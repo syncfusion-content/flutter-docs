@@ -11,7 +11,7 @@ documentation: ug
 
 ## Multiple series
 
-You can add multiple series to [`series`]() property of [`SfCartesianChart`]() class. By default, all the series rendered based on the [`PrimaryXAxis`]() and [`PrimaryYAxis`] of [`SfCartesianChart`](). But if you want to plot different unit or value that is specific to particular series, you can specify the separate axis for that series using [`xAxisName`]() and [`yAxisName`]() properties of series.
+You can add multiple series to [`series`]() property of [`SfCartesianChart`]() class. By default, all the series rendered based on the [`PrimaryXAxis`]() and [`PrimaryYAxis`]() of [`SfCartesianChart`](). But if you want to plot different unit or value that is specific to particular series, you can specify the separate axis for that series using [`xAxisName`]() and [`yAxisName`]() properties of series.
 
 {% highlight dart %} 
 
@@ -86,7 +86,7 @@ You can add multiple series to [`series`]() property of [`SfCartesianChart`]() c
 
 ## Animation
 
-[`SfCartesianChart`]() provides animation support for data series. Series will be animated whenever the items source changes. Animation is enabled by defualt, you can also control the duration of the animation using [`animationDuration`]() property.
+[`SfCartesianChart`]() provides animation support for data series. Series will be animated whenever the items source changes. Animation is enabled by default, you can also control the duration of the animation using [`animationDuration`]() property.
 
 {% highlight dart %} 
 
@@ -269,7 +269,7 @@ The [`gradient`]() property is used to define the gradient colors. The colors fr
 
 ## Empty points
 
-The data points that uses the null as value are considered as empty points. Empty data points are ignored and not plotted in the Chart when the data is provided by using the points property. By using [`emptyPointSettings`] property in series, you can customize the empty point. Available [`mode`]() types are [`gap`](), [`zero`](), [`drop`]() and [`average`].Default mode of the empty point is [`gap`]().
+The data points that uses the null as value are considered as empty points. Empty data points are ignored and not plotted in the Chart when the data is provided by using the points property. By using [`emptyPointSettings`]() property in series, you can customize the empty point. Available [`mode`]() types are [`gap`](), [`zero`](), [`drop`]() and [`average`]().Default mode of the empty point is [`gap`]().
 
 {% highlight dart %} 
 
@@ -348,7 +348,7 @@ Specific color for empty point can be set by [`color`]() property in [`emptyPoin
 
 ## Sorting
 
-The chart’s data source can be sorted using the [`sortingOrder`]() and [`sortFieldValueMapper`]() properties of series. The [`sortingOrder`]() property specifies the data points in the series can be sorted in [`ascending`] or [`descending`] order. The data points will be rendered in the specified order if [`sortingOrder`]() is set to [`none`](). The [`sortFieldValueMapper`]() specifies the field in the data source, which is considered for sorting the data points.
+The chart’s data source can be sorted using the [`sortingOrder`]() and [`sortFieldValueMapper`]() properties of series. The [`sortingOrder`]() property specifies the data points in the series can be sorted in [`ascending`]() or [`descending`]() order. The data points will be rendered in the specified order if [`sortingOrder`]() is set to [`none`](). The [`sortFieldValueMapper`]() specifies the field in the data source, which is considered for sorting the data points.
 
 {% highlight dart %} 
 

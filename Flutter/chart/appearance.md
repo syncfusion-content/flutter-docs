@@ -68,7 +68,7 @@ You can customize the plot area of the chart using the below properties.
 * [`plotAreaBackgroundColor`]() – used to change the plot area background color.
 * [`plotAreaBorderColor`]() – used to change the stroke width of the plot area.
 * [`plotAreaBorderWidth`]() – used to change the stroke color of the plot area.
-* [`plotAreaBackgroundImageUrl`] - used to set the image path.
+* [`plotAreaBackgroundImageUrl`]() - used to set the image path.
 
 {% highlight dart %} 
 

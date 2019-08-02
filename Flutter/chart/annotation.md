@@ -2,14 +2,14 @@
 layout: post
 title: Annotation
 description: Learn how to add annotations to the chart.
-platform: fluter
+platform: flutter
 control: Chart
 documentation: ug
 ---
 
 # Annotation
 
-Chart supports annotations which allows you to mark the specific area of interest in the chart area. You can add the custom widgets.
+Chart supports annotations which allows you to mark the specific area of interest in the chart area. You can add the custom widgets using this annotations feature as depicted below.
 
 {% highlight dart %} 
 
@@ -38,11 +38,11 @@ Chart supports annotations which allows you to mark the specific area of interes
 
 ## Positioning the annotation
 
-The [`x`]() and [`y`]() values can be specified with axis units or pixel units, and these can be identified by using [`coordinateUnit`] property.
+The [`x`]() and [`y`]() values can be specified with axis units or pixel units, and these can be identified by using [`coordinateUnit`]() property.
 
 **Positioning based on coordinateUnit as point**
 
-To position the annotation based on axis, set the [`x`] and [`y`]()properties based on axis range values, and set the [`coordinateUnit`] value as [`point`]().
+To position the annotation based on axis, set the [`x`]() and [`y`]()properties based on axis range values, and set the [`coordinateUnit`]() value as [`point`]().
 
 
 {% highlight dart %} 
@@ -70,7 +70,7 @@ To position the annotation based on axis, set the [`x`] and [`y`]()properties ba
 
 **Positioning based on coordinateUnit as pixels**
 
-To position the annotation based on the pixel values, set the [`CoordinateUnit`]() value as [`logicalPixel`], and the pixel values in [`x`] and [`y`] properties of annotation are shown in the following code snippet,
+To position the annotation based on the pixel values, set the [`CoordinateUnit`]() value as [`logicalPixel`](), and the pixel values in [`x`]() and [`y`]() properties of annotation are shown in the following code snippet,
 
 {% highlight dart %} 
 

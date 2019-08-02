@@ -9,7 +9,7 @@ documentation: ug
 
 # Tooltip
 
-Chart provides tooltip support for all series. It is used to show information about the segment, when you tap on the segment. To enable the tooltip, you need to set [`enableTooltip`] property as *true*.
+Chart provides tooltip support for all series. It is used to show information about the segment, when you tap on the segment. To enable the tooltip, you need to set [`enableTooltip`]() property as *true*.
 
 {% highlight dart %} 
 
@@ -47,12 +47,12 @@ You can use the following properties to customize the tooltip appearance.
 * [`borderWidth`]() – used to change the stroke width of the tooltip.
 * [`borderColor`]() – used to change the stroke color of the tooltip.
 * [`opacity`]() - used to control the transparency of the tooltip.
-* [`duration`]() - specifies the duration for displaying the tooltip that defualts to 3000.
+* [`duration`]() - specifies the duration for displaying the tooltip that defaults to 3000.
 * [`animationDuration`]() - specifies the duration for animating the tooltip that default to 350.
-* [`elevation`] - specifies the elevation of tooltip.
-* [`canShowMarker`] - toggles the visibility of the marker in the tooltip.
-* [`header`] - specifies the header for tooltip. By default, the series name will be displayed in the header.
-* ['format'] - formats the tooltip text. By default, the tooltip will be rendered with x and y-values. You can add prefix or suffix to x, y, and series name values in the tooltip by formatting them.
+* [`elevation`]() - specifies the elevation of tooltip.
+* [`canShowMarker`]() - toggles the visibility of the marker in the tooltip.
+* [`header`]() - specifies the header for tooltip. By default, the series name will be displayed in the header.
+* [`format`]() - formats the tooltip text. By default, the tooltip will be rendered with x and y-values. You can add prefix or suffix to x, y, and series name values in the tooltip by formatting them.
 * [`shadowColor`]() - specifes the color of the tooltip shadow.
 
 {% highlight dart %} 
@@ -110,7 +110,7 @@ The ActivationMode enum contains the following values:
 * [`longPress`]() – Activates tooltip only when performing the long press action.
 * [`singleTap`]() – Activates tooltip only when performing single tap action.
 * [`doubleTap`]() - Activates tooltip only when performing doule tap action.
-* [`none`] – Hides the visibility of tooltip when setting activation mode to none.
+* [`none`]() – Hides the visibility of tooltip when setting activation mode to none.
 
 {% highlight dart %} 
 

@@ -245,7 +245,7 @@ The [`pointRadiusMapper`]() maps the field name, which will be considered for ca
 
 ## Doughnut chart
 
-To render a doughnut chart, create an instance of [`DoughnutSeries`]() and add to the [`series`] collection property of [`SfCircularChart`](). You can use the following properties to customize the doughnut segment appearance.
+To render a doughnut chart, create an instance of [`DoughnutSeries`]() and add to the [`series`]() collection property of [`SfCircularChart`](). You can use the following properties to customize the doughnut segment appearance.
 
 * [`opacity`]() - used to control the transparency of the chart series.
 * [`strokeWidth`]() – used to change the stroke width of the series.
@@ -290,7 +290,7 @@ To render a doughnut chart, create an instance of [`DoughnutSeries`]() and add t
 
 ### Rounded corners
 
-The [`cornerStyle`]() property specifies the corner type for doughnut chart. The corners can be customized using [`bothFlat`](), [`bothCurve`](), [`startCurve`](), and [`endCurve`]() options. The [`cornerStyle`]() defualt to [`bothFlat`]().
+The [`cornerStyle`]() property specifies the corner type for doughnut chart. The corners can be customized using [`bothFlat`](), [`bothCurve`](), [`startCurve`](), and [`endCurve`]() options. The [`cornerStyle`]() defaults to [`bothFlat`]().
 
 {% highlight dart %} 
 
@@ -488,9 +488,6 @@ The small segments in the doughnut chart can be grouped into **others** category
 
 ![Doughnut grouping](images/getting-started/livechart.png)
 
-
-![Doughnut inner radius](images/getting-started/livechart.png)
-
 ## Radial bar chart
 
 To render a radial bar chart, create an instance of [`RadialBarSeries`]() and add to the [`series`]() collection property of [`SfCircularChart`](). You can use the following properties to customize the pie segment appearance.
@@ -500,7 +497,7 @@ To render a radial bar chart, create an instance of [`RadialBarSeries`]() and ad
 * [`strokeColor`]() – used to change the stroke color of the series.
 * [`pointColorMapper`]() - used to map the color for individual points from the data source.
 * [`gap`]() - changes the spacing between two individual segments. The default value of spacing is 1%.
-*[`maximumValue`]() - represents the entire span of an individual circle. The default value of the this property is null.
+* [`maximumValue`]() - represents the entire span of an individual circle. The default value of the this property is null.
 * [`trackColor`]() - changes the color of the track area.
 * [`trackBorderColor`]() - changes the color of the track border.
 * [`trackBorderWidth`]() - changes the width of the track border.
@@ -585,7 +582,7 @@ You can change the radial bar chart inner radius using the [`innerRadius`]() wit
 
 ### Rounded corners
 
-The [`cornerStyle`]() property specifies the corner type for radial bar chart. The corners can be customized using [`bothFlat`](), [`bothCurve`](), [`startCurve`](), and [`endCurve`]() options. The [`cornerStyle`]() defualt to [`bothFlat`]().
+The [`cornerStyle`]() property specifies the corner type for radial bar chart. The corners can be customized using [`bothFlat`](), [`bothCurve`](), [`startCurve`](), and [`endCurve`]() options. The [`cornerStyle`]() default to [`bothFlat`]().
 
 {% highlight dart %} 
 
