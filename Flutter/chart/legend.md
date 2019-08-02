@@ -36,13 +36,13 @@ The [`legend`]() contains list of chart series/data points in chart. The informa
 
 ## Customizing legend item text
 
-The [`name`]() property of [`CartesianSeries`] is used to define the label for the corresponding series legend item and for [`CircularSeries`]() type chart by default values mapped with [`xValueMapper`]() will be displayed. The appearance of the label can be customized using the below properties.
+The [`name`]() property of [`CartesianSeries`]() is used to define the label for the corresponding series legend item and for [`CircularSeries`]() type chart by default values mapped with [`xValueMapper`]() will be displayed. The appearance of the label can be customized using the below properties.
 
 * [`borderWidth`]() – used to change the stroke width of the legend shape.
 * [`borderColor`]() – used to change the stroke color of the legend shape.
-* [`backgroundColor`] - used to change the background color of legend shape.
-* [`opacity`] - used to control the transparency of the legend icon shape.
-* [`padding`] - used to add padding between the icon shape and the text.
+* [`backgroundColor`]() - used to change the background color of legend shape.
+* [`opacity`]() - used to control the transparency of the legend icon shape.
+* [`padding`]() - used to add padding between the icon shape and the text.
 * [`iconHeight`]() - used to change the height of the icon shape.
 * [`iconWidth`]() - used to change the width of the icon shape.
 * [`borderWidth`]() – used to change the stroke width of the legend icon shape.
@@ -80,13 +80,13 @@ The [`name`]() property of [`CartesianSeries`] is used to define the label for t
 
 The following properties are used to define and customize the [`title`]() of [`legend`]().
 
-* [`text`] - used to change the text of the title.
+* [`text`]() - used to change the text of the title.
 * [`textStyle`]() – used to change the text color, size, font family, fontStyle, and font weight.
 * [`textStyle.color`]() – used to change the color of the text.
 * [`textStyle.fontFamily`]() - used to change the font family for legend text. 
 * [`textStyle.fontStyle`]() – used to change the font style for the legend text.
 * [`textStyle.fontSize`]() - used to change the font size for the legend text.
-* [`alignment`] – used to change the alignment of the title text; it can be near, center, or far.
+* [`alignment`]() – used to change the alignment of the title text; it can be near, center, or far.
 
 {% highlight dart %} 
 
@@ -271,7 +271,7 @@ You can position the legend anywhere inside the chart. The following properties 
 
 ### Legend item template
 
-You can customize the appearance of legend items with your template by using [`legendItemBuilder`]() property of [`legend`].
+You can customize the appearance of legend items with your template by using [`legendItemBuilder`]() property of [`legend`]().
 
 {% highlight dart %} 
 

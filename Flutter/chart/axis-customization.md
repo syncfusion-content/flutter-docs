@@ -15,7 +15,7 @@ Customization of features such as axis title, labels, grid lines and tick lines 
 
 ### Axis Visibility
 
-Axis visibility can be controlled using the [`isVisible`]() property of axis. Default value of IsVisible property is *true*.
+Axis visibility can be controlled using the [`isVisible`]() property of axis. Default value of [`isVisible`]() is *true*.
 
 {% highlight dart %} 
 

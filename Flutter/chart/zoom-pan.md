@@ -103,10 +103,10 @@ You can customize the selection rectangle using the below properties.
 
 The axis tooltip on selection zooming can be enabled using [`enable`]() property of [`crosshairTooltip`](). You can cusotmize the appearance of axis tooltip using the following properties.
 
-* [`enable`] - used to enable the axis toolip.
+* [`enable`]() - used to enable the axis toolip.
 * [`borderWidth`]() – used to change the stroke width of the axis tooltip.
 * [`borderColor`]() – used to change the stroke color of the axis tooltip.
-* [`format`] - by default, axis value will be displayed in the tooltip, and it can be customized by adding desired text as prefix or suffix.
+* [`format`]() - by default, axis value will be displayed in the tooltip, and it can be customized by adding desired text as prefix or suffix.
 * [`textStyle`]() – used to change the text color, size, font family, fontStyle, and font weight.
 * [`textStyle.color`]() – used to change the color of the text.
 * [`textStyle.fontFamily`]() - used to change the font family for chart title. 
@@ -171,7 +171,7 @@ The [`enableAutoIntervalOnZooming`]() property determines the update of axis int
 
 ## Maximum zoom level
 
-The [`maximumZoomLevel`]() property defines the maximum zoming level. Zooming will be stopped after reached this value. This defualts to null.
+The [`maximumZoomLevel`]() property defines the maximum zoming level. Zooming will be stopped after reached this value. This defaults to null.
 
 {% highlight dart %} 
 

@@ -158,7 +158,7 @@ Data label can be added to a chart series by enabling the [`isVisible`]() option
 
 ### Formatting label content
 
-Data label consider the format used for vertical axis by default.
+Data label considers the format used in vertical axis by default.
 
 {% highlight dart %} 
 
@@ -188,7 +188,7 @@ Data label consider the format used for vertical axis by default.
 
 ### Label position
 
-The [`position`]() property is used to position the cartesian chart type data marker labels at [`top`](), [`bottom`](), [`auto`](), [`outer`]() and [`middle`]() position of the actual data point position. By default, labels are [`auto`] positioned. You can move the labels horizontally and vertically using OffsetX and OffsetY properties respectively.
+The [`position`]() property is used to position the cartesian chart type data marker labels at [`top`](), [`bottom`](), [`auto`](), [`outer`]() and [`middle`]() position of the actual data point position. By default, labels are [`auto`]() positioned. You can move the labels horizontally and vertically using OffsetX and OffsetY properties respectively.
 
 The [`labelPosition`]() property is used to place the circular series data marker labels either [`inside`]() or [`outside`](). By default the label of circular chart is placed [`inside`]() the series.
 
@@ -216,11 +216,11 @@ The [`labelPosition`]() property is used to place the circular series data marke
 
 ![Data label position](images/getting-started/livechart.png)
 
-Note: The [`position`]() property is used to position the cartesian chart labels whereas [`labelPosition`] property is used to position the circular chart labels.
+N> The [`position`]() property is used to position the cartesian chart labels whereas [`labelPosition`]() property is used to position the circular chart labels.
 
 ### Smart labels
 
-This feature is used to arrange the data marker labels smartly and avoid the intersection when there is overlapping of labels. The property [`enableSmartLabels`]() in [`CircularSeries`](), is used to arrange the data marker labels smartly. By default, this property is *true*.
+This feature is used to arrange the data marker labels smartly and avoid the intersection when there is overlapping of labels. The property [`enableSmartLabels`]() in [`CircularSeries`]() is used to arrange the data marker labels smartly. By default, this property is *true*.
 
 {% highlight dart %} 
 
@@ -280,8 +280,8 @@ This feature is used to connect label and data point using a line. It can be ena
 
 * [`color`]() – used to change the color of the line
 * [`width`]() – used to change the stroke thickness of the line
-* ['length']() – specifies the length of the connector line.
-* ['type']() - specifies the shape of connector line either [`curve`]() or [`line`](). 
+* [`length`]() – specifies the length of the connector line.
+* [`type`]() - specifies the shape of connector line either [`curve`]() or [`line`](). 
 
 {% highlight dart %} 
 

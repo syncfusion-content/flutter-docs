@@ -152,7 +152,7 @@ To render an area chart, create an instance of [`AreaSeries`]() and add to the [
 
 ###	Border customization
 
-The borders of the area chart can be customized using the [`borderMode`]() property. The default value of [`borderMode`]() property is *top*. The other values are [`all`]() and [`excludeBottom`]().
+The borders of the area chart can be customized using the [`borderMode`]() property. The default value of [`borderMode`]() property is [`top`](). The other values are [`all`]() and [`excludeBottom`]().
 
 {% highlight dart %} 
 
@@ -234,8 +234,7 @@ The [`dashArray`]() property of the [`SplineSeries`]() is used to render spline 
 
 ###	Spline rendering types
 
-The [`splineType`]() allows you to change the spline curve in series. 
-The following types are used in [`SplineSeries`]()
+The [`splineType`]() allows you to change the spline curve in series. The following types are used in [`SplineSeries`]()
 
 * natural
 * monotonic
@@ -516,7 +515,7 @@ The [`borderRadius`]() property is used to add the rounded corners to the rectan
 
 ### Track customization
 
-Renders bar chart with track. Track is a rectangular bar rendered from the start to the end of the axis. Bar series will be rendered above the track. The [`isTrackVisible`]() property is used to enable the track.You can use the following properties to customize the appearance.
+You can render the bar chart with track. Track is a rectangular bar rendered from the start to the end of the axis. Bar series will be rendered above the track. The [`isTrackVisible`]() property is used to enable the track.You can use the following properties to customize the appearance.
 
 * [`trackColor`]() – used to change the color of the track.
 * [`trackBorderWidth`]() – used to change the stroke width of the track.
@@ -684,8 +683,7 @@ The [`height`]() and [`width`]() properties of [`markerSettings`]() are used to 
 
 ## Step line chart
 
-To render a step line chart, create an instance of [`StepLineSeries`]() and add to the [`series`]() collection property of
-[`SfCartesianChart`](). You can use the following properties to customize the spline segment appearance.
+To render a step line chart, create an instance of [`StepLineSeries`]() and add to the [`series`]() collection property of [`SfCartesianChart`](). You can use the following properties to customize the spline segment appearance.
 
 * [`color`]() – used to change the color of the line.
 * [`opacity`]() - used to control the transparency of the chart series.
