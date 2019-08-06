@@ -18,7 +18,7 @@ Create a simple project, using the instructions given in [Getting Started with y
 ### Adding flutter charts to your app
 
 #### Add dependency
-Add the Syncfusion Flutter Chart dependency to your [`pubspec.yaml`]() file.
+Add the Syncfusion Flutter Chart dependency to your [pubspec.yaml]() file.
 
 {% highlight dart %} 
 
