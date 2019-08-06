@@ -18,7 +18,7 @@ Create a simple project, using the instructions given in [Getting Started with y
 ### Adding flutter charts to your app
 
 #### Add dependency
-Add the Syncfusion Flutter Chart dependency to your pubspec.yaml file.
+Add the Syncfusion Flutter Chart dependency to your pub spec file.
 
 {% highlight dart %} 
 
@@ -65,7 +65,7 @@ Once the packages has been imported, initialize the chart as a child of any widg
 
 {% endhighlight %}
 
-![Initialize chart](images/getting-started/Initialize-chart.png)
+![Initialize chart](images/getting-started/oneplus.jpg)
 
 ### Bind data source
 
@@ -107,7 +107,7 @@ Based on your data, initialize the appropriate axis type and series type. In the
 
 {% endhighlight %}
 
-![Bind data source](images/getting-started/datasource.png)
+![Bind data source](images/getting-started/redmi.png)
 
 ### Add title
 
@@ -144,7 +144,7 @@ You can add a [`title`]() to the chart to provide quick information to the user 
 
 {% endhighlight %}
 
-![Title to chart](images/getting-started/title.png)
+![Title to chart](images/getting-started/honor.jpg)
 
 ### Enable data labels
 
@@ -182,7 +182,7 @@ You can add data labels to improve the readability of the chart. This can be ach
 
 {% endhighlight %}
 
-![DataLabel to chart](images/getting-started/datalabel.png)
+![DataLabel to chart](images/getting-started/pixel.png)
 
 ### Enable legend
 
@@ -219,13 +219,13 @@ You can use legend for the chart by setting the [`isVisible`]() property to true
 
 {% endhighlight %}
 
-![Legend in chart](images/getting-started/livechart.png)
+![Legend in chart](images/getting-started/moto-g.png)
 
 ### Enable tooltip
 
 The tooltip is useful when you cannot display information by using the data labels due to space constraints. The tooltip can be enabled as depicted below.
 
-The [`tooltipBehavior`]() property in chart is used to enable and cusotmize the tooltip for all the series whereas the [`enableTooltip`]() property in series used to toggle the tooltip visibility of each series.
+The [`tooltipBehavior`]() property in chart is used to enable and customize the tooltip for all the series whereas the [`enableTooltip`]() property in series used to toggle the tooltip visibility of each series.
 
 {% highlight dart %} 
 
@@ -262,4 +262,4 @@ The [`tooltipBehavior`]() property in chart is used to enable and cusotmize the 
 
 {% endhighlight %}
 
-![Tooltip in chart](images/getting-started/livechart.png)
+![Tooltip in chart](images/getting-started/moto-e.png)
