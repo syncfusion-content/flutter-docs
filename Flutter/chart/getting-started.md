@@ -65,7 +65,7 @@ Once the packages has been imported, initialize the chart as a child of any widg
 
 {% endhighlight %}
 
-![Initialize chart](images/getting-started/livechart.png)
+![Initialize chart](images/getting-started/oneplus.jpg)
 
 ### Bind data source
 
@@ -144,7 +144,7 @@ You can add a [`title`]() to the chart to provide quick information to the user 
 
 {% endhighlight %}
 
-![Title to chart](images/getting-started/livechart.png)
+![Title to chart](images/getting-started/honor.jpg)
 
 ### Enable data labels
 
