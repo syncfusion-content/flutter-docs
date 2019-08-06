@@ -225,7 +225,7 @@ You can use legend for the chart by setting the [`isVisible`]() property to true
 
 The tooltip is useful when you cannot display information by using the data labels due to space constraints. The tooltip can be enabled as depicted below.
 
-The [`tooltipBehavior`]() property in chart is used to enable and cusotmize the tooltip for all the series whereas the [`enableTooltip`]() property in series used to toggle the tooltip visibility of each series.
+The [`tooltipBehavior`]() property in chart is used to enable and customize the tooltip for all the series whereas the [`enableTooltip`]() property in series used to toggle the tooltip visibility of each series.
 
 {% highlight dart %} 
 
