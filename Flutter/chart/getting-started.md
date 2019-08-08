@@ -65,7 +65,7 @@ Once the packages has been imported, initialize the chart as a child of any widg
 
 {% endhighlight %}
 
-![Initialize chart](images/getting-started/moto-300-300.png)
+![Initialize chart](images/getting-started/moto-240-305.jpg)
 
 ### Bind data source
 
