@@ -45,7 +45,7 @@ You can add multiple series to [`series`]() property of [`SfCartesianChart`]() c
 
 {% endhighlight %}
 
-![Multiple series](images/getting-started/livechart.png)
+![Multiple series](images/series-customization/multipleSeries.jpg)
 
 ## Combination series
 
@@ -78,7 +78,7 @@ You can add multiple series to [`series`]() property of [`SfCartesianChart`]() c
 
 {% endhighlight %}
 
-![Combination series](images/getting-started/livechart.png)
+![Combination series](images/series-customization/combination_series.jpg)
 
 **Limitation of Combination Chart**
 
@@ -130,7 +130,6 @@ The [`isTransposed`]() property of [`CartesianSeries`]() is used to transpose th
                     dataSource: chartData,
                     xValueMapper: (ChartData data, _) => data.x,
                     yValueMapper: (ChartData data, _) => data.y,
-                    animationDuration: 1000
                 )])
             )
         ));
@@ -138,7 +137,7 @@ The [`isTransposed`]() property of [`CartesianSeries`]() is used to transpose th
 
 {% endhighlight %}
 
-![Transposed chart](images/getting-started/livechart.png)
+![Transposed chart](images/series-customization/transpose.jpg)
 
 ## Color palette
 
@@ -181,7 +180,7 @@ The [`palette`]() property is used to define the colors for the series available
 
 {% endhighlight %}
 
-![Palette](images/getting-started/livechart.png)
+![Palette](images/series-customization/palette.jpg)
 
 ## Color mapping for data points   
 
@@ -223,7 +222,7 @@ The [`pointColorMapper`]() property is used to map the color field from the data
 
 {% endhighlight %}
 
-![Point color mapping](images/getting-started/livechart.png)
+![Point color mapping](images/series-customization/color_mapping.jpg)
 
 ## Gradient fill
 
@@ -263,7 +262,7 @@ The [`gradient`]() property is used to define the gradient colors. The colors fr
 
 {% endhighlight %}
 
-![Gradient color](images/getting-started/livechart.png)
+![Gradient color](images/series-customization/gradient.jpg)
 
 ## Empty points
 
@@ -300,7 +299,7 @@ The data points that has null value are considered as empty points. Empty data p
 
 {% endhighlight %}
 
-![Empty points](images/getting-started/livechart.png)
+![Empty points](images/series-customization/emptyPoint.jpg)
 
 ### Empty point customization
 
@@ -342,7 +341,7 @@ Specific color for empty point can be set by [`color`]() property in [`emptyPoin
 
 {% endhighlight %}
 
-![Empty points customization](images/getting-started/livechart.png)
+![Empty points customization](images/series-customization/emptyPoint_customization.jpg)
 
 ## Sorting
 
@@ -380,4 +379,4 @@ The chart’s data source can be sorted using the [`sortingOrder`]() and [`sortF
 
 {% endhighlight %}
 
-![Sorting](images/getting-started/livechart.png)
+![Sorting](images/series-customization/sorting.jpg)

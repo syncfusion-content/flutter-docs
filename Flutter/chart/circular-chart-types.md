@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Syncfusion Circular Chart types
+title: Syncfusion Circular Chart Types
 description: Learn what are the different types of circular charts available in Flutter Chart.
 platform: flutter
 control: Chart
@@ -23,10 +23,10 @@ To render a pie chart, create an instance of [`PieSeries`]() and add to the [`se
     @override
     Widget build(BuildContext context) {
         final List<ChartData> chartData = [
-            ChartData('David', 25, Color.fromRGBO(9,0,136,1)),
-            ChartData('Steve', 38, Color.fromRGBO(147,0,119,1)),
-            ChartData('Jack', 34, Color.fromRGBO(228,0,124,1)),
-            ChartData('Others', 52, Color.fromRGBO(255,189,57,1))
+            ChartData('David', 25),
+            ChartData('Steve', 38),
+            ChartData('Jack', 34),
+            ChartData('Others', 52)
         ];
         return Scaffold(
             body: Center(
