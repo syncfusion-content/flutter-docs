@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Overview of Syncfusion Essential Flutter Chart
-description: How to customize the visibility, title, labels, grid lines and tick lines of chart axis
+title: Axis customization in Flutter Charts
+description: Learn how to customize the visibility, title, labels, grid lines and tick lines of chart axis
 platform: flutter
 control: Chart
 documentation: ug
@@ -15,22 +15,23 @@ Customization of features such as axis title, labels, grid lines and tick lines 
 
 ### Axis Visibility
 
-Axis visibility can be controlled using the [`isVisible`]() property of axis. Default value of [`isVisible`]() is *true*.
+Axis visibility can be toggled using the [`isVisible`]() property of axis. Default value of [`isVisible`]() is *true*.
 
 {% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-        body: Center(
-            child: Container(
-                child: SfCartesianChart(
-                   primaryXAxis: NumericAxis(
-                       isVisible: false,
-                    ),
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis: NumericAxis(
+                            isVisible: false
+                        )
+                    )
                 )
             )
-        ));
+        );
     }
 
 {% endhighlight %}
@@ -39,7 +40,7 @@ Axis visibility can be controlled using the [`isVisible`]() property of axis. De
 
 ### Axis title
 
-The [`title`]() property in axis provides options to customize the text and font of axis title. Axis does not display title by default. The title can be customized using following properties,
+The [`title`]() property in axis provides options to customize the text and font of axis title. Axis does not display title by default. The title can be customized using following properties.
 
 * [`text`]() – used to set the title for axis.
 * [`textStyle`]() – used to change the text color, size, font family, font style, and font weight.
@@ -68,7 +69,7 @@ The [`title`]() property in axis provides options to customize the text and font
                            fontWeight: FontWeight.w300
                          )
                        )
-                    ),
+                    )
                 )
             )
         ));
@@ -80,22 +81,23 @@ The [`title`]() property in axis provides options to customize the text and font
 
 ### Axis label rotation
 
-The [`labelRotation`]() property of axis can be used to rotate the axis labels position. Default value of [`labelRotation`]() property is 0d.
+The [`labelRotation`]() property of axis can be used to rotate the axis labels position. Default value of [`labelRotation`]() property is 0 degree.
 
 {% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-        body: Center(
-            child: Container(
-                child: SfCartesianChart(
-                     primaryXAxis: CategoryAxis(
-                       labelRotation: 90
-                    ), 
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis: CategoryAxis(
+                            labelRotation: 90
+                        ) 
+                    )
                 )
             )
-        ));
+        );
     }
 
 {% endhighlight %}
@@ -104,7 +106,7 @@ The [`labelRotation`]() property of axis can be used to rotate the axis labels p
 
 ### Axis line customization
 
-[`SfCartesianChart`]() provides support to customize the style of the axis line by defining the [`axisLine`]() property as shown in the below code snippet.
+[`SfCartesianChart`]() provides support to customize the appearance of the axis line by defining the [`axisLine`]() property as shown in the below code snippet.
 
 * [`color`]() – used to change the stroke color of axis line.
 * [`width`]() – used to change the stroke width of axis line.
@@ -124,7 +126,7 @@ The [`labelRotation`]() property of axis can be used to rotate the axis labels p
                          width: 2,
                          dashArray: <double>[5,5]
                        )
-                    ), 
+                    ) 
                 )
             )
         ));
@@ -136,7 +138,7 @@ The [`labelRotation`]() property of axis can be used to rotate the axis labels p
 
 ### Axis label customization
 
-The [`labelStyle`]() property in axis provides options to customize the font of axis label. The axis label can be customized using following properties,
+The [`labelStyle`]() property in axis provides options to customize the appearance of the axis label. The axis label can be customized using following properties.
 
 * [`labelStyle`]() – used to change the text color, size, font family, font style, and font weight.
 * [`color`]() – used to change the color of the axis label.
@@ -150,21 +152,22 @@ The [`labelStyle`]() property in axis provides options to customize the font of 
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-        body: Center(
-            child: Container(
-                child: SfCartesianChart(
-                     primaryXAxis: NumericAxis(
-                       labelStyle: ChartTextStyle(
-                         color: Colors.red,
-                         fontFamily: 'Roboto',
-                         fontSize: 14,
-                         fontStyle: FontStyle.italic,
-                         fontWeight: FontWeight.w500
-                       )
-                    ), 
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis: NumericAxis(
+                            labelStyle: ChartTextStyle(
+                                color: Colors.red,
+                                fontFamily: 'Roboto',
+                                fontSize: 14,
+                                fontStyle: FontStyle.italic,
+                                fontWeight: FontWeight.w500
+                            )
+                        )
+                    )
                 )
             )
-        ));
+        );
     }
 
 {% endhighlight %}
@@ -173,22 +176,23 @@ The [`labelStyle`]() property in axis provides options to customize the font of 
 
 ### Formatting axis label content
 
-The [`labelFormat`]() property is used to add prefix or suffix with the axis label.
+The [`labelFormat`]() property is used to add prefix or suffix to the axis labels text.
 
 {% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-        body: Center(
-            child: Container(
-                child: SfCartesianChart(
-                     primaryYAxis: NumericAxis(
-                       labelFormat: '{value}°C'
-                    ), 
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryYAxis: NumericAxis(
+                            labelFormat: '{value}°C'
+                        ) 
+                    )
                 )
             )
-        ));
+        );
     }
 
 {% endhighlight %}
@@ -197,23 +201,24 @@ The [`labelFormat`]() property is used to add prefix or suffix with the axis lab
 
 ### Label and tick positioning
 
-Axis labels and ticks can be positioned inside or outside the chart area by using [`labelPosition`]() and [`tickPosition`]() properties of ChartAxis. By default labels and ticks will be positioned outside the chart area.
+Axis labels and ticks can be positioned inside or outside the chart area by using [`labelPosition`]() and [`tickPosition`]() properties of chart axis. By default, labels and ticks will be positioned outside the chart area.
 
 {% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-        body: Center(
-            child: Container(
-                child:SfCartesianChart(
-                     primaryXAxis: CategoryAxis(
-                       labelPosition: LabelPosition.inside,
-                       tickPosition: TickPosition.inside
-                     ), 
+            body: Center(
+                child: Container(
+                    child:SfCartesianChart(
+                        primaryXAxis: CategoryAxis(
+                            labelPosition: LabelPosition.inside,
+                            tickPosition: TickPosition.inside
+                        ) 
                     )
+                )
             )
-        ));
+        );
     }
 
 {% endhighlight %}
@@ -222,22 +227,23 @@ Axis labels and ticks can be positioned inside or outside the chart area by usin
 
 ### Edge label placement
 
-Labels with long text at the edges of an axis may appear partially outside the chart. The [`edgeLabelPlacement`]() property can be used to avoid the partial appearance of labels at the corners. Default value of this property is *none*. Other available options of [`edgeLabelPlacement`]() are shift and hide.
+Labels with long text at the edges of an axis may appear partially outside the chart. The [`edgeLabelPlacement`]() property can be used to avoid the partial appearance labels at the corners. Default value of this property is *none*. Other available options of [`edgeLabelPlacement`]() are shift and hide. When using shift, the edge labels are moved inside the chart bounds.
 
 {% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-        body: Center(
-            child: Container(
-                child:SfCartesianChart(
-                     primaryXAxis: CategoryAxis(
-                       edgeLabelPlacement: EdgeLabelPlacement.shift
-                    ), 
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis: CategoryAxis(
+                            edgeLabelPlacement: EdgeLabelPlacement.shift
+                        )
+                    )
                 )
             )
-        ));
+        );
     }
 
 {% endhighlight %}
@@ -246,7 +252,7 @@ Labels with long text at the edges of an axis may appear partially outside the c
 
 ### Grid lines customization
 
-The [`width`]() property is used to control the visibility of grid lines. [`majorGridLines`]() and [`minorGridLines`]() properties in axis are used to customize the major grid lines and minor grid lines of an axis respectively. They provide options to change the width, dashes, color of grid lines. By default minor grid lines will not be visible.
+The [`width`]() property is used to control the visibility of grid lines. [`majorGridLines`]() and [`minorGridLines`]() properties in axis are used to customize the major grid lines and minor grid lines of an axis respectively. They provide options to change the width, dashes and color of the grid lines. By default, minor grid lines are not visible.
 
 {% highlight dart %} 
 
@@ -279,7 +285,7 @@ The [`width`]() property is used to control the visibility of grid lines. [`majo
 
 ### Tick lines customization
 
-The [`majorTickLines`]() and [`minorTickLines`]() properties in axis are used to customize the major tick lines of an axis and minor tick lines of an axis respectively. They provide options to change the [`width`](), [`size`](), [`color`]() and [`minorTicksPerInterval`]() of tick lines. By default minor tick lines will not be visible.
+The [`majorTickLines`]() and [`minorTickLines`]() properties in axis are used to customize the major tick lines of an axis and minor tick lines of an axis respectively. They provide options to change the [`width`](), [`size`](), [`color`]() and [`minorTicksPerInterval`]() of tick lines. By default, minor tick lines will not be visible.
 
 {% highlight dart %} 
 
@@ -313,7 +319,7 @@ The [`majorTickLines`]() and [`minorTickLines`]() properties in axis are used to
 
 ### Inversing axis
 
-Axis can be inversed using the [`isInversed`]() property of an axis. Default value of [`isInversed`]() property is *false*.
+The rendering direction of an axis can be inversed using the [`isInversed`]() property of an axis. Default value of [`isInversed`]() property is *false*.
 
 {% highlight dart %} 
 
@@ -469,7 +475,7 @@ Axis labels may overlap with each other based on chart dimensions and label size
                 child:SfCartesianChart(
                      primaryXAxis: CategoryAxis(
                        labelIntersectAction: AxisLabelIntersectAction.multipleRows
-                     ), 
+                     )
                 )
             )
         ));

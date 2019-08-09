@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion Circular Chart types
-description: What are the different types of Charts available in Essential Flutter Chart.
+description: Learn what are the different types of circular charts available in Flutter Chart.
 platform: flutter
 control: Chart
 documentation: ug
@@ -26,7 +26,7 @@ To render a pie chart, create an instance of [`PieSeries`]() and add to the [`se
             ChartData('David', 25, Color.fromRGBO(9,0,136,1)),
             ChartData('Steve', 38, Color.fromRGBO(147,0,119,1)),
             ChartData('Jack', 34, Color.fromRGBO(228,0,124,1)),
-            ChartData('Others', 52, Color.fromRGBO(255,189,57,1)),
+            ChartData('Others', 52, Color.fromRGBO(255,189,57,1))
         ];
         return Scaffold(
             body: Center(
@@ -36,10 +36,10 @@ To render a pie chart, create an instance of [`PieSeries`]() and add to the [`se
                     dataSource: chartData,
                     pointColorMapper:(ChartData data,  _) => data.color,
                     xValueMapper: (ChartData data, _) => data.x,
-                    yValueMapper: (ChartData data, _) => data.y,
-                ),
-            ])),
-        ),
+                    yValueMapper: (ChartData data, _) => data.y
+                )
+            ]))
+        )
         );
     }
 
@@ -71,9 +71,9 @@ You can use [`radius`]() property to change the diameter of the pie chart with r
                     xValueMapper: (ChartData data, _) => data.x,
                     yValueMapper: (ChartData data, _) => data.y,
                     radius: '50%'
-                ),
-            ])),
-        ),
+                )
+            ]))
+        )
         );
     }
 
@@ -103,10 +103,10 @@ You can explode a pie segment by enabling the [`explode`]() property. You can us
                     xValueMapper: (ChartData data, _) => data.x,
                     yValueMapper: (ChartData data, _) => data.y,
                     explode: true,
-                    explodeIndex: 1,
-                ),
-            ])),
-        ),
+                    explodeIndex: 1
+                )
+            ]))
+        )
         );
     }
 
@@ -448,9 +448,9 @@ Using [`explodeAll`]() property of [`DoughnutSeries`](), you can explode all the
                     yValueMapper: (ChartData data, _) => data.y,
                     startAngle: 270,
                     endAngle: 90
-                ),
-            ])),
-        ),
+                )
+            ]))
+        )
         );
     }
 
@@ -477,9 +477,9 @@ The small segments in the doughnut chart can be grouped into **others** category
                     yValueMapper: (ChartData data, _) => data.y,
                     groupMode: CircularChartGroupMode.point,
                     groupTo: 2
-                ),
-            ])),
-        ),
+                )
+            ]))
+        )
         );
     }
 
@@ -515,10 +515,10 @@ To render a radial bar chart, create an instance of [`RadialBarSeries`]() and ad
           RadialBarSeries<ChartData, String>(
             dataSource: chartData,
             xValueMapper: (ChartData data, _) => data.x,
-            yValueMapper: (ChartData data, _) => data.y,
-          ),
-        ])),
-        ),
+            yValueMapper: (ChartData data, _) => data.y
+          )
+        ]))
+        )
         );
     }
 
@@ -544,9 +544,9 @@ You can use [`radius`]() property to change the diameter of the radial bar chart
                     xValueMapper: (ChartData data, _) => data.x,
                     yValueMapper: (ChartData data, _) => data.y,
                     radius: '50%'
-                ),
-            ])),
-        ),
+                )
+            ]))
+        )
         );
     }
 
@@ -572,9 +572,9 @@ You can change the radial bar chart inner radius using the [`innerRadius`]() wit
                     xValueMapper: (ChartData data, _) => data.x,
                     yValueMapper: (ChartData data, _) => data.y,
                     innerRadius: '80%'
-                ),
-            ])),
-        ),
+                )
+            ]))
+        )
         );
     }
 
@@ -597,9 +597,9 @@ The [`cornerStyle`]() property specifies the corner type for radial bar chart. T
                     xValueMapper: (ChartData data, _) => data.x,
                     yValueMapper: (ChartData data, _) => data.y,
                     cornerStyle: CornerStyle.bothCurve
-                ),
-            ])),
-        ),
+                )
+            ]))
+        )
         );
     }
 
@@ -637,10 +637,10 @@ Data labels can be enabled by using [`isVisible`]() property of [`dataLabelSetti
                             xValueMapper: (ChartData data, _) => data.x,
                             yValueMapper: (ChartData data, _) => data.y,
                             dataLabelSettings: DataLabelSettings(
-                                isVisible: true,
-                            )),
-                    ])),
-            ),
+                                isVisible: true
+                            ))
+                    ]))
+            )
         );
     }
 

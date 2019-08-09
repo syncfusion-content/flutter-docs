@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion Flutter Chart Axis
-description: How to customize the grid lines, tick lines, labels and title of chart axis
+description: Learn how to customize the grid lines, tick lines, labels and title of a chart axis.
 platform: flutter
 control: Chart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Axis
 
-Charts typically have two axes that are used to measure and categorize data: a vertical (Y) axis, and a horizontal (X) axis.
+Charts typically have two axis, that are used to measure and categorize data: a vertical (Y) axis, and a horizontal (X) axis.
 
 Vertical(Y) axis always uses numerical scale. Horizontal(X) axis supports the following types of scale:
 
@@ -385,10 +385,9 @@ To customize the range of an axis, you can use the [`minimum`]() and [`maximum`]
 
 ### Date time intervals
 
-Date time intervals can be customized using [`interval`]() and [`intervalType`]() properties of the [`DateTimeAxis`](). For example, setting Inter[`interval`]()val as 2 and [`intervalType`]() as years will consider 2 years as interval.
+Date time intervals can be customized using [`interval`]() and [`intervalType`]() properties of the [`DateTimeAxis`](). For example, setting [`interval`]() as 2 and [`intervalType`]() as years will consider 2 years as interval.
 
-Essential Chart supports the following types of interval for date time axis
-
+Essential Chart supports the following types of interval for date time axis.
 * auto
 * years
 * months
@@ -546,4 +545,3 @@ The [`dateFormat`]() property formats the date-time axis labels. The default dat
 {% endhighlight %}
 
 ![Date format](images/axis-types/datetime_labelFormat.jpg)
-
