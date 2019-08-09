@@ -53,7 +53,7 @@ You can use the following properties to customize the tooltip appearance.
 * [`canShowMarker`]() - toggles the visibility of the marker in the tooltip.
 * [`header`]() - specifies the header for tooltip. By default, the series name will be displayed in the header.
 * [`format`]() - formats the tooltip text. By default, the tooltip will be rendered with x and y-values. You can add prefix or suffix to x, y, and series name values in the tooltip by formatting them.
-* [`shadowColor`]() - specifes the color of the tooltip shadow.
+* [`shadowColor`]() - specifies the color of the tooltip shadow.
 
 {% highlight dart %} 
 
@@ -109,7 +109,7 @@ The ActivationMode enum contains the following values:
 
 * [`longPress`]() – Activates tooltip only when performing the long press action.
 * [`singleTap`]() – Activates tooltip only when performing single tap action.
-* [`doubleTap`]() - Activates tooltip only when performing doule tap action.
+* [`doubleTap`]() - Activates tooltip only when performing double tap action.
 * [`none`]() – Hides the visibility of tooltip when setting activation mode to none.
 
 {% highlight dart %} 

@@ -34,7 +34,7 @@ The selection feature in chart let you to select a segment in a series or the se
 
 ## Customizing the segments
 
-You can customize the segements using the below properties.
+You can customize the segments using the below properties.
 
 * [`selectedColor`]() - used to change the background color of selected segment.
 * [`unselectedColor`]() - used to change the background color of unselected segment.

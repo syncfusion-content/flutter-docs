@@ -465,7 +465,7 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
 
 {% endhighlight %}
 
-## Cirular chart events
+## Circular chart events
 
 ### onLegendItemRender
 

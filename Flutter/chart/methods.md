@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Cartesain chart methods
+# Cartesian chart methods
 
 ## Show method in tooltipBehavior
 
@@ -326,8 +326,8 @@ The [`selectionIndex`]() method is used to select the data point programmaticall
 
 * pointIndex - specifies the point index value.
 * seriesIndex - specifies the series index value.
-* selectionType - specifies the [`SelectionType`]() and this is an optional paramter. 
-* multiSelect - bool property specifies the multiple selection and this is an optional paramter.
+* selectionType - specifies the [`SelectionType`]() and this is an optional parameter. 
+* multiSelect - bool property specifies the multiple selection and this is an optional parameter.
 
 {% highlight dart %}
 

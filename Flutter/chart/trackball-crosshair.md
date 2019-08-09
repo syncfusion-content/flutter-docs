@@ -13,7 +13,7 @@ documentation: ug
 
 Trackball feature displays the tooltip for the data points that are closer to the point where you touch on the chart area. This feature, especially, can be used instead of data label feature when you cannot show data labels for all data points due to space constraint. This feature can be enabled using [`enable`]() property of [`trackballBehavior`](). Trackball will be activated once you long-press anywhere on the chart area. Once it is activated, it will appear in the UI and move based on your touch movement until you stop touching on the chart.
 
-You can use the following properties to customize the appearance of trakball tooltip.
+You can use the following properties to customize the appearance of trackball tooltip.
 
 * [`lineType`]() - specifies the type of trackball line. By default, vertical line will be displayed.
 * [`lineColor`]() - specifies the color of the trackball line.
@@ -151,7 +151,7 @@ The ActivationMode enum contains the following values:
 
 * [`longPress`]() – Activates trackball only when performing the long press action.
 * [`singleTap`]() – Activates trackball only when performing single tap action.
-* [`doubleTap`]() - Activates trackball only when performing doule tap action.
+* [`doubleTap`]() - Activates trackball only when performing double tap action.
 * [`none`]() – Hides the visibility of trackball when setting activation mode to none. It will be activated when calling the [`show`]() method.
 
 {% highlight dart %} 
@@ -240,9 +240,9 @@ The appearance of the track line in crosshair can be customized using the follow
 
 **Show axis tooltip**
 
-The axis tooltip can be enabled using [`enable`]() property of [`crosshairTooltip`](). You can cusotmize the appearance of axis tooltip using the following properties.
+The axis tooltip can be enabled using [`enable`]() property of [`crosshairTooltip`](). You can customize the appearance of axis tooltip using the following properties.
 
-* [`enable`]() - used to enable the axis toolip.
+* [`enable`]() - used to enable the axis tooltip.
 * [`borderWidth`]() – used to change the stroke width of the axis tooltip.
 * [`borderColor`]() – used to change the stroke color of the axis tooltip.
 * [`format`]() - by default, axis value will be displayed in the tooltip, and it can be customized by adding desired text as prefix or suffix.
@@ -260,7 +260,7 @@ The ActivationMode enum contains the following values:
 
 * [`longPress`]() – Activates crosshair only when performing the long press action.
 * [`singleTap`]() – Activates crosshair only when performing single tap action.
-* [`doubleTap`]() - Activates crosshair only when performing doule tap action.
+* [`doubleTap`]() - Activates crosshair only when performing double tap action.
 * [`none`]() – Hides the visibility of crosshair when setting activation mode to none. It will be activated when calling the [`show`]() method.
 
 {% highlight dart %} 

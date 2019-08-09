@@ -65,7 +65,7 @@ Double tap zooming can be enabled using [`enableDoubleTapZooming`]() property. D
 
 ## Selection zooming
 
-By speciying [`enableSelectionZooming`]() property to true, you can double tap and drag to select a range on the chart to be zoomed in.
+By specifying [`enableSelectionZooming`]() property to true, you can double tap and drag to select a range on the chart to be zoomed in.
 
 **Selection rectangle customization**
 
@@ -101,9 +101,9 @@ You can customize the selection rectangle using the below properties.
 
 **Show axis tooltip**
 
-The axis tooltip on selection zooming can be enabled using [`enable`]() property of [`crosshairTooltip`](). You can cusotmize the appearance of axis tooltip using the following properties.
+The axis tooltip on selection zooming can be enabled using [`enable`]() property of [`crosshairTooltip`](). You can customize the appearance of axis tooltip using the following properties.
 
-* [`enable`]() - used to enable the axis toolip.
+* [`enable`]() - used to enable the axis tooltip.
 * [`borderWidth`]() – used to change the stroke width of the axis tooltip.
 * [`borderColor`]() – used to change the stroke color of the axis tooltip.
 * [`format`]() - by default, axis value will be displayed in the tooltip, and it can be customized by adding desired text as prefix or suffix.
