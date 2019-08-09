@@ -100,11 +100,11 @@ You can customize the selection rectangle using the below properties.
 
 {% endhighlight %}
 
-![Selection Zooming](images/zooming-panning/before_selection.jpg)
+![Selection Zooming](images/zooming-panning/before_zooming.jpg)
 
 Following screenshot shows the zoomed area
 
-![Selection Zooming](images/zooming-panning/after_selection.jpg)
+![Selection Zooming](images/zooming-panning/after_zooming.jpg)
 
 **Show axis tooltip**
 
