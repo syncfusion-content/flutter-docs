@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Syncfusion Flutter Chart Data Point Selection
-description: How to select the data point in Essential Flutter Chart
+title: Syncfusion Flutter Charts Data Point Selection
+description: Learn how to select the data point in  Flutter Charts.
 platform: flutter
 control: Chart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Selection
 
-Chart supports selection that enables you to select a segment in a series or series itself.
+The selection feature in chart let you to select a segment in a series or the series itself.
 
 {% highlight dart %} 
 
@@ -34,7 +34,7 @@ Chart supports selection that enables you to select a segment in a series or ser
 
 ## Customizing the segments
 
-You can customize the segements using the below properties.
+You can customize the segments using the below properties.
 
 * [`selectedColor`]() - used to change the background color of selected segment.
 * [`unselectedColor`]() - used to change the background color of unselected segment.
@@ -69,11 +69,11 @@ You can customize the segements using the below properties.
 
 ## Selection modes
 
-The selection features allows you to select segments with following options using [`selectionType`]() property of chart.
+The selection features allows you to select segments in following modes using [`selectionType`]() property of chart.
 
-* [`point`]() - selects the individual point.
-* [`series`]() - selects the entire series.
-* [`cluster`]() - selects the cluster of points of same or different series.
+* [`Point`]() - selects the individual data point.
+* [`Series`]() - selects the entire series.
+* [`Cluster`]() - selects the cluster of points of different series i.e selects the points with same index in each series.
 
 {% highlight dart %} 
 

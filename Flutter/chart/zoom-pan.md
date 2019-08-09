@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Zooming and Panning in Syncfusion Flutter Chart
-description: How to add ZoomPan behavior in Essential Flutter Chart
+title: Zooming and Panning in Syncfusion Flutter Charts
+description: Learn how to enable zooming and panning in Flutter Charts
 platform: flutter
 control: Chart
 documentation: ug
@@ -65,7 +65,7 @@ Double tap zooming can be enabled using [`enableDoubleTapZooming`]() property. D
 
 ## Selection zooming
 
-By speciying [`enableSelectionZooming`]() property to true, you can double tap and drag to select a range on the chart to be zoomed in.
+By specifying [`enableSelectionZooming`]() property to true, you can double tap and drag to select a range on the chart to be zoomed in.
 
 **Selection rectangle customization**
 
@@ -101,9 +101,9 @@ You can customize the selection rectangle using the below properties.
 
 **Show axis tooltip**
 
-The axis tooltip on selection zooming can be enabled using [`enable`]() property of [`crosshairTooltip`](). You can cusotmize the appearance of axis tooltip using the following properties.
+The axis tooltip on selection zooming can be enabled using [`enable`]() property of [`crosshairTooltip`](). You can customize the appearance of axis tooltip using the following properties.
 
-* [`enable`]() - used to enable the axis toolip.
+* [`enable`]() - used to enable the axis tooltip.
 * [`borderWidth`]() – used to change the stroke width of the axis tooltip.
 * [`borderColor`]() – used to change the stroke color of the axis tooltip.
 * [`format`]() - by default, axis value will be displayed in the tooltip, and it can be customized by adding desired text as prefix or suffix.
@@ -171,7 +171,7 @@ The [`enableAutoIntervalOnZooming`]() property determines the update of axis int
 
 ## Maximum zoom level
 
-The [`maximumZoomLevel`]() property defines the maximum zoming level. Zooming will be stopped after reached this value. This defaults to null.
+The [`maximumZoomLevel`]() property defines the maximum zooming level. Zooming will be stopped after reaching this value. This defaults to null.
 
 {% highlight dart %} 
 

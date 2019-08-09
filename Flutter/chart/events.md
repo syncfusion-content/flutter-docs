@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion Flutter Chart Events
-description: What are the events in Essential Flutter Chart
+description: Learn what are all the events available in Flutter Charts.
 platform: flutter
 control: Chart
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Events
 
-## Cartesian events
+## Cartesian chart events
 
 ### onTooltipRender
 
-Occurs while tooltip is rendered. Here, you can customize the text, header, x and y-positions. The arguments of [`onTooltipRender`]() event contains the following information.
+Triggers when the tooltip is rendering. Here, you can customize the text, header, x and y-positions. The [`onTooltipRender`]() event contains the following arguments.
 
 * text - specifies the content of the tooltip.
 * header - specifies the header content of the tooltip.
@@ -27,23 +27,23 @@ Occurs while tooltip is rendered. Here, you can customize the text, header, x an
 
     @override
     Widget build(BuildContext context) {
-    
-    return Scaffold(
-      body: Center(
-        child: SfCartesianChart(
-          tooltipBehavior: TooltipBehavior(enable: true),
-          onTooltipRender: (TooltipArgs args) {
-            args.text = 'Customized Text';
-          },
-        ),
-      ));
+      return Scaffold(
+        body: Center(
+          child: SfCartesianChart(
+            tooltipBehavior: TooltipBehavior(enable: true),
+            onTooltipRender: (TooltipArgs args) {
+              args.text = 'Customized Text';
+            },
+          ),
+        )
+      );
     }
 
 {% endhighlight %}
 
 ### onActualRangeChanged
 
-Occurs when the visible range of an axis is changed, i.e. value changes for minimum, maximum, and interval. Here, you can customize the visible range of an axis. The arguments of [`onActualRangeChanged`]() event contains the following information.
+Triggers when the visible range of an axis is changed, i.e. value changes for minimum, maximum, and interval. Here, you can customize the visible range of an axis. The [`onActualRangeChanged`]() event contains the following arguments.
 
 * axisName - specifies the axis name.
 * axis - holds the information about the current axis.
@@ -59,24 +59,24 @@ Occurs when the visible range of an axis is changed, i.e. value changes for mini
 
     @override
     Widget build(BuildContext context) {
-    
-    return Scaffold(
-      body: Center(
-        child: SfCartesianChart(
-          onActualRangeChanged: (ActualRangeChangedArgs args){
-            if(args.axisName == 'primaryYAxis'){
-              args.visibleMin = 10;
+      return Scaffold(
+        body: Center(
+          child: SfCartesianChart(
+            onActualRangeChanged: (ActualRangeChangedArgs args){
+              if (args.axisName == 'primaryYAxis'){
+                args.visibleMin = 10;
+              }
             }
-          },
-        ),
-      ));
+          )
+        )
+      );
     }
 
 {% endhighlight %}
 
 ### onAxisLabelRender
 
-Occurs while rendering the axis labels. Text and text styles such as color, font size, and font weight can be customized. The arguments of [`onAxisLabelRender`]() event contains the following information.
+Triggers while rendering the axis labels. Text and text styles such as color, font size, and font weight can be customized. The [`onAxisLabelRender`]() event contains the following arguments.
 
 * text - specifies the axis label to be rendered.
 * value - specifies the actual value of the current axis label.
@@ -89,17 +89,16 @@ Occurs while rendering the axis labels. Text and text styles such as color, font
 
     @override
     Widget build(BuildContext context) {
-    
-    return Scaffold(
-      body: Center(
+      return Scaffold(
+        body: Center(
         child: SfCartesianChart(
           onAxisLabelRender: (AxisLabelRenderArgs args) {
             if(args.axisName == 'primaryXAxis'){
               args.text = 'Text';
               args.textStyle.color = Colors.red;
             }
-          },
-        ),
+          }
+        )
       ));
     }
 
@@ -107,7 +106,7 @@ Occurs while rendering the axis labels. Text and text styles such as color, font
 
 ### onDataLabelRender
 
-Occurs when data label is rendering. Text and text styles such as color, font size, and font weight can be customized. The arguments of [`onDataLabelRender`]() event contains the following information.
+Triggers when data label is rendering. Text and text styles such as color, font size, and font weight can be customized. The [`onDataLabelRender`]() event contains the following arguments.
 
 * text - specifies the content of the data label.
 * textStyle – used to change the text color, size, font family, font style, and font weight.
@@ -140,7 +139,7 @@ Occurs when data label is rendering. Text and text styles such as color, font si
 
 ### onLegendItemRender
 
-Occurs when the legend item is rendered. Here, you can customize the legend’s text, and shape.  The arguments of [`onLegendItemRender`]() event contains the following information.
+Triggers when the legend item is rendered. Here, you can customize the legend’s text, and shape.  The [`onLegendItemRender`]() event contains the following arguments.
 
 * text - specifies the content of the legend.
 * pointIndex - specifies the current point index that is applicable for circular chart type alone.
@@ -168,7 +167,7 @@ Occurs when the legend item is rendered. Here, you can customize the legend’s 
 
 ### onTrackballPositionChanging
 
-Occurs while the trackball position is changed. Here, you can customize the text of the trackball.The arguments of [`onTrackballPositionChanging`]() event contains the following information.
+Triggers while the trackball position is changed. Here, you can customize the text of the trackball.The [`onTrackballPositionChanging`]() event contains the following argument.
 
 * chartPointInfo - holds the information about the current point.
 
@@ -193,7 +192,7 @@ Occurs while the trackball position is changed. Here, you can customize the text
 
 ### onCrosshairPositionChanging
 
-Occurs while the crosshair position is changed. Here, you can customize the text and line color of the crosshair.The arguments of [`onCrosshairPositionChanging`]() event contains the following information.
+Triggers while the crosshair position is changed. Here, you can customize the text and line color of the crosshair.The [`onCrosshairPositionChanging`]() event contains the following arguments.
 
 * text - specifies the crosshair content.
 * value - specifies the actual value of the crosshair.
@@ -223,7 +222,7 @@ Occurs while the crosshair position is changed. Here, you can customize the text
 
 ### onZooming
 
-Occurs when the zooming action is in progress. The arguments of [`onZooming`]() event contains the following information.
+Triggers when the zooming action is in progress. The [`onZooming`]() event contains the following arguments.
 
 * axis - holds the information about the current axis.
 * currentZoomPosition - specifies the current zoom position of an axis.
@@ -256,7 +255,7 @@ Occurs when the zooming action is in progress. The arguments of [`onZooming`]() 
 
 ### onZoomStart
 
-Occurs when zooming action begins. The arguments of [`onZoomStart`]() event contains the following information.
+Triggers when zooming action begins. The [`onZoomStart`]() event contains the following arguments.
 
 * axis - holds the information about the current axis.
 * currentZoomPosition - specifies the current zoom position of an axis.
@@ -289,7 +288,7 @@ Occurs when zooming action begins. The arguments of [`onZoomStart`]() event cont
 
 ### onZoomEnd
 
-Occurs when the zooming action is completed. The arguments of [`onZoomEnd`]() event contains the following information.
+Triggers when the zooming action is completed. The [`onZoomEnd`]() event contains the following arguments.
 
 * axis - holds the information about the current axis.
 * currentZoomPosition - specifies the current zoom position of an axis.
@@ -322,7 +321,7 @@ Occurs when the zooming action is completed. The arguments of [`onZoomEnd`]() ev
 
 ### onZoomReset
 
-Occurs when zoomed state is reset. The arguments of [`onZoomReset`]() event contains the following information.
+Triggers when zoomed state is reset. The  [`onZoomReset`]() event contains the following arguments.
 
 * axis - holds the information about the current axis.
 * currentZoomPosition - specifies the current zoom position of an axis.
@@ -355,7 +354,7 @@ Occurs when zoomed state is reset. The arguments of [`onZoomReset`]() event cont
 
 ### onPointTapped
 
-Occurs when tapping the series point. The arguments of [`onPointTapped`]() event contains the following information.
+Triggers when tapping the series point. The [`onPointTapped`]() event contains the following arguments.
 
 * seriesIndex - specifies the current series index.
 * pointIndex - specifies the current point index.
@@ -380,7 +379,7 @@ Occurs when tapping the series point. The arguments of [`onPointTapped`]() event
 
 ### onAxisLabelTapped
 
-Occurs when tapping the axis label. The arguments of [`onPointTapped`]() event contains the following information.
+Triggers when tapping the axis label. The  [`onPointTapped`]() event contains the following arguments.
 
 * axis - holds the information about the current axis.
 * text - specifies the content of the axis label.
@@ -404,7 +403,7 @@ Occurs when tapping the axis label. The arguments of [`onPointTapped`]() event c
 
 ### onLegendTapped
 
-Occurs when tapping the legend item. The arguments of [`onLegendTapped`]() event contains the following information.
+Triggers when tapping the legend item. The  [`onLegendTapped`]() event contains the following arguments.
 
 * seriesIndex - specifies the current series index.
 * pointIndex - specifies the current point index that is applicable for circular series.
@@ -430,7 +429,7 @@ Occurs when tapping the legend item. The arguments of [`onLegendTapped`]() event
 
 ### onSelectionChanged
 
-Occurs while selection changes. Here you can customize the selectedColor, unselectedColor, selectedBorderColor, selectedBorderWidth, unselectedBorderColor, and unselectedBorderWidth properties. The arguments of [`onSelectionChanged`]() event contains the following information.
+Triggers while selection changes. Here you can customize the selectedColor, unselectedColor, selectedBorderColor, selectedBorderWidth, unselectedBorderColor, and unselectedBorderWidth properties. The [`onSelectionChanged`]() event contains the following arguments.
 
 * series - specifies current series.
 * seriesIndex - specifies the current series index.
@@ -466,11 +465,11 @@ Occurs while selection changes. Here you can customize the selectedColor, unsele
 
 {% endhighlight %}
 
-## Cirular events
+## Circular chart events
 
 ### onLegendItemRender
 
-Occurs when the legend item is rendered. Here, you can customize the legend’s text, and shape.  The arguments of [`onLegendItemRender`]() event contains the following information.
+Triggers when the legend item is rendered. Here, you can customize the legend’s text, and shape.  The [`onLegendItemRender`]() event contains the following arguments.
 
 * text - specifies the content of the legend.
 * pointIndex - specifies the current point index that is applicable for circular chart type alone.
@@ -498,7 +497,7 @@ Occurs when the legend item is rendered. Here, you can customize the legend’s 
 
 ### onTooltipRender
 
-Occurs while tooltip is rendered. Here, you can customize the text, header, x and y-positions. The arguments of [`onTooltipRender`]() event contains the following information.
+Triggers while tooltip is rendered. Here, you can customize the text, header, x and y-positions. The [`onTooltipRender`]() event contains the following arguments.
 
 * text - specifies the content of the tooltip.
 * header - specifies the header content of the tooltip.
@@ -528,7 +527,7 @@ Occurs while tooltip is rendered. Here, you can customize the text, header, x an
 
 ### onDataLabelRender
 
-Occurs when data label is rendering. Text and text styles such as color, font size, and font weight can be customized. The arguments of [`onDataLabelRender`]() event contains the following information.
+Triggers when data label is rendering. Text and text styles such as color, font size, and font weight can be customized. The [`onDataLabelRender`]() event contains the following arguments.
 
 * text - specifies the content of the data label.
 * textStyle – used to change the text color, size, font family, font style, and font weight.
@@ -561,7 +560,7 @@ Occurs when data label is rendering. Text and text styles such as color, font si
 
 ### onPointTapped
 
-Occurs when tapping the series point. The arguments of [`onPointTapped`]() event contains the following information.
+Triggers when tapping the series point. The [`onPointTapped`]() event contains the following arguments.
 
 * seriesIndex - specifies the current series index.
 * pointIndex - specifies the current point index.
@@ -586,7 +585,7 @@ Occurs when tapping the series point. The arguments of [`onPointTapped`]() event
 
 ### onLegendTapped
 
-Occurs when tapping the legend item. The arguments of [`onLegendTapped`]() event contains the following information.
+Triggers when tapping the legend item. The [`onLegendTapped`]() event contains the following arguments.
 
 * seriesIndex - specifies the current series index.
 * pointIndex - specifies the current point index that is applicable for circular series.
@@ -612,7 +611,7 @@ Occurs when tapping the legend item. The arguments of [`onLegendTapped`]() event
 
 ### onSelectionChanged
 
-Occurs while selection changes. Here you can customize the selectedColor, unselectedColor, selectedBorderColor, selectedBorderWidth, unselectedBorderColor, and unselectedBorderWidth properties. The arguments of [`onSelectionChanged`]() event contains the following information.
+Triggers while selection changes. Here you can customize the selectedColor, unselectedColor, selectedBorderColor, selectedBorderWidth, unselectedBorderColor, and unselectedBorderWidth properties. The [`onSelectionChanged`]() event contains the following arguments.
 
 * series - specifies current series.
 * seriesIndex - specifies the current series index.

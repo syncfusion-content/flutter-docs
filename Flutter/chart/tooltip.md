@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Syncfusion Flutter Chart Tooltip
-description: How to enable and customize the tooltip in Essential Flutter Chart
+title: Syncfusion Flutter Charts Tooltip
+description: Learn how to enable and customize the tooltip in Flutter Charts
 platform: flutter
 control: Chart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Tooltip
 
-Chart provides tooltip support for all series. It is used to show information about the segment, when you tap on the segment. To enable the tooltip, you need to set [`enableTooltip`]() property as *true*.
+Chart provides tooltip support for all the series. It is used to show information about the segment, when you tap on the segment. To enable the tooltip, you need to set [`enableTooltip`]() property as *true*.
 
 {% highlight dart %} 
 
@@ -53,7 +53,7 @@ You can use the following properties to customize the tooltip appearance.
 * [`canShowMarker`]() - toggles the visibility of the marker in the tooltip.
 * [`header`]() - specifies the header for tooltip. By default, the series name will be displayed in the header.
 * [`format`]() - formats the tooltip text. By default, the tooltip will be rendered with x and y-values. You can add prefix or suffix to x, y, and series name values in the tooltip by formatting them.
-* [`shadowColor`]() - specifes the color of the tooltip shadow.
+* [`shadowColor`]() - specifies the color of the tooltip shadow.
 
 {% highlight dart %} 
 
@@ -109,7 +109,7 @@ The ActivationMode enum contains the following values:
 
 * [`longPress`]() – Activates tooltip only when performing the long press action.
 * [`singleTap`]() – Activates tooltip only when performing single tap action.
-* [`doubleTap`]() - Activates tooltip only when performing doule tap action.
+* [`doubleTap`]() - Activates tooltip only when performing double tap action.
 * [`none`]() – Hides the visibility of tooltip when setting activation mode to none.
 
 {% highlight dart %} 
