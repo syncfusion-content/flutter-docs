@@ -67,6 +67,8 @@ You can customize the segments using the below properties.
 
 {% endhighlight %}
 
+![Customizing segments](images/selection/customizing_segments.jpg)
+
 ## Selection modes
 
 The selection features allows you to select segments in following modes using [`selectionType`]() property of chart.
@@ -90,6 +92,7 @@ The selection features allows you to select segments in following modes using [`
 
 {% endhighlight %}
 
+![Cluster mode](images/selection/cluster_mode.jpg)
 
 ## Multi-selection
 
@@ -110,6 +113,8 @@ Multiple selection can be enabled using the [`enableMultiSelection`]() property 
 
 {% endhighlight %}
 
+![Multi selection](images/selection/multi_select.jpg)
+
 ## Selection on initial rendering
 
 You can select a point or series programmatically on a chart using [`initialSelectedDataIndexes`]() property of chart.
@@ -128,3 +133,5 @@ You can select a point or series programmatically on a chart using [`initialSele
     }
 
 {% endhighlight %}
+
+![Initial selection](images/selection/initial_render_selection.jpg)

@@ -36,9 +36,7 @@ Chart supports annotations which allows you to mark the specific area of interes
     }
 
 {% endhighlight %}
-
-![Chart annotation](images/getting-started/livechart.png)
-
+![Annotation](images/annotation/default_annotation.jpg)
 ## Positioning the annotation
 
 The [`x`]() and [`y`]() values can be specified with axis units or pixel units, and these can be identified by using [`coordinateUnit`]() property.
@@ -104,6 +102,8 @@ To position the annotation based on the pixel values, set the [`CoordinateUnit`]
 
 {% endhighlight %}
 
+![Positioning based on coordinateUnit as pixels](images/annotation/annotation_pixel.jpg)
+
 ## Adding multiple annotation
 
 You can add multiple annotations to the Chart as depicted in below code snippet.
@@ -118,27 +118,25 @@ You can add multiple annotations to the Chart as depicted in below code snippet.
             child: Container(
               child: SfCartesianChart(
                 annotations: <CartesianChartAnnotation>[
-                  CartesianChartAnnotation(
-                    child: Container(child: const Text('High')),
-                    coordinateUnit: CoordinateUnit.logicalPixel,
-                    x: 150,
-                    y: 200),
-                  CartesianChartAnnotation(
-                    child: Container(child: const Text('Low')),
-                    coordinateUnit: CoordinateUnit.logicalPixel,
-                    x: 250,
-                    y: 200)
-                ]
-              )
-            )
-          )
-        )
-      );
-    }
+               CartesianChartAnnotation(
+                  child: Container(child: const Text('High')),
+                  coordinateUnit: CoordinateUnit.logicalPixel,
+                  x: 90,
+                  y: 200),
+              CartesianChartAnnotation(
+                  child: Container(child: const Text('Low')),
+                  coordinateUnit: CoordinateUnit.logicalPixel,
+                  x: 170,
+                  y: 200)
+            ],
+        )),
+      )),
+    );
+  }
 
 {% endhighlight %}
 
-![Multiple annotation](images/getting-started/livechart.png)
+![Multiple annotation](images/annotation/multiple_annotation_pixel.jpg)
 
 ## Adding annotation for multiple axes
 
@@ -209,4 +207,5 @@ When there are multiple axes in the chart, annotation can be added for a particu
 
 {% endhighlight %}
 
-![Multiple axis annotation](images/getting-started/livechart.png)
+![Multiple axis annotation](images/annotation/annotation_axis.jpg)
+

@@ -87,8 +87,9 @@ You can customize the selection rectangle using the below properties.
           width: 350, 
           child: SfCartesianChart(
             zoomPanBehavior: ZoomPanBehavior(
+              enableSelectionZooming: true,
               selectionRectBorderColor: Colors.red,
-              selectionRectBorderWidth: 5,
+              selectionRectBorderWidth: 1,
               selectionRectColor: Colors.grey,
             ),
           )
@@ -98,6 +99,12 @@ You can customize the selection rectangle using the below properties.
   }
 
 {% endhighlight %}
+
+![Selection Zooming](images/zooming-panning/before_zooming.jpg)
+
+Following screenshot shows the zoomed area
+
+![Selection Zooming](images/zooming-panning/after_zooming.jpg)
 
 **Show axis tooltip**
 

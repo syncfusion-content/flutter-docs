@@ -35,9 +35,9 @@ The [`legend`]() contains list of chart series/data points in chart. The informa
 
 {% endhighlight %}
 
-![Legend](images/getting-started/livechart.png)
+![Legend](images/legend/default_legend.jpg)
 
-## Customizing legend item text
+## Customizing legend 
 
 The [`name`]() property of [`CartesianSeries`]() is used to define the label for the corresponding series legend item and for [`CircularSeries`]() type chart by default values mapped with [`xValueMapper`]() will be displayed. The appearance of the label can be customized using the below properties.
 
@@ -80,7 +80,7 @@ The [`name`]() property of [`CartesianSeries`]() is used to define the label for
 
 {% endhighlight %}
 
-![Legend text](images/getting-started/livechart.png)
+![Customized Legend](images/legend/customized_legend.jpg)
 
 ### Legend title
 
@@ -100,16 +100,22 @@ The following properties are used to define and customize the [`title`]() of [`l
     Widget build(BuildContext context) {
       return Scaffold(
         body: Center(
-          child: Container(
-            child: SfCircularChart(
-              legend: Legend(
-                isVisible: true,
-                textStyle: ChartTextStyle(
-                  color: Colors.red,
-                  fontSize: 15,
-                  fontStyle: FontStyle.italic,
-                  fontWeight: FontWeight.w900
-                )
+            child: Container(
+                child:SfCircularChart(
+                legend: Legend(
+                    isVisible: true,
+                    title: LegendTitle(text:'Country',
+                      textStyle: ChartTextStyle(
+                      color: Colors.red,
+                      fontSize: 15,
+                      fontStyle: FontStyle.italic,
+                      fontWeight: FontWeight.w900
+                    )),
+                series: <CircularSeries>[
+              PieSeries<ChartData, String>(
+                dataSource: chartData,
+                xValueMapper: (ChartData data, _) => data.x,
+                yValueMapper: (ChartData data, _) => data.y,
               ),
               series: <CircularSeries>[
                 PieSeries<ChartData, String>(
@@ -126,7 +132,7 @@ The following properties are used to define and customize the [`title`]() of [`l
 
 {% endhighlight %}
 
-![Legend text](images/getting-started/livechart.png)
+![Legend title](images/legend/legend_title.jpg)
 
 ### Toggles the series visibility
 
@@ -189,8 +195,6 @@ The [`isVisible`]() property of [`legend`]() is used to toggle the visibility of
 
 {% endhighlight %}
 
-![Legend visibility](images/getting-started/livechart.png)
-
 ### Legend item visibility
 
 You can control the visibility of a particular series legend item using the [`isVisibleInLegend`]() property of series. The default value of the [`isVisibleInLegend`]() property is *true*. If it is set to false, then the legend item for this specific series will not be displayed in the legend.
@@ -208,6 +212,11 @@ You can control the visibility of a particular series legend item using the [`is
               ),
               primaryXAxis: CategoryAxis(),
               series: <ColumnSeries>[
+                ColumnSeries<ChartData, String>(                  
+                  dataSource: chartData,
+                  xValueMapper: (ChartData data, _) => data.x,
+                  yValueMapper: (ChartData data, _) => data.y
+                ),
                 ColumnSeries<ChartData, String>(
                   isVisibleInLegend: false,
                   dataSource: chartData,
@@ -222,6 +231,8 @@ You can control the visibility of a particular series legend item using the [`is
     }
 
 {% endhighlight %}
+
+![Legend isVisibleInLegend](images/legend/toggle_visibility.jpg)
 
 ### Legend over flow
 
@@ -254,7 +265,7 @@ The legend items can be placed in multiple rows or scroll can be enabled using t
 
 {% endhighlight %}
 
-![Legend over flow](images/getting-started/livechart.png)
+![Legend](images/legend/overflow_wrap.jpg))
 
 
 ### Positioning the legend
@@ -291,7 +302,7 @@ You can change the position of the legend inside the chart. The following proper
 
 {% endhighlight %}
 
-![Legend position](images/getting-started/livechart.png)
+![Legend](images/legend/legend_position.jpg))
 
 ### Legend item template
 
@@ -329,5 +340,3 @@ You can customize the appearance of legend items with your template by using [`l
     }
 
 {% endhighlight %}
-
-![Legend template](images/getting-started/livechart.png)

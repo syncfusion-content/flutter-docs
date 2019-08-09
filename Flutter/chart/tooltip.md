@@ -39,6 +39,8 @@ Chart provides tooltip support for all the series. It is used to show informatio
 
 {% endhighlight %}
 
+![Tooltip](images/tooltip/default_tooltip.jpg)
+
 ## Customizing the appearance
 
 You can use the following properties to customize the tooltip appearance.
@@ -75,6 +77,8 @@ You can use the following properties to customize the tooltip appearance.
 
 {% endhighlight %}
 
+![Customized tooltip](images/tooltip/customized_tooltip.jpg)
+
 ## Tooltip template
 
 You can customize the appearance of the tooltip with your own widget by using the [`builder`]() property of [`tooltipBehavior`]().
@@ -100,6 +104,8 @@ You can customize the appearance of the tooltip with your own widget by using th
     }
 
 {% endhighlight %}
+
+![Tooltip template](images/tooltip/tooltip_template.jpg)
 
 ##	Activation mode
 

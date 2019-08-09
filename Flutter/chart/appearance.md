@@ -32,7 +32,7 @@ Chart renders based on the parent widget size. If you need the chart to be rende
 
 {% endhighlight %}
 
-![Chart size](images/getting-started/livechart.png)
+![Chart size](images/appearance/chart_sizing.jpg)
 
 ## Chart margin
 
@@ -45,15 +45,13 @@ Margin to the chart can be specified using the [`margin`]() property.
       return Scaffold(
         body: SafeArea(
           child: Center(
-            child: Container(
-              height: 300, 
-              width: 350, 
-              child: SfCartesianChart(
-                borderColor: Colors.red,
-                borderWidth: sqrt1_2,
-                margin: EdgeInsets.all(15)
-              )
-            )
+        child: Container(
+          height: 300, 
+          width: 350, 
+          child: SfCartesianChart(
+              borderColor: Colors.red,
+              borderWidth: 2,
+              margin: EdgeInsets.all(15)
           )
         )
       );
@@ -61,7 +59,7 @@ Margin to the chart can be specified using the [`margin`]() property.
 
 {% endhighlight %}
 
-![Chart margin](images/getting-started/livechart.png)
+![Chart Margin](images/appearance/chart_margin.jpg)
 
 ## Plot area customization
 
@@ -96,4 +94,4 @@ You can customize the plot area of the chart using the below properties.
 
 {% endhighlight %}
 
-![Chart plot area](images/getting-started/livechart.png)
+![Chart plot area](images/appearance/plot_area_customization.jpg)
