@@ -35,7 +35,7 @@ Axis visibility can be controlled using the [`isVisible`]() property of axis. De
 
 {% endhighlight %}
 
-![Axis visibility](images/getting-started/livechart.png)
+![Axis visibility](images/axis-customization/axis_visible.jpg)
 
 ### Axis title
 
@@ -61,7 +61,7 @@ The [`title`]() property in axis provides options to customize the text and font
                        title: AxisTitle(
                          text: 'X-Axis',
                          textStyle: ChartTextStyle(
-                           color: Colors.red,
+                           color: Colors.deepOrange,
                            fontFamily: 'Roboto',
                            fontSize: 16,
                            fontStyle: FontStyle.italic,
@@ -76,7 +76,7 @@ The [`title`]() property in axis provides options to customize the text and font
 
 {% endhighlight %}
 
-![Axis title](images/getting-started/livechart.png)
+![Axis title](images/axis-customization/axis_title.jpg)
 
 ### Axis label rotation
 
@@ -100,7 +100,7 @@ The [`labelRotation`]() property of axis can be used to rotate the axis labels p
 
 {% endhighlight %}
 
-![Axis label rotation](images/getting-started/livechart.png)
+![Axis label rotation](images/axis-customization/label_rotation.jpg)
 
 ### Axis line customization
 
@@ -120,7 +120,7 @@ The [`labelRotation`]() property of axis can be used to rotate the axis labels p
                 child: SfCartesianChart(
                      primaryXAxis: CategoryAxis(
                        axisLine: AxisLine(
-                         color: Colors.red,
+                         color: Colors.deepOrange,
                          width: 2,
                          dashArray: <double>[5,5]
                        )
@@ -132,7 +132,7 @@ The [`labelRotation`]() property of axis can be used to rotate the axis labels p
 
 {% endhighlight %}
 
-![Axis line](images/getting-started/livechart.png)
+![Axis line](images/axis-customization/axis_line_custom.jpg)
 
 ### Axis label customization
 
@@ -155,7 +155,7 @@ The [`labelStyle`]() property in axis provides options to customize the font of 
                 child: SfCartesianChart(
                      primaryXAxis: NumericAxis(
                        labelStyle: ChartTextStyle(
-                         color: Colors.red,
+                         color: Colors.deepOrange,
                          fontFamily: 'Roboto',
                          fontSize: 14,
                          fontStyle: FontStyle.italic,
@@ -169,7 +169,7 @@ The [`labelStyle`]() property in axis provides options to customize the font of 
 
 {% endhighlight %}
 
-![Axis label](images/getting-started/livechart.png)
+![Axis label](images/axis-customization/label_custom.jpg)
 
 ### Formatting axis label content
 
@@ -193,7 +193,7 @@ The [`labelFormat`]() property is used to add prefix or suffix with the axis lab
 
 {% endhighlight %}
 
-![Axis label format](images/getting-started/livechart.png)
+![Axis label format](images/axis-customization/label_custom.jpg)
 
 ### Label and tick positioning
 
@@ -218,7 +218,7 @@ Axis labels and ticks can be positioned inside or outside the chart area by usin
 
 {% endhighlight %}
 
-![Axis label and tick position](images/getting-started/livechart.png)
+![Axis label and tick position](images/axis-customization/label_tick_poisition.jpg)
 
 ### Edge label placement
 
@@ -232,7 +232,7 @@ Labels with long text at the edges of an axis may appear partially outside the c
         body: Center(
             child: Container(
                 child:SfCartesianChart(
-                     primaryXAxis: CategoryAxis(
+                     primaryXAxis: NumericAxis(
                        edgeLabelPlacement: EdgeLabelPlacement.shift
                     ), 
                 )
@@ -242,7 +242,7 @@ Labels with long text at the edges of an axis may appear partially outside the c
 
 {% endhighlight %}
 
-![Edge label placement](images/getting-started/livechart.png)
+![Edge label placement](images/axis-customization/edge_label_placement.jpg)
 
 ### Grid lines customization
 
@@ -275,7 +275,7 @@ The [`width`]() property is used to control the visibility of grid lines. [`majo
 
 {% endhighlight %}
 
-![Grid lines customization](images/getting-started/livechart.png)
+![Grid lines customization](images/axis-customization/gridLine.jpg)
 
 ### Tick lines customization
 
@@ -309,7 +309,7 @@ The [`majorTickLines`]() and [`minorTickLines`]() properties in axis are used to
 
 {% endhighlight %}
 
-![Tick lines customization](images/getting-started/livechart.png)
+![Tick lines customization](images/axis-customization/tickLine.jpg)
 
 ### Inversing axis
 
@@ -333,7 +333,7 @@ Axis can be inversed using the [`isInversed`]() property of an axis. Default val
 
 {% endhighlight %}
 
-![Inversing axis](images/getting-started/livechart.png)
+![Inversing axis](images/axis-customization/inverse.jpg)
 
 ### Placing axes at the opposite side
 
@@ -357,7 +357,7 @@ The [`opposedPosition`]() property of axis can be used to place the axis at the 
 
 {% endhighlight %}
 
-![Opposed axis](images/getting-started/livechart.png)
+![Opposed axis](images/axis-customization/opposite.jpg)
 
 ### Offset the rendering
 
@@ -381,7 +381,7 @@ The [`plotOffset`]() property is used to offset the rendering of the axis at sta
 
 {% endhighlight %}
 
-![Plot Offset](images/getting-started/livechart.png)
+![Plot Offset](images/axis-customization/plot_offset.jpg)
 
 ### Maximum number of labels per 100 pixels
 
@@ -395,8 +395,8 @@ By default, a maximum of 3 labels are displayed for each 100 pixels in axis. The
         body: Center(
             child: Container(
                 child:SfCartesianChart(
-                     primaryXAxis: NumericAxis(
-                       maximumLabels: 5
+                     primaryXAxis: CategoryAxis(
+                       maximumLabels: 3
                      ), 
                 )
             )
@@ -404,8 +404,6 @@ By default, a maximum of 3 labels are displayed for each 100 pixels in axis. The
     }
 
 {% endhighlight %}
-
-![Maximum labels](images/getting-started/livechart.png)
 
 ### Visible minimum
 
@@ -420,7 +418,7 @@ The [`visibleMinimum`]() property is used to set the minimum visible range of an
             child: Container(
                 child:SfCartesianChart(
                      primaryXAxis: NumericAxis(
-                       visibleMinimum: 2
+                       visibleMinimum: 2,
                      ), 
                 )
             )
@@ -428,8 +426,6 @@ The [`visibleMinimum`]() property is used to set the minimum visible range of an
     }
 
 {% endhighlight %}
-
-![Visible minimum](images/getting-started/livechart.png)
 
 ### Visible maximum
 
@@ -453,8 +449,6 @@ The [`visibleMaximum`]() property is used to set the minimum visible range of an
 
 {% endhighlight %}
 
-![Visible maximum](images/getting-started/livechart.png)
-
 ## Smart axis labels
 
 Axis labels may overlap with each other based on chart dimensions and label size. The [`labelIntersectAction`]() property of axis is used to avoid overlapping of axis labels. The default value of the [`labelIntersectAction`]() is [`hide`](). Other available values are [`none`](), [`wrap`](), [`multipleRows`](), [`rotate45`]() and [`rotate90`]().
@@ -477,7 +471,7 @@ Axis labels may overlap with each other based on chart dimensions and label size
 
 {% endhighlight %}
 
-![Label intesect action](images/getting-started/livechart.png)
+![Label intesect action](images/axis-customization/smartLabels.jpg)
 
 ## Multiple axes
 
@@ -490,50 +484,52 @@ User can add n number of axis to the chart. Using the [`xAxisName`]() and [`yAxi
         return Scaffold(
         body: Center(
             child: Container(
-                child:SfCartesianChart(
-                primaryXAxis:
-                    CategoryAxis(title: AxisTitle(text: 'Primary X Axis')),
-                primaryYAxis:
-                    NumericAxis(title: AxisTitle(text: 'Primary Y Axis')),
-                //Adding multiple axis
-                axes: <ChartAxis>[
-              NumericAxis(
-                  name: 'xAxis',
-                  opposedPosition: true,
-                  title: AxisTitle(text: 'Secondary X Axis')),
-              NumericAxis(
-                  name: 'yAxis',
-                  opposedPosition: true,
-                  title: AxisTitle(text: 'Secondary Y Axis'))
-            ],
-                series: <ChartSeries>[
-              LineSeries<SalesData, String>(
-                  dataSource: [
-                    SalesData('Jan', 35),
-                    SalesData('Feb', 28),
-                    SalesData('Mar', 34),
-                    SalesData('Apr', 32),
-                    SalesData('May', 40)
-                  ],
-                  xValueMapper: (SalesData sales, _) => sales.year,
-                  yValueMapper: (SalesData sales, _) => sales.sales),
-              LineSeries<SalesData, double>(
-                  dataSource: [
-                    SalesData('Jan', 15, 1),
-                    SalesData('Feb', 8, 2),
-                    SalesData('Mar', 14, 3),
-                    SalesData('Apr', 12, 4),
-                    SalesData('May', 20, 5)
-                  ],
-                  xValueMapper: (SalesData sales, _) => sales.numeric,
-                  yValueMapper: (SalesData sales, _) => sales.sales,
-                  xAxisName: 'xAxis',
-                  yAxisName: 'yAxis')
-            ])
+                child: SfCartesianChart(
+                    primaryXAxis: CategoryAxis(
+                        title: AxisTitle(text: 'Primary X Axis')),
+                    primaryYAxis: NumericAxis(
+                        title: AxisTitle(text: 'Primary Y Axis')),
+                    //Adding multiple axis
+                    axes: <ChartAxis>[
+                      NumericAxis(
+                          name: 'xAxis',
+                          opposedPosition: true,
+                          interval:1,
+                          minimum: 0,
+                          maximum: 5,
+                          title: AxisTitle(text: 'Secondary X Axis')),
+                      NumericAxis(
+                          name: 'yAxis',
+                          opposedPosition: true,
+                          title: AxisTitle(text: 'Secondary Y Axis'))
+                    ],
+                    series: <ChartSeries>[
+                      LineSeries<SalesData, String>(
+                          dataSource: [
+                            SalesData('Jan', 35),
+                            SalesData('Feb', 28),
+                            SalesData('Mar', 34),
+                            SalesData('Apr', 32),
+                            SalesData('May', 40)
+                          ],
+                          xValueMapper: (SalesData sales, _) => sales.year,
+                          yValueMapper: (SalesData sales, _) => sales.sales),
+                      LineSeries<SalesData, double>(
+                          dataSource: [
+                            SalesData('Jan', 15, 1),
+                            SalesData('Feb', 11, 2),
+                            SalesData('Mar', 14, 3),
+                            SalesData('Apr', 12, 4),
+                          ],
+                          xValueMapper: (SalesData sales, _) => sales.numeric,
+                          yValueMapper: (SalesData sales, _) => sales.sales,
+                          xAxisName: 'xAxis',
+                          yAxisName: 'yAxis')
+                    ])
             )
         ));
     }
 
 {% endhighlight %}
 
-![Multiple axes](images/getting-started/livechart.png)
+![Multiple axes](images/axis-customization/multiple_axis.jpg)
