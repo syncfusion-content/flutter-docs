@@ -106,7 +106,7 @@ To position the annotation based on the pixel values, set the [`CoordinateUnit`]
 
 ## Adding multiple annotation
 
-You can add muliple annotations to the Chart as depicted in below code snippet.
+You can add multiple annotations to the Chart as depicted in below code snippet.
 
 {% highlight dart %} 
 

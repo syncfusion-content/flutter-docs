@@ -140,7 +140,7 @@ Data label can be added to a chart series by enabling the [`isVisible`]() option
 * [`fontSize`]() - used to change the font size for the data label.
 * [`margin`]() - used to change the margin size for data labels.
 * [`opacity`]() - used to control the transparency of the data label.
-* [`position`]() - used to align the data label to positions. The available options to customize the psotions are [`outer`](), [`auto`](), [`top`](), [`bottom`]() and [`middle`]().
+* [`position`]() - used to align the data label to positions. The available options to customize the positions are [`outer`](), [`auto`](), [`top`](), [`bottom`]() and [`middle`]().
 * [`borderRadius`]() - used to add the rounded corners to the data label shape.
 * [`angle`]() - used to rotate the labels.
 
@@ -208,7 +208,7 @@ Data label considers the text format used in the vertical axis by default.
 
 ### Label position
 
-The [`position`]() property is used to position the cartesian chart type data labels at [`top`](), [`bottom`](), [`auto`](), [`outer`]() and [`middle`]() position of the actual data point position. By default, labels are [`auto`]() positioned. You can move the labels horizontally and vertically using OffsetX and OffsetY properties respectively.
+The [`position`]() property is used to position the Cartesian chart type data labels at [`top`](), [`bottom`](), [`auto`](), [`outer`]() and [`middle`]() position of the actual data point position. By default, labels are [`auto`]() positioned. You can move the labels horizontally and vertically using OffsetX and OffsetY properties respectively.
 
 The [`labelPosition`]() property is used to place the circular series data labels either [`inside`]() or [`outside`](). By default the label of circular chart is placed [`inside`]() the series.
 
@@ -241,7 +241,7 @@ The [`labelPosition`]() property is used to place the circular series data label
 
 ![Data label position](images/getting-started/livechart.png)
 
-N> The [`position`]() property is used to position the cartesian chart labels whereas [`labelPosition`]() property is used to position the circular chart labels.
+N> The [`position`]() property is used to position the Cartesian chart labels whereas [`labelPosition`]() property is used to position the circular chart labels.
 
 ### Smart labels
 
