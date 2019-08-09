@@ -38,7 +38,7 @@ Numeric axis uses numerical scale and displays numbers as labels. The default ho
 
 {% endhighlight %}
 
-![Numeric axis](images/getting-started/livechart.png)
+![Numeric axis](images/axis-types/numeric.jpg)
 
 
 ### Customizing numeric range
@@ -53,9 +53,9 @@ To customize the range of an axis, you can use the [`minimum`]() and [`maximum`]
         body: Center(
             child: Container(
                 child: SfCartesianChart(
-                   primaryXAxis: NumericAxis(
+                   primaryYAxis: NumericAxis(
                      minimum: 10,
-                     maximum: 60
+                     maximum: 50
                    ),  
                 )
             )
@@ -64,7 +64,7 @@ To customize the range of an axis, you can use the [`minimum`]() and [`maximum`]
 
 {% endhighlight %}
 
-![Numeric axis range](images/getting-started/livechart.png)
+![Numeric axis range](images/axis-types/numeric_range.jpg)
 
 ### Customizing numeric interval
 
@@ -78,8 +78,8 @@ Axis interval can be customized using the [`interval`]() property of [`ChartAxis
         body: Center(
             child: Container(
                 child: SfCartesianChart(
-                   primaryXAxis: NumericAxis(
-                     interval: 2
+                   primaryYAxis: NumericAxis(
+                     interval: 10
                    ),  
                 )
             )
@@ -88,7 +88,7 @@ Axis interval can be customized using the [`interval`]() property of [`ChartAxis
 
 {% endhighlight %}
 
-![Numeric axis interval](images/getting-started/livechart.png)
+![Numeric axis interval](images/axis-types/numeric_interval.jpg)
 
 ### Apply padding to the range
 
@@ -109,12 +109,12 @@ When the value of [`rangePadding`]() property is [`additional`](), axis range wi
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-        body: Center(
+            body: Center(
             child: Container(
                 child: SfCartesianChart(
-                   primaryXAxis: NumericAxis(
-                     rangePadding: ChartRangePadding.additional
-                   ),  
+                   primaryYAxis: NumericAxis(
+                    rangePadding: ChartRangePadding.additional
+                   )  
                 )
             )
         ));
@@ -122,7 +122,7 @@ When the value of [`rangePadding`]() property is [`additional`](), axis range wi
 
 {% endhighlight %}
 
-![RangePadding additional](images/getting-started/livechart.png)
+![RangePadding additional](images/axis-types/numeric_additional.jpg)
 
 **auto**
 
@@ -136,7 +136,7 @@ When the value of [`rangePadding`]() property is [`auto`](), the horizontal nume
         body: Center(
             child: Container(
                 child: SfCartesianChart(
-                   primaryXAxis: NumericAxis(
+                   primaryYAxis: NumericAxis(
                      rangePadding: ChartRangePadding.auto
                    ),  
                 )
@@ -146,7 +146,7 @@ When the value of [`rangePadding`]() property is [`auto`](), the horizontal nume
 
 {% endhighlight %}
 
-![RangePadding auto](images/getting-started/livechart.png)
+![RangePadding auto](images/axis-types/numeric_auto.jpg)
 
 **none**
 
@@ -160,7 +160,7 @@ When the value of [`rangePadding`]() property is [`none`](), padding will not be
         body: Center(
             child: Container(
                 child: SfCartesianChart(
-                   primaryXAxis: NumericAxis(
+                   primaryYAxis: NumericAxis(
                      rangePadding: ChartRangePadding.none
                    ),  
                 )
@@ -169,8 +169,6 @@ When the value of [`rangePadding`]() property is [`none`](), padding will not be
     }
 
 {% endhighlight %}
-
-![RangePadding none](images/getting-started/livechart.png)
 
 **normal**
 
@@ -184,7 +182,7 @@ When the value of [`rangePadding`]() property is [`normal`](), padding is applie
         body: Center(
             child: Container(
                 child: SfCartesianChart(
-                   primaryXAxis: NumericAxis(
+                   primaryYAxis: NumericAxis(
                      rangePadding: ChartRangePadding.normal
                    ),  
                 )
@@ -194,7 +192,7 @@ When the value of [`rangePadding`]() property is [`normal`](), padding is applie
 
 {% endhighlight %}
 
-![RangePadding normal](images/getting-started/livechart.png)
+![RangePadding normal](images/axis-types/numeric_normal.jpg)
 
 **round**
 
@@ -208,7 +206,7 @@ When the value of [`rangePadding`]() property is [`round`](), axis range will be
         body: Center(
             child: Container(
                 child: SfCartesianChart(
-                   primaryXAxis: NumericAxis(
+                   primaryYAxis: NumericAxis(
                      rangePadding: ChartRangePadding.round
                    ),  
                 )
@@ -218,7 +216,7 @@ When the value of [`rangePadding`]() property is [`round`](), axis range will be
 
 {% endhighlight %}
 
-![RangePadding round](images/getting-started/livechart.png)
+![RangePadding round](images/axis-types/numeric_round.jpg)
 
 ### Formatting the labels
 
@@ -232,8 +230,8 @@ Formats the numeric axis labels with globalized label formats.
         body: Center(
             child: Container(
                 child: SfCartesianChart(
-                   primaryXAxis: NumericAxis(
-                     numberFormat: NumberFormat.decimalPattern()
+                   primaryYAxis: NumericAxis(
+                     numberFormat: NumberFormat.simpleCurrency()
                    ),  
                 )
             )
@@ -242,7 +240,7 @@ Formats the numeric axis labels with globalized label formats.
 
 {% endhighlight %}
 
-![Number format](images/getting-started/livechart.png)
+![Number format](images/axis-types/number_format.jpg)
 
 ## Category axis
 
@@ -264,7 +262,8 @@ Category axis displays text labels instead of numbers.
 
 {% endhighlight %}
 
-![Category Axis](images/getting-started/livechart.png)
+![Category Axis](images/axis-types/category.jpg
+)
 
 ### Placing labels between the ticks
 
@@ -279,7 +278,7 @@ Labels in category axis can be placed on the ticks by setting [`labelPlacement`]
             child: Container(
                 child: SfCartesianChart(
                    primaryXAxis: CategoryAxis(
-                       labelPlacement: LabelPlacement.betweenTicks
+                       labelPlacement: LabelPlacement.onTicks
                    ), 
                 )
             )
@@ -287,8 +286,6 @@ Labels in category axis can be placed on the ticks by setting [`labelPlacement`]
     }
 
 {% endhighlight %}
-
-![Label Placement](images/getting-started/livechart.png)
 
 ### Displaying labels after a fixed interval
 
@@ -313,7 +310,7 @@ To display labels after a fixed interval n, you can set [`interval`]() property 
 
 {% endhighlight %}
 
-![Fixed interval](images/getting-started/livechart.png)
+![Fixed interval](images/axis-types/category_interval.jpg)
 
 ### Indexed category axis
 
@@ -337,7 +334,7 @@ Category axis also can be rendered based on the index values of data source. Thi
 
 {% endhighlight %}
 
-![Indexed category axis](images/getting-started/livechart.png)
+![Indexed category axis](images/axis-types/category_arrangebyIndex.jpg)
 
 ## Date time axis
 
@@ -359,7 +356,7 @@ Date time axis uses date time scale and displays date time values as axis labels
 
 {% endhighlight %}
 
-![DateTime axis](images/getting-started/livechart.png)
+![DateTime axis](images/axis-types/datetime.jpg)
 
 ### Customizing date time range
 
@@ -374,8 +371,8 @@ To customize the range of an axis, you can use the [`minimum`]() and [`maximum`]
             child: Container(
                 child: SfCartesianChart(
                    primaryXAxis: DateTimeAxis(
-                       minimum: DateTime(2000),
-                       maximum: DateTime(2019)
+                       minimum: DateTime(2010),
+                       maximum: DateTime(2020)
                    )
                 )
             )
@@ -384,7 +381,7 @@ To customize the range of an axis, you can use the [`minimum`]() and [`maximum`]
 
 {% endhighlight %}
 
-![DateTime range](images/getting-started/livechart.png)
+![DateTime range](images/axis-types/datetime_range.jpg)
 
 ### Date time intervals
 
@@ -419,7 +416,7 @@ Essential Chart supports the following types of interval for date time axis
 
 {% endhighlight %}
 
-![DateTime range](images/getting-started/livechart.png)
+![DateTime range](images/axis-types/datetime_interval.jpg)
 
 ### Apply padding to range
 
@@ -452,7 +449,7 @@ When the value of [`rangePadding`]() property is [`none`](), padding will not be
 
 {% endhighlight %}
 
-![Range padding none](images/getting-started/livechart.png)
+![Range padding none](images/axis-types/datetime_rangePadding_none.jpg)
 
 **round**
 
@@ -476,7 +473,7 @@ When the value of [`rangePadding`]() property is [`round`](), axis range will be
 
 {% endhighlight %}
 
-![RangePadding round](images/getting-started/livechart.png)
+![RangePadding round](images/axis-types/datetime_rangePadding_round.jpg)
 
 **additional**
 
@@ -500,7 +497,7 @@ When the value of [`rangePadding`]() property is [`additional`](), range will be
 
 {% endhighlight %}
 
-![RangePadding round](images/getting-started/livechart.png)
+![RangePadding round](images/axis-types/datetime_rangePadding_add.jpg)
 
 **normal**
 
@@ -524,7 +521,7 @@ When the value of [`rangePadding`]() property is [`normal`](), padding is applie
 
 {% endhighlight %}
 
-![RangePadding normal](images/getting-started/livechart.png)
+![RangePadding normal](images/axis-types/datetime_rangePadding_normal.jpg)
 
 ### Formatting the labels
 
@@ -548,5 +545,5 @@ The [`dateFormat`]() property formats the date-time axis labels. The default dat
 
 {% endhighlight %}
 
-![Date format](images/getting-started/livechart.png)
+![Date format](images/axis-types/datetime_labelFormat.jpg)
 

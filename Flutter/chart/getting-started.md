@@ -65,7 +65,7 @@ Once the packages has been imported, initialize the chart as a child of any widg
 
 {% endhighlight %}
 
-![Initialize chart](images/getting-started/moto-240-305.jpg)
+![Initialize chart](images/getting-started/default.jpg)
 
 ### Bind data source
 
@@ -107,7 +107,8 @@ Based on your data, initialize the appropriate axis type and series type. In the
 
 {% endhighlight %}
 
-![Bind data source](images/getting-started/moto-350-300.png)
+![Bind data source](images/getting-started/datasource.jpg
+)
 
 ### Add title
 
@@ -144,7 +145,7 @@ You can add a [`title`]() to the chart to provide quick information to the user 
 
 {% endhighlight %}
 
-![Title to chart](images/getting-started/moto-350-350.png)
+![Title to chart](images/getting-started/title.jpg)
 
 ### Enable data labels
 
@@ -182,7 +183,7 @@ You can add data labels to improve the readability of the chart. This can be ach
 
 {% endhighlight %}
 
-![DataLabel to chart](images/getting-started/moto-350-400.png)
+![DataLabel to chart](images/getting-started/datalabel.jpg)
 
 ### Enable legend
 
@@ -219,7 +220,7 @@ You can use legend for the chart by setting the [`isVisible`]() property to true
 
 {% endhighlight %}
 
-![Legend in chart](images/getting-started/moto-500-300.png)
+![Legend in chart](images/getting-started/legend.jpg)
 
 ### Enable tooltip
 
@@ -262,4 +263,4 @@ The [`tooltipBehavior`]() property in chart is used to enable and customize the 
 
 {% endhighlight %}
 
-![Tooltip in chart](images/getting-started/moto-500-400.png)
+![Tooltip in chart](images/getting-started/tooltip.jpg)

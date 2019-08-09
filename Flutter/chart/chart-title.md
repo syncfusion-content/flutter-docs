@@ -69,4 +69,4 @@ You can align the title text content to the near, center or far of the title usi
 
 {% endhighlight %}
 
-![Chart title](images/getting-started/livechart.png)
+![Chart title](images/getting-started/chart-title.jpg)
