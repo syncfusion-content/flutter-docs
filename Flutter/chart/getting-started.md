@@ -107,7 +107,7 @@ Based on your data, initialize the appropriate axis type and series type. In the
 
 {% endhighlight %}
 
-![Bind data source](images/getting-started/datasource.jpg
+![Bind data source](images/getting-started/data_source.jpg
 )
 
 ### Add title
@@ -145,7 +145,7 @@ You can add a [`title`]() to the chart to provide quick information to the user 
 
 {% endhighlight %}
 
-![Title to chart](images/getting-started/title.jpg)
+![Title to chart](images/getting-started/title_chart.jpg)
 
 ### Enable data labels
 

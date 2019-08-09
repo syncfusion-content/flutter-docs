@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Overview of Essential Flutter Chart
+title: Overview of Syncfusion Essential Flutter Chart
 description: How to customize the visibility, title, labels, grid lines and tick lines of chart axis
 platform: flutter
 control: Chart

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Chart Title
+title: Syncfusion Essential Flutter Chart Title
 description: How to add chart title and customize the appearance of the chart title in the Essential Flutter Charts.
 platform: flutter
 control: Chart
