@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Zooming and Panning in Syncfusion Flutter Chart
-description: How to add ZoomPan behavior in Essential Flutter Chart
+title: Zooming and Panning in Syncfusion Flutter Charts
+description: Learn how to enable zooming and panning in Flutter Charts
 platform: flutter
 control: Chart
 documentation: ug
@@ -171,7 +171,7 @@ The [`enableAutoIntervalOnZooming`]() property determines the update of axis int
 
 ## Maximum zoom level
 
-The [`maximumZoomLevel`]() property defines the maximum zoming level. Zooming will be stopped after reached this value. This defaults to null.
+The [`maximumZoomLevel`]() property defines the maximum zooming level. Zooming will be stopped after reaching this value. This defaults to null.
 
 {% highlight dart %} 
 

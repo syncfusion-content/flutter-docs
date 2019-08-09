@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Syncfusion Flutter Chart Tooltip
-description: How to enable and customize the tooltip in Essential Flutter Chart
+title: Syncfusion Flutter Charts Tooltip
+description: Learn how to enable and customize the tooltip in Flutter Charts
 platform: flutter
 control: Chart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Tooltip
 
-Chart provides tooltip support for all series. It is used to show information about the segment, when you tap on the segment. To enable the tooltip, you need to set [`enableTooltip`]() property as *true*.
+Chart provides tooltip support for all the series. It is used to show information about the segment, when you tap on the segment. To enable the tooltip, you need to set [`enableTooltip`]() property as *true*.
 
 {% highlight dart %} 
 

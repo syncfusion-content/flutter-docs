@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion Flutter Chart Public Methods
-description: What are the public methods in Essential Flutter Chart
+description: Learn what are all the public methods available in Flutter Chart.
 platform: flutter
 control: Chart
 documentation: ug
@@ -66,7 +66,7 @@ The [`show`]() method is used to activate the tooltip at the specified location.
 
 ## Hide method in tooltipBehavior
 
-The [`hide`]() method is used to hide the tooltip programmatically.
+The [`hide`]() method is used to hide the displaying tooltip programmatically.
 
 {% highlight dart %} 
 
@@ -169,7 +169,7 @@ The [`show`]() method is used to activate the trackball at the specified locatio
 
 ## Hide method in trackballBehavior
 
-The [`hide`]() method is used to hide the trackball programmatically.
+The [`hide`]() method is used to hide the displaying trackball programmatically.
 
 {% highlight dart %} 
 
@@ -271,7 +271,7 @@ The [`show`]() method is used to activate the crosshair at the specified locatio
 
 ## Hide method in crosshairBehavior
 
-The [`hide`]() method is used to hide the crosshair programmatically.
+The [`hide`]() method is used to hide the displaying crosshair programmatically.
 
 {% highlight dart %} 
 
@@ -322,7 +322,7 @@ The [`hide`]() method is used to hide the crosshair programmatically.
 
 ## SelectionIndex method in selectionSettings
 
-The [`selectionIndex`]() method is used to select the point programmatically. The arguments that are required are depicted below.
+The [`selectionIndex`]() method is used to select the data point programmatically. The required arguments are listed below.
 
 * pointIndex - specifies the point index value.
 * seriesIndex - specifies the series index value.

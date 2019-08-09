@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Syncfusion Flutter Chart Trackball and Crosshair
-description: How to enable and customize the trackball and corsshair behavior in Essential Flutter Chart
+title: Syncfusion Flutter Charts Trackball and Crosshair
+description: Learn how to enable and customize the trackball and crosshair in Flutter Charts
 platform: flutter
 control: Chart
 documentation: ug
@@ -59,7 +59,7 @@ You can use the following properties to customize the appearance of trakball too
 
 The [`tooltipDisplayMode`]() property is used to specify whether to display label for all the data points along the vertical line or display only single label. Following are the options you can set to this property,
 
-* [`floatAllPoints`]() – Displays label for all the data points along the vertical line.
+* [`floatAllPoints`]() – Displays label for all the data points along the tracker line.
 * [`nearestPoint`]() – Displays label for single data point that is nearer to the touch contact position.
 * [`groupAllPoints`]() – Displays label for all the data points grouped and positioned at the top of the chart area.
 * [`none`]() - Doesn't display the label.
@@ -207,7 +207,7 @@ Crosshair lines can be enabled by using [`enable`]() property in the [`crosshair
 
 **Track line customization**
 
-The appearance of the track line of crosshair can be customized using the following properties.
+The appearance of the track line in crosshair can be customized using the following properties.
 
 * [`lineType`]() - specifies the type of crosshair line.
 * [`lineColor`]() - specifies the color of the crosshair line.
