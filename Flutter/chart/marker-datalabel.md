@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Markers and data labels in Essential Syncfusion Flutter Chart
-description: Learn how to add markers and data point labels, connector lines, formatting label content, configure the data label template to the Chart series.
+title: Markers and data labels in Syncfusion Flutter Charts
+description: Learn how to add markers and data point labels to the Flutter Chart series.
 platform: flutter
 control: Chart
 documentation: ug
@@ -24,19 +24,23 @@ Markers are used to provide information about the exact point location. You can 
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-        body: Center(
-            child: Container(
-                child:SfCartesianChart(series: <CartesianSeries>[
-                LineSeries<ChartData, double>(
-                    dataSource: chartData,
-                    xValueMapper: (ChartData data, _) => data.x,
-                    yValueMapper: (ChartData data, _) => data.y,
-                    markerSettings: MarkerSettings(
-                        isVisible: true
+            body: Center(
+                child: Container(
+                    child:SfCartesianChart(
+                        series: <CartesianSeries>[
+                            LineSeries<ChartData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                markerSettings: MarkerSettings(
+                                    isVisible: true
+                                )
+                            )
+                        ]
                     )
-                ),
-            ]))
-        ));
+                )
+            )
+        );
     }
 
 {% endhighlight %}
@@ -62,20 +66,24 @@ Markers can be assigned with different shapes using the [`shape`]() property. By
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-        body: Center(
-            child: Container(
-                child:SfCartesianChart(series: <CartesianSeries>[
-                LineSeries<ChartData, double>(
-                    dataSource: chartData,
-                    xValueMapper: (ChartData data, _) => data.x,
-                    yValueMapper: (ChartData data, _) => data.y,
-                    markerSettings: MarkerSettings(
-                        isVisible: true,
-                        shape: DataMarkerType.diamond,
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <CartesianSeries>[
+                            LineSeries<ChartData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                markerSettings: MarkerSettings(
+                                    isVisible: true,
+                                    shape: DataMarkerType.diamond
+                                )
+                            )
+                        ]
                     )
-                ),
-            ]))
-        ));
+                )
+            )
+        );
     }
 
 {% endhighlight %}
@@ -84,28 +92,32 @@ Markers can be assigned with different shapes using the [`shape`]() property. By
 
 ### Image marker
 
-The markers can be rendered with desired image as shape. For this you specify the [`shape`]() as [`image`]() and refer the path using [`imageUrl`]() property.
+The markers can be rendered with desired image as shape. For this you have to specify the [`shape`]() as [`image`]() and refer the image path using [`imageUrl`]() property.
 
 {% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-        body: Center(
-            child: Container(
-                child:SfCartesianChart(series: <CartesianSeries>[
-                LineSeries<ChartData, double>(
-                    dataSource: chartData,
-                    xValueMapper: (ChartData data, _) => data.x,
-                    yValueMapper: (ChartData data, _) => data.y,
-                    markerSettings: MarkerSettings(
-                        isVisible: true,
-                        shape: DataMarkerType.image,
-                        imageUrl: 'images/livechart.png'
+            body: Center(
+                child: Container(
+                    child:SfCartesianChart(
+                        series: <CartesianSeries>[
+                            LineSeries<ChartData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                markerSettings: MarkerSettings(
+                                    isVisible: true,
+                                    shape: DataMarkerType.image,
+                                    imageUrl: 'images/livechart.png'
+                                )
+                            )
+                        ]
                     )
-                ),
-            ]))
-        ));
+                )
+            )
+        );
     }
 
 {% endhighlight %}
@@ -137,19 +149,23 @@ Data label can be added to a chart series by enabling the [`isVisible`]() option
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-        body: Center(
-            child: Container(
-                child:SfCartesianChart(series: <CartesianSeries>[
-                LineSeries<ChartData, double>(
-                    dataSource: chartData,
-                    xValueMapper: (ChartData data, _) => data.x,
-                    yValueMapper: (ChartData data, _) => data.y,
-                    dataLabelSettings: DataLabelSettings(
-                        isVisible: true,
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <CartesianSeries>[
+                            LineSeries<ChartData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                dataLabelSettings: DataLabelSettings(
+                                    isVisible: true
+                                )
+                            )
+                        ]
                     )
-                ),
-            ])
-        )));
+                )
+            )
+        );
     }
 
 {% endhighlight %}
@@ -158,28 +174,32 @@ Data label can be added to a chart series by enabling the [`isVisible`]() option
 
 ### Formatting label content
 
-Data label considers the format used in vertical axis by default.
+Data label considers the text format used in the vertical axis by default.
 
 {% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-        body: Center(
-            child: Container(
-                child:SfCartesianChart(
-              primaryYAxis: NumericAxis(numberFormat: NumberFormat.simpleCurrency()),
-              series: <CartesianSeries>[
-          LineSeries<ChartData, double>(
-              dataSource: chartData,
-              color: Colors.red,
-              xValueMapper: (ChartData data, _) => data.x,
-              yValueMapper: (ChartData data, _) => data.y,
-              dataLabelSettings: DataLabelSettings(
-                isVisible: true,
-              )),
-        ])
-        )));
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryYAxis: NumericAxis(numberFormat: NumberFormat.simpleCurrency()),
+                        series: <CartesianSeries>[
+                            LineSeries<ChartData, double>(
+                                dataSource: chartData,
+                                color: Colors.red,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                dataLabelSettings: DataLabelSettings(
+                                    isVisible: true
+                                )
+                            ),
+                        ]
+                    )
+                )
+            )
+        );
     }
 
 {% endhighlight %}
@@ -188,28 +208,33 @@ Data label considers the format used in vertical axis by default.
 
 ### Label position
 
-The [`position`]() property is used to position the cartesian chart type data marker labels at [`top`](), [`bottom`](), [`auto`](), [`outer`]() and [`middle`]() position of the actual data point position. By default, labels are [`auto`]() positioned. You can move the labels horizontally and vertically using OffsetX and OffsetY properties respectively.
+The [`position`]() property is used to position the cartesian chart type data labels at [`top`](), [`bottom`](), [`auto`](), [`outer`]() and [`middle`]() position of the actual data point position. By default, labels are [`auto`]() positioned. You can move the labels horizontally and vertically using OffsetX and OffsetY properties respectively.
 
-The [`labelPosition`]() property is used to place the circular series data marker labels either [`inside`]() or [`outside`](). By default the label of circular chart is placed [`inside`]() the series.
+The [`labelPosition`]() property is used to place the circular series data labels either [`inside`]() or [`outside`](). By default the label of circular chart is placed [`inside`]() the series.
 
 {% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-        body: Center(
-            child: Container(
-                child:SfCircularChart(series: <CircularSeries>[
-          PieSeries<ChartData, double>(
-              dataSource: chartData,
-              xValueMapper: (ChartData data, _) => data.x,
-              yValueMapper: (ChartData data, _) => data.y,
-              dataLabelSettings: DataLabelSettings(
-                isVisible: true,
-                labelPosition: LabelPosition.outside,
-              )),
-        ])
-        )));
+            body: Center(
+                child: Container(
+                    child: SfCircularChart(
+                        series: <CircularSeries>[
+                            PieSeries<ChartData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                dataLabelSettings: DataLabelSettings(
+                                    isVisible: true,
+                                    labelPosition: LabelPosition.outside
+                                )
+                            )
+                        ]
+                    )
+                )
+            )
+        );
     }
 
 {% endhighlight %}
@@ -220,26 +245,31 @@ N> The [`position`]() property is used to position the cartesian chart labels wh
 
 ### Smart labels
 
-This feature is used to arrange the data marker labels smartly and avoid the intersection when there is overlapping of labels. The property [`enableSmartLabels`]() in [`CircularSeries`]() is used to arrange the data marker labels smartly. By default, this property is *true*.
+This feature is used to arrange the data labels smartly and avoid the intersection when there is overlapping of labels. The property [`enableSmartLabels`]() in [`CircularSeries`]() is used to arrange the data labels smartly. By default, this property is *true*.
 
 {% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-        body: Center(
-            child: Container(
-                child:SfCircularChart(series: <CircularSeries>[
-          PieSeries<ChartData, double>(
-              enableSmartLabels: true,
-              dataSource: chartData,
-              xValueMapper: (ChartData data, _) => data.x,
-              yValueMapper: (ChartData data, _) => data.y,
-              dataLabelSettings: DataLabelSettings(
-                isVisible: true,
-              )),
-        ])
-        )));
+            body: Center(
+                child: Container(
+                    child: SfCircularChart(
+                        series: <CircularSeries>[
+                            PieSeries<ChartData, double>(
+                                enableSmartLabels: true,
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                dataLabelSettings: DataLabelSettings(
+                                    isVisible: true
+                                )
+                            )
+                        ]
+                    )
+                )
+            )
+        );
     }
 
 {% endhighlight %}
@@ -248,26 +278,31 @@ This feature is used to arrange the data marker labels smartly and avoid the int
 
 ### Apply series color
 
-The [`useSeriesColor`]() property is used to apply the series color to background color of data marker labels. The default value of this property is *false*.
+The [`useSeriesColor`]() property is used to apply the series color to background color of the data labels. The default value of this property is *false*.
 
 {% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-        body: Center(
-            child: Container(
-                child:SfCircularChart(series: <CircularSeries>[
-          PieSeries<ChartData, double>(
-              enableSmartLabels: true,
-              dataSource: chartData,
-              xValueMapper: (ChartData data, _) => data.x,
-              yValueMapper: (ChartData data, _) => data.y,
-              dataLabelSettings: DataLabelSettings(
-                isVisible: true,
-              )),
-        ])
-        )));
+            body: Center(
+                child: Container(
+                    child: SfCircularChart(
+                        series: <CircularSeries>[
+                            PieSeries<ChartData, double>(
+                                enableSmartLabels: true,
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                dataLabelSettings: DataLabelSettings(
+                                    isVisible: true
+                                )
+                            )
+                        ]
+                    )
+                )
+            )
+        );
     }
 
 {% endhighlight %}
@@ -276,7 +311,7 @@ The [`useSeriesColor`]() property is used to apply the series color to backgroun
 
 ### Connector line
 
-This feature is used to connect label and data point using a line. It can be enabled for [`PieSeries`]() and [`DoughnutSeries`]() chart types. The [`connectorLineSettings`]() property used to customize the connector line.
+This feature is used to connect label and data point using a line. It can be enabled for [`Pie`]() and [`Doughnut`]() chart types. The [`connectorLineSettings`]() property used to customize the connector line.
 
 * [`color`]() – used to change the color of the line
 * [`width`]() – used to change the stroke thickness of the line
@@ -288,23 +323,28 @@ This feature is used to connect label and data point using a line. It can be ena
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-        body: Center(
-            child: Container(
-                child:SfCircularChart(series: <CircularSeries>[
-          PieSeries<ChartData, double>(
-              enableSmartLabels: true,
-              dataSource: chartData,
-              xValueMapper: (ChartData data, _) => data.x,
-              yValueMapper: (ChartData data, _) => data.y,
-              dataLabelSettings: DataLabelSettings(
-                isVisible: true,
-                labelPosition: LabelPosition.outside,
-                connectorLineSettings: ConnectorLineSettings(
-                  type: ConnectorType.curve
+            body: Center(
+                child: Container(
+                    child: SfCircularChart(
+                        series: <CircularSeries>[
+                            PieSeries<ChartData, double>(
+                                enableSmartLabels: true,
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                dataLabelSettings: DataLabelSettings(
+                                    isVisible: true,
+                                    labelPosition: LabelPosition.outside,
+                                    connectorLineSettings: ConnectorLineSettings(
+                                        type: ConnectorType.curve
+                                    )
+                                )
+                            )
+                        ]
+                    )
                 )
-              )),
-        ])
-        )));
+            )
+        );
     }
 
 {% endhighlight %}
@@ -328,25 +368,31 @@ The [`dataLabelMapper`]() property is used to map the text from data source.
         ];
 
         return Scaffold(
-        body: Center(
-            child: Container(
-                child:SfCircularChart(series: <CircularSeries>[
-          PieSeries<ChartData, String>(
-              dataSource: chartData,
-              xValueMapper: (ChartData data, _) => data.x,
-              yValueMapper: (ChartData data, _) => data.y,
-              dataLabelMapper: (ChartData data, _) => data.text,
-              dataLabelSettings: DataLabelSettings(
-                  isVisible: true)),
-        ])
-        )));
+            body: Center(
+                child: Container(
+                    child:SfCircularChart(
+                        series: <CircularSeries>[
+                            PieSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                dataLabelMapper: (ChartData data, _) => data.text,
+                                dataLabelSettings: DataLabelSettings(
+                                    isVisible: true
+                                )
+                            )
+                        ]
+                    )
+                )
+            )
+        );
     }
 
     class ChartData {
         ChartData(this.x, this.y, this.text);
-            final String x;
-            final double y;
-            final String text;
+        final String x;
+        final double y;
+        final String text;
     }
 
 {% endhighlight %}
@@ -355,32 +401,37 @@ The [`dataLabelMapper`]() property is used to map the text from data source.
 
 ### Label template
 
-You can customize the appearance of the data marker label with your own template using the [`builder`]() property of [`dataLabelSettings`]().
+You can customize the appearance of the data label with your own template using the [`builder`]() property of [`dataLabelSettings`]().
 
 {% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-        body: Center(
-            child: Container(
-                child:SfCircularChart(series: <CircularSeries>[
-          PieSeries<ChartData, String>(
-              dataSource: chartData,
-              xValueMapper: (ChartData data, _) => data.x,
-              yValueMapper: (ChartData data, _) => data.y,
-              dataLabelMapper: (ChartData data, _) => data.text,
-              dataLabelSettings: DataLabelSettings(
-                  isVisible: true,
-                  builder: (dynamic data, dynamic point, dynamic series,
-                    int pointIndex, int seriesIndex) {
-                  return Container(
-                      height: 30,
-                      width: 30,
-                      child: Image.asset('images/livechart.png'));
-                })),
-        ])
-        )));
+            body: Center(
+                child: Container(
+                    child:SfCircularChart(
+                        series: <CircularSeries>[
+                            PieSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                dataLabelMapper: (ChartData data, _) => data.text,
+                                dataLabelSettings: DataLabelSettings(
+                                    isVisible: true
+                                    builder: (dynamic data, dynamic point, dynamic series, int pointIndex, int seriesIndex) {
+                                        return Container(
+                                        height: 30,
+                                        width: 30,
+                                        child: Image.asset('images/livechart.png'));
+                                    }
+                                )
+                            )
+                        ]
+                    )
+                )
+            )
+        );
     }
 
 {% endhighlight %}

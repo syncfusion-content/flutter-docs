@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Multiple series in Syncfusion Flutter chart
-description: Learn how to render different types of series in a chart.
+title: Series customization in Syncfusion Flutter charts
+description: Learn how to customize the appearance of the series in a chart.
 platform: flutter
 control: Chart
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Multiple series
 
-You can add multiple series to [`series`]() property of [`SfCartesianChart`]() class. By default, all the series rendered based on the [`PrimaryXAxis`]() and [`PrimaryYAxis`]() of [`SfCartesianChart`](). But if you want to plot different unit or value that is specific to particular series, you can specify the separate axis for that series using [`xAxisName`]() and [`yAxisName`]() properties of series.
+You can add multiple series to [`series`]() property of [`SfCartesianChart`]() class. By default, all the series rendered based on the [`PrimaryXAxis`]() and [`PrimaryYAxis`]() in [`SfCartesianChart`](). But if you want to plot different unit or value that is specific to particular series, you can specify separate axis for that series using [`xAxisName`]() and [`yAxisName`]() properties of series.
 
 {% highlight dart %} 
 
@@ -86,7 +86,7 @@ You can add multiple series to [`series`]() property of [`SfCartesianChart`]() c
 
 ## Animation
 
-[`SfCartesianChart`]() provides animation support for data series. Series will be animated whenever the items source changes. Animation is enabled by default, you can also control the duration of the animation using [`animationDuration`]() property.
+[`SfCartesianChart`]() provides animation support for the series. Series will be animated while rendering. Animation is enabled by default, you can also control the duration of the animation using [`animationDuration`]() property. You can disable the animation by setting 0 value to that property.
 
 {% highlight dart %} 
 
@@ -113,7 +113,7 @@ You can add multiple series to [`series`]() property of [`SfCartesianChart`]() c
 
 ## Transpose the series
 
-The [`isTransposed`]() property of [`CartesianSeries`]() is used to plot the chart vertically and view the data in a different perspective.
+The [`isTransposed`]() property of [`CartesianSeries`]() is used to transpose the horizontal and vertical axes, to view the data in a different perspective. Using this feature, you can render vertical charts.
 
 {% highlight dart %} 
 
@@ -142,7 +142,7 @@ The [`isTransposed`]() property of [`CartesianSeries`]() is used to plot the cha
 
 ## Color palette
 
-The [`palette`]() property is used to define the colors for each series.
+The [`palette`]() property is used to define the colors for the series available in chart. By default, a set of 10 colors are predefined for applying it to the series. If the colors specified in the series are less than the number of series, than the remaining series are filled with the specified palette colors rotationally.
 
 {% highlight dart %} 
 
@@ -185,9 +185,7 @@ The [`palette`]() property is used to define the colors for each series.
 
 ## Color mapping for data points   
 
-The [`pointColorMapper`]() property is used to map the color field from data source. 
-
-The [`palette`]() property is used to define the colors for each series.
+The [`pointColorMapper`]() property is used to map the color field from the data source. 
 
 {% highlight dart %} 
 
@@ -269,7 +267,7 @@ The [`gradient`]() property is used to define the gradient colors. The colors fr
 
 ## Empty points
 
-The data points that uses the null as value are considered as empty points. Empty data points are ignored and not plotted in the Chart when the data is provided by using the points property. By using [`emptyPointSettings`]() property in series, you can customize the empty point. Available [`mode`]() types are [`gap`](), [`zero`](), [`drop`]() and [`average`]().Default mode of the empty point is [`gap`]().
+The data points that has null value are considered as empty points. Empty data points are ignored and not plotted in the chart. By using [`emptyPointSettings`]() property in series, you can decide the action taken for empty points. Available [`modes`]() are [`gap`](), [`zero`](), [`drop`]() and [`average`](). Default mode of the empty point is [`gap`]().
 
 {% highlight dart %} 
 
@@ -280,7 +278,7 @@ The data points that uses the null as value are considered as empty points. Empt
             ChartData(1, 112),
             ChartData(2, null),
             ChartData(3, 107),
-            ChartData(4, 87),
+            ChartData(4, 87)
         ];
 
         return Scaffold(

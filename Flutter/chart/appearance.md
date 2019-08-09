@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customizing the appearance of Essential Syncfusion Flutter Chart
+title: Customizing the appearance of Syncfusion Flutter Charts
 description: Learn how to customize the appearance of Chart.
 platform: flutter
 control: Chart
@@ -17,17 +17,18 @@ Chart renders based on the parent widget size. If you need the chart to be rende
 
     @override
     Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
+      return Scaffold(
+        body: SafeArea(
           child: Center(
-        child: Container(
-          height: 300, 
-          width: 350, 
-          child: SfCartesianChart()
-        ),
-      )),
-    );
-  }
+            child: Container(
+              height: 300, 
+              width: 350, 
+              child: SfCartesianChart()
+            )
+          )
+        )
+      );
+    }
 
 {% endhighlight %}
 
@@ -41,21 +42,22 @@ Margin to the chart can be specified using the [`margin`]() property.
 
     @override
     Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
+      return Scaffold(
+        body: SafeArea(
           child: Center(
-        child: Container(
-          height: 300, 
-          width: 350, 
-          child: SfCartesianChart(
-              borderColor: Colors.red,
-              borderWidth: sqrt1_2,
-              margin: EdgeInsets.all(15)
+            child: Container(
+              height: 300, 
+              width: 350, 
+              child: SfCartesianChart(
+                borderColor: Colors.red,
+                borderWidth: sqrt1_2,
+                margin: EdgeInsets.all(15)
+              )
+            )
           )
-        ),
-      )),
-    );
-  }
+        )
+      );
+    }
 
 {% endhighlight %}
 
@@ -74,22 +76,23 @@ You can customize the plot area of the chart using the below properties.
 
     @override
     Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
+      return Scaffold(
+        body: SafeArea(
           child: Center(
-        child: Container(
-          height: 300, 
-          width: 350, 
-          child: SfCartesianChart(
-            plotAreaBorderWidth: 5,
-            plotAreaBorderColor: Colors.red,
-            plotAreaBackgroundColor: Colors.lightGreen,
-            plotAreaBackgroundImageUrl: 'images/livechart.png'
+            child: Container(
+              height: 300, 
+              width: 350, 
+              child: SfCartesianChart(
+                plotAreaBorderWidth: 5,
+                plotAreaBorderColor: Colors.red,
+                plotAreaBackgroundColor: Colors.lightGreen,
+                plotAreaBackgroundImageUrl: 'images/livechart.png'
+              )
+            )
           )
-        ),
-      )),
-    );
-  }
+        )
+      );
+    }
 
 {% endhighlight %}
 
