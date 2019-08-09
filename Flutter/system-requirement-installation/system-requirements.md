@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Installation and Deployment process for Syncfusion Flutter products
-description: Describes about system requirements to install the Syncfusion Flutter Components
+title: Installation and Deployment process for Syncfusion Flutter widgets
+description: Describes about system requirements to install the Syncfusion Flutter widgets
 platform: flutter
 control: Installation and Deployment
 documentation: ug
@@ -22,4 +22,3 @@ Please find the recommended development environment for Flutter platform in the 
 * Windows - https://flutter.dev/docs/get-started/install/windows 
 * MacOS - https://flutter.dev/docs/get-started/install/macos 
 * Linux - https://flutter.dev/docs/get-started/install/linux 
-

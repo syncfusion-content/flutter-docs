@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Overview of Syncfusion Essential Flutter Chart
-description: How to customize the visibility, title, labels, grid lines and tick lines of chart axis
+title: Axis customization in Syncfusion Flutter Charts
+description: Learn how to customize the visibility, title, labels, grid lines and tick lines of chart axis
 platform: flutter
 control: Chart
 documentation: ug
@@ -22,15 +22,16 @@ Axis visibility can be controlled using the [`isVisible`]() property of axis. De
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-        body: Center(
-            child: Container(
-                child: SfCartesianChart(
-                   primaryXAxis: NumericAxis(
-                       isVisible: false,
-                    ),
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis: NumericAxis(
+                            isVisible: false
+                        )
+                    )
                 )
             )
-        ));
+        );
     }
 
 {% endhighlight %}
