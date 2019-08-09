@@ -55,6 +55,8 @@ You can use the following properties to customize the appearance of trackball to
 
 {% endhighlight %}
 
+![Trackball](images/trackball-crosshair/default_trackball.jpg)
+
 ### Label display mode
 
 The [`tooltipDisplayMode`]() property is used to specify whether to display label for all the data points along the vertical line or display only single label. Following are the options you can set to this property,
@@ -84,6 +86,8 @@ The [`tooltipDisplayMode`]() property is used to specify whether to display labe
   }
 
 {% endhighlight %}
+
+![Label display mode](images/trackball-crosshair/label_display_mode.jpg)
 
 ### Label alignment
 
@@ -115,6 +119,8 @@ The position of trackball tooltip can be changed using the [`tooltipAlignment`](
 
 {% endhighlight %}
 
+![Label alignment](images/trackball-crosshair/label_alignment.jpg)
+
 N> This is applicable only when the [`tooltipDisplayMode`]() is set to [`groupAllPoints`]().
 
 ### Label format
@@ -133,7 +139,7 @@ By default, axis value will be displayed in the tooltip, and it can be customize
             trackballBehavior: TrackballBehavior(
                     enable: true,
                     tooltipSettings: InteractiveTooltip(
-                      format: 'point.x %')
+                      format: 'point.x : point.y%')
                 )
           )
         ),
@@ -142,6 +148,8 @@ By default, axis value will be displayed in the tooltip, and it can be customize
   }
 
 {% endhighlight %}
+
+![Label format](images/trackball-crosshair/label_format.jpg)
 
 ###	Activation mode
 
@@ -205,6 +213,8 @@ Crosshair lines can be enabled by using [`enable`]() property in the [`crosshair
 
 {% endhighlight %}
 
+![Crosshair](images/trackball-crosshair/default_crosshair.jpg)
+
 **Track line customization**
 
 The appearance of the track line in crosshair can be customized using the following properties.
@@ -228,7 +238,7 @@ The appearance of the track line in crosshair can be customized using the follow
                   lineColor: Colors.red,
                   lineDashArray: <double>[5,5],
                   lineWidth: 2,
-                  lineType: CrosshairLineType.horizontal
+                  lineType: CrosshairLineType.vertical
                 ),
           )
         ),
@@ -237,6 +247,8 @@ The appearance of the track line in crosshair can be customized using the follow
   }
 
 {% endhighlight %}
+
+![Customized trackline](images/trackball-crosshair/customized_trackline.jpg)
 
 **Show axis tooltip**
 

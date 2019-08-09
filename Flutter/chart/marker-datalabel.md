@@ -41,7 +41,7 @@ Markers are used to provide information about the exact point location. You can 
 
 {% endhighlight %}
 
-![Marker](images/getting-started/livechart.png)
+![Marker](images/marker-datalabel/default_marker.jpg)
 
 ### Customizing marker shapes
 
@@ -80,7 +80,7 @@ Markers can be assigned with different shapes using the [`shape`]() property. By
 
 {% endhighlight %}
 
-![Marker shapes](images/getting-started/livechart.png)
+![Marker Shapes](images/marker-datalabel/marker_shape.jpg)
 
 ### Image marker
 
@@ -110,7 +110,7 @@ The markers can be rendered with desired image as shape. For this you specify th
 
 {% endhighlight %}
 
-![Marker image](images/getting-started/livechart.png)
+![Image Marker](images/marker-datalabel/image_marker.jpg)
 
 ## Data label
 
@@ -154,7 +154,7 @@ Data label can be added to a chart series by enabling the [`isVisible`]() option
 
 {% endhighlight %}
 
-![Data label](images/getting-started/livechart.png)
+![DataLabel](images/marker-datalabel/default_datalabel.jpg)
 
 ### Formatting label content
 
@@ -184,7 +184,7 @@ Data label considers the format used in vertical axis by default.
 
 {% endhighlight %}
 
-![Data label format](images/getting-started/livechart.png)
+![DataLabel format](images/marker-datalabel/datalabel_format.jpg)
 
 ### Label position
 
@@ -214,7 +214,7 @@ The [`labelPosition`]() property is used to place the circular series data marke
 
 {% endhighlight %}
 
-![Data label position](images/getting-started/livechart.png)
+![Data label position](images/marker-datalabel/datalabel_position.jpg)
 
 N> The [`position`]() property is used to position the cartesian chart labels whereas [`labelPosition`]() property is used to position the circular chart labels.
 
@@ -234,9 +234,11 @@ This feature is used to arrange the data marker labels smartly and avoid the int
               enableSmartLabels: true,
               dataSource: chartData,
               xValueMapper: (ChartData data, _) => data.x,
-              yValueMapper: (ChartData data, _) => data.y,
+              yValueMapper: (ChartData data, _) => dataLabelMapper: (ChartData sales, _)    => sales.x
+              xValueMapper: (ChartData data, _) => data.x,
               dataLabelSettings: DataLabelSettings(
                 isVisible: true,
+                labelPosition: LabelPosition.inside,
               )),
         ])
         )));
@@ -244,7 +246,7 @@ This feature is used to arrange the data marker labels smartly and avoid the int
 
 {% endhighlight %}
 
-![Smart labels](images/getting-started/livechart.png)
+![Smart labels](images/marker-datalabel/smart_label.jpg)
 
 ### Apply series color
 
@@ -263,8 +265,9 @@ The [`useSeriesColor`]() property is used to apply the series color to backgroun
               dataSource: chartData,
               xValueMapper: (ChartData data, _) => data.x,
               yValueMapper: (ChartData data, _) => data.y,
+              dataValueMapper: (ChartData data, _) => data.x,
               dataLabelSettings: DataLabelSettings(
-                isVisible: true,
+                isVisible: true, labelPosition: LabelPosition.outside
               )),
         ])
         )));
@@ -272,7 +275,7 @@ The [`useSeriesColor`]() property is used to apply the series color to backgroun
 
 {% endhighlight %}
 
-![Series color](images/getting-started/livechart.png)
+![Series color](images/marker-datalabel/use_series_color.jpg)
 
 ### Connector line
 
@@ -309,7 +312,7 @@ This feature is used to connect label and data point using a line. It can be ena
 
 {% endhighlight %}
 
-![Connector line](images/getting-started/livechart.png)
+![Connector line](images/marker-datalabel/connector_line.jpg)
 
 ### Point text mapping
 
@@ -351,7 +354,7 @@ The [`dataLabelMapper`]() property is used to map the text from data source.
 
 {% endhighlight %}
 
-![Data label mapper](images/getting-started/livechart.png)
+![Data label mapper](images/marker-datalabel/value_mapper.jpg)
 
 ### Label template
 
@@ -369,7 +372,6 @@ You can customize the appearance of the data marker label with your own template
               dataSource: chartData,
               xValueMapper: (ChartData data, _) => data.x,
               yValueMapper: (ChartData data, _) => data.y,
-              dataLabelMapper: (ChartData data, _) => data.text,
               dataLabelSettings: DataLabelSettings(
                   isVisible: true,
                   builder: (dynamic data, dynamic point, dynamic series,
@@ -385,4 +387,4 @@ You can customize the appearance of the data marker label with your own template
 
 {% endhighlight %}
 
-![Label template](images/getting-started/livechart.png)
+![Label template](images/marker-datalabel/datalabel_template.jpg)
