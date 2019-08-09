@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Syncfusion Essential Flutter Chart Title
-description: How to add chart title and customize the appearance of the chart title in the Essential Flutter Charts.
+title: Syncfusion Flutter Chart Title
+description: Learn how to add chart title and customize its appearance in the Flutter Charts.
 platform: flutter
 control: Chart
 documentation: ug
@@ -12,7 +12,6 @@ documentation: ug
 You can define and customize the Chart title using [`title`]() property of [`SfCartesianChart`](). The [`text`]() property of [`ChartTitle`]() is used to set the text for the title. 
 
 Following properties are used to customize its appearance.
-
 
 * [`backgroundColor`]() – used to change the background color.
 * [`borderColor`]() – used to change the border color.
@@ -25,7 +24,7 @@ Following properties are used to customize its appearance.
 
 ### Text Alignment
 
-You can align the title text content to the near, center or far of the title using the [`alignment`]() property of the [`title`]().
+You can align the title text content horizontally to the near, center or far of the chart using the [`alignment`]() property of the [`title`]().
 
 {% highlight dart %} 
 

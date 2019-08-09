@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion Circular Chart Types
-description: What are the different types of Charts available in Essential Flutter Chart.
+description: Learn what are the different types of circular charts available in Flutter Chart.
 platform: flutter
 control: Chart
 documentation: ug
@@ -26,7 +26,7 @@ To render a pie chart, create an instance of [`PieSeries`]() and add to the [`se
             ChartData('David', 25),
             ChartData('Steve', 38),
             ChartData('Jack', 34),
-            ChartData('Others', 52),
+            ChartData('Others', 52)
         ];
         return Scaffold(
             body: Center(
@@ -34,24 +34,25 @@ To render a pie chart, create an instance of [`PieSeries`]() and add to the [`se
                     child: SfCircularChart(series: <CircularSeries>[
                 PieSeries<ChartData, String>(
                     dataSource: chartData,
+                    pointColorMapper:(ChartData data,  _) => data.color,
                     xValueMapper: (ChartData data, _) => data.x,
-                    yValueMapper: (ChartData data, _) => data.y,
-                ),
-            ])
-            ),
-        ),
+                    yValueMapper: (ChartData data, _) => data.y
+                )
+            ]))
+        )
         );
     }
 
     class ChartData {
-        ChartData(this.x, this.y);
+        ChartData(this.x, this.y, [this.color]);
             final String x;
             final double y;
+            final Color color;
     }
 
 {% endhighlight %}
 
-![Pie chart](images/circular-chart-types/pie.jpg)
+![Pie chart](images/getting-started/livechart.png)
 
 ### Changing pie size
 
@@ -70,16 +71,16 @@ You can use [`radius`]() property to change the diameter of the pie chart with r
                     xValueMapper: (ChartData data, _) => data.x,
                     yValueMapper: (ChartData data, _) => data.y,
                     radius: '50%'
-                ),
-            ])),
-        ),
+                )
+            ]))
+        )
         );
     }
 
 
 {% endhighlight %}
 
-![Pie size](images/circular-chart-types/pie_sizing.jpg)
+![Pie size](images/getting-started/livechart.png)
 
 ### Exploding a segment
 
@@ -102,17 +103,17 @@ You can explode a pie segment by enabling the [`explode`]() property. You can us
                     xValueMapper: (ChartData data, _) => data.x,
                     yValueMapper: (ChartData data, _) => data.y,
                     explode: true,
-                    explodeIndex: 1,
-                ),
-            ])),
-        ),
+                    explodeIndex: 1
+                )
+            ]))
+        )
         );
     }
 
 
 {% endhighlight %}
 
-![Pie explode](images/circular-chart-types/pie_explode.jpg)
+![Pie explode](images/getting-started/livechart.png)
 
 ### Exploding all the segments
 
@@ -141,7 +142,7 @@ Using [`explodeAll`]() property of [`PieSeries`](), you can explode all the pie 
 
 {% endhighlight %}
 
-![Pie explode all](images/circular-chart-types/pie_explodeAll.jpg)
+![Pie explode all](images/getting-started/livechart.png)
 
 ### Angle of pie
 
@@ -170,7 +171,7 @@ Using [`explodeAll`]() property of [`PieSeries`](), you can explode all the pie 
 
 {% endhighlight %}
 
-![Pie angle](images/circular-chart-types/pie_angle.jpg)
+![Pie angle](images/getting-started/livechart.png)
 
 ### Grouping data points
 
@@ -199,7 +200,7 @@ The small segments in the pie chart can be grouped into **others** category usin
 
 {% endhighlight %}
 
-![Pie grouping](images/circular-chart-types/pie_grouping.jpg)
+![Pie grouping](images/getting-started/livechart.png)
 
 ### Various radius for each slice
 
@@ -240,7 +241,7 @@ The [`pointRadiusMapper`]() maps the field name, which will be considered for ca
 
 {% endhighlight %}
 
-![Pie various radius](images/circular-chart-types/pie_radius.jpg)
+![Pie various radius](images/getting-started/livechart.png)
 
 ## Doughnut chart
 
@@ -256,10 +257,10 @@ To render a doughnut chart, create an instance of [`DoughnutSeries`]() and add t
     @override
     Widget build(BuildContext context) {
         final List<ChartData> chartData = [
-            ChartData('David', 25),
-            ChartData('Steve', 38),
-            ChartData('Jack', 34),
-            ChartData('Others', 52),
+            ChartData('David', 25, Color.fromRGBO(9,0,136,1)),
+            ChartData('Steve', 38, Color.fromRGBO(147,0,119,1)),
+            ChartData('Jack', 34, Color.fromRGBO(228,0,124,1)),
+            ChartData('Others', 52, Color.fromRGBO(255,189,57,1)),
         ];
         return Scaffold(
             body: Center(
@@ -267,6 +268,7 @@ To render a doughnut chart, create an instance of [`DoughnutSeries`]() and add t
                     child: SfCircularChart(series: <CircularSeries>[
                 DoughnutSeries<ChartData, String>(
                     dataSource: chartData,
+                    pointColorMapper:(ChartData data,  _) => data.color,
                     xValueMapper: (ChartData data, _) => data.x,
                     yValueMapper: (ChartData data, _) => data.y,
                 ),
@@ -276,14 +278,15 @@ To render a doughnut chart, create an instance of [`DoughnutSeries`]() and add t
     }
 
     class ChartData {
-        ChartData(this.x, this.y);
+        ChartData(this.x, this.y, [this.color]);
             final String x;
             final double y;
+            final Color color;
     }
 
 {% endhighlight %}
 
-![Doughnut chart](images/circular-chart-types/doughnut.jpg)
+![Doughnut chart](images/getting-started/livechart.png)
 
 ### Rounded corners
 
@@ -310,7 +313,7 @@ The [`cornerStyle`]() property specifies the corner type for doughnut chart. The
 
 {% endhighlight %}
 
-![Doughnut corner style](images/circular-chart-types/doughnut_roundCorner.jpg)
+![Doughnut corner style](images/getting-started/livechart.png)
 
 ### Changing the doughnut size
 
@@ -338,7 +341,7 @@ You can use [`radius`]() property to change the diameter of the doughnut chart w
 
 {% endhighlight %}
 
-![Doughnut size](images/circular-chart-types/doughnut_size.jpg)
+![Doughnut size](images/getting-started/livechart.png)
 
 ### Changing doughnut inner radius
 
@@ -364,8 +367,6 @@ You can change the doughnut chart inner radius using the [`innerRadius`]() with 
     }
 
 {% endhighlight %}
-
-![Doughnut Inner Radius](images/circular-chart-types/doughnut_innerRadius.jpg)
 
 ### Exploding a segment
 
@@ -398,7 +399,7 @@ You can explode a doughnut segment by enabling the [`explode`]() property. You c
 
 {% endhighlight %}
 
-![Doughnut explode](images/circular-chart-types/doughnut_explode.jpg)
+![Doughnut explode](images/getting-started/livechart.png)
 
 ### Exploding all the segments
 
@@ -427,7 +428,7 @@ Using [`explodeAll`]() property of [`DoughnutSeries`](), you can explode all the
 
 {% endhighlight %}
 
-![Pie explode all](images/circular-chart-types/doughnut_explodeAll.jpg)
+![Pie explode all](images/getting-started/livechart.png)
 
 ### Angle of doughnut
 
@@ -447,16 +448,16 @@ Using [`explodeAll`]() property of [`DoughnutSeries`](), you can explode all the
                     yValueMapper: (ChartData data, _) => data.y,
                     startAngle: 270,
                     endAngle: 90
-                ),
-            ])),
-        ),
+                )
+            ]))
+        )
         );
     }
 
 
 {% endhighlight %}
 
-![Doughnut angle](images/circular-chart-types/doughnut_angle.jpg)
+![Doughnut angle](images/getting-started/livechart.png)
 
 ### Grouping data points
 
@@ -476,16 +477,16 @@ The small segments in the doughnut chart can be grouped into **others** category
                     yValueMapper: (ChartData data, _) => data.y,
                     groupMode: CircularChartGroupMode.point,
                     groupTo: 2
-                ),
-            ])),
-        ),
+                )
+            ]))
+        )
         );
     }
 
 
 {% endhighlight %}
 
-![Doughnut grouping](images/circular-chart-types/doughnut_grouping.jpg)
+![Doughnut grouping](images/getting-started/livechart.png)
 
 ## Radial bar chart
 
@@ -514,17 +515,17 @@ To render a radial bar chart, create an instance of [`RadialBarSeries`]() and ad
           RadialBarSeries<ChartData, String>(
             dataSource: chartData,
             xValueMapper: (ChartData data, _) => data.x,
-            yValueMapper: (ChartData data, _) => data.y,
-          ),
-        ])),
-        ),
+            yValueMapper: (ChartData data, _) => data.y
+          )
+        ]))
+        )
         );
     }
 
 
 {% endhighlight %}
 
-![Radial bar chart](images/circular-chart-types/radialbar.jpg)
+![Radial bar chart](images/getting-started/livechart.png)
 
 ### Changing the radial bar size
 
@@ -543,16 +544,16 @@ You can use [`radius`]() property to change the diameter of the radial bar chart
                     xValueMapper: (ChartData data, _) => data.x,
                     yValueMapper: (ChartData data, _) => data.y,
                     radius: '50%'
-                ),
-            ])),
-        ),
+                )
+            ]))
+        )
         );
     }
 
 
 {% endhighlight %}
 
-![Radial bar size](images/circular-chart-types/radialbar_sizing.jpg)
+![Radial bar size](images/getting-started/livechart.png)
 
 ### Changing the radial bar inner radius
 
@@ -570,16 +571,14 @@ You can change the radial bar chart inner radius using the [`innerRadius`]() wit
                     dataSource: chartData,
                     xValueMapper: (ChartData data, _) => data.x,
                     yValueMapper: (ChartData data, _) => data.y,
-                    innerRadius: '30%'
-                ),
-            ])),
-        ),
+                    innerRadius: '80%'
+                )
+            ]))
+        )
         );
     }
 
 {% endhighlight %}
-
-![Radialbar Inner Radius](images/circular-chart-types/radialbar_innerRadius.jpg)
 
 ### Rounded corners
 
@@ -598,15 +597,15 @@ The [`cornerStyle`]() property specifies the corner type for radial bar chart. T
                     xValueMapper: (ChartData data, _) => data.x,
                     yValueMapper: (ChartData data, _) => data.y,
                     cornerStyle: CornerStyle.bothCurve
-                ),
-            ])),
-        ),
+                )
+            ]))
+        )
         );
     }
 
 {% endhighlight %}
 
-![Radial bar corner style](images/circular-chart-types/radialbar_roundCorner.jpg)
+![Radial bar corner style](images/getting-started/livechart.png)
 
 ### Rendering data labels
 
@@ -638,13 +637,13 @@ Data labels can be enabled by using [`isVisible`]() property of [`dataLabelSetti
                             xValueMapper: (ChartData data, _) => data.x,
                             yValueMapper: (ChartData data, _) => data.y,
                             dataLabelSettings: DataLabelSettings(
-                                isVisible: true,
-                            )),
-                    ])),
-            ),
+                                isVisible: true
+                            ))
+                    ]))
+            )
         );
     }
 
 {% endhighlight %}
 
-![Radial bar data label](images/circular-chart-types/radialbar_dataLabel.jpg)
+![Radial bar data label](images/getting-started/livechart.png)

@@ -1,15 +1,16 @@
 ---
 layout: post
 title: Overview | Flutter | Syncfusion
-description: Basic overview about the list of available features on Syncfusion Flutter components and steps to use the guide.
+description: Basic overview about the list of available features on Syncfusion Flutter widgets and steps to use the guide.
 platform: flutter
 control: Overview
 documentation: ug
 ---
 
-# Welcome to Syncfusion Essential Studio for Flutter
+# Welcome to Syncfusion Flutter Widgets
 
-Essential Studio for Flutter is a comprehensive collection of enterprise-grade Flutter components for building modern Mobile applications. It includes chart UI control that is typically required for building line-of-business (LOB) applications.
+The Syncfusion Flutter UI widgets is the suite you ever need to create rich and high-quality mobile applications in iOS and Android with single code base. As of now, it includes charts widgets.
+
 
 ## How to best read this user guide
 

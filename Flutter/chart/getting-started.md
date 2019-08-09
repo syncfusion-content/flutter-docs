@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started for Essential Syncfusion Flutter Chart
-description: How to create a chart, add series, legend in Chart.
+title: Getting Started for Syncfusion Flutter Charts
+description: Learn how to create the Flutter chart, add series, legend in Chart.
 platform: flutter
 control: Chart
 documentation: ug
@@ -56,11 +56,12 @@ Once the packages has been imported, initialize the chart as a child of any widg
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-        body: Center(
-            child: Container(
-                child: SfCartesianChart() //Initialize chart
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart() //Initialize chart
+                )
             )
-        ));
+        );
     }
 
 {% endhighlight %}
@@ -76,33 +77,35 @@ Based on your data, initialize the appropriate axis type and series type. In the
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-        body: Center(
-            child: Container(
-                child: SfCartesianChart(
-                   primaryXAxis: CategoryAxis(), // Initialize category axis.
-                  series: <ChartSeries>[
-                  // Initialize line series.
-                  LineSeries<SalesData, String>(
-                    dataSource: [
-                      // Bind data source.
-                      SalesData('Jan', 35),
-                      SalesData('Feb', 28),
-                      SalesData('Mar', 34),
-                      SalesData('Apr', 32),
-                      SalesData('May', 40)
-                    ],
-                    xValueMapper: (SalesData sales, _) => sales.year,
-                    yValueMapper: (SalesData sales, _) => sales.sales)
-              ])
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis: CategoryAxis(), // Initialize category axis.
+                        series: <ChartSeries>[
+                            // Initialize line series.
+                            LineSeries<SalesData, String>(
+                                dataSource: [
+                                    // Bind data source.
+                                    SalesData('Jan', 35),
+                                    SalesData('Feb', 28),
+                                    SalesData('Mar', 34),
+                                    SalesData('Apr', 32),
+                                    SalesData('May', 40)
+                                ],
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales
+                            )
+                        ]
+                    )
+                )
             )
-        ),
         );
     }
 
     class SalesData{
         SalesData(this.year, this.sales);
-            final String year;
-            final double sales;
+        final String year;
+        final double sales;
     }
 
 {% endhighlight %}
@@ -119,27 +122,28 @@ You can add a [`title`]() to the chart to provide quick information to the user 
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-        body: Center(
-            child: Container(
-                child: SfCartesianChart(
-                   title: ChartTitle(text: 'Half yearly sales analysis'),
-                   primaryXAxis: CategoryAxis(), // Initialize category axis.
-                  series: <ChartSeries>[
-                  // Initialize line series.
-                  LineSeries<SalesData, String>(
-                    dataSource: [
-                      // Bind data source.
-                      SalesData('Jan', 35),
-                      SalesData('Feb', 28),
-                      SalesData('Mar', 34),
-                      SalesData('Apr', 32),
-                      SalesData('May', 40)
-                    ],
-                    xValueMapper: (SalesData sales, _) => sales.year,
-                    yValueMapper: (SalesData sales, _) => sales.sales)
-              ])
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        title: ChartTitle(text: 'Half yearly sales analysis'),
+                        primaryXAxis: CategoryAxis(), // Initialize category axis.
+                        series: <ChartSeries>[
+                            // Initialize line series.
+                            LineSeries<SalesData, String>(
+                            dataSource: [
+                                // Bind data source.
+                                SalesData('Jan', 35),
+                                SalesData('Feb', 28),
+                                SalesData('Mar', 34),
+                                SalesData('Apr', 32),
+                                SalesData('May', 40)
+                            ],
+                            xValueMapper: (SalesData sales, _) => sales.year,
+                            yValueMapper: (SalesData sales, _) => sales.sales)
+                        ]
+                    )
+                )
             )
-        ),
         );
     }
 
@@ -156,28 +160,30 @@ You can add data labels to improve the readability of the chart. This can be ach
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-        body: Center(
-            child: Container(
-                child: SfCartesianChart(
-                   title: ChartTitle(text: 'Half yearly sales analysis'),
-                   primaryXAxis: CategoryAxis(), // Initialize category axis.
-                  series: <ChartSeries>[
-                  // Initialize line series.
-                  LineSeries<SalesData, String>(
-                    dataSource: [
-                      // Bind data source.
-                      SalesData('Jan', 35),
-                      SalesData('Feb', 28),
-                      SalesData('Mar', 34),
-                      SalesData('Apr', 32),
-                      SalesData('May', 40)
-                    ],
-                    xValueMapper: (SalesData sales, _) => sales.year,
-                    yValueMapper: (SalesData sales, _) => sales.sales,
-                    dataLabelSettings:DataLabelSettings(isVisible : true))
-              ])
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        title: ChartTitle(text: 'Half yearly sales analysis'),
+                        primaryXAxis: CategoryAxis(), // Initialize category axis.
+                        series: <ChartSeries>[
+                            // Initialize line series.
+                            LineSeries<SalesData, String>(
+                                dataSource: [
+                                    // Bind data source.
+                                    SalesData('Jan', 35),
+                                    SalesData('Feb', 28),
+                                    SalesData('Mar', 34),
+                                    SalesData('Apr', 32),
+                                    SalesData('May', 40)
+                                ],
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales,
+                                dataLabelSettings:DataLabelSettings(isVisible : true)
+                            )
+                        ]
+                    )
+                )
             )
-        ),
         );
     }
 
@@ -194,27 +200,29 @@ You can use legend for the chart by setting the [`isVisible`]() property to true
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-        body: Center(
-            child: Container(
-                child: SfCartesianChart(
-                   legend: Legend(isVisible: true), 
-                   primaryXAxis: CategoryAxis(), // Initialize category axis.
-                  series: <ChartSeries>[
-                  // Initialize line series.
-                  LineSeries<SalesData, String>(
-                    dataSource: [
-                      // Bind data source.
-                      SalesData('Jan', 35),
-                      SalesData('Feb', 28),
-                      SalesData('Mar', 34),
-                      SalesData('Apr', 32),
-                      SalesData('May', 40)
-                    ],
-                    xValueMapper: (SalesData sales, _) => sales.year,
-                    yValueMapper: (SalesData sales, _) => sales.sales)
-              ])
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        legend: Legend(isVisible: true), 
+                        primaryXAxis: CategoryAxis(), // Initialize category axis.
+                        series: <ChartSeries>[
+                            // Initialize line series.
+                            LineSeries<SalesData, String>(
+                                dataSource: [
+                                    // Bind data source.
+                                    SalesData('Jan', 35),
+                                    SalesData('Feb', 28),
+                                    SalesData('Mar', 34),
+                                    SalesData('Apr', 32),
+                                    SalesData('May', 40)
+                                ],
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales
+                            )
+                        ]
+                    )
+                )      
             )
-        ),
         );
     }
 
@@ -233,31 +241,33 @@ The [`tooltipBehavior`]() property in chart is used to enable and customize the 
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-        appBar: AppBar(
-            title: Text(widget.title),
-        ),
-        body: Center(
-            child: Container(
-                child: SfCartesianChart(
-                   tooltipBehavior: TooltipBehavior(enable: true),//Used to customize the tooltip for all the series
-                   primaryXAxis: CategoryAxis(), // Initialize category axis.
-                  series: <ChartSeries>[
-                  // Initialize line series.
-                  LineSeries<SalesData, String>(
-                    enableTooltip: true, //Enables the tooltip for individual series. 
-                    dataSource: [
-                      // Bind data source.
-                      SalesData('Jan', 35),
-                      SalesData('Feb', 28),
-                      SalesData('Mar', 34),
-                      SalesData('Apr', 32),
-                      SalesData('May', 40)
-                    ],
-                    xValueMapper: (SalesData sales, _) => sales.year,
-                    yValueMapper: (SalesData sales, _) => sales.sales)
-              ])
+            appBar: AppBar(
+                title: Text(widget.title),
+            ),
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        tooltipBehavior: TooltipBehavior(enable: true),//Used to customize the tooltip for all the series
+                        primaryXAxis: CategoryAxis(), // Initialize category axis.
+                        series: <ChartSeries>[
+                            // Initialize line series.
+                            LineSeries<SalesData, String>(
+                                enableTooltip: true, //Enables the tooltip for individual series. 
+                                dataSource: [
+                                    // Bind data source.
+                                    SalesData('Jan', 35),
+                                    SalesData('Feb', 28),
+                                    SalesData('Mar', 34),
+                                    SalesData('Apr', 32),
+                                    SalesData('May', 40)
+                                ],
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales
+                            )
+                        ]
+                    )
+                )
             )
-        ),
         );
     }
 

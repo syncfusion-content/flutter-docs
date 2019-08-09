@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion Cartesian Chart types
-description: What are the different types of Charts available in Essential Flutter Chart.
+description: Leart what are the different types of Charts available in Flutter Charts.
 platform: flutter
 control: Chart
 documentation: ug
@@ -81,7 +81,7 @@ The [`dashArray`]() property of the [`LineSeries`]() is used to render line seri
 
 ### Multi-colored line
 
-To render a multicolored line series, map the individual colors to the data by using the [`pointColorMapper`]() property.
+To render a multi-colored line series, map the individual colors to the data by using the [`pointColorMapper`]() property.
 
 {% highlight dart %} 
 
