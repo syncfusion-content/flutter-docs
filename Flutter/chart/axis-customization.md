@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Overview of Essential Flutter Chart
+title: Overview of Syncfusion Essential Flutter Chart
 description: How to customize the visibility, title, labels, grid lines and tick lines of chart axis
 platform: flutter
 control: Chart
@@ -57,9 +57,9 @@ The [`title`]() property in axis provides options to customize the text and font
         body: Center(
             child: Container(
                 child: SfCartesianChart(
-                   primaryXAxis: NumericAxis(
+                   primaryXAxis: CategoryAxis(
                        title: AxisTitle(
-                         text: 'Axis Title',
+                         text: 'X-Axis',
                          textStyle: ChartTextStyle(
                            color: Colors.red,
                            fontFamily: 'Roboto',
@@ -90,7 +90,7 @@ The [`labelRotation`]() property of axis can be used to rotate the axis labels p
         body: Center(
             child: Container(
                 child: SfCartesianChart(
-                     primaryXAxis: NumericAxis(
+                     primaryXAxis: CategoryAxis(
                        labelRotation: 90
                     ), 
                 )
@@ -118,7 +118,7 @@ The [`labelRotation`]() property of axis can be used to rotate the axis labels p
         body: Center(
             child: Container(
                 child: SfCartesianChart(
-                     primaryXAxis: NumericAxis(
+                     primaryXAxis: CategoryAxis(
                        axisLine: AxisLine(
                          color: Colors.red,
                          width: 2,
@@ -183,7 +183,7 @@ The [`labelFormat`]() property is used to add prefix or suffix with the axis lab
         body: Center(
             child: Container(
                 child: SfCartesianChart(
-                     primaryXAxis: NumericAxis(
+                     primaryYAxis: NumericAxis(
                        labelFormat: '{value}°C'
                     ), 
                 )
@@ -207,7 +207,7 @@ Axis labels and ticks can be positioned inside or outside the chart area by usin
         body: Center(
             child: Container(
                 child:SfCartesianChart(
-                     primaryXAxis: NumericAxis(
+                     primaryXAxis: CategoryAxis(
                        labelPosition: LabelPosition.inside,
                        tickPosition: TickPosition.inside
                      ), 
@@ -232,7 +232,7 @@ Labels with long text at the edges of an axis may appear partially outside the c
         body: Center(
             child: Container(
                 child:SfCartesianChart(
-                     primaryXAxis: NumericAxis(
+                     primaryXAxis: CategoryAxis(
                        edgeLabelPlacement: EdgeLabelPlacement.shift
                     ), 
                 )

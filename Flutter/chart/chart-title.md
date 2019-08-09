@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Chart Title
+title: Syncfusion Essential Flutter Chart Title
 description: How to add chart title and customize the appearance of the chart title in the Essential Flutter Charts.
 platform: flutter
 control: Chart
@@ -69,4 +69,4 @@ You can align the title text content to the near, center or far of the title usi
 
 {% endhighlight %}
 
-![Chart title](images/getting-started/livechart.png)
+![Chart title](images/chart-title/chart_title.jpg)
