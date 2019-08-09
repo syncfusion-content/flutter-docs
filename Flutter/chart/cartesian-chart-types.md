@@ -50,7 +50,7 @@ To render a line chart, create an instance of [`LineSeries`]() and add to the [`
 
 {% endhighlight %}
 
-![Line chart](images/getting-started/livechart.png)
+![Line chart](images/cartesian-chart-types/line.jpg)
 
 ### Dashed line
 
@@ -77,7 +77,7 @@ The [`dashArray`]() property of the [`LineSeries`]() is used to render line seri
 
 {% endhighlight %}
 
-![Dashed line chart](images/getting-started/livechart.png)
+![Dashed line chart](images/cartesian-chart-types/dashed_line.jpg)
 
 ### Multi-colored line
 
@@ -118,7 +118,7 @@ To render a multi-colored line series, map the individual colors to the data by 
 
 {% endhighlight %}
 
-![Multi-colored line](images/getting-started/livechart.png)
+![Multi-colored line](images/cartesian-chart-types/multiColored_line.jpg)
 
 ## Area chart
 
@@ -148,7 +148,7 @@ To render an area chart, create an instance of [`AreaSeries`]() and add to the [
 
 {% endhighlight %}
 
-![Area chart](images/getting-started/livechart.png)
+![Area chart](images/cartesian-chart-types/area.jpg)
 
 ###	Border customization
 
@@ -164,7 +164,10 @@ The borders of the area chart can be customized using the [`borderMode`]() prope
                 child:SfCartesianChart(series: <ChartSeries>[
                  AreaSeries<SalesData, double>(
                     dataSource: chartData,
+                    color: Colors.deepOrange[300],
                     borderMode: AreaBorderMode.excludeBottom,
+                    borderColor: Colors.green,
+                    borderWidth: 2,
                     xValueMapper: (SalesData sales, _) => sales.year,
                     yValueMapper: (SalesData sales, _) => sales.sales),
                 ])
@@ -174,7 +177,7 @@ The borders of the area chart can be customized using the [`borderMode`]() prope
 
 {% endhighlight %}
 
-![Area border](images/getting-started/livechart.png)
+![Area border](images/cartesian-chart-types/area_border.jpg)
 
 ## Spline chart
 
@@ -203,7 +206,7 @@ To render a spline chart, create an instance of [`SplineSeries`]() and add to th
 
 {% endhighlight %}
 
-![Spline border](images/getting-started/livechart.png)
+![Spline border](images/cartesian-chart-types/spline.jpg)
 
 ### Dashed spline
 
@@ -230,7 +233,7 @@ The [`dashArray`]() property of the [`SplineSeries`]() is used to render spline 
 
 {% endhighlight %}
 
-![Dashed spline chart](images/getting-started/livechart.png)
+![Dashed spline chart](images/cartesian-chart-types/dashed_spline.jpg)
 
 ###	Spline rendering types
 
@@ -266,7 +269,7 @@ The following code shows how to set the [`splineType`]() value as [`cardinal`]()
 
 {% endhighlight %}
 
-![Spline type](images/getting-started/livechart.png)
+![Spline type](images/cartesian-chart-types/cardinal_spline.jpg)
 
 ## Column chart
 
@@ -296,7 +299,7 @@ To render a column chart, create an instance of [`ColumnSeries`]() and add to th
 
 {% endhighlight %}
 
-![Column chart](images/getting-started/livechart.png)
+![Column chart](images/cartesian-chart-types/column.jpg)
 
 ### Side by side series placement
 
@@ -308,7 +311,7 @@ By default, all the column series which has the same x and y axes are placed sid
     Widget build(BuildContext context) {
         final List<SalesData> chartData = [
             SalesData(2010, 35, 23),
-            Salesata(2011, 38, 49),
+            SalesData(2011, 38, 49),
             SalesData(2012, 34, 12),
             SalesData(2013, 52, 33),
             SalesData(2014, 40, 30)
@@ -329,7 +332,7 @@ By default, all the column series which has the same x and y axes are placed sid
                 width: 0.4,
                 dataSource: chartData,
                 xValueMapper: (SalesData sales, _) => sales.year,
-                yValueMapper: (SalesData sales, _) => sales.segmentColor
+                yValueMapper: (SalesData sales, _) => sales.loss
               ),
             ])
           )   
@@ -338,7 +341,7 @@ By default, all the column series which has the same x and y axes are placed sid
 
 {% endhighlight %}
 
-![Column side by side placement](images/getting-started/livechart.png)
+![Column side by side placement](images/cartesian-chart-types/sidebySidePlacement.jpg)
 
 ### Column width and spacing
 
@@ -367,7 +370,7 @@ The [`width`]() property is used to change the width of the rectangle. The defau
 
 {% endhighlight %}
 
-![Column width and spacing](images/getting-started/livechart.png)
+![Column width and spacing](images/cartesian-chart-types/column_width_spacing.jpg)
 
 ### Rounded corners
 
@@ -393,7 +396,7 @@ The [`borderRadius`]() property is used to add the rounded corners to the rectan
 
 {% endhighlight %}
 
-![Rounded corners](images/getting-started/livechart.png)
+![Rounded corners](images/cartesian-chart-types/rounded_column.jpg)
 
 
 ### Track customization
@@ -415,7 +418,7 @@ Renders column with track. Track is a rectangular bar rendered from the start to
                 child:SfCartesianChart(series: <ChartSeries>[
                     ColumnSeries<SalesData, double>(
                         dataSource: chartData,
-                        isTrackVisible: true ,
+                        isTrackVisible: true,
                         xValueMapper: (SalesData sales, _) => sales.year,
                         yValueMapper: (SalesData sales, _) => sales.sales),
                 ])
@@ -425,7 +428,7 @@ Renders column with track. Track is a rectangular bar rendered from the start to
 
 {% endhighlight %}
 
-![Track](images/getting-started/livechart.png)
+![Track](images/cartesian-chart-types/track_column.jpg)
 
 ## Bar chart
 
@@ -455,7 +458,7 @@ To render a column chart, create an instance of [`BarSeries`]() and add to the [
 
 {% endhighlight %}
 
-![Bar chart](images/getting-started/livechart.png)
+![Bar chart](images/cartesian-chart-types/bar.jpg)
 
 ### Column width and spacing
 
@@ -475,8 +478,8 @@ The [`width`]() property is used to change the width of the rectangle. The defau
                         dataSource: chartData,
                         xValueMapper: (SalesData sales, _) => sales.year,
                         yValueMapper: (SalesData sales, _) => sales.sales,
-                        width: 0.8,
-                        spacing: 0.2),
+                        width: 0.6,
+                        spacing: 0.3),
             ])
           )   
         ));
@@ -484,7 +487,7 @@ The [`width`]() property is used to change the width of the rectangle. The defau
 
 {% endhighlight %}
 
-![Bar width and spacing](images/getting-started/livechart.png)
+![Bar width and spacing](images/cartesian-chart-types/bar_width_spacing.jpg)
 
 ### Rounded corners
 
@@ -510,7 +513,7 @@ The [`borderRadius`]() property is used to add the rounded corners to the rectan
 
 {% endhighlight %}
 
-![Bar rounded corners](images/getting-started/livechart.png)
+![Bar rounded corners](images/cartesian-chart-types/rounded_bar.jpg)
 
 
 ### Track customization
@@ -532,7 +535,7 @@ You can render the bar chart with track. Track is a rectangular bar rendered fro
                 child:SfCartesianChart(series: <ChartSeries>[
                     BarSeries<SalesData, double>(
                         dataSource: chartData,
-                        isTrackVisible: true ,
+                        isTrackVisible: true,
                         xValueMapper: (SalesData sales, _) => sales.year,
                         yValueMapper: (SalesData sales, _) => sales.sales),
                 ])
@@ -542,7 +545,7 @@ You can render the bar chart with track. Track is a rectangular bar rendered fro
 
 {% endhighlight %}
 
-![Bar track](images/getting-started/livechart.png)
+![Bar track](images/cartesian-chart-types/track_bar.jpg)
 
 ## Bubble chart
 
@@ -589,7 +592,7 @@ Bubble chart requires 3 fields (X, Y and Size) to plot a point. Here [`sizeValue
 
 {% endhighlight %}
 
-![Bubble chart](images/getting-started/livechart.png)
+![Bubble chart](images/cartesian-chart-types/bubble.jpg)
 
 ### Change min and max radius of bubble
 
@@ -617,7 +620,7 @@ The [`minimumRadius`]() property is used to change the minimum size of the serie
 
 {% endhighlight %}
 
-![Bubble size](images/getting-started/livechart.png)
+![Bubble size](images/cartesian-chart-types/bubble_radius.jpg)
 
 ## Scatter chart
 
@@ -647,7 +650,7 @@ To render a scatter chart, create an instance of [`ScatterSeries`]() and add to 
 
 {% endhighlight %}
 
-![Scatter chart](images/getting-started/livechart.png)
+![Scatter chart](images/cartesian-chart-types/scatter.jpg)
 
 ###	Change shape and size of the scatter
 
@@ -679,7 +682,7 @@ The [`height`]() and [`width`]() properties of [`markerSettings`]() are used to 
 
 {% endhighlight %}
 
-![Scatter shape](images/getting-started/livechart.png)
+![Scatter shape](images/cartesian-chart-types/scatter_shape.jpg)
 
 ## Step line chart
 
@@ -709,7 +712,7 @@ To render a step line chart, create an instance of [`StepLineSeries`]() and add 
 
 {% endhighlight %}
 
-![Step line chart](images/getting-started/livechart.png)
+![Step line chart](images/cartesian-chart-types/stepline.jpg)
 
 ### Dashed line
 
@@ -736,7 +739,7 @@ The [`dashArray`]() property of the [`StepLineSeries`]() is used to render step 
 
 {% endhighlight %}
 
-![Step line chart](images/getting-started/livechart.png)
+![Step line chart](images/cartesian-chart-types/dashed_stepline.jpg)
 
 ## Fast line chart
 
@@ -766,4 +769,4 @@ The [`dashArray`]() property of the [`StepLineSeries`]() is used to render step 
 
 {% endhighlight %}
 
-![Fast line chart](images/getting-started/livechart.png)
+![Fast line chart](images/cartesian-chart-types/fastline.jpg)
