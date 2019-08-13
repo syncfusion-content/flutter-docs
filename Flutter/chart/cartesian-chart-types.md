@@ -122,7 +122,7 @@ To render a multi-colored line series, map the individual colors to the data by 
 
 ## Area chart
 
-To render an area chart, create an instance of [`AreaSeries`]() and add to the [`series`]() collection property of [`SfCartesianChart`](). The area chart shows the filled area to represent the data, but when there are more than a series, this may hide the other series. To ged rid if this, you can increase/decrease the transparency of the series. 
+To render an area chart, create an instance of [`AreaSeries`]() and add to the [`series`]() collection property of [`SfCartesianChart`](). The area chart shows the filled area to represent the data, but when there are more than a series, this may hide the other series. To get rid of this, you can increase/decrease the transparency of the series. 
 
 You can use the following properties to customize the appearance.
 

@@ -244,7 +244,7 @@ The [`numberFormat`]() property of numeric axis formats the numeric axis labels 
 
 ## Category axis
 
-Category axis displays text labels instead of numbers. When the string values are bound to x values, then the x axis must be initialzed with CategoryAxis.
+Category axis displays text labels instead of numbers. When the string values are bound to x values, then the x axis must be initialized with CategoryAxis.
 
 {% highlight dart %} 
 

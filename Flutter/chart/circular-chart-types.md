@@ -493,7 +493,7 @@ The small segments in the doughnut chart can be grouped into **others** category
 
 ## Radial bar chart
 
-The radial bar chart is used for showing the comparisons among the categories using the circualr shapes. To render a radial bar chart, create an instance of [`RadialBarSeries`]() and add to the [`series`]() collection property of [`SfCircularChart`](). You can use the following properties to customize the pie segment appearance.
+The radial bar chart is used for showing the comparisons among the categories using the circular shapes. To render a radial bar chart, create an instance of [`RadialBarSeries`]() and add to the [`series`]() collection property of [`SfCircularChart`](). You can use the following properties to customize the pie segment appearance.
 
 * [`opacity`]() - used to control the transparency of the chart series.
 * [`strokeWidth`]() – used to change the stroke width of the series.
