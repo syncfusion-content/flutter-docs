@@ -54,7 +54,7 @@ To render a line chart, create an instance of [`LineSeries`]() and add to the [`
 
 ### Dashed line
 
-The [`dashArray`]() property of the [`LineSeries`]() is used to render line series with dashes.
+The [`dashArray`]() property of the [`LineSeries`]() is used to render line series with dashes. Odd value is considered as rendering size and even value is considered as gap.
 
 {% highlight dart %} 
     
@@ -122,7 +122,9 @@ To render a multi-colored line series, map the individual colors to the data by 
 
 ## Area chart
 
-To render an area chart, create an instance of [`AreaSeries`]() and add to the [`series`]() collection property of [`SfCartesianChart`](). You can use the following properties to customize the appearance.
+To render an area chart, create an instance of [`AreaSeries`]() and add to the [`series`]() collection property of [`SfCartesianChart`](). The area chart shows the filled area to represent the data, but when there are more than a series, this may hide the other series. To get rid of this, you can increase/decrease the transparency of the series. 
+
+You can use the following properties to customize the appearance.
 
 * [`color`]() – used to change the color of the series.
 * [`opacity`]() - used to control the transparency of the chart series.
@@ -210,7 +212,7 @@ To render a spline chart, create an instance of [`SplineSeries`]() and add to th
 
 ### Dashed spline
 
-The [`dashArray`]() property of the [`SplineSeries`]() is used to render spline series with dashes.
+The [`dashArray`]() property of the [`SplineSeries`]() is used to render spline series with dashes. Odd value is considered as rendering size and even value is considered as gap.
 
 {% highlight dart %} 
     
@@ -714,9 +716,9 @@ To render a step line chart, create an instance of [`StepLineSeries`]() and add 
 
 ![Step line chart](images/cartesian-chart-types/stepline.jpg)
 
-### Dashed line
+### Dashed step line
 
-The [`dashArray`]() property of the [`StepLineSeries`]() is used to render step line series with dashes.
+The [`dashArray`]() property of the [`StepLineSeries`]() is used to render step line series with dashes. Odd value is considered as rendering size and even value is considered as gap.
 
 {% highlight dart %} 
     

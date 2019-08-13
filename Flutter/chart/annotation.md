@@ -39,7 +39,7 @@ Chart supports annotations which allows you to mark the specific area of interes
 ![Annotation](images/annotation/default_annotation.jpg)
 ## Positioning the annotation
 
-The [`x`]() and [`y`]() values can be specified with axis units or pixel units, and these can be identified by using [`coordinateUnit`]() property.
+The [`x`]() and [`y`]() values can be specified with axis units or pixel units, and these can be identified by using [`coordinateUnit`]() property. When logicalPixel is specified, the annotation will be placed with respect to pixel values whereas point is specified, then the annotation will be placed with respect to series point values.
 
 **Positioning based on coordinateUnit as point**
 
@@ -106,7 +106,7 @@ To position the annotation based on the pixel values, set the [`CoordinateUnit`]
 
 ## Adding multiple annotation
 
-You can add multiple annotations to the Chart as depicted in below code snippet.
+You can add multiple annotations to the Chart by adding multiple widgets to the [`annotations`]() property. as depicted in below code snippet.
 
 {% highlight dart %} 
 

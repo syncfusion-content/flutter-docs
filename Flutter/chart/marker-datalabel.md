@@ -174,7 +174,7 @@ Data label can be added to a chart series by enabling the [`isVisible`]() option
 
 ### Formatting label content
 
-Data label considers the text format used in the vertical axis by default.
+Data label considers the format used in the vertical axis by default. In the below code snippet, we have specified format to y-axis and you can see the same format is applied to data label.
 
 {% highlight dart %} 
 
@@ -304,7 +304,7 @@ The [`useSeriesColor`]() property is used to apply the series color to backgroun
 
 ### Connector line
 
-This feature is used to connect label and data point using a line. It can be enabled for [`Pie`]() and [`Doughnut`]() chart types. The [`connectorLineSettings`]() property used to customize the connector line.
+This feature is used to connect label and data point using a line. It can be enabled for [`Pie`]() and [`Doughnut`]() chart types. The [`connectorLineSettings`]() property is used to customize the connector line.
 
 * [`color`]() – used to change the color of the line
 * [`width`]() – used to change the stroke thickness of the line
@@ -346,7 +346,7 @@ This feature is used to connect label and data point using a line. It can be ena
 
 ### Point text mapping
 
-The [`dataLabelMapper`]() property is used to map the text from data source. 
+The [`dataLabelMapper`]() property is used to map the text from data source which can be used by the data label to display the text..
 
 {% highlight dart %} 
 
@@ -394,7 +394,7 @@ The [`dataLabelMapper`]() property is used to map the text from data source.
 
 ### Label template
 
-You can customize the appearance of the data label with your own template using the [`builder`]() property of [`dataLabelSettings`]().
+You can customize the appearance of the data label with your own template using the [`builder`]() property of [`dataLabelSettings`](). Here you can specify the content that needs to be displayed in the data label as widget.
 
 {% highlight dart %} 
 
@@ -411,7 +411,7 @@ You can customize the appearance of the data label with your own template using 
                                 yValueMapper: (ChartData data, _) => data.y,
                                 dataLabelMapper: (ChartData data, _) => data.text,
                                 dataLabelSettings: DataLabelSettings(
-                                    isVisible: true
+                                    isVisible: true,
                                     builder: (dynamic data, dynamic point, dynamic series, int pointIndex, int seriesIndex) {
                                         return Container(
                                         height: 30,

@@ -306,7 +306,7 @@ You can change the position of the legend inside the chart. The following proper
 
 ### Legend item template
 
-You can customize the appearance of legend items with your template by using [`legendItemBuilder`]() property of [`legend`]().
+You can customize the appearance of legend items with your template by using [`legendItemBuilder`]() property of [`legend`](). Here you can specify the content that needs to be displayed in the legend text as widget.
 
 {% highlight dart %} 
 

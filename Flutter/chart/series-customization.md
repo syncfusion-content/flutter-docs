@@ -49,7 +49,7 @@ You can add multiple series to [`series`]() property of [`SfCartesianChart`]() c
 
 ## Combination series
 
-[`SfCartesianChart`]() allows you to render the combination of different types of series.
+[`SfCartesianChart`]() allows you to render the combination of different types of series. In the below code snippet we have combined the column and line type series.
 
 {% highlight dart %} 
 
@@ -141,7 +141,7 @@ The [`isTransposed`]() property of [`CartesianSeries`]() is used to transpose th
 
 ## Color palette
 
-The [`palette`]() property is used to define the colors for the series available in chart. By default, a set of 10 colors are predefined for applying it to the series. If the colors specified in the series are less than the number of series, than the remaining series are filled with the specified palette colors rotationally.
+The [`palette`]() property is used to define the colors for the series available in chart. By default, a set of 10 colors are predefined for applying it to the series. If the colors specified in the palette property is less than the number of series, than the remaining series are filled with the specified palette colors rotationally.
 
 {% highlight dart %} 
 
