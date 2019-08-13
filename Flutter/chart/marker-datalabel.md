@@ -174,7 +174,7 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
 
 ### Formatting label content
 
-Data label considers the text format used in the vertical axis by default.
+Data label considers the format used in the vertical axis by default. In the below code snippet, we have specified format to y-axis and you can see the same format is applied to data label.
 
 {% highlight dart %} 
 
@@ -419,7 +419,7 @@ You can customize the appearance of the data label with your own template using 
                                 yValueMapper: (ChartData data, _) => data.y,
                                 dataLabelMapper: (ChartData data, _) => data.text,
                                 dataLabelSettings: DataLabelSettings(
-                                    isVisible: true
+                                    isVisible: true,
                                     builder: (dynamic data, dynamic point, dynamic series, int pointIndex, int seriesIndex) {
                                         return Container(
                                         height: 30,

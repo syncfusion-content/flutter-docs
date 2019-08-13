@@ -17,7 +17,8 @@ Create a simple project, using the instructions given in [Getting Started with y
 
 ### Adding flutter charts to your app
 
-#### Add dependency
+**Add dependency**
+
 Add the Syncfusion Flutter Chart dependency to your pub spec file.
 
 {% highlight dart %} 
@@ -28,7 +29,7 @@ Add the Syncfusion Flutter Chart dependency to your pub spec file.
 
 {% endhighlight %}
 
-#### Get packages
+**Get packages**
 
 Run the following command to get the required packages.
 
@@ -38,7 +39,8 @@ Run the following command to get the required packages.
 
 {% endhighlight %}
 
-#### Import package
+**Import package**
+
 Import the following package in your Dart code.
 
 {% highlight dart %} 
@@ -47,7 +49,7 @@ Import the following package in your Dart code.
 
 {% endhighlight %}
 
-### Initialize chart
+**Initialize chart**
 
 Once the packages has been imported, initialize the chart as a child of any widget. Here, add the chart widget as a child of the container widget.
 
@@ -110,12 +112,11 @@ Based on your data, initialize the appropriate axis type and series type. In the
 
 {% endhighlight %}
 
-![Bind data source](images/getting-started/data_source.jpg
-)
+![Bind data source](images/getting-started/data_source.jpg)
 
 ### Add title
 
-You can add a [`title`]() to the chart to provide quick information to the user about the data plotted in the chart. The title in chart can be set as below.
+You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/title.html) to the chart to provide quick information to the user about the data plotted in the chart. The title in chart can be set as below.
 
 {% highlight dart %} 
 
@@ -153,7 +154,7 @@ You can add a [`title`]() to the chart to provide quick information to the user 
 
 ### Enable data labels
 
-You can add data labels to improve the readability of the chart. This can be achieved using [`SfCartesianChart.dataLabelSettings`]() property as shown below.
+You can add data labels to improve the readability of the chart. This can be achieved using [`SfCartesianChart.dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings-class.html) property as shown below.
 
 {% highlight dart %} 
 
@@ -193,7 +194,9 @@ You can add data labels to improve the readability of the chart. This can be ach
 
 ### Enable legend
 
-You can use legend for the chart by setting the [`isVisible`]() property to true in [`SfCartesianChart.legend`]().
+Legend provides information about the series rendered in the chart.
+
+You can use legend for the chart by setting the [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/isVisible.html) property to true in [`SfCartesianChart.legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend-class.html).
 
 {% highlight dart %} 
 
@@ -234,7 +237,7 @@ You can use legend for the chart by setting the [`isVisible`]() property to true
 
 The tooltip is useful when you cannot display information by using the data labels due to space constraints. The tooltip can be enabled as depicted below.
 
-The [`tooltipBehavior`]() property in chart is used to enable and customize the tooltip for all the series whereas the [`enableTooltip`]() property in series used to toggle the tooltip visibility of each series.
+The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior-class.html) property in chart is used to enable and customize the tooltip for all the series whereas the [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/enableTooltip.html) property in series used to toggle the tooltip visibility of each series.
 
 {% highlight dart %} 
 

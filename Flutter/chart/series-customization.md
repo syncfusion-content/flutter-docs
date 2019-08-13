@@ -51,7 +51,7 @@ You can add multiple series to [`series`](https://pub.dev/documentation/syncfusi
 
 ## Combination series
 
-[`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) allows you to render the combination of different types of series.
+[`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) allows you to render the combination of different types of series.In the below code snippet we have combined the column and line type series.
 
 {% highlight dart %} 
 

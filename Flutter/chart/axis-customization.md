@@ -15,7 +15,7 @@ Customization of features such as axis title, labels, grid lines and tick lines 
 
 ### Axis Visibility
 
-Axis visibility can be controlled using the [`isVisible`]() property of axis. Default value of [`isVisible`]() is *true*.
+Axis visibility can be controlled using the [`isVisible`]() property of axis. Default value of [`isVisible`]() is *true*. When the axis visibility is set to false, then the axis elements like ticks, labels, title, etc will be hidden.
 
 {% highlight dart %} 
 
@@ -194,8 +194,6 @@ The [`labelFormat`]() property is used to add prefix or suffix with the axis lab
 
 {% endhighlight %}
 
-![Axis label format](images/axis-customization/label_custom.jpg)
-
 ### Label and tick positioning
 
 Axis labels and ticks can be positioned inside or outside the chart area by using [`labelPosition`]() and [`tickPosition`]() properties of ChartAxis. By default labels and ticks will be positioned outside the chart area.
@@ -247,7 +245,7 @@ Labels with long text at the edges of an axis may appear partially outside the c
 
 ### Grid lines customization
 
-The [`width`]() property is used to control the visibility of grid lines. [`majorGridLines`]() and [`minorGridLines`]() properties in axis are used to customize the major grid lines and minor grid lines of an axis respectively. They provide options to change the width, dashes, color of grid lines. By default minor grid lines will not be visible.
+The [`width`]() property is used to control the visibility of grid lines. [`majorGridLines`]() and [`minorGridLines`]() properties in axis are used to customize the major grid lines and minor grid lines of an axis respectively. We have provided options to change the width, dashes, color of grid lines. By default minor grid lines will not be visible.
 
 {% highlight dart %} 
 
@@ -280,7 +278,7 @@ The [`width`]() property is used to control the visibility of grid lines. [`majo
 
 ### Tick lines customization
 
-The [`majorTickLines`]() and [`minorTickLines`]() properties in axis are used to customize the major tick lines of an axis and minor tick lines of an axis respectively. They provide options to change the [`width`](), [`size`](), [`color`]() and [`minorTicksPerInterval`]() of tick lines. By default minor tick lines will not be visible.
+The [`majorTickLines`]() and [`minorTickLines`]() properties in axis are used to customize the major tick lines of an axis and minor tick lines of an axis respectively. We have provided options to change the [`width`](), [`size`](), [`color`]() and [`minorTicksPerInterval`]() of tick lines. By default minor tick lines will not be visible.
 
 {% highlight dart %} 
 
@@ -362,7 +360,7 @@ The [`opposedPosition`]() property of axis can be used to place the axis at the 
 
 ### Offset the rendering
 
-The [`plotOffset`]() property is used to offset the rendering of the axis at start and end position. The following code snippet demonstrates to apply the plot offset to both x and y axes.
+The [`plotOffset`]() property is used to offset the rendering of the axis at start and end position. The following code snippet demonstrates to apply the plot offset of an axis.
 
 {% highlight dart %} 
 
