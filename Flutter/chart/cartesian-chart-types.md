@@ -615,14 +615,14 @@ You can render the bar chart with track. Track is a rectangular bar rendered fro
 
 ## Bubble chart
 
-To render a bubble chart, create an instance of [`BubbleSeries`]() and add to the [`series`]() collection property of [`SfCartesianChart`]().
+To render a bubble chart, create an instance of [`BubbleSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BubbleSeries-class.html  ) and add to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html).
 
-Bubble chart requires 3 fields (X, Y and Size) to plot a point. Here [`sizeValueMapper`]() is used to map the size of each bubble segment from data source.
+Bubble chart requires 3 fields (X, Y and Size) to plot a point. Here [`sizeValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/sizeValueMapper.html) is used to map the size of each bubble segment from data source.
 
-* [`color`]() – used to change the color of the series.
-* [`opacity`]() - used to control the transparency of the chart series.
-* [`borderColor`]() – used to change the stroke width of the series.
-* [`borderWidth`]() – used to change the stroke color of the series.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) – used to change the color of the series.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - used to control the transparency of the chart series.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) – used to change the stroke width of the series.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) – used to change the stroke color of the series.
 
 {% highlight dart %} 
     
@@ -644,10 +644,12 @@ Bubble chart requires 3 fields (X, Y and Size) to plot a point. Here [`sizeValue
                         sizeValueMapper: (ChartData sales, _) => sales.size,
                         xValueMapper: (ChartData sales, _) => sales.x,
                         yValueMapper: (ChartData sales, _) => sales.y),
-                ])
-          )   
-        ));
-    }
+                    ]
+                )
+            )   
+        )
+    );
+}
 
     class ChartData {
         ChartData(this.x, this.y, this.size);
@@ -662,7 +664,7 @@ Bubble chart requires 3 fields (X, Y and Size) to plot a point. Here [`sizeValue
 
 ### Change min and max radius of bubble
 
-The [`minimumRadius`]() property is used to change the minimum size of the series and [`maximumRadius`]() property is used to change the maximum size of the series.
+The [`minimumRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BubbleSeries/minimumRadius.html) property is used to change the minimum size of the series and [`maximumRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BubbleSeries/maximumRadius.html) property is used to change the maximum size of the series.
 
 {% highlight dart %} 
     
@@ -679,10 +681,12 @@ The [`minimumRadius`]() property is used to change the minimum size of the serie
                         maximumRadius: 15,
                         xValueMapper: (ChartData sales, _) => sales.x,
                         yValueMapper: (ChartData sales, _) => sales.y),
-                ])
-          )   
-        ));
-    }
+                    ]
+                )
+            )   
+        )
+    );
+}
 
 {% endhighlight %}
 
@@ -690,12 +694,12 @@ The [`minimumRadius`]() property is used to change the minimum size of the serie
 
 ## Scatter chart
 
-To render a scatter chart, create an instance of [`ScatterSeries`]() and add to the [`series`]() collection property of [`SfCartesianChart`](). You can use the following properties to customize the scatter segment appearance.
+To render a scatter chart, create an instance of [`ScatterSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ScatterSeries-class.html) and add to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). You can use the following properties to customize the scatter segment appearance.
 
-* [`color`]() – used to change the color of the series.
-* [`opacity`]() - used to control the transparency of the chart series.
-* [`borderWidth`]() – used to change the stroke width of the series.
-* [`borderColor`]() – used to change the stroke color of the series.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) – used to change the color of the series.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - used to control the transparency of the chart series.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) – used to change the stroke width of the series.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) – used to change the stroke color of the series.
 
 {% highlight dart %} 
     
@@ -709,10 +713,12 @@ To render a scatter chart, create an instance of [`ScatterSeries`]() and add to 
                         dataSource: chartData,
                         xValueMapper: (ChartData sales, _) => sales.x,
                         yValueMapper: (ChartData sales, _) => sales.y),
-                ])
-          )   
-        ));
-    }
+                    ]
+                )
+            )   
+        )
+    );
+}
 
 {% endhighlight %}
 
@@ -720,9 +726,9 @@ To render a scatter chart, create an instance of [`ScatterSeries`]() and add to 
 
 ###	Change shape and size of the scatter
 
-The [`shape`]() property is used to change the rendering shape of scatter series. The available shapes are [`circle`](), [`rectangle`](), [`pentagon`](), [`verticalLine`](), [`horizontalLine`](), [`diamond`](), [`triangle`](), [`image`]() and [`invertedTriangle`](). If [`image`]() shape is specified, then you can assign the image using [`imageUrl`]() property.
+The [`shape`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/shape.html) property is used to change the rendering shape of scatter series. The available shapes are [`circle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataMarkerType-class.html), [`rectangle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataMarkerType-class.html), [`pentagon`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataMarkerType-class.html), [`verticalLine`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataMarkerType-class.html), [`horizontalLine`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataMarkerType-class.html), [`diamond`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataMarkerType-class.html), [`triangle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataMarkerType-class.html), [`image`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataMarkerType-class.html) and [`invertedTriangle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataMarkerType-class.html). If [`image`]() shape is specified, then you can assign the image using [`imageUrl`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/imageUrl.html) property.
 
-The [`height`]() and [`width`]() properties of [`markerSettings`]() are used to change the height and width of the scatter series respectively.
+The [`height`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/height.html) and [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/width.html) properties of [`markerSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/markerSettings.html) are used to change the height and width of the scatter series respectively.
 
 {% highlight dart %} 
     
@@ -740,11 +746,14 @@ The [`height`]() and [`width`]() properties of [`markerSettings`]() are used to 
                             height: 15,
                             width: 15,
                             shape: DataMarkerType.diamond,
-                )),
-            ])
-          )   
-        ));
-    }
+                            )
+                        )
+                    ]
+                )
+            )   
+        )
+    );
+}
 
 {% endhighlight %}
 
@@ -752,11 +761,11 @@ The [`height`]() and [`width`]() properties of [`markerSettings`]() are used to 
 
 ## Step line chart
 
-To render a step line chart, create an instance of [`StepLineSeries`]() and add to the [`series`]() collection property of [`SfCartesianChart`](). You can use the following properties to customize the spline segment appearance.
+To render a step line chart, create an instance of [`StepLineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StepLineSeries-class.html) and add to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). You can use the following properties to customize the spline segment appearance.
 
-* [`color`]() – used to change the color of the line.
-* [`opacity`]() - used to control the transparency of the chart series.
-* [`width`]() – used to change the stroke width of the line.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) – used to change the color of the line.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - used to control the transparency of the chart series.
+* [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) – used to change the stroke width of the line.
 
 {% highlight dart %} 
     
@@ -771,10 +780,12 @@ To render a step line chart, create an instance of [`StepLineSeries`]() and add 
                         xValueMapper: (ChartData sales, _) => sales.x,
                         yValueMapper: (ChartData sales, _) => sales.y,
                     ),
-                ])
+                ]
+            )
           )   
-        ));
-    }
+        )
+    );
+}
 
 {% endhighlight %}
 
@@ -782,7 +793,7 @@ To render a step line chart, create an instance of [`StepLineSeries`]() and add 
 
 ### Dashed step line
 
-The [`dashArray`]() property of the [`StepLineSeries`]() is used to render step line series with dashes. Odd value is considered as rendering size and even value is considered as gap.
+The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/dashArray.html) property of the [`StepLineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StepLineSeries-class.html) is used to render step line series with dashes. Odd value is considered as rendering size and even value is considered as gap.
 
 {% highlight dart %} 
     
@@ -798,10 +809,12 @@ The [`dashArray`]() property of the [`StepLineSeries`]() is used to render step 
                         xValueMapper: (ChartData sales, _) => sales.x,
                         yValueMapper: (ChartData sales, _) => sales.y,
                     ),
-                ])
+                ]
+            )
           )   
-        ));
-    }
+        )
+    );
+}
 
 {% endhighlight %}
 
@@ -809,11 +822,11 @@ The [`dashArray`]() property of the [`StepLineSeries`]() is used to render step 
 
 ## Fast line chart
 
-[`FastLineSeries`]() is a line chart, but it loads faster than [`LineSeries`](). You can use this when there are large number of points to be loaded in chart. To render a fast line chart, create an instance of [`FastLineSeries`]() and add to the [`series`]() collection property of [`SfCartesianChart`](). You can use the following properties to customize the fast line segment appearance.
+[`FastLineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FastLineSeries-class.html) is a line chart, but it loads faster than [`LineSeries`]https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LineSeries-class.html(). You can use this when there are large number of points to be loaded in chart. To render a fast line chart, create an instance of [`FastLineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FastLineSeries-class.html) and add to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). You can use the following properties to customize the fast line segment appearance.
 
-* [`color`]() – used to change the color of the line.
-* [`opacity`]() - used to control the transparency of the chart series.
-* [`width`]() – used to change the stroke width of the line.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) – used to change the color of the line.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - used to control the transparency of the chart series.
+* [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) – used to change the stroke width of the line.
 
 {% highlight dart %} 
 
@@ -827,10 +840,12 @@ The [`dashArray`]() property of the [`StepLineSeries`]() is used to render step 
                         dataSource: chartData,
                         xValueMapper: (SalesData sales, _) => sales.year,
                         yValueMapper: (SalesData sales, _) => sales.sales),
-                ])
+                    ]
+                )
             )
-        ));
-    }
+        )
+    );
+}
 
 
 {% endhighlight %}

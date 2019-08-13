@@ -11,7 +11,7 @@ documentation: ug
 
 ## Multiple series
 
-You can add multiple series to [`series`]() property of [`SfCartesianChart`]() class. By default, all the series rendered based on the [`PrimaryXAxis`]() and [`PrimaryYAxis`]() in [`SfCartesianChart`](). But if you want to plot different unit or value that is specific to particular series, you can specify separate axis for that series using [`xAxisName`]() and [`yAxisName`]() properties of series.
+You can add multiple series to [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) class. By default, all the series rendered based on the [`PrimaryXAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/primaryXAxis.html) and [`PrimaryYAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/primaryYAxis.html) in [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). But if you want to plot different unit or value that is specific to particular series, you can specify separate axis for that series using [`xAxisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/xAxisName.html) and [`yAxisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/yAxisName.html) properties of series.
 
 {% highlight dart %} 
 
@@ -37,11 +37,13 @@ You can add multiple series to [`series`]() property of [`SfCartesianChart`]() c
                 dataSource: chartData,
                 xValueMapper: (ChartData data, _) => data.x,
                 yValueMapper: (ChartData data, _) => data.y3,
-              ),
-            ])
+                        ),
+                    ]
+                )
             )
-        ));
-    }
+        )
+    );
+}
 
 {% endhighlight %}
 
@@ -49,7 +51,7 @@ You can add multiple series to [`series`]() property of [`SfCartesianChart`]() c
 
 ## Combination series
 
-[`SfCartesianChart`]() allows you to render the combination of different types of series. In the below code snippet we have combined the column and line type series.
+[`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) allows you to render the combination of different types of series.In the below code snippet we have combined the column and line type series.
 
 {% highlight dart %} 
 
@@ -70,11 +72,13 @@ You can add multiple series to [`series`]() property of [`SfCartesianChart`]() c
                 dataSource: chartData,
                 xValueMapper: (ChartData data, _) => data.x,
                 yValueMapper: (ChartData data, _) => data.y2,
-              ),
-            ])
+                        ),
+                    ]
+                )
             )
-        ));
-    }
+        )
+    );
+}
 
 {% endhighlight %}
 
@@ -86,7 +90,7 @@ You can add multiple series to [`series`]() property of [`SfCartesianChart`]() c
 
 ## Animation
 
-[`SfCartesianChart`]() provides animation support for the series. Series will be animated while rendering. Animation is enabled by default, you can also control the duration of the animation using [`animationDuration`]() property. You can disable the animation by setting 0 value to that property.
+[`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) provides animation support for the series. Series will be animated while rendering. Animation is enabled by default, you can also control the duration of the animation using [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/animationDuration.html) property. You can disable the animation by setting 0 value to that property.
 
 {% highlight dart %} 
 
@@ -103,17 +107,19 @@ You can add multiple series to [`series`]() property of [`SfCartesianChart`]() c
                 xValueMapper: (ChartData data, _) => data.x,
                 yValueMapper: (ChartData data, _) => data.y,
                 animationDuration: 1000
-              )
-            ])
+                        )
+                    ]
+                )
             )
-        ));
-    }
+        )
+    );
+}
 
 {% endhighlight %}
 
 ## Transpose the series
 
-The [`isTransposed`]() property of [`CartesianSeries`]() is used to transpose the horizontal and vertical axes, to view the data in a different perspective. Using this feature, you can render vertical charts.
+The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/isTransposed.html) property of [`CartesianSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries-class.html) is used to transpose the horizontal and vertical axes, to view the data in a different perspective. Using this feature, you can render vertical charts.
 
 {% highlight dart %} 
 
@@ -130,10 +136,13 @@ The [`isTransposed`]() property of [`CartesianSeries`]() is used to transpose th
                     dataSource: chartData,
                     xValueMapper: (ChartData data, _) => data.x,
                     yValueMapper: (ChartData data, _) => data.y,
-                )])
+                        )
+                    ]
+                )
             )
-        ));
-    }
+        )
+    );
+}
 
 {% endhighlight %}
 
@@ -141,7 +150,7 @@ The [`isTransposed`]() property of [`CartesianSeries`]() is used to transpose th
 
 ## Color palette
 
-The [`palette`]() property is used to define the colors for the series available in chart. By default, a set of 10 colors are predefined for applying it to the series. If the colors specified in the palette property is less than the number of series, than the remaining series are filled with the specified palette colors rotationally.
+The [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/palette.html) property is used to define the colors for the series available in chart. By default, a set of 10 colors are predefined for applying it to the series. If the colors specified in the series are less than the number of series, than the remaining series are filled with the specified palette colors rotationally.
 
 {% highlight dart %} 
 
@@ -172,11 +181,13 @@ The [`palette`]() property is used to define the colors for the series available
                 dataSource: chartData,
                 xValueMapper: (ChartData data, _) => data.x,
                 yValueMapper: (ChartData data, _) => data.y3,
-              ),
-            ])
+                        ),
+                    ]
+                )
             )
-        ));
-    }
+        )
+    );
+}
 
 {% endhighlight %}
 
@@ -184,7 +195,7 @@ The [`palette`]() property is used to define the colors for the series available
 
 ## Color mapping for data points   
 
-The [`pointColorMapper`]() property is used to map the color field from the data source. 
+The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/pointColorMapper.html) property is used to map the color field from the data source. 
 
 {% highlight dart %} 
 
@@ -207,11 +218,13 @@ The [`pointColorMapper`]() property is used to map the color field from the data
                 xValueMapper: (ChartData data, _) => data.x,
                 yValueMapper: (ChartData data, _) => data.y,
                 pointColorMapper: (ChartData data, _) => data.color
-              ),
-            ])
+                        )
+                    ]
+                )
             )
-        ));
-    }
+        )
+    );
+}
 
     class ChartData {
         ChartData(this.x, this.y, this.color);
@@ -226,7 +239,7 @@ The [`pointColorMapper`]() property is used to map the color field from the data
 
 ## Gradient fill
 
-The [`gradient`]() property is used to define the gradient colors. The colors from this property is used for series.
+The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/gradient.html) property is used to define the gradient colors. The colors from this property is used for series.
 
 {% highlight dart %} 
 
@@ -255,10 +268,12 @@ The [`gradient`]() property is used to define the gradient colors. The colors fr
                   xValueMapper: (ChartData data, _) => data.x,
                   yValueMapper: (ChartData data, _) => data.y,
                   gradient: gradientColors),
-            ])
+                    ]
+                )
             )
-        ));
-    }
+        )
+    );
+}
 
 {% endhighlight %}
 
@@ -266,7 +281,7 @@ The [`gradient`]() property is used to define the gradient colors. The colors fr
 
 ## Empty points
 
-The data points that has null value are considered as empty points. Empty data points are ignored and not plotted in the chart. By using [`emptyPointSettings`]() property in series, you can decide the action taken for empty points. Available [`modes`]() are [`gap`](), [`zero`](), [`drop`]() and [`average`](). Default mode of the empty point is [`gap`]().
+The data points that has null value are considered as empty points. Empty data points are ignored and not plotted in the chart. By using [`emptyPointSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/emptyPointSettings.html) property in series, you can decide the action taken for empty points. Available [`modes`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode-class.html) are [`gap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode-class.html), [`zero`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode-class.html), [`drop`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode-class.html) and [`average`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode-class.html). Default mode of the empty point is [`gap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode-class.html).
 
 {% highlight dart %} 
 
@@ -291,11 +306,14 @@ The data points that has null value are considered as empty points. Empty data p
                   yValueMapper: (ChartData data, _) => data.y,
                   emptyPointSettings: EmptyPointSettings(
                     mode: EmptyPointMode.average
-                  )),
-            ])
+                            )
+                        )
+                    ]
+                )
             )
-        ));
-    }
+        )
+    );
+}
 
 {% endhighlight %}
 
@@ -303,7 +321,7 @@ The data points that has null value are considered as empty points. Empty data p
 
 ### Empty point customization
 
-Specific color for empty point can be set by [`color`]() property in [`emptyPointSettings`](). The [`borderWidth`]() property is used to change the stroke width of the empty point and [`borderColor`]() is used to change the stroke color of the empty point.
+Specific color for empty point can be set by [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointSettings/color.html) property in [`emptyPointSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/emptyPointSettings.html). The [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointSettings/borderWidth.html) property is used to change the stroke width of the empty point and [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointSettings/borderColor.html) is used to change the stroke color of the empty point.
 
 {% highlight dart %} 
 
@@ -333,11 +351,14 @@ Specific color for empty point can be set by [`color`]() property in [`emptyPoin
                     color: Colors.red, 
                     borderColor: Colors.black,
                     borderWidth: 2
-                  )),
-            ])
+                            )
+                        )
+                    ]
+                )
             )
-        ));
-    }
+        )
+    );
+}
 
 {% endhighlight %}
 
@@ -345,7 +366,7 @@ Specific color for empty point can be set by [`color`]() property in [`emptyPoin
 
 ## Sorting
 
-The chart’s data source can be sorted using the [`sortingOrder`]() and [`sortFieldValueMapper`]() properties of series. The [`sortingOrder`]() property specifies the data points in the series can be sorted in [`ascending`]() or [`descending`]() order. The data points will be rendered in the specified order if [`sortingOrder`]() is set to [`none`](). The [`sortFieldValueMapper`]() specifies the field in the data source, which is considered for sorting the data points.
+The chart’s data source can be sorted using the [`sortingOrder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/sortingOrder.html) and [`sortFieldValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/sortFieldValueMapper.html) properties of series. The [`sortingOrder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/sortingOrder.html) property specifies the data points in the series can be sorted in [`ascending`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SortingOrder-class.html) or [`descending`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SortingOrder-class.html) order. The data points will be rendered in the specified order if [`sortingOrder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/sortingOrder.html) is set to [`none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SortingOrder-class.html). The [`sortFieldValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/sortFieldValueMapper.html) specifies the field in the data source, which is considered for sorting the data points.
 
 {% highlight dart %} 
 
@@ -371,11 +392,13 @@ The chart’s data source can be sorted using the [`sortingOrder`]() and [`sortF
                   yValueMapper: (ChartData data, _) => data.y,
                   sortingOrder: SortingOrder.descending,
                   sortFieldValueMapper: (ChartData data, _) => data.x,
-                  ),
-            ])
+                        ),
+                    ]
+                )
             )
-        ));
-    }
+        )
+    );
+}
 
 {% endhighlight %}
 

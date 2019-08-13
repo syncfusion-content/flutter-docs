@@ -38,12 +38,11 @@ Chart supports annotations which allows you to mark the specific area of interes
 {% endhighlight %}
 ![Annotation](images/annotation/default_annotation.jpg)
 ## Positioning the annotation
-
-The [`x`]() and [`y`]() values can be specified with axis units or pixel units, and these can be identified by using [`coordinateUnit`]() property. When logicalPixel is specified, the annotation will be placed with respect to pixel values whereas point is specified, then the annotation will be placed with respect to series point values.
+The [`x`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/x.html) and [`y`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/y.html) values can be specified with axis units or pixel units, and these can be identified by using [`coordinateUnit`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html) property. When logicalPixel is specified, the annotation will be placed with respect to pixel values whereas point is specified, then the annotation will be placed with respect to series point values.
 
 **Positioning based on coordinateUnit as point**
 
-To position the annotation based on axis, set the [`x`]() and [`y`]()properties based on axis range values, and set the [`coordinateUnit`]() value as [`point`]().
+To position the annotation based on axis, set the [`x`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/x.html) and [`y`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/y.html)properties based on axis range values, and set the [`coordinateUnit`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html) value as [`point`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html).
 
 
 {% highlight dart %} 
@@ -74,7 +73,7 @@ To position the annotation based on axis, set the [`x`]() and [`y`]()properties 
 
 **Positioning based on coordinateUnit as pixels**
 
-To position the annotation based on the pixel values, set the [`CoordinateUnit`]() value as [`logicalPixel`](), and the pixel values in [`x`]() and [`y`]() properties of annotation are shown in the following code snippet.
+To position the annotation based on the pixel values, set the [`CoordinateUnit`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html) value as [`logicalPixel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html), and the pixel values in [`x`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/x.html) and [`y`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/y.html) properties of annotation are shown in the following code snippet.
 
 {% highlight dart %} 
 
@@ -129,10 +128,12 @@ You can add multiple annotations to the Chart by adding multiple widgets to the 
                   x: 170,
                   y: 200)
             ],
-        )),
-      )),
-    );
-  }
+         )
+       )
+      )
+    ),
+  );
+}
 
 {% endhighlight %}
 
@@ -140,7 +141,7 @@ You can add multiple annotations to the Chart by adding multiple widgets to the 
 
 ## Adding annotation for multiple axes
 
-When there are multiple axes in the chart, annotation can be added for a particular axis by using the [`xAxisName`]() and [`yAxisName`]() properties. It is shown in the below code snippet.
+When there are multiple axes in the chart, annotation can be added for a particular axis by using the [`xAxisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/xAxisName.html) and [`yAxisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/yAxisName.html  ) properties. It is shown in the below code snippet.
 
 {% highlight dart %} 
 

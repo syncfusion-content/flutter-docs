@@ -24,11 +24,14 @@ The selection feature in chart let you to select a segment in a series or the se
                 dataSource: chartData,
                 xValueMapper: (ChartData data, _) => data.x,
                 yValueMapper: (ChartData data, _) => data.y,
-                selectionSettings: SelectionSettings(enable: true))
-          ],
-        ))
-        ));
-    }
+                selectionSettings: SelectionSettings(enable: true)
+                        )
+                    ],
+                )
+            )
+        )
+    );
+}
 
 {% endhighlight %}
 
@@ -36,14 +39,14 @@ The selection feature in chart let you to select a segment in a series or the se
 
 You can customize the segments using the below properties.
 
-* [`selectedColor`]() - used to change the background color of selected segment.
-* [`unselectedColor`]() - used to change the background color of unselected segment.
-* [`selectedBorderColor`]() - used to change the stroke color of the selected segment.
-* [`selectedBorderWidth`]() - used to change the stroke width of the selected segment.
-* [`unselectedBorderColor`]() - used to change the stroke color of the unselected segment.
-* [`unselectedBorderWidth`]() - used to change the stroke width of the unselected segment.
-* [`selectedOpacity`]() - used to control the transparency of the selected segment.
-* [`unselectedOpacity`]() - used to control the transparency of the selected segment.
+* [`selectedColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionSettings/selectedColor.html) - used to change the background color of selected segment.
+* [`unselectedColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionSettings/unselectedColor.html) - used to change the background color of unselected segment.
+* [`selectedBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionSettings/selectedBorderColor.html) - used to change the stroke color of the selected segment.
+* [`selectedBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionSettings/selectedBorderWidth.html) - used to change the stroke width of the selected segment.
+* [`unselectedBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionSettings/unselectedBorderColor.html) - used to change the stroke color of the unselected segment.
+* [`unselectedBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionSettings/unselectedBorderWidth.html) - used to change the stroke width of the unselected segment.
+* [`selectedOpacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionSettings/selectedOpacity.html) - used to control the transparency of the selected segment.
+* [`unselectedOpacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionSettings/unselectedOpacity.html) - used to control the transparency of the selected segment.
 
 {% highlight dart %} 
 
@@ -59,11 +62,14 @@ You can customize the segments using the below properties.
                   enable: true,
                   selectedColor: Colors.red,
                   unselectedColor: Colors.grey
-                ))
-          ],
-        ))
-        ));
-    }
+                            )
+                        )
+                    ],
+                )
+            )
+        )
+    );
+}
 
 {% endhighlight %}
 
@@ -71,11 +77,11 @@ You can customize the segments using the below properties.
 
 ## Selection modes
 
-The selection features allows you to select segments in following modes using [`selectionType`]() property of chart.
+The selection features allows you to select segments in following modes using [`selectionType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/selectionType.html) property of chart.
 
-* [`Point`]() - selects the individual data point.
-* [`Series`]() - selects the entire series.
-* [`Cluster`]() - selects the cluster of points of different series i.e selects the points with same index in each series.
+* [`Point`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionType-class.html) - selects the individual data point.
+* [`Series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionType-class.html) - selects the entire series.
+* [`Cluster`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionType-class.html) - selects the cluster of points of different series i.e selects the points with same index in each series.
 
 {% highlight dart %} 
 
@@ -86,9 +92,11 @@ The selection features allows you to select segments in following modes using [`
             child: Container(
                 child:SfCartesianChart(
                     selectionType: SelectionType.cluster
-            ))
-        ));
-    }
+                )
+            )
+        )
+    );
+}
 
 {% endhighlight %}
 
@@ -96,7 +104,7 @@ The selection features allows you to select segments in following modes using [`
 
 ## Multi-selection
 
-Multiple selection can be enabled using the [`enableMultiSelection`]() property of chart.
+Multiple selection can be enabled using the [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/enableMultiSelection.html) property of chart.
 
 {% highlight dart %} 
 
@@ -107,9 +115,11 @@ Multiple selection can be enabled using the [`enableMultiSelection`]() property 
             child: Container(
                 child:SfCartesianChart(
                     enableMultiSelection: true,
-            ))
-        ));
-    }
+                )
+            )
+        )
+    );
+}
 
 {% endhighlight %}
 
@@ -117,7 +127,7 @@ Multiple selection can be enabled using the [`enableMultiSelection`]() property 
 
 ## Selection on initial rendering
 
-You can select a point or series programmatically on a chart using [`initialSelectedDataIndexes`]() property of chart.
+You can select a point or series programmatically on a chart using [`initialSelectedDataIndexes`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/initialSelectedDataIndexes.html) property of chart.
 
 {% highlight dart %} 
 
@@ -128,9 +138,11 @@ You can select a point or series programmatically on a chart using [`initialSele
             child: Container(
                 child:SfCartesianChart(
                     initialSelectedDataIndexes: <IndexesModel>[IndexesModel(1, 0)]
-            ))
-        ));
-    }
+                )
+            )
+        )
+    );
+}
 
 {% endhighlight %}
 

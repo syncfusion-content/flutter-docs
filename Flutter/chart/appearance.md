@@ -36,7 +36,7 @@ Chart renders based on the parent widget size. If you need the chart to be rende
 
 ## Chart margin
 
-Margin to the chart can be specified using the [`margin`]() property.
+Margin to the chart can be specified using the [`margin`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/margin.html) property.
 
 {% highlight dart %} 
 
@@ -65,10 +65,10 @@ Margin to the chart can be specified using the [`margin`]() property.
 
 You can customize the plot area of the chart using the below properties.
 
-* [`plotAreaBackgroundColor`]() – used to change the plot area background color.
-* [`plotAreaBorderColor`]() – used to change the stroke width of the plot area.
-* [`plotAreaBorderWidth`]() – used to change the stroke color of the plot area.
-* [`plotAreaBackgroundImageUrl`]() - used to set the image path.
+* [`plotAreaBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/plotAreaBackgroundColor.html) – used to change the plot area background color.
+* [`plotAreaBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/plotAreaBorderColor.html) – used to change the stroke width of the plot area.
+* [`plotAreaBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/plotAreaBorderWidth.html) – used to change the stroke color of the plot area.
+* [`plotAreaBackgroundImageUrl`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/plotAreaBackgroundImageUrl.html) - used to set the image path.
 
 {% highlight dart %} 
 
