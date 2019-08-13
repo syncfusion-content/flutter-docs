@@ -9,7 +9,7 @@ documentation: ug
 
 # Tooltip
 
-Chart provides tooltip support for all the series. It is used to show information about the segment, when you tap on the segment. To enable the tooltip, you need to set [`enableTooltip`]() property as *true*.
+Chart provides tooltip support for all the series. It is used to show information about the segment, when you tap on the segment. To enable the tooltip, you need to set [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/enableTooltip.html) property as *true*.
 
 {% highlight dart %} 
 
@@ -31,9 +31,9 @@ Chart provides tooltip support for all the series. It is used to show informatio
               enableTooltip: true,
               
             )
-          ],
+          ]
         )
-            )
+          )
         ));
     }
 
@@ -45,17 +45,17 @@ Chart provides tooltip support for all the series. It is used to show informatio
 
 You can use the following properties to customize the tooltip appearance.
 
-* [`color`]() – used to change the background color of tooltip.
-* [`borderWidth`]() – used to change the stroke width of the tooltip.
-* [`borderColor`]() – used to change the stroke color of the tooltip.
-* [`opacity`]() - used to control the transparency of the tooltip.
-* [`duration`]() - specifies the duration for displaying the tooltip that defaults to 3000.
-* [`animationDuration`]() - specifies the duration for animating the tooltip that default to 350.
-* [`elevation`]() - specifies the elevation of tooltip.
-* [`canShowMarker`]() - toggles the visibility of the marker in the tooltip.
-* [`header`]() - specifies the header for tooltip. By default, the series name will be displayed in the header.
-* [`format`]() - formats the tooltip text. By default, the tooltip will be rendered with x and y-values. You can add prefix or suffix to x, y, and series name values in the tooltip by formatting them.
-* [`shadowColor`]() - specifies the color of the tooltip shadow.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/color.html) – used to change the background color of tooltip.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/borderWidth.html) – used to change the stroke width of the tooltip.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/borderColor.html) – used to change the stroke color of the tooltip.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/opacity.html) - used to control the transparency of the tooltip.
+* [`duration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/duration.html) - specifies the duration for displaying the tooltip that defaults to 3000.
+* [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/animationDuration.html) - specifies the duration for animating the tooltip that default to 350.
+* [`elevation`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/elevation.html) - specifies the elevation of tooltip.
+* [`canShowMarker`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/canShowMarker.html) - toggles the visibility of the marker in the tooltip.
+* [`header`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/header.html) - specifies the header for tooltip. By default, the series name will be displayed in the header.
+* [`format`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/format.html) - formats the tooltip text. By default, the tooltip will be rendered with x and y-values. You can add prefix or suffix to x, y, and series name values in the tooltip by formatting them.
+* [`shadowColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/shadowColor.html) - specifies the color of the tooltip shadow.
 
 {% highlight dart %} 
 
@@ -71,17 +71,17 @@ You can use the following properties to customize the tooltip appearance.
                 borderWidth: 5,
                 color: Colors.lightBlue,
               ),
-        ))
-        ));
+          ))
+      ));
     }
 
 {% endhighlight %}
 
 ![Customized tooltip](images/tooltip/customized_tooltip.jpg)
 
-## Tooltip template
+## Tooltip Behavior
 
-You can customize the appearance of the tooltip with your own widget by using the [`builder`]() property of [`tooltipBehavior`]().
+You can customize the appearance of the tooltip with your own widget by using the [`builder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/builder.html) property of [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/tooltipBehavior.html).
 
 {% highlight dart %} 
 
@@ -100,7 +100,7 @@ You can customize the appearance of the tooltip with your own widget by using th
                 );
               }),
         ))
-        ));
+      ));
     }
 
 {% endhighlight %}
@@ -109,14 +109,14 @@ You can customize the appearance of the tooltip with your own widget by using th
 
 ##	Activation mode
 
-The [`activationMode`]() property is used to restrict the visibility of tooltip based on the touch actions. The default value of this property is [`ActivationMode.singleTap`]().
+The [`activationMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/activationMode.html) property is used to restrict the visibility of tooltip based on the touch actions. The default value of this property is [`ActivationMode.singleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode-class.html).
 
 The ActivationMode enum contains the following values:
 
-* [`longPress`]() – Activates tooltip only when performing the long press action.
-* [`singleTap`]() – Activates tooltip only when performing single tap action.
-* [`doubleTap`]() - Activates tooltip only when performing double tap action.
-* [`none`]() – Hides the visibility of tooltip when setting activation mode to none.
+* [`longPress`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode-class.html) – Activates tooltip only when performing the long press action.
+* [`singleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode-class.html) – Activates tooltip only when performing single tap action.
+* [`doubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode-class.html) - Activates tooltip only when performing double tap action.
+* [`none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode-class.html) – Hides the visibility of tooltip when setting activation mode to none.
 
 {% highlight dart %} 
 
@@ -130,7 +130,7 @@ The ActivationMode enum contains the following values:
                 enable: true,
                 activationMode: ActivationMode.longPress),
         ))
-        ));
+      ));
     }
 
 {% endhighlight %}

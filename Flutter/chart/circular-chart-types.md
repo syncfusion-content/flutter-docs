@@ -11,9 +11,9 @@ documentation: ug
 
 ## Pie chart
 
-To render a pie chart, create an instance of [`PieSeries`]() and add to the [`series`]() collection property of [`SfCircularChart`](). You can use the following properties to customize the pie segment appearance.
+To render a pie chart, create an instance of [`PieSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PieSeries-class.html) and add to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries-class.html) collection property of [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html). You can use the following properties to customize the pie segment appearance.
 
-* [`opacity`]() - used to control the transparency of the chart series.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/opacity.html) - used to control the transparency of the chart series.
 * [`strokeWidth`]() – used to change the stroke width of the series.
 * [`strokeColor`]() – used to change the stroke color of the series.
 * [`pointColorMapper`]() - used to map the color for individual points from the data source.

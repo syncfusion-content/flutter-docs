@@ -11,7 +11,7 @@ documentation: ug
 
 ## Show method in tooltipBehavior
 
-The [`show`]() method is used to activate the tooltip at the specified location.
+The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/show.html) method is used to activate the tooltip at the specified location.
 
 {% highlight dart %} 
 
@@ -49,10 +49,11 @@ The [`show`]() method is used to activate the tooltip at the specified location.
               onPressed: show,
             ),
             Container(child: chart),
-          ],
-        ),
-      ));
-    }
+          ]
+        )
+      )
+    );
+  }
 
     void show() {
         tooltip.show(121,164);
@@ -66,7 +67,7 @@ The [`show`]() method is used to activate the tooltip at the specified location.
 
 ## Hide method in tooltipBehavior
 
-The [`hide`]() method is used to hide the displaying tooltip programmatically.
+The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/hide.html) method is used to hide the displaying tooltip programmatically.
 
 {% highlight dart %} 
 
@@ -92,7 +93,7 @@ The [`hide`]() method is used to hide the displaying tooltip programmatically.
             dataSource: chartData,
             xValueMapper: (ChartData data, _) => data.x,
             yValueMapper: (ChartData data, _) => data.y),
-      ],
+      ]
     );
 
     return Scaffold(
@@ -104,10 +105,11 @@ The [`hide`]() method is used to hide the displaying tooltip programmatically.
               onPressed: hide,
             ),
             Container(child: chart),
-          ],
-        ),
-      ));
-    }
+          ]
+        )
+      )
+    );
+  }
 
     void hide(){
         tooltip.hide();
@@ -118,7 +120,7 @@ The [`hide`]() method is used to hide the displaying tooltip programmatically.
 
 ## Show method in trackballBehavior
 
-The [`show`]() method is used to activate the trackball at the specified location.
+The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/show.html) method is used to activate the trackball at the specified location.
 
 {% highlight dart %} 
 
@@ -144,7 +146,7 @@ The [`show`]() method is used to activate the trackball at the specified locatio
             dataSource: chartData,
             xValueMapper: (ChartData data, _) => data.x,
             yValueMapper: (ChartData data, _) => data.y),
-      ],
+      ]
     );
     
     return Scaffold(
@@ -156,10 +158,11 @@ The [`show`]() method is used to activate the trackball at the specified locatio
               onPressed: show,
             ),
             Container(child: chart),
-          ],
-        ),
-      ));
-    }
+          ]
+        )
+      )
+    );
+  }
 
     void show() {
         trackball.show(121, 164);
@@ -169,7 +172,7 @@ The [`show`]() method is used to activate the trackball at the specified locatio
 
 ## Hide method in trackballBehavior
 
-The [`hide`]() method is used to hide the displaying trackball programmatically.
+The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/hide.html) method is used to hide the displaying trackball programmatically.
 
 {% highlight dart %} 
 
@@ -207,10 +210,11 @@ The [`hide`]() method is used to hide the displaying trackball programmatically.
               onPressed: hide,
             ),
             Container(child: chart),
-          ],
-        ),
-      ));
-    }
+          ]
+        )
+      )
+    );
+  }
 
     void hide() {
         trackball.hide();
@@ -220,7 +224,7 @@ The [`hide`]() method is used to hide the displaying trackball programmatically.
 
 ## Show method in crosshairBehavior
 
-The [`show`]() method is used to activate the crosshair at the specified location.
+The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/show.html) method is used to activate the crosshair at the specified location.
 
 {% highlight dart %} 
 
@@ -246,7 +250,7 @@ The [`show`]() method is used to activate the crosshair at the specified locatio
             dataSource: chartData,
             xValueMapper: (ChartData data, _) => data.x,
             yValueMapper: (ChartData data, _) => data.y),
-      ],
+      ]
     );
 
     return Scaffold(
@@ -258,10 +262,11 @@ The [`show`]() method is used to activate the crosshair at the specified locatio
               onPressed: show,
             ),
             Container(child: chart),
-          ],
-        ),
-      ));
-    }
+          ]
+        )
+      )
+    );
+  }
 
     void show() {
         crosshair.show(121, 164);
@@ -271,7 +276,7 @@ The [`show`]() method is used to activate the crosshair at the specified locatio
 
 ## Hide method in crosshairBehavior
 
-The [`hide`]() method is used to hide the displaying crosshair programmatically.
+The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/hide.html) method is used to hide the displaying crosshair programmatically.
 
 {% highlight dart %} 
 
@@ -297,7 +302,7 @@ The [`hide`]() method is used to hide the displaying crosshair programmatically.
             dataSource: chartData,
             xValueMapper: (ChartData data, _) => data.x,
             yValueMapper: (ChartData data, _) => data.y),
-      ],
+      ]
     );
     
     return Scaffold(
@@ -309,10 +314,11 @@ The [`hide`]() method is used to hide the displaying crosshair programmatically.
               onPressed: hide,
             ),
             Container(child: chart),
-          ],
-        ),
-      ));
-     }
+          ]
+        )
+      )
+    );
+  }
 
     void hide() {
         crosshair.hide();
@@ -322,11 +328,11 @@ The [`hide`]() method is used to hide the displaying crosshair programmatically.
 
 ## SelectionIndex method in selectionSettings
 
-The [`selectionIndex`]() method is used to select the data point programmatically. The required arguments are listed below.
+The [`selectionIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionSettings/selectionIndex.html) method is used to select the data point programmatically. The required arguments are listed below.
 
 * pointIndex - specifies the point index value.
 * seriesIndex - specifies the series index value.
-* selectionType - specifies the [`SelectionType`]() and this is an optional parameter. 
+* selectionType - specifies the [`SelectionType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionType-class.html) and this is an optional parameter. 
 * multiSelect - bool property specifies the multiple selection and this is an optional parameter.
 
 {% highlight dart %}
@@ -352,9 +358,8 @@ The [`selectionIndex`]() method is used to select the data point programmaticall
             xValueMapper: (ChartData data, _) => data.x,
             yValueMapper: (ChartData data, _) => data.y,
             selectionSettings: selection
-            ),
-
-      ],
+        )
+      ]
     );
     
     return Scaffold(
@@ -366,10 +371,11 @@ The [`selectionIndex`]() method is used to select the data point programmaticall
               onPressed: select,
             ),
             Container(child: chart),
-          ],
-        ),
-      ));
-    }
+          ]
+        )
+      )
+    );
+  }
 
     void select() {
         selection.selectionIndex(1, 0);
@@ -379,7 +385,7 @@ The [`selectionIndex`]() method is used to select the data point programmaticall
 
 ## ZoomIn method in zoomPanBehavior
 
-The [`zoomIn`]() method is used to increases the magnification of the plot area.
+The [`zoomIn`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/zoomIn.html) method is used to increases the magnification of the plot area.
 
 {% highlight dart %}
 
@@ -408,8 +414,8 @@ The [`zoomIn`]() method is used to increases the magnification of the plot area.
           dataSource: chartData,
           xValueMapper: (ChartData data, _) => data.x,
           yValueMapper: (ChartData data, _) => data.y,
-        ),
-      ],
+        )
+      ]
     );
     
     return Scaffold(
@@ -421,10 +427,11 @@ The [`zoomIn`]() method is used to increases the magnification of the plot area.
               onPressed: zoom,
             ),
             Container(child: chart),
-          ],
-        ),
-      ));
-    }
+          ]
+        )
+      )
+    );
+  }
 
     void zoom() {
         zooming.zoomIn();
@@ -434,7 +441,7 @@ The [`zoomIn`]() method is used to increases the magnification of the plot area.
 
 ## ZoomOut method in zoomPanBehavior
 
-The [`zoomOut`]() method is used to decreases the magnification of the plot area.
+The [`zoomOut`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/zoomOut.html) method is used to decreases the magnification of the plot area.
 
 {% highlight dart %}
 
@@ -463,8 +470,8 @@ The [`zoomOut`]() method is used to decreases the magnification of the plot area
           dataSource: chartData,
           xValueMapper: (ChartData data, _) => data.x,
           yValueMapper: (ChartData data, _) => data.y,
-        ),
-      ],
+        )
+      ]
     );
     
     return Scaffold(
@@ -476,10 +483,11 @@ The [`zoomOut`]() method is used to decreases the magnification of the plot area
               onPressed: zoom,
             ),
             Container(child: chart),
-          ],
-        ),
-      ));
-    }
+          ]
+        )
+      )
+    );
+  }
 
     void zoom() {
         zooming.zoomOut();
@@ -487,9 +495,9 @@ The [`zoomOut`]() method is used to decreases the magnification of the plot area
 
 {% endhighlight %}
 
-## ZoomOut method in zoomPanBehavior
+## zoomByFactor method in zoomPanBehavior
 
-The [`zoomByFactor`]() method changes the zoom level using zoom factor. Here, you can pass the zoom factor of an axis to magnify the plot area. The value ranges from 0 to 1.
+The [`zoomByFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/zoomByFactor.html) method changes the zoom level using zoom factor. Here, you can pass the zoom factor of an axis to magnify the plot area. The value ranges from 0 to 1.
 
 {% highlight dart %}
 
@@ -518,8 +526,8 @@ The [`zoomByFactor`]() method changes the zoom level using zoom factor. Here, yo
           dataSource: chartData,
           xValueMapper: (ChartData data, _) => data.x,
           yValueMapper: (ChartData data, _) => data.y,
-        ),
-      ],
+        )
+      ]
     );
     
     return Scaffold(
@@ -531,10 +539,11 @@ The [`zoomByFactor`]() method changes the zoom level using zoom factor. Here, yo
               onPressed: zoom,
             ),
             Container(child: chart),
-          ],
-        ),
-      ));
-    }
+          ]
+        )
+      )
+    );
+  }
 
     void zoom() {
         zooming.zoomByFactor(0.5);
@@ -544,7 +553,7 @@ The [`zoomByFactor`]() method changes the zoom level using zoom factor. Here, yo
 
 ## ZoomByRect method in zoomPanBehavior
 
-The [`zoomByRect`]() method zooms the chart for a given rectangle value. Here, you can pass the rectangle with the left, right, top, and bottom values, using which the selection zooming will be performed.
+The [`zoomByRect`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/zoomByRect.html) method zooms the chart for a given rectangle value. Here, you can pass the rectangle with the left, right, top, and bottom values, using which the selection zooming will be performed.
 
 {% highlight dart %}
 
@@ -586,10 +595,11 @@ The [`zoomByRect`]() method zooms the chart for a given rectangle value. Here, y
               onPressed: zoom,
             ),
             Container(child: chart),
-          ],
-        ),
-      ));
-    }
+          ]
+        )
+      )
+    );
+  }
 
     void zoom() {
         zooming.zoomByRect(const Rect.fromLTRB(200, 300, 300, 400));
@@ -599,7 +609,7 @@ The [`zoomByRect`]() method zooms the chart for a given rectangle value. Here, y
 
 ## ZoomToSingleAxis method in zoomPanBehavior
 
-The [`zoomToSingleAxis`]() method changes the zoom level of an appropriate axis. Here, you need to pass axis, zoom factor, zoom position of the zoom level that needs to be modified.
+The [`zoomToSingleAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/zoomToSingleAxis.html) method changes the zoom level of an appropriate axis. Here, you need to pass axis, zoom factor, zoom position of the zoom level that needs to be modified.
 
 {% highlight dart %}
 
@@ -631,8 +641,8 @@ The [`zoomToSingleAxis`]() method changes the zoom level of an appropriate axis.
           dataSource: chartData,
           xValueMapper: (ChartData data, _) => data.x,
           yValueMapper: (ChartData data, _) => data.y,
-        ),
-      ],
+        )
+      ]
     );
     
     return Scaffold(
@@ -644,10 +654,11 @@ The [`zoomToSingleAxis`]() method changes the zoom level of an appropriate axis.
               onPressed: zoom,
             ),
             Container(child: chart),
-          ],
-        ),
-      ));
-    }
+          ]
+        )
+      )
+    );
+  }
 
     void zoom() {
         final double zoomPosition = 0.5;
@@ -659,7 +670,7 @@ The [`zoomToSingleAxis`]() method changes the zoom level of an appropriate axis.
 
 ## PanToDirection method in zoomPanBehavior
 
-The [`panToDirection`]() method pans the plot area for given left, right, top, and bottom directions. To perform this action, the plot area needs to be in zoomed state.
+The [`panToDirection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/panToDirection.html) method pans the plot area for given left, right, top, and bottom directions. To perform this action, the plot area needs to be in zoomed state.
 
 {% highlight dart %}
 
@@ -691,8 +702,8 @@ The [`panToDirection`]() method pans the plot area for given left, right, top, a
           dataSource: chartData,
           xValueMapper: (ChartData data, _) => data.x,
           yValueMapper: (ChartData data, _) => data.y,
-        ),
-      ],
+        )
+      ]
     );
     
     return Scaffold(
@@ -704,10 +715,11 @@ The [`panToDirection`]() method pans the plot area for given left, right, top, a
               onPressed: pan,
             ),
             Container(child: chart),
-          ],
-        ),
-      ));
-    }
+          ]
+        )
+      )
+    );
+  }
 
     void pan() {
         //In similar way, specify other directions like bottom, left and right
@@ -718,7 +730,7 @@ The [`panToDirection`]() method pans the plot area for given left, right, top, a
 
 ## Reset method in zoomPanBehavior
 
-The [`reset`]() method returns the plot area back to its original position after zooming..
+The [`reset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/reset.html) method returns the plot area back to its original position after zooming..
 
 {% highlight dart %}
 
@@ -747,8 +759,8 @@ The [`reset`]() method returns the plot area back to its original position after
           dataSource: chartData,
           xValueMapper: (ChartData data, _) => data.x,
           yValueMapper: (ChartData data, _) => data.y,
-        ),
-      ],
+        )
+      ]
     );
     
     return Scaffold(
@@ -760,10 +772,11 @@ The [`reset`]() method returns the plot area back to its original position after
               onPressed: zoom,
             ),
             Container(child: chart),
-          ],
-        ),
-      ));
-    }
+          ]
+        )
+      )
+    );
+  }
 
     void zoom() {
         zooming.zoomByFactor(0.5);
