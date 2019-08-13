@@ -237,7 +237,7 @@ You can use legend for the chart by setting the [`isVisible`](https://pub.dev/do
 
 The tooltip is useful when you cannot display information by using the data labels due to space constraints. The tooltip can be enabled as depicted below.
 
-The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior-class.html) property in chart is used to enable and customize the tooltip for all the series whereas the [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/enableTooltip.html) property in series used to toggle the tooltip visibility of each series.
+The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/tooltipBehavior.html) property in chart is used to enable and customize the tooltip for all the series whereas the [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/enableTooltip.html) property in series used to toggle the tooltip visibility of each series.
 
 {% highlight dart %} 
 
