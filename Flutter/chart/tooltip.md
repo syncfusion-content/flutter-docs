@@ -79,6 +79,30 @@ You can use the following properties to customize the tooltip appearance.
 
 ![Customized tooltip](images/tooltip/customized_tooltip.jpg)
 
+## Label format
+
+By default, x and y value will be displayed in the tooltip, and it can be customized using [`format`]() property as depicted in the below code snippet.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: Center(
+          child: Container(
+            child:SfCartesianChart(
+              tooltipBehavior: TooltipBehavior(
+                enable: true, 
+                format: 'point.y%'
+              ),
+            )
+          )
+        )
+      );
+    }
+
+{% endhighlight %}
+
 ## Tooltip template
 
 You can customize the appearance of the tooltip with your own widget by using the [`builder`]() property of [`tooltipBehavior`]().

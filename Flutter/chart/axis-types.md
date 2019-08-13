@@ -220,7 +220,7 @@ When the value of [`rangePadding`]() property is [`round`](), axis range will be
 
 ### Formatting the labels
 
-Formats the numeric axis labels with globalized label formats.
+The [`numberFormat`]() property of numeric axis formats the numeric axis labels with globalized label formats. The following code snippet illustrates how to format numeric labels.
 
 {% highlight dart %} 
 
@@ -244,7 +244,7 @@ Formats the numeric axis labels with globalized label formats.
 
 ## Category axis
 
-Category axis displays text labels instead of numbers.
+Category axis displays text labels instead of numbers. When the string values are bound to x values, then the x axis must be initialzed with CategoryAxis.
 
 {% highlight dart %} 
 
@@ -262,8 +262,7 @@ Category axis displays text labels instead of numbers.
 
 {% endhighlight %}
 
-![Category Axis](images/axis-types/category.jpg
-)
+![Category Axis](images/axis-types/category.jpg)
 
 ### Placing labels between the ticks
 
@@ -419,7 +418,7 @@ Essential Chart supports the following types of interval for date time axis.
 
 ### Apply padding to range
 
-Padding can be applied to the [`minimum`]() and ['maximum']() extremes of range by using the RangePadding property. Date-time axis supports the following types of padding:
+Padding can be applied to the [`minimum`]() and [`maximum`]() extremes of range by using the RangePadding property. Date-time axis supports the following types of padding:
 
 * none
 * round 
@@ -524,7 +523,7 @@ When the value of [`rangePadding`]() property is [`normal`](), padding is applie
 
 ### Formatting the labels
 
-The [`dateFormat`]() property formats the date-time axis labels. The default data-time axis label can be formatted with various built-in date formats.
+The [`dateFormat`]() property formats the date-time axis labels. The default data-time axis label can be formatted with various built-in date formats which depends on the given data source.
 
 {% highlight dart %} 
 
