@@ -186,7 +186,7 @@ Triggers while the trackball position is changed. Here, you can customize the te
             args.chartPointInfo.label = 'Custom Text';
           },
           trackballBehavior: TrackballBehavior(
-            enable: true
+            enable: true,
           ),
       ),
     );
@@ -217,7 +217,7 @@ Triggers while the crosshair position is changed. Here, you can customize the te
             args.text = 'crosshair';
           },
           crosshairBehavior: CrosshairBehavior(
-            enable: true
+            enable: true,
           ),
       ),
     );

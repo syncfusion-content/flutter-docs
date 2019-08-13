@@ -16,7 +16,7 @@ To render a pie chart, create an instance of [`PieSeries`](https://pub.dev/docum
 * [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/opacity.html) - used to control the transparency of the chart series.
 * [`strokeWidth`]() – used to change the stroke width of the series.
 * [`strokeColor`]() – used to change the stroke color of the series.
-* [`pointColorMapper`]() - used to map the color for individual points from the data source.
+* [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointColorMapper.html) - used to map the color for individual points from the data source.
 
 {% highlight dart %} 
 
@@ -37,11 +37,13 @@ To render a pie chart, create an instance of [`PieSeries`](https://pub.dev/docum
                     pointColorMapper:(ChartData data,  _) => data.color,
                     xValueMapper: (ChartData data, _) => data.x,
                     yValueMapper: (ChartData data, _) => data.y
+                        )
+                    ]
                 )
-            ]))
+            )
         )
-        );
-    }
+    );
+}
 
     class ChartData {
         ChartData(this.x, this.y, [this.color]);
@@ -56,7 +58,7 @@ To render a pie chart, create an instance of [`PieSeries`](https://pub.dev/docum
 
 ### Changing pie size
 
-You can use [`radius`]() property to change the diameter of the pie chart with respect to the plot area. The default value is *80%*.
+You can use [`radius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/radius.html) property to change the diameter of the pie chart with respect to the plot area. The default value is *80%*.
 
 {% highlight dart %} 
 
@@ -71,11 +73,13 @@ You can use [`radius`]() property to change the diameter of the pie chart with r
                     xValueMapper: (ChartData data, _) => data.x,
                     yValueMapper: (ChartData data, _) => data.y,
                     radius: '50%'
+                        )
+                    ]
                 )
-            ]))
+            )
         )
-        );
-    }
+    );
+}
 
 
 {% endhighlight %}
@@ -84,11 +88,11 @@ You can use [`radius`]() property to change the diameter of the pie chart with r
 
 ### Exploding a segment
 
-You can explode a pie segment by enabling the [`explode`]() property. You can use the following properties to customize the explode options.
+You can explode a pie segment by enabling the [`explode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/explode.html) property. You can use the following properties to customize the explode options.
 
-* [`explodeIndex`]() - specifies the index of the slice to explode it at the initial rendering.
+* [`explodeIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/explodeIndex.html) - specifies the index of the slice to explode it at the initial rendering.
 * [`explodeOffset`]() - specifies the offset of exploded slice. The value ranges from 0% to 100%.
-* [`explodeGesture`]() - gesture for activating the explode. Explode can be activated in single tap, double tap, and long press. The available gesture types are [`singleTap`](), [`doubleTap`](), [`longPress`]() and [`none`]() and the default value is [`singleTap`]().
+* [`explodeGesture`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/explodeOffset.html) - gesture for activating the explode. Explode can be activated in single tap, double tap, and long press. The available gesture types are [`singleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode-class.html), [`doubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode-class.html), [`longPress`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode-class.html) and [`none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode-class.html) and the default value is [`singleTap`]().
 
 {% highlight dart %} 
 
@@ -104,11 +108,13 @@ You can explode a pie segment by enabling the [`explode`]() property. You can us
                     yValueMapper: (ChartData data, _) => data.y,
                     explode: true,
                     explodeIndex: 1
+                        )
+                    ]
                 )
-            ]))
+            )
         )
-        );
-    }
+    );
+}
 
 
 {% endhighlight %}
@@ -117,7 +123,7 @@ You can explode a pie segment by enabling the [`explode`]() property. You can us
 
 ### Exploding all the segments
 
-Using [`explodeAll`]() property of [`PieSeries`](), you can explode all the pie segments.
+Using [`explodeAll`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/explodeAll.html) property of [`PieSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PieSeries-class.html), you can explode all the pie segments.
 
 {% highlight dart %} 
 
@@ -133,11 +139,13 @@ Using [`explodeAll`]() property of [`PieSeries`](), you can explode all the pie 
                     yValueMapper: (ChartData data, _) => data.y,
                     explode: true,
                     explodeAll: true
-                ),
-            ])),
-        ),
-        );
-    }
+                        )
+                    ]
+                )
+            )
+        )
+    );
+}
 
 
 {% endhighlight %}
@@ -146,7 +154,7 @@ Using [`explodeAll`]() property of [`PieSeries`](), you can explode all the pie 
 
 ### Angle of pie
 
-[`SfCircularChart`]() allows you to render all the data points/segments in semi-pie, quarter-pie or in any sector using [`startAngle`]() and [`endAngle`]() properties.
+[`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) allows you to render all the data points/segments in semi-pie, quarter-pie or in any sector using [`startAngle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/startAngle.html) and [`endAngle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/endAngle.html) properties.
 
 {% highlight dart %} 
 
@@ -162,11 +170,13 @@ Using [`explodeAll`]() property of [`PieSeries`](), you can explode all the pie 
                     yValueMapper: (ChartData data, _) => data.y,
                     startAngle: 270,
                     endAngle: 90
-                ),
-            ])),
-        ),
-        );
-    }
+                        )
+                    ]
+                )
+            )
+        )
+    );
+}
 
 
 {% endhighlight %}
@@ -175,7 +185,7 @@ Using [`explodeAll`]() property of [`PieSeries`](), you can explode all the pie 
 
 ### Grouping data points
 
-The small segments in the pie chart can be grouped into **others** category using the [`groupTo`]() and [`groupMode`]() properties of [`PieSeries`](). The [`groupMode`]() property is used to specify the grouping type based on the actual data point value, or by points length, and the [`groupTo`]() property is used to set the limit to group data points into a single slice. The grouped segment is labeled as **Others** in legend and toggled as any other segment. The default value of the [`groupTo`]() property is *null*, and [`groupMode`]() property is [`point`]().
+The small segments in the pie chart can be grouped into **others** category using the [`groupTo`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/groupTo.html) and [`groupMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/groupMode.html) properties of [`PieSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PieSeries-class.html). The [`groupMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/groupMode.html) property is used to specify the grouping type based on the actual data point value, or by points length, and the [`groupTo`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/groupTo.html) property is used to set the limit to group data points into a single slice. The grouped segment is labeled as **Others** in legend and toggled as any other segment. The default value of the [`groupTo`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/groupTo.html) property is *null*, and [`groupMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/groupMode.html) property is [`point`]().
 
 {% highlight dart %} 
 
@@ -191,11 +201,13 @@ The small segments in the pie chart can be grouped into **others** category usin
                     yValueMapper: (ChartData data, _) => data.y,
                     groupMode: CircularChartGroupMode.point,
                     groupTo: 2
-                ),
-            ])),
-        ),
-        );
-    }
+                        )
+                    ]
+                )
+            )
+        )
+    );
+}
 
 
 {% endhighlight %}
@@ -204,7 +216,7 @@ The small segments in the pie chart can be grouped into **others** category usin
 
 ### Various radius for each slice
 
-The [`pointRadiusMapper`]() maps the field name, which will be considered for calculating the radius of the data points.
+The [`pointRadiusMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointRadiusMapper.html) maps the field name, which will be considered for calculating the radius of the data points.
 
 {% highlight dart %} 
 
@@ -227,10 +239,12 @@ The [`pointRadiusMapper`]() maps the field name, which will be considered for ca
                             yValueMapper: (ChartData data, _) => data.y,
                             pointRadiusMapper: (ChartData data, _) => data.size,
                         ),
-                ])),
+                    ]
+                )
             ),
-        );
-    }
+        ),
+    );
+}
 
     class ChartData {
          ChartData(this.x, this.y, this.size);
@@ -245,12 +259,12 @@ The [`pointRadiusMapper`]() maps the field name, which will be considered for ca
 
 ## Doughnut chart
 
-To render a doughnut chart, create an instance of [`DoughnutSeries`]() and add to the [`series`]() collection property of [`SfCircularChart`](). You can use the following properties to customize the doughnut segment appearance.
+To render a doughnut chart, create an instance of [`DoughnutSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DoughnutSeries-class.html) and add to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/series.html) collection property of [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html). You can use the following properties to customize the doughnut segment appearance.
 
-* [`opacity`]() - used to control the transparency of the chart series.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/opacity.html) - used to control the transparency of the chart series.
 * [`strokeWidth`]() – used to change the stroke width of the series.
 * [`strokeColor`]() – used to change the stroke color of the series.
-* [`pointColorMapper`]() - used to map the color for individual points from the data source.
+* [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointColorMapper.html) - used to map the color for individual points from the data source.
 
 {% highlight dart %} 
 
@@ -271,11 +285,13 @@ To render a doughnut chart, create an instance of [`DoughnutSeries`]() and add t
                     pointColorMapper:(ChartData data,  _) => data.color,
                     xValueMapper: (ChartData data, _) => data.x,
                     yValueMapper: (ChartData data, _) => data.y,
-                ),
-            ])),
-        ),
-        );
-    }
+                        )
+                    ]
+                )
+            )
+        )
+    );
+}
 
     class ChartData {
         ChartData(this.x, this.y, [this.color]);
@@ -290,7 +306,7 @@ To render a doughnut chart, create an instance of [`DoughnutSeries`]() and add t
 
 ### Rounded corners
 
-The [`cornerStyle`]() property specifies the corner type for doughnut chart. The corners can be customized using [`bothFlat`](), [`bothCurve`](), [`startCurve`](), and [`endCurve`]() options. The [`cornerStyle`]() defaults to [`bothFlat`]().
+The [`cornerStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/cornerStyle.html) property specifies the corner type for doughnut chart. The corners can be customized using [`bothFlat`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CornerStyle-class.html), [`bothCurve`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CornerStyle-class.html), [`startCurve`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CornerStyle-class.html), and [`endCurve`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CornerStyle-class.html) options. The [`cornerStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/cornerStyle.html) defaults to [`bothFlat`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CornerStyle-class.html).
 
 {% highlight dart %} 
 
@@ -305,11 +321,13 @@ The [`cornerStyle`]() property specifies the corner type for doughnut chart. The
                     xValueMapper: (ChartData data, _) => data.x,
                     yValueMapper: (ChartData data, _) => data.y,
                     cornerStyle: CornerStyle.bothCurve
-                ),
-            ])),
-        ),
-        );
-    }
+                        )
+                    ]
+                )
+            )
+        )
+    );
+}
 
 {% endhighlight %}
 
@@ -317,7 +335,7 @@ The [`cornerStyle`]() property specifies the corner type for doughnut chart. The
 
 ### Changing the doughnut size
 
-You can use [`radius`]() property to change the diameter of the doughnut chart with respect to the plot area. The default value is *80%*.
+You can use [`radius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/radius.html) property to change the diameter of the doughnut chart with respect to the plot area. The default value is *80%*.
 
 {% highlight dart %} 
 
@@ -332,11 +350,13 @@ You can use [`radius`]() property to change the diameter of the doughnut chart w
                     xValueMapper: (ChartData data, _) => data.x,
                     yValueMapper: (ChartData data, _) => data.y,
                     radius: '50%'
-                ),
-            ])),
-        ),
-        );
-    }
+                        )
+                    ]
+                )
+            )
+        )
+    );
+}
 
 
 {% endhighlight %}
@@ -345,7 +365,7 @@ You can use [`radius`]() property to change the diameter of the doughnut chart w
 
 ### Changing doughnut inner radius
 
-You can change the doughnut chart inner radius using the [`innerRadius`]() with respect to the plot area. The value ranges from 0% to 100%.
+You can change the doughnut chart inner radius using the [`innerRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/innerRadius.html) with respect to the plot area. The value ranges from 0% to 100%.
 
 {% highlight dart %} 
 
@@ -360,11 +380,13 @@ You can change the doughnut chart inner radius using the [`innerRadius`]() with 
                     xValueMapper: (ChartData data, _) => data.x,
                     yValueMapper: (ChartData data, _) => data.y,
                     innerRadius: '80%'
-                ),
-            ])),
-        ),
-        );
-    }
+                        )
+                    ]
+                )
+            )
+        )
+    );
+}
 
 {% endhighlight %}
 
@@ -373,11 +395,11 @@ You can change the doughnut chart inner radius using the [`innerRadius`]() with 
 
 ### Exploding a segment
 
-You can explode a doughnut segment by enabling the [`explode`]() property. You can use the following properties to customize the explode options.
+You can explode a doughnut segment by enabling the [`explode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/explode.html) property. You can use the following properties to customize the explode options.
 
-* [`explodeIndex`]() - specifies the index of the slice to explode it at the initial rendering.
-* [`explodeOffset`]() - specifies the offset of exploded slice. The value ranges from 0% to 100%.
-* [`explodeGesture`]() - gesture for activating the explode. Explode can be activated in single tap, double tap, and long press. The available gesture types are [`singleTap`](), [`doubleTap`](), [`longPress`]() and [`none`]() and the default value is [`singleTap`]().
+* [`explodeIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/explodeIndex.html) - specifies the index of the slice to explode it at the initial rendering.
+* [`explodeOffset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/explodeOffset.html) - specifies the offset of exploded slice. The value ranges from 0% to 100%.
+* [`explodeGesture`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/explodeGesture.html) - gesture for activating the explode. Explode can be activated in single tap, double tap, and long press. The available gesture types are [`singleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode-class.html), [`doubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode-class.html), [`longPress`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode-class.html) and [`none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode-class.html) and the default value is [`singleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode-class.html).
 
 {% highlight dart %} 
 
@@ -393,11 +415,13 @@ You can explode a doughnut segment by enabling the [`explode`]() property. You c
                     yValueMapper: (ChartData data, _) => data.y,
                     explode: true,
                     explodeIndex: 1,
-                ),
-            ])),
-        ),
-        );
-    }
+                        )
+                    ]
+                )
+            )
+        )
+    );
+}
 
 
 {% endhighlight %}
@@ -406,7 +430,7 @@ You can explode a doughnut segment by enabling the [`explode`]() property. You c
 
 ### Exploding all the segments
 
-Using [`explodeAll`]() property of [`DoughnutSeries`](), you can explode all the doughnut segments.
+Using [`explodeAll`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/explodeAll.html) property of [`DoughnutSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DoughnutSeries-class.html), you can explode all the doughnut segments.
 
 {% highlight dart %} 
 
@@ -422,11 +446,13 @@ Using [`explodeAll`]() property of [`DoughnutSeries`](), you can explode all the
                     yValueMapper: (ChartData data, _) => data.y,
                     explode: true,
                     explodeAll: true
-                ),
-            ])),
-        ),
-        );
-    }
+                        )
+                    ]
+                )
+            )
+        )
+    );
+}
 
 
 {% endhighlight %}
@@ -435,7 +461,7 @@ Using [`explodeAll`]() property of [`DoughnutSeries`](), you can explode all the
 
 ### Angle of doughnut
 
-[`SfCircularChart`]() allows you to render all the data points/segments in semi-pie, quarter-pie or in any sector using [`startAngle`]() and [`endAngle`]() properties.
+[`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) allows you to render all the data points/segments in semi-pie, quarter-pie or in any sector using [`startAngle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/startAngle.html) and [`endAngle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/endAngle.html) properties.
 
 {% highlight dart %} 
 
@@ -451,11 +477,13 @@ Using [`explodeAll`]() property of [`DoughnutSeries`](), you can explode all the
                     yValueMapper: (ChartData data, _) => data.y,
                     startAngle: 270,
                     endAngle: 90
+                        )
+                    ]
                 )
-            ]))
+            )
         )
-        );
-    }
+    );
+}
 
 
 {% endhighlight %}
@@ -464,7 +492,7 @@ Using [`explodeAll`]() property of [`DoughnutSeries`](), you can explode all the
 
 ### Grouping data points
 
-The small segments in the doughnut chart can be grouped into **others** category using the [`groupTo`]() and [`groupMode`]() properties of [`DoughnutSeries`](). The [`groupMode`]() property is used to specify the grouping type based on the actual data point value, or by points length, and the [`groupTo`]() property is used to set the limit to group data points into a single slice. The grouped segment is labeled as **Others** in legend and toggled as any other segment. The default value of the [`groupTo`]() property is *null*, and [`groupMode`]() property is [`point`]().
+The small segments in the doughnut chart can be grouped into **others** category using the [`groupTo`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/groupTo.html) and [`groupMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/groupMode.html) properties of [`DoughnutSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DoughnutSeries-class.html). The [`groupMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/groupMode.html) property is used to specify the grouping type based on the actual data point value, or by points length, and the [`groupTo`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/groupTo.html) property is used to set the limit to group data points into a single slice. The grouped segment is labeled as **Others** in legend and toggled as any other segment. The default value of the [`groupTo`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/groupTo.html) property is *null*, and [`groupMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/groupMode.html) property is [`point`]().
 
 {% highlight dart %} 
 
@@ -480,11 +508,13 @@ The small segments in the doughnut chart can be grouped into **others** category
                     yValueMapper: (ChartData data, _) => data.y,
                     groupMode: CircularChartGroupMode.point,
                     groupTo: 2
+                        )
+                    ]
                 )
-            ]))
+            )
         )
-        );
-    }
+    );
+}
 
 
 {% endhighlight %}
@@ -493,19 +523,19 @@ The small segments in the doughnut chart can be grouped into **others** category
 
 ## Radial bar chart
 
-The radial bar chart is used for showing the comparisons among the categories using the circular shapes. To render a radial bar chart, create an instance of [`RadialBarSeries`]() and add to the [`series`]() collection property of [`SfCircularChart`](). You can use the following properties to customize the pie segment appearance.
+The radial bar chart is used for showing the comparisons among the categories using the circular shapes. To render a radial bar chart, create an instance of [`RadialBarSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries-class.html) and add to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/series.html) collection property of [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html). You can use the following properties to customize the pie segment appearance.
 
-* [`opacity`]() - used to control the transparency of the chart series.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/opacity.html) - used to control the transparency of the chart series.
 * [`strokeWidth`]() – used to change the stroke width of the series.
 * [`strokeColor`]() – used to change the stroke color of the series.
-* [`pointColorMapper`]() - used to map the color for individual points from the data source.
-* [`gap`]() - changes the spacing between two individual segments. The default value of spacing is 1%.
-* [`maximumValue`]() - represents the entire span of an individual circle. The default value of the this property is null.
-* [`trackColor`]() - changes the color of the track area.
-* [`trackBorderColor`]() - changes the color of the track border.
-* [`trackBorderWidth`]() - changes the width of the track border.
-* [`trackOpacity`]() - controls the transparency of the track area.
-* [`useSeriesColor`]() - uses the point color for filling the track area.
+* [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointColorMapper.html) - used to map the color for individual points from the data source.
+* [`gap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/gap.html) - changes the spacing between two individual segments. The default value of spacing is 1%.
+* [`maximumValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/maximumValue.html) - represents the entire span of an individual circle. The default value of the this property is null.
+* [`trackColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/trackColor.html) - changes the color of the track area.
+* [`trackBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/trackBorderColor.html) - changes the color of the track border.
+* [`trackBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/trackBorderWidth.html) - changes the width of the track border.
+* [`trackOpacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/trackOpacity.html) - controls the transparency of the track area.
+* [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/useSeriesColor.html) - uses the point color for filling the track area.
 
 {% highlight dart %} 
 
@@ -519,11 +549,13 @@ The radial bar chart is used for showing the comparisons among the categories us
             dataSource: chartData,
             xValueMapper: (ChartData data, _) => data.x,
             yValueMapper: (ChartData data, _) => data.y
-          )
-        ]))
+                        )
+                    ]
+                )
+            )
         )
-        );
-    }
+    );
+}
 
 
 {% endhighlight %}
@@ -532,7 +564,7 @@ The radial bar chart is used for showing the comparisons among the categories us
 
 ### Changing the radial bar size
 
-You can use [`radius`]() property to change the diameter of the radial bar chart with respect to the plot area. The default value is *80%*.
+You can use [`radius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/radius.html) property to change the diameter of the radial bar chart with respect to the plot area. The default value is *80%*.
 
 {% highlight dart %} 
 
@@ -547,11 +579,13 @@ You can use [`radius`]() property to change the diameter of the radial bar chart
                     xValueMapper: (ChartData data, _) => data.x,
                     yValueMapper: (ChartData data, _) => data.y,
                     radius: '50%'
+                        )
+                    ]
                 )
-            ]))
+            )
         )
-        );
-    }
+    );
+}
 
 
 {% endhighlight %}
@@ -560,7 +594,7 @@ You can use [`radius`]() property to change the diameter of the radial bar chart
 
 ### Changing the radial bar inner radius
 
-You can change the radial bar chart inner radius using the [`innerRadius`]() with respect to the plot area. The value ranges from 0% to 100%.
+You can change the radial bar chart inner radius using the [`innerRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/innerRadius.html) with respect to the plot area. The value ranges from 0% to 100%.
 
 {% highlight dart %} 
 
@@ -575,17 +609,19 @@ You can change the radial bar chart inner radius using the [`innerRadius`]() wit
                     xValueMapper: (ChartData data, _) => data.x,
                     yValueMapper: (ChartData data, _) => data.y,
                     innerRadius: '80%'
+                        )
+                    ]
                 )
-            ]))
+            )
         )
-        );
-    }
+    );
+}
 
 {% endhighlight %}
 
 ### Rounded corners
 
-The [`cornerStyle`]() property specifies the corner type for radial bar chart. The corners can be customized using [`bothFlat`](), [`bothCurve`](), [`startCurve`](), and [`endCurve`]() options. The [`cornerStyle`]() default to [`bothFlat`]().
+The [`cornerStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/cornerStyle.html) property specifies the corner type for radial bar chart. The corners can be customized using [`bothFlat`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CornerStyle-class.html), [`bothCurve`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CornerStyle-class.html), [`startCurve`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CornerStyle-class.html), and [`endCurve`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CornerStyle-class.html) options. The [`cornerStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/cornerStyle.html) default to [`bothFlat`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CornerStyle-class.html).
 
 {% highlight dart %} 
 
@@ -600,11 +636,13 @@ The [`cornerStyle`]() property specifies the corner type for radial bar chart. T
                     xValueMapper: (ChartData data, _) => data.x,
                     yValueMapper: (ChartData data, _) => data.y,
                     cornerStyle: CornerStyle.bothCurve
+                        )
+                    ]
                 )
-            ]))
+            )
         )
-        );
-    }
+    );
+}
 
 {% endhighlight %}
 
@@ -612,20 +650,20 @@ The [`cornerStyle`]() property specifies the corner type for radial bar chart. T
 
 ### Rendering data labels
 
-Data labels can be enabled by using [`isVisible`]() property of [`dataLabelSettings`](). The label appearance can be customized using following properties.
+Data labels can be enabled by using [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/isVisible.html) property of [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/dataLabelSettings.html). The label appearance can be customized using following properties.
 
-* [`color`]() - used to change the label background color.
-* [`textStyle`]() – used to change the text color, size, font family, fontStyle, and font weight.
-* [`textStyle.color`]() – used to change the color of the text.
-* [`textStyle.fontFamily`]() - used to change the font family for chart title. 
-* [`textStyle.fontStyle`]() – used to change the font style for the chart title.
-* [`textStyle.fontSize`]() - used to change the font size for the chart title.
-* [`opacity`]() - used to control the transparency of the label background color.
-* [`borderRadius`]() - customizes the data label border radius.
-* [`angle`]() - used to rotate the labels.
-* [`borderWidth`]() – used to change the stroke width of the data label shape.
-* [`borderColor`]() – used to change the stroke color of the data label shape.
-* [`useSeriesColor`]() - uses the series color for filling the data label shape.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/color.html) - used to change the label background color.
+* [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/textStyle.html) – used to change the text color, size, font family, fontStyle, and font weight.
+* [`textStyle.color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/color.html) – used to change the color of the text.
+* [`textStyle.fontFamily`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontFamily.html) - used to change the font family for chart title. 
+* [`textStyle.fontStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontStyle.html) – used to change the font style for the chart title.
+* [`textStyle.fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontSize.html) - used to change the font size for the chart title.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/opacity.html) - used to control the transparency of the label background color.
+* [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/borderRadius.html) - customizes the data label border radius.
+* [`angle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/angle.html) - used to rotate the labels.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/borderWidth.html) – used to change the stroke width of the data label shape.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/borderColor.html) – used to change the stroke color of the data label shape.
+* [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/useSeriesColor.html) - uses the series color for filling the data label shape.
 
 {% highlight dart %} 
 
@@ -641,11 +679,14 @@ Data labels can be enabled by using [`isVisible`]() property of [`dataLabelSetti
                             yValueMapper: (ChartData data, _) => data.y,
                             dataLabelSettings: DataLabelSettings(
                                 isVisible: true
-                            ))
-                    ]))
+                            )
+                        )
+                    ]
+                )
             )
-        );
-    }
+        )
+    );
+}
 
 {% endhighlight %}
 

@@ -52,7 +52,7 @@ You can use the following properties to customize the appearance of trackball to
       )
     )
   );
-  }
+}
 
 {% endhighlight %}
 
@@ -85,7 +85,7 @@ The [`tooltipDisplayMode`](https://pub.dev/documentation/syncfusion_flutter_char
       )
     )
   );
-  }
+}
 
 {% endhighlight %}
 
@@ -118,7 +118,7 @@ The position of trackball tooltip can be changed using the [`tooltipAlignment`](
       )
     )
   );
-  }
+}
 
 {% endhighlight %}
 
@@ -149,7 +149,7 @@ By default, axis value will be displayed in the tooltip, and it can be customize
       )
     )
   );
-  }
+}
 
 {% endhighlight %}
 
@@ -184,7 +184,7 @@ The ActivationMode enum contains the following values:
       )
     )
   );
-  }
+}
 
 {% endhighlight %}
 
@@ -205,17 +205,17 @@ Crosshair lines can be enabled by using [`enable`](https://pub.dev/documentation
           child: SfCartesianChart(
               primaryXAxis: NumericAxis(
                 crosshairTooltip: InteractiveTooltip(
-                  enable: true
+                  enable: true,
                 )),
               crosshairBehavior: CrosshairBehavior(
-                  enable: true
+                  enable: true,
               )
           )
         )
       )
     )
   );
-  }
+}
 
 {% endhighlight %}
 
@@ -244,14 +244,14 @@ The appearance of the track line in crosshair can be customized using the follow
                   lineColor: Colors.red,
                   lineDashArray: <double>[5,5],
                   lineWidth: 2,
-                  lineType: CrosshairLineType.vertical
-                ),
+                  lineType: CrosshairLineType.vertical,
+                )
           )
         )
       )
     )
   );
-  }
+}
 
 {% endhighlight %}
 

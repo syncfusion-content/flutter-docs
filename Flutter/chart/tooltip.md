@@ -28,14 +28,14 @@ Chart provides tooltip support for all the series. It is used to show informatio
             LineSeries<ChartData, double>(
 
               //Enables the tooltip for individual series
-              enableTooltip: true,
-              
+              enableTooltip: true, 
             )
           ]
         )
-          )
-        ));
-    }
+      )
+    )
+  );
+}
 
 {% endhighlight %}
 
@@ -70,10 +70,12 @@ You can use the following properties to customize the tooltip appearance.
                 borderColor: Colors.red,
                 borderWidth: 5,
                 color: Colors.lightBlue,
-              ),
-          ))
-      ));
-    }
+          ),
+        )
+      )
+    )
+  );
+}
 
 {% endhighlight %}
 
@@ -81,7 +83,7 @@ You can use the following properties to customize the tooltip appearance.
 
 ## Label format
 
-By default, x and y value will be displayed in the tooltip, and it can be customized using [`format`]() property as depicted in the below code snippet.
+By default, x and y value will be displayed in the tooltip, and it can be customized using [`format`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/format.html) property as depicted in the below code snippet.
 
 {% highlight dart %} 
 
@@ -122,10 +124,13 @@ You can customize the appearance of the tooltip with your own widget by using th
                 return Container(
                   child: Text('PointIndex : ${pointIndex.toString()}'),
                 );
-              }),
-        ))
-      ));
-    }
+              }
+            ),
+        )
+      )
+    )
+  );
+}
 
 {% endhighlight %}
 
@@ -153,8 +158,10 @@ The ActivationMode enum contains the following values:
               tooltipBehavior: TooltipBehavior(
                 enable: true,
                 activationMode: ActivationMode.longPress),
-        ))
-      ));
-    }
+        )
+      )
+    )
+  );
+}
 
 {% endhighlight %}
