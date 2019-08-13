@@ -38,8 +38,6 @@ Chart supports annotations which allows you to mark the specific area of interes
 {% endhighlight %}
 ![Annotation](images/annotation/default_annotation.jpg)
 ## Positioning the annotation
-
-
 The [`x`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/x.html) and [`y`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/y.html) values can be specified with axis units or pixel units, and these can be identified by using [`coordinateUnit`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html) property. When logicalPixel is specified, the annotation will be placed with respect to pixel values whereas point is specified, then the annotation will be placed with respect to series point values.
 
 **Positioning based on coordinateUnit as point**
