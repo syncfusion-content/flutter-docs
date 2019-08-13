@@ -28,46 +28,46 @@ You can align the title text content horizontally to the near, center or far of 
 
 {% highlight dart %} 
 
-    @override
-    Widget build(BuildContext context) {
+      @override
+      Widget build(BuildContext context) {
         return Scaffold(
           body: Center(
-              child: Container(
-                child: SfCartesianChart(
-                  title: ChartTitle(
-                    text: 'Half yearly sales analysis',
-                    backgroundColor: Colors.lightGreen,
-                    borderColor: Colors.blue,
-                    borderWidth: 2,
-                    alignment: ChartAlignment.near,
-                    textStyle: ChartTextStyle(
-                      color: Colors.red,
-                      fontFamily: 'Roboto',
-                      fontStyle: FontStyle.italic,
-                      fontSize: 14,
-                    )
-                  ),
-                  primaryXAxis: CategoryAxis(), // Initialize category axis.
-                  series: <ChartSeries>[
-                    // Initialize line series.
-                    LineSeries<SalesData, String>(
-                      dataSource: [
-                        // Bind data source.
-                        SalesData('Jan', 35),
-                        SalesData('Feb', 28),
-                        SalesData('Mar', 34),
-                        SalesData('Apr', 32),
-                        SalesData('May', 40)
-                      ],
-                      xValueMapper: (SalesData sales, _) =>   sales.year,
-                      yValueMapper: (SalesData sales, _) => sales.sales
-                    )
-                  ]
-                )
+            child: Container(
+              child: SfCartesianChart(
+                title: ChartTitle(
+                  text: 'Half yearly sales analysis',
+                  backgroundColor: Colors.lightGreen,
+                  borderColor: Colors.blue,
+                  borderWidth: 2,
+                  alignment: ChartAlignment.near,
+                  textStyle: ChartTextStyle(
+                    color: Colors.red,
+                    fontFamily: 'Roboto',
+                    fontStyle: FontStyle.italic,
+                    fontSize: 14,
+                  )
+                ),
+                primaryXAxis: CategoryAxis(), // Initialize category axis.
+                series: <ChartSeries>[
+                  // Initialize line series.
+                  LineSeries<SalesData, String>(
+                    dataSource: [
+                      // Bind data source.
+                      SalesData('Jan', 35),
+                      SalesData('Feb', 28),
+                      SalesData('Mar', 34),
+                      SalesData('Apr', 32),
+                      SalesData('May', 40)
+                    ],
+                    xValueMapper: (SalesData sales, _) =>   sales.year,
+                    yValueMapper: (SalesData sales, _) => sales.sales
+                  )
+                ]
               )
-        )
+            )
+          )
         );
-    }
+      }
 
 {% endhighlight %}
 
