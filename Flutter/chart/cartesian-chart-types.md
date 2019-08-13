@@ -635,21 +635,24 @@ Bubble chart requires 3 fields (X, Y and Size) to plot a point. Here [`sizeValue
             ChartData(2013, 52, 0.29),
             ChartData(2014, 40, 0.34)
         ];
+
         return Scaffold(
-        body: Center(
-            child: Container(
-                child:SfCartesianChart(series: <ChartSeries>[
-                    BubbleSeries<ChartData, double>(
-                        dataSource: chartData,
-                        sizeValueMapper: (ChartData sales, _) => sales.size,
-                        xValueMapper: (ChartData sales, _) => sales.x,
-                        yValueMapper: (ChartData sales, _) => sales.y),
-                    ]
-                )
-            )   
-        )
-    );
-}
+            body: Center(
+                child: Container(
+                    child:SfCartesianChart(
+                        series: <ChartSeries>[
+                            BubbleSeries<ChartData, double>(
+                                dataSource: chartData,
+                                sizeValueMapper: (ChartData sales, _) => sales.size,
+                                xValueMapper: (ChartData sales, _) => sales.x,
+                                yValueMapper: (ChartData sales, _) => sales.y
+                            )
+                        ]
+                    )
+                )   
+            )
+        );
+    }
 
     class ChartData {
         ChartData(this.x, this.y, this.size);
@@ -670,23 +673,25 @@ The [`minimumRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/la
     
     @override
     Widget build(BuildContext context) {
-         return Scaffold(
-        body: Center(
-            child: Container(
-                child:SfCartesianChart(series: <ChartSeries>[
-                    BubbleSeries<ChartData, double>(
-                        dataSource: chartData,
-                        sizeValueMapper: (ChartData sales, _) => sales.size,
-                        minimumRadius:9,
-                        maximumRadius: 15,
-                        xValueMapper: (ChartData sales, _) => sales.x,
-                        yValueMapper: (ChartData sales, _) => sales.y),
-                    ]
-                )
-            )   
-        )
-    );
-}
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child:SfCartesianChart(
+                        series: <ChartSeries>[
+                            BubbleSeries<ChartData, double>(
+                                dataSource: chartData,
+                                sizeValueMapper: (ChartData sales, _) => sales.size,
+                                minimumRadius:9,
+                                maximumRadius: 15,
+                                xValueMapper: (ChartData sales, _) => sales.x,
+                                yValueMapper: (ChartData sales, _) => sales.y
+                            )
+                        ]
+                    )
+                )   
+            )
+        );
+    }
 
 {% endhighlight %}
 
@@ -706,19 +711,21 @@ To render a scatter chart, create an instance of [`ScatterSeries`](https://pub.d
     @override
     Widget build(BuildContext context) {
          return Scaffold(
-        body: Center(
-            child: Container(
-                child:SfCartesianChart(series: <ChartSeries>[
-                    ScatterSeries<ChartData, double>(
-                        dataSource: chartData,
-                        xValueMapper: (ChartData sales, _) => sales.x,
-                        yValueMapper: (ChartData sales, _) => sales.y),
-                    ]
-                )
-            )   
-        )
-    );
-}
+            body: Center(
+                child: Container(
+                    child:SfCartesianChart(
+                        series: <ChartSeries>[
+                            ScatterSeries<ChartData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData sales, _) => sales.x,
+                                yValueMapper: (ChartData sales, _) => sales.y
+                            )
+                        ]
+                    )
+                )   
+            )
+        );
+    }
 
 {% endhighlight %}
 
@@ -735,25 +742,26 @@ The [`height`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
     @override
     Widget build(BuildContext context) {
          return Scaffold(
-        body: Center(
-            child: Container(
-                child:SfCartesianChart(series: <ChartSeries>[
-                    ScatterSeries<ChartData, double>(
-                        dataSource: chartData,
-                        xValueMapper: (ChartData sales, _) => sales.x,
-                        yValueMapper: (ChartData sales, _) => sales.y,
-                        markerSettings: MarkerSettings(
-                            height: 15,
-                            width: 15,
-                            shape: DataMarkerType.diamond,
+            body: Center(
+                child: Container(
+                    child:SfCartesianChart(
+                        series: <ChartSeries>[
+                            ScatterSeries<ChartData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData sales, _) => sales.x,
+                                yValueMapper: (ChartData sales, _) => sales.y,
+                                markerSettings: MarkerSettings(
+                                    height: 15,
+                                    width: 15,
+                                    shape: DataMarkerType.diamond
+                                )
                             )
-                        )
-                    ]
-                )
-            )   
-        )
-    );
-}
+                        ]
+                    )
+                )   
+            )
+        );
+    }
 
 {% endhighlight %}
 
@@ -772,20 +780,21 @@ To render a step line chart, create an instance of [`StepLineSeries`](https://pu
     @override
     Widget build(BuildContext context) {
          return Scaffold(
-        body: Center(
-            child: Container(
-                child:SfCartesianChart(series: <ChartSeries>[
-                    StepLineSeries<ChartData, double>(
-                        dataSource: chartData,
-                        xValueMapper: (ChartData sales, _) => sales.x,
-                        yValueMapper: (ChartData sales, _) => sales.y,
-                    ),
-                ]
+            body: Center(
+                child: Container(
+                    child:SfCartesianChart(
+                        series: <ChartSeries>[
+                            StepLineSeries<ChartData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData sales, _) => sales.x,
+                                yValueMapper: (ChartData sales, _) => sales.y
+                            )
+                        ]
+                    )
+                )   
             )
-          )   
-        )
-    );
-}
+        );
+    }
 
 {% endhighlight %}
 
@@ -800,21 +809,22 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
     @override
     Widget build(BuildContext context) {
          return Scaffold(
-        body: Center(
-            child: Container(
-                child:SfCartesianChart(series: <ChartSeries>[
-                    StepLineSeries<ChartData, double>(
-                        dataSource: chartData,
-                        dashArray: <double>[5,5],
-                        xValueMapper: (ChartData sales, _) => sales.x,
-                        yValueMapper: (ChartData sales, _) => sales.y,
-                    ),
-                ]
+            body: Center(
+                child: Container(
+                    child:SfCartesianChart(
+                        series: <ChartSeries>[
+                            StepLineSeries<ChartData, double>(
+                                dataSource: chartData,
+                                dashArray: <double>[5,5],
+                                xValueMapper: (ChartData sales, _) => sales.x,
+                                yValueMapper: (ChartData sales, _) => sales.y
+                            )
+                        ]
+                    )
+                )   
             )
-          )   
-        )
-    );
-}
+        );
+    }
 
 {% endhighlight %}
 
@@ -833,19 +843,21 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-        body: Center(
-            child: Container(
-                child:SfCartesianChart(series: <ChartSeries>[
-                    FastLineSeries<SalesData, double>(
-                        dataSource: chartData,
-                        xValueMapper: (SalesData sales, _) => sales.year,
-                        yValueMapper: (SalesData sales, _) => sales.sales),
-                    ]
+            body: Center(
+                child: Container(
+                    child:SfCartesianChart(
+                        series: <ChartSeries>[
+                            FastLineSeries<SalesData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales
+                            )
+                        ]
+                    )
                 )
             )
-        )
-    );
-}
+        );
+    }
 
 
 {% endhighlight %}

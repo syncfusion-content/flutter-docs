@@ -35,24 +35,24 @@ You can use the following properties to customize the appearance of trackball to
 
     @override
     Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
+      return Scaffold(
+        body: SafeArea(
           child: Center(
-        child: Container(
-          child: SfCartesianChart(
-            trackballBehavior: TrackballBehavior(
-                enable: true,
-                tooltipSettings: InteractiveTooltip(
+            child: Container(
+              child: SfCartesianChart(
+                trackballBehavior: TrackballBehavior(
                   enable: true,
-                  color: Colors.red,
+                  tooltipSettings: InteractiveTooltip(
+                    enable: true,
+                    color: Colors.red
+                  )
                 )
+              )
             )
           )
         )
-      )
-    )
-  );
-}
+      );
+    }
 
 {% endhighlight %}
 
@@ -71,21 +71,21 @@ The [`tooltipDisplayMode`](https://pub.dev/documentation/syncfusion_flutter_char
 
     @override
     Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
+      return Scaffold(
+        body: SafeArea(
           child: Center(
-        child: Container(
-          child: SfCartesianChart(
-            trackballBehavior: TrackballBehavior(
-                enable: true,
-                tooltipDisplayMode: TrackballDisplayMode.floatAllPoints
+            child: Container(
+              child: SfCartesianChart(
+                trackballBehavior: TrackballBehavior(
+                  enable: true,
+                  tooltipDisplayMode: TrackballDisplayMode.floatAllPoints
+                )
+              )
             )
           )
         )
-      )
-    )
-  );
-}
+      );
+    }
 
 {% endhighlight %}
 
@@ -103,22 +103,22 @@ The position of trackball tooltip can be changed using the [`tooltipAlignment`](
 
     @override
     Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
+      return Scaffold(
+        body: SafeArea(
           child: Center(
-        child: Container(
-          child: SfCartesianChart(
-            trackballBehavior: TrackballBehavior(
-                enable: true,
-                tooltipAlignment: ChartAlignment.near,
-                tooltipDisplayMode: TrackballDisplayMode.groupAllPoints
+            child: Container(
+              child: SfCartesianChart(
+                trackballBehavior: TrackballBehavior(
+                  enable: true,
+                  tooltipAlignment: ChartAlignment.near,
+                  tooltipDisplayMode: TrackballDisplayMode.groupAllPoints
+                )
+              )
             )
           )
         )
-      )
-    )
-  );
-}
+      );
+    }
 
 {% endhighlight %}
 
@@ -134,22 +134,23 @@ By default, axis value will be displayed in the tooltip, and it can be customize
 
     @override
     Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
+      return Scaffold(
+        body: SafeArea(
           child: Center(
-        child: Container(
-          child: SfCartesianChart(
-            trackballBehavior: TrackballBehavior(
-                    enable: true,
-                    tooltipSettings: InteractiveTooltip(
-                      format: 'point.x : point.y%')
+            child: Container(
+              child: SfCartesianChart(
+                trackballBehavior: TrackballBehavior(
+                  enable: true,
+                  tooltipSettings: InteractiveTooltip(
+                    format: 'point.x : point.y%'
+                  )
                 )
+              )
+            )
           )
         )
-      )
-    )
-  );
-}
+      );
+    }
 
 {% endhighlight %}
 
@@ -170,21 +171,21 @@ The ActivationMode enum contains the following values:
 
     @override
     Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
+      return Scaffold(
+        body: SafeArea(
           child: Center(
-        child: Container(
-          child: SfCartesianChart(
-            trackballBehavior: TrackballBehavior(
-                    enable: true,
+            child: Container(
+              child: SfCartesianChart(
+                trackballBehavior: TrackballBehavior(
+                  enable: true,
                     activationMode: ActivationMode.singleTap
                 )
+              )
+            )
           )
         )
-      )
-    )
-  );
-}
+      );
+    }
 
 {% endhighlight %}
 
@@ -198,24 +199,25 @@ Crosshair lines can be enabled by using [`enable`](https://pub.dev/documentation
 
     @override
     Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
+      return Scaffold(
+        body: SafeArea(
           child: Center(
-        child: Container(
-          child: SfCartesianChart(
-              primaryXAxis: NumericAxis(
-                crosshairTooltip: InteractiveTooltip(
-                  enable: true,
-                )),
-              crosshairBehavior: CrosshairBehavior(
-                  enable: true,
+            child: Container(
+              child: SfCartesianChart(
+                primaryXAxis: NumericAxis(
+                  crosshairTooltip: InteractiveTooltip(
+                    enable: true
+                  )
+                ),
+                crosshairBehavior: CrosshairBehavior(
+                  enable: true
+                )
               )
+            )
           )
         )
-      )
-    )
-  );
-}
+      );
+    }
 
 {% endhighlight %}
 
@@ -234,24 +236,24 @@ The appearance of the track line in crosshair can be customized using the follow
 
     @override
     Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-          child: Center(
-        child: Container(
-          child: SfCartesianChart(
+      return Scaffold(
+        body: SafeArea(
+        child: Center(
+          child: Container(
+            child: SfCartesianChart(
               crosshairBehavior: CrosshairBehavior(
                   enable: true,
                   lineColor: Colors.red,
                   lineDashArray: <double>[5,5],
                   lineWidth: 2,
-                  lineType: CrosshairLineType.vertical,
+                  lineType: CrosshairLineType.vertical
                 )
+              )
+            )
           )
         )
-      )
-    )
-  );
-}
+      );
+    }
 
 {% endhighlight %}
 
@@ -286,19 +288,20 @@ The ActivationMode enum contains the following values:
 
     @override
     Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
+      return Scaffold(
+        body: SafeArea(
           child: Center(
-        child: Container(
-          child: SfCartesianChart(
-            crosshairBehavior: CrosshairBehavior(
+            child: Container(
+              child: SfCartesianChart(
+                crosshairBehavior: CrosshairBehavior(
                   enable: true,
                   activationMode: ActivationMode.singleTap
-                ),
+                )
+              )
+            )
           )
-        ),
-      )),
-    );
-  }
+        )
+      );
+    }
 
 {% endhighlight %}

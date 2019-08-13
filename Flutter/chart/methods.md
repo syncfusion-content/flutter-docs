@@ -31,13 +31,13 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
     chart = SfCartesianChart(
       tooltipBehavior: tooltip,
-      series: <CartesianSeries>[
-        ColumnSeries<ChartData, double>(
+        series: <CartesianSeries>[
+          ColumnSeries<ChartData, double>(
             enableTooltip: true,
             dataSource: chartData,
             xValueMapper: (ChartData data, _) => data.x,
-            yValueMapper: (ChartData data, _) => data.y),
-      ],
+            yValueMapper: (ChartData data, _) => data.y)
+      ]
     );
 
     return Scaffold(
@@ -46,9 +46,9 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
           children: <Widget>[
             FlatButton(
               child: Text('Show'),
-              onPressed: show,
+              onPressed: show
             ),
-            Container(child: chart),
+            Container(child: chart)
           ]
         )
       )
@@ -76,11 +76,10 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
     @override
     Widget build(BuildContext context) {
-
     final List<ChartData> chartData = [
         ChartData(10, 17),
-        ChartData(20, 34),
-        // Add the required data
+        ChartData(20, 34)
+    // Add the required data  
     ];
     
     tooltip = TooltipBehavior (enable: true);
@@ -92,8 +91,8 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
             enableTooltip: true,
             dataSource: chartData,
             xValueMapper: (ChartData data, _) => data.x,
-            yValueMapper: (ChartData data, _) => data.y),
-      ]
+            yValueMapper: (ChartData data, _) => data.y)
+        ]
     );
 
     return Scaffold(
@@ -102,9 +101,9 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
           children: <Widget>[
             FlatButton(
               child: Text('Hide'),
-              onPressed: hide,
+              onPressed: hide
             ),
-            Container(child: chart),
+            Container(child: chart)
           ]
         )
       )
@@ -132,7 +131,7 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
     
     final List<ChartData> chartData = [
       ChartData(10, 17),
-      ChartData(20, 34),
+      ChartData(20, 34)
       // Add the required data
     ];
     
@@ -145,7 +144,7 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
             enableTooltip: true,
             dataSource: chartData,
             xValueMapper: (ChartData data, _) => data.x,
-            yValueMapper: (ChartData data, _) => data.y),
+            yValueMapper: (ChartData data, _) => data.y)
       ]
     );
     
@@ -155,9 +154,9 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
           children: <Widget>[
             FlatButton(
               child: Text('Show'),
-              onPressed: show,
+              onPressed: show
             ),
-            Container(child: chart),
+            Container(child: chart)
           ]
         )
       )
@@ -197,7 +196,7 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
             enableTooltip: true,
             dataSource: chartData,
             xValueMapper: (ChartData data, _) => data.x,
-            yValueMapper: (ChartData data, _) => data.y),
+            yValueMapper: (ChartData data, _) => data.y)
       ],
     );
     
@@ -207,9 +206,9 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
           children: <Widget>[
             FlatButton(
               child: Text('Hide'),
-              onPressed: hide,
+              onPressed: hide
             ),
-            Container(child: chart),
+            Container(child: chart)
           ]
         )
       )
@@ -233,11 +232,10 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
     
     @override
     Widget build(BuildContext context) {
-    
+     // Add the required data 
     final List<ChartData> chartData = [
       ChartData(10, 17),
       ChartData(20, 34),
-      // Add the required data
     ];
 
     crosshair = CrosshairBehavior(enable: true);
@@ -249,9 +247,10 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
             enableTooltip: true,
             dataSource: chartData,
             xValueMapper: (ChartData data, _) => data.x,
-            yValueMapper: (ChartData data, _) => data.y),
-      ]
-    );
+            yValueMapper: (ChartData data, _) => data.y
+          )
+       ]
+     );
 
     return Scaffold(
       body: Center(
@@ -259,9 +258,9 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
           children: <Widget>[
             FlatButton(
               child: Text('Show'),
-              onPressed: show,
+              onPressed: show
             ),
-            Container(child: chart),
+            Container(child: chart)
           ]
         )
       )
@@ -284,12 +283,11 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
     CrosshairBehavior crosshair;
   
     @override
-    Widget build(BuildContext context) {
-    
+    Widget build(BuildContext context) {  
     final List<ChartData> chartData = [
       ChartData(10, 17),
-      ChartData(20, 34),
-      // Add the required data
+      ChartData(20, 34)
+    // Add the required data  
     ];
     
     crosshair = CrosshairBehavior(enable: true);
@@ -301,7 +299,7 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
             enableTooltip: true,
             dataSource: chartData,
             xValueMapper: (ChartData data, _) => data.x,
-            yValueMapper: (ChartData data, _) => data.y),
+            yValueMapper: (ChartData data, _) => data.y)
       ]
     );
     
@@ -311,9 +309,9 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
           children: <Widget>[
             FlatButton(
               child: Text('Hide'),
-              onPressed: hide,
+              onPressed: hide
             ),
-            Container(child: chart),
+            Container(child: chart)
           ]
         )
       )
@@ -345,7 +343,7 @@ The [`selectionIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/l
     
     final List<ChartData> chartData = [
       hartData(10, 17),
-      ChartData(20, 34),
+      ChartData(20, 34)
       // Add the required data
     ];
 
@@ -368,9 +366,9 @@ The [`selectionIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/l
           children: <Widget>[
             FlatButton(
               child: Text('Select'),
-              onPressed: select,
+              onPressed: select
             ),
-            Container(child: chart),
+            Container(child: chart)
           ]
         )
       )
@@ -394,18 +392,18 @@ The [`zoomIn`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
 
     @override
     Widget build(BuildContext context) {
-    
     final List<ChartData> chartData = [
       ChartData(10, 17),
-      ChartData(20, 34),
+      ChartData(20, 34)
       //add the required data
     ];
     
     zooming = ZoomPanBehavior(
-        enableSelectionZooming: true,
-        enableDoubleTapZooming: true,
-        enablePinching: true,
-        enablePanning: true);
+      enableSelectionZooming: true,
+      enableDoubleTapZooming: true,
+      enablePinching: true,
+      enablePanning: true
+    );
     
     chart = SfCartesianChart(
       zoomPanBehavior: zooming,
@@ -413,7 +411,7 @@ The [`zoomIn`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
         ColumnSeries<ChartData, double>(
           dataSource: chartData,
           xValueMapper: (ChartData data, _) => data.x,
-          yValueMapper: (ChartData data, _) => data.y,
+          yValueMapper: (ChartData data, _) => data.y
         )
       ]
     );
@@ -424,9 +422,9 @@ The [`zoomIn`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
           children: <Widget>[
             FlatButton(
               child: Text('Zoom'),
-              onPressed: zoom,
+              onPressed: zoom
             ),
-            Container(child: chart),
+            Container(child: chart)
           ]
         )
       )
@@ -453,7 +451,7 @@ The [`zoomOut`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
     
     final List<ChartData> chartData = [
       ChartData(10, 17),
-      ChartData(20, 34),
+      ChartData(20, 34)
       //add the required data
     ];
     
@@ -461,7 +459,8 @@ The [`zoomOut`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
         enableSelectionZooming: true,
         enableDoubleTapZooming: true,
         enablePinching: true,
-        enablePanning: true);
+        enablePanning: true
+    );
     
     chart = SfCartesianChart(
       zoomPanBehavior: zooming,
@@ -469,7 +468,7 @@ The [`zoomOut`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
         ColumnSeries<ChartData, double>(
           dataSource: chartData,
           xValueMapper: (ChartData data, _) => data.x,
-          yValueMapper: (ChartData data, _) => data.y,
+          yValueMapper: (ChartData data, _) => data.y
         )
       ]
     );
@@ -480,9 +479,9 @@ The [`zoomOut`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
           children: <Widget>[
             FlatButton(
               child: Text('Zoom'),
-              onPressed: zoom,
+              onPressed: zoom
             ),
-            Container(child: chart),
+            Container(child: chart)
           ]
         )
       )
@@ -517,7 +516,8 @@ The [`zoomByFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
         enableSelectionZooming: true,
         enableDoubleTapZooming: true,
         enablePinching: true,
-        enablePanning: true);
+        enablePanning: true
+    );
     
     chart = SfCartesianChart(
       zoomPanBehavior: zooming,
@@ -525,7 +525,7 @@ The [`zoomByFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
         ColumnSeries<ChartData, double>(
           dataSource: chartData,
           xValueMapper: (ChartData data, _) => data.x,
-          yValueMapper: (ChartData data, _) => data.y,
+          yValueMapper: (ChartData data, _) => data.y
         )
       ]
     );
@@ -536,9 +536,9 @@ The [`zoomByFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
           children: <Widget>[
             FlatButton(
               child: Text('Zoom'),
-              onPressed: zoom,
+              onPressed: zoom
             ),
-            Container(child: chart),
+            Container(child: chart)
           ]
         )
       )
@@ -581,9 +581,9 @@ The [`zoomByRect`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
         ColumnSeries<ChartData, double>(
           dataSource: chartData,
           xValueMapper: (ChartData data, _) => data.x,
-          yValueMapper: (ChartData data, _) => data.y,
-        ),
-      ],
+          yValueMapper: (ChartData data, _) => data.y
+        )
+      ]
     );
     
     return Scaffold(
@@ -592,9 +592,9 @@ The [`zoomByRect`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
           children: <Widget>[
             FlatButton(
               child: Text('Zoom'),
-              onPressed: zoom,
+              onPressed: zoom
             ),
-            Container(child: chart),
+            Container(child: chart)
           ]
         )
       )
@@ -626,13 +626,13 @@ The [`zoomToSingleAxis`](https://pub.dev/documentation/syncfusion_flutter_charts
       //add required data
     ];
     zooming = ZoomPanBehavior(
-        enableSelectionZooming: true,
-        enableDoubleTapZooming: true,
-        enablePinching: true,
-        enablePanning: true);
+      enableSelectionZooming: true,
+      enableDoubleTapZooming: true,
+      enablePinching: true,
+      enablePanning: true
+    );
 
     xAxis = NumericAxis();
-
     chart = SfCartesianChart(
       zoomPanBehavior: zooming,
       primaryXAxis: xAxis,
@@ -640,7 +640,7 @@ The [`zoomToSingleAxis`](https://pub.dev/documentation/syncfusion_flutter_charts
         ColumnSeries<ChartData, double>(
           dataSource: chartData,
           xValueMapper: (ChartData data, _) => data.x,
-          yValueMapper: (ChartData data, _) => data.y,
+          yValueMapper: (ChartData data, _) => data.y
         )
       ]
     );
@@ -651,9 +651,9 @@ The [`zoomToSingleAxis`](https://pub.dev/documentation/syncfusion_flutter_charts
           children: <Widget>[
             FlatButton(
               child: Text('Zoom'),
-              onPressed: zoom,
+              onPressed: zoom
             ),
-            Container(child: chart),
+            Container(child: chart)
           ]
         )
       )
@@ -690,10 +690,10 @@ The [`panToDirection`](https://pub.dev/documentation/syncfusion_flutter_charts/l
         enableSelectionZooming: true,
         enableDoubleTapZooming: true,
         enablePinching: true,
-        enablePanning: true);
+        enablePanning: true
+    );
 
     xAxis = NumericAxis();
-
     chart = SfCartesianChart(
       zoomPanBehavior: zooming,
       primaryXAxis: xAxis,
@@ -701,7 +701,7 @@ The [`panToDirection`](https://pub.dev/documentation/syncfusion_flutter_charts/l
         ColumnSeries<ChartData, double>(
           dataSource: chartData,
           xValueMapper: (ChartData data, _) => data.x,
-          yValueMapper: (ChartData data, _) => data.y,
+          yValueMapper: (ChartData data, _) => data.y
         )
       ]
     );
@@ -712,9 +712,9 @@ The [`panToDirection`](https://pub.dev/documentation/syncfusion_flutter_charts/l
           children: <Widget>[
             FlatButton(
               child: Text('Pan'),
-              onPressed: pan,
+              onPressed: pan
             ),
-            Container(child: chart),
+            Container(child: chart)
           ]
         )
       )
@@ -742,15 +742,16 @@ The [`reset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
     
     final List<ChartData> chartData = [
       ChartData(10, 17),
-      ChartData(20, 34),
+      ChartData(20, 34)
       //add the required data
     ];
     
     zooming = ZoomPanBehavior(
-        enableSelectionZooming: true,
-        enableDoubleTapZooming: true,
-        enablePinching: true,
-        enablePanning: true);
+      enableSelectionZooming: true,
+      enableDoubleTapZooming: true,
+      enablePinching: true,
+      enablePanning: true
+    );
     
     chart = SfCartesianChart(
       zoomPanBehavior: zooming,
@@ -758,7 +759,7 @@ The [`reset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
         ColumnSeries<ChartData, double>(
           dataSource: chartData,
           xValueMapper: (ChartData data, _) => data.x,
-          yValueMapper: (ChartData data, _) => data.y,
+          yValueMapper: (ChartData data, _) => data.y
         )
       ]
     );
@@ -769,9 +770,9 @@ The [`reset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
           children: <Widget>[
             FlatButton(
               child: Text('Zoom'),
-              onPressed: zoom,
+              onPressed: zoom
             ),
-            Container(child: chart),
+            Container(child: chart)
           ]
         )
       )

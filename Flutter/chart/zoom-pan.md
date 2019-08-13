@@ -17,23 +17,22 @@ Pinch zooming can be enabled by [`enablePinching`](https://pub.dev/documentation
 
     @override
     Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
+      return Scaffold(
+        body: SafeArea(
           child: Center(
-        child: Container(
-          height: 300, 
-          width: 350, 
-          child: SfCartesianChart(
-            zoomPanBehavior: ZoomPanBehavior(
-              enablePinching: true
-            ),
-            
+            child: Container(
+              height: 300, 
+              width: 350, 
+              child: SfCartesianChart(
+                zoomPanBehavior: ZoomPanBehavior(
+                  enablePinching: true
+                )
+              )
+            )
           )
         )
-      )
-    )
-  );
-}
+      );
+    }
 
 {% endhighlight %}
 
@@ -45,22 +44,22 @@ Double tap zooming can be enabled using [`enableDoubleTapZooming`](https://pub.d
 
     @override
     Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
+      return Scaffold(
+        body: SafeArea(
           child: Center(
-        child: Container(
-          height: 300, 
-          width: 350, 
-          child: SfCartesianChart(
-            zoomPanBehavior: ZoomPanBehavior(
-              enableDoubleTapZooming: true,
-            ),
+            child: Container(
+              height: 300, 
+              width: 350, 
+              child: SfCartesianChart(
+                zoomPanBehavior: ZoomPanBehavior(
+                  enableDoubleTapZooming: true
+                )
+              )
+            )
           )
         )
-      )
-    )
-  );
-}
+      );
+    }
 
 {% endhighlight %}
 
@@ -80,25 +79,25 @@ You can customize the selection rectangle using the below properties.
 
     @override
     Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
+      return Scaffold(
+        body: SafeArea(
           child: Center(
-        child: Container(
-          height: 300, 
-          width: 350, 
-          child: SfCartesianChart(
-            zoomPanBehavior: ZoomPanBehavior(
-              enableSelectionZooming: true,
-              selectionRectBorderColor: Colors.red,
-              selectionRectBorderWidth: 1,
-              selectionRectColor: Colors.grey,
+            child: Container(
+              height: 300, 
+              width: 350, 
+              child: SfCartesianChart(
+                zoomPanBehavior: ZoomPanBehavior(
+                  enableSelectionZooming: true,
+                  selectionRectBorderColor: Colors.red,
+                  selectionRectBorderWidth: 1,
+                  selectionRectColor: Colors.grey
+                )
+              )
             )
           )
         )
-      )
-    )
-  );
-}
+      );
+    }
 
 {% endhighlight %}
 
@@ -126,36 +125,36 @@ The axis tooltip on selection zooming can be enabled using [`enable`](https://pu
 
     @override
     Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
+      return Scaffold(
+        body: SafeArea(
           child: Center(
-        child: Container(
-          child: SfCartesianChart(
-            primaryXAxis: NumericAxis(
-                    crosshairTooltip: InteractiveTooltip(
+            child: Container(
+              child: SfCartesianChart(
+                primaryXAxis: NumericAxis(
+                  crosshairTooltip: InteractiveTooltip(
                   enable: true,
                   borderColor: Colors.red,
-                  borderWidth: 2,
+                  borderWidth: 2
                 )
               ),
                 primaryYAxis: NumericAxis(
-                    crosshairTooltip: InteractiveTooltip(
+                  crosshairTooltip: InteractiveTooltip(
                   enable: true,
                   borderColor: Colors.red,
-                  borderWidth: 2,
+                  borderWidth: 2
                 )
               ),
                 zoomPanBehavior: ZoomPanBehavior(
                   enableDoubleTapZooming: true,
                   enablePinching: true,
-                  enableSelectionZooming: true,
+                  enableSelectionZooming: true
                 )
+              )
+            )
           )
-        ),
-      )
-    )
-  );
-}
+        )
+      );
+    }
 
 {% endhighlight %}
 
@@ -167,18 +166,18 @@ The [`enableAutoIntervalOnZooming`](https://pub.dev/documentation/syncfusion_flu
 
     @override
     Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
+      return Scaffold(
+        body: SafeArea(
           child: Center(
-        child: Container(
-          child: SfCartesianChart(
-            primaryXAxis: DateTimeAxis(
+            child: Container(
+              child: SfCartesianChart(
+                primaryXAxis: DateTimeAxis(
                   enableAutoIntervalOnZooming: false
+                )
+              )
             )
-      )
-    )
-  );
-}
+          );
+        }
 
 {% endhighlight %}
 
@@ -190,19 +189,19 @@ The [`maximumZoomLevel`](https://pub.dev/documentation/syncfusion_flutter_charts
 
     @override
     Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
+      return Scaffold(
+        body: SafeArea(
           child: Center(
-        child: Container(
-          child: SfCartesianChart(
-            zoomPanBehavior: ZoomPanBehavior(
+            child: Container(
+              child: SfCartesianChart(
+                zoomPanBehavior: ZoomPanBehavior(
                   maximumZoomLevel: 3
+                )
+              )
             )
           )
         )
-      )
-    )
-  );
-}
+      );
+    }
 
 {% endhighlight %}

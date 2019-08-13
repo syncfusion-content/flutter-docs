@@ -22,7 +22,10 @@ Chart supports annotations which allows you to mark the specific area of interes
               child: SfCartesianChart(
                 annotations: <CartesianChartAnnotation>[
                   CartesianChartAnnotation(
-                    child: Container(child: const Text('Annotation')),
+                    child: 
+                      Container(
+                        child: const Text('Annotation')
+                      ),
                     coordinateUnit: CoordinateUnit.point,
                     x: 'USA',
                     y: 20
@@ -36,8 +39,11 @@ Chart supports annotations which allows you to mark the specific area of interes
     }
 
 {% endhighlight %}
+
 ![Annotation](images/annotation/default_annotation.jpg)
+
 ## Positioning the annotation
+
 The [`x`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/x.html) and [`y`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/y.html) values can be specified with axis units or pixel units, and these can be identified by using [`coordinateUnit`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html) property. When logicalPixel is specified, the annotation will be placed with respect to pixel values whereas point is specified, then the annotation will be placed with respect to series point values.
 
 **Positioning based on coordinateUnit as point**
@@ -56,7 +62,9 @@ To position the annotation based on axis, set the [`x`](https://pub.dev/document
               child: SfCartesianChart(
                 annotations: <CartesianChartAnnotation>[
                   CartesianChartAnnotation(
-                    child: Container(child: const Text('Text')),
+                    child: Container(
+                      child: const Text('Text')
+                    ),
                     coordinateUnit: CoordinateUnit.point,
                     x: 20,
                     y: 40
@@ -86,8 +94,10 @@ To position the annotation based on the pixel values, set the [`CoordinateUnit`]
               child: SfCartesianChart(
                 annotations: <CartesianChartAnnotation>[
                   CartesianChartAnnotation(
-                    child: Container(child: const Text('Text')),
-                    coordinateUnit: CoordinateUnit.logicalPixel,
+                    child: Container(
+                      child: const Text('Text')
+                    )
+                    coordinateUnit: CoordinateUnit.logicalPixel
                     x: 150,
                     y: 200
                   )

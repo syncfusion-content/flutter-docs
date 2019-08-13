@@ -154,7 +154,7 @@ You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
 ## Enable data labels
 
-You can add data labels to improve the readability of the chart. This can be achieved using [`SfCartesianChart.dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings-class.html) property as shown below.
+You can add data labels to improve the readability of the chart. This can be achieved using [`SfCartesianChart.dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/dataLabelSettings.html) property as shown below.
 
 {% highlight dart %} 
 

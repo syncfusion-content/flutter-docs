@@ -15,27 +15,25 @@ Chart provides tooltip support for all the series. It is used to show informatio
 
     @override
     Widget build(BuildContext context) {
-        return Scaffold(
+      return Scaffold(
         body: Center(
-            child: Container(
-                child:SfCartesianChart(
-
-              //Enables the tooltip for all the series
+          child: Container(
+            child:SfCartesianChart(
+            //Enables the tooltip for all the series
               tooltipBehavior: TooltipBehavior(
                 enable: true
               ),
-          series: <CartesianSeries>[
-            LineSeries<ChartData, double>(
-
-              //Enables the tooltip for individual series
-              enableTooltip: true, 
+              series: <CartesianSeries>[
+                LineSeries<ChartData, double>(
+                //Enables the tooltip for individual series
+                  enableTooltip: true, 
+                )
+              ]
             )
-          ]
+          )
         )
-      )
-    )
-  );
-}
+      );
+    }
 
 {% endhighlight %}
 
@@ -61,21 +59,21 @@ You can use the following properties to customize the tooltip appearance.
 
     @override
     Widget build(BuildContext context) {
-        return Scaffold(
+      return Scaffold(
         body: Center(
-            child: Container(
-                child:SfCartesianChart(
+          child: Container(
+            child:SfCartesianChart(
               tooltipBehavior: TooltipBehavior(
                 enable: true,
                 borderColor: Colors.red,
                 borderWidth: 5,
-                color: Colors.lightBlue,
-          ),
+                color: Colors.lightBlue
+              )
+            )
+          )
         )
-      )
-    )
-  );
-}
+      );
+    }
 
 {% endhighlight %}
 
@@ -96,7 +94,7 @@ By default, x and y value will be displayed in the tooltip, and it can be custom
               tooltipBehavior: TooltipBehavior(
                 enable: true, 
                 format: 'point.y%'
-              ),
+              )
             )
           )
         )
@@ -113,24 +111,26 @@ You can customize the appearance of the tooltip with your own widget by using th
 
     @override
     Widget build(BuildContext context) {
-        return Scaffold(
+      return Scaffold(
         body: Center(
-            child: Container(
-                child:SfCartesianChart(
+          child: Container(
+            child:SfCartesianChart(
               tooltipBehavior: TooltipBehavior(
                 enable: true,
-               builder: (dynamic data, dynamic point, dynamic series,
-                  int pointIndex, int seriesIndex) {
-                return Container(
-                  child: Text('PointIndex : ${pointIndex.toString()}'),
-                );
-              }
-            ),
+                builder: (dynamic data, dynamic point, dynamic series,
+                int pointIndex, int seriesIndex) {
+                  return Container(
+                    child: Text(
+                      'PointIndex : ${pointIndex.toString()}'
+                    )
+                  );
+                }
+              )
+            )
+          )
         )
-      )
-    )
-  );
-}
+      );
+    }
 
 {% endhighlight %}
 
@@ -151,17 +151,18 @@ The ActivationMode enum contains the following values:
 
     @override
     Widget build(BuildContext context) {
-        return Scaffold(
+      return Scaffold(
         body: Center(
-            child: Container(
-                child:SfCartesianChart(
+          child: Container(
+            child:SfCartesianChart(
               tooltipBehavior: TooltipBehavior(
                 enable: true,
-                activationMode: ActivationMode.longPress),
+                activationMode: ActivationMode.longPress
+              )
+            )
+          )
         )
-      )
-    )
-  );
-}
+      );
+    }
 
 {% endhighlight %}
