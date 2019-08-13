@@ -15,7 +15,7 @@ This section explains you the steps required to populate the Chart with data, ti
 
 Create a simple project, using the instructions given in [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app).
 
-### Adding flutter charts to your app
+## Adding flutter charts to your app
 
 **Add dependency**
 
@@ -70,7 +70,7 @@ Once the packages has been imported, initialize the chart as a child of any widg
 
 ![Initialize chart](images/getting-started/default.jpg)
 
-### Bind data source
+## Bind data source
 
 Based on your data, initialize the appropriate axis type and series type. In the series, you need to map the data source and the fields for x and y data points. Since we are going to render a line chart with a category axis, we have initialized those.
 
@@ -114,7 +114,7 @@ Based on your data, initialize the appropriate axis type and series type. In the
 
 ![Bind data source](images/getting-started/data_source.jpg)
 
-### Add title
+## Add title
 
 You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/title.html) to the chart to provide quick information to the user about the data plotted in the chart. The title in chart can be set as below.
 
@@ -152,7 +152,7 @@ You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
 ![Title to chart](images/getting-started/title_chart.jpg)
 
-### Enable data labels
+## Enable data labels
 
 You can add data labels to improve the readability of the chart. This can be achieved using [`SfCartesianChart.dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings-class.html) property as shown below.
 
@@ -192,7 +192,7 @@ You can add data labels to improve the readability of the chart. This can be ach
 
 ![DataLabel to chart](images/getting-started/datalabel.jpg)
 
-### Enable legend
+## Enable legend
 
 Legend provides information about the series rendered in the chart.
 
@@ -233,7 +233,7 @@ You can use legend for the chart by setting the [`isVisible`](https://pub.dev/do
 
 ![Legend in chart](images/getting-started/legend.jpg)
 
-### Enable tooltip
+## Enable tooltip
 
 The tooltip is useful when you cannot display information by using the data labels due to space constraints. The tooltip can be enabled as depicted below.
 
