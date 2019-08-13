@@ -13,7 +13,7 @@ documentation: ug
 
 ### onTooltipRender
 
-Triggers when the tooltip is rendering. Here, you can customize the text, header, x and y-positions. The [`onTooltipRender`]() event contains the following arguments.
+Triggers when the tooltip is rendering. Here, you can customize the text, header, x and y-positions. The [`onTooltipRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onTooltipRender.html) event contains the following arguments.
 
 * text - specifies the content of the tooltip.
 * header - specifies the header content of the tooltip.
@@ -43,7 +43,7 @@ Triggers when the tooltip is rendering. Here, you can customize the text, header
 
 ### onActualRangeChanged
 
-Triggers when the visible range of an axis is changed, i.e. value changes for minimum, maximum, and interval. Here, you can customize the visible range of an axis. The [`onActualRangeChanged`]() event contains the following arguments.
+Triggers when the visible range of an axis is changed, i.e. value changes for minimum, maximum, and interval. Here, you can customize the visible range of an axis. The [`onActualRangeChanged`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onActualRangeChanged.html) event contains the following arguments.
 
 * axisName - specifies the axis name.
 * axis - holds the information about the current axis.
@@ -76,7 +76,7 @@ Triggers when the visible range of an axis is changed, i.e. value changes for mi
 
 ### onAxisLabelRender
 
-Triggers while rendering the axis labels. Text and text styles such as color, font size, and font weight can be customized. The [`onAxisLabelRender`]() event contains the following arguments.
+Triggers while rendering the axis labels. Text and text styles such as color, font size, and font weight can be customized. The [`onAxisLabelRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onAxisLabelRender.html) event contains the following arguments.
 
 * text - specifies the axis label to be rendered.
 * value - specifies the actual value of the current axis label.
@@ -99,14 +99,15 @@ Triggers while rendering the axis labels. Text and text styles such as color, fo
             }
           }
         )
-      ));
-    }
+      ),
+    );
+  }
 
 {% endhighlight %}
 
 ### onDataLabelRender
 
-Triggers when data label is rendering. Text and text styles such as color, font size, and font weight can be customized. The [`onDataLabelRender`]() event contains the following arguments.
+Triggers when data label is rendering. Text and text styles such as color, font size, and font weight can be customized. The [`onDataLabelRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onDataLabelRender.html) event contains the following arguments.
 
 * text - specifies the content of the data label.
 * textStyle – used to change the text color, size, font family, font style, and font weight.
@@ -132,14 +133,15 @@ Triggers when data label is rendering. Text and text styles such as color, font 
             ),
           ],
         ),
-      ));
-    }
+      ),
+    );
+  }
 
 {% endhighlight %}
 
 ### onLegendItemRender
 
-Triggers when the legend item is rendered. Here, you can customize the legend’s text, and shape.  The [`onLegendItemRender`]() event contains the following arguments.
+Triggers when the legend item is rendered. Here, you can customize the legend’s text, and shape.  The [`onLegendItemRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onLegendItemRender.html) event contains the following arguments.
 
 * text - specifies the content of the legend.
 * pointIndex - specifies the current point index that is applicable for circular chart type alone.
@@ -160,14 +162,15 @@ Triggers when the legend item is rendered. Here, you can customize the legend’
             args.legendIconType = LegendIconType.diamond;
           },
         ),
-      ));
-    }
+      ),
+    );
+  }
 
 {% endhighlight %}
 
 ### onTrackballPositionChanging
 
-Triggers while the trackball position is changed. Here, you can customize the text of the trackball.The [`onTrackballPositionChanging`]() event contains the following argument.
+Triggers while the trackball position is changed. Here, you can customize the text of the trackball.The [`onTrackballPositionChanging`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onTrackballPositionChanging.html) event contains the following argument.
 
 * chartPointInfo - holds the information about the current point.
 
@@ -183,16 +186,17 @@ Triggers while the trackball position is changed. Here, you can customize the te
             args.chartPointInfo.label = 'Custom Text';
           },
           trackballBehavior: TrackballBehavior(
-            enable: true
+            enable: true,
           ),
-      ));
-    }
+      ),
+    );
+  }
 
 {% endhighlight %}
 
 ### onCrosshairPositionChanging
 
-Triggers while the crosshair position is changed. Here, you can customize the text and line color of the crosshair.The [`onCrosshairPositionChanging`]() event contains the following arguments.
+Triggers while the crosshair position is changed. Here, you can customize the text and line color of the crosshair.The [`onCrosshairPositionChanging`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onCrosshairPositionChanging.html) event contains the following arguments.
 
 * text - specifies the crosshair content.
 * value - specifies the actual value of the crosshair.
@@ -213,16 +217,17 @@ Triggers while the crosshair position is changed. Here, you can customize the te
             args.text = 'crosshair';
           },
           crosshairBehavior: CrosshairBehavior(
-            enable: true
+            enable: true,
           ),
-      ));
-    }
+      ),
+    );
+  }
 
 {% endhighlight %}
 
 ### onZooming
 
-Triggers when the zooming action is in progress. The [`onZooming`]() event contains the following arguments.
+Triggers when the zooming action is in progress. The [`onZooming`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onZooming.html) event contains the following arguments.
 
 * axis - holds the information about the current axis.
 * currentZoomPosition - specifies the current zoom position of an axis.
@@ -248,14 +253,15 @@ Triggers when the zooming action is in progress. The [`onZooming`]() event conta
               print(args.currentZoomFactor);
               print(args.currentZoomPosition);
           },
-      ));
-    }
+      ),
+    );
+  }
 
 {% endhighlight %}
 
 ### onZoomStart
 
-Triggers when zooming action begins. The [`onZoomStart`]() event contains the following arguments.
+Triggers when zooming action begins. The [`onZoomStart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onZoomStart.html) event contains the following arguments.
 
 * axis - holds the information about the current axis.
 * currentZoomPosition - specifies the current zoom position of an axis.
@@ -281,14 +287,15 @@ Triggers when zooming action begins. The [`onZoomStart`]() event contains the fo
               print(args.currentZoomFactor);
               print(args.currentZoomPosition);
           },
-      ));
-    }
+      ),
+    );
+  }
 
 {% endhighlight %}
 
 ### onZoomEnd
 
-Triggers when the zooming action is completed. The [`onZoomEnd`]() event contains the following arguments.
+Triggers when the zooming action is completed. The [`onZoomEnd`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onZoomEnd.html) event contains the following arguments.
 
 * axis - holds the information about the current axis.
 * currentZoomPosition - specifies the current zoom position of an axis.
@@ -314,14 +321,15 @@ Triggers when the zooming action is completed. The [`onZoomEnd`]() event contain
               print(args.currentZoomFactor);
               print(args.currentZoomPosition);
           },
-      ));
-    }
+      ),
+    );
+  }
 
 {% endhighlight %}
 
 ### onZoomReset
 
-Triggers when zoomed state is reset. The  [`onZoomReset`]() event contains the following arguments.
+Triggers when zoomed state is reset. The  [`onZoomReset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onZoomReset.html) event contains the following arguments.
 
 * axis - holds the information about the current axis.
 * currentZoomPosition - specifies the current zoom position of an axis.
@@ -347,14 +355,15 @@ Triggers when zoomed state is reset. The  [`onZoomReset`]() event contains the f
               print(args.currentZoomFactor);
               print(args.currentZoomPosition);
           },
-      ));
-    }
+      ),
+    );
+  }
 
 {% endhighlight %}
 
 ### onPointTapped
 
-Triggers when tapping the series point. The [`onPointTapped`]() event contains the following arguments.
+Triggers when tapping the series point. The [`onPointTapped`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onPointTapped.html) event contains the following arguments.
 
 * seriesIndex - specifies the current series index.
 * pointIndex - specifies the current point index.
@@ -372,14 +381,15 @@ Triggers when tapping the series point. The [`onPointTapped`]() event contains t
             print(args.seriesIndex);
             print(args.pointIndex);
           },
-      ));
+        )
+      );
     }
 
 {% endhighlight %}
 
 ### onAxisLabelTapped
 
-Triggers when tapping the axis label. The  [`onPointTapped`]() event contains the following arguments.
+Triggers when tapping the axis label. The  [`onAxisLabelTapped`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onAxisLabelTapped.html) event contains the following arguments.
 
 * axis - holds the information about the current axis.
 * text - specifies the content of the axis label.
@@ -396,14 +406,15 @@ Triggers when tapping the axis label. The  [`onPointTapped`]() event contains th
            onAxisLabelTapped: (AxisLabelTapArgs args) {
             print(args.text);
            },
-      ));
-    }
+      ),
+    );
+  }
 
 {% endhighlight %}
 
 ### onLegendTapped
 
-Triggers when tapping the legend item. The  [`onLegendTapped`]() event contains the following arguments.
+Triggers when tapping the legend item. The  [`onLegendTapped`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onLegendTapped.html) event contains the following arguments.
 
 * seriesIndex - specifies the current series index.
 * pointIndex - specifies the current point index that is applicable for circular series.
@@ -422,14 +433,15 @@ Triggers when tapping the legend item. The  [`onLegendTapped`]() event contains 
             print(args.seriesIndex);
           },
           legend: Legend(isVisible: true),
-      ));
-    }
+      )
+    );
+  }
 
 {% endhighlight %}
 
 ### onSelectionChanged
 
-Triggers while selection changes. Here you can customize the selectedColor, unselectedColor, selectedBorderColor, selectedBorderWidth, unselectedBorderColor, and unselectedBorderWidth properties. The [`onSelectionChanged`]() event contains the following arguments.
+Triggers while selection changes. Here you can customize the selectedColor, unselectedColor, selectedBorderColor, selectedBorderWidth, unselectedBorderColor, and unselectedBorderWidth properties. The [`onSelectionChanged`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onSelectionChanged.html) event contains the following arguments.
 
 * series - specifies current series.
 * seriesIndex - specifies the current series index.
@@ -460,8 +472,9 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
               ),
             ),
           ],
-      ));
-    }
+      )
+    );
+  }
 
 {% endhighlight %}
 
@@ -469,7 +482,7 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
 
 ### onLegendItemRender
 
-Triggers when the legend item is rendered. Here, you can customize the legend’s text, and shape.  The [`onLegendItemRender`]() event contains the following arguments.
+Triggers when the legend item is rendered. Here, you can customize the legend’s text, and shape.  The [`onLegendItemRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onLegendItemRender.html) event contains the following arguments.
 
 * text - specifies the content of the legend.
 * pointIndex - specifies the current point index that is applicable for circular chart type alone.
@@ -490,14 +503,15 @@ Triggers when the legend item is rendered. Here, you can customize the legend’
             args.legendIconType = LegendIconType.diamond;
           },
         ),
-      ));
-    }
+      )
+    );
+  }
 
 {% endhighlight %}
 
 ### onTooltipRender
 
-Triggers while tooltip is rendered. Here, you can customize the text, header, x and y-positions. The [`onTooltipRender`]() event contains the following arguments.
+Triggers while tooltip is rendered. Here, you can customize the text, header, x and y-positions. The [`onTooltipRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onTooltipRender.html) event contains the following arguments.
 
 * text - specifies the content of the tooltip.
 * header - specifies the header content of the tooltip.
@@ -520,14 +534,15 @@ Triggers while tooltip is rendered. Here, you can customize the text, header, x 
           },
           tooltipBehavior: TooltipBehavior(enable: true),
         ),
-      ));
-    }
+      )
+    );
+  }
 
 {% endhighlight %}
 
 ### onDataLabelRender
 
-Triggers when data label is rendering. Text and text styles such as color, font size, and font weight can be customized. The [`onDataLabelRender`]() event contains the following arguments.
+Triggers when data label is rendering. Text and text styles such as color, font size, and font weight can be customized. The [`onDataLabelRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onDataLabelRender.html) event contains the following arguments.
 
 * text - specifies the content of the data label.
 * textStyle – used to change the text color, size, font family, font style, and font weight.
@@ -553,14 +568,15 @@ Triggers when data label is rendering. Text and text styles such as color, font 
             ),
           ],
         ),
-      ));
-    }
+      ),
+    );
+  }
 
 {% endhighlight %}
 
 ### onPointTapped
 
-Triggers when tapping the series point. The [`onPointTapped`]() event contains the following arguments.
+Triggers when tapping the series point. The [`onPointTapped`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onPointTapped.html) event contains the following arguments.
 
 * seriesIndex - specifies the current series index.
 * pointIndex - specifies the current point index.
@@ -578,14 +594,15 @@ Triggers when tapping the series point. The [`onPointTapped`]() event contains t
             print(args.seriesIndex);
             print(args.pointIndex);
           },
-      ));
-    }
+      ),
+    );
+  }
 
 {% endhighlight %}
 
 ### onLegendTapped
 
-Triggers when tapping the legend item. The [`onLegendTapped`]() event contains the following arguments.
+Triggers when tapping the legend item. The [`onLegendTapped`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onLegendTapped.html) event contains the following arguments.
 
 * seriesIndex - specifies the current series index.
 * pointIndex - specifies the current point index that is applicable for circular series.
@@ -604,14 +621,15 @@ Triggers when tapping the legend item. The [`onLegendTapped`]() event contains t
             print(args.seriesIndex);
           },
           legend: Legend(isVisible: true),
-      ));
-    }
+      ),
+    );
+  }
 
 {% endhighlight %}
 
 ### onSelectionChanged
 
-Triggers while selection changes. Here you can customize the selectedColor, unselectedColor, selectedBorderColor, selectedBorderWidth, unselectedBorderColor, and unselectedBorderWidth properties. The [`onSelectionChanged`]() event contains the following arguments.
+Triggers while selection changes. Here you can customize the selectedColor, unselectedColor, selectedBorderColor, selectedBorderWidth, unselectedBorderColor, and unselectedBorderWidth properties. The [`onSelectionChanged`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onSelectionChanged.html) event contains the following arguments.
 
 * series - specifies current series.
 * seriesIndex - specifies the current series index.
