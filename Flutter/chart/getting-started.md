@@ -17,7 +17,8 @@ Create a simple project, using the instructions given in [Getting Started with y
 
 ### Adding flutter charts to your app
 
-#### Add dependency
+**Add dependency**
+
 Add the Syncfusion Flutter Chart dependency to your pub spec file.
 
 {% highlight dart %} 
@@ -28,7 +29,7 @@ Add the Syncfusion Flutter Chart dependency to your pub spec file.
 
 {% endhighlight %}
 
-#### Get packages
+**Get packages**
 
 Run the following command to get the required packages.
 
@@ -38,7 +39,8 @@ Run the following command to get the required packages.
 
 {% endhighlight %}
 
-#### Import package
+**Import package**
+
 Import the following package in your Dart code.
 
 {% highlight dart %} 
@@ -47,7 +49,7 @@ Import the following package in your Dart code.
 
 {% endhighlight %}
 
-### Initialize chart
+**Initialize chart**
 
 Once the packages has been imported, initialize the chart as a child of any widget. Here, add the chart widget as a child of the container widget.
 
