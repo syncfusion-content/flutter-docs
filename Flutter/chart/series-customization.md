@@ -18,32 +18,32 @@ You can add multiple series to [`series`](https://pub.dev/documentation/syncfusi
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-        body: Center(
-            child: Container(
-                child:SfCartesianChart(
-                primaryXAxis: CategoryAxis(),
-                series: <CartesianSeries>[
-              ColumnSeries<ChartData, String>(
-                dataSource: chartData,
-                xValueMapper: (ChartData data, _) => data.x,
-                yValueMapper: (ChartData data, _) => data.y,
-              ),
-              ColumnSeries<ChartData, String>(
-                dataSource: chartData,
-                xValueMapper: (ChartData data, _) => data.x,
-                yValueMapper: (ChartData data, _) => data.y2,
-              ),
-              ColumnSeries<ChartData, String>(
-                dataSource: chartData,
-                xValueMapper: (ChartData data, _) => data.x,
-                yValueMapper: (ChartData data, _) => data.y3,
-                        ),
-                    ]
+            body: Center(
+                child: Container(
+                    child:SfCartesianChart(
+                        primaryXAxis: CategoryAxis(),
+                        series: <CartesianSeries>[
+                            ColumnSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
+                            ),
+                            ColumnSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y2
+                            ),
+                            ColumnSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y3
+                            )
+                        ]
+                    )
                 )
             )
-        )
-    );
-}
+        );
+    }
 
 {% endhighlight %}
 
@@ -58,27 +58,27 @@ You can add multiple series to [`series`](https://pub.dev/documentation/syncfusi
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-        body: Center(
-            child: Container(
-                child:SfCartesianChart(
-                primaryXAxis: CategoryAxis(),
-                series: <CartesianSeries>[
-              ColumnSeries<ChartData, String>(
-                dataSource: chartData,
-                xValueMapper: (ChartData data, _) => data.x,
-                yValueMapper: (ChartData data, _) => data.y,
-              ),
-              LineSeries<ChartData, String>(
-                dataSource: chartData,
-                xValueMapper: (ChartData data, _) => data.x,
-                yValueMapper: (ChartData data, _) => data.y2,
-                        ),
-                    ]
+            body: Center(
+                child: Container(
+                    child:SfCartesianChart(
+                        primaryXAxis: CategoryAxis(),
+                        series: <CartesianSeries>[
+                            ColumnSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
+                            ),
+                            LineSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y2,
+                            ),
+                        ]
+                    )
                 )
             )
-        )
-    );
-}
+        );
+    }
 
 {% endhighlight %}
 
@@ -97,23 +97,23 @@ You can add multiple series to [`series`](https://pub.dev/documentation/syncfusi
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-        body: Center(
-            child: Container(
-                child:SfCartesianChart(
-                primaryXAxis: CategoryAxis(),
-                series: <CartesianSeries>[
-              ColumnSeries<ChartData, String>(
-                dataSource: chartData,
-                xValueMapper: (ChartData data, _) => data.x,
-                yValueMapper: (ChartData data, _) => data.y,
-                animationDuration: 1000
-                        )
-                    ]
+            body: Center(
+                child: Container(
+                    child:SfCartesianChart(
+                        primaryXAxis: CategoryAxis(),
+                        series: <CartesianSeries>[
+                            ColumnSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                animationDuration: 1000
+                            )
+                        ]
+                    )
                 )
             )
-        )
-    );
-}
+        );
+    }
 
 {% endhighlight %}
 
@@ -126,23 +126,23 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-        body: Center(
-            child: Container(
-                child:SfCartesianChart(
-                    isTransposed: true,
-                    primaryXAxis: CategoryAxis(),
-                    series: <CartesianSeries>[
-                ColumnSeries<ChartData, String>(
-                    dataSource: chartData,
-                    xValueMapper: (ChartData data, _) => data.x,
-                    yValueMapper: (ChartData data, _) => data.y,
-                        )
-                    ]
+            body: Center(
+                child: Container(
+                    child:SfCartesianChart(
+                        isTransposed: true,
+                        primaryXAxis: CategoryAxis(),
+                        series: <CartesianSeries>[
+                            ColumnSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                            )
+                        ]
+                    )
                 )
             )
-        )
-    );
-}
+        );
+    }
 
 {% endhighlight %}
 
@@ -157,37 +157,37 @@ The [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-        body: Center(
-            child: Container(
-                child:SfCartesianChart(
-                primaryXAxis: CategoryAxis(),
-                palette: <Color>[
-                    Colors.teal,
-                    Colors.orange,
-                    Colors.brown
-                  ],
-                series: <CartesianSeries>[
-              ColumnSeries<ChartData, String>(
-                dataSource: chartData,
-                xValueMapper: (ChartData data, _) => data.x,
-                yValueMapper: (ChartData data, _) => data.y,
-              ),
-              ColumnSeries<ChartData, String>(
-                dataSource: chartData,
-                xValueMapper: (ChartData data, _) => data.x,
-                yValueMapper: (ChartData data, _) => data.y2,
-              ),
-              ColumnSeries<ChartData, String>(
-                dataSource: chartData,
-                xValueMapper: (ChartData data, _) => data.x,
-                yValueMapper: (ChartData data, _) => data.y3,
-                        ),
-                    ]
+            body: Center(
+                child: Container(
+                    child:SfCartesianChart(
+                        primaryXAxis: CategoryAxis(),
+                        palette: <Color>[
+                            Colors.teal,
+                            Colors.orange,
+                            Colors.brown
+                        ],
+                        series: <CartesianSeries>[
+                            ColumnSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
+                            ),
+                            ColumnSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y2
+                            ),
+                            ColumnSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y3
+                            )
+                        ]
+                    )
                 )
             )
-        )
-    );
-}
+        );
+    }
 
 {% endhighlight %}
 
@@ -205,26 +205,26 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
             ChartData('Germany', 118, Colors.teal),
             ChartData('Russia', 123, Colors.orange),
             ChartData('Norway', 107, Colors.brown),
-            ChartData('USA', 87, Colors.deepOrange),
+            ChartData('USA', 87, Colors.deepOrange)
         ];
         return Scaffold(
-        body: Center(
-            child: Container(
-                child:SfCartesianChart(
-                primaryXAxis: CategoryAxis(),
-                series: <CartesianSeries>[
-              ColumnSeries<ChartData, String>(
-                dataSource: chartData,
-                xValueMapper: (ChartData data, _) => data.x,
-                yValueMapper: (ChartData data, _) => data.y,
-                pointColorMapper: (ChartData data, _) => data.color
-                        )
-                    ]
+            body: Center(
+                child: Container(
+                    child:SfCartesianChart(
+                        primaryXAxis: CategoryAxis(),
+                        series: <CartesianSeries>[
+                            ColumnSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                pointColorMapper: (ChartData data, _) => data.color
+                            )
+                        ]
+                    )
                 )
             )
-        )
-    );
-}
+        );
+    }
 
     class ChartData {
         ChartData(this.x, this.y, this.color);
@@ -259,21 +259,22 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
             LinearGradient(colors: color, stops: stops);
 
         return Scaffold(
-        body: Center(
-            child: Container(
-                child:SfCartesianChart(
-                series: <CartesianSeries>[
-              AreaSeries<ChartData, double>(
-                  dataSource: chartData,
-                  xValueMapper: (ChartData data, _) => data.x,
-                  yValueMapper: (ChartData data, _) => data.y,
-                  gradient: gradientColors),
-                    ]
+            body: Center(
+                child: Container(
+                    child:SfCartesianChart(
+                        series: <CartesianSeries>[
+                            AreaSeries<ChartData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                gradient: gradientColors
+                            )
+                        ]
+                    )
                 )
             )
-        )
-    );
-}
+        );
+    }
 
 {% endhighlight %}
 
@@ -296,24 +297,24 @@ The data points that has null value are considered as empty points. Empty data p
         ];
 
         return Scaffold(
-        body: Center(
-            child: Container(
-                child:SfCartesianChart(
-                series: <CartesianSeries>[
-              ColumnSeries<ChartData, double>(
-                  dataSource: chartData,
-                  xValueMapper: (ChartData data, _) => data.x,
-                  yValueMapper: (ChartData data, _) => data.y,
-                  emptyPointSettings: EmptyPointSettings(
-                    mode: EmptyPointMode.average
-                            )
-                        )
-                    ]
+            body: Center(
+                child: Container(
+                    child:SfCartesianChart(
+                        series: <CartesianSeries>[
+                            ColumnSeries<ChartData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                emptyPointSettings: EmptyPointSettings(
+                                    mode: EmptyPointMode.average
+                                )
+                            )      
+                        ]
+                    )
                 )
             )
-        )
-    );
-}
+        );
+    }
 
 {% endhighlight %}
 
@@ -332,33 +333,33 @@ Specific color for empty point can be set by [`color`](https://pub.dev/documenta
             ChartData(1, 112),
             ChartData(2, null),
             ChartData(3, 107),
-            ChartData(4, 87),
+            ChartData(4, 87)
         ];
 
         return Scaffold(
-        body: Center(
-            child: Container(
-                child:SfCartesianChart(
-                series: <CartesianSeries>[
-              ColumnSeries<ChartData, double>(
-                  dataSource: chartData,
-                  xValueMapper: (ChartData data, _) => data.x,
-                  yValueMapper: (ChartData data, _) => data.y,
-                  borderColor: Colors.blue,
-                  borderWidth: 5,
-                  emptyPointSettings: EmptyPointSettings(
-                    mode: EmptyPointMode.average, 
-                    color: Colors.red, 
-                    borderColor: Colors.black,
-                    borderWidth: 2
+            body: Center(
+                child: Container(
+                    child:SfCartesianChart(
+                        series: <CartesianSeries>[
+                            ColumnSeries<ChartData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                borderColor: Colors.blue,
+                                borderWidth: 5,
+                                emptyPointSettings: EmptyPointSettings(
+                                    mode: EmptyPointMode.average, 
+                                    color: Colors.red, 
+                                    borderColor: Colors.black,
+                                    borderWidth: 2
+                                )
                             )
-                        )
-                    ]
+                        ]
+                    )
                 )
             )
-        )
-    );
-}
+        );
+    }
 
 {% endhighlight %}
 
@@ -381,24 +382,24 @@ The chart’s data source can be sorted using the [`sortingOrder`](https://pub.d
         ];
 
         return Scaffold(
-        body: Center(
-            child: Container(
-                child:SfCartesianChart(
-              primaryXAxis: CategoryAxis(),
-                series: <CartesianSeries>[
-              ColumnSeries<ChartData, String>(
-                  dataSource: chartData,
-                  xValueMapper: (ChartData data, _) => data.x,
-                  yValueMapper: (ChartData data, _) => data.y,
-                  sortingOrder: SortingOrder.descending,
-                  sortFieldValueMapper: (ChartData data, _) => data.x,
-                        ),
-                    ]
+            body: Center(
+                child: Container(
+                    child:SfCartesianChart(
+                        primaryXAxis: CategoryAxis(),
+                        series: <CartesianSeries>[
+                            ColumnSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                sortingOrder: SortingOrder.descending,
+                                sortFieldValueMapper: (ChartData data, _) => data.x
+                            )
+                        ]
+                    )
                 )
             )
-        )
-    );
-}
+        );
+    }
 
 {% endhighlight %}
 

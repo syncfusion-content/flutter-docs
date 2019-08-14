@@ -194,7 +194,7 @@ Data label considers the format used in the vertical axis by default. In the bel
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true
                                 )
-                            ),
+                            )
                         ]
                     )
                 )
@@ -252,26 +252,27 @@ This feature is used to arrange the data labels smartly and avoid the intersecti
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-        body: Center(
-            child: Container(
-                child:SfCircularChart(series: <CircularSeries>[
-          PieSeries<ChartData, double>(
-              enableSmartLabels: true,
-              dataSource: chartData,
-              xValueMapper: (ChartData data, _) => data.x,
-              yValueMapper: (ChartData data, _) =>  data.y,
-              dataLabelMapper: (ChartData data, _) => data.x,
-              dataLabelSettings: DataLabelSettings(
-                isVisible: true,
-                labelPosition: LabelPosition.inside,
-                            )   
-                        ),
-                    ]   
+            body: Center(
+                child: Container(
+                    child:SfCircularChart(
+                        series: <CircularSeries>[
+                            PieSeries<ChartData, double>(
+                                enableSmartLabels: true,
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) =>  data.y,
+                                dataLabelMapper: (ChartData data, _) => data.x,
+                                dataLabelSettings: DataLabelSettings(
+                                    isVisible: true,
+                                    labelPosition: LabelPosition.inside
+                                )   
+                            )
+                        ]   
+                    )
                 )
             )
-        )
-    );
-}
+        );
+    }
 
 {% endhighlight %}
 
@@ -286,17 +287,19 @@ The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-        body: Center(
-            child: Container(
-                child:SfCircularChart(series: <CircularSeries>[
-          PieSeries<ChartData, double>(
-              enableSmartLabels: true,
-              dataSource: chartData,
-              xValueMapper: (ChartData data, _) => data.x,
-              yValueMapper: (ChartData data, _) => data.y,
-              dataValueMapper: (ChartData data, _) => data.x,
-              dataLabelSettings: DataLabelSettings(
-                isVisible: true, labelPosition: LabelPosition.outside
+            body: Center(
+                child: Container(
+                    child:SfCircularChart(
+                        series: <CircularSeries>[
+                            PieSeries<ChartData, double>(
+                                enableSmartLabels: true,
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                dataValueMapper: (ChartData data, _) => data.x,
+                                dataLabelSettings: DataLabelSettings(
+                                    isVisible: true, 
+                                    labelPosition: LabelPosition.outside
                                 )
                             )
                         ]
@@ -424,7 +427,8 @@ You can customize the appearance of the data label with your own template using 
                                         return Container(
                                         height: 30,
                                         width: 30,
-                                        child: Image.asset('images/livechart.png'));
+                                        child: Image.asset('images/livechart.png')
+                                        );
                                     }
                                 )
                             )
