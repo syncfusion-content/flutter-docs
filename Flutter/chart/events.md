@@ -118,23 +118,24 @@ Triggers when data label is rendering. Text and text styles such as color, font 
 
     @override
     Widget build(BuildContext context) {
-      return Scaffold(
-        body: Center(
-          child: SfCartesianChart(
-            onDataLabelRender:(DataLabelRenderArgs args){
-              args.text = 'Data label';
-            },
-            series: <CartesianSeries>[
-              ColumnSeries<ChartData, double>(
-                dataLabelSettings: DataLabelSettings(
-                  isVisible: true
-                )
+    
+    return Scaffold(
+      body: Center(
+        child: SfCartesianChart(
+          onDataLabelRender:(DataLabelRenderArgs args){
+            args.text = 'Data label';
+          },
+          series: <CartesianSeries>[
+            ColumnSeries<ChartData, double>(
+              dataLabelSettings: DataLabelSettings(
+                isVisible: true
               )
-            ]
-          )
+            )
+          ]
         )
-      );
-    }
+      )
+    );
+  }
 
 {% endhighlight %}
 
@@ -159,9 +160,9 @@ Triggers when the legend item is rendered. Here, you can customize the legend’
           onLegendItemRender: (LegendRenderArgs args){
             args.text = 'Legend Text';
             args.legendIconType = LegendIconType.diamond;
-          },
-        ),
-      ),
+          }
+        )
+      )
     );
   }
 
@@ -185,11 +186,11 @@ Triggers while the trackball position is changed. Here, you can customize the te
             args.chartPointInfo.label = 'Custom Text';
           },
           trackballBehavior: TrackballBehavior(
-            enable: true,
-          ),
-      ),
-    );
-  }
+            enable: true
+          )
+        )
+      );
+    }
 
 {% endhighlight %}
 
@@ -216,11 +217,11 @@ Triggers while the crosshair position is changed. Here, you can customize the te
             args.text = 'crosshair';
           },
           crosshairBehavior: CrosshairBehavior(
-            enable: true,
-          ),
-      ),
-    );
-  }
+            enable: true
+          )
+        )
+      );
+    }
 
 {% endhighlight %}
 
@@ -251,8 +252,8 @@ Triggers when the zooming action is in progress. The [`onZooming`](https://pub.d
           onZooming: (ZoomPanArgs args){
               print(args.currentZoomFactor);
               print(args.currentZoomPosition);
-          },
-      ),
+          }
+      )
     );
   }
 
@@ -285,8 +286,8 @@ Triggers when zooming action begins. The [`onZoomStart`](https://pub.dev/documen
           onZoomStart: (ZoomPanArgs args){
               print(args.currentZoomFactor);
               print(args.currentZoomPosition);
-          },
-      ),
+          }
+      )
     );
   }
 
@@ -319,8 +320,8 @@ Triggers when the zooming action is completed. The [`onZoomEnd`](https://pub.dev
           onZoomEnd: (ZoomPanArgs args){
               print(args.currentZoomFactor);
               print(args.currentZoomPosition);
-          },
-      ),
+          }
+      )
     );
   }
 
@@ -353,10 +354,10 @@ Triggers when zoomed state is reset. The  [`onZoomReset`](https://pub.dev/docume
           onZoomReset: (ZoomPanArgs args){
               print(args.currentZoomFactor);
               print(args.currentZoomPosition);
-          },
-      ),
-    );
-  }
+          }
+       )
+      );
+    }
 
 {% endhighlight %}
 
@@ -379,7 +380,7 @@ Triggers when tapping the series point. The [`onPointTapped`](https://pub.dev/do
            onPointTapped: (PointTapArgs args){
             print(args.seriesIndex);
             print(args.pointIndex);
-          },
+          }
         )
       );
     }
@@ -404,10 +405,10 @@ Triggers when tapping the axis label. The  [`onAxisLabelTapped`](https://pub.dev
         child: SfCartesianChart(
            onAxisLabelTapped: (AxisLabelTapArgs args) {
             print(args.text);
-           },
-      ),
-    );
-  }
+           }
+        )
+      );
+    }
 
 {% endhighlight %}
 
@@ -431,7 +432,7 @@ Triggers when tapping the legend item. The  [`onLegendTapped`](https://pub.dev/d
           onLegendTapped: (LegendTapArgs args) {
             print(args.seriesIndex);
           },
-          legend: Legend(isVisible: true),
+          legend: Legend(isVisible: true)
       )
     );
   }
@@ -460,7 +461,7 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
     return Scaffold(
       body: Center(
         child: SfCartesianChart(
-         onSelectionChanged: (SelectionArgs args){
+          onSelectionChanged: (SelectionArgs args){
             args.selectedColor = Colors.red;
             args.unselectedColor = Colors.lightGreen;
           },
@@ -468,12 +469,12 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
             ColumnSeries<ChartData, double>(
               selectionSettings: SelectionSettings(
                 enable: true,
-              ),
-            ),
-          ],
-      )
-    );
-  }
+              )
+            )
+          ]
+        )
+      );
+    }
 
 {% endhighlight %}
 
@@ -500,8 +501,8 @@ Triggers when the legend item is rendered. Here, you can customize the legend’
           onLegendItemRender: (LegendRenderArgs args){
             args.text = 'Legend Text';
             args.legendIconType = LegendIconType.diamond;
-          },
-        ),
+          }
+        )
       )
     );
   }
@@ -532,7 +533,7 @@ Triggers while tooltip is rendered. Here, you can customize the text, header, x 
             args.text = 'Custom Text';
           },
           tooltipBehavior: TooltipBehavior(enable: true),
-        ),
+        )
       )
     );
   }
@@ -562,12 +563,12 @@ Triggers when data label is rendering. Text and text styles such as color, font 
           series: <CircularSeries>[
             PieSeries<ChartData, String>(
              dataLabelSettings: DataLabelSettings(
-              isVisible: true
-             ),
-            ),
-          ],
-        ),
-      ),
+                isVisible: true
+             )
+            )
+          ]
+        )
+      )
     );
   }
 
@@ -592,10 +593,10 @@ Triggers when tapping the series point. The [`onPointTapped`](https://pub.dev/do
            onPointTapped: (PointTapArgs args){
             print(args.seriesIndex);
             print(args.pointIndex);
-          },
-      ),
-    );
-  }
+          }
+        )
+      );
+    }
 
 {% endhighlight %}
 
@@ -619,8 +620,8 @@ Triggers when tapping the legend item. The [`onLegendTapped`](https://pub.dev/do
           onLegendTapped: (LegendTapArgs args) {
             print(args.seriesIndex);
           },
-          legend: Legend(isVisible: true),
-      ),
+          legend: Legend(isVisible: true)
+      )
     );
   }
 
@@ -655,11 +656,12 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
           series: <CircularSeries>[
             PieSeries<ChartData, String>(
               selectionSettings: SelectionSettings(
-                enable: true,
-              ),
-            ),
-          ],
-      ));
+                enable: true
+              )
+            )
+          ]
+       )
+      );
     }
 
 {% endhighlight %}

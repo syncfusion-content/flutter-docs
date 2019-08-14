@@ -32,11 +32,11 @@ To render a pie chart, create an instance of [`PieSeries`](https://pub.dev/docum
             body: Center(
                 child: Container(
                     child: SfCircularChart(series: <CircularSeries>[
-                PieSeries<ChartData, String>(
-                    dataSource: chartData,
-                    pointColorMapper:(ChartData data,  _) => data.color,
-                    xValueMapper: (ChartData data, _) => data.x,
-                    yValueMapper: (ChartData data, _) => data.y
+                        PieSeries<ChartData, String>(
+                            dataSource: chartData,
+                            pointColorMapper:(ChartData data,  _) => data.color,
+                            xValueMapper: (ChartData data, _) => data.x,
+                            yValueMapper: (ChartData data, _) => data.y
                         )
                     ]
                 )
@@ -67,19 +67,20 @@ You can use [`radius`](https://pub.dev/documentation/syncfusion_flutter_charts/l
         return Scaffold(
             body: Center(
                 child: Container(
-                    child: SfCircularChart(series: <CircularSeries>[
-                PieSeries<ChartData, String>(
-                    dataSource: chartData,
-                    xValueMapper: (ChartData data, _) => data.x,
-                    yValueMapper: (ChartData data, _) => data.y,
-                    radius: '50%'
-                        )
-                    ]
+                    child: SfCircularChart(
+                        series: <CircularSeries>[
+                            PieSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                radius: '50%'
+                            )
+                        ]
+                    )
                 )
             )
-        )
-    );
-}
+        );
+    }
 
 
 {% endhighlight %}
@@ -101,20 +102,21 @@ You can explode a pie segment by enabling the [`explode`](https://pub.dev/docume
         return Scaffold(
             body: Center(
                 child: Container(
-                    child: SfCircularChart(series: <CircularSeries>[
-                PieSeries<ChartData, String>(
-                    dataSource: chartData,
-                    xValueMapper: (ChartData data, _) => data.x,
-                    yValueMapper: (ChartData data, _) => data.y,
-                    explode: true,
-                    explodeIndex: 1
-                        )
-                    ]
+                    child: SfCircularChart(
+                        series: <CircularSeries>[
+                            PieSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                explode: true,
+                                explodeIndex: 1
+                            )
+                        ]
+                    )
                 )
             )
-        )
-    );
-}
+        );
+    }
 
 
 {% endhighlight %}
@@ -132,20 +134,21 @@ Using [`explodeAll`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
         return Scaffold(
             body: Center(
                 child: Container(
-                    child: SfCircularChart(series: <CircularSeries>[
-                PieSeries<ChartData, String>(
-                    dataSource: chartData,
-                    xValueMapper: (ChartData data, _) => data.x,
-                    yValueMapper: (ChartData data, _) => data.y,
-                    explode: true,
-                    explodeAll: true
-                        )
-                    ]
+                    child: SfCircularChart(
+                        series: <CircularSeries>[
+                            PieSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                explode: true,
+                                explodeAll: true
+                            )
+                        ]
+                    )
                 )
             )
-        )
-    );
-}
+        );
+    }
 
 
 {% endhighlight %}
@@ -163,20 +166,21 @@ Using [`explodeAll`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
         return Scaffold(
             body: Center(
                 child: Container(
-                    child: SfCircularChart(series: <CircularSeries>[
-                PieSeries<ChartData, String>(
-                    dataSource: chartData,
-                    xValueMapper: (ChartData data, _) => data.x,
-                    yValueMapper: (ChartData data, _) => data.y,
-                    startAngle: 270,
-                    endAngle: 90
-                        )
-                    ]
+                    child: SfCircularChart(
+                        series: <CircularSeries>[
+                            PieSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                startAngle: 270,
+                                endAngle: 90
+                            )
+                        ]
+                    )
                 )
             )
-        )
-    );
-}
+        );
+    } 
 
 
 {% endhighlight %}
@@ -194,20 +198,21 @@ The small segments in the pie chart can be grouped into **others** category usin
         return Scaffold(
             body: Center(
                 child: Container(
-                    child: SfCircularChart(series: <CircularSeries>[
-                PieSeries<ChartData, String>(
-                    dataSource: chartData,
-                    xValueMapper: (ChartData data, _) => data.x,
-                    yValueMapper: (ChartData data, _) => data.y,
-                    groupMode: CircularChartGroupMode.point,
-                    groupTo: 2
-                        )
-                    ]
+                    child: SfCircularChart(
+                        series: <CircularSeries>[
+                            PieSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                groupMode: CircularChartGroupMode.point,
+                                groupTo: 2
+                            )
+                        ]
+                    )
                 )
             )
-        )
-    );
-}
+        );
+    }
 
 
 {% endhighlight %}
@@ -226,25 +231,25 @@ The [`pointRadiusMapper`](https://pub.dev/documentation/syncfusion_flutter_chart
             ChartData('USA', 10, '70%'),
             ChartData('China', 11, '60%'),
             ChartData('Russia', 9, '52%'),
-            ChartData('Germany', 10, '40%'),
+            ChartData('Germany', 10, '40%')
         ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCircularChart(
                         series: <CircularSeries>[
-                        PieSeries<ChartData, String>(
-                            dataSource: chartData,
-                            xValueMapper: (ChartData data, _) => data.x,
-                            yValueMapper: (ChartData data, _) => data.y,
-                            pointRadiusMapper: (ChartData data, _) => data.size,
-                        ),
-                    ]
+                            PieSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                pointRadiusMapper: (ChartData data, _) => data.size
+                            )
+                        ]
+                    )
                 )
-            ),
-        ),
-    );
-}
+            )
+        );
+    }
 
     class ChartData {
          ChartData(this.x, this.y, this.size);
@@ -274,24 +279,25 @@ To render a doughnut chart, create an instance of [`DoughnutSeries`](https://pub
             ChartData('David', 25, Color.fromRGBO(9,0,136,1)),
             ChartData('Steve', 38, Color.fromRGBO(147,0,119,1)),
             ChartData('Jack', 34, Color.fromRGBO(228,0,124,1)),
-            ChartData('Others', 52, Color.fromRGBO(255,189,57,1)),
+            ChartData('Others', 52, Color.fromRGBO(255,189,57,1))
         ];
         return Scaffold(
             body: Center(
                 child: Container(
-                    child: SfCircularChart(series: <CircularSeries>[
-                DoughnutSeries<ChartData, String>(
-                    dataSource: chartData,
-                    pointColorMapper:(ChartData data,  _) => data.color,
-                    xValueMapper: (ChartData data, _) => data.x,
-                    yValueMapper: (ChartData data, _) => data.y,
-                        )
-                    ]
+                    child: SfCircularChart(
+                        series: <CircularSeries>[
+                            DoughnutSeries<ChartData, String>(
+                                dataSource: chartData,
+                                pointColorMapper:(ChartData data,  _) => data.color,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
+                            )
+                        ]
+                    )
                 )
             )
-        )
-    );
-}
+        );
+    }
 
     class ChartData {
         ChartData(this.x, this.y, [this.color]);
@@ -315,19 +321,20 @@ The [`cornerStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/late
         return Scaffold(
             body: Center(
                 child: Container(
-                    child: SfCircularChart(series: <CircularSeries>[
-                DoughnutSeries<ChartData, String>(
-                    dataSource: chartData,
-                    xValueMapper: (ChartData data, _) => data.x,
-                    yValueMapper: (ChartData data, _) => data.y,
-                    cornerStyle: CornerStyle.bothCurve
-                        )
-                    ]
+                    child: SfCircularChart(
+                        series: <CircularSeries>[
+                            DoughnutSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                cornerStyle: CornerStyle.bothCurve
+                            )
+                        ]
+                    )
                 )
             )
-        )
-    );
-}
+        );  
+    }
 
 {% endhighlight %}
 
@@ -344,19 +351,20 @@ You can use [`radius`](https://pub.dev/documentation/syncfusion_flutter_charts/l
         return Scaffold(
             body: Center(
                 child: Container(
-                    child: SfCircularChart(series: <CircularSeries>[
-                DoughnutSeries<ChartData, String>(
-                    dataSource: chartData,
-                    xValueMapper: (ChartData data, _) => data.x,
-                    yValueMapper: (ChartData data, _) => data.y,
-                    radius: '50%'
-                        )
-                    ]
+                    child: SfCircularChart(
+                        series: <CircularSeries>[
+                            DoughnutSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                radius: '50%'
+                            )
+                        ]
+                    )
                 )
             )
-        )
-    );
-}
+        );
+    }
 
 
 {% endhighlight %}
@@ -374,19 +382,20 @@ You can change the doughnut chart inner radius using the [`innerRadius`](https:/
         return Scaffold(
             body: Center(
                 child: Container(
-                    child: SfCircularChart(series: <CircularSeries>[
-                DoughnutSeries<ChartData, String>(
-                    dataSource: chartData,
-                    xValueMapper: (ChartData data, _) => data.x,
-                    yValueMapper: (ChartData data, _) => data.y,
-                    innerRadius: '80%'
-                        )
-                    ]
+                    child: SfCircularChart(
+                        series: <CircularSeries>[
+                            DoughnutSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                innerRadius: '80%'
+                            )
+                        ]
+                    )
                 )
             )
-        )
-    );
-}
+        );
+    }
 
 {% endhighlight %}
 
@@ -408,20 +417,21 @@ You can explode a doughnut segment by enabling the [`explode`](https://pub.dev/d
         return Scaffold(
             body: Center(
                 child: Container(
-                    child: SfCircularChart(series: <CircularSeries>[
-                DoughnutSeries<ChartData, String>(
-                    dataSource: chartData,
-                    xValueMapper: (ChartData data, _) => data.x,
-                    yValueMapper: (ChartData data, _) => data.y,
-                    explode: true,
-                    explodeIndex: 1,
-                        )
-                    ]
+                    child: SfCircularChart(
+                        series: <CircularSeries>[
+                            DoughnutSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                explode: true,
+                                explodeIndex: 1
+                            )
+                        ]
+                    )
                 )
             )
-        )
-    );
-}
+        );
+    }
 
 
 {% endhighlight %}
@@ -439,20 +449,21 @@ Using [`explodeAll`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
         return Scaffold(
             body: Center(
                 child: Container(
-                    child: SfCircularChart(series: <CircularSeries>[
-                DoughnutSeries<ChartData, String>(
-                    dataSource: chartData,
-                    xValueMapper: (ChartData data, _) => data.x,
-                    yValueMapper: (ChartData data, _) => data.y,
-                    explode: true,
-                    explodeAll: true
-                        )
-                    ]
+                    child: SfCircularChart(
+                        series: <CircularSeries>[
+                            DoughnutSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                explode: true,
+                                explodeAll: true
+                            )
+                        ]
+                    )
                 )
             )
-        )
-    );
-}
+        );
+    }
 
 
 {% endhighlight %}
@@ -470,20 +481,21 @@ Using [`explodeAll`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
         return Scaffold(
             body: Center(
                 child: Container(
-                    child: SfCircularChart(series: <CircularSeries>[
-                DoughnutSeries<ChartData, String>(
-                    dataSource: chartData,
-                    xValueMapper: (ChartData data, _) => data.x,
-                    yValueMapper: (ChartData data, _) => data.y,
-                    startAngle: 270,
-                    endAngle: 90
-                        )
-                    ]
+                    child: SfCircularChart(
+                        series: <CircularSeries>[
+                            DoughnutSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                startAngle: 270,
+                                endAngle: 90
+                            )
+                        ]
+                    )
                 )
             )
-        )
-    );
-}
+        );
+    }
 
 
 {% endhighlight %}
@@ -501,20 +513,21 @@ The small segments in the doughnut chart can be grouped into **others** category
         return Scaffold(
             body: Center(
                 child: Container(
-                    child: SfCircularChart(series: <CircularSeries>[
-                DoughnutSeries<ChartData, String>(
-                    dataSource: chartData,
-                    xValueMapper: (ChartData data, _) => data.x,
-                    yValueMapper: (ChartData data, _) => data.y,
-                    groupMode: CircularChartGroupMode.point,
-                    groupTo: 2
-                        )
-                    ]
+                    child: SfCircularChart(
+                        series: <CircularSeries>[
+                            DoughnutSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                groupMode: CircularChartGroupMode.point,
+                                groupTo: 2
+                            )
+                        ]
+                    )
                 )
             )
-        )
-    );
-}
+        );
+    }
 
 
 {% endhighlight %}
@@ -544,18 +557,19 @@ The radial bar chart is used for showing the comparisons among the categories us
         return Scaffold(
             body: Center(
                 child: Container(
-                    child: SfCircularChart(series: <CircularSeries>[
-          RadialBarSeries<ChartData, String>(
-            dataSource: chartData,
-            xValueMapper: (ChartData data, _) => data.x,
-            yValueMapper: (ChartData data, _) => data.y
-                        )
-                    ]
+                    child: SfCircularChart(
+                        series: <CircularSeries>[
+                            RadialBarSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
+                            )
+                        ]
+                    )
                 )
             )
-        )
-    );
-}
+        );  
+    }
 
 
 {% endhighlight %}
@@ -573,19 +587,20 @@ You can use [`radius`](https://pub.dev/documentation/syncfusion_flutter_charts/l
         return Scaffold(
             body: Center(
                 child: Container(
-                    child: SfCircularChart(series: <CircularSeries>[
-                RadialBarSeries<ChartData, String>(
-                    dataSource: chartData,
-                    xValueMapper: (ChartData data, _) => data.x,
-                    yValueMapper: (ChartData data, _) => data.y,
-                    radius: '50%'
-                        )
-                    ]
+                    child: SfCircularChart(
+                        series: <CircularSeries>[
+                            RadialBarSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                radius: '50%'
+                            )
+                        ]
+                    )
                 )
             )
-        )
-    );
-}
+        );
+    }
 
 
 {% endhighlight %}
@@ -603,19 +618,20 @@ You can change the radial bar chart inner radius using the [`innerRadius`](https
         return Scaffold(
             body: Center(
                 child: Container(
-                    child: SfCircularChart(series: <CircularSeries>[
-                RadialBarSeries<ChartData, String>(
-                    dataSource: chartData,
-                    xValueMapper: (ChartData data, _) => data.x,
-                    yValueMapper: (ChartData data, _) => data.y,
-                    innerRadius: '80%'
-                        )
-                    ]
+                    child: SfCircularChart(
+                        series: <CircularSeries>[
+                            RadialBarSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                innerRadius: '80%'
+                            )
+                        ]
+                    )
                 )
             )
-        )
-    );
-}
+        );
+    }
 
 {% endhighlight %}
 
@@ -630,19 +646,20 @@ The [`cornerStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/late
         return Scaffold(
             body: Center(
                 child: Container(
-                    child: SfCircularChart(series: <CircularSeries>[
-                RadialBarSeries<ChartData, String>(
-                    dataSource: chartData,
-                    xValueMapper: (ChartData data, _) => data.x,
-                    yValueMapper: (ChartData data, _) => data.y,
-                    cornerStyle: CornerStyle.bothCurve
-                        )
-                    ]
+                    child: SfCircularChart(
+                        series: <CircularSeries>[
+                            RadialBarSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                cornerStyle: CornerStyle.bothCurve
+                            )
+                        ]
+                    )
                 )
             )
-        )
-    );
-}
+        );
+    }
 
 {% endhighlight %}
 
@@ -672,21 +689,22 @@ Data labels can be enabled by using [`isVisible`](https://pub.dev/documentation/
         return Scaffold(
             body: Center(
                 child: Container(
-                    child: SfCircularChart(series: <CircularSeries>[
-                        RadialBarSeries<ChartData, String>(
-                            dataSource: chartData,
-                            xValueMapper: (ChartData data, _) => data.x,
-                            yValueMapper: (ChartData data, _) => data.y,
-                            dataLabelSettings: DataLabelSettings(
-                                isVisible: true
+                    child: SfCircularChart(
+                        series: <CircularSeries>[
+                            RadialBarSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                dataLabelSettings: DataLabelSettings(
+                                    isVisible: true
+                                )
                             )
-                        )
-                    ]
+                        ]
+                    )
                 )
             )
-        )
-    );
-}
+        );  
+    }
 
 {% endhighlight %}
 

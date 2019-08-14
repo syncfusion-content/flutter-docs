@@ -16,22 +16,24 @@ The selection feature in chart let you to select a segment in a series or the se
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-        body: Center(
-            child: Container(
-                child: SfCartesianChart(
-              series: <CartesianSeries>[
-            ColumnSeries<ChartData, double>(
-                dataSource: chartData,
-                xValueMapper: (ChartData data, _) => data.x,
-                yValueMapper: (ChartData data, _) => data.y,
-                selectionSettings: SelectionSettings(enable: true)
-                        )
-                    ],
+            body: Center(
+                child: Container(
+                    child:SfCartesianChart(
+                        series: <CartesianSeries>[
+                            ColumnSeries<ChartData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                selectionSettings: SelectionSettings(
+                                    enable: true
+                                )
+                            )
+                        ]
+                    )
                 )
             )
-        )
-    );
-}
+        );  
+    }
 
 {% endhighlight %}
 
@@ -53,23 +55,23 @@ You can customize the segments using the below properties.
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-        body: Center(
-            child: Container(
-                child: SfCartesianChart(
-              series: <CartesianSeries>[
-            ColumnSeries<ChartData, double>(
-                selectionSettings: SelectionSettings(
-                  enable: true,
-                  selectedColor: Colors.red,
-                  unselectedColor: Colors.grey
+            body: Center(
+                child: Container(
+                    child:SfCartesianChart(
+                        series: <CartesianSeries>[
+                            ColumnSeries<ChartData, double>(
+                                selectionSettings: SelectionSettings(
+                                    enable: true,
+                                    selectedColor: Colors.red,
+                                    unselectedColor: Colors.grey
+                                )
                             )
-                        )
-                    ],
+                        ]
+                    )
                 )
             )
-        )
-    );
-}
+        );
+    }
 
 {% endhighlight %}
 
@@ -88,15 +90,15 @@ The selection features allows you to select segments in following modes using [`
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-        body: Center(
-            child: Container(
-                child: SfCartesianChart(
-                    selectionType: SelectionType.cluster
+            body: Center(
+                child: Container(
+                    child:SfCartesianChart(
+                        selectionType: SelectionType.cluster
+                    )
                 )
             )
-        )
-    );
-}
+        );
+    }
 
 {% endhighlight %}
 
@@ -111,15 +113,15 @@ Multiple selection can be enabled using the [`enableMultiSelection`](https://pub
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-        body: Center(
-            child: Container(
-                child: SfCartesianChart(
-                    enableMultiSelection: true,
+            body: Center(
+                child: Container(
+                    child:SfCartesianChart(
+                        enableMultiSelection: true
+                    )
                 )
             )
-        )
-    );
-}
+        );
+    }
 
 {% endhighlight %}
 
@@ -134,15 +136,15 @@ You can select a point or series programmatically on a chart using [`initialSele
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-        body: Center(
-            child: Container(
-                child: SfCartesianChart(
-                    initialSelectedDataIndexes: <IndexesModel>[IndexesModel(1, 0)]
+            body: Center(
+                child: Container(
+                    child:SfCartesianChart(
+                        initialSelectedDataIndexes: <IndexesModel>[IndexesModel(1, 0)]
+                    )
                 )
             )
-        )
-    );
-}
+        );
+    }
 
 {% endhighlight %}
 
