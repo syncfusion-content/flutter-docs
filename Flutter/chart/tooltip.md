@@ -18,7 +18,7 @@ Chart provides tooltip support for all the series. It is used to show informatio
       return Scaffold(
         body: Center(
           child: Container(
-            child:SfCartesianChart(
+            child: SfCartesianChart(
             //Enables the tooltip for all the series
               tooltipBehavior: TooltipBehavior(
                 enable: true
@@ -62,7 +62,7 @@ You can use the following properties to customize the tooltip appearance.
       return Scaffold(
         body: Center(
           child: Container(
-            child:SfCartesianChart(
+            child: SfCartesianChart(
               tooltipBehavior: TooltipBehavior(
                 enable: true,
                 borderColor: Colors.red,
@@ -90,7 +90,7 @@ By default, x and y value will be displayed in the tooltip, and it can be custom
       return Scaffold(
         body: Center(
           child: Container(
-            child:SfCartesianChart(
+            child: SfCartesianChart(
               tooltipBehavior: TooltipBehavior(
                 enable: true, 
                 format: 'point.y%'
@@ -114,7 +114,7 @@ You can customize the appearance of the tooltip with your own widget by using th
       return Scaffold(
         body: Center(
           child: Container(
-            child:SfCartesianChart(
+            child: SfCartesianChart(
               tooltipBehavior: TooltipBehavior(
                 enable: true,
                 builder: (dynamic data, dynamic point, dynamic series,
@@ -154,7 +154,7 @@ The ActivationMode enum contains the following values:
       return Scaffold(
         body: Center(
           child: Container(
-            child:SfCartesianChart(
+            child: SfCartesianChart(
               tooltipBehavior: TooltipBehavior(
                 enable: true,
                 activationMode: ActivationMode.longPress

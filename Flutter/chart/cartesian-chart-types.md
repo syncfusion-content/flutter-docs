@@ -32,7 +32,7 @@ To render a line chart, create an instance of [`LineSeries`](https://pub.dev/doc
         return Scaffold(
             body: Center(
                 child: Container(
-                    child:SfCartesianChart(
+                    child: SfCartesianChart(
                         series: <ChartSeries>[
                             LineSeries<SalesData, double>(
                                 dataSource: chartData,
@@ -67,7 +67,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
         return Scaffold(
             body: Center(
                 child: Container(
-                    child:SfCartesianChart(
+                    child: SfCartesianChart(
                         series: <ChartSeries>[
                             LineSeries<SalesData, String>(
                                 dataSource: chartData,
@@ -97,7 +97,7 @@ To render a multi-colored line series, map the individual colors to the data by 
         return Scaffold(
             body: Center(
                 child: Container(
-                    child:SfCartesianChart(
+                    child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
                             LineSeries<SalesData, String>(
@@ -148,7 +148,7 @@ You can use the following properties to customize the appearance.
         return Scaffold(
             body: Center(
                 child: Container(
-                    child:SfCartesianChart(
+                    child: SfCartesianChart(
                         series: <ChartSeries>[
                             AreaSeries<SalesData, double>(
                                 dataSource: chartData,
@@ -177,7 +177,7 @@ The borders of the area chart can be customized using the [`borderMode`](https:/
         return Scaffold(
             body: Center(
                 child: Container(
-                    child:SfCartesianChart(
+                    child: SfCartesianChart(
                         series: <ChartSeries>[
                             AreaSeries<SalesData, double>(
                                 dataSource: chartData,
@@ -214,7 +214,7 @@ To render a spline chart, create an instance of [`SplineSeries`](https://pub.dev
         return Scaffold(
             body: Center(
                 child: Container(
-                    child:SfCartesianChart(
+                    child: SfCartesianChart(
                         series: <ChartSeries>[
                             SplineSeries<SalesData, double>(
                                 dataSource: chartData,
@@ -243,7 +243,7 @@ The [`dashArray`]() property of the [`SplineSeries`](https://pub.dev/documentati
         return Scaffold(
             body: Center(
                 child: Container(
-                    child:SfCartesianChart(
+                    child: SfCartesianChart(
                         series: <ChartSeries>[
                             SplineSeries<SalesData, String>(
                                 dataSource: chartData,
@@ -282,7 +282,7 @@ The following code shows how to set the [`splineType`](https://pub.dev/documenta
         return Scaffold(
             body: Center(
                 child: Container(
-                    child:SfCartesianChart(
+                    child: SfCartesianChart(
                         series: <ChartSeries>[
                             SplineSeries<SalesData, double>(
                                 dataSource: chartData,
@@ -318,7 +318,7 @@ To render a column chart, create an instance of [`ColumnSeries`](https://pub.dev
         return Scaffold(
             body: Center(
                 child: Container(
-                    child:SfCartesianChart(
+                    child: SfCartesianChart(
                         series: <ChartSeries>[
                             ColumnSeries<SalesData, double>(
                                 dataSource: chartData,
@@ -355,7 +355,7 @@ By default, all the column series which has the same x and y axes are placed sid
         return Scaffold(
             body: Center(
                 child: Container(
-                    child:SfCartesianChart(
+                    child: SfCartesianChart(
                         enableSideBySideSeriesPlacement: false,
                         series: <ChartSeries>[
                             ColumnSeries<SalesData, double>(
@@ -394,7 +394,7 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
         return Scaffold(
             body: Center(
                 child: Container(
-                    child:SfCartesianChart(
+                    child: SfCartesianChart(
                         series: <ChartSeries>[
                             ColumnSeries<SalesData, double>(
                                 dataSource: chartData,
@@ -425,7 +425,7 @@ The [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
         return Scaffold(
             body: Center(
                 child: Container(
-                    child:SfCartesianChart(
+                    child: SfCartesianChart(
                         series: <ChartSeries>[
                             ColumnSeries<SalesData, double>(
                                 dataSource: chartData,
@@ -461,7 +461,7 @@ Renders column with track. Track is a rectangular bar rendered from the start to
         return Scaffold(
             body: Center(
                 child: Container(
-                    child:SfCartesianChart(
+                    child: SfCartesianChart(
                         series: <ChartSeries>[
                             ColumnSeries<SalesData, double>(
                                 dataSource: chartData,
@@ -496,7 +496,7 @@ To render a column chart, create an instance of [`BarSeries`](https://pub.dev/do
         return Scaffold(
             body: Center(
                 child: Container(
-                    child:SfCartesianChart(
+                    child: SfCartesianChart(
                         series: <ChartSeries>[
                             BarSeries<SalesData, double>(
                                 dataSource: chartData,
@@ -527,7 +527,7 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
         return Scaffold(
             body: Center(
                 child: Container(
-                    child:SfCartesianChart(
+                    child: SfCartesianChart(
                         series: <ChartSeries>[
                             BarSeries<SalesData, double>(
                                 dataSource: chartData,
@@ -558,7 +558,7 @@ The [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
         return Scaffold(
             body: Center(
                 child: Container(
-                    child:SfCartesianChart(
+                    child: SfCartesianChart(
                         series: <ChartSeries>[
                             BarSeries<SalesData, double>(
                                 dataSource: chartData,
@@ -594,7 +594,7 @@ You can render the bar chart with track. Track is a rectangular bar rendered fro
         return Scaffold(
             body: Center(
                 child: Container(
-                    child:SfCartesianChart(
+                    child: SfCartesianChart(
                         series: <ChartSeries>[
                             BarSeries<SalesData, double>(
                                 dataSource: chartData,
@@ -639,7 +639,7 @@ Bubble chart requires 3 fields (X, Y and Size) to plot a point. Here [`sizeValue
         return Scaffold(
             body: Center(
                 child: Container(
-                    child:SfCartesianChart(
+                    child: SfCartesianChart(
                         series: <ChartSeries>[
                             BubbleSeries<ChartData, double>(
                                 dataSource: chartData,
@@ -676,7 +676,7 @@ The [`minimumRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/la
         return Scaffold(
             body: Center(
                 child: Container(
-                    child:SfCartesianChart(
+                    child: SfCartesianChart(
                         series: <ChartSeries>[
                             BubbleSeries<ChartData, double>(
                                 dataSource: chartData,
@@ -713,7 +713,7 @@ To render a scatter chart, create an instance of [`ScatterSeries`](https://pub.d
          return Scaffold(
             body: Center(
                 child: Container(
-                    child:SfCartesianChart(
+                    child: SfCartesianChart(
                         series: <ChartSeries>[
                             ScatterSeries<ChartData, double>(
                                 dataSource: chartData,
@@ -744,7 +744,7 @@ The [`height`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
          return Scaffold(
             body: Center(
                 child: Container(
-                    child:SfCartesianChart(
+                    child: SfCartesianChart(
                         series: <ChartSeries>[
                             ScatterSeries<ChartData, double>(
                                 dataSource: chartData,
@@ -782,7 +782,7 @@ To render a step line chart, create an instance of [`StepLineSeries`](https://pu
          return Scaffold(
             body: Center(
                 child: Container(
-                    child:SfCartesianChart(
+                    child: SfCartesianChart(
                         series: <ChartSeries>[
                             StepLineSeries<ChartData, double>(
                                 dataSource: chartData,
@@ -811,7 +811,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
          return Scaffold(
             body: Center(
                 child: Container(
-                    child:SfCartesianChart(
+                    child: SfCartesianChart(
                         series: <ChartSeries>[
                             StepLineSeries<ChartData, double>(
                                 dataSource: chartData,
@@ -845,7 +845,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
         return Scaffold(
             body: Center(
                 child: Container(
-                    child:SfCartesianChart(
+                    child: SfCartesianChart(
                         series: <ChartSeries>[
                             FastLineSeries<SalesData, double>(
                                 dataSource: chartData,
