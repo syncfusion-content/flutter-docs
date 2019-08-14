@@ -11,11 +11,12 @@ documentation: ug
 # System Requirements
 
 ### Development Environment
-Please find the recommended development environment for Flutter platform in the following link. 
 
-* Windows - https://flutter.dev/docs/get-started/install/windows 
-* MacOS - https://flutter.dev/docs/get-started/install/macos 
-* Linux - https://flutter.dev/docs/get-started/install/linux 
+Refer to the following links for recommended development environment in Flutter.
+
+* Windows - [`https://flutter.dev/docs/get-started/install/windows`](https://flutter.dev/docs/get-started/install/windows)
+* MacOS - [`https://flutter.dev/docs/get-started/install/macos`](https://flutter.dev/docs/get-started/install/macos)
+* Linux - [`https://flutter.dev/docs/get-started/install/linux`](https://flutter.dev/docs/get-started/install/linux)
 
 ### Supported Platforms
 
@@ -31,7 +32,7 @@ The following table lists the platforms supported by our Flutter controls.
             <br/>
         </th>
         <th>
-            Supported versions
+            Supported Versions
             <br/>
             <br/>
         </th>
