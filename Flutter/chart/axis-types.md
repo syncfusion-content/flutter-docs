@@ -130,7 +130,7 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
 
 **auto**
 
-When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding-class.html) property is [`auto`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding-class.html), the horizontal numeric axis takes none as padding calculation, while the vertical numeric axis takes normal as padding calculation. This is also the default value of rangePadding.
+When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangePadding.html) property is [`auto`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding-class.html), the horizontal numeric axis takes none as padding calculation, while the vertical numeric axis takes normal as padding calculation. This is also the default value of rangePadding.
 
 {% highlight dart %} 
 
@@ -155,7 +155,7 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
 
 **none**
 
-When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding-class.html) property is [`none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding-class.html), padding will not be applied to the axis.
+When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangePadding.html) property is [`none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding-class.html), padding will not be applied to the axis.
 
 {% highlight dart %} 
 
@@ -178,7 +178,7 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
 
 **normal**
 
-When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding-class.html) property is [`normal`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding-class.html), padding is applied to the axis based on default range calculation.
+When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangePadding.html) property is [`normal`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding-class.html), padding is applied to the axis based on default range calculation.
 
 {% highlight dart %} 
 
@@ -203,7 +203,7 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
 
 **round**
 
-When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding-class.html) property is [`round`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding-class.html), axis range will be rounded to the nearest possible date time value.
+When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangePadding.html) property is [`round`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding-class.html), axis range will be rounded to the nearest possible date time value.
 
 {% highlight dart %} 
 
@@ -276,7 +276,7 @@ Category axis displays text labels instead of numbers. When the string values ar
 
 ### Placing labels between the ticks
 
-Labels in category axis can be placed on the ticks by setting [`labelPlacement`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelPlacement-class.html) to [`onTicks`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelPlacement-class.html). Default value of [`labelPlacement`]() property is [`betweenTicks`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelPlacement-class.html) i.e. labels will be placed between the ticks by default.
+Labels in category axis can be placed on the ticks by setting [`labelPlacement`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CategoryAxis/labelPlacement.html) to [`onTicks`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelPlacement-class.html). Default value of [`labelPlacement`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CategoryAxis/labelPlacement.html) property is [`betweenTicks`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelPlacement-class.html) i.e. labels will be placed between the ticks by default.
 
 {% highlight dart %} 
 

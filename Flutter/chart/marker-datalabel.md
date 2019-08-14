@@ -26,7 +26,7 @@ Markers are used to provide information about the exact point location. You can 
         return Scaffold(
             body: Center(
                 child: Container(
-                    child:SfCartesianChart(
+                    child: SfCartesianChart(
                         series: <CartesianSeries>[
                             LineSeries<ChartData, double>(
                                 dataSource: chartData,
@@ -101,7 +101,7 @@ The markers can be rendered with desired image as shape. For this you have to sp
         return Scaffold(
             body: Center(
                 child: Container(
-                    child:SfCartesianChart(
+                    child: SfCartesianChart(
                         series: <CartesianSeries>[
                             LineSeries<ChartData, double>(
                                 dataSource: chartData,

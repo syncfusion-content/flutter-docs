@@ -18,7 +18,7 @@ The selection feature in chart let you to select a segment in a series or the se
         return Scaffold(
         body: Center(
             child: Container(
-                child:SfCartesianChart(
+                child: SfCartesianChart(
               series: <CartesianSeries>[
             ColumnSeries<ChartData, double>(
                 dataSource: chartData,
@@ -55,7 +55,7 @@ You can customize the segments using the below properties.
         return Scaffold(
         body: Center(
             child: Container(
-                child:SfCartesianChart(
+                child: SfCartesianChart(
               series: <CartesianSeries>[
             ColumnSeries<ChartData, double>(
                 selectionSettings: SelectionSettings(
@@ -90,7 +90,7 @@ The selection features allows you to select segments in following modes using [`
         return Scaffold(
         body: Center(
             child: Container(
-                child:SfCartesianChart(
+                child: SfCartesianChart(
                     selectionType: SelectionType.cluster
                 )
             )
@@ -113,7 +113,7 @@ Multiple selection can be enabled using the [`enableMultiSelection`](https://pub
         return Scaffold(
         body: Center(
             child: Container(
-                child:SfCartesianChart(
+                child: SfCartesianChart(
                     enableMultiSelection: true,
                 )
             )
@@ -136,7 +136,7 @@ You can select a point or series programmatically on a chart using [`initialSele
         return Scaffold(
         body: Center(
             child: Container(
-                child:SfCartesianChart(
+                child: SfCartesianChart(
                     initialSelectedDataIndexes: <IndexesModel>[IndexesModel(1, 0)]
                 )
             )

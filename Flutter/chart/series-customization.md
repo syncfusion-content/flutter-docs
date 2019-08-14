@@ -20,7 +20,7 @@ You can add multiple series to [`series`](https://pub.dev/documentation/syncfusi
         return Scaffold(
         body: Center(
             child: Container(
-                child:SfCartesianChart(
+                child: SfCartesianChart(
                 primaryXAxis: CategoryAxis(),
                 series: <CartesianSeries>[
               ColumnSeries<ChartData, String>(
@@ -60,7 +60,7 @@ You can add multiple series to [`series`](https://pub.dev/documentation/syncfusi
         return Scaffold(
         body: Center(
             child: Container(
-                child:SfCartesianChart(
+                child: SfCartesianChart(
                 primaryXAxis: CategoryAxis(),
                 series: <CartesianSeries>[
               ColumnSeries<ChartData, String>(
@@ -99,7 +99,7 @@ You can add multiple series to [`series`](https://pub.dev/documentation/syncfusi
         return Scaffold(
         body: Center(
             child: Container(
-                child:SfCartesianChart(
+                child: SfCartesianChart(
                 primaryXAxis: CategoryAxis(),
                 series: <CartesianSeries>[
               ColumnSeries<ChartData, String>(
@@ -128,7 +128,7 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
         return Scaffold(
         body: Center(
             child: Container(
-                child:SfCartesianChart(
+                child: SfCartesianChart(
                     isTransposed: true,
                     primaryXAxis: CategoryAxis(),
                     series: <CartesianSeries>[
@@ -159,7 +159,7 @@ The [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
         return Scaffold(
         body: Center(
             child: Container(
-                child:SfCartesianChart(
+                child: SfCartesianChart(
                 primaryXAxis: CategoryAxis(),
                 palette: <Color>[
                     Colors.teal,
@@ -210,7 +210,7 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
         return Scaffold(
         body: Center(
             child: Container(
-                child:SfCartesianChart(
+                child: SfCartesianChart(
                 primaryXAxis: CategoryAxis(),
                 series: <CartesianSeries>[
               ColumnSeries<ChartData, String>(
@@ -261,7 +261,7 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
         return Scaffold(
         body: Center(
             child: Container(
-                child:SfCartesianChart(
+                child: SfCartesianChart(
                 series: <CartesianSeries>[
               AreaSeries<ChartData, double>(
                   dataSource: chartData,
@@ -298,7 +298,7 @@ The data points that has null value are considered as empty points. Empty data p
         return Scaffold(
         body: Center(
             child: Container(
-                child:SfCartesianChart(
+                child: SfCartesianChart(
                 series: <CartesianSeries>[
               ColumnSeries<ChartData, double>(
                   dataSource: chartData,
@@ -338,7 +338,7 @@ Specific color for empty point can be set by [`color`](https://pub.dev/documenta
         return Scaffold(
         body: Center(
             child: Container(
-                child:SfCartesianChart(
+                child: SfCartesianChart(
                 series: <CartesianSeries>[
               ColumnSeries<ChartData, double>(
                   dataSource: chartData,
@@ -383,7 +383,7 @@ The chart’s data source can be sorted using the [`sortingOrder`](https://pub.d
         return Scaffold(
         body: Center(
             child: Container(
-                child:SfCartesianChart(
+                child: SfCartesianChart(
               primaryXAxis: CategoryAxis(),
                 series: <CartesianSeries>[
               ColumnSeries<ChartData, String>(

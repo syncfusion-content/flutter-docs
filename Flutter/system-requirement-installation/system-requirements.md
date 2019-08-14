@@ -10,15 +10,67 @@ documentation: ug
 
 # System Requirements
 
-### Hardware Environment
-
-* Processor: x86 or x64
-* RAM : 512 MB (minimum), 1 GB (recommended)
-* Hard disk: up to 1.5 GB of available space may be required. However, 250 MB free space is required in boot drive even if you are installing the setup in other drive.
-
 ### Development Environment
 Please find the recommended development environment for Flutter platform in the following link. 
 
 * Windows - https://flutter.dev/docs/get-started/install/windows 
 * MacOS - https://flutter.dev/docs/get-started/install/macos 
 * Linux - https://flutter.dev/docs/get-started/install/linux 
+
+### Supported Platforms
+
+The following table lists the platforms supported by our Flutter controls.
+
+<table>
+    <tr>
+        <th>Platform<br/>
+            <br/></th>        
+        <th>
+          Device Types
+            <br/>
+            <br/>
+        </th>
+        <th>
+            Supported versions
+            <br/>
+            <br/>
+        </th>
+    </tr>
+    <tr>
+        <td rowspan="2">
+            Android
+            <br/>
+            <br/>
+        </td>
+        <td rowspan="2">
+        Phone, Tablet
+        <br/>
+        <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            API level 16 and later versions
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            iOS
+            <br/>
+            <br/>
+        </td>
+        <td>
+            iPhone, iPod, iPad
+            <br/>
+            <br/>
+        </td>
+        <td>
+            iOS 8 and later versions
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    
+</table>

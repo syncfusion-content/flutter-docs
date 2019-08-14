@@ -210,7 +210,7 @@ Axis labels and ticks can be positioned inside or outside the chart area by usin
         return Scaffold(
             body: Center(
                 child: Container(
-                    child:SfCartesianChart(
+                    child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(
                             labelPosition: LabelPosition.inside,
                             tickPosition: TickPosition.inside
@@ -236,7 +236,7 @@ Labels with long text at the edges of an axis may appear partially outside the c
         return Scaffold(
             body: Center(
                 child: Container(
-                    child:SfCartesianChart(
+                    child: SfCartesianChart(
                         primaryXAxis: NumericAxis(
                             edgeLabelPlacement: EdgeLabelPlacement.shift
                         ) 
@@ -261,7 +261,7 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
         return Scaffold(
             body: Center(
                 child: Container(
-                    child:SfCartesianChart(
+                    child: SfCartesianChart(
                         primaryXAxis: NumericAxis(
                             majorGridLines: MajorGridLines(
                                 width: 1,
@@ -296,7 +296,7 @@ The [`majorTickLines`](https://pub.dev/documentation/syncfusion_flutter_charts/l
         return Scaffold(
             body: Center(
                 child: Container(
-                    child:SfCartesianChart(
+                    child: SfCartesianChart(
                         primaryXAxis: NumericAxis(
                             majorTickLines: MajorTickLines(
                                 size: 6,
@@ -331,7 +331,7 @@ Axis can be inversed using the [`isInversed`](https://pub.dev/documentation/sync
         return Scaffold(
             body: Center(
                 child: Container(
-                    child:SfCartesianChart(
+                    child: SfCartesianChart(
                         primaryXAxis: NumericAxis(
                             isInversed: true
                         )
@@ -356,7 +356,7 @@ The [`opposedPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/
         return Scaffold(
             body: Center(
                 child: Container(
-                    child:SfCartesianChart(
+                    child: SfCartesianChart(
                         primaryXAxis: NumericAxis(
                             opposedPosition: true
                         )
@@ -381,7 +381,7 @@ The [`plotOffset`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
         return Scaffold(
             body: Center(
                 child: Container(
-                    child:SfCartesianChart(
+                    child: SfCartesianChart(
                         primaryXAxis: NumericAxis(
                             plotOffset: 20
                         )
@@ -406,7 +406,7 @@ By default, a maximum of 3 labels are displayed for each 100 pixels in axis. The
         return Scaffold(
             body: Center(
                 child: Container(
-                    child:SfCartesianChart(
+                    child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(
                             maximumLabels: 3
                         )
@@ -429,7 +429,7 @@ The [`visibleMinimum`](https://pub.dev/documentation/syncfusion_flutter_charts/l
         return Scaffold(
             body: Center(
                 child: Container(
-                    child:SfCartesianChart(
+                    child: SfCartesianChart(
                         primaryXAxis: NumericAxis(
                             visibleMinimum: 2,
                         )
@@ -452,7 +452,7 @@ The [`visibleMaximum`](https://pub.dev/documentation/syncfusion_flutter_charts/l
         return Scaffold(
             body: Center(
                 child: Container(
-                    child:SfCartesianChart(
+                    child: SfCartesianChart(
                         primaryXAxis: NumericAxis(
                             visibleMaximum: 4
                         )
@@ -475,7 +475,7 @@ Axis labels may overlap with each other based on chart dimensions and label size
         return Scaffold(
             body: Center(
                 child: Container(
-                    child:SfCartesianChart(
+                    child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(
                             labelIntersectAction: AxisLabelIntersectAction.multipleRows
                         )

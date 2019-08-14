@@ -11,11 +11,9 @@ documentation: ug
 
 This section explains you the steps required to populate the Chart with data, title, add data labels, legend and tooltips to the Chart. This section covers only the minimal features that you need to know to get started with the Chart.
 
-## Adding Flutter Chart reference
+## Adding flutter charts to your app
 
 Create a simple project, using the instructions given in [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app).
-
-## Adding flutter charts to your app
 
 **Add dependency**
 
@@ -72,7 +70,7 @@ Once the packages has been imported, initialize the chart as a child of any widg
 
 ## Bind data source
 
-Based on your data, initialize the appropriate axis type and series type. In the series, you need to map the data source and the fields for x and y data points. Since we are going to render a line chart with a category axis, we have initialized those.
+Based on your data, initialize the appropriate axis type and series type. In the series, you need to map the data source and the fields for x and y data points. We have rendered line series with category axis that we have depicted with the below code snippet. 
 
 {% highlight dart %} 
 
@@ -154,7 +152,7 @@ You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
 ## Enable data labels
 
-You can add data labels to improve the readability of the chart. This can be achieved using [`SfCartesianChart.dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings-class.html) property as shown below.
+You can add data labels to improve the readability of the chart. This can be achieved using [`SfCartesianChart.dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/dataLabelSettings.html) property as shown below.
 
 {% highlight dart %} 
 
@@ -220,7 +218,8 @@ You can use legend for the chart by setting the [`isVisible`](https://pub.dev/do
                                     SalesData('May', 40)
                                 ],
                                 xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                yValueMapper: (SalesData sales, _) => sales.sales,
+                                name: 'Sales'
                             )
                         ]
                     )
@@ -230,6 +229,9 @@ You can use legend for the chart by setting the [`isVisible`](https://pub.dev/do
     }
 
 {% endhighlight %}
+
+Additionally, you need to set label for each series using [`series.name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/name.html) property, which will be displayed in corresponding legend.
+
 
 ![Legend in chart](images/getting-started/legend.jpg)
 

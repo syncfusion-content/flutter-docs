@@ -33,8 +33,8 @@ Triggers when the tooltip is rendering. Here, you can customize the text, header
             tooltipBehavior: TooltipBehavior(enable: true),
             onTooltipRender: (TooltipArgs args) {
               args.text = 'Customized Text';
-            },
-          ),
+            }
+          )
         )
       );
     }
@@ -91,17 +91,17 @@ Triggers while rendering the axis labels. Text and text styles such as color, fo
     Widget build(BuildContext context) {
       return Scaffold(
         body: Center(
-        child: SfCartesianChart(
-          onAxisLabelRender: (AxisLabelRenderArgs args) {
-            if(args.axisName == 'primaryXAxis'){
-              args.text = 'Text';
-              args.textStyle.color = Colors.red;
+          child: SfCartesianChart(
+            onAxisLabelRender: (AxisLabelRenderArgs args) {
+              if(args.axisName == 'primaryXAxis'){
+                args.text = 'Text';
+                args.textStyle.color = Colors.red;
+              }
             }
-          }
+          )
         )
-      ),
-    );
-  }
+      );
+    }
 
 {% endhighlight %}
 
@@ -118,24 +118,23 @@ Triggers when data label is rendering. Text and text styles such as color, font 
 
     @override
     Widget build(BuildContext context) {
-    
-    return Scaffold(
-      body: Center(
-        child: SfCartesianChart(
-          onDataLabelRender:(DataLabelRenderArgs args){
-            args.text = 'Data label';
-          },
-          series: <CartesianSeries>[
-            ColumnSeries<ChartData, double>(
-              dataLabelSettings: DataLabelSettings(
-                isVisible: true
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
+      return Scaffold(
+        body: Center(
+          child: SfCartesianChart(
+            onDataLabelRender:(DataLabelRenderArgs args){
+              args.text = 'Data label';
+            },
+            series: <CartesianSeries>[
+              ColumnSeries<ChartData, double>(
+                dataLabelSettings: DataLabelSettings(
+                  isVisible: true
+                )
+              )
+            ]
+          )
+        )
+      );
+    }
 
 {% endhighlight %}
 
