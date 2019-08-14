@@ -47,9 +47,9 @@ Import the following package in your Dart code.
 
 {% endhighlight %}
 
-**Initialize chart**
+## Initialize chart
 
-Once the packages has been imported, initialize the chart as a child of any widget. Here, add the chart widget as a child of the container widget.
+Once the package has been imported, initialize the chart as a child of any widget. There are two kinds of chart widgets - SfCartesianChart and SfCircularChart. SfCartesianChart is used to render all kinds of charts which need to be plotted in Cartesian coordinates. SfCircularChart can be used to render pie, doughnut, and radial bar charts. Here, as we are plotting line chart, initialize SfCartesianChart widget as a child of Container widget.
 
 {% highlight dart %} 
 
