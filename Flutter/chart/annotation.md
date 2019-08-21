@@ -66,8 +66,8 @@ To position the annotation based on axis, set the [`x`](https://pub.dev/document
                       child: const Text('Text')
                     ),
                     coordinateUnit: CoordinateUnit.point,
-                    x: 20,
-                    y: 40
+                    x: 20, // x position of annotation
+                    y: 40 // y position of annotation
                   )
                 ]
               )
@@ -97,6 +97,7 @@ To position the annotation based on the pixel values, set the [`CoordinateUnit`]
                     child: Container(
                       child: const Text('Text')
                     )
+                    // Coordinate unit type
                     coordinateUnit: CoordinateUnit.logicalPixel
                     x: 150,
                     y: 200
@@ -127,11 +128,13 @@ You can add multiple annotations to the Chart by adding multiple widgets to the 
             child: Container(
               child: SfCartesianChart(
                 annotations: <CartesianChartAnnotation>[
+               // first annotation
                CartesianChartAnnotation(
                   child: Container(child: const Text('High')),
                   coordinateUnit: CoordinateUnit.logicalPixel,
                   x: 90,
                   y: 200),
+              // second annotation
               CartesianChartAnnotation(
                   child: Container(child: const Text('Low')),
                   coordinateUnit: CoordinateUnit.logicalPixel,
@@ -182,7 +185,7 @@ When there are multiple axes in the chart, annotation can be added for a particu
                     coordinateUnit: CoordinateUnit.point,
                     x: 35,
                     y: 130,
-                    yAxisName: 'YAxis'
+                    yAxisName: 'YAxis' // Refers to the additional axis
                   )
                 ],
                 primaryYAxis: NumericAxis(minimum: 0, maximum: 80),
@@ -193,13 +196,13 @@ When there are multiple axes in the chart, annotation can be added for a particu
                   ColumnSeries<ChartData, double>(
                     dataSource: chartData,
                     xValueMapper: (ChartData data, _) => data.x,
-                    yValueMapper: (ChartData data, _) => data.y,
+                    yValueMapper: (ChartData data, _) => data.y
                   ),
                   ColumnSeries<ChartData, double>(
                     dataSource: chartData,
                     xValueMapper: (ChartData data, _) => data.x,
                     yValueMapper: (ChartData data, _) => data.y2,
-                    yAxisName: 'YAxis',
+                    yAxisName: 'YAxis'
                   )
                 ]
               )
@@ -219,4 +222,3 @@ When there are multiple axes in the chart, annotation can be added for a particu
 {% endhighlight %}
 
 ![Multiple axis annotation](images/annotation/annotation_axis.jpg)
-

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Multiple and Combinational Syncfusion Flutter charts
-description: Learn how to customize the appearance of the series in a chart.
+description: Learn how to render a chart with multiple and combination series.
 platform: flutter
 control: Chart
 documentation: ug
@@ -14,7 +14,6 @@ documentation: ug
 You can add multiple series to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) property of the [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) class. By default, all the series are rendered based on the [`PrimaryXAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/primaryXAxis.html) and [`PrimaryYAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/primaryYAxis.html) in [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). If you want to plot different unit or value that is specific to a particular series, specify separate axis for that series using the [`xAxisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/xAxisName.html) and [`yAxisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/yAxisName.html) properties of series.
 
 {% highlight dart %} 
-
     @override
     Widget build(BuildContext context) {
         return Scaffold(
@@ -71,8 +70,8 @@ You can add multiple series to the [`series`](https://pub.dev/documentation/sync
                             LineSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) => data.y2,
-                            ),
+                                yValueMapper: (ChartData data, _) => data.y2
+                            )
                         ]
                     )
                 )
