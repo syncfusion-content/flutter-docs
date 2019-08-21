@@ -234,7 +234,7 @@ You can control the visibility of a particular series legend item using the [`is
 
 ![Legend isVisibleInLegend](images/legend/toggle_visibility.jpg)
 
-### Legend over flow
+### Legend overflow
 
 The legend items can be placed in multiple rows or scroll can be enabled using the [`overflowMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/overflowMode.html) property if size of the total legend items exceeds the available size. The default value of the [`overflowMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/overflowMode.html) property is [`scroll`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendItemOverflowMode-class.html).
 

@@ -21,8 +21,8 @@ Chart renders based on the parent widget size. If you need the chart to be rende
         body: SafeArea(
           child: Center(
             child: Container(
-              height: 300, 
-              width: 350, 
+              height: 300, // height of the Container widget
+              width: 350,  // width of the Container widget
               child: SfCartesianChart()
             )
           )
@@ -51,6 +51,7 @@ Margin to the chart can be specified using the [`margin`](https://pub.dev/docume
           child: SfCartesianChart(
               borderColor: Colors.red,
               borderWidth: 2,
+              // Sets 15 logical pixels as margin for all the 4 sides.
               margin: EdgeInsets.all(15)
           )
         )
