@@ -779,8 +779,8 @@ The [`reset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
     );
   }
 
-    void zoom() {
-        zooming.zoomByFactor(0.5);
-    }
+  void zoom() {
+    zooming.reset();
+  }
 
 {% endhighlight %}

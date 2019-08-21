@@ -427,7 +427,7 @@ By default, a maximum of 3 labels are displayed for each 100 logical pixels in a
 
 ### Visible minimum
 
-The [`visibleMinimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/visibleMinimum.html) property is used to set the minimum visible range of an axis.
+The [`visibleMinimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/visibleMinimum.html) property is used to set the minimum visible range of an axis. When panning is enabled, you can pan to the actual minimum range of an axis.
 
 {% highlight dart %} 
 
@@ -448,9 +448,11 @@ The [`visibleMinimum`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
 {% endhighlight %}
 
+Also refer [minimum](./axis-types) and [maximum](./axis-types) range of an axis.
+
 ### Visible maximum
 
-The [`visibleMaximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/visibleMaximum.html) property is used to set the minimum visible range of an axis.
+The [`visibleMaximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/visibleMaximum.html) property is used to set the minimum visible range of an axis.When panning is enabled, you can pan to the actual maximum range of an axis.
 
 {% highlight dart %} 
 
