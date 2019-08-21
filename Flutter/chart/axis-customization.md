@@ -26,6 +26,7 @@ Axis visibility can be controlled using the [`isVisible`](https://pub.dev/docume
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: NumericAxis(
+                            // X axis is hidden now
                             isVisible: false
                         )
                     )
@@ -93,6 +94,7 @@ The [`labelRotation`](https://pub.dev/documentation/syncfusion_flutter_charts/la
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(
+                            // Axis labels will be rotated to 90 degree
                             labelRotation: 90
                         )
                     )
@@ -189,6 +191,7 @@ The [`labelFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/late
                 child: Container(
                     child: SfCartesianChart(
                         primaryYAxis: NumericAxis(
+                            // '°C' will be append to all the labels in Y axis
                             labelFormat: '{value}°C'
                         )
                     )
@@ -238,6 +241,7 @@ Labels with long text at the edges of an axis may appear partially outside the c
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: NumericAxis(
+                            // Edge labels will be shifted
                             edgeLabelPlacement: EdgeLabelPlacement.shift
                         ) 
                     )
@@ -333,6 +337,7 @@ Axis can be inversed using the [`isInversed`](https://pub.dev/documentation/sync
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: NumericAxis(
+                            // X axis will be inversed
                             isInversed: true
                         )
                     )
@@ -358,6 +363,7 @@ The [`opposedPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: NumericAxis(
+                            // X axis will be opposed
                             opposedPosition: true
                         )
                     )
@@ -383,6 +389,7 @@ The [`plotOffset`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: NumericAxis(
+                            // 20 logical pixels gap will be left at the start and end of the x axis
                             plotOffset: 20
                         )
                     )
@@ -395,9 +402,9 @@ The [`plotOffset`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
 
 ![Plot Offset](images/axis-customization/plot_offset.jpg)
 
-### Maximum number of labels per 100 pixels
+### Maximum number of labels per 100 logical pixels
 
-By default, a maximum of 3 labels are displayed for each 100 pixels in axis. The maximum number of labels that should be present within 100 pixels length can be customized using the [`maximumLabels`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/maximumLabels.html) property of an axis. This property is applicable only for automatic range calculation and will not work if you set value for **interval** property of an axis.
+By default, a maximum of 3 labels are displayed for each 100 logical pixels in axis. The maximum number of labels that should be present within 100 logical pixels length can be customized using the [`maximumLabels`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/maximumLabels.html) property of an axis. This property is applicable only for automatic range calculation and will not work if you set value for **interval** property of an axis.
 
 {% highlight dart %} 
 
@@ -431,7 +438,7 @@ The [`visibleMinimum`](https://pub.dev/documentation/syncfusion_flutter_charts/l
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: NumericAxis(
-                            visibleMinimum: 2,
+                            visibleMinimum: 2
                         )
                     )
                 )
@@ -477,6 +484,7 @@ Axis labels may overlap with each other based on chart dimensions and label size
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(
+                            // Axis labels will be placed in multiple rows, if it is intersected
                             labelIntersectAction: AxisLabelIntersectAction.multipleRows
                         )
                     )
@@ -509,7 +517,7 @@ User can add n number of axis to the chart. Using the [`xAxisName`](https://pub.
                                 text: 'Primary Y Axis'
                             )
                         ),
-                        //Adding multiple axis
+                        // adding multiple axis
                         axes: <ChartAxis>[
                             NumericAxis(
                                 name: 'xAxis',
