@@ -149,3 +149,5 @@ You can select a point or series programmatically on a chart using [`initialSele
 {% endhighlight %}
 
 ![Initial selection](images/selection/initial_render_selection.jpg)
+
+Also refer [selection event](./events) for further customization.

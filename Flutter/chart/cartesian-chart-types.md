@@ -130,6 +130,8 @@ To render a multi-colored line series, map the individual colors to the data usi
 
 ![Multi-colored line](images/cartesian-chart-types/multiColored_line.jpg)
 
+Also refer, [color palette](./series-customization), [color mapping](./series-customization), [animation](./series-customization), [gradient](./series-customization) and [empty points](./series-customization) for customizing the line series further.
+
 ## Fast line chart
 
 [`FastLineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FastLineSeries-class.html) is a line chart, but it loads faster than [`LineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LineSeries-class.html). You can use this when there are large number of points to be loaded in a chart. To render a fast line chart, create an instance of [`FastLineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FastLineSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). The following properties are used to customize the appearance of fast line segment:
@@ -163,6 +165,8 @@ To render a multi-colored line series, map the individual colors to the data usi
 {% endhighlight %}
 
 ![Fast line chart](images/cartesian-chart-types/fastline.jpg)
+
+Also refer, [color palette](./series-customization), [color mapping](./series-customization), [animation](./series-customization), [gradient](./series-customization) and [empty points](./series-customization) for customizing the fast line series further.
 
 ## Area chart
 
@@ -232,6 +236,8 @@ The borders of the area chart can be customized using the [`borderMode`](https:/
 {% endhighlight %}
 
 ![Area border](images/cartesian-chart-types/area_border.jpg)
+
+Also refer, [color palette](./series-customization), [color mapping](./series-customization), [animation](./series-customization), [gradient](./series-customization) and [empty points](./series-customization) for customizing the area series further.
 
 ## Spline chart
 
@@ -335,6 +341,8 @@ The following code sample demonstrates how to set the [`splineType`](https://pub
 {% endhighlight %}
 
 ![Spline type](images/cartesian-chart-types/cardinal_spline.jpg)
+
+Also refer, [color palette](./series-customization), [color mapping](./series-customization), [animation](./series-customization), [gradient](./series-customization) and [empty points](./series-customization) for customizing the spline series further.
 
 ## Column chart
 
@@ -513,6 +521,8 @@ Renders column with track. Track is a rectangular bar rendered from the start to
 
 ![Track](images/cartesian-chart-types/track_column.jpg)
 
+Also refer, [color palette](./series-customization), [color mapping](./series-customization), [animation](./series-customization), [gradient](./series-customization) and [empty points](./series-customization) for customizing the column series further.
+
 ## Bar chart
 
 To render a bar chart, create an instance of [`BarSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BarSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties are used to customize the appearance:
@@ -645,6 +655,8 @@ You can render the bar chart with track. Track is a rectangular bar rendered fro
 
 ![Bar track](images/cartesian-chart-types/track_bar.jpg)
 
+Also refer, [color palette](./series-customization), [color mapping](./series-customization), [animation](./series-customization), [gradient](./series-customization) and [empty points](./series-customization) for customizing the bar series further.
+
 ## Bubble chart
 
 To render a bubble chart, create an instance of [`BubbleSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BubbleSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html).
@@ -729,6 +741,8 @@ The [`minimumRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/la
 
 ![Bubble size](images/cartesian-chart-types/bubble_radius.jpg)
 
+Also refer, [color palette](./series-customization), [color mapping](./series-customization), [animation](./series-customization), [gradient](./series-customization) and [empty points](./series-customization) for customizing the bubble series further.
+
 ## Scatter chart
 
 To render a scatter chart, create an instance of [`ScatterSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ScatterSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). The following properties are used to customize the scatter segment appearance.
@@ -799,6 +813,8 @@ The [`height`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
 
 ![Scatter shape](images/cartesian-chart-types/scatter_shape.jpg)
 
+Also refer, [color palette](./series-customization), [color mapping](./series-customization), [animation](./series-customization), [gradient](./series-customization) and [empty points](./series-customization) for customizing the scatter series further.
+
 ## Step line chart
 
 To render a step line chart, create an instance of [`StepLineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StepLineSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). The following properties are used to customize the appearance of spline segment:
@@ -861,3 +877,5 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
 {% endhighlight %}
 
 ![Step line chart](images/cartesian-chart-types/dashed_stepline.jpg)
+
+Also refer, [color palette](./series-customization), [color mapping](./series-customization), [animation](./series-customization), [gradient](./series-customization) and [empty points](./series-customization) for customizing the step line series further.

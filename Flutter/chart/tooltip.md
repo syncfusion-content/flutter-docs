@@ -166,3 +166,5 @@ The ActivationMode enum contains the following values:
     }
 
 {% endhighlight %}
+
+Also refer [tooltip event](./events) for further customization.
