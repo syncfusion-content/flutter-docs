@@ -25,6 +25,7 @@ The selection feature in chart let you to select a segment in a series or the se
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
                                 selectionSettings: SelectionSettings(
+                                    // Enables the selection
                                     enable: true
                                 )
                             )
@@ -93,6 +94,7 @@ The selection features allows you to select segments in following modes using [`
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        // Mode of selection
                         selectionType: SelectionType.cluster
                     )
                 )
@@ -116,6 +118,7 @@ Multiple selection can be enabled using the [`enableMultiSelection`](https://pub
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        // Enables multiple selection
                         enableMultiSelection: true
                     )
                 )

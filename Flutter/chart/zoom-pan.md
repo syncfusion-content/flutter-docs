@@ -25,6 +25,7 @@ Pinch zooming can be enabled by [`enablePinching`](https://pub.dev/documentation
               width: 350, 
               child: SfCartesianChart(
                 zoomPanBehavior: ZoomPanBehavior(
+                  // Enables pinch zooming
                   enablePinching: true
                 )
               )
@@ -52,6 +53,7 @@ Double tap zooming can be enabled using [`enableDoubleTapZooming`](https://pub.d
               width: 350, 
               child: SfCartesianChart(
                 zoomPanBehavior: ZoomPanBehavior(
+                  // Performs zooming on double tap
                   enableDoubleTapZooming: true
                 )
               )
@@ -132,6 +134,7 @@ The axis tooltip on selection zooming can be enabled using [`enable`](https://pu
               child: SfCartesianChart(
                 primaryXAxis: NumericAxis(
                   crosshairTooltip: InteractiveTooltip(
+                  // Displays the axis tooltip
                   enable: true,
                   borderColor: Colors.red,
                   borderWidth: 2
@@ -147,6 +150,7 @@ The axis tooltip on selection zooming can be enabled using [`enable`](https://pu
                 zoomPanBehavior: ZoomPanBehavior(
                   enableDoubleTapZooming: true,
                   enablePinching: true,
+                  // Enables the selection zooming
                   enableSelectionZooming: true
                 )
               )
@@ -172,6 +176,7 @@ The [`enableAutoIntervalOnZooming`](https://pub.dev/documentation/syncfusion_flu
             child: Container(
               child: SfCartesianChart(
                 primaryXAxis: DateTimeAxis(
+                  // Intervals will be fixed, not calculated automatically based on the visible range on zooming
                   enableAutoIntervalOnZooming: false
                 )
               )

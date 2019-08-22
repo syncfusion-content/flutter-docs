@@ -93,6 +93,7 @@ By default, x and y value will be displayed in the tooltip, and it can be custom
             child: SfCartesianChart(
               tooltipBehavior: TooltipBehavior(
                 enable: true, 
+                // Formatting the tooltip text
                 format: 'point.y%'
               )
             )
@@ -117,6 +118,7 @@ You can customize the appearance of the tooltip with your own widget by using th
             child: SfCartesianChart(
               tooltipBehavior: TooltipBehavior(
                 enable: true,
+                // Templating the tooltip
                 builder: (dynamic data, dynamic point, dynamic series,
                 int pointIndex, int seriesIndex) {
                   return Container(
@@ -157,6 +159,7 @@ The ActivationMode enum contains the following values:
             child: SfCartesianChart(
               tooltipBehavior: TooltipBehavior(
                 enable: true,
+                // Tooltip will be displayed on long press
                 activationMode: ActivationMode.longPress
               )
             )

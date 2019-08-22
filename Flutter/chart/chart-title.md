@@ -39,6 +39,7 @@ You can align the title text content horizontally to the near, center or far of 
                   backgroundColor: Colors.lightGreen,
                   borderColor: Colors.blue,
                   borderWidth: 2,
+                  // Aligns the chart title to left
                   alignment: ChartAlignment.near,
                   textStyle: ChartTextStyle(
                     color: Colors.red,
@@ -47,12 +48,13 @@ You can align the title text content horizontally to the near, center or far of 
                     fontSize: 14,
                   )
                 ),
-                primaryXAxis: CategoryAxis(), // Initialize category axis.
+                // Initialize category axis
+                primaryXAxis: CategoryAxis(),
                 series: <ChartSeries>[
-                  // Initialize line series.
+                  // Initialize line series
                   LineSeries<SalesData, String>(
                     dataSource: [
-                      // Bind data source.
+                      // Bind data source
                       SalesData('Jan', 35),
                       SalesData('Feb', 28),
                       SalesData('Mar', 34),

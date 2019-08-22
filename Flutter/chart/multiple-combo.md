@@ -64,11 +64,13 @@ Also refer [multiple axes](./axis-customization#multiple-axes) for customizing t
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
                         series: <CartesianSeries>[
+                            // Render column series
                             ColumnSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y
                             ),
+                            // Render line series
                             LineSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,

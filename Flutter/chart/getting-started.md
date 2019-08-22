@@ -58,7 +58,8 @@ Once the package has been imported, initialize the chart as a child of any widge
         return Scaffold(
             body: Center(
                 child: Container(
-                    child: SfCartesianChart() //Initialize chart
+                    //Initialize chart
+                    child: SfCartesianChart()
                 )
             )
         );
@@ -80,12 +81,13 @@ Based on your data, initialize the appropriate axis type and series type. In the
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis: CategoryAxis(), // Initialize category axis.
+                        // Initialize category axis
+                        primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
-                            // Initialize line series.
+                            // Initialize line series
                             LineSeries<SalesData, String>(
                                 dataSource: [
-                                    // Bind data source.
+                                    // Bind data source
                                     SalesData('Jan', 35),
                                     SalesData('Feb', 28),
                                     SalesData('Mar', 34),
@@ -124,13 +126,15 @@ You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        // Chart title text
                         title: ChartTitle(text: 'Half yearly sales analysis'),
-                        primaryXAxis: CategoryAxis(), // Initialize category axis.
+                        // Initialize category axis
+                        primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
-                            // Initialize line series.
+                            // Initialize line series
                             LineSeries<SalesData, String>(
                             dataSource: [
-                                // Bind data source.
+                                // Bind data source
                                 SalesData('Jan', 35),
                                 SalesData('Feb', 28),
                                 SalesData('Mar', 34),
@@ -163,12 +167,13 @@ You can add data labels to improve the readability of the chart using the [`SfCa
                 child: Container(
                     child: SfCartesianChart(
                         title: ChartTitle(text: 'Half yearly sales analysis'),
-                        primaryXAxis: CategoryAxis(), // Initialize category axis.
+                        // Initialize category axis
+                        primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
-                            // Initialize line series.
+                            // Initialize line series
                             LineSeries<SalesData, String>(
                                 dataSource: [
-                                    // Bind data source.
+                                    // Bind data source
                                     SalesData('Jan', 35),
                                     SalesData('Feb', 28),
                                     SalesData('Mar', 34),
@@ -177,6 +182,7 @@ You can add data labels to improve the readability of the chart using the [`SfCa
                                 ],
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales,
+                                // Render the data label
                                 dataLabelSettings:DataLabelSettings(isVisible : true)
                             )
                         ]
@@ -206,13 +212,15 @@ Additionally, you need to set label for each series using the [`series.name`](ht
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        // Enables the legend
                         legend: Legend(isVisible: true), 
-                        primaryXAxis: CategoryAxis(), // Initialize category axis.
+                        // Initialize category axis
+                        primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
-                            // Initialize line series.
+                            // Initialize line series
                             LineSeries<SalesData, String>(
                                 dataSource: [
-                                    // Bind data source.
+                                    // Bind data source
                                     SalesData('Jan', 35),
                                     SalesData('Feb', 28),
                                     SalesData('Mar', 34),
@@ -251,14 +259,17 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        tooltipBehavior: TooltipBehavior(enable: true),//Used to customize the tooltip for all the series
-                        primaryXAxis: CategoryAxis(), // Initialize category axis.
+                        // Enables the tooltip for all the series in chart
+                        tooltipBehavior: TooltipBehavior(enable: true),
+                        // Initialize category axis
+                        primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
-                            // Initialize line series.
+                            // Initialize line series
                             LineSeries<SalesData, String>(
-                                enableTooltip: true, //Enables the tooltip for individual series. 
+                                // Enables the tooltip for individual series
+                                enableTooltip: true, 
                                 dataSource: [
-                                    // Bind data source.
+                                    // Bind data source
                                     SalesData('Jan', 35),
                                     SalesData('Feb', 28),
                                     SalesData('Mar', 34),
