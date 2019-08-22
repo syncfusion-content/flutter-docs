@@ -48,7 +48,7 @@ You can add multiple series to the [`series`](https://pub.dev/documentation/sync
 
 ![Multiple series](images/series-customization/multipleSeries.jpg)
 
-Also refer [multiple axes](./axis-customization) for customizing the axis.
+Also refer [multiple axes](./axis-customization#multiple-axes) for customizing the axis further.
 
 ## Combination series
 
