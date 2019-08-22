@@ -250,6 +250,8 @@ The [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
 ![Number format](images/axis-types/number_format.jpg)
 
+Also refer [label format](./axis-customization#formatting-axis-label-content) and [date format](#formatting-the-labels-1) for formatting the labels further.
+
 ## Category axis
 
 Category axis displays text labels instead of numbers. When the string values are bound to x values, then the x-axis must be initialized with CategoryAxis.
@@ -589,3 +591,5 @@ The [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
 {% endhighlight %}
 
 ![Date format](images/axis-types/datetime_labelFormat.jpg)
+
+Also refer [label format](./axis-customization#formatting-axis-label-content) and [number format](#formatting-the-labels) for formatting the labels further.
