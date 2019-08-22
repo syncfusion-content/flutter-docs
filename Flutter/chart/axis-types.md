@@ -30,7 +30,7 @@ Numeric axis uses numerical scale and displays numbers as labels. By default, [`
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: NumericAxis(), 
-                        primaryYAxis: NumericAxis(), 
+                        primaryYAxis: NumericAxis() 
                     )
                 )
             )
@@ -80,6 +80,7 @@ Axis interval can be customized using the [`interval`](https://pub.dev/documenta
                 child: Container(
                     child: SfCartesianChart(
                         primaryYAxis: NumericAxis(
+                            // axis interval is set to 10
                             interval: 10
                         ) 
                     )
@@ -115,6 +116,7 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
                 child: Container(
                     child: SfCartesianChart(
                         primaryYAxis: NumericAxis(
+                            // Additional range padding is applied to y axis
                             rangePadding: ChartRangePadding.additional
                         )  
                     )
@@ -227,7 +229,7 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
 
 ### Formatting the labels
 
-The [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/numberFormat.html) property of numeric axis formats the numeric axis labels with globalized label formats. The following code snippet demonstrates how to format numeric labels.
+The [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/numberFormat.html) property of numeric axis formats the numeric axis labels with [`globalized label formats`](https://api.flutter.dev/flutter/intl/NumberFormat-class.html). The following code snippet demonstrates how to format numeric labels.
 
 {% highlight dart %} 
 
@@ -238,6 +240,7 @@ The [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
                 child: Container(
                     child: SfCartesianChart(
                         primaryYAxis: NumericAxis(
+                            // Y axis labels will be rendered with currency format
                             numberFormat: NumberFormat.simpleCurrency()
                         )
                     )
@@ -288,6 +291,7 @@ Labels in category axis can be placed on the ticks by setting the [`labelPlaceme
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(
+                            // Axis labels will be placed on the ticks
                             labelPlacement: LabelPlacement.onTicks
                         )
                     )
@@ -326,7 +330,7 @@ To display the labels after a fixed interval n, set the [`interval`](https://pub
 
 ### Indexed category axis
 
-Category axis also can be rendered based on the index values of data source by setting the [`arrangeByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CategoryAxis/arrangeByIndex.html) property to true in the axis.
+Category axis can also be rendered based on the index values of data source by setting the [`arrangeByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CategoryAxis/arrangeByIndex.html) property to true in the axis.
 
 {% highlight dart %}
 
@@ -349,6 +353,7 @@ Category axis also can be rendered based on the index values of data source by s
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(
+                            // Axis will be rendered based on the index values
                             arrangeByIndex: true
                         ),
                         series: <ChartSeries<ChartData, String>>[
@@ -445,6 +450,7 @@ The Flutter Chart supports the following types of interval for date-time axis:
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeAxis(
+                            // Interval type will be months
                             intervalType: DateTimeIntervalType.months,
                             interval: 2
                         )
@@ -580,6 +586,7 @@ The [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeAxis(
+                            // X axis labels will be rendered based on the below format
                             dateFormat: DateFormat.y()
                         )  
                     )

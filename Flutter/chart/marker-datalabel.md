@@ -32,6 +32,7 @@ Markers are used to provide information about the exact point location. You can 
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
+                                // Renders the marker 
                                 markerSettings: MarkerSettings(
                                     isVisible: true
                                 )
@@ -76,6 +77,7 @@ Markers can be assigned with different shapes using the [`shape`](https://pub.de
                                 yValueMapper: (ChartData data, _) => data.y,
                                 markerSettings: MarkerSettings(
                                     isVisible: true,
+                                    // Marker shape is set to diamond
                                     shape: DataMarkerType.diamond
                                 )
                             )
@@ -110,6 +112,7 @@ The markers can be rendered with desired image as shape. For this you have to sp
                                 markerSettings: MarkerSettings(
                                     isVisible: true,
                                     shape: DataMarkerType.image,
+                                    // Renders the image as marker
                                     imageUrl: 'images/livechart.png'
                                 )
                             )
@@ -158,6 +161,7 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
                                 dataLabelSettings: DataLabelSettings(
+                                    // Renders the data label
                                     isVisible: true
                                 )
                             )
@@ -174,7 +178,7 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
 
 ### Formatting label content
 
-Data label considers the format used in the vertical axis by default. In the below code snippet, we have specified format to y-axis and you can see the same format is applied to data label.
+Data label considers the format used in the vertical axis by default. In the below code snippet, we have specified format to y-axis and you can see the same format is applied to the data label.
 
 {% highlight dart %} 
 
@@ -184,6 +188,7 @@ Data label considers the format used in the vertical axis by default. In the bel
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        // Applies currency format for y axis labels and also for data labels
                         primaryYAxis: NumericAxis(numberFormat: NumberFormat.simpleCurrency()),
                         series: <CartesianSeries>[
                             LineSeries<ChartData, double>(
@@ -227,6 +232,7 @@ The [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/la
                                 yValueMapper: (ChartData data, _) => data.y,
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true,
+                                    // Position of the data label
                                     labelPosition: LabelPosition.outside
                                 )
                             )
@@ -257,6 +263,7 @@ This feature is used to arrange the data labels smartly and avoid the intersecti
                     child:SfCircularChart(
                         series: <CircularSeries>[
                             PieSeries<ChartData, double>(
+                                // Avoid labels intersection
                                 enableSmartLabels: true,
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
@@ -299,6 +306,7 @@ The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true, 
                                     labelPosition: LabelPosition.outside,
+                                    // Renders background rectangle and fills it with series color
                                     useSeriesColor: true
                                 )
                             )
@@ -340,6 +348,7 @@ This feature is used to connect label and data point using a line. It can be ena
                                     isVisible: true,
                                     labelPosition: LabelPosition.outside,
                                     connectorLineSettings: ConnectorLineSettings(
+                                        // Type of the connector line
                                         type: ConnectorType.curve
                                     )
                                 )
@@ -380,6 +389,7 @@ The [`dataLabelMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
+                                // Map the data label text for each point from the data source
                                 dataLabelMapper: (ChartData data, _) => data.text,
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true
@@ -423,6 +433,7 @@ You can customize the appearance of the data label with your own template using 
                                 dataLabelMapper: (ChartData data, _) => data.text,
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true,
+                                    // Templating the data label
                                     builder: (dynamic data, dynamic point, dynamic series, int pointIndex, int seriesIndex) {
                                         return Container(
                                         height: 30,

@@ -19,6 +19,7 @@ The [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
         body: Center(
           child: Container(
               child:SfCircularChart(
+                // Enables the legend
                 legend: Legend(isVisible: true),
                 series: <CircularSeries>[
                   PieSeries<ChartData, String>(
@@ -61,6 +62,7 @@ The [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
             child:SfCircularChart(
               legend: Legend(
                 isVisible: true,
+                // Border color and border width of legend
                 borderColor: Colors.black,
                 borderWidth: 2
               ),
@@ -103,7 +105,9 @@ The following properties are used to define and customize the [`title`](https://
                 child:SfCircularChart(
                 legend: Legend(
                     isVisible: true,
-                    title: LegendTitle(text:'Country',
+                    // Legend title
+                    title: LegendTitle(
+                      text:'Country',
                       textStyle: ChartTextStyle(
                       color: Colors.red,
                       fontSize: 15,
@@ -148,6 +152,7 @@ You can control the visibility of the series by tapping the legend item. You can
             child:SfCircularChart(
               legend: Legend(
                 isVisible: true,
+                // Toogles the series visibility on tapping the legend item
                 toggleSeriesVisibility: true
               ),
               series: <CircularSeries>[
@@ -178,7 +183,8 @@ The [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
           child: Container(
             child:SfCircularChart(
               legend: Legend(
-                isVisible: false,
+                // Visibility of legend
+                isVisible: false
               ),
               series: <CircularSeries>[
                 PieSeries<ChartData, String>(
@@ -218,6 +224,7 @@ You can control the visibility of a particular series legend item using the [`is
                   yValueMapper: (ChartData data, _) => data.y
                 ),
                 ColumnSeries<ChartData, String>(
+                  // Hiding the legend item for this series
                   isVisibleInLegend: false,
                   dataSource: chartData,
                   xValueMapper: (ChartData data, _) => data.x,
@@ -248,6 +255,7 @@ The legend items can be placed in multiple rows or scroll can be enabled using t
             child: SfCircularChart(
               legend: Legend(
                 isVisible: true,
+                // Overflowing legend content will be wraped
                 overflowMode: LegendItemOverflowMode.wrap
               ),
               series: <CircularSeries>[
@@ -285,6 +293,7 @@ You can change the position of the legend inside the chart. The following proper
             child: SfCircularChart(
               legend: Legend(
                 isVisible: true,
+                // Legend will be placed at the left
                 position: LegendPosition.left
               ),
               series: <CircularSeries>[
@@ -306,7 +315,7 @@ You can change the position of the legend inside the chart. The following proper
 
 ## Legend item template
 
-You can customize the appearance of legend items with your template by using [`legendItemBuilder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/legendItemBuilder.html) property of [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/legend.html. Here you can specify the content that needs to be displayed in the legend text as widget.
+You can customize the appearance of legend items with your template by using [`legendItemBuilder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/legendItemBuilder.html) property of [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/legend.html). Here you can specify the content that needs to be displayed in the legend text as widget.
 
 {% highlight dart %} 
 
@@ -318,6 +327,7 @@ You can customize the appearance of legend items with your template by using [`l
             child: SfCircularChart(
               legend: Legend(
                 isVisible: true,
+                // Templating the legend item
                 legendItemBuilder: (String name, dynamic series, dynamic point, int index) {
                   return Container(
                     height: 20,
