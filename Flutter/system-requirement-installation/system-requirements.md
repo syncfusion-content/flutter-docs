@@ -18,6 +18,10 @@ Refer to the following links for recommended development environment in Flutter.
 * MacOS - [`https://flutter.dev/docs/get-started/install/macos`](https://flutter.dev/docs/get-started/install/macos)
 * Linux - [`https://flutter.dev/docs/get-started/install/linux`](https://flutter.dev/docs/get-started/install/linux)
 
+### SDK Version
+
+The minimum Flutter SDK version required for our component is [`v1.7.8`](https://flutter.dev/docs/development/tools/sdk/releases)
+
 ### Supported Platforms
 
 The following table lists the platforms supported by our Flutter controls.

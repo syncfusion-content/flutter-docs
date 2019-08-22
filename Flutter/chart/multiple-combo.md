@@ -48,6 +48,8 @@ You can add multiple series to the [`series`](https://pub.dev/documentation/sync
 
 ![Multiple series](images/series-customization/multipleSeries.jpg)
 
+Also refer [multiple axes](./axis-customization#multiple-axes) for customizing the axis further.
+
 ## Combination series
 
 [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) allows you to render a combination of different types of series. In the following code snippet, the column and line type series have been combined.
@@ -62,11 +64,13 @@ You can add multiple series to the [`series`](https://pub.dev/documentation/sync
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
                         series: <CartesianSeries>[
+                            // Render column series
                             ColumnSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y
                             ),
+                            // Render line series
                             LineSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
