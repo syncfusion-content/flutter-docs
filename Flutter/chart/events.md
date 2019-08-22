@@ -9,7 +9,7 @@ documentation: ug
 
 # Events
 
-The below events are for cartesian chart.
+The below events are for Cartesian chart.
 
 ## onTooltipRender
 
@@ -477,7 +477,7 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
 
 {% endhighlight %}
 
-The below events are for circular chart.
+The below events are for Circular chart.
 
 ## onLegendItemRender
 
