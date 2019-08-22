@@ -27,6 +27,7 @@ documentation: ug
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
+                                // Duration of series animation
                                 animationDuration: 1000
                             )
                         ]
@@ -50,10 +51,11 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        // Transpose the chart
                         isTransposed: true,
                         primaryXAxis: CategoryAxis(),
                         series: <CartesianSeries>[
-                            ColumnSeries<ChartData, String>(
+                            SplineSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
@@ -82,6 +84,7 @@ The [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
+                        // Palette colors
                         palette: <Color>[
                             Colors.teal,
                             Colors.orange,
@@ -138,6 +141,7 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
+                                // Map color for each data points from the data source
                                 pointColorMapper: (ChartData data, _) => data.color
                             )
                         ]
@@ -188,6 +192,7 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
+                                // Applies gradient color
                                 gradient: gradientColors
                             )
                         ]
@@ -227,6 +232,7 @@ The data points that has null value are considered as empty points. Empty data p
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
                                 emptyPointSettings: EmptyPointSettings(
+                                    // Mode of empty point
                                     mode: EmptyPointMode.average
                                 )
                             )      
@@ -313,6 +319,7 @@ The chart’s data source can be sorted using the [`sortingOrder`](https://pub.d
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
                                 sortingOrder: SortingOrder.descending,
+                                // Sorting based on the specified field
                                 sortFieldValueMapper: (ChartData data, _) => data.x
                             )
                         ]

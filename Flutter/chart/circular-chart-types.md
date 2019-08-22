@@ -32,6 +32,7 @@ To render a pie chart, create an instance of [`PieSeries`](https://pub.dev/docum
             body: Center(
                 child: Container(
                     child: SfCircularChart(series: <CircularSeries>[
+                        // Render pie chart
                         PieSeries<ChartData, String>(
                             dataSource: chartData,
                             pointColorMapper:(ChartData data,  _) => data.color,
@@ -45,12 +46,12 @@ To render a pie chart, create an instance of [`PieSeries`](https://pub.dev/docum
     );
 }
 
-    class ChartData {
-        ChartData(this.x, this.y, [this.color]);
-            final String x;
-            final double y;
-            final Color color;
-    }
+class ChartData {
+    ChartData(this.x, this.y, [this.color]);
+    final String x;
+    final double y;
+    final Color color;
+}
 
 {% endhighlight %}
 
@@ -73,6 +74,7 @@ You can use the [`radius`](https://pub.dev/documentation/syncfusion_flutter_char
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
+                                // Radius of pie
                                 radius: '50%'
                             )
                         ]
@@ -81,7 +83,6 @@ You can use the [`radius`](https://pub.dev/documentation/syncfusion_flutter_char
             )
         );
     }
-
 
 {% endhighlight %}
 
@@ -108,7 +109,9 @@ You can explode a pie segment by enabling the [`explode`](https://pub.dev/docume
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
+                                // Segments will explode on tap
                                 explode: true,
+                                // First segment will be exploded on initial rendering 
                                 explodeIndex: 1
                             )
                         ]
@@ -117,7 +120,6 @@ You can explode a pie segment by enabling the [`explode`](https://pub.dev/docume
             )
         );
     }
-
 
 {% endhighlight %}
 
@@ -141,6 +143,7 @@ Using the [`explodeAll`](https://pub.dev/documentation/syncfusion_flutter_charts
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
                                 explode: true,
+                                // All the segments will be exploded
                                 explodeAll: true
                             )
                         ]
@@ -149,7 +152,6 @@ Using the [`explodeAll`](https://pub.dev/documentation/syncfusion_flutter_charts
             )
         );
     }
-
 
 {% endhighlight %}
 
@@ -172,8 +174,8 @@ Using the [`explodeAll`](https://pub.dev/documentation/syncfusion_flutter_charts
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
-                                startAngle: 270,
-                                endAngle: 90
+                                startAngle: 270, // starting angle of pie
+                                endAngle: 90 // ending angle of pie
                             )
                         ]
                     )
@@ -181,7 +183,6 @@ Using the [`explodeAll`](https://pub.dev/documentation/syncfusion_flutter_charts
             )
         );
     } 
-
 
 {% endhighlight %}
 
@@ -205,6 +206,7 @@ The small segments in the pie chart can be grouped into **others** category usin
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
                                 groupMode: CircularChartGroupMode.point,
+                                // As the grouping mode is point, 2 points will be grouped
                                 groupTo: 2
                             )
                         ]
@@ -242,6 +244,7 @@ The [`pointRadiusMapper`](https://pub.dev/documentation/syncfusion_flutter_chart
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
+                                // Radius for each segment from data source
                                 pointRadiusMapper: (ChartData data, _) => data.size
                             )
                         ]
@@ -252,10 +255,10 @@ The [`pointRadiusMapper`](https://pub.dev/documentation/syncfusion_flutter_chart
     }
 
     class ChartData {
-         ChartData(this.x, this.y, this.size);
-            final String x;
-            final double y;
-            final String size;
+        ChartData(this.x, this.y, this.size);
+        final String x;
+        final double y;
+        final String size;
     }
 
 {% endhighlight %}
@@ -286,6 +289,7 @@ To render a doughnut chart, create an instance of [`DoughnutSeries`](https://pub
                 child: Container(
                     child: SfCircularChart(
                         series: <CircularSeries>[
+                            // Renders doughnut chart
                             DoughnutSeries<ChartData, String>(
                                 dataSource: chartData,
                                 pointColorMapper:(ChartData data,  _) => data.color,
@@ -327,6 +331,7 @@ The [`cornerStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/late
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
+                                // Corner style of doughnut segment
                                 cornerStyle: CornerStyle.bothCurve
                             )
                         ]
@@ -357,6 +362,7 @@ You can use the [`radius`](https://pub.dev/documentation/syncfusion_flutter_char
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
+                                // Radius of doughnut
                                 radius: '50%'
                             )
                         ]
@@ -388,6 +394,7 @@ You can change the inner radius of doughnut chart using the [`innerRadius`](http
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
+                                // Radius of doughnut's inner circle
                                 innerRadius: '80%'
                             )
                         ]
@@ -422,6 +429,7 @@ You can explode a doughnut segment by enabling the [`explode`](https://pub.dev/d
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
+                                // Explode the segments on tap
                                 explode: true,
                                 explodeIndex: 1
                             )
@@ -455,6 +463,7 @@ Using the [`explodeAll`](https://pub.dev/documentation/syncfusion_flutter_charts
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
                                 explode: true,
+                                // Explode all the segments
                                 explodeAll: true
                             )
                         ]
@@ -486,8 +495,8 @@ Using the [`explodeAll`](https://pub.dev/documentation/syncfusion_flutter_charts
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
-                                startAngle: 270,
-                                endAngle: 90
+                                startAngle: 270, // Starting angle of doughnut
+                                endAngle: 90 // Ending angle of doughnut
                             )
                         ]
                     )
@@ -518,6 +527,7 @@ The small segments in the doughnut chart can be grouped into **others** category
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
+                                // Mode of grouping
                                 groupMode: CircularChartGroupMode.point,
                                 groupTo: 2
                             )
@@ -558,6 +568,7 @@ The radial bar chart is used for showing the comparisons among the categories us
                 child: Container(
                     child: SfCircularChart(
                         series: <CircularSeries>[
+                            // Renders radial bar chart
                             RadialBarSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
@@ -591,6 +602,7 @@ You can use the [`radius`](https://pub.dev/documentation/syncfusion_flutter_char
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
+                                // Radius of the radial bar
                                 radius: '50%'
                             )
                         ]
@@ -622,6 +634,7 @@ You can change the inner radius of radial bar chart using the [`innerRadius`](ht
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
+                                // Radius of the radial bar's inner circle
                                 innerRadius: '80%'
                             )
                         ]
@@ -650,6 +663,7 @@ The [`cornerStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/late
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
+                                // Corner style of radial bar segment
                                 cornerStyle: CornerStyle.bothCurve
                             )
                         ]
@@ -694,6 +708,7 @@ Data labels can be enabled using the [`isVisible`](https://pub.dev/documentation
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
                                 dataLabelSettings: DataLabelSettings(
+                                    // Renders the data label
                                     isVisible: true
                                 )
                             )

@@ -41,6 +41,7 @@ You can use the following properties to customize the appearance of trackball to
             child: Container(
               child: SfCartesianChart(
                 trackballBehavior: TrackballBehavior(
+                  // Enables the trackball
                   enable: true,
                   tooltipSettings: InteractiveTooltip(
                     enable: true,
@@ -78,6 +79,7 @@ The [`tooltipDisplayMode`](https://pub.dev/documentation/syncfusion_flutter_char
               child: SfCartesianChart(
                 trackballBehavior: TrackballBehavior(
                   enable: true,
+                  // Display mode of trackball tooltip
                   tooltipDisplayMode: TrackballDisplayMode.floatAllPoints
                 )
               )
@@ -142,6 +144,7 @@ By default, axis value will be displayed in the tooltip, and it can be customize
                 trackballBehavior: TrackballBehavior(
                   enable: true,
                   tooltipSettings: InteractiveTooltip(
+                    // Formatting trackball tooltip text
                     format: 'point.x : point.y%'
                   )
                 )
@@ -178,6 +181,7 @@ The ActivationMode enum contains the following values:
               child: SfCartesianChart(
                 trackballBehavior: TrackballBehavior(
                   enable: true,
+                    // Displays the trackball on single tap
                     activationMode: ActivationMode.singleTap
                 )
               )
@@ -206,10 +210,12 @@ Crosshair lines can be enabled by using [`enable`](https://pub.dev/documentation
               child: SfCartesianChart(
                 primaryXAxis: NumericAxis(
                   crosshairTooltip: InteractiveTooltip(
+                    // Enables the crosshair tooltip
                     enable: true
                   )
                 ),
                 crosshairBehavior: CrosshairBehavior(
+                  // Enables the crosshair
                   enable: true
                 )
               )
@@ -295,6 +301,7 @@ The ActivationMode enum contains the following values:
               child: SfCartesianChart(
                 crosshairBehavior: CrosshairBehavior(
                   enable: true,
+                  // Displays the crosshair on single tap
                   activationMode: ActivationMode.singleTap
                 )
               )
@@ -305,3 +312,5 @@ The ActivationMode enum contains the following values:
     }
 
 {% endhighlight %}
+
+Also refer [crosshair](./events#oncrosshairpositionchanging) and [trackball](./events#ontrackballpositionchanging) events for customizing the crosshair and trackball further.
