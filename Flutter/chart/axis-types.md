@@ -229,7 +229,7 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
 
 ### Formatting the labels
 
-The [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/numberFormat.html) property of numeric axis formats the numeric axis labels with globalized label formats. The following code snippet demonstrates how to format numeric labels.
+The [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/numberFormat.html) property of numeric axis formats the numeric axis labels with [`globalized label formats`](https://api.flutter.dev/flutter/intl/NumberFormat-class.html). The following code snippet demonstrates how to format numeric labels.
 
 {% highlight dart %} 
 

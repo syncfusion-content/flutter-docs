@@ -67,7 +67,7 @@ Double tap zooming can be enabled using [`enableDoubleTapZooming`](https://pub.d
 
 ## Selection zooming
 
-By specifying [`enableSelectionZooming`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/enableSelectionZooming.html) property to true, you can double tap and drag to select a range on the chart to be zoomed in.
+By specifying [`enableSelectionZooming`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/enableSelectionZooming.html) property to true, you can long press and drag to select a range on the chart to be zoomed in.
 
 **Selection rectangle customization**
 

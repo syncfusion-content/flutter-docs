@@ -178,7 +178,7 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
 
 ### Formatting label content
 
-Data label considers the format used in the vertical axis by default. In the below code snippet, we have specified format to y-axis and you can see the same format is applied to data label.
+Data label considers the format used in the vertical axis by default. In the below code snippet, we have specified format to y-axis and you can see the same format is applied to the data label.
 
 {% highlight dart %} 
 
