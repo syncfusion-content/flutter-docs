@@ -53,7 +53,7 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
                         isTransposed: true,
                         primaryXAxis: CategoryAxis(),
                         series: <CartesianSeries>[
-                            ColumnSeries<ChartData, String>(
+                            SplineSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,

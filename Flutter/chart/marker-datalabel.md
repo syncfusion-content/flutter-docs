@@ -292,14 +292,14 @@ The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
                     child:SfCircularChart(
                         series: <CircularSeries>[
                             PieSeries<ChartData, double>(
-                                enableSmartLabels: true,
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
-                                dataValueMapper: (ChartData data, _) => data.x,
+                                dataLabelMapper: (ChartData data, _) => data.x,
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true, 
-                                    labelPosition: LabelPosition.outside
+                                    labelPosition: LabelPosition.outside,
+                                    useSeriesColor: true
                                 )
                             )
                         ]

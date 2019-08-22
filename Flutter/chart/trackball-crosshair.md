@@ -305,3 +305,5 @@ The ActivationMode enum contains the following values:
     }
 
 {% endhighlight %}
+
+Also refer [crosshair and trackball event](./events) for further customization.

@@ -330,7 +330,19 @@ To display the labels after a fixed interval n, set the [`interval`](https://pub
 
 Category axis can also be rendered based on the index values of data source by setting the [`arrangeByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CategoryAxis/arrangeByIndex.html) property to true in the axis.
 
-{% highlight dart %} 
+{% highlight dart %}
+
+    final List<ChartData> chartData = [
+        ChartData('John', 10),
+        ChartData('David', 9),
+        ChartData('Brit', 10),
+    ];
+
+    final List<ChartData> chartData2 = [
+        ChartData('Anto', 11),
+        ChartData('Peter', 12),
+        ChartData('Parker', 8),
+    ];
 
     @override
     Widget build(BuildContext context) {
@@ -341,7 +353,19 @@ Category axis can also be rendered based on the index values of data source by s
                         primaryXAxis: CategoryAxis(
                             // Axis will be rendered based on the index values
                             arrangeByIndex: true
-                        )
+                        ),
+                        series: <ChartSeries<ChartData, String>>[
+                            ColumnSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData sales, _) => sales.x,
+                                yValueMapper: (ChartData sales, _) => sales.y,
+                            ),
+                            ColumnSeries<ChartData, String>(
+                                dataSource: chartData2,
+                                xValueMapper: (ChartData sales, _) => sales.x,
+                                yValueMapper: (ChartData sales, _) => sales.y,
+                            )
+                        ]
                     )
                 )
             )
