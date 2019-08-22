@@ -34,6 +34,7 @@ To render a line chart, create an instance of [`LineSeries`](https://pub.dev/doc
                 child: Container(
                     child: SfCartesianChart(
                         series: <ChartSeries>[
+                            // Renders line chart
                             LineSeries<SalesData, double>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
@@ -71,6 +72,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
                         series: <ChartSeries>[
                             LineSeries<SalesData, String>(
                                 dataSource: chartData,
+                                // Dash values for line
                                 dashArray: <double>[5,5],
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales
@@ -108,6 +110,7 @@ To render a multi-colored line series, map the individual colors to the data usi
                                     SalesData('Apr', 32, Colors.pink),
                                     SalesData('May', 40, Colors.black)
                                 ],
+                                // Bind the color for all the data points from the data source
                                 pointColorMapper:(SalesData sales, _) => sales.segmentColor,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales
@@ -121,9 +124,9 @@ To render a multi-colored line series, map the individual colors to the data usi
 
     class SalesData {
         SalesData(this.year, this.sales, this.segmentColor);
-            final double year;
-            final double sales;
-            final Color segmentColor;
+        final double year;
+        final double sales;
+        final Color segmentColor;
     }
 
 {% endhighlight %}
@@ -147,6 +150,7 @@ To render a multi-colored line series, map the individual colors to the data usi
                 child: Container(
                     child: SfCartesianChart(
                         series: <ChartSeries>[
+                            // Renders fast line chart
                             FastLineSeries<SalesData, double>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
@@ -184,6 +188,7 @@ The following properties are used to customize the appearance:
                 child: Container(
                     child: SfCartesianChart(
                         series: <ChartSeries>[
+                            // Renders area chart
                             AreaSeries<SalesData, double>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
@@ -250,6 +255,7 @@ To render a spline chart, create an instance of [`SplineSeries`](https://pub.dev
                 child: Container(
                     child: SfCartesianChart(
                         series: <ChartSeries>[
+                            // Renders spline chart
                             SplineSeries<SalesData, double>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
@@ -281,7 +287,8 @@ The [`dashArray`]() property of the [`SplineSeries`](https://pub.dev/documentati
                         series: <ChartSeries>[
                             SplineSeries<SalesData, String>(
                                 dataSource: chartData,
-                                dashArray: <double>[5,5],
+                                // Dash values for spline
+                                dashArray: <double>[5, 5],
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales
                             )
@@ -320,6 +327,7 @@ The following code sample demonstrates how to set the [`splineType`](https://pub
                         series: <ChartSeries>[
                             SplineSeries<SalesData, double>(
                                 dataSource: chartData,
+                                // Type of spline
                                 splineType: SplineType.cardinal,
                                 cardinalSplineTension: 0.9,
                                 xValueMapper: (SalesData sales, _) => sales.year,
@@ -354,6 +362,7 @@ To render a column chart, create an instance of [`ColumnSeries`](https://pub.dev
                 child: Container(
                     child: SfCartesianChart(
                         series: <ChartSeries>[
+                            // Renders column chart
                             ColumnSeries<SalesData, double>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
@@ -390,6 +399,7 @@ By default, all the column series that have the same x and y-axes are placed sid
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        // Columns will be rendered back to back
                         enableSideBySideSeriesPlacement: false,
                         series: <ChartSeries>[
                             ColumnSeries<SalesData, double>(
@@ -434,8 +444,8 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales,
-                                width: 0.8,
-                                spacing: 0.2
+                                width: 0.8, // Width of the columns
+                                spacing: 0.2 // Spacing between the columns
                             )
                         ]
                     )
@@ -465,6 +475,7 @@ The [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales,
+                                // Sets the corner radius
                                 borderRadius: BorderRadius.all(Radius.circular(15))
                             )
                         ]
@@ -498,6 +509,7 @@ Renders column with track. Track is a rectangular bar rendered from the start to
                         series: <ChartSeries>[
                             ColumnSeries<SalesData, double>(
                                 dataSource: chartData,
+                                // Renders the track
                                 isTrackVisible: true,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales
@@ -531,6 +543,7 @@ To render a bar chart, create an instance of [`BarSeries`](https://pub.dev/docum
                 child: Container(
                     child: SfCartesianChart(
                         series: <ChartSeries>[
+                            // Renders bar chart
                             BarSeries<SalesData, double>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
@@ -566,8 +579,8 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales,
-                                width: 0.6,
-                                spacing: 0.3
+                                width: 0.6, // Width of the bars
+                                spacing: 0.3 // Spacing between the bars
                             )
                         ]
                     )
@@ -630,6 +643,7 @@ You can render the bar chart with track. Track is a rectangular bar rendered fro
                         series: <ChartSeries>[
                             BarSeries<SalesData, double>(
                                 dataSource: chartData,
+                                // Renders the track
                                 isTrackVisible: true,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales
@@ -673,6 +687,7 @@ Bubble chart requires three fields (X, Y, and Size) to plot a point. Here, [`siz
                 child: Container(
                     child: SfCartesianChart(
                         series: <ChartSeries>[
+                            // Renders bubble chart
                             BubbleSeries<ChartData, double>(
                                 dataSource: chartData,
                                 sizeValueMapper: (ChartData sales, _) => sales.size,
@@ -713,8 +728,8 @@ The [`minimumRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/la
                             BubbleSeries<ChartData, double>(
                                 dataSource: chartData,
                                 sizeValueMapper: (ChartData sales, _) => sales.size,
-                                minimumRadius:9,
-                                maximumRadius: 15,
+                                minimumRadius:9, // Minimum radius of bubble
+                                maximumRadius: 15, // Maximum radius of bubble
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y
                             )
@@ -747,6 +762,7 @@ To render a scatter chart, create an instance of [`ScatterSeries`](https://pub.d
                 child: Container(
                     child: SfCartesianChart(
                         series: <ChartSeries>[
+                            // Renders scatter chart
                             ScatterSeries<ChartData, double>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
@@ -785,6 +801,7 @@ The [`height`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
                                 markerSettings: MarkerSettings(
                                     height: 15,
                                     width: 15,
+                                    // Scatter will render in diamond shape
                                     shape: DataMarkerType.diamond
                                 )
                             )
@@ -816,6 +833,7 @@ To render a step line chart, create an instance of [`StepLineSeries`](https://pu
                 child: Container(
                     child: SfCartesianChart(
                         series: <ChartSeries>[
+                            // Renders step line chart
                             StepLineSeries<ChartData, double>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
@@ -847,7 +865,8 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
                         series: <ChartSeries>[
                             StepLineSeries<ChartData, double>(
                                 dataSource: chartData,
-                                dashArray: <double>[5,5],
+                                // Dashes for step line
+                                dashArray: <double>[5, 5],
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y
                             )
