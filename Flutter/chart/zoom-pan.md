@@ -206,4 +206,4 @@ The [`maximumZoomLevel`](https://pub.dev/documentation/syncfusion_flutter_charts
 
 {% endhighlight %}
 
-Also refer [zooming events](./events) for further customization.
+Also refer [zooming](./events#onzooming), [zoom start](./events#onzoomstart) and [zoom end](./events#onzoomend) events for customizing the zooming further.

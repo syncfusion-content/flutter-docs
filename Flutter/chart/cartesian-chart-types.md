@@ -130,7 +130,7 @@ To render a multi-colored line series, map the individual colors to the data usi
 
 ![Multi-colored line](images/cartesian-chart-types/multiColored_line.jpg)
 
-Also refer, [color palette](./series-customization), [color mapping](./series-customization), [animation](./series-customization), [gradient](./series-customization) and [empty points](./series-customization) for customizing the line series further.
+Also refer, [color palette](./series-customization#color-palette), [color mapping](./series-customization#color-mapping-for-data-points), [animation](./series-customization#animation), [gradient](./series-customization#gradient-fill) and [empty points](./series-customization#empty-points) for customizing the line series further.
 
 ## Fast line chart
 
@@ -166,7 +166,7 @@ Also refer, [color palette](./series-customization), [color mapping](./series-cu
 
 ![Fast line chart](images/cartesian-chart-types/fastline.jpg)
 
-Also refer, [color palette](./series-customization), [color mapping](./series-customization), [animation](./series-customization), [gradient](./series-customization) and [empty points](./series-customization) for customizing the fast line series further.
+Also refer, [color palette](./series-customization#color-palette), [color mapping](./series-customization#color-mapping-for-data-points), [animation](./series-customization#animation), [gradient](./series-customization#gradient-fill) and [empty points](./series-customization#empty-points) for customizing the fast line series further.
 
 ## Area chart
 
@@ -237,7 +237,7 @@ The borders of the area chart can be customized using the [`borderMode`](https:/
 
 ![Area border](images/cartesian-chart-types/area_border.jpg)
 
-Also refer, [color palette](./series-customization), [color mapping](./series-customization), [animation](./series-customization), [gradient](./series-customization) and [empty points](./series-customization) for customizing the area series further.
+Also refer, [color palette](./series-customization#color-palette), [color mapping](./series-customization#color-mapping-for-data-points), [animation](./series-customization#animation), [gradient](./series-customization#gradient-fill) and [empty points](./series-customization#empty-points) for customizing the area series further.
 
 ## Spline chart
 
@@ -342,7 +342,7 @@ The following code sample demonstrates how to set the [`splineType`](https://pub
 
 ![Spline type](images/cartesian-chart-types/cardinal_spline.jpg)
 
-Also refer, [color palette](./series-customization), [color mapping](./series-customization), [animation](./series-customization), [gradient](./series-customization) and [empty points](./series-customization) for customizing the spline series further.
+Also refer, [color palette](./series-customization#color-palette), [color mapping](./series-customization#color-mapping-for-data-points), [animation](./series-customization#animation), [gradient](./series-customization#gradient-fill) and [empty points](./series-customization#empty-points) for customizing the spline series further.
 
 ## Column chart
 
@@ -521,7 +521,7 @@ Renders column with track. Track is a rectangular bar rendered from the start to
 
 ![Track](images/cartesian-chart-types/track_column.jpg)
 
-Also refer, [color palette](./series-customization), [color mapping](./series-customization), [animation](./series-customization), [gradient](./series-customization) and [empty points](./series-customization) for customizing the column series further.
+Also refer, [color palette](./series-customization#color-palette), [color mapping](./series-customization#color-mapping-for-data-points), [animation](./series-customization#animation), [gradient](./series-customization#gradient-fill) and [empty points](./series-customization#empty-points) for customizing the column series further.
 
 ## Bar chart
 
@@ -655,7 +655,7 @@ You can render the bar chart with track. Track is a rectangular bar rendered fro
 
 ![Bar track](images/cartesian-chart-types/track_bar.jpg)
 
-Also refer, [color palette](./series-customization), [color mapping](./series-customization), [animation](./series-customization), [gradient](./series-customization) and [empty points](./series-customization) for customizing the bar series further.
+Also refer, [color palette](./series-customization#color-palette), [color mapping](./series-customization#color-mapping-for-data-points), [animation](./series-customization#animation), [gradient](./series-customization#gradient-fill) and [empty points](./series-customization#empty-points) for customizing the bar series further.
 
 ## Bubble chart
 
@@ -741,7 +741,7 @@ The [`minimumRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/la
 
 ![Bubble size](images/cartesian-chart-types/bubble_radius.jpg)
 
-Also refer, [color palette](./series-customization), [color mapping](./series-customization), [animation](./series-customization), [gradient](./series-customization) and [empty points](./series-customization) for customizing the bubble series further.
+Also refer, [color palette](./series-customization#color-palette), [color mapping](./series-customization#color-mapping-for-data-points), [animation](./series-customization#animation), [gradient](./series-customization#gradient-fill) and [empty points](./series-customization#empty-points) for customizing the bubble series further.
 
 ## Scatter chart
 
@@ -813,7 +813,7 @@ The [`height`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
 
 ![Scatter shape](images/cartesian-chart-types/scatter_shape.jpg)
 
-Also refer, [color palette](./series-customization), [color mapping](./series-customization), [animation](./series-customization), [gradient](./series-customization) and [empty points](./series-customization) for customizing the scatter series further.
+Also refer, [color palette](./series-customization#color-palette), [color mapping](./series-customization#color-mapping-for-data-points), [animation](./series-customization#animation), [gradient](./series-customization#gradient-fill) and [empty points](./series-customization#empty-points) for customizing the scatter series further.
 
 ## Step line chart
 
@@ -878,4 +878,4 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
 
 ![Step line chart](images/cartesian-chart-types/dashed_stepline.jpg)
 
-Also refer, [color palette](./series-customization), [color mapping](./series-customization), [animation](./series-customization), [gradient](./series-customization) and [empty points](./series-customization) for customizing the step line series further.
+Also refer, [color palette](./series-customization#color-palette), [color mapping](./series-customization#color-mapping-for-data-points), [animation](./series-customization#animation), [gradient](./series-customization#gradient-fill) and [empty points](./series-customization#empty-points) for customizing the step line series further.
