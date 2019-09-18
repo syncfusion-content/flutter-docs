@@ -1193,9 +1193,6 @@ You can shown the cumulative data label values using [`showCumulativeValues`](ht
 
 {% endhighlight %}
 
-<!-- ![Stacked cumulative](images/cartesian-chart-types/stacked_area_cumulative.jpg) -->
-
-
 ## Stacked column chart
 
 To render a stacked column chart, create an instance of [`StackedColumnSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedColumnSeries-class.html) and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). The following properties are used to customize the appearance of stacked line series
@@ -1244,7 +1241,6 @@ To render a stacked column chart, create an instance of [`StackedColumnSeries`](
 
 {% endhighlight %}
 
-<!-- ![Stacked column chart](images/cartesian-chart-types/stacked_column.jpg) -->
 
 ### Grouping series
 
@@ -1342,9 +1338,6 @@ You can shown the cumulative data label values using [`showCumulativeValues`](ht
 
 {% endhighlight %}
 
-<!-- ![Stacked column cumulative](images/cartesian-chart-types/stacked_column_cumulative.jpg) -->
-
-
 ## Stacked bar chart
 
 To render a stacked bar chart, create an instance of [`StackedBarSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedBarSeries-class.html) and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). The following properties are used to customize the appearance of stacked line series
@@ -1392,8 +1385,6 @@ To render a stacked bar chart, create an instance of [`StackedBarSeries`](https:
     }
 
 {% endhighlight %}
-
-<!-- ![Stacked column chart](images/cartesian-chart-types/stacked_bar.jpg) -->
 
 ### Grouping series
 
@@ -1490,5 +1481,3 @@ You can shown the cumulative data label values using [`showCumulativeValues`](ht
     }
 
 {% endhighlight %}
-
-<!-- ![Stacked column cumulative](images/cartesian-chart-types/stacked_bar_cumulative.jpg) -->

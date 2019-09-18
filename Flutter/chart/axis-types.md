@@ -624,7 +624,7 @@ Logarithmic axis uses logarithmic scale and displays numbers as axis labels.
 
 {% endhighlight %}
 
-![Logarithmic axis](images/axis-types/logarthmic2.jpg)
+![Logarithmic axis](images/axis-types/logarthmic.jpg)
 
 ### Change logarithmic range
 
