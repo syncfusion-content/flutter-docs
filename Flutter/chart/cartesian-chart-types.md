@@ -1095,8 +1095,6 @@ To render a stacked area chart, create an instance of [`StackedAreaSeries`](http
 
 {% endhighlight %}
 
-<!-- ![Stacked area chart](images/cartesian-chart-types/stacked_area.jpg) -->
-
 ### Grouping series
 
 You can group and stack the similar stacked series types using [`groupName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedAreaSeries/groupName.html) property of stacked series. The stacked series which contains the same [`groupName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedAreaSeries/groupName.html) will be stacked in a single group.  
