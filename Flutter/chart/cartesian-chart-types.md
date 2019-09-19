@@ -964,28 +964,34 @@ You can group and stack the similar stacked series types using [`groupName`](htt
                         series: <ChartSeries>[
                             StackedLineSeries<ChartData, double>(
                                 groupName: 'Group A',
+                                dataLabelSettings: DataLabelSettings(
+                                    isVisible: true,
+                                    useSeriesColor: true
+                                ),
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y1
                             ),
                             StackedLineSeries<ChartData, double>(
                                 groupName: 'Group B',
+                                dataLabelSettings: DataLabelSettings(
+                                    isVisible: true,
+                                    useSeriesColor: true
+                                ),
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y2
                             ),
                             StackedLineSeries<ChartData, double>(
                                 groupName: 'Group A',
+                                dataLabelSettings: DataLabelSettings(
+                                    isVisible: true,
+                                    useSeriesColor: true
+                                ),
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y3
                             ),
-                            StackedLineSeries<ChartData, double>(
-                                groupName: 'Group B',
-                                dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y4
-                            )
                         ]
                     )
                 )   
@@ -994,6 +1000,8 @@ You can group and stack the similar stacked series types using [`groupName`](htt
     }
 
 {% endhighlight %}
+
+![Stacked line grouping](images/cartesian-chart-types/stacked_line_grouping.jpg)
 
 ### Display cumulative values
 
@@ -1010,32 +1018,37 @@ You can shown the cumulative data label values using [`showCumulativeValues`](ht
                         series: <ChartSeries>[
                             StackedLineSeries<ChartData, double>(
                                 groupName: 'Group A',
-                                dataLabelSettings: prefix0.DataLabelSettings(isVisible:true, showCumulativeValues: true),
+                                dataLabelSettings: DataLabelSettings(
+                                    isVisible: true,
+                                    showCumulativeValues: true,
+                                    useSeriesColor: true
+                                ),
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y1
                             ),
                             StackedLineSeries<ChartData, double>(
                                 groupName: 'Group B',
-                                dataLabelSettings: prefix0.DataLabelSettings(isVisible:true, showCumulativeValues: true),
+                                dataLabelSettings: DataLabelSettings(
+                                    isVisible: true,
+                                    showCumulativeValues: true,
+                                    useSeriesColor: true
+                                ),
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y2
                             ),
                             StackedLineSeries<ChartData, double>(
                                 groupName: 'Group A',
-                                dataLabelSettings: prefix0.DataLabelSettings(isVisible:true, showCumulativeValues: true),
+                                dataLabelSettings: DataLabelSettings(
+                                    isVisible: true,
+                                    showCumulativeValues: true,
+                                    useSeriesColor: true
+                                ),
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y3
                             ),
-                            StackedLineSeries<ChartData, double>(
-                                groupName: 'Group B',
-                                dataLabelSettings: prefix0.DataLabelSettings(isVisible:true, showCumulativeValues: true),
-                                dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y4
-                            )
                         ]
                     )
                 )   
@@ -1045,7 +1058,7 @@ You can shown the cumulative data label values using [`showCumulativeValues`](ht
 
 {% endhighlight %}
 
-![Stacked cumulative](images/cartesian-chart-types/stacked_cumulative.jpg)
+![Stacked line cumulative](images/cartesian-chart-types/stacked_line_cumulative.jpg)
 
 ## Stacked area chart
 
@@ -1076,16 +1089,11 @@ To render a stacked area chart, create an instance of [`StackedAreaSeries`](http
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y2
                             ),
-                             StackedAreaSeries<ChartData, double>(
+                            StackedAreaSeries<ChartData, double>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y3
                             ),
-                            StackedAreaSeries<ChartData, double>(
-                                dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y4
-                            )
                         ]
                     )
                 )   
@@ -1094,6 +1102,8 @@ To render a stacked area chart, create an instance of [`StackedAreaSeries`](http
     }
 
 {% endhighlight %}
+
+![Stacked area](images/cartesian-chart-types/stacked_area.jpg)
 
 ### Grouping series
 
@@ -1110,28 +1120,34 @@ You can group and stack the similar stacked series types using [`groupName`](htt
                         series: <ChartSeries>[
                             StackedAreaSeries<ChartData, double>(
                                 groupName: 'Group A',
+                                dataLabelSettings: DataLabelSettings(
+                                    isVisible: true,
+                                    useSeriesColor: true
+                                ),
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y1
                             ),
                             StackedAreaSeries<ChartData, double>(
                                 groupName: 'Group B',
+                                dataLabelSettings: DataLabelSettings(
+                                    isVisible: true,
+                                    useSeriesColor: true
+                                ),
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y2
                             ),
                             StackedAreaSeries<ChartData, double>(
                                 groupName: 'Group A',
+                                dataLabelSettings: DataLabelSettings(
+                                    isVisible: true,
+                                    useSeriesColor: true
+                                ),
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y3
                             ),
-                            StackedAreaSeries<ChartData, double>(
-                                groupName: 'Group B',
-                                dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y4
-                            )
                         ]
                     )
                 )   
@@ -1140,6 +1156,8 @@ You can group and stack the similar stacked series types using [`groupName`](htt
     }
 
 {% endhighlight %}
+
+![Stacked area grouping](images/cartesian-chart-types/stacked_area_grouping.jpg)
 
 ### Display cumulative values
 
@@ -1156,32 +1174,37 @@ You can shown the cumulative data label values using [`showCumulativeValues`](ht
                         series: <ChartSeries>[
                             StackedAreaSeries<ChartData, double>(
                                 groupName: 'Group A',
-                                dataLabelSettings: prefix0.DataLabelSettings(isVisible:true, showCumulativeValues: true),
+                                dataLabelSettings: DataLabelSettings(
+                                    isVisible: true,
+                                    showCumulativeValues: true,
+                                    useSeriesColor: true
+                                ),
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y1
                             ),
                             StackedAreaSeries<ChartData, double>(
                                 groupName: 'Group B',
-                                dataLabelSettings: prefix0.DataLabelSettings(isVisible:true, showCumulativeValues: true),
+                                dataLabelSettings: DataLabelSettings(
+                                    isVisible: true,
+                                    showCumulativeValues: true,
+                                    useSeriesColor: true
+                                ),
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y2
                             ),
                             StackedAreaSeries<ChartData, double>(
                                 groupName: 'Group A',
-                                dataLabelSettings: prefix0.DataLabelSettings(isVisible:true, showCumulativeValues: true),
+                                dataLabelSettings: DataLabelSettings(
+                                    isVisible: true,
+                                    showCumulativeValues: true,
+                                    useSeriesColor: true
+                                ),
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y3
                             ),
-                            StackedAreaSeries<ChartData, double>(
-                                groupName: 'Group B',
-                                dataLabelSettings: prefix0.DataLabelSettings(isVisible:true, showCumulativeValues: true),
-                                dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y4
-                            )
                         ]
                     )
                 )   
@@ -1190,6 +1213,8 @@ You can shown the cumulative data label values using [`showCumulativeValues`](ht
     }
 
 {% endhighlight %}
+
+![Stacked area cumulative](images/cartesian-chart-types/stacked_area_cumulative.jpg)
 
 ## Stacked column chart
 
@@ -1239,6 +1264,7 @@ To render a stacked column chart, create an instance of [`StackedColumnSeries`](
 
 {% endhighlight %}
 
+![Stacked column](images/cartesian-chart-types/stacked_column.jpg)
 
 ### Grouping series
 
@@ -1286,6 +1312,8 @@ You can group and stack the similar stacked series types using [`groupName`](htt
 
 {% endhighlight %}
 
+![Stacked column grouping](images/cartesian-chart-types/stacked_column_grouping.jpg)
+
 ### Display cumulative values
 
 You can shown the cumulative data label values using [`showCumulativeValues`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/showCumulativeValues.html) property. If the series are grouped using [`groupName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedColumnSeries/groupName.html), then cumulative values will be shown based on grouping.
@@ -1301,28 +1329,28 @@ You can shown the cumulative data label values using [`showCumulativeValues`](ht
                         series: <ChartSeries>[
                             StackedColumnSeries<ChartData, double>(
                                 groupName: 'Group A',
-                                dataLabelSettings: prefix0.DataLabelSettings(isVisible:true, showCumulativeValues: true),
+                                dataLabelSettings: DataLabelSettings(isVisible:true, showCumulativeValues: true),
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y1
                             ),
                             StackedColumnSeries<ChartData, double>(
                                 groupName: 'Group B',
-                                dataLabelSettings: prefix0.DataLabelSettings(isVisible:true, showCumulativeValues: true),
+                                dataLabelSettings: DataLabelSettings(isVisible:true, showCumulativeValues: true),
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y2
                             ),
                             StackedColumnSeries<ChartData, double>(
                                 groupName: 'Group A',
-                                dataLabelSettings: prefix0.DataLabelSettings(isVisible:true, showCumulativeValues: true),
+                                dataLabelSettings: DataLabelSettings(isVisible:true, showCumulativeValues: true),
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y3
                             ),
                             StackedColumnSeries<ChartData, double>(
                                 groupName: 'Group B',
-                                dataLabelSettings: prefix0.DataLabelSettings(isVisible:true, showCumulativeValues: true),
+                                dataLabelSettings: DataLabelSettings(isVisible:true, showCumulativeValues: true),
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y4
@@ -1335,6 +1363,8 @@ You can shown the cumulative data label values using [`showCumulativeValues`](ht
     }
 
 {% endhighlight %}
+
+![Stacked column cumulative](images/cartesian-chart-types/stacked_column_cumulative.jpg)
 
 ## Stacked bar chart
 
@@ -1384,6 +1414,8 @@ To render a stacked bar chart, create an instance of [`StackedBarSeries`](https:
 
 {% endhighlight %}
 
+![Stacked bar](images/cartesian-chart-types/stacked_bar.jpg)
+
 ### Grouping series
 
 You can group and stack the similar stacked series types using [`groupName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedBarSeries/groupName.html) property of stacked series. The stacked series which contains the same [`groupName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedBarSeries/groupName.html) will be stacked in a single group.  
@@ -1430,6 +1462,8 @@ You can group and stack the similar stacked series types using [`groupName`](htt
 
 {% endhighlight %}
 
+![Stacked bar grouping](images/cartesian-chart-types/stacked_bar_grouping.jpg)
+
 ### Display cumulative values
 
 You can shown the cumulative data label values using [`showCumulativeValues`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/showCumulativeValues.html) property. If the series are grouped using [`groupName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedBarSeries/groupName.html), then cumulative values will be shown based on grouping.
@@ -1445,28 +1479,28 @@ You can shown the cumulative data label values using [`showCumulativeValues`](ht
                         series: <ChartSeries>[
                             StackedBarSeries<ChartData, double>(
                                 groupName: 'Group A',
-                                dataLabelSettings: prefix0.DataLabelSettings(isVisible:true, showCumulativeValues: true),
+                                dataLabelSettings: DataLabelSettings(isVisible:true, showCumulativeValues: true),
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y1
                             ),
                             StackedBarSeries<ChartData, double>(
                                 groupName: 'Group B',
-                                dataLabelSettings: prefix0.DataLabelSettings(isVisible:true, showCumulativeValues: true),
+                                dataLabelSettings: DataLabelSettings(isVisible:true, showCumulativeValues: true),
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y2
                             ),
                             StackedBarSeries<ChartData, double>(
                                 groupName: 'Group A',
-                                dataLabelSettings: prefix0.DataLabelSettings(isVisible:true, showCumulativeValues: true),
+                                dataLabelSettings: DataLabelSettings(isVisible:true, showCumulativeValues: true),
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y3
                             ),
                             StackedBarSeries<ChartData, double>(
                                 groupName: 'Group B',
-                                dataLabelSettings: prefix0.DataLabelSettings(isVisible:true, showCumulativeValues: true),
+                                dataLabelSettings: DataLabelSettings(isVisible:true, showCumulativeValues: true),
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y4
@@ -1479,3 +1513,5 @@ You can shown the cumulative data label values using [`showCumulativeValues`](ht
     }
 
 {% endhighlight %}
+
+![Stacked bar cumulative](images/cartesian-chart-types/stacked_bar_cumulative.jpg)
