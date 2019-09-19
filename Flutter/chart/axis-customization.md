@@ -748,8 +748,12 @@ Suppose, you want to draw a plot band that should not stretch along its associat
                             plotBands: <PlotBand>[
                             PlotBand(
                             isVisible: true,
-                            associatedAxisStart: 20.5,
-                            associatedAxisEnd: 27.5,
+                            start: DateTime(2018,2,1),
+                            end: DateTime(2018,6,1),
+                            associatedAxisStart: 8,
+                            associatedAxisEnd: 15,
+                            shouldRenderAboveSeries: true,
+                            color: const Color.fromRGBO(224, 155, 0, 1)
                         ),
                     )
                 )
@@ -759,6 +763,7 @@ Suppose, you want to draw a plot band that should not stretch along its associat
 
 {% endhighlight %}
 
+![Segement plotband](images/axis-customization/segment_plotband.jpg)
 
 ## Multiple axes
 
