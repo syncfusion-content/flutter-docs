@@ -16,6 +16,7 @@ Vertical(Y) axis always uses numerical scale. Horizontal(X) axis supports the fo
 * Category
 * Numeric
 * Date-time
+* Logarithmic
 
 ## Numeric axis
 
@@ -600,3 +601,79 @@ The [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
 ![Date format](images/axis-types/datetime_labelFormat.jpg)
 
 Also refer [label format](./axis-customization#formatting-axis-label-content) and [number format](#formatting-the-labels) for formatting the labels further.
+
+## Logarithmic axis
+
+Logarithmic axis uses logarithmic scale and displays numbers as axis labels.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis: NumericAxis(),
+                        primaryYAxis: LogarithmicAxis() 
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![Logarithmic axis](images/axis-types/logarthmic.jpg)
+
+### Change logarithmic range
+
+To customize the range of log axis, you can use the [`minimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LogarithmicAxis/minimum.html), [`maximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LogarithmicAxis/maximum.html) and [`interval`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/interval.html) properties of LogarithmicAxis. By default, range will be calculated automatically based on the provided data.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryYAxis: LogarithmicAxis(
+                            minimum: 300,
+                            maximum: 10000,
+                            interval: 1,
+                        )  
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![Logarithmic range](images/axis-types/logarthmic_range.jpg)
+
+### Change log base value
+
+To customize the log base value, you can use [`logBase`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LogarithmicAxis/logBase.html) property.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryYAxis: LogarithmicAxis(
+                           logBase: 5,
+                        )  
+                    )
+                )
+            )
+        );
+    }
+     
+{% endhighlight %}
+
+![Logarithmic base](images/axis-types/log_base.jpg)
