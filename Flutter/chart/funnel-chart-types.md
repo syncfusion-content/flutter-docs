@@ -7,16 +7,14 @@ control: Chart
 documentation: ug
 ---
 
-# Funnel Chart Type
+# Funnel Chart
 
-## Funnel chart
+To render a funnel chart, create an instance of [`FunnelSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/series.html) property of [`SfFunnelChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart-class.html). The following properties are used to customize the appearance of a funnel segment:
 
-To render a funnel chart, create an instance of [`FunnelSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries-class.html) and add to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/series.html) property of [`SfFunnelChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart-class.html). You can use the following properties to customize the funnel segment appearance.
-
-* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/opacity.html) - used to control the transparency of the chart series.
-* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/borderWidth.html) – used to change the stroke width of the series.
-* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/borderColor.html) – used to change the stroke color of the series.
-* [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/pointColorMapper.html) - used to map the color from data source
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/opacity.html) - Controls the transparency of the chart series.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/borderWidth.html) – Changes the stroke width of the series.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/borderColor.html) – Changes the stroke color of the series.
+* [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/pointColorMapper.html) – Maps the color from data source.
 
 {% highlight dart %} 
 
@@ -54,10 +52,9 @@ To render a funnel chart, create an instance of [`FunnelSeries`](https://pub.dev
 
 ![Funnel chart](images/funnel-charts/funnel.jpg)
 
+## Changing funnel size
 
-### Changing funnel size
-
-You can modify the size of funnel series using [`height`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/height.html) and [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/width.html) properties. It ranges from 0% to 100%.
+You can modify the size of funnel series using the [`height`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/height.html) and [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/width.html) properties. It ranges from 0% to 100%.
 
 {% highlight dart %} 
 
@@ -81,10 +78,9 @@ You can modify the size of funnel series using [`height`](https://pub.dev/docume
 
 ![Funnel size](images/funnel-charts/funnel_size.jpg)
 
+## Changing neck size
 
-### Changing neck size
-
-You can modify the neck size of funnel series using [`neckHeight`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/neckHeight.html) and [`neckWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/neckWidth.html) properties. It ranges from 0% to 100%.
+You can modify the neck size of funnel series using the [`neckHeight`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/neckHeight.html) and [`neckWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/neckWidth.html) properties. It ranges from 0% to 100%.
 
 {% highlight dart %} 
 
@@ -108,9 +104,9 @@ You can modify the neck size of funnel series using [`neckHeight`](https://pub.d
 
 ![Neck size](images/funnel-charts/neck_size.jpg)
 
-### Gap between segments
+## Gap between segments
 
-You can control the gap between the two segments using [`gapRatio`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/gapRatio.html) property. It ranges from 0 to 1.
+You can control the gap between the two segments using the [`gapRatio`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/gapRatio.html) property. It ranges from 0 to 1.
 
 {% highlight dart %} 
 
@@ -133,9 +129,9 @@ You can control the gap between the two segments using [`gapRatio`](https://pub.
 
 ![Funnel gap](images/funnel-charts/funnel_gap.jpg)
 
-### Explode segments
+## Explode segments
 
-You can explode a funnel segment using [`explodeIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/explodeIndex.html) property, and [`explodeOffset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/explodeOffset.html) property is used to specify the exploded segment’s distance.
+You can explode a funnel segment using the [`explodeIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/explodeIndex.html) property. The [`explodeOffset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/explodeOffset.html) property is used to specify the exploded segment’s distance.
 
 Also, the segments can be exploded by tapping the segment.
 
@@ -162,13 +158,13 @@ Also, the segments can be exploded by tapping the segment.
 
 ![Explode](images/funnel-charts/funnel_explode.jpg)
 
-### Smart data labels
+## Smart data labels
 
-The [`smartLabelMode`]() property can be used to place the data labels smartly. The following values are supported by [`smartLabelMode`]().
+The [`smartLabelMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/smartLabelMode.html) property is used to place the data labels smartly. The [`smartLabelMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/smartLabelMode.html) supports the following values:
 
-* [`shift`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmartLabelMode-class.html) - shifts the data label position when intersect with other label and is the default value.
-* [`none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmartLabelMode-class.html) - renders all the data label when intersects.
-* [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmartLabelMode-class.html) - hide the intersect data label.
+* [`shift`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmartLabelMode-class.html) - Shifts the data label position when a label intersects with other label, and it is the default value.
+* [`none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmartLabelMode-class.html) - Renders all the data labels when intersect.
+* [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmartLabelMode-class.html) - Hides the intersecting data label.
 
 {% highlight dart %} 
 
@@ -193,9 +189,9 @@ The [`smartLabelMode`]() property can be used to place the data labels smartly. 
 
 {% endhighlight %}
 
-### Applying palette color
+## Applying palette color
 
-The [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/palette.html) property is used to define the colors for the series available in chart. By default, a set of 10 colors are predefined for applying it to the series. If the colors specified in the series are less than the number of series, than the remaining series are filled with the specified palette colors rotationally.
+The [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/palette.html) property is used to define colors for the series available in chart. By default, a set of 10 colors is predefined for applying it to the series. If the colors specified in the series are less than the number of series, then the remaining series will be filled with the specified palette colors rotationally.
 
 {% highlight dart %} 
 

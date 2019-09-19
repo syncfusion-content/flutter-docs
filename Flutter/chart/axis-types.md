@@ -628,7 +628,7 @@ Logarithmic axis uses logarithmic scale and displays numbers as axis labels.
 
 ### Change logarithmic range
 
-To customize the range of log axis, you can use the [`minimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LogarithmicAxis/minimum.html), [`maximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LogarithmicAxis/maximum.html) and [`interval`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/interval.html) properties of LogarithmicAxis. By default, range will be calculated automatically based on the provided data.
+To customize the range of log axis, use the [`minimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LogarithmicAxis/minimum.html), [`maximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LogarithmicAxis/maximum.html), and [`interval`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/interval.html) properties. By default, the range will be calculated automatically based on the provided data.
 
 {% highlight dart %}
 
@@ -655,7 +655,7 @@ To customize the range of log axis, you can use the [`minimum`](https://pub.dev/
 
 ### Change log base value
 
-To customize the log base value, you can use [`logBase`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LogarithmicAxis/logBase.html) property.
+To customize the log base value, use the [`logBase`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LogarithmicAxis/logBase.html) property.
 
 {% highlight dart %}
 
