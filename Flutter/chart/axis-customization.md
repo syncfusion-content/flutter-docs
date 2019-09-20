@@ -594,7 +594,7 @@ The [`placeLabelsNearAxisLine`](https://pub.dev/documentation/syncfusion_flutter
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis:NumericAxis(
-                            placeLabelNearToAxisLine: true
+                            placeLabelNearToAxisLine: false
                         ),
                         primaryYAxis:NumericAxis(
                             placeLabelNearToAxisLine: false
