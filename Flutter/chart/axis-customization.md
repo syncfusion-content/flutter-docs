@@ -501,9 +501,273 @@ Axis labels may overlap with each other based on chart dimensions and label size
 
 ![Label intesect action](images/axis-customization/smartLabels.jpg)
 
+## Axis crossing
+
+Axis can be positioned anywhere in the plot area using the [`crossesAt`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/crossesAt.html) property. This property specifies where the horizontal axis should intersect or cross the vertical axis, or vice-versa. The default value of the [`crossesAt`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/crossesAt.html) property is *null*.
+
+{% highlight dart %} 
+   
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis:NumericAxis(
+                            crossesAt: 0
+                        ),
+                        primaryYAxis:NumericAxis(
+                            crossesAt: 0
+                        )
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![Axis crossing](images/axis-customization/axis_crossing.jpg)
+
+### Crossing in category axis
+
+For crossing in horizontal category axis, index value should be provided for the [`crossesAt`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/crossesAt.html) property of vertical axis.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis:CategoryAxis(),
+                        primaryYAxis:NumericAxis(
+                            crossesAt: 3
+                        )
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![Category crossing](images/axis-customization/category_crossing.jpg)
+
+### Crossing in date-time axis
+
+For crossing in horizontal date-time axis, date value should be provided for the [`crossesAt`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/crossesAt.html) property of vertical axis.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis:DateTimeAxis(),
+                        primaryYAxis:NumericAxis(
+                            crossesAt: DateTime(2018, 4, 1)
+                        )
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}  
+
+![Datetime crossing](images/axis-customization/datetime_crossing.jpg)
+
+### Positioning the axis labels when crossing
+
+The [`placeLabelsNearAxisLine`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/placeLabelsNearAxisLine.html) property is used to determine whether the axis labels of crossed axis should be placed near to the axis line or not. The default value of [`placeLabelsNearAxisLine`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/placeLabelsNearAxisLine.html) property is *false*.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis:NumericAxis(
+                            placeLabelNearToAxisLine: false
+                        ),
+                        primaryYAxis:NumericAxis(
+                            placeLabelNearToAxisLine: false
+                        )
+                    )
+                )
+            )
+        );
+    } 
+    
+{% endhighlight %}
+
+![Datetime crossing](images/axis-customization/axis_crossing_labels.jpg)
+
+## Plot bands
+
+Plot bands are also known as strip lines, which are used to shade the different ranges in plot area with different colors to improve the readability of the chart. You can also add a text to indicate what that particular region indicates. You can enable the plot bands to be drawn repeatedly at regular intervals. This will be useful when you need to mark an event that occurs recursively along the timeline of the chart.
+
+Since plot bands are drawn based on the axis, you have to add plot bands using the [`plotBands`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/plotBands.html) property of the respective axis. You can also add multiple plot bands to an axis.
+
+The following properties are used to configure the plot bands:
+
+* [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/start.html) – Changes the start position of the plot band.
+* [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/end.html) – Changes the end position of the plot band.
+* [`size`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/size.html) – Changes how long plot band should be expanded. This is applicable only when end is not specified.
+* [`sizeType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/sizeType.html) – Changes the date-time unit of the value specified in the size property. The values can be Year, Month, Day, Hour, Minute, Second, and Millisecond.
+* [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/text.html) – Changes the text of the plot band.
+* [`textAngle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/textAngle.html) – Changes the angle of the text.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/color.html) – Changes the color of the plot band.
+* [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/gradient.html) – Applies gradient color for plot band.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/opacity.html) – Changes the opacity of the plot band.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/borderWidth.html) – Changes the stroke width of the plot band.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/borderColor.html) – Changes the stroke color of the plot band.
+* [`horizontalTextAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/horizontalTextAlignment.html) – Aligns the text horizontally.
+* [`verticalTextAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/verticalTextAlignment.html) – Aligns the text vertically.
+* [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/isVisible.html) – Changes the visibility of the plot band in chart axis.
+* [`shouldRenderAboveSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/shouldRenderAboveSeries.html) – Changes the rendering order of the plot band.
+
+![Plotband](images/axis-customization/plotband.jpg)
+
+### Add plot band for category axis
+
+Plot band can be added to the category axis by specifying index values to the [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/start.html) and [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/end.html) properties.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis:CategoryAxis(
+                            plotBands: <PlotBand>[
+                            PlotBand(
+                            isVisible: true,
+                            start: 1,
+                            end: 2,
+                        ),
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}    
+
+![Category plotband](images/axis-customization/category_plotband.jpg)
+
+### Add plot band for date-time axis
+
+Plot band can be added to the date-time axis by specifying date values to the [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/start.html) and [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/end.html) properties.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis:DateTimeAxis(
+                            plotBands: <PlotBand>[
+                            PlotBand(
+                            isVisible: true,
+                            start: DateTime(2018, 2, 1),
+                            end:  DateTime(2018, 4, 1),
+                        ),
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![DateTime plotband](images/axis-customization/datetime_plotband.jpg)
+
+### Recursive plot band
+
+This feature is used to enable the plot bands to be drawn repeatedly at the regular intervals. This will be useful when you need to mark an event that occurs recursively along the timeline of the chart. The following properties are used to configure this feature:
+
+* [`repeatEvery`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/repeatEvery.html) – Changes the frequency of the plot band being repeated.
+* [`repeatUntil`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/repeatUntil.html) – Specifies the end value at which point strip line has to stop repeating.
+
+The following code snippet and screenshot demonstrate this feature by highlighting weekends.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis:DateTimeAxis(
+                            plotBands: <PlotBand>[
+                            PlotBand(
+                            isVisible: true,
+                            isRepeatable: true,
+                            repeatEvery: 2,
+                            size: 1,
+                            sizeType: DateTimeIntervalType.months,
+                            repeatUntil: DateTime(2018, 6, 1),
+                        ),
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![Recursive plotband](images/axis-customization/recursive_plotband.jpg)
+
+### Segmented plot band
+
+Typically, if you draw a plot band for a vertical axis, the height of the plot band is determined by the start and end properties, and the end of the plot band is equivalent to the end of its associated horizontal axis, i.e., plot band is drawn horizontally to the entire stretch of its associated horizontal axis. Similarly, for horizontal axis, width is determined by the Start and Width properties, and vertically, it is drawn to the entire stretch of the associated vertical axis.
+
+Suppose, you need to draw a plot band that should not stretch along its associated axis, you have to set the [`associatedAxisStart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/associatedAxisStart.html) and [`associatedAxisEnd`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/associatedAxisEnd.html) properties. The values provided in these two properties correspond to its associated axis specified by the [`associatedAxisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/associatedAxisName.html) property in the axis.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis:DateTimeAxis(
+                            plotBands: <PlotBand>[
+                            PlotBand(
+                            isVisible: true,
+                            start: DateTime(2018,2,1),
+                            end: DateTime(2018,6,1),
+                            associatedAxisStart: 8,
+                            associatedAxisEnd: 15,
+                            shouldRenderAboveSeries: true,
+                            color: const Color.fromRGBO(224, 155, 0, 1)
+                        ),
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![Segement plotband](images/axis-customization/segment_plotband.jpg)
+
 ## Multiple axes
 
-By default, chart will render with primary x axis and primary y axis. But the user can add n number of axis to the chart. An additional horizontal or vertical axis can be added to the chart by using the [`axes`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/axes.html) property and then you can associate it to a series by specifying the name of the axis to the [`xAxisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/xAxisName.html) or [`yAxisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/yAxisName.html) property in the series.
+By default, the chart is rendered with primary x axis and primary y axis. But, the users can add n number of axis to the chart. An additional horizontal or vertical axis can be added to the chart using the [`axes`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/axes.html) property, and then you can associate it to a series by specifying the name of the axis to the [`xAxisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/xAxisName.html) or [`yAxisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/yAxisName.html) property in the series.
 
 {% highlight dart %} 
 
