@@ -17,7 +17,7 @@ Create a simple project using the instructions given in the [Getting Started wit
 
 **Add dependency**
 
-Add the Syncfusion Flutter Gauge dependency to your pub spec file.
+Add the Syncfusion Flutter Gauge dependency to your pubspec.yaml file.
 
 {% highlight dart %} 
 
@@ -124,7 +124,7 @@ Axes contain a list of axis elements, where you can add any number of radial axe
 
 ## Add range
 
-Ranges contain a list of range elements, where you can add any number of ranges inside the axis. You can specify the start value, end value, and color for range using the [`startValue`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/startValue.html), [`endValue`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/endValue.html), and color properties as demonstrated in the following code.   
+Ranges contain a list of range elements, where you can add any number of ranges inside the axis. You can specify the start value, end value, and color for range using the [`startValue`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/startValue.html), [`endValue`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/endValue.html), and [`color`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/color.html) properties as demonstrated in the following code.   
 
 {% highlight dart %} 
 
