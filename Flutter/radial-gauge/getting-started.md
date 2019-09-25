@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains the steps required to add the radial gauge and its elements such as title, axis, range, pointer and annotation. This section covers only basic features needed to know to get started with Syncfusion radial gauge. 
 
-## Add Flutter Charts to an application
+## Add Flutter Radial Gauge to an application
 
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
 
