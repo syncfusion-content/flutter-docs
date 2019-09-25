@@ -11,13 +11,13 @@ documentation: ug
 
 This section explains the steps required to add the radial gauge and its elements such as title, axis, range, pointer and annotation. This section covers only basic features needed to know to get started with Syncfusion radial gauge. 
 
-## Add Flutter Charts to an application
+## Add Flutter Radial Gauge to an application
 
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
 
 **Add dependency**
 
-Add the Syncfusion Flutter Gauge dependency to your pub spec file.
+Add the Syncfusion Flutter Gauge dependency to your pubspec.yaml file.
 
 {% highlight dart %} 
 
@@ -124,7 +124,7 @@ Axes contain a list of axis elements, where you can add any number of radial axe
 
 ## Add range
 
-Ranges contain a list of range elements, where you can add any number of ranges inside the axis. You can specify the start value, end value, and color for range using the [`startValue`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/startValue.html), [`endValue`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/endValue.html), and color properties as demonstrated in the following code.   
+Ranges contain a list of range elements, where you can add any number of ranges inside the axis. You can specify the start value, end value, and color for range using the [`startValue`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/startValue.html), [`endValue`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/endValue.html), and [`color`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/color.html) properties as demonstrated in the following code.   
 
 {% highlight dart %} 
 
