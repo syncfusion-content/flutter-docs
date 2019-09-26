@@ -950,7 +950,7 @@ Since the [`RangeColumnSeries`](https://pub.dev/documentation/syncfusion_flutter
 
 ### Data label
 
-In the range column chart when data label is enabled, by default there will be two values dispalyed viz, high and low, but in the other types of cartesian charts, only y value will be displayed.
+In the range column chart when data label is enabled, by default there will be two values displayed viz, high and low, but in the other types of charts, only y value will be displayed.
 
 {% highlight dart %} 
     
