@@ -899,6 +899,91 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
 
 Also refer, [color palette](./series-customization#color-palette), [color mapping](./series-customization#color-mapping-for-data-points), [animation](./series-customization#animation), [gradient](./series-customization#gradient-fill) and [empty points](./series-customization#empty-points) for customizing the step line series further.
 
+## Range column chart
+
+To render a range column chart, create an instance of [`RangeColumnSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RangeColumnSeries-class.html) and add to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). 
+
+Since the [`RangeColumnSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RangeColumnSeries-class.html) requires two Y values for a point, your data should contain high and low values. High and low value specifies the maximum and minimum range of the point. 
+
+* ['highValueMapper'](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/highValueMapper.html) - Field in the data source, which is considered as high value for the data points.
+* [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/lowValueMapper.html) - Field in the data source, which is considered as low value for the data points. 
+
+{% highlight dart %} 
+    
+    @override
+    Widget build(BuildContext context) {
+         return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis: CategoryAxis(),
+                        series: <ChartSeries>[
+                            RangeColumnSeries<ChartData, double>(
+                                dataSource: <ChartData>[
+                                    ChartData('Jan', 3, 9),
+                                    ChartData('Feb', 4, 11),
+                                    ChartData('Mar', 6, 13),
+                                    ChartData('Apr', 9, 17),
+                                    ChartData('May', 12, 20),
+                                ],
+                                xValueMapper: (ChartData sales, _) => sales.x,
+                                lowValueMapper: (ChartData sales, _) => sales.low,
+                                highValueMapper: (ChartData sales, _) => sales.high,
+                            )
+                        ]
+                    )
+                )   
+            )
+        );
+    }
+
+    class ChartData {
+        ChartData(this.x, this.high, this.low);
+            final String x;
+            final double high;
+            final double low;
+    }
+
+{% endhighlight %}
+
+![Range column chart](images/cartesian-chart-types/range_column.jpg)
+
+### Data label
+
+In the range column chart when data label is enabled, by default there will be two values dispalyed viz, high and low, but in the other types of cartesian charts, only y value will be displayed.
+
+{% highlight dart %} 
+    
+    @override
+    Widget build(BuildContext context) {
+         return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis: CategoryAxis(),
+                        series: <ChartSeries>[
+                            RangeColumnSeries<ChartData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData sales, _) => sales.x,
+                                lowValueMapper: (ChartData sales, _) => sales.low,
+                                highValueMapper: (ChartData sales, _) => sales.high,
+                                dataLabelSettings: DataLabelSettings(
+                                    isVisible: true, 
+                                    position: CartesianLabelPosition.top
+                                ),
+                            )
+                        ]
+                    )
+                )   
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![Range column datalabel](images/cartesian-chart-types/range_column_datalabel.jpg)
+
+
 
 ## Stacked line chart
 
