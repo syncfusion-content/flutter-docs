@@ -11,6 +11,10 @@ documentation: ug
 
 This section explains the steps required to populate the chart with data, title, data labels, legend, and tooltips. This section covers only the minimal features needed to know to get started with the chart.
 
+To get start quickly with our Flutter chart widget, you can check on this video:
+
+`youtu.be/t3Dczqj8-10`
+
 ## Add Flutter Charts to an application
 
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
@@ -289,3 +293,5 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
 {% endhighlight %}
 
 ![Tooltip in chart](images/getting-started/tooltip.jpg)
+
+You can find the complete getting started sample from this [`link`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/chart_example2131351808).
