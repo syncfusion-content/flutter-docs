@@ -13,7 +13,7 @@ This section explains the steps required to populate the chart with data, title,
 
 To get start quickly with our Flutter chart widget, you can check on this video:
 
-`youtu.be/t3Dczqj8-10`
+`youtube:t3Dczqj8-10`
 
 ## Add Flutter Charts to an application
 
