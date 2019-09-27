@@ -11,7 +11,9 @@ documentation: ug
 
 This section explains the steps required to populate the chart with data, title, data labels, legend, and tooltips. This section covers only the minimal features needed to know to get started with the chart.
 
-To get start quickly with our Flutter chart widget, you can check on this [`video`](https://youtu.be/t3Dczqj8-10).
+To get start quickly with our Flutter chart widget, you can check on this video.
+
+<html><head><style>#flutterChartVideoTutorial{width : 90% !important; height: 300px !important }</style></head><body><iframe id='flutterChartVideoTutorial' src='https://www.youtube.com/embed/t3Dczqj8-10'></iframe></body></html>
 
 ## Add Flutter Charts to an application
 
