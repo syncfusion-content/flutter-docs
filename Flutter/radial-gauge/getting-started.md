@@ -14,7 +14,7 @@ This section explains the steps required to add the radial gauge and its element
 To get start quickly with our Flutter radial gauge widget, you can check on this video.
 
 <style>#flutterRadialGaugeVideoTutorial{width : 90% !important; height: 300px !important }</style>
-<iframe id='flutterRadialGaugeVideoTutorial' src='https://www.youtube.com/embed/Rjd9NxDFoWo'></iframe>
+<iframe id='flutterRadialGaugeVideoTutorial' src='https://www.youtube.com/embed/2NuipO7j2tA'></iframe>
 
 ## Add Flutter Radial Gauge to an application
 
