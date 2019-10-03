@@ -59,7 +59,8 @@ The following procedure illustrates how to install Essential Studio Flutter plat
 	   **Default Samples location:** C:\Users\Public\Documents\Syncfusion\{platform}\{version}
 	   However, you can change the locations by clicking browse button.
 
-   * Select the **Install Syncfusion Samples** check box to install Syncfusion samples, or leave the check box clear, when you do not want to install Syncfusion samples.
+   * Select the **Install Demos** check box to install Syncfusion samples, or leave the check box clear, when you do not want to install Syncfusion samples.
+   * Select the **Create Desktop Shortcut** checkbox to create the desktop shortcut for Syncfusion Control Panel or leave the check box clear, when you do not want to create desktop shortcut.
    
 
 
