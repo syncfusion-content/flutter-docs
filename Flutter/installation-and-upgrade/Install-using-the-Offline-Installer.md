@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Installation and Deployment process for Syncfusion Essential Studio Flutter products
+title: Installation and Deployment process for Syncfusion Flutter products
 description: Learn how to install and deploy the Syncfusion Flutter component
 platform: flutter
 control: Installation and Deployment
@@ -18,7 +18,7 @@ The following procedure illustrates how to install Essential Studio Flutter plat
 
 2. Double-click the Syncfusion Flutter platform Setup file. The Setup Wizard opens and extracts the package automatically.
 
-   ![](Platform_images/Step-by-Step-Installation_img1.png)
+   ![Setup extraction](Platform_images/Step-by-Step-Installation_img1.png)
 
    N> The Setup wizard extracts the syncfusionessentialflutter_(version).exe dialog, displaying the unzip operation of the package.
 
@@ -35,14 +35,14 @@ The following procedure illustrates how to install Essential Studio Flutter plat
    
    You should enter your Syncfusion Direct-Trac login credentials. If you don't have Syncfusion Direct-Trac login credentials, then you can click on Sign Up to a create new account. Else if you forgot your password, click on Reset Password to create new password. Here Email address and Password is validated and the Platform Selection window opens.
 
-   ![](Platform_images/Step-by-Step-Installation_img2.png)   
+   ![Install using login](Platform_images/Step-by-Step-Installation_img2.png)   
 
 
    **Use Unlock Key**
    
    You should use the Syncfusion License/Trial key. Trial key is valid for 30 days and the installer won't accept the expired trial key. Licensed customer can generate key from [here](https://www.syncfusion.com/kb/2326).
 
-   ![](Platform_images/Step-by-Step-Installation_img3.png)   
+   ![Install using key](Platform_images/Step-by-Step-Installation_img3.png)   
 
 
 4. After reading the License Terms and Conditions, check the **I agree to the License Terms and Conditions** check box.
@@ -51,7 +51,7 @@ The following procedure illustrates how to install Essential Studio Flutter plat
 5. Click Next. Select the Installation, Samples Folder and Advanced Options screen opens. To install in the displayed default location, click Install
 
 
-    ![](Platform_images/Step-by-Step-Installation_img4.png)
+    ![Advanced options](Platform_images/Step-by-Step-Installation_img4.png)
 
 
     N> From the 2018 Volume 2 release, Syncfusion has changed the install and samples location 
@@ -66,11 +66,11 @@ The following procedure illustrates how to install Essential Studio Flutter plat
 6.  Click Install.
 
 
-    ![](Platform_images/Step-by-Step-Installation_img5.png)
+    ![Installa progress](Platform_images/Step-by-Step-Installation_img5.png)
 
 7. The Completed screen is displayed once the Flutter platform is installed.
 
-    ![](Platform_images/Step-by-Step-Installation_img6.png)
+    ![Finish wizard](Platform_images/Step-by-Step-Installation_img6.png)
 
 
 8. Select the **Run Syncfusion Control Panel** check box to launch the Syncfusion Control Panel after installing.

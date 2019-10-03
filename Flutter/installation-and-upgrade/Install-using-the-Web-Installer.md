@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Installation and Deployment process for Syncfusion Essential Studio Flutter products
+title: Installation and Deployment process for Syncfusion Flutter products
 description: Learn how to install and deploy the Syncfusion Flutter component
 platform: flutter
 control: Installation and Deployment
