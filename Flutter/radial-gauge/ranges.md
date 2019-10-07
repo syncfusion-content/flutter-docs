@@ -43,10 +43,10 @@ Widget build(BuildContext context) {
 
  The following properties are used for the range customization,
 
-[`color`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/color.html) – used to specifies the color for the range
-[`startWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/startWidth.html) – used to specify the star width of the range either in logical pixel or factor
-[`endWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/endWidth.html) – used to specify the end width of the range either in logical pixel or factor
-[`sizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/sizeUnit.html) – specifies whether the start and end width of the range is set in logical pixel or factor
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/color.html) – used to specifies the color for the range
+* [`startWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/startWidth.html) – used to specify the star width of the range either in logical pixel or factor
+* [`endWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/endWidth.html) – used to specify the end width of the range either in logical pixel or factor
+* [`sizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/sizeUnit.html) – specifies whether the start and end width of the range is set in logical pixel or factor
 
 {% highlight dart %}
 

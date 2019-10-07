@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Syncfusion Flutter Gauge Title
-description: Learn how to add chart title and customize its appearance in the Flutter Charts.
+description: Learn how to add gauge title and customize its appearance in the Flutter Charts.
 platform: flutter
-control: Chart
+control: SfRadialGauge
 documentation: ug
 ---
 

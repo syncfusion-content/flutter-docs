@@ -57,7 +57,7 @@ Widget build(BuildContext context) {
 
 ## Radius customization
 
-The radius of the radial axis can be customized using its [`radiusFactor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/radiusFactor.html) property. The default value of the [`radiusFactor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/radiusFactor.html) is 0.95. The value of [`radiusFactor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/radiusFactor.html) ranges from 0 to 1. For example, When the [`radiusFactor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/radiusFactor.html) value is 1, the full radius will be considered for rendering the axis and when when the [‘radiusFactor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/radiusFactor.html) value is 0.5, then half of the radius value will be considered for rendering the circle.
+The radius of the radial axis can be customized using its [`radiusFactor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/radiusFactor.html) property. The default value of the [`radiusFactor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/radiusFactor.html) is 0.95. The value of [`radiusFactor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/radiusFactor.html) ranges from 0 to 1. For example, When the [`radiusFactor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/radiusFactor.html) value is 1, the full radius will be considered for rendering the axis and when when the [`radiusFactor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/radiusFactor.html) value is 0.5, then half of the radius value will be considered for rendering the circle.
 
 {% highlight dart %}
 
@@ -104,7 +104,7 @@ Widget build(BuildContext context) {
 
 ## Axis label rotation
 
-The axis label can be rotated based on its current angle by using [‘needsRotateLabels`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/needsRotateLabels.html) property of axis. The default value of [‘needsRotateLabels`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/needsRotateLabels.html) is false.
+The axis label can be rotated based on its current angle by using [`needsRotateLabels`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/needsRotateLabels.html) property of axis. The default value of [`needsRotateLabels`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/needsRotateLabels.html) is false.
 
 {% highlight dart %}
 
@@ -201,7 +201,7 @@ Widget build(BuildContext context) {
 
 ## Interval
 
-The [`interval`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/interval.html) between labels can be customized using the [‘interval’](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/interval.html) property of axis.
+The [`interval`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/interval.html) between labels can be customized using the [`interval`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/interval.html) property of axis.
 
 {% highlight dart %}
 
@@ -278,7 +278,7 @@ Widget build(BuildContext context) {
 
 **Dashed axis line**
 
-The [‘dashArray`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLineStyle/dashArray.html) property of [‘axisLineStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLineStyle-class.html) allows to render the dashed axis line.
+The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLineStyle/dashArray.html) property of [`axisLineStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLineStyle-class.html) allows to render the dashed axis line.
 
 {% highlight dart %}
 
@@ -302,7 +302,7 @@ Widget build(BuildContext context) {
 
 **Axis line visibility**
 
-The visibility of the axis line can be customized using [‘showAxisLine`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/showAxisLine.html) property of axis. By default, the property is set as true
+The visibility of the axis line can be customized using [`showAxisLine`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/showAxisLine.html) property of axis. By default, the property is set as true
 
 {% highlight dart %}
 
