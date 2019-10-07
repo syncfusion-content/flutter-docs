@@ -9,15 +9,17 @@ documentation: ug
 
 # Annotation
 
-[`Radial axis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis-class.html) allows you to add multiple widgets such as text, image as an annotation to the specific point of interest in radial gauge.
+[`Radial axis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis-class.html) allows you to add multiple widgets such as text and image as an annotation to a specific point of interest in radial gauge.
 
-The following properties are available in the [`annotation`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation-class.html) in order to customizes the position and alignment of the [`annotation widget`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/widget.html)
+The following properties are available in [`annotation`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation-class.html) to customizes the position and alignment of [`annotation widget`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/widget.html)
 
-* [`angle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/angle.html) – allows to position the annotation using the angle
-* [`axisValue`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/axisValue.html) – allows to position the annotation using the axis value
-* [`positionFactor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/positionFactor.html) – used to specify the factor value to position the annotation based on the provided [`axis value`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/axisValue.html) or [`angle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/angle.html)
-* [`horizontalAlignment`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/horizontalAlignment.html) – specifies the horizontal alignment for positioning the annotation widget
-* [`verticalAlignment`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/verticalAlignment.html) – specifies the vertical alignment for positioning the annotation
+* [`angle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/angle.html) – Allows to position the annotation using the angle.
+
+* [`axisValue`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/axisValue.html) –  Allows to position the annotation using the axis value.
+
+* [`positionFactor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/positionFactor.html) –Specifies the factor value to position the annotation based on the provided [`axis value`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/axisValue.html) or [`angle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/angle.html)
+* [`horizontalAlignment`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/horizontalAlignment.html) – Specifies the horizontal alignment for positioning the annotation widget.
+* [`verticalAlignment`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/verticalAlignment.html) – Specifies the vertical alignment for positioning the annotation.
 
 {% highlight dart %}
 
@@ -42,10 +44,9 @@ Widget build(BuildContext context) {
 
 ![default annotation position](images/annotation/annotation_default_position.jpg)
 
-** Positioning annotation**
+**Positioning annotation**
 
-The annotation can be positioned either using the [`angle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/angle.html) or [`axis value`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/axisValue.html). Both when providing both the [`angle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/angle.html) and the [`axis value`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/axisValue.html), priority will be provided to the angle value. 
-The following example shows to position the annotation widget using angle
+The annotation can be positioned either using the [`angle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/angle.html) or [`axis value`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/axisValue.html). When providing both the [`angle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/angle.html) and the [`axis value`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/axisValue.html), priority will be provided to the angle value. The following example shows how to position the annotation widget using angle.
 
 {% highlight dart %}
 
@@ -68,7 +69,7 @@ Widget build(BuildContext context) {
 
 ![annotation position with angle](images/annotation/annottaion_angle.jpg)
 
-The below code example shows to position the annotation using [`axis value`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/axisValue.html)
+The following code example shows how to position the annotation using [`axis value`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/axisValue.html)
 
 {% highlight dart %}
 @override
@@ -89,13 +90,13 @@ Widget build(BuildContext context) {
 
 ![annotation position with axis](images/annotation/annottaion_axis.jpg)
 
-[`PositionFactor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/positionFactor.html) is used to move the annotation widget from the center of axis to edge of the axis.  For example, when you specify the [`positionFactor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/positionFactor.html) as 0.5, then the annotation widget will be moved from center towards the corresponding direction with the distance of half of radius value of axis .
+[`PositionFactor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/positionFactor.html)is used to move the annotation widget from the center of axis to the edge of the axis. For example, when you specify the [`positionFactor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/positionFactor.html) as 0.5, the annotation widget will be moved from the center towards the corresponding direction with the distance of half of the radius value of axis.
 
 By default, the value of [`positionFactor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/positionFactor.html) is 0. 
 
 ## Setting image for annotation
 
-Annotations provide options to add any image over the gauge control with respect to its offset position. You can add multiple images in single control
+Annotations provide options to add any image over the gauge control with respect to its offset position. You can add multiple images in a single control.
 
 {% highlight dart %}
 @override
@@ -125,12 +126,9 @@ Widget build(BuildContext context) {
           child: Container(child:Text('73°F',
               style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 25)) ,),
-        )
-      ],) , angle: 270, positionFactor: 0.1)
-
-    ]
-)],)
+                  fontSize: 25)) ,),)
+      ],) , angle: 270, positionFactor: 0.1)]
+    )])
   );
 }
 
@@ -140,8 +138,9 @@ Widget build(BuildContext context) {
 
 ## Alignment of annotation
 
-[Annotation](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation-class.html) can be aligned to [`center`], [`near`] and[`far`] using the [`horizontalAlignment`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/horizontalAlignment.html) and [`verticalAlignment`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/verticalAlignment.html) property of annotation
-The below code example demonstrates how to set the [`horizontalAlignment`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/horizontalAlignment.html) for annotation
+[Annotation](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation-class.html) can be aligned to [`center`], [`near`] and[`far`] using the [`horizontalAlignment`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/horizontalAlignment.html) and [`verticalAlignment`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/verticalAlignment.html) properties of annotation.
+
+The following code example demonstrates how to set the [`horizontalAlignment`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/horizontalAlignment.html) for annotation
 
 {% highlight dart %}
 @override
@@ -165,7 +164,7 @@ Widget build(BuildContext context) {
 
 ![horizontal alignment](images/annotation/annotation_horizontal.jpg)
 
-The below code example demonstrates how to set the [`verticalAlignment`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/verticalAlignment.html) for annotation,
+The following code example demonstrates how to set [`verticalAlignment`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/verticalAlignment.html) for annotation,
 
 {% highlight dart %}
 
