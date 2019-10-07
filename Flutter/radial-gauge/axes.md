@@ -324,7 +324,7 @@ Widget build(BuildContext context) {
 
 ## Label style customization
 
-The axis labels can be customized using the [`axisLabelStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/axisLabelStyle.html) property of axis. The following properties can be customized using the [`axislabelStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/axisLabelStyle.html)
+The axis labels can be customized using the [`axisLabelStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/axisLabelStyle.html) property of axis. The following properties can be customized using the [`axisLabelStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/axisLabelStyle.html)
 
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeTextStyle/color.html) – allows to customize the color of the labels
 * [`fontFamily`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeTextStyle/fontFamily.html) – allows to specify the font family for labels
