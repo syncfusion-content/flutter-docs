@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion Flutter Gauge Range
-description: Learn how to add and customizes ranges
+description: Learn how to add and customizes ranges of radial gauge control
 platform: flutter
 control: SfRadialGauge
 documentation: ug

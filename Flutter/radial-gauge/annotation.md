@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion Flutter Gauge Annotation
-description: Learn how to add and customizes annotation
+description: Learn how to add and customizes gauge annotation of radial gauge control
 platform: flutter
 control: SfRadialGauge
 documentation: ug

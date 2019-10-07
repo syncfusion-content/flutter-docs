@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Syncfusion Flutter Gauge Axis
+title: Axis of Syncfusion Flutter Gauge
 description: Learn how to add and customizes axis and its element
 platform: flutter
 control: SfRadialGauge

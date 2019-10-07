@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion Flutter Gauge Pointers
-description: Learn how to add and customizes pointers
+description: Learn how to add and customizes pointers of radial gauge control
 platform: flutter
 control: SfRadialGauge
 documentation: ug
@@ -484,13 +484,13 @@ Widget build(BuildContext context) {
 ## Pointer Animation
 The [`enableAnimation`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugePointer/enableAnimation.html) property of pointer allows to enable or disable animation for pointer. The gauge pointers has following animation type.
 
-* bounceOut
-* ease
-* easeInCirc
-* easeOutBack
-* elasticOut
-* linear
-* slowMiddle
+* [`bounceOut`]
+* [`ease`]
+* [`easeInCirc`]
+* [`easeOutBack`]
+* [`elasticOut`]
+* [`linear`]
+* [`slowMiddle`]
 
 The animation type can be changed with [`animationType`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugePointer/animationType.html) property of pointer. By default the animation type is linear.
 
