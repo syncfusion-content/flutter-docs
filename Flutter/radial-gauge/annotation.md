@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion Flutter Gauge Annotation
-description: Learn how to add and customizes gauge annotation of radial gauge control
+description: This article describes how to add and customizes the appearence gauge annotation of radial gauge control in flutter platform
 platform: flutter
 control: SfRadialGauge
 documentation: ug
@@ -25,15 +25,18 @@ The following properties are available in the [`annotation`](https://pub.dev/doc
 Widget build(BuildContext context) {
   return Scaffold(
       body: Center(
-      child: SfRadialGauge(
-      axes: <RadialAxis>[RadialAxis(
-      annotations: <GaugeAnnotation>[
-      GaugeAnnotation(axisValue: 50, positionFactor: 0.4,
-      widget: Text('50.0', style:
-      TextStyle(fontWeight: FontWeight.bold, fontSize: 20),))]
-  )],)
-      ));
-  }
+        child: SfRadialGauge(
+          axes: <RadialAxis>[RadialAxis(
+            annotations: <GaugeAnnotation>[
+              GaugeAnnotation(axisValue: 50, positionFactor: 0.4,
+              widget: Text('50.0', style:
+              TextStyle(fontWeight: FontWeight.bold, fontSize: 20),))]
+            )
+          ],
+        )
+      )
+    );
+}
 
 {% endhighlight %}
 

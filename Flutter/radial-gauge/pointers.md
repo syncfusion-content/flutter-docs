@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion Flutter Gauge Pointers
-description: Learn how to add and customizes pointers of radial gauge control
+description: This article describes how to add and customizes the appearence of pointers of radial gauge control in flutter platform
 platform: flutter
 control: SfRadialGauge
 documentation: ug
@@ -406,7 +406,7 @@ Widget build(BuildContext context) {
 
 ![range pointer customization](images/pointers/pointer_customization.jpg)
 
- The default value of [`SizeUnit`] is [`GaugeSizeUnit`].logicalPixel.
+ The default value of [`SizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RangePointer/sizeUnit.html) is [`GaugeSizeUnit.logicalPixel`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeSizeUnit-class.html).
 
  **Corner customization**
 

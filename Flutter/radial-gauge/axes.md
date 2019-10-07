@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Axis of Syncfusion Flutter Gauge
-description: Learn how to add and customizes axis and its element
+description: This article describes how to add and customizes the appearence of radial axis and its element of radial gauge in flutter platform
 platform: flutter
 control: SfRadialGauge
 documentation: ug
@@ -358,7 +358,7 @@ Widget build(BuildContext context) {
 
 The following property of the axis allows to customize the axis label text
 
-* [‘labelFormat`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/labelFormat.html) - allows to add prefix or suffix with the axis labels
+* [`labelFormat`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/labelFormat.html) - allows to add prefix or suffix with the axis labels
 
 {% highlight dart %}
 
