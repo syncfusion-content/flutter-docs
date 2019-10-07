@@ -63,7 +63,7 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 
-![annotation position with angle](images/range/annottaion_angle.jpg)
+![annotation position with angle](images/annotation/annottaion_angle.jpg)
 
 The below code example shows to position the annotation using [`axis value`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/axisValue.html)
 
@@ -84,7 +84,7 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 
-![annotation position with axis](images/range/annottaion_axis.jpg)
+![annotation position with axis](images/annotation/annottaion_axis.jpg)
 
 [`PositionFactor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/positionFactor.html) is used to move the annotation widget from the center of axis to edge of the axis.  For example, when you specify the [`positionFactor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/positionFactor.html) as 0.5, then the annotation widget will be moved from center towards the corresponding direction with the distance of half of radius value of axis .
 
@@ -133,7 +133,7 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 
-![image annotation](images/range/image_annottaion.jpg)
+![image annotation](images/annotation/image_annottaion.jpg)
 
 ## Alignment of annotation
 
@@ -160,7 +160,7 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 
-![horizontal alignment](images/range/annotation_horizontal.jpg)
+![horizontal alignment](images/annotation/annotation_horizontal.jpg)
 
 The below code example demonstrates how to set the [`verticalAlignment`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/verticalAlignment.html) for annotation,
 
@@ -184,4 +184,4 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 
-![vertical alignment](images/range/annotation_vertical.jpg)
+![vertical alignment](images/annotation/annotation_vertical.jpg)
