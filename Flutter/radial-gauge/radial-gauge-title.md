@@ -24,7 +24,7 @@ The following properties are used to customize the appearance of title:
 
 ## Text Alignment
 
-You can align the title text content horizontally to the near, center, or far to the chart using the [`alignment`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeTitle/alignment.html) property of[`title`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeTitle-class.html).
+You can align the title text content horizontally to the near, center, or far to the gauge using the [`alignment`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeTitle/alignment.html) property of[`title`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeTitle-class.html).
 
 {% highlight dart %} 
 
