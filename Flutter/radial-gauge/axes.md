@@ -7,11 +7,13 @@ control: SfRadialGauge
 documentation: ug
 ---
 
-# Axes
+# Axis
 
 The [`radial axis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis-class.html) is a circular arc in which a set of values are displayed along a linear or custom scale based on the design requirements. Axis elements such as  labels, ticks, and axis line can be easily customized with built-in properties.
 
-## Axis minimum and maximum 
+## Axis Customization
+
+**Axis minimum and maximum** 
 
 The [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/minimum.html) and [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/maximum.html) properties of an axis can be used to customize the axis range.The default value of [minimum](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/minimum.html) is 0, and the default value of [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/maximum.html) is 100.
 
@@ -34,7 +36,7 @@ Widget build(BuildContext context) {
 
 ![axis range](images/axis/axis_range.jpg)
 
-## Angle Customization
+**Angle Customization**
 
 The start and end angles of radial axis can be customized using the [`startAngle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/startAngle.html) and [`endAngle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/startAngle.html) properties.
 
@@ -57,7 +59,7 @@ Widget build(BuildContext context) {
 
 ![axis angle customization](images/axis/axis_angle.jpg)
 
-## Radius customization
+**Radius customization**
 
 The radius of the radial axis can be customized using the [`radiusFactor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/radiusFactor.html) property. The default value of the [`radiusFactor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/radiusFactor.html) is 0.95. The value of [`radiusFactor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/radiusFactor.html) ranges from 0 to 1. For example, When the [`radiusFactor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/radiusFactor.html) value is 1, the full radius will be considered for rendering the axis, and when the [`radiusFactor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/radiusFactor.html) value is 0.5, then half of the radius value will be considered for rendering the circle.
 
@@ -79,7 +81,7 @@ Widget build(BuildContext context) {
 
 ![axis radius customization](images/axis/axis_radius.jpg)
 
-## Axis position customization
+**Axis position customization**
 
 The position of the [`radial axis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis-class.html) can be customized using the [`centerX`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/centerX.html) and [`centerY`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/centerY.html) values. The default value of [`centerX`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/centerX.html) and [`centerY`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/centerY.html) properties is 0.5. Therefore, the axis will be positioned in the center of provided size of gauge.
 
@@ -105,7 +107,7 @@ Widget build(BuildContext context) {
 
 ![axis position customization](images/axis/axis_center.jpg)
 
-## Axis label rotation
+**Axis label rotation**
 
 The axis label can be rotated based on its current angle using the [`needsRotateLabels`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/needsRotateLabels.html) property of axis. The default value of [`needsRotateLabels`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/needsRotateLabels.html) is false.
 
@@ -126,7 +128,7 @@ Widget build(BuildContext context) {
 
 ![axis label rotation](images/axis/axis_rotate.jpg)
 
-## Edge label customization
+**Edge label customization**
 
 The visibility of the first and last labels of an axis can be customized using the [`showFirstLabel`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/showFirstLabel.html) and [`showLastLabel`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/showLastLabel.html) properties. 
 
@@ -154,7 +156,7 @@ Widget build(BuildContext context) {
 
 ![axis edge label](images/axis/axis_showfirstlabel.jpg)
 
-## Axis direction customization
+**Axis direction customization**
 
 The direction of [`radial axis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis-class.html) can be customized by its [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/isInversed.html) property. 
 
@@ -177,7 +179,7 @@ Widget build(BuildContext context) {
 
 ![axis direction](images/axis/axis_inversed.jpg)
 
-## Maximum number of labels per 100 logical pixels
+**Maximum number of labels per 100 logical pixels**
 
 By default, a maximum of three labels are displayed for each 100 logical pixels in an axis. The maximum number of labels that should present within 100 logical pixels length can be customized using the [`maximumLabels`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/maximumLabels.html) property of the axis. This property is applicable only for automatic range calculation and will not work if you set value for interval property of an axis.
 
@@ -198,7 +200,7 @@ Widget build(BuildContext context) {
 
 ![axis maximum labels](images/axis/axis_maximumlabels.jpg)
 
-## Interval
+**Interval**
 
 The [`interval`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/interval.html) between labels can be customized using the  [`interval`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/interval.html) property of axis.
 
@@ -219,7 +221,7 @@ Widget build(BuildContext context) {
 
 ![axis label interval](images/axis/axis_interval.jpg)
 
-## Axis line customization
+**Axis line customization**
 
 The radial axis line can be customized using the [`axisLineStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/axisLineStyle.html) property. The following properties can be customized using [`axisLineStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/axisLineStyle.html).
 
@@ -249,7 +251,7 @@ Widget build(BuildContext context) {
 
 ![axis line customization](images/axis/axis_color.jpg)
 
-##  Rounded Corners
+**Rounded Corners**
 
 The [`cornerStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLineStyle/cornerStyle.html) property of [`axisLineStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLineStyle-class.html) specifies the corner type for axis line. The corners can be customized using the bothFlat, bothCurve, startCurve, and endCurve options. The default value of this property is bothFlat.
 
