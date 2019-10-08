@@ -322,7 +322,7 @@ The axis labels can be customized using the [`axisLabelStyle`](https://pub.dev/d
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeTextStyle/color.html) – Allows to customize the color of the labels.
 * [`fontFamily`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeTextStyle/fontFamily.html) – Allows to specify the font family for labels.
 * [`fontStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeTextStyle/fontStyle.html) – Allows to specify the font style for labels.
-* [‘fontWeight`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeTextStyle/fontWeight.html) – Allows to specify the font weight for labels.
+* [`fontWeight`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeTextStyle/fontWeight.html) – Allows to specify the font weight for labels.
 * [`fontSize`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeTextStyle/fontSize.html) – Allows to specify the font size for labels.
 
 {% highlight dart %}

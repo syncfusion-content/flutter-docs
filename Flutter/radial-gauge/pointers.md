@@ -549,7 +549,7 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 
-![pointer animation](images/pointers/multiple_pointer.jpg)
+![pointer animation](images/pointers/animation.gif)
 
 ## Pointer Dragging
 
@@ -579,7 +579,7 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 
-![pointer dragging](images/pointers/multiple_pointer.jpg)
+![pointer dragging](images/pointers/pointer-interaction.gif)
 
 ## Event
 
