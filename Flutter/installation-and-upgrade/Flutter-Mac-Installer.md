@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Installation and Deployment process for Syncfusion Essential Studio Flutter
+title: Mac installation process for Syncfusion Essential Studio Flutter
 description: Learn how to install and deploy the Syncfusion Flutter component
 platform: flutter
 control: Installation and Deployment
