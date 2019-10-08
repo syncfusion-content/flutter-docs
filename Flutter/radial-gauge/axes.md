@@ -13,7 +13,7 @@ The [`radial axis`](https://pub.dev/documentation/syncfusion_flutter_gauges/late
 
 ## Axis minimum and maximum 
 
-The [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/minimum.html) and [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/maximum.html) properties of an axis can be used to customize the axis range.The default value of [minimum](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/minimum.html) is 0, and the default value of [‘maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/maximum.html) is 100.
+The [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/minimum.html) and [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/maximum.html) properties of an axis can be used to customize the axis range.The default value of [minimum](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/minimum.html) is 0, and the default value of [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/maximum.html) is 100.
 
 {% highlight dart %}
 
@@ -156,7 +156,7 @@ Widget build(BuildContext context) {
 
 ## Axis direction customization
 
-The direction of [`radial axis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis-class.html) can be customized by its [isInversed`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/isInversed.html) property. 
+The direction of [`radial axis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis-class.html) can be customized by its [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/isInversed.html) property. 
 
 When the [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/isInversed.html) property is true, the axis can be placed in counter-clockwise direction. When the  [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/isInversed.html) property is set to false, the axis will be positioned in clockwise direction.
 
@@ -221,13 +221,13 @@ Widget build(BuildContext context) {
 
 ## Axis line customization
 
-The radial axis line can be customized using the [axisLineStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/axisLineStyle.html) property. The following properties can be customized using [`axisLineStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/axisLineStyle.html).
+The radial axis line can be customized using the [`axisLineStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/axisLineStyle.html) property. The following properties can be customized using [`axisLineStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/axisLineStyle.html).
 
 * [`thickness`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLineStyle/thickness.html) – Customizes the thickness of axis line.
 * [`thicknessUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLineStyle/thicknessUnit.html) – Allows to specify the thickness of the axis either in logical pixel or factor. Its default value is logicalPixel.
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLineStyle/color.html) – Customizes the color of the axis line.
 * [`cornerStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLineStyle/cornerStyle.html) – Allows to customize the corner of the axis line.
-* [dashArray](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLineStyle/dashArray.html) – Allows to customize the axis line as dashed circular arc.
+* [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLineStyle/dashArray.html) – Allows to customize the axis line as dashed circular arc.
 
 {% highlight dart %}
 
@@ -542,7 +542,7 @@ Widget build(BuildContext context) {
 
 **Tick position customization**
 
-The ticks can be moved near or far to the axis line using the [`tickOffset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/tickOffset.html) property. The [‘offsetUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/offsetUnit.html) property of axis allows to specify the tick offset either in factor or logical pixels, and the default value of [`offsetUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/offsetUnit.html) is logicalPixel.
+The ticks can be moved near or far to the axis line using the [`tickOffset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/tickOffset.html) property. The [`offsetUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/offsetUnit.html) property of axis allows to specify the tick offset either in factor or logical pixels, and the default value of [`offsetUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/offsetUnit.html) is logicalPixel.
 
 The default value of tick offset is 0. While setting offset for the ticks, the axis labels are also moved along with the ticks.
 
@@ -589,7 +589,7 @@ Widget build(BuildContext context) {
 
 **Label position customization**
 
-The [`labelOffset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/labelOffset.html) property allows the adjust the distance between the tick end and the labels. The [‘offsetUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/offsetUnit.html) property of axis allows to specify the label offset either in factor or logical pixels. By default, the value of the label offset is 15.
+The [`labelOffset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/labelOffset.html) property allows to adjust the distance between the tick end and the labels. The [`offsetUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/offsetUnit.html) property of axis allows to specify the label offset either in factor or logical pixels. By default, the value of the label offset is 15.
 
 {% highlight dart %}
 
