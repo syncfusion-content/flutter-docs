@@ -41,7 +41,7 @@ Widget build(BuildContext context) {
 
 The following properties are used for the range customization:
 
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/color.html) – u Specifies the color for the range.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/color.html) – Specifies the color for the range.
 
 * [`startWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/startWidth.html) – Specifies the start width of the range either in logical pixels or factor.
 
@@ -71,7 +71,7 @@ Widget build(BuildContext context) {
 
 ![range thickness](images/range/range_thickness.jpg)
 
-When the [`sizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/sizeUnit.html) is set as logical pixels, the range will be rendered based on the provided logical pixel values in[startWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/startWidth.html) and [`endWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/endWidth.html)
+When the [`sizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/sizeUnit.html) is set as logical pixels, the range will be rendered based on the provided logical pixel values in [`startWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/startWidth.html) and [`endWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/endWidth.html)
 
 If the [`sizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/sizeUnit.html) is set as factor, the provided factor value in the start width and end width will be multiplied with the axis radius, respectively. The factor value ranges from 0 to 1.
 
@@ -82,7 +82,7 @@ If the [`sizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/late
 If the [‘sizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/sizeUnit.html) is set as logical pixels, then the range will be moved based on the provided logical pixel value.
 
 If the [`sizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/sizeUnit.html) is set as factor, the factor value will be multiplied with the axis radius.Then the pointer will be moved to the corresponding value
-The [`sizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/sizeUnit.html) property is common for the [rangeOffset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/rangeOffset.html), [`startWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/startWidth.html) and the [`endWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/endWidth.html) properties. The default value of [`sizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/sizeUnit.html) is logicalPixel.
+The [`sizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/sizeUnit.html) property is common for the [`rangeOffset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/rangeOffset.html), [`startWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/startWidth.html) and the [`endWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/endWidth.html) properties. The default value of [`sizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/sizeUnit.html) is logicalPixel.
 
 {% highlight dart %}
 
