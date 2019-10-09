@@ -15,7 +15,7 @@ The [`radial axis`](https://pub.dev/documentation/syncfusion_flutter_gauges/late
 
 **Axis minimum and maximum** 
 
-The [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/minimum.html) and [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/maximum.html) properties of an axis can be used to customize the axis range.The default value of [minimum](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/minimum.html) is 0, and the default value of [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/maximum.html) is 100.
+The [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/minimum.html) and [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/maximum.html) properties of an axis can be used to customize the axis range.The default value of [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/minimum.html) is 0, and the default value of [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/maximum.html) is 100.
 
 {% highlight dart %}
 
