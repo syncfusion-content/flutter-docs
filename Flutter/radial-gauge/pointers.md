@@ -49,7 +49,7 @@ The [`enableAnimation`](https://pub.dev/documentation/syncfusion_flutter_gauges/
 
 * `bounceOut`
 * `ease`
-* `easeInCirc`
+* `easeInCir`
 * `easeOutBack`
 * `elasticOut`
 * `linear`
