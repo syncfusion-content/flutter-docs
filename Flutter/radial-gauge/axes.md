@@ -15,7 +15,7 @@ The [`radial axis`](https://pub.dev/documentation/syncfusion_flutter_gauges/late
 
 **Axis minimum and maximum** 
 
-The [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/minimum.html) and [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/maximum.html) properties of an axis can be used to customize the axis range.The default value of [minimum](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/minimum.html) is 0, and the default value of [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/maximum.html) is 100.
+The [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/minimum.html) and [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/maximum.html) properties of an axis can be used to customize the axis range.The default value of [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/minimum.html) is 0, and the default value of [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/maximum.html) is 100.
 
 {% highlight dart %}
 
@@ -38,7 +38,7 @@ Widget build(BuildContext context) {
 
 **Angle Customization**
 
-The start and end angles of radial axis can be customized using the [`startAngle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/startAngle.html) and [`endAngle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/startAngle.html) properties.
+The start and end angles of radial axis can be customized using the [`startAngle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/startAngle.html) and [`endAngle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/endAngle.html) properties.
 
 {% highlight dart %}
 
@@ -615,7 +615,7 @@ Widget build(BuildContext context) {
 
 The [`offsetUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/offsetUnit.html)  property of axis is common for both the [`tickOffset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/tickOffset.html) and [`labelOffset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/labelOffset.html)
 
-N > [`GaugeSizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeSizeUnit-class.html) allows to specify the value either in logical pixels or in factor. GaugeSizeUnit.factor ranges from 0 to 1. For example, when setting factor as 0.5, the half of axis radius value will be considered.
+N> [`GaugeSizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeSizeUnit-class.html) allows to specify the value either in logical pixels or in factor. GaugeSizeUnit.factor ranges from 0 to 1. For example, when setting factor as 0.5, the half of axis radius value will be considered.
 
 ## Multiple axis
 
