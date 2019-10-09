@@ -138,7 +138,7 @@ Widget build(BuildContext context) {
 
 ## Alignment of annotation
 
-[Annotation](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation-class.html) can be aligned to [`center`], [`near`] and[`far`] using the [`horizontalAlignment`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/horizontalAlignment.html) and [`verticalAlignment`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/verticalAlignment.html) properties of annotation.
+[Annotation](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation-class.html) can be aligned to center, near and far using the [`horizontalAlignment`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/horizontalAlignment.html) and [`verticalAlignment`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/verticalAlignment.html) properties of annotation.
 
 The following code example demonstrates how to set the [`horizontalAlignment`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAnnotation/horizontalAlignment.html) for annotation
 
