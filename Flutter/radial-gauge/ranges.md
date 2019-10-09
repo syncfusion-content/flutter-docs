@@ -79,7 +79,7 @@ If the [`sizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/late
 
  The range can be moved far or near to the axis line with using the [`rangeOffset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/rangeOffset.html) property. The property can be specified either in the logical pixels or the factor value.
 
-If the [‘sizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/sizeUnit.html) is set as logical pixels, then the range will be moved based on the provided logical pixel value.
+If the [`sizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/sizeUnit.html) is set as logical pixels, then the range will be moved based on the provided logical pixel value.
 
 If the [`sizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/sizeUnit.html) is set as factor, the factor value will be multiplied with the axis radius.Then the pointer will be moved to the corresponding value
 The [`sizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/sizeUnit.html) property is common for the [`rangeOffset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/rangeOffset.html), [`startWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/startWidth.html) and the [`endWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/endWidth.html) properties. The default value of [`sizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/sizeUnit.html) is logicalPixel.

@@ -38,7 +38,7 @@ Widget build(BuildContext context) {
 
 **Angle Customization**
 
-The start and end angles of radial axis can be customized using the [`startAngle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/startAngle.html) and [`endAngle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/startAngle.html) properties.
+The start and end angles of radial axis can be customized using the [`startAngle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/startAngle.html) and [`endAngle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/endAngle.html) properties.
 
 {% highlight dart %}
 

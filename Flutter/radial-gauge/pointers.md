@@ -11,7 +11,7 @@ documentation: ug
 
  Pointer is used to indicate values on an axis. The radial gauge control has three types of pointers: 
 
-[`Marker pointer`]((https://help.syncfusion.com/flutter/radial-gauge/marker-pointer)
+[`Marker pointer`](https://help.syncfusion.com/flutter/radial-gauge/marker-pointer)
 [`Needle pointer`](https://help.syncfusion.com/flutter/radial-gauge/needle-pointer)
 [`Range pointer`](https://help.syncfusion.com/flutter/radial-gauge/range-pointer)
 
@@ -47,13 +47,13 @@ Widget build(BuildContext context) {
 ## Pointer Animation
 The [`enableAnimation`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugePointer/enableAnimation.html) property of pointer allows to enable or disable animation for pointer. The gauge pointers has following animation type:
 
-* [`bounceOut`]
-* [`ease`]
-* [`easeInCirc`]
-* [`easeOutBack`]
-* [`elasticOut`]
-* [`linear`]
-* [`slowMiddle`]
+* `bounceOut`
+* `ease`
+* `easeInCirc`
+* `easeOutBack`
+* `elasticOut`
+* `linear`
+* `slowMiddle`
 
 The animation type can be changed using the [`animationType`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugePointer/animationType.html)property of pointer. By default, the animation type is linear.
 
@@ -119,7 +119,7 @@ Widget build(BuildContext context) {
 
 ## Event
 
-[`onValueChanged`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugePointer/onValueChanged.html) Occurs whenever the pointer value is changed while dragging.
+[`onValueChanged`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugePointer/onValueChanged.html) - Occurs whenever the pointer value is changed while dragging.
 
 {% highlight dart %}
 
