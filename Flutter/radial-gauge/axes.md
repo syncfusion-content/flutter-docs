@@ -325,7 +325,7 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 
-![axis gradient line](images/axis/axis_dasharray.jpg)
+![axis gradient line](images/axis/axis_gradient.jpg)
 
 **Axis line visibility**
 
