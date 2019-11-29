@@ -294,18 +294,18 @@ The following code shows how to apply the gradient color for the tail.
                       needleLength: 0.8,
                       needleEndWidth:  11,
                       tailStyle: TailStyle(length: 0.2, width: 11,
-                        gradient: const LinearGradient(
+                        gradient:LinearGradient(
                             colors: <Color>[
                               Color(0xFFFF6B78), Color(0xFFFF6B78),
                               Color(0xFFE20A22), Color(0xFFE20A22)],
                             stops: <double>[0, 0.5, 0.5, 1]),
                       ),
-                      gradient: const LinearGradient(
+                      gradient: LinearGradient(
                           colors: <Color>[
                         Color(0xFFFF6B78), Color(0xFFFF6B78),
                         Color(0xFFE20A22), Color(0xFFE20A22)],
                           stops: <double>[0, 0.5, 0.5, 1]),
-                      needleColor: const Color(0xFFF67280),
+                      needleColor: Color(0xFFF67280),
                       knobStyle: KnobStyle(
                           knobRadius: 0.08,
                           sizeUnit: GaugeSizeUnit.factor,
