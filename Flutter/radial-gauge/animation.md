@@ -1,0 +1,84 @@
+---
+layout: post
+title: Syncfusion Flutter Gauge Animation
+description: This article describes how to add and customizes the appearence gauge annotation of radial gauge control in flutter platform
+platform: flutter
+control: SfRadialGauge
+documentation: ug
+---
+
+# Animation
+
+## Initial animation
+
+Radial gauge allows to animate all its features with its `enableLoadingAnimation` property. But the property value is false. The animation duration can be controlled by the `animationDuration` property of gauge.
+
+override
+Widget build(BuildContext context) {
+   return Scaffold(
+      body: Center(
+        child: SfRadialGauge(
+      enableLoadingAnimation: true, animationDuration: 4500,
+      axes: <RadialAxis>[
+        RadialAxis(minimum: 0,maximum: 150,
+            ranges: <GaugeRange>[
+              GaugeRange(startValue: 0,endValue: 50,color: Colors.green,startWidth: 10,endWidth: 10),
+              GaugeRange(startValue: 50,endValue: 100,color: Colors.orange,startWidth: 10,endWidth: 10),
+              GaugeRange(startValue: 100,endValue: 150,color: Colors.red,startWidth: 10,endWidth: 10)],
+            pointers: <GaugePointer>[NeedlePointer(value:90, )],
+            annotations: <GaugeAnnotation>[
+              GaugeAnnotation(widget: Container(child:
+              Text('90.0',style: TextStyle(fontSize: 25,fontWeight:FontWeight.bold))),
+                  angle: 90,positionFactor: 0.5)]
+          )]
+        ),
+      ),
+    );
+  }
+
+{% endhighlight %}
+
+![gauge loading animation](images/animation/initial_Animation.gif)
+
+## Pointer Animation
+The [`enableAnimation`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugePointer/enableAnimation.html) property of pointer allows to enable or disable animation for pointer. The gauge pointers has following animation type:
+
+* `bounceOut`
+* `ease`
+* `easeInCir`
+* `easeOutBack`
+* `elasticOut`
+* `linear`
+* `slowMiddle`
+
+The animation type can be changed using the [`animationType`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugePointer/animationType.html)property of pointer. By default, the animation type is linear.
+
+{% highlight dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: Center(
+              child: SfRadialGauge(
+                axes: <RadialAxis>[RadialAxis( 
+                 axisLineStyle: AxisLineStyle(thickness: 30), showTicks: false,
+                 pointers: <GaugePointer>[NeedlePointer(value: 60, enableAnimation: true,
+                 needleStartWidth: 0,
+                   needleEndWidth: 5, needleColor: Color(0xFFDADADA),
+                   knobStyle: KnobStyle(color: Colors.white, borderColor: Color(0xFFDADADA),
+                       knobRadius: 0.06,
+                       borderWidth: 0.04),
+                   tailStyle: TailStyle(color:Color(0xFFDADADA), width: 5,
+                   length: 0.15)
+                    ),
+                   RangePointer(value: 60, width: 30, enableAnimation: true, color: Colors.orange)
+                 ]
+                )],
+              )
+            ),
+          );
+        }
+
+{% endhighlight %}
+
+![pointer animation](images/animation/animation.gif)

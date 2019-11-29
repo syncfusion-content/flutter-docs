@@ -49,6 +49,8 @@ The following properties are used for the range customization:
 
 * [`sizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/sizeUnit.html) – Specifies whether the start width and end width of the range are set in logical pixels or factor.
 
+* `gradient` - Specifies the gradient color for the range.
+
 {% highlight dart %}
 
 @override
@@ -74,6 +76,39 @@ Widget build(BuildContext context) {
 When the [`sizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/sizeUnit.html) is set as logical pixels, the range will be rendered based on the provided logical pixel values in [`startWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/startWidth.html) and [`endWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/endWidth.html)
 
 If the [`sizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/sizeUnit.html) is set as factor, the provided factor value in the start width and end width will be multiplied with the axis radius, respectively. The factor value ranges from 0 to 1.
+
+**Gradient support**
+
+ The `gradient` property of [`range`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange-class.html) allows to specify the smooth color transition to pointer by specifying the different colors based on provided factor value.
+
+{% highlight dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+      body: Center(
+          child: SfRadialGauge(
+            axes: <RadialAxis>[RadialAxis(
+                ranges: <GaugeRange>[
+                  GaugeRange(startValue: 30,
+                      endValue: 65,
+                      gradient: const SweepGradient(
+                          colors: <Color>[Color(0xFFBC4E9C), Color(0xFFF80759)],
+                          stops: <double>[0.25, 0.75]),
+                      startWidth: 5,
+                      endWidth: 20
+                  )
+                ]
+            )
+            ],
+          )
+      ),
+    );
+  }
+
+{% endhighlight %}
+
+![range gradient](images/range/range_gradient.jpg)
 
 **Position customization**
 

@@ -45,6 +45,8 @@ The needle can be customized using the following properties:
 
 * [`needleColor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer/needleColor.html) – Specifies the needle color.
 
+* `gradient` - Specifies the gradient color for the needle.
+
 **Needle length customization**
 
 The needle length can be controlled using the [`needleLength`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer/needleLength.html) and [`lengthUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer/lengthUnit.html) properties. The length can be set either in logical pixels or factor using [`lengthUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer/lengthUnit.html). 
@@ -98,6 +100,45 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 
 ![needle width customization](images/needle-pointer/needle_customization.jpg)
+
+**Gradient support for needle**
+
+ The `gradient` property of [`needle pointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer-class.html) allows to specify the smooth color transition to pointer by specifying the different colors based on provided factor value.
+
+ {% highlight dart %}
+@override
+Widget build(BuildContext context) {
+ return Scaffold(
+      body: Center(
+        child: SfRadialGauge(
+            axes: <RadialAxis>[RadialAxis(,
+                pointers: <GaugePointer>[
+                  NeedlePointer(
+                      value: 65,
+                      lengthUnit: GaugeSizeUnit.factor,
+                      needleLength: 0.8,
+                      needleEndWidth:  11,
+                      gradient: const LinearGradient(
+                          colors: <Color>[
+                        Color(0xFFFF6B78), Color(0xFFFF6B78),
+                        Color(0xFFE20A22), Color(0xFFE20A22)],
+                          stops: <double>[0, 0.5, 0.5, 1]),
+                      needleColor: const Color(0xFFF67280),
+                      knobStyle: KnobStyle(
+                          knobRadius: 0.08,
+                          sizeUnit: GaugeSizeUnit.factor,
+                          color: Colors.black)),
+                ]
+            ),
+            ]
+        ),
+      ),
+    );
+  }
+
+{% endhighlight %}
+
+![needle pointer gradient](images/needle-pointer/needle_gradient.jpg)
 
 ## Knob customization
 
@@ -181,8 +222,12 @@ The [`tail`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gaug
 * [`lengthUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/TailStyle/lengthUnit.html) – Specifies whether the tail length value is defined in logical pixels or factor.
 
 * [`width`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/TailStyle/width.html) – Specifies the width for the tail.
+
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/TailStyle/borderColor.html) –  Allows to specify the border color of tail.
+
 * [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/TailStyle/borderWidth.html) – Allows to specify the border width of tail.
+
+* `gradient` - Specifies the gradient color for the tail.
 
 By default, the value of [`lengthUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/TailStyle/lengthUnit.html) is GaugeSizeUnit.factor.The factor value ranges from 0 to 1. When the length is set to 0.2, 20 % of axis radius value will be considered as tail length.The following code example shows how to specify the length in factor. 
 
@@ -233,6 +278,49 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 
 ![needle tail customization](images/needle-pointer/tail_border.jpg)
+
+The following code shows how to apply the gradient color for the tail.
+
+@override
+ Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfRadialGauge(
+            axes: <RadialAxis>[RadialAxis(
+                pointers: <GaugePointer>[
+                  NeedlePointer(
+                      value: 65,
+                      lengthUnit: GaugeSizeUnit.factor,
+                      needleLength: 0.8,
+                      needleEndWidth:  11,
+                      tailStyle: TailStyle(length: 0.2, width: 11,
+                        gradient: const LinearGradient(
+                            colors: <Color>[
+                              Color(0xFFFF6B78), Color(0xFFFF6B78),
+                              Color(0xFFE20A22), Color(0xFFE20A22)],
+                            stops: <double>[0, 0.5, 0.5, 1]),
+                      ),
+                      gradient: const LinearGradient(
+                          colors: <Color>[
+                        Color(0xFFFF6B78), Color(0xFFFF6B78),
+                        Color(0xFFE20A22), Color(0xFFE20A22)],
+                          stops: <double>[0, 0.5, 0.5, 1]),
+                      needleColor: const Color(0xFFF67280),
+                      knobStyle: KnobStyle(
+                          knobRadius: 0.08,
+                          sizeUnit: GaugeSizeUnit.factor,
+                          color: Colors.black)),
+                ]
+            ),
+          ]
+        ),
+      ),
+    );
+  }
+
+{% endhighlight %}
+
+![needle tail gradient](images/needle-pointer/tail_gradient.jpg)
 
 
 
