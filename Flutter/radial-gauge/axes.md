@@ -230,7 +230,7 @@ The radial axis line can be customized using the [`axisLineStyle`](https://pub.d
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLineStyle/color.html) – Customizes the color of the axis line.
 * [`cornerStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLineStyle/cornerStyle.html) – Allows to customize the corner of the axis line.
 * [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLineStyle/dashArray.html) – Allows to customize the axis line as dashed circular arc.
-* `gradient` - Allows to apply the gradient color for axis line.
+* `gradient` - Allows to apply the gradient for axis line.
 
 {% highlight dart %}
 
@@ -297,7 +297,7 @@ Widget build(BuildContext context) {
 
 ![dashed axis line](images/axis/axis_dasharray.jpg)
 
-**Gradient color support**
+**Gradient support**
 
 The `gradient` property of [`axisLineStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLineStyle-class.html) allows to specify the smooth color transition to the axis line by specifying the different colors based on provided factor value.
 
@@ -350,7 +350,7 @@ Widget build(BuildContext context) {
 
 **Background image support**
 
-[`Radial axis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis-class.html) allows to provide an image as its background with its `backgroundImage` property.
+[`Radial axis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis-class.html) allows to add an image frame as its background using `backgroundImage` property.
 
 {% highlight dart %}
 
