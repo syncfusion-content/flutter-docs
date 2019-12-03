@@ -11,7 +11,7 @@ documentation: ug
 
 ## Initial animation
 
-Radial gauge allows to animate all its features with its `enableLoadingAnimation` property. But the property value is false. The animation duration can be controlled by the `animationDuration` property of gauge.
+The radial gauge allows all of its elements to be animated with `enableLoadingAnimation` property. The default value for this property is false. The duration of the animation can be controlled by `animationDuration` property of the gauge.
 
 override
 Widget build(BuildContext context) {
@@ -41,7 +41,7 @@ Widget build(BuildContext context) {
 ![gauge loading animation](images/animation/initial_Animation.gif)
 
 ## Pointer Animation
-The [`enableAnimation`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugePointer/enableAnimation.html) property of pointer allows to enable or disable animation for pointer. The gauge pointers has following animation type:
+The [`enableAnimation`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugePointer/enableAnimation.html) property of pointer allows to enable or disable animation for pointer. The gauge pointer has following animation type:
 
 * `bounceOut`
 * `ease`
