@@ -230,6 +230,7 @@ The radial axis line can be customized using the [`axisLineStyle`](https://pub.d
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLineStyle/color.html) – Customizes the color of the axis line.
 * [`cornerStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLineStyle/cornerStyle.html) – Allows to customize the corner of the axis line.
 * [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLineStyle/dashArray.html) – Allows to customize the axis line as dashed circular arc.
+* `gradient` - Allows to apply the gradient for axis line.
 
 {% highlight dart %}
 
@@ -296,6 +297,36 @@ Widget build(BuildContext context) {
 
 ![dashed axis line](images/axis/axis_dasharray.jpg)
 
+**Gradient support**
+
+The `gradient` property of [`axisLineStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLineStyle-class.html) allows to specify the smooth color transition to the axis line by specifying the different colors based on provided factor value.
+
+{% highlight dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: Center(
+     child: SfRadialGauge(
+            axes:<RadialAxis>[RadialAxis(
+                axisLineStyle: AxisLineStyle(thickness: 0.1,
+                thicknessUnit: GaugeSizeUnit.factor,
+                  gradient: const SweepGradient(
+                      colors: <Color>[Color(0xFFFF7676), Color(0xFFF54EA2)],
+                      stops: <double>[0.25, 0.75]
+                  ),
+                )
+              ),
+            ]
+        ),
+    ),
+  );
+}
+
+{% endhighlight %}
+
+![axis gradient line](images/axis/axis_gradient.jpg)
+
 **Axis line visibility**
 
 The visibility of the axis line can be customized using the [`showAxisLine`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/showAxisLine.html) property of axis. By default, this property is set to true.
@@ -316,6 +347,100 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 
 ![axis line visibility](images/axis/axis_showline.jpg)
+
+**Background image support**
+
+[`Radial axis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis-class.html) allows to add an image frame as its background using `backgroundImage` property.
+
+{% highlight dart %}
+
+@override
+ Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Padding(
+          padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+          child: SfRadialGauge(
+            axes: <RadialAxis>[
+              RadialAxis(showAxisLine: false,
+                  radiusFactor: 1, 
+                  showLastLabel: false,
+                  needsRotateLabels: true,
+                  tickOffset: 0.32,
+                  offsetUnit: GaugeSizeUnit.factor,
+                  onLabelCreated: axisLabelCreated,
+                  startAngle: 270,
+                  endAngle: 270,
+                  labelOffset: 0.05,
+                  maximum: 360,
+                  minimum: 0,
+                  interval: 30,
+                  minorTicksPerInterval: 4,
+                  axisLabelStyle: GaugeTextStyle(color: const Color(0xFF949494)),
+                  minorTickStyle: MinorTickStyle(color: const Color(0xFF616161),
+                      thickness: 1.6,
+                      length: 0.058,
+                      lengthUnit: GaugeSizeUnit.factor),
+                  majorTickStyle: MajorTickStyle(color: const Color(0xFF949494),
+                      thickness: 2.3,
+                      length: 0.087,
+                      lengthUnit: GaugeSizeUnit.factor),
+                  backgroundImage: const AssetImage(
+                      'images/dark_theme_gauge.png'),
+                  pointers: <GaugePointer>[
+                    MarkerPointer(value: 90,
+                        color: const Color(0xFFDF5F2D),
+                        enableAnimation: true,
+                        animationDuration: 1200,
+                        markerOffset: 0.71,
+                        offsetUnit: GaugeSizeUnit.factor,
+                        markerType: MarkerType.triangle,
+                        markerHeight: 10,
+                        markerWidth: 15)
+                  ],
+                  annotations: <GaugeAnnotation>[
+                    GaugeAnnotation(angle: 270,
+                      positionFactor:  0.025,
+                      widget: Text('90',
+                        style: TextStyle(
+                          color: const Color(0xFFDF5F2D),
+                            fontWeight: FontWeight.bold,
+                            fontSize: 22
+                            )
+                          )
+                        )
+                  ]
+              )
+            ],
+          ),
+        )
+      ),
+    );
+  }
+
+  void axisLabelCreated(AxisLabelCreatedArgs args) {
+    if (args.text == '90') {
+      args.text = 'E';
+      args.labelStyle = GaugeTextStyle(
+          color: const Color(0xFFDF5F2D));
+    }else{
+      if (args.text == '0') {
+        args.text = 'N';
+      }else if (args.text == '180') {
+        args.text = 'S';
+      } else if (args.text == '270') {
+        args.text = 'W';
+      }
+
+      args.labelStyle = GaugeTextStyle(
+          color: const Color(0xFFFFFFFF),
+      );
+    }
+  }
+
+{% endhighlight %}
+
+![axis background image](images/axis/axis_label.jpg)
 
 ## Label style customization
 

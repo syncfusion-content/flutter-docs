@@ -44,49 +44,6 @@ Widget build(BuildContext context) {
 
 ![multiple pointers](images/pointers/multiple_pointer.jpg)
 
-## Pointer Animation
-The [`enableAnimation`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugePointer/enableAnimation.html) property of pointer allows to enable or disable animation for pointer. The gauge pointers has following animation type:
-
-* `bounceOut`
-* `ease`
-* `easeInCir`
-* `easeOutBack`
-* `elasticOut`
-* `linear`
-* `slowMiddle`
-
-The animation type can be changed using the [`animationType`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugePointer/animationType.html)property of pointer. By default, the animation type is linear.
-
-{% highlight dart %}
-
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-              child: SfRadialGauge(
-                axes: <RadialAxis>[RadialAxis( 
-                 axisLineStyle: AxisLineStyle(thickness: 30), showTicks: false,
-                 pointers: <GaugePointer>[NeedlePointer(value: 60, enableAnimation: true,
-                 needleStartWidth: 0,
-                   needleEndWidth: 5, needleColor: Color(0xFFDADADA),
-                   knobStyle: KnobStyle(color: Colors.white, borderColor: Color(0xFFDADADA),
-                       knobRadius: 0.06,
-                       borderWidth: 0.04),
-                   tailStyle: TailStyle(color:Color(0xFFDADADA), width: 5,
-                   length: 0.15)
-                    ),
-                   RangePointer(value: 60, width: 30, enableAnimation: true, color: Colors.orange)
-                 ]
-                )],
-              )
-            ),
-          );
-        }
-
-{% endhighlight %}
-
-![pointer animation](images/pointers/animation.gif)
-
 ## Pointer Dragging
 
 Pointers can be dragged over the scale value. It can be achieved by clicking and dragging the pointer. To enable or disable the pointer drag, use the [`enableDragging`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugePointer/enableDragging.html) property.
@@ -119,7 +76,13 @@ Widget build(BuildContext context) {
 
 ## Event
 
+`onValueChangeStart` - Occurs whenever the pointer starts to drag.
+
+`onValueChanging` - Occurs before the current drag value gets updated as pointer value. The `cancel` argument of `ValueChangingArgs` allows to restrict the update of current drag value as pointer value.
+
 [`onValueChanged`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugePointer/onValueChanged.html) - Occurs whenever the pointer value is changed while dragging.
+
+`onValueChangeEnd` - Occurs once the dragging of the pointer gets completed.
 
 {% highlight dart %}
 
@@ -131,12 +94,19 @@ Widget build(BuildContext context) {
                 axes: <RadialAxis>[RadialAxis(
                   pointers: <GaugePointer>[ RangePointer(value: 30, 
                   enableDragging: true,
+                  onValueChanging: onValueChanging,
                   onValueChanged: onvalueChanged)]
                 )],
               )
             ),
           );
         }
+
+void onValueChanging(ValueChangingArgs args){
+  if(args.value > 60){
+      args.cancel = true;
+  }
+}
 
 void onvalueChanged(double value){
 

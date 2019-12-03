@@ -64,6 +64,37 @@ Widget build(BuildContext context) {
 
  The default value of [`SizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RangePointer/sizeUnit.html) is [`GaugeSizeUnit.logicalPixel`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeSizeUnit-class.html).
  
+ **Gradient support**
+
+ The `gradient` property of [`range pointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RangePointer-class.html) allows to specify the smooth color transition to pointer by specifying the different colors based on provided factor value.
+
+ {% highlight dart %}
+
+@override
+Widget build(BuildContext context) {
+   return Scaffold(
+      body: Center(
+        child: SfRadialGauge(
+            axes:<RadialAxis>[RadialAxis( 
+                axisLineStyle: AxisLineStyle(thickness: 0.1,
+                  thicknessUnit: GaugeSizeUnit.factor,),
+              pointers: <GaugePointer>[RangePointer(
+                value: 40, width: 0.1, sizeUnit: GaugeSizeUnit.factor,
+                gradient: const SweepGradient(
+                    colors: <Color>[Color(0xFFCC2B5E), Color(0xFF753A88)],
+                    stops: <double>[0.25, 0.75]
+                ),
+              )]
+            ),
+          ]
+        ),
+      ),
+    );
+  }
+
+{% endhighlight %}
+
+![range pointer gradient](images/range-pointer/pointer_gradient.jpg)
 
  ## Corner customization
 
