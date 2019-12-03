@@ -41,7 +41,7 @@ Widget build(BuildContext context) {
 ![gauge loading animation](images/animation/initial_Animation.gif)
 
 ## Pointer Animation
-The [`enableAnimation`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugePointer/enableAnimation.html) property of pointer allows to enable or disable animation for pointer. The gauge pointer has following animation type:
+The [`enableAnimation`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugePointer/enableAnimation.html) property of pointer allows to enable or disable animation for pointer. The gauge pointer has the following animation type:
 
 * `bounceOut`
 * `ease`
