@@ -49,7 +49,7 @@ The following properties are used for the range customization:
 
 * [`sizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/sizeUnit.html) – Specifies whether the start width and end width of the range are set in logical pixels or factor.
 
-* `gradient` - Specifies the gradient color for the range.
+* `gradient` - Specifies the gradient for the range.
 
 {% highlight dart %}
 
