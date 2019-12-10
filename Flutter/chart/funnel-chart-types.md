@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion Funnel Chart Types
-description: Learn how to customize funnel charts available in Syncfusion Flutter Chart.
+description: Learn how to add and customize the funnel type chart available in Syncfusion Flutter Chart.
 platform: flutter
 control: Chart
 documentation: ug

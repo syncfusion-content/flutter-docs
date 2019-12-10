@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion Cartesian Chart types
-description: Leart what are the different types of Charts available in Flutter Charts.
+description: Learn what are the different types of Cartesian Charts available in the Flutter Charts.
 platform: flutter
 control: Chart
 documentation: ug
@@ -1887,7 +1887,7 @@ To render a 100% stacked area chart, create an instance of `StackingArea100Serie
 
 {% endhighlight %}
 
-![100% Stacked Area chart](images/cartesian-chart-types/)
+![Stacked 100Area chart](images/cartesian-chart-types/)
 
 ## 100% Stacked Column Chart
 
@@ -1937,7 +1937,7 @@ To render a 100% stacked column chart, create an instance of `StackedColumn100Se
 
 {% endhighlight %}
 
-![100% stacked column chart](images/cartesian-chart-types/stacked100_column.png)
+![Stacked 100 column chart](images/cartesian-chart-types/stacked100_column.png)
 
 ### Column width and spacing
 
@@ -1977,7 +1977,7 @@ The `width` property is used to change the width of the rectangle. The default v
 
 {% endhighlight %}
 
-![100% Stacked column width and spacing](images/cartesian-chart-types)
+![Stacked 100 column width and spacing](images/cartesian-chart-types)
 
 ## 100% Stacked Bar Chart
 
@@ -2027,7 +2027,7 @@ To render a 100% stacked bar chart, create an instance of `StackedBar100Series`,
 
 {% endhighlight %}
 
-![100% stacked bar chart](images/cartesian-chart-types/stacked100_bar.png)
+![Stacked 100 bar chart](images/cartesian-chart-types/stacked100_bar.png)
 
 ### Bar width and spacing
 
@@ -2067,7 +2067,7 @@ The `width` property is used to change the width of the rectangle. The default v
 
 {% endhighlight %}
 
-![100% Stacked bar width and spacing](images/cartesian-chart-types)
+![Stacked 100 bar width and spacing](images/cartesian-chart-types)
 
 ## 100% Stacked Line Chart
 
@@ -2115,7 +2115,7 @@ To render a 100% stacked line chart, create an instance of `StackedLine100Series
 
 {% endhighlight %}
 
-![100% stacked line chart](images/cartesian-chart-types/)
+![Stacked 100 line chart](images/cartesian-chart-types/)
 
 ### Dashed line
 

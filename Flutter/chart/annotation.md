@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotation in Syncfusion Flutter Charts
-description: Learn how to add annotations to the Flutter charts
+description: Learn how to add and customize the annotations available in the Syncfusion Flutter charts
 platform: flutter
 control: Chart
 documentation: ug
