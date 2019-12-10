@@ -143,7 +143,7 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
 * [`fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontSize.html) - used to change the font size for the data label.
 * [`margin`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/margin.html) - used to change the margin size for data labels.
 * [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/opacity.html) - used to control the transparency of the data label.
-* [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/position.html) - used to align the data label to positions. The available options to customize the positions are [`outer`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianLabelPosition-class.html), [`auto`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianLabelPosition-class.html), [`top`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianLabelPosition-class.html), [`bottom`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianLabelPosition-class.html) and [`middle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianLabelPosition-class.html).
+* [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelAlignment.html) - used to align the cartesian data label positions. The available options to customize the positions are [`outer`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelAlignment-class.html), [`auto`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelAlignment-class.html), [`top`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelAlignment-class.html), [`bottom`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelAlignment-class.html) and [`middle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelAlignment-class.html).
 * [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/borderRadius.html) - used to add the rounded corners to the data label shape.
 * [`angle`]() - used to rotate the labels.
 
@@ -213,9 +213,9 @@ Data label considers the format used in the vertical axis by default. In the bel
 
 ### Label position
 
-The [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianLabelPosition-class.html) property is used to position the Cartesian chart type data labels at [`top`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianLabelPosition-class.html), [`bottom`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianLabelPosition-class.html), [`auto`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianLabelPosition-class.html), [`outer`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianLabelPosition-class.html) and [`middle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianLabelPosition-class.html) position of the actual data point position. By default, labels are [`auto`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianLabelPosition-class.html) positioned. You can move the labels horizontally and vertically using OffsetX and OffsetY properties respectively.
+The [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelAlignment-class.html) property is used to position the Cartesian chart type data labels at [`top`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelAlignment-class.html), [`bottom`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelAlignment-class.html), [`auto`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelAlignment-class.html), [`outer`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelAlignment-class.html) and [`middle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelAlignment-class.html) position of the actual data point position. By default, labels are [`auto`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelAlignment-class.html) positioned. You can move the labels horizontally and vertically using OffsetX and OffsetY properties respectively.
 
-The [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelPosition.html) property is used to place the circular series data labels either [`inside`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelPosition-class.html) or [`outside`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelPosition-class.html). By default the label of circular chart is placed [`inside`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelPosition-class.html) the series.
+The [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelPosition.html) property is used to place the circular series data labels either [`inside`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelPosition-class.html) or [`outside`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelPosition-class.html). By default the label of circular chart is placed [`inside`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelPosition-class.html) the series.
 
 {% highlight dart %} 
 
@@ -232,8 +232,8 @@ The [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/la
                                 yValueMapper: (ChartData data, _) => data.y,
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true,
-                                    // Position of the data label
-                                    labelPosition: LabelPosition.outside
+                                    // Positioning the data label
+                                    labelPosition: ChartDataLabelPosition.outside
                                 )
                             )
                         ]
@@ -247,7 +247,7 @@ The [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/la
 
 ![Data label position](images/marker-datalabel/datalabel_position.jpg)
 
-N> The [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/position.html) property is used to position the Cartesian chart labels whereas [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelPosition.html) property is used to position the circular chart labels.
+N> The [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelAlignment.html) property is used to position the Cartesian chart labels whereas [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelPosition.html) property is used to position the circular chart labels.
 
 ### Smart labels
 
@@ -271,7 +271,7 @@ This feature is used to arrange the data labels smartly and avoid the intersecti
                                 dataLabelMapper: (ChartData data, _) => data.x,
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true,
-                                    labelPosition: LabelPosition.inside
+                                    labelPosition: ChartDataLabelPosition.inside
                                 )   
                             )
                         ]   
@@ -305,7 +305,7 @@ The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
                                 dataLabelMapper: (ChartData data, _) => data.x,
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true, 
-                                    labelPosition: LabelPosition.outside,
+                                    labelPosition: ChartDataLabelPosition.outside,
                                     // Renders background rectangle and fills it with series color
                                     useSeriesColor: true
                                 )
@@ -346,7 +346,7 @@ This feature is used to connect label and data point using a line. It can be ena
                                 yValueMapper: (ChartData data, _) => data.y,
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true,
-                                    labelPosition: LabelPosition.outside,
+                                    labelPosition: ChartDataLabelPosition.outside,
                                     connectorLineSettings: ConnectorLineSettings(
                                         // Type of the connector line
                                         type: ConnectorType.curve

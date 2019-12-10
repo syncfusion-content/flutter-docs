@@ -570,7 +570,7 @@ To render a bar chart, create an instance of [`BarSeries`](https://pub.dev/docum
 
 ![Bar chart](images/cartesian-chart-types/bar.jpg)
 
-### Column width and spacing
+### Bar width and spacing
 
 The [`spacing`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BarSeries/spacing.html) property is used to change the spacing between two segments. The default value of spacing is 0, and the value ranges from 0 to 1. Here, 1 and 0 correspond to 100% and 0% of the available space, respectively.
 
@@ -905,7 +905,7 @@ To render a range column chart, create an instance of [`RangeColumnSeries`](http
 
 Since the [`RangeColumnSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RangeColumnSeries-class.html) requires two Y values for a point, your data should contain high and low values. High and low value specifies the maximum and minimum range of the point. 
 
-* ['highValueMapper'](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/highValueMapper.html) - Field in the data source, which is considered as high value for the data points.
+* [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/highValueMapper.html) - Field in the data source, which is considered as high value for the data points.
 * [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/lowValueMapper.html) - Field in the data source, which is considered as low value for the data points. 
 
 {% highlight dart %} 
@@ -983,7 +983,246 @@ In the range column chart when data label is enabled, by default there will be t
 
 ![Range column datalabel](images/cartesian-chart-types/range_column_datalabel.jpg)
 
+## Range area chart
 
+To render a range area chart, create an instance of `RangeAreaSeries` and add to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). 
+
+Since the `RangeAreaSeries` requires two Y values for a point, your data should contain high and low values. High and low value specifies the maximum and minimum range of the point. 
+
+* [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/highValueMapper.html) - Field in the data source, which is considered as high value for the data points.
+* [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/lowValueMapper.html) - Field in the data source, which is considered as low value for the data points. 
+
+{% highlight dart %} 
+    
+    @override
+    Widget build(BuildContext context) {
+         return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <ChartSeries>[
+                            RangeAreaSeries<ChartData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData sales, _) => sales.x,
+                                lowValueMapper: (ChartData sales, _) => sales.low,
+                                highValueMapper: (ChartData sales, _) => sales.high,
+                            )
+                        ]
+                    )
+                )   
+            )
+        );
+    }
+
+    class ChartData {
+        ChartData(this.x, this.high, this.low);
+            final double x;
+            final double high;
+            final double low;
+    }
+
+{% endhighlight %}
+
+![Range area chart](images/cartesian-chart-types/)
+
+###	Border customization
+
+The borders of the range area chart can be customized using the `borderDrawMode` property. The default value of the `borderMode` property is `all` and the other value is `excludeSides`.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <ChartSeries>[
+                            RangeAreaSeries<SalesData, double>(
+                                dataSource: chartData,
+                                color: Colors.deepOrange[300],
+                                borderDrawMode: RangeAreaBorderMode.excludeSides,
+                                borderColor: Colors.green,
+                                borderWidth: 2,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales
+                            )
+                        ]
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![Range area border](images/cartesian-chart-types/)
+
+## Spline area chart
+
+To render a spline area chart, create an instance of `SplineAreaSeries`, and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties are used to customize the appearance of spline area chart:
+
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) – Changes the color of the series.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
+* [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) – Changes the stroke width of the series.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <ChartSeries>[
+                            SplineAreaSeries<SalesData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales
+                            )
+                        ]
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![Spline area chart](images/cartesian-chart-types/)
+
+### Dashed spline area
+
+The [`dashArray`]() property of the `SplineAreaSeries` is used to render spline area series with dashes. Odd value is considered as rendering size and even value is considered as gap.
+
+{% highlight dart %} 
+    
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <ChartSeries>[
+                            SplineAreaSeries<SalesData, double>(
+                                dataSource: chartData,
+                                dashArray: <double>[5, 5],
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales
+                            )
+                        ]
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![Dashed spline area chart](images/cartesian-chart-types/)
+
+###	Spline area rendering types
+
+The `splineType` allows you to change the spline area curve in series. The following types are used in `SplineAreaSeries`:
+
+* natural
+* monotonic
+* cardinal
+* clamped
+
+By default, the value of `splineType` is `natural`.
+
+The following code sample demonstrates how to set the `splineType` value to `cardinal`. When you set the cardinal type, you can specify the desired line tension of the `cardinal` spline using the `cardinalSplineTension` property. The value of this property ranges from 0 to 1.
+
+{% highlight dart %} 
+    
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <ChartSeries>[
+                            SplineAreaSeries<SalesData, double>(
+                                dataSource: chartData,
+                                splineType: SplineType.cardinal,
+                                cardinalSplineTension: 0.9,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales
+                            )
+                        ]
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![Spline area type](images/cartesian-chart-types/)
+
+## Step area chart
+
+To render a spline area chart, create an instance of `StepAreaSeries`, and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties are used to customize the appearance of spline area chart:
+
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) – Changes the color of the series.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
+* [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) – Changes the stroke width of the series.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <ChartSeries>[
+                            StepAreaSeries<SalesData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales
+                            )
+                        ]
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![Step area chart](images/cartesian-chart-types/)
+
+### Dashed step area
+
+The [`dashArray`]() property of the `StepAreaSeries` is used to render spline area series with dashes. Odd value is considered as rendering size and even value is considered as gap.
+
+{% highlight dart %} 
+    
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <ChartSeries>[
+                            StepAreaSeries<SalesData, double>(
+                                dataSource: chartData,
+                                dashArray: <double>[5, 5],
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales
+                            )
+                        ]
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![Dashed step area chart](images/cartesian-chart-types/)
 
 ## Stacked line chart
 
@@ -1599,3 +1838,317 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
 {% endhighlight %}
 
 ![Stacked bar cumulative](images/cartesian-chart-types/stacked_bar_cumulative.jpg)
+
+## 100% Stacked Area Chart
+
+To render a 100% stacked area chart, create an instance of `StackingArea100Series` and add to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). You can use the following properties to customize the 100% stacked area appearance.
+
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) – Changes the color of the series.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) – Changes the stroke width of the series.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) – Changes the stroke color of the series.
+* `borderDrawMode` - Specifies the type of the border mode and it defaults to *top*.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <ChartSeries>[
+                            StackedArea100Series<ChartData, DateTime>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales1
+                            ),
+                            StackedArea100Series<ChartData, DateTime>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales2
+                            ),
+                            StackedArea100Series<ChartData, DateTime>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales3
+                            ),
+                            StackedArea100Series<ChartData, DateTime>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales4
+                            )
+                        ]
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![100% Stacked Area chart](images/cartesian-chart-types/)
+
+## 100% Stacked Column Chart
+
+To render a 100% stacked column chart, create an instance of `StackedColumn100Series`, and add it to the [`series`]() collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties are used to customize the appearance:
+
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) – Changes the color of the series.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) – Changes the stroke width of the series.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) – Changes the stroke color of the series.
+* `borderRadius` -  used to add the rounded corners to the rectangle.
+
+{% highlight dart %} 
+    
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <ChartSeries>[
+                            StackedColumn100Series<SalesData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales
+                            ),
+                            StackedColumn100Series<SalesData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales2
+                            ),
+                            StackedColumn100Series<SalesData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales3
+                            ),
+                            StackedColumn100Series<SalesData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales4
+                            )
+                        ]
+                    )
+                )      
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![100% stacked column chart](images/cartesian-chart-types/stacked100_column.png)
+
+### Column width and spacing
+
+The `spacing` property is used to change the spacing between two segments. The default value of spacing is 0, and the value ranges from 0 to 1. Here, 1 and 0 correspond to 100% and 0% of the available space, respectively.
+
+The `width` property is used to change the width of the rectangle. The default value of the width is 0.7, and the value ranges from 0 to 1. Here, 1 and 0 correspond to 100% and 0% of the available width, respectively.
+
+{% highlight dart %} 
+    
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <ChartSeries>[
+                            StackedColumn100Series<SalesData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales,
+                                width: 0.8, // Width of the columns
+                                spacing: 0.2 // Spacing between the columns
+                            ),
+                            StackedColumn100Series<SalesData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales2,
+                                width: 0.8, // Width of the columns
+                                spacing: 0.2 // Spacing between the columns
+                            )
+                        ]
+                    )
+                )   
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![100% Stacked column width and spacing](images/cartesian-chart-types)
+
+## 100% Stacked Bar Chart
+
+To render a 100% stacked bar chart, create an instance of `StackedBar100Series`, and add it to the [`series`]() collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties are used to customize the appearance:
+
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) – Changes the color of the series.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) – Changes the stroke width of the series.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) – Changes the stroke color of the series.
+* `borderRadius` -  used to add the rounded corners to the rectangle.
+
+{% highlight dart %} 
+    
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <ChartSeries>[
+                            StackedBar100Series<SalesData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales
+                            ),
+                            StackedBar100Series<SalesData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales2
+                            ),
+                            StackedBar100Series<SalesData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales3
+                            ),
+                            StackedBar100Series<SalesData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales4
+                            )
+                        ]
+                    )
+                )      
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![100% stacked bar chart](images/cartesian-chart-types/stacked100_bar.png)
+
+### Bar width and spacing
+
+The `spacing` property is used to change the spacing between two segments. The default value of spacing is 0, and the value ranges from 0 to 1. Here, 1 and 0 correspond to 100% and 0% of the available space, respectively.
+
+The `width` property is used to change the width of the rectangle. The default value of the width is 0.7, and the value ranges from 0 to 1. Here, 1 and 0 correspond to 100% and 0% of the available width, respectively.
+
+{% highlight dart %} 
+    
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <ChartSeries>[
+                            StackedBar100Series<SalesData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales,
+                                width: 0.8, 
+                                spacing: 0.2 
+                            ),
+                            StackedBar100Series<SalesData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales2,
+                                width: 0.8, 
+                                spacing: 0.2 
+                            )
+                        ]
+                    )
+                )   
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![100% Stacked bar width and spacing](images/cartesian-chart-types)
+
+## 100% Stacked Line Chart
+
+To render a 100% stacked line chart, create an instance of `StackedLine100Series`, and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties are used to customize the appearance:
+
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) – Changes the color of the line.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
+* [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) – Changes the stroke width of the line.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <ChartSeries>[
+                            StackedLine100Series<SalesData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales
+                            ),
+                            StackedLine100Series<SalesData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales2
+                            ),
+                            StackedLine100Series<SalesData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales3
+                            ),
+                            StackedLine100Series<SalesData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales4
+                            )
+                        ]
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![100% stacked line chart](images/cartesian-chart-types/)
+
+### Dashed line
+
+The `dashArray` property of `StackedLine100Series` is used to render line series with dashes. Odd value is considered as rendering size and even value is considered as gap.
+
+{% highlight dart %} 
+    
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <ChartSeries>[
+                            StackedLine100Series<SalesData, String>(
+                                dataSource: chartData,
+                                dashArray: <double>[5,5],
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales
+                            ),
+                            StackedLine100Series<SalesData, String>(
+                                dataSource: chartData,
+                                dashArray: <double>[5,5],
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales2
+                            )
+                        ]
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![Dashed line chart](images/cartesian-chart-types/dashed_line.jpg)
