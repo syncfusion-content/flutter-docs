@@ -13,6 +13,8 @@ documentation: ug
 
 The radial gauge allows all of its elements to be animated with `enableLoadingAnimation` property. The default value for this property is false. The duration of the animation can be controlled by `animationDuration` property of the gauge.
 
+{% highlight dart %}
+
 override
 Widget build(BuildContext context) {
    return Scaffold(
