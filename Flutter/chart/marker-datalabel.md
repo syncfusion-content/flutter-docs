@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Markers and data labels in Syncfusion Flutter Charts
-description:  Learn how to add the markers and data point labels to the Flutter Chart series types.
+description: Learn how to add the markers and data point labels to the series available in the Syncfusion Flutter Chart widget.
 platform: flutter
 control: Chart
 documentation: ug

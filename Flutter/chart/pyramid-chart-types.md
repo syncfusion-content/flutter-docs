@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion Pyramid Chart Types
-description: Learn how to add and customize the pyramid type chart available in Syncfusion Flutter Chart.
+description: Learn how to add and customize the pyramid type of charts available in the Syncfusion Flutter Chart widget.
 platform: flutter
 control: Chart
 documentation: ug
