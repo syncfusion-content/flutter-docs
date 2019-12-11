@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotation in Syncfusion Flutter Charts
-description: Learn how to add and customize the annotations available in the Syncfusion Flutter charts
+description: Learn how to add and customize the Cartesian, and Circular annotations available in the Syncfusion.
 platform: flutter
 control: Chart
 documentation: ug
