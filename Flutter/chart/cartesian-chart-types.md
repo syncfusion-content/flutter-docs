@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion Cartesian Chart types
-description: Learn what are the different types of Cartesian Charts available in the Flutter Charts.
+description: Learn what are the different types of Cartesian Charts available in the Syncfusion Flutter Chart widget.
 platform: flutter
 control: Chart
 documentation: ug
