@@ -281,6 +281,8 @@ Widget build(BuildContext context) {
 
 The following code shows how to apply the gradient for the tail.
 
+{% highlight dart %}
+
 @override
  Widget build(BuildContext context) {
     return Scaffold(
