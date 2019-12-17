@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotation in Syncfusion Flutter Charts
-description: Learn how to add annotations to the Flutter charts
+description: Learn how to add and customize the Cartesian, and Circular annotations available in the Syncfusion Flutter Chart widget.
 platform: flutter
 control: Chart
 documentation: ug
@@ -22,7 +22,7 @@ Chart supports annotations which allows you to mark the specific area of interes
               child: SfCartesianChart(
                 annotations: <CartesianChartAnnotation>[
                   CartesianChartAnnotation(
-                    child: 
+                    widget: 
                       Container(
                         child: const Text('Annotation')
                       ),
@@ -62,7 +62,7 @@ To position the annotation based on axis, set the [`x`](https://pub.dev/document
               child: SfCartesianChart(
                 annotations: <CartesianChartAnnotation>[
                   CartesianChartAnnotation(
-                    child: Container(
+                    widget: Container(
                       child: const Text('Text')
                     ),
                     coordinateUnit: CoordinateUnit.point,
@@ -94,11 +94,11 @@ To position the annotation based on the pixel values, set the [`CoordinateUnit`]
               child: SfCartesianChart(
                 annotations: <CartesianChartAnnotation>[
                   CartesianChartAnnotation(
-                    child: Container(
+                    widget: Container(
                       child: const Text('Text')
-                    )
+                    ),
                     // Coordinate unit type
-                    coordinateUnit: CoordinateUnit.logicalPixel
+                    coordinateUnit: CoordinateUnit.logicalPixel,
                     x: 150,
                     y: 200
                   )
@@ -175,13 +175,13 @@ When there are multiple axes in the chart, annotation can be added for a particu
               child: SfCartesianChart(
                 annotations: <CartesianChartAnnotation>[
                   CartesianChartAnnotation(
-                    child: Container(child: const Text('Low')),
+                    widget: Container(child: const Text('Low')),
                     coordinateUnit: CoordinateUnit.point,
                     x: 15,
                     y: 50
                   ),
                   CartesianChartAnnotation(
-                    child: Container(child: const Text('High')),
+                    widget: Container(child: const Text('High')),
                     coordinateUnit: CoordinateUnit.point,
                     x: 35,
                     y: 130,

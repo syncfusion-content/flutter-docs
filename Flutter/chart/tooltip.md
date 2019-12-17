@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion Flutter Charts Tooltip
-description: Learn how to enable and customize the tooltip in Flutter Charts
+description: Learn how to enable and customize the tooltip options available in the Syncfusion Flutter Chart widget.
 platform: flutter
 control: Chart
 documentation: ug
@@ -100,6 +100,30 @@ By default, x and y value will be displayed in the tooltip, and it can be custom
                 enable: true, 
                 // Formatting the tooltip text
                 format: 'point.y%'
+              )
+            )
+          )
+        )
+      );
+    }
+
+{% endhighlight %}
+
+## Tooltip positioning
+
+The tooltip can be made to display in the fixed location or at the pointer location itself using the `tooltipPosition` property. This defaults to `auto`.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: Center(
+          child: Container(
+            child: SfCartesianChart(
+              tooltipBehavior: TooltipBehavior(
+                enable: true, 
+                tooltipPosition: TooltipPosition.pointer
               )
             )
           )

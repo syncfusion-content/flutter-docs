@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Syncfusion Funnel Chart Types
-description: Learn how to customize funnel charts available in Syncfusion Flutter Chart.
+title: Syncfusion Funnel Chart Types.
+description: Learn how to add and customize the funnel type of charts available in the Syncfusion Flutter Chart widget.
 platform: flutter
 control: Chart
 documentation: ug
@@ -162,9 +162,9 @@ Also, the segments can be exploded by tapping the segment.
 
 The [`smartLabelMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/smartLabelMode.html) property is used to place the data labels smartly. The [`smartLabelMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/smartLabelMode.html) supports the following values:
 
-* [`shift`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmartLabelMode-class.html) - Shifts the data label position when a label intersects with other label, and it is the default value.
+* [`shift`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmartLabelMode-class.html) - Shifts the data label position when a label intersects with other label.
 * [`none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmartLabelMode-class.html) - Renders all the data labels when intersect.
-* [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmartLabelMode-class.html) - Hides the intersecting data label.
+* [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmartLabelMode-class.html) - Hides the intersecting data label, and it is the default value.
 
 {% highlight dart %} 
 
