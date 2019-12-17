@@ -30,6 +30,7 @@ You can use the following properties to customize the appearance of trackball to
 * [`tooltipSettings.textStyle.fontFamily`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontFamily.html) - used to change the font family for tooltip text.
 * [`tooltipSettings.textStyle.fontStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontStyle.html) – used to change the font style for tooltip text.
 * [`tooltipSettings.textStyle.fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontSize.html) - used to change the font size for tooltip text.
+* `hideDelay` - used to specify disappear delay for trackball.
 
 {% highlight dart %} 
 
@@ -197,7 +198,7 @@ The ActivationMode enum contains the following values:
 
 Crosshair has a vertical and horizontal line to view the value of the axis. 
 
-Crosshair lines can be enabled by using [`enable`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/enable.html) property in the [`crosshairBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/CrosshairBehavior.html). Likewise tooltip label for an axis can be enabled by using [`enable`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/enable.html) property of [`crosshairTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/crosshairTooltip.html) in the corresponding axis.
+Crosshair lines can be enabled by using [`enable`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/enable.html) property in the [`crosshairBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/CrosshairBehavior.html). Likewise tooltip label for an axis can be enabled by using [`enable`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/enable.html) property of [`crosshairTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/crosshairTooltip.html) in the corresponding axis. The `hideDelay` property can be used to specify a disapper delay for the crosshair.
 
 {% highlight dart %} 
 

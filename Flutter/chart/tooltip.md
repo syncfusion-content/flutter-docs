@@ -109,6 +109,30 @@ By default, x and y value will be displayed in the tooltip, and it can be custom
 
 {% endhighlight %}
 
+## Tooltip positioning
+
+The tooltip can be made to display in the fixed location or at the pointer location itself using the `tooltipPosition` property. This defaults to `auto`.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: Center(
+          child: Container(
+            child: SfCartesianChart(
+              tooltipBehavior: TooltipBehavior(
+                enable: true, 
+                tooltipPosition: TooltipPosition.pointer
+              )
+            )
+          )
+        )
+      );
+    }
+
+{% endhighlight %}
+
 ## Tooltip template
 
 You can customize the appearance of the tooltip with your own widget by using the [`builder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/builder.html) property of [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/tooltipBehavior.html).
