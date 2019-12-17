@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion Flutter Charts Trackball and Crosshair
-description: Learn how to enable and customize the trackball and crosshair in Flutter Charts
+description: Learn how to enable and customize the trackball and crosshair available in the Syncfusion Flutter Chart widget.
 platform: flutter
 control: Chart
 documentation: ug
@@ -198,7 +198,7 @@ The ActivationMode enum contains the following values:
 
 Crosshair has a vertical and horizontal line to view the value of the axis. 
 
-Crosshair lines can be enabled by using [`enable`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/enable.html) property in the [`crosshairBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/CrosshairBehavior.html). Likewise tooltip label for an axis can be enabled by using [`enable`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/enable.html) property of [`crosshairTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/crosshairTooltip.html) in the corresponding axis. The `hideDelay` property can be used to specify a disapper delay for the crosshair.
+Crosshair lines can be enabled by using [`enable`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/enable.html) property in the [`crosshairBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/CrosshairBehavior.html). Likewise tooltip label for an axis can be enabled by using [`enable`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/enable.html) property of [`crosshairTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/crosshairTooltip.html) in the corresponding axis. The `hideDelay` property can be used to specify a disappear delay for the crosshair.
 
 {% highlight dart %} 
 

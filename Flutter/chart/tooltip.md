@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion Flutter Charts Tooltip
-description: Learn how to enable and customize the tooltip in Flutter Charts
+description: Learn how to enable and customize the tooltip options available in the Syncfusion Flutter Chart widget.
 platform: flutter
 control: Chart
 documentation: ug
