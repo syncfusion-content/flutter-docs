@@ -1023,7 +1023,7 @@ Since the `RangeAreaSeries` requires two Y values for a point, your data should 
 
 {% endhighlight %}
 
-![Range area chart](images/cartesian-chart-types/)
+![Range area chart](images/cartesian-chart-types/range_area.png)
 
 ###	Border customization
 
@@ -1056,7 +1056,7 @@ The borders of the range area chart can be customized using the `borderDrawMode`
 
 {% endhighlight %}
 
-![Range area border](images/cartesian-chart-types/)
+![Range area border](images/cartesian-chart-types/range_area_border.png)
 
 ## Spline area chart
 
@@ -1089,7 +1089,7 @@ To render a spline area chart, create an instance of `SplineAreaSeries`, and add
 
 {% endhighlight %}
 
-![Spline area chart](images/cartesian-chart-types/)
+![Spline area chart](images/cartesian-chart-types/spline_area.png)
 
 ### Dashed spline area
 
@@ -1119,7 +1119,7 @@ The [`dashArray`]() property of the `SplineAreaSeries` is used to render spline 
 
 {% endhighlight %}
 
-![Dashed spline area chart](images/cartesian-chart-types/)
+![Dashed spline area chart](images/cartesian-chart-types/spline_area_dashed.png)
 
 ###	Spline area rendering types
 
@@ -1159,7 +1159,7 @@ The following code sample demonstrates how to set the `splineType` value to `car
 
 {% endhighlight %}
 
-![Spline area type](images/cartesian-chart-types/)
+![Spline area type](images/cartesian-chart-types/spline_area_types.png)
 
 ## Step area chart
 
@@ -1192,7 +1192,7 @@ To render a spline area chart, create an instance of `StepAreaSeries`, and add i
 
 {% endhighlight %}
 
-![Step area chart](images/cartesian-chart-types/)
+![Step area chart](images/cartesian-chart-types/step_area.png)
 
 ### Dashed step area
 
@@ -1222,7 +1222,7 @@ The [`dashArray`]() property of the `StepAreaSeries` is used to render spline ar
 
 {% endhighlight %}
 
-![Dashed step area chart](images/cartesian-chart-types/)
+![Dashed step area chart](images/cartesian-chart-types/step_area_dashed.png)
 
 ## Stacked line chart
 
@@ -1887,7 +1887,7 @@ To render a 100% stacked area chart, create an instance of `StackingArea100Serie
 
 {% endhighlight %}
 
-![Stacked 100Area chart](images/cartesian-chart-types/)
+![Stacked 100Area chart](images/cartesian-chart-types/stacked_area_100.png)
 
 ## 100% Stacked Column Chart
 
@@ -1937,7 +1937,7 @@ To render a 100% stacked column chart, create an instance of `StackedColumn100Se
 
 {% endhighlight %}
 
-![Stacked 100 column chart](images/cartesian-chart-types/stacked100_column.png)
+![Stacked 100 column chart](images/cartesian-chart-types/stacked_column_100.png)
 
 ### Column width and spacing
 
@@ -1977,7 +1977,7 @@ The `width` property is used to change the width of the rectangle. The default v
 
 {% endhighlight %}
 
-![Stacked 100 column width and spacing](images/cartesian-chart-types)
+![Stacked 100 column width and spacing](images/cartesian-chart-types/stacked_column_100_size.png)
 
 ## 100% Stacked Bar Chart
 
@@ -2067,7 +2067,7 @@ The `width` property is used to change the width of the rectangle. The default v
 
 {% endhighlight %}
 
-![Stacked 100 bar width and spacing](images/cartesian-chart-types)
+![Stacked 100 bar width and spacing](images/cartesian-chart-types/stacked_bar_100_sizing.png)
 
 ## 100% Stacked Line Chart
 
@@ -2115,7 +2115,7 @@ To render a 100% stacked line chart, create an instance of `StackedLine100Series
 
 {% endhighlight %}
 
-![Stacked 100 line chart](images/cartesian-chart-types/)
+![Stacked 100 line chart](images/cartesian-chart-types/stacked_line_100.png)
 
 ### Dashed line
 
@@ -2141,6 +2141,18 @@ The `dashArray` property of `StackedLine100Series` is used to render line series
                                 dashArray: <double>[5,5],
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales2
+                            ),
+                            StackedLine100Series<SalesData, String>(
+                                dataSource: chartData,
+                                dashArray: <double>[5,5],
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales3
+                            ),
+                            StackedLine100Series<SalesData, String>(
+                                dataSource: chartData,
+                                dashArray: <double>[5,5],
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales4
                             )
                         ]
                     )
@@ -2151,4 +2163,4 @@ The `dashArray` property of `StackedLine100Series` is used to render line series
 
 {% endhighlight %}
 
-![Dashed line chart](images/cartesian-chart-types/dashed_line.jpg)
+![Dashed line chart](images/cartesian-chart-types/stacked_line_100_dashes.png)
