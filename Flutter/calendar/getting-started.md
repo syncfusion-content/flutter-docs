@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started Syncfusion Flutter Calendar
-description: A quick tour to initial users on Syncfusion Calendar for flutter platform
+description: Learn here about getting started with Syncfusion Flutter Calendar (SfCalendar) widget and more details. 
 platform: flutter
 control: SfCalendar
 documentation: ug
@@ -15,7 +15,7 @@ Create a simple project using the instructions given in the [Getting Started wit
 
 **Add dependency**
 
-Add the Syncfusion flutter calendar dependency to your pubspc.yaml file.
+Add the Syncfusion flutter calendar dependency to your pubspec.yaml file.
 
 {% highlight dart %}
 
@@ -311,3 +311,5 @@ Widget build(BuildContext context) {
 }
 
 {% endhighlight %}
+
+You can get the complete getting started sample from [here](https://github.com/SyncfusionExamples/flutter-calendar).
