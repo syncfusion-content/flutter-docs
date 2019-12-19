@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started Syncfusion Flutter Calendar
-description: Learn here about getting started with Syncfusion Flutter Calendar (SfCalendar) widget and more details. 
+title: Flutter calendar widget to schedule & manage events | Syncfusion
+description: Getting started with the Syncfusion flutter calendar widget to schedule an event with seven built-in configurable views modes.
 platform: flutter
 control: SfCalendar
 documentation: ug
