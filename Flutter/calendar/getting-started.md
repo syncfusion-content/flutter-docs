@@ -234,7 +234,7 @@ Widget build(BuildContext context) {
 					selectionDecoration: BoxDecoration(
 						color: Colors.transparent,
 						border: Border.all(
-						color: const Color.fromARGB(255, 68, 140, 255), width: 2),
+						color: Colors.red, width: 2),
 						borderRadius: const BorderRadius.all(Radius.circular(4)),
 						shape: BoxShape.rectangle,
 					),
