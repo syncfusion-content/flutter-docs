@@ -47,7 +47,6 @@ The Syncfusion Flutter Calendar library was written natively in Dart and has sev
 
 * **Appearance customization**: Provide a uniform and consistent look with Calendar’s flexible appearance and format.
 
-![Appearance customization](images/overview/Appearance_customization.png)
 
 
 
