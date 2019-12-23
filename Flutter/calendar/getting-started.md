@@ -53,11 +53,10 @@ After importing the package, initialize the calendar widget as a child of any wi
 
 @override
 Widget build(BuildContext context) {
-	return Scaffold(
-		body: Container(
-			child: SfCalendar(),
-		)
-	);
+  return Scaffold(
+      body: Container(
+    child: SfCalendar(),
+  ));
 }
 	
 {% endhighlight %}
@@ -68,14 +67,13 @@ The SfCalendar widget provides seven different types of views to display dates. 
 
 {% highlight dart %}
 
-	@override
-	Widget build(BuildContext context) {
-		return Scaffold(
-			body: SfCalendar(
-				view: CalendarView.month,
-			)
-		);
-	}
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+      body: SfCalendar(
+    view: CalendarView.month,
+  ));
+}
 
 {% endhighlight %}
 
@@ -88,70 +86,68 @@ You can also map custom appointment data to our calendar.
 
 @override
 Widget build(BuildContext context) {
-	return Scaffold(
-		body: SfCalendar(
-			view: CalendarView.month,
-				dataSource: MeetingDataSource(_getDataSource()),
-				monthViewSettings: MonthViewSettings(
-				appointmentDisplayMode: MonthAppointmentDisplayMode.appointment),
-		)
-	);
+  return Scaffold(
+      body: SfCalendar(
+    view: CalendarView.month,
+    dataSource: MeetingDataSource(_getDataSource()),
+    monthViewSettings: MonthViewSettings(
+        appointmentDisplayMode: MonthAppointmentDisplayMode.appointment),
+  ));
 }
 
 List<Meeting> _getDataSource() {
-	meetings = <Meeting>[];
-	final DateTime today = DateTime.now();
-	final DateTime startTime =
-		DateTime(today.year, today.month, today.day, 9, 0, 0);
-	final DateTime endTime = startTime.add(const Duration(hours: 2));
-	meetings.add(
-		Meeting('Conference', startTime, endTime, const Color(0xFF0F8644), false));
-	return meetings;
+  meetings = <Meeting>[];
+  final DateTime today = DateTime.now();
+  final DateTime startTime =
+      DateTime(today.year, today.month, today.day, 9, 0, 0);
+  final DateTime endTime = startTime.add(const Duration(hours: 2));
+  meetings.add(Meeting(
+      'Conference', startTime, endTime, const Color(0xFF0F8644), false));
+  return meetings;
 }
 
-
 class MeetingDataSource extends CalendarDataSource {
-	MeetingDataSource(this.source);
+  MeetingDataSource(this.source);
 
-	List<Meeting> source;
+  List<Meeting> source;
 
-	@override
-	List<dynamic> get appointments => source;
+  @override
+  List<dynamic> get appointments => source;
 
-	@override
-	DateTime getStartTime(int index) {
-		return source[index].from;
-	}
+  @override
+  DateTime getStartTime(int index) {
+    return source[index].from;
+  }
 
-	@override
-	DateTime getEndTime(int index) {
-		return source[index].to;
-	}
+  @override
+  DateTime getEndTime(int index) {
+    return source[index].to;
+  }
 
-	@override
-	String getSubject(int index) {
-		return source[index].eventName;
-	}
+  @override
+  String getSubject(int index) {
+    return source[index].eventName;
+  }
 
-	@override
-	Color getColor(int index) {
-		return source[index].background;
-	}
+  @override
+  Color getColor(int index) {
+    return source[index].background;
+  }
 
-	@override
-	bool isAllDay(int index) {
-		return source[index].isAllDay;
-	}
+  @override
+  bool isAllDay(int index) {
+    return source[index].isAllDay;
+  }
 }
 
 class Meeting {
-	Meeting(this.eventName, this.from, this.to, this.background, this.isAllDay);
+  Meeting(this.eventName, this.from, this.to, this.background, this.isAllDay);
 
-	String eventName;
-	DateTime from;
-	DateTime to;
-	Color background;
-	bool isAllDay;
+  String eventName;
+  DateTime from;
+  DateTime to;
+  Color background;
+  bool isAllDay;
 }
 
 {% endhighlight %}
@@ -164,12 +160,11 @@ The calendar widget will be rendered with Sunday as the first day of the week, b
 
 @override
 Widget build(BuildContext context) {
-	return Scaffold(
-		body: SfCalendar(
-			view: CalendarView.week,
-			firstDayOfWeek: 1, // Monday
-		)
-	);
+  return Scaffold(
+      body: SfCalendar(
+    view: CalendarView.week,
+    firstDayOfWeek: 1, // Monday
+  ));
 }
 
 {% endhighlight %}
@@ -180,19 +175,19 @@ You can programmatically select the specific calendar month cell, and time slot 
 
 {% highlight dart %}
 
-	@override
-	Widget build(BuildContext context) {
-	return MaterialApp(
-		home: Scaffold(
-			body: Container(
-				child: SfCalendar(
-					view: CalendarView.week,
-					initialSelectedDate: DateTime(2019, 12, 20, 12),
-					),
-				),
-			),
-		);
-	}
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.week,
+          initialSelectedDate: DateTime(2019, 12, 20, 12),
+        ),
+      ),
+    ),
+  );
+}
 
 {% endhighlight %}
 
@@ -202,19 +197,19 @@ You can change the initial display date of calendar by using the [initialDisplay
 
 {% highlight dart %}
 
-	@override
-	Widget build(BuildContext context) {
-		return MaterialApp(
-			home: Scaffold(
-				body: Container(
-					child: SfCalendar(
-						view: CalendarView.week,
-						initialDisplayDate: DateTime(2019, 12, 20, 12),
-					),
-				),
-			),
-		);
-	}
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.week,
+          initialDisplayDate: DateTime(2019, 12, 20, 12),
+        ),
+      ),
+    ),
+  );
+}
 
 {% endhighlight %}
 
@@ -225,24 +220,23 @@ You can decorate the selection view of calendar by using the [selectionDecoratio
 {% highlight dart %}
 
 	@override
-	Widget build(BuildContext context) {
-		return MaterialApp(
-			home: Scaffold(
-				body: Container(
-					child: SfCalendar(
-						view: CalendarView.week,
-						selectionDecoration: BoxDecoration(
-							color: Colors.transparent,
-							border: Border.all(
-							color: Colors.red, width: 2),
-							borderRadius: const BorderRadius.all(Radius.circular(4)),
-							shape: BoxShape.rectangle,
-						),
-					),
-				),
-			),
-		);
-	}
+Widget build(BuildContext context) {
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.week,
+          selectionDecoration: BoxDecoration(
+            color: Colors.transparent,
+            border: Border.all(color: Colors.red, width: 2),
+            borderRadius: const BorderRadius.all(Radius.circular(4)),
+            shape: BoxShape.rectangle,
+          ),
+        ),
+      ),
+    ),
+  );
+}
 
 {% endhighlight %}
 
@@ -253,18 +247,18 @@ You can customize the today highlight color of calendar by using the [todayHighl
 {% highlight dart %}
 
 	@override
-	Widget build(BuildContext context) {
-		return MaterialApp(
-			home: Scaffold(
-				body: Container(
-					child: SfCalendar(
-						view: CalendarView.week,
-						todayHighlightColor: Colors.red,
-					),
-				),
-			),
-		);
-	}
+Widget build(BuildContext context) {
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.week,
+          todayHighlightColor: Colors.red,
+        ),
+      ),
+    ),
+  );
+}
 
 {% endhighlight %}
 
@@ -274,19 +268,19 @@ You can customize the vertical and horizontal line color of calendar by using th
 
 {% highlight dart %}
 
-	@override
-	Widget build(BuildContext context) {
-		return MaterialApp(
-			home: Scaffold(
-				body: Container(
-					child: SfCalendar(
-						view: CalendarView.week,
-						cellBorderColor: Colors.blue,
-					),
-				),
-			),
-		);
-	}
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.week,
+          cellBorderColor: Colors.blue,
+        ),
+      ),
+    ),
+  );
+}
 
 {% endhighlight %}
 
@@ -296,19 +290,19 @@ The calendar widgets background color can be customized by using the [background
 
 {% highlight dart %}
 
-	@override
-	Widget build(BuildContext context) {
-		return MaterialApp(
-			home: Scaffold(
-				body: Container(
-					child: SfCalendar(
-						view: CalendarView.week,
-						backgroundColor: Colors.lightBlue,
-					),
-				),
-			),
-		);
-	}
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.week,
+          backgroundColor: Colors.lightBlue,
+        ),
+      ),
+    ),
+  );
+}
 
 {% endhighlight %}
 
