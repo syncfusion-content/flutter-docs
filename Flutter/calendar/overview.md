@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of Syncfusion Flutter calendar
-description: Overview and a glance of key features in Syncfusion Flutter Calendar widget.
+description: Learn the key features of Syncfusion Flutter Calendar (SfCalendar) widget and more details | Scheduler.
 platform: flutter
 control: SfCalendar
 documentation: ug
