@@ -25,14 +25,13 @@ You can customize the interval of timeslots in all the timeslots view by using t
 
 @override
 Widget build(BuildContext context) {
-	return Container(
-		child: SfCalendar(
-			view: CalendarView.week,
-			timeSlotViewSettings: TimeSlotViewSettings(
-				timeInterval: Duration(hours: 2)
-			),
-		),
-	);
+  return Container(
+    child: SfCalendar(
+      view: CalendarView.week,
+      timeSlotViewSettings:
+          TimeSlotViewSettings(timeInterval: Duration(hours: 2)),
+    ),
+  );
 }
 
 {% endhighlight %}
@@ -48,14 +47,14 @@ You can customize the time interval height of timeslots by using the [timeInterv
 
 @override
 Widget build(BuildContext context) {
-	return Container(
-		child: SfCalendar(
-			view: CalendarView.week,
-			timeSlotViewSettings: TimeSlotViewSettings(
-				timeIntervalHeight: 100,
-			),
-		),
-	);
+  return Container(
+    child: SfCalendar(
+      view: CalendarView.week,
+      timeSlotViewSettings: TimeSlotViewSettings(
+        timeIntervalHeight: 100,
+      ),
+    ),
+  );
 }
 
 {% endhighlight %}
@@ -70,16 +69,15 @@ You can also customize the nonworking days of a week by using the [nonWorkingDay
 
 @override
 Widget build(BuildContext context) {
-	return Scaffold(
-		body: SfCalendar(
-			view: CalendarView.workWeek,
-			timeSlotViewSettings: TimeSlotViewSettings(
-				startHour: 9,
-				endHour: 16,
-				nonWorkingDays: <int>[DateTime.friday, DateTime.saturday]),
-			)
-		);
-	}
+  return Scaffold(
+      body: SfCalendar(
+    view: CalendarView.workWeek,
+    timeSlotViewSettings: TimeSlotViewSettings(
+        startHour: 9,
+        endHour: 16,
+        nonWorkingDays: <int>[DateTime.friday, DateTime.saturday]),
+  ));
+}
 
 {% endhighlight %}
 
@@ -99,14 +97,14 @@ Calendar time interval height can be adjusted based on screen height by changing
 
 @override
 Widget build(BuildContext context) {
-	return Container(
-		child: SfCalendar(
-			view: CalendarView.week,
-			timeSlotViewSettings: TimeSlotViewSettings(
-				timeIntervalHeight: -1,
-			),
-		),
-	);
+  return Container(
+    child: SfCalendar(
+      view: CalendarView.week,
+      timeSlotViewSettings: TimeSlotViewSettings(
+        timeIntervalHeight: -1,
+      ),
+    ),
+  );
 }
 
 {% endhighlight %}
@@ -119,18 +117,17 @@ You can customize the size of the time ruler view where the labels mentioning th
 
 @override
 Widget build(BuildContext context) {
-	return MaterialApp(
-		home: Scaffold(
-			body: Container(
-				child: SfCalendar(
-					view: CalendarView.week,
-					timeSlotViewSettings:
-						TimeSlotViewSettings(timeRulerSize: 100),
-					),
-				),
-			),
-		);
-	}
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.week,
+          timeSlotViewSettings: TimeSlotViewSettings(timeRulerSize: 100),
+        ),
+      ),
+    ),
+  );
+}
 
 {% endhighlight %}
 
@@ -142,45 +139,42 @@ The [minimumAppointmentDuration](https://pub.dev/documentation/syncfusion_flutte
 
 @override
 Widget build(BuildContext context) {
-	return MaterialApp(
-		home: Scaffold(
-			body: Container(
-				child: SfCalendar(
-					view: CalendarView.week,
-					dataSource: _getCalendarDataSource(),
-					timeSlotViewSettings:
-						TimeSlotViewSettings(minimumAppointmentDuration: Duration(minutes: 30)),
-					),
-				),
-			),
-		);
-	}
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.week,
+          dataSource: _getCalendarDataSource(),
+          timeSlotViewSettings: TimeSlotViewSettings(
+              minimumAppointmentDuration: Duration(minutes: 30)),
+        ),
+      ),
+    ),
+  );
+}
 
 _AppointmentDataSource _getCalendarDataSource() {
-	List<Appointment> appointments = <Appointment>[];
-	appointments.add(Appointment(
-		startTime: DateTime.now(),
-		endTime: DateTime.now().add(Duration(minutes: 10)),
-		subject: 'Meeting',
-		color: Colors.blue,
-		startTimeZone: '',
-		endTimeZone: '',
-		)
-	);
+  List<Appointment> appointments = <Appointment>[];
+  appointments.add(Appointment(
+    startTime: DateTime.now(),
+    endTime: DateTime.now().add(Duration(minutes: 10)),
+    subject: 'Meeting',
+    color: Colors.blue,
+    startTimeZone: '',
+    endTimeZone: '',
+  ));
 
-	return _AppointmentDataSource(appointments);
+  return _AppointmentDataSource(appointments);
 }
-
 
 class _AppointmentDataSource extends CalendarDataSource {
-	_AppointmentDataSource(this.source);
+  _AppointmentDataSource(this.source);
 
-	List<Appointment> source;
+  List<Appointment> source;
 
-	@override
-	List<dynamic> get appointments => source;
+  @override
+  List<dynamic> get appointments => source;
 }
-
 
 {% endhighlight %}
 
@@ -198,18 +192,18 @@ You can customize the height of appointment in timeline views using the [timelin
 
 @override
 Widget build(BuildContext context) {
-	return MaterialApp(
-		home: Scaffold(
-			body: Container(
-				child: SfCalendar(
-					view: CalendarView.timelineWeek,
-					timeSlotViewSettings:
-						TimeSlotViewSettings(timelineAppointmentHeight: 100),
-					),
-				),
-			),
-		);
-	}
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.timelineWeek,
+          timeSlotViewSettings:
+              TimeSlotViewSettings(timelineAppointmentHeight: 100),
+        ),
+      ),
+    ),
+  );
+}
 
 {% endhighlight %}
 
@@ -221,18 +215,18 @@ You can customize the date and day format of SfCalendar ViewHeader by using the 
 
 @override
 Widget build(BuildContext context) {
-	return MaterialApp(
-		home: Scaffold(
-			body: Container(
-				child: SfCalendar(
-					view: CalendarView.week,
-					timeSlotViewSettings:
-						TimeSlotViewSettings(dateFormat: 'dd', dayFormat: 'EEEE'),
-					),
-				),
-			),
-		);
-	}
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.week,
+          timeSlotViewSettings:
+              TimeSlotViewSettings(dateFormat: 'dd', dayFormat: 'EEEE'),
+        ),
+      ),
+    ),
+  );
+}
 
 {% endhighlight %}
 
@@ -244,22 +238,22 @@ You can customize the text style for the labels mentioning the time, by setting 
 
 @override
 Widget build(BuildContext context) {
-	return MaterialApp(
-		home: Scaffold(
-			body: Container(
-				child: SfCalendar(
-					view: CalendarView.week,
-					timeSlotViewSettings: TimeSlotViewSettings(
-					timeTextStyle: TextStyle(
-						fontWeight: FontWeight.w500,
-						fontStyle: FontStyle.italic,
-						fontSize: 15,
-						color: Colors.blue,
-					)),
-				),
-			),
-		),
-	);
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.week,
+          timeSlotViewSettings: TimeSlotViewSettings(
+              timeTextStyle: TextStyle(
+            fontWeight: FontWeight.w500,
+            fontStyle: FontStyle.italic,
+            fontSize: 15,
+            color: Colors.blue,
+          )),
+        ),
+      ),
+    ),
+  );
 }
 
 {% endhighlight %}

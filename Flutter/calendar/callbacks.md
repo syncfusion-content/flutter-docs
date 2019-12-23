@@ -20,18 +20,18 @@ The [onViewChanged](https://pub.dev/documentation/syncfusion_flutter_calendar/la
 
 @override
 Widget build(BuildContext context) {
-	return MaterialApp(
-		home: Scaffold(
-			body: Container(
-				child: SfCalendar(
-					view: CalendarView.week,
-					onViewChanged: (ViewChangedDetails details) {
-						dates = details.visibleDates;
-					},
-				),
-			),
-		),
-	);
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.week,
+          onViewChanged: (ViewChangedDetails details) {
+            dates = details.visibleDates;
+          },
+        ),
+      ),
+    ),
+  );
 }
 
 {% endhighlight %}
@@ -48,20 +48,20 @@ The [onTapUp](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/c
 
 @override
 Widget build(BuildContext context) {
-	return MaterialApp(
-		home: Scaffold(
-			body: Container(
-				child: SfCalendar(
-					view: CalendarView.week,
-					onTap: (CalendarTapDetails details) {
-						appointment = details.appointments;
-						date = details.date;
-						element = details.targetElement;
-					},
-				),
-			),
-		),
-	);
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.week,
+          onTap: (CalendarTapDetails details) {
+            appointment = details.appointments;
+            date = details.date;
+            element = details.targetElement;
+          },
+        ),
+      ),
+    ),
+  );
 }
 
 {% endhighlight %}

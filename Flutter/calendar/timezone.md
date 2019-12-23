@@ -1197,16 +1197,16 @@ You can set specific time zone to calendar using the [timeZone](https://pub.dev/
 
 @override
 Widget build(BuildContext context) {
-	return MaterialApp(
-		home: Scaffold(
-			body: Container(
-				child: SfCalendar(
-					view: CalendarView.week,
-					timeZone: 'Central America Standard Time',
-				),
-			),
-		),
-	);
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.week,
+          timeZone: 'Central America Standard Time',
+        ),
+      ),
+    ),
+  );
 }
 
 {% endhighlight %}

@@ -19,11 +19,11 @@ The calendar month view displays a divided agenda view that is used to show the 
 
 @override
 Widget build(BuildContext context) {
-	return Scaffold(
-		body: SfCalendar(
-			view: CalendarView.month,
-			monthViewSettings: MonthViewSettings(showAgenda: true),
-	));
+  return Scaffold(
+      body: SfCalendar(
+    view: CalendarView.month,
+    monthViewSettings: MonthViewSettings(showAgenda: true),
+  ));
 }
 
 {% endhighlight %}
@@ -40,19 +40,19 @@ You can customize the month agenda view height from calendar by using the [agend
 
 @override
 Widget build(BuildContext context) {
-	return MaterialApp(
-		home: Scaffold(
-			body: Container(
-				child: SfCalendar(
-					view: CalendarView.month,
-					monthViewSettings: MonthViewSettings(
-						showAgenda: true,
-						agendaViewHeight: 400,
-					),
-				),
-			),
-		),
-	);
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.month,
+          monthViewSettings: MonthViewSettings(
+            showAgenda: true,
+            agendaViewHeight: 400,
+          ),
+        ),
+      ),
+    ),
+  );
 }
 
 {% endhighlight %}
@@ -65,19 +65,19 @@ You can customize the height of an appointment in agenda view by using the [agen
 
 @override
 Widget build(BuildContext context) {
-	return MaterialApp(
-		home: Scaffold(
-			body: Container(
-				child: SfCalendar(
-					view: CalendarView.month,
-					monthViewSettings: MonthViewSettings(
-						showAgenda: true,
-						agendaItemHeight: 70,
-					),
-				),
-			),
-		),
-	);
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.month,
+          monthViewSettings: MonthViewSettings(
+            showAgenda: true,
+            agendaItemHeight: 70,
+          ),
+        ),
+      ),
+    ),
+  );
 }
 
 {% endhighlight %}
@@ -90,16 +90,16 @@ You can customize the number of appointments displayed in month cell using the [
 
 @override
 Widget build(BuildContext context) {
-	return MaterialApp(
-		home: Scaffold(
-			body: Container(
-				child: SfCalendar(
-					view: CalendarView.month,
-					monthViewSettings: MonthViewSettings(appointmentDisplayCount: 2),
-				),
-			),
-		),
-	);
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.month,
+          monthViewSettings: MonthViewSettings(appointmentDisplayCount: 2),
+        ),
+      ),
+    ),
+  );
 }
 
 {% endhighlight %}
@@ -119,19 +119,18 @@ You can handle the calendar month view appointment display by using the [appoint
 
 @override
 Widget build(BuildContext context) {
-	return MaterialApp(
-		home: Scaffold(
-			body: Container(
-				child: SfCalendar(
-					view: CalendarView.month,
-					monthViewSettings: MonthViewSettings(
-						appointmentDisplayMode:
-							MonthAppointmentDisplayMode.appointment),
-					),
-				),
-			),
-		);
-	}
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.month,
+          monthViewSettings: MonthViewSettings(
+              appointmentDisplayMode: MonthAppointmentDisplayMode.appointment),
+        ),
+      ),
+    ),
+  );
+}
 
 {% endhighlight %}
 
@@ -143,19 +142,18 @@ MonthView of calendar can be navigated in both horizontal and vertical direction
 
 @override
 Widget build(BuildContext context) {
-	return MaterialApp(
-		home: Scaffold(
-			body: Container(
-				child: SfCalendar(
-					view: CalendarView.month,
-					monthViewSettings: MonthViewSettings(
-						appointmentDisplayMode:
-							MonthAppointmentDisplayMode.appointment),
-					),
-				),
-			),
-		);
-	}
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.month,
+          monthViewSettings: MonthViewSettings(
+              appointmentDisplayMode: MonthAppointmentDisplayMode.appointment),
+        ),
+      ),
+    ),
+  );
+}
 
 {% endhighlight %}
 
@@ -167,16 +165,16 @@ The number of weeks in the month view can be changed by setting the [numberOfWee
 
 @override
 Widget build(BuildContext context) {
-	return MaterialApp(
-		home: Scaffold(
-			body: Container(
-				child: SfCalendar(
-					view: CalendarView.month,
-					monthViewSettings: MonthViewSettings(numberOfWeeksInView: 2),
-				),
-			),
-		),
-	);
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.month,
+          monthViewSettings: MonthViewSettings(numberOfWeeksInView: 2),
+        ),
+      ),
+    ),
+  );
 }
 
 {% endhighlight %}
@@ -193,16 +191,16 @@ You can customize the day format of SfCalendar ViewHeader by using the [dayForma
 
 @override
 Widget build(BuildContext context) {
-	return MaterialApp(
-		home: Scaffold(
-			body: Container(
-				child: SfCalendar(
-					view: CalendarView.month,
-					monthViewSettings: MonthViewSettings(dayFormat: 'dd'),
-				),
-			),
-		),
-	);
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.month,
+          monthViewSettings: MonthViewSettings(dayFormat: 'dd'),
+        ),
+      ),
+    ),
+  );
 }
 
 {% endhighlight %}
@@ -215,36 +213,35 @@ You can customize the agenda view appointment and the selected date text style b
 
 @override
 Widget build(BuildContext context) {
-	return MaterialApp(
-		home: Scaffold(
-			body: Container(
-				child: SfCalendar(
-					view: CalendarView.month,
-					monthViewSettings: MonthViewSettings(
-						showAgenda: true,
-						agendaStyle: AgendaStyle(
-							backgroundColor: Colors.grey,
-							appointmentTextStyle: TextStyle(
-								fontSize: 14,
-								fontStyle: FontStyle.italic,
-								color: Colors.blue),
-							dateTextStyle: TextStyle(
-								fontStyle: FontStyle.italic,
-								fontSize: 12,
-								fontWeight: FontWeight.w300,
-								color: Colors.black),
-							dayTextStyle: TextStyle(
-								fontStyle: FontStyle.normal,
-								fontSize: 20,
-								fontWeight: FontWeight.w700,
-								color: Colors.black),
-							)
-						),
-					),
-				),
-			),
-		);
-	}
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.month,
+          monthViewSettings: MonthViewSettings(
+              showAgenda: true,
+              agendaStyle: AgendaStyle(
+                backgroundColor: Colors.grey,
+                appointmentTextStyle: TextStyle(
+                    fontSize: 14,
+                    fontStyle: FontStyle.italic,
+                    color: Colors.blue),
+                dateTextStyle: TextStyle(
+                    fontStyle: FontStyle.italic,
+                    fontSize: 12,
+                    fontWeight: FontWeight.w300,
+                    color: Colors.black),
+                dayTextStyle: TextStyle(
+                    fontStyle: FontStyle.normal,
+                    fontSize: 20,
+                    fontWeight: FontWeight.w700,
+                    color: Colors.black),
+              )),
+        ),
+      ),
+    ),
+  );
+}
 
 {% endhighlight %}
 
@@ -256,40 +253,38 @@ By using the [monthCellStyle](https://pub.dev/documentation/syncfusion_flutter_c
 
 @override
 Widget build(BuildContext context) {
-	return MaterialApp(
-		home: Scaffold(
-			body: Container(
-				child: SfCalendar(
-					view: CalendarView.month,
-					monthViewSettings: MonthViewSettings(
-						monthCellStyle: MonthCellStyle(
-							backgroundColor: Colors.blue,
-							trailingDatesBackgroundColor: Colors.white,
-							leadingDatesBackgroundColor: Colors.grey,
-							todayBackgroundColor: Colors.red,
-							textStyle: TextStyle(
-								fontStyle: FontStyle.italic,
-								fontSize: 12,
-								fontFamily: 'Arial'),
-							todayTextStyle: TextStyle(
-								fontStyle: FontStyle.italic,
-								fontSize: 12,
-								fontWeight: FontWeight.bold,
-								fontFamily: 'Arial'),
-							trailingDatesTextStyle: TextStyle(
-								fontStyle: FontStyle.normal,
-								fontSize: 12,
-								fontFamily: 'Arial'),
-							leadingDatesTextStyle: TextStyle(
-								fontStyle: FontStyle.normal,
-								fontSize: 12,	
-								fontFamily: 'Arial')
-							)
-						),
-					),
-				),
-			),
-		);
-	}
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.month,
+          monthViewSettings: MonthViewSettings(
+              monthCellStyle: MonthCellStyle(
+                  backgroundColor: Colors.blue,
+                  trailingDatesBackgroundColor: Colors.white,
+                  leadingDatesBackgroundColor: Colors.grey,
+                  todayBackgroundColor: Colors.red,
+                  textStyle: TextStyle(
+                      fontStyle: FontStyle.italic,
+                      fontSize: 12,
+                      fontFamily: 'Arial'),
+                  todayTextStyle: TextStyle(
+                      fontStyle: FontStyle.italic,
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Arial'),
+                  trailingDatesTextStyle: TextStyle(
+                      fontStyle: FontStyle.normal,
+                      fontSize: 12,
+                      fontFamily: 'Arial'),
+                  leadingDatesTextStyle: TextStyle(
+                      fontStyle: FontStyle.normal,
+                      fontSize: 12,
+                      fontFamily: 'Arial'))),
+        ),
+      ),
+    ),
+  );
+}
 
 {% endhighlight %}

@@ -18,12 +18,12 @@ You can customize the height for header in calendar using the `headerHeight` pro
 
 @override
 Widget build(BuildContext context) {
-	return Container(
-		child: SfCalendar(
-			view: CalendarView.week,
-			headerHeight: 100,
-		),
-	);
+  return Container(
+    child: SfCalendar(
+      view: CalendarView.week,
+      headerHeight: 100,
+    ),
+  );
 }
 
 {% endhighlight %}
@@ -35,21 +35,20 @@ You can style the header using the [calendarHeaderStyle](https://pub.dev/documen
 
 @override
 Widget build(BuildContext context) {
-	return Container(
-		child: SfCalendar(
-			view: CalendarView.week,
-			headerStyle: CalendarHeaderStyle(
-				textAlign: TextAlign.center,
-				backgroundColor: Colors.grey,
-				textStyle: TextStyle(
-					fontSize: 22,
-					fontStyle: FontStyle.italic,
-					color: Colors.blue,
-					fontWeight: FontWeight.w500)
-				),
-			),
-		);
-	}
+  return Container(
+    child: SfCalendar(
+      view: CalendarView.week,
+      headerStyle: CalendarHeaderStyle(
+          textAlign: TextAlign.center,
+          backgroundColor: Colors.grey,
+          textStyle: TextStyle(
+              fontSize: 22,
+              fontStyle: FontStyle.italic,
+              color: Colors.blue,
+              fontWeight: FontWeight.w500)),
+    ),
+  );
+}
 
 {% endhighlight %}
 
@@ -65,14 +64,12 @@ You can customize the height for view header in calendar using the `viewHeaderHe
 
 @override
 Widget build(BuildContext context) {
-@override
-Widget build(BuildContext context) {
-	return Container(
-		child: SfCalendar(
-			view: CalendarView.week,
-			viewHeaderHeight: 100,
-		),
-	);
+  return Container(
+    child: SfCalendar(
+      view: CalendarView.week,
+      viewHeaderHeight: 100,
+    ),
+  );
 }
 
 {% endhighlight %}
@@ -85,25 +82,24 @@ You can style the header using the [viewHeaderStyle](https://pub.dev/documentati
 
 @override
 Widget build(BuildContext context) {
-	return Container(
-		child: SfCalendar(
-			view: CalendarView.week,
-			viewHeaderStyle: ViewHeaderStyle(
-				backgroundColor: Colors.grey,
-				dayTextStyle: TextStyle(
-					fontSize: 18,
-					fontStyle: FontStyle.italic,
-					color: Colors.blue,
-					fontWeight: FontWeight.w500),
-				dateTextStyle: TextStyle(
-					fontSize: 22,
-					fontStyle: FontStyle.italic,
-					color: Colors.blue,
-					fontWeight: FontWeight.w500)
-				),
-			),
-		);
-	}
+  return Container(
+    child: SfCalendar(
+      view: CalendarView.week,
+      viewHeaderStyle: ViewHeaderStyle(
+          backgroundColor: Colors.grey,
+          dayTextStyle: TextStyle(
+              fontSize: 18,
+              fontStyle: FontStyle.italic,
+              color: Colors.blue,
+              fontWeight: FontWeight.w500),
+          dateTextStyle: TextStyle(
+              fontSize: 22,
+              fontStyle: FontStyle.italic,
+              color: Colors.blue,
+              fontWeight: FontWeight.w500)),
+    ),
+  );
+}
 
 {% endhighlight %}
 

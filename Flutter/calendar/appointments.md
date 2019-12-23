@@ -15,40 +15,39 @@ SfCalendar widget has a built-in capability to handle the appointment arrangemen
 
 @override
 Widget build(BuildContext context) {
-	return MaterialApp(
-		home: Scaffold(
-			body: Container(
-				child: SfCalendar(
-				view: CalendarView.week,
-				dataSource: _getCalendarDataSource(),
-			),
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.week,
+          dataSource: _getCalendarDataSource(),
         ),
-	),
+      ),
+    ),
   );
 }
 
 _AppointmentDataSource _getCalendarDataSource() {
-	List<Appointment> appointments = <Appointment>[];
-	appointments.add(Appointment(
-		startTime: DateTime.now(),
-		endTime: DateTime.now().add(Duration(minutes: 10)),
-		subject: 'Meeting',
-		color: Colors.blue,
-		startTimeZone: '',
-		endTimeZone: '',
-		)
-	);
+  List<Appointment> appointments = <Appointment>[];
+  appointments.add(Appointment(
+    startTime: DateTime.now(),
+    endTime: DateTime.now().add(Duration(minutes: 10)),
+    subject: 'Meeting',
+    color: Colors.blue,
+    startTimeZone: '',
+    endTimeZone: '',
+  ));
 
-	return _AppointmentDataSource(appointments);
+  return _AppointmentDataSource(appointments);
 }
 
 class _AppointmentDataSource extends CalendarDataSource {
-	_AppointmentDataSource(this.source);
+  _AppointmentDataSource(this.source);
 
-	List<Appointment> source;
+  List<Appointment> source;
 
-	@override
-	List<dynamic> get appointments => source;
+  @override
+  List<dynamic> get appointments => source;
 }
 
 {% endhighlight %}
@@ -78,47 +77,47 @@ Calendar supports full data binding to any type of List source. Specify the corr
 {% highlight dart %}
 
 class MeetingDataSource extends CalendarDataSource {
-	MeetingDataSource(this.source);
+  MeetingDataSource(this.source);
 
-	List<Meeting> source;
+  List<Meeting> source;
 
-	@override
-	List<dynamic> get appointments => source;
+  @override
+  List<dynamic> get appointments => source;
 
-	@override
-	DateTime getStartTime(int index) {
-		return source[index].from;
-	}
+  @override
+  DateTime getStartTime(int index) {
+    return source[index].from;
+  }
 
-	@override
-	DateTime getEndTime(int index) {
-		return source[index].to;
-	}
+  @override
+  DateTime getEndTime(int index) {
+    return source[index].to;
+  }
 
-	@override
-	bool isAllDay(int index) {
-		return source[index].isAllDay;
-	}
+  @override
+  bool isAllDay(int index) {
+    return source[index].isAllDay;
+  }
 
-	@override
-	String getSubject(int index) {
-		return source[index].eventName;
-	}
+  @override
+  String getSubject(int index) {
+    return source[index].eventName;
+  }
 
-	@override
-	String getStartTimeZone(int index) {
-		return source[index].startTimeZone;
-	}
+  @override
+  String getStartTimeZone(int index) {
+    return source[index].startTimeZone;
+  }
 
-	@override
-	String getEndTimeZone(int index) {
-		return source[index].endTimeZone;
-	}
+  @override
+  String getEndTimeZone(int index) {
+    return source[index].endTimeZone;
+  }
 
-	@override
-	Color getColor(int index) {
-		return source[index].background;
-	}
+  @override
+  Color getColor(int index) {
+    return source[index].background;
+  }
 }
 
 {% endhighlight %}
@@ -139,13 +138,13 @@ You can create a custom class `Meeting` with mandatory fields `from`, and `to`.
 {% highlight dart %}
 
 class Meeting {
-	Meeting({this.eventName, this.from, this.to, this.background, this.isAllDay});
+  Meeting({this.eventName, this.from, this.to, this.background, this.isAllDay});
 
-	String eventName;
-	DateTime from;
-	DateTime to;
-	Color background;
-	bool isAllDay;
+  String eventName;
+  DateTime from;
+  DateTime to;
+  Color background;
+  bool isAllDay;
 }
 
 {% endhighlight %}
@@ -155,47 +154,47 @@ You can map those properties of `Meeting` class with our calendar widget by usin
 {% highlight dart %}
 
 class MeetingDataSource extends CalendarDataSource {
-	MeetingDataSource(this.source);
+  MeetingDataSource(this.source);
 
-	List<Meeting> source;
+  List<Meeting> source;
 
-	@override
-	List<dynamic> get appointments => source;
+  @override
+  List<dynamic> get appointments => source;
 
-	@override
-	DateTime getStartTime(int index) {
-		return source[index].from;
-	}
+  @override
+  DateTime getStartTime(int index) {
+    return source[index].from;
+  }
 
-	@override
-	DateTime getEndTime(int index) {
-		return source[index].to;
-	}
+  @override
+  DateTime getEndTime(int index) {
+    return source[index].to;
+  }
 
-	@override
-	bool isAllDay(int index) {
-		return source[index].isAllDay;
-	}
+  @override
+  bool isAllDay(int index) {
+    return source[index].isAllDay;
+  }
 
-	@override
-	String getSubject(int index) {
-		return source[index].eventName;
-	}
+  @override
+  String getSubject(int index) {
+    return source[index].eventName;
+  }
 
-	@override
-	String getStartTimeZone(int index) {
-		return source[index].startTimeZone;
-	}
+  @override
+  String getStartTimeZone(int index) {
+    return source[index].startTimeZone;
+  }
 
-	@override
-	String getEndTimeZone(int index) {
-		return source[index].endTimeZone;
-	}
+  @override
+  String getEndTimeZone(int index) {
+    return source[index].endTimeZone;
+  }
 
-	@override
-	Color getColor(int index) {
-		return source[index].background;
-	}
+  @override
+  Color getColor(int index) {
+    return source[index].background;
+  }
 }
 
 {% endhighlight %}
@@ -206,28 +205,28 @@ You can schedule meetings for a day by setting `From` and `To` of Meeting class.
 
 @override
 Widget build(BuildContext context) {
-	return MaterialApp(
-		home: Scaffold(
-			body: Container(
-				child: SfCalendar(
-					view: CalendarView.week,
-					dataSource: _getCalendarDataSource(),
-				),
-			),
-		),
-    );
-  }
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.week,
+          dataSource: _getCalendarDataSource(),
+        ),
+      ),
+    ),
+  );
+}
 
 MeetingDataSource _getCalendarDataSource() {
-	List<Meeting> meetings = <Meeting>[];
-	meetings.add(Meeting(eventName: 'meeting',
-		from: DateTime(2019, 12, 18, 10),
-		to: DateTime(2019, 12, 18, 12),
-		background: Colors.green,
-		isAllDay: false));
-		
-	return MeetingDataSource(meetings);
- }
+  List<Meeting> meetings = <Meeting>[];
+  meetings.add(Meeting(
+      eventName: 'meeting',
+      from: DateTime(2019, 12, 18, 10),
+      to: DateTime(2019, 12, 18, 12),
+      background: Colors.green,
+      isAllDay: false));
+
+  return MeetingDataSource(meetings);
 }
 
 {% endhighlight %}
@@ -239,14 +238,14 @@ Spanned Appointment is an appointment, which lasts more than 24 hours. It does n
 {% highlight dart %}
 
 MeetingDataSource _getCalendarDataSource() {
-	List<Meeting> meetings = <Meeting>[];
-	meetings.add(Meeting(eventName: 'meeting',
-		from: DateTime(2019, 12, 18, 10),
-		to: DateTime(2019, 12, 20, 12),
-		background: Colors.green));
-		
-	return MeetingDataSource(meetings);
-  }
+  List<Meeting> meetings = <Meeting>[];
+  meetings.add(Meeting(
+      eventName: 'meeting',
+      from: DateTime(2019, 12, 18, 10),
+      to: DateTime(2019, 12, 20, 12),
+      background: Colors.green));
+
+  return MeetingDataSource(meetings);
 }
 
 {% endhighlight %}
@@ -258,17 +257,16 @@ All-Day appointment is an appointment which is scheduled for a whole day. It can
 {% highlight dart %}
 
 _AppointmentDataSource _getCalendarDataSource() {
-	List<Appointment> appointments = <Appointment>[];
-	appointments.add(Appointment(
-		startTime: DateTime.now(),
-		endTime: DateTime.now().add(Duration(minutes: 10)),
-		subject: 'Meeting',
-		color: Colors.blue,
-		isAllDay: true,
-    ));
+  List<Appointment> appointments = <Appointment>[];
+  appointments.add(Appointment(
+    startTime: DateTime.now(),
+    endTime: DateTime.now().add(Duration(minutes: 10)),
+    subject: 'Meeting',
+    color: Colors.blue,
+    isAllDay: true,
+  ));
 
-    return _AppointmentDataSource(appointments);
-  }
+  return _AppointmentDataSource(appointments);
 }
 
 {% endhighlight %}
@@ -304,38 +302,38 @@ Calendar appointment recurrenceRule is used to populate the required recurring a
 
 @override
 Widget build(BuildContext context) {
-	return MaterialApp(
-		home: Scaffold(
-			body: Container(
-				child: SfCalendar(
-				view: CalendarView.week,
-				dataSource: _getCalendarDataSource(),
-			),
-		),
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.week,
+          dataSource: _getCalendarDataSource(),
+        ),
+      ),
     ),
   );
 }
 
 _AppointmentDataSource _getCalendarDataSource() {
-	List<Appointment> appointments = <Appointment>[];
+  List<Appointment> appointments = <Appointment>[];
 
-	appointments.add(Appointment(
-		startTime: DateTime(2019, 12, 16, 10),
-		endTime: DateTime(2019, 12, 16, 12),
-		subject: 'Meeting',
-		color: Colors.blue,
-		recurrenceRule: 'FREQ=DAILY;INTERVAL=2;COUNT=10'));
+  appointments.add(Appointment(
+      startTime: DateTime(2019, 12, 16, 10),
+      endTime: DateTime(2019, 12, 16, 12),
+      subject: 'Meeting',
+      color: Colors.blue,
+      recurrenceRule: 'FREQ=DAILY;INTERVAL=2;COUNT=10'));
 
-	return _AppointmentDataSource(appointments);
+  return _AppointmentDataSource(appointments);
 }
 
 class _AppointmentDataSource extends CalendarDataSource {
-	_AppointmentDataSource(this.source);
+  _AppointmentDataSource(this.source);
 
-	List<Appointment> source;
+  List<Appointment> source;
 
-	@override
-	List<dynamic> get appointments => source;
+  @override
+  List<dynamic> get appointments => source;
 }
 
 {% endhighlight %}
@@ -347,20 +345,20 @@ For creating custom recurrence appointment, you need to create a custom class `M
 {% highlight dart %}
 
 class Meeting {
-	Meeting(
-		{this.eventName,
-		this.from,
-		this.to,
-		this.background,
-		this.isAllDay,
-		this.recurrenceRule});
+  Meeting(
+      {this.eventName,
+      this.from,
+      this.to,
+      this.background,
+      this.isAllDay,
+      this.recurrenceRule});
 
-	String eventName;
-	DateTime from;
-	DateTime to;
-	Color background;
-	bool isAllDay;
-	String recurrenceRule;
+  String eventName;
+  DateTime from;
+  DateTime to;
+  Color background;
+  bool isAllDay;
+  String recurrenceRule;
 }
 
 {% endhighlight %}
@@ -370,42 +368,42 @@ You can map those properties of `Meeting` class with our calendar widget by usin
 {% highlight dart %}
 
 class MeetingDataSource extends CalendarDataSource {
-	MeetingDataSource(this.source);
+  MeetingDataSource(this.source);
 
-	List<Meeting> source;
+  List<Meeting> source;
 
-	@override
-	List<dynamic> get appointments => source;
+  @override
+  List<dynamic> get appointments => source;
 
-	@override
-	DateTime getStartTime(int index) {
-		return source[index].from;
-	}
+  @override
+  DateTime getStartTime(int index) {
+    return source[index].from;
+  }
 
-	@override
-	DateTime getEndTime(int index) {
-		return source[index].to;
-	}
+  @override
+  DateTime getEndTime(int index) {
+    return source[index].to;
+  }
 
-	@override
-	bool isAllDay(int index) {
-		return source[index].isAllDay;
-	}
+  @override
+  bool isAllDay(int index) {
+    return source[index].isAllDay;
+  }
 
-	@override
-	String getSubject(int index) {
-		return source[index].eventName;
-	}
+  @override
+  String getSubject(int index) {
+    return source[index].eventName;
+  }
 
-	@override
-	Color getColor(int index) {
-		return source[index].background;
-	}
+  @override
+  Color getColor(int index) {
+    return source[index].background;
+  }
 
-	@override
-	String getRecurrenceRule(int index) {
-		return source[index].recurrenceRule;
-	}
+  @override
+  String getRecurrenceRule(int index) {
+    return source[index].recurrenceRule;
+  }
 }
 
 {% endhighlight %}
@@ -505,7 +503,7 @@ You can get the Recurrence properties form `RRULE` by using the [parseRRule](htt
 
 DateTime dateTime = DateTime(2020, 03, 15);
 RecurrenceProperties recurrenceProperties =
-	SfCalendar.parseRRule('FREQ=DAILY;INTERVAL=1;COUNT=1', dateTime);
+    SfCalendar.parseRRule('FREQ=DAILY;INTERVAL=1;COUNT=1', dateTime);
 
 {% endhighlight %}
 
@@ -523,7 +521,7 @@ You can get the occurrences date time list of recurring appointment from RRULE u
 
 DateTime dateTime = DateTime(2020, 03, 15);
 List<DateTime> dateCollection = SfCalendar.getRecurrenceDateTimeCollection(
-	'FREQ=DAILY;INTERVAL=1;COUNT=3', dateTime);
+    'FREQ=DAILY;INTERVAL=1;COUNT=3', dateTime);
 
 {% endhighlight %}
 
@@ -556,41 +554,40 @@ You can delete any of occurrence, which is an exception from the recurrence patt
 
 @override
 Widget build(BuildContext context) {
-	return MaterialApp(
-		home: Scaffold(
-			body: Container(
-				child: SfCalendar(
-					view: CalendarView.week,
-					dataSource: _getCalendarDataSource(),
-				),
-			),
-		),
-    );
-  }
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.week,
+          dataSource: _getCalendarDataSource(),
+        ),
+      ),
+    ),
+  );
+}
 
 _AppointmentDataSource _getCalendarDataSource() {
-	List<Appointment> appointments = <Appointment>[];
+  List<Appointment> appointments = <Appointment>[];
 
-    DateTime exceptionDate = DateTime(2019, 12, 20);
-    appointments.add(Appointment(
-        startTime: DateTime(2019, 12, 16, 10),
-        endTime: DateTime(2019, 12, 16, 12),
-        subject: 'Occurs daily',
-        color: Colors.red,
-        recurrenceRule: 'FREQ=DAILY;COUNT=20',
-        recurrenceExceptionDates: <DateTime>[exceptionDate]));
+  DateTime exceptionDate = DateTime(2019, 12, 20);
+  appointments.add(Appointment(
+      startTime: DateTime(2019, 12, 16, 10),
+      endTime: DateTime(2019, 12, 16, 12),
+      subject: 'Occurs daily',
+      color: Colors.red,
+      recurrenceRule: 'FREQ=DAILY;COUNT=20',
+      recurrenceExceptionDates: <DateTime>[exceptionDate]));
 
-    return _AppointmentDataSource(appointments);
-  }
+  return _AppointmentDataSource(appointments);
 }
 
 class _AppointmentDataSource extends CalendarDataSource {
-	_AppointmentDataSource(this.source);
+  _AppointmentDataSource(this.source);
 
-	List<Appointment> source;
+  List<Appointment> source;
 
-	@override
-	List<dynamic> get appointments => source;
+  @override
+  List<dynamic> get appointments => source;
 }
 
 {% endhighlight %}
@@ -611,95 +608,95 @@ To add the exception dates in the recurrence series of custom appointment, add t
 
 @override
 Widget build(BuildContext context) {
-	return MaterialApp(
-		home: Scaffold(
-			body: Container(
-				child: SfCalendar(
-					view: CalendarView.week,
-					dataSource: _getCalendarDataSource(),
-				),
-			),
-		),
-	);
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.week,
+          dataSource: _getCalendarDataSource(),
+        ),
+      ),
+    ),
+  );
 }
 
 MeetingDataSource _getCalendarDataSource() {
-	List<Meeting> meetings = <Meeting>[];
+  List<Meeting> meetings = <Meeting>[];
 
-	DateTime exceptionDate = DateTime(2019, 12, 24);
-	meetings.add(Meeting(
-		eventName: 'meeting',
-		from: DateTime(2019, 12, 18, 10),
-		to: DateTime(2019, 12, 18, 12),
-		background: Colors.green,
-		isAllDay: false,
-		recurrenceRule: 'FREQ=DAILY;COUNT=20',
-		exceptionDates: <DateTime>[exceptionDate]));
-		
-	return MeetingDataSource(meetings);
+  DateTime exceptionDate = DateTime(2019, 12, 24);
+  meetings.add(Meeting(
+      eventName: 'meeting',
+      from: DateTime(2019, 12, 18, 10),
+      to: DateTime(2019, 12, 18, 12),
+      background: Colors.green,
+      isAllDay: false,
+      recurrenceRule: 'FREQ=DAILY;COUNT=20',
+      exceptionDates: <DateTime>[exceptionDate]));
+
+  return MeetingDataSource(meetings);
 }
 
-
 class MeetingDataSource extends CalendarDataSource {
-	MeetingDataSource(this.source);
+  MeetingDataSource(this.source);
 
-	List<Meeting> source;
+  List<Meeting> source;
 
-	@override
-	List<dynamic> get appointments => source;
+  @override
+  List<dynamic> get appointments => source;
 
-	@override
-	DateTime getStartTime(int index) {
-		return source[index].from;
-	}
+  @override
+  DateTime getStartTime(int index) {
+    return source[index].from;
+  }
 
-	@override
-	DateTime getEndTime(int index) {
-		return source[index].to;
-	}
+  @override
+  DateTime getEndTime(int index) {
+    return source[index].to;
+  }
 
-	@override
-	bool isAllDay(int index) {
-		return source[index].isAllDay;
-	}
+  @override
+  bool isAllDay(int index) {
+    return source[index].isAllDay;
+  }
 
-	@override
-	String getSubject(int index) {
-		return source[index].eventName;
-	}
+  @override
+  String getSubject(int index) {
+    return source[index].eventName;
+  }
 
-	@override
-	Color getColor(int index) {
-		return source[index].background;
-	}
+  @override
+  Color getColor(int index) {
+    return source[index].background;
+  }
 
-	@override
-	String getRecurrenceRule(int index) {
-		return source[index].recurrenceRule;
-	}
+  @override
+  String getRecurrenceRule(int index) {
+    return source[index].recurrenceRule;
+  }
 
-	@override
-	List<DateTime> getRecurrenceExceptionDates(int index) {
-		return source[index].exceptionDates;
-	}
+  @override
+  List<DateTime> getRecurrenceExceptionDates(int index) {
+    return source[index].exceptionDates;
+  }
 }
 
 class Meeting {
-	Meeting({this.eventName,
-		this.from,
-		this.to,
-		this.background,
-		this.isAllDay,
-		this.recurrenceRule,
-		this.exceptionDates});
+  Meeting(
+      {this.eventName,
+      this.from,
+      this.to,
+      this.background,
+      this.isAllDay,
+      this.recurrenceRule,
+      this.exceptionDates});
 
-	String eventName;
-	DateTime from;
-	DateTime to;
-	Color background;
-	bool isAllDay;
-	String recurrenceRule;
-	List<DateTime> exceptionDates;
+  String eventName;
+  DateTime from;
+  DateTime to;
+  Color background;
+  bool isAllDay;
+  String recurrenceRule;
+  List<DateTime> exceptionDates;
 }
 
 {% endhighlight %}
@@ -714,21 +711,21 @@ Calendar appointment text style can be customized by using the [appointmentTextS
 
 @override
 Widget build(BuildContext context) {
-	return MaterialApp(
-		home: Scaffold(
-			body: Container(
-				child: SfCalendar(
-					view: CalendarView.week,
-					dataSource: _getCalendarDataSource(),
-					appointmentTextStyle: TextStyle(
-						fontSize: 15,
-						fontStyle: FontStyle.italic,
-						color: Colors.lightGreen,
-						fontWeight: FontWeight.bold),
-					),
-				),
-			),
-		);
-	}
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.week,
+          dataSource: _getCalendarDataSource(),
+          appointmentTextStyle: TextStyle(
+              fontSize: 15,
+              fontStyle: FontStyle.italic,
+              color: Colors.lightGreen,
+              fontWeight: FontWeight.bold),
+        ),
+      ),
+    ),
+  );
+}
 
 {% endhighlight %}
