@@ -39,15 +39,13 @@ The Syncfusion Flutter Calendar library was written natively in Dart and has sev
 
 ![First day of week](images/overview/First_day_of_week.png)
 
-* **Custom start and end hours**: Display the event calendar timeslot views with specific time durations by hiding the unwanted hours. 
-
 * **Month agenda view**: Display appointments in a list as shown in the following month view by clicking on a day.
 
 ![Month agenda view](images/overview/Month_agenda_view.png)
 
 * **Appearance customization**: Provide a uniform and consistent look with Calendar’s flexible appearance and format.
 
-
+* **Custom start and end hours**: Display the event calendar timeslot views with specific time durations by hiding the unwanted hours. 
 
 
 
