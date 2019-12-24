@@ -12,6 +12,14 @@ documentation: ug
 This page helps to navigate to the public API's available in the Syncfusion Flutter widgets.
 
 <table>
+	<tr>
+        <td>
+            Calendar
+        </td>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/calendar-library.html">Link</a>
+        </td>
+    </tr>
     <tr>
         <td>
             Charts
