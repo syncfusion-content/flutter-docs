@@ -1,7 +1,7 @@
 ---
 layout: post
-title: API | Flutter | Syncfusion
-description: The public API's available in Syncfusion Flutter widgets.
+title: Public API | Flutter | Syncfusion
+description: The reference and a summary with a sample code snippet for public API's available in Syncfusion Flutter widgets.
 platform: flutter
 control: API
 documentation: ug
