@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Callbacks in Syncfusion Flutter Calendar 
+title: Callbacks in the Flutter Calendar | Scheduler | Syncfusion
 description: Learn about the callbacks in Syncfusion Flutter Calendar and the return values and usage of the callbacks
 platform: flutter
 control: SfCalendar

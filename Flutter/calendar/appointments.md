@@ -199,7 +199,7 @@ class MeetingDataSource extends CalendarDataSource {
 
 {% endhighlight %}
 
-You can schedule meetings for a day by setting `From` and `To` of Meeting class. Create meetings of type List<Meeting> and assign those appointments collection Meetings to the [appointments](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/appointments.html) property of `CalendarDataSource`.
+You can schedule meetings for a day by setting `From` and `To` of Meeting class. Create meetings of type `List<Meeting>` and assign those appointments collection Meetings to the [appointments](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/appointments.html) property of `CalendarDataSource`.
 
 {% highlight dart %}
 
@@ -233,7 +233,7 @@ MeetingDataSource _getCalendarDataSource() {
 
 ## Spanned appointments
 
-Spanned Appointment is an appointment, which lasts more than 24 hours. It does not block out time slots in SfCalendar, it will render in `All-Day appointment` panel exclusively.
+Spanned Appointment is an appointment, which lasts more than 24 hours. It does not block out time slots in SfCalendar, it will render in `All-Day appointment panel` exclusively.
 
 {% highlight dart %}
 
@@ -495,7 +495,7 @@ class Meeting {
 
 {% endhighlight %}
 
-### How to get Recurrence editor field values from RRULE
+### How to get the Recurrence editor field values from RRULE
 
 You can get the Recurrence properties form `RRULE` by using the [parseRRule](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/parseRRule.html) method from calendar.
 
@@ -513,7 +513,7 @@ recurrenceProperties.interval = 1;
 recurrenceProperties.recurrenceCount = 3;
 recurrenceProperties.recurrenceRange = RecurrenceRange.count;
 
-### How to get recurrence dates from RRULE
+### How to get the recurrence dates from RRULE
 
 You can get the occurrences date time list of recurring appointment from RRULE using the [getRecurrenceDateTimeCollection](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/getRecurrenceDateTimeCollection.html) method of SfCalendar.
 
