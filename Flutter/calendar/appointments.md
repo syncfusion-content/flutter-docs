@@ -1,7 +1,7 @@
 ---
-layout: post
-title: Appointments in Syncfusion Flutter Calendar 
-description: Learn how to schedule, customize and handle different kinds of appointments in Syncfusion Flutter Calendar.
+layout: post 
+title: Appointments | events in Syncfusion Flutter Calendar | Scheduler
+description: Learn how to plan, configure and manage all day, recurrence and spanning appointments in Syncfusion Flutter Calendar.
 platform: flutter
 control: SfCalendar
 documentation: ug
