@@ -1,7 +1,7 @@
 ---
 layout: post
-title: API | Flutter | Syncfusion
-description: The public API's available in Syncfusion Flutter widgets.
+title: Public API | Flutter | Syncfusion
+description: The reference and a summary with a sample code snippet for public API's available in Syncfusion Flutter widgets.
 platform: flutter
 control: API
 documentation: ug
@@ -12,6 +12,14 @@ documentation: ug
 This page helps to navigate to the public API's available in the Syncfusion Flutter widgets.
 
 <table>
+	<tr>
+        <td>
+            Calendar
+        </td>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/calendar-library.html">Link</a>
+        </td>
+    </tr>
     <tr>
         <td>
             Charts
