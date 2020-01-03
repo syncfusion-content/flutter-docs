@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Month view of Syncfusion Flutter Calendar 
+title: Month and agenda view of Syncfusion Flutter Calendar | Scheduler
 description: Learn how to customize the Calendar month view settings and its appearance in SfCalendar widget in Flutter
 platform: flutter
 control: SfCalendar
@@ -31,6 +31,33 @@ Widget build(BuildContext context) {
 >**NOTE**
 * An agenda view displays text as `No Selected Date` until no date is selected.
 * If there is no appointment in a selected day, agenda view displays the text as `No Events`.
+
+## Month appointment display mode
+
+You can handle the calendar month view appointment display by using the [appointmentDisplayMode](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings/appointmentDisplayMode.html) property of `MonthViewSettings`. By default, `appointmentDisplayMode` is set to Indicator, using the `appointmentDisplayMode` you can set the month view appointments display as follows.
+
+`indicator` - appointment will be denoted as the circle.
+`appointment` - appointment subject will be displayed in month cell.
+`none` - appointment will not be displayed.
+
+{% highlight dart %}
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.month,
+          monthViewSettings: MonthViewSettings(
+              appointmentDisplayMode: MonthAppointmentDisplayMode.appointment),
+        ),
+      ),
+    ),
+  );
+}
+
+{% endhighlight %}
 
 ## Agenda view height
 
@@ -107,36 +134,10 @@ Widget build(BuildContext context) {
 >**NOTE**
 * If appointments count is lesser than the `appointmentDisplayCount` value in the particular day, then according to the number of appointments available, appointment will be displayed in the month cell.
 
-## Month appointment display mode
-
-You can handle the calendar month view appointment display by using the [appointmentDisplayMode](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings/appointmentDisplayMode.html) property of `MonthViewSettings`. By default, `appointmentDisplayMode` is set to Indicator, using the `appointmentDisplayMode` you can set the month view appointments display as follows.
-
-`indicator` - appointment will be denoted as the circle.
-`appointment` - appointment subject will be displayed in month cell.
-`none` - appointment will not be displayed.
-
-{% highlight dart %}
-
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-    home: Scaffold(
-      body: Container(
-        child: SfCalendar(
-          view: CalendarView.month,
-          monthViewSettings: MonthViewSettings(
-              appointmentDisplayMode: MonthAppointmentDisplayMode.appointment),
-        ),
-      ),
-    ),
-  );
-}
-
-{% endhighlight %}
 
 ## Month navigation direction
 
-MonthView of calendar can be navigated in both horizontal and vertical direction. You can change the direction of navigation using the [navigationDirection](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings/navigationDirection.html) property of `MonthViewSettings, by default Month navigation direction is Horizontal.
+MonthView of calendar can be navigated in both horizontal and vertical direction. You can change the direction of navigation using the [navigationDirection](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings/navigationDirection.html) property of `MonthViewSettings`, by default Month navigation direction is Horizontal.
 
 {% highlight dart %}
 
