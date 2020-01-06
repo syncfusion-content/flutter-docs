@@ -42,7 +42,7 @@ The [onTapUp](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/c
 
 `date` - returns the selected date.
 `appointments` - returns the selected appointments.
-‘targetElement` - returns the element tapped.
+`targetElement` - returns the element tapped.
 
 {% highlight dart %}
 
