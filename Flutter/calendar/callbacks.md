@@ -16,7 +16,8 @@ The [onViewChanged](https://pub.dev/documentation/syncfusion_flutter_calendar/la
 
 `visibleDates` - returns the current view visible dates collection.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -35,6 +36,7 @@ Widget build(BuildContext context) {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Calendar tap callback
 
@@ -44,7 +46,8 @@ The [onTapUp](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/c
 `appointments` - returns the selected appointments.
 `targetElement` - returns the element tapped.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -65,4 +68,5 @@ Widget build(BuildContext context) {
 }
 
 {% endhighlight %}
+{% endtabs %}
 

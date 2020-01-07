@@ -11,7 +11,8 @@ documentation: ug
 
 SfCalendar widget has a built-in capability to handle the appointment arrangement internally based on the [CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html). [Appointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment-class.html) is a class, which holds the details about the appointment to be rendered in calendar.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -51,6 +52,7 @@ class _AppointmentDataSource extends CalendarDataSource {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Calendar data source and mapping
 
@@ -73,7 +75,8 @@ class _AppointmentDataSource extends CalendarDataSource {
 >**NOTE**
 * Custom appointment class should contain two date time fields as mandatory.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 class MeetingDataSource extends CalendarDataSource {
   MeetingDataSource(this.source);
@@ -120,21 +123,25 @@ class MeetingDataSource extends CalendarDataSource {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 You must call the notifier of the `CalendarDataSource` when the datasource collection is modified to reflect the changes on UI that is an appointment added to the datasource or removed from the datasource.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 events.dataSource.clear();
 events.notifyListeners(CalendarDataSourceAction.reset, null);
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Creating business objects
 
 You can create a custom class `Meeting` with mandatory fields `from`, and `to`.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 class Meeting {
   Meeting({this.eventName, this.from, this.to, this.background, this.isAllDay});
@@ -147,10 +154,12 @@ class Meeting {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 You can map those properties of `Meeting` class with our calendar widget by using the `CalendarDataSource` override methods properties.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 class MeetingDataSource extends CalendarDataSource {
   MeetingDataSource(this.source);
@@ -197,10 +206,12 @@ class MeetingDataSource extends CalendarDataSource {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 You can schedule meetings for a day by setting `From` and `To` of Meeting class. Create meetings of type `List<Meeting>` and assign those appointments collection Meetings to the [appointments](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/appointments.html) property of `CalendarDataSource`.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -229,12 +240,14 @@ MeetingDataSource _getCalendarDataSource() {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Spanned appointments
 
 Spanned Appointment is an appointment, which lasts more than 24 hours. It does not block out time slots in SfCalendar, it will render in `All-Day appointment panel` exclusively.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 MeetingDataSource _getCalendarDataSource() {
   List<Meeting> meetings = <Meeting>[];
@@ -248,12 +261,14 @@ MeetingDataSource _getCalendarDataSource() {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## All day appointment
 
 All-Day appointment is an appointment which is scheduled for a whole day. It can be set by using the [isAllDay](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/isAllDay.html) property in the `Appointment`.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 _AppointmentDataSource _getCalendarDataSource() {
   List<Appointment> appointments = <Appointment>[];
@@ -269,6 +284,7 @@ _AppointmentDataSource _getCalendarDataSource() {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 >**NOTE**
 * Appointment which lasts through an entire day (exact 24 hours) will be considered as all day appointment without setting the IsAllDay property. For example, 06/12/2019 12:00AM to 06/12/2019 12:00AM.
@@ -296,7 +312,8 @@ The `recurrenceRule` is a string value (RRULE) that contains the details of the 
 
 Calendar appointment recurrenceRule is used to populate the required recurring appointment collection in a specific pattern. RRULE can be directly set to the `recurrenceRule` property of `Appointment`.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -335,12 +352,14 @@ class _AppointmentDataSource extends CalendarDataSource {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Creating custom recurrence appointment
 
 For creating custom recurrence appointment, you need to create a custom class `Meeting` with mandatory fields `from`, `to`, and `recurrenceRule`.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 class Meeting {
   Meeting(
@@ -360,10 +379,12 @@ class Meeting {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 You can map those properties of `Meeting` class with our calendar widget by using `CalendarDataSource`.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 class MeetingDataSource extends CalendarDataSource {
   MeetingDataSource(this.source);
@@ -405,10 +426,12 @@ class MeetingDataSource extends CalendarDataSource {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 You can schedule recurring meetings for daily, weekly, monthly, or yearly interval by setting `recurrenceRule` of `Meeting` class. Create meetings of type List <Meeting> and assign those appointments collection Meetings to the `appointments` property of `CalendarDataSource`.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -492,18 +515,21 @@ class Meeting {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 ### How to get the Recurrence editor field values from RRULE?
 
 You can get the Recurrence properties form `RRULE` by using the [parseRRule](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/parseRRule.html) method from calendar.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 DateTime dateTime = DateTime(2020, 03, 15);
 RecurrenceProperties recurrenceProperties =
     SfCalendar.parseRRule('FREQ=DAILY;INTERVAL=1;COUNT=1', dateTime);
 
 {% endhighlight %}
+{% endtabs %}
 
 Recurrence properties retrieved from above method,
 recurrenceProperties.recurrenceType = RecurrenceType.daily;
@@ -515,13 +541,15 @@ recurrenceProperties.recurrenceRange = RecurrenceRange.count;
 
 You can get the occurrences date time list of recurring appointment from RRULE using the [getRecurrenceDateTimeCollection](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/getRecurrenceDateTimeCollection.html) method of SfCalendar.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 DateTime dateTime = DateTime(2020, 03, 15);
 List<DateTime> dateCollection = SfCalendar.getRecurrenceDateTimeCollection(
     'FREQ=DAILY;INTERVAL=1;COUNT=3', dateTime);
 
 {% endhighlight %}
+{% endtabs %}
 
 The following occurrence dates can be retrieved from the given RRULE:
 var date0 = 3/15/2019;
@@ -548,7 +576,8 @@ You can add the recurrence exception appointments and recurrence exception dates
 
 You can delete any of occurrence, which is an exception from the recurrence pattern appointment by using the `recurrenceExceptionDates` property of `Appointment`. The deleted occurrence date will be considered as recurrence exception dates.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -589,6 +618,7 @@ class _AppointmentDataSource extends CalendarDataSource {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 >**NOTE**
 * Exception dates should be Universal Time Coordinates (UTC) time zone.
@@ -602,7 +632,8 @@ You can add the recurrence exception appointments and recurrence exception dates
 You can delete any occurrence, which is an exception from the recurrence pattern appointment by using the `getRecurrenceExceptionDates` override method of `CalendarDataSource`, which is used to map the exception dates to the calendar recurrence appointment. The deleted occurrence date will be considered as recurrence exception dates.
 To add the exception dates in the recurrence series of custom appointment, add the `recurrenceExceptionDates` property to custom class Meeting.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -698,6 +729,7 @@ class Meeting {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 >**NOTE**
 * Exception dates should be Universal Time Coordinates (UTC) time zone.
@@ -705,7 +737,8 @@ class Meeting {
 ## Appearance customization
 Calendar appointment text style can be customized by using the [appointmentTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/appointmentTextStyle.html) property of calendar.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -727,3 +760,4 @@ Widget build(BuildContext context) {
 }
 
 {% endhighlight %}
+{% endtabs %}

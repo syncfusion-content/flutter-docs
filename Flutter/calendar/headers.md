@@ -15,7 +15,8 @@ You can customize the header of the calendar using the [headerStyle](https://pub
 
 You can customize the height for header in calendar using the `headerHeight` property in calendar.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -28,11 +29,13 @@ Widget build(BuildContext context) {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 ### Header appearance
 You can style the header using the [calendarHeaderStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarHeaderStyle-class.html) in calendar. You can change the background color, textStyle, and textAlignement using the properties such as [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarHeaderStyle/backgroundColor.html), [textStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarHeaderStyle/textStyle.html), and [textAlign](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarHeaderStyle/textAlign.html) of header using the `headerStyle` property in calendar. 
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -52,6 +55,7 @@ Widget build(BuildContext context) {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## View header
 
@@ -61,7 +65,8 @@ You can customize the view header of the calendar using the [viewHeaderStyle](ht
 
 You can customize the height for view header in calendar using the `viewHeaderHeight` property in calendar.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -74,12 +79,14 @@ Widget build(BuildContext context) {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 ### View header appearance
 
 You can style the header using the [viewHeaderStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ViewHeaderStyle-class.html) properties in calendar. You can change the background color, dayTextStyle, and dateTextStyle using properties such as [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ViewHeaderStyle/backgroundColor.html), [dayTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ViewHeaderStyle/dayTextStyle.html) and [dateTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ViewHeaderStyle/dateTextStyle.html) of view header using the `viewHeaderStyle` property in calendar.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -103,6 +110,7 @@ Widget build(BuildContext context) {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 >**NOTE**
 * The `dateTextStyle` property not applicable for view header in month view of calendar.

@@ -1164,7 +1164,8 @@ UTC + 14:00
 You can create appointments at different time zones using the [startTimeZone](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/startTimeZone.html) and [EndTimeZone](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/endTimeZone.html) properties of `Appointment`. An appointment’s start time and end time are calculated based on the given time zone information for the start time and end time. You can set different time zones to the `startTimeZone` and `endTimeZone` properties.
 You can use the `startTime` and `endTime` properties of `Appointment` to get the exact start time and end time of an appointment. 
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 List<Appointment> appointments = <Appointment>[];
 
@@ -1177,6 +1178,7 @@ appointments.add(Appointment(
 	color: Colors.blue));
 
 {% endhighlight %}
+{% endtabs %}
 
 >**NOTE**
 * If the recurring appointment is converted to another time zone, then the whole sequence will be recalculated according to the new time zone information.
@@ -1193,7 +1195,8 @@ You can display the appointments based on the client’s local time zone in cale
 
 You can set specific time zone to calendar using the [timeZone](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/timeZone.html) property of calendar. On this scenario, the appointments will be displayed in UTC time when the `startTimeZone` and `endTimeZone` properties of `Appointment` are set to null. The appointments will be displayed in UTC time based on the given calendar time zone.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -1210,6 +1213,7 @@ Widget build(BuildContext context) {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Display appointments at same time everywhere regardless of client’s time zone
 
