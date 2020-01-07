@@ -230,6 +230,30 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 
+## Time text formatting
+You can customize the format for the labels mentioning the time, by setting the [timeFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeFormat.html) property of `timeSlotViewSettings` in calendar.
+
+{% highlight dart %}
+
+@override
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.week,
+          timeSlotViewSettings: TimeSlotViewSettings(
+              timeInterval: Duration(minutes: 30), timeFormat: 'h:mm'),
+        ),
+      ),
+    ),
+  );
+}
+
+{% endhighlight %}
+
+
 ## Time text appearance
 
 You can customize the text style for the labels mentioning the time, by setting the [timeTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeTextStyle.html) property of `timeSlotViewSettings` in calendar.

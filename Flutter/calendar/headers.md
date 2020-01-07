@@ -6,7 +6,8 @@ platform: flutter
 control: SfCalendar
 documentation: ug
 ---
-# Header
+## Header
+
 
 You can customize the header of the calendar using the [headerStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/headerStyle.html) and [headerHeight](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/headerHeight.html) properties in calendar.
 
