@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Callbacks
-Calendar supports the following two events:
+Calendar supports the [ViewChangedCallback](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ViewChangedCallback.html) and [CalendarTapCallback](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarTapCallback.html), and the callback details were following by.
 
 ## View changed callback
 
