@@ -15,7 +15,8 @@ The `MonthView` of SfCalendar used to display entire dates of the specific month
 
 The calendar month view displays a divided agenda view that is used to show the selected date’s appointments below the month. You can show the agenda view by setting the [showAgenda](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings/showAgenda.html) property to true in [MonthViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings-class.html).
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -27,6 +28,7 @@ Widget build(BuildContext context) {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 >**NOTE**
 * An agenda view displays text as `No Selected Date` until no date is selected.
@@ -40,7 +42,8 @@ You can handle the calendar month view appointment display by using the [appoint
 `appointment` - appointment subject will be displayed in month cell.
 `none` - appointment will not be displayed.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -58,12 +61,14 @@ Widget build(BuildContext context) {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Agenda view height
 
 You can customize the month agenda view height from calendar by using the [agendaViewHeight](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings/agendaViewHeight.html) property of `MonthViewSettings`. By default, the agenda view will occupy the 30% height of the calendar height.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -83,12 +88,14 @@ Widget build(BuildContext context) {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Agenda item height
 
 You can customize the height of an appointment in agenda view by using the [agendaItemHeight](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings/agendaItemHeight.html) property of `MonthViewSettings`.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -108,12 +115,14 @@ Widget build(BuildContext context) {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Appointment display count
 
 You can customize the number of appointments displayed in month cell using the [appointmentDisplayCount](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings/appointmentDisplayCount.html) property of `MonthViewSettings` in SfCalendar, by default Appointment display count is 4.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -130,6 +139,7 @@ Widget build(BuildContext context) {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 >**NOTE**
 * If appointments count is lesser than the `appointmentDisplayCount` value in the particular day, then according to the number of appointments available, appointment will be displayed in the month cell.
@@ -139,7 +149,8 @@ Widget build(BuildContext context) {
 
 MonthView of calendar can be navigated in both horizontal and vertical direction. You can change the direction of navigation using the [navigationDirection](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings/navigationDirection.html) property of `MonthViewSettings`, by default Month navigation direction is Horizontal.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -157,12 +168,14 @@ Widget build(BuildContext context) {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Customize number of month rows
 
 The number of weeks in the month view can be changed by setting the [numberOfWeeksInView](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings/numberOfWeeksInView.html) property in `MonthViewSettings`. By default, `numberOfWeeksInView` starts from current week, and this can be modified using the `initialDisplayDate` property of calendar, the two weeks calendar can be achieved by setting the `numberOfWeeksInView` property with the value 2.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -179,6 +192,7 @@ Widget build(BuildContext context) {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 >**NOTE**
 * Week number ranges from 1 to 6. If lesser or greater than these range is considered, `numberOfWeeksInView` will be displayed as 6.
@@ -188,7 +202,8 @@ Widget build(BuildContext context) {
 
 You can customize the day format of SfCalendar ViewHeader by using the [dayFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings/dayFormat.html) property of `MonthViewSettings`.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -205,12 +220,14 @@ Widget build(BuildContext context) {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Agenda view appearance
 
 You can customize the agenda view appointment and the selected date text style by using the [agendaStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings/agendaStyle.html) property of `MonthViewSettings`. Agenda view [appointmentTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AgendaStyle/appointmentTextStyle.html), [dayTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AgendaStyle/dayTextStyle.html), [dateTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AgendaStyle/dateTextStyle.html), and [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AgendaStyle/backgroundColor.html) can be customized using [AgendaStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AgendaStyle-class.html) properties.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -245,12 +262,14 @@ Widget build(BuildContext context) {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Month cell appearance
 
 By using the [monthCellStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings/monthCellStyle.html) property of `MonthViewSettings`, you can customize the month properties such as [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthCellStyle/backgroundColor.html), [todayBackgroundColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthCellStyle/todayBackgroundColor.html), [trailingDatesBackgroundColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthCellStyle/trailingDatesBackgroundColor.html), [leadingDatesBackgroundColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthCellStyle/leadingDatesBackgroundColor.html), [textStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthCellStyle/textStyle.html), [todayTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthCellStyle/todayTextStyle.html), [trailingDatesTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthCellStyle/trailingDatesTextStyle.html), and [leadingDatesTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthCellStyle/leadingDatesTextStyle.html) from [MonthCellStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthCellStyle-class.html).
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -289,3 +308,4 @@ Widget build(BuildContext context) {
 }
 
 {% endhighlight %}
+{% endtabs %}

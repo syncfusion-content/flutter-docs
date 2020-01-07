@@ -39,17 +39,20 @@ $ flutter pub get
 
 Import the following package in your Dart code.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 import 'package:syncfusion_flutter_calendar/calendar.dart';
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Initialize calendar
 
 After importing the package, initialize the calendar widget as a child of any widget. Here, the calendar widget is added as a child of the scaffold widget.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -60,12 +63,14 @@ Widget build(BuildContext context) {
 }
 	
 {% endhighlight %}
+{% endtabs %}
 
 ## Change different calendar views
 
 The SfCalendar widget provides seven different types of views to display dates. It can be assigned to the widget constructor by using the [view](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/view.html) property. By default, the widget is assigned day view. The current date will be displayed initially for all the calendar views.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -76,13 +81,15 @@ Widget build(BuildContext context) {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Add data source
 
 The calendar widget has a built-in capability to handle appointment arrangement internally based on the appointment collections. You need to assign the created collection to the [dataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/dataSource.html) property.
 You can also map custom appointment data to our calendar.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -151,12 +158,14 @@ class Meeting {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Change first day of week
 
 The calendar widget will be rendered with Sunday as the first day of the week, but you can customize it to any day by using the [firstDayOfWeek](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/firstDayOfWeek.html) property.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -168,12 +177,14 @@ Widget build(BuildContext context) {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Initial selected date
 
 You can programmatically select the specific calendar month cell, and time slot by setting corresponding date and time value to the [initialSelectedDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/initialSelectedDate.html) property of calendar. By default, it is null.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -190,12 +201,14 @@ Widget build(BuildContext context) {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Initial display date
 
 You can change the initial display date of calendar by using the [initialDisplayDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/initialDisplayDate.html) property of calendar, which displays the calendar based on the given date time. By default, current date will be set as `initialDisplayDate`.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -212,12 +225,14 @@ Widget build(BuildContext context) {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Selection decoration
 
 You can decorate the selection view of calendar by using the [selectionDecoration](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/selectionDecoration.html) property of Calendar.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 	@override
 Widget build(BuildContext context) {
@@ -239,12 +254,14 @@ Widget build(BuildContext context) {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Today highlight color
 
 You can customize the today highlight color of calendar by using the [todayHighlightColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/todayHighlightColor.html) property in calendar, which will highlight the today text in calendar view header, month cell, and agenda view.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 	@override
 Widget build(BuildContext context) {
@@ -261,12 +278,14 @@ Widget build(BuildContext context) {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Cell border color
 
 You can customize the vertical and horizontal line color of calendar by using the [cellBorderColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/cellBorderColor.html) property in calendar.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -283,12 +302,14 @@ Widget build(BuildContext context) {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Background color
 
 The calendar widgets background color can be customized by using the [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/backgroundColor.html) property in calendar.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -305,5 +326,6 @@ Widget build(BuildContext context) {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 You can get the complete getting started sample from [here](https://github.com/SyncfusionExamples/flutter-calendar).

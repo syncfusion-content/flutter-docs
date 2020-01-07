@@ -21,7 +21,8 @@ Calendar has six built-in time slot views used to display date, and the views wi
 
 You can customize the interval of timeslots in all the timeslots view by using the [timeInterval](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeInterval.html) property of [TimeSlotViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings-class.html/).
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -35,6 +36,7 @@ Widget build(BuildContext context) {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 >**NOTE**
 * If you modify the timeInterval value (in minutes), you need to change the time labels format by setting the timeFormat value to `hh:mm`. By default, timeFormat value is `h a`.
@@ -43,7 +45,8 @@ Widget build(BuildContext context) {
 
 You can customize the time interval height of timeslots by using the [timeIntervalHeight](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeIntervalHeight.html) property of `TimeSlotViewSettings`.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -58,6 +61,7 @@ Widget build(BuildContext context) {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Flexible working days and working hours
 
@@ -65,7 +69,8 @@ The default values for [startHour](https://pub.dev/documentation/syncfusion_flut
 
 You can also customize the nonworking days of a week by using the [nonWorkingDays](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/nonWorkingDays.html) property of `timeSlotViewSettings` to show only the required days for the users.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -80,6 +85,7 @@ Widget build(BuildContext context) {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 >**NOTE**
 * The `nonWorkingDays` property will applicable only for `workWeek` and `timelineWorkWeek` views only, and not applicable for the remaining views.
@@ -93,7 +99,8 @@ Widget build(BuildContext context) {
 
 Calendar time interval height can be adjusted based on screen height by changing the value of timeIntervalHeight property to -1. It will auto-fit to the screen height and width.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -108,12 +115,14 @@ Widget build(BuildContext context) {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Change time ruler size
 
 You can customize the size of the time ruler view where the labels mentioning the time are placed by using the [timeRulerSize](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeRulerSize.html) property of `TimeSlotViewSettings`.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -130,12 +139,14 @@ Widget build(BuildContext context) {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Minimum appointment duration
 
 The [minimumAppointmentDuration](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/minimumAppointmentDuration.html) property in timeSlotViewSettings is to set an arbitrary height to appointments when it has minimum duration, in timeslot views, so that the subject can be readable.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -177,6 +188,7 @@ class _AppointmentDataSource extends CalendarDataSource {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 >**NOTE**
 * `minimumAppointmentDuration` value will be set, when an appointment duration value lesser than `minimumAppointmentDuration`.
@@ -188,7 +200,8 @@ class _AppointmentDataSource extends CalendarDataSource {
 
 You can customize the height of appointment in timeline views using the [timelineAppointmentHeight](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timelineAppointmentHeight.html) property of `TimeSlotViewSettings`.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -206,12 +219,14 @@ Widget build(BuildContext context) {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## View header text formatting
 
 You can customize the date and day format of SfCalendar ViewHeader by using the [dateFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/dateFormat.html) and [dayFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/dayFormat.html) properties of `TimeSlotViewSettings`.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -229,11 +244,13 @@ Widget build(BuildContext context) {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Time text formatting
 You can customize the format for the labels mentioning the time, by setting the [timeFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeFormat.html) property of `timeSlotViewSettings` in calendar.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 @override
@@ -252,13 +269,15 @@ Widget build(BuildContext context) {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 
 ## Time text appearance
 
 You can customize the text style for the labels mentioning the time, by setting the [timeTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeTextStyle.html) property of `timeSlotViewSettings` in calendar.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -281,3 +300,4 @@ Widget build(BuildContext context) {
 }
 
 {% endhighlight %}
+{% endtabs %}
