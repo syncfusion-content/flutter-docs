@@ -253,7 +253,6 @@ You can customize the format for the labels mentioning the time, by setting the 
 {% highlight Dart %}
 
 @override
-@override
 Widget build(BuildContext context) {
   return MaterialApp(
     home: Scaffold(
