@@ -253,8 +253,8 @@ MeetingDataSource _getCalendarDataSource() {
   List<Meeting> meetings = <Meeting>[];
   meetings.add(Meeting(
       eventName: 'meeting',
-      from: DateTime(2019, 12, 18, 10),
-      to: DateTime(2019, 12, 20, 12),
+      from: DateTime(2019, 12, 03, 10),
+      to: DateTime(2019, 12, 05, 12),
       background: Colors.green));
 
   return MeetingDataSource(meetings);

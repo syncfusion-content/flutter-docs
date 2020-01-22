@@ -170,7 +170,7 @@ Widget build(BuildContext context) {
         child: SfCalendar(
           view: CalendarView.month,
           monthViewSettings: MonthViewSettings(
-              appointmentDisplayMode: MonthAppointmentDisplayMode.appointment),
+              navigationDirection: MonthNavigationDirection.horizontal),
         ),
       ),
     ),
