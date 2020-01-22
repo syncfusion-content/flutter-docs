@@ -30,6 +30,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Month agenda view](images/monthview/appointment-indicator-count.png)
+
 >**NOTE**
 * An agenda view displays text as `No Selected Date` until no date is selected.
 * If there is no appointment in a selected day, agenda view displays the text as `No Events`.
@@ -63,6 +65,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Month appointment display mode](images/monthview/appointments_displaymode.png)
+
 ## Agenda view height
 
 You can customize the month agenda view height from calendar by using the [agendaViewHeight](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings/agendaViewHeight.html) property of `MonthViewSettings`. By default, the agenda view will occupy the 30% height of the calendar height.
@@ -89,6 +93,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Agenda view height](images/monthview/agendaview-height.png)
 
 ## Agenda item height
 
@@ -117,6 +123,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Agenda item height](images/monthview/agenda-item-height.png)
+
 ## Appointment display count
 
 You can customize the number of appointments displayed in month cell using the [appointmentDisplayCount](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings/appointmentDisplayCount.html) property of `MonthViewSettings` in SfCalendar, by default Appointment display count is 4.
@@ -140,6 +148,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Appointment display count](images/monthview/appointment-indicator-count.png)
 
 >**NOTE**
 * If appointments count is lesser than the `appointmentDisplayCount` value in the particular day, then according to the number of appointments available, appointment will be displayed in the month cell.
@@ -194,6 +204,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Customize number of month rows](images/monthview/number-of-month-rows.png)
+
 >**NOTE**
 * Week number ranges from 1 to 6. If lesser or greater than these range is considered, `numberOfWeeksInView` will be displayed as 6.
 * Dynamically changing `numberOfWeeksInView` shows the first row of month view dates. It can be handled using the `initialDisplayDate` property of calendar.
@@ -212,7 +224,7 @@ Widget build(BuildContext context) {
       body: Container(
         child: SfCalendar(
           view: CalendarView.month,
-          monthViewSettings: MonthViewSettings(dayFormat: 'dd'),
+          monthViewSettings: MonthViewSettings(dayFormat: 'EEE'),
         ),
       ),
     ),
@@ -221,6 +233,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![View header DayFormat](images/monthview/Flexible_working_days.png)
 
 ## Agenda view appearance
 
@@ -280,25 +294,23 @@ Widget build(BuildContext context) {
           view: CalendarView.month,
           monthViewSettings: MonthViewSettings(
               monthCellStyle: MonthCellStyle(
-                  backgroundColor: Colors.blue,
-                  trailingDatesBackgroundColor: Colors.white,
-                  leadingDatesBackgroundColor: Colors.grey,
-                  todayBackgroundColor: Colors.red,
+                  backgroundColor: Color(0xFF293462),
+                  trailingDatesBackgroundColor: Color(0xff216583),
+                  leadingDatesBackgroundColor: Color(0xff216583),
+                  todayBackgroundColor: Color(0xFFf7be16),
                   textStyle: TextStyle(
-                      fontStyle: FontStyle.italic,
                       fontSize: 12,
                       fontFamily: 'Arial'),
                   todayTextStyle: TextStyle(
-                      fontStyle: FontStyle.italic,
                       fontSize: 12,
                       fontWeight: FontWeight.bold,
                       fontFamily: 'Arial'),
                   trailingDatesTextStyle: TextStyle(
-                      fontStyle: FontStyle.normal,
+                      fontStyle: FontStyle.italic,
                       fontSize: 12,
                       fontFamily: 'Arial'),
                   leadingDatesTextStyle: TextStyle(
-                      fontStyle: FontStyle.normal,
+                      fontStyle: FontStyle.italic,
                       fontSize: 12,
                       fontFamily: 'Arial'))),
         ),
@@ -309,3 +321,5 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Month cell appearance](images/monthview/monthcell_appearance.png)

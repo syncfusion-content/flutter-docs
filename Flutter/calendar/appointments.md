@@ -746,12 +746,13 @@ Widget build(BuildContext context) {
     home: Scaffold(
       body: Container(
         child: SfCalendar(
-          view: CalendarView.week,
+          view: CalendarView.day,
           dataSource: _getCalendarDataSource(),
           appointmentTextStyle: TextStyle(
-              fontSize: 15,
+              fontSize: 25,
               fontStyle: FontStyle.italic,
-              color: Colors.lightGreen,
+              color: Color(0xFFd89cf6),
+			  letterSpacing: 5,
               fontWeight: FontWeight.bold),
         ),
       ),
