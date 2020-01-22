@@ -38,6 +38,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Change time interval](images/timeslot-views/time-interval.png)
+
 >**NOTE**
 * If you modify the timeInterval value (in minutes), you need to change the time labels format by setting the timeFormat value to `hh:mm`. By default, timeFormat value is `h a`.
 
@@ -63,6 +65,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Change time interval height](images/timeslot-views/time-interval-height.png)
+
 ## Flexible working days and working hours
 
 The default values for [startHour](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/startHour.html) and [endHour](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/endHour.html) are 0 and 24 to show all the time slots in time slot views. You can to set the `startHour` and `endHour` properties of `timeSlotViewSettings` to show only the required time duration for users. You can set `startHour` and `endHour` in time duration to show the required time duration in minutes.
@@ -86,6 +90,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Flexible working days and working hours](images/timeslot-views/starthour-endhour.png)
 
 >**NOTE**
 * The `nonWorkingDays` property will applicable only for `workWeek` and `timelineWorkWeek` views only, and not applicable for the remaining views.
@@ -117,6 +123,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Full screen calendar](images/timeslot-views/time-interval-height-1.png)
+
 ## Change time ruler size
 
 You can customize the size of the time ruler view where the labels mentioning the time are placed by using the [timeRulerSize](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeRulerSize.html) property of `TimeSlotViewSettings`.
@@ -140,6 +148,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Change time ruler size](images/timeslot-views/time-ruler-size.png)
 
 ## Minimum appointment duration
 
@@ -190,6 +200,8 @@ class _AppointmentDataSource extends CalendarDataSource {
 {% endhighlight %}
 {% endtabs %}
 
+![Minimum appointment duration](images/timeslot-views/minimum-appointment-height.png)
+
 >**NOTE**
 * `minimumAppointmentDuration` value will be set, when an appointment duration value lesser than `minimumAppointmentDuration`.
 * Appointment duration value will be set, when the appointment duration value greater than `minimumAppointmentDuration`.
@@ -221,6 +233,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Timeline appointment height](images/timeslot-views/timeline-appointment-height.png)
+
 ## View header text formatting
 
 You can customize the date and day format of SfCalendar ViewHeader by using the [dateFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/dateFormat.html) and [dayFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/dayFormat.html) properties of `TimeSlotViewSettings`.
@@ -236,7 +250,7 @@ Widget build(BuildContext context) {
         child: SfCalendar(
           view: CalendarView.week,
           timeSlotViewSettings:
-              TimeSlotViewSettings(dateFormat: 'dd', dayFormat: 'EEEE'),
+              TimeSlotViewSettings(dateFormat: 'dd', dayFormat: 'EEE'),
         ),
       ),
     ),
@@ -245,6 +259,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![View header text formatting](images/timeslot-views/viewheader-text-format.png)
 
 ## Time text formatting
 You can customize the format for the labels mentioning the time, by setting the [timeFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeFormat.html) property of `timeSlotViewSettings` in calendar.
@@ -270,6 +286,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Time text formatting](images/timeslot-views/time-text-format.png)
 
 ## Time text appearance
 
@@ -300,3 +317,5 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Time text appearance](images/timeslot-views/time-text-appearance.png)
