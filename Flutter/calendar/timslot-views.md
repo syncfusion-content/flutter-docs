@@ -260,7 +260,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![View header text formatting](images/timeslot-views/Flexible_working_days.png)
+![View header text formatting](images/timeslot-views/viewheader-text-format.png)
 
 ## Time text formatting
 You can customize the format for the labels mentioning the time, by setting the [timeFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeFormat.html) property of `timeSlotViewSettings` in calendar.
