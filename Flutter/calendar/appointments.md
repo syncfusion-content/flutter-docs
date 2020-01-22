@@ -253,8 +253,8 @@ MeetingDataSource _getCalendarDataSource() {
   List<Meeting> meetings = <Meeting>[];
   meetings.add(Meeting(
       eventName: 'meeting',
-      from: DateTime(2019, 12, 18, 10),
-      to: DateTime(2019, 12, 20, 12),
+      from: DateTime(2019, 12, 03, 10),
+      to: DateTime(2019, 12, 05, 12),
       background: Colors.green));
 
   return MeetingDataSource(meetings);
@@ -746,12 +746,13 @@ Widget build(BuildContext context) {
     home: Scaffold(
       body: Container(
         child: SfCalendar(
-          view: CalendarView.week,
+          view: CalendarView.day,
           dataSource: _getCalendarDataSource(),
           appointmentTextStyle: TextStyle(
-              fontSize: 15,
+              fontSize: 25,
               fontStyle: FontStyle.italic,
-              color: Colors.lightGreen,
+              color: Color(0xFFd89cf6),
+			  letterSpacing: 5,
               fontWeight: FontWeight.bold),
         ),
       ),

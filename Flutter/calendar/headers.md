@@ -31,6 +31,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Customize header height in calendar](images/headers/header-height.png)
+
 ### Header appearance
 You can style the header using the [calendarHeaderStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarHeaderStyle-class.html) in calendar. You can change the background color, textStyle, and textAlignement using the properties such as [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarHeaderStyle/backgroundColor.html), [textStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarHeaderStyle/textStyle.html), and [textAlign](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarHeaderStyle/textAlign.html) of header using the `headerStyle` property in calendar. 
 
@@ -44,11 +46,12 @@ Widget build(BuildContext context) {
       view: CalendarView.week,
       headerStyle: CalendarHeaderStyle(
           textAlign: TextAlign.center,
-          backgroundColor: Colors.grey,
+          backgroundColor: Color(0xFF7fcd91),
           textStyle: TextStyle(
-              fontSize: 22,
-              fontStyle: FontStyle.italic,
-              color: Colors.blue,
+              fontSize: 25,
+			  fontStyle: FontStyle.normal,
+              letterSpacing: 5,
+              color: Color(0xFFff5eaea),
               fontWeight: FontWeight.w500)),
     ),
   );
@@ -56,6 +59,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Header appearance](images/headers/header-style.png)
 
 ## View header
 
@@ -81,6 +86,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Customize view header height in calendar](images/headers/viewheader-height.png)
+
 ### View header appearance
 
 You can style the header using the [viewHeaderStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ViewHeaderStyle-class.html) properties in calendar. You can change the background color, dayTextStyle, and dateTextStyle using properties such as [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ViewHeaderStyle/backgroundColor.html), [dayTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ViewHeaderStyle/dayTextStyle.html) and [dateTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ViewHeaderStyle/dateTextStyle.html) of view header using the `viewHeaderStyle` property in calendar.
@@ -96,14 +103,13 @@ Widget build(BuildContext context) {
       viewHeaderStyle: ViewHeaderStyle(
           backgroundColor: Colors.grey,
           dayTextStyle: TextStyle(
-              fontSize: 18,
-              fontStyle: FontStyle.italic,
-              color: Colors.blue,
+              fontSize: 18,	
+              color: Color(0xFFff5eaea),
               fontWeight: FontWeight.w500),
           dateTextStyle: TextStyle(
               fontSize: 22,
-              fontStyle: FontStyle.italic,
-              color: Colors.blue,
+              color: Color(0xFFff5eaea),
+			  letterSpacing: 2,
               fontWeight: FontWeight.w500)),
     ),
   );
@@ -111,6 +117,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![View header appearance](images/headers/viewheader-style.png)
 
 >**NOTE**
 * The `dateTextStyle` property not applicable for view header in month view of calendar.
