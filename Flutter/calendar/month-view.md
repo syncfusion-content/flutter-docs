@@ -234,7 +234,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![View header DayFormat](images/monthview/Flexible_working_days.png)
+![View header DayFormat](images/monthview/month-ViewHeader-textformat.png)
 
 ## Agenda view appearance
 
