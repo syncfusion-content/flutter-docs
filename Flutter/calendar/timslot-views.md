@@ -250,7 +250,7 @@ Widget build(BuildContext context) {
         child: SfCalendar(
           view: CalendarView.week,
           timeSlotViewSettings:
-              TimeSlotViewSettings(dateFormat: 'dd', dayFormat: 'EEE'),
+              TimeSlotViewSettings(dateFormat: 'd', dayFormat: 'EEE'),
         ),
       ),
     ),
@@ -304,11 +304,11 @@ Widget build(BuildContext context) {
           view: CalendarView.week,
           timeSlotViewSettings: TimeSlotViewSettings(
               timeTextStyle: TextStyle(
-            fontWeight: FontWeight.w500,
-            fontStyle: FontStyle.italic,
-            fontSize: 15,
-            color: Colors.blue,
-          )),
+                fontWeight: FontWeight.w500,
+                fontStyle: FontStyle.italic,
+                fontSize: 15,
+                color: Colors.blue,
+              )),
         ),
       ),
     ),
