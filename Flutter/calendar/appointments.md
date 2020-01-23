@@ -263,6 +263,8 @@ MeetingDataSource _getCalendarDataSource() {
 {% endhighlight %}
 {% endtabs %}
 
+![Spanned appointments](images/appointments/spanned-appointment.png)
+
 ## All day appointment
 
 All-Day appointment is an appointment which is scheduled for a whole day. It can be set by using the [isAllDay](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/isAllDay.html) property in the `Appointment`.
@@ -285,6 +287,8 @@ _AppointmentDataSource _getCalendarDataSource() {
 
 {% endhighlight %}
 {% endtabs %}
+
+![All day appointment](images/appointments/all-day-appointment.png)
 
 >**NOTE**
 * Appointment which lasts through an entire day (exact 24 hours) will be considered as all day appointment without setting the IsAllDay property. For example, 06/12/2019 12:00AM to 06/12/2019 12:00AM.
@@ -353,6 +357,8 @@ class _AppointmentDataSource extends CalendarDataSource {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Adding recurrence appointment](images/appointments/recurrence-appointment.png)
 
 ### Creating custom recurrence appointment
 
@@ -620,6 +626,8 @@ class _AppointmentDataSource extends CalendarDataSource {
 {% endhighlight %}
 {% endtabs %}
 
+![Recurrence exceptiondate](images/appointments/recurrence-exception-date.png)
+
 >**NOTE**
 * Exception dates should be Universal Time Coordinates (UTC) time zone.
 
@@ -762,3 +770,5 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Appearance customization](images/appointments/appearance-customization.png)

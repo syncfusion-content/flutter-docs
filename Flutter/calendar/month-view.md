@@ -250,14 +250,15 @@ Widget build(BuildContext context) {
       body: Container(
         child: SfCalendar(
           view: CalendarView.month,
+		  todayHighlightColor: Color(0xFFcc0066),
           monthViewSettings: MonthViewSettings(
               showAgenda: true,
               agendaStyle: AgendaStyle(
-                backgroundColor: Colors.grey,
+                backgroundColor: Color(0xFF066cccc),
                 appointmentTextStyle: TextStyle(
                     fontSize: 14,
                     fontStyle: FontStyle.italic,
-                    color: Colors.blue),
+                    color: Color(0xFF0ffcc00)),
                 dateTextStyle: TextStyle(
                     fontStyle: FontStyle.italic,
                     fontSize: 12,
@@ -277,6 +278,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Month cell appearance](images/monthview/agendaview-appearance.png)
 
 ## Month cell appearance
 
