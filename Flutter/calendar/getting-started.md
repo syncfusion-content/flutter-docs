@@ -227,7 +227,7 @@ Widget build(BuildContext context) {
       body: Container(
         child: SfCalendar(
           view: CalendarView.week,
-          initialDisplayDate: DateTime(2019, 12, 20, 12),
+          initialDisplayDate: DateTime(2019, 12, 20, 7, 30),
         ),
       ),
     ),
