@@ -49,7 +49,7 @@ Widget build(BuildContext context) {
           backgroundColor: Color(0xFF7fcd91),
           textStyle: TextStyle(
               fontSize: 25,
-			  fontStyle: FontStyle.normal,
+              fontStyle: FontStyle.normal,
               letterSpacing: 5,
               color: Color(0xFFff5eaea),
               fontWeight: FontWeight.w500)),
@@ -103,13 +103,13 @@ Widget build(BuildContext context) {
       viewHeaderStyle: ViewHeaderStyle(
           backgroundColor: Colors.grey,
           dayTextStyle: TextStyle(
-              fontSize: 18,	
+              fontSize: 18,
               color: Color(0xFFff5eaea),
               fontWeight: FontWeight.w500),
           dateTextStyle: TextStyle(
               fontSize: 22,
               color: Color(0xFFff5eaea),
-			  letterSpacing: 2,
+              letterSpacing: 2,
               fontWeight: FontWeight.w500)),
     ),
   );
