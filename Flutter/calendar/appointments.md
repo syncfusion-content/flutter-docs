@@ -255,7 +255,7 @@ MeetingDataSource _getCalendarDataSource() {
       eventName: 'meeting',
       from: DateTime(2019, 11, 03, 10),
       to: DateTime(2019, 11, 05, 12),
-      background: Colors.green));
+      background: Colors.blue));
 
   return MeetingDataSource(meetings);
 }
@@ -758,9 +758,8 @@ Widget build(BuildContext context) {
           dataSource: _getCalendarDataSource(),
           appointmentTextStyle: TextStyle(
               fontSize: 25,
-              fontStyle: FontStyle.italic,
               color: Color(0xFFd89cf6),
-			  letterSpacing: 5,
+              letterSpacing: 5,
               fontWeight: FontWeight.bold),
         ),
       ),
