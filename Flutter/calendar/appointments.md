@@ -255,7 +255,7 @@ MeetingDataSource _getCalendarDataSource() {
       eventName: 'meeting',
       from: DateTime(2019, 11, 03, 10),
       to: DateTime(2019, 11, 05, 12),
-      background: Colors.green));
+      background: Colors.blue));
 
   return MeetingDataSource(meetings);
 }
