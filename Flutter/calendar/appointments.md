@@ -758,9 +758,8 @@ Widget build(BuildContext context) {
           dataSource: _getCalendarDataSource(),
           appointmentTextStyle: TextStyle(
               fontSize: 25,
-              fontStyle: FontStyle.italic,
               color: Color(0xFFd89cf6),
-			  letterSpacing: 5,
+              letterSpacing: 5,
               fontWeight: FontWeight.bold),
         ),
       ),
