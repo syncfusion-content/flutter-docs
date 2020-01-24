@@ -626,7 +626,7 @@ class _AppointmentDataSource extends CalendarDataSource {
 {% endhighlight %}
 {% endtabs %}
 
-![Recurrence exceptiondate](images/appointments/.png)
+![Recurrence exceptiondate](images/appointments/recurrence-exception-date.png)
 
 >**NOTE**
 * Exception dates should be Universal Time Coordinates (UTC) time zone.
