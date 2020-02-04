@@ -118,36 +118,33 @@ List<Meeting> _getDataSource() {
 }
 
 class MeetingDataSource extends CalendarDataSource {
-  MeetingDataSource(this.source);
-
-  List<Meeting> source;
-
-  @override
-  List<dynamic> get appointments => source;
+  MeetingDataSource(List<Meeting> source){
+    appointments = source;
+  }
 
   @override
   DateTime getStartTime(int index) {
-    return source[index].from;
+    return appointments[index].from;
   }
 
   @override
   DateTime getEndTime(int index) {
-    return source[index].to;
+    return appointments[index].to;
   }
 
   @override
   String getSubject(int index) {
-    return source[index].eventName;
+    return appointments[index].eventName;
   }
 
   @override
   Color getColor(int index) {
-    return source[index].background;
+    return appointments[index].background;
   }
 
   @override
   bool isAllDay(int index) {
-    return source[index].isAllDay;
+    return appointments[index].isAllDay;
   }
 }
 

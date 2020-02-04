@@ -189,12 +189,9 @@ _AppointmentDataSource _getCalendarDataSource() {
 }
 
 class _AppointmentDataSource extends CalendarDataSource {
-  _AppointmentDataSource(this.source);
-
-  List<Appointment> source;
-
-  @override
-  List<dynamic> get appointments => source;
+  _AppointmentDataSource(List<Appointment> source) {
+    appointments = source;
+  }
 }
 
 {% endhighlight %}
