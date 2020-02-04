@@ -43,12 +43,9 @@ _AppointmentDataSource _getCalendarDataSource() {
 }
 
 class _AppointmentDataSource extends CalendarDataSource {
-  _AppointmentDataSource(this.source);
-
-  List<Appointment> source;
-
-  @override
-  List<dynamic> get appointments => source;
+  _AppointmentDataSource(List<Appointment> source){
+   appointments = source; 
+  }
 }
 
 {% endhighlight %}
@@ -79,46 +76,43 @@ class _AppointmentDataSource extends CalendarDataSource {
 {% highlight Dart %}
 
 class MeetingDataSource extends CalendarDataSource {
-  MeetingDataSource(this.source);
-
-  List<Meeting> source;
-
-  @override
-  List<dynamic> get appointments => source;
+  MeetingDataSource(List<Meeting> source){
+    appointments = source;
+  }
 
   @override
   DateTime getStartTime(int index) {
-    return source[index].from;
+    return appointments[index].from;
   }
 
   @override
   DateTime getEndTime(int index) {
-    return source[index].to;
+    return appointments[index].to;
   }
 
   @override
   bool isAllDay(int index) {
-    return source[index].isAllDay;
+    return appointments[index].isAllDay;
   }
 
   @override
   String getSubject(int index) {
-    return source[index].eventName;
+    return appointments[index].eventName;
   }
 
   @override
   String getStartTimeZone(int index) {
-    return source[index].startTimeZone;
+    return appointments[index].startTimeZone;
   }
 
   @override
   String getEndTimeZone(int index) {
-    return source[index].endTimeZone;
+    return appointments[index].endTimeZone;
   }
 
   @override
   Color getColor(int index) {
-    return source[index].background;
+    return appointments[index].background;
   }
 }
 
@@ -162,46 +156,43 @@ You can map those properties of `Meeting` class with our calendar widget by usin
 {% highlight Dart %}
 
 class MeetingDataSource extends CalendarDataSource {
-  MeetingDataSource(this.source);
-
-  List<Meeting> source;
-
-  @override
-  List<dynamic> get appointments => source;
+  MeetingDataSource(List<Meeting> source){
+    appointments = source;
+  }
 
   @override
   DateTime getStartTime(int index) {
-    return source[index].from;
+    return appointments[index].from;
   }
 
   @override
   DateTime getEndTime(int index) {
-    return source[index].to;
+    return appointments[index].to;
   }
 
   @override
   bool isAllDay(int index) {
-    return source[index].isAllDay;
+    return appointments[index].isAllDay;
   }
 
   @override
   String getSubject(int index) {
-    return source[index].eventName;
+    return appointments[index].eventName;
   }
 
   @override
   String getStartTimeZone(int index) {
-    return source[index].startTimeZone;
+    return appointments[index].startTimeZone;
   }
 
   @override
   String getEndTimeZone(int index) {
-    return source[index].endTimeZone;
+    return appointments[index].endTimeZone;
   }
 
   @override
   Color getColor(int index) {
-    return source[index].background;
+    return appointments[index].background;
   }
 }
 
@@ -347,12 +338,9 @@ _AppointmentDataSource _getCalendarDataSource() {
 }
 
 class _AppointmentDataSource extends CalendarDataSource {
-  _AppointmentDataSource(this.source);
-
-  List<Appointment> source;
-
-  @override
-  List<dynamic> get appointments => source;
+  _AppointmentDataSource(List<Appointment> source) {
+    appointments = source;
+  }
 }
 
 {% endhighlight %}
@@ -393,41 +381,38 @@ You can map those properties of `Meeting` class with our calendar widget by usin
 {% highlight Dart %}
 
 class MeetingDataSource extends CalendarDataSource {
-  MeetingDataSource(this.source);
-
-  List<Meeting> source;
-
-  @override
-  List<dynamic> get appointments => source;
+  MeetingDataSource(List<Meeting> source){
+    appointments = source;
+  }
 
   @override
   DateTime getStartTime(int index) {
-    return source[index].from;
+    return appointments[index].from;
   }
 
   @override
   DateTime getEndTime(int index) {
-    return source[index].to;
+    return appointments[index].to;
   }
 
   @override
   bool isAllDay(int index) {
-    return source[index].isAllDay;
+    return appointments[index].isAllDay;
   }
 
   @override
   String getSubject(int index) {
-    return source[index].eventName;
+    return appointments[index].eventName;
   }
 
   @override
   Color getColor(int index) {
-    return source[index].background;
+    return appointments[index].background;
   }
 
   @override
   String getRecurrenceRule(int index) {
-    return source[index].recurrenceRule;
+    return appointments[index].recurrenceRule;
   }
 }
 
@@ -466,41 +451,38 @@ MeetingDataSource _getCalendarDataSource() {
 }}
 
 class MeetingDataSource extends CalendarDataSource {
-  MeetingDataSource(this.source);
-
-  List<Meeting> source;
-
-  @override
-  List<dynamic> get appointments => source;
+  MeetingDataSource(List<Meeting> source){
+    appointments = source;
+  }
 
   @override
   DateTime getStartTime(int index) {
-    return source[index].from;
+    return appointments[index].from;
   }
 
   @override
   DateTime getEndTime(int index) {
-    return source[index].to;
+    return appointments[index].to;
   }
 
   @override
   bool isAllDay(int index) {
-    return source[index].isAllDay;
+    return appointments[index].isAllDay;
   }
 
   @override
   String getSubject(int index) {
-    return source[index].eventName;
+    return appointments[index].eventName;
   }
 
   @override
   Color getColor(int index) {
-    return source[index].background;
+    return appointments[index].background;
   }
 
   @override
   String getRecurrenceRule(int index) {
-    return source[index].recurrenceRule;
+    return appointments[index].recurrenceRule;
   }
 }
 
@@ -615,12 +597,9 @@ _AppointmentDataSource _getCalendarDataSource() {
 }
 
 class _AppointmentDataSource extends CalendarDataSource {
-  _AppointmentDataSource(this.source);
-
-  List<Appointment> source;
-
-  @override
-  List<dynamic> get appointments => source;
+  _AppointmentDataSource(List<Appointment> source) {
+    appointments = source;
+  }
 }
 
 {% endhighlight %}
@@ -674,46 +653,43 @@ MeetingDataSource _getCalendarDataSource() {
 }
 
 class MeetingDataSource extends CalendarDataSource {
-  MeetingDataSource(this.source);
-
-  List<Meeting> source;
-
-  @override
-  List<dynamic> get appointments => source;
+  MeetingDataSource(List<Meeting> source) {
+    appointments = source;
+  }
 
   @override
   DateTime getStartTime(int index) {
-    return source[index].from;
+    return appointments[index].from;
   }
 
   @override
   DateTime getEndTime(int index) {
-    return source[index].to;
+    return appointments[index].to;
   }
 
   @override
   bool isAllDay(int index) {
-    return source[index].isAllDay;
+    return appointments[index].isAllDay;
   }
 
   @override
   String getSubject(int index) {
-    return source[index].eventName;
+    return appointments[index].eventName;
   }
 
   @override
   Color getColor(int index) {
-    return source[index].background;
+    return appointments[index].background;
   }
 
   @override
   String getRecurrenceRule(int index) {
-    return source[index].recurrenceRule;
+    return appointments[index].recurrenceRule;
   }
 
   @override
   List<DateTime> getRecurrenceExceptionDates(int index) {
-    return source[index].exceptionDates;
+    return appointments[index].exceptionDates;
   }
 }
 
