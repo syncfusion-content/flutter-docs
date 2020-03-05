@@ -15,7 +15,7 @@ Trendlines can be generated for Cartesian type series (Line, Column, Scatter, Ar
 
 You can use the following properties to customize the behavior and appearance of trendlines.
 
-* [`type`]() - Specifies the type of trendline thet must be added to the series.
+* [`type`]() - Specifies the type of trendline the must be added to the series.
 * [`isVisible`]() -Used to toggle the visibility of trendlines in a series.
 * [`width`]() -Used to determine the width of trendline.
 * [`backwardForecast`]() -Used to specify the range of backward forecast for the trendline.
@@ -297,7 +297,7 @@ The value set for the backwardForecast is used to determine the past trends.
 
 ## Legend
 
-Legend provides information about the series rendered in the chart.Legend for trendline gets rendered  together  with the series legend when the legend is set to be visible.Also when the  [ `name` ]()  property is assigned to a trendline,the name of the legend is changed based on the name of the trendlines.[`legendItemText`]()  can also be provided for changing the name of the legend.In default  rendering the [`legendIconShape`]()  will be a horizotal line.
+Legend provides information about the series rendered in the chart.Legend for trendline gets rendered  together  with the series legend when the legend is set to be visible.Also when the  [ `name` ]()  property is assigned to a trendline,the name of the legend is changed based on the name of the trendlines.[`legendItemText`]()  can also be provided for changing the name of the legend.In default  rendering the [`legendIconShape`]()  will be a horizontal line.
 
 { % highlight dart % }
 
@@ -363,7 +363,7 @@ Data markers are used to provide information about the data points in the series
 
 ## Tooltip
 
-Chart will display details about the points through tooltip, when userinteraction is done over the point.Trendline Tootltip has the same [`Activationmode`]()  that has been given in the [`ToolitipBehavior`]()  of the series.
+Chart will display details about the points through tooltip, when user interaction is done over the point.Trendline Toottip has the same [`ActivationMode`]()  that has been given in the [`TooltipBehavior`]()  of the series.
 
 { % highlight dart % }
 

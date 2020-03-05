@@ -2165,10 +2165,10 @@ The `dashArray` property of `StackedLine100Series` is used to render line series
 
 ![Dashed line chart](images/cartesian-chart-types/stacked_line_100_dashes.png)
 
-### Hilo chart
+### HiLO chart
 Hilo Series illustrates the price movements in stock using the high and low values.
 
-To render a hilo chart, create an instance of [`HiloSeries`](), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties are used to customize the appearance:
+To render a hiLo chart, create an instance of [`HiloSeries`](), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties are used to customize the appearance:
 
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) – Changes the color of the series.
 * [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
@@ -2203,13 +2203,13 @@ To render a hilo chart, create an instance of [`HiloSeries`](), and add it to th
 
 {% endhighlight %}
 
-![hilo chart](images/cartesian-chart-types/hilo_chart.png)
+![hiLo chart](images/cartesian-chart-types/hilo_chart.png)
 
 ### High Low Open Close
 
-HiloOpenClose series is used to represent the low, high, open and closing values over time.
+HiLoOpenClose series is used to represent the low, high, open and closing values over time.
 
-To render a HiloOpenClose chart, create an instance of [` hiloOpenCloseSeries`](), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties are used to customize the appearance:
+To render a HiLoOpenClose chart, create an instance of [` hiloOpenCloseSeries`](), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties are used to customize the appearance:
 
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) – Changes the color of the series.
 * [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
@@ -2253,13 +2253,13 @@ To render a HiloOpenClose chart, create an instance of [` hiloOpenCloseSeries`](
 
 {% endhighlight %}
 
-![hiloopenclose chart](images/cartesian-chart-types/hilo_open_close.png)
+![hiLoopenclose chart](images/cartesian-chart-types/hilo_open_close.png)
 
 ### Candle
 
-Candle series is similar to Hilo Open Close series, used to represent the low, high, open and closing price over time.
+Candle series is similar to HiLo Open Close series, used to represent the low, high, open and closing price over time.
 
-To render a HiloOpenClose chart, create an instance of [` CandleSeries`](), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties are used to customize the appearance:
+To render a HiLoOpenClose chart, create an instance of [` CandleSeries`](), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties are used to customize the appearance:
 
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) – Changes the color of the series.
 * [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
