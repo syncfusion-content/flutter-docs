@@ -668,15 +668,15 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
 
 ## onIndicatorRender
  
-Triggers when indicator is rendering. Here you can customize the name, signallinecolor, signallinewidth,dasharray and so on.
+Triggers when indicator is rendering. Here you can customize the name, signal line color, signal line width,dash array and so on.
  
 The [`onIndicatorRender`] contains following arguments.
 
-* [`indicatorname`]() - Specifies the name of the indicator.
-* [`signalLineColor`]() - Used to change the color of the signalline.
-* [`signalLineWidth`]() - Used to change the width of the signalline.
+* [`indicatorname`]() - Specifies the indicator name.
+* [`signalLineColor`]() - Used to change the color of the signal line.
+* [`signalLineWidth`]() - Used to change the width of the signal line.
 * [`lineDashArray`]() - Used to change the dash array size.
-* [`seriesName`]() - Specifies the seriesname.
+* [`seriesName`]() - Specifies the series name.
 * [`index`]() - Specifies the current series index
 * [`dataPoints`]() - Specifies the current datapoints.
 

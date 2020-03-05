@@ -12,30 +12,30 @@ documentation: ug
 
 The different types of technical indicators available in chart are follows:
 
-* [`Accumulation distributuon indicator`]() - AD
+* [`Accumulation distribution indicator`]() - AD
 *	[`Average true range indicator`]() - ATR
 *	[`Bollinger band indicator`]()
-*	[`Exponential moving average indictaor`]() - EMA
+*	[`Exponential moving average indicator`]() - EMA
 * [`Moving average convergence divergence`]() - MACD
 *	[`Momentum indicator`]()
-*	[`Relative strength index indicator`]() -RSI 
-*	[`Simple moving average indicator`]() -SMA 
+*	[`Relative strength index indicator`]() - RSI 
+*	[`Simple moving average indicator`]() - SMA 
 *	[`Stochastic indicator`]()
 *	[`Triangular moving average indicator`]() - TMA 
 
 ## Adding Technical indicator into Chart
  
-To render any indicator, add it to the [`TechnicalIndicators`]() collection using the [`indicators`]() propety in [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html).The following properties are used to customize the appearance:
+To render any indicator, add it to the [`TechnicalIndicators`]() collection using the [`indicators`]() property in [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html).The following properties are used to customize the appearance:
 
-* [`isVisible`]() - To check the visiblity of the indicator.
+* [`isVisible`]() - To check the visibility of the indicator.
 * [`period`]()- Used to indicates the moving average period.
 * [`signalLineColor`]()- Used to defines the color for the respective indicator line.
-* [`signalLineWidth`]() - Used to change the singnalline width.
+* [`signalLineWidth`]() - Used to change the singnal line width.
 * [`seriesName`]() - Used to bind the data source of chart series to technical indicators, including x and y axis.
-* [`xAxisName`](),[`yAxisName`]() - Uesd to set the x and y axes 
+* [`xAxisName`](),[`yAxisName`]() - Used to set the x and y axes 
 * [`animationDuration`]() - To control the duration of animation 
 * [`dataSource`]() - Directly bind the values such as [`xValueMapper`](),[`lowValueMapper`](),[`highValueMapper`](),[`openValueMapper`](),[`closeValueMapper`]()
-* [`isVisibleInLegend`](),[`legendItemText`](),[`legendIconType`]() - Used to change the legend visiblity,text and Icontype
+* [`isVisibleInLegend`](),[`legendItemText`](),[`legendIconType`]() - Used to change the legend visibility,text and Icon type
 * [`name`]() - Used to define the label for corresponding indicators.
 * [`dashArray`]() - Used to render the indicators with dashes.
 
@@ -48,7 +48,7 @@ To render any indicator, add it to the [`TechnicalIndicators`]() collection usin
 Accumulation distribution indicator is a volume-based indicator designed to measure the accumulative flow of money into and out of a security. It requires [`volumeValueMapper`]() property additionally with the data source to calculate the signal line.
 
 The following code example helps you to add 
-**Accumulation distributuon indicator**
+**Accumulation distribution indicator**
 
 {% highlight dart %}
 
@@ -132,11 +132,11 @@ You can define the **Bollinger band indicator** using the following code example
 
 ![BollingerBand](images/technical-indicators/bollinger.jpg)
 
-### Exponential moving average indictaor (EMA)
+### Exponential moving average indicator (EMA)
 
 A EMA indicator is a simple, arithmetic moving average that is calculated by adding the closing price for number of time periods and dividing the total value by the number of time periods.
 
-It also having a [`valueFeild`]() property.Based on these property Indicator will render.
+It also having a [`valueField`]() property.Based on these property Indicator will render.
 
 The following code example demonstrates the usage of **Simple moving average indicator**
 
@@ -196,7 +196,7 @@ You can specify the **MACD indicator** using the following code example.
 
 ![MACDIndicator](images/technical-indicators/macd.jpg)
 
-### Moemtum Indicator
+### Momentum Indicator
 
 This indicator also having a centerline.The[`centerLineColor`]() and [`centerLineWidth`]()property is used to define center line.
 
@@ -257,7 +257,7 @@ To define the **Relative strength index Indicator**, use the following code exam
 
 ### Simple moving average indicator(SMA)
 
-The [`Exponential moving average indictaor`]() is similar to [`Simple moving average indicator`]() and this can be defined using the following code examples.
+The [`Exponential moving average indicator`]() is similar to [`Simple moving average indicator`]() and this can be defined using the following code examples.
 
 {% highlight dart %}
 
@@ -335,7 +335,7 @@ The **Triangular moving average indicator** can be defined as in the following c
 
 ### Legend
 
-Legend provides information about the series rendered in the chart.Legend for indicator gets rendered along with the series legend when the legend is set to be visible.Also when the  [ `name` ] property is given to a indicator,the legend name gets changed based on the indicator name.[`legendItemText`] can also be provided for changing the name of the legend.In default  rendering the [`legendIconShape`] will be a horizotal line.
+Legend provides information about the series rendered in the chart.Legend for indicator is rendered along with the series legend when the legend is set to be visible.Also when the  [ `name` ] property is given to a indicator,the legend name is changed based on the indicator name.[`legendItemText`] can also be provided for changing the name of the legend.In default  rendering the [`legendIconShape`] will be a horizontal line.
 
 The following code example can define the legend.
 
