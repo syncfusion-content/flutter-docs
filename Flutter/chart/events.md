@@ -664,3 +664,38 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
     }
 
 {% endhighlight %}
+
+
+## onIndicatorRender
+ 
+Triggers when indicator is rendering. Here you can customize the name, signallinecolor, signallinewidth,dasharray and so on.
+ 
+The [`onIndicatorRender`] contains following arguments.
+
+* [`indicatorname`]() - Specifies the name of the indicator.
+* [`signalLineColor`]() - Used to change the color of the signalline.
+* [`signalLineWidth`]() - Used to change the width of the signalline.
+* [`lineDashArray`]() - Used to change the dash array size.
+* [`seriesName`]() - Specifies the seriesname.
+* [`index`]() - Specifies the current series index
+* [`dataPoints`]() - Specifies the current datapoints.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+    return Scaffold(
+      body:Center(
+          child: SfCartesianChart(
+            onIndicatorRender: (IndicatorRenderArgs args)
+            {
+              if(args.index==0) 
+              {
+             args.indicatorname='changed1';
+             args.signalLineColor=Colors.green;
+             args.signalLineWidth=6.0;
+              }
+            },
+    )));
+    }
+{% endhighlight  %}
