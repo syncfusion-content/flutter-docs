@@ -30,7 +30,7 @@ To render any indicator, add it to the [`TechnicalIndicators`]() collection usin
 * [`isVisible`]() - To check the visibility of the indicator.
 * [`period`]()- Used to indicates the moving average period.
 * [`signalLineColor`]()- Used to defines the color for the respective indicator line.
-* [`signalLineWidth`]() - Used to change the singnal line width.
+* [`signalLineWidth`]() - Used to change the signal line width.
 * [`seriesName`]() - Used to bind the data source of chart series to technical indicators, including x and y axis.
 * [`xAxisName`](),[`yAxisName`]() - Used to set the x and y axes 
 * [`animationDuration`]() - To control the duration of animation 
