@@ -9,6 +9,9 @@ documentation: ug
 
 # Zooming and Panning
 
+* [`note:`]()
+      The above mentioned properties are only applicable for SfCartesian types of charts.
+
 ## Pinch zooming
 
 Pinch zooming can be enabled by [`enablePinching`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/enablePinching.html) property and defaults to *false*. Pinching can be performed by moving two fingers over the chart.

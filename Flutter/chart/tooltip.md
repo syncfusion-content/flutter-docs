@@ -133,6 +133,8 @@ The tooltip can be made to display in the fixed location or at the pointer locat
 
 {% endhighlight %}
 
+![pointer tooltip](images/tooltip/tooltip_pointer.png)
+
 ## Tooltip template
 
 You can customize the appearance of the tooltip with your own widget by using the [`builder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/builder.html) property of [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/tooltipBehavior.html).
