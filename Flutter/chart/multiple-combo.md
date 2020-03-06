@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Multiple and Combinational Syncfusion Flutter charts
-description: Learn how to render a chart with multiple and combination series.
+description: Learn how to render a multiple series, combination series and limitations of combinations in SfCartesianChart.
 platform: flutter
 control: Chart
 documentation: ug
@@ -9,11 +9,14 @@ documentation: ug
 
 # Multiple and Combinational Charts
 
+*Note* - Multiple and Combinational Charts only applicable for [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html)
+
 ## Multiple series
 
 You can add multiple series to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) property of the [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) class. By default, all the series are rendered based on the [`PrimaryXAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/primaryXAxis.html) and [`PrimaryYAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/primaryYAxis.html) in [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). If you want to plot different unit or value that is specific to a particular series, specify separate axis for that series using the [`xAxisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/xAxisName.html) and [`yAxisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/yAxisName.html) properties of series.
 
 {% highlight dart %} 
+
     @override
     Widget build(BuildContext context) {
         return Scaffold(
@@ -46,7 +49,7 @@ You can add multiple series to the [`series`](https://pub.dev/documentation/sync
 
 {% endhighlight %}
 
-![Multiple series](images/series-customization/multipleSeries.jpg)
+![Multiple series](images/cartesian-series-customization/multipleSeries.jpg)
 
 Also refer [multiple axes](./axis-customization#multiple-axes) for customizing the axis further.
 
@@ -85,7 +88,7 @@ Also refer [multiple axes](./axis-customization#multiple-axes) for customizing t
 
 {% endhighlight %}
 
-![Combination series](images/series-customization/combination_series.jpg)
+![Combination series](images/cartesian-series-customization/combination_series.jpg)
 
 **Limitation of combination chart**
 
