@@ -78,3 +78,78 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Default range slider](images/getting-started/default_range_slider.png)
+
+## Add numeric labels
+
+Add range slider with ticks, numeric labels, minimum and maximum values to restrict slider range.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: Center(
+      child: Container(
+        child: SfRangeSlider(
+          min: _min,
+          max: _max,
+          values: _values,
+          interval: 20,
+          showTicks: true,
+          showLabels: true,
+          minorTicksPerInterval: 1,
+          onChanged: (SfRangeValues value) {
+            setState(() {
+              _values = value;
+            });
+          },
+        ),
+      ),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Numeric range slider](images/getting-started/numeric_range_slider.png)
+
+## Add date time labels
+
+Add range slider with tick and date time labels.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Container(
+          child: SfRangeSlider(
+            min: _min,
+            max: _max,
+            values: _values,
+            interval: 2,
+            showTicks: true,
+            showLabels: true,
+            minorTicksPerInterval: 1,
+            dateIntervalType: DateIntervalType.years,
+            dateFormat: DateFormat.y(),
+            onChanged: (SfRangeValues value) {
+              setState(() {
+                _values = value;
+              });
+            },
+          ),
+        ),
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+![DateTime range slider](images/getting-started/date_range_slider.png)
+
