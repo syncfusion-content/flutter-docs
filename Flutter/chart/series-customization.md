@@ -39,6 +39,10 @@ documentation: ug
 
 {% endhighlight %}
 
+### Dynamic animation
+
+[`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) also provide the dynamic animation support for the series.The series can be dynamically added to the charts, it will animated by setting the Timer value.when you set the [`animationDuration`]() value to 0,the series won't be animated. 
+
 ## Transpose the series
 
 The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/isTransposed.html) property of [`CartesianSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries-class.html) is used to transpose the horizontal and vertical axes, to view the data in a different perspective. Using this feature, you can render vertical charts.
