@@ -694,8 +694,7 @@ The [`onIndicatorRender`] contains following arguments.
              args.indicatorname='changed1';
              args.signalLineColor=Colors.green;
              args.signalLineWidth=6.0;
-              }
-            },
+              }},
     )));
     }
 {% endhighlight  %}
