@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Axis customization in Syncfusion Flutter Charts
-description: Learn how to customize the visibility, title, labels, grid lines and tick lines of chart axis
+description: Learn how to customize the visibility, title, labels, grid lines and tick lines of the cartesian chart axis
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Axis customization
+# Axis customization in SfCartesianChart
 
 ## Common axis features
 
@@ -842,4 +842,4 @@ By default, the chart is rendered with primary x axis and primary y axis. But, t
 
 ## Axis animation:
 
-[`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) provide animation support for axis.Axis elements will be animated while changing the range values such as  [`minimum`]()  or [`maximum`]() in charts and also enbale the legend toggle visibility.If you can apply [`animationDuration`]() value 0,the axis will animated.
+[`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) provide animation support for axis.Axis elements will be animated while changing the range values such as  [`minimum`]()  or [`maximum`]() in charts and also enable the legend toggle visibility.If you can apply [`animationDuration`]() value 0,the axis will animated.

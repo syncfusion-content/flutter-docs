@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Syncfusion Flutter Chart Events
-description: Learn what are all the events available in Flutter Charts.
+description: Learn what are all the events available in Flutter Charts. Events will be triggered on some specific actions in chart.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Events
+# Events in SfCartesianChart
 
 The below events are for Cartesian chart.
 
@@ -672,7 +672,7 @@ Triggers when indicator is rendering. Here you can customize the name, signal li
  
 The [`onIndicatorRender`] contains following arguments.
 
-* [`indicatorname`]() - Specifies the indicator name.
+* [`indicatorName`]() - Specifies the indicator name.
 * [`signalLineColor`]() - Used to change the color of the signal line.
 * [`signalLineWidth`]() - Used to change the width of the signal line.
 * [`lineDashArray`]() - Used to change the dash array size.

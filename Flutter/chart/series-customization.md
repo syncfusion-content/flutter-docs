@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Series customization in Syncfusion Flutter charts
-description: Learn how to customize the appearance of the series in a chart.
+description: Learn how to customize the series features like animation, transpose, color palette, gradient, etc., in the chart
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Series customization
+# Series customization in SfCartesianChart
 
 ## Animation
 
