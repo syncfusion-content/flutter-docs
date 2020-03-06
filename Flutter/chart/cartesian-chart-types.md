@@ -2164,3 +2164,144 @@ The `dashArray` property of `StackedLine100Series` is used to render line series
 {% endhighlight %}
 
 ![Dashed line chart](images/cartesian-chart-types/stacked_line_100_dashes.png)
+
+### HiLo chart
+HiLo Series illustrates the price movements in stock using the high and low values.
+
+To render a HiLo chart, create an instance of [`HiloSeries`](), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties are used to customize the appearance:
+
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) – Changes the color of the series.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) – Changes the stroke width of the series.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) – Changes the stroke color of the series.
+* [`lowValueMapper`]() - used to get the low values from the series.
+* [`highValueMapper`]() - used to get the high values from the series.
+
+{% highlight dart %} 
+    
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <ChartSeries>[
+                            // Renders bar chart
+                            HiloSeries<SalesData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales,
+                                  lowValueMapper: (Sample sales, _) => sales.low,
+              highValueMapper: (Sample sales, _) => sales.high
+                            )
+                        ]
+                    )
+                )   
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![hiLo chart](images/cartesian-chart-types/hilo_chart.png)
+
+### High Low Open Close
+
+HiLoOpenClose series is used to represent the low, high, open and closing values over time.
+
+To render a HiLoOpenClose chart, create an instance of [` hiloOpenCloseSeries`](), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties are used to customize the appearance:
+
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) – Changes the color of the series.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) – Changes the stroke width of the series.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) – Changes the stroke color of the series.
+* [`lowValueMapper`]() - used to get the low values from the series.
+* [`highValueMapper`]() - used to get the high values from the series.
+* [`openValueMapper`]() - used to get the open values from the series.
+* [`closeValueMapper`]() - used to get the close values from the series.
+* [`bearFillColor`]() - bearFillColor will be applied when the opening value is less than the closing value.
+* [`bullFillColor`]() - bullFillColor will be applied when the opening value is greater than closing value.
+
+
+
+{% highlight dart %} 
+    
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <ChartSeries>[
+                            // Renders hiloOpenCloseSeries 
+                            hiloOpenCloseSeries<SalesData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales,
+                                lowValueMapper: (Sample sales, _) => sales.low,
+                                highValueMapper: (Sample sales, _) => sales.high, 
+                                openValueMapper: (Sample sales, _) => sales.open,
+                          closeValueMapper: (Sample sales, _) => sales.close,
+
+                            )
+                        ]
+                    )
+                )   
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![hiLoopenclose chart](images/cartesian-chart-types/hilo_open_close.png)
+
+### Candle
+
+Candle series is similar to HiLo Open Close series, used to represent the low, high, open and closing price over time.
+
+To render a HiLoOpenClose chart, create an instance of [` CandleSeries`](), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties are used to customize the appearance:
+
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) – Changes the color of the series.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) – Changes the stroke width of the series.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) – Changes the stroke color of the series.
+* [`enableSolidCandles`]()- Used to enable/disable the solid candles. By default is set to be false. The fill color of the candle will be defined by its opening and closing values.
+* [`lowValueMapper`]() - used to get the low values from the series.
+* [`highValueMapper`]() - used to get the high values from the series.
+* [`openValueMapper`]() - used to get the open values from the series.
+* [`closeValueMapper`]() - used to get the close values from the series.
+* [`bearFillColor`]() - bearFillColor will be applied when the opening value is less than the closing value.
+* [`bullFillColor`]() - bullFillColor will be applied when the opening value is greater than closing value.
+
+
+
+{% highlight dart %} 
+    
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <ChartSeries>[
+                            // Renders CandleSeries
+                            CandleSeries<SalesData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales,
+                                lowValueMapper: (Sample sales, _) => sales.low,
+                                highValueMapper: (Sample sales, _) => sales.high, 
+                                openValueMapper: (Sample sales, _) => sales.open,
+                          closeValueMapper: (Sample sales, _) => sales.close,
+
+                            )
+                        ]
+                    )
+                )   
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![candle chart](images/cartesian-chart-types/candle.png)
