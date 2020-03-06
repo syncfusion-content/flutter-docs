@@ -665,36 +665,36 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
 
 {% endhighlight %}
 
-## onTrendlineRender
 
-Triggers when  the trendline gets rendered.Trendline properties like color,opacity can be customized using trendlineRender events. The [`onTrendlineRender`]() event contains the following arguments.
+## onIndicatorRender
+ 
+Triggers when indicator is rendering. Here you can customize the name, signal line color, signal line width,dash array and so on.
+ 
+The [`onIndicatorRender`] contains following arguments.
 
-* [`trendlineIndex`]() - Specifies the  index of the trendlines.
-* [`opacity`]() - Specifies the opacity of the trendlines.
-* [`seriesName`]() - Specifies the series name of the trendline.
-* [`color`]() - Specifies the color of the trendline.
-* [`seriesIndex`]() - Specifies the seriesIndex.
-* [`data`]() - Specifies the data points of the series.
-* [`trendlineName`]() - Specifies the name of the trendline.
-* [`intercept`]() - Specifies the intercept value of the trendline.
-* [`dashArray`]() - Specifies and set the dashArray for trendlines.
+* [`indicatorName`]() - Specifies the indicator name.
+* [`signalLineColor`]() - Used to change the color of the signal line.
+* [`signalLineWidth`]() - Used to change the width of the signal line.
+* [`lineDashArray`]() - Used to change the dash array size.
+* [`seriesName`]() - Specifies the series name.
+* [`index`]() - Specifies the current series index
+* [`dataPoints`]() - Specifies the current datapoints.
 
 {% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
-    
     return Scaffold(
-      body: Center(
-        child: SfCartesianChart(
-          onTrendlineRender: (TrendlineRenderArgs args) {
-            args.color = Colors.greenAccent;
-            args.opacity = 0.18;
-            args.dashArray = <double>[5, 3];
-           }
-        )
-      )
-    );
-  }
-
-{% endhighlight %}
+      body:Center(
+          child: SfCartesianChart(
+            onIndicatorRender: (IndicatorRenderArgs args)
+            {
+              if(args.index==0) 
+              {
+             args.indicatorname='changed1';
+             args.signalLineColor=Colors.green;
+             args.signalLineWidth=6.0;
+              }},
+    )));
+    }
+{% endhighlight  %}

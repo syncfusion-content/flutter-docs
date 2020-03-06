@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Series customization in Syncfusion Flutter charts
-description: Learn how to customize the appearance of the series in a chart.
+description: Learn how to customize the series features like animation, transpose, color palette, gradient, etc., in the chart
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Series customization
+# Series customization in SfCartesianChart
 
 ## Animation
 
@@ -38,6 +38,10 @@ documentation: ug
     }
 
 {% endhighlight %}
+
+### Dynamic animation
+
+[`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) also provide the dynamic animation support for the series.The series can be dynamically added to the charts, it will animated by setting the Timer value.when you set the [`animationDuration`]() value to 0,the series won't be animated. 
 
 ## Transpose the series
 
