@@ -39,7 +39,7 @@ To render any indicator, add it to the [`TechnicalIndicators`]() collection usin
 * [`name`]() - Used to define the label for corresponding indicators.
 * [`dashArray`]() - Used to render the indicators with dashes.
 
-**Note** - If you giving series and indicator in the chart, you can add  the same [`seriesName`]() to the series and indicator, otherwise you can directly bind the [`dataSource`]() to the [`indicators`]() property.
+*Note* - If you giving series and indicator in the chart, you can add  the same [`seriesName`]() to the series and indicator, otherwise you can directly bind the [`dataSource`]() to the [`indicators`]() property.
 
 ## Indicator Types
 
