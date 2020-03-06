@@ -2165,10 +2165,10 @@ The `dashArray` property of `StackedLine100Series` is used to render line series
 
 ![Dashed line chart](images/cartesian-chart-types/stacked_line_100_dashes.png)
 
-### HiLO chart
-Hilo Series illustrates the price movements in stock using the high and low values.
+### HiLo chart
+HiLo Series illustrates the price movements in stock using the high and low values.
 
-To render a hiLo chart, create an instance of [`HiloSeries`](), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties are used to customize the appearance:
+To render a HiLo chart, create an instance of [`HiloSeries`](), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties are used to customize the appearance:
 
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) – Changes the color of the series.
 * [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.

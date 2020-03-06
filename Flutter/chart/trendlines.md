@@ -11,7 +11,7 @@ documentation: ug
 
 Trendlines are used to show the direction and speed of price.
 
-Trendlines can be generated for Cartesian type series (Line, Column, Scatter, Area, Candle, Hilo etc.) except bar type series. You can add more than one trendline to a series.
+Trendlines can be generated for Cartesian type series (Line, Column, Scatter, Area, Candle, HiLo etc.) except bar type series. You can add more than one trendline to a series.
 
 You can use the following properties to customize the behavior and appearance of trendlines.
 
@@ -363,7 +363,7 @@ Data markers are used to provide information about the data points in the series
 
 ## Tooltip
 
-Chart will display details about the points through tooltip, when user interaction is done over the point.Trendline Toottip has the same [`ActivationMode`]()  that has been given in the [`TooltipBehavior`]()  of the series.
+Chart will display details about the points through tooltip, when user interaction is done over the point.Trendline Tooltip has the same [`ActivationMode`]()  that has been given in the [`TooltipBehavior`]()  of the series.
 
 { % highlight dart % }
 
