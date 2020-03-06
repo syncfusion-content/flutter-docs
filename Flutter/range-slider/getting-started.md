@@ -152,4 +152,3 @@ Add range slider with tick and date time labels.
 {% endtabs %}
 
 ![DateTime range slider](images/getting-started/date_range_slider.png)
-
