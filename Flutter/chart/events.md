@@ -698,3 +698,39 @@ The [`onIndicatorRender`] contains following arguments.
     )));
     }
 {% endhighlight  %}
+
+{% endhighlight %}
+
+## onTrendlineRender
+
+Triggers when  the trendline gets rendered.Trendline properties like color,opacity can be customized using trendlineRender events. The [`onTrendlineRender`]() event contains the following arguments.
+
+* [`trendlineIndex`]() - Specifies the  index of the trendlines.
+* [`opacity`]() - Specifies the opacity of the trendlines.
+* [`seriesName`]() - Specifies the series name of the trendline.
+* [`color`]() - Specifies the color of the trendline.
+* [`seriesIndex`]() - Specifies the seriesIndex.
+* [`data`]() - Specifies the data points of the series.
+* [`trendlineName`]() - Specifies the name of the trendline.
+* [`intercept`]() - Specifies the intercept value of the trendline.
+* [`dashArray`]() - Specifies and set the dashArray for trendlines.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+    
+    return Scaffold(
+      body: Center(
+        child: SfCartesianChart(
+          onTrendlineRender: (TrendlineRenderArgs args) {
+            args.color = Colors.greenAccent;
+            args.opacity = 0.18;
+            args.dashArray = <double>[5, 3];
+           }
+        )
+      )
+    );
+  }
+
+{% endhighlight %}
