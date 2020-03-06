@@ -1,3 +1,4 @@
+---
 layout: post
 title: Syncfusion Flutter Charts Trendlines
 description: Learn how to enable and customize the trendlines and its features available in the Syncfusion Flutter Charts widget.
