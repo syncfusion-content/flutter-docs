@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Tooltip
+# Tooltip in Flutter Charts
 
 Chart provides tooltip support for all the series. It is used to show information about the segment, when you tap on the segment. To enable the tooltip, you need to set [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/enableTooltip.html) property as *true*.
 
