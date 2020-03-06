@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Syncfusion Flutter Chart Events
-description: Learn what are all the events available in Flutter Charts.
+description: Learn what are all the events available in Flutter Charts. Events will be triggered on some specific actions in chart.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Events
+# Events in SfCartesianChart
 
 The below events are for Cartesian chart.
 
@@ -668,20 +668,6 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
 ## onTrendlineRender
 
 Triggers when  the trendline gets rendered.Trendline properties like color,opacity can be customized using trendlineRender events. The [`onTrendlineRender`]() event contains the following arguments.
-[
-  class TrendlineRenderArgs {
-  double intercept;
-  int trendlineIndex;
-  int seriesIndex;
-  String trendlineName;
-  String seriesName;
-  Color color;
-  double opacity;
-  List<double> dashArray;
-  List<CartesianChartPoint<dynamic>> data;
-}
-
-]
 
 * [`trendlineIndex`]() - Specifies the  index of the trendlines.
 * [`opacity`]() - Specifies the opacity of the trendlines.
