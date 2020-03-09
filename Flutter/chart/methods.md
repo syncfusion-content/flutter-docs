@@ -9,7 +9,9 @@ documentation: ug
 
 # Cartesian chart methods
 
-## Show method in tooltipBehavior
+## Methods in tooltipBehavior
+
+### Show method in tooltipBehavior
 
 The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/show.html) method is used to activate the tooltip at the specified location.
 
@@ -57,7 +59,7 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
     void show() {
         tooltip.show(121,164);
-    }
+      }
 
     void hide(){
         tooltip.hide();
@@ -65,7 +67,124 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
   {% endhighlight %}
 
-## Hide method in tooltipBehavior
+### showByIndex method in tooltipBehavior
+
+The [`showByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/showByIndex.html) method is used to Displays the tooltip at the specified series and point index.
+
+The below mentioned arguments are given to the [`showByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/showByIndex.html) method:
+
+[`seriesIndex`]() - index of the series for which the pointIndex is specified.
+
+[`pointIndex`]() - index of the point for which the tooltip should be shown.
+
+
+{% highlight dart %} 
+
+    SfCartesianChart chart;
+    TooltipBehavior tooltip;
+
+    @override
+    Widget build(BuildContext context) {
+
+    final List<ChartData> chartData = [
+        ChartData(10, 17),
+        ChartData(20, 34),
+        // Add the required data
+    ];
+    
+    tooltip = TooltipBehavior (enable: true);
+
+    chart = SfCartesianChart(
+      tooltipBehavior: tooltip,
+        series: <CartesianSeries>[
+          ColumnSeries<ChartData, double>(
+            enableTooltip: true,
+            dataSource: chartData,
+            xValueMapper: (ChartData data, _) => data.x,
+            yValueMapper: (ChartData data, _) => data.y)
+      ]
+    );
+
+    return Scaffold(
+      body: Center(
+        child: Column(
+          children: <Widget>[
+            FlatButton(
+              child: Text('Show'),
+              onPressed:(){
+                   tooltip.showByIndex(0,1);
+              }
+            ),
+            Container(child: chart)
+          ]
+        )
+      )
+    );
+  }
+
+    void hide(){
+        tooltip.hide();
+    }
+
+  {% endhighlight %}
+
+### showByPixel method in tooltipBehavior
+
+The [`showByPixel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/showByPixel.html) method is used to Displays the tooltip at the specified x and y-positions.
+
+x & y - logical pixel values to position the tooltip.
+
+{% highlight dart %} 
+
+    SfCartesianChart chart;
+    TooltipBehavior tooltip;
+
+    @override
+    Widget build(BuildContext context) {
+
+    final List<ChartData> chartData = [
+        ChartData(10, 17),
+        ChartData(20, 34),
+        // Add the required data
+    ];
+    
+    tooltip = TooltipBehavior (enable: true);
+
+    chart = SfCartesianChart(
+      tooltipBehavior: tooltip,
+        series: <CartesianSeries>[
+          ColumnSeries<ChartData, double>(
+            enableTooltip: true,
+            dataSource: chartData,
+            xValueMapper: (ChartData data, _) => data.x,
+            yValueMapper: (ChartData data, _) => data.y)
+      ]
+    );
+
+    return Scaffold(
+      body: Center(
+        child: Column(
+          children: <Widget>[
+            FlatButton(
+              child: Text('Show'),
+              onPressed:(){
+                tooltip.showByPixel(230.0,470.0);
+              }
+            ),
+            Container(child: chart)
+          ]
+        )
+      )
+    );
+   }
+
+    void hide(){
+        tooltip.hide();
+    }
+
+  {% endhighlight %}
+
+### Hide method in tooltipBehavior
 
 The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/hide.html) method is used to hide the displaying tooltip programmatically.
 
@@ -116,8 +235,9 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
   {% endhighlight %}
 
+## Methods in trackballBehavior
 
-## Show method in trackballBehavior
+### Show method in trackballBehavior
 
 The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/show.html) method is used to activate the trackball at the specified location.
 
@@ -154,7 +274,8 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
           children: <Widget>[
             FlatButton(
               child: Text('Show'),
-              onPressed: show
+              onPressed:() {
+        trackball.show(121, 164);
             ),
             Container(child: chart)
           ]
@@ -163,13 +284,61 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
     );
   }
 
-    void show() {
-        trackball.show(121, 164);
-    }
+  {% endhighlight %}
+
+### showByIndex  method in trackballBehavior
+
+The [`showByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/showByIndex.html) method is used to activate the trackball at the specified point index.
+
+[`pointIndex`]()- index of the point for which the trackball must be shown
+
+{% highlight dart %} 
+
+    SfCartesianChart chart;
+    TrackballBehavior trackball;
+  
+    @override
+    Widget build(BuildContext context) {
+    
+    final List<ChartData> chartData = [
+      ChartData(10, 17),
+      ChartData(20, 34)
+      // Add the required data
+    ];
+    
+    trackball = TrackballBehavior(enable: true);
+    
+    chart = SfCartesianChart(
+      trackballBehavior: trackball,
+      series: <CartesianSeries>[
+        ColumnSeries<ChartData, double>(
+            enableTooltip: true,
+            dataSource: chartData,
+            xValueMapper: (ChartData data, _) => data.x,
+            yValueMapper: (ChartData data, _) => data.y)
+      ]
+    );
+    
+    return Scaffold(
+      body: Center(
+        child: Column(
+          children: <Widget>[
+            FlatButton(
+              child: Text('Show'),
+              onPressed: (){
+        trackball.showByIndex(3);
+    },
+            ),
+            Container(child: chart)
+          ]
+        )
+      )
+    );
+  }
 
   {% endhighlight %}
 
-## Hide method in trackballBehavior
+### Hide method in trackballBehavior
 
 The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/hide.html) method is used to hide the displaying trackball programmatically.
 
@@ -221,7 +390,9 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
   {% endhighlight %}
 
-## Show method in crosshairBehavior
+## Methods in crosshairBehavior
+
+### Show method in crosshairBehavior
 
 The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/show.html) method is used to activate the crosshair at the specified location.
 
@@ -258,7 +429,10 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
           children: <Widget>[
             FlatButton(
               child: Text('Show'),
-              onPressed: show
+              onPressed: ()
+              {
+                crosshair.show(121, 164);
+              }
             ),
             Container(child: chart)
           ]
@@ -267,13 +441,63 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
     );
   }
 
-    void show() {
-        crosshair.show(121, 164);
-    }
+  {% endhighlight %}
+
+### showByIndex method in crosshairBehavior
+
+The [`showByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/showByIndex.html) method is used to activate the crosshair at the specified point index.
+
+[`pointIndex`]() - index of point at which the crosshair needs to be shown.
+
+{% highlight dart %} 
+
+    SfCartesianChart chart;
+    CrosshairBehavior crosshair;
+    
+    @override
+    Widget build(BuildContext context) {
+     // Add the required data 
+    final List<ChartData> chartData = [
+      ChartData(10, 17),
+      ChartData(20, 34),
+    ];
+
+    crosshair = CrosshairBehavior(enable: true);
+    
+    chart = SfCartesianChart(
+      crosshairBehavior: crosshair,
+      series: <CartesianSeries>[
+        ColumnSeries<ChartData, double>(
+            enableTooltip: true,
+            dataSource: chartData,
+            xValueMapper: (ChartData data, _) => data.x,
+            yValueMapper: (ChartData data, _) => data.y
+          )
+       ]
+     );
+
+    return Scaffold(
+      body: Center(
+        child: Column(
+          children: <Widget>[
+            FlatButton(
+              child: Text('Show'),
+              onPressed: ()
+              {
+                 crosshair.showByIndex(2);
+              }
+            ),
+            Container(child: chart)
+          ]
+        )
+      )
+    );
+  }
 
   {% endhighlight %}
 
-## Hide method in crosshairBehavior
+
+### Hide method in crosshairBehavior
 
 The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/hide.html) method is used to hide the displaying crosshair programmatically.
 
@@ -324,7 +548,9 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
   {% endhighlight %}
 
-## SelectionIndex method in selectionSettings
+## Methods in selectionSettings
+
+### SelectionIndex method in selectionSettings
 
 The [`selectionIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionSettings/selectionIndex.html) method is used to select the data point programmatically. The required arguments are listed below.
 
@@ -381,7 +607,9 @@ The [`selectionIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
 {% endhighlight %}
 
-## ZoomIn method in zoomPanBehavior
+## Methods in zoomPanBehavior
+
+### ZoomIn method in zoomPanBehavior
 
 The [`zoomIn`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/zoomIn.html) method is used to increases the magnification of the plot area.
 
@@ -437,7 +665,7 @@ The [`zoomIn`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
 
 {% endhighlight %}
 
-## ZoomOut method in zoomPanBehavior
+### ZoomOut method in zoomPanBehavior
 
 The [`zoomOut`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/zoomOut.html) method is used to decreases the magnification of the plot area.
 
@@ -494,7 +722,7 @@ The [`zoomOut`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
 
 {% endhighlight %}
 
-## zoomByFactor method in zoomPanBehavior
+### zoomByFactor method in zoomPanBehavior
 
 The [`zoomByFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/zoomByFactor.html) method changes the zoom level using zoom factor. Here, you can pass the zoom factor of an axis to magnify the plot area. The value ranges from 0 to 1.
 
@@ -551,7 +779,7 @@ The [`zoomByFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
 {% endhighlight %}
 
-## ZoomByRect method in zoomPanBehavior
+### ZoomByRect method in zoomPanBehavior
 
 The [`zoomByRect`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/zoomByRect.html) method zooms the chart for a given rectangle value. Here, you can pass the rectangle with the left, right, top, and bottom values, using which the selection zooming will be performed.
 
@@ -607,7 +835,7 @@ The [`zoomByRect`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
 
 {% endhighlight %}
 
-## ZoomToSingleAxis method in zoomPanBehavior
+### ZoomToSingleAxis method in zoomPanBehavior
 
 The [`zoomToSingleAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/zoomToSingleAxis.html) method changes the zoom level of an appropriate axis. Here, you need to pass axis, zoom factor, zoom position of the zoom level that needs to be modified.
 
@@ -668,7 +896,7 @@ The [`zoomToSingleAxis`](https://pub.dev/documentation/syncfusion_flutter_charts
 
 {% endhighlight %}
 
-## PanToDirection method in zoomPanBehavior
+### PanToDirection method in zoomPanBehavior
 
 The [`panToDirection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/panToDirection.html) method pans the plot area for given left, right, top, and bottom directions. To perform this action, the plot area needs to be in zoomed state.
 
@@ -728,7 +956,7 @@ The [`panToDirection`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
 {% endhighlight %}
 
-## Reset method in zoomPanBehavior
+### Reset method in zoomPanBehavior
 
 The [`reset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/reset.html) method returns the plot area back to its original position after zooming..
 
@@ -779,8 +1007,8 @@ The [`reset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
     );
   }
 
-  void zoom() {
-    zooming.reset();
-  }
+    void zoom() {
+      zooming.reset();
+       }
 
 {% endhighlight %}
