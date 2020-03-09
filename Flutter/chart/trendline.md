@@ -395,8 +395,3 @@ Chart will display details about the points through tooltip, when user interacti
 
 
 ![tooltip](images/trendline/tooltip.png)
-
-
-
-
-
