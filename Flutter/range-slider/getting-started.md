@@ -77,7 +77,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Default range slider](images/getting-started/default_range_slider.png)
+![Default range slider](/images/getting_started/default_range_slider.png)
 
 ## Add numeric labels
 
@@ -113,7 +113,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Numeric range slider](images/getting-started/numeric_range_slider.png)
+![Numeric range slider](/images/getting_started/numeric_range_slider.png)
 
 ## Add date time labels
 
@@ -151,4 +151,92 @@ Add range slider with tick and date time labels.
 {% endhighlight %}
 {% endtabs %}
 
-![DateTime range slider](images/getting-started/date_range_slider.png)
+![DateTime range slider](/images/getting_started/date_range_slider.png)
+
+## Initialize the range selector
+
+You can add any kind of widget as a child of range selector. Here, chart widget is added as a child.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+   final ThemeData themeData = Theme.of(context);
+   final dynamic device = MediaQuery.of(context);
+   return Container(
+       margin: const EdgeInsets.all(0),
+       padding: const EdgeInsets.all(0),
+       child: Stack(
+         children: <Widget>[
+           Padding(
+             padding: const EdgeInsets.only(top: 10),
+             child: Center(
+               child: SfRangeSelectorTheme(
+                 data: SfRangeSliderThemeData(
+                     brightness: Theme
+                         .of(context)
+                         .brightness,
+                     labelOffset: const Offset(0, 0),
+                     activeLabelStyle: TextStyle(
+                         fontSize: 10,
+                         color: themeData.textTheme.body2.color.withOpacity(
+                            0.87)),
+                     inactiveLabelStyle: TextStyle(
+                         fontSize: 10,
+                         color: themeData.textTheme.body2.color
+                             .withOpacity(0.87))
+                 ),
+                 child: SfRangeSelector(
+                   min: dateTimeMin,
+                   max: dateTimeMax,
+                   initialValues: _dateTimeValues,
+                   labelPlacement: LabelPlacement.betweenTicks,
+                   interval: 1,
+                   controller: _dateTimeController,
+                   dateFormat: DateFormat.y(),
+                   showTicks: true,
+                   showLabels: true,
+                   showTooltip: true,
+                   tooltipTextFormatterCallback: (dynamic actual,
+                       String formatted) {
+                     return DateFormat.yMMMd().format(actual).toString();
+                   },
+                   onChanged: (SfRangeValues values) {},
+                   child: Container(
+                     child: SfCartesianChart(
+                       margin: const EdgeInsets.all(0),
+                       primaryXAxis: DateTimeAxis(minimum: dateTimeMin,
+                         maximum: dateTimeMax,
+                         isVisible: false,),
+                       primaryYAxis: NumericAxis(isVisible: false, maximum: 4),
+                       series: <SplineAreaSeries<Data, DateTime>>[
+                         SplineAreaSeries<Data, DateTime>(
+                             dataSource: chartData,
+                             xValueMapper: (Data sales, _) => sales.x,
+                             yValueMapper: (Data sales, _) => sales.y)
+                       ],
+                     ),
+                     height: device.orientation == Orientation.portrait
+                         ? device.size.height * 0.45
+                         : device.size.height * 0.4,
+                   ),
+                 ),
+               ),
+             ),
+           ),
+         ],
+       ));
+ }
+}
+
+class Data {
+  Data({this.x, this.y});
+  final DateTime x;
+  final double y;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Default range selector](/images/getting_started/default_range_selector.png)
