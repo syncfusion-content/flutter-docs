@@ -162,73 +162,61 @@ You can add any kind of widget as a child of range selector. Here, chart widget 
 
 @override
 Widget build(BuildContext context) {
-   final ThemeData themeData = Theme.of(context);
-   final dynamic device = MediaQuery.of(context);
-   return Container(
-       margin: const EdgeInsets.all(0),
-       padding: const EdgeInsets.all(0),
-       child: Stack(
-         children: <Widget>[
-           Padding(
-             padding: const EdgeInsets.only(top: 10),
-             child: Center(
-               child: SfRangeSelectorTheme(
-                 data: SfRangeSliderThemeData(
-                     brightness: Theme
-                         .of(context)
-                         .brightness,
-                     labelOffset: const Offset(0, 0),
-                     activeLabelStyle: TextStyle(
-                         fontSize: 10,
-                         color: themeData.textTheme.body2.color.withOpacity(
-                            0.87)),
-                     inactiveLabelStyle: TextStyle(
-                         fontSize: 10,
-                         color: themeData.textTheme.body2.color
-                             .withOpacity(0.87))
-                 ),
-                 child: SfRangeSelector(
-                   min: dateTimeMin,
-                   max: dateTimeMax,
-                   initialValues: _dateTimeValues,
-                   labelPlacement: LabelPlacement.betweenTicks,
-                   interval: 1,
-                   controller: _dateTimeController,
-                   dateFormat: DateFormat.y(),
-                   showTicks: true,
-                   showLabels: true,
-                   showTooltip: true,
-                   tooltipTextFormatterCallback: (dynamic actual,
-                       String formatted) {
-                     return DateFormat.yMMMd().format(actual).toString();
-                   },
-                   onChanged: (SfRangeValues values) {},
-                   child: Container(
-                     child: SfCartesianChart(
-                       margin: const EdgeInsets.all(0),
-                       primaryXAxis: DateTimeAxis(minimum: dateTimeMin,
-                         maximum: dateTimeMax,
-                         isVisible: false,),
-                       primaryYAxis: NumericAxis(isVisible: false, maximum: 4),
-                       series: <SplineAreaSeries<Data, DateTime>>[
-                         SplineAreaSeries<Data, DateTime>(
-                             dataSource: chartData,
-                             xValueMapper: (Data sales, _) => sales.x,
-                             yValueMapper: (Data sales, _) => sales.y)
-                       ],
-                     ),
-                     height: device.orientation == Orientation.portrait
-                         ? device.size.height * 0.45
-                         : device.size.height * 0.4,
-                   ),
-                 ),
-               ),
-             ),
-           ),
-         ],
-       ));
- }
+  final ThemeData themeData = Theme.of(context);
+  final dynamic device = MediaQuery.of(context);
+  return Container(
+      margin: const EdgeInsets.all(0),
+      padding: const EdgeInsets.all(0),
+      child: Stack(
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.only(top: 10),
+            child: Center(
+              child: SfRangeSelector(
+                min: dateTimeMin,
+                max: dateTimeMax,
+                initialValues: _dateTimeValues,
+                labelPlacement: LabelPlacement.betweenTicks,
+                interval: 1,
+                dateFormat: DateFormat.y(),
+                showTicks: true,
+                showLabels: true,
+                showTooltip: true,
+                tooltipTextFormatterCallback: (dynamic actual,
+                    String formatted) {
+                  return DateFormat.yMMMd().format(actual).toString();
+                },
+                onChanged: (SfRangeValues values) {},
+                child: Container(
+                  child: SfCartesianChart(
+                    margin: const EdgeInsets.all(0),
+                    primaryXAxis: DateTimeAxis(minimum: dateTimeMin,
+                      maximum: dateTimeMax,
+                      isVisible: false,),
+                    primaryYAxis: NumericAxis(isVisible: false, maximum: 4),
+                    series: <SplineAreaSeries<Data, DateTime>>[
+                      SplineAreaSeries<Data, DateTime>(
+                          dataSource: chartData,
+                          xValueMapper: (Data sales, _) => sales.x,
+                          yValueMapper: (Data sales, _) => sales.y)
+                    ],
+                  ),
+                  height: device.orientation == Orientation.portrait
+                      ? device.size.height * 0.45
+                      : device.size.height * 0.4,
+                ),
+              ),
+            ),
+          ),
+        ],
+      ));
 }
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Dart %}
 
 class Data {
   Data({this.x, this.y});
