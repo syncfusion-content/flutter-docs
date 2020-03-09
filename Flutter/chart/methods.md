@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion Flutter Chart Public Methods
-description: Learn what are all the public methods available in Flutter Chart.
+description: Learn what are all the public methods available in Syncfusion Flutter Charts along with their properties.
 platform: flutter
 control: Chart
 documentation: ug
