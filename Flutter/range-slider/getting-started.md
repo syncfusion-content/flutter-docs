@@ -77,7 +77,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Default range slider](/images/getting-started/default_range_slider.png)
+![Default range slider](images/getting-started/default_range_slider.png)
 
 ## Add numeric labels
 
@@ -113,7 +113,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Numeric range slider](/images/getting-started/numeric_range_slider.png)
+![Numeric range slider](images/getting-started/numeric_range_slider.png)
 
 ## Add date time labels
 
@@ -151,7 +151,7 @@ Add range slider with tick and date time labels.
 {% endhighlight %}
 {% endtabs %}
 
-![DateTime range slider](/images/getting-started/date_range_slider.png)
+![DateTime range slider](images/getting-started/date_range_slider.png)
 
 ## Initialize the range selector
 
@@ -239,4 +239,4 @@ class Data {
 {% endhighlight %}
 {% endtabs %}
 
-![Default range selector](/images/getting-started/default_range_selector.png)
+![Default range selector](images/getting-started/default_range_selector.png)
