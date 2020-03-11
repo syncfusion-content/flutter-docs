@@ -18,18 +18,22 @@ This property is used to display labels for the ticks. When it sets to true, it 
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeSlider sliderWithLabel() {
-   return
-     SfRangeSlider(
-        interval: 0.2,
-        showLabels: true,
-        values: _values,
-        onChanged: (dynamic values) {
-          setState(() {
-            _values = values;
-          });
-       }
-   );
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body:Center(
+      child: SfRangeSlider(
+          interval: 0.2,
+          showLabels: true,
+          values: _values,
+          onChanged: (dynamic values) {
+            setState(() {
+              _values = values;
+            });
+          }
+      ),
+    ),
+  );
 }
 
 {% endhighlight %}
@@ -44,24 +48,64 @@ This property is used to position the label based on the offset value from the t
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeSliderTheme sliderWithLabel() {
-   return SfRangeSliderTheme(
-     data: SfRangeSliderThemeData(
-         labelOffset: Offset(0, -30),
-     ),
-     child: SfRangeSlider(
-         interval: 0.2,
-         showLabels: true,
-         values: _values,
-         onChanged: (dynamic values) {
-           setState(() {
-             _values = values;
-           });
-         }),
-   );
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body:Center(
+      child: SfRangeSliderTheme(
+        data: SfRangeSliderThemeData(
+          labelOffset: Offset(0, -30),
+        ),
+        child: SfRangeSlider(
+            interval: 0.2,
+            showLabels: true,
+            values: _values,
+            onChanged: (dynamic values) {
+              setState(() {
+                _values = values;
+              });
+            }),
+      ),
+    ),
+  );
 }
 
 {% endhighlight %}
 {% endtabs %}
 
 ![Label offset support](images/label-customization/label-offset.png)
+
+## Label style
+
+You can change the label size, color using the `activeLabelStyle` and `inactiveLabelStyle` properties in the SfRangeSlider.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body:Center(
+      child: SfRangeSliderTheme(
+        data: SfRangeSliderThemeData(
+          activeLabelStyle: TextStyle(fontSize: 16, fontStyle: FontStyle.italic, color: Colors.red),
+          inactiveLabelStyle: TextStyle(fontSize: 16, fontStyle: FontStyle.italic, color: Colors.red[100]),
+        ),
+        child: SfRangeSlider(
+            interval: 0.2,
+            showLabels: true,
+            values: _values,
+            onChanged: (dynamic values) {
+              setState(() {
+                _values = values;
+              });
+            }),
+      ),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Label style support](images/label-customization/label-style.png)
