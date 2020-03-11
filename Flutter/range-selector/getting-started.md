@@ -113,7 +113,7 @@ class Data {
 
 ## Add numeric labels
 
-Add range slider with ticks, numeric labels and minimum and maximum values to restrict slider range.
+Add the range slider with ticks, numeric labels, minimum and maximum values to restrict the slider range.
 
 {% tabs %}
 {% highlight Dart %}

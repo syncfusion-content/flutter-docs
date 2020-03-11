@@ -81,7 +81,7 @@ Widget build(BuildContext context) {
 
 ## Add numeric labels
 
-Add range slider with ticks, numeric labels and minimum and maximum values to restrict slider range.
+Add the range slider with ticks, numeric labels, minimum and maximum values to restrict the slider range.
 
 {% tabs %}
 {% highlight Dart %}
@@ -117,7 +117,7 @@ Widget build(BuildContext context) {
 
 ## Add date time labels
 
-Add range slider with tick and date time labels.
+Add the range slider with tick and date time labels.
 
 {% tabs %}
 {% highlight Dart %}
