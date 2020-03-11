@@ -18,6 +18,8 @@ This property is used to display labels for the ticks. When it sets to true, it 
 {% tabs %}
 {% highlight Dart %}
 
+SfRangeValues _values = const SfRangeValues(0.4, 0.6);
+
 @override
 Widget build(BuildContext context) {
   return Scaffold(
