@@ -109,9 +109,11 @@ class Data {
 {% endhighlight %}
 {% endtabs %}
 
-![Default range selector](images/getting-started/range-selector/default_range_selector.png)
+![Default range selector](images/getting-started/default-range-selector.png)
 
 ## Add numeric labels
+
+Add range slider with ticks, numeric labels and minimum and maximum values to restrict slider range.
 
 {% tabs %}
 {% highlight Dart %}
@@ -155,16 +157,57 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Default range selector](images/getting-started/range-selector/range_selector_labels.png)
+![Numeric range selector](images/getting-started/numeric-range-selector.png)
 
 Add date time labels
+
+Add range slider with tick and date time labels.
 
 {% tabs %}
 {% highlight Dart %}
 
+DateTime dateTimeMin = DateTime(2003, 01, 01);
+DateTime dateTimeMax = DateTime(2010, 01, 01);
+final SfRangeValues _dateTimeValues = SfRangeValues(DateTime(2005, 01, 01), DateTime(2008, 01, 01));
 
+@override
+Widget build(BuildContext context) {
+  return Container(
+      child: Center(
+        child: SfRangeSelector(
+          min: dateTimeMin,
+          max: dateTimeMax,
+          initialValues: _dateTimeValues,
+          labelPlacement: LabelPlacement.betweenTicks,
+          dateIntervalType: DateIntervalType.months,
+          interval: 12,
+          dateFormat: DateFormat.y(),
+          showLabels: true,
+          showTicks: true,
+          onChanged: (SfRangeValues values) {},
+          child: Container(
+            child: SfCartesianChart(
+              margin: const EdgeInsets.all(0),
+              primaryXAxis: DateTimeAxis(
+                minimum: dateTimeMin,
+                maximum: dateTimeMax,
+                isVisible: false,),
+              primaryYAxis: NumericAxis(isVisible: false, maximum: 4),
+              series: <SplineAreaSeries<Data, DateTime>>[
+                SplineAreaSeries<Data, DateTime>(
+                    dataSource: chartData,
+                    xValueMapper: (Data sales, _) => sales.x,
+                    yValueMapper: (Data sales, _) => sales.y)
+              ],
+            ),
+            height: 250,
+          ),
+        ),
+      ),
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-
+![Date time range selector](images/getting-started/date-time-range-selector.png)
