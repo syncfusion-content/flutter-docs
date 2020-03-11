@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of Syncfusion Flutter Range Slider
-description: Learn the key features available in the Flutter Range Slider.
+description: Syncfusion flutter range slider provides a rich set of features such as support for numeric and date values, tooltips, labels, and ticks.
 platform: flutter
 control: SfRangeSlider
 documentation: ug

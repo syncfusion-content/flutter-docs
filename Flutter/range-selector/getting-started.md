@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started for Syncfusion Flutter Range Selector | Syncfusion
-description: A quick tour for initial users on Syncfusion SfRangeSelector for flutter platform
+description: This section explains the steps required to add the range slider widget and its elements such as tick, tooltip, numeric and date time labels
 platform: flutter
 control: SfRangeSelector
 documentation: ug
@@ -49,7 +49,9 @@ import 'package:syncfusion_flutter_sliders/sliders.dart';
 
 ## Initialize range selector
 
-After importing the package, initialize the range selector widget as a child of any widget. Here, the range slider widget is added as a child of the Container widget. The default value of the minimum and maximum property of the SfRangeSlider is 0.0 and 1.0 respectively. So, the values must be given within the range. You can add any kind of widget as a child of range selector. Here, chart widget is added as a child.
+After importing the package, initialize the range selector widget as a child of any widget. Here, the range slider widget is added as a child of the Container widget. The default value of the `minimum` and `maximum` property of the SfRangeSlider is 0.0 and 1.0 respectively. So, the `values` property must be given within the range. You can add any kind of widget as a child of range selector. Here, [Chart](https://help.syncfusion.com/flutter/chart/getting-started) widget is added as a child.
+
+N> You must update the `values` property inside the `setState` function for the movement of the thumb in the range slider.
 
 {% tabs %}
 {% highlight Dart %}
@@ -115,6 +117,8 @@ class Data {
 
 Add the range slider with ticks, numeric labels, minimum and maximum values to restrict the slider range.
 
+N> The label type like numeric or date time can be determined based on the `minimum` and `maximum` properties.
+
 {% tabs %}
 {% highlight Dart %}
 
@@ -162,6 +166,8 @@ Widget build(BuildContext context) {
 Add date time labels
 
 Add range slider with tick and date time labels.
+
+N> You must import the 'package:intl/intl.dart' show DateFormat` package to add the date format in the range selector.
 
 {% tabs %}
 {% highlight Dart %}

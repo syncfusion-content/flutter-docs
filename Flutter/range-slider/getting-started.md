@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started for Syncfusion Flutter Range Slider | Syncfusion
-description: A quick tour for initial users on Syncfusion SfRangeSlider for flutter platform
+description: This section explains the steps required to add the range slider widget and its elements such as tick, tooltip, numeric and date time labels.
 platform: flutter
 control: SfRangeSlider
 documentation: ug
@@ -49,10 +49,14 @@ import 'package:syncfusion_flutter_sliders/sliders.dart';
 
 ## Initialize range slider
 
-After importing the package, initialize the range slider widget as a child of any widget. Here, the range slider widget is added as a child of the Container widget. The default value of the minimum and maximum property of the SfRangeSlider is 0.0 and 1.0 respectively. So, the values must be given within the range.
+After importing the package, initialize the range slider widget as a child of any widget. Here, the range slider widget is added as a child of the Container widget. The default value of the `minimum` and `maximum` property of the SfRangeSlider is 0.0 and 1.0 respectively. So, the `values` property must be given within the range.
+
+N> You must update the `values` property inside the `setState` function for the movement of the thumb in the range slider.
 
 {% tabs %}
 {% highlight Dart %}
+
+SfRangeValues _values = const SfRangeValues(0.3, 0.7);
 
 @override
 Widget build(BuildContext context) {
@@ -83,8 +87,14 @@ Widget build(BuildContext context) {
 
 Add the range slider with ticks, numeric labels, minimum and maximum values to restrict the slider range.
 
+N> The label type like numeric or date time can be determined based on the `minimum` and `maximum` properties.
+
 {% tabs %}
 {% highlight Dart %}
+
+final double _min = 0;
+final double _max = 100;
+SfRangeValues _values = const SfRangeValues(40.0, 60.0);
 
 @override
 Widget build(BuildContext context) {
@@ -119,34 +129,40 @@ Widget build(BuildContext context) {
 
 Add the range slider with tick and date time labels.
 
+N> You must import the 'package:intl/intl.dart' show DateFormat` package to add the date format in the range slider.
+
 {% tabs %}
 {% highlight Dart %}
 
+DateTime _min = DateTime(2008, 01, 01);
+DateTime _max = DateTime(2018, 01, 01);
+SfRangeValues _values = SfRangeValues(DateTime(2012, 01, 01), DateTime(2014, 01, 01));
+
 @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Container(
-          child: SfRangeSlider(
-            min: _min,
-            max: _max,
-            values: _values,
-            interval: 2,
-            showTicks: true,
-            showLabels: true,
-            minorTicksPerInterval: 1,
-            dateIntervalType: DateIntervalType.years,
-            dateFormat: DateFormat.y(),
-            onChanged: (SfRangeValues value) {
-              setState(() {
-                _values = value;
-              });
-            },
-          ),
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: Center(
+      child: Container(
+        child: SfRangeSlider(
+          min: _min,
+          max: _max,
+          values: _values,
+          interval: 2,
+          showTicks: true,
+          showLabels: true,
+          minorTicksPerInterval: 1,
+          dateIntervalType: DateIntervalType.years,
+          dateFormat: DateFormat.y(),
+          onChanged: (SfRangeValues value) {
+            setState(() {
+              _values = value;
+            });
+          },
         ),
       ),
-    );
-  }
+    ),
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
