@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Getting Started
-This section explains the steps required to add the range slider widget and its elements such as thumb, overlay, tick, numeric and date time labels. This section covers only basic features needed to get started with Syncfusion range slider widget.
+This section explains the steps required to add the range slider widget and its elements such as tick, tooltip, numeric and date time labels. This section covers only basic features needed to get started with Syncfusion range slider widget.
 
 ## Add flutter range slider to an application
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
@@ -49,7 +49,7 @@ import 'package:syncfusion_flutter_sliders/sliders.dart';
 
 ## Initialize range slider
 
-After importing the package, initialize the range slider widget as a child of any widget. Here, the range slider widget is added as a child of the Container widget.
+After importing the package, initialize the range slider widget as a child of any widget. Here, the range slider widget is added as a child of the Container widget. The default value of the minimum and maximum property of the SfRangeSlider is 0.0 and 1.0 respectively. So, the values must be given within the range.
 
 {% tabs %}
 {% highlight Dart %}
@@ -152,79 +152,3 @@ Add range slider with tick and date time labels.
 {% endtabs %}
 
 ![DateTime range slider](images/getting-started/date_range_slider.png)
-
-## Initialize the range selector
-
-You can add any kind of widget as a child of range selector. Here, chart widget is added as a child.
-
-{% tabs %}
-{% highlight Dart %}
-
-@override
-Widget build(BuildContext context) {
-  final ThemeData themeData = Theme.of(context);
-  final dynamic device = MediaQuery.of(context);
-  return Container(
-      margin: const EdgeInsets.all(0),
-      padding: const EdgeInsets.all(0),
-      child: Stack(
-        children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.only(top: 10),
-            child: Center(
-              child: SfRangeSelector(
-                min: dateTimeMin,
-                max: dateTimeMax,
-                initialValues: _dateTimeValues,
-                labelPlacement: LabelPlacement.betweenTicks,
-                interval: 1,
-                dateFormat: DateFormat.y(),
-                showTicks: true,
-                showLabels: true,
-                showTooltip: true,
-                tooltipTextFormatterCallback: (dynamic actual,
-                    String formatted) {
-                  return DateFormat.yMMMd().format(actual).toString();
-                },
-                onChanged: (SfRangeValues values) {},
-                child: Container(
-                  child: SfCartesianChart(
-                    margin: const EdgeInsets.all(0),
-                    primaryXAxis: DateTimeAxis(minimum: dateTimeMin,
-                      maximum: dateTimeMax,
-                      isVisible: false,),
-                    primaryYAxis: NumericAxis(isVisible: false, maximum: 4),
-                    series: <SplineAreaSeries<Data, DateTime>>[
-                      SplineAreaSeries<Data, DateTime>(
-                          dataSource: chartData,
-                          xValueMapper: (Data sales, _) => sales.x,
-                          yValueMapper: (Data sales, _) => sales.y)
-                    ],
-                  ),
-                  height: device.orientation == Orientation.portrait
-                      ? device.size.height * 0.45
-                      : device.size.height * 0.4,
-                ),
-              ),
-            ),
-          ),
-        ],
-      ));
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight Dart %}
-
-class Data {
-  Data({this.x, this.y});
-  final DateTime x;
-  final double y;
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-![Default range selector](images/getting-started/default_range_selector.png)

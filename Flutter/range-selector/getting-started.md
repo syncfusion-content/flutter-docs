@@ -1,0 +1,170 @@
+---
+layout: post
+title: Getting Started for Syncfusion Flutter Range Selector | Syncfusion
+description: A quick tour for initial users on Syncfusion SfRangeSelector for flutter platform
+platform: flutter
+control: SfRangeSelector
+documentation: ug
+---
+
+# Getting Started
+This section explains the steps required to add the range selector widget and its elements such as tick, tooltip, numeric and date time labels. This section covers only basic features needed to get started with Syncfusion range selector widget.
+
+## Add flutter range selector to an application
+Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
+
+**Add dependency**
+
+Add the Syncfusion flutter range selector dependency to your pubspec.yaml file.
+
+{% highlight dart %}
+
+dependencies:
+
+syncfusion_flutter_sliders: ^18.1.36-beta
+
+{% endhighlight %}
+
+**Get packages** 
+
+Run the following command to get the required packages.
+
+{% highlight dart %}
+
+$ flutter pub get
+
+{% endhighlight %}
+
+**Import package**
+
+Import the following package in your Dart code.
+
+{% tabs %}
+{% highlight Dart %}
+
+import 'package:syncfusion_flutter_sliders/sliders.dart';
+
+{% endhighlight %}
+{% endtabs %}
+
+## Initialize range selector
+
+After importing the package, initialize the range selector widget as a child of any widget. Here, the range slider widget is added as a child of the Container widget. The default value of the minimum and maximum property of the SfRangeSlider is 0.0 and 1.0 respectively. So, the values must be given within the range. You can add any kind of widget as a child of range selector. Here, chart widget is added as a child.
+
+{% tabs %}
+{% highlight Dart %}
+
+final SfRangeValues _values = SfRangeValues(0.3, 0.7);
+
+final List<Data> chartData = <Data>[
+  Data(x: DateTime(2003, 01, 01), y: 3.4),
+  Data(x: DateTime(2004, 01, 01), y: 2.8),
+  Data(x: DateTime(2005, 01, 01), y: 1.6),
+  Data(x: DateTime(2006, 01, 01), y: 2.3),
+  Data(x: DateTime(2007, 01, 01), y: 2.5),
+  Data(x: DateTime(2008, 01, 01), y: 2.9),
+  Data(x: DateTime(2009, 01, 01), y: 3.8),
+  Data(x: DateTime(2010, 01, 01), y: 2.0),
+];
+
+@override
+Widget build(BuildContext context) {
+  return Container(
+      child: Center(
+        child: SfRangeSelector(
+          initialValues: _values,
+          onChanged: (SfRangeValues values) {},
+          child: Container(
+            child: SfCartesianChart(
+              margin: const EdgeInsets.all(0),
+              primaryXAxis: DateTimeAxis(
+                isVisible: false,),
+              primaryYAxis: NumericAxis(isVisible: false, maximum: 4),
+              series: <SplineAreaSeries<Data, DateTime>>[
+                SplineAreaSeries<Data, DateTime>(
+                    dataSource: chartData,
+                    xValueMapper: (Data sales, _) => sales.x,
+                    yValueMapper: (Data sales, _) => sales.y)
+              ],
+            ),
+            height: 250,
+          ),
+        ),
+      ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Dart %}
+
+class Data {
+  Data({this.x, this.y});
+  final DateTime x;
+  final double y;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Default range selector](images/getting-started/range-selector/default_range_selector.png)
+
+## Add numeric labels
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 10;
+final double _max = 90;
+final SfRangeValues _values = SfRangeValues(40.0, 60.0);
+
+@override
+Widget build(BuildContext context) {
+  return Container(
+      child: Center(
+        child: SfRangeSelector(
+          min: _min,
+          max: _max,
+          initialValues: _values,
+          interval: 10,
+          showLabels: true,
+          showTicks: true,
+          onChanged: (SfRangeValues values) {},
+          child: Container(
+            child: SfCartesianChart(
+              margin: const EdgeInsets.all(0),
+              primaryXAxis: DateTimeAxis(
+                isVisible: false,),
+              primaryYAxis: NumericAxis(isVisible: false, maximum: 4),
+              series: <SplineAreaSeries<Data, DateTime>>[
+                SplineAreaSeries<Data, DateTime>(
+                    dataSource: chartData,
+                    xValueMapper: (Data sales, _) => sales.x,
+                    yValueMapper: (Data sales, _) => sales.y)
+              ],
+            ),
+            height: 250,
+          ),
+        ),
+      ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Default range selector](images/getting-started/range-selector/range_selector_labels.png)
+
+Add date time labels
+
+{% tabs %}
+{% highlight Dart %}
+
+
+
+{% endhighlight %}
+{% endtabs %}
+
+
