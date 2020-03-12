@@ -147,7 +147,7 @@ As like `Code39`, the `code39 Extended` supports the 'enableCheckSum` property.
 
 ## Code128
 
-`Code128` is a variable length, high density, alphanumeric, linear Barcode Symbology. It is capable of encoding full ASCII character set and extended character sets. This symbol includes a checksum digit for verification and the Barcode may also be verified character-by-character for parity of each data byte. It is used majorly in shipping and packaging industries in worldwide.
+`Code128` is a variable length, high density, alphanumeric, linear Barcode Symbology. It is capable of encoding full ASCII character set and extended character sets. This symbol includes a checksum digit for verification and the Barcode may also be verified character-by-character for parity of each data byte. It is used widely in shipping and packaging industries in worldwide.
 
 The `Code128` symbology encodes the input symbols supported by `Code128A`, `Code128B`, `Code128C`. The default symbology type of barcode generator is `Code128`
 
