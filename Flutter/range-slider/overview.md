@@ -7,9 +7,9 @@ control: SfRangeSlider
 documentation: ug
 ---
 
-# Overview
+# Overview of Range Slider
 
-It supports numeric and date values, labels, ticks, and tooltips.
+Syncfusion flutter range slider provides a rich set of features such as support for numeric and date values, tooltips, labels, and ticks.
 
 ![Range slider overview](images/overview/range-slider-overview.png)
 
