@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Supported one dimensional symbology for Syncfusion Flutter Barcode
-description: This article explains the supported one dimensional symbology types of syncfusion flutter barcode generator control
+description: This article explains the supported one dimensional symbology types of syncfusion flutter barcode generator control.
 platform: flutter
 control: SfBarcodeGenerator
 documentation: ug

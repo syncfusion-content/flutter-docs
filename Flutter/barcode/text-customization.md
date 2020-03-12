@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Text customization of Syncfusion Flutter Barcode
-description: This article explains how to customize the text of barcode generator control
+description: This article explains how to customize the input value which is displayed as the text of barcode generator control in flutter.
 platform: flutter
 control: SfBarcodeGenerator
 documentation: ug

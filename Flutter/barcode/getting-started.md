@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started for Syncfusion Flutter Barcode
-description: A quick tour to initial users on Syncfusion Flutter SfBarcodeGenerator 
+description: A quick tour to initial users on Syncfusion Flutter SfBarcodeGenerator. It provide overview on the symbology types and displaying the text option.
 platform: flutter
 control: SfBarcodeGenerator
 documentation: ug
