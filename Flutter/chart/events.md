@@ -137,7 +137,7 @@ Triggers when data label is rendering. Text and text styles such as color, font 
         )
       )
     );
-  }
+   }
 
 {% endhighlight %}
 
@@ -511,8 +511,7 @@ The [`onIndicatorRender`] contains following arguments.
               }},
     )));
     }
-{% endhighlight  %}
-
+    
 {% endhighlight %}
 
 ## onTrendlineRender
