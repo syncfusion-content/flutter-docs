@@ -9,7 +9,7 @@ documentation: ug
 
 # Overview
 
-Syncfusion flutter range selector provides a rich set of features such as support for numeric and date values, tooltips, labels, and ticks. It also accepts any kind of child, including [Charts](https://help.syncfusion.com/flutter/chart/getting-started) widget.
+It supports numeric and date values, labels, ticks, and tooltips.
 
 ![Range selector overview](images/overview/range-selector-overview.png)
 

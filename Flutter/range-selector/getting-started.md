@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Getting Started
-This section explains the steps required to add the range selector widget and its elements such as tick, tooltip, numeric and date time labels. This section covers only basic features needed to get started with Syncfusion range selector widget.
+It supports numeric and date values, labels, ticks, and tooltips.
 
 ## Add flutter range selector to an application
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
