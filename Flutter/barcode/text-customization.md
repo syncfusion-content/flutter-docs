@@ -7,7 +7,7 @@ control: SfBarcodeGenerator
 documentation: ug
 ---
 
-# Text customization
+# Text customization of Barcode Generator 
 
 The provided input value of the barcode can be displayed by enabling its `showValue` property. By default, the `showValue` is false.
 
