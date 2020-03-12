@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started
 
-This section explains the steps required to add the barcode and set its symbology. This section covers only basic features needed to know to get started with Syncfusion barcode control. 
+This section explains the steps required to add the barcode and set its symbology. This section covers only basic features needed to get started with Syncfusion barcode generator control. 
 
 
 ## Add Flutter Barcode to an application
@@ -50,7 +50,7 @@ Import the following package in your Dart code.
 
 ## Initialize the barcode
 
-After the package has been imported, initialize the SfBarcodeGenerator as a child of any widget such as container widget.
+Add the Barcode Generator widget as a child of any widget. Here, the widget is added as a child of the container widget and the size to the container is specified (otherwise it will take full container size).
 
 {% highlight dart %} 
 
@@ -77,11 +77,11 @@ The default symbology of SfBarcodeGenerator is Code128.
 
 ## Initialize QR Code symbology
 
-You can set the required symbology to the barcode generator by initializing the `symbology` property. In the following code snippet, the QR Code is set as the barcode symbology,
+You can set the required symbology type to the barcode generator based on input value by initializing the `symbology` property. In the following code snippet, the QR code is set as the barcode symbology.
 
 {% highlight dart %} 
 
-  @override
+    @override
     Widget build(BuildContext context) {
         return MaterialApp(
             home: Scaffold(
@@ -107,6 +107,7 @@ The provided input value can be displayed below the barcode by enabling the `sho
 
 {% highlight dart %} 
 
+    @override
     Widget build(BuildContext context) {
         return MaterialApp(
             home: Scaffold(
