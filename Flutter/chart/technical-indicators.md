@@ -360,7 +360,7 @@ The following code example can define the legend.
 ![Legend](images/technical-indicators/legend.jpg)
 
 
-Also refer [`technicalindicators event`]() for customizing the tooltip further.
+Also refer [`technical indicators event`]() for customizing the tooltip further.
 
 ## Tooltip for technical indicators
 
