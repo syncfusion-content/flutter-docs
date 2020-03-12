@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of Syncfusion Flutter Barcode
-description: Learn the key features available in the Flutter Barcode.
+description: Learn the key features such as symbology types and text customization option available in the Flutter Barcode.
 platform: flutter
 control: SfBarcodeGenerator
 documentation: ug
