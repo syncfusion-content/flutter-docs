@@ -480,11 +480,11 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
 
 {% endhighlight %}
 
-## onIndicatorRender
+### onIndicatorRender
  
 Triggers when indicator is rendering. Here you can customize the name, signal line color, signal line width,dash array and so on.
  
-The [`onIndicatorRender`] contains following arguments.
+The [`onIndicatorRender`]() contains following arguments.
 
 * [`indicatorName`]() - Specifies the indicator name.
 * [`signalLineColor`]() - Used to change the color of the signal line.
@@ -514,7 +514,7 @@ The [`onIndicatorRender`] contains following arguments.
     
 {% endhighlight %}
 
-## onTrendlineRender
+### onTrendlineRender
 
 Triggers when  the trendline gets rendered.Trendline properties like color,opacity can be customized using trendlineRender events. The [`onTrendlineRender`]() event contains the following arguments.
 
