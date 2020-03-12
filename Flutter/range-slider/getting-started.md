@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Getting Started for Syncfusion Flutter Range Slider | Syncfusion
-description: This section explains the steps required to add the range slider widget and its elements such as tick, tooltip, numeric and date time labels.
+description: This section explains the steps required to add the range slider widget and its elements such as numeric and date values, ticks, labels and tooltips 
 platform: flutter
 control: SfRangeSlider
 documentation: ug
 ---
 
 # Getting Started for Range Slider
-This section explains the steps required to add the range slider widget and its elements such as tick, tooltip, numeric and date time labels. This section covers only basic features needed to know to get started with Syncfusion range slider.
+This section explains the steps required to add the range slider widget and ts elements such as numeric and date values, ticks, labels and tooltips. This section covers only basic features needed to know to get started with Syncfusion range slider.
 
 ## Add flutter range slider to an application
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
@@ -49,7 +49,7 @@ import 'package:syncfusion_flutter_sliders/sliders.dart';
 
 ## Initialize range slider
 
-After importing the package, initialize the range slider widget as a child of any widget. Here, the range slider widget is added as a child of the Container widget. The default value of the `minimum` and `maximum` property of the SfRangeSlider is 0.0 and 1.0 respectively. So, the `values` property must be given within the range.
+After importing the package, initialize the range slider widget as a child of any widget. Here, the range slider widget is added as a child of the Container widget. The default value of the `min` and `max` property of the SfRangeSlider is 0.0 and 1.0 respectively. So, the `values` property must be given within the range.
 
 N> You must update the `values` property inside the `setState` function for the movement of the thumb in the range slider.
 
@@ -83,11 +83,11 @@ Widget build(BuildContext context) {
 
 ![Default range slider](images/getting-started/default_range_slider.png)
 
-## Add numeric labels
+## Add tick with numeric labels
 
 Add the range slider with ticks, numeric labels, minimum and maximum values to restrict the slider range.
 
-N> The label type like numeric or date time can be determined based on the `minimum` and `maximum` properties.
+N> The label type like numeric or date time can be determined based on the `min` and `max` properties.
 
 {% tabs %}
 {% highlight Dart %}
@@ -125,9 +125,9 @@ Widget build(BuildContext context) {
 
 ![Numeric range slider](images/getting-started/numeric_range_slider.png)
 
-## Add date time labels
+## Add tick with date labels
 
-Add the range slider with tick and date time labels.
+Add the range slider with ticks and date labels.
 
 N> You must import the 'package:intl/intl.dart' show DateFormat` package to add the date format in the range slider.
 

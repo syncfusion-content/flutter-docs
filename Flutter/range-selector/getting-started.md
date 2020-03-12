@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Getting Started for Syncfusion Flutter Range Selector | Syncfusion
-description: This section explains the steps required to add the range selector widget and its elements such as tick, tooltip, numeric and date time labels
+description: This section explains the steps required to add the range selector widget and its elements such as numeric and date values, ticks, labels and tooltips.
 platform: flutter
 control: SfRangeSelector
 documentation: ug
 ---
 
 # Getting Started for Range Selector
-This section explains the steps required to add the range selector widget and its elements such as tick, tooltip, numeric and date time labels. This section covers only basic features needed to know to get started with Syncfusion range selector.
+This section explains the steps required to add the range selector widget and its elements such as numeric and date values, ticks, labels and tooltips. This section covers only basic features needed to know to get started with Syncfusion range selector.
 
 ## Add flutter range selector to an application
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
@@ -49,16 +49,14 @@ import 'package:syncfusion_flutter_sliders/sliders.dart';
 
 ## Initialize range selector
 
-After importing the package, initialize the range selector widget as a child of any widget. Here, the range slider widget is added as a child of the Container widget. The default value of the `minimum` and `maximum` property of the SfRangeSlider is 0.0 and 1.0 respectively. So, the `values` property must be given within the range. You can add any kind of widget as a child of range selector. Here, [Chart](https://help.syncfusion.com/flutter/chart/getting-started) widget is added as a child.
-
-N> You must update the `values` property inside the `setState` function for the movement of the thumb in the range slider.
+After importing the package, initialize the range selector widget as a child of any widget. Here, the range slider widget is added as a child of the Container widget. The default value of the `min` and `max` property of the SfRangeSlider is 0.0 and 1.0 respectively. So, the `initialValues` property must be given within the range. You can add any kind of widget as a child of range selector. Here, [Chart](https://help.syncfusion.com/flutter/chart/getting-started) widget is added as a child.
 
 {% tabs %}
 {% highlight Dart %}
 
-final SfRangeValues _values = SfRangeValues(0.3, 0.7);
+final SfRangeValues _initialValues = SfRangeValues(0.3, 0.7);
 
-final List<Data> chartData = <Data>[
+final List<Data> _chartData = <Data>[
   Data(x: DateTime(2003, 01, 01), y: 3.4),
   Data(x: DateTime(2004, 01, 01), y: 2.8),
   Data(x: DateTime(2005, 01, 01), y: 1.6),
@@ -74,8 +72,7 @@ Widget build(BuildContext context) {
   return Container(
       child: Center(
         child: SfRangeSelector(
-          initialValues: _values,
-          onChanged: (SfRangeValues values) {},
+          initialValues: _initialValues,
           child: Container(
             child: SfCartesianChart(
               margin: const EdgeInsets.all(0),
@@ -84,7 +81,7 @@ Widget build(BuildContext context) {
               primaryYAxis: NumericAxis(isVisible: false, maximum: 4),
               series: <SplineAreaSeries<Data, DateTime>>[
                 SplineAreaSeries<Data, DateTime>(
-                    dataSource: chartData,
+                    dataSource: _chartData,
                     xValueMapper: (Data sales, _) => sales.x,
                     yValueMapper: (Data sales, _) => sales.y)
               ],
@@ -113,18 +110,18 @@ class Data {
 
 ![Default range selector](images/getting-started/default-range-selector.png)
 
-## Add numeric labels
+## Add tick with numeric labels
 
-Add the range slider with ticks, numeric labels, minimum and maximum values to restrict the slider range.
+Add the range selector with ticks, numeric labels, minimum and maximum values to restrict the slider range.
 
-N> The label type like numeric or date time can be determined based on the `minimum` and `maximum` properties.
+N> The label type like numeric or date time can be determined based on the `min` and `max` properties.
 
 {% tabs %}
 {% highlight Dart %}
 
 final double _min = 10;
 final double _max = 90;
-final SfRangeValues _values = SfRangeValues(40.0, 60.0);
+final SfRangeValues _initialValues = SfRangeValues(40.0, 60.0);
 
 @override
 Widget build(BuildContext context) {
@@ -133,11 +130,10 @@ Widget build(BuildContext context) {
         child: SfRangeSelector(
           min: _min,
           max: _max,
-          initialValues: _values,
+          initialValues: _initialValues,
           interval: 10,
           showLabels: true,
           showTicks: true,
-          onChanged: (SfRangeValues values) {},
           child: Container(
             child: SfCartesianChart(
               margin: const EdgeInsets.all(0),
@@ -146,7 +142,7 @@ Widget build(BuildContext context) {
               primaryYAxis: NumericAxis(isVisible: false, maximum: 4),
               series: <SplineAreaSeries<Data, DateTime>>[
                 SplineAreaSeries<Data, DateTime>(
-                    dataSource: chartData,
+                    dataSource: _chartData,
                     xValueMapper: (Data sales, _) => sales.x,
                     yValueMapper: (Data sales, _) => sales.y)
               ],
@@ -163,17 +159,17 @@ Widget build(BuildContext context) {
 
 ![Numeric range selector](images/getting-started/numeric-range-selector.png)
 
-Add date time labels
+## Add tick with date labels
 
-Add range slider with tick and date time labels.
+Add range selector with ticks and date labels.
 
 N> You must import the 'package:intl/intl.dart' show DateFormat` package to add the date format in the range selector.
 
 {% tabs %}
 {% highlight Dart %}
 
-DateTime dateTimeMin = DateTime(2003, 01, 01);
-DateTime dateTimeMax = DateTime(2010, 01, 01);
+final DateTime _dateTimeMin = DateTime(2003, 01, 01);
+final DateTime _dateTimeMax = DateTime(2010, 01, 01);
 final SfRangeValues _dateTimeValues = SfRangeValues(DateTime(2005, 01, 01), DateTime(2008, 01, 01));
 
 @override
@@ -181,8 +177,8 @@ Widget build(BuildContext context) {
   return Container(
       child: Center(
         child: SfRangeSelector(
-          min: dateTimeMin,
-          max: dateTimeMax,
+          min: _dateTimeMin,
+          max: _dateTimeMax,
           initialValues: _dateTimeValues,
           labelPlacement: LabelPlacement.betweenTicks,
           dateIntervalType: DateIntervalType.months,
@@ -190,7 +186,6 @@ Widget build(BuildContext context) {
           dateFormat: DateFormat.y(),
           showLabels: true,
           showTicks: true,
-          onChanged: (SfRangeValues values) {},
           child: Container(
             child: SfCartesianChart(
               margin: const EdgeInsets.all(0),
