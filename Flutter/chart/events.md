@@ -513,8 +513,6 @@ The [`onIndicatorRender`] contains following arguments.
     }
 {% endhighlight  %}
 
-{% endhighlight %}
-
 ## onTrendlineRender
 
 Triggers when  the trendline gets rendered.Trendline properties like color,opacity can be customized using trendlineRender events. The [`onTrendlineRender`]() event contains the following arguments.
