@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of Syncfusion Flutter PDF
-description: Learn the key features available in the Flutter PDF.
+description: Learn how to create or generate a PDF file in Windows Forms with easy steps using Syncfusion .NET PDF library without depending on Adobe.
 platform: flutter
 control: PDF
 documentation: ug
