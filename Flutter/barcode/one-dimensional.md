@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Supported one dimensional symbology for Syncfusion Flutter Barcode
-description: This article explains the supported one dimensional symbology types of syncfusion flutter barcode generator control.
+description: This article explains the supported one dimensional symbology types of syncfusion flutter barcode generator widget.
 platform: flutter
 control: SfBarcodeGenerator
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # One-dimensional symbology
 
-The one-dimensional barcode represents the data by varying the widths and spacings of parallel lines. These types of barcode are also known as linear barcode types. The Syncfusion flutter barcode generator supports the following one-dimensional barcode types:
+The one-dimensional barcode represents the data by varying the widths and spacings of the parallel lines. These barcode types are also known as linear barcode types. The Syncfusion flutter barcode generator supports the following one-dimensional barcode types:
 
 `Codabar`
 `Code39`
@@ -57,7 +57,7 @@ The one-dimensional barcode represents the data by varying the widths and spacin
 
 ## Code39
 
-Code39 is a Symbology of Barcode that encodes alphanumeric characters into a series of bars. A special start / stop character is placed at the beginning and ending of each barcode. Code 39 is the only type of barcode that does not require a checksum for common use.
+`Code 39` is a discrete, variable-length symbology that encodes alphanumeric characters into a series of bars. A special start / stop character is placed at the beginning and ending of each barcode. Code 39 is self-checking, a check digit is not usually required for common use. For certain cases, applications requiring an extremely high level of accuracy of the checksum digit might be added.
 
 * Allows character set of digits (0-9), upper case alphabets (A-Z), and symbols like space, minus (-), plus (+), period (.), dollar sign ($), slash (/), and percent (%).
 
@@ -89,7 +89,7 @@ The `enableCheckSum` property of `Code39` barcode allows to add the check digit 
 
 ## Code39 Extended
 
-`Code39 Extended` Symbology is an extended version of Code39 that supports full ASCII character set. So, it encodes lower case alphabets (a-z) as well as special characters on the keyboard.
+`Code39 Extended` Symbology is an extended version of Code39 that supports all 128 ASCII characters set. So, it encodes lower case alphabets (a-z) as well as special characters.
 
 {% highlight dart %} 
 
@@ -118,9 +118,9 @@ As like `Code39`, the `code39 Extended` supports the 'enableCheckSum` property.
 
 ## Code93
 
-`Code93` is designed to complement and improve upon `Code39`. It represents the full ASCII character set by using the combination of 2 characters. It is a continuous, variable-length symbology and it produces denser code.
+`Code93` is designed to complement and enhance `Code39`. It represents the complete ASCII character set by using a combination of 2 characters. It is a continuous, variable-length symbology and produces a denser code.
 
-* Encodes character set of uppercase alphabets (A-Z), digits (0-9), and special characters like asterisk (*), dash (-), dollar ($), percent (%), Space, dot (.), slash (/), and plus (+).
+* Encodes character set of uppercase alphabets (A-Z), digits (0-9), and special characters such as asterisk (*), dash (-), dollar ($), percent (%), Space, dot (.), slash (/), plus (+) and so on. 
 
 * The asterisk (*) is not a true encoding character, but it is the start and stop symbol for `Code93` Symbology.
 
@@ -147,7 +147,7 @@ As like `Code39`, the `code39 Extended` supports the 'enableCheckSum` property.
 
 ## Code128
 
-`Code128` is a variable length, high density, alphanumeric, linear Barcode Symbology. It is capable of encoding full ASCII character set and extended character sets. This symbol includes a checksum digit for verification and the Barcode may also be verified character-by-character for parity of each data byte. It is used widely in shipping and packaging industries in worldwide.
+`Code 128` is a highly efficient, high-density linear barcode symbology that allows the encoding of alphanumeric data. It is capable of encoding full ASCII character set and extended character sets. This symbology contains the checksum digit for verification and the barcode can also be verified character-by-character for the parity of each data byte.
 
 The `Code128` symbology encodes the input symbols supported by `Code128A`, `Code128B`, `Code128C`. The default symbology type of barcode generator is `Code128`
 
@@ -251,11 +251,11 @@ The `Code128` symbology encodes the input symbols supported by `Code128A`, `Code
 
 The last seven characters of Code Sets A and B (character values 96 - 102) and the last three characters of Code Set C (character values 100 - 102) are special non-data characters with no ASCII character equivalents that have a particular significance to the Barcode reading device.
 
-## UPCA
+## UPC-A
 
-`UPCA` symbology supports only numeric symbols. It encodes 11 digits of provided numeric data (0 to 9) along with the check digit at its end, for a total of 12 digits of input data. 
+`UPC-A` symbology supports only numeric characters. It encodes 11 digits of provided numeric input (0 to 9) along with a check digit at its end, for a total of 12 digits of input data. If you give 11 numeric inputs, the check digit should automatically calculate at the end, and if you give 12 numeric inputs, the last digit should be check digit, otherwise it will not be accepted.
 
-* This type is mainly used for tracking items and consumer goods.
+* This type is mainly used for worldwide retail.
 
 {% highlight dart %} 
 
@@ -278,9 +278,9 @@ The last seven characters of Code Sets A and B (character values 96 - 102) and t
 
 ![UPCA symbology](images/one-dimensional/upca-symbology.jpg)
 
-## UPCE
+## UPC-E
 
-As like `UPCA`, the `UPCE` symbology supports only numeric symbols. It is a zero suppressed version of `UPCA` symbology where it uses only 6 digits and does not use the middle guard.
+As like `UPC-A`, the `UPC-E` symbology supports only numeric character. It is a zero suppressed version of `UPC-A` symbology where it uses only 6 digits of product code and does not use the middle guard. By default, the number system(0) will add at the front and check digit at the end along with 6 digits of the input product code.
 
 * This type is mainly used on products with very small packaging details.
 
@@ -307,7 +307,7 @@ As like `UPCA`, the `UPCE` symbology supports only numeric symbols. It is a zero
 
 ## EAN-13
 
-`EAN13` is implemented based upon the `UPCA` standard. As like `UPCA`, it supports only the numeric character. It encodes the 12 digits of input data with the check digit at its end.
+`EAN-13`, based on the UPC-A standard. As like `UPC-A`, it supports only the numeric character. It encodes the 12 digits of input data with the check digit at its end.
 
 * This difference between the `UPCA` and `EAN13` is that number system used in the `EAN13` is 2 digits ranges from 00 to 99 whereas the number system used in `UPCA` is single digits range from 0 to 9.
 
