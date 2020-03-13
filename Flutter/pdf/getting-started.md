@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started for Syncfusion Flutter PDF
-description: Learn how to create the Flutter PDF with all basic elements.
+description: Learn how to create PDF document with all basic elements and save it in browser or mobile devices by using Syncfusion Flutter PDF.
 platform: flutter
 control: PDF
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started
 
-This section explains the steps required to create a PDF document by a single button click. This section covers only the minimal features needed to know to get started with the PDF.
+This section explains the steps required to create a PDF document by a single button click. This section covers only the minimal features needed to learn to get started with the PDF.
 
 ## Steps to create PDF document in Flutter application
 
@@ -70,22 +70,22 @@ Include the following code snippet in the click event of the button to create a 
 {% highlight dart %}
 
     void _createPDF() {
-      // Create a new PDF document.
+      //Create a new PDF document
       PdfDocument document = PdfDocument();
 
-      // Add a new page and draw text.
+      //Add a new page and draw text
       document.pages.add().graphics.drawString(
           'Hello World!', PdfStandardFont(PdfFontFamily.helvetica, 12),
           brush: PdfSolidBrush(PdfColor(0, 0, 0)),
           bounds: Rect.fromLTWH(0, 0, 150, 20));
 
-      // Save the document.
+      //Save the document
       List<int> bytes = document.save();
 
-      // Dispose the document.
+      //Dispose the document
       document.dispose();
 
-      // Open the document after saving it
+      //Open the document after saving it
       _saveAndLaunchFile(bytes, 'output.pdf');
     }
 
@@ -137,7 +137,7 @@ Or include the following code snippet to open the document in browser after savi
 
 {% endhighlight %}
 
-By executing the above code sample, you will get the PDF document as follows,
+By executing the above code sample, you will get the PDF document as follows.
 
 ![Getting started PDF](images/getting-started/default.jpg)
 
@@ -147,16 +147,18 @@ The following code example shows how to create a PDF document with an image.
 
 {% highlight dart %}
 
-    // Creates a new PDF document.
+    //Creates a new PDF document
     PdfDocument document = PdfDocument();
 
-    // Draw the image.
-    document.pages.add().graphics.drawImage(PdfBitmap(File('image.jpg'). readAsBytesSync()), Rect.fromLTWH(0, 0, 100, 100));
+    //Draw the image
+    document.pages.add().graphics.drawImage(
+        PdfBitmap(File('image.jpg'). readAsBytesSync()),
+        Rect.fromLTWH(0, 0, 100, 100));
 
-    // Saves the document.
+    //Saves the document
     File('Output.pdf').writeAsBytes(document.save());
 
-    // Dispose the document.
+    //Dispose the document
     document.dispose();
 
 {% endhighlight %}
@@ -165,36 +167,46 @@ The following code example shows how to create a PDF document with an image.
 
 {% highlight dart %}
 
-    // Creates a new PDF document.
+    //Creates a new PDF document
     PdfDocument document = PdfDocument();
 
-    // Create a DataTable
-    DataTable dataTable = DataTable(
-        columns: const <DataColumn>[
-            DataColumn(label: Text('RollNo')),
-            DataColumn(label: Text('Name')),
-            DataColumn(label: Text('Class')),
-        ],
-        rows: const <DataRow>[
-            DataRow(cells: <DataCell>[ DataCell(Text('1')), DataCell(Text('Arya')), DataCell(Text('6')) ]),
-            DataRow(cells: <DataCell>[ DataCell(Text('12')), DataCell(Text('John')), DataCell(Text('9')) ]),
-      DataRow(cells: <DataCell>[ DataCell(Text('42')), DataCell(Text('Tony')), DataCell(Text('8')) ]),
+    //Create a DataTable
+    DataTable dataTable = DataTable(columns: const <DataColumn>[
+      DataColumn(label: Text('RollNo')),
+      DataColumn(label: Text('Name')),
+      DataColumn(label: Text('Class')),
+    ], rows: const <DataRow>[
+      DataRow(cells: <DataCell>[
+        DataCell(Text('1')),
+        DataCell(Text('Arya')),
+        DataCell(Text('6'))
+      ]),
+      DataRow(cells: <DataCell>[
+        DataCell(Text('12')),
+        DataCell(Text('John')),
+        DataCell(Text('9'))
+      ]),
+      DataRow(cells: <DataCell>[
+        DataCell(Text('42')),
+        DataCell(Text('Tony')),
+        DataCell(Text('8'))
+      ]),
     ]);
 
-    // Create a PdfGrid.
+    //Create a PdfGrid
     PdfGrid grid = PdfGrid();
 
-    // Assign data source.
+    //Assign data source
     grid.dataSource = dataTable;
 
-    // Draw grid to the page of the PDF document.
+    //Draw grid to the page of the PDF document
     grid.draw(
       page: document.pages.add(), bounds: const Rect.fromLTWH(0, 0, 0, 0));
 
-    // Saves the document.
+    //Saves the document
     File('Output.pdf').writeAsBytes(document.save());
 
-    // Dispose the document.
+    //Dispose the document
     document.dispose();
 
 {% endhighlight %}
@@ -205,14 +217,14 @@ The PdfDocument object represents an entire PDF document that is being created. 
 
 {% highlight dart %}
 
-    // Creates a new PDF document
+    //Creates a new PDF document
     PdfDocument document = PdfDocument();
 
-    // Adds page settings
+    //Adds page settings
     document.pageSettings.orientation = PdfPageOrientation.landscape;
     document.pageSettings.margins.all = 50;
 
-    // Adds a page to the document
+    //Adds a page to the document
     PdfPage page = document.pages.add();
     PdfGraphics graphics = page.graphics;
 
@@ -226,20 +238,20 @@ The following code example explains how to add an image from base64 string to a 
 
 {% highlight dart %}
 
-    // Loads the image from base64 string
+    //Loads the image from base64 string
     PdfImage image = PdfBitmap.fromBase64String('/9j/4AAQSkZJRgABAQEAYABgAAD/4Q');
 
-    // Draws the image to the PDF page
+    //Draws the image to the PDF page
     page.graphics.drawImage(image, Rect.fromLTWH(176, 0, 390, 130));
 
 {% endhighlight %}
 
 The following methods can be used to add text to a PDF document.
 
-* drawString() method of the PdfGraphics
+* drawString method of the PdfGraphics
 * PdfTextElement class.
 
-The PdfTextElement provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. This is not available in the DrawString method.
+The PdfTextElement provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. This is not available in the drawString method.
 
 The following code example adds the necessary text such as address, invoice number and date to create a basic invoice application.
 
@@ -248,28 +260,28 @@ The following code example adds the necessary text such as address, invoice numb
     PdfBrush solidBrush = PdfSolidBrush(PdfColor(126, 151, 173));
     Rect bounds = Rect.fromLTWH(0, 160, graphics.clientSize.width, 30);
 
-    // Draws a rectangle to place the heading in that region.
+    //Draws a rectangle to place the heading in that region
     graphics.drawRectangle(brush: solidBrush, bounds: bounds);
 
-    // Creates a font for adding the heading in the page
+    //Creates a font for adding the heading in the page
     PdfFont subHeadingFont = PdfStandardFont(PdfFontFamily.timesRoman, 14);
 
-    // Creates a text element to add the invoice number
+    //Creates a text element to add the invoice number
     PdfTextElement element =
       PdfTextElement(text: 'INVOICE 001', font: subHeadingFont);
     element.brush = PdfBrushes.white;
 
-    // Draws the heading on the page
+    //Draws the heading on the page
     PdfLayoutResult result =
       element.draw(page: page, bounds: Rect.fromLTWH(10, bounds.top + 8, 0, 0));
     String currentDate = 'DATE ' + DateFormat.yMMMd().format(DateTime.now());
 
-    // Measures the width of the text to place it in the correct location
+    //Measures the width of the text to place it in the correct location
     Size textSize = subHeadingFont.measureString(currentDate);
     Offset textPosition = Offset(
       graphics.clientSize.width - textSize.width - 10, result.bounds.top);
 
-    // Draws the date by using DrawString method
+    //Draws the date by using drawString method
     graphics.drawString(currentDate, subHeadingFont,
       brush: element.brush,
       bounds: Offset(graphics.clientSize.width - textSize.width - 10,
@@ -278,7 +290,7 @@ The following code example adds the necessary text such as address, invoice numb
 
     PdfFont timesRoman = PdfStandardFont(PdfFontFamily.timesRoman, 10);
 
-    // Creates text elements to add the address and draw it to the page.
+    //Creates text elements to add the address and draw it to the page
     element = PdfTextElement(text: 'BILL TO ', font: timesRoman);
     element.brush = PdfSolidBrush(PdfColor(126, 155, 203));
     result = element.draw(
@@ -294,7 +306,7 @@ The following code example adds the necessary text such as address, invoice numb
     result = element.draw(
       page: page, bounds: Rect.fromLTWH(10, result.bounds.bottom + 10, 0, 0));
 
-    // Draws a line at the bottom of the address
+    //Draws a line at the bottom of the address
     graphics.drawLine(PdfPen(PdfColor(126, 151, 173), width: 0.7), Offset(0, result.bounds.bottom + 3),
       Offset(graphics.clientSize.width, result.bounds.bottom + 3));
 
@@ -304,21 +316,21 @@ Since the invoice document requires only simple cell customizations, the given c
 
 {% highlight dart %}
 
-    // Creates the datasource for the table
+    //Creates the datasource for the table
     DataTable invoiceDetails = getProductDetailsAsDataTable();
 
-    // Creates a PDF grid
+    //Creates a PDF grid
     PdfGrid grid = PdfGrid();
 
-    // Adds the data source
+    //Adds the data source
     grid.dataSource = invoiceDetails;
 
-    // Creates the grid cell styles
+    //Creates the grid cell styles
     PdfGridCellStyle cellStyle = PdfGridCellStyle();
     cellStyle.borders.all = PdfPens.white;
     PdfGridRow header = grid.headers[0];
 
-    // Creates the header style
+    //Creates the header style
     PdfGridCellStyle headerStyle = PdfGridCellStyle();
     headerStyle.borders.all = PdfPen(PdfColor(126, 151, 173));
     headerStyle.backgroundBrush = PdfSolidBrush(PdfColor(126, 151, 173));
@@ -326,7 +338,7 @@ Since the invoice document requires only simple cell customizations, the given c
     headerStyle.font = PdfStandardFont(PdfFontFamily.timesRoman, 14,
       style: PdfFontStyle.regular);
 
-    // Adds cell customizations
+    //Adds cell customizations
     for (int i = 0; i < header.cells.count; i++) {
       if (i == 0 || i == 1) {
         header.cells[i].stringFormat = PdfStringFormat(
@@ -344,10 +356,10 @@ Since the invoice document requires only simple cell customizations, the given c
     cellStyle.font = PdfStandardFont(PdfFontFamily.timesRoman, 12);
     cellStyle.textBrush = PdfSolidBrush(PdfColor(131, 130, 136));
 
-    // Creates layout format settings to allow the table pagination
+    //Creates layout format settings to allow the table pagination
     PdfLayoutFormat layoutFormat = PdfLayoutFormat(layoutType : PdfLayoutType.paginate);
 
-    // Draws the grid to the PDF page.
+    //Draws the grid to the PDF page
     PdfLayoutResult gridResult = grid.draw(
       page: page,
       bounds: Rect.fromLTWH(0, result.bounds.bottom + 20,
@@ -370,10 +382,10 @@ The following code example shows how to save the invoice document and dispose th
 
 {% highlight dart %}
 
-    // Saves the document.
+    //Saves the document
     File('Output.pdf').writeAsBytes(document.save());
 
-    // Dispose the document.
+    //Dispose the document
     document.dispose();
 
 {% endhighlight %}
