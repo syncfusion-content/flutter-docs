@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pages of Syncfusion Flutter PDF
-description: Learn how to add, rotate and customize page settings based on PDF sections in the Flutter PDF.
+description: Learn how to add, rotate pages and customize page settings based on PDF sections in the Flutter PDF.
 platform: flutter
 control: PDF
 documentation: ug
