@@ -7,7 +7,7 @@ control: PDF
 documentation: ug
 ---
 
-# Working with Pages
+# Working with PDF Pages
 
 ## Adding a new page to the PDF document
 

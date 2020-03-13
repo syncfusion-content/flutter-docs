@@ -7,7 +7,7 @@ control: PDF
 documentation: ug
 ---
 
-# Working with Lists
+# Working with Bullets and Lists
 
 ## Adding an Ordered List
 

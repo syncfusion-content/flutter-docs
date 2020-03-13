@@ -7,7 +7,7 @@ control: PDF
 documentation: ug
 ---
 
-# Getting Started
+# Getting Started for Syncfusion Flutter PDF
 
 This section explains the steps required to create a PDF document by a single button click. This section covers only the minimal features needed to learn to get started with the PDF.
 

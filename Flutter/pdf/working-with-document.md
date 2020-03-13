@@ -7,7 +7,7 @@ control: PDF
 documentation: ug
 ---
 
-# Working with Document
+# Working with PDF Document
 
 ## Adding the document settings
 
