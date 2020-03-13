@@ -7,7 +7,7 @@ control: PDF
 documentation: ug
 ---
 
-# Working with Shapes
+# Working with Shapes Drawing
 
 Syncfusion Flutter PDF has support for adding the following shapes:
 
@@ -23,7 +23,7 @@ Syncfusion Flutter PDF has support for adding the following shapes:
 
 ## Adding shapes to a PDF document
 
-This package supports adding shapes with various colour and transparency levels.
+This package supports adding shapes with various color and transparency levels.
 
 **Polygon**
 

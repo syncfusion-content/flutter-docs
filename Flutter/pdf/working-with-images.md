@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Images of Syncfusion Flutter PDF
-description: Learn how to draw images and applying transparency and rotation to the images in the Flutter PDF.
+description: Learn how to draw raster images and applying transparency and rotation to the images in the Flutter PDF.
 platform: flutter
 control: PDF
 documentation: ug

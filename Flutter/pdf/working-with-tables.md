@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tables of Syncfusion Flutter PDF
-description: Learn how to add tables and cell, column and row based customizations in the Flutter PDF.
+description: Learn how to add tables in PDF document and cell, column and row based customizations by using the Syncfusion Flutter PDF.
 platform: flutter
 control: PDF
 documentation: ug
