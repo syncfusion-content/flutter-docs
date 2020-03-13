@@ -380,4 +380,4 @@ The following code example shows how to save the invoice document and dispose th
 
 The following screenshot shows the invoice PDF document created by the Syncfusion Flutter PDF.
 
-![PDF invoice](images/getting-started/invoice.jpg)
+![Invoice PDF](images/getting-started/invoice.jpg)
