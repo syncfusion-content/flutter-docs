@@ -35,7 +35,7 @@ You can add margin to all the PDF pages of a PDF document using the pageSettings
 
 {% highlight dart %}
 
-	//Create a new PDF documentation
+    //Create a new PDF documentation
     PdfDocument document = PdfDocument();
 
     //Set margin for all the pages
@@ -60,7 +60,7 @@ The following code snippet explains how to add more sections to a PDF document w
 
 {% highlight dart %}
 
-	//Create a PDF document
+    //Create a PDF document
     PdfDocument document = PdfDocument();
 
     //Set the font
@@ -126,7 +126,7 @@ You can rotate a PDF page in the PDF document using the PdfPageRotateAngle enum 
 
 {% highlight dart %}
 
-	//Create a PDF document
+    //Create a PDF document
     PdfDocument document = PdfDocument();
 
     //Add section to the document

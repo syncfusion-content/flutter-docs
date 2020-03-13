@@ -17,7 +17,7 @@ You can choose the standard or custom page size when you add a page to the PDF d
 
 {% highlight dart %}
 
-	//Create a new PDF documentation
+    //Create a new PDF documentation
     PdfDocument document = PdfDocument();
 
     //Set the page size
@@ -39,7 +39,7 @@ You can create a PDF document with custom page size by using the following code 
 
 {% highlight dart %}
 
-	//Create a new PDF documentation
+    //Create a new PDF documentation
     PdfDocument document = PdfDocument();
 
     //Set the page size
@@ -60,7 +60,7 @@ You can change the page orientation from portrait to landscape using the PdfPage
 
 {% highlight dart %}
 
-	//Create a new PDF documentation
+    //Create a new PDF documentation
     PdfDocument document = PdfDocument();
 
     //Set the page size
@@ -85,7 +85,7 @@ You can also change the orientation by setting the rotation angle using the PdfP
 
 {% highlight dart %}
 
-	//Create a new PDF documentation
+    //Create a new PDF documentation
     PdfDocument document = PdfDocument();
 
     //Set the page size
@@ -112,7 +112,7 @@ PDF sections are parts of a PDF document, which may contain one or more pages wi
 
 {% highlight dart %}
 
-	//Create a new PDF documentation
+    //Create a new PDF documentation
     PdfDocument document = PdfDocument();
 
     //Add a section to PDF document

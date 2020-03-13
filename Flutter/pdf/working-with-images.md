@@ -50,7 +50,7 @@ You can add transparency and rotation to the image using the setTransparency and
 
 {% highlight dart %}
 
-	//Create a new PDF document
+    //Create a new PDF document
     PdfDocument document = PdfDocument();
 
     //Adds a page to the document
