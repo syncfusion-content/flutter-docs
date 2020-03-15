@@ -39,7 +39,7 @@ To render any indicator, add it to the [`TechnicalIndicators`]() collection usin
 * [`name`]() - Used to define the label for corresponding indicators.
 * [`dashArray`]() - Used to render the indicators with dashes.
 
-*Note* - If you giving series and indicator in the chart, you can add  the same [`seriesName`]() to the series and indicator, otherwise you can directly bind the [`dataSource`]() to the [`indicators`]() property.
+N> If you giving series and indicator in the chart, you can add  the same [`seriesName`]() to the series and indicator, otherwise you can directly bind the [`dataSource`]() to the [`indicators`]() property.
 
 ## Indicator Types
 
@@ -47,8 +47,7 @@ To render any indicator, add it to the [`TechnicalIndicators`]() collection usin
 
 Accumulation distribution indicator is a volume-based indicator designed to measure the accumulative flow of money into and out of a security. It requires [`volumeValueMapper`]() property additionally with the data source to calculate the signal line.
 
-The following code example helps you to add 
-**Accumulation distribution indicator**
+Refer the following example,
 
 {% highlight dart %}
 
@@ -76,9 +75,9 @@ The following code example helps you to add
 
 ### Average true range indicator(ATR)
 
-ATR indicator is a technical analysis volatility indicator. This indicator does not provide an indication of price trend.simply the degree of price volatility. The average true range is an N-day smoothed moving average (SMMA) of the true range values.
+ATR indicator is a technical analysis volatility indicator. This indicator does not indicate the price trend. simply the degree of price volatility. The average true range is an N-day smoothed moving average (SMMA) of the true range values.
 
-You can define the **Average true range indicator** using the following code example.
+Refer the following example,
 
 {% highlight dart %}
 
@@ -109,7 +108,7 @@ This indicator also having [`upperLineColor`](), [`lowerLineColor`]()  property 
 
 Also, we can specify standard deviation values for BollingerBand indicator using [`standardDeviation`]() property.
 
-You can define the **Bollinger band indicator** using the following code example.
+Refer the following example,
 
 {% highlight dart %}
 
@@ -134,11 +133,11 @@ You can define the **Bollinger band indicator** using the following code example
 
 ### Exponential moving average indicator (EMA)
 
-A EMA indicator is a simple, arithmetic moving average that is calculated by adding the closing price for number of time periods and dividing the total value by the number of time periods.
+An EMA indicator is a simple, arithmetic moving average that is calculated by adding the closing price for the number of time periods and dividing the total value by the number of periods.
 
-It also having a [`valueField`]() property.Based on these property Indicator will render.
+It also has a [`valueField`]() property. Based on this property Indicator will render.
 
-The following code example demonstrates the usage of **Simple moving average indicator**
+Refer the following example,
 
 {% highlight dart %}
 
@@ -171,7 +170,7 @@ Also you can draw **Line**, **Histogram** MACD or **Both** using the  [`macdType
 
 The [`macdLineColor`]() property is used to define the color for the MACD line and the [`histogramNegativeColor`]() and [`histogramPositiveColor`]() property is used to define the color for the MACD histogram.
 
-You can specify the **MACD indicator** using the following code example.
+Refer the following example,
 
 {% highlight dart %}
     
@@ -198,9 +197,9 @@ You can specify the **MACD indicator** using the following code example.
 
 ### Momentum Indicator
 
-This indicator also having a centerline.The[`centerLineColor`]() and [`centerLineWidth`]()property is used to define center line.
+This indicator also having a centerline. The [`centerLineColor`]() and [`centerLineWidth`]() property is used to define center line.
 
-You can define **Momentum indicator** using the following code example.
+Refer the following example,
 
 {% highlight dart %}
 
@@ -225,12 +224,11 @@ You can define **Momentum indicator** using the following code example.
 ![MomentumIndicator](images/technical-indicators/momentum.jpg)
 
 ### Relative strength index Indicator(RSI)
-
-The RSI indicator has additional two lines other than signal line.They indicate the [`overBought`]() and[`overSold`]() region.
+The RSI indicator has an additional two lines other than the signal line.They indicate the [`overBought`]() and[`overSold`]() region.
 
 The [`upperLineColor`]() property is used to define the color for the line that indicates [`overBought`]() region, and the [`lowerLineColor`]() property is used to define the color for the line that indicates [`overSold`]() region.
 
-To define the **Relative strength index Indicator**, use the following code example.
+Refer the following example,
 
 {% highlight dart %}
 
@@ -285,7 +283,7 @@ This indicator is used to measure the range and momentum of price movements. It 
 
 In this indicator [`upperLineColor`](),[`lowerLineColor`]() and [`periodLineColor`]() property are used to define the color for the Stochastic indicator lines.
 
-You can define **Stochastic indicator** using the following code example.
+Refer the following example,
 
 {% highlight dart %}
 
@@ -310,9 +308,9 @@ You can define **Stochastic indicator** using the following code example.
 
 ### Triangular moving average indicator (TMA)
 
-A TMA indicator is simply a double-smoothed simple moving average of data calculated over a period of time where the middle portion of the data has more weight.
+A TMA indicator is simply a double-smoothed simple moving average of data calculated over a period where the middle portion of the data has more weight.
 
-The **Triangular moving average indicator** can be defined as in the following code example.
+Refer the following example,
 
 {% highlight dart %}
 
@@ -333,9 +331,10 @@ The **Triangular moving average indicator** can be defined as in the following c
 
 ![TMAIndicator](images/technical-indicators/tma.jpg)
 
-### Legend
+## Legend for technical indicators
 
-Legend provides information about the series rendered in the chart.Legend for indicator is rendered along with the series legend when the legend is set to be visible.Also when the  [ `name` ] property is given to a indicator,the legend name is changed based on the indicator name.[`legendItemText`] can also be provided for changing the name of the legend.In default  rendering the [`legendIconShape`] will be a horizontal line.
+
+Legend provides information about the series rendered in the chart. Legend for the indicator is rendered along with the series legend when the legend is set to be visible. Also when the  [ `name` ]() property is given to an indicator, the legend name is changed based on the indicator name.[`legendItemText`]() can also be provided for changing the name of the legend. In default rendering the [`legendIconShape`]() will be a horizontal line.
 
 The following code example can define the legend.
 
@@ -359,3 +358,32 @@ The following code example can define the legend.
 {% endhighlight %}
 
 ![Legend](images/technical-indicators/legend.jpg)
+
+
+Also refer [`technical indicators event`]() for customizing the tooltip further.
+
+## Tooltip for technical indicators
+
+The chart will display the segment information through the tooltip. It is used to show information about the segment when you tap on the segment. The technical indicator tooltip has the same [`ActivationMode`]()  that has been given in the [`TooltipBehavior`]()  of the series.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context){
+      return Scaffold(
+        body: Center(
+          child: SfCartesianChart(
+            tooltipBehavior: TooltipBehavior(enable: true, shared: true),
+            indicators: <TechnicalIndicators<dynamic, dynamic>>[
+              ATRIndicator<dynamic, dynamic>(
+                  seriesName: 'HiloOpenClose',
+                  )],
+            series: <ChartSeries<Sample, dynamic>>[
+              HiloOpenCloseSeries<Sample, dynamic>(
+                  enableTooltip: true,
+                  name: 'HiloOpenClose')])));
+    }}
+
+{% endhighlight %}
+
+![tooltip](images/technical-indicators/tooltip.jpg)
