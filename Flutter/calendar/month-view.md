@@ -7,7 +7,7 @@ control: SfCalendar
 documentation: ug
 ---
 
-# Month view
+# Month view in flutter calendar
 
 The `MonthView` of SfCalendar used to display entire dates of the specific month and current month by default initially. Current date color is differentiated with other dates of the current month, also the color differentiation for dates will be applicable for previous and next month dates.
 
