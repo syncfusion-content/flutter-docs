@@ -91,7 +91,7 @@ You can also change the orientation by setting the rotation angle using the PdfP
     //Set the page size
     document.pageSettings.size = PdfPageSize.a4;
 
-    //Change the page orientation to 90°
+    //Change the page orientation to 90 degree
     document.pageSettings.rotate = PdfPageRotateAngle.rotateAngle90;
 
     //Draw the text by adding page to the document
