@@ -65,11 +65,11 @@ Add a new button widget as a child of your container widget.
 
 {% endhighlight %}
 
-Include the following code snippet in the click event of the button to create a PDF file.
+Include the following code snippet in the button click event to create a PDF file.
 
 {% highlight dart %}
 
-    void _createPDF() {
+    void _createPDF() async {
       //Create a new PDF document
       PdfDocument document = PdfDocument();
 
@@ -84,42 +84,62 @@ Include the following code snippet in the click event of the button to create a 
 
       //Dispose the document
       document.dispose();
-
-      //Open the document after saving it
-      _saveAndLaunchFile(bytes, 'output.pdf');
     }
 
 {% endhighlight %}
 
-## Save and open the PDF document
+## Save and open a PDF document in mobile devices
 
-Include the following code snippet to open the document in mobile device after saving it.
+You can save and open a PDF document in mobile devices by using the following steps:
+
+**Add dependency**
+
+Add the following packages to your pub spec file.
+
+{% highlight dart %} 
+
+    path_provider: ^1.6.5
+	open_file: ^3.0.1
+
+{% endhighlight %}
+
+**Get packages**
+
+Run the following command to get the required packages.
+
+{% highlight dart %} 
+
+    $ flutter pub get
+
+{% endhighlight %}
+
+**Import package**
 
 {% highlight dart %}
 
     import 'dart:io';
-    import 'package:flutter/services.dart';
+    import 'package:open_file/open_file.dart';
     import 'package:path_provider/path_provider.dart';
-
-    const MethodChannel _platformCall = MethodChannel('launchFile');
-
-    Future<void> _saveAndLaunchFile(List<int> bytes, String fileName) async {
-      final Directory directory = await getApplicationDocumentsDirectory();
-      final String path = directory.path;
-      final File file = File('$path/$fileName');
-      await file.writeAsBytes(bytes, flush: true);
-      final Map<String, String> argument = <String, String>{ 'file_path': '$path/$fileName' };
-      try {
-        final Future<Map<String, String>> result =
-            _platformCall.invokeMethod('viewPdf', argument);
-      } catch (e) {
-        throw Exception(e);
-      }
-    }
 
 {% endhighlight %}
 
-Or include the following code snippet to open the document in browser after saving it.
+Include the following code snippet in _createPDF method to open the PDF document in mobile device after saving it.
+
+{% highlight dart %}
+
+    final directory = await getExternalStorageDirectory();
+    final path = directory.path;
+    File file = File('$path/Output.pdf');
+    await file.writeAsBytes(bytes, flush: true);
+    OpenFile.open('$path/Output.pdf');
+
+{% endhighlight %}
+
+## Save and download a PDF document in browser
+
+You can save and download a PDF document in browser by using the following steps.
+
+**Import package**
 
 {% highlight dart %}
 
@@ -127,13 +147,34 @@ Or include the following code snippet to open the document in browser after savi
     import 'dart:convert';
     import 'dart:js' as js;
 
-    Future<void> saveAndLaunchFile(List<int> bytes, String fileName) async {
-      js.context['pdfdata'] = base64.encode(bytes);
-      js.context['filename'] = fileName;
-      Timer.run(() {
-          js.context.callMethod('download');
-      });
-    }
+{% endhighlight %}
+
+Include the following code snippet in _createPDF method to open the document in browser after saving it.
+
+{% highlight dart %}
+
+    js.context['pdfData'] = base64.encode(bytes);
+    js.context['filename'] = fileName;
+    Timer.run(() {
+      js.context.callMethod('download');
+    });
+
+{% endhighlight %}
+
+Add the following code in the header section of index.html file under the web folder.
+
+{% highlight dart %}
+
+    <script>
+        async function download() {
+          var pdfAsDataUri = "data:application/pdf;base64, " + pdfData;
+          var link = document.createElement('a');
+          link.download = filename;
+          link.href = pdfAsDataUri;
+          link.type = 'application/pdf';
+          link.click();
+        }
+    </script>
 
 {% endhighlight %}
 

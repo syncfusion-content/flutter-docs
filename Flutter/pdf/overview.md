@@ -17,7 +17,7 @@ The Syncfusion Flutter PDF is a library written natively in Dart for creating th
 * Support to add text and drawing shapes.
 * Support to add ordered and unordered lists.
 * Support to draw raster images like JPEG and PNG formats.
-* Support to add hyper link and document link annotations.
+* Support to add hyperlink and document link annotations.
 * Support to add tables.
 * Support to add headers and footers in PDF document.
 * Support to add bookmarks in PDF document.
