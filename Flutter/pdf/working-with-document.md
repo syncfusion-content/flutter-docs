@@ -17,21 +17,21 @@ You can choose the standard or custom page size when you add a page to the PDF d
 
 {% highlight dart %}
 
-    //Create a new PDF documentation
-    PdfDocument document = PdfDocument();
+//Create a new PDF documentation
+PdfDocument document = PdfDocument();
 
-    //Set the page size
-    document.pageSettings.size = PdfPageSize.a4;
+//Set the page size
+document.pageSettings.size = PdfPageSize.a4;
 
-    //Draw the text by adding page to the document
-    document.pages.add().graphics.drawString(
-        'Hello World!!!', PdfStandardFont(PdfFontFamily.helvetica, 27),
-        brush: PdfBrushes.mediumVioletRed,
-        bounds: const Rect.fromLTWH(170, 100, 0, 0));
+//Draw the text by adding page to the document
+document.pages.add().graphics.drawString(
+	'Hello World!!!', PdfStandardFont(PdfFontFamily.helvetica, 27),
+	brush: PdfBrushes.mediumVioletRed,
+	bounds: const Rect.fromLTWH(170, 100, 0, 0));
 
-    //Save and dispose the PDF document
-    File('Output.pdf').writeAsBytes(document.save());
-    document.dispose();
+//Save and dispose the PDF document
+File('Output.pdf').writeAsBytes(document.save());
+document.dispose();
 	
 {% endhighlight %}
 
@@ -39,20 +39,20 @@ You can create a PDF document with custom page size by using the following code 
 
 {% highlight dart %}
 
-    //Create a new PDF documentation
-    PdfDocument document = PdfDocument();
+//Create a new PDF documentation
+PdfDocument document = PdfDocument();
 
-    //Set the page size
-    document.pageSettings.size = const Size(200, 300);
+//Set the page size
+document.pageSettings.size = const Size(200, 300);
 
-    //Draw the text by adding page to the document
-    document.pages.add().graphics.drawString(
-        'Hello World!!!', PdfStandardFont(PdfFontFamily.helvetica, 19),
-        brush: PdfBrushes.mediumVioletRed);
+//Draw the text by adding page to the document
+document.pages.add().graphics.drawString(
+	'Hello World!!!', PdfStandardFont(PdfFontFamily.helvetica, 19),
+	brush: PdfBrushes.mediumVioletRed);
 
-    //Save and close the PDF document
-    File('Output.pdf').writeAsBytes(document.save());
-    document.dispose();
+//Save and close the PDF document
+File('Output.pdf').writeAsBytes(document.save());
+document.dispose();
 	
 {% endhighlight %}
 
@@ -60,24 +60,24 @@ You can change the page orientation from portrait to landscape using the PdfPage
 
 {% highlight dart %}
 
-    //Create a new PDF documentation
-    PdfDocument document = PdfDocument();
+//Create a new PDF documentation
+PdfDocument document = PdfDocument();
 
-    //Set the page size
-    document.pageSettings.size = PdfPageSize.a4;
+//Set the page size
+document.pageSettings.size = PdfPageSize.a4;
 
-    //Change the page orientation to landscape
-    document.pageSettings.orientation = PdfPageOrientation.landscape;
+//Change the page orientation to landscape
+document.pageSettings.orientation = PdfPageOrientation.landscape;
 
-    //Draw the text by adding page to the document
-    document.pages.add().graphics.drawString(
-        'Hello World!!!', PdfStandardFont(PdfFontFamily.helvetica, 27),
-        brush: PdfBrushes.mediumVioletRed,
-        bounds: const Rect.fromLTWH(170, 100, 0, 0));
+//Draw the text by adding page to the document
+document.pages.add().graphics.drawString(
+	'Hello World!!!', PdfStandardFont(PdfFontFamily.helvetica, 27),
+	brush: PdfBrushes.mediumVioletRed,
+	bounds: const Rect.fromLTWH(170, 100, 0, 0));
 
-    //Save and close the PDF document
-    File('Output.pdf').writeAsBytes(document.save());
-    document.dispose();
+//Save and close the PDF document
+File('Output.pdf').writeAsBytes(document.save());
+document.dispose();
 	
 {% endhighlight %}
 
@@ -85,24 +85,24 @@ You can also change the orientation by setting the rotation angle using the PdfP
 
 {% highlight dart %}
 
-    //Create a new PDF documentation
-    PdfDocument document = PdfDocument();
+//Create a new PDF documentation
+PdfDocument document = PdfDocument();
 
-    //Set the page size
-    document.pageSettings.size = PdfPageSize.a4;
+//Set the page size
+document.pageSettings.size = PdfPageSize.a4;
 
-    //Change the page orientation to 90 degree
-    document.pageSettings.rotate = PdfPageRotateAngle.rotateAngle90;
+//Change the page orientation to 90 degree
+document.pageSettings.rotate = PdfPageRotateAngle.rotateAngle90;
 
-    //Draw the text by adding page to the document
-    document.pages.add().graphics.drawString(
-        'Hello World!!!', PdfStandardFont(PdfFontFamily.helvetica, 27),
-        brush: PdfBrushes.mediumVioletRed,
-        bounds: const Rect.fromLTWH(170, 100, 0, 0));
+//Draw the text by adding page to the document
+document.pages.add().graphics.drawString(
+	'Hello World!!!', PdfStandardFont(PdfFontFamily.helvetica, 27),
+	brush: PdfBrushes.mediumVioletRed,
+	bounds: const Rect.fromLTWH(170, 100, 0, 0));
 
-    //Save and close the PDF document
-    File('Output.pdf').writeAsBytes(document.save());
-    document.dispose();
+//Save and close the PDF document
+File('Output.pdf').writeAsBytes(document.save());
+document.dispose();
 	
 {% endhighlight %}
 
@@ -112,20 +112,20 @@ PDF sections are parts of a PDF document, which may contain one or more pages wi
 
 {% highlight dart %}
 
-    //Create a new PDF documentation
-    PdfDocument document = PdfDocument();
+//Create a new PDF documentation
+PdfDocument document = PdfDocument();
 
-    //Add a section to PDF document
-    PdfSection section = document.sections.add();
+//Add a section to PDF document
+PdfSection section = document.sections.add();
 
-    //Draw the text by section page graphics
-    section.pages.add().graphics.drawString(
-        'Hello World!!!', PdfStandardFont(PdfFontFamily.helvetica, 27),
-        brush: PdfBrushes.mediumVioletRed,
-        bounds: const Rect.fromLTWH(170, 100, 0, 0));
+//Draw the text by section page graphics
+section.pages.add().graphics.drawString(
+	'Hello World!!!', PdfStandardFont(PdfFontFamily.helvetica, 27),
+	brush: PdfBrushes.mediumVioletRed,
+	bounds: const Rect.fromLTWH(170, 100, 0, 0));
 
-    //Save and close the PDF document
-    File('Output.pdf').writeAsBytes(document.save());
-    document.dispose();
+//Save and close the PDF document
+File('Output.pdf').writeAsBytes(document.save());
+document.dispose();
 	
 {% endhighlight %}

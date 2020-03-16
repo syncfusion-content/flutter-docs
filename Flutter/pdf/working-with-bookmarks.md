@@ -17,26 +17,26 @@ The PdfBookmarkBase collection represents the bookmarks in a PDF document. You c
 
 {% highlight dart %}
 
-    //Create a new PDF document
-    PdfDocument document = PdfDocument();
+//Create a new PDF document
+PdfDocument document = PdfDocument();
 
-    //Creates document bookmark
-    PdfBookmark bookmark = document.bookmarks.add('page 1');
+//Creates document bookmark
+PdfBookmark bookmark = document.bookmarks.add('page 1');
 
-    //Sets the destination page and destination location
-    bookmark.destination = PdfDestination(document.pages.add(), Offset(100, 100));
+//Sets the destination page and destination location
+bookmark.destination = PdfDestination(document.pages.add(), Offset(100, 100));
 
-    //Sets the text style
-    bookmark.textStyle = [PdfTextStyle.bold];
+//Sets the text style
+bookmark.textStyle = [PdfTextStyle.bold];
 
-    //Sets the bookmark color(RGB)
-    bookmark.color = PdfColor(255, 0, 0);
+//Sets the bookmark color(RGB)
+bookmark.color = PdfColor(255, 0, 0);
 
-    //Save the document
-    File('Output.pdf').writeAsBytes(document.save());
+//Save the document
+File('Output.pdf').writeAsBytes(document.save());
 
-    //Dispose the document
-    document.dispose();
+//Dispose the document
+document.dispose();
   
 {% endhighlight %}
 
@@ -46,37 +46,37 @@ You can add a child bookmark by using the insert or add method. Refer to the fol
 
 {% highlight dart %}
 
-    //Create a new PDF document
-    PdfDocument document = PdfDocument();
+//Create a new PDF document
+PdfDocument document = PdfDocument();
 
-    //Add a page
-    PdfPage page = document.pages.add();
+//Add a page
+PdfPage page = document.pages.add();
 
-    //Creates document bookmark
-    PdfBookmark bookmark = document.bookmarks.add('page 1');
+//Creates document bookmark
+PdfBookmark bookmark = document.bookmarks.add('page 1');
 
-    //Inserts the child bookmark
-    PdfBookmark childBookmark1 = bookmark.insert(0, 'heading 1');
+//Inserts the child bookmark
+PdfBookmark childBookmark1 = bookmark.insert(0, 'heading 1');
 
-    //Adds the child bookmark
-    PdfBookmark childBookmark2 = bookmark.add('heading 2');
+//Adds the child bookmark
+PdfBookmark childBookmark2 = bookmark.add('heading 2');
 
-    //Sets the text style
-    childBookmark1.textStyle = [PdfTextStyle.bold, PdfTextStyle.italic];
-    childBookmark2.textStyle = [PdfTextStyle.italic];
+//Sets the text style
+childBookmark1.textStyle = [PdfTextStyle.bold, PdfTextStyle.italic];
+childBookmark2.textStyle = [PdfTextStyle.italic];
 
-    //Sets the destination page and destination location
-    childBookmark1.destination = PdfDestination(page, Offset(100, 100));
-    childBookmark2.destination = PdfDestination(page, Offset(100, 400));
+//Sets the destination page and destination location
+childBookmark1.destination = PdfDestination(page, Offset(100, 100));
+childBookmark2.destination = PdfDestination(page, Offset(100, 400));
 
-    //Sets the bookmark color(RGB)
-    childBookmark1.color = PdfColor(0, 255, 0);
-    childBookmark2.color = PdfColor(0, 0, 255);
+//Sets the bookmark color(RGB)
+childBookmark1.color = PdfColor(0, 255, 0);
+childBookmark2.color = PdfColor(0, 0, 255);
 
-    //Saves the bookmark
-    File('Output.pdf').writeAsBytes(document.save());
+//Saves the bookmark
+File('Output.pdf').writeAsBytes(document.save());
 
-    //Dispose the document
-    document.dispose();
+//Dispose the document
+document.dispose();
 	
 {% endhighlight %}

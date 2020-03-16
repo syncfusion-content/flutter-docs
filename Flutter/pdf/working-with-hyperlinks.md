@@ -18,26 +18,27 @@ You can navigate to a specified URL from a PDF document by using the PdfTextWebL
 Refer to the following code snippet for navigating to the webpage.
 
 {% highlight dart %}
-    //Create a new Pdf document
-    PdfDocument document = PdfDocument();
+//Create a new Pdf document
+PdfDocument document = PdfDocument();
 
-    //Create and draw the web link in the PDF page
-    PdfTextWebLink(
-        url: 'www.google.co.in',
-        text: 'google',
-        font: PdfStandardFont(PdfFontFamily.timesRoman, 14),
-        brush: PdfSolidBrush(PdfColor(0, 0, 0)),
-        pen: PdfPens.brown,
-        format: PdfStringFormat(
-            alignment: PdfTextAlignment.center,
-            lineAlignment: PdfVerticalAlignment.middle))
-      .draw(document.pages.add(), Offset(50, 40));
+//Create and draw the web link in the PDF page
+PdfTextWebLink(
+	url: 'www.google.co.in',
+	text: 'google',
+	font: PdfStandardFont(PdfFontFamily.timesRoman, 14),
+	brush: PdfSolidBrush(PdfColor(0, 0, 0)),
+	pen: PdfPens.brown,
+	format: PdfStringFormat(
+		alignment: PdfTextAlignment.center,
+		lineAlignment: PdfVerticalAlignment.middle))
+  .draw(document.pages.add(), Offset(50, 40));
 
-    //Save the PDF document
-    File('Hyperlink.pdf').writeAsBytes(document.save());
+//Save the PDF document
+File('Hyperlink.pdf').writeAsBytes(document.save());
 
-    //Dispose document
-    document.dispose();
+//Dispose document
+document.dispose();
+
 {% endhighlight %}
 
 ## Working with internal document navigation
@@ -48,27 +49,27 @@ The following code explains how to add the hyperlink for internal document navig
 
 {% highlight dart %}
 
-    //Create a new Pdf document
-    PdfDocument document = PdfDocument();
+//Create a new Pdf document
+PdfDocument document = PdfDocument();
 
-    //Create a page
-    PdfPage page = document.pages.add();
+//Create a page
+PdfPage page = document.pages.add();
 
-    //Create a document link
-    PdfDocumentLinkAnnotation docLink = PdfDocumentLinkAnnotation(
-        Rect.fromLTWH(10, 40, 30, 30),
-        PdfDestination(document.pages.add(), Offset(10, 0)));
+//Create a document link
+PdfDocumentLinkAnnotation docLink = PdfDocumentLinkAnnotation(
+	Rect.fromLTWH(10, 40, 30, 30),
+	PdfDestination(document.pages.add(), Offset(10, 0)));
 
-    //Set the destination mode
-    docLink.destination.mode = PdfDestinationMode.fitToPage;
+//Set the destination mode
+docLink.destination.mode = PdfDestinationMode.fitToPage;
 
-    //Add the document link to the page
-    page.annotations.add(docLink);
+//Add the document link to the page
+page.annotations.add(docLink);
 
-    //Save the PDF document
-    File('Hyperlink.pdf').writeAsBytes(document.save());
+//Save the PDF document
+File('Hyperlink.pdf').writeAsBytes(document.save());
 
-    //Dispose document
-    document.dispose();
+//Dispose document
+document.dispose();
 
 {% endhighlight %}
