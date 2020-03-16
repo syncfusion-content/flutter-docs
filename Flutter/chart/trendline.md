@@ -102,7 +102,7 @@ A logarithmic trendline is a best-fit curved line that is most useful when the r
 
 To render a logarithmic trendline, use trendline type as Logarithmic 
 
-{ % highlight dart % }
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -136,7 +136,7 @@ A polynomial trendline is a curved line that is used when data fluctuates.
 
 To render a polynomial trendline, use trendline type as Polynomial.
 
-{ % highlight dart % }
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -170,7 +170,7 @@ A power trendline is a curved line that is best used with data sets that compare
 
 To render a power trendline, use trendline type as Power
 
-{ % highlight dart % }
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -203,7 +203,7 @@ A moving average trendline smoothen out fluctuations in data to show a pattern o
 
 To render a moving average trendline, use trendline type as MovingAverage 
 
-{ % highlight dart % }
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -241,7 +241,7 @@ Forward Forecasting and Backward Forecasting are the two types of forecasting.
 
 The value set for forwardForecast is used to determine the distance moving towards the future trend.
 
-{ % highlight dart % }
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -274,7 +274,7 @@ The value set for forwardForecast is used to determine the distance moving towar
 
 The value set for the backwardForecast is used to determine the past trends.
 
-{ % highlight dart % }
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -307,7 +307,7 @@ The value set for the backwardForecast is used to determine the past trends.
 
 Legend provides information about the series rendered in the chart.Legend for trendline gets rendered  together  with the series legend when the legend is set to be visible.Also when the  [ `name` ]()  property is assigned to a trendline,the name of the legend is changed based on the name of the trendlines.[`legendItemText`]()  can also be provided for changing the name of the legend.In default  rendering the [`legendIconShape`]()  will be a horizontal line.
 
-{ % highlight dart % }
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -341,7 +341,7 @@ Legend provides information about the series rendered in the chart.Legend for tr
 
 Data markers are used to provide information about the data points in the series. You can add a shape to adorn each data point.Trendlines support markers that can be enabled using the property [`markerSettings`]() .
 
-{ % highlight dart % }
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -375,7 +375,7 @@ Data markers are used to provide information about the data points in the series
 
 Chart will display details about the points through tooltip, when user interaction is done over the point.Trendline Tooltip has the same [`ActivationMode`]()  that has been given in the [`TooltipBehavior`]()  of the series.
 
-{ % highlight dart % }
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
