@@ -89,7 +89,7 @@ The `enableCheckSum` property of `Code39` barcode allows to add the check digit 
 
 ## Code39 Extended
 
-`Code39 Extended` Symbology is an extended version of Code39 that supports all 128 ASCII characters set. So, it encodes lower case alphabets (a-z) as well as special characters.
+`Code39 Extended` symbology is an extended version of Code39 that supports all 128 ASCII characters set. So, it encodes lower case alphabets (a-z) as well as special characters.
 
 {% highlight dart %} 
 
@@ -114,7 +114,7 @@ The `enableCheckSum` property of `Code39` barcode allows to add the check digit 
 
 ![code39 extended symbology](images/one-dimensional/code39-extended.jpg)
 
-As like `Code39`, the `code39 Extended` supports the 'enableCheckSum` property.
+As like `Code39`, the `Code39 Extended` supports the `enableCheckSum` property.
 
 ## Code93
 
