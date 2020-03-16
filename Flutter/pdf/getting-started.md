@@ -113,14 +113,23 @@ import 'package:path_provider/path_provider.dart';
 
 {% endhighlight %}
 
-Include the following code snippet in _createPDF method to open the PDF document in mobile device after saving it.
+Include the following code snippet in _createPDF method to open the PDF document in mobile after saving it.
 
 {% highlight dart %}
 
+//Get external storage directory
 final directory = await getExternalStorageDirectory();
+
+//Get directory path
 final path = directory.path;
+
+//Create an empty file to write PDF data
 File file = File('$path/Output.pdf');
+
+//Write PDF data
 await file.writeAsBytes(bytes, flush: true);
+
+//Open the PDF document in mobile
 OpenFile.open('$path/Output.pdf');
 
 {% endhighlight %}
@@ -144,7 +153,7 @@ Include the following code snippet in _createPDF method to open the document in 
 {% highlight dart %}
 
 js.context['pdfData'] = base64.encode(bytes);
-js.context['filename'] = fileName;
+js.context['filename'] = 'Output.pdf';
 Timer.run(() {
   js.context.callMethod('download');
 });
