@@ -7,7 +7,7 @@ control: SfCalendar
 documentation: ug
 ---
 
-# Timeslot views
+# Timeslot views in flutter calendar
 Calendar has six built-in time slot views used to display date, and the views will display based on the current day by default. Appointments on a specific day will be arranged in respective timeslots based on its duration.
 
 * **Day view:** Displays a single day.
