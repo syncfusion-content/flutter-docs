@@ -202,3 +202,45 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Label placement support](images/label-and-divisor/label-placement.png)
+
+## LabelFormatterCallback
+
+Formats or change the whole numeric or date label text. Its arguments contains the following parameters:
+
+* actualValue – either `DateTime` or `double` based on given `values`.
+* formattedText – If the actual value is `double`, it is formatted by `numberFormat` and if the actual value is `DateTime`, it is formatted by `dateFormat`.
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(100.0, 9900.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSlider(
+                    min: 100.0,
+                    max: 10000.0,
+                    values: _values,
+                    showLabels: true,
+                    interval: 9900,
+                    labelFormatterCallback: (dynamic actualValue, String formattedText) {
+                        return actualValue == 10000 ? '\$ $formattedText+' : '\$ $formattedText';
+                    },
+                    onChanged: (SfRangeValues newValues) {
+                        setState(() {
+                            _values = newValues;
+                        });
+                   },
+              ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Label formmatter support](images/label-and-divisor/label-formattercallback.png)
