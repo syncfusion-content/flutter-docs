@@ -20,18 +20,18 @@ PdfDocument document = PdfDocument();
 
 //Create ordered list and draw on page
 PdfOrderedList(
-		items: PdfListItemCollection(<String>[
-		  'Mammals',
-		  'Reptiles',
-		  'Birds',
-		  'Insects',
-		  'Aquatic Animals'
-		]),
-		font: PdfStandardFont(PdfFontFamily.timesRoman, 20,
-			style: PdfFontStyle.italic),
-		indent: 20,
-		format: PdfStringFormat(lineSpacing: 10))
-	.draw(page: document.pages.add(), bounds: Rect.fromLTWH(0, 20, 0, 0));
+        items: PdfListItemCollection(<String>[
+          'Mammals',
+          'Reptiles',
+          'Birds',
+          'Insects',
+          'Aquatic Animals'
+        ]),
+        font: PdfStandardFont(PdfFontFamily.timesRoman, 20,
+            style: PdfFontStyle.italic),
+        indent: 20,
+        format: PdfStringFormat(lineSpacing: 10))
+    .draw(page: document.pages.add(), bounds: Rect.fromLTWH(0, 20, 0, 0));
 
 //Saves the document
 File('Output.pdf').writeAsBytes(document.save());
@@ -52,13 +52,13 @@ PdfDocument document = PdfDocument();
 
 //Create unordered list and draw list on page
 PdfUnorderedList(
-		text: 'Mammals\nReptiles\nBirds\nInsects\nAquatic Animals',
-		style: PdfUnorderedMarkerStyle.disk,
-		font: PdfStandardFont(PdfFontFamily.helvetica, 12),
-		indent: 10,
-		textIndent: 10,
-		format: PdfStringFormat(lineSpacing: 10))
-	.draw(page: document.pages.add(), bounds: Rect.fromLTWH(0, 10, 0, 0));
+        text: 'Mammals\nReptiles\nBirds\nInsects\nAquatic Animals',
+        style: PdfUnorderedMarkerStyle.disk,
+        font: PdfStandardFont(PdfFontFamily.helvetica, 12),
+        indent: 10,
+        textIndent: 10,
+        format: PdfStringFormat(lineSpacing: 10))
+    .draw(page: document.pages.add(), bounds: Rect.fromLTWH(0, 10, 0, 0));
 
 //Saves the document
 File('Output.pdf').writeAsBytes(document.save());
@@ -103,48 +103,48 @@ PdfStringFormat format = PdfStringFormat(lineSpacing: 10);
 
 //Create ordered list
 PdfOrderedList oList =
-	PdfOrderedList(items: item, font: font, format: format);
+    PdfOrderedList(items: item, font: font, format: format);
 
 //Create ordered sub list
 oList.items[0].subList = PdfOrderedList(
-	items: item_2, font: font, format: format, markerHierarchy: true);
+    items: item_2, font: font, format: format, markerHierarchy: true);
 
 //Create ordered sub list
 oList.items[1].subList = PdfOrderedList(
-	items: item_3, font: font, format: format, markerHierarchy: true);
+    items: item_3, font: font, format: format, markerHierarchy: true);
 
 //Draw ordered list with sub list
 oList.draw(
-	page: page,
-	bounds: Rect.fromLTWH(
-		0, 10, page.getClientSize().width, page.getClientSize().height));
+    page: page,
+    bounds: Rect.fromLTWH(
+        0, 10, page.getClientSize().width, page.getClientSize().height));
 
 //Create unordered list
 PdfUnorderedList uList = PdfUnorderedList(
-	items: item,
-	font: font,
-	format: format,
-	style: PdfUnorderedMarkerStyle.disk);
+    items: item,
+    font: font,
+    format: format,
+    style: PdfUnorderedMarkerStyle.disk);
 
 //Create unordered sub list
 uList.items[0].subList = PdfUnorderedList(
-	items: item_2,
-	font: font,
-	format: format,
-	style: PdfUnorderedMarkerStyle.circle);
+    items: item_2,
+    font: font,
+    format: format,
+    style: PdfUnorderedMarkerStyle.circle);
 
- //Create unordered sub list
+//Create unordered sub list
 uList.items[1].subList = PdfUnorderedList(
-	items: item_3,
-	font: font,
-	format: format,
-	style: PdfUnorderedMarkerStyle.circle);
+    items: item_3,
+    font: font,
+    format: format,
+    style: PdfUnorderedMarkerStyle.circle);
 
 //Draw unordered list with sub list
 uList.draw(
-	page: page,
-	bounds: Rect.fromLTWH(
-		0, 400, page.getClientSize().width, page.getClientSize().height));
+    page: page,
+    bounds: Rect.fromLTWH(
+        0, 400, page.getClientSize().width, page.getClientSize().height));
 
 //Saves the document
 File('Output.pdf').writeAsBytes(document.save());

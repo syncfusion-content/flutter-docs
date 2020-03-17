@@ -20,8 +20,8 @@ PdfDocument document = PdfDocument();
 
 //Create a new PDF page and draw the text
 document.pages.add().graphics.drawString(
-  'Hello World!!!', PdfStandardFont(PdfFontFamily.helvetica, 27),
-  brush: PdfBrushes.darkBlue, bounds: const Rect.fromLTWH(170, 100, 0, 0));
+    'Hello World!!!', PdfStandardFont(PdfFontFamily.helvetica, 27),
+    brush: PdfBrushes.darkBlue, bounds: const Rect.fromLTWH(170, 100, 0, 0));
 
 //Save and dispose the PDF document
 File('Output.pdf').writeAsBytes(document.save());
@@ -43,8 +43,8 @@ document.pageSettings.margins.all = 200;
 
 //Draw the text by adding page to the document
 document.pages.add().graphics.drawString(
-	'Hello World!!!', PdfStandardFont(PdfFontFamily.helvetica, 27),
-	brush: PdfBrushes.darkBlue);
+    'Hello World!!!', PdfStandardFont(PdfFontFamily.helvetica, 27),
+    brush: PdfBrushes.darkBlue);
 
 //Save and dispose the PDF document
 List<int> bytes = document.save();
@@ -76,7 +76,7 @@ section.pageSettings.size = const Size(300, 400);
 
 //Draw simple text on the page
 section.pages.add().graphics.drawString('Rotated by 0 degrees', font,
-	brush: PdfBrushes.black, bounds: const Rect.fromLTWH(20, 20, 0, 0));
+    brush: PdfBrushes.black, bounds: const Rect.fromLTWH(20, 20, 0, 0));
 
 //Section - 2
 //Add section to the document
@@ -88,7 +88,7 @@ section.pageSettings.size = const Size(300, 400);
 
 //Draw simple text on the page
 section.pages.add().graphics.drawString('Rotated by 90 degrees', font,
-	brush: PdfBrushes.black, bounds: const Rect.fromLTWH(20, 20, 0, 0));
+    brush: PdfBrushes.black, bounds: const Rect.fromLTWH(20, 20, 0, 0));
 
 //Section - 3
 //Add section to the document
@@ -100,7 +100,7 @@ section.pageSettings.size = const Size(500, 200);
 
 //Draw simple text on the page
 section.pages.add().graphics.drawString('Rotated by 180 degrees', font,
-	brush: PdfBrushes.black, bounds: const Rect.fromLTWH(20, 20, 0, 0));
+    brush: PdfBrushes.black, bounds: const Rect.fromLTWH(20, 20, 0, 0));
 
 //Section - 4
 //Add section to the document
@@ -112,7 +112,7 @@ section.pageSettings.size = const Size(300, 200);
 
 //Draw simple text on the page
 section.pages.add().graphics.drawString('Rotated by 270 degrees', font,
-	brush: PdfBrushes.black, bounds: const Rect.fromLTWH(20, 20, 0, 0));
+    brush: PdfBrushes.black, bounds: const Rect.fromLTWH(20, 20, 0, 0));
 
 //Save and dispose the PDF document
 File('Output.pdf').writeAsBytes(document.save());
@@ -138,8 +138,8 @@ section.pageSettings.size = PdfPageSize.a4;
 
 //Draw simple text on the page
 section.pages.add().graphics.drawString(
-	'Rotated by 180 degrees', PdfStandardFont(PdfFontFamily.helvetica, 14),
-	brush: PdfBrushes.black, bounds: const Rect.fromLTWH(20, 20, 0, 0));
+    'Rotated by 180 degrees', PdfStandardFont(PdfFontFamily.helvetica, 14),
+    brush: PdfBrushes.black, bounds: const Rect.fromLTWH(20, 20, 0, 0));
 
 //Add section to the document
 section = document.sections.add();
@@ -150,8 +150,8 @@ section.pageSettings.size = PdfPageSize.a4;
 
 //Draw simple text on the page
 section.pages.add().graphics.drawString(
-	'Rotated by 270 degrees', PdfStandardFont(PdfFontFamily.helvetica, 14),
-	brush: PdfBrushes.black, bounds: const Rect.fromLTWH(20, 20, 0, 0));
+    'Rotated by 270 degrees', PdfStandardFont(PdfFontFamily.helvetica, 14),
+    brush: PdfBrushes.black, bounds: const Rect.fromLTWH(20, 20, 0, 0));
 
 //Save and dispose the PDF document
 File('Output.pdf').writeAsBytes(document.save());

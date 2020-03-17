@@ -36,8 +36,8 @@ PdfDocument document = PdfDocument();
 
 //Draw a polygon on PDF document
 document.pages.add().graphics.drawPolygon(
-	[Offset(10, 100), Offset(10, 200), Offset(100, 100), Offset(55, 150)],
-	pen: PdfPens.black, brush: PdfSolidBrush(PdfColor(165, 42, 42)));
+    [Offset(10, 100), Offset(10, 200), Offset(100, 100), Offset(55, 150)],
+    pen: PdfPens.black, brush: PdfSolidBrush(PdfColor(165, 42, 42)));
 
 //Save the PDF document
 File('Polygon.pdf').writeAsBytes(document.save());
@@ -58,9 +58,9 @@ PdfDocument document = PdfDocument();
 
 //Draw a line on PDF document
 document.pages.add().graphics.drawLine(
-	PdfPen(PdfColor(165, 42, 42), width: 5),
-	Offset(10, 100),
-	Offset(10, 200));
+    PdfPen(PdfColor(165, 42, 42), width: 5),
+    Offset(10, 100),
+    Offset(10, 200));
 
 //Save the PDF document
 File('Line.pdf').writeAsBytes(document.save());
@@ -81,11 +81,11 @@ final PdfDocument document = PdfDocument();
 
 //Create an instance of Bezier curve
 final PdfBezierCurve bezier = PdfBezierCurve(
-	Offset(100, 10), Offset(150, 50), Offset(50, 80), Offset(100, 10));
+    Offset(100, 10), Offset(150, 50), Offset(50, 80), Offset(100, 10));
 
 //Draw a Bezier curve
 bezier.draw(
-	page: document.pages.add(), bounds: Rect.fromLTWH(200, 100, 0, 0));
+    page: document.pages.add(), bounds: Rect.fromLTWH(200, 100, 0, 0));
 
 //Save the PDF document
 File('Curve.pdf').writeAsBytes(document.save());
@@ -134,7 +134,7 @@ final PdfDocument document = PdfDocument();
 
 //Draw the rectangle on PDF document
 document.pages.add().graphics.drawRectangle(
-	brush: PdfBrushes.chocolate, bounds: Rect.fromLTWH(10, 10, 100, 50));
+    brush: PdfBrushes.chocolate, bounds: Rect.fromLTWH(10, 10, 100, 50));
 
 //Save the PDF document
 File('Rectangle.pdf').writeAsBytes(document.save());
@@ -155,8 +155,8 @@ final PdfDocument document = PdfDocument();
 
 //Draw a pie on page
 document.pages.add().graphics.drawPie(
-	Rect.fromLTWH(10, 50, 200, 200), 90, 180,
-	pen: PdfPen(PdfColor(165, 42, 42), width: 5), brush: PdfBrushes.green);
+    Rect.fromLTWH(10, 50, 200, 200), 90, 180,
+    pen: PdfPen(PdfColor(165, 42, 42), width: 5), brush: PdfBrushes.green);
 
 //Save the PDF document
 File('Pie.pdf').writeAsBytes(document.save());
@@ -177,8 +177,8 @@ final PdfDocument document = PdfDocument();
 
 //Draw arc on page
 document.pages.add().graphics.drawArc(
-	Rect.fromLTWH(100, 140, 200, 400), 70, 190,
-	pen: PdfPen(PdfColor(165, 42, 42), width: 5));
+    Rect.fromLTWH(100, 140, 200, 400), 70, 190,
+    pen: PdfPen(PdfColor(165, 42, 42), width: 5));
 
 //Save the PDF document
 File('Arc.pdf').writeAsBytes(document.save());
@@ -199,8 +199,8 @@ final PdfDocument document = PdfDocument();
 
 //Draw Bezier on page
 document.pages.add().graphics.drawBezier(
-	Offset(100, 10), Offset(150, 50), Offset(50, 80), Offset(100, 10),
-	pen: PdfPen(PdfColor(165, 42, 42), width: 1));
+    Offset(100, 10), Offset(150, 50), Offset(50, 80), Offset(100, 10),
+    pen: PdfPen(PdfColor(165, 42, 42), width: 1));
 
 //Save the PDF document
 File('Bezier.pdf').writeAsBytes(document.save());
@@ -221,8 +221,8 @@ final PdfDocument document = PdfDocument();
 
 //Draw an Ellipse on page
 document.pages.add().graphics.drawEllipse(Rect.fromLTWH(10, 200, 450, 150),
-	pen: PdfPen(PdfColor(165, 42, 42), width: 5),
-	brush: PdfBrushes.darkOrange);
+    pen: PdfPen(PdfColor(165, 42, 42), width: 5),
+    brush: PdfBrushes.darkOrange);
 
 //Save the PDF document
 final List<int> bytes = document.save();

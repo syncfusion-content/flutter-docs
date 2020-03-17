@@ -22,8 +22,7 @@ Add the Syncfusion Flutter PDF dependency to your pub spec file.
 {% highlight dart %} 
 
 dependencies:
-
-syncfusion_flutter_pdf: ^1.0.0-beta.3
+  syncfusion_flutter_pdf: ^1.0.0-beta.3
 
 {% endhighlight %}
 
@@ -75,9 +74,9 @@ void _createPDF() async {
 
   //Add a new page and draw text
   document.pages.add().graphics.drawString(
-	  'Hello World!', PdfStandardFont(PdfFontFamily.helvetica, 12),
-	  brush: PdfSolidBrush(PdfColor(0, 0, 0)),
-	  bounds: Rect.fromLTWH(0, 0, 150, 20));
+      'Hello World!', PdfStandardFont(PdfFontFamily.helvetica, 12),
+      brush: PdfSolidBrush(PdfColor(0, 0, 0)),
+      bounds: Rect.fromLTWH(0, 0, 150, 20));
 
   //Save the document
   List<int> bytes = document.save();
@@ -165,13 +164,13 @@ Add the following code in the header section of index.html file under the web fo
 {% highlight dart %}
 
 <script>
-	async function download() {
-	  var pdfAsDataUri = "data:application/pdf;base64, " + pdfData;
-	  var link = document.createElement('a');
-	  link.download = filename;
-	  link.href = pdfAsDataUri;
-	  link.type = 'application/pdf';
-	  link.click();
+    async function download() {
+      var pdfAsDataUri = "data:application/pdf;base64, " + pdfData;
+      var link = document.createElement('a');
+      link.download = filename;
+      link.href = pdfAsDataUri;
+      link.type = 'application/pdf';
+      link.click();
 	}
 </script>
 
@@ -192,8 +191,8 @@ PdfDocument document = PdfDocument();
 
 //Draw the image
 document.pages.add().graphics.drawImage(
-	PdfBitmap(File('image.jpg'). readAsBytesSync()),
-	Rect.fromLTWH(0, 0, 100, 100));
+    PdfBitmap(File('image.jpg').readAsBytesSync()),
+    Rect.fromLTWH(0, 0, 100, 100));
 
 //Saves the document
 File('Output.pdf').writeAsBytes(document.save());
@@ -217,19 +216,19 @@ DataTable dataTable = DataTable(columns: const <DataColumn>[
   DataColumn(label: Text('Class')),
 ], rows: const <DataRow>[
   DataRow(cells: <DataCell>[
-	DataCell(Text('1')),
-	DataCell(Text('Arya')),
-	DataCell(Text('6'))
+    DataCell(Text('1')),
+    DataCell(Text('Arya')),
+    DataCell(Text('6'))
   ]),
   DataRow(cells: <DataCell>[
-	DataCell(Text('12')),
-	DataCell(Text('John')),
-	DataCell(Text('9'))
+    DataCell(Text('12')),
+    DataCell(Text('John')),
+    DataCell(Text('9'))
   ]),
   DataRow(cells: <DataCell>[
-	DataCell(Text('42')),
-	DataCell(Text('Tony')),
-	DataCell(Text('8'))
+    DataCell(Text('42')),
+    DataCell(Text('Tony')),
+    DataCell(Text('8'))
   ]),
 ]);
 
@@ -241,7 +240,7 @@ grid.dataSource = dataTable;
 
 //Draw grid to the page of the PDF document
 grid.draw(
-  page: document.pages.add(), bounds: const Rect.fromLTWH(0, 0, 0, 0));
+    page: document.pages.add(), bounds: const Rect.fromLTWH(0, 0, 0, 0));
 
 //Saves the document
 File('Output.pdf').writeAsBytes(document.save());
@@ -308,25 +307,25 @@ PdfFont subHeadingFont = PdfStandardFont(PdfFontFamily.timesRoman, 14);
 
 //Creates a text element to add the invoice number
 PdfTextElement element =
-  PdfTextElement(text: 'INVOICE 001', font: subHeadingFont);
+    PdfTextElement(text: 'INVOICE 001', font: subHeadingFont);
 element.brush = PdfBrushes.white;
 
 //Draws the heading on the page
 PdfLayoutResult result =
-  element.draw(page: page, bounds: Rect.fromLTWH(10, bounds.top + 8, 0, 0));
+    element.draw(page: page, bounds: Rect.fromLTWH(10, bounds.top + 8, 0, 0));
 String currentDate = 'DATE ' + DateFormat.yMMMd().format(DateTime.now());
 
 //Measures the width of the text to place it in the correct location
 Size textSize = subHeadingFont.measureString(currentDate);
 Offset textPosition = Offset(
-  graphics.clientSize.width - textSize.width - 10, result.bounds.top);
+    graphics.clientSize.width - textSize.width - 10, result.bounds.top);
 
 //Draws the date by using drawString method
 graphics.drawString(currentDate, subHeadingFont,
-  brush: element.brush,
-  bounds: Offset(graphics.clientSize.width - textSize.width - 10,
-		  result.bounds.top) &
-	  Size(textSize.width + 2, 20));
+    brush: element.brush,
+    bounds: Offset(graphics.clientSize.width - textSize.width - 10,
+            result.bounds.top) &
+        Size(textSize.width + 2, 20));
 
 PdfFont timesRoman = PdfStandardFont(PdfFontFamily.timesRoman, 10);
 
@@ -334,21 +333,24 @@ PdfFont timesRoman = PdfStandardFont(PdfFontFamily.timesRoman, 10);
 element = PdfTextElement(text: 'BILL TO ', font: timesRoman);
 element.brush = PdfSolidBrush(PdfColor(126, 155, 203));
 result = element.draw(
-page: page, bounds: Rect.fromLTWH(10, result.bounds.bottom + 25, 0, 0));
+    page: page, bounds: Rect.fromLTWH(10, result.bounds.bottom + 25, 0, 0));
 
 element = PdfTextElement(text: 'Victuailles en stock ', font: timesRoman);
 element.brush = PdfBrushes.black;
 result = element.draw(
-page: page, bounds: Rect.fromLTWH(10, result.bounds.bottom + 10, 0, 0));
+    page: page, bounds: Rect.fromLTWH(10, result.bounds.bottom + 10, 0, 0));
 
-element = PdfTextElement(text: '2, rue du Commerce, Lyon, France ', font: timesRoman);
+element = PdfTextElement(
+    text: '2, rue du Commerce, Lyon, France ', font: timesRoman);
 element.brush = PdfBrushes.black;
 result = element.draw(
-  page: page, bounds: Rect.fromLTWH(10, result.bounds.bottom + 10, 0, 0));
+    page: page, bounds: Rect.fromLTWH(10, result.bounds.bottom + 10, 0, 0));
 
 //Draws a line at the bottom of the address
-graphics.drawLine(PdfPen(PdfColor(126, 151, 173), width: 0.7), Offset(0, result.bounds.bottom + 3),
-  Offset(graphics.clientSize.width, result.bounds.bottom + 3));
+graphics.drawLine(
+    PdfPen(PdfColor(126, 151, 173), width: 0.7),
+    Offset(0, result.bounds.bottom + 3),
+    Offset(graphics.clientSize.width, result.bounds.bottom + 3));
 
 {% endhighlight %}
 
@@ -376,19 +378,18 @@ headerStyle.borders.all = PdfPen(PdfColor(126, 151, 173));
 headerStyle.backgroundBrush = PdfSolidBrush(PdfColor(126, 151, 173));
 headerStyle.textBrush = PdfBrushes.white;
 headerStyle.font = PdfStandardFont(PdfFontFamily.timesRoman, 14,
-  style: PdfFontStyle.regular);
+    style: PdfFontStyle.regular);
 
 //Adds cell customizations
 for (int i = 0; i < header.cells.count; i++) {
   if (i == 0 || i == 1) {
-	header.cells[i].stringFormat = PdfStringFormat(
-	  alignment: PdfTextAlignment.left,
-	  lineAlignment: PdfVerticalAlignment.middle);
-  }
-  else {
-	header.cells[i].stringFormat = PdfStringFormat(
-	  alignment: PdfTextAlignment.right,
-	  lineAlignment: PdfVerticalAlignment.middle);
+    header.cells[i].stringFormat = PdfStringFormat(
+        alignment: PdfTextAlignment.left,
+        lineAlignment: PdfVerticalAlignment.middle);
+  } else {
+    header.cells[i].stringFormat = PdfStringFormat(
+        alignment: PdfTextAlignment.right,
+        lineAlignment: PdfVerticalAlignment.middle);
   }
   header.cells[i].style = headerStyle;
 }
@@ -397,24 +398,25 @@ cellStyle.font = PdfStandardFont(PdfFontFamily.timesRoman, 12);
 cellStyle.textBrush = PdfSolidBrush(PdfColor(131, 130, 136));
 
 //Creates layout format settings to allow the table pagination
-PdfLayoutFormat layoutFormat = PdfLayoutFormat(layoutType : PdfLayoutType.paginate);
+PdfLayoutFormat layoutFormat =
+    PdfLayoutFormat(layoutType: PdfLayoutType.paginate);
 
 //Draws the grid to the PDF page
 PdfLayoutResult gridResult = grid.draw(
-  page: page,
-  bounds: Rect.fromLTWH(0, result.bounds.bottom + 20,
-	graphics.clientSize.width, graphics.clientSize.height - 100),
-  format: layoutFormat);
+    page: page,
+    bounds: Rect.fromLTWH(0, result.bounds.bottom + 20,
+        graphics.clientSize.width, graphics.clientSize.height - 100),
+    format: layoutFormat);
 
 gridResult.page.graphics.drawString(
-  'Total Due :             1329', subHeadingFont,
-  brush : PdfSolidBrush(PdfColor(126, 155, 203)),
-  bounds: Rect.fromLTWH(520, gridResult.bounds.bottom + 30, 0, 0));
+    'Total Due :             1329', subHeadingFont,
+    brush: PdfSolidBrush(PdfColor(126, 155, 203)),
+    bounds: Rect.fromLTWH(520, gridResult.bounds.bottom + 30, 0, 0));
 
 gridResult.page.graphics.drawString(
-  'Thank you for your business !', subHeadingFont,
-  brush: PdfBrushes.black,
-  bounds: Rect.fromLTWH(520, gridResult.bounds.bottom + 60, 0, 0));
+    'Thank you for your business !', subHeadingFont,
+    brush: PdfBrushes.black,
+    bounds: Rect.fromLTWH(520, gridResult.bounds.bottom + 60, 0, 0));
 
 {% endhighlight %}
 
