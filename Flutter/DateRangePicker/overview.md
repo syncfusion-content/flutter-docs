@@ -9,7 +9,7 @@ documentation: ug
 
 # Flutter Date Range Picker (SfDateRangePicker) Overview
 
-The Syncfusion Flutter DateRangePicker library was written natively in Dart. It is a lightweight widget that allows users to easily select a single date, multiple dates, or a range of dates. It provides month, year, decade, and century view options to quickly navigate to the desired date. It supports minimum, maximum, and disabled dates to restrict date selection.
+The Syncfusion Flutter Date Range Picker is a lightweight widget that allows users to easily select a single date, multiple dates, or a range of dates. It provides month, year, decade, and century view options to quickly navigate to the desired date. It supports minimum, maximum, and disabled dates to restrict date selection.
 
 
 ## Key features

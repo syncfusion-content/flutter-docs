@@ -8,20 +8,20 @@ documentation: ug
 ---
 
 # Getting Started with Flutter Date Range Picker (SfDateRangePicker)
-This section explains the steps required to add the date picker range widget. This section covers only basic features needed to get started with Syncfusion date range picker widget.
+This section explains the steps required to add the date range picker widget. This section covers only basic features needed to get started with Syncfusion date range picker widget.
 
 ## Add flutter calendar to an application
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
 
 **Add dependency**
 
-Add the Syncfusion flutter date picker range dependency to your pubspec.yaml file.
+Add the Syncfusion flutter date range picker dependency to your pubspec.yaml file.
 
 {% highlight dart %}
 
 dependencies:
 
-syncfusion_flutter_datepicker: ^17.4.39-beta
+syncfusion_flutter_datepicker: ^18.1.0.36-beta
 
 {% endhighlight %}
 
@@ -49,7 +49,7 @@ import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 
 ## Initialize date range picker
 
-After importing the package, initialize the date range picker widget as a child of any widget. Here, the date picker range widget is added as a child of the scaffold widget.
+After importing the package, initialize the date range picker widget as a child of any widget. Here, the date range pciker widget is added as a child of the scaffold widget.
 
 {% tabs %}
 {% highlight Dart %}
