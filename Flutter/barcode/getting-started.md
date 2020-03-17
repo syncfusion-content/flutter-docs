@@ -24,7 +24,7 @@ Add the Syncfusion Flutter Barcode dependency to your pubspec.yaml file.
 
     dependencies:
 
-    syncfusion_flutter_barcodes: ^1.0.0-beta
+    syncfusion_flutter_barcodes: ^18.1.36-beta
 
 {% endhighlight %}
 
@@ -50,7 +50,7 @@ Import the following package in your Dart code.
 
 ## Initialize the barcode
 
-Add the Barcode Generator widget as a child of any widget. Here, the widget is added as a child of the container widget and the size to the container is specified (otherwise it will take full container size).
+Add the Barcode Generator widget as a child of any widget. Here, the widget is added as a child of the container widget and the height to the container is specified (otherwise it will take full container height).
 
 {% highlight dart %} 
 
@@ -61,7 +61,6 @@ Add the Barcode Generator widget as a child of any widget. Here, the widget is a
                 body: Center(
                     child: Container(
                          height: 150,
-                         width: 400,
                         child:SfBarcodeGenerator(value:'http://www.syncfusion.com')
                         )
                     )
