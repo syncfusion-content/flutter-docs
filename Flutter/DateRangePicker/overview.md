@@ -20,7 +20,7 @@ The Syncfusion Flutter Date Range Picker is a lightweight widget that allows use
 
 * **Date selection**: Select single, multiple, and range of dates. It also supports programmatic selection.
 
-* **Limit the date selection range**: Select only a date range with a specific minimum and maximum numbers of days (span of days) by setting the min and max days options.
+* **Limit the date selection range**: Select only a date range with a specific minimum and maximum numbers of days (span of days) by setting the minimum and maximum days options.
 
 * **Change first day of week**: Customize the first day of the week as needed. The default first day is Sunday.
 
@@ -28,18 +28,10 @@ The Syncfusion Flutter Date Range Picker is a lightweight widget that allows use
 
 * **Highlight holidays and weekends**: Highlight any date or every weekend in a month as special days using decoration in flutter date range picker.
 
-* **Appearance customization**: Change the look and feel of the Date picker by customizing its default appearance and style using Flutter decorations.
+* **Appearance customization**: Change the look and feel of the date range picker by customizing its default appearance and style using Flutter decorations.
 
 * **Right to left(RTL)** - Right-to-left direction support for users working in RTL languages like Hebrew and Arabic.
 
-* **Accessibility** - Easy access of the datepicker by the screen readers. Complete keyboard interaction support has also been provided.
+* **Accessibility** - EEasy access of the date range picker by the screen readers.
 
 * **Globalization** - Display the current date and time by following the globalized date and time formats.
-
-
-
-
-
-
-
-
