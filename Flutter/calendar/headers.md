@@ -125,4 +125,4 @@ Widget build(BuildContext context) {
 
 ## See Also
 
-[How to add custom header and view header in Flutter event calendar widget] (https://www.syncfusion.com/kb/10997/how-to-add-custom-header-and-view-header-in-flutter-event-calendar-widget)
+* [How to add custom header and view header in Flutter event calendar widget] (https://www.syncfusion.com/kb/10997/how-to-add-custom-header-and-view-header-in-flutter-event-calendar-widget)
