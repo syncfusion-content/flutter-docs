@@ -70,7 +70,7 @@ Add the Barcode Generator widget as a child of any widget. Here, the widget is a
 
 {% endhighlight %}
 
-The default symbology of SfBarcodeGenerator is Code128.
+N> The default symbology of SfBarcodeGenerator is `Code128`.
 
 ![Initialize barcode generator](images/getting-started/getting_started1.jpg)
 
@@ -100,7 +100,7 @@ You can set the required symbology type to the barcode generator based on input 
 
 ![symbology to barcode](images/getting-started/getting_started2.jpg)
 
-## Add text
+## Display input value
 
 The provided input value can be displayed below the barcode by enabling the `showValue` property of barcode as like the following code snippet,
 
