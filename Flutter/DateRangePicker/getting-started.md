@@ -49,7 +49,7 @@ import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 
 ## Initialize date range picker
 
-After importing the package, initialize the date range picker widget as a child of any widget. Here, the date range pciker widget is added as a child of the scaffold widget.
+After importing the package, initialize the date range picker widget as a child of any widget. Here, the date range picker widget is added as a child of the scaffold widget.
 
 {% tabs %}
 {% highlight Dart %}
