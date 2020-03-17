@@ -123,7 +123,7 @@ Widget build(BuildContext context) {
 
 **Date values**
 
-You must import the 'package:intl/intl.dart' show DateFormat` package to add the date format in the range slider.
+You must import the 'package:intl/intl.dart` package to add the date format in the range slider.
 
 {% tabs %}
 {% highlight Dart %}
