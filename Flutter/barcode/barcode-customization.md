@@ -70,7 +70,7 @@ The style of the text can be customized with the `textStyle` property of the bar
 
 **Text spacing**
 
-The spacing between the text and the barcode can be controlled by the `textSpacing` property of barcode generator. By default, the value of `textSpacing` is 0. 
+The spacing between the text and the barcode can be controlled by the `textSpacing` property of barcode generator. By default, the value of `textSpacing` is 2. 
 
 {% highlight dart %} 
 
@@ -95,9 +95,9 @@ The spacing between the text and the barcode can be controlled by the `textSpaci
 
 ![text spacing](images/text-customization/text-spacing.jpg)
 
-**Text alignment**
+**Horizontal text alignment**
 
-The alignment of the text can be controlled by `textAlign` property of barcode generator. The displayed value can be positioned at `start`, `center` or `end` of the control. The default value of `textAlign` property is center.
+The horizontal alignment of the text can be controlled by `textAlign` property of barcode generator. The displayed value can be positioned at `start`, `center` or `end` of the control. The default value of `textAlign` property is center.
 
 {% highlight dart %} 
   
