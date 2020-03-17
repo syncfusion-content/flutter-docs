@@ -15,17 +15,17 @@ The following code sample explains how to add a PdfPage to a PDF document. When 
 
 {% highlight dart %}
 
-	//Create a new PDF documentation
-	PdfDocument document = PdfDocument();
+//Create a new PDF documentation
+PdfDocument document = PdfDocument();
 
-	//Create a new PDF page and draw the text
-	document.pages.add().graphics.drawString(
-	  'Hello World!!!', PdfStandardFont(PdfFontFamily.helvetica, 27),
-	  brush: PdfBrushes.darkBlue, bounds: const Rect.fromLTWH(170, 100, 0, 0));
+//Create a new PDF page and draw the text
+document.pages.add().graphics.drawString(
+  'Hello World!!!', PdfStandardFont(PdfFontFamily.helvetica, 27),
+  brush: PdfBrushes.darkBlue, bounds: const Rect.fromLTWH(170, 100, 0, 0));
 
-	//Save and dispose the PDF document
-	File('Output.pdf').writeAsBytes(document.save());
-	document.dispose();
+//Save and dispose the PDF document
+File('Output.pdf').writeAsBytes(document.save());
+document.dispose();
 	
 {% endhighlight %}
 
@@ -35,20 +35,20 @@ You can add margin to all the PDF pages of a PDF document using the pageSettings
 
 {% highlight dart %}
 
-    //Create a new PDF documentation
-    PdfDocument document = PdfDocument();
+//Create a new PDF documentation
+PdfDocument document = PdfDocument();
 
-    //Set margin for all the pages
-    document.pageSettings.margins.all = 200;
+//Set margin for all the pages
+document.pageSettings.margins.all = 200;
 
-    //Draw the text by adding page to the document
-    document.pages.add().graphics.drawString(
-        'Hello World!!!', PdfStandardFont(PdfFontFamily.helvetica, 27),
-        brush: PdfBrushes.darkBlue);
+//Draw the text by adding page to the document
+document.pages.add().graphics.drawString(
+	'Hello World!!!', PdfStandardFont(PdfFontFamily.helvetica, 27),
+	brush: PdfBrushes.darkBlue);
 
-    //Save and dispose the PDF document
-    List<int> bytes = document.save();
-    document.dispose();
+//Save and dispose the PDF document
+List<int> bytes = document.save();
+document.dispose();
 
 {% endhighlight %}
 
@@ -60,63 +60,63 @@ The following code snippet explains how to add more sections to a PDF document w
 
 {% highlight dart %}
 
-    //Create a PDF document
-    PdfDocument document = PdfDocument();
+//Create a PDF document
+PdfDocument document = PdfDocument();
 
-    //Set the font
-    PdfFont font = PdfStandardFont(PdfFontFamily.helvetica, 14);
+//Set the font
+PdfFont font = PdfStandardFont(PdfFontFamily.helvetica, 14);
 
-    //Section - 1
-    //Add section to the document
-    PdfSection section = document.sections.add();
+//Section - 1
+//Add section to the document
+PdfSection section = document.sections.add();
 
-    //Create page settings to the section
-    section.pageSettings.rotate = PdfPageRotateAngle.rotateAngle0;
-    section.pageSettings.size = const Size(300, 400);
+//Create page settings to the section
+section.pageSettings.rotate = PdfPageRotateAngle.rotateAngle0;
+section.pageSettings.size = const Size(300, 400);
 
-    //Draw simple text on the page
-    section.pages.add().graphics.drawString('Rotated by 0 degrees', font,
-        brush: PdfBrushes.black, bounds: const Rect.fromLTWH(20, 20, 0, 0));
+//Draw simple text on the page
+section.pages.add().graphics.drawString('Rotated by 0 degrees', font,
+	brush: PdfBrushes.black, bounds: const Rect.fromLTWH(20, 20, 0, 0));
 
-    //Section - 2
-    //Add section to the document
-    section = document.sections.add();
+//Section - 2
+//Add section to the document
+section = document.sections.add();
 
-    //Create page settings to the section
-    section.pageSettings.rotate = PdfPageRotateAngle.rotateAngle90;
-    section.pageSettings.size = const Size(300, 400);
+//Create page settings to the section
+section.pageSettings.rotate = PdfPageRotateAngle.rotateAngle90;
+section.pageSettings.size = const Size(300, 400);
 
-    //Draw simple text on the page
-    section.pages.add().graphics.drawString('Rotated by 90 degrees', font,
-        brush: PdfBrushes.black, bounds: const Rect.fromLTWH(20, 20, 0, 0));
+//Draw simple text on the page
+section.pages.add().graphics.drawString('Rotated by 90 degrees', font,
+	brush: PdfBrushes.black, bounds: const Rect.fromLTWH(20, 20, 0, 0));
 
-    //Section - 3
-    //Add section to the document
-    section = document.sections.add();
+//Section - 3
+//Add section to the document
+section = document.sections.add();
 
-    //Create page settings to the section
-    section.pageSettings.rotate = PdfPageRotateAngle.rotateAngle180;
-    section.pageSettings.size = const Size(500, 200);
+//Create page settings to the section
+section.pageSettings.rotate = PdfPageRotateAngle.rotateAngle180;
+section.pageSettings.size = const Size(500, 200);
 
-    //Draw simple text on the page
-    section.pages.add().graphics.drawString('Rotated by 180 degrees', font,
-        brush: PdfBrushes.black, bounds: const Rect.fromLTWH(20, 20, 0, 0));
+//Draw simple text on the page
+section.pages.add().graphics.drawString('Rotated by 180 degrees', font,
+	brush: PdfBrushes.black, bounds: const Rect.fromLTWH(20, 20, 0, 0));
 
-    //Section - 4
-    //Add section to the document
-    section = document.sections.add();
+//Section - 4
+//Add section to the document
+section = document.sections.add();
 
-    //Create page settings to the section
-    section.pageSettings.rotate = PdfPageRotateAngle.rotateAngle270;
-    section.pageSettings.size = const Size(300, 200);
+//Create page settings to the section
+section.pageSettings.rotate = PdfPageRotateAngle.rotateAngle270;
+section.pageSettings.size = const Size(300, 200);
 
-    //Draw simple text on the page
-    section.pages.add().graphics.drawString('Rotated by 270 degrees', font,
-        brush: PdfBrushes.black, bounds: const Rect.fromLTWH(20, 20, 0, 0));
+//Draw simple text on the page
+section.pages.add().graphics.drawString('Rotated by 270 degrees', font,
+	brush: PdfBrushes.black, bounds: const Rect.fromLTWH(20, 20, 0, 0));
 
-    //Save and dispose the PDF document
-    File('Output.pdf').writeAsBytes(document.save());
-    document.dispose();
+//Save and dispose the PDF document
+File('Output.pdf').writeAsBytes(document.save());
+document.dispose();
 
 {% endhighlight %}
 
@@ -126,35 +126,35 @@ You can rotate a PDF page in the PDF document using the PdfPageRotateAngle enum 
 
 {% highlight dart %}
 
-    //Create a PDF document
-    PdfDocument document = PdfDocument();
+//Create a PDF document
+PdfDocument document = PdfDocument();
 
-    //Add section to the document
-    PdfSection section = document.sections.add();
+//Add section to the document
+PdfSection section = document.sections.add();
 
-    //Create page settings to the section
-    section.pageSettings.rotate = PdfPageRotateAngle.rotateAngle180;
-    section.pageSettings.size = PdfPageSize.a4;
+//Create page settings to the section
+section.pageSettings.rotate = PdfPageRotateAngle.rotateAngle180;
+section.pageSettings.size = PdfPageSize.a4;
 
-    //Draw simple text on the page
-    section.pages.add().graphics.drawString(
-        'Rotated by 180 degrees', PdfStandardFont(PdfFontFamily.helvetica, 14),
-        brush: PdfBrushes.black, bounds: const Rect.fromLTWH(20, 20, 0, 0));
+//Draw simple text on the page
+section.pages.add().graphics.drawString(
+	'Rotated by 180 degrees', PdfStandardFont(PdfFontFamily.helvetica, 14),
+	brush: PdfBrushes.black, bounds: const Rect.fromLTWH(20, 20, 0, 0));
 
-    //Add section to the document
-    section = document.sections.add();
+//Add section to the document
+section = document.sections.add();
 
-    //Create page settings to the section
-    section.pageSettings.rotate = PdfPageRotateAngle.rotateAngle270;
-    section.pageSettings.size = PdfPageSize.a4;
+//Create page settings to the section
+section.pageSettings.rotate = PdfPageRotateAngle.rotateAngle270;
+section.pageSettings.size = PdfPageSize.a4;
 
-    //Draw simple text on the page
-    section.pages.add().graphics.drawString(
-        'Rotated by 270 degrees', PdfStandardFont(PdfFontFamily.helvetica, 14),
-        brush: PdfBrushes.black, bounds: const Rect.fromLTWH(20, 20, 0, 0));
+//Draw simple text on the page
+section.pages.add().graphics.drawString(
+	'Rotated by 270 degrees', PdfStandardFont(PdfFontFamily.helvetica, 14),
+	brush: PdfBrushes.black, bounds: const Rect.fromLTWH(20, 20, 0, 0));
 
-    //Save and dispose the PDF document
-    File('Output.pdf').writeAsBytes(document.save());
-    document.dispose();
+//Save and dispose the PDF document
+File('Output.pdf').writeAsBytes(document.save());
+document.dispose();
 	
 {% endhighlight %}

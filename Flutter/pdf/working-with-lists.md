@@ -15,29 +15,29 @@ The Syncfusion Flutter PDF allows you to create an ordered list in the document.
 
 {% highlight dart %}
 
-    //Create a new PDF document
-    PdfDocument document = PdfDocument();
+//Create a new PDF document
+PdfDocument document = PdfDocument();
 
-    //Create ordered list and draw on page
-    PdfOrderedList(
-            items: PdfListItemCollection(<String>[
-              'Mammals',
-              'Reptiles',
-              'Birds',
-              'Insects',
-              'Aquatic Animals'
-            ]),
-            font: PdfStandardFont(PdfFontFamily.timesRoman, 20,
-                style: PdfFontStyle.italic),
-            indent: 20,
-            format: PdfStringFormat(lineSpacing: 10))
-        .draw(page: document.pages.add(), bounds: Rect.fromLTWH(0, 20, 0, 0));
+//Create ordered list and draw on page
+PdfOrderedList(
+		items: PdfListItemCollection(<String>[
+		  'Mammals',
+		  'Reptiles',
+		  'Birds',
+		  'Insects',
+		  'Aquatic Animals'
+		]),
+		font: PdfStandardFont(PdfFontFamily.timesRoman, 20,
+			style: PdfFontStyle.italic),
+		indent: 20,
+		format: PdfStringFormat(lineSpacing: 10))
+	.draw(page: document.pages.add(), bounds: Rect.fromLTWH(0, 20, 0, 0));
 
-    //Saves the document
-    File('Output.pdf').writeAsBytes(document.save());
+//Saves the document
+File('Output.pdf').writeAsBytes(document.save());
 
-    //Disposes the document
-    document.dispose();
+//Disposes the document
+document.dispose();
 	
 {% endhighlight %}
 
@@ -47,24 +47,24 @@ The Syncfusion Flutter PDF also provides support to create an unordered list tha
 
 {% highlight dart %}
 
-    //Create a new PDF document
-    PdfDocument document = PdfDocument();
+//Create a new PDF document
+PdfDocument document = PdfDocument();
 
-    //Create unordered list and draw list on page
-    PdfUnorderedList(
-            text: 'Mammals\nReptiles\nBirds\nInsects\nAquatic Animals',
-            style: PdfUnorderedMarkerStyle.disk,
-            font: PdfStandardFont(PdfFontFamily.helvetica, 12),
-            indent: 10,
-            textIndent: 10,
-            format: PdfStringFormat(lineSpacing: 10))
-        .draw(page: document.pages.add(), bounds: Rect.fromLTWH(0, 10, 0, 0));
+//Create unordered list and draw list on page
+PdfUnorderedList(
+		text: 'Mammals\nReptiles\nBirds\nInsects\nAquatic Animals',
+		style: PdfUnorderedMarkerStyle.disk,
+		font: PdfStandardFont(PdfFontFamily.helvetica, 12),
+		indent: 10,
+		textIndent: 10,
+		format: PdfStringFormat(lineSpacing: 10))
+	.draw(page: document.pages.add(), bounds: Rect.fromLTWH(0, 10, 0, 0));
 
-    //Saves the document
-    File('Output.pdf').writeAsBytes(document.save());
+//Saves the document
+File('Output.pdf').writeAsBytes(document.save());
 
-    //Disposes the document
-    document.dispose();
+//Disposes the document
+document.dispose();
 
 {% endhighlight %}
 
@@ -74,82 +74,82 @@ The Syncfusion Flutter PDF also provides support to create a sub list to a PdfLi
 
 {% highlight dart %}
 
-    //Create a new PDF document
-    PdfDocument document = PdfDocument();
+//Create a new PDF document
+PdfDocument document = PdfDocument();
 
-    //Adds a page to the document
-    PdfPage page = document.pages.add();
+//Adds a page to the document
+PdfPage page = document.pages.add();
 
-    //Create font
-    PdfFont font = PdfStandardFont(PdfFontFamily.helvetica, 16);
+//Create font
+PdfFont font = PdfStandardFont(PdfFontFamily.helvetica, 16);
 
-    PdfListItemCollection item = PdfListItemCollection(['Mammals', 'Reptiles']);
+PdfListItemCollection item = PdfListItemCollection(['Mammals', 'Reptiles']);
 
-    PdfListItemCollection item_2 = PdfListItemCollection([
-      'body covered by scales',
-      'cold-blooded',
-      'have a backbone',
-      'most lay hard-shelled eggs on land',
-    ]);
-    PdfListItemCollection item_3 = PdfListItemCollection([
-      'body covered by scales',
-      'cold-blooded',
-      'have a backbone',
-      'most lay hard-shelled eggs on land'
-    ]);
+PdfListItemCollection item_2 = PdfListItemCollection([
+  'body covered by scales',
+  'cold-blooded',
+  'have a backbone',
+  'most lay hard-shelled eggs on land',
+]);
+PdfListItemCollection item_3 = PdfListItemCollection([
+  'body covered by scales',
+  'cold-blooded',
+  'have a backbone',
+  'most lay hard-shelled eggs on land'
+]);
 
-    //Create a string format
-    PdfStringFormat format = PdfStringFormat(lineSpacing: 10);
+//Create a string format
+PdfStringFormat format = PdfStringFormat(lineSpacing: 10);
 
-    //Create ordered list
-    PdfOrderedList oList =
-        PdfOrderedList(items: item, font: font, format: format);
+//Create ordered list
+PdfOrderedList oList =
+	PdfOrderedList(items: item, font: font, format: format);
 
-    //Create ordered sub list
-    oList.items[0].subList = PdfOrderedList(
-        items: item_2, font: font, format: format, markerHierarchy: true);
+//Create ordered sub list
+oList.items[0].subList = PdfOrderedList(
+	items: item_2, font: font, format: format, markerHierarchy: true);
 
-    //Create ordered sub list
-    oList.items[1].subList = PdfOrderedList(
-        items: item_3, font: font, format: format, markerHierarchy: true);
+//Create ordered sub list
+oList.items[1].subList = PdfOrderedList(
+	items: item_3, font: font, format: format, markerHierarchy: true);
 
-    //Draw ordered list with sub list
-    oList.draw(
-        page: page,
-        bounds: Rect.fromLTWH(
-            0, 10, page.getClientSize().width, page.getClientSize().height));
+//Draw ordered list with sub list
+oList.draw(
+	page: page,
+	bounds: Rect.fromLTWH(
+		0, 10, page.getClientSize().width, page.getClientSize().height));
 
-    //Create unordered list
-    PdfUnorderedList uList = PdfUnorderedList(
-        items: item,
-        font: font,
-        format: format,
-        style: PdfUnorderedMarkerStyle.disk);
+//Create unordered list
+PdfUnorderedList uList = PdfUnorderedList(
+	items: item,
+	font: font,
+	format: format,
+	style: PdfUnorderedMarkerStyle.disk);
 
-    //Create unordered sub list
-    uList.items[0].subList = PdfUnorderedList(
-        items: item_2,
-        font: font,
-        format: format,
-        style: PdfUnorderedMarkerStyle.circle);
+//Create unordered sub list
+uList.items[0].subList = PdfUnorderedList(
+	items: item_2,
+	font: font,
+	format: format,
+	style: PdfUnorderedMarkerStyle.circle);
 
-     //Create unordered sub list
-    uList.items[1].subList = PdfUnorderedList(
-        items: item_3,
-        font: font,
-        format: format,
-        style: PdfUnorderedMarkerStyle.circle);
+ //Create unordered sub list
+uList.items[1].subList = PdfUnorderedList(
+	items: item_3,
+	font: font,
+	format: format,
+	style: PdfUnorderedMarkerStyle.circle);
 
-    //Draw unordered list with sub list
-    uList.draw(
-        page: page,
-        bounds: Rect.fromLTWH(
-            0, 400, page.getClientSize().width, page.getClientSize().height));
+//Draw unordered list with sub list
+uList.draw(
+	page: page,
+	bounds: Rect.fromLTWH(
+		0, 400, page.getClientSize().width, page.getClientSize().height));
 
-    //Saves the document
-    File('Output.pdf').writeAsBytes(document.save());
+//Saves the document
+File('Output.pdf').writeAsBytes(document.save());
 
-    //Disposes the document
-    document.dispose();
+//Disposes the document
+document.dispose();
   
 {% endhighlight %}

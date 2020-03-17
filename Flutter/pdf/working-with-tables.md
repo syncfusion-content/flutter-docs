@@ -19,49 +19,49 @@ The following code example explains how to create a table directly using PdfGrid
 
 {% highlight dart %}
 
-    //Create a new PDF document
-    PdfDocument document = PdfDocument();
+//Create a new PDF document
+PdfDocument document = PdfDocument();
 
-    //Create a PdfGrid class
-    PdfGrid grid = PdfGrid();
+//Create a PdfGrid class
+PdfGrid grid = PdfGrid();
 
-    //Add the columns to the grid
-    grid.columns.add(count: 3);
+//Add the columns to the grid
+grid.columns.add(count: 3);
 
-    //Add header to the grid
-    grid.headers.add(1);
+//Add header to the grid
+grid.headers.add(1);
 
-    //Add the rows to the grid
-    PdfGridRow header = grid.headers[0];
-    header.cells[0].value = 'Employee ID';
-    header.cells[1].value = 'Employee Name';
-    header.cells[2].value = 'Salary';
+//Add the rows to the grid
+PdfGridRow header = grid.headers[0];
+header.cells[0].value = 'Employee ID';
+header.cells[1].value = 'Employee Name';
+header.cells[2].value = 'Salary';
 
-    //Add rows to grid
-    PdfGridRow row = grid.rows.add();
-    row.cells[0].value = 'E01';
-    row.cells[1].value = 'Clay';
-    row.cells[2].value = '\$10,000';
+//Add rows to grid
+PdfGridRow row = grid.rows.add();
+row.cells[0].value = 'E01';
+row.cells[1].value = 'Clay';
+row.cells[2].value = '\$10,000';
 
-    row = grid.rows.add();
-    row.cells[0].value = 'E02';
-    row.cells[1].value = 'Simon';
-    row.cells[2].value = '\$12,000';
+row = grid.rows.add();
+row.cells[0].value = 'E02';
+row.cells[1].value = 'Simon';
+row.cells[2].value = '\$12,000';
 
-    //Set the grid style
-    grid.style = PdfGridStyle(
-        cellPadding: PdfPaddings(left: 2, right: 3, top: 4, bottom: 5),
-        backgroundBrush: PdfBrushes.blue,
-        textBrush: PdfBrushes.white,
-        font: PdfStandardFont(PdfFontFamily.timesRoman, 25));
+//Set the grid style
+grid.style = PdfGridStyle(
+	cellPadding: PdfPaddings(left: 2, right: 3, top: 4, bottom: 5),
+	backgroundBrush: PdfBrushes.blue,
+	textBrush: PdfBrushes.white,
+	font: PdfStandardFont(PdfFontFamily.timesRoman, 25));
 
-    //Draw the grid
-    grid.draw(
-        page: document.pages.add(), bounds: const Rect.fromLTWH(0, 0, 0, 0));
+//Draw the grid
+grid.draw(
+	page: document.pages.add(), bounds: const Rect.fromLTWH(0, 0, 0, 0));
 
-    //Save and dispose the PDF document
-    File('SampleOutput.pdf').writeAsBytes(document.save());
-    document.dispose();
+//Save and dispose the PDF document
+File('SampleOutput.pdf').writeAsBytes(document.save());
+document.dispose();
 
 {% endhighlight %}
 
@@ -69,45 +69,45 @@ The following code example explains how to create a table from a data source usi
 
 {% highlight dart %}
 
-    //Create a new PDF document
-    PdfDocument document = PdfDocument();
+//Create a new PDF document
+PdfDocument document = PdfDocument();
 
-    //Create a PdfGrid
-    PdfGrid grid = PdfGrid();
+//Create a PdfGrid
+PdfGrid grid = PdfGrid();
 
-    //Set the dataSource in PdfGrid with created DataTable
-    grid.dataSource = DataTable(
-      columns: [
-        DataColumn(label: Text('ID')),
-        DataColumn(label: Text('Name')),
-        DataColumn(label: Text('Salary'))
-      ],
-      rows: <DataRow>[
-        DataRow(cells: [
-          DataCell(Text('E01')),
-          DataCell(Text('Clay')),
-          DataCell(Text('\$10,000'))
-        ]),
-        DataRow(cells: [
-          DataCell(Text('E02')),
-          DataCell(Text('Thomas')),
-          DataCell(Text('\$10,500'))
-        ]),
-        DataRow(cells: [
-          DataCell(Text('E02')),
-          DataCell(Text('Simon')),
-          DataCell(Text('\$12,000'))
-        ])
-      ],
-    );
+//Set the dataSource in PdfGrid with created DataTable
+grid.dataSource = DataTable(
+  columns: [
+	DataColumn(label: Text('ID')),
+	DataColumn(label: Text('Name')),
+	DataColumn(label: Text('Salary'))
+  ],
+  rows: <DataRow>[
+	DataRow(cells: [
+	  DataCell(Text('E01')),
+	  DataCell(Text('Clay')),
+	  DataCell(Text('\$10,000'))
+	]),
+	DataRow(cells: [
+	  DataCell(Text('E02')),
+	  DataCell(Text('Thomas')),
+	  DataCell(Text('\$10,500'))
+	]),
+	DataRow(cells: [
+	  DataCell(Text('E02')),
+	  DataCell(Text('Simon')),
+	  DataCell(Text('\$12,000'))
+	])
+  ],
+);
 
-    //Draw the grid in PDF document
-    grid.draw(
-        page: document.pages.add(), bounds: const Rect.fromLTWH(0, 0, 0, 0));
-        
-    //Save and dispose the PDF document
-    File('SampleOutput.pdf').writeAsBytes(document.save());
-    document.dispose();
+//Draw the grid in PDF document
+grid.draw(
+	page: document.pages.add(), bounds: const Rect.fromLTWH(0, 0, 0, 0));
+	
+//Save and dispose the PDF document
+File('SampleOutput.pdf').writeAsBytes(document.save());
+document.dispose();
 
 {% endhighlight %}
 
@@ -119,64 +119,64 @@ The following code snippet explains how to customize the cell in PdfGrid.
 
 {% highlight dart %}
 
-    //Create a new PDF document
-    PdfDocument document = PdfDocument();
+//Create a new PDF document
+PdfDocument document = PdfDocument();
 
-    //Create a PdfGrid
-    PdfGrid grid = PdfGrid();
+//Create a PdfGrid
+PdfGrid grid = PdfGrid();
 
-    //Add columns to grid
-    grid.columns.add(count: 3);
+//Add columns to grid
+grid.columns.add(count: 3);
 
-    //Add headers to grid
-    PdfGridRow header = grid.headers.add(1)[0];
-    header.cells[0].value = 'Employee ID';
-    header.cells[1].value = 'Employee Name';
-    header.cells[2].value = 'Salary';
+//Add headers to grid
+PdfGridRow header = grid.headers.add(1)[0];
+header.cells[0].value = 'Employee ID';
+header.cells[1].value = 'Employee Name';
+header.cells[2].value = 'Salary';
 
-    //Add the styles to specific cell
-    header.cells[0].style.stringFormat = PdfStringFormat(
-        alignment: PdfTextAlignment.center,
-        lineAlignment: PdfVerticalAlignment.bottom,
-        wordSpacing: 10);
-    header.cells[1].style.textPen = PdfPens.mediumVioletRed;
-    header.cells[2].style.backgroundBrush = PdfBrushes.yellow;
-    header.cells[2].style.textBrush = PdfBrushes.darkOrange;
+//Add the styles to specific cell
+header.cells[0].style.stringFormat = PdfStringFormat(
+	alignment: PdfTextAlignment.center,
+	lineAlignment: PdfVerticalAlignment.bottom,
+	wordSpacing: 10);
+header.cells[1].style.textPen = PdfPens.mediumVioletRed;
+header.cells[2].style.backgroundBrush = PdfBrushes.yellow;
+header.cells[2].style.textBrush = PdfBrushes.darkOrange;
 
-    //Add rows to grid
-    PdfGridRow row1 = grid.rows.add();
-    row1.cells[0].value = 'E01';
-    row1.cells[1].value = 'Clay';
-    row1.cells[2].value = '\$10,000';
+//Add rows to grid
+PdfGridRow row1 = grid.rows.add();
+row1.cells[0].value = 'E01';
+row1.cells[1].value = 'Clay';
+row1.cells[2].value = '\$10,000';
 
-    //Apply the cell style to specific row cells
-    row1.style = PdfGridCellStyle(
-      backgroundBrush: PdfBrushes.lightYellow,
-      cellPadding: PdfPaddings(left: 2, right: 3, top: 4, bottom: 5),
-      font: PdfStandardFont(PdfFontFamily.timesRoman, 17),
-      textBrush: PdfBrushes.white,
-      textPen: PdfPens.orange,
-    );
+//Apply the cell style to specific row cells
+row1.cells[0].style = PdfGridCellStyle(
+  backgroundBrush: PdfBrushes.lightYellow,
+  cellPadding: PdfPaddings(left: 2, right: 3, top: 4, bottom: 5),
+  font: PdfStandardFont(PdfFontFamily.timesRoman, 17),
+  textBrush: PdfBrushes.white,
+  textPen: PdfPens.orange,
+);
 
-    PdfGridRow row2 = grid.rows.add();
-    row2.cells[0].value = 'E02';
-    row2.cells[1].value = 'Simon';
-    row2.cells[2].value = '\$12,000';
+PdfGridRow row2 = grid.rows.add();
+row2.cells[0].value = 'E02';
+row2.cells[1].value = 'Simon';
+row2.cells[2].value = '\$12,000';
 
-    //Add the style to specific cell
-    row2.cells[2].style.borders = PdfBorders(
-        left: PdfPen(PdfColor(240, 0, 0), width: 2),
-        top: PdfPen(PdfColor(0, 240, 0), width: 3),
-        bottom: PdfPen(PdfColor(0, 0, 240), width: 4),
-        right: PdfPen(PdfColor(240, 100, 240), width: 5));
+//Add the style to specific cell
+row2.cells[2].style.borders = PdfBorders(
+	left: PdfPen(PdfColor(240, 0, 0), width: 2),
+	top: PdfPen(PdfColor(0, 240, 0), width: 3),
+	bottom: PdfPen(PdfColor(0, 0, 240), width: 4),
+	right: PdfPen(PdfColor(240, 100, 240), width: 5));
 
-    //Draw the grid in PDF document page
-    grid.draw(
-        page: document.pages.add(), bounds: const Rect.fromLTWH(0, 0, 0, 0));
+//Draw the grid in PDF document page
+grid.draw(
+	page: document.pages.add(), bounds: const Rect.fromLTWH(0, 0, 0, 0));
 
-    //Save and dispose the PDF document
-    File('SampleOutput.pdf').writeAsBytes(document.save());
-    document.dispose();
+//Save and dispose the PDF document
+File('SampleOutput.pdf').writeAsBytes(document.save());
+document.dispose();
 
 {% endhighlight %}
 
@@ -188,60 +188,60 @@ The following code snippet explains how to customize the row in PdfGrid.
 
 {% highlight dart %}
 
-    //Create a new PDF document
-    PdfDocument document = PdfDocument();
+//Create a new PDF document
+PdfDocument document = PdfDocument();
 
-    //Create a PdfGrid
-    PdfGrid grid = PdfGrid();
+//Create a PdfGrid
+PdfGrid grid = PdfGrid();
 
-    //Add columns to grid
-    grid.columns.add(count: 3);
+//Add columns to grid
+grid.columns.add(count: 3);
 
-    //Add headers to grid
-    grid.headers.add(2);
-    PdfGridRow header = grid.headers[0];
-    header.cells[0].value = 'Employee ID';
-    header.cells[1].value = 'Employee Name';
-    header.cells[2].value = 'Salary';
+//Add headers to grid
+grid.headers.add(2);
+PdfGridRow header = grid.headers[0];
+header.cells[0].value = 'Employee ID';
+header.cells[1].value = 'Employee Name';
+header.cells[2].value = 'Salary';
 
-    //Add rows to grid
-    PdfGridRow row1 = grid.rows.add();
-    row1.cells[0].value = 'E01';
-    row1.cells[1].value = 'Clay';
-    row1.cells[2].value = '\$10,000';
-    PdfGridRow row2 = grid.rows.add();
-    row2.cells[0].value = 'E02';
-    row2.cells[1].value = 'Simon';
-    row2.cells[2].value = '\$12,000';
+//Add rows to grid
+PdfGridRow row1 = grid.rows.add();
+row1.cells[0].value = 'E01';
+row1.cells[1].value = 'Clay';
+row1.cells[2].value = '\$10,000';
+PdfGridRow row2 = grid.rows.add();
+row2.cells[0].value = 'E02';
+row2.cells[1].value = 'Simon';
+row2.cells[2].value = '\$12,000';
 
-    //Set the row span
-    row1.cells[1].rowSpan = 2;
+//Set the row span
+row1.cells[1].rowSpan = 2;
 
-    //Set the row height
-    row2.height = 20;
+//Set the row height
+row2.height = 20;
 
-    //Set the row style
-    row1.style = PdfGridRowStyle(
-        backgroundBrush: PdfBrushes.dimGray,
-        textPen: PdfPens.lightGoldenrodYellow,
-        textBrush: PdfBrushes.darkOrange,
-        font: PdfStandardFont(PdfFontFamily.timesRoman, 12));
+//Set the row style
+row1.style = PdfGridRowStyle(
+	backgroundBrush: PdfBrushes.dimGray,
+	textPen: PdfPens.lightGoldenrodYellow,
+	textBrush: PdfBrushes.darkOrange,
+	font: PdfStandardFont(PdfFontFamily.timesRoman, 12));
 
-    //Create the PDF grid row style. Assign to second row
-    PdfGridRowStyle rowStyle = PdfGridRowStyle(
-        backgroundBrush: PdfBrushes.lightGoldenrodYellow,
-        textPen: PdfPens.indianRed,
-        textBrush: PdfBrushes.lightYellow,
-        font: PdfStandardFont(PdfFontFamily.timesRoman, 12));
-    row2.style = rowStyle;
+//Create the PDF grid row style. Assign to second row
+PdfGridRowStyle rowStyle = PdfGridRowStyle(
+	backgroundBrush: PdfBrushes.lightGoldenrodYellow,
+	textPen: PdfPens.indianRed,
+	textBrush: PdfBrushes.lightYellow,
+	font: PdfStandardFont(PdfFontFamily.timesRoman, 12));
+row2.style = rowStyle;
 
-    //Draw the grid in PDF document page
-    grid.draw(
-        page: document.pages.add(), bounds: const Rect.fromLTWH(0, 0, 0, 0));
+//Draw the grid in PDF document page
+grid.draw(
+	page: document.pages.add(), bounds: const Rect.fromLTWH(0, 0, 0, 0));
 
-    //Save and dispose the PDF document
-    File('SampleOutput.pdf').writeAsBytes(document.save());
-    document.dispose();
+//Save and dispose the PDF document
+File('SampleOutput.pdf').writeAsBytes(document.save());
+document.dispose();
 
 {% endhighlight %}
 
@@ -253,71 +253,49 @@ The following code snippet explains how to customize the column in PdfGrid.
 
 {% highlight dart %}
 
-    //Create a new PDF document
-    PdfDocument document = PdfDocument();
+//Create a new PDF document
+PdfDocument document = PdfDocument();
 
-    //Create a PdfGrid
-    PdfGrid grid = PdfGrid();
+//Create a PdfGrid
+PdfGrid grid = PdfGrid();
 
-    //Add columns to grid
-    grid.columns.add(count: 3);
+//Add columns to grid
+grid.columns.add(count: 3);
 
-    //Set the columns width
-    grid.columns[0].width = 170;
-    grid.columns[1].width = 130;
-    grid.columns[2].width = 190;
+//Add headers to grid
+grid.headers.add(1);
+PdfGridRow header = grid.headers[0];
+header.cells[0].value = 'Employee ID';
+header.cells[1].value = 'Employee Name';
+header.cells[2].value = 'Salary';
 
-    //Set the format to column
-    grid.columns[0].format = PdfStringFormat(
-        alignment: PdfTextAlignment.center,
-        lineAlignment: PdfVerticalAlignment.middle);
+//Add rows to grid
+PdfGridRow row1 = grid.rows.add();
+row1.cells[0].value = 'E01';
+row1.cells[1].value = 'Clay';
+row1.cells[2].value = '\$10,000';
+PdfGridRow row2 = grid.rows.add();
+row2.cells[0].value = 'E02';
+row2.cells[1].value = 'Simon';
+row2.cells[2].value = '\$12,000';
 
-    //Create a string format
-    PdfStringFormat format1 = PdfStringFormat(
-        alignment: PdfTextAlignment.right,
-        lineAlignment: PdfVerticalAlignment.middle);
-    PdfStringFormat format2 = PdfStringFormat(
-        alignment: PdfTextAlignment.left,
-        lineAlignment: PdfVerticalAlignment.middle);
+//Set the width
+grid.columns[1].width = 50;
+//Create and customize the string formats
+PdfStringFormat format = PdfStringFormat();
+format.alignment = PdfTextAlignment.center;
+format.lineAlignment = PdfVerticalAlignment.bottom;
 
-    //Add headers to grid
-    grid.headers.add(1);
-    PdfGridRow header = grid.headers[0];
-    header.cells[0].value = 'Employee ID';
-    header.cells[1].value = 'Employee Name';
-    header.cells[2].value = 'Salary';
+//Set the column text format
+grid.columns[0].format = format;
 
-    //Set the string format to column cells
-    header.cells[1].stringFormat = format1;
-    header.cells[2].stringFormat = format2;
+//Draw the grid in PDF document page
+grid.draw(
+    page: document.pages.add(), bounds: const Rect.fromLTWH(0, 0, 0, 0));
 
-    //Set the style to header
-    header.style = PdfGridRowStyle(
-        backgroundBrush: PdfBrushes.lightGoldenrodYellow,
-        textPen: PdfPens.indianRed,
-        textBrush: PdfBrushes.lightYellow,
-        font: PdfStandardFont(PdfFontFamily.timesRoman, 12));
-
-    //Add rows to grid
-    PdfGridRow row1 = grid.rows.add();
-    row1.cells[0].value = 'E01';
-    row1.cells[1].value = 'Clay';
-    row1.cells[2].value = '\$10,000';
-    PdfGridRow row2 = grid.rows.add();
-    row2.cells[0].value = 'E02';
-    row2.cells[1].value = 'Simon';
-    row2.cells[2].value = '\$12,000';
-
-    //Set the column span
-    row1.cells[1].columnSpan = 2;
-
-    //Draw the grid in PDF document page
-    grid.draw(
-        page: document.pages.add(), bounds: const Rect.fromLTWH(0, 0, 0, 0));
-
-    //Save and dispose the PDF document
-    File('SampleOutput.pdf').writeAsBytes(document.save());
-    document.dispose();
+//Save and dispose the PDF document
+File('SampleOutput.pdf').writeAsBytes(document.save());
+document.dispose();
 
 {% endhighlight %}
 
@@ -329,86 +307,86 @@ The following code snippet explains how to customize the PdfGrid using  PdfGridS
 
 {% highlight dart %}
 
-    //Create a new Pdf document
-    PdfDocument document = PdfDocument();
+//Create a new Pdf document
+PdfDocument document = PdfDocument();
 
-    //Create a border
-    PdfBorders border = PdfBorders(
-        left: PdfPen(PdfColor(240, 0, 0), width: 2),
-        top: PdfPen(PdfColor(0, 240, 0), width: 3),
-        bottom: PdfPen(PdfColor(0, 0, 240), width: 4),
-        right: PdfPen(PdfColor(240, 100, 240), width: 5));
+//Create a border
+PdfBorders border = PdfBorders(
+	left: PdfPen(PdfColor(240, 0, 0), width: 2),
+	top: PdfPen(PdfColor(0, 240, 0), width: 3),
+	bottom: PdfPen(PdfColor(0, 0, 240), width: 4),
+	right: PdfPen(PdfColor(240, 100, 240), width: 5));
 
-    //Create a string format
-    PdfStringFormat format = PdfStringFormat(
-        alignment: PdfTextAlignment.center,
-        lineAlignment: PdfVerticalAlignment.bottom,
-        wordSpacing: 10);
+//Create a string format
+PdfStringFormat format = PdfStringFormat(
+	alignment: PdfTextAlignment.center,
+	lineAlignment: PdfVerticalAlignment.bottom,
+	wordSpacing: 10);
 
-    //Create a cell style
-    PdfGridCellStyle cellStyle = PdfGridCellStyle(
-      backgroundBrush: PdfBrushes.lightYellow,
-      borders: border,
-      cellPadding: PdfPaddings(left: 2, right: 3, top: 4, bottom: 5),
-      font: PdfStandardFont(PdfFontFamily.timesRoman, 17),
-      format: format,
-      textBrush: PdfBrushes.white,
-      textPen: PdfPens.orange,
-    );
+//Create a cell style
+PdfGridCellStyle cellStyle = PdfGridCellStyle(
+  backgroundBrush: PdfBrushes.lightYellow,
+  borders: border,
+  cellPadding: PdfPaddings(left: 2, right: 3, top: 4, bottom: 5),
+  font: PdfStandardFont(PdfFontFamily.timesRoman, 17),
+  format: format,
+  textBrush: PdfBrushes.white,
+  textPen: PdfPens.orange,
+);
 
-    //Create a grid style
-    PdfGridStyle gridStyle = PdfGridStyle(
-      cellSpacing: 2,
-      cellPadding: PdfPaddings(left: 2, right: 3, top: 4, bottom: 5),
-      borderOverlapStyle: PdfBorderOverlapStyle.inside,
-      backgroundBrush: PdfBrushes.lightGray,
-      textPen: PdfPens.black,
-      textBrush: PdfBrushes.white,
-      font: PdfStandardFont(PdfFontFamily.timesRoman, 17),
-    );
+//Create a grid style
+PdfGridStyle gridStyle = PdfGridStyle(
+  cellSpacing: 2,
+  cellPadding: PdfPaddings(left: 2, right: 3, top: 4, bottom: 5),
+  borderOverlapStyle: PdfBorderOverlapStyle.inside,
+  backgroundBrush: PdfBrushes.lightGray,
+  textPen: PdfPens.black,
+  textBrush: PdfBrushes.white,
+  font: PdfStandardFont(PdfFontFamily.timesRoman, 17),
+);
 
-    //Create a grid
-    PdfGrid grid = PdfGrid();
+//Create a grid
+PdfGrid grid = PdfGrid();
 
-    //Adds the columns to the grid
-    grid.columns.add(count: 3);
-    grid.headers.add(1);
-    PdfGridRow header = grid.headers[0];
-    header.cells[0].value = 'Employee Id';
-    header.cells[1].value = 'Employee name';
-    header.cells[2].value = 'Employee role';
+//Adds the columns to the grid
+grid.columns.add(count: 3);
+grid.headers.add(1);
+PdfGridRow header = grid.headers[0];
+header.cells[0].value = 'Employee Id';
+header.cells[1].value = 'Employee name';
+header.cells[2].value = 'Employee role';
 
-    //Apply the grid style
-    grid.rows.applyStyle(gridStyle);
+//Apply the grid style
+grid.rows.applyStyle(gridStyle);
 
-    //Add rows to grid. Set the cells style
-    PdfGridRow row1 = grid.rows.add();
-    row1.cells[0].value = 'E01';
-    row1.cells[1].value = 'Clay';
-    row1.cells[2].value = 'Product manager';
-    PdfGridRow row2 = grid.rows.add();
-    row2.cells[0].value = 'E02';
-    row2.cells[1].value = 'Thomas';
-    row2.cells[2].value = 'Software engineer';
-    PdfGridRow row3 = grid.rows.add();
-    row3.cells[0].value = 'E03';
-    row3.cells[1].value = 'Albert';
-    row3.cells[2].value = 'Test engineer';
+//Add rows to grid. Set the cells style
+PdfGridRow row1 = grid.rows.add();
+row1.cells[0].value = 'E01';
+row1.cells[1].value = 'Clay';
+row1.cells[2].value = 'Product manager';
+PdfGridRow row2 = grid.rows.add();
+row2.cells[0].value = 'E02';
+row2.cells[1].value = 'Thomas';
+row2.cells[2].value = 'Software engineer';
+PdfGridRow row3 = grid.rows.add();
+row3.cells[0].value = 'E03';
+row3.cells[1].value = 'Albert';
+row3.cells[2].value = 'Test engineer';
 
-    //Set the row cells style
-    for (int i = 0; i < grid.columns.count; i++) {
-      row1.cells[i].style = cellStyle;
-      row2.cells[i].style = cellStyle;
-      row3.cells[i].style = cellStyle;
-    }
+//Set the row cells style
+for (int i = 0; i < grid.columns.count; i++) {
+  row1.cells[i].style = cellStyle;
+  row2.cells[i].style = cellStyle;
+  row3.cells[i].style = cellStyle;
+}
 
-    //Draw the grid in PDF document page
-    grid.draw(
-        page: document.pages.add(), bounds: const Rect.fromLTWH(0, 0, 0, 0));
+//Draw the grid in PDF document page
+grid.draw(
+	page: document.pages.add(), bounds: const Rect.fromLTWH(0, 0, 0, 0));
 
-    //Save and dispose the PDF document
-    File('SampleOutput.pdf').writeAsBytes(document.save());
-    document.dispose();
+//Save and dispose the PDF document
+File('SampleOutput.pdf').writeAsBytes(document.save());
+document.dispose();
 
 {% endhighlight %}
 
@@ -420,48 +398,48 @@ The following sample explains how to allow PdfGrid to flow across pages.
 
 {% highlight dart %}
 
-    //Create a new PDF documentation
-    PdfDocument document = PdfDocument();
+//Create a new PDF documentation
+PdfDocument document = PdfDocument();
 
-    //Create a PdfGrid
-    PdfGrid grid = PdfGrid();
+//Create a PdfGrid
+PdfGrid grid = PdfGrid();
 
-    //Add the columns to the grid
-    grid.columns.add(count: 3);
-    grid.headers.add(1);
-    PdfGridRow header = grid.headers[0];
-    header.cells[0].value = 'Name';
-    header.cells[1].value = 'Age';
-    header.cells[2].value = 'Sex';
+//Add the columns to the grid
+grid.columns.add(count: 3);
+grid.headers.add(1);
+PdfGridRow header = grid.headers[0];
+header.cells[0].value = 'Name';
+header.cells[1].value = 'Age';
+header.cells[2].value = 'Sex';
 
-    //Add rows to grid. Set the cells style
-    PdfGridRow row1 = grid.rows.add();
-    row1.cells[0].value = 'Bob';
-    row1.cells[1].value = '22';
-    row1.cells[2].value = 'Male';
-    PdfGridRow row2 = grid.rows.add();
-    row2.cells[0].value = 'Sam';
-    row2.cells[1].value = '23';
-    row2.cells[2].value = 'Male';
-    PdfGridRow row3 = grid.rows.add();
-    row3.cells[0].value = 'Falitha';
-    row3.cells[1].value = '19';
-    row3.cells[2].value = 'Female';
+//Add rows to grid. Set the cells style
+PdfGridRow row1 = grid.rows.add();
+row1.cells[0].value = 'Bob';
+row1.cells[1].value = '22';
+row1.cells[2].value = 'Male';
+PdfGridRow row2 = grid.rows.add();
+row2.cells[0].value = 'Sam';
+row2.cells[1].value = '23';
+row2.cells[2].value = 'Male';
+PdfGridRow row3 = grid.rows.add();
+row3.cells[0].value = 'Falitha';
+row3.cells[1].value = '19';
+row3.cells[2].value = 'Female';
 
-    //Create a PdfLayoutFormat for pagination
-    PdfLayoutFormat format = PdfLayoutFormat(
-        breakType: PdfLayoutBreakType.fitColumnsToPage,
-        layoutType: PdfLayoutType.paginate);
+//Create a PdfLayoutFormat for pagination
+PdfLayoutFormat format = PdfLayoutFormat(
+	breakType: PdfLayoutBreakType.fitColumnsToPage,
+	layoutType: PdfLayoutType.paginate);
 
-    //Draw the grid in PDF document page
-    grid.draw(
-        page: document.pages.add(),
-        bounds: const Rect.fromLTWH(0, 0, 0, 0),
-        format: format);
+//Draw the grid in PDF document page
+grid.draw(
+	page: document.pages.add(),
+	bounds: const Rect.fromLTWH(0, 0, 0, 0),
+	format: format);
 
-    //Save and dispose the PDF document
-    File('SampleOutput.pdf').writeAsBytes(document.save());
-    document.dispose();
+//Save and dispose the PDF document
+File('SampleOutput.pdf').writeAsBytes(document.save());
+document.dispose();
 
 {% endhighlight %}
 
@@ -471,62 +449,62 @@ The Flutter PDF supports maintaining the position of a PDF grid drawn on PDF pag
 
 {% highlight dart %}
 
-    //Create a new PDF document
-    PdfDocument document = PdfDocument();
+//Create a new PDF document
+PdfDocument document = PdfDocument();
 
-    //Create a PdfGrid
-    PdfGrid grid = PdfGrid();
+//Create a PdfGrid
+PdfGrid grid = PdfGrid();
 
-    //Add the columns to the grid
-    grid.columns.add(count: 3);
-    grid.headers.add(1);
-    PdfGridRow header = grid.headers[0];
-    header.cells[0].value = 'Product Id';
-    header.cells[1].value = 'Product name';
-    header.cells[2].value = 'Price';
+//Add the columns to the grid
+grid.columns.add(count: 3);
+grid.headers.add(1);
+PdfGridRow header = grid.headers[0];
+header.cells[0].value = 'Product Id';
+header.cells[1].value = 'Product name';
+header.cells[2].value = 'Price';
 
-    //Add rows to grid
-    PdfGridRow row1 = grid.rows.add();
-    row1.cells[0].value = 'P01';
-    row1.cells[1].value = 'Water bottle';
-    row1.cells[2].value = 'Rs: 100';
-    PdfGridRow row2 = grid.rows.add();
-    row2.cells[0].value = 'P02';
-    row2.cells[1].value = 'Trimmer';
-    row2.cells[2].value = 'Rs: 1200';
+//Add rows to grid
+PdfGridRow row1 = grid.rows.add();
+row1.cells[0].value = 'P01';
+row1.cells[1].value = 'Water bottle';
+row1.cells[2].value = 'Rs: 100';
+PdfGridRow row2 = grid.rows.add();
+row2.cells[0].value = 'P02';
+row2.cells[1].value = 'Trimmer';
+row2.cells[2].value = 'Rs: 1200';
 
-    //Draw grid on the page of PDF document and store the grid position in PdfLayoutResult
-    PdfLayoutResult result = grid.draw(
-        page: document.pages.add(), bounds: const Rect.fromLTWH(0, 0, 400, 300));
+//Draw grid on the page of PDF document and store the grid position in PdfLayoutResult
+PdfLayoutResult result = grid.draw(
+	page: document.pages.add(), bounds: const Rect.fromLTWH(0, 0, 400, 300));
 
-    //Create a second PdfGrid in the same page
-    PdfGrid grid2 = PdfGrid();
+//Create a second PdfGrid in the same page
+PdfGrid grid2 = PdfGrid();
 
-    //Add columns to second grid
-    grid2.columns.add(count: 3);
-    grid2.headers.add(1);
-    PdfGridRow header1 = grid2.headers[0];
-    header1.cells[0].value = 'Employee ID';
-    header1.cells[1].value = 'Employee Name';
-    header1.cells[2].value = 'Salary';
+//Add columns to second grid
+grid2.columns.add(count: 3);
+grid2.headers.add(1);
+PdfGridRow header1 = grid2.headers[0];
+header1.cells[0].value = 'Employee ID';
+header1.cells[1].value = 'Employee Name';
+header1.cells[2].value = 'Salary';
 
-    //Add rows to grid
-    PdfGridRow row11 = grid2.rows.add();
-    row11.cells[0].value = 'E01';
-    row11.cells[1].value = 'Clay';
-    row11.cells[2].value = '\$10,000';
-    PdfGridRow row12 = grid2.rows.add();
-    row12.cells[0].value = 'E02';
-    row12.cells[1].value = 'Simon';
-    row12.cells[2].value = '\$12,000';
+//Add rows to grid
+PdfGridRow row11 = grid2.rows.add();
+row11.cells[0].value = 'E01';
+row11.cells[1].value = 'Clay';
+row11.cells[2].value = '\$10,000';
+PdfGridRow row12 = grid2.rows.add();
+row12.cells[0].value = 'E02';
+row12.cells[1].value = 'Simon';
+row12.cells[2].value = '\$12,000';
 
-    //Draw the grid in PDF document page
-    grid2.draw(
-        page: result.page,
-        bounds: Rect.fromLTWH(0, result.bounds.bottom + 20, 400, 300));
+//Draw the grid in PDF document page
+grid2.draw(
+	page: result.page,
+	bounds: Rect.fromLTWH(0, result.bounds.bottom + 20, 400, 300));
 
-    //Save and dispose the PDF document
-    File('SampleOutput.pdf').writeAsBytes(document.save());
-    document.dispose();
+//Save and dispose the PDF document
+File('SampleOutput.pdf').writeAsBytes(document.save());
+document.dispose();
 
 {% endhighlight %}
