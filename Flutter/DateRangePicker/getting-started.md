@@ -66,9 +66,9 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 
-## Change different views
+## Multiple picker views
 
-The SfDateRangePicker widget provides four different types of views to display. It can be assigned to the widget constructor by using the [view](https://pub.dev/documentation/syncfusion_flutter_daterangepicker/latest/daterangepicker/SfDateRangePicker/view.html) property. Default view of the widget is month view. By default the current date will be displayed initially for all the date range picker views.
+The `SfDateRangePicker` widget provides four different types of views to display. It can be assigned to the widget constructor by using the [view](https://pub.dev/documentation/syncfusion_flutter_daterangepicker/latest/daterangepicker/SfDateRangePicker/view.html) property. Default view of the widget is month view. By default the current date will be displayed initially for all the date range picker views.
 
 {% tabs %}
 {% highlight Dart %}
