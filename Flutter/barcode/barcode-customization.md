@@ -7,7 +7,7 @@ control: SfBarcodeGenerator
 documentation: ug
 ---
 
-# Customization
+# Customization of barcode generator
 
 ## Text customization 
 
