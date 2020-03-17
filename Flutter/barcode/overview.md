@@ -22,4 +22,4 @@ The Syncfusion Flutter Barcode Generator is a data visualization widget used to 
 * **Barcode customization** - Customize the visual appearance of barcodes using the backgroundColor and barColor properties and adjust the size of smallest line or dot of the code using the module property.
 * **Text customization** - Configure to display the barcode value and customize the position and style of the barcode text.
 
-You can get the sample in the following link: [`Flutter Gauges`](https://github.com/syncfusion/flutter-examples).
+You can get the sample in the following link: [`Flutter Barcodes`](https://github.com/syncfusion/flutter-examples).
