@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Basic features for Syncfusion Flutter Range Slider | Syncfusion
-description: This section explains the steps required to add the range slider widget and its elements such as min, max, values and interval
+description: This section explains the steps required to add the range slider widget and its basic elements such as min, max, values and interval
 platform: flutter
 control: SfRangeSlider
 documentation: ug
 ---
 
 # Basic features for Range Slider
-This section explains the steps required to add the range slider widget and its elements such as min, max, values and interval.
+This section explains the steps required to add the range slider widget and its basic elements such as min, max, values and interval.
 
 ## Minimum
 
