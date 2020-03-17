@@ -1,26 +1,22 @@
 ---
 layout: post
 title: Basic features for Syncfusion Flutter Range Slider | Syncfusion
-description: This section explains the steps required to add the range slider widget and its basic elements such as min, max, values and interval
+description: This section explains how to add the numeric and date range slider
 platform: flutter
 control: SfRangeSlider
 documentation: ug
 ---
 
 # Basic features for Range Slider
-This section explains the steps required to add the range slider widget and its basic elements such as min, max, values and interval.
+This section explains how to add the numeric and date range slider.
 
 ## Minimum
 
 The minimum value that the user can select. The default value of `min` property is 0.0.
 
-N> Must be less than the `max` value. If the `min` value is equal to the `max` value, the range slider is disabled.
-
 ## Maximum
 
 The maximum value that the user can select. The default value of `max` property is 1.0.
-
-N> Must be greater than the `min` value. If the `max` value is equal to the `min` value, the range slider is disabled.
 
 ## onChanged
 
@@ -28,54 +24,27 @@ The `onChanged` callback is called when the user selects a value through interac
 
 N> If it is null, the range slider will be disabled.
 
-**Disabled state**
-
-{% tabs %}
-{% highlight Dart %}
-
-SfRangeValues _values = const SfRangeValues(0.3, 0.7);
-
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: Container(
-                  child: SfRangeSlider(
-                     values: _values,
-                     onChanged: (SfRangeValues newValues) {
-                     },
-                  )
-              )
-          )
-      )
-  );
-}
-
-{% endhighlight %}
-{% endtabs %}
-
 **Enabled state**
 
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _values = const SfRangeValues(0.3, 0.7);
+SfRangeValues _values = SfRangeValues(3.0, 7.0);
 
 @override
 Widget build(BuildContext context) {
   return MaterialApp(
       home: Scaffold(
           body: Center(
-              child: Container(
-                  child: SfRangeSlider(
-                     values: _values,
-                     onChanged: (SfRangeValues newValues) {
-                          setState(() {
-                              _values = newValues;
-                          });
-                     },
-                  )
+              child: SfRangeSlider(
+                    min: 0.0,
+                    max: 10.0,
+                    values: _values,
+                    onChanged: (SfRangeValues newValues) {
+                       setState(() {
+                           _values = newValues;
+                        });
+                   },
               )
           )
       )
@@ -85,33 +54,60 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## Value
+![Enabled range slider](images/basic-features/enabled-state.png)
+
+**Disabled state**
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(3.0, 7.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSlider(
+                    min: 0.0,
+                    max: 10.0,
+                    values: _values,
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Disabled range slider](images/basic-features/disabled-state.png)
+
+## Values
 
 The values currently selected in the range slider. The range slider's thumb is drawn corresponding to this value. For date values, the range slider doesn’t have auto interval support. So, it is necessary to set `interval`, `dateIntervalType`, and `dateFormat` for date values.
 
-***Numeric values**
+***Numeric range slider**
 
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _values = const SfRangeValues(1.3, 1.7);
+SfRangeValues _values = SfRangeValues(3.0, 7.0);
 
 @override
 Widget build(BuildContext context) {
   return MaterialApp(
       home: Scaffold(
           body: Center(
-              child: Container(
-                  child: SfRangeSlider(
-                     min: 0.0,
-                     max: 10.0,
-                     values: _values,
-                     onChanged: (SfRangeValues newValues) {
-                            setState(() {
+              child: SfRangeSlider(
+                    min: 0.0,
+                    max: 10.0,
+                    values: _values,
+                    onChanged: (SfRangeValues newValues) {
+                        setState(() {
                             _values = newValues;
                         });
-                     },
-                  )
+                    },
               )
           )
       )
@@ -121,34 +117,35 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-**Date values**
+![Numeric range slider](images/basic-features/numeric-labels.png)
 
-You must import the 'package:intl/intl.dart` package to add the date format in the range slider.
+**Date range slider**
+
+You must add the [`intl`](https://pub.dev/packages/intl) package for using date format in the range slider.
 
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _values = SfRangeValues(DateTime(2012, 01, 01), DateTime(2013, 01, 01));
+ SfRangeValues _values = SfRangeValues(DateTime(2002, 01, 01), DateTime(2004, 01, 01));
 
 @override
 Widget build(BuildContext context) {
   return MaterialApp(
       home: Scaffold(
           body: Center(
-              child: Container(
-                  child: SfRangeSlider(
-                       min: DateTime(2000, 01, 01, 00),
-                       max: DateTime(2005, 31, 12, 24),
-                       values: _values,
-                       interval: 1,
-                       dateFormat: DateFormat.y(),
-                       dateIntervalType: DateIntervalType.years,
-                       onChanged: (SfRangeValues newValues) {
+              child: SfRangeSlider(
+                    min: DateTime(2000, 01, 01, 00),
+                    max: DateTime(2004, 12, 31, 24),
+                    values: _values,
+                    interval: 1,
+                    showLabels: true,
+                    dateFormat: DateFormat.y(),
+                    dateIntervalType: DateIntervalType.years,
+                    onChanged: (SfRangeValues newValues) {
                           setState(() {
-                             _values = newValues;
+                                _values = newValues;
                           });
-                      },
-                  )
+                    },
               )
           )
       )
@@ -158,6 +155,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Date range slider](images/basic-features/date-labels.png)
 
 ## Interval
 
