@@ -7,7 +7,7 @@ control: SfRangeSlider
 documentation: ug
 ---
 
-# Basic features for Range Slider
+# Basic features of Range Slider
 This section explains about how to add the numeric and date range slider.
 
 ## Minimum
