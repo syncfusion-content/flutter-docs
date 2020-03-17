@@ -24,23 +24,23 @@ The following code snippet shows how to draw an image to the PDF document.
 
 {% highlight dart %}
 
-    //Create a new PDF document
-    PdfDocument document = PdfDocument();
+//Create a new PDF document
+PdfDocument document = PdfDocument();
 
-    //Adds a page to the document
-    PdfPage page = document.pages.add();
+//Adds a page to the document
+PdfPage page = document.pages.add();
 
-    //Draw the image
-    page.graphics.drawImage(
-        PdfBitmap(File('image.jpg').readAsBytesSync()),
-        Rect.fromLTWH(
-            0, 0, page.getClientSize().width, page.getClientSize().height));
+//Draw the image
+page.graphics.drawImage(
+	PdfBitmap(File('image.jpg').readAsBytesSync()),
+	Rect.fromLTWH(
+		0, 0, page.getClientSize().width, page.getClientSize().height));
 
-    //Saves the document
-    File('Output.pdf').writeAsBytes(document.save());
+//Saves the document
+File('Output.pdf').writeAsBytes(document.save());
 
-    //Disposes the document
-    document.dispose();
+//Disposes the document
+document.dispose();
   
 {% endhighlight %}
 
@@ -50,38 +50,38 @@ You can add transparency and rotation to the image using the setTransparency and
 
 {% highlight dart %}
 
-    //Create a new PDF document
-    PdfDocument document = PdfDocument();
+//Create a new PDF document
+PdfDocument document = PdfDocument();
 
-    //Adds a page to the document
-    PdfPage page = document.pages.add();
+//Adds a page to the document
+PdfPage page = document.pages.add();
 
-    //Save the current graphics state
-    PdfGraphicsState state = page.graphics.save();
+//Save the current graphics state
+PdfGraphicsState state = page.graphics.save();
 
-    //Translate the coordinate system to the  required position
-    page.graphics.translateTransform(20, 100);
+//Translate the coordinate system to the  required position
+page.graphics.translateTransform(20, 100);
 
-    //Apply transparency
-    page.graphics.setTransparency(0.5);
+//Apply transparency
+page.graphics.setTransparency(0.5);
 
-    //Rotate the coordinate system
-    page.graphics.rotateTransform(-45);
+//Rotate the coordinate system
+page.graphics.rotateTransform(-45);
 
-    //Draw image
-    page.graphics.drawImage(
-        PdfBitmap(
-        File('image.jpg').readAsBytesSync()),
-        Rect.fromLTWH(
-            0, 0, page.getClientSize().width, page.getClientSize().height));
+//Draw image
+page.graphics.drawImage(
+	PdfBitmap(
+	File('image.jpg').readAsBytesSync()),
+	Rect.fromLTWH(
+		0, 0, page.getClientSize().width, page.getClientSize().height));
 
-    //Restore the graphics state
-    page.graphics.restore(state);
+//Restore the graphics state
+page.graphics.restore(state);
 
-    //Saves the document
-    File('Output.pdf').writeAsBytes(document.save());
+//Saves the document
+File('Output.pdf').writeAsBytes(document.save());
 
-    //Disposes the document
-    document.dispose();
+//Disposes the document
+document.dispose();
 	
 {% endhighlight %}
