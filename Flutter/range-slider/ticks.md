@@ -48,7 +48,7 @@ Widget build(BuildContext context) {
 
 ![Range slider tick support](images/tick/major-tick.png)
 
-N> The `tickShape` and `SfRangeSliderThemeData` for customizing the major tick’s visual appearance.
+N> The `tickShape` and `SfRangeSliderThemeData` can be used for customizing the major tick’s visual appearance.
 
 ## Show minor tick
 
@@ -91,5 +91,5 @@ Widget build(BuildContext context) {
 ![Range slider minor tick support](images/tick/minor-tick.png)
 
 N>
-* The 'showTicks' to render major ticks at given interval.
-* The `minorTickShape` and `SfRangeSliderThemeData` for customizing the minor tick’s visual appearance.
+* The 'showTicks' can be used to render major ticks at given interval.
+* The `minorTickShape` and `SfRangeSliderThemeData` can be used for customizing the minor tick’s visual appearance.
