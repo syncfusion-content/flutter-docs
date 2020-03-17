@@ -7,7 +7,7 @@ control: SfCalendar
 documentation: ug
 ---
 
-# Month view
+# Month view in flutter calendar
 
 The `MonthView` of SfCalendar used to display entire dates of the specific month and current month by default initially. Current date color is differentiated with other dates of the current month, also the color differentiation for dates will be applicable for previous and next month dates.
 
@@ -327,3 +327,9 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Month cell appearance](images/monthview/monthcell_appearance.png)
+
+## See Also
+
+* [How to show a custom agenda view in the Flutter event calendar widget?] (https://www.syncfusion.com/kb/11016/how-to-show-a-custom-agenda-view-in-the-flutter-event-calendar-widget)
+* [How to customize the agenda item height in the flutter event calendar (SfCalendar)] (https://www.syncfusion.com/kb/11015/how-to-customize-the-agenda-item-height-in-the-flutter-event-calendar-sfcalendar)
+* [How to customize agenda view height based on the Flutter event calendar widget height](https://www.syncfusion.com/kb/11013/how-to-customize-agenda-view-height-based-on-the-flutter-event-calendar-widget-height)
