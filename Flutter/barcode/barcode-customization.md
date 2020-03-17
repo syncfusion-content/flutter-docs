@@ -70,7 +70,7 @@ The style of the text can be customized with the `textStyle` property of the bar
 
 **Text spacing**
 
-The spacing between the text and the barcode can be controlled by the `textSpacing` property of barcode generator. By default, the value of `textSpacing` is 2. 
+The space between the text and the barcode can be controlled by the `textSpacing` property of barcode generator. By default, the value of `textSpacing` is 2. 
 
 {% highlight dart %} 
 
@@ -128,7 +128,7 @@ The horizontal alignment of the text can be controlled by `textAlign` property o
 
 Both the one dimensional and the two dimensional symbology support the `module` property. The property is used to define the size of the smallest line or dot of the barcode.
 
-For one dimensional barcode, if this property is not set, the size of the smallest line of the barcode is calculated based on the available width and total number of bars for the provided input value. The barcode takes full available height as its height.
+For one dimensional barcode, if this property is not set, the size of the smallest bar line is determined depending on the width available.
 
 The following code snippet shows the one dimensional barcode with `module` property,
 
@@ -146,7 +146,7 @@ The following code snippet shows the one dimensional barcode with `module` prope
               backgroundColor:  Color.fromRGBO(193, 250, 250, 1),
               value: '123456789',
               showValue: true,
-              symbology: Codabar(module: 1),),
+              symbology: Codabar(module: 1)),
           )
         ),
       );
@@ -155,6 +155,8 @@ The following code snippet shows the one dimensional barcode with `module` prope
   {% endhighlight %}
 
 ![with module value](images/text-customization/with-module.jpg)
+
+N> In the image above, the smallest bar line width is 1 logical pixel. 
 
 Below code snippet shows the one dimensional barcode without the `module` property,
 
@@ -172,7 +174,7 @@ Below code snippet shows the one dimensional barcode without the `module` proper
               backgroundColor: Color.fromRGBO(193, 250, 250, 1),
               value: '123456789',
               showValue: true,
-              symbology: Codabar(),),
+              symbology: Codabar()),
           )
       ),
     );
@@ -182,7 +184,9 @@ Below code snippet shows the one dimensional barcode without the `module` proper
 
 ![without module value](images/text-customization/without-module.jpg)
 
-For two dimensional barcode , if the `module` property is not set, the size of smallest line or dot is calculated based on the minimum of available size.
+N> In the image above, the smallest bar line width is calculated on the basis of the available width as a result of the total computed inputs(0's and 1's) divided by the available width.
+
+For two dimensional barcode , if the `module` property is not set, the size of smallest dot is calculated based on the minimum of available width or height.
 
 The following code snippet shows the two dimensional barcode with `module` property,
 
