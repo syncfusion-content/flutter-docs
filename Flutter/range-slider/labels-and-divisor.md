@@ -47,8 +47,8 @@ Widget build(BuildContext context) {
 ![Range slider label support](images/label-and-divisor/show-labels.png)
 
 N>
-* The `numberFormat` and `dateFormat` for formatting the numeric and date labels respectively.
-* The `SfRangeSliderThemeData` to customize the appearance of the labels.
+* The `numberFormat` and `dateFormat` can be used for formatting the numeric and date labels respectively.
+* The `SfRangeSliderThemeData` can be used to customize the appearance of the labels.
 
 ## Show divisor
 
