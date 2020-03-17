@@ -50,14 +50,14 @@ row.cells[2].value = '\$12,000';
 
 //Set the grid style
 grid.style = PdfGridStyle(
-	cellPadding: PdfPaddings(left: 2, right: 3, top: 4, bottom: 5),
-	backgroundBrush: PdfBrushes.blue,
-	textBrush: PdfBrushes.white,
-	font: PdfStandardFont(PdfFontFamily.timesRoman, 25));
+    cellPadding: PdfPaddings(left: 2, right: 3, top: 4, bottom: 5),
+    backgroundBrush: PdfBrushes.blue,
+    textBrush: PdfBrushes.white,
+    font: PdfStandardFont(PdfFontFamily.timesRoman, 25));
 
 //Draw the grid
 grid.draw(
-	page: document.pages.add(), bounds: const Rect.fromLTWH(0, 0, 0, 0));
+    page: document.pages.add(), bounds: const Rect.fromLTWH(0, 0, 0, 0));
 
 //Save and dispose the PDF document
 File('SampleOutput.pdf').writeAsBytes(document.save());
@@ -78,33 +78,33 @@ PdfGrid grid = PdfGrid();
 //Set the dataSource in PdfGrid with created DataTable
 grid.dataSource = DataTable(
   columns: [
-	DataColumn(label: Text('ID')),
-	DataColumn(label: Text('Name')),
-	DataColumn(label: Text('Salary'))
+    DataColumn(label: Text('ID')),
+    DataColumn(label: Text('Name')),
+    DataColumn(label: Text('Salary'))
   ],
   rows: <DataRow>[
-	DataRow(cells: [
-	  DataCell(Text('E01')),
-	  DataCell(Text('Clay')),
-	  DataCell(Text('\$10,000'))
-	]),
-	DataRow(cells: [
-	  DataCell(Text('E02')),
-	  DataCell(Text('Thomas')),
-	  DataCell(Text('\$10,500'))
-	]),
-	DataRow(cells: [
-	  DataCell(Text('E02')),
-	  DataCell(Text('Simon')),
-	  DataCell(Text('\$12,000'))
-	])
+    DataRow(cells: [
+      DataCell(Text('E01')),
+      DataCell(Text('Clay')),
+      DataCell(Text('\$10,000'))
+    ]),
+    DataRow(cells: [
+      DataCell(Text('E02')),
+      DataCell(Text('Thomas')),
+      DataCell(Text('\$10,500'))
+    ]),
+    DataRow(cells: [
+      DataCell(Text('E02')),
+      DataCell(Text('Simon')),
+      DataCell(Text('\$12,000'))
+    ])
   ],
 );
 
 //Draw the grid in PDF document
 grid.draw(
-	page: document.pages.add(), bounds: const Rect.fromLTWH(0, 0, 0, 0));
-	
+    page: document.pages.add(), bounds: const Rect.fromLTWH(0, 0, 0, 0));
+
 //Save and dispose the PDF document
 File('SampleOutput.pdf').writeAsBytes(document.save());
 document.dispose();
@@ -136,9 +136,9 @@ header.cells[2].value = 'Salary';
 
 //Add the styles to specific cell
 header.cells[0].style.stringFormat = PdfStringFormat(
-	alignment: PdfTextAlignment.center,
-	lineAlignment: PdfVerticalAlignment.bottom,
-	wordSpacing: 10);
+    alignment: PdfTextAlignment.center,
+    lineAlignment: PdfVerticalAlignment.bottom,
+    wordSpacing: 10);
 header.cells[1].style.textPen = PdfPens.mediumVioletRed;
 header.cells[2].style.backgroundBrush = PdfBrushes.yellow;
 header.cells[2].style.textBrush = PdfBrushes.darkOrange;
@@ -165,14 +165,14 @@ row2.cells[2].value = '\$12,000';
 
 //Add the style to specific cell
 row2.cells[2].style.borders = PdfBorders(
-	left: PdfPen(PdfColor(240, 0, 0), width: 2),
-	top: PdfPen(PdfColor(0, 240, 0), width: 3),
-	bottom: PdfPen(PdfColor(0, 0, 240), width: 4),
-	right: PdfPen(PdfColor(240, 100, 240), width: 5));
+    left: PdfPen(PdfColor(240, 0, 0), width: 2),
+    top: PdfPen(PdfColor(0, 240, 0), width: 3),
+    bottom: PdfPen(PdfColor(0, 0, 240), width: 4),
+    right: PdfPen(PdfColor(240, 100, 240), width: 5));
 
 //Draw the grid in PDF document page
 grid.draw(
-	page: document.pages.add(), bounds: const Rect.fromLTWH(0, 0, 0, 0));
+    page: document.pages.add(), bounds: const Rect.fromLTWH(0, 0, 0, 0));
 
 //Save and dispose the PDF document
 File('SampleOutput.pdf').writeAsBytes(document.save());
@@ -222,22 +222,22 @@ row2.height = 20;
 
 //Set the row style
 row1.style = PdfGridRowStyle(
-	backgroundBrush: PdfBrushes.dimGray,
-	textPen: PdfPens.lightGoldenrodYellow,
-	textBrush: PdfBrushes.darkOrange,
-	font: PdfStandardFont(PdfFontFamily.timesRoman, 12));
+    backgroundBrush: PdfBrushes.dimGray,
+    textPen: PdfPens.lightGoldenrodYellow,
+    textBrush: PdfBrushes.darkOrange,
+    font: PdfStandardFont(PdfFontFamily.timesRoman, 12));
 
 //Create the PDF grid row style. Assign to second row
 PdfGridRowStyle rowStyle = PdfGridRowStyle(
-	backgroundBrush: PdfBrushes.lightGoldenrodYellow,
-	textPen: PdfPens.indianRed,
-	textBrush: PdfBrushes.lightYellow,
-	font: PdfStandardFont(PdfFontFamily.timesRoman, 12));
+    backgroundBrush: PdfBrushes.lightGoldenrodYellow,
+    textPen: PdfPens.indianRed,
+    textBrush: PdfBrushes.lightYellow,
+    font: PdfStandardFont(PdfFontFamily.timesRoman, 12));
 row2.style = rowStyle;
 
 //Draw the grid in PDF document page
 grid.draw(
-	page: document.pages.add(), bounds: const Rect.fromLTWH(0, 0, 0, 0));
+    page: document.pages.add(), bounds: const Rect.fromLTWH(0, 0, 0, 0));
 
 //Save and dispose the PDF document
 File('SampleOutput.pdf').writeAsBytes(document.save());
@@ -312,16 +312,16 @@ PdfDocument document = PdfDocument();
 
 //Create a border
 PdfBorders border = PdfBorders(
-	left: PdfPen(PdfColor(240, 0, 0), width: 2),
-	top: PdfPen(PdfColor(0, 240, 0), width: 3),
-	bottom: PdfPen(PdfColor(0, 0, 240), width: 4),
-	right: PdfPen(PdfColor(240, 100, 240), width: 5));
+    left: PdfPen(PdfColor(240, 0, 0), width: 2),
+    top: PdfPen(PdfColor(0, 240, 0), width: 3),
+    bottom: PdfPen(PdfColor(0, 0, 240), width: 4),
+    right: PdfPen(PdfColor(240, 100, 240), width: 5));
 
 //Create a string format
 PdfStringFormat format = PdfStringFormat(
-	alignment: PdfTextAlignment.center,
-	lineAlignment: PdfVerticalAlignment.bottom,
-	wordSpacing: 10);
+    alignment: PdfTextAlignment.center,
+    lineAlignment: PdfVerticalAlignment.bottom,
+    wordSpacing: 10);
 
 //Create a cell style
 PdfGridCellStyle cellStyle = PdfGridCellStyle(
@@ -382,7 +382,7 @@ for (int i = 0; i < grid.columns.count; i++) {
 
 //Draw the grid in PDF document page
 grid.draw(
-	page: document.pages.add(), bounds: const Rect.fromLTWH(0, 0, 0, 0));
+    page: document.pages.add(), bounds: const Rect.fromLTWH(0, 0, 0, 0));
 
 //Save and dispose the PDF document
 File('SampleOutput.pdf').writeAsBytes(document.save());
@@ -428,14 +428,14 @@ row3.cells[2].value = 'Female';
 
 //Create a PdfLayoutFormat for pagination
 PdfLayoutFormat format = PdfLayoutFormat(
-	breakType: PdfLayoutBreakType.fitColumnsToPage,
-	layoutType: PdfLayoutType.paginate);
+    breakType: PdfLayoutBreakType.fitColumnsToPage,
+    layoutType: PdfLayoutType.paginate);
 
 //Draw the grid in PDF document page
 grid.draw(
-	page: document.pages.add(),
-	bounds: const Rect.fromLTWH(0, 0, 0, 0),
-	format: format);
+    page: document.pages.add(),
+    bounds: const Rect.fromLTWH(0, 0, 0, 0),
+    format: format);
 
 //Save and dispose the PDF document
 File('SampleOutput.pdf').writeAsBytes(document.save());
@@ -475,7 +475,7 @@ row2.cells[2].value = 'Rs: 1200';
 
 //Draw grid on the page of PDF document and store the grid position in PdfLayoutResult
 PdfLayoutResult result = grid.draw(
-	page: document.pages.add(), bounds: const Rect.fromLTWH(0, 0, 400, 300));
+    page: document.pages.add(), bounds: const Rect.fromLTWH(0, 0, 400, 300));
 
 //Create a second PdfGrid in the same page
 PdfGrid grid2 = PdfGrid();
@@ -500,8 +500,8 @@ row12.cells[2].value = '\$12,000';
 
 //Draw the grid in PDF document page
 grid2.draw(
-	page: result.page,
-	bounds: Rect.fromLTWH(0, result.bounds.bottom + 20, 400, 300));
+    page: result.page,
+    bounds: Rect.fromLTWH(0, result.bounds.bottom + 20, 400, 300));
 
 //Save and dispose the PDF document
 File('SampleOutput.pdf').writeAsBytes(document.save());

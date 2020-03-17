@@ -18,20 +18,21 @@ You can navigate to a specified URL from a PDF document by using the PdfTextWebL
 Refer to the following code snippet for navigating to the webpage.
 
 {% highlight dart %}
+
 //Create a new Pdf document
 PdfDocument document = PdfDocument();
 
 //Create and draw the web link in the PDF page
 PdfTextWebLink(
-	url: 'www.google.co.in',
-	text: 'google',
-	font: PdfStandardFont(PdfFontFamily.timesRoman, 14),
-	brush: PdfSolidBrush(PdfColor(0, 0, 0)),
-	pen: PdfPens.brown,
-	format: PdfStringFormat(
-		alignment: PdfTextAlignment.center,
-		lineAlignment: PdfVerticalAlignment.middle))
-  .draw(document.pages.add(), Offset(50, 40));
+        url: 'www.google.co.in',
+        text: 'google',
+        font: PdfStandardFont(PdfFontFamily.timesRoman, 14),
+        brush: PdfSolidBrush(PdfColor(0, 0, 0)),
+        pen: PdfPens.brown,
+        format: PdfStringFormat(
+            alignment: PdfTextAlignment.center,
+            lineAlignment: PdfVerticalAlignment.middle))
+    .draw(document.pages.add(), Offset(50, 40));
 
 //Save the PDF document
 File('Hyperlink.pdf').writeAsBytes(document.save());
@@ -57,8 +58,8 @@ PdfPage page = document.pages.add();
 
 //Create a document link
 PdfDocumentLinkAnnotation docLink = PdfDocumentLinkAnnotation(
-	Rect.fromLTWH(10, 40, 30, 30),
-	PdfDestination(document.pages.add(), Offset(10, 0)));
+    Rect.fromLTWH(10, 40, 30, 30),
+    PdfDestination(document.pages.add(), Offset(10, 0)));
 
 //Set the destination mode
 docLink.destination.mode = PdfDestinationMode.fitToPage;

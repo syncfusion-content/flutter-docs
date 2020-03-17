@@ -25,9 +25,9 @@ document.pageSettings.size = PdfPageSize.a4;
 
 //Draw the text by adding page to the document
 document.pages.add().graphics.drawString(
-	'Hello World!!!', PdfStandardFont(PdfFontFamily.helvetica, 27),
-	brush: PdfBrushes.mediumVioletRed,
-	bounds: const Rect.fromLTWH(170, 100, 0, 0));
+    'Hello World!!!', PdfStandardFont(PdfFontFamily.helvetica, 27),
+    brush: PdfBrushes.mediumVioletRed,
+    bounds: const Rect.fromLTWH(170, 100, 0, 0));
 
 //Save and dispose the PDF document
 File('Output.pdf').writeAsBytes(document.save());
@@ -47,8 +47,8 @@ document.pageSettings.size = const Size(200, 300);
 
 //Draw the text by adding page to the document
 document.pages.add().graphics.drawString(
-	'Hello World!!!', PdfStandardFont(PdfFontFamily.helvetica, 19),
-	brush: PdfBrushes.mediumVioletRed);
+    'Hello World!!!', PdfStandardFont(PdfFontFamily.helvetica, 19),
+    brush: PdfBrushes.mediumVioletRed);
 
 //Save and close the PDF document
 File('Output.pdf').writeAsBytes(document.save());
@@ -71,9 +71,9 @@ document.pageSettings.orientation = PdfPageOrientation.landscape;
 
 //Draw the text by adding page to the document
 document.pages.add().graphics.drawString(
-	'Hello World!!!', PdfStandardFont(PdfFontFamily.helvetica, 27),
-	brush: PdfBrushes.mediumVioletRed,
-	bounds: const Rect.fromLTWH(170, 100, 0, 0));
+    'Hello World!!!', PdfStandardFont(PdfFontFamily.helvetica, 27),
+    brush: PdfBrushes.mediumVioletRed,
+    bounds: const Rect.fromLTWH(170, 100, 0, 0));
 
 //Save and close the PDF document
 File('Output.pdf').writeAsBytes(document.save());
@@ -96,9 +96,9 @@ document.pageSettings.rotate = PdfPageRotateAngle.rotateAngle90;
 
 //Draw the text by adding page to the document
 document.pages.add().graphics.drawString(
-	'Hello World!!!', PdfStandardFont(PdfFontFamily.helvetica, 27),
-	brush: PdfBrushes.mediumVioletRed,
-	bounds: const Rect.fromLTWH(170, 100, 0, 0));
+    'Hello World!!!', PdfStandardFont(PdfFontFamily.helvetica, 27),
+    brush: PdfBrushes.mediumVioletRed,
+    bounds: const Rect.fromLTWH(170, 100, 0, 0));
 
 //Save and close the PDF document
 File('Output.pdf').writeAsBytes(document.save());
@@ -120,9 +120,9 @@ PdfSection section = document.sections.add();
 
 //Draw the text by section page graphics
 section.pages.add().graphics.drawString(
-	'Hello World!!!', PdfStandardFont(PdfFontFamily.helvetica, 27),
-	brush: PdfBrushes.mediumVioletRed,
-	bounds: const Rect.fromLTWH(170, 100, 0, 0));
+    'Hello World!!!', PdfStandardFont(PdfFontFamily.helvetica, 27),
+    brush: PdfBrushes.mediumVioletRed,
+    bounds: const Rect.fromLTWH(170, 100, 0, 0));
 
 //Save and close the PDF document
 File('Output.pdf').writeAsBytes(document.save());
