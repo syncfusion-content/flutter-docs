@@ -108,28 +108,29 @@ Widget build(BuildContext context) {
 
 The DateRangePicker supports selecting single, multiple, and range of dates. It also supports programmatic selection.
 
-The selected date or range details can be obtained using the `onSelectionChanged` callback of datepicker. The callback will return the `DateRangePickerSelectionChangedArgs` which contains the selected date or range details.
+The selected date or range details can be obtained using the `onSelectionChanged` callback of date range picker. The callback will return the `DateRangePickerSelectionChangedArgs` which contains the selected date or range details.
 
 {% tabs %}
 {% highlight Dart %}
 
 void _onSelectionChanged(DateRangePickerSelectionChangedArgs args) {
- final dynamic value = args;
+// TODO: implement your code here
 }
 
 @override
 Widget build(BuildContext context) {
-   return MaterialApp(
-       home: Scaffold(
-         body: Container(
-          child: SfDateRangePicker(
-            onSelectionChanged: _onSelectionChanged,
-            selectionMode: DateRangePickerSelectionMode.range,
-            ),
-          ),
+return MaterialApp(
+home: Scaffold(
+body: Container(
+child: SfDateRangePicker(
+onSelectionChanged: _onSelectionChanged,
+selectionMode: DateRangePickerSelectionMode.range,
         ),
-      );
+      ),
+    ),
+  );
 }
+
 
 {% endhighlight %}
 {% endtabs %}
