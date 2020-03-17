@@ -89,7 +89,7 @@ The values currently selected in the range slider. The range slider's thumb is d
 
 N> The `onChanged` callback to update the visual appearance of the range slider when the user drags the thumb through interaction.
 
-***Numeric range slider**
+**Numeric range slider**
 
 {% tabs %}
 {% highlight Dart %}
