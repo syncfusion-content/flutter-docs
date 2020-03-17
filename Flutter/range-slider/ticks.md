@@ -7,7 +7,7 @@ control: SfRangeSlider
 documentation: ug
 ---
 
-# Ticks features for Range Slider
+# Ticks features in range slider
 
 This section helps to learn about how to add major and minor tick in the range slider.
 
