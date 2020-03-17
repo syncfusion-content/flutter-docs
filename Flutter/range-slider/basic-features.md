@@ -87,7 +87,7 @@ Widget build(BuildContext context) {
 
 The values currently selected in the range slider. The range slider's thumb is drawn corresponding to this value. For date values, the range slider doesn’t have auto interval support. So, it is necessary to set `interval`, `dateIntervalType`, and `dateFormat` for date values.
 
-N> The `onChanged` callback to update the visual appearance of the range slider when the user drags the thumb through interaction.
+N> The `onChanged` callback can be used to update the visual appearance of the range slider when the user drags the thumb through interaction.
 
 **Numeric range slider**
 
@@ -168,9 +168,9 @@ Represents the certain interval between two labels. It is necessary for date `Sf
 I> The default value is null. Must be greater than 0.
 
 N>
-* `showDivisions` to render divisors at given interval.
-* `showTicks` to render major ticks at given interval.
-* `showLabels` to render labels at given interval.
+* `showDivisions` can be used to render divisors at given interval.
+* `showTicks` can be used to render major ticks at given interval.
+* `showLabels` can be used to render labels at given interval.
 
 ## Active color
 
