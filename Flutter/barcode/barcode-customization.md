@@ -143,7 +143,7 @@ The following code snippet shows the one dimensional barcode with `module` prope
             height: 150,
             width: 230,
             child: SfBarcodeGenerator(
-              backgroundColor: Colors.tealAccent,
+              backgroundColor:  Color.fromRGBO(193, 250, 250, 1),
               value: '123456789',
               showValue: true,
               symbology: Codabar(module: 1),),
@@ -169,7 +169,7 @@ Below code snippet shows the one dimensional barcode without the `module` proper
             height: 150,
             width: 230,
             child: SfBarcodeGenerator(
-              backgroundColor: Colors.tealAccent,
+              backgroundColor: Color.fromRGBO(193, 250, 250, 1),
               value: '123456789',
               showValue: true,
               symbology: Codabar(),),
