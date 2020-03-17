@@ -10,7 +10,7 @@ documentation: ug
 # Getting Started with Flutter Date Range Picker (SfDateRangePicker)
 This section explains the steps required to add the date range picker widget. This section covers only basic features needed to get started with Syncfusion date range picker widget.
 
-## Add flutter calendar to an application
+## Add flutter date range picker to an application
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
 
 **Add dependency**
