@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Basic features for Range Slider
-This section explains how to add the numeric and date range slider.
+This section explains about how to add the numeric and date range slider.
 
 ## Minimum
 
