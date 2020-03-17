@@ -32,9 +32,9 @@ PdfPage page = document.pages.add();
 
 //Draw the image
 page.graphics.drawImage(
-	PdfBitmap(File('image.jpg').readAsBytesSync()),
-	Rect.fromLTWH(
-		0, 0, page.getClientSize().width, page.getClientSize().height));
+    PdfBitmap(File('image.jpg').readAsBytesSync()),
+    Rect.fromLTWH(
+        0, 0, page.getClientSize().width, page.getClientSize().height));
 
 //Saves the document
 File('Output.pdf').writeAsBytes(document.save());
@@ -70,10 +70,9 @@ page.graphics.rotateTransform(-45);
 
 //Draw image
 page.graphics.drawImage(
-	PdfBitmap(
-	File('image.jpg').readAsBytesSync()),
-	Rect.fromLTWH(
-		0, 0, page.getClientSize().width, page.getClientSize().height));
+    PdfBitmap(File('image.jpg').readAsBytesSync()),
+    Rect.fromLTWH(
+        0, 0, page.getClientSize().width, page.getClientSize().height));
 
 //Restore the graphics state
 page.graphics.restore(state);
