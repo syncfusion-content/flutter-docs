@@ -103,6 +103,8 @@ Widget build(BuildContext context) {
                     min: 0.0,
                     max: 10.0,
                     values: _values,
+                    interval: 2,
+                    showLabels: true,
                     onChanged: (SfRangeValues newValues) {
                         setState(() {
                             _values = newValues;
