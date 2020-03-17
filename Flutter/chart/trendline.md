@@ -11,7 +11,7 @@ documentation: ug
 
 Trendlines are used to show the direction and speed of price.
 
-Trendlines can be generated for Cartesian type series (Line, Column, Scatter, Area, Candle, HiLo etc.) except bar type series. You can add more than one trendline to a series.
+Trendlines can be generated for the Cartesian type series (Line, Column, Scatter, Area, Candle, HiLo, etc.) except bar type series. You can add more than one trendline to a series.
 
 You can use the following properties to customize the behavior and appearance of trendlines.
 
@@ -34,7 +34,7 @@ Chart supports 6 types of trendlines.
 
 A linear trendline is a best fit straight line that is used with simpler data sets. To render a linear trendline, use trendline type as Linear.
 
-{ % highlight dart % }
+{% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
@@ -57,17 +57,18 @@ A linear trendline is a best fit straight line that is used with simpler data se
             )
         );
     }
-{ % end highlight %}
+
+{% endhighlight %}
 
 ![linear trendline](images/trendline/linear.png)
 
 ### Exponential
 
-An exponential trendline is a curved line that is most useful when data values rise or fall at increasingly higher rates. You cannot create an exponential trendline, if your data contains zero or negative values.
+An exponential trendline is a curved line that is most useful when data values rise or fall at increasingly higher rates. You cannot create an exponential trendline if your data contains zero or negative values.
 
-To render an exponential trendline, use trendline type as Exponential .
+To render an exponential trendline, use trendline type as Exponential.
 
-{ % highlight dart % }
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -90,7 +91,8 @@ To render an exponential trendline, use trendline type as Exponential .
             )
         );
     }
-{ % end highlight %}
+
+{% endhighlight %}
 
 ![exponential trendline](images/trendline/exponential.png)
 
@@ -100,7 +102,7 @@ A logarithmic trendline is a best-fit curved line that is most useful when the r
 
 To render a logarithmic trendline, use trendline type as Logarithmic 
 
-{ % highlight dart % }
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -123,7 +125,8 @@ To render a logarithmic trendline, use trendline type as Logarithmic
             )
         );
     }
-{ % end highlight %}
+
+{% endhighlight %}
  
 ![logarithmic trendline](images/trendline/logarithmic.png)
 
@@ -133,7 +136,7 @@ A polynomial trendline is a curved line that is used when data fluctuates.
 
 To render a polynomial trendline, use trendline type as Polynomial.
 
-{ % highlight dart % }
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -156,7 +159,8 @@ To render a polynomial trendline, use trendline type as Polynomial.
             )
         );
     }
-{ % end highlight %}
+
+{% endhighlight %}
 
 
 ![polynomial trendline](images/trendline/polynomial.png)
@@ -166,7 +170,7 @@ A power trendline is a curved line that is best used with data sets that compare
 
 To render a power trendline, use trendline type as Power
 
-{ % highlight dart % }
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -189,7 +193,8 @@ To render a power trendline, use trendline type as Power
             )
         );
     }
-{ % end highlight %}
+
+{% endhighlight %}
 
 ![power trendline](images/trendline/power.png)
 
@@ -198,7 +203,7 @@ A moving average trendline smoothen out fluctuations in data to show a pattern o
 
 To render a moving average trendline, use trendline type as MovingAverage 
 
-{ % highlight dart % }
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -221,7 +226,8 @@ To render a moving average trendline, use trendline type as MovingAverage
             )
         );
     }
-{ % end highlight %}
+
+{% endhighlight %}
 
 ![linear trendline](images/trendline/movingaverage.png)
 
@@ -235,7 +241,7 @@ Forward Forecasting and Backward Forecasting are the two types of forecasting.
 
 The value set for forwardForecast is used to determine the distance moving towards the future trend.
 
-{ % highlight dart % }
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -259,7 +265,8 @@ The value set for forwardForecast is used to determine the distance moving towar
             )
         );
     }
-{ % end highlight %}
+
+{% endhighlight %}
 
 ![forward forecast](images/trendline/forwardforecast.png)
 
@@ -267,7 +274,7 @@ The value set for forwardForecast is used to determine the distance moving towar
 
 The value set for the backwardForecast is used to determine the past trends.
 
-{ % highlight dart % }
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -291,15 +298,16 @@ The value set for the backwardForecast is used to determine the past trends.
             )
         );
     }
-{ % end highlight %}
+
+{% endhighlight %}
 
 ![forward forecast](images/trendline/backwardforecast.png)
 
-## Legend
+## Legend for TrendLine
 
 Legend provides information about the series rendered in the chart.Legend for trendline gets rendered  together  with the series legend when the legend is set to be visible.Also when the  [ `name` ]()  property is assigned to a trendline,the name of the legend is changed based on the name of the trendlines.[`legendItemText`]()  can also be provided for changing the name of the legend.In default  rendering the [`legendIconShape`]()  will be a horizontal line.
 
-{ % highlight dart % }
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -323,7 +331,8 @@ Legend provides information about the series rendered in the chart.Legend for tr
             )
         );
     }
-{ % end highlight %}
+
+{% endhighlight %}
 
 ![forward forecast](images/trendline/legend.png)
 
@@ -332,7 +341,7 @@ Legend provides information about the series rendered in the chart.Legend for tr
 
 Data markers are used to provide information about the data points in the series. You can add a shape to adorn each data point.Trendlines support markers that can be enabled using the property [`markerSettings`]() .
 
-{ % highlight dart % }
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -357,15 +366,16 @@ Data markers are used to provide information about the data points in the series
             )
         );
     }
-{ % end highlight %}
+
+{% endhighlight %}
 
 ![backward forecast](images/trendline/marker.png)
 
-## Tooltip
+## Tooltip for Trendline
 
 Chart will display details about the points through tooltip, when user interaction is done over the point.Trendline Tooltip has the same [`ActivationMode`]()  that has been given in the [`TooltipBehavior`]()  of the series.
 
-{ % highlight dart % }
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
@@ -391,7 +401,10 @@ Chart will display details about the points through tooltip, when user interacti
             )
         );
     }
-{ % end highlight %}
+
+{% endhighlight %}
 
 
 ![tooltip](images/trendline/tooltip.png)
+
+Also refer [`trendline event`]() for customizing the tooltip further.

@@ -40,7 +40,7 @@ documentation: ug
 
 ### Dynamic animation
 
-[`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) also provide the dynamic animation support for the series.The series can be dynamically added to the charts, it will animated by setting the Timer value.when you set the [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/animationDuration.html) value to 0,the series won't be animated. 
+[`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) also provide the dynamic animation support for the series.The series can be dynamically added to the charts, it will animated by setting the timer value. when you set the [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/animationDuration.html) value to 0, the series won't be animated. 
 
 
 ## Empty points
@@ -151,3 +151,42 @@ The chart’s data source can be sorted using the [`sortingOrder`](https://pub.d
 {% endhighlight %}
 
 ![Sorting](images/circular-series-customization/sorting.jpg)
+
+## Color mapping for data points   
+
+The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointColorMapper.html) property is used to map the color field from the data source. 
+
+{% highlight dart %} 
+
+    @override
+     Widget build(BuildContext context) {
+    static dynamic chartData = <SalesData>[
+    SalesData('Rent', 1000,Colors.teal),
+    SalesData('Food', 2500,Colors.lightBlue),
+    SalesData('Savings', 760,Colors.brown),
+    SalesData('Tax', 1897,Colors.grey),
+    SalesData('Others', 2987,Colors.blueGrey)
+     ];
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCircularChart(
+                        primaryXAxis: CategoryAxis(),
+                        series: <PieSeries<SalesData, String>>[
+                            PieSeries<SalesData, String>(
+                                dataSource: chartData,
+              xValueMapper: (SalesData sales, _) => sales.year,
+              yValueMapper: (SalesData sales, _) => sales.sales,
+              //map Color for each dataPoint datasource.
+              pointColorMapper: (SalesData sales,_) => sales.color,
+                            )
+                        ]
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![mapcolor](images/circular-series-customization/colormapping.jpg)

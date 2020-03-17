@@ -9,7 +9,7 @@ documentation: ug
 
 # Multiple and Combinational Charts
 
-*Note* - Multiple and Combinational Charts only applicable for [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html)
+N> Multiple and Combinational Charts only applicable for [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html)
 
 ## Multiple series
 
