@@ -50,8 +50,8 @@ Widget build(BuildContext context) {
 ![Range slider tooltip support](images/tooltip/show-tooltip.png)
 
 N>
-* The `tooltipTextFormatterCallback` for changing the default tooltip text.
-* The `SfRangeSliderThemeData` to customize the appearance of the tooltip text.
+* The `tooltipTextFormatterCallback` can be used for changing the default tooltip text.
+* The `SfRangeSliderThemeData` can be used to customize the appearance of the tooltip text.
 
 ## TooltipTextFormatterCallback
 
