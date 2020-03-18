@@ -8,7 +8,9 @@ documentation: ug
 ---
 
 # Right to left (RTL) in Flutter Calendar (SfCalendar)
-`SfCalendar` supports changing the layout direction of the control in the right-to-left direction by giving the Directionality textDirection to RightToLeft.
+`SfCalendar` supports changing the layout direction of the widget in the right-to-left direction by using the Directionality widget textDirection property to rtl.
+
+You can also change the right to left direction by specifying locale, which support RTL language such as (Arabic(ar) ,Farsi(fa) ,Hebrew (he) ,Pashto(ps), Urdu(ur)) by specifying the `MaterialApp` properties and adding the flutter_localizations package to your application.
 
 {% tabs %}
 {% highlight Dart %}

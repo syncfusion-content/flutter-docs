@@ -60,8 +60,6 @@ return MaterialApp(
 ## Localize the custom text in calendar
 Calendar custom text can be localized using the syncfusion_localizations package and specifying localizationsDelegates in `MaterialApp`.
 
-### Add dependency
-
 To use syncfusion_localizations, add the package as dependency to pubspec.yaml file.
 
 {% highlight dart %}
@@ -71,8 +69,7 @@ syncfusion_localizations:^18.1.0.36
 
 {% endhighlight %}
 
-### Import package
-Import the following package in your Dart code.
+Next, import the syncfusion_localizations library.
 
 {% highlight dart %}
 
