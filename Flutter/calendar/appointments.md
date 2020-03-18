@@ -748,7 +748,8 @@ Widget build(BuildContext context) {
 
 ![Appearance customization](images/appointments/appearance-customization.png)
 
-## See Also
+## See also
 
-* [How to design and configure your appointment editor in event calendar widget Flutter] (https://www.syncfusion.com/kb/11204/how-to-design-and-configure-your-appointment-editor-in-event-calendar-widget-flutter)
-* [How to get appointment details from the OnTap event of the flutter event calendar] (https://www.syncfusion.com/kb/10999/how-to-get-appointment-details-from-the-ontap-event-of-the-flutter-event-calendar)
+[How to design and configure your appointment editor in event calendar widget Flutter](https://www.syncfusion.com/kb/11204/how-to-design-and-configure-your-appointment-editor-in-event-calendar-widget-flutter)
+
+[How to get appointment details from the OnTap event of the flutter event calendar](https://www.syncfusion.com/kb/10999/how-to-get-appointment-details-from-the-ontap-event-of-the-flutter-event-calendar)

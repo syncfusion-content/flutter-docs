@@ -49,7 +49,7 @@ You can add multiple series to the [`series`](https://pub.dev/documentation/sync
 
 {% endhighlight %}
 
-![Multiple series](images/cartesian-series-customization/multipleSeries.jpg)
+![Multiple series](images/cartesian-customization/multipleSeriess.jpg)
 
 Also refer [multiple axes](./axis-customization#multiple-axes) for customizing the axis further.
 
@@ -88,7 +88,7 @@ Also refer [multiple axes](./axis-customization#multiple-axes) for customizing t
 
 {% endhighlight %}
 
-![Combination series](images/cartesian-series-customization/combination_series.jpg)
+![Combination series](images/cartesian-customization/combinationseries.jpg)
 
 **Limitation of combination chart**
 

@@ -66,7 +66,7 @@ graphics.setTransparency(0.25);
 graphics.drawImage(
     PdfBitmap.fromBase64String(alphaPng),
     Rect.fromLTWH(
-      0, 0, graphics.clientSize.width, graphics.clientSize.height));
+        0, 0, graphics.clientSize.width, graphics.clientSize.height));
 graphics.restore(state);
 
 //Save and dispose the PDF document

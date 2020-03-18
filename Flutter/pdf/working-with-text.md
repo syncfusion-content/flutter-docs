@@ -20,9 +20,8 @@ PdfDocument document = PdfDocument();
 
 //Draw text
 document.pages.add().graphics.drawString(
-	'Hello World!!!', PdfStandardFont(PdfFontFamily.helvetica, 20),
-	brush: PdfBrushes.black,
-	bounds: Rect.fromLTWH(10, 10, 300, 50));
+    'Hello World!!!', PdfStandardFont(PdfFontFamily.helvetica, 20),
+    brush: PdfBrushes.black, bounds: Rect.fromLTWH(10, 10, 300, 50));
 
 //Saves the document
 File('Output.pdf').writeAsBytes(document.save());
@@ -55,9 +54,8 @@ PdfDocument document = PdfDocument();
 
 //Draw text
 document.pages.add().graphics.drawString(
-	'Hello World!!!', PdfStandardFont(PdfFontFamily.helvetica, 16),
-	brush: PdfBrushes.black,
-	bounds: Rect.fromLTWH(10, 10, 300, 50));
+    'Hello World!!!', PdfStandardFont(PdfFontFamily.helvetica, 16),
+    brush: PdfBrushes.black, bounds: Rect.fromLTWH(10, 10, 300, 50));
 
 //Saves the document
 File('Output.pdf').writeAsBytes(document.save());
@@ -77,10 +75,9 @@ You can add text using the font data, by initializing PdfFont class as PdfTrueTy
 PdfDocument document = PdfDocument();
 
 //Draw text
-  document.pages.add().graphics.drawString('Hello World!!!',
-	PdfTrueTypeFont(File('Arial.ttf').readAsBytesSync(), 14),
-	brush: PdfBrushes.black,
-	bounds: Rect.fromLTWH(10, 10, 300, 50));
+document.pages.add().graphics.drawString('Hello World!!!',
+    PdfTrueTypeFont(File('Arial.ttf').readAsBytesSync(), 14),
+    brush: PdfBrushes.black, bounds: Rect.fromLTWH(10, 10, 300, 50));
 
 //Saves the document
 File('Output.pdf').writeAsBytes(document.save());
@@ -101,8 +98,8 @@ PdfDocument document = PdfDocument();
 
 //Create page and draw text
 document.pages.add().graphics.drawString(
-	'こんにちは世界', PdfCjkStandardFont(PdfCjkFontFamily.heiseiMinchoW3, 20),
-	brush: PdfBrushes.black, bounds: Rect.fromLTWH(10, 10, 300, 50));
+    'こんにちは世界', PdfCjkStandardFont(PdfCjkFontFamily.heiseiMinchoW3, 20),
+    brush: PdfBrushes.black, bounds: Rect.fromLTWH(10, 10, 300, 50));
 
 //Saves the document
 File('Output.pdf').writeAsBytes(document.save());
@@ -131,8 +128,8 @@ Size size = font.measureString(text);
 
 //Draw text
 document.pages.add().graphics.drawString(text, font,
-	brush: PdfBrushes.black,
-	bounds: Rect.fromLTWH(0, 0, size.width, size.height));
+    brush: PdfBrushes.black,
+    bounds: Rect.fromLTWH(0, 0, size.width, size.height));
 
 //Saves the document
 File('Output.pdf').writeAsBytes(document.save());
@@ -155,18 +152,18 @@ PdfDocument document = PdfDocument();
 PdfPage page = document.pages.add();
 
 String text =
-	'سنبدأ بنظرة عامة مفاهيمية على مستند PDF بسيط. تم تصميم هذا الفصل ليكون توجيهًا مختصرًا قبل الغوص في مستند حقيقي وإنشاءه من البداية.\r\n \r\nيمكن تقسيم ملف PDF إلى أربعة أجزاء: الرأس والجسم والجدول الإسناد الترافقي والمقطورة. يضع الرأس الملف كملف PDF ، حيث يحدد النص المستند المرئي ، ويسرد جدول الإسناد الترافقي موقع كل شيء في الملف ، ويوفر المقطع الدعائي تعليمات حول كيفية بدء قراءة الملف.\r\n\r\nرأس الصفحة هو ببساطة رقم إصدار PDF وتسلسل عشوائي للبيانات الثنائية. البيانات الثنائية تمنع التطبيقات الساذجة من معالجة ملف PDF كملف نصي. سيؤدي ذلك إلى ملف تالف ، لأن ملف PDF يتكون عادةً من نص عادي وبيانات ثنائية (على سبيل المثال ، يمكن تضمين ملف خط ثنائي بشكل مباشر في ملف PDF).\r\n\r\nלאחר הכותרת והגוף מגיע טבלת הפניה המקושרת. הוא מתעדת את מיקום הבית של כל אובייקט בגוף הקובץ. זה מאפשר גישה אקראית של המסמך, ולכן בעת עיבוד דף, רק את האובייקטים הנדרשים עבור דף זה נקראים מתוך הקובץ. זה עושה מסמכי PDF הרבה יותר מהר מאשר קודמיו PostScript, אשר היה צריך לקרוא את כל הקובץ לפני עיבוד זה.';
+    'سنبدأ بنظرة عامة مفاهيمية على مستند PDF بسيط. تم تصميم هذا الفصل ليكون توجيهًا مختصرًا قبل الغوص في مستند حقيقي وإنشاءه من البداية.\r\n \r\nيمكن تقسيم ملف PDF إلى أربعة أجزاء: الرأس والجسم والجدول الإسناد الترافقي والمقطورة. يضع الرأس الملف كملف PDF ، حيث يحدد النص المستند المرئي ، ويسرد جدول الإسناد الترافقي موقع كل شيء في الملف ، ويوفر المقطع الدعائي تعليمات حول كيفية بدء قراءة الملف.\r\n\r\nرأس الصفحة هو ببساطة رقم إصدار PDF وتسلسل عشوائي للبيانات الثنائية. البيانات الثنائية تمنع التطبيقات الساذجة من معالجة ملف PDF كملف نصي. سيؤدي ذلك إلى ملف تالف ، لأن ملف PDF يتكون عادةً من نص عادي وبيانات ثنائية (على سبيل المثال ، يمكن تضمين ملف خط ثنائي بشكل مباشر في ملف PDF).\r\n\r\nלאחר הכותרת והגוף מגיע טבלת הפניה המקושרת. הוא מתעדת את מיקום הבית של כל אובייקט בגוף הקובץ. זה מאפשר גישה אקראית של המסמך, ולכן בעת עיבוד דף, רק את האובייקטים הנדרשים עבור דף זה נקראים מתוך הקובץ. זה עושה מסמכי PDF הרבה יותר מהר מאשר קודמיו PostScript, אשר היה צריך לקרוא את כל הקובץ לפני עיבוד זה.';
 
 //Draw text
 page.graphics.drawString(
-	text, PdfTrueTypeFont(File('Arial.ttf').readAsBytesSync(), 14),
-	brush: PdfBrushes.black,
-	bounds: Rect.fromLTWH(
-		0, 0, page.getClientSize().width, page.getClientSize().height),
-	format: PdfStringFormat(
-		textDirection: PdfTextDirection.rightToLeft,
-		alignment: PdfTextAlignment.right,
-		paragraphIndent: 35));
+    text, PdfTrueTypeFont(File('Arial.ttf').readAsBytesSync(), 14),
+    brush: PdfBrushes.black,
+    bounds: Rect.fromLTWH(
+        0, 0, page.getClientSize().width, page.getClientSize().height),
+    format: PdfStringFormat(
+        textDirection: PdfTextDirection.rightToLeft,
+        alignment: PdfTextAlignment.right,
+        paragraphIndent: 35));
 
 //Saves the document
 File('Output.pdf').writeAsBytes(document.save());
@@ -189,25 +186,25 @@ PdfDocument document = PdfDocument();
 PdfPage page = document.pages.add();
 
 String text =
-	'Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base.';
+    'Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base.';
 
 //Create a text element with the text and font
 //Draw the text in the first column
 PdfTextElement(
-		text: text, font: PdfStandardFont(PdfFontFamily.timesRoman, 14))
-	.draw(
-		page: page,
-		bounds: Rect.fromLTWH(0, 0, page.getClientSize().width / 2,
-			page.getClientSize().height / 2));
+        text: text, font: PdfStandardFont(PdfFontFamily.timesRoman, 14))
+    .draw(
+        page: page,
+        bounds: Rect.fromLTWH(0, 0, page.getClientSize().width / 2,
+            page.getClientSize().height / 2));
 
 //Create a text element with the text and font
 //Draw the text in second column
 PdfTextElement(
-		text: text, font: PdfStandardFont(PdfFontFamily.timesRoman, 14))
-	.draw(
-		page: page,
-		bounds: Rect.fromLTWH(page.getClientSize().width / 2, 0,
-			page.getClientSize().width / 2, page.getClientSize().height / 2));
+        text: text, font: PdfStandardFont(PdfFontFamily.timesRoman, 14))
+    .draw(
+        page: page,
+        bounds: Rect.fromLTWH(page.getClientSize().width / 2, 0,
+            page.getClientSize().width / 2, page.getClientSize().height / 2));
 
 //Saves the document
 File('Output.pdf').writeAsBytes(document.save());
@@ -230,30 +227,30 @@ PdfDocument document = PdfDocument();
 PdfPage page = document.pages.add();
 
 String text =
-	'Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base.';
+    'Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base.';
 
 //Create a text element with the text and font
 PdfTextElement textElement = PdfTextElement(
-	text: text, font: PdfStandardFont(PdfFontFamily.timesRoman, 20));
+    text: text, font: PdfStandardFont(PdfFontFamily.timesRoman, 20));
 
 //Create layout format
 PdfLayoutFormat layoutFormat = PdfLayoutFormat(
-	layoutType: PdfLayoutType.paginate,
-	breakType: PdfLayoutBreakType.fitPage);
+    layoutType: PdfLayoutType.paginate,
+    breakType: PdfLayoutBreakType.fitPage);
 
 //Draw the first paragraph
 PdfLayoutResult result = textElement.draw(
-	page: page,
-	bounds: Rect.fromLTWH(
-		0, 0, page.getClientSize().width / 2, page.getClientSize().height),
-	format: layoutFormat);
+    page: page,
+    bounds: Rect.fromLTWH(
+        0, 0, page.getClientSize().width / 2, page.getClientSize().height),
+    format: layoutFormat);
 
 //Draw the second paragraph from the first paragraph end position
 textElement.draw(
-	page: page,
-	bounds: Rect.fromLTWH(0, result.bounds.bottom + 300,
-		page.getClientSize().width / 2, page.getClientSize().height),
-	format: layoutFormat);
+    page: page,
+    bounds: Rect.fromLTWH(0, result.bounds.bottom + 300,
+        page.getClientSize().width / 2, page.getClientSize().height),
+    format: layoutFormat);
 
 //Saves the document
 File('Output.pdf').writeAsBytes(document.save());
