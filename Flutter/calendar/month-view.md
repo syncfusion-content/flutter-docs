@@ -328,7 +328,7 @@ Widget build(BuildContext context) {
 
 ![Month cell appearance](images/monthview/monthcell_appearance.png)
 
-## See Also
+## See also
 
 [How to show a custom agenda view in the Flutter event calendar widget?](https://www.syncfusion.com/kb/11016/how-to-show-a-custom-agenda-view-in-the-flutter-event-calendar-widget)
 
