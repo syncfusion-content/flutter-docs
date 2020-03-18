@@ -42,7 +42,7 @@ The Syncfusion Flutter Date Range Picker is a lightweight widget that allows use
 
 * **Right to left (RTL)** - Right-to-left direction support for users working in RTL languages like Hebrew and Arabic.
 
-  ![Right to left (RTL) Date Range Picker](images/overview/right_to_left.png)
+  ![Right to left Date Range Picker](images/overview/right_to_left.png)
 
 * **Accessibility** - Easy access of the date range picker by the screen readers.
 
