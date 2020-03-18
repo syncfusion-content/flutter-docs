@@ -68,7 +68,7 @@ Include the following code snippet in the button click event to create a PDF fil
 
 {% highlight dart %}
 
-void _createPDF() async {
+Future<void> _createPDF() async {
   //Create a new PDF document
   PdfDocument document = PdfDocument();
 
