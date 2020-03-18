@@ -25,7 +25,7 @@ body: SfCalendar(
 view: CalendarView.month,
 minDate: DateTime(DateTime.now().year,DateTime.now().month -  6,DateTime.now().day,10,0,0),
      )
-  )  ;
+  );
 }
 
 {% endhighlight %}
@@ -103,9 +103,3 @@ _calendarController.backward();
 
 {% endhighlight %}
 {% endtabs %}
-
-
-
-
-
-

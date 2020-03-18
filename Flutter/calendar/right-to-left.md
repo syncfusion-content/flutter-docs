@@ -29,4 +29,3 @@ view: DateRangePickerView.month,
       );
    }
 }
-

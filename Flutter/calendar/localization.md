@@ -67,7 +67,3 @@ view: CalendarView.month,
 
 {% endhighlight %}
 {% endtabs %}
-
-
-
-
