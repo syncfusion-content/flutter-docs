@@ -347,7 +347,7 @@ Widget build(BuildContext context) {
 
 You can get the complete getting started sample from [here](https://github.com/SyncfusionExamples/flutter-calendar).
 
-## See Also
+## See also
 
 [How to switch between views of the event calendar in Flutter?](https://www.syncfusion.com/kb/10944/how-to-switch-between-views-of-the-event-calendar-in-flutter)
 
