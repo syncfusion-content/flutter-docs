@@ -14,7 +14,7 @@ The Syncfusion Flutter Date Range Picker is a lightweight widget that allows use
 
 ## Key features
 
-* **Multiple scheduler views**: Display month, year, decade, and century views that allow users to easily select and navigate between built-in views. Supports programmatic navigation.
+* **Multiple picker views**: Display month, year, decade, and century views that allow users to easily select and navigate between built-in views. Supports programmatic navigation.
 
 * **Quick navigation**: Navigate back and forth the date-range views and between different view modes.
 
@@ -32,6 +32,6 @@ The Syncfusion Flutter Date Range Picker is a lightweight widget that allows use
 
 * **Right to left(RTL)** - Right-to-left direction support for users working in RTL languages like Hebrew and Arabic.
 
-* **Accessibility** - EEasy access of the date range picker by the screen readers.
+* **Accessibility** - Easy access of the date range picker by the screen readers.
 
 * **Globalization** - Display the current date and time by following the globalized date and time formats.
