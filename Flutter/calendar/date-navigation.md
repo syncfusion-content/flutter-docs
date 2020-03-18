@@ -12,8 +12,8 @@ documentation: ug
 ## Range for visible dates
 Visible dates can be restricted between certain range of dates, using `MinDisplayDate` and `MaxDisplayDate` properties in `SfCalendar`. It is applicable in all the schedule views.
 
-### Minimum Display Date
-`MinDisplayDate` will restrict date navigations features of `Backward`,  also cannot swipe the control using touch gesture beyond the min date range.
+### Minimum display Date
+`MinDisplayDate` will restrict date navigations features of  backward,  also cannot swipe the control using touch gesture beyond the min date range.
 
 {% tabs %}
 {% highlight Dart %}
@@ -31,8 +31,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-### Maximum Display Date :
-`MaxDisplayDate` will restrict date navigations features of `Forward`,  and also cannot swipe the control using touch gesture beyond the max date range.
+### Maximum display Date :
+`MaxDisplayDate` will restrict date navigations features of  forward,  and also cannot swipe the control using touch gesture beyond the max date range.
 
 {% tabs %}
 {% highlight Dart %}
@@ -97,8 +97,8 @@ _calendarController.forward();
 {% endhighlight %}
 {% endtabs %}
 
-### Backward :
-You can use the backward method of controller for viewing the previous immediate visible dates in the `SfCalendar`. It will move to previous month if the calendar view is month, similarly it will move to previous week for week view and previous day for day view.
+### Backward
+You can use the `backward method of controller` for viewing the previous immediate visible dates in the `SfCalendar`. It will move to previous month if the calendar view is month, similarly it will move to previous week for week view and previous day for day view.
 
 {% tabs %}
 {% highlight Dart %}

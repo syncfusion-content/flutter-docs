@@ -9,11 +9,11 @@ documentation: ug
 
 # Localization in Flutter Calendar (SfCalendar)
 
-By default, the calendar widget supports US English localizations. You can change the other languages by specifying the `MaterialApp` properties and adding the flutter_localizations package to your application.
+By default, the calendar widget supports US English localizations. You can change the other languages by specifying the `MaterialApp` properties and adding the `flutter_localizations` package to your application.
 
 As of February 2020, flutter package supports 77 languages.
 
-To use flutter_localizations, add the package as dependency to pubspec.yaml file.
+To use `flutter_localizations`, add the package as dependency to pubspec.yaml file.
 
 {% highlight dart %}
 
@@ -23,7 +23,7 @@ sdk: flutter
 
 {% endhighlight %}
 
-Next, import the flutter_localizations library and specify localizationsDelegates and supportedLocales for `MaterialApp`.
+Next, import the `flutter_localizations` library and specify `localizationsDelegates` and supportedLocales for `MaterialApp`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -58,9 +58,9 @@ return MaterialApp(
 {% endtabs %}
 
 ## Localize the custom text in calendar
-Calendar custom text can be localized using the syncfusion_localizations package and specifying localizationsDelegates in `MaterialApp`.
+Calendar custom text can be localized using the `syncfusion_localizations` package and specifying localizationsDelegates in `MaterialApp`.
 
-To use syncfusion_localizations, add the package as dependency to pubspec.yaml file.
+To use `syncfusion_localizations`, add the package as dependency to pubspec.yaml file.
 
 {% highlight dart %}
 
@@ -77,7 +77,7 @@ import 'package:syncfusion_localizations/syncfusion_localizations.dart';
 
 {% endhighlight %}
 
-Then, declare the SfGlobalLocalizations.delegate in the localizationsDelegates, which is used to localize the custom string (mention) using in calendar and specify the supported locales as well.
+Then, declare the `SfGlobalLocalizations.delegate` in the `localizationsDelegates`, which is used to localize the custom string (mention) using in calendar and specify the supported locales as well.
 
 {% tabs %}
 {% highlight Dart %}
