@@ -113,4 +113,4 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Localization](images/localization/localization.png)
+![Localization](images/localization/localization.jpg)
