@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Overview of Syncfusion Flutter Date Range Picker | Date Picker | Features
+title: Overview of Syncfusion Flutter Date Range Picker | Date Picker
 description: Learn the key features of Syncfusion Flutter Date Range Picker (SfDateRangePicker) widget and more details | Calendar
 platform: flutter
 control: SfDateRangePicker
