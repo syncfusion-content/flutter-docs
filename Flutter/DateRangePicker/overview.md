@@ -24,7 +24,7 @@ The Syncfusion Flutter Date Range Picker is a lightweight widget that allows use
 
 * **Change first day of week**: Customize the first day of the week as needed. The default first day is Sunday.
 
-* **Blackout dates**: Disable any date in a calendar to make it inactive. Easily prevent the selection of weekends by disabling them.
+* **Blackout dates**: Disable any date to make it inactive in a date range picker. Easily prevent the selection of weekends by disabling them.
 
 * **Highlight holidays and weekends**: Highlight any date or every weekend in a month as special days using decoration in flutter date range picker.
 
