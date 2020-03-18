@@ -123,6 +123,6 @@ Widget build(BuildContext context) {
 >**NOTE**
 * The `dateTextStyle` property not applicable for view header in month view of calendar.
 
-## See Also
+## See also
 
 [How to add custom header and view header in Flutter event calendar widget](https://www.syncfusion.com/kb/10997/how-to-add-custom-header-and-view-header-in-flutter-event-calendar-widget)
