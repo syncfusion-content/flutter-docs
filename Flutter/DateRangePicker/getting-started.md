@@ -65,7 +65,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Date Range Picker](images/getting-started/initialize.png)
+![Initialize Date Range Picker](images/getting-started/initialize.png)
 
 ## Multiple picker views
 
@@ -85,7 +85,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Date Range Picker](images/getting-started/picker_views.png)
+![Multiple picker views Date Range Picker](images/getting-started/picker_views.png)
 
 ## Change first day of week
 
@@ -137,4 +137,4 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-  ![Date Range Picker](images/overview/selection_mode.png)
+  ![Date selection Date Range Picker](images/overview/selection_mode.png)
