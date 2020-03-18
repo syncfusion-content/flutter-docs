@@ -317,6 +317,6 @@ Widget build(BuildContext context) {
 
 ![Time text appearance](images/timeslot-views/time-text-appearance.png)
 
-## See Also
+## See also
 
-* [Time label customization in the flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/11008/how-to-customize-the-time-label-in-the-flutter-event-calendar-sfcalendar)
+[Time label customization in the flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/11008/how-to-customize-the-time-label-in-the-flutter-event-calendar-sfcalendar)
