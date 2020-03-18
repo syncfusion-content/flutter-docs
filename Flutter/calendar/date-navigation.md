@@ -50,7 +50,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![MinMaxDate](images/date-navigation/minmaxdate.png)
+![MinMaxDate Calendar](images/date-navigation/minmaxdate.png)
 
 ## Programmatic date navigation and selection
 You can programmatically navigate and select the dates in calendar widget by using the `displayDate` and `selectedDate` properties of controller.

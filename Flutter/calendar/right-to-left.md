@@ -29,4 +29,4 @@ Widget build(BuildContext context) {
    }
 }
 
-![Right to Left](images/right-to-left/rtl.png)
+![Right to Left Calendar](images/right-to-left/rtl.png)
