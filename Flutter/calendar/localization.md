@@ -9,18 +9,64 @@ documentation: ug
 
 # Localization in Flutter Calendar (SfCalendar)
 
-The `SfCalendar control is available with complete localization support. Localization can be specified by setting locale in Material app.
+By default, the calendar widget supports US English localizations. You can change the other languages by specifying the `MaterialApp` properties and adding the flutter_localizations package to your application.
 
-## Change the default control language
-Based on the locale specified in the material app, control such as date, time, and days are localized accordingly.
+As of February 2020, flutter package supports 77 languages.
 
-### Add dependency
+To use flutter_localizations, add the package as dependency to pubspec.yaml file.
 
 {% highlight dart %}
 
 dependencies:
 flutter_localizations:
 sdk: flutter
+
+{% endhighlight %}
+
+Next, import the flutter_localizations library and specify localizationsDelegates and supportedLocales for `MaterialApp`.
+
+{% tabs %}
+{% highlight Dart %}
+
+import 'package:flutter_localizations/flutter_localizations.dart';
+
+@override
+Widget build(BuildContext context) {
+return MaterialApp(
+        localizationsDelegates: [
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+        ],
+        supportedLocales: [
+            const Locale('zh'),
+            const Locale('ar'),
+            const Locale('ja'),
+        ],
+        locale: const Locale('zh'),
+        title: 'Calendar Localization',
+        home: Scaffold(
+            appBar: AppBar(
+            title: Text('Calendar'),
+            ),
+            body: SfCalendar(
+            view: CalendarView.month,
+            ),
+    ),
+)
+
+{% endhighlight %}
+{% endtabs %}
+
+## Localize the custom text in calendar
+Calendar custom text can be localized using the syncfusion_localizations package and specifying localizationsDelegates in `MaterialApp`.
+
+### Add dependency
+
+To use syncfusion_localizations, add the package as dependency to pubspec.yaml file.
+
+{% highlight dart %}
+
+dependencies:
 syncfusion_localizations:^18.1.0.36
 
 {% endhighlight %}
@@ -30,40 +76,41 @@ Import the following package in your Dart code.
 
 {% highlight dart %}
 
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:syncfusion_localizations/syncfusion_localizations.dart';
 
 {% endhighlight %}
 
-Then, declare the SfGlobalLocalizations.delegate in the localizationsDelegates and specify the supported locales and current locale as depicted below. By default, the schedule control is available with en locale, which is English.
+Then, declare the SfGlobalLocalizations.delegate in the localizationsDelegates, which is used to localize the custom string (mention) using in calendar and specify the supported locales as well.
 
 {% tabs %}
 {% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
-return MaterialApp(
-localizationsDelegates: [
-GlobalMaterialLocalizations.delegate,
-GlobalWidgetsLocalizations.delegate,
-SfGlobalLocalizations.delegate
-],
-supportedLocales: [
-const Locale('zh'),
-const Locale('ar'),
-const Locale('ja'),
-],
-locale: const Locale('zh'),
-title: 'Calendar Localization',
-home: Scaffold(
-appBar: AppBar(
-title: Text('Calendar'),
-),
-body: SfCalendar(
-view: CalendarView.month,
-       ),
-    ),
+        return MaterialApp(
+                localizationsDelegates: [
+                        GlobalMaterialLocalizations.delegate,
+                        GlobalWidgetsLocalizations.delegate,
+                        SfGlobalLocalizations.delegate
+                        ],
+                supportedLocales: [
+                        const Locale('zh'),
+                        const Locale('ar'),
+                        const Locale('ja'),
+                        ],
+                locale: const Locale('zh'),
+                title: 'Calendar Localization',
+                home: Scaffold(
+                appBar: AppBar(
+                    title: Text('Calendar'),
+                    ),
+                    body: SfCalendar(
+                    view: CalendarView.month,
+                ),
+        ),
 )
 
 {% endhighlight %}
 {% endtabs %}
+
+![Localization](images/localization/localization.png)

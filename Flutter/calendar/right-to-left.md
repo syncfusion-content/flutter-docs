@@ -7,7 +7,7 @@ control: SfCalendar
 documentation: ug
 ---
 
-# Right to left(RTL) in Flutter Calendar (SfCalendar)
+# Right to left (RTL) in Flutter Calendar (SfCalendar)
 `SfCalendar` supports changing the layout direction of the control in the right-to-left direction by giving the Directionality textDirection to RightToLeft.
 
 {% tabs %}
@@ -15,17 +15,18 @@ documentation: ug
 
 @override
 Widget build(BuildContext context) {
-return Directionality(
-textDirection: TextDirection.rtl,
-child: Scaffold(
-appBar: AppBar(
-title: const Text('RTL in calendar'),
-backgroundColor: Colors.blue,
-),
-body: SfDateRangePicker(
-view: DateRangePickerView.month,
+        return Directionality(
+            textDirection: TextDirection.rtl,
+            child: Scaffold(
+                appBar: AppBar(
+                title: const Text('RTL in calendar'),
+            ),
+            body: SfDateRangePicker(
+            view: DateRangePickerView.month,
              ),
          ),
       );
    }
 }
+
+![Right to Left](images/right-to-left/rtl.png)

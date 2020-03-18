@@ -20,12 +20,12 @@ Visible dates can be restricted between certain range of dates, using `MinDispla
 
 @override
 Widget build(BuildContext context) {
-return Scaffold(
-body: SfCalendar(
-view: CalendarView.month,
-minDate: DateTime(DateTime.now().year,DateTime.now().month -  6,DateTime.now().day,10,0,0),
-     )
-  );
+        return Scaffold(
+            body: SfCalendar(
+                view: CalendarView.month,
+                minDate: DateTime(2020, 03, 05, 10 , 0, 0),
+                )
+        );
 }
 
 {% endhighlight %}
@@ -39,14 +39,18 @@ minDate: DateTime(DateTime.now().year,DateTime.now().month -  6,DateTime.now().d
 
 @override
 Widget build(BuildContext context) {
-return Scaffold(
-body: SfCalendar(
-view: CalendarView.month,
-maxDate: DateTime(DateTime.now().year,DateTime.now().month +  6,DateTime.now().day,10,0,0),));
+        return Scaffold(
+            body: SfCalendar(
+            view: CalendarView.month,
+            maxDate: DateTime(2020, 03, 25, 10 , 0, 0),
+            )
+        );
 }
 
 {% endhighlight %}
 {% endtabs %}
+
+![MinMaxDate](images/date-navigation/minmaxdate.png)
 
 ## Programmatic date navigation and selection
 You can programmatically navigate and select the dates in calendar widget by using the `displayDate` and `selectedDate` properties of controller.
