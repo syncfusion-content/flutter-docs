@@ -319,4 +319,4 @@ Widget build(BuildContext context) {
 
 ## See Also
 
-* [Time label customization in the flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/11008/how-to-customize-the-time-label-in-the-flutter-event-calendar-sfcalendar)
+[Time label customization in the flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/11008/how-to-customize-the-time-label-in-the-flutter-event-calendar-sfcalendar)

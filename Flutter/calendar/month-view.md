@@ -330,6 +330,8 @@ Widget build(BuildContext context) {
 
 ## See Also
 
-* [How to show a custom agenda view in the Flutter event calendar widget?] (https://www.syncfusion.com/kb/11016/how-to-show-a-custom-agenda-view-in-the-flutter-event-calendar-widget)
-* [How to customize the agenda item height in the flutter event calendar (SfCalendar)] (https://www.syncfusion.com/kb/11015/how-to-customize-the-agenda-item-height-in-the-flutter-event-calendar-sfcalendar)
-* [How to customize agenda view height based on the Flutter event calendar widget height](https://www.syncfusion.com/kb/11013/how-to-customize-agenda-view-height-based-on-the-flutter-event-calendar-widget-height)
+[How to show a custom agenda view in the Flutter event calendar widget?](https://www.syncfusion.com/kb/11016/how-to-show-a-custom-agenda-view-in-the-flutter-event-calendar-widget)
+
+[How to customize the agenda item height in the flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/11015/how-to-customize-the-agenda-item-height-in-the-flutter-event-calendar-sfcalendar)
+
+[How to customize agenda view height based on the Flutter event calendar widget height](https://www.syncfusion.com/kb/11013/how-to-customize-agenda-view-height-based-on-the-flutter-event-calendar-widget-height)
