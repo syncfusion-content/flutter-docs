@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Series customization in Syncfusion Flutter charts
-description: Learn how to customize the appearance of the series in a chart.
+title: Cartesian series customization in Syncfusion Flutter charts
+description: Learn how to customize the series features like animation, transpose, color palette, gradient, etc., in cartesian chart
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Series customization
+# Cartesian series customization
 
 ## Animation
 
@@ -39,6 +39,10 @@ documentation: ug
 
 {% endhighlight %}
 
+### Dynamic animation
+
+[`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) also provide the dynamic animation support for the series.The series can be dynamically added to the charts, it will animated by setting the timer value. when you set the [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/animationDuration.html) value to 0, the series won't be animated. 
+
 ## Transpose the series
 
 The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/isTransposed.html) property of [`CartesianSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries-class.html) is used to transpose the horizontal and vertical axes, to view the data in a different perspective. Using this feature, you can render vertical charts.
@@ -69,7 +73,7 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
 {% endhighlight %}
 
-![Transposed chart](images/series-customization/transpose.jpg)
+![Transposed chart](images/cartesian-customization/transposes.jpg)
 
 ## Color palette
 
@@ -115,7 +119,7 @@ The [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
 
 {% endhighlight %}
 
-![Palette](images/series-customization/palette.jpg)
+![Palette](images/cartesian-customization/palettee.jpg)
 
 ## Color mapping for data points   
 
@@ -160,7 +164,7 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
 
 {% endhighlight %}
 
-![Point color mapping](images/series-customization/color_mapping.jpg)
+![Point color mapping](images/cartesian-customization/colormapping.jpg)
 
 ## Gradient fill
 
@@ -204,7 +208,7 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
 
 {% endhighlight %}
 
-![Gradient color](images/series-customization/gradient.jpg)
+![Gradient color](images/cartesian-customization/gradientt.jpg)
 
 ## Empty points
 
@@ -245,7 +249,7 @@ The data points that has null value are considered as empty points. Empty data p
 
 {% endhighlight %}
 
-![Empty points](images/series-customization/emptyPoint.jpg)
+![Empty points](images/cartesian-customization/emptyPoint.jpg)
 
 ### Empty point customization
 
@@ -290,7 +294,7 @@ Specific color for empty point can be set by [`color`](https://pub.dev/documenta
 
 {% endhighlight %}
 
-![Empty points customization](images/series-customization/emptyPoint_customization.jpg)
+![Empty points customization](images/cartesian-customization/emptyPointcustomization.jpg)
 
 ## Sorting
 
@@ -331,4 +335,4 @@ The chart’s data source can be sorted using the [`sortingOrder`](https://pub.d
 
 {% endhighlight %}
 
-![Sorting](images/series-customization/sorting.jpg)
+![Sorting](images/cartesian-customization/sortings.jpg)
