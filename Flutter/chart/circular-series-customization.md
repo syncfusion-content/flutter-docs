@@ -75,7 +75,7 @@ The data points that has null value are considered as empty points. Empty data p
 
 {% endhighlight %}
 
-![Empty points](images/circular-series-customization/emptyPoint.jpg)
+![Empty points](images/circular-customization/emptyPoints.jpg)
 
 ### Empty point customization
 
@@ -111,7 +111,7 @@ Specific color for empty point can be set by [`color`](https://pub.dev/documenta
 
 {% endhighlight %}
 
-![Empty points customization](images/circular-series-customization/emptyPoint-customization.jpg)
+![Empty points customization](images/circular-customization/emptyPointcustomization.jpg)
 
 ## Sorting
 
@@ -150,7 +150,7 @@ The chart’s data source can be sorted using the [`sortingOrder`](https://pub.d
 
 {% endhighlight %}
 
-![Sorting](images/circular-series-customization/sorting.jpg)
+![Sorting](images/circular-customization/sortings.jpg)
 
 ## Color mapping for data points   
 
@@ -189,4 +189,4 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
 
 {% endhighlight %}
 
-![mapcolor](images/circular-series-customization/colormapping.jpg)
+![mapcolor](images/circular-customization/color-mapping.jpg)
