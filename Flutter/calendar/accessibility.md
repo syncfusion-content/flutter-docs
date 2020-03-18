@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Accessibility of Syncfusion Flutter Calendar | Calendar
-description: Learn about the accessibility support in Syncfusion Flutter Calendar widget
+description: Learn about the accessibility support in Syncfusion Flutter Calendar (SfCalendar) widget  | Calendar
 platform: flutter
 control: SfCalendar
 documentation: ug
 ---
 
-# Accessibility
+# Accessibility with Flutter Calendar (SfCalendar)
 The `SfCalendar` can easily be accessed by screen readers. Please find the following table  for inner elements.
 
 ## Month view
@@ -25,7 +25,7 @@ The `SfCalendar` can easily be accessed by screen readers. Please find the follo
 ## TimeSlot view
 | View                   | Format                                              | Example                                                                      |
 |------------------------|-----------------------------------------------------|------------------------------------------------------------------------------|
-| Timeslotview| hh mm a dd/MMMM/yyyy | 11AM the 28th of January 2020 |
+| Timeslot view| hh mm a dd/MMMM/yyyy | 11AM the 28th of January 2020 |
 | Appointment | Subject hh mm a – hh mm a dd/MMMM/yyyy  | Yoga therapy 10AM to 11AM the 29th of January 2020                           |
 | Header | MMMM yyyy | January 2020|
 | View header | EEE, dd/MMMM/yyyy| Wednesday the 29th of January 2020|
