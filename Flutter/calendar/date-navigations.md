@@ -12,7 +12,7 @@ documentation: ug
 ## Range for visible dates
 Visible dates can be restricted between certain range of dates, using `MinDisplayDate` and `MaxDisplayDate` properties in `SfCalendar`. It is applicable in all the schedule views.
 
-### Minimum display Date
+### Minimum display Date :
 `MinDisplayDate` will restrict date navigations features of  backward,  also cannot swipe the control using touch gesture beyond the min date range.
 
 {% tabs %}
