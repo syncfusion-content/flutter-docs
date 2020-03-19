@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Right to Left of Syncfusion Flutter Calendar | Calendar
-description: Describes how Calendar works on right-to-left localization in Flutter Calendar(SfCalendar) | Calendar
+title: Right to Left of Syncfusion Flutter Calendar | Scheduler
+description: Describes how Calendar works on right-to-left localization in Flutter Calendar(SfCalendar) | Scheduler
 platform: flutter
 control: SfCalendar
 documentation: ug

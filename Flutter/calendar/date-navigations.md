@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Date Navigations of Syncfusion Flutter Calendar | Scheduler
-description: Learn about the complete navigation and gesture support in Syncfusion Flutter Calendar (SfCalendar) widget | Calendar
+description: Learn about the complete navigation and gesture support in Syncfusion Flutter Calendar (SfCalendar) widget | Scheduler
 platform: flutter
 control: SfCalendar
 documentation: ug
