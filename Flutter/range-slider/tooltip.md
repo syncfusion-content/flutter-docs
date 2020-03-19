@@ -11,7 +11,7 @@ documentation: ug
 
 This section helps to learn about how to add tooltip in the range slider.
 
-## Show tooltip
+## Show tooltips
 
 You can enable tooltips for both thumbs. It is used to clearly indicate the current selection of the ranges during interaction. By default, tooltip text is formatted with either `numberFormat` or `dateFormat`.
 
@@ -50,10 +50,10 @@ Widget build(BuildContext context) {
 ![Range slider tooltip support](images/tooltip/show-tooltip.png)
 
 N>
-* The `tooltipTextFormatterCallback` can be used for changing the default tooltip text.
-* The `SfRangeSliderThemeData` can be used to customize the appearance of the tooltip text.
+* Refer the `tooltipTextFormatterCallback` for changing the default tooltip text.
+* Refer the `SfRangeSliderThemeData` for customizing the appearance of the tooltip text.
 
-## TooltipTextFormatterCallback
+## Tooltip text format
 
 You can format or change the whole tooltip label text. Its arguments contains the following parameters:
 
@@ -78,7 +78,7 @@ Widget build(BuildContext context) {
                     showTicks: true,
                     showLabels: true,
                     showTooltip: true,
-                    dateFormat: DateFormat('h:mm a'),
+                    dateFormat: DateFormat('h:mm'),
                     dateIntervalType: DateIntervalType.hours,
                     tooltipTextFormatterCallback: (dynamic actualValue, String formattedText) {
                         return DateFormat('h:mm a').format(actualValue);

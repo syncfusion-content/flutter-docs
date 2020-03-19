@@ -7,85 +7,22 @@ control: SfRangeSlider
 documentation: ug
 ---
 
-# Basic features of Range Slider
+# Basic features of range slider
 This section explains about how to add the numeric and date range slider.
 
 ## Minimum
 
-The minimum value that the user can select. The default value of `min` property is 0.0.
+The minimum value that the user can select. The default value of `min` property is 0.0. Must be less than the `max` value.
 
 ## Maximum
 
-The maximum value that the user can select. The default value of `max` property is 1.0.
-
-## onChanged
-
-The `onChanged` callback is called when the user selects a value through interaction. The range slider passes the new values to the callback but does not change its state until the parent widget rebuilds the range slider with new values.
-
-N> If it is null, the range slider will be disabled.
-
-**Enabled state**
-
-{% tabs %}
-{% highlight Dart %}
-
-SfRangeValues _values = SfRangeValues(3.0, 7.0);
-
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfRangeSlider(
-                    min: 0.0,
-                    max: 10.0,
-                    values: _values,
-                    onChanged: (SfRangeValues newValues) {
-                       setState(() {
-                           _values = newValues;
-                        });
-                   },
-              )
-          )
-      )
-  );
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-![Enabled range slider](images/basic-features/enabled-state.png)
-
-**Disabled state**
-
-{% tabs %}
-{% highlight Dart %}
-
-SfRangeValues _values = SfRangeValues(3.0, 7.0);
-
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfRangeSlider(
-                    min: 0.0,
-                    max: 10.0,
-                    values: _values,
-              )
-          )
-      )
-  );
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-![Disabled range slider](images/basic-features/disabled-state.png)
+The maximum value that the user can select. The default value of `max` property is 1.0. Must be greater than the `min`.
 
 ## Values
 
-The values currently selected in the range slider. The range slider's thumb is drawn corresponding to this value. For date values, the range slider doesn’t have auto interval support. So, it is necessary to set `interval`, `dateIntervalType`, and `dateFormat` for date values.
+The values currently selected in the range slider. The range slider's thumb is drawn corresponding to this value.
+
+For date values, the range slider does not have auto interval support. So, it is mandatory to set `interval`, `dateIntervalType`, and `dateFormat` for date values.
 
 N> The `onChanged` callback can be used to update the visual appearance of the range slider when the user drags the thumb through interaction.
 
@@ -161,20 +98,15 @@ Widget build(BuildContext context) {
 
 ![Date range slider](images/basic-features/date-labels.png)
 
-## Interval
+## OnChanged callback
 
-Represents the certain interval between two labels. It is necessary for date `SfRangeSlider`. Based on this value, labels, major ticks and divisions are drawn. For example, if `min` is 0.0 and `max` is 4.0 and `interval` is 2.0, then the range slider will render the major ticks at 0.0, 2.0, and 4.0.
+The `onChanged` callback is called when the user selects a value through interaction.
 
-I> The default value is null. Must be greater than 0.
+N> The range slider passes the new values to the callback but does not change its state until the parent widget rebuilds the range slider with new values.
 
-N>
-* `showDivisions` can be used to render divisors at given interval.
-* `showTicks` can be used to render major ticks at given interval.
-* `showLabels` can be used to render labels at given interval.
+N> If it is null, the range slider will be disabled.
 
-## Active color
-
-Represents the color applied to the active track, thumb, overlay, and inactive divisors. The `active` side of the range slider is between the left and right thumbs.
+**Enabled state**
 
 {% tabs %}
 {% highlight Dart %}
@@ -190,13 +122,11 @@ Widget build(BuildContext context) {
                     min: 0.0,
                     max: 10.0,
                     values: _values,
-                    activeColor: Colors.red,
-                    showDivisors: true,
                     onChanged: (SfRangeValues newValues) {
-                        setState(() {
-                            _values = newValues;
+                       setState(() {
+                           _values = newValues;
                         });
-                    },
+                   },
               )
           )
       )
@@ -206,11 +136,9 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Active color support](images/basic-features/active-color.png)
+![Enabled range slider](images/basic-features/enabled-state.png)
 
-## Inactive color
-
-Represents the color applied to the inactive track and active divisors. The "inactive" side of the range slider is between the `min` value and the left thumb, and the right thumb and the `max` value.
+**Disabled state**
 
 {% tabs %}
 {% highlight Dart %}
@@ -226,14 +154,6 @@ Widget build(BuildContext context) {
                     min: 0.0,
                     max: 10.0,
                     values: _values,
-                    activeColor: Colors.red,
-                    inactiveColor: Colors.red.withOpacity(0.2),
-                    showDivisors: true,
-                    onChanged: (SfRangeValues newValues) {
-                        setState(() {
-                            _values = newValues;
-                        });
-                    },
               )
           )
       )
@@ -243,4 +163,4 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Inactive color support](images/basic-features/inactive-color.png)
+![Disabled range slider](images/basic-features/disabled-state.png)
