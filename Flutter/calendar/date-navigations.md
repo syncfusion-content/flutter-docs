@@ -10,7 +10,7 @@ documentation: ug
 # Date Navigations in Flutter Calendar (SfCalendar)
 
 ## Range for visible dates
-Visible dates can be restricted between certain range of dates, using  [minDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/minDate.html) and [maxDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/maxDate.html)  properties in `SfCalendar`. It is applicable in all the schedule views.
+Visible dates can be restricted between certain range of dates, using [minDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/minDate.html) and [maxDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/maxDate.html) properties in `SfCalendar`. It is applicable in all the schedule views.
 
 ### Minimum display date
 `minDate` will restrict date navigations features of  backward, also cannot swipe the control using touch gesture beyond the min date range.
@@ -53,7 +53,7 @@ Widget build(BuildContext context) {
 ![MinMaxDate Calendar](images/date-navigation/minmaxdate.png)
 
 ## Programmatic date navigation
-You can programmatically navigate dates in calendar widget by using the [displayDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/controller/displayDate.html) properties of `controller`.
+You can programmatically navigate dates in calendar widget by using the [displayDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/displayDate.html) propertie of `CalendarController`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -83,7 +83,7 @@ class MyAppState extends State<MyApp>{
 {% endtabs %}
 
 ## Programmatic date selection
-You can programmatically select the dates in calendar widget by [selectedDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/controller/selectedDate.html) properties of `controller`.
+You can programmatically select the dates in calendar widget by [selectedDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/selectedDate.html) propertie of `CalendarController`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -113,10 +113,10 @@ class MyAppState extends State<MyApp>{
 {% endtabs %}
 
 ## Programmatically change to adjacent dates
-By default, the date can be navigated to next and previous views using touch gesture, by swiping the control from right to left and left to right direction. The view can be also changed programmatically using the [forward](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/controller/forward.html) and [backward](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/controller/backward.html) methods available in `CalendarController`.
+By default, the date can be navigated to next and previous views using touch gesture, by swiping the control from right to left and left to right direction. The view can be also changed programmatically using the [forward](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/forward.html) and [backward](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/backward.html) methods available in `CalendarController`.
 
 ### Forward
-You can use the `forward` method of `controller` for viewing the next immediate visible dates in the `SfCalendar`. It will move to next month if the calendar view is month, similarly it will move to next week for week view and next day for day view.
+You can use the `forward` method of `CalendarController` for viewing the next immediate visible dates in the `SfCalendar`. It will move to next month if the calendar view is month, similarly it will move to next week for week view and next day for day view.
 
 {% tabs %}
 {% highlight Dart %}
