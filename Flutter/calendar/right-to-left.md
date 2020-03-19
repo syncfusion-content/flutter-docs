@@ -17,17 +17,19 @@ You can also change the right to left direction by specifying locale, which supp
 
 @override
 Widget build(BuildContext context) {
-        return Directionality(
-            textDirection: TextDirection.rtl,
-            child: Scaffold(
-                appBar: AppBar(
-                title: const Text('RTL in calendar'),
-            ),
-            body: SfDateRangePicker(
-            view: DateRangePickerView.month,
+     return Scaffold(
+         appBar: AppBar(
+             title: Text('Right to Left'),
+             ),
+         body: Directionality(
+             textDirection: TextDirection.rtl,
+             child: SfCalendar(
+             view: CalendarView.month,
              ),
          ),
-      );
-   }
+     );
 }
+   
+{% endhighlight %}
+{% endtabs %}
 
