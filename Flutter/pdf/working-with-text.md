@@ -259,3 +259,29 @@ File('Output.pdf').writeAsBytes(document.save());
 document.dispose();
 	
 {% endhighlight %}
+
+## Draw text with Pens and Brushes
+
+Pens and brushes are used to draw the content on PDF document with specific color and style.
+
+{% highlight dart %}
+
+//Create a new PDF document
+final PdfDocument document = PdfDocument();
+
+//Add a new page and draw text using PdfPen and PdfSolidBrush
+document.pages.add().graphics.drawString(
+    'Hello World!', PdfStandardFont(PdfFontFamily.helvetica, 20),
+    brush: PdfSolidBrush(PdfColor(0, 0, 0)),
+    pen: PdfPen(PdfColor(255, 0, 0), width : 0.5),
+    bounds: const Rect.fromLTWH(0, 0, 500, 50));
+
+//Save the document
+final List<int> bytes = document.save();
+
+//Dispose the document
+document.dispose();
+
+{% endhighlight %}
+
+The Syncfusion Flutter PDF has Pens and Brushes with various built-in colors to draw the content on PDF document.
