@@ -23,7 +23,7 @@ sdk: flutter
 
 {% endhighlight %}
 
-Next, import the `flutter_localizations` library and specify `localizationsDelegates` and supportedLocales for `MaterialApp`.
+Next, import the `flutter_localizations` library and specify `localizationsDelegates` and `supportedLocales` for `MaterialApp`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -59,7 +59,7 @@ return MaterialApp(
 {% endtabs %}
 
 ## Localize the custom text in Calendar
-Calendar custom text can be localized using the `syncfusion_localizations` package and specifying localizationsDelegates in `MaterialApp`.
+Calendar custom text can be localized using the `syncfusion_localizations` package and specifying `localizationsDelegates` in `MaterialApp`.
 
 To use `syncfusion_localizations`, add the package as dependency to `pubspec.yaml` file.
 
