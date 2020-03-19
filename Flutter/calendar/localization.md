@@ -51,8 +51,9 @@ return MaterialApp(
             body: SfCalendar(
             view: CalendarView.month,
             ),
-    ),
-)
+       ),
+   )
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -89,12 +90,12 @@ Widget build(BuildContext context) {
                         GlobalMaterialLocalizations.delegate,
                         GlobalWidgetsLocalizations.delegate,
                         SfGlobalLocalizations.delegate
-                        ],
+                ],
                 supportedLocales: [
                         const Locale('zh'),
                         const Locale('ar'),
                         const Locale('ja'),
-                        ],
+                ],
                 locale: const Locale('zh'),
                 title: 'Calendar Localization',
                 home: Scaffold(
@@ -104,8 +105,9 @@ Widget build(BuildContext context) {
                     body: SfCalendar(
                     view: CalendarView.month,
                 ),
-        ),
-)
+         ),
+    )
+}
 
 {% endhighlight %}
 {% endtabs %}
