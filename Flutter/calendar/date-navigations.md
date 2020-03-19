@@ -12,8 +12,8 @@ documentation: ug
 ## Range for visible dates
 Visible dates can be restricted between certain range of dates, using `MinDisplayDate` and `MaxDisplayDate` properties in `SfCalendar`. It is applicable in all the schedule views.
 
-### Minimum display Date :
-`MinDisplayDate` will restrict date navigations features of  backward,  also cannot swipe the control using touch gesture beyond the min date range.
+### Minimum display Date
+[minDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/minDate.html) will restrict date navigations features of  backward,  also cannot swipe the control using touch gesture beyond the min date range.
 
 {% tabs %}
 {% highlight Dart %}
@@ -31,8 +31,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-### Maximum display Date :
-`MaxDisplayDate` will restrict date navigations features of  forward,  and also cannot swipe the control using touch gesture beyond the max date range.
+### Maximum display Date
+[maxDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/maxDate.html) will restrict date navigations features of  forward,  and also cannot swipe the control using touch gesture beyond the max date range.
 
 {% tabs %}
 {% highlight Dart %}
