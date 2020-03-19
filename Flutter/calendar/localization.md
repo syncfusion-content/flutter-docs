@@ -11,9 +11,9 @@ documentation: ug
 
 By default, the calendar widget supports US English localizations. You can change the other languages by specifying the `MaterialApp` properties and adding the `flutter_localizations` package to your application.
 
-As of February 2020, flutter package supports 77 languages.
+As of February 2020, [flutter package](https://flutter.dev/docs/development/accessibility-and-localization/internationalization) supports 77 languages.
 
-To use `flutter_localizations`, add the package as dependency to pubspec.yaml file.
+To use `flutter_localizations`, add the package as dependency to `pubspec.yaml` file.
 
 {% highlight dart %}
 
@@ -57,10 +57,10 @@ return MaterialApp(
 {% endhighlight %}
 {% endtabs %}
 
-## Localize the custom text in calendar
+## Localize the custom text in Calendar
 Calendar custom text can be localized using the `syncfusion_localizations` package and specifying localizationsDelegates in `MaterialApp`.
 
-To use `syncfusion_localizations`, add the package as dependency to pubspec.yaml file.
+To use `syncfusion_localizations`, add the package as dependency to `pubspec.yaml` file.
 
 {% highlight dart %}
 
@@ -77,7 +77,7 @@ import 'package:syncfusion_localizations/syncfusion_localizations.dart';
 
 {% endhighlight %}
 
-Then, declare the `SfGlobalLocalizations.delegate` in the `localizationsDelegates`, which is used to localize the custom string (mention) using in calendar and specify the supported locales as well.
+Then, declare the `SfGlobalLocalizations.delegate` in the `localizationsDelegates`, which is used to localize the custom string (No events, No selected date) using in calendar and specify the supported locales as well.
 
 {% tabs %}
 {% highlight Dart %}
