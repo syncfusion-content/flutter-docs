@@ -7,7 +7,7 @@ control: SfRangeSlider
 documentation: ug
 ---
 
-# Getting Started for Range Slider
+# Getting started for range slider
 This section explains the steps required to add the range slider widget and its elements such as numeric and date values, ticks, labels and tooltips. This section covers only basic features needed to know to get started with Syncfusion range slider.
 
 ## Add flutter range slider to an application
@@ -129,7 +129,7 @@ Widget build(BuildContext context) {
 
 Add the range slider with ticks and date labels.
 
-N> You must import the 'package:intl/intl.dart' show DateFormat` package to add the date format in the range slider.
+N> You must add the [`intl`](https://pub.dev/packages/intl) package for using date format in the range slider.
 
 {% tabs %}
 {% highlight Dart %}
