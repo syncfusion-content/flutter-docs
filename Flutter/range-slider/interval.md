@@ -60,6 +60,8 @@ The type of date interval. It can be years to seconds. It is mandatory for date 
 
 For date values, the range slider does not have auto interval support. So, it is mandatory to set `interval`, `dateIntervalType`, and `dateFormat` for date values.
 
+For example, if `min` is `DateTime(2000, 01, 01)` and `max` is `DateTime(2005, 01, 01)` and `interval` is `1`, `dateIntervalType` is `DateIntervalType.years`, `dateFormat` is `DateFormat.y()` then the range selector will render the labels,  major ticks, and divisors at 2000, 2001, 2002 and so on.
+
 {% tabs %}
 {% highlight Dart %}
 
