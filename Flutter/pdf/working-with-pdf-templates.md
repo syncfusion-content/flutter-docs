@@ -45,9 +45,9 @@ document.dispose();
 
 ## Working with PdfPageTemplateElement
 
-PdfPageTemplateElement is template element that can be added to any part of the PDF page such as header, footer etc.
+The PdfPageTemplateElement is a template element that can be added to any part of the PDF page such as header, footer, and more.
 
-The following code example explains how to add the page template elements in a PDF document.
+The following code example explains how to add the page template elements to a PDF document.
 
 {% highlight dart %}
 
