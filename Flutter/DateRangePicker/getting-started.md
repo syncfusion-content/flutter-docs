@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Flutter date range picker widget | Syncfusion
-description: Getting started with the Syncfusion flutter date range picker with four built-in configurable views modes.
+title: Flutter Date Range Picker | Date Picker | Date Selection | Syncfusion
+description: The Syncfusion Flutter Date Range Picker widget allows users to easily select dates or a range of dates. It allows us to quickly navigate to the desired date.
 platform: flutter
 control: SfDateRangePicker
 documentation: ug
@@ -10,7 +10,7 @@ documentation: ug
 # Getting Started with Flutter Date Range Picker (SfDateRangePicker)
 This section explains the steps required to add the date range picker widget. This section covers only basic features needed to get started with Syncfusion date range picker widget.
 
-## Add flutter date range picker to an application
+## Add flutter Date Range Picker to an application
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
 
 **Add dependency**
@@ -58,13 +58,14 @@ After importing the package, initialize the date range picker widget as a child 
 Widget build(BuildContext context) {
    return Scaffold(
        body: Container(
-    child: SfDateRangePicker(),
+       child: SfDateRangePicker(),
 ));
 }
 	
 {% endhighlight %}
 {% endtabs %}
 
+![Initialize Date Range Picker](images/getting-started/initialize.png)
 
 ## Multiple picker views
 
@@ -77,12 +78,14 @@ The `SfDateRangePicker` widget provides four different types of views to display
 Widget build(BuildContext context) {
    return Scaffold(
        body: SfDateRangePicker(
-     view: DateRangePickerView.year,
+       view: DateRangePickerView.year,
 ));
 }
 
 {% endhighlight %}
 {% endtabs %}
+
+![Multiple picker views Date Range Picker](images/getting-started/picker_views.png)
 
 ## Change first day of week
 
@@ -94,15 +97,14 @@ The DateRangePicker widget will be rendered with Sunday as the first day of the 
 @override
 Widget build(BuildContext context) {
    return Scaffold(
-       body: SfDateRangePicker(
-     view: DateRangePickerView.month,
-     firstDayOfWeek: 1,
-));
+        body: SfDateRangePicker(
+        view: DateRangePickerView.month,
+        firstDayOfWeek: 1,
+        ));
 }
 
 {% endhighlight %}
 {% endtabs %}
-
 
 ## Date selection
 
@@ -119,18 +121,20 @@ void _onSelectionChanged(DateRangePickerSelectionChangedArgs args) {
 
 @override
 Widget build(BuildContext context) {
-return MaterialApp(
-home: Scaffold(
-body: Container(
-child: SfDateRangePicker(
-onSelectionChanged: _onSelectionChanged,
-selectionMode: DateRangePickerSelectionMode.range,
+    return MaterialApp(
+        home: Scaffold(
+            body: Container(
+                child: SfDateRangePicker(
+                    onSelectionChanged: _onSelectionChanged,
+                    selectionMode: DateRangePickerSelectionMode.range,
+                ),
+            ),
         ),
-      ),
-    ),
-  );
+    );
 }
 
 
 {% endhighlight %}
 {% endtabs %}
+
+  ![Date selection Date Range Picker](images/overview/selection_mode.png)

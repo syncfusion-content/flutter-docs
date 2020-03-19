@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started of Barcode Generator 
 
-This section explains the steps required to add the barcode and set its symbology. This section covers only basic features needed to get started with Syncfusion barcode generator control. 
+This section explains the steps required to add the barcode and set its symbology. This section covers only basic features needed to get started with Syncfusion barcode generator widget. 
 
 
 ## Add Flutter Barcode to an application
