@@ -53,7 +53,7 @@ Widget build(BuildContext context) {
 ![MinMaxDate Calendar](images/date-navigation/minmaxdate.png)
 
 ## Programmatic date navigation
-You can programmatically navigate dates in calendar widget by using the [displayDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/displayDate.html) propertie of `CalendarController`.
+You can programmatically navigate dates in calendar widget by using the [displayDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/displayDate.html) propertie of [CalendarController](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController-class.html).
 
 {% tabs %}
 {% highlight Dart %}
