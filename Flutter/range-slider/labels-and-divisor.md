@@ -7,10 +7,10 @@ control: SfRangeSlider
 documentation: ug
 ---
 
-# Labels and divisor in range slider
-This section explains about how to add the labels and divisor in the range slider.
+# Labels and divisors in range slider
+This section explains about how to add the labels and divisors in the range slider.
 
-## Show label
+## Show labels
 
 Option to render the labels on given interval. The default value of `showLabels` property is `false`.
 
@@ -29,6 +29,7 @@ Widget build(BuildContext context) {
                     max: 10.0,
                     interval: 2,
                     showLabels: true,
+                    showTicks: true,
                     values: _values,
                     onChanged: (SfRangeValues newValues) {
                         setState(() {
@@ -47,12 +48,14 @@ Widget build(BuildContext context) {
 ![Range slider label support](images/label-and-divisor/show-labels.png)
 
 N>
-* The `numberFormat` and `dateFormat` can be used for formatting the numeric and date labels respectively.
-* The `SfRangeSliderThemeData` can be used to customize the appearance of the labels.
+* Refer the `numberFormat` and `dateFormat` for formatting the numeric and date labels respectively.
+* Refer the `SfRangeSliderThemeData` for customizing the appearance of the labels.
 
-## Show divisor
+## Show divisors
 
-Option to render the divisors on the track. The default value of `showDivisors` property is `false`. It is a shape which is used to represent the major interval points of the track. For example, if `min` is 0.0 and `max` is 10.0 and `interval` is 2.0, the range slider will render the divisors at 0.0, 2.0, 4.0 and so on.
+Option to render the divisors on the track. The default value of `showDivisors` property is `false`. It is a shape which is used to represent the major interval points of the track.
+
+For example, if `min` is 0.0 and `max` is 10.0 and `interval` is 2.0, the range slider will render the divisors at 0.0, 2.0, 4.0 and so on.
 
 {% tabs %}
 {% highlight Dart %}
@@ -126,7 +129,7 @@ Widget build(BuildContext context) {
 
 ## Date format
 
-Formats the date labels. It is necessary for date `SfRangeSlider`. For date values, the range slider does not have auto interval support. So, it is necessary to set `interval`, `dateIntervalType`, and `dateFormat` for date values. The default of `dateFormat` property is `null`.
+Formats the date labels. It is mandatory for date `SfRangeSlider`. For date values, the range slider does not have auto interval support. So, it is mandatory to set `interval`, `dateIntervalType`, and `dateFormat` for date values. The default of `dateFormat` property is `null`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -165,7 +168,7 @@ Widget build(BuildContext context) {
 
 ## Label placement
 
-Option to place the labels either between the major ticks or on the major ticks. The default value of `labelPlacement` is `LabelPlacement.onTicks`.
+Option to place the labels either between the major ticks or on the major ticks. The default value of `labelPlacement` property is `LabelPlacement.onTicks`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -203,9 +206,9 @@ Widget build(BuildContext context) {
 
 ![Label placement support](images/label-and-divisor/label-placement.png)
 
-## LabelFormatterCallback
+## Label formatter callback
 
-Formats or change the whole numeric or date label text. Its arguments contains the following parameters:
+You can format or change the whole numeric or date label text. Its arguments contains the following parameters:
 
 * actualValue – either `DateTime` or `double` based on given `values`.
 * formattedText – If the actual value is `double`, it is formatted by `numberFormat` and if the actual value is `DateTime`, it is formatted by `dateFormat`.
@@ -243,4 +246,4 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Label formmatter support](images/label-and-divisor/label-formattercallback.png)
+![Label formatter support](images/label-and-divisor/label-formattercallback.png)
