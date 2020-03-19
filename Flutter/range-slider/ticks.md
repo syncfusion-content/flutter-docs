@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tick features in Syncfusion Flutter Range Slider | Syncfusion
-description: This section helps to learn about how to add major and minor tick in the range slider for flutter platform
+description: This section helps to learn about how to add major and minor ticks in the range slider for flutter platform
 platform: flutter
 control: SfRangeSlider
 documentation: ug
@@ -9,11 +9,13 @@ documentation: ug
 
 # Ticks features in range slider
 
-This section helps to learn about how to add major and minor tick in the range slider.
+This section helps to learn about how to add major and minor ticks in the range slider.
 
-## Show tick
+## Show major ticks
 
-You can enable the major ticks on the track. It is a shape which is used to represent the major interval points of the track. The default value of `showTicks` property is `false`. For example, if `min` is 0.0 and `max` is 4.0 and `interval] is 2.0, the range slider will render the major ticks at 0.0, 2.0, and 4.0.
+You can enable the major ticks on the track. It is a shape which is used to represent the major interval points of the track. The default value of `showTicks` property is `false`.
+
+For example, if `min` is 0.0 and `max` is 10.0 and `interval` is 2.0, the range slider will render the major ticks at 0.0, 2.0, 4.0 and so on.
 
 {% tabs %}
 {% highlight Dart %}
@@ -48,9 +50,9 @@ Widget build(BuildContext context) {
 
 ![Range slider tick support](images/tick/major-tick.png)
 
-N> The `tickShape` and `SfRangeSliderThemeData` can be used for customizing the major tick’s visual appearance.
+N> Refer the `tickShape` and `SfRangeSliderThemeData` for customizing the major tick’s visual appearance.
 
-## Show minor tick
+## Show minor ticks
 
 Represents the number of smaller ticks between two major ticks. For example, if `min` is 0.0 and `max` is 10.0 and `interval` is 2.0, the range slider will render the major ticks at 0.0, 2.0, 4.0 and so on. If `minorTicksPerInterval` is 1, then smaller ticks will be rendered on 1.0 and 3.0 and so on.
 
@@ -91,5 +93,5 @@ Widget build(BuildContext context) {
 ![Range slider minor tick support](images/tick/minor-tick.png)
 
 N>
-* The 'showTicks' can be used to render major ticks at given interval.
-* The `minorTickShape` and `SfRangeSliderThemeData` can be used for customizing the minor tick’s visual appearance.
+* Refer the `showTicks` to know about the rendering major ticks at given interval.
+* Refer the `minorTickShape` and `SfRangeSliderThemeData` for customizing the minor tick’s visual appearance.
