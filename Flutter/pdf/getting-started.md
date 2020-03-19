@@ -76,7 +76,7 @@ Future<void> _createPDF() async {
   document.pages.add().graphics.drawString(
       'Hello World!', PdfStandardFont(PdfFontFamily.helvetica, 20),
       brush: PdfSolidBrush(PdfColor(0, 0, 0)),
-      bounds: Rect.fromLTWH(0, 0, 150, 20));
+      bounds: Rect.fromLTWH(0, 0, 500, 50));
 
   //Save the document
   List<int> bytes = document.save();
