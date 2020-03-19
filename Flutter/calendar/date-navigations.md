@@ -84,10 +84,10 @@ controller: _calendarController,
 {% endtabs %}
 
 ## Programmatically change to adjacent dates
-By default, the date can be navigated to next and previous views using touch gesture, by swiping the control from right to left and left to right direction. The view can be also changed programmatically using the `Forward` and `Backward` methods available in `CalendarController`.
+By default, the date can be navigated to next and previous views using touch gesture, by swiping the control from right to left and left to right direction. The view can be also changed programmatically using the [forward](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/controller/forward.html) and [backward](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/controller/backward.html) methods available in `CalendarController`.
 
 ### Forward
-You can use the [forward](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/controller/forward.html) method of `controller` for viewing the next immediate visible dates in the `SfCalendar`. It will move to next month if the calendar view is month, similarly it will move to next week for week view and next day for day view.
+You can use the `forward` method of `controller` for viewing the next immediate visible dates in the `SfCalendar`. It will move to next month if the calendar view is month, similarly it will move to next week for week view and next day for day view.
 
 {% tabs %}
 {% highlight Dart %}
@@ -129,7 +129,7 @@ class MyAppState extends State<MyApp> {
 {% endtabs %}
 
 ### Backward
-You can use the [backward](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/controller/backward.html) method of `controller` for viewing the previous immediate visible dates in the `SfCalendar`. It will move to previous month if the calendar view is month, similarly it will move to previous week for week view and previous day for day view.
+You can use the `backward` method of `controller` for viewing the previous immediate visible dates in the `SfCalendar`. It will move to previous month if the calendar view is month, similarly it will move to previous week for week view and previous day for day view.
 
 {% tabs %}
 {% highlight Dart %}
