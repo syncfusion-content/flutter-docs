@@ -53,7 +53,7 @@ Widget build(BuildContext context) {
 ![MinMaxDate Calendar](images/date-navigation/minmaxdate.png)
 
 ## Programmatic date navigation
-You can programmatically navigate dates in calendar widget by using the [displayDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/displayDate.html) propertie of [CalendarController](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController-class.html).
+You can programmatically navigate dates in calendar widget by using the [displayDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/displayDate.html) property of [CalendarController](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController-class.html).
 
 {% tabs %}
 {% highlight Dart %}
@@ -83,7 +83,7 @@ class MyAppState extends State<MyApp>{
 {% endtabs %}
 
 ## Programmatic date selection
-You can programmatically select the dates in calendar widget by [selectedDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/selectedDate.html) propertie of `CalendarController`.
+You can programmatically select the dates in calendar widget by [selectedDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/selectedDate.html) property of `CalendarController`.
 
 {% tabs %}
 {% highlight Dart %}
