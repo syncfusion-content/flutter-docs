@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization of Syncfusion Flutter Calendar | Calendar
-description: Describes how to Localize the contents and custom texts of calendar (SfCalendar) control in Flutter | Calendar
+description: Describes how to Localize the contents and custom texts of calendar (SfCalendar) control in Flutter | Globalization | Internationalization Calendar
 platform: flutter
 control: SfCalendar
 documentation: ug

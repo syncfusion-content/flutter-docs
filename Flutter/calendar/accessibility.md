@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility of Syncfusion Flutter Calendar | Calendar
-description: Learn about the accessibility support in Syncfusion Flutter Calendar (SfCalendar) widget  | Calendar
+title: Accessibility of Syncfusion Flutter Calendar | Scheduler
+description: Learn about the accessibility support in Syncfusion Flutter Calendar (SfCalendar) widget  | Scheduler
 platform: flutter
 control: SfCalendar
 documentation: ug
