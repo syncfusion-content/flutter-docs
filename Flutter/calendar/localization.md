@@ -69,7 +69,7 @@ syncfusion_localizations:^18.1.0.36
 
 {% endhighlight %}
 
-Next, import the syncfusion_localizations library.
+Next, import the `syncfusion_localizations` library.
 
 {% highlight dart %}
 
