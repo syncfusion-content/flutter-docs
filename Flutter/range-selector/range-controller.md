@@ -17,6 +17,8 @@ The `end` represents the currently selected end value of the range selector. The
 
 The `start` and `end` be either `double` or `DateTime`.
 
+N> you must import the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) to use the range controller in the range selector.
+
 {% tabs %}
 {% highlight Dart %}
 
