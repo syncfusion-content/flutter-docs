@@ -15,7 +15,7 @@ Create a simple project using the instructions given in the [Getting Started wit
 
 **Add dependency**
 
-Add the Syncfusion flutter date range picker dependency to your pubspec.yaml file.
+Add the Syncfusion flutter date range picker dependency to your `pubspec.yaml` file.
 
 {% highlight dart %}
 
@@ -69,7 +69,7 @@ Widget build(BuildContext context) {
 
 ## Multiple picker views
 
-The `SfDateRangePicker` widget provides four different types of views to display. It can be assigned to the widget constructor by using the [view](https://pub.dev/documentation/syncfusion_flutter_daterangepicker/latest/daterangepicker/SfDateRangePicker/view.html) property. Default view of the widget is month view. By default the current date will be displayed initially for all the date range picker views.
+The `SfDateRangePicker` widget provides four different types of views to display. It can be assigned to the widget constructor by using the [view](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/view.html) property. Default view of the widget is month view. By default the current date will be displayed initially for all the date range picker views.
 
 {% tabs %}
 {% highlight Dart %}
@@ -79,17 +79,18 @@ Widget build(BuildContext context) {
    return Scaffold(
        body: SfDateRangePicker(
        view: DateRangePickerView.year,
-));
+      )
+   );
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-![Multiple picker views Date Range Picker](images/getting-started/picker_views.png)
+![Multiple picker views Date Range Picker](images/getting-started/year-view.png)
 
 ## Change first day of week
 
-The DateRangePicker widget will be rendered with Sunday as the first day of the week, but you can customize it to any day by using the [firstDayOfWeek](https://pub.dev/documentation/syncfusion_flutter_daterangepicker/latest/daterangepicker/SfDateRangePicker/firstDayOfWeek.html) property.
+The DateRangePicker widget will be rendered with Sunday as the first day of the week, but you can customize it to any day by using the [firstDayOfWeek](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/firstDayOfWeek.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -100,7 +101,8 @@ Widget build(BuildContext context) {
         body: SfDateRangePicker(
         view: DateRangePickerView.month,
         firstDayOfWeek: 1,
-        ));
+        )
+    );
 }
 
 {% endhighlight %}
@@ -137,4 +139,4 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-  ![Date selection Date Range Picker](images/overview/selection_mode.png)
+  ![Date selection Date Range Picker](images/getting-started/range-selection.png)
