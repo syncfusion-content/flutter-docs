@@ -2165,7 +2165,7 @@ The `dashArray` property of `StackedLine100Series` is used to render line series
 
 ![Dashed line chart](images/cartesian-chart-types/stacked_line_100_dashes.png)
 
-### HiLo chart
+## HiLo chart
 HiLo Series illustrates the price movements in stock using the high and low values.
 
 To render a HiLo chart, create an instance of [`HiloSeries`](), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties are used to customize the appearance:
@@ -2205,7 +2205,7 @@ To render a HiLo chart, create an instance of [`HiloSeries`](), and add it to th
 
 ![hiLo chart](images/cartesian-chart-types/hilo_chart.png)
 
-### High Low Open Close
+## High Low Open Close
 
 HiLoOpenClose series is used to represent the low, high, open and closing values over time.
 
@@ -2255,7 +2255,7 @@ To render a HiLoOpenClose chart, create an instance of [` hiloOpenCloseSeries`](
 
 ![hiLoopenclose chart](images/cartesian-chart-types/hilo_open_close.png)
 
-### Candle
+## Candle
 
 Candle series is similar to HiLo Open Close series, used to represent the low, high, open and closing price over time.
 
