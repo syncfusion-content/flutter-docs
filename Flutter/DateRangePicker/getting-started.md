@@ -137,4 +137,4 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-  ![Date selection Date Range Picker](images/overview/range-selection.png)
+  ![Date selection Date Range Picker](images/getting-started/range-selection.png)
