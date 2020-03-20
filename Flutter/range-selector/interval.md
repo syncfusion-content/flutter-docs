@@ -56,8 +56,8 @@ Widget build(BuildContext context) {
                             isVisible: false,),
                         primaryYAxis: NumericAxis(isVisible: false),
                         plotAreaBorderWidth: 0,
-                        series: <SplineAreaSeries<Data, double>>[
-                            SplineAreaSeries<Data, double>(
+                        series: <ColumnSeries<Data, double>>[
+                            ColumnSeries<Data, double>(
                                 color: Color.fromARGB(255, 126, 184, 253),
                                 dataSource: chartData,
                                     xValueMapper: (Data sales, _) => sales.x,
@@ -144,8 +144,8 @@ Widget build(BuildContext context) {
                             isVisible: false,),
                         primaryYAxis: NumericAxis(isVisible: false),
                         plotAreaBorderWidth: 0,
-                        series: <SplineAreaSeries<Data, DateTime>>[
-                            SplineAreaSeries<Data, DateTime>(
+                        series: <ColumnSeries<Data, DateTime>>[
+                            ColumnSeries<Data, DateTime>(
                                 color: Color.fromARGB(255, 126, 184, 253),
                                 dataSource: chartData,
                                 xValueMapper: (Data sales, _) => sales.x,
