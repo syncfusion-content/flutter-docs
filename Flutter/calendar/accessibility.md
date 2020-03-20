@@ -26,8 +26,8 @@ The `SfCalendar` can easily be accessed by screen readers. Please find the follo
 
 
 ## Appointments
-| View                            | Format                                                             |Example                                                                             |
-|--------------------------|----------------------------------------------------|-----------------------------------------------------------------|
+| View                            | Format                                                             | Example                                                                             |
+|----------------------------------------|-------------------------------------------------------|-------------------------------------------------------------------------------------|
 
 | Normal appointment   | Subject hh mm a – hh mm a dd/MMMM/yyyy| Yoga therapy 10AM to 11AM the 29th of January 2020|
 | Month agenda view appointment  | Subject hh mm a – hh mm a dd/MMMM/yyyy | Plan execution 9AM to 11AM the 23rd January 2020|
