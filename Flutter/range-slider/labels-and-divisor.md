@@ -93,6 +93,8 @@ Widget build(BuildContext context) {
 
 Formats the numeric labels. The default value of `numberFormat` property is `null`.
 
+N> You must import the [`intl`](https://pub.dev/packages/intl) package for using number format in the range slider.
+
 {% tabs %}
 {% highlight Dart %}
 
@@ -130,6 +132,8 @@ Widget build(BuildContext context) {
 ## Date format
 
 Formats the date labels. It is mandatory for date `SfRangeSlider`. For date values, the range slider does not have auto interval support. So, it is mandatory to set `interval`, `dateIntervalType`, and `dateFormat` for date values. The default of `dateFormat` property is `null`.
+
+N> You must import the [`intl`](https://pub.dev/packages/intl) package for using date format in the range slider.
 
 {% tabs %}
 {% highlight Dart %}
