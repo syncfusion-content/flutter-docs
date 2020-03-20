@@ -31,25 +31,21 @@ You must import the [`Chart`](https://pub.dev/packages/syncfusion_flutter_charts
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _values = SfRangeValues(4.0, 6.0);
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(5.0, 8.0);
 
-DateTime dateTimeMin = DateTime(2002, 01, 01),
-      dateTimeMax = DateTime(2011, 01, 01);
-  final SfRangeValues _dateTimeValues =
-  SfRangeValues(DateTime(2006, 01, 01), DateTime(2007, 01, 01));
-
-  final List<Data> chartData = <Data>[
-    Data(x: DateTime(2002, 01, 01), y: 2.2),
-    Data(x: DateTime(2003, 01, 01), y: 3.4),
-    Data(x: DateTime(2004, 01, 01), y: 2.8),
-    Data(x: DateTime(2005, 01, 01), y: 1.6),
-    Data(x: DateTime(2006, 01, 01), y: 2.3),
-    Data(x: DateTime(2007, 01, 01), y: 2.5),
-    Data(x: DateTime(2008, 01, 01), y: 2.9),
-    Data(x: DateTime(2009, 01, 01), y: 3.8),
-    Data(x: DateTime(2010, 01, 01), y: 1.4),
-    Data(x: DateTime(2011, 01, 01), y: 3.1),
-  ];
+final List<Data> chartData = <Data>[
+    Data(x:2.0, y: 2.2),
+    Data(x:3.0, y: 3.4),
+    Data(x:4.0, y: 2.8),
+    Data(x:5.0, y: 1.6),
+    Data(x:6.0, y: 2.3),
+    Data(x:7.0, y: 2.5),
+    Data(x:8.0, y: 2.9),
+    Data(x:9.0, y: 3.8),
+    Data(x:10.0, y: 3.7),
+];
 
 @override
 Widget build(BuildContext context) {
@@ -57,24 +53,30 @@ Widget build(BuildContext context) {
       home: Scaffold(
           body: Center(
               child: SfRangeSelector(
-                    min: 0.0,
-                    max: 10.0,
-                    interval: 2,
+                    min: _min,
+                    max: _max,
+                    interval: 1,
                     showLabels: true,
                     showTicks: true,
                     initialValues: _values,
+                    child: Container(
+                    height: 130,
                     child: SfCartesianChart(
                         margin: const EdgeInsets.all(0),
-                        primaryXAxis: DateTimeAxis(minimum: dateTimeMin,maximum: dateTimeMax,isVisible: false,),
-                        primaryYAxis: NumericAxis(isVisible: false , maximum: 4),
+                        primaryXAxis: NumericAxis(minimum: _min,
+                            maximum: _max,
+                            isVisible: false,),
+                        primaryYAxis: NumericAxis(isVisible: false),
                         plotAreaBorderWidth: 0,
-                        series: <SplineAreaSeries<Data, DateTime>>[
-                            SplineAreaSeries<Data, DateTime>(
+                        series: <SplineAreaSeries<Data, double>>[
+                            SplineAreaSeries<Data, double>(
+                                color: Color.fromARGB(255, 126, 184, 253),
                                 dataSource: chartData,
                                     xValueMapper: (Data sales, _) => sales.x,
                                     yValueMapper: (Data sales, _) => sales.y)
-                        ],
-                    ),
+                            ],
+                        ),
+                   ),
               ),
           )
       )
@@ -89,12 +91,14 @@ Widget build(BuildContext context) {
 
 class Data {
   Data({this.x, this.y});
-  final DateTime x;
+  final double x;
   final double y;
 }
 
 {% endhighlight %}
 {% endtabs %}
+
+![Numeric range selector](images/basic-features/selector_numeric_label.png)
 
 **Date range slider**
 
@@ -103,14 +107,11 @@ You must add the [`intl`](https://pub.dev/packages/intl) package for using date 
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _values = SfRangeValues(DateTime(2002, 01, 01), DateTime(2003, 01, 01));
+final DateTime _min = DateTime(2002, 01, 01);
+final DateTime _max = DateTime(2010, 01, 01);
+SfRangeValues _values = SfRangeValues(DateTime(2005, 01, 01), DateTime(2008, 01, 01));
 
-DateTime dateTimeMin = DateTime(2002, 01, 01),
-      dateTimeMax = DateTime(2011, 01, 01);
-  final SfRangeValues _dateTimeValues =
-  SfRangeValues(DateTime(2006, 01, 01), DateTime(2007, 01, 01));
-
-  final List<Data> chartData = <Data>[
+final List<Data> chartData = <Data>[
     Data(x: DateTime(2002, 01, 01), y: 2.2),
     Data(x: DateTime(2003, 01, 01), y: 3.4),
     Data(x: DateTime(2004, 01, 01), y: 2.8),
@@ -119,9 +120,8 @@ DateTime dateTimeMin = DateTime(2002, 01, 01),
     Data(x: DateTime(2007, 01, 01), y: 2.5),
     Data(x: DateTime(2008, 01, 01), y: 2.9),
     Data(x: DateTime(2009, 01, 01), y: 3.8),
-    Data(x: DateTime(2010, 01, 01), y: 1.4),
-    Data(x: DateTime(2011, 01, 01), y: 3.1),
-  ];
+    Data(x: DateTime(2010, 01, 01), y: 3.7),
+];
 
 @override
 Widget build(BuildContext context) {
@@ -129,26 +129,33 @@ Widget build(BuildContext context) {
       home: Scaffold(
           body: Center(
               child: SfRangeSelector(
-                    min: DateTime(2000, 01, 01, 00),
-                    max: DateTime(2004, 12, 31, 24),
-                    initialValues: _values,
-                    interval: 1,
+                    min: _min,
+                    max: _max,
                     showLabels: true,
                     showTicks: true,
+                    interval: 1,
                     dateFormat: DateFormat.y(),
                     dateIntervalType: DateIntervalType.years,
+                    initialValues: _values,
+                    child: Container(
+                    height: 130,
                     child: SfCartesianChart(
                         margin: const EdgeInsets.all(0),
-                        primaryXAxis: DateTimeAxis(minimum: dateTimeMin,maximum: dateTimeMax,isVisible: false,),
-                        primaryYAxis: NumericAxis(isVisible: false , maximum: 4),
+                        primaryXAxis: DateTimeAxis(
+                            minimum: _min,
+                            maximum: _max,
+                            isVisible: false,),
+                        primaryYAxis: NumericAxis(isVisible: false),
                         plotAreaBorderWidth: 0,
                         series: <SplineAreaSeries<Data, DateTime>>[
                             SplineAreaSeries<Data, DateTime>(
+                                color: Color.fromARGB(255, 126, 184, 253),
                                 dataSource: chartData,
-                                    xValueMapper: (Data sales, _) => sales.x,
-                                    yValueMapper: (Data sales, _) => sales.y)
-                        ],
-                    ),
+                                xValueMapper: (Data sales, _) => sales.x,
+                                yValueMapper: (Data sales, _) => sales.y)
+                            ],
+                        ),
+                   ),
               ),
           )
       )
@@ -170,6 +177,78 @@ class Data {
 {% endhighlight %}
 {% endtabs %}
 
+![Date range selector](images/basic-features/selector_date_label.png)
+
 ## Enabled
 
 Controls the range selector’s state whether it is disabled or enabled.
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(5.0, 8.0);
+
+final List<Data> chartData = <Data>[
+    Data(x:2.0, y: 2.2),
+    Data(x:3.0, y: 3.4),
+    Data(x:4.0, y: 2.8),
+    Data(x:5.0, y: 1.6),
+    Data(x:6.0, y: 2.3),
+    Data(x:7.0, y: 2.5),
+    Data(x:8.0, y: 2.9),
+    Data(x:9.0, y: 3.8),
+    Data(x:10.0, y: 3.7),
+];
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSelector(
+                    min: _min,
+                    max: _max,
+                    enabled: false,
+                    initialValues: _values,
+                    child: Container(
+                    height: 130,
+                    child: SfCartesianChart(
+                        margin: const EdgeInsets.all(0),
+                        primaryXAxis: NumericAxis(minimum: _min,
+                            maximum: _max,
+                            isVisible: false,),
+                        primaryYAxis: NumericAxis(isVisible: false),
+                        plotAreaBorderWidth: 0,
+                        series: <SplineAreaSeries<Data, double>>[
+                            SplineAreaSeries<Data, double>(
+                                color: Color.fromARGB(255, 126, 184, 253),
+                                dataSource: chartData,
+                                    xValueMapper: (Data sales, _) => sales.x,
+                                    yValueMapper: (Data sales, _) => sales.y)
+                            ],
+                        ),
+                   ),
+              ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Dart %}
+
+class Data {
+  Data({this.x, this.y});
+  final double x;
+  final double y;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Range selector disabled state](images/basic-features/selector_disabled_state.png)
