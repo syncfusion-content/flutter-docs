@@ -79,7 +79,8 @@ Widget build(BuildContext context) {
    return Scaffold(
        body: SfDateRangePicker(
        view: DateRangePickerView.year,
-));
+      )
+   );
 }
 
 {% endhighlight %}
@@ -100,7 +101,8 @@ Widget build(BuildContext context) {
         body: SfDateRangePicker(
         view: DateRangePickerView.month,
         firstDayOfWeek: 1,
-        ));
+        )
+    );
 }
 
 {% endhighlight %}
