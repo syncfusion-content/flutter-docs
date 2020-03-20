@@ -7,7 +7,7 @@ control: SfRangeSelector
 documentation: ug
 ---
 
-# Range controller
+# Range controller in range selector
 
 Coordinates `SfRangeSelector` with its child or a widget that listened `RangeController`.
 

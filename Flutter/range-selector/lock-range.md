@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Lock range in Syncfusion Flutter Range Selector | Syncfusion
-description: This section explains about how to show lock range feature in range selector for flutter platform
+description: This section explains about how to show lock range feature in the range selector for flutter platform
 platform: flutter
 control: SfRangeSelector
 documentation: ug
 ---
 
-# Lock range
+# Lock range of range selector
 
 The selected range can be moved by dragging the center of the selected range.
 
