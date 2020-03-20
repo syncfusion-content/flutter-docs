@@ -78,7 +78,7 @@ import 'package:syncfusion_localizations/syncfusion_localizations.dart';
 
 {% endhighlight %}
 
-Then, declare the `SfGlobalLocalizations.delegate` in the `localizationsDelegates`, which is used to localize the custom string (No events, No selected date) using in calendar and specify the supported locales as well.
+Then, declare the `SfGlobalLocalizations.delegate` in the `localizationsDelegates`, which is used to localize the custom string (No events, No selected date) using in calendar and specify the `supportedLocales` as well.
 
 {% tabs %}
 {% highlight Dart %}
