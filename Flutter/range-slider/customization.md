@@ -10,7 +10,55 @@ documentation: ug
 # Customization of range slider
 This section explains about how to customize the range slider elements.
 
-## Active color
+## Color customization
+
+### Track
+
+You can change the active and inactive track color of the range slider using the `activeTrackColor` and `inactiveTrackColor` properties respectively.
+
+N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://help.syncfusion.com/flutter/range-slider/customization).
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(4.0, 7.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                        activeTrackColor: Colors.red,
+                        inactiveTrackColor: Colors.red[100],
+                    ),
+                    child:  SfRangeSlider(
+                        min: _min,
+                        max: _max,
+                        values: _values,
+                        onChanged: (dynamic newValue){
+                            setState(() {
+                                _values = newValue;
+                            });
+                        },
+                    ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Track color support](images/customization/slider-track-color.png)
+
+### Common
+
+**Active color**
 
 Represents the color applied to the active track, thumb, overlay, and inactive divisors. The `active` side of the range slider is between the left and right thumbs.
 
@@ -48,7 +96,7 @@ Widget build(BuildContext context) {
 
 N> Refer the `SfRangeSliderThemeData` to know about updating the individual active range slider element’s visual.
 
-## Inactive color
+**Inactive color**
 
 Represents the color applied to the inactive track and active divisors. The "inactive" side of the range slider is between the `min` value and the left thumb, and the right thumb and the `max` value.
 
