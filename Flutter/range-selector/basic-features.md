@@ -181,7 +181,7 @@ class Data {
 
 ## Enabled
 
-Controls the range selector’s state whether it is disabled or enabled.
+Controls the range selector’s state whether it is disabled or enabled. The default value of `enabled` is `true`.
 
 {% tabs %}
 {% highlight Dart %}
