@@ -7,7 +7,7 @@ control: SfCalendar
 documentation: ug
 ---
 
-# Time zone
+# Time zone in Flutter Calendar (SfCalendar)
 
 Calendar allows you to create appointments in various time zones and display them in users’ time zone or any other time zone. You can use a time zone in the following four different ways:
 
@@ -1161,7 +1161,7 @@ UTC + 14:00
 
 ## Create appointment in different time zones
 
-You can create appointments at different time zones using the [startTimeZone](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/startTimeZone.html) and [EndTimeZone](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/endTimeZone.html) properties of `Appointment`. An appointment’s start time and end time are calculated based on the given time zone information for the start time and end time. You can set different time zones to the `startTimeZone` and `endTimeZone` properties.
+You can create appointments at different time zones using the [startTimeZone](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/startTimeZone.html) and [endTimeZone](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/endTimeZone.html) properties of `Appointment`. An appointment’s start time and end time are calculated based on the given time zone information for the start time and end time. You can set different time zones to the `startTimeZone` and `endTimeZone` properties.
 You can use the `startTime` and `endTime` properties of `Appointment` to get the exact start time and end time of an appointment. 
 
 {% tabs %}
