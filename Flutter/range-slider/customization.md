@@ -151,6 +151,53 @@ Widget build(BuildContext context) {
 
 ![Minor ticks color](images/customization/slider-minor-ticks.png)
 
+### Labels color
+
+You can change the active and inactive label style of the range slider using the `activeLabelStyle` and `inactiveLabelStyle` properties respectively.
+
+N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://help.syncfusion.com/flutter/range-slider/customization).
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                         activeLabelStyle: TextStyle(color: Colors.red, fontSize: 12, fontStyle: FontStyle.italic),
+                         inactiveLabelStyle: TextStyle(color: Colors.red[200], fontSize: 12, fontStyle: FontStyle.italic),
+                    ),
+                    child:  SfRangeSlider(
+                       min: _min,
+                       max: _max,
+                       values: _values,
+                       interval: 1,
+                       showLabels: true,
+                       showTicks: true,
+                       onChanged: (dynamic newValue){
+                            setState(() {
+                                _values = newValue;
+                            });
+                        },
+                    ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Labels color support](images/customization/slider-labels-color.png)
+
 ### Common
 
 **Active color**
