@@ -1512,3 +1512,132 @@ class Data {
 ![Inactive color support](images/customization/selector_inactive_color.png)
 
 N> Refer the `SfRangeSliderThemeData` to know about updating the individual inactive range slider element’s visual.
+
+## Shape customization
+
+### Thumb and overlay customization
+
+You can customize the thumb and overlay position and shape using the `thumbShape` and `overlayShape` properties in the range slider.
+
+For that, you must declare the class for thumb customization by extending from SfThumbShape and override the `getPreferredSize` method for declaring thumb size and override `paint` method for custom drawing.
+You must declare the class for overlay customization by extending from SfOverlayShape and override the `getPreferredSize` method for declaring overlay size and override `paint` method for custom drawing.
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+final List<Data> chartData = <Data>[
+    Data(x:2.0, y: 2.2),
+    Data(x:3.0, y: 3.4),
+    Data(x:4.0, y: 2.8),
+    Data(x:5.0, y: 1.6),
+    Data(x:6.0, y: 2.3),
+    Data(x:7.0, y: 2.5),
+    Data(x:8.0, y: 2.9),
+    Data(x:9.0, y: 3.8),
+    Data(x:10.0, y: 3.7),
+];
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSelector(
+                    min: _min,
+                    max: _max,
+                    interval: 1,
+                    showLabels: true,
+                    showTicks: true,
+                    initialValues: _values,
+                    thumbShape: _SfThumbShape(),
+                    overlayShape: _SfOverlayShape(),
+                    child: Container(
+                    height: 130,
+                    child: SfCartesianChart(
+                        margin: const EdgeInsets.all(0),
+                        primaryXAxis: NumericAxis(minimum: _min,
+                            maximum: _max,
+                            isVisible: false,),
+                        primaryYAxis: NumericAxis(isVisible: false),
+                        plotAreaBorderWidth: 0,
+                        series: <SplineAreaSeries<Data, double>>[
+                            SplineAreaSeries<Data, double>(
+                                color: Color.fromARGB(255, 126, 184, 253),
+                                dataSource: chartData,
+                                    xValueMapper: (Data sales, _) => sales.x,
+                                    yValueMapper: (Data sales, _) => sales.y)
+                            ],
+                        ),
+                   ),
+              ),
+          )
+      )
+  );
+}
+
+class Data {
+  Data({this.x, this.y});
+  final double x;
+  final double y;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Dart %}
+
+class _SfThumbShape extends SfThumbShape{
+
+  Size getPreferredSize(SfRangeSliderThemeData themeData, bool isEnabled) {
+    return Size.fromRadius(themeData.thumbRadius);
+  }
+
+  @override
+  void paint(PaintingContext context, Offset center,
+      {bool isEnabled,
+        RenderProxyBox parentBox,
+        SfRangeSliderThemeData themeData,
+        Animation<double> animation,
+        TextDirection textDirection,
+        SfThumb thumb}) {
+
+    super.paint(context, Offset(center.dx, center.dy - 25),
+    isEnabled: isEnabled,
+    parentBox: parentBox,
+    themeData: themeData,
+    animation: animation,
+    textDirection: textDirection,
+    thumb: thumb);
+  }
+}
+
+class _SfOverlayShape extends SfOverlayShape {
+
+  Size getPreferredSize(SfRangeSliderThemeData themeData, bool isEnabled) {
+    return Size.fromRadius(themeData.overlayRadius);
+  }
+
+  @override
+  void paint(PaintingContext context, Offset center,
+      {bool isEnabled,
+        RenderProxyBox parentBox,
+        SfRangeSliderThemeData themeData,
+        Animation<double> animation,
+        SfThumb thumb}) {
+    super.paint(context, Offset(center.dx, center.dy - 25),
+      isEnabled: isEnabled,
+      parentBox: parentBox,
+      themeData: themeData,
+      animation: animation);
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Thumb shape customization support](images/customization/selector-thumb-customization.png)

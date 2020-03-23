@@ -867,7 +867,7 @@ Widget build(BuildContext context) {
                     min: 0.0,
                     max: 10.0,
                     values: _values,
-                    activeColor: Colors.red,
+                    activeColor: Colors .red,
                     inactiveColor: Colors.red.withOpacity(0.2),
                     showDivisors: true,
                     onChanged: (SfRangeValues newValues) {
@@ -887,3 +887,87 @@ Widget build(BuildContext context) {
 ![Inactive color support](images/customization/inactive-color.png)
 
 N> Refer the `SfRangeSliderThemeData` to know about updating the individual inactive range slider element’s visual.
+
+## Shape customization
+
+### Thumb shape
+
+You can customize the thumb position and shape using the `thumbShape` property in the range slider.
+
+For that, you must declare the class for thumb customization by extending from SfThumbShape and override the `getPreferredSize` method for declaring thumb size and override `paint` method for custom drawing.
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSlider(
+                    min: _min,
+                    max: _max,
+                    interval: 1,
+                    showTicks: true,
+                    showLabels: true,
+                    values: _values,
+                    thumbShape: _SfThumbShape(),
+                    onChanged: (SfRangeValues newValues) {
+                        setState(() {
+                            _values = newValues;
+                        });
+                    },
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Dart %}
+
+class _SfThumbShape extends SfThumbShape{
+
+  Size getPreferredSize(SfRangeSliderThemeData themeData, bool isEnabled) {
+    return Size.fromRadius(themeData.thumbRadius);
+  }
+
+  @override
+  void paint(PaintingContext context, Offset center,
+      {bool isEnabled,
+        RenderProxyBox parentBox,
+        SfRangeSliderThemeData themeData,
+        Animation<double> animation,
+        TextDirection textDirection,
+        SfThumb thumb}) {
+
+    super.paint(context, center,
+    isEnabled: isEnabled,
+    parentBox: parentBox,
+    themeData: themeData,
+    animation: animation,
+    textDirection: textDirection,
+    thumb: thumb);
+
+    context.canvas.drawCircle(
+        center,
+        getPreferredSize(themeData, isEnabled).width / 2,
+        Paint()
+          ..isAntiAlias = true
+          ..strokeWidth = 3
+          ..style = PaintingStyle.stroke
+          ..color = Colors.white);
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Thumb shape customization support](images/customization/slider-thumb-customization.png)
