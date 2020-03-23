@@ -897,7 +897,7 @@ N> Refer the `SfRangeSliderThemeData` to know about updating the individual inac
 
 You can customize the thumb position and shape using the `thumbShape` property in the range slider.
 
-For that, you must declare the class for thumb customization by extending from SfThumbShape and override the `getPreferredSize` method for declaring thumb size and override `paint` method for custom drawing.
+For that, you must declare the class for thumb customization by extending from SfThumbShape and override `paint` method for custom drawing.
 
 {% tabs %}
 {% highlight Dart %}
@@ -972,11 +972,9 @@ class _SfThumbShape extends SfThumbShape{
 
 ### Divisor shape
 
-### Thumb shape
+You can customize the divisor position and shape using the `divisorShape` property in the range slider.
 
-You can customize the thumb position and shape using the `thumbShape` property in the range slider.
-
-For that, you must declare the class for thumb customization by extending from SfThumbShape and override the `getPreferredSize` method for declaring thumb size and override `paint` method for custom drawing.
+For that, you must declare the class for divisor customization by extending from SfDivisorShape and override the `paint` method for custom drawing.
 
 {% tabs %}
 {% highlight Dart %}
@@ -1026,3 +1024,131 @@ class _SfDivisorShape extends SfDivisorShape {
 {% endtabs %}
 
 ![Divisor shape customization support](images/customization/slider-divisor-customization.png)
+
+### Ticks shape
+
+You can customize the major and minor ticks position and shape using the `tickShape` and `minorTickShape` property in the range slider.
+
+For that, you must declare the class for major ticks customization by extending from SfTickShape and override the `paint` method for custom drawing.
+
+You must declare the class for minor ticks customization by extending from SfMinorTickShape and override the `paint` method for custom drawing.
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSlider(
+                    min: _min,
+                    max: _max,
+                    interval: 2,
+                    minorTicksPerInterval: 1,
+                    showTicks: true,
+                    showLabels: true,
+                    tickShape: _TickShape(),
+                    minorTickShape: _MinorTickShape(),
+                    onChanged: (SfRangeValues newValues) {
+                        setState(() {
+                            _values = newValues;
+                        });
+                    },
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Dart %}
+
+class _TickShape extends SfTickShape {
+  @override
+  Size getPreferredSize(SfRangeSliderThemeData themeData, bool isEnabled) {
+    return const Size(10, 10);
+  }
+
+  @override
+  void paint(PaintingContext context, Offset center, Offset thumbCenter,
+      Offset endThumbCenter,
+      {bool isEnabled,
+        RenderProxyBox parentBox,
+        SfRangeSliderThemeData themeData,
+        Animation<double> animation,
+        TextDirection textDirection}) {
+    final Size tickSize = getPreferredSize(themeData, isEnabled);
+    final bool isTickRightOfThumb = endThumbCenter == null
+        ? center.dx > thumbCenter.dx
+        : center.dx < thumbCenter.dx || center.dx > endThumbCenter.dx;
+    final Color begin = isTickRightOfThumb
+        ? themeData.disabledInactiveTickColor
+        : themeData.disabledActiveTickColor;
+    final Color end = isTickRightOfThumb
+        ? Colors.blue[100]
+        : Colors.blue;
+    final Paint paint = Paint()
+      ..isAntiAlias = true
+      ..strokeWidth = tickSize.width
+      ..color = ColorTween(begin: begin, end: end).evaluate(animation);
+
+    final Path path = Path();
+    path.moveTo(center.dx, center.dy);
+    path.lineTo(center.dx - (tickSize.width / 2), center.dy + tickSize.height);
+    path.lineTo(center.dx + (tickSize.width / 2), center.dy + tickSize.height);
+    context.canvas.drawPath(path, paint);
+  }
+}
+
+class _MinorTickShape extends SfMinorTickShape {
+
+  @override
+  Size getPreferredSize(SfRangeSliderThemeData themeData, bool isEnabled) {
+    return const Size(8, 8);
+  }
+
+  @override
+  void paint(PaintingContext context, Offset offset, Offset startThumbCenter,
+      Offset endThumbCenter,
+      {bool isEnabled,
+        RenderProxyBox parentBox,
+        SfRangeSliderThemeData themeData,
+        Animation<double> animation,
+        TextDirection textDirection}) {
+    final Size minorTickSize = getPreferredSize(themeData, isEnabled);
+    final bool isMinorTickRightOfThumb = endThumbCenter == null
+        ? offset.dx > startThumbCenter.dx
+        : offset.dx < startThumbCenter.dx || offset.dx > endThumbCenter.dx;
+
+    final Color begin = isMinorTickRightOfThumb
+        ? themeData.disabledInactiveMinorTickColor
+        : themeData.disabledActiveMinorTickColor;
+    final Color end = isMinorTickRightOfThumb
+        ?  Colors.blue[100]
+        : Colors.blue;
+
+    final Paint paint = Paint()
+      ..isAntiAlias = true
+      ..strokeWidth = minorTickSize.width
+      ..color = ColorTween(begin: begin, end: end).evaluate(animation);
+
+    final Path path = Path();
+    path.moveTo(offset.dx, offset.dy);
+    path.lineTo(offset.dx - (minorTickSize.width / 2), offset.dy + minorTickSize.height);
+    path.lineTo(offset.dx + (minorTickSize.width / 2), offset.dy + minorTickSize.height);
+    context.canvas.drawPath(path, paint);
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Ticks shape customization support](images/customization/slider-ticks-customization.png)
