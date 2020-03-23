@@ -1880,3 +1880,142 @@ class _MinorTickShape extends SfMinorTickShape {
 {% endtabs %}
 
 ![Ticks shape customization support](images/customization/selector-ticks-customization.png)
+
+### Track shape
+
+You can customize track shape using the `trackShape` property in the range slider.
+
+For that, you must declare the class for track customization by extending from SfTrackShape and override the `paint` method for custom drawing.
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+final List<Data> chartData = <Data>[
+    Data(x:2.0, y: 2.2),
+    Data(x:3.0, y: 3.4),
+    Data(x:4.0, y: 2.8),
+    Data(x:5.0, y: 1.6),
+    Data(x:6.0, y: 2.3),
+    Data(x:7.0, y: 2.5),
+    Data(x:8.0, y: 2.9),
+    Data(x:9.0, y: 3.8),
+    Data(x:10.0, y: 3.7),
+];
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSelectorTheme(
+                    data: SfRangeSliderThemeData(
+                        trackHeight: 5,
+                    ),
+                    child:  SfRangeSelector(
+                         min: _min,
+                         max: _max,
+                         initialValues: _values,
+                         trackShape: _SfTrackShape(),
+                        child: Container(
+                        height: 130,
+                        child: SfCartesianChart(
+                            margin: const EdgeInsets.all(0),
+                            primaryXAxis: NumericAxis(minimum: _min,
+                                maximum: _max,
+                                isVisible: false),
+                            primaryYAxis: NumericAxis(isVisible: false),
+                            plotAreaBorderWidth: 0,
+                            series: <SplineAreaSeries<Data, double>>[
+                                SplineAreaSeries<Data, double>(
+                                    color: Color.fromARGB(255, 126, 184, 253),
+                                        dataSource: chartData,
+                                            xValueMapper: (Data sales, _) => sales.x,
+                                            yValueMapper: (Data sales, _) => sales.y,
+                                            gradient: gradientColor)
+                                ],
+                            ),
+                        ),
+                   ),
+              ),
+          )
+      )
+  );
+}
+
+class Data {
+  Data({this.x, this.y});
+  final double x;
+  final double y;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Dart %}
+
+class _SfTrackShape extends SfTrackShape {
+  @override
+  void paint(PaintingContext context, Offset offset, Offset startThumbCenter,
+      Offset endThumbCenter,
+      {bool isEnabled,
+        RenderProxyBox parentBox,
+        SfRangeSliderThemeData themeData,
+        Animation<double> animation,
+        TextDirection textDirection}) {
+    super.paint(context, offset, startThumbCenter, endThumbCenter,
+        isEnabled: isEnabled,
+        parentBox: parentBox,
+        themeData: themeData,
+        animation: animation,
+        textDirection: textDirection);
+
+    final Paint paint = Paint()
+      ..isAntiAlias = true
+      ..strokeWidth = 0
+      ..color = Colors.pink[100];
+
+    final Canvas canvas = context.canvas;
+    final Radius radius = Radius.circular(themeData.trackCornerRadius);
+
+    Rect actualTrackRect =
+    getPreferredRect(parentBox, themeData, offset, isEnabled);
+    Rect activeTrackRect = Rect.fromLTRB(actualTrackRect.left,
+        actualTrackRect.top, startThumbCenter.dx, actualTrackRect.bottom);
+    RRect activeTrackRRect = RRect.fromRectAndCorners(activeTrackRect,
+        topLeft: radius, bottomLeft: radius);
+    canvas.drawRRect(activeTrackRRect, paint);
+
+    actualTrackRect = getPreferredRect(parentBox, themeData, offset, isEnabled);
+    activeTrackRect = Rect.fromLTRB(startThumbCenter.dx, actualTrackRect.top,
+        endThumbCenter.dx, actualTrackRect.bottom);
+    activeTrackRRect = RRect.fromRectAndCorners(activeTrackRect);
+    paint.shader = gradientColor.createShader(activeTrackRect);
+    canvas.drawRRect(activeTrackRRect, paint);
+
+    paint.color = Colors.green[50];
+    actualTrackRect = getPreferredRect(parentBox, themeData, offset, isEnabled);
+    activeTrackRect = Rect.fromLTRB(endThumbCenter.dx, actualTrackRect.top,
+        actualTrackRect.width + actualTrackRect.left, actualTrackRect.bottom);
+    activeTrackRRect = RRect.fromRectAndCorners(activeTrackRect,
+        topRight: radius, bottomRight: radius);
+    canvas.drawRRect(activeTrackRRect, paint);
+  }
+}
+
+LinearGradient get gradientColor {
+  final List<Color> colors = <Color>[];
+  colors.add(Colors.pink);
+  colors.add(Colors.green);
+  final List<double> stops = <double>[0.0, 1.0];
+  return LinearGradient(colors: colors, stops: stops);
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Track shape customization support](images/customization/selector-track-customization.png)

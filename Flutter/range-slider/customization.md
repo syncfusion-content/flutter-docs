@@ -1152,3 +1152,109 @@ class _MinorTickShape extends SfMinorTickShape {
 {% endtabs %}
 
 ![Ticks shape customization support](images/customization/slider-ticks-customization.png)
+
+### Track shape
+
+You can customize track shape using the `trackShape` property in the range slider.
+
+For that, you must declare the class for track customization by extending from SfTrackShape and override the `paint` method for custom drawing.
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                        trackHeight: 5
+                    ),
+                    child:  SfRangeSlider(
+                      min: _min,
+                      max: _max,
+                      values: _values,
+                      trackShape: _SfTrackShape(),
+                     onChanged: (dynamic newValue){
+                            setState(() {
+                                _values = newValue;
+                            });
+                        },
+                    ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Dart %}
+
+class _SfTrackShape extends SfTrackShape {
+  @override
+  void paint(PaintingContext context, Offset offset, Offset startThumbCenter,
+      Offset endThumbCenter,
+      {bool isEnabled,
+        RenderProxyBox parentBox,
+        SfRangeSliderThemeData themeData,
+        Animation<double> animation,
+        TextDirection textDirection}) {
+    super.paint(context, offset, startThumbCenter, endThumbCenter,
+        isEnabled: isEnabled,
+        parentBox: parentBox,
+        themeData: themeData,
+        animation: animation,
+        textDirection: textDirection);
+
+    final Paint paint = Paint()
+      ..isAntiAlias = true
+      ..strokeWidth = 0
+      ..color = Colors.pink[100];
+
+    final Canvas canvas = context.canvas;
+    final Radius radius = Radius.circular(themeData.trackCornerRadius);
+
+    Rect actualTrackRect =
+    getPreferredRect(parentBox, themeData, offset, isEnabled);
+    Rect activeTrackRect = Rect.fromLTRB(actualTrackRect.left,
+        actualTrackRect.top, startThumbCenter.dx, actualTrackRect.bottom);
+    RRect activeTrackRRect = RRect.fromRectAndCorners(activeTrackRect,
+        topLeft: radius, bottomLeft: radius);
+    canvas.drawRRect(activeTrackRRect, paint);
+
+    actualTrackRect = getPreferredRect(parentBox, themeData, offset, isEnabled);
+    activeTrackRect = Rect.fromLTRB(startThumbCenter.dx, actualTrackRect.top,
+        endThumbCenter.dx, actualTrackRect.bottom);
+    activeTrackRRect = RRect.fromRectAndCorners(activeTrackRect);
+    paint.shader = gradientColor.createShader(activeTrackRect);
+    canvas.drawRRect(activeTrackRRect, paint);
+
+    paint.color = Colors.green[50];
+    actualTrackRect = getPreferredRect(parentBox, themeData, offset, isEnabled);
+    activeTrackRect = Rect.fromLTRB(endThumbCenter.dx, actualTrackRect.top,
+        actualTrackRect.width + actualTrackRect.left, actualTrackRect.bottom);
+    activeTrackRRect = RRect.fromRectAndCorners(activeTrackRect,
+        topRight: radius, bottomRight: radius);
+    canvas.drawRRect(activeTrackRRect, paint);
+  }
+}
+
+LinearGradient get gradientColor {
+  final List<Color> colors = <Color>[];
+  colors.add(Colors.pink);
+  colors.add(Colors.green);
+  final List<double> stops = <double>[0.0, 1.0];
+  return LinearGradient(colors: colors, stops: stops);
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Track shape customization support](images/customization/slider-track-customization.png)
