@@ -759,6 +759,56 @@ Widget build(BuildContext context) {
 
 ![Overlay color support](images/customization/slider-overlay-color.png)
 
+## Disabled color
+
+You can change the disable state color of the active and inactive track using the `disabledActiveTrackColor` and `disabledInactiveTrackColor` properties, color of the disabled active and inactive major ticks using the `disabledActiveTickColor` and `disabledInactiveTickColor`properties, color of the disabled active and inactive minor ticks using the `disabledActiveMinorTickColor` and `disabledInactiveMinorTickColor` properties, color of the active and inactive divisors using the `disabledActiveDivisorColor` and `disabledInactiveDivisorColor` properties, color of the disabled thumb color using the `disabledThumbColor` property.
+
+N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://help.syncfusion.com/flutter/range-slider/customization).
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                        disabledActiveTrackColor: Colors.orange,
+                        disabledInactiveTrackColor: Colors.orange[200],
+                        disabledActiveTickColor: Colors.orange,
+                        disabledInactiveTickColor: Colors.orange[200],
+                        disabledActiveMinorTickColor: Colors.orange,
+                        disabledInactiveMinorTickColor: Colors.orange[200],
+                        disabledActiveDivisorColor: Colors.purple,
+                        disabledInactiveDivisorColor: Colors.purple[200],
+                        disabledThumbColor: Colors.orange,
+                    ),
+                    child:  SfRangeSlider(
+                     min: _min,
+                     max: _max,
+                     interval: 2,
+                     showTicks: true,
+                     minorTicksPerInterval: 1,
+                     showDivisors: true,
+                     values: _values,
+                  ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Disabled color support](images/customization/slider-disabled-color.png)
+
 ## Common
 
 ### Active color
