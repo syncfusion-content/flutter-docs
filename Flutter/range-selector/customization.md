@@ -682,6 +682,9 @@ class Data {
 
 You can provide the empty space between the ticks and labels of the range selector using the `labelOffset` property.
 
+The default value of `labelOffset` property is `Offset(0.0, 13.0)` if the `showTicks` property is `false`.
+The default value of `labelOffset` property is `Offset(0.0, 5.0)` if the `showTicks` property is `true`.
+
 N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://help.syncfusion.com/flutter/range-selector/customization).
 
 {% tabs %}
