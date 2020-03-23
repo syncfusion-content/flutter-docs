@@ -382,6 +382,148 @@ Widget build(BuildContext context) {
 
 ![Labels color support](images/customization/slider-labels-color.png)
 
+### Labels offset
+
+You can provide the empty space between the ticks and labels of the range slider using the `labelOffset` property.
+
+N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://help.syncfusion.com/flutter/range-slider/customization).
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                        labelOffset: Offset(0.0, 10.0),
+                    ),
+                    child:  SfRangeSlider(
+                       min: _min,
+                       max: _max,
+                       interval: 2,
+                       showTicks: true,
+                       showLabels: true,
+                       onChanged: (dynamic newValue){
+                            setState(() {
+                                _values = newValue;
+                            });
+                        },
+                    ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Labels offset support](images/customization/slider-labels-offset.png)
+
+## Divisor customization
+
+### Divisor color
+
+You can change the active and inactive divisor color of the range slider using the `activeDivisorColor` and `inactiveDivisorColor` properties respectively.
+
+N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://help.syncfusion.com/flutter/range-slider/customization).
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                         activeDivisorColor: Colors.red,
+                         inactiveDivisorColor: Colors.red[200],
+                    ),
+                    child:  SfRangeSlider(
+                      min: _min,
+                      max: _max,
+                      interval: 1,
+                      showDivisors: true,
+                      values: _values,
+                      onChanged: (dynamic newValue){
+                            setState(() {
+                                _values = newValue;
+                            });
+                        },
+                    ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Divisor color support](images/customization/slider-divisor-color.png)
+
+## Tooltip customization
+
+### Tooltip color
+
+You can change the background color of the tooltip in the range slider using the `tooltipBackgroundColor` property.
+
+N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://help.syncfusion.com/flutter/range-slider/customization).
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                        tooltipBackgroundColor: Colors.red[300],
+                    ),
+                    child:  SfRangeSlider(
+                     min: _min,
+                     max: _max,
+                     interval: 1,
+                     showTicks: true,
+                     showLabels: true,
+                     showTooltip: true,
+                     values: _values,
+                     onChanged: (dynamic newValue){
+                            setState(() {
+                                _values = newValue;
+                            });
+                        },
+                    ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Tooltip color support](images/customization/slider-tooltip-color.png)
+
 ## Common
 
 ### Active color
