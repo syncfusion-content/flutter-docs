@@ -93,7 +93,7 @@ class Data {
 
 ![Track color support](images/customization/selector-track-color.png)
 
-### Track size
+### Track height
 
 You can change the track height of the range selector using the `trackHeight` property. The default value of the `trackHeight` property is `2.0`.
 
@@ -682,7 +682,7 @@ class Data {
 
 You can provide the empty space between the ticks and labels of the range selector using the `labelOffset` property.
 
-The default value of `labelOffset` property is `Offset(0.0, 13.0)` if the `showTicks` property is `false`.
+The default value of `labelOffset` property is `Offset(0.0, 13.0)` if  the `showTicks` property is `false`.
 The default value of `labelOffset` property is `Offset(0.0, 5.0)` if the `showTicks` property is `true`.
 
 N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://help.syncfusion.com/flutter/range-selector/customization).
@@ -1595,11 +1595,6 @@ class Data {
 {% highlight Dart %}
 
 class _SfThumbShape extends SfThumbShape{
-
-  Size getPreferredSize(SfRangeSliderThemeData themeData, bool isEnabled) {
-    return Size.fromRadius(themeData.thumbRadius);
-  }
-
   @override
   void paint(PaintingContext context, Offset center,
       {bool isEnabled,
@@ -1620,11 +1615,6 @@ class _SfThumbShape extends SfThumbShape{
 }
 
 class _SfOverlayShape extends SfOverlayShape {
-
-  Size getPreferredSize(SfRangeSliderThemeData themeData, bool isEnabled) {
-    return Size.fromRadius(themeData.overlayRadius);
-  }
-
   @override
   void paint(PaintingContext context, Offset center,
       {bool isEnabled,
@@ -1644,3 +1634,88 @@ class _SfOverlayShape extends SfOverlayShape {
 {% endtabs %}
 
 ![Thumb shape customization support](images/customization/selector-thumb-customization.png)
+
+You can customize the thumb and overlay position and shape using the `thumbShape` and `overlayShape` properties in the range slider.
+
+For that, you must declare the class for thumb customization by extending from SfThumbShape and override the `getPreferredSize` method for declaring thumb size and override `paint` method for custom drawing.
+You must declare the class for overlay customization by extending from SfOverlayShape and override the `getPreferredSize` method for declaring overlay size and override `paint` method for custom drawing.
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+final List<Data> chartData = <Data>[
+    Data(x:2.0, y: 2.2),
+    Data(x:3.0, y: 3.4),
+    Data(x:4.0, y: 2.8),
+    Data(x:5.0, y: 1.6),
+    Data(x:6.0, y: 2.3),
+    Data(x:7.0, y: 2.5),
+    Data(x:8.0, y: 2.9),
+    Data(x:9.0, y: 3.8),
+    Data(x:10.0, y: 3.7),
+];
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSelector(
+                    min: _min,
+                    max: _max,
+                    interval: 1,
+                    showLabels: true,
+                    showDivisors: true,
+                    showTicks: true,
+                    initialValues: _values,
+                    divisorShape: _SfDivisorShape(),
+                    child: Container(
+                    height: 130,
+                    child: SfCartesianChart(
+                        margin: const EdgeInsets.all(0),
+                        primaryXAxis: NumericAxis(minimum: _min,
+                            maximum: _max,
+                            isVisible: false,),
+                        primaryYAxis: NumericAxis(isVisible: false),
+                        plotAreaBorderWidth: 0,
+                        series: <SplineAreaSeries<Data, double>>[
+                            SplineAreaSeries<Data, double>(
+                                color: Color.fromARGB(255, 126, 184, 253),
+                                dataSource: chartData,
+                                    xValueMapper: (Data sales, _) => sales.x,
+                                    yValueMapper: (Data sales, _) => sales.y)
+                            ],
+                        ),
+                   ),
+              ),
+          )
+      )
+  );
+}
+
+class Data {
+  Data({this.x, this.y});
+  final double x;
+  final double y;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Dart %}
+
+class _SfDivisorShape extends SfDivisorShape {
+  Size getPreferredSize(SfRangeSliderThemeData themeData, bool isEnabled) {
+    return const Size.fromRadius(6);
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Divisor shape customization support](images/customization/selector-divisor-customization.png)

@@ -56,7 +56,7 @@ Widget build(BuildContext context) {
 
 ![Track color support](images/customization/slider-track-color.png)
 
-### Track size
+### Track height
 
 You can change the track height of the range slider using the `trackHeight` property. The default value of the `trackHeight` property is `2.0`
 
@@ -974,3 +974,60 @@ class _SfThumbShape extends SfThumbShape{
 {% endtabs %}
 
 ![Thumb shape customization support](images/customization/slider-thumb-customization.png)
+
+### Divisor shape
+
+### Thumb shape
+
+You can customize the thumb position and shape using the `thumbShape` property in the range slider.
+
+For that, you must declare the class for thumb customization by extending from SfThumbShape and override the `getPreferredSize` method for declaring thumb size and override `paint` method for custom drawing.
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSlider(
+                    min: _min,
+                    max: _max,
+                    interval: 1,
+                    showDivisors: true,
+                    showTicks: true,
+                    showLabels: true,
+                    values: _values,
+                    divisorShape: _SfDivisorShape(),
+                    onChanged: (SfRangeValues newValues) {
+                        setState(() {
+                            _values = newValues;
+                        });
+                    },
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Dart %}
+
+class _SfDivisorShape extends SfDivisorShape {
+  Size getPreferredSize(SfRangeSliderThemeData themeData, bool isEnabled) {
+    return const Size.fromRadius(6);
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Divisor shape customization support](images/customization/slider-divisor-customization.png)
