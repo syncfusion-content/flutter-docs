@@ -2205,11 +2205,11 @@ To render a HiLo chart, create an instance of [`HiloSeries`](), and add it to th
 
 ![hiLo chart](images/cartesian-chart-types/hilo_chart.png)
 
-## High Low Open Close
+## Open High Low Close (OHLC)
 
-HiLoOpenClose series is used to represent the low, high, open and closing values over time.
+ OpenHighLowClose series is used to represent the low, high, open and closing values over time.
 
-To render a HiLoOpenClose chart, create an instance of [` hiloOpenCloseSeries`](), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties are used to customize the appearance:
+To render a OpenHighLowClose chart, create an instance of [` hiloOpenCloseSeries`](), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties are used to customize the appearance:
 
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) – Changes the color of the series.
 * [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
