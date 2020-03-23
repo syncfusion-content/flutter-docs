@@ -665,6 +665,100 @@ Widget build(BuildContext context) {
 
 ![Thumb color support](images/customization/slider-thumb-color.png)
 
+## Overlay customization
+
+### Overlay size
+
+You can change the size of the overlay in the range slider using the `overlayRadius` property.
+
+N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://help.syncfusion.com/flutter/range-slider/customization).
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                        overlayRadius: 22,
+                    ),
+                    child:  SfRangeSlider(
+                     min: _min,
+                     max: _max,
+                     interval: 1,
+                     showTicks: true,
+                     showLabels: true,
+                     values: _values,
+                     onChanged: (dynamic newValue){
+                            setState(() {
+                                _values = newValue;
+                            });
+                        },
+                    ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Overlay size support](images/customization/slider-overlay-size.png)
+
+### Overlay color
+
+You can change the color of the overlay in the range slider using the `overlayColor` property.
+
+N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://help.syncfusion.com/flutter/range-slider/customization).
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                        overlayColor: Colors.red[50],
+                    ),
+                    child:  SfRangeSlider(
+                     min: _min,
+                     max: _max,
+                     interval: 1,
+                     showTicks: true,
+                     showLabels: true,
+                     values: _values,
+                     onChanged: (dynamic newValue){
+                            setState(() {
+                                _values = newValue;
+                            });
+                        },
+                    ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Overlay color support](images/customization/slider-overlay-color.png)
+
 ## Common
 
 ### Active color
