@@ -10,7 +10,7 @@ documentation: ug
 # Customization of range slider
 This section explains about how to customize the range slider elements.
 
-## Color customization
+## Track customization
 
 ### Track color
 
@@ -55,6 +55,95 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Track color support](images/customization/slider-track-color.png)
+
+### Track size
+
+You can change the track height of the range slider using the `trackHeight` property.
+
+N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://help.syncfusion.com/flutter/range-slider/customization).
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(4.0, 7.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                        trackHeight: 8,
+                    ),
+                    child:  SfRangeSlider(
+                        min: _min,
+                        max: _max,
+                        values: _values,
+                        onChanged: (dynamic newValue){
+                            setState(() {
+                                _values = newValue;
+                            });
+                        },
+                    ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Track size support](images/customization/slider-track-size.png)
+
+### Track corner radius
+
+You can change the corner of the track to be round in the range slider using the `trackCornerRadius` property.
+
+N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://help.syncfusion.com/flutter/range-slider/customization).
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(4.0, 7.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                        trackHeight: 10,
+                        trackCornerRadius: 5,
+                    ),
+                    child:  SfRangeSlider(
+                        min: _min,
+                        max: _max,
+                        values: _values,
+                        onChanged: (dynamic newValue){
+                            setState(() {
+                                _values = newValue;
+                            });
+                        },
+                    ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Track corner radius support](images/customization/slider-track-corner-radius.png)
+
+## Ticks customization
 
 ### Ticks color
 
@@ -151,6 +240,55 @@ Widget build(BuildContext context) {
 
 ![Minor ticks color](images/customization/slider-minor-ticks.png)
 
+### Ticks size
+
+You can change the major and minor ticks size of the range slider using the `tickSize` and `minorTickSize` properties respectively.
+
+N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://help.syncfusion.com/flutter/range-slider/customization).
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                         tickSize: Size(3.0, 12.0),
+                         minorTickSize: Size(3.0, 8.0),
+                    ),
+                    child:  SfRangeSlider(
+                         min: _min,
+                         max: _max,
+                         interval: 2,
+                         minorTicksPerInterval: 1,
+                         showTicks: true,
+                         values: _values,
+                        onChanged: (dynamic newValue){
+                            setState(() {
+                                _values = newValue;
+                            });
+                        },
+                    ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Ticks size support](images/customization/slider-ticks-size.png)
+
+## Labels customization
+
 ### Labels color
 
 You can change the active and inactive label style of the range slider using the `activeLabelStyle` and `inactiveLabelStyle` properties respectively.
@@ -198,9 +336,9 @@ Widget build(BuildContext context) {
 
 ![Labels color support](images/customization/slider-labels-color.png)
 
-### Common
+## Common
 
-**Active color**
+### Active color
 
 Represents the color applied to the active track, thumb, overlay, and inactive divisors. The `active` side of the range slider is between the left and right thumbs.
 
@@ -238,7 +376,7 @@ Widget build(BuildContext context) {
 
 N> Refer the `SfRangeSliderThemeData` to know about updating the individual active range slider element’s visual.
 
-**Inactive color**
+### Inactive color
 
 Represents the color applied to the inactive track and active divisors. The "inactive" side of the range slider is between the `min` value and the left thumb, and the right thumb and the `max` value.
 
