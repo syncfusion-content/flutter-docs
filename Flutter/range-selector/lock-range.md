@@ -9,7 +9,7 @@ documentation: ug
 
 # Lock range of range selector
 
-The selected range can be moved by dragging the center of the selected range.
+Range selector allows the user to keep the selected range while dragging center of the selected region.
 
 If the touch down is beyond the selected range, the nearest thumb will be moved to the point and the selected range is extended.
 

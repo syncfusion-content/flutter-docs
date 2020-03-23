@@ -337,7 +337,7 @@ Widget build(BuildContext context) {
 
 ### Labels color
 
-You can change the active and inactive label style of the range slider using the `activeLabelStyle` and `inactiveLabelStyle` properties respectively.
+You can change the active and inactive label appearance of the range slider using the `activeLabelStyle` and `inactiveLabelStyle` properties respectively.
 
 N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://help.syncfusion.com/flutter/range-slider/customization).
 
@@ -527,7 +527,7 @@ Widget build(BuildContext context) {
 
 ![Tooltip color support](images/customization/slider-tooltip-color.png)
 
-### Tooltip style
+### Tooltip label style
 
 You can change the text color, font size, font style of the tooltip in the range slider using the `tooltipTextStyle` property.
 
@@ -937,11 +937,6 @@ Widget build(BuildContext context) {
 {% highlight Dart %}
 
 class _SfThumbShape extends SfThumbShape{
-
-  Size getPreferredSize(SfRangeSliderThemeData themeData, bool isEnabled) {
-    return Size.fromRadius(themeData.thumbRadius);
-  }
-
   @override
   void paint(PaintingContext context, Offset center,
       {bool isEnabled,

@@ -596,7 +596,7 @@ class Data {
 
 ### Labels color
 
-You can change the active and inactive label style of the range selector using the `activeLabelStyle` and `inactiveLabelStyle` properties respectively.
+You can change the active and inactive label appearance of the range selector using the `activeLabelStyle` and `inactiveLabelStyle` properties respectively.
 
 N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://help.syncfusion.com/flutter/range-selector/customization).
 
@@ -935,7 +935,7 @@ class Data {
 
 ![Tooltip color support](images/customization/selector-tooltip-color.png)
 
-### Tooltip style
+### Tooltip label style
 
 You can change the text color, font size, font style of the tooltip in the range selector using the `tooltipTextStyle` property.
 
