@@ -7,7 +7,7 @@ control: SfCalendar
 documentation: ug
 ---
 
-# Time zone
+# Time zone in Flutter Calendar (SfCalendar)
 
 Calendar allows you to create appointments in various time zones and display them in users’ time zone or any other time zone. You can use a time zone in the following four different ways:
 
