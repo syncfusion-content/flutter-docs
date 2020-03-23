@@ -12,7 +12,7 @@ This section explains about how to customize the range slider elements.
 
 ## Color customization
 
-### Track
+### Track color
 
 You can change the active and inactive track color of the range slider using the `activeTrackColor` and `inactiveTrackColor` properties respectively.
 
@@ -55,6 +55,101 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Track color support](images/customization/slider-track-color.png)
+
+### Ticks color
+
+**Major ticks color**
+
+You can change the active and inactive major ticks color of the range slider using the `activeTickColor` and `inactiveTickColor` properties respectively.
+
+N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://help.syncfusion.com/flutter/range-slider/customization).
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                        activeTickColor: Colors.red,
+                        inactiveTickColor: Colors.red[100],
+                    ),
+                    child:  SfRangeSlider(
+                        min: _min,
+                        max: _max,
+                        values: _values,
+                        interval: 1,
+                        showTicks: true,
+                        onChanged: (dynamic newValue){
+                            setState(() {
+                                _values = newValue;
+                            });
+                        },
+                    ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Major ticks color](images/customization/slider-major-ticks.png)
+
+**Minor ticks color**
+
+You can change the active and inactive minor ticks color of the range slider using the `activeMinorTickColor` and `inactiveMinorTickColor` properties respectively.
+
+N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://help.syncfusion.com/flutter/range-slider/customization).
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                        activeMinorTickColor: Colors.red,
+                        inactiveMinorTickColor: Colors.red[200],
+                    ),
+                    child:  SfRangeSlider(
+                        min: _min,
+                        max: _max,
+                        values: _values,
+                        interval: 2,
+                        minorTicksPerInterval: 1,
+                        showTicks: true,
+                        onChanged: (dynamic newValue){
+                            setState(() {
+                                _values = newValue;
+                            });
+                        },
+                    ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Minor ticks color](images/customization/slider-minor-ticks.png)
 
 ### Common
 
