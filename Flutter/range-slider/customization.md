@@ -287,6 +287,52 @@ Widget build(BuildContext context) {
 
 ![Ticks size support](images/customization/slider-ticks-size.png)
 
+### Ticks offset
+
+You can provide the empty space between the track and ticks of the range slider using the `tickOffset` property in the `SfRangeSliderThemeData`.
+
+N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://help.syncfusion.com/flutter/range-slider/customization).
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                        tickOffset: Offset(0.0, 10.0),
+                    ),
+                    child:  SfRangeSlider(
+                         min: _min,
+                         max: _max,
+                         interval: 2,
+                         minorTicksPerInterval: 1,
+                         showTicks: true,
+                         values: _values,
+                        onChanged: (dynamic newValue){
+                            setState(() {
+                                _values = newValue;
+                            });
+                        },
+                    ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Ticks offset support](images/customization/slider-ticks-offset.png)
+
 ## Labels customization
 
 ### Labels color
