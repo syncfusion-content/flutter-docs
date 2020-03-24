@@ -89,7 +89,7 @@ class Data {
 ![Numeric interval](images/interval/numeric_interval.png)
 
 N>
-* Refer the `showDivisions` to know about the rendering of divisors at given interval.
+* Refer the `showDivisors` to know about the rendering of divisors at given interval.
 * Refer the `showTicks` to know about the rendering of major ticks at given interval.
 * Refer the `showLabels` to know about the rendering of labels at given interval.
 
