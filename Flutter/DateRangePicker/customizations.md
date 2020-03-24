@@ -70,7 +70,7 @@ Widget build(BuildContext context) {
 
 ## Month selection cell customization
 
-You can also customize month view section by using the `monthCellStyle`.
+You can also customize month view section by using the `monthCellStyle` of `SfDateRangePicker`.
 
 •    **Selection date text style** – Selected date text style can be customized using [selectionTextStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/selectionTextStyle.html) property of `monthCellStyle` which is applicable for selection mode is `single` and `multiple`, it’s also applicable for start and end of selected range text style in `single` and `multi-range` selection
 
@@ -107,7 +107,7 @@ Widget build(BuildContext context) {
 ## Year cell customization
 You can customize the calendar `year`,`decade`,`century` view by using the `yearCellStyle` of `SfDateRangePicker`.
 
-•   **Current year** – You can customize the date range picker current month dates text color and background by using textStyle and [cellDecoration](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/cellDecoration.html).
+•   **Current year** – You can customize the date range picker current month dates text color and background by using [textStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/textStyle.html) and [cellDecoration](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/cellDecoration.html).
 
 •   **Disabled dates** – Disable dates text color and background beyond the date range picker by using [disableDatesTextStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/disabledDatesTextStyle.html) and  [disableDatesDecoration](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/disabledDatesDecoration.html).
 
