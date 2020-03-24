@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Track features in Syncfusion Flutter Range Selector | Syncfusion
-description: This section helps to learn about how to customize the track in range selector for flutter platform
+description: This section helps to learn about how to customize the track features in range selector for flutter platform
 platform: flutter
 control: SfRangeSelector
 documentation: ug

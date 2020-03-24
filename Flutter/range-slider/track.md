@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Track features in Syncfusion Flutter Range Slider | Syncfusion
-description: This section helps to learn about how to customize the track in range slider for flutter platform
+description: This section helps to learn about how to customize the track features in range slider for flutter platform
 platform: flutter
 control: SfRangeSlider
 documentation: ug
