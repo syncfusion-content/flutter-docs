@@ -30,6 +30,14 @@ This page helps to navigate to the public API's available in the Syncfusion Flut
     </tr>
     <tr>
         <td>
+          Date Range Picker
+        </td>
+       <td>
+           <a href="https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/datepicker-library.html">Link</a>
+      </td>
+  </tr>
+    <tr>
+        <td>
             Radial Gauge
         </td>
         <td>
