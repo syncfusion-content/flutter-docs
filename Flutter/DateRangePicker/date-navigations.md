@@ -124,7 +124,7 @@ class MyAppState extends State<MyApp> {
    DateRangePickerController _datePickerController;
    @override
    initState() {
-      _ datePickerController = DateRangePickerController ();
+      _datePickerController = DateRangePickerController ();
       super.initState();
    }
 
@@ -137,14 +137,14 @@ class MyAppState extends State<MyApp> {
           actions: <Widget>[
           IconButton(icon: Icon(Icons.arrow_forward),
          onPressed: () {
-           _ datePickerController.forward();
+           _datePickerController.forward();
          },
       ),
    ],
 ),
         body: SfDateRangePicker(
         view: DateRangePickerView.month,
-        controller: _ datePickerController,
+        controller: _datePickerController,
        ),
     ),
   );
@@ -185,7 +185,7 @@ class MyAppState extends State<MyApp> {
 ),
             body: SfDateRangePicker(
             view: DateRangePickerView.month,
-            controller: _ datePickerController,
+            controller: _datePickerController,
            ),
        ),
    );

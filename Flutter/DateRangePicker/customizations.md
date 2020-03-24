@@ -74,7 +74,7 @@ You can also customize month view section by using the `monthCellStyle` of `SfDa
 
 •    **Selection date text style** – Selected date text style can be customized using [selectionTextStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/selectionTextStyle.html) property of `monthCellStyle` which is applicable for `selectionMode` is `single` and `multiple`, it’s also applicable for start and end of selected range text style in `single` and `multi-range` selection
 
-•    **Selection date text color** – Selected date background color can be customized using [selectionColor](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/selectionColor.html) property of `monthCellStyle` which is applicable for `single` and `multiple` selection.
+•    **Selection color** – Selected date background color can be customized using [selectionColor](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/selectionColor.html) property of `monthCellStyle` which is applicable for `single` and `multiple` selection.
 
 •    **Range selection text style** – Range selection date text style can be customized using [rangeTextStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/rangeTextStyle.html) property which is applicable when `selectionMode` is `range` or `multi-range`.
 
