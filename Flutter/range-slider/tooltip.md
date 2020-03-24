@@ -98,3 +98,97 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Tooltip formatter support](images/tooltip/tooltip-formatter.png)
+
+## Tooltip color
+
+You can change the background color of the tooltip in the range slider using the `tooltipBackgroundColor` property.
+
+N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://help.syncfusion.com/flutter/range-slider/customization).
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                        tooltipBackgroundColor: Colors.red[300],
+                    ),
+                    child:  SfRangeSlider(
+                     min: _min,
+                     max: _max,
+                     interval: 1,
+                     showTicks: true,
+                     showLabels: true,
+                     showTooltip: true,
+                     values: _values,
+                     onChanged: (dynamic newValue){
+                            setState(() {
+                                _values = newValue;
+                            });
+                        },
+                    ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Tooltip color support](images/tooltip/slider-tooltip-color.png)
+
+## Tooltip label style
+
+You can change the text color, font size, font style of the tooltip in the range slider using the `tooltipTextStyle` property.
+
+N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://help.syncfusion.com/flutter/range-slider/customization).
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                        tooltipTextStyle: TextStyle(color: Colors.red, fontSize: 16, fontStyle: FontStyle.italic),
+                    ),
+                    child:  SfRangeSlider(
+                     min: _min,
+                     max: _max,
+                     interval: 1,
+                     showTicks: true,
+                     showLabels: true,
+                     showTooltip: true,
+                     values: _values,
+                     onChanged: (dynamic newValue){
+                            setState(() {
+                                _values = newValue;
+                            });
+                        },
+                    ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Tooltip style support](images/tooltip/slider-tooltip-style.png)
