@@ -29,7 +29,7 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ## Maximum display date
-[maxDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/maxDate.html) will restrict date navigations features of forward, and also cannot swipe the control using touch gesture beyond the max date range in all views
+[maxDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/maxDate.html) will restrict date navigations features of forward, and also cannot swipe the control using touch gesture beyond the max date range in all views.
 
 {% tabs %}
 {% highlight Dart %}
