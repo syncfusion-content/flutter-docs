@@ -51,44 +51,6 @@ N>
 * Refer the `numberFormat` and `dateFormat` for formatting the numeric and date labels respectively.
 * Refer the `SfRangeSliderThemeData` for customizing the appearance of the labels.
 
-## Show divisors
-
-Option to render the divisors on the track. The default value of `showDivisors` property is `false`. It is a shape which is used to represent the major interval points of the track.
-
-For example, if `min` is 0.0 and `max` is 10.0 and `interval` is 2.0, the range slider will render the divisors at 0.0, 2.0, 4.0 and so on.
-
-{% tabs %}
-{% highlight Dart %}
-
-SfRangeValues _values = SfRangeValues(4.0, 6.0);
-
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfRangeSlider(
-                    min: 0.0,
-                    max: 10.0,
-                    interval: 2,
-                    showDivisors: true,
-                    values: _values,
-                    onChanged: (SfRangeValues newValues) {
-                        setState(() {
-                            _values = newValues;
-                        });
-                   },
-              ),
-          )
-      )
-  );
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-![Range slider divisor support](images/label-and-divisor/show-divisor.png)
-
 ## Number format
 
 Formats the numeric labels. The default value of `numberFormat` property is `null`.
@@ -251,3 +213,182 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Label formatter support](images/label-and-divisor/label-formattercallback.png)
+
+## Labels style
+
+You can change the active and inactive label appearance of the range slider using the `activeLabelStyle` and `inactiveLabelStyle` properties respectively.
+
+N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://help.syncfusion.com/flutter/range-slider/customization).
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                         activeLabelStyle: TextStyle(color: Colors.red, fontSize: 12, fontStyle: FontStyle.italic),
+                         inactiveLabelStyle: TextStyle(color: Colors.red[200], fontSize: 12, fontStyle: FontStyle.italic),
+                    ),
+                    child:  SfRangeSlider(
+                       min: _min,
+                       max: _max,
+                       values: _values,
+                       interval: 1,
+                       showLabels: true,
+                       showTicks: true,
+                       onChanged: (dynamic newValue){
+                            setState(() {
+                                _values = newValue;
+                            });
+                        },
+                    ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Labels style support](images/label-and-divisor/slider-labels-color.png)
+
+## Labels offset
+
+You can adjust the space between ticks and labels of the range slider using the `labelOffset` property.
+
+The default value of `labelOffset` property is `Offset(0.0, 13.0)` if the `showTicks` property is `false`.
+The default value of `labelOffset` property is `Offset(0.0, 5.0)` if the `showTicks` property is `true`.
+
+N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://help.syncfusion.com/flutter/range-slider/customization).
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                        labelOffset: Offset(0.0, 10.0),
+                    ),
+                    child:  SfRangeSlider(
+                       min: _min,
+                       max: _max,
+                       interval: 2,
+                       showTicks: true,
+                       showLabels: true,
+                       onChanged: (dynamic newValue){
+                            setState(() {
+                                _values = newValue;
+                            });
+                        },
+                    ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Labels offset support](images/label-and-divisor/slider-labels-offset.png)
+
+## Show divisors
+
+Option to render the divisors on the track. The default value of `showDivisors` property is `false`. It is a shape which is used to represent the major interval points of the track.
+
+For example, if `min` is 0.0 and `max` is 10.0 and `interval` is 2.0, the range slider will render the divisors at 0.0, 2.0, 4.0 and so on.
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 6.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSlider(
+                    min: 0.0,
+                    max: 10.0,
+                    interval: 2,
+                    showDivisors: true,
+                    values: _values,
+                    onChanged: (SfRangeValues newValues) {
+                        setState(() {
+                            _values = newValues;
+                        });
+                   },
+              ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Range slider divisor support](images/label-and-divisor/show-divisor.png)
+
+## Divisor color
+
+You can change the active and inactive divisor color of the range slider using the `activeDivisorColor` and `inactiveDivisorColor` properties respectively.
+
+N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://help.syncfusion.com/flutter/range-slider/customization).
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                         activeDivisorColor: Colors.red,
+                         inactiveDivisorColor: Colors.red[200],
+                    ),
+                    child:  SfRangeSlider(
+                      min: _min,
+                      max: _max,
+                      interval: 1,
+                      showDivisors: true,
+                      values: _values,
+                      onChanged: (dynamic newValue){
+                            setState(() {
+                                _values = newValue;
+                            });
+                        },
+                    )
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Divisor color support](images/label-and-divisor/slider-divisor-color.png)

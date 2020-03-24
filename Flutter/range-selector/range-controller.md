@@ -9,15 +9,17 @@ documentation: ug
 
 # Range controller in range selector
 
-Coordinates `SfRangeSelector` with its child or a widget that listened `RangeController`.
+Coordinates `SfRangeSelector` with charts. It automatically controls selection and zooming with charts using the `start` and `end` properties of the controller.
 
 The `start` represents the currently selected start value of the range selector. The left thumb of the range selector was drawn corresponding to this value.
 
 The `end` represents the currently selected end value of the range selector. The right thumb of the range selector was drawn corresponding to this value.
 
-The `start` and `end` be either `double` or `DateTime`.
+The `start` and `end` can be either `double` or `DateTime`.
 
-N> you must import the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) to use the range controller in the range selector.
+I> No need to set the `initialValues` property when using `controller` property in the range selector.
+
+N> You must import the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) to use the range controller in the range selector.
 
 {% tabs %}
 {% highlight Dart %}
@@ -71,12 +73,14 @@ Widget build(BuildContext context) {
                         margin: const EdgeInsets.all(0),
                         primaryXAxis: NumericAxis(minimum: _min,
                             maximum: _max,
-                            isVisible: false,
-                            controller: _rangeController),
+                            isVisible: false),
                         primaryYAxis: NumericAxis(isVisible: false),
                         plotAreaBorderWidth: 0,
                         series: <SplineAreaSeries<Data, double>>[
                             SplineAreaSeries<Data, double>(
+                                selectionSettings: SelectionSettings(
+                                    enable: true,
+                                    selectionController: _rangeController),
                                 color: Color.fromARGB(255, 126, 184, 253),
                                 dataSource: chartData,
                                     xValueMapper: (Data sales, _) => sales.x,

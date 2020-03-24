@@ -9,9 +9,7 @@ documentation: ug
 
 # Lock range of range selector
 
-Range selector allows the user to keep the selected range while dragging center of the selected region.
-
-If the touch down is beyond the selected range, the nearest thumb will be moved to the point and the selected range is extended.
+When lock range is enabled, you can move both the thumbs at the same time by dragging in the area between start and end thumbs. It is `false` by default.
 
 {% tabs %}
 {% highlight Dart %}
@@ -51,8 +49,7 @@ Widget build(BuildContext context) {
                         margin: const EdgeInsets.all(0),
                         primaryXAxis: NumericAxis(minimum: _min,
                             maximum: _max,
-                            isVisible: false,
-                            controller: _rangeController),
+                            isVisible: false),
                         primaryYAxis: NumericAxis(isVisible: false),
                         plotAreaBorderWidth: 0,
                         series: <SplineAreaSeries<Data, double>>[

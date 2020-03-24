@@ -488,3 +488,256 @@ class Data {
 {% endtabs %}
 
 ![Label formatter support](images/label-and-divisor/selector_label_formatter.png)
+
+## Labels style
+
+You can change the active and inactive label appearance of the range selector using the `activeLabelStyle` and `inactiveLabelStyle` properties respectively.
+
+N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://help.syncfusion.com/flutter/range-selector/customization).
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+final List<Data> chartData = <Data>[
+    Data(x:2.0, y: 2.2),
+    Data(x:3.0, y: 3.4),
+    Data(x:4.0, y: 2.8),
+    Data(x:5.0, y: 1.6),
+    Data(x:6.0, y: 2.3),
+    Data(x:7.0, y: 2.5),
+    Data(x:8.0, y: 2.9),
+    Data(x:9.0, y: 3.8),
+    Data(x:10.0, y: 3.7),
+];
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSelectorTheme(
+                    data: SfRangeSliderThemeData(
+                        activeLabelStyle: TextStyle(color: Colors.red, fontSize: 12, fontStyle: FontStyle.italic),
+                        inactiveLabelStyle: TextStyle(color: Colors.red[200], fontSize: 12, fontStyle: FontStyle.italic),
+                    ),
+                    child:  SfRangeSelector(
+                        min: _min,
+                        max: _max,
+                        interval: 1,
+                        showLabels: true,
+                        showTicks: true,
+                        initialValues: _values,
+                        child: Container(
+                        height: 130,
+                        child: SfCartesianChart(
+                            margin: const EdgeInsets.all(0),
+                            primaryXAxis: NumericAxis(minimum: _min,
+                                maximum: _max,
+                                isVisible: false),
+                            primaryYAxis: NumericAxis(isVisible: false),
+                            plotAreaBorderWidth: 0,
+                            series: <SplineAreaSeries<Data, double>>[
+                                SplineAreaSeries<Data, double>(
+                                    color: Color.fromARGB(255, 126, 184, 253),
+                                        dataSource: chartData,
+                                            xValueMapper: (Data sales, _) => sales.x,
+                                            yValueMapper: (Data sales, _) => sales.y)
+                                ],
+                            ),
+                        ),
+                   ),
+              ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Dart %}
+
+class Data {
+  Data({this.x, this.y});
+  final double x;
+  final double y;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Labels color support](images/label-and-divisor/selector-labels-color.png)
+
+## Labels offset
+
+You can adjust the space between ticks and labels of the range selector using the `labelOffset` property.
+
+The default value of `labelOffset` property is `Offset(0.0, 13.0)` if  the `showTicks` property is `false`.
+The default value of `labelOffset` property is `Offset(0.0, 5.0)` if the `showTicks` property is `true`.
+
+N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://help.syncfusion.com/flutter/range-selector/customization).
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+final List<Data> chartData = <Data>[
+    Data(x:2.0, y: 2.2),
+    Data(x:3.0, y: 3.4),
+    Data(x:4.0, y: 2.8),
+    Data(x:5.0, y: 1.6),
+    Data(x:6.0, y: 2.3),
+    Data(x:7.0, y: 2.5),
+    Data(x:8.0, y: 2.9),
+    Data(x:9.0, y: 3.8),
+    Data(x:10.0, y: 3.7),
+];
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSelectorTheme(
+                    data: SfRangeSliderThemeData(
+                         labelOffset: Offset(0.0, 10.0),
+                    ),
+                    child:  SfRangeSelector(
+                        min: _min,
+                        max: _max,
+                        interval: 2,
+                        showLabels: true,
+                        showTicks: true,
+                        initialValues: _values,
+                        child: Container(
+                        height: 130,
+                        child: SfCartesianChart(
+                            margin: const EdgeInsets.all(0),
+                            primaryXAxis: NumericAxis(minimum: _min,
+                                maximum: _max,
+                                isVisible: false),
+                            primaryYAxis: NumericAxis(isVisible: false),
+                            plotAreaBorderWidth: 0,
+                            series: <SplineAreaSeries<Data, double>>[
+                                SplineAreaSeries<Data, double>(
+                                    color: Color.fromARGB(255, 126, 184, 253),
+                                        dataSource: chartData,
+                                            xValueMapper: (Data sales, _) => sales.x,
+                                            yValueMapper: (Data sales, _) => sales.y)
+                                ],
+                            ),
+                        ),
+                   ),
+              ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Dart %}
+
+class Data {
+  Data({this.x, this.y});
+  final double x;
+  final double y;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Labels offset support](images/label-and-divisor/selector-labels-offset.png)
+
+## Divisor color
+
+You can change the active and inactive divisor color of the range selector using the `activeDivisorColor` and `inactiveDivisorColor` properties respectively.
+
+N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://help.syncfusion.com/flutter/range-selector/customization).
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+final List<Data> chartData = <Data>[
+    Data(x:2.0, y: 2.2),
+    Data(x:3.0, y: 3.4),
+    Data(x:4.0, y: 2.8),
+    Data(x:5.0, y: 1.6),
+    Data(x:6.0, y: 2.3),
+    Data(x:7.0, y: 2.5),
+    Data(x:8.0, y: 2.9),
+    Data(x:9.0, y: 3.8),
+    Data(x:10.0, y: 3.7),
+];
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSelectorTheme(
+                    data: SfRangeSliderThemeData(
+                        activeDivisorColor: Colors.red,
+                        inactiveDivisorColor: Colors.red[200],
+                    ),
+                    child:  SfRangeSelector(
+                        min: _min,
+                        max: _max,
+                        interval: 1,
+                        showDivisors: true,
+                        initialValues: _values,
+                        child: Container(
+                        height: 130,
+                        child: SfCartesianChart(
+                            margin: const EdgeInsets.all(0),
+                            primaryXAxis: NumericAxis(minimum: _min,
+                                maximum: _max,
+                                isVisible: false),
+                            primaryYAxis: NumericAxis(isVisible: false),
+                            plotAreaBorderWidth: 0,
+                            series: <SplineAreaSeries<Data, double>>[
+                                SplineAreaSeries<Data, double>(
+                                    color: Color.fromARGB(255, 126, 184, 253),
+                                        dataSource: chartData,
+                                            xValueMapper: (Data sales, _) => sales.x,
+                                            yValueMapper: (Data sales, _) => sales.y)
+                                ],
+                            ),
+                        ),
+                   ),
+              ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Dart %}
+
+class Data {
+  Data({this.x, this.y});
+  final double x;
+  final double y;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Divisor color support](images/label-and-divisor/selector-divisor-color.png)
