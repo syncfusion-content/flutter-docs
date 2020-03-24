@@ -45,4 +45,4 @@ The `SfCalendar` can easily be accessed by screen readers. Please find the follo
 | Timeline week header     | dd/MMMM to dd/MMMM/yyyy | 15th of January to 21th January 2020 |
 | Timeline workweek header | dd/MMMM to dd/MMMM/yyyy | 16th of January to 20th January 2020 |
 | Month view header        | EEE                     | Monday                               |
-| Timeslot view header     | EEE, dd/MMMM/yyyy       | Wednesday the 29th of January 2020   |
+| TimeSlot view header     | EEE, dd/MMMM/yyyy       | Wednesday the 29th of January 2020   |
