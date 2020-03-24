@@ -12,7 +12,6 @@ The `SfCalendar` can easily be accessed by screen readers. Please find the follo
 
 ## Month view
 
-
 | View              | Format                       | Example                                       |
 |-------------------|------------------------------|-----------------------------------------------|
 | Month cell        | EEE, dd/MMMM/yyyy            | Thursday the 2nd of January 2020              |
@@ -20,7 +19,6 @@ The `SfCalendar` can easily be accessed by screen readers. Please find the follo
 | No selected dates | No selected date             | No selected date                              |                                               |
 
 ## TimeSlot view
-
 
 | View                   | Format                                     | Example                                        |
 |------------------------|--------------------------------------------|------------------------------------------------|
@@ -31,7 +29,6 @@ The `SfCalendar` can easily be accessed by screen readers. Please find the follo
 
 ## Appointments
 
-
 | View                          | Format                                              | Example                                                                      |
 |-------------------------------|-----------------------------------------------------|------------------------------------------------------------------------------|
 | Normal appointment            | Subject hh mm a – hh mm a dd/MMMM/yyyy              | Yoga therapy 10AM to 11AM the 29th of January 2020                           |
@@ -41,7 +38,6 @@ The `SfCalendar` can easily be accessed by screen readers. Please find the follo
 
 
 ## Headers
-
 
 | View                     | Format                  | Example                              |
 |--------------------------|-------------------------|--------------------------------------|
