@@ -9,11 +9,11 @@ documentation: ug
 
 # Working with flow layout
 
+The Syncfusion Flutter PDF supports creating a PDF document with flow model by maintaining the position of previously drawn element.
+
 ## Flow model using PdfLayoutResult
 
-The Syncfusion Flutter PDF supports creating a PDF document with flow model by maintaining the position of previously drawn element in PdfLayoutResult.
-
-The following code snippet explains how to create a PDF document with image, paragraph text, header text, and a table using flow model.
+The following code snippet explains how to create a PDF document with image, paragraph text, header text, and a table using flow model with the help of PdfLayoutResult.
 
 {% highlight dart %}
 
