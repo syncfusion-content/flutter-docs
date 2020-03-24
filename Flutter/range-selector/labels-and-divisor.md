@@ -489,7 +489,7 @@ class Data {
 
 ![Label formatter support](images/label-and-divisor/selector_label_formatter.png)
 
-## Labels style
+## Label style
 
 You can change the active and inactive label appearance of the range selector using the `activeLabelStyle` and `inactiveLabelStyle` properties respectively.
 
@@ -573,7 +573,7 @@ class Data {
 
 ![Labels color support](images/label-and-divisor/selector-labels-color.png)
 
-## Labels offset
+## Label offset
 
 You can adjust the space between ticks and labels of the range selector using the `labelOffset` property.
 
