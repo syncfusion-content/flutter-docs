@@ -16,11 +16,11 @@ You can programmatically navigate dates in date range picker widget by using the
 {% highlight Dart %}
 
 class MyAppState extends State<MyApp>{
-         DateRangePickerController _datepickerController;
+         DateRangePickerController _datePickerController;
          @override
          initState(){
-            _datepickerController = DateRangePickerController ();
-            _daterpickerController.displayDate = DateTime(2022, 02, 05);
+            _datePickerController = DateRangePickerController ();
+            _datePickerController.displayDate = DateTime(2022, 02, 05);
             super.initState();
         }
 
@@ -30,7 +30,7 @@ class MyAppState extends State<MyApp>{
            home: Scaffold(
            body: SfDateRangePicker(
            view: DateRangePickerView.month,
-           controller: _datepickerController,
+           controller: _datePickerController,
            ),
        ),
    );
@@ -46,11 +46,11 @@ You can programmatically navigate dates in calendar widget by using the [view](h
 {% highlight Dart %}
 
 class MyAppState extends State<MyApp>{
-         DateRangePickerController _datepickerController;
+         DateRangePickerController _datePickerController;
          @override
          initState(){
-            _datepickerController = DateRangePickerController ();
-             _dateController.view =DateRangePickerView.month;
+            _datePickerController = DateRangePickerController ();
+            _datePickerController.view =DateRangePickerView.month;
             super.initState();
        }
 
@@ -59,7 +59,7 @@ class MyAppState extends State<MyApp>{
         return MaterialApp(
            home: Scaffold(
            body: SfDateRangePicker(
-           controller: _datepickerController,
+           controller: _datePickerController,
            ),
        ),
    );
@@ -87,11 +87,11 @@ You can selects more than one date range programmatically at initial or run time
 {% highlight Dart %}
 
 class MyAppState extends State<MyApp>{
-    DateRangePickerController _datepickerController;
+    DateRangePickerController _datePickerController;
     @override
     initState(){
-      _datepickerController = DateRangePickerController ();
-      _datepickerController.selectedRange = PickerDateRange(DateTime(2020,03,01),DateTime(2020,03,05));
+      _datePickerController = DateRangePickerController ();
+      _datePickerController.selectedRange = PickerDateRange(DateTime(2020,03,01),DateTime(2020,03,05));
       super.initState();
      }
 
@@ -102,7 +102,7 @@ class MyAppState extends State<MyApp>{
         body: SfDateRangePicker (
         view: DateRangePickerView.month,
         selectionMode: DateRangePickerSelectionMode.range,
-        controller: _datepickerController,
+        controller: _datePickerController,
         ),
       ),
     );
@@ -121,10 +121,10 @@ You can use the `forward` method of ` DateRangePickerController ` for viewing th
 {% highlight Dart %}
 
 class MyAppState extends State<MyApp> {
-   DateRangePickerController _datepickerController;
+   DateRangePickerController _datePickerController;
    @override
    initState() {
-      _ datepickerController = DateRangePickerController ();
+      _ datePickerController = DateRangePickerController ();
       super.initState();
    }
 
@@ -137,14 +137,14 @@ class MyAppState extends State<MyApp> {
           actions: <Widget>[
           IconButton(icon: Icon(Icons.arrow_forward),
          onPressed: () {
-           _ datepickerController.forward();
+           _ datePickerController.forward();
          },
       ),
    ],
 ),
         body: SfDateRangePicker(
         view: DateRangePickerView.month,
-        controller: _ datepickerController,
+        controller: _ datePickerController,
        ),
     ),
   );
@@ -160,11 +160,11 @@ You can use the `backward` method of ` DateRangePickerController` for viewing th
 {% highlight Dart %}
 
 class MyAppState extends State<MyApp> {
-   DateRangePickerController _datepickerController;
+   DateRangePickerController _datePickerController;
 
    @override
    initState() {
-      _datepickerController = DateRangePickerController ();
+      _datePickerController = DateRangePickerController ();
       super.initState();
    }
 
@@ -178,14 +178,14 @@ class MyAppState extends State<MyApp> {
              IconButton(
              icon: Icon(Icons.arrow_back),
              onPressed: () {
-             _datepickerController.backward();
+             _datePickerController.backward();
           },
        ),
     ],
 ),
             body: SfDateRangePicker(
             view: DateRangePickerView.month,
-            controller: _ datepickerController,
+            controller: _ datePickerController,
            ),
        ),
    );
