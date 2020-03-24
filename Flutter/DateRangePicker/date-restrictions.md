@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Date restrcitions in Syncfusion Flutter Date Range Picker | Date Picker | Date Selection | Syncfusion
+title: Date restrictions in Syncfusion Flutter Date Range Picker | Syncfusion
 description: Learn about the complete date restriction in Syncfusion SfDateRangePicker widget in Flutter
 platform: flutter
 control: SfDateRangePicker

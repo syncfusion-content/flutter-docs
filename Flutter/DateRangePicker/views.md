@@ -1,7 +1,7 @@
 ---
 layout: post
-title: View of Syncfusion Flutter Date Range Picker | Date Picker | Date Selection | Syncfusion
-description: This session describes the Date Range Picker views in SfDateRangePicker widget in Flutter
+title: Views of Syncfusion Flutter Date Range Picker | Syncfusion
+description: This session describes the Date Range Picker views in SfDateRangePicker widget in Flutter | Date Picker
 platform: flutter
 control: SfDateRangePicker
 documentation: ug
