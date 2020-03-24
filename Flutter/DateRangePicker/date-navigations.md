@@ -16,11 +16,11 @@ You can programmatically navigate dates in date range picker widget by using the
 {% highlight Dart %}
 
 class MyAppState extends State<MyApp>{
-         DateRangePickerController _daterangepickerController;
+         DateRangePickerController _datepickerController;
          @override
          initState(){
-            _daterangepickerController = DateRangePickerController ();
-            _daterangepickerController.displayDate = DateTime(2022, 02, 05);
+            _datepickerController = DateRangePickerController ();
+            _daterpickerController.displayDate = DateTime(2022, 02, 05);
             super.initState();
         }
 
@@ -30,7 +30,7 @@ class MyAppState extends State<MyApp>{
            home: Scaffold(
            body: SfDateRangePicker(
            view: DateRangePickerView.month,
-           controller: _daterangepickerController,
+           controller: _datepickerController,
            ),
        ),
    );
@@ -46,11 +46,11 @@ You can programmatically navigate dates in calendar widget by using the [view](h
 {% highlight Dart %}
 
 class MyAppState extends State<MyApp>{
-         DateRangePickerController _daterangepickerController;
+         DateRangePickerController _datepickerController;
          @override
          initState(){
-            _daterangepickerController = DateRangePickerController ();
-             _datepickerController.view =DateRangePickerView.month;
+            _datepickerController = DateRangePickerController ();
+             _dateController.view =DateRangePickerView.month;
             super.initState();
        }
 
@@ -59,7 +59,7 @@ class MyAppState extends State<MyApp>{
         return MaterialApp(
            home: Scaffold(
            body: SfDateRangePicker(
-           controller: _daterangepickerController,
+           controller: _datepickerController,
            ),
        ),
    );
@@ -72,20 +72,16 @@ class MyAppState extends State<MyApp>{
 You can programmatically select the dates in calendar widget by using  `DateRangePickerController` property.
 
 ### Single selection
-You can selects the date programmatically at initial or run time by using [selectedDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedDate.html) of `DateRangePickerController` property.
-It is only applicable when the [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode-class.html) set as `DateRangePickerSelectionMode.single`.
+You can selects the date programmatically at initial or run time by using [selectedDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedDate.html) of `DateRangePickerController` property. It is only applicable when the [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode-class.html) set as `DateRangePickerSelectionMode.single`.
 
 ### Multi selection
-You can selects the multiple dates programmatically at initial or run time by using [selectedDates](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedDates.html) of `DateRangePickerController` property.
-It is only applicable when the `selectionMode` set as `DateRangePickerSelectionMode.multiple`.
+You can selects the multiple dates programmatically at initial or run time by using [selectedDates](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedDates.html) of `DateRangePickerController` property. It is only applicable when the `selectionMode` set as `DateRangePickerSelectionMode.multiple`.
 
 ### Range selection
-You can selects the single date range programmatically at initial or run time by using [selectedRange](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedRange.html) of `DateRangePickerController` property.
-It is only applicable when the `selectionMode` set as `DateRangePickerSelectionMode.range`
+You can selects the single date range programmatically at initial or run time by using [selectedRange](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedRange.html) of `DateRangePickerController` property. It is only applicable when the `selectionMode` set as `DateRangePickerSelectionMode.range`
 
 ### Multi Range selection
-You can selects more than one date range programmatically at initial or run time by using [selectedRanges](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedRanges.html) of `DateRangePickerController` property.
-It is only applicable when the `selectionMode` set as `DateRangePickerSelectionMode.multiRange`.
+You can selects more than one date range programmatically at initial or run time by using [selectedRanges](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedRanges.html) of `DateRangePickerController` property. It is only applicable when the `selectionMode` set as `DateRangePickerSelectionMode.multiRange`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -94,6 +90,7 @@ class MyAppState extends State<MyApp>{
     DateRangePickerController _datepickerController;
     @override
     initState(){
+      _datepickerController = DateRangePickerController ();
       _datepickerController.selectedRange = PickerDateRange(DateTime(2020,03,01),DateTime(2020,03,05));
       super.initState();
      }
@@ -124,11 +121,10 @@ You can use the `forward` method of ` DateRangePickerController ` for viewing th
 {% highlight Dart %}
 
 class MyAppState extends State<MyApp> {
-   DateRangePickerController _daterangepickerController;
-
+   DateRangePickerController _datepickerController;
    @override
    initState() {
-      _ daterangepickerController = DateRangePickerController ();
+      _ datepickerController = DateRangePickerController ();
       super.initState();
    }
 
@@ -141,14 +137,14 @@ class MyAppState extends State<MyApp> {
           actions: <Widget>[
           IconButton(icon: Icon(Icons.arrow_forward),
          onPressed: () {
-           _ daterangepickerController.forward();
+           _ datepickerController.forward();
          },
       ),
    ],
 ),
         body: SfDateRangePicker(
         view: DateRangePickerView.month,
-        controller: _ daterangepickerController,
+        controller: _ datepickerController,
        ),
     ),
   );
@@ -164,11 +160,11 @@ You can use the `backward` method of ` DateRangePickerController` for viewing th
 {% highlight Dart %}
 
 class MyAppState extends State<MyApp> {
-   DateRangePickerController _daterangepickerController;
+   DateRangePickerController _datepickerController;
 
    @override
    initState() {
-      _daterangepickerController = DateRangePickerController ();
+      _datepickerController = DateRangePickerController ();
       super.initState();
    }
 
@@ -182,14 +178,14 @@ class MyAppState extends State<MyApp> {
              IconButton(
              icon: Icon(Icons.arrow_back),
              onPressed: () {
-             _daterangepickerController.backward();
+             _datepickerController.backward();
           },
        ),
     ],
 ),
             body: SfDateRangePicker(
             view: DateRangePickerView.month,
-            controller: _ daterangepickerController,
+            controller: _ datepickerController,
            ),
        ),
    );
@@ -197,8 +193,4 @@ class MyAppState extends State<MyApp> {
 
 {% endhighlight %}
 {% endtabs %}
-
-
-
-
 
