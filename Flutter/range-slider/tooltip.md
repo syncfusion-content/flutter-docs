@@ -108,8 +108,6 @@ N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/pa
 {% tabs %}
 {% highlight Dart %}
 
-final double _min = 2.0;
-final double _max = 10.0;
 SfRangeValues _values = SfRangeValues(4.0, 8.0);
 
 @override
@@ -122,16 +120,16 @@ Widget build(BuildContext context) {
                         tooltipBackgroundColor: Colors.red[300],
                     ),
                     child:  SfRangeSlider(
-                     min: _min,
-                     max: _max,
+                     min: 2.0,
+                     max: 10.0,
                      interval: 1,
                      showTicks: true,
                      showLabels: true,
                      showTooltip: true,
                      values: _values,
-                     onChanged: (dynamic newValue){
+                     onChanged: (SfRangeValues newValues){
                             setState(() {
-                                _values = newValue;
+                                _values = newValues;
                             });
                         },
                     ),
@@ -155,8 +153,6 @@ N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/pa
 {% tabs %}
 {% highlight Dart %}
 
-final double _min = 2.0;
-final double _max = 10.0;
 SfRangeValues _values = SfRangeValues(4.0, 8.0);
 
 @override
@@ -169,16 +165,16 @@ Widget build(BuildContext context) {
                         tooltipTextStyle: TextStyle(color: Colors.red, fontSize: 16, fontStyle: FontStyle.italic),
                     ),
                     child:  SfRangeSlider(
-                     min: _min,
-                     max: _max,
+                     min: 2.0,
+                     max: 10.0,
                      interval: 1,
                      showTicks: true,
                      showLabels: true,
                      showTooltip: true,
                      values: _values,
-                     onChanged: (dynamic newValue){
+                     onChanged: (SfRangeValues newValues){
                             setState(() {
-                                _values = newValue;
+                                _values = newValues;
                             });
                         },
                     ),
