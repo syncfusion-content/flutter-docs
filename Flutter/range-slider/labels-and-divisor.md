@@ -214,7 +214,7 @@ Widget build(BuildContext context) {
 
 ![Label formatter support](images/label-and-divisor/label-formattercallback.png)
 
-## Labels style
+## Label style
 
 You can change the active and inactive label appearance of the range slider using the `activeLabelStyle` and `inactiveLabelStyle` properties respectively.
 
@@ -261,7 +261,7 @@ Widget build(BuildContext context) {
 
 ![Labels style support](images/label-and-divisor/slider-labels-color.png)
 
-## Labels offset
+## Label offset
 
 You can adjust the space between ticks and labels of the range slider using the `labelOffset` property.
 

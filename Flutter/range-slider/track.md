@@ -20,8 +20,6 @@ N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/pa
 {% tabs %}
 {% highlight Dart %}
 
-final double _min = 2.0;
-final double _max = 10.0;
 SfRangeValues _values = SfRangeValues(4.0, 7.0);
 
 @override
@@ -35,8 +33,8 @@ Widget build(BuildContext context) {
                         inactiveTrackColor: Colors.red[100],
                     ),
                     child:  SfRangeSlider(
-                        min: _min,
-                        max: _max,
+                        min: 2.0,
+                        max: 10.0,
                         values: _values,
                         onChanged: (dynamic newValue){
                             setState(() {
