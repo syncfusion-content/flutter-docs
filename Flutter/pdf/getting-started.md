@@ -22,7 +22,7 @@ Add the Syncfusion Flutter PDF dependency to your pub spec file.
 {% highlight dart %} 
 
 dependencies:
-  syncfusion_flutter_pdf: ^18.1.36-beta
+  syncfusion_flutter_pdf: ^1.0.0-beta.3
 
 {% endhighlight %}
 
@@ -68,15 +68,15 @@ Include the following code snippet in the button click event to create a PDF fil
 
 {% highlight dart %}
 
-Future<void> _createPDF() async {
+void _createPDF() async {
   //Create a new PDF document
   PdfDocument document = PdfDocument();
 
   //Add a new page and draw text
   document.pages.add().graphics.drawString(
-      'Hello World!', PdfStandardFont(PdfFontFamily.helvetica, 20),
+      'Hello World!', PdfStandardFont(PdfFontFamily.helvetica, 12),
       brush: PdfSolidBrush(PdfColor(0, 0, 0)),
-      bounds: Rect.fromLTWH(0, 0, 500, 50));
+      bounds: Rect.fromLTWH(0, 0, 150, 20));
 
   //Save the document
   List<int> bytes = document.save();
@@ -171,7 +171,7 @@ Add the following code in the header section of index.html file under the web fo
       link.href = pdfAsDataUri;
       link.type = 'application/pdf';
       link.click();
-    }
+	}
 </script>
 
 {% endhighlight %}
@@ -327,16 +327,13 @@ graphics.drawString(currentDate, subHeadingFont,
             result.bounds.top) &
         Size(textSize.width + 2, 20));
 
+PdfFont timesRoman = PdfStandardFont(PdfFontFamily.timesRoman, 10);
+
 //Creates text elements to add the address and draw it to the page
-element = PdfTextElement(
-    text: 'BILL TO ',
-    font: PdfStandardFont(PdfFontFamily.timesRoman, 10,
-        style: PdfFontStyle.bold));
+element = PdfTextElement(text: 'BILL TO ', font: timesRoman);
 element.brush = PdfSolidBrush(PdfColor(126, 155, 203));
 result = element.draw(
     page: page, bounds: Rect.fromLTWH(10, result.bounds.bottom + 25, 0, 0));
-
-PdfFont timesRoman = PdfStandardFont(PdfFontFamily.timesRoman, 10);
 
 element = PdfTextElement(text: 'Victuailles en stock ', font: timesRoman);
 element.brush = PdfBrushes.black;
@@ -367,12 +364,12 @@ DataTable invoiceDetails = getProductDetailsAsDataTable();
 //Creates a PDF grid
 PdfGrid grid = PdfGrid();
 
-//Set padding for grid cells
-grid.style.cellPadding = PdfPaddings(left: 2, right: 2, top: 2, bottom: 2);
-
 //Adds the data source
 grid.dataSource = invoiceDetails;
 
+//Creates the grid cell styles
+PdfGridCellStyle cellStyle = PdfGridCellStyle();
+cellStyle.borders.all = PdfPens.white;
 PdfGridRow header = grid.headers[0];
 
 //Creates the header style
@@ -396,29 +393,9 @@ for (int i = 0; i < header.cells.count; i++) {
   }
   header.cells[i].style = headerStyle;
 }
-
-//Creates the grid cell styles
-PdfGridCellStyle cellStyle = PdfGridCellStyle();
-cellStyle.borders.all = PdfPens.white;
 cellStyle.borders.bottom = PdfPen(PdfColor(217, 217, 217), width: 0.70);
 cellStyle.font = PdfStandardFont(PdfFontFamily.timesRoman, 12);
 cellStyle.textBrush = PdfSolidBrush(PdfColor(131, 130, 136));
-//Adds cell customizations
-for (int i = 0; i < grid.rows.count; i++) {
-  PdfGridRow row = grid.rows[i];
-  for (int j = 0; j < row.cells.count; j++) {
-    row.cells[j].style = cellStyle;
-    if (j == 0 || j == 1) {
-      row.cells[j].stringFormat = PdfStringFormat(
-          alignment: PdfTextAlignment.left,
-          lineAlignment: PdfVerticalAlignment.middle);
-    } else {
-      row.cells[j].stringFormat = PdfStringFormat(
-          alignment: PdfTextAlignment.right,
-          lineAlignment: PdfVerticalAlignment.middle);
-    }
-  }
-}
 
 //Creates layout format settings to allow the table pagination
 PdfLayoutFormat layoutFormat =
@@ -432,7 +409,7 @@ PdfLayoutResult gridResult = grid.draw(
     format: layoutFormat);
 
 gridResult.page.graphics.drawString(
-    'Grand Total :                             \$386.91', subHeadingFont,
+    'Total Due :             1329', subHeadingFont,
     brush: PdfSolidBrush(PdfColor(126, 155, 203)),
     bounds: Rect.fromLTWH(520, gridResult.bounds.bottom + 30, 0, 0));
 
