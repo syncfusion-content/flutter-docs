@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started for Syncfusion Flutter Range Selector | Syncfusion
+title: Getting started for Syncfusion Flutter Range Selector | Syncfusion
 description: This section explains the steps required to add the range selector widget and its elements such as numeric and date values, ticks, labels and tooltips.
 platform: flutter
 control: SfRangeSelector
 documentation: ug
 ---
 
-# Getting Started for Range Selector
+# Getting started for range selector
 This section explains the steps required to add the range selector widget and its elements such as numeric and date values, ticks, labels and tooltips. This section covers only basic features needed to know to get started with Syncfusion range selector.
 
 ## Add flutter range selector to an application
