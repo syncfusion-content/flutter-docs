@@ -29,7 +29,7 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ## Year view
-This displays entire month of a particular year, by default current year will be displayed on loading. The Months can be navigated quickly by selecting on the particular month in year view.
+This displays entire month of a particular year, by default current year will be displayed on loading. The Months can be navigated quickly by selecting on the particular month in `year view`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -47,7 +47,7 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ## Decade view
-This view displays the period of 10 years. By default, current year range of 10 years will be displayed on loading. You can easily navigate between month/year view to decade view by tapping the calendar header. The year can be navigated quickly by selecting a particular year from decade view.
+This view displays the period of 10 years. By default, current year range of 10 years will be displayed on loading. You can easily navigate between month/year view to decade view by tapping the calendar header. The year can be navigated quickly by selecting a particular year from `decade view`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -65,7 +65,7 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ## Century view
-This view displays the period of 100 years. By default, current year range of 100 years will be displayed on loading. You can easily navigate between month/year/decade view to century view by tapping the calendar header. You can easily navigate to decade view by selecting decade years in century view
+This view displays the period of 100 years. By default, current year range of 100 years will be displayed on loading. You can easily navigate between month/year/decade view to century view by tapping the calendar header. You can easily navigate to decade view by selecting decade years in `century view`.
 
 {% tabs %}
 {% highlight Dart %}
