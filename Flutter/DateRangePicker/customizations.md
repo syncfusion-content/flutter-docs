@@ -10,9 +10,9 @@ documentation: ug
 # Customizations in Flutter DateRangePicker (SfDateRangePicker)
 
 ## Month cell customization
-You can customize the calendar month view by using the `monthCellStyle`.
+You can customize the calendar month view by using the `monthCellStyle` of `SfDateRangePicker`.
 
-•    Current month dates – You can customize the date range picker current month dates text color and background by using textStyle and [cellDecoration](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/cellDecoration.html).
+•    `Current month dates` – You can customize the date range picker current month dates text color and background by using [textStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/textStyle.html) and [cellDecoration](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/cellDecoration.html).
 
 •    Today date – You can customize the date range picker today date text color and background by using [todayTextStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/todayTextStyle.html) and [todayCellDecoration](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/todayCellDecoration.html).
 
@@ -40,6 +40,8 @@ Widget build(BuildContext context) {
        view: DateRangePickerView.month,
        monthViewSettings:DateRangePickerMonthViewSettings(blackoutDates:List<DateTime>()
            ..add(DateTime(2020, 03, 26)),
+      weekendDays: List<int>()
+           ..add(7)..add(6),
       specialDates:List<DateTime>()
            ..add(DateTime(2020, 03, 20))..add(DateTime(2020, 03, 16))..add(DateTime(2020,03,17)),showTrailingAndLeadingDates: true),
       monthCellStyle: DateRangePickerMonthCellStyle(
@@ -70,9 +72,9 @@ Widget build(BuildContext context) {
 
 You can also customize month view section by using the `monthCellStyle`.
 
-•    Selection date text style – Selected date text style can be customized using [selectionTextStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/selectionTextStyle.html) property of `monthCellStyle` which is applicable for selection mode is single and multiple, it’s also applicable for start and end of selected range text style in single and multi-range selection
+•    Selection date text style – Selected date text style can be customized using [selectionTextStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/selectionTextStyle.html) property of `monthCellStyle` which is applicable for selection mode is `single` and `multiple`, it’s also applicable for start and end of selected range text style in `single and multi-range` selection
 
-•    Selection date text color – Selected date background color can be customized using [selectionColor](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/selectionColor.html) property of monthCellStyle which is applicable for single and multiple selection.
+•    Selection date text color – Selected date background color can be customized using [selectionColor](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/selectionColor.html) property of `monthCellStyle` which is applicable for single and multiple selection.
 
 •    Range selection text style – Range selection date text style can be customized using [rangeTextStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/rangeTextStyle.html) property which is applicable when selection mode is range or multi-range.
 
@@ -103,7 +105,7 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ## Year cell customization
-You can customize the calendar year,decade,century view by using the `yearCellStyle`.
+You can customize the calendar `year`,`decade`,`century` view by using the `yearCellStyle` of `SfDateRangePicker`.
 
 •    Current year – You can customize the date range picker current month dates text color and background by using textStyle and [cellDecoration](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/cellDecoration.html).
 

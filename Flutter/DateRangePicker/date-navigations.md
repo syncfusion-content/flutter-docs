@@ -72,29 +72,28 @@ class MyAppState extends State<MyApp>{
 You can programmatically select the dates in calendar widget by using  `DateRangePickerController` property.
 
 ### Single selection
-You can Selects the date programmatically at initial or run time by using [selectedDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedDate.html) of `DateRangePickerController` property.
+You can selects the date programmatically at initial or run time by using [selectedDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedDate.html) of `DateRangePickerController` property.
 It is only applicable when the [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode-class.html) set as `DateRangePickerSelectionMode.single`.
 
 ### Multi selection
-You can Selects the multiple dates programmatically at initial or run time by using [selectedDates](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedDates.html) of `DateRangePickerController` property.
+You can selects the multiple dates programmatically at initial or run time by using [selectedDates](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedDates.html) of `DateRangePickerController` property.
 It is only applicable when the `selectionMode` set as `DateRangePickerSelectionMode.multiple`.
 
 ### Range selection
-You can Selects the single date range programmatically at initial or run time by using [selectedRange](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedRange.html) of `DateRangePickerController` property.
+You can selects the single date range programmatically at initial or run time by using [selectedRange](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedRange.html) of `DateRangePickerController` property.
 It is only applicable when the `selectionMode` set as `DateRangePickerSelectionMode.range`
 
 ### Multi Range selection
-You can select more than one date range programmatically at initial or run time by using [selectedRanges](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedRanges.html) of `DateRangePickerController` property.
+You can selects more than one date range programmatically at initial or run time by using [selectedRanges](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedRanges.html) of `DateRangePickerController` property.
 It is only applicable when the `selectionMode` set as `DateRangePickerSelectionMode.multiRange`.
 
 {% tabs %}
 {% highlight Dart %}
 
 class MyAppState extends State<MyApp>{
-    DateRangePickerController _daterangepickerController;
+    DateRangePickerController _datepickerController;
     @override
     initState(){
-      _datepickerController = DateRangePickerController ();
       _datepickerController.selectedRange = PickerDateRange(DateTime(2020,03,01),DateTime(2020,03,05));
       super.initState();
      }
@@ -106,7 +105,7 @@ class MyAppState extends State<MyApp>{
         body: SfDateRangePicker (
         view: DateRangePickerView.month,
         selectionMode: DateRangePickerSelectionMode.range,
-        controller: _daterangepickerController,
+        controller: _datepickerController,
         ),
       ),
     );
