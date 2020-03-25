@@ -29,6 +29,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![SingleSelection Date Range Picker](images/selections/singleselection.png)
+
 ## Multiple selection mode
 More than one date can be selected in a random manner by using `DateRangePickerSelectionMode` as `multiple`. Clicking again on selected dates can do deselection.
 
@@ -45,9 +47,10 @@ Widget build(BuildContext context) {
    );
 }
 
-
 {% endhighlight %}
 {% endtabs %}
+
+![MultiSelection Date Range Picker](images/selections/multiselection.png)
 
 ## Range selection mode
 You can select a single date range in `SfDateRangePicker`  view by using `DateRangePickerSelectionMode` as `range`.
@@ -68,6 +71,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![RangeSelection Date Range Picker](images/selections/range-selection.png)
+
 ## Multi range selection mode
 You can select more than one date range in a month view by changing `DateRangePickerSelectionMode` as `multiRange`.
 
@@ -85,3 +90,5 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![MultiRangeSelection Date Range Picker](images/selections/multirange.png)

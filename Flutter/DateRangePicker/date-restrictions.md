@@ -47,6 +47,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Min_Max Date Date Range Picker](images/date-restrictions/min_max_date.png)
+
 ## Enable and disable past dates
 
 The `DateRangePicker` allows you to enable/disable the past dates from today dates in `MonthView`. This can be achieved by changing the [enablePastDates](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/enablePastDates.html) property. By default, value of this property is set to true.

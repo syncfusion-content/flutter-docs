@@ -33,3 +33,5 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![RTL Date Range Picker](images/rtl/right_to_left.png)

@@ -57,3 +57,5 @@ return MaterialApp(
 
 {% endhighlight %}
 {% endtabs %}
+
+![Localization Date Range Picker](images/localization/localization.png)

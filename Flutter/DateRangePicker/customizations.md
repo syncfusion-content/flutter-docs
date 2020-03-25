@@ -67,6 +67,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Customizations Date Range Picker](images/customizations/customizations.png)
 
 ## Month selection cell customization
 
