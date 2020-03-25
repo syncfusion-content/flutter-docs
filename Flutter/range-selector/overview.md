@@ -7,7 +7,7 @@ control: SfRangeSelector
 documentation: ug
 ---
 
-# Overview of Range Selector
+# Overview of range selector
 
 Syncfusion flutter range selector provides a rich set of features such as support for numeric and date values, ticks, labels and tooltips.
 

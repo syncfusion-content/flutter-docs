@@ -214,7 +214,7 @@ Widget build(BuildContext context) {
 
 ![Label formatter support](images/label-and-divisor/label-formattercallback.png)
 
-## Labels style
+## Label style
 
 You can change the active and inactive label appearance of the range slider using the `activeLabelStyle` and `inactiveLabelStyle` properties respectively.
 
@@ -223,8 +223,6 @@ N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/pa
 {% tabs %}
 {% highlight Dart %}
 
-final double _min = 2.0;
-final double _max = 10.0;
 SfRangeValues _values = SfRangeValues(4.0, 8.0);
 
 @override
@@ -238,15 +236,15 @@ Widget build(BuildContext context) {
                          inactiveLabelStyle: TextStyle(color: Colors.red[200], fontSize: 12, fontStyle: FontStyle.italic),
                     ),
                     child:  SfRangeSlider(
-                       min: _min,
-                       max: _max,
+                       min: 2.0,
+                       max: 10.0,
                        values: _values,
                        interval: 1,
                        showLabels: true,
                        showTicks: true,
-                       onChanged: (dynamic newValue){
+                       onChanged: (SfRangeValues newValues){
                             setState(() {
-                                _values = newValue;
+                                _values = newValues;
                             });
                         },
                     ),
@@ -261,7 +259,7 @@ Widget build(BuildContext context) {
 
 ![Labels style support](images/label-and-divisor/slider-labels-color.png)
 
-## Labels offset
+## Label offset
 
 You can adjust the space between ticks and labels of the range slider using the `labelOffset` property.
 
@@ -273,8 +271,6 @@ N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/pa
 {% tabs %}
 {% highlight Dart %}
 
-final double _min = 2.0;
-final double _max = 10.0;
 SfRangeValues _values = SfRangeValues(4.0, 8.0);
 
 @override
@@ -287,14 +283,15 @@ Widget build(BuildContext context) {
                         labelOffset: Offset(0.0, 10.0),
                     ),
                     child:  SfRangeSlider(
-                       min: _min,
-                       max: _max,
+                       min: 2.0,
+                       max: 10.0,
+                       values: _values,
                        interval: 2,
                        showTicks: true,
                        showLabels: true,
-                       onChanged: (dynamic newValue){
+                       onChanged: (SfRangeValues newValues){
                             setState(() {
-                                _values = newValue;
+                                _values = newValues;
                             });
                         },
                     ),
@@ -356,8 +353,6 @@ N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/pa
 {% tabs %}
 {% highlight Dart %}
 
-final double _min = 2.0;
-final double _max = 10.0;
 SfRangeValues _values = SfRangeValues(4.0, 8.0);
 
 @override
@@ -371,14 +366,14 @@ Widget build(BuildContext context) {
                          inactiveDivisorColor: Colors.red[200],
                     ),
                     child:  SfRangeSlider(
-                      min: _min,
-                      max: _max,
+                      min: 2.0,
+                      max: 10.0,
                       interval: 1,
                       showDivisors: true,
                       values: _values,
-                      onChanged: (dynamic newValue){
+                      onChanged: (SfRangeValues newValues){
                             setState(() {
-                                _values = newValue;
+                                _values = newValues;
                             });
                         },
                     )
