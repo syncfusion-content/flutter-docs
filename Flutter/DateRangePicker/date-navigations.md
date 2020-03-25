@@ -10,7 +10,7 @@ documentation: ug
 # Date Navigations in Flutter Date Range Picker (SfDateRangePicker)
 
 ## Programmatic date navigation
-You can programmatically navigate dates in date range picker widget by using the [displayDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/displayDate.html)  property of [DateRangePickerController](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController-class.html)
+You can programmatically navigate dates in the calendar widget by using the [displayDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/displayDate.html)  property of [DateRangePickerController](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController-class.html)
 
 {% tabs %}
 {% highlight Dart %}
@@ -40,7 +40,7 @@ class MyAppState extends State<MyApp>{
 {% endtabs %}
 
 ## Programmatic view navigation
-You can programmatically navigate dates in calendar widget by using the [view](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/view.html) property of `DateRangePickerController`.
+You can programmatically navigate view in the calendar widget by using the [view](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/view.html) property of `DateRangePickerController`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -69,19 +69,19 @@ class MyAppState extends State<MyApp>{
 {% endtabs %}
 
 ## Programmatic date selection
-You can programmatically select the dates in calendar widget by using  `DateRangePickerController` property.
+You can programmatically select the dates in the calendar widget by using the  `DateRangePickerController` property.
 
 ### Single selection
-You can selects the date programmatically at initial or run time by using [selectedDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedDate.html) of `DateRangePickerController` property. It is only applicable when the [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode-class.html) set as `DateRangePickerSelectionMode.single`.
+Initially or during the run time,you can select the date programmatically by using the [selectedDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedDate.html) of `DateRangePickerController` property. It is only applicable when the [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode-class.html) is set to `DateRangePickerSelectionMode.single`.
 
 ### Multi selection
-You can selects the multiple dates programmatically at initial or run time by using [selectedDates](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedDates.html) of `DateRangePickerController` property. It is only applicable when the `selectionMode` set as `DateRangePickerSelectionMode.multiple`.
+Initially or during the run time, you can selects the multiple dates programmatically by using the [selectedDates](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedDates.html) of `DateRangePickerController` property. It is only applicable when the `selectionMode` is set to `DateRangePickerSelectionMode.multiple`.
 
 ### Range selection
-You can selects the single date range programmatically at initial or run time by using [selectedRange](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedRange.html) of `DateRangePickerController` property. It is only applicable when the `selectionMode` set as `DateRangePickerSelectionMode.range`
+Initially or during run time, you can selects the single date range programmatically by using the [selectedRange](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedRange.html) of `DateRangePickerController` property. It is only applicable when the `selectionMode` is set to `DateRangePickerSelectionMode.range`
 
 ### Multi Range selection
-You can selects more than one date range programmatically at initial or run time by using [selectedRanges](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedRanges.html) of `DateRangePickerController` property. It is only applicable when the `selectionMode` set as `DateRangePickerSelectionMode.multiRange`.
+Initially or during run time, you can selects more than one date range programmatically by using the [selectedRanges](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedRanges.html) of `DateRangePickerController` property. It is only applicable when the `selectionMode` is set to `DateRangePickerSelectionMode.multiRange`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -112,10 +112,10 @@ class MyAppState extends State<MyApp>{
 {% endtabs %}
 
 ## Programmatically change to adjacent dates
-By default, the date can be navigated to next and previous views using touch gesture, by swiping the control from right to left and left to right direction. The view can be also changed programmatically using the [forward](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/forward.html) and [backward](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/backward.html) methods available in ` DateRangePickerController`.
+By default, the date can be navigated to next and previous views using the touch gesture, by swiping the control from right to left and left to right direction. The view can be also changed programmatically using the [forward](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/forward.html) and [backward](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/backward.html) methods that are available in the `DateRangePickerController`.
 
 ### Forward
-You can use the `forward` method of ` DateRangePickerController ` for viewing the next immediate visible dates in the `SfDateRangePicker`. It will move to next month if the calendar view is month, similarly it will move to next week for week view and next day for day view.
+You can use the `forward` method of ` DateRangePickerController ` for viewing the next immediate next visible dates in the `SfDateRangePicker`. It will move to next month if the calendar view is a month, similarly it will move to next week for week view and next day for day view.
 
 {% tabs %}
 {% highlight Dart %}
@@ -154,7 +154,7 @@ class MyAppState extends State<MyApp> {
 {% endtabs %}
 
 ### Backward
-You can use the `backward` method of ` DateRangePickerController` for viewing the previous immediate visible dates in the `SfDateRangePicker`. It will move to previous month if the calendar view is month, similarly it will move to previous week for week view and previous day for day view.
+You can use the `backward` method of ` DateRangePickerController` for viewing the previous immediate previous visible dates in the `SfDateRangePicker`. It will move to the previous month if the calendar view is in month, similarly it will move to the previous week for week view and previous day for day view.
 
 {% tabs %}
 {% highlight Dart %}

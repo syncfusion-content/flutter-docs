@@ -10,7 +10,7 @@ documentation: ug
 # Date Restrictions in Flutter Date Range Picker (SfDateRangePicker)
 
 ## Minimum display date
-[minDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/minDate.html) will restrict date navigations features of backward, also cannot swipe the control using touch gesture beyond the min date range in all views.
+The [minDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/minDate.html) will restrict `backward` date navigations features, and cannot swipe the control using the touch gesture beyond the min date range in all views.
 
 {% tabs %}
 {% highlight Dart %}
@@ -29,7 +29,7 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ## Maximum display date
-[maxDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/maxDate.html) will restrict date navigations features of forward, and also cannot swipe the control using touch gesture beyond the max date range in all views.
+The [maxDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/maxDate.html) will restrict `forward` date navigations features, and cannot swipe the control using the touch gesture beyond the max date range in all views.
 
 {% tabs %}
 {% highlight Dart %}
@@ -51,7 +51,7 @@ Widget build(BuildContext context) {
 
 ## Enable and disable past dates
 
-The `DateRangePicker` allows you to enable/disable the past dates from today dates in `MonthView`. This can be achieved by changing the [enablePastDates](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/enablePastDates.html) property. By default, value of this property is set to true.
+The `DateRangePicker` allows you to enable or disable the past dates from today's date in `MonthView`. This can be achieved by changing the [enablePastDates](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/enablePastDates.html) property. By default, the value of this property is set to true.
 
 {% tabs %}
 {% highlight Dart %}
@@ -70,7 +70,7 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ## Blackout Dates
-In `DateRangePicker`, [blackoutDates](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/blackoutDates.html) refers the disabled dates that restrict the user from selecting it. These dates will be marked with Strikethrough.
+In `DateRangePicker`, [blackoutDates](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/blackoutDates.html) refer to the disabled dates that restrict the user from selecting it. These dates will be marked with Strikethrough.
 
 {% tabs %}
 {% highlight Dart %}

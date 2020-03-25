@@ -11,7 +11,7 @@ documentation: ug
 The `SfDateRangePicker` widget provides four different types of views to display. It can be assigned to the widget constructor by using the [view](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/view.html) property. Default view of the widget is month view. By default the current date will be displayed initially for all the date range picker views.
 
 ## Month view
-This view displays entire dates of a particular month, by default current month will be displayed on loading. The current date is provided with separate color different from the rest of the dates color in `month view`.
+This view displays the entire dates of a particular month. By default , the current month will be displayed on loading. The current date is provided with a separate color different from the rest of the dates color in `month view`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -31,7 +31,7 @@ Widget build(BuildContext context) {
 ![Month view Date Range Picker](images/views/monthview.png)
 
 ## Year view
-This displays entire month of a particular year, by default current year will be displayed on loading. The Months can be navigated quickly by selecting on the particular month in `year view`.
+This displays the entire month of a particular year. By default, the current year will be displayed on loading. You can navigate between months quickly by selecting the particular month in a `year view`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -51,7 +51,7 @@ Widget build(BuildContext context) {
 ![Year view Date Range Picker](images/views/yearview.png)
 
 ## Decade view
-This view displays the period of 10 years. By default, current year range of 10 years will be displayed on loading. You can easily navigate between month/year view to decade view by tapping the calendar header. The year can be navigated quickly by selecting a particular year from `decade view`.
+This view displays the period of 10 years. By default, the current year range of 10 years will be displayed on loading. You can easily navigate between month/year view to decade view by tapping the calendar header. The year can be navigated quickly by selecting a particular year from a  `decade view`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -71,7 +71,7 @@ Widget build(BuildContext context) {
 ![Decade view Date Range Picker](images/views/decadeview.png)
 
 ## Century view
-This view displays the period of 100 years. By default, current year range of 100 years will be displayed on loading. You can easily navigate between month/year/decade view to century view by tapping the calendar header. You can easily navigate to decade view by selecting decade years in `century view`.
+This view displays the period of 100 years. By default, the current year range of 100 years will be displayed on loading. You can easily navigate between month/year/decade view to century view by tapping the calendar header. You can easily navigate to a decade view by selecting decade years in `century view`.
 
 {% tabs %}
 {% highlight Dart %}

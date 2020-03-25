@@ -8,10 +8,10 @@ documentation: ug
 ---
 
 # Selections in flutter Date Range Picker (SfDateRangePicker)
-Dates can be selected by making a touch on month view cells. The default [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectionMode.html) is Single which allows user to select one date at a time. `SfDateRangePicker` provides support to select dates in four modes such as Single,Multiple,Range,MultiRange selection
+Dates can be selected by touching the on month view cells. The default [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectionMode.html) is Single that allows the user to select one date at a time. `SfDateRangePicker` provides support to select dates in four modes such as Single,Multiple,Range and MultiRange selection
 
 ## Single selection mode
- A `single` date can be selected in a month view by changing [DateRangePickerSelectionMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode-class.html) as `single`.
+ A `single` date can be selected in a month view by changing the [DateRangePickerSelectionMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode-class.html) to `single`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -32,7 +32,7 @@ Widget build(BuildContext context) {
 ![SingleSelection Date Range Picker](images/selections/singleselection.png)
 
 ## Multiple selection mode
-More than one date can be selected in a random manner by using `DateRangePickerSelectionMode` as `multiple`. Clicking again on selected dates can do deselection.
+You can randomly select more than one date by changing the `DateRangePickerSelectionMode` to `multiple`. By Clicking again you can deselect the selected dates.
 
 {% tabs %}
 {% highlight Dart %}
@@ -53,7 +53,7 @@ Widget build(BuildContext context) {
 ![MultiSelection Date Range Picker](images/selections/multiselection.png)
 
 ## Range selection mode
-You can select a single date range in `SfDateRangePicker`  view by using `DateRangePickerSelectionMode` as `range`.
+You can select a single date range in the month view by changing the `DateRangePickerSelectionMode` to the `range`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -74,7 +74,7 @@ Widget build(BuildContext context) {
 ![RangeSelection Date Range Picker](images/selections/range-selection.png)
 
 ## Multi range selection mode
-You can select more than one date range in a month view by changing `DateRangePickerSelectionMode` as `multiRange`.
+You can select more than one date range in a month view by changing the `DateRangePickerSelectionMode` to the `multiRange`.
 
 {% tabs %}
 {% highlight Dart %}
