@@ -163,7 +163,7 @@ Widget build(BuildContext context) {
 
 Add range selector with ticks and date labels.
 
-N> You must import the 'package:intl/intl.dart' show DateFormat` package to add the date format in the range selector.
+N> You must add the [`intl`](https://pub.dev/packages/intl) package for using date format in the range selector.
 
 {% tabs %}
 {% highlight Dart %}

@@ -15,7 +15,7 @@ This section helps to learn about how to customize the thumb and overlay in the 
 
 You can change the size of the thumb in the range selector using the `thumbRadius` property.
 
-N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://help.syncfusion.com/flutter/range-selector/customization).
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://help.syncfusion.com/flutter/range-selector/customization).
 
 {% tabs %}
 {% highlight Dart %}
@@ -98,7 +98,7 @@ class Data {
 
 You can change the color of the thumb in the range selector using the `thumbColor` property.
 
-N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://help.syncfusion.com/flutter/range-selector/customization).
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://help.syncfusion.com/flutter/range-selector/customization).
 
 {% tabs %}
 {% highlight Dart %}
@@ -181,7 +181,7 @@ class Data {
 
 You can change the size of the overlay in the range selector using the `overlayRadius` property.
 
-N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://help.syncfusion.com/flutter/range-selector/customization).
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://help.syncfusion.com/flutter/range-selector/customization).
 
 {% tabs %}
 {% highlight Dart %}
@@ -264,7 +264,7 @@ class Data {
 
 You can change the color of the overlay in the range selector using the `overlayColor` property.
 
-N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://help.syncfusion.com/flutter/range-selector/customization).
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://help.syncfusion.com/flutter/range-selector/customization).
 
 {% tabs %}
 {% highlight Dart %}
@@ -424,7 +424,7 @@ N> Refer the `SfRangeSliderThemeData` to know about updating the individual acti
 
 ## Inactive color
 
-Represents the color applied to the inactive track and active divisors. The "inactive" side of the range selector is between the `min` value and the left thumb, and the right thumb and the `max` value.
+Represents the color applied to the inactive track and active divisors. The `inactive` side of the range selector is between the `min` value and the left thumb, and the right thumb and the `max` value.
 
 {% tabs %}
 {% highlight Dart %}
