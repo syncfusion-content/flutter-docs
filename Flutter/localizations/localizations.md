@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Applying localizations for Syncfusion FLutter widgets
-description: This section explains about localization in Syncfusion Flutter widgets
+description: This section explains about applying the localization for the applicable Syncfusion Flutter widgets.
 platform: flutter
 control: General
 documentation: ug
 ---
 
-# Localizations
+# Localizations for Syncfusion widgets
 
 By default, Syncfusion widgets provide English localizations alone for the applicable widgets. You can add support for other languages by including a separate package called `syncfusion_localizations`. As of March 2020, this package support `74 languages` which are listed below.
 
@@ -104,7 +104,7 @@ Add the Syncfusion Localization dependency to your pub spec file. And to depict 
 
 {% endhighlight %}
 
-*Note* - Here **XX.X.XX** denotes the current version of `Synfusion Flutter` widgets.
+*Note* - Here **XX.X.XX** denotes the current version of `Syncfusion Flutter` widgets.
 
 **Get packages**
 
