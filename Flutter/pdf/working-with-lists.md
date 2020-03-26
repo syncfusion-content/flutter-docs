@@ -9,9 +9,11 @@ documentation: ug
 
 # Working with Bullets and Lists
 
+The Syncfusion Flutter PDF allows you list the content in ordered and unordered list. The ordered list can be number or alphabets and the unordered list can be bullets, circles, and images.
+
 ## Adding an ordered list
 
-The Syncfusion Flutter PDF allows you to create an ordered list in the document. An ordered list is represented by the PdfOrderedList class and can be numerical or alphabetical. The following code snippet explains the same.
+The Syncfusion Flutter PDF allows you to create an ordered list in the document. An ordered list is represented by the PdfOrderedList class. The following code snippet explains the same.
 
 {% highlight dart %}
 
@@ -43,7 +45,7 @@ document.dispose();
 
 ## Adding an unordered list
 
-The Syncfusion Flutter PDF also provides support to create an unordered list that is represented by the PdfUnorderedList class. An unordered list can be bullets, circle or an image. The following code snippet explains the same.
+The Syncfusion Flutter PDF also provides support to create an unordered list that is represented by the PdfUnorderedList class. The following code snippet explains the same.
 
 {% highlight dart %}
 

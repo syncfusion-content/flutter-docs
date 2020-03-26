@@ -95,3 +95,181 @@ Widget build(BuildContext context) {
 N>
 * Refer the `showTicks` to know about the rendering major ticks at given interval.
 * Refer the `minorTickShape` and `SfRangeSliderThemeData` for customizing the minor tick’s visual appearance.
+
+## Major ticks color
+
+You can change the active and inactive major ticks color of the range slider using the `activeTickColor` and `inactiveTickColor` properties respectively.
+
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://help.syncfusion.com/flutter/range-slider/customization).
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                        activeTickColor: Colors.red,
+                        inactiveTickColor: Colors.red[100],
+                    ),
+                    child:  SfRangeSlider(
+                        min: 2.0,
+                        max: 10.0,
+                        values: _values,
+                        interval: 1,
+                        showTicks: true,
+                        onChanged: (SfRangeValues newValues){
+                            setState(() {
+                                _values = newValues;
+                            });
+                        },
+                    ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Major ticks color](images/tick/slider-major-ticks.png)
+
+## Minor ticks color
+
+You can change the active and inactive minor ticks color of the range slider using the `activeMinorTickColor` and `inactiveMinorTickColor` properties respectively.
+
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://help.syncfusion.com/flutter/range-slider/customization).
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                        activeMinorTickColor: Colors.red,
+                        inactiveMinorTickColor: Colors.red[200],
+                    ),
+                    child:  SfRangeSlider(
+                        min: 2.0,
+                        max: 10.0,
+                        values: _values,
+                        interval: 2,
+                        minorTicksPerInterval: 1,
+                        showTicks: true,
+                        onChanged: (SfRangeValues newValues){
+                            setState(() {
+                                _values = newValues;
+                            });
+                        },
+                    ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Minor ticks color](images/tick/slider-minor-ticks.png)
+
+## Ticks size
+
+You can change the major and minor ticks size of the range slider using the `tickSize` and `minorTickSize` properties respectively. The default value of the `tickSize` property is `Size(1.0, 8.0)` and `minorTickSize` property is `Size(1.0, 5.0)`.
+
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://help.syncfusion.com/flutter/range-slider/customization).
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                         tickSize: Size(3.0, 12.0),
+                         minorTickSize: Size(3.0, 8.0),
+                    ),
+                    child:  SfRangeSlider(
+                         min: 2.0,
+                         max: 10.0,
+                         interval: 2,
+                         minorTicksPerInterval: 1,
+                         showTicks: true,
+                         values: _values,
+                        onChanged: (SfRangeValues newValues){
+                            setState(() {
+                                _values = newValues;
+                            });
+                        },
+                    ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Ticks size support](images/tick/slider-ticks-size.png)
+
+## Ticks offset
+
+You can adjust the space between track and ticks of the range slider using the `tickOffset` property in the `SfRangeSliderThemeData`. The default value of the `tickOffset` is `null`.
+
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://help.syncfusion.com/flutter/range-slider/customization).
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                        tickOffset: Offset(0.0, 10.0),
+                    ),
+                    child:  SfRangeSlider(
+                         min: 2.0,
+                         max: 10.0,
+                         interval: 2,
+                         minorTicksPerInterval: 1,
+                         showTicks: true,
+                         values: _values,
+                        onChanged: (SfRangeValues newValues){
+                            setState(() {
+                                _values = newValues;
+                            });
+                        },
+                    ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Ticks offset support](images/tick/slider-ticks-offset.png)
