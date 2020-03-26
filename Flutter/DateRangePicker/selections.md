@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Selections in flutter Date Range Picker (SfDateRangePicker)
-Dates can be selected by touching the on month view cells. The default [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectionMode.html) is Single that allows the user to select one date at a time. `SfDateRangePicker` provides support to select dates in four modes such as Single,Multiple,Range and MultiRange selection
+Dates can be selected by touching the on month view cells. The default [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectionMode.html) is Single that allows the user to select one date at a time. `SfDateRangePicker` provides support to select dates in four modes such as `Single`, `Multiple`, `Range` and `MultiRange` selection
 
 ## Single selection
  A `single` date can be selected in a month view by changing the [DateRangePickerSelectionMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode-class.html) to `single`.
@@ -52,7 +52,7 @@ Widget build(BuildContext context) {
 
 ![MultiSelection Date Range Picker](images/selections/multiselection.png)
 
-## Range selection 
+## Range selection
 You can select a single date range in the month view by changing the `DateRangePickerSelectionMode` to the `range`.
 
 {% tabs %}
