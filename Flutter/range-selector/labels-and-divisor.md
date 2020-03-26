@@ -493,7 +493,7 @@ class Data {
 
 You can change the active and inactive label appearance of the range selector using the `activeLabelStyle` and `inactiveLabelStyle` properties respectively.
 
-N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://help.syncfusion.com/flutter/range-selector/customization).
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://help.syncfusion.com/flutter/range-selector/customization).
 
 {% tabs %}
 {% highlight Dart %}
@@ -580,7 +580,7 @@ You can adjust the space between ticks and labels of the range selector using th
 The default value of `labelOffset` property is `Offset(0.0, 13.0)` if  the `showTicks` property is `false`.
 The default value of `labelOffset` property is `Offset(0.0, 5.0)` if the `showTicks` property is `true`.
 
-N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://help.syncfusion.com/flutter/range-selector/customization).
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://help.syncfusion.com/flutter/range-selector/customization).
 
 {% tabs %}
 {% highlight Dart %}
@@ -663,7 +663,7 @@ class Data {
 
 You can change the active and inactive divisor color of the range selector using the `activeDivisorColor` and `inactiveDivisorColor` properties respectively.
 
-N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://help.syncfusion.com/flutter/range-selector/customization).
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://help.syncfusion.com/flutter/range-selector/customization).
 
 {% tabs %}
 {% highlight Dart %}

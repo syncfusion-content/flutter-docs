@@ -103,7 +103,7 @@ Widget build(BuildContext context) {
 
 You can change the background color of the tooltip in the range slider using the `tooltipBackgroundColor` property.
 
-N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://help.syncfusion.com/flutter/range-slider/customization).
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://help.syncfusion.com/flutter/range-slider/customization).
 
 {% tabs %}
 {% highlight Dart %}
@@ -148,7 +148,7 @@ Widget build(BuildContext context) {
 
 You can change the text color, font size, font style of the tooltip in the range slider using the `tooltipTextStyle` property.
 
-N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://help.syncfusion.com/flutter/range-slider/customization).
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://help.syncfusion.com/flutter/range-slider/customization).
 
 {% tabs %}
 {% highlight Dart %}
