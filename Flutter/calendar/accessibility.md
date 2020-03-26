@@ -16,7 +16,7 @@ The `SfCalendar` can easily be accessed by screen readers. Please find the follo
 |-------------------|------------------------------|-----------------------------------------------|
 | Month cell        | EEE, dd/MMMM/yyyy            | Thursday the 2nd of January 2020              |
 | No events         | EEE, dd/MMMM/yyyy, No events | Wednesday the 15th of January 2020, No events |
-| No selected dates | No selected date             | No selected date                              |                                               |
+| No selected dates | No selected date             | No selected date                              |                                               
 
 ## TimeSlot view
 
