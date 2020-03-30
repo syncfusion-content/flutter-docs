@@ -125,7 +125,7 @@ Widget build(BuildContext context) {
         body: SfDateRangePicker(
         view: DateRangePickerView.month,
         selectionMode: DateRangePickerSelectionMode.range,
-        yearCellStyle: DateRangePickerMonthCellStyle(
+        yearCellStyle: DateRangePickerYearCellStyle(
             disabledDatesDecoration:BoxDecoration(
                    color: const Color(0xFFDFDFDF),
                    border: Border.all(color: const Color(0xFFB6B6B6), width: 1),
@@ -144,7 +144,7 @@ Widget build(BuildContext context) {
            todayTextStyle: const TextStyle(color: Colors.purple),
            )
          ),
-     )
+     );
 }
 
 {% endhighlight %}
