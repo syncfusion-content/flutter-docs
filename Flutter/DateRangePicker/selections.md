@@ -83,7 +83,8 @@ You can select more than one date range in a month view by changing the `DateRan
 Widget build(BuildContext context) {
     return Scaffold(
                body: SfDateRangePicker(
-               view: DateRangePickerView.century,
+               view: DateRangePickerView.month,
+               selectionMode: DateRangePickerSelectionMode.multiRange,
                )
       );
 }

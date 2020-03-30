@@ -133,7 +133,7 @@ class MyAppState extends State<MyApp> {
        return MaterialApp(
           home: Scaffold(
           appBar: AppBar(
-          title: Text(‘DateRangePicker Demo'),
+          title: Text('DateRangePicker Demo'),
           actions: <Widget>[
           IconButton(icon: Icon(Icons.arrow_forward),
          onPressed: () {
@@ -173,7 +173,7 @@ class MyAppState extends State<MyApp> {
          return MaterialApp(
              home: Scaffold(
              appBar: AppBar(
-             title: Text(DateRangePicker Demo'),
+             title: Text('DateRangePicker Demo'),
              actions: <Widget>[
              IconButton(
              icon: Icon(Icons.arrow_back),
