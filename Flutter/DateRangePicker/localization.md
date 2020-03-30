@@ -52,7 +52,7 @@ return MaterialApp(
           view: DateRangePickerView.month,
            ),
        ),
-   )
+   );
 }
 
 {% endhighlight %}
