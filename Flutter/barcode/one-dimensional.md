@@ -276,7 +276,7 @@ The last seven characters of Code Sets A and B (character values 96 - 102) and t
 
 {% endhighlight %}
 
-![UPCA symbology](images/one-dimensional/upca-symbology.jpg)
+![UPCA symbology](images/one-dimensional/upca-symbology.png)
 
 ## UPC-E
 
@@ -303,7 +303,7 @@ As like `UPC-A`, the `UPC-E` symbology supports only numeric character. It is a 
 
 {% endhighlight %}
 
-![UPCE symbology](images/one-dimensional/upce.jpg)
+![UPCE symbology](images/one-dimensional/upce.png)
 
 ## EAN-13
 
@@ -330,7 +330,7 @@ As like `UPC-A`, the `UPC-E` symbology supports only numeric character. It is a 
 
 {% endhighlight %}
 
-![EAN13 symbology](images/one-dimensional/ean-13.jpg)
+![EAN13 symbology](images/one-dimensional/ean-13.png)
 
 ## EAN-8
 
@@ -357,6 +357,6 @@ As like `EAN13` and `UPCE`, it encodes 7 digits of numeric data with the check d
 
 {% endhighlight %}
 
-![EAN8 symbology](images/one-dimensional/ean-8.jpg)
+![EAN8 symbology](images/one-dimensional/ean-8.png)
 
 All the one dimensional symbology supports the `module` property. The property is used to define the size of the smallest line or dot of the barcode. If this property is not set, the size of the smallest line of the barcode is calculated based on the available size and total number of bars for the provided input value.
