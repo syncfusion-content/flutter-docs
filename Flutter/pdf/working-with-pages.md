@@ -11,7 +11,7 @@ documentation: ug
 
 ## Adding a new page to the PDF document
 
-The following code sample explains how to add a PdfPage to a PDF document. When multiple pages are added, the new page will always be added to the end of the document.
+The following code sample explains how to add a [`PdfPage`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPage-class.html) to a PDF document. When multiple pages are added, the new page will always be added to the end of the document.
 
 {% highlight dart %}
 
@@ -31,7 +31,7 @@ document.dispose();
 
 ## Adding margin to the PDF pages
 
-You can add margin to all the PDF pages of a PDF document using the pageSettings property. The following code snippet explains the same.
+You can add [`margin`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageSettings/margins.html) to all the PDF pages of a PDF document using the [`pageSettings`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument/pageSettings.html) property. The following code snippet explains the same.
 
 {% highlight dart %}
 
@@ -54,7 +54,7 @@ document.dispose();
 
 ## Adding sections with different page settings
 
-Flutter PDF supports adding sections with different page settings such as margins, orientation, rotate, size. You can add sections to a PDF document by using the PdfSection available in PdfDocument instance and create page settings to the PdfSection using the PageSettings property.
+Flutter PDF supports adding sections with different page settings such as [`margins`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageSettings/margins.html), [`orientation`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageSettings/orientation.html), [`rotate`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageSettings/rotate.html), [`size`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageSettings/size.html). You can add sections to a PDF document by using the [`PdfSection`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSection-class.html) available in [`PdfDocument`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument-class.html) instance and create page settings to the [`PdfSection`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSection-class.html) using the [`pageSettings`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSection/pageSettings.html) property.
 
 The following code snippet explains how to add more sections to a PDF document with different page settings.
 
@@ -122,7 +122,7 @@ document.dispose();
 
 ## Rotating a PDF page
 
-You can rotate a PDF page in the PDF document using the PdfPageRotateAngle enum as shown in the following code snippet.
+You can [`rotate`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageSettings/rotate.html) a PDF page in the PDF document using the [`PdfPageRotateAngle`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageRotateAngle-class.html) enum as shown in the following code snippet.
 
 {% highlight dart %}
 
