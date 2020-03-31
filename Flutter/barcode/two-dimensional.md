@@ -187,8 +187,10 @@ Length - Data Matrix can store up to 2335 alphanumeric characters or 3116 number
 
 Type - Data Matrix supports the following data types,
 
-`Numeric`
-`Alpha Numeric`
+`Numeric`,
+
+`Alpha Numeric`,
+
 `Byte`
 
 The encoded data size depends upon the length and data type of provided input values.
