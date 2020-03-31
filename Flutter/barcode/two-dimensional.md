@@ -153,3 +153,74 @@ The number of modules increases in steps of 4 modules per side up to Version 40 
 {% endhighlight %}
 
 ![QR version](images/two-dimensional/version09.jpg)
+
+## DataMatrix
+
+DataMatrix Barcode is a two dimensional barcode that consists of a grid of dark and light dots or blocks forming a square or rectangular symbol. The data encoded in the barcode can either be numbers or alphanumeric. They are widely used in printed media such as labels and letters. You can read it easily with the help of a barcode reader and mobile phones.
+
+{% highlight dart %} 
+
+    @override
+        Widget build(BuildContext context) {
+    return Scaffold(
+        backgroundColor: Colors.white,
+        body: Center(
+            child: Container(
+                height: 300,
+                width: 300,
+                child: SfBarcodeGenerator(
+                  value: 'www.syncfusion.com',
+                  showValue: true,
+                  symbology:  DataMatrix())
+            )
+        )
+    ); 
+    }
+
+{% endhighlight %}
+
+![Data matrix](images/two-dimensional/data-matrix.png)
+
+**Data matrix format**
+
+Length - Data matrix can store up to 2335 alphanumeric characters or 3116 numbers from the ASCII range.
+
+Type - The data matrix supports the following data types,
+
+`Numeric`
+`Alpha Numeric`
+`Byte`
+
+The encoded data size depends upon the length and data type of provided input values.
+
+**Encoding Methods**
+
+The data matrix supports following encoding types, 
+
+`Auto`,
+
+`Ascii`,
+
+`AsciiNumeric`,
+
+`Base256`
+
+By default, the encoding types is `auto`.
+
+When the encoding type is `ascii`, the code word will be calculated as like follows,
+
+Code word = ASCII value + 1.
+
+The `ASCII` value ranges from 0 to 127
+
+When the encoding type is `base256`, then the first code word will be calculated with the value 235 and the second code value is calculated as ASCII value - 127.
+
+The `base256` value ranges from 128 to 255.
+
+When the encoding type is `asciiNumeric`, then the code word will be calculated as like follows,
+
+Code word = numerical value pair + 130.
+
+The numerical value pair will be like 00, 01, 02,.....99
+
+
