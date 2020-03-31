@@ -66,7 +66,7 @@ To use `syncfusion_localizations`, add the package as dependency to `pubspec.yam
 {% highlight dart %}
 
 dependencies:
-syncfusion_localizations: ^18.1.36-beta
+syncfusion_localizations: ^18.1.36
 
 {% endhighlight %}
 
