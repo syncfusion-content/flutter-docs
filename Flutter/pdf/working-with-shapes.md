@@ -27,7 +27,7 @@ This package supports adding shapes with various color and transparency levels.
 
 ### Polygon
 
-You can draw a polygon in PDF document by using the drawPolygon method of PdfGraphics. The following code snippet explains how to draw a polygon in the new PDF document.
+You can draw a polygon in PDF document by using the [`drawPolygon`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics/drawPolygon.html) method of [`PdfGraphics`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics-class.html). The following code snippet explains how to draw a polygon in the new PDF document.
 
 {% highlight dart %}
 
@@ -49,7 +49,7 @@ document.dispose();
 
 ### Line
 
-You can draw a line in PDF document by using the drawLine method of PdfGraphics. The following code snippet explains how to draw a line in the new PDF document.
+You can draw a line in PDF document by using the [`drawLine`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics/drawLine.html) method of [`PdfGraphics`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics-class.html). The following code snippet explains how to draw a line in the new PDF document.
 
 {% highlight dart %}
 
@@ -72,7 +72,7 @@ document.dispose();
 
 ### Curve
 
-You can draw a curve in PDF document by using the draw method of PdfBezierCurve. The following code snippet explains how to draw a curve in the new PDF document.
+You can draw a curve in PDF document by using the [`draw`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfLayoutElement/draw.html) method of [`PdfBezierCurve`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfBezierCurve-class.html). The following code snippet explains how to draw a curve in the new PDF document.
 
 {% highlight dart %}
 
@@ -97,7 +97,7 @@ document.dispose();
 
 ### Path
 
-You can draw a path in PDF document by using the draw method of PdfPath. The following code snippet explains how to draw a path in the new PDF document.
+You can draw a path in PDF document by using the draw method of [`PdfPath`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPath-class.html). The following code snippet explains how to draw a path in the new PDF document.
 
 {% highlight dart %}
 
@@ -125,7 +125,7 @@ document.dispose();
 
 ### Rectangle
 
-You can draw a rectangle in PDF document by using the drawRectangle method of PdfGraphics. The following code snippet explains how to draw a rectangle in the new PDF document.
+You can draw a rectangle in PDF document by using the [`drawRectangle`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics/drawRectangle.html) method of [`PdfGraphics`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics-class.html). The following code snippet explains how to draw a rectangle in the new PDF document.
 
 {% highlight dart %}
 
@@ -146,7 +146,7 @@ document.dispose();
 
 ### Pie
 
-You can draw a pie in PDF document by using the drawPie method of PdfGraphics. The following code snippet explains how to draw a pie in the new PDF document.
+You can draw a pie in PDF document by using the [`drawPie`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics/drawPie.html) method of [`PdfGraphics`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics-class.html). The following code snippet explains how to draw a pie in the new PDF document.
 
 {% highlight dart %}
 
@@ -168,7 +168,7 @@ document.dispose();
 
 ### Arc
 
-You can draw an arc in PDF document by using the drawArc method of PdfGraphics. The following code snippet explains how to draw an arc in the new PDF document.
+You can draw an arc in PDF document by using the [`drawArc`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics-class.html) method of [`PdfGraphics`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics-class.html). The following code snippet explains how to draw an arc in the new PDF document.
 
 {% highlight dart %}
 
@@ -190,7 +190,7 @@ document.dispose();
 
 ### Bezier
 
-You can draw a bezier in PDF document by using the drawBezier method of PdfGraphics. The following code snippet explains how to draw a bezier in the new PDF document.
+You can draw a bezier in PDF document by using the [`drawBezier`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics/drawBezier.html) method of [`PdfGraphics`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics-class.html). The following code snippet explains how to draw a bezier in the new PDF document.
 
 {% highlight dart %}
 
@@ -212,7 +212,7 @@ document.dispose();
 
 ### Ellipse
 
-You can draw an ellipse in PDF document by using the drawEllipse method of PdfGraphics. The following code snippet explains how to draw an ellipse in the new PDF document.
+You can draw an ellipse in PDF document by using the [`drawEllipse`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics/drawEllipse.html) method of [`PdfGraphics`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics-class.html). The following code snippet explains how to draw an ellipse in the new PDF document.
 
 {% highlight dart %}
 
