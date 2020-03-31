@@ -252,7 +252,7 @@ document.dispose();
 
 ## Creating a simple PDF document with basic elements
 
-The PdfDocument object represents an entire PDF document that is being created. The following code example shows how to create a PDF document and add a PdfPage to it along with the PdfPageSettings.
+The [`PdfDocument`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument-class.html) object represents an entire PDF document that is being created. The following code example shows how to create a PDF document and add a [`PdfPage`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPage-class.html) to it along with the [`PdfPageSettings`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageSettings-class.html).
 
 {% highlight dart %}
 
@@ -271,7 +271,7 @@ PdfGraphics graphics = page.graphics;
 
 * All the units are measured in point instead of pixel.
 * In PDF, all the elements are placed in absolute positions and has the possibility for content overlapping if misplaced.
-* Syncfusion PDF provides the rendered bounds for each and every element added through PdfLayoutResult objects. This can be used to add successive elements and prevent content overlap.
+* Syncfusion PDF provides the rendered bounds for each and every element added through [`PdfLayoutResult`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfLayoutResult-class.html) objects. This can be used to add successive elements and prevent content overlap.
 
 The following code example explains how to add an image from base64 string to a PDF document, by providing the rectangle coordinates.
 
@@ -287,10 +287,10 @@ page.graphics.drawImage(image, Rect.fromLTWH(176, 0, 390, 130));
 
 The following methods can be used to add text to a PDF document.
 
-* drawString method of the PdfGraphics
-* PdfTextElement class.
+* [`drawString`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics/drawString.html) method of the [`PdfGraphics`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics-class.html)
+* [`PdfTextElement`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfTextElement-class.html) class.
 
-The PdfTextElement provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. This is not available in the drawString method.
+The [`PdfTextElement`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfTextElement-class.html) provides the layout result of the added text by using the location of the next element that decides to prevent content overlapping. This is not available in the [`drawString`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics/drawString.html) method.
 
 The following code example adds the necessary text such as address, invoice number and date to create a basic invoice application.
 
@@ -357,7 +357,7 @@ graphics.drawLine(
 
 {% endhighlight %}
 
-Since the invoice document requires only simple cell customizations, the given code example explains how to create a simple invoice table by using PdfGrid.
+Since the invoice document requires only simple cell customizations, the given code example explains how to create a simple invoice table by using [`PdfGrid`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGrid-class.html).
 
 {% highlight dart %}
 
@@ -443,7 +443,7 @@ gridResult.page.graphics.drawString(
 
 {% endhighlight %}
 
-The following code example shows how to save the invoice document and dispose the PdfDocument object.
+The following code example shows how to save the invoice document and dispose the [`PdfDocument`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument-class.html) object.
 
 {% highlight dart %}
 
