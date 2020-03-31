@@ -52,7 +52,7 @@ return MaterialApp(
             view: CalendarView.month,
             ),
        ),
-   )
+   );
 }
 
 {% endhighlight %}
@@ -106,7 +106,7 @@ Widget build(BuildContext context) {
                     view: CalendarView.month,
                 ),
          ),
-    )
+     );
 }
 
 {% endhighlight %}
