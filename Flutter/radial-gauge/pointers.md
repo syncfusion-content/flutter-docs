@@ -76,13 +76,13 @@ Widget build(BuildContext context) {
 
 ## Event
 
-`onValueChangeStart` - Occurs whenever the pointer starts to drag.
+[`onValueChangeStart`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugePointer/onValueChangeStart.html) - Occurs whenever the pointer starts to drag.
 
-`onValueChanging` - Occurs before the current drag value gets updated as pointer value. The `cancel` argument of `ValueChangingArgs` allows to restrict the update of current drag value as pointer value.
+[`onValueChanging`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugePointer/onValueChanging.html) - Occurs before the current drag value gets updated as pointer value. The [`cancel`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/ValueChangingArgs/cancel.html) argument of [`ValueChangingArgs`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/ValueChangingArgs-class.html) allows to restrict the update of current drag value as pointer value.
 
 [`onValueChanged`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugePointer/onValueChanged.html) - Occurs whenever the pointer value is changed while dragging.
 
-`onValueChangeEnd` - Occurs once the dragging of the pointer gets completed.
+[`onValueChangeEnd`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugePointer/onValueChangeEnd.html) - Occurs once the dragging of the pointer gets completed.
 
 {% highlight dart %}
 

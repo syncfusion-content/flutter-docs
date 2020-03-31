@@ -11,7 +11,7 @@ documentation: ug
 
 ## Initial animation
 
-The radial gauge allows all of its elements to be animated with `enableLoadingAnimation` property. The default value for this property is false. The duration of the animation can be controlled by `animationDuration` property of the gauge.
+The radial gauge allows all of its elements to be animated with [`enableLoadingAnimation`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfRadialGauge/enableLoadingAnimation.html) property. The default value for this property is false. The duration of the animation can be controlled by [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfRadialGauge/animationDuration.html) property of the gauge.
 
 {% highlight dart %}
 

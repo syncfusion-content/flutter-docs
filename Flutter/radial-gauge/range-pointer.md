@@ -66,7 +66,7 @@ Widget build(BuildContext context) {
  
  **Gradient support**
 
- The `gradient` property of [`range pointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RangePointer-class.html) allows to specify the smooth color transition to pointer by specifying the different colors based on provided factor value.
+ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RangePointer/gradient.html) property of [`range pointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RangePointer-class.html) allows to specify the smooth color transition to pointer by specifying the different colors based on provided factor value.
 
  {% highlight dart %}
 
@@ -96,7 +96,7 @@ Widget build(BuildContext context) {
 
 ![range pointer gradient](images/range-pointer/pointer_gradient.jpg)
 
- ## Corner customization
+**Corner customization**
 
  The [`cornerStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RangePointer/cornerStyle.html) property of [`range pointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RangePointer-class.html) specifies the corner type for pointer. The corners can be customized using the bothFlat, bothCurve, startCurve, and endCurve options. The default value of this property is bothFlat.
 
