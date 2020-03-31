@@ -496,7 +496,7 @@ Widget build(BuildContext context) {
 
 ![axis label format](images/axis/axis_labelFormat.jpg)
 
-* [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/numberFormat.html)- Allows to customize the axis label with the [`globalized label format`].
+* [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/numberFormat.html)- Allows to customize the axis label with the `globalized label format`.
 
 {% highlight dart %}
 

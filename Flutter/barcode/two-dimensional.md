@@ -11,11 +11,13 @@ documentation: ug
 
 Two dimensional Barcode is a way to represent information by using the two-dimensional approach. It is similar to one dimensional Barcode, but can represent more data per unit area. The barcode generator control supports the following two dimensional symbology:
 
-`QR Code`
+[`QR Code`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/QRCode-class.html),
+
+`Data Matrix`
 
 ## QR Code
 
-A QR Code is a two-dimensional barcode that consists of a grid of dark and light dots or blocks that form a square. The data encoded in the barcode can be numeric, alphanumeric, or Shift JIS characters.
+A [`QR Code`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/QRCode-class.html) is a two-dimensional barcode that consists of a grid of dark and light dots or blocks that form a square. The data encoded in the barcode can be numeric, alphanumeric, or Shift JIS characters.
 
 * The QR Code uses version from 1 to 40. Version 1 measures 21 modules x 21 modules, Version 2 measures 25 modules x 25 modules, and so on. The number of modules increases in steps of 4 modules per side up to Version 40 that measures 177 modules x 177 modules. 
 
@@ -48,17 +50,19 @@ A QR Code is a two-dimensional barcode that consists of a grid of dark and light
 
 The data that can be stored in the QR code depends upon the following property:
 
-* `Error correction level`
-* `QR code version`
-* `Input mode`
+* [`Error correction level`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/QRCode/errorCorrectionLevel.html)
+
+* [`QR code version`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/QRCode/codeVersion.html)
+
+* [`Input mode`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/QRCode/inputMode.html)
 
 
-As like one dimensional symbology, the two dimensional symbology also supports the `module` property. 
+As like one dimensional symbology, the two dimensional symbology also supports the [`module`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Symbology/module.html) property. 
 The property is used to define the size of the smallest line or dot of the barcode. If this property is not set, the size of the smallest dot of the barcode is calculated based on the available size.
 
 **Error correction level**
 
-The `errorCorrectionLevel` property employs error correction to generate a series of error correction code words that are added to the data code word sequence in order to enable the symbol to withstand damage without loss of data. By default, its value is set as high.
+The [`errorCorrectionLevel`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/QRCode/errorCorrectionLevel.html) property employs error correction to generate a series of error correction code words that are added to the data code word sequence in order to enable the symbol to withstand damage without loss of data. By default, its value is set as high.
 
 Low - it recovers the data up to 7%
 Medium - it recovers the data up to 15%
@@ -94,7 +98,7 @@ The data can be read from the damaged image based on the error correction level,
 
 **Input mode**
 
-The `inputMode` property allows you to select a specific set of input characters. You may select the most suitable input mode. By default, its value is set as `binaryMode`.
+The [`inputMode`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/QRCode/inputMode.html) property allows you to select a specific set of input characters. You may select the most suitable input mode. By default, its value is set as [`binaryMode`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/QRInputMode-class.html).
 
 numeric - supports from 0 to 9
 alphaNumeric - supports 0 to 9, A to Z, space, $, %, *, +, -,., /, :
@@ -125,7 +129,7 @@ binary - supports Shift JIS characters
 
 **QR code version**
 
-The `version` property allows you to set various types of version for QR code from QRVersion enumeration. By default, its value is set as auto.
+The [`version`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/QRCode/codeVersion.html) property allows you to set various types of version for QR code from QRVersion enumeration. By default, its value is set as auto.
 
 The QR Code uses version from 1 to 40. Version 1 measures 21 modules x 21 modules, Version 2 measures 25 modules x 25 modules, and so on. 
 
