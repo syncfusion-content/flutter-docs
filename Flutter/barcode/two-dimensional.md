@@ -183,9 +183,9 @@ DataMatrix Barcode is a two dimensional barcode that consists of a grid of dark 
 
 **Data matrix format**
 
-Length - Data matrix can store up to 2335 alphanumeric characters or 3116 numbers from the ASCII range.
+Length - Data Matrix can store up to 2335 alphanumeric characters or 3116 numbers from the ASCII range.
 
-Type - The data matrix supports the following data types,
+Type - Data Matrix supports the following data types,
 
 `Numeric`
 `Alpha Numeric`
@@ -195,19 +195,19 @@ The encoded data size depends upon the length and data type of provided input va
 
 **Encoding Methods**
 
-The data matrix supports following encoding types, 
+Data Matrix supports following encoding types, 
 
 `Auto`,
 
-`Ascii`,
+`ASCII`,
 
-`AsciiNumeric`,
+`ASCIINumeric`,
 
 `Base256`
 
 By default, the encoding types is `auto`.
 
-When the encoding type is `ascii`, the code word will be calculated as like follows,
+When the encoding type is `ASCII`, the code word will be calculated as like follows,
 
 Code word = ASCII value + 1.
 
@@ -217,7 +217,7 @@ When the encoding type is `base256`, then the first code word will be calculated
 
 The `base256` value ranges from 128 to 255.
 
-When the encoding type is `asciiNumeric`, then the code word will be calculated as like follows,
+When the encoding type is `ASCIINumeric`, then the code word will be calculated as like follows,
 
 Code word = numerical value pair + 130.
 
