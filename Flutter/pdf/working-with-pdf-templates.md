@@ -13,7 +13,7 @@ A PDF template is a drawing surface, where contents can be added. All the elemen
 
 ## Creating a new PDF template
 
-The [`PdfTemplate`] class can be used to create a new PDF template. You can add contents to the template using [`graphics`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPage/graphics.html) property of the [`PdfTemplate`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfTemplate-class.html) object.
+The [`PdfTemplate`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfTemplate-class.html) class can be used to create a new PDF template. You can add contents to the template using [`graphics`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPage/graphics.html) property of the [`PdfTemplate`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfTemplate-class.html) object.
 
 The following code example explains how to add contents to the [`PdfTemplate`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfTemplate-class.html) and render into the new PDF page.
 
