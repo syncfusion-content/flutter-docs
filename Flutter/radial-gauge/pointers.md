@@ -7,7 +7,7 @@ control: SfRadialGauge
 documentation: ug
 ---
 
-# Pointers
+# Pointers in radial gauge
 
  Pointer is used to indicate values on an axis. The radial gauge control has three types of pointers: 
 

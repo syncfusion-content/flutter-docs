@@ -7,7 +7,7 @@ control: SfRadialGauge
 documentation: ug
 ---
 
-# Animation
+# Animation in  radial gauge
 
 ## Initial animation
 

@@ -7,7 +7,7 @@ control: SfRadialGauge
 documentation: ug
 ---
 
-# Range
+# Gauge range customization
 
 Gauge range is a visual element that helps to quickly visualize where a value falls on the axis. The text can be easily annotated in range to improve the readability.
 

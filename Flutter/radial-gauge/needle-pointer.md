@@ -7,7 +7,7 @@ control: SfRadialGauge
 documentation: ug
 ---
 
-# Needle Pointer
+# Needle Pointer customization
 
 [`Needle Pointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer-class.html) contains three parts, namely needle, [`knob`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer/knobStyle.html), and [`tail`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer/tailStyle.html) and that can be placed on a gauge to mark the values.
 
