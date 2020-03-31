@@ -52,7 +52,7 @@ return MaterialApp(
             view: CalendarView.month,
             ),
        ),
-   )
+   );
 }
 
 {% endhighlight %}
@@ -66,7 +66,7 @@ To use `syncfusion_localizations`, add the package as dependency to `pubspec.yam
 {% highlight dart %}
 
 dependencies:
-syncfusion_localizations:^18.1.0.36
+syncfusion_localizations: ^18.1.36-beta
 
 {% endhighlight %}
 
@@ -106,7 +106,7 @@ Widget build(BuildContext context) {
                     view: CalendarView.month,
                 ),
          ),
-    )
+     );
 }
 
 {% endhighlight %}
