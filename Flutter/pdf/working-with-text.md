@@ -89,7 +89,7 @@ document.dispose();
 
 ### Draw text using CJK fonts
 
-The Syncfusion Flutter PDF provides support to draw a CJK (Chinese, Japanese, Korean) text using some of the standard CJK fonts. The font data can be initialized by initializing [`PdfFont`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfFont-class.html) class as PDF CJK StandardFont. The following code sample explains this.
+The Syncfusion Flutter PDF provides support to draw a CJK (Chinese, Japanese, Korean) text using some of the standard CJK fonts. The font data can be initialized by initializing [`PdfFont`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfFont-class.html) class as [`PdfCjkStandardFont`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfCjkStandardFont-class.html). The following code sample explains this.
 
 {% highlight dart %}
 
