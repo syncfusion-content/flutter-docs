@@ -12,32 +12,32 @@ documentation: ug
 
 The different types of technical indicators available in chart are follows:
 
-* [`Accumulation distribution indicator`]() - AD
-*	[`Average true range indicator`]() - ATR
-*	[`Bollinger band indicator`]()
-*	[`Exponential moving average indicator`]() - EMA
-* [`Moving average convergence divergence`]() - MACD
-*	[`Momentum indicator`]()
-*	[`Relative strength index indicator`]() - RSI 
-*	[`Simple moving average indicator`]() - SMA 
-*	[`Stochastic indicator`]()
-*	[`Triangular moving average indicator`]() - TMA 
+* [`Accumulation distribution indicator`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AccumulationDistributionIndicator-class.html) - AD
+*	[`Average true range indicator`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AtrIndicator-class.html) - ATR
+*	[`Bollinger band indicator`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BollingerBandIndicator-class.html)
+*	[`Exponential moving average indicator`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmaIndicator-class.html) - EMA
+* [`Moving average convergence divergence`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdIndicator-class.html) - MACD
+*	[`Momentum indicator`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MomentumIndicator-class.html)
+*	[`Relative strength index indicator`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RsiIndicator-class.html) - RSI 
+*	[`Simple moving average indicator`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmaIndicator-class.html) - SMA 
+*	[`Stochastic indicator`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StochasticIndicator-class.html)
+*	[`Triangular moving average indicator`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TmaIndicator-class.html) - TMA 
 
 ## Adding Technical indicator into Chart
  
-To render any indicator, add it to the [`TechnicalIndicators`]() collection using the [`indicators`]() property in [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html).The following properties are used to customize the appearance:
+To render any indicator, add it to the [`TechnicalIndicators`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators-class.html) collection using the indicators in [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html).The following properties are used to customize the appearance:
 
-* [`isVisible`]() - To check the visibility of the indicator.
-* [`period`]()- Used to indicates the moving average period.
-* [`signalLineColor`]()- Used to defines the color for the respective indicator line.
-* [`signalLineWidth`]() - Used to change the signal line width.
-* [`seriesName`]() - Used to bind the data source of chart series to technical indicators, including x and y axis.
-* [`xAxisName`](),[`yAxisName`]() - Used to set the x and y axes 
-* [`animationDuration`]() - To control the duration of animation 
-* [`dataSource`]() - Directly bind the values such as [`xValueMapper`](),[`lowValueMapper`](),[`highValueMapper`](),[`openValueMapper`](),[`closeValueMapper`]()
-* [`isVisibleInLegend`](),[`legendItemText`](),[`legendIconType`]() - Used to change the legend visibility,text and Icon type
-* [`name`]() - Used to define the label for corresponding indicators.
-* [`dashArray`]() - Used to render the indicators with dashes.
+* [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/isVisible.html) - To check the visibility of the indicator.
+* [`period`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/period.html)- Used to indicates the moving average period.
+* [`signalLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/signalLineColor.html)- Used to defines the color for the respective indicator line.
+* [`signalLineWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/signalLineWidth.html) - Used to change the signal line width.
+* [`seriesName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/seriesName.html) - Used to bind the data source of chart series to technical indicators, including x and y axis.
+* [`xAxisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/xAxisName.html),[`yAxisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/yAxisName.html) - Used to set the x and y axes 
+* [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/animationDuration.html) - To control the duration of animation 
+* [`dataSource`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/dataSource.html) - Directly bind the values such as [`xValueMapper`](),[`lowValueMapper`](),[`highValueMapper`](),[`openValueMapper`](),[`closeValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/closeValueMapper.html)
+* [`isVisibleInLegend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/isVisibleInLegend.html),[`legendItemText`]https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/legendItemText.html),[`legendIconType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/legendIconType.html) - Used to change the legend visibility,text and Icon type
+* [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/name.html) - Used to define the label for corresponding indicators.
+* [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/dashArray.html) - Used to render the indicators with dashes.
 
 N> If you giving series and indicator in the chart, you can add  the same [`seriesName`]() to the series and indicator, otherwise you can directly bind the [`dataSource`]() to the [`indicators`]() property.
 
@@ -45,7 +45,7 @@ N> If you giving series and indicator in the chart, you can add  the same [`seri
 
 ###  Accumulation distribution indicator (AD)
 
-Accumulation distribution indicator is a volume-based indicator designed to measure the accumulative flow of money into and out of a security. It requires [`volumeValueMapper`]() property additionally with the data source to calculate the signal line.
+Accumulation distribution indicator is a volume-based indicator designed to measure the accumulative flow of money into and out of a security. It requires [`volumeValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AccumulationDistributionIndicator/volumeValueMapper.html) property additionally with the data source to calculate the signal line.
 
 Refer the following example,
 
@@ -104,9 +104,9 @@ Refer the following example,
 
 ### Bollinger band Indicator
 
-This indicator also having [`upperLineColor`](), [`lowerLineColor`]()  property for defining the brushes for the indicator lines.
+This indicator also having [`upperLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BollingerBandIndicator/upperLineColor.html), [`lowerLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BollingerBandIndicator/lowerLineColor.html)  property for defining the brushes for the indicator lines.
 
-Also, we can specify standard deviation values for BollingerBand indicator using [`standardDeviation`]() property.
+Also, we can specify standard deviation values for BollingerBand indicator using [`standardDeviation`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BollingerBandIndicator/standardDeviation.html) property.
 
 Refer the following example,
 
@@ -135,7 +135,7 @@ Refer the following example,
 
 An EMA indicator is a simple, arithmetic moving average that is calculated by adding the closing price for the number of time periods and dividing the total value by the number of periods.
 
-It also has a [`valueField`]() property. Based on this property Indicator will render.
+It also has a [`valueField`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmaIndicator/valueField.html) property. Based on this property Indicator will render.
 
 Refer the following example,
 
@@ -164,11 +164,11 @@ Refer the following example,
 
 ### Moving average convergence divergence (MACD)
 
-This is mostly using indicator having [`shortPeriod`]() and [`longPeriod`]() for defining the motion of the indicator.
+This is mostly using indicator having [`shortPeriod`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdIndicator/shortPeriod.html) and [`longPeriod`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdIndicator/longPeriod.html) for defining the motion of the indicator.
 
-Also you can draw **Line**, **Histogram** MACD or **Both** using the  [`macdType`]() property,
+Also you can draw **Line**, **Histogram** MACD or **Both** using the  [`macdType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdIndicator/macdType.html) property,
 
-The [`macdLineColor`]() property is used to define the color for the MACD line and the [`histogramNegativeColor`]() and [`histogramPositiveColor`]() property is used to define the color for the MACD histogram.
+The [`macdLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdIndicator/macdLineColor.html) property is used to define the color for the MACD line and the [`histogramNegativeColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdIndicator/histogramNegativeColor.html) and [`histogramPositiveColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdIndicator/histogramPositiveColor.html) property is used to define the color for the MACD histogram.
 
 Refer the following example,
 
@@ -197,7 +197,7 @@ Refer the following example,
 
 ### Momentum Indicator
 
-This indicator also having a centerline. The [`centerLineColor`]() and [`centerLineWidth`]() property is used to define center line.
+This indicator also having a centerline. The [`centerLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MomentumIndicator/centerLineColor.html) and [`centerLineWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MomentumIndicator/centerLineWidth.html) property is used to define center line.
 
 Refer the following example,
 
@@ -224,9 +224,9 @@ Refer the following example,
 ![MomentumIndicator](images/technical-indicators/momentum.jpg)
 
 ### Relative strength index Indicator(RSI)
-The RSI indicator has an additional two lines other than the signal line.They indicate the [`overBought`]() and[`overSold`]() region.
+The RSI indicator has an additional two lines other than the signal line.They indicate the [`overBought`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RsiIndicator/overbought.html) and[`overSold`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RsiIndicator/oversold.html) region.
 
-The [`upperLineColor`]() property is used to define the color for the line that indicates [`overBought`]() region, and the [`lowerLineColor`]() property is used to define the color for the line that indicates [`overSold`]() region.
+The [`upperLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RsiIndicator/upperLineColor.html) property is used to define the color for the line that indicates [`overBought`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RsiIndicator/overbought.html) region, and the [`lowerLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RsiIndicator/lowerLineColor.html) property is used to define the color for the line that indicates [`overSold`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RsiIndicator/oversold.html) region.
 
 Refer the following example,
 
@@ -255,7 +255,7 @@ Refer the following example,
 
 ### Simple moving average indicator(SMA)
 
-The [`Exponential moving average indicator`]() is similar to [`Simple moving average indicator`]() and this can be defined using the following code examples.
+The [`Simple moving average indicator`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmaIndicator-class.html) is similar to [`Exponential moving average indicator`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmaIndicator-class.html) and this can be defined using the following code examples.
 
 {% highlight dart %}
 
@@ -281,7 +281,7 @@ The [`Exponential moving average indicator`]() is similar to [`Simple moving ave
 
 This indicator is used to measure the range and momentum of price movements. It contains [`kPeriod`]() and [`dPeriod`]() property defining the ‘k’ percentage and ‘d’ percentage respectively.
 
-In this indicator [`upperLineColor`](),[`lowerLineColor`]() and [`periodLineColor`]() property are used to define the color for the Stochastic indicator lines.
+In this indicator [`upperLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StochasticIndicator/upperLineColor.html),[`lowerLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StochasticIndicator/lowerLineColor.html) and [`periodLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StochasticIndicator/periodLineColor.html) property are used to define the color for the Stochastic indicator lines.
 
 Refer the following example,
 
@@ -334,7 +334,7 @@ Refer the following example,
 ## Legend for technical indicators
 
 
-Legend provides information about the series rendered in the chart. Legend for the indicator is rendered along with the series legend when the legend is set to be visible. Also when the  [ `name` ]() property is given to an indicator, the legend name is changed based on the indicator name.[`legendItemText`]() can also be provided for changing the name of the legend. In default rendering the [`legendIconShape`]() will be a horizontal line.
+Legend provides information about the series rendered in the chart. Legend for the indicator is rendered along with the series legend when the legend is set to be visible. Also when the  [ `name` ](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/name.html) property is given to an indicator, the legend name is changed based on the indicator name.[`legendItemText`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/legendItemText.html) can also be provided for changing the name of the legend. In default rendering the [`legendIconType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/legendIconType.html) will be a horizontal line.
 
 The following code example can define the legend.
 
@@ -360,11 +360,11 @@ The following code example can define the legend.
 ![Legend](images/technical-indicators/legend.jpg)
 
 
-Also refer [`technical indicators event`]() for customizing the tooltip further.
+Also refer [`technical indicators event`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs-class.html) for customizing the tooltip further.
 
 ## Tooltip for technical indicators
 
-The chart will display the segment information through the tooltip. It is used to show information about the segment when you tap on the segment. The technical indicator tooltip has the same [`ActivationMode`]()  that has been given in the [`TooltipBehavior`]()  of the series.
+The chart will display the segment information through the tooltip. It is used to show information about the segment when you tap on the segment. The technical indicator tooltip has the same [`ActivationMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/activationMode.html)  that has been given in the [`TooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior-class.html)  of the series.
 
 {% highlight dart %}
 
