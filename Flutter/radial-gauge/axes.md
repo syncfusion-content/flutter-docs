@@ -440,7 +440,7 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 
-![axis background image](images/axis/axis_label.jpg)
+![axis background image](images/axis/axis_background.png)
 
 ## Label style customization
 
