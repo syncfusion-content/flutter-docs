@@ -9,11 +9,11 @@ documentation: ug
 
 # Working with Headers and Footers				 
 
-The Flutter PDF supports drawing the header and footer in PDF document using PdfPageTemplateElement class. The header and footer contain the graphics support and automatic field support to perform their operations.
+The Flutter PDF supports drawing the header and footer in PDF document using [`PdfPageTemplateElement`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageTemplateElement-class.html) class. The header and footer contain the graphics support and automatic field support to perform their operations.
 
 ## Adding graphics and automatic fields to header and footer
 
-This package supports to add page count, page numbers, date and time using automatic fields such as PdfPageCountField, PdfPageNumberField and PdfDateTimeField, and more.
+This package supports to add page count, page numbers, date and time using automatic fields such as [`PdfPageCountField`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageCountField-class.html), [`PdfPageNumberField`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageNumberField-class.html) and [`PdfDateTimeField`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDateTimeField-class.html), and more.
 
 The following code snippet explains how to use the graphics and automatic fields in header and footer.
 
