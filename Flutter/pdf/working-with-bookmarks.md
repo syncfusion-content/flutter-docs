@@ -9,11 +9,11 @@ documentation: ug
 
 # Working with PDF Bookmarks
 
-The Syncfusion Flutter PDF provides support to add bookmarks to a PDF document to navigate interactively from one part of the document to another. It provides customization such as title font, color, size and more. 
+The Syncfusion Flutter PDF provides support to add [`bookmarks`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument/bookmarks.html) to a PDF document to navigate interactively from one part of the document to another. It provides customization such as title font, color, size and more. 
 
 ## Adding bookmarks to a PDF
 
-The PdfBookmarkBase collection represents the bookmarks in a PDF document. You can add a bookmark to a new PDF document using PdfBookmark class. Refer to the following code example.
+The [`PdfBookmarkBase`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfBookmarkBase-class.html) collection represents the bookmarks in a PDF document. You can add a bookmark to a new PDF document using [`PdfBookmark`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfBookmark-class.html) class. Refer to the following code example.
 
 {% highlight dart %}
 
@@ -42,7 +42,7 @@ document.dispose();
 
 ## Adding a child to the bookmarks
 
-You can add a child bookmark by using the insert or add method. Refer to the following code example.
+You can add a child bookmark by using the [`insert`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfBookmarkBase/insert.html) or [`add`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfBookmarkBase/add.html) method. Refer to the following code example.
 
 {% highlight dart %}
 

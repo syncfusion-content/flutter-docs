@@ -9,7 +9,7 @@ documentation: ug
 
 # Working with PDF Images
 
-Images are supported through the PdfImage class, which is an abstract base class that provides functionality for PdfBitmap class.
+Images are supported through the [`PdfImage`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfImage-class.html) class, which is an abstract base class that provides functionality for [`PdfBitmap`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfBitmap-class.html) class.
 
 ## Inserting an image in PDF document
 
@@ -18,7 +18,7 @@ The following raster images are supported in Flutter PDF:
 * JPEG
 * PNG
 
-You can load image data in PdfBitmap object to draw the images using the drawImage method of the PdfGraphics class. The image data can be initialized as list of bytes or base64 string format.
+You can load image data in [`PdfBitmap`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfBitmap-class.html) object to draw the images using the [`drawImage`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics/drawImage.html) method of the [`PdfGraphics`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics-class.html) class. The image data can be initialized as list of bytes or base64 string format.
 
 The following code snippet shows how to draw an image to the PDF document.
 
@@ -46,7 +46,7 @@ document.dispose();
 
 ## Applying transparency and rotation to the image
 
-You can add transparency and rotation to the image using the setTransparency and rotateTransform methods of PdfGraphics respectively. This is explained in the following code snippet.
+You can add transparency and rotation to the image using the [`setTransparency`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics/setTransparency.html) and [`rotateTransform`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics/rotateTransform.html) methods of [`PdfGraphics`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics-class.html) respectively. This is explained in the following code snippet.
 
 {% highlight dart %}
 
