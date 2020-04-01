@@ -11,7 +11,7 @@ documentation: ug
 
 ## Drawing text in PDF document
 
-You can add text to the PDF document by using the drawString method of PdfGraphics class as shown in the following code sample.
+You can add text to the PDF document by using the [`drawString`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics/drawString.html) method of [`PdfGraphics`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics-class.html) class as shown in the following code sample.
 
 {% highlight dart %}
 
@@ -45,7 +45,7 @@ PDF has fourteen base fonts also known as standard fonts, which has special sign
 
 [`Standard type 1 fonts`](https://en.wikipedia.org/wiki/PDF#Standard_Type_1_Fonts_.28Standard_14_Fonts.29)
 
-You can add text using the standard PDF fonts, by initializing the PdfFont class as PdfStandardFont class. The following code snippet explains this.
+You can add text using the standard PDF fonts, by initializing the [`PdfFont`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfFont-class.html) class as [`PdfStandardFont`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfStandardFont-class.html) class. The following code snippet explains this.
 
 {% highlight dart %}
 
@@ -67,7 +67,7 @@ document.dispose();
 
 ### Draw text using TrueType fonts
 
-You can add text using the font data, by initializing PdfFont class as PdfTrueTypeFont class. The font data can be loaded from the disk. The font data can be initialized to PdfTrueTypeFont as a list of bytes or base64 string format. The following code snippet explains this.
+You can add text using the font data, by initializing [`PdfFont`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfFont-class.html) class as [`PdfTrueTypeFont`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfTrueTypeFont-class.html) class. The font data can be loaded from the disk. The font data can be initialized to [`PdfTrueTypeFont`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfTrueTypeFont-class.html) as a list of bytes or base64 string format. The following code snippet explains this.
 
 {% highlight dart %}
 
@@ -89,7 +89,7 @@ document.dispose();
 
 ### Draw text using CJK fonts
 
-The Syncfusion Flutter PDF provides support to draw a CJK (Chinese, Japanese, Korean) text using some of the standard CJK fonts. The font data can be initialized by initializing PdfFont class as [`PdfCjkStandardFont`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfCjkStandardFont-class.html). The following code sample explains this.
+The Syncfusion Flutter PDF provides support to draw a CJK (Chinese, Japanese, Korean) text using some of the standard CJK fonts. The font data can be initialized by initializing [`PdfFont`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfFont-class.html) class as [`PdfCjkStandardFont`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfCjkStandardFont-class.html). The following code sample explains this.
 
 {% highlight dart %}
 
@@ -111,7 +111,7 @@ document.dispose();
 
 ## Measuring a string
 
-The Syncfusion Flutter PDF allows you to measure the size of a string which uses the PdfFont using the measureString method of it and returns the size. Refer to the following code sample.
+The Syncfusion Flutter PDF allows you to measure the size of a string which uses the [`PdfFont`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfFont-class.html) using the [`measureString`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfFont/measureString.html) method of it and returns the size. Refer to the following code sample.
 
 {% highlight dart %}
 
@@ -141,7 +141,7 @@ document.dispose();
 
 ## Drawing Right-To-Left text
 
-The Syncfusion Flutter PDF allows you to draw the right-to-left language text in a PDF document. To draw RTL scripts such as Arabic, Hebrew, Persian, and Urdu, set the value of textDirection property in the PdfStringFormat class to rightToLeft using PdfTextDirection enum. The languages (e.g., Sindhi and Kurdish) that have more than one script and can be written in either right-to-left or left-to-right format. The leftToRight value of the textDirection property is used to draw RTL text in the left-to-right format. Refer to the following code sample.
+The Syncfusion Flutter PDF allows you to draw the right-to-left language text in a PDF document. To draw RTL scripts such as Arabic, Hebrew, Persian, and Urdu, set the value of [`textDirection`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfStringFormat/textDirection.html) property in the [`PdfStringFormat`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfStringFormat-class.html) class to rightToLeft using [`PdfTextDirection`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfTextDirection-class.html) enum. The languages (e.g., Sindhi and Kurdish) that have more than one script and can be written in either right-to-left or left-to-right format. The leftToRight value of the [`textDirection`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfStringFormat/textDirection.html) property is used to draw RTL text in the left-to-right format. Refer to the following code sample.
 
 {% highlight dart %}
 
@@ -175,7 +175,7 @@ document.dispose();
 
 ## Creating a multicolumn PDF document
 
-Syncfusion Flutter PDF allows you to create a multi-column text in PDF document by using PdfTextElement class. The following code example explains the same.
+Syncfusion Flutter PDF allows you to create a multi-column text in PDF document by using [`PdfTextElement`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfTextElement-class.html) class. The following code example explains the same.
 
 {% highlight dart %}
 
@@ -214,7 +214,7 @@ document.dispose();
 
 {% endhighlight %}
 
-The PdfLayoutFormat class helps to allow the text to flow across pages. The PdfLayoutResult class provides the rendered bounds of the previously added text, which can be used to place successive elements without overlapping.
+The [`PdfLayoutFormat`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfLayoutFormat-class.html) class helps to allow the text to flow across pages. The [`PdfLayoutResult`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfLayoutResult-class.html) class provides the rendered bounds of the previously added text, which can be used to place successive elements without overlapping.
 
 The following code snippet explains how to add elements relatively and also allow the text to flow across multiple pages.
 
@@ -284,4 +284,4 @@ document.dispose();
 
 {% endhighlight %}
 
-The Syncfusion Flutter PDF has Pens and Brushes with various built-in colors to draw the content on PDF document.
+The Syncfusion Flutter PDF has [`Pens`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPens-class.html) and [`Brushes`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfBrushes-class.html) with various built-in colors to draw the content on PDF document.

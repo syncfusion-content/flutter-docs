@@ -13,7 +13,7 @@ In PDF, hyperlinks can be added to allow the users to navigate to another part o
 
 ## Working with Web navigation
 
-You can navigate to a specified URL from a PDF document by using the PdfTextWebLink class.
+You can navigate to a specified URL from a PDF document by using the [`PdfTextWebLink`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfTextWebLink-class.html) class.
 
 Refer to the following code snippet for navigating to the webpage.
 
@@ -44,7 +44,7 @@ document.dispose();
 
 ## Working with internal document navigation
 
-To allow the users navigate to any other part of the same document, the PdfDocumentLinkAnnotation class can be used. 
+To allow the users navigate to any other part of the same document, the [`PdfDocumentLinkAnnotation`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocumentLinkAnnotation-class.html) class can be used. 
 
 The following code explains how to add the hyperlink for internal document navigation.
 

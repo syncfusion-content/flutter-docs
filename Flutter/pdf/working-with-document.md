@@ -11,7 +11,7 @@ documentation: ug
 
 ## Adding the document settings
 
-Flutter PDF supports various page setting options to control the page display, using the pageSettings property of PdfDocument.
+Flutter PDF supports various page setting options to control the page display, using the [`pageSettings`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument/pageSettings.html) property of [`PdfDocument`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument-class.html).
 
 You can choose the standard or custom page size when you add a page to the PDF document. The following sample explains how to create a PDF document with standard page size.
 
@@ -56,7 +56,7 @@ document.dispose();
 	
 {% endhighlight %}
 
-You can change the page orientation from portrait to landscape using the PdfPageOrientation enum by the following code snippet.
+You can change the page [`orientation`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageSettings/orientation.html) from [`portrait`] to landscape using the [`PdfPageOrientation`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageOrientation-class.html) enum by the following code snippet.
 
 {% highlight dart %}
 
@@ -81,7 +81,7 @@ document.dispose();
 	
 {% endhighlight %}
 
-You can also change the orientation by setting the rotation angle using the PdfPageRotateAngle enum. The following code snippet explains the same.
+You can also change the [`orientation`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageSettings/orientation.html) by setting the [`rotation angle`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageSettings/rotate.html) using the [`PdfPageRotateAngle`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageRotateAngle-class.html) enum. The following code snippet explains the same.
 
 {% highlight dart %}
 
@@ -108,7 +108,7 @@ document.dispose();
 
 ## Creating sections in a PDF
 
-PDF sections are parts of a PDF document, which may contain one or more pages with their unique page settings. The following code snippet explains how to create a PdfSection in a PDF document.
+PDF [`sections`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument/sections.html) are parts of a PDF document, which may contain one or more pages with their unique page settings. The following code snippet explains how to create a [`PdfSection`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSection-class.html) in a PDF document.
 
 {% highlight dart %}
 

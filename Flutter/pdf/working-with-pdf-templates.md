@@ -9,13 +9,13 @@ documentation: ug
 
 # Working with PDF Templates
 
-A PDF template is a drawing surface, where contents can be added. All the elements that can be added to a PdfPage is supported in PdfTemplate as well. The template in turn can be drawn over the page or can be positioned at any part of the page.
+A PDF template is a drawing surface, where contents can be added. All the elements that can be added to a [`PdfPage`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPage-class.html) is supported in [`PdfTemplate`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfTemplate-class.html) as well. The template in turn can be drawn over the page or can be positioned at any part of the page.
 
 ## Creating a new PDF template
 
-The PdfTemplate class can be used to create a new PDF template. You can add contents to the template using Graphics property of the PdfTemplate object.
+The [`PdfTemplate`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfTemplate-class.html) class can be used to create a new PDF template. You can add contents to the template using [`graphics`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPage/graphics.html) property of the [`PdfTemplate`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfTemplate-class.html) object.
 
-The following code example explains how to add contents to the PdfTemplate and render into the new PDF page.
+The following code example explains how to add contents to the [`PdfTemplate`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfTemplate-class.html) and render into the new PDF page.
 
 {% highlight dart %}
 
@@ -45,7 +45,7 @@ document.dispose();
 
 ## Working with PdfPageTemplateElement
 
-The PdfPageTemplateElement is a template element that can be added to any part of the PDF page such as header, footer, and more.
+The [`PdfPageTemplateElement`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageTemplateElement-class.html) is a template element that can be added to any part of the PDF page such as header, footer, and more.
 
 The following code example explains how to add the page template elements to a PDF document.
 
