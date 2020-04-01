@@ -178,7 +178,7 @@ Add the following code in the header section of index.html file under the web fo
 
 By executing the above code sample, you will get the PDF document as follows.
 
-![Getting started PDF](/flutter/pdf/images/getting-started/default.jpg)
+![Getting started PDF](images/getting-started/default.jpg)
 
 ## Creating a PDF document with image
 
@@ -457,4 +457,4 @@ document.dispose();
 
 The following screenshot shows the invoice PDF document created by the Syncfusion Flutter PDF.
 
-![Invoice PDF](/flutter/pdf/images/getting-started/invoice.jpg)
+![Invoice PDF](images/getting-started/invoice.jpg)
