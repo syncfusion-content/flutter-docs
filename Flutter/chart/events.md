@@ -484,15 +484,15 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
  
 Triggers when indicator is rendering. Here you can customize the name, signal line color, signal line width,dash array and so on.
  
-The [`onIndicatorRender`]() contains following arguments.
+The [`onIndicatorRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs-class.html) contains following arguments.
 
-* [`indicatorName`]() - Specifies the indicator name.
-* [`signalLineColor`]() - Used to change the color of the signal line.
-* [`signalLineWidth`]() - Used to change the width of the signal line.
-* [`lineDashArray`]() - Used to change the dash array size.
-* [`seriesName`]() - Specifies the series name.
-* [`index`]() - Specifies the current series index
-* [`dataPoints`]() - Specifies the current datapoints.
+* [`indicatorName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/indicatorname.html) - Specifies the indicator name.
+* [`signalLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/signalLineColor.html) - Used to change the color of the signal line.
+* [`signalLineWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/signalLineWidth.html) - Used to change the width of the signal line.
+* [`lineDashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/lineDashArray.html) - Used to change the dash array size.
+* [`seriesName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/seriesName.html) - Specifies the series name.
+* [`index`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/index.html) - Specifies the current series index
+* [`dataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/dataPoints.html) - Specifies the current datapoints.
 
 {% highlight dart %}
 
@@ -516,17 +516,17 @@ The [`onIndicatorRender`]() contains following arguments.
 
 ### onTrendlineRender
 
-Triggers when  the trendline gets rendered.Trendline properties like color,opacity can be customized using trendlineRender events. The [`onTrendlineRender`]() event contains the following arguments.
+Triggers when  the trendline gets rendered.Trendline properties like color,opacity can be customized using trendlineRender events. The [`onTrendlineRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs-class.html) event contains the following arguments.
 
-* [`trendlineIndex`]() - Specifies the  index of the trendlines.
-* [`opacity`]() - Specifies the opacity of the trendlines.
-* [`seriesName`]() - Specifies the series name of the trendline.
-* [`color`]() - Specifies the color of the trendline.
-* [`seriesIndex`]() - Specifies the seriesIndex.
-* [`data`]() - Specifies the data points of the series.
-* [`trendlineName`]() - Specifies the name of the trendline.
-* [`intercept`]() - Specifies the intercept value of the trendline.
-* [`dashArray`]() - Specifies and set the dashArray for trendlines.
+* [`trendlineIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/trendlineIndex.html) - Specifies the  index of the trendlines.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/opacity.html) - Specifies the opacity of the trendlines.
+* [`seriesName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/seriesName.html) - Specifies the series name of the trendline.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/color.html) - Specifies the color of the trendline.
+* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/seriesIndex.html) - Specifies the seriesIndex.
+* [`data`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/data.html) - Specifies the data points of the series.
+* [`trendlineName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/trendlineName.html) - Specifies the name of the trendline.
+* [`intercept`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/intercept.html) - Specifies the intercept value of the trendline.
+* [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/dashArray.html) - Specifies and set the dashArray for trendlines.
 
 {% highlight dart %}
 
