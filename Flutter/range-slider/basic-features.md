@@ -12,19 +12,19 @@ This section explains about how to add the numeric and date range slider.
 
 ## Minimum
 
-The minimum value that the user can select. The default value of `min` property is 0.0. Must be less than the `max` value.
+The minimum value that the user can select. The default value of [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html) property is 0.0. Must be less than the [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) value.
 
 ## Maximum
 
-The maximum value that the user can select. The default value of `max` property is 1.0. Must be greater than the `min`.
+The maximum value that the user can select. The default value of [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) property is 1.0. Must be greater than the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html).
 
 ## Values
 
 The values currently selected in the range slider. The range slider's thumb is drawn corresponding to this value.
 
-For date values, the range slider does not have auto interval support. So, it is mandatory to set `interval`, `dateIntervalType`, and `dateFormat` for date values.
+For date values, the range slider does not have auto interval support. So, it is mandatory to set [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/interval.html), [`dateIntervalType`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateIntervalType.html), and [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateFormat.html) for date values.
 
-N> The `onChanged` callback can be used to update the visual appearance of the range slider when the user drags the thumb through interaction.
+N> The [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onChanged.html) callback can be used to update the visual appearance of the range slider when the user drags the thumb through interaction.
 
 **Numeric range slider**
 
@@ -100,7 +100,7 @@ Widget build(BuildContext context) {
 
 ## OnChanged callback
 
-The `onChanged` callback is called when the user selects a value through interaction.
+The [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onChanged.html) callback is called when the user selects a value through interaction.
 
 N> The range slider passes the new values to the callback but does not change its state until the parent widget rebuilds the range slider with new values.
 
