@@ -59,3 +59,7 @@ return MaterialApp(
 {% endtabs %}
 
 ![Localization Date Range Picker](images/localization/localization.png)
+
+## See also
+
+[How to add new language in flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/11306/how-to-add-new-language-in-flutter-date-range-picker-sfdaterangepicker)
