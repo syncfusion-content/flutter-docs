@@ -2,7 +2,7 @@
 layout: post
 title: Customizations Syncfusion Flutter Date Range Picker | Date Picker
 description: Describe how to customize the Syncfusion SfDateRangePicker widget in Flutter | Date Picker | Customization
-platform: flutter
+platform: Flutter
 control: SfDateRangePicker
 documentation: ug
 ---
@@ -152,4 +152,4 @@ Widget build(BuildContext context) {
 
 ## See also
 
-[How to customize the month cell of the flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/11307/how-to-customize-the-month-cell-of-the-flutter-date-range-picker-sfdaterangepicker)
+[How to customize the month cell of the Flutter date range picker (SfDateRangePicker)?](https://www.syncfusion.com/kb/11307/how-to-customize-the-month-cell-of-the-flutter-date-range-picker-sfdaterangepicker)
