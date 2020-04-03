@@ -149,3 +149,7 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+## See also
+
+[How to customize the month cell of the flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/11307/how-to-customize-the-month-cell-of-the-flutter-date-range-picker-sfdaterangepicker)

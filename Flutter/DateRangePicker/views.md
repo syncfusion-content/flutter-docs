@@ -89,3 +89,9 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Century view Date Range Picker](images/views/centuryview.png)
+
+## See also
+
+[How to switch between the date range picker views in flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/11305/how-to-switch-between-the-date-range-picker-views-in-flutter-date-range-picker)
+
+[How to get the current view dates in flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/11331/how-to-get-the-current-view-dates-in-flutter-date-range-picker-sfdaterangepicker)
