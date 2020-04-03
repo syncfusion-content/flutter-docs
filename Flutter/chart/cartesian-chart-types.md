@@ -2168,14 +2168,14 @@ The `dashArray` property of `StackedLine100Series` is used to render line series
 ## HiLo chart
 HiLo Series illustrates the price movements in stock using the high and low values.
 
-To render a HiLo chart, create an instance of [`HiloSeries`](), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties are used to customize the appearance:
+To render a HiLo chart, create an instance of [`HiloSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/HiloSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties are used to customize the appearance:
 
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) – Changes the color of the series.
 * [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
 * [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) – Changes the stroke width of the series.
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) – Changes the stroke color of the series.
-* [`lowValueMapper`]() - used to get the low values from the series.
-* [`highValueMapper`]() - used to get the high values from the series.
+* [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/lowValueMapper.html) - used to get the low values from the series.
+* [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/highValueMapper.html) - used to get the high values from the series.
 
 {% highlight dart %} 
     
@@ -2209,18 +2209,18 @@ To render a HiLo chart, create an instance of [`HiloSeries`](), and add it to th
 
  OpenHighLowClose series is used to represent the low, high, open and closing values over time.
 
-To render a OpenHighLowClose chart, create an instance of [` hiloOpenCloseSeries`](), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties are used to customize the appearance:
+To render a OpenHighLowClose chart, create an instance of [` hiloOpenCloseSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/HiloOpenCloseSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties are used to customize the appearance:
 
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) – Changes the color of the series.
 * [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
 * [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) – Changes the stroke width of the series.
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) – Changes the stroke color of the series.
-* [`lowValueMapper`]() - used to get the low values from the series.
-* [`highValueMapper`]() - used to get the high values from the series.
-* [`openValueMapper`]() - used to get the open values from the series.
-* [`closeValueMapper`]() - used to get the close values from the series.
-* [`bearFillColor`]() - bearFillColor will be applied when the opening value is less than the closing value.
-* [`bullFillColor`]() - bullFillColor will be applied when the opening value is greater than closing value.
+* [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/lowValueMapper.html) - used to get the low values from the series.
+* [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/highValueMapper.html) - used to get the high values from the series.
+* [`openValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/HiloOpenCloseSeries/openValueMapper.html) - used to get the open values from the series.
+* [`closeValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/HiloOpenCloseSeries/closeValueMapper.html) - used to get the close values from the series.
+* [`bearFillColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/HiloOpenCloseSeries/bearColor.html) - bearFillColor will be applied when the opening value is less than the closing value.
+* [`bullFillColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/HiloOpenCloseSeries/bullColor.html) - bullFillColor will be applied when the opening value is greater than closing value.
 
 
 
@@ -2259,19 +2259,19 @@ To render a OpenHighLowClose chart, create an instance of [` hiloOpenCloseSeries
 
 Candle series is similar to HiLo Open Close series, used to represent the low, high, open and closing price over time.
 
-To render a HiLoOpenClose chart, create an instance of [` CandleSeries`](), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties are used to customize the appearance:
+To render a Candle chart, create an instance of [` CandleSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CandleSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties are used to customize the appearance:
 
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) – Changes the color of the series.
 * [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
 * [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) – Changes the stroke width of the series.
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) – Changes the stroke color of the series.
-* [`enableSolidCandles`]()- Used to enable/disable the solid candles. By default is set to be false. The fill color of the candle will be defined by its opening and closing values.
-* [`lowValueMapper`]() - used to get the low values from the series.
-* [`highValueMapper`]() - used to get the high values from the series.
-* [`openValueMapper`]() - used to get the open values from the series.
-* [`closeValueMapper`]() - used to get the close values from the series.
-* [`bearFillColor`]() - bearFillColor will be applied when the opening value is less than the closing value.
-* [`bullFillColor`]() - bullFillColor will be applied when the opening value is greater than closing value.
+* [`enableSolidCandles`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CandleSeries/enableSolidCandles.html)- Used to enable/disable the solid candles. By default is set to be false. The fill color of the candle will be defined by its opening and closing values.
+* [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/lowValueMapper.html) - used to get the low values from the series.
+* [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/highValueMapper.html) - used to get the high values from the series.
+* [`openValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CandleSeries/openValueMapper.html) - used to get the open values from the series.
+* [`closeValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CandleSeries/closeValueMapper.html) - used to get the close values from the series.
+* [`bearFillColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CandleSeries/bearColor.html) - bearFillColor will be applied when the opening value is less than the closing value.
+* [`bullFillColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CandleSeries/bullColor.html) - bullFillColor will be applied when the opening value is greater than closing value.
 
 
 
