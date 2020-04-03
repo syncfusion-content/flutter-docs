@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Tooltip features in Syncfusion Flutter Range Slider | Syncfusion
-description: This section helps to learn about how to add tooltip and its features in range slider for flutter platform
-platform: flutter
+description: This section helps to learn about how to add tooltip and its features in range slider for Flutter platform
+platform: Flutter
 control: SfRangeSlider
 documentation: ug
 ---

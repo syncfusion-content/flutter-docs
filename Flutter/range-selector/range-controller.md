@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Controller in Syncfusion Flutter Range Selector | Syncfusion
-description: This section explains about how to add the range controller to the range selector for flutter platform
-platform: flutter
+description: This section explains about how to add the range controller to the range selector for Flutter platform
+platform: Flutter
 control: SfRangeSelector
 documentation: ug
 ---
