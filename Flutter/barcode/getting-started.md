@@ -70,13 +70,13 @@ Add the Barcode Generator widget as a child of any widget. Here, the widget is a
 
 {% endhighlight %}
 
-N> The default symbology of SfBarcodeGenerator is `Code128`.
+N> The default symbology of SfBarcodeGenerator is [`Code128`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code128-class.html).
 
 ![Initialize barcode generator](images/getting-started/getting_started1.jpg)
 
 ## Initialize QR Code symbology
 
-You can set the required symbology type to the barcode generator based on input value by initializing the `symbology` property. In the following code snippet, the QR code is set as the barcode symbology.
+You can set the required symbology type to the barcode generator based on input value by initializing the [`symbology`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Symbology-class.html) property. In the following code snippet, the QR code is set as the barcode symbology.
 
 {% highlight dart %} 
 
@@ -102,7 +102,7 @@ You can set the required symbology type to the barcode generator based on input 
 
 ## Display input value
 
-The provided input value can be displayed below the barcode by enabling the `showValue` property of barcode as like the following code snippet,
+The provided input value can be displayed below the barcode by enabling the [`showValue`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/SfBarcodeGenerator/showValue.html) property of barcode as like the following code snippet,
 
 {% highlight dart %} 
 
