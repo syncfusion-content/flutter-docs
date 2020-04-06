@@ -253,6 +253,172 @@ class Data {
 
 ![Range selector disabled state](images/basic-features/selector_disabled_state.png)
 
+## Active region color
+
+It specifies the color for the active region of the child in the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html). The active side of the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html) is between `start` and `end` thumbs.
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(5.0, 8.0);
+
+final List<Data> chartData = <Data>[
+    Data(x:2.0, y: 2.2),
+    Data(x:3.0, y: 3.4),
+    Data(x:4.0, y: 2.8),
+    Data(x:5.0, y: 1.6),
+    Data(x:6.0, y: 2.3),
+    Data(x:7.0, y: 2.5),
+    Data(x:8.0, y: 2.9),
+    Data(x:9.0, y: 3.8),
+    Data(x:10.0, y: 3.7),
+];
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSelectorTheme(
+                    data: SfRangeSliderThemeData(
+                        activeRegionColor: Colors.greenAccent[100],
+                    ),
+                    child:  SfRangeSelector(
+                        min: _min,
+                        max: _max,
+                        interval: 1,
+                        showLabels: true,
+                        showTicks: true,
+                        initialValues: _values,
+                        child: Container(
+                        height: 130,
+                        child: SfCartesianChart(
+                            margin: const EdgeInsets.all(0),
+                            primaryXAxis: NumericAxis(minimum: _min,
+                                maximum: _max,
+                                isVisible: false),
+                            primaryYAxis: NumericAxis(isVisible: false),
+                            plotAreaBorderWidth: 0,
+                            series: <SplineAreaSeries<Data, double>>[
+                                SplineAreaSeries<Data, double>(
+                                    color: Color.fromARGB(255, 126, 184, 253),
+                                        dataSource: chartData,
+                                            xValueMapper: (Data sales, _) => sales.x,
+                                            yValueMapper: (Data sales, _) => sales.y)
+                                ],
+                            ),
+                        ),
+                   ),
+              ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Dart %}
+
+class Data {
+  Data({this.x, this.y});
+  final double x;
+  final double y;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Active region color support](images/basic-features/selector-active-region-color.png)
+
+## Inactive region color
+
+It specifies the color for the inactive region of the child in the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html).
+
+The inactive side of the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html) is between the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) value and the left thumb, and the right thumb and the [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) value.
+
+For RTL, the inactive side is between the [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) value and the left thumb, and the right thumb and the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) value.
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+final List<Data> chartData = <Data>[
+    Data(x:2.0, y: 2.2),
+    Data(x:3.0, y: 3.4),
+    Data(x:4.0, y: 2.8),
+    Data(x:5.0, y: 1.6),
+    Data(x:6.0, y: 2.3),
+    Data(x:7.0, y: 2.5),
+    Data(x:8.0, y: 2.9),
+    Data(x:9.0, y: 3.8),
+    Data(x:10.0, y: 3.7),
+];
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSelectorTheme(
+                    data: SfRangeSliderThemeData(
+                        inactiveRegionColor: Colors.greenAccent[100],
+                    ),
+                    child:  SfRangeSelector(
+                        min: _min,
+                        max: _max,
+                        interval: 1,
+                        showLabels: true,
+                        showTicks: true,
+                        initialValues: _values,
+                        child: Container(
+                        height: 130,
+                        child: SfCartesianChart(
+                            margin: const EdgeInsets.all(0),
+                            primaryXAxis: NumericAxis(minimum: _min,
+                                maximum: _max,
+                                isVisible: false),
+                            primaryYAxis: NumericAxis(isVisible: false),
+                            plotAreaBorderWidth: 0,
+                            series: <SplineAreaSeries<Data, double>>[
+                                SplineAreaSeries<Data, double>(
+                                    color: Color.fromARGB(255, 126, 184, 253),
+                                        dataSource: chartData,
+                                            xValueMapper: (Data sales, _) => sales.x,
+                                            yValueMapper: (Data sales, _) => sales.y)
+                                ],
+                            ),
+                        ),
+                   ),
+              ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Dart %}
+
+class Data {
+  Data({this.x, this.y});
+  final double x;
+  final double y;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Inactive region color support](images/basic-features/selector-inactive-region-color.png)
+
 ## Active color
 
 It represents the color applied to the active track, thumb, overlay, and inactive divisors. The `active` side of the range selector is between the left and right thumbs.
