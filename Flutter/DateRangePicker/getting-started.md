@@ -108,6 +108,115 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+## Initial display date
+You can change the initial display date of date range picker by using the initialDisplayDate[link] property, which displays the `DateRangePicker` based on the given date time. By default, current date will be set as `initialDisplayDate`.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDateRangePicker(
+        view: DateRangePickerView.month,
+        initialDisplayDate: DateTime(2020,3,1,9,0,0),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Initial selected date
+You can programmatically select the specific date of the date range picker by setting corresponding date value to the initialSelectedDate[link] property of `DateRangePicker`. 
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDateRangePicker(
+        view: DateRangePickerView.month,
+        initialSelectedDate: DateTime.now(),
+	),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Initial selected dates
+You can programmatically set the selected dates for `DateRangePicker` by setting corresponding dates to the initialSelectedDates[link] property. 
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDateRangePicker(
+      view: DateRangePickerView.month,
+      selectionMode: DateRangePickerSelectionMode.multiple,
+      initialSelectedDates: List<DateTime>()
+        ..add(DateTime(2020, 04, 20))
+        ..add(DateTime(2020, 04, 16))
+        ..add(DateTime(2020, 04, 17))
+        ..add(DateTime(2020, 04, 30))
+        ..add(DateTime(2020, 04, 07))
+        ..add(DateTime(2020, 04, 03)),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Initial selected range
+You can programmatically set the selected range for `DateRangePicker` by setting start end range to the initialSelectedRange[link] property.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDateRangePicker(
+        view: DateRangePickerView.month,
+        selectionMode: DateRangePickerSelectionMode.range,
+        initialSelectedRange: PickerDateRange(
+            DateTime.now(), DateTime.now().add(Duration(days: 5)))),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Initial selected ranges
+You can programmatically set more than one selected range for `DateRangePicker` by setting start and end ranges to the initialSelectedRanges[link] property.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDateRangePicker(
+        view: DateRangePickerView.month,
+        selectionMode: DateRangePickerSelectionMode.multiRange,
+        initialSelectedRanges: List<PickerDateRange>()
+          ..add(
+            PickerDateRange(
+                DateTime.now(), DateTime.now().add(Duration(days: 5))),
+          )..add(
+            PickerDateRange(DateTime(2020, 4, 21), DateTime(2020, 4, 28)),
+          )),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Date selection
 
 The DateRangePicker supports selecting single, multiple, and range of dates. It also supports programmatic selection.

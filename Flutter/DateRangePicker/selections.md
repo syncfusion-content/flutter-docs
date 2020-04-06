@@ -93,3 +93,62 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![MultiRangeSelection Date Range Picker](images/selections/multirange.png)
+
+## Selection radius
+You can customize the radius of the selection using selectionRadius[link] property of the `DateRange PickerMonthViewSettings`.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDateRangePicker(
+      view: DateRangePickerView.month,
+      monthViewSettings: DateRangePickerMonthViewSettings(selectionRadius: 10),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Enable swipe selection
+Using enableSwipeSelection[link] property of the `DateRangePicker`, you can’t select the dates by using swiping. By default, `enableSwipeSelection` property as `true`.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDateRangePicker(
+      view: DateRangePickerView.month,
+      selectionMode: DateRangePickerSelectionMode.range,
+      monthViewSettings:
+          DateRangePickerMonthViewSettings(enableSwipeSelection: false),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Toggle day selection
+You can de-select the selected date using the toggleDaySelection[link] property of the `DateRangePicker`.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDateRangePicker(
+      view: DateRangePickerView.month,
+      toggleDaySelection: true,
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}

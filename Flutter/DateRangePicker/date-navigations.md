@@ -194,3 +194,39 @@ class MyAppState extends State<MyApp> {
 {% endhighlight %}
 {% endtabs %}
 
+## Navigation direction
+You can navigate the Month, Year, Decade, and Century views either `Vertical` or `Horizontal` directions by setting the navigationDirection[link] property of `DateRangePicker`.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDateRangePicker(
+        view: DateRangePickerView.month,
+        navigationDirection: DateRangePickerNavigationDirection.vertical),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Show navigation arrow
+Using showNavigationArrow[link] property of the `DateRangePicker` you can move to the next or previous views of the picker without swiping.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDateRangePicker(
+      view: DateRangePickerView.month,
+      showNavigationArrow: true,
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}

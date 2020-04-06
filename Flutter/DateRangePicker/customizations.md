@@ -69,6 +69,26 @@ Widget build(BuildContext context) {
 
 ![Customizations Date Range Picker](images/customizations/customizations.png)
 
+## Month format
+You can customize the month format of the `DateRangePicker` using the monthFormat[link] property.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDateRangePicker(
+      view: DateRangePickerView.month,
+      monthFormat: 'MMM',
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+
 ## Month selection cell customization
 
 You can also customize the month view section by using the `monthCellStyle` of `SfDateRangePicker`.
