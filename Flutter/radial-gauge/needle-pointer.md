@@ -7,7 +7,7 @@ control: SfRadialGauge
 documentation: ug
 ---
 
-# Needle Pointer
+# Needle Pointer customization
 
 [`Needle Pointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer-class.html) contains three parts, namely needle, [`knob`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer/knobStyle.html), and [`tail`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer/tailStyle.html) and that can be placed on a gauge to mark the values.
 
@@ -45,7 +45,7 @@ The needle can be customized using the following properties:
 
 * [`needleColor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer/needleColor.html) – Specifies the needle color.
 
-* `gradient` - Specifies the gradient for the needle. 
+* [`gradient`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer/gradient.html) - Specifies the gradient for the needle. 
 
 **Needle length customization**
 
@@ -103,7 +103,7 @@ Widget build(BuildContext context) {
 
 **Gradient support for needle**
 
- The `gradient` property of [`needle pointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer-class.html) allows to specify the smooth color transition to pointer by specifying the different colors based on provided factor value.
+ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer/gradient.html) property of [`needle pointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer-class.html) allows to specify the smooth color transition to pointer by specifying the different colors based on provided factor value.
 
  {% highlight dart %}
 @override
@@ -227,7 +227,7 @@ The [`tail`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gaug
 
 * [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/TailStyle/borderWidth.html) – Allows to specify the border width of tail.
 
-* `gradient` - Specifies the gradient for the tail.
+* [`gradient`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer/gradient.html) - Specifies the gradient for the tail.
 
 By default, the value of [`lengthUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/TailStyle/lengthUnit.html) is GaugeSizeUnit.factor.The factor value ranges from 0 to 1. When the length is set to 0.2, 20 % of axis radius value will be considered as tail length.The following code example shows how to specify the length in factor. 
 

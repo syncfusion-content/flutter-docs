@@ -7,7 +7,7 @@ control: SfRadialGauge
 documentation: ug
 ---
 
-# Range
+# Gauge range customization
 
 Gauge range is a visual element that helps to quickly visualize where a value falls on the axis. The text can be easily annotated in range to improve the readability.
 
@@ -49,7 +49,7 @@ The following properties are used for the range customization:
 
 * [`sizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/sizeUnit.html) – Specifies whether the start width and end width of the range are set in logical pixels or factor.
 
-* `gradient` - Specifies the gradient for the range.
+* [`gradient`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/gradient.html) - Specifies the gradient for the range.
 
 {% highlight dart %}
 
@@ -79,7 +79,7 @@ If the [`sizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/late
 
 **Gradient support**
 
- The `gradient` property of [`range`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange-class.html) allows to specify the smooth color transition to pointer by specifying the different colors based on provided factor value.
+ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange/gradient.html) property of [`range`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeRange-class.html) allows to specify the smooth color transition to pointer by specifying the different colors based on provided factor value.
 
 {% highlight dart %}
 

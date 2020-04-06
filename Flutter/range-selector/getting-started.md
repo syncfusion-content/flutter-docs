@@ -2,7 +2,7 @@
 layout: post
 title: Getting started for Syncfusion Flutter Range Selector | Syncfusion
 description: This section explains the steps required to add the range selector widget and its elements such as numeric and date values, ticks, labels and tooltips.
-platform: flutter
+platform: Flutter
 control: SfRangeSelector
 documentation: ug
 ---
@@ -10,12 +10,12 @@ documentation: ug
 # Getting started for range selector
 This section explains the steps required to add the range selector widget and its elements such as numeric and date values, ticks, labels and tooltips. This section covers only basic features needed to know to get started with Syncfusion range selector.
 
-## Add flutter range selector to an application
+## Add Flutter range selector to an application
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
 
 **Add dependency**
 
-Add the Syncfusion flutter range selector dependency to your pubspec.yaml file.
+Add the Syncfusion Flutter range selector dependency to your pubspec.yaml file.
 
 {% highlight dart %}
 
@@ -49,7 +49,7 @@ import 'package:syncfusion_flutter_sliders/sliders.dart';
 
 ## Initialize range selector
 
-After importing the package, initialize the range selector widget as a child of any widget. Here, the range slider widget is added as a child of the Container widget. The default value of the `min` and `max` property of the SfRangeSlider is 0.0 and 1.0 respectively. So, the `initialValues` property must be given within the range. You can add any kind of widget as a child of range selector. Here, [Chart](https://help.syncfusion.com/flutter/chart/getting-started) widget is added as a child.
+After importing the package, initialize the range selector widget as a child of any widget. Here, the range selector widget is added as a child of the Container widget. The default value of the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) property of the SfRangeSelector is 0.0 and 1.0 respectively. So, the [`initialValues`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/initialValues.html) property must be given within the range. You can add any kind of widget as a child of range selector. Here, [Chart](https://help.syncfusion.com/flutter/chart/getting-started) widget is added as a child.
 
 {% tabs %}
 {% highlight Dart %}
@@ -114,7 +114,7 @@ class Data {
 
 Add the range selector with ticks, numeric labels, minimum and maximum values to restrict the slider range.
 
-N> The label type like numeric or date time can be determined based on the `min` and `max` properties.
+N> The label type like numeric or date time can be determined based on the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) properties.
 
 {% tabs %}
 {% highlight Dart %}

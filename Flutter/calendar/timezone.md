@@ -2,7 +2,7 @@
 layout: post
 title: Time zone in Syncfusion Flutter Calendar | Scheduler
 description: Learn about the Time zone and the usage of it with events in Syncfusion Flutter Calendar | Scheduler.
-platform: flutter
+platform: Flutter
 control: SfCalendar
 documentation: ug
 ---

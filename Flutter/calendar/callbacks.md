@@ -2,12 +2,12 @@
 layout: post
 title: Callbacks in the Flutter Calendar | Scheduler | Syncfusion
 description: Learn about the callbacks in Syncfusion Flutter Calendar and the return values and usage of the callbacks
-platform: flutter
+platform: Flutter
 control: SfCalendar
 documentation: ug
 ---
 
-# Callbacks in flutter calendar
+# Callbacks in Flutter calendar
 Calendar supports the [ViewChangedCallback](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ViewChangedCallback.html) and [CalendarTapCallback](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarTapCallback.html) to interact with Flutter calendar.
 
 ## View changed callback
@@ -72,7 +72,7 @@ Widget build(BuildContext context) {
 
 ## See also
 
-[How to get visible dates details from the flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/11026/how-to-get-visible-dates-details-from-the-flutter-event-calendar-sfcalendar)
+[How to get visible dates details from the Flutter event calendar (SfCalendar)?](https://www.syncfusion.com/kb/11026/how-to-get-visible-dates-details-from-the-flutter-event-calendar-sfcalendar)
 
-[How to get Datetime details while tapping the Flutter event calendar elements](https://www.syncfusion.com/kb/10998/how-to-get-datetime-details-while-tapping-the-flutter-event-calendar-elements)
+[How to get Datetime details while tapping the Flutter event calendar (SfCalendar) elements?](https://www.syncfusion.com/kb/10998/how-to-get-datetime-details-while-tapping-the-flutter-event-calendar-elements)
 
