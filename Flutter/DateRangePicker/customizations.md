@@ -67,6 +67,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![View Header appearance Date Range Picker](images/headers/viewheaderappearance.png)
+
 ![Customizations Date Range Picker](images/customizations/customizations.png)
 
 ## Month format
@@ -88,6 +90,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Month cell customization Date Range Picker](images/customizations/monthcell_customization.png)
 
 ## Month selection cell customization
 
@@ -124,6 +127,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Month Selection cell customization Date Range Picker](images/customizations/monthcell_selection_customization.png)
 
 ## Year cell customization
 You can customize the calendar `year`,`decade`,`century` view by using the `yearCellStyle` of `SfDateRangePicker`.
@@ -169,6 +174,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Year cell customization Date Range Picker](images/customizations/yearcell_customization.png)
 
 ## See also
 

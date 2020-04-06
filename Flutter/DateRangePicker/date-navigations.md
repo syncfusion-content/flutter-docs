@@ -228,5 +228,7 @@ Widget build(BuildContext context) {
   );
 }
 
+![Navigation arrow in Date Range Picker](images/date-navigations/navigationarrow.png)
+
 {% endhighlight %}
 {% endtabs %}

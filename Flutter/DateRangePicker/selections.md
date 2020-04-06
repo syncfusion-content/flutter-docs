@@ -113,6 +113,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Selection radius Date Range Picker](images/selections/selectionradius.png)
+
 ## Enable swipe selection
 Using enableSwipeSelection[link] property of the `DateRangePicker`, you can’t select the dates by using swiping. By default, `enableSwipeSelection` property as `true`.
 
@@ -133,6 +135,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Swipe selection Date Range Picker](images/selections/swipeselection.png)
 
 ## Toggle day selection
 You can de-select the selected date using the toggleDaySelection[link] property of the `DateRangePicker`.

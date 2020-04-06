@@ -105,6 +105,8 @@ Widget build(BuildContext context) {
     );
 }
 
+![First day of week Date Range Picker](images/getting-started/firstdayofweek.png)
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -127,6 +129,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Initial display date in Date Range Picker](images/getting-started/initialdisplaydate.png)
+
 ## Initial selected date
 You can programmatically select the specific date of the date range picker by setting corresponding date value to the initialSelectedDate[link] property of `DateRangePicker`. 
 
@@ -145,6 +149,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Initial selected date in Date Range Picker](images/getting-started/initialselecteddate.png)
 
 ## Initial selected dates
 You can programmatically set the selected dates for `DateRangePicker` by setting corresponding dates to the initialSelectedDates[link] property. 
@@ -172,6 +178,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Initial selected dates in Date Range Picker](images/getting-started/initialselecteddates.png)
+
 ## Initial selected range
 You can programmatically set the selected range for `DateRangePicker` by setting start end range to the initialSelectedRange[link] property.
 
@@ -191,6 +199,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Initial selected range in Date Range Picker](images/getting-started/initialselectedrange.png)
 
 ## Initial selected ranges
 You can programmatically set more than one selected range for `DateRangePicker` by setting start and end ranges to the initialSelectedRanges[link] property.
@@ -216,6 +226,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Initial selected ranges in Date Range Picker](images/getting-started/initialselectedranges.png)
 
 ## Date selection
 
@@ -248,4 +260,4 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-  ![Date selection Date Range Picker](images/getting-started/range-selection.png)
+![Date selection Date Range Picker](images/getting-started/range-selection.png)

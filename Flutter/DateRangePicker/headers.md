@@ -28,6 +28,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Header height Date Range Picker](images/headers/headerheight.png)
+
 ### Header appearance
 You can customize the header style of the `DataRangePicker` by using backgroundColor[link], textStyle[link], and textAlign[link] properties of `DateRangePickerHeaderStyle`.
 
@@ -55,6 +57,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Header appearance Date Range Picker](images/headers/headerappearance.png)
+
 ## View header
 You can customize the view header of the `DateRangePicker` using the viewHeaderHeight[link] and viewHeaderStyle[link] properties of `DateRangePickerMonthViewSettings`.
 
@@ -78,6 +82,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![View Header height Date Range Picker](images/headers/viewheaderheight.png)
+
 ### View header appearance
 You can customize the view header style of `DateRangePicker` by using  textStyle, backgroundColor using backgroundColor[link], textStyle[link] properties of `DateRangePickerViewHeaderStyle`.
 
@@ -100,6 +106,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![View Header appearance Date Range Picker](images/headers/viewheaderappearance.png)
+
 ### View header day format
 You can customize the view header of `DateRangePicker` by using dayFormat[link] property of `DateRangePickerMonthViewSettings`.
 
@@ -121,3 +129,5 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![View Header format Date Range Picker](images/headers/viewheaderformat.png)
