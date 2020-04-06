@@ -13,7 +13,7 @@ Two dimensional Barcode is a way to represent information by using the two-dimen
 
 [`QR Code`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/QRCode-class.html),
 
-`Data Matrix`
+[`Data Matrix`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/DataMatrix-class.html)
 
 ## QR Code
 
@@ -158,9 +158,9 @@ The number of modules increases in steps of 4 modules per side up to Version 40 
 
 ![QR version](images/two-dimensional/version09.jpg)
 
-## DataMatrix
+## Data Matrix
 
-DataMatrix Barcode is a two dimensional barcode that consists of a grid of dark and light dots or blocks forming a square or rectangular symbol. The data encoded in the barcode can either be numbers or alphanumeric. They are widely used in printed media such as labels and letters. You can read it easily with the help of a barcode reader and mobile phones.
+[`Data Matrix`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/DataMatrix-class.html) barcode is a two dimensional barcode that consists of a grid of dark and light dots or blocks forming a square or rectangular symbol. The data encoded in the barcode can either be numbers or alphanumeric. They are widely used in printed media such as labels and letters. You can read it easily with the help of a barcode reader and mobile phones.
 
 {% highlight dart %} 
 
