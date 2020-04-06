@@ -9,7 +9,7 @@ documentation: ug
 
 # Theme for Syncfusion widgets
 
-The Syncfusion theme widget allows you to apply colors, date-format, etc in the applicaion level across all the Syncfusion Flutter widgets with a uniform approach and provide a consistent look.
+The Syncfusion theme widget allows you to apply colors, font-styles, etc in the application level across all the Syncfusion Flutter widgets with a uniform approach and provide a consistent look.
 
 ## Getting started
 

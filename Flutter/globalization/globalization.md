@@ -7,9 +7,11 @@ control: General
 documentation: ug
 ---
 
-# Localizations for Syncfusion widgets
+# Globalization for Syncfusion widgets
 
-By default, the Syncfusion widgets are implemented with English localization (en-US) alone. You can add support for other languages by including our another package named syncfusion_localizations. As of now, this package supports 74 languages which are listed below.
+## Localizations
+
+By default, the Syncfusion widgets are implemented with English localization (en-US) alone. You can add support for other languages by including our another package named `syncfusion_localizations` and the date-format will also be maintained based on the culture. As of now, this package supports 74 languages which are listed below.
 
 *  af - Afrikaans 
 *  am - Amharic 
@@ -91,7 +93,7 @@ By default, the Syncfusion widgets are implemented with English localization (en
 
 **Add dependency**
 
-Add the `syncfusion_localizations` package as dependency to your pub spec file. And for exampple purposes to depict the localization working model, we have used the `Syncfusion Flutter Calendar` widget.
+Add the `syncfusion_localizations` package as dependency to your pub spec file. And for example purposes to depict the localization working model, we have used the `Syncfusion Flutter Calendar` widget.
 
 {% highlight dart %} 
 
