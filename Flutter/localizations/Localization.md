@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Applying localizations for Syncfusion FLutter widgets
+title: Applying Localizations for Syncfusion FLutter widgets
 description: This section explains about applying the localization for the applicable Syncfusion Flutter widgets.
 platform: flutter
 control: General
@@ -9,7 +9,7 @@ documentation: ug
 
 # Localizations for Syncfusion widgets
 
-By default, Syncfusion widgets provide English localizations alone for the applicable widgets. You can add support for other languages by including a separate package called `syncfusion_localizations`. As of March 2020, this package support `74 languages` which are listed below.
+By default, the Syncfusion widgets are implemented with English localization (en-US) alone. You can add support for other languages by including our another package named syncfusion_localizations. As of now, this package supports 74 languages which are listed below.
 
 *  af - Afrikaans 
 *  am - Amharic 
@@ -89,11 +89,9 @@ By default, Syncfusion widgets provide English localizations alone for the appli
 
 ## Getting started
 
-Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
-
 **Add dependency**
 
-Add the Syncfusion Localization dependency to your pub spec file. And to depict the localization working model, we have used the `Syncfusion Flutter Calendar` widget.
+Add the `syncfusion_localizations` package as dependency to your pub spec file. And for exampple purposes to depict the localization working model, we have used the `Syncfusion Flutter Calendar` widget.
 
 {% highlight dart %} 
 
@@ -118,7 +116,7 @@ Run the following command to get the required packages.
 
 **Import package**
 
-To use the Syncfusion Localization and Syncfusion Flutter Calendar widgets, import the following packages in your Dart code.
+To use the Syncfusion Localization and Syncfusion Flutter Calendar widgets, import the following libraries in your Dart code.
 
 {% highlight dart %} 
 
@@ -128,7 +126,7 @@ To use the Syncfusion Localization and Syncfusion Flutter Calendar widgets, impo
 
 {% endhighlight %}
 
-## Initialize calendar
+### Initialize calendar
 
 After importing the required packages, initialize the `calendar` widget as a child of any widget and specify `localizationsDelegates` and `supportedLocales` for the MaterialApp.
 
@@ -179,9 +177,11 @@ And some languages may require more than language code to differentiate properly
 
 {% endhighlight %}
 
-## Override support
+![Chinese culture](images/localization_zh.png)
 
-If the users wish to add their locale text, then they can use the extendability options to achieve this in the application level. Here, we have depicted using the `Estonian(et)` language.
+## Custom culture support
+
+If you wish to add your own custom culture apart from the supported 74 languages, you can use the extendability options to achieve this in the application level. Here, we have depicted using the Estonian(et) language.
 
 **Step 1**
 
@@ -202,7 +202,7 @@ Create a dart file in your application and import the required packages.
  {% highlight dart %} 
 
     /// The translations for Estonian (`et`).
-    class SfLocalizationsEt extends             SfLocalizations{
+    class SfLocalizationsEt extends SfLocalizations{
         SfLocalizationsEt();
 
         @override
@@ -274,6 +274,8 @@ Import the created dart file in your application and specify the `localizationsD
     }
 
 {% endhighlight %}
+
+![extendability](images/localization_extendability.png)
 
 The sample for reference can be found below.
 
