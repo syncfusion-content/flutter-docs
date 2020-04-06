@@ -20,7 +20,7 @@ The maximum value that the user can select. The default value of [`max`](https:/
 
 ## Values
 
-The values currently selected in the range slider. The range slider's thumb is drawn corresponding to this value.
+It represents the values currently selected in the range slider. The range slider's thumb is drawn corresponding to this value.
 
 For date values, the range slider does not have auto interval support. So, it is mandatory to set [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/interval.html), [`dateIntervalType`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateIntervalType.html), and [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateFormat.html) for date values.
 
@@ -167,7 +167,7 @@ Widget build(BuildContext context) {
 
 ## Active color
 
-Represents the color applied to the active track, thumb, overlay, and inactive divisors. The `active` side of the range slider is between the left and right thumbs.
+It represents the color applied to the active track, thumb, overlay, and inactive divisors. The `active` side of the range slider is between the left and right thumbs.
 
 {% tabs %}
 {% highlight Dart %}
@@ -205,7 +205,7 @@ N> Refer the [`SfRangeSliderThemeData`](https://pub.dev/documentation/syncfusion
 
 ## Inactive color
 
-Represents the color applied to the inactive track and active divisors. The `inactive` side of the range slider is between the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html) value and the left thumb, and the right thumb and the [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) value.
+It represents the color applied to the inactive track and active divisors. The `inactive` side of the range slider is between the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html) value and the left thumb, and the right thumb and the [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) value.
 
 {% tabs %}
 {% highlight Dart %}

@@ -12,7 +12,7 @@ This section explains about how to add the interval for numeric and date range s
 
 ## Numeric interval
 
-Splits the range slider into given interval. It is mandatory if labels, major ticks and divisions are needed. The default value is `null`. Must be greater than 0.
+It splits the range slider into given interval. It is mandatory if labels, major ticks and divisions are needed. The default value is `null`. Must be greater than 0.
 
 For example, if [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html) is 0.0 and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) is 10.0 and [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/interval.html) is 2.0, the range slider will render the labels, major ticks, and divisors at 0.0, 2.0, 4.0 and so on.
 
