@@ -21,7 +21,7 @@ Add the Syncfusion flutter date range picker dependency to your `pubspec.yaml` f
 
 dependencies:
 
-syncfusion_flutter_datepicker: ^18.1.0.36-beta
+syncfusion_flutter_datepicker: ^18.1.36-beta
 
 {% endhighlight %}
 
@@ -100,7 +100,7 @@ Widget build(BuildContext context) {
    return Scaffold(
         body: SfDateRangePicker(
         view: DateRangePickerView.month,
-        firstDayOfWeek: 1,
+        monthViewSettings: DateRangePickerMonthViewSettings(firstDayOfWeek: 1),
         )
     );
 }

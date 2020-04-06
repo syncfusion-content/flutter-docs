@@ -182,7 +182,7 @@ class Data {
 
 You can change the background color of the tooltip in the range selector using the `tooltipBackgroundColor` property.
 
-N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://help.syncfusion.com/flutter/range-selector/customization).
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://help.syncfusion.com/flutter/range-selector/customization).
 
 {% tabs %}
 {% highlight Dart %}
@@ -266,7 +266,7 @@ class Data {
 
 You can change the text color, font size, font style of the tooltip in the range selector using the `tooltipTextStyle` property.
 
-N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://help.syncfusion.com/flutter/range-selector/customization).
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://help.syncfusion.com/flutter/range-selector/customization).
 
 {% tabs %}
 {% highlight Dart %}

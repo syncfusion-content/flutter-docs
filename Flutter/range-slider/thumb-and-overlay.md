@@ -15,7 +15,7 @@ This section helps to learn about how to customize the thumb and overlay in the 
 
 You can change the size of the thumb in the range slider using the `thumbRadius` property.
 
-N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://help.syncfusion.com/flutter/range-slider/customization).
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://help.syncfusion.com/flutter/range-slider/customization).
 
 {% tabs %}
 {% highlight Dart %}
@@ -59,7 +59,7 @@ Widget build(BuildContext context) {
 
 You can change the color of the thumb in the range slider using the `thumbColor` property.
 
-N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://help.syncfusion.com/flutter/range-slider/customization).
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://help.syncfusion.com/flutter/range-slider/customization).
 
 {% tabs %}
 {% highlight Dart %}
@@ -103,7 +103,7 @@ Widget build(BuildContext context) {
 
 You can change the size of the overlay in the range slider using the `overlayRadius` property.
 
-N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://help.syncfusion.com/flutter/range-slider/customization).
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://help.syncfusion.com/flutter/range-slider/customization).
 
 {% tabs %}
 {% highlight Dart %}
@@ -147,7 +147,7 @@ Widget build(BuildContext context) {
 
 You can change the color of the overlay in the range slider using the `overlayColor` property.
 
-N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://help.syncfusion.com/flutter/range-slider/customization).
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://help.syncfusion.com/flutter/range-slider/customization).
 
 {% tabs %}
 {% highlight Dart %}
@@ -227,7 +227,7 @@ N> Refer the `SfRangeSliderThemeData` to know about updating the individual acti
 
 ### Inactive color
 
-Represents the color applied to the inactive track and active divisors. The "inactive" side of the range slider is between the `min` value and the left thumb, and the right thumb and the `max` value.
+Represents the color applied to the inactive track and active divisors. The `inactive` side of the range slider is between the `min` value and the left thumb, and the right thumb and the `max` value.
 
 {% tabs %}
 {% highlight Dart %}
@@ -268,7 +268,7 @@ N> Refer the `SfRangeSliderThemeData` to know about updating the individual inac
 
 You can change the disable state color of the active and inactive track using the `disabledActiveTrackColor` and `disabledInactiveTrackColor` properties, color of the disabled active and inactive major ticks using the `disabledActiveTickColor` and `disabledInactiveTickColor`properties, color of the disabled active and inactive minor ticks using the `disabledActiveMinorTickColor` and `disabledInactiveMinorTickColor` properties, color of the active and inactive divisors using the `disabledActiveDivisorColor` and `disabledInactiveDivisorColor` properties, color of the disabled thumb color using the `disabledThumbColor` property.
 
-N> You must import the `theme.dart' library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://help.syncfusion.com/flutter/range-slider/customization).
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://help.syncfusion.com/flutter/range-slider/customization).
 
 {% tabs %}
 {% highlight Dart %}

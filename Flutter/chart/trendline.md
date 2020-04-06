@@ -15,15 +15,15 @@ Trendlines can be generated for the Cartesian type series (Line, Column, Scatter
 
 You can use the following properties to customize the behavior and appearance of trendlines.
 
-* [`type`]() - Specifies the type of trendline the must be added to the series.
-* [`isVisible`]() -Used to toggle the visibility of trendlines in a series.
-* [`width`]() -Used to determine the width of trendline.
-* [`backwardForecast`]() -Used to specify the range of backward forecast for the trendline.
-* [`forwardForecast`]() -Used to specify the range of forward forecast for the trendline.
-* [`intercept`]() - Used to provide the trendline intercept values
-* [`period`]() -Used to determine the starting point for the trendline.
-* [`polynomialOrder`]() -used to provide the polynomial order for polynomial type trendlines.
-* [ ` animationDuration` ]() -Used to animate the trendlines . By default animationDuration has a value of 1500.When animationDuration is set to zero no animation takes place.
+* [`type`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineType-class.html) - Specifies the type of trendline the must be added to the series.
+* [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/isVisible.html) -Used to toggle the visibility of trendlines in a series.
+* [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/width.html) -Used to determine the width of trendline.
+* [`backwardForecast`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/backwardForecast.html) -Used to specify the range of backward forecast for the trendline.
+* [`forwardForecast`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/forwardForecast.html) -Used to specify the range of forward forecast for the trendline.
+* [`intercept`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/intercept.html) - Used to provide the trendline intercept values
+* [`period`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/period.html) -Used to determine the starting point for the trendline.
+* [`polynomialOrder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/polynomialOrder.html) -used to provide the polynomial order for polynomial type trendlines.
+* [ ` animationDuration` ](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/animationDuration.html) -Used to animate the trendlines . By default animationDuration has a value of 1500.When animationDuration is set to zero no animation takes place.
 
 
 ## Types of trendlines
@@ -305,7 +305,7 @@ The value set for the backwardForecast is used to determine the past trends.
 
 ## Legend for TrendLine
 
-Legend provides information about the series rendered in the chart.Legend for trendline gets rendered  together  with the series legend when the legend is set to be visible.Also when the  [ `name` ]()  property is assigned to a trendline,the name of the legend is changed based on the name of the trendlines.[`legendItemText`]()  can also be provided for changing the name of the legend.In default  rendering the [`legendIconShape`]()  will be a horizontal line.
+Legend provides information about the series rendered in the chart.Legend for trendline gets rendered  together  with the series legend when the legend is set to be visible.Also when the  [ `name` ](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/name.html)  property is assigned to a trendline,the name of the legend is changed based on the name of the trendlines.In default  rendering the [`legendIconType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/legendIconType.html)  will be a horizontal line.
 
 {% highlight dart %}
 
@@ -323,6 +323,7 @@ Legend provides information about the series rendered in the chart.Legend for tr
                                  Trendline(
                                 type: TrendlineType.linear, 
                                 name:'trendline-name',
+                                legendIconType: LegendIconType.diamond,
                                 color: Colors.blue)
                              ],
                         ]
@@ -339,7 +340,7 @@ Legend provides information about the series rendered in the chart.Legend for tr
 
 ## Markers
 
-Data markers are used to provide information about the data points in the series. You can add a shape to adorn each data point.Trendlines support markers that can be enabled using the property [`markerSettings`]() .
+Data markers are used to provide information about the data points in the series. You can add a shape to adorn each data point.Trendlines support markers that can be enabled using the property [`markerSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/markerSettings.html) .
 
 {% highlight dart %}
 
@@ -357,7 +358,7 @@ Data markers are used to provide information about the data points in the series
                                  Trendline(
                                 type: TrendlineType.linear, 
                                 name:'trendline-name',
-                                 markerSettings: MarkerSettings(isVisible:true),
+                                markerSettings: MarkerSettings(isVisible:true),
                                 color: Colors.blue)
                              ],
                         ]
@@ -373,7 +374,7 @@ Data markers are used to provide information about the data points in the series
 
 ## Tooltip for Trendline
 
-Chart will display details about the points through tooltip, when user interaction is done over the point.Trendline Tooltip has the same [`ActivationMode`]()  that has been given in the [`TooltipBehavior`]()  of the series.
+Chart will display details about the points through tooltip, when user interaction is done over the point.Trendline Tooltip has the same [`ActivationMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/activationMode.html)  that has been given in the [`TooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior-class.html)  of the series.
 
 {% highlight dart %}
 
@@ -407,4 +408,4 @@ Chart will display details about the points through tooltip, when user interacti
 
 ![tooltip](images/trendline/tooltip.png)
 
-Also refer [`trendline event`]() for customizing the tooltip further.
+Also refer [`trendline event`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs-class.html) for customizing the tooltip further.
