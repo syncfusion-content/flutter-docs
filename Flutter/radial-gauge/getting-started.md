@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started for Syncfusion Flutter Radial Gauge
-description: A quick tour to initial users on Syncfusion SfRadialGauge for Flutter platform
+description: A quick tour to initial users about Syncfusion Radial Gauge widget for the Flutter platform. It provide overview on SfRadialGauge. 
 platform: flutter
 control: SfRadialGauge
 documentation: ug
