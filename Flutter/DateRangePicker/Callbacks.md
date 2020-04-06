@@ -7,10 +7,10 @@ control: SfDateRangePicker
 documentation: ug
 ---
 
-# Callbacks in Flutter date range picker
+## Callbacks in Flutter date range picker
 Calendar supports the ViewChangedCallback and SelectionChangedCallback to interact with Flutter calendar.
 
-## View changed callback
+### View changed callback
 The onViewChanged[link] callback triggers when the current view of picker changed that is view swiped to previous /next view, picker view switched to another picker view.
 
 `visibleDateRange` - returns the start and end dates of the current visible month.
