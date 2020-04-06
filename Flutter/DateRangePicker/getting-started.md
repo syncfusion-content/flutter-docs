@@ -229,6 +229,25 @@ Widget build(BuildContext context) {
 
 ![Initial selected ranges in Date Range Picker](images/getting-started/initialselectedranges.png)
 
+## Background color
+You can customize background of the `DateRangePicker` using the backgroundColor[link] property. 
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDateRangePicker(
+      view: DateRangePickerView.month,
+      backgroundColor: Color(0xFFF6D55C),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Date selection
 
 The DateRangePicker supports selecting single, multiple, and range of dates. It also supports programmatic selection.
