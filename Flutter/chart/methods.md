@@ -75,7 +75,7 @@ The below mentioned arguments are given to the [`showByIndex`](https://pub.dev/d
 
 [`seriesIndex`]() - index of the series for which the pointIndex is specified.
 
-[`pointIndex`]() - index of the point for which the tooltip should be shown.
+[`pointIndex`]()  - index of the point for which the tooltip should be shown.
 
 
 {% highlight dart %} 
@@ -290,7 +290,7 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
 The [`showByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/showByIndex.html) method is used to activate the trackball at the specified point index.
 
-[`pointIndex`]()- index of the point for which the trackball must be shown
+[`pointIndex`]() - index of the point for which the trackball must be shown.
 
 {% highlight dart %} 
 
