@@ -167,7 +167,7 @@ Widget build(BuildContext context) {
 
 ## Active color
 
-It represents the color applied to the active track, thumb, overlay, and inactive divisors. The `active` side of the range slider is between the left and right thumbs.
+It represents the color applied to the active track, thumb, overlay, and inactive divisors. The `active` side of the range slider is between the start and end thumbs.
 
 {% tabs %}
 {% highlight Dart %}
@@ -205,7 +205,11 @@ N> Refer the [`SfRangeSliderThemeData`](https://pub.dev/documentation/syncfusion
 
 ## Inactive color
 
-It represents the color applied to the inactive track and active divisors. The `inactive` side of the range slider is between the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html) value and the left thumb, and the right thumb and the [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) value.
+It represents the color applied to the inactive track and active divisors.
+
+The `inactive` side of the range slider is between the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html) value and the left thumb, and the right thumb and the [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) value.
+
+For RTL, the inactive side is between the [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) value and the left thumb, and the right thumb and the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html) value.
 
 {% tabs %}
 {% highlight Dart %}

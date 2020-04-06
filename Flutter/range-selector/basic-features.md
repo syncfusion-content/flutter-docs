@@ -20,7 +20,7 @@ The maximum value that the user can select. The default value of `max` property 
 
 ## Initial values
 
-It represents the values that initially selected in the range selector. The range selector's thumb is drawn corresponding to this value.
+It represents the initial values that initially selected in the range selector. The range selector's thumb is drawn corresponding to this value.
 
 N> For date values, the range selector does not have auto interval support. So, it is mandatory to set `interval`, `dateIntervalType`, and `dateFormat` for date values.
 
@@ -255,7 +255,9 @@ class Data {
 
 ## Active region color
 
-It specifies the color for the active region of the child in the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html). The active side of the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html) is between `start` and `end` thumbs.
+It specifies the color for the active region of the child in the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html).
+
+The active side of the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html) is between `start` and `end` thumbs.
 
 {% tabs %}
 {% highlight Dart %}
@@ -421,7 +423,9 @@ class Data {
 
 ## Active color
 
-It represents the color applied to the active track, thumb, overlay, and inactive divisors. The `active` side of the range selector is between the left and right thumbs.
+It represents the color applied to the active track, thumb, overlay, and inactive divisors.
+
+The `active` side of the range selector is between the `start` and `end` thumbs.
 
 {% tabs %}
 {% highlight Dart %}
@@ -500,7 +504,13 @@ N> Refer the [`SfRangeSliderThemeData`](https://pub.dev/documentation/syncfusion
 
 ## Inactive color
 
-It represents the color applied to the inactive track and active divisors. The `inactive` side of the range selector is between the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) value and the left thumb, and the right thumb and the [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) value.
+It represents the color applied to the inactive track and active divisors.
+
+The active side of the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html) is between `start` and `end` thumbs.
+
+The inactive side of the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html) is between the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) value and the left thumb, and the right thumb and the [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) value.
+
+For RTL, the inactive side is between the [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) value and the left thumb, and the right thumb and the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) value.
 
 {% tabs %}
 {% highlight Dart %}
