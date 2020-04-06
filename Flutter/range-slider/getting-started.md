@@ -7,7 +7,7 @@ control: SfRangeSlider
 documentation: ug
 ---
 
-# Getting started for range slider
+# Getting Started with Flutter Range Slider (SfRangeSlider)
 This section explains the steps required to add the range slider widget and its elements such as numeric and date values, ticks, labels and tooltips. This section covers only basic features needed to know to get started with Syncfusion range slider.
 
 ## Add Flutter range slider to an application
@@ -51,7 +51,7 @@ import 'package:syncfusion_flutter_sliders/sliders.dart';
 
 After importing the package, initialize the range slider widget as a child of any widget. Here, the range slider widget is added as a child of the Container widget. The default value of the `min` and `max` property of the SfRangeSlider is 0.0 and 1.0 respectively. So, the `values` property must be given within the range.
 
-N> You must update the `values` property inside the `setState` function for the movement of the thumb in the range slider.
+N> The range slider passes the new values to the [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onChanged.html) callback but does not change its state until the parent widget rebuilds the range slider with new values.
 
 {% tabs %}
 {% highlight Dart %}
