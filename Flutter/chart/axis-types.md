@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Syncfusion Flutter Chart Axis
-description: Learn how to customize the grid lines, tick lines, labels and title of a chart axis.
+title: Syncfusion Flutter Chart Axis types.
+description: description: Learn how to customize the grid lines, tick lines, labels and title of a chart axis in Syncfusion flutter charts.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Axis
+# Axis in Syncfusion flutter charts
 
 Charts typically have two axes that are used to measure and categorize data: a vertical (Y) axis, and a horizontal (X) axis.
 
@@ -41,6 +41,30 @@ Numeric axis uses numerical scale and displays numbers as labels. By default, [`
 {% endhighlight %}
 
 ![Numeric axis](images/axis-types/numeric.jpg)
+
+### Inversed numeric axis
+
+By using  the [isInverted](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/isInversed.html) Property in Cartesian charts, the  numeric axis can be inverted.Axis is rendered from the minimum value to the maximum value by default, and can be inverted from the maximum value to the minimum value.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis: NumericAxis(isInversed: true), 
+                        primaryYAxis: NumericAxis(isInversed: true) 
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![Inversed Numeric axis](images/axis-types/inversed-numeric.png)
 
 ### Customizing range
 
@@ -677,3 +701,28 @@ To customize the log base value, use the [`logBase`](https://pub.dev/documentati
 {% endhighlight %}
 
 ![Logarithmic base](images/axis-types/log_base.jpg)
+
+### inversed logarithmic axis 
+
+By using  the [isInverted](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/isInversed.html) Property in Cartesian charts, the  logarithmic axis can be inverted.Axis is rendered from the minimum value to the maximum value by default, and can be inverted from the maximum value to the minimum value.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis: LogarithmicAxis(
+                          isInversed:true,
+                        )  
+                    )
+                )
+            )
+        );
+    }
+     
+{% endhighlight %}
+
+![Inversed logarithmic axis](images/axis-types/inversed-logarithmic.png)

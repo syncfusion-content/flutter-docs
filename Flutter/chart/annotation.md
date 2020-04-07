@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Annotation
+# Annotation in Syncfusion flutter charts
 
 Chart supports annotations which allows you to mark the specific area of interest in the chart area. You can add the custom widgets using this annotations feature as depicted below.
 
@@ -222,3 +222,45 @@ When there are multiple axes in the chart, annotation can be added for a particu
 {% endhighlight %}
 
 ![Multiple axis annotation](images/annotation/annotation_axis.jpg)
+
+## Chart with watermark
+
+Chart supports watermark which allows you to mark the specific area of interest in the chart area. You can add the custom widgets and watermarks using this annotations feature as depicted below.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: SafeArea(
+          child: Center(
+            child: Container(
+              child: SfCartesianChart(
+                annotations: <CartesianChartAnnotation>[
+                 CartesianChartAnnotation(
+                 child: Container(
+                  child: const Text(
+                    '€ - \$ ',
+                  style: TextStyle(
+                  color: Color.fromRGBO(216, 225, 227, 1),
+                  fontWeight: FontWeight.bold,
+                  fontSize: 80),
+                    ),
+                  ),
+        coordinateUnit: CoordinateUnit.point,
+        region: AnnotationRegion.chart,
+        x: 6,
+        y: 36,
+                 )
+                ] 
+              )
+            )
+          )
+        )
+      );
+    }
+
+{% endhighlight %}
+
+
+![Chart with Watermark](images/annotation/watermark.png)
