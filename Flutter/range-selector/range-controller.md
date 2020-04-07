@@ -9,15 +9,17 @@ documentation: ug
 
 # Range controller in range selector
 
-It coordinates the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html) with charts. It automatically controls selection and zooming with charts using the `start` and `end` properties of the controller.
+You can use [`RangeController`](https://pub.dev/documentation/syncfusion_flutter_core/latest/core/RangeController-class.html) for setting and getting current selected values of range selector.
 
 The `start` represents the currently selected start value of the range selector. The left thumb of the range selector was drawn corresponding to this value.
 
 The `end` represents the currently selected end value of the range selector. The right thumb of the range selector was drawn corresponding to this value.
 
-The `start` and `end` can be either `double` or `DateTime`.
+You can get previous values using `previousStart` and `previousEnd` properties.
 
-I> No need to set the [`initialValues`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/initialValues.html) property when using [`controller`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/controller.html) property in the range selector.
+The `start`, `end`, `previousStart`, `previousEnd` properties can be either `double` or `DateTime`.
+
+I> You no need to set the [`initialValues`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/initialValues.html) property when using [`controller`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/controller.html) property in the range selector.
 
 N> You must import the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) to use the range controller in the range selector.
 
@@ -78,9 +80,6 @@ Widget build(BuildContext context) {
                         plotAreaBorderWidth: 0,
                         series: <SplineAreaSeries<Data, double>>[
                             SplineAreaSeries<Data, double>(
-                                selectionSettings: SelectionSettings(
-                                    enable: true,
-                                    selectionController: _rangeController),
                                 color: Color.fromARGB(255, 126, 184, 253),
                                 dataSource: chartData,
                                     xValueMapper: (Data sales, _) => sales.x,
@@ -110,3 +109,4 @@ class Data {
 {% endtabs %}
 
 ![Range selector controller](images/range-controller/range-controller.png)
+

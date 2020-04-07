@@ -175,23 +175,25 @@ The [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/late
 
 N> You must import [`intl`](https://pub.dev/packages/intl) package for formatting date range selector using the [`DateFormat`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
 
+### Year format
+
 {% tabs %}
 {% highlight Dart %}
 
-final DateTime _min = DateTime(2002, 01, 01, 09, 00, 00);
-final DateTime _max = DateTime(2002, 01, 01, 17, 00, 00);
-SfRangeValues _values = SfRangeValues(DateTime(2002, 01, 01, 11, 00, 00), DateTime(2002, 01, 01, 15, 00, 00));
+final DateTime _min = DateTime(2000, 01, 01);
+final DateTime _max = DateTime(2008, 01, 01);
+SfRangeValues _values = SfRangeValues(DateTime(2002, 01, 01), DateTime(2006, 01, 01));
 
-  final List<Data> chartData = <Data>[
-    Data(x: DateTime(2002, 01, 01, 09, 00, 00), y: 2.2),
-    Data(x: DateTime(2002, 01, 01, 10, 00, 00), y: 3.4),
-    Data(x: DateTime(2002, 01, 01, 11, 00, 00), y: 2.8),
-    Data(x: DateTime(2002, 01, 01, 12, 00, 00), y: 1.6),
-    Data(x: DateTime(2002, 01, 01, 13, 00, 00), y: 2.3),
-    Data(x: DateTime(2002, 01, 01, 14, 00, 00), y: 2.5),
-    Data(x: DateTime(2002, 01, 01, 15, 00, 00), y: 2.9),
-    Data(x: DateTime(2002, 01, 01, 16, 00, 00), y: 3.8),
-    Data(x: DateTime(2002, 01, 01, 17, 00, 00), y: 3.7),
+final List<Data> _chartData = <Data>[
+    Data(x: DateTime(2000, 01, 01), y: 2.2),
+    Data(x: DateTime(2001, 01, 01), y: 3.4),
+    Data(x: DateTime(2002, 01, 01), y: 2.8),
+    Data(x: DateTime(2003, 01, 01), y: 1.6),
+    Data(x: DateTime(2004, 01, 01), y: 2.3),
+    Data(x: DateTime(2005, 01, 01), y: 2.5),
+    Data(x: DateTime(2006, 01, 01), y: 2.9),
+    Data(x: DateTime(2007, 01, 01), y: 3.8),
+    Data(x: DateTime(2008, 01, 01), y: 3.7),
 ];
 
 @override
@@ -205,28 +207,28 @@ Widget build(BuildContext context) {
                     showLabels: true,
                     showTicks: true,
                     interval: 2,
-                    dateFormat: DateFormat('h:mm a'),
-                    dateIntervalType: DateIntervalType.hours,
+                    dateFormat: DateFormat.y(),
+                    dateIntervalType: DateIntervalType.years,
                     initialValues: _values,
                     child: Container(
-                    height: 130,
-                    child: SfCartesianChart(
-                        margin: const EdgeInsets.all(0),
-                        primaryXAxis: DateTimeAxis(
-                            minimum: _min,
-                            maximum: _max,
-                            isVisible: false,),
-                        primaryYAxis: NumericAxis(isVisible: false),
-                        plotAreaBorderWidth: 0,
-                        series: <ColumnSeries<Data, DateTime>>[
-                            ColumnSeries<Data, DateTime>(
-                                color: Color.fromARGB(255, 126, 184, 253),
-                                dataSource: chartData,
-                                xValueMapper: (Data sales, _) => sales.x,
-                                yValueMapper: (Data sales, _) => sales.y)
-                            ],
-                        ),
-                   ),
+                         height: 130,
+                         child: SfCartesianChart(
+                              margin: const EdgeInsets.all(0),
+                              primaryXAxis: DateTimeAxis(
+                                   minimum: _min,
+                                   maximum: _max,
+                                   isVisible: false),
+                              primaryYAxis: NumericAxis(isVisible: false),
+                              plotAreaBorderWidth: 0,
+                              series: <SplineAreaSeries<Data, DateTime>>[
+                                   SplineAreaSeries<Data, DateTime>(
+                                          color: Color.fromARGB(255, 126, 184, 253),
+                                          dataSource: chartData,
+                                             xValueMapper: (Data sales, _) => sales.x,
+                                             yValueMapper: (Data sales, _) => sales.y)
+                              ],
+                         ),
+                    ),
               ),
           )
       )
@@ -248,7 +250,161 @@ class Data {
 {% endhighlight %}
 {% endtabs %}
 
-![Date format support](images/label-and-divisor/selector_date_format.png)
+![Year date format support](images/label-and-divisor/selector_year_date_format.png)
+
+### Month format
+
+{% tabs %}
+{% highlight Dart %}
+
+final DateTime _min = DateTime(2000, 01, 01);
+final DateTime _max = DateTime(2000, 09, 01);
+SfRangeValues _values = SfRangeValues(DateTime(2000, 05, 01), DateTime(2000, 07, 01));
+
+final List<Data> chartData = <Data>[
+    Data(x: DateTime(2000, 01, 01), y: 2.2),
+    Data(x: DateTime(2000, 01, 01), y: 3.4),
+    Data(x: DateTime(2000, 01, 01), y: 2.8),
+    Data(x: DateTime(2000, 01, 01), y: 1.6),
+    Data(x: DateTime(2000, 01, 01), y: 2.3),
+    Data(x: DateTime(2000, 01, 01), y: 2.5),
+    Data(x: DateTime(2000, 01, 01), y: 2.9),
+    Data(x: DateTime(2000, 01, 01), y: 3.8),
+    Data(x: DateTime(2000, 01, 01), y: 3.7),
+];
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSelector(
+                   min: _min,
+                   max: _max,
+                   showLabels: true,
+                   showTicks: true,
+                   interval: 2,
+                   dateFormat: DateFormat.yM(),
+                   dateIntervalType: DateIntervalType.months,
+                   initialValues: _values,
+                   child: Container(
+                       height: 130,
+                       child: SfCartesianChart(
+                             margin: const EdgeInsets.all(0),
+                             primaryXAxis: DateTimeAxis(
+                                  minimum: _min,
+                                  maximum: _max,
+                                  isVisible: false),
+                             primaryYAxis: NumericAxis(isVisible: false),
+                             plotAreaBorderWidth: 0,
+                             series: <SplineAreaSeries<Data, DateTime>>[
+                                  SplineAreaSeries<Data, DateTime>(
+                                        color: Color.fromARGB(255, 126, 184, 253),
+                                        dataSource: chartData,
+                                             xValueMapper: (Data sales, _) => sales.x,
+                                             yValueMapper: (Data sales, _) => sales.y)
+                                  ],
+                             ),
+                       ),
+                ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Dart %}
+
+class Data {
+  Data({this.x, this.y});
+  final DateTime x;
+  final double y;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Month date format support](images/label-and-divisor/selector_month_date_format.png)
+
+### Hour format
+
+{% tabs %}
+{% highlight Dart %}
+
+final DateTime _min = DateTime(2002, 01, 01, 09, 00, 00);
+final DateTime _max = DateTime(2002, 01, 01, 17, 00, 00);
+SfRangeValues _values = SfRangeValues(DateTime(2002, 01, 01, 11, 00, 00), DateTime(2002, 01, 01, 15, 00, 00));
+
+final List<Data> _chartData = <Data>[
+    Data(x: DateTime(2002, 01, 01, 09, 00, 00), y: 2.2),
+    Data(x: DateTime(2002, 01, 01, 10, 00, 00), y: 3.4),
+    Data(x: DateTime(2002, 01, 01, 11, 00, 00), y: 2.8),
+    Data(x: DateTime(2002, 01, 01, 12, 00, 00), y: 1.6),
+    Data(x: DateTime(2002, 01, 01, 13, 00, 00), y: 2.3),
+    Data(x: DateTime(2002, 01, 01, 14, 00, 00), y: 2.5),
+    Data(x: DateTime(2002, 01, 01, 15, 00, 00), y: 2.9),
+    Data(x: DateTime(2002, 01, 01, 16, 00, 00), y: 3.8),
+    Data(x: DateTime(2002, 01, 01, 17, 00, 00), y: 3.7),
+];
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSelector(
+                   min: _min,
+                   max: _max,
+                   showLabels: true,
+                   showTicks: true,
+                   interval: 2,
+                   dateFormat: DateFormat('h:mm a'),
+                   dateIntervalType: DateIntervalType.hours,
+                   initialValues: _values,
+                   child: Container(
+                        height: 130,
+                        child: SfCartesianChart(
+                            margin: const EdgeInsets.all(0),
+                            primaryXAxis: DateTimeAxis(
+                                 minimum: _min,
+                                 maximum: _max,
+                                 isVisible: false),
+                            primaryYAxis: NumericAxis(isVisible: false),
+                            plotAreaBorderWidth: 0,
+                            series: <SplineAreaSeries<Data, DateTime>>[
+                                  SplineAreaSeries<Data, DateTime>(
+                                      color: Color.fromARGB(255, 126, 184, 253),
+                                      dataSource: _chartData,
+                                          xValueMapper: (Data sales, _) => sales.x,
+                                          yValueMapper: (Data sales, _) => sales.y)
+                                      ],
+                         ),
+                    ),
+               ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Dart %}
+
+class Data {
+  Data({this.x, this.y});
+  final DateTime x;
+  final double y;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Hour date format support](images/label-and-divisor/selector_hour_date_format.png)
 
 ## Label placement
 
