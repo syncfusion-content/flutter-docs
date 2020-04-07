@@ -9,7 +9,7 @@ documentation: ug
 
 # Range controller in range selector
 
-Coordinates [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html) with charts. It automatically controls selection and zooming with charts using the `start` and `end` properties of the controller.
+It coordinates the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html) with charts. It automatically controls selection and zooming with charts using the `start` and `end` properties of the controller.
 
 The `start` represents the currently selected start value of the range selector. The left thumb of the range selector was drawn corresponding to this value.
 
