@@ -167,8 +167,8 @@ Widget build(BuildContext context) {
                             isVisible: false),
                         primaryYAxis: NumericAxis(isVisible: false),
                         plotAreaBorderWidth: 0,
-                        series: <SplineAreaSeries<Data, double>>[
-                            SplineAreaSeries<Data, double>(
+                        series: <ColumnSeries<Data, double>>[
+                            ColumnSeries<Data, double>(
                                 selectionSettings: SelectionSettings(
                                      enable: true,
                                      selectionController: _rangeController),
