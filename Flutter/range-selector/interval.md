@@ -178,7 +178,7 @@ class Data {
 
 ## Step size
 
-You can move the thumb in a discrete manner using the [`stepSize`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/stepSize.html) property in the range slider.
+You can move the thumb in discrete manner using the [`stepSize`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/stepSize.html) property in the range selector.
 
 {% tabs %}
 {% highlight Dart %}

@@ -99,7 +99,7 @@ Widget build(BuildContext context) {
 
 ## Step size
 
-You can move the thumb in a discrete manner using the [`stepSize`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/stepSize.html) property in the range slider.
+You can move the thumb in discrete manner using the [`stepSize`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/stepSize.html) property in the range slider.
 
 {% tabs %}
 {% highlight Dart %}
@@ -114,8 +114,7 @@ Widget build(BuildContext context) {
               child: SfRangeSlider(
                   min: 0.0,
                   max: 10.0,
-                  interval: 2,You can move the thumb in a discrete manner using the [`stepSize`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/stepSize.html) property in the range slider.
-
+                  interval: 2,
                   stepSize: 1,
                   showTicks: true,
                   minorTicksPerInterval: 1,

@@ -208,6 +208,8 @@ Widget build(BuildContext context) {
 
 ![Hour date format support](images/label-and-divisor/hour-date-format.png)
 
+N> Refer the [`DateIntervalType`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/DateIntervalType-class.html) class for other date format.
+
 ## Label placement
 
 The [`labelPlacement`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/labelPlacement.html) property is used to place the labels either between the major ticks or on the major ticks. The default value of [`labelPlacement`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/labelPlacement.html) property is `LabelPlacement.onTicks`.

@@ -406,6 +406,8 @@ class Data {
 
 ![Hour date format support](images/label-and-divisor/selector_hour_date_format.png)
 
+N> Refer the [`DateIntervalType`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/DateIntervalType-class.html) class for other date format.
+
 ## Label placement
 
 The [`labelPlacement`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/labelPlacement.html) property is used to place the labels either between the major ticks or on the major ticks. The default value of [`labelPlacement`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/labelPlacement.html) property is `LabelPlacement.onTicks`.
