@@ -97,6 +97,8 @@ The [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/late
 
 N> You must import [`intl`](https://pub.dev/packages/intl) package for formatting date range slider using the [`DateFormat`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
 
+### Year format
+
 {% tabs %}
 {% highlight Dart %}
 
@@ -130,7 +132,83 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Date format support](images/label-and-divisor/date-format.png)
+![Year date format support](images/label-and-divisor/year-date-format.png)
+
+### Month format
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(DateTime(2000, 03, 01), DateTime(2000, 07, 01));
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSlider(
+                    min: DateTime(2000, 01, 01, 00),
+                    max: DateTime(2000, 09, 01, 24),
+                    values: _values,
+                    interval: 2,
+                    showLabels: true,
+                    showTicks: true,
+                    dateFormat: DateFormat.yM(),
+                    dateIntervalType: DateIntervalType.months,
+                    onChanged: (SfRangeValues newValues) {
+                        setState(() {
+                            _values = newValues;
+                        });
+                    },
+              ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Month date format support](images/label-and-divisor/month-date-format.png)
+
+### Hour format
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(DateTime(2000, 01, 01, 07, 00, 00), DateTime(2000, 01, 01, 17, 00, 00));
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSlider(
+                  min: DateTime(2000, 01, 01, 02, 00, 00),
+                  max: DateTime(2000, 01, 01, 22, 00, 00),
+                  values: _values,
+                  interval: 5,
+                  showLabels: true,
+                  showTicks: true,
+                  dateFormat: DateFormat('h:mm a'),
+                  dateIntervalType: DateIntervalType.hours,
+                  onChanged: (SfRangeValues newValues) {
+                       setState(() {
+                            _values = newValues;
+                       });
+                  },
+              ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Hour date format support](images/label-and-divisor/hour-date-format.png)
+
+N> Refer the [`DateIntervalType`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/DateIntervalType-class.html) class for other date format.
 
 ## Label placement
 
