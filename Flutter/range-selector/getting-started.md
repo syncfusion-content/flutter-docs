@@ -17,8 +17,6 @@ Create a simple project using the instructions given in the [Getting Started wit
 
 Add the Syncfusion Flutter range selector dependency to your pubspec.yaml file.
 
-N> You must import [`intl`](https://pub.dev/packages/intl) package for using date format in range selector.
-
 {% highlight dart %}
 
 dependencies:
@@ -114,7 +112,7 @@ class Data {
 
 ## Handle range change
 
-The [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/onChanged.html) callback is called when the user is selecting a new values for the range selector.
+The [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/onChanged.html) callback is called when the user is selecting the new values.
 
 {% tabs %}
 {% highlight Dart %}
@@ -397,6 +395,8 @@ class Data {
 You can add prefix or suffix to the labels using the [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/numberFormat.html) or [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dateFormat.html) properties.
 
 N> The format type(numeric or date) of the range selector is determined based on the value specified in [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) and [`initialValues`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/initialValues.html) properties.
+
+I> You must import [`intl`](https://pub.dev/packages/intl) package for formatting date range selector using the [`DateFormat`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class and for formatting numeric range selector using the [`NumberFormat`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html) class.
 
 {% tabs %}
 {% highlight Dart %}

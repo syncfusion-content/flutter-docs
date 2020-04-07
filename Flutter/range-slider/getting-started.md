@@ -17,8 +17,6 @@ Create a simple project using the instructions given in the [Getting Started wit
 
 Add the Syncfusion Flutter range slider dependency to your pubspec.yaml file.
 
-N> You must import [`intl`](https://pub.dev/packages/intl) package for using date format in range slider.
-
 {% highlight dart %}
 
 dependencies:
@@ -243,6 +241,8 @@ Widget build(BuildContext context) {
 You can add prefix or suffix to the labels using the [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/numberFormat.html) or [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateFormat.html) properties.
 
 N> The format type(numeric or date) of the range slider is determined based on the value specified in [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) and [`values`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/values.html) properties.
+
+I> You must import [`intl`](https://pub.dev/packages/intl) package for formatting date range slider using the [`DateFormat`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class and for formatting numeric range slider using the [`NumberFormat`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html) class.
 
 {% tabs %}
 {% highlight Dart %}
