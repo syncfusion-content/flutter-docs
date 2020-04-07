@@ -42,6 +42,30 @@ Numeric axis uses numerical scale and displays numbers as labels. By default, [`
 
 ![Numeric axis](images/axis-types/numeric.jpg)
 
+### Inversed numeric axis
+
+By using  the [isInverted](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/isInversed.html) Property in Cartesian charts, the  numeric axis can be inverted.Axis is rendered from the minimum value to the maximum value by default, and can be inverted from the maximum value to the minimum value.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis: NumericAxis(isInversed: true), 
+                        primaryYAxis: NumericAxis(isInversed: true) 
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![Inversed Numeric axis](images/axis-types/inversed-numeric.png)
+
 ### Customizing range
 
 To customize the range of an axis, use the [`minimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/minimum.html) and [`maximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/maximum.html) properties of [`NumericAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/NumericAxis.html). By default, nice range will be calculated automatically based on the provided data.
@@ -677,3 +701,28 @@ To customize the log base value, use the [`logBase`](https://pub.dev/documentati
 {% endhighlight %}
 
 ![Logarithmic base](images/axis-types/log_base.jpg)
+
+### inversed lograthmic axis 
+
+By using  the [isInverted](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/isInversed.html) Property in Cartesian charts, the  lograthmic axis can be inverted.Axis is rendered from the minimum value to the maximum value by default, and can be inverted from the maximum value to the minimum value.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis: LogarithmicAxis(
+                          isInversed:true,
+                        )  
+                    )
+                )
+            )
+        );
+    }
+     
+{% endhighlight %}
+
+![Inversed lograthmic axis](images/axis-types/inversed-lograthmic.png)

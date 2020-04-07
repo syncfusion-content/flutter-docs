@@ -345,6 +345,86 @@ The [`cornerStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 
 ![Doughnut corner style](images/circular-chart-types/doughnut_roundCorner.jpg)
 
+### Doughnut with center elevation
+
+You can use the Annotations property in charts, to provide center elvation text in dougnut charts as shown below:
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCircularChart(
+                        annotations: <CircularChartAnnotation>[
+                         CircularChartAnnotation(
+                           child: Container(
+                             child: PhysicalModel(
+                              child: Container(),
+                                shape: BoxShape.circle,
+                                elevation: 10,
+                                shadowColor: Colors.black,
+                                color: const Color.fromRGBO(230, 230, 230, 1)))),
+                                CircularChartAnnotation(
+                                  child: Container(
+                                  child: const Text('62%',
+                                 style: TextStyle(
+                                color: Color.fromRGBO(0, 0, 0, 0.5), fontSize: 25))))
+                                   ],
+                        series: <CircularSeries>[
+                            DoughnutSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                // Radius of doughnut
+                                radius: '50%'
+                            )
+                        ]
+                    )
+                )
+            )
+        );
+    }
+
+
+{% endhighlight %}
+
+![Doughnut elevation](images/circular-chart-types/doughnut_elevation.png)
+
+### Doughnut with color mapping
+
+you can use the [pointColorMapper](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/pointColorMapper.html) property to provide different color mappings to the doughnut charts as shown below:
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCircularChart(
+                        series: <CircularSeries>[
+                            DoughnutSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                pointColorMapper: (ChartSampleData data, _) => data.pointColor,
+                                // Radius of doughnut
+                                radius: '50%'
+                            )
+                        ]
+                    )
+                )
+            )
+        );
+    }
+
+
+{% endhighlight %}
+
+![Doughnut color mapping](images/circular-chart-types/doughnut_colormapping.png)
+
 ### Changing the doughnut size
 
 You can use the [`radius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/radius.html) property to change the diameter of the doughnut chart with respect to the plot area. The default value of this property is 80%.
