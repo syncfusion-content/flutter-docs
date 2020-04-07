@@ -17,6 +17,8 @@ Create a simple project using the instructions given in the [Getting Started wit
 
 Add the Syncfusion Flutter range slider dependency to your pubspec.yaml file.
 
+N> You must import [`intl`](https://pub.dev/packages/intl) package for using date format in range slider.
+
 {% highlight dart %}
 
 dependencies:
@@ -160,8 +162,6 @@ Widget build(BuildContext context) {
 ## Set date range
 
 You can show date values in the range slider by setting `DateTime` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) and [`values`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/values.html) properties.
-
-N> You must add the [`intl`](https://pub.dev/packages/intl) package for using date format in the range slider.
 
 {% tabs %}
 {% highlight Dart %}

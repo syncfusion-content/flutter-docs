@@ -62,8 +62,6 @@ Widget build(BuildContext context) {
 
 **Date range slider**
 
-You must add the [`intl`](https://pub.dev/packages/intl) package for using date format in the range slider.
-
 {% tabs %}
 {% highlight Dart %}
 
