@@ -20,7 +20,7 @@ The maximum value that the user can select. The default value of `max` property 
 
 ## Initial values
 
-It represents the initial values that initially selected in the range selector. The range selector's thumb is drawn corresponding to this value.
+It represents the initial values in the range selector. The range selector's thumb is drawn corresponding to this value.
 
 N> For date values, the range selector does not have auto interval support. So, it is mandatory to set `interval`, `dateIntervalType`, and `dateFormat` for date values.
 
@@ -500,8 +500,6 @@ class Data {
 
 ![Active color support](images/basic-features/selector_active_color.png)
 
-N> Refer the [`SfRangeSliderThemeData`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData-class.html) to know about updating the individual active range selector element’s visual.
-
 ## Inactive color
 
 It represents the color applied to the inactive track and active divisors.
@@ -585,8 +583,6 @@ class Data {
 {% endtabs %}
 
 ![Inactive color support](images/basic-features/selector_inactive_color.png)
-
-N> Refer the [`SfRangeSliderThemeData`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData-class.html) to know about updating the individual inactive range slider element’s visual.
 
 ### For customizing individual items
 

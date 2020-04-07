@@ -114,8 +114,6 @@ class Data {
 
 The [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/onChanged.html) callback is called when the user is selecting a new values for the selector by dragging.
 
-When the values of the range selector changes, the widget calls the onChanged callback with the new values.
-
 {% tabs %}
 {% highlight Dart %}
 
@@ -178,8 +176,6 @@ class Data {
 ## Set numeric range
 
 You can show numeric values in the range selector by setting `double` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) and [`initialValues`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/initialValues.html) properties.
-
-N> The value type(numeric or date) of the range selector is determined based on the value specified in [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) and [initialValues](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/initialValues.html) properties.
 
 {% tabs %}
 {% highlight Dart %}

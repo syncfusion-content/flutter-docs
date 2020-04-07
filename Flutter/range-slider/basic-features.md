@@ -201,8 +201,6 @@ Widget build(BuildContext context) {
 
 ![Active color support](images/basic-features/active-color.png)
 
-N> Refer the [`SfRangeSliderThemeData`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData-class.html) to know about updating the individual active range slider element’s visual.
-
 ## Inactive color
 
 It represents the color applied to the inactive track and active divisors.
@@ -243,8 +241,6 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Inactive color support](images/basic-features/inactive-color.png)
-
-N> Refer the [`SfRangeSliderThemeData`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData-class.html) to know about updating the individual inactive range slider element’s visual.
 
 ## Disabled color
 
