@@ -702,9 +702,9 @@ To customize the log base value, use the [`logBase`](https://pub.dev/documentati
 
 ![Logarithmic base](images/axis-types/log_base.jpg)
 
-### inversed lograthmic axis 
+### inversed logarithmic axis 
 
-By using  the [isInverted](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/isInversed.html) Property in Cartesian charts, the  lograthmic axis can be inverted.Axis is rendered from the minimum value to the maximum value by default, and can be inverted from the maximum value to the minimum value.
+By using  the [isInverted](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/isInversed.html) Property in Cartesian charts, the  logarithmic axis can be inverted.Axis is rendered from the minimum value to the maximum value by default, and can be inverted from the maximum value to the minimum value.
 
 {% highlight dart %}
 
@@ -725,4 +725,4 @@ By using  the [isInverted](https://pub.dev/documentation/syncfusion_flutter_char
      
 {% endhighlight %}
 
-![Inversed lograthmic axis](images/axis-types/inversed-lograthmic.png)
+![Inversed logarithmic axis](images/axis-types/inversed-logarithmic.png)

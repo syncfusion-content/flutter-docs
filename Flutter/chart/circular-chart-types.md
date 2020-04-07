@@ -347,7 +347,7 @@ The [`cornerStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 
 ### Doughnut with center elevation
 
-You can use the Annotations property in charts, to provide center elvation text in dougnut charts as shown below:
+You can use the Annotations property in charts, to provide center elevation text in doughnut charts as shown below:
 
 {% highlight dart %} 
 
