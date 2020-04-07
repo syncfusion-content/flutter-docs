@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Thumb features in Syncfusion Flutter Range Selector | Syncfusion
-description: This section helps to learn about how to customize the thumb and overlay in range selector for Flutter platform
+description: This section helps to learn about how to customize the thumb and thumb overlay in range selector for Flutter platform
 platform: Flutter
 control: SfRangeSelector
 documentation: ug
 ---
 
-# Thumb and overlay features in range selector
+# Thumb and thumb overlay features in range selector
 
-This section helps to learn about how to customize the thumb and overlay in the range selector.
+This section helps to learn about how to customize the thumb and thumb overlay in the range selector.
 
 ## Thumb size
 
@@ -177,9 +177,9 @@ class Data {
 
 ![Thumb color support](images/thumb-and-overlay/selector-thumb-color.png)
 
-## Overlay size
+## Thumb overlay size
 
-You can change the size of the overlay in the range selector using the [`overlayRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/overlayRadius.html) property.
+You can change the size of the thumb overlay in the range selector using the [`overlayRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/overlayRadius.html) property.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorTheme-class.html).
 
@@ -258,11 +258,11 @@ class Data {
 {% endhighlight %}
 {% endtabs %}
 
-![Overlay size support](images/thumb-and-overlay/selector-overlay-size.png)
+![Thumb overlay size support](images/thumb-and-overlay/selector-overlay-size.png)
 
-## Overlay color
+## Thumb overlay color
 
-You can change the color of the overlay in the range selector using the [`overlayColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/overlayColor.html) property.
+You can change the color of the thumb overlay in the range selector using the [`overlayColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/overlayColor.html) property.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorTheme-class.html).
 
@@ -341,4 +341,4 @@ class Data {
 {% endhighlight %}
 {% endtabs %}
 
-![Overlay color support](images/thumb-and-overlay/selector-overlay-color.png)
+![Thumb overlay color support](images/thumb-and-overlay/selector-overlay-color.png)

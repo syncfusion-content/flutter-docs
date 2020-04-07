@@ -112,7 +112,7 @@ class Data {
 
 ## Handle range change
 
-The [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/onChanged.html) callback is called when the user is selecting a new values for the selector by dragging.
+The [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/onChanged.html) callback is called when the user is selecting the new values.
 
 {% tabs %}
 {% highlight Dart %}
@@ -246,8 +246,6 @@ class Data {
 ## Set date range
 
 You can show date values in the range selector by setting `DateTime` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) and [`initialValues`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/initialValues.html) properties.
-
-N> You must add the [`intl`](https://pub.dev/packages/intl) package for using date format in the range selector.
 
 {% tabs %}
 {% highlight Dart %}
@@ -398,7 +396,7 @@ You can add prefix or suffix to the labels using the [`numberFormat`](https://pu
 
 N> The format type(numeric or date) of the range selector is determined based on the value specified in [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) and [`initialValues`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/initialValues.html) properties.
 
-N> You must add the [`intl`](https://pub.dev/packages/intl) package for using number format in the range selector.
+I> You must import [`intl`](https://pub.dev/packages/intl) package for formatting date range selector using the [`DateFormat`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class and for formatting numeric range selector using the [`NumberFormat`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html) class.
 
 {% tabs %}
 {% highlight Dart %}

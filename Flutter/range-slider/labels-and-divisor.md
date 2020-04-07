@@ -55,7 +55,7 @@ N>
 
 The [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/numberFormat.html) property is used to format the numeric labels. The default value of [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/numberFormat.html) property is `null`.
 
-N> You must import the [`intl`](https://pub.dev/packages/intl) package for using number format in the range slider.
+N> You must import [`intl`](https://pub.dev/packages/intl) package for formatting numeric range slider using the [`NumberFormat`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html) class.
 
 {% tabs %}
 {% highlight Dart %}
@@ -95,7 +95,7 @@ Widget build(BuildContext context) {
 
 The [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateFormat.html) property is used to format the date labels. It is mandatory for date [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html). For date values, the range slider does not have auto interval support. So, it is mandatory to set [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/interval.html), [`dateIntervalType`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateIntervalType.html), and [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateFormat.html) for date values. The default of [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateFormat.html) property is `null`.
 
-N> You must import the [`intl`](https://pub.dev/packages/intl) package for using date format in the range slider.
+N> You must import [`intl`](https://pub.dev/packages/intl) package for formatting date range slider using the [`DateFormat`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
 
 {% tabs %}
 {% highlight Dart %}
@@ -328,7 +328,11 @@ Widget build(BuildContext context) {
   return MaterialApp(
       home: Scaffold(
           body: Center(
-              child: SfRangeSlider(
+              child: SfRangeSliderTheme(
+                 data: SfRangeSliderThemeData(
+                    trackHeight: 5,
+                 ),
+                 child: SfRangeSlider(
                     min: 0.0,
                     max: 10.0,
                     interval: 2,
@@ -336,9 +340,10 @@ Widget build(BuildContext context) {
                     values: _values,
                     onChanged: (SfRangeValues newValues) {
                         setState(() {
-                            _values = newValues;
+                           _values = newValues;
                         });
-                   },
+                    },
+                 ),
               ),
           )
       )
@@ -359,7 +364,7 @@ N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/pa
 {% tabs %}
 {% highlight Dart %}
 
-SfRangeValues _values = SfRangeValues(4.0, 8.0);
+SfRangeValues _values = SfRangeValues(2.0, 8.0);
 
 @override
 Widget build(BuildContext context) {
@@ -368,6 +373,7 @@ Widget build(BuildContext context) {
           body: Center(
               child: SfRangeSliderTheme(
                     data: SfRangeSliderThemeData(
+                         trackHeight: 5,
                          activeDivisorColor: Colors.red,
                          inactiveDivisorColor: Colors.red[200],
                     ),

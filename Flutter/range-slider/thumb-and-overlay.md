@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Thumb features in Syncfusion Flutter Range Slider | Syncfusion
-description: This section helps to learn about how to customize the thumb and overlay in range slider for Flutter platform
+description: This section helps to learn about how to customize the thumb and thumb overlay in range slider for Flutter platform
 platform: Flutter
 control: SfRangeSlider
 documentation: ug
 ---
 
-# Thumb and overlay features in range slider
+# Thumb and thumb overlay features in range slider
 
-This section helps to learn about how to customize the thumb and overlay in the range slider.
+This section helps to learn about how to customize the thumb and thumb overlay in the range slider.
 
 ## Thumb size
 
@@ -99,9 +99,9 @@ Widget build(BuildContext context) {
 
 ![Thumb color support](images/thumb-and-overlay/slider-thumb-color.png)
 
-## Overlay size
+## Thumb overlay size
 
-You can change the size of the overlay in the range slider using the [`overlayRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/overlayRadius.html) property.
+You can change the size of the thumb overlay in the range slider using the [`overlayRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/overlayRadius.html) property.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderTheme-class.html).
 
@@ -141,11 +141,11 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Overlay size support](images/thumb-and-overlay/slider-overlay-size.png)
+![Thumb overlay size support](images/thumb-and-overlay/slider-overlay-size.png)
 
-## Overlay color
+## Thumb overlay color
 
-You can change the color of the overlay in the range slider using the [`overlayColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/overlayColor.html) property.
+You can change the color of the thumb overlay in the range slider using the [`overlayColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/overlayColor.html) property.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderTheme-class.html).
 
@@ -185,4 +185,4 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Overlay color support](images/thumb-and-overlay/slider-overlay-color.png)
+![Thumb overlay color support](images/thumb-and-overlay/slider-overlay-color.png)
