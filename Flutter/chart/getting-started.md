@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Getting Started with Syncfusion Flutter Charts
-description: Learn how to create the Flutter chart, add series, legend in Chart.
+description: Learn how to create the syncfusion Flutter charts, add series, legend ,markers and other features in Chart.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Getting Started
+# Getting Started with Syncfusion Flutter Charts
 
 This section explains the steps required to populate the chart with data, title, data labels, legend, and tooltips. This section covers only the minimal features needed to know to get started with the chart.
 

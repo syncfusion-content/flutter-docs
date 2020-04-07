@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Annotation
+# Annotation in Syncfusion flutter charts
 
 Chart supports annotations which allows you to mark the specific area of interest in the chart area. You can add the custom widgets using this annotations feature as depicted below.
 
