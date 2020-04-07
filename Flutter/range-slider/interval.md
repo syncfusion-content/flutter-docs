@@ -134,4 +134,4 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Step size support](images/interval/step-size-support.png)
+![Step size support](images/interval/step-size-support.gif)

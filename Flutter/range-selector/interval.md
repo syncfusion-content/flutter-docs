@@ -252,4 +252,4 @@ class Data {
 {% endhighlight %}
 {% endtabs %}
 
-![Step size support](images/interval/selector-step-size-support.png)
+![Step size support](images/interval/selector-step-size-support.gif)

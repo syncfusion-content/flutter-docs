@@ -38,7 +38,7 @@ Widget build(BuildContext context) {
               child: SfRangeSelector(
                     min: _min,
                     max: _max,
-                    interval: 1,
+                    interval: 2,
                     showTicks: true,
                     showLabels: true,
                     initialValues: _values,
@@ -82,4 +82,4 @@ class Data {
 {% endhighlight %}
 {% endtabs %}
 
-![Range selector lock range](images/lock-range/lock-range.png)
+![Range selector lock range](images/lock-range/lock-range.gif)
