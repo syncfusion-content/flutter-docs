@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion Flutter Charts Data Point Selection
-description: Learn how to select the data point in  SfCartesian  Charts and the selection modes available.
+description: Learn how to select the data point in  SfCartesian  Charts and the selection modes available for SfCartesian Charts.
 platform: flutter
 control: Chart
 documentation: ug
