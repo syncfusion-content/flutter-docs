@@ -93,6 +93,9 @@ Widget build(BuildContext context) {
 ## Week view
 The number of weeks in the month view can be customized by setting the [numberOfWeeksInView](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/numberOfWeeksInView.html) property of `DateRangePickerMonthViewSettings`.
 
+{% tabs %}
+{% highlight Dart %}
+
 @override
 Widget build(BuildContext context) {
   return Scaffold(
@@ -102,6 +105,11 @@ Widget build(BuildContext context) {
             DateRangePickerMonthViewSettings(numberOfWeeksInView: 2)),
   );
 }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Century view Date Range Picker](images/views/numberofweek-in-view.png)
 
 ## See also
 
