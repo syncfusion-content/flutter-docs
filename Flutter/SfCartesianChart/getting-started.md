@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Getting Started
+# Getting Started with SfCartesian Charts
 
 This section explains the steps required to populate the chart with data, title, data labels, legend, and tooltips. This section covers only the minimal features needed to know to get started with the chart.
 
