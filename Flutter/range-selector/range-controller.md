@@ -247,7 +247,7 @@ final List<Data> chartData = <Data>[
 @override
 Widget build(BuildContext context) {
     splineChart = SfCartesianChart(
-      margin: const EdgeInsets.all(0),
+      margin: const EdgeInsets.only(left: 10, right: 10, bottom: 20),
       primaryXAxis: NumericAxis(
           minimum: _min,
           maximum: _max,
@@ -259,6 +259,7 @@ Widget build(BuildContext context) {
         SplineSeries<Data, double>(
             color: Color.fromARGB(255, 126, 184, 253),
             dataSource: chartData,
+            animationDuration: 0,
             xValueMapper: (Data sales, _) => sales.x,
             yValueMapper: (Data sales, _) => sales.y)
       ],
@@ -267,7 +268,7 @@ Widget build(BuildContext context) {
     return Scaffold(
         body: Center(
           child: Padding(
-            padding: EdgeInsets.only(left: 10, right: 10),
+            padding: EdgeInsets.only(left: 10, right: 10, top: 80),
             child: Column(
               children: <Widget>[
                 Container(
@@ -276,7 +277,7 @@ Widget build(BuildContext context) {
                 SfRangeSelector(
                   min: _min,
                   max: _max,
-                  interval: 1,
+                  interval: 2,
                   showTicks: true,
                   showLabels: true,
                   controller: _rangeController,
@@ -287,8 +288,7 @@ Widget build(BuildContext context) {
                       primaryXAxis: NumericAxis(
                           minimum: _min,
                           maximum: _max,
-                          isVisible: false,
-                          rangeController: _rangeController),
+                          isVisible: false),
                       primaryYAxis: NumericAxis(isVisible: false),
                       plotAreaBorderWidth: 0,
                       series: <SplineSeries<Data, double>>[
@@ -322,3 +322,5 @@ class Data {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Zooming with SfChart](images/range-controller/range-controller-with-zooming.gif)
