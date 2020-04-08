@@ -111,9 +111,9 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ## Initial display date
-You can change the initial display date of date range picker by using the initialDisplayDate[link] property, which displays the `DateRangePicker` based on the given date time. By default, current date will be set as `initialDisplayDate`.
-
+You can change the initial display date of date range picker by using the [initialDisplayDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/initialDisplayDate.html) property, which displays the `DateRangePicker` based on the given date time. By default, current date will be set as `initialDisplayDate`.
 {% tabs %}
+
 {% highlight Dart %}
 
 @override
@@ -132,7 +132,7 @@ Widget build(BuildContext context) {
 ![Initial display date in Date Range Picker](images/getting-started/initialdisplaydate.png)
 
 ## Initial selected date
-You can programmatically select the specific date of the date range picker by setting corresponding date value to the initialSelectedDate[link] property of `DateRangePicker`. 
+You can programmatically select the specific date of the date range picker by setting corresponding date value to the [initialSelectedDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/initialSelectedDate.html) property of `DateRangePicker`. 
 
 {% tabs %}
 {% highlight Dart %}
@@ -153,7 +153,7 @@ Widget build(BuildContext context) {
 ![Initial selected date in Date Range Picker](images/getting-started/initialselecteddate.png)
 
 ## Initial selected dates
-You can programmatically set the selected dates for `DateRangePicker` by setting corresponding dates to the initialSelectedDates[link] property. 
+You can programmatically set the selected dates for `DateRangePicker` by setting corresponding dates to the [initialSelectedDates](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/initialSelectedDates.html) property. 
 
 {% tabs %}
 {% highlight Dart %}
@@ -181,7 +181,7 @@ Widget build(BuildContext context) {
 ![Initial selected dates in Date Range Picker](images/getting-started/initialselecteddates.png)
 
 ## Initial selected range
-You can programmatically set the selected range for `DateRangePicker` by setting start end range to the initialSelectedRange[link] property.
+You can programmatically set the selected range for `DateRangePicker` by setting start end range to the [initialSelectedRange](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/initialSelectedRange.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -203,7 +203,7 @@ Widget build(BuildContext context) {
 ![Initial selected range in Date Range Picker](images/getting-started/initialselectedrange.png)
 
 ## Initial selected ranges
-You can programmatically set more than one selected range for `DateRangePicker` by setting start and end ranges to the initialSelectedRanges[link] property.
+You can programmatically set more than one selected range for `DateRangePicker` by setting start and end ranges to the [initialSelectedRanges](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/initialSelectedRanges.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -230,7 +230,7 @@ Widget build(BuildContext context) {
 ![Initial selected ranges in Date Range Picker](images/getting-started/initialselectedranges.png)
 
 ## Background color
-You can customize background of the `DateRangePicker` using the backgroundColor[link] property. 
+You can customize background of the `DateRangePicker` using the [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/backgroundColor.html) property. 
 
 {% tabs %}
 {% highlight Dart %}

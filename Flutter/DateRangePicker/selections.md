@@ -95,7 +95,7 @@ Widget build(BuildContext context) {
 ![MultiRangeSelection Date Range Picker](images/selections/multirange.png)
 
 ## Selection radius
-You can customize the radius of the selection using selectionRadius[link] property of the `DateRange PickerMonthViewSettings`.
+You can customize the radius of the selection using [selectionRadius](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/selectionRadius.html) property of the `DateRange PickerMonthViewSettings`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -116,7 +116,7 @@ Widget build(BuildContext context) {
 ![Selection radius Date Range Picker](images/selections/selectionradius.png)
 
 ## Selection shape
-You can customize the selection shape of the selected date using the selectionShape[link] property of the `DateRangePicker`.
+You can customize the selection shape of the selected date using the [selectionShape](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectionShape.html) property of the `DateRangePicker`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -137,7 +137,7 @@ Widget build(BuildContext context) {
 ![Selection shape Date Range Picker](images/selections/selectionshape.png)
 
 ## Enable swipe selection
-Using enableSwipeSelection[link] property of the `DateRangePicker`, you can’t select the dates by using swiping. By default, `enableSwipeSelection` property as `true`.
+Using [enableSwipeSelection]()https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/enableSwipeSelection.html property of the `DateRangePicker`, you can’t select the dates by using swiping. By default, `enableSwipeSelection` property as `true`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -158,7 +158,7 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ## Toggle day selection
-You can deselect the selected date using the toggleDaySelection[link] property of the `DateRangePicker`.
+You can deselect the selected date using the [toggleDaySelection](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/toggleDaySelection.html) property of the `DateRangePicker`.
 
 {% tabs %}
 {% highlight Dart %}

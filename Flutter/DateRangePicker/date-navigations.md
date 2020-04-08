@@ -202,7 +202,7 @@ class MyAppState extends State<MyApp> {
 
 
 ## Navigation direction
-You can navigate the Month, Year, Decade, and Century views either `Vertical` or `Horizontal` directions by setting the navigationDirection[link] property of `DateRangePicker`.
+You can navigate the Month, Year, Decade, and Century views either `Vertical` or `Horizontal` directions by setting the [navigationDirection](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/navigationDirection.html) property of `DateRangePicker`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -220,7 +220,7 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ## Show navigation arrow
-Using showNavigationArrow[link] property of the `DateRangePicker` you can move to the next or previous views of the picker without swiping.
+Using [showNavigationArrow](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/showNavigationArrow.html) property of the `DateRangePicker` you can move to the next or previous views of the picker without swiping.
 
 {% tabs %}
 {% highlight Dart %}

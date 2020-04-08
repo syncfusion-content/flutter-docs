@@ -7,10 +7,10 @@ control: SfDateRangePicker
 documentation: ug
 ---
 ## Header
-You can customize the header of the data range picker using the headerStyle[link] and headerHeight[link] properties in date range picker.
+You can customize the header of the data range picker using the [headerStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/headerStyle.html) and [headerHeight](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/headerHeight.html) properties in date range picker.
 
 ### Customize the header height in date range picker
-You can customize the height of the header of `DateRangePicker` by using headerHeight[link] property.
+You can customize the height of the header of `DateRangePicker` by using [headerHeight](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/headerHeight.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -31,7 +31,7 @@ Widget build(BuildContext context) {
 ![Header height Date Range Picker](images/headers/headerheight.png)
 
 ### Header appearance
-You can customize the header style of the `DataRangePicker` by using backgroundColor[link], textStyle[link], and textAlign[link] properties of `DateRangePickerHeaderStyle`.
+You can customize the header style of the `DataRangePicker` by using [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerHeaderStyle/backgroundColor.html), [textStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerHeaderStyle/textStyle.html), and [textAlign](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerHeaderStyle/textAlign.html) properties of `DateRangePickerHeaderStyle`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -60,10 +60,10 @@ Widget build(BuildContext context) {
 ![Header appearance Date Range Picker](images/headers/headerappearance.png)
 
 ## View header
-You can customize the view header of the `DateRangePicker` using the viewHeaderHeight[link] and viewHeaderStyle[link] properties of `DateRangePickerMonthViewSettings`.
+You can customize the view header of the `DateRangePicker` using the [viewHeaderHeight](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/viewHeaderHeight.html) and [viewHeaderStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/viewHeaderStyle.html) properties of `DateRangePickerMonthViewSettings`.
 
 ### View header height
-You can customize the view header height of `DateRangePicker` using viewHeaderHeight[link] property of `DateRangePickerMonthViewSettings`.
+You can customize the view header height of `DateRangePicker` using [viewHeaderHeight](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/viewHeaderHeight.html) property of `DateRangePickerMonthViewSettings`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -85,7 +85,7 @@ Widget build(BuildContext context) {
 ![View Header height Date Range Picker](images/headers/viewheaderheight.png)
 
 ### View header appearance
-You can customize the view header style of `DateRangePicker` by using  textStyle, backgroundColor using backgroundColor[link], textStyle[link] properties of `DateRangePickerViewHeaderStyle`.
+You can customize the view header style of `DateRangePicker` by using [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerViewHeaderStyle/backgroundColor.html), [textStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerViewHeaderStyle/textStyle.html) properties of `DateRangePickerViewHeaderStyle`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -118,12 +118,8 @@ You can customize the view header of `DateRangePicker` by using dayFormat[link] 
 Widget build(BuildContext context) {
   return Scaffold(
     body: SfDateRangePicker(
-      view: DateRangePickerView.month,
-      monthViewSettings: DateRangePickerMonthViewSettings(
-          viewHeaderStyle: DateRangePickerViewHeaderStyle(
-              backgroundColor: Color(0xFF7fcd91),
-              textStyle: TextStyle(fontSize: 20, letterSpacing: 5))),
-    ),
+        view: DateRangePickerView.month,
+        monthViewSettings: DateRangePickerMonthViewSettings(dayFormat: 'EEE')),
   );
 }
 

@@ -70,7 +70,7 @@ Widget build(BuildContext context) {
 ![Customizations Date Range Picker](images/customizations/customizations.png)
 
 ## Month format
-You can customize the month format of the `DateRangePicker` using the monthFormat[link] property.
+You can customize the month format of the `DateRangePicker` using the [monthFormat](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/monthFormat.html) property.
 
 {% tabs %}
 {% highlight Dart %}
