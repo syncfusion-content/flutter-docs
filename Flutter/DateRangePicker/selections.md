@@ -157,8 +157,6 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Swipe selection Date Range Picker](images/selections/swipeselection.png)
-
 ## Toggle day selection
 You can deselect the selected date using the toggleDaySelection[link] property of the `DateRangePicker`.
 
