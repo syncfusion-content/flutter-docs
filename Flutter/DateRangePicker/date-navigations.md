@@ -157,8 +157,6 @@ class MyAppState extends State<MyApp> {
 {% endhighlight %}
 {% endtabs %}
 
-![Forward Date Range Picker](images/date-navigations/forward.png)
-
 ### Backward
 You can use the `backward` method of  `DateRangePickerController` for viewing the previous immediate previous visible dates in the `SfDateRangePicker`. It will move to the previous month if the calendar view is in month, similarly it will move to the previous week for week view and previous day for day view.
 
@@ -200,7 +198,6 @@ class MyAppState extends State<MyApp> {
 {% endhighlight %}
 {% endtabs %}
 
-![Backward Date Range Picker](images/date-navigations/backward.png)
 
 ## Navigation direction
 You can navigate the Month, Year, Decade, and Century views either `Vertical` or `Horizontal` directions by setting the navigationDirection[link] property of `DateRangePicker`.
