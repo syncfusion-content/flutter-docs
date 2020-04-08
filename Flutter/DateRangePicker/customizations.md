@@ -67,8 +67,6 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![View Header appearance Date Range Picker](images/headers/viewheaderappearance.png)
-
 ![Customizations Date Range Picker](images/customizations/customizations.png)
 
 ## Month format

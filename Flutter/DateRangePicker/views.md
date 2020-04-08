@@ -90,6 +90,19 @@ Widget build(BuildContext context) {
 
 ![Century view Date Range Picker](images/views/centuryview.png)
 
+## Week view
+The number of weeks in the month view can be customized by setting the numberOfWeeksInView[link] property of `DateRangePickerMonthViewSettings`.
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDateRangePicker(
+        view: DateRangePickerView.month,
+        monthViewSettings:
+            DateRangePickerMonthViewSettings(numberOfWeeksInView: 2)),
+  );
+}
+
 ## See also
 
 [How to switch between the date range picker views in Flutter date range picker (SfDateRangePicker)?](https://www.syncfusion.com/kb/11305/how-to-switch-between-the-date-range-picker-views-in-flutter-date-range-picker)

@@ -248,6 +248,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Backgroundcolor Date Range Picker](images/getting-started/backgroundcolor.png)
+
 ## Date selection
 
 The DateRangePicker supports selecting single, multiple, and range of dates. It also supports programmatic selection.
