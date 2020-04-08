@@ -39,6 +39,8 @@ class MyAppState extends State<MyApp>{
 {% endhighlight %}
 {% endtabs %}
 
+![displaydate Date Range Picker](images/date-navigations/displaydate.png)
+
 ## Programmatic view navigation
 You can programmatically navigate view in the calendar widget by using the [view](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/view.html) property of `DateRangePickerController`.
 
@@ -110,6 +112,8 @@ class MyAppState extends State<MyApp>{
 
 {% endhighlight %}
 {% endtabs %}
+
+[!displaydate Date Range Picker](images/date-navigations/displaydate.png)
 
 ## Programmatically change to adjacent dates
 By default, the date can be navigated to next and previous views using the touch gesture, by swiping the control from right to left and left to right direction. The view can be also changed programmatically using the [forward](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/forward.html) and [backward](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/backward.html) methods that are available in the `DateRangePickerController`.

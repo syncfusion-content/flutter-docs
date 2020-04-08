@@ -115,6 +115,27 @@ Widget build(BuildContext context) {
 
 ![Selection radius Date Range Picker](images/selections/selectionradius.png)
 
+## Selection shape
+You can customize the selection shape of the selected date using the selectionShape[link] property of the `DateRangePicker`.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDateRangePicker(
+      view: DateRangePickerView.month,
+      selectionShape: DateRangePickerSelectionShape.rectangle,
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Selection shape Date Range Picker](images/selections/selectionshape.png)
+
 ## Enable swipe selection
 Using enableSwipeSelection[link] property of the `DateRangePicker`, you can’t select the dates by using swiping. By default, `enableSwipeSelection` property as `true`.
 

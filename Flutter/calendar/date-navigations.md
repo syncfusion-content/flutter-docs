@@ -82,6 +82,8 @@ class MyAppState extends State<MyApp>{
 {% endhighlight %}
 {% endtabs %}
 
+![InitialDisplayDate Calendar](images/date-navigation/initial-display-date.png)
+
 ## Programmatic date selection
 You can programmatically select the dates in calendar widget by [selectedDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/selectedDate.html) property of `CalendarController`.
 
@@ -111,6 +113,8 @@ class MyAppState extends State<MyApp>{
 
 {% endhighlight %}
 {% endtabs %}
+
+![InitialSelectedDate Calendar](images/date-navigation/initial-selected-date.png)
 
 ## Programmatically change to adjacent dates
 By default, the date can be navigated to next and previous views using touch gesture, by swiping the control from right to left and left to right direction. The view can be also changed programmatically using the [forward](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/forward.html) and [backward](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/backward.html) methods available in `CalendarController`.
