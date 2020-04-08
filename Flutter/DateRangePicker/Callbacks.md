@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Callbacks support in Syncfusion Flutter Date Range Picker | Date Picker | Syncfusion
+title: Callbacks in Flutter Date Range Picker | Date Picker | Syncfusion
 description: This session describes the Date Range Picker callbacks in SfDateRangePicker widget in Flutter | Date Picker
 platform: Flutter
 control: SfDateRangePicker
