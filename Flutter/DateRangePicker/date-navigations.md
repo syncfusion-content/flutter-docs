@@ -39,7 +39,7 @@ class MyAppState extends State<MyApp>{
 {% endhighlight %}
 {% endtabs %}
 
-![displaydate Date Range Picker](images/date-navigations/displaydate.png)
+![Displaydate Date Range Picker](images/date-navigations/displaydate.png)
 
 ## Programmatic view navigation
 You can programmatically navigate view in the calendar widget by using the [view](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/view.html) property of `DateRangePickerController`.
@@ -69,6 +69,8 @@ class MyAppState extends State<MyApp>{
 
 {% endhighlight %}
 {% endtabs %}
+
+![View navigation Date Range Picker](images/date-navigations/monthview.png)
 
 ## Programmatic date selection
 You can programmatically select the dates in the calendar widget by using the  `DateRangePickerController` property.
