@@ -394,7 +394,7 @@ You can use the Annotations property in charts, to provide center elevation text
 
 ### Doughnut with color mapping
 
-you can use the [pointColorMapper](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/pointColorMapper.html) property to provide different color mappings to the doughnut charts as shown below:
+you can use the [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/pointColorMapper.html) property to provide different color mappings to the doughnut charts as shown below:
 
 {% highlight dart %} 
 
