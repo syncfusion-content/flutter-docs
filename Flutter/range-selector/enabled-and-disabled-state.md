@@ -117,15 +117,16 @@ final List<Data> _chartData = <Data>[
             body: Center(
               child: SfRangeSelectorTheme(
                 data: SfRangeSliderThemeData(
-                  disabledActiveTrackColor: Colors.orange,
-                  disabledInactiveTrackColor: Colors.orange[200],
-                  disabledActiveTickColor: Colors.orange,
-                  disabledInactiveTickColor: Colors.orange[200],
-                  disabledActiveMinorTickColor: Colors.orange,
-                  disabledInactiveMinorTickColor: Colors.orange[200],
-                  disabledActiveDivisorColor: Colors.purple,
-                  disabledInactiveDivisorColor: Colors.purple[200],
-                  disabledThumbColor: Colors.orange,
+                     disabledActiveTrackColor: Colors.red[900],
+                     disabledInactiveTrackColor: Colors.red[200],
+                     disabledActiveTickColor: Colors.red[900],
+                     disabledInactiveTickColor: Colors.red[200],
+                     disabledActiveMinorTickColor: Colors.red[900],
+                     disabledInactiveMinorTickColor: Colors.red[200],
+                     disabledActiveDivisorColor: Colors.blue[900],
+                     disabledInactiveDivisorColor: Colors.blue[200],
+                     disabledThumbColor: Colors.red,
+                     trackHeight: 4,
                 ),
                 child:  SfRangeSelector(
                   min: _min,
@@ -176,4 +177,4 @@ class Data {
 {% endhighlight %}
 {% endtabs %}
 
-![Disabled color support](images/enabled-and-disabled/selector-disabled-color.png)
+![Disabled color support](images/disabled-state/selector-disabled-color.png)
