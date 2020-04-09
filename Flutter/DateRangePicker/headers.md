@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Views of Syncfusion Flutter Date Range Picker | Syncfusion
-description: This session describes the Date Range Picker headers in SfDateRangePicker widget in Flutter | Date Picker
+title: Header in Syncfusion Flutter Date Range Picker | Date Picker | Syncfusion
+description: Learn about Headers support in Syncfusion Flutter Date range picker (SfDateRangePicker) widget and more details.
 platform: Flutter
 control: SfDateRangePicker
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 ## Header
 You can customize the header of the data range picker using the [headerStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/headerStyle.html) and [headerHeight](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/headerHeight.html) properties in date range picker.
 
-### Customize the header height in date range picker
+### Customize the header height
 You can customize the height of the header of `DateRangePicker` by using [headerHeight](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/headerHeight.html) property.
 
 {% tabs %}
@@ -62,7 +62,7 @@ Widget build(BuildContext context) {
 ## View header
 You can customize the view header of the `DateRangePicker` using the [viewHeaderHeight](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/viewHeaderHeight.html) and [viewHeaderStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/viewHeaderStyle.html) properties of `DateRangePickerMonthViewSettings`.
 
-### View header height
+### Customize view header height
 You can customize the view header height of `DateRangePicker` using [viewHeaderHeight](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/viewHeaderHeight.html) property of `DateRangePickerMonthViewSettings`.
 
 {% tabs %}
