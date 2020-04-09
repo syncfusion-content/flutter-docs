@@ -137,7 +137,7 @@ Widget build(BuildContext context) {
 ![Selection shape Date Range Picker](images/selections/selectionshape.png)
 
 ## Enable swipe selection
-Using [enableSwipeSelection]()https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/enableSwipeSelection.html property of the `DateRangePicker`, you can’t select the dates by using swiping. By default, `enableSwipeSelection` property as `true`.
+Using [enableSwipeSelection]()https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/enableSwipeSelection.html property of the `DateRangePicker`, you can select the dates by using swiping. By default, `enableSwipeSelection` property as `true`.
 
 {% tabs %}
 {% highlight Dart %}
