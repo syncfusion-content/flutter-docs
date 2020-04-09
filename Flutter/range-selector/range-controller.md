@@ -326,5 +326,3 @@ class Data {
 
 {% endhighlight %}
 {% endtabs %}
-
-![RTL support](images/range-controller/range-controller-with-zooming.gif)
