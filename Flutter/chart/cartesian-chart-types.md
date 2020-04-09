@@ -244,6 +244,111 @@ The borders of the area chart can be customized using the [`borderMode`](https:/
 
 Also refer, [color palette](./series-customization#color-palette), [color mapping](./series-customization#color-mapping-for-data-points), [animation](./series-customization#animation), [gradient](./series-customization#gradient-fill) and [empty points](./series-customization#empty-points) for customizing the area series further.
 
+### Area with gradients
+
+The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/gradient.html) property is used to define the gradient colors. The colors from this property is used for series.
+
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+         final List<Color> color = <Color>[];
+        color.add(Colors.blue[50]);
+        color.add(Colors.blue[200]);
+        color.add(Colors.blue);
+
+        final List<double> stops = <double>[];
+        stops.add(0.0);
+        stops.add(0.5);
+        stops.add(1.0);
+
+        final LinearGradient gradientColors =
+            LinearGradient(colors: color, stops: stops);
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <ChartSeries>[
+                            // Renders area chart
+                            AreaSeries<SalesData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales,
+                                 gradient: gradientColors
+                            )
+                        ]
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![Area gradients](images/cartesian-chart-types/area_gradient.png)
+
+### Area with empty points
+
+Data points with a null value are considered empty points. Empty data points are ignored and are not plotted in the chart. By using [`emptyPointSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/emptyPointSettings.html) property in series, you can decide the action taken for empty points. Available [`modes`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode-class.html) are [`gap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode-class.html), [`zero`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode-class.html), [`drop`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode-class.html) and [`average`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode-class.html). Default mode of the empty point is [`gap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode-class.html).
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <ChartSeries>[
+                            AreaSeries<SalesData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales
+                            )
+                        ]
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![Area with empty points](images/cartesian-chart-types/area_emptypoints.png)
+
+
+
+### vertical area chart
+
+The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/isTransposed.html) property of [`CartesianSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries-class.html) is used to transpose the horizontal and vertical axes, to view the data in a different perspective. Using this feature, you can render vertical area chart.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        isTransposed: true,
+                        series: <ChartSeries>[
+                            AreaSeries<SalesData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales
+                            )
+                        ]
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![Vertical area chart](images/cartesian-chart-types/vertical_area.png)
+
 ## Spline chart
 
 To render a spline chart, create an instance of [`SplineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties are used to customize the appearance of spline segment:
@@ -351,6 +456,36 @@ The following code sample demonstrates how to set the [`splineType`](https://pub
 ![Spline type](images/cartesian-chart-types/cardinal_spline.jpg)
 
 Also refer, [color palette](./series-customization#color-palette), [color mapping](./series-customization#color-mapping-for-data-points), [animation](./series-customization#animation), [gradient](./series-customization#gradient-fill) and [empty points](./series-customization#empty-points) for customizing the spline series further.
+
+### Vertical spline chart
+
+The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/isTransposed.html) property of [`CartesianSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries-class.html) is used to transpose the horizontal and vertical axes, to view the data in a different perspective. Using this feature, you can render vertical Spline chart.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        isTransposed: true,
+                        series: <ChartSeries>[
+                            SplineSeries<SalesData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales
+                            )
+                        ]
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![Vertical spline chart](images/cartesian-chart-types/inversed-spline.png)
 
 ## Column chart
 
@@ -758,6 +893,126 @@ The [`minimumRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/la
 
 Also refer, [color palette](./series-customization#color-palette), [color mapping](./series-customization#color-mapping-for-data-points), [animation](./series-customization#animation), [gradient](./series-customization#gradient-fill) and [empty points](./series-customization#empty-points) for customizing the bubble series further.
 
+### Bubble with various color
+
+Using the [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/pointColorMapper.html) and [`sizeValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/sizeValueMapper.html) properties in the Cartesian charts, the Bubble series with different colors and sizes can be rendered.
+
+{% highlight dart %} 
+    
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <ChartSeries>[
+                            BubbleSeries<ChartData, double>(
+                                dataSource: chartData,
+                                sizeValueMapper: (ChartData sales, _) => sales.size,
+                                pointColorMapper:(ChartData sales, _) => sales.pointColor,
+                                xValueMapper: (ChartData sales, _) => sales.x,
+                                yValueMapper: (ChartData sales, _) => sales.y
+                            )
+                        ]
+                    )
+                )   
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![Bubble various color](images/cartesian-chart-types/bubble_variouscolors.png)
+
+### Bubble with gradients
+
+The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/gradient.html) property is used to define the gradient colors. The colors from this property is used for series.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        final List<Color> color = <Color>[];
+        color.add(Colors.blue[50]);
+        color.add(Colors.blue[200]);
+        color.add(Colors.blue);
+
+        final List<double> stops = <double>[];
+        stops.add(0.0);
+        stops.add(0.5);
+        stops.add(1.0);
+
+        final LinearGradient gradientColors =
+            LinearGradient(colors: color, stops: stops);
+
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <CartesianSeries>[
+                            BubbleSeries<ChartData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData sales, _) => sales.x,
+                                yValueMapper: (ChartData sales, _) => sales.y,
+                                 sizeValueMapper:(ChartData sales, _) => sales.size,
+                                // Applies gradient color
+                                gradient: gradientColors
+                            )
+                        ]
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![Bubble gradients](images/cartesian-chart-types/bubble_gradients.png)
+
+### Bubble with multiple series
+
+Using the [`dataSource`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/dataSource.html) property in the Map charts, multiple series can be rendered in a bubble chart.
+
+{% highlight dart %} 
+    
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <ChartSeries>[
+                            BubbleSeries<ChartData, num>(
+                                  dataSource: northAmerica,
+                                  xValueMapper: (ChartData sales, _) => sales.xValue,
+                                  yValueMapper: (ChartData sales, _) => sales.y,
+                                  sizeValueMapper: (ChartData sales, _) => sales.size),
+                            BubbleSeries<ChartData, num>(
+                                  dataSource: europe,
+                                  xValueMapper: (ChartData sales, _) => sales.xValue,
+                                  yValueMapper: (ChartData sales, _) => sales.y,
+                                  sizeValueMapper:(ChartData sales, _) => sales.size),
+                            BubbleSeries<ChartData, num>(
+                                  dataSource: asia,
+                                  xValueMapper: (ChartData sales, _) => sales.xValue,
+                                  yValueMapper: (ChartData sales, _) => sales.y,
+                                  sizeValueMapper: (ChartData sales, _) => sales.size),
+                            BubbleSeries<ChartData, num>(
+                                  dataSource: africa,
+                                  xValueMapper: (ChartData sales, _) => sales.xValue,
+                                  yValueMapper: (ChartData sales, _) => sales.y,
+                                  sizeValueMapper: (ChartData sales, _) => sales.size),
+                        ]
+                    )
+                )   
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![Bubble nultiple series](images/cartesian-chart-types/bubble_with_multiple.png)
+
 ## Scatter chart
 
 To render a scatter chart, create an instance of [`ScatterSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ScatterSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). The following properties are used to customize the scatter segment appearance.
@@ -982,6 +1237,50 @@ In the range column chart when data label is enabled, by default there will be t
 {% endhighlight %}
 
 ![Range column datalabel](images/cartesian-chart-types/range_column_datalabel.jpg)
+
+### Transposed range column
+
+The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/isTransposed.html) property of [`CartesianSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries-class.html) is used to transpose the horizontal and vertical axes, to view the data in a different perspective. Using this feature, you can render range column chart.
+
+{% highlight dart %} 
+    
+    @override
+    Widget build(BuildContext context) {
+         return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        isTransposed: true,
+                        primaryXAxis: CategoryAxis(),
+                        series: <ChartSeries>[
+                            RangeColumnSeries<ChartData, double>(
+                                dataSource: <ChartData>[
+                                    ChartData('Jan', 3, 9),
+                                    ChartData('Feb', 4, 11),
+                                    ChartData('Mar', 6, 13),
+                                    ChartData('Apr', 9, 17),
+                                    ChartData('May', 12, 20),
+                                ],
+                                xValueMapper: (ChartData sales, _) => sales.x,
+                                lowValueMapper: (ChartData sales, _) => sales.low,
+                                highValueMapper: (ChartData sales, _) => sales.high,
+                            )
+                        ]
+                    )
+                )   
+            )
+        );
+    }
+
+    class ChartData {
+        ChartData(this.x, this.high, this.low);
+            final String x;
+            final double high;
+            final double low;
+    }
+
+{% endhighlight %}
+
 
 ## Range area chart
 
