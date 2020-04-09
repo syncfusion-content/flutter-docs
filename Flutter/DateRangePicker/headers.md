@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Header in Syncfusion Flutter Date Range Picker | Date Picker | Syncfusion
+title: Header in Flutter Date Range Picker | Date Picker | Syncfusion
 description: Learn about Headers support in Syncfusion Flutter Date range picker (SfDateRangePicker) widget and more details.
 platform: Flutter
 control: SfDateRangePicker
