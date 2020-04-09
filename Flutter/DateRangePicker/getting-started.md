@@ -111,7 +111,7 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ## Initial display date
-You can set the initial display date of date range picker by using the [initialDisplayDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/initialDisplayDate.html) property, which displays the `DateRangePicker` based on the given date time. By default, current date will be set as `initialDisplayDate`.
+You can set the initial display date of date range picker by using the [initialDisplayDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/initialDisplayDate.html) property that displays the `DateRangePicker` based on the given date-time. By default, the current date will be set to `initialDisplayDate`.
 {% tabs %}
 
 {% highlight Dart %}

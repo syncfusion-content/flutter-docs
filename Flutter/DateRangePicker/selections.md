@@ -95,7 +95,7 @@ Widget build(BuildContext context) {
 ![MultiRangeSelection Date Range Picker](images/selections/multirange.png)
 
 ## Selection radius
-You can customize the radius of the selection using [selectionRadius](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/selectionRadius.html) property of the `DateRange PickerMonthViewSettings`.
+You can customize the radius of the selection using the [selectionRadius](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/selectionRadius.html) property of the `DateRange PickerMonthViewSettings`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -137,7 +137,7 @@ Widget build(BuildContext context) {
 ![Selection shape Date Range Picker](images/selections/selectionshape.png)
 
 ## Enable swipe selection
-Using [enableSwipeSelection]()https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/enableSwipeSelection.html property of the `DateRangePicker`, you can select the dates by using swiping. By default, `enableSwipeSelection` property as `true`.
+Using the [enableSwipeSelection](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/enableSwipeSelection.html) property of the `DateRangePicker`, you can select the dates by using swiping. By default, `enableSwipeSelection` property as `true`.
 
 {% tabs %}
 {% highlight Dart %}
