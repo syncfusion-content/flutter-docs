@@ -725,4 +725,4 @@ By using  the [isInverted](https://pub.dev/documentation/syncfusion_flutter_char
      
 {% endhighlight %}
 
-![Inversed logarithmic axis](images/axis-types/inversed-logarithmic.png)
+![Inversed logarithmic axis](images/axis-types/inversed-logarithmic.png) 

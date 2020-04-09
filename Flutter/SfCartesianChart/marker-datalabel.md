@@ -215,8 +215,6 @@ Data label considers the format used in the vertical axis by default. In the bel
 
 The [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelAlignment-class.html) property is used to position the Cartesian chart type data labels at [`top`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelAlignment-class.html), [`bottom`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelAlignment-class.html), [`auto`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelAlignment-class.html), [`outer`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelAlignment-class.html) and [`middle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelAlignment-class.html) position of the actual data point position. By default, labels are [`auto`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelAlignment-class.html) positioned. You can move the labels horizontally and vertically using OffsetX and OffsetY properties respectively.
 
-The [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelPosition.html) property is used to place the circular series data labels either [`inside`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelPosition-class.html) or [`outside`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelPosition-class.html). By default the label of circular chart is placed [`inside`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelPosition-class.html) the series.
-
 {% highlight dart %} 
 
     @override
@@ -224,16 +222,16 @@ The [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/la
         return Scaffold(
             body: Center(
                 child: Container(
-                    child: SfCircularChart(
-                        series: <CircularSeries>[
-                            PieSeries<ChartData, double>(
+                    child: SfCartesianChart(
+                        series: <CartesianSeries>[
+                            AreaSeries<ChartData, double>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true,
                                     // Positioning the data label
-                                    labelPosition: ChartDataLabelPosition.outside
+                                    labelAlignment: ChartDataLabelAlignment.top
                                 )
                             )
                         ]
@@ -245,45 +243,8 @@ The [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/la
 
 {% endhighlight %}
 
-![Data label position](images/marker-datalabel/datalabel_position.jpg)
+![Data label position](images/marker-datalabel/datalabel_alignment.png)
 
-N> The [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelAlignment.html) property is used to position the Cartesian chart labels whereas [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelPosition.html) property is used to position the circular chart labels.
-
-### Smart labels
-
-This feature is used to arrange the data labels smartly and avoid the intersection when there is overlapping of labels. The property [`enableSmartLabels`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/enableSmartLabels.html) in [`CircularSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries-class.html) is used to arrange the data labels smartly. By default, this property is *true*.
-
-{% highlight dart %} 
-
-    @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child:SfCircularChart(
-                        series: <CircularSeries>[
-                            PieSeries<ChartData, double>(
-                                // Avoid labels intersection
-                                enableSmartLabels: true,
-                                dataSource: chartData,
-                                xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) =>  data.y,
-                                dataLabelMapper: (ChartData data, _) => data.x,
-                                dataLabelSettings: DataLabelSettings(
-                                    isVisible: true,
-                                    labelPosition: ChartDataLabelPosition.inside
-                                )   
-                            )
-                        ]   
-                    )
-                )
-            )
-        );
-    }
-
-{% endhighlight %}
-
-![Smart labels](images/marker-datalabel/smart_label.jpg)
 
 ### Apply series color
 
@@ -296,61 +257,16 @@ The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
         return Scaffold(
             body: Center(
                 child: Container(
-                    child:SfCircularChart(
-                        series: <CircularSeries>[
-                            PieSeries<ChartData, double>(
-                                dataSource: chartData,
-                                xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) => data.y,
-                                dataLabelMapper: (ChartData data, _) => data.x,
-                                dataLabelSettings: DataLabelSettings(
-                                    isVisible: true, 
-                                    labelPosition: ChartDataLabelPosition.outside,
-                                    // Renders background rectangle and fills it with series color
-                                    useSeriesColor: true
-                                )
-                            )
-                        ]
-                    )
-                )
-            )
-        );
-    }
-
-{% endhighlight %}
-
-![Series color](images/marker-datalabel/use_series_color.jpg)
-
-### Connector line
-
-This feature is used to connect label and data point using a line. It can be enabled for [`Pie`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PieSeries-class.html) and [`Doughnut`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DoughnutSeries-class.html) chart types. The [`connectorLineSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/connectorLineSettings.html) property used to customize the connector line.
-
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ConnectorLineSettings/color.html) – used to change the color of the line
-* [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ConnectorLineSettings/width.html) – used to change the stroke thickness of the line
-* [`length`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ConnectorLineSettings/length.html) – specifies the length of the connector line.
-* [`type`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ConnectorLineSettings/type.html) - specifies the shape of connector line either [`curve`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ConnectorType-class.html) or [`line`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ConnectorType-class.html). 
-
-{% highlight dart %} 
-
-    @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCircularChart(
-                        series: <CircularSeries>[
-                            PieSeries<ChartData, double>(
-                                enableSmartLabels: true,
+                    child: SfCartesianChart(
+                        series: <CartesianSeries>[
+                            AreaSeries<ChartData, double>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true,
-                                    labelPosition: ChartDataLabelPosition.outside,
-                                    connectorLineSettings: ConnectorLineSettings(
-                                        // Type of the connector line
-                                        type: ConnectorType.curve
-                                    )
+                                    // Positioning the data label
+                                    useSeriesColor: true,
                                 )
                             )
                         ]
@@ -362,7 +278,7 @@ This feature is used to connect label and data point using a line. It can be ena
 
 {% endhighlight %}
 
-![Connector line](images/marker-datalabel/connector_line.jpg)
+![Series color](images/marker-datalabel/useseries_color.png)
 
 ### Point text mapping
 
@@ -372,25 +288,27 @@ The [`dataLabelMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
     @override
     Widget build(BuildContext context) {
-        final List<ChartData> chartData = [
-            ChartData('USA', 17, '17%'),
-            ChartData('China', 34, '34%'),
-            ChartData('Japan', 24, '24%'),
-            ChartData('Africa', 30, '30%'),
-            ChartData('UK', 10, '10%')
-        ];
+        final List<ChartData> chartData =[
+        ChartData('jan', 21),
+        ChartData('feb', 24),
+        ChartData('mar', 36),
+        ChartData('apr', 38),
+        ChartData('may', 54),
+        ChartData('jun', 57),
+        ChartData('jul', 70)
+     ];
 
         return Scaffold(
             body: Center(
                 child: Container(
-                    child:SfCircularChart(
-                        series: <CircularSeries>[
-                            PieSeries<ChartData, String>(
+                    child:SfCartesianChart(
+                        series: <CartesianSeries>[
+                            AreaSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
                                 // Map the data label text for each point from the data source
-                                dataLabelMapper: (ChartData data, _) => data.text,
+                                dataLabelMapper: (ChartData data, _) => data.x,
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true
                                 )
@@ -403,19 +321,18 @@ The [`dataLabelMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/
     }
 
     class ChartData {
-        ChartData(this.x, this.y, this.text);
+        ChartData(this.x, this.y);
         final String x;
         final double y;
-        final String text;
     }
 
 {% endhighlight %}
 
-![Data label mapper](images/marker-datalabel/value_mapper.jpg)
+![Data label mapper](images/marker-datalabel/datalabel_mapper.png)
 
 ### Label template
 
-You can customize the appearance of the data label with your own template using the [`builder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/builder.html) property of [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/dataLabelSettings.html).
+You can customize the appearance of the data label with your own template using the [`builder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/builder.html) property of [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/dataLabelSettings.html).
 
 {% highlight dart %} 
 
@@ -424,13 +341,13 @@ You can customize the appearance of the data label with your own template using 
         return Scaffold(
             body: Center(
                 child: Container(
-                    child:SfCircularChart(
-                        series: <CircularSeries>[
-                            PieSeries<ChartData, String>(
+                    child:SfCartesianChart(
+                        series: <CartesianSeries>[
+                            AreaSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
-                                dataLabelMapper: (ChartData data, _) => data.text,
+                                dataLabelMapper: (ChartData data, _) => data.x,
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true,
                                     // Templating the data label
@@ -452,4 +369,4 @@ You can customize the appearance of the data label with your own template using 
 
 {% endhighlight %}
 
-![Label template](images/marker-datalabel/datalabel_template.jpg)
+![Label template](images/marker-datalabel/datalabel_builder.png)
