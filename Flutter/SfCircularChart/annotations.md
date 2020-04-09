@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Annotation in SfCircular Charts
-description: Learn how to add and customize the Circular annotations available in the SfCircular Chart widget.
+title: Annotation in Syncfusion Circular Charts
+description: Learn how to add and customize the Circular annotations available in the Syncfusion Circular Chart widget.
 platform: flutter
 control: Chart
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data labels in SfCircular Charts
-description: Learn how to add the Data point labels to the series available in the SfCircular Chart widget.
+title: Data labels in Syncfusion Circular Charts
+description: Learn how to add the Data point labels to the series available in the Syncfusion Flutter Circular Chart widget.
 platform: flutter
 control: Chart
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion Flutter Circular Chart Public Methods
-description: Learn what are all the public methods available in SfCircular Charts along with their properties.
+description: Learn what are all the public methods available in Syncfusion Flutter Circular Charts along with their properties.
 platform: flutter
 control: Chart
 documentation: ug
