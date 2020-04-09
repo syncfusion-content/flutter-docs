@@ -12,7 +12,7 @@ This section explains about how to add the interval for numeric and date range s
 
 ## Numeric interval
 
-Splits the range slider into given interval. It is mandatory if labels, major ticks and divisions are needed. The default value is `null`. Must be greater than 0.
+It splits the range slider into given interval. It is mandatory if labels, major ticks and divisions are needed. The default value is `null`. Must be greater than 0.
 
 For example, if [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html) is 0.0 and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) is 10.0 and [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/interval.html) is 2.0, the range slider will render the labels, major ticks, and divisors at 0.0, 2.0, 4.0 and so on.
 
@@ -96,3 +96,42 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Date interval type support](images/interval/date-interval-type.png)
+
+## Step size
+
+You can move the thumb in discrete manner using the [`stepSize`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/stepSize.html) property in the range slider.
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 6.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSlider(
+                  min: 0.0,
+                  max: 10.0,
+                  interval: 2,
+                  stepSize: 1,
+                  showTicks: true,
+                  minorTicksPerInterval: 1,
+                  showLabels: true,
+                  values: _values,
+                  onChanged: (SfRangeValues newValues) {
+                      setState(() {
+                          _values = newValues;
+                      });
+                  },
+              ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Step size support](images/interval/step-size-support.gif)

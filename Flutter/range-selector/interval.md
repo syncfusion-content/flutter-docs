@@ -12,7 +12,7 @@ This section explains about how to add the interval for numeric and date range s
 
 ## Numeric interval
 
-Splits the range selector into given interval. It is mandatory if labels, major ticks and divisions are needed. The default value of [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/interval.html) property is `null`. Must be greater than 0.
+It splits the range selector into given interval. It is mandatory if labels, major ticks and divisions are needed. The default value of [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/interval.html) property is `null`. Must be greater than 0.
 
 For example, if [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) is 2.0 and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) is 10.0 and [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/interval.html) is 2.0, the range selector will render the labels, major ticks, and divisors at 2.0, 4.0 and so on.
 
@@ -175,3 +175,81 @@ class Data {
 {% endtabs %}
 
 ![Date interval](images/interval/date_interval.png)
+
+## Step size
+
+You can move the thumb in discrete manner using the [`stepSize`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/stepSize.html) property in the range selector.
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+final List<Data> chartData = <Data>[
+    Data(x:2.0, y: 2.2),
+    Data(x:3.0, y: 3.4),
+    Data(x:4.0, y: 2.8),
+    Data(x:5.0, y: 1.6),
+    Data(x:6.0, y: 2.3),
+    Data(x:7.0, y: 2.5),
+    Data(x:8.0, y: 2.9),
+    Data(x:9.0, y: 3.8),
+    Data(x:10.0, y: 3.7),
+];
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSelector(
+                    min: _min,
+                    max: _max,
+                    interval: 2,
+                    stepSize: 1,
+                    showLabels: true,
+                    showTicks: true,
+                    minorTicksPerInterval: 1,
+                    initialValues: _values,
+                    child: Container(
+                    height: 130,
+                    child: SfCartesianChart(
+                        margin: const EdgeInsets.all(0),
+                        primaryXAxis: NumericAxis(minimum: _min,
+                            maximum: _max,
+                            isVisible: false,),
+                        primaryYAxis: NumericAxis(isVisible: false),
+                        plotAreaBorderWidth: 0,
+                        series: <SplineAreaSeries<Data, double>>[
+                            SplineAreaSeries<Data, double>(
+                                color: Color.fromARGB(255, 126, 184, 253),
+                                dataSource: chartData,
+                                    xValueMapper: (Data sales, _) => sales.x,
+                                    yValueMapper: (Data sales, _) => sales.y)
+                            ],
+                        ),
+                   ),
+              ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Dart %}
+
+class Data {
+  Data({this.x, this.y});
+  final double x;
+  final double y;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Step size support](images/interval/selector-step-size-support.gif)

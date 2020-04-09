@@ -12,7 +12,7 @@ This section explains about how to add the labels and divisors in the range sele
 
 ## Show labels
 
-Option to render the labels on given interval. The default value of [`showLabels`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/showLabels.html) property is `false`.
+The [`showLabels`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/showLabels.html) property is used to render the labels on given interval. The default value of [`showLabels`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/showLabels.html) property is `false`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -90,88 +90,11 @@ N>
 * Refer the [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/numberFormat.html) and [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dateFormat.html) for formatting the numeric and date labels respectively.
 * Refer the [`SfRangeSliderThemeData`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData-class.html) for customizing the appearance of the labels.
 
-## Show divisors
-
-Option to render the divisors on the track. The default value of [`showDivisors`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/showDivisors.html) property is `false`. It is a shape which is used to represent the major interval points of the track.
-
-For example, if [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) is 0.0 and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) is 10.0 and [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/interval.html) is 2.0, the range selector will render the divisors at 0.0, 2.0, 4.0 and so on.
-
-{% tabs %}
-{% highlight Dart %}
-
-final double _min = 2.0;
-final double _max = 10.0;
-SfRangeValues _values = SfRangeValues(5.0, 8.0);
-
-final List<Data> chartData = <Data>[
-    Data(x:2.0, y: 2.2),
-    Data(x:3.0, y: 3.4),
-    Data(x:4.0, y: 2.8),
-    Data(x:5.0, y: 1.6),
-    Data(x:6.0, y: 2.3),
-    Data(x:7.0, y: 2.5),
-    Data(x:8.0, y: 2.9),
-    Data(x:9.0, y: 3.8),
-    Data(x:10.0, y: 3.7),
-];
-
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfRangeSelector(
-                    min: _min,
-                    max: _max,
-                    interval: 1,
-                    showDivisors: true,
-                    initialValues: _values,
-                    child: Container(
-                    height: 130,
-                    child: SfCartesianChart(
-                        margin: const EdgeInsets.all(0),
-                        primaryXAxis: NumericAxis(minimum: _min,
-                            maximum: _max,
-                            isVisible: false,),
-                        primaryYAxis: NumericAxis(isVisible: false),
-                        plotAreaBorderWidth: 0,
-                        series: <SplineAreaSeries<Data, double>>[
-                            SplineAreaSeries<Data, double>(
-                                color: Color.fromARGB(255, 126, 184, 253),
-                                dataSource: chartData,
-                                    xValueMapper: (Data sales, _) => sales.x,
-                                    yValueMapper: (Data sales, _) => sales.y)
-                            ],
-                        ),
-                   ),
-              ),
-          )
-      )
-  );
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight Dart %}
-
-class Data {
-  Data({this.x, this.y});
-  final double x;
-  final double y;
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-![Range selector divisors](images/label-and-divisor/selector_show_divisor.png)
-
 ## Number format
 
-Formats the numeric labels. The default value of [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/numberFormat.html) property is `null`.
+The [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/numberFormat.html) property is used to format the numeric labels. The default value of [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/numberFormat.html) property is `null`.
 
-N> You must import the [`intl`](https://pub.dev/packages/intl) package for using number format in the range selector.
+N> You must import [`intl`](https://pub.dev/packages/intl) package for formatting numeric range selector using the [`NumberFormat`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html) class.
 
 {% tabs %}
 {% highlight Dart %}
@@ -248,27 +171,29 @@ class Data {
 
 ## Date format
 
-Formats the date labels. It is mandatory for date [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html). For date values, the range selector does not have auto interval support. So, it is mandatory to set [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/interval.html), [`dateIntervalType`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dateIntervalType.html), and [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dateFormat.html) for date values. The default of [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dateFormat.html) property is `null`.
+The [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dateFormat.html) property is used to format the date labels. It is mandatory for date [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html). For date values, the range selector does not have auto interval support. So, it is mandatory to set [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/interval.html), [`dateIntervalType`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dateIntervalType.html), and [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dateFormat.html) for date values. The default of [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dateFormat.html) property is `null`.
 
-N> You must import the [`intl`](https://pub.dev/packages/intl) package for using date format in the range selector.
+N> You must import [`intl`](https://pub.dev/packages/intl) package for formatting date range selector using the [`DateFormat`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
+
+### Year format
 
 {% tabs %}
 {% highlight Dart %}
 
-final DateTime _min = DateTime(2002, 01, 01, 09, 00, 00);
-final DateTime _max = DateTime(2002, 01, 01, 17, 00, 00);
-SfRangeValues _values = SfRangeValues(DateTime(2002, 01, 01, 11, 00, 00), DateTime(2002, 01, 01, 15, 00, 00));
+final DateTime _min = DateTime(2000, 01, 01);
+final DateTime _max = DateTime(2008, 01, 01);
+SfRangeValues _values = SfRangeValues(DateTime(2002, 01, 01), DateTime(2006, 01, 01));
 
-  final List<Data> chartData = <Data>[
-    Data(x: DateTime(2002, 01, 01, 09, 00, 00), y: 2.2),
-    Data(x: DateTime(2002, 01, 01, 10, 00, 00), y: 3.4),
-    Data(x: DateTime(2002, 01, 01, 11, 00, 00), y: 2.8),
-    Data(x: DateTime(2002, 01, 01, 12, 00, 00), y: 1.6),
-    Data(x: DateTime(2002, 01, 01, 13, 00, 00), y: 2.3),
-    Data(x: DateTime(2002, 01, 01, 14, 00, 00), y: 2.5),
-    Data(x: DateTime(2002, 01, 01, 15, 00, 00), y: 2.9),
-    Data(x: DateTime(2002, 01, 01, 16, 00, 00), y: 3.8),
-    Data(x: DateTime(2002, 01, 01, 17, 00, 00), y: 3.7),
+final List<Data> _chartData = <Data>[
+    Data(x: DateTime(2000, 01, 01), y: 2.2),
+    Data(x: DateTime(2001, 01, 01), y: 3.4),
+    Data(x: DateTime(2002, 01, 01), y: 2.8),
+    Data(x: DateTime(2003, 01, 01), y: 1.6),
+    Data(x: DateTime(2004, 01, 01), y: 2.3),
+    Data(x: DateTime(2005, 01, 01), y: 2.5),
+    Data(x: DateTime(2006, 01, 01), y: 2.9),
+    Data(x: DateTime(2007, 01, 01), y: 3.8),
+    Data(x: DateTime(2008, 01, 01), y: 3.7),
 ];
 
 @override
@@ -282,28 +207,28 @@ Widget build(BuildContext context) {
                     showLabels: true,
                     showTicks: true,
                     interval: 2,
-                    dateFormat: DateFormat('h:mm a'),
-                    dateIntervalType: DateIntervalType.hours,
+                    dateFormat: DateFormat.y(),
+                    dateIntervalType: DateIntervalType.years,
                     initialValues: _values,
                     child: Container(
-                    height: 130,
-                    child: SfCartesianChart(
-                        margin: const EdgeInsets.all(0),
-                        primaryXAxis: DateTimeAxis(
-                            minimum: _min,
-                            maximum: _max,
-                            isVisible: false,),
-                        primaryYAxis: NumericAxis(isVisible: false),
-                        plotAreaBorderWidth: 0,
-                        series: <ColumnSeries<Data, DateTime>>[
-                            ColumnSeries<Data, DateTime>(
-                                color: Color.fromARGB(255, 126, 184, 253),
-                                dataSource: chartData,
-                                xValueMapper: (Data sales, _) => sales.x,
-                                yValueMapper: (Data sales, _) => sales.y)
-                            ],
-                        ),
-                   ),
+                         height: 130,
+                         child: SfCartesianChart(
+                              margin: const EdgeInsets.all(0),
+                              primaryXAxis: DateTimeAxis(
+                                   minimum: _min,
+                                   maximum: _max,
+                                   isVisible: false),
+                              primaryYAxis: NumericAxis(isVisible: false),
+                              plotAreaBorderWidth: 0,
+                              series: <SplineAreaSeries<Data, DateTime>>[
+                                   SplineAreaSeries<Data, DateTime>(
+                                          color: Color.fromARGB(255, 126, 184, 253),
+                                          dataSource: chartData,
+                                             xValueMapper: (Data sales, _) => sales.x,
+                                             yValueMapper: (Data sales, _) => sales.y)
+                              ],
+                         ),
+                    ),
               ),
           )
       )
@@ -325,11 +250,167 @@ class Data {
 {% endhighlight %}
 {% endtabs %}
 
-![Date format support](images/label-and-divisor/selector_date_format.png)
+![Year date format support](images/label-and-divisor/selector_year_date_format.png)
+
+### Month format
+
+{% tabs %}
+{% highlight Dart %}
+
+final DateTime _min = DateTime(2000, 01, 01);
+final DateTime _max = DateTime(2000, 09, 01);
+SfRangeValues _values = SfRangeValues(DateTime(2000, 05, 01), DateTime(2000, 07, 01));
+
+final List<Data> chartData = <Data>[
+    Data(x: DateTime(2000, 01, 01), y: 2.2),
+    Data(x: DateTime(2000, 01, 01), y: 3.4),
+    Data(x: DateTime(2000, 01, 01), y: 2.8),
+    Data(x: DateTime(2000, 01, 01), y: 1.6),
+    Data(x: DateTime(2000, 01, 01), y: 2.3),
+    Data(x: DateTime(2000, 01, 01), y: 2.5),
+    Data(x: DateTime(2000, 01, 01), y: 2.9),
+    Data(x: DateTime(2000, 01, 01), y: 3.8),
+    Data(x: DateTime(2000, 01, 01), y: 3.7),
+];
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSelector(
+                   min: _min,
+                   max: _max,
+                   showLabels: true,
+                   showTicks: true,
+                   interval: 2,
+                   dateFormat: DateFormat.yM(),
+                   dateIntervalType: DateIntervalType.months,
+                   initialValues: _values,
+                   child: Container(
+                       height: 130,
+                       child: SfCartesianChart(
+                             margin: const EdgeInsets.all(0),
+                             primaryXAxis: DateTimeAxis(
+                                  minimum: _min,
+                                  maximum: _max,
+                                  isVisible: false),
+                             primaryYAxis: NumericAxis(isVisible: false),
+                             plotAreaBorderWidth: 0,
+                             series: <SplineAreaSeries<Data, DateTime>>[
+                                  SplineAreaSeries<Data, DateTime>(
+                                        color: Color.fromARGB(255, 126, 184, 253),
+                                        dataSource: chartData,
+                                             xValueMapper: (Data sales, _) => sales.x,
+                                             yValueMapper: (Data sales, _) => sales.y)
+                                  ],
+                             ),
+                       ),
+                ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Dart %}
+
+class Data {
+  Data({this.x, this.y});
+  final DateTime x;
+  final double y;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Month date format support](images/label-and-divisor/selector_month_date_format.png)
+
+### Hour format
+
+{% tabs %}
+{% highlight Dart %}
+
+final DateTime _min = DateTime(2002, 01, 01, 09, 00, 00);
+final DateTime _max = DateTime(2002, 01, 01, 17, 00, 00);
+SfRangeValues _values = SfRangeValues(DateTime(2002, 01, 01, 11, 00, 00), DateTime(2002, 01, 01, 15, 00, 00));
+
+final List<Data> _chartData = <Data>[
+    Data(x: DateTime(2002, 01, 01, 09, 00, 00), y: 2.2),
+    Data(x: DateTime(2002, 01, 01, 10, 00, 00), y: 3.4),
+    Data(x: DateTime(2002, 01, 01, 11, 00, 00), y: 2.8),
+    Data(x: DateTime(2002, 01, 01, 12, 00, 00), y: 1.6),
+    Data(x: DateTime(2002, 01, 01, 13, 00, 00), y: 2.3),
+    Data(x: DateTime(2002, 01, 01, 14, 00, 00), y: 2.5),
+    Data(x: DateTime(2002, 01, 01, 15, 00, 00), y: 2.9),
+    Data(x: DateTime(2002, 01, 01, 16, 00, 00), y: 3.8),
+    Data(x: DateTime(2002, 01, 01, 17, 00, 00), y: 3.7),
+];
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSelector(
+                   min: _min,
+                   max: _max,
+                   showLabels: true,
+                   showTicks: true,
+                   interval: 2,
+                   dateFormat: DateFormat('h:mm a'),
+                   dateIntervalType: DateIntervalType.hours,
+                   initialValues: _values,
+                   child: Container(
+                        height: 130,
+                        child: SfCartesianChart(
+                            margin: const EdgeInsets.all(0),
+                            primaryXAxis: DateTimeAxis(
+                                 minimum: _min,
+                                 maximum: _max,
+                                 isVisible: false),
+                            primaryYAxis: NumericAxis(isVisible: false),
+                            plotAreaBorderWidth: 0,
+                            series: <SplineAreaSeries<Data, DateTime>>[
+                                  SplineAreaSeries<Data, DateTime>(
+                                      color: Color.fromARGB(255, 126, 184, 253),
+                                      dataSource: _chartData,
+                                          xValueMapper: (Data sales, _) => sales.x,
+                                          yValueMapper: (Data sales, _) => sales.y)
+                                      ],
+                         ),
+                    ),
+               ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Dart %}
+
+class Data {
+  Data({this.x, this.y});
+  final DateTime x;
+  final double y;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Hour date format support](images/label-and-divisor/selector_hour_date_format.png)
+
+N> Refer the [`DateIntervalType`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/DateIntervalType-class.html) class for other date format.
 
 ## Label placement
 
-Option to place the labels either between the major ticks or on the major ticks. The default value of [`labelPlacement`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/labelPlacement.html) property is `LabelPlacement.onTicks`.
+The [`labelPlacement`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/labelPlacement.html) property is used to place the labels either between the major ticks or on the major ticks. The default value of [`labelPlacement`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/labelPlacement.html) property is `LabelPlacement.onTicks`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -493,6 +574,12 @@ class Data {
 
 You can change the active and inactive label appearance of the range selector using the [`activeLabelStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/activeLabelStyle.html) and [`inactiveLabelStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/inactiveLabelStyle.html) properties respectively.
 
+The active side of the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html) is between `start` and `end` thumbs.
+
+The inactive side of the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html) is between the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) value and the left thumb, and the right thumb and the [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) value.
+
+For RTL, the inactive side is between the [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) value and the left thumb, and the right thumb and the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) value.
+
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorTheme-class.html).
 
 {% tabs %}
@@ -608,14 +695,14 @@ Widget build(BuildContext context) {
           body: Center(
               child: SfRangeSelectorTheme(
                     data: SfRangeSliderThemeData(
-                         labelOffset: Offset(0.0, 10.0),
+                        trackHeight: 5,
                     ),
                     child:  SfRangeSelector(
                         min: _min,
                         max: _max,
-                        interval: 2,
+                        interval: 1,
                         showLabels: true,
-                        showTicks: true,
+                        showDivisors: true,
                         initialValues: _values,
                         child: Container(
                         height: 130,
@@ -659,6 +746,83 @@ class Data {
 
 ![Labels offset support](images/label-and-divisor/selector-labels-offset.png)
 
+## Show divisors
+
+The [`showDivisors`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/showDivisors.html) property is used to render the divisors on the track. The default value of [`showDivisors`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/showDivisors.html) property is `false`. It is a shape which is used to represent the major interval points of the track.
+
+For example, if [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) is 0.0 and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) is 10.0 and [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/interval.html) is 2.0, the range selector will render the divisors at 0.0, 2.0, 4.0 and so on.
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+final List<Data> chartData = <Data>[
+    Data(x:2.0, y: 2.2),
+    Data(x:3.0, y: 3.4),
+    Data(x:4.0, y: 2.8),
+    Data(x:5.0, y: 1.6),
+    Data(x:6.0, y: 2.3),
+    Data(x:7.0, y: 2.5),
+    Data(x:8.0, y: 2.9),
+    Data(x:9.0, y: 3.8),
+    Data(x:10.0, y: 3.7),
+];
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSelector(
+                    min: _min,
+                    max: _max,
+                    interval: 1,
+                    showDivisors: true,
+                    initialValues: _values,
+                    child: Container(
+                    height: 130,
+                    child: SfCartesianChart(
+                        margin: const EdgeInsets.all(0),
+                        primaryXAxis: NumericAxis(minimum: _min,
+                            maximum: _max,
+                            isVisible: false,),
+                        primaryYAxis: NumericAxis(isVisible: false),
+                        plotAreaBorderWidth: 0,
+                        series: <SplineAreaSeries<Data, double>>[
+                            SplineAreaSeries<Data, double>(
+                                color: Color.fromARGB(255, 126, 184, 253),
+                                dataSource: chartData,
+                                    xValueMapper: (Data sales, _) => sales.x,
+                                    yValueMapper: (Data sales, _) => sales.y)
+                            ],
+                        ),
+                   ),
+              ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Dart %}
+
+class Data {
+  Data({this.x, this.y});
+  final double x;
+  final double y;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Range selector divisors](images/label-and-divisor/selector_show_divisor.png)
+
 ## Divisor color
 
 You can change the active and inactive divisor color of the range selector using the [`activeDivisorColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/activeDivisorColor.html) and [`inactiveDivisorColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/inactiveDivisorColor.html) properties respectively.
@@ -691,6 +855,7 @@ Widget build(BuildContext context) {
           body: Center(
               child: SfRangeSelectorTheme(
                     data: SfRangeSliderThemeData(
+                        trackHeight: 5,
                         activeDivisorColor: Colors.red,
                         inactiveDivisorColor: Colors.red[200],
                     ),

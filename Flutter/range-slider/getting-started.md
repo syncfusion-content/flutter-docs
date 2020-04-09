@@ -7,7 +7,7 @@ control: SfRangeSlider
 documentation: ug
 ---
 
-# Getting started for range slider
+# Getting Started with Flutter Range Slider (SfRangeSlider)
 This section explains the steps required to add the range slider widget and its elements such as numeric and date values, ticks, labels and tooltips. This section covers only basic features needed to know to get started with Syncfusion range slider.
 
 ## Add Flutter range slider to an application
@@ -51,7 +51,7 @@ import 'package:syncfusion_flutter_sliders/sliders.dart';
 
 After importing the package, initialize the range slider widget as a child of any widget. Here, the range slider widget is added as a child of the Container widget. The default value of the `min` and `max` property of the SfRangeSlider is 0.0 and 1.0 respectively. So, the `values` property must be given within the range.
 
-N> You must update the `values` property inside the `setState` function for the movement of the thumb in the range slider.
+N> The range slider passes the new values to the [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onChanged.html) callback but does not change its state until the parent widget rebuilds the range slider with new values.
 
 {% tabs %}
 {% highlight Dart %}
@@ -83,11 +83,123 @@ Widget build(BuildContext context) {
 
 ![Default range slider](images/getting-started/default_range_slider.png)
 
-## Add tick with numeric labels
+## Handle range change
 
-Add the range slider with ticks, numeric labels, minimum and maximum values to restrict the slider range.
+The [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onChanged.html) callback is used to get the current value of the range slider when the user selects a value through interaction.
 
-N> The label type like numeric or date time can be determined based on the `min` and `max` properties.
+N> The range slider passes the new values to the callback but does not change its state until the parent widget rebuilds the range slider with new values.
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(3.0, 7.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSlider(
+                    min: 0.0,
+                    max: 10.0,
+                    values: _values,
+                    onChanged: (SfRangeValues newValues) {
+                       setState(() {
+                           _values = newValues;
+                        });
+                   },
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Handle range slider](images/getting-started/handle-range-slider-state.png)
+
+## Set numeric range
+
+You can show numeric values in the range slider by setting `double` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) and [`values`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/values.html) properties.
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 0;
+final double _max = 100;
+SfRangeValues _values = const SfRangeValues(40.0, 60.0);
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: Center(
+      child: Container(
+        child: SfRangeSlider(
+          min: _min,
+          max: _max,
+          values: _values,
+          interval: 20,
+          showLabels: true,
+          onChanged: (SfRangeValues value) {
+            setState(() {
+              _values = value;
+            });
+          },
+        ),
+      ),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Numeric range slider](images/getting-started/numeric_range_slider.png)
+
+## Set date range
+
+You can show date values in the range slider by setting `DateTime` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) and [`values`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/values.html) properties.
+
+{% tabs %}
+{% highlight Dart %}
+
+DateTime _min = DateTime(2008, 01, 01);
+DateTime _max = DateTime(2018, 01, 01);
+SfRangeValues _values = SfRangeValues(DateTime(2012, 01, 01), DateTime(2014, 01, 01));
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: Center(
+      child: Container(
+        child: SfRangeSlider(
+          min: _min,
+          max: _max,
+          values: _values,
+          interval: 2,
+          showLabels: true,
+          dateIntervalType: DateIntervalType.years,
+          dateFormat: DateFormat.y(),
+          onChanged: (SfRangeValues value) {
+            setState(() {
+              _values = value;
+            });
+          },
+        ),
+      ),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![DateTime range slider](images/getting-started/date_range_slider.png)
+
+## Enable ticks
+
+You can enable ticks in the range slider using the [`showTicks`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/showTicks.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -108,7 +220,6 @@ Widget build(BuildContext context) {
           interval: 20,
           showTicks: true,
           showLabels: true,
-          minorTicksPerInterval: 1,
           onChanged: (SfRangeValues value) {
             setState(() {
               _values = value;
@@ -123,20 +234,22 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Numeric range slider](images/getting-started/numeric_range_slider.png)
+![Numeric range slider](images/getting-started/range_slider_with_tick.png)
 
-## Add tick with date labels
+## Add prefix/suffix to labels
 
-Add the range slider with ticks and date labels.
+You can add prefix or suffix to the labels using the [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/numberFormat.html) or [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateFormat.html) properties.
 
-N> You must add the [`intl`](https://pub.dev/packages/intl) package for using date format in the range slider.
+N> The format type(numeric or date) of the range slider is determined based on the value specified in [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) and [`values`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/values.html) properties.
+
+I> You must import [`intl`](https://pub.dev/packages/intl) package for formatting date range slider using the [`DateFormat`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class and for formatting numeric range slider using the [`NumberFormat`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html) class.
 
 {% tabs %}
 {% highlight Dart %}
 
-DateTime _min = DateTime(2008, 01, 01);
-DateTime _max = DateTime(2018, 01, 01);
-SfRangeValues _values = SfRangeValues(DateTime(2012, 01, 01), DateTime(2014, 01, 01));
+final double _min = 0;
+final double _max = 100;
+SfRangeValues _values = const SfRangeValues(40.0, 60.0);
 
 @override
 Widget build(BuildContext context) {
@@ -147,12 +260,10 @@ Widget build(BuildContext context) {
           min: _min,
           max: _max,
           values: _values,
-          interval: 2,
+          interval: 20,
           showTicks: true,
           showLabels: true,
-          minorTicksPerInterval: 1,
-          dateIntervalType: DateIntervalType.years,
-          dateFormat: DateFormat.y(),
+          numberFormat: NumberFormat("\$"),
           onChanged: (SfRangeValues value) {
             setState(() {
               _values = value;
@@ -167,4 +278,4 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![DateTime range slider](images/getting-started/date_range_slider.png)
+![Format label](images/getting-started/slider_with_formatted_label.png)
