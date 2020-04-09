@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion Flutter Chart Axis types.
-description: Learn how to customize the grid lines, tick lines, labels and title of a chart axis in Syncfusion flutter charts.
+description: description: Learn how to customize the grid lines, tick lines, labels and title of a chart axis in Syncfusion flutter charts.
 platform: flutter
 control: Chart
 documentation: ug
@@ -44,7 +44,7 @@ Numeric axis uses numerical scale and displays numbers as labels. By default, [`
 
 ### Inversed numeric axis
 
-By using  the [isInverted](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/isInversed.html) Property in Cartesian charts, the  numeric axis can be inverted.Axis is rendered from the minimum value to the maximum value by default, and can be inverted from the maximum value to the minimum value.
+By using  the [isInversed](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/isInversed.html) Property in Cartesian charts, the  numeric axis can be inverted.Axis is rendered from the minimum value to the maximum value by default, and can be inverted from the maximum value to the minimum value.
 
 {% highlight dart %} 
 
@@ -702,9 +702,9 @@ To customize the log base value, use the [`logBase`](https://pub.dev/documentati
 
 ![Logarithmic base](images/axis-types/log_base.jpg)
 
-### inversed logarithmic axis 
+### Inversed logarithmic axis 
 
-By using  the [isInverted](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/isInversed.html) Property in Cartesian charts, the  logarithmic axis can be inverted.Axis is rendered from the minimum value to the maximum value by default, and can be inverted from the maximum value to the minimum value.
+By using  the [isInversed](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/isInversed.html) Property in Cartesian charts, the  logarithmic axis can be inverted.Axis is rendered from the minimum value to the maximum value by default, and can be inverted from the maximum value to the minimum value.
 
 {% highlight dart %}
 

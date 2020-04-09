@@ -249,8 +249,8 @@ Chart supports watermark which allows you to mark the specific area of interest 
                   ),
         coordinateUnit: CoordinateUnit.point,
         region: AnnotationRegion.chart,
-        x: 6,
-        y: 36,
+        x: 3,
+        y: 38,
                  )
                 ] 
               )
