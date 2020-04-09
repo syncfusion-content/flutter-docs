@@ -12,11 +12,11 @@ This section explains about how to add the numeric and date range slider.
 
 ## Minimum
 
-The minimum value that the user can select. The default value of [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html) property is 0.0. Must be less than the [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) value.
+The minimum value that the user can select. The default value of [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html) property is 0.0 and must be less than the [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) value.
 
 ## Maximum
 
-The maximum value that the user can select. The default value of [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) property is 1.0. Must be greater than the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html).
+The maximum value that the user can select. The default value of [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) property is 1.0 and must be greater than the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html).
 
 ## Values
 
@@ -102,8 +102,6 @@ N> The range slider passes the new values to the callback but does not change it
 
 N> If it is null, the range slider will be disabled.
 
-**Enabled state**
-
 {% tabs %}
 {% highlight Dart %}
 
@@ -134,36 +132,9 @@ Widget build(BuildContext context) {
 
 ![Enabled range slider](images/basic-features/enabled-state.png)
 
-**Disabled state**
-
-{% tabs %}
-{% highlight Dart %}
-
-SfRangeValues _values = SfRangeValues(3.0, 7.0);
-
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfRangeSlider(
-                    min: 0.0,
-                    max: 10.0,
-                    values: _values,
-              )
-          )
-      )
-  );
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-![Disabled range slider](images/basic-features/disabled-state.png)
-
 ## Active color
 
-It represents the color applied to the active track, thumb, overlay, and inactive divisors. The `active` side of the range slider is between the start and end thumbs.
+It represents the color applied to the active track, thumb, overlay, and inactive divisors. The active side of the range slider is between the start and end thumbs.
 
 {% tabs %}
 {% highlight Dart %}
@@ -201,7 +172,7 @@ Widget build(BuildContext context) {
 
 It represents the color applied to the inactive track and active divisors.
 
-The `inactive` side of the range slider is between the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html) value and the left thumb, and the right thumb and the [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) value.
+The inactive side of the range slider is between the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html) value and the left thumb, and the right thumb and the [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) value.
 
 For RTL, the inactive side is between the [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) value and the left thumb, and the right thumb and the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html) value.
 
@@ -219,7 +190,7 @@ Widget build(BuildContext context) {
                     min: 0.0,
                     max: 10.0,
                     values: _values,
-                    activeColor: Colors .red,
+                    activeColor: Colors.red,
                     inactiveColor: Colors.red.withOpacity(0.2),
                     showDivisors: true,
                     onChanged: (SfRangeValues newValues) {
@@ -237,54 +208,6 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Inactive color support](images/basic-features/inactive-color.png)
-
-## Disabled color
-
-You can change the disable state color of the active and inactive track using the [`disabledActiveTrackColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/disabledActiveTrackColor.html) and [`disabledInactiveTrackColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/disabledInactiveTrackColor.html) properties, color of the disabled active and inactive major ticks using the [`disabledActiveTickColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/disabledActiveTickColor.html) and [`disabledInactiveTickColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/disabledInactiveTickColor.html) properties, color of the disabled active and inactive minor ticks using the [`disabledActiveMinorTickColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/disabledActiveMinorTickColor.html) and [`disabledInactiveMinorTickColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/disabledInactiveMinorTickColor.html) properties, color of the active and inactive divisors using the [`disabledActiveDivisorColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/disabledActiveDivisorColor.html) and [`disabledInactiveDivisorColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/disabledInactiveDivisorColor.html) properties, color of the disabled thumb color using the [`disabledThumbColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/disabledThumbColor.html) property.
-
-N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderTheme-class.html).
-
-{% tabs %}
-{% highlight Dart %}
-
-SfRangeValues _values = SfRangeValues(4.0, 8.0);
-
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfRangeSliderTheme(
-                    data: SfRangeSliderThemeData(
-                        disabledActiveTrackColor: Colors.orange,
-                        disabledInactiveTrackColor: Colors.orange[200],
-                        disabledActiveTickColor: Colors.orange,
-                        disabledInactiveTickColor: Colors.orange[200],
-                        disabledActiveMinorTickColor: Colors.orange,
-                        disabledInactiveMinorTickColor: Colors.orange[200],
-                        disabledActiveDivisorColor: Colors.purple,
-                        disabledInactiveDivisorColor: Colors.purple[200],
-                        disabledThumbColor: Colors.orange,
-                    ),
-                    child:  SfRangeSlider(
-                     min: 2.0,
-                     max: 10.0,
-                     interval: 2,
-                     showTicks: true,
-                     minorTicksPerInterval: 1,
-                     showDivisors: true,
-                     values: _values,
-                  ),
-              )
-          )
-      )
-  );
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-![Disabled color support](images/basic-features/slider-disabled-color.png)
 
 ### For customizing individual items
 

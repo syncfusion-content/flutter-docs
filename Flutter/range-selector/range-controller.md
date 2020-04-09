@@ -17,7 +17,7 @@ The `end` represents the currently selected end value of the range selector. The
 
 You can get previous values using `previousStart` and `previousEnd` properties.
 
-The `start`, `end`, `previousStart`, `previousEnd` properties can be either `double` or `DateTime`.
+The `start`, `end`, `previousStart`, `previousEnd` properties can be either `double` or `DateTime` based on whether it is date type [`SfRangeSelector`](https://help.syncfusion.com/flutter/range-selector/getting-started#set-date-range) or numeric [`SfRangeSelector`](https://help.syncfusion.com/flutter/range-selector/getting-started#set-numeric-range).
 
 I> You need not to set the [`initialValues`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/initialValues.html) property when using [`controller`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/controller.html) property in the range selector.
 
@@ -110,7 +110,9 @@ class Data {
 
 ![Range selector controller](images/range-controller/range-controller.png)
 
-### Selection with SfChart
+## Selection with SfChart
+
+We have provided built-in support for selecting the chart segments based on the selected range in range selector.
 
 {% tabs %}
 {% highlight Dart %}
@@ -200,7 +202,9 @@ class Data {
 {% endhighlight %}
 {% endtabs %}
 
-### Zooming with SfChart
+## Zooming with SfChart
+
+We have provided built-in support for updating the visible range of the chart based on the selected range in range selector.
 
 {% tabs %}
 {% highlight Dart %}
@@ -322,5 +326,3 @@ class Data {
 
 {% endhighlight %}
 {% endtabs %}
-
-![Zooming with SfChart](images/range-controller/range-controller-with-zooming.gif)
