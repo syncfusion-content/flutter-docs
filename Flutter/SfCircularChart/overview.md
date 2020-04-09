@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Overview of Syncfusion Flutter Charts
-description: Learn the key features available in the Syncfusion Circular Charts.
+description: Learn the key features available in Syncfusion Flutter Charts and overview about SYncfusion Flutter Charts.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Overview
+# Overview of Syncfusion Flutter Charts
 
 Syncfusion Flutter Charts is a data visualization library written natively in Dart for creating beautiful and high-performance charts, which are used to craft high-quality mobile app user interfaces using Flutter.
 

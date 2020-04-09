@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion Circular Chart Types
-description: description: Learn what are the different types of circular charts available in Syncfusion Flutter Charts and their properties.
+description: description: Learn what are the different types of circular charts available in SfCircular Charts and their properties.
 platform: flutter
 control: Chart
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Circular series customization in Syncfusion Flutter charts
-description: Learn how to customize the series features like animation, color palette, gradient, etc., in circular chart
+description: Learn how to customize the series features like animation, color palette, gradient, etc., in SfCircular chart
 platform: flutter
 control: Chart
 documentation: ug

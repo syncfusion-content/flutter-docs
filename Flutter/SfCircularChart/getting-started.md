@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Syncfusion Flutter Charts
-description: Learn how to create the syncfusion Flutter charts, add series, legend ,markers and other features in Chart.
+title: Getting Started with SfCircular Charts
+description: Learn how to create the SfCircular charts, add series, legend ,markers and other features in Chart.
 platform: flutter
 control: Chart
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion Flutter Chart Title
-description: Learn how to add chart title and customize its appearance such as text alignment in the Flutter Charts.
+description: Learn how to add chart title and customize its appearance such as text alignment in the SfCircular Charts.
 platform: flutter
 control: Chart
 documentation: ug

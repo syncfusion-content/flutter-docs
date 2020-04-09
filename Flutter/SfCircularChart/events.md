@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion Flutter Chart Events
-description: Learn what are all the events available in Flutter Charts. Events will be triggered on some specific actions in chart.
+description: Learn what are all the events available in Flutter Charts. Events will be triggered on some specific actions in SfCircular chart.
 platform: flutter
 control: Chart
 documentation: ug

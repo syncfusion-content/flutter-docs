@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Annotation in Syncfusion Flutter Charts
-description: Learn how to add and customize the Circular annotations available in the Syncfusion Flutter Chart widget.
+title: Annotation in SfCircular Charts
+description: Learn how to add and customize the Circular annotations available in the SfCircular Chart widget.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Annotation in Syncfusion flutter charts
+# Annotation in SfCircular charts
 
 Chart supports annotations which allows you to mark the specific area of interest in the chart area. You can add the custom widgets using this annotations feature as depicted below.
 

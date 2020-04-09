@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customizing the appearance of Syncfusion Flutter Charts
-description: Learn how to customize the appearance of Chart.
+title: Customizing the appearance of SfCircular Charts
+description: Learn how to customize the appearance of SfCircular Charts and the customizing properties available in SfCircular charts.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Appearance
+# Appearance of SfCircular Charts
 
 ## Chart sizing
 
