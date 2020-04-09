@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion Flutter Chart Axis types.
-description: description: Learn how to customize the grid lines, tick lines, labels and title of a chart axis in Syncfusion flutter charts.
+description: Learn how to customize the grid lines, tick lines, labels and title of a chart axis in Syncfusion flutter charts.
 platform: flutter
 control: Chart
 documentation: ug
