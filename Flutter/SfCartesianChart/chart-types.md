@@ -303,6 +303,10 @@ Data points with a null value are considered empty points. Empty data points are
                         series: <ChartSeries>[
                             AreaSeries<SalesData, double>(
                                 dataSource: chartData,
+                                color: Colors.deepOrange[300],
+                                borderMode: AreaBorderMode.excludeBottom,
+                                borderColor: Colors.green,
+                                borderWidth: 2,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales
                             )
@@ -319,7 +323,7 @@ Data points with a null value are considered empty points. Empty data points are
 
 
 
-### vertical area chart
+### Vertical area chart
 
 The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/isTransposed.html) property of [`CartesianSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries-class.html) is used to transpose the horizontal and vertical axes, to view the data in a different perspective. Using this feature, you can render vertical area chart.
 
@@ -385,7 +389,7 @@ To render a spline chart, create an instance of [`SplineSeries`](https://pub.dev
 
 ### Dashed spline
 
-The [`dashArray`]() property of the [`SplineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineSeries/SplineSeries.html) is used to render spline series with dashes. Odd value is considered as rendering size and even value is considered as gap.
+The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/dashArray.html) property of the [`SplineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineSeries/SplineSeries.html) is used to render spline series with dashes. Odd value is considered as rendering size and even value is considered as gap.
 
 {% highlight dart %} 
     
@@ -971,7 +975,7 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
 
 ### Bubble with multiple series
 
-Using the [`dataSource`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/dataSource.html) property in the Map charts, multiple series can be rendered in a bubble chart.
+Using the [`datasource`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/dataSource.html) property in the Map charts, multiple series can be rendered in a bubble chart.
 
 {% highlight dart %} 
     

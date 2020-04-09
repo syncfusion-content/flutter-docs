@@ -9,8 +9,6 @@ documentation: ug
 
 # Zooming and Panning in Flutter Charts
 
-* [`note:`]()
-      The above mentioned properties are only applicable for SfCartesian types of charts.
 
 ## Pinch zooming
 

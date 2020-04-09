@@ -9,7 +9,6 @@ documentation: ug
 
 # Multiple and Combinational Charts
 
-N> Multiple and Combinational Charts only applicable for [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html)
 
 ## Multiple series
 
@@ -92,4 +91,4 @@ Also refer [multiple axes](./axis-customization#multiple-axes) for customizing t
 
 **Limitation of combination chart**
 
-* Cartesian type series cannot be combined with circular series (pie, doughnut, and radial bar).
+* Cartesian type series cannot be combined with circular series (pie, doughnut, and radial bar).  
