@@ -118,12 +118,11 @@ Run the following command to get the required packages.
 
 **Import package**
 
-To use the Syncfusion Localization and Syncfusion Flutter Calendar widgets, import the following libraries in your Dart code.
+To use the `Syncfusion Localization` and `Syncfusion Flutter Calendar` widgets, import the following libraries in your Dart code.
 
 {% highlight dart %} 
 
     import 'package:syncfusion_flutter_calendar/calendar.dart';
-
     import 'package:syncfusion_localizations/syncfusion_localizations.dart';
 
 {% endhighlight %}
@@ -190,11 +189,9 @@ If you wish to add your own custom culture apart from the supported 74 languages
 Create a dart file in your application and import the required packages.
 
 {% highlight dart %} 
-
     import 'package:flutter/foundation.dart';
     import 'package:flutter/material.dart';
     import 'package:syncfusion_flutter_core/localizations.dart';
-
 {% endhighlight %}
 
 **Step 2**
