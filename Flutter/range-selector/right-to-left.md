@@ -46,7 +46,7 @@ Widget build(BuildContext context) {
 
 ![RTL support](images/right-to-left/right-to-left-support.png)
 
-You can also change the right to left direction by specifying locale, that supports RTL language such as (Arabic ,Persian ,Hebrew, Pashto and Urdu) by specifying the MaterialApp properties and adding the flutter_localizations package to your application.
+You can also change to right to left direction by specifying locale, that supports RTL language such as (Arabic ,Persian ,Hebrew, Pashto and Urdu) by specifying the MaterialApp properties and you need to add the flutter_localizations package to your application.
 
 {% highlight dart %}
 
