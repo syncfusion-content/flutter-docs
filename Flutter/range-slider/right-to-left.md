@@ -100,9 +100,11 @@ SfRangeValues _values = SfRangeValues(40.0, 60.0);
             },
           ),
         )
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ),
    );
 }
 
 {% endhighlight %}
 {% endtabs %}
+
+![RTL localization support](images/right-to-left/right-to-left-localization.png)
