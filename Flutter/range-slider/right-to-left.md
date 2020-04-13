@@ -73,10 +73,10 @@ SfRangeValues _values = SfRangeValues(40.0, 60.0);
       ],
       supportedLocales: [
         const Locale('es'),
-        const Locale('he'), //french
-        const Locale('ar') //spanish
+        const Locale('he'), //Hebrew
+        const Locale('ar') //Arabic
       ],
-      locale: const Locale('he'),
+      locale: const Locale('ar'),
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
