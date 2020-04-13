@@ -39,6 +39,8 @@ class MyAppState extends State<MyApp>{
 {% endhighlight %}
 {% endtabs %}
 
+![Displaydate Date Range Picker](images/date-navigations/displaydate.png)
+
 ## Programmatic view navigation
 You can programmatically navigate view in the calendar widget by using the [view](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/view.html) property of `DateRangePickerController`.
 
@@ -67,6 +69,8 @@ class MyAppState extends State<MyApp>{
 
 {% endhighlight %}
 {% endtabs %}
+
+![View navigation Date Range Picker](images/date-navigations/monthview.png)
 
 ## Programmatic date selection
 You can programmatically select the dates in the calendar widget by using the  `DateRangePickerController` property.
@@ -110,6 +114,8 @@ class MyAppState extends State<MyApp>{
 
 {% endhighlight %}
 {% endtabs %}
+
+![Programmatic selectedrange Date Range Picker](images/date-navigations/displaydate.png)
 
 ## Programmatically change to adjacent dates
 By default, the date can be navigated to next and previous views using the touch gesture, by swiping the control from right to left and left to right direction. The view can be also changed programmatically using the [forward](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/forward.html) and [backward](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/backward.html) methods that are available in the `DateRangePickerController`.
@@ -194,3 +200,42 @@ class MyAppState extends State<MyApp> {
 {% endhighlight %}
 {% endtabs %}
 
+
+## Navigation direction
+You can navigate the Month, Year, Decade, and Century views either `Vertical` or `Horizontal` directions by setting the [navigationDirection](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/navigationDirection.html) property of `DateRangePicker`.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDateRangePicker(
+        view: DateRangePickerView.month,
+        navigationDirection: DateRangePickerNavigationDirection.vertical),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Show navigation arrow
+Using the [showNavigationArrow](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/showNavigationArrow.html) property of the `DateRangePicker` you can move to the next or previous views of the picker without swiping.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDateRangePicker(
+      view: DateRangePickerView.month,
+      showNavigationArrow: true,
+    ),
+  );
+}
+
+![Navigation arrow in Date Range Picker](images/date-navigations/navigationarrow.png)
+
+{% endhighlight %}
+{% endtabs %}

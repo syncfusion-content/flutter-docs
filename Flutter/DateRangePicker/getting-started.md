@@ -105,8 +105,150 @@ Widget build(BuildContext context) {
     );
 }
 
+![First day of week Date Range Picker](images/getting-started/firstdayofweek.png)
+
 {% endhighlight %}
 {% endtabs %}
+
+## Initial display date
+You can set the initial display date of date range picker by using the [initialDisplayDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/initialDisplayDate.html) property that displays the `DateRangePicker` based on the given date-time. By default, the current date will be set to `initialDisplayDate`.
+{% tabs %}
+
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDateRangePicker(
+        view: DateRangePickerView.month,
+        initialDisplayDate: DateTime(2020,3,1,9,0,0),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Initial display date in Date Range Picker](images/getting-started/initialdisplaydate.png)
+
+## Initial selected date
+You can select the specific date of the date range picker by setting corresponding date value to the [initialSelectedDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/initialSelectedDate.html) property of `DateRangePicker`. 
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDateRangePicker(
+        view: DateRangePickerView.month,
+        initialSelectedDate: DateTime.now(),
+	),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Initial selected date in Date Range Picker](images/getting-started/initialselecteddate.png)
+
+## Initial selected dates
+You can set the selected dates for `DateRangePicker` by setting corresponding dates to the [initialSelectedDates](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/initialSelectedDates.html) property. 
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDateRangePicker(
+      view: DateRangePickerView.month,
+      selectionMode: DateRangePickerSelectionMode.multiple,
+      initialSelectedDates: List<DateTime>()
+        ..add(DateTime(2020, 04, 20))
+        ..add(DateTime(2020, 04, 16))
+        ..add(DateTime(2020, 04, 17))
+        ..add(DateTime(2020, 04, 30))
+        ..add(DateTime(2020, 04, 07))
+        ..add(DateTime(2020, 04, 03)),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Initial selected dates in Date Range Picker](images/getting-started/initialselecteddates.png)
+
+## Initial selected range
+You can set the selected range for `DateRangePicker` by setting start end range to the [initialSelectedRange](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/initialSelectedRange.html) property.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDateRangePicker(
+        view: DateRangePickerView.month,
+        selectionMode: DateRangePickerSelectionMode.range,
+        initialSelectedRange: PickerDateRange(
+            DateTime.now(), DateTime.now().add(Duration(days: 5)))),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Initial selected range in Date Range Picker](images/getting-started/initialselectedrange.png)
+
+## Initial selected ranges
+You can set more than one selected range for `DateRangePicker` by setting start and end ranges to the [initialSelectedRanges](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/initialSelectedRanges.html) property.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDateRangePicker(
+        view: DateRangePickerView.month,
+        selectionMode: DateRangePickerSelectionMode.multiRange,
+        initialSelectedRanges: List<PickerDateRange>()
+          ..add(
+            PickerDateRange(
+                DateTime.now(), DateTime.now().add(Duration(days: 5))),
+          )..add(
+            PickerDateRange(DateTime(2020, 4, 21), DateTime(2020, 4, 28)),
+          )),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Initial selected ranges in Date Range Picker](images/getting-started/initialselectedranges.png)
+
+## Background color
+You can customize background of the `DateRangePicker` using the [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/backgroundColor.html) property. 
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDateRangePicker(
+      view: DateRangePickerView.month,
+      backgroundColor: Color(0xFFF6D55C),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Backgroundcolor Date Range Picker](images/getting-started/backgroundcolor.png)
 
 ## Date selection
 
@@ -139,4 +281,4 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-  ![Date selection Date Range Picker](images/getting-started/range-selection.png)
+![Date selection Date Range Picker](images/getting-started/range-selection.png)
