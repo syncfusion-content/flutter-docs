@@ -8,8 +8,7 @@ documentation: ug
 ---
 
 # Getting Started with Flutter calendar (SfCalendar)
-This section explains the steps required to add the calendar widget and populate appointments to the calendar widget. This section covers only basic features needed to get started with Syncfusion calendar widget.
-
+This section explains the steps required to add the calendar widget and populate appointments to the calendar widget. This section covers only basic features needed to get started with the Syncfusion calendar widget.
 ## Add Flutter calendar to an application
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
 
