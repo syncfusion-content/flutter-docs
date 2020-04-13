@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customizing the appearance of Syncfusion Flutter Charts
-description: Learn how to customize the appearance of Chart.
+description: Learn how to customize the appearance of SfPyramid Charts and the customizing properties available in SfPyramid charts.
 platform: flutter
 control: Chart
 documentation: ug

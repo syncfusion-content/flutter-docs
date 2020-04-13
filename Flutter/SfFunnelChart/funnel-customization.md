@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Funnel Chart
+# Funnel Chart Customization
 
 To render a funnel chart, create an instance of [`FunnelSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/series.html) property of [`SfFunnelChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart-class.html). The following properties are used to customize the appearance of a funnel segment:
 
