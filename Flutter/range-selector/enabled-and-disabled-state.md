@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Disabled state in Syncfusion Flutter Range Selector | Syncfusion
-description: This section helps to learn about the disabled state in the Flutter range selector
+description: This section helps to learn about the disabled state of the range selector and its feature in the Flutter platform
 platform: Flutter
 control: SfRangeSelector
 documentation: ug
