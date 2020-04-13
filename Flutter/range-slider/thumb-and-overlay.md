@@ -11,6 +11,9 @@ documentation: ug
 
 This section helps to learn about how to customize the thumb and thumb overlay in the range slider.
 
+* Thumb - It is one of the elements of range slider which can be used to drag and change the selected values of the range slider.
+* Thumb overlay - It is rendered around the thumb while interacting with them.
+
 ## Thumb size
 
 You can change the size of the thumb in the range slider using the [`thumbRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/thumbRadius.html) property.
