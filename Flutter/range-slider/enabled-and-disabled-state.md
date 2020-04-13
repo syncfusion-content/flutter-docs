@@ -1,49 +1,15 @@
 ---
 layout: post
-title: Enable & Disable state in Syncfusion Flutter Range Slider | Syncfusion
-description: This section helps to learn about how to add enabled and disabled state in the range slider for Flutter platform
+title: Disable state in Syncfusion Flutter Range Slider | Syncfusion
+description: This section helps to learn about the disabled state in the Flutter range selector
 platform: Flutter
 control: SfRangeSlider
 documentation: ug
 ---
 
-# Enabled and disabled state in range slider
+# Disabled state in range slider
 
-This section helps to learn about how to add enabled and disabled state in the range slider.
-
-## Enabled state
-
-The range slider will goes to enabled state when setting [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onChanged.html) property.
-
-{% tabs %}
-{% highlight Dart %}
-
-SfRangeValues _values = SfRangeValues(3.0, 7.0);
-
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: SfRangeSlider(
-                    min: 0.0,
-                    max: 10.0,
-                    values: _values,
-                    onChanged: (SfRangeValues newValues) {
-                       setState(() {
-                           _values = newValues;
-                        });
-                   },
-              )
-          )
-      )
-  );
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-![Enabled range slider](images/enabled-and-disabled/enabled-state.png)
+This section helps to learn about the disabled state in the Flutter range slider.
 
 ## Disabled state
 
@@ -76,7 +42,13 @@ Widget build(BuildContext context) {
 
 ## Disabled color
 
-You can change the disable state color of the active and inactive track using the [`disabledActiveTrackColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/disabledActiveTrackColor.html) and [`disabledInactiveTrackColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/disabledInactiveTrackColor.html) properties, color of the disabled active and inactive major ticks using the [`disabledActiveTickColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/disabledActiveTickColor.html) and [`disabledInactiveTickColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/disabledInactiveTickColor.html) properties, color of the disabled active and inactive minor ticks using the [`disabledActiveMinorTickColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/disabledActiveMinorTickColor.html) and [`disabledInactiveMinorTickColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/disabledInactiveMinorTickColor.html) properties, color of the active and inactive divisors using the [`disabledActiveDivisorColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/disabledActiveDivisorColor.html) and [`disabledInactiveDivisorColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/disabledInactiveDivisorColor.html) properties, color of the disabled thumb color using the [`disabledThumbColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/disabledThumbColor.html) property.
+You can change the color of the range slider features in disabled state.
+
+* The color of the active and inactive track using the [`disabledActiveTrackColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/disabledActiveTrackColor.html) and [`disabledInactiveTrackColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/disabledInactiveTrackColor.html) properties.
+* The color of the active and inactive major ticks using the [`disabledActiveTickColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/disabledActiveTickColor.html) and [`disabledInactiveTickColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/disabledInactiveTickColor.html) properties.
+* The color of the active and inactive minor ticks using the [`disabledActiveMinorTickColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/disabledActiveMinorTickColor.html) and [`disabledInactiveMinorTickColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/disabledInactiveMinorTickColor.html) properties.
+* The color of the active and inactive divisors using the [`disabledActiveDivisorColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/disabledActiveDivisorColor.html) and [`disabledInactiveDivisorColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/disabledInactiveDivisorColor.html) properties.
+* The color of the thumb using the [`disabledThumbColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/disabledThumbColor.html) property.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderTheme-class.html).
 
