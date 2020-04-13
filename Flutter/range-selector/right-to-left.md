@@ -72,8 +72,8 @@ Widget build(BuildContext context) {
       ],
       supportedLocales: [
         const Locale('es'),
-        const Locale('he'), //french
-        const Locale('ar') //spanish
+        const Locale('he'), //Hebrew
+        const Locale('ar') //Arabic
       ],
       locale: const Locale('ar'),
       title: 'Flutter Demo',
