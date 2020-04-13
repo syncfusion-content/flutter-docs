@@ -55,6 +55,8 @@ N>
 
 ## Tooltip text format
 
+By default it is formatted based on [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/numberFormat.html) property and [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateFormat.html) property based on whether it is date type [`SfRangeSlider`](https://help.syncfusion.com/flutter/range-slider/getting-started#set-date-range) or numeric [`SfRangeSlider`](https://help.syncfusion.com/flutter/range-slider/getting-started#set-numeric-range).
+
 You can format or change the whole tooltip label text. Its arguments contains the following parameters:
 
 * actualValue – either `DateTime` or `double` based on given [`values`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/values.html).
@@ -120,14 +122,14 @@ Widget build(BuildContext context) {
                         tooltipBackgroundColor: Colors.red[300],
                     ),
                     child:  SfRangeSlider(
-                     min: 2.0,
-                     max: 10.0,
-                     interval: 1,
-                     showTicks: true,
-                     showLabels: true,
-                     showTooltip: true,
-                     values: _values,
-                     onChanged: (SfRangeValues newValues){
+                        min: 2.0,
+                        max: 10.0,
+                        interval: 1,
+                        showTicks: true,
+                        showLabels: true,
+                        showTooltip: true,
+                        values: _values,
+                        onChanged: (SfRangeValues newValues){
                             setState(() {
                                 _values = newValues;
                             });

@@ -17,7 +17,7 @@ The `end` represents the currently selected end value of the range selector. The
 
 You can get previous values using `previousStart` and `previousEnd` properties.
 
-The `start`, `end`, `previousStart`, `previousEnd` properties can be either `double` or `DateTime`.
+The `start`, `end`, `previousStart`, `previousEnd` properties can be either `double` or `DateTime` based on whether it is date type [`SfRangeSelector`](https://help.syncfusion.com/flutter/range-selector/getting-started#set-date-range) or numeric [`SfRangeSelector`](https://help.syncfusion.com/flutter/range-selector/getting-started#set-numeric-range).
 
 I> You need not to set the [`initialValues`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/initialValues.html) property when using [`controller`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/controller.html) property in the range selector.
 
@@ -110,7 +110,9 @@ class Data {
 
 ![Range selector controller](images/range-controller/range-controller.png)
 
-### Selection with SfChart
+## Selection with SfChart
+
+We have provided built-in support for selecting the chart segments based on the selected range in range selector.
 
 {% tabs %}
 {% highlight Dart %}
@@ -200,7 +202,9 @@ class Data {
 {% endhighlight %}
 {% endtabs %}
 
-### Zooming with SfChart
+## Zooming with SfChart
+
+We have provided built-in support for updating the visible range of the chart based on the selected range in range selector.
 
 {% tabs %}
 {% highlight Dart %}
@@ -247,7 +251,7 @@ final List<Data> chartData = <Data>[
 @override
 Widget build(BuildContext context) {
     splineChart = SfCartesianChart(
-      margin: const EdgeInsets.all(0),
+      margin: const EdgeInsets.only(left: 10, right: 10, bottom: 20),
       primaryXAxis: NumericAxis(
           minimum: _min,
           maximum: _max,
@@ -259,6 +263,7 @@ Widget build(BuildContext context) {
         SplineSeries<Data, double>(
             color: Color.fromARGB(255, 126, 184, 253),
             dataSource: chartData,
+            animationDuration: 0,
             xValueMapper: (Data sales, _) => sales.x,
             yValueMapper: (Data sales, _) => sales.y)
       ],
@@ -267,7 +272,7 @@ Widget build(BuildContext context) {
     return Scaffold(
         body: Center(
           child: Padding(
-            padding: EdgeInsets.only(left: 10, right: 10),
+            padding: EdgeInsets.only(left: 10, right: 10, top: 80),
             child: Column(
               children: <Widget>[
                 Container(
@@ -276,7 +281,7 @@ Widget build(BuildContext context) {
                 SfRangeSelector(
                   min: _min,
                   max: _max,
-                  interval: 1,
+                  interval: 2,
                   showTicks: true,
                   showLabels: true,
                   controller: _rangeController,
@@ -287,8 +292,7 @@ Widget build(BuildContext context) {
                       primaryXAxis: NumericAxis(
                           minimum: _min,
                           maximum: _max,
-                          isVisible: false,
-                          rangeController: _rangeController),
+                          isVisible: false),
                       primaryYAxis: NumericAxis(isVisible: false),
                       plotAreaBorderWidth: 0,
                       series: <SplineSeries<Data, double>>[
@@ -304,8 +308,8 @@ Widget build(BuildContext context) {
               ],
             ),
           ),
-        ));
-  }
+       )
+    );
 }
 
 {% endhighlight %}
