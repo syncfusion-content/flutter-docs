@@ -181,6 +181,69 @@ class Data {
 
 ![Date range selector](images/basic-features/selector_date_label.png)
 
+## OnChanged callback
+
+The [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/onChanged.html) callback is called when the user is selecting the new values.
+
+{% tabs %}
+{% highlight Dart %}
+
+final SfRangeValues _initialValues = SfRangeValues(0.3, 0.7);
+
+final List<Data> _chartData = <Data>[
+  Data(x: DateTime(2003, 01, 01), y: 3.4),
+  Data(x: DateTime(2004, 01, 01), y: 2.8),
+  Data(x: DateTime(2005, 01, 01), y: 1.6),
+  Data(x: DateTime(2006, 01, 01), y: 2.3),
+  Data(x: DateTime(2007, 01, 01), y: 2.5),
+  Data(x: DateTime(2008, 01, 01), y: 2.9),
+  Data(x: DateTime(2009, 01, 01), y: 3.8),
+  Data(x: DateTime(2010, 01, 01), y: 2.0),
+];
+
+@override
+Widget build(BuildContext context) {
+  return Container(
+      child: Center(
+        child: SfRangeSelector(
+          initialValues: _initialValues,
+          onChanged: (SfRangeValues values) {
+          },
+          child: Container(
+            child: SfCartesianChart(
+              margin: const EdgeInsets.all(0),
+              primaryXAxis: DateTimeAxis(
+                isVisible: false,),
+              primaryYAxis: NumericAxis(isVisible: false, maximum: 4),
+              series: <SplineAreaSeries<Data, DateTime>>[
+                SplineAreaSeries<Data, DateTime>(
+                    dataSource: _chartData,
+                    xValueMapper: (Data sales, _) => sales.x,
+                    yValueMapper: (Data sales, _) => sales.y)
+              ],
+            ),
+            height: 250,
+          ),
+        ),
+      ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Dart %}
+
+class Data {
+  Data({this.x, this.y});
+  final DateTime x;
+  final double y;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Active color
 
 It represents the color applied to the active track, thumb, overlay, and inactive divisors.
