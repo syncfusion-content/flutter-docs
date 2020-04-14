@@ -1,19 +1,53 @@
 ---
 layout: post
-title: Disable state in Syncfusion Flutter Range Slider | Syncfusion
-description: This section helps to learn about the disabled state of the range slider and its feature in the Flutter platform
+title: Enable & disable state in Syncfusion Flutter Range Slider | Syncfusion
+description: This section helps to learn about the enabled and disabled state of the range slider and its feature in the Flutter platform
 platform: Flutter
 control: SfRangeSlider
 documentation: ug
 ---
 
-# Disabled state in range slider
+# Enabled and disabled state in range slider
 
-This section helps to learn about the disabled state in the Flutter range slider.
+This section helps to learn about the enabled and disabled state in the Flutter range slider.
+
+## Enabled state
+
+The range slider will be in enabled state if [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onChanged.html) is set.
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(3.0, 7.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSlider(
+                    min: 0.0,
+                    max: 10.0,
+                    values: _values,
+                    onChanged: (SfRangeValues newValues) {
+                       setState(() {
+                           _values = newValues;
+                        });
+                   },
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Enabled state](images/enabled-and-disabled/enabled-state.png)
 
 ## Disabled state
 
-The range slider will goes to disabled state when setting [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onChanged.html) property to `null`.
+The range slider will be in disabled state if [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onChanged.html) is `null`.
 
 {% tabs %}
 {% highlight Dart %}
