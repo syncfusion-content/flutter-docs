@@ -11,11 +11,13 @@ documentation: ug
 
 ## Date and number formats
 
-Our Syncfusion Flutter widgets will format the culturally based date, currency and numbers.
+Our Syncfusion Flutter widgets will format the culturally based date, and numbers.
 
-* [`chart`](https://pub.dev/packages/syncfusion_flutter_charts) - Supports formats with number, date, and currency.
-* [`calendar`](https://pub.dev/packages/syncfusion_flutter_calendar) - Supports with date format.
-* [`sliders`](https://pub.dev/packages/syncfusion_flutter_sliders) - Supports formats with number and date.
+* [`Chart`](https://pub.dev/packages/syncfusion_flutter_charts) - Supports formats with [`number`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/numberFormat.html), [`date`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/dateFormat.html). The currency format can be achieved with the number format.
+* [`Calendar`](https://pub.dev/packages/syncfusion_flutter_calendar) - Supports formats with [`date`](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AgendaStyle/dayTextStyle.html).
+* [`Date range picker`](https://pub.dev/packages/syncfusion_flutter_datepicker) - Supports formats with [`date`](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/dayFormat.html).
+* [`Range slider`](https://pub.dev/packages/syncfusion_flutter_sliders) - Supports formats with [`number`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/numberFormat.html) and [`date`](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/dayFormat.html).
+* [`Range selector`](https://pub.dev/packages/syncfusion_flutter_sliders) - Supports formats with [`number`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/numberFormat.html) and [`date`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dateFormat.html).
 
 ## Localizations
 
@@ -134,8 +136,6 @@ To use the [`Syncfusion Localization`](https://pub.dev/packages/syncfusion_local
     import 'package:syncfusion_localizations/syncfusion_localizations.dart';
 
 {% endhighlight %}
-
-**Initialize calendar**
 
 After importing the required packages, initialize the [`calendar`](https://pub.dev/packages/syncfusion_flutter_calendar) widget as a child of any widget and specify `localizationsDelegates` and `supportedLocales` for the MaterialApp.
 
