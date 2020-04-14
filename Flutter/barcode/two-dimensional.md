@@ -197,11 +197,11 @@ Type - Data Matrix supports the following data types,
 
 `Byte`
 
-The encoded data size depends upon the length and data type of provided input values.
+The [`encoded data size`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/DataMatrix/dataMatrixSize.html) depends upon the length and data type of provided input values.
 
 **Encoding Methods**
 
-Data Matrix supports following encoding types, 
+Data Matrix supports following [`encoding types`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/DataMatrix/encoding.html), 
 
 `Auto`,
 
