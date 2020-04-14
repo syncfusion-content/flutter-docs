@@ -11,21 +11,19 @@ documentation: ug
 
 The Syncfusion theme widget allows you to apply colors, font-styles, etc in the application level across all the Syncfusion Flutter widgets with a uniform approach and provide a consistent look.
 
-## Getting started
+### How to use syncfusion_flutter_core package
 
-**Add dependency**
-
-The theme widget is available in the `syncfusion_flutter_core` package. Since all our widgets are core dependent, you don't need to include the core as a separate package. Here for example purpose to depict the theme widget working model, we have included the chart package in the pub spec file.
+The theme widget is available in the [`syncfusion_flutter_core`](https://pub.dev/packages/syncfusion_flutter_core) package. Since all our widgets are core dependent, you don't need to include the core as a separate package. Here for example purpose to depict the theme widget working model, we have included the [`syncfusion_flutter_charts`](https://pub.dev/packages/syncfusion_flutter_charts) package in the pub spec file.
 
 {% highlight dart %} 
 
     dependencies:
 
-    syncfusion_flutter_charts: ^XX.X.XX
+    syncfusion_flutter_charts: ^xx.x.xx
 
 {% endhighlight %}
 
-*Note* - Here **XX.X.XX** denotes the current version of [`Syncfusion Flutter Chart`](https://pub.dev/packages/syncfusion_flutter_charts/versions) widget.
+N> Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Chart`](https://pub.dev/packages/syncfusion_flutter_charts/versions) widget.
 
 **Get packages**
 
@@ -74,7 +72,7 @@ By default, the light theme will be applied. You can apply a dark theme using th
 
 ## Individual theme widget
 
-Using the `SfTheme` widget you can apply theme across all the Syncfusion Flutter widgets with a uniform approach. If you wish to apply a specific theme to a specific widget alone, this can be achieved using the individual theme widget. For example, `SfChartTheme` widget in case of `chart` widget and `SfCalendarTheme` in case of `calendar` widget. In the below example, we have used `chart` widget.
+Using the [`SfTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfTheme-class.html) widget you can apply theme across all the Syncfusion Flutter widgets with a uniform approach. If you wish to apply a specific theme to a specific widget alone, this can be achieved using the individual theme widget. For example, [`SfChartTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChartTheme-class.html) widget in case of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html), [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html), [`SfPyramidChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart-class.html), [`SfPyramidChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart-class.html) widgets and [`SfCalendarTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfCalendarTheme-class.html) in case of [`SfCalendar`](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html) widget. In the below example, we have used [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) widget.
 
 {% highlight dart %} 
 
