@@ -11,13 +11,53 @@ documentation: ug
 
 ## Date and number formats
 
-Our Syncfusion Flutter widgets will format the culturally based date, and numbers.
+Syncfusion Flutter widgets support formatting dates and numbers based on culture. For more details, you can refer to the following links.
 
-* [`Chart`](https://pub.dev/packages/syncfusion_flutter_charts) - Supports formats with [`number`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/numberFormat.html), [`date`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/dateFormat.html). The currency format can be achieved with the number format.
-* [`Calendar`](https://pub.dev/packages/syncfusion_flutter_calendar) - Supports formats with [`date`](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/AgendaStyle/dayTextStyle.html).
-* [`Date range picker`](https://pub.dev/packages/syncfusion_flutter_datepicker) - Supports formats with [`date`](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/dayFormat.html).
-* [`Range slider`](https://pub.dev/packages/syncfusion_flutter_sliders) - Supports formats with [`number`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/numberFormat.html) and [`date`](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/dayFormat.html).
-* [`Range selector`](https://pub.dev/packages/syncfusion_flutter_sliders) - Supports formats with [`number`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/numberFormat.html) and [`date`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dateFormat.html).
+<table>
+    <tr>
+        <td>
+            Chart
+        </td>
+        <td>
+             <a href="https://help.syncfusion.com/flutter/chart/axis-types#formatting-the-labels">Number</a> <br/>
+             <a href="https://help.syncfusion.com/flutter/chart/axis-types#formatting-the-labels-1">Date</a>
+        </td>
+    </tr>
+	<tr>
+        <td>
+            Calendar
+        </td>
+        <td>
+            <a href="https://help.syncfusion.com/flutter/calendar/month-view#view-header-dayformat">Date</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Date range <br/> picker
+        </td>
+        <td>
+            <a href="https://help.syncfusion.com/flutter/daterangepicker/headers#view-header-day-format">Date</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          Range slider
+        </td>
+       <td>
+           <a href="https://help.syncfusion.com/flutter/range-slider/labels-and-divisor#number-format">Number</a><br/>
+           <a href="https://help.syncfusion.com/flutter/range-slider/labels-and-divisor#date-format">Date</a>
+      </td>
+  </tr>
+  <tr>
+        <td>
+            Range selector
+        </td>
+        <td>
+            <a href="https://help.syncfusion.com/flutter/range-selector/labels-and-divisor#number-format">Number</a><br/>
+            <a href="https://help.syncfusion.com/flutter/range-selector/labels-and-divisor#date-format">Date</a>
+        </td>
+    </tr>
+</table>
 
 ## Localizations
 
@@ -101,7 +141,7 @@ By default, the Syncfusion widgets are implemented with English localization (en
 
 ### How to use syncfusion_localizations package
 
-Here we have depicted the working layout of the [`localization`](https://pub.dev/packages/syncfusion_localizations) widget using the [`calendar`](https://pub.dev/packages/syncfusion_flutter_calendar) widget.
+Here, lets see how to localize texts in the calendar using our [`syncfusion_localizations`](https://pub.dev/packages/syncfusion_localizations) package.
 
 To accomplish this add to your pub spec file the [`syncfusion_localizations`](https://pub.dev/packages/syncfusion_localizations) and the [`syncfusion_flutter_calendar`](https://pub.dev/packages/syncfusion_flutter_calendar) packages as dependency.
 
@@ -115,18 +155,6 @@ To accomplish this add to your pub spec file the [`syncfusion_localizations`](ht
 {% endhighlight %}
 
 N> Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter`](https://pub.dev/publishers/syncfusion.com/packages ) widgets.
-
-**Get packages**
-
-Run the following command to get the required packages.
-
-{% highlight dart %} 
-
-    $ flutter pub get
-
-{% endhighlight %}
-
-**Import package**
 
 To use the [`Syncfusion Localization`](https://pub.dev/packages/syncfusion_localizations) and [`Syncfusion Flutter Calendar`](https://pub.dev/packages/syncfusion_flutter_calendar) widgets, import the following libraries in your Dart code.
 
@@ -190,7 +218,7 @@ And some languages may require more than language code to differentiate properly
 
 ### Custom culture support
 
-If you wish to add your own custom culture apart from the supported 74 languages, you can use the extendability options to achieve this in the application level. Here, we have depicted using the Estonian(et) language.
+If you wish to add your own custom culture apart from the supported 74 languages, you can extend the [`SfLocalizations`](https://pub.dev/documentation/syncfusion_flutter_core/latest/localizations/SfLocalizations-class.html) class and override the required properties. This has been depicted in the following example for the Estonian(et) language.
 
 **Step 1**
 
@@ -282,8 +310,8 @@ Import the created dart file in your application and specify the `localizationsD
 
 {% endhighlight %}
 
-![extendability](images/localization_extendability.png)
+![Localization](images/localization_extendability.png)
 
 The sample for reference can be found below.
 
-[`Localization extendability sample`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/sync_localizations275997229)
+[`Custom Localization Sample`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/sync_localizations275997229)
