@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Funnel series customization in Syncfusion Flutter charts
-description: Learn how to customize the series features like animation, color palette, gradient, etc., in SfFunnel chart
+description: Learn how to customize the series features like animation, empty points mode, gradient, etc., in SfFunnel chart
 platform: flutter
 control: Chart
 documentation: ug
@@ -34,35 +34,6 @@ documentation: ug
     }
 
 {% endhighlight %}
-
-## Color Palette
-
-[`SfFunnelChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart-class.html) provides Color Palette property called [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/palette.html) for the data points in the chart series. If the series color is not specified, then the series will be rendered with appropriate palette color. Ten colors are available by default.
-
-
-{% highlight dart %} 
-
-    @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfFunnelChart(
-                      palette: <Color>[Colors.amber, Colors.brown, Colors.green, Colors.redAccent, Colors.blueAccent, Colors.teal],
-                        series:FunnelSeries<ChartData, String>(
-                            dataSource: chartData,
-                            xValueMapper: (ChartData data, _) => data.x,
-                            yValueMapper: (ChartData data, _) => data.y,
-                        )
-                    )
-                )
-            )
-        );
-    }
-
-{% endhighlight %}
-
-![Color Palette](images/Funnel-customization/color_palette.png)
 
 ## Empty points
 
