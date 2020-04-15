@@ -50,7 +50,7 @@ The [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 * [`iconWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/iconWidth.html) - used to change the width of the icon shape.
 * [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/borderWidth.html) – used to change the stroke width of the legend icon shape.
 * [`iconBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/iconBorderColor.html) – used to change the stroke color of the legend icon shape.
-* [`itemPadding`]() - used to add padding between the first legend text and the second legend icon shape.
+* [`itemPadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/itemPadding.html) - used to add padding between the first legend text and the second legend icon shape.
 
 {% highlight dart %} 
 
@@ -282,7 +282,7 @@ The legend items can be placed in multiple rows or scroll can be enabled using t
 
 You can change the position of the legend inside the chart. The following properties are used to customize the position of legend. **auto** position will place the legend at the right, if the chart's width is greater than the chart's height. Else the legend will be placed at the bottom position.
 
-* [`position`]() – used to position the legend relatively. The available options are [`auto`](), [`bottom`](), [`left`](), [`right`](), and [`top`](). Defaults to auto.
+* [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendPosition-class.html) – used to position the legend relatively. The available options are [`auto`](), [`bottom`](), [`left`](), [`right`](), and [`top`](). Defaults to auto.
 * [`orientation`]() - used to change the orientation of the legend, the default value is [`auto`](). Also you can set [`horizontal`]() or [`vertical`]().
 
 {% highlight dart %} 

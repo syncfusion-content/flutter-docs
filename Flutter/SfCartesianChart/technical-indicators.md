@@ -39,7 +39,7 @@ To render any indicator, add it to the [`TechnicalIndicators`](https://pub.dev/d
 * [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/name.html) - Used to define the label for corresponding indicators.
 * [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/dashArray.html) - Used to render the indicators with dashes.
 
-N> If you giving series and indicator in the chart, you can add  the same [`seriesName`]() to the series and indicator, otherwise you can directly bind the [`dataSource`]() to the [`indicators`]() property.
+*Note* If you giving series and indicator in the chart, you can add  the same [`seriesName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/seriesName.html) to the series and indicator, otherwise you can directly bind the [`dataSource`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/dataSource.html) to the [`indicators`]() property.
 
 ## Indicator Types
 
@@ -279,7 +279,7 @@ The [`Simple moving average indicator`](https://pub.dev/documentation/syncfusion
 
 ### Stochastic indicator
 
-This indicator is used to measure the range and momentum of price movements. It contains [`kPeriod`]() and [`dPeriod`]() property defining the ‘k’ percentage and ‘d’ percentage respectively.
+This indicator is used to measure the range and momentum of price movements. It contains [`kPeriod`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StochasticIndicator/kPeriod.html) and [`dPeriod`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StochasticIndicator/dPeriod.html) property defining the ‘k’ percentage and ‘d’ percentage respectively.
 
 In this indicator [`upperLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StochasticIndicator/upperLineColor.html),[`lowerLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StochasticIndicator/lowerLineColor.html) and [`periodLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StochasticIndicator/periodLineColor.html) property are used to define the color for the Stochastic indicator lines.
 
