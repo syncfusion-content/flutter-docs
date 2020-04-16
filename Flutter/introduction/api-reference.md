@@ -12,7 +12,7 @@ documentation: ug
 This page helps to navigate to the public API's available in the Syncfusion Flutter widgets.
 
 <table>
-    tr>
+    <tr>
         <td>
             Barcode Generator
         </td>
@@ -61,12 +61,20 @@ This page helps to navigate to the public API's available in the Syncfusion Flut
         </td>
     </tr>
     <tr>
-          <td>
-              Range Selector
-          </td>
-          <td>
-              <a href="https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html">Link</a>
-          </td>
+        <td>
+            Range Selector
+        </td>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html">Link</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Range Slider
+        </td>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html">Link</a>
+        </td>
     </tr>
      <tr>
           <td>
