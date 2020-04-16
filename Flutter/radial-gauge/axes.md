@@ -65,7 +65,7 @@ The radius of the radial axis can be customized using the [`radiusFactor`](https
 
 {% highlight dart %}
 
-@@override
+@override
 Widget build(BuildContext context) {
   return Scaffold(
     body: Center(
@@ -106,6 +106,29 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 
 ![axis position customization](images/axis/axis_center.jpg)
+
+**Positioning axis based on its angle**
+
+The [`canScaleToFit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/canScaleToFit.html) property of [`radial axis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis-class.html) allows to position the axis and its features based on the provided [`start`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/startAngle.html) and [`end angle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/endAngle.html). By default, the [`canScaleToFit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/canScaleToFit.html) is false, therefore the axis will be positioned based on the [`centerX`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/centerX.html) and [`centerY`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/centerY.html) value. 
+
+{% highlight dart %}
+
+  @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: Center(
+          child: SfRadialGauge(
+            axes: <RadialAxis>[RadialAxis( startAngle: 180, endAngle: 0,
+                interval: 10,
+                canScaleToFit: true)]),
+      ),
+    );
+  }
+
+{% endhighlight %}
+
+![axis fit to scale](images/axis/axis_fitToScale.png)
+
 
 **Axis label rotation**
 
@@ -230,7 +253,7 @@ The radial axis line can be customized using the [`axisLineStyle`](https://pub.d
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLineStyle/color.html) – Customizes the color of the axis line.
 * [`cornerStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLineStyle/cornerStyle.html) – Allows to customize the corner of the axis line.
 * [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLineStyle/dashArray.html) – Allows to customize the axis line as dashed circular arc.
-* `gradient` - Allows to apply the gradient for axis line.
+* [`gradient`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLineStyle/gradient.html) - Allows to apply the gradient for axis line.
 
 {% highlight dart %}
 
@@ -299,7 +322,7 @@ Widget build(BuildContext context) {
 
 **Gradient support**
 
-The `gradient` property of [`axisLineStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLineStyle-class.html) allows to specify the smooth color transition to the axis line by specifying the different colors based on provided factor value.
+The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLineStyle/gradient.html) property of [`axisLineStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLineStyle-class.html) allows to specify the smooth color transition to the axis line by specifying the different colors based on provided factor value.
 
 {% highlight dart %}
 
@@ -350,7 +373,7 @@ Widget build(BuildContext context) {
 
 **Background image support**
 
-[`Radial axis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis-class.html) allows to add an image frame as its background using `backgroundImage` property.
+[`Radial axis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis-class.html) allows to add an image frame as its background using [`backgroundImage`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/backgroundImage.html) property.
 
 {% highlight dart %}
 
@@ -496,7 +519,7 @@ Widget build(BuildContext context) {
 
 ![axis label format](images/axis/axis_labelFormat.jpg)
 
-* [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/numberFormat.html)- Allows to customize the axis label with the `globalized label format`.
+* [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/numberFormat.html)- Allows to customize the axis label with the [`globalized label format`](https://api.flutter.dev/flutter/intl/NumberFormat-class.html).
 
 {% highlight dart %}
 
