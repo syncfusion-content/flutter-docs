@@ -13,7 +13,7 @@ Two dimensional Barcode is a way to represent information by using the two-dimen
 
 [`QR Code`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/QRCode-class.html),
 
-`Data Matrix`
+[`Data Matrix`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/DataMatrix-class.html)
 
 ## QR Code
 
@@ -158,9 +158,9 @@ The number of modules increases in steps of 4 modules per side up to Version 40 
 
 ![QR version](images/two-dimensional/version09.jpg)
 
-## DataMatrix
+## Data Matrix
 
-DataMatrix barcode is a two dimensional barcode that consists of a grid of dark and light dots or blocks forming a square or rectangular symbol. The data encoded in the barcode can either be numbers or alphanumerics. They are widely used in printed media such as labels and letters. You can read it easily with the help of a barcode readers and mobile phones.
+[`Data Matrix`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/DataMatrix-class.html) barcode is a two dimensional barcode that consists of a grid of dark and light dots or blocks forming a square or rectangular symbol. The data encoded in the barcode can either be numbers or alphanumeric. They are widely used in printed media such as labels and letters. You can read it easily with the help of a barcode reader and mobile phones.
 
 {% highlight dart %} 
 
@@ -185,48 +185,48 @@ DataMatrix barcode is a two dimensional barcode that consists of a grid of dark 
 
 ![Data matrix](images/two-dimensional/data-matrix.png)
 
-**Data Matrix format**
+**Data matrix format**
 
 Length - Data Matrix can store up to 2335 alphanumeric characters or 3116 numbers from the ASCII range.
 
-Type - Data Matrix supports the following data types:
+Type - Data Matrix supports the following data types,
 
-`Numeric`
+`Numeric`,
 
-`Alpha Numeric`
+`Alpha Numeric`,
 
 `Byte`
 
-The encoded data size depends upon the length and data type of provided input values.
+The [`encoded data size`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/DataMatrix/dataMatrixSize.html) depends upon the length and data type of provided input values.
 
 **Encoding Methods**
 
-Data Matrix supports the following encoding types: 
+Data Matrix supports following [`encoding types`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/DataMatrix/encoding.html), 
 
-`Auto`
+`Auto`,
 
-`ASCII`
+`ASCII`,
 
-`ASCIINumeric`
+`ASCIINumeric`,
 
 `Base256`
 
 By default, the encoding types is `auto`.
 
-When the encoding type is `ASCII`, then code word will be calculated as like follows.
+When the encoding type is `ASCII`, the code word will be calculated as like follows,
 
 Code word = ASCII value + 1.
 
-The `ASCII` value ranges from 0 to 127.
+The `ASCII` value ranges from 0 to 127
 
-When the encoding type is `base256`, then the first code word will be calculated with the value 235 and the second code value is calculated as ASCII value-127.
+When the encoding type is `base256`, then the first code word will be calculated with the value 235 and the second code value is calculated as ASCII value - 127.
 
 The `base256` value ranges from 128 to 255.
 
-When the encoding type is `ASCIINumeric`, then the code word will be calculated as like follows.
+When the encoding type is `ASCIINumeric`, then the code word will be calculated as like follows,
 
 Code word = numerical value pair + 130.
 
-The numerical value pair will be like 00, 01, 02,.....99.
+The numerical value pair will be like 00, 01, 02,.....99
 
 
