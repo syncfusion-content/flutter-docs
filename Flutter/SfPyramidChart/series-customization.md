@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pyramid series customization in Syncfusion Flutter charts
-description: Learn how to customize the series features like animation, color palette, gradient, etc., in SfPyramid chart
+description: Learn how to customize the series features like animation, empty points mode, gradient, etc., in SfPyramid chart
 platform: flutter
 control: Chart
 documentation: ug
@@ -34,35 +34,6 @@ documentation: ug
     }
 
 {% endhighlight %}
-
-## Color Palette
-
-[`SfPyramidChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart-class.html) provides Color Palette property called [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/palette.html) for the data points in the chart series. If the series color is not specified, then the series will be rendered with appropriate palette color. Ten colors are available by default.
-
-
-{% highlight dart %} 
-
-    @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfPyramidChart(
-                      palette: <Color>[Colors.amber, Colors.brown, Colors.green, Colors.redAccent, Colors.blueAccent, Colors.teal],
-                        series:PyramidSeries<ChartData, String>(
-                            dataSource: chartData,
-                            xValueMapper: (ChartData data, _) => data.x,
-                            yValueMapper: (ChartData data, _) => data.y,
-                        )
-                    )
-                )
-            )
-        );
-    }
-
-{% endhighlight %}
-
-![Color Palette](images/Pyramid-customization/color_palette.png)
 
 ## Empty points
 

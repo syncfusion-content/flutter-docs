@@ -13,7 +13,7 @@ The Syncfusion theme widget allows you to apply colors, font-styles, etc in the 
 
 ## Using SfTheme widget
 
-The [`SfTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfTheme-class.html) widget is used to apply theme at one place to all of the applicable Syncfusion Flutter widgets. You can customize all our widgets with the [`SfThemeData`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfThemeData-class.html) and use this class to configure a [`SfTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfTheme-class.html) widget. The [`SfThemeData`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfThemeData-class.html) holds the color and typography values for light and dark themes. For more details, you can refer to the below links.
+The [`SfTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfTheme-class.html) widget is used to apply theme at one place to all of the applicable Syncfusion Flutter widgets. You can customise all our widgets with the [`SfThemeData`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfThemeData-class.html) and use this class to configure a [`SfTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfTheme-class.html) widget. The [`SfThemeData`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfThemeData-class.html) holds the color and typography values for light and dark themes. For more details, you can refer to the below links.
 
 <table>
     <tr>

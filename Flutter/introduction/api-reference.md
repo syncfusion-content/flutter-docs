@@ -12,6 +12,14 @@ documentation: ug
 This page helps to navigate to the public API's available in the Syncfusion Flutter widgets.
 
 <table>
+    <tr>
+        <td>
+            Barcode Generator
+        </td>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/barcodes-library.html">Link</a>
+        </td>
+    </tr>
 	<tr>
         <td>
             Calendar
@@ -35,7 +43,15 @@ This page helps to navigate to the public API's available in the Syncfusion Flut
        <td>
            <a href="https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/datepicker-library.html">Link</a>
       </td>
-  </tr>
+    </tr>
+    <tr>
+        <td>
+            PDF
+        </td>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/pdf-library.html">Link</a>
+        </td>
+    </tr>
     <tr>
         <td>
             Radial Gauge
@@ -46,10 +62,18 @@ This page helps to navigate to the public API's available in the Syncfusion Flut
     </tr>
     <tr>
         <td>
-            PDF
+            Range Selector
         </td>
         <td>
-            <a href="https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/pdf-library.html">Link</a>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html">Link</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Range Slider
+        </td>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html">Link</a>
         </td>
     </tr>
      <tr>
@@ -60,12 +84,5 @@ This page helps to navigate to the public API's available in the Syncfusion Flut
               <a href="https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html">Link</a>
           </td>
      </tr>
-     <tr>
-          <td>
-              Range Selector
-          </td>
-          <td>
-              <a href="https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html">Link</a>
-          </td>
-    </tr>
+    
 </table>
