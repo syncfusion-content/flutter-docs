@@ -181,7 +181,7 @@ class Data {
 
 ![Date range selector](images/basic-features/selector_date_label.png)
 
-## OnChanged callback
+**Handle value change**
 
 The [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/onChanged.html) callback is called when the user is selecting the new values.
 
