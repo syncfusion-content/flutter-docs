@@ -73,9 +73,9 @@ The [`showByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 
 The below mentioned arguments are given to the [`showByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/showByIndex.html) method:
 
-[`seriesIndex`]() - index of the series for which the pointIndex is specified.
+[`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipArgs/seriesIndex.html) - index of the series for which the pointIndex is specified.
 
-[`pointIndex`]()  - index of the point for which the tooltip should be shown.
+[`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipArgs/pointIndex.html)  - index of the point for which the tooltip should be shown.
 
 
 {% highlight dart %} 
