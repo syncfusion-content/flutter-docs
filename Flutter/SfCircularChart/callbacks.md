@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Syncfusion Flutter Chart Events
-description: Learn what are all the events available in Flutter Charts. Events will be triggered on some specific actions in SfCircular chart.
+title: Syncfusion Flutter Chart Callbacks
+description: Learn what are all the Callbacks available in Flutter Charts. Callbacks will be triggered on some specific actions in SfCircular chart.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Events in Syncfusion Flutter charts
+# Callbacks in Syncfusion Flutter charts
 
-## Events in Circular Charts
+## Callbacks in Circular Charts
 
-The below events are for Circular chart.
+The below Callbacks are for Circular chart.
 
 ### onLegendItemRender
 
-Triggers when the legend item is rendering. Here, you can customize the legend’s text, and shape.  The [`onLegendItemRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onLegendItemRender.html) event contains the following arguments.
+Triggers when the legend item is rendering. Here, you can customize the legend’s text, and shape.  The [`onLegendItemRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onLegendItemRender.html) Callback contains the following arguments.
 
 * [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendRenderArgs/text.html) - specifies the content of the legend.
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendRenderArgs/pointIndex.html) - specifies the current point index that is applicable for circular chart type alone.
@@ -44,7 +44,7 @@ Triggers when the legend item is rendering. Here, you can customize the legend�
 
 ### onTooltipRender
 
-Triggers while tooltip is rendering. Here, you can customize the text, header, x and y-positions. The [`onTooltipRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onTooltipRender.html) event contains the following arguments.
+Triggers while tooltip is rendering. Here, you can customize the text, header, x and y-positions. The [`onTooltipRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onTooltipRender.html) Callback contains the following arguments.
 
 * [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipArgs/text.html) - specifies the content of the tooltip.
 * [`header`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipArgs/header.html) - specifies the header content of the tooltip.
@@ -75,7 +75,7 @@ Triggers while tooltip is rendering. Here, you can customize the text, header, x
 
 ### onDataLabelRender
 
-Triggers when data label is rendering. Text and text styles such as color, font size, and font weight can be customized. The [`onDataLabelRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onDataLabelRender.html) event contains the following arguments.
+Triggers when data label is rendering. Text and text styles such as color, font size, and font weight can be customized. The [`onDataLabelRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onDataLabelRender.html) Callback contains the following arguments.
 
 * [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/text.html) - specifies the content of the data label.
 * [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/textStyle.html) – used to change the text color, size, font family, font style, and font weight.
@@ -109,7 +109,7 @@ Triggers when data label is rendering. Text and text styles such as color, font 
 
 ### onPointTapped
 
-Triggers when tapping the series point. The [`onPointTapped`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onPointTapped.html) event contains the following arguments.
+Triggers when tapping the series point. The [`onPointTapped`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onPointTapped.html) Callback contains the following arguments.
 
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PointTapArgs/seriesIndex.html) - specifies the current series index.
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PointTapArgs/pointIndex.html) - specifies the current point index.
@@ -135,7 +135,7 @@ Triggers when tapping the series point. The [`onPointTapped`](https://pub.dev/do
 
 ### onLegendTapped
 
-Triggers when tapping the legend item. The [`onLegendTapped`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onLegendTapped.html) event contains the following arguments.
+Triggers when tapping the legend item. The [`onLegendTapped`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onLegendTapped.html) Callback contains the following arguments.
 
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendTapArgs/seriesIndex.html) - specifies the current series index.
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendTapArgs/pointIndex.html) - specifies the current point index that is applicable for circular series.
@@ -162,7 +162,7 @@ Triggers when tapping the legend item. The [`onLegendTapped`](https://pub.dev/do
 
 ### onSelectionChanged
 
-Triggers while selection changes. Here you can customize the selectedColor, unselectedColor, selectedBorderColor, selectedBorderWidth, unselectedBorderColor, and unselectedBorderWidth properties. The [`onSelectionChanged`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onSelectionChanged.html) event contains the following arguments.
+Triggers while selection changes. Here you can customize the selectedColor, unselectedColor, selectedBorderColor, selectedBorderWidth, unselectedBorderColor, and unselectedBorderWidth properties. The [`onSelectionChanged`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onSelectionChanged.html) Callback contains the following arguments.
 
 * [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/series.html) - specifies current series.
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/pointIndex.html) - specifies the current series index.
