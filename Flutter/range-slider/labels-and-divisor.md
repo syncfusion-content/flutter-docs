@@ -250,7 +250,7 @@ Widget build(BuildContext context) {
 
 ![Label placement support](images/label-and-divisor/label-placement.png)
 
-## Customized label text
+## Customize label text
 
 You can format or change the whole numeric or date label text using the [`labelFormatterCallback`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/labelFormatterCallback.html). Its arguments contains the following parameters:
 
