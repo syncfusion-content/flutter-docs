@@ -100,7 +100,7 @@ Widget build(BuildContext context) {
 
 ![Date range slider](images/basic-features/date-labels.png)
 
-## OnChanged callback
+**Handle value change**
 
 The [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onChanged.html) callback is called when the user selects a value through interaction.
 
