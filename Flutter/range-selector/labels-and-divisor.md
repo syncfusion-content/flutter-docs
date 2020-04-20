@@ -488,7 +488,7 @@ class Data {
 
 ![Label placement support](images/label-and-divisor/selector_label_placement.png)
 
-## Customized label text
+## Customize label text
 
 You can format or change the whole numeric or date label text using the [`labelFormatterCallback`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/labelFormatterCallback.html). Its arguments contains the following parameters:
 
