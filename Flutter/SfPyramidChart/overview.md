@@ -19,4 +19,4 @@ Syncfusion Flutter Charts is a data visualization library written natively in Da
 * Plots data against multiple scales that help to visualize the mixed types of data in a single chart.
 * Provides various options to customize the chart features, labels, legends, series, etc. and visualize them accordingly.
 
-You can get the sample in the following link: [`Flutter Charts`](https://github.com/syncfusion/flutter-examples).
+You can get the examples in the following link:: [`Flutter Charts`](https://github.com/syncfusion/flutter-examples).
