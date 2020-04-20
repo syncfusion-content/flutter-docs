@@ -133,7 +133,7 @@ N> This is applicable only when the [`tooltipDisplayMode`](https://pub.dev/docum
 
 ### Label format
 
-By default, axis value will be displayed in the tooltip, and it can be customized using [`format`]() property by adding desired text as prefix or suffix.
+By default, axis value will be displayed in the tooltip, and it can be customized using [`format`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/format.html) property by adding desired text as prefix or suffix.
 
 {% highlight dart %} 
 
@@ -171,7 +171,7 @@ The ActivationMode enum contains the following values:
 * [`longPress`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode-class.html) – Activates trackball only when performing the long press action.
 * [`singleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode-class.html) – Activates trackball only when performing single tap action.
 * [`doubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode-class.html) - Activates trackball only when performing double tap action.
-* [`none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode-class.html) – Hides the visibility of trackball when setting activation mode to none. It will be activated when calling the [`show`]() method.
+* [`none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode-class.html) – Hides the visibility of trackball when setting activation mode to none. It will be activated when calling the [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/show.html) method.
 
 {% highlight dart %} 
 
