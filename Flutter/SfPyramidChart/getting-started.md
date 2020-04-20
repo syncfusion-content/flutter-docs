@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Flutter Pyramid Charts (SfPyramidChart).
+title: Getting started with Flutter Pyramid Charts (SfPyramidChart) | Syncfusion
 description: Learn how to create the Syncfusion Flutter Pyramid charts, add series, legend ,markers and other features in Chart.
 platform: flutter
 control: Chart

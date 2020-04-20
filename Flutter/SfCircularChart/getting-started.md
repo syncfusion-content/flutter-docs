@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Flutter Circular Charts (SfCircularChart).
+title: Getting started with Flutter Circular Charts (SfCircularChart) | Syncfusion
 description: Learn how to create the Syncfusion Flutter Circular charts, add series, legend ,markers and other features in Chart.
 platform: flutter
 control: Chart
