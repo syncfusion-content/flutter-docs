@@ -141,8 +141,9 @@ By default, the light theme will be applied. You can apply a dark theme using th
                     data: SfThemeData(
                         brightness: Brightness.dark
                     ),
-                    child: SfCartesianChart())
-            
+                    child: SfCartesianChart()
+                )  
+            )          
         );
     }
 
