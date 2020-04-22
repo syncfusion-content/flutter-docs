@@ -348,3 +348,5 @@ class Data {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Zooming support](images/range-controller/zooming-controller-with-sfchart.gif)
