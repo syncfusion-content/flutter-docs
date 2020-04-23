@@ -245,7 +245,7 @@ Additionally, you need to set label for each series using the [`series.name`](ht
 
 {% endhighlight %}
 
-![Legend in chart](images/getting-started/legend.jpg)
+![Legend in chart](images/getting-started/legend.png)
 
 ## Enable tooltip
 
@@ -293,6 +293,6 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
 {% endhighlight %}
 
-![Tooltip in chart](images/getting-started/tooltip.jpg)
+![Tooltip in chart](images/getting-started/tooltip.png)
 
 You can find the complete getting started example from this [`link`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/chart_example2131351808).
