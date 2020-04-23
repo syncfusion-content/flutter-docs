@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Pyramid series customization 
+# series customization in Pyramid chart
 
 ## Animation
 

@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Data label in SfPyramid Charts
+# Data label in Pyramid chart
 
 Data label can be added to a chart series by enabling the [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/isVisible.html) option in the [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidSeries/dataLabelSettings.html). You can use the following properties to customize the appearance.
 

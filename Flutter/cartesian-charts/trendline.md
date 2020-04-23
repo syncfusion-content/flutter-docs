@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Trendlines in SfCartesianChart
+# Trendlines in Cartesian charts
 
 Trendlines are used to show the direction and speed of price.
 

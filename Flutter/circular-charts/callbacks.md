@@ -7,13 +7,11 @@ control: Chart
 documentation: ug
 ---
 
-# Callbacks in Syncfusion Flutter charts
-
-## Callbacks in Circular Charts
+# Callbacks in Circular charts
 
 The below Callbacks are for Circular chart.
 
-### onLegendItemRender
+## onLegendItemRender
 
 Triggers when the legend item is rendering. Here, you can customize the legendâ€™s text, and shape.  The [`onLegendItemRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onLegendItemRender.html) Callback contains the following arguments.
 
@@ -42,7 +40,7 @@ Triggers when the legend item is rendering. Here, you can customize the legendâ€
 
 {% endhighlight %}
 
-### onTooltipRender
+## onTooltipRender
 
 Triggers while tooltip is rendering. Here, you can customize the text, header, x and y-positions. The [`onTooltipRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onTooltipRender.html) Callback contains the following arguments.
 
@@ -73,7 +71,7 @@ Triggers while tooltip is rendering. Here, you can customize the text, header, x
 
 {% endhighlight %}
 
-### onDataLabelRender
+## onDataLabelRender
 
 Triggers when data label is rendering. Text and text styles such as color, font size, and font weight can be customized. The [`onDataLabelRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onDataLabelRender.html) Callback contains the following arguments.
 
@@ -107,7 +105,7 @@ Triggers when data label is rendering. Text and text styles such as color, font 
 
 {% endhighlight %}
 
-### onPointTapped
+## onPointTapped
 
 Triggers when tapping the series point. The [`onPointTapped`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onPointTapped.html) Callback contains the following arguments.
 
@@ -133,7 +131,7 @@ Triggers when tapping the series point. The [`onPointTapped`](https://pub.dev/do
 
 {% endhighlight %}
 
-### onLegendTapped
+## onLegendTapped
 
 Triggers when tapping the legend item. The [`onLegendTapped`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onLegendTapped.html) Callback contains the following arguments.
 
@@ -160,7 +158,7 @@ Triggers when tapping the legend item. The [`onLegendTapped`](https://pub.dev/do
 
 {% endhighlight %}
 
-### onSelectionChanged
+## onSelectionChanged
 
 Triggers while selection changes. Here you can customize the selectedColor, unselectedColor, selectedBorderColor, selectedBorderWidth, unselectedBorderColor, and unselectedBorderWidth properties. The [`onSelectionChanged`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onSelectionChanged.html) Callback contains the following arguments.
 

@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Cartesian chart types
+# Chart types in Cartesian charts
 
 ## Line chart
 

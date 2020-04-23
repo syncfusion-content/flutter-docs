@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Circular series customization 
+# Series customization in Circular charts 
 
 ## Animation
 

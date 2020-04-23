@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Axis in Syncfusion flutter charts
+# Axis types in Cartesian charts
 
 Charts typically have two axes that are used to measure and categorize data: a vertical (Y) axis, and a horizontal (X) axis.
 

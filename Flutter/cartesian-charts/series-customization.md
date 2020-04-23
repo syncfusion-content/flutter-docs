@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Cartesian series customization
+# Series customization in Cartesian charts
 
 ## Animation
 

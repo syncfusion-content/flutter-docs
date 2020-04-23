@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Appearance Of SfCartesian Charts
+# Appearance Of Cartesian charts
 
 ## Chart sizing
 
