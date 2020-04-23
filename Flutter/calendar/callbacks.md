@@ -39,7 +39,7 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 >**NOTE**
-* Initially, the `onViewChanged` callback was triggered to load the data based on the visible dates.
+* Initially, the `onViewChanged` callback would be triggered to load the appointment data on the basis of visible dates.
 
 ## Calendar tap callback
 
