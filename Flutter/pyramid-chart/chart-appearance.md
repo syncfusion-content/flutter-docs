@@ -8,6 +8,7 @@ documentation: ug
 ---
 
 # Appearance of Pyramid chart
+
 ## Chart sizing
 
 Chart renders based on the parent widget size. If you need the chart to be rendered in specific size, then set the size(width/height) to the parent widget.
