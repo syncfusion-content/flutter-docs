@@ -38,6 +38,9 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+>**NOTE**
+* Initially, the `onViewChanged` callback was triggered to load the data based on the visible dates.
+
 ## Calendar tap callback
 
 The [onTapUp](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onTap.html) callback triggers whenever the calendar tapped.
