@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Callbacks in  Cartesian charts
+# Callbacks in Cartesian charts
 
 The below Callbacks are for Cartesian chart.
 
