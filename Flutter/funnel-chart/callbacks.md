@@ -7,13 +7,11 @@ control: Chart
 documentation: ug
 ---
 
-# Callbacks in Syncfusion Flutter charts
-
-## Callbacks in Funnel Charts
+# Callbacks in Funnel chart
 
 The below Callbacks are for Funnel chart.
 
-### onLegendItemRender
+## onLegendItemRender
 
 Triggers when the legend item is rendering. Here, you can customize the legendâ€™s text, and shape.  The [`onLegendItemRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/onLegendItemRender.html) Callback contains the following arguments.
 
@@ -42,7 +40,7 @@ Triggers when the legend item is rendering. Here, you can customize the legendâ€
 
 {% endhighlight %}
 
-### onTooltipRender
+## onTooltipRender
 
 Triggers while tooltip is rendering. Here, you can customize the text, header, x and y-positions. The [`onTooltipRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/onTooltipRender.html) Callback contains the following arguments.
 
@@ -73,7 +71,7 @@ Triggers while tooltip is rendering. Here, you can customize the text, header, x
 
 {% endhighlight %}
 
-### onDataLabelRender
+## onDataLabelRender
 
 Triggers when data label is rendering. Text and text styles such as color, font size, and font weight can be customized. The [`onDataLabelRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/onDataLabelRender.html) Callback contains the following arguments.
 
@@ -105,7 +103,7 @@ Triggers when data label is rendering. Text and text styles such as color, font 
 
 {% endhighlight %}
 
-### onLegendTapped
+## onLegendTapped
 
 Triggers when tapping the legend item. The [`onLegendTapped`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/onLegendTapped.html) Callback contains the following arguments.
 
@@ -132,7 +130,7 @@ Triggers when tapping the legend item. The [`onLegendTapped`](https://pub.dev/do
 
 {% endhighlight %}
 
-### onSelectionChanged
+## onSelectionChanged
 
 Triggers while selection changes. Here you can customize the selectedColor, unselectedColor, selectedBorderColor, selectedBorderWidth, unselectedBorderColor, and unselectedBorderWidth properties. The [`onSelectionChanged`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/onSelectionChanged.html) Callback contains the following arguments.
 

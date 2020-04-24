@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Circular Chart Types
+# Chart types in Circular charts
 
 ## Pie chart
 

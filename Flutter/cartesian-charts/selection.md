@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Selection in SfCartesian Charts
+# Selection in Cartesian charts
 
 The selection feature in chart let you to select a segment in a series or the series itself. This features allows you to select either individual or cluster of segments in the chart series.
 

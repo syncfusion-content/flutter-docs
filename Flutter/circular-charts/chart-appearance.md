@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Appearance of SfCircular Charts
+# Appearance of Circular charts
 
 ## Chart sizing
 

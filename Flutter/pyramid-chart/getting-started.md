@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Getting Started with Syncfusion Flutter Charts
+# Getting Started with Flutter Pyramid Chart (SfCartesianChart)
 
 This section explains the steps required to populate the chart with data, title, data labels, legend, and tooltips. This section covers only the minimal features needed to know to get started with the chart.
 
@@ -72,7 +72,7 @@ Once the package has been imported, initialize the chart as a child of any widge
 
 {% endhighlight %}
 
-![Initialize chart](images/getting-started/default.png)
+_note_ : An empty chart will be displayed.This is charts default behavior. 
 
 ## Bind data source
 
@@ -237,4 +237,4 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
 ![Tooltip in chart](images/getting-started/tooltip.png)
 
-You can find the complete getting started sample from this [`link`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/chart_example2131351808).
+You can find the complete getting started example  from this [`link`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/chart_example2131351808).

@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Data label in SfFunnel Charts
+# Data label in Funnel chart
 
 Data label can be added to a chart series by enabling the [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/isVisible.html) option in the [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/dataLabelSettings.html). You can use the following properties to customize the appearance.
 

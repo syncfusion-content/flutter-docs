@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Technical indicators in Flutter Charts
+# Technical indicators in Cartesian charts
 
 
 The different types of technical indicators available in chart are follows:

@@ -7,13 +7,11 @@ control: Chart
 documentation: ug
 ---
 
-# Callbacks in Syncfusion Flutter charts
-
-## Callbacks in SfCartesianChart
+# Callbacks in Cartesian charts
 
 The below Callbacks are for Cartesian chart.
 
-### onTooltipRender
+## onTooltipRender
 
 Triggers when the tooltip is rendering. Here, you can customize the text, header, x and y-positions. The [`onTooltipRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onTooltipRender.html) Callback contains the following arguments.
 
@@ -43,7 +41,7 @@ Triggers when the tooltip is rendering. Here, you can customize the text, header
 
 {% endhighlight %}
 
-### onActualRangeChanged
+## onActualRangeChanged
 
 Triggers when the visible range of an axis is changed, i.e. value changes for minimum, maximum, and interval. Here, you can customize the visible range of an axis. The [`onActualRangeChanged`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onActualRangeChanged.html) Callback contains the following arguments.
 
@@ -76,7 +74,7 @@ Triggers when the visible range of an axis is changed, i.e. value changes for mi
 
 {% endhighlight %}
 
-### onAxisLabelRender
+## onAxisLabelRender
 
 Triggers while rendering the axis labels. Text and text styles such as color, font size, and font weight can be customized. The [`onAxisLabelRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onAxisLabelRender.html) Callback contains the following arguments.
 
@@ -107,7 +105,7 @@ Triggers while rendering the axis labels. Text and text styles such as color, fo
 
 {% endhighlight %}
 
-### onDataLabelRender
+## onDataLabelRender
 
 Triggers when data label is rendering. Text and text styles such as color, font size, and font weight can be customized. The [`onDataLabelRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onDataLabelRender.html) Callback contains the following arguments.
 
@@ -141,7 +139,7 @@ Triggers when data label is rendering. Text and text styles such as color, font 
 
 {% endhighlight %}
 
-### onLegendItemRender
+## onLegendItemRender
 
 Triggers when the legend item is rendering. Here, you can customize the legendâ€™s text, and shape.  The [`onLegendItemRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onLegendItemRender.html) Callback contains the following arguments.
 
@@ -170,7 +168,7 @@ Triggers when the legend item is rendering. Here, you can customize the legendâ€
 
 {% endhighlight %}
 
-### onTrackballPositionChanging
+## onTrackballPositionChanging
 
 Triggers while the trackball position is changing. Here, you can customize the text of the trackball.The [`onTrackballPositionChanging`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onTrackballPositionChanging.html) Callback contains the following argument.
 
@@ -196,7 +194,7 @@ Triggers while the trackball position is changing. Here, you can customize the t
 
 {% endhighlight %}
 
-### onCrosshairPositionChanging
+## onCrosshairPositionChanging
 
 Triggers while the crosshair position is changing. Here, you can customize the text and line color of the crosshair.The [`onCrosshairPositionChanging`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onCrosshairPositionChanging.html) Callback contains the following arguments.
 
@@ -227,7 +225,7 @@ Triggers while the crosshair position is changing. Here, you can customize the t
 
 {% endhighlight %}
 
-### onZooming
+## onZooming
 
 Triggers when the zooming action is in progress. The [`onZooming`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onZooming.html) Callback contains the following arguments.
 
@@ -261,7 +259,7 @@ Triggers when the zooming action is in progress. The [`onZooming`](https://pub.d
 
 {% endhighlight %}
 
-### onZoomStart
+## onZoomStart
 
 Triggers when zooming action begins. The [`onZoomStart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onZoomStart.html) Callback contains the following arguments.
 
@@ -295,7 +293,7 @@ Triggers when zooming action begins. The [`onZoomStart`](https://pub.dev/documen
 
 {% endhighlight %}
 
-### onZoomEnd
+## onZoomEnd
 
 Triggers when the zooming action is completed. The [`onZoomEnd`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onZoomEnd.html) Callback contains the following arguments.
 
@@ -329,7 +327,7 @@ Triggers when the zooming action is completed. The [`onZoomEnd`](https://pub.dev
 
 {% endhighlight %}
 
-### onZoomReset
+## onZoomReset
 
 Triggers when zoomed state is reset. The  [`onZoomReset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onZoomReset.html) Callback contains the following arguments.
 
@@ -363,7 +361,7 @@ Triggers when zoomed state is reset. The  [`onZoomReset`](https://pub.dev/docume
 
 {% endhighlight %}
 
-### onPointTapped
+## onPointTapped
 
 Triggers when tapping the series point. The [`onPointTapped`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onPointTapped.html) Callback contains the following arguments.
 
@@ -389,7 +387,7 @@ Triggers when tapping the series point. The [`onPointTapped`](https://pub.dev/do
 
 {% endhighlight %}
 
-### onAxisLabelTapped
+## onAxisLabelTapped
 
 Triggers when tapping the axis label. The  [`onAxisLabelTapped`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onAxisLabelTapped.html) Callback contains the following arguments.
 
@@ -414,7 +412,7 @@ Triggers when tapping the axis label. The  [`onAxisLabelTapped`](https://pub.dev
 
 {% endhighlight %}
 
-### onLegendTapped
+## onLegendTapped
 
 Triggers when tapping the legend item. The  [`onLegendTapped`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onLegendTapped.html) Callback contains the following arguments.
 
@@ -441,7 +439,7 @@ Triggers when tapping the legend item. The  [`onLegendTapped`](https://pub.dev/d
 
 {% endhighlight %}
 
-### onSelectionChanged
+## onSelectionChanged
 
 Triggers while selection changes. Here you can customize the selectedColor, unselectedColor, selectedBorderColor, selectedBorderWidth, unselectedBorderColor, and unselectedBorderWidth properties. The [`onSelectionChanged`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onSelectionChanged.html) Callback contains the following arguments.
 
@@ -480,7 +478,7 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
 
 {% endhighlight %}
 
-### onIndicatorRender
+## onIndicatorRender
  
 Triggers when indicator is rendering. Here you can customize the name, signal line color, signal line width,dash array and so on.
  
@@ -514,7 +512,7 @@ The [`onIndicatorRender`](https://pub.dev/documentation/syncfusion_flutter_chart
     
 {% endhighlight %}
 
-### onTrendlineRender
+## onTrendlineRender
 
 Triggers when  the trendline gets rendered.Trendline properties like color,opacity can be customized using trendlineRender Callbacks. The [`onTrendlineRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs-class.html) Callback contains the following arguments.
 

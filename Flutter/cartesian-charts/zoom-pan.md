@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Zooming and Panning in Flutter Charts
+# Zooming and Panning in Cartesian charts
 
 
 ## Pinch zooming
