@@ -28,9 +28,11 @@ Add the Syncfusion Flutter Gauge dependency to your pubspec.yaml file.
 
     dependencies:
 
-    syncfusion_flutter_gauges: ^1.0.0-beta
+    syncfusion_flutter_gauges: ^xx.x.xx
 
 {% endhighlight %}
+
+N> Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Gauge`](https://pub.dev/packages/syncfusion_flutter_gauges/versions) package.
 
 **Get packages**
 
