@@ -28,9 +28,11 @@ Add the Syncfusion Flutter Chart dependency to your pub spec file.
 
     dependencies:
 
-    syncfusion_flutter_charts: ^1.0.0-beta.3
+    syncfusion_flutter_charts: ^xx.x.xx
 
 {% endhighlight %}
+
+N> Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Chart`](https://pub.dev/packages/syncfusion_flutter_charts/versions) widget.
 
 **Get packages**
 
