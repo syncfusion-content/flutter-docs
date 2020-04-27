@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Appearance of SfFunnel Charts
+# Appearance of Funnel chart
 
 ## Chart sizing
 

@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Appearance of SfPyramid Charts
+# Appearance of Pyramid chart
 
 ## Chart sizing
 

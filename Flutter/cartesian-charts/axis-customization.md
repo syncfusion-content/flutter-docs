@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Axis customization in SfCartesianChart
+# Axis customization in Cartesian charts
 
 ## Common axis features
 

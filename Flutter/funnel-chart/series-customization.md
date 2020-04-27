@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Funnel series customization 
+# series customization in Funnel chart
 
 ## Animation
 
