@@ -147,7 +147,7 @@ By default, the Syncfusion widgets are implemented with English localization (en
 *  zu - Zulu
 
 
-### How to localize Syncfusion Flutter widgets?
+### How to localize the Syncfusion Flutter widgets?
 
 Here, lets see how to localize texts in the calendar using our [`syncfusion_localizations`](https://pub.dev/packages/syncfusion_localizations) package.
 

@@ -21,9 +21,11 @@ Add the Syncfusion flutter calendar dependency to your pubspec.yaml file.
 
 dependencies:
 
-syncfusion_flutter_calendar: ^17.4.39-beta
+syncfusion_flutter_calendar: ^xx.x.xx
 
 {% endhighlight %}
+
+N> Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Calendar`](https://pub.dev/packages/syncfusion_flutter_calendar/versions) package.
 
 **Get packages** 
 
