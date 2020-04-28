@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Cartesian chart methods
+# Methods in Cartesian charts
 
 ## Methods in tooltipBehavior
 
