@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Applying Localizations for Syncfusion FLutter widgets
+title: Applying Localizations for Syncfusion Flutter widgets
 description: This section explains about applying the localization for the applicable Syncfusion Flutter widgets.
 platform: flutter
 control: General
@@ -16,7 +16,15 @@ Syncfusion Flutter widgets support formatting dates and numbers based on culture
 <table>
     <tr>
         <td>
-            Chart
+            <b>Widgets</b>
+        </td>
+        <td>
+             <b>Reference Links</b>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfCartesianChart
         </td>
         <td>
              <a href="https://help.syncfusion.com/flutter/chart/axis-types#formatting-the-labels">Number</a> <br/>
@@ -25,7 +33,7 @@ Syncfusion Flutter widgets support formatting dates and numbers based on culture
     </tr>
 	<tr>
         <td>
-            Calendar
+            SfCalendar
         </td>
         <td>
             <a href="https://help.syncfusion.com/flutter/calendar/month-view#view-header-dayformat">Date</a>
@@ -33,7 +41,7 @@ Syncfusion Flutter widgets support formatting dates and numbers based on culture
     </tr>
     <tr>
         <td>
-            Date range <br/> picker
+            SfDateRangePicker
         </td>
         <td>
             <a href="https://help.syncfusion.com/flutter/daterangepicker/headers#view-header-day-format">Date</a>
@@ -41,7 +49,7 @@ Syncfusion Flutter widgets support formatting dates and numbers based on culture
     </tr>
     <tr>
         <td>
-          Range slider
+           SfRangeSlider
         </td>
        <td>
            <a href="https://help.syncfusion.com/flutter/range-slider/labels-and-divisor#number-format">Number</a><br/>
@@ -50,7 +58,7 @@ Syncfusion Flutter widgets support formatting dates and numbers based on culture
   </tr>
   <tr>
         <td>
-            Range selector
+            SfRangeSelector
         </td>
         <td>
             <a href="https://help.syncfusion.com/flutter/range-selector/labels-and-divisor#number-format">Number</a><br/>
@@ -139,7 +147,7 @@ By default, the Syncfusion widgets are implemented with English localization (en
 *  zu - Zulu
 
 
-### How to use syncfusion_localizations package
+### How to localize the Syncfusion Flutter widgets?
 
 Here, lets see how to localize texts in the calendar using our [`syncfusion_localizations`](https://pub.dev/packages/syncfusion_localizations) package.
 
