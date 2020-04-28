@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Applying Themes for Syncfusion FLutter widgets
+title: Applying Themes for Syncfusion Flutter widgets
 description: Learn how to apply theme across all the Syncfusion Flutter widgets with a common approach or to the individual widget.
 platform: flutter
 control: General

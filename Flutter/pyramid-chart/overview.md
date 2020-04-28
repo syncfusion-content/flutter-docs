@@ -11,7 +11,7 @@ documentation: ug
 
 Syncfusion Flutter Charts is a data visualization library written natively in Dart for creating beautiful and high-performance charts, which are used to craft high-quality mobile app user interfaces using Flutter.
 
-![Overview flutter chart](images/overview/overview.png)
+![Overview Flutter chart](images/overview/overview.png)
 
 ## Key Features
 

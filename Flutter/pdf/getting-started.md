@@ -22,9 +22,11 @@ Add the Syncfusion Flutter PDF dependency to your pub spec file.
 {% highlight dart %} 
 
 dependencies:
-  syncfusion_flutter_pdf: ^18.1.36-beta
+  syncfusion_flutter_pdf: ^xx.x.xx
 
 {% endhighlight %}
+
+N> Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter PDF`](https://pub.dev/packages/syncfusion_flutter_pdf/versions) package.
 
 **Get packages**
 

@@ -21,9 +21,11 @@ Add the Syncfusion Flutter date range picker dependency to your `pubspec.yaml` f
 
 dependencies:
 
-syncfusion_flutter_datepicker: ^18.1.36-beta
+syncfusion_flutter_datepicker: ^xx.x.xx
 
 {% endhighlight %}
+
+N> Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Date Picker`](https://pub.dev/packages/syncfusion_flutter_datepicker/versions) package.
 
 **Get packages** 
 
