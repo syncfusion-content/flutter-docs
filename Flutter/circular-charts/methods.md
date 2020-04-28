@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Circular chart methods
+# Methods in Circular charts
 
 ## Methods in tooltipBehavior
 
