@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Installation and Deployment process for Syncfusion Flutter widgets
-description: Describes about system requirements to install the Syncfusion Flutter widgets
+description: Describes the supported platforms and the system requirements to install the Syncfusion Flutter widgets.
 platform: flutter
 control: Installation and Deployment
 documentation: ug
 
 ---
 
-# System Requirements
+# System Requirements for Flutter
 
 ### Development Environment
 
@@ -31,7 +31,7 @@ The following table lists the platforms supported by our Flutter controls.
         <th>Platform<br/>
             <br/></th>        
         <th>
-          Device Types
+          Supported Mediums
             <br/>
             <br/>
         </th>
@@ -73,6 +73,23 @@ The following table lists the platforms supported by our Flutter controls.
         </td>
         <td>
             iOS 8 and later versions
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Web
+            <br/>
+            <br/>
+        </td>
+        <td>
+            All major browsers
+            <br/>
+            <br/>
+        </td>
+        <td>
+            -
             <br/>
             <br/>
         </td>

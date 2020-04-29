@@ -21,9 +21,11 @@ Add the Syncfusion flutter range slider dependency to your pubspec.yaml file.
 
 dependencies:
 
-syncfusion_flutter_sliders: ^18.1.36-beta
+syncfusion_flutter_sliders: ^xx.x.xx
 
 {% endhighlight %}
+
+N> Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Sliders`](https://pub.dev/packages/syncfusion_flutter_sliders/versions) package.
 
 **Get packages** 
 
