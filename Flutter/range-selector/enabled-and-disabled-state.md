@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Disabled state in Syncfusion Flutter Range Selector | Syncfusion
-description: This section helps to learn about the disabled state of the range selector and its feature in the Flutter platform
+description: This section explains about how to show disabled state and customize its appearance in the range selector
 platform: Flutter
 control: SfRangeSelector
 documentation: ug
@@ -13,7 +13,7 @@ This section helps to learn about the disabled state in the Flutter range select
 
 ## Disabled state
 
-It controls the range selector’s state whether it is disabled or enabled. The default value of [`enabled`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/enabled.html) property is `true`.
+You can render the range selector in disabled state using [`enabled`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/enabled.html) property. The default value of [`enabled`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/enabled.html) property is `true`.
 
 {% tabs %}
 {% highlight Dart %}

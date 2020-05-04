@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Basic features for Syncfusion Flutter Range Slider | Syncfusion
-description: This basic features section explains how to add the numeric and date range slider for Flutter platform
+description: This basic features section explains about how to add the numeric and date range slider for Flutter platform
 platform: Flutter
 control: SfRangeSlider
 documentation: ug
