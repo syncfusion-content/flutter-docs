@@ -19,7 +19,7 @@ To use `flutter_localizations`, add the package as a dependency to `pubspec.yaml
 
 dependencies:
 flutter_localizations:
-sdk: flutter
+  sdk: flutter
 
 {% endhighlight %}
 
