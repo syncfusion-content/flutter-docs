@@ -1,7 +1,7 @@
 ---
 layout: post
 title: RTL feature in Syncfusion Flutter Range Slider | Syncfusion
-description: This section explains about how to render range slider in RTL direction.
+description: This section explains about how to render the range slider in RTL direction.
 platform: Flutter
 control: SfRangeSlider
 documentation: ug
