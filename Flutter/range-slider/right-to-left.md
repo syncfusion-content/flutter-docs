@@ -1,7 +1,7 @@
 ---
 layout: post
 title: RTL feature in Syncfusion Flutter Range Slider | Syncfusion
-description: This section helps to learn about how to change the layout direction in the right to left direction in range slider for Flutter platform
+description: This section explains about how to change range slider to right to left direction
 platform: Flutter
 control: SfRangeSlider
 documentation: ug
