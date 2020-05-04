@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Disabled state in Syncfusion Flutter Range Selector | Syncfusion
-description: This section explains about how to show disabled state and how to customize its appearance in the range selector
+description: This section explains about how to enable disabled state and customize its appearance in the range selector
 platform: Flutter
 control: SfRangeSelector
 documentation: ug
