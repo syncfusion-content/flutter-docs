@@ -114,7 +114,7 @@ class _MyAppState extends State<MyApp> {
 {% endhighlight %}
 {% endtabs %}
 
-![Programmatic selectedrange Date Range Picker](images/date-navigations/selecteddate.png)
+![Programmatic selected date in Date Range Picker](images/date-navigations/programmatic_selecteddate.png)
 
 ### Multi selection
 Initially or during the run time, you can selects the multiple dates programmatically by using the [selectedDates](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedDates.html) of `DateRangePickerController` property. It is only applicable when the `selectionMode` is set to `DateRangePickerSelectionMode.multiple`.
@@ -160,7 +160,7 @@ class _MyAppState extends State<MyApp> {
 {% endhighlight %}
 {% endtabs %}
 
-![Programmatic selectedrange Date Range Picker](images/date-navigations/multiple_selected_dates.png)
+![Programmatic multiple dates selection Date Range Picker](images/date-navigations/multiple_selected_dates.png)
 
 ### Range selection
 Initially or during run time, you can selects the single date range programmatically by using the [selectedRange](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedRange.html) of `DateRangePickerController` property. It is only applicable when the `selectionMode` is set to `DateRangePickerSelectionMode.range`
@@ -239,7 +239,7 @@ class _MyAppState extends State<MyApp> {
 {% endhighlight %}
 {% endtabs %}
 
-![Programmatic selectedrange Date Range Picker](images/date-navigations/multirangeselection.png)
+![Programmatic multi selectedrange Date Range Picker](images/date-navigations/multirangeselection.png)
 
 ## Programmatically change to adjacent dates
 By default, the date can be navigated to next and previous views using the touch gesture, by swiping the control from right to left and left to right direction. The view can be also changed programmatically using the [forward](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/forward.html) and [backward](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/backward.html) methods that are available in the `DateRangePickerController`.
