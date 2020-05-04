@@ -1,7 +1,7 @@
 ---
 layout: post
 title: RTL feature in Syncfusion Flutter Range Selector | Syncfusion
-description: This section explains about how to change range selector to right to left direction
+description: This section explains about how to render the range selector in RTL direction.
 platform: Flutter
 control: SfRangeSelector
 documentation: ug
