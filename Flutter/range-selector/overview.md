@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of Syncfusion Flutter Range Selector
-description: Syncfusion Flutter range selector provides a rich set of features such as support for numeric and date values, ticks, labels and tooltips
+description: Syncfusion Flutter range selector provides a rich set of features such as support for numeric and date values, ticks, labels and tooltips.
 platform: Flutter
 control: SfRangeSelector
 documentation: ug
