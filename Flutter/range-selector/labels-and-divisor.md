@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Labels features in Syncfusion Flutter Range Selector | Syncfusion
-description: This section helps to learn about how to add labels and divisors in the range selector for Flutter platform
+description: This section explains about how to show labels, divisors and how to customize them in the range selector.
 platform: Flutter
 control: SfRangeSelector
 documentation: ug
