@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Thumb features in Syncfusion Flutter Range Selector | Syncfusion
-description: This section explains about how to customize the thumb and thumb overlay in the range selector.
+description: This section explains about how to customize the thumb and thumb overlay in the Flutter range selector.
 platform: Flutter
 control: SfRangeSelector
 documentation: ug
