@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip features in Syncfusion Flutter Range Selector | Syncfusion
-description: This section helps to learn about how to show tooltip and customize them in the range selector.
+description: This section explains about how to show tooltips and customize its appearance in the Flutter range selector.
 platform: Flutter
 control: SfRangeSelector
 documentation: ug
