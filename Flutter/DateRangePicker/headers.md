@@ -10,7 +10,7 @@ documentation: ug
 You can customize the header of the data range picker using the [headerStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/headerStyle.html) and [headerHeight](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/headerHeight.html) properties in date range picker.
 
 ### Customize the header height
-You can customize the height of the header of `DateRangePicker` by using the [headerHeight](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/headerHeight.html) property.
+You can customize the height of the header of `DateRangePicker` by using the `headerHeight` property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -60,10 +60,10 @@ Widget build(BuildContext context) {
 ![Header appearance Date Range Picker](images/headers/headerappearance.png)
 
 ## View header
-You can customize the view header of the `DateRangePicker` using the [viewHeaderHeight](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/viewHeaderHeight.html) and [viewHeaderStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/viewHeaderStyle.html) properties of `DateRangePickerMonthViewSettings`.
+You can customize the view header of the `DateRangePicker` using the [viewHeaderHeight](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/viewHeaderHeight.html) and [viewHeaderStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/viewHeaderStyle.html) properties of [DateRangePickerMonthViewSettings](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings-class.html).
 
 ### Customize view header height
-You can customize the view header height of `DateRangePicker` using the [viewHeaderHeight](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/viewHeaderHeight.html) property of `DateRangePickerMonthViewSettings`.
+You can customize the view header height of `DateRangePicker` using the `viewHeaderHeight` property of `DateRangePickerMonthViewSettings`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -85,7 +85,7 @@ Widget build(BuildContext context) {
 ![View Header height Date Range Picker](images/headers/viewheaderheight.png)
 
 ### View header appearance
-You can customize the view header style of `DateRangePicker` by using the [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerViewHeaderStyle/backgroundColor.html), [textStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerViewHeaderStyle/textStyle.html) properties of `DateRangePickerViewHeaderStyle`.
+You can customize the view header style of `DateRangePicker` by using the [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerViewHeaderStyle/backgroundColor.html), [textStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerViewHeaderStyle/textStyle.html) properties of [DateRangePickerViewHeaderStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerViewHeaderStyle-class.html).
 
 {% tabs %}
 {% highlight Dart %}
@@ -109,7 +109,7 @@ Widget build(BuildContext context) {
 ![View Header appearance Date Range Picker](images/headers/viewheaderappearance.png)
 
 ### View header day format
-You can customize the view header of `DateRangePicker` by using the dayFormat[link] property of `DateRangePickerMonthViewSettings`.
+You can customize the view header of `DateRangePicker` by using the dayFormat[https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/dayFormat.html] property of DateRangePickerMonthViewSettings[https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings-class.html].
 
 {% tabs %}
 {% highlight Dart %}
