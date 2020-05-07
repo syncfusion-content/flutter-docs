@@ -256,7 +256,7 @@ Widget build(BuildContext context) {
 
 The DateRangePicker supports selecting single, multiple, and range of dates. It also supports programmatic selection.
 
-The selected date or range details can be obtained using the `onSelectionChanged` callback of date range picker. The callback will return the `DateRangePickerSelectionChangedArgs` which contains the selected date or range details.
+The selected date or range details can be obtained using the onSelectionChanged[https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/onSelectionChanged.html] callback of date range picker. The callback will return the `DateRangePickerSelectionChangedArgs` which contains the selected date or range details.
 
 {% tabs %}
 {% highlight Dart %}
