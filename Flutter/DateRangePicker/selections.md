@@ -2,12 +2,12 @@
 layout: post
 title: Selections in Syncfusion Flutter Date Range Picker | Syncfusion
 description: This session describes the multiple selections in SfDateRangePicker widget in Flutter | DatePicker | Syncfusion
-platform: flutter
+platform: Flutter
 control: SfDateRangePicker
 documentation: ug
 ---
 
-# Selections in flutter Date Range Picker (SfDateRangePicker)
+# Selections in Flutter Date Range Picker (SfDateRangePicker)
 Dates can be selected by touching the on month view cells. The default [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectionMode.html) is Single that allows the user to select one date at a time. `SfDateRangePicker` provides support to select dates in four modes such as `Single`, `Multiple`, `Range` and `MultiRange` selection
 
 ## Single selection
@@ -93,3 +93,85 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![MultiRangeSelection Date Range Picker](images/selections/multirange.png)
+
+## Selection radius
+You can customize the radius of the selection using the [selectionRadius](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/selectionRadius.html) property of the [DateRangePickerMonthViewSettings](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings-class.html).
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDateRangePicker(
+      view: DateRangePickerView.month,
+      monthViewSettings: DateRangePickerMonthViewSettings(selectionRadius: 10),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Selection radius Date Range Picker](images/selections/selectionradius.png)
+
+## Selection shape
+You can customize the selection shape of the selected date using the [selectionShape](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectionShape.html) property of the `DateRangePicker`.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDateRangePicker(
+      view: DateRangePickerView.month,
+      selectionShape: DateRangePickerSelectionShape.rectangle,
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Selection shape Date Range Picker](images/selections/selectionshape.png)
+
+## Enable swipe selection
+Using the [enableSwipeSelection](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/enableSwipeSelection.html) property of the `DateRangePicker`, you can select the dates by using swiping. By default, `enableSwipeSelection` property as `true`.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDateRangePicker(
+      view: DateRangePickerView.month,
+      selectionMode: DateRangePickerSelectionMode.range,
+      monthViewSettings:
+          DateRangePickerMonthViewSettings(enableSwipeSelection: false),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Toggle day selection
+You can deselect the selected date using the [toggleDaySelection](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/toggleDaySelection.html) property of the [DateRangePickerMonthViewSettings](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings-class.html).
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDateRangePicker(
+      view: DateRangePickerView.month,
+      toggleDaySelection: true,
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}

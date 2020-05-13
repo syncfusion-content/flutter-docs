@@ -2,7 +2,7 @@
 layout: post
 title: Customizations Syncfusion Flutter Date Range Picker | Date Picker
 description: Describe how to customize the Syncfusion SfDateRangePicker widget in Flutter | Date Picker | Customization
-platform: flutter
+platform: Flutter
 control: SfDateRangePicker
 documentation: ug
 ---
@@ -12,7 +12,7 @@ documentation: ug
 ## Month cell customization
 You can customize the calendar month view by using the `monthCellStyle` of `SfDateRangePicker`.
 
-•    **Current month dates** – You can customize the current month date's text style and background of the `DateRangePicker` by using the [textStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/textStyle.html) and [cellDecoration](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/cellDecoration.html).
+•    **Current month dates** – You can customize the current month date's text style and background of the `DateRangePicker` by using the [textStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/textStyle.html) and [cellDecoration](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/cellDecoration.html) properties of [DateRangePickerMonthCellStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle-class.html)
 
 •    **Today date** – You can customize the today date text style and background of the `DateRangePicker` by using the [todayTextStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/todayTextStyle.html) and [todayCellDecoration](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/todayCellDecoration.html).
 
@@ -69,6 +69,27 @@ Widget build(BuildContext context) {
 
 ![Customizations Date Range Picker](images/customizations/customizations.png)
 
+## Month format
+You can customize the month format of the `DateRangePicker` using the [monthFormat](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/monthFormat.html) property.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDateRangePicker(
+      view: DateRangePickerView.month,
+      monthFormat: 'MMM',
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Month cell customization Date Range Picker](images/customizations/monthcell_customization.png)
+
 ## Month selection cell customization
 
 You can also customize the month view section by using the `monthCellStyle` of `SfDateRangePicker`.
@@ -105,10 +126,12 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## Year cell customization
-You can customize the calendar `year`,`decade`,`century` view by using the `yearCellStyle` of `SfDateRangePicker`.
+![Month Selection cell customization Date Range Picker](images/customizations/monthcell_selection_customization.png)
 
-•   **Current year** – You can customize current month dates text style and background of the `DateRangePicker` by using the [textStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/textStyle.html) and [cellDecoration](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/cellDecoration.html).
+## Year cell customization
+You can customize the calendar `year`, `decade`, and `century` view by using the `yearCellStyle` of `SfDateRangePicker`. 
+
+•   **Current year** – You can customize current month dates text style and background of the `DateRangePicker` by using the [textStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/textStyle.html) and [cellDecoration](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/cellDecoration.html) properties of [DateRangePickerYearCellStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerYearCellStyle-class.html)
 
 •   **Disabled dates** – Disable dates text style and background beyond of the `DateRangePicker` by using the [disableDatesTextStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/disabledDatesTextStyle.html) and  [disableDatesDecoration](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthCellStyle/disabledDatesDecoration.html).
 
@@ -149,3 +172,9 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Year cell customization Date Range Picker](images/customizations/yearcell_customization.png)
+
+## See also
+
+[How to customize the month cell of the Flutter date range picker (SfDateRangePicker)?](https://www.syncfusion.com/kb/11307/how-to-customize-the-month-cell-of-the-flutter-date-range-picker-sfdaterangepicker)

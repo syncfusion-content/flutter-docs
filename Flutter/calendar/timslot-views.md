@@ -103,7 +103,7 @@ Widget build(BuildContext context) {
 
 ## Full screen calendar
 
-Calendar time interval height can be adjusted based on screen height by changing the value of timeIntervalHeight property to -1. It will auto-fit to the screen height and width.
+Calendar time interval height can be adjusted based on screen height by changing the value of `timeIntervalHeight` property to -1. It will auto-fit to the screen height and width.
 
 {% tabs %}
 {% highlight Dart %}
