@@ -2,7 +2,7 @@
 layout: post
 title: Header of Syncfusion Flutter Calendar | Scheduler
 description: Learn about the header and view header and their customization in Syncfusion Flutter Calendar widget
-platform: Flutter
+platform: flutter
 control: SfCalendar
 documentation: ug
 ---
@@ -125,4 +125,4 @@ Widget build(BuildContext context) {
 
 ## See also
 
-[How to add custom header and view header in Flutter event calendar(SfCalendar) widget?](https://www.syncfusion.com/kb/10997/how-to-add-custom-header-and-view-header-in-flutter-event-calendar-widget)
+[How to add custom header and view header in Flutter event calendar widget](https://www.syncfusion.com/kb/10997/how-to-add-custom-header-and-view-header-in-flutter-event-calendar-widget)

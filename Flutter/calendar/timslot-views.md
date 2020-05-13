@@ -2,12 +2,12 @@
 layout: post
 title: Day, week, work week views of Syncfusion Flutter Calendar | Scheduler
 description: Learn how to customize the Calendar timeslot view settings and its appearance in SfCalendar widget in Flutter
-platform: Flutter
+platform: flutter
 control: SfCalendar
 documentation: ug
 ---
 
-# Timeslot views in Flutter calendar
+# Timeslot views in flutter calendar
 Calendar has six built-in time slot views used to display date, and the views will display based on the current day by default. Appointments on a specific day will be arranged in respective timeslots based on its duration.
 
 * **Day view:** Displays a single day.
@@ -319,4 +319,4 @@ Widget build(BuildContext context) {
 
 ## See also
 
-[Time label customization in the Flutter event calendar (SfCalendar)?](https://www.syncfusion.com/kb/11008/how-to-customize-the-time-label-in-the-flutter-event-calendar-sfcalendar)
+[Time label customization in the flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/11008/how-to-customize-the-time-label-in-the-flutter-event-calendar-sfcalendar)

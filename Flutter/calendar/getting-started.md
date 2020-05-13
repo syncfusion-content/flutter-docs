@@ -1,20 +1,21 @@
 ---
 layout: post
 title: Flutter calendar widget to schedule & manage events | Syncfusion
-description: Getting started with the Syncfusion Flutter calendar widget to schedule an event with seven built-in configurable views modes.
-platform: Flutter
+description: Getting started with the Syncfusion flutter calendar widget to schedule an event with seven built-in configurable views modes.
+platform: flutter
 control: SfCalendar
 documentation: ug
 ---
 
-# Getting Started with Flutter calendar (SfCalendar)
-This section explains the steps required to add the calendar widget and populate appointments to the calendar widget. This section covers only basic features needed to get started with the Syncfusion calendar widget.
-## Add Flutter calendar to an application
+# Getting Started of flutter calendar
+This section explains the steps required to add the calendar widget and populate appointments to the calendar widget. This section covers only basic features needed to get started with Syncfusion calendar widget.
+
+## Add flutter calendar to an application
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
 
 **Add dependency**
 
-Add the Syncfusion Flutter calendar dependency to your pubspec.yaml file.
+Add the Syncfusion flutter calendar dependency to your pubspec.yaml file.
 
 {% highlight dart %}
 
@@ -350,8 +351,8 @@ You can get the complete getting started sample from [here](https://github.com/S
 
 ## See also
 
-[How to switch between views of the event calendar (SfCalendar) in Flutter?](https://www.syncfusion.com/kb/10944/how-to-switch-between-views-of-the-event-calendar-in-flutter)
+[How to switch between views of the event calendar in Flutter?](https://www.syncfusion.com/kb/10944/how-to-switch-between-views-of-the-event-calendar-in-flutter)
 
-[How to update event calendar (SfCalendar) DisplayDate using showDatePicker in Flutter?](https://www.syncfusion.com/kb/11010/how-to-update-event-calendar-sfcalendar-displaydate-using-showdatepicker-in-flutter)
+[How to update event calendar (SfCalendar) DisplayDate using showDatePicker in flutter](https://www.syncfusion.com/kb/11010/how-to-update-event-calendar-sfcalendar-displaydate-using-showdatepicker-in-flutter)
 
-[How can we move to specific time while switching from month to day view in Flutter event calendar (SfCalendar)?](https://www.syncfusion.com/kb/10943/how-can-we-move-to-specific-time-while-switching-from-month-to-day-view-in-flutter-event)
+[How can we move to specific time while switching from month to day view in Flutter event calendar](https://www.syncfusion.com/kb/10943/how-can-we-move-to-specific-time-while-switching-from-month-to-day-view-in-flutter-event)

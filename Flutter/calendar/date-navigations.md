@@ -2,7 +2,7 @@
 layout: post
 title: Date Navigations of Syncfusion Flutter Calendar | Scheduler
 description: Learn about the complete navigation and gesture support in Syncfusion Flutter Calendar (SfCalendar) widget | Scheduler
-platform: Flutter
+platform: flutter
 control: SfCalendar
 documentation: ug
 ---
@@ -82,10 +82,8 @@ class MyAppState extends State<MyApp>{
 {% endhighlight %}
 {% endtabs %}
 
-![InitialDisplayDate Calendar](images/date-navigation/initial-display-date.png)
-
 ## Programmatic date selection
-You can programmatically select the dates in calendar widget by the [selectedDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/selectedDate.html) property of `CalendarController`.
+You can programmatically select the dates in calendar widget by [selectedDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/selectedDate.html) property of `CalendarController`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -114,10 +112,8 @@ class MyAppState extends State<MyApp>{
 {% endhighlight %}
 {% endtabs %}
 
-![InitialSelectedDate Calendar](images/date-navigation/initial-selected-date.png)
-
 ## Programmatically change to adjacent dates
-By default, the date can be navigated to next and previous views using touch gesture, by swiping the control from right-to -left and left-to-right direction. The view can be also changed programmatically using the [forward](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/forward.html) and [backward](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/backward.html) methods available in `CalendarController`.
+By default, the date can be navigated to next and previous views using touch gesture, by swiping the control from right to left and left to right direction. The view can be also changed programmatically using the [forward](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/forward.html) and [backward](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/backward.html) methods available in `CalendarController`.
 
 ### Forward
 You can use the `forward` method of `CalendarController` for viewing the next immediate visible dates in the `SfCalendar`. It will move to next month if the calendar view is month, similarly it will move to next week for week view and next day for day view.

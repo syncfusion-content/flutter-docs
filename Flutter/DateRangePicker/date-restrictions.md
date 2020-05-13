@@ -2,7 +2,7 @@
 layout: post
 title: Date restrictions in Syncfusion Flutter Date Range Picker | Syncfusion
 description: Learn about the complete date restriction in Syncfusion SfDateRangePicker widget in Flutter | Date Picker
-platform: Flutter
+platform: flutter
 control: SfDateRangePicker
 documentation: ug
 ---
@@ -91,8 +91,4 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Blackoutdate Range Picker](images/date-restrictions/blackoutdate.png)
 
-## See also
-
-[How to restrict date range picker within the date limit in Flutter date range picker (SfDateRangePicker)?](https://www.syncfusion.com/kb/11329/how-to-restrict-date-range-picker-within-the-date-limit-in-flutter-date-range-picker)

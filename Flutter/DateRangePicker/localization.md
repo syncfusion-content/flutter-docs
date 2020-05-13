@@ -2,7 +2,7 @@
 layout: post
 title: Localization of Syncfusion Flutter Date Range Picker | Date Picker
 description: Describe how to Localize the contents in Syncfusion SfDateRangePicker widget in Flutter | Globalization | Internationalization | Date picker
-platform: Flutter
+platform: flutter
 control: SfDateRangePicker
 documentation: ug
 ---
@@ -59,7 +59,3 @@ return MaterialApp(
 {% endtabs %}
 
 ![Localization Date Range Picker](images/localization/localization.png)
-
-## See also
-
-[How to add new language in Flutter date range picker (SfDateRangePicker)?](https://www.syncfusion.com/kb/11306/how-to-add-new-language-in-flutter-date-range-picker-sfdaterangepicker)

@@ -2,7 +2,7 @@
 layout: post
 title: Right to Left of Syncfusion Flutter Date Range Picker | Date Picker
 description: Describe how DateRangePicker works on right-to-left direction in Syncfusion SfDateRangePicker widget in Flutter
-platform: Flutter
+platform: flutter
 control: SfDateRangePicker
 documentation: ug
 ---
