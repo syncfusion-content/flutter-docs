@@ -14,7 +14,7 @@ documentation: ug
 Syncfusion Flutter widgets support formatting dates and numbers based on culture. For more details, you can refer to the following links.
 
 <table>
-    <tr>
+<tr>
         <td>
             <b>Widgets</b>
         </td>
@@ -49,7 +49,7 @@ Syncfusion Flutter widgets support formatting dates and numbers based on culture
     </tr>
     <tr>
         <td>
-           SfRangeSlider
+          SfRangeSlider
         </td>
        <td>
            <a href="https://help.syncfusion.com/flutter/range-slider/labels-and-divisor#number-format">Number</a><br/>
