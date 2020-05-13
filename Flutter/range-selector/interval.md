@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Interval in Syncfusion Flutter Range Selector | Syncfusion
-description: This section explains about how to add the interval for numeric and date range selector for flutter platform
-platform: flutter
+description: This section explains about how to add intervals in numeric and date range selector in Flutter application.
+platform: Flutter
 control: SfRangeSelector
 documentation: ug
 ---
@@ -14,7 +14,7 @@ This section explains about how to add the interval for numeric and date range s
 
 Range selector elements like labels, ticks and divisors are rendered based on the [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/interval.html), [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) properties. The default value of the [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/interval.html) property is `null` and it must be greater than 0.
 
-For example, if `min` is 2.0 and `max` is 10.0 and `interval` is 2.0, the range selector will render the labels,  major ticks, and divisors at 2.0, 4.0 and so on.
+For example, if [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) is 2.0 and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) is 10.0 and [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/interval.html) is 2.0, the range selector will render the labels, major ticks, and divisors at 2.0, 4.0 and so on.
 
 {% tabs %}
 {% highlight Dart %}
@@ -89,17 +89,17 @@ class Data {
 ![Numeric interval](images/interval/numeric_interval.png)
 
 N>
-* Refer the `showDivisors` to know about the rendering of divisors at given interval.
-* Refer the `showTicks` to know about the rendering of major ticks at given interval.
-* Refer the `showLabels` to know about the rendering of labels at given interval.
+* Refer the [`showDivisors`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/showDivisors.html) to know about the rendering of divisors at given interval.
+* Refer the [`showTicks`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/showTicks.html) to know about the rendering of major ticks at given interval.
+* Refer the [`showLabels`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/showLabels.html) to know about the rendering of labels at given interval.
 
 ## Date interval
 
-The type of date interval. It can be years to seconds. It is mandatory for date `SfRangeSelector`. The default value of `dateIntervalType` property is `null`.
+The type of date interval. It can be years to seconds. It is mandatory for date [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html). The default value of [`dateIntervalType`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dateIntervalType.html) property is `null`.
 
-For date values, the range selector does not have auto interval support. So, it is mandatory to set `interval`, `dateIntervalType`, and `dateFormat` for date values.
+For date values, the range selector does not have auto interval support. So, it is mandatory to set [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/interval.html), [`dateIntervalType`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dateIntervalType.html), and [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dateFormat.html) for date values.
 
-For example, if `min` is `DateTime(2002, 01, 01)` and `max` is `DateTime(2010, 01, 01)` and `interval` is `2`, `dateIntervalType` is `DateIntervalType.years`, `dateFormat` is `DateFormat.y()` then the range selector will render the labels,  major ticks, and divisors at 2002, 2004, 2006 and so on.
+For example, if [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) is `DateTime(2002, 01, 01)` and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) is `DateTime(2010, 01, 01)` and [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/interval.html) is `2`, [`dateIntervalType`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dateIntervalType.html) is `DateIntervalType.years`, [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dateFormat.html) is `DateFormat.y()` then the range selector will render the labels, major ticks, and divisors at 2002, 2004, 2006 and so on.
 
 {% tabs %}
 {% highlight Dart %}
@@ -175,3 +175,81 @@ class Data {
 {% endtabs %}
 
 ![Date interval](images/interval/date_interval.png)
+
+## Step size
+
+You can move the thumb in discrete manner using the [`stepSize`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/stepSize.html) property in the range selector.
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+final List<Data> chartData = <Data>[
+    Data(x:2.0, y: 2.2),
+    Data(x:3.0, y: 3.4),
+    Data(x:4.0, y: 2.8),
+    Data(x:5.0, y: 1.6),
+    Data(x:6.0, y: 2.3),
+    Data(x:7.0, y: 2.5),
+    Data(x:8.0, y: 2.9),
+    Data(x:9.0, y: 3.8),
+    Data(x:10.0, y: 3.7),
+];
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSelector(
+                    min: _min,
+                    max: _max,
+                    interval: 2,
+                    stepSize: 1,
+                    showLabels: true,
+                    showTicks: true,
+                    minorTicksPerInterval: 1,
+                    initialValues: _values,
+                    child: Container(
+                    height: 130,
+                    child: SfCartesianChart(
+                        margin: const EdgeInsets.all(0),
+                        primaryXAxis: NumericAxis(minimum: _min,
+                            maximum: _max,
+                            isVisible: false,),
+                        primaryYAxis: NumericAxis(isVisible: false),
+                        plotAreaBorderWidth: 0,
+                        series: <SplineAreaSeries<Data, double>>[
+                            SplineAreaSeries<Data, double>(
+                                color: Color.fromARGB(255, 126, 184, 253),
+                                dataSource: chartData,
+                                    xValueMapper: (Data sales, _) => sales.x,
+                                    yValueMapper: (Data sales, _) => sales.y)
+                            ],
+                        ),
+                   ),
+              ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Dart %}
+
+class Data {
+  Data({this.x, this.y});
+  final double x;
+  final double y;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Step size support](images/interval/selector-step-size-support.gif)
