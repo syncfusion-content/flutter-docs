@@ -1,7 +1,7 @@
 ---
 layout: post
 title: RTL feature in Syncfusion Flutter Range Selector | Syncfusion
-description: This section helps to learn about how to change the layout direction in the right to left direction in range selector for Flutter platform
+description: This section explains about how to render the Flutter range selector in right to left direction using Directionality widget.
 platform: Flutter
 control: SfRangeSelector
 documentation: ug
@@ -9,28 +9,23 @@ documentation: ug
 
 # Right to Left (RTL) in range selector
 
-The SfRangeSelector supports changing the layout direction of the widget in the right-to-left direction by using the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to `rtl` in the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget.
-
-You can also change the right to left direction by specifying locale, that supports RTL language such as (Arabic ,Persian ,Hebrew, Pashto and Urdu) by specifying the MaterialApp properties and adding the flutter_localizations package to your application.
+The SfRangeSelector supports changing the layout direction of the widget in the right-to-left direction by setting the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to `rtl` in the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget.
 
 {% tabs %}
 {% highlight Dart %}
 
-final double _min = 2.0;
-final double _max = 10.0;
 SfRangeValues _initialValues = SfRangeValues(4.0, 8.0);
 
 @override
 Widget build(BuildContext context) {
   return MaterialApp(
       home: Scaffold(
-          backgroundColor: Colors.white,
           body: Directionality(
             textDirection: TextDirection.rtl,
             child: Center(
               child: SfRangeSelector(
-                min: _min,
-                max: _max,
+                min: 2.0,
+                max: 10.0,
                 interval: 1,
                 showLabels: true,
                 showTicks: true,

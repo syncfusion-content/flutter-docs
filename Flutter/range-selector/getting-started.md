@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started for Syncfusion Flutter Range Selector | Syncfusion
-description: This section explains the steps required to add the range selector widget and its elements such as numeric and date values, ticks, labels and tooltips.
+description: This section explains about the steps required to add the range selector widget and its elements such as numeric and date values, ticks, labels and tooltips.
 platform: Flutter
 control: SfRangeSelector
 documentation: ug
@@ -21,9 +21,11 @@ Add the Syncfusion Flutter range selector dependency to your pubspec.yaml file.
 
 dependencies:
 
-syncfusion_flutter_sliders: ^18.1.0.36-beta
+syncfusion_flutter_sliders: ^xx.x.xx
 
 {% endhighlight %}
+
+N> Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Sliders`](https://pub.dev/packages/syncfusion_flutter_sliders/versions) package.
 
 **Get packages** 
 

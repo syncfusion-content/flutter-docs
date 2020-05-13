@@ -90,8 +90,29 @@ Widget build(BuildContext context) {
 
 ![Century view Date Range Picker](images/views/centuryview.png)
 
+## Week view
+The number of weeks in the month view can be customized by setting the [numberOfWeeksInView](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/numberOfWeeksInView.html) property of DateRangePickerMonthViewSettings[https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings-class.html].
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDateRangePicker(
+        view: DateRangePickerView.month,
+        monthViewSettings:
+            DateRangePickerMonthViewSettings(numberOfWeeksInView: 2)),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Century view Date Range Picker](images/views/numberofweek-in-view.png)
+
 ## See also
 
-[How to switch between the date range picker views in Flutter date range picker (SfDateRangePicker)?](https://www.syncfusion.com/kb/11305/how-to-switch-between-the-date-range-picker-views-in-flutter-date-range-picker)
+[How to switch between the date range picker views in the Flutter date range picker (SfDateRangePicker)?](https://www.syncfusion.com/kb/11305/how-to-switch-between-the-date-range-picker-views-in-flutter-date-range-picker)
 
 [How to get the current view dates in Flutter date range picker (SfDateRangePicker)?](https://www.syncfusion.com/kb/11331/how-to-get-the-current-view-dates-in-flutter-date-range-picker-sfdaterangepicker)

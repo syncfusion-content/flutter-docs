@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tick features in Syncfusion Flutter Range Slider | Syncfusion
-description: This section helps to learn about how to add major and minor ticks in the range slider for Flutter platform
+description: This section explains about how to show minor ticks, major ticks and how to customize them in the range slider.
 platform: Flutter
 control: SfRangeSlider
 documentation: ug
@@ -56,7 +56,7 @@ N> Refer the [`tickShape`](https://pub.dev/documentation/syncfusion_flutter_slid
 
 It is used to represent the number of smaller ticks between two major ticks. For example, if [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html) is 0.0 and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) is 10.0 and [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/interval.html) is 2.0, the range slider will render the major ticks at 0.0, 2.0, 4.0 and so on. If [`minorTicksPerInterval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/minorTicksPerInterval.html) is 1, then smaller ticks will be rendered on 1.0 and 3.0 and so on.
 
-I> The default value of [`minorTicksPerInterval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/minorTicksPerInterval.html) property is null and must be greater than 0.
+I> The default value of [`minorTicksPerInterval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/minorTicksPerInterval.html) property is null and it must be greater than 0.
 
 {% tabs %}
 {% highlight Dart %}

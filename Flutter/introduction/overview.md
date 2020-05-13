@@ -9,7 +9,7 @@ documentation: ug
 
 # Syncfusion Flutter Widgets
 
-The Syncfusion Flutter UI widgets is the suite you ever need to create rich and high-quality mobile applications in iOS and Android with single code base. It also includes charts widgets.
+The Syncfusion Flutter UI widgets are the suite you ever need to create rich and high-quality cross-platform applications in iOS, Android, and Web from a single code base.
 
 ## How to best read this user guide
 

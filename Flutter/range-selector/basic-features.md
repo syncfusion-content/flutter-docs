@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Basic features for Syncfusion Flutter Range Selector | Syncfusion
-description: This basic features section explains how to add the numeric and date range selector for Flutter platform
+description: This section explains about how to add numeric range selector and date range selector in Flutter application.
 platform: Flutter
 control: SfRangeSelector
 documentation: ug
@@ -12,11 +12,11 @@ This section explains about how to add the numeric and date range selector.
 
 ## Minimum
 
-The minimum value that the user can select. The default value of [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) property is 0.0 and must be less than the [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) value.
+The minimum value that the user can select. The default value of [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) property is 0.0 and it must be less than the [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) value.
 
 ## Maximum
 
-The maximum value that the user can select. The default value of [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) property is 1.0 and must be greater than the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html).
+The maximum value that the user can select. The default value of [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) property is 1.0 and it must be greater than the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) value.
 
 ## Initial values
 
@@ -24,9 +24,9 @@ It represents the initial values in the range selector. The range selector's thu
 
 N> For date values, the range selector does not have auto interval support. So, it is mandatory to set [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/interval.html), [`dateIntervalType`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dateIntervalType.html), and [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dateFormat.html) for date values.
 
-**Numeric range slider**
+**Numeric range selector**
 
-You must import the [`Chart`](https://pub.dev/packages/syncfusion_flutter_charts) package to use chart as a child in range selector.
+You can show numeric values in the range selector by setting `double` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) and [`initialValues`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/initialValues.html) properties.
 
 {% tabs %}
 {% highlight Dart %}
@@ -100,7 +100,11 @@ class Data {
 
 ![Numeric range selector](images/basic-features/selector_numeric_label.png)
 
-**Date range slider**
+**Date range selector**
+
+You can show date values in the range selector by setting `DateTime` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) and [`initialValues`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/initialValues.html) properties.
+
+N> You must import [`intl`](https://pub.dev/packages/intl) package for formatting date range selector using the [`DateFormat`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
 
 {% tabs %}
 {% highlight Dart %}
@@ -176,6 +180,69 @@ class Data {
 {% endtabs %}
 
 ![Date range selector](images/basic-features/selector_date_label.png)
+
+**Handle value change**
+
+The [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/onChanged.html) callback is called when the user is selecting the new values.
+
+{% tabs %}
+{% highlight Dart %}
+
+final SfRangeValues _initialValues = SfRangeValues(0.3, 0.7);
+
+final List<Data> _chartData = <Data>[
+  Data(x: DateTime(2003, 01, 01), y: 3.4),
+  Data(x: DateTime(2004, 01, 01), y: 2.8),
+  Data(x: DateTime(2005, 01, 01), y: 1.6),
+  Data(x: DateTime(2006, 01, 01), y: 2.3),
+  Data(x: DateTime(2007, 01, 01), y: 2.5),
+  Data(x: DateTime(2008, 01, 01), y: 2.9),
+  Data(x: DateTime(2009, 01, 01), y: 3.8),
+  Data(x: DateTime(2010, 01, 01), y: 2.0),
+];
+
+@override
+Widget build(BuildContext context) {
+  return Container(
+      child: Center(
+        child: SfRangeSelector(
+          initialValues: _initialValues,
+          onChanged: (SfRangeValues values) {
+          },
+          child: Container(
+            child: SfCartesianChart(
+              margin: const EdgeInsets.all(0),
+              primaryXAxis: DateTimeAxis(
+                isVisible: false,),
+              primaryYAxis: NumericAxis(isVisible: false, maximum: 4),
+              series: <SplineAreaSeries<Data, DateTime>>[
+                SplineAreaSeries<Data, DateTime>(
+                    dataSource: _chartData,
+                    xValueMapper: (Data sales, _) => sales.x,
+                    yValueMapper: (Data sales, _) => sales.y)
+              ],
+            ),
+            height: 250,
+          ),
+        ),
+      ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Dart %}
+
+class Data {
+  Data({this.x, this.y});
+  final DateTime x;
+  final double y;
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Active color
 

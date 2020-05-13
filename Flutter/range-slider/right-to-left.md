@@ -1,7 +1,7 @@
 ---
 layout: post
 title: RTL feature in Syncfusion Flutter Range Slider | Syncfusion
-description: This section helps to learn about how to change the layout direction in the right to left direction in range slider for Flutter platform
+description: This section explains about how to render the Flutter range slider in right to left direction using Directionality widget.
 platform: Flutter
 control: SfRangeSlider
 documentation: ug
@@ -9,9 +9,7 @@ documentation: ug
 
 # Right to Left (RTL) in range slider
 
-The SfRangeSlider supports changing the layout direction of the widget in the right-to-left direction by using the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to `rtl` in the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget.
-
-You can also change the right to left direction by specifying locale, that supports RTL language such as (Arabic ,Persian ,Hebrew, Pashto and Urdu) by specifying the MaterialApp properties and adding the flutter_localizations package to your application.
+The SfRangeSlider supports changing the layout direction of the widget in the right-to-left direction by setting the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to `rtl` in the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget.
 
 {% tabs %}
 {% highlight Dart %}

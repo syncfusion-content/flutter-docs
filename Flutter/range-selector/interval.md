@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Interval in Syncfusion Flutter Range Selector | Syncfusion
-description: This section explains about how to add the interval for numeric and date range selector for Flutter platform
+description: This section explains about how to add intervals in numeric and date range selector in Flutter application.
 platform: Flutter
 control: SfRangeSelector
 documentation: ug
@@ -12,7 +12,7 @@ This section explains about how to add the interval for numeric and date range s
 
 ## Numeric interval
 
-Range selector elements like labels, ticks and divisors are rendered based on the [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/interval.html), [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) properties. The default value of the [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/interval.html) property is `null` and must be greater than 0.
+Range selector elements like labels, ticks and divisors are rendered based on the [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/interval.html), [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) properties. The default value of the [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/interval.html) property is `null` and it must be greater than 0.
 
 For example, if [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) is 2.0 and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) is 10.0 and [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/interval.html) is 2.0, the range selector will render the labels, major ticks, and divisors at 2.0, 4.0 and so on.
 

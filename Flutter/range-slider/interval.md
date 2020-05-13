@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Interval in Syncfusion Flutter Range Slider | Syncfusion
-description: This section explains about how to add the interval for numeric and date range slider for Flutter platform
+description: This section explains about how to add intervals for numeric and date range slider in Flutter application.
 platform: Flutter
 control: SfRangeSlider
 documentation: ug
@@ -12,7 +12,7 @@ This section explains about how to add the interval for numeric and date range s
 
 ## Numeric interval
 
-Range slider elements like labels, ticks and divisors are rendered based on the [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/interval.html), [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html) and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) properties. The default value is `null` and must be greater than 0.
+Range slider elements like labels, ticks and divisors are rendered based on the [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/interval.html), [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html) and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) properties. The default value is `null` and it must be greater than 0.
 
 For example, if [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html) is 0.0 and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) is 10.0 and [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/interval.html) is 2.0, the range slider will render the labels, major ticks, and divisors at 0.0, 2.0, 4.0 and so on.
 

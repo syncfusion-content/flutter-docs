@@ -69,6 +69,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Enable and disable past dates Range Picker](images/date-restrictions/enable_diasable_pastdates.png)
+
 ## Blackout Dates
 In `DateRangePicker`, [blackoutDates](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/blackoutDates.html) refer to the disabled dates that restrict the user from selecting it. These dates will be marked with Strikethrough.
 
@@ -88,6 +90,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Blackoutdate Range Picker](images/date-restrictions/blackoutdate.png)
 
 ## See also
 

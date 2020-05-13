@@ -7,9 +7,8 @@ control: SfCalendar
 documentation: ug
 ---
 
-# Getting Started of Flutter calendar (SfCalendar)
-This section explains the steps required to add the calendar widget and populate appointments to the calendar widget. This section covers only basic features needed to get started with Syncfusion calendar widget.
-
+# Getting Started with Flutter calendar (SfCalendar)
+This section explains the steps required to add the calendar widget and populate appointments to the calendar widget. This section covers only basic features needed to get started with the Syncfusion calendar widget.
 ## Add Flutter calendar to an application
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
 
@@ -21,9 +20,11 @@ Add the Syncfusion Flutter calendar dependency to your pubspec.yaml file.
 
 dependencies:
 
-syncfusion_flutter_calendar: ^17.4.39-beta
+syncfusion_flutter_calendar: ^xx.x.xx
 
 {% endhighlight %}
+
+N> Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Calendar`](https://pub.dev/packages/syncfusion_flutter_calendar/versions) package.
 
 **Get packages** 
 
