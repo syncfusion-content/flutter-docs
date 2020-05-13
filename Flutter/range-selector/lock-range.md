@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Lock range in Syncfusion Flutter Range Selector | Syncfusion
-description: This section explains about how to show lock range feature in the range selector for flutter platform
-platform: flutter
+description: This section explains about how to use lock range feature in the range selector in Flutter application.
+platform: Flutter
 control: SfRangeSelector
 documentation: ug
 ---
@@ -38,7 +38,7 @@ Widget build(BuildContext context) {
               child: SfRangeSelector(
                     min: _min,
                     max: _max,
-                    interval: 1,
+                    interval: 2,
                     showTicks: true,
                     showLabels: true,
                     initialValues: _values,
@@ -82,4 +82,4 @@ class Data {
 {% endhighlight %}
 {% endtabs %}
 
-![Range selector lock range](images/lock-range/lock-range.png)
+![Range selector lock range](images/lock-range/lock-range.gif)

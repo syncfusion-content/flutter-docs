@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Tooltip features in Syncfusion Flutter Range Slider | Syncfusion
-description: This section helps to learn about how to add tooltip and its features in range slider for flutter platform
-platform: flutter
+description: This section explains about how to show tooltips and customize its appearance in the Flutter range slider.
+platform: Flutter
 control: SfRangeSlider
 documentation: ug
 ---
@@ -13,7 +13,7 @@ This section helps to learn about how to add tooltip in the range slider.
 
 ## Show tooltips
 
-You can enable tooltips for both thumbs. It is used to clearly indicate the current selection of the ranges during interaction. By default, tooltip text is formatted with either `numberFormat` or `dateFormat`.
+You can enable tooltips for both thumbs. It is used to clearly indicate the current selection of the ranges during interaction. By default, tooltip text is formatted with either [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/numberFormat.html) or [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateFormat.html).
 
 {% tabs %}
 {% highlight Dart %}
@@ -50,15 +50,17 @@ Widget build(BuildContext context) {
 ![Range slider tooltip support](images/tooltip/show-tooltip.png)
 
 N>
-* Refer the `tooltipTextFormatterCallback` for changing the default tooltip text.
-* Refer the `SfRangeSliderThemeData` for customizing the appearance of the tooltip text.
+* Refer the [`tooltipTextFormatterCallback`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/tooltipTextFormatterCallback.html) for changing the default tooltip text.
+* Refer the [`SfRangeSliderThemeData`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData-class.html) for customizing the appearance of the tooltip text.
 
 ## Tooltip text format
 
-You can format or change the whole tooltip label text. Its arguments contains the following parameters:
+By default it is formatted based on [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/numberFormat.html) property and [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateFormat.html) property based on whether it is date type [`SfRangeSlider`](https://help.syncfusion.com/flutter/range-slider/getting-started#set-date-range) or numeric [`SfRangeSlider`](https://help.syncfusion.com/flutter/range-slider/getting-started#set-numeric-range).
 
-* actualValue – either `DateTime` or `double` based on given `values`.
-* formattedText – If the actual value is `double`, it is formatted by `numberFormat` and if the actual value is `DateTime`, it is formatted by `dateFormat`.
+You can format or change the whole tooltip label text using the [`tooltipTextFormatterCallback`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/tooltipTextFormatterCallback.html). Its arguments are,
+
+* actualValue – either `DateTime` or `double` based on given [`values`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/values.html).
+* formattedText – If the actual value is `double`, it is formatted by [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/numberFormat.html) and if the actual value is `DateTime`, it is formatted by [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateFormat.html).
 
 {% tabs %}
 {% highlight Dart %}
@@ -101,9 +103,9 @@ Widget build(BuildContext context) {
 
 ## Tooltip color
 
-You can change the background color of the tooltip in the range slider using the `tooltipBackgroundColor` property.
+You can change the background color of the tooltip in the range slider using the [`tooltipBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/tooltipBackgroundColor.html) property.
 
-N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://help.syncfusion.com/flutter/range-slider/customization).
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderTheme-class.html).
 
 {% tabs %}
 {% highlight Dart %}
@@ -120,14 +122,14 @@ Widget build(BuildContext context) {
                         tooltipBackgroundColor: Colors.red[300],
                     ),
                     child:  SfRangeSlider(
-                     min: 2.0,
-                     max: 10.0,
-                     interval: 1,
-                     showTicks: true,
-                     showLabels: true,
-                     showTooltip: true,
-                     values: _values,
-                     onChanged: (SfRangeValues newValues){
+                        min: 2.0,
+                        max: 10.0,
+                        interval: 1,
+                        showTicks: true,
+                        showLabels: true,
+                        showTooltip: true,
+                        values: _values,
+                        onChanged: (SfRangeValues newValues){
                             setState(() {
                                 _values = newValues;
                             });
@@ -146,9 +148,9 @@ Widget build(BuildContext context) {
 
 ## Tooltip label style
 
-You can change the text color, font size, font style of the tooltip in the range slider using the `tooltipTextStyle` property.
+You can change the appearance of the tooltip text in the range slider using the [`tooltipTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/tooltipTextStyle.html) property.
 
-N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://help.syncfusion.com/flutter/range-slider/customization).
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderTheme-class.html).
 
 {% tabs %}
 {% highlight Dart %}

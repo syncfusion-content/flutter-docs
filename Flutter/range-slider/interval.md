@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Interval in Syncfusion Flutter Range Slider | Syncfusion
-description: This section explains about how to add the interval for numeric and date range slider for flutter platform
-platform: flutter
+description: This section explains about how to add intervals for numeric and date range slider in Flutter application.
+platform: Flutter
 control: SfRangeSlider
 documentation: ug
 ---
@@ -14,7 +14,7 @@ This section explains about how to add the interval for numeric and date range s
 
 Range slider elements like labels, ticks and divisors are rendered based on the [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/interval.html), [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html) and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) properties. The default value is `null` and it must be greater than 0.
 
-For example, if `min` is 0.0 and `max` is 10.0 and `interval` is 2.0, the range slider will render the labels,  major ticks, and divisors at 0.0, 2.0, 4.0 and so on.
+For example, if [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html) is 0.0 and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) is 10.0 and [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/interval.html) is 2.0, the range slider will render the labels, major ticks, and divisors at 0.0, 2.0, 4.0 and so on.
 
 {% tabs %}
 {% highlight Dart %}
@@ -50,17 +50,17 @@ Widget build(BuildContext context) {
 ![Numeric interval support](images/interval/numeric-interval.png)
 
 N>
-* Refer the `showDivisors` to know about the rendering of divisors at given interval.
-* Refer the `showTicks` to know about the rendering of major ticks at given interval.
-* Refer the `showLabels` to know about the rendering of labels at given interval.
+* Refer the [`showDivisors`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/showDivisors.html) to know about the rendering of divisors at given interval.
+* Refer the [`showTicks`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/showTicks.html) to know about the rendering of major ticks at given interval.
+* Refer the [`showLabels`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/showLabels.html) to know about the rendering of labels at given interval.
 
 ## Date interval
 
-The type of date interval. It can be years to seconds. It is mandatory for date `SfRangeSlider`. The default value of `dateIntervalType` property is `null`.
+The type of date interval. It can be years to seconds. It is mandatory for date [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html). The default value of [`dateIntervalType`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateIntervalType.html) property is `null`.
 
-For date values, the range slider does not have auto interval support. So, it is mandatory to set `interval`, `dateIntervalType`, and `dateFormat` for date values.
+For date values, the range slider does not have auto interval support. So, it is mandatory to set [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/interval.html), [`dateIntervalType`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateIntervalType.html), and [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateFormat.html) for date values.
 
-For example, if `min` is `DateTime(2000, 01, 01)` and `max` is `DateTime(2005, 01, 01)` and `interval` is `1`, `dateIntervalType` is `DateIntervalType.years`, `dateFormat` is `DateFormat.y()` then the range selector will render the labels,  major ticks, and divisors at 2000, 2001, 2002 and so on.
+For example, if [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html) is `DateTime(2000, 01, 01)` and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) is `DateTime(2005, 01, 01)` and [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/interval.html) is `1`, [`dateIntervalType`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateIntervalType.html) is `DateIntervalType.years`, [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateFormat.html) is `DateFormat.y()` then the range selector will render the labels, major ticks, and divisors at 2000, 2001, 2002 and so on.
 
 {% tabs %}
 {% highlight Dart %}
@@ -96,3 +96,42 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Date interval type support](images/interval/date-interval-type.png)
+
+## Step size
+
+You can move the thumb in discrete manner using the [`stepSize`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/stepSize.html) property in the range slider.
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 6.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSlider(
+                  min: 0.0,
+                  max: 10.0,
+                  interval: 2,
+                  stepSize: 2,
+                  showTicks: true,
+                  minorTicksPerInterval: 1,
+                  showLabels: true,
+                  values: _values,
+                  onChanged: (SfRangeValues newValues) {
+                      setState(() {
+                          _values = newValues;
+                      });
+                  },
+              ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Step size support](images/interval/step-size-support.gif)
