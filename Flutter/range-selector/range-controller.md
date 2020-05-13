@@ -1,23 +1,25 @@
 ---
 layout: post
 title: Controller in Syncfusion Flutter Range Selector | Syncfusion
-description: This section explains about how to add the range controller to the range selector for flutter platform
-platform: flutter
+description: This section explains about how to use the range controller for getting and setting values in the Flutter range selector.
+platform: Flutter
 control: SfRangeSelector
 documentation: ug
 ---
 
 # Range controller in range selector
 
-Coordinates `SfRangeSelector` with charts. It automatically controls selection and zooming with charts using the `start` and `end` properties of the controller.
+You can use [`RangeController`](https://pub.dev/documentation/syncfusion_flutter_core/latest/core/RangeController-class.html) for setting and getting current selected values of range selector.
 
 The `start` represents the currently selected start value of the range selector. The left thumb of the range selector was drawn corresponding to this value.
 
 The `end` represents the currently selected end value of the range selector. The right thumb of the range selector was drawn corresponding to this value.
 
-The `start` and `end` can be either `double` or `DateTime`.
+You can get previous values using `previousStart` and `previousEnd` properties.
 
-I> No need to set the `initialValues` property when using `controller` property in the range selector.
+The `start`, `end`, `previousStart`, `previousEnd` properties can be either `double` or `DateTime` based on whether it is date type [`SfRangeSelector`](https://help.syncfusion.com/flutter/range-selector/getting-started#set-date-range) or numeric [`SfRangeSelector`](https://help.syncfusion.com/flutter/range-selector/getting-started#set-numeric-range).
+
+I> You need not to set the [`initialValues`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/initialValues.html) property when using [`controller`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/controller.html) property in the range selector.
 
 N> You must import the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) to use the range controller in the range selector.
 
@@ -346,3 +348,5 @@ class Data {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Zooming support](images/range-controller/zooming-controller-with-sfchart.gif)

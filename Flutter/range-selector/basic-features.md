@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Basic features for Syncfusion Flutter Range Selector | Syncfusion
-description: This basic features section explains how to add the numeric and date range selector for flutter platform
-platform: flutter
+description: This section explains about how to add numeric range selector and date range selector in Flutter application.
+platform: Flutter
 control: SfRangeSelector
 documentation: ug
 ---
@@ -20,9 +20,9 @@ The maximum value that the user can select. The default value of [`max`](https:/
 
 ## Initial values
 
-The values that initially selected in the range selector. The range selector's thumb is drawn corresponding to this value.
+It represents the initial values in the range selector. The range selector's thumb is drawn corresponding to this value.
 
-N> For date values, the range selector does not have auto interval support. So, it is mandatory to set `interval`, `dateIntervalType`, and `dateFormat` for date values.
+N> For date values, the range selector does not have auto interval support. So, it is mandatory to set [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/interval.html), [`dateIntervalType`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dateIntervalType.html), and [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dateFormat.html) for date values.
 
 **Numeric range selector**
 
@@ -35,7 +35,7 @@ final double _min = 2.0;
 final double _max = 10.0;
 SfRangeValues _values = SfRangeValues(5.0, 8.0);
 
-final List<Data> chartData = <Data>[
+final List<Data> _chartData = <Data>[
     Data(x:2.0, y: 2.2),
     Data(x:3.0, y: 3.4),
     Data(x:4.0, y: 2.8),
@@ -71,7 +71,7 @@ Widget build(BuildContext context) {
                         series: <SplineAreaSeries<Data, double>>[
                             SplineAreaSeries<Data, double>(
                                 color: Color.fromARGB(255, 126, 184, 253),
-                                dataSource: chartData,
+                                dataSource: _chartData,
                                     xValueMapper: (Data sales, _) => sales.x,
                                     yValueMapper: (Data sales, _) => sales.y)
                             ],
@@ -106,8 +106,6 @@ You can show date values in the range selector by setting `DateTime` values to t
 
 N> You must import [`intl`](https://pub.dev/packages/intl) package for formatting date range selector using the [`DateFormat`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
 
-You must add the [`intl`](https://pub.dev/packages/intl) package for using date format in the range slider.
-
 {% tabs %}
 {% highlight Dart %}
 
@@ -115,7 +113,7 @@ final DateTime _min = DateTime(2002, 01, 01);
 final DateTime _max = DateTime(2010, 01, 01);
 SfRangeValues _values = SfRangeValues(DateTime(2005, 01, 01), DateTime(2008, 01, 01));
 
-final List<Data> chartData = <Data>[
+final List<Data> _chartData = <Data>[
     Data(x: DateTime(2002, 01, 01), y: 2.2),
     Data(x: DateTime(2003, 01, 01), y: 3.4),
     Data(x: DateTime(2004, 01, 01), y: 2.8),
@@ -154,7 +152,7 @@ Widget build(BuildContext context) {
                         series: <SplineAreaSeries<Data, DateTime>>[
                             SplineAreaSeries<Data, DateTime>(
                                 color: Color.fromARGB(255, 126, 184, 253),
-                                dataSource: chartData,
+                                dataSource: _chartData,
                                 xValueMapper: (Data sales, _) => sales.x,
                                 yValueMapper: (Data sales, _) => sales.y)
                             ],
@@ -183,7 +181,7 @@ class Data {
 
 ![Date range selector](images/basic-features/selector_date_label.png)
 
-## OnChanged callback
+**Handle value change**
 
 The [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/onChanged.html) callback is called when the user is selecting the new values.
 
@@ -245,3 +243,342 @@ class Data {
 
 {% endhighlight %}
 {% endtabs %}
+
+## Active color
+
+It represents the color applied to the active track, thumb, overlay, and inactive divisors.
+
+The active side of the range selector is between start and end thumbs.
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+final List<Data> chartData = <Data>[
+    Data(x:2.0, y: 2.2),
+    Data(x:3.0, y: 3.4),
+    Data(x:4.0, y: 2.8),
+    Data(x:5.0, y: 1.6),
+    Data(x:6.0, y: 2.3),
+    Data(x:7.0, y: 2.5),
+    Data(x:8.0, y: 2.9),
+    Data(x:9.0, y: 3.8),
+    Data(x:10.0, y: 3.7),
+];
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSelector(
+                    min: _min,
+                    max: _max,
+                    interval: 1,
+                    showLabels: true,
+                    showTicks: true,
+                    activeColor: Color.fromARGB(255, 253, 125, 0),
+                    initialValues: _values,
+                    child: Container(
+                    height: 130,
+                    child: SfCartesianChart(
+                        margin: const EdgeInsets.all(0),
+                        primaryXAxis: NumericAxis(minimum: _min,
+                            maximum: _max,
+                            isVisible: false,),
+                        primaryYAxis: NumericAxis(isVisible: false),
+                        plotAreaBorderWidth: 0,
+                        series: <SplineAreaSeries<Data, double>>[
+                            SplineAreaSeries<Data, double>(
+                                color: Color.fromARGB(255, 126, 184, 253),
+                                dataSource: chartData,
+                                    xValueMapper: (Data sales, _) => sales.x,
+                                    yValueMapper: (Data sales, _) => sales.y)
+                            ],
+                        ),
+                   ),
+              ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Dart %}
+
+class Data {
+  Data({this.x, this.y});
+  final double x;
+  final double y;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Active color support](images/basic-features/selector_active_color.png)
+
+## Inactive color
+
+It represents the color applied to the inactive track and active divisors.
+
+The active side of the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html) is between start and end thumbs.
+
+The inactive side of the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html) is between the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) value and the left thumb, and the right thumb and the [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) value.
+
+For RTL, the inactive side is between the [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) value and the left thumb, and the right thumb and the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) value.
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+final List<Data> chartData = <Data>[
+    Data(x:2.0, y: 2.2),
+    Data(x:3.0, y: 3.4),
+    Data(x:4.0, y: 2.8),
+    Data(x:5.0, y: 1.6),
+    Data(x:6.0, y: 2.3),
+    Data(x:7.0, y: 2.5),
+    Data(x:8.0, y: 2.9),
+    Data(x:9.0, y: 3.8),
+    Data(x:10.0, y: 3.7),
+];
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSelector(
+                    min: _min,
+                    max: _max,
+                    interval: 1,
+                    showLabels: true,
+                    showTicks: true,
+                    activeColor: Color.fromARGB(255,5, 90, 194),
+                    inactiveColor: Color.fromARGB(140, 121, 244, 195),
+                    initialValues: _values,
+                    child: Container(
+                    height: 130,
+                    child: SfCartesianChart(
+                        margin: const EdgeInsets.all(0),
+                        primaryXAxis: NumericAxis(minimum: _min,
+                            maximum: _max,
+                            isVisible: false,),
+                        primaryYAxis: NumericAxis(isVisible: false),
+                        plotAreaBorderWidth: 0,
+                        series: <SplineAreaSeries<Data, double>>[
+                            SplineAreaSeries<Data, double>(
+                                color: Color.fromARGB(255, 126, 184, 253),
+                                dataSource: chartData,
+                                    xValueMapper: (Data sales, _) => sales.x,
+                                    yValueMapper: (Data sales, _) => sales.y)
+                            ],
+                        ),
+                   ),
+              ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Dart %}
+
+class Data {
+  Data({this.x, this.y});
+  final double x;
+  final double y;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Inactive color support](images/basic-features/selector_inactive_color.png)
+
+## Active region color
+
+It specifies the color for the active region of the child in the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html).
+
+The active side of the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html) is between start and end thumbs.
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(5.0, 8.0);
+
+final List<Data> chartData = <Data>[
+    Data(x:2.0, y: 2.2),
+    Data(x:3.0, y: 3.4),
+    Data(x:4.0, y: 2.8),
+    Data(x:5.0, y: 1.6),
+    Data(x:6.0, y: 2.3),
+    Data(x:7.0, y: 2.5),
+    Data(x:8.0, y: 2.9),
+    Data(x:9.0, y: 3.8),
+    Data(x:10.0, y: 3.7),
+];
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSelectorTheme(
+                    data: SfRangeSliderThemeData(
+                        activeRegionColor: Colors.greenAccent[100],
+                    ),
+                    child:  SfRangeSelector(
+                        min: _min,
+                        max: _max,
+                        interval: 1,
+                        showLabels: true,
+                        showTicks: true,
+                        initialValues: _values,
+                        child: Container(
+                        height: 130,
+                        child: SfCartesianChart(
+                            margin: const EdgeInsets.all(0),
+                            primaryXAxis: NumericAxis(minimum: _min,
+                                maximum: _max,
+                                isVisible: false),
+                            primaryYAxis: NumericAxis(isVisible: false),
+                            plotAreaBorderWidth: 0,
+                            series: <SplineAreaSeries<Data, double>>[
+                                SplineAreaSeries<Data, double>(
+                                    color: Color.fromARGB(255, 126, 184, 253),
+                                        dataSource: chartData,
+                                            xValueMapper: (Data sales, _) => sales.x,
+                                            yValueMapper: (Data sales, _) => sales.y)
+                                ],
+                            ),
+                        ),
+                   ),
+              ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Dart %}
+
+class Data {
+  Data({this.x, this.y});
+  final double x;
+  final double y;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Active region color support](images/basic-features/selector-active-region-color.png)
+
+## Inactive region color
+
+It specifies the color for the inactive region of the child in the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html).
+
+The inactive side of the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html) is between the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) value and the left thumb, and the right thumb and the [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) value.
+
+For RTL, the inactive side is between the [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) value and the left thumb, and the right thumb and the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) value.
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+final List<Data> chartData = <Data>[
+    Data(x:2.0, y: 2.2),
+    Data(x:3.0, y: 3.4),
+    Data(x:4.0, y: 2.8),
+    Data(x:5.0, y: 1.6),
+    Data(x:6.0, y: 2.3),
+    Data(x:7.0, y: 2.5),
+    Data(x:8.0, y: 2.9),
+    Data(x:9.0, y: 3.8),
+    Data(x:10.0, y: 3.7),
+];
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSelectorTheme(
+                    data: SfRangeSliderThemeData(
+                        inactiveRegionColor: Colors.greenAccent[100],
+                    ),
+                    child:  SfRangeSelector(
+                        min: _min,
+                        max: _max,
+                        interval: 1,
+                        showLabels: true,
+                        showTicks: true,
+                        initialValues: _values,
+                        child: Container(
+                        height: 130,
+                        child: SfCartesianChart(
+                            margin: const EdgeInsets.all(0),
+                            primaryXAxis: NumericAxis(minimum: _min,
+                                maximum: _max,
+                                isVisible: false),
+                            primaryYAxis: NumericAxis(isVisible: false),
+                            plotAreaBorderWidth: 0,
+                            series: <SplineAreaSeries<Data, double>>[
+                                SplineAreaSeries<Data, double>(
+                                    color: Color.fromARGB(255, 126, 184, 253),
+                                        dataSource: chartData,
+                                            xValueMapper: (Data sales, _) => sales.x,
+                                            yValueMapper: (Data sales, _) => sales.y)
+                                ],
+                            ),
+                        ),
+                   ),
+              ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Dart %}
+
+class Data {
+  Data({this.x, this.y});
+  final double x;
+  final double y;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Inactive region color support](images/basic-features/selector-inactive-region-color.png)
+
+### For customizing individual items
+
+* Track - [`Link`](https://help.syncfusion.com/flutter/range-selector/track)
+* Ticks - [`Link`](https://help.syncfusion.com/flutter/range-selector/ticks)
+* Labels and divisors - [`Link`](https://help.syncfusion.com/flutter/range-selector/labels-and-divisor)
+* Tooltips - [`Link`](https://help.syncfusion.com/flutter/range-selector/tooltip)
+* Thumb and overlay - [`Link`](https://help.syncfusion.com/flutter/range-selector/thumb-and-overlay)

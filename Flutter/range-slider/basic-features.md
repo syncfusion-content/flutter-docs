@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Basic features for Syncfusion Flutter Range Slider | Syncfusion
-description: This basic features section explains how to add the numeric and date range slider for flutter platform
-platform: flutter
+description: This section explains about how to add numeric range slider and date range slider in Flutter application.
+platform: Flutter
 control: SfRangeSlider
 documentation: ug
 ---
@@ -20,11 +20,9 @@ The maximum value that the user can select. The default value of [`max`](https:/
 
 ## Values
 
-The values currently selected in the range slider. The range slider's thumb is drawn corresponding to this value.
+It represents the values currently selected in the range slider. The range slider's thumb is drawn corresponding to this value.
 
-For date values, the range slider does not have auto interval support. So, it is mandatory to set `interval`, `dateIntervalType`, and `dateFormat` for date values.
-
-N> The `onChanged` callback can be used to update the visual appearance of the range slider when the user drags the thumb through interaction.
+For date values, the range slider does not have auto interval support. So, it is mandatory to set [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/interval.html), [`dateIntervalType`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateIntervalType.html), and [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateFormat.html) for date values.
 
 **Numeric range slider**
 
@@ -102,15 +100,13 @@ Widget build(BuildContext context) {
 
 ![Date range slider](images/basic-features/date-labels.png)
 
-## OnChanged callback
+**Handle value change**
 
-The `onChanged` callback is called when the user selects a value through interaction.
+The [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onChanged.html) callback is called when the user selects a value through interaction.
 
 N> The range slider passes the new values to the callback but does not change its state until the parent widget rebuilds the range slider with new values.
 
 N> If it is null, the range slider will be disabled.
-
-**Enabled state**
 
 {% tabs %}
 {% highlight Dart %}
@@ -142,7 +138,9 @@ Widget build(BuildContext context) {
 
 ![Enabled range slider](images/basic-features/enabled-state.png)
 
-**Disabled state**
+## Active color
+
+It represents the color applied to the active track, thumb, overlay, and inactive divisors. The active side of the range slider is between the start and end thumbs.
 
 {% tabs %}
 {% highlight Dart %}
@@ -158,6 +156,13 @@ Widget build(BuildContext context) {
                     min: 0.0,
                     max: 10.0,
                     values: _values,
+                    activeColor: Colors.red,
+                    showDivisors: true,
+                    onChanged: (SfRangeValues newValues) {
+                        setState(() {
+                            _values = newValues;
+                        });
+                    },
               )
           )
       )
@@ -167,4 +172,53 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Disabled range slider](images/basic-features/disabled-state.png)
+![Active color support](images/basic-features/active-color.png)
+
+## Inactive color
+
+It represents the color applied to the inactive track and active divisors.
+
+The inactive side of the range slider is between the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html) value and the left thumb, and the right thumb and the [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) value.
+
+For RTL, the inactive side is between the [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) value and the left thumb, and the right thumb and the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html) value.
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(3.0, 7.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSlider(
+                    min: 0.0,
+                    max: 10.0,
+                    values: _values,
+                    activeColor: Colors.red,
+                    inactiveColor: Colors.red.withOpacity(0.2),
+                    showDivisors: true,
+                    onChanged: (SfRangeValues newValues) {
+                        setState(() {
+                            _values = newValues;
+                        });
+                    },
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Inactive color support](images/basic-features/inactive-color.png)
+
+### For customizing individual items
+
+* Track - [`Link`](https://help.syncfusion.com/flutter/range-slider/track)
+* Ticks - [`Link`](https://help.syncfusion.com/flutter/range-slider/ticks)
+* Labels and divisors - [`Link`](https://help.syncfusion.com/flutter/range-slider/labels-and-divisor)
+* Tooltips - [`Link`](https://help.syncfusion.com/flutter/range-slider/tooltip)
+* Thumb and overlay - [`Link`](https://help.syncfusion.com/flutter/range-slider/thumb-and-overlay)
