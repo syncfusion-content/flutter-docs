@@ -93,7 +93,7 @@ class MyAppState extends State<MyApp>{
         @override
         initState(){
             _calendarController = CalendarController();
-            _calendarController.selectedDate = DateTime(2022, 02, 05);
+            _calendarController.selectedDate = DateTime(2020, 04, 10);
             super.initState();
  }
 
