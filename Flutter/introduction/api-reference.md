@@ -76,13 +76,4 @@ This page helps to navigate to the public API's available in the Syncfusion Flut
             <a href="https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html">Link</a>
         </td>
     </tr>
-     <tr>
-          <td>
-              Range Slider
-          </td>
-          <td>
-              <a href="https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html">Link</a>
-          </td>
-     </tr>
-    
 </table>
