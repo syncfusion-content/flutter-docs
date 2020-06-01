@@ -839,7 +839,3 @@ By default, the chart is rendered with primary x axis and primary y axis. But, t
 {% endhighlight %}
 
 ![Multiple axes](images/axis-customization/multiple_axis.jpg)
-
-## Axis animation:
-
-[`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) provide animation support for axis.Axis elements will be animated while changing the range values such as  [`minimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/minimum.html)  or [`maximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/maximum.html) in charts and also enable the legend toggle visibility.If you  apply [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/animationDuration.html) value 0,the axis will not be animated.
