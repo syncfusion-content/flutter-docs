@@ -2608,3 +2608,73 @@ To render a Candle chart, create an instance of [` CandleSeries`](https://pub.de
 {% endhighlight %}
 
 ![candle chart](images/cartesian-chart-types/candle.png)
+
+
+## Histogram Chart
+
+To render a histogram chart, create an instance of [`HistogramSeries`]() and add to the series collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html).
+
+Histogram chart is a graphical representation that organizes a group of data points into user-specified ranges. It is similar in appearance to a bar chart. The histogram condenses a data series into an easily interpreted visual by taking many data points and grouping them into logical ranges.
+
+You can customize intervals using the [`binInterval`]() property and collapse the normal distribution curve using the [`showNormalDistributionCurve`]() property. You can use the following properties to customize the appearance.
+
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) – Changes the color of the series.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) – Changes the stroke width of the series.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) – Changes the stroke color of the series.
+
+* [`curveColor`]() - used to change the color of the normal distribution curve.
+
+* [`curveWidth`]() - used to change the width of the normal distribution curve.
+
+* [`curveDashArray`]() -  used to render the normal distribution curve  with dashes.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <ChartSeries>[
+                          HistogramSeries<SalesDaa, num>(
+                            dataSource: chartData,
+                            yValueMapper: (SalesData sales, _) => sales.yValue,
+                            binInterval: 20,
+                            showNormalDistributionCurve: true,
+                            curveColor: Colors.black,
+                     borderWidth: 20),
+                    ]))));
+    }
+
+{% endhighlight %}
+
+![histogram chart](images/cartesian-chart-types/Histogram.png)
+
+## Spline Range area 
+
+To render a spline range area chart, create an instance of the [`SplineRangeAreaSeries`](), and add to the series collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html).
+
+
+ SplineRangeAreaSeries requires two Y values for a point, data should contain high and low values. The high and low values specify the maximum and minimum ranges of a point.
+
+* [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/highValueMapper.html) - Field in the data source, which is considered as high value for the data points.
+* [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/lowValueMapper.html) - Field in the data source, which is considered as low value for the data points.
+
+
+
+###	Spline rendering types
+
+The [`splineType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineSeries/splineType.html) allows you to change the spline curve in series. The following types are used in [`SplineRangeAreaSeries`]():
+
+* natural
+* monotonic
+* cardinal
+* clamped
+
+By default, the value of [`splineType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineSeries/splineType.html) is [`natural`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineType-class.html).
+
+The following code sample demonstrates how to set the [`splineType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineSeries/splineType.html) value to [`cardinal`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineType-class.html). When you set the cardinal type, you can specify the desired line tension of the [`cardinal`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineType-class.html) spline using the [`cardinalSplineTension`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineSeries/cardinalSplineTension.html) property. The value of this property ranges from 0 to 1.
+
+
