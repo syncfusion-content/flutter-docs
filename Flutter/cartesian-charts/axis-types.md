@@ -280,6 +280,20 @@ The [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
 Also refer [label format](./axis-customization#formatting-axis-label-content) and [date format](#formatting-the-labels-1) for formatting the labels further.
 
+
+## double range support
+
+Date-time Interval can be cutomize using double value.
+
+for example,if render a series with data time axis it show x axis labels in year if you give the interval value in double it shows as month
+
+
+{% highlight dart %} 
+{% endhighlight %}
+
+![doublerange](images/axis-types/doublerange.png)
+
+
 ## Category axis
 
 Category axis displays text labels instead of numbers. When the string values are bound to x values, then the x-axis must be initialized with CategoryAxis.

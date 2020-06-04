@@ -765,6 +765,42 @@ Suppose, you need to draw a plot band that should not stretch along its associat
 
 ![Segement plotband](images/axis-customization/segment_plotband.jpg)
 
+## plotband line
+
+When you give the [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/start.html) and [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/end.html) position value the same, It will draw the line.also can add the [`borderwidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/borderWidth.html)) property.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+               child: SfCartesianChart(
+                    primaryXAxis: CategoryAxis(
+                      plotBands: <PlotBand>[
+                        PlotBand(
+                          isVisible: true,
+                          start: 1.5,
+                          end: 1.5,
+                          borderWidth: 2,
+                          color:Colors.blue,
+                        )
+                      ],
+                    ),
+                    primaryYAxis: NumericAxis(
+                        minimum: 27,
+                        maximum: 42,),
+                    ))));
+  }
+
+{% endhighlight %}
+
+![Segement plotband](images/axis-customization/plotband_line.png)
+
+
+
 ## Multiple axes
 
 By default, the chart is rendered with primary x axis and primary y axis. But, the users can add n number of axis to the chart. An additional horizontal or vertical axis can be added to the chart using the [`axes`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/axes.html) property, and then you can associate it to a series by specifying the name of the axis to the [`xAxisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/xAxisName.html) or [`yAxisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/yAxisName.html) property in the series.
@@ -839,3 +875,110 @@ By default, the chart is rendered with primary x axis and primary y axis. But, t
 {% endhighlight %}
 
 ![Multiple axes](images/axis-customization/multiple_axis.jpg)
+
+## Axis Label Alignment
+
+The position of axis label alignment can be changed using the [`labelAlignment`]() property.The following options are availabel in axis label alignment.
+
+* [`start`]() - axis label alignment is closer to axis line.
+
+* [`end`]() - axis label alignment is greater distance in axis line.
+
+* [`center`]() - axis label alignment is center of the axis line.
+
+### center 
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        child: SfCartesianChart(
+                    primaryXAxis: NumericAxis(
+                      labelAlignment: LabelAlignment.center,
+                    ),
+                    primaryYAxis:
+                        NumericAxis(labelAlignment: LabelAlignment.center),
+                    series: <CartesianSeries<SalesData, num>>[
+                      LineSeries<SalesData, num>(
+                        dataSource: chartData,
+                        xValueMapper: (SalesData sales, _) => sales.xValue,
+                        yValueMapper: (SalesData sales, _) => sales.yValue,
+                        animationDuration: 3000,
+                      ),
+                    ]))));
+     }
+     
+{% endhighlight %}
+
+![center](images/axis-customization/center.png)
+
+### start
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        child: SfCartesianChart(
+                    primaryXAxis: NumericAxis(
+                      labelAlignment: LabelAlignment.start,
+                    ),
+                    primaryYAxis:
+                        NumericAxis(labelAlignment: LabelAlignment.start),
+                    series: <CartesianSeries<SalesData, num>>[
+                      LineSeries<SalesData, num>(
+                        dataSource: chartData,
+                        xValueMapper: (SalesData sales, _) => sales.xValue,
+                        yValueMapper: (SalesData sales, _) => sales.yValue,
+                        animationDuration: 3000,
+                      ),
+                    ]))));
+     }
+     
+{% endhighlight %}
+
+![start](images/axis-customization/start.png)
+
+### end
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        child: SfCartesianChart(
+                    primaryXAxis: NumericAxis(
+                      labelAlignment: LabelAlignment.end,
+                    ),
+                    primaryYAxis:
+                        NumericAxis(labelAlignment: LabelAlignment.end),
+                    series: <CartesianSeries<SalesData, num>>[
+                      LineSeries<SalesData, num>(
+                        dataSource: chartData,
+                        xValueMapper: (SalesData sales, _) => sales.xValue,
+                        yValueMapper: (SalesData sales, _) => sales.yValue,
+                        animationDuration: 3000,
+                      ),
+                    ]))));
+     }
+     
+{% endhighlight %}
+
+![start](images/axis-customization/end.png)
+
+
+
+
+
+
+

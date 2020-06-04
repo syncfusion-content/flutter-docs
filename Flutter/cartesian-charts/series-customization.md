@@ -208,7 +208,7 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
 
 {% endhighlight %}
 
-![Gradient color](images/cartesian-customization/gradientt.jpg)
+![Gradient color](images/cartesian-customization/gradient.png)
 
 ## Empty points
 
