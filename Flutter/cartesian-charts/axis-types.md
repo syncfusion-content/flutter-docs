@@ -283,7 +283,7 @@ Also refer [label format](./axis-customization#formatting-axis-label-content) an
 
 ## double range support
 
-Date-time Interval can be cutomize using double value.
+Date-time axis [`Interval`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/interval.html) property can be customize using double value.
 
 for example,if render a series with data time axis it show x axis labels in year if you give the interval value in double it shows as month
 

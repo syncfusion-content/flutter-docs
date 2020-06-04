@@ -765,9 +765,9 @@ Suppose, you need to draw a plot band that should not stretch along its associat
 
 ![Segement plotband](images/axis-customization/segment_plotband.jpg)
 
-## plotband line
+## plot band line
 
-When you give the [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/start.html) and [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/end.html) position value the same, It will draw the line.also can add the [`borderwidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/borderWidth.html)) property.
+When you give the [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/start.html) and [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/end.html) position value the same, It will draw the line.also can add the [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/borderWidth.html)) property.
 
 {% highlight dart %}
 
@@ -878,7 +878,7 @@ By default, the chart is rendered with primary x axis and primary y axis. But, t
 
 ## Axis Label Alignment
 
-The position of axis label alignment can be changed using the [`labelAlignment`]() property.The following options are availabel in axis label alignment.
+The position of axis label alignment can be changed using the [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelAlignment.html) property.The following options are available in axis label alignment.
 
 * [`start`]() - axis label alignment is closer to axis line.
 
