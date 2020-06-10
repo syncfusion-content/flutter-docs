@@ -2662,6 +2662,30 @@ To render a spline range area chart, create an instance of the [`SplineRangeArea
 * [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/highValueMapper.html) - Field in the data source, which is considered as high value for the data points.
 * [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/lowValueMapper.html) - Field in the data source, which is considered as low value for the data points.
 
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <CartesianSeries<SalesData, String>>[
+                      SplineRangeAreaSeries<SalesData, String>(
+                          dataSource: chartData,
+                          dataLabelSettings: DataLabelSettings(isVisible: true),
+                          xValueMapper: (SalesData sales, _) => sales.xValue,
+                          lowValueMapper: (SalesData sales, _) =>
+                              sales.lowValue,
+                          highValueMapper: (SalesData sales, _) =>
+                              sales.highValue,),
+                    ]))));
+    }
+
+{% endhighlight %}
+
+![splinerangearea](images/cartesian-chart-types/splinerangearea.png)
+
 
 
 ###	Spline rendering types
@@ -2677,4 +2701,29 @@ By default, the value of [`splineType`](https://pub.dev/documentation/syncfusion
 
 The following code sample demonstrates how to set the [`splineType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineSeries/splineType.html) value to [`cardinal`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineType-class.html). When you set the cardinal type, you can specify the desired line tension of the [`cardinal`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineType-class.html) spline using the [`cardinalSplineTension`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineSeries/cardinalSplineTension.html) property. The value of this property ranges from 0 to 1.
 
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <CartesianSeries<SalesData, String>>[
+                      SplineRangeAreaSeries<SalesData, String>(
+                          dataSource: chartData,
+                          splineType: SplineType.monotonic,
+                          dataLabelSettings: DataLabelSettings(isVisible: true),
+                          xValueMapper: (SalesData sales, _) => sales.xValue,
+                          lowValueMapper: (SalesData sales, _) =>
+                              sales.lowValue,
+                          highValueMapper: (SalesData sales, _) =>
+                              sales.highValue,),
+                    ]))));
+    }
+
+{% endhighlight %}
+
+
+![splinerangearea](images/cartesian-chart-types/splinerangeareatype.png)
 
