@@ -2656,7 +2656,7 @@ You can customize intervals using the [`binInterval`]() property and collapse th
 
 ![histogram chart](images/cartesian-chart-types/Histogram.png)
 
-## Spline Range area 
+## Spline Range Area 
 
 To render a spline range area chart, create an instance of the [`SplineRangeAreaSeries`](), and add to the series collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html).
 
@@ -2692,8 +2692,6 @@ To render a spline range area chart, create an instance of the [`SplineRangeArea
 {% endhighlight %}
 
 ![splinerangearea](images/cartesian-chart-types/splinerangearea.png)
-
-
 
 ###	Spline rendering types
 
@@ -2738,7 +2736,7 @@ The following code sample demonstrates how to set the [`splineType`](https://pub
 
 ![splinerangearea](images/cartesian-chart-types/splinerangeareatype.png)
 
-###	Border customization
+### Border customization
 
 The borders of the range area chart can be customized using the [`borderDrawMode`]() property. The default value of the [`borderDrawMode`] property is `all` and the other value is `excludeSides`.
 
