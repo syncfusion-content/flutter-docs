@@ -373,7 +373,7 @@ You can customize the appearance of the data label with your own template using 
 
 ### Hide data label for 0 value
 
-Data label in cartesian charts if the data label hide for point value is 0.Connector line should also be hidden for this case when labels are placed outside.
+Data label in Cartesian charts if the data label hide for point value is 0.Connector line should also be hidden for this case when labels are placed outside.
 
 [`showZeroValue`]() - used to hide the data label for 0 values.
 
