@@ -2738,3 +2738,40 @@ The following code sample demonstrates how to set the [`splineType`](https://pub
 
 ![splinerangearea](images/cartesian-chart-types/splinerangeareatype.png)
 
+###	Border customization
+
+The borders of the range area chart can be customized using the [`borderDrawMode`]() property. The default value of the [`borderDrawMode`] property is `all` and the other value is `excludeSides`.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <CartesianSeries<SalesData, String>>[
+                      SplineRangeAreaSeries<SalesData, String>(
+                          dataSource: chartData,
+                          borderDrawMode: RangeAreaBorderMode.all,
+                          borderWidth:2,
+                          borderColor: Colors.red,
+                          xValueMapper: (SalesData sales, _) => sales.xValue,
+                          lowValueMapper: (SalesData sales, _) =>
+                              sales.lowValue,
+                          highValueMapper: (SalesData sales, _) =>
+                              sales.highValue,)
+                    ]
+                 )
+                )
+              )
+            );
+        }
+
+{% endhighlight %}
+
+![splinerangearea_bordermode](images/cartesian-chart-types/splinerangearea_bordermode.png)
+
+
+
+
