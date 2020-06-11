@@ -2645,7 +2645,11 @@ You can customize intervals using the [`binInterval`]() property and collapse th
                             showNormalDistributionCurve: true,
                             curveColor: Colors.black,
                      borderWidth: 20),
-                    ]))));
+                    ]
+                  )
+                )
+             )
+         );
     }
 
 {% endhighlight %}
@@ -2679,7 +2683,11 @@ To render a spline range area chart, create an instance of the [`SplineRangeArea
                               sales.lowValue,
                           highValueMapper: (SalesData sales, _) =>
                               sales.highValue,),
-                    ]))));
+                    ]
+                )
+             )
+          )
+       );
     }
 
 {% endhighlight %}
@@ -2712,15 +2720,18 @@ The following code sample demonstrates how to set the [`splineType`](https://pub
                         series: <CartesianSeries<SalesData, String>>[
                       SplineRangeAreaSeries<SalesData, String>(
                           dataSource: chartData,
-                          splineType: SplineType.monotonic,
-                          dataLabelSettings: DataLabelSettings(isVisible: true),
+                          splineType: SplineType.cardinal,
                           xValueMapper: (SalesData sales, _) => sales.xValue,
                           lowValueMapper: (SalesData sales, _) =>
                               sales.lowValue,
                           highValueMapper: (SalesData sales, _) =>
-                              sales.highValue,),
-                    ]))));
-    }
+                              sales.highValue,)
+                    ]
+                 )
+                )
+              )
+            );
+        }
 
 {% endhighlight %}
 

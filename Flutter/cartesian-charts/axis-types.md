@@ -281,17 +281,6 @@ The [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 Also refer [label format](./axis-customization#formatting-axis-label-content) and [date format](#formatting-the-labels-1) for formatting the labels further.
 
 
-## double range support
-
-Date-time axis [`Interval`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/interval.html) property can be customize using double value.
-
-for example,if render a series with data time axis it show x axis labels in year if you give the interval value in double it shows as month
-
-
-{% highlight dart %} 
-{% endhighlight %}
-
-![doublerange](images/axis-types/doublerange.png)
 
 
 ## Category axis
@@ -740,3 +729,32 @@ By using  the [isInversed](https://pub.dev/documentation/syncfusion_flutter_char
 {% endhighlight %}
 
 ![Inversed logarithmic axis](images/axis-types/inversed-logarithmic.png) 
+
+### double range support
+
+Date-time axis [`interval`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/interval.html) property can be customize using double value.
+
+for example,if render a series with data time axis it show x axis labels in year if you give the interval value in double it shows as month
+
+
+{% highlight dart %} 
+
+     @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis: DateTimeAxis(
+                             interval: 0.5,
+                        )
+                        primaryXAxis: NumericAxis()
+                    )
+                )
+            )
+        );
+     }
+
+{% endhighlight %}
+
+![doublerange](images/axis-types/doublerange.png)

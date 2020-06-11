@@ -765,7 +765,7 @@ Suppose, you need to draw a plot band that should not stretch along its associat
 
 ![Segement plotband](images/axis-customization/segment_plotband.jpg)
 
-## plot band line
+### plot band line
 
 When you give the [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/start.html) and [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/end.html) position value the same, It will draw the line.also can add the [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/borderWidth.html)) property.
 
@@ -776,28 +776,25 @@ When you give the [`start`](https://pub.dev/documentation/syncfusion_flutter_cha
         return Scaffold(
             body: Center(
                 child: Container(
-                    child: SfCartesianChart(
                child: SfCartesianChart(
                     primaryXAxis: CategoryAxis(
                       plotBands: <PlotBand>[
                         PlotBand(
                           isVisible: true,
-                          start: 1.5,
-                          end: 1.5,
+                          start: 13,
+                          end: 13,
                           borderWidth: 2,
-                          color:Colors.blue,
                         )
-                      ],
-                    ),
-                    primaryYAxis: NumericAxis(
-                        minimum: 27,
-                        maximum: 42,),
-                    ))));
-  }
+                      ]
+                    )
+                   )
+                )
+              );  
+           }
 
 {% endhighlight %}
 
-![Segement plotband](images/axis-customization/plotband_line.png)
+![plotband-line](images/axis-customization/plotband_line.png)
 
 
 
@@ -908,9 +905,13 @@ The position of axis label alignment can be changed using the [`labelAlignment`]
                         xValueMapper: (SalesData sales, _) => sales.xValue,
                         yValueMapper: (SalesData sales, _) => sales.yValue,
                         animationDuration: 3000,
-                      ),
-                    ]))));
-     }
+                      )
+                    ]
+                  )
+                )
+              )
+            );
+          }
      
 {% endhighlight %}
 
@@ -931,7 +932,7 @@ The position of axis label alignment can be changed using the [`labelAlignment`]
                       labelAlignment: LabelAlignment.start,
                     ),
                     primaryYAxis:
-                        NumericAxis(labelAlignment: LabelAlignment.start),
+                        NumericAxis(),
                     series: <CartesianSeries<SalesData, num>>[
                       LineSeries<SalesData, num>(
                         dataSource: chartData,
@@ -939,8 +940,12 @@ The position of axis label alignment can be changed using the [`labelAlignment`]
                         yValueMapper: (SalesData sales, _) => sales.yValue,
                         animationDuration: 3000,
                       ),
-                    ]))));
-     }
+                    ]
+                  )
+                ) 
+              )
+            );
+          }
      
 {% endhighlight %}
 
@@ -957,9 +962,8 @@ The position of axis label alignment can be changed using the [`labelAlignment`]
                 child: Container(
                     child: SfCartesianChart(
                         child: SfCartesianChart(
-                    primaryXAxis: NumericAxis(
-                      labelAlignment: LabelAlignment.end,
-                    ),
+                    primaryXAxis: 
+                    NumericAxis(),
                     primaryYAxis:
                         NumericAxis(labelAlignment: LabelAlignment.end),
                     series: <CartesianSeries<SalesData, num>>[
@@ -968,9 +972,13 @@ The position of axis label alignment can be changed using the [`labelAlignment`]
                         xValueMapper: (SalesData sales, _) => sales.xValue,
                         yValueMapper: (SalesData sales, _) => sales.yValue,
                         animationDuration: 3000,
-                      ),
-                    ]))));
-     }
+                      )
+                    ]
+                  )
+                )
+              )
+           );
+         }
      
 {% endhighlight %}
 
