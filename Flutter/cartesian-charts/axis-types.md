@@ -629,6 +629,36 @@ The [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
 
 Also refer [label format](./axis-customization#formatting-axis-label-content) and [number format](#formatting-the-labels) for formatting the labels further.
 
+### double range support
+
+Date-time axis [`interval`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/interval.html) property can be customize using double value.
+
+For example, if rendering a series with data time axis it shows x-axis labels in the year if you give the interval value in double it shows as month.
+
+
+{% highlight dart %} 
+
+     @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis: DateTimeAxis(
+                             interval: 0.5,
+                        )
+                        primaryXAxis: NumericAxis()
+                    )
+                )
+            )
+        );
+     }
+
+{% endhighlight %}
+
+![doublerange](images/axis-types/doublerange.png)
+
+
 ## Logarithmic axis
 
 Logarithmic axis uses logarithmic scale and displays numbers as axis labels.
@@ -730,31 +760,3 @@ By using  the [isInversed](https://pub.dev/documentation/syncfusion_flutter_char
 
 ![Inversed logarithmic axis](images/axis-types/inversed-logarithmic.png) 
 
-### double range support
-
-Date-time axis [`interval`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/interval.html) property can be customize using double value.
-
-For example, if rendering a series with data time axis it shows x-axis labels in the year if you give the interval value in double it shows as month.
-
-
-{% highlight dart %} 
-
-     @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCartesianChart(
-                        primaryXAxis: DateTimeAxis(
-                             interval: 0.5,
-                        )
-                        primaryXAxis: NumericAxis()
-                    )
-                )
-            )
-        );
-     }
-
-{% endhighlight %}
-
-![doublerange](images/axis-types/doublerange.png)

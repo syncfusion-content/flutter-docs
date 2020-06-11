@@ -794,7 +794,7 @@ When you give the [`start`](https://pub.dev/documentation/syncfusion_flutter_cha
 
 {% endhighlight %}
 
-![plotband-line](images/axis-customization/plotband_line.png)
+![plotband_line](images/axis-customization/plotband_line.png)
 
 
 
@@ -893,13 +893,11 @@ The position of axis label alignment can be changed using the [`labelAlignment`]
             body: Center(
                 child: Container(
                         child: SfCartesianChart(
-                    primaryXAxis: NumericAxis(
-                      labelAlignment: LabelAlignment.center,
-                    ),
+                    primaryXAxis: DateTimeAxis(),
                     primaryYAxis:
                         NumericAxis(labelAlignment: LabelAlignment.center),
-                    series: <CartesianSeries<SalesData, num>>[
-                      LineSeries<SalesData, num>(
+                    series: <CartesianSeries<SalesData, DateTime>>[
+                      LineSeries<SalesData, DateTime>(
                         dataSource: chartData,
                         xValueMapper: (SalesData sales, _) => sales.xValue,
                         yValueMapper: (SalesData sales, _) => sales.yValue,
@@ -926,13 +924,13 @@ The position of axis label alignment can be changed using the [`labelAlignment`]
             body: Center(
                 child: Container(
                         child: SfCartesianChart(
-                    primaryXAxis: NumericAxis(
+                    primaryXAxis: DateTimeAxis(
                       labelAlignment: LabelAlignment.start,
                     ),
                     primaryYAxis:
                         NumericAxis(),
-                    series: <CartesianSeries<SalesData, num>>[
-                      LineSeries<SalesData, num>(
+                    series: <CartesianSeries<SalesData, DateTime>>[
+                      LineSeries<SalesData, DateTime>(
                         dataSource: chartData,
                         xValueMapper: (SalesData sales, _) => sales.xValue,
                         yValueMapper: (SalesData sales, _) => sales.yValue,
@@ -960,11 +958,11 @@ The position of axis label alignment can be changed using the [`labelAlignment`]
                 child: Container(
                         child: SfCartesianChart(
                     primaryXAxis: 
-                    NumericAxis(),
+                    DateTimeAxis(),
                     primaryYAxis:
                         NumericAxis(labelAlignment: LabelAlignment.end),
-                    series: <CartesianSeries<SalesData, num>>[
-                      LineSeries<SalesData, num>(
+                    series: <CartesianSeries<SalesData, DateTime>>[
+                      LineSeries<SalesData, DateTime>(
                         dataSource: chartData,
                         xValueMapper: (SalesData sales, _) => sales.xValue,
                         yValueMapper: (SalesData sales, _) => sales.yValue,
