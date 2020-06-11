@@ -734,7 +734,7 @@ By using  the [isInversed](https://pub.dev/documentation/syncfusion_flutter_char
 
 Date-time axis [`interval`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/interval.html) property can be customize using double value.
 
-for example,if render a series with data time axis it show x axis labels in year if you give the interval value in double it shows as month
+For example, if rendering a series with data time axis it shows x-axis labels in the year if you give the interval value in double it shows as month.
 
 
 {% highlight dart %} 

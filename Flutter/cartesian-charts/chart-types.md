@@ -2674,8 +2674,8 @@ To render a spline range area chart, create an instance of the [`SplineRangeArea
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        series: <CartesianSeries<SalesData, String>>[
-                      SplineRangeAreaSeries<SalesData, String>(
+                        series: <CartesianSeries<SalesData, num>>[
+                      SplineRangeAreaSeries<SalesData, num>(
                           dataSource: chartData,
                           xValueMapper: (SalesData sales, _) => sales.xValue,
                           lowValueMapper: (SalesData sales, _) =>
@@ -2716,8 +2716,8 @@ The following code sample demonstrates how to set the [`splineType`](https://pub
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        series: <CartesianSeries<SalesData, String>>[
-                      SplineRangeAreaSeries<SalesData, String>(
+                        series: <CartesianSeries<SalesData, num>>[
+                      SplineRangeAreaSeries<SalesData, num>(
                           dataSource: chartData,
                           splineType: SplineType.cardinal,
                           cardinalSplineTension: 1.5,
@@ -2750,8 +2750,8 @@ The borders of the range area chart can be customized using the [`borderDrawMode
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        series: <CartesianSeries<SalesData, String>>[
-                      SplineRangeAreaSeries<SalesData, String>(
+                        series: <CartesianSeries<SalesData, num>>[
+                      SplineRangeAreaSeries<SalesData, num>(
                           dataSource: chartData,
                           borderDrawMode: RangeAreaBorderMode.all,
                           borderWidth:2,

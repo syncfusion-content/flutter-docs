@@ -777,7 +777,7 @@ When you give the [`start`](https://pub.dev/documentation/syncfusion_flutter_cha
             body: Center(
                 child: Container(
                child: SfCartesianChart(
-                    primaryXAxis: CategoryAxis(
+                    primaryXAxis: NumericAxis(
                       plotBands: <PlotBand>[
                         PlotBand(
                           isVisible: true,

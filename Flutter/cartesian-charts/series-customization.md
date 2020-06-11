@@ -210,6 +210,51 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
 
 ![Gradient color](images/cartesian-customization/gradient.png)
 
+## Gradient stroke
+ 
+The [`borderGradient`]() property is used to define the gradient color for the border of the series.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <CartesianSeries>[
+                            AreaSeries<ChartData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                 borderWidth: 4,
+                        borderGradient: const LinearGradient(colors: <Color>[
+                          Color.fromRGBO(230, 0, 180, 1),
+                          Color.fromRGBO(255, 200, 0, 1)
+                        ], stops: <double>[
+                          0.2,
+                          0.9
+                        ]),
+                        gradient: const LinearGradient(colors: <Color>[
+                          // Color.fromRGBO(255, 87, 220, 0.9),
+                          Color.fromRGBO(255, 220, 96, 0.9)
+                        ], stops: <double>[
+                          0.2,
+                        ]),
+                          opacity:0.5,
+                            )
+                        ]
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![stroke_gradient](images/cartesian-customization/stroke_gradient.png)
+
+
 ## Empty points
 
 The data points that has null value are considered as empty points. Empty data points are ignored and not plotted in the chart. By using [`emptyPointSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/emptyPointSettings.html) property in series, you can decide the action taken for empty points. Available [`modes`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode-class.html) are [`gap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode-class.html), [`zero`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode-class.html), [`drop`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode-class.html) and [`average`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode-class.html). Default mode of the empty point is [`gap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode-class.html).
