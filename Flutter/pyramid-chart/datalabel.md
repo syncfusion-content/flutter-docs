@@ -162,3 +162,35 @@ You can customize the appearance of the data label with your own template using 
 {% endhighlight %}
 
 ![Label template](images/datalabel/datalabel_template.png)
+
+### Hide data label for 0 value
+
+Data label in pyramid charts if the data label hide for point value is 0.Connector line should also be hidden for this case when labels are placed outside.
+
+[`showZeroValue`]() - used to hide the data label for 0 values.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                    child:SfPyramidChart(
+                        series: PyramidSeries<SalesData, num>(
+                        dataSource: [SalesData(11, 35),
+                      SalesData(12, 28),
+                      SalesData(13, 0),
+                      SalesData(14, 32),
+                      SalesData(15, 40)
+                    ],
+                        xValueMapper: (SalesData sales, _) => sales.xValue,
+                        yValueMapper: (SalesData sales, _) => sales.yValue,
+                       dataLabelSettings: DataLabelSettings(
+                            showZeroValue: false, isVisible: true),
+                )
+              )
+            );
+          }
+{% endhighlight %}
+
+![hide_0_value](images/datalabel/dataLabel_0_value.png)
