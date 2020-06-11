@@ -892,7 +892,6 @@ The position of axis label alignment can be changed using the [`labelAlignment`]
         return Scaffold(
             body: Center(
                 child: Container(
-                    child: SfCartesianChart(
                         child: SfCartesianChart(
                     primaryXAxis: NumericAxis(
                       labelAlignment: LabelAlignment.center,
@@ -926,7 +925,6 @@ The position of axis label alignment can be changed using the [`labelAlignment`]
         return Scaffold(
             body: Center(
                 child: Container(
-                    child: SfCartesianChart(
                         child: SfCartesianChart(
                     primaryXAxis: NumericAxis(
                       labelAlignment: LabelAlignment.start,
@@ -960,7 +958,6 @@ The position of axis label alignment can be changed using the [`labelAlignment`]
         return Scaffold(
             body: Center(
                 child: Container(
-                    child: SfCartesianChart(
                         child: SfCartesianChart(
                     primaryXAxis: 
                     NumericAxis(),

@@ -2677,7 +2677,6 @@ To render a spline range area chart, create an instance of the [`SplineRangeArea
                         series: <CartesianSeries<SalesData, String>>[
                       SplineRangeAreaSeries<SalesData, String>(
                           dataSource: chartData,
-                          dataLabelSettings: DataLabelSettings(isVisible: true),
                           xValueMapper: (SalesData sales, _) => sales.xValue,
                           lowValueMapper: (SalesData sales, _) =>
                               sales.lowValue,
@@ -2721,6 +2720,7 @@ The following code sample demonstrates how to set the [`splineType`](https://pub
                       SplineRangeAreaSeries<SalesData, String>(
                           dataSource: chartData,
                           splineType: SplineType.cardinal,
+                          cardinalSplineTension: 1.5,
                           xValueMapper: (SalesData sales, _) => sales.xValue,
                           lowValueMapper: (SalesData sales, _) =>
                               sales.lowValue,
