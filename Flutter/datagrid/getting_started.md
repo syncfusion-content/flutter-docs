@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started for Syncfusion Flutter DataGrid
-description:  Learn how to create the Syncfusion Flutter DataGrid, add basic features in DataGrid.
+description: Learn how to create the Syncfusion Flutter DataGrid, add basic features in DataGrid.
 platform: flutter
 control: SfDataGrid
 documentation: ug
@@ -49,7 +49,7 @@ Import the following package in your Dart code.
 
 {% endhighlight %}
 
-## Initialize  Datarid
+## Initialize DataGrid
 
 Add the SfDataGrid widget as a child of any widget. Here, `SfDataGrid` widget is initialized as a child of Container widget. `SfDataGrid` requires the `source` and `columns` property. You can find the more details on these properties in further topics.
 
