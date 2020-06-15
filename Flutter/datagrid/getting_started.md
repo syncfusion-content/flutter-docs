@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started for Syncfusion Flutter DataGrid
-description: Learn how to create the Syncfusion Flutter DataGrid, add basic features in DataGrid.
+description: This section explains the steps required to the DataGrid widget, and its basic features needed to add in the DataGrid widget.
 platform: flutter
 control: SfDataGrid
 documentation: ug
