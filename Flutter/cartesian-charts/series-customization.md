@@ -224,25 +224,18 @@ The [`borderGradient`]() property is used to define the gradient color for the b
                     child: SfCartesianChart(
                         series: <CartesianSeries>[
                             AreaSeries<ChartData, double>(
-                                dataSource: chartData,
-                                xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) => data.y,
-                                 borderWidth: 4,
-                        borderGradient: const LinearGradient(colors: <Color>[
-                          Color.fromRGBO(230, 0, 180, 1),
-                          Color.fromRGBO(255, 200, 0, 1)
-                        ], stops: <double>[
-                          0.2,
-                          0.9
-                        ]),
-                        gradient: const LinearGradient(colors: <Color>[
-                          // Color.fromRGBO(255, 87, 220, 0.9),
-                          Color.fromRGBO(255, 220, 96, 0.9)
-                        ], stops: <double>[
-                          0.2,
-                        ]),
-                          opacity:0.5,
-                            )
+                                borderWidth: 4,
+                                borderGradient: const LinearGradient(
+                                    colors: <Color>[
+                                                    Color.fromRGBO(230, 0, 180, 1),
+                                                    Color.fromRGBO(255, 200, 0, 1)
+                                            ], 
+                                    stops: <double>[
+                                                    0.2,
+                                                    0.9
+                                            ]
+                                ),
+                           )
                         ]
                     )
                 )

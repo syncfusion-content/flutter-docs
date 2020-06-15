@@ -373,9 +373,7 @@ You can customize the appearance of the data label with your own template using 
 
 ### Hide data label for 0 value
 
-Data label in Cartesian charts if the data label hide for point value is 0.Connector line should also be hidden for this case when labels are placed outside.
-
-[`showZeroValue`]() - used to hide the data label for 0 values.
+Data label in the Cartesian charts for the point value 0 can be hidden using the [`showZeroValue`]() property.
 
 {% highlight dart %} 
 
@@ -384,18 +382,19 @@ Data label in Cartesian charts if the data label hide for point value is 0.Conne
         return Scaffold(
             body: Center(
                     child:SfCartesianChart(
-                        series: <CartesianSeries<SalesData,num>>[SplineSeries<SalesData, num>(
-                        dataSource: chartData,
-                        xValueMapper: (SalesData sales, _) => sales.xValue,
-                        yValueMapper: (SalesData sales, _) => sales.yValue,
-                       dataLabelSettings: DataLabelSettings(
-                            showZeroValue: false, isVisible: true),
-                        )
-                  ]
-                )
-              )
-            );
-          }
+                        series: <CartesianSeries<SalesData,num>>[
+                            SplineSeries<SalesData, num>(
+                                dataLabelSettings: DataLabelSettings(
+                                    showZeroValue: false, 
+                                    isVisible: true
+                                ),
+                            )
+                        ]
+                    )
+            )
+        );
+    }
+    
 {% endhighlight %}
 
 ![hide_0_value](images/marker-datalabel/dataLabel_0_value.png)

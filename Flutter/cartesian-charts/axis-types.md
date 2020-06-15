@@ -280,9 +280,6 @@ The [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
 Also refer [label format](./axis-customization#formatting-axis-label-content) and [date format](#formatting-the-labels-1) for formatting the labels further.
 
-
-
-
 ## Category axis
 
 Category axis displays text labels instead of numbers. When the string values are bound to x values, then the x-axis must be initialized with CategoryAxis.
@@ -629,11 +626,11 @@ The [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
 
 Also refer [label format](./axis-customization#formatting-axis-label-content) and [number format](#formatting-the-labels) for formatting the labels further.
 
-### double range support
+### Double range support
 
 Date-time axis [`interval`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/interval.html) property can be customize using double value.
 
-For example, if rendering a series with data time axis it shows x-axis labels in the year if you give the interval value in double it shows as month.
+For example, if you are rendering a series with months in x-axis with an interval of 0.5, then the interval will be calculated in days. The interval calculation may vary depends upon the number of days in the month.
 
 
 {% highlight dart %} 
