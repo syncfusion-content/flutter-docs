@@ -345,8 +345,6 @@ You can customize the appearance of the data label with your own template using 
 
 Data label in the Circular charts for the point value 0 can be hidden using the [`showZeroValue`]() property. The connector line should also be hidden for this case when labels are positioned outside.
 
-[`isVisibleForZeroValues`]() - used to hide the data label for 0 values.
-
 {% highlight dart %} 
 
     final List<SalesData> chartData = <SalesData>[
