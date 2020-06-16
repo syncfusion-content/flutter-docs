@@ -117,7 +117,7 @@ Widget build(BuildContext context) {
 
 ![Handle slider](images/getting-started/handle-slider-state.png)
 
-## Set numeric range
+## Set numeric value
 
 You can show numeric values in the slider by setting `double` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) and [`value`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/value.html) properties.
 
@@ -155,7 +155,7 @@ Widget build(BuildContext context) {
 
 ![Numeric slider](images/getting-started/numeric_slider.png)
 
-## Set date range
+## Set date value
 
 You can show date values in the slider by setting `DateTime` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) and [`value`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/value.html) properties.
 
