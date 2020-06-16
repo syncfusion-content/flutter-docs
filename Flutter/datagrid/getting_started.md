@@ -57,19 +57,24 @@ Add the SfDataGrid widget as a child of any widget. Here, `SfDataGrid` widget is
 
     @override
      Widget build(BuildContext context) {
-       return Center(
-        child: Container(
-          child: SfDataGrid(
-            source: _employeeDataSource,
-            columns: [
-            GridNumericColumn(mappingName: 'id',  headerText:'ID'),
-            GridTextColumn(mappingName: 'name', headerText: 'Name'),
-            GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-            GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
-         ],
-        ),
-       ),
-     );
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Syncfusion DataGrid'),
+      ),
+      body: Center(
+          child: Expanded(
+            child:SfDataGrid(
+                    source: _employeeDataSource,
+                    columns: [
+                      GridNumericColumn(mappingName: 'id',  headerText:'ID'),
+                      GridTextColumn(mappingName: 'name', headerText: 'Name'),
+                      GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+                      GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+                    ],                                                   
+                  ),
+          ),
+      ),
+    );
     }
 
 {% endhighlight %}
@@ -154,14 +159,18 @@ Create an instance of `DataGridSource` and set this object to `source` property 
 
     @override
     Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        child: SfDataGrid(
-          source: _employeeDataSource,
-        ),
-       ),
-      );
-     }
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Syncfusion DataGrid'),
+      ),
+      body: Center(
+          child: Expanded(
+            child:SfDataGrid(
+                    source: _employeeDataSource,
+          ),
+      ),
+    );
+    }
 
 {% endhighlight %}
 
@@ -172,24 +181,33 @@ You can also load any widget in a column using the `GridWidgetColumn` and `cellB
 
 {% highlight dart %} 
 
+     final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
+  
     @override
-      Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        child: SfDataGrid(
-          source: _employeeDataSource,
-          columns: [
-            GridNumericColumn(mappingName: 'id',  headerText:'ID'),
-            GridTextColumn(mappingName: 'name', headerText: 'Name'),
-            GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-            GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
-          ],
-        ),
-        ),
-       );
+     Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Syncfusion DataGrid'),
+      ),
+      body: Center(
+          child: Expanded(
+            child:SfDataGrid(
+                    source: _employeeDataSource,
+                    columns: [
+                      GridNumericColumn(mappingName: 'id',  headerText:'ID'),
+                      GridTextColumn(mappingName: 'name', headerText: 'Name'),
+                      GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+                      GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+                    ],                      
+                  ),
+          ),
+      ),
+    );
      }
 
 {% endhighlight %}
+
+![Defining columns](images/getting-started/getting-started-flutter-datagrid.png)
 
 ## Selection
 
@@ -197,63 +215,80 @@ SfDataGrid allows you to select one or more rows. The `selectionMode` property c
 
 {% highlight dart %} 
 
-    @override
-     Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        child: SfDataGrid(
-          source: _employeeDataSource,
-          columns: [
-            GridNumericColumn(mappingName: 'id',  headerText:'ID'),
-            GridTextColumn(mappingName: 'name', headerText: 'Name'),
-            GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-            GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
-          ],
-          selectionMode: SelectionMode.multiple,
-        ),
+   final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
+
+     @override
+      Widget build(BuildContext context) {
+        return Scaffold(
+         appBar: AppBar(
+           title: Text('Syncfusion DataGrid'),
+            ),
+         body: Center(
+          child: Expanded(
+            child:SfDataGrid(
+                    source: _employeeDataSource,
+                    columns: [
+                      GridNumericColumn(mappingName: 'id',  headerText:'ID'),
+                      GridTextColumn(mappingName: 'name', headerText: 'Name'),
+                      GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+                      GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+                    ],
+                    selectionMode: SelectionMode.multiple,                                                   
+                  ),
+          ),
       ),
-      );
-    }
+    );
+     }
 
 {% endhighlight %}
+
+![Selection](images/getting-started/flutter-datagrid-selection.png)
 
 The information about the rows that are selected can be retrieved using `selectedIndex`, `selectedRow`` and selectedRows` properties in `DataGridController`. You need to initialize the `DataGridController` object to the `controller` property of SfDataGrid.
 ` DataGridController` objects are expected to be long-lived, not recreated with each build.
 
 {% highlight dart %} 
 
-    final DataGridController _controller = DataGridController();
+    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
+
+final DataGridController _controller = DataGridController();
+
     @override
-     Widget build(BuildContext context) {
-       return Center(
-        child: Container(
-        child: Column(
-          children: [
-            RaisedButton(child: Text('Get Selection Information'),
-            onPressed:() {
+      Widget build(BuildContext context) {
+         return Scaffold(
+           appBar: AppBar(
+             title: Text('Syncfusion DataGrid'),
+             ),
+      body: Column(
+        children: [
+          RaisedButton(
+              child: Text('Get Selection Information'),
+              onPressed: () {
                 int selectedIndex = _controller.selectedIndex;
                 Object selectedRow = _controller.selectedRow;
                 List<Object> selectedRows = _controller.selectedRows;
                 print(selectedIndex);
                 print(selectedRow);
                 print(selectedRows);
-            }),
-            SfDataGrid(
-                source: _employeeDataSource,
-                columns: [
-                  GridNumericColumn(mappingName: 'id',  headerText:'ID'),
-                  GridTextColumn(mappingName: 'name', headerText: 'Name'),
-                  GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-                  GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
-                ],
-                controller: _controller,
-                selectionMode: SelectionMode.multiple,
-              ),
-          ],
-        ),
+              }),
+          Expanded(
+            child: SfDataGrid(
+              source: _employeeDataSource,
+              columns: [
+                GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+                GridTextColumn(mappingName: 'name', headerText: 'Name'),
+                GridTextColumn(
+                    mappingName: 'designation', headerText: 'Designation'),
+                GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+              ],
+              controller: _controller,
+              selectionMode: SelectionMode.multiple,
+            ),
+          ),
+        ],
       ),
-      );
-    }
+    );
+     }
 
 {% endhighlight %}
 
