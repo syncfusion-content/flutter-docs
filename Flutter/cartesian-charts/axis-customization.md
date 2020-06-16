@@ -939,11 +939,10 @@ If it is a horizontal axis, aligns the labels before the gridline and if it is a
             body: Center(
                 child: Container(
                         child: SfCartesianChart(
-                            primaryXAxis: DateTimeAxis(
-                                //Aligns the x-axis labels
-                                labelAlignment: LabelAlignment.start,
-                            ),
-                            primaryYAxis: NumericAxis(),
+                            primaryXAxis: DateTimeAxis(),
+                            primaryYAxis: NumericAxis(
+                                //Aligns the y-axis labels
+                                labelAlignment:LabelAlignment.start),
                         )
                 ) 
             )
