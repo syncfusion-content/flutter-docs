@@ -489,6 +489,35 @@ The Flutter Chart supports the following types of interval for date-time axis:
 
 ![DateTime range](images/axis-types/datetime_interval.jpg)
 
+### Double range support
+
+Date-time axis [`interval`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/interval.html) property can be customize using double value.
+
+For example, if you are rendering a series with months in x-axis with an interval of 0.5, then the interval will be calculated in days. The interval calculation may vary depends upon the number of days in the month.
+
+
+{% highlight dart %} 
+
+     @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis: DateTimeAxis(
+                             interval: 0.5,
+                        )
+                        primaryXAxis: NumericAxis()
+                    )
+                )
+            )
+        );
+     }
+
+{% endhighlight %}
+
+![doublerange](images/axis-types/doublerange.png)
+
 ### Applying padding to range
 
 Padding can be applied to the [`minimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/minimum.html) and [`maximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/maximum.html) extremes of a range using the `RangePadding` property. The date-time axis supports the following types of padding:
@@ -625,36 +654,6 @@ The [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
 ![Date format](images/axis-types/datetime_labelFormat.jpg)
 
 Also refer [label format](./axis-customization#formatting-axis-label-content) and [number format](#formatting-the-labels) for formatting the labels further.
-
-### Double range support
-
-Date-time axis [`interval`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/interval.html) property can be customize using double value.
-
-For example, if you are rendering a series with months in x-axis with an interval of 0.5, then the interval will be calculated in days. The interval calculation may vary depends upon the number of days in the month.
-
-
-{% highlight dart %} 
-
-     @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCartesianChart(
-                        primaryXAxis: DateTimeAxis(
-                             interval: 0.5,
-                        )
-                        primaryXAxis: NumericAxis()
-                    )
-                )
-            )
-        );
-     }
-
-{% endhighlight %}
-
-![doublerange](images/axis-types/doublerange.png)
-
 
 ## Logarithmic axis
 

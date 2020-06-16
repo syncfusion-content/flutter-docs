@@ -1640,7 +1640,14 @@ Histogram chart is a graphical representation that organizes a group of data poi
 
 To render a histogram chart, create an instance of [`HistogramSeries`]() and add to the series collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html).
 
-You can customize intervals using the [`binInterval`]() property and collapse the normal distribution curve using the [`showNormalDistributionCurve`]() property. You can use the following properties to customize the appearance.
+You can customize intervals using the [`binInterval`]() property. Interval value by which the data points are grouped and rendered as bars, in histogram series.
+
+For example, if the [`binInterval`]() is set to 20, the x-axis will split with 20 as the interval. The first bar in the histogram represents the count of values lying between 0 to 20 in the provided data and the second bar will represent 20 to 40.
+
+If no value is specified for this property, then the interval will be calculated
+automatically based on the data points count and value.
+
+You can collapse the normal distribution curve using the [`showNormalDistributionCurve`]() property. You can use the following properties to customize the appearance.
 
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) – Changes the color of the series.
 * [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.

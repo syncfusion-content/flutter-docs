@@ -180,7 +180,7 @@ The [`labelStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
 
 ### Axis animation
 
-The axis animation can be enabled using the `enableAxisAnimation` property of the chart. It defaults to false and this is applicable for all the primary and secondary axis in the chart
+The axis animation can be enabled using the `enableAxisAnimation` property of the chart. It defaults to false and this is applicable for all the primary and secondary axis in the chart.
 
 On setting the `enableAxisAnimation` property to true, the axis elements like grid lines, tick lines, and labels will be animated when the axis range is changed dynamically. Axis visible range will be changed while zooming, panning, or while updating the data points.
 
@@ -783,9 +783,9 @@ Suppose, you need to draw a plot band that should not stretch along its associat
 
 ![Segement plotband](images/axis-customization/segment_plotband.jpg)
 
-### Plot band line
+### Plot line
 
-When you give the [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/start.html) and [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/end.html) position values the same, it will draw a line. You can customize the line using the  [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/borderWidth.html) and [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/borderColor.html) properties.
+When you specify the same value for both [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/start.html) and [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/end.html), it will draw a line. You can customize the line using the  [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/borderWidth.html) and [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/borderColor.html) properties.
 
 {% highlight dart %}
 
@@ -889,19 +889,19 @@ By default, the chart is rendered with primary x axis and primary y axis. But, t
 
 ![Multiple axes](images/axis-customization/multiple_axis.jpg)
 
-## Axis Label Alignment
+## Axis label alignment
 
 The position of axis label can be aligned using the [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelAlignment.html) property.The following options are available in axis label alignment.
 
-* [`start`]() - Aligns the axis label to the start position.
+* [`start`]() - If it is a horizontal axis, aligns the labels before the gridline and if it is a vertical axis, aligns the labels below the gridline.
 
-* [`end`]() - Aligns the axis label to the end position.
+* [`end`]() - If it is a horizontal axis, aligns the labels after the gridline and if it is a vertical axis, align the labels above the gridline.
 
-* [`center`]() - Aligns the axis label to the center position.
+* [`center`]() - Aligns the axis label to the center of the gridlines.
 
-### center 
+### Center 
 
-Aligns the axis label to the center position.
+Aligns the axis label to the center of the gridlines.
 
 {% highlight dart %} 
 
@@ -927,9 +927,9 @@ Aligns the axis label to the center position.
 
 ![center](images/axis-customization/center.png)
 
-### start
+### Start
 
-Aligns the axis label to the start position.
+If it is a horizontal axis, aligns the labels before the gridline and if it is a vertical axis, aligns the labels below the gridline.
 
 {% highlight dart %} 
 
@@ -954,9 +954,9 @@ Aligns the axis label to the start position.
 
 ![start](images/axis-customization/start.png)
 
-### end
+### End
 
-Aligns the axis label to the end position.
+If it is a horizontal axis, aligns the labels after the gridline and if it is a vertical axis, align the labels above the gridline.
 
 {% highlight dart %} 
 
@@ -979,4 +979,4 @@ Aligns the axis label to the end position.
      
 {% endhighlight %}
 
-![start](images/axis-customization/end.png)
+![end](images/axis-customization/end.png)
