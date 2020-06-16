@@ -96,6 +96,71 @@ Widget build(BuildContext context) {
 
 ![Default maps](images/getting-started/default_maps.png)
 
+## Declare data source
+
+You can declare the data source as your own for customizing the shape. You must set the [`primaryValueMapper`] property to render the custom data source along with the [`shapeFile`], and [`shapeDataField`] properties in the [MapShapeLayerDelegate] class.
+
+{% tabs %}
+{% highlight Dart %}
+
+MapShapeLayerDelegate mapDelegate;
+List<Model> worldMapData;
+
+@override
+void initState() {
+  worldMapData = <Model>[
+    Model('South America', Colors.green, 'S.A.'),
+    Model('North America', Colors.purple, 'N.A.'),
+    Model('Africa', Colors.teal, 'Africa'),
+    Model('Asia', Colors.pink, 'Asia'),
+    Model('Australia', Colors.greenAccent, 'Australia'),
+  ];
+
+  mapDelegate = MapShapeLayerDelegate(
+    shapeFile: 'assets/world_map.json',
+    shapeDataField: 'continent',
+    dataCount: worldMapData.length,
+    showDataLabels: true,
+    primaryValueMapper: (int index) => worldMapData[index].key,
+    shapeColorValueMapper: (int index) => worldMapData[index].color,
+    dataLabelMapper: (int index) => worldMapData[index].dataLabel,
+  );
+  super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: Center(
+      child: SfMaps(
+        layers: <MapLayer>[
+          MapShapeLayer(
+             delegate: mapDelegate),
+        ],
+      ),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Dart %}
+
+class Model {
+  const Model(this.key, this.color, this.dataLabel);
+
+  final String key;
+  final Color color;
+  final String dataLabel;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Maps data source](images/getting-started/maps_data_source.png)
+
 ## Map title
 
 You can add a title to the map to provide quick information to users about the data plotted in the map using the [`title`] property in the [`SfMaps`] class. The default value of the [`title`] property is `null`.
@@ -103,29 +168,29 @@ You can add a title to the map to provide quick information to users about the d
 {% tabs %}
 {% highlight Dart %}
 
- MapShapeLayerDelegate mapDelegate;
+MapShapeLayerDelegate mapDelegate;
 
-  @override
-  void initState() {
-    mapDelegate = MapShapeLayerDelegate(
-        shapeFile: 'assets/world_map.json',
-        shapeDataField: 'continent');
-    super.initState();
-  }
+@override
+void initState() {
+  mapDelegate = MapShapeLayerDelegate(
+      shapeFile: 'assets/world_map.json',
+      shapeDataField: 'continent');
+  super.initState();
+}
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: SfMaps(
-          title: MapTitle(text: 'World map'),
-          layers: <MapLayer>[
-            MapShapeLayer(delegate: mapDelegate),
-          ],
-        ),
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: Center(
+      child: SfMaps(
+        title: MapTitle(text: 'World map'),
+        layers: <MapLayer>[
+          MapShapeLayer(delegate: mapDelegate),
+        ],
       ),
-    );
-  }
+    ),
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
