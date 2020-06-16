@@ -102,7 +102,7 @@ Widget build(BuildContext context) {
 * If the custom `startHour` and `endHour` are given, then the number of time slots calculated based on given `startHour` and `endHour` should result in integer value, otherwise next immediate `timeInterval` will be considered until the result is integer value. For example, if `startHour` is 9 (09:00AM), `endHour` is 18.25 (06:15 PM), `timeInterval` is 30 minutes, and total minutes = 555 ((18.25-9)*60), then the timeInterval will be changed to ’37 minutes’ (555%37=0) by considering (total minutes % timeInterval = 0). it will return integer value for time slots rendering.
 
 ## Special time regions
-You can restrict the user interaction such as selection and highlights specific regions of time in the timeslotviews by adding the [specialTimeRegions] property of `sfCalendar`. You need to set the [startTime] and [endTime] properties of [TimeRegion] to create a `specialTimeRegion`, you can use the [timeZone] property to set the specific timezone for start and end time of `spcialTimeRegion`. The `specialTimeRegion` will display the text or icon on it that set to the [text] or [icon] property of `TimeRegion`.
+You can restrict the user interaction such as selection and highlights specific regions of time in the timeslot views by adding the [specialTimeRegions] property of `sfCalendar`. You need to set the [startTime] and [endTime] properties of [TimeRegion] to create a `specialTimeRegion`, you can use the [timeZone] property to set the specific timezone for start and end time of `specialTimeRegion`. The `specialTimeRegion` will display the text or icon on it that set to the [text] or [icon] property of `TimeRegion`.
 
 >**NOTE** If time region has both the text and icon then it will draw icon only.
 
