@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started for Syncfusion Flutter Maps | Syncfusion
-description: This section explains the steps required to add the maps widget and its elements such as data labels, selection, markers, bubbles, assignable colors based on region, and legends.
+description: This section explains the steps required to add the maps widget and its elements such as data labels, selection, markers, bubbles, and legends.
 platform: Flutter
 control: SfMaps
 documentation: ug
