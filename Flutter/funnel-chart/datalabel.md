@@ -127,7 +127,7 @@ The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
 ### Hide data label for 0 value
 
-Data label in the Funnel charts for the point value 0 can be hidden using the [`showZeroValue`]() property. The connector line should also be hidden for this case when labels are positioned outside.
+Data label and its connector line in the Funnel charts for the point value 0 can be hidden using the [`showZeroValue`]() property. This defaults to *true*.
 
 {% highlight dart %} 
 

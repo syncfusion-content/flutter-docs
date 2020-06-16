@@ -614,7 +614,7 @@ Triggers when touched or clicked on the chart area. You can get the position of 
 
 ## onChartTouchInteractionUp
 
-Triggers when tapped on the chart area. You can get the position of the taped region using this callback.
+Triggers when tapped or clicked on the chart area. You can get the position of the taped region using this callback.
 
 {% highlight dart %}
 

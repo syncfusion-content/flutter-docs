@@ -373,7 +373,7 @@ You can customize the appearance of the data label with your own template using 
 
 ### Hide data label for 0 value
 
-Data label in the Cartesian charts for the point value 0 can be hidden using the [`showZeroValue`]() property.
+Data label and its connector line in the Cartesian charts for the point value 0 can be hidden using the [`showZeroValue`]() property. This defaults to *true*.
 
 {% highlight dart %} 
 

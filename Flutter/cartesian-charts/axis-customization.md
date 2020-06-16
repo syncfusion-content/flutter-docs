@@ -196,6 +196,8 @@ On setting the `enableAxisAnimation` property to true, the axis elements like gr
 
 {% endhighlight %}
 
+![Axis label](images/axis-customization/animatedAxis.gif)
+
 ### Formatting axis label content
 
 The [`labelFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/labelFormat.html) property is used to add prefix or suffix with the axis label.
