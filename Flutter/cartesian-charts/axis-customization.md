@@ -924,11 +924,11 @@ The position of axis label alignment can be changed using the [`labelAlignment`]
             body: Center(
                 child: Container(
                         child: SfCartesianChart(
-                    primaryXAxis: DateTimeAxis(
-                      labelAlignment: LabelAlignment.start,
-                    ),
+                    primaryXAxis: DateTimeAxis(),
                     primaryYAxis:
-                        NumericAxis(),
+                        NumericAxis(
+                            labelAlignment: LabelAlignment.start,
+                        ),
                     series: <CartesianSeries<SalesData, DateTime>>[
                       LineSeries<SalesData, DateTime>(
                         dataSource: chartData,
@@ -977,7 +977,7 @@ The position of axis label alignment can be changed using the [`labelAlignment`]
      
 {% endhighlight %}
 
-![start](images/axis-customization/end.png)
+![end](images/axis-customization/end.png)
 
 
 
