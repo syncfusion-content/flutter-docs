@@ -168,7 +168,7 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
 
 ## Gradient fill
 
-The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/gradient.html) property is used to define the gradient colors. The colors from this property is used for series.
+The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/gradient.html) property are used to define the gradient colors. The colors from this property is used for series and now you can use the transform property available in [`LinearGradient`](https://api.flutter.dev/flutter/painting/LinearGradient/LinearGradient.html) to transform the applied gradient colors.
 
 {% highlight dart %} 
 
@@ -210,9 +210,11 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
 
 ![Gradient color](images/cartesian-customization/gradient.png)
 
+N> The gradient is not applicable for financial and line type series except the [`FastLineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FastLineSeries-class.html).
+
 ## Gradient stroke
  
-The [`borderGradient`]() property is used to define the gradient color for the border of the series.
+The [`borderGradient`]() property is used to define the gradient color for the border of the applicable series.
 
 {% highlight dart %} 
 

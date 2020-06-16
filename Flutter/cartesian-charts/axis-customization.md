@@ -178,6 +178,24 @@ The [`labelStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
 
 ![Axis label](images/axis-customization/label_custom.jpg)
 
+### Axis animation
+
+The axis animation can be enabled using the `enableAxisAnimation` property of the chart. It defaults to false and this is applicable for all the primary and secondary axis in the chart
+
+On setting the `enableAxisAnimation` property to true, the axis elements like grid lines, tick lines, and labels will be animated when the axis range is changed dynamically. Axis visible range will be changed while zooming, panning, or while updating the data points.
+
+{% highlight dart %}
+
+    Widget build(BuildContext context) {
+        return Container(
+            child: SfCartesianChart(
+                enableAxisAnimation: true,
+            )
+        );
+    }
+
+{% endhighlight %}
+
 ### Formatting axis label content
 
 The [`labelFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/labelFormat.html) property is used to add prefix or suffix with the axis label.
