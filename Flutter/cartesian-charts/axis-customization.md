@@ -941,8 +941,8 @@ Aligns the axis label to the start position.
                         child: SfCartesianChart(
                             primaryXAxis: DateTimeAxis(),
                             primaryYAxis: NumericAxis(
-                                //Aligns the x-axis labels
-                                labelAlignment: LabelAlignment.start),
+                                //Aligns the y-axis labels
+                                labelAlignment:LabelAlignment.start),
                         )
                 ) 
             )
