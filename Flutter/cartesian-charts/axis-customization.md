@@ -178,6 +178,24 @@ The [`labelStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
 
 ![Axis label](images/axis-customization/label_custom.jpg)
 
+### Axis animation
+
+The axis animation can be enabled using the `enableAxisAnimation` property of the chart. It defaults to false and this is applicable for all the primary and secondary axis in the chart
+
+On setting the `enableAxisAnimation` property to true, the axis elements like grid lines, tick lines, and labels will be animated when the axis range is changed dynamically. Axis visible range will be changed while zooming, panning, or while updating the data points.
+
+{% highlight dart %}
+
+    Widget build(BuildContext context) {
+        return Container(
+            child: SfCartesianChart(
+                enableAxisAnimation: true,
+            )
+        );
+    }
+
+{% endhighlight %}
+
 ### Formatting axis label content
 
 The [`labelFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/labelFormat.html) property is used to add prefix or suffix with the axis label.
@@ -765,9 +783,9 @@ Suppose, you need to draw a plot band that should not stretch along its associat
 
 ![Segement plotband](images/axis-customization/segment_plotband.jpg)
 
-### plot band line
+### Plot band line
 
-When you give the [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/start.html) and [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/end.html) position value the same, It will draw the line.also can add the [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/borderWidth.html)) property.
+When you give the [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/start.html) and [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/end.html) position values the same, it will draw a line. You can customize the line using the  [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/borderWidth.html) and [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/borderColor.html) properties.
 
 {% highlight dart %}
 
@@ -795,8 +813,6 @@ When you give the [`start`](https://pub.dev/documentation/syncfusion_flutter_cha
 {% endhighlight %}
 
 ![plotband_line](images/axis-customization/plotband_line.png)
-
-
 
 ## Multiple axes
 
@@ -875,15 +891,17 @@ By default, the chart is rendered with primary x axis and primary y axis. But, t
 
 ## Axis Label Alignment
 
-The position of axis label alignment can be changed using the [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelAlignment.html) property.The following options are available in axis label alignment.
+The position of axis label can be aligned using the [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelAlignment.html) property.The following options are available in axis label alignment.
 
-* [`start`]() - axis label alignment is closer to axis line.
+* [`start`]() - Aligns the axis label to the start position.
 
-* [`end`]() - axis label alignment is greater distance in axis line.
+* [`end`]() - Aligns the axis label to the end position.
 
-* [`center`]() - axis label alignment is center of the axis line.
+* [`center`]() - Aligns the axis label to the center position.
 
 ### center 
+
+Aligns the axis label to the center position.
 
 {% highlight dart %} 
 
@@ -893,22 +911,17 @@ The position of axis label alignment can be changed using the [`labelAlignment`]
             body: Center(
                 child: Container(
                         child: SfCartesianChart(
-                    primaryXAxis: DateTimeAxis(),
-                    primaryYAxis:
-                        NumericAxis(labelAlignment: LabelAlignment.center),
-                    series: <CartesianSeries<SalesData, DateTime>>[
-                      LineSeries<SalesData, DateTime>(
-                        dataSource: chartData,
-                        xValueMapper: (SalesData sales, _) => sales.xValue,
-                        yValueMapper: (SalesData sales, _) => sales.yValue,
-                        animationDuration: 3000,
-                      )
-                    ]
-                  )
+                            primaryXAxis: DateTimeAxis(),
+                            primaryYAxis:
+                                NumericAxis(
+                                    //Aligns the y-axis labels
+                                    labelAlignment: LabelAlignment.center
+                                ),
+                        )
                 )
-              )
-            );
-          }
+            )
+        );
+    }
      
 {% endhighlight %}
 
@@ -916,6 +929,8 @@ The position of axis label alignment can be changed using the [`labelAlignment`]
 
 ### start
 
+Aligns the axis label to the start position.
+
 {% highlight dart %} 
 
     @override
@@ -924,24 +939,15 @@ The position of axis label alignment can be changed using the [`labelAlignment`]
             body: Center(
                 child: Container(
                         child: SfCartesianChart(
-                    primaryXAxis: DateTimeAxis(),
-                    primaryYAxis:
-                        NumericAxis(
-                            labelAlignment: LabelAlignment.start,
-                        ),
-                    series: <CartesianSeries<SalesData, DateTime>>[
-                      LineSeries<SalesData, DateTime>(
-                        dataSource: chartData,
-                        xValueMapper: (SalesData sales, _) => sales.xValue,
-                        yValueMapper: (SalesData sales, _) => sales.yValue,
-                        animationDuration: 3000,
-                      ),
-                    ]
-                  )
+                            primaryXAxis: DateTimeAxis(),
+                            primaryYAxis: NumericAxis(
+                                //Aligns the x-axis labels
+                                labelAlignment: LabelAlignment.start),
+                        )
                 ) 
-              )
-            );
-          }
+            )
+        );
+    }
      
 {% endhighlight %}
 
@@ -949,6 +955,8 @@ The position of axis label alignment can be changed using the [`labelAlignment`]
 
 ### end
 
+Aligns the axis label to the end position.
+
 {% highlight dart %} 
 
     @override
@@ -957,31 +965,17 @@ The position of axis label alignment can be changed using the [`labelAlignment`]
             body: Center(
                 child: Container(
                         child: SfCartesianChart(
-                    primaryXAxis: 
-                    DateTimeAxis(),
-                    primaryYAxis:
-                        NumericAxis(labelAlignment: LabelAlignment.end),
-                    series: <CartesianSeries<SalesData, DateTime>>[
-                      LineSeries<SalesData, DateTime>(
-                        dataSource: chartData,
-                        xValueMapper: (SalesData sales, _) => sales.xValue,
-                        yValueMapper: (SalesData sales, _) => sales.yValue,
-                        animationDuration: 3000,
-                      )
-                    ]
-                  )
+                            primaryXAxis: DateTimeAxis(),
+                            primaryYAxis: NumericAxis(
+                                //Aligns the y-axis labels
+                                labelAlignment: LabelAlignment.end
+                            ),
+                        )
                 )
-              )
-           );
-         }
+            )
+        );
+    }
      
 {% endhighlight %}
 
-![end](images/axis-customization/end.png)
-
-
-
-
-
-
-
+![start](images/axis-customization/end.png)

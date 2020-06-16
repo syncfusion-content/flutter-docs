@@ -343,18 +343,17 @@ You can customize the appearance of the data label with your own template using 
 
 ## Hide data label for 0 value
 
-Data label in circular charts if the data label hide for point value is 0.Connector line should also be hidden for this case when labels are placed outside.
-
-[`isVisibleForZeroValues`]() - used to hide the data label for 0 values.
+Data label in the Circular charts for the point value 0 can be hidden using the [`showZeroValue`]() property. The connector line should also be hidden for this case when labels are positioned outside.
 
 {% highlight dart %} 
 
     final List<SalesData> chartData = <SalesData>[
-    SalesData('jan', 35),
-    SalesData('feb', 28),
-    SalesData('march', 0),
-    SalesData('april', 32),
-    SalesData('may', 40)];
+        SalesData('Jan', 35),
+        SalesData('Feb', 28),
+        SalesData('March', 0),
+        SalesData('April', 32),
+        SalesData('May', 40)
+    ];
     
     @override
     Widget build(BuildContext context) {
@@ -363,14 +362,21 @@ Data label in circular charts if the data label hide for point value is 0.Connec
                 child: Container(
                     child:SfCircularChart(
                         series: <CircularSeries<SalesData, String>>[
-                    PieSeries<SalesData, String>(
-                        dataSource: chartData,
-                        xValueMapper: (SalesData sales, _) => sales.xValue,
-                        yValueMapper: (SalesData sales, _) => sales.yValue,
-                        dataLabelSettings: DataLabelSettings(
-                            isVisibleForZeroValues: false, isVisible: true))
-                  ],
-                ))));}
+                            PieSeries<SalesData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (SalesData sales, _) => sales.xValue,
+                                yValueMapper: (SalesData sales, _) => sales.yValue,
+                                dataLabelSettings: DataLabelSettings(
+                                    isVisibleForZeroValues: false, 
+                                    isVisible: true
+                                )
+                            )
+                        ],
+                    )
+                )
+            )
+        );
+    }
 
 {% endhighlight %}
 
