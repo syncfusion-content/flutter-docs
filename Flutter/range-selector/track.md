@@ -100,7 +100,7 @@ class Data {
 
 ## Track height
 
-You can change the track height of the range selector using the [`trackHeight`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/trackHeight.html) property. The default value of the [`trackHeight`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/trackHeight.html) property is `2.0`.
+You can change the track height of the range selector using the [`activeTrackHeight`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/activeTrackHeight.html) and the [`inactiveTrackHeight`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/inactiveTrackHeight.html) properties. The default value of the [`activeTrackHeight`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/activeTrackHeight.html) and the [`inactiveTrackHeight`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/inactiveTrackHeight.html) properties are `2.0`.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorTheme-class.html).
 
@@ -130,7 +130,8 @@ Widget build(BuildContext context) {
           body: Center(
               child: SfRangeSelectorTheme(
                     data: SfRangeSliderThemeData(
-                        trackHeight: 8,
+                        activeTrackHeight: 8,
+                        inactiveTrackHeight: 8,
                     ),
                     child:  SfRangeSelector(
                         min: _min,
@@ -210,7 +211,8 @@ Widget build(BuildContext context) {
           body: Center(
               child: SfRangeSelectorTheme(
                     data: SfRangeSliderThemeData(
-                        trackHeight: 10,
+                        activeTrackHeight: 10,
+                        inactiveTrackHeight: 10,
                         trackCornerRadius: 5,
                     ),
                     child:  SfRangeSelector(

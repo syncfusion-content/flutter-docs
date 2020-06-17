@@ -61,7 +61,7 @@ Widget build(BuildContext context) {
 
 ## Track height
 
-You can change the track height of the range slider using the [`trackHeight`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/trackHeight.html) property. The default value of the [`trackHeight`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/trackHeight.html) property is `2.0`
+You can change the track height of the range slider using the [`activeTrackHeight`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/activeTrackHeight.html) and the [`inactiveTrackHeight`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/inactiveTrackHeight.html) properties. The default value of the [`activeTrackHeight`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/activeTrackHeight.html) and the [`inactiveTrackHeight`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/inactiveTrackHeight.html) properties are `2.0`.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderTheme-class.html).
 
@@ -77,7 +77,8 @@ Widget build(BuildContext context) {
           body: Center(
               child: SfRangeSliderTheme(
                     data: SfRangeSliderThemeData(
-                        trackHeight: 8,
+                        activeTrackHeight: 8,
+                        inactiveTrackHeight: 8,
                     ),
                     child:  SfRangeSlider(
                         min: 2.0,
@@ -102,7 +103,7 @@ Widget build(BuildContext context) {
 
 ## Track corner radius
 
-You can change the corner of the track to be round in the range slider using the [`trackCornerRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/trackCornerRadius.html) property. The default value of the [`trackCornerRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/trackCornerRadius.html) property is `1.0`
+You can change the corner of the track to be round in the range slider using the [`trackCornerRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/trackCornerRadius.html) property. The default value of the [`trackCornerRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/trackCornerRadius.html) property is `1.0`.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderTheme-class.html).
 
@@ -118,7 +119,8 @@ Widget build(BuildContext context) {
           body: Center(
               child: SfRangeSliderTheme(
                     data: SfRangeSliderThemeData(
-                        trackHeight: 10,
+                        activeTrackHeight: 10,
+                        inactiveTrackHeight: 10,
                         trackCornerRadius: 5,
                     ),
                     child: SfRangeSlider(
