@@ -13,7 +13,7 @@ The Syncfusion Flutter DataGrid is used to display and manipulate data in a tabu
 
 ## Key Features
 
-* **ColumnTypes** : Provides the option to show different data types (int, double, string, and date-time) in different types of columns. Also, it can load any widget in a column.
+* **Column Types** : Provides the option to show different data types (int, double, string, and date-time) in different types of columns. Also, it can load any widget in a column.
 * **Column sizing** : Sets the width of columns with various sizing options. Columns can also be fitted based on their content.
 * **Auto row height** : Provides the option to set the height for rows based on the content of their cells.
 * **Selection** : Selects one or more rows. Keyboard navigation is supported for web platforms.
