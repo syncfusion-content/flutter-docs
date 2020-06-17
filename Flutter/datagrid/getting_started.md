@@ -209,7 +209,7 @@ You can also load any widget in a column using the `GridWidgetColumn` and `cellB
 
 {% endhighlight %}
 
-![flutter datagrid shows different column types](images/getting-started/getting-started-flutter-datagrid.png.png)
+![flutter datagrid shows different column types](images/getting-started/getting-started-flutter-datagrid.png)
 
 ## Selection
 
