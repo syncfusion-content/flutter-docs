@@ -7,7 +7,7 @@ control: SfDataGrid
 documentation: ug
 ---
 
-# Overview of DataGrid Generator 
+# Overview of Syncfusion Flutter DataGrid 
 
 The Syncfusion Flutter DataGrid is used to display and manipulate data in a tabular view. It is built from the ground up to achieve the best possible performance even when loading large amounts data.         
 
