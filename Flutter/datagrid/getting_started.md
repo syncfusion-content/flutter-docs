@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started for Syncfusion Flutter DataGrid
-description: This section explains the steps required to the DataGrid widget, and its basic features needed to add in the DataGrid widget.
+title: Getting started for Syncfusion Flutter DataGrid | DataTable
+description: Learn how to create the Syncfusion Flutter DataGrid and it's basic features.
 platform: flutter
 control: SfDataGrid
 documentation: ug
@@ -45,13 +45,13 @@ Import the following package in your Dart code.
 
 {% highlight dart %} 
 
-    import 'package:syncfusion_flutter_/datagrid.dart';
+    import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
 {% endhighlight %}
 
 ## Initialize DataGrid
 
-Add the SfDataGrid widget as a child of any widget. Here, `SfDataGrid` widget is initialized as a child of Container widget. `SfDataGrid` requires the `source` and `columns` property. You can find the more details on these properties in further topics.
+Add the SfDataGrid widget as a child of any widget. Here, `SfDataGrid` widget is initialized as a child of Expanded widget. `SfDataGrid` requires the `source` and `columns` properties. You can find the more details on these properties in further topics.
 
 {% highlight dart %} 
 
@@ -81,7 +81,7 @@ Add the SfDataGrid widget as a child of any widget. Here, `SfDataGrid` widget is
 
 ## Creating Data for an application
 
- The SfDataGrid is depending upon the data. Create a simple data source for `SfDataGrid` as shown in the following code example.
+The `SfDataGrid` is depending upon the data. Create a simple datasource for `SfDataGrid` as shown in the following code example.
 
 {% highlight dart %} 
 
@@ -95,7 +95,7 @@ Add the SfDataGrid widget as a child of any widget. Here, `SfDataGrid` widget is
 
 {% endhighlight %}
 
-Create the collection of Employee data with the required number of data objects. Here, the method which is used to populate the data objects is initialized in initState().
+Create the collection of Employee data with the required number of data objects. Here, the `populateData` method which is used to populate the data objects is initialized in `initState()`.
 
 {% highlight dart %} 
 
@@ -126,7 +126,9 @@ Create the collection of Employee data with the required number of data objects.
 {% highlight dart %} 
 
     final List<Employee> _employees =<Employee>[];
-     final EmployeeDataSource_employeeDataSource= EmployeeDataSource ();
+    
+    final EmployeeDataSource_employeeDataSource= EmployeeDataSource ();
+     
      class EmployeeDataSource extend DataGridSource {
       @override
        List<Object> get dataSource => _employees;
@@ -181,7 +183,7 @@ You can also load any widget in a column using the `GridWidgetColumn` and `cellB
 
 {% highlight dart %} 
 
-     final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
+    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
   
     @override
      Widget build(BuildContext context) {
@@ -207,7 +209,7 @@ You can also load any widget in a column using the `GridWidgetColumn` and `cellB
 
 {% endhighlight %}
 
-![Defining columns](images/getting-started/getting-started-flutter-datagrid.png.png)
+![flutter datagrid shows different column types](images/getting-started/getting-started-flutter-datagrid.png.png)
 
 ## Selection
 
@@ -242,14 +244,14 @@ SfDataGrid allows you to select one or more rows. The `selectionMode` property c
 
 {% endhighlight %}
 
-![Selection](images/getting-started/flutter-datagrid-selection.png)
+![flutter datagrid shows rows with selection](images/getting-started/flutter-datagrid-selection.png)
 
 The information about the rows that are selected can be retrieved using `selectedIndex`, `selectedRow`` and selectedRows` properties in `DataGridController`. You need to initialize the `DataGridController` object to the `controller` property of SfDataGrid.
 ` DataGridController` objects are expected to be long-lived, not recreated with each build.
 
 {% highlight dart %} 
 
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
+final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
 
 final DataGridController _controller = DataGridController();
 
