@@ -107,7 +107,7 @@ You can restrict the user interaction such as selection and highlights specific 
 >**NOTE** If time region has both the text and icon then it will draw icon only.
 
 ### Special time region customization
-The `specialTimeRegion` background color can be customized by using the [color], [textStyle] properties of `TimeRegion` used to customize the text style for the `text` and `icon` of the `specialTimeRegion`.
+The `specialTimeRegion` background color can be customized by using the [color] and [textStyle] properties of `TimeRegion` that is used to customize the text style for the `text` and `icon` of the `specialTimeRegion`.
 
 ### Selection restriction in timeslots
 You can enable or disable the touch interaction of `TimeRegion` using the ` enablePointerInteraction` property of `TimeRegion`. By default, its value is true.
