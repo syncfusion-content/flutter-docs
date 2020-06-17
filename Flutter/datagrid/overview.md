@@ -11,6 +11,9 @@ documentation: ug
 
 The Syncfusion Flutter DataGrid is used to display and manipulate data in a tabular view. It is built from the ground up to achieve the best possible performance even when loading large amounts data.         
 
+![Overview Flutter datagrid](images/overview/flutter-datagrid-overview.png)
+
+
 ## Key Features
 
 * **Column Types** : Provides the option to show different data types (int, double, string, and date-time) in different types of columns. Also, it can load any widget in a column.
