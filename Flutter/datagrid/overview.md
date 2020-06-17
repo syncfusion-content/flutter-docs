@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Overview of Syncfusion Flutter DataGrid
+title: Overview of Syncfusion Flutter DataGrid | DataTable
 description: Learn the key features available in Syncfusion Flutter DataGrid (SfDataGrid) widget and more details.
 platform: flutter
 control: SfDataGrid
