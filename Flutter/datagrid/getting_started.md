@@ -144,22 +144,22 @@ Create the collection of Employee data with the required number of data objects.
 
       @override
         getCellValue(int rowIndex, String columnName) {
-      switch (columnName) {
-        case 'id':
-          return _employees[rowIndex].id;
-        break;
-        case 'name':
-          return _employees[rowIndex].name;
-        break;
-        case 'salary':
-          return _employees[rowIndex].salary;
-        break;
-        case 'designation':
-          return _employees[rowIndex].designation;
-        break;
-        default:
-          return ' ';
-        break;
+          switch (columnName) {
+            case 'id':
+              return _employees[rowIndex].id;
+            break;
+            case 'name':
+              return _employees[rowIndex].name;
+            break;
+            case 'salary':
+              return _employees[rowIndex].salary;
+            break;
+            case 'designation':
+              return _employees[rowIndex].designation;
+            break;
+            default:
+              return ' ';
+            break;
       }
     }
 
@@ -209,7 +209,7 @@ You can also load any widget in a column using the `GridWidgetColumn` and `cellB
               child:SfDataGrid(
                 source: _employeeDataSource,
                 columns: [
-                  GridNumericColumn(mappingName: 'id',headerText:'ID'),
+                    GridNumericColumn(mappingName: 'id',headerText:'ID'),
                       GridTextColumn(mappingName: 'name', headerText: 'Name'),
                       GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
                       GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
