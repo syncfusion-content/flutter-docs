@@ -7,7 +7,7 @@ control: SfSlider
 documentation: ug
 ---
 
-# Track features in slider
+# Track features in Flutter slider
 
 This section helps to learn about how to customize the track in the slider.
 

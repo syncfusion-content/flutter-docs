@@ -90,7 +90,7 @@ class Data {
 
 N>
 * Refer the [`tooltipTextFormatterCallback`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/tooltipTextFormatterCallback.html) for changing the default tooltip text.
-* Refer the [`SfRangeSliderThemeData`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData-class.html) for customizing the appearance of the tooltip text.
+* Refer the [`SfRangeSelectorThemeData`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData-class.html) for customizing the appearance of the tooltip text.
 
 ## Tooltip text format
 
@@ -182,7 +182,7 @@ class Data {
 
 ## Tooltip color
 
-You can change the background color of the tooltip in the range selector using the [`tooltipBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/tooltipBackgroundColor.html) property.
+You can change the background color of the tooltip in the range selector using the [`tooltipBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/tooltipBackgroundColor.html) property.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorTheme-class.html).
 
@@ -211,7 +211,7 @@ Widget build(BuildContext context) {
       home: Scaffold(
           body: Center(
               child: SfRangeSelectorTheme(
-                    data: SfRangeSliderThemeData(
+                    data: SfRangeSelectorThemeData(
                         tooltipBackgroundColor: Colors.red[300],
                     ),
                     child:  SfRangeSelector(
@@ -266,7 +266,7 @@ class Data {
 
 ## Tooltip label style
 
-You can change the appearance of the tooltip text in the range selector using the [`tooltipTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/tooltipTextStyle.html) property.
+You can change the appearance of the tooltip text in the range selector using the [`tooltipTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/tooltipTextStyle.html) property.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorTheme-class.html).
 
@@ -295,7 +295,7 @@ Widget build(BuildContext context) {
       home: Scaffold(
           body: Center(
               child: SfRangeSelectorTheme(
-                    data: SfRangeSliderThemeData(
+                    data: SfRangeSelectorThemeData(
                         tooltipTextStyle: TextStyle(color: Colors.red, fontSize: 16, fontStyle: FontStyle.italic),
                     ),
                     child:  SfRangeSelector(
