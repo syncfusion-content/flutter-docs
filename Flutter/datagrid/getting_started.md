@@ -104,7 +104,9 @@ Create the collection of Employee data with the required number of data objects.
 
 {% tabs %}
 {% highlight Dart %} 
-
+   
+    final List<Employee> _employees = <Employee>[];
+    
     @override
       void initState() {
         super.initState();
@@ -116,6 +118,11 @@ Create the collection of Employee data with the required number of data objects.
         _employees.add(Employee(10003, 'Lara', 'Developer', 15000));
         _employees.add(Employee(10004, 'Michael', 'Designer', 15000));
         _employees.add(Employee(10005, 'Martin', 'Developer', 15000));
+        _employees.add(Employee(10006, 'Newberry', 'Developer', 15000));
+        _employees.add(Employee(10007, 'Balnc', 'Developer', 15000));
+        _employees.add(Employee(10008, 'Perry', 'Developer', 15000));
+        _employees.add(Employee(10009, 'Gable', 'Developer', 15000));
+        _employees.add(Employee(10010, 'Grimes', 'Developer', 15000));
     }
 
 {% endhighlight %}
@@ -231,7 +238,7 @@ SfDataGrid allows you to select one or more rows. The `selectionMode` property c
 
 {% tabs %}
 {% highlight Dart %} 
-
+    
     final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
 
      @override
