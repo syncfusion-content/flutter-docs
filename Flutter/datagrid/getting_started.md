@@ -209,7 +209,7 @@ You can also load any widget in a column using the `GridWidgetColumn` and `cellB
               child:SfDataGrid(
                 source: _employeeDataSource,
                 columns: [
-                    GridNumericColumn(mappingName: 'id',headerText:'ID'),
+                      GridNumericColumn(mappingName: 'id',headerText:'ID'),
                       GridTextColumn(mappingName: 'name', headerText: 'Name'),
                       GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
                       GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
