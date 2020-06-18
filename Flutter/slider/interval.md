@@ -99,7 +99,7 @@ Widget build(BuildContext context) {
 
 ## Step size
 
-You can move the thumb in discrete manner using the [`stepSize`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/stepSize.html) property in the slider.
+You can move the thumb in discrete manner for numeric values using the [`stepSize`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/stepSize.html) property in the slider.
 
 {% tabs %}
 {% highlight Dart %}
@@ -135,3 +135,43 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Step size support](images/interval/step-size-support.gif)
+
+## Step duration
+
+You can move the thumb in discrete manner for date values using the [`stepDuration`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/stepDuration.html) property in the slider.
+
+{% tabs %}
+{% highlight Dart %}
+
+DateTime _value = DateTime(2004, 01, 01);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+            child: SfSlider(
+              min: DateTime(2000, 01, 01),
+              max: DateTime(2010, 01, 01),
+              interval: 2,
+              stepDuration: SliderStepDuration(years: 2),
+              dateFormat: DateFormat.y(),
+              dateIntervalType: DateIntervalType.years,
+              showTicks: true,
+              showLabels: true,
+              value: _value,
+              onChanged: (dynamic newValue) {
+                setState(() {
+                  _value = newValue;
+                });
+              },
+            ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Step duration support](images/interval/step-duration-support.gif)
