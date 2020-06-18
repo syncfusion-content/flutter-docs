@@ -311,4 +311,5 @@ The information about the rows that are selected can be retrieved using `selecte
 {% endhighlight %}
 {% endtabs %}
 
-_note_ : `SfDataGrid` supports selection via keyboard interaction for the Web platform when `selectionMode` is not `none`.
+>**NOTE**
+* `SfDataGrid` supports selection via keyboard interaction for the Web platform when `selectionMode` is not `none`.
