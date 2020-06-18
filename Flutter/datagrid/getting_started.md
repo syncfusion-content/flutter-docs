@@ -94,11 +94,11 @@ The `SfDataGrid` is depending upon the data. Create a simple datasource for `SfD
 {% highlight Dart %} 
 
     class Employee {
-       Employee(this.id, this.name, this.designation, this.salary);
-         final int id;
-         final String name;
-         final String designation;
-         final int salary;
+    Employee(this.id, this.name, this.designation, this.salary);
+    final int id;
+    final String name;
+    final String designation;
+    final int salary;
     }
 
 {% endhighlight %}
