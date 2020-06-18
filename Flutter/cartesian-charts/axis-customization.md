@@ -178,6 +178,26 @@ The [`labelStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
 
 ![Axis label](images/axis-customization/label_custom.jpg)
 
+### Axis animation
+
+The axis animation can be enabled using the `enableAxisAnimation` property of the chart. It defaults to false and this is applicable for all the primary and secondary axis in the chart.
+
+On setting the `enableAxisAnimation` property to true, the axis elements like grid lines, tick lines, and labels will be animated when the axis range is changed dynamically. Axis visible range will be changed while zooming, panning, or while updating the data points.
+
+{% highlight dart %}
+
+    Widget build(BuildContext context) {
+        return Container(
+            child: SfCartesianChart(
+                enableAxisAnimation: true,
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![Axis label](images/axis-customization/animatedAxis.gif)
+
 ### Formatting axis label content
 
 The [`labelFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/labelFormat.html) property is used to add prefix or suffix with the axis label.
@@ -765,6 +785,37 @@ Suppose, you need to draw a plot band that should not stretch along its associat
 
 ![Segement plotband](images/axis-customization/segment_plotband.jpg)
 
+### Plot line
+
+When you specify the same value for both [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/start.html) and [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/end.html), it will draw a line. You can customize the line using the  [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/borderWidth.html) and [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/borderColor.html) properties.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+               child: SfCartesianChart(
+                    primaryXAxis: NumericAxis(
+                      plotBands: <PlotBand>[
+                        PlotBand(
+                          isVisible: true,
+                          start: 13,
+                          end: 13,
+                          borderWidth: 2,
+                        )
+                      ]
+                    )
+                   )
+                )
+              );  
+           }
+
+{% endhighlight %}
+
+![plotband_line](images/axis-customization/plotband_line.png)
+
 ## Multiple axes
 
 By default, the chart is rendered with primary x axis and primary y axis. But, the users can add n number of axis to the chart. An additional horizontal or vertical axis can be added to the chart using the [`axes`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/axes.html) property, and then you can associate it to a series by specifying the name of the axis to the [`xAxisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/xAxisName.html) or [`yAxisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/yAxisName.html) property in the series.
@@ -839,3 +890,94 @@ By default, the chart is rendered with primary x axis and primary y axis. But, t
 {% endhighlight %}
 
 ![Multiple axes](images/axis-customization/multiple_axis.jpg)
+
+## Axis label alignment
+
+The position of axis label can be aligned using the [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelAlignment.html) property.The following options are available in axis label alignment.
+
+* [`start`]() - If it is a horizontal axis, aligns the labels before the gridline and if it is a vertical axis, aligns the labels below the gridline.
+
+* [`end`]() - If it is a horizontal axis, aligns the labels after the gridline and if it is a vertical axis, align the labels above the gridline.
+
+* [`center`]() - Aligns the axis label to the center of the gridlines.
+
+### Center 
+
+Aligns the axis label to the center of the gridlines.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                        child: SfCartesianChart(
+                            primaryXAxis: DateTimeAxis(),
+                            primaryYAxis:
+                                NumericAxis(
+                                    //Aligns the y-axis labels
+                                    labelAlignment: LabelAlignment.center
+                                ),
+                        )
+                )
+            )
+        );
+    }
+     
+{% endhighlight %}
+
+![center](images/axis-customization/center.png)
+
+### Start
+
+If it is a horizontal axis, aligns the labels before the gridline and if it is a vertical axis, aligns the labels below the gridline.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                        child: SfCartesianChart(
+                            primaryXAxis: DateTimeAxis(),
+                            primaryYAxis: NumericAxis(
+                                //Aligns the y-axis labels
+                                labelAlignment:LabelAlignment.start),
+                        )
+                ) 
+            )
+        );
+    }
+     
+{% endhighlight %}
+
+![start](images/axis-customization/start.png)
+
+### End
+
+If it is a horizontal axis, aligns the labels after the gridline and if it is a vertical axis, align the labels above the gridline.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                        child: SfCartesianChart(
+                            primaryXAxis: DateTimeAxis(),
+                            primaryYAxis: NumericAxis(
+                                //Aligns the y-axis labels
+                                labelAlignment: LabelAlignment.end
+                            ),
+                        )
+                )
+            )
+        );
+    }
+     
+{% endhighlight %}
+
+![end](images/axis-customization/end.png)

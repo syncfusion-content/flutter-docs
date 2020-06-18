@@ -514,7 +514,7 @@ The [`onIndicatorRender`](https://pub.dev/documentation/syncfusion_flutter_chart
 
 ## onTrendlineRender
 
-Triggers when  the trendline gets rendered.Trendline properties like color,opacity can be customized using trendlineRender Callbacks. The [`onTrendlineRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs-class.html) Callback contains the following arguments.
+Triggers when the trendline gets rendered. Trendline properties like color,opacity can be customized using trendlineRender Callbacks. The [`onTrendlineRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs-class.html) Callback contains the following arguments.
 
 * [`trendlineIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/trendlineIndex.html) - Specifies the  index of the trendlines.
 * [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/opacity.html) - Specifies the opacity of the trendlines.
@@ -546,4 +546,106 @@ Triggers when  the trendline gets rendered.Trendline properties like color,opaci
 
 {% endhighlight %}
 
+## onRendererCreated
 
+Triggers when the series renderer is created. Using this callback, able to get the `ChartSeriesController` instance, which is used to access the public methods in the series.
+
+{% highlight dart %}
+
+  Widget build(BuildContext context) {
+
+    //Initialize the series controller
+    ChartSeriesController _chartSeriesController;
+
+    return Column(
+     children: <Widget>[
+      Container(
+       child: SfCartesianChart(
+            series: <LineSeries<SalesData, num>>[
+                LineSeries<SalesData, num>(
+                  dataSource: chartData,
+                  //Initialize the onRendererCreated event and store the controller for the respective series
+                  onRendererCreated: (ChartSeriesController controller) {
+                      _chartSeriesController = controller;
+                  },
+                ),
+              ],
+        )
+      ),
+      Container(
+        child: RaisedButton(
+          onPressed: () {
+            //Removed a point from data source
+            chartData.removeAt(0);
+            //Added a point to the data source
+            chartData.add(ChartData(3,23));
+            //Here accessed the public method of the series.
+            _chartSeriesController.updateDataSource(
+              addedDataIndexes: <int>[chartData.length -1],
+              removedDataIndexes: <int>[0],
+            );
+          }
+        )
+      )
+    ]
+  );
+ }
+
+{% endhighlight %}
+
+## onChartTouchInteractionDown
+
+Triggers when touched or clicked on the chart area. You can get the position of the touched region using this callback.
+
+{% highlight dart %}
+
+  Widget build(BuildContext context) {
+      return Container(
+         child: SfCartesianChart(
+              onChartTouchInteractionDown: (ChartTouchInteractionArgs args){
+                 print(args.position.dx.toString());
+                 print(args.position.dy.toString());
+               }
+          )
+      );
+  }
+
+{% endhighlight %}
+
+## onChartTouchInteractionUp
+
+Triggers when tapped or clicked on the chart area. You can get the position of the taped region using this callback.
+
+{% highlight dart %}
+
+  Widget build(BuildContext context) {
+     return Container(
+          child: SfCartesianChart(
+              onChartTouchInteractionUp: (ChartTouchInteractionArgs args){
+                 print(args.position.dx.toString());
+                 print(args.position.dy.toString());
+               }
+          )
+      );
+  }
+
+{% endhighlight %}
+
+## onChartTouchInteractionMove
+
+Triggers when touched or clicked and moved on the chart area. You can get the position of the moving region using this callback.
+
+{% highlight dart %}
+
+  Widget build(BuildContext context) {
+      return Container(
+          child: SfCartesianChart(
+              onChartTouchInteractionMove: (ChartTouchInteractionArgs args){
+                 print(args.position.dx.toString());
+                 print(args.position.dy.toString());
+               }
+          )
+      );
+  }
+
+{% endhighlight %}

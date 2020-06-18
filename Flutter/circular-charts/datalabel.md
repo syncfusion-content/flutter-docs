@@ -340,3 +340,45 @@ You can customize the appearance of the data label with your own template using 
 {% endhighlight %}
 
 ![Label template](images/datalabel/datalabel_template.jpg)
+
+## Hide data label for 0 value
+
+Data label and its connector line in the Circular charts for the point value 0 can be hidden using the [`showZeroValue`]() property. This defaults to *true*.
+
+{% highlight dart %} 
+
+    final List<SalesData> chartData = <SalesData>[
+        SalesData('Jan', 35),
+        SalesData('Feb', 28),
+        SalesData('March', 0),
+        SalesData('April', 32),
+        SalesData('May', 40)
+    ];
+    
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child:SfCircularChart(
+                        series: <CircularSeries<SalesData, String>>[
+                            PieSeries<SalesData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (SalesData sales, _) => sales.xValue,
+                                yValueMapper: (SalesData sales, _) => sales.yValue,
+                                dataLabelSettings: DataLabelSettings(
+                                    isVisibleForZeroValues: false, 
+                                    isVisible: true
+                                )
+                            )
+                        ],
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![datalabel0value](images/datalabel/datalabel_0_value.png)
+
