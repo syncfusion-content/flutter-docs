@@ -168,7 +168,7 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
 
 ## Gradient fill
 
-The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/gradient.html) property is used to define the gradient colors. The colors from this property is used for series.
+The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/gradient.html) property is used to define the gradient colors. The colors from this property are used for series. Also, you can use the transform property available in [`LinearGradient`](https://api.flutter.dev/flutter/painting/LinearGradient/LinearGradient.html) to transform the applied gradient colors.
 
 {% highlight dart %} 
 
@@ -208,7 +208,47 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
 
 {% endhighlight %}
 
-![Gradient color](images/cartesian-customization/gradientt.jpg)
+![Gradient color](images/cartesian-customization/gradient.png)
+
+N> The gradient is not applicable for spline, step line, candle, hilo, hilo open close, and line type charts. However, in line type gradient is applicable for [`FastLineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FastLineSeries-class.html) alone.
+
+### Gradient stroke
+ 
+The [`borderGradient`]() property is used to define the gradient color for the border of the applicable series.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <CartesianSeries>[
+                            AreaSeries<ChartData, double>(
+                                borderWidth: 4,
+                                borderGradient: const LinearGradient(
+                                    colors: <Color>[
+                                                    Color.fromRGBO(230, 0, 180, 1),
+                                                    Color.fromRGBO(255, 200, 0, 1)
+                                            ], 
+                                    stops: <double>[
+                                                    0.2,
+                                                    0.9
+                                            ]
+                                ),
+                           )
+                        ]
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![stroke_gradient](images/cartesian-customization/stroke_gradient.png)
+
 
 ## Empty points
 
