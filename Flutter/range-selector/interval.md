@@ -256,7 +256,7 @@ class Data {
 
 ## Step duration
 
-You can move the thumb in discrete manner for date values using the [`stepDuration`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/stepDuration.html) property in the range selector.
+You can move the thumb in discrete manner for date values based on the value provided in the [`stepDuration`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/stepDuration.html) property in the range selector.
 
 {% tabs %}
 {% highlight Dart %}

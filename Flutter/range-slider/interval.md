@@ -138,7 +138,7 @@ Widget build(BuildContext context) {
 
 ## Step duration
 
-You can move the thumb in discrete manner for date values using the [`stepDuration`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/stepDuration.html) property in the range slider.
+You can move the thumb in discrete manner for date values based on the value provided in the [`stepDuration`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/stepDuration.html) property in the range slider.
 
 {% tabs %}
 {% highlight Dart %}
@@ -175,3 +175,44 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Step duration support](images/interval/range-step-duration-support.gif)
+
+## Enable interval selection
+
+You can select a particular interval by tapping when setting the [`enableIntervalSelection`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/enableIntervalSelection.html) property as `true`. Both thumbs will be moved to the current interval with smooth animation.
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(DateTime(2004, 01, 01), DateTime(2006, 01, 01));
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+            child: SfRangeSlider(
+              min: DateTime(2000, 01, 01),
+              max: DateTime(2010, 01, 01),
+              interval: 2,
+              enableIntervalSelection: true,
+              dateFormat: DateFormat.y(),
+              dateIntervalType: DateIntervalType.years,
+              showTicks: true,
+              showLabels: true,
+              showTooltip: true,
+              values: _values,
+              onChanged: (SfRangeValues newValues) {
+                setState(() {
+                  _values = newValues;
+                });
+              },
+            ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Interval selection support](images/interval/range-interval-selection-support.gif)
