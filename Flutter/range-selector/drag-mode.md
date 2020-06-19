@@ -163,7 +163,7 @@ class Data {
 
 ![Drag mode between thumb](images/drag-mode/drag-mode-between-thumb.gif)
 
-## Both
+## Both thumbs
 
 When [`dragMode`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dragMode.html) is set to `SliderDragMode.both`, individual thumb can be moved by dragging it, and also both the thumbs can be moved at the same time by dragging in the area between start and end thumbs.
 
