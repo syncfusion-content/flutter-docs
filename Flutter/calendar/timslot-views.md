@@ -109,6 +109,37 @@ You can restrict the user interaction such as selection and highlights specific 
 ### Special time region customization
 The `specialTimeRegion` background color can be customized by using the [color] and [textStyle] properties of `TimeRegion` that is used to customize the text style for the `text` and `icon` of the `specialTimeRegion`.
 
+{% tabs %}
+{% highlight Dart %}
+
+@override
+  Widget build(BuildContext context) {
+    return Container(
+      child: SfCalendar(
+        view: CalendarView.week,
+        specialRegions: _getTimeRegions(),
+      ),
+    );
+  }
+
+  List<TimeRegion> _getTimeRegions() {
+    final List<TimeRegion> regions = <TimeRegion>[];
+    regions.add(TimeRegion(
+        startTime: DateTime.now(),
+        endTime: DateTime.now().add(Duration(hours: 1)),
+        enablePointerInteraction: false,
+        textStyle: TextStyle(color: Colors.black45, fontSize: 15),
+        color: Colors.grey.withOpacity(0.2),
+        text: 'Break'));
+
+    return regions;
+  }
+  
+{% endhighlight %}
+{% endtabs %}
+
+![Special time region customization](images/timeslot-views/Special_region_customization.png)
+
 ### Selection restriction in timeslots
 You can enable or disable the touch interaction of `TimeRegion` using the ` enablePointerInteraction` property of `TimeRegion`. By default, its value is true.
 
@@ -139,6 +170,8 @@ You can enable or disable the touch interaction of `TimeRegion` using the ` enab
 
 {% endhighlight %}
 {% endtabs %}
+
+![Special time region touch restriction](images/timeslot-views/Special_region_touch_restriction.png)
 
 >**NOTE**
 This property only restricts the interaction on region and it does not restrict the following:
@@ -172,7 +205,6 @@ The recurring time region on a daily, weekly, monthly, or yearly interval. The r
         startTime: DateTime.now(),
         endTime: DateTime.now().add(Duration(hours: 1)),
         enablePointerInteraction: false,
-        timeZone: 'Eastern Standard Time',
         recurrenceRule: 'FREQ=DAILY;INTERVAL=1',
         textStyle: TextStyle(color: Colors.black45, fontSize: 15),
         color: Colors.grey.withOpacity(0.2),
@@ -183,6 +215,8 @@ The recurring time region on a daily, weekly, monthly, or yearly interval. The r
   
 {% endhighlight %}
 {% endtabs %}
+
+![Special time region recurrence](images/timeslot-views/Special_region_recurrence.png)
 
 You can refer to [here](https://help.syncfusion.com/flutter/calendar/appointments#recurrence-rule) to know more about the recurrence rule.
 
@@ -208,7 +242,6 @@ You can delete any of occurrence that is an exception from the recurrence patter
         startTime: DateTime.now(),
         endTime: DateTime.now().add(Duration(hours: 1)),
         enablePointerInteraction: false,
-        timeZone: 'Eastern Standard Time',
         recurrenceRule: 'FREQ=DAILY;INTERVAL=1',
         textStyle: TextStyle(color: Colors.black45, fontSize: 15),
         color: Colors.grey.withOpacity(0.2),
@@ -220,6 +253,8 @@ You can delete any of occurrence that is an exception from the recurrence patter
 
 {% endhighlight %}
 {% endtabs %}
+
+![Special time region recurrence exception](images/timeslot-views/Special_region_recurrence_exception.png)
 
 
 ## Full screen calendar

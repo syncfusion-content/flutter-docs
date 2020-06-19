@@ -36,6 +36,8 @@ You can customize the height of an appointment in a schedule view by using the [
 {% endhighlight %}
 {% endtabs %}
 
+![Schedule view appointment height customization](images/scheduleview/Schedule_view_appointment_height.png)
+
 ## Hide empty weeks
 You can hide the weeks that do not have an appointment on it in schedule view, by using the [hideEmptyScheduleWeek] property of  `scheduleViewSettings`.
 
@@ -57,6 +59,8 @@ You can hide the weeks that do not have an appointment on it in schedule view, b
 {% endhighlight %}
 {% endtabs %}
 
+![Schedule view hide empty agenda weeks](images/scheduleview/Schedule_view_hide-empty_week.png)
+
 ## Appointment text customization
 The appointment text style of schedule view can be customized by using the [appointmentTextStyle] property of `scheduleViewSettings`.
 
@@ -70,13 +74,15 @@ The appointment text style of schedule view can be customized by using the [appo
         view: CalendarView.schedule,
         scheduleViewSettings: ScheduleViewSettings(
             appointmentTextStyle: TextStyle(
-                fontSize: 12, fontWeight: FontWeight.w500, color: Colors.red)),
+                fontSize: 12, fontWeight: FontWeight.w500, color: Colors.lime)),
       ),
     );
   }
 
 {% endhighlight %}
 {% endtabs %}
+
+![Schedule view appointment customization](images/scheduleview/Schedule_view_appointment.png)
 
 ## Day header customization
 The day header is the one that displays the date and day of the appointment on the left side of the view. This will be displayed only when the date has an appointment on it.
@@ -97,16 +103,15 @@ The [DayHeaderSettings] contains the properties to customize the day format, wid
             dayHeaderSettings: DayHeaderSettings(
                 dayFormat: 'EEEE',
                 width: 70,
-                backgroundColor: Colors.black,
                 dayTextStyle: TextStyle(
                   fontSize: 10,
                   fontWeight: FontWeight.w300,
-                  color: Colors.white,
+                  color: Colors.red,
                 ),
                 dateTextStyle: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w300,
-                  color: Colors.white,
+                  color: Colors.red,
                 ))),
       ),
     );
@@ -114,6 +119,8 @@ The [DayHeaderSettings] contains the properties to customize the day format, wid
 
 {% endhighlight %}
 {% endtabs %}
+
+![Schedule view day header customization](images/scheduleview/Schedule_view_day_header.png)
 
 ## Week header customization
 The week header is the one that displays the first and last date of the week, at the start of a week.
@@ -150,6 +157,8 @@ The [WeekHeaderSettings] contains the properties to customize the start and end 
 {% endhighlight %}
 {% endtabs %}
 
+![Schedule view week header customization](images/scheduleview/Schedule_view_week_header.png)
+
 ## Month header customization
 Month header is the one that displays the month and year, at the start of a new month in schedule view.
 
@@ -181,3 +190,5 @@ The [MonthHeaderSettings] contains the properties to customize the month format,
 
 {% endhighlight %}
 {% endtabs %}
+
+![Schedule view month header customization](images/scheduleview/Schedule_view_month_header.png)
