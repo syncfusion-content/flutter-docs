@@ -7,7 +7,7 @@ control: SfSlider
 documentation: ug
 ---
 
-# Slider interval
+# Interval in Flutter Slider
 This section explains about how to add the interval for numeric and date slider.
 
 ## Numeric interval

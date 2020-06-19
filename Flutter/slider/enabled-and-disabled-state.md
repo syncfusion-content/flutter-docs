@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Enable & disable state in Syncfusion Flutter Slider | Syncfusion
-description: This section explains about how to render slider in disabled state and customize its appearance.
+description: This section explains about how to render the slider in disabled state and customize its appearance.
 platform: Flutter
 control: SfSlider
 documentation: ug

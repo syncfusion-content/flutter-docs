@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Labels features in Syncfusion Flutter Slider | Syncfusion
-description: This section explains about how to show labels, divisors and how to customize them in the slider.
+description: This section explains about how to show labels, divisors and how to customize them in the Flutter slider.
 platform: Flutter
 control: SfSlider
 documentation: ug

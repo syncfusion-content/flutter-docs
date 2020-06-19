@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Track features in Syncfusion Flutter Slider | Syncfusion
-description: This section explains about how to customize the appearance of the track in the Flutter slider.
+description: This section explains about how to customize the appearance of the track in the Flutter application.
 platform: Flutter
 control: SfSlider
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip features in Syncfusion Flutter Slider | Syncfusion
-description: This section explains about how to show tooltip and customize its appearance in the Flutter slider.
+description: This section explains about how to show tooltip, and customize its appearance in the Flutter slider.
 platform: Flutter
 control: SfSlider
 documentation: ug

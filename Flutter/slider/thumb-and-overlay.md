@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Thumb features in Syncfusion Flutter Slider | Syncfusion
-description: This section explains about how to customize the thumb and thumb overlay in the Flutter slider.
+description: This section explains about how to customize the thumb and thumb overlay in the Flutter application.
 platform: Flutter
 control: SfSlider
 documentation: ug
