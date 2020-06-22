@@ -347,6 +347,26 @@ Widget build(BuildContext context) {
 
 ![Background color](images/getting-started/calendar-background-color.png)
 
+## Show navigation arrow
+Using the [showNavigationArrow] property of the `SfCalendar` you can navigate to the next or previous views of the calendar without swiping.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+    return Container(
+      child: SfCalendar(
+        view: CalendarView.day,
+        showNavigationArrow: true,
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+
 You can get the complete getting started sample from [here](https://github.com/SyncfusionExamples/flutter-calendar).
 
 ## See also
