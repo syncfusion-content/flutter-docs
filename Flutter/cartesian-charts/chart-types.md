@@ -1464,6 +1464,113 @@ The following code sample demonstrates how to set the `splineType` value to `car
 
 ![Spline area type](images/cartesian-chart-types/spline_area_types.png)
 
+## Spline Range Area 
+
+To render a spline range area chart, create an instance of the [`SplineRangeAreaSeries`](), and add to the series collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html).
+
+
+ SplineRangeAreaSeries requires two Y values for a point, data should contain high and low values. The high and low values specify the maximum and minimum ranges of a point.
+
+* [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/highValueMapper.html) - Field in the data source, which is considered as high value for the data points.
+* [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/lowValueMapper.html) - Field in the data source, which is considered as low value for the data points.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <CartesianSeries<SalesData, num>>[
+                        SplineRangeAreaSeries<SalesData, num>(
+                          dataSource: chartData,
+                          xValueMapper: (SalesData sales, _) => sales.xValue,
+                          lowValueMapper: (SalesData sales, _) =>
+                              sales.lowValue,
+                          highValueMapper: (SalesData sales, _) =>
+                              sales.highValue,),
+                    ]
+                )
+             )
+          )
+       );
+    }
+
+{% endhighlight %}
+
+![splinerangearea](images/cartesian-chart-types/splinerangearea.png)
+
+###	Spline rendering types
+
+The [`splineType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineSeries/splineType.html) allows you to change the spline curve in series. The following types are used in [`SplineRangeAreaSeries`]():
+
+* natural
+* monotonic
+* cardinal
+* clamped
+
+By default, the value of [`splineType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineSeries/splineType.html) is [`natural`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineType-class.html).
+
+The following code sample demonstrates how to set the [`splineType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineSeries/splineType.html) value to [`cardinal`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineType-class.html). When you set the cardinal type, you can specify the desired line tension of the [`cardinal`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineType-class.html) spline using the [`cardinalSplineTension`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineSeries/cardinalSplineTension.html) property. The value of this property ranges from 0 to 1.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <CartesianSeries<SalesData, num>>[
+                            SplineRangeAreaSeries<SalesData, num>(
+                                dataSource: chartData,
+                                splineType: SplineType.cardinal,
+                                cardinalSplineTension: 1.5,
+                                xValueMapper: (SalesData sales, _) => sales.xValue,
+                                lowValueMapper: (SalesData sales, _) => sales.lowValue,
+                                highValueMapper: (SalesData sales, _) => sales.highValue
+                            )
+                        ]
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![splinerangearea](images/cartesian-chart-types/splinerangeareatype.png)
+
+### Border customization
+
+The borders of the range area chart can be customized using the [`borderDrawMode`]() property. The default value of the [`borderDrawMode`] property is `all` and the other value is `excludeSides`.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <CartesianSeries<SalesData, num>>[
+                            SplineRangeAreaSeries<SalesData, num>(
+                                borderDrawMode: RangeAreaBorderMode.all,
+                                borderWidth:2,
+                                borderColor: Colors.red
+                            )
+                        ]
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![splinerangearea_bordermode](images/cartesian-chart-types/splinerangearea_bordermode.png)
+
 ## Step area chart
 
 To render a spline area chart, create an instance of `StepAreaSeries`, and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties are used to customize the appearance of spline area chart:
@@ -1526,6 +1633,60 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
 {% endhighlight %}
 
 ![Dashed step area chart](images/cartesian-chart-types/step_area_dashed.png)
+
+## Histogram Chart
+
+Histogram chart is a graphical representation that organizes a group of data points into user-specified ranges. It is similar in appearance to a bar chart. The histogram condenses a data series into an easily interpreted visual by taking many data points and grouping them into logical ranges.
+
+To render a histogram chart, create an instance of [`HistogramSeries`]() and add to the series collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html).
+
+You can customize intervals using the [`binInterval`]() property. Interval value by which the data points are grouped and rendered as bars, in histogram series.
+
+For example, if the [`binInterval`]() is set to 20, the x-axis will split with 20 as the interval. The first bar in the histogram represents the count of values lying between 0 to 20 in the provided data and the second bar will represent 20 to 40.
+
+If no value is specified for this property, then the interval will be calculated
+automatically based on the data points count and value.
+
+You can collapse the normal distribution curve using the [`showNormalDistributionCurve`]() property. You can use the following properties to customize the appearance.
+
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) – Changes the color of the series.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) – Changes the stroke width of the series.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) – Changes the stroke color of the series.
+
+* [`curveColor`]() - Changes the color of the normal distribution curve.
+
+* [`curveWidth`]() - Changes the width of the normal distribution curve.
+
+* [`curveDashArray`]() -  Renders the normal distribution curve  with dashes.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <ChartSeries>[
+                            HistogramSeries<SalesDaa, num>(
+                                dataSource: chartData,
+                                yValueMapper: (SalesData sales, _) => sales.yValue,
+                                binInterval: 20,
+                                showNormalDistributionCurve: true,
+                                curveColor: Colors.black,
+                                borderWidth: 20
+                            ),
+                        ]
+                    )
+                )
+             )
+        );
+    }
+
+{% endhighlight %}
+
+![histogram chart](images/cartesian-chart-types/Histogram.png)
 
 ## Stacked line chart
 

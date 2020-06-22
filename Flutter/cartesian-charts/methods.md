@@ -1012,3 +1012,64 @@ The [`reset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
        }
 
 {% endhighlight %}
+
+## UpdateDataSource
+
+Used to process only the newly added, updated, and removed data points in a series, instead of processing all the data points.
+
+To re-render the chart with modified data points, setState() will be called. This will render the chart from scratch and thus, the app’s performance will be degraded on continuous updates.
+
+To overcome this problem, the `updateDataSource` method can be called by passing updated data points indexes. The chart widget will process only that point and skip various steps like bounds calculation,
+old data points processing, etc. Thus, this will improve the app’s performance.
+
+The following are the arguments of this method.
+* `addedDataIndexes` – `List<int>` type – Indexes of newly added data points in the existing series.
+* `removedDataIndexes` – `List<int>` type – Indexes of removed data points in the existing series.
+ * `updatedDataIndexes` – `List<int>` type – Indexes of updated data points in the existing series.
+ * `addedDataIndex` – `int` type – Index of newly added data point in the existing series.
+ * `removedDataIndex` – `int` type – Index of removed data point in the existing series.
+* `updatedDataIndex` – `int` type – Index of updated data point in the existing series.
+
+
+{% highlight dart %}
+
+Widget build(BuildContext context) {
+
+    //Initialize the series controller
+    ChartSeriesController _chartSeriesController;
+
+    return Column(
+     children: <Widget>[
+      Container(
+       child: SfCartesianChart(
+            series: <LineSeries<SalesData, num>>[
+                LineSeries<SalesData, num>(
+                  dataSource: chartData,
+                  //Initialize the onRendererCreated event and store the controller for the respective series
+                  onRendererCreated: (ChartSeriesController controller) {
+                      _chartSeriesController = controller;
+                  },
+                ),
+              ],
+        )
+      ),
+      Container(
+        child: RaisedButton(
+          onPressed: () {
+            //Removed a point from data source
+            chartData.removeAt(0);
+            //Added a point to the data source
+            chartData.add(ChartData(3,23));
+            //Passed the necessary arguments to the updateDataSource method. Here passed the added and removed dat point indexes.
+            _chartSeriesController.updateDataSource(
+              addedDataIndexes: <int>[chartData.length -1],
+              removedDataIndexes: <int>[0],
+            );
+          }
+        )
+      )
+    ]
+  );
+ }
+
+{% endhighlight %}

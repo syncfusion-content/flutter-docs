@@ -370,3 +370,31 @@ You can customize the appearance of the data label with your own template using 
 {% endhighlight %}
 
 ![Label template](images/marker-datalabel/datalabel_builder.png)
+
+### Hide data label for 0 value
+
+Data label and its connector line in the Cartesian charts for the point value 0 can be hidden using the [`showZeroValue`]() property. This defaults to *true*.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                    child:SfCartesianChart(
+                        series: <CartesianSeries<SalesData,num>>[
+                            SplineSeries<SalesData, num>(
+                                dataLabelSettings: DataLabelSettings(
+                                    showZeroValue: false, 
+                                    isVisible: true
+                                ),
+                            )
+                        ]
+                    )
+            )
+        );
+    }
+    
+{% endhighlight %}
+
+![hide_0_value](images/marker-datalabel/dataLabel_0_value.png)
