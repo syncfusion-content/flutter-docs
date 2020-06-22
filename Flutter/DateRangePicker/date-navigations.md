@@ -72,6 +72,26 @@ class MyAppState extends State<MyApp>{
 
 ![View navigation Date Range Picker](images/date-navigations/monthview.png)
 
+## Enable view navigation
+You can restrict the built-in view navigation to any picker views by using the [enableViewNavigation] property of `SfDateRangePicker`, which allows you to restrict the built-in view switching through touch interaction and allow to select the cells in all available views.
+
+{% tabs %}
+{% highlight Dart %}
+
+Widget build(BuildContext context) {
+  return MaterialApp(
+    home: Scaffold(
+      body: SfDateRangePicker(
+        allowViewNavigation: false,
+      ),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+
 ## Programmatic date selection
 You can programmatically select the dates in the calendar widget by using the  `DateRangePickerController` property.
 
