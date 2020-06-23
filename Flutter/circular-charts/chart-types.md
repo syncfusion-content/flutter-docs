@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Chart types | Circular Charts | Flutter | Syncfusion
+title: Chart types | Circular Charts | Flutter | Syncfusion
 description: You can learn here about chart types support in Syncfusion Flutter Circular Charts control and more details.
 platform: flutter
 control: Chart
