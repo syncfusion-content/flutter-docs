@@ -31,7 +31,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![SingleSelection Date Range Picker](images/selections/singleselection.png)
+![SingleSelection Date Range Picker](images/selections/singleselection.jpg)
 
 >**NOTE**
 * The year, decade, and century view allow you to select cells only when the `enableViewNavigation` is set to false.
@@ -61,7 +61,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![MultiSelection Date Range Picker](images/selections/multiselection.png)
+![MultiSelection Date Range Picker](images/selections/multiselection.jpg)
 
 ## Range selection
 You can select a range of cells in any date range picker view by setting the `DateRangePickerSelectionMode` to the `range`.
@@ -82,7 +82,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![RangeSelection Date Range Picker](images/selections/range-selection.png)
+![RangeSelection Date Range Picker](images/selections/range-selection.jpg)
 
 >**NOTE**
 * The year, decade, and century view allow you to select cells only when the `enableViewNavigation` set is as false.
@@ -112,7 +112,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![MultiRangeSelection Date Range Picker](images/selections/multirange.png)
+![MultiRangeSelection Date Range Picker](images/selections/multirange.jpg)
 
 ## Selection radius
 You can customize the radius of the selection using the [selectionRadius](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/selectionRadius.html) property of the [DateRangePickerMonthViewSettings](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings-class.html).

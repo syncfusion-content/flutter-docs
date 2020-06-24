@@ -131,6 +131,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Multi-date picker view](images/views/multi-picker-view.jpg)
 
 ## See also
 
