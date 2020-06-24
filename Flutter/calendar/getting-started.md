@@ -347,7 +347,7 @@ Widget build(BuildContext context) {
 
 ![Background color](images/getting-started/calendar-background-color.png)
 
-## Show navigation arrow
+## Navigation arrow
 Using the [showNavigationArrow] property of the `SfCalendar`, you can navigate to the next or previous views of the calendar without swiping.
 
 {% tabs %}
