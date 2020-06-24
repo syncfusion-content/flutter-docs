@@ -9,7 +9,7 @@ documentation: ug
 
 # Schedule view in flutter calendar
 
-The `ScheduleView` of SfCalendar shows a list of scheduled appointments grouped by week, between min, and max dates, by default displaying the appointments from the current date. If the `DataSource` property of `sfCalendar` is null then the schedule view will display the month, week, and date headers alone in the view.
+The `schedule` view of SfCalendar shows a list of scheduled appointments grouped by week, between min, and max dates, by default displaying the appointments from the current date. If the `DataSource` property of `sfCalendar` is null then the schedule view will display the month, week, and date headers alone in the view.
 
 The schedule view display two different UI for mobile and web, for mobile it will display the month header, week header, and date header but for the web, it will display the appointments alone in the view.
 

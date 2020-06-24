@@ -106,40 +106,6 @@ You can restrict the user interaction such as selection and highlights specific 
 
 >**NOTE** If time region has both the text and icon then it will draw icon only.
 
-### Special time region customization
-The `specialTimeRegion` background color can be customized by using the [color] and [textStyle] properties of `TimeRegion` that is used to customize the text style for the `text` and `icon` of the `specialTimeRegion`.
-
-{% tabs %}
-{% highlight Dart %}
-
-@override
-  Widget build(BuildContext context) {
-    return Container(
-      child: SfCalendar(
-        view: CalendarView.week,
-        specialRegions: _getTimeRegions(),
-      ),
-    );
-  }
-
-  List<TimeRegion> _getTimeRegions() {
-    final List<TimeRegion> regions = <TimeRegion>[];
-    regions.add(TimeRegion(
-        startTime: DateTime.now(),
-        endTime: DateTime.now().add(Duration(hours: 1)),
-        enablePointerInteraction: false,
-        textStyle: TextStyle(color: Colors.black45, fontSize: 15),
-        color: Colors.grey.withOpacity(0.2),
-        text: 'Break'));
-
-    return regions;
-  }
-  
-{% endhighlight %}
-{% endtabs %}
-
-![Special time region customization](images/timeslot-views/Special_region_customization.png)
-
 ### Selection restriction in timeslots
 You can enable or disable the touch interaction of `TimeRegion` using the ` enablePointerInteraction` property of `TimeRegion`. By default, its value is true.
 
@@ -180,11 +146,11 @@ This property only restricts the interaction on region and it does not restrict 
 the `enablePointerInteraction` property to false
 * It does not restrict appointment interaction when the appointment placed
 in the region
-* It does not restrict the appointment rendering on a specified region
+* It does not restrict the appointment rendering on a region, when loading from data service and programmatic adding
 
-### Recurrence time region
+### Recurring time region
 
-The recurring time region on a daily, weekly, monthly, or yearly interval. The recurring special time regions can be created by setting the `recurrenceRule` property in `TimeZone`.
+The recurring time region on a daily, weekly, monthly, or yearly interval. The recurring special time regions can be created by setting the `recurrenceRule` property in `TimeRegion`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -220,7 +186,7 @@ The recurring time region on a daily, weekly, monthly, or yearly interval. The r
 
 You can refer to [here](https://help.syncfusion.com/flutter/calendar/appointments#recurrence-rule) to know more about the recurrence rule.
 
-### Recurrence pattern exception
+### Recurrence exception dates
 You can delete any of occurrence that is an exception from the recurrence pattern time region by using the [recurrenceExceptionDates] property of `TimeRegion`. The deleted occurrence date will be considered as a recurrence exception date.
 
 {% tabs %}
@@ -255,6 +221,40 @@ You can delete any of occurrence that is an exception from the recurrence patter
 {% endtabs %}
 
 ![Special time region recurrence exception](images/timeslot-views/Special_region_recurrence_exception.png)
+
+### Special time region customization
+The `specialTimeRegion` background color can be customized by using the [color] and [textStyle] properties of `TimeRegion` that is used to customize the text style for the `text` and `icon` of the `specialTimeRegion`.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+  Widget build(BuildContext context) {
+    return Container(
+      child: SfCalendar(
+        view: CalendarView.week,
+        specialRegions: _getTimeRegions(),
+      ),
+    );
+  }
+
+  List<TimeRegion> _getTimeRegions() {
+    final List<TimeRegion> regions = <TimeRegion>[];
+    regions.add(TimeRegion(
+        startTime: DateTime.now(),
+        endTime: DateTime.now().add(Duration(hours: 1)),
+        enablePointerInteraction: false,
+        textStyle: TextStyle(color: Colors.black45, fontSize: 15),
+        color: Colors.grey.withOpacity(0.2),
+        text: 'Break'));
+
+    return regions;
+  }
+  
+{% endhighlight %}
+{% endtabs %}
+
+![Special time region customization](images/timeslot-views/Special_region_customization.png)
 
 
 ## Full screen calendar
