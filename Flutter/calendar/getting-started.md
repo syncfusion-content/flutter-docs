@@ -357,7 +357,7 @@ Using the [showNavigationArrow] property of the `SfCalendar`, you can navigate t
 Widget build(BuildContext context) {
     return Container(
       child: SfCalendar(
-        view: CalendarView.day,
+        view: CalendarView.month,
         showNavigationArrow: true,
       ),
     );
@@ -365,6 +365,9 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Show Navigation Arrow](images/getting-started/show-navigation-arrow.jpg)
+
 
 >**NOTE** The `showNavigationArrow` property is not applicable when the `view` is set to `CalendarView.schedule`..
 
