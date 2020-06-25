@@ -176,7 +176,7 @@ class Data {
 
 ![Date interval](images/interval/date_interval.png)
 
-## Step size
+## Discrete selection for numeric values
 
 You can move the thumb in discrete manner for numeric values using the [`stepSize`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/stepSize.html) property in the range selector.
 
@@ -254,7 +254,7 @@ class Data {
 
 ![Step size support](images/interval/selector-step-size-support.gif)
 
-## Step duration
+## Discrete selection for date values
 
 You can move the thumb in discrete manner for date values based on the value provided in the [`stepDuration`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/stepDuration.html) property in the range selector.
 
@@ -336,7 +336,7 @@ class Data {
 
 ## Enable interval selection
 
-You can select a particular interval by tapping when setting the [`enableIntervalSelection`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/enableIntervalSelection.html) property as `true`. Both thumbs will be moved to the current interval with smooth animation.
+You can select a particular interval by tapping when setting the [`enableIntervalSelection`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/enableIntervalSelection.html) property as `true`. Both the thumbs will be moved to the current interval with animation.
 
 {% tabs %}
 {% highlight Dart %}
