@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Markers in Syncfusion Flutter Maps | Syncfusion
-description: This section explains about how to show markers and customize its appearance in the Flutter maps.
+description: This section explains about how to show the markers and customise its appearance in the Flutter maps.
 platform: Flutter
 control: SfMaps
 documentation: ug
