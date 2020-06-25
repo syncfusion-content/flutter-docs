@@ -72,8 +72,8 @@ class MyAppState extends State<MyApp>{
 
 ![View navigation Date Range Picker](images/date-navigations/monthview.png)
 
-## Enable view navigation
-You can restrict the built-in view navigation to any picker views by using the [enableViewNavigation] property of `SfDateRangePicker`. It allows you to restrict the built-in view switching through touch interaction and allow you to select the cells in the year, decade and century views.
+## Allow view navigation
+You can allow or restrict the built-in view navigation to any picker views by using the [enableViewNavigation] property of `SfDateRangePicker`. It allows you to restrict the built-in view switching through touch interaction and allow you to select the cells in the year, decade and century views.
 
 {% tabs %}
 {% highlight Dart %}
