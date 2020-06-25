@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Schedule view of Syncfusion Flutter Calendar | Scheduler
-description: Learn how to customize the schedule view and its appearance customization in Flutter event calendar
+description: Learn how to customize the schedule view and its appearance customization in Flutter event calendar.
 platform: flutter
 control: SfCalendar
 documentation: ug
