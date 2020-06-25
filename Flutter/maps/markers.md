@@ -82,61 +82,69 @@ class Model {
 You can show custom marker using the [child] property of the [MapMarker] which returns from [markerBuilder] property in the [MapShapeLayer].
 
 ```dart
- List<Model> data;
+List<Model> data;
+List<Widget> iconsList;
 
-  @override
-  void initState() {
-    data = const <Model>[
-      Model('Brazil', -14.235004, -51.92528),
-      Model('Germany', 51.16569, 10.451526),
-      Model('Australia', -25.274398, 133.775136),
-      Model('India', 20.593684, 78.96288),
-      Model('Russia', 61.52401, 105.318756)
-    ];
+@override
+void initState() {
+     data = <Model>[
+       Model(-14.235004, -51.92528),
+       Model(51.16569, 10.451526),
+       Model(-25.274398, 133.775136),
+       Model(20.593684, 78.96288),
+       Model(61.52401, 105.318756)
+     ];
 
-    super.initState();
+     iconsList = <Widget>[
+       Icon(Icons.add_location),
+       Icon(Icons.airplanemode_active),
+       Icon(Icons.add_alarm),
+       Icon(Icons.accessibility_new),
+       Icon(Icons.account_balance)
+     ];
+
+     super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+     return Scaffold(
+       body: Center(
+           child: Container(
+             height: 350,
+             child: Padding(
+               padding: EdgeInsets.only(left: 15, right: 15),
+               child: SfMaps(
+                 layers: <MapLayer>[
+                   MapShapeLayer(
+                     delegate: MapShapeLayerDelegate(
+                       shapeFile: 'assets/world_map.json',
+                       shapeDataField: 'name',
+                       dataCount: data.length,
+                     ),
+                     initialMarkersCount: 5,
+                     markerBuilder: (_, int index){
+                       return MapMarker(
+                         latitude: data[index].latitude,
+                         longitude: data[index].longitude,
+                         child: iconsList[index],
+                       );
+                     },
+                   ),
+                 ],
+               ),
+             ),
+           )
+       ),
+     );
   }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-          child: Container(
-            height: 350,
-            child: Padding(
-              padding: EdgeInsets.only(left: 15, right: 15),
-              child: SfMaps(
-                layers: <MapLayer>[
-                  MapShapeLayer(
-                    delegate: MapShapeLayerDelegate(
-                      shapeFile: 'assets/world_map.json',
-                      shapeDataField: 'name',
-                      dataCount: data.length,
-                      primaryValueMapper: (index) => data[index].country,
-                    ),
-                    initialMarkersCount: 5,
-                    markerBuilder: (_, int index){
-                      return MapMarker(
-                        latitude: data[index].latitude,
-                        longitude: data[index].longitude,
-                        child: Icon(Icons.add_location),
-                      );
-                    },
-                  ),
-                ],
-              ),
-            ),
-          )
-      ),
-    );
- }
+}
 
 class Model {
-  const Model(this.country, this.latitude, this.longitude);
+   Model(this.latitude, this.longitude);
 
-  final String country;
-  final double latitude;
-  final double longitude;
+   final double latitude;
+   final double longitude;
 }
 ```
 
