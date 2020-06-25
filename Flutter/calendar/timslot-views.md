@@ -104,6 +104,8 @@ Widget build(BuildContext context) {
 ## Special time regions
 You can restrict the user interaction such as selection and highlights specific regions of time in the timeslot views by adding the [specialTimeRegions] property of `sfCalendar`. You need to set the [startTime] and [endTime] properties of [TimeRegion] to create a `specialTimeRegion`, you can use the [timeZone] property to set the specific timezone for start and end time of `specialTimeRegion`. The `specialTimeRegion` will display the text or icon on it that set to the [text] or [icon] property of `TimeRegion`.
 
+![Special time region in Flutter event calendar](images/timeslot-views/Special_region.png)
+
 >**NOTE** If time region has both the text and icon then it will draw icon only.
 
 ### Selection restriction in timeslots
