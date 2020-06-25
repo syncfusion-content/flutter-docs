@@ -101,6 +101,163 @@ Widget build(BuildContext context) {
 * If custom timeInterval is given, then the number of time slots calculated based on the given TimeInterval should result in integer value (total minutes % timeInterval = 0), otherwise next immediate time interval that result in integer value when divide total minutes of a day will be considered. For example, if timeInterval=2 Hours 15 minutes and total minutes = 1440 (24 Hours per day), then timeInterval will be changed to ‘144’ (1440%144=0) by considering (total minutes % timeInterval = 0), it will return integer value for time slots rendering.
 * If the custom `startHour` and `endHour` are given, then the number of time slots calculated based on given `startHour` and `endHour` should result in integer value, otherwise next immediate `timeInterval` will be considered until the result is integer value. For example, if `startHour` is 9 (09:00AM), `endHour` is 18.25 (06:15 PM), `timeInterval` is 30 minutes, and total minutes = 555 ((18.25-9)*60), then the timeInterval will be changed to ’37 minutes’ (555%37=0) by considering (total minutes % timeInterval = 0). it will return integer value for time slots rendering.
 
+## Special time regions
+You can restrict the user interaction such as selection and highlights specific regions of time in the timeslot views by adding the [specialTimeRegions] property of `sfCalendar`. You need to set the [startTime] and [endTime] properties of [TimeRegion] to create a `specialTimeRegion`, you can use the [timeZone] property to set the specific timezone for start and end time of `specialTimeRegion`. The `specialTimeRegion` will display the text or icon on it that set to the [text] or [icon] property of `TimeRegion`.
+
+![Special time region in Flutter event calendar](images/timeslot-views/Special_region.png)
+
+>**NOTE** If time region has both the text and icon then it will draw icon only.
+
+### Selection restriction in timeslots
+You can enable or disable the touch interaction of `TimeRegion` using the ` enablePointerInteraction` property of `TimeRegion`. By default, its value is true.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+  Widget build(BuildContext context) {
+    return Container(
+      child: SfCalendar(
+        view: CalendarView.week,
+        specialRegions: _getTimeRegions(),
+      ),
+    );
+  }
+
+  List<TimeRegion> _getTimeRegions() {
+    final List<TimeRegion> regions = <TimeRegion>[];
+    regions.add(TimeRegion(
+        startTime: DateTime.now(),
+        endTime: DateTime.now().add(Duration(hours: 1)),
+        enablePointerInteraction: false,
+        color: Colors.grey.withOpacity(0.2),
+        text: 'Break'));
+
+    return regions;
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Special time region touch restriction](images/timeslot-views/Special_region_touch_restriction.png)
+
+>**NOTE**
+This property only restricts the interaction on region and it does not restrict the following:
+* Programmatic selection (if the user updates the selected date value dynamically)
+* Does not clear the selection when the user selects the region and dynamically change
+the `enablePointerInteraction` property to false
+* It does not restrict appointment interaction when the appointment placed
+in the region
+* It does not restrict the appointment rendering on a region, when appointments are loaded from data services or adding programmatically.
+### Recurring time region
+
+The recurring time region on a daily, weekly, monthly, or yearly interval. The recurring special time regions can be created by setting the `recurrenceRule` property in `TimeRegion`.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+  Widget build(BuildContext context) {
+    return Container(
+      child: SfCalendar(
+        view: CalendarView.week,
+        specialRegions: _getTimeRegions(),
+      ),
+    );
+  }
+
+  List<TimeRegion> _getTimeRegions() {
+    final List<TimeRegion> regions = <TimeRegion>[];
+    regions.add(TimeRegion(
+        startTime: DateTime.now(),
+        endTime: DateTime.now().add(Duration(hours: 1)),
+        enablePointerInteraction: false,
+        recurrenceRule: 'FREQ=DAILY;INTERVAL=1',
+        textStyle: TextStyle(color: Colors.black45, fontSize: 15),
+        color: Colors.grey.withOpacity(0.2),
+        text: 'Break'));
+
+    return regions;
+  }
+  
+{% endhighlight %}
+{% endtabs %}
+
+![Special time region recurrence](images/timeslot-views/Special_region_recurrence.png)
+
+You can refer to [here](https://help.syncfusion.com/flutter/calendar/appointments#recurrence-rule) to know more about the recurrence rule.
+
+### Recurrence exception dates
+You can delete any of occurrence that is an exception from the recurrence pattern time region by using the [recurrenceExceptionDates] property of `TimeRegion`. The deleted occurrence date will be considered as a recurrence exception date.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+  Widget build(BuildContext context) {
+    return Container(
+      child: SfCalendar(
+        view: CalendarView.week,
+        specialRegions: _getTimeRegions(),
+      ),
+    );
+  }
+
+  List<TimeRegion> _getTimeRegions() {
+    final List<TimeRegion> regions = <TimeRegion>[];
+    regions.add(TimeRegion(
+        startTime: DateTime.now(),
+        endTime: DateTime.now().add(Duration(hours: 1)),
+        enablePointerInteraction: false,
+        recurrenceRule: 'FREQ=DAILY;INTERVAL=1',
+        textStyle: TextStyle(color: Colors.black45, fontSize: 15),
+        color: Colors.grey.withOpacity(0.2),
+        recurrenceExceptionDates: [DateTime.now().add(Duration(days: 2))],
+        text: 'Break'));
+
+    return regions;
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Special time region recurrence exception](images/timeslot-views/Special_region_recurrence_exception.png)
+
+### Special time region customization
+The `specialTimeRegion` background color can be customized by using the [color] and [textStyle] properties of `TimeRegion` that is used to customize the text style for the `text` and `icon` of the `specialTimeRegion`.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+  Widget build(BuildContext context) {
+    return Container(
+      child: SfCalendar(
+        view: CalendarView.week,
+        specialRegions: _getTimeRegions(),
+      ),
+    );
+  }
+
+  List<TimeRegion> _getTimeRegions() {
+    final List<TimeRegion> regions = <TimeRegion>[];
+    regions.add(TimeRegion(
+        startTime: DateTime.now(),
+        endTime: DateTime.now().add(Duration(hours: 1)),
+        enablePointerInteraction: false,
+        textStyle: TextStyle(color: Colors.black45, fontSize: 15),
+        color: Colors.grey.withOpacity(0.2),
+        text: 'Break'));
+
+    return regions;
+  }
+  
+{% endhighlight %}
+{% endtabs %}
+
+![Special time region customization](images/timeslot-views/Special_region_customization.png)
+
+
 ## Full screen calendar
 
 Calendar time interval height can be adjusted based on screen height by changing the value of `timeIntervalHeight` property to -1. It will auto-fit to the screen height and width.
