@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Drag modes explains about the different types of drag modes in Syncfusion Flutter Range Selector | Syncfusion
+title: Drag modes in Syncfusion Flutter Range Selector | Syncfusion
 description: This section explains about the different types of the thumb movement in the Flutter range selector.
 platform: Flutter
 control: SfRangeSelector
