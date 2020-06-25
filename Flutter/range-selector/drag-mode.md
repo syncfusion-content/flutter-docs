@@ -11,7 +11,7 @@ documentation: ug
 
 ## On Thumb
 
-When [`dragMode`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dragMode.html) is set to `SliderDragMode.onThumb`, only individual thumb can be moved by dragging it.
+When [`dragMode`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dragMode.html) is set to `SliderDragMode.onThumb`, only individual thumb can be moved by dragging it. The nearest thumb will move to the touch position if interaction is done anywhere other than the thumb.
 
 {% tabs %}
 {% highlight Dart %}
