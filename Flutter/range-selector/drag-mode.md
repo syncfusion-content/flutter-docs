@@ -9,7 +9,7 @@ documentation: ug
 
 # Drag modes of range selector
 
-## On Thumb
+## On thumb
 
 When [`dragMode`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dragMode.html) is set to `SliderDragMode.onThumb`, only individual thumb can be moved by dragging it. The nearest thumb will move to the touch position if interaction is done anywhere other than the thumb.
 
