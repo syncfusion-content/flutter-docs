@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Markers in Syncfusion Flutter Maps | Syncfusion
-description: This section explains about how to show the markers and customise its appearance in the Flutter maps.
+description: This section explains about how to add the markers and customize them dynamically.
 platform: Flutter
 control: SfMaps
 documentation: ug
@@ -9,13 +9,13 @@ documentation: ug
 
 # Markers in the Flutter Maps
 
-It denotes a location with built-in symbols or display a custom widget at a specific latitude and longitude on a map.
+Markers can be used to denote the locations. It is possible to use the built-in symbols or display a custom widget at a specific latitude and longitude on a map.
 
-## Adding default markers
+## Adding markers
 
 You can show markers at any position on the map by providing latitude and longitude position to the [MapMarker], which is the widget returns from the [markerBuilder] property in the [MapShapeLayer].
 
-The [markerBuilder] function returns list of markers based on the value specified in the [initialMarkersCount] property. The default value of the [`initialMarkersCount`] property is `null`.
+The [markerBuilder] callback will be called number of times equal to the value specified in the [initialMarkersCount] property. The default value of the [`initialMarkersCount`] property is `null`.
 
 ```dart
 List<Model> data;
@@ -77,9 +77,77 @@ class Model {
 
 ![default marker](images/markers/default_marker.png)
 
+## Markers customization
+
+You can customize the built-in markers appearance using the [iconType], [iconColor], [iconStrokeColor], [iconStrokeWidth], and [size] properties.
+
+```dart
+List<Model> data;
+
+@override
+void initState() {
+    data = <Model>[
+      Model(-14.235004, -51.92528),
+      Model(51.16569, 10.451526),
+      Model(-25.274398, 133.775136),
+      Model(20.593684, 78.96288),
+      Model(61.52401, 105.318756)
+    ];
+
+    super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: Center(
+          child: Container(
+            height: 350,
+            child: Padding(
+              padding: EdgeInsets.only(left: 15, right: 15),
+              child: SfMaps(
+                layers: <MapLayer>[
+                  MapShapeLayer(
+                    delegate: MapShapeLayerDelegate(
+                      shapeFile: 'assets/world_map.json',
+                      shapeDataField: 'name',
+                      dataCount: data.length,
+                    ),
+                    initialMarkersCount: 5,
+                    markerBuilder: (_, int index){
+                      return MapMarker(
+                        latitude: data[index].latitude,
+                        longitude: data[index].longitude,
+                        iconType: MapIconType.triangle,
+                        size: Size(18, 18),
+                        iconColor: Colors.green[200],
+                        iconStrokeColor: Colors.green[900],
+                        iconStrokeWidth: 2,
+                      );
+                    },
+                  ),
+                ],
+              ),
+            ),
+          )
+      ),
+   );
+}
+
+class Model {
+  Model(this.latitude, this.longitude);
+
+  final double latitude;
+  final double longitude;
+}
+```
+
+![marker customization](images/markers/marker_customization.png)
+
 ## Adding custom markers
 
-You can show custom marker using the [child] property of the [MapMarker] which returns from [markerBuilder] property in the [MapShapeLayer].
+You can show custom marker using the [child] property of the [MapMarker] which returns from the [markerBuilder].
 
 ```dart
 List<Model> data;
@@ -150,81 +218,13 @@ class Model {
 
 ![custom marker](images/markers/custom_marker.png)
 
-## Markers customization
+## Adding markers dynamically
 
-You can customize the built-in markers appearance using the [iconType], [iconColor], [iconStrokeColor], [iconStrokeWidth], and [size] properties.
+You can add markers dynamically using the [insertMarker] method in the [MapShapeLayerController]. The [markerBuilder] will be called for the respective index once [insertMarker] method is called. The [controller] property of [MapShapeLayer] has to be set with the new instance of [MapShapeLayerController].
 
-```dart
-List<Model> data;
+Marker will be inserted at the given index if the index value is less than or equal to the current available index and the marker will be added as a last item if the index value is greater than the current available index.
 
-@override
-void initState() {
-    data = <Model>[
-      Model(-14.235004, -51.92528),
-      Model(51.16569, 10.451526),
-      Model(-25.274398, 133.775136),
-      Model(20.593684, 78.96288),
-      Model(61.52401, 105.318756)
-    ];
-
-    super.initState();
-}
-
-@override
-Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Center(
-          child: Container(
-            height: 350,
-            child: Padding(
-              padding: EdgeInsets.only(left: 15, right: 15),
-              child: SfMaps(
-                layers: <MapLayer>[
-                  MapShapeLayer(
-                    delegate: MapShapeLayerDelegate(
-                      shapeFile: 'assets/world_map.json',
-                      shapeDataField: 'name',
-                      dataCount: data.length,
-                    ),
-                    initialMarkersCount: 5,
-                    markerBuilder: (_, int index){
-                      return MapMarker(
-                        latitude: data[index].latitude,
-                        longitude: data[index].longitude,
-                        iconType: MapIconType.triangle,
-                        size: Size(18, 18),
-                        iconColor: Colors.green[200],
-                        iconStrokeColor: Colors.green[900],
-                        iconStrokeWidth: 2,
-                      );
-                    },
-                  ),
-                ],
-              ),
-            ),
-          )
-      ),
-   );
-}
-
-class Model {
-  Model(this.latitude, this.longitude);
-
-  final double latitude;
-  final double longitude;
-}
-```
-
-![marker customization](images/markers/marker_customization.png)
-
-## Adding marker dynamically
-
-You can add marker dynamically using the [insertMarker] function in the [controller] property of [MapShapeLayer]. The [controller] property is used to rebuild the [markerBuilder] function based on the value of [initialMarkersCount] property.
-
-Marker will be inserted at the given index if the index value is less than the [initialMarkersCount] value and marker will be added last if the index value is greater than the [initialMarkersCount] value.
-
-I> You must update the [initialMarkersCount] property for any [controller] functions such as [insertMarker], [updateMarkers], [removeMarkerAt], and [clearMarkers].
+N> You can get the current markers count from [MapShapeLayerController.markersCount].
 
 ```dart
 List<Model> data;
@@ -301,11 +301,11 @@ class Model {
 }
 ```
 
-## Updating the existing marker
+## Updating the existing markers
 
-You can update multiple markers at a same time by passing multiple indices to the [updateMarkers] function in the [controller] property.
+You can update multiple markers at a same time by passing indices to the [updateMarkers] method in the [MapShapeLayerController]. The [markerBuilder] will be called again for the respective indices once [updateMarkers] method is called.
 
-I> You must update the [initialMarkersCount] property for any [controller] functions such as [insertMarker], [updateMarkers], [removeMarkerAt], and [clearMarkers].
+N> You can get the current markers count from [MapShapeLayerController.markersCount].
 
 ```dart
 List<Model> data;
@@ -383,11 +383,11 @@ class Model {
 }
 ```
 
-## Deleting marker
+## Deleting a marker
 
-You can remove marker at any index using the [removeMarkerAt] function in the [controller] property.
+You can remove marker at any index using the [removeMarkerAt] method.
 
-I> You must update the [initialMarkersCount] property for any [controller] functions such as [insertMarker], [updateMarkers], [removeMarkerAt], and [clearMarkers].
+N> You can get the current markers count from [MapShapeLayerController.markersCount].
 
 ```dart
 List<Model> data;
@@ -463,9 +463,9 @@ class Model {
 
 ## Clearing the markers
 
-You can clear all markers using the [clearMarkers] function in the [controller] property.
+You can clear all markers using the [clearMarkers] method.
 
-I> You must update the [initialMarkersCount] property for any [controller] functions such as [insertMarker], [updateMarkers], [removeMarkerAt], and [clearMarkers].
+N> You can get the current markers count from [MapShapeLayerController.markersCount].
 
 ```dart
 List<Model> data;
