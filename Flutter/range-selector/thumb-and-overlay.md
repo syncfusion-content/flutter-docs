@@ -16,7 +16,7 @@ This section helps to learn about how to customize the thumb and thumb overlay i
 
 ## Thumb size
 
-You can change the size of the thumb in the range selector using the [`thumbRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/thumbRadius.html) property.
+You can change the size of the thumb in the range selector using the [`thumbRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/thumbRadius.html) property.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorTheme-class.html).
 
@@ -45,7 +45,7 @@ Widget build(BuildContext context) {
       home: Scaffold(
           body: Center(
               child: SfRangeSelectorTheme(
-                    data: SfRangeSliderThemeData(
+                    data: SfRangeSelectorThemeData(
                         thumbRadius: 13,
                     ),
                     child:  SfRangeSelector(
@@ -99,7 +99,7 @@ class Data {
 
 ## Thumb color
 
-You can change the color of the thumb in the range selector using the [`thumbColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/thumbColor.html) property.
+You can change the color of the thumb in the range selector using the [`thumbColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/thumbColor.html) property.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorTheme-class.html).
 
@@ -128,7 +128,7 @@ Widget build(BuildContext context) {
       home: Scaffold(
           body: Center(
               child: SfRangeSelectorTheme(
-                    data: SfRangeSliderThemeData(
+                    data: SfRangeSelectorThemeData(
                         thumbColor: Colors.red,
                     ),
                     child:  SfRangeSelector(
@@ -180,9 +180,185 @@ class Data {
 
 ![Thumb color support](images/thumb-and-overlay/selector-thumb-color.png)
 
+## Thumb stroke width and stroke color
+
+You can change the thumb stroke width using the [`thumbStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/thumbStrokeWidth.html) property and thumb stroke color using the [`thumbStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/thumbStrokeColor.html) property.
+
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorTheme-class.html).
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+final List<Data> chartData = <Data>[
+  Data(x:2.0, y: 2.2),
+  Data(x:3.0, y: 3.4),
+  Data(x:4.0, y: 2.8),
+  Data(x:5.0, y: 1.6),
+  Data(x:6.0, y: 2.3),
+  Data(x:7.0, y: 2.5),
+  Data(x:8.0, y: 2.9),
+  Data(x:9.0, y: 3.8),
+  Data(x:10.0, y: 3.7),
+];
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+        body: Center(
+            child: SfRangeSelectorTheme(
+              data: SfRangeSelectorThemeData(
+                thumbStrokeWidth: 3,
+                thumbStrokeColor: Colors.red,
+              ),
+              child: SfRangeSelector(
+                min: _min,
+                max: _max,
+                interval: 1,
+                showTicks: true,
+                showLabels: true,
+                initialValues: _values,
+                child: Container(
+                  height: 130,
+                  child: SfCartesianChart(
+                    margin: const EdgeInsets.all(0),
+                    primaryXAxis: NumericAxis(minimum: _min,
+                        maximum: _max,
+                        isVisible: false),
+                    primaryYAxis: NumericAxis(isVisible: false),
+                    plotAreaBorderWidth: 0,
+                    series: <SplineAreaSeries<Data, double>>[
+                      SplineAreaSeries<Data, double>(
+                          color: Color.fromARGB(255, 126, 184, 253),
+                          dataSource: chartData,
+                          xValueMapper: (Data sales, _) => sales.x,
+                          yValueMapper: (Data sales, _) => sales.y)
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Dart %}
+
+class Data {
+  Data({this.x, this.y});
+  final double x;
+  final double y;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Thumb stroke color support](images/thumb-and-overlay/selector-thumb-stroke-color.png)
+
+## Thumb icon
+
+You can show the custom widgets like icon or text inside the thumbs using the [`startThumbIcon`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/startThumbIcon.html) and the [`endThumbIcon`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/endThumbIcon.html) properties.
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 2.0;
+final double _max = 10.0;
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+final List<Data> chartData = <Data>[
+  Data(x:2.0, y: 2.2),
+  Data(x:3.0, y: 3.4),
+  Data(x:4.0, y: 2.8),
+  Data(x:5.0, y: 1.6),
+  Data(x:6.0, y: 2.3),
+  Data(x:7.0, y: 2.5),
+  Data(x:8.0, y: 2.9),
+  Data(x:9.0, y: 3.8),
+  Data(x:10.0, y: 3.7),
+];
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+            child: SfRangeSelectorTheme(
+              data: SfRangeSelectorThemeData(
+                  thumbColor: Colors.white,
+                  thumbRadius: 15,
+                  thumbStrokeWidth: 2,
+                  thumbStrokeColor: Colors.blue
+              ),
+              child: SfRangeSelector(
+                min: _min,
+                max: _max,
+                interval: 1,
+                showTicks: true,
+                showLabels: true,
+                initialValues: _values,
+                startThumbIcon: Icon(
+                    Icons.arrow_back_ios,
+                    color: Colors.blue,
+                    size: 20.0),
+                endThumbIcon: Icon(
+                    Icons.arrow_forward_ios,
+                    color: Colors.blue,
+                    size: 20.0),
+                child: Container(
+                  height: 130,
+                  child: SfCartesianChart(
+                    margin: const EdgeInsets.all(0),
+                    primaryXAxis: NumericAxis(minimum: _min,
+                        maximum: _max,
+                        isVisible: false),
+                    primaryYAxis: NumericAxis(isVisible: false),
+                    plotAreaBorderWidth: 0,
+                    series: <SplineAreaSeries<Data, double>>[
+                      SplineAreaSeries<Data, double>(
+                          color: Color.fromARGB(255, 126, 184, 253),
+                          dataSource: chartData,
+                          xValueMapper: (Data sales, _) => sales.x,
+                          yValueMapper: (Data sales, _) => sales.y)
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Dart %}
+
+class Data {
+  Data({this.x, this.y});
+  final double x;
+  final double y;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Thumb icon support](images/thumb-and-overlay/selector-thumb-icon.png)
+
 ## Thumb overlay size
 
-You can change the size of the thumb overlay in the range selector using the [`overlayRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/overlayRadius.html) property.
+You can change the size of the thumb overlay in the range selector using the [`overlayRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/overlayRadius.html) property.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorTheme-class.html).
 
@@ -211,7 +387,7 @@ Widget build(BuildContext context) {
       home: Scaffold(
           body: Center(
               child: SfRangeSelectorTheme(
-                    data: SfRangeSliderThemeData(
+                    data: SfRangeSelectorThemeData(
                         overlayRadius: 25,
                     ),
                     child:  SfRangeSelector(
@@ -265,7 +441,7 @@ class Data {
 
 ## Thumb overlay color
 
-You can change the color of the thumb overlay in the range selector using the [`overlayColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/overlayColor.html) property.
+You can change the color of the thumb overlay in the range selector using the [`overlayColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/overlayColor.html) property.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorTheme-class.html).
 
@@ -294,7 +470,7 @@ Widget build(BuildContext context) {
       home: Scaffold(
           body: Center(
               child: SfRangeSelectorTheme(
-                    data: SfRangeSliderThemeData(
+                    data: SfRangeSelectorThemeData(
                         overlayColor: Colors.red[50],
                     ),
                     child:  SfRangeSelector(
