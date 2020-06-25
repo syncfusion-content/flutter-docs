@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Markers in Syncfusion Flutter Maps | Syncfusion
-description: This section explains about how to add the markers and customize them dynamically.
+description: This section explains about how to add the markers and customize them dynamically in the Flutter maps.
 platform: Flutter
 control: SfMaps
 documentation: ug
@@ -13,9 +13,9 @@ Markers can be used to denote the locations. It is possible to use the built-in 
 
 ## Adding markers
 
-You can show markers at any position on the map by providing latitude and longitude position to the [MapMarker], which is the widget returns from the [markerBuilder] property in the [MapShapeLayer].
+You can show markers at any position on the map by providing latitude and longitude position to the [`MapMarker`], which is the widget returns from the [`markerBuilder`] property in the [`MapShapeLayer`].
 
-The [markerBuilder] callback will be called number of times equal to the value specified in the [initialMarkersCount] property. The default value of the [`initialMarkersCount`] property is `null`.
+The [`markerBuilder`] callback will be called number of times equal to the value specified in the [`initialMarkersCount`] property. The default value of the [`initialMarkersCount`] property is `null`.
 
 ```dart
 List<Model> data;
@@ -79,7 +79,7 @@ class Model {
 
 ## Markers customization
 
-You can customize the built-in markers appearance using the [iconType], [iconColor], [iconStrokeColor], [iconStrokeWidth], and [size] properties.
+You can customize the built-in markers appearance using the [`iconType`], [`iconColor`], [`iconStrokeColor`], [`iconStrokeWidth`], and [`size`] properties.
 
 ```dart
 List<Model> data;
@@ -100,7 +100,6 @@ void initState() {
 @override
 Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       body: Center(
           child: Container(
             height: 350,
@@ -112,7 +111,6 @@ Widget build(BuildContext context) {
                     delegate: MapShapeLayerDelegate(
                       shapeFile: 'assets/world_map.json',
                       shapeDataField: 'name',
-                      dataCount: data.length,
                     ),
                     initialMarkersCount: 5,
                     markerBuilder: (_, int index){
@@ -147,7 +145,7 @@ class Model {
 
 ## Adding custom markers
 
-You can show custom marker using the [child] property of the [MapMarker] which returns from the [markerBuilder].
+You can show custom marker using the [`child`] property of the [`MapMarker`] which returns from the [`markerBuilder`].
 
 ```dart
 List<Model> data;
@@ -188,7 +186,6 @@ Widget build(BuildContext context) {
                      delegate: MapShapeLayerDelegate(
                        shapeFile: 'assets/world_map.json',
                        shapeDataField: 'name',
-                       dataCount: data.length,
                      ),
                      initialMarkersCount: 5,
                      markerBuilder: (_, int index){
@@ -220,16 +217,15 @@ class Model {
 
 ## Adding markers dynamically
 
-You can add markers dynamically using the [insertMarker] method in the [MapShapeLayerController]. The [markerBuilder] will be called for the respective index once [insertMarker] method is called. The [controller] property of [MapShapeLayer] has to be set with the new instance of [MapShapeLayerController].
+You can add markers dynamically using the [`insertMarker`] method in the [`MapShapeLayerController`]. The [`markerBuilder`] will be called for the respective index once when [`insertMarker`] method is called. The [`controller`] property of [`MapShapeLayer`] has to be set with the new instance of [`MapShapeLayerController`].
 
 Marker will be inserted at the given index if the index value is less than or equal to the current available index and the marker will be added as a last item if the index value is greater than the current available index.
 
-N> You can get the current markers count from [MapShapeLayerController.markersCount].
+N> You can get the current markers count from [`MapShapeLayerController.markersCount`].
 
 ```dart
 List<Model> data;
 MapShapeLayerController controller;
-int markerCount = 5;
 Random random = Random();
 
 @override
@@ -262,9 +258,8 @@ Widget build(BuildContext context) {
                         delegate: MapShapeLayerDelegate(
                           shapeFile: 'assets/world_map.json',
                           shapeDataField: 'name',
-                          dataCount: data.length,
                         ),
-                        initialMarkersCount: markerCount,
+                        initialMarkersCount: 5,
                         markerBuilder: (_, int index){
                           return MapMarker(
                             latitude: data[index].latitude,
@@ -282,7 +277,7 @@ Widget build(BuildContext context) {
                       data.add(Model(
                           -180 + random.nextInt(360).toDouble(),
                           -55 + random.nextInt(139).toDouble()));
-                      controller.insertMarker(markerCount++);
+                      controller.insertMarker(5);
                     },
                   ),
                 ],
@@ -303,15 +298,13 @@ class Model {
 
 ## Updating the existing markers
 
-You can update multiple markers at a same time by passing indices to the [updateMarkers] method in the [MapShapeLayerController]. The [markerBuilder] will be called again for the respective indices once [updateMarkers] method is called.
+You can update multiple markers at a same time by passing indices to the [`updateMarkers`] method in the [`MapShapeLayerController`]. The [`markerBuilder`] will be called again for the respective indices once when [`updateMarkers`] method is called.
 
-N> You can get the current markers count from [MapShapeLayerController.markersCount].
+N> You can get the current markers count from [`MapShapeLayerController.markersCount`].
 
 ```dart
 List<Model> data;
 MapShapeLayerController controller;
-int markerCount = 5;
-Random random = Random();
 Widget markerWidget;
 
 @override
@@ -345,9 +338,8 @@ Widget build(BuildContext context) {
                         delegate: MapShapeLayerDelegate(
                           shapeFile: 'assets/world_map.json',
                           shapeDataField: 'name',
-                          dataCount: data.length,
                         ),
-                        initialMarkersCount: markerCount,
+                        initialMarkersCount: 5,
                         markerBuilder: (_, int index){
                           return MapMarker(
                             latitude: data[index].latitude,
@@ -385,15 +377,13 @@ class Model {
 
 ## Deleting a marker
 
-You can remove marker at any index using the [removeMarkerAt] method.
+You can remove marker at any index using the [`removeMarkerAt`] method.
 
-N> You can get the current markers count from [MapShapeLayerController.markersCount].
+N> You can get the current markers count from [`MapShapeLayerController.markersCount`].
 
 ```dart
 List<Model> data;
 MapShapeLayerController controller;
-int markerCount = 5;
-Random random = Random();
 
 @override
 void initState() {
@@ -424,9 +414,8 @@ Widget build(BuildContext context) {
                         delegate: MapShapeLayerDelegate(
                           shapeFile: 'assets/world_map.json',
                           shapeDataField: 'name',
-                          dataCount: data.length,
                         ),
-                        initialMarkersCount: markerCount,
+                        initialMarkersCount: 5,
                         markerBuilder: (_, int index){
                           return MapMarker(
                             latitude: data[index].latitude,
@@ -442,7 +431,6 @@ Widget build(BuildContext context) {
                     child: Text('Remove marker'),
                     onPressed: () {
                       controller.removeMarkerAt(2);
-                      markerCount--;
                     },
                   ),
                 ],
@@ -463,15 +451,13 @@ class Model {
 
 ## Clearing the markers
 
-You can clear all markers using the [clearMarkers] method.
+You can clear all markers using the [`clearMarkers`] method.
 
-N> You can get the current markers count from [MapShapeLayerController.markersCount].
+N> You can get the current markers count from [`MapShapeLayerController.markersCount`].
 
 ```dart
 List<Model> data;
 MapShapeLayerController controller;
-int markerCount = 5;
-Random random = Random();
 
 @override
 void initState() {
@@ -490,7 +476,6 @@ void initState() {
 @override
 Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       body: Center(
           child: Container(
             height: 350,
@@ -504,9 +489,8 @@ Widget build(BuildContext context) {
                         delegate: MapShapeLayerDelegate(
                           shapeFile: 'assets/world_map.json',
                           shapeDataField: 'name',
-                          dataCount: data.length,
                         ),
-                        initialMarkersCount: markerCount,
+                        initialMarkersCount: 5,
                         markerBuilder: (_, int index){
                           return MapMarker(
                             latitude: data[index].latitude,
@@ -522,7 +506,6 @@ Widget build(BuildContext context) {
                     child: Text('Clear marker'),
                     onPressed: () {
                       controller.clearMarkers();
-                      markerCount = 0;
                     },
                   ),
                 ],
