@@ -9,7 +9,7 @@ documentation: ug
 
 # Overview of Flutter Maps
 
-Syncfusion Flutter Maps is a highly interactive UI control, allowing users to visualize GeoJSON data as a geographical area. It provides rich features, such as data labels, selection, markers, bubbles, assignable colors based on region, and legends.
+Syncfusion Flutter Maps is a highly interactive UI widget, allowing users to visualize GeoJSON data as a geographical area. It provides rich features, such as data labels, selection, markers, bubbles, assignable colors based on region, and legends.
 
 ![Maps overview](images/overview/maps-overview.png)
 
