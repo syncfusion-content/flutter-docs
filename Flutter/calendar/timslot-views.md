@@ -149,6 +149,8 @@ the `enablePointerInteraction` property to false
 * It does not restrict appointment interaction when the appointment placed
 in the region
 * It does not restrict the appointment rendering on a region, when appointments are loaded from data services or adding programmatically.
+
+
 ### Recurring time region
 
 The recurring time region on a daily, weekly, monthly, or yearly interval. The recurring special time regions can be created by setting the `recurrenceRule` property in `TimeRegion`.

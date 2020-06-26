@@ -115,7 +115,7 @@ Widget build(BuildContext context) {
 ![MultiRangeSelection Date Range Picker](images/selections/multirange.jpg)
 
 ## Selection radius
-You can customize the radius of the selection using the [selectionRadius](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/selectionRadius.html) property of the [DateRangePickerMonthViewSettings](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings-class.html).
+You can customize the radius of the selection using the [selectionRadius](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/selectionRadius.html) property of the `SfDateRangePicker`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -125,7 +125,7 @@ Widget build(BuildContext context) {
   return Scaffold(
     body: SfDateRangePicker(
       view: DateRangePickerView.month,
-      monthViewSettings: DateRangePickerMonthViewSettings(selectionRadius: 10),
+      selectionRadius: 10,
     ),
   );
 }
@@ -178,7 +178,7 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ## Toggle day selection
-You can deselect the selected date using the [toggleDaySelection](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/toggleDaySelection.html) property of the [DateRangePickerMonthViewSettings](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings-class.html).
+You can deselect the selected date using the [toggleDaySelection](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/toggleDaySelection.html) property of the `SfDateRangePicker`.
 
 {% tabs %}
 {% highlight Dart %}
