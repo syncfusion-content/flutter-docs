@@ -37,7 +37,7 @@ The data grid allows you to select a specific row or group of rows either progra
 </tr>
 </table>
 
-### Current cell navigation
+### Currentcell navigation
 
 Keyboard navigation through the cells and rows is determined based on the `navigationMode` property. The `GridNavigationMode.cell` allows you to navigate between the cells in a row and between the rows. The `GridNavigationMode.row` allows you to navigate between the rows.
 
@@ -73,7 +73,7 @@ It allows you to select only one item (record). For example, you have selected a
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows selection](images/selection/selection.png)
+![flutter datagrid shows single row selection](images/selection/single_selection.png)
 
 ### Multiple row selection
 
@@ -128,7 +128,7 @@ Selection on a particular row can be disabled by handling the CurrentCellActivat
 {% tabs %}
 {% highlight Dart %}
     
-    DataGridController _dataGridController;
+    final DataGridController _dataGridController;
 
     @override
     void initState() {
@@ -165,7 +165,7 @@ Selection on a particular row can be disabled by handling the CurrentCellActivat
 
 ## Programmatic selection
 
-When SfDataGrid.SelectionMode is set a value other than None, select row/rows from the code by setting the `DataGridController.SelectedIndex`, `DataGridController.SelectedRow`, or `DataGridController.SelectedRows` property based on the selection mode. To enable selection from code, follow the code example:
+When SfDataGrid.SelectionMode is set a value other than None, select row/rows from the code by setting the `DataGridController.selectedIndex`, `DataGridController.selectedRow`, or `DataGridController.selectedRows` property based on the selection mode. To enable selection from code, follow the code example:
 
 When the selection mode is Single, programmatically select a row in two ways either by setting the row index to the DataGridController.selectedIndex property, or by setting the underlying object to be selected to the DataGridController.selectedRow property
 
@@ -224,7 +224,7 @@ The current cell information such as row index, column index can be retrieved us
 {% tabs %}
 {% highlight Dart %}
 
-    var _currenCell = this._dataGridController.currentCell;
+   var _currenCell = this._dataGridController.currentCell;
 
 {% endhighlight %}
 {% endtabs %}
@@ -244,7 +244,7 @@ The CurrentCell can be moved to a particular RowColumnIndex by using the `moveCu
 
 ### Clear selection
 
-Data grid allows you to clear the selection applied in the grid rows either by setting the `SfDataGrid.SelectionMode` to `None`.
+Data grid allows you to clear the selection applied in the grid rows either by setting the `SfDataGrid.SelectionMode` to `none`.
 
 {% tabs %}
 {% highlight Dart %}
