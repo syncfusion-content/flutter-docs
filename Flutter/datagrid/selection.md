@@ -37,7 +37,7 @@ The data grid allows you to select a specific row or group of rows either progra
 </tr>
 </table>
 
-### Currentcell navigation
+### Current cell navigation
 
 Keyboard navigation through the cells and rows is determined based on the `navigationMode` property. The `GridNavigationMode.cell` allows you to navigate between the cells in a row and between the rows. The `GridNavigationMode.row` allows you to navigate between the rows.
 
@@ -217,7 +217,7 @@ Multiple rows can be selected by adding data objects to SelectedRows property.
 
 ![flutter datagrid shows multiple row selection](images/selection/multiple_selection.png)
 
-### Get the currentcell
+### Get the current cell
 
 The current cell information such as row index, column index can be retrieved using the `DataGridController.currentCell` property. 
 
@@ -230,7 +230,7 @@ The current cell information such as row index, column index can be retrieved us
 {% endtabs %}
 
 
-### Process currentcell
+### Process current cell
 
 The CurrentCell can be moved to a particular RowColumnIndex by using the `moveCurrentCellTo` method.
 
@@ -568,7 +568,7 @@ The selection background and foreground color can be changed  of by `SfDataGridT
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows multiple row selection](images/selection/customized_selection.png)
+![flutter datagrid shows customized selection](images/selection/customized_selection.png)
 
 ### CurrentCell
 
@@ -594,7 +594,7 @@ The BorderColor, and BorderThickness of the current cell can be changed by `SfDa
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows multiple row selection](images/selection/customized_currentcell.png)
+![flutter datagrid shows customized current cell](images/selection/customized_currentcell.png)
 
 
 
