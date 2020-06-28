@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Selection | SfDataGrid | Flutter | Syncfusion
+title: Selection | SfDataGrid | Flutter | Syncfusion | GridView
 description: How to enable selection, about the selection modes, properties, events, and customizations available for selection in a data grid.
 platform: flutter
 control: SfDataGrid
@@ -195,32 +195,28 @@ To programmatically select a row from the code, follow the code example:
 {% tabs %}
 {% highlight Dart %}
 
+    //SelectedIndex
     @override
-    Widget build(BuildContext context) {
-
-        //SelectedIndex
-        @override
-        Widget build(BuildContext context){
-            return MaterialApp(
-                home: Scaffold(
-                    body: SfDataGrid(
-                    controller: DataGridController(
-                        selectedIndex : 4
-                    )))
-            );
-        }
-        
-        //SelectedRow
-        @override
-        Widget build(BuildContext context){
-            return MaterialApp(
-                home: Scaffold(
-                    body: SfDataGrid(
-                    controller: DataGridController(
-                        selectedRow : this.employeeData[3]
-                    )))
-            );
-        }
+    Widget build(BuildContext context){
+        return MaterialApp(
+            home: Scaffold(
+                body: SfDataGrid(
+                controller: DataGridController(
+                    selectedIndex : 4
+                )))
+        );
+    }
+    
+    //SelectedRow
+    @override
+    Widget build(BuildContext context){
+        return MaterialApp(
+            home: Scaffold(
+                body: SfDataGrid(
+                controller: DataGridController(
+                    selectedRow : this.employeeData[3]
+                )))
+        );
     }
 
 {% endhighlight %}
@@ -467,7 +463,7 @@ To hook the `onSelectionChanging` event and cancel the selection. follow the cod
                 body: SfDataGrid(
                  onSelectionChanging: (List<Object> addedRows, List<Object> removedRows){
                     // apply your logics
-                    return true;
+                    return false; // return true to perform selection
                  },
                  onSelectionChanged: (List<Object> addedRows, List<Object> removedRows){
                     // apply your logics
