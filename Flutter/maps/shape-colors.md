@@ -20,6 +20,11 @@ straightaway.
 
 If you set a value other than the color to the [`shapeColorValueMapper`] property, then you must set the [`MapShapeLayer.shapeColorMappers`] property which is a collection of [`MapColorMapper`] to apply color for the shape.
 
+N>
+* By default, the legend icon and text color will be applied based on the [`shapeDataField`] property.
+* If [`MapShapeLayerDelegate.shapeColorMappers`] is `null`, then the colors returned from [`MapShapeLayerDelegate.shapeColorValueMapper`] will be used for the legend icon and the legend text will be taken from the [`MapShapeLayerDelegate.primaryValueMapper`].
+* If [`MapShapeLayerDelegate.shapeColorMappers`] is not null, then [`MapColorMapper.color`] and [`MapColorMapper.text`] will be used for legend icon and the legend text respectively.
+
 ```dart
 List<Model> data;
 
