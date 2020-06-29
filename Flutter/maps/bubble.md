@@ -194,3 +194,67 @@ class Model {
 ```
 
 ![Bubble tooltip](images/bubble/bubble-tooltip.png)
+
+## Bubbles palette
+
+You can customize the bubble color based on the value returned from the `bubbleColorValueMapper` property.
+
+```dart
+ List<Model> data;
+
+  @override
+  void initState() {
+    super.initState();
+
+    data = <Model>[
+      Model('Asia', 51, Colors.red[400]),
+      Model('Africa', 58, Colors.green[400]),
+      Model('Europe', 48, Colors.blue[400]),
+      Model('North America', 41, Colors.purple[400]),
+      Model('South America', 14, Colors.yellow[400]),
+      Model('Australia', 23, Colors.orange[400]),
+    ];
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: Padding(
+        padding: EdgeInsets.only(left: 15, right: 15),
+        child: SfMaps(
+          layers: [
+            MapShapeLayer(
+              delegate: MapShapeLayerDelegate(
+                shapeFile: "assets/world_map.json",
+                shapeDataField: "continent",
+                dataCount: data.length,
+                primaryValueMapper: (int index) => data[index].continent,
+                bubbleSizeMapper: (int index) => data[index].countriesCount,
+                bubbleColorValueMapper: (int index) => data[index].bubbleColor,
+                bubbleTooltipTextMapper: (int index) =>
+                data[index].countriesCount.toStringAsFixed(0) + 'countries',
+              ),
+              showBubbles: true,
+              enableBubbleTooltip: true,
+              bubbleSettings: MapBubbleSettings(
+                maxRadius: 30,
+                minRadius: 15,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class Model {
+  const Model(this.continent, this.countriesCount, this.bubbleColor);
+
+  final String continent;
+  final double countriesCount;
+  final Color bubbleColor;
+}
+```
+![Bubble palette](images/bubble/bubble-palette.png)
