@@ -155,7 +155,6 @@ List<Model> data;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       body: Padding(
         padding: EdgeInsets.only(left: 15, right: 15),
         child: SfMaps(
@@ -223,7 +222,6 @@ If `bubbleColorValueMapper` returns a value other than the color, then you must 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       body: Padding(
         padding: EdgeInsets.only(left: 15, right: 15),
         child: SfMaps(
