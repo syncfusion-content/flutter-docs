@@ -18,7 +18,7 @@ You can apply color to the shape by setting the color directly to the [`shapeCol
 If you set a color to the [`shapeColorValueMapper`] property, then the color will be applied to the shape
 straightaway.
 
-If you set a value other than the color to the [`shapeColorValueMapper`] property, then you must set the [`MapShapeLayer.shapeColorMappers`] property which is a collection of [`MapColorMapper`].
+If you set a value other than the color to the [`shapeColorValueMapper`] property, then you must set the [`MapShapeLayer.shapeColorMappers`] property which is a collection of [`MapColorMapper`] to apply color for the shape.
 
 ```dart
 List<Model> data;
