@@ -158,7 +158,7 @@ The [WeekHeaderSettings]() contains the properties to customize the start and en
 ![Schedule view week header customization](images/scheduleview/Schedule_view_week_header.png)
 
 ## Month header customization
-The month header can be customized by using the [monthkHeaderSettings]() property of `scheduleViewSettings`. 
+The month header can be customized by using the [monthHeaderSettings]() property of `scheduleViewSettings`. 
 
 The [MonthHeaderSettings]() contains the properties to customize the month format, height, text alignment, background color, and month text style of the month header by using the [monthFormat](), [height](), [textAlign](), [backgroundColor](), and [monthTextStyle]() of `MonthHeaderSettings`.
 
