@@ -22,7 +22,7 @@ List<Model> data;
 void initState() {
    super.initState();
 
-   data = <Model>[s
+   data = <Model>[
       Model('Asia', 51),
       Model('Africa', 58),
       Model('Europe', 48),
