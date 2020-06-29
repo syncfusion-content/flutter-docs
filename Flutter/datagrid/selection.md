@@ -410,7 +410,7 @@ The CurrentCell can be moved to a particular cell by using the `moveCurrentCellT
 
 Data grid allows you to clear the selection applied in the grid rows by setting the `DataGridController.selectedIndex` to `-1` or `DataGridController.selectedRow` to null when `selectionMode` property is in `single` or `singleDeselect`. On selectionMode property is in `multiple` you can clear the selection from grid rows by setting the `DataGridController.selectedRows` to `empty`.
 
-The following code example shows how to clear selection when selectionMode proeprty is in `single` or `singleDeselect`,
+The following code example shows how to clear selection when selectionMode property is in `single` or `singleDeselect`,
 
 {% tabs %}
 {% highlight Dart %}
@@ -452,7 +452,7 @@ The following code example shows how to clear selection when selectionMode proep
 {% endhighlight %}
 {% endtabs %}
 
-The following code example shows how to clear selection when selectionMode proeprty is in `multiple`,
+The following code example shows how to clear selection when selectionMode property is in `multiple`,
 
 {% tabs %}
 {% highlight Dart %}

@@ -1,12 +1,12 @@
 ---
 layout: post
 title: Accessibility | DataGrid widget for Flutter | Syncfusion
-description: Learn about the accessibility support in Syncfusion DataGrid
+description: Learn accessibility works on Syncfusion Flutter DataGrid (SfDataGrid). How to enable it and which cells are gone accessible on-screen reading.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Accessibility
+# Accessibility with Flutter DataGrid (SfDataGrid)
    
-   SfDataGrid widget support accessibility when switch on the 'TalkBack' on device. In SfDataGrid it will read the cell value on each grid cell.
+   SfDataGrid support accessibility when switch on the 'TalkBack' mode on device and it will read the screen by each cell value when click on the grid cells.
