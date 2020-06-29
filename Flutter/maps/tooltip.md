@@ -25,7 +25,7 @@ N> You must set `enableBubbleTooltip` bool as true.
 
 # Tooltip text customization
 
-You can customize the shape tooltip text by using the [shapeTooltipTextMapper]. The [shapeTooltipTextMapper] will be called each time when you tap on a shape with corresponding index.You can pass the information that needs to be shown in the tooltip. By default, the tooltip text will be [primaryValueMapper] value. 
+You can customize the shape tooltip text by using the [shapeTooltipTextMapper]. The [shapeTooltipTextMapper] will be called each time when you tap on a shape with corresponding index.You can pass the information that needs to be shown in the tooltip.
 
 You can also customize the bubble tooltip as same shape tooltip using [bubbleTooltipTextMapper].
 
