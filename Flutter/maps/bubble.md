@@ -133,7 +133,7 @@ class Model {
 
 ## Bubbles tooltip
 
-You can show tooltip for the bubbles using the `enableBubbleTooltip` property in the `MapShapeLayer`.
+You can show tooltip for the bubbles using the `enableBubbleTooltip` property in the `MapShapeLayer`. It is possible to customize the bubble tooltip text using the `bubbleTooltipTextMapper` properties.
 
 ```dart
 List<Model> data;
@@ -167,6 +167,7 @@ List<Model> data;
                   dataCount: data.length,
                   primaryValueMapper: (int index) => data[index].continent,
                   bubbleSizeMapper: (int index) => data[index].countriesCount,
+                  bubbleTooltipTextMapper: (int index) => data[index].countriesCount.toStringAsFixed(0) + 'countries',
               ),
               showBubbles: true,
               enableBubbleTooltip: true,
