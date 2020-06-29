@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Selection | SfDataGrid | Flutter | Syncfusion | GridView
-description: How to enable selection, about the selection modes, properties, events, and customizations available for selection in a data grid.
+title: Selection | DataGrid widget for Flutter | Syncfusion
+description: How to enable selection, about the selection modes, properties, callbacks, and customizations available for selection in a data grid.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 # Selection in Flutter (SfDataGrid)
 
-This section explains how to enable selection in the data grid; modes, properties, and events involved in selection and customizations available for selection.
+This section explains how to enable selection in the data grid; modes, properties, and callbacks involved in selection and customizations available for selection.
 
-The data grid allows you to select a specific row or group of rows either programmatically or by touch interactions. To enable selection, set the [selectionMode] property of SfDataGrid to a value other than `none`. This control has different selection modes to perform the selection operation as follows.
+The datagrid allows you to select a specific row or group of rows either programmatically or by touch interactions. To enable selection, set the `selectionMode` property of SfDataGrid to a value other than `none`. SfDataGrid has different selection modes to perform the selection operation as follows.
 
 ## Selection modes 
 
@@ -29,7 +29,7 @@ The data grid allows you to select a specific row or group of rows either progra
 </tr>
 <tr>
 <td> multiple </td>
-<td> Allows selection of more than one row. Selection is not cleared when selecting more than one record. When you click on a selected row for the second time, the selection is cleared. </td>
+<td> Allows selection of more than one row. Selection is not cleared when selecting more than one row. When you click on a selected row for the second time, the selection is cleared. </td>
 </tr>
 <tr>
 <td> singleDeselect </td>
@@ -44,15 +44,23 @@ Keyboard navigation through the cells and rows is determined based on the [navig
 {% tabs %}
 {% highlight Dart %}
 
+    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
+
     // NavigationMode cell
     @override
     Widget build(BuildContext context) {
-     return MaterialApp(
-        home: Scaffold(
-            body: SfDataGrid(
-                navigationMode: GridNavigationMode.cell
-            )
-        )
+      return Scaffold(
+          body: SfDataGrid(
+              source: _employeeDataSource,
+              columns: [
+                GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+                GridTextColumn(mappingName: 'name', headerText: 'Name'),
+                GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+                GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+              ],
+              selectionMode: SelectionMode.single
+              navigationMode: GridNavigationMode.cell
+          )
       );
     }
 
@@ -63,19 +71,26 @@ Keyboard navigation through the cells and rows is determined based on the [navig
 
 ### Single row selection
 
-It allows you to select only one item (record). For example, you have selected a record. Now if you select some other record, the previous record selection will be cleared. Hence it is a `single` record selection mode.
+It allows you to select only one row. For example, you have selected a row. Now if you select some other row, the previous row selection will be cleared. Hence it is a `single` row selection mode.
 
 {% tabs %}
 {% highlight Dart %}
+   
+    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
 
     @override
     Widget build(BuildContext context){
-     return MaterialApp(
-        home: Scaffold(
-            body: SfDataGrid(
+      return Scaffold(
+          body: SfDataGrid(
+              source: _employeeDataSource,
+              columns: [
+                GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+                GridTextColumn(mappingName: 'name', headerText: 'Name'),
+                GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+                GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+              ],
               selectionMode: SelectionMode.single
-            )
-        )
+          )
       );
     }
 
@@ -86,137 +101,183 @@ It allows you to select only one item (record). For example, you have selected a
 
 ### Multiple row selection
 
-The SfDataGrid allows you to select multiple rows by setting SelectionMode property as `multiple`,  where you can select multiple rows by touch or mouse on SfDataGrid and also using the key modifiers.
+The SfDataGrid allows you to select multiple rows by setting selectionMode property as `multiple`,  where you can select multiple rows by click on SfDataGrid and also using the key modifiers.
 
 While using `multiple`, you can select multiple rows by pressing the key modifiers <kbd>Shift</kbd> + <kbd>Down</kbd> and <kbd>Shift</kbd> + <kbd>Up</kbd>.
 
 {% tabs %}
 {% highlight Dart %}
 
+    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
+
     @override
     Widget build(BuildContext context){
-     return MaterialApp(
-        home: Scaffold(
-            body: SfDataGrid(
+      return Scaffold(
+          body: SfDataGrid(
+              source: _employeeDataSource,
+              columns: [
+                GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+                GridTextColumn(mappingName: 'name', headerText: 'Name'),
+                GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+                GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+              ],
               selectionMode: SelectionMode.multiple
-            )
-        )
+          )
       );
     }
 
 {% endhighlight %}
 {% endtabs %}
-
-The following image shows for multiple mode row selection.
 
 ![flutter datagrid shows multiple row selection](images/selection/multiple_selection.png)
 
->  When the SelectionMode is `multiple`, multiple rows can be selected or deselected by clicking the respective rows. In multiple selection, pressing navigation keys will move the current cell alone. The rows can be selected or deselected by pressing the <kbd>Space</kbd> key.
+N>  When the selectionMode is `multiple`, multiple rows can be selected or deselected by clicking the respective rows. In multiple selection, pressing navigation keys will move the current cell alone. The rows can be selected or deselected by pressing the <kbd>Space</kbd> key.
 
 ### Disable selection
 
-The selection can be disabled by setting the SelectionMode property as `none`.
+The selection can be disabled by setting the selectionMode property as `none`.
 
 {% tabs %}
 {% highlight Dart %}
 
+    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
+
     @override
     Widget build(BuildContext context){
-     return MaterialApp(
-        home: Scaffold(
-            body: SfDataGrid(
+      return Scaffold(
+          body: SfDataGrid(
+              source: _employeeDataSource,
+              columns: [
+                GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+                GridTextColumn(mappingName: 'name', headerText: 'Name'),
+                GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+                GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+              ],
               selectionMode: SelectionMode.none
-            )
-        )
+          )
       );
     }
 
 {% endhighlight %}
 {% endtabs %}
 
-Selection on a particular row can be disabled by handling the `onCurrentCellActivating` event.
+Selection on a particular row can be disabled by handling the `onCurrentCellActivating` callback.
 
-> You cannot select the header row of SfDataGrid.
+ N> You cannot select the header row of SfDataGrid.
 
 ## Getting selected rows
 
-`DataGridController` is used to obtain the selection properties. The `selectedRow` property returns the data object of the selected row and the `selectedIndex` property returns the index of the `selectedRow` in SfDataGrid. SelectedRow denotes the last selected row in multiple selection.
+You can get the information of selected rows by using controller property. Create an instance of `DataGridController` and set to controller property. The `selectedRow` property returns the data object of the selected row and the `selectedIndex` property returns the index of the `selectedRow` in SfDataGrid. SelectedRow denotes the last selected row in multiple selection.
 
 {% tabs %}
 {% highlight Dart %}
     
-    final DataGridController _dataGridController;
-
-    @override
-    void initState() {
-        this._dataGridController = DataGridController();
-        super.initState();
-    }
-
+    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
+  
+    final DataGridController _dataGridController = DataGridController();
+  
     @override
     Widget build(BuildContext context){
-     return MaterialApp(
-        home: Scaffold(
-            body: SfDataGrid(
-              controller: this._dataGridController
-            )
-        )
+      return Scaffold(
+          body: Column(
+              children:[
+                FlatButton(
+                    child: Text('Get Selection Information'),
+                    onPressed: () {
+                      //SelectedIndex
+                      var _selectedIndex = this._dataGridController.selectedIndex;
+
+                      //SelectedRow    
+                      var _selectedRow = this._dataGridController.selectedRow;
+
+                      //SelectedRows
+                      var _selectedRows = this._dataGridController.selectedRows;
+
+                      print(_selectedIndex);
+                      print(_selectedRow);
+                      print(_selectedRows);
+                    }),
+                Expanded(
+                    child: SfDataGrid(
+                        source: _employeeDataSource,
+                        columns: [
+                          GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+                          GridTextColumn(mappingName: 'name', headerText: 'Name'),
+                          GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+                          GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+                        ],
+                        controller: this._dataGridController,
+                        selectionMode: SelectionMode.multiple
+                    ))
+              ]
+          )
       );
     }
 
 {% endhighlight %}
 {% endtabs %}
 
+N> DataGridController objects are expected to be long-lived, not re-created with each build.
+
+## Programmatic selection
+
+When `selectionMode` is set a value other than `none`, selected row/rows from the code by setting the `DataGridController.selectedIndex`, `DataGridController.selectedRow`, or `DataGridController.selectedRows` property based on the selection mode. To enable selection from code, follow the code example:
+
+When the selection mode is `single`, programmatically select a row in two ways either by setting the row index to the `DataGridController.selectedIndex` property, or by setting the underlying object to be selected to the `DataGridController.selectedRow` property
+
+The following code example shows how to select a row using selectedIndex,
+
 {% tabs %}
 {% highlight Dart %}
+  
+    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
 
-    //SelectedIndex
-    var _selectedIndex = this._dataGridController.selectedIndex;
-
-    //SelectedRow    
-    var _selectedRow = this._dataGridController.selectedRow;
-
-    //SelectedRows
-    var _selectedRows = this._dataGridController.selectedRows;
+    @override
+    Widget build(BuildContext context){
+      return Scaffold(
+          body: SfDataGrid(
+              source: _employeeDataSource,
+              columns: [
+                GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+                GridTextColumn(mappingName: 'name', headerText: 'Name'),
+                GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+                GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+              ],
+              controller: DataGridController(
+                  selectedIndex : 4
+              ),
+              selectionMode: SelectionMode.single
+          )
+      );
+    }
 
 {% endhighlight %}
 {% endtabs %}
 
-> DataGridController objects are expected to be long-lived, not re-created with each build.
-
-## Programmatic selection
-
-When [selectionMode] is set a value other than `none`, selected row/rows from the code by setting the `DataGridController.selectedIndex`, `DataGridController.selectedRow`, or `DataGridController.selectedRows` property based on the selection mode. To enable selection from code, follow the code example:
-
-When the selection mode is `single`, programmatically select a row in two ways either by setting the row index to the `DataGridController.selectedIndex` property, or by setting the underlying object to be selected to the `DataGridController.selectedRow` property
-
-To programmatically select a row from the code, follow the code example:
+The following code example shows how to select a row using selectedRow,
 
 {% tabs %}
 {% highlight Dart %}
 
-    //SelectedIndex
+    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
+
     @override
     Widget build(BuildContext context){
-        return MaterialApp(
-            home: Scaffold(
-                body: SfDataGrid(
-                controller: DataGridController(
-                    selectedIndex : 4
-                )))
-        );
-    }
-    
-    //SelectedRow
-    @override
-    Widget build(BuildContext context){
-        return MaterialApp(
-            home: Scaffold(
-                body: SfDataGrid(
-                controller: DataGridController(
-                    selectedRow : this.employeeData[3]
-                )))
-        );
+      return Scaffold(
+          body: SfDataGrid(
+              source: _employeeDataSource,
+              columns: [
+                GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+                GridTextColumn(mappingName: 'name', headerText: 'Name'),
+                GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+                GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+              ],
+              controller: DataGridController(
+                  selectedRow : this.employeeData[3]
+              ),
+              selectionMode: SelectionMode.single
+          )
+      );
     }
 
 {% endhighlight %}
@@ -226,21 +287,30 @@ Multiple rows can be selected by adding data objects to SelectedRows property.
 
 {% tabs %}
 {% highlight c# %}
+
+    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
     
-    //SelectedRow
     @override
     Widget build(BuildContext context){
-        return MaterialApp(
-            home: Scaffold(
-                body: SfDataGrid(
-                controller: DataGridController(
-                    selectedRows: [
-                        this.employeeData[1],
-                        this.employeeData[3],
-                        this.employeeData[6],
-                    ]
-                )))
-        );
+      return Scaffold(
+          body: SfDataGrid(
+              source: _employeeDataSource,
+              columns: [
+                GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+                GridTextColumn(mappingName: 'name', headerText: 'Name'),
+                GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+                GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+              ],
+              controller: DataGridController(
+                  selectedRows: [
+                    this.employeeData[1],
+                    this.employeeData[3],
+                    this.employeeData[6],
+                  ]
+              ),
+              selectionMode: SelectionMode.multiple
+          )
+      );
     }
 
 {% endhighlight %}
@@ -250,12 +320,44 @@ Multiple rows can be selected by adding data objects to SelectedRows property.
 
 ### Get the current cell
 
-The current cell information such as row index, column index can be retrieved using the [currentCell] property of `DataGridController`. 
+The current cell information such as row index, column index can be retrieved using the `currentCell` property of `DataGridController`. 
 
 {% tabs %}
 {% highlight Dart %}
 
-   var _currentCell = this._dataGridController.currentCell;
+    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
+  
+    final DataGridController _dataGridController = DataGridController();
+  
+    @override
+    Widget build(BuildContext context){
+      return Scaffold(
+          body: Column(
+              children:[
+                FlatButton(
+                    child: Text('Get current cell'),
+                    onPressed: () {
+                      var _currentCell = this._dataGridController.currentCell;
+                      print(_currentCell);
+                    }),
+                Expanded(
+                    child: SfDataGrid(
+                        source: _employeeDataSource,
+                        columns: [
+                          GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+                          GridTextColumn(mappingName: 'name', headerText: 'Name'),
+                          GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+                          GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+                        ],
+                        controller: this._dataGridController,
+                        selectionMode: SelectionMode.single,
+                        navigationMode: GridNavigationMode.cell
+                    )
+                )
+              ]
+          )
+      );
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -263,32 +365,128 @@ The current cell information such as row index, column index can be retrieved us
 
 ### Process current cell
 
-The CurrentCell can be moved to a particular RowColumnIndex by using the `moveCurrentCellTo()` method in `DataGridController`.
+The CurrentCell can be moved to a particular cell by using the `moveCurrentCellTo()` method in `DataGridController`.
 
 {% tabs %}
 {% highlight Dart %}
 
-    this._dataGridController.moveCurrentCellTo(RowColumnIndex(6,4);
+    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
+  
+    final DataGridController _dataGridController = DataGridController();
+  
+    @override
+    Widget build(BuildContext context){
+      return Scaffold(
+          body: Column(
+              children:[
+                FlatButton(
+                    child: Text('Move current cell'),
+                    onPressed: () {
+                      this._dataGridController.moveCurrentCellTo(RowColumnIndex(6,4))
+                    }),
+                Expanded(
+                    child: SfDataGrid(
+                        source: _employeeDataSource,
+                        columns: [
+                          GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+                          GridTextColumn(mappingName: 'name', headerText: 'Name'),
+                          GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+                          GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+                        ],
+                        controller: this._dataGridController,
+                        selectionMode: SelectionMode.single,
+                        navigationMode: GridNavigationMode.cell
+                    )
+                )
+              ]
+          )
+      );
+    }
 
 {% endhighlight %}
 {% endtabs %}
 
 ### Clear selection
 
-Data grid allows you to clear the selection applied in the grid rows by setting the [selectionMode] property to `none`.
+Data grid allows you to clear the selection applied in the grid rows by setting the `DataGridController.selectedIndex` to `-1` or `DataGridController.selectedRow` to null when `selectionMode` property is in `single` or `singleDeselect`. On selectionMode property is in `multiple` you can clear the selection from grid rows by setting the `DataGridController.selectedRows` to `empty`.
+
+The following code example shows how to clear selection when selectionMode proeprty is in `single` or `singleDeselect`,
 
 {% tabs %}
 {% highlight Dart %}
 
-    //Clear selection using selection mode
+    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
+  
+    final DataGridController _dataGridController = DataGridController();
+  
     @override
     Widget build(BuildContext context){
-        return MaterialApp(
-            home: Scaffold(
-                body: SfDataGrid(
-                 selectionMode : SelectionMode.none
-                ))
-        );
+      return Scaffold(
+          body: Column(
+              children:[
+                FlatButton(
+                    child: Text('Get current cell'),
+                    onPressed: () {
+                      this._dataGridController.selectedIndex = -1;
+                      //or
+                      //this._dataGridController.selectedRow = null;
+                    }),
+                Expanded(
+                    child: SfDataGrid(
+                        source: _employeeDataSource,
+                        columns: [
+                          GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+                          GridTextColumn(mappingName: 'name', headerText: 'Name'),
+                          GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+                          GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+                        ],
+                        controller: this._dataGridController,
+                        selectionMode: SelectionMode.single
+                    )
+                )
+              ]
+          )
+      );
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+The following code example shows how to clear selection when selectionMode proeprty is in `multiple`,
+
+{% tabs %}
+{% highlight Dart %}
+
+    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
+  
+    final DataGridController _dataGridController = DataGridController();
+  
+    @override
+    Widget build(BuildContext context){
+      return Scaffold(
+          body: Column(
+              children:[
+                FlatButton(
+                    child: Text('Get current cell'),
+                    onPressed: () {
+                      this._dataGridController.selectedRows = [];
+                    }),
+                Expanded(
+                    child: SfDataGrid(
+                        source: _employeeDataSource,
+                        columns: [
+                          GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+                          GridTextColumn(mappingName: 'name', headerText: 'Name'),
+                          GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+                          GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+                        ],
+                        controller: this._dataGridController,
+                        selectionMode: SelectionMode.multiple
+                    )
+                )
+              ]
+          )
+      );
     }
 
 {% endhighlight %}
@@ -376,7 +574,7 @@ The SfDataGrid will be scrolled to previous set of rows that are not displayed i
 <kbd>Tab</kbd>
 </td>
 <td>
-Moves the current cell to next to the active current cell. If the active current cell is the last cell of the current row, the focus will moved to first cell of the row next to the current row.If the active current cell is the last cell of the last row, the focus will be moved to next control in the tab order of the parent container.
+Moves the current cell to next to the active current cell. If the active current cell is the last cell of the current row, the focus will moved to first cell of the row next to the current row.If the active current cell is the last cell of the last row, the focus will be moved to next widget in the tab order of the parent container.
 </td>
 </tr>
 <tr>
@@ -384,7 +582,7 @@ Moves the current cell to next to the active current cell. If the active current
 <kbd>Shift</kbd> + <kbd>Tab</kbd>
 </td>
 <td>
-Moves the current cell to previous to the active current cell. If the active current cell is the first cell of the current row, the current cell will moved to last cell of the row previous to the current row.If the active current cell is the first cell of the first row, the focus will be moved to previous control in the tab order of the parent container.
+Moves the current cell to previous to the active current cell. If the active current cell is the first cell of the current row, the current cell will moved to last cell of the row previous to the current row.If the active current cell is the first cell of the first row, the focus will be moved to previous widget in the tab order of the parent container.
 </td>
 </tr>
 <tr>
@@ -424,7 +622,7 @@ Moves the current cell to the last cell of the last row.
 <kbd>Enter</kbd>
 </td>
 <td>
-If the active current cell is in edit mode, the changes will committed and moves the current cell to below the active current cell. If the active current cell is in last row, commits changes only and retains in the same cell.
+ The current cell will be moved to the next focused row of the same column.
 </td>
 </tr>
 <tr>
@@ -437,39 +635,47 @@ All rows or cells will be selected.
 </tr>
 </table>
 
- n> When the [navigationMode] property is in `row`, the <kbd>UpArrow</kbd> and <kbd>DownArrow</kbd> only work.
+ N> When the [navigationMode] property is in `row`, the <kbd>UpArrow</kbd> and <kbd>DownArrow</kbd> only work.
 
 ## Callbacks
 
-The data grid provides the following events for selection:
+The data grid provides the following callbacks for selection:
 
- * [onSelectionChanging] : This event is raised while selecting a row at the execution time before the row is selected. So it allows canceling the selection action by return `false`.
- * [onSelectionChanged] : This event is raised after the column is selected.
+ * [onSelectionChanging] : This callback is raised while selecting a row at the execution time before the row is selected. So it allows canceling the selection action by return `false`.
+ * [onSelectionChanged] : This callback is raised after the column is selected.
 
-These two events are triggered with following properties:
+These two callbacks are triggered with following properties:
 
  * newItems: Gets collection of the underlying data objects added for selection.
  * oldItems: Gets collection of the underlying data objects removed from selection.
 
-To hook the `onSelectionChanging` event and cancel the selection. follow the code example:
+To hook the `onSelectionChanging` callback and cancel the selection. follow the code example:
 
 {% tabs %}
 {% highlight Dart %}
 
+    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
+
     @override
     Widget build(BuildContext context){
-        return MaterialApp(
-            home: Scaffold(
-                body: SfDataGrid(
-                 onSelectionChanging: (List<Object> addedRows, List<Object> removedRows){
-                    // apply your logics
-                    return false; // return true to perform selection
-                 },
-                 onSelectionChanged: (List<Object> addedRows, List<Object> removedRows){
-                    // apply your logics
-                 },
-                ))
-        );
+      return Scaffold(
+          body: SfDataGrid(
+            source: _employeeDataSource,
+            columns: [
+              GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+              GridTextColumn(mappingName: 'name', headerText: 'Name'),
+              GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+              GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+            ],
+            onSelectionChanging: (List<Object> addedRows, List<Object> removedRows){
+              // apply your logics
+              return false; // return true to perform selection
+            },
+            onSelectionChanged: (List<Object> addedRows, List<Object> removedRows){
+              // apply your logics
+            },
+          )
+      );
     }
 
 {% endhighlight %}
@@ -481,16 +687,24 @@ To perform custom actions apart from the functionalities mentioned in the above 
 
 {% tabs %}
 {% highlight c# %}
+  
+    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
 
     @override
     Widget build(BuildContext context){
-        return MaterialApp(
-            home: Scaffold(
-                body: SfDataGrid(
-                  selectionMode: SelectionMode.multiple,
-                  selectionManager: CustomSelectionManager(),
-                ))
-        );
+      return Scaffold(
+          body: SfDataGrid(
+            source: _employeeDataSource,
+            columns: [
+              GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+              GridTextColumn(mappingName: 'name', headerText: 'Name'),
+              GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+              GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+            ],
+            selectionMode: SelectionMode.multiple,
+            selectionManager: CustomSelectionManager(),
+          )
+      );
     }
 
     class CustomSelectionManager extends RowSelectionManager{
@@ -517,23 +731,32 @@ When pressing the <kbd>Enter</kbd> key, the current cell will be moved to the ne
 
 {% tabs %}
 {% highlight c# %}
-
+   
+    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
+    
     @override
     Widget build(BuildContext context){
-        return MaterialApp(
-            home: Scaffold(
-                body: SfDataGrid(
-                  selectionMode: SelectionMode.multiple,
-                  navigationMode: GridNavigationMode.cell,
-                  selectionManager: CustomSelectionManager(),
-                ))
-        );
+      return MaterialApp(
+          home: Scaffold(
+              body: SfDataGrid(
+                source: _employeeDataSource,
+                columns: [
+                  GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+                  GridTextColumn(mappingName: 'name', headerText: 'Name'),
+                  GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+                  GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+                ],
+                selectionMode: SelectionMode.multiple,
+                navigationMode: GridNavigationMode.cell,
+                selectionManager: CustomSelectionManager(),
+              ))
+      );
     }
 
     class CustomSelectionManager extends RowSelectionManager{
         @override
         void handleKeyEvent(RawKeyEvent keyEvent) {
-            if(keyEvent.logicalKey == LogicalKeyboardKey.arrowDown{
+            if(keyEvent.logicalKey == LogicalKeyboardKey.enter){
                 if(keyEvent.isControlPressed){
                     //apply your logic
                     return;
@@ -552,29 +775,37 @@ When pressing the <kbd>Enter</kbd> key, the current cell will be moved to the ne
 SfDataGrid allows to customize the appearance of the selected rows and current cell through `SfDataGridTheme.SfDataGridThemeData` property.
 
 ### Selection
-The selection background and foreground color can be changed  of by [selectionStyle] property of `SfDataGridThemeData` in `SfDataGridTheme`.
+The selection background and foreground color can be changed by [selectionStyle] property of `SfDataGridThemeData` in `SfDataGridTheme`.
 
 {% tabs %}
 {% highlight Dart %}
 
+    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
+
     @override
     Widget build(BuildContext context) {
-      return MaterialApp(
-          home: Scaffold(
-              body: SfDataGridTheme(
-                  data: SfDataGridThemeData(
-                      selectionStyle: DataGridCellStyle(
-                          backgroundColor: Colors.red,
-                          textStyle: TextStyle(
-                            fontFamily: 'Raleway',
-                            fontWeight: FontWeight.w300,
-                            color: Colors.white,
-                          )
-                      )),
-                  child: SfDataGrid(
-                    selectionMode: SelectionMode.multiple,
-                  ))
-          ));
+      return Scaffold(
+          body: SfDataGridTheme(
+              data: SfDataGridThemeData(
+                  selectionStyle: DataGridCellStyle(
+                      backgroundColor: Colors.red,
+                      textStyle: TextStyle(
+                        fontFamily: 'Raleway',
+                        fontWeight: FontWeight.w300,
+                        color: Colors.white,
+                      )
+                  )),
+              child: SfDataGrid(
+                source: _employeeDataSource,
+                columns: [
+                  GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+                  GridTextColumn(mappingName: 'name', headerText: 'Name'),
+                  GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+                  GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+                ],
+                selectionMode: SelectionMode.multiple,
+              ))
+      );
     }
 
 {% endhighlight %}
@@ -584,27 +815,34 @@ The selection background and foreground color can be changed  of by [selectionSt
 
 ### Current cell
 
-The BorderColor and BorderThickness of the current cell can be changed by [currentCellStyle] property of `SfDataGridThemeData` in `SfDataGridTheme`.
+The current cell border's color and thickness can be changed by `currentCellStyle` property of `SfDataGridThemeData` in `SfDataGridTheme`.
 
 {% tabs %}
 {% highlight Dart %}
 
+    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
+
     @override
     Widget build(BuildContext context){
-        return MaterialApp(
-            home: Scaffold(
-                body: SfDataGridTheme(
-                    data: SfDataGridThemeData(
-                        currentCellStyle: DataGridCurrentCellStyle(
-                            borderWidth: 2,
-                            borderColor: Colors.pinkAccent
-                        )
-                    ),
-                    child: SfDataGrid(
-                        selectionMode: SelectionMode.multiple,
-                    ))
-            )
-        );
+      return Scaffold(
+          body: SfDataGridTheme(
+              data: SfDataGridThemeData(
+                  currentCellStyle: DataGridCurrentCellStyle(
+                      borderWidth: 2,
+                      borderColor: Colors.pinkAccent
+                  )
+              ),
+              child: SfDataGrid(
+                source: _employeeDataSource,
+                columns: [
+                  GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+                  GridTextColumn(mappingName: 'name', headerText: 'Name'),
+                  GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+                  GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+                ],
+                selectionMode: SelectionMode.multiple,
+              ))
+      );
     }
 
 {% endhighlight %}
