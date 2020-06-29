@@ -64,11 +64,11 @@ Widget build(BuildContext context) {
 }
 ```
 
-## Adding a GeoJSON file
+## Add a GeoJSON file
 
-The [layers] in [SfMaps] contains collection of [MapShapeLayer]. The actual geographical rendering is done in the each [MapShapeLayer]. The [delegate] property of the [MapShapeLayer] is of type [MapShapeLayerDelegate]. The path of the .json file which contains the GeoJSON data has to be set to the [shapeFile] property of the [MapShapeLayerDelegate].
+The `layers` in `SfMaps` contains collection of `MapShapeLayer`. The actual geographical rendering is done in the each `MapShapeLayer`. The `delegate` property of the `MapShapeLayer` is of type `MapShapeLayerDelegate`. The path of the .json file which contains the GeoJSON data has to be set to the `shapeFile` property of the `MapShapeLayerDelegate`.
 
-The [shapeDataField] property of the [MapShapeLayerDelegate] is used to refer the unique field name in the .json file to identify each shapes. In 'Adding a data source' section of this document, this [shapeDataField] will be used to map with respective value returned in [primaryValueMapper] from the data source.
+The `shapeDataField` property of the `MapShapeLayerDelegate` is used to refer the unique field name in the .json file to identify each shapes. In 'Mapping the data source' section of this document, this `shapeDataField` will be used to map with respective value returned in `primaryValueMapper` from the data source.
 
 ```dart
 @override
@@ -91,9 +91,9 @@ Widget build(BuildContext context) {
 
 ![maps basic view](images/getting-started/map_basic_view.png)
 
-## Adding a data source
+## Mapping the data source
 
-By default, the value specified for the [shapeDataField] in the GeoJSON file will be used in the elements like data labels, tooltip, and legend for their respective shapes. However, it is possible to keep a data source and customize these elements based on the requirement. As mentioned above, [shapeDataField] will be used to map with respective value returned in [primaryValueMapper] from the data source.
+By default, the value specified for the `shapeDataField` in the GeoJSON file will be used in the elements like data labels, tooltip, and legend for their respective shapes. However, it is possible to keep a data source and customize these elements based on the requirement. As mentioned above, `shapeDataField` will be used to map with respective value returned in `primaryValueMapper` from the data source.
 
 ```dart
 List<Model> data;
@@ -122,7 +122,7 @@ Widget build(BuildContext context) {
                 shapeFile: 'assets/world_map.json',
                 shapeDataField: 'continent',
                 dataCount: data.length,
-                primaryValueMapper: (index) => data[index].country,
+                primaryValueMapper: (index) => data[index].continent,
               ),
           ),
         ],
@@ -133,14 +133,14 @@ Widget build(BuildContext context) {
 
 class Model {
   const Model(this.country, this.code);
-  final String country;
+  final String continent;
   final String code;
 }
 ```
 
 ## Add title
 
-You can add a title to the maps to provide a quick information about the data plotted in the map using the [title] property in the [SfMaps].
+You can add a title to the maps to provide a quick information about the data plotted in the map using the `title` property in the `SfMaps`.
 
 ```dart
 @override
@@ -148,7 +148,7 @@ Widget build(BuildContext context) {
   return Scaffold(
     body: Center(
       child: SfMaps(
-        title: MapTitle(text:'World map'),
+        title: const MapTitle(text:'World map'),
         layers: <MapLayer>[
           MapShapeLayer(
           delegate: const MapShapeLayerDelegate(
@@ -165,7 +165,7 @@ Widget build(BuildContext context) {
 
 ## Add data label
 
-You can show data labels using the [showDataLabels] property in the [MapShapeLayer] and also, it is possible to show data labels only for the particular shapes/or show custom text using the [dataLabelMapper] property in the [MapShapeLayerDelegate].
+You can show data labels using the `showDataLabels` property in the `MapShapeLayer` and also, it is possible to show data labels only for the particular shapes/or show custom text using the `dataLabelMapper` property in the `MapShapeLayerDelegate`.
 
 ```dart
 List<Model> data;
@@ -192,14 +192,14 @@ Widget build(BuildContext context) {
             child: Padding(
               padding: EdgeInsets.only(left: 15, right: 15),
               child: SfMaps(
-                title: MapTitle(text: 'World map'),
+                title: const MapTitle(text: 'World map'),
                 layers: <MapLayer>[
                   MapShapeLayer(
                     delegate: MapShapeLayerDelegate(
                       shapeFile: 'assets/world_map.json',
                       shapeDataField: 'continent',
                       dataCount: data.length,
-                      primaryValueMapper: (index) => data[index].country,
+                      primaryValueMapper: (index) => data[index].continent,
                       dataLabelMapper: (index) => data[index].code,
                     ),
                     showDataLabels: true,
@@ -213,9 +213,9 @@ Widget build(BuildContext context) {
 }
 
 class Model {
-  const Model(this.country, this.code, this.color);
+  const Model(this.continent, this.code, this.color);
 
-  final String country;
+  final String continent;
   final String code;
   final Color color;
 }
@@ -225,7 +225,7 @@ class Model {
 
 ## Add legend
 
-You can show legend using the [showLegend] property in the [MapShapeLayer]. The icon color of the legend is applied based on the color returned in the [shapeColorValueMapper] property in the [MapShapeLayerDelegate]. It is possible to customize the legend item's color and text using the [shapeColorMappers] property in the [MapShapeLayerDelegate].
+You can show legend using the `showLegend` property in the `MapShapeLayer`. The icon color of the legend is applied based on the color returned in the `shapeColorValueMapper` property in the `MapShapeLayerDelegate`. It is possible to customize the legend item's color and text using the `shapeColorMappers` property in the `MapShapeLayerDelegate`.
 
 ```dart
 List<Model> data;
@@ -252,14 +252,14 @@ Widget build(BuildContext context) {
             child: Padding(
               padding: EdgeInsets.only(left: 15, right: 15),
               child: SfMaps(
-                title: MapTitle(text: 'World map'),
+                title: const MapTitle(text: 'World map'),
                 layers: <MapLayer>[
                   MapShapeLayer(
                     delegate: MapShapeLayerDelegate(
                       shapeFile: 'assets/world_map.json',
                       shapeDataField: 'continent',
                       dataCount: data.length,
-                      primaryValueMapper: (index) => data[index].country,
+                      primaryValueMapper: (index) => data[index].continent,
                       dataLabelMapper: (index) => data[index].code,
                       shapeColorValueMapper: (index) => data[index].color,
                     ),
@@ -275,9 +275,9 @@ Widget build(BuildContext context) {
 }
 
 class Model {
-  const Model(this.country, this.code, this.color);
+  const Model(this.continent, this.code, this.color);
 
-  final String country;
+  final String continent;
   final String code;
   final Color color;
 }
@@ -287,7 +287,7 @@ class Model {
 
 ## Add tooltip
 
-You can enable tooltip for the shapes using the [enableShapeTooltip] property in the [MapShapeLayer] and also, it is possible to enable tooltip only for the particular shapes/or show custom text using the [shapeTooltipTextMapper] property in the [MapShapeLayerDelegate].
+You can enable tooltip for the shapes using the `enableShapeTooltip` property in the `MapShapeLayer` and also, it is possible to enable tooltip only for the particular shapes/or show custom text using the `shapeTooltipTextMapper` property in the `MapShapeLayerDelegate`.
 
 ```dart
 
@@ -315,17 +315,17 @@ Widget build(BuildContext context) {
             child: Padding(
               padding: EdgeInsets.only(left: 15, right: 15),
               child: SfMaps(
-                title: MapTitle(text: 'World map'),
+                title: const MapTitle(text: 'World map'),
                 layers: <MapLayer>[
                   MapShapeLayer(
                     delegate: MapShapeLayerDelegate(
                       shapeFile: 'assets/world_map.json',
                       shapeDataField: 'continent',
                       dataCount: data.length,
-                      primaryValueMapper: (index) => data[index].country,
+                      primaryValueMapper: (index) => data[index].continent,
                       dataLabelMapper: (index) => data[index].code,
                       shapeColorValueMapper: (index) => data[index].color,
-                      shapeTooltipTextMapper: (index) => data[index].country,
+                      shapeTooltipTextMapper: (index) => data[index].continent,
                     ),
                     showDataLabels: true,
                     showLegend: true,
@@ -343,9 +343,9 @@ Widget build(BuildContext context) {
 }
 
 class Model {
-  const Model(this.country, this.code, this.color);
+  const Model(this.continent, this.code, this.color);
 
-  final String country;
+  final String continent;
   final String code;
   final Color color;
 }
