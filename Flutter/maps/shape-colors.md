@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Shape colors in Syncfusion Flutter Maps | Syncfusion
-description: This section explains about how to fill different colors to the shapes in the Flutter maps application.
+description: This section explains how to apply colors to the shapes based on specific values in the Flutter maps.
 platform: Flutter
 control: SfMaps
 documentation: ug
@@ -13,17 +13,13 @@ You can categorize the shapes on a map by customizing their color based on the u
 
 ## Based on underlying value
 
-You can apply color to the shape by setting the color directly to the [`shapeColorValueMapper`] property in the [MapShapeLayerDelegate] based on the color of underlying model. You can either set color or value to the [`shapeColorValueMapper`] property.
+You can apply color to the shape by setting the color directly to the `shapeColorValueMapper` property in the `MapShapeLayerDelegate` based on the color of underlying model. You can either return a color or a value from the `shapeColorValueMapper`.
 
-If you set a color to the [`shapeColorValueMapper`] property, then the color will be applied to the shape
-straightaway.
+If you return a color from the `shapeColorValueMapper`, then the color will be applied to the respective shape straightaway.
 
-If you set a value other than the color to the [`shapeColorValueMapper`] property, then you must set the [`MapShapeLayer.shapeColorMappers`] property which is a collection of [`MapColorMapper`] to apply color for the shape.
+If you return a value of different type other than the color from the `shapeColorValueMapper`, then you must set the `MapShapeLayer.shapeColorMappers` property which is a collection of `MapColorMapper` to apply colors for the respective shapes.
 
-N>
-* By default, the legend icon and text color will be applied based on the [`shapeDataField`] property.
-* If [`MapShapeLayerDelegate.shapeColorMappers`] is `null`, then the colors returned from [`MapShapeLayerDelegate.shapeColorValueMapper`] will be used for the legend icon and the legend text will be taken from the [`MapShapeLayerDelegate.primaryValueMapper`].
-* If [`MapShapeLayerDelegate.shapeColorMappers`] is not null, then [`MapColorMapper.color`] and [`MapColorMapper.text`] will be used for legend icon and the legend text respectively.
+N> You can show legend using the `showLegend` property in the `MapShapeLayer`. The icon color of the legend is applied based on the color returned in the `shapeColorValueMapper` property in the `MapShapeLayerDelegate` and the text will be taken from `primaryValueMapper`. It is possible to customize the legend item's color and text using the `shapeColorMappers` property in the `MapShapeLayerDelegate`.
 
 ```dart
 List<Model> data;
@@ -81,9 +77,7 @@ class Model {
 
 ## Equal color mapping
 
-You can apply color to the shape based on the specific value set to the [`MapColorMapper.value`] and [`MapColorMapper.color`] properties of the [`shapeColorMappers`].
-
-I> The legend icon color and text color will be applied based on the value of [`MapColorMapper.color`] and [`MapColorMapper.text`] properties respectively.
+You can apply color to the shape by comparing a value that returns from the `shapeColorValueMapper` property and setting the different `MapColorMapper.color` based on the value given in the `MapColorMapper.value` property of `shapeColorMappers`.
 
 ```dart
  List<Model> data;
@@ -142,9 +136,7 @@ class Model {
 
 ## Range color mapping
 
-You can apply color to the shape based on the range of values set to the [`MapColorMapper.from`], [`MapColorMapper.to`], and [`MapColorMapper.color`] properties of the [`shapeColorMappers`].
-
-I> The legend icon color and text color will be applied based on the value of [`MapColorMapper.color`] and [`MapColorMapper.text`] properties respectively.
+You can apply color to the shape by comparing a value that returns from the `shapeColorValueMapper` property and setting the different `MapColorMapper.color` based on the range given in the `MapColorMapper.from` and `MapColorMapper.to` properties of `shapeColorMappers`.
 
 ```dart
 List<Model> data;
@@ -178,7 +170,8 @@ Widget build(BuildContext context) {
                   shapeColorMappers: [
                     MapColorMapper(from: 0, to: 100, color: Colors.red),
                     MapColorMapper(from: 101, to: 300, color: Colors.green)
-                  ]),
+                  ]
+               ),
             )
           ],
         ),
