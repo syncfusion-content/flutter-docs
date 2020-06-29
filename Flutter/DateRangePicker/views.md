@@ -111,6 +111,28 @@ Widget build(BuildContext context) {
 
 ![Century view Date Range Picker](images/views/numberofweek-in-view.png)
 
+## Multi-date picker view
+You can enable a multi-date range picker by using the [enableMultiView] property of `SfDateRangePicker`, which displays two date range pickers side by side, the space between the two date-range picker can be customized by using the [viewSpacing] property of `SfDateRangePicker`.
+
+{% tabs %}
+{% highlight Dart %}
+
+Widget build(BuildContext context) {
+  return MaterialApp(
+    home: Scaffold(
+      body: SfDateRangePicker(
+        enableMultiView: true,
+        viewSpacing: 20,
+      ),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Multi-date picker view](images/views/multi-picker-view.jpg)
+
 ## See also
 
 [How to switch between the date range picker views in the Flutter date range picker (SfDateRangePicker)?](https://www.syncfusion.com/kb/11305/how-to-switch-between-the-date-range-picker-views-in-flutter-date-range-picker)
