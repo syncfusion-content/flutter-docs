@@ -13,7 +13,7 @@ You can add information to shapes such as population density, number of users, a
 
 ## Show bubbles
 
-You can show bubbles using the [`showBubbles`] property in the [`MapShapeLayer`] and the [`bubbleSizeMapper`] property which is used to specify size to the bubble in the [`MapShapeLayerDelegate`].
+You can show bubbles using the `showBubbles` property in the `MapShapeLayer` and the `bubbleSizeMapper` property of the `MapShapeLayerDelegate` is used to specify size to the bubble.
 
 ```dart
 List<Model> data;
@@ -67,12 +67,12 @@ class Model {
 
 ## Bubbles customization
 
-You can customize the bubbles using the [`minRadius`], [`maxRadius`], [`color`], [`strokeWidth`], and [`strokeColor`] properties in the [`bubbleSettings`] property.
+You can customize the bubbles using the `minRadius`, `maxRadius`, `color`, `strokeWidth`, and `strokeColor` properties in the `bubbleSettings` property.
 
 N>
-* The default value of the [`minRadius`] property is `10.0`.
-* The default value of the [`maxRadius`] property is `50.0`.
-* The default value of the [`opacity`] property is `0.75`.
+* The default value of the `minRadius` property is `10.0`.
+* The default value of the `maxRadius` property is `50.0`.
+* The default value of the `opacity` property is `0.75`.
 
 ```dart
 List<Model> data;
