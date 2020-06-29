@@ -197,7 +197,7 @@ class Model {
 
 ## Bubbles palette
 
-You can customize the bubble color based on the value returned from the `bubbleColorValueMapper` property.
+You can customize the bubble color based on the value returned from the `bubbleColorValueMapper` property in the `MapShapeLayerDelegate`.
 
 ```dart
  List<Model> data;
