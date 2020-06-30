@@ -73,6 +73,37 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+## Long press callback
+The [onLongPress] callback called whenever the `SfCalendar` elements long pressed on view.
+
+The long-pressed date, appointments, and element details when the long-press action performed on element available in the [CalendarLongPressDetails].
+
+`date` - returns the long-pressed date.
+`appointments` - returns the long-pressed appointments.
+`targetElement` - returns the long-pressed calendar element.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Container(
+      child: SfCalendar(
+        view: CalendarView.week,
+        onLongPress: (CalendarLongPressDetails details) {
+          DateTime date = details.date;
+          dynamic appointments = details.appointments;
+          CalendarElement view = details.targetElement;
+        },
+      ),
+    )));
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
 ## See also
 
 [How to get visible dates details from the flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/11026/how-to-get-visible-dates-details-from-the-flutter-event-calendar-sfcalendar)
