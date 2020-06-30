@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Legend in Syncfusion Flutter Maps | Syncfusion
-description: This section explains how to show legend and customize its appearance in the Flutter maps.
+description: This section explains how to show legend in the Flutter maps and customize its appearance including text, icon, position, etc.
 platform: Flutter
 control: SfMaps
 documentation: ug
