@@ -38,7 +38,7 @@ SfDataGrid allows you to customize the height of the header row by using the `he
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows height for header row ](images/row-height-customization/flutter-datagrid-rowHeaderHeight.jpg)
+![flutter datagrid shows height for header row ](images/row-height-customization/flutter-datagrid-header-row-height.jpg)
 
 ## Set height for rows except header row
 
@@ -66,7 +66,7 @@ You can customize the height of the grid rows in `SfDataGrid` by using the `rowH
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows height for rows except header row ](images/row-height-customization/flutter-datagrid-rowHeight.jpg)
+![flutter datagrid shows height for rows except header row ](images/row-height-customization/flutter-datagrid-row-height.jpg)
 
 ## Fit row height based on its content
 
@@ -112,7 +112,7 @@ To access the `getAutoRowHeight` method, create an instance of `ColumnSizer`, se
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows row height based on its content](images/row-height-customization/flutter-datagrid-contentBasedRowHeight.jpg)
+![flutter datagrid shows auto fit row height](images/row-height-customization/flutter-datagrid-auto-fit-row.jpg)
 
 ### Auto fit row height options
 
