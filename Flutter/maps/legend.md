@@ -13,7 +13,7 @@ You can provide clear information on the data plotted in the map. You can use th
 
 ## Show legend
 
-You can show legend using the `showLegend` property in the `MapShapeLayer`. The legend text is rendered based on the value of `shapeDataField` property.
+You can show legend using the `showLegend` property in the `MapShapeLayer`. The legend text is rendered based on the value of `shapeDataField` property. The default value of the `showLegend` property is `false`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -181,21 +181,21 @@ class Model {
 
 You can customize the legend items using the following properties.
 
-* **showIcon** - You can show or hide the legend icon. The default value of the `showIcon` property is `true`.
-* **position** - You can position the legend in the different directions. The default value of the `position` property is `MapLegendPosition.top`. The `MapLegendPosition` contains four values such as `left`, `right`, `top`, and `bottom`.
-* **overflowMode** - You can wrap or scroll the legend items. The default value of the `overflowMode` property is `MapLegendOverflowMode.wrap`. The `MapLegendOverflowMode` contains two values such as `scroll` and `wrap`. If the legend position is left or right, then scroll direction is vertical and the legend position is top or bottom, then scroll direction is horizontal.
-* **iconType** - You can change the icon shape. The default value of the `iconType` property is `MapIconType.circle`. The `MapIconType` contains four values such as `circle`, `square`, `triangle`, and `diamond`.
-* **iconSize** - You can change the size of the icon. The default value of the `iconType` is `Size(12.0, 12.0)`.
-* **offset** - You can place the legend in custom position. The default value of the `offset` property is `null`.
-* **itemsSpacing** - You can provide space between the each legend items. The default value of the `itemsSpacing` is `10.0`.
-* **direction** - You can arrange the legend items in either horizontal or vertical direction. It defaults to `horizontal`, if the value of the `position` property is `top`, `bottom` or `null` and defaults to `vertical`, if the value of the `position` property is `left` or `right`.
-* **padding** - You can set padding around the legend. The default value of the `padding` property is `EdgeInsets.all(10.0)`.
-* **textStyle** - You can customize the legend text style.
-* **enableToggleInteraction** - You can enable the toggle interaction for the legend items. The default value of the `enableToggleInteraction` property is `false`.
-* **toggledShapeColor** - You can fill the selected legend item icon and it's shape using the `toggledShapeColor` property.
-* **toggledShapeStrokeColor** - You can change the stroke color which applies to selected legend item's shape using the `toggledShapeStrokeColor` property.
-* **toggledShapeStrokeWidth** - You can change the stroke width which applies to selected legend item's shape using the `toggledShapeStrokeWidth` property.
-* **toggledShapeOpacity** - You can set the color opacity to the selected legend item's shape using the `toggledShapeOpacity` property.
+* **showIcon** - Used to show or hide the legend icon. The default value of the `showIcon` property is `true`.
+* **position** - Used to position the legend in the different directions. The default value of the `position` property is `MapLegendPosition.top`. The `MapLegendPosition` contains four values such as `left`, `right`, `top`, and `bottom`.
+* **overflowMode** - Used to wrap or scroll the legend items. The default value of the `overflowMode` property is `MapLegendOverflowMode.wrap`. The `MapLegendOverflowMode` contains two values such as `scroll` and `wrap`. If the legend position is left or right, then scroll direction is vertical and the legend position is top or bottom, then scroll direction is horizontal.
+* **iconType** - Used to change the icon shape. The default value of the `iconType` property is `MapIconType.circle`. The `MapIconType` contains four values such as `circle`, `square`, `triangle`, and `diamond`.
+* **iconSize** - Used to change the size of the icon. The default value of the `iconType` is `Size(12.0, 12.0)`.
+* **offset** - Used to place the legend in custom position. The default value of the `offset` property is `null`.
+* **itemsSpacing** - Used to provide space between the each legend items. The default value of the `itemsSpacing` is `10.0`.
+* **direction** - Used to arrange the legend items in either horizontal or vertical direction. It defaults to `horizontal`, if the value of the `position` property is `top`, `bottom` or `null` and defaults to `vertical`, if the value of the `position` property is `left` or `right`.
+* **padding** - Used to set padding around the legend. The default value of the `padding` property is `EdgeInsets.all(10.0)`.
+* **textStyle** - Used to customize the legend text style.
+* **enableToggleInteraction** - Used to enable the toggle interaction for the legend items. The default value of the `enableToggleInteraction` property is `false`.
+* **toggledShapeColor** - Used to fill the selected legend item icon and it's shape using the `toggledShapeColor` property.
+* **toggledShapeStrokeColor** - Used to change the stroke color which applies to selected legend item's shape using the `toggledShapeStrokeColor` property.
+* **toggledShapeStrokeWidth** - Used to change the stroke width which applies to selected legend item's shape using the `toggledShapeStrokeWidth` property.
+* **toggledShapeOpacity** - Used to set the color opacity to the selected legend item's shape using the `toggledShapeOpacity` property.
 
 {% tabs %}
 {% highlight Dart %}

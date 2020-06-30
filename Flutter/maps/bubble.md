@@ -13,7 +13,7 @@ You can add information to shapes such as population density, number of users, a
 
 ## Show bubbles
 
-You can show bubbles using the `showBubbles` property in the `MapShapeLayer` and the `bubbleSizeMapper` property of the `MapShapeLayerDelegate` is used to specify size to the bubble.
+You can show bubbles using the `showBubbles` property in the `MapShapeLayer` and the `MapShapeLayerDelegate.bubbleSizeMapper` property is used to specify size to the bubble. The default value of the `showBubbles` property is `false`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -141,7 +141,7 @@ class Model {
 
 ## Bubbles tooltip
 
-You can show tooltip for the bubbles using the `enableBubbleTooltip` property in the `MapShapeLayer`. It is possible to customize the bubble tooltip text using the `bubbleTooltipTextMapper` properties.
+You can show tooltip for the bubbles using the `MapShapeLayer.enableBubbleTooltip` property. It is possible to customize the bubble tooltip text using the `bubbleTooltipTextMapper` properties. The default value of the `enableBubbleTooltip` property is `false`.
 
 {% tabs %}
 {% highlight Dart %}
