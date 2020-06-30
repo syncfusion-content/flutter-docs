@@ -45,7 +45,7 @@ The appearance of cell can be customized by using the `SfDataGridThemeData.cellS
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows rows with styling](images/styles/styling_rows.png)
+![flutter datagrid shows rows with styling](images/styles/flutter-datagrid-rows-styling.png)
 
 ## Styling column header
 
@@ -82,7 +82,7 @@ The appearance of cell can be customized by using the `SfDataGridThemeData.cellS
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows column header with styling](images/styles/styling_column_header.png)
+![flutter datagrid shows column header with styling](images/styles/flutter-datagrid-column-header-styling.png)
 
 ## Styling grid lines
 
@@ -116,7 +116,7 @@ Color and thickness of the grid lines can be changed by using the `SfDataGridThe
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows customizing a grid lines](images/styles/styling_gridline_customization.png)
+![flutter datagrid shows customizing the grid lines](images/styles/flutter-datagrid-gridline-customization.png)
 
 ## Show vertical and horizontal grid lines
 
@@ -153,4 +153,4 @@ The following code describes how to draw both vertical and horizontal grid lines
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows both grid lines](images/styles/styling_both_gridlines.png)
+![flutter datagrid shows both grid lines](images/styles/flutter-datagrid-gridlines.png)

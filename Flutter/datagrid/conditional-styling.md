@@ -57,7 +57,7 @@ The appearance of the cells in SfDataGrid can be customized conditionally based 
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows styling a cell based on content](images/conditional-styling/style_based_on_content_cells.png)
+![flutter datagrid shows styling a cell based on content](images/conditional-styling/flutter-datagrid-cells-styling-based-on-content.png)
 
 ### Styling Alternate Cells
 
@@ -100,7 +100,7 @@ The appearance of the alternating cells in a column can be customized conditiona
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows styling an alternate cells](images/conditional-styling/style_based_on_alternate_cells.png)
+![flutter datagrid shows styling alternate cells](images/conditional-styling/flutter-datagrid-alternate-cells-styling.png)
 
 ## Rows
 
@@ -144,7 +144,7 @@ The appearance of the rows in SfDataGrid can be customized conditionally based o
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows styling a row based on content](images/conditional-styling/styles_based_on_content_rows.png)
+![flutter datagrid shows styling a row based on content](images/conditional-styling/flutter-datagrid-rows-styling-based-on-content.png)
 
 ### Styling Alternate Rows
 
@@ -184,4 +184,4 @@ The appearance of the alternating rows in SfDataGrid can be customized by using 
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows styling a row based on content](images/conditional-styling/styles_based_on_alternate_rows.png)
+![flutter datagrid shows styling alternate rows](images/conditional-styling/flutter-datagrid-alternate-rows-styling.png)
