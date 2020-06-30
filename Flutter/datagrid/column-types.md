@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Conditional Styling feature of Syncfusion Flutter DataGrid | DataTable
-description: Learn about Column Types and its properties in Syncfusion Flutter DataGrid
+description: Learn how to use and customize the different types of column and its properties in Syncfusion Flutter DataGrid
 platform: flutter
 control: SfDataGrid
 documentation: ug
