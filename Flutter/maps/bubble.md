@@ -15,7 +15,9 @@ You can add information to shapes such as population density, number of users, a
 
 You can show bubbles using the `showBubbles` property in the `MapShapeLayer` and the `bubbleSizeMapper` property of the `MapShapeLayerDelegate` is used to specify size to the bubble.
 
-```dart
+{% tabs %}
+{% highlight Dart %}
+
 List<Model> data;
 
 @override
@@ -61,7 +63,9 @@ class Model {
   final String continent;
   final double countriesCount;
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ![Bubble support](images/bubble/default-bubble.png)
 
@@ -74,7 +78,9 @@ N>
 * The default value of the `maxRadius` property is `50.0`.
 * The default value of the `opacity` property is `0.75`.
 
-```dart
+{% tabs %}
+{% highlight Dart %}
+
 List<Model> data;
 
 @override
@@ -127,7 +133,9 @@ class Model {
   final String continent;
   final double countriesCount;
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ![Bubble customization](images/bubble/bubble-customization.png)
 
@@ -135,7 +143,9 @@ class Model {
 
 You can show tooltip for the bubbles using the `enableBubbleTooltip` property in the `MapShapeLayer`. It is possible to customize the bubble tooltip text using the `bubbleTooltipTextMapper` properties.
 
-```dart
+{% tabs %}
+{% highlight Dart %}
+
 List<Model> data;
 
   @override
@@ -190,7 +200,9 @@ class Model {
   final String continent;
   final double countriesCount;
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ![Bubble tooltip](images/bubble/bubble-tooltip.png)
 
@@ -202,7 +214,9 @@ If `bubbleColorValueMapper` returns a color, then the color will be applied to t
 
 If `bubbleColorValueMapper` returns a value other than the color, then you must set the `MapShapeLayer.bubbleColorMappers` property. The value returned from the `bubbleColorValueMapper` will be used for the comparison in the `MapColorMapper.value` or `MapColorMapper.from` and `MapColorMapper.to`. Then, the `MapColorMapper.color` will be applied to the respective bubble.
 
-```dart
+{% tabs %}
+{% highlight Dart %}
+
  List<Model> data;
 
   @override
@@ -258,5 +272,8 @@ class Model {
   final double countriesCount;
   final Color bubbleColor;
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 ![Bubble palette](images/bubble/bubble-palette.png)

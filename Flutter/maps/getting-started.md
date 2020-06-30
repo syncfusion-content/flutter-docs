@@ -53,7 +53,9 @@ import 'package:syncfusion_flutter_maps/maps.dart';
 
 After importing the package, initialize the maps widget as a child of any widget.
 
-```dart
+{% tabs %}
+{% highlight Dart %}
+
 @override
 Widget build(BuildContext context) {
   return Scaffold(
@@ -62,7 +64,9 @@ Widget build(BuildContext context) {
     ),
   );
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Add a GeoJSON file
 
@@ -70,7 +74,9 @@ The `layers` in `SfMaps` contains collection of `MapShapeLayer`. The actual geog
 
 The `shapeDataField` property of the `MapShapeLayerDelegate` is used to refer the unique field name in the .json file to identify each shapes. In 'Mapping the data source' section of this document, this `shapeDataField` will be used to map with respective value returned in `primaryValueMapper` from the data source.
 
-```dart
+{% tabs %}
+{% highlight Dart %}
+
 @override
 Widget build(BuildContext context) {
   return Scaffold(
@@ -87,7 +93,9 @@ Widget build(BuildContext context) {
     ),
   );
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ![maps basic view](images/getting-started/map_basic_view.png)
 
@@ -95,7 +103,9 @@ Widget build(BuildContext context) {
 
 By default, the value specified for the `shapeDataField` in the GeoJSON file will be used in the elements like data labels, tooltip, and legend for their respective shapes. However, it is possible to keep a data source and customize these elements based on the requirement. As mentioned above, `shapeDataField` will be used to map with respective value returned in `primaryValueMapper` from the data source.
 
-```dart
+{% tabs %}
+{% highlight Dart %}
+
 List<Model> data;
 
 @override
@@ -136,13 +146,17 @@ class Model {
   final String continent;
   final String code;
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Add title
 
 You can add a title to the maps to provide a quick information about the data plotted in the map using the `title` property in the `SfMaps`.
 
-```dart
+{% tabs %}
+{% highlight Dart %}
+
 @override
 Widget build(BuildContext context) {
   return Scaffold(
@@ -160,14 +174,19 @@ Widget build(BuildContext context) {
     ),
   );
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 ![maps title](images/getting-started/map_title.png)
 
 ## Add data label
 
 You can show data labels using the `showDataLabels` property in the `MapShapeLayer` and also, it is possible to show data labels only for the particular shapes/or show custom text using the `dataLabelMapper` property in the `MapShapeLayerDelegate`.
 
-```dart
+{% tabs %}
+{% highlight Dart %}
+
 List<Model> data;
 
 @override
@@ -219,7 +238,9 @@ class Model {
   final String code;
   final Color color;
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ![maps data labels](images/getting-started/map_data_labels.png)
 
@@ -227,7 +248,9 @@ class Model {
 
 You can show legend using the `showLegend` property in the `MapShapeLayer`. The icon color of the legend is applied based on the color returned in the `shapeColorValueMapper` property in the `MapShapeLayerDelegate`. It is possible to customize the legend item's color and text using the `shapeColorMappers` property in the `MapShapeLayerDelegate`.
 
-```dart
+{% tabs %}
+{% highlight Dart %}
+
 List<Model> data;
 
 @override
@@ -281,7 +304,9 @@ class Model {
   final String code;
   final Color color;
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ![maps legend](images/getting-started/map_legend.png)
 
@@ -289,7 +314,8 @@ class Model {
 
 You can enable tooltip for the shapes using the `enableShapeTooltip` property in the `MapShapeLayer` and also, it is possible to enable tooltip only for the particular shapes/or show custom text using the `shapeTooltipTextMapper` property in the `MapShapeLayerDelegate`.
 
-```dart
+{% tabs %}
+{% highlight Dart %}
 
 List<Model> data;
 
@@ -349,6 +375,8 @@ class Model {
   final String code;
   final Color color;
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ![maps tooltip](images/getting-started/map_tooltip.png)

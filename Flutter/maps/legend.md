@@ -15,7 +15,9 @@ You can provide clear information on the data plotted in the map. You can use th
 
 You can show legend using the `showLegend` property in the `MapShapeLayer`. The legend text is rendered based on the value of `shapeDataField` property.
 
-```dart
+{% tabs %}
+{% highlight Dart %}
+
 @override
 Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +42,9 @@ Widget build(BuildContext context) {
       ),
    );
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ![Legend support](images/legend/default-legend.png)
 
@@ -48,7 +52,9 @@ Widget build(BuildContext context) {
 
 The icon color of the legend is applied based on the color returned in the `shapeColorValueMapper` property in the `MapShapeLayerDelegate` and the text will be taken from `primaryValueMapper`.
 
-```dart
+{% tabs %}
+{% highlight Dart %}
+
 List<Model> data;
 
 @override
@@ -68,7 +74,6 @@ void initState() {
 @override
 Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       body: Center(
         child: Container(
           height: 350,
@@ -100,7 +105,9 @@ class Model {
   final String continent;
   final Color color;
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ![Legend icon color](images/legend/legend-icon-color.png)
 
@@ -108,7 +115,9 @@ class Model {
 
 You can customize the legend item's color and text using the [MapColorMapper.text] property of `shapeColorMappers` property in the `MapShapeLayerDelegate`.
 
-```dart
+{% tabs %}
+{% highlight Dart %}
+
 List<Model> data;
 
 @override
@@ -162,7 +171,9 @@ class Model {
   final String country;
   final double density;
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ![Legend text customization](images/legend/legend-text-customization.png)
 
@@ -186,7 +197,9 @@ You can customize the legend items using the following properties.
 * **toggledShapeStrokeWidth** - You can change the stroke width which applies to selected legend item's shape using the `toggledShapeStrokeWidth` property.
 * **toggledShapeOpacity** - You can set the color opacity to the selected legend item's shape using the `toggledShapeOpacity` property.
 
-```dart
+{% tabs %}
+{% highlight Dart %}
+
 List<Model> data;
 
 @override
@@ -256,6 +269,8 @@ class Model {
   final String country;
   final double density;
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ![Legend items customization](images/legend/legend-items-customization.png)

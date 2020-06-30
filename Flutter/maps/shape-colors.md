@@ -21,7 +21,9 @@ If you return a value of different type other than the color from the `shapeColo
 
 N> You can show legend using the `showLegend` property in the `MapShapeLayer`. The icon color of the legend is applied based on the color returned in the `shapeColorValueMapper` property in the `MapShapeLayerDelegate` and the text will be taken from `primaryValueMapper`. It is possible to customize the legend item's color and text using the `shapeColorMappers` property in the `MapShapeLayerDelegate`.
 
-```dart
+{% tabs %}
+{% highlight Dart %}
+
 List<Model> data;
 
 @override
@@ -71,7 +73,9 @@ class Model {
   final String country;
   final Color color;
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ![Shape color](images/shape-colors/shape_color_default.png)
 
@@ -79,11 +83,13 @@ class Model {
 
 You can apply color to the shape by comparing a value that returns from the `shapeColorValueMapper` property and setting the different `MapColorMapper.color` based on the value given in the `MapColorMapper.value` property of `shapeColorMappers`.
 
-```dart
- List<Model> data;
+{% tabs %}
+{% highlight Dart %}
 
-  @override
-  void initState() {
+List<Model> data;
+
+@override
+void initState() {
     super.initState();
 
     data = <Model>[
@@ -91,12 +97,11 @@ You can apply color to the shape by comparing a value that returns from the `sha
       Model('United States of America', "High"),
       Model('Pakistan', "Low"),
     ];
-  }
+}
 
-  @override
-  Widget build(BuildContext context) {
+@override
+Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
         body: Padding(
           padding: EdgeInsets.only(left: 15, right: 15),
           child: SfMaps(
@@ -130,7 +135,9 @@ class Model {
   final String country;
   final String storage;
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ![Equal color mapping](images/shape-colors/equal_color_mapping.png)
 
@@ -138,7 +145,9 @@ class Model {
 
 You can apply color to the shape by comparing a value that returns from the `shapeColorValueMapper` property and setting the different `MapColorMapper.color` based on the range given in the `MapColorMapper.from` and `MapColorMapper.to` properties of `shapeColorMappers`.
 
-```dart
+{% tabs %}
+{% highlight Dart %}
+
 List<Model> data;
 
 @override
@@ -155,7 +164,6 @@ void initState() {
 @override
 Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       body: Padding(
         padding: EdgeInsets.only(left: 15, right: 15),
         child: SfMaps(
@@ -185,6 +193,8 @@ class Model {
   final String country;
   final double count;
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ![Range color mapping](images/shape-colors/range_color_mapping.png)
