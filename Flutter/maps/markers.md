@@ -13,11 +13,13 @@ Markers can be used to denote the locations. It is possible to use the built-in 
 
 ## Adding markers
 
-You can show markers at any position on the map by providing latitude and longitude position to the [`MapMarker`], which is the widget returns from the [`markerBuilder`] property in the [`MapShapeLayer`].
+You can show markers at any position on the map by providing latitude and longitude position to the `MapMarker`, which is the widget returns from the `markerBuilder` property in the `MapShapeLayer`.
 
-The [`markerBuilder`] callback will be called number of times equal to the value specified in the [`initialMarkersCount`] property. The default value of the [`initialMarkersCount`] property is `null`.
+The `markerBuilder` callback will be called number of times equal to the value specified in the `initialMarkersCount` property. The default value of the `initialMarkersCount` property is `null`.
 
-```dart
+{% tabs %}
+{% highlight Dart %}
+
 List<Model> data;
 
 @override
@@ -73,15 +75,25 @@ class Model {
   final double latitude;
   final double longitude;
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ![default marker](images/markers/default_marker.png)
 
 ## Markers customization
 
-You can customize the built-in markers appearance using the [`iconType`], [`iconColor`], [`iconStrokeColor`], [`iconStrokeWidth`], and [`size`] properties.
+You can customize the built-in markers appearance using the `iconType`, `iconColor`, `iconStrokeColor`, `iconStrokeWidth`, and `size` properties of the `MapMarker`.
 
-```dart
+N>
+* The default value of the `iconType` is `MapIconType.circle`.
+* The default value of the `iconStrokeWidth` is `1.0`.
+* The default value of the `iconColor` is `Colors.blue`.
+* The default value of the `size` is `Size(14.0, 14.0)`.
+
+{% tabs %}
+{% highlight Dart %}
+
 List<Model> data;
 
 @override
@@ -139,15 +151,19 @@ class Model {
   final double latitude;
   final double longitude;
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ![marker customization](images/markers/marker_customization.png)
 
 ## Adding custom markers
 
-You can show custom marker using the [`child`] property of the [`MapMarker`] which returns from the [`markerBuilder`].
+You can show custom marker using the `child` property of the `MapMarker` which returns from the `markerBuilder`.
 
-```dart
+{% tabs %}
+{% highlight Dart %}
+
 List<Model> data;
 List<Widget> iconsList;
 
@@ -211,19 +227,23 @@ class Model {
    final double latitude;
    final double longitude;
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ![custom marker](images/markers/custom_marker.png)
 
 ## Adding markers dynamically
 
-You can add markers dynamically using the [`insertMarker`] method in the [`MapShapeLayerController`]. The [`markerBuilder`] will be called for the respective index once when [`insertMarker`] method is called. The [`controller`] property of [`MapShapeLayer`] has to be set with the new instance of [`MapShapeLayerController`].
+You can add markers dynamically using the `insertMarker` method in the `MapShapeLayerController`. The `markerBuilder` will be called for the respective index once when `insertMarker` method is called. The `controller` property of `MapShapeLayer` has to be set with the new instance of `MapShapeLayerController`.
 
 Marker will be inserted at the given index if the index value is less than or equal to the current available index and the marker will be added as a last item if the index value is greater than the current available index.
 
-N> You can get the current markers count from [`MapShapeLayerController.markersCount`].
+N> You can get the current markers count from `MapShapeLayerController.markersCount`.
 
-```dart
+{% tabs %}
+{% highlight Dart %}
+
 List<Model> data;
 MapShapeLayerController controller;
 Random random = Random();
@@ -294,15 +314,19 @@ class Model {
   final double latitude;
   final double longitude;
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Updating the existing markers
 
-You can update multiple markers at a same time by passing indices to the [`updateMarkers`] method in the [`MapShapeLayerController`]. The [`markerBuilder`] will be called again for the respective indices once when [`updateMarkers`] method is called.
+You can update multiple markers at a same time by passing indices to the `updateMarkers` method in the `MapShapeLayerController`. The `markerBuilder` will be called again for the respective indices once when `updateMarkers` method is called.
 
-N> You can get the current markers count from [`MapShapeLayerController.markersCount`].
+N> You can get the current markers count from `MapShapeLayerController.markersCount`.
 
-```dart
+{% tabs %}
+{% highlight Dart %}
+
 List<Model> data;
 MapShapeLayerController controller;
 Widget markerWidget;
@@ -373,15 +397,19 @@ class Model {
   final double latitude;
   final double longitude;
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Deleting a marker
 
-You can remove marker at any index using the [`removeMarkerAt`] method.
+You can remove marker at any index using the `removeMarkerAt` method.
 
-N> You can get the current markers count from [`MapShapeLayerController.markersCount`].
+N> You can get the current markers count from `MapShapeLayerController.markersCount`.
 
-```dart
+{% tabs %}
+{% highlight Dart %}
+
 List<Model> data;
 MapShapeLayerController controller;
 
@@ -447,15 +475,19 @@ class Model {
   final double latitude;
   final double longitude;
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Clearing the markers
 
-You can clear all markers using the [`clearMarkers`] method.
+You can clear all markers using the `clearMarkers` method.
 
-N> You can get the current markers count from [`MapShapeLayerController.markersCount`].
+N> You can get the current markers count from `MapShapeLayerController.markersCount`.
 
-```dart
+{% tabs %}
+{% highlight Dart %}
+
 List<Model> data;
 MapShapeLayerController controller;
 
@@ -522,4 +554,6 @@ class Model {
   final double latitude;
   final double longitude;
 }
-```
+
+{% endhighlight %}
+{% endtabs %}

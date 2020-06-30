@@ -53,7 +53,9 @@ import 'package:syncfusion_flutter_maps/maps.dart';
 
 After importing the package, initialize the maps widget as a child of any widget.
 
-```dart
+{% tabs %}
+{% highlight Dart %}
+
 @override
 Widget build(BuildContext context) {
   return Scaffold(
@@ -62,123 +64,129 @@ Widget build(BuildContext context) {
     ),
   );
 }
-```
 
-## Adding a GeoJSON file
+{% endhighlight %}
+{% endtabs %}
 
-The [layers] in [SfMaps] contains collection of [MapShapeLayer]. The actual geographical rendering is done in the each [MapShapeLayer]. The [delegate] property of the [MapShapeLayer] is of type [MapShapeLayerDelegate]. The path of the .json file which contains the GeoJSON data has to be set to the [shapeFile] property of the [MapShapeLayerDelegate].
+## Add a GeoJSON file
 
-The [shapeDataField] property of the [MapShapeLayerDelegate] is used to refer the unique field name in the .json file to identify each shapes. In 'Adding a data source' section of this document, this [shapeDataField] will be used to map with respective value returned in [primaryValueMapper] from the data source.
+The `layers` in `SfMaps` contains collection of `MapShapeLayer`. The actual geographical rendering is done in the each `MapShapeLayer`. The `delegate` property of the `MapShapeLayer` is of type `MapShapeLayerDelegate`. The path of the .json file which contains the GeoJSON data has to be set to the `shapeFile` property of the `MapShapeLayerDelegate`.
 
-```dart
+The `shapeDataField` property of the `MapShapeLayerDelegate` is used to refer the unique field name in the .json file to identify each shapes. In 'Mapping the data source' section of this document, this `shapeDataField` will be used to map with respective value returned in `primaryValueMapper` from the data source.
+
+{% tabs %}
+{% highlight Dart %}
+
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-    body: Center(
+    body: Padding(
+      padding: EdgeInsets.all(15),
       child: SfMaps(
-        layers: <MapLayer>[
+        layers: [
           MapShapeLayer(
-          delegate: const MapShapeLayerDelegate(
-             shapeFile: 'assets/world_map.json',
-             shapeDataField: 'continent')
+            delegate: const MapShapeLayerDelegate(
+              shapeFile: 'assets/australia.json',
+              shapeDataField: 'STATE_NAME',
+            ),
           ),
         ],
       ),
     ),
   );
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ![maps basic view](images/getting-started/map_basic_view.png)
 
-## Adding a data source
+## Mapping the data source
 
-By default, the value specified for the [shapeDataField] in the GeoJSON file will be used in the elements like data labels, tooltip, and legend for their respective shapes. However, it is possible to keep a data source and customize these elements based on the requirement. As mentioned above, [shapeDataField] will be used to map with respective value returned in [primaryValueMapper] from the data source.
+By default, the value specified for the `shapeDataField` in the GeoJSON file will be used in the elements like data labels, tooltip, and legend for their respective shapes. However, it is possible to keep a data source and customize these elements based on the requirement. As mentioned above, `shapeDataField` will be used to map with respective value returned in `primaryValueMapper` from the data source.
 
-```dart
+{% tabs %}
+{% highlight Dart %}
+
 List<Model> data;
 
 @override
 void initState() {
-  data = const <Model>[
-    Model('Asia', 'Asia'),
-    Model('Europe', 'Europe'),
-    Model('North America', 'NA'),
-    Model('South America', 'SA'),
-    Model('Australia', 'Australia'),
-    Model('Africa', 'Africa')
+  data = <Model>[
+    Model('New South Wales',
+     '       New\nSouth Wales'),
+    Model('Queensland', 'Queensland'),
+    Model('Northern Territory', 'Northern\nTerritory'),
+    Model('Victoria', 'Victoria'),
+    Model('South Australia', 'South Australia'),
+    Model('Western Australia', 'Western Australia'),
+    Model('Tasmania', 'Tasmania'),
+    Model('Australian Capital Territory', 'ACT')
   ];
+
   super.initState();
 }
 
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-    body: Center(
-      child: SfMaps(
-        layers: <MapLayer>[
-          MapShapeLayer(
-              delegate: MapShapeLayerDelegate(
-                shapeFile: 'assets/world_map.json',
-                shapeDataField: 'continent',
-                dataCount: data.length,
-                primaryValueMapper: (index) => data[index].country,
-              ),
-          ),
-        ],
-      ),
-    ),
-  );
+    body: SfMaps(
+       layers: <MapShapeLayer>[
+         MapShapeLayer(
+           delegate: MapShapeLayerDelegate(
+             shapeFile: 'assets/australia.json',
+             shapeDataField: 'STATE_NAME',
+             dataCount: data.length,
+             primaryValueMapper: (int index) => data[index].state,
+           ),
+         ),
+       ],
+     ),
+   );
 }
 
 class Model {
-  const Model(this.country, this.code);
-  final String country;
-  final String code;
+  Model(this.state, this.stateCode);
+
+  String state;
+  String stateCode;
 }
-```
 
-## Add title
+{% endhighlight %}
+{% endtabs %}
 
-You can add a title to the maps to provide a quick information about the data plotted in the map using the [title] property in the [SfMaps].
+## Add maps elements
 
-```dart
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-      child: SfMaps(
-        title: MapTitle(text:'World map'),
-        layers: <MapLayer>[
-          MapShapeLayer(
-          delegate: const MapShapeLayerDelegate(
-             shapeFile: 'assets/world_map.json',
-             shapeDataField: 'continent')
-          ),
-        ],
-      ),
-    ),
-  );
-}
-```
-![maps title](images/getting-started/map_title.png)
+Add the basic maps elements such as title, data labels, legend, and tooltip as shown in the below code snippet.
 
-## Add data label
+* **Title** - You can add a title to the maps to provide a quick information about the data plotted in the map using the `title` property in the `SfMaps`.
 
-You can show data labels using the [showDataLabels] property in the [MapShapeLayer] and also, it is possible to show data labels only for the particular shapes/or show custom text using the [dataLabelMapper] property in the [MapShapeLayerDelegate].
+* **Data label** - You can show data labels using the `showDataLabels` property in the `MapShapeLayer` and also, it is possible to show data labels only for the particular shapes/or show custom text using the `dataLabelMapper` property in the `MapShapeLayerDelegate`.
 
-```dart
+* **Legend** - You can show legend using the `showLegend` property in the `MapShapeLayer`. The icon color of the legend is applied based on the color returned in the `shapeColorValueMapper` property in the `MapShapeLayerDelegate`. It is possible to customize the legend item's color and text using the `shapeColorMappers` property in the `MapShapeLayerDelegate`.
+
+* **Tooltip** - You can enable tooltip for the shapes using the `enableShapeTooltip` property in the `MapShapeLayer` and also, it is possible to enable tooltip only for the particular shapes/or show custom text using the `shapeTooltipTextMapper` property in the `MapShapeLayerDelegate`.
+
+{% tabs %}
+{% highlight Dart %}
+
 List<Model> data;
 
 @override
 void initState() {
-    data = const <Model>[
-      Model('Asia', 'Asia', Color.fromRGBO(60, 120, 255, 1)),
-      Model('Africa', 'Africa', Color.fromRGBO(51, 102, 255, 1)),
-      Model('Europe', 'EUR', Color.fromRGBO(0, 57, 230, 1)),
-      Model('South America', 'SA', Color.fromRGBO(0, 51, 204, 1)),
-      Model('Australia', 'Australia', Color.fromRGBO(0, 45, 179, 1)),
-      Model('North America', 'NA', Color.fromRGBO(0, 38, 153, 1))
+    data = <Model>[
+      Model('New South Wales', Color.fromRGBO(255, 215, 0, 1.0),
+          '       New\nSouth Wales'),
+      Model('Queensland', Color.fromRGBO(72, 209, 204, 1.0), 'Queensland'),
+      Model('Northern Territory', Colors.red.withOpacity(0.85),
+          'Northern\nTerritory'),
+      Model('Victoria', Color.fromRGBO(171, 56, 224, 0.75), 'Victoria'),
+      Model('South Australia', Color.fromRGBO(126, 247, 74, 0.75),
+          'South Australia'),
+      Model('Western Australia', Color.fromRGBO(79, 60, 201, 0.7),
+          'Western Australia'),
+      Model('Tasmania', Color.fromRGBO(99, 164, 230, 1), 'Tasmania'),
+      Model('Australian Capital Territory', Colors.teal, 'ACT')
     ];
     super.initState();
 }
@@ -187,168 +195,59 @@ void initState() {
 Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-          child: Container(
-            height: 400,
-            child: Padding(
-              padding: EdgeInsets.only(left: 15, right: 15),
-              child: SfMaps(
-                title: MapTitle(text: 'World map'),
-                layers: <MapLayer>[
-                  MapShapeLayer(
-                    delegate: MapShapeLayerDelegate(
-                      shapeFile: 'assets/world_map.json',
-                      shapeDataField: 'continent',
-                      dataCount: data.length,
-                      primaryValueMapper: (index) => data[index].country,
-                      dataLabelMapper: (index) => data[index].code,
-                    ),
-                    showDataLabels: true,
+        child: Container(
+          height: 520,
+          child: Padding(
+            padding: EdgeInsets.all(15),
+            child: SfMaps(
+              title: const MapTitle(text: 'Australia map'),
+              layers: <MapShapeLayer>[
+                MapShapeLayer(
+                  delegate: MapShapeLayerDelegate(
+                    shapeFile: 'assets/australia.json',
+                    shapeDataField: 'STATE_NAME',
+                    dataCount: data.length,
+                    primaryValueMapper: (int index) => data[index].state,
+                    dataLabelMapper: (int index) => data[index].stateCode,
+                    shapeColorValueMapper: (int index) => data[index].color,
+                    shapeTooltipTextMapper: (int index) => data[index].stateCode,
                   ),
-                ],
-              ),
-            ),
-          )
-      ),
-    );
-}
-
-class Model {
-  const Model(this.country, this.code, this.color);
-
-  final String country;
-  final String code;
-  final Color color;
-}
-```
-
-![maps data labels](images/getting-started/map_data_labels.png)
-
-## Add legend
-
-You can show legend using the [showLegend] property in the [MapShapeLayer]. The icon color of the legend is applied based on the color returned in the [shapeColorValueMapper] property in the [MapShapeLayerDelegate]. It is possible to customize the legend item's color and text using the [shapeColorMappers] property in the [MapShapeLayerDelegate].
-
-```dart
-List<Model> data;
-
-@override
-void initState() {
-    data = const <Model>[
-      Model('Asia', 'Asia', Color.fromRGBO(60, 120, 255, 1)),
-      Model('Africa', 'Africa', Color.fromRGBO(51, 102, 255, 1)),
-      Model('Europe', 'EUR', Color.fromRGBO(0, 57, 230, 1)),
-      Model('South America', 'SA', Color.fromRGBO(0, 51, 204, 1)),
-      Model('Australia', 'Australia', Color.fromRGBO(0, 45, 179, 1)),
-      Model('North America', 'NA', Color.fromRGBO(0, 38, 153, 1))
-    ];
-    super.initState();
-}
-
-@override
-Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-          child: Container(
-            height: 400,
-            child: Padding(
-              padding: EdgeInsets.only(left: 15, right: 15),
-              child: SfMaps(
-                title: MapTitle(text: 'World map'),
-                layers: <MapLayer>[
-                  MapShapeLayer(
-                    delegate: MapShapeLayerDelegate(
-                      shapeFile: 'assets/world_map.json',
-                      shapeDataField: 'continent',
-                      dataCount: data.length,
-                      primaryValueMapper: (index) => data[index].country,
-                      dataLabelMapper: (index) => data[index].code,
-                      shapeColorValueMapper: (index) => data[index].color,
-                    ),
-                    showDataLabels: true,
-                    showLegend: true,
+                  showDataLabels: true,
+                  showLegend: true,
+                  enableShapeTooltip: true,
+                  tooltipSettings: MapTooltipSettings(color: Colors.grey[700],
+                      strokeColor: Colors.white, strokeWidth: 2
                   ),
-                ],
-              ),
+                  strokeColor: Colors.white,
+                  strokeWidth: 0.5,
+                  dataLabelSettings: MapDataLabelSettings(
+                      textStyle: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize:
+                          Theme
+                              .of(context)
+                              .textTheme
+                              .caption
+                              .fontSize)),
+                ),
+              ],
             ),
-          )
-      ),
-    );
-}
-
-class Model {
-  const Model(this.country, this.code, this.color);
-
-  final String country;
-  final String code;
-  final Color color;
-}
-```
-
-![maps legend](images/getting-started/map_legend.png)
-
-## Add tooltip
-
-You can enable tooltip for the shapes using the [enableShapeTooltip] property in the [MapShapeLayer] and also, it is possible to enable tooltip only for the particular shapes/or show custom text using the [shapeTooltipTextMapper] property in the [MapShapeLayerDelegate].
-
-```dart
-
-List<Model> data;
-
-@override
-void initState() {
-    data = const <Model>[
-      Model('Asia', 'Asia', Color.fromRGBO(60, 120, 255, 1)),
-      Model('Africa', 'Africa', Color.fromRGBO(51, 102, 255, 1)),
-      Model('Europe', 'EUR', Color.fromRGBO(0, 57, 230, 1)),
-      Model('South America', 'SA', Color.fromRGBO(0, 51, 204, 1)),
-      Model('Australia', 'Australia', Color.fromRGBO(0, 45, 179, 1)),
-      Model('North America', 'NA', Color.fromRGBO(0, 38, 153, 1))
-    ];
-  super.initState();
-}
-
-@override
-Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-          child: Container(
-            height: 400,
-            child: Padding(
-              padding: EdgeInsets.only(left: 15, right: 15),
-              child: SfMaps(
-                title: MapTitle(text: 'World map'),
-                layers: <MapLayer>[
-                  MapShapeLayer(
-                    delegate: MapShapeLayerDelegate(
-                      shapeFile: 'assets/world_map.json',
-                      shapeDataField: 'continent',
-                      dataCount: data.length,
-                      primaryValueMapper: (index) => data[index].country,
-                      dataLabelMapper: (index) => data[index].code,
-                      shapeColorValueMapper: (index) => data[index].color,
-                      shapeTooltipTextMapper: (index) => data[index].country,
-                    ),
-                    showDataLabels: true,
-                    showLegend: true,
-                    enableShapeTooltip: true,
-                    tooltipSettings: MapTooltipSettings(
-                        color: const Color.fromRGBO(60, 120, 255, 1),
-                        strokeColor: Colors.white),
-                  ),
-                ],
-              ),
-            ),
-          )
+          ),
+        ),
       ),
    );
 }
 
 class Model {
-  const Model(this.country, this.code, this.color);
+  Model(this.state, this.color, this.stateCode);
 
-  final String country;
-  final String code;
-  final Color color;
+  String state;
+  Color color;
+  String stateCode;
 }
-```
 
-![maps tooltip](images/getting-started/map_tooltip.png)
+{% endhighlight %}
+{% endtabs %}
+
+![Maps getting started](images/getting-started/maps_getting_started.png)
