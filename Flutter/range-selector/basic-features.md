@@ -438,7 +438,7 @@ Widget build(BuildContext context) {
       home: Scaffold(
           body: Center(
               child: SfRangeSelectorTheme(
-                    data: SfRangeSliderThemeData(
+                    data: SfRangeSelectorThemeData(
                         activeRegionColor: Colors.greenAccent[100],
                     ),
                     child:  SfRangeSelector(
@@ -523,7 +523,7 @@ Widget build(BuildContext context) {
       home: Scaffold(
           body: Center(
               child: SfRangeSelectorTheme(
-                    data: SfRangeSliderThemeData(
+                    data: SfRangeSelectorThemeData(
                         inactiveRegionColor: Colors.greenAccent[100],
                     ),
                     child:  SfRangeSelector(
