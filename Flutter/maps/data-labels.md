@@ -132,7 +132,6 @@ void initState() {
       Model('Western Australia', 'Western Australia'),
       Model('Tasmania', 'Tasmania'),
     ];
-
     super.initState();
 }
 
