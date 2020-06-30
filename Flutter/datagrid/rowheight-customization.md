@@ -100,8 +100,8 @@ To access the `getAutoRowHeight` method, create an instance of `ColumnSizer`, se
               GridTextColumn(mappingName: 'contactName')..softWrap = true..overflow = TextOverflow.clip
               ..headerText = 'Contact Name',
               GridTextColumn(mappingName: 'companyName')..softWrap = true ..overflow = TextOverflow.clip..headerText = 'Company Name',
-              GridTextColumn(mappingName: 'address')..softWrap = true..overflow = TextOverflow.clip..headerText = 'Address',
               GridTextColumn(mappingName: 'city')..softWrap = true ..overflow = TextOverflow.clip..headerText = 'City',
+              GridTextColumn(mappingName: 'address')..softWrap = true..overflow = TextOverflow.clip..headerText = 'Address',
               GridTextColumn(mappingName: 'designation')..softWrap = true ..overflow = TextOverflow.clip..headerText = 'Designation',
               GridTextColumn(mappingName: 'country')..softWrap = true ..overflow = TextOverflow.clip..headerText = 'Country',
           ]    
