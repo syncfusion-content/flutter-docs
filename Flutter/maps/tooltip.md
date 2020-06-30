@@ -13,73 +13,80 @@ This section helps to learn about how to add tooltip in the maps.
 
 # Shape tooltip
 
-You can enable tooltip for a shape. It is used to show an information about the current tapped shape. By default, the shape tooltip text will be based on [shapeDataField] values.
+You can enable shape tooltip. It is used to indicate clearly the information on the current tapped shape. By default, the shape tooltip text will be based on [`shapeDataField`] values.
 
-N> You must set `enableShapeTooltip` bool as true.
+N> 
+* Refer the [`shapeTooltipTextMapper`] for changing the default shape tooltip text.
+
+```dart
+SfMaps()
+```
+
+![Tooltip support](images/tooltip/tooltip.png)
 
 # Bubble tooltip
 
-It is visibled when tapping on any of the bubbles in maps. It shows the information about the current tapped bubble.By default, the bubble tooltip text will be [primaryValueMapper] data.
+You can enable bubble tooltip. It is used to indicate clearly the information on the current tapped bubble. By default, the bubble tooltip text will be [`shapeDataField`] values.
 
-N> You must set `enableBubbleTooltip` bool as true.
-
-# Tooltip text customization
-
-You can customize the shape tooltip text by using the [shapeTooltipTextMapper]. The [shapeTooltipTextMapper] will be called each time when you tap on a shape with corresponding index.You can pass the information that needs to be shown in the tooltip.
-
-You can also customize the bubble tooltip as same shape tooltip using [bubbleTooltipTextMapper].
-
-# Tooltip customization
-
-You can customize the tooltip using the [tooltipSettings] which is property of [MapShapeLayer].
-
-In [tooltipSettings], there are customizing properties like [color], [strokeColor], [strokeWidth], and [textStyle].
+N> 
+* Refer the [`bubbleTooltipTextMapper`] for changing the default bubble tooltip text.
 
 ```dart
-SfMaps(
-            layers: <MapLayer>[
-              MapShapeLayer(
-                delegate: MapShapeLayerDelegate(
-                  shapeFile: 'assets/europe.json',
-                  shapeDataField: 'name',
-                  dataCount: _gmtDetails.length,
-                  primaryValueMapper: (int index) =>
-                      _gmtDetails[index].countryName,
-                  bubbleTooltipTextMapper: (int index) =>
-                      'Country : ' +
-                      _gmtDetails[index].countryName +
-                      '\nPopulation : ' +
-                      _gmtDetails[index].population.toInt().toString(),
-                  bubbleSizeMapper: (index) => _gmtDetails[index].population,
-                ),
-                showBubbles: true,
-                enableShapeTooltip: true,
-                enableBubbleTooltip: true,
-              ),
-            ],
-          )
+SfMaps()
 ```
+
+![Tooltip support](images/tooltip/tooltip.png)
+
+# Tooltip text callback
+
+You can customize the shape tooltip text by using the [`shapeTooltipTextMapper`]. The [`shapeTooltipTextMapper`] will be called each time when you tap on a shape with corresponding index.You can pass the information that needs to be shown in the tooltip.
+
+You can also customize the bubble tooltip as same shape tooltip using [`bubbleTooltipTextMapper`].
+
 ```dart
-SfMaps(
-            layers: <MapLayer>[
-              MapShapeLayer(
-                delegate: MapShapeLayerDelegate(
-                  shapeFile: 'assets/europe.json',
-                  shapeDataField: 'name',
-                  dataCount: _gmtDetails.length,
-                  primaryValueMapper: (int index) =>
-                      _gmtDetails[index].countryName,
-                  bubbleTooltipTextMapper: (int index) =>
-                      'Country : ' +
-                      _gmtDetails[index].countryName +
-                      '\nPopulation : ' +
-                      _gmtDetails[index].population.toInt().toString(),
-                  bubbleSizeMapper: (index) => _gmtDetails[index].population,
-                ),
-                showBubbles: true,
-                enableShapeTooltip: true,
-                enableBubbleTooltip: true,
-              ),
-            ],
-          )
+SfMaps()
 ```
+
+![Tooltip support](images/tooltip/tooltip.png)
+
+# Tooltip fill color
+
+You can change the background color of the tooltip in the maps using the [`tooltipColor`] property.
+
+You can also change the background color of the tooltip in the maps using the [`color`] which is property of [`tooltipSettings`].
+
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfMapsTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsTheme-class.html).
+
+```dart
+SfMaps()
+```
+
+![Tooltip support](images/tooltip/tooltip.png)
+
+# Tooltip Stroke color and width
+
+You can change the border color and width of the tooltip in the maps using the [`tooltipStrokeColor`] and [`tooltipStrokeWidth`] property.
+
+You can also change the background color of the tooltip in the maps using the [`strokeColor`] and [`strokeWidth`] which is property of [tooltipSettings].
+
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfMapsTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsTheme-class.html).
+
+```dart
+SfMaps()
+```
+
+![Tooltip support](images/tooltip/tooltip.png)
+
+# Tooltip label style
+
+You can change the appearance of the tooltip text in the maps using the [`tooltipTextStyle`] property.
+
+You can also change the appearance of the tooltip text in the maps using the [`textStyle`] which is property of [tooltipSettings].
+
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfMapsTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsTheme-class.html).
+
+```dart
+SfMaps()
+```
+
+![Tooltip support](images/tooltip/tooltip.png)
