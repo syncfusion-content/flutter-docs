@@ -102,7 +102,7 @@ Widget build(BuildContext context) {
 * If the custom `startHour` and `endHour` are given, then the number of time slots calculated based on given `startHour` and `endHour` should result in integer value, otherwise next immediate `timeInterval` will be considered until the result is integer value. For example, if `startHour` is 9 (09:00AM), `endHour` is 18.25 (06:15 PM), `timeInterval` is 30 minutes, and total minutes = 555 ((18.25-9)*60), then the timeInterval will be changed to ’37 minutes’ (555%37=0) by considering (total minutes % timeInterval = 0). it will return integer value for time slots rendering.
 
 ## Special time regions
-You can restrict the user interaction such as selection and highlights specific regions of time in the timeslot views by adding the [specialTimeRegions] property of `sfCalendar`. You need to set the [startTime] and [endTime] properties of [TimeRegion] to create a `specialTimeRegion`, you can use the [timeZone] property to set the specific timezone for start and end time of `specialTimeRegion`. The `specialTimeRegion` will display the text or icon on it that set to the [text] or [icon] property of `TimeRegion`.
+You can restrict the user interaction such as selection and highlights specific regions of time in the timeslot views by adding the [specialTimeRegions]() property of `SfCalendar`. You need to set the [startTime]() and [endTime]() properties of [TimeRegion]() to create a `specialTimeRegion`, you can use the [timeZone]() property to set the specific timezone for start and end time of `specialTimeRegion`. The `specialTimeRegion` will display the text or icon on it that set to the [text]() or [icon]() property of `TimeRegion`.
 
 ![Special time region in Flutter event calendar](images/timeslot-views/Special_region.png)
 
@@ -190,7 +190,7 @@ The recurring time region on a daily, weekly, monthly, or yearly interval. The r
 You can refer to [here](https://help.syncfusion.com/flutter/calendar/appointments#recurrence-rule) to know more about the recurrence rule.
 
 ### Recurrence exception dates
-You can delete any of occurrence that is an exception from the recurrence pattern time region by using the [recurrenceExceptionDates] property of `TimeRegion`. The deleted occurrence date will be considered as a recurrence exception date.
+You can delete any of occurrence that is an exception from the recurrence pattern time region by using the [recurrenceExceptionDates]() property of `TimeRegion`. The deleted occurrence date will be considered as a recurrence exception date.
 
 {% tabs %}
 {% highlight Dart %}
@@ -226,7 +226,7 @@ You can delete any of occurrence that is an exception from the recurrence patter
 ![Special time region recurrence exception](images/timeslot-views/Special_region_recurrence_exception.png)
 
 ### Special time region customization
-The `specialTimeRegion` background color can be customized by using the [color] and [textStyle] properties of `TimeRegion` that is used to customize the text style for the `text` and `icon` of the `specialTimeRegion`.
+The `specialTimeRegion` background color can be customized by using the [color]() and [textStyle]() properties of `TimeRegion` that is used to customize the text style for the `text` and `icon` of the `specialTimeRegion`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -257,7 +257,7 @@ The `specialTimeRegion` background color can be customized by using the [color] 
 {% endhighlight %}
 {% endtabs %}
 
-![Special time region customization](images/timeslot-views/Special_region_customization.png)
+![Special time region customization](images/timeslot-views/Special_region_customization.jpg)
 
 
 ## Full screen calendar

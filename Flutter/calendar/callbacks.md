@@ -74,9 +74,9 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ## Long press callback
-The [onLongPress] callback called whenever the `SfCalendar` elements long pressed on view.
+The [onLongPress]() callback called whenever the `SfCalendar` elements long pressed on view.
 
-The long-pressed date, appointments, and element details when the long-press action performed on element available in the [CalendarLongPressDetails].
+The long-pressed date, appointments, and element details when the long-press action performed on element available in the [CalendarLongPressDetails]().
 
 `date` - returns the long-pressed date.
 `appointments` - returns the long-pressed appointments.

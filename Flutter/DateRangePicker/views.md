@@ -112,7 +112,7 @@ Widget build(BuildContext context) {
 ![Century view Date Range Picker](images/views/numberofweek-in-view.png)
 
 ## Multi-date picker view
-You can enable a multi-date range picker by using the [enableMultiView] property of `SfDateRangePicker`, which displays two date range pickers side by side, the space between the two date-range picker can be customized by using the [viewSpacing] property of `SfDateRangePicker`.
+You can enable a multi-date range picker by using the [enableMultiView]() property of `SfDateRangePicker`, which displays two date range pickers side by side, the space between the two date-range picker can be customized by using the [viewSpacing]() property of `SfDateRangePicker`.
 
 {% tabs %}
 {% highlight Dart %}
