@@ -13,8 +13,6 @@ You can categorize the shapes on a map by customizing their color based on the u
 
 ## Based on underlying value
 
-You can apply color to the shape by setting the color directly to the `shapeColorValueMapper` property in the `MapShapeLayerDelegate` based on the color of underlying model. You can either return a color or a value from the `shapeColorValueMapper`.
-
 If you return a color from the `shapeColorValueMapper`, then the color will be applied to the respective shape straightaway.
 
 If you return a value of different type other than the color from the `shapeColorValueMapper`, then you must set the `MapShapeLayer.shapeColorMappers` property which is a collection of `MapColorMapper` to apply colors for the respective shapes.
@@ -81,7 +79,7 @@ class Model {
 
 ## Equal color mapping
 
-You can apply color to the shape by comparing a value that returns from the `shapeColorValueMapper` property and setting the different `MapColorMapper.color` based on the value given in the `MapColorMapper.value` property of `shapeColorMappers`.
+You can apply color to the shape by comparing a value that returns from the `shapeColorValueMapper` with the `MapColorMapper.value`. For the matched values, the `MapColorMapper.color` will be applied to the respective shapes.
 
 {% tabs %}
 {% highlight Dart %}
@@ -143,7 +141,7 @@ class Model {
 
 ## Range color mapping
 
-You can apply color to the shape by comparing a value that returns from the `shapeColorValueMapper` property and setting the different `MapColorMapper.color` based on the range given in the `MapColorMapper.from` and `MapColorMapper.to` properties of `shapeColorMappers`.
+You can apply color to the shape if the value returned from `shapeColorValueMapper` falls within the `MapColorMapper.from` and `MapColorMapper.to`. Then, the `MapColorMapper.color` will be applied to the respective shapes.
 
 {% tabs %}
 {% highlight Dart %}
