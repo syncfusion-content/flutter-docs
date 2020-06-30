@@ -61,9 +61,6 @@ Add the SfDataGrid widget as a child of any widget. Here, `SfDataGrid` widget is
     @override
     Widget build(BuildContext context) {
       return Scaffold(
-        appBar: AppBar(
-          title: Text('SyncfusionDataGrid'),
-        ),
         body: SfDataGrid(
           source: _employeeDataSource,
           columns: [
@@ -177,8 +174,6 @@ Create an instance of `DataGridSource` and set this object to `source` property 
     @override
     Widget build(BuildContext context) {
       return Scaffold(
-          appBar: AppBar(
-            title: Text('Syncfusion DataGrid'),),
           body: SfDataGrid(
             source: _employeeDataSource,
           )
@@ -201,9 +196,6 @@ You can also load any widget in a column using the `GridWidgetColumn` and `cellB
     @override
     Widget build(BuildContext context) {
       return Scaffold(
-        appBar: AppBar(
-          title: Text ('Syncfusion DataGrid'),
-        ),
         body: SfDataGrid(
           source: _employeeDataSource,
           columns: [
@@ -233,9 +225,6 @@ SfDataGrid allows you to select one or more rows. The `selectionMode` property c
     @override
     Widget build(BuildContext context) {
       return Scaffold(
-        appBar: AppBar(
-          title: Text('Syncfusion DataGrid'),
-        ),
         body: SfDataGrid(
           source: _employeeDataSource,
           columns: [
@@ -267,9 +256,6 @@ The information about the rows that are selected can be retrieved using `selecte
     @override
     Widget build(BuildContext context) {
       return Scaffold(
-        appBar: AppBar(
-          title: Text('Syncfusion DataGrid'),
-        ),
         body: Column(
           children: [
             RaisedButton(
