@@ -7,7 +7,7 @@ control: SfDataGrid
 documentation: ug
 ---
 
-# Conditional Styling
+# Conditional Styling in Flutter DataGrid
 
 The SfDataGrid allows to customize the style of the individual cells and rows based on the requirements. It can be customized in the following ways:
 
