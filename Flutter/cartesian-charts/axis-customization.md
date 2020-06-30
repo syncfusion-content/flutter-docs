@@ -901,7 +901,7 @@ The position of axis label can be aligned using the [`labelAlignment`](https://p
 
 * [`center`]() - Aligns the axis label to the center of the gridlines.
 
-### Center 
+### Center
 
 Aligns the axis label to the center of the gridlines.
 
