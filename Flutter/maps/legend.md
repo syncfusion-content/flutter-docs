@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Legend in Syncfusion Flutter Maps | Syncfusion
-description: This section explains how to show legend and customize its appearance in the Flutter maps application.
+description: This section explains how to show legend and customize its appearance in the Flutter maps.
 platform: Flutter
 control: SfMaps
 documentation: ug
@@ -50,7 +50,7 @@ Widget build(BuildContext context) {
 
 ## Legend icon and text customization
 
-The icon color of the legend is applied based on the color returned from the `MapShapeLayerDelegate.shapeColorValueMapper` property and the text is taken from the `primaryValueMapper`. It is possible to customize the legend item's color and text using the `MapColorMapper.color` and `MapColorMapper.text` properties based on the `MapColorMapper.value` or `MapColorMapper.from` and `MapColorMapper.to` properties.
+The icon color of the legend is applied based on the color returned from the `MapShapeLayerDelegate.shapeColorValueMapper` property and the text is taken from the `shapeDataField`. It is possible to customize the legend item's color and text using the `MapColorMapper.color` and `MapColorMapper.text` properties based on the `MapColorMapper.value` or `MapColorMapper.from` and `MapColorMapper.to` properties.
 
 {% tabs %}
 {% highlight Dart %}
@@ -116,7 +116,7 @@ class Model {
 
 ## Legend position
 
-You can position the legend items in different directions using the `position` property. The default value of the `position` property is `MapLegendPosition.top`. The `MapLegendPosition` contains four values such as `left`, `right`, `top`, and `bottom`.
+You can position the legend items in different directions using the `position` property. The default value of the `position` property is `MapLegendPosition.top`. The possibles values are `left`, `right`, `top`, and `bottom`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -209,11 +209,11 @@ class Model {
 
 ## Overflow mode
 
-You can wrap or scroll the legend items using the `overflowMode` property. The default value of the `overflowMode` property is `MapLegendOverflowMode.wrap`. The `MapLegendOverflowMode` contains two values such as `scroll` and `wrap`.
+You can wrap or scroll the legend items using the `overflowMode` property. The default value of the `overflowMode` property is `MapLegendOverflowMode.wrap`. The possible values such as `scroll` and `wrap`.
 
-If the legend position is `left` or `right`, then scroll direction is vertical.
+If the legend position is `left` or `right`, then the default scroll direction is vertical.
 
-If the legend position is `top` or `bottom`, then scroll direction is horizontal.
+If the legend position is `top` or `bottom`, then the default scroll direction is horizontal.
 
 {% tabs %}
 {% highlight Dart %}
@@ -307,12 +307,12 @@ class Model {
 
 ## Toggles the legend items
 
-You can disable the legend items and the shapes corresponding to the disabled legend items using the `enableToggleInteraction` property. The default value of the `enableToggleInteraction` property is `false`. You can customize the disabled shapes using the following properties:
+You can enable toggling the legend items and the corresponding shapes using the `enableToggleInteraction` property. The default value of the `enableToggleInteraction` property is `false`. You can customize the toggled shapes using the following properties:
 
-* **toggledShapeColor** - Used to fill the disabled legend item's icon and it's shape using the `toggledShapeColor` property.
-* **toggledShapeStrokeColor** - Used to change the stroke color which applies to disabled legend item's shape using the `toggledShapeStrokeColor` property.
-* **toggledShapeStrokeWidth** - Used to change the stroke width which applies to disabled legend item's shape using the `toggledShapeStrokeWidth` property.
-* **toggledShapeOpacity** - Used to set the color opacity to the disabled legend item's shape using the `toggledShapeOpacity` property.
+* **toggledShapeColor** - Used to set the color for the toggled legend item's icon and it's shape.
+* **toggledShapeStrokeColor** - Used to set the stroke color which applies to the toggled legend item's shape.
+* **toggledShapeStrokeWidth** - Used to set the stroke width which applies to the toggled legend item's shape.
+* **toggledShapeOpacity** - Used to set the opacity to the toggled legend item's shape.
 
 {% tabs %}
 {% highlight Dart %}
@@ -411,14 +411,14 @@ class Model {
 
 You can customize the legend items using the following properties.
 
-* **showIcon** - Used to show or hide the legend icon. The default value of the `showIcon` property is `true`.
-* **iconType** - Used to change the icon shape. The default value of the `iconType` property is `MapIconType.circle`. The `MapIconType` contains four values such as `circle`, `square`, `triangle`, and `diamond`.
-* **iconSize** - Used to change the size of the icon. The default value of the `iconType` is `Size(12.0, 12.0)`.
+* **showIcon** - Used to show or hide the legend icons. The default value of the `showIcon` property is `true`.
+* **iconType** - Used to change the icon shape. The default value of the `iconType` property is `MapIconType.circle`. The possible values are `circle`, `square`, `triangle`, and `diamond`.
+* **iconSize** - Used to change the size of the icon. The default value is `Size(12.0, 12.0)`.
 * **offset** - Used to place the legend in custom position. The default value of the `offset` property is `null`.
 * **itemsSpacing** - Used to provide space between the each legend items. The default value of the `itemsSpacing` is `10.0`.
-* **direction** - Used to arrange the legend items in either horizontal or vertical direction. It defaults to `horizontal`, if the value of the `position` property is `top`, `bottom` or `null` and defaults to `vertical`, if the value of the `position` property is `left` or `right`.
+* **direction** - Used to arrange the legend items in either horizontal or vertical direction. It defaults to `horizontal`, if the value of the `position` property is `top`, `bottom` and defaults to `vertical`, if the value of the `position` property is `left` or `right`.
 * **padding** - Used to set padding around the legend. The default value of the `padding` property is `EdgeInsets.all(10.0)`.
-* **textStyle** - Used to customize the legend text style.
+* **textStyle** - Used to customize the legend item's text style.
 
 {% tabs %}
 {% highlight Dart %}

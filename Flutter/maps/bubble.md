@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bubbles in Syncfusion Flutter Maps | Syncfusion
-description: This section explains how to show bubbles and customize its appearance in the Flutter maps application.
+description: This section explains how to show bubbles and customize its appearance in the Flutter maps.
 platform: Flutter
 control: SfMaps
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Bubbles in the Flutter Maps
 
-You can add information to shapes such as population density, number of users, and more. Bubbles can be rendered in different colors and sizes based on the data values of their assigned shape.
+Bubbles can be rendered in different colors and sizes based on the data values of their assigned shape. You can add information to shapes such as population density, number of users, and more. 
 
 ## Show bubbles
 
@@ -73,7 +73,7 @@ class Model {
 
 You can customize the bubble color based on the value returned from the `bubbleColorValueMapper` property in the `MapShapeLayerDelegate`. You can either return a value or a color from the `bubbleColorValueMapper`.
 
-If `bubbleColorValueMapper` returns a color, then the color will be applied to the bubble from the underlying model straightaway.
+If `bubbleColorValueMapper` returns a color, then the color will be applied to the bubble straightaway.
 
 If `bubbleColorValueMapper` returns a value other than the color, then you must set the `MapShapeLayer.bubbleColorMappers` property. The value returned from the `bubbleColorValueMapper` will be used for the comparison in the `MapColorMapper.value` or `MapColorMapper.from` and `MapColorMapper.to`. Then, the `MapColorMapper.color` will be applied to the respective bubble.
 

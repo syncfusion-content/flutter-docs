@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Shape selection in Syncfusion Flutter Maps | Syncfusion
-description: This section explains about how to enable shape selection and explains the action available during selection.
+description: This section explains about how to enable shape selection and explains how to perform any action during selection.
 platform: Flutter
 control: SfMaps
 documentation: ug

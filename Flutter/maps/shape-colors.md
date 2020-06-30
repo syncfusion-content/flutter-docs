@@ -11,7 +11,7 @@ documentation: ug
 
 You can categorize the shapes on a map by customizing their color based on the underlying value. It is possible to set the shape color for a specific value or for a range of values.
 
-## Based on underlying value
+## Applying colors for the shape
 
 If you return a color from the `shapeColorValueMapper`, then the color will be applied to the respective shape straightaway.
 

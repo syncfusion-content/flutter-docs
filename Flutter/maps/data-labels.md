@@ -9,7 +9,7 @@ documentation: ug
 
 # Data labels in the Flutter Maps
 
-Data labels provides identification for the shapes by displaying their names. Trim or hide the labels if they exceed shape bounds.
+Data labels provides identification for the shapes by displaying their names. You can trim or hide the labels if they exceed the shape bounds.
 
 ## Show data labels
 
@@ -50,7 +50,7 @@ Widget build(BuildContext context) {
 
 ## Data labels customization
 
-You can customize the data labels by setting value to the `dataLabelMapper` property based on the value given in the underlying model.
+You can customize text of the data labels using the `dataLabelMapper` property. 
 
 {% tabs %}
 {% highlight Dart %}
@@ -114,7 +114,7 @@ class Model {
 
 You can trim or remove the data label when it is overflowed from the shape using the `overflowMode` property in the `dataLabelSettings` property. The default value of the `overflowMode` property is `MapLabelOverflowMode.none`.
 
-By default, the data labels will render even if it overflows from the shape. Using this property, it is possible to remove or trim the data labels based on the available space.
+By default, the data labels will render even if it overflows from the shape. 
 
 {% tabs %}
 {% highlight Dart %}
