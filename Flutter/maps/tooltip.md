@@ -15,8 +15,7 @@ This section helps to learn about how to enable tooltips for the shapes and bubb
 
 It is used to clearly indicate the shape information on the tap or click. By default, the shape tooltip text is based on [`shapeDataField`] values.
 
-N> 
-* Refer the [`shapeTooltipTextMapper`] for changing the default shape tooltip text.
+You can use the [`shapeTooltipTextMapper`] for changing the text of the shape tooltip.
 
 {% tabs %}
 {% highlight Dart %}
@@ -52,8 +51,7 @@ Widget build(BuildContext context) {
 
 It is used to clearly indicate the bubble information on the tap or click. By default, the bubble tooltip text is based on [`shapeDataField`] values.
 
-N> 
-* Refer the [`bubbleTooltipTextMapper`] for changing the default bubble tooltip text.
+You can use the [`bubbleTooltipTextMapper`] for changing the text of the bubble tooltip.
 
 {% tabs %}
 {% highlight Dart %}
