@@ -141,75 +141,6 @@ class Model {
 
 ![Bubble palette](images/bubble/bubble-palette.png)
 
-## Bubbles tooltip
-
-You can enable bubble tooltip using the `MapShapeLayer.enableBubbleTooltip` property. It is used to indicate clearly the information on the current tapped bubble. By default, the bubble tooltip text will be `shapeDataField` values.
-
-N> Refer the `bubbleTooltipTextMapper` for changing the default bubble tooltip text.
-
-{% tabs %}
-{% highlight Dart %}
-
-List<Model> data;
-
-  @override
-  void initState() {
-    super.initState();
-
-    data = <Model>[
-      Model('Asia', 51),
-      Model('Africa', 58),
-      Model('Europe', 48),
-      Model('North America', 41),
-      Model('South America', 14),
-      Model('Australia', 23),
-    ];
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.only(left: 15, right: 15),
-        child: SfMaps(
-          layers: [
-            MapShapeLayer(
-              delegate: MapShapeLayerDelegate(
-                  shapeFile: "assets/world_map.json",
-                  shapeDataField: "continent",
-                  dataCount: data.length,
-                  primaryValueMapper: (int index) => data[index].continent,
-                  bubbleSizeMapper: (int index) => data[index].count,
-                  bubbleTooltipTextMapper: (int index) => data[index].count.toStringAsFixed(0) + 'countries',
-              ),
-              showBubbles: true,
-              enableBubbleTooltip: true,
-              bubbleSettings: MapBubbleSettings(
-                maxRadius: 30,
-                minRadius: 15,
-                color: Colors.red[200],
-                strokeWidth: 2,
-                strokeColor: Colors.red[800],
-              ),
-            ),
-          ],
-        ),
-      ),
-   );
-}
-
-class Model {
-  const Model(this.continent, this.count);
-
-  final String continent;
-  final double count;
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-![Bubble tooltip](images/bubble/bubble-tooltip.png)
-
 ## Bubbles customization
 
 You can customize the bubbles using the `minRadius`, `maxRadius`, `color`, `strokeWidth`, and `strokeColor` properties in the `bubbleSettings`.
@@ -279,3 +210,72 @@ class Model {
 {% endtabs %}
 
 ![Bubble customization](images/bubble/bubble-customization.png)
+
+## Bubbles tooltip
+
+You can enable bubble tooltip using the `MapShapeLayer.enableBubbleTooltip` property. It is used to indicate clearly the information on the current tapped bubble. By default, the bubble tooltip text will be `shapeDataField` values.
+
+N> Refer the `bubbleTooltipTextMapper` for changing the default bubble tooltip text.
+
+{% tabs %}
+{% highlight Dart %}
+
+List<Model> data;
+
+  @override
+  void initState() {
+    super.initState();
+
+    data = <Model>[
+      Model('Asia', 51),
+      Model('Africa', 58),
+      Model('Europe', 48),
+      Model('North America', 41),
+      Model('South America', 14),
+      Model('Australia', 23),
+    ];
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Padding(
+        padding: EdgeInsets.only(left: 15, right: 15),
+        child: SfMaps(
+          layers: [
+            MapShapeLayer(
+              delegate: MapShapeLayerDelegate(
+                  shapeFile: "assets/world_map.json",
+                  shapeDataField: "continent",
+                  dataCount: data.length,
+                  primaryValueMapper: (int index) => data[index].continent,
+                  bubbleSizeMapper: (int index) => data[index].count,
+                  bubbleTooltipTextMapper: (int index) => data[index].count.toStringAsFixed(0) + 'countries',
+              ),
+              showBubbles: true,
+              enableBubbleTooltip: true,
+              bubbleSettings: MapBubbleSettings(
+                maxRadius: 30,
+                minRadius: 15,
+                color: Colors.red[200],
+                strokeWidth: 2,
+                strokeColor: Colors.red[800],
+              ),
+            ),
+          ],
+        ),
+      ),
+   );
+}
+
+class Model {
+  const Model(this.continent, this.count);
+
+  final String continent;
+  final double count;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Bubble tooltip](images/bubble/bubble-tooltip.png)
