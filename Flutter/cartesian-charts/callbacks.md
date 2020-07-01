@@ -666,6 +666,7 @@ Triggers when the marker is being rendered. Here, you can get the marker's point
                   args.markerWidth = 20;
                   args.shape = DataMarkerType.diamond;
                   args.borderColor = Colors.green;
+                  args.borderWidth = 2;
                 }
               },
           )
