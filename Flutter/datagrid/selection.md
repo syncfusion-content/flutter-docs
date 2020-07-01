@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Selection | DataGrid widget for Flutter | Syncfusion
-description: How to enable selection, about the selection modes, properties, callbacks, and customizations available for selection in a data grid.
+description: How to enable selection, about the selection modes, properties, callbacks, and customizations available for selection in a datagrid.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 # Selection in Flutter (SfDataGrid)
 
-This section explains how to enable selection in the data grid; modes, properties, and callbacks involved in selection and customizations available for selection.
+This section explains how to enable selection in the datagrid; modes, properties, and callbacks involved in selection and customizations available for selection.
 
 The datagrid allows you to select a specific row or group of rows either programmatically or by touch interactions. To enable selection, set the `selectionMode` property of SfDataGrid to a value other than `none`. SfDataGrid has different selection modes to perform the selection operation as follows.
 
@@ -67,7 +67,7 @@ Keyboard navigation through the cells and rows is determined based on the [navig
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows currentCell](images/selection/currentcell.png)
+![flutter datagrid shows currentCell](images/selection/flutter-datagrid-currentcell.png)
 
 ### Single row selection
 
@@ -97,7 +97,7 @@ It allows you to select only one row. For example, you have selected a row. Now 
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows single row selection](images/selection/single_selection.png)
+![flutter datagrid shows single row selection](images/selection/flutter-datagrid-single-selection.png)
 
 ### Multiple row selection
 
@@ -129,7 +129,7 @@ While using `multiple`, you can select multiple rows by pressing the key modifie
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows multiple row selection](images/selection/multiple_selection.png)
+![flutter datagrid shows multiple row selection](images/selection/flutter-datagrid-multiple-selection.png)
 
 N>  When the selectionMode is `multiple`, multiple rows can be selected or deselected by clicking the respective rows. In multiple selection, pressing navigation keys will move the current cell alone. The rows can be selected or deselected by pressing the <kbd>Space</kbd> key.
 
@@ -316,7 +316,7 @@ Multiple rows can be selected by adding data objects to SelectedRows property.
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows multiple row selection](images/selection/multiple_selection.png)
+![flutter datagrid shows multiple row selection](images/selection/flutter-datagrid-programmatic-multiple-selection.png)
 
 ### Get the current cell
 
@@ -639,7 +639,7 @@ All rows or cells will be selected.
 
 ## Callbacks
 
-The data grid provides the following callbacks for selection:
+The datagrid provides the following callbacks for selection:
 
  * [onSelectionChanging] : This callback is raised while selecting a row at the execution time before the row is selected. So it allows canceling the selection action by return `false`.
  * [onSelectionChanged] : This callback is raised after the column is selected.
@@ -811,7 +811,7 @@ The selection background and foreground color can be changed by [selectionStyle]
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows customized multiple selection](images/selection/customized_selection.png)
+![flutter datagrid shows customized multiple selection](images/selection/flutter-datagrid-customized-multiple-selection.png)
 
 ### Current cell
 
@@ -848,7 +848,7 @@ The current cell border's color and thickness can be changed by `currentCellStyl
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows customized current cell](images/selection/customized_currentcell.png)
+![flutter datagrid shows customized current cell](images/selection/flutter-datagrid-customized-currentcell.png)
 
 
 
