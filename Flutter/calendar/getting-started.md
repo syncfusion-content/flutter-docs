@@ -369,7 +369,8 @@ Widget build(BuildContext context) {
 ![Show Navigation Arrow](images/getting-started/show-navigation-arrow.jpg)
 
 
->**NOTE** The `showNavigationArrow` property is not applicable when the `view` is set to `CalendarView.schedule`.
+>**NOTE** 
+* The `showNavigationArrow` property is not applicable when the `view` is set to `CalendarView.schedule`.
 
 
 You can get the complete getting started sample from [here](https://github.com/SyncfusionExamples/flutter-calendar).
