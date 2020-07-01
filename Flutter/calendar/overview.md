@@ -15,7 +15,7 @@ The Syncfusion Flutter Calendar library was written natively in Dart and has sev
 
 ## Key features
 
-* **Multiple calendar views**: A wide range of built-in view modes are available: day, week, workweek, month, timeline day, timeline week, timeline workweek. The control allows you to conveniently customize every view with unique, view-specific options.
+* **Multiple calendar views**: A wide range of built-in view modes are available: day, week, workweek, month, schedule, timeline day, timeline week, timeline workweek. The control allows you to conveniently customize every view with unique, view-specific options.
 
 ![Multiple calendar views](images/overview/multiple_calenda_views.png)
 
@@ -49,7 +49,7 @@ The Syncfusion Flutter Calendar library was written natively in Dart and has sev
 
 * **Custom start and end hours**: Display the event calendar timeslot views with specific time durations by hiding the unwanted hours. 
 
-
+* **Web layout**: The web layout improved for a better experience, and now, the mouse hovering effect has been applied to all the calendar elements.
 
 
 

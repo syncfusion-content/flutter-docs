@@ -176,9 +176,9 @@ class Data {
 
 ![Date interval](images/interval/date_interval.png)
 
-## Step size
+## Discrete selection for numeric values
 
-You can move the thumb in discrete manner using the [`stepSize`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/stepSize.html) property in the range selector.
+You can move the thumb in discrete manner for numeric values using the [`stepSize`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/stepSize.html) property in the range selector.
 
 {% tabs %}
 {% highlight Dart %}
@@ -253,3 +253,165 @@ class Data {
 {% endtabs %}
 
 ![Step size support](images/interval/selector-step-size-support.gif)
+
+## Discrete selection for date values
+
+You can move the thumb in discrete manner for date values based on the value provided in the [`stepDuration`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/stepDuration.html) property in the range selector.
+
+For example, if [min](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) is DateTime(2015, 01, 01) and [max](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) is DateTime(2020, 01, 01) and [stepDuration](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/stepDuration.html) is SliderDuration(years: 1, months: 6),the range selector will move the thumbs at DateTime(2015, 01, 01), DateTime(2016, 07, 01), DateTime(2018, 01, 01),and DateTime(2019, 07, 01).
+
+{% tabs %}
+{% highlight Dart %}
+
+final DateTime _min = DateTime(2002, 01, 01);
+final DateTime _max = DateTime(2010, 01, 01);
+SfRangeValues _values = SfRangeValues(DateTime(2004, 01, 01), DateTime(2008, 01, 01));
+
+final List<Data> chartData = <Data>[
+  Data(x: DateTime(2002, 01, 01), y: 2.2),
+  Data(x: DateTime(2003, 01, 01), y: 3.4),
+  Data(x: DateTime(2004, 01, 01), y: 2.8),
+  Data(x: DateTime(2005, 01, 01), y: 1.6),
+  Data(x: DateTime(2006, 01, 01), y: 2.3),
+  Data(x: DateTime(2007, 01, 01), y: 2.5),
+  Data(x: DateTime(2008, 01, 01), y: 2.9),
+  Data(x: DateTime(2009, 01, 01), y: 3.8),
+  Data(x: DateTime(2010, 01, 01), y: 3.7),
+];
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+            child: SfRangeSelector(
+              min: _min,
+              max: _max,
+              showLabels: true,
+              showTicks: true,
+              interval: 2,
+              stepDuration: SliderStepDuration(years: 2),
+              dateFormat: DateFormat.y(),
+              dateIntervalType: DateIntervalType.years,
+              initialValues: _values,
+              child: Container(
+                height: 130,
+                child: SfCartesianChart(
+                  margin: const EdgeInsets.all(0),
+                  primaryXAxis: DateTimeAxis(
+                    minimum: _min,
+                    maximum: _max,
+                    isVisible: false,),
+                  primaryYAxis: NumericAxis(isVisible: false),
+                  plotAreaBorderWidth: 0,
+                  series: <SplineAreaSeries<Data, DateTime>>[
+                    SplineAreaSeries<Data, DateTime>(
+                       color: Color.fromARGB(255, 126, 184, 253),
+                       dataSource: chartData,
+                       xValueMapper: (Data sales, _) => sales.x,
+                       yValueMapper: (Data sales, _) => sales.y)
+                  ],
+                ),
+              ),
+            ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Dart %}
+
+class Data {
+  Data({this.x, this.y});
+  final DateTime x;
+  final double y;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Step duration support](images/interval/selector-step-duration-support.gif)
+
+## Enable interval selection
+
+You can select a particular interval by tapping when setting the [`enableIntervalSelection`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/enableIntervalSelection.html) property as `true`. Both the thumbs will be moved to the current interval with animation.
+
+{% tabs %}
+{% highlight Dart %}
+
+final DateTime _min = DateTime(2002, 01, 01);
+final DateTime _max = DateTime(2010, 01, 01);
+SfRangeValues _values = SfRangeValues(DateTime(2004, 01, 01), DateTime(2008, 01, 01));
+
+final List<Data> chartData = <Data>[
+  Data(x: DateTime(2002, 01, 01), y: 2.2),
+  Data(x: DateTime(2003, 01, 01), y: 3.4),
+  Data(x: DateTime(2004, 01, 01), y: 2.8),
+  Data(x: DateTime(2005, 01, 01), y: 1.6),
+  Data(x: DateTime(2006, 01, 01), y: 2.3),
+  Data(x: DateTime(2007, 01, 01), y: 2.5),
+  Data(x: DateTime(2008, 01, 01), y: 2.9),
+  Data(x: DateTime(2009, 01, 01), y: 3.8),
+  Data(x: DateTime(2010, 01, 01), y: 3.7),
+];
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+            child: SfRangeSelector(
+              min: _min,
+              max: _max,
+              showLabels: true,
+              showTicks: true,
+              interval: 2,
+              enableIntervalSelection: true,
+              dateFormat: DateFormat.y(),
+              dateIntervalType: DateIntervalType.years,
+              initialValues: _values,
+              child: Container(
+                height: 130,
+                child: SfCartesianChart(
+                  margin: const EdgeInsets.all(0),
+                  primaryXAxis: DateTimeAxis(
+                    minimum: _min,
+                    maximum: _max,
+                    isVisible: false,),
+                  primaryYAxis: NumericAxis(isVisible: false),
+                  plotAreaBorderWidth: 0,
+                  series: <SplineAreaSeries<Data, DateTime>>[
+                    SplineAreaSeries<Data, DateTime>(
+                        color: Color.fromARGB(255, 126, 184, 253),
+                        dataSource: chartData,
+                        xValueMapper: (Data sales, _) => sales.x,
+                        yValueMapper: (Data sales, _) => sales.y)
+                  ],
+                ),
+              ),
+            ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Dart %}
+
+class Data {
+  Data({this.x, this.y});
+  final DateTime x;
+  final double y;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Interval selection support](images/interval/selector-interval-selection-support.gif)

@@ -17,8 +17,16 @@ The Syncfusion Flutter Date Range Picker is a lightweight widget that allows use
 * **Multiple picker views**: Display month, year, decade, and century views that allow users to easily select and navigate between built-in views. Supports programmatic navigation.
 
    ![Multiple picker views Date Range Picker](images/overview/picker_views.png)
+   
+* **Multi-date picker view**: Display two Date Range Pickers side by side, allowing you to select ranges of dates within two separate months easily.
+
+	![Multi date picker view Date Range Picker](images/overview/multi-date-picker.png)
 
 * **Quick navigation**: Navigate back and forth the date-range views and between different view modes.
+
+* **Enable/disable built-in view switching**: Restrict users from navigating to different picker views by disabling view switching. Select values in terms of month, year, or decade with this feature enabled.
+
+	![Range selection Date Range Picker](images/overview/range-selection.jpg)
 
 * **Date selection**: Select single, multiple, and range of dates. It also supports programmatic selection.
 
