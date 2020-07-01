@@ -9,11 +9,11 @@ documentation: ug
 
 # Tooltip features in maps
 
-This section helps to learn about how to enable tooltips for the shapes and bubbles in the maps and customize them.
+Tooltip is used to clearly indicate the shape information during tap or click interaction. This section helps to learn about how to enable tooltip for the shapes and bubbles in the maps and customize them.
 
 ## Tooltip for the shapes
 
-It is used to clearly indicate the shape information on the tap or click. By default, the shape tooltip text is based on [`shapeDataField`] values.
+It is used to clearly indicate the shape information on the tap or click. By default, the shape tooltip text is based on [`shapeDataField`] value of the respective shape.
 
 You can use the [`shapeTooltipTextMapper`] for changing the text of the shape tooltip.
 
@@ -32,7 +32,6 @@ Widget build(BuildContext context) {
               shapeFile: "assets/world_map.json",
               shapeDataField: "continent",
             ),
-            color: const Color.fromRGBO(86, 170, 235, 0.35),
             enableShapeTooltip: true,
           ),
         ],
@@ -49,7 +48,7 @@ Widget build(BuildContext context) {
 
 ## Tooltip for the bubbles
 
-It is used to clearly indicate the bubble information on the tap or click. By default, the bubble tooltip text is based on [`shapeDataField`] values.
+It is used to clearly indicate the bubble information on the tap or click. By default, the bubble tooltip text is based on [`shapeDataField`] value of the respective shape.
 
 You can use the [`bubbleTooltipTextMapper`] for changing the text of the bubble tooltip.
 
@@ -87,14 +86,8 @@ Widget build(BuildContext context) {
               primaryValueMapper: (int index) => data[index].continent,
               bubbleSizeMapper: (int index) => data[index].countriesCount,
             ),
-            color: const Color.fromRGBO(86, 170, 235, 0.35),
             showBubbles: true,
             enableBubbleTooltip: true,
-            bubbleSettings: const MapBubbleSettings(
-              color: Color.fromRGBO(17, 124, 179, 0.5),
-              maxRadius: 30,
-              minRadius: 15,
-            ),
           ),
         ],
       ),
@@ -119,7 +112,7 @@ class Model {
 
 You can customize the shape tooltip text with the [`shapeTooltipTextMapper`]. The [`shapeTooltipTextMapper`] will be called with the corresponding index every time when you tap or click on a shape. You can change the format or the entire text and return it from this callback.
 
-You can customize the bubble tooltip text with the [`bubbleTooltipTextMapper`].
+Similarly, you can customize the bubble tooltip text using the [`bubbleTooltipTextMapper`].
 
 {% tabs %}
 {% highlight Dart %}
@@ -165,15 +158,9 @@ Widget build(BuildContext context) {
                   '\nTotal Countries : ' +
                   data[index].countriesCount.toStringAsFixed(0),
             ),
-            color: const Color.fromRGBO(86, 170, 235, 0.35),
             showBubbles: true,
             enableBubbleTooltip: true,
             enableShapeTooltip: true,
-            bubbleSettings: const MapBubbleSettings(
-              color: Color.fromRGBO(17, 124, 179, 0.5),
-              maxRadius: 30,
-              minRadius: 15,
-            ),
           ),
         ],
       ),
@@ -195,8 +182,6 @@ class Model {
 ![Maps tooltip text customization](images/tooltip/tooltip_text_custom.png)
 
 ## Background color
-
-### Using tooltipSettings
 
 You can change the background color of the tooltip in the maps using the [`MapTooltipSettings.color`].
 
@@ -244,15 +229,9 @@ Widget build(BuildContext context) {
                   '\nTotal Countries : ' +
                   data[index].countriesCount.toStringAsFixed(0),
             ),
-            color: const Color.fromRGBO(86, 170, 235, 0.35),
             showBubbles: true,
             enableBubbleTooltip: true,
             enableShapeTooltip: true,
-            bubbleSettings: const MapBubbleSettings(
-              color: Color.fromRGBO(17, 124, 179, 0.5),
-              maxRadius: 30,
-              minRadius: 15,
-            ),
             tooltipSettings: const MapTooltipSettings(
               color: Color.fromRGBO(27, 129, 188, 1),
             ),
@@ -274,7 +253,7 @@ class Model {
 {% endhighlight %}
 {% endtabs %}
 
-### Using SfMapsTheme
+<b>Using SfMapsTheme</b>
 
 You can also change the background color of the tooltip in the maps using the [`tooltipColor`] property of [`SfMapsThemeData`].
 
@@ -328,15 +307,9 @@ Widget build(BuildContext context) {
                     '\nTotal Countries : ' +
                     data[index].countriesCount.toStringAsFixed(0),
               ),
-              color: const Color.fromRGBO(86, 170, 235, 0.35),
               showBubbles: true,
               enableBubbleTooltip: true,
               enableShapeTooltip: true,
-              bubbleSettings: MapBubbleSettings(
-                color: const Color.fromRGBO(17, 124, 179, 0.5),
-                maxRadius: 30,
-                minRadius: 15,
-              ),
             ),
           ],
         ),
@@ -360,9 +333,7 @@ class Model {
 
 ## Stroke color and stroke width
 
-### Using tooltipSettings
-
-You can change the border color of the tooltip in the maps using the [`MapTooltipSettings.strokeColor`] and [`MapTooltipSettings.strokeWidth`].
+You can change the stroke color and width of the tooltip in the maps using the [`MapTooltipSettings.strokeColor`] and [`MapTooltipSettings.strokeWidth`].
 
 {% tabs %}
 {% highlight Dart %}
@@ -408,15 +379,9 @@ Widget build(BuildContext context) {
                   '\nTotal Countries : ' +
                   data[index].countriesCount.toStringAsFixed(0),
             ),
-            color: const Color.fromRGBO(86, 170, 235, 0.35),
             showBubbles: true,
             enableBubbleTooltip: true,
             enableShapeTooltip: true,
-            bubbleSettings: const MapBubbleSettings(
-              color: Color.fromRGBO(17, 124, 179, 0.5),
-              maxRadius: 30,
-              minRadius: 15,
-            ),
             tooltipSettings: const MapTooltipSettings(
               color: Color.fromRGBO(27, 129, 188, 1),
               strokeColor: Colors.white,
@@ -440,9 +405,9 @@ class Model {
 {% endhighlight %}
 {% endtabs %}
 
-### Using SfMapsTheme
+<b>Using SfMapsTheme</b>
 
-You can also change the border color and width of the tooltip in the maps using the [`tooltipStrokeColor`] and [`tooltipStrokeWidth`] property of [`SfMapsThemeData`].
+You can also change the stroke color and width of the tooltip in the maps using the [`tooltipStrokeColor`] and [`tooltipStrokeWidth`] property of [`SfMapsThemeData`].
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfMapsTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsTheme-class.html).
 
@@ -496,15 +461,9 @@ Widget build(BuildContext context) {
                     '\nTotal Countries : ' +
                     data[index].countriesCount.toStringAsFixed(0),
               ),
-              color: const Color.fromRGBO(86, 170, 235, 0.35),
               showBubbles: true,
               enableBubbleTooltip: true,
               enableShapeTooltip: true,
-              bubbleSettings: MapBubbleSettings(
-                color: const Color.fromRGBO(17, 124, 179, 0.5),
-                maxRadius: 30,
-                minRadius: 15,
-              ),
             ),
           ],
         ),
@@ -527,8 +486,6 @@ class Model {
 ![Tooltip stroke color and width support](images/tooltip/tooltip_stroke.png)
 
 ## Text style
-
-### Using tooltipSettings
 
 You can change the appearance of the tooltip text in the maps using the [`MapTooltipSettings.textStyle`].
 
@@ -576,15 +533,9 @@ Widget build(BuildContext context) {
                   '\nTotal Countries : ' +
                   data[index].countriesCount.toStringAsFixed(0),
             ),
-            color: const Color.fromRGBO(86, 170, 235, 0.35),
             showBubbles: true,
             enableBubbleTooltip: true,
             enableShapeTooltip: true,
-            bubbleSettings: const MapBubbleSettings(
-              color: Color.fromRGBO(17, 124, 179, 0.5),
-              maxRadius: 30,
-              minRadius: 15,
-            ),
             tooltipSettings: const MapTooltipSettings(
               color: Color.fromRGBO(27, 129, 188, 1),
               strokeColor: Colors.white,
@@ -613,7 +564,7 @@ class Model {
 {% endhighlight %}
 {% endtabs %}
 
-### Using SfMapsTheme
+<b>Using SfMapsTheme</b>
 
 You can also change the appearance of the tooltip text in the maps using the [`tooltipTextStyle`] property of [`SfMapsThemeData`].
 
@@ -674,15 +625,9 @@ Widget build(BuildContext context) {
                     '\nTotal Countries : ' +
                     data[index].countriesCount.toStringAsFixed(0),
               ),
-              color: const Color.fromRGBO(86, 170, 235, 0.35),
               showBubbles: true,
               enableBubbleTooltip: true,
               enableShapeTooltip: true,
-              bubbleSettings: MapBubbleSettings(
-                color: const Color.fromRGBO(17, 124, 179, 0.5),
-                maxRadius: 30,
-                minRadius: 15,
-              ),
             ),
           ],
         ),
