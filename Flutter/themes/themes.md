@@ -107,10 +107,26 @@ In the above code snippet, [`chartThemeData`](https://pub.dev/documentation/sync
     </tr>
     <tr>
        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData-class.html">SfMapsThemeData</a>
+        </td>
+        <td>
+           <a href="https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html">SfMaps</a>
+        </td>
+    </tr>
+    <tr>
+       <td>
             <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfGaugeThemeData-class.html">SfGaugeThemeData</a>
         </td>
         <td>
            <a href="https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfRadialGauge-class.html">SfRadialGauge</a>
+        </td>
+    </tr>
+    <tr>
+       <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData-class.html">SfSliderThemeData</a>
+        </td>
+        <td>
+           <a href="https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html">SfSlider</a>
         </td>
     </tr>
     <tr>
@@ -225,10 +241,26 @@ Similarly, refer the following table to know about the other specialized theme w
     </tr>
     <tr>
        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsTheme-class.html">SfMapsTheme</a>
+        </td>
+        <td>
+           <a href="https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html">SfMaps</a>
+        </td>
+    </tr>
+    <tr>
+       <td>
             <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfGaugeTheme-class.html">SfGaugeTheme</a>
         </td>
         <td>
            <a href="https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfRadialGauge-class.html">SfRadialGauge</a>
+        </td>
+    </tr>
+    <tr>
+       <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderTheme-class.html">SfSliderTheme</a>
+        </td>
+        <td>
+           <a href="https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html">SfSlider</a>
         </td>
     </tr>
     <tr>
