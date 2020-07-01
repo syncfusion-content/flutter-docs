@@ -11,7 +11,7 @@ documentation: ug
 
 This section helps to learn about how to add title in the maps and customize them.
 
-## Title Text
+## Title text
 
 You can define the maps title using [`SfMaps.title`] property. You can set the text for the title using the [`MapsTitle.text`] property.
 
@@ -45,7 +45,7 @@ Widget build(BuildContext context) {
 
 ![Maps title support](images/title/default_title.png)
 
-## Text Style
+## Text style
 
 You can change the style of the title text in the maps using the [`MapsTitle.textStyle`] property.
 
@@ -84,7 +84,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-### Using SfMapsTheme
+<b>Using SfMapsTheme</b>
 
 You can also change the style of the title text in the maps using the [`titleTextStyle`] property of [`SfMapsThemeData`].
 
@@ -131,9 +131,9 @@ Widget build(BuildContext context) {
 
 ![Maps title textStyle](images/title/textStyle.png)
 
-## Text Alignment
+## Text alignment
 
-You can align the title text in the maps using the [`MapsTitle.alignment`] property. By default, the alignment will be center. You can also align the text in the available alignment options in [`Alignment`](https://api.flutter.dev/flutter/painting/Alignment-class.html)
+You can align the title text in the maps using the [`MapsTitle.alignment`] property. By default, the alignment will be center. You can also align the text in the available alignment options in [`Alignment`](https://api.flutter.dev/flutter/painting/Alignment-class.html).
 
 {% tabs %}
 {% highlight Dart %}
@@ -217,7 +217,7 @@ Widget build(BuildContext context) {
 
 ## Decoration
 
-You can decorate the title of maps using the [`MapsTitle.decoration`] property. You can use [`box decoration`](https://api.flutter.dev/flutter/painting/BoxDecoration-class.html), [`shapeDecoration`](https://api.flutter.dev/flutter/painting/ShapeDecoration-class.html) or create a custom [`decoration`](https://api.flutter.dev/flutter/painting/Decoration-class.html).
+You can decorate the title of maps using the [`MapsTitle.decoration`] property. You can use [`BoxDecoration`](https://api.flutter.dev/flutter/painting/BoxDecoration-class.html), [`ShapeDecoration`](https://api.flutter.dev/flutter/painting/ShapeDecoration-class.html) or create a custom [`Decoration`](https://api.flutter.dev/flutter/painting/Decoration-class.html).
 
 {% tabs %}
 {% highlight Dart %}
