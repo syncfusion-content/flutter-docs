@@ -44,7 +44,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Maps title support](images/tooltip/default_title.png)
+![Maps title support](images/title/default_title.png)
 
 ## Text Style
 
@@ -129,7 +129,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Maps title support](images/tooltip/default_title.png)
+![Maps title support](images/title/default_title.png)
 
 ## Text Alignment
 
@@ -170,7 +170,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Maps title support](images/tooltip/default_title.png)
+![Maps title support](images/title/default_title.png)
 
 ## Background color
 
@@ -212,7 +212,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Maps title support](images/tooltip/default_title.png)
+![Maps title support](images/title/default_title.png)
 
 ## Decoration
 
@@ -259,7 +259,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Maps title support](images/tooltip/default_title.png)
+![Maps title support](images/title/default_title.png)
 
 ## Margin
 
@@ -307,7 +307,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Maps title support](images/tooltip/default_title.png)
+![Maps title support](images/title/default_title.png)
 
 ## Padding
 
@@ -356,4 +356,4 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Maps title support](images/tooltip/default_title.png)
+![Maps title support](images/title/default_title.png)
