@@ -816,6 +816,45 @@ When you specify the same value for both [`start`](https://pub.dev/documentation
 
 ![plotband_line](images/axis-customization/plotband_line.png)
 
+### Plot band padding
+
+Padding to the plot band text can be added using the [`verticalTextPadding`]() or [`horizontalTextPadding`]() properties. The [`verticalTextPadding`]() is used to move the plot band text vertically and [`horizontalTextPadding`]() is used to move the plot band text horizontally.
+
+These properties takes pixel or percentage value. For pixel input should be like `10px` and for percentage input should be like `10%`. If no suffix is specified (`10`), it will be considered as pixel value. Percentage value refers to the overall width of the chart. i.e 100% is equal to the width of the chart. 
+
+This is applicable for both vertical and horizontal axis. Positive value for this property moves the text to right and negative value moves to left.
+
+If [`verticalTextAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/verticalTextAlignment.html) or [`horizontalTextAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/horizontalTextAlignment.html) is specified, text padding will be calculated from that modified position. Defaults to `null`.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+      return Container(
+        child: SfCartesianChart(
+            primaryXAxis: NumericAxis(
+                plotBands: <PlotBand>[
+                    PlotBand(
+                        verticalTextPadding:'5%',
+                        horizontalTextPadding: '5%',
+                        text: 'Average',
+                        textAngle: 0,
+                        start: 10,
+                        end: 10, 
+                        textStyle: TextStyle(color: Colors.deepOrange, fontSize: 16),
+                        borderColor: Colors.red,
+                        borderWidth: 2
+                    )
+                ]
+            )
+        )
+      );
+    }
+
+{% endhighlight %}
+
+![plotband padding](images/axis-customization/plotband_padding.png)
+
 ## Multiple axes
 
 By default, the chart is rendered with primary x axis and primary y axis. But, the users can add n number of axis to the chart. An additional horizontal or vertical axis can be added to the chart using the [`axes`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/axes.html) property, and then you can associate it to a series by specifying the name of the axis to the [`xAxisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/xAxisName.html) or [`yAxisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/yAxisName.html) property in the series.
