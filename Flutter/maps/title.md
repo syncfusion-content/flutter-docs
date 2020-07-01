@@ -13,7 +13,7 @@ This section helps to learn about how to add title in the maps and customize the
 
 ## Title Text
 
-You can define the maps title using [`SfMaps.title`] property. You can set the maps title using the [`MapsTitle.text`] property.
+You can define the maps title using [`SfMaps.title`] property. You can set the text for the title using the [`MapsTitle.text`] property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -33,7 +33,6 @@ Widget build(BuildContext context) {
               shapeFile: "assets/world_map.json",
               shapeDataField: "continent",
             ),
-            color: const Color.fromRGBO(86, 170, 235, 0.35),
           ),
         ],
       ),
@@ -48,9 +47,7 @@ Widget build(BuildContext context) {
 
 ## Text Style
 
-### Using title
-
-You can change the appearance of the title text in the maps using the [`MapsTitle.textStyle`]property.
+You can change the style of the title text in the maps using the [`MapsTitle.textStyle`] property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -64,9 +61,11 @@ Widget build(BuildContext context) {
         title: MapTitle(
             text: 'World Map',
             textStyle: const TextStyle(
-                color: Colors.black,
-                fontSize: 20,
+                color: Colors.red,
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
                 fontStyle: FontStyle.italic,
+                fontFamily: 'Times'
             ),
         ),
         layers: [
@@ -75,7 +74,6 @@ Widget build(BuildContext context) {
               shapeFile: "assets/world_map.json",
               shapeDataField: "continent",
             ),
-            color: const Color.fromRGBO(86, 170, 235, 0.35),
           ),
         ],
       ),
@@ -88,7 +86,7 @@ Widget build(BuildContext context) {
 
 ### Using SfMapsTheme
 
-You can also change the appearance of the title text in the maps using the [`titleTextStyle`] property of [`SfMapsThemeData`].
+You can also change the style of the title text in the maps using the [`titleTextStyle`] property of [`SfMapsThemeData`].
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfMapsTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsTheme-class.html).
 
@@ -103,9 +101,11 @@ Widget build(BuildContext context) {
       child: SfMapsTheme(
                 data: SfMapsThemeData(
                     titleTextStyle: const TextStyle(
-                        color: Colors.black,
-                        fontSize: 30,
+                        color: Colors.red,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
                         fontStyle: FontStyle.italic,
+                        fontFamily: 'Times'
                     ),
                 ),
                 child: SfMaps(
@@ -129,11 +129,11 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Maps title support](images/title/default_title.png)
+![Maps title textStyle](images/title/textStyle.png)
 
 ## Text Alignment
 
-You can align the title text in the maps using the [`MapsTitle.alignment`] property.
+You can align the title text in the maps using the [`MapsTitle.alignment`] property. By default, the alignment will be center. You can also align the text in `topleft`, `topright`, `bottomleft`, `bottomright`, etc.
 
 {% tabs %}
 {% highlight Dart %}
@@ -147,11 +147,13 @@ Widget build(BuildContext context) {
         title: MapTitle(
             text: 'World Map',
             textStyle: const TextStyle(
-                color: Colors.black,
-                fontSize: 20,
+                color: Colors.red,
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
                 fontStyle: FontStyle.italic,
+                fontFamily: 'Times'
             ),
-            alignment: Alignment.center,
+            alignment: Alignment.centerLeft,
         ),
         layers: [
           MapShapeLayer(
@@ -159,7 +161,6 @@ Widget build(BuildContext context) {
               shapeFile: "assets/world_map.json",
               shapeDataField: "continent",
             ),
-            color: const Color.fromRGBO(86, 170, 235, 0.35),
           ),
         ],
       ),
@@ -170,7 +171,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Maps title support](images/title/default_title.png)
+![Maps title alignment](images/title/alignment.png)
 
 ## Background color
 
@@ -188,12 +189,13 @@ Widget build(BuildContext context) {
         title: MapTitle(
             text: 'World Map',
             textStyle: const TextStyle(
-                color: Colors.black,
-                fontSize: 20,
+                color: Colors.red,
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
                 fontStyle: FontStyle.italic,
+                fontFamily: 'Times'
             ),
-            alignment: Alignment.center,
-            color: Colors.red,
+            color: Colors.lightBlueAccent,
         ),
         layers: [
           MapShapeLayer(
@@ -201,7 +203,6 @@ Widget build(BuildContext context) {
               shapeFile: "assets/world_map.json",
               shapeDataField: "continent",
             ),
-            color: const Color.fromRGBO(86, 170, 235, 0.35),
           ),
         ],
       ),
@@ -212,11 +213,11 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Maps title support](images/title/default_title.png)
+![Maps title background color](images/title/background_color.png)
 
 ## Decoration
 
-You can decorate the title of maps by using the [`MapsTitle.decoration`] property.
+You can decorate the title of maps by using the [`MapsTitle.decoration`] property. You can use [`boxdecoration`](https://api.flutter.dev/flutter/painting/BoxDecoration-class.html), [`shapeDecoration`](https://api.flutter.dev/flutter/painting/ShapeDecoration-class.html) or create a custom [`decoration`](https://api.flutter.dev/flutter/painting/Decoration-class.html).
 
 {% tabs %}
 {% highlight Dart %}
@@ -230,13 +231,14 @@ Widget build(BuildContext context) {
         title: MapTitle(
             text: 'World Map',
             textStyle: const TextStyle(
-                color: Colors.black,
-                fontSize: 20,
+                color: Colors.red,
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
                 fontStyle: FontStyle.italic,
+                fontFamily: 'Times'
             ),
-            alignment: Alignment.center,
             decoration: BoxDecoration(
-                color: Colors.transparent,
+                color: Colors.lightBlueAccent,
                 border: Border.all(color: Colors.red, width: 2),
                 borderRadius: const BorderRadius.all(Radius.circular(4)),
                 shape: BoxShape.rectangle,
@@ -248,7 +250,6 @@ Widget build(BuildContext context) {
               shapeFile: "assets/world_map.json",
               shapeDataField: "continent",
             ),
-            color: const Color.fromRGBO(86, 170, 235, 0.35),
           ),
         ],
       ),
@@ -259,7 +260,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Maps title support](images/title/default_title.png)
+![Maps title decoration](images/title/decoration.png)
 
 ## Margin
 
@@ -277,14 +278,15 @@ Widget build(BuildContext context) {
         title: MapTitle(
             text: 'World Map',
             textStyle: const TextStyle(
-                color: Colors.black,
-                fontSize: 20,
+                color: Colors.red,
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
                 fontStyle: FontStyle.italic,
+                fontFamily: 'Times'
             ),
-            alignment: Alignment.center,
             margin: const EdgeInsets.all(10),
             decoration: BoxDecoration(
-                color: Colors.transparent,
+                color: Colors.lightBlueAccent,
                 border: Border.all(color: Colors.red, width: 2),
                 borderRadius: const BorderRadius.all(Radius.circular(4)),
                 shape: BoxShape.rectangle,
@@ -296,7 +298,6 @@ Widget build(BuildContext context) {
               shapeFile: "assets/world_map.json",
               shapeDataField: "continent",
             ),
-            color: const Color.fromRGBO(86, 170, 235, 0.35),
           ),
         ],
       ),
@@ -307,7 +308,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Maps title support](images/title/default_title.png)
+![Maps title margin support](images/title/margin.png)
 
 ## Padding
 
@@ -325,15 +326,16 @@ Widget build(BuildContext context) {
         title: MapTitle(
             text: 'World Map',
             textStyle: const TextStyle(
-                color: Colors.black,
-                fontSize: 20,
+                color: Colors.red,
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
                 fontStyle: FontStyle.italic,
+                fontFamily: 'Times'
             ),
-            alignment: Alignment.center,
             margin: const EdgeInsets.all(10),
             padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
-                color: Colors.transparent,
+                color: Colors.lightBlueAccent,
                 border: Border.all(color: Colors.red, width: 2),
                 borderRadius: const BorderRadius.all(Radius.circular(4)),
                 shape: BoxShape.rectangle,
@@ -345,7 +347,6 @@ Widget build(BuildContext context) {
               shapeFile: "assets/world_map.json",
               shapeDataField: "continent",
             ),
-            color: const Color.fromRGBO(86, 170, 235, 0.35),
           ),
         ],
       ),
@@ -356,4 +357,4 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Maps title support](images/title/default_title.png)
+![Maps title padding support](images/title/padding.png)
