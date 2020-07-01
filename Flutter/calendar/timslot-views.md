@@ -106,10 +106,11 @@ You can restrict the user interaction such as selection and highlights specific 
 
 ![Special time region in Flutter event calendar](images/timeslot-views/Special_region.png)
 
->**NOTE** If time region has both the text and icon then it will draw icon only.
+>**NOTE** 
+* If time region has both the text and icon then it will draw icon only.
 
 ### Selection restriction in timeslots
-You can enable or disable the touch interaction of `TimeRegion` using the ` enablePointerInteraction` property of `TimeRegion`. By default, its value is true.
+You can enable or disable the touch interaction of `TimeRegion` using the `enablePointerInteraction` property of `TimeRegion`. By default, its value is true.
 
 {% tabs %}
 {% highlight Dart %}
