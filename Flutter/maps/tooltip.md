@@ -9,7 +9,7 @@ documentation: ug
 
 # Tooltip features in maps
 
-Tooltip is used to clearly indicate the shape information during tap or click interaction. This section helps to learn about how to enable tooltip for the shapes and bubbles in the maps and customize them.
+Tooltip is used to clearly indicate the shape or bubble information during tap or click interaction. This section helps to learn about how to enable tooltip for the shapes and bubbles in the maps and customize them.
 
 ## Tooltip for the shapes
 
