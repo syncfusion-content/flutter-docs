@@ -217,7 +217,7 @@ Widget build(BuildContext context) {
 
 ## Decoration
 
-You can decorate the title of maps using the [`MapsTitle.decoration`] property. You can use [`boxdecoration`](https://api.flutter.dev/flutter/painting/BoxDecoration-class.html), [`shapeDecoration`](https://api.flutter.dev/flutter/painting/ShapeDecoration-class.html) or create a custom [`decoration`](https://api.flutter.dev/flutter/painting/Decoration-class.html).
+You can decorate the title of maps using the [`MapsTitle.decoration`] property. You can use [`box decoration`](https://api.flutter.dev/flutter/painting/BoxDecoration-class.html), [`shapeDecoration`](https://api.flutter.dev/flutter/painting/ShapeDecoration-class.html) or create a custom [`decoration`](https://api.flutter.dev/flutter/painting/Decoration-class.html).
 
 {% tabs %}
 {% highlight Dart %}
