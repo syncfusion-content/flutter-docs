@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion Flutter Maps Title | Syncfusion
-description: This section explains how to add title and customize its appearance in the flutter maps.
+description: This section describes how to add title in the Flutter maps and how to customize its appearance based on the application requirement.
 platform: Flutter
 control: SfMaps
 documentation: ug
@@ -133,7 +133,7 @@ Widget build(BuildContext context) {
 
 ## Text Alignment
 
-You can align the title text in the maps using the [`MapsTitle.alignment`] property. By default, the alignment will be center. You can also align the text in `topleft`, `topright`, `bottomleft`, `bottomright`, etc.
+You can align the title text in the maps using the [`MapsTitle.alignment`] property. By default, the alignment will be center. You can also align the text in the available alignment options in [`Alignment`](https://api.flutter.dev/flutter/painting/Alignment-class.html)
 
 {% tabs %}
 {% highlight Dart %}
@@ -217,7 +217,7 @@ Widget build(BuildContext context) {
 
 ## Decoration
 
-You can decorate the title of maps by using the [`MapsTitle.decoration`] property. You can use [`boxdecoration`](https://api.flutter.dev/flutter/painting/BoxDecoration-class.html), [`shapeDecoration`](https://api.flutter.dev/flutter/painting/ShapeDecoration-class.html) or create a custom [`decoration`](https://api.flutter.dev/flutter/painting/Decoration-class.html).
+You can decorate the title of maps using the [`MapsTitle.decoration`] property. You can use [`boxdecoration`](https://api.flutter.dev/flutter/painting/BoxDecoration-class.html), [`shapeDecoration`](https://api.flutter.dev/flutter/painting/ShapeDecoration-class.html) or create a custom [`decoration`](https://api.flutter.dev/flutter/painting/Decoration-class.html).
 
 {% tabs %}
 {% highlight Dart %}
@@ -284,7 +284,7 @@ Widget build(BuildContext context) {
                 fontStyle: FontStyle.italic,
                 fontFamily: 'Times'
             ),
-            margin: const EdgeInsets.all(10),
+            margin: const EdgeInsets.only(top: 50),
             decoration: BoxDecoration(
                 color: Colors.lightBlueAccent,
                 border: Border.all(color: Colors.red, width: 2),
