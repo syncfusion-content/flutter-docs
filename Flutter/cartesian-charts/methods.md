@@ -1060,9 +1060,9 @@ Widget build(BuildContext context) {
             chartData.removeAt(0);
             //Added a point to the data source
             chartData.add(ChartData(3,23));
-            //Passed the necessary arguments to the updateDataSource method. Here passed the added and removed dat point indexes.
+            //Passed the necessary arguments to the updateDataSource method. Here passed the added and removed data point indexes.
             _chartSeriesController.updateDataSource(
-              addedDataIndexes: <int>[chartData.length -1],
+              addedDataIndexes: <int>[chartData.length - 1],
               removedDataIndexes: <int>[0],
             );
           }
