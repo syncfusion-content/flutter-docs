@@ -322,4 +322,4 @@ Also refer [crosshair](./events#oncrosshairpositionchanging) and [trackball](./e
 
 ## See Also
 
-* [Disabling trackball tooltip for particular series in cartesian chart](https://www.syncfusion.com/kb/11638/how-to-disable-trackball-tooltip-for-particular-series-in-cartesian-charts-sfcartesianchart).
+* [Disabling trackball tooltip for particular series in Cartesian chart](https://www.syncfusion.com/kb/11638/how-to-disable-trackball-tooltip-for-particular-series-in-cartesian-charts-sfcartesianchart).
