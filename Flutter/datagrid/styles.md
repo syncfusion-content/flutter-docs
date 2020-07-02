@@ -127,7 +127,7 @@ To show the vertical and horizontal gridlines, use the `SfDataGrid.gridLinesVisi
 * Both
 * None
 
-The following code describes how to show vertical and horizontal grid lines for the SfDataGrid.
+The following code describes how to show vertical and horizontal grid lines for the `SfDataGrid`.
 
 {% tabs %}
 {% highlight Dart %} 

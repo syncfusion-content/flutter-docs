@@ -9,7 +9,7 @@ documentation: ug
 
 # Conditional Styling in Flutter DataGrid
 
-The SfDataGrid allows to customize the style of the individual cells and rows based on the requirements. It can be customized in the following ways:
+The `SfDataGrid` allows to customize the style of the individual cells and rows based on the requirements. It can be customized in the following ways:
 
 * Using `onQueryCellStyle` Callback
 * Using `onQueryRowStyle` Callback
@@ -18,7 +18,7 @@ The SfDataGrid allows to customize the style of the individual cells and rows ba
 
 ### Styling based on content
 
-The appearance of the cells in SfDataGrid can be customized conditionally based on the content by handling the `SfDataGrid.onQueryCellStyle` callback. 
+The appearance of the cells in `SfDataGrid` can be customized conditionally based on the content by handling the `SfDataGrid.onQueryCellStyle` callback. 
 Callback requires `QueryCellStyleArgs` as parameter which provides all the required options to know about the cell.
 
 {% tabs %}
@@ -103,7 +103,7 @@ The appearance of the alternating cells in a column can be customized conditiona
 
 ### Styling based on content
 
-The appearance of the rows in SfDataGrid can be customized conditionally based on the content by handling the `SfDataGrid.onQueryRowStyle` callback.
+The appearance of the rows in `SfDataGrid` can be customized conditionally based on the content by handling the `SfDataGrid.onQueryRowStyle` callback.
 Callback requires `QueryRowStyleArgs` as parameter which provides all the required options to know about the cell.
 
 {% tabs %}
@@ -146,7 +146,7 @@ Callback requires `QueryRowStyleArgs` as parameter which provides all the requir
 
 ### Styling alternate rows
 
-The appearance of the alternating rows in SfDataGrid can be customized by using the `SfDataGrid.onQueryRowStyle` callback.
+The appearance of the alternating rows in `SfDataGrid` can be customized by using the `SfDataGrid.onQueryRowStyle` callback.
 
 {% tabs %}
 {% highlight Dart %} 

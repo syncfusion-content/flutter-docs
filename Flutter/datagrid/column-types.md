@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Types in Flutter DataGrid
 
-SfDataGrid provides support for various built-in column types. Each column has its own properties and renderer to handle different types of data. Based on the requirements, any column can be used.
+`SfDataGrid` provides support for various built-in column types. Each column has its own properties and renderer to handle different types of data. Based on the requirements, any column can be used.
 
 The following table describes the types of columns and its usage:
 
@@ -22,7 +22,7 @@ The following table describes the types of columns and its usage:
 
 ## GridColumn
 
-GridColumn is a class that provides base functionalities for all the column types in SfDataGrid.
+GridColumn is a class that provides base functionalities for all the column types in `SfDataGrid`.
 
 ### Mapping column to a property
 
@@ -112,7 +112,7 @@ Column can be bound to a property in data object using `GridColumn.mappingName` 
 
 ### Set manual width for column
 
-SfDataGrid allows you to customize the width of each `GridColumn` in the `SfDataGrid.Columns` collection. To customize column width, use the `GridColumn.width` property. By default, this property will not be assigned any value. The GridColumn renders in view based on the value of the `defaultColumnWidth` property.
+`SfDataGrid` allows you to customize the width of each `GridColumn` in the `SfDataGrid.Columns` collection. To customize column width, use the `GridColumn.width` property. By default, this property will not be assigned any value. The GridColumn renders in view based on the value of the `defaultColumnWidth` property.
 
 >**NOTE**  
    Set the `isHidden` property to `True` instead of setting column width as `0` to hide a column.

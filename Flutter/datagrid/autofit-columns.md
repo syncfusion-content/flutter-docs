@@ -176,7 +176,7 @@ The default is `ColumnWidthCalculationRange.visibleRows` which considers visible
 
 ## Customizing built-in column sizing logic
 
-The column auto sizing operations of the SfDataGrid is processed in the `ColumnSizer` class. The column sizing operations can be customized by overriding `ColumnSizer` and set it to `SfDataGrid.columnSizer` property.
+The column auto sizing operations of the `SfDataGrid` is processed in the `ColumnSizer` class. The column sizing operations can be customized by overriding `ColumnSizer` and set it to `SfDataGrid.columnSizer` property.
 
 {% tabs %}
 {% highlight Dart %} 
