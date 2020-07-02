@@ -24,7 +24,7 @@ The following table describes the types of columns and its usage:
 
 GridColumn is a class that provides base functionalities for all the column types in SfDataGrid.
 
-### Mapping Column to a Property
+### Mapping column to a property
 
 Column can be bound to a property in data object using `GridColumn.mappingName` property. `headerText` is used to display the required text in a column header. If the `headerText` is not mentioned, `mappingName` is considered.
 

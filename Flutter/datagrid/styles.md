@@ -9,7 +9,7 @@ documentation: ug
 
 # Styling in Flutter DataGrid
 
-The data grid applies style for all its elements by writing a Style class overriding from `DataGridCellStyle`. The styling can be applied to DataGrid by using the `sfDataGridThemeData` in `SfDataGridTheme`. The DataGrid should be wrapped inside the `SfDataGridTheme`.
+The data grid applies style for all its elements by writing a Style class overriding from `DataGridCellStyle`. The styling can be applied to DataGrid by using the `SfDataGridThemeData` in `SfDataGridTheme`. The DataGrid should be wrapped inside the `SfDataGridTheme`.
 
 ## Styling row
 

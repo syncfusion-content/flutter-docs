@@ -23,7 +23,7 @@ SfDataGrid allows to set the column widths based on certain logic using `SfDataG
 > **NOTE**  
     `ColumnWidthMode` will not work when the column width defined explicitly. `columnWidthMode` calculates column width based on miniumWidth and maximumWidth properties.
 
-Below code, applies `ColumnWidthMode.fill` to equally set width for `SfDataGrid.columns`.
+The following example shows how to set the width equally for column based on the view port size.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -53,11 +53,11 @@ Below code, applies `ColumnWidthMode.fill` to equally set width for `SfDataGrid.
 > **NOTE**  
     The `GridColumn.columnWidthMode` takes higher priority than the `SfDataGrid.columnWidthMode`.
 
-![flutter datagrid shows columns with fill mode](images/autofit-columns/flutter-datagrid-fill-columns.png)
+![columns filled based on view port size in flutter datagrid](images/autofit-columns/flutter-datagrid-fill-columns.png)
 
 ## Fill remaining width for any column
 
-While setting `SfDataGrid.columnWidthMode` as `lastColumnFill` remaining width is applied to last column. The remaining width to specific column can be applied by setting GridColumn.ColumnWidthMode property.
+While setting `SfDataGrid.columnWidthMode` as `lastColumnFill` remaining width is applied to last column. The remaining width to specific column can be applied by setting `GridColumn.columnWidthMode` property.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -83,9 +83,9 @@ While setting `SfDataGrid.columnWidthMode` as `lastColumnFill` remaining width i
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows columns with last column fill](images/autofit-columns/flutter-datagrid-fill-lastcolumn.png)
+![The last column is filled in view in flutter datagrid](images/autofit-columns/flutter-datagrid-fill-lastcolumn.png)
 
-Below code applies `ColumnWidthMode.lastColumnFill` to fill Name column by using `GridColumn.columnWidthMode`.
+The below example shows Name column is set as `lastColumnFill` mode.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -112,12 +112,12 @@ Below code applies `ColumnWidthMode.lastColumnFill` to fill Name column by using
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows columns with fill any column](images/autofit-columns/flutter-datagrid-fill-anycolumn.png)
+![Name column is filled with remaining available space in flutter datagrid](images/autofit-columns/flutter-datagrid-fill-anycolumn.png)
 
-## Autofit based on String length
+## Autofit based on string length
 
-By default, the auto size of the column is calculated based on the string size. To improve the performance of the column auto sizing, the column auto size calculation logic can be calculated based on the length of the cell value by using `SfDataGrid.ColumnWidthCalculationMode` property.
-The default is `ColumnWidthCalculationMode.textSize` which calculates size for all the cell’s formatted text. The columns can also be auto sized based on string length of the cell using the `ColumnWidthCalculationMode.textLength` which calculates the size for the cell which has longest string
+By default, the auto size of the column is calculated based on the string size. To improve the performance of the column auto sizing, the auto size calculation logic of column can be calculated based on the length of the cell value by using `SfDataGrid.columnWidthCalculationMode` property.
+The default is `ColumnWidthCalculationMode.textSize` which calculates size for all the cell’s formatted text. The columns can also be auto sized based on string length of the cell using the `ColumnWidthCalculationMode.textLength` which calculates the size for the cell which has longest string.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -174,7 +174,7 @@ The default is `ColumnWidthCalculationRange.visibleRows` which considers visible
 {% endhighlight %}
 {% endtabs %}
 
-## Customizing Built-in Column Sizing Logic
+## Customizing built-in column sizing logic
 
 The column auto sizing operations of the SfDataGrid is processed in the `ColumnSizer` class. The column sizing operations can be customized by overriding `ColumnSizer` and set it to `SfDataGrid.columnSizer` property.
 
@@ -201,12 +201,6 @@ The column auto sizing operations of the SfDataGrid is processed in the `ColumnS
         return super.calculateAllCellsExceptHeaderWidth(column, setWidth);
       }
     }
-
-{% endhighlight %}
-{% endtabs %}   
-
-{% tabs %}
-{% highlight Dart %} 
 
     final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
     final CustomGridColumnSizer _customGridColumnSizer = CustomGridColumnSizer();
