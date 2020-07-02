@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tooltips in Syncfusion Flutter maps | Syncfusion
+title: Tooltip in Syncfusion Flutter maps | Syncfusion
 description: This section explains how to show tooltips in shape and bubble and customize its appearance in the Flutter maps.
 platform: Flutter
 control: SfMaps

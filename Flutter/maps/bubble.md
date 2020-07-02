@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bubbles in Syncfusion Flutter Maps | Syncfusion
-description: This section explains how to show bubbles in the Flutter maps and customize their appearances like size, color.
+description: This section explains how to show bubbles in the Flutter maps and customize their appearances like size and color.
 platform: Flutter
 control: SfMaps
 documentation: ug
