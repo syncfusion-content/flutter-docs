@@ -280,6 +280,7 @@ The [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
 Also refer [label format](./axis-customization#formatting-axis-label-content) and [date format](#formatting-the-labels-1) for formatting the labels further.
 
+
 ## Category axis
 
 Category axis displays text labels instead of numbers. When the string values are bound to x values, then the x-axis must be initialized with CategoryAxis.
@@ -756,3 +757,6 @@ By using  the [isInversed](https://pub.dev/documentation/syncfusion_flutter_char
 
 ![Inversed logarithmic axis](images/axis-types/inversed-logarithmic.png) 
 
+## See Also
+
+* [Applying currency format to axis labels](https://www.syncfusion.com/kb/11519/how-to-apply-the-currency-format-to-the-axis-labels-sfcartesianchart).
