@@ -1,7 +1,7 @@
 ---
 layout: post
-title: AutoFit Columns feature of Syncfusion Flutter DataGrid | DataTable
-description: Learn how to customize the column widths by using AutoFit Columns feature in Syncfusion Flutter DataGrid
+title: AutoFit Columns feature in Syncfusion Flutter DataGrid | DataTable
+description: Learn how to autofit the columns and column width customization in Syncfusion Flutter DataGrid.
 platform: flutter
 control: SfDataGrid
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Autofit Columns in Flutter DataGrid
 
-SfDataGrid allows to set the column widths based on certain logic using `SfDataGrid.columnWidthMode` or `GridColumn.columnWidthMode` property. Below is the list of predefined column sizing options available.
+SfDataGrid allows to set the column widths based on certain logic using `SfDataGrid.columnWidthMode` or `GridColumn.columnWidthMode` property. Below are the list of predefined column sizing options available.
 
 | Mode                      | Description                                         |
 |---------------------------|-----------------------------------------------------|
@@ -147,7 +147,7 @@ The default is `ColumnWidthCalculationMode.textSize` which calculates size for a
 ## Calculate the column width for all the rows
 
 By default, the column auto size is calculated for the visible rows. The column auto size can be calculated for the all the available rows by using the `SfDataGrid.columnWidthCalculationRange` property.
-The default is `ColumnWidthCalculationRange.visibleRows` which considers visible records for auto sizing. The columns can also be auto sized by considering all the rows using the `ColumnWidthCalculationRange.allRows` mode.
+The default is `ColumnWidthCalculationRange.visibleRows` which considers visible rows for auto sizing. The columns can also be auto sized by considering all the rows using the `ColumnWidthCalculationRange.allRows` mode.
 
 {% tabs %}
 {% highlight Dart %} 

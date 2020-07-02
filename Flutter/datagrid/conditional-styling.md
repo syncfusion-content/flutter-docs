@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Conditional Styling feature of Syncfusion Flutter DataGrid | DataTable
+title: Conditional Styling feature in Syncfusion Flutter DataGrid | DataTable
 description: Learn how to customize the appearance of rows and cells by using conditional styling feature in Syncfusion Flutter DataGrid.
 platform: flutter
 control: SfDataGrid
@@ -166,11 +166,9 @@ The appearance of the alternating rows in SfDataGrid can be customized by using 
                 ..headerText = 'Designation',
             ],
             onQueryRowStyle: (QueryRowStyleArgs args) {
-              if (args.rowIndex >= 0 && args.rowIndex <= 10) {
-                if (args.rowIndex % 2 == 0) {
-                  return DataGridCellStyle(
-                      backgroundColor: Colors.lightGreen[300]);
-                }
+              if (args.rowIndex % 2 == 0) {
+                return DataGridCellStyle(
+                    backgroundColor: Colors.lightGreen[300]);
               }
               return null;
             }),

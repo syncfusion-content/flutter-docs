@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Styling feature of Syncfusion Flutter DataGrid | DataTable
+title: Styling feature in Syncfusion Flutter DataGrid | DataTable
 description: Learn about styles and how to customize the appearance of DataGrid and its elements in Syncfusion Flutter DataGrid.
 platform: flutter
 control: SfDataGrid
@@ -127,7 +127,7 @@ To show the vertical and horizontal gridlines, use the `SfDataGrid.gridLinesVisi
 * Both
 * None
 
-The following code describes how to draw both vertical and horizontal grid lines for the SfDataGrid.
+The following code describes how to show vertical and horizontal grid lines for the SfDataGrid.
 
 {% tabs %}
 {% highlight Dart %} 

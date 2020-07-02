@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Conditional Styling feature of Syncfusion Flutter DataGrid | DataTable
-description: Learn how to use and customize the different types of column and its properties in Syncfusion Flutter DataGrid
+title: Column types in Syncfusion Flutter DataGrid | DataTable
+description: Learn how to use and customize the different types of column and its properties in Syncfusion Flutter DataGrid.
 platform: flutter
 control: SfDataGrid
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Types in Flutter DataGrid
 
-SfDataGrid provides support for various built-in column types. Each column has its own properties and renderer to handle different types of data. Based on the requirements any column can be used.
+SfDataGrid provides support for various built-in column types. Each column has its own properties and renderer to handle different types of data. Based on the requirements, any column can be used.
 
 The following table describes the types of columns and its usage:
 
@@ -112,7 +112,7 @@ Column can be bound to a property in data object using `GridColumn.mappingName` 
 
 ### Set manual width for column
 
-SfDataGrid allows you to customize the width of each `GridColumn` in the `SfDataGrid.Columns` collection. To customize column width, use the `GridColumn.width` property. By default, this property will not be assigned any value. The GridColumn renders in view based on the value of the `DefaultColumnWidth` property.
+SfDataGrid allows you to customize the width of each `GridColumn` in the `SfDataGrid.Columns` collection. To customize column width, use the `GridColumn.width` property. By default, this property will not be assigned any value. The GridColumn renders in view based on the value of the `defaultColumnWidth` property.
 
 >**NOTE**  
    Set the `isHidden` property to `True` instead of setting column width as `0` to hide a column.
@@ -143,7 +143,7 @@ SfDataGrid allows you to customize the width of each `GridColumn` in the `SfData
 
 ### Set alignment for column
 
-`GridColumn.textAlignment` and `GridColumn.headerTextAlignment` can be used to customize the alignment for the cells and header cells in the `GridColumn`.
+`GridColumn.textAlignment` and `GridColumn.headerTextAlignment` can be used to customize the alignment for the cells and header cells in the column.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -157,8 +157,8 @@ SfDataGrid allows you to customize the width of each `GridColumn` in the `SfData
           source: _employeeDataSource,
           columns: [
             GridNumericColumn(mappingName: 'id', headerText: 'ID')
-              ..textAlignment = Alignment.bottomCenter
-              ..headerTextAlignment = Alignment.bottomCenter,
+              ..textAlignment = Alignment.center
+              ..headerTextAlignment = Alignment.center,
             GridTextColumn(mappingName: 'name', headerText: 'Name'),
             GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
             GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
@@ -215,7 +215,7 @@ When the text for the record cells exceeds the content area, wrap the record cel
           source: _employeeDataSource,
           columns: [
             GridNumericColumn(mappingName: 'id', headerText: 'ID')
-              ..overflow = TextOverflow.ellipsis,
+              ..overflow = TextOverflow.fade,
             GridTextColumn(mappingName: 'name', headerText: 'Name')
               ..overflow = TextOverflow.clip,
             GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
@@ -230,11 +230,11 @@ When the text for the record cells exceeds the content area, wrap the record cel
 
 ## Column styling
 
-GridColumn provides support to customize the style of column using `GridColumn.cellStyle` and `GridColumn.headerStyle` properties. The return type of cellStyle and headerStyle property is `DataGridCellStyle` and `DataGridHeaderCellStyle`. For more information, refer [Styling](styles.md\#styles) section.
+GridColumn provides support to customize the style of column using `GridColumn.cellStyle` and `GridColumn.headerStyle` properties. The type of `cellStyle` and `headerStyle` property is `DataGridCellStyle` and `DataGridHeaderCellStyle`. For more information, refer [Styling](styles.md\#styles) section.
 
 ### Change column text style
 
-`GridColumn.cellStyle.textStyle` and ` GridColumn.headerStyle.textStyle` properties can be used to change the text style to the column's cells.
+`GridColumn.cellStyle.textStyle` and ` GridColumn.headerStyle.textStyle` properties can be used to change the text style for the column's cells.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -268,7 +268,7 @@ GridColumn provides support to customize the style of column using `GridColumn.c
 
 ### Change column background color
 
-` GridColumn.cellStyle.backgroundColor` and ` GridColumn.headerStyle.backgroundColor` properties can be used to change the background color to the column's cells.
+` GridColumn.cellStyle.backgroundColor` and ` GridColumn.headerStyle.backgroundColor` properties can be used to change the background color for the column's cells.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -415,7 +415,7 @@ The numeric value can be formatted by using `GridNumericColumn.numberFormat` pro
 
 ### Date formatting
 
-The datetime value can be formatted by using `GridDateTimeColumn.dateFormat` property, which contains the set of predefined date time patterns. The default format of a date is `dd-MM-yyyy`. For more information about predefined patterns, refer [DateFormat](https://api.flutter.dev/flutter/intl/DateFormat-class.html) class.
+The datetime value can be formatted by using `GridDateTimeColumn.dateFormat` property, which contains the set of predefined datetime patterns. The default format of a date is `dd-MM-yyyy`. For more information about predefined patterns, refer [DateFormat](https://api.flutter.dev/flutter/intl/DateFormat-class.html) class.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -447,6 +447,8 @@ The datetime value can be formatted by using `GridDateTimeColumn.dateFormat` pro
 ## GridWidgetColumn
 
 `GridWidgetColumn` is used to load any custom widget or multiple widgets to the column's cells. Any widget can be loaded using the `cellBuilder` callback. You can simply return a required widget in a callback.
+
+In the below example, image is returned in `cellBuilder` callback. Image is already added in the Employee class.
 
 {% tabs %}
 {% highlight Dart %} 
