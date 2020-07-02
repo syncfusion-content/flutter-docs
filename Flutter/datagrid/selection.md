@@ -677,12 +677,12 @@ The datagrid provides the following callbacks for selection:
  * `onSelectionChanging` : This callback is raised while selecting a row at the execution time before the row is selected. So it allows canceling the selection action by return `false`.
  * `onSelectionChanged` : This callback is raised after the column is selected.
 
-These two callbacks are triggered with following properties:
+The followings are the parameters of the `onSelectionChanging` and `onSelectionChanged` callbacks,
 
  * newItems: Gets collection of the underlying data objects added for selection.
  * oldItems: Gets collection of the underlying data objects removed from selection.
 
-To hook the `onSelectionChanging` callback and cancel the selection. follow the code example:
+The following example shows how to cancel the selection when select a row which contains the designation as Manager
 
 {% tabs %}
 {% highlight Dart %}
@@ -701,8 +701,12 @@ To hook the `onSelectionChanging` callback and cancel the selection. follow the 
               GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
             ],
             onSelectionChanging: (List<Object> addedRows, List<Object> removedRows){
-              // apply your logics
-              return false; // return true to perform selection
+                
+                if(addedRows.isNotEmpty && (addedRows.last as employees).designation == 'Manager'){
+                  return false;
+                }
+                
+                return true;
             },
             onSelectionChanged: (List<Object> addedRows, List<Object> removedRows){
               // apply your logics
@@ -714,10 +718,10 @@ To hook the `onSelectionChanging` callback and cancel the selection. follow the 
 {% endhighlight %}
 {% endtabs %}
 
-* `onCurrentCellActivating`: This callback is raised before the current cell applying to the corresponding grid cell of the selecting row. So it allows canceling the selection action by return `false`. If return false, the  selection will not apply and also `onSelectionChanging`, `onSelectionChanged` and `onCurrentCellActivated` callback will not fire.
+* `onCurrentCellActivating`: This callback is raised before the current cell applying to the corresponding grid cell of the selecting row. So it allows canceling the selection action by return `false`. If return false, the  selection will not apply and also `onSelectionChanging`, `onSelectionChanged` and `onCurrentCellActivated` are not called.
  * `onCurrentCellActivated`: This callback is raised after the current cell applied in grid cell on the selecting row.
 
- These two callbacks are triggered with following properties:
+ The followings are the parameters of the `onCurrentCellActivating` and `onCurrentCellActivated` callbacks,
 
  * newRowColumnIndex: Gets current RowColumnIndex of the current cell.
  * oldRowColumnIndex: Gets previous RowColumnIndex of the current cell.
@@ -729,8 +733,12 @@ To hook the `onSelectionChanging` callback and cancel the selection. follow the 
     Widget build(BuildContext context) {
         return SfDataGrid(
             onCurrentCellActivating: (RowColumnIndex currentRowColumnIndex , RowColumnIndex previousRowColumnIndex){
-               // apply your logics
-               return false; // return true to perform selection
+
+                if(currentRowColumnIndex == RowColumnIndex(2,3)){
+                    return false;
+                }
+               
+                return true;
             },
             onCurrentCellActivated: (RowColumnIndex currentRowColumnIndex , RowColumnIndex previousRowColumnIndex){
                // apply your logics
