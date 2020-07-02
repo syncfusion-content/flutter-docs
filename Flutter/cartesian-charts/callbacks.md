@@ -675,3 +675,9 @@ Triggers when the marker is being rendered. Here, you can get the marker's point
 
 {% endhighlight %}
 
+## See Also
+
+* [Customize the tooltip using its callback event](https://www.syncfusion.com/kb/11507/how-to-customize-the-tooltip-using-callback-events-sfcartesianchart).
+* [Customize the axis labels using its callback event](https://www.syncfusion.com/kb/11678/how-to-customize-the-axis-labels-using-callback-events-sfcartesianchart).
+* [Customize the data labels using its callback event](https://www.syncfusion.com/kb/11679/how-to-customize-data-labels-using-callback-events-sfcartesianchart).
+* [To Synchronize panning in multiple charts](https://www.syncfusion.com/kb/11533/how-to-synchronize-panning-in-multiple-charts-sfcartesianchart).

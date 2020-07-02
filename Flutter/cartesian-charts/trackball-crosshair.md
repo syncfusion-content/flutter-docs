@@ -319,3 +319,7 @@ The ActivationMode enum contains the following values:
 {% endhighlight %}
 
 Also refer [crosshair](./events#oncrosshairpositionchanging) and [trackball](./events#ontrackballpositionchanging) events for customizing the crosshair and trackball further.
+
+## See Also
+
+* [Disabling trackball tooltip for particular series in cartesian chart](https://www.syncfusion.com/kb/11638/how-to-disable-trackball-tooltip-for-particular-series-in-cartesian-charts-sfcartesianchart).

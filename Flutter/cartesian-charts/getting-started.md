@@ -298,3 +298,7 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
 ![Tooltip in chart](images/getting-started/tooltip.png)
 
 You can find the complete getting started example from this [`link`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/chart_example2131351808).
+
+## See Also
+
+* [Integrate Syncfusion Flutter charts in Flutter web Application](https://www.syncfusion.com/kb/11551/how-to-integrate-syncfusion-charts-in-flutter-web-application-sfcartesianchart).

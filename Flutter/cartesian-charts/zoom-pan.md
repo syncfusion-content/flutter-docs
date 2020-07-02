@@ -213,3 +213,7 @@ The [`maximumZoomLevel`](https://pub.dev/documentation/syncfusion_flutter_charts
 {% endhighlight %}
 
 Also refer [zooming](./events#onzooming), [zoom start](./events#onzoomstart) and [zoom end](./events#onzoomend) events for customizing the zooming further.
+
+## See Also
+
+* [To Synchronize panning in multiple charts](https://www.syncfusion.com/kb/11533/how-to-synchronize-panning-in-multiple-charts-sfcartesianchart).
