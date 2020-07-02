@@ -649,3 +649,29 @@ Triggers when touched or clicked and moved on the chart area. You can get the po
   }
 
 {% endhighlight %}
+
+## onMarkerRender
+
+Triggers when the marker is being rendered. Here, you can get the marker's pointIndex, seriesIndex, shape, size and color. You can customize the color, shape and size of the marker.
+
+{% highlight dart %}
+
+  Widget build(BuildContext context) {
+      return Container(
+          child: SfCartesianChart(
+              onMarkerRender: (MarkerRenderArgs args) {
+                if (args.pointIndex == 1) {
+                  args.color = Colors.red;
+                  args.markerHeight = 20;
+                  args.markerWidth = 20;
+                  args.shape = DataMarkerType.diamond;
+                  args.borderColor = Colors.green;
+                  args.borderWidth = 2;
+                }
+              },
+          )
+      );
+  }
+
+{% endhighlight %}
+
