@@ -243,7 +243,7 @@ The following code example shows how to select a row using `selectedIndex`,
                     child: Text('Set Selection'),
                     onPressed: () {
                        //SelectedIndex
-                       _dataGridController.selectedIndex = 4
+                       _dataGridController.selectedIndex = 4;
                     }),
                 Expanded(
                     child: SfDataGrid(
@@ -283,7 +283,7 @@ The following code example shows how to select a row using `selectedRow`,
                     child: Text('Set Selection'),
                     onPressed: () {
                        //SelectedRow 
-                       _dataGridController.selectedRow = this.employees[3];
+                       _dataGridController.selectedRow = _employees[3];
                     }),
                 Expanded(
                     child: SfDataGrid(
@@ -324,10 +324,10 @@ Multiple rows can be selected by adding data objects to `selectedRows` property.
                     onPressed: () {
                        //SelectedRows 
                        _dataGridController.selectedRows = [
-                                this.employees[1],
-                                this.employees[3],
-                                this.employees[6],
-                              ]
+                                _employees[1],
+                                _employees[3],
+                                _employees[6],
+                              ];
                     }),
                 Expanded(
                     child: SfDataGrid(
@@ -415,7 +415,7 @@ The CurrentCell can be moved to a particular cell by using the `moveCurrentCellT
                 FlatButton(
                     child: Text('Move current cell'),
                     onPressed: () {
-                      this._dataGridController.moveCurrentCellTo(RowColumnIndex(6,4))
+                      this._dataGridController.moveCurrentCellTo(RowColumnIndex(6,4));
                     }),
                 Expanded(
                     child: SfDataGrid(
@@ -458,7 +458,7 @@ The following code example shows how to clear selection when `selectionMode` pro
           body: Column(
               children:[
                 FlatButton(
-                    child: Text('Get current cell'),
+                    child: Text('Clear Selection'),
                     onPressed: () {
                       this._dataGridController.selectedIndex = -1;
                       //or
@@ -500,7 +500,7 @@ The following code example shows how to clear selection when `selectionMode` pro
           body: Column(
               children:[
                 FlatButton(
-                    child: Text('Get current cell'),
+                    child: Text('Clear Selection'),
                     onPressed: () {
                       this._dataGridController.selectedRows = [];
                     }),
@@ -700,9 +700,10 @@ The following example shows how to cancel the selection when select a row which 
               GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
               GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
             ],
+            selectionMode: SelectionMode.single,
             onSelectionChanging: (List<Object> addedRows, List<Object> removedRows){
                 
-                if(addedRows.isNotEmpty && (addedRows.last as employees).designation == 'Manager'){
+                if(addedRows.isNotEmpty && (addedRows.last as Employee).designation == 'Manager'){
                   return false;
                 }
                 
@@ -729,21 +730,36 @@ The following example shows how to cancel the selection when select a row which 
 {% tabs %}
 {% highlight Dart %}
 
+    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
+
     @override
     Widget build(BuildContext context) {
-        return SfDataGrid(
-            onCurrentCellActivating: (RowColumnIndex currentRowColumnIndex , RowColumnIndex previousRowColumnIndex){
+      return Scaffold(
+          body: SfDataGrid(
+            source: _employeeDataSource,
+            columns: [
+              GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+              GridTextColumn(mappingName: 'name', headerText: 'Name'),
+              GridTextColumn(
+                  mappingName: 'designation', headerText: 'Designation'),
+              GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+            ],
+            selectionMode: SelectionMode.single,
+            navigationMode: GridNavigationMode.cell,
+            onCurrentCellActivating: (RowColumnIndex currentRowColumnIndex,
+                RowColumnIndex previousRowColumnIndex) {
+              if (currentRowColumnIndex == RowColumnIndex(2, 3)) {
+                return false;
+              }
 
-                if(currentRowColumnIndex == RowColumnIndex(2,3)){
-                    return false;
-                }
-               
-                return true;
+              return true;
             },
-            onCurrentCellActivated: (RowColumnIndex currentRowColumnIndex , RowColumnIndex previousRowColumnIndex){
-               // apply your logics
+            onCurrentCellActivated: (RowColumnIndex currentRowColumnIndex,
+                RowColumnIndex previousRowColumnIndex) {
+              // apply your logics
             },
-        );
+          )
+      );
     }
 
 {% endhighlight %}
@@ -907,6 +923,7 @@ The current cell border's color and thickness can be changed by `currentCellStyl
                   GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
                 ],
                 selectionMode: SelectionMode.multiple,
+                navigationMode:  GridNavigationMode.cell,
               ))
       );
     }
