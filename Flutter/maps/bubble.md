@@ -190,7 +190,7 @@ If `bubbleColorValueMapper` returns a value other than the color, then you must 
 }
 
 class Model {
-  const Model(this.continent, this.count, this.bubbleColor);
+   Model(this.continent, this.count, this.bubbleColor);
 
   final String continent;
   final double count;
@@ -262,7 +262,7 @@ Widget build(BuildContext context) {
 }
 
 class Model {
-  const Model(this.continent, this.count);
+  Model(this.continent, this.count);
 
   final String continent;
   final double count;
