@@ -13,7 +13,7 @@ Data labels provides identification for the shapes by displaying their names. Yo
 
 ## Show data labels
 
-You can show data labels on the map using the `showDataLabels` property in the `MapShapeLayer`. By default, the data labels are rendered based on the value of `shapeDataField` property. The default value of the `showDataLabels` property is `false`.
+You can show data labels on the map using the `MapShapeLayer.showDataLabels` property. By default, the data labels are rendered based on the value of `shapeDataField` property. The default value of the `showDataLabels` property is `false`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -48,9 +48,9 @@ Widget build(BuildContext context) {
 
 ![Data labels support](images/data-labels/default-data-labels.png)
 
-## Data labels customization
+## Appearance customization
 
-You can customize text of the data labels using the `dataLabelMapper` property. 
+You can customize text of the data labels using the `MapShapeLayerDelegate.dataLabelMapper` property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -112,7 +112,7 @@ class Model {
 
 ## Overflow mode
 
-You can trim or remove the data label when it is overflowed from the shape using the `overflowMode` property in the `dataLabelSettings` property. The default value of the `overflowMode` property is `MapLabelOverflowMode.none`.
+You can trim or remove the data label when it is overflowed from the shape using the `MapDataLabelSettings.overflowMode` property. The default value of the `overflowMode` property is `MapLabelOverflowMode.none`.
 
 By default, the data labels will render even if it overflows from the shape. 
 

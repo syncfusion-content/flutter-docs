@@ -17,7 +17,7 @@ If you return a color from the `shapeColorValueMapper`, then the color will be a
 
 If you return a value of different type other than the color from the `shapeColorValueMapper`, then you must set the `MapShapeLayer.shapeColorMappers` property which is a collection of `MapColorMapper` to apply colors for the respective shapes.
 
-N> You can show legend using the `showLegend` property in the `MapShapeLayer`. The icon color of the legend is applied based on the color returned in the `shapeColorValueMapper` property in the `MapShapeLayerDelegate` and the text will be taken from `primaryValueMapper`. It is possible to customize the legend item's color and text using the `shapeColorMappers` property in the `MapShapeLayerDelegate`.
+N> You can show legend using the `MapShapeLayer.showLegend` property. The icons color of the legend is applied based on the colors returned in the `MapShapeLayerDelegate.shapeColorValueMapper` and texts of the legend will be the value returned in the 'primaryValueMapper'. It is possible to customize the legend icons color and texts using the `MapShapeLayerDelegate.shapeColorMappers` property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -79,7 +79,7 @@ class Model {
 
 ## Equal color mapping
 
-You can apply color to the shape by comparing a value that returns from the `shapeColorValueMapper` with the `MapColorMapper.value`. For the matched values, the `MapColorMapper.color` will be applied to the respective shapes.
+You can apply color to the shape by comparing a value that returns from the `MapShapeLayerDelegate.shapeColorValueMapper` with the `MapColorMapper.value`. For the matched values, the `MapColorMapper.color` will be applied to the respective shapes.
 
 {% tabs %}
 {% highlight Dart %}
@@ -141,7 +141,7 @@ class Model {
 
 ## Range color mapping
 
-You can apply color to the shape if the value returned from `shapeColorValueMapper` falls within the `MapColorMapper.from` and `MapColorMapper.to`. Then, the `MapColorMapper.color` will be applied to the respective shapes.
+You can apply color to the shape if the value returned from `MapShapeLayerDelegate.shapeColorValueMapper` falls within the `MapColorMapper.from` and `MapColorMapper.to`. Then, the `MapColorMapper.color` will be applied to the respective shapes.
 
 {% tabs %}
 {% highlight Dart %}

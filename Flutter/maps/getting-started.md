@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Getting Started for Syncfusion Flutter Maps | Syncfusion
-description: This section explains the steps required to add the maps widget and its elements such as data labels, selection, markers, bubbles, and legends.
+description: This section explains the steps required to add the maps widget and its elements such as data labels, markers, bubbles, and legends.
 platform: Flutter
 control: SfMaps
 documentation: ug
 ---
 
 # Getting Started with Flutter Maps (SfMaps)
-This section explains the steps required to add the maps widget and its elements such as data labels, selection, markers, bubbles, assignable colors based on region, and legends. This section covers only basic features needed to know to get started with Syncfusion maps.
+This section explains the steps required to add the maps widget and its elements such as data labels, markers, bubbles, assignable colors based on region, and legends. This section covers only basic features needed to know to get started with Syncfusion maps.
 
 ## Add Flutter maps to an application
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
@@ -159,13 +159,13 @@ class Model {
 
 Add the basic maps elements such as title, data labels, legend, and tooltip as shown in the below code snippet.
 
-* **Title** - You can add a title to the maps to provide a quick information about the data plotted in the map using the `title` property in the `SfMaps`.
+* **Title** - You can add a title to the maps to provide a quick information about the data plotted in the map using the `SfMaps.title` property.
 
-* **Data label** - You can show data labels using the `showDataLabels` property in the `MapShapeLayer` and also, it is possible to show data labels only for the particular shapes/or show custom text using the `dataLabelMapper` property in the `MapShapeLayerDelegate`.
+* **Data labels** - You can show data labels using the `MapShapeLayer.showDataLabels` property and also, it is possible to show data labels only for the particular shapes/or show custom text using the `MapShapeLayerDelegate.dataLabelMapper` property.
 
-* **Legend** - You can show legend using the `showLegend` property in the `MapShapeLayer`. The icon color of the legend is applied based on the color returned in the `shapeColorValueMapper` property in the `MapShapeLayerDelegate`. It is possible to customize the legend item's color and text using the `shapeColorMappers` property in the `MapShapeLayerDelegate`.
+* **Legend** - You can show legend using the `MapShapeLayer.showLegend` property. The icons color of the legend is applied based on the colors returned in the `MapShapeLayerDelegate.shapeColorValueMapper` property. It is possible to customize the legend icons color and texts using the `MapShapeLayerDelegate.shapeColorMappers` property.
 
-* **Tooltip** - You can enable tooltip for the shapes using the `enableShapeTooltip` property in the `MapShapeLayer` and also, it is possible to enable tooltip only for the particular shapes/or show custom text using the `shapeTooltipTextMapper` property in the `MapShapeLayerDelegate`.
+* **Tooltip** - You can enable tooltip for the shapes using the `MapShapeLayer.enableShapeTooltip` property and also, it is possible to enable tooltip only for the particular shapes/or show custom text using the `MapShapeLayerDelegate.shapeTooltipTextMapper` property.
 
 {% tabs %}
 {% highlight Dart %}
