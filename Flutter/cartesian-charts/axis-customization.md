@@ -1020,3 +1020,7 @@ If it is a horizontal axis, aligns the labels after the gridline and if it is a 
 {% endhighlight %}
 
 ![end](images/axis-customization/end.png)
+
+## See Also
+
+* [Rendering a particular part of a data using visible minimum and visible maximum in the Cartesian chart](https://www.syncfusion.com/kb/11308/how-to-render-particular-part-of-a-data-in-cartesian-charts-sfcartesianchart).
