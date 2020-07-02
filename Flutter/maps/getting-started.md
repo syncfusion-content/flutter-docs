@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Getting Started for Syncfusion Flutter Maps | Syncfusion
-description: This section explains the steps required to add the maps widget and its elements such as data labels, selection, markers, bubbles, and legends.
+description: This section explains the steps required to add the maps widget and its elements such as data labels, markers, bubbles, and legends.
 platform: Flutter
 control: SfMaps
 documentation: ug
 ---
 
 # Getting Started with Flutter Maps (SfMaps)
-This section explains the steps required to add the maps widget and its elements such as data labels, selection, markers, bubbles, assignable colors based on region, and legends. This section covers only basic features needed to know to get started with Syncfusion maps.
+This section explains the steps required to add the maps widget and its elements such as data labels, markers, bubbles, assignable colors based on region, and legends. This section covers only basic features needed to know to get started with Syncfusion maps.
 
 ## Add Flutter maps to an application
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
@@ -73,6 +73,8 @@ Widget build(BuildContext context) {
 The `layers` in `SfMaps` contains collection of `MapShapeLayer`. The actual geographical rendering is done in the each `MapShapeLayer`. The `delegate` property of the `MapShapeLayer` is of type `MapShapeLayerDelegate`. The path of the .json file which contains the GeoJSON data has to be set to the `shapeFile` property of the `MapShapeLayerDelegate`.
 
 The `shapeDataField` property of the `MapShapeLayerDelegate` is used to refer the unique field name in the .json file to identify each shapes. In 'Mapping the data source' section of this document, this `shapeDataField` will be used to map with respective value returned in `primaryValueMapper` from the data source.
+
+N> You can get the [`australia.json`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/australia-json-910278184.zip) file here. Add this json file to the assets folder of your root directory and refer the json file path in the `pubspec.yaml` file.
 
 {% tabs %}
 {% highlight Dart %}
@@ -159,13 +161,13 @@ class Model {
 
 Add the basic maps elements such as title, data labels, legend, and tooltip as shown in the below code snippet.
 
-* **Title** - You can add a title to the maps to provide a quick information about the data plotted in the map using the `title` property in the `SfMaps`.
+* **Title** - You can add a title to the maps to provide a quick information about the data plotted in the map using the `SfMaps.title` property.
 
-* **Data label** - You can show data labels using the `showDataLabels` property in the `MapShapeLayer` and also, it is possible to show data labels only for the particular shapes/or show custom text using the `dataLabelMapper` property in the `MapShapeLayerDelegate`.
+* **Data labels** - You can show data labels using the `MapShapeLayer.showDataLabels` property and also, it is possible to show data labels only for the particular shapes/or show custom text using the `MapShapeLayerDelegate.dataLabelMapper` property.
 
-* **Legend** - You can show legend using the `showLegend` property in the `MapShapeLayer`. The icon color of the legend is applied based on the color returned in the `shapeColorValueMapper` property in the `MapShapeLayerDelegate`. It is possible to customize the legend item's color and text using the `shapeColorMappers` property in the `MapShapeLayerDelegate`.
+* **Legend** - You can show legend using the `MapShapeLayer.showLegend` property. The icons color of the legend is applied based on the colors returned in the `MapShapeLayerDelegate.shapeColorValueMapper` property. It is possible to customize the legend icons color and texts using the `MapShapeLayerDelegate.shapeColorMappers` property.
 
-* **Tooltip** - You can enable tooltip for the shapes using the `enableShapeTooltip` property in the `MapShapeLayer` and also, it is possible to enable tooltip only for the particular shapes/or show custom text using the `shapeTooltipTextMapper` property in the `MapShapeLayerDelegate`.
+* **Tooltip** - You can enable tooltip for the shapes using the `MapShapeLayer.enableShapeTooltip` property and also, it is possible to enable tooltip only for the particular shapes/or show custom text using the `MapShapeLayerDelegate.shapeTooltipTextMapper` property.
 
 {% tabs %}
 {% highlight Dart %}

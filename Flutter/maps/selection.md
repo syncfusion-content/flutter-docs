@@ -138,9 +138,9 @@ class Model {
 
 ![Selection on initial rendering](images/selection/selection-on-initial-rendering.png)
 
-## Customization
+## Appearance customization
 
-You can customize the selected shape using the `color`, `strokeColor`, `strokeWidth`, and `opacity` properties in the `selectionSettings` property.
+You can customize the selected shape using the `color`, `strokeColor`, `strokeWidth`, and `opacity` properties in the `MapSelectionSettings`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -206,11 +206,13 @@ class Model {
 
 ![Selection customization](images/selection/selection-customization.png)
 
-## onSelectionChanged
+## Handling selection change
 
 The `onSelectionChanged` callback is used to pass the index of the selected shape when the user is selecting a shape by tapping or clicking.
 
 If the selected shape is tapped or clicked again, the index will be passed as -1. It means that, the shape is unselected.
+
+N> You can get the index of the selected shape from `MapShapeLayerController.selectedIndex`.
 
 {% tabs %}
 {% highlight Dart %}

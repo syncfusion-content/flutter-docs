@@ -1,17 +1,164 @@
 ---
 layout: post
 title: Shape colors in Syncfusion Flutter Maps | Syncfusion
-description: This section explains how to apply colors to the shapes based on specific values in the Flutter maps.
+description: This section explains about shapes and how to apply colors to the shapes based on specific values in the Flutter maps.
 platform: Flutter
 control: SfMaps
 documentation: ug
 ---
 
-# Shape colors in the Flutter Maps
+# Shapes in the Flutter Maps
 
-You can categorize the shapes on a map by customizing their color based on the underlying value. It is possible to set the shape color for a specific value or for a range of values.
+This section explains about shapes and how to apply colors to the shapes based on specific values in the Flutter maps.
 
-## Applying colors for the shape
+## Loading progress indicator
+
+You can notify the user that the map is being loaded using the `MapShapeLayer.loadingBuilder`. It returns the widget which will be visible till the maps is loaded. 
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+   return Scaffold(c
+      body: Padding(
+        padding: EdgeInsets.all(15),
+        child: SfMaps(
+          layers: <MapLayer>[
+            MapShapeLayer(
+              delegate: MapShapeLayerDelegate(
+                shapeFile: 'assets/world_map.json',
+                shapeDataField: 'continent',
+              ),
+              loadingBuilder: (_) {
+                return Container(
+                  height: 25,
+                  width: 25,
+                  child: const CircularProgressIndicator(
+                    strokeWidth: 3,
+                  ),
+                );
+              },
+            ),
+          ],
+        ),
+      ),
+   );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Loading builder](images/basic-features/loading-builder.gif)
+
+## Shape color
+
+You can apply color all the shapes using the `MapShapeLayer.color` property.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+   return Scaffold(
+      body: Padding(
+        padding: EdgeInsets.all(15),
+        child: SfMaps(
+          layers: <MapLayer>[
+            MapShapeLayer(
+              color: Colors.blue[400],
+              delegate: MapShapeLayerDelegate(
+                shapeFile: 'assets/world_map.json',
+                shapeDataField: 'continent',
+              ),
+            ),
+          ],
+        ),
+      ),
+   );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Shape color](images/basic-features/shape-color.png)
+
+## Stroke color
+
+You can apply stroke color to the shapes using the `MapShapeLayer.strokeColor` property.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+   return Scaffold(
+      body: Padding(
+        padding: EdgeInsets.all(15),
+        child: SfMaps(
+          layers: <MapLayer>[
+            MapShapeLayer(
+              color: Colors.blue[100],
+              strokeColor: Colors.blue,
+              strokeWidth: 2,
+              delegate: MapShapeLayerDelegate(
+                shapeFile: 'assets/world_map.json',
+                shapeDataField: 'continent',
+              ),
+            ),
+          ],
+        ),
+      ),
+   );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Shapes stroke color](images/basic-features/shapes-stroke-color.png)
+
+## Palette
+
+You can color the shape based on the list of colors in a sequential order.
+
+If the number of shapes exceeds the length of this collections, once the last color is used for a shape, color in the 0th index will be used for the next shape and so on.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+   return Scaffold(
+      body: Padding(
+        padding: EdgeInsets.all(15),
+        child: SfMaps(
+          layers: <MapLayer>[
+            MapShapeLayer(
+              delegate: MapShapeLayerDelegate(
+                shapeFile: 'assets/world_map.json',
+                shapeDataField: 'continent',
+              ),
+              palette: [
+                Colors.blue[200],
+                Colors.orange[200],
+                Colors.red[200],
+                Colors.green[200],
+                Colors.purple[200],
+                Colors.lime[200]
+              ],
+            ),
+          ],
+        ),
+      ),
+   );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Shapes palette](images/basic-features/shapes-palette.png)
+
+## Applying colors based on the data
 
 If you return a color from the `shapeColorValueMapper`, then the color will be applied to the respective shape straightaway.
 
@@ -141,7 +288,7 @@ class Model {
 
 ## Range color mapping
 
-You can apply color to the shape if the value returned from `shapeColorValueMapper` falls within the `MapColorMapper.from` and `MapColorMapper.to`. Then, the `MapColorMapper.color` will be applied to the respective shapes.
+You can apply color to the shape based on whether the value returned from `shapeColorValueMapper` falls within the `MapColorMapper.from` and `MapColorMapper.to`. Then, the `MapColorMapper.color` will be applied to the respective shapes.
 
 {% tabs %}
 {% highlight Dart %}
