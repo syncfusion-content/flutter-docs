@@ -59,25 +59,18 @@ Add the SfDataGrid widget as a child of any widget. Here, `SfDataGrid` widget is
 {% highlight Dart %} 
 
     @override
-      Widget build(BuildContext context) {
-        return Scaffold(
-          appBar: AppBar(
-            title: Text('SyncfusionDataGrid'),
-            ),
-          body: Center(
-            child: Expanded(
-              child:SfDataGrid(
-                source: _employeeDataSource,
-                columns: [
-                      GridNumericColumn(mappingName: 'id',  headerText:'ID'),
-                      GridTextColumn(mappingName: 'name', headerText: 'Name'),
-                      GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-                      GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
-                    ],              
-                  ),
-               ),
-            ),
-         );
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: SfDataGrid(
+          source: _employeeDataSource,
+          columns: [
+            GridNumericColumn(mappingName: 'id',  headerText:'ID'),
+            GridTextColumn(mappingName: 'name', headerText: 'Name'),
+            GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+            GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+          ],
+        ),
+      );
     }
 
 {% endhighlight %}
@@ -144,7 +137,7 @@ Create the collection of Employee data with the required number of data objects.
     
     final EmployeeDataSource_employeeDataSource= EmployeeDataSource ();
      
-    class EmployeeDataSource extend DataGridSource {
+    class EmployeeDataSource extends DataGridSource {
 
       @override
        List<Object> get dataSource => _employees;
@@ -179,17 +172,12 @@ Create an instance of `DataGridSource` and set this object to `source` property 
 {% highlight Dart %} 
 
     @override
-      Widget build(BuildContext context) {
-        return Scaffold(
-          appBar: AppBar(
-            title: Text('Syncfusion DataGrid'),),
-          body: Center(
-            child: Expanded(
-              child:SfDataGrid(
-                source: _employeeDataSource,
-             ),
-           ),
-        );
+    Widget build(BuildContext context) {
+      return Scaffold(
+          body: SfDataGrid(
+            source: _employeeDataSource,
+          )
+      );
     }
 
 {% endhighlight %}
@@ -206,26 +194,19 @@ You can also load any widget in a column using the `GridWidgetColumn` and `cellB
     final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
   
     @override
-      Widget build(BuildContext context) {
-        return Scaffold(
-          appBar: AppBar(
-            title: Text ('Syncfusion DataGrid'),
-            ),
-          body: Center(
-            child: Expanded(
-              child:SfDataGrid(
-                source: _employeeDataSource,
-                columns: [
-                      GridNumericColumn(mappingName: 'id',headerText:'ID'),
-                      GridTextColumn(mappingName: 'name', headerText: 'Name'),
-                      GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-                      GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
-                    ],                      
-                  ),
-              ),  
-           ),
-        );
-     }
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: SfDataGrid(
+          source: _employeeDataSource,
+          columns: [
+            GridNumericColumn(mappingName: 'id',headerText:'ID'),
+            GridTextColumn(mappingName: 'name', headerText: 'Name'),
+            GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+            GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+          ],
+        ),
+      );
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -241,28 +222,21 @@ SfDataGrid allows you to select one or more rows. The `selectionMode` property c
     
     final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
 
-     @override
-      Widget build(BuildContext context) {
-        return Scaffold(
-         appBar: AppBar(
-           title: Text('Syncfusion DataGrid'),
-            ),
-         body: Center(
-          child: Expanded(
-            child:SfDataGrid(
-              source: _employeeDataSource,
-              columns: [
-                      GridNumericColumn(mappingName: 'id',  headerText:'ID'),
-                      GridTextColumn(mappingName: 'name', headerText: 'Name'),
-                      GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-                      GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
-                    ],
-              selectionMode: SelectionMode.multiple,                                                   
-                  ),
-               ),
-            ),
-         );
-     }
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: SfDataGrid(
+          source: _employeeDataSource,
+          columns: [
+            GridNumericColumn(mappingName: 'id',  headerText:'ID'),
+            GridTextColumn(mappingName: 'name', headerText: 'Name'),
+            GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+            GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+          ],
+          selectionMode: SelectionMode.multiple,
+        ),
+      );
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -280,40 +254,38 @@ The information about the rows that are selected can be retrieved using `selecte
     final DataGridController _controller = DataGridController();
 
     @override
-      Widget build(BuildContext context) {
-        return Scaffold(
-          appBar: AppBar(
-             title: Text('Syncfusion DataGrid'),
-             ),
-          body: Column(
-            children: [
-              RaisedButton(
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: Column(
+          children: [
+            RaisedButton(
                 child: Text('Get Selection Information'),
                 onPressed: () {
-                int selectedIndex = _controller.selectedIndex;
-                Object selectedRow = _controller.selectedRow;
-                List<Object> selectedRows = _controller.selectedRows;
-                print(selectedIndex);
-                print(selectedRow);
-                print(selectedRows);
-              }),
-              Expanded(
-                child: SfDataGrid(
-                  source: _employeeDataSource,
-                  columns: [
-                  	GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-                  	GridTextColumn(mappingName: 'name', headerText: 'Name'),
-                  	GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-                  	GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),                          ],
-                  controller: _controller,
-                  selectionMode:
-                  SelectionMode.multiple,
+                  int selectedIndex = _controller.selectedIndex;
+                  Object selectedRow = _controller.selectedRow;
+                  List<Object> selectedRows = _controller.selectedRows;
+                  print(selectedIndex);
+                  print(selectedRow);
+                  print(selectedRows);
+                }),
+            Expanded(
+              child: SfDataGrid(
+                source: _employeeDataSource,
+                columns: [
+                  GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+                  GridTextColumn(mappingName: 'name', headerText: 'Name'),
+                  GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+                  GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),              
+                ],
+                controller: _controller,
+                selectionMode:
+                SelectionMode.multiple,
+              ),
             ),
-           ),
           ],
-         ),
-       );
-      }
+        ),
+      );
+    }
 
 {% endhighlight %}
 {% endtabs %}
