@@ -48,7 +48,7 @@ Widget build(BuildContext context) {
 
 ![Data labels support](images/data-labels/default-data-labels.png)
 
-## Appearance customization
+## Text customization
 
 You can customize text of the data labels using the `MapShapeLayerDelegate.dataLabelMapper` property.
 
