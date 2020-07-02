@@ -318,6 +318,8 @@ class Model {
 {% endhighlight %}
 {% endtabs %}
 
+![Add markers dynamically](images/markers/add-markers.gif)
+
 ## Updating the existing markers
 
 You can update multiple markers at a same time by passing indices to the `updateMarkers` method in the `MapShapeLayerController`. The `markerBuilder` will be called again for the respective indices once `updateMarkers` method is called.
@@ -401,6 +403,8 @@ class Model {
 {% endhighlight %}
 {% endtabs %}
 
+![Update markers dynamically](images/markers/update-markers.gif)
+
 ## Deleting a marker
 
 You can remove marker at any index using the `removeMarkerAt` method.
@@ -458,7 +462,7 @@ Widget build(BuildContext context) {
                   RaisedButton(
                     child: Text('Remove marker'),
                     onPressed: () {
-                      controller.removeMarkerAt(2);
+                      controller.removeMarkerAt(4);
                     },
                   ),
                 ],
@@ -478,6 +482,8 @@ class Model {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Remove marker dynamically](images/markers/remove-marker.gif)
 
 ## Clearing the markers
 
