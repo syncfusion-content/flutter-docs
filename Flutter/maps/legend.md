@@ -304,7 +304,7 @@ class Model {
 
 ## Overflow mode
 
-You can wrap or scroll the legend items using the `MapLegendSettings.overflowMode` property. The default value of the `overflowMode` property is `MapLegendOverflowMode.wrap`. The possible values such as `scroll` and `wrap`.
+You can wrap or scroll the legend items using the `MapLegendSettings.overflowMode` property. The default value of the `overflowMode` property is `MapLegendOverflowMode.wrap`. The possible values are `scroll` and `wrap`.
 
 If the legend position is `left` or `right`, then the default scroll direction is `vertical`.
 

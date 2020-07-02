@@ -49,8 +49,6 @@ Widget build(BuildContext context) {
 
 You can customize the shape tooltip text with the `shapeTooltipTextMapper`. The `shapeTooltipTextMapper` will be called with the corresponding index every time when you tap or click on a shape. You can change the format or the entire text and return it from this callback.
 
-Similarly, you can customize the bubble tooltip text using the `bubbleTooltipTextMapper`.
-
 {% tabs %}
 {% highlight Dart %}
 
@@ -178,7 +176,7 @@ class Model {
 
 ## Appearance customization
 
-You can customize the appearance of the tooltip by the following items,
+You can customize the below appearance of the tooltip.
 
 * **Background color** - Change the background color of the tooltip in the maps using the `MapTooltipSettings.color`.
 * **Stroke color** - Change the stroke color of the tooltip in the maps using the `MapTooltipSettings.strokeColor`.
@@ -263,7 +261,7 @@ class Model {
 
 <b>Using SfMapsTheme</b>
 
-You can also customize the appearance of the tooltip by the following items,
+You can customize the below appearance of the tooltip.
 
 * **Background color** - Change the background color of the tooltip in the maps using the `tooltipColor` property of `SfMapsThemeData`.
 * **Stroke color** - Change the stroke color of the tooltip in the maps using the `tooltipStrokeColor` property of `SfMapsThemeData`.
