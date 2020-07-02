@@ -74,6 +74,8 @@ The `layers` in `SfMaps` contains collection of `MapShapeLayer`. The actual geog
 
 The `shapeDataField` property of the `MapShapeLayerDelegate` is used to refer the unique field name in the .json file to identify each shapes. In 'Mapping the data source' section of this document, this `shapeDataField` will be used to map with respective value returned in `primaryValueMapper` from the data source.
 
+N> You can get the [`australia.json`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/australia-json-910278184.zip) file here. Add this json file to the assets folder of your root directory and refer the json file path in the `pubspec.yaml` file.
+
 {% tabs %}
 {% highlight Dart %}
 
