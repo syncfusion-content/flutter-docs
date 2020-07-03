@@ -81,6 +81,10 @@ class Model {
 
 ![default marker](images/markers/default_marker.png)
 
+N>
+* Refer the `markerBuilder`, for returning the `MapMarker`.
+* Refer the `controller`, for dynamically updating the markers.
+
 ## Appearance customization
 
 You can customize the built-in markers appearance using the `iconType`, `iconColor`, `iconStrokeColor`, `iconStrokeWidth`, and `size` properties of the `MapMarker`.

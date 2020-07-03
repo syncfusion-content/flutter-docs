@@ -74,6 +74,9 @@ class Model {
 
 ![Enable shape selection](images/selection/enable-shape-selection.png)
 
+N>
+* Refer the `MapSelectionSettings`, for customizing the selected shape's appearance.
+
 ## Selection on initial rendering
 
 You can programmatically select a shape on a map using the `MapShapeLayer.initialSelectedIndex` property.

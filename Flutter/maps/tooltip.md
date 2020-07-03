@@ -45,6 +45,9 @@ Widget build(BuildContext context) {
 
 ![Maps shape tooltip support](images/tooltip/default_shape_tooltip.png)
 
+N>
+* Refer the `MapTooltipSettings`, for customizing the tooltip.
+
 ## Customizing the shape tooltip text
 
 You can customize the shape tooltip text with the `shapeTooltipTextMapper`. The `shapeTooltipTextMapper` will be called with the corresponding index every time when you tap or click on a shape. You can change the format or the entire text and return it from this callback.
@@ -173,6 +176,9 @@ class Model {
 {% endtabs %}
 
 ![Maps bubble tooltip support](images/tooltip/default_bubble_tooltip.png)
+
+N>
+* Refer the `MapTooltipSettings`, for customizing the tooltip.
 
 ## Appearance customization
 
@@ -349,3 +355,7 @@ class Model {
 {% endtabs %}
 
 ![Maps tooltip Appearance customization](images/tooltip/tooltip_textStyle.png)
+
+N>
+* Refer the `MapShapeLayer.enableBubbleTooltip`, for enabling tooltip for the bubbles.
+* Refer the `MapShapeLayer.enableShapeTooltip`, for enabling tooltip for the shapes.

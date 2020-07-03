@@ -48,6 +48,9 @@ Widget build(BuildContext context) {
 
 ![Legend support](images/legend/default-legend.png)
 
+N>
+* Refer the `MapLegendSettings`, for customizing the legend items.
+
 ## Icon and text customization
 
 The icons color of the legend is applied based on the colors returned from the `MapShapeLayerDelegate.shapeColorValueMapper` property and the text is taken from the `shapeDataField`. It is possible to customize the legend icons color and texts using the `MapColorMapper.color` and `MapColorMapper.text` properties based on the `MapColorMapper.value` or `MapColorMapper.from` and `MapColorMapper.to` properties.
@@ -206,6 +209,9 @@ class Model {
 {% endtabs %}
 
 ![Legend position](images/legend/legend-position.png)
+
+N>
+* Refer the `offset`, for placing the legend in custom position.
 
 ## Offset
 
@@ -399,6 +405,10 @@ class Model {
 {% endtabs %}
 
 ![Legend overflow mode](images/legend/legend-overflow-mode.gif)
+
+N>
+* Refer the `showIcon`, for enabling the icon for the legend.
+* Refer the `iconSize`, for setting the size of the icon.
 
 ## Legend toggling
 
@@ -891,3 +901,7 @@ class Model {
 {% endtabs %}
 
 ![Legend items customization](images/legend/legend-items-customization.png)
+
+N>
+* Refer the `EdgeInsetsGeometry`, to use the EdgeInsets values.
+* Refer the `position`, for setting the position of the legend.
