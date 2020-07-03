@@ -404,10 +404,10 @@ class Model {
 
 You can enable toggling the legend items and the corresponding shapes using the `MapLegendSettings.enableToggleInteraction` property. The default value of the `enableToggleInteraction` property is `false`. You can customize the toggled shapes using the following properties:
 
-* **toggledShapeColor** - Used to set the color for the toggled legend item's icon and it's shape.
-* **toggledShapeStrokeColor** - Used to set the stroke color which applies to the toggled legend item's shape.
-* **toggledShapeStrokeWidth** - Used to set the stroke width which applies to the toggled legend item's shape.
-* **toggledShapeOpacity** - Used to set the opacity to the toggled legend item's shape.
+* **toggledShapeColor** - Used to change the color for the toggled legend item's icon and it's shape.
+* **toggledShapeStrokeColor** - Used to change the stroke color which applies to the toggled legend item's shape.
+* **toggledShapeStrokeWidth** - Used to change the stroke width which applies to the toggled legend item's shape.
+* **toggledShapeOpacity** - Used to change the opacity to the toggled legend item's shape.
 
 {% tabs %}
 {% highlight Dart %}
@@ -475,8 +475,6 @@ Widget build(BuildContext context) {
                   ),
                   showLegend: true,
                   legendSettings: MapLegendSettings(
-                    position: MapLegendPosition.bottom,
-                    overflowMode: MapLegendOverflowMode.wrap,
                     enableToggleInteraction: true,
                     toggledShapeColor: Colors.grey,
                     toggledShapeStrokeWidth: 3,
@@ -501,7 +499,312 @@ class Model {
 {% endhighlight %}
 {% endtabs %}
 
+<b>Using SfMapsTheme</b>
+
+You can also customize the below appearance of the legend using the `SfMapsThemeData.toggledShapeColor`, `SfMapsThemeData.toggledShapeStrokeColor` and `SfMapsThemeData.toggledShapeStrokeWidth` properties.
+
+* **toggledShapeColor** - Used to change the color for the toggled legend item's icon and it's shape.
+* **toggledShapeStrokeColor** - Used to change the stroke color which applies to the toggled legend item's shape.
+* **toggledShapeStrokeWidth** - Used to change the stroke width which applies to the toggled legend item's shape.
+
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfMapsTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsTheme-class.html).
+
+{% tabs %}
+{% highlight Dart %}
+
+List<Model> data;
+
+@override
+void initState() {
+    super.initState();
+    data = <Model>[
+      Model('India', 280),
+      Model('United States of America', 190),
+      Model('Kazakhstan', 37),
+      Model('Italy', 201),
+      Model('Korea', 512),
+      Model('Japan', 335),
+      Model('Cuba', 103),
+      Model('China', 148)
+   ];
+}
+
+@override
+Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Container(
+          height: 350,
+          child: Padding(
+            padding: EdgeInsets.only(left: 15, right: 15),
+            child: SfMapsTheme(
+              data: SfMapsThemeData(
+                toggledShapeColor: Colors.grey,
+                toggledShapeStrokeWidth: 3,
+                toggledShapeStrokeColor: Colors.black,
+              ),
+              child: SfMaps(
+                layers: [
+                  MapShapeLayer(
+                    delegate: MapShapeLayerDelegate(
+                        shapeFile: "assets/world_map.json",
+                        shapeDataField: "name",
+                        dataCount: data.length,
+                        primaryValueMapper: (int index) => data[index].country,
+                        shapeColorValueMapper: (int index) => data[index].density,
+                        shapeColorMappers: [
+                          MapColorMapper(from: 0,
+                              to: 100,
+                              color: Colors.red,
+                              text: '< 100/km'),
+                          MapColorMapper(from: 101,
+                              to: 200,
+                              color: Colors.green,
+                              text: '100 - 200/km'),
+                          MapColorMapper(from: 201,
+                              to: 300,
+                              color: Colors.blue,
+                              text: '200 - 300/km'),
+                          MapColorMapper(from: 301,
+                              to: 400,
+                              color: Colors.orange,
+                              text: '300 - 400/km'),
+                          MapColorMapper(from: 401,
+                              to: 500,
+                              color: Colors.teal,
+                              text: '400 - 500/km'),
+                          MapColorMapper(from: 501,
+                              to: 600,
+                              color: Colors.deepPurple,
+                              text: '500 - 600/km'),
+                        ]
+                    ),
+                    showLegend: true,
+                    legendSettings: MapLegendSettings(
+                      enableToggleInteraction: true,
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+   );
+}
+
+class Model {
+   Model(this.country, this.density);
+
+   final String country;
+   final double density;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ![Toggles legend items](images/legend/toggles-legend-items.png)
+
+## Text style
+
+You can customize the legend item's text style using the `MapLegendSettings.textStyle` property.
+
+{% tabs %}
+{% highlight Dart %}
+
+List<Model> data;
+
+@override
+void initState() {
+    super.initState();
+    data = <Model>[
+      Model('India', 280),
+      Model('United States of America', 190),
+      Model('Kazakhstan', 37),
+      Model('Italy', 201),
+      Model('Korea', 512),
+      Model('Japan', 335),
+      Model('Cuba', 103),
+      Model('China', 148)
+   ];
+}
+
+@override
+Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Container(
+          height: 350,
+          child: Padding(
+            padding: EdgeInsets.only(left: 15, right: 15),
+            child: SfMaps(
+              layers: [
+                MapShapeLayer(
+                  delegate: MapShapeLayerDelegate(
+                      shapeFile: "assets/world_map.json",
+                      shapeDataField: "name",
+                      dataCount: data.length,
+                      primaryValueMapper: (int index) => data[index].country,
+                      shapeColorValueMapper: (int index) => data[index].density,
+                      shapeColorMappers: [
+                        MapColorMapper(from: 0,
+                            to: 100,
+                            color: Colors.red,
+                            text: '< 100/km'),
+                        MapColorMapper(from: 101,
+                            to: 200,
+                            color: Colors.green,
+                            text: '100 - 200/km'),
+                        MapColorMapper(from: 201,
+                            to: 300,
+                            color: Colors.blue,
+                            text: '200 - 300/km'),
+                        MapColorMapper(from: 301,
+                            to: 400,
+                            color: Colors.orange,
+                            text: '300 - 400/km'),
+                        MapColorMapper(from: 401,
+                            to: 500,
+                            color: Colors.teal,
+                            text: '400 - 500/km'),
+                        MapColorMapper(from: 501,
+                            to: 600,
+                            color: Colors.deepPurple,
+                            text: '500 - 600/km'),
+                      ]
+                  ),
+                  showLegend: true,
+                  legendSettings: MapLegendSettings(
+                    textStyle: const TextStyle(
+                        color: Colors.red,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        fontStyle: FontStyle.italic,
+                        fontFamily: 'Times'
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ),
+        ),
+      ),
+   );
+}
+
+class Model {
+  Model(this.country, this.density);
+
+  final String country;
+  final double density;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+<b>Using SfMapsTheme</b>
+
+You can also customize the legend item's text style using the `SfMapsThemeData.legendTextStyle` property.
+
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfMapsTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsTheme-class.html).
+
+{% tabs %}
+{% highlight Dart %}
+
+List<Model> data;
+
+@override
+void initState() {
+    super.initState();
+    data = <Model>[
+      Model('India', 280),
+      Model('United States of America', 190),
+      Model('Kazakhstan', 37),
+      Model('Italy', 201),
+      Model('Korea', 512),
+      Model('Japan', 335),
+      Model('Cuba', 103),
+      Model('China', 148)
+   ];
+}
+
+@override
+Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Container(
+          height: 350,
+          child: Padding(
+            padding: EdgeInsets.only(left: 15, right: 15),
+            child: SfMapsTheme(
+              data: SfMapsThemeData(
+                legendTextStyle: TextStyle(
+                    color: Colors.red,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    fontStyle: FontStyle.italic,
+                    fontFamily: 'Times'
+                ),
+              ),
+              child: SfMaps(
+                layers: [
+                  MapShapeLayer(
+                    delegate: MapShapeLayerDelegate(
+                        shapeFile: "assets/world_map.json",
+                        shapeDataField: "name",
+                        dataCount: data.length,
+                        primaryValueMapper: (int index) => data[index].country,
+                        shapeColorValueMapper: (int index) => data[index].density,
+                        shapeColorMappers: [
+                          MapColorMapper(from: 0,
+                              to: 100,
+                              color: Colors.red,
+                              text: '< 100/km'),
+                          MapColorMapper(from: 101,
+                              to: 200,
+                              color: Colors.green,
+                              text: '100 - 200/km'),
+                          MapColorMapper(from: 201,
+                              to: 300,
+                              color: Colors.blue,
+                              text: '200 - 300/km'),
+                          MapColorMapper(from: 301,
+                              to: 400,
+                              color: Colors.orange,
+                              text: '300 - 400/km'),
+                          MapColorMapper(from: 401,
+                              to: 500,
+                              color: Colors.teal,
+                              text: '400 - 500/km'),
+                          MapColorMapper(from: 501,
+                              to: 600,
+                              color: Colors.deepPurple,
+                              text: '500 - 600/km'),
+                        ]
+                    ),
+                    showLegend: true,
+                  )
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class Model {
+  const Model(this.country, this.density);
+
+  final String country;
+  final double density;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Legend text style](images/legend/legend-text-style.png)
 
 ## Appearance customization
 
@@ -513,7 +816,6 @@ You can customize the legend items using the following properties.
 * **itemsSpacing** - Used to provide space between the each legend items. The default value of the `itemsSpacing` is `10.0`.
 * **direction** - Used to arrange the legend items in either horizontal or vertical direction. It defaults to `horizontal`, if the value of the `position` property is `top`, `bottom` and defaults to `vertical`, if the value of the `position` property is `left` or `right`.
 * **padding** - Used to set padding around the legend. The default value of the `padding` property is `EdgeInsets.all(10.0)`.
-* **textStyle** - Used to customize the legend item's text style.
 
 {% tabs %}
 {% highlight Dart %}
@@ -568,7 +870,6 @@ Widget build(BuildContext context) {
                     iconType: MapIconType.square,
                     iconSize: Size(15.0, 15.0),
                     itemsSpacing: 15,
-                    textStyle: TextStyle(fontStyle: FontStyle.italic, color: Colors.black)
                   ),
                 )
               ],
