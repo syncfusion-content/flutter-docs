@@ -404,10 +404,10 @@ class Model {
 
 You can enable toggling the legend items and the corresponding shapes using the `MapLegendSettings.enableToggleInteraction` property. The default value of the `enableToggleInteraction` property is `false`. You can customize the toggled shapes using the following properties:
 
-* **toggledShapeColor** - Used to change the color for the toggled legend item's icon and it's shape.
-* **toggledShapeStrokeColor** - Used to change the stroke color which applies to the toggled legend item's shape.
-* **toggledShapeStrokeWidth** - Used to change the stroke width which applies to the toggled legend item's shape.
-* **toggledShapeOpacity** - Used to change the opacity to the toggled legend item's shape.
+* **Toggled shape color** - Change the color for the toggled legend item's icon and it's shape using the `MapLegendSettings.toggledShapeColor` property.
+* **Toggled shape stroke color** - Change the stroke color which applies to the toggled legend item's shape using the `MapLegendSettings.toggledShapeStrokeColor` property.
+* **Toggled shape stroke width** - Change the stroke width which applies to the toggled legend item's shape using the `MapLegendSettings.toggledShapeStrokeWidth` property.
+* **Toggled shape opacity** - Change the opacity of the toggled legend item's shape using the `MapLegendSettings.opacity` property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -501,11 +501,11 @@ class Model {
 
 <b>Using SfMapsTheme</b>
 
-You can also customize the below appearance of the legend using the `SfMapsThemeData.toggledShapeColor`, `SfMapsThemeData.toggledShapeStrokeColor` and `SfMapsThemeData.toggledShapeStrokeWidth` properties.
+You can also customize the below appearance of the legend.
 
-* **toggledShapeColor** - Used to change the color for the toggled legend item's icon and it's shape.
-* **toggledShapeStrokeColor** - Used to change the stroke color which applies to the toggled legend item's shape.
-* **toggledShapeStrokeWidth** - Used to change the stroke width which applies to the toggled legend item's shape.
+* **Toggled shape color** - Change the color for the toggled legend item's icon and it's shape using the `SfMapsThemeData.toggledShapeColor` property.
+* **Toggled shape stroke color** - Change the stroke color which applies to the toggled legend item's shape using the `SfMapsThemeData.toggledShapeStrokeColor` property.
+* **Toggled shape stroke width** - Change the stroke width which applies to the toggled legend item's shape using the `SfMapsThemeData.toggledShapeStrokeWidth` property.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfMapsTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsTheme-class.html).
 

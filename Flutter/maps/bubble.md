@@ -204,13 +204,14 @@ class Model {
 
 ## Appearance customization
 
-You can customize the bubbles using the `minRadius`, `maxRadius`, `color`, `strokeWidth`, and `strokeColor` properties in the `bubbleSettings`.
+You can customize the below appearance of the bubbles.
 
-N>
-* The default value of the `minRadius` property is `10.0`.
-* The default value of the `maxRadius` property is `50.0`.
-* The default value of the `opacity` property is `0.75`.
-* The default value of the `color` property is `Color.fromRGBO(98, 0, 238, 0.5)`.
+* **MinRadius** - Change the minimum radius of the bubbles using the `MapBubbleSettings.minRadius` property. The default value of the `minRadius` property is `10.0`.
+* **MaxRadius** - Change the maximum radius of the bubbles using the `MapBubbleSettings.maxRadius` property. The default value of the `maxRadius` property is `50.0`.
+* **Opacity** - Change the opacity of the bubbles using the `MapBubbleSettings.opacity` property.  The default value of the `opacity` property is `0.75`.
+* **Background color** - Change the background color of the bubbles using the `MapBubbleSettings.color` property.
+* **Stroke color** - Change the stroke color of the bubbles using the `MapBubbleSettings.strokeColor` property.
+* **Stroke width** - Change the stroke width of the bubbles using the `MapBubbleSettings.strokeWidth` property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -257,6 +258,79 @@ Widget build(BuildContext context) {
             )
           ],
         ),
+      ),
+   );
+}
+
+class Model {
+  Model(this.continent, this.count);
+
+  final String continent;
+  final double count;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+<b>Using SfMapsTheme</b>
+
+You can also customize the below appearance of the bubbles.
+
+* **Background color** - Change the background color of the bubbles using the `SfMapsThemeData.bubbleColor` property.
+* **Stroke color** - Change the stroke color of the bubbles using the `SfMapsThemeData.bubbleStrokeColor` property.
+* **Stroke width** - Change the stroke width of the bubbles using the `SfMapsThemeData.bubbleStrokeWidth` property.
+
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfMapsTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsTheme-class.html).
+
+{% tabs %}
+{% highlight Dart %}
+
+List<Model> data;
+
+@override
+void initState() {
+    super.initState();
+
+    data = <Model>[
+      Model('Asia', 51),
+      Model('Africa', 58),
+      Model('Europe', 48),
+      Model('North America', 41),
+      Model('South America', 14),
+      Model('Australia', 23),
+   ];
+}
+
+@override
+Widget build(BuildContext context) {
+    return Scaffold(
+      body: Padding(
+        padding: EdgeInsets.only(left: 15, right: 15),
+        child: SfMapsTheme(
+          data: SfMapsThemeData(
+            bubbleColor: Colors.red[200],
+            bubbleStrokeColor: Colors.red[800],
+            bubbleStrokeWidth: 2
+          ),
+          child: SfMaps(
+            layers: [
+              MapShapeLayer(
+                delegate: MapShapeLayerDelegate(
+                  shapeFile: "assets/world_map.json",
+                  shapeDataField: "continent",
+                  dataCount: data.length,
+                  primaryValueMapper: (int index) => data[index].continent,
+                  bubbleSizeMapper: (int index) => data[index].count,
+                ),
+                showBubbles: true,
+                bubbleSettings: MapBubbleSettings(
+                  maxRadius: 30,
+                  minRadius: 15,
+                ),
+              )
+            ],
+          ),
+        )
       ),
    );
 }

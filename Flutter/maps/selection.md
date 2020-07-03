@@ -142,10 +142,10 @@ class Model {
 
 You can customize the below appearance of the selected shape.
 
-* **Background color** - Change the background color of the selected shape using the `color` property of `MapSelectionSettings`.
-* **Stroke width** - Change the stroke width of the selected shape using the `strokeWidth` property of `MapSelectionSettings`.
-* **Stroke color** - Change the stroke color of the selected shape using the `strokeColor` property of `MapSelectionSettings`.
-* **Opacity** - Change the opacity of the selected shape using the `opacity` property of `MapSelectionSettings`.
+* **Background color** - Change the background color of the selected shape using the `MapSelectionSettings.color` property.
+* **Stroke width** - Change the stroke width of the selected shape using the `MapSelectionSettings.strokeWidth` property.
+* **Stroke color** - Change the stroke color of the selected shape using the `MapSelectionSettings.strokeColor` property.
+* **Opacity** - Change the opacity of the selected shape using the `MapSelectionSettings.opacity` property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -213,9 +213,9 @@ class Model {
 
 You can customize the below appearance of the selected shape.
 
-* **Background color** - Change the background color of the selected shape using the `selectionColor` property of `SfMapsThemeData`.
-* **Stroke width** - Change the stroke width of the selected shape using the `selectionStrokeWidth` property of `SfMapsThemeData`.
-* **Stroke color** - Change the stroke color of the selected shape using the `selectionStrokeColor` property of `SfMapsThemeData`.
+* **Background color** - Change the background color of the selected shape using the `SfMapsThemeData.selectionColor` property.
+* **Stroke width** - Change the stroke width of the selected shape using the `SfMapsThemeData.selectionStrokeWidth` property.
+* **Stroke color** - Change the stroke color of the selected shape using the `SfMapsThemeData.selectionStrokeColor` property.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfMapsTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsTheme-class.html).
 
