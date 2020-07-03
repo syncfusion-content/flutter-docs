@@ -243,7 +243,9 @@ SfDataGrid allows you to select one or more rows. The `selectionMode` property c
 
 ![flutter datagrid shows rows with selection](images/getting-started/flutter-datagrid-selection.png)
 
-The information about the rows that are selected can be retrieved using `selectedIndex`, `selectedRow` and `selectedRows` properties in `DataGridController`. You need to initialize the `DataGridController` object to the `controller` property of SfDataGrid.`DataGridController` objects are expected to be long-lived, not recreated with each build.
+The information about the rows that are selected can be retrieved using `selectedIndex`, `selectedRow` and `selectedRows` properties in `DataGridController`. You need to initialize the `DataGridController` object to the `controller` property of SfDataGrid.
+
+`DataGridController` objects are expected to be long-lived, not recreated with each build.
 
 {% tabs %}
 {% highlight Dart %} 

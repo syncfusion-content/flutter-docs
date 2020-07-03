@@ -773,6 +773,8 @@ To perform custom actions apart from the functionalities mentioned in the above 
 {% highlight Dart %}
   
     final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
+    
+    final CustomSelectionManager _customSelectionManager = CustomSelectionManager();
 
     @override
     Widget build(BuildContext context){
@@ -786,7 +788,7 @@ To perform custom actions apart from the functionalities mentioned in the above 
               GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
             ],
             selectionMode: SelectionMode.multiple,
-            selectionManager: CustomSelectionManager(),
+            selectionManager: _customSelectionManager,
           )
       );
     }
@@ -817,6 +819,8 @@ When pressing the <kbd>Enter</kbd> key, the current cell will be moved to the ne
 {% highlight Dart %}
    
     final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
+
+    final CustomSelectionManager _customSelectionManager = CustomSelectionManager();
     
     @override
     Widget build(BuildContext context){
@@ -832,7 +836,7 @@ When pressing the <kbd>Enter</kbd> key, the current cell will be moved to the ne
                 ],
                 selectionMode: SelectionMode.multiple,
                 navigationMode: GridNavigationMode.cell,
-                selectionManager: CustomSelectionManager(),
+                selectionManager: _customSelectionManager,
               ))
       );
     }
