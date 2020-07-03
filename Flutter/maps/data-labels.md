@@ -250,7 +250,7 @@ class Model {
 
 <b>Using SfMapsTheme</b>
 
-You can also customize the data labels using the `SfMapsThemeData.dataLabelTextStyle` property.
+You can also customize the data labels using the `SfMapsThemeData.dataLabelTextStyle` property in `SfMapsTheme`.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfMapsTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsTheme-class.html).
 

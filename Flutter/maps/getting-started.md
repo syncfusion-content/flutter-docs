@@ -103,15 +103,6 @@ Widget build(BuildContext context) {
 
 ![maps basic view](images/getting-started/map_basic_view.png)
 
-N>
-* Refer the `MapShapeLayerDelegate.primaryValueMapper`, for mapping the data of the data source collection with the respective `MapShapeLayerDelegate.shapeDataField` in .json file.
-* Refer the `MapShapeLayerDelegate.bubbleSizeMapper`, for customizing the bubble size.
-* Refer the `MapShapeLayerDelegate.bubbleColorValueMapper`, for customizing the bubble colors.
-* Refer the `MapShapeLayerDelegate.dataLabelMapper`, for customizing the data label text.
-* Refer the `MapShapeLayerDelegate.shapeTooltipTextMapper`, for customizing the shape tooltip text.
-* Refer the `MapShapeLayerDelegate.bubbleTooltipTextMapper`, for customizing the bubble tooltip text.
-* Refer the `MapShapeLayerDelegate.shapeColorValueMapper`, for customizing the bubble colors.
-
 ## Mapping the data source
 
 By default, the value specified for the `shapeDataField` in the GeoJSON file will be used in the elements like data labels, tooltip, and legend for their respective shapes. However, it is possible to keep a data source and customize these elements based on the requirement. As mentioned above, `shapeDataField` will be used to map with respective value returned in `primaryValueMapper` from the data source.
@@ -165,6 +156,15 @@ class Model {
 
 {% endhighlight %}
 {% endtabs %}
+
+N>
+* Refer the `MapShapeLayerDelegate.primaryValueMapper`, for mapping the data of the data source collection with the respective `MapShapeLayerDelegate.shapeDataField` in .json file.
+* Refer the `MapShapeLayerDelegate.bubbleSizeMapper`, for customizing the bubble size.
+* Refer the `MapShapeLayerDelegate.bubbleColorValueMapper`, for customizing the bubble colors.
+* Refer the `MapShapeLayerDelegate.dataLabelMapper`, for customizing the data label text.
+* Refer the `MapShapeLayerDelegate.shapeTooltipTextMapper`, for customizing the shape tooltip text.
+* Refer the `MapShapeLayerDelegate.bubbleTooltipTextMapper`, for customizing the bubble tooltip text.
+* Refer the `MapShapeLayerDelegate.shapeColorValueMapper`, for customizing the bubble colors.
 
 ## Add maps elements
 

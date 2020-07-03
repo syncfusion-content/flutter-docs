@@ -85,7 +85,7 @@ Widget build(BuildContext context) {
 
 <b>Using SfMapsTheme</b>
 
-You can customize the below appearance of the shape.
+You can also customize the below appearance of the shape using `SfMapsTheme`.
 
 * **Color** - Change the color of the shapes using the `SfMapsThemeData.layerColor` property.
 * **Stroke color** - Change the stroke color of the shapes using the `SfMapsThemeData.layerStrokeColor` property.

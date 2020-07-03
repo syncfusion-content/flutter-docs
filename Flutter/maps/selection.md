@@ -214,7 +214,7 @@ class Model {
 
 <b>Using SfMapsTheme</b>
 
-You can customize the below appearance of the selected shape.
+You can customize the below appearance of the selected shape using `SfMapsTheme`.
 
 * **Background color** - Change the background color of the selected shape using the `SfMapsThemeData.selectionColor` property.
 * **Stroke width** - Change the stroke width of the selected shape using the `SfMapsThemeData.selectionStrokeWidth` property.

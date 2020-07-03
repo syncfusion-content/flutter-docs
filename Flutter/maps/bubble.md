@@ -274,7 +274,7 @@ class Model {
 
 <b>Using SfMapsTheme</b>
 
-You can also customize the below appearance of the bubbles.
+You can also customize the below appearance of the bubbles using `SfMapsTheme`.
 
 * **Background color** - Change the background color of the bubbles using the `SfMapsThemeData.bubbleColor` property.
 * **Stroke color** - Change the stroke color of the bubbles using the `SfMapsThemeData.bubbleStrokeColor` property.

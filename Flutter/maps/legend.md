@@ -511,7 +511,7 @@ class Model {
 
 <b>Using SfMapsTheme</b>
 
-You can also customize the below appearance of the legend.
+You can also customize the below appearance of the legend using `SfMapsTheme`.
 
 * **Toggled shape color** - Change the color for the toggled legend item's icon and it's shape using the `SfMapsThemeData.toggledShapeColor` property.
 * **Toggled shape stroke color** - Change the stroke color which applies to the toggled legend item's shape using the `SfMapsThemeData.toggledShapeStrokeColor` property.
@@ -714,7 +714,7 @@ class Model {
 
 <b>Using SfMapsTheme</b>
 
-You can also customize the legend item's text style using the `SfMapsThemeData.legendTextStyle` property.
+You can also customize the legend item's text style using the `SfMapsThemeData.legendTextStyle` property in `SfMapsTheme`.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfMapsTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsTheme-class.html).
 
