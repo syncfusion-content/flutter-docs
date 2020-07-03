@@ -12,6 +12,8 @@ This section explains how to enable selection in the datagrid; modes, properties
 
 The datagrid allows you to select a specific row or group of rows either programmatically or by touch interactions. To enable selection, set the `selectionMode` property of SfDataGrid to a value other than `none`. SfDataGrid has different selection modes to perform the selection operation as follows.
 
+N> The`dataSource` property must be initialized in `source`. `dataSource` is the actual underlying collection of data objects to populate the rows in DataGrid.
+
 ## Selection modes 
 
 <table>
