@@ -38,7 +38,7 @@ This section explains about options to customize the header row height and the r
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows height for header row ](images/row-height-customization/flutter-datagrid-header-row-height.jpg)
+![flutter datagrid shows header row with custom height ](images/row-height-customization/flutter-datagrid-header-row-height.jpg)
 
 ## Set height for rows except header row
 
@@ -66,7 +66,7 @@ You can customize the height of the grid rows in `SfDataGrid` by using the `rowH
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows height for rows except header row ](images/row-height-customization/flutter-datagrid-row-height.jpg)
+![flutter datagrid shows rows except header row with custom height ](images/row-height-customization/flutter-datagrid-row-height.jpg)
 
 ## Fit row height based on its content
 
@@ -112,7 +112,7 @@ To access the `getAutoRowHeight` method, create an instance of `ColumnSizer`, se
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows auto fit row height](images/row-height-customization/flutter-datagrid-auto-fit-row.jpg)
+![rows are fitted in flutter datagrid ](images/row-height-customization/flutter-datagrid-auto-fit-row.jpg)
 
 ### Auto fit row height options
 
@@ -120,8 +120,16 @@ To access the `getAutoRowHeight` method, create an instance of `ColumnSizer`, se
                 
 By default, `getAutoRowHeight` method calculates the row height based on all columns. To skip the specific columns from the row height calculation, add that columns to the `excludeColumns` parameter in `getAutoRowHeight` method.
 
- {% tabs %}
+{% tabs %}
 {% highlight Dart %} 
+
+    final List<String> _excludeColumns = [
+                'designation',
+                'address',
+                'city',
+                ];
+            
+    final ColumnSizer _columnSizer = ColumnSizer();
 
     @override
       Widget build(BuildContext context) {
@@ -130,11 +138,6 @@ By default, `getAutoRowHeight` method calculates the row height based on all col
             source: _autoRowHeightDataGridSource,
             columnSizer: _columnSizer,
             onQueryRowHeight: (int rowIndex) {
-              final List<String> _excludeColumns = [
-                'designation',
-                'address',
-                'city',
-                ];
                 final double height= _columnSizer.getAutoRowHeight(rowIndex,excludedColumns:_excludeColumns);
              return height;
             },
@@ -152,6 +155,7 @@ By default, `getAutoRowHeight` method calculates the row height based on all col
         );
       );
      }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -164,6 +168,8 @@ The hidden columns can also be considered for the row height calculation by usin
 
 {% tabs %}
 {% highlight Dart %} 
+
+    final ColumnSizer _columnSizer = ColumnSizer();
 
     @override
       Widget build(BuildContext context) {
@@ -189,6 +195,7 @@ The hidden columns can also be considered for the row height calculation by usin
         )
         );
     }
+
 {% endhighlight %}
 {% endtabs %}
 
