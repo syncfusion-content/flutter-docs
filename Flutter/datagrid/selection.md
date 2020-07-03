@@ -44,7 +44,6 @@ Keyboard navigation through the cells and rows is determined based on the `navig
 {% tabs %}
 {% highlight Dart %}
 
-// NavigationMode cell
 @override
 Widget build(BuildContext context) {
   return Scaffold(
