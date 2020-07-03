@@ -99,23 +99,24 @@ Create the collection of Employee data with the required number of data objects.
 {% highlight Dart %} 
    
     final List<Employee> _employees = <Employee>[];
-    
+  
     @override
-      void initState() {
-        super.initState();
-        populateData();
-      }
-      void populateData() {
-        _employees.add(Employee(10001, 'James', 'Project Lead', 20000));
-        _employees.add(Employee(10002, 'Kathryn', 'Manager', 30000));
-        _employees.add(Employee(10003, 'Lara', 'Developer', 15000));
-        _employees.add(Employee(10004, 'Michael', 'Designer', 15000));
-        _employees.add(Employee(10005, 'Martin', 'Developer', 15000));
-        _employees.add(Employee(10006, 'Newberry', 'Developer', 15000));
-        _employees.add(Employee(10007, 'Balnc', 'Developer', 15000));
-        _employees.add(Employee(10008, 'Perry', 'Developer', 15000));
-        _employees.add(Employee(10009, 'Gable', 'Developer', 15000));
-        _employees.add(Employee(10010, 'Grimes', 'Developer', 15000));
+    void initState() {
+      super.initState();
+      populateData();
+    }
+  
+    void populateData() {
+      _employees.add(Employee(10001, 'James', 'Project Lead', 20000));
+      _employees.add(Employee(10002, 'Kathryn', 'Manager', 30000));
+      _employees.add(Employee(10003, 'Lara', 'Developer', 15000));
+      _employees.add(Employee(10004, 'Michael', 'Designer', 15000));
+      _employees.add(Employee(10005, 'Martin', 'Developer', 15000));
+      _employees.add(Employee(10006, 'Newberry', 'Developer', 15000));
+      _employees.add(Employee(10007, 'Balnc', 'Developer', 15000));
+      _employees.add(Employee(10008, 'Perry', 'Developer', 15000));
+      _employees.add(Employee(10009, 'Gable', 'Developer', 15000));
+      _employees.add(Employee(10010, 'Grimes', 'Developer', 15000));
     }
 
 {% endhighlight %}
@@ -133,33 +134,33 @@ Create the collection of Employee data with the required number of data objects.
 {% tabs %}
 {% highlight Dart %} 
 
-    final List<Employee> _employees =<Employee>[];
-    
-    final EmployeeDataSource_employeeDataSource= EmployeeDataSource ();
-     
+    final List<Employee> _employees = <Employee>[];
+
+    final EmployeeDataSource_employeeDataSource = EmployeeDataSource();
+
     class EmployeeDataSource extends DataGridSource {
+      @override
+      List<Object> get dataSource => _employees;
 
       @override
-       List<Object> get dataSource => _employees;
-
-      @override
-        getCellValue(int rowIndex, String columnName) {
-          switch (columnName) {
-            case 'id':
-              return _employees[rowIndex].id;
+      getCellValue(int rowIndex, String columnName) {
+        switch (columnName) {
+          case 'id':
+            return _employees[rowIndex].id;
             break;
-            case 'name':
-              return _employees[rowIndex].name;
+          case 'name':
+            return _employees[rowIndex].name;
             break;
-            case 'salary':
-              return _employees[rowIndex].salary;
+          case 'salary':
+            return _employees[rowIndex].salary;
             break;
-            case 'designation':
-              return _employees[rowIndex].designation;
+          case 'designation':
+            return _employees[rowIndex].designation;
             break;
-            default:
-              return ' ';
+          default:
+            return ' ';
             break;
+        }
       }
     }
 
@@ -175,9 +176,8 @@ Create an instance of `DataGridSource` and set this object to `source` property 
     Widget build(BuildContext context) {
       return Scaffold(
           body: SfDataGrid(
-            source: _employeeDataSource,
-          )
-      );
+        source: _employeeDataSource,
+      ));
     }
 
 {% endhighlight %}
@@ -199,7 +199,7 @@ You can also load any widget in a column using the `GridWidgetColumn` and `cellB
         body: SfDataGrid(
           source: _employeeDataSource,
           columns: [
-            GridNumericColumn(mappingName: 'id',headerText:'ID'),
+            GridNumericColumn(mappingName: 'id', headerText: 'ID'),
             GridTextColumn(mappingName: 'name', headerText: 'Name'),
             GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
             GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
@@ -228,7 +228,7 @@ SfDataGrid allows you to select one or more rows. The `selectionMode` property c
         body: SfDataGrid(
           source: _employeeDataSource,
           columns: [
-            GridNumericColumn(mappingName: 'id',  headerText:'ID'),
+            GridNumericColumn(mappingName: 'id', headerText: 'ID'),
             GridTextColumn(mappingName: 'name', headerText: 'Name'),
             GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
             GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
@@ -275,12 +275,12 @@ The information about the rows that are selected can be retrieved using `selecte
                 columns: [
                   GridNumericColumn(mappingName: 'id', headerText: 'ID'),
                   GridTextColumn(mappingName: 'name', headerText: 'Name'),
-                  GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-                  GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),              
+                  GridTextColumn(
+                      mappingName: 'designation', headerText: 'Designation'),
+                  GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
                 ],
                 controller: _controller,
-                selectionMode:
-                SelectionMode.multiple,
+                selectionMode: SelectionMode.multiple,
               ),
             ),
           ],
