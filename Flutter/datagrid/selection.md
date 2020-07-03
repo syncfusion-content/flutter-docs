@@ -644,8 +644,6 @@ All rows or cells will be selected.
 </tr>
 </table>
 
- N> When the `navigationMode` property is in `row`, the <kbd>UpArrow</kbd> and <kbd>DownArrow</kbd> only work.
-
 ## Callbacks
 
 The datagrid provides the following callbacks for selection:
