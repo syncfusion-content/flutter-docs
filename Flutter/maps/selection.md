@@ -140,7 +140,12 @@ class Model {
 
 ## Appearance customization
 
-You can customize the selected shape using the `color`, `strokeColor`, `strokeWidth`, and `opacity` properties in the `MapSelectionSettings`.
+You can customize the below appearance of the selected shape.
+
+* **Background color** - Change the background color of the selected shape using the `color` property of `MapSelectionSettings`.
+* **Stroke width** - Change the stroke width of the selected shape using the `strokeWidth` property of `MapSelectionSettings`.
+* **Stroke color** - Change the stroke color of the selected shape using the `strokeColor` property of `MapSelectionSettings`.
+* **Opacity** - Change the opacity of the selected shape using the `opacity` property of `MapSelectionSettings`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -187,6 +192,80 @@ Widget build(BuildContext context) {
                 ),
               ],
             ),
+          ),
+        ),
+      ),
+   );
+}
+
+class Model {
+  const Model(this.continent, this.code, this.color);
+
+  final String continent;
+  final String code;
+  final Color color;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+<b>Using SfMapsTheme</b>
+
+You can customize the below appearance of the selected shape.
+
+* **Background color** - Change the background color of the selected shape using the `selectionColor` property of `SfMapsThemeData`.
+* **Stroke width** - Change the stroke width of the selected shape using the `selectionStrokeWidth` property of `SfMapsThemeData`.
+* **Stroke color** - Change the stroke color of the selected shape using the `selectionStrokeColor` property of `SfMapsThemeData`.
+
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfMapsTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsTheme-class.html).
+
+{% tabs %}
+{% highlight Dart %}
+
+List<Model> data;
+
+@override
+void initState() {
+    super.initState();
+    data = const <Model>[
+      Model('Asia', 'Asia', Color.fromRGBO(60, 120, 255, 0.8)),
+      Model('Africa', 'Africa', Color.fromRGBO(51, 102, 255, 0.8)),
+      Model('Europe', 'Europe', Color.fromRGBO(0, 57, 230, 0.8)),
+      Model('South America', 'SA', Color.fromRGBO(0, 51, 204, 0.8)),
+      Model('Australia', 'Australia', Color.fromRGBO(0, 45, 179, 0.8)),
+      Model('North America', 'NA', Color.fromRGBO(0, 38, 153, 0.8))
+   ];
+}
+
+@override
+Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Container(
+          height: 350,
+          child: Padding(
+            padding: EdgeInsets.only(left: 15, right: 15),
+            child: SfMapsTheme(
+              data: SfMapsThemeData(
+                selectionColor: Colors.orange,
+                selectionStrokeWidth: 3,
+                selectionStrokeColor: Colors.red[900],
+              ),
+              child: SfMaps(
+                layers: [
+                  MapShapeLayer(
+                    delegate: MapShapeLayerDelegate(
+                      shapeFile: "assets/world_map.json",
+                      shapeDataField: "continent",
+                      dataCount: data.length,
+                      primaryValueMapper: (int index) => data[index].continent,
+                      shapeColorValueMapper: (int index) => data[index].color,
+                    ),
+                    enableSelection: true,
+                  ),
+                ],
+              ),
+            )
           ),
         ),
       ),
