@@ -25,10 +25,14 @@ This section explains about options to customize the header row height and the r
                 source:_employeeDatasource,
                 headerRowHeight: 70,
                 columns:<GridColumn>[
-                   GridNumericColumn(mappingName: 'id')..headerText = 'ID',
-                   GridTextColumn(mappingName: 'name')..headerText = 'Name',
-                   GridTextColum(mappingName: 'designation')..headerText = 'Designation',
-                   GridNumericColumn(mappingName: 'salary')..headerText = 'Salary',
+                   GridNumericColumn(mappingName: 'id')
+                   ..headerText = 'ID',
+                   GridTextColumn(mappingName: 'name')
+                   ..headerText = 'Name',
+                   GridTextColum(mappingName: 'designation')
+                   ..headerText = 'Designation',
+                   GridNumericColumn(mappingName: 'salary')
+                   ..headerText = 'Salary',
                       ],
                  )
           
@@ -54,10 +58,14 @@ You can customize the height of the grid rows in `SfDataGrid` by using the `rowH
             source:_employeeDatasource,
             rowHeight: 60,
             columns:<GridColumn>[
-              GridNumericColumn(mappingName: 'id')..headerText = 'ID',
-              GridTextColumn(mappingName: 'name')..headerText = 'Name',
-              GridTextColum(mappingName: 'designation')..headerText = 'Designation',
-              GridNumericColumn(mappingName: 'salary')..headerText = 'Salary',
+              GridNumericColumn(mappingName: 'id')
+              ..headerText = 'ID',
+              GridTextColumn(mappingName: 'name')
+              ..headerText = 'Name',
+              GridTextColum(mappingName: 'designation')
+              ..headerText = 'Designation',
+              GridNumericColumn(mappingName: 'salary')
+              ..headerText = 'Salary',
                             ],
                         )
            );
@@ -96,14 +104,34 @@ To access the `getAutoRowHeight` method, create an instance of `ColumnSizer`, se
                   return height;
                     },
             columns: <GridColumn>[
-              GridTextColumn(mappingName: 'id')..softWrap = true..overflow = TextOverflow.clip..headerText = 'ID',
-              GridTextColumn(mappingName: 'contactName')..softWrap = true..overflow = TextOverflow.clip
+              GridTextColumn(mappingName: 'id')
+              ..softWrap = true
+              ..overflow = TextOverflow.clip
+              ..headerText = 'ID',
+              GridTextColumn(mappingName: 'contactName')
+              ..softWrap = true
+              ..overflow = TextOverflow.clip
               ..headerText = 'Contact Name',
-              GridTextColumn(mappingName: 'companyName')..softWrap = true ..overflow = TextOverflow.clip..headerText = 'Company Name',
-              GridTextColumn(mappingName: 'city')..softWrap = true ..overflow = TextOverflow.clip..headerText = 'City',
-              GridTextColumn(mappingName: 'address')..softWrap = true..overflow = TextOverflow.clip..headerText = 'Address',
-              GridTextColumn(mappingName: 'designation')..softWrap = true ..overflow = TextOverflow.clip..headerText = 'Designation',
-              GridTextColumn(mappingName: 'country')..softWrap = true ..overflow = TextOverflow.clip..headerText = 'Country',
+              GridTextColumn(mappingName: 'companyName')
+              ..softWrap = true
+              ..overflow = TextOverflow.clip
+              ..headerText = 'Company Name',
+              GridTextColumn(mappingName: 'city')
+              ..softWrap = true
+              ..overflow = TextOverflow.clip
+              ..headerText = 'City',
+              GridTextColumn(mappingName: 'address')
+              ..softWrap = true
+              ..overflow = TextOverflow.clip
+              ..headerText = 'Address',
+              GridTextColumn(mappingName: 'designation')
+              ..softWrap = true
+              ..overflow = TextOverflow.clip
+              ..headerText = 'Designation',
+              GridTextColumn(mappingName: 'country')
+              ..softWrap = true 
+              ..overflow = TextOverflow.clip
+              ..headerText = 'Country',
           ]    
         )
       );
@@ -142,15 +170,34 @@ By default, `getAutoRowHeight` method calculates the row height based on all col
              return height;
             },
             columns: <GridColumn>[
-              GridTextColumn(mappingName: 'id') ..softWrap=true..overflow = TextOverflow.clip..headerText = 'ID',
-              GridTextColumn(mappingName: 'contactName')..softWrap = true..overflow = TextOverflow.clip..headerText = 'Contact Name',
-              GridTextColumn(mappingName: 'companyName')..softWrap=true..overflow = TextOverflow.clip..headerText = 'Company Name',
-              GridTextColumn(mappingName: 'address')..softWrap=true..overflow = TextOverflow.clip ..headerText = 'Address',
-              GridTextColumn(mappingName: 'city')..softWrap=true..overflow = TextOverflow.clip
+              GridTextColumn(mappingName: 'id')
+              ..softWrap=true
+              ..overflow = TextOverflow.clip
+              ..headerText = 'ID',
+              GridTextColumn(mappingName: 'contactName')
+              ..softWrap = true
+              ..overflow = TextOverflow.clip
+              ..headerText = 'Contact Name',
+              GridTextColumn(mappingName: 'companyName')
+              ..softWrap=true
+              ..overflow = TextOverflow.clip
+              ..headerText = 'Company Name',
+              GridTextColumn(mappingName: 'address')
+              ..softWrap=true
+              ..overflow = TextOverflow.clip 
+              ..headerText = 'Address',
+              GridTextColumn(mappingName: 'city')
+              ..softWrap=true
+              ..overflow = TextOverflow.clip
               ..headerText = 'City',
-              GridTextColumn(mappingName: 'designation')..softWrap=true..overflow = TextOverflow.clip
+              GridTextColumn(mappingName: 'designation')
+              ..softWrap=true
+              ..overflow = TextOverflow.clip
               ..headerText = 'Designation',
-              GridTextColumn(mappingName: 'country')..softWrap=true..overflow = TextOverflow.clip..headerText = 'Country',
+              GridTextColumn(mappingName: 'country')
+              ..softWrap=true
+              ..overflow = TextOverflow.clip
+              ..headerText = 'Country',
           ]
         );
       );
@@ -182,14 +229,37 @@ The hidden columns can also be considered for the row height calculation by usin
             return height;
            },
             columns: <GridColumn>[
-              GridTextColumn(mappingName: 'id')..softWrap = true..overflow = TextOverflow.clip..headerText = 'ID',
-              GridTextColumn(mappingName: 'contactName')..softWrap = true ..overflow = TextOverflow.clip..headerText = 'Contact Name',
-              GridTextColumn(mappingName: 'companyName')..softWrap = true ..overflow = TextOverflow.clip
+              GridTextColumn(mappingName: 'id')
+              ..softWrap = true
+              ..overflow = TextOverflow.clip
+              ..headerText = 'ID',
+              GridTextColumn(mappingName: 'contactName')
+              ..softWrap = true 
+              ..overflow = TextOverflow.clip
+              ..headerText = 'Contact Name',
+              GridTextColumn(mappingName: 'companyName')
+              ..softWrap = true 
+              ..overflow = TextOverflow.clip
               ..headerText = 'Company Name',
-              GridTextColumn(mappingName: 'country')..softWrap = true..overflow = TextOverflow.clip..headerText = 'Country',
-              GridTextColumn(mappingName: 'address')..softWrap = true..isHidden = true..overflow = TextOverflow.clip..headerText = 'Address',
-              GridTextColumn(mappingName: 'city')..softWrap = true..isHidden = true..overflow = TextOverflow.clip ..headerText = 'City',
-              GridTextColumn(mappingName: 'designation') ..softWrap = true ..isHidden = true..overflow = TextOverflow.clip..headerText = 'Designation',
+              GridTextColumn(mappingName: 'country')
+              ..softWrap = true
+              ..overflow = TextOverflow.clip
+              ..headerText = 'Country',
+              GridTextColumn(mappingName: 'address')
+              ..softWrap = true
+              ..isHidden = true
+              ..overflow = TextOverflow.clip
+              ..headerText = 'Address',
+              GridTextColumn(mappingName: 'city')
+              ..softWrap = true
+              ..isHidden = true
+              ..overflow = TextOverflow.clip 
+              ..headerText = 'City',
+              GridTextColumn(mappingName: 'designation') 
+              ..softWrap = true 
+              ..isHidden = true
+              ..overflow = TextOverflow.clip
+              ..headerText = 'Designation',
              
         ]
         )
