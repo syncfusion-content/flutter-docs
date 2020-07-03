@@ -353,7 +353,7 @@ class Data {
 
 ## Deferred update
 
-You can control when the dependent components are updated while thumbs are being dragged continuously. It can be achieved by setting the `SfRangeSelector.enableDeferredUpdate` property and the delay can be updated using the `SfRangeSelector.deferredUpdateDelay` property. The default value of the `deferredUpdateDelay` property is `500 milliseconds`
+You can control when the dependent components are updated while thumbs are being dragged continuously. It can be achieved by setting the `SfRangeSelector.enableDeferredUpdate` property and the delay in the update can be achieved by setting the `SfRangeSelector.deferredUpdateDelay` property. The default value of the `deferredUpdateDelay` property is `500 milliseconds`
 
 It updates the `controller` start and end values and invoke the [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/onChanged.html) callback when the thumb is dragged and held for the duration specified in the `deferredUpdateDelay`. However, range values are immediately updated in touch up action. 
 
