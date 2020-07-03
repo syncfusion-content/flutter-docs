@@ -308,7 +308,7 @@ The following code example shows how to select a row using `selectedRow`,
 Multiple rows can be selected by adding data objects to `selectedRows` property.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight Dart %}
 
     final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
     
@@ -770,7 +770,7 @@ The following example shows how to cancel the selection when select a row which 
 To perform custom actions apart from the functionalities mentioned in the above tables for key press actions of the keyboard, implement your custom actions in the `handleKeyEvent()` override of the custom written selection manager class derived from `RowSelectionManager` and assign it to the `SfDataGrid.selectionManager` property.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight Dart %}
   
     final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
 
@@ -814,7 +814,7 @@ To perform custom actions apart from the functionalities mentioned in the above 
 When pressing the <kbd>Enter</kbd> key, the current cell will be moved to the next focused row of the same column, by default. The following code shows how to change the <kbd>Enter</kbd> key behavior by overriding the `handleKeyEvent()` method in `RowSelectionManager`.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight Dart %}
    
     final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
     

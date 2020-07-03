@@ -53,7 +53,7 @@ Import the following package in your Dart code.
 
 ## Initialize DataGrid
 
-Add the SfDataGrid widget as a child of any widget. Here, `SfDataGrid` widget is initialized as a child of Expanded widget. `SfDataGrid` requires the `source` and `columns` properties. You can find the more details on these properties in further topics.
+Add the SfDataGrid widget as a child of any widget. `SfDataGrid` requires the `source` and `columns` properties. You can find the more details on these properties in further topics.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -243,8 +243,7 @@ SfDataGrid allows you to select one or more rows. The `selectionMode` property c
 
 ![flutter datagrid shows rows with selection](images/getting-started/flutter-datagrid-selection.png)
 
-The information about the rows that are selected can be retrieved using `selectedIndex`, `selectedRow`` and selectedRows` properties in `DataGridController`. You need to initialize the `DataGridController` object to the `controller` property of SfDataGrid.
-` DataGridController` objects are expected to be long-lived, not recreated with each build.
+The information about the rows that are selected can be retrieved using `selectedIndex`, `selectedRow` and `selectedRows` properties in `DataGridController`. You need to initialize the `DataGridController` object to the `controller` property of SfDataGrid.`DataGridController` objects are expected to be long-lived, not recreated with each build.
 
 {% tabs %}
 {% highlight Dart %} 
