@@ -22,4 +22,5 @@ The Syncfusion Flutter DataGrid is used to display and manipulate data in a tabu
 * **Selection** : Selects one or more rows. Keyboard navigation is supported for web platforms.
 * **Styling** : Customizes the appearance of cells and headers. Conditional styling is also supported.
 * **Theme** : Use a dark or light theme.
-
+* **Accessibility** : The DataGrid can easily be accessed by screen readers.
+* **Right to Left (RTL)** : Right-to-left direction support for users working in RTL languages like Hebrew and Arabic.

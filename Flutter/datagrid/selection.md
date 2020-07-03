@@ -44,25 +44,23 @@ Keyboard navigation through the cells and rows is determined based on the `navig
 {% tabs %}
 {% highlight Dart %}
 
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-
-    // NavigationMode cell
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-          body: SfDataGrid(
-              source: _employeeDataSource,
-              columns: [
-                GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-                GridTextColumn(mappingName: 'name', headerText: 'Name'),
-                GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-                GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
-              ],
-              selectionMode: SelectionMode.single
-              navigationMode: GridNavigationMode.cell
-          )
-      );
-    }
+// NavigationMode cell
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+      body: SfDataGrid(
+          source: _employeeDataSource,
+          columns: [
+            GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+            GridTextColumn(mappingName: 'name', headerText: 'Name'),
+            GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+            GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+          ],
+          selectionMode: SelectionMode.single
+          navigationMode: GridNavigationMode.cell
+      )
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -76,23 +74,21 @@ It allows you to select only one row. For example, you have selected a row. Now 
 {% tabs %}
 {% highlight Dart %}
    
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-
-    @override
-    Widget build(BuildContext context){
-      return Scaffold(
-          body: SfDataGrid(
-              source: _employeeDataSource,
-              columns: [
-                GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-                GridTextColumn(mappingName: 'name', headerText: 'Name'),
-                GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-                GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
-              ],
-              selectionMode: SelectionMode.single
-          )
-      );
-    }
+@override
+Widget build(BuildContext context){
+  return Scaffold(
+      body: SfDataGrid(
+          source: _employeeDataSource,
+          columns: [
+            GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+            GridTextColumn(mappingName: 'name', headerText: 'Name'),
+            GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+            GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+          ],
+          selectionMode: SelectionMode.single
+      )
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -108,23 +104,21 @@ While using `multiple`, you can select multiple rows by pressing the key modifie
 {% tabs %}
 {% highlight Dart %}
 
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-
-    @override
-    Widget build(BuildContext context){
-      return Scaffold(
-          body: SfDataGrid(
-              source: _employeeDataSource,
-              columns: [
-                GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-                GridTextColumn(mappingName: 'name', headerText: 'Name'),
-                GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-                GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
-              ],
-              selectionMode: SelectionMode.multiple
-          )
-      );
-    }
+@override
+Widget build(BuildContext context){
+  return Scaffold(
+      body: SfDataGrid(
+          source: _employeeDataSource,
+          columns: [
+            GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+            GridTextColumn(mappingName: 'name', headerText: 'Name'),
+            GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+            GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+          ],
+          selectionMode: SelectionMode.multiple
+      )
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -140,23 +134,21 @@ The selection can be disabled by setting the `selectionMode` property as `none`.
 {% tabs %}
 {% highlight Dart %}
 
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-
-    @override
-    Widget build(BuildContext context){
-      return Scaffold(
-          body: SfDataGrid(
-              source: _employeeDataSource,
-              columns: [
-                GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-                GridTextColumn(mappingName: 'name', headerText: 'Name'),
-                GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-                GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
-              ],
-              selectionMode: SelectionMode.none
-          )
-      );
-    }
+@override
+Widget build(BuildContext context){
+  return Scaffold(
+      body: SfDataGrid(
+          source: _employeeDataSource,
+          columns: [
+            GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+            GridTextColumn(mappingName: 'name', headerText: 'Name'),
+            GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+            GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+          ],
+          selectionMode: SelectionMode.none
+      )
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -172,47 +164,45 @@ You can get the information of selected rows by using `controller` property. Cre
 {% tabs %}
 {% highlight Dart %}
     
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-  
-    final DataGridController _dataGridController = DataGridController();
-  
-    @override
-    Widget build(BuildContext context){
-      return Scaffold(
-          body: Column(
-              children:[
-                FlatButton(
-                    child: Text('Get Selection Information'),
-                    onPressed: () {
-                      //SelectedIndex
-                      var _selectedIndex = this._dataGridController.selectedIndex;
+final DataGridController _dataGridController = DataGridController();
 
-                      //SelectedRow    
-                      var _selectedRow = this._dataGridController.selectedRow;
+@override
+Widget build(BuildContext context){
+  return Scaffold(
+      body: Column(
+          children:[
+            FlatButton(
+                child: Text('Get Selection Information'),
+                onPressed: () {
+                  //SelectedIndex
+                  var _selectedIndex = this._dataGridController.selectedIndex;
 
-                      //SelectedRows
-                      var _selectedRows = this._dataGridController.selectedRows;
+                  //SelectedRow    
+                  var _selectedRow = this._dataGridController.selectedRow;
 
-                      print(_selectedIndex);
-                      print(_selectedRow);
-                      print(_selectedRows);
-                    }),
-                Expanded(
-                    child: SfDataGrid(
-                        source: _employeeDataSource,
-                        columns: [
-                          GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-                          GridTextColumn(mappingName: 'name', headerText: 'Name'),
-                          GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-                          GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
-                        ],
-                        controller: this._dataGridController,
-                        selectionMode: SelectionMode.multiple
-                    ))
-              ]
-          )
-      );
-    }
+                  //SelectedRows
+                  var _selectedRows = this._dataGridController.selectedRows;
+
+                  print(_selectedIndex);
+                  print(_selectedRow);
+                  print(_selectedRows);
+                }),
+            Expanded(
+                child: SfDataGrid(
+                    source: _employeeDataSource,
+                    columns: [
+                      GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+                      GridTextColumn(mappingName: 'name', headerText: 'Name'),
+                      GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+                      GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+                    ],
+                    controller: this._dataGridController,
+                    selectionMode: SelectionMode.multiple
+                ))
+          ]
+      )
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -230,37 +220,35 @@ The following code example shows how to select a row using `selectedIndex`,
 {% tabs %}
 {% highlight Dart %}
   
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-    
-    final DataGridController _dataGridController = DataGridController();
+final DataGridController _dataGridController = DataGridController();
 
-    @override
-    Widget build(BuildContext context){
-      return Scaffold(
-          body: Column(
-              children:[
-                FlatButton(
-                    child: Text('Set Selection'),
-                    onPressed: () {
-                       //SelectedIndex
-                       _dataGridController.selectedIndex = 4;
-                    }),
-                Expanded(
-                    child: SfDataGrid(
-                        source: _employeeDataSource,
-                        columns: [
-                          GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-                          GridTextColumn(mappingName: 'name', headerText: 'Name'),
-                          GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-                          GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
-                        ],
-                        controller: this._dataGridController,
-                        selectionMode: SelectionMode.single
-                    ))
-              ]
-          )
-      );
-    }
+@override
+Widget build(BuildContext context){
+  return Scaffold(
+      body: Column(
+          children:[
+            FlatButton(
+                child: Text('Set Selection'),
+                onPressed: () {
+                    //SelectedIndex
+                    _dataGridController.selectedIndex = 4;
+                }),
+            Expanded(
+                child: SfDataGrid(
+                    source: _employeeDataSource,
+                    columns: [
+                      GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+                      GridTextColumn(mappingName: 'name', headerText: 'Name'),
+                      GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+                      GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+                    ],
+                    controller: this._dataGridController,
+                    selectionMode: SelectionMode.single
+                ))
+          ]
+      )
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -270,37 +258,35 @@ The following code example shows how to select a row using `selectedRow`,
 {% tabs %}
 {% highlight Dart %}
 
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-    
-    final DataGridController _dataGridController = DataGridController();
+final DataGridController _dataGridController = DataGridController();
 
-    @override
-    Widget build(BuildContext context){
-      return Scaffold(
-          body: Column(
-              children:[
-                FlatButton(
-                    child: Text('Set Selection'),
-                    onPressed: () {
-                       //SelectedRow 
-                       _dataGridController.selectedRow = _employees[3];
-                    }),
-                Expanded(
-                    child: SfDataGrid(
-                        source: _employeeDataSource,
-                        columns: [
-                          GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-                          GridTextColumn(mappingName: 'name', headerText: 'Name'),
-                          GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-                          GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
-                        ],
-                        controller: this._dataGridController,
-                        selectionMode: SelectionMode.single
-                    ))
-              ]
-          )
-      );
-    }
+@override
+Widget build(BuildContext context){
+  return Scaffold(
+      body: Column(
+          children:[
+            FlatButton(
+                child: Text('Set Selection'),
+                onPressed: () {
+                    //SelectedRow 
+                    _dataGridController.selectedRow = _employees[3];
+                }),
+            Expanded(
+                child: SfDataGrid(
+                    source: _employeeDataSource,
+                    columns: [
+                      GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+                      GridTextColumn(mappingName: 'name', headerText: 'Name'),
+                      GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+                      GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+                    ],
+                    controller: this._dataGridController,
+                    selectionMode: SelectionMode.single
+                ))
+          ]
+      )
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -310,41 +296,39 @@ Multiple rows can be selected by adding data objects to `selectedRows` property.
 {% tabs %}
 {% highlight Dart %}
 
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-    
-    final DataGridController _dataGridController = DataGridController();
+final DataGridController _dataGridController = DataGridController();
 
-    @override
-    Widget build(BuildContext context){
-      return Scaffold(
-          body: Column(
-              children:[
-                FlatButton(
-                    child: Text('Set Selection'),
-                    onPressed: () {
-                       //SelectedRows 
-                       _dataGridController.selectedRows = [
-                                _employees[1],
-                                _employees[3],
-                                _employees[6],
-                              ];
-                    }),
-                Expanded(
-                    child: SfDataGrid(
-                        source: _employeeDataSource,
-                        columns: [
-                          GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-                          GridTextColumn(mappingName: 'name', headerText: 'Name'),
-                          GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-                          GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
-                        ],
-                        controller: this._dataGridController,
-                        selectionMode: SelectionMode.multiple
-                    ))
-              ]
-          )
-      );
-    }
+@override
+Widget build(BuildContext context){
+  return Scaffold(
+      body: Column(
+          children:[
+            FlatButton(
+                child: Text('Set Selection'),
+                onPressed: () {
+                    //SelectedRows 
+                    _dataGridController.selectedRows = [
+                            _employees[1],
+                            _employees[3],
+                            _employees[6],
+                          ];
+                }),
+            Expanded(
+                child: SfDataGrid(
+                    source: _employeeDataSource,
+                    columns: [
+                      GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+                      GridTextColumn(mappingName: 'name', headerText: 'Name'),
+                      GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+                      GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+                    ],
+                    controller: this._dataGridController,
+                    selectionMode: SelectionMode.multiple
+                ))
+          ]
+      )
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -358,39 +342,37 @@ The current cell information such as row index, column index can be retrieved us
 {% tabs %}
 {% highlight Dart %}
 
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-  
-    final DataGridController _dataGridController = DataGridController();
-  
-    @override
-    Widget build(BuildContext context){
-      return Scaffold(
-          body: Column(
-              children:[
-                FlatButton(
-                    child: Text('Get current cell'),
-                    onPressed: () {
-                      var _currentCell = this._dataGridController.currentCell;
-                      print(_currentCell);
-                    }),
-                Expanded(
-                    child: SfDataGrid(
-                        source: _employeeDataSource,
-                        columns: [
-                          GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-                          GridTextColumn(mappingName: 'name', headerText: 'Name'),
-                          GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-                          GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
-                        ],
-                        controller: this._dataGridController,
-                        selectionMode: SelectionMode.single,
-                        navigationMode: GridNavigationMode.cell
-                    )
+final DataGridController _dataGridController = DataGridController();
+
+@override
+Widget build(BuildContext context){
+  return Scaffold(
+      body: Column(
+          children:[
+            FlatButton(
+                child: Text('Get current cell'),
+                onPressed: () {
+                  var _currentCell = this._dataGridController.currentCell;
+                  print(_currentCell);
+                }),
+            Expanded(
+                child: SfDataGrid(
+                    source: _employeeDataSource,
+                    columns: [
+                      GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+                      GridTextColumn(mappingName: 'name', headerText: 'Name'),
+                      GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+                      GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+                    ],
+                    controller: this._dataGridController,
+                    selectionMode: SelectionMode.single,
+                    navigationMode: GridNavigationMode.cell
                 )
-              ]
-          )
-      );
-    }
+            )
+          ]
+      )
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -403,38 +385,36 @@ The CurrentCell can be moved to a particular cell by using the `moveCurrentCellT
 {% tabs %}
 {% highlight Dart %}
 
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-  
-    final DataGridController _dataGridController = DataGridController();
-  
-    @override
-    Widget build(BuildContext context){
-      return Scaffold(
-          body: Column(
-              children:[
-                FlatButton(
-                    child: Text('Move current cell'),
-                    onPressed: () {
-                      this._dataGridController.moveCurrentCellTo(RowColumnIndex(6,4));
-                    }),
-                Expanded(
-                    child: SfDataGrid(
-                        source: _employeeDataSource,
-                        columns: [
-                          GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-                          GridTextColumn(mappingName: 'name', headerText: 'Name'),
-                          GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-                          GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
-                        ],
-                        controller: this._dataGridController,
-                        selectionMode: SelectionMode.single,
-                        navigationMode: GridNavigationMode.cell
-                    )
+final DataGridController _dataGridController = DataGridController();
+
+@override
+Widget build(BuildContext context){
+  return Scaffold(
+      body: Column(
+          children:[
+            FlatButton(
+                child: Text('Move current cell'),
+                onPressed: () {
+                  this._dataGridController.moveCurrentCellTo(RowColumnIndex(6,4));
+                }),
+            Expanded(
+                child: SfDataGrid(
+                    source: _employeeDataSource,
+                    columns: [
+                      GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+                      GridTextColumn(mappingName: 'name', headerText: 'Name'),
+                      GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+                      GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+                    ],
+                    controller: this._dataGridController,
+                    selectionMode: SelectionMode.single,
+                    navigationMode: GridNavigationMode.cell
                 )
-              ]
-          )
-      );
-    }
+            )
+          ]
+      )
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -448,39 +428,37 @@ The following code example shows how to clear selection when `selectionMode` pro
 {% tabs %}
 {% highlight Dart %}
 
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-  
-    final DataGridController _dataGridController = DataGridController();
-  
-    @override
-    Widget build(BuildContext context){
-      return Scaffold(
-          body: Column(
-              children:[
-                FlatButton(
-                    child: Text('Clear Selection'),
-                    onPressed: () {
-                      this._dataGridController.selectedIndex = -1;
-                      //or
-                      //this._dataGridController.selectedRow = null;
-                    }),
-                Expanded(
-                    child: SfDataGrid(
-                        source: _employeeDataSource,
-                        columns: [
-                          GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-                          GridTextColumn(mappingName: 'name', headerText: 'Name'),
-                          GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-                          GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
-                        ],
-                        controller: this._dataGridController,
-                        selectionMode: SelectionMode.single
-                    )
+final DataGridController _dataGridController = DataGridController();
+
+@override
+Widget build(BuildContext context){
+  return Scaffold(
+      body: Column(
+          children:[
+            FlatButton(
+                child: Text('Clear Selection'),
+                onPressed: () {
+                  this._dataGridController.selectedIndex = -1;
+                  //or
+                  //this._dataGridController.selectedRow = null;
+                }),
+            Expanded(
+                child: SfDataGrid(
+                    source: _employeeDataSource,
+                    columns: [
+                      GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+                      GridTextColumn(mappingName: 'name', headerText: 'Name'),
+                      GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+                      GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+                    ],
+                    controller: this._dataGridController,
+                    selectionMode: SelectionMode.single
                 )
-              ]
-          )
-      );
-    }
+            )
+          ]
+      )
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -490,37 +468,35 @@ The following code example shows how to clear selection when `selectionMode` pro
 {% tabs %}
 {% highlight Dart %}
 
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-  
-    final DataGridController _dataGridController = DataGridController();
-  
-    @override
-    Widget build(BuildContext context){
-      return Scaffold(
-          body: Column(
-              children:[
-                FlatButton(
-                    child: Text('Clear Selection'),
-                    onPressed: () {
-                      this._dataGridController.selectedRows = [];
-                    }),
-                Expanded(
-                    child: SfDataGrid(
-                        source: _employeeDataSource,
-                        columns: [
-                          GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-                          GridTextColumn(mappingName: 'name', headerText: 'Name'),
-                          GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-                          GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
-                        ],
-                        controller: this._dataGridController,
-                        selectionMode: SelectionMode.multiple
-                    )
+final DataGridController _dataGridController = DataGridController();
+
+@override
+Widget build(BuildContext context){
+  return Scaffold(
+      body: Column(
+          children:[
+            FlatButton(
+                child: Text('Clear Selection'),
+                onPressed: () {
+                  this._dataGridController.selectedRows = [];
+                }),
+            Expanded(
+                child: SfDataGrid(
+                    source: _employeeDataSource,
+                    columns: [
+                      GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+                      GridTextColumn(mappingName: 'name', headerText: 'Name'),
+                      GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+                      GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+                    ],
+                    controller: this._dataGridController,
+                    selectionMode: SelectionMode.multiple
                 )
-              ]
-          )
-      );
-    }
+            )
+          ]
+      )
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -687,34 +663,32 @@ The following example shows how to cancel the selection when select a row which 
 {% tabs %}
 {% highlight Dart %}
 
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-
-    @override
-    Widget build(BuildContext context){
-      return Scaffold(
-          body: SfDataGrid(
-            source: _employeeDataSource,
-            columns: [
-              GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-              GridTextColumn(mappingName: 'name', headerText: 'Name'),
-              GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-              GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
-            ],
-            selectionMode: SelectionMode.single,
-            onSelectionChanging: (List<Object> addedRows, List<Object> removedRows){
-                
-                if(addedRows.isNotEmpty && (addedRows.last as Employee).designation == 'Manager'){
-                  return false;
-                }
-                
-                return true;
-            },
-            onSelectionChanged: (List<Object> addedRows, List<Object> removedRows){
-              // apply your logics
-            },
-          )
-      );
-    }
+@override
+Widget build(BuildContext context){
+  return Scaffold(
+      body: SfDataGrid(
+        source: _employeeDataSource,
+        columns: [
+          GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+          GridTextColumn(mappingName: 'name', headerText: 'Name'),
+          GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+          GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+        ],
+        selectionMode: SelectionMode.single,
+        onSelectionChanging: (List<Object> addedRows, List<Object> removedRows){
+            
+            if(addedRows.isNotEmpty && (addedRows.last as Employee).designation == 'Manager'){
+              return false;
+            }
+            
+            return true;
+        },
+        onSelectionChanged: (List<Object> addedRows, List<Object> removedRows){
+          // apply your logics
+        },
+      )
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -730,37 +704,35 @@ The following example shows how to cancel the selection when select a row which 
 {% tabs %}
 {% highlight Dart %}
 
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+      body: SfDataGrid(
+        source: _employeeDataSource,
+        columns: [
+          GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+          GridTextColumn(mappingName: 'name', headerText: 'Name'),
+          GridTextColumn(
+              mappingName: 'designation', headerText: 'Designation'),
+          GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+        ],
+        selectionMode: SelectionMode.single,
+        navigationMode: GridNavigationMode.cell,
+        onCurrentCellActivating: (RowColumnIndex currentRowColumnIndex,
+            RowColumnIndex previousRowColumnIndex) {
+          if (currentRowColumnIndex == RowColumnIndex(2, 3)) {
+            return false;
+          }
 
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-          body: SfDataGrid(
-            source: _employeeDataSource,
-            columns: [
-              GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-              GridTextColumn(mappingName: 'name', headerText: 'Name'),
-              GridTextColumn(
-                  mappingName: 'designation', headerText: 'Designation'),
-              GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
-            ],
-            selectionMode: SelectionMode.single,
-            navigationMode: GridNavigationMode.cell,
-            onCurrentCellActivating: (RowColumnIndex currentRowColumnIndex,
-                RowColumnIndex previousRowColumnIndex) {
-              if (currentRowColumnIndex == RowColumnIndex(2, 3)) {
-                return false;
-              }
-
-              return true;
-            },
-            onCurrentCellActivated: (RowColumnIndex currentRowColumnIndex,
-                RowColumnIndex previousRowColumnIndex) {
-              // apply your logics
-            },
-          )
-      );
-    }
+          return true;
+        },
+        onCurrentCellActivated: (RowColumnIndex currentRowColumnIndex,
+            RowColumnIndex previousRowColumnIndex) {
+          // apply your logics
+        },
+      )
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -771,42 +743,40 @@ To perform custom actions apart from the functionalities mentioned in the above 
 
 {% tabs %}
 {% highlight Dart %}
-  
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-    
-    final CustomSelectionManager _customSelectionManager = CustomSelectionManager();
+      
+final CustomSelectionManager _customSelectionManager = CustomSelectionManager();
+
+@override
+Widget build(BuildContext context){
+  return Scaffold(
+      body: SfDataGrid(
+        source: _employeeDataSource,
+        columns: [
+          GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+          GridTextColumn(mappingName: 'name', headerText: 'Name'),
+          GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+          GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+        ],
+        selectionMode: SelectionMode.multiple,
+        selectionManager: _customSelectionManager,
+      )
+  );
+}
+
+class CustomSelectionManager extends RowSelectionManager{
 
     @override
-    Widget build(BuildContext context){
-      return Scaffold(
-          body: SfDataGrid(
-            source: _employeeDataSource,
-            columns: [
-              GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-              GridTextColumn(mappingName: 'name', headerText: 'Name'),
-              GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-              GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
-            ],
-            selectionMode: SelectionMode.multiple,
-            selectionManager: _customSelectionManager,
-          )
-      );
-    }
-
-    class CustomSelectionManager extends RowSelectionManager{
-
-        @override
-        void handleKeyEvent(RawKeyEvent keyEvent) {
-            if(keyEvent.logicalKey == LogicalKeyboardKey.keyA){
-                if(keyEvent.isControlPressed){
-                    //apply your logic
-                    return;
-                }
+    void handleKeyEvent(RawKeyEvent keyEvent) {
+        if(keyEvent.logicalKey == LogicalKeyboardKey.keyA){
+            if(keyEvent.isControlPressed){
+                //apply your logic
+                return;
             }
-
-            super.handleKeyEvent(keyEvent);
         }
+
+        super.handleKeyEvent(keyEvent);
     }
+}
 
 {% endhighlight %}
 {% endtabs %}   
@@ -818,40 +788,38 @@ When pressing the <kbd>Enter</kbd> key, the current cell will be moved to the ne
 {% tabs %}
 {% highlight Dart %}
    
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
+final CustomSelectionManager _customSelectionManager = CustomSelectionManager();
 
-    final CustomSelectionManager _customSelectionManager = CustomSelectionManager();
-    
+@override
+Widget build(BuildContext context){
+  return MaterialApp(
+      home: Scaffold(
+          body: SfDataGrid(
+            source: _employeeDataSource,
+            columns: [
+              GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+              GridTextColumn(mappingName: 'name', headerText: 'Name'),
+              GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+              GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+            ],
+            selectionMode: SelectionMode.multiple,
+            navigationMode: GridNavigationMode.cell,
+            selectionManager: _customSelectionManager,
+          ))
+  );
+}
+
+class CustomSelectionManager extends RowSelectionManager{
     @override
-    Widget build(BuildContext context){
-      return MaterialApp(
-          home: Scaffold(
-              body: SfDataGrid(
-                source: _employeeDataSource,
-                columns: [
-                  GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-                  GridTextColumn(mappingName: 'name', headerText: 'Name'),
-                  GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-                  GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
-                ],
-                selectionMode: SelectionMode.multiple,
-                navigationMode: GridNavigationMode.cell,
-                selectionManager: _customSelectionManager,
-              ))
-      );
-    }
-
-    class CustomSelectionManager extends RowSelectionManager{
-        @override
-        void handleKeyEvent(RawKeyEvent keyEvent) {
-            if(keyEvent.logicalKey == LogicalKeyboardKey.enter){
-                //apply your logic
-                return;
-            }
-
-            super.handleKeyEvent(keyEvent);
+    void handleKeyEvent(RawKeyEvent keyEvent) {
+        if(keyEvent.logicalKey == LogicalKeyboardKey.enter){
+            //apply your logic
+            return;
         }
+
+        super.handleKeyEvent(keyEvent);
     }
+}
 
 {% endhighlight %}
 {% endtabs %}   
@@ -866,33 +834,31 @@ The selection background and foreground color can be changed by `selectionStyle`
 {% tabs %}
 {% highlight Dart %}
 
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-          body: SfDataGridTheme(
-              data: SfDataGridThemeData(
-                  selectionStyle: DataGridCellStyle(
-                      backgroundColor: Colors.red,
-                      textStyle: TextStyle(
-                        fontFamily: 'Raleway',
-                        fontWeight: FontWeight.w300,
-                        color: Colors.white,
-                      )
-                  )),
-              child: SfDataGrid(
-                source: _employeeDataSource,
-                columns: [
-                  GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-                  GridTextColumn(mappingName: 'name', headerText: 'Name'),
-                  GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-                  GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
-                ],
-                selectionMode: SelectionMode.multiple,
-              ))
-      );
-    }
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+      body: SfDataGridTheme(
+          data: SfDataGridThemeData(
+              selectionStyle: DataGridCellStyle(
+                  backgroundColor: Colors.red,
+                  textStyle: TextStyle(
+                    fontFamily: 'Raleway',
+                    fontWeight: FontWeight.w300,
+                    color: Colors.white,
+                  )
+              )),
+          child: SfDataGrid(
+            source: _employeeDataSource,
+            columns: [
+              GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+              GridTextColumn(mappingName: 'name', headerText: 'Name'),
+              GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+              GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+            ],
+            selectionMode: SelectionMode.multiple,
+          ))
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -906,31 +872,29 @@ The current cell border's color and thickness can be changed by `currentCellStyl
 {% tabs %}
 {% highlight Dart %}
 
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-
-    @override
-    Widget build(BuildContext context){
-      return Scaffold(
-          body: SfDataGridTheme(
-              data: SfDataGridThemeData(
-                  currentCellStyle: DataGridCurrentCellStyle(
-                      borderWidth: 2,
-                      borderColor: Colors.pinkAccent
-                  )
-              ),
-              child: SfDataGrid(
-                source: _employeeDataSource,
-                columns: [
-                  GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-                  GridTextColumn(mappingName: 'name', headerText: 'Name'),
-                  GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-                  GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
-                ],
-                selectionMode: SelectionMode.multiple,
-                navigationMode:  GridNavigationMode.cell,
-              ))
-      );
-    }
+@override
+Widget build(BuildContext context){
+  return Scaffold(
+      body: SfDataGridTheme(
+          data: SfDataGridThemeData(
+              currentCellStyle: DataGridCurrentCellStyle(
+                  borderWidth: 2,
+                  borderColor: Colors.pinkAccent
+              )
+          ),
+          child: SfDataGrid(
+            source: _employeeDataSource,
+            columns: [
+              GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+              GridTextColumn(mappingName: 'name', headerText: 'Name'),
+              GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+              GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+            ],
+            selectionMode: SelectionMode.multiple,
+            navigationMode:  GridNavigationMode.cell,
+          ))
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
