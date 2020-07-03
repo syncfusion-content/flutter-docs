@@ -157,6 +157,15 @@ class Model {
 {% endhighlight %}
 {% endtabs %}
 
+N>
+* Refer the `MapShapeLayerDelegate.primaryValueMapper`, for mapping the data of the data source collection with the respective `MapShapeLayerDelegate.shapeDataField` in .json file.
+* Refer the `MapShapeLayerDelegate.bubbleSizeMapper`, for customizing the bubble size.
+* Refer the `MapShapeLayerDelegate.bubbleColorValueMapper`, for customizing the bubble colors.
+* Refer the `MapShapeLayerDelegate.dataLabelMapper`, for customizing the data label text.
+* Refer the `MapShapeLayerDelegate.shapeTooltipTextMapper`, for customizing the shape tooltip text.
+* Refer the `MapShapeLayerDelegate.bubbleTooltipTextMapper`, for customizing the bubble tooltip text.
+* Refer the `MapShapeLayerDelegate.shapeColorValueMapper`, for customizing the bubble colors.
+
 ## Add maps elements
 
 Add the basic maps elements such as title, data labels, legend, and tooltip as shown in the below code snippet.

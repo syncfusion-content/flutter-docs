@@ -156,7 +156,6 @@ Widget build(BuildContext context) {
                   showDataLabels: true,
                   dataLabelSettings: MapDataLabelSettings(
                     overflowMode: MapLabelOverflowMode.trim,
-                    textStyle: TextStyle(fontStyle: FontStyle.italic, color: Colors.black),
                   ),
                 ),
               ],
@@ -178,3 +177,149 @@ class Model {
 {% endtabs %}
 
 ![Data labels trim support](images/data-labels/data-labels-overflow-mode.png)
+
+## Appearance customization
+
+You can customize the data labels using the `MapDataLabelSettings.textStyle` property.
+
+{% tabs %}
+{% highlight Dart %}
+
+List<Model> data;
+
+@override
+void initState() {
+    data = <Model>[
+      Model('New South Wales', 'New South Wales'),
+      Model('Queensland', 'Queensland'),
+      Model('Northern Territory', 'Northern sTerritory'),
+      Model('Victoria', 'Victoria'),
+      Model('South Australia', 'South Australia'),
+      Model('Western Australia', 'Western Australia'),
+      Model('Tasmania', 'Tasmania'),
+    ];
+    super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Container(
+          height: 350,
+          child: Padding(
+            padding: EdgeInsets.only(left: 15, right: 15),
+            child: SfMaps(
+              layers: [
+                MapShapeLayer(
+                  delegate: MapShapeLayerDelegate(
+                    shapeFile: 'assets/australia.json',
+                    shapeDataField: 'STATE_NAME',
+                    dataCount: data.length,
+                    primaryValueMapper: (int index) => data[index].state,
+                    dataLabelMapper: (int index) => data[index].dataLabel,
+                  ),
+                  showDataLabels: true,
+                  dataLabelSettings: MapDataLabelSettings(
+                    textStyle: const TextStyle(
+                        color: Colors.red,
+                        fontSize: 12,
+                        fontWeight: FontWeight.bold,
+                        fontStyle: FontStyle.italic,
+                        fontFamily: 'Times'
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+   );
+}
+
+class Model {
+  Model(this.state, this.dataLabel);
+
+  String state;
+  String dataLabel;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+<b>Using SfMapsTheme</b>
+
+You can also customize the data labels using the `SfMapsThemeData.dataLabelTextStyle` property in `SfMapsTheme`.
+
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfMapsTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsTheme-class.html).
+
+{% tabs %}
+{% highlight Dart %}
+
+List<Model> data;
+
+@override
+void initState() {
+    data = <Model>[
+      Model('New South Wales', 'New South Wales'),
+      Model('Queensland', 'Queensland'),
+      Model('Northern Territory', 'Northern sTerritory'),
+      Model('Victoria', 'Victoria'),
+      Model('South Australia', 'South Australia'),
+      Model('Western Australia', 'Western Australia'),
+      Model('Tasmania', 'Tasmania'),
+    ];
+    super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Container(
+          height: 350,
+          child: Padding(
+            padding: EdgeInsets.only(left: 15, right: 15),
+            child: SfMapsTheme(
+              data: SfMapsThemeData(
+                dataLabelTextStyle: TextStyle(
+                    color: Colors.red,
+                    fontSize: 12,
+                    fontWeight: FontWeight.bold,
+                    fontStyle: FontStyle.italic,
+                    fontFamily: 'Times'
+                ),
+              ),
+              child: SfMaps(
+                layers: [
+                  MapShapeLayer(
+                    delegate: MapShapeLayerDelegate(
+                      shapeFile: 'assets/australia.json',
+                      shapeDataField: 'STATE_NAME',
+                      dataCount: data.length,
+                      primaryValueMapper: (int index) => data[index].state,
+                      dataLabelMapper: (int index) => data[index].dataLabel,
+                    ),
+                    showDataLabels: true,
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+   );
+}
+
+class Model {
+   Model(this.state, this.dataLabel);
+
+   String state;
+   String dataLabel;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Data labels customization](images/data-labels/data-labels-appearance-customization.png)

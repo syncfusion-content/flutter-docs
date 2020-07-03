@@ -45,6 +45,9 @@ Widget build(BuildContext context) {
 
 ![Maps shape tooltip support](images/tooltip/default_shape_tooltip.png)
 
+N>
+* Refer the `MapTooltipSettings`, for customizing the tooltip.
+
 ## Customizing the shape tooltip text
 
 You can customize the shape tooltip text with the `shapeTooltipTextMapper`. The `shapeTooltipTextMapper` will be called with the corresponding index every time when you tap or click on a shape. You can change the format or the entire text and return it from this callback.
@@ -174,14 +177,17 @@ class Model {
 
 ![Maps bubble tooltip support](images/tooltip/default_bubble_tooltip.png)
 
+N>
+* Refer the `MapTooltipSettings`, for customizing the tooltip.
+
 ## Appearance customization
 
 You can customize the below appearance of the tooltip.
 
-* **Background color** - Change the background color of the tooltip in the maps using the `MapTooltipSettings.color`.
-* **Stroke color** - Change the stroke color of the tooltip in the maps using the `MapTooltipSettings.strokeColor`.
-* **Stroke width** - Change the stroke width of the tooltip in the maps using the `MapTooltipSettings.strokeWidth`.
-* **Text style** - Change the appearance of the tooltip text in the maps using the `MapTooltipSettings.textStyle`.
+* **Background color** - Change the background color of the tooltip in the maps using the `MapTooltipSettings.color` property.
+* **Stroke color** - Change the stroke color of the tooltip in the maps using the `MapTooltipSettings.strokeColor` property.
+* **Stroke width** - Change the stroke width of the tooltip in the maps using the `MapTooltipSettings.strokeWidth` property.
+* **Text style** - Change the appearance of the tooltip text in the maps using the `MapTooltipSettings.textStyle` property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -261,12 +267,12 @@ class Model {
 
 <b>Using SfMapsTheme</b>
 
-You can customize the below appearance of the tooltip.
+You can customize the below appearance of the tooltip using `SfMapsTheme`.
 
-* **Background color** - Change the background color of the tooltip in the maps using the `tooltipColor` property of `SfMapsThemeData`.
-* **Stroke color** - Change the stroke color of the tooltip in the maps using the `tooltipStrokeColor` property of `SfMapsThemeData`.
-* **Stroke width** - Change the stroke width of the tooltip in the maps using the `tooltipStrokeWidth` property of `SfMapsThemeData`.
-* **Text style** - Change the appearance of the tooltip text in the maps using the `tooltipTextStyle` property of `SfMapsThemeData`.
+* **Background color** - Change the background color of the tooltip in the maps using the `SfMapsThemeData.tooltipColor` property.
+* **Stroke color** - Change the stroke color of the tooltip in the maps using the `SfMapsThemeData.tooltipStrokeColor` property.
+* **Stroke width** - Change the stroke width of the tooltip in the maps using the `SfMapsThemeData.tooltipStrokeWidth` property.
+* **Text style** - Change the appearance of the tooltip text in the maps using the `SfMapsThemeData.tooltipTextStyle` property.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfMapsTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsTheme-class.html).
 
@@ -349,3 +355,7 @@ class Model {
 {% endtabs %}
 
 ![Maps tooltip Appearance customization](images/tooltip/tooltip_textStyle.png)
+
+N>
+* Refer the `MapShapeLayer.enableBubbleTooltip`, for enabling tooltip for the bubbles.
+* Refer the `MapShapeLayer.enableShapeTooltip`, for enabling tooltip for the shapes.
