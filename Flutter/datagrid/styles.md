@@ -18,8 +18,6 @@ The appearance of cell can be customized by using the `SfDataGridThemeData.cellS
 {% tabs %}
 {% highlight Dart %} 
 
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-
     @override
     Widget build(BuildContext context) {
       return Scaffold(
@@ -53,8 +51,6 @@ The appearance of cell can be customized by using the `SfDataGridThemeData.cellS
 
 {% tabs %}
 {% highlight Dart %} 
-
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
 
     @override
     Widget build(BuildContext context) {
@@ -90,8 +86,6 @@ Color and thickness of the grid lines can be changed by using the `SfDataGridThe
 
 {% tabs %}
 {% highlight Dart %} 
-
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
 
     @override
       Widget build(BuildContext context) {
@@ -131,8 +125,6 @@ The following code describes how to show vertical and horizontal grid lines for 
 
 {% tabs %}
 {% highlight Dart %} 
-
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
 
     @override
     Widget build(BuildContext context) {

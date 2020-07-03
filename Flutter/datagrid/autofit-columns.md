@@ -28,24 +28,22 @@ The following example shows how to set the width equally for column based on the
 {% tabs %}
 {% highlight Dart %} 
 
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-  
     @override
     Widget build(BuildContext context) {
       return Scaffold(
         body: SfDataGrid(
           source: _employeeDataSource,
-          columnWidthMode: ColumnWidthMode.fill, 
+          columnWidthMode: ColumnWidthMode.fill,
           columns: [
-                GridNumericColumn(mappingName: 'id', headerText:'ID'),
-                GridTextColumn(mappingName: 'name', headerText: 'Name'),
-                GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-                GridTextColumn(mappingName: 'city', headerText: 'City'),
-                GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
-            ],                      
-         ),
+            GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+            GridTextColumn(mappingName: 'name', headerText: 'Name'),
+            GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+            GridTextColumn(mappingName: 'city', headerText: 'City'),
+            GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+          ],
+        ),
       );
-     }
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -62,23 +60,21 @@ While setting `SfDataGrid.columnWidthMode` as `lastColumnFill` remaining width i
 {% tabs %}
 {% highlight Dart %} 
 
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-  
     @override
     Widget build(BuildContext context) {
       return Scaffold(
         body: SfDataGrid(
           source: _employeeDataSource,
-          columnWidthMode: ColumnWidthMode.lastColumnFill, 
+          columnWidthMode: ColumnWidthMode.lastColumnFill,
           columns: [
-                GridNumericColumn(mappingName: 'id', headerText:'ID'),
-                GridTextColumn(mappingName: 'name', headerText: 'Name'),
-                GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
-                GridTextColumn(mappingName: 'designation',  headerText'Designation')                
-            ],                      
-          ),
-       );
-     }
+            GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+            GridTextColumn(mappingName: 'name', headerText: 'Name'),
+            GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+            GridTextColumn(mappingName: 'designation', headerText: 'Designation')
+          ],
+        ),
+      );
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -89,25 +85,23 @@ The below example shows Name column is set as `lastColumnFill` mode.
 
 {% tabs %}
 {% highlight Dart %} 
-
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-  
+ 
     @override
     Widget build(BuildContext context) {
       return Scaffold(
         body: SfDataGrid(
           source: _employeeDataSource,
-          columnWidthMode: ColumnWidthMode.auto, 
+          columnWidthMode: ColumnWidthMode.auto,
           columns: [
-                GridNumericColumn(mappingName: 'id', headerText:'ID'),
-                GridTextColumn(mappingName: 'name', headerText: 'Name')
-                ..columnWidthMode = ColumnWidthMode.lastColumnFill,
-                GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-                GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
-            ],                      
-         ),
+            GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+            GridTextColumn(mappingName: 'name', headerText: 'Name')
+              ..columnWidthMode = ColumnWidthMode.lastColumnFill,
+            GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+            GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+          ],
+        ),
       );
-     }
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -122,24 +116,22 @@ The default is `ColumnWidthCalculationMode.textSize` which calculates size for a
 {% tabs %}
 {% highlight Dart %} 
 
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-  
     @override
     Widget build(BuildContext context) {
       return Scaffold(
         body: SfDataGrid(
           source: _employeeDataSource,
           columnWidthMode: ColumnWidthMode.auto,
-          columnWidthCalculationMode: ColumWidthCalculationMode.textLength, 
+          columnWidthCalculationMode: ColumnWidthCalculationMode.textLength,
           columns: [
-                GridNumericColumn(mappingName: 'id', headerText:'ID'),
-                GridTextColumn(mappingName: 'name', headerText: 'Name'),
-                GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-                GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
-            ],                      
-         ),
+            GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+            GridTextColumn(mappingName: 'name', headerText: 'Name'),
+            GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+            GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+          ],
+        ),
       );
-     }
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -151,25 +143,23 @@ The default is `ColumnWidthCalculationRange.visibleRows` which considers visible
 
 {% tabs %}
 {% highlight Dart %} 
-
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-  
+ 
     @override
     Widget build(BuildContext context) {
       return Scaffold(
-         body: SfDataGrid(
-           source: _employeeDataSource,
-           columnWidthMode: ColumnWidthMode.auto,
-           columnWidthCalculationRange: ColumnWidthCalculationRange.allRows, 
-           columns: [
-                 GridNumericColumn(mappingName: 'id', headerText:'ID'),
-                 GridTextColumn(mappingName: 'name', headerText: 'Name'),
-                 GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-                 GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
-             ],                      
-          ),
-       );
-     }
+        body: SfDataGrid(
+          source: _employeeDataSource,
+          columnWidthMode: ColumnWidthMode.auto,
+          columnWidthCalculationRange: ColumnWidthCalculationRange.allRows,
+          columns: [
+            GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+            GridTextColumn(mappingName: 'name', headerText: 'Name'),
+            GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+            GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+          ],
+        ),
+      );
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -202,7 +192,6 @@ The column auto sizing operations of the `SfDataGrid` is processed in the `Colum
       }
     }
 
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
     final CustomGridColumnSizer _customGridColumnSizer = CustomGridColumnSizer();
   
     @override
@@ -213,14 +202,14 @@ The column auto sizing operations of the `SfDataGrid` is processed in the `Colum
           columnSizer: _customGridColumnSizer,
           columnWidthMode: ColumnWidthMode.auto,
           columns: [
-                GridNumericColumn(mappingName: 'id', headerText:'ID'),
-                GridTextColumn(mappingName: 'name', headerText: 'Name'),
-                GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-                GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
-            ],                      
-         ),
+            GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+            GridTextColumn(mappingName: 'name', headerText: 'Name'),
+            GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+            GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+          ],
+        ),
       );
-     }
+    }
 
 {% endhighlight %}
 {% endtabs %}

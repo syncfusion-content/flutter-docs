@@ -24,8 +24,6 @@ Callback requires `QueryCellStyleArgs` as parameter which provides all the requi
 {% tabs %}
 {% highlight Dart %} 
 
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-
     @override
     Widget build(BuildContext context) {
       return Scaffold(
@@ -67,8 +65,6 @@ The appearance of the alternating cells in a column can be customized conditiona
 {% tabs %}
 {% highlight Dart %} 
 
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-
     @override
     Widget build(BuildContext context) {
       return Scaffold(
@@ -108,34 +104,32 @@ Callback requires `QueryRowStyleArgs` as parameter which provides all the requir
 
 {% tabs %}
 {% highlight Dart %} 
-
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
       
     @override
     Widget build(BuildContext context) {
       return Scaffold(
         body: SfDataGrid(
-          source: _employeeDataSource,
-          columns: <GridColumn>[
-             GridNumericColumn(mappingName: 'id')..headerText = 'Order ID',
-             GridTextColumn(mappingName: 'name')..headerText = 'Name',
-             GridTextColumn(mappingName: 'designation')
-               ..headerText = 'Designation',
-             GridNumericColumn(mappingName: 'salary')..headerText = 'Salary',                
-          ],
-          onQueryRowStyle: (QueryRowStyleArgs args) {
-          Employee employee = _employeeCollection[args.rowIndex];
-          if (employee.salary >= 10000 && employee.salary < 15000) {
-            return DataGridCellStyle(
-                textStyle: TextStyle(color: Colors.white)
-                backgroundColor: Colors.blue[300]);
-          } else if (employee.salary <= 15000) {
-            return DataGridCellStyle(
-                textStyle: TextStyle(color: Colors.white)
-                backgroundColor: Colors.orange[300]);
-          }
-          return null;
-        }),
+            source: _employeeDataSource,
+            columns: <GridColumn>[
+              GridNumericColumn(mappingName: 'id')..headerText = 'Order ID',
+              GridTextColumn(mappingName: 'name')..headerText = 'Name',
+              GridTextColumn(mappingName: 'designation')
+                ..headerText = 'Designation',
+              GridNumericColumn(mappingName: 'salary')..headerText = 'Salary',
+            ],
+            onQueryRowStyle: (QueryRowStyleArgs args) {
+              Employee employee = _employeeCollection[args.rowIndex];
+              if (employee.salary >= 10000 && employee.salary < 15000) {
+                return DataGridCellStyle(
+                    textStyle: TextStyle(color: Colors.white),
+                    backgroundColor: Colors.blue[300]);
+              } else if (employee.salary <= 15000) {
+                return DataGridCellStyle(
+                    textStyle: TextStyle(color: Colors.white),
+                    backgroundColor: Colors.orange[300]);
+              }
+              return null;
+            }),
       );
     }
     
@@ -150,8 +144,6 @@ The appearance of the alternating rows in `SfDataGrid` can be customized by usin
 
 {% tabs %}
 {% highlight Dart %} 
-    
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
 
     @override
     Widget build(BuildContext context) {
@@ -167,8 +159,7 @@ The appearance of the alternating rows in `SfDataGrid` can be customized by usin
             ],
             onQueryRowStyle: (QueryRowStyleArgs args) {
               if (args.rowIndex % 2 == 0) {
-                return DataGridCellStyle(
-                    backgroundColor: Colors.lightGreen[300]);
+                return DataGridCellStyle(backgroundColor: Colors.lightGreen[300]);
               }
               return null;
             }),

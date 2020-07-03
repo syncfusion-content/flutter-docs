@@ -30,9 +30,7 @@ Column can be bound to a property in data object using `GridColumn.mappingName` 
 
 {% tabs %}
 {% highlight Dart %} 
-
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-  
+ 
     @override
     Widget build(BuildContext context) {
       return Scaffold(
@@ -57,9 +55,7 @@ Column can be bound to a property in data object using `GridColumn.mappingName` 
 
 {% tabs %}
 {% highlight Dart %} 
-
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-  
+ 
     @override
     Widget build(BuildContext context) {
       return Scaffold(
@@ -88,9 +84,7 @@ Column can be bound to a property in data object using `GridColumn.mappingName` 
 
 {% tabs %}
 {% highlight Dart %} 
-
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-  
+ 
     @override
     Widget build(BuildContext context) {
       return Scaffold(
@@ -119,9 +113,7 @@ Column can be bound to a property in data object using `GridColumn.mappingName` 
 
 {% tabs %}
 {% highlight Dart %} 
-
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-  
+ 
     @override
     Widget build(BuildContext context) {
       return Scaffold(
@@ -147,9 +139,7 @@ Column can be bound to a property in data object using `GridColumn.mappingName` 
 
 {% tabs %}
 {% highlight Dart %} 
-
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-  
+ 
     @override
     Widget build(BuildContext context) {
       return Scaffold(
@@ -176,9 +166,7 @@ When the text for the record cells exceeds the content area, wrap the record cel
 
 {% tabs %}
 {% highlight Dart %} 
-
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-  
+ 
     @override
     Widget build(BuildContext context) {
       return Scaffold(
@@ -206,8 +194,6 @@ When the text for the record cells exceeds the content area, wrap the record cel
 {% tabs %}
 {% highlight Dart %} 
 
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-  
     @override
     Widget build(BuildContext context) {
       return Scaffold(
@@ -238,9 +224,7 @@ GridColumn provides support to customize the style of column using `GridColumn.c
 
 {% tabs %}
 {% highlight Dart %} 
-
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-  
+ 
     @override
     Widget build(BuildContext context) {
       return Scaffold(
@@ -272,9 +256,7 @@ GridColumn provides support to customize the style of column using `GridColumn.c
 
 {% tabs %}
 {% highlight Dart %} 
-
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-  
+ 
     @override
     Widget build(BuildContext context) {
       return Scaffold(
@@ -307,9 +289,7 @@ GridColumn provides support to customize the style of column using `GridColumn.c
 
 {% tabs %}
 {% highlight Dart %} 
-
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-  
+ 
     @override
     Widget build(BuildContext context) {
       return Scaffold(
@@ -335,8 +315,6 @@ GridColumn provides support to customize the style of column using `GridColumn.c
 {% tabs %}
 {% highlight Dart %} 
 
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-  
     @override
     Widget build(BuildContext context) {
       return Scaffold(
@@ -361,9 +339,7 @@ The numeric value can be formatted by using `GridNumericColumn.numberFormat` pro
 
 {% tabs %}
 {% highlight Dart %} 
-
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-  
+ 
     @override
     Widget build(BuildContext context) {
       return Scaffold(
@@ -374,7 +350,8 @@ The numeric value can be formatted by using `GridNumericColumn.numberFormat` pro
             GridTextColumn(mappingName: 'name', headerText: 'Name'),
             GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
             GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
-              ..numberFormat = NumberFormat.currency(locale: 'en_US', symbol: '\$')
+              ..numberFormat = 
+                NumberFormat.currency(locale: 'en_US', symbol: '\$')
           ],
         ),
       );
@@ -391,9 +368,7 @@ The numeric value can be formatted by using `GridNumericColumn.numberFormat` pro
 
 {% tabs %}
 {% highlight Dart %} 
-
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-  
+ 
     @override
     Widget build(BuildContext context) {
       return Scaffold(
@@ -419,9 +394,7 @@ The datetime value can be formatted by using `GridDateTimeColumn.dateFormat` pro
 
 {% tabs %}
 {% highlight Dart %} 
-
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-  
+ 
     @override
     Widget build(BuildContext context) {
       return Scaffold(
@@ -453,8 +426,6 @@ In the below example, image is returned in `cellBuilder` callback. Image is alre
 {% tabs %}
 {% highlight Dart %} 
 
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-  
     @override
     Widget build(BuildContext context) {
       return Scaffold(
