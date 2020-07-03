@@ -49,43 +49,11 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Loading builder](images/basic-features/loading-builder.gif)
+![Loading builder](images/shape-colors/loading-builder.gif)
 
 ## Shape color
 
-You can apply color all the shapes using the `MapShapeLayer.color` property.
-
-{% tabs %}
-{% highlight Dart %}
-
-@override
-Widget build(BuildContext context) {
-   return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.all(15),
-        child: SfMaps(
-          layers: <MapLayer>[
-            MapShapeLayer(
-              color: Colors.blue[400],
-              delegate: MapShapeLayerDelegate(
-                shapeFile: 'assets/world_map.json',
-                shapeDataField: 'continent',
-              ),
-            ),
-          ],
-        ),
-      ),
-   );
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-![Shape color](images/basic-features/shape-color.png)
-
-## Stroke color
-
-You can apply stroke color to the shapes using the `MapShapeLayer.strokeColor` property.
+You can apply color, stroke color and stroke width to the shapes using the `MapShapeLayer.color`, `MapShapeLayer.strokeColor` and `MapShapeLayer.strokeWidth` properties respectively.
 
 {% tabs %}
 {% highlight Dart %}
@@ -115,7 +83,49 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Shapes stroke color](images/basic-features/shapes-stroke-color.png)
+<b>Using SfMapsTheme</b>
+
+You can customize the below appearance of the shape.
+
+* **Color** - Change the color of the shapes using the `SfMapsThemeData.layerColor` property.
+* **Stroke color** - Change the stroke color of the shapes using the `SfMapsThemeData.layerStrokeColor` property.
+* **Stroke width** - Change the stroke width of the shapes using the `SfMapsThemeData.layerStrokeWidth` property.
+
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfMapsTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsTheme-class.html).
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+   return Scaffold(
+      body: Padding(
+        padding: EdgeInsets.all(15),
+        child: SfMapsTheme(
+          data: SfMapsThemeData(
+            layerColor: Colors.blue[100],
+            layerStrokeColor: Colors.blue,
+            layerStrokeWidth: 2
+          ),
+          child: SfMaps(
+            layers: <MapLayer>[
+              MapShapeLayer(
+                delegate: MapShapeLayerDelegate(
+                  shapeFile: 'assets/world_map.json',
+                  shapeDataField: 'continent',
+                ),
+              ),
+            ],
+          ),
+        )
+      ),
+   );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Shapes color](images/shape-colors/shapes-stroke-color.png)
 
 ## Palette
 
@@ -156,7 +166,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Shapes palette](images/basic-features/shapes-palette.png)
+![Shapes palette](images/shape-colors/shapes-palette.png)
 
 ## Applying colors based on the data
 
