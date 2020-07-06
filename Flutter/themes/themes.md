@@ -107,6 +107,14 @@ In the above code snippet, [`chartThemeData`](https://pub.dev/documentation/sync
     </tr>
     <tr>
        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData-class.html">SfMapsThemeData</a>
+        </td>
+        <td>
+           <a href="https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html">SfMaps</a>
+        </td>
+    </tr>
+    <tr>
+       <td>
             <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfGaugeThemeData-class.html">SfGaugeThemeData</a>
         </td>
         <td>
@@ -114,14 +122,29 @@ In the above code snippet, [`chartThemeData`](https://pub.dev/documentation/sync
         </td>
     </tr>
     <tr>
+       <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData-class.html">SfSliderThemeData</a>
+        </td>
+        <td>
+           <a href="https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html">SfSlider</a>
+        </td>
+    </tr>
+    <tr>
         <td>
           <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData-class.html">SfRangeSliderThemeData</a>
         </td>
         <td>
-            <a href="https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html">SfRangeSlider</a><br>
-            <a href="https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html">SfRangeSelector</a>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html">SfRangeSlider</a>
         </td>
   </tr>
+  <tr>
+       <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData-class.html">SfRangeSelectorThemeData</a>
+        </td>
+        <td>
+           <a href="https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html">SfRangeSelector</a>
+        </td>
+    </tr>
 </table>
 
 
@@ -225,6 +248,14 @@ Similarly, refer the following table to know about the other specialized theme w
     </tr>
     <tr>
        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsTheme-class.html">SfMapsTheme</a>
+        </td>
+        <td>
+           <a href="https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html">SfMaps</a>
+        </td>
+    </tr>
+    <tr>
+       <td>
             <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfGaugeTheme-class.html">SfGaugeTheme</a>
         </td>
         <td>
@@ -232,14 +263,29 @@ Similarly, refer the following table to know about the other specialized theme w
         </td>
     </tr>
     <tr>
+       <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderTheme-class.html">SfSliderTheme</a>
+        </td>
+        <td>
+           <a href="https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html">SfSlider</a>
+        </td>
+    </tr>
+    <tr>
         <td>
           <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderTheme-class.html">SfRangeSliderTheme</a>
         </td>
         <td>
-            <a href="https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html">SfRangeSlider</a><br>
-            <a href="https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html">SfRangeSelector</a>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html">SfRangeSlider</a>
         </td>
   </tr>
+  <tr>
+       <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorTheme-class.html">SfRangeSelectorTheme</a>
+        </td>
+        <td>
+           <a href="https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html">SfRangeSelector</a>
+        </td>
+    </tr>
 </table>
 
 N> When dark or light theme is applied to the material app, and Syncfusion theme widgets are not initialized in your application, then based on the theme applied to the material app, the appropriate theme will be applied to Syncfusion widgets.

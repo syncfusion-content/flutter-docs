@@ -112,7 +112,7 @@ class Data {
 
 ## Selection with SfChart
 
-We have provided built-in support for selecting the chart segments based on the selected range in range selector.
+We have provided built-in support for selecting the chart segments based on the selected range in range selector. To achieve this segment selection, you must set the `SelectionSettings.selectionController` property in the `SfCartesianChart.series` property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -226,7 +226,7 @@ class Data {
 
 ## Zooming with SfChart
 
-We have provided built-in support for updating the visible range of the chart based on the selected range in range selector.
+We have provided built-in support for updating the visible range of the chart based on the selected range in range selector. To update the visible range, you must set the `primaryYAxis.rangeController` property in the `SfCartesianChart`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -350,3 +350,153 @@ class Data {
 {% endtabs %}
 
 ![Zooming support](images/range-controller/zooming-controller-with-sfchart.gif)
+
+## Deferred update
+
+You can control when the dependent components are updated while thumbs are being dragged continuously. It can be achieved by setting the `SfRangeSelector.enableDeferredUpdate` property and the delay in the update can be achieved by setting the `SfRangeSelector.deferredUpdateDelay` property. The default value of the `deferredUpdateDelay` property is `500 milliseconds`
+
+It updates the `controller` start and end values and invoke the [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/onChanged.html) callback when the thumb is dragged and held for the duration specified in the `deferredUpdateDelay`. However, range values are immediately updated in touch up action. 
+
+{% tabs %}
+{% highlight Dart %}
+
+final DateTime min = DateTime(2000, 01, 01, 0), max = DateTime(2000, 12, 15);
+RangeController rangeController;
+SfCartesianChart splineAreaChart, splineChart;
+List<Data> data;
+
+@override
+void initState() {
+    super.initState();
+    rangeController = RangeController(
+      start: DateTime(2000, 04, 15),
+      end: DateTime(2000, 07, 15),
+    );
+
+    data = <Data>[
+      Data(x: DateTime(2000, 01, 01, 0), y: 100),
+      Data(x: DateTime(2000, 01, 15), y: 10),
+      Data(x: DateTime(2000, 02, 01), y: 40),
+      Data(x: DateTime(2000, 02, 15), y: 34),
+      Data(x: DateTime(2000, 03, 01), y: 80),
+      Data(x: DateTime(2000, 03, 15), y: 49),
+      Data(x: DateTime(2000, 04, 01), y: 56),
+      Data(x: DateTime(2000, 04, 15), y: 26),
+      Data(x: DateTime(2000, 05, 01), y: 8),
+      Data(x: DateTime(2000, 05, 15), y: 80),
+      Data(x: DateTime(2000, 06, 01), y: 42),
+      Data(x: DateTime(2000, 06, 15), y: 12),
+      Data(x: DateTime(2000, 07, 01), y: 28),
+      Data(x: DateTime(2000, 07, 15), y: 68),
+      Data(x: DateTime(2000, 08, 01), y: 94),
+      Data(x: DateTime(2000, 08, 15), y: 24),
+      Data(x: DateTime(2000, 09, 01), y: 72),
+      Data(x: DateTime(2000, 09, 15), y: 32),
+      Data(x: DateTime(2000, 10, 01), y: 48),
+      Data(x: DateTime(2000, 10, 15), y: 4),
+      Data(x: DateTime(2000, 11, 01), y: 64),
+      Data(x: DateTime(2000, 11, 15), y: 10),
+      Data(x: DateTime(2000, 12, 01), y: 85),
+      Data(x: DateTime(2000, 12, 15), y: 96),
+    ];
+
+    splineAreaChart = SfCartesianChart(
+      margin: const EdgeInsets.all(0),
+      primaryXAxis: DateTimeAxis(isVisible: false, maximum: max),
+      primaryYAxis: NumericAxis(isVisible: false),
+      plotAreaBorderWidth: 0,
+      series: <SplineAreaSeries<Data, DateTime>>[
+        SplineAreaSeries<Data, DateTime>(
+          dataSource: data,
+          xValueMapper: (Data sales, _) => sales.x,
+          yValueMapper: (Data sales, _) => sales.y,
+        )
+      ],
+   );
+}
+
+@override
+Widget build(BuildContext context) {
+    splineChart = SfCartesianChart(
+      plotAreaBorderWidth: 0,
+      primaryXAxis: DateTimeAxis(
+          isVisible: false,
+          minimum: min,
+          maximum: max,
+          rangeController: rangeController),
+      primaryYAxis: NumericAxis(
+        labelPosition: ChartDataLabelPosition.inside,
+        labelAlignment: LabelAlignment.end,
+        majorTickLines: MajorTickLines(size: 0),
+        axisLine: AxisLine(color: Colors.transparent),
+      ),
+      series: <SplineSeries<Data, DateTime>>[
+        SplineSeries<Data, DateTime>(
+          dataSource: data,
+          animationDuration: 0,
+          xValueMapper: (Data sales, _) => sales.x,
+          yValueMapper: (Data sales, _) => sales.y,
+        )
+      ],
+    );
+    final Widget page = Container(
+        margin: const EdgeInsets.all(0),
+        padding: const EdgeInsets.all(0),
+        child: Center(
+          child: Column(
+            children: <Widget>[
+              Expanded(
+                child: Container(
+                    padding: const EdgeInsets.fromLTRB(5, 20, 15, 25),
+                    child: splineChart),
+              ),
+              Container(
+                margin: const EdgeInsets.all(0),
+                padding: const EdgeInsets.all(0),
+                child: Center(
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(14, 0, 15, 15),
+                    child: SfRangeSelector(
+                      min: min,
+                      max: max,
+                      interval: 1,
+                      enableDeferredUpdate: true,
+                      deferredUpdateDelay: 500,
+                      labelPlacement: LabelPlacement.betweenTicks,
+                      dateIntervalType: DateIntervalType.months,
+                      controller: rangeController,
+                      showTicks: true,
+                      showLabels: true,
+                      dragMode: SliderDragMode.both,
+                      labelFormatterCallback:
+                          (dynamic actualLabel, String formattedText) {
+                        String label = DateFormat.MMM().format(actualLabel);
+                        label = label;
+                        return label;
+                      },
+                      onChanged: (SfRangeValues values) {},
+                      child: Container(
+                        child: splineAreaChart,
+                        height: 75,
+                        padding: const EdgeInsets.all(0),
+                        margin: const EdgeInsets.all(0),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        )
+     );
+    return Scaffold(
+      body: Center(
+        child: Container(height: 400, child: page),
+      )
+   );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Deferred update support](images/range-controller/deferred-update.gif)

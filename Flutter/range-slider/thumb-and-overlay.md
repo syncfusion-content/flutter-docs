@@ -102,6 +102,104 @@ Widget build(BuildContext context) {
 
 ![Thumb color support](images/thumb-and-overlay/slider-thumb-color.png)
 
+## Thumb stroke width and stroke color
+
+You can change the thumb stroke width using the [`thumbStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/thumbStrokeWidth.html) property and thumb stroke color using the [`thumbStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/thumbStrokeColor.html) property.
+
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderTheme-class.html).
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                data: SfRangeSliderThemeData(
+                  thumbStrokeWidth: 3,
+                  thumbStrokeColor: Colors.red,
+                ),
+                child: SfRangeSlider(
+                  min: 2.0,
+                  max: 10.0,
+                  interval: 1,
+                  showTicks: true,
+                  showLabels: true,
+                  values: _values,
+                  onChanged: (SfRangeValues newValues){
+                    setState(() {
+                      _values = newValues;
+                    });
+                  },
+                ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Thumb stroke color support](images/thumb-and-overlay/range-slider-thumb-stroke-color.png)
+
+## Thumb icon
+
+You can show the custom widgets like icon or text inside the thumbs using the [`startThumbIcon`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/startThumbIcon.html) and the  [`endThumbIcon`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/endThumbIcon.html) properties.
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(5.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                data: SfRangeSliderThemeData(
+                    thumbColor: Colors.white,
+                    thumbRadius: 15,
+                    thumbStrokeWidth: 2,
+                    thumbStrokeColor: Colors.blue
+                ),
+                child: SfRangeSlider(
+                  min: 2.0,
+                  max: 10.0,
+                  interval: 1,
+                  showTicks: true,
+                  showLabels: true,
+                  values: _values,
+                  startThumbIcon: Icon(
+                      Icons.arrow_back_ios,
+                      color: Colors.blue,
+                      size: 20.0),
+                  endThumbIcon: Icon(
+                      Icons.arrow_forward_ios,
+                      color: Colors.blue,
+                      size: 20.0),
+                  onChanged: (SfRangeValues newValues){
+                    setState(() {
+                      _values = newValues;
+                    });
+                  },
+                ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Thumb icon support](images/thumb-and-overlay/range-slider-thumb-icon.png)
+
 ## Thumb overlay size
 
 You can change the size of the thumb overlay in the range slider using the [`overlayRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/overlayRadius.html) property.

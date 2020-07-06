@@ -408,7 +408,8 @@ Widget build(BuildContext context) {
           body: Center(
               child: SfRangeSliderTheme(
                  data: SfRangeSliderThemeData(
-                    trackHeight: 5,
+                    activeTrackHeight: 5,
+                    inactiveTrackHeight: 5,
                  ),
                  child: SfRangeSlider(
                     min: 0.0,
@@ -433,6 +434,102 @@ Widget build(BuildContext context) {
 
 ![Range slider divisor support](images/label-and-divisor/show-divisor.png)
 
+## Divisor radius
+
+You can change the active and inactive divisor radius of the range slider using the [`activeDivisorRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/activeDivisorRadius.html) and the [`inactiveDivisorRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/inactiveDivisorRadius.html) properties respectively.
+
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderTheme-class.html).
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(3.0, 7.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                 data: SfRangeSliderThemeData(
+                    activeTrackHeight: 10,
+                    inactiveTrackHeight: 10,
+                    activeDivisorRadius: 5,
+                    inactiveDivisorRadius: 5
+                 ),
+                 child: SfRangeSlider(
+                    min: 0.0,
+                    max: 10.0,
+                    interval: 1,
+                    showDivisors: true,
+                    values: _values,
+                    onChanged: (SfRangeValues newValues) {
+                        setState(() {
+                           _values = newValues;
+                        });
+                    },
+                 ),
+              ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Divisor radius support](images/label-and-divisor/range-slider-divisor-radius.png)
+
+## Divisor stroke width and stroke color
+
+You can change the active and inactive divisor stroke width of the range slider using the [`activeDivisorStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/activeDivisorStrokeWidth.html) and the [`inactiveDivisorStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/inactiveDivisorStrokeWidth.html) properties respectively.
+
+Also, you can change the active and inactive divisor stroke color of the range slider using the [`activeDivisorStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/activeDivisorStrokeColor.html) and the [`inactiveDivisorStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/inactiveDivisorStrokeColor.html) properties respectively.
+
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderTheme-class.html).
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(3.0, 7.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                 data: SfRangeSliderThemeData(
+                     activeTrackHeight: 10,
+                     inactiveTrackHeight: 10,
+                     activeDivisorStrokeColor: Colors.red,
+                     activeDivisorStrokeWidth: 2,
+                     inactiveDivisorStrokeWidth: 2,
+                     inactiveDivisorStrokeColor: Colors.red,
+                 ),
+                 child: SfRangeSlider(
+                    min: 0.0,
+                    max: 10.0,
+                    interval: 1,
+                    showDivisors: true,
+                    values: _values,
+                    onChanged: (SfRangeValues newValues) {
+                        setState(() {
+                           _values = newValues;
+                        });
+                    },
+                 ),
+              ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Divisor stroke width and color support](images/label-and-divisor/range-slider-divisor-stroke-color.png)
+
 ## Divisor color
 
 You can change the active and inactive divisor color of the range slider using the [`activeDivisorColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/activeDivisorColor.html) and [`inactiveDivisorColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/inactiveDivisorColor.html) properties respectively.
@@ -451,7 +548,8 @@ Widget build(BuildContext context) {
           body: Center(
               child: SfRangeSliderTheme(
                     data: SfRangeSliderThemeData(
-                         trackHeight: 5,
+                         activeTrackHeight: 5,
+                         inactiveTrackHeight: 5,
                          activeDivisorColor: Colors.red,
                          inactiveDivisorColor: Colors.red[200],
                     ),

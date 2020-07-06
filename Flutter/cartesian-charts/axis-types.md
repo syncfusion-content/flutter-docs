@@ -280,6 +280,7 @@ The [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
 Also refer [label format](./axis-customization#formatting-axis-label-content) and [date format](#formatting-the-labels-1) for formatting the labels further.
 
+
 ## Category axis
 
 Category axis displays text labels instead of numbers. When the string values are bound to x values, then the x-axis must be initialized with CategoryAxis.
@@ -488,6 +489,35 @@ The Flutter Chart supports the following types of interval for date-time axis:
 {% endhighlight %}
 
 ![DateTime range](images/axis-types/datetime_interval.jpg)
+
+### Double range support
+
+Date-time axis [`interval`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/interval.html) property can be customize using double value.
+
+For example, if you are rendering a series with months in x-axis with an interval of 0.5, then the interval will be calculated in days. The interval calculation may vary depends upon the number of days in the month.
+
+
+{% highlight dart %} 
+
+     @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis: DateTimeAxis(
+                             interval: 0.5,
+                        )
+                        primaryXAxis: NumericAxis()
+                    )
+                )
+            )
+        );
+     }
+
+{% endhighlight %}
+
+![doublerange](images/axis-types/doublerange.png)
 
 ### Applying padding to range
 
@@ -726,3 +756,7 @@ By using  the [isInversed](https://pub.dev/documentation/syncfusion_flutter_char
 {% endhighlight %}
 
 ![Inversed logarithmic axis](images/axis-types/inversed-logarithmic.png) 
+
+## See Also
+
+* [Applying currency format to axis labels](https://www.syncfusion.com/kb/11519/how-to-apply-the-currency-format-to-the-axis-labels-sfcartesianchart).
