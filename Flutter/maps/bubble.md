@@ -131,6 +131,9 @@ class Model {
   final String area;
 }
 
+{% endhighlight %}
+{% endtabs %}
+
 ![Bubble tooltip](images/bubble/bubble-tooltip.png)
 
 ## Color
