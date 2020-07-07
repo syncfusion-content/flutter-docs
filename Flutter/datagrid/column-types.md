@@ -437,7 +437,7 @@ Widget build(BuildContext context) {
       columns: [
         GridNumericColumn(mappingName: 'id', headerText: 'ID'),
         GridWidgetColumn(mappingName: 'image', headerText: 'Image'),
-        GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+        GridTextColumn(mappingName: 'name', headerText: 'Name'),
         GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
       ],
     ),
@@ -446,3 +446,5 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![flutter datagrid shows widget column in columns](images/column-types/flutter-datagrid-widget-column.png)
