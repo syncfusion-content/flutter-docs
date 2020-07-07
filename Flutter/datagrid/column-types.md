@@ -447,4 +447,4 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows widget column in columns](images/column-types/flutter-datagrid-widget-column.png)
+![flutter datagrid shows image in a column through widget column](images/column-types/flutter-datagrid-widget-column.png)
