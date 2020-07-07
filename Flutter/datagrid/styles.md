@@ -18,27 +18,27 @@ The appearance of cell can be customized by using the `SfDataGridThemeData.cellS
 {% tabs %}
 {% highlight Dart %} 
 
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        body: SfDataGridTheme(
-          data: SfDataGridThemeData(
-              cellStyle: DataGridCellStyle(
-                  textStyle: TextStyle(color: Colors.white),
-                  backgroundColor: Colors.indigo[300])),
-          child: SfDataGrid(
-            source: _employeeDataSource,
-            columns: <GridColumn>[
-              GridNumericColumn(mappingName: 'id')..headerText = 'Order ID',
-              GridTextColumn(mappingName: 'name')..headerText = 'Name',
-              GridTextColumn(mappingName: 'designation')
-                ..headerText = 'Designation',
-              GridNumericColumn(mappingName: 'salary')..headerText = 'Salary',
-            ],
-          ),
-        ),
-      );
-    }
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDataGridTheme(
+      data: SfDataGridThemeData(
+          cellStyle: DataGridCellStyle(
+              textStyle: TextStyle(color: Colors.white),
+              backgroundColor: Colors.indigo[300])),
+      child: SfDataGrid(
+        source: _employeeDataSource,
+        columns: <GridColumn>[
+          GridNumericColumn(mappingName: 'id')..headerText = 'Order ID',
+          GridTextColumn(mappingName: 'name')..headerText = 'Name',
+          GridTextColumn(mappingName: 'designation')
+            ..headerText = 'Designation',
+          GridNumericColumn(mappingName: 'salary')..headerText = 'Salary',
+        ],
+      ),
+    ),
+  );
+}
     
 {% endhighlight %}
 {% endtabs %}
@@ -52,28 +52,28 @@ The appearance of cell can be customized by using the `SfDataGridThemeData.cellS
 {% tabs %}
 {% highlight Dart %} 
 
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        body: SfDataGridTheme(
-          data: SfDataGridThemeData(
-              headerStyle: DataGridHeaderCellStyle(
-                  textStyle:
-                      TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
-                  backgroundColor: Colors.teal)),
-          child: SfDataGrid(
-            source: _employeeDataSource,
-            columns: <GridColumn>[
-              GridNumericColumn(mappingName: 'id')..headerText = 'Order ID',
-              GridTextColumn(mappingName: 'name')..headerText = 'Name',
-              GridNumericColumn(mappingName: 'salary')..headerText = 'Salary',
-              GridTextColumn(mappingName: 'designation')
-                ..headerText = 'Designation'
-            ],
-          ),
-        ),
-      );
-    }
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDataGridTheme(
+      data: SfDataGridThemeData(
+          headerStyle: DataGridHeaderCellStyle(
+              textStyle:
+                  TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+              backgroundColor: Colors.teal)),
+      child: SfDataGrid(
+        source: _employeeDataSource,
+        columns: <GridColumn>[
+          GridNumericColumn(mappingName: 'id')..headerText = 'Order ID',
+          GridTextColumn(mappingName: 'name')..headerText = 'Name',
+          GridNumericColumn(mappingName: 'salary')..headerText = 'Salary',
+          GridTextColumn(mappingName: 'designation')
+            ..headerText = 'Designation'
+        ],
+      ),
+    ),
+  );
+}
     
 {% endhighlight %}
 {% endtabs %}
@@ -87,25 +87,25 @@ Color and thickness of the grid lines can be changed by using the `SfDataGridThe
 {% tabs %}
 {% highlight Dart %} 
 
-    @override
-      Widget build(BuildContext context) {
-        return Scaffold(
-           body: SfDataGridTheme(
-            data: SfDataGridThemeData(
-                gridLineColor: Colors.amber, gridLineStrokeWidth: 3.0),
-              child: SfDataGrid(
-              source: _employeeDataSource,
-              columns: <GridColumn>[
-                GridNumericColumn(mappingName: 'id')..headerText = 'Order ID',
-                GridTextColumn(mappingName: 'name')..headerText = 'Name',
-                GridNumericColumn(mappingName: 'salary')..headerText = 'Salary',
-                GridTextColumn(mappingName: 'designation')
-                  ..headerText = 'Designation'
-              ],
-            ),
-          ),
-        );
-      }
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+     body: SfDataGridTheme(
+      data: SfDataGridThemeData(
+          gridLineColor: Colors.amber, gridLineStrokeWidth: 3.0),
+        child: SfDataGrid(
+        source: _employeeDataSource,
+        columns: <GridColumn>[
+          GridNumericColumn(mappingName: 'id')..headerText = 'Order ID',
+          GridTextColumn(mappingName: 'name')..headerText = 'Name',
+          GridNumericColumn(mappingName: 'salary')..headerText = 'Salary',
+          GridTextColumn(mappingName: 'designation')
+            ..headerText = 'Designation'
+        ],
+      ),
+    ),
+  );
+}
     
 {% endhighlight %}
 {% endtabs %}
@@ -126,21 +126,21 @@ The following code describes how to show vertical and horizontal grid lines for 
 {% tabs %}
 {% highlight Dart %} 
 
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        body: SfDataGrid(
-            source: _employeeDataSource,
-            columns: <GridColumn>[
-              GridNumericColumn(mappingName: 'id')..headerText = 'Order ID',
-              GridTextColumn(mappingName: 'name')..headerText = 'Name',
-              GridNumericColumn(mappingName: 'salary')..headerText = 'Salary',
-              GridTextColumn(mappingName: 'designation')
-                ..headerText = 'Designation',
-            ],
-            gridLinesVisibility: GridLinesVisibility.both),
-      );
-    }
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDataGrid(
+        source: _employeeDataSource,
+        columns: <GridColumn>[
+          GridNumericColumn(mappingName: 'id')..headerText = 'Order ID',
+          GridTextColumn(mappingName: 'name')..headerText = 'Name',
+          GridNumericColumn(mappingName: 'salary')..headerText = 'Salary',
+          GridTextColumn(mappingName: 'designation')
+            ..headerText = 'Designation',
+        ],
+        gridLinesVisibility: GridLinesVisibility.both),
+  );
+}
     
 {% endhighlight %}
 {% endtabs %}
