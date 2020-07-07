@@ -19,7 +19,7 @@ The schedule view display two different UI for mobile and web, for mobile it wil
 * If the web view width is less than `767` the calendar will render the mobile schedule UI for the web. 
 
 ## Appointment item height
-You can customize the height of an appointment in a schedule view by using the [appointmentItemHeight]() property of [ScheduleViewSettings]().
+You can customize the height of an appointment in a schedule view by using the [appointmentItemHeight](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ScheduleViewSettings/appointmentItemHeight.html) property of [ScheduleViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ScheduleViewSettings/ScheduleViewSettings.html).
 
 {% tabs %}
 {% highlight Dart %}
@@ -42,7 +42,7 @@ You can customize the height of an appointment in a schedule view by using the [
 ![Schedule view appointment height customization](images/scheduleview/Schedule_view_appointment_height.png)
 
 ## Hide empty weeks
-You can hide the weeks that do not have an appointment on it in schedule view, by using the [hideEmptyScheduleWeek]() property of  `scheduleViewSettings`.
+You can hide the weeks that do not have an appointment on it in schedule view, by using the [hideEmptyScheduleWeek](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ScheduleViewSettings/hideEmptyScheduleWeek.html) property of  `scheduleViewSettings`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -65,7 +65,7 @@ You can hide the weeks that do not have an appointment on it in schedule view, b
 ![Schedule view hide empty agenda weeks](images/scheduleview/Schedule_view_hide-empty_week.png)
 
 ## Appointment text customization
-The appointment text style of schedule view can be customized by using the [appointmentTextStyle]() property of `scheduleViewSettings`.
+The appointment text style of schedule view can be customized by using the [appointmentTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ScheduleViewSettings/appointmentTextStyle.html) property of `scheduleViewSettings`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -88,9 +88,9 @@ The appointment text style of schedule view can be customized by using the [appo
 ![Schedule view appointment customization](images/scheduleview/Schedule_view_appointment.png)
 
 ## Day header customization
-The day header can be customized by using the [dayHeaderSettings]() property of `scheduleViewSettings`. 
+The day header can be customized by using the [dayHeaderSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ScheduleViewSettings/dayHeaderSettings.html) property of `scheduleViewSettings`. 
 
-The [DayHeaderSettings]() contains the properties to customize the day format, width, day text style, and date text style of the day header by using the [dayFormat](), [width](), [dayTextStyle](), and [dateTextStyle]() of `DayHeaderSettings`.
+The [DayHeaderSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DayHeaderSettings-class.html) contains the properties to customize the day format, width, day text style, and date text style of the day header by using the [dayFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DayHeaderSettings/dayFormat.html), [width](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DayHeaderSettings/width.html), [dayTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DayHeaderSettings/dayTextStyle.html), and [dateTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/DayHeaderSettings/dateTextStyle.html) of `DayHeaderSettings`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -124,9 +124,9 @@ The [DayHeaderSettings]() contains the properties to customize the day format, w
 ![Schedule view day header customization](images/scheduleview/Schedule_view_day_header.png)
 
 ## Week header customization
-The week header can be customized by using the [weekHeaderSettings]() property of `scheduleViewSettings`. 
+The week header can be customized by using the [weekHeaderSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ScheduleViewSettings/weekHeaderSettings.html) property of `scheduleViewSettings`. 
 
-The [WeekHeaderSettings]() contains the properties to customize the start and end date format, height, Text alignment, background color, and week text style of the week header by using the [startDateFormat](), [endDateFormat](), [height](), [textAlign](), [backgroundColor](), and [weekTextStyle]() of `WeekHeaderSettings`.
+The [WeekHeaderSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/WeekHeaderSettings-class.html) contains the properties to customize the start and end date format, height, Text alignment, background color, and week text style of the week header by using the [startDateFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/WeekHeaderSettings/startDateFormat.html), [endDateFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/WeekHeaderSettings/endDateFormat.html), [height](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/WeekHeaderSettings/height.html), [textAlign](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/WeekHeaderSettings/textAlign.html), [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/WeekHeaderSettings/backgroundColor.html), and [weekTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/WeekHeaderSettings/weekTextStyle.html) of `WeekHeaderSettings`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -159,9 +159,9 @@ The [WeekHeaderSettings]() contains the properties to customize the start and en
 ![Schedule view week header customization](images/scheduleview/Schedule_view_week_header.png)
 
 ## Month header customization
-The month header can be customized by using the [monthHeaderSettings]() property of `scheduleViewSettings`. 
+The month header can be customized by using the [monthHeaderSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ScheduleViewSettings/monthHeaderSettings.html) property of `scheduleViewSettings`. 
 
-The [MonthHeaderSettings]() contains the properties to customize the month format, height, text alignment, background color, and month text style of the month header by using the [monthFormat](), [height](), [textAlign](), [backgroundColor](), and [monthTextStyle]() of `MonthHeaderSettings`.
+The [MonthHeaderSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthHeaderSettings-class.html) contains the properties to customize the month format, height, text alignment, background color, and month text style of the month header by using the [monthFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthHeaderSettings/monthFormat.html), [height](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthHeaderSettings/height.html), [textAlign](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthHeaderSettings/textAlign.html), [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthHeaderSettings/backgroundColor.html), and [monthTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthHeaderSettings/monthTextStyle.html) of `MonthHeaderSettings`.
 
 {% tabs %}
 {% highlight Dart %}

@@ -31,6 +31,13 @@ The Syncfusion Flutter Calendar library was written natively in Dart and has sev
 
 ![Calendar timezone](images/overview/timezone.png)
 
+* **Schedule view**: Show a list of scheduled appointments grouped by week, between set minimum and maximum dates, with the schedule view. You can customize everything from the date and time formats to the styling of each header.
+
+![Schedule view](images/overview/Schedule_view.png)
+
+* **Special time regions**: Disable interactions and selections for specific time ranges. This is useful when you want to block user interaction during holidays or another special events and to highlight those time slots.
+![Calendar time regions](images/overview/Special_region.png)
+
 * **Flexible working days**: Customize the work days in a workweek so that the remaining days will be hidden from view.
 
 ![Flexible working days](images/overview/Flexible_working_days.png)
