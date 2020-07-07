@@ -102,7 +102,7 @@ Widget build(BuildContext context) {
 * If the custom `startHour` and `endHour` are given, then the number of time slots calculated based on given `startHour` and `endHour` should result in integer value, otherwise next immediate `timeInterval` will be considered until the result is integer value. For example, if `startHour` is 9 (09:00AM), `endHour` is 18.25 (06:15 PM), `timeInterval` is 30 minutes, and total minutes = 555 ((18.25-9)*60), then the timeInterval will be changed to ’37 minutes’ (555%37=0) by considering (total minutes % timeInterval = 0). it will return integer value for time slots rendering.
 
 ## Special time regions
-You can restrict the user interaction such as selection and highlights specific regions of time in the timeslot views by adding the [specialTimeRegions]() property of `SfCalendar`. You need to set the [startTime]() and [endTime]() properties of [TimeRegion]() to create a `specialTimeRegion`, you can use the [timeZone]() property to set the specific timezone for start and end time of `specialTimeRegion`. The `specialTimeRegion` will display the text or icon on it that set to the [text]() or [icon]() property of `TimeRegion`.
+You can restrict the user interaction such as selection and highlights specific regions of time in the timeslot views by adding the [specialRegions](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/specialRegions.html) property of `SfCalendar`. You need to set the [startTime](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/startTime.html) and [endTime](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/endTime.html) properties of [TimeRegion](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion-class.html) to create a `specialTimeRegion`, you can use the [timeZone](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/timeZone.html) property to set the specific timezone for start and end time of `specialTimeRegion`. The `specialTimeRegion` will display the text or icon on it that set to the [text](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/text.html) or [iconData](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/iconData.html) property of `TimeRegion`.
 
 ![Special time region in Flutter event calendar](images/timeslot-views/Special_region.png)
 
@@ -110,7 +110,7 @@ You can restrict the user interaction such as selection and highlights specific 
 * If time region has both the text and icon then it will draw icon only.
 
 ### Selection restriction in timeslots
-You can enable or disable the touch interaction of `TimeRegion` using the `enablePointerInteraction` property of `TimeRegion`. By default, its value is true.
+You can enable or disable the touch interaction of `TimeRegion` using the [enablePointerInteraction](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/enablePointerInteraction.html) property of `TimeRegion`. By default, its value is true.
 
 {% tabs %}
 {% highlight Dart %}
@@ -154,7 +154,7 @@ in the region
 
 ### Recurring time region
 
-The recurring time region on a daily, weekly, monthly, or yearly interval. The recurring special time regions can be created by setting the `recurrenceRule` property in `TimeRegion`.
+The recurring time region on a daily, weekly, monthly, or yearly interval. The recurring special time regions can be created by setting the [recurrenceRule](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/recurrenceRule.html) property in `TimeRegion`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -191,7 +191,7 @@ The recurring time region on a daily, weekly, monthly, or yearly interval. The r
 You can refer to [here](https://help.syncfusion.com/flutter/calendar/appointments#recurrence-rule) to know more about the recurrence rule.
 
 ### Recurrence exception dates
-You can delete any of occurrence that is an exception from the recurrence pattern time region by using the [recurrenceExceptionDates]() property of `TimeRegion`. The deleted occurrence date will be considered as a recurrence exception date.
+You can delete any of occurrence that is an exception from the recurrence pattern time region by using the [recurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/recurrenceExceptionDates.html) property of `TimeRegion`. The deleted occurrence date will be considered as a recurrence exception date.
 
 {% tabs %}
 {% highlight Dart %}
@@ -227,7 +227,7 @@ You can delete any of occurrence that is an exception from the recurrence patter
 ![Special time region recurrence exception](images/timeslot-views/Special_region_recurrence_exception.png)
 
 ### Special time region customization
-The `specialTimeRegion` background color can be customized by using the [color]() and [textStyle]() properties of `TimeRegion` that is used to customize the text style for the `text` and `icon` of the `specialTimeRegion`.
+The `specialTimeRegion` background color can be customized by using the [color](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/color.html) and [textStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/textStyle.html) properties of `TimeRegion` that is used to customize the text style for the `text` and `iconData` of the `specialTimeRegion`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -248,9 +248,9 @@ The `specialTimeRegion` background color can be customized by using the [color](
         startTime: DateTime.now(),
         endTime: DateTime.now().add(Duration(hours: 1)),
         enablePointerInteraction: false,
-        textStyle: TextStyle(color: Colors.black45, fontSize: 15),
-        color: Colors.grey.withOpacity(0.2),
-        text: 'Break'));
+        textStyle: TextStyle(color: Colors.red, fontSize: 15),
+        color: Color.fromRGBO(255, 236, 179, 1.0),
+        iconData: Icons.group));
 
     return regions;
   }
