@@ -58,20 +58,20 @@ Add the SfDataGrid widget as a child of any widget. `SfDataGrid` requires the `s
 {% tabs %}
 {% highlight Dart %} 
 
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        body: SfDataGrid(
-          source: _employeeDataSource,
-          columns: [
-            GridNumericColumn(mappingName: 'id',  headerText:'ID'),
-            GridTextColumn(mappingName: 'name', headerText: 'Name'),
-            GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-            GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
-          ],
-        ),
-      );
-    }
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDataGrid(
+      source: _employeeDataSource,
+      columns: [
+        GridNumericColumn(mappingName: 'id',  headerText:'ID'),
+        GridTextColumn(mappingName: 'name', headerText: 'Name'),
+        GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+        GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+      ],
+    ),
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -82,13 +82,13 @@ The `SfDataGrid` is depending upon the data. Create a simple datasource for `SfD
 {% tabs %}
 {% highlight Dart %} 
 
-    class Employee {
-      Employee(this.id, this.name, this.designation, this.salary);
-      final int id;
-      final String name;
-      final String designation;
-      final int salary;
-    }
+class Employee {
+  Employee(this.id, this.name, this.designation, this.salary);
+  final int id;
+  final String name;
+  final String designation;
+  final int salary;
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -98,33 +98,33 @@ Create the collection of Employee data with the required number of data objects.
 {% tabs %}
 {% highlight Dart %} 
    
-    final List<Employee> _employees = <Employee>[];
+final List<Employee> _employees = <Employee>[];
   
-    @override
-    void initState() {
-      super.initState();
-      populateData();
-    }
+@override
+void initState() {
+  super.initState();
+  populateData();
+}
   
-    void populateData() {
-      _employees.add(Employee(10001, 'James', 'Project Lead', 20000));
-      _employees.add(Employee(10002, 'Kathryn', 'Manager', 30000));
-      _employees.add(Employee(10003, 'Lara', 'Developer', 15000));
-      _employees.add(Employee(10004, 'Michael', 'Designer', 15000));
-      _employees.add(Employee(10005, 'Martin', 'Developer', 15000));
-      _employees.add(Employee(10006, 'Newberry', 'Developer', 15000));
-      _employees.add(Employee(10007, 'Balnc', 'Developer', 15000));
-      _employees.add(Employee(10008, 'Perry', 'Developer', 15000));
-      _employees.add(Employee(10009, 'Gable', 'Developer', 15000));
-      _employees.add(Employee(10010, 'Grimes', 'Developer', 15000));
-    }
+void populateData() {
+  _employees.add(Employee(10001, 'James', 'Project Lead', 20000));
+  _employees.add(Employee(10002, 'Kathryn', 'Manager', 30000));
+  _employees.add(Employee(10003, 'Lara', 'Developer', 15000));
+  _employees.add(Employee(10004, 'Michael', 'Designer', 15000));
+  _employees.add(Employee(10005, 'Martin', 'Developer', 15000));
+  _employees.add(Employee(10006, 'Newberry', 'Developer', 15000));
+  _employees.add(Employee(10007, 'Balnc', 'Developer', 15000));
+  _employees.add(Employee(10008, 'Perry', 'Developer', 15000));
+  _employees.add(Employee(10009, 'Gable', 'Developer', 15000));
+  _employees.add(Employee(10010, 'Grimes', 'Developer', 15000));
+}
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Creating DataSource for DataGrid
 
-`DataGridSource` is used to obtain the row data for the ‘SfDataGrid’. So, create the DataSource from the DataGridSource and override the following APIs in it,
+`DataGridSource` is used to obtain the row data for the `SfDataGrid`. So, create the DataSource from the DataGridSource and override the following APIs in it,
 
 * **`dataSource`** - To Fetch the number of rows available for data population. Also, it is used to fetch the corresponding data object to process the selection.
 * **`getCellValue`** - To fetch the value for each cell.
@@ -134,35 +134,35 @@ Create the collection of Employee data with the required number of data objects.
 {% tabs %}
 {% highlight Dart %} 
 
-    final List<Employee> _employees = <Employee>[];
+final List<Employee> _employees = <Employee>[];
 
-    final EmployeeDataSource_employeeDataSource = EmployeeDataSource();
+final EmployeeDataSource_employeeDataSource = EmployeeDataSource();
 
-    class EmployeeDataSource extends DataGridSource {
-      @override
-      List<Object> get dataSource => _employees;
-
-      @override
-      getCellValue(int rowIndex, String columnName) {
-        switch (columnName) {
-          case 'id':
-            return _employees[rowIndex].id;
-            break;
-          case 'name':
-            return _employees[rowIndex].name;
-            break;
-          case 'salary':
-            return _employees[rowIndex].salary;
-            break;
-          case 'designation':
-            return _employees[rowIndex].designation;
-            break;
-          default:
-            return ' ';
-            break;
-        }
-      }
+class EmployeeDataSource extends DataGridSource {
+  @override
+  List<Object> get dataSource => _employees
+  
+  @override
+  getCellValue(int rowIndex, String columnName) {
+    switch (columnName) {
+      case 'id':
+        return _employees[rowIndex].id;
+        break;
+      case 'name':
+        return _employees[rowIndex].name;
+        break;
+      case 'salary':
+        return _employees[rowIndex].salary;
+        break;
+      case 'designation':
+        return _employees[rowIndex].designation;
+        break;
+      default:
+        return ' ';
+        break;
     }
+  }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -172,13 +172,13 @@ Create an instance of `DataGridSource` and set this object to `source` property 
 {% tabs %}
 {% highlight Dart %} 
 
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-          body: SfDataGrid(
-        source: _employeeDataSource,
-      ));
-    }
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+      body: SfDataGrid(
+    source: _employeeDataSource,
+  ));
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -191,22 +191,22 @@ You can also load any widget in a column using the `GridWidgetColumn` and `cellB
 {% tabs %}
 {% highlight Dart %} 
 
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
+final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
   
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        body: SfDataGrid(
-          source: _employeeDataSource,
-          columns: [
-            GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-            GridTextColumn(mappingName: 'name', headerText: 'Name'),
-            GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-            GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
-          ],
-        ),
-      );
-    }
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDataGrid(
+      source: _employeeDataSource,
+      columns: [
+        GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+        GridTextColumn(mappingName: 'name', headerText: 'Name'),
+        GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+        GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+      ],
+    ),
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -215,81 +215,81 @@ You can also load any widget in a column using the `GridWidgetColumn` and `cellB
 
 ## Selection
 
-SfDataGrid allows you to select one or more rows. The `selectionMode` property can be set to specify whether a user can select single row, or multiple rows. 
+`SfDataGrid` allows you to select one or more rows. The `selectionMode` property can be set to specify whether a user can select single row, or multiple rows. 
 
 {% tabs %}
 {% highlight Dart %} 
     
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
+final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
 
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        body: SfDataGrid(
-          source: _employeeDataSource,
-          columns: [
-            GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-            GridTextColumn(mappingName: 'name', headerText: 'Name'),
-            GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-            GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
-          ],
-          selectionMode: SelectionMode.multiple,
-        ),
-      );
-    }
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDataGrid(
+      source: _employeeDataSource,
+      columns: [
+        GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+        GridTextColumn(mappingName: 'name', headerText: 'Name'),
+        GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+        GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+      ],
+      selectionMode: SelectionMode.multiple,
+    ),
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
 
 ![flutter datagrid shows rows with selection](images/getting-started/flutter-datagrid-selection.png)
 
-The information about the rows that are selected can be retrieved using `selectedIndex`, `selectedRow` and `selectedRows` properties in `DataGridController`. You need to initialize the `DataGridController` object to the `controller` property of SfDataGrid.
+The information about the rows that are selected can be retrieved using `selectedIndex`, `selectedRow` and `selectedRows` properties in `DataGridController`. You need to initialize the `DataGridController` object to the `controller` property of `SfDataGrid`.
 
 `DataGridController` objects are expected to be long-lived, not recreated with each build.
 
 {% tabs %}
 {% highlight Dart %} 
 
-    final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
+final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
 
-    final DataGridController _controller = DataGridController();
+final DataGridController _controller = DataGridController();
 
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        body: Column(
-          children: [
-            RaisedButton(
-                child: Text('Get Selection Information'),
-                onPressed: () {
-                  int selectedIndex = _controller.selectedIndex;
-                  Object selectedRow = _controller.selectedRow;
-                  List<Object> selectedRows = _controller.selectedRows;
-                  print(selectedIndex);
-                  print(selectedRow);
-                  print(selectedRows);
-                }),
-            Expanded(
-              child: SfDataGrid(
-                source: _employeeDataSource,
-                columns: [
-                  GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-                  GridTextColumn(mappingName: 'name', headerText: 'Name'),
-                  GridTextColumn(
-                      mappingName: 'designation', headerText: 'Designation'),
-                  GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
-                ],
-                controller: _controller,
-                selectionMode: SelectionMode.multiple,
-              ),
-            ),
-          ],
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: Column(
+      children: [
+        RaisedButton(
+            child: Text('Get Selection Information'),
+            onPressed: () {
+              int selectedIndex = _controller.selectedIndex;
+              Object selectedRow = _controller.selectedRow;
+              List<Object> selectedRows = _controller.selectedRows;
+              print(selectedIndex);
+              print(selectedRow);
+              print(selectedRows);
+            }),
+        Expanded(
+          child: SfDataGrid(
+            source: _employeeDataSource,
+            columns: [
+              GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+              GridTextColumn(mappingName: 'name', headerText: 'Name'),
+              GridTextColumn(
+                  mappingName: 'designation', headerText: 'Designation'),
+              GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+            ],
+            controller: _controller,
+            selectionMode: SelectionMode.multiple,
+          ),
         ),
-      );
-    }
+      ],
+    ),
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
 
->**NOTE**
-* `SfDataGrid` supports selection via keyboard interaction for the Web platform when `selectionMode` is not `none`.
+>**NOTE**  
+  `SfDataGrid` supports selection via keyboard interaction for the Web platform when `selectionMode` is not `none`.
