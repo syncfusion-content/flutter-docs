@@ -18,26 +18,20 @@ This section explains about options to customize the header row height and the r
 {% tabs %}
 {% highlight dart %} 
 
-    @override
-        Widget build(BuildContext context) {
-            return Scaffold(
-              body:SfDataGrid(
-                source:_employeeDatasource,
-                headerRowHeight: 70,
-                columns:<GridColumn>[
-                   GridNumericColumn(mappingName: 'id')
-                   ..headerText = 'ID',
-                   GridTextColumn(mappingName: 'name')
-                   ..headerText = 'Name',
-                   GridTextColum(mappingName: 'designation')
-                   ..headerText = 'Designation',
-                   GridNumericColumn(mappingName: 'salary')
-                   ..headerText = 'Salary',
-                      ],
-                 )
-          
-              );
-    }
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+      body: SfDataGrid(
+    source: _employeeDatasource,
+    headerRowHeight: 70,
+    columns: <GridColumn>[
+      GridNumericColumn(mappingName: 'id')..headerText = 'ID',
+      GridTextColumn(mappingName: 'name')..headerText = 'Name',
+      GridTextColumn(mappingName: 'designation')..headerText = 'Designation',
+      GridNumericColumn(mappingName: 'salary')..headerText = 'Salary',
+    ],
+  ));
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -51,25 +45,20 @@ You can customize the height of the grid rows in `SfDataGrid` by using the `rowH
 {% tabs %}
 {% highlight Dart %} 
         
-    @override
-      Widget build(BuildContext context) {
-        return Scaffold(
-          body: SfDataGrid(
-            source:_employeeDatasource,
-            rowHeight: 60,
-            columns:<GridColumn>[
-              GridNumericColumn(mappingName: 'id')
-              ..headerText = 'ID',
-              GridTextColumn(mappingName: 'name')
-              ..headerText = 'Name',
-              GridTextColum(mappingName: 'designation')
-              ..headerText = 'Designation',
-              GridNumericColumn(mappingName: 'salary')
-              ..headerText = 'Salary',
-                            ],
-                        )
-           );
-    }
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+      body: SfDataGrid(
+    source: _employeeDatasource,
+    rowHeight: 60,
+    columns: <GridColumn>[
+      GridNumericColumn(mappingName: 'id')..headerText = 'ID',
+      GridTextColumn(mappingName: 'name')..headerText = 'Name',
+      GridTextColumn(mappingName: 'designation')..headerText = 'Designation',
+      GridNumericColumn(mappingName: 'salary')..headerText = 'Salary',
+    ],
+  ));
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -84,58 +73,56 @@ To access the `getAutoRowHeight` method, create an instance of `ColumnSizer`, se
 
 `ColumnSizer` objects are expected to be long-lived, not recreated with each build. 
  
-**NOTE**
+>**NOTE**
     By default, the display text’s overflow behavior is ellipsis. So, to enable the wrap for the display text, set the `softWrap` property as `true` and `overflow` property as clip.
 
 
 {% tabs %}
 {% highlight Dart %} 
 
-    final ColumnSizer _columnSizer = ColumnSizer();
+final ColumnSizer _columnSizer = ColumnSizer();
 
-    @override
-      Widget build(BuildContext context) {
-        return Scaffold(
-          body:SfDataGrid(
-            source: _employeeDatasource,
-            columnSizer: _columnSizer,
-            onQueryRowHeight: (rowIndex) {
-                  double height = _columnSizer.getAutoRowHeight(rowIndex);
-                  return height;
-                    },
-            columns: <GridColumn>[
-              GridTextColumn(mappingName: 'id')
-              ..softWrap = true
-              ..overflow = TextOverflow.clip
-              ..headerText = 'ID',
-              GridTextColumn(mappingName: 'contactName')
-              ..softWrap = true
-              ..overflow = TextOverflow.clip
-              ..headerText = 'Contact Name',
-              GridTextColumn(mappingName: 'companyName')
-              ..softWrap = true
-              ..overflow = TextOverflow.clip
-              ..headerText = 'Company Name',
-              GridTextColumn(mappingName: 'city')
-              ..softWrap = true
-              ..overflow = TextOverflow.clip
-              ..headerText = 'City',
-              GridTextColumn(mappingName: 'address')
-              ..softWrap = true
-              ..overflow = TextOverflow.clip
-              ..headerText = 'Address',
-              GridTextColumn(mappingName: 'designation')
-              ..softWrap = true
-              ..overflow = TextOverflow.clip
-              ..headerText = 'Designation',
-              GridTextColumn(mappingName: 'country')
-              ..softWrap = true 
-              ..overflow = TextOverflow.clip
-              ..headerText = 'Country',
-          ]    
-        )
-      );
-    }
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+      body: SfDataGrid(
+          source: _employeeDatasource,
+          columnSizer: _columnSizer,
+          onQueryRowHeight: (rowIndex) {
+            double height = _columnSizer.getAutoRowHeight(rowIndex);
+            return height;
+          },
+          columns: <GridColumn>[
+        GridTextColumn(mappingName: 'id')
+          ..softWrap = true
+          ..overflow = TextOverflow.clip
+          ..headerText = 'ID',
+        GridTextColumn(mappingName: 'contactName')
+          ..softWrap = true
+          ..overflow = TextOverflow.clip
+          ..headerText = 'Contact Name',
+        GridTextColumn(mappingName: 'companyName')
+          ..softWrap = true
+          ..overflow = TextOverflow.clip
+          ..headerText = 'Company Name',
+        GridTextColumn(mappingName: 'city')
+          ..softWrap = true
+          ..overflow = TextOverflow.clip
+          ..headerText = 'City',
+        GridTextColumn(mappingName: 'address')
+          ..softWrap = true
+          ..overflow = TextOverflow.clip
+          ..headerText = 'Address',
+        GridTextColumn(mappingName: 'designation')
+          ..softWrap = true
+          ..overflow = TextOverflow.clip
+          ..headerText = 'Designation',
+        GridTextColumn(mappingName: 'country')
+          ..softWrap = true
+          ..overflow = TextOverflow.clip
+          ..headerText = 'Country',
+      ]));
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -151,57 +138,56 @@ By default, `getAutoRowHeight` method calculates the row height based on all col
 {% tabs %}
 {% highlight Dart %} 
 
-    final List<String> _excludeColumns = [
-                'designation',
-                'address',
-                'city',
-                ];
-            
-    final ColumnSizer _columnSizer = ColumnSizer();
+final List<String> _excludeColumns = [
+  'designation',
+  'address',
+  'city',
+];
 
-    @override
-      Widget build(BuildContext context) {
-        return Scaffold(
-          body:SfDataGrid(
-            source: _autoRowHeightDataGridSource,
-            columnSizer: _columnSizer,
-            onQueryRowHeight: (int rowIndex) {
-                final double height= _columnSizer.getAutoRowHeight(rowIndex,excludedColumns:_excludeColumns);
-             return height;
-            },
-            columns: <GridColumn>[
-              GridTextColumn(mappingName: 'id')
-              ..softWrap=true
-              ..overflow = TextOverflow.clip
-              ..headerText = 'ID',
-              GridTextColumn(mappingName: 'contactName')
-              ..softWrap = true
-              ..overflow = TextOverflow.clip
-              ..headerText = 'Contact Name',
-              GridTextColumn(mappingName: 'companyName')
-              ..softWrap=true
-              ..overflow = TextOverflow.clip
-              ..headerText = 'Company Name',
-              GridTextColumn(mappingName: 'address')
-              ..softWrap=true
-              ..overflow = TextOverflow.clip 
-              ..headerText = 'Address',
-              GridTextColumn(mappingName: 'city')
-              ..softWrap=true
-              ..overflow = TextOverflow.clip
-              ..headerText = 'City',
-              GridTextColumn(mappingName: 'designation')
-              ..softWrap=true
-              ..overflow = TextOverflow.clip
-              ..headerText = 'Designation',
-              GridTextColumn(mappingName: 'country')
-              ..softWrap=true
-              ..overflow = TextOverflow.clip
-              ..headerText = 'Country',
-          ]
-        );
-      );
-     }
+final ColumnSizer _columnSizer = ColumnSizer();
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+      body: SfDataGrid(
+          source: _autoRowHeightDataGridSource,
+          columnSizer: _columnSizer,
+          onQueryRowHeight: (int rowIndex) {
+            final double height = _columnSizer.getAutoRowHeight(rowIndex,
+                excludedColumns: _excludeColumns);
+            return height;
+          },
+          columns: <GridColumn>[
+        GridTextColumn(mappingName: 'id')
+          ..softWrap = true
+          ..overflow = TextOverflow.clip
+          ..headerText = 'ID',
+        GridTextColumn(mappingName: 'contactName')
+          ..softWrap = true
+          ..overflow = TextOverflow.clip
+          ..headerText = 'Contact Name',
+        GridTextColumn(mappingName: 'companyName')
+          ..softWrap = true
+          ..overflow = TextOverflow.clip
+          ..headerText = 'Company Name',
+        GridTextColumn(mappingName: 'address')
+          ..softWrap = true
+          ..overflow = TextOverflow.clip
+          ..headerText = 'Address',
+        GridTextColumn(mappingName: 'city')
+          ..softWrap = true
+          ..overflow = TextOverflow.clip
+          ..headerText = 'City',
+        GridTextColumn(mappingName: 'designation')
+          ..softWrap = true
+          ..overflow = TextOverflow.clip
+          ..headerText = 'Designation',
+        GridTextColumn(mappingName: 'country')
+          ..softWrap = true
+          ..overflow = TextOverflow.clip
+          ..headerText = 'Country',
+      ]));
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -216,55 +202,53 @@ The hidden columns can also be considered for the row height calculation by usin
 {% tabs %}
 {% highlight Dart %} 
 
-    final ColumnSizer _columnSizer = ColumnSizer();
+final ColumnSizer _columnSizer = ColumnSizer();
 
-    @override
-      Widget build(BuildContext context) {
-        return Scaffold(
-          body:SfDataGrid(
-            source: _autoRowHeightDataGridSource,
-            columnSizer: _columnSizer,
-            onQueryRowHeight: (int rowIndex) {
-              final double height = _columnSizer.getAutoRowHeight(rowIndex,  canIncludeHiddenColumns: true);
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+      body: SfDataGrid(
+          source: _autoRowHeightDataGridSource,
+          columnSizer: _columnSizer,
+          onQueryRowHeight: (int rowIndex) {
+            final double height = _columnSizer.getAutoRowHeight(rowIndex,
+                canIncludeHiddenColumns: true);
             return height;
-           },
-            columns: <GridColumn>[
-              GridTextColumn(mappingName: 'id')
-              ..softWrap = true
-              ..overflow = TextOverflow.clip
-              ..headerText = 'ID',
-              GridTextColumn(mappingName: 'contactName')
-              ..softWrap = true 
-              ..overflow = TextOverflow.clip
-              ..headerText = 'Contact Name',
-              GridTextColumn(mappingName: 'companyName')
-              ..softWrap = true 
-              ..overflow = TextOverflow.clip
-              ..headerText = 'Company Name',
-              GridTextColumn(mappingName: 'country')
-              ..softWrap = true
-              ..overflow = TextOverflow.clip
-              ..headerText = 'Country',
-              GridTextColumn(mappingName: 'address')
-              ..softWrap = true
-              ..isHidden = true
-              ..overflow = TextOverflow.clip
-              ..headerText = 'Address',
-              GridTextColumn(mappingName: 'city')
-              ..softWrap = true
-              ..isHidden = true
-              ..overflow = TextOverflow.clip 
-              ..headerText = 'City',
-              GridTextColumn(mappingName: 'designation') 
-              ..softWrap = true 
-              ..isHidden = true
-              ..overflow = TextOverflow.clip
-              ..headerText = 'Designation',
-             
-        ]
-        )
-        );
-    }
+          },
+          columns: <GridColumn>[
+        GridTextColumn(mappingName: 'id')
+          ..softWrap = true
+          ..overflow = TextOverflow.clip
+          ..headerText = 'ID',
+        GridTextColumn(mappingName: 'contactName')
+          ..softWrap = true
+          ..overflow = TextOverflow.clip
+          ..headerText = 'Contact Name',
+        GridTextColumn(mappingName: 'companyName')
+          ..softWrap = true
+          ..overflow = TextOverflow.clip
+          ..headerText = 'Company Name',
+        GridTextColumn(mappingName: 'country')
+          ..softWrap = true
+          ..overflow = TextOverflow.clip
+          ..headerText = 'Country',
+        GridTextColumn(mappingName: 'address')
+          ..softWrap = true
+          ..isHidden = true
+          ..overflow = TextOverflow.clip
+          ..headerText = 'Address',
+        GridTextColumn(mappingName: 'city')
+          ..softWrap = true
+          ..isHidden = true
+          ..overflow = TextOverflow.clip
+          ..headerText = 'City',
+        GridTextColumn(mappingName: 'designation')
+          ..softWrap = true
+          ..isHidden = true
+          ..overflow = TextOverflow.clip
+          ..headerText = 'Designation',
+      ]));
+}
 
 {% endhighlight %}
 {% endtabs %}
