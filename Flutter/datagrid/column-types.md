@@ -31,20 +31,20 @@ Column can be bound to a property in data object using `GridColumn.mappingName` 
 {% tabs %}
 {% highlight Dart %} 
  
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        body: SfDataGrid(
-          source: _employeeDataSource,
-          columns: [
-            GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-            GridTextColumn(mappingName: 'name', headerText: 'Name'),
-            GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-            GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
-          ],
-        ),
-      );
-    }
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDataGrid(
+      source: _employeeDataSource,
+      columns: [
+        GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+        GridTextColumn(mappingName: 'name', headerText: 'Name'),
+        GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+        GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+      ],
+    ),
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -56,21 +56,21 @@ Column can be bound to a property in data object using `GridColumn.mappingName` 
 {% tabs %}
 {% highlight Dart %} 
  
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        body: SfDataGrid(
-          source: _employeeDataSource,
-          columns: [
-            GridNumericColumn(mappingName: 'id', headerText: 'ID')
-              ..padding = EdgeInsets.all(20.0),
-            GridTextColumn(mappingName: 'name', headerText: 'Name'),
-            GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-            GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
-          ],
-        ),
-      );
-    }
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDataGrid(
+      source: _employeeDataSource,
+      columns: [
+        GridNumericColumn(mappingName: 'id', headerText: 'ID')
+          ..padding = EdgeInsets.all(20.0),
+        GridTextColumn(mappingName: 'name', headerText: 'Name'),
+        GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+        GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+      ],
+    ),
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -85,21 +85,21 @@ Column can be bound to a property in data object using `GridColumn.mappingName` 
 {% tabs %}
 {% highlight Dart %} 
  
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        body: SfDataGrid(
-          source: _employeeDataSource,
-          columns: [
-            GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-            GridTextColumn(mappingName: 'name', headerText: 'Name'),
-            GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-            GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
-              ..isHidden = true,
-          ],
-        ),
-      );
-    }
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDataGrid(
+      source: _employeeDataSource,
+      columns: [
+        GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+        GridTextColumn(mappingName: 'name', headerText: 'Name'),
+        GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+        GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+          ..isHidden = true,
+      ],
+    ),
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -114,21 +114,21 @@ Column can be bound to a property in data object using `GridColumn.mappingName` 
 {% tabs %}
 {% highlight Dart %} 
  
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        body: SfDataGrid(
-          source: _employeeDataSource,
-          columns: [
-            GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-            GridTextColumn(mappingName: 'name', headerText: 'Name')
-              ..width = 100.0,
-            GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-            GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
-          ],
-        ),
-      );
-    }
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDataGrid(
+      source: _employeeDataSource,
+      columns: [
+        GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+        GridTextColumn(mappingName: 'name', headerText: 'Name')
+          ..width = 100.0,
+        GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+        GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+      ],
+    ),
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -140,22 +140,22 @@ Column can be bound to a property in data object using `GridColumn.mappingName` 
 {% tabs %}
 {% highlight Dart %} 
  
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        body: SfDataGrid(
-          source: _employeeDataSource,
-          columns: [
-            GridNumericColumn(mappingName: 'id', headerText: 'ID')
-              ..textAlignment = Alignment.center
-              ..headerTextAlignment = Alignment.center,
-            GridTextColumn(mappingName: 'name', headerText: 'Name'),
-            GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-            GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
-          ],
-        ),
-      );
-    }
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDataGrid(
+      source: _employeeDataSource,
+      columns: [
+        GridNumericColumn(mappingName: 'id', headerText: 'ID')
+          ..textAlignment = Alignment.center
+          ..headerTextAlignment = Alignment.center,
+        GridTextColumn(mappingName: 'name', headerText: 'Name'),
+        GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+        GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+      ],
+    ),
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -167,22 +167,22 @@ When the text for the record cells exceeds the content area, wrap the record cel
 {% tabs %}
 {% highlight Dart %} 
  
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        body: SfDataGrid(
-          source: _employeeDataSource,
-          columns: [
-            GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-            GridTextColumn(mappingName: 'name', headerText: 'Name'),
-            GridTextColumn(mappingName: 'designation', headerText: 'Designation')
-              ..softWrap = true,
-            GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
-            
-          ],
-        ),
-      );
-    }
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDataGrid(
+      source: _employeeDataSource,
+      columns: [
+        GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+        GridTextColumn(mappingName: 'name', headerText: 'Name'),
+        GridTextColumn(mappingName: 'designation', headerText: 'Designation')
+          ..softWrap = true,
+        GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+        
+      ],
+    ),
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -194,56 +194,56 @@ When the text for the record cells exceeds the content area, wrap the record cel
 {% tabs %}
 {% highlight Dart %} 
 
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        body: SfDataGrid(
-          source: _employeeDataSource,
-          columns: [
-            GridNumericColumn(mappingName: 'id', headerText: 'ID')
-              ..overflow = TextOverflow.fade,
-            GridTextColumn(mappingName: 'name', headerText: 'Name')
-              ..overflow = TextOverflow.clip,
-            GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-            GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
-          ],
-        ),
-      );
-    }
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDataGrid(
+      source: _employeeDataSource,
+      columns: [
+        GridNumericColumn(mappingName: 'id', headerText: 'ID')
+          ..overflow = TextOverflow.fade,
+        GridTextColumn(mappingName: 'name', headerText: 'Name')
+          ..overflow = TextOverflow.clip,
+        GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+        GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+      ],
+    ),
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Column styling
 
-GridColumn provides support to customize the style of column using `GridColumn.cellStyle` and `GridColumn.headerStyle` properties. The type of `cellStyle` and `headerStyle` property is `DataGridCellStyle` and `DataGridHeaderCellStyle`. For more information, refer [Styling](styles.md\#styles) section.
+GridColumn provides support to customize the style of column using `GridColumn.cellStyle` and `GridColumn.headerStyle` properties. The type of `cellStyle` and `headerStyle` property is `DataGridCellStyle` and `DataGridHeaderCellStyle`. For more information, refer [Styling](styles.md\#styling-in-flutter-dataGrid) section.
 
 ### Change column text style
 
-`GridColumn.cellStyle.textStyle` and ` GridColumn.headerStyle.textStyle` properties can be used to change the text style for the column's cells.
+`GridColumn.cellStyle.textStyle` and `GridColumn.headerStyle.textStyle` properties can be used to change the text style for the column's cells.
 
 {% tabs %}
 {% highlight Dart %} 
  
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        body: SfDataGrid(
-          source: _employeeDataSource,
-          columns: [
-            GridNumericColumn(mappingName: 'id', headerText: 'ID')
-              ..headerStyle = DataGridHeaderCellStyle(
-                  textStyle:
-                      TextStyle(color: Colors.red, fontWeight: FontWeight.bold))
-              ..cellStyle =
-                  DataGridCellStyle(textStyle: TextStyle(color: Colors.red)),
-            GridTextColumn(mappingName: 'name', headerText: 'Name'),
-            GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-            GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
-          ],
-        ),
-      );
-    }
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDataGrid(
+      source: _employeeDataSource,
+      columns: [
+        GridNumericColumn(mappingName: 'id', headerText: 'ID')
+          ..headerStyle = DataGridHeaderCellStyle(
+              textStyle:
+                  TextStyle(color: Colors.red, fontWeight: FontWeight.bold))
+          ..cellStyle =
+              DataGridCellStyle(textStyle: TextStyle(color: Colors.red)),
+        GridTextColumn(mappingName: 'name', headerText: 'Name'),
+        GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+        GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+      ],
+    ),
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -252,31 +252,31 @@ GridColumn provides support to customize the style of column using `GridColumn.c
 
 ### Change column background color
 
-` GridColumn.cellStyle.backgroundColor` and ` GridColumn.headerStyle.backgroundColor` properties can be used to change the background color for the column's cells.
+` GridColumn.cellStyle.backgroundColor` and `GridColumn.headerStyle.backgroundColor` properties can be used to change the background color for the column's cells.
 
 {% tabs %}
 {% highlight Dart %} 
  
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        body: SfDataGrid(
-          source: _employeeDataSource,
-          columns: [
-            GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-            GridTextColumn(mappingName: 'name', headerText: 'Name'),
-            GridTextColumn(mappingName: 'designation', headerText: 'Designation')
-              ..headerStyle = DataGridHeaderCellStyle(
-                  textStyle:
-                      TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-                  backgroundColor: Colors.deepPurple)
-              ..cellStyle =
-                  DataGridCellStyle(backgroundColor: Colors.deepPurple[200]),
-            GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
-          ],
-        ),
-      );
-    }
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDataGrid(
+      source: _employeeDataSource,
+      columns: [
+        GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+        GridTextColumn(mappingName: 'name', headerText: 'Name'),
+        GridTextColumn(mappingName: 'designation', headerText: 'Designation')
+          ..headerStyle = DataGridHeaderCellStyle(
+              textStyle:
+                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+              backgroundColor: Colors.deepPurple)
+          ..cellStyle =
+              DataGridCellStyle(backgroundColor: Colors.deepPurple[200]),
+        GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+      ],
+    ),
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -290,20 +290,20 @@ GridColumn provides support to customize the style of column using `GridColumn.c
 {% tabs %}
 {% highlight Dart %} 
  
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        body: SfDataGrid(
-          source: _employeeDataSource,
-          columns: [
-            GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-            GridTextColumn(mappingName: 'name', headerText: 'Name'),
-            GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-            GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
-          ],
-        ),
-      );
-    }
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDataGrid(
+      source: _employeeDataSource,
+      columns: [
+        GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+        GridTextColumn(mappingName: 'name', headerText: 'Name'),
+        GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+        GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+      ],
+    ),
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -315,20 +315,20 @@ GridColumn provides support to customize the style of column using `GridColumn.c
 {% tabs %}
 {% highlight Dart %} 
 
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        body: SfDataGrid(
-          source: _employeeDataSource,
-          columns: [
-            GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-            GridTextColumn(mappingName: 'name', headerText: 'Name'),
-            GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-            GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
-          ],
-        ),
-      );
-    }
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDataGrid(
+      source: _employeeDataSource,
+      columns: [
+        GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+        GridTextColumn(mappingName: 'name', headerText: 'Name'),
+        GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+        GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+      ],
+    ),
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -340,22 +340,22 @@ The numeric value can be formatted by using `GridNumericColumn.numberFormat` pro
 {% tabs %}
 {% highlight Dart %} 
  
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        body: SfDataGrid(
-          source: _employeeDataSource,
-          columns: [
-            GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-            GridTextColumn(mappingName: 'name', headerText: 'Name'),
-            GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-            GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
-              ..numberFormat = 
-                NumberFormat.currency(locale: 'en_US', symbol: '\$')
-          ],
-        ),
-      );
-    }
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDataGrid(
+      source: _employeeDataSource,
+      columns: [
+        GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+        GridTextColumn(mappingName: 'name', headerText: 'Name'),
+        GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+        GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+          ..numberFormat = 
+            NumberFormat.currency(locale: 'en_US', symbol: '\$')
+      ],
+    ),
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -369,21 +369,21 @@ The numeric value can be formatted by using `GridNumericColumn.numberFormat` pro
 {% tabs %}
 {% highlight Dart %} 
  
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        body: SfDataGrid(
-          source: _employeeDataSource,
-          columns: [
-            GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-            GridTextColumn(mappingName: 'name', headerText: 'Name'),
-            GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
-            GridDateTimeColumn(
-                mappingName: 'dateOfJoining', headerText: 'Date of Joining')
-          ],
-        ),
-      );
-    }
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDataGrid(
+      source: _employeeDataSource,
+      columns: [
+        GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+        GridTextColumn(mappingName: 'name', headerText: 'Name'),
+        GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+        GridDateTimeColumn(
+            mappingName: 'dateOfJoining', headerText: 'Date of Joining')
+      ],
+    ),
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -395,22 +395,22 @@ The datetime value can be formatted by using `GridDateTimeColumn.dateFormat` pro
 {% tabs %}
 {% highlight Dart %} 
  
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        body: SfDataGrid(
-          source: _employeeDataSource,
-          columns: [
-            GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-            GridTextColumn(mappingName: 'name', headerText: 'Name'),
-            GridDateTimeColumn(
-                mappingName: 'dateOfJoining', headerText: 'Date of Joining')
-              ..dateFormat = DateFormat('dd/MM/yyyy'),
-            GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
-          ],
-        ),
-      );
-    }
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDataGrid(
+      source: _employeeDataSource,
+      columns: [
+        GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+        GridTextColumn(mappingName: 'name', headerText: 'Name'),
+        GridDateTimeColumn(
+            mappingName: 'dateOfJoining', headerText: 'Date of Joining')
+          ..dateFormat = DateFormat('dd/MM/yyyy'),
+        GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+      ],
+    ),
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -426,23 +426,25 @@ In the below example, image is returned in `cellBuilder` callback. Image is alre
 {% tabs %}
 {% highlight Dart %} 
 
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        body: SfDataGrid(
-          source: _employeeDataSource,
-          cellBuilder: (BuildContext context, GridColumn column, int rowindex) {
-            return employees[rowIndex].image;
-          },
-          columns: [
-            GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-            GridWidgetColumn(mappingName: 'image', headerText: 'Image'),
-            GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-            GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
-          ],
-        ),
-      );
-    }
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDataGrid(
+      source: _employeeDataSource,
+      cellBuilder: (BuildContext context, GridColumn column, int rowindex) {
+        return employees[rowIndex].image;
+      },
+      columns: [
+        GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+        GridWidgetColumn(mappingName: 'image', headerText: 'Image'),
+        GridTextColumn(mappingName: 'name', headerText: 'Name'),
+        GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+      ],
+    ),
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
+
+![flutter datagrid shows image in a column through widget column](images/column-types/flutter-datagrid-widget-column.png)
