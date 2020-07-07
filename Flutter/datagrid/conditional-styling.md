@@ -24,34 +24,34 @@ Callback requires `QueryCellStyleArgs` as parameter which provides all the requi
 {% tabs %}
 {% highlight Dart %} 
 
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        body: SfDataGrid(
-            source: _employeeDataSource,
-            columns: <GridColumn>[
-              GridNumericColumn(mappingName: 'id')..headerText = 'Order ID',
-              GridTextColumn(mappingName: 'name')..headerText = 'Name',
-              GridTextColumn(mappingName: 'designation')
-                ..headerText = 'Designation',
-              GridNumericColumn(mappingName: 'salary')..headerText = 'Salary'
-            ],
-            onQueryCellStyle: (QueryCellStyleArgs args) {
-              if (args.column.mappingName == 'designation') {
-                if (args.cellValue == 'Developer') {
-                  return DataGridCellStyle(
-                      textStyle: TextStyle(fontStyle: FontStyle.italic),
-                      backgroundColor: Colors.tealAccent);
-                } else if (args.cellValue == 'Manager') {
-                  return DataGridCellStyle(
-                      textStyle: TextStyle(fontStyle: FontStyle.italic),
-                      backgroundColor: Colors.blue[200]);
-                }
-              }
-              return null;
-            }),
-      );
-    }
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDataGrid(
+        source: _employeeDataSource,
+        columns: <GridColumn>[
+          GridNumericColumn(mappingName: 'id')..headerText = 'Order ID',
+          GridTextColumn(mappingName: 'name')..headerText = 'Name',
+          GridTextColumn(mappingName: 'designation')
+            ..headerText = 'Designation',
+          GridNumericColumn(mappingName: 'salary')..headerText = 'Salary'
+        ],
+        onQueryCellStyle: (QueryCellStyleArgs args) {
+          if (args.column.mappingName == 'designation') {
+            if (args.cellValue == 'Developer') {
+              return DataGridCellStyle(
+                  textStyle: TextStyle(fontStyle: FontStyle.italic),
+                  backgroundColor: Colors.tealAccent);
+            } else if (args.cellValue == 'Manager') {
+              return DataGridCellStyle(
+                  textStyle: TextStyle(fontStyle: FontStyle.italic),
+                  backgroundColor: Colors.blue[200]);
+            }
+          }
+          return null;
+        }),
+  );
+}
     
 {% endhighlight %}
 {% endtabs %}
@@ -65,30 +65,30 @@ The appearance of the alternating cells in a column can be customized conditiona
 {% tabs %}
 {% highlight Dart %} 
 
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        body: SfDataGrid(
-            source: _employeeDataSource,
-            columns: <GridColumn>[
-              GridNumericColumn(mappingName: 'id')..headerText = 'Order ID',
-              GridTextColumn(mappingName: 'name')..headerText = 'Name',
-              GridTextColumn(mappingName: 'designation')
-                ..headerText = 'Designation',
-              GridNumericColumn(mappingName: 'salary')..headerText = 'Salary',
-            ],
-            onQueryCellStyle: (QueryCellStyleArgs args) {
-              if (args.column.mappingName == 'id') {
-                if (args.rowIndex % 2 == 0) {
-                  return DataGridCellStyle(
-                      textStyle: TextStyle(fontStyle: FontStyle.italic),
-                      backgroundColor: Colors.blueAccent);
-                }
-              }
-              return null;
-            }),
-      );
-    }
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDataGrid(
+        source: _employeeDataSource,
+        columns: <GridColumn>[
+          GridNumericColumn(mappingName: 'id')..headerText = 'Order ID',
+          GridTextColumn(mappingName: 'name')..headerText = 'Name',
+          GridTextColumn(mappingName: 'designation')
+            ..headerText = 'Designation',
+          GridNumericColumn(mappingName: 'salary')..headerText = 'Salary',
+        ],
+        onQueryCellStyle: (QueryCellStyleArgs args) {
+          if (args.column.mappingName == 'id') {
+            if (args.rowIndex % 2 == 0) {
+              return DataGridCellStyle(
+                  textStyle: TextStyle(fontStyle: FontStyle.italic),
+                  backgroundColor: Colors.blueAccent);
+            }
+          }
+          return null;
+        }),
+  );
+}
     
 {% endhighlight %}
 {% endtabs %}
@@ -105,33 +105,33 @@ Callback requires `QueryRowStyleArgs` as parameter which provides all the requir
 {% tabs %}
 {% highlight Dart %} 
       
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        body: SfDataGrid(
-            source: _employeeDataSource,
-            columns: <GridColumn>[
-              GridNumericColumn(mappingName: 'id')..headerText = 'Order ID',
-              GridTextColumn(mappingName: 'name')..headerText = 'Name',
-              GridTextColumn(mappingName: 'designation')
-                ..headerText = 'Designation',
-              GridNumericColumn(mappingName: 'salary')..headerText = 'Salary',
-            ],
-            onQueryRowStyle: (QueryRowStyleArgs args) {
-              Employee employee = _employeeCollection[args.rowIndex];
-              if (employee.salary >= 10000 && employee.salary < 15000) {
-                return DataGridCellStyle(
-                    textStyle: TextStyle(color: Colors.white),
-                    backgroundColor: Colors.blue[300]);
-              } else if (employee.salary <= 15000) {
-                return DataGridCellStyle(
-                    textStyle: TextStyle(color: Colors.white),
-                    backgroundColor: Colors.orange[300]);
-              }
-              return null;
-            }),
-      );
-    }
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDataGrid(
+        source: _employeeDataSource,
+        columns: <GridColumn>[
+          GridNumericColumn(mappingName: 'id')..headerText = 'Order ID',
+          GridTextColumn(mappingName: 'name')..headerText = 'Name',
+          GridTextColumn(mappingName: 'designation')
+            ..headerText = 'Designation',
+          GridNumericColumn(mappingName: 'salary')..headerText = 'Salary',
+        ],
+        onQueryRowStyle: (QueryRowStyleArgs args) {
+          Employee employee = _employeeCollection[args.rowIndex];
+          if (employee.salary >= 10000 && employee.salary < 15000) {
+            return DataGridCellStyle(
+                textStyle: TextStyle(color: Colors.white),
+                backgroundColor: Colors.blue[300]);
+          } else if (employee.salary <= 15000) {
+            return DataGridCellStyle(
+                textStyle: TextStyle(color: Colors.white),
+                backgroundColor: Colors.orange[300]);
+          }
+          return null;
+        }),
+  );
+}
     
 {% endhighlight %}
 {% endtabs %}
@@ -145,26 +145,26 @@ The appearance of the alternating rows in `SfDataGrid` can be customized by usin
 {% tabs %}
 {% highlight Dart %} 
 
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        body: SfDataGrid(
-            source: _employeeDataSource,
-            columns: <GridColumn>[
-              GridNumericColumn(mappingName: 'id')..headerText = 'Order ID',
-              GridTextColumn(mappingName: 'name')..headerText = 'Name',
-              GridNumericColumn(mappingName: 'salary')..headerText = 'Salary',
-              GridTextColumn(mappingName: 'designation')
-                ..headerText = 'Designation',
-            ],
-            onQueryRowStyle: (QueryRowStyleArgs args) {
-              if (args.rowIndex % 2 == 0) {
-                return DataGridCellStyle(backgroundColor: Colors.lightGreen[300]);
-              }
-              return null;
-            }),
-      );
-    }
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDataGrid(
+        source: _employeeDataSource,
+        columns: <GridColumn>[
+          GridNumericColumn(mappingName: 'id')..headerText = 'Order ID',
+          GridTextColumn(mappingName: 'name')..headerText = 'Name',
+          GridNumericColumn(mappingName: 'salary')..headerText = 'Salary',
+          GridTextColumn(mappingName: 'designation')
+            ..headerText = 'Designation',
+        ],
+        onQueryRowStyle: (QueryRowStyleArgs args) {
+          if (args.rowIndex % 2 == 0) {
+            return DataGridCellStyle(backgroundColor: Colors.lightGreen[300]);
+          }
+          return null;
+        }),
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
