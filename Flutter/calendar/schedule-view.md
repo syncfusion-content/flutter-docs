@@ -19,7 +19,7 @@ The schedule view display two different UI for mobile and web, for mobile it wil
 * If the web view width is less than `767` the calendar will render the mobile schedule UI for the web. 
 
 ## Appointment item height
-You can customize the height of an appointment in a schedule view by using the [appointmentItemHeight](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ScheduleViewSettings/appointmentItemHeight.html) property of [ScheduleViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ScheduleViewSettings/ScheduleViewSettings.html).
+You can customize the height of an appointment in a schedule view by using the [appointmentItemHeight](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ScheduleViewSettings/appointmentItemHeight.html) property of [ScheduleViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ScheduleViewSettings-class.html).
 
 {% tabs %}
 {% highlight Dart %}
