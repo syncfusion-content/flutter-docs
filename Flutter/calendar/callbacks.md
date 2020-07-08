@@ -76,7 +76,7 @@ Widget build(BuildContext context) {
 ## Long press callback
 The [onLongPress](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onLongPress.html) callback called whenever the `SfCalendar` elements long pressed on view.
 
-The long-pressed date, appointments, and element details when the long-press action performed on element available in the [CalendarLongPressDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarLongPressCallback.html).
+The long-pressed date, appointments, and element details when the long-press action performed on element available in the [CalendarLongPressDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarLongPressDetails-class.html).
 
 `date` - returns the long-pressed date.
 `appointments` - returns the long-pressed appointments.
