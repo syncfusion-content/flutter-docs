@@ -13,7 +13,7 @@ Data labels provides identification for the shapes by displaying their names. Yo
 
 ## Show data labels
 
-You can show data labels on the map using the `MapShapeLayer.showDataLabels` property. By default, the data labels are rendered based on the value of `shapeDataField` property. The default value of the `showDataLabels` property is `false`.
+You can show data labels on the map using the [`MapShapeLayer.showDataLabels`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/showDataLabels.html) property. By default, the data labels are rendered based on the value of [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeDataField.html) property. The default value of the [`showDataLabels`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/showDataLabels.html) property is `false`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -50,7 +50,7 @@ Widget build(BuildContext context) {
 
 ## Text customization
 
-You can customize text of the data labels using the `MapShapeLayerDelegate.dataLabelMapper` property.
+You can customize text of the data labels using the [`MapShapeLayerDelegate.dataLabelMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/dataLabelMapper.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -112,7 +112,7 @@ class Model {
 
 ## Overflow mode
 
-You can trim or remove the data label when it is overflowed from the shape using the `MapDataLabelSettings.overflowMode` property. The default value of the `overflowMode` property is `MapLabelOverflowMode.none`.
+You can trim or remove the data label when it is overflowed from the shape using the [`MapDataLabelSettings.overflowMode`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapDataLabelSettings/overflowMode.html) property. The default value of the [`overflowMode`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapDataLabelSettings/overflowMode.html) property is `MapLabelOverflowMode.none`.
 
 By default, the data labels will render even if it overflows from the shape. 
 
@@ -180,7 +180,7 @@ class Model {
 
 ## Appearance customization
 
-You can customize the data labels using the `MapDataLabelSettings.textStyle` property.
+You can customize the data labels using the [`MapDataLabelSettings.textStyle`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapDataLabelSettings/textStyle.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -250,7 +250,7 @@ class Model {
 
 <b>Using SfMapsTheme</b>
 
-You can also customize the data labels using the `SfMapsThemeData.dataLabelTextStyle` property in `SfMapsTheme`.
+You can also customize the data labels using the [`SfMapsThemeData.dataLabelTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData/dataLabelTextStyle.html) property in [`SfMapsTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsTheme-class.html).
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfMapsTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsTheme-class.html).
 

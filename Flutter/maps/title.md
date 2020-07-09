@@ -13,7 +13,7 @@ This section helps to learn about how to add title in the maps and customize the
 
 ## Title text
 
-You can define the maps title using `SfMaps.title` property. You can set the text for the title using the `MapsTitle.text` property.
+You can define the maps title using [`SfMaps.title`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps/title.html) property. You can set the text for the title using the [`MapsTitle.text`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTitle/text.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -52,7 +52,7 @@ Widget build(BuildContext context) {
 
 ## Text style
 
-You can change the style of the title text in the maps using the `MapsTitle.textStyle` property.
+You can change the style of the title text in the maps using the [`MapsTitle.textStyle`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTitle/textStyle.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -96,7 +96,7 @@ Widget build(BuildContext context) {
 
 <b>Using SfMapsTheme</b>
 
-You can also change the style of the title text in the maps using the `titleTextStyle` property of `SfMapsThemeData`.
+You can also change the style of the title text in the maps using the [`SfMapsThemeData.titleTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData/titleTextStyle.html) property.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfMapsTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsTheme-class.html).
 
@@ -148,7 +148,7 @@ Widget build(BuildContext context) {
 
 ## Text alignment
 
-You can align the title text in the maps using the `MapsTitle.alignment` property. By default, the alignment will be center. You can also align the text in the available alignment options in [`Alignment`](https://api.flutter.dev/flutter/painting/Alignment-class.html).
+You can align the title text in the maps using the [`MapsTitle.alignment`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTitle/alignment.html) property. By default, the alignment will be center. You can also align the text in the available alignment options in [`Alignment`](https://api.flutter.dev/flutter/painting/Alignment-class.html).
 
 {% tabs %}
 {% highlight Dart %}
@@ -195,7 +195,7 @@ Widget build(BuildContext context) {
 
 ## Background color
 
-You can change the background color of the title in the maps using the `MapsTitle.color`.
+You can change the background color of the title in the maps using the [`MapsTitle.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTitle/color.html).
 
 {% tabs %}
 {% highlight Dart %}
@@ -242,7 +242,7 @@ Widget build(BuildContext context) {
 
 ## Decoration
 
-You can decorate the title of maps using the `MapsTitle.decoration` property. You can use [`BoxDecoration`](https://api.flutter.dev/flutter/painting/BoxDecoration-class.html), [`ShapeDecoration`](https://api.flutter.dev/flutter/painting/ShapeDecoration-class.html) or create a custom [`Decoration`](https://api.flutter.dev/flutter/painting/Decoration-class.html).
+You can decorate the title of maps using the [`MapsTitle.decoration`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTitle/decoration.html) property. You can use [`BoxDecoration`](https://api.flutter.dev/flutter/painting/BoxDecoration-class.html), [`ShapeDecoration`](https://api.flutter.dev/flutter/painting/ShapeDecoration-class.html) or create a custom [`Decoration`](https://api.flutter.dev/flutter/painting/Decoration-class.html).
 
 {% tabs %}
 {% highlight Dart %}
@@ -347,7 +347,7 @@ Widget build(BuildContext context) {
 
 ## Padding
 
-You can add padding to the maps title using the `MapsTitle.padding` property.
+You can add padding to the maps title using the [`MapsTitle.padding`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTitle/padding.html) property.
 
 {% tabs %}
 {% highlight Dart %}
