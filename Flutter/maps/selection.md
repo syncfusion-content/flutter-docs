@@ -13,7 +13,7 @@ You can select a shape in order to highlight that area on a map. You can use the
 
 ## Enable shape selection
 
-You can enable shape selection on a map using the `MapShapeLayer.enableSelection` property. The default value of the `enableSelection` property is `false`.
+You can enable shape selection on a map using the [`MapShapeLayer.enableSelection`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/enableSelection.html) property. The default value of the [`enableSelection`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/enableSelection.html) property is `false`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -75,11 +75,11 @@ class Model {
 ![Enable shape selection](images/selection/enable-shape-selection.png)
 
 N>
-* Refer the `MapSelectionSettings`, for customizing the selected shape's appearance.
+* Refer the [`MapSelectionSettings`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/selectionSettings.html), for customizing the selected shape's appearance.
 
 ## Selection on initial rendering
 
-You can programmatically select a shape on a map using the `MapShapeLayer.initialSelectedIndex` property.
+You can programmatically select a shape on a map using the [`MapShapeLayer.initialSelectedIndex`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/initialSelectedIndex.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -145,10 +145,10 @@ class Model {
 
 You can customize the below appearance of the selected shape.
 
-* **Background color** - Change the background color of the selected shape using the `MapSelectionSettings.color` property.
-* **Stroke width** - Change the stroke width of the selected shape using the `MapSelectionSettings.strokeWidth` property.
-* **Stroke color** - Change the stroke color of the selected shape using the `MapSelectionSettings.strokeColor` property.
-* **Opacity** - Change the opacity of the selected shape using the `MapSelectionSettings.opacity` property.
+* **Background color** - Change the background color of the selected shape using the [`MapSelectionSettings.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapSelectionSettings/color.html) property.
+* **Stroke width** - Change the stroke width of the selected shape using the [`MapSelectionSettings.strokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapSelectionSettings/strokeWidth.html) property.
+* **Stroke color** - Change the stroke color of the selected shape using the [`MapSelectionSettings.strokeColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapSelectionSettings/strokeColor.html) property.
+* **Opacity** - Change the opacity of the selected shape using the [`MapSelectionSettings.opacity`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapSelectionSettings/opacity.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -214,11 +214,11 @@ class Model {
 
 <b>Using SfMapsTheme</b>
 
-You can customize the below appearance of the selected shape using `SfMapsTheme`.
+You can customize the below appearance of the selected shape using [`SfMapsTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsTheme-class.html).
 
-* **Background color** - Change the background color of the selected shape using the `SfMapsThemeData.selectionColor` property.
-* **Stroke width** - Change the stroke width of the selected shape using the `SfMapsThemeData.selectionStrokeWidth` property.
-* **Stroke color** - Change the stroke color of the selected shape using the `SfMapsThemeData.selectionStrokeColor` property.
+* **Background color** - Change the background color of the selected shape using the [`SfMapsThemeData.selectionColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData/selectionColor.html) property.
+* **Stroke width** - Change the stroke width of the selected shape using the [`SfMapsThemeData.selectionStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData/selectionStrokeWidth.html) property.
+* **Stroke color** - Change the stroke color of the selected shape using the [`SfMapsThemeData.selectionStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData/selectionStrokeColor.html) property.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfMapsTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsTheme-class.html).
 
@@ -290,11 +290,11 @@ class Model {
 
 ## Handling selection change
 
-The `onSelectionChanged` callback is used to pass the index of the selected shape when the user is selecting a shape by tapping or clicking.
+The [`onSelectionChanged`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/onSelectionChanged.html) callback is used to pass the index of the selected shape when the user is selecting a shape by tapping or clicking.
 
 If the selected shape is tapped or clicked again, the index will be passed as -1. It means that, the shape is unselected.
 
-N> You can get the index of the selected shape from `MapShapeLayerController.selectedIndex`.
+N> You can get the index of the selected shape from [`MapShapeLayerController.selectedIndex`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerController/selectedIndex.html).
 
 {% tabs %}
 {% highlight Dart %}
