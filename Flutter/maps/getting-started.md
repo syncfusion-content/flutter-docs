@@ -70,9 +70,9 @@ Widget build(BuildContext context) {
 
 ## Add a GeoJSON file
 
-The `layers` in `SfMaps` contains collection of `MapShapeLayer`. The actual geographical rendering is done in the each `MapShapeLayer`. The `delegate` property of the `MapShapeLayer` is of type `MapShapeLayerDelegate`. The path of the .json file which contains the GeoJSON data has to be set to the `shapeFile` property of the `MapShapeLayerDelegate`.
+The [`layers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps/layers.html) in [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) contains collection of [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html). The actual geographical rendering is done in the each [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html). The [`delegate`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/delegate.html) property of the [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html) is of type [`MapShapeLayerDelegate`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate-class.html). The path of the .json file which contains the GeoJSON data has to be set to the [`shapeFile`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeFile.html) property of the [`MapShapeLayerDelegate`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate-class.html).
 
-The `shapeDataField` property of the `MapShapeLayerDelegate` is used to refer the unique field name in the .json file to identify each shapes. In 'Mapping the data source' section of this document, this `shapeDataField` will be used to map with respective value returned in `primaryValueMapper` from the data source.
+The [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeDataField.html) property of the [`MapShapeLayerDelegate`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate-class.html) is used to refer the unique field name in the .json file to identify each shapes. In 'Mapping the data source' section of this document, this [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeDataField.html) will be used to map with respective value returned in [`primaryValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/primaryValueMapper.html) from the data source.
 
 N> You can get the [`australia.json`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/australia-json-910278184.zip) file here. Add this json file to the assets folder of your root directory and refer the json file path in the `pubspec.yaml` file.
 
@@ -105,7 +105,7 @@ Widget build(BuildContext context) {
 
 ## Mapping the data source
 
-By default, the value specified for the `shapeDataField` in the GeoJSON file will be used in the elements like data labels, tooltip, and legend for their respective shapes. However, it is possible to keep a data source and customize these elements based on the requirement. As mentioned above, `shapeDataField` will be used to map with respective value returned in `primaryValueMapper` from the data source.
+By default, the value specified for the [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeDataField.html) in the GeoJSON file will be used in the elements like data labels, tooltip, and legend for their respective shapes. However, it is possible to keep a data source and customize these elements based on the requirement. As mentioned above, [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeDataField.html) will be used to map with respective value returned in [`primaryValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/primaryValueMapper.html) from the data source.
 
 {% tabs %}
 {% highlight Dart %}
@@ -158,25 +158,25 @@ class Model {
 {% endtabs %}
 
 N>
-* Refer the `MapShapeLayerDelegate.primaryValueMapper`, for mapping the data of the data source collection with the respective `MapShapeLayerDelegate.shapeDataField` in .json file.
-* Refer the `MapShapeLayerDelegate.bubbleSizeMapper`, for customizing the bubble size.
-* Refer the `MapShapeLayerDelegate.bubbleColorValueMapper`, for customizing the bubble colors.
-* Refer the `MapShapeLayerDelegate.dataLabelMapper`, for customizing the data label text.
-* Refer the `MapShapeLayerDelegate.shapeTooltipTextMapper`, for customizing the shape tooltip text.
-* Refer the `MapShapeLayerDelegate.bubbleTooltipTextMapper`, for customizing the bubble tooltip text.
-* Refer the `MapShapeLayerDelegate.shapeColorValueMapper`, for customizing the bubble colors.
+* Refer the [`MapShapeLayerDelegate.primaryValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/primaryValueMapper.html), for mapping the data of the data source collection with the respective [`MapShapeLayerDelegate.shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeDataField.html) in .json file.
+* Refer the [`MapShapeLayerDelegate.bubbleSizeMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/bubbleSizeMapper.html), for customizing the bubble size.
+* Refer the [`MapShapeLayerDelegate.bubbleColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/bubbleColorValueMapper.html), for customizing the bubble colors.
+* Refer the [`MapShapeLayerDelegate.dataLabelMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/dataLabelMapper.html), for customizing the data label text.
+* Refer the [`MapShapeLayerDelegate.shapeTooltipTextMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeTooltipTextMapper.html), for customizing the shape tooltip text.
+* Refer the [`MapShapeLayerDelegate.bubbleTooltipTextMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/bubbleTooltipTextMapper.html), for customizing the bubble tooltip text.
+* Refer the [`MapShapeLayerDelegate.shapeColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeColorValueMapper.html), for customizing the bubble colors.
 
 ## Add maps elements
 
 Add the basic maps elements such as title, data labels, legend, and tooltip as shown in the below code snippet.
 
-* **Title** - You can add a title to the maps to provide a quick information about the data plotted in the map using the `SfMaps.title` property.
+* **Title** - You can add a title to the maps to provide a quick information about the data plotted in the map using the [`SfMaps.title`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps/title.html) property.
 
-* **Data labels** - You can show data labels using the `MapShapeLayer.showDataLabels` property and also, it is possible to show data labels only for the particular shapes/or show custom text using the `MapShapeLayerDelegate.dataLabelMapper` property.
+* **Data labels** - You can show data labels using the [`MapShapeLayer.showDataLabels`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/showDataLabels.html) property and also, it is possible to show data labels only for the particular shapes/or show custom text using the [`MapShapeLayerDelegate.dataLabelMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/dataLabelMapper.html) property.
 
-* **Legend** - You can show legend using the `MapShapeLayer.showLegend` property. The icons color of the legend is applied based on the colors returned in the `MapShapeLayerDelegate.shapeColorValueMapper` property. It is possible to customize the legend icons color and texts using the `MapShapeLayerDelegate.shapeColorMappers` property.
+* **Legend** - You can show legend using the [`MapShapeLayer.showLegend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/showLegend.html) property. The icons color of the legend is applied based on the colors returned in the [`MapShapeLayerDelegate.shapeColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeColorValueMapper.html) property. It is possible to customize the legend icons color and texts using the [`MapShapeLayerDelegate.shapeColorMappers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeColorMappers.html) property.
 
-* **Tooltip** - You can enable tooltip for the shapes using the `MapShapeLayer.enableShapeTooltip` property and also, it is possible to enable tooltip only for the particular shapes/or show custom text using the `MapShapeLayerDelegate.shapeTooltipTextMapper` property.
+* **Tooltip** - You can enable tooltip for the shapes using the [`MapShapeLayer.enableShapeTooltip`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/enableShapeTooltip.html) property and also, it is possible to enable tooltip only for the particular shapes/or show custom text using the [`MapShapeLayerDelegate.shapeTooltipTextMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeTooltipTextMapper.html) property.
 
 {% tabs %}
 {% highlight Dart %}
