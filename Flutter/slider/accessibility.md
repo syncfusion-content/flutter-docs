@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility with Flutter Slider (SfSlider)
 
-The `SfSlider` can easily be accessed by screen readers. The default reading format is `$value`. You can change the reading format using the `semanticFormatterCallback` property.
+The `SfSlider` can easily be accessed by screen readers. By default, it will read the current value. You can change the reading format using the `semanticFormatterCallback` property.
 
 {% tabs %}
 {% highlight Dart %}

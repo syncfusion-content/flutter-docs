@@ -46,6 +46,14 @@ This page helps to navigate to the public API's available in the Syncfusion Flut
     </tr>
     <tr>
         <td>
+            Maps
+        </td>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/maps-library.html">Link</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
             PDF
         </td>
         <td>
@@ -74,6 +82,14 @@ This page helps to navigate to the public API's available in the Syncfusion Flut
         </td>
         <td>
             <a href="https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html">Link</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Slider
+        </td>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html">Link</a>
         </td>
     </tr>
 </table>
