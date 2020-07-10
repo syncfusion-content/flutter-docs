@@ -149,7 +149,7 @@ Widget build(BuildContext context) {
 
 ## Thumb icon
 
-You can show the custom widgets like icon or text inside the thumbs using the [`startThumbIcon`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/startThumbIcon.html) and the  [`endThumbIcon`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/endThumbIcon.html) properties.
+You can show the custom widgets like icon or text inside the thumbs using the [`startThumbIcon`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/startThumbIcon.html) and the [`endThumbIcon`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/endThumbIcon.html) properties.
 
 {% tabs %}
 {% highlight Dart %}
