@@ -11,12 +11,25 @@ documentation: ug
 
 The data grid applies style for all its elements by writing a Style class overriding from `DataGridCellStyle`. The styling can be applied to DataGrid by using the `SfDataGridThemeData` in `SfDataGridTheme`. The DataGrid should be wrapped inside the `SfDataGridTheme`.
 
+All the style classes such as [DataGridCellStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/DataGridCellStyle-class.html), [DataGridHeaderCellStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/DataGridHeaderCellStyle-class.html) related to `SfDataGrid` are available in the [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) package. To access those classes, import the below file in your application,
+
+{% tabs %}
+{% highlight Dart %} 
+
+import 'package:syncfusion_flutter_core/theme.dart';
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Styling row
 
 The appearance of cell can be customized by using the `SfDataGridThemeData.cellStyle`. It is applicable for all the record cells except column header.
 
 {% tabs %}
 {% highlight Dart %} 
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
 
 @override
 Widget build(BuildContext context) {
@@ -51,6 +64,9 @@ The appearance of cell can be customized by using the `SfDataGridThemeData.cellS
 
 {% tabs %}
 {% highlight Dart %} 
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
 
 @override
 Widget build(BuildContext context) {

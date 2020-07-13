@@ -827,11 +827,24 @@ class CustomSelectionManager extends RowSelectionManager{
  
 SfDataGrid allows to customize the appearance of the selected rows and current cell through `SfDataGridTheme.SfDataGridThemeData` property.
 
+All the style classes such as [DataGridCellStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/DataGridCellStyle-class.html), [DataGridHeaderCellStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/DataGridHeaderCellStyle-class.html), [DataGridCurrentCellStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/DataGridCurrentCellStyle-class.html) related to `SfDataGrid` are available in the [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) package. To access those classes, import the below file in your application,
+
+{% tabs %}
+{% highlight Dart %} 
+
+import 'package:syncfusion_flutter_core/theme.dart';
+
+{% endhighlight %}
+{% endtabs %}
+
 ### Selection
 The selection background and foreground color can be changed by `selectionStyle` property of `SfDataGridThemeData` in `SfDataGridTheme`.
 
 {% tabs %}
 {% highlight Dart %}
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
 
 @override
 Widget build(BuildContext context) {
@@ -870,6 +883,9 @@ The current cell border's color and thickness can be changed by `currentCellStyl
 
 {% tabs %}
 {% highlight Dart %}
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
 
 @override
 Widget build(BuildContext context){
