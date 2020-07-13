@@ -34,6 +34,7 @@ Callback requires `QueryCellStyleArgs` as parameter which provides all the requi
 {% tabs %}
 {% highlight Dart %} 
 
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 import 'package:syncfusion_flutter_core/theme.dart';
 
 @override
@@ -77,6 +78,7 @@ The appearance of the alternating cells in a column can be customized conditiona
 {% tabs %}
 {% highlight Dart %} 
 
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 import 'package:syncfusion_flutter_core/theme.dart';
 
 @override
@@ -119,6 +121,7 @@ Callback requires `QueryRowStyleArgs` as parameter which provides all the requir
 {% tabs %}
 {% highlight Dart %} 
 
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 import 'package:syncfusion_flutter_core/theme.dart';
       
 @override
@@ -161,6 +164,7 @@ The appearance of the alternating rows in `SfDataGrid` can be customized by usin
 {% tabs %}
 {% highlight Dart %} 
 
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 import 'package:syncfusion_flutter_core/theme.dart';
 
 @override

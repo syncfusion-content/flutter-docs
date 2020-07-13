@@ -28,6 +28,7 @@ The appearance of cell can be customized by using the `SfDataGridThemeData.cellS
 {% tabs %}
 {% highlight Dart %} 
 
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 import 'package:syncfusion_flutter_core/theme.dart';
 
 @override
@@ -64,6 +65,7 @@ The appearance of cell can be customized by using the `SfDataGridThemeData.cellS
 {% tabs %}
 {% highlight Dart %} 
 
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 import 'package:syncfusion_flutter_core/theme.dart';
 
 @override

@@ -235,6 +235,7 @@ import 'package:syncfusion_flutter_core/theme.dart';
 {% tabs %}
 {% highlight Dart %} 
 
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 import 'package:syncfusion_flutter_core/theme.dart';
 
 @override
@@ -269,6 +270,7 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %} 
 
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 import 'package:syncfusion_flutter_core/theme.dart';
  
 @override
