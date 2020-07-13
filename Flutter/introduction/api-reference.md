@@ -38,6 +38,14 @@ This page helps to navigate to the public API's available in the Syncfusion Flut
     </tr>
     <tr>
         <td>
+            DataGrid
+        </td>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/datagrid-library.html">Link</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
           Date Range Picker
         </td>
        <td>

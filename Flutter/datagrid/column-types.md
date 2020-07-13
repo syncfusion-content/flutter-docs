@@ -218,13 +218,25 @@ Widget build(BuildContext context) {
 
 GridColumn provides support to customize the style of column using `GridColumn.cellStyle` and `GridColumn.headerStyle` properties. The type of `cellStyle` and `headerStyle` property is `DataGridCellStyle` and `DataGridHeaderCellStyle`. For more information, refer [Styling](styles.md\#styling-in-flutter-dataGrid) section.
 
+All the style classes such as [DataGridCellStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/DataGridCellStyle-class.html), [DataGridHeaderCellStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/DataGridHeaderCellStyle-class.html) related to `SfDataGrid` are available in the [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) package. To access those classes, import the below file in your application,
+
+{% tabs %}
+{% highlight Dart %} 
+
+import 'package:syncfusion_flutter_core/theme.dart';
+
+{% endhighlight %}
+{% endtabs %}
+
 ### Change column text style
 
 `GridColumn.cellStyle.textStyle` and `GridColumn.headerStyle.textStyle` properties can be used to change the text style for the column's cells.
 
 {% tabs %}
 {% highlight Dart %} 
- 
+
+import 'package:syncfusion_flutter_core/theme.dart';
+
 @override
 Widget build(BuildContext context) {
   return Scaffold(
@@ -256,6 +268,8 @@ Widget build(BuildContext context) {
 
 {% tabs %}
 {% highlight Dart %} 
+
+import 'package:syncfusion_flutter_core/theme.dart';
  
 @override
 Widget build(BuildContext context) {
