@@ -14,6 +14,16 @@ The `SfDataGrid` allows to customize the style of the individual cells and rows 
 * Using `onQueryCellStyle` Callback
 * Using `onQueryRowStyle` Callback
 
+All the style classes such as [DataGridCellStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/DataGridCellStyle-class.html), [DataGridHeaderCellStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/DataGridHeaderCellStyle-class.html) related to `SfDataGrid` are available in the [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) package. To access those classes, import the below file in your application,
+
+{% tabs %}
+{% highlight Dart %} 
+
+import 'package:syncfusion_flutter_core/theme.dart';
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Cells
 
 ### Styling based on content
@@ -23,6 +33,9 @@ Callback requires `QueryCellStyleArgs` as parameter which provides all the requi
 
 {% tabs %}
 {% highlight Dart %} 
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
 
 @override
 Widget build(BuildContext context) {
@@ -65,6 +78,9 @@ The appearance of the alternating cells in a column can be customized conditiona
 {% tabs %}
 {% highlight Dart %} 
 
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
+
 @override
 Widget build(BuildContext context) {
   return Scaffold(
@@ -104,6 +120,9 @@ Callback requires `QueryRowStyleArgs` as parameter which provides all the requir
 
 {% tabs %}
 {% highlight Dart %} 
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
       
 @override
 Widget build(BuildContext context) {
@@ -144,6 +163,9 @@ The appearance of the alternating rows in `SfDataGrid` can be customized by usin
 
 {% tabs %}
 {% highlight Dart %} 
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
 
 @override
 Widget build(BuildContext context) {
