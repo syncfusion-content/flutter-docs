@@ -13,7 +13,7 @@ This section explains about options to customize the header row height and the r
 
 ## Set height for header row
 
-`SfDataGrid` allows you to customize the height of the header row by using the `headerRowHeight` property.
+[SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) allows you to customize the height of the header row by using the [headerRowHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/headerRowHeight.html) property.
 
 {% tabs %}
 {% highlight dart %} 
@@ -40,7 +40,7 @@ Widget build(BuildContext context) {
 
 ## Set height for rows except header row
 
-You can customize the height of the grid rows in `SfDataGrid` by using the `rowHeight` property.
+You can customize the height of the grid rows in `SfDataGrid` by using the [rowHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/rowHeight.html) property.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -63,11 +63,11 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows rows except header row with custom height ](images/row-height-customization/flutter-datagrid-row-height.jpg)
+![flutter datagrid shows rows except header row with custom height](images/row-height-customization/flutter-datagrid-row-height.jpg)
 
 ## Fit row height based on its content
 
-The row height can be fitted based on its content in `onQueryRowHeight` callback using `getAutoRowHeight` method which is available in `ColumnSizer`.
+The row height can be fitted based on its content in [onQueryRowHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onQueryRowHeight.html) callback using [getAutoRowHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/ColumnSizer/getAutoRowHeight.html) method which is available in [ColumnSizer](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/ColumnSizer-class.html).
 
 To access the `getAutoRowHeight` method, create an instance of `ColumnSizer`, set this instance in `columnSizer` property and use it in `onQueryRowHeight` callback. 
 
