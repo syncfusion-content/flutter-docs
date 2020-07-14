@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Types in Flutter DataGrid
 
-`SfDataGrid` provides support for various built-in column types. Each column has its own properties and renderer to handle different types of data. Based on the requirements, any column can be used.
+[SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) provides support for various built-in column types. Each column has its own properties and renderer to handle different types of data. Based on the requirements, any column can be used.
 
 The following table describes the types of columns and its usage:
 
@@ -26,7 +26,7 @@ GridColumn is a class that provides base functionalities for all the column type
 
 ### Mapping column to a property
 
-Column can be bound to a property in data object using `GridColumn.mappingName` property. `headerText` is used to display the required text in a column header. If the `headerText` is not mentioned, `mappingName` is considered.
+Column can be bound to a property in data object using [GridColumn.mappingName](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/mappingName.html) property. [headerText](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/headerText.html) is used to display the required text in a column header. If the `headerText` is not mentioned, `mappingName` is considered.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -51,7 +51,7 @@ Widget build(BuildContext context) {
 
 ### Set padding for column
 
-`GridColumn.padding` property can be used to set the padding for the cells in the column. It is also applicable to the column header cell except `GridWidgetColumn`. The default value of padding is 16.0.
+[GridColumn.padding](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/padding.html) property can be used to set the padding for the cells in the column. It is also applicable to the column header cell except [GridWidgetColumn](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridWidgetColumn-class.html). The default value of padding is 16.0.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -77,7 +77,7 @@ Widget build(BuildContext context) {
 
 ### Hiding a column
 
-`GridColumn.isHidden` property can be used to set a column as hidden. The default value of the `isHidden` property is false.
+[GridColumn.isHidden](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/isHidden.html) property can be used to set a column as hidden. The default value of the `isHidden` property is false.
 
 >**NOTE**  
    Set the `isHidden` property to `True` instead of setting column width as `0` to hide a column.
@@ -106,7 +106,7 @@ Widget build(BuildContext context) {
 
 ### Set manual width for column
 
-`SfDataGrid` allows you to customize the width of each `GridColumn` in the `SfDataGrid.Columns` collection. To customize column width, use the `GridColumn.width` property. By default, this property will not be assigned any value. The GridColumn renders in view based on the value of the `defaultColumnWidth` property.
+`SfDataGrid` allows you to customize the width of each [GridColumn](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn-class.html) in the [SfDataGrid.Columns](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/columns.html) collection. To customize column width, use the [GridColumn.width](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/width.html) property. By default, this property will not be assigned any value. The GridColumn renders in view based on the value of the [defaultColumnWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/defaultColumnWidth.html) property.
 
 >**NOTE**  
    Set the `isHidden` property to `True` instead of setting column width as `0` to hide a column.
@@ -135,7 +135,7 @@ Widget build(BuildContext context) {
 
 ### Set alignment for column
 
-`GridColumn.textAlignment` and `GridColumn.headerTextAlignment` can be used to customize the alignment for the cells and header cells in the column.
+[GridColumn.textAlignment](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/textAlignment.html) and [GridColumn.headerTextAlignment](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/headerTextAlignment.html) can be used to customize the alignment for the cells and header cells in the column.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -162,7 +162,7 @@ Widget build(BuildContext context) {
 
 ### Set text wrapping for column
 
-When the text for the record cells exceeds the content area, wrap the record cell by setting the `GridColumn.softWrap` as `True`. The default value of `softWrap` is false.
+When the text for the record cells exceeds the content area, wrap the record cell by setting the [GridColumn.softWrap](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/softWrap.html) as `True`. The default value of `softWrap` is false.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -189,7 +189,7 @@ Widget build(BuildContext context) {
 
 ### Change text overflow behavior
 
-`GridColumn.overflow` property can be used to change the behavior of the text overflow. The default value of overflow is ellipsis.
+[GridColumn.overflow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/overflow.html) property can be used to change the behavior of the text overflow. The default value of overflow is ellipsis.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -216,7 +216,7 @@ Widget build(BuildContext context) {
 
 ## Column styling
 
-GridColumn provides support to customize the style of column using `GridColumn.cellStyle` and `GridColumn.headerStyle` properties. The type of `cellStyle` and `headerStyle` property is `DataGridCellStyle` and `DataGridHeaderCellStyle`. For more information, refer [Styling](styles.md\#styling-in-flutter-dataGrid) section.
+GridColumn provides support to customize the style of column using [GridColumn.cellStyle](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/cellStyle.html) and [GridColumn.headerStyle](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/headerStyle.html) properties. The type of `cellStyle` and `headerStyle` property is `DataGridCellStyle` and `DataGridHeaderCellStyle`. For more information, refer [Styling](styles.md\#styling-in-flutter-dataGrid) section.
 
 All the style classes such as [DataGridCellStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/DataGridCellStyle-class.html), [DataGridHeaderCellStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/DataGridHeaderCellStyle-class.html) related to `SfDataGrid` are available in the [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) package. To access those classes, import the below file in your application,
 
@@ -265,7 +265,7 @@ Widget build(BuildContext context) {
 
 ### Change column background color
 
-` GridColumn.cellStyle.backgroundColor` and `GridColumn.headerStyle.backgroundColor` properties can be used to change the background color for the column's cells.
+`GridColumn.cellStyle.backgroundColor` and `GridColumn.headerStyle.backgroundColor` properties can be used to change the background color for the column's cells.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -301,7 +301,7 @@ Widget build(BuildContext context) {
 
 ## GridTextColumn
 
-`GridTextColumn` inherits all the properties of GridColumn. It is used to display the textual content to the column's cells.
+[GridTextColumn](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridTextColumn-class.html) inherits all the properties of GridColumn. It is used to display the textual content to the column's cells.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -326,7 +326,7 @@ Widget build(BuildContext context) {
 
 ## GridNumericColumn
 
-`GridNumericColumn` inherits all the properties of GridColumn. It is used to display the columns data as numeric values.
+[GridNumericColumn](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridNumericColumn-class.html) inherits all the properties of GridColumn. It is used to display the columns data as numeric values.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -351,7 +351,7 @@ Widget build(BuildContext context) {
 
 ### Number formatting
 
-The numeric value can be formatted by using `GridNumericColumn.numberFormat` property, which contains the set of predefined number patterns. For more information about predefined patterns, refer [NumberFormat](https://api.flutter.dev/flutter/intl/NumberFormat-class.html) class.
+The numeric value can be formatted by using [GridNumericColumn.numberFormat](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridNumericColumn/numberFormat.html) property, which contains the set of predefined number patterns. For more information about predefined patterns, refer [NumberFormat](https://api.flutter.dev/flutter/intl/NumberFormat-class.html) class.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -380,7 +380,7 @@ Widget build(BuildContext context) {
 
 ## GridDateTimeColumn
 
-`GridDateTimeColumn` inherits all the properties of GridColumn. It is used to display the columns data as datetime values.
+[GridDateTimeColumn](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridDateTimeColumn-class.html) inherits all the properties of GridColumn. It is used to display the columns data as datetime values.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -406,7 +406,7 @@ Widget build(BuildContext context) {
 
 ### Date formatting
 
-The datetime value can be formatted by using `GridDateTimeColumn.dateFormat` property, which contains the set of predefined datetime patterns. The default format of a date is `dd-MM-yyyy`. For more information about predefined patterns, refer [DateFormat](https://api.flutter.dev/flutter/intl/DateFormat-class.html) class.
+The datetime value can be formatted by using [GridDateTimeColumn.dateFormat](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridDateTimeColumn/dateFormat.html) property, which contains the set of predefined datetime patterns. The default format of a date is `dd-MM-yyyy`. For more information about predefined patterns, refer [DateFormat](https://api.flutter.dev/flutter/intl/DateFormat-class.html) class.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -435,7 +435,7 @@ Widget build(BuildContext context) {
 
 ## GridWidgetColumn
 
-`GridWidgetColumn` is used to load any custom widget or multiple widgets to the column's cells. Any widget can be loaded using the `cellBuilder` callback. You can simply return a required widget in a callback.
+[GridWidgetColumn](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridWidgetColumn-class.html) is used to load any custom widget or multiple widgets to the column's cells. Any widget can be loaded using the [cellBuilder](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/cellBuilder.html) callback. You can simply return a required widget in a callback.
 
 In the below example, image is returned in `cellBuilder` callback. Image is already added in the Employee class.
 

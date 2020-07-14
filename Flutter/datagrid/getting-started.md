@@ -53,7 +53,7 @@ Import the following package in your Dart code.
 
 ## Initialize DataGrid
 
-Add the SfDataGrid widget as a child of any widget. `SfDataGrid` requires the `source` and `columns` properties. You can find the more details on these properties in further topics.
+Add the SfDataGrid widget as a child of any widget. [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) requires the [source](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/source.html) and [columns](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/columns.html) properties. You can find the more details on these properties in further topics.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -124,7 +124,7 @@ void populateData() {
 
 ## Creating DataSource for DataGrid
 
-`DataGridSource` is used to obtain the row data for the `SfDataGrid`. So, create the DataSource from the DataGridSource and override the following APIs in it,
+[DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) is used to obtain the row data for the `SfDataGrid`. So, create the DataSource from the DataGridSource and override the following APIs in it,
 
 * **`dataSource`** - To Fetch the number of rows available for data population. Also, it is used to fetch the corresponding data object to process the selection.
 * **`getCellValue`** - To fetch the value for each cell.
@@ -186,7 +186,7 @@ Widget build(BuildContext context) {
 ## Defining columns
 
 `SfDataGrid` supports to show different data types (int, double, String and DateTime) in different types of columns. You can add the column collection to the `columns` property. 
-You can also load any widget in a column using the `GridWidgetColumn` and `cellBuilder` property in `SfDataGrid`.
+You can also load any widget in a column using the [GridWidgetColumn](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridWidgetColumn-class.html) and [cellBuilder](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/cellBuilder.html) property in `SfDataGrid`.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -215,7 +215,7 @@ Widget build(BuildContext context) {
 
 ## Selection
 
-`SfDataGrid` allows you to select one or more rows. The `selectionMode` property can be set to specify whether a user can select single row, or multiple rows. 
+`SfDataGrid` allows you to select one or more rows. The [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/selectionMode.html) property can be set to specify whether a user can select single row, or multiple rows. 
 
 {% tabs %}
 {% highlight Dart %} 
@@ -243,7 +243,7 @@ Widget build(BuildContext context) {
 
 ![flutter datagrid shows rows with selection](images/getting-started/flutter-datagrid-selection.png)
 
-The information about the rows that are selected can be retrieved using `selectedIndex`, `selectedRow` and `selectedRows` properties in `DataGridController`. You need to initialize the `DataGridController` object to the `controller` property of `SfDataGrid`.
+The information about the rows that are selected can be retrieved using [selectedIndex](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedIndex.html), [selectedRow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedRow.html) and [selectedRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedRows.html) properties in [DataGridController](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController-class.html). You need to initialize the `DataGridController` object to the [controller](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/controller.html) property of `SfDataGrid`.
 
 `DataGridController` objects are expected to be long-lived, not recreated with each build.
 
