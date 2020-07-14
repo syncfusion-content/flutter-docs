@@ -9,10 +9,10 @@ documentation: ug
 
 # Conditional Styling in Flutter DataGrid
 
-The `SfDataGrid` allows to customize the style of the individual cells and rows based on the requirements. It can be customized in the following ways:
+The [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) allows to customize the style of the individual cells and rows based on the requirements. It can be customized in the following ways:
 
-* Using `onQueryCellStyle` Callback
-* Using `onQueryRowStyle` Callback
+* Using [onQueryCellStyle](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onQueryCellStyle.html) Callback
+* Using [onQueryRowStyle](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onQueryRowStyle.html) Callback
 
 All the style classes such as [DataGridCellStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/DataGridCellStyle-class.html), [DataGridHeaderCellStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/DataGridHeaderCellStyle-class.html) related to `SfDataGrid` are available in the [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) package. To access those classes, import the below file in your application,
 
@@ -29,7 +29,7 @@ import 'package:syncfusion_flutter_core/theme.dart';
 ### Styling based on content
 
 The appearance of the cells in `SfDataGrid` can be customized conditionally based on the content by handling the `SfDataGrid.onQueryCellStyle` callback. 
-Callback requires `QueryCellStyleArgs` as parameter which provides all the required options to know about the cell.
+Callback requires [QueryCellStyleArgs](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/QueryCellStyleArgs-class.html) as parameter which provides all the required options to know about the cell.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -116,7 +116,7 @@ Widget build(BuildContext context) {
 ### Styling based on content
 
 The appearance of the rows in `SfDataGrid` can be customized conditionally based on the content by handling the `SfDataGrid.onQueryRowStyle` callback.
-Callback requires `QueryRowStyleArgs` as parameter which provides all the required options to know about the cell.
+Callback requires [QueryRowStyleArgs](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/QueryRowStyleArgs-class.html) as parameter which provides all the required options to know about the cell.
 
 {% tabs %}
 {% highlight Dart %} 

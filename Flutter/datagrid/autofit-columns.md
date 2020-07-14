@@ -9,7 +9,7 @@ documentation: ug
 
 # Autofit Columns in Flutter DataGrid
 
-SfDataGrid allows to set the column widths based on certain logic using `SfDataGrid.columnWidthMode` or `GridColumn.columnWidthMode` property. Below are the list of predefined column sizing options available.
+[SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) allows to set the column widths based on certain logic using [SfDataGrid.columnWidthMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/columnWidthMode.html) or [GridColumn.columnWidthMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/columnWidthMode.html) property. Below are the list of predefined column sizing options available.
 
 | Mode                      | Description                                         |
 |---------------------------|-----------------------------------------------------|
@@ -21,7 +21,7 @@ SfDataGrid allows to set the column widths based on certain logic using `SfDataG
 | ColumnWidthMode.none      | No sizing. Default column width or defined width set to column. |
 
 > **NOTE**  
-    `ColumnWidthMode` will not work when the column width defined explicitly. `columnWidthMode` calculates column width based on miniumWidth and maximumWidth properties.
+    [ColumnWidthMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/ColumnWidthMode-class.html) will not work when the column width defined explicitly. `columnWidthMode` calculates column width based on miniumWidth and maximumWidth properties.
 
 The following example shows how to set the width equally for column based on the view port size.
 
@@ -110,7 +110,7 @@ Widget build(BuildContext context) {
 
 ## Autofit based on string length
 
-By default, the auto size of the column is calculated based on the string size. To improve the performance of the column auto sizing, the auto size calculation logic of column can be calculated based on the length of the cell value by using `SfDataGrid.columnWidthCalculationMode` property.
+By default, the auto size of the column is calculated based on the string size. To improve the performance of the column auto sizing, the auto size calculation logic of column can be calculated based on the length of the cell value by using [SfDataGrid.columnWidthCalculationMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/columnWidthCalculationMode.html) property.
 The default is `ColumnWidthCalculationMode.textSize` which calculates size for all the cell’s formatted text. The columns can also be auto sized based on string length of the cell using the `ColumnWidthCalculationMode.textLength` which calculates the size for the cell which has longest string.
 
 {% tabs %}
@@ -138,7 +138,7 @@ Widget build(BuildContext context) {
 
 ## Calculate the column width for all the rows
 
-By default, the column auto size is calculated for the visible rows. The column auto size can be calculated for the all the available rows by using the `SfDataGrid.columnWidthCalculationRange` property.
+By default, the column auto size is calculated for the visible rows. The column auto size can be calculated for the all the available rows by using the [SfDataGrid.columnWidthCalculationRange](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/columnWidthCalculationRange.html) property.
 The default is `ColumnWidthCalculationRange.visibleRows` which considers visible rows for auto sizing. The columns can also be auto sized by considering all the rows using the `ColumnWidthCalculationRange.allRows` mode.
 
 {% tabs %}
@@ -166,7 +166,7 @@ Widget build(BuildContext context) {
 
 ## Customizing built-in column sizing logic
 
-The column auto sizing operations of the `SfDataGrid` is processed in the `ColumnSizer` class. The column sizing operations can be customized by overriding `ColumnSizer` and set it to `SfDataGrid.columnSizer` property.
+The column auto sizing operations of the `SfDataGrid` is processed in the [ColumnSizer](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/ColumnSizer-class.html) class. The column sizing operations can be customized by overriding `ColumnSizer` and set it to [SfDataGrid.columnSizer](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/columnSizer.html) property.
 
 {% tabs %}
 {% highlight Dart %} 
