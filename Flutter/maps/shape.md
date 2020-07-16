@@ -20,7 +20,7 @@ You can notify the user that the map is being loaded using the [`MapShapeLayer.l
 
 @override
 Widget build(BuildContext context) {
-   return Scaffold(c
+    return Scaffold(
       body: Padding(
         padding: EdgeInsets.all(15),
         child: SfMaps(
@@ -30,7 +30,7 @@ Widget build(BuildContext context) {
                 shapeFile: 'assets/world_map.json',
                 shapeDataField: 'continent',
               ),
-              loadingBuilder: (_) {
+              loadingBuilder: (BuildContext context) {
                 return Container(
                   height: 25,
                   width: 25,
@@ -148,7 +148,7 @@ Widget build(BuildContext context) {
                 shapeFile: 'assets/world_map.json',
                 shapeDataField: 'continent',
               ),
-              palette: [
+              palette: <Color>[
                 Colors.blue[200],
                 Colors.orange[200],
                 Colors.red[200],
@@ -199,26 +199,25 @@ Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
           child: Container(
-            height: 350,
-            child: Padding(
-              padding: EdgeInsets.only(left: 15, right: 15),
-              child: SfMaps(
-                layers: <MapLayer>[
-                  MapShapeLayer(
-                    delegate: MapShapeLayerDelegate(
-                      shapeFile: 'assets/world_map.json',
-                      shapeDataField: 'continent',
-                      dataCount: data.length,
-                      primaryValueMapper: (index) => data[index].country,
-                      shapeColorValueMapper: (index) => data[index].color,
-                    ),
-                  ),
-                ],
+        height: 350,
+        child: Padding(
+          padding: EdgeInsets.only(left: 15, right: 15),
+          child: SfMaps(
+            layers: <MapLayer>[
+              MapShapeLayer(
+                delegate: MapShapeLayerDelegate(
+                  shapeFile: 'assets/world_map.json',
+                  shapeDataField: 'continent',
+                  dataCount: data.length,
+                  primaryValueMapper: (int index) => data[index].country,
+                  shapeColorValueMapper: (int index) => data[index].color,
+                ),
               ),
-            ),
-          )
-      ),
-  );
+            ],
+          ),
+        ),
+      )),
+   );
 }
 
 class Model {
@@ -245,7 +244,6 @@ List<Model> data;
 @override
 void initState() {
     super.initState();
-
     data = <Model>[
       Model('India', "Low"),
       Model('United States of America', "High"),
@@ -256,31 +254,30 @@ void initState() {
 @override
 Widget build(BuildContext context) {
     return Scaffold(
-        body: Padding(
-          padding: EdgeInsets.only(left: 15, right: 15),
-          child: SfMaps(
-            layers: <MapShapeLayer>[
-              MapShapeLayer(
-                delegate: MapShapeLayerDelegate(
-                    shapeFile: "assets/world_map.json",
-                    shapeDataField: "name",
-                    dataCount: data.length,
-                    primaryValueMapper: (index) {
-                      return data[index].country;
-                    },
-                    shapeColorValueMapper: (index) {
-                      return data[index].storage;
-                    },
-                    shapeColorMappers: [
-                      MapColorMapper(value: "Low", color: Colors.red),
-                      MapColorMapper(value: "High", color: Colors.green)
-                    ]),
-              )
-            ],
-          ),
+      body: Padding(
+        padding: EdgeInsets.only(left: 15, right: 15),
+        child: SfMaps(
+          layers: <MapShapeLayer>[
+            MapShapeLayer(
+              delegate: MapShapeLayerDelegate(
+                  shapeFile: "assets/world_map.json",
+                  shapeDataField: "name",
+                  dataCount: data.length,
+                  primaryValueMapper: (int index) {
+                    return data[index].country;
+                  },
+                  shapeColorValueMapper: (int index) {
+                    return data[index].storage;
+                  },
+                  shapeColorMappers: [
+                    MapColorMapper(value: "Low", color: Colors.red),
+                    MapColorMapper(value: "High", color: Colors.green)
+                  ]),
+            )
+          ],
         ),
-    );
-  }
+      ),
+   );
 }
 
 class Model {
