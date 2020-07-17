@@ -37,36 +37,35 @@ void initState() {
 
 @override
 Widget build(BuildContext context) {
-    return Scaffold(
+   return Scaffold(
       body: Center(
           child: Container(
-            height: 350,
-            child: Padding(
-              padding: EdgeInsets.only(left: 15, right: 15),
-              child: SfMaps(
-                layers: <MapLayer>[
-                  MapShapeLayer(
-                    delegate: MapShapeLayerDelegate(
-                      shapeFile: 'assets/world_map.json',
-                      shapeDataField: 'name',
-                      dataCount: data.length,
-                      primaryValueMapper: (index) => data[index].country,
-                    ),
-                    initialMarkersCount: 5,
-                    markerBuilder: (_, int index){
-                      return MapMarker(
-                        latitude: data[index].latitude,
-                        longitude: data[index].longitude,
-                      );
-                    },
-                  ),
-                ],
+        height: 350,
+        child: Padding(
+          padding: EdgeInsets.only(left: 15, right: 15),
+          child: SfMaps(
+            layers: <MapLayer>[
+              MapShapeLayer(
+                delegate: MapShapeLayerDelegate(
+                  shapeFile: 'assets/world_map.json',
+                  shapeDataField: 'name',
+                  dataCount: data.length,
+                  primaryValueMapper: (index) => data[index].country,
+                ),
+                initialMarkersCount: 5,
+                markerBuilder: (BuildContext context, int index) {
+                  return MapMarker(
+                    latitude: data[index].latitude,
+                    longitude: data[index].longitude,
+                  );
+                },
               ),
-            ),
-          )
-      ),
-    );
- }
+            ],
+          ),
+        ),
+      )),
+   );
+}
 
 class Model {
   const Model(this.country, this.latitude, this.longitude);
@@ -129,7 +128,7 @@ Widget build(BuildContext context) {
                       shapeDataField: 'name',
                     ),
                     initialMarkersCount: 5,
-                    markerBuilder: (_, int index){
+                    markerBuilder: (BuildContext context, int index){
                       return MapMarker(
                         latitude: data[index].latitude,
                         longitude: data[index].longitude,
@@ -208,7 +207,7 @@ Widget build(BuildContext context) {
                        shapeDataField: 'name',
                      ),
                      initialMarkersCount: 5,
-                     markerBuilder: (_, int index){
+                     markerBuilder: (BuildContext context, int index){
                        return MapMarker(
                          latitude: data[index].latitude,
                          longitude: data[index].longitude,
@@ -284,7 +283,7 @@ Widget build(BuildContext context) {
                           shapeDataField: 'name',
                         ),
                         initialMarkersCount: 5,
-                        markerBuilder: (_, int index){
+                        markerBuilder: (BuildContext context, int index){
                           return MapMarker(
                             latitude: data[index].latitude,
                             longitude: data[index].longitude,
@@ -370,7 +369,7 @@ Widget build(BuildContext context) {
                           shapeDataField: 'name',
                         ),
                         initialMarkersCount: 5,
-                        markerBuilder: (_, int index){
+                        markerBuilder: (BuildContext context, int index){
                           return MapMarker(
                             latitude: data[index].latitude,
                             longitude: data[index].longitude,
@@ -452,7 +451,7 @@ Widget build(BuildContext context) {
                           shapeDataField: 'name',
                         ),
                         initialMarkersCount: 5,
-                        markerBuilder: (_, int index){
+                        markerBuilder: (BuildContext context, int index){
                           return MapMarker(
                             latitude: data[index].latitude,
                             longitude: data[index].longitude,
@@ -533,7 +532,7 @@ Widget build(BuildContext context) {
                           shapeDataField: 'name',
                         ),
                         initialMarkersCount: 5,
-                        markerBuilder: (_, int index){
+                        markerBuilder: (BuildContext context, int index){
                           return MapMarker(
                             latitude: data[index].latitude,
                             longitude: data[index].longitude,
