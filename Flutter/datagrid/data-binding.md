@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Data Binding in Syncfusion Flutter DataGrid | DataTable
-description: Learn about data binding support and manipulate the data in Syncfusion Flutter DataGrid.
+description: Learn about data binding support, manipulate the data  and how to refresh the cell in Syncfusion Flutter DataGrid
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Data binding 
+# Data binding in Flutter DataGrid (SfDataGrid)
 
 [`SfDataGrid`](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) requires the [`DataGridSource`](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) to obtain the row data. In order to bind data source of the SfDataGrid, set an instance of the `DataGridSource` to the [`source`](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/source.html) property.`source` property must not be null.
 
@@ -82,7 +82,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## Data manipulation 
+## Data manipulation in Flutter DataGrid (SfDataGrid)
 
 `SfDataGrid` provides support to update or refresh the DataGrid when an underlying data is updated i.e. CRUD operation is performed in an underlying data.
 
