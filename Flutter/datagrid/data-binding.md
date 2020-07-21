@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Binding in Syncfusion Flutter DataGrid | DataTable
-description: Learn about data binding (List, ObservableCollection, DataTable and so on) support in Syncfusion Flutter DataGrid.
+description: Learn about data binding support and manipulate the data in Syncfusion Flutter DataGrid.
 platform: flutter
 control: SfDataGrid
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Data binding 
 
-SfDataGrid requires the [`DataGridSource`](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) to obtain the row data. In order to bind data source of the SfDataGrid, set an instance of the `DataGridSource` to the [`source`](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/source.html) property.`source` property must not be null.
+[`SfDataGrid`](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) requires the [`DataGridSource`](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) to obtain the row data. In order to bind data source of the SfDataGrid, set an instance of the `DataGridSource` to the [`source`](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/source.html) property.`source` property must not be null.
 
  The following APIs in the `DataGridSource` are mandatory to process the data,
 
@@ -19,7 +19,7 @@ SfDataGrid requires the [`DataGridSource`](https://pub.dev/documentation/syncfus
 * [`getCellValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendRenderArgs/pointIndex.html) - The data needed for the cells is obtained from
 `getCellValue`.
 
-`DataGridSource`objects are expected to be long-lived, not recreated with each build.
+`DataGridSource` objects are expected to be long-lived, not recreated with each build.
 
 The following example shows how to create the `DataGridSource`,
 
@@ -84,11 +84,11 @@ Widget build(BuildContext context) {
 
 ## Data manipulation 
 
-[`SfDataGrid`](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) provides support to update or refresh the DataGrid when an underlying data is updated i.e. CRUD operation is performed in an underlying data.
+`SfDataGrid` provides support to update or refresh the DataGrid when an underlying data is updated i.e. CRUD operation is performed in an underlying data.
 
 If row is added, removed or replaced in an underlying datasource, you can call the [`notifyDataSourceListeners`](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/notifyDataSourceListeners.html). 
 
-In the following example, row is inserted and `notifyDataSourceListeners` is called in `onPressed` callback of the `FlatButton`.
+In the following example, row is added and `notifyDataSourceListeners` is called in `onPressed` callback of the `FlatButton`.
 
 {% tabs %}
 {% highlight Dart %} 
