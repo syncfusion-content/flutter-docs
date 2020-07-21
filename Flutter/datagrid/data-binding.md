@@ -7,7 +7,7 @@ control: SfDataGrid
 documentation: ug
 ---
 
-# Data binding in Flutter DataGrid (SfDataGrid)
+# Data binding 
 
 SfDataGrid requires the [`DataGridSource`](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) to obtain the row data. In order to bind data source of the SfDataGrid, set an instance of the `DataGridSource` to the [`source`](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/source.html) property.`source` property must not be null.
 
@@ -82,7 +82,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## Data manipulation in Flutter DataGrid (SfDataGrid)
+## Data manipulation 
 
 [`SfDataGrid`](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) provides support to update or refresh the DataGrid when an underlying data is updated i.e. CRUD operation is performed in an underlying data.
 
