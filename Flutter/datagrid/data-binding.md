@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Binding in Syncfusion Flutter DataGrid | DataTable
-description: Learn about data binding support, manipulate the data  and how to refresh the cell in Syncfusion Flutter DataGrid
+description: Learn about data binding support, manipulate the data and how to refresh the cell in Syncfusion Flutter DataGrid
 platform: flutter
 control: SfDataGrid
 documentation: ug
