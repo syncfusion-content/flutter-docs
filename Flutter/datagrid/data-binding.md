@@ -16,7 +16,7 @@ documentation: ug
  * [`dataSource`](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/dataSource.html) - The number of rows in a datagrid and row selection depends
  on the [dataSource]. So, set the collection required for datagrid in
 `dataSource`.
-* [`getCellValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendRenderArgs/pointIndex.html) - The data needed for the cells is obtained from
+* [`getCellValue`](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/getCellValue.html) - The data needed for the cells is obtained from
 `getCellValue`.
 
 `DataGridSource` objects are expected to be long-lived, not recreated with each build.
@@ -130,7 +130,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-If the value of the specific cell is updated, you can `notifyDataSourceListeners` method with `RowColumnIndex` argument where it refers the corresponding row and column index of the cell. 
+If the value of the specific cell is updated, you can `notifyDataSourceListeners` method with [`RowColumnIndex`](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/RowColumnIndex-class.html) argument where it refers the corresponding row and column index of the cell. 
 So, DataGrid refreshes the corresponding cell alone.
 
 In the following example, cell value is updated and `notifyDataSourceListeners` is called in `onPressed` callback of the `FlatButton`.
