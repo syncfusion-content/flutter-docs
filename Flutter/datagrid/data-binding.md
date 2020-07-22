@@ -9,14 +9,14 @@ documentation: ug
 
 # Data binding in Flutter DataGrid (SfDataGrid)
 
-[`SfDataGrid`](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) requires the [`DataGridSource`](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) to obtain the row data. In order to bind data source of the SfDataGrid, set an instance of the `DataGridSource` to the [`source`](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/source.html) property.`source` property must not be null.
+[SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) requires the [DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) to obtain the row data. In order to bind data source of the SfDataGrid, set an instance of the `DataGridSource` to the [source](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/source.html) property.`source` property must not be null.
 
  The following APIs in the `DataGridSource` are mandatory to process the data,
 
- * [`dataSource`](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/dataSource.html) - The number of rows in a datagrid and row selection depends
+ * [dataSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/dataSource.html) - The number of rows in a datagrid and row selection depends
  on the [dataSource]. So, set the collection required for datagrid in
 `dataSource`.
-* [`getCellValue`](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/getCellValue.html) - The data needed for the cells is obtained from
+* [getCellValue](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/getCellValue.html) - The data needed for the cells is obtained from
 `getCellValue`.
 
 `DataGridSource` objects are expected to be long-lived, not recreated with each build.
@@ -86,7 +86,7 @@ Widget build(BuildContext context) {
 
 `SfDataGrid` provides support to update or refresh the DataGrid when an underlying data is updated i.e. CRUD operation is performed in an underlying data.
 
-If row is added, removed or replaced in an underlying datasource, you can call the [`notifyDataSourceListeners`](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/notifyDataSourceListeners.html). 
+If row is added, removed or replaced in an underlying datasource, you can call the [notifyDataSourceListeners](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/notifyDataSourceListeners.html). 
 
 In the following example, row is added and `notifyDataSourceListeners` is called in `onPressed` callback of the `FlatButton`.
 
@@ -130,7 +130,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-If the value of the specific cell is updated, you can `notifyDataSourceListeners` method with [`RowColumnIndex`](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/RowColumnIndex-class.html) argument where it refers the corresponding row and column index of the cell. 
+If the value of the specific cell is updated, you can `notifyDataSourceListeners` method with [RowColumnIndex](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/RowColumnIndex-class.html) argument where it refers the corresponding row and column index of the cell. 
 So, DataGrid refreshes the corresponding cell alone.
 
 In the following example, cell value is updated and `notifyDataSourceListeners` is called in `onPressed` callback of the `FlatButton`.
