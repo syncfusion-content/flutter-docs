@@ -234,17 +234,17 @@ Widget build(BuildContext context) {
           ..headerText = 'Country',
         GridTextColumn(mappingName: 'address')
           ..softWrap = true
-          ..isHidden = true
+          ..visible = false
           ..overflow = TextOverflow.clip
           ..headerText = 'Address',
         GridTextColumn(mappingName: 'city')
           ..softWrap = true
-          ..isHidden = true
+          ..visible = false
           ..overflow = TextOverflow.clip
           ..headerText = 'City',
         GridTextColumn(mappingName: 'designation')
           ..softWrap = true
-          ..isHidden = true
+          ..visible = false
           ..overflow = TextOverflow.clip
           ..headerText = 'Designation',
       ]));
