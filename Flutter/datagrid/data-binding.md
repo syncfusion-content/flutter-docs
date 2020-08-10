@@ -1,0 +1,177 @@
+---
+layout: post
+title: Data Binding in Syncfusion Flutter DataGrid | DataTable
+description: Learn about data binding support, manipulate the data and how to refresh the cell in Syncfusion Flutter DataGrid
+platform: flutter
+control: SfDataGrid
+documentation: ug
+---
+
+# Data binding in Flutter DataGrid (SfDataGrid)
+
+[SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) requires the [DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) to obtain the row data. In order to bind data source of the SfDataGrid, set an instance of the `DataGridSource` to the [source](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/source.html) property.`source` property must not be null.
+
+ The following APIs in the `DataGridSource` are mandatory to process the data,
+
+ * [dataSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/dataSource.html) - The number of rows in a datagrid and row selection depends
+ on the [dataSource]. So, set the collection required for datagrid in
+`dataSource`.
+* [getCellValue](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/getCellValue.html) - The data needed for the cells is obtained from
+`getCellValue`.
+
+`DataGridSource` objects are expected to be long-lived, not recreated with each build.
+
+The following example shows how to create the `DataGridSource`,
+
+{% tabs %}
+{% highlight dart %} 
+
+final List<Employee> _employees = <Employee>[];
+
+class EmployeeDataSource extends DataGridSource {
+  @override
+  List<Object> get dataSource => _employees
+  
+  @override
+  getCellValue(int rowIndex, String columnName) {
+    switch (columnName) {
+      case 'id':
+        return _employees[rowIndex].id;
+        break;
+      case 'name':
+        return _employees[rowIndex].name;
+        break;
+      case 'salary':
+        return _employees[rowIndex].salary;
+        break;
+      case 'designation':
+        return _employees[rowIndex].designation;
+        break;
+      default:
+        return ' ';
+        break;
+    }
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+The following example shows how to set the `source` property in `SfDataGrid`
+
+{% tabs %}
+{% highlight dart %}
+
+final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
+  
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDataGrid(
+      source: _employeeDataSource,
+      columns: [
+        GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+        GridTextColumn(mappingName: 'name', headerText: 'Name'),
+        GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+        GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+      ],
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Data manipulation in Flutter DataGrid (SfDataGrid)
+
+`SfDataGrid` provides support to update or refresh the DataGrid when an underlying data is updated i.e. CRUD operation is performed in an underlying data.
+
+If row is added, removed or replaced in an underlying datasource, you can call the [notifyDataSourceListeners](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/notifyDataSourceListeners.html). 
+
+In the following example, row is added and `notifyDataSourceListeners` is called in `onPressed` callback of the `FlatButton`.
+
+{% tabs %}
+{% highlight Dart %} 
+        
+final List<Employee> _employees = <Employee>[];
+
+final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
+
+@override
+Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Syncfusion Flutter DataGrid'),
+      ),
+      body: Column(
+        children: [
+          FlatButton(
+              child: const Text('Add row'),
+              onPressed: () {
+                                _employees.add(Employee(10011, 'Steve', 'Designer', 15000));
+                _employeeDataSource.notifyDataSourceListeners();
+
+              }),
+          SfDataGrid(
+            source: _employeeDataSource,
+            columns: <GridColumn>[
+              GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+              GridTextColumn(mappingName: 'name', headerText: 'Name'),
+              GridTextColumn(
+                  mappingName: 'designation', headerText: 'Designation'),
+              GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+If the value of the specific cell is updated, you can `notifyDataSourceListeners` method with [RowColumnIndex](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/RowColumnIndex-class.html) argument where it refers the corresponding row and column index of the cell. 
+So, DataGrid refreshes the corresponding cell alone.
+
+In the following example, cell value is updated and `notifyDataSourceListeners` is called in `onPressed` callback of the `FlatButton`.
+
+{% tabs %}
+{% highlight Dart %} 
+
+final List<Employee> _employees = <Employee>[];
+
+final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    appBar: AppBar(
+      title: const Text('Syncfusion Flutter DataGrid'),
+    ),
+    body: Column(
+      children: [
+        FlatButton(
+          child: const Text('Update cell value),
+              onPressed: () {
+
+                _employees[0].salary = 25000;
+                _employeeDataSource.notifyDataSourceListeners(
+                    rowColumnIndex: RowColumnIndex(0, 3));
+              }),
+          SfDataGrid(
+            source: _employeeDataSource,
+            columns: <GridColumn>[
+              GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+              GridTextColumn(mappingName: 'name', headerText: 'Name'),
+              GridTextColumn(
+                  mappingName: 'designation', headerText: 'Designation'),
+              GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
