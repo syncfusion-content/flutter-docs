@@ -253,4 +253,42 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+## Fit header row height based on its content
 
+By default, auto height is supported for the headers is `onQueryRowHeight` callback. If you want to set auto height to the header row, set `GridColumn.headerTextSoftWrap` as `True`.
+
+{% tabs %}
+{% highlight Dart %} 
+
+final ColumnSizer _columnSizer = ColumnSizer();
+        
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+      body: SfDataGrid(
+    source: _employeeDatasource,
+    columnSizer: _columnSizer,
+    onQueryRowHeight: (int rowIndex) {
+      final double height = _columnSizer.getAutoRowHeight(rowIndex);
+      // The header row index.
+      if(rowIndex == 0) {
+        return height;
+      }
+      return 48.0;
+    },
+    columns: <GridColumn>[
+      GridNumericColumn(mappingName: 'id')..headerText = 'ID',
+      GridTextColumn(mappingName: 'name')..headerText = 'Name',
+      GridTextColumn(mappingName: 'designation')
+        ..headerTextSoftWrap = true,
+        ..headerTextOverflow = TextOverflow.clip
+        ..headerText = 'Employee Designation',
+      GridNumericColumn(mappingName: 'salary')..headerText = 'Salary',
+    ],
+  ));
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![flutter datagrid shows header row with custom height](images/row-height-customization/flutter-datagrid-auto-fit-header-row.png)
