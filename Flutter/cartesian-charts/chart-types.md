@@ -2650,7 +2650,6 @@ To render a HiLo chart, create an instance of [`HiloSeries`](https://pub.dev/doc
                             HiloSeries<SalesData, double>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales,
                                   lowValueMapper: (Sample sales, _) => sales.low,
               highValueMapper: (Sample sales, _) => sales.high
                             )
@@ -2697,7 +2696,6 @@ To render a OpenHighLowClose chart, create an instance of [` hiloOpenCloseSeries
                             hiloOpenCloseSeries<SalesData, double>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales,
                                 lowValueMapper: (Sample sales, _) => sales.low,
                                 highValueMapper: (Sample sales, _) => sales.high, 
                                 openValueMapper: (Sample sales, _) => sales.open,
@@ -2748,7 +2746,6 @@ To render a Candle chart, create an instance of [` CandleSeries`](https://pub.de
                             CandleSeries<SalesData, double>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales,
                                 lowValueMapper: (Sample sales, _) => sales.low,
                                 highValueMapper: (Sample sales, _) => sales.high, 
                                 openValueMapper: (Sample sales, _) => sales.open,
