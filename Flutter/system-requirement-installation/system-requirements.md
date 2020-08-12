@@ -20,7 +20,7 @@ Refer to the following links for recommended development environment in Flutter.
 
 ### SDK Version
 
-The below is the minimum Flutter SDK version required for our widgets:
+The following is the minimum Flutter SDK version required for our widgets:
 
 <table>
     <tr>
