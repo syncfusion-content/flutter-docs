@@ -20,7 +20,7 @@ Refer to the following links for recommended development environment in Flutter.
 
 ### SDK Version
 
-The minimum Flutter SDK version required for our component is [`v1.7.8`](https://flutter.dev/docs/development/tools/sdk/releases)
+The minimum Flutter SDK version required for our component is [`v1.20.1`](https://storage.googleapis.com/flutter_infra/releases/stable/windows/flutter_windows_1.20.1-stable.zip)
 
 ### Supported Platforms
 
