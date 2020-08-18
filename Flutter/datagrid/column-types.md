@@ -216,6 +216,48 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+## Load widget in header
+
+The SfDataGrid allows you to load any widget in header using [headerCellBuilder](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/HeaderCellBuilderCallback.html )callback. You can return a required widget in a callback.
+
+{% tabs %}
+{% highlight Dart %} 
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDataGrid(
+      source: _employeeDataSource,
+      headerCellBuilder: (BuildContext context, GridColumn column) {
+        if (column.mappingName == 'city')
+          return Row(
+            children: <Widget>[
+              Icon(Icons.add_location),
+              SizedBox(height: 5, width: 5),
+              Text(column.headerText)
+            ],
+          );
+        else
+          return null;
+      },
+      columns: [
+      GridNumericColumn(mappingName: 'id')..headerText = 'ID',
+      GridTextColumn(mappingName: 'name')..headerText = 'Name',
+      GridTextColumn(mappingName: 'city')..headerText = 'City',
+      GridTextColumn(mappingName: 'designation')
+        ..width = 150
+        ..headerText = 'Designation',
+      GridTextColumn(mappingName: 'price')..headerText = 'Price'
+      ],
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![flutter datagrid shows image in a header](images/column-types/flutter-datagrid-header-widget.png)
+
 ## Column styling
 
 GridColumn provides support to customize the style of column using [GridColumn.cellStyle](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/cellStyle.html) and [GridColumn.headerStyle](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/headerStyle.html) properties. The type of `cellStyle` and `headerStyle` property is `DataGridCellStyle` and `DataGridHeaderCellStyle`. For more information, refer [Styling](styles.md\#styling-in-flutter-dataGrid) section.
