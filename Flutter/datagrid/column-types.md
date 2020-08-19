@@ -77,7 +77,7 @@ Widget build(BuildContext context) {
 
 ### Hiding a column
 
-[GridColumn.visible](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/visible.html) property can be used to set a column as hidden. The default value of the `visible` property is false.
+[GridColumn.visible](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/visible.html) property can be used to set a column as hidden. The default value of the `visible` property is true.
 
 >**NOTE**  
    Set the `visible` property to `false` instead of setting column width as `0` to hide a column.
