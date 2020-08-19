@@ -218,7 +218,7 @@ Widget build(BuildContext context) {
 
 ## Load widget in header
 
-The SfDataGrid allows you to load any widget in header cell using [headerCellBuilder](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/HeaderCellBuilderCallback.html) callback. You can return a required widget in a callback.
+The SfDataGrid allows you to load any widget in header cell using [headerCellBuilder](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/headerCellBuilder.html) callback. You can return a required widget in a callback.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -234,7 +234,12 @@ Widget build(BuildContext context) {
             children: <Widget>[
               Icon(Icons.location_on),
               SizedBox(width: 5),
-              Flexible(child: Text(column.headerText))
+              Flexible(
+                child: Text(
+                        column.headerText,
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      )
+                )
             ],
           );
         else
