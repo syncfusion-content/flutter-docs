@@ -234,17 +234,17 @@ Widget build(BuildContext context) {
           ..headerText = 'Country',
         GridTextColumn(mappingName: 'address')
           ..softWrap = true
-          ..isHidden = true
+          ..visible = false
           ..overflow = TextOverflow.clip
           ..headerText = 'Address',
         GridTextColumn(mappingName: 'city')
           ..softWrap = true
-          ..isHidden = true
+          ..visible = false
           ..overflow = TextOverflow.clip
           ..headerText = 'City',
         GridTextColumn(mappingName: 'designation')
           ..softWrap = true
-          ..isHidden = true
+          ..visible = false
           ..overflow = TextOverflow.clip
           ..headerText = 'Designation',
       ]));
@@ -253,4 +253,45 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+## Fit header row height based on its content
 
+The datagrid allows you to customize the height of the header row based on its content using the `onQueryRowHeight` callback and  getAutoRowHeight method which is available in ColumnSizer.
+
+>**NOTE**
+   By default, the header text’s overflow behavior is ellipsis. So, to enable the wrap for the display text, set the `headerTextSoftWrap` property as true and `headerTextOverflow` property as clip.
+
+{% tabs %}
+{% highlight Dart %} 
+
+final ColumnSizer _columnSizer = ColumnSizer();
+        
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+      body: SfDataGrid(
+    source: _employeeDatasource,
+    columnSizer: _columnSizer,
+    onQueryRowHeight: (int rowIndex) {
+      final double height = _columnSizer.getAutoRowHeight(rowIndex);
+      // The header row index.
+      if(rowIndex == 0) {
+        return height;
+      }
+      return 49.0;
+    },
+    columns: <GridColumn>[
+      GridNumericColumn(mappingName: 'id')..headerText = 'ID',
+      GridTextColumn(mappingName: 'name')..headerText = 'Name',
+      GridTextColumn(mappingName: 'designation')
+        ..headerTextSoftWrap = true,
+        ..headerTextOverflow = TextOverflow.clip
+        ..headerText = 'Employee Designation',
+      GridNumericColumn(mappingName: 'salary')..headerText = 'Salary',
+    ],
+  ));
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![flutter datagrid shows header row with custom height](images/row-height-customization/flutter-datagrid-auto-fit-header-row.png)
