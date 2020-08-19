@@ -77,7 +77,7 @@ Widget build(BuildContext context) {
 
 ### Hiding a column
 
-[GridColumn.visible](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/isHidden.html) property can be used to set a column as hidden. The default value of the `visible` property is false.
+[GridColumn.visible](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/visible.html) property can be used to set a column as hidden. The default value of the `visible` property is false.
 
 >**NOTE**  
    Set the `visible` property to `False` instead of setting column width as `0` to hide a column.
@@ -162,7 +162,7 @@ Widget build(BuildContext context) {
 
 ### Set text wrapping for column
 
-When the text for the record and header cells exceeds the content area, wrap the record and header cells by setting the [GridColumn.softWrap](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/softWrap.html) and `GridColumn.headerTextSoftWrap` as `True`. The default values of `softWrap` and `headerTextSoftWrap` are false.
+When the text for the record and header cells exceeds the content area, wrap the record and header cells by setting the [GridColumn.softWrap](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/softWrap.html) and `GridColumn.headerTextSoftWrap` as `True` respectively. The default values of `softWrap` and `headerTextSoftWrap` are false.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -190,7 +190,7 @@ Widget build(BuildContext context) {
 
 ### Change text overflow behavior
 
-[GridColumn.overflow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/overflow.html) and `GridColumn.headerTextOverflow` properties can be used to change the behavior of the record and header cells text overflow. The default values of `overflow` and `headerTextOverfow` are ellipsis.
+[GridColumn.overflow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/overflow.html) and `GridColumn.headerTextOverflow` properties can be used to change the behavior of the record and header cells text overflow respectively. The default values of `overflow` and `headerTextOverfow` are ellipsis.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -218,7 +218,7 @@ Widget build(BuildContext context) {
 
 ## Load widget in header
 
-The SfDataGrid allows you to load any widget in header using [headerCellBuilder](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/HeaderCellBuilderCallback.html )callback. You can return a required widget in a callback.
+The SfDataGrid allows you to load any widget in header cell using [headerCellBuilder](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/HeaderCellBuilderCallback.html) callback. You can return a required widget in a callback.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -232,8 +232,8 @@ Widget build(BuildContext context) {
         if (column.mappingName == 'city')
           return Row(
             children: <Widget>[
-              Icon(Icons.add_location),
-              SizedBox(height: 5, width: 5),
+              Icon(Icons.location_on),
+              SizedBox(width: 5),
               Text(column.headerText)
             ],
           );
@@ -244,9 +244,6 @@ Widget build(BuildContext context) {
       GridNumericColumn(mappingName: 'id')..headerText = 'ID',
       GridTextColumn(mappingName: 'name')..headerText = 'Name',
       GridTextColumn(mappingName: 'city')..headerText = 'City',
-      GridTextColumn(mappingName: 'designation')
-        ..width = 150
-        ..headerText = 'Designation',
       GridTextColumn(mappingName: 'price')..headerText = 'Price'
       ],
     ),
