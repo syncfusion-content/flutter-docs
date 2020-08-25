@@ -190,7 +190,7 @@ Widget build(BuildContext context) {
 
 ### Change text overflow behavior
 
-[GridColumn.overflow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/overflow.html) and `GridColumn.headerTextOverflow` properties can be used to change the behavior of the record and header cells text overflow respectively. The default values of `overflow` and `headerTextOverfow` are ellipsis.
+[GridColumn.overflow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/overflow.html) and [GridColumn.headerTextOverflow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/headerTextOverflow.html) properties can be used to change the behavior of the record and header cells text overflow respectively. The default values of `overflow` and `headerTextOverfow` are ellipsis.
 
 {% tabs %}
 {% highlight Dart %} 
