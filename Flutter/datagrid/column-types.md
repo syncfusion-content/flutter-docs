@@ -162,7 +162,7 @@ Widget build(BuildContext context) {
 
 ### Set text wrapping for column
 
-When the text for the record and header cells exceeds the content area, wrap the record and header cells by setting the [GridColumn.softWrap](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/softWrap.html) and `GridColumn.headerTextSoftWrap` as `true` respectively. The default values of `softWrap` and `headerTextSoftWrap` are false.
+When the text for the record and header cells exceeds the content area, wrap the record and header cells by setting the [GridColumn.softWrap](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/softWrap.html) and [GridColumn.headerTextSoftWrap](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/headerTextSoftWrap.html) as `true` respectively. The default values of `softWrap` and `headerTextSoftWrap` are false.
 
 {% tabs %}
 {% highlight Dart %} 
