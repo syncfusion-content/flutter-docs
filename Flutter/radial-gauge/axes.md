@@ -132,7 +132,7 @@ The [`canScaleToFit`](https://pub.dev/documentation/syncfusion_flutter_gauges/la
 
 **Axis label rotation**
 
-The axis label can be rotated based on its current angle using the [`needsRotateLabels`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/needsRotateLabels.html) property of axis. The default value of [`needsRotateLabels`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/needsRotateLabels.html) is false.
+The axis label can be rotated based on its current angle using the [`canRotateLabels`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/canRotateLabels.html) property of axis. The default value of [`canRotateLabels`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/canRotateLabels.html) is false.
 
 {% highlight dart %}
 
@@ -141,7 +141,7 @@ Widget build(BuildContext context) {
   return Scaffold(
     body: Center(
      child: SfRadialGauge(
-       axes:<RadialAxis>[RadialAxis(needsRotateLabels: true)]
+       axes:<RadialAxis>[RadialAxis(canRotateLabels: true)]
      ),
     ),
   );
@@ -388,7 +388,7 @@ Widget build(BuildContext context) {
               RadialAxis(showAxisLine: false,
                   radiusFactor: 1, 
                   showLastLabel: false,
-                  needsRotateLabels: true,
+                  canRotateLabels: true,
                   tickOffset: 0.32,
                   offsetUnit: GaugeSizeUnit.factor,
                   onLabelCreated: axisLabelCreated,
