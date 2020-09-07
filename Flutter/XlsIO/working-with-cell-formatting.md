@@ -1,11 +1,8 @@
 # Working with Cell Formatting
-
 This section covers the various formatting options in a cell or a range.
-
 ## Create a Style
-
 The following code shows how to create and apply cell style.
-
+{% tabs %}
 {% highlight dart %}
 // Create a new Excel document.
 Workbook workbook = new Workbook();
@@ -42,12 +39,11 @@ workbook.save("CreateCellStyle.xlsx");
 workbook.dispose();
 
 {% endhighlight %}
-
+{% endtabs %}
 ## Apply Global Style
-
 The Flutter XlsIO adds styles globally that can be applied to one or more cells in a workbook. This is a recommended approach to apply single style in different rows and columns, which improves memory and performance considerably.
 The following code snippet illustrates how to apply global style .
-
+{% tabs %}
 {% highlight dart %}
 //Create a new Excel document.
   Workbook workbook = new Workbook();
@@ -108,7 +104,7 @@ The following code snippet illustrates how to apply global style .
   workbook.dispose();
 
 {% endhighlight %}
-
+{% endtabs %}
 ![](working-with-cell-formatting_images/working-with-cell-formatting_img1.jpeg)
 
 ## Apply Number Formats 
@@ -131,10 +127,10 @@ The following table shows various custom formatting codes:
 <table>
 <tr>
 <td>
-{{'**Number Code **'| markdownify }}
+Number Code 
 </td>
 <td>
-{{'**Description**'| markdownify }}
+Description
 </td>
 </tr>
 <tr>
@@ -203,10 +199,10 @@ Scientific notation.
 </tr>
 <tr>
 <td>
-{{'**Text Code**'| markdownify }}
+Text Code
 </td>
 <td>
-{{'**Description**'| markdownify }}
+Description
 </td>
 </tr>
 <tr>
@@ -256,10 +252,10 @@ Text placeholder.
 </tr>
 <tr>
 <td>
-{{'**Date Code**'| markdownify }}
+Date Code
 </td>
 <td>
-{{'**Description**'| markdownify }}
+Description
 </td>
 </tr>
 <tr>
@@ -344,10 +340,10 @@ Year as a four-digit number (for example, 1996).
 </tr>
 <tr>
 <td>
-{{'**Time Code**'| markdownify }}
+Time Code
 </td>
 <td>
-{{'**Description **'| markdownify }}
+Description 
 </td>
 </tr>
 <tr>
@@ -408,10 +404,10 @@ Time based on the twelve-hour clock.
 </tr>
 <tr>
 <td>
-{{'**Miscellaneous Code**'| markdownify }}
+Miscellaneous Code
 </td>
 <td>
-{{'**Description**'| markdownify }}
+Description
 </td>
 </tr>
 <tr>
@@ -429,10 +425,9 @@ These codes display the characters in the specified colors. <br/><br/>Note: n is
 Condition may be &lt;, &gt;, =, >=, &lt;=, &lt;&gt; and value may be any number.<br/><br/>Note: A number format may contain up to two conditions.<br/></td>
 </tr>
 </table>
-
-XlsIO provides support for reading and writing various built-in and custom number formats in a cell by using the **NumberFormat** property of **Range** class.
+XlsIO provides support for reading and writing various built-in and custom number formats in a cell by using the NumberFormat property of Range class.
 The following code snippet illustrates how to set different number formats in a worksheet range.
-
+{% tabs %}
 {% highlight dart %}
  //Create a new Excel document.
   Workbook workbook = new Workbook();
@@ -495,17 +490,15 @@ The following code snippet illustrates how to set different number formats in a 
   sheet.getRangeByName("C10").numberFormat = "_(\$* #,##0_)";
   sheet.getRangeByName("C10").number = 234;
 
-  workbook.save("NumberFormats.xlsx");
-
+ workbook.save("NumberFormats.xlsx");
 {% endhighlight %}
-
+{% endtabs %}
 ![](working-with-cell-formatting_images/working-with-cell-formatting_img2.jpeg)
 
 ## Access display text
-
-Cell values can be accessed as **text**, **number**, **dateTime** and **formula** of **Range** class. In addition to this, there is  a another property**DisplayText** in **Range**, which returns a resultant value of a cell with its number format applied.
+Cell values can be accessed as **text**, **number**, **dateTime** and **formula** of **Range** class. In addition to this, there is  another property**DisplayText** in **Range**, which returns a resultant value of a cell with its number format applied.
 The following code example illustrates how to display the text of a cell.
-
+{% tabs %}
 {% highlight dart %}
 //Create a new Excel document.
 Workbook workbook = new Workbook();
@@ -525,25 +518,24 @@ workbook.save("DisplayText.xlsx");
 
 
 {% endhighlight %}
-
+{% endtabs %}
 ## Merging and Un-Merging Cells
-The cells can be merged using the **merge()**method in **Range** as shown as follows.
-
+The cells can be merged using the merge() method in Range as shown as follows.
+{% tabs %}
 {% highlight dart %}
 //Merging Cells from A1 to A6 
 sheet.getRangeByName("A1:A6").merge();
 {% endhighlight %}
-
+{% endtabs %}
 Merged cells can be unmerged using the **unmerge()**method in **Range** as shown below.
-
+{% tabs %}
 {% highlight dart %}
 //UnMerging Cells from A1 to A6 
 sheet.getRangeByName("A1:A6").unmerge();
 {% endhighlight %}
-
-
+{% endtabs %}
 The below code shows merging and unmerging worksheet cells.
-
+{% tabs %}
 {% highlight dart %}
 //Create a new Excel document.
 Workbook workbook = new Workbook();
@@ -561,11 +553,10 @@ sheet.getRangeByName("A1:C16").unmerge();
 workbook.save("MergeUnMerge.xlsx");
 
 {% endhighlight %}
-
+{% endtabs %}
 ## Apply Build-In Style
-
-The following code snippet explains how to add **builtInStyle** for a worksheet range.
-
+The following code snippet explains how to add [builtInStyle](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_BuiltInStyle "") for a worksheet range.
+{% tabs %}
 {% highlight dart %}
 //Create a new Excel document.
 Workbook workbook = new Workbook();
@@ -581,4 +572,4 @@ sheet.getRangeByName("A2").builtInStyle = BuiltInStyles.CheckCell;
 
 workbook.save("BuildInStyle.xlsx");
 {% endhighlight %}
-
+{% endtabs %}
