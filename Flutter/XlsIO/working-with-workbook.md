@@ -25,8 +25,10 @@ Workbook workbook = new Workbook();
 
 //Save the workbook to stream.
 final List<int> bytes = workbook.saveStream();
+
 workbook.dispose();
-File('YearlySale.xlsx').writeAsBytes(bytes);
+
+File('Output.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
