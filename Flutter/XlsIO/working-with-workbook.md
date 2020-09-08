@@ -14,6 +14,22 @@ workbook.save('Output.xlsx');
 
 {% endhighlight %}
 
+## Saving a Excel workbook to Stream
+
+You can also save the created or manipulated workbook to stream.
+
+{% highlight dart %}
+
+//Creates a new instance for workbook.
+Workbook workbook = new Workbook();
+
+//Save the workbook to stream.
+final List<int> bytes = workbook.saveStream();
+workbook.dispose();
+File('YearlySale.xlsx').writeAsBytes(bytes);
+
+{% endhighlight %}
+
 ## Closing a workbook
 
 Once after the workbook manipulation and save operation are completed, you should dispose the instance of Workbook, in order to release all the memory consumed by XlsIO’s DOM. The following code snippet illustrates how dispose the instance of Workbook.
