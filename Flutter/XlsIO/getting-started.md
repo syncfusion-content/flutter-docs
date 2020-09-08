@@ -17,7 +17,7 @@ syncfusion_flutter_xlsio: ^xx.x.xx
 
 {% endhighlight %}
 
-N>**Here xx.x.xx denotes the current version of [Syncfusion Flutter XlsIO](syncfusion-flutter-xlsio) package.
+N> Here **xx.x.xx** denotes the current version of ['Syncfusion Flutter XlsIO'](syncfusion-flutter-xlsio) package.
 
 **Get packages**
 
