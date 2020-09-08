@@ -1,16 +1,20 @@
 # Working with Cell Formatting
+
 This section covers the various formatting options in a cell or a range.
+
 ## Create a Style
+
 The following code shows how to create and apply cell style.
-{% tabs %}
+
 {% highlight dart %}
+
 // Create a new Excel document.
 Workbook workbook = new Workbook();
+
 //Accessing worksheet via index.
 Worksheet sheet = workbook.worksheets[0];
 
 //Creating a new style with all properties.
-
 Style style = new CellStyle(workbook);
 style.name = 'Style1';
 style.backColor = '#FF5050';
@@ -29,7 +33,7 @@ style.borders.all.color = '#FFFF66';
 style.wrapText = true;
 workbook.styles.addStyle(style);
 
-//Apply cellStyle
+//Apply cellStyle.
 sheet.getRangeByName('A1').cellStyle = style;
 
 // Save the document.
@@ -39,76 +43,83 @@ workbook.save("CreateCellStyle.xlsx");
 workbook.dispose();
 
 {% endhighlight %}
-{% endtabs %}
+
 ## Apply Global Style
+
 The Flutter XlsIO adds styles globally that can be applied to one or more cells in a workbook. This is a recommended approach to apply single style in different rows and columns, which improves memory and performance considerably.
-The following code snippet illustrates how to apply global style .
-{% tabs %}
+
+The following code snippet illustrates how to apply global style.
+
+
 {% highlight dart %}
+
 //Create a new Excel document.
-  Workbook workbook = new Workbook();
+Workbook workbook = new Workbook();
 
 //Accessing worksheet via index.
- Worksheet sheet = workbook.worksheets[0];
+Worksheet sheet = workbook.worksheets[0];
 
-  sheet.getRangeByName('A1').text = "Name";
-  sheet.getRangeByName('A2').text = "John";
-  sheet.getRangeByName('A3').text = "Ashok";
-  sheet.getRangeByName('A4').text = "Vicki";
-  sheet.getRangeByName('B1').text = "Mark1";
-  sheet.getRangeByName('B2').number = 10;
-  sheet.getRangeByName('B3').number = 39;
-  sheet.getRangeByName('B4').number = 25;
-  sheet.getRangeByName('C1').text = "Mark2";
-  sheet.getRangeByName('C2').number = 49;
-  sheet.getRangeByName('C3').number = 23;
-  sheet.getRangeByName('C4').number = 13;
-  sheet.getRangeByName('D1').text = "Mark3";
-  sheet.getRangeByName('D2').number = 24;
-  sheet.getRangeByName('D3').number = 30;
-  sheet.getRangeByName('D4').number = 10;
+sheet.getRangeByName('A1').text = "Name";
+sheet.getRangeByName('A2').text = "John";
+sheet.getRangeByName('A3').text = "Ashok";
+sheet.getRangeByName('A4').text = "Vicki";
+sheet.getRangeByName('B1').text = "Mark1";
+sheet.getRangeByName('B2').number = 10;
+sheet.getRangeByName('B3').number = 39;
+sheet.getRangeByName('B4').number = 25;
+sheet.getRangeByName('C1').text = "Mark2";
+sheet.getRangeByName('C2').number = 49;
+sheet.getRangeByName('C3').number = 23;
+sheet.getRangeByName('C4').number = 13;
+sheet.getRangeByName('D1').text = "Mark3";
+sheet.getRangeByName('D2').number = 24;
+sheet.getRangeByName('D3').number = 30;
+sheet.getRangeByName('D4').number = 10;
+  
 
 //Defining a global style with properties.
-  Style globalStyle = workbook.styles.add('globalStyle');
-  globalStyle.backColor = "#37D8E9";
-  globalStyle.fontName = 'Times New Roman';
-  globalStyle.fontSize = 12;
-  globalStyle.fontColor = "#C67878";
-  globalStyle.italic = true;
-  globalStyle.bold = true;
-  globalStyle.underline = true;
-  globalStyle.wrapText = true;
-  globalStyle.hAlign = HAlignType.center;
-  globalStyle.vAlign = VAlignType.center;
-  globalStyle.borders.all.lineStyle = LineStyle.Thick;
-  globalStyle.borders.all.color = "#9954CC";
+Style globalStyle = workbook.styles.add('globalStyle');
+globalStyle.backColor = "#37D8E9";
+globalStyle.fontName = 'Times New Roman';
+globalStyle.fontSize = 12;
+globalStyle.fontColor = "#C67878";
+globalStyle.italic = true;
+globalStyle.bold = true;
+globalStyle.underline = true;
+globalStyle.wrapText = true;
+globalStyle.hAlign = HAlignType.center;
+globalStyle.vAlign = VAlignType.center;
+globalStyle.borders.all.lineStyle = LineStyle.Thick;
+globalStyle.borders.all.color = "#9954CC";
 
-  Style globalStyle1 = workbook.styles.add('globalStyle1');
-  globalStyle1.fontSize = 14;
-  globalStyle1.fontColor = "#362191";
-  globalStyle1.hAlign = HAlignType.center;
-  globalStyle1.vAlign = VAlignType.center;
-  globalStyle1.borders.bottom.lineStyle = LineStyle.Thin;
-  globalStyle1.borders.bottom.color = "#829193";
+Style globalStyle1 = workbook.styles.add('globalStyle1');
+globalStyle1.fontSize = 14;
+globalStyle1.fontColor = "#362191";
+globalStyle1.hAlign = HAlignType.center;
+globalStyle1.vAlign = VAlignType.center;
+globalStyle1.borders.bottom.lineStyle = LineStyle.Thin;
+globalStyle1.borders.bottom.color = "#829193";
 
 //Apply GlobalStyle
-  sheet.getRangeByName('A1:D1').cellStyle = globalStyle;
+sheet.getRangeByName('A1:D1').cellStyle = globalStyle;
 
 //Apply GlobalStyle1
-  sheet.getRangeByName('B2:D4').cellStyle = globalStyle1;
+sheet.getRangeByName('B2:D4').cellStyle = globalStyle1;
 
 // Save the document.
-  workbook.save("ApplyGlobalStyle.xlsx");
+workbook.save("ApplyGlobalStyle.xlsx");
 
 //Dispose the workbook.
-  workbook.dispose();
+workbook.dispose();
 
 {% endhighlight %}
-{% endtabs %}
+
 ![](working-with-cell-formatting_images/working-with-cell-formatting_img1.jpeg)
 
 ## Apply Number Formats 
+
 Number Formats are codes that helps to control the appearance of cell values especially numbers in an Excel document. Excel recognizes the numbers in various formats like:
+
 * Number
 * Currency
 * Percentage
@@ -117,13 +128,17 @@ Number Formats are codes that helps to control the appearance of cell values esp
 * Scientific
 * Fraction and
 * Text
+
 This number format can be of maximum 4 parts, separated by semicolons. They are:
 * Positive Numbers
 * Negative Numbers
 * Zeros
 * Text
+
 Each part is an individual number format. Default format is “General”, it means anything that will fit.
+
 The following table shows various custom formatting codes:
+
 <table>
 <tr>
 <td>
@@ -425,81 +440,88 @@ These codes display the characters in the specified colors. <br/><br/>Note: n is
 Condition may be &lt;, &gt;, =, >=, &lt;=, &lt;&gt; and value may be any number.<br/><br/>Note: A number format may contain up to two conditions.<br/></td>
 </tr>
 </table>
+
 XlsIO provides support for reading and writing various built-in and custom number formats in a cell by using the NumberFormat property of Range class.
+
 The following code snippet illustrates how to set different number formats in a worksheet range.
-{% tabs %}
+
 {% highlight dart %}
- //Create a new Excel document.
-  Workbook workbook = new Workbook();
+
+//Create a new Excel document.
+Workbook workbook = new Workbook();
 
 //Accessing worksheet via index.
- Worksheet sheet = workbook.worksheets[0];
+Worksheet sheet = workbook.worksheets[0];
 
-  sheet.getRangeByName("A1").text = "DATA";
-  sheet.getRangeByName("B1").text = "NUMBER FORMAT";
-  sheet.getRangeByName("C1").text = "RESULT";
-  Style headingStyle = workbook.styles.add("HeadingStyle");
-  headingStyle.bold = true;
-  headingStyle.hAlign = HAlignType.center;
-  headingStyle.wrapText = true;
-  sheet.getRangeByName("A1:C1").cellStyle = headingStyle;
+sheet.getRangeByName("A1").text = "DATA";
+sheet.getRangeByName("B1").text = "NUMBER FORMAT";
+sheet.getRangeByName("C1").text = "RESULT";
+Style headingStyle = workbook.styles.add("HeadingStyle");
+headingStyle.bold = true;
+headingStyle.hAlign = HAlignType.center;
+headingStyle.wrapText = true;
+sheet.getRangeByName("A1:C1").cellStyle = headingStyle;
 
-  //Applying different number formats
-  sheet.getRangeByName("A2").text = "100.23";
-  sheet.getRangeByName("B2").text = "0.00";
-  sheet.getRangeByName("C2").numberFormat = "0.00";
-  sheet.getRangeByName("C2").number = 100.23;
-  sheet.getRangeByName("A3").text = "43782";
-  sheet.getRangeByName("B3").text = "###,##";
-  sheet.getRangeByName("C3").numberFormat = "###,##";
-  sheet.getRangeByName("C3").number = 43782;
-  sheet.getRangeByName("A4").text = "-500";
-  sheet.getRangeByName("B4").text = "[Blue]#,##0";
-  sheet.getRangeByName("C4").numberFormat = "[Blue]#,##0";
-  sheet.getRangeByName("C4").number = -500;
-  sheet.getRangeByName("A5").text = "0.0123";
-  sheet.getRangeByName("B5").text = "0.0000";
-  sheet.getRangeByName("C5").numberFormat = "0.0000";
-  sheet.getRangeByName("C5").number = 0.0123;
-  sheet.getRangeByName("A6").text = "1.20";
-  sheet.getRangeByName("B6").text = "0.00E+00";
-  sheet.getRangeByName("C6").numberFormat = "0.00E+00";
-  sheet.getRangeByName("C6").number = 1.20;
+  //Applying different number formats.
+sheet.getRangeByName("A2").text = "100.23";
+sheet.getRangeByName("B2").text = "0.00";
+sheet.getRangeByName("C2").numberFormat = "0.00";
+sheet.getRangeByName("C2").number = 100.23;
+sheet.getRangeByName("A3").text = "43782";
+sheet.getRangeByName("B3").text = "###,##";
+sheet.getRangeByName("C3").numberFormat = "###,##";
+sheet.getRangeByName("C3").number = 43782;
+sheet.getRangeByName("A4").text = "-500";
+sheet.getRangeByName("B4").text = "[Blue]#,##0";
+sheet.getRangeByName("C4").numberFormat = "[Blue]#,##0";
+sheet.getRangeByName("C4").number = -500;
+sheet.getRangeByName("A5").text = "0.0123";
+sheet.getRangeByName("B5").text = "0.0000";
+sheet.getRangeByName("C5").numberFormat = "0.0000";
+sheet.getRangeByName("C5").number = 0.0123;
+sheet.getRangeByName("A6").text = "1.20";
+sheet.getRangeByName("B6").text = "0.00E+00";
+sheet.getRangeByName("C6").numberFormat = "0.00E+00";
+sheet.getRangeByName("C6").number = 1.20;
 
-  //Applying percentage format
-  sheet.getRangeByName("A7").text = "1.20";
-  sheet.getRangeByName("B7").text = "0.00%";
-  sheet.getRangeByName("C7").numberFormat = "0.00%";
-  sheet.getRangeByName("C7").number = 1.20;
+//Applying percentage format.
+sheet.getRangeByName("A7").text = "1.20";
+sheet.getRangeByName("B7").text = "0.00%";
+sheet.getRangeByName("C7").numberFormat = "0.00%";
+sheet.getRangeByName("C7").number = 1.20;
 
-  //Applying date format
-  sheet.getRangeByName("A8").text = DateTime(2005, 12, 25).toString();
-  sheet.getRangeByName("B8").text = "m/d/yyyy";
-  sheet.getRangeByName("C8").numberFormat = "m/d/yyyy";
-  sheet.getRangeByName("C8").dateTime = DateTime(2005, 12, 25);
+//Applying date format.
+sheet.getRangeByName("A8").text = DateTime(2005, 12, 25).toString();
+sheet.getRangeByName("B8").text = "m/d/yyyy";
+sheet.getRangeByName("C8").numberFormat = "m/d/yyyy";
+sheet.getRangeByName("C8").dateTime = DateTime(2005, 12, 25);
 
-  //Applying currency format
-  sheet.getRangeByName("A9").text = "1.20";
-  sheet.getRangeByName("B9").text = "\$#,##0.00";
-  sheet.getRangeByName("C9").numberFormat = "\$#,##0.00";
-  sheet.getRangeByName("C9").number = 1.20;
+//Applying currency format.
+sheet.getRangeByName("A9").text = "1.20";
+sheet.getRangeByName("B9").text = "\$#,##0.00";
+sheet.getRangeByName("C9").numberFormat = "\$#,##0.00";
+sheet.getRangeByName("C9").number = 1.20;
 
-  //Applying accounting format
-  sheet.getRangeByName("A10").text = "234";
-  sheet.getRangeByName("B10").text = "_(\$* #,##0_)";
-  sheet.getRangeByName("C10").numberFormat = "_(\$* #,##0_)";
-  sheet.getRangeByName("C10").number = 234;
+//Applying accounting format.
+sheet.getRangeByName("A10").text = "234";
+sheet.getRangeByName("B10").text = "_(\$* #,##0_)";
+sheet.getRangeByName("C10").numberFormat = "_(\$* #,##0_)";
+sheet.getRangeByName("C10").number = 234;
 
- workbook.save("NumberFormats.xlsx");
+workbook.save("NumberFormats.xlsx");
+
 {% endhighlight %}
-{% endtabs %}
+
 ![](working-with-cell-formatting_images/working-with-cell-formatting_img2.jpeg)
 
 ## Access display text
+
 Cell values can be accessed as **text**, **number**, **dateTime** and **formula** of **Range** class. In addition to this, there is  another property**DisplayText** in **Range**, which returns a resultant value of a cell with its number format applied.
+
 The following code example illustrates how to display the text of a cell.
-{% tabs %}
+
 {% highlight dart %}
+
 //Create a new Excel document.
 Workbook workbook = new Workbook();
 
@@ -509,34 +531,41 @@ Worksheet sheet = workbook.worksheets[0];
  
 Range range1 = sheet.getRangeByIndex(1, 1);
 range1.numberFormat = "0%";
+
 //Set value to the cell
 range1.number = 10;
+
 //Get display text of the cell
 range1.displayText;
 
 workbook.save("DisplayText.xlsx");
 
-
 {% endhighlight %}
-{% endtabs %}
+
 ## Merging and Un-Merging Cells
+
 The cells can be merged using the merge() method in Range as shown as follows.
-{% tabs %}
+
 {% highlight dart %}
+
 //Merging Cells from A1 to A6 
 sheet.getRangeByName("A1:A6").merge();
+
 {% endhighlight %}
-{% endtabs %}
+
 Merged cells can be unmerged using the **unmerge()**method in **Range** as shown below.
-{% tabs %}
+
 {% highlight dart %}
+
 //UnMerging Cells from A1 to A6 
 sheet.getRangeByName("A1:A6").unmerge();
+
 {% endhighlight %}
-{% endtabs %}
+
 The below code shows merging and unmerging worksheet cells.
-{% tabs %}
+
 {% highlight dart %}
+
 //Create a new Excel document.
 Workbook workbook = new Workbook();
 
@@ -544,20 +573,22 @@ Workbook workbook = new Workbook();
 Worksheet sheet = workbook.worksheets[0];
 
  
-//Merging Cells from A16 to C16 
+//Merging Cells from A16 to C16. 
 sheet.getRangeByName("A1:C16").merge();
 
-//UnMerging Cells from A1 to A6 
+//UnMerging Cells from A1 to C16 
 sheet.getRangeByName("A1:C16").unmerge();
 
 workbook.save("MergeUnMerge.xlsx");
 
 {% endhighlight %}
-{% endtabs %}
+
 ## Apply Build-In Style
-The following code snippet explains how to add [builtInStyle](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_BuiltInStyle "") for a worksheet range.
-{% tabs %}
+
+The following code snippet explains how to add **builtInStyle** for a worksheet range.
+
 {% highlight dart %}
+
 //Create a new Excel document.
 Workbook workbook = new Workbook();
 
@@ -571,5 +602,6 @@ sheet.getRangeByName("A2").text = "Sample";
 sheet.getRangeByName("A2").builtInStyle = BuiltInStyles.CheckCell;  
 
 workbook.save("BuildInStyle.xlsx");
+
 {% endhighlight %}
-{% endtabs %}
+
