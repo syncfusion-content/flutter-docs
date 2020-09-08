@@ -9,7 +9,7 @@ You can save the created or manipulated workbook to file system using Save metho
 //Creates a new instance for workbook.
 Workbook workbook = new Workbook();
 
-//Save the workbook in file system as XLSX format
+//Save the workbook in file system as XLSX format.
 workbook.save('Output.xlsx');
 
 {% endhighlight %}
@@ -23,10 +23,10 @@ Once after the workbook manipulation and save operation are completed, you shoul
 //Creates a new instance for workbook.
 Workbook workbook = new Workbook();
 
-//Save the workbook in file system as XLSX format
+//Save the workbook in file system as XLSX format.
 workbook.save('Output.xlsx');
 
-//Dispose the instance of workbook
+//Dispose the instance of workbook.
 workbook.dispose();
 
 {% endhighlight %}
