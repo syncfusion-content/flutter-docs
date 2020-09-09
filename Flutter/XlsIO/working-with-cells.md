@@ -1,3 +1,12 @@
+---
+layout: post
+title: Working with Cells using Syncfusion Flutter XlsIO
+description: Learn how to add text, number, datetime and values to Excel worksheet using Syncfusion Flutter XlsIO.
+platform: flutter
+control: Excel
+documentation: ug
+---
+
 # Working with Cells
 
 ## Adding a Text to Excel worksheet
