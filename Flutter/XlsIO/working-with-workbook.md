@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Workbook of Syncfusion Flutter XlsIO
-description: Learn how to save the created workbook and close the workbook using Syncfusion Flutter XlsIO.
+description: Learn how to save the created workbook using different ways and close the workbook using Syncfusion Flutter XlsIO.
 platform: flutter
 control: Excel
 documentation: ug

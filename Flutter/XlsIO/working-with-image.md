@@ -1,4 +1,13 @@
-# Working with Images
+---
+layout: post
+title: Excel images of Syncfusion Flutter XlsIO.
+description: Learn how to add, format and remove the images from the Excel worksheet using Syncfusion Flutter XlsIO.
+platform: flutter
+control: Excel
+documentation: ug
+---
+
+# Working with Excel Images
 
 ## Adding Images to worksheet
 

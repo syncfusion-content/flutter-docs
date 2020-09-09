@@ -7,7 +7,7 @@ control: Excel
 documentation: ug
 ---
 
-# Working with Cells
+# Working with Worksheet Cells  
 
 ## Adding a Text to Excel worksheet
 

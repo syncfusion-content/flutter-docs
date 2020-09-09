@@ -1,3 +1,12 @@
+---
+layout: post
+title: Excel worksheet of Syncfusion Flutter XlsIO.
+description: Learn how to create and access a worksheet of workbook and manipulating the worksheet using Syncfusion Flutter XlsIO. 
+platform: flutter
+control: Excel
+documentation: ug
+---
+
 # Working with Excel Worksheets
 
 A Workbook contains a collection of worksheets where the actual contents reside and Worksheet instance represents a worksheet. With Flutter XlsIO, you can add and manipulate worksheets.

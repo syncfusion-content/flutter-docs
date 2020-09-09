@@ -1,4 +1,13 @@
-# Working with Charts
+---
+layout: post
+title: Excel Charts of Syncfusion Flutter XlsIO.
+description: Learn how to create, add and manipulate different type of Excel charts in worksheet using Syncfusion Flutter XlsIO. 
+platform: flutter
+control: Excel
+documentation: ug
+---
+
+# Working with Excel Charts
 
 Flutter XlsIO has support for creating and modifying Excel charts inside a workbook.
 
