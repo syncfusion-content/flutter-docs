@@ -1,3 +1,12 @@
+---
+layout: post
+title: Getting Started for Syncfusion Flutter XlsIO
+description: Learn how to create Excel document with all basic elements and save it in browser or mobile devices by using Syncfusion Flutter XlsIO.
+platform: flutter
+control: Excel
+documentation: ug
+---
+
 # Getting Started for Syncfusion Flutter XlsIO
 
 This section explains the steps required to create a Excel document by a single button click. This section covers only the minimal features needed to learn to get started with the Excel.

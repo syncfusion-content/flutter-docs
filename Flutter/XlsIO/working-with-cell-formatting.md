@@ -114,7 +114,7 @@ workbook.dispose();
 
 {% endhighlight %}
 
-![](working-with-cell-formatting_images/working-with-cell-formatting_img1.jpeg)
+![globalstyle](images/globalstyle.jpeg)
 
 ## Apply Number Formats 
 
@@ -512,7 +512,7 @@ workbook.save("NumberFormats.xlsx");
 
 {% endhighlight %}
 
-![](working-with-cell-formatting_images/working-with-cell-formatting_img2.jpeg)
+![numberformat](images/numberformat.jpeg)
 
 ## Access display text
 
@@ -583,7 +583,7 @@ workbook.save("MergeUnMerge.xlsx");
 
 {% endhighlight %}
 
-## Apply Build-In Style
+## Apply Build-in Style
 
 The following code snippet explains how to add **builtInStyle** for a worksheet range.
 
