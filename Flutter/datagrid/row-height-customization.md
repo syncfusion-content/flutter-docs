@@ -300,7 +300,7 @@ Widget build(BuildContext context) {
 
 The SfDataGrid allows you to update or refresh the datagrid when an underlying data is updated.
 
-If row data is upadeted or the specific value of the cell is upadeted, you can call the `refreshRow` method with `rowIndex` arugument.
+If row data is updated or the specific value of the cell is updated, you can call the `refreshRow` method with `rowIndex` argument.
 
 So, data which is displayed in a row or cell will be refreshed.
 
