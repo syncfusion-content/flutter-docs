@@ -1,0 +1,147 @@
+---
+layout: post
+title: Excel Formula of Syncfusion Flutter XlsIO.
+description: Learn how to apply formulas and to calculate value in the cells of Excel worksheet using Syncfusion Flutter XlsIO. 
+platform: flutter
+control: Excel
+documentation: ug
+---
+
+# Working with Formulas
+
+Formulas are entries in Excel that have equations, by which values are calculated. A typical formula might contain cell references, constants, and even functions.
+
+## Enable Calculation
+
+To perform calculation in an Excel workbook, it is recommended to invoke **enableSheetCalculations()**method of **Worksheet**. Enabling this method will initialize **CalcEngine** objects and retrieves calculated values of formulas in a worksheet.
+
+The following code sample illustrates on how to enable worksheet formula calculations.
+
+{% highlight dart %}
+
+Worksheet sheet = workbook.worksheets[0];
+
+//Formula calculation is enabled for the sheet
+sheet.enableSheetCalculations();
+
+{% endhighlight %}
+
+
+## Apply Formula
+
+In a worksheet, formulas can be entered by using the **formula** property of the Range instance.
+Following code example illustrates on how to write a formula.
+
+
+{% highlight dart %}
+
+//Create a new Excel document.
+Workbook workbook = new Workbook();
+
+//Accessing worksheet via index.
+Worksheet sheet = workbook.worksheets[0];
+
+//set the value to the cell.
+sheet.getRangeByName("A1").number = 10;
+sheet.getRangeByName("A2").number = 20;
+
+//Setting formula in the cell.
+sheet.getRangeByName("A3").formula = "=A1+A2";
+
+//Save a workbook.
+workbook.save("Formula.xlsx");
+
+//dispose workbook.
+workbook.dispose();
+
+{% endhighlight %}
+
+## Accessing a Calculated value
+
+To evaluate formula, it is must to [enable sheet calculation](enable-sheet-calculation) in prior. After enabling the sheet calculation, the formula can be evaluated using **calculatedValue** of **Range**, which returns a string value.
+
+The following code shows how to access a calculated value.
+
+{% highlight dart %}
+
+//Create a new Excel document.
+Workbook workbook = new Workbook();
+
+//Accessing worksheet via index.
+Worksheet sheet = workbook.worksheets[0];
+
+//Formula calculation is enabled for the sheet.
+sheet.enableSheetCalculations();
+
+//set the value to the cell.
+sheet.getRangeByName("A1").number = 10;
+sheet.getRangeByName("A2").number = 20;
+
+//Setting formula in the cell.
+sheet.getRangeByName("A3").formula = "=A1+A2";
+
+//Returns the calculated value of a formula using the most current inputs
+String calculatedValue = sheet.getRangeByName("A3").calculatedValue;
+
+//Save a workbook.
+workbook.save("Formula.xlsx");
+
+//dispose workbook.
+workbook.dispose();
+
+{% endhighlight %}
+
+## Supported Formulas
+
+In flutter XlsIO, we have support for Range reference and basic function formula listed below:
+
+<table>
+<tr>
+<td>
+SUM
+</td>
+<td>
+Adds its arguments
+</td>
+</tr>
+<tr>
+<td>
+AVERAGE
+</td>
+<td>
+Returns the average of its arguments
+</td>
+</tr>
+<tr>
+<td>
+MAX
+</td>
+<td>
+Returns the maximum value in a list of arguments
+</td>
+</tr>
+<tr>
+<td>
+MIN
+</td>
+<td>
+Returns the minimum value in a list of arguments
+</td>
+</tr>
+<tr>
+<td>
+COUNT
+</td>
+<td>
+Counts how many numbers are in the list of arguments
+</td>
+</tr>
+<tr>
+<td>
+IF
+</td>
+<td>
+Specifies a logical test to perform
+</td>
+</tr>
+</table>
