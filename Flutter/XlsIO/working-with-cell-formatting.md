@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Working with Cell Formatting
-description: Learn how to add cell formatting options in a cell or range to Excel Worksheet.
+title: Cell Formatting of Syncfusion Flutter XlsIO
+description: Learn how to create and apply different cell formatting options in a cell or range to Excel Worksheet.
 platform: flutter
 control: Excel
 documentation: ug
