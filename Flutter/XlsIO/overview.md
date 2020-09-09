@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of Syncfusion Flutter XlsIO
-description: Learn how to create or generate a Excel file in Windows Forms with easy steps using Syncfusion .NET XlsIO library without dependency of Microsoft Office COM libraries & Microsoft Office.
+description: Learn how to create or generate a Excel file in Windows Forms with easy steps using Syncfusion .NET XlsIO library.
 platform: flutter
 control: Excel
 documentation: ug

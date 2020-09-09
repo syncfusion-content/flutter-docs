@@ -1,3 +1,12 @@
+---
+layout: post
+title: Working with Cell Formatting
+description: Learn how to add cell formatting options in a cell or range to Excel Worksheet.
+platform: flutter
+control: Excel
+documentation: ug
+---
+
 # Working with Cell Formatting
 
 This section covers the various formatting options in a cell or a range.
@@ -583,7 +592,7 @@ workbook.save("MergeUnMerge.xlsx");
 
 {% endhighlight %}
 
-## Apply Build-in Style
+## Apply Built-in Style
 
 The following code snippet explains how to add **builtInStyle** for a worksheet range.
 
@@ -601,7 +610,7 @@ sheet.getRangeByName("A2").text = "Sample";
 //Set built in style.
 sheet.getRangeByName("A2").builtInStyle = BuiltInStyles.CheckCell;  
 
-workbook.save("BuildInStyle.xlsx");
+workbook.save("BuiltInStyle.xlsx");
 
 {% endhighlight %}
 
