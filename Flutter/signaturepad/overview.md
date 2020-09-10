@@ -1,0 +1,18 @@
+---
+layout: post
+title: Getting Started for Syncfusion Flutter Signature Pad | Syncfusion
+description: This section explains the steps required to add the Signature Pad widget and its elements such as minimum and maximum stroke widths, stroke color and background color.
+platform: Flutter
+control: SfSignaturePad
+documentation: ug
+---
+
+# Overview of Signature Pad
+
+The Signature Pad widget allows you to capture smooth and more realistic signatures through drawing gestures. The widget allows you to save the signature as an image, which can be further synchronized with your devices and documents that need the signature.
+
+### Features
+
+* **Rich customization** - The widget allows you to set the minimum and maximum stroke widths and the stroke color for a signature. Also, you can set the background color of the signature pad.
+* **More realistic handwritten look and feel** - The unique stroke rendering algorithm draws the signature based on the speed of the drawing gestures, along with the minimum and maximum stroke thicknesses, which brings a more realistic handwritten look and feel to your signature.
+* **Save as image** - Save the drawn signature as an image to embedded in documents, PDFs, and anything else that supports using images to denote a signature.
