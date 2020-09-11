@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started for Syncfusion Flutter Signature Pad | Syncfusion
-description: This section explains the steps required to add the Signature Pad widget and its elements such as minimum and maximum stroke widths, stroke color and background color.
+description: This section explains how to use the signature pad widget in flutter applciations and how to save a signature as image in flutter applciations.
 platform: Flutter
 control: SfSignaturePad
 documentation: ug
@@ -51,7 +51,7 @@ import 'package:syncfusion_flutter_signaturepad/signaturepad.dart';
 
 ## Initialize Signature Pad
 
-After importing the package, initialize the signature pad widget as a child of any widget. Here, the SinaturePad widget is added as a child of the Container widget to get a position and size. Also, applied a background color to show the Signature Pad widget in white background.The default `backgroundColor` is `Colors.transparent`.
+After importing the package, initialize the signature pad widget as a child of any widget. Here, the signature pad widget is added as a child of the Container widget to get a position and size. Also, applied a background color to show the signature pad widget in white background.The default `backgroundColor` is `Colors.transparent`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -129,9 +129,9 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 
-## Save as image in android and iOS platforms
+## Save as image in Android and iOS platforms
 
-You can save the signature drawn in the SignaturePad as an image using the toImage() method as show in the below code example in android and iOS platfroms. Since this toImage() method is defined in the state object of Signature Pad, you have to use a global key assigned to the Signature Pad instance to call this method.
+You can save the signature drawn in the SignaturePad as an image using the toImage() method as shown in the below code example in Android and iOS platforms. Since this toImage() method is defined in the state object of Signature Pad, you have to use a global key assigned to the Signature Pad instance to call this method.
 
 {% tabs %}
 {% highlight Dart %}
@@ -188,10 +188,18 @@ Widget build(BuildContext context) {
         RaisedButton(
             child: Text("Save As Image"),
             onPressed: () async {
+			
+				//Get a html canvas context.
                 final canvas = html.CanvasElement(width: 500, height: 500);
                 final context = canvas.context2D;
+				
+				//Get the signature in the canvas context.
                 _signaturePadKey.currentState.renderToContext2D(context);
+				
+				//Get the image from the canvas context
                 final blob = await canvas.toBlob('image/jpeg', 1.0);
+				
+				//Save the image as Uint8List to use it in local device.
                 final completer = Completer<Uint8List>();
                 final reader = html.FileReader();
                 reader.readAsArrayBuffer(blob);
@@ -222,9 +230,6 @@ Widget build(BuildContext context) {
         Container(
           child: SfSignaturePad(
             key: _signaturePadKey,
-            minimumStrokeWidth: 1,
-            maximumStrokeWidth: 3,
-            strokeColor: Colors.blue,
             backgroundColor: Colors.grey[200],
           ),
           height: 200,
@@ -247,7 +252,7 @@ Widget build(BuildContext context) {
 
 ## Handle onSignStart and onSignEnd callbacks
 
-The widget allows to handle the onSignStart and onSignEnd callbacks for every strokes udpated to the Signature Pad.The `onSignStart` callback will be called when the user starts signing on `SfSignaturePad`and the `onSignEnd` callback will be called when the user completes signing on `SfSignaturePad`.
+The widget allows to handle the onSignStart and onSignEnd callbacks for every strokes updated to the Signature Pad.The `onSignStart` callback will be called when the user starts signing on `SfSignaturePad`and the `onSignEnd` callback will be called when the user completes signing on `SfSignaturePad`.
 
 @override
 Widget build(BuildContext context) {
