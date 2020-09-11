@@ -254,6 +254,9 @@ Widget build(BuildContext context) {
 
 The widget allows to handle the onSignStart and onSignEnd callbacks for every strokes updated to the Signature Pad.The `onSignStart` callback will be called when the user starts signing on `SfSignaturePad`and the `onSignEnd` callback will be called when the user completes signing on `SfSignaturePad`.
 
+{% tabs %}
+{% highlight Dart %}
+
 @override
 Widget build(BuildContext context) {
   return Scaffold(
