@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotations of Syncfusion Flutter PDF
-description: Learn how to work with PDF interactive annotations in a document using Flutter PDF.
+description: Learn how to add, remove, and modify properties of interactive annotations in a PDF document using Flutter PDF.
 platform: flutter
 control: PDF
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 The Syncfusion Flutter PDF provides support for interactive annotations.
 
-You can [`add`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfAnnotationCollection/add.html), delete, and modify the [`annotations`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPage/annotations.html) from the PDF documents.
+You can [`add`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfAnnotationCollection/add.html), remove, and modify the [`annotations`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPage/annotations.html) from the PDF documents.
 
 ## Adding annotations to a PDF document
 
