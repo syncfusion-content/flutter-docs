@@ -197,7 +197,7 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
 
 {% endhighlight %}
 
-## onDatalabelTapped
+## onDataLabelTapped
 Whenever the data label is tapped [`onDataLabelTapped`]() callback will be called. Provides options to get the position of the data label, series index, point index and its text.
 
 **NOTE** 

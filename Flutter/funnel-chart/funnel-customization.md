@@ -215,3 +215,65 @@ The [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
 {% endhighlight %}
 
 ![Palette](images/funnel-charts/funnel_palette.jpg)
+
+## Export Image or PDF for chart
+
+To export the Funnel chart as image(any of the image format) and as PDF document.
+
+We can get the image by calling [`toImage`]() method in repaint boundary and we create the pdf document using pdf component.
+
+### Export Image
+
+{% highlight dart %} 
+
+    Future<void> _renderFunnelImage() async {
+    dart_ui.Image data = await _funnelChartKey.currentState.toImage(pixelRatio: 3.0);
+    final bytes = await data.toByteData(format: dart_ui.ImageByteFormat.png);
+    if (data != null) {
+      await Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (BuildContext context) {
+            return Scaffold(
+              appBar: AppBar(),
+              body: Center(
+                child: Container(
+                  color: Colors.white,
+                  child: Image.memory(bytes.buffer.asUint8List()),
+                ),
+              ),
+            );
+          },
+        ),
+      );
+    }
+    }
+
+  {% endhighlight %}
+
+![image_view](images/Funnel-customization/image_view.png))
+
+### Export PDF
+
+{% highlight dart %} 
+
+    Future<void> _renderFunnelPDF() async {
+    var document = PdfDocument();
+    PdfPage page = document.pages.add();
+    dart_ui.Image data = await _funnelChartKey.currentState.toImage(pixelRatio: 3.0);
+    final bytes = await data.toByteData(format: dart_ui.ImageByteFormat.png);
+    final Uint8List imageBytes =
+        bytes.buffer.asUint8List(bytes.offsetInBytes, bytes.lengthInBytes);
+    page.graphics
+        .drawImage(PdfBitmap(imageBytes), Rect.fromLTWH(25, 50, 300, 300));
+    var byteData = document.save();
+    document.dispose();
+    Directory directory = await getExternalStorageDirectory();
+    String path = directory.path;
+    File file = File('$path/Output.pdf');
+    await file.writeAsBytes(byteData, flush: true);
+    OpenFile.open('$path/Output.pdf');
+    } 
+
+  {% endhighlight %}
+  
+  ![image_view](images/Funnel-customization/pdf_view.png))
