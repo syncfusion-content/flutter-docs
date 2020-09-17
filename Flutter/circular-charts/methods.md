@@ -235,16 +235,19 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
   {% endhighlight %}
 
-  ## Methods in selectionSettings
+## Methods in selectionSettings
 
-### SelectionIndex method in selectionSettings
+### SelectDataPoints method in selectionSettings
 
-The [`selectionIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionSettings/selectionIndex.html) method is used to select the data point programmatically. The required arguments are listed below.
+The [`selectDataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionSettings/selectionIndex.html) method is used to select the data point programmatically. The required arguments are listed below.
 
 * pointIndex - specifies the point index value.
-* seriesIndex - specifies the series index value.
-* selectionType - specifies the [`SelectionType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionType-class.html) and this is an optional parameter. 
-* multiSelect - bool property specifies the multiple selection and this is an optional parameter.
+* seriesIndex - specifies the series index value and this is an optional parameter.
+
+**NOTE**
+
+We can get the [`enableMultiSelection`]() and [`selectionType`]() is directly should be used from the API.
+
 
 {% highlight dart %}
 
@@ -255,7 +258,7 @@ The [`selectionIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/l
     Widget build(BuildContext context) {
     
     final List<ChartData> chartData = [
-      hartData(10, 17),
+      ChartData(10, 17),
       ChartData(20, 34)
       // Add the required data
     ];
@@ -264,7 +267,7 @@ The [`selectionIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/l
     
     chart = SfCircularChart(
       series: <CircularSeries>[
-        ColumnSeries<ChartData, double>(
+        PieSeries<ChartData, double>(
             dataSource: chartData,
             xValueMapper: (ChartData data, _) => data.x,
             yValueMapper: (ChartData data, _) => data.y,
@@ -289,7 +292,7 @@ The [`selectionIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/l
   }
 
     void select() {
-        selection.selectionIndex(1, 0);
+        selection.selectDataPoints(1, 0);
     }
 
 {% endhighlight %}

@@ -196,6 +196,45 @@ The ActivationMode enum contains the following values:
 
 {% endhighlight %}
 
+### Trackball Tooltip Overlap
+
+In this method used to avoid the overlap for two or more tooltips in trackball. For example, If we provide 2 or more series datapoints in same index, the trackball tooltip will not be overlaped.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+          child: Center(
+            child: Container(
+              child: SfCartesianChart(
+                trackballBehavior: TrackballBehavior(
+                  enable: true
+                )
+                <SplineSeries<SalesData, double>>[
+                      SplineSeries<SalesData, double>(
+                          dataSource: data,
+                          markerSettings: 
+                          xValueMapper: (SalesData sales, _) => sales.year,
+                          yValueMapper: (SalesData sales, _) => sales.sales)
+                      SplineSeries<SalesData, double>(
+                          dataSource: data2,
+                          xValueMapper: (SalesData sales, _) => sales.year,
+                          yValueMapper: (SalesData sales, _) => sales.sales),
+                      SplineSeries<SalesData, double>(
+                          dataSource:data3
+                          xValueMapper: (SalesData sales, _) => sales.year,
+                          yValueMapper: (SalesData sales, _) => sales.sales),
+              )
+            )
+        )
+      );
+    }
+
+{% endhighlight %}
+
+![Trackball Tooltip Overlap](images/trackball-crosshair/trackball_overlap.png)
+
 ## Crosshair
 
 Crosshair has a vertical and horizontal line to view the value of the axis. 

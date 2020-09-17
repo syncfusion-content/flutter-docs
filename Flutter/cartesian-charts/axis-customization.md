@@ -1021,6 +1021,32 @@ If it is a horizontal axis, aligns the labels after the gridline and if it is a 
 
 ![end](images/axis-customization/end.png)
 
+## Auto Range Calculation
+Determines the value axis range, based on the visible data points or based on the overall data points available in chart. 
+
+By default, value axis range will be calculated automatically based on the visible data points on dynamic changes. The visible data points are changed on performing interactions like pinch zooming, selection zooming, panning and also on specifying [visibleMinimum]() and [visibleMaximum]() values.
+  
+To toggle this functionality, this property can be used. i.e. on setting false to this property,
+value axis range will be calculated based on allthe data points in chart irrespective of visible points.
+  
+**NOTE** 
+
+This is applicable only to the value axis and not for other axis.
+  
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+      return Container(
+          child: SfCartesianChart(
+             primaryYAxis: NumericAxis(anchorRangeToVisiblePoints: false),
+          ));
+    }
+
+![Auto_Range Calculation](images/axis-customization/auto_range_calculation.png)
+
+{% endhighlight %}
+
 ## See Also
 
 * [Rendering a particular part of a data using visible minimum and visible maximum in the Cartesian chart](https://www.syncfusion.com/kb/11308/how-to-render-particular-part-of-a-data-in-cartesian-charts-sfcartesianchart).

@@ -125,3 +125,62 @@ You can select a point or series programmatically on a chart using [`initialSele
 ![Initial selection](images/selection/initial_render_selection.png)
 
 Also refer [selection event](./events#onselectionchanged) for customizing the selection further.
+
+## Methods in selectionSettings
+
+### SelectDataPoints method in selectionSettings
+
+The [`selectDataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionSettings/selectionIndex.html) method is used to select the data point programmatically. The required arguments are listed below.
+
+* pointIndex - specifies the point index value.
+* seriesIndex - specifies the series index value and this is an optional parameter.
+
+**NOTE**
+
+We can get the [`enableMultiSelection`]() and [`selectionType`]() is directly should be used from the API.
+
+
+{% highlight dart %}
+
+    SfPyramidChart chart;
+    SelectionSettings selection;
+
+    @override
+    Widget build(BuildContext context) {
+    
+    final List<ChartData> chartData = [
+      ChartData(10, 17),
+      ChartData(20, 34)
+      // Add the required data
+    ];
+
+    selection = SelectionSettings(enable: true);
+    
+    chart = SfPyramidChart(
+      series: PyramidSeries<ChartData, double>(
+            dataSource: chartData,
+            xValueMapper: (ChartData data, _) => data.x,
+            yValueMapper: (ChartData data, _) => data.y,
+            selectionSettings: selection
+        )
+    );
+    
+    return Scaffold(
+      body: Center(
+        child: Column(
+          children: <Widget>[
+            FlatButton(
+              child: Text('Select'),
+              onPressed: select
+            ),
+            Container(child: chart)
+          ]
+        )
+      )
+    );
+    }
+    void select() {
+        selection.selectDataPoints(1, 0);
+    }
+
+{% endhighlight %}

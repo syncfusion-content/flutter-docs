@@ -398,3 +398,71 @@ Data label and its connector line in the Cartesian charts for the point value 0 
 {% endhighlight %}
 
 ![hide_0_value](images/marker-datalabel/dataLabel_0_value.png)
+
+
+### Datalabel Padding
+
+Provide support to add padding for data labels to move it vertically or horizontally in cartesian charts. It can achieve using [`offset`]() property in [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/dataLabelSettings.html). 
+
+data label in both vertical and horizontal direction from its position. It takes the logical pixel value for x and y values as input. 
+
+
+**NOTE**  
+This is not applicable for other widgets like Circular, Pyramid and Funnel.
+
+
+#### Horiontal Padding
+
+In Horizontal Padding, Positive value for x, moves the datalabel to right and negative value moves to left.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                    child:SfCartesianChart(
+                        series: <CartesianSeries<SalesData,num>>[
+                            SplineSeries<SalesData, num>(
+                                dataLabelSettings: DataLabelSettings(
+                                    isVisible: true,
+                                    offset: Offset(30, 0);
+                                ),
+                            )
+                        ]
+                    )
+            )
+        );
+    }
+    
+{% endhighlight %}
+
+![Horizontal padding](images/marker-datalabel/horizontal_padding.png)
+
+#### Vertical Padding
+
+In Vertical Padding, Positive value for y, moves the datalabel upwards and negative value moves downwards.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                    child:SfCartesianChart(
+                        series: <CartesianSeries<SalesData,num>>[
+                            SplineSeries<SalesData, num>(
+                                dataLabelSettings: DataLabelSettings(
+                                    isVisible: true,
+                                    offset: Offset(0, 30);
+                                ),
+                            )
+                        ]
+                    )
+            )
+        );
+    }
+    
+{% endhighlight %}
+
+![Vertical padding](images/marker-datalabel/vertical_padding.png)
