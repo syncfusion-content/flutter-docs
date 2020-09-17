@@ -39,9 +39,40 @@ documentation: ug
 
 {% endhighlight %}
 
-### Dynamic animation
+### Dynamic Series Animation
 
-[`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) also provide the dynamic animation support for the series.The series can be dynamically added to the charts, it will animated by setting the timer value. when you set the [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/animationDuration.html) value to 0, the series won't be animated. 
+[`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) also provide the dynamic animation support for the series.
+
+If you wish to perform initial animation again in the existing series, this method should be called. On calling this method, this particular series will be animated again based on the [`animationDuration`]() property's value in the series.
+
+If the value is 0, then the animation will not be performed.
+
+{% highlight dart %} 
+
+    Widget build(BuildContext context) {
+    ChartSeriesController _chartSeriesController;
+     return Column(
+       children: <Widget>[
+         Container(
+           child: SfCartesianChart(
+              series: <LineSeries<SalesData, num>>[
+                 LineSeries<SalesData, num>(
+                     onRendererCreated: (ChartSeriesController controller) {
+                       _chartSeriesController = controller;
+                     },
+                  ),
+              ],
+          )),
+     Container(
+        child: RaisedButton(
+             onPressed: () {
+             _chartSeriesController.animate();
+        })
+     )]
+    );
+    }
+
+{% endhighlight %}
 
 ## Transpose the series
 
