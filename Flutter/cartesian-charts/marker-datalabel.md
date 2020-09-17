@@ -400,9 +400,9 @@ Data label and its connector line in the Cartesian charts for the point value 0 
 ![hide_0_value](images/marker-datalabel/dataLabel_0_value.png)
 
 
-### Datalabel Padding
+### Data label Padding
 
-Provide support to add padding for data labels to move it vertically or horizontally in cartesian charts. It can achieve using [`offset`]() property in [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/dataLabelSettings.html). 
+Provide support to add padding for data labels to move it vertically or horizontally in Cartesian charts. It can achieve using [`offset`]() property in [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/dataLabelSettings.html). 
 
 data label in both vertical and horizontal direction from its position. It takes the logical pixel value for x and y values as input. 
 
@@ -411,9 +411,9 @@ data label in both vertical and horizontal direction from its position. It takes
 This is not applicable for other widgets like Circular, Pyramid and Funnel.
 
 
-#### Horiontal Padding
+#### Horizontal Padding
 
-In Horizontal Padding, Positive value for x, moves the datalabel to right and negative value moves to left.
+In Horizontal Padding, Positive value for x, moves the data label to right and negative value moves to left.
 
 {% highlight dart %} 
 
@@ -441,7 +441,7 @@ In Horizontal Padding, Positive value for x, moves the datalabel to�
 
 #### Vertical Padding
 
-In Vertical Padding, Positive value for y, moves the datalabel upwards and negative value moves downwards.
+In Vertical Padding, Positive value for y, moves the data label upwards and negative value moves downwards.
 
 {% highlight dart %} 
 

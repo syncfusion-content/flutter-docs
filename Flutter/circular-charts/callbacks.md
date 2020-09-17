@@ -196,3 +196,24 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
     }
 
 {% endhighlight %}
+
+## onDatalabelTapped
+Whenever the data label is tapped [`onDataLabelTapped`]() callback will be called. Provides options to get the position of the data label, series index, point index and its text.
+
+**NOTE** 
+
+This callback will not be called, when the builder is specified for data label (data label template). For this case, custom widget specified in the [`DataLabelSettings.builder`]() property can be wrapped using the [`GestureDetector`]() and this functionality can be achieved in the application level.
+
+{% highlight dart %}
+
+    Widget build(BuildContext context) {
+      return Container(
+          child: SfCircularChart(
+              onDatalabelTapped: (DataLabelTapArgs args) {
+              print(arg.seriesIndex);                 
+              }
+          )
+      );
+     }
+
+{% endhighlight %}

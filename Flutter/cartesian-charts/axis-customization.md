@@ -1027,7 +1027,7 @@ Determines the value axis range, based on the visible data points or based on th
 By default, value axis range will be calculated automatically based on the visible data points on dynamic changes. The visible data points are changed on performing interactions like pinch zooming, selection zooming, panning and also on specifying [visibleMinimum]() and [visibleMaximum]() values.
   
 To toggle this functionality, this property can be used. i.e. on setting false to this property,
-value axis range will be calculated based on allthe data points in chart irrespective of visible points.
+value axis range will be calculated based on all the data points in chart irrespective of visible points.
   
 **NOTE** 
 
@@ -1043,7 +1043,7 @@ This is applicable only to the value axis and not for other axis.
           ));
     }
 
-![Auto_Range Calculation](images/axis-customization/auto_range_calculation.png)
+![Auto_Range_Calculation](images/axis-customization/auto_range_calculation.png)
 
 {% endhighlight %}
 
