@@ -55,16 +55,11 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
         )
       )
     );
-  }
-
-    void show() {
-        tooltip.show(121,164);
-      }
-
-    void hide(){
-        tooltip.hide();
     }
 
+    void show() {
+        tooltip.show(20, 34);
+      }
   {% endhighlight %}
 
 ### showByIndex method in tooltipBehavior
@@ -120,10 +115,6 @@ The below mentioned arguments are given to the [`showByIndex`](https://pub.dev/d
         )
       )
     );
-  }
-
-    void hide(){
-        tooltip.hide();
     }
 
   {% endhighlight %}
@@ -176,12 +167,7 @@ x & y - logical pixel values to position the tooltip.
         )
       )
     );
-   }
-
-    void hide(){
-        tooltip.hide();
-    }
-
+     }
   {% endhighlight %}
 
 ### Hide method in tooltipBehavior
@@ -230,7 +216,7 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
   }
 
     void hide(){
-        tooltip.hide();
+        tooltip.hide(10, 17);
     }
 
   {% endhighlight %}
@@ -275,14 +261,14 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
             FlatButton(
               child: Text('Show'),
               onPressed:() {
-        trackball.show(121, 164);
+        trackball.show(10, 17);
             ),
             Container(child: chart)
           ]
         )
       )
     );
-  }
+    }
 
   {% endhighlight %}
 
@@ -334,7 +320,7 @@ The [`showByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/late
         )
       )
     );
-  }
+    }
 
   {% endhighlight %}
 
@@ -382,10 +368,10 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
         )
       )
     );
-  }
+     }
 
     void hide() {
-        trackball.hide();
+        trackball.hide(20,34);
     }
 
   {% endhighlight %}
@@ -439,7 +425,7 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
         )
       )
     );
-  }
+    }
 
   {% endhighlight %}
 
@@ -492,7 +478,7 @@ The [`showByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/late
         )
       )
     );
-  }
+    }
 
   {% endhighlight %}
 
@@ -540,7 +526,7 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
         )
       )
     );
-  }
+    }
 
     void hide() {
         crosshair.hide();
@@ -658,7 +644,7 @@ The [`zoomIn`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
         )
       )
     );
-  }
+    }
 
     void zoom() {
         zooming.zoomIn();
@@ -715,7 +701,7 @@ The [`zoomOut`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
         )
       )
     );
-  }
+    }
 
     void zoom() {
         zooming.zoomOut();
@@ -772,7 +758,7 @@ The [`zoomByFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
         )
       )
     );
-  }
+    }
 
     void zoom() {
         zooming.zoomByFactor(0.5);
@@ -828,7 +814,7 @@ The [`zoomByRect`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
         )
       )
     );
-  }
+    }
 
     void zoom() {
         zooming.zoomByRect(const Rect.fromLTRB(200, 300, 300, 400));
@@ -887,7 +873,7 @@ The [`zoomToSingleAxis`](https://pub.dev/documentation/syncfusion_flutter_charts
         )
       )
     );
-  }
+    }
 
     void zoom() {
         final double zoomPosition = 0.5;
@@ -948,7 +934,7 @@ The [`panToDirection`](https://pub.dev/documentation/syncfusion_flutter_charts/l
         )
       )
     );
-  }
+    }
 
     void pan() {
         //In similar way, specify other directions like bottom, left and right
@@ -1006,7 +992,7 @@ The [`reset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
         )
       )
     );
-  }
+    }
 
     void zoom() {
       zooming.reset();
@@ -1070,8 +1056,8 @@ Widget build(BuildContext context) {
         )
       )
     ]
-  );
- }
+    );
+    }
 
 {% endhighlight %}
 

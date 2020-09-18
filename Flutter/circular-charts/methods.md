@@ -58,13 +58,8 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
   }
 
     void show() {
-        tooltip.show(121,164);
+        tooltip.show(10, 17);
       }
-
-    void hide(){
-        tooltip.hide();
-    }
-
   {% endhighlight %}
 
 ### showByIndex method in tooltipBehavior
@@ -120,10 +115,6 @@ The below mentioned arguments are given to the [`showByIndex`](https://pub.dev/d
         )
       )
     );
-  }
-
-    void hide(){
-        tooltip.hide();
     }
 
   {% endhighlight %}
@@ -176,12 +167,7 @@ x & y - logical pixel values to position the tooltip.
         )
       )
     );
-   }
-
-    void hide(){
-        tooltip.hide();
     }
-
   {% endhighlight %}
 
 ### Hide method in tooltipBehavior
@@ -227,10 +213,10 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
         )
       )
     );
-  }
+    }
 
     void hide(){
-        tooltip.hide();
+        tooltip.hide(20, 34);
     }
 
   {% endhighlight %}
@@ -289,7 +275,7 @@ We can get the [`enableMultiSelection`]() and [`selectionType`]() is directly sh
         )
       )
     );
-  }
+    }
 
     void select() {
         selection.selectDataPoints(1, 0);
