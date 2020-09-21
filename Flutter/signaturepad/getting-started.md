@@ -131,7 +131,7 @@ Widget build(BuildContext context) {
 
 ## Save signatures as images in Android and iOS platforms
 
-You can save the signature drawn in the SignaturePad as an image using the toImage() method as shown in the below code example in Android and iOS platforms. Since this toImage() method is defined in the state object of SignaturePad, you have to use a global key assigned to the SignaturePad instance to call this method.
+You can save the signature drawn in the SignaturePad as an image using the toImage() method as shown in the below code example in Android and iOS platforms. Since this toImage() method is defined in the state object of SignaturePad, you have to use a global key assigned to the SignaturePad instance to call this method. Optionally, the pixelRatio parameter may be used to set the pixel ratio of the image. The higher the pixel ratio value, the high-quality picture you get. The default value of the pixel ratio parameter is 1.
 
 {% tabs %}
 {% highlight Dart %}
