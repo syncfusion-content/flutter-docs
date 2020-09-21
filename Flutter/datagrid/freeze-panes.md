@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Freeze panes for Syncfusion Flutter DataGrid | DataTable
-description: Learn how to freeze the row and column in Syncfusion Flutter DataGrid.
+description: Learn how to freeze the row and column in Syncfusion Flutter DataGrid with support to customize the freeze count in the runtime.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Freeze Panes
+# Freeze Panes in Flutter (SfDataGrid)
 
 The rows and column can freeze in view like excel. The rows and columns can be freeze by setting following properties,
 
@@ -112,7 +112,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows frozen column at right](images/frozen-pane/flutter-datagrid-footer-frozen-column.gif)
+![flutter datagrid shows frozen column at right](images/frozen-pane/flutter-datagrid-footer-frozen-column.png)
 
 ## Freeze rows
 
@@ -175,7 +175,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows frozen row at bottom](images/frozen-pane/flutter-datagrid-footer-frozen-row.gif)
+![flutter datagrid shows frozen row at bottom](images/frozen-pane/flutter-datagrid-footer-frozen-row.png)
 
 ## Appearance
 
