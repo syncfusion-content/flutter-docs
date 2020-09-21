@@ -77,10 +77,10 @@ Widget build(BuildContext context) {
 
 ### Hiding a column
 
-[GridColumn.visible](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/isHidden.html) property can be used to set a column as hidden. The default value of the `visible` property is false.
+[GridColumn.visible](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/visible.html) property can be used to set a column as hidden. The default value of the `visible` property is true.
 
 >**NOTE**  
-   Set the `visible` property to `False` instead of setting column width as `0` to hide a column.
+   Set the `visible` property to `false` instead of setting column width as `0` to hide a column.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -109,7 +109,7 @@ Widget build(BuildContext context) {
 `SfDataGrid` allows you to customize the width of each [GridColumn](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn-class.html) in the [SfDataGrid.Columns](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/columns.html) collection. To customize column width, use the [GridColumn.width](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/width.html) property. By default, this property will not be assigned any value. The GridColumn renders in view based on the value of the [defaultColumnWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/defaultColumnWidth.html) property.
 
 >**NOTE**  
-   Set the `visible` property to `False` instead of setting column width as `0` to hide a column.
+   Set the `visible` property to `false` instead of setting column width as `0` to hide a column.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -162,7 +162,7 @@ Widget build(BuildContext context) {
 
 ### Set text wrapping for column
 
-When the text for the record and header cells exceeds the content area, wrap the record and header cells by setting the [GridColumn.softWrap](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/softWrap.html) and `GridColumn.headerTextSoftWrap` as `True`. The default values of `softWrap` and `headerTextSoftWrap` are false.
+When the text for the record and header cells exceeds the content area, wrap the record and header cells by setting the [GridColumn.softWrap](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/softWrap.html) and [GridColumn.headerTextSoftWrap](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/headerTextSoftWrap.html) as `true` respectively. The default values of `softWrap` and `headerTextSoftWrap` are false.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -190,7 +190,7 @@ Widget build(BuildContext context) {
 
 ### Change text overflow behavior
 
-[GridColumn.overflow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/overflow.html) and `GridColumn.headerTextOverflow` properties can be used to change the behavior of the record and header cells text overflow. The default values of `overflow` and `headerTextOverfow` are ellipsis.
+[GridColumn.overflow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/overflow.html) and [GridColumn.headerTextOverflow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/headerTextOverflow.html) properties can be used to change the behavior of the record and header cells text overflow respectively. The default values of `overflow` and `headerTextOverfow` are ellipsis.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -215,6 +215,50 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+## Load widget in header
+
+The SfDataGrid allows you to load any widget in header cell using [headerCellBuilder](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/headerCellBuilder.html) callback. You can return a required widget in a callback.
+
+{% tabs %}
+{% highlight Dart %} 
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDataGrid(
+      source: _employeeDataSource,
+      headerCellBuilder: (BuildContext context, GridColumn column) {
+        if (column.mappingName == 'city')
+          return Row(
+            children: <Widget>[
+              Icon(Icons.location_on),
+              SizedBox(width: 5),
+              Flexible(
+                child: Text(
+                        column.headerText,
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      )
+                )
+            ],
+          );
+        else
+          return null;
+      },
+      columns: [
+      GridNumericColumn(mappingName: 'id')..headerText = 'ID',
+      GridTextColumn(mappingName: 'name')..headerText = 'Name',
+      GridTextColumn(mappingName: 'city')..headerText = 'City',
+      GridTextColumn(mappingName: 'price')..headerText = 'Price'
+      ],
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![flutter datagrid shows image in a header](images/column-types/flutter-datagrid-header-widget.png)
 
 ## Column styling
 

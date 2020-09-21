@@ -255,7 +255,10 @@ Widget build(BuildContext context) {
 
 ## Fit header row height based on its content
 
-By default, auto height is supported for the headers is `onQueryRowHeight` callback. If you want to set auto height to the header row, set `GridColumn.headerTextSoftWrap` as `True`.
+The datagrid allows you to customize the height of the header row based on its content using the `onQueryRowHeight` callback and  getAutoRowHeight method which is available in ColumnSizer.
+
+>**NOTE**
+   By default, the header text’s overflow behavior is ellipsis. So, to enable the wrap for the display text, set the [headerTextSoftWrap](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/headerTextSoftWrap.html) property as true and [headerTextOverflow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/headerTextOverflow.html) property as clip.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -274,7 +277,7 @@ Widget build(BuildContext context) {
       if(rowIndex == 0) {
         return height;
       }
-      return 48.0;
+      return 49.0;
     },
     columns: <GridColumn>[
       GridNumericColumn(mappingName: 'id')..headerText = 'ID',
