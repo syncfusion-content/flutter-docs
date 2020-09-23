@@ -25,7 +25,9 @@ The following code example illustrates using `SfDataPager` with the data grid co
 {% tabs %}
 {% highlight Dart %}
 
-List<Employee> paginatedDataSource = [];
+List<OrderInfo> paginatedDataSource = [];
+
+final OrderInfoDataSource _orderInfoDataSource = OrderInfoDataSource();
 
 @override
 Widget build(BuildContext context) {
@@ -38,22 +40,24 @@ Widget build(BuildContext context) {
               height: constraint.maxHeight - 60,
               width: constraint.maxWidth,
               child: SfDataGrid(
-                  source: _employeeDataSource,
+                  source: _orderInfoDataSource,
                   columnWidthMode: ColumnWidthMode.fill,
                   columns: <GridColumn>[
-                    GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-                    GridTextColumn(mappingName: 'name', headerText: 'Name'),
-                    GridTextColumn(
-                        mappingName: 'designation',
-                        headerText: 'Designation'),
                     GridNumericColumn(
-                        mappingName: 'salary', headerText: 'Salary')
-                  ]),                                                                                   
-            ),                                                                                          
+                        mappingName: 'orderID', headerText: 'Order ID'),
+                    GridTextColumn(
+                        mappingName: 'customerID',
+                        headerText: 'Customer Name'),
+                    GridDateTimeColumn(
+                        mappingName: 'orderDate', headerText: 'Order Date'),
+                    GridNumericColumn(
+                        mappingName: 'freight', headerText: 'Freight'),
+                  ]),
+            ),
             Container(
               height: 60,
               child: SfDataPager(
-                delegate: _employeeDataSource,
+                delegate: _orderInfoDataSource,
                 rowsPerPage: 20,
                 direction: Axis.horizontal,
               ),
@@ -65,47 +69,44 @@ Widget build(BuildContext context) {
   );
 }
 
-class EmployeeDataSource extends DataGridSource<Employee> {
-
-  @override                                                                    
-  List<Employee> get dataSource => paginatedDataSource;
+class OrderInfoDataSource extends DataGridSource<OrderInfo> {
+  @override
+  List<OrderInfo> get dataSource => paginatedDataSource;
 
   @override
-  int get rowCount => _employees.length;
-
-  @override                                                                    
-  Object getValue(Employee data, String columnName) {
+  Object getValue(OrderInfo orderInfos, String columnName) {
     switch (columnName) {
-      case 'id':
-        return data.id;
+      case 'orderID':
+        return orderInfos.orderID;
         break;
-      case 'name':
-        return data.name;
+      case 'customerID':
+        return orderInfos.customerID;
         break;
-      case 'salary':
-        return data.salary;
+      case 'freight':
+        return orderInfos.freight;
         break;
-      case 'designation':
-        return data.designation;
+      case 'orderDate':
+        return orderInfos.orderData;
         break;
       default:
-        return ' ';                                                            
-        break;                                                                 
+        return '';
+        break;
     }
   }
 
   @override
-  Future<bool> handlePageChange(int oldPageIndex, int newPageIndex,            
+  int get rowCount => orderInfos.length;
+
+  @override
+  Future<bool> handlePageChange(int oldPageIndex, int newPageIndex,
       int startRowIndex, int rowsPerPage) async {
-
-    int endIndex = startRowIndex + rowsPerPage;                               
-    if (endIndex > _employees.length) {
-      endIndex = _employees.length - 1;
+    int endIndex = startRowIndex + rowsPerPage;
+    if (endIndex > orderInfos.length) {
+      endIndex = orderInfos.length - 1;
     }
-
+    
     paginatedDataSource = List.from(
-      _employees.getRange(startRowIndex, endIndex).toList(growable: false);
-
+        orderInfos.getRange(startRowIndex, endIndex).toList(growable: false));
     notifyDataSourceListeners();
     return true;
   }
@@ -114,7 +115,7 @@ class EmployeeDataSource extends DataGridSource<Employee> {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows customized current cell](images/selection/flutter-datagrid-customized-currentcell.png)
+![flutter datapager with datagrid](images/paging/flutter-datapager.png)
 
 ## Asynchronous data loading
 
@@ -123,22 +124,27 @@ Data to the SfDataPager can be loaded asynchronously using the ProgressIndicator
 {% tabs %}
 {% highlight Dart %}
 
-class EmployeeDataSource extends DataGridSource<Employee> {
+class OrderInfoDataSource extends DataGridSource<OrderInfo> {
   @override
   Future<bool> handlePageChange(int oldPageIndex, int newPageIndex,
       int startRowIndex, int rowsPerPage) async {
     int endIndex = startRowIndex + rowsPerPage;
-    if (endIndex > _employees.length) {
-      endIndex = _employees.length - 1;
+    if (endIndex > orderInfos.length) {
+      endIndex = orderInfos.length - 1;
     }
 
+    // Show the circle progress indicator
     showLoadingIndicator = true;
     notifyListeners();
-    await Future.delayed(Duration(milliseconds: 1000));
-    paginatedDataSource = List.from(
-        _employees.getRange(startRowIndex, endIndex).toList(growable: false));
+    await Future.delayed(Duration(milliseconds: 2000));
+
+    // hide the circle progress indicator
     showLoadingIndicator = false;
     notifyListeners();
+
+    paginatedDataSource = List.from(
+        orderInfos.getRange(startRowIndex, endIndex).toList(growable: false));
+    notifyDataSourceListeners();
     return true;
   }
 }
@@ -146,31 +152,40 @@ class EmployeeDataSource extends DataGridSource<Employee> {
 {% endhighlight %}
 {% endtabs %}
 
-You can download the source code of asynchronous data loading sample [here](http://www.syncfusion.com/downloads/support/directtrac/general/ze/SfGrid_Sample788022149)
+![flutter datapager with asynchronous loading](images/paging/flutter-datapager-asynchronous-loading.gif)
+
+You can download the source code of asynchronous data loading sample [here]()
 
 ## Orientation
 
-SfDataPager allows you to arrange the child elements either horizontally or vertically. This can be achieved by using the `direction` Property. `direction` is an Enum type. The following table describes the direction enum values.
+SfDataPager allows you to arrange the child elements either horizontally or vertically. This can be achieved by using the [SfDataPager.direction] Property. [SfDataPager.direction] is an Enum type.
 
 <table>
 <tr>
 <th>
-Enum Value</th><th>
-Description</th></tr>
+Enum 
+</th>
+<th>
+Description</th>
+</tr>
 <tr>
 <td>
-horizontal</td><td>
-This is the default enum value for direction. Arranges all the navigation buttons and numeric buttons horizontally.
-{{'!![flutter datagrid shows customized current cell](images/selection/flutter-datagrid-customized-currentcell.png)'|markdownify}}
-
-</td></tr>
+horizontal
+</td>
+<td>
+This is the default enum value for direction. Arranges all the navigation buttons and numeric buttons horizontally..
+{{'![flutter datapager in horizontal direction](images/paging/flutter-datapager-direction-horizontal.png)'|markdownify}}
+</td>
+</tr>
 <tr>
 <td>
-vertical</td><td>
-Arranges all the navigation buttons and numeric buttons vertically.
-{{'!![flutter datagrid shows customized current cell](images/selection/flutter-datagrid-customized-currentcell.png)'|markdownify}}
-
-</td></tr>
+vertical
+</td>
+<td>
+Arranges all the navigation buttons and numeric buttons vertically by setting [Axis.vertical] to direction property.
+{{'![flutter datapager in vertical direction](images/paging/flutter-datapager-direction-vertical.png)'|markdownify}}
+</td>
+</tr>
 </table>
 
 
@@ -184,7 +199,7 @@ SfDataPager allows to customize the appearance of the data pager through [SfData
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-      body: SfDataPagerTheme(
+    body: SfDataPagerTheme(
     data: SfDataPagerThemeData(
       itemColor: Colors.white,
       selectedItemColor: Colors.lightGreen,
@@ -192,7 +207,7 @@ Widget build(BuildContext context) {
       backgroundColor: Colors.teal,
     ),
     child: SfDataPager(
-      delegate: _employeeDataSource,
+      delegate: _orderInfoDataSource,
       rowsPerPage: 20,
       direction: Axis.horizontal,
     ),
@@ -202,4 +217,4 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows customized current cell](images/selection/flutter-datagrid-customized-currentcell.png)
+![flutter datapager with customization](images/paging/flutter-datapager-customization.png)
