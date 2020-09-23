@@ -13,7 +13,7 @@ The data grid interactively supports the manipulation of data using [SfDataPager
 
 The data grid performs paging of data using the `SfDataPager`. To enable paging, follow the procedure:
 
-* Create a new `SfDataPager` widget, and bind the `SfDatGrid.DataGridSource` to the `SfDataPager.delegate` property.
+* Create a new `SfDataPager` widget, and bind the `SfDataGrid.DataGridSource` to the `SfDataPager.delegate` property.
 * Set the number of rows to be displayed on a page by setting the `SfDataPager.rowsPerPage` property.
 * Set the number of buttons that should be displayed in view by setting the `SfDataPager.visibleItemsCount` property.
 * Extent `SfDataPager.delegate.rowCount` property and `SfDataPager.delegate.handlePageChanges` method in `SfDataGrid.DataGridSource`.
