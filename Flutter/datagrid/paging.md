@@ -9,7 +9,7 @@ documentation: ug
 
 # Paging in Flutter (SfDataGrid)
 
-The data grid interactively supports the manipulation of data using `SfDataPager` control. This provides to load data in segments when dealing with large volumes of data. SfDataPager can be placed above or below based on the requirement to easily manage data paging.
+The data grid interactively supports the manipulation of data using [SfDataPager] control. This provides to load data in segments when dealing with large volumes of data. `SfDataPager` can be placed above or below based on the requirement to easily manage data paging.
 
 The data grid performs paging of data using the `SfDataPager`. To enable paging, follow the procedure:
 
