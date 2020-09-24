@@ -7,13 +7,13 @@ control: SfDataGrid
 documentation: ug
 ---
 
-# Sorting
+# Sorting in Flutter Datagrid
 
 The datagrid sorts the data by setting the `SfDataGrid.allowSorting` property to true. It allows sorting the data against one or more columns. When sorting is applied, the control automatically rearranges the data to match with the current sort criteria. When `SfDataGrid.allowSorting` is true, you can sort the data simply by tapping the column header. Once sorting is applied, the control shows a sort icon in the respective column header indicating the sort direction.
 
 ## Programmatic sorting
 
-The datagrid also sorts from the code. This requires to manually define the `SortColumnDetails` objects, and add it in the `SfDataGrid.source.sortedColumns` collection. The control sorts the data based on the `SortColumnDetails` objects added to this collection. If you want to perform sorting by using button click, you should call `SfDataGrid.source.sort()` method to perfrom sorting after adding the sort column to the `SfDataGrid.source.sortedColumns` collection. 
+The datagrid also sorts from the code. This requires to manually define the `SortColumnDetails` objects, and add it in the `SfDataGrid.source.sortedColumns` collection. The control sorts the data based on the `SortColumnDetails` objects added to this collection. If you want to perform sorting by using button click, you should call `SfDataGrid.source.sort()` method after adding the sort column to the `SfDataGrid.source.sortedColumns` collection. 
 
 The `SortColumnDetails` object holds the following two properties:
 
@@ -283,6 +283,11 @@ Widget build(BuildContext context) {
 
 The datagrid allows to sort columns based on custom logic. For each column, you can provide different sorting criteria by overriding `handleSort()` method from `SfDataGrid.source`. you can get the sort columns from `SfDataGrid.source.sortedColumns` collection. So you can apply different custom logics for ascending and descending.
 
+{% tabs %}
+{% highlight Dart %} 
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+
 class EmployeeDataSource extends DataGridSource<Employee> {
   @override
   Future<bool> handleSort() async {
@@ -323,3 +328,6 @@ class EmployeeDataSource extends DataGridSource<Employee> {
     return true;
   }
 }
+
+{% endhighlight %}
+{% endtabs %}
