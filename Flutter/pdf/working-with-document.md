@@ -129,3 +129,27 @@ File('Output.pdf').writeAsBytes(document.save());
 document.dispose();
 	
 {% endhighlight %}
+
+## Performing incremental update for the PDF document
+
+The Syncfusion Flutter PDF supports incremental update for the PDF document. The content of a PDF file can be updated incrementally without rewriting the entire file. The changes are appended to the end of the file, leaving its original contents intact. The main benefit is small changes to a large PDF document can be saved quickly but the resultant document size gets increased compared with the original PDF document. Disabling the incrementalUpdate of [`PdfFileStructure`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfFileStructure-class.html) will rewrite the entire file, which results in a smaller PDF. This is explained in the following code sample.
+
+{% highlight dart %}
+
+//Loads an existing PDF document
+PdfDocument document =
+    PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
+
+//Disable the incremental update
+document.fileStructure.incrementalUpdate = false;
+
+//Set the compression level
+document.compressionLevel = PdfCompressionLevel.best;
+
+//Saves the document
+File('output.pdf').writeAsBytes(document.save());
+
+//Disposes the document
+document.dispose();
+
+{% endhighlight %}
