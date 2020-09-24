@@ -114,6 +114,10 @@ Widget build(BuildContext context) {
 
 ![flutter datagrid shows frozen column at right](images/frozen-pane/flutter-datagrid-footer-frozen-column.png)
 
+### Limitation
+
+* `frozenColumnsCount` or  `footerFrozenColumnsCount` should be lesser than number of columns displayed in view. For example, If you have 5 columns in view, then you can set `frozenColumnsCount` to a maximum value of 4.
+
 ## Freeze rows
 
 The rows can be freeze in view at top and bottom like Excel by setting the `frozenRowsCount` and `footerFrozenRowsCount` properties.
@@ -176,6 +180,12 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![flutter datagrid shows frozen row at bottom](images/frozen-pane/flutter-datagrid-footer-frozen-row.png)
+
+### Limitation
+
+* `frozenRowsCount` or `footerFrozenRowsCount` should be lesser than the number of rows displayed in view. For example, If you have 10 rows in view, then you set `frozenRowsCount` to a maximum value of 9.
+
+N> Header row is frozen by default and works regardless of the `frozenRowsCount` property..
 
 ## Appearance
 
