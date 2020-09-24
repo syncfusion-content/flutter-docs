@@ -185,7 +185,7 @@ Widget build(BuildContext context) {
 
 * `frozenRowsCount` or `footerFrozenRowsCount` should be lesser than the number of rows displayed in view. For example, If you have 10 rows in view, then you set `frozenRowsCount` to a maximum value of 9.
 
-N> Header row is frozen by default and works regardless of the `frozenRowsCount` property..
+N> Header row is frozen by default and works regardless of the `frozenRowsCount` property.
 
 ## Appearance
 
