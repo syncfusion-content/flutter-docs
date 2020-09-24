@@ -126,8 +126,8 @@ void populateData() {
 
 [DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) is used to obtain the row data for the `SfDataGrid`. So, create the DataSource from the DataGridSource and override the following APIs in it,
 
-* **`dataSource`** - To Fetch the number of rows available for data population. Also, it is used to fetch the corresponding data object to process the selection.
-* **`getCellValue`** - To fetch the value for each cell.
+* **`dataSource`** - To fetch the number of rows available for data population. Also, it is used to fetch the corresponding data object to process the selection.
+* **`getValue`** - To fetch the value for each cell.
 
 `DataGridSource` objects are expected to be long-lived, not recreated with each build.
 
@@ -138,24 +138,24 @@ final List<Employee> _employees = <Employee>[];
 
 final EmployeeDataSource_employeeDataSource = EmployeeDataSource();
 
-class EmployeeDataSource extends DataGridSource {
+class EmployeeDataSource extends DataGridSource<Employee> {
   @override
-  List<Object> get dataSource => _employees
+  List<Employee> get dataSource => _employees
   
   @override
-  getCellValue(int rowIndex, String columnName) {
+  getValue(Employee employee, String columnName) {
     switch (columnName) {
       case 'id':
-        return _employees[rowIndex].id;
+        return employee.id;
         break;
       case 'name':
-        return _employees[rowIndex].name;
+        return employee.name;
         break;
       case 'salary':
-        return _employees[rowIndex].salary;
+        return employee.salary;
         break;
       case 'designation':
-        return _employees[rowIndex].designation;
+        return employee.designation;
         break;
       default:
         return ' ';
