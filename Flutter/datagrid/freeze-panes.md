@@ -9,7 +9,7 @@ documentation: ug
 
 # Freeze Panes in Flutter (SfDataGrid)
 
-The rows and column can freeze in view like excel. The rows and columns can be freeze by setting following properties,
+The rows and column can freeze in view like Excel. The rows and columns can be freeze by setting following properties,
 
 <table>
 <tr>
