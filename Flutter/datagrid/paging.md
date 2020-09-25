@@ -124,6 +124,8 @@ Data to the SfDataPager can be loaded asynchronously using the ProgressIndicator
 {% tabs %}
 {% highlight Dart %}
 
+bool showLoadingIndicator = true;
+
 class OrderInfoDataSource extends DataGridSource<OrderInfo> {
   @override
   Future<bool> handlePageChange(int oldPageIndex, int newPageIndex,
@@ -153,8 +155,6 @@ class OrderInfoDataSource extends DataGridSource<OrderInfo> {
 {% endtabs %}
 
 ![flutter datapager with asynchronous loading](images/paging/flutter-datapager-asynchronous-loading.gif)
-
-You can download the source code of asynchronous data loading sample [here]()
 
 ## Orientation
 
