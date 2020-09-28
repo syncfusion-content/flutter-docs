@@ -198,7 +198,7 @@ The ActivationMode enum contains the following values:
 
 ### Trackball Tooltip Overlap
 
-In this method used to avoid the overlap for two or more tooltips in trackball. For example, If we provide 2 or more series datapoints in same index, the trackball tooltip will not be overlap..
+[`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) also provides support to avoid the overlapping of two or more tooltips of the trackball. For example, If we have 2 or more series data points rendered close to each other then, the trackball tooltips of each data point will not be overlap with each other.
 
 {% highlight dart %} 
 
@@ -211,20 +211,25 @@ In this method used to avoid the overlap for two or more tooltips in trackball. 
                 trackballBehavior: TrackballBehavior(
                   enable: true
                 )
-                <SplineSeries<SalesData, double>>[
-                      SplineSeries<SalesData, double>(
+                <LineSeries<SalesData, double>>[
+                      LineSeries<SalesData, double>(
                           dataSource: data,
                           markerSettings: 
                           xValueMapper: (SalesData sales, _) => sales.year,
                           yValueMapper: (SalesData sales, _) => sales.sales)
-                      SplineSeries<SalesData, double>(
+                      LineSeries<SalesData, double>(
                           dataSource: data2,
                           xValueMapper: (SalesData sales, _) => sales.year,
                           yValueMapper: (SalesData sales, _) => sales.sales),
-                      SplineSeries<SalesData, double>(
-                          dataSource:data3
+                      LineSeries<SalesData, double>(
+                          dataSource:data3,
                           xValueMapper: (SalesData sales, _) => sales.year,
                           yValueMapper: (SalesData sales, _) => sales.sales),
+                      LineSeries<SalesData, double>(
+                          dataSource:data4,
+                          xValueMapper: (SalesData sales, _) => sales.year,
+                          yValueMapper: (SalesData sales, _) => sales.sales)
+                ]
               )
             )
         )
