@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Exporting Pyramid Chart types
-description: Learn how to exporting the Pyramid Charts
+title: Exporting Syncfusion Pyramid Chart types
+description: Learn how to be exporting image or PDF document in Pyramid Charts
 platform: flutter
 control: Chart
 documentation: ug

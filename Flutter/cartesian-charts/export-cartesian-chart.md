@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Exporting Cartesian Chart types
-description: Learn how to exporting the Cartesian Charts
+title: Exporting Syncfusion Cartesian Chart types
+description: Learn how to be exporting image or PDF document in the Cartesian Charts
 platform: flutter
 control: Chart
 documentation: ug

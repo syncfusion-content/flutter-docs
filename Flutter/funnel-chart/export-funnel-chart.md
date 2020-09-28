@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Exporting Funnel Chart types
-description: Learn how to exporting the Funnel Charts
+title: Exporting Syncfusion Funnel Chart types
+description: Learn how to be exporting image or PDF document in the Funnel Charts
 platform: flutter
 control: Chart
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Exporting Circular Chart types
-description: Learn how to exporting the Circular Charts
+title: Exporting Syncfusion Circular Chart types
+description: Learn how to be exporting image or PDF document in Circular Charts
 platform: flutter
 control: Chart
 documentation: ug
