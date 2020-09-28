@@ -216,11 +216,11 @@ The [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
 
 ![Palette](images/funnel-charts/funnel_palette.jpg)
 
-## Export Image or PDF for chart
+## Export chart to Image or PDF
 
-To export the Funnel chart as image(any of the image format) and as PDF document.
+[`SfFunnelChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart-class.html) provides support to export the Funnel chart as image(any of the image format) or as PDF document.
 
-We can get the image by calling [`toImage`]() method in repaint boundary and we create the pdf document using pdf component.
+We can get the image by calling [`toImage`](https://api.flutter.dev/flutter/rendering/RenderRepaintBoundary/toImage.html) method in repaint boundary and we can create the pdf document using pdf component.
 
 ### Export Image
 

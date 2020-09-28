@@ -2763,19 +2763,25 @@ To render a Candle chart, create an instance of [` CandleSeries`](https://pub.de
 
 ![candle chart](images/cartesian-chart-types/candle.png)
 
-
 ## Box and Whisker chart
 
+<<<<<<< HEAD
 This class holds the properties of the Box and Whisker series.
 
 To render a Box and Whisker chart, create an instance of [`BoxAndWhiskerSeries`](), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html).
 
 The Box and Whisker charts are used to visualize a group of numerical data through their quartiles. It is also referred as box plot. Box plots may also have lines extending vertically from the boxes (whiskers) indicating variability outside the upper and lower quartiles.
+=======
+The Box and Whisker chart represents the hollow rectangle with the lower quartile, upper quartile, maximum and minimum value in the given data.
+>>>>>>> 0c7fafd27e04dd654cdf89fa67f8541346c05659
 
-The following properties to customize the appearance.
+To render a Box and Whisker chart, create an instance of [`BoxAndWhiskerSeries`](), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties to customize the appearance.
 
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - Changes the color of the series.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
+* [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) – Changes the stroke width of the series.
 * [`BoxPlotMode`]() - used to change the box plot rendering mode. This property is applicable for 
-`normal`, `exclusive`, and `inclusive` values.
+[`normal`](), [`exclusive`](), and [`inclusive`]() values.
 * [`showMean`]() - Indication for mean value in box plot. It is set to be true, a cross symbol will be displayed at the mean value, for each data point in box plot. Else, it will not be displayed.
 * [`spacing`]() - Spacing between the box plots.The value ranges from 0 to 1, where 1 represents 100% and 0 represents 0% of the available space.
 
@@ -2807,17 +2813,30 @@ The following properties to customize the appearance.
 
 ## Waterfall Chart
 
+<<<<<<< HEAD
 To render a waterfall chart, create an instance of [`WaterfallSeries`]() and add to the[`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html)collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html).
 
 The waterfall chart explains gradual changes in the quantitative value of an entity that is subject to changes by increments or decrements. Using the waterfall chart, you can quickly illustrate changes in revenues.
+=======
+WaterfallSeries is similar to range column series, in range column high and low value should be there, but in waterfall we have find the endValue and originValue of each data point.
+>>>>>>> 0c7fafd27e04dd654cdf89fa67f8541346c05659
 
-The following properties to customize the appearance.
+To render a waterfall chart, create an instance of [`WaterfallSeries`]() and add to the[`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html)collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties to customize the appearance.
 
+<<<<<<< HEAD
 * [`negativePointsColor`]() - color of the negative data points in the series. If no color is specified, then the negative data points will be rendered with the series default color.
 * [`intermediateSumColor`]() - color of the intermediate sum points in the series. If no color is specified, then the intermediate sum points will be rendered with the series default color.
 * [`totalSumColor`]() - color of the total sum points in the series. If no color is specified, then the total sum points will be rendered with the series default color.
 * [`connectorLineSettings`]() - options to customize the waterfall chart connector line. Data points in waterfall chart are connected using the connector line. Provides the options to change the [`width`](), [`color`]() and [`dashArray`]() of the connector line to customize the appearance.
 * [`spacing`]() - spacing between the data points in waterfall chart. The value ranges from 0 to 1, where 1 represents 100% and 0 represents 0% of the available space.
+=======
+* [`negativePointsColor`]() - Changes the color of the negative data points in the series. If no color is specified, then the negative data points will be rendered with the series default color.
+* [`intermediateSumColor`]() - Changes the Color of the intermediate sum points in the series. If no color is specified, then the intermediate sum points will be rendered with the series default color.
+* [`totalSumColor`]() - Changes the color of the total sum points in the series. If no color is specified, then the total sum points will be rendered with the series default color.
+* [`connectorLineSettings`]() - used to customize the waterfall chart connector line. Data points in waterfall chart are connected using the connector line. Provides the options to change the [`width`](), [`color`]() and [`dashArray`]() of the connector line to customize the appearance.
+* [`spacing`]() - used to provide spacing between the data points in waterfall chart. The value ranges from 0 to 1, where 1 represents 100% and 0 represents 0% of the available space.
+* [`borderRadius`]() - used to customize the corners of the waterfall. Each corner can be customized with a desired value or with a single value.
+>>>>>>> 0c7fafd27e04dd654cdf89fa67f8541346c05659
 
 {% highlight dart %}
 
@@ -2864,8 +2883,3 @@ The following properties to customize the appearance.
 {% endhighlight %}
 
 ![waterfall_chart](images/cartesian-chart-types/waterfall_series.png)
-
-
-
-
-

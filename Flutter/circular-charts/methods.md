@@ -221,9 +221,9 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
   {% endhighlight %}
 
-## Methods in selectionSettings
+## Methods in selectionBehavior
 
-### SelectDataPoints method in selectionSettings
+### SelectDataPoints method in selectionBehavior
 
 The [`selectDataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionSettings/selectionIndex.html) method is used to select the data point programmatically. The required arguments are listed below.
 
@@ -233,11 +233,13 @@ The [`selectDataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts
 >**NOTE**
 We can get the [`enableMultiSelection`]() and [`selectionType`]() is directly should be used from the API.
 
+* `pointIndex` - index of the point which needs to be selected.
+* `seriesIndex` - index of the series for which the pointIndex is specified.
 
 {% highlight dart %}
 
     SfCircularChart chart;
-    SelectionSettings selection;
+    SelectionBehavior selection;
 
     @override
     Widget build(BuildContext context) {
@@ -248,7 +250,7 @@ We can get the [`enableMultiSelection`]() and [`selectionType`]() is directly sh
       // Add the required data
     ];
 
-    selection = SelectionSettings(enable: true);
+    selection = SelectionBehavior(enable: true);
     
     chart = SfCircularChart(
       series: <CircularSeries>[
@@ -256,7 +258,7 @@ We can get the [`enableMultiSelection`]() and [`selectionType`]() is directly sh
             dataSource: chartData,
             xValueMapper: (ChartData data, _) => data.x,
             yValueMapper: (ChartData data, _) => data.y,
-            selectionSettings: selection
+            selectionBehavior: selection
         )
       ]
     );

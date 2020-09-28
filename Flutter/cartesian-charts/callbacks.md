@@ -467,7 +467,7 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
           },
           series: <CartesianSeries>[
             ColumnSeries<ChartData, double>(
-              selectionSettings: SelectionSettings(
+              selectionBehavior: SelectionBehavior(
                 enable: true,
               )
             )
@@ -708,6 +708,7 @@ This callback will not be called, when the builder is specified for data label (
      }
 
 {% endhighlight %}
+
 ## See Also
 
 * [Customize the tooltip using its callback event](https://www.syncfusion.com/kb/11507/how-to-customize-the-tooltip-using-callback-events-sfcartesianchart).

@@ -534,23 +534,26 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
   {% endhighlight %}
 
-## Methods in selectionSettings
+## Methods in selectionBehavior
 
-### SelectDataPoints method in selectionSettings
+### SelectDataPoints method in selectionBehavior
 
 The [`selectDataPoints`]() method is used to select the data point programmatically. The required arguments are listed below.
 
+<<<<<<< HEAD
 * pointIndex - specifies the point index value.
 * seriesIndex - specifies the series index value and this is an optional parameter. By default it will be considered as 0.
+=======
+* `pointIndex` - index of the point which needs to be selected.
+* `seriesIndex` - index of the series for which the pointIndex is specified.
+>>>>>>> 0c7fafd27e04dd654cdf89fa67f8541346c05659
 
-**NOTE**
-
-We can get the [`enableMultiSelection`]() and [`selectionType`]() is directly should be used from the API.
+N> The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/enableMultiSelection.html) and [`selectionType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/selectionType.html)  are also applicable for this but, it is based on their API values specified in the chart.
 
 {% highlight dart %}
 
     SfCartesianChart chart;
-    SelectionSettings selection;
+    SelectionBehavior selection;
 
     @override
     Widget build(BuildContext context) {
@@ -561,7 +564,7 @@ We can get the [`enableMultiSelection`]() and [`selectionType`]() is directly sh
       // Add the required data
     ];
 
-    selection = SelectionSettings(enable: true);
+    selection = SelectionBehavior(enable: true);
     
     chart = SfCartesianChart(
       series: <CartesianSeries>[
@@ -569,7 +572,7 @@ We can get the [`enableMultiSelection`]() and [`selectionType`]() is directly sh
             dataSource: chartData,
             xValueMapper: (ChartData data, _) => data.x,
             yValueMapper: (ChartData data, _) => data.y,
-            selectionSettings: selection
+            selectionBehavior: selection
         )
       ]
     );

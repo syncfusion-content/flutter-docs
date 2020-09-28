@@ -224,9 +224,9 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
 
 ![mapcolor](images/circular-customization/color-mapping.jpg)
 
-## Export Image or PDF for chart
+## Export chart to Image or PDF
 
-To export the Circular chart as image(any of the image format) and as PDF document.
+[`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) provides support to export the Circular chart as image(any of the image format)  or as PDF document.
 
 We can get the image by calling [`toImage`]() method in repaint boundary and we create the pdf document using pdf component.
 
