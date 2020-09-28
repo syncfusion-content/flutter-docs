@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tile Layer in Syncfusion Flutter maps | Syncfusion
-description: This section explains how to use the tile layer in the Flutter maps.
+description: This section explains how to use the tile layer and its features in the Flutter maps.
 platform: Flutter
 control: SfMaps
 documentation: ug
@@ -18,9 +18,14 @@ The [`layers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps
 The `urlTemplate` property accepts the URL in WMTS format i.e. {z} — zoom level, {x} and {y} — tile coordinates. This URL might vary slightly depends on the providers. The formats can be,
     https://exampleprovider/{z}/{x}/{y}.png,
     https://exampleprovider/z={z}/x={x}/y={y}.png,
-    https://exampleprovider/z={z}/x={x}/y={y}.png?key=subscription_key, etc. 
-    
-We will replace the {z}, {x}, {y} internally based on the current center point and the zoom level. Some of the providers may need subscription key to access them. Please include them in the [urlTemplate] itself as mentioned in above example.
+    https://exampleprovider/z={z}/x={x}/y={y}.png?key=subscription_key, etc. We will replace the {z}, {x}, {y} internally based 
+on the current center point and the zoom level. 
+
+Some of the providers may need subscription key to access them. Please include them in the `urlTemplate` itself as mentioned in above example.Please note that the format may vary between the each map providers. You can check the exact URL format needed for the providers in their official websites.
+
+For Bing maps, an additional step is required. The format of the required URL varies from the other tile services. Hence, we have added a top-level [getBingUrlTemplate] method which returns the URL in the required format. You can use the URL returned from this method to pass it to the [urlTemplate] property.
+
+Some of the providers provide different map types. For example, Bing Maps provide map types like Road, Aerial, AerialWithLabels etc. These types too can be passed in the [urlTemplate] itself as shown in the above example. You can check the official websites of the tile providers to know about the available types and the code for it.
 
 Regarding the cache and clearing it, please check the APIs in [imageCache](https://api.flutter.dev/flutter/painting/imageCache.html).
 
@@ -42,6 +47,26 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+## Customizing the focalLatLng
+
+You can able to set the intial focalLatLng by setting the `MapTileLayer.initialFocalLatLng` property. It represents the initial focal latitude and longitude position of the map layer based on which zooming happens.
+
+Based on the size of the [SfMaps] widget, [initialFocalLatLng] and [initialZoomLevel] number of initial tiles needed in the view port alone will be rendered. While zooming and panning, new tiles will be requested and rendered on demand based on the current zoom level and focal point. The current zoom level and focal point can be obtained from the [MapZoomPanBehavior.zoomLevel] and [MapZoomPanBehavior.focalLatLng]. 
+
+This properties cannot be changed dynamically. Defaults to `MapLatLng(0.0, 0.0)`.
+
+You can also able to set the intial focalLatLng by setting the `MapZoomPanBehavior.focalLatLng` property.
+
+## Customizing the zoom level
+
+You can able to set the initial zoom level by setting the `MapTileLayer.initialFocalLatLng` property. This properties cannot be changed dynamically. By default, it will be 1.
+
+You can also able to set the initial zoom level by setting the `MapZoomPanBehavior.zoomLevel` property.
+
 ## Markers
 
 You can also able to add markers to denote the locations. It is possible to use the built-in symbols or display a custom widget at a specific latitude and longitude on a map.
+
+## Tile layer controller
+
+Provides options for adding, removing, deleting, updating markers collection and converting pixel points to latitude and longitude.
