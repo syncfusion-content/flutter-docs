@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tile Layer in Syncfusion Flutter maps | Syncfusion
-description: This section explains how to use the tile layer and its features in the Flutter maps.
+description: This section describes how the tile layer and its features are used in the Flutter maps.
 platform: Flutter
 control: SfMaps
 documentation: ug
@@ -16,9 +16,9 @@ An interactive tile layer which renders the tiles returned from web map tile ser
 The [`layers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps/layers.html) in [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) contains collection of `MapTileLayer`. The URL of the providers must be set in the `urlTemplate` property of the `MapTileLayer`.
 
 The `urlTemplate` property accepts the URL in WMTS format i.e. {z} — zoom level, {x} and {y} — tile coordinates. This URL might vary slightly depends on the providers. The formats can be,
-    https://exampleprovider/{z}/{x}/{y}.png,
-    https://exampleprovider/z={z}/x={x}/y={y}.png,
-    https://exampleprovider/z={z}/x={x}/y={y}.png?key=subscription_key, etc. We will replace the {z}, {x}, {y} internally based on the current center point and the zoom level. 
+    https://example_provider/{z}/{x}/{y}.png,
+    https://example_provider/z={z}/x={x}/y={y}.png,
+    https://example_provider/z={z}/x={x}/y={y}.png?key=subscription_key, etc. We will replace the {z}, {x}, {y} internally based on the current center point and the zoom level. 
 
 Some of the providers may need subscription key to access them. Please include them in the `urlTemplate` itself as mentioned in above example.Please note that the format may vary between the each map providers. You can check the exact URL format needed for the providers in their official websites.
 
