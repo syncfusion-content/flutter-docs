@@ -174,7 +174,7 @@ N>
 
 ### onZooming
 
-Called whenever zooming is happening. Subclasses can override this method to do any custom operations based on the details provided in the [MapZoomDetails].
+Whenever zooming happens, this method is called. Subclasses can override this method to do any custom operations based on the details provided in the [MapZoomDetails].
 
 [MapZoomDetails] contains following properties,
     * [MapZoomDetails.previousVisibleBounds] - provides the visible bounds before the current zooming operation completes i.e. current visible bounds.
@@ -191,7 +191,7 @@ N>
 
 ### onPanning
 
-Called whenever panning is happening. Subclasses can override this method to do any custom operations based on the details provided in the [MapPanDetails]. 
+Whenever panning happens, this method is called. Subclasses can override this method to do any custom operations based on the details provided in the [MapPanDetails]. 
   
 [MapPanDetails] contains following properties,
     * [MapPanDetails.previousVisibleBounds] - provides the visible bounds before the current panning operation completes i.e. current visible bounds.

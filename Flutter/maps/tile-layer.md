@@ -50,7 +50,7 @@ Widget build(BuildContext context) {
 
 You can able to set the initial focalLatLng by setting the `MapTileLayer.initialFocalLatLng` property. It represents the initial focal latitude and longitude position of the map layer based on which zooming happens.
 
-Based on the size of the [SfMaps] widget, [initialFocalLatLng] and [initialZoomLevel] number of initial tiles needed in the view port alone will be rendered. While zooming and panning, new tiles will be requested and rendered on demand based on the current zoom level and focal point. The current focal point can be obtained from the [MapZoomPanBehavior.focalLatLng]. 
+Based on the size of the [SfMaps](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) widget, [initialFocalLatLng] and [initialZoomLevel] number of initial tiles needed in the view port alone will be rendered. While zooming and panning, new tiles will be requested and rendered on demand based on the current zoom level and focal point. The current focal point can be obtained from the [MapZoomPanBehavior.focalLatLng]. 
 
 This properties cannot be changed dynamically. Defaults to `MapLatLng(0.0, 0.0)`.
 
