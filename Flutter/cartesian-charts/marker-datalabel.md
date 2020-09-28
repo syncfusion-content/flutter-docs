@@ -401,10 +401,10 @@ Data label and its connector line in the Cartesian charts for the point value 0 
 
 
 ### Data label padding
-
 The [`offset`]() property of [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/dataLabelSettings.html) is used to add padding for the data label to move it in both vertically and horizontally direction from its position. It takes the logical pixel value for x and y values as input.
 
-N> This is not applicable for other widgets like Circular, Pyramid and Funnel.
+>**NOTE** 
+This is not applicable for other widgets like Circular, Pyramid and Funnel.
 
 #### Horizontal padding
 

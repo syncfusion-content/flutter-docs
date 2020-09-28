@@ -540,8 +540,18 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
 The [`selectDataPoints`]() method is used to select the data point programmatically. The required arguments are listed below.
 
+<<<<<<< HEAD
 * pointIndex - specifies the point index value.
 * seriesIndex - specifies the series index value and this is an optional parameter. By default it will be considered as 0.
+=======
+<<<<<<< HEAD
+* pointIndex - specifies the point index value.
+* seriesIndex - specifies the series index value and this is an optional parameter. By default it will be considered as 0.
+=======
+* `pointIndex` - index of the point which needs to be selected.
+* `seriesIndex` - index of the series for which the pointIndex is specified.
+>>>>>>> 0c7fafd27e04dd654cdf89fa67f8541346c05659
+>>>>>>> e682db3512b375a696724c2910cfb1cf60316928
 
 N> The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/enableMultiSelection.html) and [`selectionType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/selectionType.html)  are also applicable for this but, it is based on their API values specified in the chart.
 
