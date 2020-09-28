@@ -18,8 +18,7 @@ The [`layers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps
 The `urlTemplate` property accepts the URL in WMTS format i.e. {z} — zoom level, {x} and {y} — tile coordinates. This URL might vary slightly depends on the providers. The formats can be,
     https://exampleprovider/{z}/{x}/{y}.png,
     https://exampleprovider/z={z}/x={x}/y={y}.png,
-    https://exampleprovider/z={z}/x={x}/y={y}.png?key=subscription_key, etc. We will replace the {z}, {x}, {y} internally based 
-on the current center point and the zoom level. 
+    https://exampleprovider/z={z}/x={x}/y={y}.png?key=subscription_key, etc. We will replace the {z}, {x}, {y} internally based on the current center point and the zoom level. 
 
 Some of the providers may need subscription key to access them. Please include them in the `urlTemplate` itself as mentioned in above example.Please note that the format may vary between the each map providers. You can check the exact URL format needed for the providers in their official websites.
 
@@ -49,24 +48,91 @@ Widget build(BuildContext context) {
 
 ## Customizing the focalLatLng
 
-You can able to set the intial focalLatLng by setting the `MapTileLayer.initialFocalLatLng` property. It represents the initial focal latitude and longitude position of the map layer based on which zooming happens.
+You can able to set the initial focalLatLng by setting the `MapTileLayer.initialFocalLatLng` property. It represents the initial focal latitude and longitude position of the map layer based on which zooming happens.
 
-Based on the size of the [SfMaps] widget, [initialFocalLatLng] and [initialZoomLevel] number of initial tiles needed in the view port alone will be rendered. While zooming and panning, new tiles will be requested and rendered on demand based on the current zoom level and focal point. The current zoom level and focal point can be obtained from the [MapZoomPanBehavior.zoomLevel] and [MapZoomPanBehavior.focalLatLng]. 
+Based on the size of the [SfMaps] widget, [initialFocalLatLng] and [initialZoomLevel] number of initial tiles needed in the view port alone will be rendered. While zooming and panning, new tiles will be requested and rendered on demand based on the current zoom level and focal point. The current focal point can be obtained from the [MapZoomPanBehavior.focalLatLng]. 
 
 This properties cannot be changed dynamically. Defaults to `MapLatLng(0.0, 0.0)`.
 
-You can also able to set the intial focalLatLng by setting the `MapZoomPanBehavior.focalLatLng` property.
+You can also able to set the initial focalLatLng by setting the `MapZoomPanBehavior.focalLatLng` property.
+
+{% tabs %}
+{% highlight Dart %}
+
+
+@override
+Widget build(BuildContext context) {
+    return SfMaps(
+        layers: [
+            MapTileLayer(
+                urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                initialFocalLatLng: MapLatLng(27.1751, 78.0421),
+            ),
+        ],
+    );
+}
+ 
+{% endhighlight %}
+{% endtabs %}
 
 ## Customizing the zoom level
 
-You can able to set the initial zoom level by setting the `MapTileLayer.initialFocalLatLng` property. This properties cannot be changed dynamically. By default, it will be 1.
+You can able to set the initial zoom level by setting the `MapTileLayer.initialFocalLatLng` property. This properties cannot be changed dynamically. By default, it will be 1. The current zoom level can be obtained from the [MapZoomPanBehavior.zoomLevel].
 
 You can also able to set the initial zoom level by setting the `MapZoomPanBehavior.zoomLevel` property.
 
+{% tabs %}
+{% highlight Dart %}
+
+
+@override
+Widget build(BuildContext context) {
+    return SfMaps(
+        layers: [
+            MapTileLayer(
+                urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                initialFocalLatLng: MapLatLng(27.1751, 78.0421),
+                initialZoomLevel: 2,
+            ),
+        ],
+    );
+}
+ 
+{% endhighlight %}
+{% endtabs %}
+
 ## Markers
 
-You can also able to add markers to denote the locations. It is possible to use the built-in symbols or display a custom widget at a specific latitude and longitude on a map.
+You can also able to add markers in tile layer. Kindly refer the markers section.
 
 ## Tile layer controller
 
 Provides options for adding, removing, deleting, updating markers collection and converting pixel points to latitude and longitude.
+
+{% tabs %}
+{% highlight Dart %}
+
+MapTileLayerController _tileLayerController;
+
+@override
+void initState() {
+    super.initState();
+    _tileLayerController = MapTileLayerController();
+}
+
+@override
+Widget build(BuildContext context) {
+    return SfMaps(
+        layers: [
+            MapTileLayer(
+                urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                initialFocalLatLng: MapLatLng(27.1751, 78.0421),
+                initialZoomLevel: 2,
+                controller: _tileLayerController,
+            ),
+        ],
+    );
+}
+ 
+{% endhighlight %}
+{% endtabs %}
