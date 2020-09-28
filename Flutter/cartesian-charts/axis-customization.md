@@ -1021,17 +1021,15 @@ If it is a horizontal axis, aligns the labels after the gridline and if it is a 
 
 ![end](images/axis-customization/end.png)
 
-## Auto Range Calculation
+## Auto range calculation
 Determines the value axis range, based on the visible data points or based on the overall data points available in chart. 
 
 By default, value axis range will be calculated automatically based on the visible data points on dynamic changes. The visible data points are changed on performing interactions like pinch zooming, selection zooming, panning and also on specifying [visibleMinimum]() and [visibleMaximum]() values.
   
-To toggle this functionality, this property can be used. i.e. on setting false to this property,
-value axis range will be calculated based on all the data points in chart irrespective of visible points.
+To toggle this functionality, [`anchorRangeToVisiblePoints`]() property can be used. i.e. on setting false to this property, value axis range will be calculated based on all the data points in chart irrespective of visible points.
   
-**NOTE** 
-
-This is applicable only to the value axis and not for other axis.
+>**NOTE**  
+This is applicable only to the value axis and not for other axis and this is applicable when zoom mode is set to x only.
   
 {% highlight dart %} 
 
@@ -1043,72 +1041,9 @@ This is applicable only to the value axis and not for other axis.
           ));
     }
 
-![Auto_Range_Calculation](images/axis-customization/auto_range_calculation.png)
+![Auto_Range_Calculation](images/axis-customization/auto_range_calculation.gif)
 
 {% endhighlight %}
-
-## Export Image or PDF for chart
-
-To export the Cartesian chart as image(any of the image format) and as PDF document.
-
-We can get the image by calling [`toImage`]() method in repaint boundary and we create the pdf document using pdf component.
-
-### Export Image
-
-{% highlight dart %} 
-
-     Future<void> _renderCartesianImage() async {
-    dart_ui.Image data = await _cartesianKey.currentState.toImage(pixelRatio: 3.0);
-    final bytes = await data.toByteData(format: dart_ui.ImageByteFormat.png);
-    if (data != null) {
-      await Navigator.of(context).push(
-        MaterialPageRoute(
-          builder: (BuildContext context) {
-            return Scaffold(
-              appBar: AppBar(),
-              body: Center(
-                child: Container(
-                  color: Colors.white,
-                  child: Image.memory(bytes.buffer.asUint8List()),
-                ),
-              ),
-            );
-          },
-        ),
-      );
-    }
-  }
-
-  {% endhighlight %}
-
-![image_export](images/axis-customization/image_view.png)
-
-### Export PDF
-
-{% highlight dart %} 
-
-     Future<void> _renderCartesianPDF() async {
-     var document = PdfDocument();
-     PdfPage page = document.pages.add();
-     dart_ui.Image data = await _cartesianKey. currentState.toImage(pixelRatio: 3.0);
-     final bytes = await data.toByteData(format: dart_ui.ImageByteFormat.png);
-     final Uint8List imageBytes =
-        bytes.buffer.asUint8List(bytes.offsetInBytes, bytes.lengthInBytes);
-     page.graphics
-        .drawImage(PdfBitmap(imageBytes), Rect.fromLTWH(25, 50, 300, 300));
-     var byteData = document.save();
-     document.dispose();
-     Directory directory = await getExternalStorageDirectory();
-     String path = directory.path;
-     File file = File('$path/Output.pdf');
-     await file.writeAsBytes(byteData, flush: true);
-     OpenFile.open('$path/Output.pdf');
-    }
-  {% endhighlight %}
-
-![pdf_export](images/axis-customization/pdf_view.png)
-
- 
 
 
 ## See Also

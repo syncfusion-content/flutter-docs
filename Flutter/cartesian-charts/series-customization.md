@@ -39,13 +39,13 @@ documentation: ug
 
 {% endhighlight %}
 
-### Dynamic Series Animation
+### Dynamic series animation
 
 [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) also provide the dynamic animation support for the series.
 
 If you wish to perform initial animation again in the existing series, this method should be called. On calling this method, this particular series will be animated again based on the [`animationDuration`]() property's value in the series.
 
-If the value is 0, then the animation will not be performed.
+If the value is 0, then the animation will not perform initial rendering animation.
 
 {% highlight dart %} 
 

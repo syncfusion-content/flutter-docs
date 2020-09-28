@@ -198,21 +198,34 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
 {% endhighlight %}
 
 ## onDataLabelTapped
-Whenever the data label is tapped [`onDataLabelTapped`]() callback will be called. Provides options to get the position of the data label, series index, point index and its text.
+Triggers when tapping on the data label of the data point in the series.Here, you can customize the position, text, seriesIndex, pointIndex and DataLabelSettings. 
 
-**NOTE** 
+The [`onDataLabelTapped`]() Callback contains the following arguments.
 
+* [`position`]() - specifies the position of the tapped data label in logical pixels.
+* [`seriesIndex`]() - Specifies the series index of the tapped data label
+* [`pointIndex`]() - Specifies the point index of the tapped data label.
+* [`text`]() - Specifies the content of the tapped data label.
+
+>**NOTE**  
 This callback will not be called, when the builder is specified for data label (data label template). For this case, custom widget specified in the [`DataLabelSettings.builder`]() property can be wrapped using the [`GestureDetector`]() and this functionality can be achieved in the application level.
 
 {% highlight dart %}
 
     Widget build(BuildContext context) {
       return Container(
-          child: SfCircularChart(
+          child: SfCartesianChart(
               onDatalabelTapped: (DataLabelTapArgs args) {
               print(arg.seriesIndex);                 
               }
-          )
+               series: <CircularSeries<Sample, DateTime>>[
+                    PieSeries<Sample, DateTime>(
+                      dataSource: sample,
+                        dataLabelSettings: DataLabelSettings(
+                          isVisible: true),
+                          xValueMapper: (Sample sales, _) => sales.x,
+                        yValueMapper: (Sample sales, _) => sales.y,
+          ))]
       );
      }
 

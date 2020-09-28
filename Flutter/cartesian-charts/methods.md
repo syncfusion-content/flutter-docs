@@ -216,7 +216,7 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
   }
 
     void hide(){
-        tooltip.hide(10, 17);
+        tooltip.hide();
     }
 
   {% endhighlight %}
@@ -371,7 +371,7 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
      }
 
     void hide() {
-        trackball.hide(20,34);
+        trackball.hide();
     }
 
   {% endhighlight %}
@@ -541,7 +541,7 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 The [`selectDataPoints`]() method is used to select the data point programmatically. The required arguments are listed below.
 
 * pointIndex - specifies the point index value.
-* seriesIndex - specifies the series index value this is an optional parameter.
+* seriesIndex - specifies the series index value and this is an optional parameter. By default it will be considered as 0.
 
 **NOTE**
 

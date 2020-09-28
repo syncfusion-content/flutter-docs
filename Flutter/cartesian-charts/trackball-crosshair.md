@@ -196,9 +196,9 @@ The ActivationMode enum contains the following values:
 
 {% endhighlight %}
 
-### Trackball Tooltip Overlap
+### Trackball tooltip overlap
 
-In this method used to avoid the overlap for two or more tooltips in trackball. For example, If we provide 2 or more series datapoints in same index, the trackball tooltip will not be overlap..
+In this method used to avoid the overlap for two or more tooltips in trackball. This method is done by deafault and No API is required. For example, If we provide 2 or more series datapoints in same index, the trackball tooltip will not be overlap.
 
 {% highlight dart %} 
 
