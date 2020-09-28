@@ -26,8 +26,6 @@ For Bing maps, an additional step is required. The format of the required URL va
 
 Some of the providers provide different map types. For example, Bing Maps provide map types like Road, Aerial, AerialWithLabels etc. These types too can be passed in the [urlTemplate] itself as shown in the above example. You can check the official websites of the tile providers to know about the available types and the code for it.
 
-Regarding the cache and clearing it, please check the APIs in [imageCache](https://api.flutter.dev/flutter/painting/imageCache.html).
-
 {% tabs %}
 {% highlight Dart %}
 
@@ -48,11 +46,11 @@ Widget build(BuildContext context) {
 
 ## Customizing the focalLatLng
 
-You can able to set the initial focalLatLng by setting the `MapTileLayer.initialFocalLatLng` property. It represents the initial focal latitude and longitude position of the map layer based on which zooming happens.
+You can able to set the initial focalLatLng by setting the `MapTileLayer.initialFocalLatLng` property. It represents the initial focal latitude and longitude position of the map layer.
 
 Based on the size of the [SfMaps](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) widget, [initialFocalLatLng] and [initialZoomLevel] number of initial tiles needed in the view port alone will be rendered. While zooming and panning, new tiles will be requested and rendered on demand based on the current zoom level and focal point. The current focal point can be obtained from the [MapZoomPanBehavior.focalLatLng]. 
 
-This properties cannot be changed dynamically. Defaults to `MapLatLng(0.0, 0.0)`.
+This property cannot be changed dynamically. Defaults to `MapLatLng(0.0, 0.0)`.
 
 You can also able to set the initial focalLatLng by setting the `MapZoomPanBehavior.focalLatLng` property.
 
@@ -77,7 +75,7 @@ Widget build(BuildContext context) {
 
 ## Customizing the zoom level
 
-You can able to set the initial zoom level by setting the `MapTileLayer.initialFocalLatLng` property. This properties cannot be changed dynamically. By default, it will be 1. The current zoom level can be obtained from the [MapZoomPanBehavior.zoomLevel].
+You can able to set the initial zoom level by setting the `MapTileLayer.initialFocalLatLng` property. This property cannot be changed dynamically. By default, it will be 1. The current zoom level can be obtained from the [MapZoomPanBehavior.zoomLevel].
 
 You can also able to set the initial zoom level by setting the `MapZoomPanBehavior.zoomLevel` property.
 
@@ -103,7 +101,7 @@ Widget build(BuildContext context) {
 
 ## Markers
 
-You can also able to add markers in tile layer. Kindly refer the markers section.
+You can also able to add markers in tile layer. Kindly refer the [markers](https://help.syncfusion.com/flutter/maps/markers#adding-markers) section.
 
 ## Tile layer controller
 

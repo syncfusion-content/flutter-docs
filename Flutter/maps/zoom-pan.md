@@ -43,7 +43,7 @@ Widget build(BuildContext context) {
 
 The `MapZoomPanBehavior.focalLatLng` is the focal point of the map layer based on which zooming happens.It represents the focal latitude and longitude position of the map layer.You can also get the current focalLatLng after interaction using the [MapZoomPanBehavior.focalLatLng] property.
 
-This properties can be changed dynamically. Defaults to `MapLatLng(0.0, 0.0)`.
+This property can be changed dynamically. Defaults to `MapLatLng(0.0, 0.0)`.
 
 To perform panning, enable the `MapZoomPanBehavior.enablePanning`property. By default it will be `true`.
 
@@ -86,7 +86,7 @@ You can able to set the current zoom level of the map layer by using `MapZoomPan
 
 The default [zoomLevel] value is 1 which will show the whole map in the viewport for [MapShapeLayer] and the possible bounds for the [MapTileLayer] based on the [focalLatLng]. You can also get the current zoom level after interaction using the [MapZoomPanBehavior.zoomLevel] property.
 
-This properties can be changed dynamically.
+This property can be changed dynamically.
 
 To perform zooming, enable the `MapZoomPanBehavior.enablePinching`property. By default it will be `true`.
 
