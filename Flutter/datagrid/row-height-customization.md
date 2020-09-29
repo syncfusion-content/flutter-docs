@@ -296,15 +296,20 @@ Widget build(BuildContext context) {
 
 ![flutter datagrid shows header row with custom height](images/row-height-customization/flutter-datagrid-auto-fit-header-row.png)
 
-## Invalidate row height
+## Refresh row height for specific row
 
-The SfDataGrid allows you to update or refresh the datagrid when an underlying data is updated.
+The SfDataGrid allows you to update or refresh specific row and it's height when 
+an underlying data is updated.
 
-If row data is updated or the specific value of the cell is updated, you can call the `refreshRow` method with `rowIndex` argument.
+You can refresh a specific row and its height by using the DataGridController.refreshRow method. This method has following two arguments,
 
-So, data which is displayed in a row or cell will be refreshed.
+* **rowIndex**- Specify the required row index which is required to refresh. If you specify this, the data alone will be refreshed for a row.
 
-In the following example, row data is updated and `refreshRow` is called in `onPressed` callback of the `FlatButton`.
+* **recalculateRowHeight** - Decides whether a height of a row should be refreshed along with the data.
+
+If you call refreshRow method, onQueryRowHeight callback will called for that specific row. So, auto-calculation of height can be recalculated for that row.
+
+In the below example, row data is updated when the `refreshRow` is called in `onPressed` callback of the `FlatButton`.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -357,9 +362,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-If the `recalculateRowHeight` set as true along with `rowIndex`, the row height can be reset based on the modified data. 
-
-In the following example, row data is updated and `refreshRow` is called in `onPressed` callback of the `FlatButton`.
+In the below example, row data is refreshed along with its row height when the `refreshRow` is called in `onPressed` callback of the `FlatButton`.
 
 {% tabs %}
 {% highlight Dart %} 
