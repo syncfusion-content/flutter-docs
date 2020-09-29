@@ -57,3 +57,5 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Localization](images/localization/pagination_dialog_localization.png)

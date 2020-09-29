@@ -11,6 +11,8 @@ documentation: ug
 
 Navigate to the desired pages instantly either by using the pagination dialog or the controller methods programmatically. If the desired page doesn’t exist, then the navigation will not happen, and the older page will be retained.
 
+![Pagination dialog](images/pagination/pagination_dialog.png)
+
 ## Navigate to the desired page programmatically
 
 The `jumpToPage` controller method helps you to navigate to the specified page number in a PDF document. The following code example explains the same
