@@ -359,3 +359,239 @@ class Model {
 N>
 * Refer the [`MapShapeLayer.enableBubbleTooltip`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/enableBubbleTooltip.html), for enabling tooltip for the bubbles.
 * Refer the [`MapShapeLayer.enableShapeTooltip`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/enableShapeTooltip.html), for enabling tooltip for the shapes.
+
+## Custom Widget for shape tooltip
+
+You can also able to add customized widget for shape tooltip with the [`MapShapeLayer.shapeTooltipBuilder`]. The [`MapShapeLayer.shapeTooltipBuilder`] will be called with the corresponding index every time when you tap or click on a shape. You can return the customized widget from this callback.
+
+{% tabs %}
+{% highlight Dart %}
+
+List<Model> data;
+
+@override
+void initState() {
+  super.initState();
+
+  data = <Model>[
+    Model('Asia', 50, '44,579,000 sq. km.'),
+    Model('Africa', 54, '30,370,000 sq. km.'),
+    Model('Europe', 51, '10,180,000 sq. km.'),
+    Model('North America', 23, '24,709,000 sq. km.'),
+    Model('South America', 12, '17,840,000 sq. km.'),
+    Model('Australia', 14, '8,600,000 sq. km.'),
+  ];
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: Padding(
+      padding: EdgeInsets.only(left: 15, right: 15),
+      child: SfMaps(
+        layers: [
+          MapShapeLayer(
+            delegate: MapShapeLayerDelegate(
+              shapeFile: "assets/world_map.json",
+              shapeDataField: "continent",
+              dataCount: data.length,
+              primaryValueMapper: (int index) => data[index].continent,
+              bubbleSizeMapper: (int index) => data[index].countriesCount,
+            ),
+            showBubbles: true,
+            enableBubbleTooltip: true,
+            shapeTooltipBuilder: (context, index) {
+              return Container(
+                width: 140,
+                padding: EdgeInsets.all(10),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Icon(
+                                Icons.people,
+                                color: Colors.white,
+                                size: 16,
+                              ),
+                              Container(
+                                width: 25,
+                              ),
+                              Center(
+                                child: Text(
+                                  data[index].key,
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: Theme.of(context)
+                                          .textTheme
+                                          .bodyText2
+                                          .fontSize),
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          Container(
+                            color: Colors.white,
+                            height: 1,
+                          ),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          Text(
+                            'Population : ' + data[index].region,
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: Theme.of(context)
+                                    .textTheme
+                                    .bodyText2
+                                    .fontSize),
+                          ),
+                        ],
+                      ),
+                    );
+                  },
+          ),
+        ],
+      ),
+    ),
+  );
+}
+
+class Model {
+  const Model(this.continent, this.countriesCount, this.area);
+
+  final String continent;
+  final double countriesCount;
+  final String area;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Maps custom tooltip](images/tooltip/custom_shape_tooltip.png)
+
+N>
+* Refer the [`MapShapeLayer.enableShapeTooltip`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/enableShapeTooltip.html), for enabling tooltip for the shapes.
+
+## Custom Widget for bubble tooltip
+
+You can also able to add customized widget for bubble tooltip with the [`MapShapeLayer.bubbleTooltipBuilder`]. The [`MapShapeLayer.bubbleTooltipBuilder`] will be called with the corresponding index every time when you tap or click on a bubble. You can return the customized widget from this callback.
+
+{% tabs %}
+{% highlight Dart %}
+
+List<Model> data;
+
+@override
+void initState() {
+  super.initState();
+
+  data = <Model>[
+    Model('Asia', 50, '44,579,000 sq. km.'),
+    Model('Africa', 54, '30,370,000 sq. km.'),
+    Model('Europe', 51, '10,180,000 sq. km.'),
+    Model('North America', 23, '24,709,000 sq. km.'),
+    Model('South America', 12, '17,840,000 sq. km.'),
+    Model('Australia', 14, '8,600,000 sq. km.'),
+  ];
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: Padding(
+      padding: EdgeInsets.only(left: 15, right: 15),
+      child: SfMaps(
+        layers: [
+          MapShapeLayer(
+            delegate: MapShapeLayerDelegate(
+              shapeFile: "assets/world_map.json",
+              shapeDataField: "continent",
+              dataCount: data.length,
+              primaryValueMapper: (int index) => data[index].continent,
+              bubbleSizeMapper: (int index) => data[index].countriesCount,
+            ),
+            showBubbles: true,
+            enableBubbleTooltip: true,
+            bubbleTooltipBuilder: (context, index) {
+              return Container(
+                width: 140,
+                padding: EdgeInsets.all(10),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Icon(
+                                Icons.people,
+                                color: Colors.white,
+                                size: 16,
+                              ),
+                              Container(
+                                width: 25,
+                              ),
+                              Center(
+                                child: Text(
+                                  data[index].key,
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: Theme.of(context)
+                                          .textTheme
+                                          .bodyText2
+                                          .fontSize),
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          Container(
+                            color: Colors.white,
+                            height: 1,
+                          ),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          Text(
+                            'Population : ' + data[index].region,
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: Theme.of(context)
+                                    .textTheme
+                                    .bodyText2
+                                    .fontSize),
+                          ),
+                        ],
+                      ),
+                    );
+                  },
+          ),
+        ],
+      ),
+    ),
+  );
+}
+
+class Model {
+  const Model(this.continent, this.countriesCount, this.area);
+
+  final String continent;
+  final double countriesCount;
+  final String area;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Maps custom tooltip](images/tooltip/custom_bubble_tooltip.png)
+
+N>
+* Refer the [`MapShapeLayer.enableBubbleTooltip`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/enableBubbleTooltip.html), for enabling tooltip for the bubbles.
