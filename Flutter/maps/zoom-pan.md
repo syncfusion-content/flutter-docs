@@ -7,9 +7,46 @@ control: SfMaps
 documentation: ug
 ---
 
-# Zooming and Panning features in maps
+# Zooming and Panning features in Maps
 
-Zoom in the any layer for a closer look at a specific region by pinching the map, scrolling the mouse wheel or track pad, or using the toolbar on the web. Pan the map to navigate across the regions. You can also customize the zoom level and the center point of the initial rendering.
+It is possible to zoom in and out for any layer to take a closer look at a specific region by pinching the map, scrolling the mouse wheel or track pad, or using the toolbar on the web. Pan the map to navigate across the regions. You can also customize the zoom level and the center point of the initial rendering.
+
+The procedure for zooming and panning for both layers is very similar.
+
+**Shape layer**
+
+{% tabs %}
+{% highlight Dart %}
+
+MapZoomPanBehavior _zoomPanBehavior;
+
+@override
+void initState() {
+    super.initState();
+    _zoomPanBehavior = MapZoomPanBehavior();
+}
+
+@override
+Widget build(BuildContext context) {
+    return Scaffold(
+        body: SfMaps(
+            layers: [
+                MapShapeLayer(
+                    delegate: MapShapeLayerDelegate(
+                        shapeFile: 'assets/world_map.json',
+                        shapeDataField: 'continent',
+                    ),
+                    zoomPanBehavior: _zoomPanBehavior,
+                ),
+            ],
+        ),
+    );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+**Tile layer**
 
 {% tabs %}
 {% highlight Dart %}
@@ -48,11 +85,9 @@ Widget build(BuildContext context) {
 
 ![Bing maps aerial default](images/zoom-pan/bing_maps_aerial.png)
 
-## Customizing the focalLatLng
+## Customizing the center latitude and longitude
 
-The `MapZoomPanBehavior.focalLatLng` is the focal point of the map layer based on which zooming happens.It represents the focal latitude and longitude position of the map layer.You can also get the current focalLatLng after interaction using the [MapZoomPanBehavior.focalLatLng] property.
-
-This property can be changed dynamically. Defaults to `MapLatLng(0.0, 0.0)`.
+The `MapZoomPanBehavior.focalLatLng` is the focal point of the map layer based on which zooming happens. It represents the focal latitude and longitude position of the map layer. You can also get the current focalLatLng after interaction using the [MapZoomPanBehavior.focalLatLng] property.
 
 To perform panning, enable the `MapZoomPanBehavior.enablePanning`property. By default it will be `true`.
 
@@ -100,11 +135,9 @@ N>
 
 ## Customizing the zoom level
 
-You can able to set the current zoom level of the map layer by using `MapZoomPanBehavior.zoomLevel`property. Current zoom level of the map layer.
+You can set the current zoom level of the map layer by using `MapZoomPanBehavior.zoomLevel`property. Current zoom level of the map layer.
 
-The default [zoomLevel] value is 1 which will show the whole map in the viewport for [MapShapeLayer] and the possible bounds for the [MapTileLayer] based on the [focalLatLng]. You can also get the current zoom level after interaction using the [MapZoomPanBehavior.zoomLevel] property.
-
-This property can be changed dynamically.
+The default [zoomLevel] value is 1 which will show the whole map in the viewport for [MapShapeLayer] and the possible bounds for the [MapShapeLayer] based on the [focalLatLng]. You can also get the current zoom level after interaction using the [MapZoomPanBehavior.zoomLevel] property.
 
 To perform zooming, enable the `MapZoomPanBehavior.enablePinching`property. By default it will be `true`.
 
@@ -153,9 +186,9 @@ N>
 
 ## Customizing min and max zoom level
 
-You can able to set the min and max zoom level of the map layer by setting the value to `MapZoomPanBehavior.minZoomLevel` and `MapZoomPanBehavior.maxZoomLevel`properties. The minimum and maximum zooming levels can be restricted using these properties respectively. The default values of `MapZoomPanBehavior.minZoomLevel` and `MapZoomPanBehavior.maxZoomLevel` are 0 and 15 respectively.
+You can set the min and max zoom level of the map layer by setting the value to `MapZoomPanBehavior.minZoomLevel` and `MapZoomPanBehavior.maxZoomLevel`properties. The minimum and maximum zooming levels can be restricted using these properties respectively. The default values of `MapZoomPanBehavior.minZoomLevel` and `MapZoomPanBehavior.maxZoomLevel` are 0 and 15 respectively.
 
-However, for [MapTileLayer.maxZoomLevel] may slightly vary depends on the providers. Kindly check the respective official website of the map tile providers to know about the maximum zoom level it supports.
+However, for [MapTileLayer], [MapZoomPanBehavior.maxZoomLevel] may slightly vary depends on the providers. Kindly check the respective official website of the map tile providers to know about the maximum zoom level it supports.
 
 {% tabs %}
 {% highlight Dart %}
@@ -199,14 +232,14 @@ Widget build(BuildContext context) {
 
 ## Toolbar
 
-Toolbar with the options for changing the visible bound for the web platform. By default, the [MapZoomPanBehavior.showToolbar] property is enabled.
+You can use the toolbar to customize the visible bound for the web platform. By default, the [MapZoomPanBehavior.showToolbar] property is `true`.
 
 N>
-* Refer [MapZoomPanBehavior.toolbarSettings] for customizing the appearance of the toolbar. You can able to customize its positions, direction, icon color, item hover color and item background color.
+* Refer [MapZoomPanBehavior.toolbarSettings] for customizing the appearance of the toolbar. You can customize its positions, direction, icon color, item hover color and item background color.
 
 ## Overriding the zoom pan behavior
 
-### onZooming
+### Zooming
 
 Whenever zooming happens, this method is called. Subclasses can override this method to do any custom operations based on the details provided in the [MapZoomDetails].
 
@@ -223,7 +256,7 @@ Whenever zooming happens, this method is called. Subclasses can override this me
 N>
 * When `super.onZooming(details)` is not called, zooming will not happen.
 
-### onPanning
+### Panning
 
 Whenever panning happens, this method is called. Subclasses can override this method to do any custom operations based on the details provided in the [MapPanDetails]. 
   
@@ -241,18 +274,15 @@ N>
 
 ### reset
 
-When this method is called, the map will be reset to the [MapZoomPanBehavior.minZoomLevel].
+You can reset the map to the [MapZoomPanBehavior.minZoomLevel] by calling this method.
 
 ### handleEvent
 
-Override this method to handle pointer events that hit this render object. 
-
-N>
-* When `super.handleEvent(event, entry)` is not called, handle event will not happen.
+You can override this method to handle pointer events that hit this render object.
 
 ### paint
 
-Paint this render object into the given context at the given offset.
+You can paint this render object into the given context at the given offset.
 
 
 
