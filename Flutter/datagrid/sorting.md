@@ -291,39 +291,20 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 class EmployeeDataSource extends DataGridSource<Employee> {
   @override
   Future<bool> handleSort() async {
-    if (_employeeDataSource.sortedColumns.isNotEmpty) {
-      var sortColumn = _employeeDataSource.sortedColumns.last;
-
-      if (_employeeDataSource.sortedColumns.isEmpty &&
-          sortColumn.name == 'name') {
-        if (sortColumn.sortDirection == DataGridSortDirection.ascending)
-          _employeeData.sort((a, b) => a.name.compareTo(b.name));
-        else
-          _employeeData.sort((a, b) => b.name.compareTo(a.name));
-      }
-      if(sortColumn.name == 'salary') {
-          return false;
-      }
-      if (_employeeDataSource.sortedColumns
-                  .firstWhere((a) => a.name == 'name') !=
-              null &&
-          sortColumn.name == 'id') {
-        if (sortColumn.sortDirection == DataGridSortDirection.ascending) {
-          _employeeData.sort((a, b) {
-            if (a.name == b.name)
-              return a.id.compareTo(b.id);
-            else
-              return a.name.compareTo(b.name);
-          });
+    if (_employeeDataGridSource.sortedColumns.isNotEmpty) {
+      var sortColumn = _employeeDataGridSource.sortedColumns.first;
+      var isSortAscending = DataGridSortDirection.ascending;
+      _employeeData.sort((Employee a, Employee b) {
+        int xLength = getValue(a, sortColumn.name)?.toString()?.length;
+        int yLength = getValue(b, sortColumn.name)?.toString()?.length;
+        if (xLength.compareTo(yLength) > 0) {
+          return sortColumn.sortDirection == isSortAscending ? 1 : -1;
+        } else if (xLength.compareTo(yLength) == -1) {
+          return sortColumn.sortDirection == isSortAscending ? 1 : 1;
+        } else {
+          return 0;
         }
-      } else {
-        _employeeData.sort((a, b) {
-          if (a.name == b.name)
-            return b.id.compareTo(a.id);
-          else
-            return b.name.compareTo(a.name);
-        });
-      }
+      });
     }
     return true;
   }
