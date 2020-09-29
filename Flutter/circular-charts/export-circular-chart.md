@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Exporting Circular Chart types in Syncfusion Flutter charts
-description: Learn how to export the Circular Charts to Image or PDF available in Syncfusion Flutter charts
+description: Learn how to export the Syncfusion Flutter Circular Charts to save it locally as image or PDF for further use.
 platform: flutter
 control: Chart
 documentation: ug

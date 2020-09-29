@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Exporting Cartesian Chart types in Syncfusion Flutter charts
-description: Learn how to export the Cartesian Charts to Image or PDF available in Syncfusion Flutter charts.
+description: Learn how to export the Syncfusion Flutter Cartesian Charts to save it locally as image or PDF for further use.
 platform: flutter
 control: Chart
 documentation: ug

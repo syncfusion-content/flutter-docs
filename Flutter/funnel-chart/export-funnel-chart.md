@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Exporting Funnel Chart types in Syncfusion Flutter charts
-description: Learn how to export the Funnel Charts to Image or PDF available in Syncfusion Flutter charts.
+description: Learn how to export the Syncfusion Flutter Funnel Charts to save it locally as image or PDF for further use.
 platform: flutter
 control: Chart
 documentation: ug
