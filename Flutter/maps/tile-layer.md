@@ -39,6 +39,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![OSM default view](images/tile-layer/osm_maps_default.png)
+
 For Bing maps, an additional step is required. The format of the required URL varies from the other tile services. Hence, we have added a top-level [getBingUrlTemplate] method which returns the URL in the required format. You can use the URL returned from this method to pass it to the [urlTemplate] property.
 
 Some of the providers provide different map types. For example, Bing Maps provide map types like Road, Aerial, AerialWithLabels etc. These types too can be passed in the [urlTemplate] itself as shown in the above example. You can check the official websites of the tile providers to know about the available types and the code for it.
@@ -69,6 +71,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Bing maps default view](images/tile-layer/bing_maps_default.png)
+
 ## Changing the focalLatLng
 
 You can able to set the initial focalLatLng by setting the `MapTileLayer.initialFocalLatLng` property. It represents the initial focal latitude and longitude position of the map layer.
@@ -97,6 +101,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![OSM initial focalLatLng](images/tile-layer/osm_initial_focallatlng.png)
+
 ## Changing the zoom level
 
 You can able to set the initial zoom level by setting the `MapTileLayer.initialZoomLevel` property. This property cannot be changed dynamically. By default, it will be 1. The current zoom level can be obtained from the [MapZoomPanBehavior.zoomLevel].
@@ -121,6 +127,8 @@ Widget build(BuildContext context) {
  
 {% endhighlight %}
 {% endtabs %}
+
+![OSM initial zoomLevel](images/tile-layer/osm_initial_zoomlevel.png)
 
 ## Markers
 
