@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tile layer in Syncfusion Flutter Maps | Syncfusion
-description: This section describes how to add the tile layer and enable its features.
+description: This section describes how to add the tile layer for rendering OpenStreetMap, Bing Maps, etc and enable its features.
 platform: Flutter
 control: SfMaps
 documentation: ug
@@ -79,7 +79,7 @@ Widget build(BuildContext context) {
 
 You can set the initial focalLatLng by setting the `MapTileLayer.initialFocalLatLng` property. It represents the initial focal latitude and longitude position of the map layer.
 
-Based on the size of the [SfMaps](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) widget, [initialFocalLatLng] and [initialZoomLevel] number of initial tiles needed in the view port alone will be rendered. For enabling [zooming and panning](https://help.syncfusion.com/flutter/maps/zoom-pan), refer this section.
+Based on the size of the [SfMaps](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) widget, [initialFocalLatLng] and [initialZoomLevel] number of initial tiles needed in the view port alone will be rendered. Refer this section for enabling [zooming and panning](https://help.syncfusion.com/flutter/maps/zoom-pan).
 
 This property cannot be changed dynamically. Defaults to `MapLatLng(0.0, 0.0)`.
 
@@ -105,7 +105,9 @@ Widget build(BuildContext context) {
 
 ## Changing the initial zoom level
 
-You can set the initial zoom level by setting the `MapTileLayer.initialZoomLevel` property. This property cannot be changed dynamically. By default, it will be 1. The current zoom level can be obtained from the [MapZoomPanBehavior.zoomLevel].
+You can set the initial zoom level by setting the `MapTileLayer.initialZoomLevel` property. By default, it will be 1. The current zoom level can be obtained from the [MapZoomPanBehavior.zoomLevel].
+
+This property cannot be changed dynamically.
 
 {% tabs %}
 {% highlight Dart %}
