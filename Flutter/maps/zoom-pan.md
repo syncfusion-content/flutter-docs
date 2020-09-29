@@ -89,7 +89,7 @@ Widget build(BuildContext context) {
 
 The `MapZoomPanBehavior.focalLatLng` is the focal point of the map layer based on which zooming happens. It represents the focal latitude and longitude position of the map layer. You can also get the current focalLatLng after interaction using the [MapZoomPanBehavior.focalLatLng] property.
 
-To perform panning, enable the `MapZoomPanBehavior.enablePanning`property. By default it will be `true`.
+To enable panning, set the instance of `MapZoomPanBehavior` to `MapTileLayer.zoomPanBehavior`. By default, it will be `true`. 
 
 {% tabs %}
 {% highlight Dart %}
@@ -136,7 +136,7 @@ You can set the current zoom level of the map layer by using `MapZoomPanBehavior
 
 The default [MapZoomPanBehavior.zoomLevel] value is 1 which will show the whole map in the viewport for [MapShapeLayer] and the possible bounds for the [MapShapeLayer] based on the [MapZoomPanBehavior.focalLatLng]. You can also get the current zoom level after interaction using the [MapZoomPanBehavior.zoomLevel] property.
 
-To perform zooming, enable the `MapZoomPanBehavior.enablePinching` property. By default it will be `true`.
+To enable zooming, set the instance of `MapZoomPanBehavior` to `MapTileLayer.zoomPanBehavior`. By default, it will be `true`. 
 
 {% tabs %}
 {% highlight Dart %}
@@ -454,7 +454,7 @@ class _CustomZoomPanBehavior extends MapZoomPanBehavior {
 N>
 * When `super.onPanning(details)` is not called, panning will not happen.
 
-### reset
+### Reset
 
 You can reset the map to the [MapZoomPanBehavior.minZoomLevel] by calling this method.
 
@@ -466,43 +466,44 @@ MapZoomPanBehavior _zoomPanBehavior;
 @override
 void initState() {
     super.initState();
-    _zoomPanBehavior = _CustomZoomPanBehavior();
+    _zoomPanBehavior = MapZoomPanBehavior();
 }
 
 @override
 Widget build(BuildContext context) {
-    return FutureBuilder(
-        future: getBingUrlTemplate(
-            'https://dev.virtualearth.net/REST/V1/Imagery/Metadata/AerialWithLabels?output=json&uriScheme=https&include=ImageryProviders&key=YOUR_KEY'),
-        builder: (context, snapshot) {
-            if (snapshot.hasData) {
-                return SfMaps(
-                    layers: [
-                        MapTileLayer(
-                            urlTemplate: snapshot.data,
-                            zoomPanBehavior: _zoomPanBehavior,
-                        ),
-                    ],
-                );
-           }
-        return CircularProgressIndicator();
-        }
+    return Column(
+        children: [
+            FutureBuilder(
+                future: getBingUrlTemplate(
+                    'https://dev.virtualearth.net/REST/V1/Imagery/Metadata/AerialWithLabels?output=json&uriScheme=https&include=ImageryProviders&key=YOUR_KEY'),
+                builder: (context, snapshot) {
+                    if (snapshot.hasData) {
+                        return SfMaps(
+                            layers: [
+                                MapTileLayer(
+                                    urlTemplate: snapshot.data,
+                                    zoomPanBehavior: _zoomPanBehavior,
+                                ),
+                            ],
+                        );
+                    }
+                    return CircularProgressIndicator();
+                },
+            ),
+            FlatButton(
+                onPressed: () {
+                    _zoomPanBehavior.reset();
+                },
+                child: Text('Reset Zoom Level'),
+            ),
+        ],
     );
-}
-
-class _CustomZoomPanBehavior extends MapZoomPanBehavior {
-
-  @override
-  void reset() {
-    super.reset();
-    // Add the code here
-  }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-### handleEvent
+### HandleEvent
 
 You can override this method to handle pointer events that hit this render object.
 
@@ -550,7 +551,7 @@ class _CustomZoomPanBehavior extends MapZoomPanBehavior {
 {% endhighlight %}
 {% endtabs %}
 
-### paint
+### Paint
 
 You can paint this render object into the given context at the given offset.
 
