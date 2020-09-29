@@ -100,7 +100,7 @@ MapZoomPanBehavior _zoomPanBehavior;
 void initState() {
     super.initState();
     _zoomPanBehavior = MapZoomPanBehavior(
-        focalLatLng: MapLatLng(27.1751, 78.0421),
+        focalLatLng: MapLatLng(27.1751, 50.0421),
     );
 }
 
