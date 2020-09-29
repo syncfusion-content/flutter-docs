@@ -130,9 +130,6 @@ Widget build(BuildContext context) {
 
 ![Bing maps aerial focalLatLng](images/zoom-pan/bing_maps_focallatlng.png)
 
-N>
-* Current map layer `onWillPan` should return `true`.
-
 ## Customizing the zoom level
 
 You can set the current zoom level of the map layer by using `MapZoomPanBehavior.zoomLevel`property.
@@ -180,9 +177,6 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Bing maps aerial zoomlevel](images/zoom-pan/bing_maps_zoomlevel.png)
-
-N>
-* Current map layer `onWillZoom` should return `true`.
 
 ## Customizing min and max zoom level
 
