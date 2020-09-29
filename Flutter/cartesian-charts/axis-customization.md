@@ -1025,24 +1025,11 @@ If it is a horizontal axis, aligns the labels after the gridline and if it is a 
 Determines the value axis range, based on the visible data points or based on the overall data points available in chart. 
 
 By default, value axis range will be calculated automatically based on the visible data points on dynamic changes. The visible data points are changed on performing interactions like pinch zooming, selection zooming, panning and also on specifying [visibleMinimum](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/visibleMinimum.html) and [visibleMaximum](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/visibleMaximum.html) values.
-  
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> e682db3512b375a696724c2910cfb1cf60316928
+
 To toggle this functionality, [`anchorRangeToVisiblePoints`]() property can be used. i.e. on setting false to this property, value axis range will be calculated based on all the data points in chart irrespective of visible points.
   
 >**NOTE**  
 This is applicable only to the value axis and not for other axis and this is applicable when zoom mode is set to x only.
-<<<<<<< HEAD
-=======
-=======
-To toggle this functionality, this property can be used. i.e. setting this property value as false,
-the value axis range will be calculated based on all the data points in chart irrespective of visible points.
-
-N> This is applicable only to the value axis and not for other axis.
->>>>>>> 0c7fafd27e04dd654cdf89fa67f8541346c05659
->>>>>>> e682db3512b375a696724c2910cfb1cf60316928
   
 {% highlight dart %} 
 
