@@ -13,7 +13,7 @@ documentation: ug
 
 ### Show method in tooltipBehavior
 
-The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/show.html) method is used to activate the tooltip at the specified location.
+The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/show.html) method is used to activate the tooltip at the specified x and y point values.
 
 {% highlight dart %} 
 
@@ -59,8 +59,9 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
     void show() {
         tooltip.show(20, 34);
-      }
-  {% endhighlight %}
+    }
+
+{% endhighlight %}
 
 ### showByIndex method in tooltipBehavior
 
@@ -167,8 +168,9 @@ x & y - logical pixel values to position the tooltip.
         )
       )
     );
-     }
-  {% endhighlight %}
+    }
+  
+{% endhighlight %}
 
 ### Hide method in tooltipBehavior
 
@@ -215,11 +217,11 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
     );
   }
 
-    void hide(){
-        tooltip.hide();
-    }
+  void hide(){
+      tooltip.hide();
+  }
 
-  {% endhighlight %}
+{% endhighlight %}
 
 ## Methods in trackballBehavior
 
@@ -270,7 +272,7 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
     );
     }
 
-  {% endhighlight %}
+{% endhighlight %}
 
 ### showByIndex  method in trackballBehavior
 
@@ -311,9 +313,9 @@ The [`showByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/late
           children: <Widget>[
             FlatButton(
               child: Text('Show'),
-              onPressed: (){
-        trackball.showByIndex(3);
-    },
+              onPressed: () {
+                trackball.showByIndex(3);
+              },
             ),
             Container(child: chart)
           ]
@@ -322,7 +324,7 @@ The [`showByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/late
     );
     }
 
-  {% endhighlight %}
+{% endhighlight %}
 
 ### Hide method in trackballBehavior
 
@@ -368,13 +370,13 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
         )
       )
     );
-     }
+    }
 
     void hide() {
         trackball.hide();
     }
 
-  {% endhighlight %}
+{% endhighlight %}
 
 ## Methods in crosshairBehavior
 
@@ -427,7 +429,7 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
     );
     }
 
-  {% endhighlight %}
+{% endhighlight %}
 
 ### showByIndex method in crosshairBehavior
 
@@ -480,8 +482,7 @@ The [`showByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/late
     );
     }
 
-  {% endhighlight %}
-
+{% endhighlight %}
 
 ### Hide method in crosshairBehavior
 
@@ -532,7 +533,7 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
         crosshair.hide();
     }
 
-  {% endhighlight %}
+{% endhighlight %}
 
 ## Methods in selectionBehavior
 
@@ -540,15 +541,10 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
 The [`selectDataPoints`]() method is used to select the data point programmatically. The required arguments are listed below.
 
-<<<<<<< HEAD
-* pointIndex - specifies the point index value.
-* seriesIndex - specifies the series index value and this is an optional parameter. By default it will be considered as 0.
-=======
 * `pointIndex` - index of the point which needs to be selected.
-* `seriesIndex` - index of the series for which the pointIndex is specified.
->>>>>>> 0c7fafd27e04dd654cdf89fa67f8541346c05659
+* `seriesIndex` - index of the series for which the pointIndex is specified and this is an optional argument. By default it will be considered as 0.
 
-N> The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/enableMultiSelection.html) and [`selectionType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/selectionType.html)  are also applicable for this but, it is based on their API values specified in the chart.
+N> The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/enableMultiSelection.html) and [`selectionType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/selectionType.html) are also applicable for this but, it is based on their API values specified in the chart.
 
 {% highlight dart %}
 

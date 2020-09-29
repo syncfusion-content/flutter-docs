@@ -198,7 +198,7 @@ The ActivationMode enum contains the following values:
 
 ### Trackball tooltip overlap
 
-[`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) also provides support to avoid the overlapping of two or more tooltips of the trackball. This method is done by deafault and No API is required. For example, If we have 2 or more series data points rendered close to each other then, the trackball tooltips of each data point will not be overlap with each other.
+[`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) provides support to avoid the overlapping of two or more tooltips of the trackball and no API is required for this feature as it will be done by default. For example, If we have 2 or more series data points rendered close to each other then, the trackball tooltips of each data point will not be overlap with each other.
 
 {% highlight dart %} 
 
@@ -214,19 +214,22 @@ The ActivationMode enum contains the following values:
                 <LineSeries<SalesData, double>>[
                       LineSeries<SalesData, double>(
                           dataSource: data,
-                          markerSettings: 
+                          markerSettings: MarkerSettings(enable: true),
                           xValueMapper: (SalesData sales, _) => sales.year,
                           yValueMapper: (SalesData sales, _) => sales.sales)
                       LineSeries<SalesData, double>(
                           dataSource: data2,
+                          markerSettings: MarkerSettings(enable: true),
                           xValueMapper: (SalesData sales, _) => sales.year,
                           yValueMapper: (SalesData sales, _) => sales.sales),
                       LineSeries<SalesData, double>(
                           dataSource:data3,
+                          markerSettings: MarkerSettings(enable: true),
                           xValueMapper: (SalesData sales, _) => sales.year,
                           yValueMapper: (SalesData sales, _) => sales.sales),
                       LineSeries<SalesData, double>(
                           dataSource:data4,
+                          markerSettings: MarkerSettings(enable: true),
                           xValueMapper: (SalesData sales, _) => sales.year,
                           yValueMapper: (SalesData sales, _) => sales.sales)
                 ]
@@ -238,7 +241,55 @@ The ActivationMode enum contains the following values:
 
 {% endhighlight %}
 
-![Trackball Tooltip Overlap](images/trackball-crosshair/trackball_overlap.png)
+![Trackball tooltip overlap](images/trackball-crosshair/trackball_overlap.png)
+
+### Trackball marker
+
+Trackball markers are used to provide information about the exact point location. You can add a shape to adorn each data point when the trackball is visible. Trackball markers can be enabled by using the [`markerVisibility`]() property of [`TrackballMarkerSettings`](). The below [`markerVisibility`]() property values determines whether the trackball marker should be visible or not when the trackball is enabled in the chart
+
+* [`TrackballVisibilityMode.auto`]() – If the [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/isVisible.html) property in the series [`markerSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings-class.html) is set  to true, then the trackball marker will also be displayed for that particular series, else it will not be displayed.
+* [`TrackballVisibilityMode.visible`]() – Makes the trackball marker visible for all the series irrespective of considering the [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/isVisible.html) property's value in the [`markerSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings-class.html).
+* [`TrackballVisibilityMode.hidden`]() – Hides the trackball marker for all the series.
+
+Also refer, [marker customization](./marker-datalabel#Marker) for customizing the appearanceof trackball marker.  
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+          child: Center(
+            child: Container(
+              child: SfCartesianChart(
+                trackballBehavior: TrackballBehavior(
+                  enable: true,
+                  markerSettings: TrackballMarkerSettings(
+                    markerVisibility: TrackballVisibilityMode.visible
+                  )
+                )
+                <LineSeries<SalesData, double>>[
+                      LineSeries<SalesData, double>(
+                          dataSource: data,
+                          xValueMapper: (SalesData sales, _) => sales.year,
+                          yValueMapper: (SalesData sales, _) => sales.sales)
+                      LineSeries<SalesData, double>(
+                          dataSource: data2,
+                          xValueMapper: (SalesData sales, _) => sales.year,
+                          yValueMapper: (SalesData sales, _) => sales.sales),
+                      LineSeries<SalesData, double>(
+                          dataSource:data3,
+                          xValueMapper: (SalesData sales, _) => sales.year,
+                          yValueMapper: (SalesData sales, _) => sales.sales),
+                ]
+              )
+            )
+        )
+      );
+    }
+
+{% endhighlight %}
+
+![Trackball marker](images/trackball-crosshair/trackball_marker.png)
 
 ## Crosshair
 
