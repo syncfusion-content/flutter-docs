@@ -251,7 +251,7 @@ Trackball markers are used to provide information about the exact point location
 * [`TrackballVisibilityMode.visible`]() – Makes the trackball marker visible for all the series irrespective of considering the [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/isVisible.html) property's value in the [`markerSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings-class.html).
 * [`TrackballVisibilityMode.hidden`]() – Hides the trackball marker for all the series.
 
-Also refer, [marker customization](./marker-datalabel#Marker) for customizing the appearanceof trackball marker.  
+Also refer, [marker customization](./marker-datalabel#Marker) for customizing the appearance of trackball marker.  
 
 {% highlight dart %} 
 
