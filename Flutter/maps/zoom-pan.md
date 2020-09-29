@@ -9,7 +9,7 @@ documentation: ug
 
 # Zooming and Panning features in maps
 
-Zoom in the any layer for a closer look at a specific region by pinching or double tapping the map, scrolling the mouse wheel or track pad, or using the toolbar on the web. Pan the map to navigate across the regions. You can also customize the zoom level and the center point of the initial rendering.
+Zoom in the any layer for a closer look at a specific region by pinching the map, scrolling the mouse wheel or track pad, or using the toolbar on the web. Pan the map to navigate across the regions. You can also customize the zoom level and the center point of the initial rendering.
 
 {% tabs %}
 {% highlight Dart %}
