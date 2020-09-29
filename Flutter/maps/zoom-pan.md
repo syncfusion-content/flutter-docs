@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Zoom Pan in Syncfusion Flutter maps | Syncfusion
-description: This section explains how to perform zooming and panning in shape and tile layer in the Flutter maps.
+title: Zooming and panning in Syncfusion Flutter Maps | Syncfusion
+description: This section explains how to enable and customize zooming and panning in shape and tile layers in the Flutter Maps.
 platform: Flutter
 control: SfMaps
 documentation: ug
