@@ -283,6 +283,8 @@ Widget build(BuildContext context) {
 
 The datagrid allows to sort columns based on custom logic. For each column, you can provide different sorting criteria by overriding `handleSort()` method from `SfDataGrid.source`. you can get the sort columns from `SfDataGrid.source.sortedColumns` collection. So you can apply different custom logics for ascending and descending.
 
+The following code to perform custom sorting for the columns based on the string length.
+
 {% tabs %}
 {% highlight Dart %} 
 
