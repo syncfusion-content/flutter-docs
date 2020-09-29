@@ -24,20 +24,29 @@ void initState() {
 
 @override
 Widget build(BuildContext context) {
-    return Scaffold(
-        body: SfMaps(
-            layers: [
-                MapTileLayer(
-                    urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-                    zoomPanBehavior: _zoomPanBehavior,
-                ),
-            ],
-        ),
+    return FutureBuilder(
+        future: getBingUrlTemplate(
+            'https://dev.virtualearth.net/REST/V1/Imagery/Metadata/AerialWithLabels?output=json&uriScheme=https&include=ImageryProviders&key=YOUR_KEY'),
+        builder: (context, snapshot) {
+            if (snapshot.hasData) {
+                return SfMaps(
+                    layers: [
+                        MapTileLayer(
+                            urlTemplate: snapshot.data,
+                            zoomPanBehavior: _zoomPanBehavior,
+                        ),
+                    ],
+                );
+           }
+        return CircularProgressIndicator();
+        }
     );
 }
 
 {% endhighlight %}
 {% endtabs %}
+
+![Bing maps aerial default](images/zoom-pan/bing_maps_aerial.png)
 
 ## Customizing the focalLatLng
 
@@ -62,20 +71,29 @@ void initState() {
 
 @override
 Widget build(BuildContext context) {
-    return Scaffold(
-        body: SfMaps(
-            layers: [
-                MapTileLayer(
-                    urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-                    zoomPanBehavior: _zoomPanBehavior,
-                ),
-            ],
-        ),
+    return FutureBuilder(
+        future: getBingUrlTemplate(
+            'https://dev.virtualearth.net/REST/V1/Imagery/Metadata/AerialWithLabels?output=json&uriScheme=https&include=ImageryProviders&key=YOUR_KEY'),
+        builder: (context, snapshot) {
+            if (snapshot.hasData) {
+                return SfMaps(
+                    layers: [
+                        MapTileLayer(
+                            urlTemplate: snapshot.data,
+                            zoomPanBehavior: _zoomPanBehavior,
+                        ),
+                    ],
+                );
+           }
+        return CircularProgressIndicator();
+        }
     );
 }
 
 {% endhighlight %}
 {% endtabs %}
+
+![Bing maps aerial focalLatLng](images/zoom-pan/bing_maps_focallatlng.png)
 
 N>
 * Current map layer `onWillPan` should return `true`.
@@ -100,26 +118,35 @@ void initState() {
     super.initState();
     _zoomPanBehavior = MapZoomPanBehavior(
         focalLatLng: MapLatLng(27.1751, 78.0421),
-        zoomLevel: 4,
+        zoomLevel: 5,
     );
 }
 
 @override
 Widget build(BuildContext context) {
-    return Scaffold(
-        body: SfMaps(
-            layers: [
-                MapTileLayer(
-                    urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-                    zoomPanBehavior: _zoomPanBehavior,
-                ),
-            ],
-        ),
+    return FutureBuilder(
+        future: getBingUrlTemplate(
+            'https://dev.virtualearth.net/REST/V1/Imagery/Metadata/AerialWithLabels?output=json&uriScheme=https&include=ImageryProviders&key=YOUR_KEY'),
+        builder: (context, snapshot) {
+            if (snapshot.hasData) {
+                return SfMaps(
+                    layers: [
+                        MapTileLayer(
+                            urlTemplate: snapshot.data,
+                            zoomPanBehavior: _zoomPanBehavior,
+                        ),
+                    ],
+                );
+           }
+        return CircularProgressIndicator();
+        }
     );
 }
 
 {% endhighlight %}
 {% endtabs %}
+
+![Bing maps aerial zoomlevel](images/zoom-pan/bing_maps_zoomlevel.png)
 
 N>
 * Current map layer `onWillZoom` should return `true`.
@@ -140,7 +167,7 @@ void initState() {
     super.initState();
     _zoomPanBehavior = MapZoomPanBehavior(
         focalLatLng: MapLatLng(27.1751, 78.0421),
-        zoomLevel: 4,
+        zoomLevel: 5,
         minZoomLevel: 3,
         maxZoomLevel: 10,
     );
@@ -148,15 +175,22 @@ void initState() {
 
 @override
 Widget build(BuildContext context) {
-    return Scaffold(
-        body: SfMaps(
-            layers: [
-                MapTileLayer(
-                    urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-                    zoomPanBehavior: _zoomPanBehavior,
-                ),
-            ],
-        ),
+    return FutureBuilder(
+        future: getBingUrlTemplate(
+            'https://dev.virtualearth.net/REST/V1/Imagery/Metadata/AerialWithLabels?output=json&uriScheme=https&include=ImageryProviders&key=YOUR_KEY'),
+        builder: (context, snapshot) {
+            if (snapshot.hasData) {
+                return SfMaps(
+                    layers: [
+                        MapTileLayer(
+                            urlTemplate: snapshot.data,
+                            zoomPanBehavior: _zoomPanBehavior,
+                        ),
+                    ],
+                );
+           }
+        return CircularProgressIndicator();
+        }
     );
 }
 
