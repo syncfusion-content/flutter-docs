@@ -302,7 +302,7 @@ class EmployeeDataSource extends DataGridSource<Employee> {
         if (xLength.compareTo(yLength) > 0) {
           return sortColumn.sortDirection == isSortAscending ? 1 : -1;
         } else if (xLength.compareTo(yLength) == -1) {
-          return sortColumn.sortDirection == isSortAscending ? 1 : 1;
+          return sortColumn.sortDirection == isSortAscending ? -1 : 1;
         } else {
           return 0;
         }
