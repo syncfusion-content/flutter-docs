@@ -508,4 +508,4 @@ class Data {
 {% endhighlight %}
 {% endtabs %}
 
-![Tooltip overlap support](images/tooltip/selector-tooltip-overlap.png)
+![Tooltip overlap support](images/tooltip/selector-overlap-stroke-color.png)
