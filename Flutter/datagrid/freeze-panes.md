@@ -18,7 +18,7 @@ The rows and column can freeze in view like Excel. The rows and columns can be f
 </tr>
 <tr>
 <td>
-[frozenRowsCount]
+frozenRowsCount
 </td>
 <td>
 Set the frozen rows count at top of the SfDataGrid.
@@ -26,7 +26,7 @@ Set the frozen rows count at top of the SfDataGrid.
 </tr>
 <tr>
 <td>
-[footerFrozenRowsCount]
+footerFrozenRowsCount
 </td>
 <td>
 Set the footer rows count at bottom of the SfDataGrid.
@@ -34,7 +34,7 @@ Set the footer rows count at bottom of the SfDataGrid.
 </tr>
 <tr>
 <td>
-[frozenColumnsCount]
+frozenColumnsCount
 </td>
 <td>
 Set the frozen columns count in left side of the SfDataGrid.
@@ -42,7 +42,7 @@ Set the frozen columns count in left side of the SfDataGrid.
 </tr>
 <tr>
 <td>
-[footerFrozenColumnsCount]
+footerFrozenColumnsCount
 </td>
 <td>
 Set the footer columns in right side of the SfDataGrid.
@@ -191,7 +191,7 @@ N> Header row is frozen by default and works regardless of the `frozenRowsCount`
 
 SfDataGrid allows to customize the appearance of the free pane through [SfDataGridTheme.SfDataGridThemeData](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData-class.html) property.
 
-The freeze pane line and freeze pane width can be changed by [frozenPaneLineColor] and [frozenPaneLineWidth]. 
+The freeze pane line and freeze pane width can be changed by `frozenPaneLineColor` and `frozenPaneLineWidth`. 
 
 {% tabs %}
 {% highlight Dart %}
