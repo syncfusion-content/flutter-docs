@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization of Syncfusion Flutter DataGrid | DataPager
-description: Describes how to Localize static string of DataGrid (SfDataGrid) | DataPager (SfDataPager)
+description: Describes how to Localize static string of DataGrid (SfDataGrid) | DataPager (SfDataPager) control in Flutter | Globalization | Internationalization 
 platform: flutter
 control: SfDataGrid
 documentation: ug
@@ -88,7 +88,7 @@ Widget build(BuildContext context) {
 
 ## Localize the static string in DataPager
 
-Static strings in the datapager can be localized using the `syncfusion_localizations` package and specifying `localizationsDelegates` in `MaterialApp`.
+Static strings in the data pager can be localized using the `syncfusion_localizations` package and specifying `localizationsDelegates` in `MaterialApp`.
 
 To use `syncfusion_localizations`, add the package as dependency to `pubspec.yaml` file.
 
@@ -107,7 +107,7 @@ import 'package:syncfusion_localizations/syncfusion_localizations.dart';
 
 {% endhighlight %}
 
-Then, declare the `SfGlobalLocalizations.delegate` in the `localizationsDelegates`, which is used to localize the static string available in datapager and specify the `supportedLocales` as well.
+Then, declare the `SfGlobalLocalizations.delegate` in the `localizationsDelegates`, which is used to localize the static string available in data pager and specify the `supportedLocales` as well.
 
 {% tabs %}
 {% highlight Dart %}

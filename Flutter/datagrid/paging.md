@@ -17,7 +17,7 @@ The datagrid performs paging of data using the `SfDataPager`. To enable paging, 
 * Set the number of rows to be displayed on a page by setting the `SfDataPager.rowsPerPage` property.
 * Set the number of buttons that should be displayed in view by setting the `SfDataPager.visibleItemsCount` property.
 * Override the `SfDataPager.delegate.rowCount` property and `SfDataPager.delegate.handlePageChanges` method in `SfDataGrid.DataGridSource`. 
-* You can load the data for the specific page in `handlePageChanges` method. This method is called for every page navigation from datapager.
+* You can load the data for the specific page in `handlePageChanges` method. This method is called for every page navigation from data pager.
 
 N> The `SfDataPager.visibleItemsCount` property default value is 5.
 
@@ -268,7 +268,7 @@ Arranges all the navigation buttons and numeric buttons vertically by setting [A
 
 ## Appearance
 
-SfDataPager allows to customize the appearance of the datapager using the `SfDataPagerThemeData` in `SfDataPagerTheme`. The `SfDataPager` should be wrapped inside the `SfDataPagerTheme`.
+SfDataPager allows to customize the appearance of the data pager using the `SfDataPagerThemeData` in `SfDataPagerTheme`. The `SfDataPager` should be wrapped inside the `SfDataPagerTheme`.
 
 Import the following class from the syncfusion_flutter_core package.
 
@@ -280,7 +280,7 @@ import 'package:syncfusion_flutter_core/theme.dart';
 {% endhighlight %}
 {% endtabs %}
 
-The following code example illustrates using `SfDataPagerThemeData` with the datapager control
+The following code example illustrates using `SfDataPagerThemeData` with the data pager control
 
 {% tabs %}
 {% highlight Dart %}
