@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started for Syncfusion Flutter PDF Viewer | Syncfusion
-description: This section explains about the steps required to add the PDF Viewer widget and its elements such as scroll head, scroll status and pagination dialog.
+description: This section explains about the steps required to add the PDF Viewer widget and its elements such as scroll head, scroll status and page navigation dialog.
 platform: Flutter
 control: SfPdfViewer
 documentation: ug
@@ -154,9 +154,9 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## Customize the visibility of pagination dialog
+## Customize the visibility of page navigation dialog
 
-By default, the pagination dialog will be displayed when the scroll head is tapped. You can customize the visibility of the pagination dialog using the `canShowPaginationDialog` property. The following code example explains the same.
+By default, the page navigation dialog will be displayed when the scroll head is tapped. You can customize the visibility of the pagw navigation dialog using the `canShowPaginationDialog` property. The following code example explains the same.
 
 {% tabs %}
 {% highlight Dart %}
