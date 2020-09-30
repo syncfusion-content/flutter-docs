@@ -9,14 +9,15 @@ documentation: ug
 
 # Paging in Flutter (SfDataGrid)
 
-The datagrid interactively supports the manipulation of data using [SfDataPager] control. This provides to load data in segments when dealing with large volumes of data. `SfDataPager` can be placed above or below based on the requirement to easily manage data paging.
+The datagrid interactively supports the manipulation of data using `SfDataPager` control. This provides support to load data in segments when dealing with large volumes of data. `SfDataPager` can be placed above or below based on the requirement to easily manage data paging.
 
-The datagrid performs paging of data using the `SfDataPager`. To enable paging, follow the procedure:
+The datagrid performs paging of data using the `SfDataPager`. To enable paging, follow below procedure
 
-* Create a new `SfDataPager` widget, and bind the `SfDataGrid.DataGridSource` to the `SfDataPager.delegate` property.
+* Create a new `SfDataPager` widget, and set the `SfDataGrid.DataGridSource` to the `SfDataPager.delegate` property.
 * Set the number of rows to be displayed on a page by setting the `SfDataPager.rowsPerPage` property.
 * Set the number of buttons that should be displayed in view by setting the `SfDataPager.visibleItemsCount` property.
-* Extent `SfDataPager.delegate.rowCount` property and `SfDataPager.delegate.handlePageChanges` method in `SfDataGrid.DataGridSource`.
+* Override the `SfDataPager.delegate.rowCount` property and `SfDataPager.delegate.handlePageChanges` method in `SfDataGrid.DataGridSource`. 
+* You can load the data for the specific page in `handlePageChanges` method. This method is called for every page navigation from datapager.
 
 N> The `SfDataPager.visibleItemsCount` property default value is 5.
 
@@ -119,12 +120,88 @@ class OrderInfoDataSource extends DataGridSource<OrderInfo> {
 
 ## Asynchronous data loading
 
-Data to the SfDataPager can be loaded asynchronously using the ProgressIndicator from the `SfDataPager.delegate.handlePageChange` method.
+You can load the data asynchronously to the `SfDataPager` by overriding the `handlePageChange` method and await the method while loading the data.
+
+In the below example, we have set await for 2000ms and displayed the loading indicator until 2000ms.
 
 {% tabs %}
 {% highlight Dart %}
 
+final OrderInfoDataSource _orderInfoDataSource = OrderInfoDataSource();
+
 bool showLoadingIndicator = true;
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: LayoutBuilder(
+      builder: (context, constraints) {
+        return Row(children: [
+          Column(
+            children: [
+              SizedBox(
+                  height: constraints.maxHeight - 60,
+                  width: constraints.maxWidth,
+                  child: loadDataGrid(constraints)),
+              Container(
+                height: 60,
+                width: constraints.maxWidth,
+                child: SfDataPager(
+                  delegate: _orderInfoDataSource,
+                  rowsPerPage: 20,
+                  direction: Axis.horizontal,
+                ),
+              )
+            ],
+          ),
+        ]);
+      },
+    ),
+  );
+}
+
+Widget getDataGrid(BoxConstraints constraint) {
+  return SfDataGrid(
+      source: _orderInfoDataSource,
+      columnWidthMode: ColumnWidthMode.fill,
+      columns: <GridColumn>[
+        GridNumericColumn(mappingName: 'orderID', headerText: 'Order ID'),
+        GridTextColumn(
+            mappingName: 'customerID', headerText: 'Customer Name'),
+        GridDateTimeColumn(
+            mappingName: 'orderDate', headerText: 'Order Date'),
+        GridNumericColumn(mappingName: 'freight', headerText: 'Freight'),
+      ]);
+}
+
+Widget loadDataGrid(BoxConstraints constraints) {
+  List<Widget> _getChildren() {
+    final List<Widget> stackChildren = [];
+    if (paginatedDataSource.isNotEmpty) {
+      stackChildren.add(getDataGrid(constraints));
+    }
+
+    if (showLoadingIndicator) {
+      stackChildren.add(Container(
+        color: Colors.black12,
+        width: constraints.maxWidth,
+        height: constraints.maxHeight,
+        child: Align(
+          alignment: Alignment.center,
+          child: CircularProgressIndicator(
+            strokeWidth: 3,
+          ),
+        ),
+      ));
+    }
+
+    return stackChildren;
+  }
+
+  return Stack(
+    children: _getChildren(),
+  );
+}
 
 class OrderInfoDataSource extends DataGridSource<OrderInfo> {
   @override
@@ -158,7 +235,7 @@ class OrderInfoDataSource extends DataGridSource<OrderInfo> {
 
 ## Orientation
 
-SfDataPager allows you to arrange the child elements either horizontally or vertically. This can be achieved by using the [SfDataPager.direction] Property. [SfDataPager.direction] is an Enum type.
+`SfDataPager` allows you to arrange the child elements either horizontally or vertically. This can be achieved by using the `direction` Property. `direction` is an Enum type.
 
 <table>
 <tr>
@@ -191,7 +268,19 @@ Arranges all the navigation buttons and numeric buttons vertically by setting [A
 
 ## Appearance
 
-SfDataPager allows to customize the appearance of the datapager through [SfDataPagerTheme.SfDataPagerThemeData] property.
+SfDataPager allows to customize the appearance of the datapager using the `SfDataPagerThemeData` in `SfDataPagerTheme`. The `SfDataPager` should be wrapped inside the `SfDataPagerTheme`.
+
+Import the following class from the syncfusion_flutter_core package.
+
+{% tabs %}
+{% highlight Dart %}
+
+import 'package:syncfusion_flutter_core/theme.dart';
+
+{% endhighlight %}
+{% endtabs %}
+
+The following code example illustrates using `SfDataPagerThemeData` with the datapager control
 
 {% tabs %}
 {% highlight Dart %}

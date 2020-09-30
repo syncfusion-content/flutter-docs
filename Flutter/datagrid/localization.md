@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization of Syncfusion Flutter DataGrid | DataPager
-description: Describes how to Localize the contents and custom texts of DataGrid (SfDataGrid) | DataPager (SfDataPager) control in Flutter | Globalization | Internationalization 
+description: Describes how to Localize static string of DataGrid (SfDataGrid) | DataPager (SfDataPager)
 platform: flutter
 control: SfDataGrid
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Localization in Flutter DataPager (SfDataPager)
 
-By default, the datapager widget supports US English localizations. You can change the other languages by specifying the `MaterialApp` properties and adding the `flutter_localizations` package to your application.
+By default, the `SfDataPager` widget supports US English localizations. You can change the other languages by specifying the `MaterialApp` properties and adding the `flutter_localizations` package to your application.
 
 As of February 2020, [flutter package](https://flutter.dev/docs/development/accessibility-and-localization/internationalization) supports 77 languages.
 
@@ -86,8 +86,9 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## Localize the custom text in DataPager
-DataPager custom text can be localized using the `syncfusion_localizations` package and specifying `localizationsDelegates` in `MaterialApp`.
+## Localize the static string in DataPager
+
+Static strings in the datapager can be localized using the `syncfusion_localizations` package and specifying `localizationsDelegates` in `MaterialApp`.
 
 To use `syncfusion_localizations`, add the package as dependency to `pubspec.yaml` file.
 
@@ -106,7 +107,7 @@ import 'package:syncfusion_localizations/syncfusion_localizations.dart';
 
 {% endhighlight %}
 
-Then, declare the `SfGlobalLocalizations.delegate` in the `localizationsDelegates`, which is used to localize the custom string (of, Pages, items) using in datapager and specify the `supportedLocales` as well.
+Then, declare the `SfGlobalLocalizations.delegate` in the `localizationsDelegates`, which is used to localize the static string available in datapager and specify the `supportedLocales` as well.
 
 {% tabs %}
 {% highlight Dart %}
