@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sorting in Flutter DataGrid | DataTable | Syncfusion
-description: Learn about how to apply single, multicolumn and tristate sorting for the columns in a Syncfusion Flutter DataGrid.
+description: Learn about how to to sort one or more columns with the tristate sorting and show sort numbers to indicate the sort order.
 platform: flutter
 control: SfDataGrid
 documentation: ug
@@ -9,16 +9,16 @@ documentation: ug
 
 # Sorting in Flutter Datagrid
 
-The datagrid sorts the data by setting the `SfDataGrid.allowSorting` property to true. It allows sorting the data against one or more columns. When sorting is applied, the control automatically rearranges the data to match with the current sort criteria. When `SfDataGrid.allowSorting` is true, you can sort the data simply by tapping the column header. Once sorting is applied, the control shows a sort icon in the respective column header indicating the sort direction.
+The datagrid provides the built-in support to sort one or more columns by setting the `SfDataGrid.allowSorting` property to true. When sorting is applied, the datagrid automatically rearranges the data to match with the current sort criteria. When `SfDataGrid.allowSorting` is true, you can sort the data simply by tapping the column header. Once sorting is applied, the datagrid shows a sort icon in the respective column header indicating the sort direction.
 
 ## Programmatic sorting
 
-The datagrid also sorts from the code. This requires to manually define the `SortColumnDetails` objects, and add it in the `SfDataGrid.source.sortedColumns` collection. The control sorts the data based on the `SortColumnDetails` objects added to this collection. If you want to perform sorting by using button click, you should call `SfDataGrid.source.sort()` method after adding the sort column to the `SfDataGrid.source.sortedColumns` collection. 
+The datagrid provides support to sort the columns programmatically. You can manually define the `SortColumnDetails` objects, and add it in the `SfDataGrid.source.sortedColumns` collection. The datagrid sorts the data based on the `SortColumnDetails` objects added to this collection. If you want to perform sorting at run time, you should call `SfDataGrid.source.sort()` method after adding the `SortColumnDetails` to the `SfDataGrid.source.sortedColumns` collection. 
 
 The `SortColumnDetails` object holds the following two properties:
 
-* name: Name of the sorted column.
-* sortDirection: Defines the sorting direction of sorted column.
+* `name` : Name of the column to be sorted.
+* `sortDirection` : Specifies the ascending or descending direction.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -64,7 +64,7 @@ Widget build(BuildContext context) {
 ## Multi-column sorting
 
 The datagrid sorts the data against more than one columns by setting the `SfDataGrid.allowMultiColumnSorting` property to true. The number of columns by which the data can be sorted is unlimited. To apply sorting for multiple columns, tap the desired column headers after setting the `SfDataGrid.allowMultiColumnSorting` property.
-To apply sorting for multiple columns in web, user have to click the column header by pressing the <kbd>Ctrl</kbd> key.
+To apply sorting for multiple columns in web, you can click the column header by pressing the <kbd>Ctrl</kbd> key.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -125,7 +125,7 @@ Widget build(BuildContext context) {
 
 ## Sort column in double tap
 
-By default, column gets sorted when column header clicked. This behavior can be changed to sort the column in double click action by setting `SfDataGrid.sortingGestureType` property to doubleTap.
+By default, column gets sorted when column header clicked. This behavior can be changed to sort the column in double click action by setting `SfDataGrid.sortingGestureType` property to `doubleTap`.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -153,7 +153,7 @@ Widget build(BuildContext context) {
 
 ## Show sort number
 
-The datagrid provides the sequence numbers to display the sorted columns during multi-column sorting by setting `SfDataGrid.showSortNumbers` is set to true.
+The datagrid provides support the sequence numbers to display the sorted columns during multi-column sorting by setting `SfDataGrid.showSortNumbers` is set to true. This is applicable when the `SfDataGrid.allowMultiColumnSorting` property is enabled.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -281,9 +281,9 @@ Widget build(BuildContext context) {
 
 ## Custom sorting
 
-The datagrid allows to sort columns based on custom logic. For each column, you can provide different sorting criteria by overriding `handleSort()` method from `SfDataGrid.source`. you can get the sort columns from `SfDataGrid.source.sortedColumns` collection. So you can apply different custom logics for ascending and descending.
+The datagrid allows to sort columns based on custom logic. For each column, you can provide different sorting criteria by overriding `handleSort()` method from DataGridSource.handleSort. you can get the sort columns from `SfDataGrid.source.sortedColumns` collection. So you can apply different custom logics for ascending and descending.
 
-The following code to perform custom sorting for the columns based on the string length.
+The following code shows how to perform custom sorting for the columns based on the string length.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -297,12 +297,22 @@ class EmployeeDataSource extends DataGridSource<Employee> {
       var sortColumn = _employeeDataGridSource.sortedColumns.first;
       var isSortAscending = DataGridSortDirection.ascending;
       _employeeData.sort((Employee a, Employee b) {
-        int xLength = getValue(a, sortColumn.name)?.toString()?.length;
-        int yLength = getValue(b, sortColumn.name)?.toString()?.length;
+        var x = getValue(a, sortColumn.name);
+        var y = getValue(b, sortColumn.name);
+        if (x == null || y == null) {
+          if (sortColumn.sortDirection == isSortAscending) {
+            return x == null ? -1 : 1;
+          }
+          if (sortColumn.sortDirection != isSortAscending) {
+            return x == null ? 1 : -1;
+          }
+        }
+        int xLength = x.toString().length;
+        int yLength = y.toString().length;
         if (xLength.compareTo(yLength) > 0) {
           return sortColumn.sortDirection == isSortAscending ? 1 : -1;
         } else if (xLength.compareTo(yLength) == -1) {
-          return sortColumn.sortDirection == isSortAscending ? 1 : 1;
+          return sortColumn.sortDirection == isSortAscending ? -1 : 1;
         } else {
           return 0;
         }
@@ -314,3 +324,5 @@ class EmployeeDataSource extends DataGridSource<Employee> {
 
 {% endhighlight %}
 {% endtabs %}
+
+![flutter datagrid shows custom sorting for the columns based on string length](images/sorting/flutter-datagrid-custom-sorting.png)
