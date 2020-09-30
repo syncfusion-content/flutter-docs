@@ -2852,9 +2852,11 @@ To render a waterfall chart, create an instance of [`WaterfallSeries`]() and add
                             SalesData(12, 8, Colors.red, false),
                             SalesData(13, -5, Colors.red, false, true),
                             ],
-                            intermediateSumColor: Colors.orange,
-                            negativePointsColor: Colors.brown,
-                            totalSumColor: Colors.green,
+                            negativePointsColor:
+                            const Color.fromRGBO(229, 101, 144, 1),
+                            intermediateSumColor:
+                            const Color.fromRGBO(79, 129, 188, 1),
+                            totalSumColor: const Color.fromRGBO(79, 129, 188, 1),
                             xValueMapper: (SalesData sales, _) => sales.x,
                             yValueMapper: (SalesData sales, _) => sales.y,
                             intermediateSumPredicate: (SalesData sales, _) =>
