@@ -9,9 +9,9 @@ documentation: ug
 
 # Paging in Flutter (SfDataGrid)
 
-The data grid interactively supports the manipulation of data using [SfDataPager] control. This provides to load data in segments when dealing with large volumes of data. `SfDataPager` can be placed above or below based on the requirement to easily manage data paging.
+The datagrid interactively supports the manipulation of data using [SfDataPager] control. This provides to load data in segments when dealing with large volumes of data. `SfDataPager` can be placed above or below based on the requirement to easily manage data paging.
 
-The data grid performs paging of data using the `SfDataPager`. To enable paging, follow the procedure:
+The datagrid performs paging of data using the `SfDataPager`. To enable paging, follow the procedure:
 
 * Create a new `SfDataPager` widget, and bind the `SfDataGrid.DataGridSource` to the `SfDataPager.delegate` property.
 * Set the number of rows to be displayed on a page by setting the `SfDataPager.rowsPerPage` property.
@@ -20,7 +20,7 @@ The data grid performs paging of data using the `SfDataPager`. To enable paging,
 
 N> The `SfDataPager.visibleItemsCount` property default value is 5.
 
-The following code example illustrates using `SfDataPager` with the data grid control:
+The following code example illustrates using `SfDataPager` with the datagrid control:
 
 {% tabs %}
 {% highlight Dart %}
@@ -191,7 +191,7 @@ Arranges all the navigation buttons and numeric buttons vertically by setting [A
 
 ## Appearance
 
-SfDataPager allows to customize the appearance of the data pager through [SfDataPagerTheme.SfDataPagerThemeData] property.
+SfDataPager allows to customize the appearance of the datapager through [SfDataPagerTheme.SfDataPagerThemeData] property.
 
 {% tabs %}
 {% highlight Dart %}
