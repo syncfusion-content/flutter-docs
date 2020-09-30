@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Pagination in Syncfusion Flutter PDF Viewer | Syncfusion
+title: Page navigation in Syncfusion Flutter PDF Viewer | Syncfusion
 description: This section explains about how to navigate to the desired pages in a PDF document using the Flutter PDF Viewer.
 platform: Flutter
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Pagination in Flutter PDF Viewer (SfPdfViewer)
+# Page navigation in Flutter PDF Viewer (SfPdfViewer)
 
-Navigate to the desired pages instantly either by using the pagination dialog or the controller methods programmatically. If the desired page doesn’t exist, then the navigation will not happen, and the older page will be retained.
+Navigate to the desired pages instantly either by using the page navigation dialog or the controller methods programmatically. If the desired page doesn’t exist, then the navigation will not happen, and the older page will be retained.
 
-![Pagination dialog](images/pagination/pagination_dialog.png)
+![Page navigation dialog](images/page-navigation/page_navigation_dialog.png)
 
 ## Navigate to the desired page programmatically
 
@@ -203,7 +203,7 @@ Widget build(BuildContext context) {
 
 ## Callbacks
 
-The `SfPdfViewer` pagination supports the `PdfPageChangedCallback` to notify the page changes.
+The `SfPdfViewer` page navigation supports the `PdfPageChangedCallback` to notify the page changes.
 
 ### Page changed callback
 
