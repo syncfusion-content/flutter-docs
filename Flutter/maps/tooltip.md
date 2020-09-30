@@ -273,6 +273,7 @@ You can customize the below appearance of the tooltip using [`SfMapsTheme`](http
 * **Stroke color** - Change the stroke color of the tooltip in the maps using the [`SfMapsThemeData.tooltipStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData/tooltipStrokeColor.html) property.
 * **Stroke width** - Change the stroke width of the tooltip in the maps using the [`SfMapsThemeData.tooltipStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData/tooltipStrokeWidth.html) property.
 * **Text style** - Change the appearance of the tooltip text in the maps using the [`SfMapsThemeData.tooltipTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData/tooltipTextStyle.html) property.
+* **Border radius** - Change the appearance of the tooltip borders in the maps using the [`SfMapsThemeData.tooltipBorderRadius`] property.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfMapsTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsTheme-class.html).
 
@@ -310,6 +311,10 @@ Widget build(BuildContext context) {
             fontSize: 14,
             fontStyle: FontStyle.italic,
             fontFamily: 'Times',
+          ),
+          tooltipBorderRadius: BorderRadiusDirectional.only(
+            topStart: Radius.circular(20),
+            bottomEnd: Radius.circular(20),
           ),
         ),
         child: SfMaps(
