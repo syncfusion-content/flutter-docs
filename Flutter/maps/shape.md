@@ -127,9 +127,9 @@ Widget build(BuildContext context) {
 
 ![Shapes color](images/shape-colors/shapes-stroke-color.png)
 
-## Hover Color
+## Hover color
 
-You can apply hover color, stroke color and stroke width to the shapes using the [`SfMapsThemeData.shapeHoverColor`], [`SfMapsThemeData.shapeHoverStrokeColor`] and [`SfMapsThemeData.shapeHoverStrokeWidth`] properties respectively.
+You can apply hover color, stroke color and stroke width to the shapes in the web platform using the [`SfMapsThemeData.shapeHoverColor`], [`SfMapsThemeData.shapeHoverStrokeColor`] and [`SfMapsThemeData.shapeHoverStrokeWidth`] properties respectively.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfMapsTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsTheme-class.html).
 

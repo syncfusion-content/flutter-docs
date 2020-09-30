@@ -11,7 +11,7 @@ documentation: ug
 
 You can provide clear information on the data plotted on the map using legend.
 
-## Default legend
+## Show legend
 
 You can show or hide the legend using the [`MapShapeLayer.legendSource`] property. The default value of the [`legendSource`] property is `MapElement.none`.
 

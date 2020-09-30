@@ -360,9 +360,9 @@ N>
 * Refer the [`MapShapeLayer.enableBubbleTooltip`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/enableBubbleTooltip.html), for enabling tooltip for the bubbles.
 * Refer the [`MapShapeLayer.enableShapeTooltip`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/enableShapeTooltip.html), for enabling tooltip for the shapes.
 
-## Custom Widget for shape tooltip
+## Custom widget for shape tooltip
 
-You can also able to add customized widget for shape tooltip with the [`MapShapeLayer.shapeTooltipBuilder`]. The [`MapShapeLayer.shapeTooltipBuilder`] will be called with the corresponding index every time when you tap or click on a shape. You can return the customized widget from this callback.
+You can add a customized widget for shape tooltip with the [`MapShapeLayer.shapeTooltipBuilder`]. The [`MapShapeLayer.shapeTooltipBuilder`] will be called with the corresponding index every time when you tap or click on a shape. You can return the customized widget from this callback.
 
 {% tabs %}
 {% highlight Dart %}
@@ -473,9 +473,9 @@ class Model {
 N>
 * Refer the [`MapShapeLayer.enableShapeTooltip`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/enableShapeTooltip.html), for enabling tooltip for the shapes.
 
-## Custom Widget for bubble tooltip
+## Custom widget for bubble tooltip
 
-You can also able to add customized widget for bubble tooltip with the [`MapShapeLayer.bubbleTooltipBuilder`]. The [`MapShapeLayer.bubbleTooltipBuilder`] will be called with the corresponding index every time when you tap or click on a bubble. You can return the customized widget from this callback.
+You can add a customized widget for bubble tooltip with the [`MapShapeLayer.bubbleTooltipBuilder`]. The [`MapShapeLayer.bubbleTooltipBuilder`] will be called with the corresponding index every time when you tap or click on a bubble. You can return the customized widget from this callback.
 
 {% tabs %}
 {% highlight Dart %}
