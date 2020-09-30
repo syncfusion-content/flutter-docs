@@ -396,65 +396,60 @@ Widget build(BuildContext context) {
               shapeDataField: "continent",
               dataCount: data.length,
               primaryValueMapper: (int index) => data[index].continent,
-              bubbleSizeMapper: (int index) => data[index].countriesCount,
             ),
-            showBubbles: true,
-            enableBubbleTooltip: true,
+            enableShapeTooltip: true,
             shapeTooltipBuilder: (context, index) {
               return Container(
-                width: 140,
+                width: 180,
                 padding: EdgeInsets.all(10),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Icon(
-                                Icons.people,
-                                color: Colors.white,
-                                size: 16,
-                              ),
-                              Container(
-                                width: 25,
-                              ),
-                              Center(
-                                child: Text(
-                                  data[index].key,
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: Theme.of(context)
-                                          .textTheme
-                                          .bodyText2
-                                          .fontSize),
-                                ),
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Container(
-                            color: Colors.white,
-                            height: 1,
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            'Population : ' + data[index].region,
+                    Stack(
+                      children: [
+                        Center(
+                          child: Text(
+                            data[index].continent,
                             style: TextStyle(
-                                color: Colors.white,
-                                fontSize: Theme.of(context)
-                                    .textTheme
-                                    .bodyText2
-                                    .fontSize),
+                              color: Colors.white,
+                              fontSize: Theme.of(context)
+                                      .textTheme
+                                      .bodyText2
+                                      .fontSize),
                           ),
-                        ],
-                      ),
-                    );
-                  },
+                        ),
+                        Icon(
+                          Icons.map,
+                          color: Colors.white,
+                          size: 16,
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Container(
+                      color: Colors.white,
+                      height: 1,
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      'Area : ' + data[index].area,
+                      style: TextStyle(
+                      color: Colors.white,
+                      fontSize:
+                        Theme.of(context).textTheme.bodyText2.fontSize),
+                    ),
+                  ],
+                ),
+              );
+            },
+            tooltipSettings: MapTooltipSettings(
+              color: Colors.blue,
+              strokeColor: const Color.fromRGBO(252, 187, 15, 1),
+              strokeWidth: 1.5),
           ),
         ],
       ),
@@ -473,7 +468,7 @@ class Model {
 {% endhighlight %}
 {% endtabs %}
 
-![Maps custom tooltip](images/tooltip/custom_shape_tooltip.png)
+![Maps shape tooltip builder](images/tooltip/shape_tooltip_builder.png)
 
 N>
 * Refer the [`MapShapeLayer.enableShapeTooltip`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/enableShapeTooltip.html), for enabling tooltip for the shapes.
@@ -518,61 +513,63 @@ Widget build(BuildContext context) {
             ),
             showBubbles: true,
             enableBubbleTooltip: true,
-            bubbleTooltipBuilder: (context, index) {
+            shapeTooltipBuilder: (context, index) {
               return Container(
-                width: 140,
+                width: 150,
                 padding: EdgeInsets.all(10),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Icon(
-                                Icons.people,
-                                color: Colors.white,
-                                size: 16,
-                              ),
-                              Container(
-                                width: 25,
-                              ),
-                              Center(
-                                child: Text(
-                                  data[index].key,
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: Theme.of(context)
-                                          .textTheme
-                                          .bodyText2
-                                          .fontSize),
-                                ),
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Container(
-                            color: Colors.white,
-                            height: 1,
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            'Population : ' + data[index].region,
+                    Stack(
+                      children: [
+                        Center(
+                          child: Text(
+                            data[index].continent,
                             style: TextStyle(
-                                color: Colors.white,
-                                fontSize: Theme.of(context)
-                                    .textTheme
-                                    .bodyText2
-                                    .fontSize),
+                              color: Colors.white,
+                              fontSize: Theme.of(context)
+                                      .textTheme
+                                      .bodyText2
+                                      .fontSize),
                           ),
-                        ],
-                      ),
-                    );
-                  },
+                        ),
+                        Icon(
+                          Icons.flag,
+                          color: Colors.white,
+                          size: 16,
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Container(
+                      color: Colors.white,
+                      height: 1,
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      'Total Countries : ' +
+                        data[index].countriesCount.toInt().toString(),
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize:
+                          Theme.of(context).textTheme.bodyText2.fontSize),
+                    ),
+                  ],
+                ),
+              );
+            },
+            bubbleSettings: MapBubbleSettings(
+                minRadius: 15,
+                maxRadius: 35,
+            ),
+            tooltipSettings: MapTooltipSettings(
+              color: const Color.fromRGBO(98, 0, 238, 1),
+              strokeColor: const Color.fromRGBO(252, 187, 15, 1),
+              strokeWidth: 1.5),
           ),
         ],
       ),
@@ -591,7 +588,7 @@ class Model {
 {% endhighlight %}
 {% endtabs %}
 
-![Maps custom tooltip](images/tooltip/custom_bubble_tooltip.png)
+![Maps bubble tooltip builder](images/tooltip/bubble_tooltip_builder.png)
 
 N>
 * Refer the [`MapShapeLayer.enableBubbleTooltip`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/enableBubbleTooltip.html), for enabling tooltip for the bubbles.

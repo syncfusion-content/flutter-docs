@@ -46,8 +46,6 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Legend support](images/legend/default-legend.png)
-
 ## Shape legend
 
 You can show shape legend using the [`MapShapeLayer.legendSource`] property. By default, the legend item's text is rendered based on the value of [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeDataField.html) property. The default value of the [`legendSource`] property is `MapElement.none`.
@@ -83,7 +81,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Shape legend support](images/legend/shape-legend.png)
+![Shape legend support](images/legend/default-legend.png)
 
 N>
 * Refer the [`MapLegendSettings`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/legendSettings.html), for customizing the legend items.
@@ -95,29 +93,58 @@ You can show bubble legend using the [`MapShapeLayer.legendSource`] property. By
 {% tabs %}
 {% highlight Dart %}
 
+List<Model> data;
+
+@override
+void initState() {
+  super.initState();
+  data = <Model>[
+    Model('Asia', 150),
+    Model('Africa', 45),
+    Model('Europe', 34),
+    Model('North America', 28),
+    Model('South America', 25),
+    Model('Australia', 5),
+  ];
+}
+
 @override
 Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Container(
-          height: 350,
-          child: Padding(
-            padding: EdgeInsets.only(left: 15, right: 15),
-            child: SfMaps(
-              layers: [
-                MapShapeLayer(
-                  delegate: MapShapeLayerDelegate(
-                    shapeFile: "assets/world_map.json",
-                    shapeDataField: "continent",
-                  ),
-                  legendSource: MapElement.bubble,
-                ),
-              ],
-            ),
-          ),
+  return Scaffold(
+    body: Center(
+      child: Container(
+        padding: EdgeInsets.only(left: 10, right: 15, top: 30),
+        height: 350,
+        child: SfMaps(
+          layers: [
+            MapShapeLayer(
+              delegate: MapShapeLayerDelegate(
+                shapeFile: "assets/world_map.json",
+                shapeDataField: "continent",
+                dataCount: data.length,
+                primaryValueMapper: (int index) => data[index].continent,
+                bubbleSizeMapper: (int index) =>
+                    data[index].populationDensityPerSqKm,
+              ),
+              showBubbles: true,
+              legendSource: MapElement.bubble,
+              bubbleSettings: MapBubbleSettings(
+                maxRadius: 45,
+                minRadius: 15,
+              ),
+            )
+          ],
         ),
       ),
-   );
+    ),
+  );
+}
+
+class Model {
+  const Model(this.continent, this.populationDensityPerSqKm);
+
+  final String continent;
+  final double populationDensityPerSqKm;
 }
 
 {% endhighlight %}

@@ -318,7 +318,7 @@ Widget build(BuildContext context) {
             bubbleStrokeColor: Colors.red[800],
             bubbleStrokeWidth: 2,
             bubbleHoverColor: Colors.red[800],
-            bubbleHoverStrokeColor: Colors.black[100],
+            bubbleHoverStrokeColor: Colors.black,
             bubbleHoverStrokeWidth: 2,
           ),
           child: SfMaps(

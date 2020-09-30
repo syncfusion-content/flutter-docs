@@ -112,34 +112,28 @@ void initState() {
 
 @override
 Widget build(BuildContext context) {
-   return Scaffold(
-      body: Center(
-          child: Container(
+  return Scaffold(
+    body: Center(
+      child: Container(
         height: 350,
-        child: Padding(
-          padding: EdgeInsets.only(left: 15, right: 15),
-          child: SfMaps(
-            layers: <MapLayer>[
-              MapShapeLayer(
-                delegate: MapShapeLayerDelegate(
-                  shapeFile: 'assets/world_map.json',
-                  shapeDataField: 'name',
-                  dataCount: data.length,
-                  primaryValueMapper: (index) => data[index].country,
-                ),
-                initialMarkersCount: 5,
-                markerBuilder: (BuildContext context, int index) {
-                  return MapMarker(
-                    latitude: data[index].latitude,
-                    longitude: data[index].longitude,
-                  );
-                },
-              ),
-            ],
-          ),
+        child: SfMaps(
+          layers: <MapLayer>[
+            MapTileLayer(
+              urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+              initialMarkersCount: 5,
+              markerBuilder: (BuildContext context, int index) {
+                return MapMarker(
+                  latitude: data[index].latitude,
+                  longitude: data[index].longitude,
+                  iconColor: Colors.blue,
+                );
+              },
+            ),
+          ],
         ),
-      )),
-   );
+      ),
+    ),
+  );
 }
 
 class Model {
@@ -153,7 +147,7 @@ class Model {
 {% endhighlight %}
 {% endtabs %}
 
-![Tile layer marker](images/markers/tile_marker.png)
+![Tile layer marker](images/markers/tile_layer_marker.png)
 
 N>
 * Refer the [`markerBuilder`], for returning the [`MapMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker-class.html).
