@@ -290,7 +290,7 @@ Widget build(BuildContext context) {
 
 ## Thumb overlap stroke color
 
-You can change the overlap stroke color of the thumb in the range slider using the [`thumbOverlappingStrokeColor`] property.
+You can change the overlap stroke color of the thumb in the range slider using the [`overlappingThumbStrokeColor`] property.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderTheme-class.html).
 
@@ -306,7 +306,7 @@ Widget build(BuildContext context) {
           body: Center(
               child: SfRangeSliderTheme(
                     data: SfRangeSliderThemeData(
-                        thumbOverlappingStrokeColor: Colors.blue,
+                        overlappingThumbStrokeColor: Colors.blue,
                     ),
                     child:  SfRangeSlider(
                      min: 2.0,
