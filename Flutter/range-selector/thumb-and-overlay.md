@@ -554,7 +554,7 @@ Widget build(BuildContext context) {
           body: Center(
               child: SfRangeSelectorTheme(
                     data: SfRangeSelectorThemeData(
-                        overlappingThumbStrokeColor: Colors.blue,
+                        overlappingThumbStrokeColor: Colors.red,
                     ),
                     child:  SfRangeSelector(
                         min: _min,

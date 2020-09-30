@@ -458,7 +458,7 @@ Widget build(BuildContext context) {
           body: Center(
               child: SfRangeSelectorTheme(
                     data: SfRangeSelectorThemeData(
-                        overlappingTooltipStrokeColor: Colors.red,
+                        overlappingTooltipStrokeColor: Colors.white,
                     ),
                     child:  SfRangeSelector(
                         min: _min,

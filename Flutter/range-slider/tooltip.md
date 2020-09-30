@@ -248,7 +248,7 @@ Widget build(BuildContext context) {
           body: Center(
               child: SfRangeSliderTheme(
                     data: SfRangeSliderThemeData(
-                        overlappingTooltipStrokeColor: Colors.red,
+                        overlappingTooltipStrokeColor: Colors.white,
                     ),
                     child:  SfRangeSlider(
                      min: 2.0,

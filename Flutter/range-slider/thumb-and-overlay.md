@@ -306,7 +306,7 @@ Widget build(BuildContext context) {
           body: Center(
               child: SfRangeSliderTheme(
                     data: SfRangeSliderThemeData(
-                        overlappingThumbStrokeColor: Colors.blue,
+                        overlappingThumbStrokeColor: Colors.red,
                     ),
                     child:  SfRangeSlider(
                      min: 2.0,
