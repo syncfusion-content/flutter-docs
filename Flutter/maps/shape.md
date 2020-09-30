@@ -165,8 +165,6 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Shapes hover color](images/shape-colors/shapes-hover-color.png)
-
 ## Palette
 
 You can color the shape based on the list of colors provided in the [`MapShapeLayer.palette`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/palette.html) property in a sequential order.

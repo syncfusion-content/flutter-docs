@@ -150,7 +150,7 @@ class Model {
 {% endhighlight %}
 {% endtabs %}
 
-![Bubble legend support](images/legend/bubble-legend.png)
+![Bubble legend support](images/legend/bubble_legend.png)
 
 N>
 * Refer the [`MapLegendSettings`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/legendSettings.html), for customizing the legend items.
