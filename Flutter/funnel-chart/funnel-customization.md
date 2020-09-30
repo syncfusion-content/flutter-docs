@@ -215,4 +215,3 @@ The [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
 {% endhighlight %}
 
 ![Palette](images/funnel-charts/funnel_palette.jpg)
-

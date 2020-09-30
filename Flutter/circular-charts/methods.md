@@ -13,7 +13,7 @@ documentation: ug
 
 ### Show method in tooltipBehavior
 
-The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/show.html) method is used to activate the tooltip at the specified location.
+The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/show.html) method is used to activate the tooltip at the specified x and y point values.
 
 {% highlight dart %} 
 
@@ -58,8 +58,9 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
   }
 
     void show() {
-        tooltip.show(10, 17);
-      }
+      tooltip.show(10, 17);
+    }
+  
   {% endhighlight %}
 
 ### showByIndex method in tooltipBehavior
@@ -225,16 +226,12 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
 ### SelectDataPoints method in selectionBehavior
 
-The [`selectDataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionSettings/selectionIndex.html) method is used to select the data point programmatically. The required arguments are listed below.
-
-* pointIndex - specifies the point index value.
-* seriesIndex - specifies the series index value and this is an optional parameter. By default it will be considered as 0.
-
->**NOTE**
-We can get the [`enableMultiSelection`]() and [`selectionType`]() is directly should be used from the API.
+The [`selectDataPoints`]() method is used to select the data point programmatically. The required arguments are listed below.
 
 * `pointIndex` - index of the point which needs to be selected.
-* `seriesIndex` - index of the series for which the pointIndex is specified.
+* `seriesIndex` - index of the series for which the pointIndex is specified and this is an optional parameter. By default it will be considered as 0.
+
+N> The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/enableMultiSelection.html) is also applicable for this but, it is based on the API values specified in the chart.
 
 {% highlight dart %}
 

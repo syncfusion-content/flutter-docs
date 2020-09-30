@@ -214,5 +214,3 @@ The [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
 {% endhighlight %}
 
 ![Palette](images/pyramid-charts/pyramid_palette.jpg)
-
-

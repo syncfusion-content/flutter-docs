@@ -223,4 +223,3 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
 {% endhighlight %}
 
 ![mapcolor](images/circular-customization/color-mapping.jpg)
-
