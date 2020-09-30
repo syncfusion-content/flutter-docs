@@ -13,6 +13,8 @@ Markers can be used to denote the locations. It is possible to use the built-in 
 
 ## Adding markers
 
+### Shape layer
+
 You can show markers at any position on the map by providing latitude and longitude position to the [`MapMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker-class.html), which is the widget returns from the [`MapShapeLayer.markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/markerBuilder.html) property.
 
 The [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/markerBuilder.html) callback will be called number of times equal to the value specified in the [`initialMarkersCount`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/initialMarkersCount.html) property. The default value of the [`initialMarkersCount`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/initialMarkersCount.html) property is `null`.
@@ -83,6 +85,73 @@ class Model {
 N>
 * Refer the [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/markerBuilder.html), for returning the [`MapMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker-class.html).
 * Refer the [`controller`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/controller.html), for dynamically updating the markers.
+
+### Tile layer
+
+You can show markers at any position on the map by providing latitude and longitude position to the [`MapMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker-class.html), which is the widget returns from the [`MapTileLayer.markerBuilder`] property.
+
+The [`markerBuilder`] callback will be called number of times equal to the value specified in the [`initialMarkersCount`] property. The default value of the [`initialMarkersCount`] property is `null`.
+
+{% tabs %}
+{% highlight Dart %}
+
+List<Model> data;
+
+@override
+void initState() {
+    data = const <Model>[
+      Model('Brazil', -14.235004, -51.92528),
+      Model('Germany', 51.16569, 10.451526),
+      Model('Australia', -25.274398, 133.775136),
+      Model('India', 20.593684, 78.96288),
+      Model('Russia', 61.52401, 105.318756)
+    ];
+
+    super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: Center(
+      child: Container(
+        height: 350,
+        child: SfMaps(
+          layers: <MapLayer>[
+            MapTileLayer(
+              urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+              initialMarkersCount: 5,
+              markerBuilder: (BuildContext context, int index) {
+                return MapMarker(
+                  latitude: data[index].latitude,
+                  longitude: data[index].longitude,
+                  iconColor: Colors.blue,
+                );
+              },
+            ),
+          ],
+        ),
+      ),
+    ),
+  );
+}
+
+class Model {
+  const Model(this.country, this.latitude, this.longitude);
+
+  final String country;
+  final double latitude;
+  final double longitude;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Tile layer marker](images/markers/tile_layer_marker.png)
+
+N>
+* Refer the [`markerBuilder`], for returning the [`MapMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker-class.html).
+* Refer the [`controller`] for dynamically updating the markers.
 
 ## Appearance customization
 
