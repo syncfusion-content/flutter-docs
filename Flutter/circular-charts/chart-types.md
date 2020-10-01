@@ -632,7 +632,7 @@ The radial bar chart is used for showing the comparisons among the categories us
 * [`strokeColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPoint/strokeWidth.html) – Changes the stroke color of the series.
 * [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointColorMapper.html) - Maps the color for individual points from the data source.
 * [`gap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/gap.html) - Changes the spacing between two individual segments. The default value of spacing is 1%.
-* [`maximumValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/maximumValue.html) - Represents the entire span of an individual circle. The default value of the this property is null.
+* [`maximumValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/maximumValue.html) - Represents the entire span of an individual circle. The default value of the this property is null.
 * [`trackColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/trackColor.html) - Changes the color of the track area.
 * [`trackBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/trackBorderColor.html) - Changes the color of the track border.
 * [`trackBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/trackBorderWidth.html) - Changes the width of the track border.

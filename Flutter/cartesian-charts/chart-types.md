@@ -211,7 +211,7 @@ The following properties are used to customize the appearance:
 
 ###	Border customization
 
-The borders of the area chart can be customized using the [`borderMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AreaSeries/borderMode.html) property. The default value of the [`borderMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AreaSeries/borderMode.html) property is [`top`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AreaBorderMode-class.html). The other values are [`all`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AreaBorderMode-class.html) and [`excludeBottom`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AreaBorderMode-class.html).
+The borders of the area chart can be customized using the [`borderDrawMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AreaSeries/borderDrawMode.html) property. The default value of the [`borderDrawMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AreaSeries/borderDrawMode.html) property is [`top`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BorderDrawMode-class.html). The other values are [`all`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BorderDrawMode-class.html) and [`excludeBottom`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BorderDrawMode-class.html).
 
 {% highlight dart %} 
 
@@ -1054,7 +1054,7 @@ To render a scatter chart, create an instance of [`ScatterSeries`](https://pub.d
 
 ###	Change shape and size of the scatter
 
-The [`shape`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/shape.html) property is used to change the rendering shape of scatter series. The available shapes are [`circle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataMarkerType-class.html), [`rectangle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataMarkerType-class.html), [`pentagon`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataMarkerType-class.html), [`verticalLine`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataMarkerType-class.html), [`horizontalLine`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataMarkerType-class.html), [`diamond`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataMarkerType-class.html), [`triangle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataMarkerType-class.html), [`image`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataMarkerType-class.html), and [`invertedTriangle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataMarkerType-class.html). If [`image`]() shape is specified, then you can assign the image using the [`imageUrl`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/imageUrl.html) property.
+The [`shape`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/shape.html) property is used to change the rendering shape of scatter series. The available shapes are [`circle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataMarkerType-class.html), [`rectangle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataMarkerType-class.html), [`pentagon`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataMarkerType-class.html), [`verticalLine`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataMarkerType-class.html), [`horizontalLine`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataMarkerType-class.html), [`diamond`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataMarkerType-class.html), [`triangle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataMarkerType-class.html), [`image`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataMarkerType-class.html), and [`invertedTriangle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataMarkerType-class.html). If [`image`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/image.html) shape is specified, then you can assign the image using the [`image`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/image.html) property.
 
 The [`height`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/height.html) and [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/width.html) properties of [`markerSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/markerSettings.html) are used to change the height and width of the scatter series, respectively.
 
@@ -2762,3 +2762,103 @@ To render a Candle chart, create an instance of [` CandleSeries`](https://pub.de
 {% endhighlight %}
 
 ![candle chart](images/cartesian-chart-types/candle.png)
+
+## Box and Whisker chart
+
+The Box and Whisker charts are used to visualize a group of numerical data through their quartiles. It is also referred as box plot. Box plots may also have lines extending vertically from the boxes (whiskers) indicating variability outside the upper and lower quartiles.
+
+To render a Box and Whisker chart, create an instance of [`BoxAndWhiskerSeries`](), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties to customize the appearance.
+
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - Changes the color of the series.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
+* [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) – Changes the stroke width of the series.
+* [`BoxPlotMode`]() - used to change the box plot rendering mode. This property is applicable for 
+[`normal`](), [`exclusive`](), and [`inclusive`]() values.
+* [`showMean`]() - Indication for mean value in box plot. It is set to be true, a cross symbol will be displayed at the mean value, for each data point in box plot. Else, it will not be displayed.
+* [`spacing`]() - Spacing between the box plots.The value ranges from 0 to 1, where 1 represents 100% and 0 represents 0% of the available space.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <ChartSeries<SalesData, double>>[
+                           BoxAndWhiskerSeries<SalesData, double>(
+                                dataSource: data,
+                                boxPlotMode: BoxPlotMode.exclusive,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.number
+                            )
+                        ]
+                    )
+                )
+            )   
+        );
+    }
+
+{% endhighlight %}
+
+![box and whisker chart](images/cartesian-chart-types/box_and_whisker.png)
+
+## Waterfall Chart
+
+The waterfall chart explains gradual changes in the quantitative value of an entity that is subject to changes by increments or decrements. Using the waterfall chart, you can quickly illustrate changes in revenues.
+
+To render a waterfall chart, create an instance of [`WaterfallSeries`]() and add to the[`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html)collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties to customize the appearance.
+
+* [`negativePointsColor`]() - Changes the color of the negative data points in the series. If no color is specified, then the negative data points will be rendered with the series default color.
+* [`intermediateSumColor`]() - Changes the Color of the intermediate sum points in the series. If no color is specified, then the intermediate sum points will be rendered with the series default color.
+* [`totalSumColor`]() - Changes the color of the total sum points in the series. If no color is specified, then the total sum points will be rendered with the series default color.
+* [`connectorLineSettings`]() - used to customize the waterfall chart connector line. Data points in waterfall chart are connected using the connector line. Provides the options to change the [`width`](), [`color`]() and [`dashArray`]() of the connector line to customize the appearance.
+* [`spacing`]() - used to provide spacing between the data points in waterfall chart. The value ranges from 0 to 1, where 1 represents 100% and 0 represents 0% of the available space.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <ChartSeries<SalesData, double>>[
+                            WaterfallSeries<SalesData, double>(
+                            dataSource: <SalesData>[
+                            SalesData(2, 10, Colors.red),
+                            SalesData(3, -3, Colors.green),
+                            SalesData(4, 5, Colors.red, true),
+                            SalesData(5, 4, Colors.blue),
+                            SalesData(6, -2, Colors.red),
+                            SalesData(7, -5, Colors.red, true),
+                            SalesData(8, -10, Colors.red),
+                            SalesData(9, 8, Colors.red),
+                            SalesData(10, 8, Colors.red),
+                            SalesData(11, 5, Colors.red),
+                            SalesData(12, 8, Colors.red, false),
+                            SalesData(13, -5, Colors.red, false, true),
+                            ],
+                            negativePointsColor:
+                            const Color.fromRGBO(229, 101, 144, 1),
+                            intermediateSumColor:
+                            const Color.fromRGBO(79, 129, 188, 1),
+                            totalSumColor: const Color.fromRGBO(79, 129, 188, 1),
+                            xValueMapper: (SalesData sales, _) => sales.x,
+                            yValueMapper: (SalesData sales, _) => sales.y,
+                            intermediateSumPredicate: (SalesData sales, _) =>
+                            sales.isIntermediate,
+                            totalSumPredicate: (SalesData sales, _) => sales.isTotal,
+                            connectorLineSettings:    WaterfallConnectorLineSettings(
+                            width: 2.5,
+                            dashArray: <double>[3, 1])
+         ]
+        )
+       )
+      )   
+     );
+    }
+
+{% endhighlight %}
+
+![waterfall_chart](images/cartesian-chart-types/waterfall_series.png)

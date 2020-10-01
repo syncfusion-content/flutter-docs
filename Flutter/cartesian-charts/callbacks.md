@@ -467,7 +467,7 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
           },
           series: <CartesianSeries>[
             ColumnSeries<ChartData, double>(
-              selectionSettings: SelectionSettings(
+              selectionBehavior: SelectionBehavior(
                 enable: true,
               )
             )
@@ -672,6 +672,40 @@ Triggers when the marker is being rendered. Here, you can get the marker's point
           )
       );
   }
+
+{% endhighlight %}
+
+## onDataLabelTapped
+Triggers when tapping on the data label of the data point in the series. The [`onDataLabelTapped`]() Callback contains the following arguments.
+
+* [`position`]() - specifies the position of the tapped data label in logical pixels.
+* [`seriesIndex`]() - Specifies the series index of the tapped data label
+* [`pointIndex`]() - Specifies the point index of the tapped data label.
+* [`text`]() - Specifies the content of the tapped data label.
+
+
+N> This callback will not be called, when the builder is specified for data label (data label template). For this case, custom widget specified in the [`DataLabelSettings.builder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/builder.html) property can be wrapped using the [`GestureDetector`](https://api.flutter.dev/flutter/widgets/GestureDetector-class.html) and this functionality can be achieved in the application level.
+
+{% highlight dart %}
+
+    Widget build(BuildContext context) {
+      return Container(
+          child: SfCartesianChart(
+              onDatalabelTapped: (DataLabelTapArgs args) {
+                print(arg.seriesIndex);                 
+              }
+              series: <ChartSeries<Sample, DateTime>>[
+                  LineSeries<Sample, DateTime>(
+                    dataSource: sample,
+                    xValueMapper: (Sample sales, _) => sales.x,
+                    yValueMapper: (Sample sales, _) => sales.y,
+                    dataLabelSettings: DataLabelSettings(
+                        isVisible: true),
+                  )
+              ]
+          )
+      );
+    }
 
 {% endhighlight %}
 
