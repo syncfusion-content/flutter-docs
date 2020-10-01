@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Exporting
+# Exporting Circular charts
 
 [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) provides support to export the circular chart as a PNG image or as PDF document.
 

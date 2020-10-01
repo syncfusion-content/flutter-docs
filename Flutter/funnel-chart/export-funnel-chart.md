@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Exporting
+# Exporting Funnel chart
 
 [`SfFunnelChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart-class.html) provides support to export the funnel chart as a PNG image or as PDF document.
 
