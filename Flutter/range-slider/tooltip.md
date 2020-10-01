@@ -229,3 +229,48 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Tooltip style support](images/tooltip/slider-tooltip-style.png)
+
+## Tooltip overlap stroke color
+
+You can change the overlap stroke color of the tooltip in the range slider using the [`overlappingTooltipStrokeColor`] property.
+
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderTheme-class.html).
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                        overlappingTooltipStrokeColor: Colors.white,
+                    ),
+                    child:  SfRangeSlider(
+                     min: 2.0,
+                     max: 10.0,
+                     interval: 1,
+                     showTicks: true,
+                     showLabels: true,
+                     showTooltip: true,
+                     values: _values,
+                     onChanged: (SfRangeValues newValues){
+                            setState(() {
+                                _values = newValues;
+                            });
+                        },
+                    ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Tooltip overlap support](images/tooltip/slider-tooltip-overlap.png)

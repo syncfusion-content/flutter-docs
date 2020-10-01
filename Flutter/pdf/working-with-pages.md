@@ -29,6 +29,28 @@ document.dispose();
 	
 {% endhighlight %}
 
+## Inserting pages in an existing document
+
+You can insert an empty page at any location in the existing PDF document using the insert method. The following code sample explains the same.
+
+{% highlight dart %}
+
+//Loads an existing PDF document
+PdfDocument document =
+    PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
+  
+//Inserts a new page at index 0
+document.pages.insert(0);
+
+//Saves the document
+File('output.pdf').writeAsBytes(document.save());
+
+//Disposes the document
+document.dispose();
+
+{% endhighlight %}
+
+
 ## Adding margin to the PDF pages
 
 You can add [`margin`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageSettings/margins.html) to all the PDF pages of a PDF document using the [`pageSettings`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument/pageSettings.html) property. The following code snippet explains the same.
@@ -120,6 +142,24 @@ document.dispose();
 
 {% endhighlight %}
 
+## Get the number of pages from a PDF document
+
+You can get the page count from the existing PDF document as shown in the following code sample.
+
+{% highlight dart %}
+
+//Loads an existing PDF document
+PdfDocument document =
+    PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
+
+//Gets the pages count
+int pageCount = document.pages.count;
+
+//Disposes the document
+document.dispose();
+
+{% endhighlight %}
+
 ## Rotating a PDF page
 
 You can [`rotate`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageSettings/rotate.html) a PDF page in the PDF document using the [`PdfPageRotateAngle`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPageRotateAngle-class.html) enum as shown in the following code snippet.
@@ -157,4 +197,31 @@ section.pages.add().graphics.drawString(
 File('Output.pdf').writeAsBytes(document.save());
 document.dispose();
 	
+{% endhighlight %}
+
+## Removing pages from a document
+
+You can remove the pages from the existing PDF document using the remove or removeAt method as shown in the following code sample.
+
+{% highlight dart %}
+
+//Loads an existing PDF document
+PdfDocument document =
+    PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
+ 
+//Gets the second page of the document
+PdfPage page = document.pages[1];
+
+//Removes the second page from the document
+document.pages.remove(page);
+
+//Removes the first page from the document
+document.pages.removeAt(0);
+
+//Saves the document
+File('output.pdf').writeAsBytes(document.save());
+
+//Disposes the document
+document.dispose();
+
 {% endhighlight %}

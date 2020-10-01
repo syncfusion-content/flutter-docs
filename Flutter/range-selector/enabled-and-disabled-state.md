@@ -132,7 +132,8 @@ final List<Data> _chartData = <Data>[
                      disabledActiveDivisorColor: Colors.blue[900],
                      disabledInactiveDivisorColor: Colors.blue[200],
                      disabledThumbColor: Colors.red,
-                     trackHeight: 4,
+                     activeTrackHeight: 4,
+                     inactiveTrackHeight: 4,
                 ),
                 child:  SfRangeSelector(
                   min: _min,

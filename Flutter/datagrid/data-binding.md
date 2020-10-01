@@ -16,8 +16,8 @@ documentation: ug
  * [dataSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/dataSource.html) - The number of rows in a datagrid and row selection depends
  on the [dataSource]. So, set the collection required for datagrid in
 `dataSource`.
-* [getCellValue](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/getCellValue.html) - The data needed for the cells is obtained from
-`getCellValue`.
+* [getValue](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/getValue.html) - The data needed for the cells is obtained from
+`getValue`.
 
 `DataGridSource` objects are expected to be long-lived, not recreated with each build.
 
@@ -28,24 +28,24 @@ The following example shows how to create the `DataGridSource`,
 
 final List<Employee> _employees = <Employee>[];
 
-class EmployeeDataSource extends DataGridSource {
+class EmployeeDataSource extends DataGridSource<Employee> {
   @override
-  List<Object> get dataSource => _employees
+  List<Employee> get dataSource => _employees
   
   @override
-  getCellValue(int rowIndex, String columnName) {
+  getValue(Employee employee, String columnName) {
     switch (columnName) {
       case 'id':
-        return _employees[rowIndex].id;
+        return employee.id;
         break;
       case 'name':
-        return _employees[rowIndex].name;
+        return employee.name;
         break;
       case 'salary':
-        return _employees[rowIndex].salary;
+        return employee.salary;
         break;
       case 'designation':
-        return _employees[rowIndex].designation;
+        return employee.designation;
         break;
       default:
         return ' ';
