@@ -156,7 +156,7 @@ Widget build(BuildContext context) {
 
 ## Customize the visibility of page navigation dialog
 
-By default, the page navigation dialog will be displayed when the scroll head is tapped. You can customize the visibility of the pagw navigation dialog using the `canShowPaginationDialog` property. The following code example explains the same.
+By default, the page navigation dialog will be displayed when the scroll head is tapped. You can customize the visibility of the page navigation dialog using the `canShowPaginationDialog` property. The following code example explains the same.
 
 {% tabs %}
 {% highlight Dart %}
