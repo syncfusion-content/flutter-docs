@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Export chart to Image or PDF
+# Exporting
 
 [`SfPyramidChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart-class.html) provides support to export the pyramid chart as a PNG image or as PDF document.
 
