@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Getting Started with Flutter Maps (SfMaps)
-This section explains the steps required to add the maps widget and its elements such as data labels, markers, bubbles, assignable colors based on region, and legends. This section covers only basic features needed to know to get started with Syncfusion maps.
+This section explains the steps required to add the maps widget with shape layer and its elements such as data labels, tooltip, title, assignable colors based on region, and legends. It also explains about adding tile layer with OpenStreetMap. This section covers only basic features needed to know to get started with Syncfusion maps.
 
 ## Add Flutter maps to an application
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
@@ -68,7 +68,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## Add a GeoJSON file
+## Add a GeoJSON file for shape layer
 
 The [`layers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps/layers.html) in [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) contains collection of [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html). The actual geographical rendering is done in the each [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html). The [`delegate`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/delegate.html) property of the [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html) is of type [`MapShapeLayerDelegate`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate-class.html). The path of the .json file which contains the GeoJSON data has to be set to the [`shapeFile`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeFile.html) property of the [`MapShapeLayerDelegate`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate-class.html).
 
@@ -103,7 +103,7 @@ Widget build(BuildContext context) {
 
 ![maps basic view](images/getting-started/map_basic_view.png)
 
-## Mapping the data source
+## Mapping the data source for shape layer
 
 By default, the value specified for the [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeDataField.html) in the GeoJSON file will be used in the elements like data labels, tooltip, and legend for their respective shapes. However, it is possible to keep a data source and customize these elements based on the requirement. As mentioned above, [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeDataField.html) will be used to map with respective value returned in [`primaryValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/primaryValueMapper.html) from the data source.
 
@@ -166,7 +166,7 @@ N>
 * Refer the [`MapShapeLayerDelegate.bubbleTooltipTextMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/bubbleTooltipTextMapper.html), for customizing the bubble tooltip text.
 * Refer the [`MapShapeLayerDelegate.shapeColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeColorValueMapper.html), for customizing the bubble colors.
 
-## Add maps elements
+## Add shape layer maps elements
 
 Add the basic maps elements such as title, data labels, legend, and tooltip as shown in the below code snippet.
 
@@ -262,3 +262,28 @@ class Model {
 {% endtabs %}
 
 ![Maps getting started](images/getting-started/maps_getting_started.png)
+
+## Add tile layer
+
+The `MapTileLayer` needs to be added in the [layers](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps/layers.html) collection in [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html). The URL of the providers must be set in the `MapTileLayer.urlTemplate` property.
+
+Kindly refer the [tile layer](https://help.syncfusion.com/flutter/maps/tile-layer#setting-url-template) section for more information.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+    return SfMaps(
+        layers: [
+            MapTileLayer(
+                urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+            ),
+        ],
+    );
+}
+ 
+{% endhighlight %}
+{% endtabs %}
+
+![Maps tile layer getting started](images/getting-started/getting_started_tile_layer.png)

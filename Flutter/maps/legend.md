@@ -13,7 +13,7 @@ You can provide clear information on the data plotted on the map using legend.
 
 ## Show legend
 
-You can show legend using the [`MapShapeLayer.showLegend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/showLegend.html) property. By default, the legend item's text is rendered based on the value of [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeDataField.html) property. The default value of the [`showLegend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/showLegend.html) property is `false`.
+You can show or hide the legend using the [`MapShapeLayer.legendSource`] property. The default value of the [`legendSource`] property is `MapElement.none`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -33,7 +33,7 @@ Widget build(BuildContext context) {
                     shapeFile: "assets/world_map.json",
                     shapeDataField: "continent",
                   ),
-                  showLegend: true,
+                  legendSource: MapElement.none,
                 ),
               ],
             ),
@@ -46,7 +46,111 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Legend support](images/legend/default-legend.png)
+## Shape legend
+
+You can show shape legend using the [`MapShapeLayer.legendSource`] property. By default, the legend item's text is rendered based on the value of [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeDataField.html) property. The default value of the [`legendSource`] property is `MapElement.none`.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Container(
+          height: 350,
+          child: Padding(
+            padding: EdgeInsets.only(left: 15, right: 15),
+            child: SfMaps(
+              layers: [
+                MapShapeLayer(
+                  delegate: MapShapeLayerDelegate(
+                    shapeFile: "assets/world_map.json",
+                    shapeDataField: "continent",
+                  ),
+                  legendSource: MapElement.shape,
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+   );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Shape legend support](images/legend/default-legend.png)
+
+N>
+* Refer the [`MapLegendSettings`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/legendSettings.html), for customizing the legend items.
+
+## Bubble legend
+
+You can show bubble legend using the [`MapShapeLayer.legendSource`] property. By default, the legend item's text is rendered based on the value of [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeDataField.html) property.
+
+{% tabs %}
+{% highlight Dart %}
+
+List<Model> data;
+
+@override
+void initState() {
+  super.initState();
+  data = <Model>[
+    Model('Asia', 150),
+    Model('Africa', 45),
+    Model('Europe', 34),
+    Model('North America', 28),
+    Model('South America', 25),
+    Model('Australia', 5),
+  ];
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: Center(
+      child: Container(
+        padding: EdgeInsets.only(left: 10, right: 15, top: 30),
+        height: 350,
+        child: SfMaps(
+          layers: [
+            MapShapeLayer(
+              delegate: MapShapeLayerDelegate(
+                shapeFile: "assets/world_map.json",
+                shapeDataField: "continent",
+                dataCount: data.length,
+                primaryValueMapper: (int index) => data[index].continent,
+                bubbleSizeMapper: (int index) =>
+                    data[index].populationDensityPerSqKm,
+              ),
+              showBubbles: true,
+              legendSource: MapElement.bubble,
+              bubbleSettings: MapBubbleSettings(
+                maxRadius: 45,
+                minRadius: 15,
+              ),
+            )
+          ],
+        ),
+      ),
+    ),
+  );
+}
+
+class Model {
+  const Model(this.continent, this.populationDensityPerSqKm);
+
+  final String continent;
+  final double populationDensityPerSqKm;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Bubble legend support](images/legend/bubble_legend.png)
 
 N>
 * Refer the [`MapLegendSettings`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/legendSettings.html), for customizing the legend items.
@@ -95,7 +199,7 @@ Widget build(BuildContext context) {
                         MapColorMapper(from: 301, to: 400, color: Colors.orange, text:'300 - 400/km'),
                       ]
                   ),
-                  showLegend: true,
+                  legendSource: MapElement.shape,
                 )
               ],
             ),
@@ -185,7 +289,7 @@ Widget build(BuildContext context) {
                             text: '500 - 600/km'),
                       ]
                   ),
-                  showLegend: true,
+                  legendSource: MapElement.shape,
                   legendSettings: MapLegendSettings(
                     position: MapLegendPosition.right,
                   ),
@@ -283,7 +387,7 @@ Widget build(BuildContext context) {
                             text: '500 - 600/km'),
                       ]
                   ),
-                  showLegend: true,
+                  legendSource: MapElement.shape,
                   legendSettings: MapLegendSettings(
                     offset: Offset(60, 275),
                   ),
@@ -380,7 +484,7 @@ Widget build(BuildContext context) {
                             text: '500 - 600/km'),
                       ]
                   ),
-                  showLegend: true,
+                  legendSource: MapElement.shape,
                   legendSettings: MapLegendSettings(
                     position: MapLegendPosition.bottom,
                     overflowMode: MapLegendOverflowMode.wrap
@@ -412,12 +516,12 @@ N>
 
 ## Legend toggling
 
-You can enable toggling the legend items and the corresponding shapes using the [`MapLegendSettings.enableToggleInteraction`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/enableToggleInteraction.html) property. The default value of the [`enableToggleInteraction`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/enableToggleInteraction.html) property is `false`. You can customize the toggled shapes using the following properties:
+You can enable toggling the legend items and the corresponding shapes or bubbles using the [`MapLegendSettings.enableToggleInteraction`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/enableToggleInteraction.html) property. The default value of the [`enableToggleInteraction`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/enableToggleInteraction.html) property is `false`. You can customize the toggled shapes or bubbles using the following properties:
 
-* **Toggled shape color** - Change the color for the toggled legend item's icon and it's shape using the [`MapLegendSettings.toggledShapeColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/toggledShapeColor.html) property.
-* **Toggled shape stroke color** - Change the stroke color which applies to the toggled legend item's shape using the [`MapLegendSettings.toggledShapeStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/toggledShapeStrokeColor.html) property.
-* **Toggled shape stroke width** - Change the stroke width which applies to the toggled legend item's shape using the [`MapLegendSettings.toggledShapeStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/toggledShapeStrokeWidth.html) property.
-* **Toggled shape opacity** - Change the opacity of the toggled legend item's shape using the [`MapLegendSettings.toggledShapeOpacity`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/toggledShapeOpacity.html) property.
+* **Toggled item color** - Change the color for the toggled legend item's icon and it's shape or bubble using the [`MapLegendSettings.toggledItemColor`]property.
+* **Toggled item stroke color** - Change the stroke color which applies to the toggled legend item's shape or bubble using the [`MapLegendSettings.toggledItemStrokeColor`] property.
+* **Toggled item stroke width** - Change the stroke width which applies to the toggled legend item's shape or bubble using the [`MapLegendSettings.toggledItemStrokeWidth`] property.
+* **Toggled item opacity** - Change the opacity of the toggled legend item's shape or bubble using the [`MapLegendSettings.toggledItemOpacity`] property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -483,12 +587,12 @@ Widget build(BuildContext context) {
                             text: '500 - 600/km'),
                       ]
                   ),
-                  showLegend: true,
+                  legendSource: MapElement.shape,
                   legendSettings: MapLegendSettings(
                     enableToggleInteraction: true,
-                    toggledShapeColor: Colors.grey,
-                    toggledShapeStrokeWidth: 3,
-                    toggledShapeStrokeColor: Colors.black,
+                    toggledItemColor: Colors.grey,
+                    toggledItemStrokeWidth: 3,
+                    toggledItemStrokeColor: Colors.black,
                   ),
                 )
               ],
@@ -513,9 +617,9 @@ class Model {
 
 You can also customize the below appearance of the legend using [`SfMapsTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsTheme-class.html).
 
-* **Toggled shape color** - Change the color for the toggled legend item's icon and it's shape using the [`SfMapsThemeData.toggledShapeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData/toggledShapeColor.html) property.
-* **Toggled shape stroke color** - Change the stroke color which applies to the toggled legend item's shape using the [`SfMapsThemeData.toggledShapeStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData/toggledShapeStrokeColor.html) property.
-* **Toggled shape stroke width** - Change the stroke width which applies to the toggled legend item's shape using the [`SfMapsThemeData.toggledShapeStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData/toggledShapeStrokeWidth.html) property.
+* **Toggled item color** - Change the color for the toggled legend item's icon and it's shape or bubble using the [`SfMapsThemeData.toggledItemColor`] property.
+* **Toggled item stroke color** - Change the stroke color which applies to the toggled legend item's shape or bubble using the [`SfMapsThemeData.toggledItemStrokeColor`] property.
+* **Toggled item stroke width** - Change the stroke width which applies to the toggled legend item's shape or bubble using the [`SfMapsThemeData.toggledItemStrokeWidth`] property.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfMapsTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsTheme-class.html).
 
@@ -549,9 +653,9 @@ Widget build(BuildContext context) {
             padding: EdgeInsets.only(left: 15, right: 15),
             child: SfMapsTheme(
               data: SfMapsThemeData(
-                toggledShapeColor: Colors.grey,
-                toggledShapeStrokeWidth: 3,
-                toggledShapeStrokeColor: Colors.black,
+                toggledItemColor: Colors.grey,
+                toggledItemStrokeWidth: 3,
+                toggledItemStrokeColor: Colors.black,
               ),
               child: SfMaps(
                 layers: [
@@ -589,7 +693,7 @@ Widget build(BuildContext context) {
                               text: '500 - 600/km'),
                         ]
                     ),
-                    showLegend: true,
+                    legendSource: MapElement.shape,
                     legendSettings: MapLegendSettings(
                       enableToggleInteraction: true,
                     ),
@@ -683,7 +787,7 @@ Widget build(BuildContext context) {
                             text: '500 - 600/km'),
                       ]
                   ),
-                  showLegend: true,
+                  legendSource: MapElement.shape,
                   legendSettings: MapLegendSettings(
                     textStyle: const TextStyle(
                         color: Colors.red,
@@ -792,7 +896,7 @@ Widget build(BuildContext context) {
                               text: '500 - 600/km'),
                         ]
                     ),
-                    showLegend: true,
+                    legendSource: MapElement.shape,
                   )
                 ],
               ),
@@ -873,7 +977,7 @@ Widget build(BuildContext context) {
                         MapColorMapper(from: 501, to: 600, color: Colors.deepPurple, text:'500 - 600/km'),
                       ]
                   ),
-                  showLegend: true,
+                  legendSource: MapElement.shape,
                   legendSettings: MapLegendSettings(
                     position: MapLegendPosition.bottom,
                     overflowMode: MapLegendOverflowMode.wrap,
