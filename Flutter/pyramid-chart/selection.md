@@ -23,7 +23,7 @@ The selection feature in chart let you to select a segment in a series or the se
                     dataSource: chartData,
                     xValueMapper: (SalesData sales, _) =>   sales.year,
                     yValueMapper: (SalesData sales, _) => sales.sales,
-                    selectionSettings: SelectionSettings(
+                    selectionBehavior: SelectionBehavior(
                     // Enables the selection
                     enable: true)
                   )
@@ -39,14 +39,14 @@ The selection feature in chart let you to select a segment in a series or the se
 
 You can customize the segments using the below properties.
 
-* [`selectedColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionSettings/selectedColor.html) - used to change the background color of selected segment.
-* [`unselectedColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionSettings/unselectedColor.html) - used to change the background color of unselected segment.
-* [`selectedBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionSettings/selectedBorderColor.html) - used to change the stroke color of the selected segment.
-* [`selectedBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionSettings/selectedBorderWidth.html) - used to change the stroke width of the selected segment.
-* [`unselectedBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionSettings/unselectedBorderColor.html) - used to change the stroke color of the unselected segment.
-* [`unselectedBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionSettings/unselectedBorderWidth.html) - used to change the stroke width of the unselected segment.
-* [`selectedOpacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionSettings/selectedOpacity.html) - used to control the transparency of the selected segment.
-* [`unselectedOpacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionSettings/unselectedOpacity.html) - used to control the transparency of the selected segment.
+* [`selectedColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/selectedColor.html) - used to change the background color of selected segment.
+* [`unselectedColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/unselectedColor.html) - used to change the background color of unselected segment.
+* [`selectedBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/selectedBorderColor.html) - used to change the stroke color of the selected segment.
+* [`selectedBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/selectedBorderWidth.html) - used to change the stroke width of the selected segment.
+* [`unselectedBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/unselectedBorderColor.html) - used to change the stroke color of the unselected segment.
+* [`unselectedBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/unselectedBorderWidth.html) - used to change the stroke width of the unselected segment.
+* [`selectedOpacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/selectedOpacity.html) - used to control the transparency of the selected segment.
+* [`unselectedOpacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/unselectedOpacity.html) - used to control the transparency of the selected segment.
 
 {% highlight dart %} 
 
@@ -60,7 +60,7 @@ You can customize the segments using the below properties.
                     dataSource: chartData,
                     xValueMapper: (SalesData sales, _) =>   sales.year,
                     yValueMapper: (SalesData sales, _) => sales.sales,
-                    selectionSettings: SelectionSettings(
+                    selectionBehavior: SelectionBehavior(
                     // Enables the selection
                     enable: true,
                     selectedColor: Colors.red,
@@ -125,3 +125,59 @@ You can select a point or series programmatically on a chart using [`initialSele
 ![Initial selection](images/selection/initial_render_selection.png)
 
 Also refer [selection event](./events#onselectionchanged) for customizing the selection further.
+
+## Methods in SelectionBehavior
+
+### SelectDataPoints method in SelectionBehavior
+
+The [`selectDataPoints`]() method is used to select the data point programmatically. The required arguments are listed below.
+
+* `pointIndex` - specifies the point index value.
+* `seriesIndex` - specifies the series index value and this is an optional parameter. By default it will be considered as 0.
+
+N> The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/enableMultiSelection.html) is also applicable for this but, it is based on the API values specified in the chart.
+
+{% highlight dart %}
+
+    SfPyramidChart chart;
+    SelectionBehavior selection;
+
+    @override
+    Widget build(BuildContext context) {
+    
+    final List<ChartData> chartData = [
+      ChartData(10, 17),
+      ChartData(20, 34)
+      // Add the required data
+    ];
+
+    selection = SelectionBehavior(enable: true);
+    
+    chart = SfPyramidChart(
+      series: PyramidSeries<ChartData, double>(
+            dataSource: chartData,
+            xValueMapper: (ChartData data, _) => data.x,
+            yValueMapper: (ChartData data, _) => data.y,
+            selectionBehavior: selection
+        )
+    );
+    
+    return Scaffold(
+      body: Center(
+        child: Column(
+          children: <Widget>[
+            FlatButton(
+              child: Text('Select'),
+              onPressed: select
+            ),
+            Container(child: chart)
+          ]
+        )
+      )
+    );
+    }
+    void select() {
+        selection.selectDataPoints(1, 0);
+    }
+
+{% endhighlight %}
