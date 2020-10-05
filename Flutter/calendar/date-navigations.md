@@ -236,7 +236,7 @@ Widget build(BuildContext context) {
 ![Allow view navigation](images/date-navigation/allow_view_navigation.gif)
 
 ## Allowed views
-You can quickly navigate to the different calendar views by using the [allowedViews](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/allowedViews.html) property in the `SfCalendar.` The views set to this property will display as a view button in the calendar header view. This UI will be responsive as showing more icons in the mobile view and will be updated based on the browser size change.
+You can quickly navigate to the different calendar views by using the [allowedViews](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/allowedViews.html) property in the `SfCalendar`. The views set to this property will display as a view button in the calendar header view. This UI will be responsive as showing more icons in the mobile view and will be updated based on the browser size change.
 
 {% tabs %}
 {% highlight Dart %}
