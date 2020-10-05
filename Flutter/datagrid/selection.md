@@ -736,6 +736,48 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+## Cell Tap callbacks
+
+The datagrid provides the following callbacks to handle interactions to the grid cell
+
+* [onCellTap](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onCellTap.html) : Called when a tap with a cell has occurred.
+* [onCellDoubleTap](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onCellDoubleTap.html) : Called when user is tapped a cell with a primary button at the same cell twice in quick succession.
+* [onCellLongPress](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onCellLongPress.html) : Called when a long press gesture with a primary button has been recognized for a cell. 
+* [onCellSecondaryTap](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onCellSecondaryTap.html) : Called when a tap with a cell has occurred with a secondary button.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDataGrid(
+      source: _employeeDataSource,
+      columns: [
+        GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+        GridTextColumn(mappingName: 'name', headerText: 'Name'),
+        GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+        GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+      ],
+      onCellTap: (DataGridCellTapDetails details) {
+        print(details);
+      },
+      onCellDoubleTap: (DataGridCellDoubleTapDetails details) {
+        print(details);
+      },
+      onCellLongPress: (DataGridCellLongPressDetails details) {
+        print(details);
+      },
+      onCellSecondaryTap: (DataGridCellTapDetails details) {
+        print(details);
+      },
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Customizing selection behavior
 
 To perform custom actions apart from the functionalities mentioned in the above tables for key press actions of the keyboard, implement your custom actions in the [handleKeyEvent()](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/RowSelectionManager/handleKeyEvent.html) override of the custom written selection manager class derived from [RowSelectionManager](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/RowSelectionManager-class.html) and assign it to the [SfDataGrid.selectionManager](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/selectionManager.html) property.
