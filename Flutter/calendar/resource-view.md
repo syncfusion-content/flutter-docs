@@ -11,7 +11,7 @@ documentation: ug
 # Resource view in flutter calendar
 The timeline resource grouping is a discrete view integrated into our Event calendar widget that allows you to group the appointments based on the available resource in timeline views of the calendar. Using this feature, you can group the appointments and time regions arranged in a row-wise order based on the allocated resource in the timeline views. This rich feature set includes customization and you can assign unique styles to the available resource view. 
 
-You can create a resource by setting the ‘displayName,’ ‘color,’ ‘id,’ and ‘image’ property of the ‘CalendarResource.’
+You can create a resource by setting the [displayName](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarResource/displayName.html), [color](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarResource/color.html), [id](https://api.dart.dev/stable/2.10.0/dart-core/Object-class.html), and [image](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarResource/image.html) property of the [CalendarResource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarResource-class.html).
 
 {% tabs %}
 {% highlight Dart %}
@@ -45,7 +45,7 @@ class _AppointmentDataSource extends CalendarDataSource {
 ![Resource view](images/resourceview/resource-view.png)
 
 ## Assigning events for resources
-You can associate resources to the appointments by adding ‘id’ of a resource to the ‘resourceIds’ property of ‘Appointment.’ The appointments will be displayed in the row associates with the resource in the event calendar timeline views.
+You can associate resources to the appointments by adding `id` of a resource to the [resourceIds](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/resourceIds.html) property of [Appointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment-class.html). The appointments will be displayed in the row associates with the resource in the event calendar timeline views.
 
 {% tabs %}
 {% highlight Dart %}
@@ -63,7 +63,7 @@ appointments.add(Appointment(
 {% endtabs %}
 
 ## Assigning custom business objects for resources
-You can associate resources to custom business objects using the equivalent field of ‘resourceIds’ in the custom business object class.
+You can associate resources to custom business objects using the equivalent field of [resourceIds](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getResourceIds.html) in the custom business object class.
 
 {% tabs %}
 {% highlight Dart %}
@@ -88,7 +88,7 @@ class _AppointmentDataSource extends CalendarDataSource {
 For more about custom appointments, refer to this [link](https://help.syncfusion.com/xamarin/scheduler/resource-view#assigning-custom-events-to-resources).
 
 ## Assigning time regions for resources
-You can add time regions to the resources by adding ‘id’ of the resource in the ‘resourceIds’ property of ‘TimeRegion.’ 
+You can add time regions to the resources by adding `id` of the resource in the [resourceIds](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/resourceIds.html) property of [TimeRegion](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion-class.html).
 
 {% tabs %}
 {% highlight Dart %}
@@ -106,7 +106,7 @@ List<TimeRegion> _specialTimeRegions = <TimeRegion>[];
 {% endtabs %}
 
 ## Visible resource count
-You can customize the number of visible resources in the current view using the ‘visibleResourceCount’ property of ‘resourceViewSettings’ in the ‘SfCalendar.’ By default, the value of this property is set to ‘-1.’ 
+You can customize the number of visible resources in the current view using the [visibleResourceCount](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewSettings/visibleResourceCount.html) property of [resourceViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/resourceViewSettings.html) in the [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html). By default, the value of this property is set to ‘-1.’ 
 
 {% tabs %}
 {% highlight Dart %}
@@ -131,7 +131,7 @@ Widget build(BuildContext context) {
 
 ## Customization
 ### Show avatar
-You can disable the user profile image and the circle representation of the resource by setting `false` to the `showAvatar` property available in the `ResourceViewSettings.` This will display each resource with a resource name and the color assigned to the resource. 
+You can disable the user profile image and the circle representation of the resource by setting `false` to the [showAvatar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewSettings/showAvatar.html) property available in the [ResourceViewSettings](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewSettings-class.html). This will display each resource with a resource name and the color assigned to the resource. 
 
 {% tabs %}
 {% highlight Dart %}
@@ -153,8 +153,7 @@ Widget build(BuildContext context) {
 ![Show avatar](images/resourceview/show_avatar.jpg)
 
 ### Display name text style
-The display name text style for the resource view can be customized by setting an appropriate text style to the `displayNameTextStyle` property available in the `ResourceViewSettings.`
-
+The display name text style for the resource view can be customized by setting an appropriate text style to the [displayNameTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewSettings/displayNameTextStyle.html) property available in the `ResourceViewSettings`.
 {% tabs %}
 {% highlight Dart %}
 
@@ -179,7 +178,7 @@ Widget build(BuildContext context) {
 ![Display name text style](images/resourceview/display_name_text_style.jpg)
 
 ### Resource panel size
-You can customize the size of the panel that displays the resource views in the calendar by setting an appropriate value to the `size` property available in the `ResourceViewSettings.`
+You can customize the size of the panel that displays the resource views in the calendar by setting an appropriate value to the [size](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewSettings/size.html) property available in the `ResourceViewSettings`.
 
 {% tabs %}
 {% highlight Dart %}

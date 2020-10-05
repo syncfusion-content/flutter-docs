@@ -183,8 +183,8 @@ Widget build(BuildContext context) {
 
 ## Blackout dates
 
-You can disable the interaction for a certain date in the month view and timeline month view by using the ‘blackoutDate’ property of ‘SfCalendar.’ Using this, you can restrict user interaction for specific dates.
-You can customize the text style of blackout dates by using the ‘blackoutDatesTextStyle’ property from the ‘SfCalendar.’
+You can disable the interaction for a certain date in the month view and timeline month view by using the [blackoutDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/blackoutDates.html) property of `SfCalendar.` Using this, you can restrict user interaction for specific dates.
+You can customize the text style of blackout dates by using the [blackoutDatesTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/blackoutDatesTextStyle.html) property from the `SfCalendar.`
 
 {% tabs %}
 {% highlight Dart %}
@@ -214,7 +214,7 @@ Widget build(BuildContext context) {
 ![Blackout dates](images/monthview/blackout-dates.png)
 
 ## Hide leading and trailing dates
-You can hide the previous and next month dates of a calendar month view by using the ‘showLeadingAndTrailingDates’ property in the ‘MonthViewSettings’ of the calendar.
+You can hide the previous and next month dates of a calendar month view by using the [showLeadingAndTrailingDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings/showTrailingAndLeadingDates.html) property in the `MonthViewSettings` of the calendar.
 
 {% tabs %}
 {% highlight Dart %}
