@@ -42,7 +42,7 @@ Widget build(BuildContext context) {
               child: SfRangeSelector(
                     min: _min,
                     max: _max,
-                    interval: 1,
+                    interval: 2,
                     showLabels: true,
                     showTicks: true,
                     showTooltip: true,
@@ -428,7 +428,7 @@ class Data {
 
 ## Tooltip overlap stroke color
 
-You can change the overlap stroke color of the tooltip in the range selector using the [`overlappingTooltipStrokeColor`] property.
+You can change the overlap stroke color of the tooltip in the range selector using the [`overlappingTooltipStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/overlappingTooltipStrokeColor.html) property.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorTheme-class.html).
 
