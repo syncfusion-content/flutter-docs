@@ -181,6 +181,59 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+## Blackout dates
+
+You can disable the interaction for a certain date in the month view and timeline month view by using the ‘blackoutDate’ property of ‘SfCalendar.’ Using this, you can restrict user interaction for specific dates.
+You can customize the text style of blackout dates by using the ‘blackoutDatesTextStyle’ property from the ‘SfCalendar.’
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+@override
+Widget build(BuildContext context) {
+  return SfCalendar(
+    view: CalendarView.month,
+    blackoutDates: <DateTime>[
+        DateTime(2020, 08, 10),
+        DateTime(2020, 08, 15),
+        DateTime(2020, 08, 20),
+        DateTime(2020, 08, 22),
+        DateTime(2020, 08, 24)
+      ],
+    blackoutDatesTextStyle: TextStyle(
+        fontWeight: FontWeight.w400,
+        fontSize: 13,
+        color: Colors.red,
+        decoration: TextDecoration.lineThrough));
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Blackout dates](images/monthview/blackout-dates.png)
+
+## Hide leading and trailing dates
+You can hide the previous and next month dates of a calendar month view by using the ‘showLeadingAndTrailingDates’ property in the ‘MonthViewSettings’ of the calendar.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return SfCalendar(
+      view: CalendarView.month,
+      monthViewSettings: MonthViewSettings(
+        showTrailingAndLeadingDates: false,
+      ));
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Blackout dates](images/monthview/show_leading_trailing_dates.jpg)
+
+
 ## Customize number of month rows
 
 The number of weeks in the month view can be changed by setting the [numberOfWeeksInView](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthViewSettings/numberOfWeeksInView.html) property in `MonthViewSettings`. By default, `numberOfWeeksInView` starts from current week, and this can be modified using the `initialDisplayDate` property of calendar, the two weeks calendar can be achieved by setting the `numberOfWeeksInView` property with the value 2.

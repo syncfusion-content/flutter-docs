@@ -195,3 +195,68 @@ class MyAppState extends State<MyApp> {
 
 {% endhighlight %}
 {% endtabs %}
+
+## Allow view navigation
+You can quickly navigate to the day view by a tap on the month cell and view header of the calendar views by using the ‘allowViewNavigation’ property of the calendar.
+
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return SfCalendar(
+      view: CalendarView.month,
+	  allowViewNavigation: true,
+    );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Allow view navigation](images/date-navigation/allow_view_navigation.gif)
+
+## Show date picker
+You can enable the date picker for the calendar by using the ‘showDatePicker’ property in the calendar, which displays the date picker and ‘Today’ button in the header view. It allows you to quickly navigate to today and different calendar views.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return SfCalendar(
+      view: CalendarView.month,
+	  showDatePickerButton: true,
+    );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Show date picker](images/date-navigation/show_date_picker.png)
+
+## Allowed views
+You can quickly navigate to the different calendar views by using the ‘allowedViews’ property in the ‘SfCalendar.’ The views set to this property will display as a view button in the calendar header view. This UI will be responsive as showing more icons in the mobile view and will be updated based on the browser size change.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+    return SfCalendar(
+        view: CalendarView.month,
+        allowedViews: <CalendarView>
+        [
+          CalendarView.day,
+          CalendarView.week,
+          CalendarView.workWeek,
+          CalendarView.month,
+          CalendarView.schedule
+        ];
+    );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Allowed views](images/date-navigation/allowed_views.png)
