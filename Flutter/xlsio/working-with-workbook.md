@@ -15,10 +15,10 @@ You can save the created or manipulated workbook to file system using Save metho
 
 {% highlight dart %}
 
-//Creates a new instance for workbook.
-Workbook workbook = new Workbook();
+// Creates a new instance for workbook.
+final Workbook workbook = Workbook();
 
-//Save the workbook in file system as XLSX format.
+// Save the workbook in file system as XLSX format.
 workbook.save('Output.xlsx');
 
 {% endhighlight %}
@@ -29,12 +29,13 @@ You can also save the created or manipulated workbook to stream.
 
 {% highlight dart %}
 
-//Creates a new instance for workbook.
-Workbook workbook = new Workbook();
+// Creates a new instance for workbook.
+final Workbook workbook = Workbook();
 
-//Save the workbook to stream.
+// Save the workbook to stream.
 final List<int> bytes = workbook.saveStream();
 
+// Dispose the workbook.
 workbook.dispose();
 
 File('Output.xlsx').writeAsBytes(bytes);
@@ -47,13 +48,13 @@ Once after the workbook manipulation and save operation are completed, you shoul
 
 {% highlight dart %}
 
-//Creates a new instance for workbook.
-Workbook workbook = new Workbook();
+// Creates a new instance for workbook.
+final Workbook workbook = new Workbook();
 
-//Save the workbook in file system as XLSX format.
+// Save the workbook in file system as XLSX format.
 workbook.save('Output.xlsx');
 
-//Dispose the instance of workbook.
+// Dispose the instance of workbook.
 workbook.dispose();
 
 {% endhighlight %}

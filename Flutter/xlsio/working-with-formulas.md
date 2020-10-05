@@ -13,45 +13,54 @@ Formulas are entries in Excel that have equations, by which values are calculate
 
 ## Enable Calculation
 
-To perform calculation in an Excel workbook, it is recommended to invoke **enableSheetCalculations()**method of **Worksheet**. Enabling this method will initialize **CalcEngine** objects and retrieves calculated values of formulas in a worksheet.
+To perform calculation in an Excel workbook, it is recommended to invoke **enableSheetCalculations()** method of **Worksheet**. Enabling this method will initialize **CalcEngine** objects and retrieves calculated values of formulas in a worksheet.
 
 The following code sample illustrates on how to enable worksheet formula calculations.
 
 {% highlight dart %}
 
-Worksheet sheet = workbook.worksheets[0];
+// Create a new Excel Document.
+final Workbook workbook = Workbook();
+
+// Accessing sheet via index.
+final Worksheet sheet = workbook.worksheets[0];
 
 //Formula calculation is enabled for the sheet
 sheet.enableSheetCalculations();
+
+// Save workbook
+workbook.save('Output.xlsx');
+
+// Dispose workbook
+workbook.dispose();
 
 {% endhighlight %}
 
 
 ## Apply Formula
 
-In a worksheet, formulas can be entered by using the **formula** property of the Range instance.
+In a worksheet, formulas can be entered by using the **setFormula** method of the Range instance.
 Following code example illustrates on how to write a formula.
-
 
 {% highlight dart %}
 
-//Create a new Excel document.
-Workbook workbook = new Workbook();
+// Create a new Excel document.
+final Workbook workbook = Workbook();
 
 //Accessing worksheet via index.
-Worksheet sheet = workbook.worksheets[0];
+final Worksheet sheet = workbook.worksheets[0];
 
 //set the value to the cell.
-sheet.getRangeByName("A1").number = 10;
-sheet.getRangeByName("A2").number = 20;
+sheet.getRangeByName('A1').setNumber(10);
+sheet.getRangeByName('A2').setNumber(20);
 
 //Setting formula in the cell.
-sheet.getRangeByName("A3").formula = "=A1+A2";
+sheet.getRangeByName('A3').setFormula('=A1+A2');
 
 //Save a workbook.
-workbook.save("Formula.xlsx");
+workbook.save('Formula.xlsx');
 
-//dispose workbook.
+// Dispose workbook.
 workbook.dispose();
 
 {% endhighlight %}
@@ -64,29 +73,29 @@ The following code shows how to access a calculated value.
 
 {% highlight dart %}
 
-//Create a new Excel document.
-Workbook workbook = new Workbook();
+// Create a new Excel document.
+final Workbook workbook = Workbook();
 
-//Accessing worksheet via index.
-Worksheet sheet = workbook.worksheets[0];
+// Accessing worksheet via index.
+final Worksheet sheet = workbook.worksheets[0];
 
-//Formula calculation is enabled for the sheet.
+// Formula calculation is enabled for the sheet.
 sheet.enableSheetCalculations();
 
-//set the value to the cell.
-sheet.getRangeByName("A1").number = 10;
-sheet.getRangeByName("A2").number = 20;
+// set the value to the cell.
+sheet.getRangeByName('A1').setNumber(10);
+sheet.getRangeByName('A2').setNumber(20);
 
-//Setting formula in the cell.
-sheet.getRangeByName("A3").formula = "=A1+A2";
+// Setting formula in the cell.
+sheet.getRangeByName('A3').setFormula('=A1+A2');
 
-//Returns the calculated value of a formula using the most current inputs
-String calculatedValue = sheet.getRangeByName("A3").calculatedValue;
+// Returns the calculated value of a formula using the most current inputs
+String calculatedValue = sheet.getRangeByName('A3').calculatedValue;
 
-//Save a workbook.
-workbook.save("Formula.xlsx");
+// Save a workbook.
+workbook.save('Formula.xlsx');
 
-//dispose workbook.
+// Dispose workbook.
 workbook.dispose();
 
 {% endhighlight %}

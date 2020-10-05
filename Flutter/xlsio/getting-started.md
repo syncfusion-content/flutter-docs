@@ -26,7 +26,7 @@ syncfusion_flutter_xlsio: ^xx.x.xx
 
 {% endhighlight %}
 
-N> Here **xx.x.xx** denotes the current version of ['Syncfusion Flutter XlsIO'](syncfusion-flutter-xlsio) package.
+N> Here **xx.x.xx** denotes the current version of ['Syncfusion Flutter XlsIO'](https://pub.dev/packages/syncfusion_flutter_xlsio/versions) package.
 
 **Get packages**
 
@@ -71,19 +71,20 @@ Include the following code snippet in the button click event to create a PDF fil
 {% highlight dart %}
 
 Future<void> _createExcel() async {
+// Create a new Excel Document.
+final Workbook workbook = Workbook();
 
-//Create a new Excel Document
-Workbook workbook = new Workbook();
+// Accessing worksheet via index.
+final Worksheet sheet = workbook.worksheets[0];
 
-//Accessing worksheet via index
-Workbook.worksheets[0];
+// Set the text value.
+sheet.getRangeByName('A1').setText('Hello World!');
 
-//Save the document
-Workbook.save(“CreateExcel.xlsx”);
+// Save the document.
+workbook.save('CreateExcel.xlsx');
 
-//dispose workbook
-Workbook.dispose();
-
+// dispose workbook.
+workbook.dispose();
 }
 
 {% endhighlight %}
@@ -117,19 +118,19 @@ Include the following code snippet in _createExcel method to open the Excel docu
 
 {% highlight dart %}
 
-//Get external storage directory
+// Get external storage directory
 final directory = await getExternalStorageDirectory();
 
-//Get directory path
+// Get directory path
 final path = directory.path;
 
-//Create an empty file to write Excel data
+// Create an empty file to write Excel data
 File file = File('$path/Output.xlsx');
 
-//Write Excel data
+// Write Excel data
 await file.writeAsBytes(bytes, flush: true);
 
-//Open the PDF document in mobile
+// Open the PDF document in mobile
 OpenFile.open('$path/Output.xlsx');
 
 {% endhighlight %}

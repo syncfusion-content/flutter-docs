@@ -18,21 +18,21 @@ Refer to the following code snippet to add images to worksheet.
 {% highlight dart %}
 
 //Create a new Excel document.
-Workbook workbook = new Workbook();
+final Workbook workbook = Workbook();
 
 //Accessing worksheet via index.
-Worksheet sheet = workbook.worksheets[0];
+final Worksheet sheet = workbook.worksheets[0];
 
 //Adding an image.
-sheet.pictures.addBase64(1, 1, image1jpg);
+sheet.pictures.addBase64(1, 1, image1jpg);
 
 //Adding an image.
-sheet.pictures.addFile(10, 10, "image1.png");
+sheet.pictures.addFile(10, 10, 'image1.png');
 
-//Save a workbook.
-workbook.save("AddImage.xlsx");
+//Save workbook.
+workbook.save('AddImage.xlsx');
 
-//dispose workbook.
+// Dispose workbook.
 workbook.dispose();
 
 {% endhighlight %}
@@ -44,26 +44,26 @@ Pictures can be re-sized, flip and formatted using various properties of **Pictu
 
 {% highlight dart %}
 
-//Create a new Excel document.
-Workbook workbook = new Workbook();
+// Create a new Excel document.
+final Workbook workbook = Workbook();
 
-//Accessing worksheet via index.
-Worksheet sheet = workbook.worksheets[0];
+// Accessing worksheet via index.
+final Worksheet sheet = workbook.worksheets[0];
 
-//Add a image.
-Picture picture = sheet.pictures.addFile(1, 1, "image1.png");
+// Add a image.
+final Picture picture = sheet.pictures.addFile(1, 1, 'image1.png');
 
-//Re-size an image
-picture.height = 200;
-picture.width = 200;
+// Re-size an image
+picture.height = 200;
+picture.width = 200;
 
-//rotate an image.
-picture.rotation = 100;
+// rotate an image.
+picture.rotation = 100;
 
-//Flip an image.
-picture.horizontalFlip = true;
+// Flip an image.
+picture.horizontalFlip = true;
 
-//save and dispose workbook
+// save and dispose workbook
 workbook.save('Image.xlsx');
 workbook.dispose();
 
@@ -75,16 +75,16 @@ The following code snippet shows how to remove the image from the worksheet usin
 
 {% highlight dart %}
  
-//Create a new Excel document.
-Workbook workbook = new Workbook();
+// Create a new Excel document.
+final Workbook workbook = Workbook();
 
-//Accessing worksheet via index.
-Worksheet sheet = workbook.worksheets[0];
+// Accessing worksheet via index.
+final Worksheet sheet = workbook.worksheets[0];
 
-//Add an image.
-Picture picture = sheet.pictures.addFile(1, 1, "image1.png");
+// Add an image.
+final Picture picture = sheet.pictures.addFile(1, 1, 'image1.png');
 
-//Remove an image.
+// Remove an image.
 picture.remove();
 
 //save and dispose workbook.
