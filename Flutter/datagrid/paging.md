@@ -16,7 +16,7 @@ The datagrid performs paging of data using the `SfDataPager`. To enable paging, 
 * Create a new `SfDataPager` widget, and set the [SfDataGrid.DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) to the [SfDataPager.delegate](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/delegate.html) property.
 * Set the number of rows to be displayed on a page by setting the [SfDataPager.rowsPerPage](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/rowsPerPage.html) property.
 * Set the number of buttons that should be displayed in view by setting the [SfDataPager.visibleItemsCount](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/visibleItemsCount.html) property.
-* Override the [SfDataPager.delegate.rowCoun](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataPagerDelegate/rowCount.html) property and [SfDataPager.delegate.handlePageChanges](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataPagerDelegate/handlePageChange.html) method in `SfDataGrid.DataGridSource`. 
+* Override the [SfDataPager.delegate.rowCount](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataPagerDelegate/rowCount.html) property and [SfDataPager.delegate.handlePageChanges](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataPagerDelegate/handlePageChange.html) method in `SfDataGrid.DataGridSource`. 
 * You can load the data for the specific page in `handlePageChanges` method. This method is called for every page navigation from data pager.
 
 N> The `SfDataPager.visibleItemsCount` property default value is 5.
