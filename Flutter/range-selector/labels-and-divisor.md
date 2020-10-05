@@ -223,7 +223,7 @@ Widget build(BuildContext context) {
                               series: <SplineAreaSeries<Data, DateTime>>[
                                    SplineAreaSeries<Data, DateTime>(
                                           color: Color.fromARGB(255, 126, 184, 253),
-                                          dataSource: chartData,
+                                          dataSource: _chartData,
                                              xValueMapper: (Data sales, _) => sales.x,
                                              yValueMapper: (Data sales, _) => sales.y)
                               ],
@@ -782,6 +782,7 @@ Widget build(BuildContext context) {
                     max: _max,
                     interval: 1,
                     showDivisors: true,
+                    showLabels: true,
                     initialValues: _values,
                     child: Container(
                     height: 130,
