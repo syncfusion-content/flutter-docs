@@ -219,6 +219,7 @@ The following code describes how to change sort icon color by using [GridColumn]
 {% highlight Dart %} 
 
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
 
 @override
 Widget build(BuildContext context) {
@@ -291,6 +292,30 @@ The following code shows how to perform custom sorting for the columns based on 
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
 class EmployeeDataSource extends DataGridSource<Employee> {
+  @override
+  List<Employee> get dataSource => _employeeData;
+
+  @override
+  Object getValue(Employee employee, String columnName) {
+    switch (columnName) {
+      case 'id':
+        return employee.id;
+        break;
+      case 'name':
+        return employee.name;
+        break;
+      case 'city':
+        return employee.city;
+        break;
+      case 'freight':
+        return employee.freight;
+        break;
+      default:
+        return ' ';
+        break;
+    }
+  }
+
   @override
   Future<bool> handleSort() async {
     if (_employeeDataGridSource.sortedColumns.isNotEmpty) {
