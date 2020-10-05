@@ -125,7 +125,7 @@ workbook.dispose();
 
 {% endhighlight %}
 
-![globalstyle](images/globalStyle.jpg)
+![globalstyle](images/globalstyle.jpg)
 
 ## Apply Number Formats 
 
