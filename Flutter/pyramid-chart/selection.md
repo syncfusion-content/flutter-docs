@@ -130,7 +130,7 @@ Also refer [selection event](./events#onselectionchanged) for customizing the se
 
 ### SelectDataPoints method in SelectionBehavior
 
-The [`selectDataPoints`]() method is used to select the data point programmatically. The required arguments are listed below.
+The [`selectDataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/selectDataPoints.html) method is used to select the data point programmatically. The required arguments are listed below.
 
 * `pointIndex` - specifies the point index value.
 * `seriesIndex` - specifies the series index value and this is an optional parameter. By default it will be considered as 0.

@@ -69,4 +69,4 @@ Similar to the above way, we can also export the rendered chart as a PDF documen
 
   {% endhighlight %}
 
-  ![pdf_view](images/export-circular-chart/pdf_view.png)
+  ![pdf_export](images/export-circular-chart/pdf_view.png)
