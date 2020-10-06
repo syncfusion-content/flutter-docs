@@ -66,7 +66,7 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 
-Include the following code snippet in the button click event to create a PDF file.
+Include the following code snippet in the button click event to create a Excel file.
 
 {% highlight dart %}
 
@@ -130,12 +130,12 @@ File file = File('$path/Output.xlsx');
 // Write Excel data
 await file.writeAsBytes(bytes, flush: true);
 
-// Open the PDF document in mobile
+// Open the Excel document in mobile
 OpenFile.open('$path/Output.xlsx');
 
 {% endhighlight %}
 
-## Save and download a PDF document in web
+## Save and download a Excel document in web
 
 You can save and download a Excel document in web by using the following steps.
 
@@ -167,13 +167,13 @@ Add the following code in the header section of index.html file under the web fo
 
 <script>
  async function download() {
- var excelAsDataUri = "data:application/excel;base64, " + excelData;
- var link = document.createElement('a');
- link.download = filename; 
- link.href = excelAsDataUri;
- link.type = 'application/excel';
- link.click(); 
-} 
+  var excelAsDataUri = "data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64, " + exceldata;
+  var link = document.createElement('a');
+  link.download = filename;
+  link.href = excelAsDataUri;
+  link.type = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
+  link.click();
+}
 </script>
 
 {% endhighlight %}
