@@ -421,7 +421,7 @@ In Horizontal padding, providing positive value for x moves the data l
                             SplineSeries<SalesData, num>(
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true,
-                                    offset: Offset(30, 0);
+                                    offset: Offset(30, 0),
                                 ),
                             )
                         ]
@@ -449,7 +449,7 @@ In Vertical padding, providing positive value for y moves the data lab
                             SplineSeries<SalesData, num>(
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true,
-                                    offset: Offset(0, 30);
+                                    offset: Offset(0, 30),
                                 ),
                             )
                         ]

@@ -214,8 +214,8 @@ N> This callback will not be called, when the builder is specified for data labe
       return Container(
         child: SfCartesianChart(
           onDatalabelTapped: (DataLabelTapArgs args) {
-            print(arg.seriesIndex);                 
-          }
+            print(args.seriesIndex);                 
+          },
           series: <CircularSeries<Sample, DateTime>>[
             PieSeries<Sample, DateTime>(
                 dataSource: sample,
