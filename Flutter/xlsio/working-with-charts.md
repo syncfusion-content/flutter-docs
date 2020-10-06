@@ -17,7 +17,8 @@ Import the following package in your Dart code to add charts
 
 {% highlight dart %}
 
-import 'package:syncfusion_flutter_office_core/office_core.dart';
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
+import 'package:syncfusion_flutter_officechart/officechart.dart';
 
 {% endhighlight %}
 
@@ -29,36 +30,40 @@ The following code example illustrates how to create a chart.
 
 {% highlight dart %}
 
-//Create a new Excel document.
-Workbook workbook = new Workbook();
+// Create a new Excel document.
+final Workbook workbook = Workbook();
 
-//Accessing worksheet via index.
-Worksheet sheet = workbook.worksheets[0];
+// Accessing worksheet via index.
+final Worksheet sheet = workbook.worksheets[0];
 
-//Setting value in the cell.
-sheet.getRangeByName('A1').text = "John";
-sheet.getRangeByName('A2').text = "Amy";
-sheet.getRangeByName('A3').text = "Jack";
-sheet.getRangeByName('A4').text = "Tiya";
-sheet.getRangeByName('B1').number = 10;
-sheet.getRangeByName('B2').number = 12;
-sheet.getRangeByName('B3').number = 20;
-sheet.getRangeByName('B4').number = 21;
+// Setting value in the cell.
+sheet.getRangeByName('A1').setText('John');
+sheet.getRangeByName('A2').setText('Amy');
+sheet.getRangeByName('A3').setText('Jack');
+sheet.getRangeByName('A4').setText('Tiya');
+sheet.getRangeByName('B1').setNumber(10);
+sheet.getRangeByName('B2').setNumber(12);
+sheet.getRangeByName('B3').setNumber(20);
+sheet.getRangeByName('B4').setNumber(21);
 
-//Create a Chart.
-Chart chart = sheet.charts.add();
+// Create an instances of chart collection.
+final ChartCollection charts = ChartCollection(sheet);
 
-//Set Chart Type.
-chart.chartType = ExcelChartType.Column;
+// Add the chart.
+final Chart chart = charts.add();
 
-//Set data range in the worksheet.
-chart.dataRange = sheet.getRangeByName("A1:B4");
- 
-//Save the document.
-workbook.save("Charts.xlsx");
+// Set Chart Type.
+chart.chartType = ExcelChartType.column;
 
-//Dispose the workbook.
-  workbook.dispose();
+// Set data range in the worksheet.
+chart.dataRange = sheet.getRangeByName('A1:B4');
+
+// set charts to worksheet.
+sheet.charts = charts;
+
+// save and dispose the workbook.
+workbook.save('Chart.xlsx');
+workbook.dispose();
 
 {% endhighlight %}
 
@@ -74,66 +79,82 @@ The following code illustrate the support chart elements.
 
 {% highlight dart %}
 
-//Create a new Excel document.
-Workbook workbook = new Workbook();
+// Create a new Excel document.
+final Workbook workbook = Workbook();
 
-//Accessing worksheet via index.
-Worksheet sheet = workbook.worksheets[0];
+// Accessing worksheet via index.
+final Worksheet sheet = workbook.worksheets[0];
 
-sheet.getRangeByName("A1").text = "Months";
-sheet.getRangeByName("B1").text = "Internal Sales Amount";
-sheet.getRangeByName("C1").text = "Reseller Sales Amount";
-sheet.getRangeByName("A2").setDateTime(DateTime(2014, 01, 14, 14, 14, 14));
-sheet.getRangeByName("A3").setDateTime(DateTime(2014, 02, 14, 14, 14, 14));
-sheet.getRangeByName("A4").setDateTime(DateTime(2014, 03, 14, 14, 14, 14));
-sheet.getRangeByName("A5").setDateTime(DateTime(2014, 04, 14, 14, 14, 14));
-sheet.getRangeByName("A6").setDateTime(DateTime(2014, 05, 14, 14, 14, 14));
+// Setting value in the cell.
+sheet.getRangeByName('A1').setText('Months');
+sheet.getRangeByName('B1').setText('Internal Sales Amount');
+sheet.getRangeByName('C1').setText('Reseller Sales Amount');
+sheet.getRangeByName('A2').setDateTime(DateTime(2014, 01, 14, 14, 14, 14));
+sheet.getRangeByName('A3').setDateTime(DateTime(2014, 02, 14, 14, 14, 14));
+sheet.getRangeByName('A4').setDateTime(DateTime(2014, 03, 14, 14, 14, 14));
+sheet.getRangeByName('A5').setDateTime(DateTime(2014, 04, 14, 14, 14, 14));
+sheet.getRangeByName('A6').setDateTime(DateTime(2014, 05, 14, 14, 14, 14));
+sheet.getRangeByName('B2').setNumber(700);
+sheet.getRangeByName('B3').setNumber(200);
+sheet.getRangeByName('B4').setNumber(300);
+sheet.getRangeByName('B5').setNumber(500);
+sheet.getRangeByName('B6').setNumber(800);
+sheet.getRangeByName('C2').setNumber(30);
+sheet.getRangeByName('C3').setNumber(40);
+sheet.getRangeByName('C4').setNumber(70);
+sheet.getRangeByName('C5').setNumber(2);
+sheet.getRangeByName('C6').setNumber(100);
 
-sheet.getRangeByName("B2").number = 700;
-sheet.getRangeByName("B3").number = 200;
-sheet.getRangeByName("B4").number = 300;
-sheet.getRangeByName("B5").number = 500;
-sheet.getRangeByName("B6").number = 800;
+// Create an instances of chart collection.
+final ChartCollection charts = ChartCollection(sheet);
 
-sheet.getRangeByName("C2").number = 30;
-sheet.getRangeByName("C3").number = 40;
-sheet.getRangeByName("C4").number = 70;
-sheet.getRangeByName("C5").number = 2;
-sheet.getRangeByName("C6").number = 100;
+// Add the chart.
+final Chart chart = charts.add();
 
-Chart chart = sheet.charts.add();
-chart.chartType = ExcelChartType.Line;
-chart.dataRange = sheet.getRangeByName("A1:C6");
-chart.isSeriesInRows = false;
+// Set Chart Type.
+chart.chartType = ExcelChartType.line;
 
-//setting chart tile with font properties
-chart.ChartTitle = "Yearly sales";
-chart.ChartTitleArea.Bold = true;
-chart.ChartTitleArea.Size = 12;
+// Set data range in the worksheet.
+chart.dataRange = sheet.getRangeByName('A1:C6');
+chart.isSeriesInRows = false;
 
-//setting legend position.
-chart.Legend.Position = ExcelLegendPosition.Bottom;
+// setting chart tile with font properties
+chart.chartTitle = 'Yearly sales';
+chart.chartTitleArea.bold = true;
+chart.chartTitleArea.size = 12;
 
-//setting the chart position.
-chart.topRow = 0;
-chart.bottomRow = 20;
-chart.leftColumn = 1;
-chart.rightColumn = 8;
+// setting legend position.
+chart.legend.position = ExcelLegendPosition.bottom;
+
+// setting the chart position.
+chart.topRow = 0;
+chart.bottomRow = 20;
+chart.leftColumn = 1;
+chart.rightColumn = 8;
 
 //setting Axis number format.
-chart.primaryCategoryAxis.numberFormat = "mmmm";
-chart.primaryValueAxis.numberFormat = '0.00';
+chart.primaryCategoryAxis.numberFormat = 'mmmm';
+chart.primaryValueAxis.numberFormat = '0.00';
 
 //setting datalabels
-ChartSerie serie = chart.series[0];
-serie.dataLabels.IsValue = true;
-serie.dataLabels.isCategoryName = true;
-serie.dataLabels.isSeriesName = true;
-serie.dataLabels.textArea.Bold = true;
-serie.dataLabels.textArea.Size = 12;
-serie.dataLabels.textArea.FontName = "Arial";
+final ChartSerie serie = chart.series[0];
+serie.dataLabels.isValue = true;
+serie.dataLabels.isCategoryName = true;
+serie.dataLabels.isSeriesName = true;
+serie.dataLabels.textArea.bold = true;
+serie.dataLabels.textArea.size = 12;
+serie.dataLabels.textArea.fontName = 'Arial';
 
-//save and dispose workbook.
+// Setting Line pattern
+chart.plotArea.linePattern = ExcelChartLinePattern.solid;
+chart.plotArea.linePatternColor = '#00FFFF';
+chart.linePattern = ExcelChartLinePattern.longDashDotDot;
+chart.linePatternColor = '#0000FF';
+
+// set charts to worksheet.
+sheet.charts = charts;
+
+// save and dispose workbook.
 workbook.save('ChartElement.xlsx');
 workbook.dispose();
 
@@ -145,55 +166,43 @@ The following code snippet illustrate how to add pie chart
 
 {% highlight dart %}
 
-//Create a new Excel document.
-Workbook workbook = new Workbook();
+// Create a new Excel document.
+final Workbook workbook = Workbook();
 
-//Accessing worksheet via index.
-Worksheet sheet = workbook.worksheets[0];
+// Accessing worksheet via index.
+final Worksheet sheet = workbook.worksheets[0];
 
-//Setting value in the cell.
-sheet.getRangeByName("A1").text = "Expenses";
-sheet.getRangeByName("A2").text = "Washing";
-sheet.getRangeByName("A3").text = "Cleaning";
-sheet.getRangeByName("A4").text = "Decoration";
-sheet.getRangeByName("A5").text = "Travel";
-sheet.getRangeByName("A6").text = "Food";
-sheet.getRangeByName("A7").text = "Maintance";
-sheet.getRangeByName("B11:B17").numberFormat = '\$#,##0_)';
-sheet.getRangeByName("B1").text = "Amount";
-sheet.getRangeByName("B2").number = 1828;
-sheet.getRangeByName("B3").number = 800;
-sheet.getRangeByName("B4").number = 14000;
-sheet.getRangeByName("B5").number = 2600;
-sheet.getRangeByName("B6").number = 4464;
-sheet.getRangeByName("B7").number = 2700;
+// Setting value in the cell.
+sheet.getRangeByName('A11').setText('Venue');
+sheet.getRangeByName('A12').setText('Seating & Decor');
+sheet.getRangeByName('A13').setText('Technical Team');
+sheet.getRangeByName('A14').setText('performers');
+sheet.getRangeByName('A15').setText('performer\'s Transport');
+sheet.getRangeByName('B11:B15').numberFormat = '\$#,##0_)';
+sheet.getRangeByName('B11').setNumber(17500);
+sheet.getRangeByName('B12').setNumber(1828);
+sheet.getRangeByName('B13').setNumber(800);
+sheet.getRangeByName('B14').setNumber(14000);
+sheet.getRangeByName('B15').setNumber(2600);
 
-  
-//Create a Chart.
-Chart chart = sheet.charts.add();
+// Create an instances of chart collection.
+final ChartCollection charts = ChartCollection(sheet);
 
-//set chart Type.
-chart.chartType = ExcelChartType.Pie;
+// Add the chart.
+final Chart chart1 = charts.add();
 
-//Set Data Range in worksheet.
-chart.dataRange = sheet.getRangeByName("A2:B7");
-chart.isSeriesInRows = false;
+// Set Chart Type.
+chart1.chartType = ExcelChartType.pie;
 
-//Set Chart title.
-chart.ChartTitle = "Monthly Expenses";
-chart.ChartTitleArea.Bold = true;
-chart.ChartTitleArea.Size = 12;
+// Set data range in the worksheet.
+chart1.dataRange = sheet.getRangeByName('A11:B15');
+chart1.isSeriesInRows = false;
 
-//Positioning chart in the worksheet.
-chart.topRow = 0;
-chart.bottomRow = 10;
-chart.leftColumn = 0;
-chart.rightColumn = 7;
+// set charts to worksheet.
+sheet.charts = charts;
 
-//Save workbook.
-workbook.save("PieChart.xlsx");
-
-//Dispose workbook
+// save and dispose the workbook.
+workbook.save('PieChart.xlsx');
 workbook.dispose();
 
 {% endhighlight %}
@@ -204,46 +213,51 @@ The following code snippet illustrate how to add bar chart
 
 {% highlight dart %}
 
-//Create a new Excel document.
-Workbook workbook = new Workbook();
+// Create a new Excel document.
+final Workbook workbook = Workbook();
 
-//Accessing worksheet via index.
-Worksheet sheet = workbook.worksheets[0];
+// Accessing worksheet via index.
+final Worksheet sheet = workbook.worksheets[0];
 
-//Setting value in the cell.
-sheet.getRangeByName("A1").text = "Items";
-sheet.getRangeByName("B1").text = "Amount(in \$)";
-sheet.getRangeByName("C1").text = "Count";
+// Setting value in the cell.
+sheet.getRangeByName('A1').setText('Items');
+sheet.getRangeByName('B1').setText('Amount(in \$)');
+sheet.getRangeByName('C1').setText('Count');
+sheet.getRangeByName('A2').setText('Beverages');
+sheet.getRangeByName('A3').setText('Condiments');
+sheet.getRangeByName('A4').setText('Confections');
+sheet.getRangeByName('A5').setText('Dairy Products');
+sheet.getRangeByName('A6').setText('Grains / Cereals');
+sheet.getRangeByName('B2').setNumber(2776);
+sheet.getRangeByName('B3').setNumber(1077);
+sheet.getRangeByName('B4').setNumber(2287);
+sheet.getRangeByName('B5').setNumber(1368);
+sheet.getRangeByName('B6').setNumber(3325);
+sheet.getRangeByName('C2').setNumber(925);
+sheet.getRangeByName('C3').setNumber(378);
+sheet.getRangeByName('C4').setNumber(880);
+sheet.getRangeByName('C5').setNumber(581);
+sheet.getRangeByName('C6').setNumber(189);
 
-sheet.getRangeByName("A2").text = "Beverages";
-sheet.getRangeByName("A3").text = "Condiments";
-sheet.getRangeByName("A4").text = "Confections";
-sheet.getRangeByName("A5").text = "Dairy Products";
-sheet.getRangeByName("A6").text = "Grains / Cereals";
+// Create an instances of chart collection.
+final ChartCollection charts = ChartCollection(sheet);
 
-sheet.getRangeByName("B2").number = 2776;
-sheet.getRangeByName("B3").number = 1077;
-sheet.getRangeByName("B4").number = 2287;
-sheet.getRangeByName("B5").number = 1368;
-sheet.getRangeByName("B6").number = 3325;
+// Add the chart.
+final Chart chart1 = charts.add();
 
-sheet.getRangeByName("C2").number = 925;
-sheet.getRangeByName("C3").number = 378;
-sheet.getRangeByName("C4").number = 880;
-sheet.getRangeByName("C5").number = 581;
-sheet.getRangeByName("C6").number = 189;
+// Set Chart Type.
+chart1.chartType = ExcelChartType.bar;
 
-//Create a Chart.
-Chart chart = sheet.charts.add();
+// Set data range in the worksheet.
+chart1.dataRange = sheet.getRangeByName('A1:C6');
 
-//Set Chart type.
-chart.chartType = ExcelChartType.Bar;
+chart1.isSeriesInRows = false;
 
-//Set DataRange.  
-chart.dataRange = sheet.getRangeByName("A1:C6");
-  
-//save and dispose workbook.
-workbook.save("BarChart.xlsx");
+// set charts to worksheet.
+sheet.charts = charts;
+
+// save and dispose the workbook.
+workbook.save('BarChart.xlsx');
 workbook.dispose();
 
 {% endhighlight %}
@@ -254,33 +268,43 @@ The following code snippet illustrate how to add column chart.
 
 {% highlight dart %}
 
-//Create a new Excel document.
-Workbook workbook = new Workbook();
+// Create a new Excel document.
+final Workbook workbook = Workbook();
 
-//Accessing worksheet via index.
-Worksheet sheet = workbook.worksheets[0];
+// Accessing worksheet via index.
+final Worksheet sheet = workbook.worksheets[0];
 
-//Setting value in the cell.
-sheet.getRangeByName("A1").text = "Expense";
-sheet.getRangeByName("A2").text = "Seating & Decor";
-sheet.getRangeByName("A3").text = "Technical Team";
-sheet.getRangeByName("A4").text = "performers";
-sheet.getRangeByName("B2").number = 1828;
-sheet.getRangeByName("B3").number = 800;
-sheet.getRangeByName("B4").number = 1400;
+// Setting value in the cell.
+sheet.getRangeByName('A11').setText('Venue');
+sheet.getRangeByName('A12').setText('Seating & Decor');
+sheet.getRangeByName('A13').setText('Technical Team');
+sheet.getRangeByName('A14').setText('performers');
+sheet.getRangeByName('A15').setText('performer\'s Transport');
+sheet.getRangeByName('B11:B15').numberFormat = '\$#,##0_)';
+sheet.getRangeByName('B11').setNumber(17500);
+sheet.getRangeByName('B12').setNumber(1828);
+sheet.getRangeByName('B13').setNumber(800);
+sheet.getRangeByName('B14').setNumber(14000);
+sheet.getRangeByName('B15').setNumber(2600);
 
-//Create a Chart.
-Chart chart = sheet.charts.add();
+// Create an instances of chart collection.
+final ChartCollection charts = ChartCollection(sheet);
 
-//Set Chart Type.
-chart.chartType = ExcelChartType.Column;
+// Add the chart.
+final Chart chart1 = charts.add();
 
-//Set data range in the worksheet.
-chart.dataRange = sheet.getRangeByName("A1:B4");
-chart.isSeriesInRows = false;
+// Set Chart Type.
+chart1.chartType = ExcelChartType.column;
 
-//save and dispose workbook.
-workbook.save('ColumnChart.xlsx');
+// Set data range in the worksheet.
+chart1.dataRange = sheet.getRangeByName('A11:B15');
+chart1.isSeriesInRows = false;
+
+// set charts to worksheet.
+sheet.charts = charts;
+
+// save and dispose the workbook.
+workbook.save('ExcelColumnChart.xlsx');
 workbook.dispose();
 
 {% endhighlight %}
@@ -291,35 +315,41 @@ The following code snippet illustrate how to add line chart.
 
 {% highlight dart %}
 
-//Create a new Excel document.
-Workbook workbook = new Workbook();
+// Create a new Excel document.
+final Workbook workbook = Workbook();
 
-//Accessing worksheet via index.
-Worksheet sheet = workbook.worksheets[0];
+// Accessing worksheet via index.
+final Worksheet sheet = workbook.worksheets[0];
 
-//Setting value in the cell.
-sheet.getRangeByName("A1").text = "City Name";
-sheet.getRangeByName("A2").text = "Chennai";
-sheet.getRangeByName("A3").text = "Mumbai";
-sheet.getRangeByName("A4").text = "Delhi";
-sheet.getRangeByName("A5").text = "Hyderabad";
-sheet.getRangeByName("A6").text = "Kolkata";
-sheet.getRangeByName("B1").text = "Temp in C";
-sheet.getRangeByName("B2").number = 34;
-sheet.getRangeByName("B3").number = 40;
-sheet.getRangeByName("B4").number = 47;
-sheet.getRangeByName("B5").number = 20;
-sheet.getRangeByName("B6").number = 66;
+// Setting value in the cell.
+sheet.getRangeByName('A1').setText('City Name');
+sheet.getRangeByName('A2').setText('Chennai');
+sheet.getRangeByName('A3').setText('Mumbai');
+sheet.getRangeByName('A4').setText('Delhi');
+sheet.getRangeByName('A5').setText('Hyderabad');
+sheet.getRangeByName('A6').setText('Kolkata');
+sheet.getRangeByName('B1').setText('Temp in C');
+sheet.getRangeByName('B2').setNumber(34);
+sheet.getRangeByName('B3').setNumber(40);
+sheet.getRangeByName('B4').setNumber(47);
+sheet.getRangeByName('B5').setNumber(20);
+sheet.getRangeByName('B6').setNumber(66);
 
-//Create a Chart.
-Chart chart = sheet.charts.add();
+// Create an instances of chart collection.
+final ChartCollection charts = ChartCollection(sheet);
+
+// Add the chart.
+final Chart chart = charts.add();
 
 //Set Chart Type.
-chart.chartType = ExcelChartType.Line;
+chart.chartType = ExcelChartType.line;
 
 //Set data range in the worksheet.
-chart.dataRange = sheet.getRangeByName("A1:B6");
-chart.isSeriesInRows = false;
+chart.dataRange = sheet.getRangeByName('A1:B6');
+chart.isSeriesInRows = false;
+
+// set charts to worksheet.
+sheet.charts = charts;
 
 //save and dispose workbook.
 workbook.save('LineChart.xlsx');
@@ -333,46 +363,50 @@ The following code snippet illustrate how to add stacked column chart.
 
 
 {% highlight dart %}
-//Create a new Excel document.
-Workbook workbook = new Workbook();
 
-//Accessing worksheet via index.
-Worksheet sheet = workbook.worksheets[0];
+// Create a new Excel document.
+final Workbook workbook = Workbook();
 
-//Setting value in the cell.
-sheet.getRangeByName("A1").text = "Items";
-sheet.getRangeByName("B1").text = "Amount(in \$)";
-sheet.getRangeByName("C1").text = "Count";
+// Accessing worksheet via index.
+final Worksheet sheet = workbook.worksheets[0];
 
-sheet.getRangeByName("A2").text = "Beverages";
-sheet.getRangeByName("A3").text = "Condiments";
-sheet.getRangeByName("A4").text = "Confections";
-sheet.getRangeByName("A5").text = "Dairy Products";
-heet.getRangeByName("A6").text = "Grains / Cereals";
+// Setting value in the cell.
+sheet.getRangeByName('A1').setText('Items');
+sheet.getRangeByName('B1').setText('Amount(in \$)');
+sheet.getRangeByName('C1').setText('Count');
+sheet.getRangeByName('A2').setText('Beverages');
+sheet.getRangeByName('A3').setText('Condiments');
+sheet.getRangeByName('A4').setText('Confections');
+sheet.getRangeByName('A5').setText('Dairy Products');
+sheet.getRangeByName('A6').setText('Grains / Cereals');
+sheet.getRangeByName('B2').setNumber(2776);
+sheet.getRangeByName('B3').setNumber(1077);
+sheet.getRangeByName('B4').setNumber(2287);
+sheet.getRangeByName('B5').setNumber(1368);
+sheet.getRangeByName('B6').setNumber(3325);
+sheet.getRangeByName('C2').setNumber(925);
+sheet.getRangeByName('C3').setNumber(378);
+sheet.getRangeByName('C4').setNumber(880);
+sheet.getRangeByName('C5').setNumber(581);
+sheet.getRangeByName('C6').setNumber(189);
 
-sheet.getRangeByName("B2").number = 2776;
-sheet.getRangeByName("B3").number = 1077;
-sheet.getRangeByName("B4").number = 2287;
-sheet.getRangeByName("B5").number = 1368;
-sheet.getRangeByName("B6").number = 3325;
+// Create an instances of chart collection.
+final ChartCollection charts = ChartCollection(sheet);
 
-sheet.getRangeByName("C2").number = 925;
-sheet.getRangeByName("C3").number = 378;
-sheet.getRangeByName("C4").number = 880;
-sheet.getRangeByName("C5").number = 581;
-sheet.getRangeByName("C6").number = 189;
-
-//Create a Chart.
-Chart chart1 = sheet.charts.add();
+// Add the chart.
+final Chart chart1 = charts.add();
 
 //Set Chart Type.
-chart1.chartType = ExcelChartType.ColumnStacked;
+chart1.chartType = ExcelChartType.columnStacked;
 
 //Set data range in the worksheet.
-chart1.dataRange = sheet.getRangeByName("A1:C6");
-chart1.isSeriesInRows = false;
+chart1.dataRange = sheet.getRangeByName('A1:C6');
+chart1.isSeriesInRows = false;
 
-//save and dispose workbook.
+// set charts to worksheet.
+sheet.charts = charts;
+
+// save and dispose workbook.
 workbook.save('ColunmStackedChart.xlsx');
 workbook.dispose();
 
@@ -384,44 +418,47 @@ The following code snippet illustrate how to add stacked bar chart.
 
 {% highlight dart %}
 
-//Create a new Excel document.
-Workbook workbook = new Workbook();
+// Create a new Excel document.
+final Workbook workbook = Workbook();
 
-//Accessing worksheet via index.
-Worksheet sheet = workbook.worksheets[0];
+// Accessing worksheet via index.
+final Worksheet sheet = workbook.worksheets[0];
 
-//Setting value in the cell.
-sheet.getRangeByName("A1").text = "Name";
-sheet.getRangeByName("B1").text = "Salary";
-sheet.getRangeByName("C1").text = "Working hr";
+// Setting value in the cell.
+sheet.getRangeByName('A1').setText('Name');
+sheet.getRangeByName('B1').setText('Salary');
+sheet.getRangeByName('C1').setText('Working hr');
+sheet.getRangeByName('A2').setText('Ben');
+sheet.getRangeByName('A3').setText('Mark');
+sheet.getRangeByName('A4').setText('Sundar');
+sheet.getRangeByName('A5').setText('Geo');
+sheet.getRangeByName('A6').setText('Andrew');
+sheet.getRangeByName('B2').setNumber(1000);
+sheet.getRangeByName('B3').setNumber(2000);
+sheet.getRangeByName('B4').setNumber(2392);
+sheet.getRangeByName('B5').setNumber(3211);
+sheet.getRangeByName('B6').setNumber(4211);
+sheet.getRangeByName('C2').setNumber(287);
+sheet.getRangeByName('C3').setNumber(355);
+sheet.getRangeByName('C4').setNumber(134);
+sheet.getRangeByName('C5').setNumber(581);
+sheet.getRangeByName('C6').setNumber(426);
 
-sheet.getRangeByName("A2").text = "Ben";
-sheet.getRangeByName("A3").text = "Mark";
-sheet.getRangeByName("A4").text = "Sundar";
-sheet.getRangeByName("A5").text = "Geo";
-sheet.getRangeByName("A6").text = "Andrew";
+// Create an instances of chart collection.
+final ChartCollection charts = ChartCollection(sheet);
 
-sheet.getRangeByName("B2").number = 1000;
-sheet.getRangeByName("B3").number = 2000;
-sheet.getRangeByName("B4").number = 2392;
-sheet.getRangeByName("B5").number = 3211;
-sheet.getRangeByName("B6").number = 4211;
+// Add the chart.
+final Chart chart1 = charts.add();
 
-sheet.getRangeByName("C2").number = 287;
-sheet.getRangeByName("C3").number = 355;
-sheet.getRangeByName("C4").number = 134;
-sheet.getRangeByName("C5").number = 581;
-sheet.getRangeByName("C6").number = 426;
+// Set Chart Type.
+chart1.chartType = ExcelChartType.barStacked;
 
-//Create a Chart.
-Chart chart1 = sheet.charts.add();
+// Set data range in the worksheet.
+chart1.dataRange = sheet.getRangeByName('A1:C6');
+chart1.isSeriesInRows = false;
 
-//Set Chart Type.
-chart1.chartType = ExcelChartType.BarStacked;
-
-//Set data range in the worksheet.
-chart1.dataRange = sheet.getRangeByName("A1:C6");
-chart1.isSeriesInRows = false;
+// set charts to worksheet.
+sheet.charts = charts;
 
 //save and dispose workbook.
 workbook.save('BarStackedChart.xlsx');
@@ -436,41 +473,47 @@ The following code snippet illustrate how to add stacked Line chart.
 
 {% highlight dart %}
 
-//Create a new Excel document.
-Workbook workbook = new Workbook();
+// Create a new Excel document.
+final Workbook workbook = Workbook();
 
-//Accessing worksheet via index.
-Worksheet sheet = workbook.worksheets[0];
+// Accessing worksheet via index.
+final Worksheet sheet = workbook.worksheets[0];
 
-//Setting value in the cell.
-sheet.getRangeByName("A1").text = "City Name";
-sheet.getRangeByName("A2").text = "Chennai";
-sheet.getRangeByName("A3").text = "Mumbai";
-sheet.getRangeByName("A4").text = "Delhi";
-sheet.getRangeByName("A5").text = "Hyderabad";
-sheet.getRangeByName("A6").text = "Kolkata";
-sheet.getRangeByName("B1").text = "Temp in C";
-sheet.getRangeByName("B2").number = 34;
-sheet.getRangeByName("B3").number = 40;
-sheet.getRangeByName("B4").number = 47;
-sheet.getRangeByName("B5").number = 20;
-sheet.getRangeByName("B6").number = 66;
-sheet.getRangeByName("C1").text = "Temp in F";
-sheet.getRangeByName("C2").number = 93;
-sheet.getRangeByName("C3").number = 104;
-sheet.getRangeByName("C4").number = 120;
-sheet.getRangeByName("C5").number = 80;
-sheet.getRangeByName("C6").number = 140;
+// Setting value in the cell.
+sheet.getRangeByName('A1').setText('City Name');
+sheet.getRangeByName('A2').setText('Chennai');
+sheet.getRangeByName('A3').setText('Mumbai');
+sheet.getRangeByName('A4').setText('Delhi');
+sheet.getRangeByName('A5').setText('Hyderabad');
+sheet.getRangeByName('A6').setText('Kolkata');
+sheet.getRangeByName('B1').setText('Temp in C');
+sheet.getRangeByName('B2').setNumber(34);
+sheet.getRangeByName('B3').setNumber(40);
+sheet.getRangeByName('B4').setNumber(47);
+sheet.getRangeByName('B5').setNumber(20);
+sheet.getRangeByName('B6').setNumber(66);
+sheet.getRangeByName('C1').setText('Temp in F');
+sheet.getRangeByName('C2').setNumber(93);
+sheet.getRangeByName('C3').setNumber(104);
+sheet.getRangeByName('C4').setNumber(120);
+sheet.getRangeByName('C5').setNumber(80);
+sheet.getRangeByName('C6').setNumber(140);
 
-//Create a Chart.
-Chart chart = sheet.charts.add();
+//Create an instances of chart collection.
+final ChartCollection charts = ChartCollection(sheet);
 
-//Set Chart Type.
-chart.chartType = ExcelChartType.LineStacked;
+// Add the chart.
+final Chart chart1 = charts.add();
 
-//Set data range in the worksheet.
-chart.dataRange = sheet.getRangeByName("A1:C6");
-chart.isSeriesInRows = false;
+// Set Chart Type.
+chart1.chartType = ExcelChartType.lineStacked;
+
+// Set data range in the worksheet.
+chart1.dataRange = sheet.getRangeByName('A1:C6');
+chart1.isSeriesInRows = false;
+
+// set charts to worksheet.
+sheet.charts = charts;
 
 //save and dispose workbook.
 workbook.save('LineStackedChart.xlsx');
