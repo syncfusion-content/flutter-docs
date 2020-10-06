@@ -67,4 +67,4 @@ Similar to the above way, we can also export the rendered chart as a PDF documen
 
   {% endhighlight %}
   
-  ![pdf_export]()
+  ![pdf_export](images\export-radial-gauge\export-radial-gauge.jpg)
