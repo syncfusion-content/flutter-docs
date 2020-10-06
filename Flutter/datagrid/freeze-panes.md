@@ -52,7 +52,7 @@ Set the footer columns in right side of the SfDataGrid.
 
 ## Freeze columns
 
-The columns can be freeze in view at left and right like Excel by setting the `frozenColumnsCount` and `footerFrozenColumnsCount` properties.
+The columns can be freeze in view at left and right like Excel by setting the [frozenColumnsCount](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/frozenColumnsCount.html) and [footerFrozenColumnsCount](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/footerFrozenColumnsCount.html) properties.
 
 The following code example shows how to freeze a column at left using `frozenColumnsCount`,
 
@@ -120,7 +120,7 @@ Widget build(BuildContext context) {
 
 ## Freeze rows
 
-The rows can be freeze in view at top and bottom like Excel by setting the `frozenRowsCount` and `footerFrozenRowsCount` properties.
+The rows can be freeze in view at top and bottom like Excel by setting the [frozenRowsCount](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/frozenRowsCount.html) and [footerFrozenRowsCount](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/footerFrozenRowsCount.html) properties.
 
 The following code example shows how to freeze a row at top using `frozenRowsCount`,
 
@@ -191,7 +191,7 @@ N> Header row is frozen by default and works regardless of the `frozenRowsCount`
 
 SfDataGrid allows to customize the appearance of the free pane through [SfDataGridTheme.SfDataGridThemeData](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData-class.html) property.
 
-The freeze pane line and freeze pane width can be changed by `frozenPaneLineColor` and `frozenPaneLineWidth`. 
+The freeze pane line and freeze pane width can be changed by [frozenPaneLineColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/frozenPaneLineColor.html) and [frozenPaneLineWidth](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/frozenPaneLineWidth.html). 
 
 {% tabs %}
 {% highlight Dart %}

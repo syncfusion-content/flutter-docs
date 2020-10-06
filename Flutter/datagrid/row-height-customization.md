@@ -309,7 +309,7 @@ You can refresh a specific row and its height by using the DataGridController.re
 
 If you call refreshRow method, onQueryRowHeight callback will called for that specific row. So, auto-calculation of height can be recalculated for that row.
 
-In the below example, row data is updated when the `refreshRow` is called in `onPressed` callback of the `FlatButton`.
+In the below example, row data is updated when the [refreshRow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/refreshRow.html) is called in `onPressed` callback of the `FlatButton`.
 
 {% tabs %}
 {% highlight Dart %} 
