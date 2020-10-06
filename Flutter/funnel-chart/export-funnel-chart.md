@@ -67,4 +67,4 @@ Similar to the above way, we can also export the rendered chart as a PDF documen
 
   {% endhighlight %}
   
-  ![image_view](images/export-funnel-chart/pdf_view.png))
+  ![pdf_export](images/export-funnel-chart/pdf_view.png)
