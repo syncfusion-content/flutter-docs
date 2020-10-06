@@ -184,8 +184,8 @@ N> This callback will not be called, when the builder is specified for data labe
       return Container(
         child: SfFunnelChart(
           onDatalabelTapped: (DataLabelTapArgs args) {
-            print(arg.seriesIndex);                 
-          }
+            print(args.seriesIndex);                 
+          },
           series: PyramidSeries<Sample, DateTime>(
               dataSource: sample,
               xValueMapper: (Sample sales, _) => sales.x,
