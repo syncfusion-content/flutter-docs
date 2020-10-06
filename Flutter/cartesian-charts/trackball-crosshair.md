@@ -283,7 +283,7 @@ Also refer, [marker customization](./marker-datalabel#Marker) for customizing th
                 ]
               )
             )
-        )
+          )
       );
     }
 
@@ -329,7 +329,7 @@ N> The above mentioned properties are only   applicable for SfCartesian types of
 
 ![Crosshair](images/trackball-crosshair/default_crosshair.jpg)
 
-**Track line customization**
+### Track line customization
 
 The appearance of the track line in crosshair can be customized using the following properties.
 
@@ -365,7 +365,7 @@ The appearance of the track line in crosshair can be customized using the follow
 
 ![Customized trackline](images/trackball-crosshair/customized_trackline.jpg)
 
-**Show axis tooltip**
+### Show axis tooltip
 
 The axis tooltip can be enabled using [`enable`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/InteractiveTooltip/enable.html) property of [`crosshairTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/crosshairTooltip.html). You can customize the appearance of axis tooltip using the following properties.
 
@@ -379,7 +379,7 @@ The axis tooltip can be enabled using [`enable`](https://pub.dev/documentation/s
 * [`textStyle.fontStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontStyle.html) – used to change the font style for the chart title.
 * [`textStyle.fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontSize.html) - used to change the font size for the chart title.
 
-**Activation mode**
+### Activation mode
 
 The [`activationMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/activationMode.html) property is used to restrict the visibility of trackball based on the touch actions. The default value of this property is [`ActivationMode.longPress`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode-class.html).
 
