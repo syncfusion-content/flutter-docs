@@ -526,7 +526,7 @@ workbook.dispose();
 
 {% endhighlight %}
 
-![numberformat](images/numberformat.jpeg)
+![numberformat](images/numberformat.jpg)
 
 ## Access display text
 

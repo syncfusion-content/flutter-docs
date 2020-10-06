@@ -17,19 +17,16 @@ Refer to the following code snippet to add images to worksheet.
 
 {% highlight dart %}
 
-//Create a new Excel document.
+// Create a new Excel document.
 final Workbook workbook = Workbook();
 
-//Accessing worksheet via index.
+// Accessing worksheet via index.
 final Worksheet sheet = workbook.worksheets[0];
 
-//Adding an image.
+// Adding an image.
 sheet.pictures.addBase64(1, 1, image1jpg);
 
-//Adding an image.
-sheet.pictures.addFile(10, 10, 'image1.png');
-
-//Save workbook.
+// Save workbook.
 workbook.save('AddImage.xlsx');
 
 // Dispose workbook.
@@ -51,7 +48,7 @@ final Workbook workbook = Workbook();
 final Worksheet sheet = workbook.worksheets[0];
 
 // Add a image.
-final Picture picture = sheet.pictures.addFile(1, 1, 'image1.png');
+final Picture picture = sheet.pictures.addBase64(1, 1, image1jpg);
 
 // Re-size an image
 picture.height = 200;
@@ -64,30 +61,6 @@ picture.rotation = 100;
 picture.horizontalFlip = true;
 
 // save and dispose workbook
-workbook.save('Image.xlsx');
-workbook.dispose();
-
-{% endhighlight %}
-
-## Remove image from Worksheet
-
-The following code snippet shows how to remove the image from the worksheet using **Remove** method.
-
-{% highlight dart %}
- 
-// Create a new Excel document.
-final Workbook workbook = Workbook();
-
-// Accessing worksheet via index.
-final Worksheet sheet = workbook.worksheets[0];
-
-// Add an image.
-final Picture picture = sheet.pictures.addFile(1, 1, 'image1.png');
-
-// Remove an image.
-picture.remove();
-
-//save and dispose workbook.
 workbook.save('Image.xlsx');
 workbook.dispose();
 

@@ -11,13 +11,37 @@ documentation: ug
 
 Flutter XlsIO has support for creating and modifying Excel charts inside a workbook.
 
+**Add dependency**
+
+Add the Syncfusion Flutter OfficeChart dependency to your pub spec file.
+
+{% highlight dart %}
+
+dependencies: 
+syncfusion_flutter_officechart: ^xx.x.xx
+
+{% endhighlight %}
+
+N> Here **xx.x.xx** denotes the current version of ['Syncfusion Flutter OfficeChart'](https://pub.dev/packages/syncfusion_flutter_xlsio/versions) package.
+
+**Get packages**
+
+Run the following command to get the required packages.
+
+{% highlight dart %}
+
+$ flutter pub get
+
+{% endhighlight %}
+
+N> If you add OfficeChart package in your dependency, it will automatically fetch the Syncfusion XlsIO package while getting OfficeChart package in your machine.
+
 ## Required package to add charts
 
 Import the following package in your Dart code to add charts
 
 {% highlight dart %}
 
-import 'package:syncfusion_flutter_xlsio/xlsio.dart';
 import 'package:syncfusion_flutter_officechart/officechart.dart';
 
 {% endhighlight %}

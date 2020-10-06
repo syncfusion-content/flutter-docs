@@ -11,7 +11,7 @@ documentation: ug
 
 ## Adding a Text to Excel worksheet
 
-You can add text to the Excel worksheet using setText method of the Range class.
+You can add text to the Excel worksheet using setText() method of the Range class.
 
 The following code snippet shows how to add text to Excel worksheet.
 
@@ -36,7 +36,7 @@ workbook.dispose();
 
 ## Adding a Number to Excel worksheet
 
-You can add number to the Excel worksheet using setNumber method of the Range class.
+You can add number to the Excel worksheet using setNumber() method of the Range class.
 
 The following code snippet shows how to add number to Excel worksheet.
 
@@ -61,7 +61,7 @@ workbook.dispose();
 
 ## Adding a DateTime to Excel worksheet
 
-You can add number to the Excel worksheet using setDateTime method of the Range class.
+You can add number to the Excel worksheet using setDateTime() method of the Range class.
 
 The following code snippet shows how to add datetime to Excel worksheet.
 
@@ -86,7 +86,7 @@ workbook.dispose();
 
 ## Adding a value to Excel Worksheet
 
-You can add value to the Excel worksheet using setValue method of the Range class. The value can be number, text or date time.
+You can add value to the Excel worksheet using setValue() method of the Range class. The value can be number, text or date time.
 
 The following code snippet shows how to add value to Excel worksheet.
 

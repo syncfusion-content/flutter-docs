@@ -114,7 +114,7 @@ import 'package:path_provider/path_provider.dart';
 
 {% endhighlight %}
 
-Include the following code snippet in _createExcel method to open the Excel document in mobile after saving it.
+Include the following code snippet in _createExcel() method to open the Excel document in mobile after saving it.
 
 {% highlight dart %}
 
@@ -149,7 +149,7 @@ import 'dart:js' as js;
 
 {% endhighlight %}
 
-Include the following code snippet in _createExcel method to open the document in web after saving it.
+Include the following code snippet in _createExcel() method to open the document in web after saving it.
 
 {% highlight dart %}
 

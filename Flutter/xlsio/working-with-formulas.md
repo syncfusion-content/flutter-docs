@@ -39,7 +39,7 @@ workbook.dispose();
 
 ## Apply Formula
 
-In a worksheet, formulas can be entered by using the **setFormula** method of the Range instance.
+In a worksheet, formulas can be entered by using the **setFormula()** method of the Range instance.
 Following code example illustrates on how to write a formula.
 
 {% highlight dart %}

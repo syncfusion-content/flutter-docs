@@ -11,7 +11,7 @@ documentation: ug
 
 ## Saving a Excel workbook to file system
 
-You can save the created or manipulated workbook to file system using Save method of Workbook. The workbook is saved in the XLSX format.
+You can save the created or manipulated workbook to file system using Save() method of Workbook. The workbook is saved in the XLSX format.
 
 {% highlight dart %}
 
@@ -25,7 +25,7 @@ workbook.save('Output.xlsx');
 
 ## Saving a Excel workbook to Stream
 
-You can also save the created or manipulated workbook to stream.
+You can also save the created or manipulated workbook to stream using saveStream() method of workbook.
 
 {% highlight dart %}
 
