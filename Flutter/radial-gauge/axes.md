@@ -371,6 +371,27 @@ Widget build(BuildContext context) {
 
 ![axis line visibility](images/axis/axis_showline.jpg)
 
+**Background color support**
+
+[`Radial gauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfRadialGauge-class.html) allows customizing its background color using [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfRadialGauge/backgroundColor.html) property.
+
+{% highlight dart %}
+
+@override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+          child: SfRadialGauge(
+        backgroundColor: Colors.lightBlue,
+        axes: <RadialAxis>[RadialAxis()],
+      )),
+    );
+  }
+
+{% endhighlight %}
+
+![axisbackground color](images/axis/axis_backgroundColor.png)
+
 **Background image support**
 
 [`Radial axis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis-class.html) allows to add an image frame as its background using [`backgroundImage`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/backgroundImage.html) property.
@@ -880,39 +901,39 @@ void axisTapped(double _tappedValue){
 
 ## Custom scale
 
-[`Radial gauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfRadialGauge-class.html) allows you to display a set of values along with a custom scale based on your business logic.
+[`Radial gauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfRadialGauge-class.html) allows you to display a set of values along with a custom scale based on your business logic using the `onCreateAxisRenderer` event of the axis. The `onCreateAxisRenderer` event allows returning the custom renderer for the axis. In that, we can override methods of `RadialAxisRenderer` to create the custom axis.
 
 {% highlight dart %}
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-        child: SfRadialGauge(
-          axes: <RadialAxis>[
-            CustomAxis(minimum: 0,
-                 maximum: 150,
-            )
-          ],
-        )
-    ),
-  );
-}
+ @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: SfRadialGauge(axes: <RadialAxis>[
+          RadialAxis(
+            minimum: 0,
+            maximum: 150,
+            onCreateAxisRenderer: () {
+              final CustomAxisRenderer renderer = CustomAxisRenderer();
+              return renderer;
+            },
+          )
+        ]),
+      ),
+    );
+  }
 
-class CustomAxis extends RadialAxis{
-  CustomAxis({
-    double minimum,
-    double maximum}) :super(
-    minimum: minimum ,
-    maximum: maximum ,
-  );
+class _CustomAxisRenderer extends RadialAxisRenderer {
+  _CustomAxisRenderer() : super();
 
+  /// Generated the 9 non-linear interval labels from 0 to 150
+  /// instead of actual generated labels.
   @override
-  List<CircularAxisLabel> generateVisibleLabels(){
+  List<CircularAxisLabel> generateVisibleLabels() {
     final List<CircularAxisLabel> _visibleLabels = <CircularAxisLabel>[];
     for (num i = 0; i < 9; i++) {
-      double _value = _calculateLabelValue(i);
-      final CircularAxisLabel label =
-      CircularAxisLabel(axisLabelStyle, _value.toInt().toString(), i, false);
+      final double _value = _calculateLabelValue(i);
+      final CircularAxisLabel label = CircularAxisLabel(
+          this.axis.axisLabelStyle, _value.toInt().toString(), i, false);
       label.value = _value;
       _visibleLabels.add(label);
     }
@@ -920,54 +941,52 @@ class CustomAxis extends RadialAxis{
     return _visibleLabels;
   }
 
+  /// Returns the factor(0 to 1) from value to place the labels in an axis.
   @override
-  double valueToFactor(double value)
-  {
-    if(value >= 0 && value <=2){
-      return (value * 0.125)/2;
-    }else if(value > 2 && value <=5){
-      return (((value - 2) * 0.125)/(5 - 2)) + (1 * 0.125);
-    }else if(value > 5 && value <=10){
-      return (((value - 5) * 0.125)/(10 - 5)) + (2 * 0.125);
-    }else if(value > 10 && value <=20){
-      return (((value - 10) * 0.125)/(20 - 10)) + (3 * 0.125);
-    }else if(value > 20 && value <=30){
-      return (((value - 20) * 0.125)/(30 - 20)) + (4 * 0.125);
-    }else if(value > 30 && value <=50){
-      return (((value - 30) * 0.125)/(50 - 30)) + (5 * 0.125);
-    }else if(value > 50 && value <=100){
-      return (((value - 50) * 0.125)/(100 - 50)) + (6 * 0.125);
-    }else if(value > 100 && value <=150){
-      return (((value - 100) * 0.125)/(150 - 100)) + (7 * 0.125);
-    }else{
+  double valueToFactor(double value) {
+    if (value >= 0 && value <= 2) {
+      return (value * 0.125) / 2;
+    } else if (value > 2 && value <= 5) {
+      return (((value - 2) * 0.125) / (5 - 2)) + (1 * 0.125);
+    } else if (value > 5 && value <= 10) {
+      return (((value - 5) * 0.125) / (10 - 5)) + (2 * 0.125);
+    } else if (value > 10 && value <= 20) {
+      return (((value - 10) * 0.125) / (20 - 10)) + (3 * 0.125);
+    } else if (value > 20 && value <= 30) {
+      return (((value - 20) * 0.125) / (30 - 20)) + (4 * 0.125);
+    } else if (value > 30 && value <= 50) {
+      return (((value - 30) * 0.125) / (50 - 30)) + (5 * 0.125);
+    } else if (value > 50 && value <= 100) {
+      return (((value - 50) * 0.125) / (100 - 50)) + (6 * 0.125);
+    } else if (value > 100 && value <= 150) {
+      return (((value - 100) * 0.125) / (150 - 100)) + (7 * 0.125);
+    } else {
       return 1;
     }
   }
 
-
   /// To return the label value based on interval
-  double _calculateLabelValue(num value){
-    if(value == 0){
+  double _calculateLabelValue(num value) {
+    if (value == 0) {
       return 0;
-    }else if(value == 1){
+    } else if (value == 1) {
       return 2;
-    }else if(value == 2){
+    } else if (value == 2) {
       return 5;
-    }else if(value == 3){
+    } else if (value == 3) {
       return 10;
-    }else if(value == 4){
+    } else if (value == 4) {
       return 20;
-    }else if(value == 5){
+    } else if (value == 5) {
       return 30;
-    }else if(value == 6){
+    } else if (value == 6) {
       return 50;
-    }else if(value == 7){
+    } else if (value == 7) {
       return 100;
-    }else{
+    } else {
       return 150;
     }
   }
-
 }
 
 {% endhighlight %}

@@ -524,7 +524,7 @@ class Data {
 
 ## Thumb overlap stroke color
 
-You can change the overlap stroke color of the thumb in the range selector using the [`overlappingThumbStrokeColor`] property.
+You can change the overlap stroke color of the thumb in the range selector using the [`overlappingThumbStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/overlappingThumbStrokeColor.html) property.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorTheme-class.html).
 

@@ -282,9 +282,9 @@ You can also customize the below appearance of the bubbles using [`SfMapsTheme`]
 * **Background color** - Change the background color of the bubbles using the [`SfMapsThemeData.bubbleColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData/bubbleColor.html) property.
 * **Stroke color** - Change the stroke color of the bubbles using the [`SfMapsThemeData.bubbleStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData/bubbleStrokeColor.html) property.
 * **Stroke width** - Change the stroke width of the bubbles using the [`SfMapsThemeData.bubbleStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData/bubbleStrokeWidth.html) property.
-* **Hover color** - Change the hover color of the bubbles in the web platform using the [`SfMapsThemeData.bubbleHoverColor`] property.
-* **Hover stroke color** - Change the hover stroke color of the bubbles in the web platform using the [`SfMapsThemeData.bubbleHoverStrokeColor`] property.
-* **Hover stroke width** - Change the hover stroke width of the bubbles in the web platform using the [`SfMapsThemeData.bubbleHoverStrokeWidth`] property.
+* **Hover color** - Change the hover color of the bubbles in the web platform using the [`SfMapsThemeData.bubbleHoverColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData/bubbleHoverColor.html) property.
+* **Hover stroke color** - Change the hover stroke color of the bubbles in the web platform using the [`SfMapsThemeData.bubbleHoverStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData/bubbleHoverStrokeColor.html) property.
+* **Hover stroke width** - Change the hover stroke width of the bubbles in the web platform using the [`SfMapsThemeData.bubbleHoverStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData/bubbleHoverStrokeWidth.html) property.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfMapsTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsTheme-class.html).
 

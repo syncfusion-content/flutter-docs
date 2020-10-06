@@ -273,7 +273,7 @@ You can customize the below appearance of the tooltip using [`SfMapsTheme`](http
 * **Stroke color** - Change the stroke color of the tooltip in the maps using the [`SfMapsThemeData.tooltipStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData/tooltipStrokeColor.html) property.
 * **Stroke width** - Change the stroke width of the tooltip in the maps using the [`SfMapsThemeData.tooltipStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData/tooltipStrokeWidth.html) property.
 * **Text style** - Change the appearance of the tooltip text in the maps using the [`SfMapsThemeData.tooltipTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData/tooltipTextStyle.html) property.
-* **Border radius** - Change the appearance of the tooltip borders in the maps using the [`SfMapsThemeData.tooltipBorderRadius`] property.
+* **Border radius** - Change the appearance of the tooltip borders in the maps using the [`SfMapsThemeData.tooltipBorderRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData/tooltipBorderRadius.html) property.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfMapsTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsTheme-class.html).
 
@@ -367,7 +367,7 @@ N>
 
 ## Custom widget for shape tooltip
 
-You can add a customized widget for shape tooltip with the [`MapShapeLayer.shapeTooltipBuilder`]. The [`MapShapeLayer.shapeTooltipBuilder`] will be called with the corresponding index every time when you tap or click on a shape. You can return the customized widget from this callback.
+You can add a customized widget for shape tooltip with the [`MapShapeLayer.shapeTooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/shapeTooltipBuilder.html). The [`MapShapeLayer.shapeTooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/shapeTooltipBuilder.html) will be called with the corresponding index every time when you tap or click on a shape. You can return the customized widget from this callback.
 
 {% tabs %}
 {% highlight Dart %}
@@ -480,7 +480,7 @@ N>
 
 ## Custom widget for bubble tooltip
 
-You can add a customized widget for bubble tooltip with the [`MapShapeLayer.bubbleTooltipBuilder`]. The [`MapShapeLayer.bubbleTooltipBuilder`] will be called with the corresponding index every time when you tap or click on a bubble. You can return the customized widget from this callback.
+You can add a customized widget for bubble tooltip with the [`MapShapeLayer.bubbleTooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/bubbleTooltipBuilder.html). The [`MapShapeLayer.bubbleTooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/bubbleTooltipBuilder.html) will be called with the corresponding index every time when you tap or click on a bubble. You can return the customized widget from this callback.
 
 {% tabs %}
 {% highlight Dart %}
