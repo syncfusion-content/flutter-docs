@@ -20,4 +20,4 @@ The Syncfusion Flutter XlsIO is a library written natively in Dart for creating 
 * Support to add images like JPEG and PNG formats.
 * Support to create and manipulate charts.
 
-You can get the sample from this link: [Flutter XlsIO](flutter-xlsio)
+You can get the sample from this link: [`Flutter XlsIO`](https://github.com/syncfusion/flutter-examples)
