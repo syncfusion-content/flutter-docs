@@ -371,6 +371,27 @@ Widget build(BuildContext context) {
 
 ![axis line visibility](images/axis/axis_showline.jpg)
 
+**Background color support**
+
+[`Radial gauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfRadialGauge-class.html) allows customizing its background color using [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfRadialGauge/backgroundColor.html) property.
+
+{% highlight dart %}
+
+@override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+          child: SfRadialGauge(
+        backgroundColor: Colors.lightBlue,
+        axes: <RadialAxis>[RadialAxis()],
+      )),
+    );
+  }
+
+{% endhighlight %}
+
+![axisbackground color](images/axis/axis_backgroundColor.png)
+
 **Background image support**
 
 [`Radial axis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis-class.html) allows to add an image frame as its background using [`backgroundImage`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/backgroundImage.html) property.

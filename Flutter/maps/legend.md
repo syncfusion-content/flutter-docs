@@ -13,7 +13,7 @@ You can provide clear information on the data plotted on the map using legend.
 
 ## Show legend
 
-You can show or hide the legend using the [`MapShapeLayer.legendSource`] property. The default value of the [`legendSource`] property is `MapElement.none`.
+You can show or hide the legend using the [`MapShapeLayer.legendSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/legendSource.html) property. The default value of the [`legendSource`] property is `MapElement.none`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -48,7 +48,7 @@ Widget build(BuildContext context) {
 
 ## Shape legend
 
-You can show shape legend using the [`MapShapeLayer.legendSource`] property. By default, the legend item's text is rendered based on the value of [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeDataField.html) property. The default value of the [`legendSource`] property is `MapElement.none`.
+You can show shape legend using the [`MapShapeLayer.legendSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/legendSource.html) property. By default, the legend item's text is rendered based on the value of [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeDataField.html) property. The default value of the [`legendSource`] property is `MapElement.none`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -88,7 +88,7 @@ N>
 
 ## Bubble legend
 
-You can show bubble legend using the [`MapShapeLayer.legendSource`] property. By default, the legend item's text is rendered based on the value of [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeDataField.html) property.
+You can show bubble legend using the [`MapShapeLayer.legendSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/legendSource.html) property. By default, the legend item's text is rendered based on the value of [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeDataField.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -518,10 +518,10 @@ N>
 
 You can enable toggling the legend items and the corresponding shapes or bubbles using the [`MapLegendSettings.enableToggleInteraction`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/enableToggleInteraction.html) property. The default value of the [`enableToggleInteraction`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/enableToggleInteraction.html) property is `false`. You can customize the toggled shapes or bubbles using the following properties:
 
-* **Toggled item color** - Change the color for the toggled legend item's icon and it's shape or bubble using the [`MapLegendSettings.toggledItemColor`]property.
-* **Toggled item stroke color** - Change the stroke color which applies to the toggled legend item's shape or bubble using the [`MapLegendSettings.toggledItemStrokeColor`] property.
-* **Toggled item stroke width** - Change the stroke width which applies to the toggled legend item's shape or bubble using the [`MapLegendSettings.toggledItemStrokeWidth`] property.
-* **Toggled item opacity** - Change the opacity of the toggled legend item's shape or bubble using the [`MapLegendSettings.toggledItemOpacity`] property.
+* **Toggled item color** - Change the color for the toggled legend item's icon and it's shape or bubble using the [`MapLegendSettings.toggledItemColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/toggledItemColor.html) property.
+* **Toggled item stroke color** - Change the stroke color which applies to the toggled legend item's shape or bubble using the [`MapLegendSettings.toggledItemStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/toggledItemStrokeColor.html) property.
+* **Toggled item stroke width** - Change the stroke width which applies to the toggled legend item's shape or bubble using the [`MapLegendSettings.toggledItemStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/toggledItemStrokeWidth.html) property.
+* **Toggled item opacity** - Change the opacity of the toggled legend item's shape or bubble using the [`MapLegendSettings.toggledItemOpacity`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/toggledItemOpacity.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -617,9 +617,9 @@ class Model {
 
 You can also customize the below appearance of the legend using [`SfMapsTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsTheme-class.html).
 
-* **Toggled item color** - Change the color for the toggled legend item's icon and it's shape or bubble using the [`SfMapsThemeData.toggledItemColor`] property.
-* **Toggled item stroke color** - Change the stroke color which applies to the toggled legend item's shape or bubble using the [`SfMapsThemeData.toggledItemStrokeColor`] property.
-* **Toggled item stroke width** - Change the stroke width which applies to the toggled legend item's shape or bubble using the [`SfMapsThemeData.toggledItemStrokeWidth`] property.
+* **Toggled item color** - Change the color for the toggled legend item's icon and it's shape or bubble using the [`SfMapsThemeData.toggledItemColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData/toggledItemColor.html) property.
+* **Toggled item stroke color** - Change the stroke color which applies to the toggled legend item's shape or bubble using the [`SfMapsThemeData.toggledItemStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData/toggledItemStrokeColor.html) property.
+* **Toggled item stroke width** - Change the stroke width which applies to the toggled legend item's shape or bubble using the [`SfMapsThemeData.toggledItemStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData/toggledItemStrokeWidth.html) property.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfMapsTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsTheme-class.html).
 
