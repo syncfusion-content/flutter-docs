@@ -63,6 +63,32 @@ Widget build(BuildContext context) {
 ![range pointer customization](images/range-pointer/pointer_customization.jpg)
 
  The default value of [`SizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RangePointer/sizeUnit.html) is [`GaugeSizeUnit.logicalPixel`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeSizeUnit-class.html).
+
+ **Dashed range pointer**
+
+ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RangePointer/dashArray.html) property of [`range pointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RangePointer-class.html) allows rendering the dashed range pointer line.
+
+{% highlight dart %}
+
+@override
+Widget build(BuildContext context) {
+   return Scaffold(
+      body: Center(
+        child: SfRadialGauge(
+            axes: <RadialAxis>[
+              RadialAxis(pointers: <GaugePointer>[
+               RangePointer(value: 60, dashArray: <double>[8, 2])
+          ])
+         ]
+        ),
+      ),
+    );
+  }
+
+{% endhighlight %}
+
+![range pointer dasharray](images/range-pointer/pointer_dasharray.png)
+
  
  **Gradient support**
 
