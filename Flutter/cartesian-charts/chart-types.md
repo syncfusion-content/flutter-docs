@@ -2825,38 +2825,37 @@ To render a waterfall chart, create an instance of [`WaterfallSeries`](https://p
                     child: SfCartesianChart(
                         series: <ChartSeries<SalesData, double>>[
                             WaterfallSeries<SalesData, double>(
-                            dataSource: <SalesData>[
-                            SalesData(2, 10, Colors.red),
-                            SalesData(3, -3, Colors.green),
-                            SalesData(4, 5, Colors.red, true),
-                            SalesData(5, 4, Colors.blue),
-                            SalesData(6, -2, Colors.red),
-                            SalesData(7, -5, Colors.red, true),
-                            SalesData(8, -10, Colors.red),
-                            SalesData(9, 8, Colors.red),
-                            SalesData(10, 8, Colors.red),
-                            SalesData(11, 5, Colors.red),
-                            SalesData(12, 8, Colors.red, false),
-                            SalesData(13, -5, Colors.red, false, true),
-                            ],
-                            negativePointsColor:
-                            const Color.fromRGBO(229, 101, 144, 1),
-                            intermediateSumColor:
-                            const Color.fromRGBO(79, 129, 188, 1),
-                            totalSumColor: const Color.fromRGBO(79, 129, 188, 1),
-                            xValueMapper: (SalesData sales, _) => sales.x,
-                            yValueMapper: (SalesData sales, _) => sales.y,
-                            intermediateSumPredicate: (SalesData sales, _) =>
-                            sales.isIntermediate,
-                            totalSumPredicate: (SalesData sales, _) => sales.isTotal,
-                            connectorLineSettings:    WaterfallConnectorLineSettings(
-                            width: 2.5,
-                            dashArray: <double>[3, 1])
-         ]
-        )
-       )
-      )   
-     );
+                                dataSource: <SalesData>[
+                                    SalesData(2, 10, Colors.red),
+                                    SalesData(3, -3, Colors.green),
+                                    SalesData(4, 5, Colors.red, true),
+                                    SalesData(5, 4, Colors.blue),
+                                    SalesData(6, -2, Colors.red),
+                                    SalesData(7, -5, Colors.red, true),
+                                    SalesData(8, -10, Colors.red),
+                                    SalesData(9, 8, Colors.red),
+                                    SalesData(10, 8, Colors.red),
+                                    SalesData(11, 5, Colors.red),
+                                    SalesData(12, 8, Colors.red, false),
+                                    SalesData(13, -5, Colors.red, false, true),
+                                ],
+                                negativePointsColor: const Color.fromRGBO(229, 101, 144, 1),
+                                intermediateSumColor: const Color.fromRGBO(79, 129, 188, 1),
+                                totalSumColor: const Color.fromRGBO(79, 129, 188, 1),
+                                xValueMapper: (SalesData sales, _) => sales.x,
+                                yValueMapper: (SalesData sales, _) => sales.y,
+                                intermediateSumPredicate: (SalesData sales, _) => sales.isIntermediate,
+                                totalSumPredicate: (SalesData sales, _) => sales.isTotal,
+                                connectorLineSettings: WaterfallConnectorLineSettings(
+                                    width: 2.5,
+                                    dashArray: <double>[3, 1]
+                                )
+                            )
+                        ]
+                    )
+                )
+            )   
+        );
     }
 
 {% endhighlight %}
