@@ -11,7 +11,7 @@ documentation: ug
 # Resource view in flutter calendar
 The timeline resource grouping is a discrete view integrated into our Event calendar widget that allows you to group the appointments based on the available resource in timeline views of the calendar. Using this feature, you can group the appointments and time regions arranged in a row-wise order based on the allocated resource in the timeline views. This rich feature set includes customization and you can assign unique styles to the available resource view. 
 
-You can create a resource view by setting the [displayName](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarResource/displayName.html), [color](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarResource/color.html), [id](https://api.dart.dev/stable/2.10.0/dart-core/Object-class.html), and [image](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarResource/image.html) property of the [CalendarResource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarResource-class.html).
+You can create a resource view by setting the [displayName](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarResource/displayName.html), [color](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarResource/color.html), [id](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarResource/id.html), and [image](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarResource/image.html) property of the [CalendarResource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarResource-class.html).
 
 {% tabs %}
 {% highlight Dart %}
@@ -26,7 +26,7 @@ List<CalendarResource> resourceColl = <CalendarResource>[];
 {% endhighlight %}
 {% endtabs %}
 
-You can add resources that can be assigned to the appointments and time regions using the ‘resources’ property of [CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html).
+You can add resources that can be assigned to the appointments and time regions using the [resources](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/resources.html) property of [CalendarDataSource](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource-class.html).
 
 {% tabs %}
 {% highlight Dart %}
