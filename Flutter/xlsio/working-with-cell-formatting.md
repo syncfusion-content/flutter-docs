@@ -458,14 +458,14 @@ The following code snippet illustrates how to set different number formats in a 
 
 {% highlight dart %}
 
-//Create a new Excel document.
+// Create a new Excel document.
 final Workbook workbook = Workbook();
 
-//Accessing worksheet via index.
+// Accessing worksheet via index.
 final Worksheet sheet = workbook.worksheets[0];
 
 sheet.getRangeByName('A1').setText('DATA');
-sheet.getRangeByName('B1').setText('NUMBER FORMAT');
+sheet.getRangeByName('B1').setText('FORMAT');
 sheet.getRangeByName('C1').setText('RESULT');
 
 final Style headingStyle = workbook.styles.add('HeadingStyle');
@@ -474,51 +474,53 @@ headingStyle.hAlign = HAlignType.center;
 headingStyle.wrapText = true;
 sheet.getRangeByName('A1:C1').cellStyle = headingStyle;
 
-//Applying different number formats.
-sheet.getRangeByName('A2').setText('100.23');
+// Applying different number formats.
+sheet.getRangeByName('A2').setNumber(100.23);
 sheet.getRangeByName('B2').setText('0.00');
 sheet.getRangeByName('C2').numberFormat = ('0.00');
 sheet.getRangeByName('C2').setNumber(100.23);
-sheet.getRangeByName('A3').setText('43782');
+sheet.getRangeByName('A3').setNumber(43782);
 sheet.getRangeByName('B3').setText('###,##');
 sheet.getRangeByName('C3').numberFormat = '###,##';
 sheet.getRangeByName('C3').setNumber(43782);
-sheet.getRangeByName('A4').setText('-500');
+sheet.getRangeByName('A4').setNumber(-500);
 sheet.getRangeByName('B4').setText('[Blue]#,##0');
 sheet.getRangeByName('C4').numberFormat = '[Blue]#,##0';
 sheet.getRangeByName('C4').setNumber(-500);
-sheet.getRangeByName('A5').setText('0.0123');
+sheet.getRangeByName('A5').setNumber(0.0123);
 sheet.getRangeByName('B5').setText('0.0000');
 sheet.getRangeByName('C5').numberFormat = '0.0000';
 sheet.getRangeByName('C5').setNumber(0.0123);
-sheet.getRangeByName('A6').setText('1.20');
+sheet.getRangeByName('A6').setNumber(1.20);
 sheet.getRangeByName('B6').setText('0.00E+00');
 sheet.getRangeByName('C6').numberFormat = '0.00E+00';
 sheet.getRangeByName('C6').setNumber(1.20);
 
-//Applying percentage format.
-sheet.getRangeByName('A7').setText('1.20');
+// Applying percentage format.
+sheet.getRangeByName('A7').setNumber(1.20);
 sheet.getRangeByName('B7').setText('0.00%');
 sheet.getRangeByName('C7').numberFormat = '0.00%';
 sheet.getRangeByName('C7').setNumber(1.20);
 
-//Applying date format.
+// Applying date format.
 sheet.getRangeByName('A8').setText(DateTime(2005, 12, 25).toString());
 sheet.getRangeByName('B8').setText('m/d/yyyy');
 sheet.getRangeByName('C8').numberFormat = 'm/d/yyyy';
 sheet.getRangeByName('C8').setDateTime(DateTime(2005, 12, 25));
 
-//Applying currency format.
-sheet.getRangeByName('A9').setText('1.20');
+// Applying currency format.
+sheet.getRangeByName('A9').setNumber(1.20);
 sheet.getRangeByName('B9').setText('\$#,##0.00');
 sheet.getRangeByName('C9').numberFormat = '\$#,##0.00';
 sheet.getRangeByName('C9').setNumber(1.20);
 
-//Applying accounting format.
-sheet.getRangeByName('A10').setText('234');
+// Applying accounting format.
+sheet.getRangeByName('A10').setNumber(234);
 sheet.getRangeByName('B10').setText('_(\$* #,##0_)');
 sheet.getRangeByName('C10').numberFormat = '_(\$* #,##0_)';
 sheet.getRangeByName('C10').setNumber(234);
+
+sheet.getRangeByName('A1:C3').columnWidth = 11;
 
 // save and dispose workbook.
 workbook.save('NumberFormats.xlsx');
