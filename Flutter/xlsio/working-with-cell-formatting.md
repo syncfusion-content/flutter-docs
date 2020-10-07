@@ -18,35 +18,36 @@ The following code shows how to create and apply cell style.
 {% highlight dart %}
 
 // Create a new Excel document.
-Workbook workbook = new Workbook();
+final Workbook workbook = Workbook();
 
 //Accessing worksheet via index.
-Worksheet sheet = workbook.worksheets[0];
+final Worksheet sheet = workbook.worksheets[0];
 
 //Creating a new style with all properties.
-Style style = new CellStyle(workbook);
-style.name = 'Style1';
-style.backColor = '#FF5050';
-style.fontName = 'Aldhabi';
-style.fontColor = '#138939';
-style.fontSize = 16;
-style.bold = true;
-style.italic = true;
-style.underline = true;
-style.rotation = 120;
-style.hAlign = HAlignType.center;
-style.vAlign = VAlignType.bottom;
-style.indent = 1;
-style.borders.all.lineStyle = LineStyle.Double;
-style.borders.all.color = '#FFFF66';
-style.wrapText = true;
+final Style style = CellStyle(workbook);
+style.name = 'Style1';
+style.backColor = '#FF5050';
+style.fontName = 'Aldhabi';
+style.fontColor = '#138939';
+style.fontSize = 16;
+style.bold = true;
+style.italic = true;
+style.underline = true;
+style.rotation = 120;
+style.hAlign = HAlignType.center;
+style.vAlign = VAlignType.bottom;
+style.indent = 1;
+style.borders.all.lineStyle = LineStyle.double;
+style.borders.all.color = '#FFFF66';
+style.wrapText = true;
+style.numberFormat = '_(\$* #,##0_)';
 workbook.styles.addStyle(style);
 
 //Apply cellStyle.
-sheet.getRangeByName('A1').cellStyle = style;
+sheet.getRangeByName('A1').cellStyle = style;
 
 // Save the document.
-workbook.save("CreateCellStyle.xlsx");
+workbook.save('CreateCellStyle.xlsx');
 
 //Dispose the workbook.
 workbook.dispose();
@@ -62,68 +63,69 @@ The following code snippet illustrates how to apply global style.
 
 {% highlight dart %}
 
-//Create a new Excel document.
-Workbook workbook = new Workbook();
+// Create a new Excel document.
+final Workbook workbook = Workbook();
 
-//Accessing worksheet via index.
-Worksheet sheet = workbook.worksheets[0];
+// Accessing worksheet via index.
+final Worksheet sheet = workbook.worksheets[0];
 
-sheet.getRangeByName('A1').text = "Name";
-sheet.getRangeByName('A2').text = "John";
-sheet.getRangeByName('A3').text = "Ashok";
-sheet.getRangeByName('A4').text = "Vicki";
-sheet.getRangeByName('B1').text = "Mark1";
-sheet.getRangeByName('B2').number = 10;
-sheet.getRangeByName('B3').number = 39;
-sheet.getRangeByName('B4').number = 25;
-sheet.getRangeByName('C1').text = "Mark2";
-sheet.getRangeByName('C2').number = 49;
-sheet.getRangeByName('C3').number = 23;
-sheet.getRangeByName('C4').number = 13;
-sheet.getRangeByName('D1').text = "Mark3";
-sheet.getRangeByName('D2').number = 24;
-sheet.getRangeByName('D3').number = 30;
-sheet.getRangeByName('D4').number = 10;
-  
+// Set value to cell.
+sheet.getRangeByName('A1').setText('Name');
+sheet.getRangeByName('A2').setText('John');
+sheet.getRangeByName('A3').setText('Ashok');
+sheet.getRangeByName('A4').setText('Vicki');
+sheet.getRangeByName('B1').setText('Mark1');
+sheet.getRangeByName('B2').setNumber(10);
+sheet.getRangeByName('B3').setNumber(39);
+sheet.getRangeByName('B4').setNumber(25);
+sheet.getRangeByName('C1').setText('Mark2');
+sheet.getRangeByName('C2').setNumber(49);
+sheet.getRangeByName('C3').setNumber(23);
+sheet.getRangeByName('C4').setNumber(13);
+sheet.getRangeByName('D1').setText('Mark3');
+sheet.getRangeByName('D2').setNumber(24);
+sheet.getRangeByName('D3').setNumber(30);
+sheet.getRangeByName('D4').setNumber(10);
 
 //Defining a global style with properties.
-Style globalStyle = workbook.styles.add('globalStyle');
-globalStyle.backColor = "#37D8E9";
-globalStyle.fontName = 'Times New Roman';
-globalStyle.fontSize = 12;
-globalStyle.fontColor = "#C67878";
-globalStyle.italic = true;
-globalStyle.bold = true;
-globalStyle.underline = true;
-globalStyle.wrapText = true;
-globalStyle.hAlign = HAlignType.center;
-globalStyle.vAlign = VAlignType.center;
-globalStyle.borders.all.lineStyle = LineStyle.Thick;
-globalStyle.borders.all.color = "#9954CC";
+final Style globalStyle = workbook.styles.add('globalStyle');
+globalStyle.backColor = '#37D8E9';
+globalStyle.fontName = 'Times New Roman';
+globalStyle.fontSize = 12;
+globalStyle.fontColor = '#C67878';
+globalStyle.italic = true;
+globalStyle.bold = true;
+globalStyle.underline = true;
+globalStyle.wrapText = true;
+globalStyle.hAlign = HAlignType.center;
+globalStyle.vAlign = VAlignType.center;
+globalStyle.borders.all.lineStyle = LineStyle.thick;
+globalStyle.borders.all.color = '#9954CC';
 
-Style globalStyle1 = workbook.styles.add('globalStyle1');
-globalStyle1.fontSize = 14;
-globalStyle1.fontColor = "#362191";
-globalStyle1.hAlign = HAlignType.center;
-globalStyle1.vAlign = VAlignType.center;
-globalStyle1.borders.bottom.lineStyle = LineStyle.Thin;
-globalStyle1.borders.bottom.color = "#829193";
+final Style globalStyle1 = workbook.styles.add('globalStyle1');
+globalStyle1.fontSize = 14;
+globalStyle1.fontColor = '#362191';
+globalStyle1.hAlign = HAlignType.center;
+globalStyle1.vAlign = VAlignType.center;
+globalStyle1.borders.bottom.lineStyle = LineStyle.thin;
+globalStyle1.borders.bottom.color = '#829193';
+globalStyle1.numberFormat = '0.00';
 
 //Apply GlobalStyle
-sheet.getRangeByName('A1:D1').cellStyle = globalStyle;
+sheet.getRangeByName('A1:D1').cellStyle = globalStyle;
 
 //Apply GlobalStyle1
-sheet.getRangeByName('B2:D4').cellStyle = globalStyle1;
+sheet.getRangeByName('B2:D4').cellStyle = globalStyle1;
 
 // Save the document.
-workbook.save("ApplyGlobalStyle.xlsx");
+workbook.save('ApplyGlobalStyle.xlsx');
 
 //Dispose the workbook.
 workbook.dispose();
 
 {% endhighlight %}
 
-![globalstyle](images/globalstyle.jpeg)
+![globalstyle](images/GlobalStyle.png)
 
 ## Apply Number Formats 
 
@@ -456,98 +458,105 @@ The following code snippet illustrates how to set different number formats in a 
 
 {% highlight dart %}
 
-//Create a new Excel document.
-Workbook workbook = new Workbook();
+// Create a new Excel document.
+final Workbook workbook = Workbook();
 
-//Accessing worksheet via index.
-Worksheet sheet = workbook.worksheets[0];
+// Accessing worksheet via index.
+final Worksheet sheet = workbook.worksheets[0];
 
-sheet.getRangeByName("A1").text = "DATA";
-sheet.getRangeByName("B1").text = "NUMBER FORMAT";
-sheet.getRangeByName("C1").text = "RESULT";
-Style headingStyle = workbook.styles.add("HeadingStyle");
-headingStyle.bold = true;
-headingStyle.hAlign = HAlignType.center;
-headingStyle.wrapText = true;
-sheet.getRangeByName("A1:C1").cellStyle = headingStyle;
+sheet.getRangeByName('A1').setText('DATA');
+sheet.getRangeByName('B1').setText('FORMAT');
+sheet.getRangeByName('C1').setText('RESULT');
 
-  //Applying different number formats.
-sheet.getRangeByName("A2").text = "100.23";
-sheet.getRangeByName("B2").text = "0.00";
-sheet.getRangeByName("C2").numberFormat = "0.00";
-sheet.getRangeByName("C2").number = 100.23;
-sheet.getRangeByName("A3").text = "43782";
-sheet.getRangeByName("B3").text = "###,##";
-sheet.getRangeByName("C3").numberFormat = "###,##";
-sheet.getRangeByName("C3").number = 43782;
-sheet.getRangeByName("A4").text = "-500";
-sheet.getRangeByName("B4").text = "[Blue]#,##0";
-sheet.getRangeByName("C4").numberFormat = "[Blue]#,##0";
-sheet.getRangeByName("C4").number = -500;
-sheet.getRangeByName("A5").text = "0.0123";
-sheet.getRangeByName("B5").text = "0.0000";
-sheet.getRangeByName("C5").numberFormat = "0.0000";
-sheet.getRangeByName("C5").number = 0.0123;
-sheet.getRangeByName("A6").text = "1.20";
-sheet.getRangeByName("B6").text = "0.00E+00";
-sheet.getRangeByName("C6").numberFormat = "0.00E+00";
-sheet.getRangeByName("C6").number = 1.20;
+final Style headingStyle = workbook.styles.add('HeadingStyle');
+headingStyle.bold = true;
+headingStyle.hAlign = HAlignType.center;
+headingStyle.wrapText = true;
+sheet.getRangeByName('A1:C1').cellStyle = headingStyle;
 
-//Applying percentage format.
-sheet.getRangeByName("A7").text = "1.20";
-sheet.getRangeByName("B7").text = "0.00%";
-sheet.getRangeByName("C7").numberFormat = "0.00%";
-sheet.getRangeByName("C7").number = 1.20;
+// Applying different number formats.
+sheet.getRangeByName('A2').setNumber(100.23);
+sheet.getRangeByName('B2').setText('0.00');
+sheet.getRangeByName('C2').numberFormat = ('0.00');
+sheet.getRangeByName('C2').setNumber(100.23);
+sheet.getRangeByName('A3').setNumber(43782);
+sheet.getRangeByName('B3').setText('###,##');
+sheet.getRangeByName('C3').numberFormat = '###,##';
+sheet.getRangeByName('C3').setNumber(43782);
+sheet.getRangeByName('A4').setNumber(-500);
+sheet.getRangeByName('B4').setText('[Blue]#,##0');
+sheet.getRangeByName('C4').numberFormat = '[Blue]#,##0';
+sheet.getRangeByName('C4').setNumber(-500);
+sheet.getRangeByName('A5').setNumber(0.0123);
+sheet.getRangeByName('B5').setText('0.0000');
+sheet.getRangeByName('C5').numberFormat = '0.0000';
+sheet.getRangeByName('C5').setNumber(0.0123);
+sheet.getRangeByName('A6').setNumber(1.20);
+sheet.getRangeByName('B6').setText('0.00E+00');
+sheet.getRangeByName('C6').numberFormat = '0.00E+00';
+sheet.getRangeByName('C6').setNumber(1.20);
 
-//Applying date format.
-sheet.getRangeByName("A8").text = DateTime(2005, 12, 25).toString();
-sheet.getRangeByName("B8").text = "m/d/yyyy";
-sheet.getRangeByName("C8").numberFormat = "m/d/yyyy";
-sheet.getRangeByName("C8").dateTime = DateTime(2005, 12, 25);
+// Applying percentage format.
+sheet.getRangeByName('A7').setNumber(1.20);
+sheet.getRangeByName('B7').setText('0.00%');
+sheet.getRangeByName('C7').numberFormat = '0.00%';
+sheet.getRangeByName('C7').setNumber(1.20);
 
-//Applying currency format.
-sheet.getRangeByName("A9").text = "1.20";
-sheet.getRangeByName("B9").text = "\$#,##0.00";
-sheet.getRangeByName("C9").numberFormat = "\$#,##0.00";
-sheet.getRangeByName("C9").number = 1.20;
+// Applying date format.
+sheet.getRangeByName('A8').setText(DateTime(2005, 12, 25).toString());
+sheet.getRangeByName('B8').setText('m/d/yyyy');
+sheet.getRangeByName('C8').numberFormat = 'm/d/yyyy';
+sheet.getRangeByName('C8').setDateTime(DateTime(2005, 12, 25));
 
-//Applying accounting format.
-sheet.getRangeByName("A10").text = "234";
-sheet.getRangeByName("B10").text = "_(\$* #,##0_)";
-sheet.getRangeByName("C10").numberFormat = "_(\$* #,##0_)";
-sheet.getRangeByName("C10").number = 234;
+// Applying currency format.
+sheet.getRangeByName('A9').setNumber(1.20);
+sheet.getRangeByName('B9').setText('\$#,##0.00');
+sheet.getRangeByName('C9').numberFormat = '\$#,##0.00';
+sheet.getRangeByName('C9').setNumber(1.20);
 
-workbook.save("NumberFormats.xlsx");
+// Applying accounting format.
+sheet.getRangeByName('A10').setNumber(234);
+sheet.getRangeByName('B10').setText('_(\$* #,##0_)');
+sheet.getRangeByName('C10').numberFormat = '_(\$* #,##0_)';
+sheet.getRangeByName('C10').setNumber(234);
+
+sheet.getRangeByName('A1').columnWidth = 21;
+sheet.getRangeByName('B1:C1').columnWidth = 13;
+
+// save and dispose workbook.
+workbook.save('NumberFormats.xlsx');
+workbook.dispose();
 
 {% endhighlight %}
 
-![numberformat](images/numberformat.jpeg)
+![numberformat](images/NumberFormats.png)
 
 ## Access display text
 
-Cell values can be accessed as **text**, **number**, **dateTime** and **formula** of **Range** class. In addition to this, there is  another property**DisplayText** in **Range**, which returns a resultant value of a cell with its number format applied.
+Cell values can be accessed as **text**, **number**, **dateTime** and **formula** of **Range** class. In addition to this, there is another property **DisplayText** in **Range**, which returns a resultant value of a cell with its number format applied.
 
 The following code example illustrates how to display the text of a cell.
 
 {% highlight dart %}
 
-//Create a new Excel document.
-Workbook workbook = new Workbook();
+// Create a new Excel document.
+final Workbook workbook = Workbook();
 
-//Accessing worksheet via index.
-Worksheet sheet = workbook.worksheets[0];
+// Accessing worksheet via index.
+final Worksheet sheet = workbook.worksheets[0];
 
- 
-Range range1 = sheet.getRangeByIndex(1, 1);
-range1.numberFormat = "0%";
+final Range range1 = sheet.getRangeByIndex(1, 1);
+range1.numberFormat = '0%';
 
-//Set value to the cell
-range1.number = 10;
+// Set value to the cell.
+range1.setNumber(10);
 
-//Get display text of the cell
+// Get display text of the cell.
 range1.displayText;
 
-workbook.save("DisplayText.xlsx");
+// Save and dispose workbook.
+workbook.save('DisplayText.xlsx');
+workbook.dispose();
 
 {% endhighlight %}
 
@@ -557,17 +566,17 @@ The cells can be merged using the merge() method in Range as shown as follows.
 
 {% highlight dart %}
 
-//Merging Cells from A1 to A6 
-sheet.getRangeByName("A1:A6").merge();
+// Merging Cells from A1 to A6 
+sheet.getRangeByName('A1:A6').merge();
 
 {% endhighlight %}
 
-Merged cells can be unmerged using the **unmerge()**method in **Range** as shown below.
+Merged cells can be unmerged using the **unmerge()** method in **Range** as shown below.
 
 {% highlight dart %}
 
-//UnMerging Cells from A1 to A6 
-sheet.getRangeByName("A1:A6").unmerge();
+// UnMerging Cells from A1 to A6 
+sheet.getRangeByName('A1:A6').unmerge();
 
 {% endhighlight %}
 
@@ -575,20 +584,19 @@ The below code shows merging and unmerging worksheet cells.
 
 {% highlight dart %}
 
-//Create a new Excel document.
-Workbook workbook = new Workbook();
+// Create a new Excel document.
+final Workbook workbook = Workbook();
 
-//Accessing worksheet via index.
-Worksheet sheet = workbook.worksheets[0];
+// Accessing worksheet via index.
+final Worksheet sheet = workbook.worksheets[0];
 
- 
 //Merging Cells from A16 to C16. 
-sheet.getRangeByName("A1:C16").merge();
+sheet.getRangeByName('A1:C16').merge();
 
 //UnMerging Cells from A1 to C16 
-sheet.getRangeByName("A1:C16").unmerge();
+sheet.getRangeByName('A1:C16').unmerge();
 
-workbook.save("MergeUnMerge.xlsx");
+workbook.save('MergeUnMerge.xlsx');
 
 {% endhighlight %}
 
@@ -598,19 +606,21 @@ The following code snippet explains how to add **builtInStyle** for a worksheet 
 
 {% highlight dart %}
 
-//Create a new Excel document.
-Workbook workbook = new Workbook();
+// Create a new Excel document.
+final Workbook workbook = Workbook();
 
-//Accessing worksheet via index.
-Worksheet sheet = workbook.worksheets[0];
+// Accessing worksheet via index.
+final Worksheet sheet = workbook.worksheets[0];
 
-//Set text worksheet.
-sheet.getRangeByName("A2").text = "Sample"; 
+// Set text worksheet.
+sheet.getRangeByName('A2').setText('Sample');
 
-//Set built in style.
-sheet.getRangeByName("A2").builtInStyle = BuiltInStyles.CheckCell;  
+// Set built in style.
+sheet.getRangeByName('A2').builtInStyle = BuiltInStyles.checkCell;
 
-workbook.save("BuiltInStyle.xlsx");
+// save and dispose workbook.
+workbook.save('BuiltInStyle.xlsx');
+workbook.dispose();
 
 {% endhighlight %}
 

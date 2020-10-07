@@ -9,7 +9,7 @@ documentation: ug
 
 # Overview of Syncfusion Flutter XlsIO
 
-The Syncfusion Flutter XlsIO is a library written natively in Dart for creating the Excel documents from scratch.The library can be used in Flutter Mobile and Web platforms without the dependency of Microsoft Office COM libraries & Microsoft Office.
+The Syncfusion Flutter XlsIO is a library written natively in Dart for creating the Excel documents from scratch. The library can be used in Flutter Mobile and web platforms without the dependency of Microsoft Office COM libraries & Microsoft Office.
 
 ## Key features of Syncfusion Flutter XlsIO
 
@@ -20,4 +20,4 @@ The Syncfusion Flutter XlsIO is a library written natively in Dart fo
 * Support to add images like JPEG and PNG formats.
 * Support to create and manipulate charts.
 
-You can get the sample from this link: [Flutter XlsIO](flutter-xlsio)
+You can get the sample from this link: [`Flutter XlsIO`](https://github.com/syncfusion/flutter-examples)
