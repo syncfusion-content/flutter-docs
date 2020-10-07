@@ -16,6 +16,7 @@ Calendar has six built-in time slot views used to display date, and the views wi
 * **Timeline day view:** Displays the single day in horizontal time axis.
 * **Timeline week view:** Displays the days of a week in horizontal time axis. You can see the past or future dates by scrolling to right or left.
 * **Timeline work week view:** Views only working days of a week in horizontal axis. By default, Saturday and Sunday are the non-working days. You can customize it with any days of a week.
+* **Timeline month:** Display appointments across multiple days of a month on a horizontal axis where each column represents a single day.
 
 ## Change time interval
 
@@ -45,7 +46,7 @@ Widget build(BuildContext context) {
 
 ## Change time interval height
 
-You can customize the time interval height of timeslots by using the [timeIntervalHeight](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeIntervalHeight.html) property of `TimeSlotViewSettings`.
+You can customize the time interval height of the day, week, and workweek view by using the [timeIntervalHeight](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeIntervalHeight.html) property of `TimeSlotViewSettings`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -66,6 +67,30 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Change time interval height](images/timeslot-views/time-interval-height.png)
+
+## Change time interval width
+
+You can customize the time interval width of the timeline day, timeline week, timeline work week, and timeline month view by using the [timeIntervalWidth](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/timeIntervalWidth.html) property of `TimeSlotViewSettings`.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Container(
+    child: SfCalendar(
+      view: CalendarView.timelineDay,
+      timeSlotViewSettings: TimeSlotViewSettings(
+        timeIntervalWidth: 100,
+      ),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Change time interval width](images/timeslot-views/time-interval-width.jpg)
 
 ## Flexible working days and working hours
 
@@ -108,6 +133,7 @@ You can restrict the user interaction such as selection and highlights specific 
 
 >**NOTE** 
 * If time region has both the text and icon then it will draw icon only.
+* The `TimeRegion` not applicable, when the calendar view is set to `timelineMonth`.
 
 ### Selection restriction in timeslots
 You can enable or disable the touch interaction of `TimeRegion` using the [enablePointerInteraction](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegion/enablePointerInteraction.html) property of `TimeRegion`. By default, its value is true.
@@ -263,7 +289,7 @@ The `specialTimeRegion` background color can be customized by using the [color](
 
 ## Full screen calendar
 
-Calendar time interval height can be adjusted based on screen height by changing the value of `timeIntervalHeight` property to -1. It will auto-fit to the screen height and width.
+The calendar time interval height and width can be adjusted based on the screen height by changing the value of the `timeiIntervalHeight` and `timeIntervalWidth` property to -1. It will auto fit the screen height and width.
 
 {% tabs %}
 {% highlight Dart %}
@@ -364,6 +390,7 @@ class _AppointmentDataSource extends CalendarDataSource {
 * Appointment duration value will be set, when the appointment duration value greater than `minimumAppointmentDuration`.
 * `timeInterval` value will be set, when `minimumAppointmentDuration` greater than `timeInterval` with lesser appointment duration.
 * All day Appointment does not support `minimumAppointmentDuration`.
+* The `minimumAppointmentDuration` property not applicable when the calendar view is set to `timelineMonth`.
 
 ## Timeline appointment height
 
