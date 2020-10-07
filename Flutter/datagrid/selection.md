@@ -738,7 +738,7 @@ Widget build(BuildContext context) {
 
 ## Cell Tap callbacks
 
-The datagrid provides the following callbacks to handle interactions to the grid cell
+The datagrid provides the following callbacks to handle interactions to the cells,
 
 * [onCellTap](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onCellTap.html) : Called when a tap with a cell has occurred.
 * [onCellDoubleTap](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onCellDoubleTap.html) : Called when user is tapped a cell with a primary button at the same cell twice in quick succession.
