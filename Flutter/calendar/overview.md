@@ -17,7 +17,7 @@ The Syncfusion Flutter Calendar library was written natively in Dart and has sev
 
 * **Multiple calendar views**: A wide range of built-in view modes are available: day, week, workweek, month, schedule, timeline day, timeline week, timeline workweek. The control allows you to conveniently customize every view with unique, view-specific options.
 
-![Multiple calendar views](images/overview/multiple_calenda_views.png)
+![Multiple calendar views](images/overview/multiple_calendar_views.png)
 
 * **Appointments**: Appointments contain information on events scheduled at specific times. In addition to default appointments, users can use their own collections to connect a business entity to an appointment by mapping their fields, such as start time, end time, subject, notes, and recurrence.
 
