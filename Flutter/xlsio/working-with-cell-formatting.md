@@ -520,7 +520,8 @@ sheet.getRangeByName('B10').setText('_(\$* #,##0_)');
 sheet.getRangeByName('C10').numberFormat = '_(\$* #,##0_)';
 sheet.getRangeByName('C10').setNumber(234);
 
-sheet.getRangeByName('A1:C3').columnWidth = 11;
+sheet.getRangeByName('A1').columnWidth = 21;
+sheet.getRangeByName('B1:C1').columnWidth = 13;
 
 // save and dispose workbook.
 workbook.save('NumberFormats.xlsx');
