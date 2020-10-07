@@ -434,6 +434,7 @@ Widget build(BuildContext context) {
           showTicks: true,
           numberFormat: NumberFormat("\$"),
           child: Container(
+             height: 130,
              child: SfCartesianChart(
                   margin: const EdgeInsets.all(0),
                   primaryXAxis: NumericAxis(
@@ -447,12 +448,12 @@ Widget build(BuildContext context) {
                   series: <ColumnSeries<Data, double>>[
                         ColumnSeries<Data, double>(
                              dataSource: _chartData,
+                             color: Color.fromARGB(255, 126, 184, 253),
                              xValueMapper: (Data sales, _) => sales.x,
                              yValueMapper: (Data sales, _) => sales.y)
                         ],
                   ),
-             height: 130,
-          ),
+            ),
         ),
       ),
   );
