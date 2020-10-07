@@ -190,7 +190,6 @@ You can customize the text style of blackout dates by using the [blackoutDatesTe
 {% highlight Dart %}
 
 @override
-@override
 Widget build(BuildContext context) {
   return SfCalendar(
     view: CalendarView.month,
