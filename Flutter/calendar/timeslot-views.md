@@ -289,7 +289,7 @@ The `specialTimeRegion` background color can be customized by using the [color](
 
 ## Full screen calendar
 
-The calendar time interval height and width can be adjusted based on the screen height by changing the value of the `timeiIntervalHeight` and `timeIntervalWidth` property to -1. It will auto fit the screen height and width.
+The calendar time interval height and width can be adjusted based on the screen height by changing the value of the `timeIntervalHeight` and `timeIntervalWidth` property to -1. It will auto fit the screen height and width.
 
 {% tabs %}
 {% highlight Dart %}

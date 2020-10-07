@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Builders in the Flutter Calendar | Scheduler | Syncfusion
-description: Learn about the builders in Syncfusion Flutter Calendar and the usage of the builders
+description: Learn about the builders in Syncfusion Flutter Calendar and assigning custom widgets to calendar through builders
 platform: flutter
 control: SfCalendar
 documentation: ug
@@ -15,7 +15,7 @@ The calendar has two builders to create and assign your custom view:
 *. Schedule view month header builder
 
 ## Month cell builder
-The [MonthCellBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthCellBuilder.html) allows you to design your custom view and assign the view to the month cells of the calendar by returning an appropriate widget in the [monthCellBuiler](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/monthCellBuilder.html) of [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html).
+The [MonthCellBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthCellBuilder.html) allows you to design your custom view and assign the view to the month cells of the calendar by returning an appropriate widget in the [monthCellBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/monthCellBuilder.html) of [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html).
 
 [MonthCellDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/MonthCellDetails-class.html) - returns the details of the month cell.
 
