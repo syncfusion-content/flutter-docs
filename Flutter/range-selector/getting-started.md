@@ -442,6 +442,8 @@ Widget build(BuildContext context) {
                     maximum: _max,
                   ),
                   primaryYAxis: NumericAxis(isVisible: false, maximum: 4),
+                  plotAreaBorderWidth: 0,
+                  plotAreaBackgroundColor: Colors.transparent,
                   series: <ColumnSeries<Data, double>>[
                         ColumnSeries<Data, double>(
                              dataSource: _chartData,
@@ -449,7 +451,7 @@ Widget build(BuildContext context) {
                              yValueMapper: (Data sales, _) => sales.y)
                         ],
                   ),
-             height: 250,
+             height: 130,
           ),
         ),
       ),
