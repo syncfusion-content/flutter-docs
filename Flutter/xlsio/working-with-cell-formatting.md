@@ -125,7 +125,7 @@ workbook.dispose();
 
 {% endhighlight %}
 
-![globalstyle](images/globalstyle.jpg)
+![globalstyle](images/GlobalStyle.png)
 
 ## Apply Number Formats 
 
@@ -528,7 +528,7 @@ workbook.dispose();
 
 {% endhighlight %}
 
-![numberformat](images/numberformat.jpg)
+![numberformat](images/NumberFormats.png)
 
 ## Access display text
 
