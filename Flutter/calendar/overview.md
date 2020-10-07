@@ -35,6 +35,10 @@ The Syncfusion Flutter Calendar library was written natively in Dart and has sev
 
 ![Schedule view](images/overview/Schedule_view.png)
 
+* **Resource view**: Display the appointments of each resource in a discrete timeline view to enhance viewability.
+
+![Resource view](images/overview/resource-view.png)
+
 * **Special time regions**: Disable interactions and selections for specific time ranges. This is useful when you want to block user interaction during holidays or another special events and to highlight those time slots.
 ![Calendar time regions](images/overview/Special_region.png)
 
@@ -43,6 +47,14 @@ The Syncfusion Flutter Calendar library was written natively in Dart and has sev
 ![Flexible working days](images/overview/Flexible_working_days.png)
 
 * **First day of the week**: Customize the first day of the week as needed. The default is Sunday. 
+
+* **Blackout dates**: Disable any date in a month and timeline month view of a calendar to make it inactive. You can easily prevent the selection of weekends by disabling them.
+
+![Blackout dates](images/overview/blackout_dates.png)
+
+* **Hide leading and trailing dates**: Hide the next month and previous month dates in the calendar to enhance the appearance.
+
+![Hide leading trailing dates](images/overview/hide-leading-trailing-dates.jpg)
 
 ![First day of week](images/overview/First_day_of_week.png)
 

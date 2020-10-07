@@ -169,12 +169,12 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
 
 ## onDataLabelTapped
 
-Triggers when tapping on the data label of the data point in the series. The [`onDataLabelTapped`]() Callback contains the following arguments.
+Triggers when tapping on the data label of the data point in the series. The [`onDataLabelTapped`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/onDataLabelTapped.html) Callback contains the following arguments.
 
-* [`position`]() - specifies the position of the tapped data label in logical pixels.
-* [`seriesIndex`]() - Specifies the series index of the tapped data label
-* [`pointIndex`]() - Specifies the point index of the tapped data label.
-* [`text`]() - Specifies the content of the tapped data label.
+* [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/position.html) - specifies the position of the tapped data label in logical pixels.
+* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/seriesIndex.html) - Specifies the series index of the tapped data label
+* [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/pointIndex.html) - Specifies the point index of the tapped data label.
+* [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/text.html) - Specifies the content of the tapped data label.
 
 N> This callback will not be called, when the builder is specified for data label (data label template). For this case, custom widget specified in the [`DataLabelSettings.builder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/builder.html) property can be wrapped using the [`GestureDetector`](https://api.flutter.dev/flutter/widgets/GestureDetector-class.html) and this functionality can be achieved in the application level.
 
@@ -184,8 +184,8 @@ N> This callback will not be called, when the builder is specified for data labe
       return Container(
         child: SfFunnelChart(
           onDatalabelTapped: (DataLabelTapArgs args) {
-            print(arg.seriesIndex);                 
-          }
+            print(args.seriesIndex);                 
+          },
           series: FunnelSeries<Sample, DateTime>(
               dataSource: sample,
               xValueMapper: (Sample sales, _) => sales.x,

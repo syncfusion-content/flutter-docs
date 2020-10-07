@@ -539,7 +539,7 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
 ### SelectDataPoints method in selectionBehavior
 
-The [`selectDataPoints`]() method is used to select the data point programmatically. The required arguments are listed below.
+The [`selectDataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/selectDataPoints.html) method is used to select the data point programmatically. The required arguments are listed below.
 
 * `pointIndex` - index of the point which needs to be selected.
 * `seriesIndex` - index of the series for which the pointIndex is specified and this is an optional argument. By default it will be considered as 0.

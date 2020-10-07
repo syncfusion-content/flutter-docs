@@ -1026,7 +1026,7 @@ Determines the value axis range, based on the visible data points or based on th
 
 By default, value axis range will be calculated automatically based on the visible data points on dynamic changes. The visible data points are changed on performing interactions like pinch zooming, selection zooming, panning and also on specifying [visibleMinimum](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/visibleMinimum.html) and [visibleMaximum](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/visibleMaximum.html) values.
   
-To toggle this functionality, [`anchorRangeToVisiblePoints`]() property can be used. i.e. on setting this property to false, the value axis range will be calculated based on all the data points in chart irrespective of visible points.
+To toggle this functionality, [`anchorRangeToVisiblePoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/anchorRangeToVisiblePoints.html) property can be used. i.e. on setting this property to false, the value axis range will be calculated based on all the data points in chart irrespective of visible points.
   
 N> This is applicable only to the value axis and not for other axis and applicable only when zoom mode is set to x.
   
@@ -1041,10 +1041,9 @@ N> This is applicable only to the value axis and not for other axis and applicab
       );
     }
 
-![Auto_Range_Calculation](images/axis-customization/auto_range_calculation.gif)
-
 {% endhighlight %}
 
+![Auto_Range_Calculation](images/axis-customization/auto_range_calculation.gif)
 
 ## See Also
 
