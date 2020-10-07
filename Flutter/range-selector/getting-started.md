@@ -437,7 +437,10 @@ Widget build(BuildContext context) {
              child: SfCartesianChart(
                   margin: const EdgeInsets.all(0),
                   primaryXAxis: NumericAxis(
-                       isVisible: false,),
+                    isVisible: false,
+                    minimum: _min,
+                    maximum: _max,
+                  ),
                   primaryYAxis: NumericAxis(isVisible: false, maximum: 4),
                   series: <ColumnSeries<Data, double>>[
                         ColumnSeries<Data, double>(
