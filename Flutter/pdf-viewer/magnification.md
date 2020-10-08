@@ -13,7 +13,7 @@ The content of a document can be zoomed in and out either by pinch to zoom or ch
 
 ## Change the zoom level factor programmatically
 
-You can change or control the zoom level factor programmatically using the `zoomLevel` property. The zoom level factor value can be set between 1.0 and 3.0. The default value is 1.0. The following code example explains the same.
+You can change or control the zoom level factor programmatically using the [zoomLevel](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/zoomLevel.html) property. The zoom level factor value can be set between 1.0 and 3.0. The default value is 1.0. The following code example explains the same.
 
 {% tabs %}
 {% highlight Dart %}
@@ -57,7 +57,7 @@ N> The maximum allowed zoom level is 3.0 and if any value is set beyond that, th
 
 ## Enable or disable the double-tap zoom.
 
-By default, the `SfPdfViewer` will be zoomed in and out when double-tapped. You can enable or disable the double-tap zoom using the `enableDoubleTapZooming` property. The following code example explains the same.
+By default, the `SfPdfViewer` will be zoomed in and out when double-tapped. You can enable or disable the double-tap zoom using the [enableDoubleTapZooming](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/enableDoubleTapZooming.html) property. The following code example explains the same.
 
 {% tabs %}
 {% highlight Dart %}
@@ -76,17 +76,17 @@ Widget build(BuildContext context) {
 
 ## Callbacks
 
-The `SfPdfViewer` magnification supports the `PdfZoomLevelChangedCallback` to notify the zoom level changes.
+The `SfPdfViewer` magnification supports the [PdfZoomLevelChangedCallback](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfZoomLevelChangedCallback.html) to notify the zoom level changes.
 
 ### Zoom level changed callback
 
-The `onZoomLevelChanged` callback triggers when the zoom level is changed in the `SfPdfViewer`. That is,
+The [onZoomLevelChanged](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onZoomLevelChanged.html) callback triggers when the zoom level is changed in the `SfPdfViewer`. That is,
 
 •	When the pinch zoom is performed.
 •	When the double-tap zoom is performed.
 •	When the `zoomLevel` property is changed.
 
-The `PdfZoomDetails` will return the `oldZoomLevel` title and `newZoomLevel` values. The following code example explains the same.
+The [PdfZoomDetails](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfZoomDetails-class.html) will return the `oldZoomLevel` title and `newZoomLevel` values. The following code example explains the same.
 
 {% tabs %}
 {% highlight Dart %}
