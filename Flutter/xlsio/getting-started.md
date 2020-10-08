@@ -26,7 +26,7 @@ syncfusion_flutter_xlsio: ^xx.x.xx
 
 {% endhighlight %}
 
-N> Here **xx.x.xx** denotes the current version of ['Syncfusion Flutter XlsIO'](syncfusion-flutter-xlsio) package.
+N> Here **xx.x.xx** denotes the current version of ['Syncfusion Flutter XlsIO'](https://pub.dev/packages/syncfusion_flutter_xlsio/versions) package.
 
 **Get packages**
 
@@ -66,24 +66,25 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 
-Include the following code snippet in the button click event to create a PDF file.
+Include the following code snippet in the button click event to create a Excel file.
 
 {% highlight dart %}
 
 Future<void> _createExcel() async {
+// Create a new Excel Document.
+final Workbook workbook = Workbook();
 
-//Create a new Excel Document
-Workbook workbook = new Workbook();
+// Accessing worksheet via index.
+final Worksheet sheet = workbook.worksheets[0];
 
-//Accessing worksheet via index
-Workbook.worksheets[0];
+// Set the text value.
+sheet.getRangeByName('A1').setText('Hello World!');
 
-//Save the document
-Workbook.save(“CreateExcel.xlsx”);
+// Save the document.
+workbook.save('CreateExcel.xlsx');
 
-//dispose workbook
-Workbook.dispose();
-
+// dispose workbook.
+workbook.dispose();
 }
 
 {% endhighlight %}
@@ -113,28 +114,28 @@ import 'package:path_provider/path_provider.dart';
 
 {% endhighlight %}
 
-Include the following code snippet in _createExcel method to open the Excel document in mobile after saving it.
+Include the following code snippet in _createExcel() method to open the Excel document in mobile after saving it.
 
 {% highlight dart %}
 
-//Get external storage directory
+// Get external storage directory
 final directory = await getExternalStorageDirectory();
 
-//Get directory path
+// Get directory path
 final path = directory.path;
 
-//Create an empty file to write Excel data
+// Create an empty file to write Excel data
 File file = File('$path/Output.xlsx');
 
-//Write Excel data
+// Write Excel data
 await file.writeAsBytes(bytes, flush: true);
 
-//Open the PDF document in mobile
+// Open the Excel document in mobile
 OpenFile.open('$path/Output.xlsx');
 
 {% endhighlight %}
 
-## Save and download a PDF document in web
+## Save and download a Excel document in web
 
 You can save and download a Excel document in web by using the following steps.
 
@@ -148,7 +149,7 @@ import 'dart:js' as js;
 
 {% endhighlight %}
 
-Include the following code snippet in _createExcel method to open the document in web after saving it.
+Include the following code snippet in _createExcel() method to open the document in web after saving it.
 
 {% highlight dart %}
 
@@ -166,13 +167,13 @@ Add the following code in the header section of index.html file under the web fo
 
 <script>
  async function download() {
- var excelAsDataUri = "data:application/excel;base64, " + excelData;
- var link = document.createElement('a');
- link.download = filename; 
- link.href = excelAsDataUri;
- link.type = 'application/excel';
- link.click(); 
-} 
+  var excelAsDataUri = "data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64, " + exceldata;
+  var link = document.createElement('a');
+  link.download = filename;
+  link.href = excelAsDataUri;
+  link.type = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
+  link.click();
+}
 </script>
 
 {% endhighlight %}

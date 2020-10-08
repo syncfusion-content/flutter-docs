@@ -19,21 +19,24 @@ The following code snippet shows how to create worksheets within a workbook.
 
 {% highlight dart %}
 
-//The new workbook will have 4 worksheets.
-Workbook workbook = new Workbook(4);
+// The new workbook will have 4 worksheets.
+final Workbook workbook = Workbook(4);
 
-//Creating a Sheet. 
-Worksheet sheet = new Worksheet(workbook);
+// Creating a Sheet.
+final Worksheet sheet = Worksheet(workbook);
 workbook.worksheets.addWithSheet(sheet);
 
 //Creating a Sheet with name “Sample”.
-Worksheet sheet1 = workbook.worksheets.addWithName('Sample');
+final Worksheet sheet1 = workbook.worksheets.addWithName('Sample');
 
-//Save workbook.
+// Add worksheet to the collection.
+final Worksheet sheet2 = workbook.worksheets.add();
+
+// Save workbook.
 workbook.save('Output.xlsx');
 
-//dispose workbook
-Workbook.dispose();
+// Dispose workbook
+workbook.dispose();
 
 {% endhighlight %}
 
@@ -48,21 +51,21 @@ The below codes illustrate how to access a worksheet from its worksheets collect
 
 {% highlight dart %}
 
-//Create a new Excel Document.
-Workbook workbook = new Workbook();
+// Create a new Excel Document.
+final Workbook workbook = Workbook();
 workbook.worksheets.addWithName('sample');
 
-//Accessing via index. 
-Worksheet sheet = workbook.Worksheets[0]; 
+// Accessing via index. 
+final Worksheet sheet = workbook.worksheets[0]; 
 
 //Accessing via sheet Name. 
-Worksheet NamedSheet = workbook.Worksheets["Sample"];
-  
-//Save workbook.
+final Worksheet namedSheet = workbook.worksheets['Sample'];
+
+// Save workbook.
 workbook.save('Output.xlsx');
 
 //dispose workbook.
-Workbook.dispose();
+workbook.dispose();
 
 {% endhighlight %}
 
@@ -75,19 +78,19 @@ The following code snippet shows how to hide the grid lines using **showGridLine
 {% highlight dart %}
 
 //Create a new Excel Document.
-Workbook workbook = new Workbook();
+final Workbook workbook = Workbook();
 
 //Accessing sheet via index.
-Worksheet sheet = workbook.worksheets[0];
+final Worksheet sheet = workbook.worksheets[0];
 
 //Hide grid line.
-sheet.showGridLines = false;
+sheet.showGridLines = false;
 
 //Save workbook.
 workbook.save('Output.xlsx');
 
 //dispose workbook.
-Workbook.dispose();
+workbook.dispose();
 
 {% endhighlight %}
 
@@ -95,29 +98,29 @@ Workbook.dispose();
 
 **Resize a range of rows or columns**
 
-Single/Multiple rows or columns can be resized and accessed by using the**rowHeight** and **columnWidth** properties of **Range**. The following code snippet shows how to resize single/multiple rows and columns.
+Single/Multiple rows or columns can be resized and accessed by using the **rowHeight** and **columnWidth** properties of **Range**. The following code snippet shows how to resize single/multiple rows and columns.
 
 {% highlight dart %}
 
-//Create a new Excel Document.
-Workbook workbook = new Workbook();
+// Create a new Excel Document.
+final Workbook workbook = Workbook();
 
-//Accessing sheet via index.
-Worksheet sheet = workbook.worksheets[0];
+// Accessing sheet via index.
+final Worksheet sheet = workbook.worksheets[0];
 
-//Modifying the row height for single and multiple range.
-sheet.getRangeByName('A1').rowHeight = 10;
-sheet.getRangeByName('A2:A5').rowHeight = 20;
+// Modifying the row height for single and multiple range.
+sheet.getRangeByName('A1').rowHeight = 10;
+sheet.getRangeByName('A2:A5').rowHeight = 20;
 
-//Modifying the columnWidth for single and multiple range.
-sheet.getRangeByName('A1').columnWidth = 20;
-sheet.getRangeByName('A2:A5').columnWidth = 30;
+// Modifying the columnWidth for single and multiple range.
+sheet.getRangeByName('A1').columnWidth = 20;
+sheet.getRangeByName('A2:A5').columnWidth = 30;
 
-//Save workbook.
+// Save workbook.
 workbook.save('Output.xlsx');
 
-//dispose workbook.
-Workbook.dispose();
+// Dispose workbook.
+workbook.dispose();
 
 {% endhighlight %}
 
