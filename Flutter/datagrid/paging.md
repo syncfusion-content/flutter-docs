@@ -250,8 +250,7 @@ Description</th>
 horizontal
 </td>
 <td>
-This is the default enum value for direction. Arranges all the navigation buttons and numeric buttons horizontally..
-{{'![flutter datapager in horizontal direction](images/paging/flutter-datapager-direction-horizontal.png)'|markdownify}}
+This is the default enum value for direction. Arranges all the navigation buttons and numeric buttons horizontally.{{'![flutter datapager in horizontal direction](images/paging/flutter-datapager-direction-horizontal.png)'|markdownify}}
 </td>
 </tr>
 <tr>
@@ -259,8 +258,7 @@ This is the default enum value for direction. Arranges all the navigation button
 vertical
 </td>
 <td>
-Arranges all the navigation buttons and numeric buttons vertically by setting [Axis.vertical] to direction property.
-{{'![flutter datapager in vertical direction](images/paging/flutter-datapager-direction-vertical.png)'|markdownify}}
+Arranges all the navigation buttons and numeric buttons vertically by setting Axis.vertical to direction property.{{'![flutter datapager in vertical direction](images/paging/flutter-datapager-direction-vertical.png)'|markdownify}}
 </td>
 </tr>
 </table>
