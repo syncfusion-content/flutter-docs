@@ -13,7 +13,7 @@ documentation: ug
 
 ### Show method in tooltipBehavior
 
-The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/show.html) method is used to activate the tooltip at the specified location.
+The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/show.html) method is used to activate the tooltip at the specified x and y point values.
 
 {% highlight dart %} 
 
@@ -58,13 +58,9 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
   }
 
     void show() {
-        tooltip.show(121,164);
-      }
-
-    void hide(){
-        tooltip.hide();
+      tooltip.show(10, 17);
     }
-
+  
   {% endhighlight %}
 
 ### showByIndex method in tooltipBehavior
@@ -120,10 +116,6 @@ The below mentioned arguments are given to the [`showByIndex`](https://pub.dev/d
         )
       )
     );
-  }
-
-    void hide(){
-        tooltip.hide();
     }
 
   {% endhighlight %}
@@ -176,12 +168,7 @@ x & y - logical pixel values to position the tooltip.
         )
       )
     );
-   }
-
-    void hide(){
-        tooltip.hide();
     }
-
   {% endhighlight %}
 
 ### Hide method in tooltipBehavior
@@ -227,7 +214,7 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
         )
       )
     );
-  }
+    }
 
     void hide(){
         tooltip.hide();
@@ -235,40 +222,40 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
   {% endhighlight %}
 
-  ## Methods in selectionSettings
+## Methods in selectionBehavior
 
-### SelectionIndex method in selectionSettings
+### SelectDataPoints method in selectionBehavior
 
-The [`selectionIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionSettings/selectionIndex.html) method is used to select the data point programmatically. The required arguments are listed below.
+The [`selectDataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/selectDataPoints.html) method is used to select the data point programmatically. The required arguments are listed below.
 
-* pointIndex - specifies the point index value.
-* seriesIndex - specifies the series index value.
-* selectionType - specifies the [`SelectionType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionType-class.html) and this is an optional parameter. 
-* multiSelect - bool property specifies the multiple selection and this is an optional parameter.
+* `pointIndex` - index of the point which needs to be selected.
+* `seriesIndex` - index of the series for which the pointIndex is specified and this is an optional parameter. By default it will be considered as 0.
+
+N> The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/enableMultiSelection.html) is also applicable for this but, it is based on the API values specified in the chart.
 
 {% highlight dart %}
 
     SfCircularChart chart;
-    SelectionSettings selection;
+    SelectionBehavior selection;
 
     @override
     Widget build(BuildContext context) {
     
     final List<ChartData> chartData = [
-      hartData(10, 17),
+      ChartData(10, 17),
       ChartData(20, 34)
       // Add the required data
     ];
 
-    selection = SelectionSettings(enable: true);
+    selection = SelectionBehavior(enable: true);
     
     chart = SfCircularChart(
       series: <CircularSeries>[
-        ColumnSeries<ChartData, double>(
+        PieSeries<ChartData, double>(
             dataSource: chartData,
             xValueMapper: (ChartData data, _) => data.x,
             yValueMapper: (ChartData data, _) => data.y,
-            selectionSettings: selection
+            selectionBehavior: selection
         )
       ]
     );
@@ -286,10 +273,10 @@ The [`selectionIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/l
         )
       )
     );
-  }
+    }
 
     void select() {
-        selection.selectionIndex(1, 0);
+        selection.selectDataPoints(1, 0);
     }
 
 {% endhighlight %}

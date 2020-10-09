@@ -22,7 +22,7 @@ syncfusion_localizations: ^XX.X.XX
 
 {% endhighlight %}
 
-Next, import the `flutter_localizations` and `syncfusion_localizations` library and specify the `localizationsDelegates` and `supportedLocales` for `MaterialApp` to localize the contents in the `SfPdfViewer` (pagination dialog and bookmark view).
+Next, import the `flutter_localizations` and `syncfusion_localizations` library and specify the `localizationsDelegates` and `supportedLocales` for `MaterialApp` to localize the contents in the `SfPdfViewer` (page navigation dialog and bookmark view).
 
 {% tabs %}
 {% highlight Dart %}
@@ -57,3 +57,5 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Localization](images/localization/page_navigation_dialog_localization.png)

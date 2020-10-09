@@ -88,8 +88,8 @@ Widget build(BuildContext context) {
       body: SfDataGrid(
           source: _employeeDatasource,
           columnSizer: _columnSizer,
-          onQueryRowHeight: (rowIndex) {
-            double height = _columnSizer.getAutoRowHeight(rowIndex);
+          onQueryRowHeight: (RowHeightDetails details) {
+            double height = _columnSizer.getAutoRowHeight(details.rowIndex);
             return height;
           },
           columns: <GridColumn>[
@@ -152,8 +152,8 @@ Widget build(BuildContext context) {
       body: SfDataGrid(
           source: _autoRowHeightDataGridSource,
           columnSizer: _columnSizer,
-          onQueryRowHeight: (int rowIndex) {
-            final double height = _columnSizer.getAutoRowHeight(rowIndex,
+          onQueryRowHeight: (RowHeightDetails details) {
+            final double height = _columnSizer.getAutoRowHeight(details.rowIndex,
                 excludedColumns: _excludeColumns);
             return height;
           },
@@ -210,8 +210,8 @@ Widget build(BuildContext context) {
       body: SfDataGrid(
           source: _autoRowHeightDataGridSource,
           columnSizer: _columnSizer,
-          onQueryRowHeight: (int rowIndex) {
-            final double height = _columnSizer.getAutoRowHeight(rowIndex,
+          onQueryRowHeight: (RowHeightDetails details) {
+            final double height = _columnSizer.getAutoRowHeight(details.rowIndex,
                 canIncludeHiddenColumns: true);
             return height;
           },
@@ -271,10 +271,10 @@ Widget build(BuildContext context) {
       body: SfDataGrid(
     source: _employeeDatasource,
     columnSizer: _columnSizer,
-    onQueryRowHeight: (int rowIndex) {
-      final double height = _columnSizer.getAutoRowHeight(rowIndex);
+    onQueryRowHeight: (RowHeightDetails details) {
+      final double height = _columnSizer.getAutoRowHeight(details.rowIndex);
       // The header row index.
-      if(rowIndex == 0) {
+      if(details.rowIndex == 0) {
         return height;
       }
       return 49.0;
@@ -295,3 +295,127 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![flutter datagrid shows header row with custom height](images/row-height-customization/flutter-datagrid-auto-fit-header-row.png)
+
+## Refresh row height for specific row
+
+The `SfDataGrid` allows you to update or refresh specific row and it's height when 
+an underlying data is updated.
+
+You can refresh a specific row and its height by using the [DataGridController.refreshRow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/refreshRow.html) method. This method has following two arguments,
+
+* **rowIndex**- Specify the required row index which is required to refresh. If you specify this, the data alone will be refreshed for a row.
+
+* **recalculateRowHeight** - Decides whether a height of a row should be refreshed along with the data.
+
+If you call `refreshRow` method, `onQueryRowHeight` callback will called for that specific row. So, auto-calculation of height can be recalculated for that row.
+
+In the below example, row data is updated when the `refreshRow` is called in `onPressed` callback of the `FlatButton`.
+
+{% tabs %}
+{% highlight Dart %} 
+
+final List<Employee> _employees = <Employee>[];
+
+final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
+
+final DataGridController _controller = DataGridController();
+
+final ColumnSizer _columnSizer = ColumnSizer();
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    appBar: AppBar(
+      title: const Text('Syncfusion Flutter DataGrid'),
+    ),
+    body: Column(
+      children: [
+        FlatButton(
+          child: const Text('Update cell value),
+              onPressed: () {
+                _employees[0].id=1010;
+                _employeeData[0].name = 'Maria Anders';
+                _employeeData[0].designation = 'Sales Representative';
+                _employees[0].salary = 25000;
+                _controller.refreshRow(0);
+              }),
+          SfDataGrid(
+            source: _employeeDataSource,
+            controller: _controller,
+            columnSizer: _columnSizer,
+            onQueryRowHeight: (RowHeightDetails details) {
+                    return _columnSizer.getAutoRowHeight(details.rowIndex);
+              },
+            columns: <GridColumn>[
+              GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+              GridTextColumn(mappingName: 'name', headerText: 'Name'),
+              GridTextColumn(
+                  mappingName: 'designation', headerText: 'Designation'),
+              GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+In the below example, row data is refreshed along with its row height when the `refreshRow` is called in `onPressed` callback of the `FlatButton`.
+
+{% tabs %}
+{% highlight Dart %} 
+
+final List<Employee> _employees = <Employee>[];
+
+final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
+
+final DataGridController _controller = DataGridController();
+
+final ColumnSizer _columnSizer = ColumnSizer();
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    appBar: AppBar(
+      title: const Text('Syncfusion Flutter DataGrid'),
+    ),
+    body: Column(
+      children: [
+        FlatButton(
+          child: const Text('Update cell value),
+              onPressed: () {
+                _employees[0].id=1010;
+                _employeeData[0].name = 'Maria Anders';
+                _employeeData[0].designation = 'Sales Representative';
+                _employees[0].salary = 25000;
+                _controller.refreshRow(0, recalculateRowHeight: true);
+              }),
+          SfDataGrid(
+            source: _employeeDataSource,
+            controller: _controller,
+            columnSizer: _columnSizer,
+            onQueryRowHeight: (RowHeightDetails details) {
+                    return _columnSizer.getAutoRowHeight(details.rowIndex);
+              },
+            columns: <GridColumn>[
+              GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+              GridTextColumn(mappingName: 'name', headerText: 'Name'),
+              GridTextColumn(
+                  mappingName: 'designation', headerText: 'Designation'),
+              GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+
+
+
+   

@@ -196,6 +196,101 @@ The ActivationMode enum contains the following values:
 
 {% endhighlight %}
 
+### Trackball tooltip overlap
+
+[`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) provides support to avoid the overlapping of two or more tooltips of the trackball and no API is required for this feature as it will be done by default. For example, If we have 2 or more series data points rendered close to each other then, the trackball tooltips of each data point will not be overlap with each other.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+          child: Center(
+            child: Container(
+              child: SfCartesianChart(
+                trackballBehavior: TrackballBehavior(
+                  enable: true
+                )
+                <LineSeries<SalesData, double>>[
+                      LineSeries<SalesData, double>(
+                          dataSource: data,
+                          markerSettings: MarkerSettings(enable: true),
+                          xValueMapper: (SalesData sales, _) => sales.year,
+                          yValueMapper: (SalesData sales, _) => sales.sales)
+                      LineSeries<SalesData, double>(
+                          dataSource: data2,
+                          markerSettings: MarkerSettings(enable: true),
+                          xValueMapper: (SalesData sales, _) => sales.year,
+                          yValueMapper: (SalesData sales, _) => sales.sales),
+                      LineSeries<SalesData, double>(
+                          dataSource:data3,
+                          markerSettings: MarkerSettings(enable: true),
+                          xValueMapper: (SalesData sales, _) => sales.year,
+                          yValueMapper: (SalesData sales, _) => sales.sales),
+                      LineSeries<SalesData, double>(
+                          dataSource:data4,
+                          markerSettings: MarkerSettings(enable: true),
+                          xValueMapper: (SalesData sales, _) => sales.year,
+                          yValueMapper: (SalesData sales, _) => sales.sales)
+                ]
+              )
+            )
+        )
+      );
+    }
+
+{% endhighlight %}
+
+![Trackball tooltip overlap](images/trackball-crosshair/trackball_overlap.png)
+
+### Trackball marker
+
+Trackball markers are used to provide information about the exact point location. You can add a shape to adorn each data point when the trackball is visible. Trackball markers can be enabled by using the [`markerVisibility`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballMarkerSettings/markerVisibility.html) property of [`TrackballMarkerSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballMarkerSettings-class.html). The below [`markerVisibility`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballMarkerSettings/markerVisibility.html) property values determines whether the trackball marker should be visible or not when the trackball is enabled in the chart
+
+* [`TrackballVisibilityMode.auto`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballVisibilityMode-class.html) – If the [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/isVisible.html) property in the series [`markerSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings-class.html) is set  to true, then the trackball marker will also be displayed for that particular series, else it will not be displayed.
+* [`TrackballVisibilityMode.visible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballVisibilityMode-class.html) – Makes the trackball marker visible for all the series irrespective of considering the [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/isVisible.html) property's value in the [`markerSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings-class.html).
+* [`TrackballVisibilityMode.hidden`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballVisibilityMode-class.html) – Hides the trackball marker for all the series.
+
+Also refer, [marker customization](./marker-datalabel#Marker) for customizing the appearance of trackball marker.  
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+          child: Center(
+            child: Container(
+              child: SfCartesianChart(
+                trackballBehavior: TrackballBehavior(
+                  enable: true,
+                  markerSettings: TrackballMarkerSettings(
+                    markerVisibility: TrackballVisibilityMode.visible
+                  )
+                )
+                <LineSeries<SalesData, double>>[
+                      LineSeries<SalesData, double>(
+                          dataSource: data,
+                          xValueMapper: (SalesData sales, _) => sales.year,
+                          yValueMapper: (SalesData sales, _) => sales.sales)
+                      LineSeries<SalesData, double>(
+                          dataSource: data2,
+                          xValueMapper: (SalesData sales, _) => sales.year,
+                          yValueMapper: (SalesData sales, _) => sales.sales),
+                      LineSeries<SalesData, double>(
+                          dataSource:data3,
+                          xValueMapper: (SalesData sales, _) => sales.year,
+                          yValueMapper: (SalesData sales, _) => sales.sales),
+                ]
+              )
+            )
+          )
+      );
+    }
+
+{% endhighlight %}
+
+![Trackball marker](images/trackball-crosshair/trackball_marker.png)
+
 ## Crosshair
 
 Crosshair has a vertical and horizontal line to view the value of the axis. 
@@ -234,7 +329,7 @@ N> The above mentioned properties are only   applicable for SfCartesian types of
 
 ![Crosshair](images/trackball-crosshair/default_crosshair.jpg)
 
-**Track line customization**
+### Track line customization
 
 The appearance of the track line in crosshair can be customized using the following properties.
 
@@ -270,7 +365,7 @@ The appearance of the track line in crosshair can be customized using the follow
 
 ![Customized trackline](images/trackball-crosshair/customized_trackline.jpg)
 
-**Show axis tooltip**
+### Show axis tooltip
 
 The axis tooltip can be enabled using [`enable`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/InteractiveTooltip/enable.html) property of [`crosshairTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/crosshairTooltip.html). You can customize the appearance of axis tooltip using the following properties.
 
@@ -284,7 +379,7 @@ The axis tooltip can be enabled using [`enable`](https://pub.dev/documentation/s
 * [`textStyle.fontStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontStyle.html) – used to change the font style for the chart title.
 * [`textStyle.fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontSize.html) - used to change the font size for the chart title.
 
-**Activation mode**
+### Activation mode
 
 The [`activationMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/activationMode.html) property is used to restrict the visibility of trackball based on the touch actions. The default value of this property is [`ActivationMode.longPress`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode-class.html).
 

@@ -1,19 +1,21 @@
 ---
 layout: post
-title: Pagination in Syncfusion Flutter PDF Viewer | Syncfusion
+title: Page navigation in Syncfusion Flutter PDF Viewer | Syncfusion
 description: This section explains about how to navigate to the desired pages in a PDF document using the Flutter PDF Viewer.
 platform: Flutter
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Pagination in Flutter PDF Viewer (SfPdfViewer)
+# Page navigation in Flutter PDF Viewer (SfPdfViewer)
 
-Navigate to the desired pages instantly either by using the pagination dialog or the controller methods programmatically. If the desired page doesn’t exist, then the navigation will not happen, and the older page will be retained.
+Navigate to the desired pages instantly either by using the page navigation dialog or the controller methods programmatically. If the desired page doesn’t exist, then the navigation will not happen, and the older page will be retained.
+
+![Page navigation dialog](images/page-navigation/page_navigation_dialog.png)
 
 ## Navigate to the desired page programmatically
 
-The `jumpToPage` controller method helps you to navigate to the specified page number in a PDF document. The following code example explains the same
+The [jumpToPage](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/jumpToPage.html) controller method helps you to navigate to the specified page number in a PDF document. The following code example explains the same
 
 {% tabs %}
 {% highlight Dart %}
@@ -55,7 +57,7 @@ Widget build(BuildContext context) {
 
 ## Navigate to the next and previous page programmatically
 
-The `nextPage` and `previousPage` controller methods help you to navigate to the next and previous page of a PDF document. The following code example explains the same.
+The [nextPage](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/nextPage.html) and [previousPage](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/previousPage.html) controller methods help you to navigate to the next and previous page of a PDF document. The following code example explains the same.
 
 {% tabs %}
 {% highlight Dart %}
@@ -106,7 +108,7 @@ Widget build(BuildContext context) {
 
 ## Navigate to the first and last page programmatically
 
-The `firstPage` and `lastPage` controller methods help you to navigate to the first and last page of a PDF document. The following code example explains the same.
+The [firstPage](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/firstPage.html) and [lastPage](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/lastPage.html) controller methods help you to navigate to the first and last page of a PDF document. The following code example explains the same.
 
 {% tabs %}
 {% highlight Dart %}
@@ -157,7 +159,7 @@ Widget build(BuildContext context) {
 
 ## Navigate to the desired offset programmatically
 
-The `jumpTo` controller method moves the scroll position of the `SfPdfViewer` to the specified horizontal and vertical offset. If the specified offset value is wrong, then the scroll will not happen, and the older position will be retained. 
+The [jumpTo](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/jumpTo.html) controller method moves the scroll position of the `SfPdfViewer` to the specified horizontal and vertical offset. If the specified offset value is wrong, then the scroll will not happen, and the older position will be retained. 
 
 N> Both the `xOffset` and `yOffset` are optional parameters and if the offset values are not provided, then the `SfPdfViewer` will be scrolled or moved to the default position (0, 0).
 
@@ -201,18 +203,18 @@ Widget build(BuildContext context) {
 
 ## Callbacks
 
-The `SfPdfViewer` pagination supports the `PdfPageChangedCallback` to notify the page changes.
+The `SfPdfViewer` page navigation supports the [PdfPageChangedCallback](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfPageChangedCallback.html) to notify the page changes.
 
 ### Page changed callback
 
-The `onPageChanged` callback triggers when the page is changed in the `SfPdfViewer`. That is,
+The [onPageChanged](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onPageChanged.html) callback triggers when the page is changed in the `SfPdfViewer`. That is,
 
 * When moved using the touch scroll or scroll head.
-* When the page navigation is performed programmatically using the `jumpToPage` controller method.
-* When scrolling is performed programmatically using the `jumpTo` controller method.
-* When bookmark navigation is performed programmatically using the `jumpToBookmark` controller method.
+* When the page navigation is performed programmatically using the [jumpToPage](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/jumpToPage.html) controller method.
+* When scrolling is performed programmatically using the [jumpTo](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/jumpTo.html) controller method.
+* When bookmark navigation is performed programmatically using the [jumpToBookmark](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/jumpToBookmark.html) controller method.
 
-The `PdfPageChangedDetails` will return the `oldPageNumber`, `newPageNumber`, `isFirstPage` and `isLastPage` values. The following code example explains the same.
+The [PdfPageChangedDetails](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfPageChangedDetails-class.html) will return the `oldPageNumber`, `newPageNumber`, `isFirstPage` and `isLastPage` values. The following code example explains the same.
 
 {% tabs %}
 {% highlight Dart %}

@@ -39,9 +39,70 @@ documentation: ug
 
 {% endhighlight %}
 
-### Dynamic animation
+### Dynamic series animation
 
-[`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) also provide the dynamic animation support for the series.The series can be dynamically added to the charts, it will animated by setting the timer value. when you set the [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/animationDuration.html) value to 0, the series won't be animated. 
+[`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) also provides dynamic animation support for the series.
+
+If you wish to perform initial rendering animation again in the existing series, this method should be called. On calling this method, this particular series will be animated again based on the [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/animationDuration.html) property's value in the series. If this property's value is 0, then the animation will not performed.
+
+{% highlight dart %} 
+
+    Widget build(BuildContext context) {
+    ChartSeriesController _chartSeriesController;
+     return Column(
+       children: <Widget>[
+         Container(
+           child: SfCartesianChart(
+              series: <ChartSeries<_ChartSampleData, String>>[
+                    ColumnSeries<_ChartSampleData, String>(
+                        animationDuration: 2000,
+                        onRendererCreated: (ChartSeriesController controller) {
+                          _chartSeriesController1 = controller;
+                        },
+                        dataSource: chartData,
+                        xValueMapper: (_ChartSampleData sales, _) => sales.x,
+                        yValueMapper: (_ChartSampleData sales, _) => sales.y,
+                        name: 'Unit Sold'),
+                    LineSeries<_ChartSampleData, String>(
+                        animationDuration: 4500,
+                        dataSource: chartData,
+                        onRendererCreated: (ChartSeriesController controller) {
+                          _chartSeriesController2 = controller;
+                        },
+                        xValueMapper: (_ChartSampleData sales, _) => sales.x,
+                        yValueMapper: (_ChartSampleData sales, _) =>
+                            sales.secondSeriesYValue,
+                        yAxisName: 'yAxis1',
+                        markerSettings: MarkerSettings(isVisible: true),
+                        name: 'Total Transaction')
+                       ],
+                        )),
+                        Container(
+                       Row(children: [
+                      child: Container(
+                          child: RaisedButton(
+                            color: Colors.grey[400],
+                            onPressed: () {
+                              _chartSeriesController2?.animate();
+                            },
+                            child: Text('Line'),
+                          )),
+                    ),
+                    Container(
+                        child: RaisedButton(
+                          color: Colors.grey[400],
+                          onPressed: () {
+                            _chartSeriesController1?.animate();
+                          },
+                          child: Text('Column'),
+                        ))],
+                   ),]
+    );
+    }
+
+{% endhighlight %}
+
+![Dynamic series animation](images/cartesian-customization/dynamicanimation.gif)
 
 ## Transpose the series
 

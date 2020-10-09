@@ -70,6 +70,14 @@ This page helps to navigate to the public API's available in the Syncfusion Flut
     </tr>
     <tr>
         <td>
+            PDF Viewer
+        </td>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/pdfviewer-library.html">Link</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
             Radial Gauge
         </td>
         <td>

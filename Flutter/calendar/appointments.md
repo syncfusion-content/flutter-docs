@@ -748,6 +748,28 @@ Widget build(BuildContext context) {
 
 ![Appearance customization](images/appointments/appearance-customization.png)
 
+## Appointment time format
+You can customize the displaying time format in the appointment widget in the month agenda view and schedule view of calendar by specifying the [appointmentTimeTextFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/appointmentTimeTextFormat.html) property of the SfCalendar.
+
+{% tabs %}
+{% highlight Dart %}
+@override
+ Widget build(BuildContext context) {
+   return SfCalendar(
+     view: CalendarView.month,
+     dataSource: _calendarDataSource,
+     appointmentTimeTextFormat: 'HH:mm',
+     monthViewSettings: MonthViewSettings(
+         showAgenda: true
+     ),
+   );
+ }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Appointment time format](images/appointments/appointment_time_format.png)
+
 ## See also
 
 [How to design and configure your appointment editor in event calendar widget Flutter](https://www.syncfusion.com/kb/11204/how-to-design-and-configure-your-appointment-editor-in-event-calendar-widget-flutter)
