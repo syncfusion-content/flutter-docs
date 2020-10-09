@@ -90,6 +90,8 @@ If row is added, removed or replaced in an underlying datasource, you can call t
 
 In the following example, row is added and `notifyDataSourceListeners` is called in `onPressed` callback of the `FlatButton`.
 
+N> `notifyDataSourceListeners` should call from inside the `DataGridSource`.
+
 {% tabs %}
 {% highlight Dart %} 
         
@@ -99,33 +101,40 @@ final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
 
 @override
 Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Syncfusion Flutter DataGrid'),
-      ),
-      body: Column(
-        children: [
-          FlatButton(
-              child: const Text('Add row'),
-              onPressed: () {
-                                _employees.add(Employee(10011, 'Steve', 'Designer', 15000));
-                _employeeDataSource.notifyDataSourceListeners();
+  return Scaffold(
+    appBar: AppBar(
+      title: const Text('Syncfusion Flutter DataGrid'),
+    ),
+    body: Column(
+      children: [
+        FlatButton(
+            child: const Text('Add row'),
+            onPressed: () {
+              _employees.add(Employee(10011, 'Steve', 'Designer', 15000));
+              _employeeDataSource.updateDataGridSource();
+            }),
+        SfDataGrid(
+          source: _employeeDataSource,
+          columns: <GridColumn>[
+            GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+            GridTextColumn(mappingName: 'name', headerText: 'Name'),
+            GridTextColumn(
+                mappingName: 'designation', headerText: 'Designation'),
+            GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+          ],
+        ),
+      ],
+    ),
+  );
+}
 
-              }),
-          SfDataGrid(
-            source: _employeeDataSource,
-            columns: <GridColumn>[
-              GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-              GridTextColumn(mappingName: 'name', headerText: 'Name'),
-              GridTextColumn(
-                  mappingName: 'designation', headerText: 'Designation'),
-              GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
-            ],
-          ),
-        ],
-      ),
-    );
+class EmployeeDataSource extends DataGridSource<Employee> {
+
+  void updateDataGridSource() {
+    notifyDataSourceListeners();
   }
+
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -151,27 +160,34 @@ Widget build(BuildContext context) {
     body: Column(
       children: [
         FlatButton(
-          child: const Text('Update cell value),
-              onPressed: () {
+            child: const Text('Update cell value'),
+            onPressed: () {
+              _employees[0].salary = 25000;
+              _employeeDataSource.updateDataGridSource(
+                  rowColumnIndex: RowColumnIndex(0, 3));
+            }),
+        SfDataGrid(
+          source: _employeeDataSource,
+          columns: <GridColumn>[
+            GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+            GridTextColumn(mappingName: 'name', headerText: 'Name'),
+            GridTextColumn(
+                mappingName: 'designation', headerText: 'Designation'),
+            GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+          ],
+        ),
+      ],
+    ),
+  );
+}
 
-                _employees[0].salary = 25000;
-                _employeeDataSource.notifyDataSourceListeners(
-                    rowColumnIndex: RowColumnIndex(0, 3));
-              }),
-          SfDataGrid(
-            source: _employeeDataSource,
-            columns: <GridColumn>[
-              GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-              GridTextColumn(mappingName: 'name', headerText: 'Name'),
-              GridTextColumn(
-                  mappingName: 'designation', headerText: 'Designation'),
-              GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
-            ],
-          ),
-        ],
-      ),
-    );
+class EmployeeDataSource extends DataGridSource<Employee> {
+
+  void updateDataGridSource({RowColumnIndex rowColumnIndex}) {
+    notifyDataSourceListeners(rowColumnIndex: rowColumnIndex);
   }
+
+}
 
 {% endhighlight %}
 {% endtabs %}
