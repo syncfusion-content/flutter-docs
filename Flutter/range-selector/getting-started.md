@@ -434,20 +434,26 @@ Widget build(BuildContext context) {
           showTicks: true,
           numberFormat: NumberFormat("\$"),
           child: Container(
+             height: 130,
              child: SfCartesianChart(
                   margin: const EdgeInsets.all(0),
                   primaryXAxis: NumericAxis(
-                       isVisible: false,),
+                    isVisible: false,
+                    minimum: _min,
+                    maximum: _max,
+                  ),
                   primaryYAxis: NumericAxis(isVisible: false, maximum: 4),
+                  plotAreaBorderWidth: 0,
+                  plotAreaBackgroundColor: Colors.transparent,
                   series: <ColumnSeries<Data, double>>[
                         ColumnSeries<Data, double>(
                              dataSource: _chartData,
+                             color: Color.fromARGB(255, 126, 184, 253),
                              xValueMapper: (Data sales, _) => sales.x,
                              yValueMapper: (Data sales, _) => sales.y)
                         ],
                   ),
-             height: 250,
-          ),
+            ),
         ),
       ),
   );
