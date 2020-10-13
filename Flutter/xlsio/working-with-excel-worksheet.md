@@ -32,11 +32,11 @@ final Worksheet sheet1 = workbook.worksheets.addWithName('Sample');
 // Add worksheet to the collection.
 final Worksheet sheet2 = workbook.worksheets.add();
 
-// Save workbook.
-workbook.save('Output.xlsx');
-
-// Dispose workbook
+// Save and dispose workbook.
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
+
+File('Output.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -61,11 +61,11 @@ final Worksheet sheet = workbook.worksheets[0];
 //Accessing via sheet Name. 
 final Worksheet namedSheet = workbook.worksheets['Sample'];
 
-// Save workbook.
-workbook.save('Output.xlsx');
-
-//dispose workbook.
+// Save and dispose workbook.
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
+
+File('Output.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -86,11 +86,11 @@ final Worksheet sheet = workbook.worksheets[0];
 //Hide grid line.
 sheet.showGridLines = false;
 
-//Save workbook.
-workbook.save('Output.xlsx');
-
-//dispose workbook.
+//Save and dispose workbook.
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
+
+File('Output.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -116,11 +116,11 @@ sheet.getRangeByName('A2:A5').rowHeight = 20;
 sheet.getRangeByName('A1').columnWidth = 20;
 sheet.getRangeByName('A2:A5').columnWidth = 30;
 
-// Save workbook.
-workbook.save('Output.xlsx');
-
-// Dispose workbook.
+// Save and dispose workbook.
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
+
+File('Output.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 

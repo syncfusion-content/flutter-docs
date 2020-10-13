@@ -86,8 +86,10 @@ chart.dataRange = sheet.getRangeByName('A1:B4');
 sheet.charts = charts;
 
 // save and dispose the workbook.
-workbook.save('Chart.xlsx');
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
+
+File('Chart.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -179,8 +181,10 @@ chart.linePatternColor = '#0000FF';
 sheet.charts = charts;
 
 // save and dispose workbook.
-workbook.save('ChartElement.xlsx');
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
+
+File('ChartElement.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -226,8 +230,10 @@ chart1.isSeriesInRows = false;
 sheet.charts = charts;
 
 // save and dispose the workbook.
-workbook.save('PieChart.xlsx');
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
+
+File('PieChart.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -281,8 +287,10 @@ chart1.isSeriesInRows = false;
 sheet.charts = charts;
 
 // save and dispose the workbook.
-workbook.save('BarChart.xlsx');
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
+
+File('BarChart.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -328,8 +336,10 @@ chart1.isSeriesInRows = false;
 sheet.charts = charts;
 
 // save and dispose the workbook.
-workbook.save('ExcelColumnChart.xlsx');
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
+
+File('ExcelColumnChart.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -376,8 +386,10 @@ chart.isSeriesInRows = false;
 sheet.charts = charts;
 
 //save and dispose workbook.
-workbook.save('LineChart.xlsx');
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
+
+File('LineChart.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -431,8 +443,10 @@ chart1.isSeriesInRows = false;
 sheet.charts = charts;
 
 // save and dispose workbook.
-workbook.save('ColunmStackedChart.xlsx');
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
+
+File('ColunmStackedChart.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -485,9 +499,10 @@ chart1.isSeriesInRows = false;
 sheet.charts = charts;
 
 //save and dispose workbook.
-workbook.save('BarStackedChart.xlsx');
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
 
+File('BarStackedChart.xlsx').writeAsBytes(bytes);
 {% endhighlight %}
 
 
@@ -540,7 +555,9 @@ chart1.isSeriesInRows = false;
 sheet.charts = charts;
 
 //save and dispose workbook.
-workbook.save('LineStackedChart.xlsx');
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
+
+File('LineStackedChart.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
