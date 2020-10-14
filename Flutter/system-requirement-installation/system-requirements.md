@@ -30,7 +30,7 @@ The following is the minimum Flutter SDK version required for our widgets:
     <tr>
         <td>Stable</td>
         <td style="text-align:center">
-            <a href="https://storage.googleapis.com/flutter_infra/releases/stable/windows/flutter_windows_1.20.1-stable.zip">v1.20.1</a>
+            <a href="https://storage.googleapis.com/flutter_infra/releases/stable/windows/flutter_windows_1.20.1-stable.zip">v1.22</a>
         </td>
     </tr>
     <tr>
