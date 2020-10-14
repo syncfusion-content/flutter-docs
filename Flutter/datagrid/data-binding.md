@@ -86,11 +86,11 @@ Widget build(BuildContext context) {
 
 `SfDataGrid` provides support to update or refresh the DataGrid when an underlying data is updated i.e. CRUD operation is performed in an underlying data.
 
-If row is added, removed or replaced in an underlying datasource, you can call the [notifyDataSourceListeners](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/notifyDataSourceListeners.html). 
+If row is added, removed or replaced in an underlying datasource, you can call the [notifyListeners](https://api.flutter.dev/flutter/foundation/ChangeNotifier/notifyListeners.html). 
 
 In the following example, row is added and `notifyListeners` is called in `onPressed` callback of the `FlatButton`.
 
-N> `notifyListeners` should call from inside the `DataGridSource`.
+N> `notifyListeners` should be called from inside the `DataGridSource`.
 
 {% tabs %}
 {% highlight Dart %} 
