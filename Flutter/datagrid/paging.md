@@ -108,7 +108,7 @@ class OrderInfoDataSource extends DataGridSource<OrderInfo> {
     
     paginatedDataSource = List.from(
         orderInfos.getRange(startRowIndex, endIndex).toList(growable: false));
-    notifyDataSourceListeners();
+    notifyListeners();
     return true;
   }
 }
@@ -219,11 +219,10 @@ class OrderInfoDataSource extends DataGridSource<OrderInfo> {
 
     // hide the circle progress indicator
     showLoadingIndicator = false;
-    notifyListeners();
 
     paginatedDataSource = List.from(
         orderInfos.getRange(startRowIndex, endIndex).toList(growable: false));
-    notifyDataSourceListeners();
+    notifyListeners();
     return true;
   }
 }

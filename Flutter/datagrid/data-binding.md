@@ -88,9 +88,9 @@ Widget build(BuildContext context) {
 
 If row is added, removed or replaced in an underlying datasource, you can call the [notifyDataSourceListeners](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/notifyDataSourceListeners.html). 
 
-In the following example, row is added and `notifyDataSourceListeners` is called in `onPressed` callback of the `FlatButton`.
+In the following example, row is added and `notifyListeners` is called in `onPressed` callback of the `FlatButton`.
 
-N> `notifyDataSourceListeners` should call from inside the `DataGridSource`.
+N> `notifyListeners` should call from inside the `DataGridSource`.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -131,7 +131,7 @@ Widget build(BuildContext context) {
 class EmployeeDataSource extends DataGridSource<Employee> {
 
   void updateDataGridSource() {
-    notifyDataSourceListeners();
+    notifyListeners();
   }
 
 }
