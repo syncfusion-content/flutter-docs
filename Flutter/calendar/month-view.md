@@ -230,7 +230,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Blackout dates](images/monthview/show_leading_trailing_dates.jpg)
+![Blackout dates](images/monthview/show_leading_trailing_dates.png)
 
 
 ## Customize number of month rows

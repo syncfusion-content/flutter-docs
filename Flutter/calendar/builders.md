@@ -66,7 +66,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Month cell builder](images/builder/month_cell_builder.jpg)
+![Month cell builder](images/builder/month_cell_builder.png)
 
 ## Schedule view month header builder
 
@@ -118,4 +118,4 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Schedule view header builder](images/builder/schedule_view_month_header_builder.jpg)
+![Schedule view header builder](images/builder/schedule_view_month_header_builder.png)

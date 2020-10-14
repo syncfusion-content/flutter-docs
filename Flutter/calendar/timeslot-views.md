@@ -90,7 +90,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Change time interval width](images/timeslot-views/time-interval-width.jpg)
+![Change time interval width](images/timeslot-views/time-interval-width.png)
 
 ## Flexible working days and working hours
 
