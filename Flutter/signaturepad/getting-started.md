@@ -25,7 +25,7 @@ syncfusion_flutter_signaturepad: ^xx.x.xx
 
 {% endhighlight %}
 
-N> Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter SignaturePad`](https://pub.dev/packages/syncfusion_flutter_sliders/versions) package.
+N> Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter SignaturePad`](https://pub.dev/packages/syncfusion_flutter_signaturepad) package.
 
 **Get packages** 
 
