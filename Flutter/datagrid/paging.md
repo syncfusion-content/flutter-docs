@@ -108,7 +108,7 @@ class OrderInfoDataSource extends DataGridSource<OrderInfo> {
     
     paginatedDataSource = List.from(
         orderInfos.getRange(startRowIndex, endIndex).toList(growable: false));
-    notifyDataSourceListeners();
+    notifyListeners();
     return true;
   }
 }
@@ -219,11 +219,10 @@ class OrderInfoDataSource extends DataGridSource<OrderInfo> {
 
     // hide the circle progress indicator
     showLoadingIndicator = false;
-    notifyListeners();
 
     paginatedDataSource = List.from(
         orderInfos.getRange(startRowIndex, endIndex).toList(growable: false));
-    notifyDataSourceListeners();
+    notifyListeners();
     return true;
   }
 }
@@ -250,8 +249,7 @@ Description</th>
 horizontal
 </td>
 <td>
-This is the default enum value for direction. Arranges all the navigation buttons and numeric buttons horizontally..
-{{'![flutter datapager in horizontal direction](images/paging/flutter-datapager-direction-horizontal.png)'|markdownify}}
+This is the default enum value for direction. Arranges all the navigation buttons and numeric buttons horizontally.{{'![flutter datapager in horizontal direction](images/paging/flutter-datapager-direction-horizontal.png)'|markdownify}}
 </td>
 </tr>
 <tr>
@@ -259,8 +257,7 @@ This is the default enum value for direction. Arranges all the navigation button
 vertical
 </td>
 <td>
-Arranges all the navigation buttons and numeric buttons vertically by setting [Axis.vertical] to direction property.
-{{'![flutter datapager in vertical direction](images/paging/flutter-datapager-direction-vertical.png)'|markdownify}}
+Arranges all the navigation buttons and numeric buttons vertically by setting Axis.vertical to direction property.{{'![flutter datapager in vertical direction](images/paging/flutter-datapager-direction-vertical.png)'|markdownify}}
 </td>
 </tr>
 </table>
