@@ -9,7 +9,9 @@ documentation: ug
 
 # Adding Pie Chart to Excel worksheet
 
-The following code snippet illustrate how to add pie chart to Excel worksheet.
+A pie chart is a circular statistical graphic, which is divided into slices to illustrate numerical proportion of data in the Excel worksheet.
+
+The following code snippet illustrate how to add pie chart to Excel worksheet using Flutter XlsIO.
 
 {% highlight dart %}
 

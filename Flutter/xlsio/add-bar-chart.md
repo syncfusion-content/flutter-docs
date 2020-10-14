@@ -9,7 +9,9 @@ documentation: ug
 
 # Adding Bar Chart to Excel worksheet
 
-The following code snippet illustrate how to add bar chart to Excel worksheet.
+A bar chart is a chart type that presents categorical data with rectangular bars with heights or lengths proportional to the data values in Excel worksheet.
+
+The following code snippet illustrate how to add bar chart to Excel worksheet using Flutter XlsIO.
 
 {% highlight dart %}
 

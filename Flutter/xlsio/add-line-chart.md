@@ -9,7 +9,9 @@ documentation: ug
 
 # Adding Line Chart to Excel worksheet
 
-The following code snippet illustrate how to add Line chart to Excel worksheet.
+A line chart is a type of chart which displays information as a series of data points called 'markers' connected by straight line segments.
+
+The following code snippet illustrate how to add Line chart to Excel worksheet using Flutter XlsIO.
 
 {% highlight dart %}
 

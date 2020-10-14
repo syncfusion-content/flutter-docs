@@ -9,7 +9,9 @@ documentation: ug
 
 # Adding Stacked line Chart to Excel worksheet
 
-The following code snippet illustrate how to add Stacked Line chart to Excel worksheet.
+A stacked line graph is a line graph in which lines don't overlap because they are cumulative at each point. A stacked line graph displays series as a set of points connected by a line. Values are represented on the y-axis and categories are displayed on the x-axis
+
+The following code snippet illustrate how to add Stacked Line chart to Excel worksheet using Flutter XlsIO.
 
 {% highlight dart %}
 

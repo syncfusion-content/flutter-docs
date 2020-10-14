@@ -9,7 +9,9 @@ documentation: ug
 
 # Adding Stacked Bar Chart to Excel worksheet
 
-The following code snippet illustrate how to add Stacked Bar chart to Excel worksheet.
+A stacked bar chart is a type of bar chart used in excel for the graphical representation of part-to-whole comparison over time. This helps you to represent data in a stacked manner. This type of graph is suitable for data which is represented in different parts and one as a whole.
+
+The following code snippet illustrate how to add Stacked Bar chart to Excel worksheet using Flutter XlsIO.
 
 {% highlight dart %}
 

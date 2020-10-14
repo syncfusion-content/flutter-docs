@@ -9,7 +9,9 @@ documentation: ug
 
 # Adding Column Chart to Excel worksheet
 
-The following code snippet illustrate how to add Column chart to Excel worksheet.
+A column chart is a graphic representation of data in the Excel worksheet. Column charts display vertical bars going across the chart horizontally, with the values axis being displayed on the left side of the chart.
+
+The following code snippet illustrate how to add Column chart to Excel worksheet using Flutter XlsIO.
 
 {% highlight dart %}
 

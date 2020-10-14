@@ -9,7 +9,9 @@ documentation: ug
 
 # Adding Stacked Column Chart to Excel worksheet
 
-The following code snippet illustrate how to add Stacked Column chart to Excel worksheet.
+A stacked column chart is a basic Excel chart type to allow part-to-whole comparisons over time, or across categories and data series are stacked one on top of the other in vertical columns. Stacked column charts can show change over time because it's easy to compare total column lengths.
+
+The following code snippet illustrate how to add Stacked Column chart to Excel worksheet using Flutter XlsIO.
 
 {% highlight dart %}
 
