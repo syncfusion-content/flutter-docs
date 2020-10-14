@@ -319,4 +319,96 @@ final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
 File('Scientific.xlsx').writeAsBytes(bytes);
 
+{% endhighlight %}
+
+## Fraction
+
+The following code snippet illustrates how to set different fraction formats in a worksheet range.
+
 {% highlight dart %}
+
+// Create a new Excel document.
+final Workbook workbook = Workbook();
+
+// Accessing worksheet via index.
+final Worksheet sheet = workbook.worksheets[0];
+
+final Range range = sheet.getRangeByIndex(1, 1);
+range.setNumber(29.4);
+range.numberFormat = '# ?/?';
+
+final Range range1 = sheet.getRangeByName('A2');
+range1.setNumber(22.11);
+range1.numberFormat = '# ??/??';
+
+final Range range2 = sheet.getRangeByIndex(3, 1);
+range2.setNumber(0.09312);
+range2.numberFormat = '# ???/???';
+
+final Range range3 = sheet.getRangeByName('A4');
+range3.setNumber(11.4);
+range3.numberFormat = '# ?/2';
+
+final Range range4 = sheet.getRangeByIndex(5, 1);
+range4.setNumber(47.98);
+range4.numberFormat = '# ?/4';
+
+final Range range5 = sheet.getRangeByName('A6');
+range5.setNumber(7.39);
+range5.numberFormat = '# ?/8';
+
+final Range range6 = sheet.getRangeByIndex(7, 1);
+range6.setNumber(21.5);
+range6.numberFormat = '# ??/16';
+
+final Range range7 = sheet.getRangeByName('A8');
+range7.setNumber(13.1);
+range7.numberFormat = '# ?/10';
+
+final Range range8 = sheet.getRangeByIndex(9, 1);
+range8.setNumber(49.56);
+range8.numberFormat = '# ??/100';
+
+// Save and dispose workbook.
+final List<int> bytes = workbook.saveAsStream();
+workbook.dispose();
+File('Fraction.xlsx').writeAsBytes(bytes);
+
+{% endhighlight %}
+
+## Text 
+
+Text format cells are treated as text even when a number is in the cell. The cell is displayed exactly as entered.
+
+The following code snippet illustrates how to set different text formats in a worksheet range.
+
+{% highlight dart %}
+
+// Create a new Excel document.
+final Workbook workbook = Workbook();
+
+// Accessing worksheet via index.
+final Worksheet sheet = workbook.worksheets[0];
+
+final Range range = sheet.getRangeByIndex(1, 1);
+range.setNumber(-12.89);
+range.numberFormat = '@';
+
+final Range range1 = sheet.getRangeByName('A2');
+range1.setNumber(2311);
+range1.numberFormat = '_(@_)';
+
+final Range range2 = sheet.getRangeByIndex(3, 1);
+range2.setNumber(0.09312);
+range2.numberFormat = '* @';
+
+final Range range3 = sheet.getRangeByName('A4');
+range3.setNumber(11.4);
+range3.numberFormat = '^ @';
+
+// Save and dispose workbook.
+final List<int> bytes = workbook.saveAsStream();
+workbook.dispose();
+File('Text.xlsx').writeAsBytes(bytes);
+
+{% endhighlight %}
