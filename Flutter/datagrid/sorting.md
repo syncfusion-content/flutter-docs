@@ -282,11 +282,14 @@ Widget build(BuildContext context) {
 
 ## Custom sorting
 
-The datagrid allows to sort columns based on custom logic. For each column, you can provide different sorting criteria by overriding [handleSort()](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/handleSort.html) method from `DataGridSource.handleSort`. you can get the sort columns from `SfDataGrid.source.sortedColumns` collection. So you can apply different custom logics for ascending and descending.
+The datagrid allows to sort columns based on custom logic. For each column, you can provide different sorting criteria by overriding the following methods from [DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html),
+
+* **[handleSort](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/handleSort.html)** : You can override this method to provide the entire logic for sorting.
+* **[compare](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/compare.html)** : You can override this method to compare two objects.
 
 ### Custom sorting based on string length
 
-The following code shows how to perform custom sorting for the columns based on the string length.
+The following code shows how to perform custom sorting for the columns based on the string length by overriding the `handleSort` and `compare` method.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -322,30 +325,35 @@ class EmployeeDataSource extends DataGridSource<Employee> {
   Future<bool> handleSort() async {
     if (_employeeDataGridSource.sortedColumns.isNotEmpty) {
       var sortColumn = _employeeDataGridSource.sortedColumns.first;
-      var isSortAscending = DataGridSortDirection.ascending;
       _employeeData.sort((Employee a, Employee b) {
-        var x = getValue(a, sortColumn.name);
-        var y = getValue(b, sortColumn.name);
-        if (x == null || y == null) {
-          if (sortColumn.sortDirection == isSortAscending) {
-            return x == null ? -1 : 1;
-          }
-          if (sortColumn.sortDirection != isSortAscending) {
-            return x == null ? 1 : -1;
-          }
-        }
-        int xLength = x.toString().length;
-        int yLength = y.toString().length;
-        if (xLength.compareTo(yLength) > 0) {
-          return sortColumn.sortDirection == isSortAscending ? 1 : -1;
-        } else if (xLength.compareTo(yLength) == -1) {
-          return sortColumn.sortDirection == isSortAscending ? -1 : 1;
-        } else {
-          return 0;
-        }
+        return compare(a, b, sortColumn);
       });
     }
     return true;
+  }
+
+  @override
+  int compare(Employee a, Employee b, SortColumnDetails sortColumn) {
+    final isSortAscending = DataGridSortDirection.ascending;
+    var x = getValue(a, sortColumn.name);
+    var y = getValue(b, sortColumn.name);
+    if (x == null || y == null) {
+      if (sortColumn.sortDirection == isSortAscending) {
+        return x == null ? -1 : 1;
+      }
+      if (sortColumn.sortDirection != isSortAscending) {
+        return x == null ? 1 : -1;
+      }
+    }
+    int xLength = x.toString().length;
+    int yLength = y.toString().length;
+    if (xLength.compareTo(yLength) > 0) {
+      return sortColumn.sortDirection == isSortAscending ? 1 : -1;
+    } else if (xLength.compareTo(yLength) == -1) {
+      return sortColumn.sortDirection == isSortAscending ? -1 : 1;
+    } else {
+      return 0;
+    }
   }
 }
 
@@ -356,9 +364,7 @@ class EmployeeDataSource extends DataGridSource<Employee> {
 
 ### Custom sorting based on case-insensitive
 
-The datagrid allows to sort columns based on custom logic. You can override the `compare` method from `DataGridSource.compare` to do the custom sorting based on your requirement. This method compares the two objects and returns the order either they are equal, or one is greater than or lesser than the other. Here `sortColumn` provides the details about the column which is currently sorted with the sort direction. You can get the currently sorted column and do the custom sorting for specific column.
-
-The following code shows how to perform custom sorting for the columns based on the case-insensitive.
+The following code shows how to perform custom sorting for the columns based on the case-insensitive by overriding the `compare` method.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -392,8 +398,17 @@ class EmployeeDataSource extends DataGridSource<Employee> {
 
   @override
   int compare(Employee a, Employee b, SortColumnDetails sortColumn) {
+    final isSortAscending = DataGridSortDirection.ascending;
+    if (a.name == null || b.name == null) {
+      if (sortColumn.sortDirection == isSortAscending) {
+        return a.name == null ? -1 : 1;
+      }
+      if (sortColumn.sortDirection != isSortAscending) {
+        return a.name == null ? 1 : -1;
+      }
+    }
     if (sortColumn.name == 'name') {
-      if (sortColumn.sortDirection == DataGridSortDirection.ascending) {
+      if (sortColumn.sortDirection == isSortAscending) {
         return a.name.toLowerCase().compareTo(b.name.toLowerCase());
       } else {
         return b.name.toLowerCase().compareTo(a.name.toLowerCase());
