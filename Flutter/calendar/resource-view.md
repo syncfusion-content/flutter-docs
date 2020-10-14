@@ -127,7 +127,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Visible resource count](images/resourceview/visible_resource_count.jpg)
+![Visible resource count](images/resourceview/visible_resource_count.png)
 
 ## Customization
 ### Show avatar
@@ -150,7 +150,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Show avatar](images/resourceview/show_avatar.jpg)
+![Show avatar](images/resourceview/show_avatar.png)
 
 ### Display name text style
 The display name text style for the resource view can be customized by setting an appropriate text style to the [displayNameTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewSettings/displayNameTextStyle.html) property available in the `ResourceViewSettings`.
@@ -175,7 +175,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Display name text style](images/resourceview/display_name_text_style.jpg)
+![Display name text style](images/resourceview/display_name_text_style.png)
 
 ### Resource panel size
 You can customize the size of the panel that displays the resource views in the calendar by setting an appropriate value to the [size](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ResourceViewSettings/size.html) property available in the `ResourceViewSettings`.
@@ -197,4 +197,4 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Resource panel size](images/resourceview/resource_panel_size.jpg)
+![Resource panel size](images/resourceview/resource_panel_size.png)

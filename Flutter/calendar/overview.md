@@ -60,7 +60,7 @@ The Syncfusion Flutter Calendar library was written natively in Dart and has sev
 
 * **Hide leading and trailing dates**: Hide the next month and previous month dates in the calendar to enhance the appearance.
 
-![Hide leading trailing dates](images/overview/hide-leading-trailing-dates.jpg)
+![Hide leading trailing dates](images/overview/hide-leading-trailing-dates.png)
 
 * **Month agenda view**: Display appointments in a list as shown in the following month view by clicking on a day.
 
