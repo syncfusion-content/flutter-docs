@@ -46,11 +46,11 @@ workbook.styles.addStyle(style);
 //Apply cellStyle.
 sheet.getRangeByName('A1').cellStyle = style;
 
-// Save the document.
-workbook.save('CreateCellStyle.xlsx');
-
-//Dispose the workbook.
+// Save and dispose the document.
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
+
+File('CreateCellStyle.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -117,11 +117,11 @@ sheet.getRangeByName('A1:D1').cellStyle = globalStyle;
 //Apply GlobalStyle1
 sheet.getRangeByName('B2:D4').cellStyle = globalStyle1;
 
-// Save the document.
-workbook.save('ApplyGlobalStyle.xlsx');
-
-//Dispose the workbook.
+// Save and dispose the document.
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
+
+File('ApplyGlobalStyle.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -524,8 +524,10 @@ sheet.getRangeByName('A1').columnWidth = 21;
 sheet.getRangeByName('B1:C1').columnWidth = 13;
 
 // save and dispose workbook.
-workbook.save('NumberFormats.xlsx');
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
+
+File('NumberFormats.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -555,8 +557,10 @@ range1.setNumber(10);
 range1.displayText;
 
 // Save and dispose workbook.
-workbook.save('DisplayText.xlsx');
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
+
+File('DisplayText.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -593,10 +597,14 @@ final Worksheet sheet = workbook.worksheets[0];
 //Merging Cells from A16 to C16. 
 sheet.getRangeByName('A1:C16').merge();
 
-//UnMerging Cells from A1 to C16 
+//UnMerging Cells from A1 to C16. 
 sheet.getRangeByName('A1:C16').unmerge();
 
-workbook.save('MergeUnMerge.xlsx');
+// Save and dispose workbook.
+final List<int> bytes = workbook.saveAsStream();
+workbook.dispose();
+
+File('MergeUnMerge.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -619,8 +627,10 @@ sheet.getRangeByName('A2').setText('Sample');
 sheet.getRangeByName('A2').builtInStyle = BuiltInStyles.checkCell;
 
 // save and dispose workbook.
-workbook.save('BuiltInStyle.xlsx');
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
+
+File('BuiltInStyle.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 

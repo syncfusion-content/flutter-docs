@@ -26,11 +26,11 @@ final Worksheet sheet = workbook.worksheets[0];
 // Adding text using setText() method.
 sheet.getRangeByName('A1').setText('Hello World');
 
-// Save workbook
-workbook.save('Output.xlsx');
-
-// Dispose workbook
+// Save and dispose workbook
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
+
+File('Output.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -52,10 +52,10 @@ final Worksheet sheet = workbook.worksheets[0];
 sheet.getRangeByName('A1').setNumber(4444);
 
 // Save workbook
-workbook.save('Output.xlsx');
-
-// Dispose workbook
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
+
+File('Output.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -77,10 +77,10 @@ final Worksheet sheet = workbook.worksheets[0];
 sheet.getRangeByName('A1').setDateTime(DateTime(2020, 7, 7, 1, 0, 0));
 
 // Save workbook
-workbook.save('Output.xlsx');
-
-// Dispose workbook
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
+
+File('Output.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -101,11 +101,11 @@ final Worksheet sheet = workbook.worksheets[0];
 // Adding text using setValue() method.
 sheet.getRangeByName('A1').setValue(44);
 
-// Save workbook
-workbook.save('Output.xlsx');
-
-// Dispose workbook
+// Save and dispose workbook
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
+
+File('Output.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
