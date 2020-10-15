@@ -28,11 +28,11 @@ final Worksheet sheet = workbook.worksheets[0];
 //Formula calculation is enabled for the sheet
 sheet.enableSheetCalculations();
 
-// Save workbook
-workbook.save('Output.xlsx');
-
-// Dispose workbook
+// Save and dispose workbook
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
+
+File('Output.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -57,11 +57,11 @@ sheet.getRangeByName('A2').setNumber(20);
 //Setting formula in the cell.
 sheet.getRangeByName('A3').setFormula('=A1+A2');
 
-//Save a workbook.
-workbook.save('Formula.xlsx');
-
-// Dispose workbook.
+//Save and dispose a workbook.
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
+
+File('Formula.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -92,11 +92,11 @@ sheet.getRangeByName('A3').setFormula('=A1+A2');
 // Returns the calculated value of a formula using the most current inputs
 String calculatedValue = sheet.getRangeByName('A3').calculatedValue;
 
-// Save a workbook.
-workbook.save('Formula.xlsx');
-
-// Dispose workbook.
+// Save and dispose a workbook.
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
+
+File('Formula.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
