@@ -282,9 +282,14 @@ Widget build(BuildContext context) {
 
 ## Custom sorting
 
-The datagrid allows to sort columns based on custom logic. For each column, you can provide different sorting criteria by overriding [handleSort()](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/handleSort.html) method from DataGridSource.handleSort. you can get the sort columns from `SfDataGrid.source.sortedColumns` collection. So you can apply different custom logics for ascending and descending.
+The datagrid allows to sort columns based on custom logic. For each column, you can provide different sorting criteria by overriding the following methods from [DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html),
 
-The following code shows how to perform custom sorting for the columns based on the string length.
+* **[handleSort](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/handleSort.html)** : This method will be called when you tap the column header and sorting is being applied. You can override this method to provide the entire logic for sorting for columns.
+* **[compare](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/compare.html)** : You can override this method to compare two objects and return the sorting order based on the criteria.
+
+### Sort column based on string length
+
+The following code shows how to perform custom sorting for the columns based on the string length by overriding the `compare` method.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -317,37 +322,88 @@ class EmployeeDataSource extends DataGridSource<Employee> {
   }
 
   @override
-  Future<bool> handleSort() async {
-    if (_employeeDataGridSource.sortedColumns.isNotEmpty) {
-      var sortColumn = _employeeDataGridSource.sortedColumns.first;
-      var isSortAscending = DataGridSortDirection.ascending;
-      _employeeData.sort((Employee a, Employee b) {
-        var x = getValue(a, sortColumn.name);
-        var y = getValue(b, sortColumn.name);
-        if (x == null || y == null) {
-          if (sortColumn.sortDirection == isSortAscending) {
-            return x == null ? -1 : 1;
-          }
-          if (sortColumn.sortDirection != isSortAscending) {
-            return x == null ? 1 : -1;
-          }
-        }
-        int xLength = x.toString().length;
-        int yLength = y.toString().length;
-        if (xLength.compareTo(yLength) > 0) {
-          return sortColumn.sortDirection == isSortAscending ? 1 : -1;
-        } else if (xLength.compareTo(yLength) == -1) {
-          return sortColumn.sortDirection == isSortAscending ? -1 : 1;
-        } else {
-          return 0;
-        }
-      });
+  int compare(Employee a, Employee b, SortColumnDetails sortColumn) {
+    var x = getValue(a, sortColumn.name);
+    var y = getValue(b, sortColumn.name);
+    if (x == null || y == null) {
+      if (sortColumn.sortDirection == DataGridSortDirection.ascending)
+        return x == null ? -1 : 1;
+      else
+        return x == null ? 1 : -1;
     }
-    return true;
+    int xLength = x.toString().length;
+    int yLength = y.toString().length;
+    if (xLength.compareTo(yLength) > 0)
+      return sortColumn.sortDirection == DataGridSortDirection.ascending ? 1 : -1;
+    else if (xLength.compareTo(yLength) == -1) 
+      return sortColumn.sortDirection == DataGridSortDirection.ascending ? -1 : 1;
+    else
+      return 0;
   }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
+>**NOTE**  
+  Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-sort-the-columns-based-on-length-of-the-text-in-Flutter-datagrid).
+
 ![flutter datagrid shows custom sorting for the columns based on string length](images/sorting/flutter-datagrid-custom-sorting.png)
+
+### Case-insensitive sorting
+
+The following code shows how to perform custom sorting for the columns based on the case-insensitive by overriding the `compare` method.
+
+{% tabs %}
+{% highlight Dart %} 
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+
+class EmployeeDataSource extends DataGridSource<Employee> {
+  @override
+  List<Employee> get dataSource => _employeeData;
+
+  @override
+  Object getValue(Employee employee, String columnName) {
+    switch (columnName) {
+      case 'id':
+        return employee.id;
+        break;
+      case 'name':
+        return employee.name;
+        break;
+      case 'city':
+        return employee.city;
+        break;
+      case 'freight':
+        return employee.freight;
+        break;
+      default:
+        return ' ';
+        break;
+    }
+  }
+
+  @override
+  int compare(Employee a, Employee b, SortColumnDetails sortColumn) {
+    if (sortColumn.name == 'name') {
+      if (sortColumn.sortDirection == DataGridSortDirection.ascending) {
+        if (a.name == null || b.name == null)
+          return a.name == null ? -1 : 1;
+        else 
+          return a.name.toLowerCase().compareTo(b.name.toLowerCase());
+      } else {
+        if (a.name == null || b.name == null)
+          return a.name == null ? 1 : -1;
+        else
+          return b.name.toLowerCase().compareTo(a.name.toLowerCase());
+      }
+    }
+    return super.compare(a, b, sortColumn);
+  }
+}
+
+>**NOTE**  
+  Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-perform-case-insensitive-sorting-in-flutter-datagrid).
+
+![flutter datagrid shows custom sorting for the columns based on case-insensitive](images/sorting/flutter-datagrid-custom-sorting-case-insensitive.png)
