@@ -289,7 +289,7 @@ The datagrid allows to sort columns based on custom logic. For each column, you 
 
 ### Sort column based on string length
 
-The following code shows how to perform custom sorting for the columns based on the string length by overriding the `handleSort` and `compare` method.
+The following code shows how to perform custom sorting for the columns based on the string length by overriding the `compare` method.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -319,17 +319,6 @@ class EmployeeDataSource extends DataGridSource<Employee> {
         return ' ';
         break;
     }
-  }
-
-  @override
-  Future<bool> handleSort() async {
-    if (_employeeDataGridSource.sortedColumns.isNotEmpty) {
-      var sortColumn = _employeeDataGridSource.sortedColumns.first;
-      _employeeData.sort((Employee a, Employee b) {
-        return compare(a, b, sortColumn);
-      });
-    }
-    return true;
   }
 
   @override
