@@ -403,6 +403,9 @@ class EmployeeDataSource extends DataGridSource<Employee> {
   }
 }
 
+{% endhighlight %}
+{% endtabs %}
+
 >**NOTE**  
   Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-perform-case-insensitive-sorting-in-flutter-datagrid).
 
