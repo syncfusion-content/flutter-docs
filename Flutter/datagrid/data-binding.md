@@ -129,11 +129,34 @@ Widget build(BuildContext context) {
 }
 
 class EmployeeDataSource extends DataGridSource<Employee> {
+ 
+  @override
+  List<Employee> get dataSource => _employees
+  
+  @override
+  getValue(Employee employee, String columnName) {
+    switch (columnName) {
+      case 'id':
+        return employee.id;
+        break;
+      case 'name':
+        return employee.name;
+        break;
+      case 'salary':
+        return employee.salary;
+        break;
+      case 'designation':
+        return employee.designation;
+        break;
+      default:
+        return ' ';
+        break;
+    }
+  }
 
   void updateDataGridSource() {
     notifyListeners();
   }
-
 }
 
 {% endhighlight %}
@@ -183,10 +206,33 @@ Widget build(BuildContext context) {
 
 class EmployeeDataSource extends DataGridSource<Employee> {
 
+  @override
+  List<Employee> get dataSource => _employees
+  
+  @override
+  getValue(Employee employee, String columnName) {
+    switch (columnName) {
+      case 'id':
+        return employee.id;
+        break;
+      case 'name':
+        return employee.name;
+        break;
+      case 'salary':
+        return employee.salary;
+        break;
+      case 'designation':
+        return employee.designation;
+        break;
+      default:
+        return ' ';
+        break;
+    }
+  }
+
   void updateDataGridSource({RowColumnIndex rowColumnIndex}) {
     notifyDataSourceListeners(rowColumnIndex: rowColumnIndex);
   }
-
 }
 
 {% endhighlight %}
