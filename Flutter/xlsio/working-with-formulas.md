@@ -28,11 +28,11 @@ final Worksheet sheet = workbook.worksheets[0];
 //Formula calculation is enabled for the sheet
 sheet.enableSheetCalculations();
 
-// Save workbook
-workbook.save('Output.xlsx');
-
-// Dispose workbook
+// Save and dispose workbook
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
+
+File('Output.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -57,11 +57,11 @@ sheet.getRangeByName('A2').setNumber(20);
 //Setting formula in the cell.
 sheet.getRangeByName('A3').setFormula('=A1+A2');
 
-//Save a workbook.
-workbook.save('Formula.xlsx');
-
-// Dispose workbook.
+//Save and dispose a workbook.
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
+
+File('Formula.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -92,11 +92,11 @@ sheet.getRangeByName('A3').setFormula('=A1+A2');
 // Returns the calculated value of a formula using the most current inputs
 String calculatedValue = sheet.getRangeByName('A3').calculatedValue;
 
-// Save a workbook.
-workbook.save('Formula.xlsx');
-
-// Dispose workbook.
+// Save and dispose a workbook.
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
+
+File('Formula.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -107,7 +107,9 @@ In flutter XlsIO, we have support for Range reference and basic function formula
 <table>
 <tr>
 <td>
-SUM
+
+[SUM](https://help.syncfusion.com/flutter/xlsio/working-with-general-functions#sum-function)
+
 </td>
 <td>
 Adds its arguments
@@ -115,7 +117,9 @@ Adds its arguments
 </tr>
 <tr>
 <td>
-AVERAGE
+
+[AVERAGE](https://help.syncfusion.com/flutter/xlsio/working-with-general-functions#average-function)
+
 </td>
 <td>
 Returns the average of its arguments
@@ -123,7 +127,9 @@ Returns the average of its arguments
 </tr>
 <tr>
 <td>
-MAX
+
+[MAX](https://help.syncfusion.com/flutter/xlsio/working-with-general-functions#max-function)
+
 </td>
 <td>
 Returns the maximum value in a list of arguments
@@ -131,7 +137,9 @@ Returns the maximum value in a list of arguments
 </tr>
 <tr>
 <td>
-MIN
+
+[MIN](https://help.syncfusion.com/flutter/xlsio/working-with-general-functions#min-function)
+
 </td>
 <td>
 Returns the minimum value in a list of arguments
@@ -139,7 +147,9 @@ Returns the minimum value in a list of arguments
 </tr>
 <tr>
 <td>
-COUNT
+
+[COUNT](https://help.syncfusion.com/flutter/xlsio/working-with-general-functions#count-function)
+
 </td>
 <td>
 Counts how many numbers are in the list of arguments
@@ -147,7 +157,9 @@ Counts how many numbers are in the list of arguments
 </tr>
 <tr>
 <td>
-IF
+
+[IF](https://help.syncfusion.com/flutter/xlsio/working-with-logical-function#if-function)
+
 </td>
 <td>
 Specifies a logical test to perform

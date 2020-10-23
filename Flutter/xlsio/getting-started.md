@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started for Syncfusion Flutter XlsIO
 
-This section explains the steps required to create a Excel document by a single button click. This section covers only the minimal features needed to learn to get started with the Excel.
+This section explains the steps required to create a Excel document by few lines of code. This section covers only the minimal features needed to learn to get started with the Excel.
 
 ## Steps to create Excel document in Flutter application
 
@@ -80,18 +80,19 @@ final Worksheet sheet = workbook.worksheets[0];
 // Set the text value.
 sheet.getRangeByName('A1').setText('Hello World!');
 
-// Save the document.
-workbook.save('CreateExcel.xlsx');
-
-// dispose workbook.
+// Save and dispose the document.
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
+
+File('Output.xlsx').writeAsBytes(bytes);
+
 }
 
 {% endhighlight %}
 
-## Save and open a Excel document in mobile
+## Create a Excel document in mobile
 
-You can save and open a Excel document in mobile by using the following steps:
+You can create a Excel document in mobile by using the following steps:
 
 **Add dependency**
 
@@ -114,9 +115,23 @@ import 'package:path_provider/path_provider.dart';
 
 {% endhighlight %}
 
-Include the following code snippet in _createExcel() method to open the Excel document in mobile after saving it.
+Include the following code snippet to create a Excel document in mobile.
 
 {% highlight dart %}
+
+Future<void> _createExcel() async {
+// Create a new Excel Document.
+final Workbook workbook = Workbook();
+
+// Accessing worksheet via index.
+final Worksheet sheet = workbook.worksheets[0];
+
+// Set the text value.
+sheet.getRangeByName('A1').setText('Hello World!');
+
+// Save and dispose the document.
+final List<int> bytes = workbook.saveAsStream();
+workbook.dispose();
 
 // Get external storage directory
 final directory = await getExternalStorageDirectory();
@@ -133,11 +148,14 @@ await file.writeAsBytes(bytes, flush: true);
 // Open the Excel document in mobile
 OpenFile.open('$path/Output.xlsx');
 
+}
+
+
 {% endhighlight %}
 
-## Save and download a Excel document in web
+## Create a Excel document in web
 
-You can save and download a Excel document in web by using the following steps.
+You can create a Excel document in web by using the following steps.
 
 **Import package**
 
@@ -149,14 +167,29 @@ import 'dart:js' as js;
 
 {% endhighlight %}
 
-Include the following code snippet in _createExcel() method to open the document in web after saving it.
+Include the following code snippet to create a excel document in web.
 
 {% highlight dart %}
+Future<void> _createExcel() async {
+// Create a new Excel Document.
+final Workbook workbook = Workbook();
+
+// Accessing worksheet via index.
+final Worksheet sheet = workbook.worksheets[0];
+
+// Set the text value.
+sheet.getRangeByName('A1').setText('Hello World!');
+
+// Save and dispose the document.
+final List<int> bytes = workbook.saveAsStream();
+workbook.dispose();
+
+File('Output.xlsx').writeAsBytes(bytes);
 
 js.context['excelData'] = base64.encode(bytes);
 js.context['filename'] = 'Output.xlsx'; 
 Timer.run(() { 
-js.context.callMethod('download');
+js.context.callMethod('_createExcel');
  });
 
 {% endhighlight %}
@@ -166,7 +199,7 @@ Add the following code in the header section of index.html file under the web fo
 {% highlight dart %}
 
 <script>
- async function download() {
+ async function _createExcel() {
   var excelAsDataUri = "data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64, " + exceldata;
   var link = document.createElement('a');
   link.download = filename;
