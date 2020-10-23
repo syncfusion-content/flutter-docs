@@ -192,10 +192,10 @@ File('ChartElement.xlsx').writeAsBytes(bytes);
 
 The following chart types are supported in Flutter XlsIO.
 
-* [Pie](#pie)
-* [Bar](#bar)
-* [Column](#column)
-* [line](#line)
-* [Bar_Stacked](#bar_stacked)
-* [Column_Stacked](#column_stacked)
-* [Line_Stacked](#line_stacked)
+* [Pie](https://help.syncfusion.com/flutter/xlsio/add-pie-chart)
+* [Bar](https://help.syncfusion.com/flutter/xlsio/add-bar-chart)
+* [Column](https://help.syncfusion.com/flutter/xlsio/add-column-chart)
+* [line](https://help.syncfusion.com/flutter/xlsio/add-line-chart)
+* [Bar_Stacked](https://help.syncfusion.com/flutter/xlsio/add-stacked-bar-chart)
+* [Column_Stacked](https://help.syncfusion.com/flutter/xlsio/add-stacked-column-chart)
+* [Line_Stacked](https://help.syncfusion.com/flutter/xlsio/add-stacked-line-chart)
