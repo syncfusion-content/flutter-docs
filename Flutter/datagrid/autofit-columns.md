@@ -213,3 +213,45 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+## Recalculating column widths when datasource is changed
+
+By default, column widths are calculated based on the `columnWidthMode` property on initial loading of datagrid. When the datasource is changed for same datagrid at run time, datagrid does not recalculate the column widths. To recalculate the column widths at run time when datasource is changed or data is updated, you can override the [shouldRecalculateColumnWidths](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/shouldRecalculateColumnWidths.html) method and return `true`. 
+ 
+Returning true may impact performance as the column widths are recalculated again (whenever the notifyListeners is called). If you are aware that column widths are going to be same whenever underlying data changes, return 'false' from this method.
+
+{% tabs %}
+{% highlight Dart %} 
+
+class EmployeeDataSource extends DataGridSource<Employee> {
+  @override
+  List<Employee> get dataSource => _employees;
+
+  @override
+  bool shouldRecalculateColumnWidths() {
+    return true;
+  }
+
+  @override
+  getValue(Employee employee, String columnName){
+    switch (columnName) {
+      case 'id':
+        return employee.id;
+        break;
+      case 'name':
+        return employee.name;
+        break;
+      case 'salary':
+        return employee.salary;
+        break;
+      case 'designation':
+        return employee.designation;
+        break;
+      default:
+        return ' ';
+        break;
+    }
+  }
+
+{% endhighlight %}
+{% endtabs %}
