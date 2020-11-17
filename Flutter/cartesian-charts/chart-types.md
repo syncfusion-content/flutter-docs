@@ -2674,6 +2674,7 @@ To render a OpenHighLowClose chart, create an instance of [` hiloOpenCloseSeries
 * [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
 * [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) – Changes the stroke width of the series.
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) – Changes the stroke color of the series.
+* [`showIndicationForSameValues`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/HiloOpenCloseSeries/showIndicationForSameValues.html)- Used to show indication of the data point with a thin line when its high and low values are same and also when all the values of high, low, open and close are same for the data point. By default is set to be false.
 * [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/lowValueMapper.html) - used to get the low values from the series.
 * [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/highValueMapper.html) - used to get the high values from the series.
 * [`openValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/HiloOpenCloseSeries/openValueMapper.html) - used to get the open values from the series.
@@ -2699,7 +2700,7 @@ To render a OpenHighLowClose chart, create an instance of [` hiloOpenCloseSeries
                                 lowValueMapper: (Sample sales, _) => sales.low,
                                 highValueMapper: (Sample sales, _) => sales.high, 
                                 openValueMapper: (Sample sales, _) => sales.open,
-                          closeValueMapper: (Sample sales, _) => sales.close,
+                                closeValueMapper: (Sample sales, _) => sales.close,
 
                             )
                         ]
@@ -2713,6 +2714,61 @@ To render a OpenHighLowClose chart, create an instance of [` hiloOpenCloseSeries
 
 ![hiLoopenclose chart](images/cartesian-chart-types/hilo_open_close.png)
 
+### Indication for same values
+
+In the OHLC series, there is a feature for the datapoints indication when their high and low values are same or open and close values or high, low, open and close values are same for a datapoint. For using this indication feature, [`showIndicationForSameValues`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/HiloOpenCloseSeries/showIndicationForSameValues.html) property can be set to true.
+
+The following are the types of indication when the combination of high, low, open and close values are same for a datapoint.
+
+* In the OHLC chart, if the open and close values are same then a horizontal line will be drawn at that value by default.
+* If the high and low values are same and with [`showIndicationForSameValues`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/HiloOpenCloseSeries/showIndicationForSameValues.html) property set to true then, a thin vertical line is drawn and if API is set to false, the line will not be drawn. 
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: SfCartesianChart(
+                        series: <ChartSeries>[
+                          HiloOpenCloseSeries<ChartData, double>(
+                            showIndicationForSameValues: true,
+                            dataSource: <ChartData>[
+                                ChartData( // Open and close values are same
+                                    x: 5,
+                                    open: 85.3593,
+                                    high: 88.1435,
+                                    low: 84.3914,
+                                    close: 85.3593),
+                                ChartData( // High and low values are same
+                                    x: 10,
+                                    open: 86.4425,
+                                    high: 86.4885,
+                                    low: 86.4885,
+                                    close: 86.5443),
+                                ChartData( //High, low, open, and close values all are same
+                                    x: 15,
+                                    open: 86.4885,
+                                    high: 86.4885,
+                                    low: 86.4885,
+                                    close: 86.4885),
+                            ],
+                            xValueMapper: (ChartData data, _) => data.x,
+                            highValueMapper: (ChartData data, _) => data.high,
+                            lowValueMapper: (ChartData data, _) => data.low,
+                            openValueMapper: (ChartData data, _) => data.open,
+                            closeValueMapper: (ChartData data, _) => data.close)
+                        ]
+                    ),
+                )   
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![OHLC Indication](images/cartesian-chart-types/hilo_open_close_indication.jpg)
+
 ## Candle
 
 Candle series is similar to HiLo Open Close series, used to represent the low, high, open and closing price over time.
@@ -2723,6 +2779,7 @@ To render a Candle chart, create an instance of [` CandleSeries`](https://pub.de
 * [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
 * [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) – Changes the stroke width of the series.
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) – Changes the stroke color of the series.
+* [`showIndicationForSameValues`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CandleSeries/showIndicationForSameValues.html)- Used to show indication of the data point with a thin line when its high and low values are same and also when all the values of high, low, open and close are same for the data point. By default is set to be false.
 * [`enableSolidCandles`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CandleSeries/enableSolidCandles.html)- Used to enable/disable the solid candles. By default is set to be false. The fill color of the candle will be defined by its opening and closing values.
 * [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/lowValueMapper.html) - used to get the low values from the series.
 * [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/highValueMapper.html) - used to get the high values from the series.
@@ -2762,6 +2819,62 @@ To render a Candle chart, create an instance of [` CandleSeries`](https://pub.de
 {% endhighlight %}
 
 ![candle chart](images/cartesian-chart-types/candle.png)
+
+### Indication for same values
+
+In the Candle series, there is a feature for the datapoints indication when their high and low values are same or open and close values or high, low, open and close values are same for a datapoint. For using this indication feature, [`showIndicationForSameValues`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CandleSeries/showIndicationForSameValues.html) property can be set to true.
+
+The following are the types of indication when the combination of high, low, open and close values are same for a datapoint.
+
+* In the Candle chart, if the open and close values are same then a horizontal line will be drawn at that value by default.
+* If the high and low values are same and with [`showIndicationForSameValues`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CandleSeries/showIndicationForSameValues.html) property set to true then, a thin vertical line is drawn and if API is set to false, the line will not be drawn. 
+
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: SfCartesianChart(
+                        series: <ChartSeries>[
+                          CandleSeries<ChartData, double>(
+                            showIndicationForSameValues: true,
+                            dataSource: <ChartData>[
+                                ChartData( // Open and close values are same
+                                    x: 5,
+                                    open: 86.3593,
+                                    high: 88.1435,
+                                    low: 84.3914,
+                                    close: 86.3593),
+                                ChartData( // High and low values are same
+                                    x: 10,
+                                    open: 85.4425,
+                                    high: 86.4885,
+                                    low: 86.4885,
+                                    close: 87.001),
+                                ChartData( //High, low, open, and close values all are same
+                                    x: 15,
+                                    open: 86.4885,
+                                    high: 86.4885,
+                                    low: 86.4885,
+                                    close: 86.4885),
+                            ],
+                            xValueMapper: (ChartData data, _) => data.x,
+                            highValueMapper: (ChartData data, _) => data.high,
+                            lowValueMapper: (ChartData data, _) => data.low,
+                            openValueMapper: (ChartData data, _) => data.open,
+                            closeValueMapper: (ChartData data, _) => data.close)
+                        ]
+                    ),
+                )   
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![Candle Indication](images/cartesian-chart-types/candle_indication.jpg)
 
 ## Box and Whisker chart
 

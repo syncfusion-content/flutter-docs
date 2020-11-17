@@ -142,7 +142,28 @@ You can select a point or series programmatically on a chart using [`initialSele
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        initialSelectedDataIndexes: <IndexesModel>[IndexesModel(1, 0)]
+                        series: <CartesianSeries>[
+                            ColumnSeries<ChartData, double>(
+                                // Initially selected the data at point index - 1.
+                                initialSelectedDataIndexes: <int>[1],
+                                dataSource: chartData1,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                selectionBehavior: SelectionBehavior(
+                                    // Enables the selection
+                                    enable: true
+                                )
+                            ),
+                            ColumnSeries<ChartData, double>(
+                                dataSource: chartData2,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                selectionBehavior: SelectionBehavior(
+                                    // Enables the selection
+                                    enable: true
+                                )
+                            )
+                        ]
                     )
                 )
             )
