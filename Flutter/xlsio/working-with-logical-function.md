@@ -98,7 +98,7 @@ workbook.dispose();
 
 ## OR Function
 
-OR Function is a logical function to check whether any of arguments are TRUE, and returns TRUE or FALSE. Returna FALSE only When all arguments are FALSE. 
+OR Function is a logical function to check whether any of arguments are TRUE, and returns TRUE or FALSE. Return FALSE only When all arguments are FALSE. 
 
 The following code snippet illustrates on how to use OR function formula.
 

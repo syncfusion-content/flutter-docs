@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Worksheet Rows and Columns Manipulation using Syncfusion Flutter XlsIO
-description: Learn how to manipulate rows and columns in Excel Worksheet using Syncfusion Flutter XlsIO.
+description: Learn how to apply and manipulate rows cells and columns cells in Excel Worksheet of workbook using Syncfusion Flutter XlsIO.
 platform: flutter
 control: Excel
 documentation: ug
