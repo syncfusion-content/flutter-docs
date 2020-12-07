@@ -25,10 +25,10 @@ Widget build(BuildContext context) {
     source: _employeeDatasource,
     headerRowHeight: 70,
     columns: <GridColumn>[
-      GridNumericColumn(mappingName: 'id')..headerText = 'ID',
-      GridTextColumn(mappingName: 'name')..headerText = 'Name',
-      GridTextColumn(mappingName: 'designation')..headerText = 'Designation',
-      GridNumericColumn(mappingName: 'salary')..headerText = 'Salary',
+      GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+      GridTextColumn(mappingName: 'name', headerText: 'Name'),
+      GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+      GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
     ],
   ));
 }
@@ -52,10 +52,10 @@ Widget build(BuildContext context) {
     source: _employeeDatasource,
     rowHeight: 60,
     columns: <GridColumn>[
-      GridNumericColumn(mappingName: 'id')..headerText = 'ID',
-      GridTextColumn(mappingName: 'name')..headerText = 'Name',
-      GridTextColumn(mappingName: 'designation')..headerText = 'Designation',
-      GridNumericColumn(mappingName: 'salary')..headerText = 'Salary',
+      GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+      GridTextColumn(mappingName: 'name', headerText: 'Name'),
+      GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+      GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
     ],
   ));
 }
@@ -93,34 +93,34 @@ Widget build(BuildContext context) {
             return height;
           },
           columns: <GridColumn>[
-        GridTextColumn(mappingName: 'id')
-          ..softWrap = true
-          ..overflow = TextOverflow.clip
-          ..headerText = 'ID',
-        GridTextColumn(mappingName: 'contactName')
-          ..softWrap = true
-          ..overflow = TextOverflow.clip
-          ..headerText = 'Contact Name',
-        GridTextColumn(mappingName: 'companyName')
-          ..softWrap = true
-          ..overflow = TextOverflow.clip
-          ..headerText = 'Company Name',
-        GridTextColumn(mappingName: 'city')
-          ..softWrap = true
-          ..overflow = TextOverflow.clip
-          ..headerText = 'City',
-        GridTextColumn(mappingName: 'address')
-          ..softWrap = true
-          ..overflow = TextOverflow.clip
-          ..headerText = 'Address',
-        GridTextColumn(mappingName: 'designation')
-          ..softWrap = true
-          ..overflow = TextOverflow.clip
-          ..headerText = 'Designation',
-        GridTextColumn(mappingName: 'country')
-          ..softWrap = true
-          ..overflow = TextOverflow.clip
-          ..headerText = 'Country',
+        GridTextColumn(mappingName: 'id',
+          softWrap: true,
+          overflow: TextOverflow.clip,
+          headerText: 'ID'),
+        GridTextColumn(mappingName: 'contactName',
+          softWrap: true,
+          overflow: TextOverflow.clip,
+          headerText: 'Contact Name'),
+        GridTextColumn(mappingName: 'companyName',
+          softWrap: true,
+          overflow: TextOverflow.clip,
+          headerText: 'Company Name'),
+        GridTextColumn(mappingName: 'city',
+          softWrap: true,
+          overflow: TextOverflow.clip,
+          headerText: 'City'),
+        GridTextColumn(mappingName: 'address',
+          softWrap: true,
+          overflow: TextOverflow.clip,
+          headerText: 'Address'),
+        GridTextColumn(mappingName: 'designation',
+          softWrap: true,
+          overflow: TextOverflow.clip,
+          headerText: 'Designation'),
+        GridTextColumn(mappingName: 'country',
+          softWrap: true,
+          overflow: TextOverflow.clip,
+          headerText: 'Country'),
       ]));
 }
 
@@ -158,34 +158,34 @@ Widget build(BuildContext context) {
             return height;
           },
           columns: <GridColumn>[
-        GridTextColumn(mappingName: 'id')
-          ..softWrap = true
-          ..overflow = TextOverflow.clip
-          ..headerText = 'ID',
-        GridTextColumn(mappingName: 'contactName')
-          ..softWrap = true
-          ..overflow = TextOverflow.clip
-          ..headerText = 'Contact Name',
-        GridTextColumn(mappingName: 'companyName')
-          ..softWrap = true
-          ..overflow = TextOverflow.clip
-          ..headerText = 'Company Name',
-        GridTextColumn(mappingName: 'address')
-          ..softWrap = true
-          ..overflow = TextOverflow.clip
-          ..headerText = 'Address',
-        GridTextColumn(mappingName: 'city')
-          ..softWrap = true
-          ..overflow = TextOverflow.clip
-          ..headerText = 'City',
-        GridTextColumn(mappingName: 'designation')
-          ..softWrap = true
-          ..overflow = TextOverflow.clip
-          ..headerText = 'Designation',
-        GridTextColumn(mappingName: 'country')
-          ..softWrap = true
-          ..overflow = TextOverflow.clip
-          ..headerText = 'Country',
+        GridTextColumn(mappingName: 'id',
+          softWrap: true,
+          overflow: TextOverflow.clip,
+          headerText: 'ID'),
+        GridTextColumn(mappingName: 'contactName',
+          softWrap: true,
+          overflow: TextOverflow.clip,
+          headerText: 'Contact Name'),
+        GridTextColumn(mappingName: 'companyName',
+          softWrap: true,
+          overflow: TextOverflow.clip,
+          headerText: 'Company Name'),
+        GridTextColumn(mappingName: 'address',
+          softWrap: true,
+          overflow: TextOverflow.clip,
+          headerText: 'Address'),
+        GridTextColumn(mappingName: 'city',
+          softWrap: true,
+          overflow: TextOverflow.clip,
+          headerText: 'City'),
+        GridTextColumn(mappingName: 'designation',
+          softWrap: true,
+          overflow: TextOverflow.clip,
+          headerText: 'Designation'),
+        GridTextColumn(mappingName: 'country',
+          softWrap: true,
+          overflow: TextOverflow.clip,
+          headerText: 'Country'),
       ]));
 }
 
@@ -216,37 +216,37 @@ Widget build(BuildContext context) {
             return height;
           },
           columns: <GridColumn>[
-        GridTextColumn(mappingName: 'id')
-          ..softWrap = true
-          ..overflow = TextOverflow.clip
-          ..headerText = 'ID',
-        GridTextColumn(mappingName: 'contactName')
-          ..softWrap = true
-          ..overflow = TextOverflow.clip
-          ..headerText = 'Contact Name',
-        GridTextColumn(mappingName: 'companyName')
-          ..softWrap = true
-          ..overflow = TextOverflow.clip
-          ..headerText = 'Company Name',
-        GridTextColumn(mappingName: 'country')
-          ..softWrap = true
-          ..overflow = TextOverflow.clip
-          ..headerText = 'Country',
-        GridTextColumn(mappingName: 'address')
-          ..softWrap = true
-          ..visible = false
-          ..overflow = TextOverflow.clip
-          ..headerText = 'Address',
-        GridTextColumn(mappingName: 'city')
-          ..softWrap = true
-          ..visible = false
-          ..overflow = TextOverflow.clip
-          ..headerText = 'City',
-        GridTextColumn(mappingName: 'designation')
-          ..softWrap = true
-          ..visible = false
-          ..overflow = TextOverflow.clip
-          ..headerText = 'Designation',
+        GridTextColumn(mappingName: 'id',
+          softWrap: true,
+          overflow: TextOverflow.clip,
+          headerText: 'ID'),
+        GridTextColumn(mappingName: 'contactName',
+          softWrap: true,
+          overflow: TextOverflow.clip,
+          headerText: 'Contact Name'),
+        GridTextColumn(mappingName: 'companyName',
+          softWrap: true,
+          overflow: TextOverflow.clip,
+          headerText: 'Company Name'),
+        GridTextColumn(mappingName: 'country',
+          softWrap: true,
+          overflow: TextOverflow.clip,
+          headerText: 'Country'),
+        GridTextColumn(mappingName: 'address',
+          softWrap: true,
+          visible: false,
+          overflow: TextOverflow.clip,
+          headerText: 'Address'),
+        GridTextColumn(mappingName: 'city',
+          softWrap: true,
+          visible: false,
+          overflow: TextOverflow.clip,
+          headerText: 'City'),
+        GridTextColumn(mappingName: 'designation',
+          softWrap: true,
+          visible: false,
+          overflow: TextOverflow.clip,
+          headerText: 'Designation'),
       ]));
 }
 
@@ -280,13 +280,13 @@ Widget build(BuildContext context) {
       return 49.0;
     },
     columns: <GridColumn>[
-      GridNumericColumn(mappingName: 'id')..headerText = 'ID',
-      GridTextColumn(mappingName: 'name')..headerText = 'Name',
-      GridTextColumn(mappingName: 'designation')
-        ..headerTextSoftWrap = true,
-        ..headerTextOverflow = TextOverflow.clip
-        ..headerText = 'Employee Designation',
-      GridNumericColumn(mappingName: 'salary')..headerText = 'Salary',
+      GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+      GridTextColumn(mappingName: 'name', headerText: 'Name'),
+      GridTextColumn(mappingName: 'designation',
+        headerTextSoftWrap: true,
+        headerTextOverflow: TextOverflow.clip,
+        headerText: 'Employee Designation'),
+      GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
     ],
   ));
 }
