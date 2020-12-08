@@ -62,8 +62,8 @@ Widget build(BuildContext context) {
     body: SfDataGrid(
       source: _employeeDataSource,
       columns: [
-        GridNumericColumn(mappingName: 'id', headerText: 'ID')
-          ..padding = EdgeInsets.all(20.0),
+        GridNumericColumn(mappingName: 'id', headerText: 'ID',padding: 
+        EdgeInsets.all(20.0)),
         GridTextColumn(mappingName: 'name', headerText: 'Name'),
         GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
         GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
@@ -94,8 +94,7 @@ Widget build(BuildContext context) {
         GridNumericColumn(mappingName: 'id', headerText: 'ID'),
         GridTextColumn(mappingName: 'name', headerText: 'Name'),
         GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-        GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
-          ..visible = false,
+        GridNumericColumn(mappingName: 'salary', headerText: 'Salary',visible: false)
       ],
     ),
   );
@@ -121,8 +120,7 @@ Widget build(BuildContext context) {
       source: _employeeDataSource,
       columns: [
         GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-        GridTextColumn(mappingName: 'name', headerText: 'Name')
-          ..width = 100.0,
+        GridTextColumn(mappingName: 'name', headerText: 'Name',width: 100.0),
         GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
         GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
       ],
@@ -146,9 +144,7 @@ Widget build(BuildContext context) {
     body: SfDataGrid(
       source: _employeeDataSource,
       columns: [
-        GridNumericColumn(mappingName: 'id', headerText: 'ID')
-          ..textAlignment = Alignment.center
-          ..headerTextAlignment = Alignment.center,
+        GridNumericColumn(mappingName: 'id', headerText: 'ID', textAlignment: Alignment.center, headerTextAlignment: Alignment.center),
         GridTextColumn(mappingName: 'name', headerText: 'Name'),
         GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
         GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
@@ -175,9 +171,7 @@ Widget build(BuildContext context) {
       columns: [
         GridNumericColumn(mappingName: 'id', headerText: 'ID'),
         GridTextColumn(mappingName: 'name', headerText: 'Name'),
-        GridTextColumn(mappingName: 'designation', headerText: 'Designation')
-          ..softWrap = true
-          ..headerTextSoftWrap = true,
+        GridTextColumn(mappingName: 'designation', headerText: 'Designation', softWrap: true, headerTextSoftWrap: true),
         GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
         
       ],
@@ -201,11 +195,8 @@ Widget build(BuildContext context) {
     body: SfDataGrid(
       source: _employeeDataSource,
       columns: [
-        GridNumericColumn(mappingName: 'id', headerText: 'ID')
-          ..overflow = TextOverflow.fade,
-        GridTextColumn(mappingName: 'name', headerText: 'Name')
-          ..overflow = TextOverflow.clip
-          ..headerTextOverflow = TextOverflow.clip,
+        GridNumericColumn(mappingName: 'id', headerText: 'ID', overflow: TextOverflow.fade),
+        GridTextColumn(mappingName: 'name', headerText: 'Name', overflow: TextOverflow.clip, headerTextOverflow: TextOverflow.clip),
         GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
         GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
       ],
@@ -246,10 +237,10 @@ Widget build(BuildContext context) {
           return null;
       },
       columns: [
-      GridNumericColumn(mappingName: 'id')..headerText = 'ID',
-      GridTextColumn(mappingName: 'name')..headerText = 'Name',
-      GridTextColumn(mappingName: 'city')..headerText = 'City',
-      GridTextColumn(mappingName: 'price')..headerText = 'Price'
+      GridNumericColumn(mappingName: 'id',headerText:'ID'),
+      GridTextColumn(mappingName: 'name',headerText: 'Name'),
+      GridTextColumn(mappingName: 'city',headerText: 'City'),
+      GridTextColumn(mappingName: 'price',headerText: 'Price')
       ],
     ),
   );
@@ -290,15 +281,17 @@ Widget build(BuildContext context) {
     body: SfDataGrid(
       source: _employeeDataSource,
       columns: [
-        GridNumericColumn(mappingName: 'id', headerText: 'ID')
-          ..headerStyle = DataGridHeaderCellStyle(
-              textStyle:
-                  TextStyle(color: Colors.red, fontWeight: FontWeight.bold))
-          ..cellStyle =
-              DataGridCellStyle(textStyle: TextStyle(color: Colors.red)),
-        GridTextColumn(mappingName: 'name', headerText: 'Name'),
-        GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-        GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+        GridNumericColumn(
+              mappingName: 'id',
+              headerText: 'ID',
+              headerStyle: DataGridHeaderCellStyle(
+                  textStyle: TextStyle(
+                      color: Colors.red, fontWeight: FontWeight.bold)),
+              cellStyle:
+                  DataGridCellStyle(textStyle: TextStyle(color: Colors.red))),
+          GridTextColumn(mappingName: 'name', headerText: 'Name'),
+          GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+          GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
       ],
     ),
   );
@@ -325,16 +318,18 @@ Widget build(BuildContext context) {
     body: SfDataGrid(
       source: _employeeDataSource,
       columns: [
-        GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-        GridTextColumn(mappingName: 'name', headerText: 'Name'),
-        GridTextColumn(mappingName: 'designation', headerText: 'Designation')
-          ..headerStyle = DataGridHeaderCellStyle(
-              textStyle:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-              backgroundColor: Colors.deepPurple)
-          ..cellStyle =
-              DataGridCellStyle(backgroundColor: Colors.deepPurple[200]),
-        GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+         GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+         GridTextColumn(mappingName: 'name', headerText: 'Name'),
+         GridTextColumn(
+              mappingName: 'designation',
+              headerText: 'Designation',
+              headerStyle: DataGridHeaderCellStyle(
+                  textStyle: TextStyle(
+                      color: Colors.white, fontWeight: FontWeight.bold),
+                  backgroundColor: Colors.deepPurple),
+              cellStyle:
+                  DataGridCellStyle(backgroundColor: Colors.deepPurple[200])),
+         GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
       ],
     ),
   );
@@ -466,8 +461,7 @@ Widget build(BuildContext context) {
         GridNumericColumn(mappingName: 'id', headerText: 'ID'),
         GridTextColumn(mappingName: 'name', headerText: 'Name'),
         GridDateTimeColumn(
-            mappingName: 'dateOfJoining', headerText: 'Date of Joining')
-          ..dateFormat = DateFormat('dd/MM/yyyy'),
+            mappingName: 'dateOfJoining', headerText: 'Date of Joining', dateFormat: DateFormat('dd/MM/yyyy')),
         GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
       ],
     ),

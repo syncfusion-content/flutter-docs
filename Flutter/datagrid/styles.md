@@ -42,11 +42,11 @@ Widget build(BuildContext context) {
       child: SfDataGrid(
         source: _employeeDataSource,
         columns: <GridColumn>[
-          GridNumericColumn(mappingName: 'id')..headerText = 'Order ID',
-          GridTextColumn(mappingName: 'name')..headerText = 'Name',
-          GridTextColumn(mappingName: 'designation')
-            ..headerText = 'Designation',
-          GridNumericColumn(mappingName: 'salary')..headerText = 'Salary',
+          GridNumericColumn(mappingName: 'id', headerText: 'Order ID'),
+          GridTextColumn(mappingName: 'name', headerText: 'Name'),
+          GridTextColumn(mappingName: 'designation',
+            headerText: 'Designation'),
+          GridNumericColumn(mappingName: 'salary',headerText: 'Salary',
         ],
       ),
     ),
@@ -80,11 +80,10 @@ Widget build(BuildContext context) {
       child: SfDataGrid(
         source: _employeeDataSource,
         columns: <GridColumn>[
-          GridNumericColumn(mappingName: 'id')..headerText = 'Order ID',
-          GridTextColumn(mappingName: 'name')..headerText = 'Name',
-          GridNumericColumn(mappingName: 'salary')..headerText = 'Salary',
-          GridTextColumn(mappingName: 'designation')
-            ..headerText = 'Designation'
+          GridNumericColumn(mappingName: 'id', headerText: 'Order ID'),
+          GridTextColumn(mappingName: 'name', headerText: 'Name'),
+          GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+          GridTextColumn(mappingName: 'designation',headerText: 'Designation')
         ],
       ),
     ),
@@ -112,11 +111,11 @@ Widget build(BuildContext context) {
         child: SfDataGrid(
         source: _employeeDataSource,
         columns: <GridColumn>[
-          GridNumericColumn(mappingName: 'id')..headerText = 'Order ID',
-          GridTextColumn(mappingName: 'name')..headerText = 'Name',
-          GridNumericColumn(mappingName: 'salary')..headerText = 'Salary',
-          GridTextColumn(mappingName: 'designation')
-            ..headerText = 'Designation'
+          GridNumericColumn(mappingName: 'id', headerText: 'Order ID'),
+          GridTextColumn(mappingName: 'name', headerText: 'Name'),
+          GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+          GridTextColumn(mappingName: 'designation',
+            headerText: 'Designation')
         ],
       ),
     ),
@@ -148,11 +147,10 @@ Widget build(BuildContext context) {
     body: SfDataGrid(
         source: _employeeDataSource,
         columns: <GridColumn>[
-          GridNumericColumn(mappingName: 'id')..headerText = 'Order ID',
-          GridTextColumn(mappingName: 'name')..headerText = 'Name',
-          GridNumericColumn(mappingName: 'salary')..headerText = 'Salary',
-          GridTextColumn(mappingName: 'designation')
-            ..headerText = 'Designation',
+          GridNumericColumn(mappingName: 'id',headerText: 'Order ID'),
+          GridTextColumn(mappingName: 'name', headerText: 'Name'),
+          GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+          GridTextColumn(mappingName: 'designation',headerText: 'Designation'),
         ],
         gridLinesVisibility: GridLinesVisibility.both),
   );
