@@ -15,9 +15,9 @@ The Syncfusion Flutter PDF currently supports the following PDF conformances:
 * PDF/A-2b conformance
 * PDF/A-3b conformance
 
-## PDF/A-1b conformance
+N> To know more details about PDF/A standard refer https://en.wikipedia.org/wiki/PDF/A#Description
 
-The PDF/A-1b conformance is a constrained form of Adobe PDF version 1.4. It indicates minimal compliance to ensure that the rendered visual appearance of a conforming file is preservable over the long term.
+## PDF/A-1b conformance
 
 You can create a PDF/A-1b document by specifying the conformance level as a1b through PdfConformanceLevel enum when creating the new PDF document as follows.
 
@@ -44,8 +44,6 @@ document.dispose();
 
 ## PDF/A-2b conformance
 
-The PDF/A-2b conformance is a constrained form of Adobe PDF version 1.7. It indicates minimal compliance to ensure that the rendered visual appearance of a conforming file is preservable over the long term.
-
 You can create a PDF/A-2b document by specifying the conformance level as a2b through PdfConformanceLevel enum when creating the new PDF document as follows.
 
 {% highlight dart %}
@@ -71,7 +69,7 @@ document.dispose();
 
 ## PDF/A-3b conformance
 
-The PDF/A-3b conformance is a constrained form of Adobe PDF version 1.7. It supports the external files as attachment to the PDF document, so you can attach any document format such as Excel, Word, HTML, CAD, or XML files.
+The PDF/A-3b conformance supports the external files as attachment to the PDF document, so you can attach any document format such as Excel, Word, HTML, CAD, or XML files.
 
 You can create a PDF/A-3b document by specifying the conformance level as a3b through PdfConformanceLevel enum when creating the new PDF document as follows.
 
