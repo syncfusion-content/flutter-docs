@@ -27,7 +27,8 @@ Add the Syncfusion Flutter Sparkline Chart dependency to your pub spec file.
 
 {% endhighlight %}
 
-N> Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Charts`](https://pub.dev/packages/syncfusion_flutter_charts/versions) package.
+> **NOTE** 
+Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Charts`](https://pub.dev/packages/syncfusion_flutter_charts/versions) package.
 
 **Get packages**
 

@@ -1047,7 +1047,7 @@ N> This is applicable only to the value axis and not for other axis and applicab
 
 ## Axis label trim
 
-Axis label is controlled by [`labelsExtent`] and [`maximumlabelWidth`] in chart axis. If the width of axis labels is greater than the provided width then the axis labels gets trimmed with the size within the provided width and ellipse(...) at their suffix.
+Axis label is controlled by [`labelsExtent`]() and [`maximumlabelWidth`]() in chart axis. If the width of axis labels is greater than the provided width then the axis labels gets trimmed with the size within the provided width and ellipse(...) at their suffix.
 
 * [`maximumlabelWidth`]() - If the provided width is lesser than the axis label width
 label gets trimmed to the width  lesser than the axis label width. Defaults to `null`.
