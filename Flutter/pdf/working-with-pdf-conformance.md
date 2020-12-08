@@ -15,7 +15,7 @@ The Syncfusion Flutter PDF currently supports the following PDF conformances:
 * PDF/A-2b conformance
 * PDF/A-3b conformance
 
-N> To know more details about PDF/A standard refer https://en.wikipedia.org/wiki/PDF/A#Description
+N> To know more details about PDF/A standard refer [`https://en.wikipedia.org/wiki/PDF/A#Description`](https://en.wikipedia.org/wiki/PDF/A#Description)
 
 ## PDF/A-1b conformance
 
