@@ -7,7 +7,9 @@ control: Sparkline
 documentation: ug
 ---
 
-# Trackball 
+# Syncfusion Flutter Sparkline Trackball 
+
+## Trackball
 
 Trackball feature displays the tooltip for the data points that are closer to the point where you touch on the chart area. This feature, especially, can be used instead of data label feature when you cannot show data labels for all data points due to space constraint. This feature can be enabled using enable property of [`trackball`](). Trackball will be activated using [`activationMode`]() property. Once it is activated, it will appear in the UI and move based on your touch movement until you stop touching on the chart.
 
