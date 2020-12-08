@@ -47,7 +47,7 @@ The following properties are used to customize the appearance:
 
 {% endhighlight %}
 
-![Spark line chart]()
+![Spark line chart](images/sparkline-types/sparkline.png)
 
 ### Dashed line
 
@@ -74,6 +74,8 @@ The [`dashArray`]() property of [`SfSparkLineChart`]() is used to render line ch
     }
 
 {% endhighlight %}
+
+![Spark line dashArray](images/sparkline-types/sparkline-dasharray.png)
 
 ## Area Sparkline chart
 
@@ -114,7 +116,7 @@ The following properties are used to customize the appearance:
 
 {% endhighlight %}
 
-![Spark Area chart]()
+![Spark Area chart](images/sparkline-types/spark-area.png)
 
 ## Bar Sparkline chart
 
@@ -153,7 +155,7 @@ The following properties are used to customize the appearance:
 
 {% endhighlight %}
 
-![Spark Bar chart]()
+![Spark Bar chart](images/sparkline-types/spark-bar.png)
 
 ## WinLoss Sparkline chart
 
@@ -195,4 +197,4 @@ The following properties are used to customize the appearance:
 
 {% endhighlight %}
 
-![Spark win-loss chart]()
+![Spark win-loss chart](images/sparkline-types/spark-win-loss.png)
