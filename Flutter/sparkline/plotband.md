@@ -11,7 +11,7 @@ documentation: ug
 
 This feature is used to highlight a particular region in the sparkline along Y axis.
 
-The following properties are used to customize the appearences:
+The following properties are used to customize the appearances:
 * [`start`]() - used to configure the start plot band value in Y axis.
 * [`end`]() - used to configure the end plot band values in Y axis.
 * [`color`]() - used to change the color for plot band.

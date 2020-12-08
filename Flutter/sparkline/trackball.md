@@ -13,11 +13,11 @@ Trackball feature displays the tooltip for the data points that are closer to th
 
 You can use the following properties to customize the appearance:
 
-* [`borderWidth`]() – Repreents the border width.
-* [`borderColor`]() – Repreents the border color.
-* [`backgroundColor`]() - Represents the background color for track ball.
-* [`width`]() - Represents the width of track ball line.
-* [`color`]() - epresents the color of track ball line.
+* [`borderWidth`]() – Represent the border width.
+* [`borderColor`]() – Represent the border color.
+* [`backgroundColor`]() - Represent the background color for track ball.
+* [`width`]() - Represent the width of track ball line.
+* [`color`]() - Represent the color of track ball line.
 
 {% highlight dart %} 
 

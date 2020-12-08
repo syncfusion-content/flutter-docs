@@ -16,4 +16,4 @@ Syncfusion Flutter Sparkline is a very small chart, typically drawn without axes
 * Supports 4 different types of sparkline such as line, area, win-loss, bar.
 * To provide marker support for all types.
 * Supports to draw trackball in sparkline
-* Supports to draw plotbands.
+* Supports to draw plot bands.
