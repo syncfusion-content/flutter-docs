@@ -41,4 +41,4 @@ The following properties are used to customize the appearences:
 
 {% endhighlight %}
 
-![Spark Area chart]()
+![Sparkline plot band](images/plotband/spark-plotband.png)

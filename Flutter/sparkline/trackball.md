@@ -42,7 +42,7 @@ You can use the following properties to customize the appearance:
 
 {% endhighlight %}
 
-![Spark Area chart]()
+![Sparkline trackball](images/trackball/spark-trackball.png)
 
 ### Activation mode
 
@@ -74,4 +74,3 @@ The [`activationMode`]() property is used to restrict the visibility of trackbal
 
 {% endhighlight %}
 
-![Spark Area chart]()
