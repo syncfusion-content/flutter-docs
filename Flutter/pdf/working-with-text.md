@@ -31,6 +31,32 @@ document.dispose();
 
 {% endhighlight %}
 
+## Drawing text in an existing document
+
+The following code sample explains how to add text in the existing PDF document by using the [`drawString`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGraphics/drawString.html) method.
+
+{% highlight dart %}
+
+//Loads an existing PDF document
+PdfDocument document =
+    PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
+  
+//Gets the first page from the document
+PdfPage page = document.pages[0];
+
+//Draw the text
+page.graphics.drawString(
+    'Hello World!', PdfStandardFont(PdfFontFamily.helvetica, 20),
+    bounds: Rect.fromLTWH(40, 40, 500, 40));
+ 
+//Saves the document
+File('output.pdf').writeAsBytes(document.save());
+
+//Disposes the document
+document.dispose();
+
+{% endhighlight %}
+
 ## Drawing text using different fonts
 
 The Syncfusion Flutter PDF allows you to add text to the PDF document using the following types of fonts:

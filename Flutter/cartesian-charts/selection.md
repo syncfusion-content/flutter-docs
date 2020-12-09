@@ -24,7 +24,7 @@ The selection feature in chart let you to select a segment in a series or the se
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
-                                selectionSettings: SelectionSettings(
+                                selectionBehavior: SelectionBehavior(
                                     // Enables the selection
                                     enable: true
                                 )
@@ -42,14 +42,14 @@ The selection feature in chart let you to select a segment in a series or the se
 
 You can customize the segments using the below properties.
 
-* [`selectedColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionSettings/selectedColor.html) - used to change the background color of selected segment.
-* [`unselectedColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionSettings/unselectedColor.html) - used to change the background color of unselected segment.
-* [`selectedBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionSettings/selectedBorderColor.html) - used to change the stroke color of the selected segment.
-* [`selectedBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionSettings/selectedBorderWidth.html) - used to change the stroke width of the selected segment.
-* [`unselectedBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionSettings/unselectedBorderColor.html) - used to change the stroke color of the unselected segment.
-* [`unselectedBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionSettings/unselectedBorderWidth.html) - used to change the stroke width of the unselected segment.
-* [`selectedOpacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionSettings/selectedOpacity.html) - used to control the transparency of the selected segment.
-* [`unselectedOpacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionSettings/unselectedOpacity.html) - used to control the transparency of the selected segment.
+* [`selectedColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/selectedColor.html) - used to change the background color of selected segment.
+* [`unselectedColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/unselectedColor.html) - used to change the background color of unselected segment.
+* [`selectedBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/selectedBorderColor.html) - used to change the stroke color of the selected segment.
+* [`selectedBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/selectedBorderWidth.html) - used to change the stroke width of the selected segment.
+* [`unselectedBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/unselectedBorderColor.html) - used to change the stroke color of the unselected segment.
+* [`unselectedBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/unselectedBorderWidth.html) - used to change the stroke width of the unselected segment.
+* [`selectedOpacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/selectedOpacity.html) - used to control the transparency of the selected segment.
+* [`unselectedOpacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/unselectedOpacity.html) - used to control the transparency of the selected segment.
 
 {% highlight dart %} 
 
@@ -61,7 +61,7 @@ You can customize the segments using the below properties.
                     child: SfCartesianChart(
                         series: <CartesianSeries>[
                             ColumnSeries<ChartData, double>(
-                                selectionSettings: SelectionSettings(
+                                selectionBehavior: SelectionBehavior(
                                     enable: true,
                                     selectedColor: Colors.red,
                                     unselectedColor: Colors.grey
@@ -142,7 +142,28 @@ You can select a point or series programmatically on a chart using [`initialSele
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        initialSelectedDataIndexes: <IndexesModel>[IndexesModel(1, 0)]
+                        series: <CartesianSeries>[
+                            ColumnSeries<ChartData, double>(
+                                // Initially selected the data at point index - 1.
+                                initialSelectedDataIndexes: <int>[1],
+                                dataSource: chartData1,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                selectionBehavior: SelectionBehavior(
+                                    // Enables the selection
+                                    enable: true
+                                )
+                            ),
+                            ColumnSeries<ChartData, double>(
+                                dataSource: chartData2,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                selectionBehavior: SelectionBehavior(
+                                    // Enables the selection
+                                    enable: true
+                                )
+                            )
+                        ]
                     )
                 )
             )

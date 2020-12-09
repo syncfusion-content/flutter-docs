@@ -20,7 +20,26 @@ Refer to the following links for recommended development environment in Flutter.
 
 ### SDK Version
 
-The minimum Flutter SDK version required for our component is [`v1.7.8`](https://flutter.dev/docs/development/tools/sdk/releases)
+The following is the minimum Flutter SDK version required for our widgets:
+
+<table>
+    <tr>
+        <th>Channel</th>
+        <th>Version</th>
+    </tr>
+    <tr>
+        <td>Stable</td>
+        <td style="text-align:center">
+            <a href="https://storage.googleapis.com/flutter_infra/releases/stable/windows/flutter_windows_1.20.1-stable.zip">v1.22</a>
+        </td>
+    </tr>
+    <tr>
+        <td>Beta</td>
+        <td style="text-align:center">
+            <a href="https://storage.googleapis.com/flutter_infra/releases/beta/windows/flutter_windows_1.20.0-7.4.pre-beta.zip">v1.20.0-7.4.pre</a>
+        </td>
+    </tr>
+</table>
 
 ### Supported Platforms
 

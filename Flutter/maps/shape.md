@@ -127,6 +127,44 @@ Widget build(BuildContext context) {
 
 ![Shapes color](images/shape-colors/shapes-stroke-color.png)
 
+## Hover color
+
+You can apply hover color, stroke color and stroke width to the shapes in the web platform using the [`SfMapsThemeData.shapeHoverColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData/shapeHoverColor.html), [`SfMapsThemeData.shapeHoverStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData/shapeHoverStrokeColor.html) and [`SfMapsThemeData.shapeHoverStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsThemeData/shapeHoverStrokeWidth.html) properties respectively.
+
+N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfMapsTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfMapsTheme-class.html).
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+   return Scaffold(
+      body: Padding(
+        padding: EdgeInsets.all(15),
+        child: SfMapsTheme(
+          data: SfMapsThemeData(
+            shapeHoverColor: Colors.red[800],
+            shapeHoverStrokeColor: Colors.black,
+            shapeHoverStrokeWidth: 2,
+          ),
+          child: SfMaps(
+            layers: <MapLayer>[
+              MapShapeLayer(
+                delegate: MapShapeLayerDelegate(
+                  shapeFile: 'assets/world_map.json',
+                  shapeDataField: 'continent',
+                ),
+              ),
+            ],
+          ),
+        )
+      ),
+   );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Palette
 
 You can color the shape based on the list of colors provided in the [`MapShapeLayer.palette`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/palette.html) property in a sequential order.

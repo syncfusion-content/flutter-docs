@@ -97,6 +97,14 @@ In the above code snippet, [`chartThemeData`](https://pub.dev/documentation/sync
              <a href="https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart-class.html">SfFunnelChart</a>
         </td>
     </tr>
+    <tr>
+        <td>
+         <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData-class.html">SfDataGridThemeData</a>
+        </td>
+        <td>
+             <a href="https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html">SfDataGrid</a>
+        </td>
+    </tr>
 	<tr>
         <td>
             <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDateRangePickerThemeData-class.html">SfDateRangePickerThemeData</a>
@@ -143,6 +151,14 @@ In the above code snippet, [`chartThemeData`](https://pub.dev/documentation/sync
         </td>
         <td>
            <a href="https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html">SfRangeSelector</a>
+        </td>
+    </tr>
+    <tr>
+       <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfPdfViewerThemeData-class.html">SfPdfViewerThemeData</a>
+        </td>
+        <td>
+           <a href="https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html">SfPdfViewer</a>
         </td>
     </tr>
 </table>
@@ -238,6 +254,14 @@ Similarly, refer the following table to know about the other specialized theme w
              <a href="https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart-class.html">SfFunnelChart</a>
         </td>
     </tr>
+    <tr>
+        <td>
+         <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData-class.html">SfDataGridThemeData</a>
+        </td>
+        <td>
+             <a href="https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html">SfDataGrid</a>
+        </td>
+    </tr>
 	<tr>
         <td>
             <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDateRangePickerTheme-class.html">SfDateRangePickerTheme</a>
@@ -284,6 +308,14 @@ Similarly, refer the following table to know about the other specialized theme w
         </td>
         <td>
            <a href="https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html">SfRangeSelector</a>
+        </td>
+    </tr>
+    <tr>
+       <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfPdfViewerTheme-class.html">SfPdfViewerTheme</a>
+        </td>
+        <td>
+           <a href="https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html">SfPdfViewer</a>
         </td>
     </tr>
 </table>
