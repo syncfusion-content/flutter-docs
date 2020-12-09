@@ -27,22 +27,20 @@ PdfPage page = document.pages.add();
 
 //Add the first layer.
 PdfPageLayer layer = page.layers.add(name: 'Layer1');
+
+//Get the layer graphics.
 PdfGraphics graphics = layer.graphics;
 graphics.translateTransform(100, 60);
 
 //Draw an Arc.
-PdfPen pen = PdfPen(PdfColor(250, 0, 0), width: 50);
-const Rect rect = Rect.fromLTWH(0, 0, 50, 50);
-graphics.drawArc(rect, 360, 360, pen: pen);
-
-pen = PdfPen(PdfColor(0, 0, 250), width: 30);
-graphics.drawArc(const Rect.fromLTWH(0, 0, 50, 50), 360, 360, pen: pen);
-
-pen = PdfPen(PdfColor(250, 250, 0), width: 20);
-graphics.drawArc(rect, 360, 360, pen: pen);
-
-pen = PdfPen(PdfColor(0, 250, 0), width: 10);
-graphics.drawArc(const Rect.fromLTWH(0, 0, 50, 50), 360, 360, pen: pen);
+graphics.drawArc(Rect.fromLTWH(0, 0, 50, 50), 360, 360,
+    pen: PdfPen(PdfColor(250, 0, 0), width: 50));
+graphics.drawArc(Rect.fromLTWH(0, 0, 50, 50), 360, 360,
+    pen: PdfPen(PdfColor(0, 0, 250), width: 30));
+graphics.drawArc(Rect.fromLTWH(0, 0, 50, 50), 360, 360,
+    pen: PdfPen(PdfColor(250, 250, 0), width: 20));
+graphics.drawArc(Rect.fromLTWH(0, 0, 50, 50), 360, 360,
+    pen: PdfPen(PdfColor(0, 250, 0), width: 10));
 
 //Add another layer on the page.
 layer = page.layers.add(name: 'Layer2', visible: false);
@@ -51,18 +49,17 @@ graphics = layer.graphics;
 graphics.translateTransform(100, 180);
 
 //Draw another set of elements.
-pen = PdfPen(PdfColor(250, 0, 0), width: 50);
-graphics.drawArc(rect, 360, 360, pen: pen);
-pen = PdfPen(PdfColor(0, 0, 250), width: 30);
-graphics.drawArc(const Rect.fromLTWH(0, 0, 50, 50), 360, 360, pen: pen);
-pen = PdfPen(PdfColor(250, 250, 0), width: 20);
-graphics.drawArc(rect, 360, 360, pen: pen);
-pen = PdfPen(PdfColor(0, 250, 0), width: 10);
-graphics.drawArc(const Rect.fromLTWH(0, 0, 50, 50), 360, 360, pen: pen);
+graphics.drawArc(Rect.fromLTWH(0, 0, 50, 50), 360, 360,
+    pen: PdfPen(PdfColor(250, 0, 0), width: 50));
+graphics.drawArc(Rect.fromLTWH(0, 0, 50, 50), 360, 360,
+    pen: PdfPen(PdfColor(0, 0, 250), width: 30));
+graphics.drawArc(Rect.fromLTWH(0, 0, 50, 50), 360, 360,
+    pen: PdfPen(PdfColor(250, 250, 0), width: 20));
+graphics.drawArc(Rect.fromLTWH(0, 0, 50, 50), 360, 360,
+    pen: PdfPen(PdfColor(0, 250, 0), width: 10));
 
-// Save the PDF document.
+//Save the PDF document.
 File('output.pdf').writeAsBytes(document.save());
-
 
 {% endhighlight %}
 
@@ -70,31 +67,30 @@ The following code shows how to add the multiple layers in an existing PDF docum
 
 {% highlight dart %}
 
-// Load the existing PDF document.
-PdfDocument document = 
+//Load the existing PDF document.
+PdfDocument document =
     PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
-PdfPage page = document.pages[0];
 
 //Add the first layer.
-PdfPageLayer layer = page.layers.add(name: 'Layer1', visible: true);
+PdfPageLayer layer =
+    document.pages[0].layers.add(name: 'Layer1', visible: true);
+
+//Get the layer graphics.
 PdfGraphics graphics = layer.graphics;
+
 graphics.translateTransform(300, 360);
 
 //Draw an Arc.
-PdfPen pen = PdfPen(PdfColor(250, 0, 0), width: 50);
-const Rect rect = Rect.fromLTWH(0, 0, 50, 50);
-graphics.drawArc(rect, 360, 360, pen: pen);
+graphics.drawArc(Rect.fromLTWH(0, 0, 50, 50), 360, 360,
+    pen: PdfPen(PdfColor(250, 0, 0), width: 50));
+graphics.drawArc(Rect.fromLTWH(0, 0, 50, 50), 360, 360,
+    pen: PdfPen(PdfColor(0, 0, 250), width: 30));
+graphics.drawArc(Rect.fromLTWH(0, 0, 50, 50), 360, 360,
+    pen: PdfPen(PdfColor(250, 250, 0), width: 20));
+graphics.drawArc(const Rect.fromLTWH(0, 0, 50, 50), 360, 360,
+    pen: PdfPen(PdfColor(0, 250, 0), width: 10));
 
-pen = PdfPen(PdfColor(0, 0, 250), width: 30);
-graphics.drawArc(const Rect.fromLTWH(0, 0, 50, 50), 360, 360, pen: pen);
-
-pen = PdfPen(PdfColor(250, 250, 0), width: 20);
-graphics.drawArc(rect, 360, 360, pen: pen);
-
-pen = PdfPen(PdfColor(0, 250, 0), width: 10);
-graphics.drawArc(const Rect.fromLTWH(0, 0, 50, 50), 360, 360, pen: pen);
-
-// Save the PDF document.
+//Save the PDF document.
 File('output.pdf').writeAsBytes(document.save());
 
 {% endhighlight %}
@@ -117,17 +113,17 @@ PdfPage page = document.pages.add();
 PdfPageLayer layer = page.layers.add(name: 'Layer1', visible: true);
 PdfGraphics graphics = layer.graphics;
 graphics.translateTransform(100, 60);
-PdfPen pen = PdfPen(PdfColor(250, 0, 0), width: 50);
-Rect rect = Rect.fromLTWH(0, 0, 50, 50);
-graphics.drawArc(rect, 360, 360, pen: pen);
+graphics.drawArc(Rect.fromLTWH(0, 0, 50, 50), 360, 360,
+    pen: PdfPen(PdfColor(250, 0, 0), width: 50));
 
 //Add another layer on the page and disable the visibility.
 PdfPageLayer layer2 = page.layers.add(name: 'Layer2', visible: false);
 graphics = layer2.graphics;
 graphics.translateTransform(100, 180);
-graphics.drawEllipse(rect, pen: pen);
+graphics.drawEllipse(Rect.fromLTWH(0, 0, 50, 50),
+    pen: PdfPen(PdfColor(250, 0, 0), width: 50));
 
-// Save the PDF document.
+//Save the PDF document.
 File('output.pdf').writeAsBytes(document.save());
 
 {% endhighlight %}
@@ -138,17 +134,12 @@ You can remove the layers from the layer collection represented by the [`PdfPage
 
 {% highlight dart %}
 
-// Load the existing PDF document.
+//Load the existing PDF document and remove the layer on the first page.
 PdfDocument document =
-    PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
+    PdfDocument(inputBytes: File('input.pdf').readAsBytesSync())
+      ..pages[0].layers.removeAt(1);
 
-//Get the layer collection.
-final PdfPageLayerCollection collection = document.pages[0].layers;
-
-//Remove the layer.
-collection.removeAt(1);
-
-// Save the PDF document.
+//Save the PDF document.
 File('output.pdf').writeAsBytes(document.save());
 
 {% endhighlight %}
@@ -166,25 +157,16 @@ PdfDocument document = PdfDocument();
 PdfPage page = document.pages.add();
 
 //Add the first layer.
-PdfLayer layer = document.layers.add(name: 'Layer1', visible: true);
-PdfGraphics graphics = layer.createGraphics(page);
-graphics.translateTransform(100, 60);
+PdfLayer layer = document.layers.add(name: 'Layer1', visible: true)
+  ..createGraphics(page).drawRectangle(
+      bounds: Rect.fromLTWH(0, 0, 200, 100), brush: PdfBrushes.red);
 
-//Draw an Arc.
-PdfPen pen = PdfPen(PdfColor(250, 0, 0), width: 50);
-const Rect rect = Rect.fromLTWH(0, 0, 50, 50);
-graphics.drawArc(rect, 360, 360, pen: pen);
+//Create nested layer.
+layer.layers.add(name: 'Nested Layer1', visible: true)
+  ..createGraphics(page)
+      .drawRectangle(bounds: Rect.fromLTWH(0, 120, 200, 100), brush: PdfBrushes.green);
 
-pen = PdfPen(PdfColor(0, 0, 250), width: 30);
-graphics.drawArc(const Rect.fromLTWH(0, 0, 50, 50), 360, 360, pen: pen);
-
-pen = PdfPen(PdfColor(250, 250, 0), width: 20);
-graphics.drawArc(rect, 360, 360, pen: pen);
-
-pen = PdfPen(PdfColor(0, 250, 0), width: 10);
-graphics.drawArc(const Rect.fromLTWH(0, 0, 50, 50), 360, 360, pen: pen);
-
-// Save the PDF document.
+//Save the PDF document.
 File('output.pdf').writeAsBytes(document.save());
 
 {% endhighlight %}
@@ -195,17 +177,12 @@ You can flatten a layer in a PDF document by removing it from the [`PdfLayerColl
 
 {% highlight dart %}
 
-// Load the existing PDF document.
+//Load the existing PDF document and flatten the layer.
 PdfDocument document =
-    PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
+    PdfDocument(inputBytes: File('input.pdf').readAsBytesSync())..layers.removeAt(0, false);
 
-// Get layers from a collection.
-final PdfLayerCollection layers = document.layers;
-
-//Flatten a layer in the PDF document.
-layers.removeAt(0, true);
-
-// Save the PDF document.
+//Save the PDF document.
 File('output.pdf').writeAsBytes(document.save());
+
 
 {% endhighlight %}
