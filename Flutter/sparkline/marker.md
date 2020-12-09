@@ -43,7 +43,7 @@ You can use the following properties to customize the appearance:
 
 {% endhighlight %}
 
-![Spark Area chart]()
+![Sparkline marker](images/marker/spark-marker-circle.png)
 
 ### Customizing marker shapes
 
@@ -77,4 +77,4 @@ Markers can be assigned with different shapes using the [`shape`]() property. By
 
 {% endhighlight %}
 
-![Spark Area chart]()
+![Sparkline marker shape](images/marker/spark-marker-square.png)
