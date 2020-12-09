@@ -50,7 +50,7 @@ The following code shows how to delete rows and columns.
 
 {% highlight dart %} 
 
- // Create a new Excel Document.
+// Create a new Excel Document.
 final Workbook workbook = Workbook();
 
 // Accessing sheet via index.
@@ -104,7 +104,7 @@ workbook.dispose();
 
 {% endhighlight %}
 
-**Auto-Fit Rows**
+**Auto-Fit Columns**
 
 The following code snippet shows how a Column is re-sized to its content.
 
@@ -176,7 +176,7 @@ final Worksheet sheet = workbook.worksheets[0];
 final Range range = sheet.getRangeByName('A1:D1');
 range.setText('This is Long Text');
 
-// Auto-Fit row the range
+// Auto-Fit column the range
 range.autoFitColumns();
 
 // Save and dispose workbook.
