@@ -174,7 +174,7 @@ Add the basic maps elements such as title, data labels, legend, and tooltip as s
 
 * **Data labels** - You can show data labels using the [`MapShapeLayer.showDataLabels`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/showDataLabels.html) property and also, it is possible to show data labels only for the particular shapes/or show custom text using the [`MapShapeLayerDelegate.dataLabelMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/dataLabelMapper.html) property.
 
-* **Legend** - You can show legend using the [`MapShapeLayer.showLegend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/showLegend.html) property. The icons color of the legend is applied based on the colors returned in the [`MapShapeLayerDelegate.shapeColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeColorValueMapper.html) property. It is possible to customize the legend icons color and texts using the [`MapShapeLayerDelegate.shapeColorMappers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeColorMappers.html) property.
+* **Legend** - You can show legend using the [`MapShapeLayer.legendSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/legendSource.html) property. The icons color of the legend is applied based on the colors returned in the [`MapShapeLayerDelegate.shapeColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeColorValueMapper.html) property. It is possible to customize the legend icons color and texts using the [`MapShapeLayerDelegate.shapeColorMappers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeColorMappers.html) property.
 
 * **Tooltip** - You can enable tooltip for the shapes using the [`MapShapeLayer.enableShapeTooltip`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/enableShapeTooltip.html) property and also, it is possible to enable tooltip only for the particular shapes/or show custom text using the [`MapShapeLayerDelegate.shapeTooltipTextMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeTooltipTextMapper.html) property.
 
@@ -224,7 +224,7 @@ Widget build(BuildContext context) {
                     shapeTooltipTextMapper: (int index) => data[index].stateCode,
                   ),
                   showDataLabels: true,
-                  showLegend: true,
+                  legendSource: MapElement.shape,
                   enableShapeTooltip: true,
                   tooltipSettings: MapTooltipSettings(color: Colors.grey[700],
                       strokeColor: Colors.white, strokeWidth: 2
