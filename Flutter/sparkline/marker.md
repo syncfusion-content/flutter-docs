@@ -79,7 +79,7 @@ Markers can be assigned with different shapes using the [`shape`]() property. By
 
 ![Sparkline marker shape](images/marker/spark-marker-square.png)
 
-## Datalabel
+## Data label
 
 Data labels are used to display values of data points to improve the readability.
 
@@ -87,7 +87,7 @@ Data labels are used to display values of data points to improve the readability
 
 To enable data label for sparkline series, provide [`labelDisplayMode`]() property in sparkline chart widget.
 
-Following posible values are available in sparkline chart:
+Following possible values are available in sparkline chart:
 
 * [`none`]() - does not allow to display data points on any side.
 * [`all`]() - allows to display data labels on all points.
