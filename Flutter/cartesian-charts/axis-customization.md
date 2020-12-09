@@ -1047,9 +1047,9 @@ N> This is applicable only to the value axis and not for other axis and applicab
 
 ## Axis label trim
 
-Axis label is controlled by [`labelsExtent`]() and [`maximumlabelWidth`]() in chart axis. If the width of axis labels is greater than the provided width then the axis labels gets trimmed with the size within the provided width and ellipse(...) at their suffix.
+Axis label is controlled by [`labelsExtent`]() and [`maximumLabelWidth`]() in chart axis. If the width of axis labels is greater than the provided width then the axis labels gets trimmed with the size within the provided width and ellipse(...) at their suffix.
 
-* [`maximumlabelWidth`]() - If the provided width is lesser than the axis label width
+* [`maximumLabelWidth`]() - If the provided width is lesser than the axis label width
 label gets trimmed to the width  lesser than the axis label width. Defaults to `null`.
 * [`labelsExtent`]() - If the provided width is greater than the axis label width the chart gets rendered considering the width. Also If provided width is lesser than the axis label width , label gets trimmed to provided width. Trimmed axis labels also provide support for tooltip. Defaults to `null`.
 
@@ -1059,14 +1059,26 @@ label gets trimmed to the width  lesser than the axis label width. Defaults to `
     Widget build(BuildContext context) {
       return Container(
           child: SfCartesianChart(
-             primaryYAxis: NumericAxis(anchorRangeToVisiblePoints: false),
+             primaryXAxis: CategoryAxis(maximumLabelWidth: 45,
+              labelsExtent: 45),
+            series: <ChartSeries<SalesData, String>>[
+                    LineSeries<SalesData, String>(
+                        dataSource: <SalesData>[
+            SalesData('January', 35),
+            SalesData('Febrauary', 28),
+            SalesData('Rokesh Karthikeyan', 34),
+            SalesData('April', 32),
+            SalesData('May', 40),
+                        xValueMapper: (SalesData sales, _) => sales.year,
+                        yValueMapper: (SalesData sales, _) => sales.sales,),
+                  ]
           )
       );
     }
 
 {% endhighlight %}
 
-
+![Axis label trim](images/axis-customization/axis-label-trim.png)
 
 
 ## See Also

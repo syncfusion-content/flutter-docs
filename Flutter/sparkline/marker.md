@@ -78,3 +78,50 @@ Markers can be assigned with different shapes using the [`shape`]() property. By
 {% endhighlight %}
 
 ![Sparkline marker shape](images/marker/spark-marker-square.png)
+
+## Datalabel
+
+Data labels are used to display values of data points to improve the readability.
+
+### Enable data label
+
+To enable data label for sparkline series, provide [`labelDisplayMode`]() property in sparkline chart widget.
+
+Following posible values are available in sparkline chart:
+
+* [`none`]() - does not allow to display data points on any side.
+* [`all`]() - allows to display data labels on all points.
+* [`high`]() - allows to display data labels on high points.
+* [`low`]() - allows to display data labels on low points.
+* [`last`]() - allows to display data labels on last points.
+* [`first`]() - allows to display data labels on first points.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: Center(
+          child:  SfSparkAreaChart(
+                   labelDisplayMode: LabelDisplayMode.all,
+            data: <double>[10,6,8,-5,11,5,-2,7,-3,6,8,10],
+               )
+             )
+           );
+         }
+
+    class SalesData {
+    SalesData(this.month, this.sales);
+    final String month;
+    final double sales;
+    }
+
+{% endhighlight %}
+
+![Sparkline datalabel](images/marker/spark-datalabel.png)
+
+
+
+
+  
+

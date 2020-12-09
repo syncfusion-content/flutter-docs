@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Plotband for Syncfusion Flutter Sparkline
-description: Learn how to customize the plot band of the Syncfusion Flutter Sparkline Chart.
+description: Learn how to customize the plot band, color, borderColor, borderWidth of the Syncfusion Flutter Sparkline Chart.
 platform: flutter
 control: Sparkline
 documentation: ug
