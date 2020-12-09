@@ -24,15 +24,10 @@ You can create a PDF/A-1b document by specifying the conformance level as a1b th
 {% highlight dart %}
 
 //Creates a new document with the PDF/A-1b standard
-PdfDocument document = PdfDocument(conformanceLevel: PdfConformanceLevel.a1b);
-
-//Adds a PDF page
-PdfPage page = document.pages.add();
-
-//Draws the text
-page.graphics.drawString(
-    'Hello World!', PdfTrueTypeFont(File('arial.ttf').readAsBytesSync(), 12),
-    bounds: Rect.fromLTWH(20, 20, 200, 50));
+PdfDocument document = PdfDocument(conformanceLevel: PdfConformanceLevel.a1b)
+  ..pages.add().graphics.drawString('Hello World!',
+      PdfTrueTypeFont(File('arial.ttf').readAsBytesSync(), 12),
+      bounds: Rect.fromLTWH(20, 20, 200, 50));
 
 //Saves the document
 File('output.pdf').writeAsBytes(document.save());
@@ -49,15 +44,10 @@ You can create a PDF/A-2b document by specifying the conformance level as a2b th
 {% highlight dart %}
 
 //Creates a new document with the PDF/A-2b standard
-PdfDocument document = PdfDocument(conformanceLevel: PdfConformanceLevel.a2b);
-
-//Adds a PDF page
-PdfPage page = document.pages.add();
-
-//Draws the text
-page.graphics.drawString(
-    'Hello World!', PdfTrueTypeFont(File('arial.ttf').readAsBytesSync(), 12),
-    bounds: Rect.fromLTWH(20, 20, 200, 50));
+PdfDocument document = PdfDocument(conformanceLevel: PdfConformanceLevel.a2b)
+  ..pages.add().graphics.drawString('Hello World!',
+      PdfTrueTypeFont(File('arial.ttf').readAsBytesSync(), 12),
+      bounds: Rect.fromLTWH(20, 20, 200, 50));
 
 //Saves the document
 File('output.pdf').writeAsBytes(document.save());
@@ -76,25 +66,20 @@ You can create a PDF/A-3b document by specifying the conformance level as a3b th
 {% highlight dart %}
 
 //Creates a new document with the PDF/A-3b standard
-PdfDocument document = PdfDocument(conformanceLevel: PdfConformanceLevel.a3b);
-
-//Adds a PDF page
-PdfPage page = document.pages.add();
+PdfDocument document = PdfDocument(conformanceLevel: PdfConformanceLevel.a3b)
+  ..pages.add().graphics.drawString('Hello World!',
+      PdfTrueTypeFont(File('arial.ttf').readAsBytesSync(), 12),
+      bounds: Rect.fromLTWH(20, 20, 200, 50));
 
 //Creates an attachment
 PdfAttachment attachment = PdfAttachment(
     'input.txt', File('input.txt').readAsBytesSync(),
-    description: 'Input text', mimeType: 'application/txt');
-attachment.relationship = PdfAttachmentRelationship.alternative;
-attachment.modificationDate = DateTime.now();
+    description: 'Input text', mimeType: 'application/txt')
+  ..relationship = PdfAttachmentRelationship.alternative
+  ..modificationDate = DateTime.now();
 
 //Adds the attachment to the document
 document.attachments.add(attachment);
-
-//Draws the text
-page.graphics.drawString(
-    'Hello World!', PdfTrueTypeFont(File('arial.ttf').readAsBytesSync(), 12),
-    bounds: Rect.fromLTWH(20, 20, 200, 50));
 
 //Saves the document
 File('output.pdf').writeAsBytes(document.save());
