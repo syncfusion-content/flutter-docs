@@ -7,7 +7,7 @@ control: SfDataGrid
 documentation: ug
 ---
 
-# Stacked headers
+# Stacked headers in Flutter Datagrid
 
 The dataGrid supports displaying additional unbound header rows known as `StackedHeaderRows` or that span across the DataGrid columns. You can group one or more columns under each stacked header.
 
