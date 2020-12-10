@@ -7,7 +7,7 @@ control: SfDataGrid
 documentation: ug
 ---
 
-# Load more
+# Load more in Flutter Datagrid
 
 The datagrid provides load more support to load a subset of data to the [DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) at runtime. You can load more rows to the datagrid by calling the `SfDataGrid.loadMoreViewBuilder` builder. When `SfDataGrid.loadMoreViewBuilder` builder is enabled, that sets the widget to display at the bottom of the datagrid when vertical scrolling reaches the end of the datagrid.
 
@@ -75,7 +75,7 @@ Widget build(BuildContext context) {
 
 Load more button is an approach that can be used to load more rows to the datagrid by tapping a button that you load from the `SfDataGrid.loadMoreViewBuilder` builder. The button will be loaded when vertical scrolling is reached at the end of the datagrid.
 
-The following example demonstrates how to show the button when vertical scrolling is reached at the end of the datagrid and display the circular indicator until the rows are loaded when you tap that button. In the onPressed flatbutton callback, you can call the `loadMoreRows` function to add more rows,
+The following example demonstrates how to show the button when vertical scrolling is reached at the end of the datagrid and display the circular indicator until the rows are loaded when you tap that button. In the onPressed flat button callback, you can call the `loadMoreRows` function to add more rows,
 
 {% tabs %}
 {% highlight Dart %} 
