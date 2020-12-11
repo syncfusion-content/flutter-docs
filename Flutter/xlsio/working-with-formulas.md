@@ -100,6 +100,54 @@ File('Formula.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
+## Formula with Nested Functions
+
+Using a function as one of the arguments in a formula is known as Nested Function.
+
+The following code shows how to access a Nested Function.
+
+{% highlight dart %}
+
+
+// Create a new Excel Document.
+final Workbook workbook = Workbook();
+
+// Accessing sheet via index.
+final Worksheet sheet = workbook.worksheets[0];
+
+// set the value to the cell.
+sheet.getRangeByName('B3').setText('Team A');
+sheet.getRangeByName('B4').setNumber(47);
+sheet.getRangeByName('B5').setNumber(43);
+sheet.getRangeByName('B6').setNumber(40);
+sheet.getRangeByName('B7').setNumber(51);
+sheet.getRangeByName('B8').setNumber(53);
+sheet.getRangeByName('B9').setNumber(50);
+
+sheet.getRangeByName('D3').setText('Team B');
+sheet.getRangeByName('D4').setNumber(72);
+sheet.getRangeByName('D5').setNumber(43);
+sheet.getRangeByName('D6').setNumber(84);
+sheet.getRangeByName('D7').setNumber(90);
+sheet.getRangeByName('D8').setNumber(42);
+sheet.getRangeByName('D9').setNumber(56);
+
+// Formula calculation is enabled for the sheet.
+sheet.enableSheetCalculations();
+
+// Setting formula in the cell.
+final Range range = sheet.getRangeByName('B11');
+range.setFormula(
+  '=IF(SUM(AVERAGE(B4:B9), MAX(COUNT(B4,D4), MIN(B5,D5))) > 50, \'PASS\', \'FAIL\')');
+range.calculatedValue;
+
+// Save and dispose workbook.
+final List<int> bytes = workbook.saveAsStream();
+File('NestedFunction.xlsx').writeAsBytes(bytes);
+workbook.dispose();
+
+{% endhighlight %}
+
 ## Supported Formulas
 
 In flutter XlsIO, we have support for Range reference and basic function formula listed below:
@@ -163,6 +211,116 @@ Counts how many numbers are in the list of arguments
 </td>
 <td>
 Specifies a logical test to perform
+</td>
+</tr>
+<tr>
+<td>
+
+[AND]()
+
+</td>
+<td>
+Returns TRUE if all of its arguments are TRUE
+</td>
+</tr>
+<tr>
+<td>
+
+[OR]()
+
+</td>
+<td>
+Returns TRUE if any argument is TRUE
+</td>
+</tr>
+<tr>
+<td>
+
+[NOT]()
+
+</td>
+<td>
+Reverses the logic of its argument
+</td>
+</tr>
+<tr>
+<td>
+
+[CONCATENATE]()
+
+</td>
+<td>
+Joins several text items into one text item
+</td>
+</tr>
+<tr>
+<td>
+
+[TRIM]()
+
+</td>
+<td>
+Removes spaces from text
+</td>
+</tr>
+<tr>
+<td>
+
+[LOWER]()
+
+</td>
+<td>
+Converts text to lowercase
+</td>
+</tr>
+<tr>
+<td>
+
+[UPPER]()
+
+</td>
+<td>
+Converts text to uppercase
+</td>
+</tr>
+<tr>
+<td>
+
+[NOW]()
+
+</td>
+<td>
+Returns the serial number of the current date and time
+</td>
+</tr>
+<tr>
+<td>
+
+[TODAY]()
+
+</td>
+<td>
+Returns the serial number of today's date
+</td>
+</tr>
+<tr>
+<td>
+
+[INDEX]()
+
+</td>
+<td>
+Uses an index to choose a value from a reference or array
+</td>
+</tr>
+<tr>
+<td>
+
+[MATCH]()
+
+</td>
+<td>
+Looks up values in a reference or array
 </td>
 </tr>
 </table>
