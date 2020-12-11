@@ -133,6 +133,29 @@ Widget build(BuildContext context) {
 
 ![Multi-date picker view](images/views/multi-picker-view.jpg)
 
+### Vertical picker
+You can arrange the two date range picker views in vertical direction by setting the [navigationDirection]() as `vertical` in the `SfDateRangePicker`.
+
+{% tabs %}
+{% highlight Dart %}
+
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+    home: Scaffold(
+        body: SfDateRangePicker(
+      enableMultiView: true,
+      navigationDirection: DateRangePickerNavigationDirection.vertical,
+      viewSpacing: 10,
+    )),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+
 ## See also
 
 [How to switch between the date range picker views in the Flutter date range picker (SfDateRangePicker)?](https://www.syncfusion.com/kb/11305/how-to-switch-between-the-date-range-picker-views-in-flutter-date-range-picker)

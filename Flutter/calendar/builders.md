@@ -119,3 +119,150 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Schedule view header builder](images/builder/schedule_view_month_header_builder.png)
+
+## Appointment builder
+
+The [CalendarAppointmentBuilder]() allows you to design your custom view and assign the view to the appointment UI of the calendar by returning an appropriate widget in the appointmentBuilder of `SfCalendar`.
+
+[CalendarAppointmentDetails]() - returns the details of the appointment view.
+
+`date` – The date associate with the appointment view.
+`appointments` – List of appointments associated with the appointment view.
+`bound` – Returns the appointment view bounds.
+`isMoreAppointmentRegion` – Determines whether the widget replaces the more appointment region.
+
+{% tabs %}
+{% highlight Dart %}
+
+class MyAppState extends State<MyApp> {
+  CalendarController _controller;
+
+  @override
+  void initState() {
+    _controller = CalendarController();
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+          body: SfCalendar(
+        view: CalendarView.day,
+        appointmentBuilder: (BuildContext context,
+            CalendarAppointmentDetails calendarAppointmentDetails) {
+          if (calendarAppointmentDetails.isMoreAppointmentRegion) {
+            return Container(
+              width: calendarAppointmentDetails.bounds.width,
+              height: calendarAppointmentDetails.bounds.height,
+              child: Text('+More'),
+            );
+          } else if (_controller.view == CalendarView.month) {
+            final Appointment appointment =
+                calendarAppointmentDetails.appointments.first;
+            return Container(
+                decoration: BoxDecoration(
+                    color: appointment.color,
+                    shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.all(Radius.circular(4.0)),
+                    gradient: LinearGradient(
+                        colors: [Colors.red, Colors.cyan],
+                        begin: Alignment.centerRight,
+                        end: Alignment.centerLeft)),
+                alignment: Alignment.center,
+                child: appointment.isAllDay
+                    ? Text('${appointment.subject}',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(color: Colors.white, fontSize: 10))
+                    : Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text('${appointment.subject}',
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 10)),
+                          Text(
+                              '${DateFormat('hh:mm a').format(appointment.startTime)} - ' +
+                                  '${DateFormat('hh:mm a').format(appointment.endTime)}',
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 10))
+                        ],
+                      ));
+          } else {
+            final Appointment appointment =
+                calendarAppointmentDetails.appointments.first;
+            return Container(
+              width: calendarAppointmentDetails.bounds.width,
+              height: calendarAppointmentDetails.bounds.height,
+              child: Text(appointment.subject),
+            );
+          }
+        },
+      )),
+    );
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+
+## Time region builder
+
+The [TimeRegionBuilder]() allows you to design your custom view and assign the view to the time region view of the calendar by returning an appropriate widget in the timeRegionBuilder of SfCalendar.
+
+[TimeRegionDetails]() - returns the details of the time region view.
+
+`date` – The date associate with the time region view.
+`bound` – Returns the time region view bounds.
+`region` – The Region detail associated with the time region view.
+
+{% tabs %}
+{% highlight Dart %}
+
+List<TimeRegion> _getTimeRegions() {
+  final List<TimeRegion> regions = <TimeRegion>[];
+  DateTime date = DateTime.now();
+  date = DateTime(date.year, date.month, date.day, 12, 0, 0);
+  regions.add(TimeRegion(
+      startTime: date,
+      endTime: date.add(Duration(hours: 2)),
+      enablePointerInteraction: false,
+      color: Colors.grey.withOpacity(0.2),
+      text: 'Break'));
+
+  return regions;
+}
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+    home: Scaffold(
+        body: SfCalendar(
+      view: CalendarView.week,
+      specialRegions: _getTimeRegions(),
+      timeRegionBuilder:
+          (BuildContext context, TimeRegionDetails timeRegionDetails) {
+        return Container(
+          margin: EdgeInsets.all(1),
+          alignment: Alignment.center,
+          child: Text(
+            timeRegionDetails.region.text,
+            style: TextStyle(color: Colors.black),
+          ),
+          decoration: BoxDecoration(
+              shape: BoxShape.rectangle,
+              borderRadius: BorderRadius.all(Radius.circular(4.0)),
+              gradient: LinearGradient(
+                  colors: [timeRegionDetails.region.color, Colors.cyan],
+                  begin: Alignment.centerRight,
+                  end: Alignment.centerLeft)),
+        );
+      },
+    )),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
