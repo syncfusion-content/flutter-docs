@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Flutter Hijri Date Range Picker | Hijri Date Picker | Hijri Date Selection | Syncfusion
-description: Hijri date picker to display and handle the lunar calendar.
+title: Flutter Hijri Date Picker | Date Picker | Date Selection | Syncfusion
+description: Learn about the hijri date picker support to display the lunar calendar, and handle the selection on it.
 platform: flutter
 control: SfDateRangePicker
 documentation: ug
@@ -28,7 +28,6 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 >**NOTE** 
-
 * Most of the properties type and classes were same from [SfDateRangePicker]() except the followings [HijriDatePickerController](), [HijriDatePickerMonthCellStyle](), [HijriDatePickerMonthViewSettings](), [HijriDatePickerViewChangedArgs](), [HijriDatePickerYearCellStyle](), [HijriDateRange]() and [HijriDatePickerView]().
 * Use [HijriDateTime]() class to define the date for ‘SfHijriDateRangePicker’.
 
@@ -132,7 +131,7 @@ class MyAppState extends State<MyApp> {
 {% endtabs %}
 
 ### Programmatic view navigation
-You can programmatically navigate view in the hijri date picker widget by using the [view]() property of `HijriDtePickerController`.
+You can programmatically navigate view in the hijri date picker widget by using the [view]() property of `HijriDatePickerController`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -236,7 +235,7 @@ class MyAppState extends State<MyApp> {
 #### Range selection
 Initially or during run time, you can selects the single date range programmatically by using the selectedRange property of `HijriDatePickerController`. It is only applicable when the selectionMode is set to `DateRangePickerSelectionMode.range`.
 
-Use [HijriDtaeRange]() to define the date range for hijir date picker.
+Use [HijriDateRange]() to define the date range for hijri date picker.
 
 {% tabs %}
 {% highlight Dart %}
@@ -358,7 +357,7 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ## Year cell customization
-You can customize the calendar year, and decde view by using the [yearCellStyle]() of `SfHijriDateRangePicker`.
+You can customize the calendar year, and decade view by using the [yearCellStyle]() of `SfHijriDateRangePicker`.
 
 •    **Current year** – You can customize current month dates text style and background of the DateRangePicker by using the [textStyle]() and [cellDecoration]() properties of [HijriDatePickerYearCellStyle]().
 •    **Disabled dates** – Disable dates text style and background beyond of the HijriDateRangePicker by using the [disableDatesTextStyle]() and [disableDatesDecoration]().
