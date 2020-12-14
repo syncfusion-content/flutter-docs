@@ -9,9 +9,9 @@ documentation: ug
 
 # Stacked headers in Flutter Datagrid
 
-The dataGrid supports displaying additional unbound header rows known as `StackedHeaderRows` or that span across the DataGrid columns. You can group one or more columns under each stacked header.
+The dataGrid supports displaying additional unbound header rows known as `StackedHeaderRows` That are spanned across the DataGrid columns. You can group one or more columns under each stacked header.
 
-Each `StackedHeaderRow` contains `cells` that hold a list of `StackedHeaderCell` where each `StackedHeaderCell` contains a number of child columns. The `StackedHeaderCell.columnNames` property returns the columns grouped under the stacked header row. The `GridColumn.mappingName` is a unique name used for mapping specific child columns grouped under the same stacked header row. The `StackedHeaderCell.child` property is used to load any type of widget to the corresponding cell.
+Each `StackedHeaderRow` contains `cells` that hold a list of `StackedHeaderCell` where each `StackedHeaderCell` contains a number of child columns. The `StackedHeaderCell.columnNames` property returns the columns grouped under the stacked header row. The `GridColumn.mappingName` is a unique name used for mapping specific child columns grouped under the same stacked header row. The `StackedHeaderCell.child` property is used to load any type of widget to the corresponding stacked header cell.
 
 {% tabs %}
 {% highlight Dart %} 
