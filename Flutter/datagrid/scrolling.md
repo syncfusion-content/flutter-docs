@@ -9,13 +9,13 @@ documentation: ug
 
 # Scrolling in Flutter (SfDataGrid)
 
-SfDataGrid supports to scroll the data in both the horizontal and vertical direction. 
+SfDataGrid provides support to scroll the content in both the horizontal and vertical direction. 
 
-## ScrollBar
+## Show Scrollbars always
 
-You can change the visibility of the scrollbar by using the [SfDataGrid.isScrollbarAlwaysShown](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/isScrollbarAlwaysShown.html) property. When the `isScrollbarAlwaysShown` is set to false, the scrollbar will be shown during scrolling and will fade out otherwise. When it is true, the scrollbar will always be visible and never fade out.
+You can show horizontal and vertical scrollbars always by using the [SfDataGrid.isScrollbarAlwaysShown](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/isScrollbarAlwaysShown.html) property. When the `isScrollbarAlwaysShown` is set to false, the scrollbar will be shown during scrolling and will fade out otherwise. When it is true, the scrollbar will always be visible and never fade out even after the scrolling.
 
-N> The `isScrollbarAlwaysShown` property default value is false.
+N> The default value of `isScrollbarAlwaysShown` is false.
 
 {% tabs %}
 {% highlight Dart %}
@@ -24,8 +24,8 @@ N> The `isScrollbarAlwaysShown` property default value is false.
  Widget build(BuildContext context) {
     return Scaffold(
       body: SfDataGrid(
-        isScrollbarAlwaysShown: true,
         source: _employeeDataSource,
+        isScrollbarAlwaysShown: true,
         columns: [
           GridNumericColumn(mappingName: 'id', headerText: 'ID'),
           GridTextColumn(mappingName: 'name', headerText: 'Name'),
@@ -39,11 +39,13 @@ N> The `isScrollbarAlwaysShown` property default value is false.
 {% endhighlight %}
 {% endtabs %}
 
-## ScrollPhysics
+## Setting scroll physics for scroll bars
 
-SfDataGrid allows you to change the physics of the scrollable data by using [SfDataGrid.horizontalScrollPhysics](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/horizontalScrollPhysics.html) and [SfDataGrid.verticalScrollPhysics](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/verticalScrollPhysics.html) properties.
+SfDataGrid allows you to set the [ScrollPhysics](https://api.flutter.dev/flutter/widgets/ScrollPhysics-class.html) for horizontal and vertical scrollbars to control how the scroll view should respond to user input.
 
-N> By default, `horizontalScrollPhysics` and `verticalScrollPhysics` property value is `AlwaysScrollableScrollPhysics()`.
+N> The default values of [horizontalScrollPhysics](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/horizontalScrollPhysics.html) and [verticalScrollPhysics](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/verticalScrollPhysics.html) properties are `AlwaysScrollableScrollPhysics()`.
+
+The following example shows how to disable the horizontal and vertical scrolling by setting `NeverScrollableScrollPhysics()`
 
 {% tabs %}
 {% highlight Dart %}
@@ -52,9 +54,9 @@ N> By default, `horizontalScrollPhysics` and `verticalScrollPhysics` property va
  Widget build(BuildContext context) {
     return Scaffold(
       body: SfDataGrid(
+        source: _employeeDataSource,
         horizontalScrollPhysics: NeverScrollableScrollPhysics(),
         verticalScrollPhysics: NeverScrollableScrollPhysics(),
-        source: _employeeDataSource,
         columns: [
           GridNumericColumn(mappingName: 'id', headerText: 'ID'),
           GridTextColumn(mappingName: 'name', headerText: 'Name'),

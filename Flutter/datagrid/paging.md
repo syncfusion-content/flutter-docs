@@ -234,18 +234,14 @@ class OrderInfoDataSource extends DataGridSource<OrderInfo> {
 
 ## Callbacks
 
-The SfDataPager supports the onPageNavigationStart and onPageNavigationEnd callbacks to listen the page navigation in widget level. 
+The SfDataPager provides `onPageNavigationStart` and `onPageNavigationEnd` callbacks to listen the page navigation in widget level. 
 
 Typically, These callbacks are used to show and hide loading indicator.
 
-* [onPageNavigationStart]():This callback is raised when the page is being navigated.
-* [onPageNavigationEnd](): This callback is raised after the page is navigated.
+* `onPageNavigationStart`:This callback is raised when the page is being navigated.
+* `onPageNavigationEnd`: This callback is raised after the page is navigated.
 
-The parameter used in `onPageNavigationStart` and `onPageNavigationEnd` callbacks,
-
-* `pageIndex`: Gets the index value of the navigating page.
-
-The following example illustrates, how to display loading indicator using callback events.
+The below example show, how to show loading indicator using callbacks.
 
 {% tabs %}
 {% highlight Dart %}
@@ -265,7 +261,7 @@ Widget build(BuildContext context) {
               SizedBox(
                   height: constraints.maxHeight - 60,
                   width: constraints.maxWidth,
-                  child: loadDataGrid(constraints)),
+                  child: buildStack(constraints)),
               Container(
                 height: 60,
                 width: constraints.maxWidth,
@@ -293,7 +289,7 @@ Widget build(BuildContext context) {
   );
 }
 
-Widget getDataGrid(BoxConstraints constraint) {
+Widget buildDataGrid(BoxConstraints constraint) {
   return SfDataGrid(
       source: _orderInfoDataSource,
       columnWidthMode: ColumnWidthMode.fill,
@@ -307,12 +303,10 @@ Widget getDataGrid(BoxConstraints constraint) {
       ]);
 }
 
-Widget loadDataGrid(BoxConstraints constraints) {
+Widget buildStack(BoxConstraints constraints) {
   List<Widget> _getChildren() {
     final List<Widget> stackChildren = [];
-    if (paginatedDataSource.isNotEmpty) {
-      stackChildren.add(getDataGrid(constraints));
-    }
+    stackChildren.add(buildDataGrid(constraints));
 
     if (showLoadingIndicator) {
       stackChildren.add(Container(
@@ -356,6 +350,9 @@ class OrderInfoDataSource extends DataGridSource<OrderInfo> {
 
 {% endhighlight %}
 {% endtabs %}
+
+>**NOTE**  
+  Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-show-loading-indicator-on-loading-page-in-flutter-datatable).
 
 ## Orientation
 
