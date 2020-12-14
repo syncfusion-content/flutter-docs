@@ -232,6 +232,131 @@ class OrderInfoDataSource extends DataGridSource<OrderInfo> {
 
 ![flutter datapager with asynchronous loading](images/paging/flutter-datapager-asynchronous-loading.gif)
 
+## Callbacks
+
+The SfDataPager supports the onPageNavigationStart and onPageNavigationEnd callbacks to listen the page navigation in widget level. 
+
+Typically, These callbacks are used to show and hide loading indicator.
+
+* [onPageNavigationStart]():This callback is raised when the page is being navigated.
+* [onPageNavigationEnd](): This callback is raised after the page is navigated.
+
+The parameter used in `onPageNavigationStart` and `onPageNavigationEnd` callbacks,
+
+* `pageIndex`: Gets the index value of the navigating page.
+
+The following example illustrates, how to display loading indicator using callback events.
+
+{% tabs %}
+{% highlight Dart %}
+
+final OrderInfoDataSource _orderInfoDataSource = OrderInfoDataSource();
+
+bool showLoadingIndicator = true;
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: LayoutBuilder(
+      builder: (context, constraints) {
+        return Row(children: [
+          Column(
+            children: [
+              SizedBox(
+                  height: constraints.maxHeight - 60,
+                  width: constraints.maxWidth,
+                  child: loadDataGrid(constraints)),
+              Container(
+                height: 60,
+                width: constraints.maxWidth,
+                child: SfDataPager(
+                  rowsPerPage: 20,
+                  direction: Axis.horizontal,
+                  onPageNavigationStart: (int pageIndex) {
+                    setState(() {
+                      showLoadingIndicator = true;
+                    });
+                  },
+                  delegate: _orderInfoDataSource,
+                  onPageNavigationEnd: (int pageIndex) {
+                    setState(() {
+                      showLoadingIndicator = false;
+                    });
+                  },
+                ),
+              )
+            ],
+          ),
+        ]);
+      },
+    ),
+  );
+}
+
+Widget getDataGrid(BoxConstraints constraint) {
+  return SfDataGrid(
+      source: _orderInfoDataSource,
+      columnWidthMode: ColumnWidthMode.fill,
+      columns: <GridColumn>[
+        GridNumericColumn(mappingName: 'orderID', headerText: 'Order ID'),
+        GridTextColumn(
+            mappingName: 'customerID', headerText: 'Customer Name'),
+        GridDateTimeColumn(
+            mappingName: 'orderDate', headerText: 'Order Date'),
+        GridNumericColumn(mappingName: 'freight', headerText: 'Freight'),
+      ]);
+}
+
+Widget loadDataGrid(BoxConstraints constraints) {
+  List<Widget> _getChildren() {
+    final List<Widget> stackChildren = [];
+    if (paginatedDataSource.isNotEmpty) {
+      stackChildren.add(getDataGrid(constraints));
+    }
+
+    if (showLoadingIndicator) {
+      stackChildren.add(Container(
+        color: Colors.black12,
+        width: constraints.maxWidth,
+        height: constraints.maxHeight,
+        child: Align(
+          alignment: Alignment.center,
+          child: CircularProgressIndicator(
+            strokeWidth: 3,
+          ),
+        ),
+      ));
+    }
+
+    return stackChildren;
+  }
+
+  return Stack(
+    children: _getChildren(),
+  );
+}
+
+class OrderInfoDataSource extends DataGridSource<OrderInfo> {
+  @override
+  Future<bool> handlePageChange(int oldPageIndex, int newPageIndex,
+      int startRowIndex, int rowsPerPage) async {
+    int endIndex = startRowIndex + rowsPerPage;
+    if (endIndex > orderInfos.length) {
+      endIndex = orderInfos.length - 1;
+    }
+
+    await Future.delayed(Duration(milliseconds: 2000));
+
+    paginatedDataSource = List.from(
+        orderInfos.getRange(startRowIndex, endIndex).toList(growable: false));
+    notifyListeners();
+    return true;
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Orientation
 
 `SfDataPager` allows you to arrange the child elements either horizontally or vertically. This can be achieved by using the [direction](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/direction.html) Property. `direction` is an Enum type.
