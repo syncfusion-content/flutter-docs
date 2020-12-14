@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Stacked Headers in Flutter DataGrid | DataTable | Syncfusion
-description: Learn about how to add stacked header rows and customize the row heights of stacked header rows in Syncfusion Flutter DataGrid.
+description: Learn about how to add stacked header rows and customize row height of stacked header rows in Syncfusion Flutter DataGrid.
 platform: flutter
 control: SfDataGrid
 documentation: ug
@@ -117,6 +117,8 @@ Widget build(BuildContext context) {
 ## Changing row height of stacked headers
 
 You can change the height of stacked header rows by using the [SfDataGrid.onQueryRowHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onQueryRowHeight.html) callback.
+
+You can also change the row height of stacked header row and column header row by using [headerRowHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/headerRowHeight.html) property.
 
 {% tabs %}
 {% highlight Dart %} 
