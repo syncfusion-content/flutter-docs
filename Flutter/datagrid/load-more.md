@@ -9,7 +9,7 @@ documentation: ug
 
 # Load more in Flutter Datagrid
 
-The datagrid provides load more support to load a subset of data to the [DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) at runtime. You can load more rows to the datagrid by calling the `SfDataGrid.loadMoreViewBuilder` builder. When `SfDataGrid.loadMoreViewBuilder` builder is enabled, that sets the widget to display at the bottom of the datagrid when vertical scrolling reaches the end of the datagrid.
+The datagrid provides support to display an interactive view when the grid reaches its maximum offset while scrolling down. You can use `loadMoreViewBuilder` builder to display the view at bottom of datagrid. 
 
 You should override the `DataGridSource.handleLoadMoreRows` method to load more rows and then notify the datagrid about the changes. The `DataGridSource.handleLoadMoreRows` can be called to load more rows from this builder by using the `loadMoreRows` function which is passed as a parameter to this builder.
 
@@ -66,14 +66,49 @@ Widget build(BuildContext context) {
   );
 }
 
+class EmployeeDataSource extends DataGridSource<Employee> {
+  @override
+  List<Employee> get dataSource => employees;
+
+  @override
+  Object getValue(Employee employee, String columnName) {
+    switch (columnName) {
+      case 'id':
+        return employee.id;
+        break;
+      case 'name':
+        return employee.name;
+        break;
+      case 'salary':
+        return employee.salary;
+        break;
+      case 'designation':
+        return employee.designation;
+        break;
+      default:
+        return ' ';
+        break;
+    }
+  }
+
+  @override
+  Future<void> handleLoadMoreRows() async {
+    await Future.delayed(Duration(seconds: 5));
+    notifyListeners();
+  }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows load more with infinite scrolling behavior](images/load-more/flutter-load-more-infinite-scrolling.png)
+**NOTE**
+  Download the sample code from [GitHub](https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/datagrid/loadmore/datagrid_infinite_scrolling.dart).
+
+![flutter datagrid shows load more with infinite scrolling behavior](images/load-more/flutter-load-more-infinite-scrolling.gif)
 
 ## Load more button
 
-Load more button is an approach that can be used to load more rows to the datagrid by tapping a button that you load from the `SfDataGrid.loadMoreViewBuilder` builder. The button will be loaded when vertical scrolling is reached at the end of the datagrid.
+Showing load more button is an approach that can be used to load more rows to the datagrid by tapping a button that you load from the `SfDataGrid.loadMoreViewBuilder` builder. The button will be loaded when vertical scrolling is reached at the end of the datagrid.
 
 The following example demonstrates how to show the button when vertical scrolling is reached at the end of the datagrid and display the circular indicator until the rows are loaded when you tap that button. In the onPressed flat button callback, you can call the `loadMoreRows` function to add more rows,
 
@@ -151,7 +186,42 @@ Widget build(BuildContext context) {
   );
 }
 
+class EmployeeDataSource extends DataGridSource<Employee> {
+  @override
+  List<Employee> get dataSource => employees;
+
+  @override
+  Object getValue(Employee employee, String columnName) {
+    switch (columnName) {
+      case 'id':
+        return employee.id;
+        break;
+      case 'name':
+        return employee.name;
+        break;
+      case 'salary':
+        return employee.salary;
+        break;
+      case 'designation':
+        return employee.designation;
+        break;
+      default:
+        return ' ';
+        break;
+    }
+  }
+
+  @override
+  Future<void> handleLoadMoreRows() async {
+    await Future.delayed(Duration(seconds: 5));
+    notifyListeners();
+  }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows load more button behavior](images/load-more/flutter-load-more-button.png)
+**NOTE**
+  Download the sample code from [GitHub](https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/datagrid/loadmore/datagrid_load_more.dart).
+
+![flutter datagrid shows load more button behavior](images/load-more/flutter-load-more-button.gif)
