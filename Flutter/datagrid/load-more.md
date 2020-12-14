@@ -94,6 +94,17 @@ class EmployeeDataSource extends DataGridSource<Employee> {
   @override
   Future<void> handleLoadMoreRows() async {
     await Future.delayed(Duration(seconds: 5));
+    employees.addAll([
+      Employee(10012, 'Kathryn', 'Manager', 30000),
+      Employee(10013, 'Lara', 'Developer', 15000),
+      Employee(10014, 'Michael', 'Designer', 15000),
+      Employee(10015, 'Martin', 'Developer', 15000),
+      Employee(10016, 'Newberry', 'Developer', 15000),
+      Employee(10017, 'Balnc', 'Developer', 15000),
+      Employee(10018, 'Perry', 'Developer', 15000),
+      Employee(10019, 'James', 'Project Lead', 20000),
+      Employee(10020, 'Kathryn', 'Manager', 30000)
+    ]);
     notifyListeners();
   }
 }
@@ -214,6 +225,17 @@ class EmployeeDataSource extends DataGridSource<Employee> {
   @override
   Future<void> handleLoadMoreRows() async {
     await Future.delayed(Duration(seconds: 5));
+    employees.addAll([
+      Employee(10012, 'Kathryn', 'Manager', 30000),
+      Employee(10013, 'Lara', 'Developer', 15000),
+      Employee(10014, 'Michael', 'Designer', 15000),
+      Employee(10015, 'Martin', 'Developer', 15000),
+      Employee(10016, 'Newberry', 'Developer', 15000),
+      Employee(10017, 'Balnc', 'Developer', 15000),
+      Employee(10018, 'Perry', 'Developer', 15000),
+      Employee(10019, 'James', 'Project Lead', 20000),
+      Employee(10020, 'Kathryn', 'Manager', 30000)
+    ]);
     notifyListeners();
   }
 }
