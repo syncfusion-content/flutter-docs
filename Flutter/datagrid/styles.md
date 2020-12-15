@@ -129,7 +129,12 @@ Widget build(BuildContext context) {
 
 ## Show vertical and horizontal grid lines
 
-To show the vertical and horizontal gridlines, use the [SfDataGrid.gridLinesVisibility](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/gridLinesVisibility.html) property. The following are the list of options available to customize gridline,
+To show the vertical and horizontal gridlines, use the following properties. 
+
+* [SfDataGrid.gridLinesVisibility](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/gridLinesVisibility.html): To set the border lines for the cells other than header and stacked header cells. 
+* `SfDataGrid.headerGridLinesVisibility`: To set the border lines only for header and stacked header cells.
+
+The following are the list of options available to customize gridlines,
 
 * Vertical
 * Horizontal
@@ -152,7 +157,8 @@ Widget build(BuildContext context) {
           GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
           GridTextColumn(mappingName: 'designation',headerText: 'Designation'),
         ],
-        gridLinesVisibility: GridLinesVisibility.both),
+        gridLinesVisibility: GridLinesVisibility.both,
+        headerGridLinesVisibility: GridLinesVisibility.both),
   );
 }
     
