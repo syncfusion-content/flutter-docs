@@ -84,6 +84,7 @@ Triggers while rendering the axis labels. Text and text styles such as color, fo
 * [`orientation`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelRenderArgs/orientation.html) - specifies the current axis orientation.
 * [`axis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelRenderArgs/axis.html) - holds the information about the current axis.
 * [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelRenderArgs/textStyle.html) – used to change the text color, size, font family, font style, and font weight.
+* [`trimmedText`]() - trimmed text value of the axis label
 
 {% highlight dart %}
 
@@ -708,6 +709,8 @@ N> This callback will not be called, when the builder is specified for data labe
     }
 
 {% endhighlight %}
+
+
 
 ## See Also
 
