@@ -22,6 +22,7 @@ Triggers when the tooltip is rendering. Here, you can customize the text, header
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipArgs/seriesIndex.html) - specifies the current series index.
 * [`dataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipArgs/dataPoints.html) - holds the data point collection.
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipArgs/pointIndex.html) - specifies the current point index.
+* [`overallPointIndex`]() - used to get overall point index.
 
  {% highlight dart %}
 
@@ -79,12 +80,13 @@ Triggers when the visible range of an axis is changed, i.e. value changes for mi
 Triggers while rendering the axis labels. Text and text styles such as color, font size, and font weight can be customized. The [`onAxisLabelRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onAxisLabelRender.html) Callback contains the following arguments.
 
 * [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelRenderArgs/text.html) - specifies the axis label to be rendered.
+* [`trimmedText`]() - trimmed text value of the axis label.
 * [`value`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelRenderArgs/value.html) - specifies the actual value of the current axis label.
 * [`axisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelRenderArgs/axisName.html) - specifies the axis name.
 * [`orientation`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelRenderArgs/orientation.html) - specifies the current axis orientation.
 * [`axis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelRenderArgs/axis.html) - holds the information about the current axis.
 * [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelRenderArgs/textStyle.html) – used to change the text color, size, font family, font style, and font weight.
-* [`trimmedText`]() - trimmed text value of the axis label
+
 
 {% highlight dart %}
 
@@ -113,8 +115,12 @@ Triggers when data label is rendering. Text and text styles such as color, font 
 * [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/text.html) - specifies the content of the data label.
 * [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/textStyle.html) – used to change the text color, size, font family, font style, and font weight.
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/pointIndex.html) - specifies the current point index.
-* [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/series.html) - specifies current series.
-
+* [`seriesRenderer`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/series.html) - specifies current series.
+* [`dataPoints`]() - used to get the data points of the series.
+* [`overallPointIndex`]() - used to get overall point index.
+* [`offset`]() - used to get and set the horizontal/vertical position of the data label. The first argument sets the horizontal component to dx, while the second argument sets the vertical component to dy.
+* [`color`]() - used to get and set the background color of a data label.
+ 
 {% highlight dart %}
 
     @override
@@ -148,6 +154,7 @@ Triggers when the legend item is rendering. Here, you can customize the legend�
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendRenderArgs/pointIndex.html) - specifies the current point index that is applicable for circular chart type alone.
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendRenderArgs/seriesIndex.html) - specifies the current series index.
 * [`legendIconType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendRenderArgs/legendIconType.html) - specifies the shape of the legend.
+* [`color`]() - used to get and set the color of the legend icon.
 
 {% highlight dart %}
 
@@ -369,6 +376,7 @@ Triggers when tapping the series point. The [`onPointTapped`](https://pub.dev/do
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PointTapArgs/seriesIndex.html) - specifies the current series index.
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PointTapArgs/pointIndex.html) - specifies the current point index.
 * [`dataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PointTapArgs/dataPoints.html) - holds the data point collection.
+* [`overallPointIndex`]() - used to get overall point index.
 
 {% highlight dart %}
 
@@ -395,6 +403,7 @@ Triggers when tapping the axis label. The  [`onAxisLabelTapped`](https://pub.dev
 * [`axis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelTapArgs/axis.html) - holds the information about the current axis.
 * [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelTapArgs/text.html) - specifies the content of the axis label.
 * [`value`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelTapArgs/value.html) - specifies the actual value of the current axis label.
+* [`axisName`]() - used to get the axis name.
 
 {% highlight dart %}
 
@@ -444,7 +453,7 @@ Triggers when tapping the legend item. The  [`onLegendTapped`](https://pub.dev/d
 
 Triggers while selection changes. Here you can customize the selectedColor, unselectedColor, selectedBorderColor, selectedBorderWidth, unselectedBorderColor, and unselectedBorderWidth properties. The [`onSelectionChanged`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onSelectionChanged.html) Callback contains the following arguments.
 
-* [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/series.html) - specifies current series.
+* [`seriesRenderer`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/series.html) - specifies current series.
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/seriesIndex.html) - specifies the current series index.
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/pointIndex.html) - specifies the current point index.
 * [`selectedColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/selectedColor.html) - specifies color of the selected data points or series.
@@ -453,6 +462,7 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
 * [`selectedBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/selectedBorderWidth.html) - specifies border width of the selected data points or series.
 * [`unselectedBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/unselectedBorderColor.html) - specifies border color of the unselected data points or series.
 * [`unselectedBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/unselectedBorderWidth.html) - specifies border width of the unselected data points or series.
+* [`overallDataPointIndex`]() - used to get the over all point index.
 
 {% highlight dart %}
 
@@ -598,6 +608,10 @@ Triggers when the series renderer is created. Using this callback, able to get t
 
 Triggers when touched or clicked on the chart area. You can get the position of the touched region using this callback.
 
+The callback contains the following argument:
+
+* [`position`]() - uesd to get the position of the touch interaction.
+
 {% highlight dart %}
 
   Widget build(BuildContext context) {
@@ -616,6 +630,10 @@ Triggers when touched or clicked on the chart area. You can get the position of 
 ## onChartTouchInteractionUp
 
 Triggers when tapped or clicked on the chart area. You can get the position of the taped region using this callback.
+
+The callback contains the following argument:
+
+* [`position`]() - uesd to get the position of the touch interaction.
 
 {% highlight dart %}
 
@@ -636,6 +654,10 @@ Triggers when tapped or clicked on the chart area. You can get the position of t
 
 Triggers when touched or clicked and moved on the chart area. You can get the position of the moving region using this callback.
 
+The callback contains the following argument:
+
+* [`position`]() - uesd to get the position of the touch interaction.
+
 {% highlight dart %}
 
   Widget build(BuildContext context) {
@@ -653,7 +675,17 @@ Triggers when touched or clicked and moved on the chart area. You can get the po
 
 ## onMarkerRender
 
-Triggers when the marker is being rendered. Here, you can get the marker's pointIndex, seriesIndex, shape, size and color. You can customize the color, shape and size of the marker.
+Triggers when the marker is being rendered. Here, you can customized the following arguments.
+
+* [`pointIndex`]() - to get the point index of the marker.
+* [`seriesIndex`]() - to get the series index of the marker.
+* [`shape`]() - to get and set the shape of the marker.
+* [`markerHeight`]() - to get and set the height of the marker.
+* [`markerWidth`]() - to get and set the width of the marker.
+* [`color`]() - to get and set the color of the marker.
+* [`borderWidth`]() - to get and set the border width of the marker.
+* [`borderColor`]() - to get and set the border color of the marker.
+* [`overallPointIndex`]() - to get overall point index.
 
 {% highlight dart %}
 
@@ -683,6 +715,9 @@ Triggers when tapping on the data label of the data point in the series. The [`o
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/seriesIndex.html) - Specifies the series index of the tapped data label
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/pointIndex.html) - Specifies the point index of the tapped data label.
 * [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/text.html) - Specifies the content of the tapped data label.
+* [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/dataLabelSettings.html) - to get the data label customization options specified in that particular series.
+* [`overallPointIndex`]() - to get the over all point index.
+
 
 
 N> This callback will not be called, when the builder is specified for data label (data label template). For this case, custom widget specified in the [`DataLabelSettings.builder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/builder.html) property can be wrapped using the [`GestureDetector`](https://api.flutter.dev/flutter/widgets/GestureDetector-class.html) and this functionality can be achieved in the application level.

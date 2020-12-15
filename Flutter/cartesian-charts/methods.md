@@ -1068,7 +1068,7 @@ The [`pixelToPoint`]() method takes logical pixel value as input and returns a c
   
 Since this method is in the series controller, x and y-axis associated with this particular series will be considering for conversion value.
   
->**NOTE** This method is only applicable for cartesian chart, not for the circular, pyramid,
+>**NOTE** This method is only applicable for Cartesian chart, not for the circular, pyramid,
 and funnel charts.
 
 {% highlight dart %}
@@ -1106,7 +1106,7 @@ The [`pointToPixel`]() method takes chart data point value as input and returns 
   
 Since this method is in the series controller, x and y-axis associated with this particular series will be considering for conversion value.
   
->**NOTE** This method is only applicable for cartesian chart, not for the circular, pyramid,
+>**NOTE** This method is only applicable for Cartesian chart, not for the circular, pyramid,
 and funnel charts.
   
 {% highlight dart %}
