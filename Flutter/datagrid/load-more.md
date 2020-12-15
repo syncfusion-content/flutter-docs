@@ -66,6 +66,21 @@ Widget build(BuildContext context) {
   );
 }
 
+List<Employee> _generateEmployeeData(List<Employee> employeeData, int count) {
+  final Random _random = Random();
+  int startIndex = employeeData.isNotEmpty ? employeeData.length : 0,
+      endIndex = startIndex + count;
+  for (int i = startIndex; i < endIndex; i++) {
+    employeeData.add(Employee(
+      1000 + i,
+      _names[_random.nextInt(_names.length - 1)],
+      _designation[_random.nextInt(_designation.length - 1)],
+      10000 + _random.nextInt(10000),
+    ));
+  }
+  return employeeData;
+}
+
 class EmployeeDataSource extends DataGridSource<Employee> {
   @override
   List<Employee> get dataSource => employees;
@@ -94,17 +109,7 @@ class EmployeeDataSource extends DataGridSource<Employee> {
   @override
   Future<void> handleLoadMoreRows() async {
     await Future.delayed(Duration(seconds: 5));
-    employees.addAll([
-      Employee(10012, 'Kathryn', 'Manager', 30000),
-      Employee(10013, 'Lara', 'Developer', 15000),
-      Employee(10014, 'Michael', 'Designer', 15000),
-      Employee(10015, 'Martin', 'Developer', 15000),
-      Employee(10016, 'Newberry', 'Developer', 15000),
-      Employee(10017, 'Balnc', 'Developer', 15000),
-      Employee(10018, 'Perry', 'Developer', 15000),
-      Employee(10019, 'James', 'Project Lead', 20000),
-      Employee(10020, 'Kathryn', 'Manager', 30000)
-    ]);
+    employees = _generateEmployeeData(employees, 15);
     notifyListeners();
   }
 }
@@ -112,7 +117,7 @@ class EmployeeDataSource extends DataGridSource<Employee> {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows load more with infinite scrolling behavior](images/load-more/flutter-load-more-infinite-scrolling.gif)
+![flutter datagrid shows load more with infinite scrolling behavior](images/load-more/flutter-datagrid-load-more-infinite-scrolling.gif)
 
 ## Load more button
 
@@ -194,6 +199,21 @@ Widget build(BuildContext context) {
   );
 }
 
+List<Employee> _generateEmployeeData(List<Employee> employeeData, int count) {
+  final Random _random = Random();
+  int startIndex = employeeData.isNotEmpty ? employeeData.length : 0,
+      endIndex = startIndex + count;
+  for (int i = startIndex; i < endIndex; i++) {
+    employeeData.add(Employee(
+      1000 + i,
+      _names[_random.nextInt(_names.length - 1)],
+      _designation[_random.nextInt(_designation.length - 1)],
+      10000 + _random.nextInt(10000),
+    ));
+  }
+  return employeeData;
+}
+
 class EmployeeDataSource extends DataGridSource<Employee> {
   @override
   List<Employee> get dataSource => employees;
@@ -222,17 +242,7 @@ class EmployeeDataSource extends DataGridSource<Employee> {
   @override
   Future<void> handleLoadMoreRows() async {
     await Future.delayed(Duration(seconds: 5));
-    employees.addAll([
-      Employee(10012, 'Kathryn', 'Manager', 30000),
-      Employee(10013, 'Lara', 'Developer', 15000),
-      Employee(10014, 'Michael', 'Designer', 15000),
-      Employee(10015, 'Martin', 'Developer', 15000),
-      Employee(10016, 'Newberry', 'Developer', 15000),
-      Employee(10017, 'Balnc', 'Developer', 15000),
-      Employee(10018, 'Perry', 'Developer', 15000),
-      Employee(10019, 'James', 'Project Lead', 20000),
-      Employee(10020, 'Kathryn', 'Manager', 30000)
-    ]);
+    employees = _generateEmployeeData(employees, 15);
     notifyListeners();
   }
 }
@@ -240,4 +250,4 @@ class EmployeeDataSource extends DataGridSource<Employee> {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows load more button behavior](images/load-more/flutter-load-more-button.gif)
+![flutter datagrid shows load more button behavior](images/load-more/flutter-datagrid-load-more-button.gif)
