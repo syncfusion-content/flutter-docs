@@ -155,9 +155,7 @@ In flutter XlsIO, we have support for Range reference and basic function formula
 <table>
 <tr>
 <td>
-
-[SUM](http://help.syncfusion.com/flutter/xlsio/working-with-general-functions#sum-function)
-
+<a href="https://help.syncfusion.com/flutter/xlsio/working-with-general-functions#sum-function">SUM</a>
 </td>
 <td>
 Adds its arguments
@@ -166,7 +164,7 @@ Adds its arguments
 <tr>
 <td>
 
-[AVERAGE](http://help.syncfusion.com/flutter/xlsio/working-with-general-functions#average-function)
+[AVERAGE](https://help.syncfusion.com/flutter/xlsio/working-with-general-functions#average-function)
 
 </td>
 <td>
@@ -176,7 +174,7 @@ Returns the average of its arguments
 <tr>
 <td>
 
-[MAX](http://help.syncfusion.com/flutter/xlsio/working-with-general-functions#max-function)
+[MAX](https://help.syncfusion.com/flutter/xlsio/working-with-general-functions#max-function)
 
 </td>
 <td>
@@ -186,7 +184,7 @@ Returns the maximum value in a list of arguments
 <tr>
 <td>
 
-[MIN](http://help.syncfusion.com/flutter/xlsio/working-with-general-functions#min-function)
+[MIN](https://help.syncfusion.com/flutter/xlsio/working-with-general-functions#min-function)
 
 </td>
 <td>
@@ -196,7 +194,7 @@ Returns the minimum value in a list of arguments
 <tr>
 <td>
 
-[COUNT](http://help.syncfusion.com/flutter/xlsio/working-with-general-functions#count-function)
+[COUNT](https://help.syncfusion.com/flutter/xlsio/working-with-general-functions#count-function)
 
 </td>
 <td>
@@ -206,7 +204,7 @@ Counts how many numbers are in the list of arguments
 <tr>
 <td>
 
-[IF](http://help.syncfusion.com/flutter/xlsio/working-with-logical-function#if-function)
+[IF](https://help.syncfusion.com/flutter/xlsio/working-with-logical-function#if-function)
 
 </td>
 <td>
