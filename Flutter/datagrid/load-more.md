@@ -93,7 +93,7 @@ final List<String> _designation = <String>[
   'CEO'
 ];
 
-List<Employee> _generateEmployeeData(List<Employee> employeeData, int count) {
+List<Employee> _addMoreRows(List<Employee> employeeData, int count) {
   final Random _random = Random();
   int startIndex = employeeData.isNotEmpty ? employeeData.length : 0,
       endIndex = startIndex + count;
@@ -136,7 +136,7 @@ class EmployeeDataSource extends DataGridSource<Employee> {
   @override
   Future<void> handleLoadMoreRows() async {
     await Future.delayed(Duration(seconds: 5));
-    employees = _generateEmployeeData(employees, 15);
+    _addMoreRows(employees, 15);
     notifyListeners();
   }
 }
@@ -253,7 +253,7 @@ final List<String> _designation = <String>[
   'CEO'
 ];
 
-List<Employee> _generateEmployeeData(List<Employee> employeeData, int count) {
+List<Employee> _addMoreRows(List<Employee> employeeData, int count) {
   final Random _random = Random();
   int startIndex = employeeData.isNotEmpty ? employeeData.length : 0,
       endIndex = startIndex + count;
@@ -296,7 +296,7 @@ class EmployeeDataSource extends DataGridSource<Employee> {
   @override
   Future<void> handleLoadMoreRows() async {
     await Future.delayed(Duration(seconds: 5));
-    employees = _generateEmployeeData(employees, 15);
+    _addMoreRows(employees, 15);
     notifyListeners();
   }
 }
