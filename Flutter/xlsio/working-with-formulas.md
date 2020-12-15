@@ -157,7 +157,6 @@ In flutter XlsIO, we have support for Range reference and basic function formula
 <td>
 
 [SUM](https://help.syncfusion.com/flutter/xlsio/working-with-general-functions#sum-function)
-
 </td>
 <td>
 Adds its arguments
