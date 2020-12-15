@@ -66,6 +66,33 @@ Widget build(BuildContext context) {
   );
 }
 
+final List<String> _names = <String>[
+  'Welli',
+  'Blonp',
+  'Folko',
+  'Furip',
+  'Folig',
+  'Picco',
+  'Frans',
+  'Warth',
+  'Linod',
+  'Simop',
+  'Merep',
+  'Riscu',
+  'Seves',
+  'Vaffe',
+  'Alfki'
+];
+
+final List<String> _designation = <String>[
+  'Project Lead',
+  'Developer',
+  'Manager',
+  'Designer',
+  'System Analyst,
+  'CEO'
+];
+
 List<Employee> _generateEmployeeData(List<Employee> employeeData, int count) {
   final Random _random = Random();
   int startIndex = employeeData.isNotEmpty ? employeeData.length : 0,
@@ -198,6 +225,33 @@ Widget build(BuildContext context) {
     ],
   );
 }
+
+final List<String> _names = <String>[
+  'Welli',
+  'Blonp',
+  'Folko',
+  'Furip',
+  'Folig',
+  'Picco',
+  'Frans',
+  'Warth',
+  'Linod',
+  'Simop',
+  'Merep',
+  'Riscu',
+  'Seves',
+  'Vaffe',
+  'Alfki'
+];
+
+final List<String> _designation = <String>[
+  'Project Lead',
+  'Developer',
+  'Manager',
+  'Designer',
+  'System Analyst,
+  'CEO'
+];
 
 List<Employee> _generateEmployeeData(List<Employee> employeeData, int count) {
   final Random _random = Random();
