@@ -19,7 +19,7 @@ Triggers when the legend item is rendering. Here, you can customize the legendâ€
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendRenderArgs/pointIndex.html) - specifies the current point index that is applicable for Funnel chart type alone.
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendRenderArgs/seriesIndex.html) - specifies the current series index.
 * [`legendIconType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendRenderArgs/legendIconType.html) - specifies the shape of the legend.
-* [`color`]() - to get and set the color of the legen icon.
+* [`color`]() - to get and set the color of the legend icon.
 
 {% highlight dart %}
 

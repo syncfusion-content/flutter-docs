@@ -118,7 +118,7 @@ Triggers when data label is rendering. Text and text styles such as color, font 
 * [`seriesRenderer`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/series.html) - specifies current series.
 * [`dataPoints`]() - used to get the data points of the series.
 * [`overallPointIndex`]() - used to get overall point index.
-* [`offset`]() - used to get and set the horizontal/vertical position of the data label. The first argument sets the horizontal component to dx, while the second argument sets the vertical component to dy.
+* [`offset`]() - used to get and set the horizontal/vertical position of the data label. The first argument sets the horizontal component to x, while the second argument sets the vertical component to y.
 * [`color`]() - used to get and set the background color of a data label.
  
 {% highlight dart %}
@@ -610,7 +610,7 @@ Triggers when touched or clicked on the chart area. You can get the position of 
 
 The callback contains the following argument:
 
-* [`position`]() - uesd to get the position of the touch interaction.
+* [`position`]() - used to get the position of the touch interaction.
 
 {% highlight dart %}
 
@@ -633,7 +633,7 @@ Triggers when tapped or clicked on the chart area. You can get the position of t
 
 The callback contains the following argument:
 
-* [`position`]() - uesd to get the position of the touch interaction.
+* [`position`]() - used to get the position of the touch interaction.
 
 {% highlight dart %}
 
@@ -656,7 +656,7 @@ Triggers when touched or clicked and moved on the chart area. You can get the po
 
 The callback contains the following argument:
 
-* [`position`]() - uesd to get the position of the touch interaction.
+* [`position`]() - used to get the position of the touch interaction.
 
 {% highlight dart %}
 
