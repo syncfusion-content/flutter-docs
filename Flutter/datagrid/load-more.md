@@ -112,9 +112,6 @@ class EmployeeDataSource extends DataGridSource<Employee> {
 {% endhighlight %}
 {% endtabs %}
 
-**NOTE**
-  Download the sample code from [GitHub](https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/datagrid/loadmore/datagrid_infinite_scrolling.dart).
-
 ![flutter datagrid shows load more with infinite scrolling behavior](images/load-more/flutter-load-more-infinite-scrolling.gif)
 
 ## Load more button
@@ -242,8 +239,5 @@ class EmployeeDataSource extends DataGridSource<Employee> {
 
 {% endhighlight %}
 {% endtabs %}
-
-**NOTE**
-  Download the sample code from [GitHub](https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/datagrid/loadmore/datagrid_load_more.dart).
 
 ![flutter datagrid shows load more button behavior](images/load-more/flutter-load-more-button.gif)
