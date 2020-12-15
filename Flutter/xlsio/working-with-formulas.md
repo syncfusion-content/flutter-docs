@@ -104,10 +104,9 @@ File('Formula.xlsx').writeAsBytes(bytes);
 
 Using a function as one of the arguments in a formula is known as Nested Function.
 
-The following code shows how to access a Nested Function.
+The following code shows how to use nested functions.
 
 {% highlight dart %}
-
 
 // Create a new Excel Document.
 final Workbook workbook = Workbook();
@@ -139,7 +138,6 @@ sheet.enableSheetCalculations();
 final Range range = sheet.getRangeByName('B11');
 range.setFormula(
   '=IF(SUM(AVERAGE(B4:B9), MAX(COUNT(B4,D4), MIN(B5,D5))) > 50, \'PASS\', \'FAIL\')');
-range.calculatedValue;
 
 // Save and dispose workbook.
 final List<int> bytes = workbook.saveAsStream();

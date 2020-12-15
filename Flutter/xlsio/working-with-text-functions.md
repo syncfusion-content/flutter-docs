@@ -44,10 +44,8 @@ sheet.enableSheetCalculations();
 // Setting formula in the cell.
 Range range = sheet.getRangeByName('A4');
 range.setFormula('=CONCATENATE(A1,A2)');
-range.calculatedValue;
 range = sheet.getRangeByName('A6');
 range.setFormula('=CONCATENATE(B1,B2)');
-range.calculatedValue;
 
 // Save and dispose workbook.
 final List<int> bytes = workbook.saveAsStream();
@@ -80,10 +78,8 @@ sheet.enableSheetCalculations();
 // Setting formula in the cell.
 Range range = sheet.getRangeByName('A4');
 range.setFormula('=TRIM(A1)');
-range.calculatedValue;
 range = sheet.getRangeByName('A6');
 range.setFormula('=TRIM(A2)');
-range.calculatedValue;
 
 // Save and dispose workbook.
 final List<int> bytes = workbook.saveAsStream();
@@ -116,10 +112,8 @@ sheet.enableSheetCalculations();
 // Setting formula in the cell.
 Range range = sheet.getRangeByName('A4');
 range.setFormula('=LOWER(A1)');
-range.calculatedValue;
 range = sheet.getRangeByName('A6');
 range.setFormula('=LOWER(A2)');
-range.calculatedValue;
 
 // Save and dispose workbook.
 final List<int> bytes = workbook.saveAsStream();
@@ -152,10 +146,8 @@ sheet.enableSheetCalculations();
 // Setting formula in the cell.
 Range range = sheet.getRangeByName('A4');
 range.setFormula('=UPPER(A1)');
-range.calculatedValue;
 range = sheet.getRangeByName('A6');
 range.setFormula('=UPPER(A2)');
-range.calculatedValue;
 
 // Save and dispose workbook.
 final List<int> bytes = workbook.saveAsStream();

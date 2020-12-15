@@ -40,10 +40,8 @@ sheet.enableSheetCalculations();
 // Setting formula in the cell.
 Range range = sheet.getRangeByName('A4');
 range.setFormula('=INDEX(A1:A2,2,1)');
-range.calculatedValue;
 range = sheet.getRangeByName('A6');
 range.setFormula('=INDEX(A1:B2,1,1,1)');
-range.calculatedValue;
 
 // Save and dispose workbook.
 final List<int> bytes = workbook.saveAsStream();
@@ -79,10 +77,8 @@ sheet.enableSheetCalculations();
 // Setting formula in the cell.
 Range range = sheet.getRangeByName('A6');
 range.setFormula('=MATCH(8,A1:A4,0)');
-range.calculatedValue;
 range = sheet.getRangeByName('A8');
 range.setFormula('=MATCH(6,A1:A4,-1)');
-range.calculatedValue;
 
 // Save and dispose workbook.
 final List<int> bytes = workbook.saveAsStream();
