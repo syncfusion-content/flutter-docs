@@ -10,7 +10,7 @@ documentation: ug
 # Hijri date range picker
 Along with Gregorian calendar, the picker package contains Hijri date picker to display the Islamic calendar. Islamic calendar or Hijri calendar is a lunar calendar consisting of 12 months in a year of 354 or 355 days. To know more about Islamic calendar, kindly refer [Wikipedia](https://en.wikipedia.org/wiki/Islamic_calendar).
 
-Also, It consists of all the Gregorian calendar functionalities like, min and max date, first day of week , different selection modes, RTL and customization for special dates.
+It consists of all the Gregorian calendar functionalities like, min and max date, first day of week , different selection modes, RTL and customization for special dates.
 
 To display Hijri date picker, initialize [HijriDateRangePicker]() widget as a child of any widget. Here Hijri date range picker added as a child of the scaffold widget.
 
@@ -51,7 +51,7 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ## Change first day of week
-The HijriDateRangePicker widget will be rendered with Sunday as the first day of the week, but you can customize it to any day by using the [firstDayOfWeek]() property [HijriDatePickerMonthViewSettings]().
+The `SfHijriDateRangePicker` widget will be rendered with Sunday as the first day of the week, but you can customize it to any day by using the [firstDayOfWeek]() property [HijriDatePickerMonthViewSettings]().
 
 {% tabs %}
 {% highlight Dart %}
@@ -71,7 +71,7 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ## Date selection
-The HijriDateRangePicker supports selecting single, multiple, and range of dates. It also supports programmatic selection.
+The `SfHijriDateRangePicker` supports selecting single, multiple, and range of dates. It also supports programmatic selection.
 
 The selected date or range details can be obtained using the [onSelectionChanged ]()callback of hijri date range picker. The callback will return the [DateRangePickerSelectionChangedArgs]() which contains the selected date or range details.
 
@@ -99,7 +99,7 @@ Widget build(BuildContext context) {
 
 ## HijriDatePickerController
 ### Programmatic date navigation
-You can programmatically navigate date in hijri date picker widget by using the [displayDate]() property in of [HijriDatePickerController]().
+You can programmatically navigate date in hijri date picker widget by using the [displayDate]() property from [HijriDatePickerController]().
 
 
 {% tabs %}
@@ -131,7 +131,7 @@ class MyAppState extends State<MyApp> {
 {% endtabs %}
 
 ### Programmatic view navigation
-You can programmatically navigate view in the hijri date picker widget by using the [view]() property of `HijriDatePickerController`.
+You can programmatically navigate to any view in the hijri date picker widget by using the [view]() property of `HijriDatePickerController`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -164,7 +164,7 @@ class MyAppState extends State<MyApp> {
 You can select dates programmatically on hijri date picker widget by using the ‘HijriDatePickerController’.
 
 #### Single selection
-Initially or during the run time, you can select the date programmatically by using the selectedDate property of `HijriDatePickerController`. It is only applicable when the selectionMode is set to `DateRangePickerSelectionMode.single`.
+You can select the date programmatically by using the [selectedDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedDate.html) property of `HijriDatePickerController`. It is only applicable when the `selectionMode` is set to `DateRangePickerSelectionMode.single`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -176,7 +176,7 @@ class MyAppState extends State<MyApp> {
   void initState() {
     _controller = HijriDatePickerController();
     _controller.view = HijriDatePickerView.month;
-    _controller.selectedDate = HijriDateTime.now().add(Duration(days: 2));
+    _controller.selectedDate = HijriDateTime.now().add(Duration(days: 1));
     super.initState();
   }
 
@@ -196,7 +196,7 @@ class MyAppState extends State<MyApp> {
 {% endtabs %}
 
 #### Multi selection
-Initially or during the run time, you can selects the multiple dates programmatically by using the selectedDates property of `HijriDatePickerController`. It is only applicable when the selectionMode is set to `DateRangePickerSelectionMode.multiple`.
+You can selects the multiple dates programmatically by using the [selectedDates](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedDates.html) property of `HijriDatePickerController`. It is only applicable when the selectionMode is set to `DateRangePickerSelectionMode.multiple`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -233,7 +233,7 @@ class MyAppState extends State<MyApp> {
 {% endtabs %}
 
 #### Range selection
-Initially or during run time, you can selects the single date range programmatically by using the selectedRange property of `HijriDatePickerController`. It is only applicable when the selectionMode is set to `DateRangePickerSelectionMode.range`.
+You can selects the single date range programmatically by using the [selectedRange](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedRange.html) property of `HijriDatePickerController`. It is only applicable when the `selectionMode` is set to `DateRangePickerSelectionMode.range`.
 
 Use [HijriDateRange]() to define the date range for hijri date picker.
 
@@ -268,7 +268,7 @@ class MyAppState extends State<MyApp> {
 {% endtabs %}
 
 #### Multi-range selection
-Initially or during run time, you can selects more than one date range programmatically by using the selectedRanges  property of `HijriDatePickerController`. It is only applicable when the selectionMode is set to `DateRangePickerSelectionMode.multiRange`.
+You can selects more than one date range programmatically by using the [selectedRanges](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedRanges.html) property of `HijriDatePickerController`. It is only applicable when the `selectionMode` is set to `DateRangePickerSelectionMode.multiRange`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -281,8 +281,8 @@ class MyAppState extends State<MyApp> {
     _controller = HijriDatePickerController();
     _controller.view = HijriDatePickerView.month;
     _controller.selectedRanges = <HijriDateRange>[
-      HijriDateRange(HijriDateTime.now().subtract(Duration(days: 4)),
-          HijriDateTime.now().add(Duration(days: 4))),
+      HijriDateRange(HijriDateTime.now().add(Duration(days: 4)),
+          HijriDateTime.now().add(Duration(days: 9))),
       HijriDateRange(HijriDateTime.now().add(Duration(days: 11)),
           HijriDateTime.now().add(Duration(days: 16)))
     ];
@@ -308,12 +308,12 @@ class MyAppState extends State<MyApp> {
 ## Month cell customization
 You can customize the hijri date picker month view by using the [monthCellStyle]() property of `SfHijriDateRangePicker`.
 
-•    **Current month dates** – You can customize the current month date’s text style and background of the HijriDateRangePicker by using the [textStyle]() and [cellDecoration]() properties of [HijriDatePickerMonthCellStyle]().
-•    **Today date** – You can customize the today date text style and background of the HijriDateRangePicker by using the [todayTextStyle]() and [todayCellDecoration]().
-•    **Blackout Dates** - You can customize the blackout dates text style and background of the HijriDateRangePicker by using the [blackoutDateTextStyle]() and [blackoutDatesDecoration]().
-•    **Disabled dates** – Disable dates text style and background beyond of the [minDate]() and [maxDate]() in HijriDateRangePicker by using [disableDatesTextStyle]() and [disableDatesDecoration]().
-•    **Special Dates** – You can add special dates to the HijriDateRangePicker by using [specialDates]() property, and you can also customize the special dates text style and background by using the [specialDatesTextStyle]() and [specialDatesDecoration]().
-•    **Weekend Dates** – You can change weekend dates to HijriDateRangePicker by using the [weekendDays]() property, and you can also customize the weekend dates text style and background by using the [weekendDatesTextStyle]() and [weekendDatesDecoration]().
+•    **Current month dates** – You can customize the current month date’s text style and background of the `SfHijriDateRangePicker` by using the [textStyle]() and [cellDecoration]() properties of [HijriDatePickerMonthCellStyle]().
+•    **Today date** – You can customize the today date text style and background of the `SfHijriDateRangePicker` by using the [todayTextStyle]() and [todayCellDecoration]().
+•    **Blackout Dates** - You can customize the blackout dates text style and background of the `SfHijriDateRangePicker` by using the [blackoutDateTextStyle]() and [blackoutDatesDecoration]().
+•    **Disabled dates** – Disable dates text style and background beyond of the [minDate]() and [maxDate]() in `SfHijriDateRangePicker` by using [disableDatesTextStyle]() and [disableDatesDecoration]().
+•    **Special Dates** – You can add special dates to the `SfHijriDateRangePicker` by using [specialDates]() property, and you can also customize the special dates text style and background by using the [specialDatesTextStyle]() and [specialDatesDecoration]().
+•    **Weekend Dates** – You can change weekend dates to `SfHijriDateRangePicker` by using the [weekendDays]() property, and you can also customize the weekend dates text style and background by using the [weekendDatesTextStyle]() and [weekendDatesDecoration]().
 
 {% tabs %}
 {% highlight Dart %}
@@ -359,9 +359,9 @@ Widget build(BuildContext context) {
 ## Year cell customization
 You can customize the calendar year, and decade view by using the [yearCellStyle]() of `SfHijriDateRangePicker`.
 
-•    **Current year** – You can customize current month dates text style and background of the DateRangePicker by using the [textStyle]() and [cellDecoration]() properties of [HijriDatePickerYearCellStyle]().
-•    **Disabled dates** – Disable dates text style and background beyond of the HijriDateRangePicker by using the [disableDatesTextStyle]() and [disableDatesDecoration]().
-•    **Today date** – You can customize the today date text style and background of the HijriDateRangePicker by using the [todayTextStyle]() and [todayCellDecoration]().
+•    **Current year** – You can customize current month dates text style and background of the `SfHijriDateRangePicker` by using the [textStyle]() and [cellDecoration]() properties of [HijriDatePickerYearCellStyle]().
+•    **Disabled dates** – Disable dates text style and background beyond of the `SfHijriDateRangePicker` by using the [disableDatesTextStyle]() and [disableDatesDecoration]().
+•    **Today date** – You can customize the today date text style and background of the `SfHijriDateRangePicker` by using the [todayTextStyle]() and [todayCellDecoration]().
 
 {% tabs %}
 {% highlight Dart %}

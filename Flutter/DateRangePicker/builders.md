@@ -36,41 +36,59 @@ class MyAppState extends State<MyApp> {
       home: Scaffold(
           body: SfDateRangePicker(
               controller: _controller,
-              cellBuilder: (BuildContext context,
-                  DateRangePickerCellDetails cellDetails) {
-                if (_controller.view == DateRangePickerView.month) {
-                  return Container(
-                    width: cellDetails.bounds.width,
-                    height: cellDetails.bounds.height,
-                    alignment: Alignment.center,
-                    child: Text(cellDetails.date.day.toString()),
-                  );
-                } else if (_controller.view == DateRangePickerView.year) {
-                  return Container(
-                    width: cellDetails.bounds.width,
-                    height: cellDetails.bounds.height,
-                    alignment: Alignment.center,
-                    child: Text(cellDetails.date.month.toString()),
-                  );
-                } else if (_controller.view == DateRangePickerView.decade) {
-                  return Container(
-                    width: cellDetails.bounds.width,
-                    height: cellDetails.bounds.height,
-                    alignment: Alignment.center,
-                    child: Text(cellDetails.date.year.toString()),
-                  );
-                } else {
-                  final int yearValue = (cellDetails.date.year ~/ 10) * 10;
-                  return Container(
-                    width: cellDetails.bounds.width,
-                    height: cellDetails.bounds.height,
-                    alignment: Alignment.center,
-                    child: Text(yearValue.toString() +
-                        ' - ' +
-                        (yearValue + 9).toString()),
-                  );
-                }
-              })),
+			  cellBuilder:
+                (BuildContext context, DateRangePickerCellDetails details) {
+              final bool isToday = isSameDate(details.date, DateTime.now());
+              final bool isBlackOut = isBlackedDate(details.date.day);
+              final bool isSpecialDate = isSpecialDay(details.date.day);
+              return Container(
+                margin: EdgeInsets.all(2),
+                padding: EdgeInsets.only(top: kIsWeb ? 5 : 10),
+                decoration: BoxDecoration(
+                    color: Colors.blueAccent,
+                    border: isToday
+                        ? Border.all(color: Colors.black, width: 2)
+                        : null),
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: <Widget>[
+                    Text(
+                      details.date.day.toString(),
+                      style: TextStyle(
+                        fontSize: kIsWeb ? 11 : 15,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    isBlackOut
+                        ? Icon(
+                            Icons.block_sharp,
+                            size: 13,
+                          )
+                        : isSpecialDate
+                            ? Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.cake,
+                                    size: 13,
+                                  ),
+                                  Icon(
+                                    Icons.celebration,
+                                    size: 13,
+                                  ),
+                                  Icon(
+                                    Icons.audiotrack,
+                                    size: 13,
+                                  )
+                                ],
+                              )
+                            : Container()
+                  ],
+                ),
+              );
+            },
+              )),
     );
   }
 }

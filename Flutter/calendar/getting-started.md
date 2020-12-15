@@ -373,7 +373,7 @@ Widget build(BuildContext context) {
 * The `showNavigationArrow` property is not applicable when the `view` is set to `CalendarView.schedule`.
 
 ## Cell end padding
-You can customize the padding between the appointment right end and month cell end by using the [cellEndPadding]() property in the calendar. Which allows you to tap the calendar cell when the cell has appointments.
+You can customize the padding between the appointment right end of the month cell by using the [cellEndPadding]() property in the calendar, which allows you to tap the calendar cell when the cell has appointments.
 
 {% tabs %}
 {% highlight Dart %}
@@ -386,6 +386,9 @@ Widget build(BuildContext context) {
       view: CalendarView.month,
       cellEndPadding: 5,
       dataSource: _getCalendarDataSource(),
+	  monthViewSettings: MonthViewSettings(
+            appointmentDisplayMode:
+                MonthAppointmentDisplayMode.appointment),
     )),
   );
 }

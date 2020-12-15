@@ -134,11 +134,10 @@ Widget build(BuildContext context) {
 ![Multi-date picker view](images/views/multi-picker-view.jpg)
 
 ### Vertical picker
-You can arrange the two date range picker views in vertical direction by setting the [navigationDirection]() as `vertical` in the `SfDateRangePicker`.
+You can arrange the two date range picker views in vertical direction by setting the [navigationDirection](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/navigationDirection.html) as `DateRangePickerNavigationDirection.vertical` in the `SfDateRangePicker`.
 
 {% tabs %}
 {% highlight Dart %}
-
 
 @override
 Widget build(BuildContext context) {

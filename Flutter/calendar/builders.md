@@ -122,7 +122,7 @@ Widget build(BuildContext context) {
 
 ## Appointment builder
 
-The [CalendarAppointmentBuilder]() allows you to design your custom view and assign the view to the appointment UI of the calendar by returning an appropriate widget in the appointmentBuilder of `SfCalendar`.
+The [CalendarAppointmentBuilder]() allows you to design your custom view and assign the view to the appointment UI of the calendar by returning an appropriate widget in the [appointmentBuilder]() of `SfCalendar`.
 
 [CalendarAppointmentDetails]() - returns the details of the appointment view.
 
@@ -149,55 +149,99 @@ class MyAppState extends State<MyApp> {
       home: Scaffold(
           body: SfCalendar(
         view: CalendarView.day,
+		dataSource: _getDataSource(),
         appointmentBuilder: (BuildContext context,
-            CalendarAppointmentDetails calendarAppointmentDetails) {
-          if (calendarAppointmentDetails.isMoreAppointmentRegion) {
-            return Container(
-              width: calendarAppointmentDetails.bounds.width,
-              height: calendarAppointmentDetails.bounds.height,
-              child: Text('+More'),
-            );
-          } else if (_controller.view == CalendarView.month) {
-            final Appointment appointment =
-                calendarAppointmentDetails.appointments.first;
-            return Container(
-                decoration: BoxDecoration(
-                    color: appointment.color,
-                    shape: BoxShape.rectangle,
-                    borderRadius: BorderRadius.all(Radius.circular(4.0)),
-                    gradient: LinearGradient(
-                        colors: [Colors.red, Colors.cyan],
-                        begin: Alignment.centerRight,
-                        end: Alignment.centerLeft)),
-                alignment: Alignment.center,
-                child: appointment.isAllDay
-                    ? Text('${appointment.subject}',
-                        textAlign: TextAlign.left,
-                        style: TextStyle(color: Colors.white, fontSize: 10))
-                    : Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text('${appointment.subject}',
-                              textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 10)),
-                          Text(
-                              '${DateFormat('hh:mm a').format(appointment.startTime)} - ' +
-                                  '${DateFormat('hh:mm a').format(appointment.endTime)}',
-                              textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 10))
-                        ],
-                      ));
-          } else {
-            final Appointment appointment =
-                calendarAppointmentDetails.appointments.first;
-            return Container(
-              width: calendarAppointmentDetails.bounds.width,
-              height: calendarAppointmentDetails.bounds.height,
-              child: Text(appointment.subject),
-            );
-          }
+                (BuildContext context, CalendarAppointmentDetails details) {
+              final Appointment meeting = details.appointments.first;
+              final String image = _getImage();
+              if (_controller.view != CalendarView.month &&
+                  _controller.view != CalendarView.schedule) {
+                return Container(
+                  child: Column(
+                    children: [
+                      Container(
+                        padding: EdgeInsets.all(3),
+                        height: 50,
+                        alignment: Alignment.topLeft,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.rectangle,
+                          borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(5),
+                              topRight: Radius.circular(5)),
+                          color: meeting.color,
+                        ),
+                        child: SingleChildScrollView(
+                            child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              meeting.subject,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
+                              ),
+                              maxLines: 3,
+                              softWrap: false,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                            !kIsWeb
+                                ? Container()
+                                : Text(
+                                    'Time: ${DateFormat('hh:mm a').format(meeting.startTime)} - ' +
+                                        '${DateFormat('hh:mm a').format(meeting.endTime)}',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 10,
+                                    ),
+                                  )
+                          ],
+                        )),
+                      ),
+                      Container(
+                        height: details.bounds.height - 70,
+                        padding: EdgeInsets.fromLTRB(3, 5, 3, 2),
+                        color: meeting.color.withOpacity(0.8),
+                        alignment: Alignment.topLeft,
+                        child: SingleChildScrollView(
+                            child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                                padding: EdgeInsets.symmetric(vertical: 5),
+                                child: Image(
+                                    image: ExactAssetImage(
+                                        'images/' + image + '.png'),
+                                    fit: BoxFit.contain,
+                                    width: details.bounds.width,
+                                    height: 60)),
+                            Text(
+                              meeting.notes,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 10,
+                              ),
+                            )
+                          ],
+                        )),
+                      ),
+                      Container(
+                        height: 20,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.rectangle,
+                          borderRadius: BorderRadius.only(
+                              bottomLeft: Radius.circular(5),
+                              bottomRight: Radius.circular(5)),
+                          color: meeting.color,
+                        ),
+                      ),
+                    ],
+                  ),
+                );
+              }
+            },
         },
       )),
     );
@@ -210,7 +254,7 @@ class MyAppState extends State<MyApp> {
 
 ## Time region builder
 
-The [TimeRegionBuilder]() allows you to design your custom view and assign the view to the time region view of the calendar by returning an appropriate widget in the timeRegionBuilder of SfCalendar.
+The [TimeRegionBuilder]() allows you to design your custom view and assign the view to the time region view of the calendar by returning an appropriate widget in the [timeRegionBuilder]() of SfCalendar.
 
 [TimeRegionDetails]() - returns the details of the time region view.
 
@@ -244,21 +288,27 @@ Widget build(BuildContext context) {
       specialRegions: _getTimeRegions(),
       timeRegionBuilder:
           (BuildContext context, TimeRegionDetails timeRegionDetails) {
-        return Container(
-          margin: EdgeInsets.all(1),
-          alignment: Alignment.center,
-          child: Text(
-            timeRegionDetails.region.text,
-            style: TextStyle(color: Colors.black),
-          ),
-          decoration: BoxDecoration(
-              shape: BoxShape.rectangle,
-              borderRadius: BorderRadius.all(Radius.circular(4.0)),
-              gradient: LinearGradient(
-                  colors: [timeRegionDetails.region.color, Colors.cyan],
-                  begin: Alignment.centerRight,
-                  end: Alignment.centerLeft)),
-        );
+        if (details.region.text == 'Lunch') {
+                return Container(
+                  color: details.region.color,
+                  alignment: Alignment.center,
+                  child: Icon(
+                    Icons.restaurant,
+                    color: Colors.grey.withOpacity(0.5),
+                  ),
+                );
+              } else if (details.region.text == 'Not Available') {
+                return Container(
+                  color: details.region.color,
+                  alignment: Alignment.center,
+                  child: Icon(
+                    Icons.block,
+                    color: Colors.grey.withOpacity(0.5),
+                  ),
+                );
+              }
+
+              return Container(color: details.region.color);
       },
     )),
   );
