@@ -104,10 +104,9 @@ File('Formula.xlsx').writeAsBytes(bytes);
 
 Using a function as one of the arguments in a formula is known as Nested Function.
 
-The following code shows how to access a Nested Function.
+The following code shows how to use nested functions.
 
 {% highlight dart %}
-
 
 // Create a new Excel Document.
 final Workbook workbook = Workbook();
@@ -139,7 +138,6 @@ sheet.enableSheetCalculations();
 final Range range = sheet.getRangeByName('B11');
 range.setFormula(
   '=IF(SUM(AVERAGE(B4:B9), MAX(COUNT(B4,D4), MIN(B5,D5))) > 50, \'PASS\', \'FAIL\')');
-range.calculatedValue;
 
 // Save and dispose workbook.
 final List<int> bytes = workbook.saveAsStream();
@@ -155,9 +153,7 @@ In flutter XlsIO, we have support for Range reference and basic function formula
 <table>
 <tr>
 <td>
-
-[SUM](https://help.syncfusion.com/flutter/xlsio/working-with-general-functions#sum-function)
-
+<a href="https://help.syncfusion.com/flutter/xlsio/working-with-general-functions#sum-function">SUM</a>
 </td>
 <td>
 Adds its arguments
@@ -165,9 +161,8 @@ Adds its arguments
 </tr>
 <tr>
 <td>
-
-[AVERAGE](https://help.syncfusion.com/flutter/xlsio/working-with-general-functions#average-function)
-
+<a href="https://help.syncfusion.com/flutter/xlsio/working-with-general-functions#average-function
+">AVERAGE</a>
 </td>
 <td>
 Returns the average of its arguments
@@ -175,9 +170,7 @@ Returns the average of its arguments
 </tr>
 <tr>
 <td>
-
-[MAX](https://help.syncfusion.com/flutter/xlsio/working-with-general-functions#max-function)
-
+<a href="https://help.syncfusion.com/flutter/xlsio/working-with-general-functions#max-function">MAX</a>
 </td>
 <td>
 Returns the maximum value in a list of arguments
@@ -185,9 +178,7 @@ Returns the maximum value in a list of arguments
 </tr>
 <tr>
 <td>
-
-[MIN](https://help.syncfusion.com/flutter/xlsio/working-with-general-functions#min-function)
-
+<a href="https://help.syncfusion.com/flutter/xlsio/working-with-general-functions#min-function">MIN</a>
 </td>
 <td>
 Returns the minimum value in a list of arguments
@@ -195,9 +186,8 @@ Returns the minimum value in a list of arguments
 </tr>
 <tr>
 <td>
-
-[COUNT](https://help.syncfusion.com/flutter/xlsio/working-with-general-functions#count-function)
-
+<a href="https://help.syncfusion.com/flutter/xlsio/working-with-general-functions#count-function
+">COUNT</a>
 </td>
 <td>
 Counts how many numbers are in the list of arguments
@@ -205,9 +195,7 @@ Counts how many numbers are in the list of arguments
 </tr>
 <tr>
 <td>
-
-[IF](https://help.syncfusion.com/flutter/xlsio/working-with-logical-function#if-function)
-
+<a href="https://help.syncfusion.com/flutter/xlsio/working-with-logical-function#if-function">IF</a>
 </td>
 <td>
 Specifies a logical test to perform
@@ -215,9 +203,7 @@ Specifies a logical test to perform
 </tr>
 <tr>
 <td>
-
-[AND]()
-
+<a href="">AND</a>
 </td>
 <td>
 Returns TRUE if all of its arguments are TRUE
@@ -225,9 +211,7 @@ Returns TRUE if all of its arguments are TRUE
 </tr>
 <tr>
 <td>
-
-[OR]()
-
+<a href="">OR</a>
 </td>
 <td>
 Returns TRUE if any argument is TRUE
@@ -235,9 +219,7 @@ Returns TRUE if any argument is TRUE
 </tr>
 <tr>
 <td>
-
-[NOT]()
-
+<a href="">NOT</a>
 </td>
 <td>
 Reverses the logic of its argument
@@ -245,9 +227,7 @@ Reverses the logic of its argument
 </tr>
 <tr>
 <td>
-
-[CONCATENATE]()
-
+<a href="">CONCATENATE</a>
 </td>
 <td>
 Joins several text items into one text item
@@ -255,9 +235,7 @@ Joins several text items into one text item
 </tr>
 <tr>
 <td>
-
-[TRIM]()
-
+<a href="">TRIM</a>
 </td>
 <td>
 Removes spaces from text
@@ -265,9 +243,7 @@ Removes spaces from text
 </tr>
 <tr>
 <td>
-
-[LOWER]()
-
+<a href="">LOWER</a>
 </td>
 <td>
 Converts text to lowercase
@@ -275,9 +251,7 @@ Converts text to lowercase
 </tr>
 <tr>
 <td>
-
-[UPPER]()
-
+<a href="">UPPER</a>
 </td>
 <td>
 Converts text to uppercase
@@ -285,9 +259,7 @@ Converts text to uppercase
 </tr>
 <tr>
 <td>
-
-[NOW]()
-
+<a href="">NOW</a>
 </td>
 <td>
 Returns the serial number of the current date and time
@@ -295,9 +267,7 @@ Returns the serial number of the current date and time
 </tr>
 <tr>
 <td>
-
-[TODAY]()
-
+<a href="">TODAY</a>
 </td>
 <td>
 Returns the serial number of today's date
@@ -305,9 +275,7 @@ Returns the serial number of today's date
 </tr>
 <tr>
 <td>
-
-[INDEX]()
-
+<a href="">INDEX</a>
 </td>
 <td>
 Uses an index to choose a value from a reference or array
@@ -315,9 +283,7 @@ Uses an index to choose a value from a reference or array
 </tr>
 <tr>
 <td>
-
-[MATCH]()
-
+<a href="">MATCH</a>
 </td>
 <td>
 Looks up values in a reference or array
