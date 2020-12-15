@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Scrolling in Syncfusion Flutter DataGrid | DataTable
-description: Learn about scrolling and how to customize the appearance of scrollbar in Syncfusion Flutter DataGrid.
+description: Learn about scrolling and how to customize the scrollbar in Syncfusion Flutter DataGrid.
 platform: flutter
 control: SfDataGrid
 documentation: ug

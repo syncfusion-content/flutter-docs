@@ -238,10 +238,7 @@ The SfDataPager provides `onPageNavigationStart` and `onPageNavigationEnd` callb
 
 Typically, These callbacks are used to show and hide loading indicator.
 
-* `onPageNavigationStart`:This callback is raised when the page is being navigated.
-* `onPageNavigationEnd`: This callback is raised after the page is navigated.
-
-The below example show, how to show loading indicator using callbacks.
+The below example show how to show loading indicator using callbacks.
 
 {% tabs %}
 {% highlight Dart %}
