@@ -32,7 +32,6 @@ The following properties are used to customize the appearance:
       return Scaffold(
         body: Center(
           child:  SfSparkLineChart(
-                    highPointColor: Color.fromRGBO(20, 170, 33, 1),
             data: <double>[
                         5,
                         6,

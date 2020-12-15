@@ -1078,7 +1078,7 @@ label gets trimmed to the width  lesser than the axis label width. Defaults to `
 
 {% endhighlight %}
 
-![Axis label trim](images/axis-customization/axis-label-trim.png)
+![Axis label trim](images/axis-customization/axis-label-trim.gif)
 
 
 ## See Also
