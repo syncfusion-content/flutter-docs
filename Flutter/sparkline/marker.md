@@ -27,9 +27,34 @@ You can use the following properties to customize the appearance:
       return Scaffold(
         body: Center(
           child:  SfSparkAreaChart(
-                    marker: (displayMode: MarkerDisplayMode.none,
-                    color: Colors.red),
-            data: <double>[10,6,8,-5,11,5,-2,7,-3,6,8,10],
+                    marker: SparkChartMarker((displayMode: SparkChartMarkerDisplayMode.all,
+                    )),
+            data: <double>[
+                        5,
+                        6,
+                        5,
+                        7,
+                        4,
+                        3,
+                        9,
+                        5,
+                        6,
+                        5,
+                        7,
+                        8,
+                        4,
+                        5,
+                        3,
+                        4,
+                        11,
+                        10,
+                        2,
+                        12,
+                        4,
+                        7,
+                        6,
+                        8
+                      ],
                )
              )
            );
@@ -62,8 +87,33 @@ Markers can be assigned with different shapes using the [`shape`]() property. By
       return Scaffold(
         body: Center(
           child:  SfSparkAreaChart(
-                    marker: (shape: MarkerShape.square),
-            data: <double>[10,6,8,-5,11,5,-2,7,-3,6,8,10],
+                    marker: SparkChartMarker(shape: MarkerShape.square,displayMode: SparkChartMarkerDisplayMode.all)),
+            data: <double>[
+                        5,
+                        6,
+                        5,
+                        7,
+                        4,
+                        3,
+                        9,
+                        5,
+                        6,
+                        5,
+                        7,
+                        8,
+                        4,
+                        5,
+                        3,
+                        4,
+                        11,
+                        10,
+                        2,
+                        12,
+                        4,
+                        7,
+                        6,
+                        8
+                      ],
                )
              )
            );
@@ -104,7 +154,32 @@ Following possible values are available in sparkline chart:
         body: Center(
           child:  SfSparkAreaChart(
                    labelDisplayMode: LabelDisplayMode.all,
-            data: <double>[10,6,8,-5,11,5,-2,7,-3,6,8,10],
+            data: <double>[
+                        5,
+                        6,
+                        5,
+                        7,
+                        4,
+                        3,
+                        9,
+                        5,
+                        6,
+                        5,
+                        7,
+                        8,
+                        4,
+                        5,
+                        3,
+                        4,
+                        11,
+                        10,
+                        2,
+                        12,
+                        4,
+                        7,
+                        6,
+                        8
+                      ],
                )
              )
            );

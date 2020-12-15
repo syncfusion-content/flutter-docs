@@ -25,9 +25,33 @@ The following properties are used to customize the appearances:
       return Scaffold(
         body: Center(
           child:  SfSparkAreaChart(
-                    plotBand: SparkChartPlotBand(start: 15, end: 25, borderColor: Colors.black,
-                   borderWidth: 2),
-                   data: <double>[10,6,8,-5,11,5,-2,7,-3,6,8,10],
+                    plotBand: SparkChartPlotBand(start: 7, end: 8),
+                  data: <double>[
+                        5,
+                        6,
+                        5,
+                        7,
+                        4,
+                        3,
+                        9,
+                        5,
+                        6,
+                        5,
+                        7,
+                        8,
+                        4,
+                        5,
+                        3,
+                        4,
+                        11,
+                        10,
+                        2,
+                        12,
+                        4,
+                        7,
+                        6,
+                        8
+                      ],
                )
              )
            );

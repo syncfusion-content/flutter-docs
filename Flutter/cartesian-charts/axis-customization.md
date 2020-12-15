@@ -1059,16 +1059,16 @@ label gets trimmed to the width  lesser than the axis label width. Defaults to `
     Widget build(BuildContext context) {
       return Container(
           child: SfCartesianChart(
-             primaryXAxis: CategoryAxis(maximumLabelWidth: 45,
-              labelsExtent: 45),
+             primaryXAxis: CategoryAxis(maximumLabelWidth: 80,
+              labelsExtent: 80),
             series: <ChartSeries<SalesData, String>>[
-                    LineSeries<SalesData, String>(
+                    BarSeries<SalesData, String>(
                         dataSource: <SalesData>[
-            SalesData('January', 35),
-            SalesData('Febrauary', 28),
-            SalesData('Rokesh Karthikeyan', 34),
-            SalesData('April', 32),
-            SalesData('May', 40),
+            SalesData('Goldin Finance 117', 597),
+    SalesData('Ping An Finance Center', 599),
+    SalesData('Makkah Clock Royal Tower', 601),
+    SalesData('Shanghai Tower', 632),
+    SalesData('Burj Khalifa', 828)),
                         xValueMapper: (SalesData sales, _) => sales.year,
                         yValueMapper: (SalesData sales, _) => sales.sales,),
                   ]

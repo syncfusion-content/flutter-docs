@@ -33,7 +33,32 @@ The following properties are used to customize the appearance:
         body: Center(
           child:  SfSparkLineChart(
                     highPointColor: Color.fromRGBO(20, 170, 33, 1),
-            data: <double>[10,6,8,-5,11,5,-2,7,-3,6,8,10],
+            data: <double>[
+                        5,
+                        6,
+                        5,
+                        7,
+                        4,
+                        3,
+                        9,
+                        5,
+                        6,
+                        5,
+                        7,
+                        8,
+                        4,
+                        5,
+                        3,
+                        4,
+                        11,
+                        10,
+                        2,
+                        12,
+                        4,
+                        7,
+                        6,
+                        8
+                      ],
                )
              )
            );
@@ -60,7 +85,32 @@ The [`dashArray`]() property of [`SfSparkLineChart`]() is used to render line ch
       return Scaffold(
         body: Center(
           child:  SfSparkLineChart(
-            data: <double>[10,6,8,-5,11,5,-2,7,-3,6,8,10],
+            data: <double>[
+                        5,
+                        6,
+                        5,
+                        7,
+                        4,
+                        3,
+                        9,
+                        5,
+                        6,
+                        5,
+                        7,
+                        8,
+                        4,
+                        5,
+                        3,
+                        4,
+                        11,
+                        10,
+                        2,
+                        12,
+                        4,
+                        7,
+                        6,
+                        8
+                      ],
             dashArray: <double>[2,2],
                )
              )
@@ -102,7 +152,19 @@ The following properties are used to customize the appearance:
       return Scaffold(
         body: Center(
           child:  SfSparkAreaChart(
-            data: <double>[10,6,8,-5,11,5,-2,7,-3,6,8,10],
+            data: <double>[
+                              34,
+                              36,
+                              32,
+                              35,
+                              40,
+                              38,
+                              33,
+                              37,
+                              34,
+                              31,
+                              30,
+            ],
                )
              )
            );
@@ -141,7 +203,20 @@ The following properties are used to customize the appearance:
       return Scaffold(
         body: Center(
           child:  SfSparkBarChart(
-            data: <double>[10,6,8,-5,11,5,-2,7,-3,6,8,10],
+            data: <double>[
+                              10,
+                              6,
+                              8,
+                              -5,
+                              11,
+                              5,
+                              -2,
+                              7,
+                              -3,
+                              6,
+                              8,
+                              10
+                            ],
                )
              )
            );
@@ -183,7 +258,20 @@ The following properties are used to customize the appearance:
       return Scaffold(
         body: Center(
           child:  SfSparkWinLossChart(
-            data: <double>[10,6,8,-5,11,5,-2,7,-3,6,8,10],
+            data: <double>[
+                          12,
+                          15,
+                          -10,
+                          13,
+                          15,
+                          6,
+                          -12,
+                          17,
+                          13,
+                          0,
+                          8,
+                          -10
+                        ],
                )
              )
            );
