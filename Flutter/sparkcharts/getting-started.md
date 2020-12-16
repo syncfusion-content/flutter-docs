@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Getting started for Syncfusion Flutter Spark charts
-description:  Learn how to create the syncfusion Flutter spark charts, add series, markers, trackball.
+description:  Learn how to create the Syncfusion Flutter Spark charts, add series, markers, data label, and trackball.
 platform: flutter
 control: Sparkline
 documentation: ug
 ---
 
-# Getting started
+# Getting started with Flutter Spark charts
 
 This section explains the steps required to populate the spark chart with data, data labels, marker and trackball. This section covers only the minimal features needed to know to get started with the spark charts.
 

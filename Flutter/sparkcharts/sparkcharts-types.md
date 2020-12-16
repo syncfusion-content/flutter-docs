@@ -7,7 +7,7 @@ control: Sparkline
 documentation: ug
 ---
 
-# Spark charts types
+# Chart types in Spark charts
 
 ## Line chart
 
