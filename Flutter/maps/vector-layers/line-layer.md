@@ -416,3 +416,184 @@ class DataModel {
 {% endtabs %}
 
 ![Line shape onTap](images/line-layer/line_shape_onTap.gif)
+
+## Tooltip
+
+You can show information about the line drawn using the [`tooltipBuilder`] property.
+
+{% tabs %}
+{% highlight Dart %}
+
+MapShapeSource dataSource;
+List<DataModel> data;
+Random random = Random();
+
+@override
+void initState() {
+  data = <DataModel>[
+    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(56.1304, -106.3468)),
+    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-9.1900, -75.0152)),
+    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(61.5240, 105.3188)),
+    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-25.2744, 133.7751)),
+  ];
+
+  dataSource = MapShapeSource.asset(
+    'assets/world_map.json',
+    shapeDataField: 'continent',
+  );
+  super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: Padding(
+      padding: EdgeInsets.all(10),
+      child: SfMaps(layers: [
+        MapShapeLayer(
+          source: dataSource,
+          sublayers: [
+            MapLineLayer(
+              lines: List<MapLine>.generate(data.length, (int index) {
+                return MapLine(
+                  from: data[index].from,
+                  to: data[index].to,
+                );
+              }).toSet(),
+              tooltipBuilder: (BuildContext context, int index) {
+                return Container(
+                  padding: EdgeInsets.only(left: 5, top: 5),
+                  height: 40,
+                  width: 100,
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Text('Flight   : '),
+                          Text('Air India'),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Text('Depart : '),
+                          Text(random.nextInt(12).toString() + 'AM'),
+                        ],
+                      ),
+                    ],
+                  ),
+                );
+              },
+            ),
+          ],
+        ),
+      ]),
+    ),
+  );
+}
+
+class DataModel {
+  DataModel(this.from, this.to);
+
+  final MapLatLng from;
+  final MapLatLng to;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Line shape tooltip](images/line-layer/line_shape_tooltip.png)
+
+## Tooltip customization
+
+You can customize the appearance of the tooltip.
+
+Background color - Change the background color of the tooltip in the maps using the MapTooltipSettings.color property.
+Stroke color - Change the stroke color of the tooltip in the maps using the MapTooltipSettings.strokeColor property.
+Stroke width - Change the stroke width of the tooltip in the maps using the MapTooltipSettings.strokeWidth property.
+
+{% tabs %}
+{% highlight Dart %}
+
+MapShapeSource dataSource;
+List<DataModel> data;
+Random random = Random();
+
+@override
+void initState() {
+  data = <DataModel>[
+    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(56.1304, -106.3468)),
+    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-9.1900, -75.0152)),
+    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(61.5240, 105.3188)),
+    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-25.2744, 133.7751)),
+  ];
+
+  dataSource = MapShapeSource.asset(
+    'assets/world_map.json',
+    shapeDataField: 'continent',
+  );
+  super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: Padding(
+      padding: EdgeInsets.all(10),
+      child: SfMaps(layers: [
+        MapShapeLayer(
+          source: dataSource,
+          tooltipSettings: const MapTooltipSettings(
+            color: Colors.white,
+            strokeWidth: 2,
+            strokeColor: Colors.black,
+          ),
+          sublayers: [
+            MapLineLayer(
+              lines: List<MapLine>.generate(data.length, (int index) {
+                return MapLine(
+                  from: data[index].from,
+                  to: data[index].to,
+                );
+              }).toSet(),
+              tooltipBuilder: (BuildContext context, int index) {
+                return Container(
+                  padding: EdgeInsets.only(left: 5, top: 5),
+                  height: 40,
+                  width: 100,
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Text('Flight   : '),
+                          Text('Air India'),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Text('Depart : '),
+                          Text(random.nextInt(12).toString() + 'AM'),
+                        ],
+                      ),
+                    ],
+                  ),
+                );
+              },
+            ),
+          ],
+        ),
+      ]),
+    ),
+  );
+}
+
+class DataModel {
+  DataModel(this.from, this.to);
+
+  final MapLatLng from;
+  final MapLatLng to;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Line shape tooltip customization](images/line-layer/line_shape_tooltip_customization.png)
