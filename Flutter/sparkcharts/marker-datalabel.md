@@ -115,9 +115,3 @@ Following possible values are available in spark charts to render data label:
 ![Sparkline datalabel](images/marker/spark-datalabel.png)
 
 N> The [`SfSparkWinLossChart`]() widget doesn't provide data label support.
-
-
-
-
-  
-
