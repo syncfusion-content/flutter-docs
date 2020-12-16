@@ -269,7 +269,7 @@ class DataModel {
 
 ## Animation
 
-You can apply animation for the [`MapLine`] using the [`MapLineLayer.animation`] property and able to customise the animation flow, curve and duration.
+You can apply animation for the [`MapLine`] using the [`MapLineLayer.animation`] property and able to customize the animation flow, curve and duration.
 
 {% tabs %}
 {% highlight Dart %}
@@ -351,7 +351,7 @@ class DataModel {
 
 ## OnTap
 
-You can customise the tapped [MapLine] based on the index of the line using the [onTap] callback.
+You can customize the tapped [MapLine] based on the index of the line using the [onTap] callback.
 
 {% tabs %}
 {% highlight Dart %}
