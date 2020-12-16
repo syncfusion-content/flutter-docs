@@ -27,6 +27,7 @@ You can use the following properties to customize the appearance:
       return Scaffold(
         body: Center(
           child: SfSparkLineChart(
+            axisLineWidth: 0,
               marker: SparkChartMarker(
                 borderColor: Colors.orange,
                 borderWidth: 2,
@@ -61,8 +62,9 @@ Markers can be assigned with different shapes using the [`shape`]() property. By
       return Scaffold(
         body: Center(
           child: SfSparkLineChart(
+            axisLineWidth: 0,
             marker: SparkChartMarker(
-              shape: MarkerShape.square,
+              shape: SparkChartMarkerShape.square,
               displayMode: SparkChartMarkerDisplayMode.all
             ),
             data: <double>[
@@ -101,7 +103,8 @@ Following possible values are available in spark charts to render data label:
       return Scaffold(
         body: Center(
           child: SfSparkLineChart(
-              labelDisplayMode: LabelDisplayMode.all,
+              axisLineWidth: 0,
+              labelDisplayMode: SparkChartLabelDisplayMode.all,
               data: <double>[
                   5, 6, 5, 7, 4, 3, 9, 5, 6, 5, 7, 8, 4, 5, 3, 4, 11, 10, 2, 12, 4, 7, 6, 8
               ],
