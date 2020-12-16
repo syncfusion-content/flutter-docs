@@ -27,10 +27,34 @@ You can use the following properties to customize the appearance:
     Widget build(BuildContext context) {
       return Scaffold(
         body: Center(
-          child:  SfSparkAreaChart(
-                    trackball:(width: 2,
-                    color: Colors.red),
-            data: <double>[10,6,8,-5,11,5,-2,7,-3,6,8,10],
+          child:  SfSparkLineChart(
+                    trackball: SparkChartTrackball(activationMode: SparkChartActivationMode.tap),
+                    data: <double>[
+                        5,
+                        6,
+                        5,
+                        7,
+                        4,
+                        3,
+                        9,
+                        5,
+                        6,
+                        5,
+                        7,
+                        8,
+                        4,
+                        5,
+                        3,
+                        4,
+                        11,
+                        10,
+                        2,
+                        12,
+                        4,
+                        7,
+                        6,
+                        8
+                      ],
                )
              )
            );
@@ -61,8 +85,8 @@ The [`activationMode`]() property is used to restrict the visibility of trackbal
       return Scaffold(
         body: Center(
           child:  SfSparkAreaChart(
-                    trackball:(SparkChartActivationMode: ActivationMode.tap),
-            data: <double>[
+                    trackball: SparkChartTrackball(activationMode: SparkChartActivationMode.doubleTap),
+                    data: <double>[
                         5,
                         6,
                         5,

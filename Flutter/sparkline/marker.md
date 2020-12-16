@@ -26,7 +26,7 @@ You can use the following properties to customize the appearance:
     Widget build(BuildContext context) {
       return Scaffold(
         body: Center(
-          child:  SfSparkAreaChart(
+          child:  SfSparkLineChart(
                     marker: SparkChartMarker((displayMode: SparkChartMarkerDisplayMode.all,
                     )),
             data: <double>[
@@ -86,7 +86,7 @@ Markers can be assigned with different shapes using the [`shape`]() property. By
     Widget build(BuildContext context) {
       return Scaffold(
         body: Center(
-          child:  SfSparkAreaChart(
+          child:  SfSparkLineChart(
                     marker: SparkChartMarker(shape: MarkerShape.square,displayMode: SparkChartMarkerDisplayMode.all)),
             data: <double>[
                         5,
@@ -152,7 +152,7 @@ Following possible values are available in sparkline chart:
     Widget build(BuildContext context) {
       return Scaffold(
         body: Center(
-          child:  SfSparkAreaChart(
+          child:  SfSparkLineChart(
                    labelDisplayMode: LabelDisplayMode.all,
             data: <double>[
                         5,
