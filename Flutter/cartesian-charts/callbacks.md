@@ -22,7 +22,7 @@ Triggers when the tooltip is rendering. Here, you can customize the text, header
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipArgs/seriesIndex.html) - specifies the current series index.
 * [`dataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipArgs/dataPoints.html) - holds the data point collection.
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipArgs/pointIndex.html) - specifies the current point index.
-* [`viewportPointIndex`]() - to get the viewport index value of the tapped data label.
+* [`viewportPointIndex`]() - specifies the viewport index value of the tooltip.
 
  {% highlight dart %}
 
@@ -80,7 +80,6 @@ Triggers when the visible range of an axis is changed, i.e. value changes for mi
 Triggers while rendering the axis labels. Text and text styles such as color, font size, and font weight can be customized. The [`onAxisLabelRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onAxisLabelRender.html) Callback contains the following arguments.
 
 * [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelRenderArgs/text.html) - specifies the axis label to be rendered.
-* [`trimmedText`]() - trimmed text value of the axis label.
 * [`value`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelRenderArgs/value.html) - specifies the actual value of the current axis label.
 * [`axisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelRenderArgs/axisName.html) - specifies the axis name.
 * [`orientation`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelRenderArgs/orientation.html) - specifies the current axis orientation.
@@ -112,10 +111,10 @@ Triggers while rendering the axis labels. Text and text styles such as color, fo
 
 Triggers when data label is rendering. Text and text styles such as color, font size, and font weight can be customized. The [`onDataLabelRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onDataLabelRender.html) Callback contains the following arguments.
 
-* [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/text.html) - specifies the content of the data label.
+* [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/text.html) - used to get and set the content of the data label.
 * [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/textStyle.html) – used to change the text color, size, font family, font style, and font weight.
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/pointIndex.html) - specifies the current point index.
-* [`seriesRenderer`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/series.html) - specifies current series.
+* [`seriesRenderer`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/series.html) - specifies current series and the series type may vary based on the chart type.
 * [`dataPoints`]() - used to get the data points of the series.
 * [`viewportPointIndex`]() - to get the viewport index value of the tapped data label.
 * [`offset`]() - used to get and set the horizontal/vertical position of the data label. The first argument sets the horizontal component to x, while the second argument sets the vertical component to y.
@@ -131,6 +130,13 @@ Triggers when data label is rendering. Text and text styles such as color, font 
         child: SfCartesianChart(
           onDataLabelRender:(DataLabelRenderArgs args){
             args.text = 'Data label';
+            CartesianSeries<dynamic, dynamic> series = args.seriesRenderer;
+            //Changed the background color of the data label based on the series type
+            if (series.name == 'Product A') {
+              args.color = Colors.blue;
+            } else if(series.name == 'Product B'){
+              args.color = Colors.red;
+            }
           },
           series: <CartesianSeries>[
             ColumnSeries<ChartData, double>(
@@ -206,12 +212,12 @@ Triggers while the trackball position is changing. Here, you can customize the t
 
 Triggers while the crosshair position is changing. Here, you can customize the text and line color of the crosshair.The [`onCrosshairPositionChanging`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onCrosshairPositionChanging.html) Callback contains the following arguments.
 
-* [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairRenderArgs/text.html) - specifies the crosshair content.
+* [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairRenderArgs/text.html) - used to get and set the crosshair tooltip content.
 * [`value`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairRenderArgs/value.html) - specifies the actual value of the crosshair.
 * [`axisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairRenderArgs/axisName.html) - specifies the axis name.
 * [`orientation`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairRenderArgs/orientation.html) - specifies the current axis orientation.
 * [`axis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairRenderArgs/axis.html) - holds the information about the current axis.
-* [`lineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairRenderArgs/lineColor.html) - specifies the line color of the crosshair line.
+* [`lineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairRenderArgs/lineColor.html) - used to get and set the color of the crosshair line.
 
 {% highlight dart %}
 
@@ -238,8 +244,8 @@ Triggers while the crosshair position is changing. Here, you can customize the t
 Triggers when the zooming action is in progress. The [`onZooming`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onZooming.html) Callback contains the following arguments.
 
 * [`axis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/axis.html) - holds the information about the current axis.
-* [`currentZoomPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/currentZoomPosition.html) - specifies the current zoom position of an axis.
-* [`currentZoomFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/currentZoomFactor.html) - specifies the current zoom factor of an axis.
+* [`currentZoomPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/currentZoomPosition.html) - used to get and set the current zoom position of an axis.
+* [`currentZoomFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/currentZoomFactor.html) - used to get and set the current zoom factor of an axis.
 * [`previousZoomPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/previousZoomPosition.html) - specifies the previous zoom position of an axis.
 * [`previousZoomFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/previousZoomFactor.html) - specifies the previous zoom factor of an axis.
 
@@ -272,8 +278,8 @@ Triggers when the zooming action is in progress. The [`onZooming`](https://pub.d
 Triggers when zooming action begins. The [`onZoomStart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onZoomStart.html) Callback contains the following arguments.
 
 * [`axis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/axis.html) - holds the information about the current axis.
-* [`currentZoomPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/currentZoomPosition.html) - specifies the current zoom position of an axis.
-* [`currentZoomFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/currentZoomFactor.html) - specifies the current zoom factor of an axis.
+* [`currentZoomPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/currentZoomPosition.html) - used to get and set the current zoom position of an axis.
+* [`currentZoomFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/currentZoomFactor.html) - used to get and set the current zoom factor of an axis.
 * [`previousZoomPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/previousZoomPosition.html) - specifies the previous zoom position of an axis.
 * [`previousZoomFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/previousZoomFactor.html) - specifies the previous zoom factor of an axis.
 
@@ -306,8 +312,8 @@ Triggers when zooming action begins. The [`onZoomStart`](https://pub.dev/documen
 Triggers when the zooming action is completed. The [`onZoomEnd`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onZoomEnd.html) Callback contains the following arguments.
 
 * [`axis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/axis.html) - holds the information about the current axis.
-* [`currentZoomPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/currentZoomPosition.html) - specifies the current zoom position of an axis.
-* [`currentZoomFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/currentZoomFactor.html) - specifies the current zoom factor of an axis.
+* [`currentZoomPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/currentZoomPosition.html) - used to get and set the current zoom position of an axis.
+* [`currentZoomFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/currentZoomFactor.html) - used to get and set the current zoom factor of an axis.
 * [`previousZoomPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/previousZoomPosition.html) - specifies the previous zoom position of an axis.
 * [`previousZoomFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/previousZoomFactor.html) - specifies the previous zoom factor of an axis.
 
@@ -340,8 +346,8 @@ Triggers when the zooming action is completed. The [`onZoomEnd`](https://pub.dev
 Triggers when zoomed state is reset. The  [`onZoomReset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onZoomReset.html) Callback contains the following arguments.
 
 * [`axis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/axis.html) - holds the information about the current axis.
-* [`currentZoomPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/currentZoomPosition.html) - specifies the current zoom position of an axis.
-* [`currentZoomFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/currentZoomFactor.html) - specifies the current zoom factor of an axis.
+* [`currentZoomPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/currentZoomPosition.html) - used to get and set the current zoom position of an axis.
+* [`currentZoomFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/currentZoomFactor.html) - used to get and set the current zoom factor of an axis.
 * [`previousZoomPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/previousZoomPosition.html) - specifies the previous zoom position of an axis.
 * [`previousZoomFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/previousZoomFactor.html) - specifies the previous zoom factor of an axis.
 
@@ -376,7 +382,7 @@ Triggers when tapping the series point. The [`onPointTapped`](https://pub.dev/do
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PointTapArgs/seriesIndex.html) - specifies the current series index.
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PointTapArgs/pointIndex.html) - specifies the current point index.
 * [`dataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PointTapArgs/dataPoints.html) - holds the data point collection.
-* [`viewportPointIndex`]() - to get the viewport index value of the tapped data label.
+* [`viewportPointIndex`]() - specifies the viewport index value of the tapped data point.
 
 {% highlight dart %}
 
@@ -428,7 +434,7 @@ Triggers when tapping the legend item. The  [`onLegendTapped`](https://pub.dev/d
 
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendTapArgs/seriesIndex.html) - specifies the current series index.
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendTapArgs/pointIndex.html) - specifies the current point index that is applicable for circular series.
-* [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendTapArgs/series.html) - specifies the current series.
+* [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendTapArgs/series.html) - specifies the current series and the series type may vary based on the chart type.
 
 
 {% highlight dart %}
@@ -456,13 +462,13 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
 * [`seriesRenderer`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/series.html) - specifies current series.
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/seriesIndex.html) - specifies the current series index.
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/pointIndex.html) - specifies the current point index.
-* [`selectedColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/selectedColor.html) - specifies color of the selected data points or series.
-* [`unselectedColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/unselectedColor.html) - specifies color of the unselected data points or series.
-* [`selectedBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/selectedBorderColor.html) - specifies border color of the selected data points or series.
-* [`selectedBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/selectedBorderWidth.html) - specifies border width of the selected data points or series.
-* [`unselectedBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/unselectedBorderColor.html) - specifies border color of the unselected data points or series.
-* [`unselectedBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/unselectedBorderWidth.html) - specifies border width of the unselected data points or series.
-* [`viewportPointIndex`]() - to get the viewport index value of the tapped data label.
+* [`selectedColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/selectedColor.html) - used to get and set the color of the selected data points or series.
+* [`unselectedColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/unselectedColor.html) - used to get and set the color of the unselected data points or series.
+* [`selectedBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/selectedBorderColor.html) - used to get and set the border color of the selected data points or series.
+* [`selectedBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/selectedBorderWidth.html) - used to get and set the border width of the selected data points or series.
+* [`unselectedBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/unselectedBorderColor.html) - used to get and set the border color of the unselected data points or series.
+* [`unselectedBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/unselectedBorderWidth.html) - used to get and set the border width of the unselected data points or series.
+* [`viewportPointIndex`]() - used to get the viewport index value of the selected data points.
 
 {% highlight dart %}
 
@@ -495,7 +501,8 @@ Triggers when indicator is rendering. Here you can customize the name, signal li
  
 The [`onIndicatorRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs-class.html) contains following arguments.
 
-* [`indicatorName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/indicatorname.html) - Specifies the indicator name.
+* [`indicatorName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/indicatorname.html) - Used to get and set the indicator name.
+* [`indicator`]() - used to get the technical indicator information.
 * [`signalLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/signalLineColor.html) - Used to change the color of the signal line.
 * [`signalLineWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/signalLineWidth.html) - Used to change the width of the signal line.
 * [`lineDashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/lineDashArray.html) - Used to change the dash array size.
@@ -507,18 +514,21 @@ The [`onIndicatorRender`](https://pub.dev/documentation/syncfusion_flutter_chart
 
     @override
     Widget build(BuildContext context) {
-    return Scaffold(
-      body:Center(
-          child: SfCartesianChart(
-            onIndicatorRender: (IndicatorRenderArgs args)
-            {
-              if(args.index==0) 
+      return Scaffold(
+        body:Center(
+            child: SfCartesianChart(
+              onIndicatorRender: (IndicatorRenderArgs args)
               {
-             args.indicatorname='changed1';
-             args.signalLineColor=Colors.green;
-             args.signalLineWidth=6.0;
-              }},
-    )));
+                if(args.index==0) 
+                {
+                  args.indicatorname='changed1';
+                  args.signalLineColor=Colors.green;
+                  args.signalLineWidth=6.0;
+                }
+              }
+            )
+        )
+      );
     }
     
 {% endhighlight %}
@@ -610,7 +620,7 @@ Triggers when touched or clicked on the chart area. You can get the position of 
 
 The callback contains the following argument:
 
-* [`position`]() - used to get the position of the touch interaction.
+* [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) - used to get the position of the touch interaction.
 
 {% highlight dart %}
 
@@ -633,7 +643,7 @@ Triggers when tapped or clicked on the chart area. You can get the position of t
 
 The callback contains the following argument:
 
-* [`position`]() - used to get the position of the touch interaction.
+* [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) - used to get the position of the touch interaction.
 
 {% highlight dart %}
 
@@ -656,7 +666,7 @@ Triggers when touched or clicked and moved on the chart area. You can get the po
 
 The callback contains the following argument:
 
-* [`position`]() - used to get the position of the touch interaction.
+* [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) - used to get the position of the touch interaction.
 
 {% highlight dart %}
 
