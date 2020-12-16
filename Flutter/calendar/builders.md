@@ -121,15 +121,15 @@ Widget build(BuildContext context) {
 ![Schedule view header builder](images/builder/schedule_view_month_header_builder.png)
 
 ## Appointment builder
-
 The [CalendarAppointmentBuilder]() allows you to design your custom view and assign the view to the appointment UI of the calendar by returning an appropriate widget in the [appointmentBuilder]() of `SfCalendar`.
 
-[CalendarAppointmentDetails]() - returns the details of the appointment view.
+[CalendarAppointmentDetails](): Returns the details of the appointment view.
 
-`date` – The date associate with the appointment view.
-`appointments` – List of appointments associated with the appointment view.
-`bound` – Returns the appointment view bounds.
-`isMoreAppointmentRegion` – Determines whether the widget replaces the more appointment region.
+
+`date`: The date associate with the appointment view.
+`appointments`: List of appointments associated with the appointment view.
+`bound`: Returns the appointment view bounds.
+`isMoreAppointmentRegion`: Determines whether the widget replaces the more appointment region.
 
 {% tabs %}
 {% highlight Dart %}
@@ -253,14 +253,13 @@ class MyAppState extends State<MyApp> {
 
 
 ## Time region builder
-
 The [TimeRegionBuilder]() allows you to design your custom view and assign the view to the time region view of the calendar by returning an appropriate widget in the [timeRegionBuilder]() of SfCalendar.
 
-[TimeRegionDetails]() - returns the details of the time region view.
+[TimeRegionDetails](): Returns the details of the time region view.
 
-`date` – The date associate with the time region view.
-`bound` – Returns the time region view bounds.
-`region` – The Region detail associated with the time region view.
+`date`: The date associate with the time region view.
+`bound`: Returns the time region view bounds.
+`region`: The Region detail associated with the time region view.
 
 {% tabs %}
 {% highlight Dart %}

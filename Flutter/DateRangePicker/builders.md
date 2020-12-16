@@ -1,22 +1,22 @@
 ---
 layout: post
 title: Builders in Flutter Date Range Picker | Date Picker | Syncfusion
-description: Learn about Builders support in the Syncfusion Flutter Date range picker (SfDateRangePicker) widget and more details.
+description: Learn about the Builders support in the Syncfusion Flutter Date range picker (SfDateRangePicker) widget and more details.
 platform: Flutter
 control: SfDateRangePicker
 documentation: ug
 ---
 # Builders in flutter date range picker
-The date range picker allows you to create a responsive UI with conditions based on a widget’s details, to design and create your custom view to the month cells and year cells in the date range picker.
+The date range picker allows you to create a responsive UI with the conditions based on a widget’s details, and to design and create your custom view to the month cells and year cells in the date range picker.
 
 ## Cell builder
 The [DateRangePickerCellBuilder]() allows you to design your custom view and assign the view to the month and year view cells of the date range picker by returning an appropriate widget in the [cellBuilder]() of [SfDateRangePicker]().
 
-[DateRangePickerCellDetails]() - returns the details of the cell.
+[DateRangePickerCellDetails](): Returns the details of the cell.
 
-`date` – The date associate with the cell.
-`bound` – Returns the cell bounds.
-`visibleDates` – The visible dates of the current view
+`date`: The date associate with the cell.
+`bound`: Returns the cell bounds.
+`visibleDates`: The visible dates of the current view.
 
 {% tabs %}
 {% highlight Dart %}
