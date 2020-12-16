@@ -81,6 +81,152 @@ class DataModel {
 {% endhighlight %}
 {% endtabs %}
 
+## Height factor
+
+The [`heightFactor`] is the distance from the line connecting two points to the arc bend point. The default value of [`heightFactor`] property is `0.2` and the value ranges from -1 to 1.
+
+By default, the arc will always render above the [`MapArc.from`] and [`MapArc.to`] points. To render the arc below the points, set the value between -1 to 0.
+
+{% tabs %}
+{% highlight Dart %}
+
+MapZoomPanBehavior zoomPanBehavior;
+MapShapeSource dataSource;
+List<DataModel> data;
+
+@override
+void initState() {
+  data = <DataModel>[
+    DataModel(MapLatLng(28.6139, 77.2090), MapLatLng(39.9042, 116.4074)),
+    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(31.2304, 121.4737)),
+    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(23.1291, 113.2644)),
+    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694)),
+    DataModel(MapLatLng(19.0760, 72.8777), MapLatLng(22.3193, 114.1694)),
+    DataModel(MapLatLng(22.3193, 114.1694), MapLatLng(13.0827, 80.2707)),
+  ];
+
+  dataSource = MapShapeSource.asset(
+    'assets/world_map.json',
+    shapeDataField: 'continent',
+  );
+  zoomPanBehavior = MapZoomPanBehavior(
+    zoomLevel: 4,
+    focalLatLng: MapLatLng(22.9734, 90.6569),
+  );
+  super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfMaps(
+      layers: [
+        MapShapeLayer(
+          source: dataSource,
+          sublayers: [
+            MapArcLayer(
+              arcs: List<MapArc>.generate(
+                data.length,
+                    (int index) {
+                  return MapArc(
+                    from: data[index].from,
+                    to: data[index].to,
+                    heightFactor: -0.2,
+                  );
+                },
+              ).toSet(),
+            ),
+          ],
+          zoomPanBehavior: zoomPanBehavior,
+        ),
+      ],
+    ),
+  );
+}
+
+class DataModel {
+  DataModel(this.from, this.to);
+
+  final MapLatLng from;
+  final MapLatLng to;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Control point factor
+
+The [`MapArc.controlPointFactor`] is the arc bending position. The default value of [`MapArc.controlPointFactor`] property is `0.5` and the value ranges from 0 to 1.
+
+By default, the arc will bend at the center between the [`MapArc.from`] and [`MapArc.to`] points.
+
+{% tabs %}
+{% highlight Dart %}
+
+MapZoomPanBehavior zoomPanBehavior;
+MapShapeSource dataSource;
+List<DataModel> data;
+
+@override
+void initState() {
+  data = <DataModel>[
+    DataModel(MapLatLng(28.6139, 77.2090), MapLatLng(39.9042, 116.4074)),
+    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(31.2304, 121.4737)),
+    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(23.1291, 113.2644)),
+    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694)),
+    DataModel(MapLatLng(19.0760, 72.8777), MapLatLng(22.3193, 114.1694)),
+    DataModel(MapLatLng(22.3193, 114.1694), MapLatLng(13.0827, 80.2707)),
+  ];
+
+  dataSource = MapShapeSource.asset(
+    'assets/world_map.json',
+    shapeDataField: 'continent',
+  );
+  zoomPanBehavior = MapZoomPanBehavior(
+    zoomLevel: 4,
+    focalLatLng: MapLatLng(22.9734, 90.6569),
+  );
+  super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfMaps(
+      layers: [
+        MapShapeLayer(
+          source: dataSource,
+          sublayers: [
+            MapArcLayer(
+              arcs: List<MapArc>.generate(
+                data.length,
+                    (int index) {
+                  return MapArc(
+                    from: data[index].from,
+                    to: data[index].to,
+                    controlPointFactor: 0.2,
+                  );
+                },
+              ).toSet(),
+            ),
+          ],
+          zoomPanBehavior: zoomPanBehavior,
+        ),
+      ],
+    ),
+  );
+}
+
+class DataModel {
+  DataModel(this.from, this.to);
+
+  final MapLatLng from;
+  final MapLatLng to;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Color
 
 You can apply single color for all [`MapArc`] in the [`arcs`] collection using the [`MapArcLayer.color`] property. Also, you can apply different color to the each [`MapArc`] in the [`arcs`] collection using the [`MapArc.color`] property.
