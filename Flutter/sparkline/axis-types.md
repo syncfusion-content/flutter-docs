@@ -193,7 +193,7 @@ Axis line of the sparkline can be customized by the following properties.
     SalesData(xval: 7, yval: 210),
     ]; 
     }
- 
+    
     class SalesData {
     SalesData({this.xval, this.yval});
     final dynamic xval;
