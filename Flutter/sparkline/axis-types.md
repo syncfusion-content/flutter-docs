@@ -1,23 +1,21 @@
 ---
 layout: post
 title: Axis customization in Syncfusion Flutter Sparkline
-description: Learn how to customize the axis types, labels, min and max values, colors, width and dashArray of the Spark chart axis.
+description: Learn how to customize the axis types, labels, min and max values, colors, width and dashArray of the SFSparkline chart axis.
 platform: flutter
 control: Sparkline
 documentation: ug
 ---
 
-# Axis types
+# Axis customization in Sparkline charts
 
-Spark charts typically have two axes that are used to measure and categorize data: a vertical (Y) axis, and a horizontal (X) axis.
+You can customize axis value types and min and max values of the sparkline.
 
-Vertical(Y) axis always uses numerical scale. Horizontal(X) axis supports the following types of scale:
+## Change axis type of the sparkline
 
-* Category
-* Date-time
-* Numeric
+You can customize the spark line chart with custom data source. Here, we can use [`SfSparkLineChart.custom`]() widget. By using this widget can we customize the different axis such as `numeric` , `DateTime`, `Category`.
 
-## Numeric Axis
+### Numeric Axis
 
 To use the numeric values i.e to bind the custom data source use the [`SfSparkBarChart.custom()`]() method and map the x, y values to [`xValueMapper`]() and [`yValueMapper`]() respectively. Here you have to specify the length of the data using [`dataCount`]() property.
 
@@ -197,13 +195,6 @@ Axis line of the spark charts can be customized using the following properties.
       SalesData(xval: 6, yval: 180),
       SalesData(xval: 7, yval: 210),
     ]; 
-  
-    
-    class SalesData {
-      SalesData({this.xval, this.yval});
-      final dynamic xval;
-      final double yval;
-    }
 
 {% endhighlight %}
 

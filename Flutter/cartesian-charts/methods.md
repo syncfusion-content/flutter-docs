@@ -1068,8 +1068,8 @@ The [`pixelToPoint`]() method takes logical pixel value as input and returns a c
   
 Since this method is in the series controller, x and y-axis associated with this particular series will be considering for conversion value.
   
->**NOTE** This method is only applicable for Cartesian chart, not for the Circular, Pyramid,
-and Funnel charts.
+>**NOTE** This method is only applicable for Cartesian chart, not for the circular, pyramid,
+and funnel charts.
 
 {% highlight dart %}
 
