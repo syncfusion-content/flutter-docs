@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting started for Syncfusion Flutter Sparkline(SFSparkline)
-description:  Learn how to create the syncfusion Flutter sparkline, add series, markers, trackball and other features in Sparkline.
+title: Getting started for Syncfusion Flutter Spark charts
+description:  Learn how to create the syncfusion Flutter spark charts, add series, markers, trackball.
 platform: flutter
 control: Sparkline
 documentation: ug
 ---
 
-# Getting Started with Flutter Flutter Sparkline(SFSparkline)
+# Getting started
 
-This section explains the steps required to populate the sparkline with data, title, data labels, marker and trackball. This section covers only the minimal features needed to know to get started with the sparkline.
+This section explains the steps required to populate the spark chart with data, data labels, marker and trackball. This section covers only the minimal features needed to know to get started with the spark charts.
 
 ## Add Flutter Sparkline Chart to an application
 
@@ -17,7 +17,7 @@ Create a simple project using the instructions given in the [Getting Started wit
 
 **Add dependency**
 
-Add the Syncfusion Flutter Sparkline Chart dependency to your pub spec file.
+Add the Syncfusion Flutter Chart dependency to your pub spec file.
 
 {% highlight dart %} 
 
@@ -46,13 +46,13 @@ Import the following package in your Dart code.
 
 {% highlight dart %} 
 
-    import 'package:syncfusion_flutter_charts/charts.dart';
+    import 'package:syncfusion_flutter_charts/sparkcharts.dart';
 
 {% endhighlight %}
 
-## Initialize chart 
+## Initialize spark charts
 
-Once the package has been imported, initialize the sparkline chart as a child of any widget. Here, as we are rendering Line chart, initialize [`SfSparkLineChart`]() widget as a child of Container widget.
+Once the package has been imported, initialize the spark charts as a child of any widget. Here, as we are rendering Line chart, initialize [`SfSparkLineChart`]() widget as a child of Container widget.
 
 {% highlight dart %} 
 
@@ -61,7 +61,7 @@ Once the package has been imported, initialize the sparkline chart as a child of
         return Scaffold(
             body: Center(
                 child: Container(
-                    //Initialize chart
+                    //Initialize spark charts
                     child: SfSparkLineChart()
                 )
             )
@@ -70,9 +70,9 @@ Once the package has been imported, initialize the sparkline chart as a child of
 
 {% endhighlight %}
 
-## Bind data source of sparkline
+## Bind data source
 
-The [`data`]() property is used for binding data to the sparkline. This property takes the list value as input. 
+The [`data`]() property is used for binding data to the spark chart. This property takes the list value as input. 
 
 {% highlight dart %} 
 
@@ -83,8 +83,11 @@ The [`data`]() property is used for binding data to the sparkline. This property
                 child: Container(
                     //Initialize chart
                     child: SfSparkLineChart(
-                         data: <double>[     10,6, 8, -5, 11, 5, -2, 7, -3, 6, 8, 10,  )),
-                )
+                         data: <double>[
+                             10,6, 8, -5, 11, 5, -2, 7, -3, 6, 8, 10
+                         ]
+                    )
+                ),
             )
         );
     }
@@ -104,7 +107,36 @@ You can change the sparkline type by setting the widget to [`SfSparkLineChart`](
                 child: Container(
                     //Initialize chart
                     child: SfSparkAreaChart(
-                         data: <double>[     10,6, 8, -5, 11, 5, -2, 7, -3, 6, 8, 10,  )),
+                         data: <double>[
+                             10,6, 8, -5, 11, 5, -2, 7, -3, 6, 8, 10
+                        ]
+                    )
+                ),
+            )
+        );
+    }
+
+{% endhighlight %}
+
+## Enable data label
+
+You can add data labels to improve the readability of the chart using the [`labelDisplayMode`]() property.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    //Initialize chart
+                    child: SfSparkLineChart(
+                        //Enable data label
+                        labelDisplayMode: SparkChartLabelDisplayMode.all,
+                        data: <double>[
+                            10,6, 8, -5, 11, 5, -2, 7, -3, 6, 8, 10
+                        ]
+                    )
                 )
             )
         );
@@ -123,10 +155,15 @@ The sparkline displays additional information through trackball when touch the p
         return Scaffold(
             body: Center(
                 child: Container(
-                    //Initialize chart
-                    child: SfSparkAreaChart(
-                         trackball: SparkChartTrackball(activationMode: SparkChartActivationMode.tap,
-                         data: <double>[     10,6, 8, -5, 11, 5, -2, 7, -3, 6, 8, 10,  )),
+                    child: SfSparkLineChart(
+                        //Enable the trackball
+                        trackball: SparkChartTrackball(
+                            activationMode: SparkChartActivationMode.tap
+                        ),
+                        data: <double>[
+                            10,6, 8, -5, 11, 5, -2, 7, -3, 6, 8, 10
+                        ]
+                    )
                 )
             )
         );

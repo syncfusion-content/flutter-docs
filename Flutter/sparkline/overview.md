@@ -1,19 +1,20 @@
 ---
 layout: post
-title: Overview of Syncfusion Flutter Sparkline
-description: Learn the key features available in Syncfusion Flutter Sparline and overview about Syncfusion Flutter Sparkline
+title: Overview of Syncfusion Flutter Spark charts
+description: Learn the key features available in Syncfusion Flutter Spark chart and overview about Syncfusion Flutter Spark charts
 platform: flutter
 control: Sparkline
 documentation: ug
 ---
 
-# Overview Of Syncfusion Flutter Sparkline
+# Overview Of Syncfusion Flutter Spark charts
 
-Syncfusion Flutter Sparkline is a very small chart, typically drawn without axes or coordinates. It presents the general shape of data’s in a simple and highly condensed way.
+Syncfusion Flutter Spark/Micro charts are light weight chart, typically drawn without axes or coordinates. It presents the general shape of data’s in a simple and highly condensed way.
 
 ## Key features
 
-* Supports 4 different types of sparkline such as line, area, win-loss, bar.
-* To provide marker support for all types.
-* Supports to draw trackball in sparkline
-* Supports to draw plot bands.
+* Supports 4 different types of spark charts such as line, area, win-loss, and bar.
+* Provides marker support for line and area chart types.
+* Supports for trackball to display additional information about data points on interaction with the spark chart.
+* Supports for data label to display the information about the data point.
+* Supports to draw plot bands which is used to highlight a particular range.

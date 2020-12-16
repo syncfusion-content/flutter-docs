@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Markers and data labels in Syncfusion Flutter Sparkline
-description: Learn how to add the markers and data point labels to the series available in the Syncfusion Flutter Sparkline widget.
+title: Markers and data labels in Syncfusion Flutter Spark charts
+description: Learn how to add the markers and data point labels to the series available in the Syncfusion Flutter Spark charts widget.
 platform: flutter
 control: Sparkline
 documentation: ug
@@ -11,14 +11,14 @@ documentation: ug
 
 ## Marker
 
-[`SparklineMarker`]() are used to highlight the data point in [`SfSparkLineChart`](), [`SfSparkBarChart`]() and [`SfSparkAreaChart`](). 
+Markers are used to provide information about the exact point location. You can add a shape to adorn each data point. Using the [`marker`]() property, add the markers to [`SfSparkLineChart`](), and [`SfSparkAreaChart`]() widgets.
 
 You can use the following properties to customize the appearance:
 
 * [`displayMode`]() - Toggles the visibility of the marker. Defaults to `none`
 * [`borderWidth`]() - Represents the border width of the marker.
-* [`color`]() - used to change the color of the marker.
-* [`borderColor`]() - used to change the borderColor of the marker.
+* [`color`]() - Represents the color of the marker.
+* [`borderColor`]() - Represents the border color of the marker.
 
 {% highlight dart %} 
 
@@ -26,44 +26,18 @@ You can use the following properties to customize the appearance:
     Widget build(BuildContext context) {
       return Scaffold(
         body: Center(
-          child:  SfSparkLineChart(
-                    marker: SparkChartMarker((displayMode: SparkChartMarkerDisplayMode.all,
-                    )),
-            data: <double>[
-                        5,
-                        6,
-                        5,
-                        7,
-                        4,
-                        3,
-                        9,
-                        5,
-                        6,
-                        5,
-                        7,
-                        8,
-                        4,
-                        5,
-                        3,
-                        4,
-                        11,
-                        10,
-                        2,
-                        12,
-                        4,
-                        7,
-                        6,
-                        8
-                      ],
-               )
-             )
-           );
-         }
-
-    class SalesData {
-    SalesData(this.month, this.sales);
-    final String month;
-    final double sales;
+          child: SfSparkLineChart(
+              marker: SparkChartMarker(
+                borderColor: Colors.orange,
+                borderWidth: 2,
+                displayMode: SparkChartMarkerDisplayMode.all
+              ),
+              data: <double>[
+                    5, 6, 5, 7, 4, 3, 9, 5, 6, 5, 7, 8, 4, 5, 3, 4, 11, 10, 2, 12, 4, 7, 6, 8
+              ],
+          )
+        )
+      );
     }
 
 {% endhighlight %}
@@ -86,43 +60,17 @@ Markers can be assigned with different shapes using the [`shape`]() property. By
     Widget build(BuildContext context) {
       return Scaffold(
         body: Center(
-          child:  SfSparkLineChart(
-                    marker: SparkChartMarker(shape: MarkerShape.square,displayMode: SparkChartMarkerDisplayMode.all)),
+          child: SfSparkLineChart(
+            marker: SparkChartMarker(
+              shape: MarkerShape.square,
+              displayMode: SparkChartMarkerDisplayMode.all
+            ),
             data: <double>[
-                        5,
-                        6,
-                        5,
-                        7,
-                        4,
-                        3,
-                        9,
-                        5,
-                        6,
-                        5,
-                        7,
-                        8,
-                        4,
-                        5,
-                        3,
-                        4,
-                        11,
-                        10,
-                        2,
-                        12,
-                        4,
-                        7,
-                        6,
-                        8
-                      ],
-               )
-             )
-           );
-         }
-
-    class SalesData {
-    SalesData(this.month, this.sales);
-    final String month;
-    final double sales;
+              5, 6, 5, 7, 4, 3, 9, 5, 6, 5, 7, 8, 4, 5, 3, 4, 11, 10, 2, 12, 4, 7, 6, 8
+            ],
+          )
+        )
+      );
     }
 
 {% endhighlight %}
@@ -135,16 +83,16 @@ Data labels are used to display values of data points to improve the readability
 
 ### Enable data label
 
-To enable data label for sparkline series, provide [`labelDisplayMode`]() property in sparkline chart widget.
+To enable data label for spark charts, use the [`labelDisplayMode`]() property in spark charts widgets.
 
-Following possible values are available in sparkline chart:
+Following possible values are available in spark charts to render data label:
 
-* [`none`]() - does not allow to display data points on any side.
-* [`all`]() - allows to display data labels on all points.
-* [`high`]() - allows to display data labels on high points.
-* [`low`]() - allows to display data labels on low points.
-* [`last`]() - allows to display data labels on last points.
-* [`first`]() - allows to display data labels on first points.
+* [`none`]() - Does not allow to display data points on any side.
+* [`all`]() - Allows to display data labels on all points.
+* [`high`]() - Allows to display data labels on the high point.
+* [`low`]() - Allows to display data labels on the low point.
+* [`last`]() - Allows to display data labels on the last point.
+* [`first`]() - Allows to display data labels on the first point.
 
 {% highlight dart %} 
 
@@ -152,48 +100,21 @@ Following possible values are available in sparkline chart:
     Widget build(BuildContext context) {
       return Scaffold(
         body: Center(
-          child:  SfSparkLineChart(
-                   labelDisplayMode: LabelDisplayMode.all,
-            data: <double>[
-                        5,
-                        6,
-                        5,
-                        7,
-                        4,
-                        3,
-                        9,
-                        5,
-                        6,
-                        5,
-                        7,
-                        8,
-                        4,
-                        5,
-                        3,
-                        4,
-                        11,
-                        10,
-                        2,
-                        12,
-                        4,
-                        7,
-                        6,
-                        8
-                      ],
-               )
-             )
-           );
-         }
-
-    class SalesData {
-    SalesData(this.month, this.sales);
-    final String month;
-    final double sales;
+          child: SfSparkLineChart(
+              labelDisplayMode: LabelDisplayMode.all,
+              data: <double>[
+                  5, 6, 5, 7, 4, 3, 9, 5, 6, 5, 7, 8, 4, 5, 3, 4, 11, 10, 2, 12, 4, 7, 6, 8
+              ],
+          )
+        )
+      );
     }
 
 {% endhighlight %}
 
 ![Sparkline datalabel](images/marker/spark-datalabel.png)
+
+N> The [`SfSparkWinLossChart`]() widget doesn't provide data label support.
 
 
 

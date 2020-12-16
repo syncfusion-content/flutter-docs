@@ -24,43 +24,14 @@ The following properties are used to customize the appearances:
     Widget build(BuildContext context) {
       return Scaffold(
         body: Center(
-          child:  SfSparkLineChart(
-                    plotBand: SparkChartPlotBand(start: 7, end: 8),
-                  data: <double>[
-                        5,
-                        6,
-                        5,
-                        7,
-                        4,
-                        3,
-                        9,
-                        5,
-                        6,
-                        5,
-                        7,
-                        8,
-                        4,
-                        5,
-                        3,
-                        4,
-                        11,
-                        10,
-                        2,
-                        12,
-                        4,
-                        7,
-                        6,
-                        8
-                      ],
-               )
-             )
-           );
-         }
-
-    class SalesData {
-    SalesData(this.month, this.sales);
-    final String month;
-    final double sales;
+          child: SfSparkLineChart(
+              plotBand: SparkChartPlotBand(start: 7, end: 8),
+              data: <double>[
+                  5, 6, 5, 7, 4, 3, 9, 5, 6, 5, 7, 8, 4, 5, 3, 4, 11, 10, 2, 12, 4, 7, 6, 8
+              ],
+          )
+        )
+      );
     }
 
 {% endhighlight %}
