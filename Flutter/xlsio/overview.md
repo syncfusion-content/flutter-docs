@@ -19,5 +19,9 @@ The Syncfusion Flutter XlsIO is a library written natively in Dart for creating 
 * Supports Cell Formatting.
 * Support to add images like JPEG and PNG formats.
 * Support to create and manipulate charts.
+* Support to add hyperlinks to texts and images.
+* Support to insert and delete rows and columns.
+* Supports Autofit rows and columns.
+* Supports Protect Excel workbooks and worksheets.
 
 You can get the sample from this link: [`Flutter XlsIO`](https://github.com/syncfusion/flutter-examples)

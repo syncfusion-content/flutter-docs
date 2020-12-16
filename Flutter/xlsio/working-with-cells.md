@@ -118,7 +118,7 @@ You can create hyperlink in a workbook to provide quick access to web pages, pla
 * E-mail
 * External files
 
-The following code example illustrates how to insert various hyperlinks.
+A Hyperlink can be added to a worksheet range or an image. The following code example illustrates how to insert various hyperlinks to worksheet range.
 
 {% highlight dart %}
 
@@ -166,10 +166,6 @@ workbook.dispose();
 {% endhighlight %}
 
 ### Hyperlink on Picture
-
-**Adding Hyperlinks to Picture**
-
-Hyperlink can be added to picture.
 
 The following code example illustrates how to insert hyperlinks to pictures.
 

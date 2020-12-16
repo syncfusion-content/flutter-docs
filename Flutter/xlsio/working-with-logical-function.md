@@ -14,6 +14,7 @@ Logical Function Formulas includes the following functions:
 * IF
 * AND
 * OR
+* NOT
 
 ## IF Function
 
@@ -45,9 +46,6 @@ sheet.enableSheetCalculations();
 //Setting formula in the cell.
 sheet.getRangeByName('A6').setFormula('=IF(A4 > B3, \'Yes\', \'No\')');
 sheet.getRangeByName('B6').setFormula('=IF(A4 < B3, A1+B1, A1-B1)');
-
-sheet.getRangeByName('A6').calculatedValue;
-sheet.getRangeByName('A6').calculatedValue;
 
 //Save and dispose a workbook.
 final List<int> bytes = workbook.saveAsStream();
@@ -84,10 +82,8 @@ sheet.enableSheetCalculations();
 // Setting formula in the cell.
 Range range = sheet.getRangeByName('B1');
 range.setFormula('=AND(A1>35,A1<75)');
-range.calculatedValue;
 range = sheet.getRangeByName('B5');
 range.setFormula('=AND(A5>35,A5<75)');
-range.calculatedValue;
 
 // Save and dispose workbook.
 final List<int> bytes = workbook.saveAsStream();
@@ -124,10 +120,8 @@ sheet.enableSheetCalculations();
 // Setting formula in the cell.
 Range range = sheet.getRangeByName('B1');
 range.setFormula('=OR(A1=\'Green\',A1=\'Red\')');
-range.calculatedValue;
 range = sheet.getRangeByName('B5');
 range.setFormula('=OR(A3=\'Green\',A3=\'Red\')');
-range.calculatedValue;
 
 // Save and dispose workbook.
 final List<int> bytes = workbook.saveAsStream();
@@ -164,10 +158,8 @@ sheet.enableSheetCalculations();
 // Setting formula in the cell.
 Range range = sheet.getRangeByName('B1');
 range.setFormula('=NOT(A1=\'Green\')');
-range.calculatedValue;
 range = sheet.getRangeByName('B5');
 range.setFormula('=NOT(A3=\'Red\')');
-range.calculatedValue;
 
 // Save and dispose workbook.
 final List<int> bytes = workbook.saveAsStream();
