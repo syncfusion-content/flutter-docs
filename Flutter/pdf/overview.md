@@ -21,5 +21,6 @@ The Syncfusion Flutter PDF is a library written natively in Dart for creating th
 * Support to add tables.
 * Support to add headers and footers in PDF document.
 * Support to add bookmarks in PDF document.
+* Support to protect PDF document by encryption.
 
 You can get the sample from this link: [`Flutter PDF`](https://github.com/syncfusion/flutter-examples).
