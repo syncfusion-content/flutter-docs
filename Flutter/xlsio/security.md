@@ -15,10 +15,6 @@ You can protect an anonymous user from viewing, moving, editing or deleting impo
 
 To keep others from making structural changes to your documents such as moving, deleting and adding sheets, you can protect the workbook in the following ways. 
 
-### Protect workbook elements
-
-Flutter XlsIO provides options to protect workbook elements with password.
-
 The following code example illustrates how to protect a workbook with a password.
 
 {% highlight dart %}
@@ -78,7 +74,7 @@ workbook.dispose();
 
 {% endhighlight %}
 
-N> By using the ExcelSheetProtectionOption enumerator, you can set protection to the workbook elements/operations.
+N> By using the ExcelSheetProtectionOption class, you can set protection to the workbook elements/operations.
 
 ## Protect Cell
 
