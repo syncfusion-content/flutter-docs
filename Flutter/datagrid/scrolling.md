@@ -45,7 +45,7 @@ SfDataGrid allows you to set the [ScrollPhysics](https://api.flutter.dev/flutter
 
 N> The default values of [horizontalScrollPhysics](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/horizontalScrollPhysics.html) and [verticalScrollPhysics](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/verticalScrollPhysics.html) properties are `AlwaysScrollableScrollPhysics()`.
 
-The following example shows how to disable the horizontal and vertical scrolling by setting `NeverScrollableScrollPhysics()`
+The following example shows how to disable the horizontal and vertical scrolling by setting `NeverScrollableScrollPhysics()`.
 
 {% tabs %}
 {% highlight Dart %}
