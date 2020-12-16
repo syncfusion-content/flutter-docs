@@ -1,13 +1,11 @@
 ---
 layout: post
-title: Syncfusion Flutter Sparkline Trackball 
-description: Learn how to enable and customize the trackball available in the Syncfusion Flutter Sparkline widget.
+title: Syncfusion Flutter Spark charts trackball 
+description: Learn how to enable and customize the trackball available in the Syncfusion Flutter Spark charts widgets.
 platform: flutter
 control: Sparkline
 documentation: ug
 ---
-
-# Syncfusion Flutter Sparkline Trackball 
 
 ## Trackball
 
@@ -27,43 +25,20 @@ You can use the following properties to customize the appearance:
     Widget build(BuildContext context) {
       return Scaffold(
         body: Center(
-          child:  SfSparkLineChart(
-                    trackball: SparkChartTrackball(activationMode: SparkChartActivationMode.tap),
-                    data: <double>[
-                        5,
-                        6,
-                        5,
-                        7,
-                        4,
-                        3,
-                        9,
-                        5,
-                        6,
-                        5,
-                        7,
-                        8,
-                        4,
-                        5,
-                        3,
-                        4,
-                        11,
-                        10,
-                        2,
-                        12,
-                        4,
-                        7,
-                        6,
-                        8
-                      ],
-               )
-             )
-           );
-         }
-
-    class SalesData {
-    SalesData(this.month, this.sales);
-    final String month;
-    final double sales;
+          child: SfSparkLineChart(
+            trackball: SparkChartTrackball(
+              backgroundColor: Colors.red.withOpacity(0.8),
+              borderColor: Colors.black,
+              borderWidth: 2,
+              labelStyle: TextStyle(color: Colors.black),
+              activationMode: SparkChartActivationMode.tap
+            ),
+            data: <double>[
+              5, 6, 5, 7, 4, 3, 9, 5, 6, 5, 7, 8, 4, 5, 3, 4, 11, 10, 2, 12, 4, 7, 6, 8
+            ],
+          )
+        )
+      );
     }
 
 {% endhighlight %}
@@ -84,44 +59,16 @@ The [`activationMode`]() property is used to restrict the visibility of trackbal
     Widget build(BuildContext context) {
       return Scaffold(
         body: Center(
-          child:  SfSparkAreaChart(
-                    trackball: SparkChartTrackball(activationMode: SparkChartActivationMode.doubleTap),
-                    data: <double>[
-                        5,
-                        6,
-                        5,
-                        7,
-                        4,
-                        3,
-                        9,
-                        5,
-                        6,
-                        5,
-                        7,
-                        8,
-                        4,
-                        5,
-                        3,
-                        4,
-                        11,
-                        10,
-                        2,
-                        12,
-                        4,
-                        7,
-                        6,
-                        8
-                      ],
-               )
-             )
-           );
-         }
-
-    class SalesData {
-    SalesData(this.month, this.sales);
-    final String month;
-    final double sales;
+          child: SfSparkAreaChart(
+            trackball: SparkChartTrackball(
+              activationMode: SparkChartActivationMode.doubleTap
+            ),
+            data: <double>[
+              5, 6, 5, 7, 4, 3, 9, 5, 6, 5, 7, 8, 4, 5, 3, 4, 11, 10, 2, 12, 4, 7, 6, 8
+            ],
+          )
+        )
+      );
     }
 
 {% endhighlight %}
-
