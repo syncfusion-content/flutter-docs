@@ -13,7 +13,7 @@ You can customize axis value types and min and max values of the sparkline.
 
 ## Change axis type of the sparkline
 
-You can customize the spark line chart with custom data source. Here, we can use [`SfSparkLineChart.custom()`]() widget. By using this widget can we customize the different axis such as `numeric` , `DateTime`, `Category`.
+You can customize the spark line chart with custom data source. Here, we can use [`SfSparkLineChart.custom`]() widget. By using this widget can we customize the different axis such as `numeric` , `DateTime`, `Category`.
 
 ### Numeric Axis
 
@@ -193,7 +193,7 @@ Axis line of the sparkline can be customized by the following properties.
     SalesData(xval: 7, yval: 210),
     ]; 
     }
-    
+
     class SalesData {
     SalesData({this.xval, this.yval});
     final dynamic xval;
