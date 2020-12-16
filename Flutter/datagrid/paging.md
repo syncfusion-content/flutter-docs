@@ -236,7 +236,7 @@ class OrderInfoDataSource extends DataGridSource<OrderInfo> {
 
 The SfDataPager provides `onPageNavigationStart` and `onPageNavigationEnd` callbacks to listen the page navigation in widget level. 
 
-Typically, These callbacks are used to show and hide loading indicator.
+Typically, these callbacks are used to show and hide loading indicator.
 
 The below example show how to show loading indicator using callbacks.
 
