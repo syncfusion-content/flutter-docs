@@ -13,7 +13,7 @@ Line shape is used to connect two location on the map. This section helps to lea
 
 ## Lines
 
-The [lines] is a collection of [MapLine]. Every single [MapLine] connects two location coordinates through a straight line. The start coordinate is set to [MapLine.from] property and the end coordinate is set to [MapLine.to] property.
+The [`lines`] is a collection of [`MapLine`]. Every single [`MapLine`] connects two location coordinates through a straight line. The start coordinate is set to [`MapLine.from`] property and the end coordinate is set to [`MapLine.to`] property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -75,7 +75,7 @@ class DataModel {
 
 ## Color
 
-You can apply single color for all [MapLine] in the [lines] collection using the [MapLineLayer.color] property. Also, you can apply different color to the each [MapLine] in the [lines] collection using the [MapLine.color] property.
+You can apply single color for all [`MapLine`] in the [`lines`] collection using the [`MapLineLayer.color`] property. Also, you can apply different color to the each [`MapLine`] in the [`lines`] collection using the [`MapLine.color`] property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -139,7 +139,7 @@ class DataModel {
 
 ## Width
 
-You can apply same width for all [MapLine] in the [lines] collection using the [MapLineLayer.width] property. Also, you can apply different width to the each [MapLine] in the [lines] collection using the [MapLine.width] property. The default value of the [MapLineLayer.width] property is `2`.
+You can apply same width for all [`MapLine`] in the [`lines`] collection using the [`MapLineLayer.width`] property. Also, you can apply different width to the each [`MapLine`] in the [`lines`] collection using the [`MapLine.width`] property. The default value of the [`MapLineLayer.width`] property is `2`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -203,7 +203,7 @@ class DataModel {
 
 ## Dash array
 
-You can apply dash support for the line using the [MapLine.dashArray] property. The default value of [MapLine.dashArray] is [0, 0].
+You can apply dash support for the line using the [`MapLine.dashArray`] property. The default value of [`MapLine.dashArray`] is [0, 0].
 
 A sequence of dash and gap will be rendered based on the values in this list. Once all values of the list is rendered, it will be repeated again till the end of the line.
 
@@ -351,7 +351,7 @@ class DataModel {
 
 ## OnTap
 
-You can customize the tapped [MapLine] based on the index of the line using the [onTap] callback.
+You can use the ['onTap'] callback to customize the taped ['MapLine'] based on the line index. The callback was called when the user clicked on the line.
 
 {% tabs %}
 {% highlight Dart %}
