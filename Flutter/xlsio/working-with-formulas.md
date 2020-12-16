@@ -100,6 +100,52 @@ File('Formula.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
+## Formula with Nested Functions
+
+Using a function as one of the arguments in a formula is known as Nested Function.
+
+The following code shows how to use nested functions.
+
+{% highlight dart %}
+
+// Create a new Excel Document.
+final Workbook workbook = Workbook();
+
+// Accessing sheet via index.
+final Worksheet sheet = workbook.worksheets[0];
+
+// set the value to the cell.
+sheet.getRangeByName('B3').setText('Team A');
+sheet.getRangeByName('B4').setNumber(47);
+sheet.getRangeByName('B5').setNumber(43);
+sheet.getRangeByName('B6').setNumber(40);
+sheet.getRangeByName('B7').setNumber(51);
+sheet.getRangeByName('B8').setNumber(53);
+sheet.getRangeByName('B9').setNumber(50);
+
+sheet.getRangeByName('D3').setText('Team B');
+sheet.getRangeByName('D4').setNumber(72);
+sheet.getRangeByName('D5').setNumber(43);
+sheet.getRangeByName('D6').setNumber(84);
+sheet.getRangeByName('D7').setNumber(90);
+sheet.getRangeByName('D8').setNumber(42);
+sheet.getRangeByName('D9').setNumber(56);
+
+// Formula calculation is enabled for the sheet.
+sheet.enableSheetCalculations();
+
+// Setting formula in the cell.
+final Range range = sheet.getRangeByName('B11');
+range.setFormula(
+  '=IF(SUM(AVERAGE(B4:B9), MAX(COUNT(B4,D4), MIN(B5,D5))) > 50, \'PASS\', \'FAIL\')');
+
+// Save and dispose workbook.
+final List<int> bytes = workbook.saveAsStream();
+File('NestedFunction.xlsx').writeAsBytes(bytes);
+workbook.dispose();
+
+{% endhighlight %}
+
 ## Supported Formulas
 
 In flutter XlsIO, we have support for Range reference and basic function formula listed below:
@@ -107,9 +153,7 @@ In flutter XlsIO, we have support for Range reference and basic function formula
 <table>
 <tr>
 <td>
-
-[SUM](https://help.syncfusion.com/flutter/xlsio/working-with-general-functions#sum-function)
-
+<a href="https://help.syncfusion.com/flutter/xlsio/working-with-general-functions#sum-function">SUM</a>
 </td>
 <td>
 Adds its arguments
@@ -117,9 +161,8 @@ Adds its arguments
 </tr>
 <tr>
 <td>
-
-[AVERAGE](https://help.syncfusion.com/flutter/xlsio/working-with-general-functions#average-function)
-
+<a href="https://help.syncfusion.com/flutter/xlsio/working-with-general-functions#average-function
+">AVERAGE</a>
 </td>
 <td>
 Returns the average of its arguments
@@ -127,9 +170,7 @@ Returns the average of its arguments
 </tr>
 <tr>
 <td>
-
-[MAX](https://help.syncfusion.com/flutter/xlsio/working-with-general-functions#max-function)
-
+<a href="https://help.syncfusion.com/flutter/xlsio/working-with-general-functions#max-function">MAX</a>
 </td>
 <td>
 Returns the maximum value in a list of arguments
@@ -137,9 +178,7 @@ Returns the maximum value in a list of arguments
 </tr>
 <tr>
 <td>
-
-[MIN](https://help.syncfusion.com/flutter/xlsio/working-with-general-functions#min-function)
-
+<a href="https://help.syncfusion.com/flutter/xlsio/working-with-general-functions#min-function">MIN</a>
 </td>
 <td>
 Returns the minimum value in a list of arguments
@@ -147,9 +186,8 @@ Returns the minimum value in a list of arguments
 </tr>
 <tr>
 <td>
-
-[COUNT](https://help.syncfusion.com/flutter/xlsio/working-with-general-functions#count-function)
-
+<a href="https://help.syncfusion.com/flutter/xlsio/working-with-general-functions#count-function
+">COUNT</a>
 </td>
 <td>
 Counts how many numbers are in the list of arguments
@@ -157,12 +195,98 @@ Counts how many numbers are in the list of arguments
 </tr>
 <tr>
 <td>
-
-[IF](https://help.syncfusion.com/flutter/xlsio/working-with-logical-function#if-function)
-
+<a href="https://help.syncfusion.com/flutter/xlsio/working-with-logical-function#if-function">IF</a>
 </td>
 <td>
 Specifies a logical test to perform
+</td>
+</tr>
+<tr>
+<td>
+<a href="">AND</a>
+</td>
+<td>
+Returns TRUE if all of its arguments are TRUE
+</td>
+</tr>
+<tr>
+<td>
+<a href="">OR</a>
+</td>
+<td>
+Returns TRUE if any argument is TRUE
+</td>
+</tr>
+<tr>
+<td>
+<a href="">NOT</a>
+</td>
+<td>
+Reverses the logic of its argument
+</td>
+</tr>
+<tr>
+<td>
+<a href="">CONCATENATE</a>
+</td>
+<td>
+Joins several text items into one text item
+</td>
+</tr>
+<tr>
+<td>
+<a href="">TRIM</a>
+</td>
+<td>
+Removes spaces from text
+</td>
+</tr>
+<tr>
+<td>
+<a href="">LOWER</a>
+</td>
+<td>
+Converts text to lowercase
+</td>
+</tr>
+<tr>
+<td>
+<a href="">UPPER</a>
+</td>
+<td>
+Converts text to uppercase
+</td>
+</tr>
+<tr>
+<td>
+<a href="">NOW</a>
+</td>
+<td>
+Returns the serial number of the current date and time
+</td>
+</tr>
+<tr>
+<td>
+<a href="">TODAY</a>
+</td>
+<td>
+Returns the serial number of today's date
+</td>
+</tr>
+<tr>
+<td>
+<a href="">INDEX</a>
+</td>
+<td>
+Uses an index to choose a value from a reference or array
+</td>
+</tr>
+<tr>
+<td>
+<a href="">MATCH</a>
+</td>
+<td>
+Looks up values in a reference or array
 </td>
 </tr>
 </table>
