@@ -24,7 +24,7 @@ The following properties are used to customize the appearances:
     Widget build(BuildContext context) {
       return Scaffold(
         body: Center(
-          child:  SfSparkAreaChart(
+          child:  SfSparkLineChart(
                     plotBand: SparkChartPlotBand(start: 7, end: 8),
                   data: <double>[
                         5,

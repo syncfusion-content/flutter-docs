@@ -110,7 +110,7 @@ The [`dashArray`]() property of [`SfSparkLineChart`]() is used to render line ch
                         6,
                         8
                       ],
-            dashArray: <double>[2,2],
+            dashArray: <double>[5,3],
                )
              )
            );
@@ -163,7 +163,7 @@ The following properties are used to customize the appearance:
                               34,
                               31,
                               30,
-            ],
+                          ],
                )
              )
            );
