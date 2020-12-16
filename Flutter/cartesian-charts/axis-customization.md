@@ -1045,13 +1045,10 @@ N> This is applicable only to the value axis and not for other axis and applicab
 
 ![Auto_Range_Calculation](images/axis-customization/auto_range_calculation.gif)
 
-## Axis label trim
+## Axis label width customization
 
-Axis label is controlled by [`labelsExtent`]() and [`maximumLabelWidth`]() in chart axis. If the width of axis labels is greater than the provided width then the axis labels gets trimmed with the size within the provided width and ellipse(...) at their suffix.
+The maximum width for axis labels and the space occupied by the axis labels can be controlled by using the [`maximumLabelWidth`]() and [`labelsExtent`]() properties of the axis respectively. If the provided width is lesser than the axis label's width, the label gets trimmed and the tooltip can be shown on clicking/tapping the axis label in both cases. Both properties are defaults to `null`.
 
-* [`maximumLabelWidth`]() - If the provided width is lesser than the axis label width
-label gets trimmed to the width  lesser than the axis label width. Defaults to `null`.
-* [`labelsExtent`]() - If the provided width is greater than the axis label width the chart gets rendered considering the width. Also If provided width is lesser than the axis label width , label gets trimmed to provided width. Trimmed axis labels also provide support for tooltip. Defaults to `null`.
 
 {% highlight dart %} 
 
@@ -1059,27 +1056,30 @@ label gets trimmed to the width  lesser than the axis label width. Defaults to `
     Widget build(BuildContext context) {
       return Container(
           child: SfCartesianChart(
-             primaryXAxis: CategoryAxis(maximumLabelWidth: 80,
-              labelsExtent: 80),
+            primaryXAxis: CategoryAxis(
+                maximumLabelWidth: 80,
+            ),
             series: <ChartSeries<SalesData, String>>[
                     BarSeries<SalesData, String>(
                         dataSource: <SalesData>[
-            SalesData('Goldin Finance 117', 597),
-    SalesData('Ping An Finance Center', 599),
-    SalesData('Makkah Clock Royal Tower', 601),
-    SalesData('Shanghai Tower', 632),
-    SalesData('Burj Khalifa', 828)),
+                            SalesData('Goldin Finance 117', 597),
+                            SalesData('Ping An Finance Center', 599),
+                            SalesData('Makkah Clock Royal Tower', 601),
+                            SalesData('Shanghai Tower', 632),
+                            SalesData('Burj Khalifa', 828)],
                         xValueMapper: (SalesData sales, _) => sales.year,
-                        yValueMapper: (SalesData sales, _) => sales.sales,),
-                  ]
+                        yValueMapper: (SalesData sales, _) => sales.sales
+                    ),
+            ]
           )
       );
     }
 
 {% endhighlight %}
 
-![Axis label trim](images/axis-customization/axis-label-trim.gif)
+N> If both [`maximumLabelWidth`]() and [`labelsExtent`]() properties are specified, then the priority goes to [`labelsExtent`]() property.
 
+![Axis label trim](images/axis-customization/axis-label-trim.gif)
 
 ## See Also
 

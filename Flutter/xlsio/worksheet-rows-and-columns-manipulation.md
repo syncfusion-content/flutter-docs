@@ -13,9 +13,9 @@ The Flutter XlsIO provides rows and columns manipulation options equivalent to E
 
 ## Insert Rows and Columns
 
-{% highlight dart %} 
-
 The following code snippet illustrates how to insert rows and columns in a worksheet.
+
+{% highlight dart %} 
 
 // Create a new Excel Document.
 final Workbook workbook = Workbook();
@@ -79,7 +79,8 @@ workbook.dispose();
 
 The Flutter XlsIO allows to auto-size the width and height of a cell to fit its content. This section demonstrates various methods to auto-fit rows and columns of a worksheet.
 
-**Auto-Fit Rows**
+### Auto-Fit a Single Row or Column
+
 The following code snippet shows how a row is re-sized to its content.
 
 {% highlight dart %}
@@ -104,7 +105,6 @@ workbook.dispose();
 
 {% endhighlight %}
 
-**Auto-Fit Columns**
 
 The following code snippet shows how a Column is re-sized to its content.
 
@@ -129,11 +129,10 @@ workbook.dispose();
 
 {% endhighlight %}
 
+
 ### Auto-Fit Multiple Rows or Columns
 
 Multiple rows or columns can be auto fitted based on the range specified.
-
-**Auto-Fit Multiple Rows**
 
 The following code snippet shows how to use auto fit for multiple rows.
 
@@ -160,7 +159,6 @@ workbook.dispose();
 
 {% endhighlight %}
 
-**Auto-Fit Multiple Columns**
 
 The following code snippet shows how to use auto fit for multiple Columns.
 

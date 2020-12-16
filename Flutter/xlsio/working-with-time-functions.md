@@ -46,7 +46,7 @@ workbook.dispose();
 
 ## TODAY Function
 
-TODAY Function is used to R]returns the serial number of the current date.
+TODAY Function is used to returns the serial number of the current date.
 
 The following code snippet illustrates on how to use TODAY function formula.
 
@@ -64,7 +64,6 @@ sheet.enableSheetCalculations();
 // Setting formula in the cell.
 final Range range = sheet.getRangeByName('A1');
 range.setFormula('=TODAY()');
-range.calculatedValue;
 range.numberFormat = 'mm/dd/yyyy';
 
 // Save and dispose workbook.
