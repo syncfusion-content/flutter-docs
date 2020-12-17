@@ -1045,6 +1045,42 @@ N> This is applicable only to the value axis and not for other axis and applicab
 
 ![Auto_Range_Calculation](images/axis-customization/auto_range_calculation.gif)
 
+## Axis label width customization
+
+The maximum width for axis labels and the space occupied by the axis labels can be controlled by using the [`maximumLabelWidth`]() and [`labelsExtent`]() properties of the axis respectively. If the provided width is lesser than the axis label's width, the label gets trimmed and the tooltip can be shown on clicking/tapping the axis label in both cases. Both properties are defaults to `null`.
+
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+      return Container(
+          child: SfCartesianChart(
+            primaryXAxis: CategoryAxis(
+                maximumLabelWidth: 80,
+            ),
+            series: <ChartSeries<SalesData, String>>[
+                    BarSeries<SalesData, String>(
+                        dataSource: <SalesData>[
+                            SalesData('Goldin Finance 117', 597),
+                            SalesData('Ping An Finance Center', 599),
+                            SalesData('Makkah Clock Royal Tower', 601),
+                            SalesData('Shanghai Tower', 632),
+                            SalesData('Burj Khalifa', 828)],
+                        xValueMapper: (SalesData sales, _) => sales.year,
+                        yValueMapper: (SalesData sales, _) => sales.sales
+                    ),
+            ]
+          )
+      );
+    }
+
+{% endhighlight %}
+
+N> If both [`maximumLabelWidth`]() and [`labelsExtent`]() properties are specified, then the priority goes to [`labelsExtent`]() property.
+
+![Axis label trim](images/axis-customization/axis-label-trim.gif)
+
 ## See Also
 
 * [Rendering a particular part of a data using visible minimum and visible maximum in the Cartesian chart](https://www.syncfusion.com/kb/11308/how-to-render-particular-part-of-a-data-in-cartesian-charts-sfcartesianchart).

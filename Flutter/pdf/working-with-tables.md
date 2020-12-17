@@ -13,7 +13,7 @@ The Syncfusion Flutter PDF provides support for creating customizable tables in 
 
 ## Creating a table
 
-[`PdfGrid`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGrid-class.html) allows you to create table by entering the data manually or from an external data source. The data source can be a [`DataTable`](https://api.flutter.dev/flutter/material/DataTable-class.html).
+[`PdfGrid`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGrid-class.html) allows you to create table by entering the data manually.
 
 The following code example explains how to create a table directly using [`PdfGrid`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGrid-class.html) with [`PdfGridStyle`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGridStyle-class.html), [`PdfGridColumn`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGridColumn-class.html) and [`PdfGridRow`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGridRow-class.html) classes.
 
@@ -56,52 +56,6 @@ grid.style = PdfGridStyle(
     font: PdfStandardFont(PdfFontFamily.timesRoman, 25));
 
 //Draw the grid
-grid.draw(
-    page: document.pages.add(), bounds: const Rect.fromLTWH(0, 0, 0, 0));
-
-//Save and dispose the PDF document
-File('SampleOutput.pdf').writeAsBytes(document.save());
-document.dispose();
-
-{% endhighlight %}
-
-The following code example explains how to create a table from a data source using [`PdfGrid`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGrid-class.html).
-
-{% highlight dart %}
-
-//Create a new PDF document
-PdfDocument document = PdfDocument();
-
-//Create a PdfGrid
-PdfGrid grid = PdfGrid();
-
-//Set the dataSource in PdfGrid with created DataTable
-grid.dataSource = DataTable(
-  columns: [
-    DataColumn(label: Text('ID')),
-    DataColumn(label: Text('Name')),
-    DataColumn(label: Text('Salary'))
-  ],
-  rows: <DataRow>[
-    DataRow(cells: [
-      DataCell(Text('E01')),
-      DataCell(Text('Clay')),
-      DataCell(Text('\$10,000'))
-    ]),
-    DataRow(cells: [
-      DataCell(Text('E02')),
-      DataCell(Text('Thomas')),
-      DataCell(Text('\$10,500'))
-    ]),
-    DataRow(cells: [
-      DataCell(Text('E02')),
-      DataCell(Text('Simon')),
-      DataCell(Text('\$12,000'))
-    ])
-  ],
-);
-
-//Draw the grid in PDF document
 grid.draw(
     page: document.pages.add(), bounds: const Rect.fromLTWH(0, 0, 0, 0));
 
