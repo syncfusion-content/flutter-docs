@@ -7,7 +7,7 @@ control: SfDateRangePicker
 documentation: ug
 ---
 
-# Hijri date range picker
+# Hijri date range picker (SfHijriDateRangePicker)
 Along with the Gregorian calendar, the picker package contains a Hijri date picker to display the Islamic calendar. Islamic calendar or Hijri calendar is a lunar calendar consisting of 12 months in a year of 354 or 355 days. To know more about the Islamic calendar, kindly refer to [Wikipedia](https://en.wikipedia.org/wiki/Islamic_calendar).
 
 It consists of all the Gregorian calendar functionalities like min and max date, the first day of the week, different selection modes, RTL, and customization for special dates.
@@ -98,8 +98,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## HijriDatePickerController
-### Programmatic date navigation
+## Programmatic date navigation
 You can programmatically navigate date in the Hijri date picker widget by using the [displayDate]() property from [HijriDatePickerController]().
 
 {% tabs %}
@@ -130,7 +129,7 @@ class MyAppState extends State<MyApp> {
 {% endhighlight %}
 {% endtabs %}
 
-### Programmatic view navigation
+## Programmatic view navigation
 You can programmatically navigate to any view in the Hijri date picker widget by using the [view]() property of `HijriDatePickerController.
 
 {% tabs %}
@@ -160,10 +159,12 @@ class MyAppState extends State<MyApp> {
 {% endhighlight %}
 {% endtabs %}
 
-### Programmatic date selection
+## Programmatic date selection
 You can select dates programmatically on the Hijri date picker widget by using the ‘HijriDatePickerController`.
 
-#### Single selection
+For selection [refer](https://help.syncfusion.com/flutter/daterangepicker/selections).
+
+### Single selection
 You can select the date programmatically by using the [selectedDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedDate.html) property of `HijriDatePickerController`. It is only applicable when the `selectionMode` is set to `DateRangePickerSelectionMode.single`.
 
 {% tabs %}
@@ -195,7 +196,7 @@ class MyAppState extends State<MyApp> {
 {% endhighlight %}
 {% endtabs %}
 
-#### Multi selection
+### Multi selection
 You can select the multiple dates programmatically by using the [selectedDates](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedDates.html) property of `HijriDatePickerController`. It is only applicable when the selectionMode is set to `DateRangePickerSelectionMode.multiple`.
 
 {% tabs %}
@@ -232,7 +233,7 @@ class MyAppState extends State<MyApp> {
 {% endhighlight %}
 {% endtabs %}
 
-#### Range selection
+### Range selection
 You can select the single date range programmatically by using the [selectedRange](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedRange.html) property of `HijriDatePickerController`. It is only applicable when the `selectionMode` is set to `DateRangePickerSelectionMode.range`.
 
 Use the [HijriDateRange]() to define the date range for the Hijri date picker.
@@ -267,7 +268,7 @@ class MyAppState extends State<MyApp> {
 {% endhighlight %}
 {% endtabs %}
 
-#### Multi-range selection
+### Multi-range selection
 You can select more than one date range programmatically by using the [selectedRanges](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedRanges.html) property of `HijriDatePickerController`. It is only applicable when the `selectionMode` is set to `DateRangePickerSelectionMode.multiRange`.
 
 {% tabs %}
