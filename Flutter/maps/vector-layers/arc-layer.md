@@ -534,7 +534,7 @@ class DataModel {
 
 ## OnTap
 
-You can use the ['onTap'] callback to customize the taped ['MapArc'] based on the arc index. The callback was called when the user clicked on the arc.
+You can use the [`onTap`] callback to customize the taped [`MapArc`] based on the arc index. The callback was called when the user clicked on the arc.
 
 {% tabs %}
 {% highlight Dart %}
@@ -611,7 +611,7 @@ class DataModel {
 
 ## Tooltip
 
-You can show information about the arc drawn using the [`MapArcLayer.tooltipBuilder`] property.
+You can show additional information about the arc drawn using the [`MapArcLayer.tooltipBuilder`] property.
 
 {% tabs %}
 {% highlight Dart %}

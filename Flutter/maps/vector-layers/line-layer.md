@@ -351,7 +351,7 @@ class DataModel {
 
 ## OnTap
 
-You can use the ['onTap'] callback to customize the taped ['MapLine'] based on the line index. The callback was called when the user clicked on the line.
+You can use the [`onTap`] callback to customize the taped [`MapLine`] based on the line index. The callback was called when the user clicked on the line.
 
 {% tabs %}
 {% highlight Dart %}
@@ -419,7 +419,7 @@ class DataModel {
 
 ## Tooltip
 
-You can show information about the line drawn using the [`tooltipBuilder`] property.
+You can show additional information about the line drawn using the [`tooltipBuilder`] property.
 
 {% tabs %}
 {% highlight Dart %}
