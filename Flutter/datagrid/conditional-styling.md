@@ -134,7 +134,7 @@ Widget build(BuildContext context) {
           GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
         ],
         onQueryRowStyle: (QueryRowStyleArgs args) {
-          Employee employee = _employeeCollection[args.rowIndex];
+          Employee employee = _employeeCollection[args.rowIndex - 1];
           if (employee.salary >= 10000 && employee.salary < 15000) {
             return DataGridCellStyle(
                 textStyle: TextStyle(color: Colors.white),
