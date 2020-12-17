@@ -9,11 +9,11 @@ documentation: ug
 
 # Polygons in the Flutter maps
 
-Polygon layer is a sublayer that renders a group of [`MapPolygon`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygon-class.html) on [`MapShapeLayer`] and [`MapTileLayer`]. This section helps to learn about how to add the polygons and customize them.
+Polygon layer is a sublayer that renders a group of [`MapPolygon`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygon-class.html) on [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html) and [`MapTileLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html). This section helps to learn about how to add the polygons and customize them.
 
 ## Adding polygons
 
-The [`polygons`] is a collection of [`MapPolygon`]. Every single [`MapPolygon`] connects multiple coordinates through a [`points`] property.
+The [`polygons`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygonLayer/polygons.html) is a collection of [`MapPolygon`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygon-class.html). Every single [`MapPolygon`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygon-class.html) connects multiple coordinates through a [`points`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygon/points.html) property.
 
 N> It is applicable for both the tile layer and shape layer.
 
@@ -150,7 +150,7 @@ class PolygonModel {
 
 ## Fill color
 
-You can apply the same color for all [`MapPolygon`] in the [`polygons`] collection using the [`MapPolygonLayer.color`] property. Alternatively, you can apply different colors to each [`MapPolygon`] in the [`polygons`] collection using the individual [`MapPolygon.color`] property.
+You can apply the same color for all [`MapPolygon`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygon-class.html) in the [`polygons`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygonLayer/polygons.html) collection using the [`MapPolygonLayer.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygonLayer/color.html) property. Alternatively, you can apply different colors to each [`MapPolygon`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygon-class.html) in the [`polygons`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygonLayer/polygons.html) collection using the individual [`MapPolygon.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygon/color.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -222,9 +222,9 @@ class PolygonModel {
 
 ## Stroke width and color
 
-You can apply the same stroke width for all [`MapPolygon`] in the [`polygons`] collection using the [`MapPolygonLayer.strokeWidth`] property. Alternatively, you can apply different stroke width to each [`MapPolygon`] in the [`polygons`] collection using the individual [`MapPolygon.strokeWidth`] property. The default value of the [`MapPolygonLayer.strokeWidth`] property is `2`.
+You can apply the same stroke width for all [`MapPolygon`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygon-class.html) in the [`polygons`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygonLayer/polygons.html) collection using the [`MapPolygonLayer.strokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygonLayer/strokeWidth.html) property. Alternatively, you can apply different stroke width to each [`MapPolygon`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygon-class.html) in the [`polygons`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygonLayer/polygons.html) collection using the individual [`MapPolygon.strokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygon/strokeWidth.html) property. The default value of the [`MapPolygonLayer.strokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygonLayer/strokeWidth.html) property is `2`.
 
-You can apply the same stroke color for all [`MapPolygon`] in the [`polygons`] collection using the [`MapPolygonLayer.strokeColor`] property. Alternatively, you can apply different stroke color to each [`MapPolygon`] in the [`polygons`] collection using the individual [`MapPolygon.strokeColor`] property.
+You can apply the same stroke color for all [`MapPolygon`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygon-class.html) in the [`polygons`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygonLayer/polygons.html) collection using the [`MapPolygonLayer.strokeColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygonLayer/strokeColor.html) property. Alternatively, you can apply different stroke color to each [`MapPolygon`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygon-class.html) in the [`polygons`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygonLayer/polygons.html) collection using the individual [`MapPolygon.strokeColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygon/strokeColor.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -297,7 +297,7 @@ class PolygonModel {
 
 ## Tap
 
-You can use the [`onTap`] callback to get a notification if the particular [`MapPolygon`] is tapped. You can also customize the tapped [`MapPolygon`] based on the index passed in the callback as shown in the below code snippet.
+You can use the [`onTap`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygon/onTap.html) callback to get a notification if the particular [`MapPolygon`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygon-class.html) is tapped. You can also customize the tapped [`MapPolygon`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygon-class.html) based on the index passed in the callback as shown in the below code snippet.
 
 {% tabs %}
 {% highlight Dart %}
@@ -374,7 +374,7 @@ class PolygonModel {
 
 ## Tooltip
 
-You can show additional information about the polygon drawn using the [`MapPolygonLayer.tooltipBuilder`] property.
+You can show additional information about the polygon drawn using the [`MapPolygonLayer.tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygonLayer/tooltipBuilder.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -452,9 +452,9 @@ class PolygonModel {
 
 You can customize the appearance of the tooltip.
 
-* Background color - Change the background color of the tooltip in the maps using the [`MapTooltipSettings.color`] property.
-* Stroke color - Change the stroke color of the tooltip in the maps using the [`MapTooltipSettings.strokeColor`] property.
-* Stroke width - Change the stroke width of the tooltip in the maps using the [`MapTooltipSettings.strokeWidth`] property.
+* Background color - Change the background color of the tooltip in the maps using the [`MapTooltipSettings.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/color.html) property.
+* Stroke color - Change the stroke color of the tooltip in the maps using the [`MapTooltipSettings.strokeColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/strokeColor.html) property.
+* Stroke width - Change the stroke width of the tooltip in the maps using the [`MapTooltipSettings.strokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/strokeWidth.html) property.
 
 {% tabs %}
 {% highlight Dart %}

@@ -9,11 +9,11 @@ documentation: ug
 
 # Circles in the Flutter maps
 
-Circle layer is a sublayer that renders a group of [`MapCircle`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircle-class.html) on [`MapShapeLayer`] and [`MapTileLayer`]. This section helps to learn about how to add the circles and customize them.
+Circle layer is a sublayer that renders a group of [`MapCircle`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircle-class.html) on [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html) and [`MapTileLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html). This section helps to learn about how to add the circles and customize them.
 
 ## Adding circles
 
-The [`circles`] is a collection of [`MapCircle`]. Every single [`MapCircle`] renders a circle using the [`MapCircle.center`] and [`MapCircle.radius`] properties.
+The [`circles`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircleLayer/circles.html) is a collection of [`MapCircle`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircle-class.html). Every single [`MapCircle`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircle-class.html) renders a circle using the [`MapCircle.center`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircle/center.html) and [`MapCircle.radius`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircle/radius.html) properties.
 
 N> It is applicable for both the tile layer and shape layer.
 
@@ -141,7 +141,7 @@ Widget build(BuildContext context) {
 
 ## Radius
 
-You can change the size of the circles using the [`MapCircle.radius`] property. The default value of the [`MapCircle.radius`] property is 5.
+You can change the size of the circles using the [`MapCircle.radius`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircle/radius.html) property. The default value of the [`MapCircle.radius`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircle/radius.html) property is 5.
 
 {% tabs %}
 {% highlight Dart %}
@@ -208,7 +208,7 @@ Widget build(BuildContext context) {
 
 ## Fill color
 
-You can apply the same color for all [`MapCircle`] in the [`circles`] collection using the [`MapCircleLayer.color`] property. Alternatively, you can apply different colors to each [`MapCircle`] in the [`circles`] collection using the individual [`MapCircle.color`] property.
+You can apply the same color for all [`MapCircle`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircle-class.html) in the [`circles`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircleLayer/circles.html) collection using the [`MapCircleLayer.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircleLayer/color.html) property. Alternatively, you can apply different colors to each [`MapCircle`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircle-class.html) in the [`circles`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircleLayer/circles.html) collection using the individual [`MapCircle.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircle/color.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -275,9 +275,9 @@ class MapCircleModel {
 
 ## Stroke width and color
 
-You can apply the same stroke width for all [`MapCircle`] in the [`circles`] collection using the [`MapCircleLayer.strokeWidth`] property. Alternatively, you can apply different stroke width to each [`MapCircle`] in the [`circles`] collection using the individual [`MapCircle.strokeWidth`] property. The default value of the [`MapCircleLayer.strokeWidth`] property is `2`.
+You can apply the same stroke width for all [`MapCircle`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircle-class.html) in the [`circles`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircleLayer/circles.html) collection using the [`MapCircleLayer.strokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircleLayer/strokeWidth.html) property. Alternatively, you can apply different stroke width to each [`MapCircle`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircle-class.html) in the [`circles`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircleLayer/circles.html) collection using the individual [`MapCircle.strokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircle/strokeWidth.html) property. The default value of the [`MapCircleLayer.strokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircleLayer/strokeWidth.html) property is `2`.
 
-You can apply the same stroke color for all [`MapCircle`] in the [`circles`] collection using the [`MapCircleLayer.strokeColor`] property. Alternatively, you can apply different stroke color to each [`MapCircle`] in the [`circles`] collection using the individual [`MapCircle.strokeColor`] property.
+You can apply the same stroke color for all [`MapCircle`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircle-class.html) in the [`circles`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircleLayer/circles.html) collection using the [`MapCircleLayer.strokeColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircleLayer/strokeColor.html) property. Alternatively, you can apply different stroke color to each [`MapCircle`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircle-class.html) in the [`circles`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircleLayer/circles.html) collection using the individual [`MapCircle.strokeColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircle/strokeColor.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -345,7 +345,7 @@ class MapCircleModel {
 
 ## Animation
 
-You can apply animation for the [`MapCircle`] using the [`MapCircleLayer.animation`] property and able to customize the animation flow, curve and duration.
+You can apply animation for the [`MapCircle`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircle-class.html) using the [`MapCircleLayer.animation`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircleLayer/animation.html) property and able to customize the animation flow, curve and duration.
 
 By default, there will not be any animation.
 
@@ -433,7 +433,7 @@ Widget build(BuildContext context) {
 
 ## Tap
 
-You can use the [`onTap`] callback to get a notification if the particular [`MapCircle`] is tapped. You can also customize the tapped [`MapCircle`] based on the index passed in the callback as shown in the below code snippet.
+You can use the [`onTap`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircle/onTap.html) callback to get a notification if the particular [`MapCircle`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircle-class.html) is tapped. You can also customize the tapped [`MapCircle`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircle-class.html) based on the index passed in the callback as shown in the below code snippet.
 
 {% tabs %}
 {% highlight Dart %}
@@ -507,7 +507,7 @@ Widget build(BuildContext context) {
 
 ## Tooltip
 
-You can show additional information about the circles drawn using the [`MapCircleLayer.tooltipBuilder`] property.
+You can show additional information about the circles drawn using the [`MapCircleLayer.tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircleLayer/tooltipBuilder.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -609,9 +609,9 @@ Widget build(BuildContext context) {
 
 You can customize the appearance of the tooltip.
 
-* Background color - Change the background color of the tooltip in the maps using the [`MapTooltipSettings.color`] property.
-* Stroke color - Change the stroke color of the tooltip in the maps using the [`MapTooltipSettings.strokeColor`] property.
-* Stroke width - Change the stroke width of the tooltip in the maps using the [`MapTooltipSettings.strokeWidth`] property.
+* Background color - Change the background color of the tooltip in the maps using the [`MapTooltipSettings.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/color.html) property.
+* Stroke color - Change the stroke color of the tooltip in the maps using the [`MapTooltipSettings.strokeColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/strokeColor.html) property.
+* Stroke width - Change the stroke width of the tooltip in the maps using the [`MapTooltipSettings.strokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/strokeWidth.html) property.
 
 {% tabs %}
 {% highlight Dart %}
