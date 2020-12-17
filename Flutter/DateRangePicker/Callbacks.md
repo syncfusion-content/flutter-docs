@@ -33,6 +33,9 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+>**NOTE** 
+* Use [HijriDatePickerViewChangedArgs]() for the [SfHijriDateRangePicker]().
+
 ### Selection changed callback
 The [onSelectionChanged](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/onSelectionChanged.html) callback triggers when selecting the dates from the date picker.
 

@@ -119,3 +119,199 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Schedule view header builder](images/builder/schedule_view_month_header_builder.png)
+
+## Appointment builder
+The [CalendarAppointmentBuilder]() allows you to design your custom view and assign the view to the appointment UI of the calendar by returning an appropriate widget in the [appointmentBuilder]() of `SfCalendar`.
+
+[CalendarAppointmentDetails](): Returns the details of the appointment view.
+
+
+`date`: The date associate with the appointment view.
+`appointments`: List of appointments associated with the appointment view.
+`bound`: Returns the appointment view bounds.
+`isMoreAppointmentRegion`: Determines whether the widget replaces the more appointment region.
+
+{% tabs %}
+{% highlight Dart %}
+
+class MyAppState extends State<MyApp> {
+  CalendarController _controller;
+
+  @override
+  void initState() {
+    _controller = CalendarController();
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+          body: SfCalendar(
+        view: CalendarView.day,
+		dataSource: _getDataSource(),
+        appointmentBuilder: (BuildContext context,
+                (BuildContext context, CalendarAppointmentDetails details) {
+              final Appointment meeting = details.appointments.first;
+              final String image = _getImage();
+              if (_controller.view != CalendarView.month &&
+                  _controller.view != CalendarView.schedule) {
+                return Container(
+                  child: Column(
+                    children: [
+                      Container(
+                        padding: EdgeInsets.all(3),
+                        height: 50,
+                        alignment: Alignment.topLeft,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.rectangle,
+                          borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(5),
+                              topRight: Radius.circular(5)),
+                          color: meeting.color,
+                        ),
+                        child: SingleChildScrollView(
+                            child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              meeting.subject,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
+                              ),
+                              maxLines: 3,
+                              softWrap: false,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                            !kIsWeb
+                                ? Container()
+                                : Text(
+                                    'Time: ${DateFormat('hh:mm a').format(meeting.startTime)} - ' +
+                                        '${DateFormat('hh:mm a').format(meeting.endTime)}',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 10,
+                                    ),
+                                  )
+                          ],
+                        )),
+                      ),
+                      Container(
+                        height: details.bounds.height - 70,
+                        padding: EdgeInsets.fromLTRB(3, 5, 3, 2),
+                        color: meeting.color.withOpacity(0.8),
+                        alignment: Alignment.topLeft,
+                        child: SingleChildScrollView(
+                            child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                                padding: EdgeInsets.symmetric(vertical: 5),
+                                child: Image(
+                                    image: ExactAssetImage(
+                                        'images/' + image + '.png'),
+                                    fit: BoxFit.contain,
+                                    width: details.bounds.width,
+                                    height: 60)),
+                            Text(
+                              meeting.notes,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 10,
+                              ),
+                            )
+                          ],
+                        )),
+                      ),
+                      Container(
+                        height: 20,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.rectangle,
+                          borderRadius: BorderRadius.only(
+                              bottomLeft: Radius.circular(5),
+                              bottomRight: Radius.circular(5)),
+                          color: meeting.color,
+                        ),
+                      ),
+                    ],
+                  ),
+                );
+              }
+            },
+        },
+      )),
+    );
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+
+## Time region builder
+The [TimeRegionBuilder]() allows you to design your custom view and assign the view to the time region view of the calendar by returning an appropriate widget in the [timeRegionBuilder]() of SfCalendar.
+
+[TimeRegionDetails](): Returns the details of the time region view.
+
+`date`: The date associate with the time region view.
+`bound`: Returns the time region view bounds.
+`region`: The Region detail associated with the time region view.
+
+{% tabs %}
+{% highlight Dart %}
+
+List<TimeRegion> _getTimeRegions() {
+  final List<TimeRegion> regions = <TimeRegion>[];
+  DateTime date = DateTime.now();
+  date = DateTime(date.year, date.month, date.day, 12, 0, 0);
+  regions.add(TimeRegion(
+      startTime: date,
+      endTime: date.add(Duration(hours: 2)),
+      enablePointerInteraction: false,
+      color: Colors.grey.withOpacity(0.2),
+      text: 'Break'));
+
+  return regions;
+}
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+    home: Scaffold(
+        body: SfCalendar(
+      view: CalendarView.week,
+      specialRegions: _getTimeRegions(),
+      timeRegionBuilder:
+          (BuildContext context, TimeRegionDetails timeRegionDetails) {
+        if (details.region.text == 'Lunch') {
+                return Container(
+                  color: details.region.color,
+                  alignment: Alignment.center,
+                  child: Icon(
+                    Icons.restaurant,
+                    color: Colors.grey.withOpacity(0.5),
+                  ),
+                );
+              } else if (details.region.text == 'Not Available') {
+                return Container(
+                  color: details.region.color,
+                  alignment: Alignment.center,
+                  child: Icon(
+                    Icons.block,
+                    color: Colors.grey.withOpacity(0.5),
+                  ),
+                );
+              }
+
+              return Container(color: details.region.color);
+      },
+    )),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
