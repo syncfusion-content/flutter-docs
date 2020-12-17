@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Adding arcs in Syncfusion Flutter maps | Syncfusion
-description: This section explains how to add arcs on the map and customize its appearance in the Flutter maps.
+description: This section explains about how to add arcs on the map and customize its appearance in the Flutter maps.
 platform: Flutter
 control: SfMaps
 documentation: ug
