@@ -601,7 +601,7 @@ class DataModel {
 {% endhighlight %}
 {% endtabs %}
 
-## OnTap
+## Tap
 
 You can use the [`onTap`] callback to get a notification if the particular [`MapArc`] is tapped. You can also customize the tapped [`MapArc`] based on the index passed in the callback as shown in the below code snippet.
 

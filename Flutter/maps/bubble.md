@@ -11,9 +11,9 @@ documentation: ug
 
 Bubbles can be rendered in different colors and sizes based on the data values of their assigned shape. You can add information to shapes such as population density, number of users, and more. 
 
-## Show bubbles
+## Enable bubbles
 
-You can show bubbles using the [`MapShapeLayer.showBubbles`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/showBubbles.html) property. The [`MapShapeLayerDelegate.bubbleSizeMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/bubbleSizeMapper.html) property is used to specify the value based on which the bubble's size has to be rendered.
+You can enable bubbles using the [`MapShapeSource.bubbleSizeMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/bubbleSizeMapper.html). This property is used to specify the value based on which the bubble's size has to be rendered.
 
 {% tabs %}
 {% highlight Dart %}
@@ -36,25 +36,23 @@ void initState() {
 
 @override
 Widget build(BuildContext context) {
-    return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.only(left: 15, right: 15),
-        child: SfMaps(
-          layers: [
-            MapShapeLayer(
-              delegate: MapShapeLayerDelegate(
-                  shapeFile: "assets/world_map.json",
-                  shapeDataField: "continent",
-                  dataCount: data.length,
-                  primaryValueMapper: (int index) => data[index].continent,
-                  bubbleSizeMapper: (int index) => data[index].count
-              ),
-              showBubbles: true,
-            )
-          ],
-        ),
+  return Scaffold(
+    body: Padding(
+      padding: EdgeInsets.only(left: 15, right: 15),
+      child: SfMaps(
+        layers: [
+          MapShapeLayer(
+            source: MapShapeSource.asset("assets/world_map.json",
+                shapeDataField: "continent",
+                dataCount: data.length,
+                primaryValueMapper: (int index) => data[index].continent,
+                bubbleSizeMapper: (int index) => data[index].count,
+            ),
+          )
+        ],
       ),
-   );
+    ),
+  );
 }
 
 class Model {
@@ -71,9 +69,7 @@ class Model {
 
 ## Tooltip for the bubbles
 
-You can enable tooltip for the bubbles using the [`MapShapeLayer.enableBubbleTooltip`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/enableBubbleTooltip.html) property. It is used to indicate clearly the information on the current tapped bubble. By default, the bubble tooltip text will be [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeDataField.html) values.
-
-N> Refer the [`bubbleTooltipTextMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/bubbleTooltipTextMapper.html), for changing the default bubble tooltip text.
+You can enable tooltip for the bubbles using the [`MapShapeLayer.bubbleTooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/bubbleTooltipBuilder.html) property. It can be used to indicate clearly the information about the currently interacted bubble.
 
 {% tabs %}
 {% highlight Dart %}
@@ -102,20 +98,22 @@ Widget build(BuildContext context) {
       child: SfMaps(
         layers: [
           MapShapeLayer(
-            delegate: MapShapeLayerDelegate(
-              shapeFile: "assets/world_map.json",
+            source: MapShapeSource.asset(
+              "assets/world_map.json",
               shapeDataField: "continent",
               dataCount: data.length,
               primaryValueMapper: (int index) => data[index].continent,
               bubbleSizeMapper: (int index) => data[index].countriesCount,
-              bubbleTooltipTextMapper: (int index) =>
-                  'Continent : ' +
-                  data[index].continent +
-                  '\nTotal Countries : ' +
-                  data[index].countriesCount.toStringAsFixed(0),
             ),
-            showBubbles: true,
-            enableBubbleTooltip: true,
+            bubbleTooltipBuilder: (BuildContext context, int index) {
+               return Padding(
+                  padding: EdgeInsets.all(10),
+                  child: Text('Continent : ' +
+                     data[index].continent +
+                     '\nTotal Countries : ' +
+                     data[index].countriesCount.toStringAsFixed(0)),
+               );
+            },
           ),
         ],
       ),
@@ -138,58 +136,56 @@ class Model {
 
 ## Color
 
-You can customize the bubble color based on the value returned from the [`MapShapeLayerDelegate.bubbleColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/bubbleColorValueMapper.html) property. You can either return a value or a color from the [`bubbleColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/bubbleColorValueMapper.html).
+You can customize the bubble color based on the value returned from the [`MapShapeSource.bubbleColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/bubbleColorValueMapper.html) property. You can either return a value or a color from the [`bubbleColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/bubbleColorValueMapper.html).
 
-If [`bubbleColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/bubbleColorValueMapper.html) returns a color, then the color will be applied to the bubble straightaway.
+If [`bubbleColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/bubbleColorValueMapper.html) returns a color, then the color will be applied to the bubble straightaway.
 
-If [`bubbleColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/bubbleColorValueMapper.html) returns a value other than the color, then you must set the [`MapShapeLayer.bubbleColorMappers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/bubbleColorMappers.html) property. The value returned from the [`bubbleColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/bubbleColorValueMapper.html) will be used for the comparison in the [`MapColorMapper.value`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/value.html) or [`MapColorMapper.from`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/from.html) and [`MapColorMapper.to`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/to.html). Then, the [`MapColorMapper.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/color.html) will be applied to the respective bubble.
+If [`bubbleColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/bubbleColorValueMapper.html) returns a value other than the color, then you must set the [`MapShapeSource.bubbleColorMappers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/bubbleColorMappers.html) property. The value returned from the [`bubbleColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/bubbleColorValueMapper.html) will be used for the comparison in the [`MapColorMapper.value`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/value.html) or [`MapColorMapper.from`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/from.html) and [`MapColorMapper.to`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/to.html). Then, the [`MapColorMapper.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/color.html) will be applied to the respective bubble.
 
 {% tabs %}
 {% highlight Dart %}
 
- List<Model> data;
+List<Model> data;
 
-  @override
-  void initState() {
-    super.initState();
+@override
+void initState() {
+  super.initState();
 
-    data = <Model>[
-      Model('Asia', 51, Colors.red[400]),
-      Model('Africa', 58, Colors.green[400]),
-      Model('Europe', 48, Colors.blue[400]),
-      Model('North America', 41, Colors.purple[400]),
-      Model('South America', 14, Colors.yellow[400]),
-      Model('Australia', 23, Colors.orange[400]),
-    ];
-  }
+  data = <Model>[
+    Model('Asia', 51, Colors.red[400]),
+    Model('Africa', 58, Colors.green[400]),
+    Model('Europe', 48, Colors.blue[400]),
+    Model('North America', 41, Colors.purple[400]),
+    Model('South America', 14, Colors.yellow[400]),
+    Model('Australia', 23, Colors.orange[400]),
+  ];
+}
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.only(left: 15, right: 15),
-        child: SfMaps(
-          layers: [
-            MapShapeLayer(
-              delegate: MapShapeLayerDelegate(
-                shapeFile: "assets/world_map.json",
-                shapeDataField: "continent",
-                dataCount: data.length,
-                primaryValueMapper: (int index) => data[index].continent,
-                bubbleSizeMapper: (int index) => data[index].count,
-                bubbleColorValueMapper: (int index) => data[index].bubbleColor,
-              ),
-              showBubbles: true,
-              bubbleSettings: MapBubbleSettings(
-                maxRadius: 30,
-                minRadius: 15,
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
+@override
+Widget build(BuildContext context) {
+   return Scaffold(
+     body: Padding(
+       padding: EdgeInsets.only(left: 15, right: 15),
+       child: SfMaps(
+         layers: [
+           MapShapeLayer(
+             source: MapShapeSource.asset(
+               "assets/world_map.json",
+               shapeDataField: "continent",
+               dataCount: data.length,
+               primaryValueMapper: (int index) => data[index].continent,
+               bubbleSizeMapper: (int index) => data[index].count,
+               bubbleColorValueMapper: (int index) => data[index].bubbleColor,
+             ),
+             bubbleSettings: MapBubbleSettings(
+               maxRadius: 30,
+               minRadius: 15,
+             ),
+           ),
+         ],
+       ),
+     ),
+   );
 }
 
 class Model {
@@ -211,7 +207,6 @@ You can customize the below appearance of the bubbles.
 
 * **MinRadius** - Change the minimum radius of the bubbles using the [`MapBubbleSettings.minRadius`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapBubbleSettings/minRadius.html) property. The default value of the [`minRadius`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapBubbleSettings/minRadius.html) property is `10.0`.
 * **MaxRadius** - Change the maximum radius of the bubbles using the [`MapBubbleSettings.maxRadius`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapBubbleSettings/maxRadius.html) property. The default value of the [`maxRadius`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapBubbleSettings/maxRadius.html) property is `50.0`.
-* **Opacity** - Change the opacity of the bubbles using the [`MapBubbleSettings.opacity`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapBubbleSettings/opacity.html) property.  The default value of the [`opacity`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapBubbleSettings/opacity.html) property is `0.75`.
 * **Background color** - Change the background color of the bubbles using the [`MapBubbleSettings.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapBubbleSettings/color.html) property.
 * **Stroke color** - Change the stroke color of the bubbles using the [`MapBubbleSettings.strokeColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapBubbleSettings/strokeColor.html) property.
 * **Stroke width** - Change the stroke width of the bubbles using the [`MapBubbleSettings.strokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapBubbleSettings/strokeWidth.html) property.
@@ -243,14 +238,13 @@ Widget build(BuildContext context) {
         child: SfMaps(
           layers: [
             MapShapeLayer(
-              delegate: MapShapeLayerDelegate(
-                  shapeFile: "assets/world_map.json",
+              source: MapShapeSource.asset(
+                  "assets/world_map.json",
                   shapeDataField: "continent",
                   dataCount: data.length,
                   primaryValueMapper: (int index) => data[index].continent,
                   bubbleSizeMapper: (int index) => data[index].count,
               ),
-              showBubbles: true,
               bubbleSettings: MapBubbleSettings(
                 maxRadius: 30,
                 minRadius: 15,
@@ -324,14 +318,13 @@ Widget build(BuildContext context) {
           child: SfMaps(
             layers: [
               MapShapeLayer(
-                delegate: MapShapeLayerDelegate(
-                  shapeFile: "assets/world_map.json",
+                source: MapShapeSource.asset(
+                  "assets/world_map.json",
                   shapeDataField: "continent",
                   dataCount: data.length,
                   primaryValueMapper: (int index) => data[index].continent,
                   bubbleSizeMapper: (int index) => data[index].count,
                 ),
-                showBubbles: true,
                 bubbleSettings: MapBubbleSettings(
                   maxRadius: 30,
                   minRadius: 15,

@@ -407,7 +407,7 @@ class DataModel {
 
 ![Line shape animation](images/line-layer/line_shape_animation.gif)
 
-## OnTap
+## Tap
 
 You can use the [`onTap`] callback to get a notification if the particular [`MapLine`] is tapped. You can also customize the tapped [`MapLine`] based on the index passed in the callback as shown in the below code snippet.
 
