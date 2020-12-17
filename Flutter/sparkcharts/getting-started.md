@@ -52,7 +52,7 @@ Import the following package in your Dart code.
 
 ## Initialize spark charts
 
-Once the package has been imported, initialize the spark charts as a child of any widget. Here, as we are rendering Line chart, initialize [`SfSparkLineChart`]() widget as a child of Container widget.
+Once the package has been imported, initialize the spark charts as a child of any widget. Here, as we are rendering Line chart, initialize [`SfSparkLineChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart-class.html) widget as a child of Container widget.
 
 {% highlight dart %} 
 
@@ -96,7 +96,7 @@ The [`data`]() property is used for binding data to the spark chart. This proper
 
 ## Change the type of sparkline
 
-You can change the sparkline type by setting the widget to [`SfSparkLineChart`](), [`SfSparkAreaChart`](), [`SfSparkBarChart`](), [`SfSparkLWinLossChart`](). Here, the sparkline type has been set to [`SfSparkAreaChart`]().
+You can change the sparkline type by setting the widget to [`SfSparkLineChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart-class.html), [`SfSparkAreaChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkAreaChart-class.html), [`SfSparkBarChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkBarChart-class.html), [`SfSparkLWinLossChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLWinLossChart-class.html). Here, the sparkline type has been set to [`SfSparkAreaChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkAreaChart-class.html).
 
 {% highlight dart %} 
 
@@ -120,7 +120,7 @@ You can change the sparkline type by setting the widget to [`SfSparkLineChart`](
 
 ## Enable data label
 
-You can add data labels to improve the readability of the chart using the [`labelDisplayMode`]() property.
+You can add data labels to improve the readability of the chart using the [`labelDisplayMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart/labelDisplayMode.html) property.
 
 {% highlight dart %} 
 
@@ -146,7 +146,7 @@ You can add data labels to improve the readability of the chart using the [`labe
 
 ## Enable trackball for sparkline
 
-The sparkline displays additional information through trackball when touch the particular location to the sparkline. You can enable trackball by setting the [`trackball`]() property in [`SparkChartTrackball`](). Once it is activated, it will appear in the UI and move based on your touch movement until you stop touching on the chart.
+The sparkline displays additional information through trackball when touch the particular location to the sparkline. You can enable trackball by setting the [`trackball`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart/trackball.html) property in [`SparkChartTrackball`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartTrackball-class.html). Once it is activated, it will appear in the UI and move based on your touch movement until you stop touching on the chart.
 
 {% highlight dart %} 
 

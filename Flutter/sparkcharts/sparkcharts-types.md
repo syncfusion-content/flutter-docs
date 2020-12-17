@@ -63,7 +63,7 @@ The following properties are used to customize the appearance:
 
 ### Dashed line
 
-The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart/dashArray.html) property of [`SfSparkLineChart`]() is used to render line chart with dashes. Odd value is considered as rendering size and even value is considered as gap.
+The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart/dashArray.html) property of [`SfSparkLineChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart-class.html) is used to render line chart with dashes. Odd value is considered as rendering size and even value is considered as gap.
 
 {% highlight dart %} 
 
@@ -88,29 +88,29 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
 
 ## Area chart
 
-[`SfSparkAreaChart`]() is used to emphasize a change in values. This is primarily used when the magnitude of the trend is to be communicated rather than individual data values.
+[`SfSparkAreaChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkAreaChart-class.html) is used to emphasize a change in values. This is primarily used when the magnitude of the trend is to be communicated rather than individual data values.
 
 The following properties are used to customize the appearance:
 
-* [`color`]() - Specifies the fill color of spark area chart.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkAreaChart/color.html) - Specifies the fill color of spark area chart.
 * [`data`]()  - Used to bind the data to spark area charts.
-* [`axisCrossesAt`]() - Specifies the axis line's position.
-* [`axisLineColor`]() - Specifies the color of the axis line.
-* [`axisLineWidth`]() - Specifies the width of the axis line.
-* [`axisLineDashArray`] - Specifies the dash array value of the axis line.
-* [`marker`]() - Represents the marker settings of spark area chart.
-* [`labelDisplayMode`]() - Specifies the spark area data label.
-* [`labelStyle`]() - Specifies the spark area data label.
-* [`trackball`]() - Represents the track ball options of spark area chart.
-* [`plotBand`]() - Represents the plot band settings for spark area chart.
-* [`isInversed`]() - Specifies whether to inverse the spark area chart.
-* [`highPointColor`]() - Specifies the high point color.
-* [`lowPointColor`]() - Specifies the low point color.
-* [`negativePointColor`]() - Specifies the negative point color.
-* [`firstPointColor`]() - Specifies the first point color.
-* [`lastPointColor`]() - Specifies the last point color.
-* [`borderWidth`]() – Changes the stroke width of the spark area chart.
-* [`borderColor`]() – Changes the stroke color of the spark area chart.
+* [`axisCrossesAt`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkAreaChart/axisCrossesAt.html) - Specifies the axis line's position.
+* [`axisLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkAreaChart/axisLineColor.html) - Specifies the color of the axis line.
+* [`axisLineWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkAreaChart/axisLineWidth.html) - Specifies the width of the axis line.
+* [`axisLineDashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkAreaChart/axisLineDashArray.html) - Specifies the dash array value of the axis line.
+* [`marker`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkAreaChart/marker.html) - Represents the marker settings of spark area chart.
+* [`labelDisplayMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkAreaChart/labelDisplayMode.html) - Specifies the spark area data label.
+* [`labelStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkAreaChart/labelStyle.html) - Specifies the spark area data label.
+* [`trackball`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkAreaChart/trackball.html) - Represents the track ball options of spark area chart.
+* [`plotBand`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkAreaChart/plotBand.html) - Represents the plot band settings for spark area chart.
+* [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkAreaChart/isInversed.html) - Specifies whether to inverse the spark area chart.
+* [`highPointColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkAreaChart/highPointColor.html) - Specifies the high point color.
+* [`lowPointColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkAreaChart/lowPointColor.html) - Specifies the low point color.
+* [`negativePointColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkAreaChart/negativePointColor.html) - Specifies the negative point color.
+* [`firstPointColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkAreaChart/firstPointColor.html) - Specifies the first point color.
+* [`lastPointColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkAreaChart/lastPointColor.html) - Specifies the last point color.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkAreaChart/borderWidth.html) – Changes the stroke width of the spark area chart.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkAreaChart/borderColor.html) – Changes the stroke color of the spark area chart.
 
 {% highlight dart %} 
 
@@ -138,27 +138,26 @@ The following properties are used to customize the appearance:
 
 ## Bar Sparkline chart
 
-[`SfSparkBarChart`]() is used to render the sparkline series as Bar.The following properties are used to customize the appearance:
+[`SfSparkBarChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkBarChart-class.html) is used to render the sparkline series as Bar.The following properties are used to customize the appearance:
 
-* [`color`]() - Specifies the fill color of the spark bar chart.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkBarChart/color.html) - Specifies the fill color of the spark bar chart.
 * [`data`]()  - Used to bind the data to spark are charts.
-* [`axisCrossesAt`]() - Specifies the axis line's position.
-* [`axisLineColor`]() - Specifies the color of the axis line.
-* [`axisLineWidth`]() - Specifies the width of the axis line.
-* [`axisLineDashArray`] - Specifies the dash array value of the axis line.
-* [`marker`]() - Represents the marker settings of spark bar chart.
-* [`labelDisplayMode`]() - Specifies the spark bar data label.
-* [`labelStyle`]() - Specifies the spark bar data label.
-* [`trackball`]() - Represents the track ball options of spark bar chart.
-* [`plotBand`]() - Represents the plot band settings for spark bar chart.
-* [`isInversed`]() - Specifies whether to inverse the spark line chart.
-* [`highPointColor`]() - Specifies the high point color.
-* [`lowPointColor`]() - Specifies the low point color.
-* [`negativePointColor`]() - Specifies the negative point color.
-* [`firstPointColor`]() - Specifies the first point color.
-* [`lastPointColor`]() - Specifies the last point color.
-* [`borderWidth`]() – Changes the stroke width of the series.
-* [`borderColor`]() – Changes the stroke color of the series.
+* [`axisCrossesAt`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkBarChart/axisCrossesAt.html) - Specifies the axis line's position.
+* [`axisLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkBarChart/axisLineColor.html) - Specifies the color of the axis line.
+* [`axisLineWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkBarChart/axisLineWidth.html) - Specifies the width of the axis line.
+* [`axisLineDashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkBarChart/axisLineDashArray.html) - Specifies the dash array value of the axis line.
+* [`labelDisplayMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkBarChart/labelDisplayMode.html) - Specifies the spark bar data label.
+* [`labelStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkBarChart/labelStyle.html) - Specifies the spark bar data label.
+* [`trackball`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkBarChart/trackball.html) - Represents the track ball options of spark bar chart.
+* [`plotBand`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkBarChart/plotBand.html) - Represents the plot band settings for spark bar chart.
+* [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkBarChart/isInversed.html) - Specifies whether to inverse the spark line chart.
+* [`highPointColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkBarChart/highPointColor.html) - Specifies the high point color.
+* [`lowPointColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkBarChart/lowPointColor.html) - Specifies the low point color.
+* [`negativePointColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkBarChart/negativePointColor.html) - Specifies the negative point color.
+* [`firstPointColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkBarChart/firstPointColor.html) - Specifies the first point color.
+* [`lastPointColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkBarChart/lastPointColor.html) - Specifies the last point color.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkBarChart/borderWidth.html) – Changes the stroke width of the series.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkBarChart/borderColor.html) – Changes the stroke color of the series.
 
 {% highlight dart %} 
 
@@ -185,26 +184,26 @@ The following properties are used to customize the appearance:
 
 ## WinLoss Sparkline chart
 
-[`SfSparkWinLossChart`]() is used to show whether each value is positive or negative visualizing a Win/Loss scenario. 
+[`SfSparkWinLossChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkWinLossChart-class.html) is used to show whether each value is positive or negative visualizing a Win/Loss scenario. 
 
 The following properties are used to customize the appearance:
 
-* [`color`]() - Specifies the spark line color.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkWinLossChart/color.html) - Specifies the spark line color.
 * [`data`]()  - Create the spark line chart with custom data source.
-* [`axisCrossesAt`]() - Specifies the axis line's position.
-* [`axisLineColor`]() - Specifies the color of the axis line.
-* [`axisLineWidth`]() - Specifies the width of the axis line.
-* [`axisLineDashArray`] - Specifies the dash array value of the axis line.
-* [`trackball`]() - Represents the track ball options of spark bar chart.
-* [`isInversed`]() - Specifies whether to inverse the spark line chart.
-* [`highPointColor`]() - Specifies the high point color.
-* [`lowPointColor`]() - Specifies the low point color.
-* [`negativePointColor`]() - Specifies the negative point color.
-* [`firstPointColor`]() - Specifies the first point color.
-* [`lastPointColor`]() - Specifies the last point color.
-* [`borderWidth`]() – Changes the stroke width of the win loss chart.
-* [`borderColor`]() – Changes the stroke color of the win loss chart.
-* [`tiePointColor`]() - Specifies the tie point color of win loss chart. color.
+* [`axisCrossesAt`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkWinLossChart/axisCrossesAt.html) - Specifies the axis line's position.
+* [`axisLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkWinLossChart/axisLineColor.html) - Specifies the color of the axis line.
+* [`axisLineWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkWinLossChart/axisLineWidth.html) - Specifies the width of the axis line.
+* [`axisLineDashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkWinLossChart/axisLineDashArray.html) - Specifies the dash array value of the axis line.
+* [`trackball`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkWinLossChart/trackball.html) - Represents the track ball options of spark bar chart.
+* [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkWinLossChart/isInversed.html) - Specifies whether to inverse the spark line chart.
+* [`highPointColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkWinLossChart/highPointColor.html) - Specifies the high point color.
+* [`lowPointColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkWinLossChart/lowPointColor.html) - Specifies the low point color.
+* [`negativePointColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkWinLossChart/negativePointColor.html) - Specifies the negative point color.
+* [`firstPointColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkWinLossChart/firstPointColor.html) - Specifies the first point color.
+* [`lastPointColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkWinLossChart/lastPointColor.html) - Specifies the last point color.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkWinLossChart/borderWidth.html) – Changes the stroke width of the win loss chart.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkWinLossChart/borderColor.html) – Changes the stroke color of the win loss chart.
+* [`tiePointColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkWinLossChart/tiePointColor.html) - Specifies the tie point color of win loss chart. color.
 
 {% highlight dart %} 
 
