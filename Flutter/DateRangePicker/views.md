@@ -154,6 +154,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![vertical date picker](images/views/vertical-datepicker.jpg)
 
 ## See also
 
