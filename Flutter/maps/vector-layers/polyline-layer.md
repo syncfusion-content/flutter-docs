@@ -492,7 +492,7 @@ class PolylineModel {
 
 ## OnTap
 
-You can use the [`onTap`] callback to get a notification if the particular [`MapPolyline`] is tapped. You can also customize the tapped [MapPolyline] based on the index passed in the callback as shown in the below code snippet.
+You can use the [`onTap`] callback to get a notification if the particular [`MapPolyline`] is tapped. You can also customize the tapped [`MapPolyline`] based on the index passed in the callback as shown in the below code snippet.
 
 {% tabs %}
 {% highlight Dart %}
