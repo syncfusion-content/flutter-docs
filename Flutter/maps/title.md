@@ -18,6 +18,17 @@ You can define the maps title using [`SfMaps.title`](https://pub.dev/documentati
 {% tabs %}
 {% highlight Dart %}
 
+MapShapeSource dataSource;
+
+@override
+void initState() {
+  dataSource = MapShapeSource.asset(
+    "assets/world_map.json",
+    shapeDataField: "continent",
+  );
+  super.initState();
+}
+
 @override
 Widget build(BuildContext context) {
   return Scaffold(
@@ -27,15 +38,10 @@ Widget build(BuildContext context) {
          child: Padding(
            padding: EdgeInsets.only(left: 15, right: 15),
            child: SfMaps(
-             title: MapTitle(
-               text: 'World Map',
-             ),
+             title: MapTitle('World Map'),
              layers: [
                MapShapeLayer(
-                 delegate: MapShapeLayerDelegate(
-                   shapeFile: "assets/world_map.json",
-                   shapeDataField: "continent",
-                 ),
+                 source: dataSource,
                ),
              ],
            ),
@@ -57,38 +63,46 @@ You can change the style of the title text in the maps using the [`MapsTitle.tex
 {% tabs %}
 {% highlight Dart %}
 
+MapShapeSource dataSource;
+
+@override
+void initState() {
+  dataSource = MapShapeSource.asset(
+    "assets/world_map.json",
+    shapeDataField: "continent",
+  );
+  super.initState();
+}
+
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-    body: Center(
-      child: Container(
-        height: 350,
-        child: Padding(
-          padding: EdgeInsets.only(left: 15, right: 15),
-          child: SfMaps(
-            title: MapTitle(
-              text: 'World Map',
-              textStyle: const TextStyle(
+     body: Center(
+       child: Container(
+         height: 350,
+         child: Padding(
+           padding: EdgeInsets.only(left: 15, right: 15),
+           child: SfMaps(
+             title: MapTitle(
+               'World Map',
+               textStyle: const TextStyle(
                   color: Colors.red,
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
                   fontStyle: FontStyle.italic,
-                  fontFamily: 'Times'
-              ),
-            ),
-            layers: [
-              MapShapeLayer(
-                delegate: MapShapeLayerDelegate(
-                  shapeFile: "assets/world_map.json",
-                  shapeDataField: "continent",
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    )
-  );
+                  fontFamily: 'Times',
+               ),
+             ),
+             layers: [
+               MapShapeLayer(
+                 source: dataSource,
+               ),
+             ],
+           ),
+         ),
+       ),
+     )
+   );
 }
 
 {% endhighlight %}
@@ -103,42 +117,45 @@ N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/pa
 {% tabs %}
 {% highlight Dart %}
 
+MapShapeSource dataSource;
+
+@override
+void initState() {
+  dataSource = MapShapeSource.asset(
+    "assets/world_map.json",
+    shapeDataField: "continent",
+  );
+  super.initState();
+}
+
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-      body: Center(
-        child: Container(
-          height: 350,
-          child: Padding(
-            padding: EdgeInsets.only(left: 15, right: 15),
-            child: SfMapsTheme(
-              data: SfMapsThemeData(
-                titleTextStyle: const TextStyle(
-                    color: Colors.red,
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    fontStyle: FontStyle.italic,
-                    fontFamily: 'Times'
-                ),
+    body: Center(
+      child: Container(
+        height: 350,
+        child: Padding(
+          padding: EdgeInsets.only(left: 15, right: 15),
+          child: SfMapsTheme(
+            data: SfMapsThemeData(
+              titleTextStyle: const TextStyle(
+                color: Colors.red,
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+                fontStyle: FontStyle.italic,
+                fontFamily: 'Times'),
               ),
-              child: SfMaps(
-                title: MapTitle(
-                  text: 'World Map',
-                ),
-                layers: [
-                  MapShapeLayer(
-                    delegate: const MapShapeLayerDelegate(
-                      shapeFile: "assets/world_map.json",
-                      shapeDataField: "continent",
-                    ),
-                  ),
-                ],
-              ),
+            child: SfMaps(
+              title: MapTitle('World Map'),
+              layers: [
+                 MapShapeLayer(source: dataSource),
+               ],
             ),
           ),
         ),
       ),
-   );
+    ),
+  );
 }
 
 {% endhighlight %}
@@ -153,38 +170,46 @@ You can align the title text in the maps using the [`MapsTitle.alignment`](https
 {% tabs %}
 {% highlight Dart %}
 
+MapShapeSource dataSource;
+
+@override
+void initState() {
+  dataSource = MapShapeSource.asset(
+    "assets/world_map.json",
+    shapeDataField: "continent",
+  );
+  super.initState();
+}
+
 @override
 Widget build(BuildContext context) {
-   return Scaffold(
-      body: Center(
-        child: Container(
-          height: 350,
-          child: Padding(
-            padding: EdgeInsets.only(left: 15, right: 15),
-            child: SfMaps(
-              title: MapTitle(
-                text: 'World Map',
-                textStyle: const TextStyle(
-                    color: Colors.red,
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    fontStyle: FontStyle.italic,
-                    fontFamily: 'Times'
-                ),
-                alignment: Alignment.centerLeft,
-              ),
-              layers: [
-                MapShapeLayer(
-                  delegate: MapShapeLayerDelegate(
-                    shapeFile: "assets/world_map.json",
-                    shapeDataField: "continent",
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
+  return Scaffold(
+     body: Center(
+       child: Container(
+         height: 350,
+         child: Padding(
+           padding: EdgeInsets.only(left: 15, right: 15),
+           child: SfMaps(
+             title: MapTitle(
+               'World Map',
+               textStyle: const TextStyle(
+                  color: Colors.red,
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FontStyle.italic,
+                  fontFamily: 'Times',
+               ),
+               alignment: Alignment.centerLeft,
+             ),
+             layers: [
+               MapShapeLayer(
+                 source: dataSource,
+               ),
+             ],
+           ),
+         ),
+       ),
+     )
    );
 }
 
@@ -200,38 +225,46 @@ You can change the background color of the title in the maps using the [`MapsTit
 {% tabs %}
 {% highlight Dart %}
 
+MapShapeSource dataSource;
+
+@override
+void initState() {
+  dataSource = MapShapeSource.asset(
+    "assets/world_map.json",
+    shapeDataField: "continent",
+  );
+  super.initState();
+}
+
 @override
 Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Container(
-          height: 350,
-          child: Padding(
-            padding: EdgeInsets.only(left: 15, right: 15),
-            child: SfMaps(
-              title: MapTitle(
-                text: 'World Map',
-                textStyle: const TextStyle(
-                    color: Colors.red,
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    fontStyle: FontStyle.italic,
-                    fontFamily: 'Times'
-                ),
-                color: Colors.lightBlueAccent,
-              ),
-              layers: [
-                MapShapeLayer(
-                  delegate: MapShapeLayerDelegate(
-                    shapeFile: "assets/world_map.json",
-                    shapeDataField: "continent",
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
+  return Scaffold(
+     body: Center(
+       child: Container(
+         height: 350,
+         child: Padding(
+           padding: EdgeInsets.only(left: 15, right: 15),
+           child: SfMaps(
+             title: MapTitle(
+               'World Map',
+               textStyle: const TextStyle(
+                  color: Colors.red,
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FontStyle.italic,
+                  fontFamily: 'Times',
+               ),
+               color: Colors.lightBlueAccent,
+             ),
+             layers: [
+               MapShapeLayer(
+                 source: dataSource,
+               ),
+             ],
+           ),
+         ),
+       ),
+     )
    );
 }
 
@@ -247,6 +280,17 @@ You can decorate the title of maps using the [`MapsTitle.decoration`](https://pu
 {% tabs %}
 {% highlight Dart %}
 
+MapShapeSource dataSource;
+
+@override
+void initState() {
+  dataSource = MapShapeSource.asset(
+    "assets/world_map.json",
+    shapeDataField: "continent",
+  );
+  super.initState();
+}
+
 @override
 Widget build(BuildContext context) {
     return Scaffold(
@@ -257,7 +301,7 @@ Widget build(BuildContext context) {
             padding: EdgeInsets.only(left: 15, right: 15),
             child: SfMaps(
               title: MapTitle(
-                text: 'World Map',
+                'World Map',
                 textStyle: const TextStyle(
                     color: Colors.red,
                     fontSize: 16,
@@ -274,10 +318,7 @@ Widget build(BuildContext context) {
               ),
               layers: [
                 MapShapeLayer(
-                  delegate: MapShapeLayerDelegate(
-                    shapeFile: "assets/world_map.json",
-                    shapeDataField: "continent",
-                  ),
+                  source: dataSource,
                 ),
               ],
             ),
@@ -299,6 +340,17 @@ You can add margin to the maps title using the `MapsTitle.margin` property.
 {% tabs %}
 {% highlight Dart %}
 
+MapShapeSource dataSource;
+
+@override
+void initState() {
+  dataSource = MapShapeSource.asset(
+    "assets/world_map.json",
+    shapeDataField: "continent",
+  );
+  super.initState();
+}
+
 @override
 Widget build(BuildContext context) {
     return Scaffold(
@@ -309,7 +361,7 @@ Widget build(BuildContext context) {
             padding: EdgeInsets.only(left: 15, right: 15),
             child: SfMaps(
               title: MapTitle(
-                text: 'World Map',
+                'World Map',
                 textStyle: const TextStyle(
                     color: Colors.red,
                     fontSize: 16,
@@ -327,10 +379,7 @@ Widget build(BuildContext context) {
               ),
               layers: [
                 MapShapeLayer(
-                  delegate: MapShapeLayerDelegate(
-                    shapeFile: "assets/world_map.json",
-                    shapeDataField: "continent",
-                  ),
+                  source: dataSource,
                 ),
               ],
             ),
@@ -352,6 +401,17 @@ You can add padding to the maps title using the [`MapsTitle.padding`](https://pu
 {% tabs %}
 {% highlight Dart %}
 
+MapShapeSource dataSource;
+
+@override
+void initState() {
+  dataSource = MapShapeSource.asset(
+    "assets/world_map.json",
+    shapeDataField: "continent",
+  );
+  super.initState();
+}
+
 @override
 Widget build(BuildContext context) {
     return Scaffold(
@@ -362,7 +422,7 @@ Widget build(BuildContext context) {
             padding: EdgeInsets.only(left: 15, right: 15),
             child: SfMaps(
               title: MapTitle(
-                text: 'World Map',
+                'World Map',
                 textStyle: const TextStyle(
                     color: Colors.red,
                     fontSize: 16,
@@ -381,10 +441,7 @@ Widget build(BuildContext context) {
               ),
               layers: [
                 MapShapeLayer(
-                  delegate: MapShapeLayerDelegate(
-                    shapeFile: "assets/world_map.json",
-                    shapeDataField: "continent",
-                  ),
+                  source: dataSource,
                 ),
               ],
             ),
