@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains the steps required to populate the spark chart with data, data labels, marker and trackball. This section covers only the minimal features needed to know to get started with the spark charts.
 
-## Add Flutter Sparkline Chart to an application
+## Add Flutter Spark charts to an application
 
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
 
