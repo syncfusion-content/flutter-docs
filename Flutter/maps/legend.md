@@ -11,9 +11,9 @@ documentation: ug
 
 You can provide clear information on the data plotted on the map using legend.
 
-## Default shape legend
+## Shape legend
 
-You can show shape legend using the [`MapShapeLayer.legend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend-class.html) property. By default, the legend item's text is rendered based on the value of [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeDataField.html) property. The default value of the [`legend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend-class.html) property is `null`.
+You can show shape legend using the [`MapShapeLayer.legend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend-class.html) property. By default, the legend item's text is rendered based on the value of [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) property. The default value of the [`legend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend-class.html) property is `null`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -58,11 +58,11 @@ Widget build(BuildContext context) {
 ![Shape legend support](images/legend/default-legend.png)
 
 N>
-* Refer the [`MapLegendSettings`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/legendSettings.html), for customizing the legend items.
+* Refer the [`MapLegend.bar`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.bar.html), for showing bar legend.
 
-## Default Bubble legend
+## Bubble legend
 
-You can show bubble legend using the [`MapShapeLayer.legendSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend-class.html) property. By default, the legend item's text is rendered based on the value of [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeDataField.html) property.
+You can show bubble legend using the [`MapShapeLayer.legend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend-class.html) property. By default, the legend item's text is rendered based on the value of [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -128,11 +128,11 @@ class Model {
 ![Bubble legend support](images/legend/bubble_legend.png)
 
 N>
-* Refer the [`MapLegendSettings`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/legendSettings.html), for customizing the legend items.
+* Refer the [`MapLegend.bar`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.bar.html), for showing bar legend.
 
 ## Bar shape legend
 
-You can show bar shape legend using the [`MapShapeLayer.legend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.bar.html) property. By default, the legend item's text is rendered based on the value of [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeDataField.html) property. 
+You can show bar shape legend using the [`MapShapeLayer.legend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.bar.html) property. By default, the legend item's text is rendered based on the value of [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) property. 
 
 {% tabs %}
 {% highlight Dart %}
@@ -177,11 +177,11 @@ Widget build(BuildContext context) {
 ![Shape legend support](images/legend/default-legend.png)
 
 N>
-* Refer the [`MapLegendSettings`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/legendSettings.html), for customizing the legend items.
+* Refer the [`MapLegend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html), for showing default legend.
 
 ## Bar Bubble legend
 
-You can show bubble legend using the [`MapShapeLayer.legend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/legendSource.html) property. By default, the legend item's text is rendered based on the value of [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeDataField.html) property.
+You can show bubble legend using the [`MapShapeLayer.legend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.bar.html) property. By default, the legend item's text is rendered based on the value of [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -247,11 +247,11 @@ class Model {
 ![Bubble legend support](images/legend/bubble_legend.png)
 
 N>
-* Refer the [`MapLegendSettings`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/legendSettings.html), for customizing the legend items.
+* Refer the [`MapLegend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html), for showing default legend.
 
 ## Icon and text customization
 
-The icons color of the legend is applied based on the colors returned from the [`MapShapeLayerDelegate.shapeColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeColorValueMapper.html) property and the text is taken from the [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeDataField.html). It is possible to customize the legend icons color and texts using the [`MapColorMapper.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/color.html) and [`MapColorMapper.text`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/text.html) properties based on the [`MapColorMapper.value`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/value.html) or [`MapColorMapper.from`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/from.html) and [`MapColorMapper.to`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/to.html) properties.
+The icons color of the legend is applied based on the colors returned from the [`MapShapeLayerDelegate.shapeColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeColorValueMapper.html) property and the text is taken from the [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html). It is possible to customize the legend icons color and texts using the [`MapColorMapper.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/color.html) and [`MapColorMapper.text`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/text.html) properties based on the [`MapColorMapper.value`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/value.html) or [`MapColorMapper.from`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/from.html) and [`MapColorMapper.to`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/to.html) properties.
 
 {% tabs %}
 {% highlight Dart %}
@@ -321,18 +321,18 @@ class Model {
 
 ## Position
 
-You can position the legend items in different directions using the [`MapLegendSettings.position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/position.html) property. The default value of the [`position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/position.html) property is `MapLegendPosition.top`. The possible values are `left`, `right`, `top`, and `bottom`.
+You can position the legend items in different directions using the [`MapLegend.position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendPosition-class.html) property. The default value of the [`position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendPosition-class.html) property is `MapLegendPosition.top`. The possible values are `left`, `right`, `top`, and `bottom`.
 
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> data;
+List<Model> _data;
 MapShapeSource _shapeSource;
 
 @override
 void initState() {
   super.initState();
-  data = <Model>[
+  _data = <Model>[
       Model('India', 280),
       Model('United States of America', 190),
       Model('Kazakhstan', 37),
@@ -345,9 +345,9 @@ void initState() {
 
   _shapeSource = MapShapeSource.asset("assets/world_map.json",
         shapeDataField: "name",
-        dataCount: data.length,
-        primaryValueMapper: (int index) => data[index].country,
-        shapeColorValueMapper: (int index) => data[index].density,
+        dataCount: _data.length,
+        primaryValueMapper: (int index) => _data[index].country,
+        shapeColorValueMapper: (int index) => _data[index].density,
         shapeColorMappers: [
           MapColorMapper(from: 0, to: 100, color: Colors.red, text: '< 100/km'),
           MapColorMapper(
@@ -404,24 +404,24 @@ class Model {
 ![Legend position](images/legend/legend-position.png)
 
 N>
-* Refer the [`offset`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/offset.html), for placing the legend in custom position.
+* Refer the [`offset`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/offset.html), for placing the legend in custom position.
 
 ## Offset
 
-You can place the legend in custom position using the [`MapLegendSettings.offset`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/offset.html) property. The default value of the [`offset`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/offset.html) property is `null`.
+You can place the legend in custom position using the [`MapLegend.offset`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/offset.html) property. The default value of the [`offset`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/offset.html) property is `null`.
 
-If the property [`MapLegendSettings.offset`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/offset.html) has been set with the property [`MapLegendSettings.position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/position.html) as top, then the legend will be placed in top but with absolute position, i.e. legend will not take dedicated position for it and will be drawn at the top of the map.
+If the property [`MapLegend.offset`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/offset.html) has been set with the property [`MapLegend.position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendPosition-class.html) as top, then the legend will be placed in top but with absolute position, i.e. legend will not take dedicated position for it and will be drawn at the top of the map.
 
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> data;
+List<Model> _data;
 MapShapeSource _shapeSource;
 
 @override
 void initState() {
     super.initState();
-    data = <Model>[
+    _data = <Model>[
       Model('India', 280),
       Model('United States of America', 190),
       Model('Kazakhstan', 37),
@@ -434,9 +434,9 @@ void initState() {
 
     _shapeSource = MapShapeSource.asset("assets/world_map.json",
         shapeDataField: "name",
-        dataCount: data.length,
-        primaryValueMapper: (int index) => data[index].country,
-        shapeColorValueMapper: (int index) => data[index].density,
+        dataCount: _data.length,
+        primaryValueMapper: (int index) => _data[index].country,
+        shapeColorValueMapper: (int index) => _data[index].density,
         shapeColorMappers: [
           MapColorMapper(from: 0, to: 100, color: Colors.red, text: '< 100/km'),
           MapColorMapper(
@@ -493,7 +493,7 @@ class Model {
 
 ## Overflow mode
 
-You can wrap or scroll the legend items using the [`MapLegendSettings.overflowMode`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/overflowMode.html) property. The default value of the [`overflowMode`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/overflowMode.html) property is `MapLegendOverflowMode.wrap`. The possible values are `scroll` and `wrap`.
+You can wrap or scroll the legend items using the [`MapLegend.overflowMode`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendOverflowMode-class.html) property. The default value of the [`overflowMode`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendOverflowMode-class.html) property is `MapLegendOverflowMode.wrap`. The possible values are `scroll` and `wrap`.
 
 If the legend position is `left` or `right`, then the default scroll direction is `vertical`.
 
@@ -502,13 +502,13 @@ If the legend position is `top` or `bottom`, then the default scroll direction i
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> data;
+List<Model> _data;
 MapShapeSource _shapeSource;
 
 @override
 void initState() {
    super.initState();
-   data = <Model>[
+   _data = <Model>[
       Model('India', 280),
       Model('United States of America', 190),
       Model('Kazakhstan', 37),
@@ -521,9 +521,9 @@ void initState() {
 
    _shapeSource = MapShapeSource.asset("assets/world_map.json",
         shapeDataField: "name",
-        dataCount: data.length,
-        primaryValueMapper: (int index) => data[index].country,
-        shapeColorValueMapper: (int index) => data[index].density,
+        dataCount: _data.length,
+        primaryValueMapper: (int index) => _data[index].country,
+        shapeColorValueMapper: (int index) => _data[index].density,
         shapeColorMappers: [
           MapColorMapper(from: 0, to: 100, color: Colors.red, text: '< 100/km'),
           MapColorMapper(
@@ -581,28 +581,27 @@ class Model {
 ![Legend overflow mode](images/legend/legend-overflow-mode.gif)
 
 N>
-* Refer the [`showIcon`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/showIcon.html), for enabling the icon for the legend.
-* Refer the [`iconSize`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/iconSize.html), for setting the size of the icon.
+* Refer the [`iconSize`], for setting the size of the icon.
 
 ## Legend toggling
 
-You can enable toggling the legend items and the corresponding shapes or bubbles using the [`MapLegendSettings.enableToggleInteraction`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/enableToggleInteraction.html) property. The default value of the [`enableToggleInteraction`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/enableToggleInteraction.html) property is `false`. You can customize the toggled shapes or bubbles using the following properties:
+You can enable toggling the legend items and the corresponding shapes or bubbles using the [`MapLegend.enableToggleInteraction`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html) property. The default value of the [`MapLegend.enableToggleInteraction`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html) property is `false`. You can customize the toggled shapes or bubbles using the following properties:
 
-* **Toggled item color** - Change the color for the toggled legend item's icon and it's shape or bubble using the [`MapLegendSettings.toggledItemColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/toggledItemColor.html) property.
-* **Toggled item stroke color** - Change the stroke color which applies to the toggled legend item's shape or bubble using the [`MapLegendSettings.toggledItemStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/toggledItemStrokeColor.html) property.
-* **Toggled item stroke width** - Change the stroke width which applies to the toggled legend item's shape or bubble using the [`MapLegendSettings.toggledItemStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/toggledItemStrokeWidth.html) property.
-* **Toggled item opacity** - Change the opacity of the toggled legend item's shape or bubble using the [`MapLegendSettings.toggledItemOpacity`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/toggledItemOpacity.html) property.
+* **Toggled item color** - Change the color for the toggled legend item's icon and it's shape or bubble using the [`MapLegend.toggledItemColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html) property.
+* **Toggled item stroke color** - Change the stroke color which applies to the toggled legend item's shape or bubble using the [`MapLegend.toggledItemStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html) property.
+* **Toggled item stroke width** - Change the stroke width which applies to the toggled legend item's shape or bubble using the [`MapLegend.toggledItemStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html) property.
+* **Toggled item opacity** - Change the opacity of the toggled legend item's shape or bubble using the [`MapLegend.toggledItemOpacity`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html) property.
 
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> data;
+List<Model> _data;
 MapShapeSource _shapeSource;
 
 @override
 void initState() {
    super.initState();
-   data = <Model>[
+   _data = <Model>[
       Model('India', 280),
       Model('United States of America', 190),
       Model('Kazakhstan', 37),
@@ -687,13 +686,13 @@ N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/pa
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> data;
+List<Model> _data;
 MapShapeSource _shapeSource;
 
 @override
 void initState() {
     super.initState();
-    data = <Model>[
+    _data = <Model>[
       Model('India', 280),
       Model('United States of America', 190),
       Model('Kazakhstan', 37),
@@ -773,18 +772,18 @@ class Model {
 
 ## Text style
 
-You can customize the legend item's text style using the [`MapLegendSettings.textStyle`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/textStyle.html) property.
+You can customize the legend item's text style using the [`MapLegend.textStyle`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/textStyle.html) property.
 
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> data;
+List<Model> _data;
 MapShapeSource _shapeSource;
 
 @override
 void initState() {
     super.initState();
-    data = <Model>[
+    _data = <Model>[
       Model('India', 280),
       Model('United States of America', 190),
       Model('Kazakhstan', 37),
@@ -797,9 +796,9 @@ void initState() {
 
    _shapeSource = MapShapeSource.asset("assets/world_map.json",
         shapeDataField: "name",
-        dataCount: data.length,
-        primaryValueMapper: (int index) => data[index].country,
-        shapeColorValueMapper: (int index) => data[index].density,
+        dataCount: _data.length,
+        primaryValueMapper: (int index) => _data[index].country,
+        shapeColorValueMapper: (int index) => _data[index].density,
         shapeColorMappers: [
           MapColorMapper(from: 0, to: 100, color: Colors.red, text: '< 100/km'),
           MapColorMapper(
@@ -868,13 +867,13 @@ N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/pa
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> data;
+List<Model> _data;
 MapShapeSource _shapeSource;
 
 @override
 void initState() {
     super.initState();
-    data = <Model>[
+    _data = <Model>[
       Model('India', 280),
       Model('United States of America', 190),
       Model('Kazakhstan', 37),
@@ -887,9 +886,9 @@ void initState() {
 
    _shapeSource = MapShapeSource.asset("assets/world_map.json",
         shapeDataField: "name",
-        dataCount: data.length,
-        primaryValueMapper: (int index) => data[index].country,
-        shapeColorValueMapper: (int index) => data[index].density,
+        dataCount: _data.length,
+        primaryValueMapper: (int index) => _data[index].country,
+        shapeColorValueMapper: (int index) => _data[index].density,
         shapeColorMappers: [
           MapColorMapper(from: 0, to: 100, color: Colors.red, text: '< 100/km'),
           MapColorMapper(
@@ -958,23 +957,22 @@ class Model {
 
 You can customize the legend items using the following properties.
 
-* **showIcon** - Used to show or hide the legend icons. The default value of the [`showIcon`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/showIcon.html) property is `true`.
-* **iconType** - Used to change the icon shape. The default value of the [`iconType`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/iconType.html) property is `MapIconType.circle`. The possible values are `circle`, `square`, `triangle`, and `diamond`.
-* **iconSize** - Used to change the size of the icon. The default value of [`iconSize`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/iconSize.html) is `Size(12.0, 12.0)`.
-* **itemsSpacing** - Used to provide space between the each legend items. The default value of the [`itemsSpacing`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/itemsSpacing.html) is `10.0`.
-* **direction** - Used to arrange the legend items in either horizontal or vertical direction. The default value of [`direction`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/direction.html) property is `horizontal`, if the value of the [`position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/position.html) property is `top`, `bottom` and defaults to `vertical`, if the value of the [`position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/position.html) property is `left` or `right`.
-* **padding** - Used to set padding around the legend. The default value of the [`padding`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/padding.html) property is `EdgeInsets.all(10.0)`.
+* **iconType** - Used to change the icon shape. The default value of the [`iconType`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html) property is `MapIconType.circle`. The possible values are `circle`, `square`, `triangle`, and `diamond`.
+* **iconSize** - Used to change the size of the icon. The default value of [`iconSize`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html) is `Size(12.0, 12.0)`.
+* **itemsSpacing** - Used to provide space between the each legend items. The default value of the [`itemsSpacing`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html) is `10.0`.
+* **direction** - Used to arrange the legend items in either horizontal or vertical direction. The default value of [`direction`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html) property is `horizontal`, if the value of the [`position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html) property is `top`, `bottom` and defaults to `vertical`, if the value of the [`position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html) property is `left` or `right`.
+* **padding** - Used to set padding around the legend. The default value of the [`padding`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html) property is `EdgeInsets.all(10.0)`.
 
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> data;
+List<Model> _data;
 MapShapeSource _shapeSource;
 
 @override
 void initState() {
     super.initState();
-    data = <Model>[
+    _data = <Model>[
       Model('India', 280),
       Model('United States of America', 190),
       Model('Kazakhstan', 37),
@@ -987,9 +985,9 @@ void initState() {
 
     _shapeSource = MapShapeSource.asset("assets/world_map.json",
         shapeDataField: "name",
-        dataCount: data.length,
-        primaryValueMapper: (int index) => data[index].country,
-        shapeColorValueMapper: (int index) => data[index].density,
+        dataCount: _data.length,
+        primaryValueMapper: (int index) => _data[index].country,
+        shapeColorValueMapper: (int index) => _data[index].density,
         shapeColorMappers: [
           MapColorMapper(from: 0, to: 100, color: Colors.red, text: '< 100/km'),
           MapColorMapper(
@@ -1050,24 +1048,24 @@ class Model {
 ![Legend items customization](images/legend/legend-items-customization.png)
 
 N>
-* Refer the [`position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/position.html), for setting the position of the legend.
+* Refer the [`position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/position.html), for setting the position of the legend.
 
-## Bar Legend Segment Painting Style
+## Bar legend segment painting style
 
 ### Solid
 
-You can set solid color for the bar by using the [MapLegendPaintingStyle.solid]. By defaults [MapLegendPaintingStyle] will be `solid`.
+You can set solid color for the bar by using the [MapLegendPaintingStyle.solid](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendPaintingStyle-class.html). By defaults [MapLegendPaintingStyle](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendPaintingStyle-class.html) will be `solid`.
 
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> data;
+List<Model> _data;
 MapShapeSource _shapeSource;
 
 @override
 void initState() {
    super.initState();
-   data = <Model>[
+   _data = <Model>[
       Model('India', 280),
       Model('United States of America', 190),
       Model('Kazakhstan', 37),
@@ -1080,9 +1078,9 @@ void initState() {
 
    _shapeSource = MapShapeSource.asset("assets/world_map.json",
         shapeDataField: "name",
-        dataCount: data.length,
-        primaryValueMapper: (int index) => data[index].country,
-        shapeColorValueMapper: (int index) => data[index].density,
+        dataCount: _data.length,
+        primaryValueMapper: (int index) => _data[index].country,
+        shapeColorValueMapper: (int index) => _data[index].density,
         shapeColorMappers: [
           MapColorMapper(from: 0, to: 100, color: Colors.red, text: '< 100/km'),
           MapColorMapper(
@@ -1140,18 +1138,18 @@ class Model {
 
 ### Gradient
 
-You can set gradient color for the bar by using the [MapLegendPaintingStyle.gradient].
+You can set gradient color for the bar by using the [MapLegendPaintingStyle.gradient](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendPaintingStyle-class.html).
 
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> data;
+List<Model> _data;
 MapShapeSource _shapeSource;
 
 @override
 void initState() {
    super.initState();
-   data = <Model>[
+   _data = <Model>[
       Model('India', 280),
       Model('United States of America', 190),
       Model('Kazakhstan', 37),
@@ -1164,9 +1162,9 @@ void initState() {
 
    _shapeSource = MapShapeSource.asset("assets/world_map.json",
         shapeDataField: "name",
-        dataCount: data.length,
-        primaryValueMapper: (int index) => data[index].country,
-        shapeColorValueMapper: (int index) => data[index].density,
+        dataCount: _data.length,
+        primaryValueMapper: (int index) => _data[index].country,
+        shapeColorValueMapper: (int index) => _data[index].density,
         shapeColorMappers: [
           MapColorMapper(from: 0, to: 100, color: Colors.red, text: '< 100/km'),
           MapColorMapper(
@@ -1227,23 +1225,23 @@ class Model {
 You can customize the legend items using the following properties.
 
 * **segmentSize** - Used to change the size of the bar segments. The default size of the bar segment is `Size(80.0, 12.0)`.
-* **labelsPlacement** - Used to place the labels either between the segments or on the segments. The default value of the [`labelsPlacement`] property will be `MapLegendLabelsPlacement.betweenItems` when setting range color mapper without setting color mapper text property otherwise it will be `MapLegendLabelsPlacement.onItem`.
-* **labelOverflow** - Used to remove or trim the legend labels based on the bar legend size.The default value of the [`labelOverflow`] property will be `MapLabelOverflow.hide`. 
-* **edgeLabelsPlacement** - Used to place the edge labels either inside or outside of the bar legend. The default value of the [`edgeLabelsPlacement`] property will be `MapLegendEdgeLabelsPlacement.inside`
-* **spacing** - Used to provide space between the each legend items. The default value of the [`spacing`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/itemsSpacing.html) is `2.0`.
-* **direction** - Used to arrange the legend items in either horizontal or vertical direction. The default value of [`direction`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/direction.html) property is `horizontal`, if the value of the [`position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/position.html) property is `top`, `bottom` and defaults to `vertical`, if the value of the [`position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/position.html) property is `left` or `right`.
-* **padding** - Used to set padding around the legend. The default value of the [`padding`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/padding.html) property is `EdgeInsets.all(10.0)`.
+* **labelsPlacement** - Used to place the labels either between the segments or on the segments. The default value of the [`labelsPlacement`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendLabelsPlacement-class.html) property will be `MapLegendLabelsPlacement.betweenItems` when setting range color mapper without setting color mapper text property otherwise it will be `MapLegendLabelsPlacement.onItem`.
+* **labelOverflow** - Used to remove or trim the legend labels based on the bar legend size.The default value of the [`labelOverflow`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLabelOverflow-class.html) property will be `MapLabelOverflow.hide`. 
+* **edgeLabelsPlacement** - Used to place the edge labels either inside or outside of the bar legend. The default value of the [`edgeLabelsPlacement`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendEdgeLabelsPlacement-class.html) property will be `MapLegendEdgeLabelsPlacement.inside`.
+* **spacing** - Used to provide space between the each legend items. The default value of the [`spacing`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/spacing.html) is `2.0`.
+* **direction** - Used to arrange the legend items in either horizontal or vertical direction. The default value of [`direction`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/direction.html) property is `horizontal`, if the value of the [`position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/position.html) property is `top`, `bottom` and defaults to `vertical`, if the value of the [`position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/position.html) property is `left` or `right`.
+* **padding** - Used to set padding around the legend. The default value of the [`padding`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/padding.html) property is `EdgeInsets.all(10.0)`.
 
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> data;
+List<Model> _data;
 MapShapeSource _shapeSource;
 
 @override
 void initState() {
    super.initState();
-   data = <Model>[
+   _data = <Model>[
       Model('India', 280),
       Model('United States of America', 190),
       Model('Kazakhstan', 37),
@@ -1256,9 +1254,9 @@ void initState() {
 
    _shapeSource = MapShapeSource.asset("assets/world_map.json",
         shapeDataField: "name",
-        dataCount: data.length,
-        primaryValueMapper: (int index) => data[index].country,
-        shapeColorValueMapper: (int index) => data[index].density,
+        dataCount: _data.length,
+        primaryValueMapper: (int index) => _data[index].country,
+        shapeColorValueMapper: (int index) => _data[index].density,
         shapeColorMappers: [
           MapColorMapper(from: 0, to: 100, color: Colors.red, text: '< 100/km'),
           MapColorMapper(
