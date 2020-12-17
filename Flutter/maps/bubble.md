@@ -13,7 +13,7 @@ Bubbles can be rendered in different colors and sizes based on the data values o
 
 ## Enable bubbles
 
-You can enable bubbles using the [`MapShapeSource.bubbleSizeMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/bubbleSizeMapper.html) property is used to specify the value based on which the bubble's size has to be rendered.
+You can enable bubbles using the [`MapShapeSource.bubbleSizeMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/bubbleSizeMapper.html). This property is used to specify the value based on which the bubble's size has to be rendered.
 
 {% tabs %}
 {% highlight Dart %}
@@ -69,7 +69,7 @@ class Model {
 
 ## Tooltip for the bubbles
 
-You can enable tooltip for the bubbles using the [`MapShapeLayer.bubbleTooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/bubbleTooltipBuilder.html) property. It is used to indicate clearly the information on the current tapped bubble.
+You can enable tooltip for the bubbles using the [`MapShapeLayer.bubbleTooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/bubbleTooltipBuilder.html) property. It can be used to indicate clearly the information about the currently interacted bubble.
 
 {% tabs %}
 {% highlight Dart %}

@@ -68,13 +68,17 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## Add a GeoJSON file for shape layer
+## Add a GeoJSON file for shape layer from various source
 
-The [`layers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps/layers.html) in [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) contains collection of [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html). The actual geographical rendering is done in the each [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html). The [`delegate`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/delegate.html) property of the [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html) is of type [`MapShapeLayerDelegate`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate-class.html). The path of the .json file which contains the GeoJSON data has to be set to the [`shapeFile`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeFile.html) property of the [`MapShapeLayerDelegate`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate-class.html).
+The [`layers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps/layers.html) in [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) contains collection of [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html). The actual geographical rendering is done in the each [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html). The [`source`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/source.html) property of the [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html) is of type [`MapShapeSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource-class.html). The [`source`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/source.html) can be set as the .json file from an asset bundle, from network or from Uint8List as bytes. Use the respective constructor depends on the type of the source.
 
-The [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeDataField.html) property of the [`MapShapeLayerDelegate`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate-class.html) is used to refer the unique field name in the .json file to identify each shapes. In 'Mapping the data source' section of this document, this [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeDataField.html) will be used to map with respective value returned in [`primaryValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/primaryValueMapper.html) from the data source.
+The [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) property of the [`MapShapeSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource-class.html) is used to refer the unique field name in the .json file to identify each shapes. In 'Mapping the data source' section of this document, this [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) will be used to map with respective value returned in [`primaryValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/primaryValueMapper.html) from the data source.
 
 N> You can get the [`australia.json`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/australia-json-910278184.zip) file here. Add this json file to the assets folder of your root directory and refer the json file path in the `pubspec.yaml` file.
+
+<b>From asset bundle</b>
+
+Load .json data from an asset bundle.
 
 {% tabs %}
 {% highlight Dart %}
@@ -87,13 +91,90 @@ Widget build(BuildContext context) {
       child: SfMaps(
         layers: [
           MapShapeLayer(
-            delegate: const MapShapeLayerDelegate(
-              shapeFile: 'assets/australia.json',
+            source: MapShapeSource.asset(
+              'assets/australia.json',
               shapeDataField: 'STATE_NAME',
             ),
           ),
         ],
       ),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+<b>From network</b>
+
+Load .json data from the network.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: Padding(
+      padding: EdgeInsets.all(15),
+      child: SfMaps(
+        layers: [
+          MapShapeLayer(
+            source: MapShapeSource.network(
+              'http://www.json-generator.com/api/json/get/bVqXoJvfjC?indent=2',
+              shapeDataField: 'name',
+            ),
+          ),
+        ],
+      ),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+<b>From memory</b>
+
+Load .json data as bytes from [`Uint8List`].
+
+{% tabs %}
+{% highlight Dart %}
+
+MapShapeSource source;
+Uint8List bytesData;
+
+@override
+void initState() {
+  fetchJsonData();
+  super.initState();
+}
+
+void fetchJsonData() async {
+  Uint8List data = (await rootBundle.load('assets/australia.json')).buffer.asUint8List();
+  setState(() => bytesData = data);
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(body: _getMaps());
+}
+
+Widget _getMaps() {
+  if (bytesData == null) {
+    return CircularProgressIndicator();
+  }
+
+  return Container(
+    child: SfMaps(
+      layers: [
+        MapShapeLayer(
+          source: MapShapeSource.memory(
+            bytesData,
+            shapeDataField: 'STATE_NAME',
+          ),
+        ),
+      ],
     ),
   );
 }
@@ -135,8 +216,8 @@ Widget build(BuildContext context) {
     body: SfMaps(
        layers: <MapShapeLayer>[
          MapShapeLayer(
-           delegate: MapShapeLayerDelegate(
-             shapeFile: 'assets/australia.json',
+           source: MapShapeSource.asset(
+             'assets/australia.json',
              shapeDataField: 'STATE_NAME',
              dataCount: data.length,
              primaryValueMapper: (int index) => data[index].state,
@@ -182,6 +263,7 @@ Add the basic maps elements such as title, data labels, legend, and tooltip as s
 {% highlight Dart %}
 
 List<Model> data;
+MapShapeSource dataSource;
 
 @override
 void initState() {
@@ -199,55 +281,58 @@ void initState() {
       Model('Tasmania', Color.fromRGBO(99, 164, 230, 1), 'Tasmania'),
       Model('Australian Capital Territory', Colors.teal, 'ACT')
     ];
+
+    dataSource = MapShapeSource.asset(
+      'assets/australia.json',
+       shapeDataField: 'STATE_NAME',
+       dataCount: data.length,
+       primaryValueMapper: (int index) => data[index].state,
+       dataLabelMapper: (int index) => data[index].stateCode,
+       shapeColorValueMapper: (int index) => data[index].color,
+    );
     super.initState();
 }
 
 @override
 Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Container(
-          height: 520,
-          child: Padding(
-            padding: EdgeInsets.all(15),
-            child: SfMaps(
-              title: const MapTitle(text: 'Australia map'),
-              layers: <MapShapeLayer>[
-                MapShapeLayer(
-                  delegate: MapShapeLayerDelegate(
-                    shapeFile: 'assets/australia.json',
-                    shapeDataField: 'STATE_NAME',
-                    dataCount: data.length,
-                    primaryValueMapper: (int index) => data[index].state,
-                    dataLabelMapper: (int index) => data[index].stateCode,
-                    shapeColorValueMapper: (int index) => data[index].color,
-                    shapeTooltipTextMapper: (int index) => data[index].stateCode,
-                  ),
-                  showDataLabels: true,
-                  legendSource: MapElement.shape,
-                  enableShapeTooltip: true,
-                  tooltipSettings: MapTooltipSettings(color: Colors.grey[700],
-                      strokeColor: Colors.white, strokeWidth: 2
-                  ),
-                  strokeColor: Colors.white,
-                  strokeWidth: 0.5,
-                  dataLabelSettings: MapDataLabelSettings(
-                      textStyle: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                          fontSize:
-                          Theme
-                              .of(context)
-                              .textTheme
-                              .caption
-                              .fontSize)),
-                ),
-              ],
-            ),
+  return Scaffold(
+    body: Center(
+      child: Container(
+        height: 520,
+        child: Padding(
+          padding: EdgeInsets.all(15),
+          child: SfMaps(
+            title: const MapTitle('Australia map'),
+            layers: <MapShapeLayer>[
+              MapShapeLayer(
+                source: dataSource,
+                showDataLabels: true,
+                legend: MapLegend(MapElement.shape),
+                shapeTooltipBuilder: (BuildContext context, int index) {
+                  return Padding(
+                    padding: EdgeInsets.all(10),
+                    child: Text(data[index].stateCode),
+                  );
+                },
+                tooltipSettings: MapTooltipSettings(
+                    color: Colors.grey[700],
+                    strokeColor: Colors.white,
+                    strokeWidth: 2),
+                strokeColor: Colors.white,
+                strokeWidth: 0.5,
+                dataLabelSettings: MapDataLabelSettings(
+                    textStyle: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize:
+                            Theme.of(context).textTheme.caption.fontSize)),
+              ),
+            ],
           ),
         ),
       ),
-   );
+    ),
+  );
 }
 
 class Model {

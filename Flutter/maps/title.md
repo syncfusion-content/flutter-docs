@@ -13,7 +13,7 @@ This section helps to learn about how to add title in the maps and customize the
 
 ## Title text
 
-You can define the maps title using [`SfMaps.title`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps/title.html) property. You can set the text for the title.
+You can define the maps title using [`SfMaps.title`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps/title.html) property. You can set the text for the title using the [`MapsTitle.text`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTitle/text.html) property.
 
 {% tabs %}
 {% highlight Dart %}
