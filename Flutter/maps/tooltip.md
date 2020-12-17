@@ -608,5 +608,6 @@ class Model {
 ![Maps tooltip Appearance customization](images/tooltip/tooltip_textStyle.png)
 
 N>
-* Refer the [`MapShapeLayer.enableBubbleTooltip`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/enableBubbleTooltip.html), for enabling tooltip for the bubbles.
-* Refer the [`MapShapeLayer.enableShapeTooltip`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/enableShapeTooltip.html), for enabling tooltip for the shapes.
+* Refer the [MapShapeLayer.shapeTooltipBuilder](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/shapeTooltipBuilder.html), for showing tooltip for the shapes.
+* Refer the [MapShapeLayer.bubbleTooltipBuilder](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/bubbleTooltipBuilder.html), for showing tooltip for the bubbles.
+* Refer the [MapLayer.markerTooltipBuilder], for showing tooltip for the markers.
