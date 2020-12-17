@@ -46,7 +46,8 @@ Widget build(BuildContext context) {
                 shapeDataField: "continent",
                 dataCount: data.length,
                 primaryValueMapper: (int index) => data[index].continent,
-                bubbleSizeMapper: (int index) => data[index].count),
+                bubbleSizeMapper: (int index) => data[index].count,
+            ),
           )
         ],
       ),
