@@ -234,7 +234,7 @@ class OrderInfoDataSource extends DataGridSource<OrderInfo> {
 
 ## Callbacks
 
-The SfDataPager provides `onPageNavigationStart` and `onPageNavigationEnd` callbacks to listen the page navigation in widget level. 
+The SfDataPager provides [onPageNavigationStart](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/onPageNavigationStart.html) and [onPageNavigationEnd](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/onPageNavigationEnd.html) callbacks to listen the page navigation in widget level. 
 
 Typically, these callbacks are used to show and hide loading indicator.
 
