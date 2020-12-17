@@ -195,7 +195,7 @@ class DataModel {
 
 ## Width
 
-You can apply the same width for all [`MapLine`] in the [`lines`] collection using the [`MapLineLayer.width`] property. Alternatively, you can apply different width to each [`MapLine`] in the [`lines`] collection using the individual [`MapLine.width`] property. The default value of the [`MapLineLayer.width`] property is `2`
+You can apply the same width for all [`MapLine`] in the [`lines`] collection using the [`MapLineLayer.width`] property. Alternatively, you can apply different width to each [`MapLine`] in the [`lines`] collection using the individual [`MapLine.width`] property. The default value of the [`MapLineLayer.width`] property is `2`.
 
 {% tabs %}
 {% highlight Dart %}

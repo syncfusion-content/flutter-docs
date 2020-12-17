@@ -235,7 +235,7 @@ class PolylineModel {
 
 ## Width
 
-You can apply the same width for all [`MapPolyline`] in the [`polylines`] collection using the [`MapPolylineLayer.width`] property. Alternatively, you can apply different width to each [`MapPolyline`] in the [`polylines`] collection using the individual [`MapPolyline.width`] property. The default value of the [`MapPolylineLayer.width`] property is `2`
+You can apply the same width for all [`MapPolyline`] in the [`polylines`] collection using the [`MapPolylineLayer.width`] property. Alternatively, you can apply different width to each [`MapPolyline`] in the [`polylines`] collection using the individual [`MapPolyline.width`] property. The default value of the [`MapPolylineLayer.width`] property is `2`.
 
 {% tabs %}
 {% highlight Dart %}

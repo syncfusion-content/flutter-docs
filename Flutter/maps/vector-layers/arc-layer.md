@@ -365,7 +365,7 @@ class DataModel {
 
 ## Width
 
-You can apply the same width for all [`MapArc`] in the [`arcs`] collection using the [`MapArcLayer.width`] property. Alternatively, you can apply different width to each [`MapArc`] in the [`arcs`] collection using the individual [`MapArc.width`] property. The default value of the [`MapArcLayer.width`] property is `2`
+You can apply the same width for all [`MapArc`] in the [`arcs`] collection using the [`MapArcLayer.width`] property. Alternatively, you can apply different width to each [`MapArc`] in the [`arcs`] collection using the individual [`MapArc.width`] property. The default value of the [`MapArcLayer.width`] property is `2`.
 
 {% tabs %}
 {% highlight Dart %}
