@@ -1,0 +1,715 @@
+---
+layout: post
+title: Adding circles in Syncfusion Flutter maps | Syncfusion
+description: This section explains about how to add circles on the map and customize its appearance in the Flutter maps.
+platform: Flutter
+control: SfMaps
+documentation: ug
+---
+
+# Circles in the Flutter maps
+
+Circle layer is a sublayer that renders a group of [`MapCircle`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircle-class.html) on [`MapShapeLayer`] and [`MapTileLayer`]. This section helps to learn about how to add the circles and customize them.
+
+## Adding circles
+
+The [`circles`] is a collection of [`MapCircle`]. Every single [`MapCircle`] renders a circle using the [`MapCircle.center`] and [`MapCircle.radius`] properties.
+
+N> It is applicable for both the tile layer and shape layer.
+
+<b>In the shape layer</b>
+
+{% tabs %}
+{% highlight Dart %}
+
+List<MapLatLng> circles;
+MapShapeSource dataSource;
+
+@override
+void initState() {
+    circles = <MapLatLng>[
+      MapLatLng(15.2993, 74.1240),
+      MapLatLng(15.5057, 80.0499),
+      MapLatLng(19.7515, 75.7139),
+      MapLatLng(23.0225, 72.5714),
+      MapLatLng(24.8607, 67.0011),
+      MapLatLng(27.0238, 74.2179),
+      MapLatLng(26.8467, 80.9462),
+      MapLatLng(21.2787, 85.2799),
+      MapLatLng(20.9517, 85.0985),
+      MapLatLng(25.0961, 85.3131),
+      MapLatLng(24.6637, 93.9063),
+      MapLatLng(26.2006, 92.9376),
+      MapLatLng(28.7041, 77.1025),
+      MapLatLng(29.0588, 76.0856),
+      MapLatLng(30.0668, 79.0193),
+      MapLatLng(31.1471, 75.3412),
+    ];
+
+    dataSource = MapShapeSource.asset(
+      'assets/india.json',
+      shapeDataField: 'name',
+    );
+    super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+   return Scaffold(
+      body: SfMaps(
+        layers: [
+          MapShapeLayer(
+            source: dataSource,
+            sublayers: [
+              MapCircleLayer(
+                circles: List<MapCircle>.generate(
+                  circles.length,
+                  (int index) {
+                    return MapCircle(
+                      center: circles[index],
+                    );
+                  },
+                ).toSet(),
+              ),
+            ],
+          ),
+        ],
+      ),
+   );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+<b>In the tile layer</b>
+
+{% tabs %}
+{% highlight Dart %}
+
+List<MapLatLng> circles;
+
+@override
+void initState() {
+    circles = <MapLatLng>[
+      MapLatLng(15.2993, 74.1240),
+      MapLatLng(15.5057, 80.0499),
+      MapLatLng(19.7515, 75.7139),
+      MapLatLng(23.0225, 72.5714),
+      MapLatLng(24.8607, 67.0011),
+      MapLatLng(27.0238, 74.2179),
+      MapLatLng(26.8467, 80.9462),
+      MapLatLng(21.2787, 85.2799),
+      MapLatLng(20.9517, 85.0985),
+      MapLatLng(25.0961, 85.3131),
+      MapLatLng(24.6637, 93.9063),
+      MapLatLng(26.2006, 92.9376),
+      MapLatLng(28.7041, 77.1025),
+      MapLatLng(29.0588, 76.0856),
+      MapLatLng(30.0668, 79.0193),
+      MapLatLng(31.1471, 75.3412),
+    ];
+    super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+   return Scaffold(
+      body: SfMaps(
+        layers: [
+          MapTileLayer(
+            urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+            sublayers: [
+              MapCircleLayer(
+                circles: List<MapCircle>.generate(
+                  circles.length,
+                  (int index) {
+                    return MapCircle(
+                      center: circles[index],
+                    );
+                  },
+                ).toSet(),
+              ),
+            ],
+          ),
+        ],
+      ),
+   );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Radius
+
+You can change the size of the circles using the [`MapCircle.radius`] property. The default value of the [`MapCircle.radius`] property is 5.
+
+{% tabs %}
+{% highlight Dart %}
+
+List<MapLatLng> circles;
+MapShapeSource dataSource;
+
+@override
+void initState() {
+    circles = <MapLatLng>[
+      MapLatLng(15.2993, 74.1240),
+      MapLatLng(15.5057, 80.0499),
+      MapLatLng(19.7515, 75.7139),
+      MapLatLng(23.0225, 72.5714),
+      MapLatLng(24.8607, 67.0011),
+      MapLatLng(27.0238, 74.2179),
+      MapLatLng(26.8467, 80.9462),
+      MapLatLng(21.2787, 85.2799),
+      MapLatLng(20.9517, 85.0985),
+      MapLatLng(25.0961, 85.3131),
+      MapLatLng(24.6637, 93.9063),
+      MapLatLng(26.2006, 92.9376),
+      MapLatLng(28.7041, 77.1025),
+      MapLatLng(29.0588, 76.0856),
+      MapLatLng(30.0668, 79.0193),
+      MapLatLng(31.1471, 75.3412),
+    ];
+
+    dataSource = MapShapeSource.asset(
+      'assets/india.json',
+      shapeDataField: 'name',
+    );
+    super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+   return Scaffold(
+      body: SfMaps(
+        layers: [
+          MapShapeLayer(
+            source: dataSource,
+            sublayers: [
+              MapCircleLayer(
+                circles: List<MapCircle>.generate(
+                  circles.length,
+                  (int index) {
+                    return MapCircle(
+                      center: circles[index],
+                      radius: 10,
+                    );
+                  },
+                ).toSet(),
+              ),
+            ],
+          ),
+        ],
+      ),
+   );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Fill color
+
+You can apply the same color for all [`MapCircle`] in the [`circles`] collection using the [`MapCircleLayer.color`] property. Alternatively, you can apply different colors to each [`MapCircle`] in the [`circles`] collection using the individual [`MapCircle.color`] property.
+
+{% tabs %}
+{% highlight Dart %}
+
+List<MapCircleModel> circles;
+MapShapeSource dataSource;
+
+@override
+void initState() {
+    circles = <MapCircleModel>[
+      MapCircleModel(MapLatLng(15.2993, 74.1240), Colors.pink),
+      MapCircleModel(MapLatLng(15.5057, 80.0499), Colors.teal),
+      MapCircleModel(MapLatLng(19.7515, 75.7139), Colors.purple),
+      MapCircleModel(MapLatLng(23.0225, 72.5714), Colors.green),
+      MapCircleModel(MapLatLng(24.8607, 67.0011), Colors.orange),
+      MapCircleModel(MapLatLng(27.0238, 74.2179), Colors.blue),
+      MapCircleModel(MapLatLng(26.8467, 80.9462), Colors.purpleAccent),
+      MapCircleModel(MapLatLng(21.2787, 85.2799), Colors.redAccent),
+    ];
+
+    dataSource = MapShapeSource.asset(
+      'assets/india.json',
+      shapeDataField: 'name',
+    );
+    super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+   return Scaffold(
+      body: SfMaps(
+        layers: [
+          MapShapeLayer(
+            source: dataSource,
+            sublayers: [
+              MapCircleLayer(
+                circles: List<MapCircle>.generate(
+                  circles.length,
+                  (int index) {
+                    return MapCircle(
+                      center: circles[index].center,
+                      radius: 10,
+                      color: circles[index].color,
+                    );
+                  },
+                ).toSet(),
+              ),
+            ],
+          ),
+        ],
+      ),
+   );
+}
+
+class MapCircleModel {
+  MapCircleModel(this.center, this.color);
+
+  final MapLatLng center;
+  final Color color;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Stroke width and color
+
+You can apply the same stroke width for all [`MapCircle`] in the [`circles`] collection using the [`MapCircleLayer.strokeWidth`] property. Alternatively, you can apply different stroke width to each [`MapCircle`] in the [`circles`] collection using the individual [`MapCircle.strokeWidth`] property. The default value of the [`MapCircleLayer.strokeWidth`] property is `2`.
+
+You can apply the same stroke color for all [`MapCircle`] in the [`circles`] collection using the [`MapCircleLayer.strokeColor`] property. Alternatively, you can apply different stroke color to each [`MapCircle`] in the [`circles`] collection using the individual [`MapCircle.strokeColor`] property.
+
+{% tabs %}
+{% highlight Dart %}
+
+List<MapCircleModel> circles;
+MapShapeSource dataSource;
+
+@override
+void initState() {
+    circles = <MapCircleModel>[
+      MapCircleModel(MapLatLng(15.2993, 74.1240), Colors.pink),
+      MapCircleModel(MapLatLng(15.5057, 80.0499), Colors.teal),
+      MapCircleModel(MapLatLng(19.7515, 75.7139), Colors.purple),
+      MapCircleModel(MapLatLng(23.0225, 72.5714), Colors.green),
+      MapCircleModel(MapLatLng(24.8607, 67.0011), Colors.orange),
+      MapCircleModel(MapLatLng(27.0238, 74.2179), Colors.blue),
+      MapCircleModel(MapLatLng(26.8467, 80.9462), Colors.purpleAccent),
+      MapCircleModel(MapLatLng(21.2787, 85.2799), Colors.redAccent),
+    ];
+
+    dataSource = MapShapeSource.asset(
+      'assets/india.json',
+      shapeDataField: 'name',
+    );
+    super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+   return Scaffold(
+      body: SfMaps(
+        layers: [
+          MapShapeLayer(
+            source: dataSource,
+            sublayers: [
+              MapCircleLayer(
+                circles: List<MapCircle>.generate(
+                  circles.length,
+                  (int index) {
+                    return MapCircle(
+                      center: circles[index].center,
+                      radius: index % 2 == 0 ? 10 : 20,
+                      strokeWidth: 3,
+                      strokeColor: circles[index].color,
+                    );
+                  },
+                ).toSet(),
+              ),
+            ],
+          ),
+        ],
+      ),
+   );
+}
+
+class MapCircleModel {
+  MapCircleModel(this.center, this.color);
+
+  final MapLatLng center;
+  final Color color;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Animation
+
+You can apply animation for the [`MapCircle`] using the [`MapCircleLayer.animation`] property and able to customize the animation flow, curve and duration.
+
+By default, there will not be any animation.
+
+{% tabs %}
+{% highlight Dart %}
+
+List<MapLatLng> circles;
+MapShapeSource dataSource;
+AnimationController animationController;
+Animation animation;
+
+@override
+void initState() {
+    circles = <MapLatLng>[
+      MapLatLng(15.2993, 74.1240),
+      MapLatLng(15.5057, 80.0499),
+      MapLatLng(19.7515, 75.7139),
+      MapLatLng(23.0225, 72.5714),
+      MapLatLng(24.8607, 67.0011),
+      MapLatLng(27.0238, 74.2179),
+      MapLatLng(26.8467, 80.9462),
+      MapLatLng(21.2787, 85.2799),
+      MapLatLng(20.9517, 85.0985),
+      MapLatLng(25.0961, 85.3131),
+      MapLatLng(24.6637, 93.9063),
+      MapLatLng(26.2006, 92.9376),
+      MapLatLng(28.7041, 77.1025),
+      MapLatLng(29.0588, 76.0856),
+      MapLatLng(30.0668, 79.0193),
+      MapLatLng(31.1471, 75.3412),
+    ];
+
+    dataSource = MapShapeSource.asset(
+      'assets/india.json',
+      shapeDataField: 'name',
+    );
+
+    animationController = AnimationController(
+      duration: Duration(seconds: 3),
+      vsync: this,
+    );
+    animation = CurvedAnimation(
+      parent: animationController,
+      curve: Curves.easeInOut,
+    );
+    animationController.forward(from: 0);
+    super.initState();
+}
+
+@override
+void dispose() {
+  animationController?.dispose();
+  super.dispose();
+}
+
+@override
+Widget build(BuildContext context) {
+   return Scaffold(
+      body: SfMaps(
+        layers: [
+          MapShapeLayer(
+            source: dataSource,
+            sublayers: [
+              MapCircleLayer(
+                circles: List<MapCircle>.generate(
+                  circles.length,
+                  (int index) {
+                    return MapCircle(
+                      center: circles[index],
+                      radius: 10,
+                    );
+                  },
+                ).toSet(),
+                animation: animation,
+              ),
+            ],
+          ),
+        ],
+      ),
+   );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Tap
+
+You can use the [`onTap`] callback to get a notification if the particular [`MapCircle`] is tapped. You can also customize the tapped [`MapCircle`] based on the index passed in the callback as shown in the below code snippet.
+
+{% tabs %}
+{% highlight Dart %}
+
+List<MapLatLng> circles;
+MapShapeSource dataSource;
+int selectedIndex;
+
+@override
+void initState() {
+    circles = <MapLatLng>[
+      MapLatLng(15.2993, 74.1240),
+      MapLatLng(15.5057, 80.0499),
+      MapLatLng(19.7515, 75.7139),
+      MapLatLng(23.0225, 72.5714),
+      MapLatLng(24.8607, 67.0011),
+      MapLatLng(27.0238, 74.2179),
+      MapLatLng(26.8467, 80.9462),
+      MapLatLng(21.2787, 85.2799),
+      MapLatLng(20.9517, 85.0985),
+      MapLatLng(25.0961, 85.3131),
+      MapLatLng(24.6637, 93.9063),
+      MapLatLng(26.2006, 92.9376),
+      MapLatLng(28.7041, 77.1025),
+      MapLatLng(29.0588, 76.0856),
+      MapLatLng(30.0668, 79.0193),
+      MapLatLng(31.1471, 75.3412),
+    ];
+
+    dataSource = MapShapeSource.asset(
+      'assets/india.json',
+      shapeDataField: 'name',
+    );
+    super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+   return Scaffold(
+      body: SfMaps(
+        layers: [
+          MapShapeLayer(
+            source: dataSource,
+            sublayers: [
+              MapCircleLayer(
+                circles: List<MapCircle>.generate(
+                  circles.length,
+                  (int index) {
+                    return MapCircle(
+                      center: circles[index],
+                      radius: 10,
+                      color: selectedIndex == index ? Colors.pink : Colors.blue,
+                      onTap: () {
+                         setState(() {
+                            selectedIndex = index;
+                         });
+                      },
+                    );
+                  },
+                ).toSet(),
+              ),
+            ],
+          ),
+        ],
+      ),
+   );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Tooltip
+
+You can show additional information about the circles drawn using the [`MapCircleLayer.tooltipBuilder`] property.
+
+{% tabs %}
+{% highlight Dart %}
+
+List<MapLatLng> circles;
+MapShapeSource dataSource;
+Random random = Random();
+
+@override
+void initState() {
+    circles = <MapLatLng>[
+      MapLatLng(15.2993, 74.1240),
+      MapLatLng(15.5057, 80.0499),
+      MapLatLng(19.7515, 75.7139),
+      MapLatLng(23.0225, 72.5714),
+      MapLatLng(24.8607, 67.0011),
+      MapLatLng(27.0238, 74.2179),
+      MapLatLng(26.8467, 80.9462),
+      MapLatLng(21.2787, 85.2799),
+      MapLatLng(20.9517, 85.0985),
+      MapLatLng(25.0961, 85.3131),
+      MapLatLng(24.6637, 93.9063),
+      MapLatLng(26.2006, 92.9376),
+      MapLatLng(28.7041, 77.1025),
+      MapLatLng(29.0588, 76.0856),
+      MapLatLng(30.0668, 79.0193),
+      MapLatLng(31.1471, 75.3412),
+    ];
+
+    dataSource = MapShapeSource.asset(
+      'assets/india.json',
+      shapeDataField: 'name',
+    );
+    super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+   return Scaffold(
+      body: SfMaps(
+        layers: [
+          MapShapeLayer(
+            source: dataSource,
+            sublayers: [
+              MapCircleLayer(
+                circles: List<MapCircle>.generate(
+                  circles.length,
+                  (int index) {
+                    return MapCircle(
+                      center: circles[index],
+                      radius: 10,
+                    );
+                  },
+                ).toSet(),
+                tooltipBuilder: (BuildContext context, int index) {
+                   return Container(
+                      padding: EdgeInsets.all(10),
+                         child: Column(
+                             mainAxisSize: MainAxisSize.min,
+                             children: [
+                               Row(
+                                 mainAxisSize: MainAxisSize.min,
+                                 children: [
+                                   Text('Disease name  :',
+                                      style: TextStyle(
+                                       color: Colors.black,
+                                        fontWeight: FontWeight.bold)),
+                                   Text('  ' + 'Corona',
+                                        style: TextStyle(color: Colors.black)),
+                                 ],
+                               ),
+                               Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                     Text('Active cases    :',
+                                          style: TextStyle(
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.bold)),
+                                     Text('  ' + random.nextInt(62342).toString(),
+                                          style: TextStyle(color: Colors.black)),
+                                  ],
+                               ),
+                         ],
+                      ),
+                   );
+                 }
+              ),
+            ],
+          ),
+        ],
+      ),
+   );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Tooltip customization
+
+You can customize the appearance of the tooltip.
+
+* Background color - Change the background color of the tooltip in the maps using the [`MapTooltipSettings.color`] property.
+* Stroke color - Change the stroke color of the tooltip in the maps using the [`MapTooltipSettings.strokeColor`] property.
+* Stroke width - Change the stroke width of the tooltip in the maps using the [`MapTooltipSettings.strokeWidth`] property.
+
+{% tabs %}
+{% highlight Dart %}
+
+List<MapLatLng> circles;
+MapShapeSource dataSource;
+Random random = Random();
+
+@override
+void initState() {
+    circles = <MapLatLng>[
+      MapLatLng(15.2993, 74.1240),
+      MapLatLng(15.5057, 80.0499),
+      MapLatLng(19.7515, 75.7139),
+      MapLatLng(23.0225, 72.5714),
+      MapLatLng(24.8607, 67.0011),
+      MapLatLng(27.0238, 74.2179),
+      MapLatLng(26.8467, 80.9462),
+      MapLatLng(21.2787, 85.2799),
+      MapLatLng(20.9517, 85.0985),
+      MapLatLng(25.0961, 85.3131),
+      MapLatLng(24.6637, 93.9063),
+      MapLatLng(26.2006, 92.9376),
+      MapLatLng(28.7041, 77.1025),
+      MapLatLng(29.0588, 76.0856),
+      MapLatLng(30.0668, 79.0193),
+      MapLatLng(31.1471, 75.3412),
+    ];
+
+    dataSource = MapShapeSource.asset(
+      'assets/india.json',
+      shapeDataField: 'name',
+    );
+    super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+   return Scaffold(
+      body: SfMaps(
+        layers: [
+          MapShapeLayer(
+            source: dataSource,
+            tooltipSettings: const MapTooltipSettings(
+               color: Colors.white,
+               strokeWidth: 2,
+               strokeColor: Colors.black,
+            ),
+            sublayers: [
+              MapCircleLayer(
+                circles: List<MapCircle>.generate(
+                  circles.length,
+                  (int index) {
+                    return MapCircle(
+                      center: circles[index],
+                      radius: 10,
+                    );
+                  },
+                ).toSet(),
+                tooltipBuilder: (BuildContext context, int index) {
+                   return Container(
+                      padding: EdgeInsets.all(10),
+                         child: Column(
+                             mainAxisSize: MainAxisSize.min,
+                             children: [
+                               Row(
+                                 mainAxisSize: MainAxisSize.min,
+                                 children: [
+                                   Text('Disease name  :',
+                                      style: TextStyle(
+                                       color: Colors.black,
+                                        fontWeight: FontWeight.bold)),
+                                   Text('  ' + 'Corona',
+                                        style: TextStyle(color: Colors.black)),
+                                 ],
+                               ),
+                               Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                     Text('Active cases    :',
+                                          style: TextStyle(
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.bold)),
+                                     Text('  ' + random.nextInt(62342).toString(),
+                                          style: TextStyle(color: Colors.black)),
+                                  ],
+                               ),
+                         ],
+                      ),
+                   );
+                 }
+              ),
+            ],
+          ),
+        ],
+      ),
+   );
+}
+
+{% endhighlight %}
+{% endtabs %}
