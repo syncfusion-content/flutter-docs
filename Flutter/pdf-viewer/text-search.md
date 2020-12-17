@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Text search in Syncfusion Flutter PDF Viewer | Syncfusion
-description: This section explains about how to find texts in the PDF document search and navigate to all its occurrences using the Flutter PDF Viewer.
+description: This section explains about how to find texts in the PDF document search and navigate to all its occurrences.
 platform: Flutter
 control: SfPdfViewer
 documentation: ug
