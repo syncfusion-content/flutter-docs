@@ -56,8 +56,6 @@ return Scaffold(
 {% endhighlight %}
 {% endtabs %}
 
-![Maps tile shape sublayer](images/tooltip/shape_tooltip_builder.png)
-
 N>
 * Refer the [`MapTileLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html), for adding tile layer in [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html).
 
@@ -110,8 +108,6 @@ return Scaffold(
 
 {% endhighlight %}
 {% endtabs %}
-
-![Maps shape layer sublayer](images/tooltip/shape_tooltip_builder.png)
 
 N>
 * Refer the [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html), for adding shape layer in [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html).
