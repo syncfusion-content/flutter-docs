@@ -96,3 +96,5 @@ class MyAppState extends State<MyApp> {
 {% endhighlight %}
 {% endtabs %}
 
+![Cell builder](images/builders/cell-builder.png)
+

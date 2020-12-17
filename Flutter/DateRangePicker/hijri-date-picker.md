@@ -27,6 +27,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+
+
 >**NOTE** 
 * Most of the properties type and classes were same from [SfDateRangePicker]() except the followings [HijriDatePickerController](), [HijriDatePickerMonthCellStyle](), [HijriDatePickerMonthViewSettings](), [HijriDatePickerViewChangedArgs](), [HijriDatePickerYearCellStyle](), [HijriDateRange]() and [HijriDatePickerView]().
 * Use the [HijriDateTime]() class to define the date for ‘SfHijriDateRangePicker’.
@@ -50,6 +52,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Hijri multiple picker views](images/hijri-picker/hijri_picker_views.png)
+
 ## Change first day of week
 The `SfHijriDateRangePicker` widget will be rendered with Sunday as the first day of the week but you can customize it to any day by using the [firstDayOfWeek]() property [HijriDatePickerMonthViewSettings]().
 
@@ -69,6 +73,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Hijri first day of week](images/hijri-picker/hijri_first_day_of_week.png)
 
 ## Date selection
 The `SfHijriDateRangePicker` supports selecting single, multiple, and range of dates. It also supports the programmatic selection.
