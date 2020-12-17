@@ -94,6 +94,8 @@ The [`data`]() property is used for binding data to the spark chart. This proper
 
 {% endhighlight %}
 
+![bind datasource](images/getting-started/bind-data.png)
+
 ## Change the type of sparkline
 
 You can change the sparkline type by setting the widget to [`SfSparkLineChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart-class.html), [`SfSparkAreaChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkAreaChart-class.html), [`SfSparkBarChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkBarChart-class.html), [`SfSparkLWinLossChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLWinLossChart-class.html). Here, the sparkline type has been set to [`SfSparkAreaChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkAreaChart-class.html).
@@ -117,6 +119,8 @@ You can change the sparkline type by setting the widget to [`SfSparkLineChart`](
     }
 
 {% endhighlight %}
+
+![chart type](images/getting-started/sparkline-type.png)
 
 ## Enable data label
 
@@ -143,6 +147,8 @@ You can add data labels to improve the readability of the chart using the [`labe
     }
 
 {% endhighlight %}
+
+![datalabel](images/getting-started/sparkline-datalabel.png)
 
 ## Enable trackball for sparkline
 
@@ -171,6 +177,7 @@ The sparkline displays additional information through trackball when touch the p
 
 {% endhighlight %}
 
+![trackball](images/getting-started/sparkline-trackball.png)
 
 
 
