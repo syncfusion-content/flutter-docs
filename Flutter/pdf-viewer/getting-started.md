@@ -134,6 +134,45 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+## Load document with the specified scroll offset position or zoom level 
+
+The `SfPdfViewer` allows you to load the document with the specified scroll offset position or zoom level using the [initialScrollOffset](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/initialScrollOffset.html) and [initialZoomLevel](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/initialZoomLevel.html) properties. The following code example explains the same.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+      body: Container(
+          child: SfPdfViewer.network(
+              'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
+              initialScrollOffset: Offset(0, 500),
+              initialZoomLevel: 1.5)));
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Customize the space being displayed between the PDF pages 
+
+By default, the `SfPdfViewer` displays the spacing between the PDF pages with the value of **4 pixels**. You can customize the space being displayed using the [pageSpacing](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/pageSpacing.html) property. The following code example explains the same.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+      body: Container(
+          child: SfPdfViewer.network(
+              'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
+              pageSpacing: 2)));
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Customize the visibility of scroll head and scroll status
 
 By default, the `SfPdfViewer` displays the scroll head and scroll status. You can customize the visibility of these items using the [canShowScrollHead](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/canShowScrollHead.html) and [canShowScrollStatus](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/canShowScrollStatus.html) properties. The following code example explains the same.
