@@ -243,9 +243,9 @@ N>
 
 ## Tooltip for the markers
 
-It is used to clearly indicate the marker information on the tap or click. To show tooltip for the marker, return a widget in [MapLayer.markerTooltipBuilder]. This widget will then be wrapped in the existing tooltip shape which comes with the nose at the bottom. 
+It is used to clearly indicate the marker information on the tap or click. To show tooltip for the marker, return a widget in [MapLayer.markerTooltipBuilder](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerTooltipBuilder.html). This widget will then be wrapped in the existing tooltip shape which comes with the nose at the bottom. 
 
-The [MapLayer.markerTooltipBuilder] will be called with the corresponding index every time when you interacts with the markers i.e., while tapping in touch devices and hovering in the mouse enabled devices.
+The [MapLayer.markerTooltipBuilder](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerTooltipBuilder.html) will be called with the corresponding index every time when you interacts with the markers i.e., while tapping in touch devices and hovering in the mouse enabled devices.
 
 {% tabs %}
 {% highlight Dart %}
@@ -612,4 +612,4 @@ class Model {
 N>
 * Refer the [MapShapeLayer.shapeTooltipBuilder](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/shapeTooltipBuilder.html), for showing tooltip for the shapes.
 * Refer the [MapShapeLayer.bubbleTooltipBuilder](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/bubbleTooltipBuilder.html), for showing tooltip for the bubbles.
-* Refer the [MapLayer.markerTooltipBuilder], for showing tooltip for the markers.
+* Refer the [MapLayer.markerTooltipBuilder](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerTooltipBuilder.html), for showing tooltip for the markers.
