@@ -11,48 +11,25 @@ documentation: ug
 
 You can provide clear information on the data plotted on the map using legend.
 
-## Show legend
+## Default shape legend
 
-You can show or hide the legend using the [`MapShapeLayer.legendSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/legendSource.html) property. The default value of the [`legendSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/legendSource.html) property is `MapElement.none`.
+You can show shape legend using the [`MapShapeLayer.legend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend-class.html) property. By default, the legend item's text is rendered based on the value of [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeDataField.html) property. The default value of the [`legend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend-class.html) property is `null`.
 
 {% tabs %}
 {% highlight Dart %}
 
+MapShapeSource _shapeSource;
+
 @override
-Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Container(
-          height: 350,
-          child: Padding(
-            padding: EdgeInsets.only(left: 15, right: 15),
-            child: SfMaps(
-              layers: [
-                MapShapeLayer(
-                  delegate: MapShapeLayerDelegate(
-                    shapeFile: "assets/world_map.json",
-                    shapeDataField: "continent",
-                  ),
-                  legendSource: MapElement.none,
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
-   );
+void initState() {
+  super.initState();
+
+  _shapeSource = MapShapeSource.asset(
+    "assets/world_map.json",
+    shapeDataField: "continent",
+  );
 }
 
-{% endhighlight %}
-{% endtabs %}
-
-## Shape legend
-
-You can show shape legend using the [`MapShapeLayer.legendSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/legendSource.html) property. By default, the legend item's text is rendered based on the value of [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeDataField.html) property. The default value of the [`legendSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/legendSource.html) property is `MapElement.none`.
-
-{% tabs %}
-{% highlight Dart %}
-
 @override
 Widget build(BuildContext context) {
     return Scaffold(
@@ -60,15 +37,12 @@ Widget build(BuildContext context) {
         child: Container(
           height: 350,
           child: Padding(
-            padding: EdgeInsets.only(left: 15, right: 15),
+            padding: const EdgeInsets.only(left: 15, right: 15),
             child: SfMaps(
               layers: [
                 MapShapeLayer(
-                  delegate: MapShapeLayerDelegate(
-                    shapeFile: "assets/world_map.json",
-                    shapeDataField: "continent",
-                  ),
-                  legendSource: MapElement.shape,
+                  source: _shapeSource,
+                  legend: MapLegend(MapElement.shape),
                 ),
               ],
             ),
@@ -86,19 +60,20 @@ Widget build(BuildContext context) {
 N>
 * Refer the [`MapLegendSettings`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/legendSettings.html), for customizing the legend items.
 
-## Bubble legend
+## Default Bubble legend
 
-You can show bubble legend using the [`MapShapeLayer.legendSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/legendSource.html) property. By default, the legend item's text is rendered based on the value of [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeDataField.html) property.
+You can show bubble legend using the [`MapShapeLayer.legendSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend-class.html) property. By default, the legend item's text is rendered based on the value of [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeDataField.html) property.
 
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> data;
+List<Model> _data;
+MapShapeSource _shapeSource;
 
 @override
 void initState() {
   super.initState();
-  data = <Model>[
+  _data = <Model>[
     Model('Asia', 150),
     Model('Africa', 45),
     Model('Europe', 34),
@@ -106,6 +81,14 @@ void initState() {
     Model('South America', 25),
     Model('Australia', 5),
   ];
+
+  _shapeSource = MapShapeSource.asset(
+    "assets/world_map.json",
+    shapeDataField: "continent",
+    dataCount: _data.length,
+    primaryValueMapper: (int index) => _data[index].continent,
+    bubbleSizeMapper: (int index) => _data[index].populationDensityPerSqKm,
+  );
 }
 
 @override
@@ -113,22 +96,133 @@ Widget build(BuildContext context) {
   return Scaffold(
     body: Center(
       child: Container(
-        padding: EdgeInsets.only(left: 10, right: 15, top: 30),
+        padding: const EdgeInsets.only(left: 10, right: 15, top: 30),
         height: 350,
         child: SfMaps(
           layers: [
             MapShapeLayer(
-              delegate: MapShapeLayerDelegate(
-                shapeFile: "assets/world_map.json",
-                shapeDataField: "continent",
-                dataCount: data.length,
-                primaryValueMapper: (int index) => data[index].continent,
-                bubbleSizeMapper: (int index) =>
-                    data[index].populationDensityPerSqKm,
+              source: _shapeSource,
+              legend: MapLegend(MapElement.bubble),
+              bubbleSettings: const MapBubbleSettings(
+                maxRadius: 45,
+                minRadius: 15,
               ),
-              showBubbles: true,
-              legendSource: MapElement.bubble,
-              bubbleSettings: MapBubbleSettings(
+            )
+          ],
+        ),
+      ),
+    ),
+  );
+}
+
+class Model {
+  const Model(this.continent, this.populationDensityPerSqKm);
+
+  final String continent;
+  final double populationDensityPerSqKm;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Bubble legend support](images/legend/bubble_legend.png)
+
+N>
+* Refer the [`MapLegendSettings`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/legendSettings.html), for customizing the legend items.
+
+## Bar shape legend
+
+You can show bar shape legend using the [`MapShapeLayer.legend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.bar.html) property. By default, the legend item's text is rendered based on the value of [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeDataField.html) property. 
+
+{% tabs %}
+{% highlight Dart %}
+
+MapShapeSource _shapeSource;
+
+@override
+void initState() {
+  super.initState();
+
+  _shapeSource = MapShapeSource.asset(
+    "assets/world_map.json",
+    shapeDataField: "continent",
+  );
+}
+
+@override
+Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Container(
+          height: 350,
+          child: Padding(
+            padding: const EdgeInsets.only(left: 15, right: 15),
+            child: SfMaps(
+              layers: [
+                MapShapeLayer(
+                  source: _shapeSource,
+                  legend: MapLegend(MapElement.shape),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+   );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Shape legend support](images/legend/default-legend.png)
+
+N>
+* Refer the [`MapLegendSettings`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/legendSettings.html), for customizing the legend items.
+
+## Bar Bubble legend
+
+You can show bubble legend using the [`MapShapeLayer.legend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/legendSource.html) property. By default, the legend item's text is rendered based on the value of [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeDataField.html) property.
+
+{% tabs %}
+{% highlight Dart %}
+
+List<Model> _data;
+MapShapeSource _shapeSource;
+
+@override
+void initState() {
+  super.initState();
+  _data = <Model>[
+    Model('Asia', 150),
+    Model('Africa', 45),
+    Model('Europe', 34),
+    Model('North America', 28),
+    Model('South America', 25),
+    Model('Australia', 5),
+  ];
+
+  _shapeSource = MapShapeSource.asset(
+    "assets/world_map.json",
+    shapeDataField: "continent",
+    dataCount: _data.length,
+    primaryValueMapper: (int index) => _data[index].continent,
+    bubbleSizeMapper: (int index) => _data[index].populationDensityPerSqKm,
+  );
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: Center(
+      child: Container(
+        padding: const EdgeInsets.only(left: 10, right: 15, top: 30),
+        height: 350,
+        child: SfMaps(
+          layers: [
+            MapShapeLayer(
+              source: _shapeSource,
+              legend: MapLegend.bar(MapElement.bubble),
+              bubbleSettings: const MapBubbleSettings(
                 maxRadius: 45,
                 minRadius: 15,
               ),
@@ -162,17 +256,33 @@ The icons color of the legend is applied based on the colors returned from the [
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> data;
+List<Model> _data;
+MapShapeSource _shapeSource;
 
 @override
 void initState() {
     super.initState();
-    data = <Model>[
+    _data = <Model>[
       Model('India', 280),
       Model('United States of America', 190),
       Model('Kazakhstan', 37),
       Model('Russia', 310)
     ];
+
+    _shapeSource = MapShapeSource.asset("assets/world_map.json",
+        shapeDataField: "name",
+        dataCount: _data.length,
+        primaryValueMapper: (int index) => _data[index].country,
+        shapeColorValueMapper: (int index) => _data[index].density,
+        shapeColorMappers: [
+          MapColorMapper(from: 0, to: 100, color: Colors.red, text: '< 100/km'),
+          MapColorMapper(
+              from: 101, to: 200, color: Colors.green, text: '100 - 200/km'),
+          MapColorMapper(
+              from: 201, to: 300, color: Colors.blue, text: '200 - 300/km'),
+          MapColorMapper(
+              from: 301, to: 400, color: Colors.orange, text: '300 - 400/km'),
+      ]);
 }
 
 @override
@@ -182,24 +292,12 @@ Widget build(BuildContext context) {
         child: Container(
           height: 350,
           child: Padding(
-            padding: EdgeInsets.only(left: 15, right: 15),
+            padding: const EdgeInsets.only(left: 15, right: 15),
             child: SfMaps(
               layers: [
                 MapShapeLayer(
-                  delegate: MapShapeLayerDelegate(
-                      shapeFile: "assets/world_map.json",
-                      shapeDataField: "name",
-                      dataCount: data.length,
-                      primaryValueMapper: (int index) => data[index].country,
-                      shapeColorValueMapper: (int index) => data[index].density,
-                      shapeColorMappers: [
-                        MapColorMapper(from: 0, to: 100, color: Colors.red, text: '< 100/km'),
-                        MapColorMapper(from: 101, to: 200, color: Colors.green, text:'100 - 200/km'),
-                        MapColorMapper(from: 201, to: 300, color: Colors.blue, text:'200 - 300/km'),
-                        MapColorMapper(from: 301, to: 400, color: Colors.orange, text:'300 - 400/km'),
-                      ]
-                  ),
-                  legendSource: MapElement.shape,
+                  source: _shapeSource,
+                  legend: MapLegend(MapElement.shape),
                 )
               ],
             ),
@@ -229,6 +327,7 @@ You can position the legend items in different directions using the [`MapLegendS
 {% highlight Dart %}
 
 List<Model> data;
+MapShapeSource _shapeSource;
 
 @override
 void initState() {
@@ -243,6 +342,28 @@ void initState() {
       Model('Cuba', 103),
       Model('China', 148)
   ];
+
+  _shapeSource = MapShapeSource.asset("assets/world_map.json",
+        shapeDataField: "name",
+        dataCount: data.length,
+        primaryValueMapper: (int index) => data[index].country,
+        shapeColorValueMapper: (int index) => data[index].density,
+        shapeColorMappers: [
+          MapColorMapper(from: 0, to: 100, color: Colors.red, text: '< 100/km'),
+          MapColorMapper(
+              from: 101, to: 200, color: Colors.green, text: '100 - 200/km'),
+          MapColorMapper(
+              from: 201, to: 300, color: Colors.blue, text: '200 - 300/km'),
+          MapColorMapper(
+              from: 301, to: 400, color: Colors.orange, text: '300 - 400/km'),
+          MapColorMapper(
+              from: 401, to: 500, color: Colors.teal, text: '400 - 500/km'),
+          MapColorMapper(
+              from: 501,
+              to: 600,
+              color: Colors.deepPurple,
+              text: '500 - 600/km'),
+    ]);
 }
 
 @override
@@ -252,45 +373,13 @@ Widget build(BuildContext context) {
         child: Container(
           height: 350,
           child: Padding(
-            padding: EdgeInsets.only(left: 15, right: 15),
+            padding: const EdgeInsets.only(left: 15, right: 15),
             child: SfMaps(
               layers: [
                 MapShapeLayer(
-                  delegate: MapShapeLayerDelegate(
-                      shapeFile: "assets/world_map.json",
-                      shapeDataField: "name",
-                      dataCount: data.length,
-                      primaryValueMapper: (int index) => data[index].country,
-                      shapeColorValueMapper: (int index) => data[index].density,
-                      shapeColorMappers: [
-                        MapColorMapper(from: 0,
-                            to: 100,
-                            color: Colors.red,
-                            text: '< 100/km'),
-                        MapColorMapper(from: 101,
-                            to: 200,
-                            color: Colors.green,
-                            text: '100 - 200/km'),
-                        MapColorMapper(from: 201,
-                            to: 300,
-                            color: Colors.blue,
-                            text: '200 - 300/km'),
-                        MapColorMapper(from: 301,
-                            to: 400,
-                            color: Colors.orange,
-                            text: '300 - 400/km'),
-                        MapColorMapper(from: 401,
-                            to: 500,
-                            color: Colors.teal,
-                            text: '400 - 500/km'),
-                        MapColorMapper(from: 501,
-                            to: 600,
-                            color: Colors.deepPurple,
-                            text: '500 - 600/km'),
-                      ]
-                  ),
-                  legendSource: MapElement.shape,
-                  legendSettings: MapLegendSettings(
+                  source: _shapeSource,
+                  legend: MapLegend(
+                    MapElement.shape,
                     position: MapLegendPosition.right,
                   ),
                 )
@@ -327,6 +416,7 @@ If the property [`MapLegendSettings.offset`](https://pub.dev/documentation/syncf
 {% highlight Dart %}
 
 List<Model> data;
+MapShapeSource _shapeSource;
 
 @override
 void initState() {
@@ -341,6 +431,28 @@ void initState() {
       Model('Cuba', 103),
       Model('China', 148)
     ];
+
+    _shapeSource = MapShapeSource.asset("assets/world_map.json",
+        shapeDataField: "name",
+        dataCount: data.length,
+        primaryValueMapper: (int index) => data[index].country,
+        shapeColorValueMapper: (int index) => data[index].density,
+        shapeColorMappers: [
+          MapColorMapper(from: 0, to: 100, color: Colors.red, text: '< 100/km'),
+          MapColorMapper(
+              from: 101, to: 200, color: Colors.green, text: '100 - 200/km'),
+          MapColorMapper(
+              from: 201, to: 300, color: Colors.blue, text: '200 - 300/km'),
+          MapColorMapper(
+              from: 301, to: 400, color: Colors.orange, text: '300 - 400/km'),
+          MapColorMapper(
+              from: 401, to: 500, color: Colors.teal, text: '400 - 500/km'),
+          MapColorMapper(
+              from: 501,
+              to: 600,
+              color: Colors.deepPurple,
+              text: '500 - 600/km'),
+    ]);
 }
 
 @override
@@ -350,47 +462,14 @@ Widget build(BuildContext context) {
         child: Container(
           height: 350,
           child: Padding(
-            padding: EdgeInsets.only(left: 15, right: 15),
+            padding: const EdgeInsets.only(left: 15, right: 15),
             child: SfMaps(
               layers: [
                 MapShapeLayer(
-                  delegate: MapShapeLayerDelegate(
-                      shapeFile: "assets/world_map.json",
-                      shapeDataField: "name",
-                      dataCount: data.length,
-                      primaryValueMapper: (int index) => data[index].country,
-                      shapeColorValueMapper: (int index) => data[index].density,
-                      shapeColorMappers: [
-                        MapColorMapper(from: 0,
-                            to: 100,
-                            color: Colors.red,
-                            text: '< 100/km'),
-                        MapColorMapper(from: 101,
-                            to: 200,
-                            color: Colors.green,
-                            text: '100 - 200/km'),
-                        MapColorMapper(from: 201,
-                            to: 300,
-                            color: Colors.blue,
-                            text: '200 - 300/km'),
-                        MapColorMapper(from: 301,
-                            to: 400,
-                            color: Colors.orange,
-                            text: '300 - 400/km'),
-                        MapColorMapper(from: 401,
-                            to: 500,
-                            color: Colors.teal,
-                            text: '400 - 500/km'),
-                        MapColorMapper(from: 501,
-                            to: 600,
-                            color: Colors.deepPurple,
-                            text: '500 - 600/km'),
-                      ]
-                  ),
-                  legendSource: MapElement.shape,
-                  legendSettings: MapLegendSettings(
-                    offset: Offset(60, 275),
-                  ),
+                  source: _shapeSource,
+                  legend: MapLegend(
+                    MapElement.shape,
+                    offset: Offset(60, 275)),
                 )
               ],
             ),
@@ -424,6 +503,7 @@ If the legend position is `top` or `bottom`, then the default scroll direction i
 {% highlight Dart %}
 
 List<Model> data;
+MapShapeSource _shapeSource;
 
 @override
 void initState() {
@@ -438,6 +518,28 @@ void initState() {
       Model('Cuba', 103),
       Model('China', 148)
    ];
+
+   _shapeSource = MapShapeSource.asset("assets/world_map.json",
+        shapeDataField: "name",
+        dataCount: data.length,
+        primaryValueMapper: (int index) => data[index].country,
+        shapeColorValueMapper: (int index) => data[index].density,
+        shapeColorMappers: [
+          MapColorMapper(from: 0, to: 100, color: Colors.red, text: '< 100/km'),
+          MapColorMapper(
+              from: 101, to: 200, color: Colors.green, text: '100 - 200/km'),
+          MapColorMapper(
+              from: 201, to: 300, color: Colors.blue, text: '200 - 300/km'),
+          MapColorMapper(
+              from: 301, to: 400, color: Colors.orange, text: '300 - 400/km'),
+          MapColorMapper(
+              from: 401, to: 500, color: Colors.teal, text: '400 - 500/km'),
+          MapColorMapper(
+              from: 501,
+              to: 600,
+              color: Colors.deepPurple,
+              text: '500 - 600/km'),
+        ]);
 }
 
 @override
@@ -447,47 +549,15 @@ Widget build(BuildContext context) {
         child: Container(
           height: 350,
           child: Padding(
-            padding: EdgeInsets.only(left: 15, right: 15),
+            padding: const EdgeInsets.only(left: 15, right: 15),
             child: SfMaps(
               layers: [
                 MapShapeLayer(
-                  delegate: MapShapeLayerDelegate(
-                      shapeFile: "assets/world_map.json",
-                      shapeDataField: "name",
-                      dataCount: data.length,
-                      primaryValueMapper: (int index) => data[index].country,
-                      shapeColorValueMapper: (int index) => data[index].density,
-                      shapeColorMappers: [
-                        MapColorMapper(from: 0,
-                            to: 100,
-                            color: Colors.red,
-                            text: '< 100/km'),
-                        MapColorMapper(from: 101,
-                            to: 200,
-                            color: Colors.green,
-                            text: '100 - 200/km'),
-                        MapColorMapper(from: 201,
-                            to: 300,
-                            color: Colors.blue,
-                            text: '200 - 300/km'),
-                        MapColorMapper(from: 301,
-                            to: 400,
-                            color: Colors.orange,
-                            text: '300 - 400/km'),
-                        MapColorMapper(from: 401,
-                            to: 500,
-                            color: Colors.teal,
-                            text: '400 - 500/km'),
-                        MapColorMapper(from: 501,
-                            to: 600,
-                            color: Colors.deepPurple,
-                            text: '500 - 600/km'),
-                      ]
-                  ),
-                  legendSource: MapElement.shape,
-                  legendSettings: MapLegendSettings(
+                  source: _shapeSource,
+                  legend: MapLegend(
+                    MapElement.shape,
                     position: MapLegendPosition.bottom,
-                    overflowMode: MapLegendOverflowMode.wrap
+                    overflowMode: MapLegendOverflowMode.wrap,
                   ),
                 )
               ],
@@ -527,6 +597,7 @@ You can enable toggling the legend items and the corresponding shapes or bubbles
 {% highlight Dart %}
 
 List<Model> data;
+MapShapeSource _shapeSource;
 
 @override
 void initState() {
@@ -541,6 +612,28 @@ void initState() {
       Model('Cuba', 103),
       Model('China', 148)
    ];
+
+   _shapeSource = MapShapeSource.asset("assets/world_map.json",
+        shapeDataField: "name",
+        dataCount: _data.length,
+        primaryValueMapper: (int index) => _data[index].country,
+        shapeColorValueMapper: (int index) => _data[index].density,
+        shapeColorMappers: [
+          MapColorMapper(from: 0, to: 100, color: Colors.red, text: '< 100/km'),
+          MapColorMapper(
+              from: 101, to: 200, color: Colors.green, text: '100 - 200/km'),
+          MapColorMapper(
+              from: 201, to: 300, color: Colors.blue, text: '200 - 300/km'),
+          MapColorMapper(
+              from: 301, to: 400, color: Colors.orange, text: '300 - 400/km'),
+          MapColorMapper(
+              from: 401, to: 500, color: Colors.teal, text: '400 - 500/km'),
+          MapColorMapper(
+              from: 501,
+              to: 600,
+              color: Colors.deepPurple,
+              text: '500 - 600/km'),
+    ]);
 }
 
 @override
@@ -550,45 +643,13 @@ Widget build(BuildContext context) {
         child: Container(
           height: 350,
           child: Padding(
-            padding: EdgeInsets.only(left: 15, right: 15),
+            padding: const EdgeInsets.only(left: 15, right: 15),
             child: SfMaps(
               layers: [
                 MapShapeLayer(
-                  delegate: MapShapeLayerDelegate(
-                      shapeFile: "assets/world_map.json",
-                      shapeDataField: "name",
-                      dataCount: data.length,
-                      primaryValueMapper: (int index) => data[index].country,
-                      shapeColorValueMapper: (int index) => data[index].density,
-                      shapeColorMappers: [
-                        MapColorMapper(from: 0,
-                            to: 100,
-                            color: Colors.red,
-                            text: '< 100/km'),
-                        MapColorMapper(from: 101,
-                            to: 200,
-                            color: Colors.green,
-                            text: '100 - 200/km'),
-                        MapColorMapper(from: 201,
-                            to: 300,
-                            color: Colors.blue,
-                            text: '200 - 300/km'),
-                        MapColorMapper(from: 301,
-                            to: 400,
-                            color: Colors.orange,
-                            text: '300 - 400/km'),
-                        MapColorMapper(from: 401,
-                            to: 500,
-                            color: Colors.teal,
-                            text: '400 - 500/km'),
-                        MapColorMapper(from: 501,
-                            to: 600,
-                            color: Colors.deepPurple,
-                            text: '500 - 600/km'),
-                      ]
-                  ),
-                  legendSource: MapElement.shape,
-                  legendSettings: MapLegendSettings(
+                  source: _shapeSource,
+                  legend: MapLegend(
+                    MapElement.shape,
                     enableToggleInteraction: true,
                     toggledItemColor: Colors.grey,
                     toggledItemStrokeWidth: 3,
@@ -627,6 +688,7 @@ N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/pa
 {% highlight Dart %}
 
 List<Model> data;
+MapShapeSource _shapeSource;
 
 @override
 void initState() {
@@ -641,6 +703,28 @@ void initState() {
       Model('Cuba', 103),
       Model('China', 148)
    ];
+
+   _shapeSource = MapShapeSource.asset("assets/world_map.json",
+        shapeDataField: "name",
+        dataCount: _data.length,
+        primaryValueMapper: (int index) => _data[index].country,
+        shapeColorValueMapper: (int index) => _data[index].density,
+        shapeColorMappers: [
+          MapColorMapper(from: 0, to: 100, color: Colors.red, text: '< 100/km'),
+          MapColorMapper(
+              from: 101, to: 200, color: Colors.green, text: '100 - 200/km'),
+          MapColorMapper(
+              from: 201, to: 300, color: Colors.blue, text: '200 - 300/km'),
+          MapColorMapper(
+              from: 301, to: 400, color: Colors.orange, text: '300 - 400/km'),
+          MapColorMapper(
+              from: 401, to: 500, color: Colors.teal, text: '400 - 500/km'),
+          MapColorMapper(
+              from: 501,
+              to: 600,
+              color: Colors.deepPurple,
+              text: '500 - 600/km'),
+    ]);
 }
 
 @override
@@ -650,7 +734,7 @@ Widget build(BuildContext context) {
         child: Container(
           height: 350,
           child: Padding(
-            padding: EdgeInsets.only(left: 15, right: 15),
+            padding: const EdgeInsets.only(left: 15, right: 15),
             child: SfMapsTheme(
               data: SfMapsThemeData(
                 toggledItemColor: Colors.grey,
@@ -660,41 +744,9 @@ Widget build(BuildContext context) {
               child: SfMaps(
                 layers: [
                   MapShapeLayer(
-                    delegate: MapShapeLayerDelegate(
-                        shapeFile: "assets/world_map.json",
-                        shapeDataField: "name",
-                        dataCount: data.length,
-                        primaryValueMapper: (int index) => data[index].country,
-                        shapeColorValueMapper: (int index) => data[index].density,
-                        shapeColorMappers: [
-                          MapColorMapper(from: 0,
-                              to: 100,
-                              color: Colors.red,
-                              text: '< 100/km'),
-                          MapColorMapper(from: 101,
-                              to: 200,
-                              color: Colors.green,
-                              text: '100 - 200/km'),
-                          MapColorMapper(from: 201,
-                              to: 300,
-                              color: Colors.blue,
-                              text: '200 - 300/km'),
-                          MapColorMapper(from: 301,
-                              to: 400,
-                              color: Colors.orange,
-                              text: '300 - 400/km'),
-                          MapColorMapper(from: 401,
-                              to: 500,
-                              color: Colors.teal,
-                              text: '400 - 500/km'),
-                          MapColorMapper(from: 501,
-                              to: 600,
-                              color: Colors.deepPurple,
-                              text: '500 - 600/km'),
-                        ]
-                    ),
-                    legendSource: MapElement.shape,
-                    legendSettings: MapLegendSettings(
+                    source: _shapeSource,
+                    legend: MapLegend(
+                      MapElement.shape,
                       enableToggleInteraction: true,
                     ),
                   )
@@ -727,6 +779,7 @@ You can customize the legend item's text style using the [`MapLegendSettings.tex
 {% highlight Dart %}
 
 List<Model> data;
+MapShapeSource _shapeSource;
 
 @override
 void initState() {
@@ -741,6 +794,28 @@ void initState() {
       Model('Cuba', 103),
       Model('China', 148)
    ];
+
+   _shapeSource = MapShapeSource.asset("assets/world_map.json",
+        shapeDataField: "name",
+        dataCount: data.length,
+        primaryValueMapper: (int index) => data[index].country,
+        shapeColorValueMapper: (int index) => data[index].density,
+        shapeColorMappers: [
+          MapColorMapper(from: 0, to: 100, color: Colors.red, text: '< 100/km'),
+          MapColorMapper(
+              from: 101, to: 200, color: Colors.green, text: '100 - 200/km'),
+          MapColorMapper(
+              from: 201, to: 300, color: Colors.blue, text: '200 - 300/km'),
+          MapColorMapper(
+              from: 301, to: 400, color: Colors.orange, text: '300 - 400/km'),
+          MapColorMapper(
+              from: 401, to: 500, color: Colors.teal, text: '400 - 500/km'),
+          MapColorMapper(
+              from: 501,
+              to: 600,
+              color: Colors.deepPurple,
+              text: '500 - 600/km'),
+        ]);
 }
 
 @override
@@ -750,45 +825,13 @@ Widget build(BuildContext context) {
         child: Container(
           height: 350,
           child: Padding(
-            padding: EdgeInsets.only(left: 15, right: 15),
+            padding: const EdgeInsets.only(left: 15, right: 15),
             child: SfMaps(
               layers: [
                 MapShapeLayer(
-                  delegate: MapShapeLayerDelegate(
-                      shapeFile: "assets/world_map.json",
-                      shapeDataField: "name",
-                      dataCount: data.length,
-                      primaryValueMapper: (int index) => data[index].country,
-                      shapeColorValueMapper: (int index) => data[index].density,
-                      shapeColorMappers: [
-                        MapColorMapper(from: 0,
-                            to: 100,
-                            color: Colors.red,
-                            text: '< 100/km'),
-                        MapColorMapper(from: 101,
-                            to: 200,
-                            color: Colors.green,
-                            text: '100 - 200/km'),
-                        MapColorMapper(from: 201,
-                            to: 300,
-                            color: Colors.blue,
-                            text: '200 - 300/km'),
-                        MapColorMapper(from: 301,
-                            to: 400,
-                            color: Colors.orange,
-                            text: '300 - 400/km'),
-                        MapColorMapper(from: 401,
-                            to: 500,
-                            color: Colors.teal,
-                            text: '400 - 500/km'),
-                        MapColorMapper(from: 501,
-                            to: 600,
-                            color: Colors.deepPurple,
-                            text: '500 - 600/km'),
-                      ]
-                  ),
-                  legendSource: MapElement.shape,
-                  legendSettings: MapLegendSettings(
+                  source: _shapeSource,
+                  legend: MapLegend(
+                    MapElement.shape,
                     textStyle: const TextStyle(
                         color: Colors.red,
                         fontSize: 16,
@@ -826,6 +869,7 @@ N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/pa
 {% highlight Dart %}
 
 List<Model> data;
+MapShapeSource _shapeSource;
 
 @override
 void initState() {
@@ -840,6 +884,28 @@ void initState() {
       Model('Cuba', 103),
       Model('China', 148)
    ];
+
+   _shapeSource = MapShapeSource.asset("assets/world_map.json",
+        shapeDataField: "name",
+        dataCount: data.length,
+        primaryValueMapper: (int index) => data[index].country,
+        shapeColorValueMapper: (int index) => data[index].density,
+        shapeColorMappers: [
+          MapColorMapper(from: 0, to: 100, color: Colors.red, text: '< 100/km'),
+          MapColorMapper(
+              from: 101, to: 200, color: Colors.green, text: '100 - 200/km'),
+          MapColorMapper(
+              from: 201, to: 300, color: Colors.blue, text: '200 - 300/km'),
+          MapColorMapper(
+              from: 301, to: 400, color: Colors.orange, text: '300 - 400/km'),
+          MapColorMapper(
+              from: 401, to: 500, color: Colors.teal, text: '400 - 500/km'),
+          MapColorMapper(
+              from: 501,
+              to: 600,
+              color: Colors.deepPurple,
+              text: '500 - 600/km'),
+        ]);
 }
 
 @override
@@ -849,7 +915,7 @@ Widget build(BuildContext context) {
         child: Container(
           height: 350,
           child: Padding(
-            padding: EdgeInsets.only(left: 15, right: 15),
+            padding: const EdgeInsets.only(left: 15, right: 15),
             child: SfMapsTheme(
               data: SfMapsThemeData(
                 legendTextStyle: TextStyle(
@@ -863,40 +929,8 @@ Widget build(BuildContext context) {
               child: SfMaps(
                 layers: [
                   MapShapeLayer(
-                    delegate: MapShapeLayerDelegate(
-                        shapeFile: "assets/world_map.json",
-                        shapeDataField: "name",
-                        dataCount: data.length,
-                        primaryValueMapper: (int index) => data[index].country,
-                        shapeColorValueMapper: (int index) => data[index].density,
-                        shapeColorMappers: [
-                          MapColorMapper(from: 0,
-                              to: 100,
-                              color: Colors.red,
-                              text: '< 100/km'),
-                          MapColorMapper(from: 101,
-                              to: 200,
-                              color: Colors.green,
-                              text: '100 - 200/km'),
-                          MapColorMapper(from: 201,
-                              to: 300,
-                              color: Colors.blue,
-                              text: '200 - 300/km'),
-                          MapColorMapper(from: 301,
-                              to: 400,
-                              color: Colors.orange,
-                              text: '300 - 400/km'),
-                          MapColorMapper(from: 401,
-                              to: 500,
-                              color: Colors.teal,
-                              text: '400 - 500/km'),
-                          MapColorMapper(from: 501,
-                              to: 600,
-                              color: Colors.deepPurple,
-                              text: '500 - 600/km'),
-                        ]
-                    ),
-                    legendSource: MapElement.shape,
+                    source: _shapeSource,
+                    legend: MapLegend(MapElement.shape),
                   )
                 ],
               ),
@@ -935,6 +969,7 @@ You can customize the legend items using the following properties.
 {% highlight Dart %}
 
 List<Model> data;
+MapShapeSource _shapeSource;
 
 @override
 void initState() {
@@ -949,6 +984,28 @@ void initState() {
       Model('Cuba', 103),
       Model('China', 148)
     ];
+
+    _shapeSource = MapShapeSource.asset("assets/world_map.json",
+        shapeDataField: "name",
+        dataCount: data.length,
+        primaryValueMapper: (int index) => data[index].country,
+        shapeColorValueMapper: (int index) => data[index].density,
+        shapeColorMappers: [
+          MapColorMapper(from: 0, to: 100, color: Colors.red, text: '< 100/km'),
+          MapColorMapper(
+              from: 101, to: 200, color: Colors.green, text: '100 - 200/km'),
+          MapColorMapper(
+              from: 201, to: 300, color: Colors.blue, text: '200 - 300/km'),
+          MapColorMapper(
+              from: 301, to: 400, color: Colors.orange, text: '300 - 400/km'),
+          MapColorMapper(
+              from: 401, to: 500, color: Colors.teal, text: '400 - 500/km'),
+          MapColorMapper(
+              from: 501,
+              to: 600,
+              color: Colors.deepPurple,
+              text: '500 - 600/km'),
+        ]);
 }
 
 @override
@@ -958,27 +1015,13 @@ Widget build(BuildContext context) {
         child: Container(
           height: 350,
           child: Padding(
-            padding: EdgeInsets.only(left: 15, right: 15),
+            padding: const EdgeInsets.only(left: 15, right: 15),
             child: SfMaps(
               layers: [
                 MapShapeLayer(
-                  delegate: MapShapeLayerDelegate(
-                      shapeFile: "assets/world_map.json",
-                      shapeDataField: "name",
-                      dataCount: data.length,
-                      primaryValueMapper: (int index) => data[index].country,
-                      shapeColorValueMapper: (int index) => data[index].density,
-                      shapeColorMappers: [
-                        MapColorMapper(from: 0, to: 100, color: Colors.red, text: '< 100/km'),
-                        MapColorMapper(from: 101, to: 200, color: Colors.green, text:'100 - 200/km'),
-                        MapColorMapper(from: 201, to: 300, color: Colors.blue, text:'200 - 300/km'),
-                        MapColorMapper(from: 301, to: 400, color: Colors.orange, text:'300 - 400/km'),
-                        MapColorMapper(from: 401, to: 500, color: Colors.teal, text:'400 - 500/km'),
-                        MapColorMapper(from: 501, to: 600, color: Colors.deepPurple, text:'500 - 600/km'),
-                      ]
-                  ),
-                  legendSource: MapElement.shape,
-                  legendSettings: MapLegendSettings(
+                  source: _shapeSource,
+                  legend: MapLegend(
+                    MapElement.shape,
                     position: MapLegendPosition.bottom,
                     overflowMode: MapLegendOverflowMode.wrap,
                     iconType: MapIconType.square,
@@ -1008,3 +1051,269 @@ class Model {
 
 N>
 * Refer the [`position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/position.html), for setting the position of the legend.
+
+## Bar Legend Segment Painting Style
+
+### Solid
+
+You can set solid color for the bar by using the [MapLegendPaintingStyle.solid]. By defaults [MapLegendPaintingStyle] will be `solid`.
+
+{% tabs %}
+{% highlight Dart %}
+
+List<Model> data;
+MapShapeSource _shapeSource;
+
+@override
+void initState() {
+   super.initState();
+   data = <Model>[
+      Model('India', 280),
+      Model('United States of America', 190),
+      Model('Kazakhstan', 37),
+      Model('Italy', 201),
+      Model('Korea', 512),
+      Model('Japan', 335),
+      Model('Cuba', 103),
+      Model('China', 148)
+   ];
+
+   _shapeSource = MapShapeSource.asset("assets/world_map.json",
+        shapeDataField: "name",
+        dataCount: data.length,
+        primaryValueMapper: (int index) => data[index].country,
+        shapeColorValueMapper: (int index) => data[index].density,
+        shapeColorMappers: [
+          MapColorMapper(from: 0, to: 100, color: Colors.red, text: '< 100/km'),
+          MapColorMapper(
+              from: 101, to: 200, color: Colors.green, text: '100 - 200/km'),
+          MapColorMapper(
+              from: 201, to: 300, color: Colors.blue, text: '200 - 300/km'),
+          MapColorMapper(
+              from: 301, to: 400, color: Colors.orange, text: '300 - 400/km'),
+          MapColorMapper(
+              from: 401, to: 500, color: Colors.teal, text: '400 - 500/km'),
+          MapColorMapper(
+              from: 501,
+              to: 600,
+              color: Colors.deepPurple,
+              text: '500 - 600/km'),
+        ]);
+}
+
+@override
+Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Container(
+          height: 350,
+          child: Padding(
+            padding: EdgeInsets.only(left: 15, right: 15),
+            child: SfMaps(
+              layers: [
+                MapShapeLayer(
+                  source: _shapeSource,
+                  legend: MapLegend.bar(
+                    MapElement.shape,
+                    segmentPaintingStyle: MapLegendPaintingStyle.solid,
+                  ),
+                )
+              ],
+            ),
+          ),
+        ),
+      ),
+   );
+}
+
+class Model {
+  const Model(this.country, this.density);
+
+  final String country;
+  final double density;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Legend bar paintStyle solid](images/legend/legend-items-customization.png)
+
+### Gradient
+
+You can set gradient color for the bar by using the [MapLegendPaintingStyle.gradient].
+
+{% tabs %}
+{% highlight Dart %}
+
+List<Model> data;
+MapShapeSource _shapeSource;
+
+@override
+void initState() {
+   super.initState();
+   data = <Model>[
+      Model('India', 280),
+      Model('United States of America', 190),
+      Model('Kazakhstan', 37),
+      Model('Italy', 201),
+      Model('Korea', 512),
+      Model('Japan', 335),
+      Model('Cuba', 103),
+      Model('China', 148)
+   ];
+
+   _shapeSource = MapShapeSource.asset("assets/world_map.json",
+        shapeDataField: "name",
+        dataCount: data.length,
+        primaryValueMapper: (int index) => data[index].country,
+        shapeColorValueMapper: (int index) => data[index].density,
+        shapeColorMappers: [
+          MapColorMapper(from: 0, to: 100, color: Colors.red, text: '< 100/km'),
+          MapColorMapper(
+              from: 101, to: 200, color: Colors.green, text: '100 - 200/km'),
+          MapColorMapper(
+              from: 201, to: 300, color: Colors.blue, text: '200 - 300/km'),
+          MapColorMapper(
+              from: 301, to: 400, color: Colors.orange, text: '300 - 400/km'),
+          MapColorMapper(
+              from: 401, to: 500, color: Colors.teal, text: '400 - 500/km'),
+          MapColorMapper(
+              from: 501,
+              to: 600,
+              color: Colors.deepPurple,
+              text: '500 - 600/km'),
+        ]);
+}
+
+@override
+Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Container(
+          height: 350,
+          child: Padding(
+            padding: EdgeInsets.only(left: 15, right: 15),
+            child: SfMaps(
+              layers: [
+                MapShapeLayer(
+                  source: _shapeSource,
+                  legend: MapLegend.bar(
+                    MapElement.shape,
+                    segmentPaintingStyle: MapLegendPaintingStyle.gradient,
+                  ),
+                )
+              ],
+            ),
+          ),
+        ),
+      ),
+   );
+}
+
+class Model {
+  const Model(this.country, this.density);
+
+  final String country;
+  final double density;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Legend bar paintStyle gradient](images/legend/legend-items-customization.png)
+
+## Bar Legend customization
+
+You can customize the legend items using the following properties.
+
+* **segmentSize** - Used to change the size of the bar segments. The default size of the bar segment is `Size(80.0, 12.0)`.
+* **labelsPlacement** - Used to place the labels either between the segments or on the segments. The default value of the [`labelsPlacement`] property will be `MapLegendLabelsPlacement.betweenItems` when setting range color mapper without setting color mapper text property otherwise it will be `MapLegendLabelsPlacement.onItem`.
+* **labelOverflow** - Used to remove or trim the legend labels based on the bar legend size.The default value of the [`labelOverflow`] property will be `MapLabelOverflow.hide`. 
+* **edgeLabelsPlacement** - Used to place the edge labels either inside or outside of the bar legend. The default value of the [`edgeLabelsPlacement`] property will be `MapLegendEdgeLabelsPlacement.inside`
+* **spacing** - Used to provide space between the each legend items. The default value of the [`spacing`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/itemsSpacing.html) is `2.0`.
+* **direction** - Used to arrange the legend items in either horizontal or vertical direction. The default value of [`direction`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/direction.html) property is `horizontal`, if the value of the [`position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/position.html) property is `top`, `bottom` and defaults to `vertical`, if the value of the [`position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/position.html) property is `left` or `right`.
+* **padding** - Used to set padding around the legend. The default value of the [`padding`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendSettings/padding.html) property is `EdgeInsets.all(10.0)`.
+
+{% tabs %}
+{% highlight Dart %}
+
+List<Model> data;
+MapShapeSource _shapeSource;
+
+@override
+void initState() {
+   super.initState();
+   data = <Model>[
+      Model('India', 280),
+      Model('United States of America', 190),
+      Model('Kazakhstan', 37),
+      Model('Italy', 201),
+      Model('Korea', 512),
+      Model('Japan', 335),
+      Model('Cuba', 103),
+      Model('China', 148)
+   ];
+
+   _shapeSource = MapShapeSource.asset("assets/world_map.json",
+        shapeDataField: "name",
+        dataCount: data.length,
+        primaryValueMapper: (int index) => data[index].country,
+        shapeColorValueMapper: (int index) => data[index].density,
+        shapeColorMappers: [
+          MapColorMapper(from: 0, to: 100, color: Colors.red, text: '< 100/km'),
+          MapColorMapper(
+              from: 101, to: 200, color: Colors.green, text: '100 - 200/km'),
+          MapColorMapper(
+              from: 201, to: 300, color: Colors.blue, text: '200 - 300/km'),
+          MapColorMapper(
+              from: 301, to: 400, color: Colors.orange, text: '300 - 400/km'),
+          MapColorMapper(
+              from: 401, to: 500, color: Colors.teal, text: '400 - 500/km'),
+          MapColorMapper(
+              from: 501,
+              to: 600,
+              color: Colors.deepPurple,
+              text: '500 - 600/km'),
+        ]);
+}
+
+@override
+Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Container(
+          height: 350,
+          child: Padding(
+            padding: EdgeInsets.only(left: 15, right: 15),
+            child: SfMaps(
+              layers: [
+                MapShapeLayer(
+                  source: _shapeSource,
+                  legend: MapLegend.bar(
+                    MapElement.shape,
+                    segmentSize: Size(20, 5),
+                    labelsPlacement: MapLegendLabelsPlacement.betweenItems,
+                    edgeLabelsPlacement: MapLegendEdgeLabelsPlacement.center,
+                    segmentPaintingStyle: MapLegendPaintingStyle.gradient,
+                    labelOverflow: MapLabelOverflow.ellipsis,
+                  ),
+                )
+              ],
+            ),
+          ),
+        ),
+      ),
+   );
+}
+
+class Model {
+  const Model(this.country, this.density);
+
+  final String country;
+  final double density;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Legend bar customization](images/legend/legend-items-customization.png)
