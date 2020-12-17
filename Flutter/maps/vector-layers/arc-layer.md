@@ -1,19 +1,23 @@
 ---
 layout: post
-title: Arc shape in Syncfusion Flutter maps | Syncfusion
-description: This section explains how to add arc shape on the map and customize its appearance in the Flutter maps.
+title: Adding arcs in Syncfusion Flutter maps | Syncfusion
+description: This section explains how to add arcs on the map and customize its appearance in the Flutter maps.
 platform: Flutter
 control: SfMaps
 documentation: ug
 ---
 
-# Arc shape features in maps
+# Arcs in the Flutter maps
 
-Arc shape is used to connect two location on the map with curved path and its customization.
+Arc layer is a sublayer that renders a group of [`MapArc`] on [`MapShapeLayer`] and [`MapTileLayer`]. This section helps to learn about how to add the arcs and customize them.
 
-## Arcs
+## Adding arcs
 
 The [`arcs`] is a collection of [`MapArc`]. Every single [`MapArc`] connects two location coordinates through a curved line. The start coordinate is set to [`MapArc.from`] property and the end coordinate is set to [`MapArc.to`] property.
+
+N> It is applicable for both the tile layer and shape layer.
+
+<b>In the shape layer</b>
 
 {% tabs %}
 {% highlight Dart %}
@@ -51,6 +55,69 @@ Widget build(BuildContext context) {
       layers: [
         MapShapeLayer(
           source: dataSource,
+          sublayers: [
+            MapArcLayer(
+              arcs: List<MapArc>.generate(
+                data.length,
+                    (int index) {
+                  return MapArc(
+                    from: data[index].from,
+                    to: data[index].to,
+                  );
+                },
+              ).toSet(),
+            ),
+          ],
+          zoomPanBehavior: zoomPanBehavior,
+        ),
+      ],
+    ),
+  );
+}
+
+class DataModel {
+  DataModel(this.from, this.to);
+
+  final MapLatLng from;
+  final MapLatLng to;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+<b>In the tile layer</b>
+
+{% tabs %}
+{% highlight Dart %}
+
+MapZoomPanBehavior zoomPanBehavior;
+List<DataModel> data;
+
+@override
+void initState() {
+  data = <DataModel>[
+    DataModel(MapLatLng(28.6139, 77.2090), MapLatLng(39.9042, 116.4074)),
+    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(31.2304, 121.4737)),
+    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(23.1291, 113.2644)),
+    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694)),
+    DataModel(MapLatLng(19.0760, 72.8777), MapLatLng(22.3193, 114.1694)),
+    DataModel(MapLatLng(22.3193, 114.1694), MapLatLng(13.0827, 80.2707)),
+  ];
+
+  zoomPanBehavior = MapZoomPanBehavior(
+    zoomLevel: 4,
+    focalLatLng: MapLatLng(22.9734, 90.6569),
+  );
+  super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfMaps(
+      layers: [
+        MapTileLayer(
+          urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
           sublayers: [
             MapArcLayer(
               arcs: List<MapArc>.generate(
@@ -229,7 +296,7 @@ class DataModel {
 
 ## Color
 
-You can apply single color for all [`MapArc`] in the [`arcs`] collection using the [`MapArcLayer.color`] property. Also, you can apply different color to the each [`MapArc`] in the [`arcs`] collection using the [`MapArc.color`] property.
+You can apply the same color for all [`MapArc`] in the [`arcs`] collection using the [`MapArcLayer.color`] property. Alternatively, you can apply different colors to each [`MapArc`] in the [`arcs`] collection using the individual [`MapArc.color`] property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -298,7 +365,7 @@ class DataModel {
 
 ## Width
 
-You can apply same width for all [`MapArc`] in the [`arcs`] collection using the [`MapArc.width`] property. Also, you can apply different width to the each [`MapArc`] in the [`arcs`] collection using the [`MapArc.width`] property. The default value of the [`MapArcLayer.width`] property is `2`.
+You can apply the same width for all [`MapArc`] in the [`arcs`] collection using the [`MapArcLayer.width`] property. Alternatively, you can apply different width to each [`MapArc`] in the [`arcs`] collection using the individual [`MapArc.width`] property. The default value of the [`MapArcLayer.width`] property is `2`
 
 {% tabs %}
 {% highlight Dart %}
@@ -370,7 +437,7 @@ class DataModel {
 
 ## Dash array
 
-You can apply dash support for the arc using the [MapArc.dashArray] property. The default value of [MapArc.dashArray] is [0, 0].
+You can apply dash support for the arc using the [MapArc.dashArray] property.
 
 A sequence of dash and gap will be rendered based on the values in this list. Once all values of the list is rendered, it will be repeated again till the end of the arc.
 
@@ -445,6 +512,8 @@ class DataModel {
 ## Animation
 
 You can apply animation for the [`MapArc`] using the [`MapArcLayer.animation`] property and able to customize the animation flow, curve and duration.
+
+By default, there will not be any animation.
 
 {% tabs %}
 {% highlight Dart %}
@@ -534,7 +603,7 @@ class DataModel {
 
 ## OnTap
 
-You can use the [`onTap`] callback to customize the taped [`MapArc`] based on the arc index. The callback was called when the user clicked on the arc.
+You can use the [`onTap`] callback to get a notification if the particular [`MapArc`] is tapped. You can also customize the tapped [`MapArc`] based on the index passed in the callback as shown in the below code snippet.
 
 {% tabs %}
 {% highlight Dart %}
@@ -611,7 +680,7 @@ class DataModel {
 
 ## Tooltip
 
-You can show additional information about the arc drawn using the [`MapArcLayer.tooltipBuilder`] property.
+You can show additional information about an arc drawn using the [`MapArcLayer.tooltipBuilder`] property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -708,9 +777,9 @@ class DataModel {
 
 You can customize the appearance of the tooltip.
 
-Background color - Change the background color of the tooltip in the maps using the [`MapTooltipSettings.color`] property.
-Stroke color - Change the stroke color of the tooltip in the maps using the [`MapTooltipSettings.strokeColor`] property.
-Stroke width - Change the stroke width of the tooltip in the maps using the [`MapTooltipSettings.strokeWidth`] property.
+* Background color - Change the background color of the tooltip in the maps using the [`MapTooltipSettings.color`] property.
+* Stroke color - Change the stroke color of the tooltip in the maps using the [`MapTooltipSettings.strokeColor`] property.
+* Stroke width - Change the stroke width of the tooltip in the maps using the [`MapTooltipSettings.strokeWidth`] property.
 
 {% tabs %}
 {% highlight Dart %}

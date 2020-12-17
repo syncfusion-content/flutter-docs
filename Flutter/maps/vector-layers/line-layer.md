@@ -1,19 +1,23 @@
 ---
 layout: post
-title: Line shape in Syncfusion Flutter maps | Syncfusion
-description: This section explains how to add line shape on the map and customize its appearance in the Flutter maps.
+title: Adding lines in Syncfusion Flutter maps | Syncfusion
+description: This section explains how to add lines on the map and customize its appearance in the Flutter maps.
 platform: Flutter
 control: SfMaps
 documentation: ug
 ---
 
-# Line shape features in maps
+# Lines in the Flutter maps
 
-Line shape is used to connect two location on the map. This section helps to learn about how to connect two location on the map and its customization.
+Line layer is a sublayer that renders a group of [`MapLine`] on [`MapShapeLayer`] and [`MapTileLayer`]. This section helps to learn about how to add the lines and customize them.
 
-## Lines
+## Adding lines
 
 The [`lines`] is a collection of [`MapLine`]. Every single [`MapLine`] connects two location coordinates through a straight line. The start coordinate is set to [`MapLine.from`] property and the end coordinate is set to [`MapLine.to`] property.
+
+N> It is applicable for both the tile layer and shape layer.
+
+<b>In the shape layer</b>
 
 {% tabs %}
 {% highlight Dart %}
@@ -71,11 +75,63 @@ class DataModel {
 {% endhighlight %}
 {% endtabs %}
 
+<b>In the tile layer</b>
+
+{% tabs %}
+{% highlight Dart %}
+
+List<DataModel> data;
+
+@override
+void initState() {
+  data = <DataModel>[
+    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(56.1304, -106.3468)),
+    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-9.1900, -75.0152)),
+    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(61.5240, 105.3188)),
+    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-25.2744, 133.7751)),
+  ];
+  super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: Padding(
+      padding: EdgeInsets.all(10),
+      child: SfMaps(layers: [
+        MapTileLayer(
+          urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+          sublayers: [
+            MapLineLayer(
+              lines: List<MapLine>.generate(data.length, (int index) {
+                return MapLine(
+                  from: data[index].from,
+                  to: data[index].to,
+                );
+              }).toSet(),
+            ),
+          ],
+        ),
+      ]),
+    ),
+  );
+}
+
+class DataModel {
+  DataModel(this.from, this.to);
+
+  final MapLatLng from;
+  final MapLatLng to;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ![Default line shape](images/line-layer/default_line_shape.png)
 
 ## Color
 
-You can apply single color for all [`MapLine`] in the [`lines`] collection using the [`MapLineLayer.color`] property. Also, you can apply different color to the each [`MapLine`] in the [`lines`] collection using the [`MapLine.color`] property.
+You can apply the same color for all [`MapLine`] in the [`lines`] collection using the [`MapLineLayer.color`] property. Alternatively, you can apply different colors to each [`MapLine`] in the [`lines`] collection using the individual [`MapLine.color`] property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -139,7 +195,7 @@ class DataModel {
 
 ## Width
 
-You can apply same width for all [`MapLine`] in the [`lines`] collection using the [`MapLineLayer.width`] property. Also, you can apply different width to the each [`MapLine`] in the [`lines`] collection using the [`MapLine.width`] property. The default value of the [`MapLineLayer.width`] property is `2`.
+You can apply the same width for all [`MapLine`] in the [`lines`] collection using the [`MapLineLayer.width`] property. Alternatively, you can apply different width to each [`MapLine`] in the [`lines`] collection using the individual [`MapLine.width`] property. The default value of the [`MapLineLayer.width`] property is `2`
 
 {% tabs %}
 {% highlight Dart %}
@@ -203,7 +259,7 @@ class DataModel {
 
 ## Dash array
 
-You can apply dash support for the line using the [`MapLine.dashArray`] property. The default value of [`MapLine.dashArray`] is [0, 0].
+You can apply dash support for the line using the [`MapLine.dashArray`] property.
 
 A sequence of dash and gap will be rendered based on the values in this list. Once all values of the list is rendered, it will be repeated again till the end of the line.
 
@@ -270,6 +326,8 @@ class DataModel {
 ## Animation
 
 You can apply animation for the [`MapLine`] using the [`MapLineLayer.animation`] property and able to customize the animation flow, curve and duration.
+
+By default, there will not be any animation.
 
 {% tabs %}
 {% highlight Dart %}
@@ -351,7 +409,7 @@ class DataModel {
 
 ## OnTap
 
-You can use the [`onTap`] callback to customize the taped [`MapLine`] based on the line index. The callback was called when the user clicked on the line.
+You can use the [`onTap`] callback to get a notification if the particular [`MapLine`] is tapped. You can also customize the tapped [`MapLine`] based on the index passed in the callback as shown in the below code snippet.
 
 {% tabs %}
 {% highlight Dart %}
@@ -419,7 +477,7 @@ class DataModel {
 
 ## Tooltip
 
-You can show additional information about the line drawn using the [`tooltipBuilder`] property.
+You can show additional information about the line drawn using the [`MapLineLayer.tooltipBuilder`] property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -507,9 +565,9 @@ class DataModel {
 
 You can customize the appearance of the tooltip.
 
-Background color - Change the background color of the tooltip in the maps using the MapTooltipSettings.color property.
-Stroke color - Change the stroke color of the tooltip in the maps using the MapTooltipSettings.strokeColor property.
-Stroke width - Change the stroke width of the tooltip in the maps using the MapTooltipSettings.strokeWidth property.
+* Background color - Change the background color of the tooltip in the maps using the [`MapTooltipSettings.color`] property.
+* Stroke color - Change the stroke color of the tooltip in the maps using the [`MapTooltipSettings.strokeColor`] property.
+* Stroke width - Change the stroke width of the tooltip in the maps using the [`MapTooltipSettings.strokeWidth`] property.
 
 {% tabs %}
 {% highlight Dart %}

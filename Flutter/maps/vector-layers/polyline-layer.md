@@ -1,19 +1,23 @@
 ---
 layout: post
-title: Polyline shape in Syncfusion Flutter maps | Syncfusion
-description: This section explains how to add polyline shape on the map and customize its appearance in the Flutter maps.
+title: Adding polylines in Syncfusion Flutter maps | Syncfusion
+description: This section explains how to add polylines on the map and customize its appearance in the Flutter maps.
 platform: Flutter
 control: SfMaps
 documentation: ug
 ---
 
-# Polyline shape features in maps
+# Polylines in the Flutter maps
 
-Polyline shape is used to connect multiple coordinates on the map to trace the path.
+Polyline layer is a sublayer that renders a group of [`MapPolyline`] on [`MapShapeLayer`] and [`MapTileLayer`]. This section helps to learn about how to add the polylines and customize them.
 
-## Polylines
+## Adding polylines
 
-The [`polylines`] is a collection of [`MapPolyline`]. Every single [`MapPolyline`] connects multiple coordinates through a [`points`].
+The [`polylines`] is a collection of [`MapPolyline`]. Every single [`MapPolyline`] connects multiple coordinates through a [`points`] property.
+
+N> It is applicable for both the tile layer and shape layer.
+
+<b>In the shape layer</b>
 
 {% tabs %}
 {% highlight Dart %}
@@ -85,9 +89,75 @@ class PolylineModel {
 {% endhighlight %}
 {% endtabs %}
 
+<b>In the tile layer</b>
+
+{% tabs %}
+{% highlight Dart %}
+
+List<MapLatLng> polyline;
+List<List<MapLatLng>> polylines;
+MapZoomPanBehavior zoomPanBehavior;
+
+@override
+void initState() {
+  polyline = <MapLatLng>[
+    MapLatLng(13.0827, 80.2707),
+    MapLatLng(13.1746, 79.6117),
+    MapLatLng(13.6373, 79.5037),
+    MapLatLng(14.4673, 78.8242),
+    MapLatLng(14.9091, 78.0092),
+    MapLatLng(16.2160, 77.3566),
+    MapLatLng(17.1557, 76.8697),
+    MapLatLng(18.0975, 75.4249),
+    MapLatLng(18.5204, 73.8567),
+    MapLatLng(19.0760, 72.8777),
+  ];
+
+  polylines = <List<MapLatLng>>[polyline];
+  zoomPanBehavior = MapZoomPanBehavior(
+    zoomLevel: 3,
+    focalLatLng: MapLatLng(15.3173, 76.7139),
+  );
+  super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfMaps(
+      layers: [
+        MapTileLayer(
+          urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+          sublayers: [
+            MapPolylineLayer(
+              polylines: List<MapPolyline>.generate(
+                polylines.length,
+                (int index) {
+                  return MapPolyline(
+                    points: polylines[index],
+                  );
+                },
+              ).toSet(),
+            ),
+          ],
+          zoomPanBehavior: zoomPanBehavior,
+        ),
+      ],
+    ),
+  );
+}
+
+class PolylineModel {
+  PolylineModel(this.points);
+  final List<MapLatLng> points;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Color
 
-You can apply single color for all [`MapPolyline`] in the [`polylines`] collection using the [`MapPolylineLayer.color`] property. Also, you can apply different color to the each [`MapPolyline`] in the [`polylines`] collection using the [`MapPolyline.color`] property.
+You can apply the same color for all [`MapPolyline`] in the [`polylines`] collection using the [`MapPolylineLayer.color`] property. Alternatively, you can apply different colors to each [`MapPolyline`] in the [`polylines`] collection using the individual [`MapPolyline.color`] property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -165,7 +235,7 @@ class PolylineModel {
 
 ## Width
 
-You can apply same width for all [`MapPolyline`] in the [`polylines`] collection using the [`MapPolylineLayer.width`] property. Also, you can apply different width to each [`MapPolyline`] in the [`polylines`] collection using the [`MapPolyline.width`] property.
+You can apply the same width for all [`MapPolyline`] in the [`polylines`] collection using the [`MapPolylineLayer.width`] property. Alternatively, you can apply different width to each [`MapPolyline`] in the [`polylines`] collection using the individual [`MapPolyline.width`] property. The default value of the [`MapPolylineLayer.width`] property is `2`
 
 {% tabs %}
 {% highlight Dart %}
@@ -243,7 +313,7 @@ class PolylineModel {
 
 ## Dash array
 
-You can apply dash for the polyline using the [`MapPolyline.dashArray`] property. The default value of [`MapPolyline.dashArray`] is [0, 0].
+You can apply dash for the polyline using the [`MapPolyline.dashArray`] property.
 
 A sequence of dash and gap will be rendered based on the values in this list. Once all values of the list is rendered, it will be repeated again till the end of the polyline.
 
@@ -325,6 +395,8 @@ class PolylineModel {
 ## Animation
 
 You can apply animation for the [`MapPolyline`] using the [`MapPolylineLayer.animation`] property and able to customize the animation flow, curve and duration.
+
+By default, there will not be any animation.
 
 {% tabs %}
 {% highlight Dart %}
@@ -420,7 +492,7 @@ class PolylineModel {
 
 ## OnTap
 
-You can use the [`onTap`] callback to customize the taped [`MapLine`] based on the line index. The callback was called when the user clicked on the line.
+You can use the [`onTap`] callback to get a notification if the particular [`MapPolyline`] is tapped. You can also customize the tapped [MapPolyline] based on the index passed in the callback as shown in the below code snippet.
 
 {% tabs %}
 {% highlight Dart %}
@@ -607,9 +679,9 @@ class PolylineModel {
 
 You can customize the appearance of the tooltip.
 
-Background color - Change the background color of the tooltip in the maps using the [`MapTooltipSettings.color`] property.
-Stroke color - Change the stroke color of the tooltip in the maps using the [`MapTooltipSettings.strokeColor`] property.
-Stroke width - Change the stroke width of the tooltip in the maps using the [`MapTooltipSettings.strokeWidth`] property.
+* Background color - Change the background color of the tooltip in the maps using the [`MapTooltipSettings.color`] property.
+* Stroke color - Change the stroke color of the tooltip in the maps using the [`MapTooltipSettings.strokeColor`] property.
+* Stroke width - Change the stroke width of the tooltip in the maps using the [`MapTooltipSettings.strokeWidth`] property.
 
 {% tabs %}
 {% highlight Dart %}
