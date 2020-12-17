@@ -7,15 +7,15 @@ control: SfMaps
 documentation: ug
 ---
 
-# Shape sublayer features in maps
+# Shape sublayer features in Maps
 
-The shape sublayer in which geographical rendering is done.
+The shape sublayer is where geographical rendering will happen for the sublayer. This is similar to the main [`shape layer`](https://help.syncfusion.com/flutter/maps/getting-started#add-a-geojson-file-for-shape-layer) rendering. This section explains adding a shape sublayer on the shape layer and tile layer.
 
-## Shape sublayer for tile layer
+## Shape sublayer on tile layer
 
 The [`sublayers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer/MapTileLayer.html) in [`MapTileLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html) contains collection of [`MapSublayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/sublayers.html).The actual geographical rendering is done in the each [`MapShapeSublayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer-class.html). The [`source`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/source.html) property of the [`MapShapeSublayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer-class.html) is of type [`MapShapeSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource-class.html). The path of the .json file which contains the GeoJSON data has to be set to the [`MapShapeSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource-class.html).
 
-The [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) property of the [`MapShapeSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource-class.html) is used to refer the unique field name in the .json file to identify each shapes. In 'Mapping the data source' section of this document, this [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) will be used to map with respective value returned in [`primaryValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/primaryValueMapper.html) from the data source.
+The [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) property of the [`MapShapeSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource-class.html) is used to refer the unique field name in the .json file to identify each shapes.
 
 {% tabs %}
 {% highlight Dart %}
@@ -59,11 +59,11 @@ return Scaffold(
 N>
 * Refer the [`MapTileLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html), for adding tile layer in [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html).
 
-## Shape sublayer for shape layer
+## Shape sublayer on shape layer
 
 The [`sublayers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/MapShapeLayer.html) in [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html) contains collection of [`MapSublayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/sublayers.html).The actual geographical rendering is done in the each [`MapShapeSublayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer-class.html). The [`source`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/source.html) property of the [`MapShapeSublayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer-class.html) is of type [`MapShapeSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource-class.html). The path of the .json file which contains the GeoJSON data has to be set to the [`MapShapeSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource-class.html).
 
-The [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) property of the [`MapShapeSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource-class.html) is used to refer the unique field name in the .json file to identify each shapes. In 'Mapping the data source' section of this document, this [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) will be used to map with respective value returned in [`primaryValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/primaryValueMapper.html) from the data source.
+The [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) property of the [`MapShapeSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource-class.html) is used to refer the unique field name in the .json file to identify each shapes.
 
 {% tabs %}
 {% highlight Dart %}
