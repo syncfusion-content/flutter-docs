@@ -13,18 +13,21 @@ Tooltip is used to indicate the shape, bubble, marker information during the tap
 
 ## Tooltip for the shapes
 
-It is used to clearly indicate the shape information on the tap or click. To show tooltip for the shape, return a widget in [`MapShapeLayer.shapeTooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/shapeTooltipBuilder.html). This widget will then be wrapped in the existing tooltip shape which comes with the nose at the bottom. The [`MapShapeLayer.shapeTooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/shapeTooltipBuilder.html) will be called with the corresponding index every time when you interacts with the shapes i.e., while tapping in touch devices and hovering in the mouse enabled devices.
+It is used to clearly indicate the shape information on the tap or click. To show tooltip for the shape, return a widget in [`MapShapeLayer.shapeTooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/shapeTooltipBuilder.html). This widget will then be wrapped in the existing tooltip shape which comes with the nose at the bottom.
+
+The [`MapShapeLayer.shapeTooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/shapeTooltipBuilder.html) will be called with the corresponding index every time when you interacts with the shapes i.e., while tapping in touch devices and hovering in the mouse enabled devices.
 
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> data;
+List<Model> _data;
+MapShapeSource _shapeSource;
 
 @override
 void initState() {
   super.initState();
 
-  data = <Model>[
+  _data = <Model>[
     Model('Asia', 50, '44,579,000 sq. km.'),
     Model('Africa', 54, '30,370,000 sq. km.'),
     Model('Europe', 51, '10,180,000 sq. km.'),
@@ -32,26 +35,28 @@ void initState() {
     Model('South America', 12, '17,840,000 sq. km.'),
     Model('Australia', 14, '8,600,000 sq. km.'),
   ];
+
+  _shapeSource = MapShapeSource.asset(
+    "assets/world_map.json",
+    shapeDataField: "continent",
+    dataCount: _data.length,
+    primaryValueMapper: (int index) => _data[index].continent,
+  );
 }
 
 @override
 Widget build(BuildContext context) {
   return Scaffold(
     body: Padding(
-      padding: EdgeInsets.only(left: 15, right: 15),
+      padding: const EdgeInsets.only(left: 15, right: 15),
       child: SfMaps(
         layers: [
           MapShapeLayer(
-            source: MapShapeSource.asset(
-              "assets/world_map.json",
-              shapeDataField: "continent",
-              dataCount: data.length,
-              primaryValueMapper: (int index) => data[index].continent,
-            ),
-            shapeTooltipBuilder: (context, index) {
+            source: _shapeSource,
+            shapeTooltipBuilder: (BuildContext context, int index) {
               return Container(
                 width: 180,
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -59,7 +64,7 @@ Widget build(BuildContext context) {
                       children: [
                         Center(
                           child: Text(
-                            data[index].continent,
+                            _data[index].continent,
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: Theme.of(context)
@@ -68,25 +73,20 @@ Widget build(BuildContext context) {
                                       .fontSize),
                           ),
                         ),
-                        Icon(
+                        const Icon(
                           Icons.map,
                           color: Colors.white,
                           size: 16,
                         ),
                       ],
                     ),
-                    SizedBox(
-                      height: 5,
-                    ),
-                    Container(
-                      color: Colors.white,
-                      height: 1,
-                    ),
-                    SizedBox(
-                      height: 5,
+                    const Divider(
+                        color: Colors.white,
+                        height: 10,
+                        thickness: 1.2,
                     ),
                     Text(
-                      'Area : ' + data[index].area,
+                      'Area : ' + _data[index].area,
                       style: TextStyle(
                       color: Colors.white,
                       fontSize:
@@ -96,9 +96,9 @@ Widget build(BuildContext context) {
                 ),
               );
             },
-            tooltipSettings: MapTooltipSettings(
+            tooltipSettings: const MapTooltipSettings(
               color: Colors.blue,
-              strokeColor: const Color.fromRGBO(252, 187, 15, 1),
+              strokeColor: Color.fromRGBO(252, 187, 15, 1),
               strokeWidth: 1.5),
           ),
         ],
@@ -132,13 +132,14 @@ The [MapShapeLayer.bubbleTooltipBuilder](https://pub.dev/documentation/syncfusio
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> data;
+List<Model> _data;
+MapShapeSource _shapeSource;
 
 @override
 void initState() {
   super.initState();
 
-  data = <Model>[
+  _data = <Model>[
     Model('Asia', 50, '44,579,000 sq. km.'),
     Model('Africa', 54, '30,370,000 sq. km.'),
     Model('Europe', 51, '10,180,000 sq. km.'),
@@ -146,27 +147,29 @@ void initState() {
     Model('South America', 12, '17,840,000 sq. km.'),
     Model('Australia', 14, '8,600,000 sq. km.'),
   ];
+
+  _shapeSource = MapShapeSource.asset(
+    "assets/world_map.json",
+    shapeDataField: "continent",
+    dataCount: _data.length,
+    primaryValueMapper: (int index) => _data[index].continent,
+    bubbleSizeMapper: (int index) => _data[index].countriesCount,
+  );
 }
 
 @override
 Widget build(BuildContext context) {
   return Scaffold(
     body: Padding(
-      padding: EdgeInsets.only(left: 15, right: 15),
+      padding: const EdgeInsets.only(left: 15, right: 15),
       child: SfMaps(
         layers: [
           MapShapeLayer(
-            source: MapShapeSource.asset(
-              "assets/world_map.json",
-              shapeDataField: "continent",
-              dataCount: data.length,
-              primaryValueMapper: (int index) => data[index].continent,
-              bubbleSizeMapper: (int index) => data[index].countriesCount,
-            ),
-            bubbleTooltipBuilder: (context, index) {
+            source: _shapeSource,
+            bubbleTooltipBuilder: (BuildContext context, int index) {
               return Container(
                 width: 150,
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -174,7 +177,7 @@ Widget build(BuildContext context) {
                       children: [
                         Center(
                           child: Text(
-                            data[index].continent,
+                            _data[index].continent,
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: Theme.of(context)
@@ -183,26 +186,21 @@ Widget build(BuildContext context) {
                                       .fontSize),
                           ),
                         ),
-                        Icon(
+                        const Icon(
                           Icons.flag,
                           color: Colors.white,
                           size: 16,
                         ),
                       ],
                     ),
-                    SizedBox(
-                      height: 5,
-                    ),
-                    Container(
+                    const Divider(
                       color: Colors.white,
-                      height: 1,
-                    ),
-                    SizedBox(
-                      height: 5,
+                      height: 10,
+                      thickness: 1.2,
                     ),
                     Text(
                       'Total Countries : ' +
-                        data[index].countriesCount.toInt().toString(),
+                        _data[index].countriesCount.toInt().toString(),
                       style: TextStyle(
                         color: Colors.white,
                         fontSize:
@@ -212,13 +210,13 @@ Widget build(BuildContext context) {
                 ),
               );
             },
-            bubbleSettings: MapBubbleSettings(
+            bubbleSettings: const MapBubbleSettings(
                 minRadius: 15,
                 maxRadius: 35,
             ),
-            tooltipSettings: MapTooltipSettings(
-              color: const Color.fromRGBO(98, 0, 238, 1),
-              strokeColor: const Color.fromRGBO(252, 187, 15, 1),
+            tooltipSettings: const MapTooltipSettings(
+              color: Color.fromRGBO(98, 0, 238, 1),
+              strokeColor: Color.fromRGBO(252, 187, 15, 1),
               strokeWidth: 1.5),
           ),
         ],
@@ -253,6 +251,7 @@ The [MapLayer.markerTooltipBuilder] will be called with the corresponding index 
 {% highlight Dart %}
 
 List<WorldWonderModel> _data;
+MapShapeSource _shapeSource;
 
 @override
 void initState() {
@@ -295,6 +294,11 @@ void initState() {
           latitude: 40.4319,
           longitude: 116.5704)
   ];
+
+  _shapeSource = MapShapeSource.asset(
+    "assets/world_map.json",
+    shapeDataField: "country",
+  );
 }
 
 @override
@@ -305,10 +309,7 @@ Widget build(BuildContext context) {
       child: SfMaps(
           layers: [
             MapShapeLayer(
-              source: MapShapeSource.asset(
-                "assets/world_map.json",
-                shapeDataField: "country",
-              ),
+              source: _shapeSource,
               initialMarkersCount: _data.length,
               markerBuilder: (BuildContext context, int index) {
                 return MapMarker(
@@ -323,7 +324,7 @@ Widget build(BuildContext context) {
               markerTooltipBuilder: (BuildContext context, int index) {
                 return Container(
                   width: 150,
-                  padding: EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(10),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
@@ -340,22 +341,17 @@ Widget build(BuildContext context) {
                                       .fontSize),
                             ),
                           ),
-                          Icon(
-                            Icons.place,
+                          const Icon(
+                            Icons.tour,
                             color: Colors.white,
                             size: 16,
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Container(
+                      const Divider(
                         color: Colors.white,
-                        height: 1,
-                      ),
-                      SizedBox(
-                        height: 5,
+                        height: 10,
+                        thickness: 1.2,
                       ),
                       Text(
                         _data[index].place,
@@ -368,7 +364,7 @@ Widget build(BuildContext context) {
                   ),
                 );
               },
-              tooltipSettings: MapTooltipSettings(
+              tooltipSettings: const MapTooltipSettings(
                   color: Colors.red,
                   strokeColor: Colors.black,
                   strokeWidth: 1.5),
@@ -393,7 +389,7 @@ class WorldWonderModel {
 {% endhighlight %}
 {% endtabs %}
 
-![Maps marker tooltip builder](images/tooltip/bubble_tooltip_builder.png)
+![Maps marker tooltip builder](images/tooltip/marker_tooltip_builder.png)
 
 N>
 * Refer the [`MapTooltipSettings`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings-class.html), for customizing the tooltip.
@@ -409,13 +405,14 @@ You can customize the below appearance of the tooltip.
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> data;
+List<Model> _data;
+MapShapeSource _shapeSource;
 
 @override
 void initState() {
   super.initState();
 
-  data = <Model>[
+  _data = <Model>[
     Model('Asia', 50, '44,579,000 sq. km.'),
     Model('Africa', 54, '30,370,000 sq. km.'),
     Model('Europe', 51, '10,180,000 sq. km.'),
@@ -423,31 +420,33 @@ void initState() {
     Model('South America', 12, '17,840,000 sq. km.'),
     Model('Australia', 14, '8,600,000 sq. km.'),
   ];
+
+  _shapeSource = MapShapeSource.asset(
+    "assets/world_map.json",
+    shapeDataField: "continent",
+    dataCount: _data.length,
+    primaryValueMapper: (int index) => _data[index].continent,
+    bubbleSizeMapper: (int index) => _data[index].countriesCount,
+  );
 }
 
 @override
 Widget build(BuildContext context) {
   return Scaffold(
     body: Padding(
-      padding: EdgeInsets.only(left: 15, right: 15),
+      padding: const EdgeInsets.only(left: 15, right: 15),
       child: SfMaps(
         layers: [
           MapShapeLayer(
-            source: MapShapeSource.asset(
-              "assets/world_map.json",
-              shapeDataField: "continent",
-              dataCount: data.length,
-              primaryValueMapper: (int index) => data[index].continent,
-              bubbleSizeMapper: (int index) => data[index].countriesCount,
-            ),
+            source: _shapeSource,
             shapeTooltipBuilder: (BuildContext context, int index) {
               return Padding(
                 padding: const EdgeInsets.all(7),
                   child: Text(
                     'Continent : ' +
-                        data[index].continent +
+                        _data[index].continent +
                         '\nArea : ' +
-                        data[index].area,
+                        _data[index].area,
                     style: const TextStyle(
                       color: Colors.white,
                       fontSize: 14,
@@ -462,9 +461,9 @@ Widget build(BuildContext context) {
                 padding: const EdgeInsets.all(7),
                 child: Text(
                     'Continent : ' +
-                        data[index].continent +
+                        _data[index].continent +
                         '\nTotal Countries : ' +
-                        data[index].countriesCount.toStringAsFixed(0),
+                        _data[index].countriesCount.toStringAsFixed(0),
                     style: const TextStyle(
                       color: Colors.white,
                       fontSize: 14,
@@ -511,13 +510,14 @@ N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/pa
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> data;
+List<Model> _data;
+MapShapeSource _shapeSource;
 
 @override
 void initState() {
   super.initState();
 
-  data = <Model>[
+  _data = <Model>[
     Model('Asia', 50, '44,579,000 sq. km.'),
     Model('Africa', 54, '30,370,000 sq. km.'),
     Model('Europe', 51, '10,180,000 sq. km.'),
@@ -525,6 +525,14 @@ void initState() {
     Model('South America', 12, '17,840,000 sq. km.'),
     Model('Australia', 14, '8,600,000 sq. km.'),
   ];
+
+  _shapeSource = MapShapeSource.asset(
+    "assets/world_map.json",
+    shapeDataField: "continent",
+    dataCount: _data.length,
+    primaryValueMapper: (int index) => _data[index].continent,
+    bubbleSizeMapper: (int index) => _data[index].countriesCount,
+  );
 }
 
 @override
@@ -537,7 +545,7 @@ Widget build(BuildContext context) {
           tooltipColor: const Color.fromRGBO(98, 0, 238, 1),
           tooltipStrokeColor: const Color.fromRGBO(252, 187, 15, 1),
           tooltipStrokeWidth: 3,
-          tooltipBorderRadius: BorderRadiusDirectional.only(
+          tooltipBorderRadius: const BorderRadiusDirectional.only(
             topStart: Radius.circular(20),
             bottomEnd: Radius.circular(20),
           ),
@@ -545,21 +553,15 @@ Widget build(BuildContext context) {
         child: SfMaps(
           layers: [
             MapShapeLayer(
-              source: MapShapeSource.asset(
-                "assets/world_map.json",
-                shapeDataField: "continent",
-                dataCount: data.length,
-                primaryValueMapper: (int index) => data[index].continent,
-                bubbleSizeMapper: (int index) => data[index].countriesCount,
-              ),
+              source: _shapeSource,
               shapeTooltipBuilder: (BuildContext context, int index) {
                   return Padding(
                       padding: const EdgeInsets.all(7),
                         child: Text(
                           'Continent : ' +
-                            data[index].continent +
+                            _data[index].continent +
                           '\nArea : ' +
-                            data[index].area,
+                            _data[index].area,
                           style: const TextStyle(
                             color: Colors.white,
                             fontSize: 14,
@@ -574,9 +576,9 @@ Widget build(BuildContext context) {
                     padding: const EdgeInsets.all(7),
                     child: Text(
                         'Continent : ' +
-                            data[index].continent +
+                            _data[index].continent +
                         '\nTotal Countries : ' +
-                            data[index].countriesCount.toStringAsFixed(0),
+                            _data[index].countriesCount.toStringAsFixed(0),
                         style: const TextStyle(
                           color: Colors.white,
                           fontSize: 14,
