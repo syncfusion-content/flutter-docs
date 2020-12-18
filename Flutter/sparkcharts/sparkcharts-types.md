@@ -41,11 +41,12 @@ The following properties are used to customize the appearance:
       return Scaffold(
         body: Center(
           child: SfSparkLineChart(
+            axisLineWidth: 0,
             data: <double>[
                 5, 6, 5, 7, 4, 3, 9, 5, 6, 5, 7, 8, 4, 5, 3, 4, 11, 10, 2, 12, 4, 7, 6, 8
             ],
             highPointColor: Colors.red,
-            lowPointColor: Colors.green,
+            lowPointColor: Colors.red,
             firstPointColor: Colors.orange,
             lastPointColor: Colors.orange,
             width: 3,
