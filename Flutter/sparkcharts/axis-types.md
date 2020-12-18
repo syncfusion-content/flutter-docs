@@ -7,7 +7,7 @@ control: Sparkline
 documentation: ug
 ---
 
-# Axis types
+# Axis types of Spark charts
 
 Charts typically have two axes that are used to measure and categorize data: a vertical (Y) axis, and a horizontal (X) axis.
 
