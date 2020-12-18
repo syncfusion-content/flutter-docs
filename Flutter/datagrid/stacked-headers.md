@@ -9,7 +9,7 @@ documentation: ug
 
 # Stacked headers in Flutter Datagrid
 
-The datagrid provides support to display an additional unbound header rows known as `StackedHeaderRows` that are spanned across the DataGrid columns. You can group one or more columns under each stacked header.
+The datagrid provides support to display an additional unbound header rows known as [StackedHeaderRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/stackedHeaderRows.html) that are spanned across the DataGrid columns. You can group one or more columns under each stacked header.
 
 Each [StackedHeaderRow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/StackedHeaderRow-class.html) contains [cells](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/StackedHeaderRow/cells.html) that hold a list of [StackedHeaderCell](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/StackedHeaderCell-class.html) where each `StackedHeaderCell` contains a number of child columns. The [StackedHeaderCell.columnNames](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/StackedHeaderCell/columnNames.html) property returns the columns grouped under the stacked header row. The [GridColumn.mappingName](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/mappingName.html) is a unique name used for mapping specific child columns grouped under the same stacked header row. The [StackedHeaderCell.child](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/StackedHeaderCell/child.html) property is used to load any type of widget to the corresponding stacked header cell.
 
@@ -60,7 +60,7 @@ Widget build(BuildContext context) {
 
 ## Multi stacked headers
 
-You can provide multiple stacked headers to the datagrid by adding the multiple `StackedHeaderRow` to the [SfDataGrid.stackedHeaderRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/stackedHeaderRows.html) collection.
+You can provide multiple stacked headers to the datagrid by adding the multiple `StackedHeaderRow` to the `SfDataGrid.stackedHeaderRows` collection.
 
 {% tabs %}
 {% highlight Dart %} 
