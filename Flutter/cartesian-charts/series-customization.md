@@ -275,9 +275,9 @@ N> The gradient is not applicable for spline, step line, candle, hilo, hilo open
 
 ### Gradient stroke
  
-The [`borderGradient`]() property is used to define the gradient color for the border of the applicable series. 
+The [`borderGradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderGradient.html) property is used to define the gradient color for the border of the applicable series. 
 
-If the properties of both [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/borderColor.html) and [`borderGradient`]() are defined then [`borderGradient`]() is considered.
+If the properties of both [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/borderColor.html) and [`borderGradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderGradient.html) are defined then [`borderGradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderGradient.html) is considered.
 
 {% highlight dart %} 
 

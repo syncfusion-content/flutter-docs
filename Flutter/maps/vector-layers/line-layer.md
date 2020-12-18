@@ -127,7 +127,7 @@ class DataModel {
 {% endhighlight %}
 {% endtabs %}
 
-![Default line shape](images/line-layer/default_line_shape.png)
+![Default line shape](../images/line-layer/default_line_shape.png)
 
 ## Color
 
@@ -191,7 +191,7 @@ class DataModel {
 {% endhighlight %}
 {% endtabs %}
 
-![Line shape color](images/line-layer/line_shape_color.png)
+![Line shape color](../images/line-layer/line_shape_color.png)
 
 ## Width
 
@@ -255,7 +255,7 @@ class DataModel {
 {% endhighlight %}
 {% endtabs %}
 
-![Line shape width](images/line-layer/line_shape_width.png)
+![Line shape width](../images/line-layer/line_shape_width.png)
 
 ## Dash array
 
@@ -321,7 +321,7 @@ class DataModel {
 {% endhighlight %}
 {% endtabs %}
 
-![Line shape dash array](images/line-layer/line_shape_dash_array.png)
+![Line shape dash array](../images/line-layer/line_shape_dash_array.png)
 
 ## Animation
 
@@ -405,7 +405,7 @@ class DataModel {
 {% endhighlight %}
 {% endtabs %}
 
-![Line shape animation](images/line-layer/line_shape_animation.gif)
+![Line shape animation](../images/line-layer/line_shape_animation.gif)
 
 ## Tap
 
@@ -473,7 +473,7 @@ class DataModel {
 {% endhighlight %}
 {% endtabs %}
 
-![Line shape onTap](images/line-layer/line_shape_onTap.gif)
+![Line shape onTap](../images/line-layer/line_shape_onTap.gif)
 
 ## Tooltip
 
@@ -559,7 +559,7 @@ class DataModel {
 {% endhighlight %}
 {% endtabs %}
 
-![Line shape tooltip](images/line-layer/line_shape_tooltip.png)
+![Line shape tooltip](../images/line-layer/line_shape_tooltip.png)
 
 ## Tooltip customization
 
@@ -654,4 +654,4 @@ class DataModel {
 {% endhighlight %}
 {% endtabs %}
 
-![Line shape tooltip customization](images/line-layer/line_shape_tooltip_customization.png)
+![Line shape tooltip customization](../images/line-layer/line_shape_tooltip_customization.png)

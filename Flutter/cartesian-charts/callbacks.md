@@ -22,7 +22,7 @@ Triggers when the tooltip is rendering. Here, you can customize the text, header
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipArgs/seriesIndex.html) - specifies the current series index.
 * [`dataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipArgs/dataPoints.html) - holds the data point collection.
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipArgs/pointIndex.html) - specifies the current point index.
-* [`viewportPointIndex`]() - specifies the viewport index value of the tooltip.
+* [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipArgs/viewportPointIndex.html) - specifies the viewport index value of the tooltip.
 
  {% highlight dart %}
 
@@ -115,10 +115,10 @@ Triggers when data label is rendering. Text and text styles such as color, font 
 * [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/textStyle.html) â€“ used to change the text color, size, font family, font style, and font weight.
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/pointIndex.html) - specifies the current point index.
 * [`seriesRenderer`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/series.html) - specifies current series and the series type may vary based on the chart type.
-* [`dataPoints`]() - used to get the data points of the series.
-* [`viewportPointIndex`]() - to get the viewport index value of the tapped data label.
-* [`offset`]() - used to get and set the horizontal/vertical position of the data label. The first argument sets the horizontal component to x, while the second argument sets the vertical component to y.
-* [`color`]() - used to get and set the background color of a data label.
+* [`dataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/dataPoints.html) - used to get the data points of the series.
+* [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/viewportPointIndex.html) - to get the viewport index value of the tapped data label.
+* [`offset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/offset.html) - used to get and set the horizontal/vertical position of the data label. The first argument sets the horizontal component to x, while the second argument sets the vertical component to y.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/color.html) - used to get and set the background color of a data label.
  
 {% highlight dart %}
 
@@ -160,7 +160,7 @@ Triggers when the legend item is rendering. Here, you can customize the legendâ€
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendRenderArgs/pointIndex.html) - specifies the current point index that is applicable for circular chart type alone.
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendRenderArgs/seriesIndex.html) - specifies the current series index.
 * [`legendIconType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendRenderArgs/legendIconType.html) - specifies the shape of the legend.
-* [`color`]() - used to get and set the color of the legend icon.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendRenderArgs/color.html) - used to get and set the color of the legend icon.
 
 {% highlight dart %}
 
@@ -382,7 +382,7 @@ Triggers when tapping the series point. The [`onPointTapped`](https://pub.dev/do
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PointTapArgs/seriesIndex.html) - specifies the current series index.
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PointTapArgs/pointIndex.html) - specifies the current point index.
 * [`dataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PointTapArgs/dataPoints.html) - holds the data point collection.
-* [`viewportPointIndex`]() - specifies the viewport index value of the tapped data point.
+* [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PointTapArgs/viewportPointIndex.html) - specifies the viewport index value of the tapped data point.
 
 {% highlight dart %}
 
@@ -409,7 +409,7 @@ Triggers when tapping the axis label. The  [`onAxisLabelTapped`](https://pub.dev
 * [`axis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelTapArgs/axis.html) - holds the information about the current axis.
 * [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelTapArgs/text.html) - specifies the content of the axis label.
 * [`value`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelTapArgs/value.html) - specifies the actual value of the current axis label.
-* [`axisName`]() - used to get the axis name.
+* [`axisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelTapArgs/axisName.html) - used to get the axis name.
 
 {% highlight dart %}
 
@@ -468,7 +468,7 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
 * [`selectedBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/selectedBorderWidth.html) - used to get and set the border width of the selected data points or series.
 * [`unselectedBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/unselectedBorderColor.html) - used to get and set the border color of the unselected data points or series.
 * [`unselectedBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/unselectedBorderWidth.html) - used to get and set the border width of the unselected data points or series.
-* [`viewportPointIndex`]() - used to get the viewport index value of the selected data points.
+* [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/viewportPointIndex.html) - used to get the viewport index value of the selected data points.
 
 {% highlight dart %}
 
@@ -501,8 +501,8 @@ Triggers when indicator is rendering. Here you can customize the name, signal li
  
 The [`onIndicatorRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs-class.html) contains following arguments.
 
-* [`indicatorName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/indicatorname.html) - Used to get and set the indicator name.
-* [`indicator`]() - used to get the technical indicator information.
+* [`indicatorName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/indicatorName.html) - Used to get and set the indicator name.
+* [`indicator`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/indicator.html) - used to get the technical indicator information.
 * [`signalLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/signalLineColor.html) - Used to change the color of the signal line.
 * [`signalLineWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/signalLineWidth.html) - Used to change the width of the signal line.
 * [`lineDashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/lineDashArray.html) - Used to change the dash array size.
@@ -687,15 +687,15 @@ The callback contains the following argument:
 
 Triggers when the marker is being rendered. Here, you can customized the following arguments.
 
-* [`pointIndex`]() - to get the point index of the marker.
-* [`seriesIndex`]() - to get the series index of the marker.
-* [`shape`]() - to get and set the shape of the marker.
-* [`markerHeight`]() - to get and set the height of the marker.
-* [`markerWidth`]() - to get and set the width of the marker.
-* [`color`]() - to get and set the color of the marker.
-* [`borderWidth`]() - to get and set the border width of the marker.
-* [`borderColor`]() - to get and set the border color of the marker.
-* [`viewportPointIndex`]() - to get the viewport index value of the tapped data label.
+* [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerRenderArgs/pointIndex.html) - to get the point index of the marker.
+* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerRenderArgs/seriesIndex.html) - to get the series index of the marker.
+* [`shape`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerRenderArgs/shape.html) - to get and set the shape of the marker.
+* [`markerHeight`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerRenderArgs/markerHeight.html) - to get and set the height of the marker.
+* [`markerWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerRenderArgs/markerWidth.html) - to get and set the width of the marker.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerRenderArgs/color.html) - to get and set the color of the marker.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerRenderArgs/borderWidth.html) - to get and set the border width of the marker.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerRenderArgs/borderColor.html) - to get and set the border color of the marker.
+* [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerRenderArgs/viewportPointIndex.html) - to get the viewport index value of the tapped data label.
 
 {% highlight dart %}
 
@@ -725,8 +725,8 @@ Triggers when tapping on the data label of the data point in the series. The [`o
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/seriesIndex.html) - Specifies the series index of the tapped data label
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/pointIndex.html) - Specifies the point index of the tapped data label.
 * [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/text.html) - Specifies the content of the tapped data label.
-* [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/dataLabelSettings.html) - to get the data label customization options specified in that particular series.
-* [`viewportPointIndex`]() - to get the viewport index value of the tapped data label.
+* [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/dataLabelSettings.html) - to get the data label customization options specified in that particular series.
+* [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/viewportPointIndex.html) - to get the viewport index value of the tapped data label.
 
 
 N> This callback will not be called, when the builder is specified for data label (data label template). For this case, custom widget specified in the [`DataLabelSettings.builder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/builder.html) property can be wrapped using the [`GestureDetector`](https://api.flutter.dev/flutter/widgets/GestureDetector-class.html) and this functionality can be achieved in the application level.
