@@ -48,8 +48,8 @@ Widget build(BuildContext context) {
           child: SfMaps(
             layers: <MapLayer>[
               MapShapeLayer(
-                delegate: MapShapeLayerDelegate(
-                  shapeFile: 'assets/world_map.json',
+                 source: MapShapeSource.asset(
+                  'assets/world_map.json',
                   shapeDataField: 'name',
                   dataCount: data.length,
                   primaryValueMapper: (index) => data[index].country,
@@ -192,8 +192,8 @@ Widget build(BuildContext context) {
               child: SfMaps(
                 layers: <MapLayer>[
                   MapShapeLayer(
-                    delegate: MapShapeLayerDelegate(
-                      shapeFile: 'assets/world_map.json',
+                    source: MapShapeSource.asset(
+                      'assets/world_map.json',
                       shapeDataField: 'name',
                     ),
                     initialMarkersCount: 5,
@@ -231,7 +231,7 @@ class Model {
 
 ## Adding custom markers
 
-You can show custom marker using the `child` property of the [`MapMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker-class.html) which returns from the [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/markerBuilder.html).
+You can show custom marker using the `child` property of the [`MapMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker-class.html) which returns from the [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerBuilder.html).
 
 {% tabs %}
 {% highlight Dart %}
@@ -271,8 +271,8 @@ Widget build(BuildContext context) {
                child: SfMaps(
                  layers: <MapLayer>[
                    MapShapeLayer(
-                     delegate: MapShapeLayerDelegate(
-                       shapeFile: 'assets/world_map.json',
+                     source: MapShapeSource.asset(
+                       'assets/world_map.json',
                        shapeDataField: 'name',
                      ),
                      initialMarkersCount: 5,
@@ -307,7 +307,7 @@ class Model {
 
 ## Adding markers dynamically
 
-You can add markers dynamically using the [`MapShapeLayerController.insertMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerController/insertMarker.html) method. The [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/markerBuilder.html) will be called for the respective index once [`insertMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerController/insertMarker.html) method is called. The [`controller`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/controller.html) property of [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html) has to be set with the new instance of [`MapShapeLayerController`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerController-class.html).
+You can add markers dynamically using the [`MapShapeLayerController.insertMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerController/insertMarker.html) method. The [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerBuilder.html) will be called for the respective index once [`insertMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerController/insertMarker.html) method is called. The [`controller`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/controller.html) property of [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html) has to be set with the new instance of [`MapShapeLayerController`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerController-class.html).
 
 Marker will be inserted at the given index if the index value is less than or equal to the current available index and the marker will be added as a last item if the index value is greater than the current available index.
 
@@ -347,8 +347,8 @@ Widget build(BuildContext context) {
                   SfMaps(
                     layers: <MapLayer>[
                       MapShapeLayer(
-                        delegate: MapShapeLayerDelegate(
-                          shapeFile: 'assets/world_map.json',
+                        source: MapShapeSource.asset(
+                          'assets/world_map.json',
                           shapeDataField: 'name',
                         ),
                         initialMarkersCount: 5,
@@ -394,7 +394,7 @@ class Model {
 
 ## Updating the existing markers
 
-You can update multiple markers at a same time by passing indices to the [`updateMarkers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerController/updateMarkers.html) method in the [`MapShapeLayerController`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerController-class.html). The [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/markerBuilder.html) will be called again for the respective indices once [`updateMarkers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerController/updateMarkers.html) method is called.
+You can update multiple markers at a same time by passing indices to the [`updateMarkers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerController/updateMarkers.html) method in the [`MapShapeLayerController`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerController-class.html). The [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerBuilder.html) will be called again for the respective indices once [`updateMarkers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerController/updateMarkers.html) method is called.
 
 N> You can get the current markers count from [`MapShapeLayerController.markersCount`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerController/markersCount.html).
 
@@ -433,8 +433,8 @@ Widget build(BuildContext context) {
                   SfMaps(
                     layers: <MapLayer>[
                       MapShapeLayer(
-                        delegate: MapShapeLayerDelegate(
-                          shapeFile: 'assets/world_map.json',
+                        source: MapShapeSource.asset(
+                          'assets/world_map.json',
                           shapeDataField: 'name',
                         ),
                         initialMarkersCount: 5,
@@ -515,8 +515,8 @@ Widget build(BuildContext context) {
                   SfMaps(
                     layers: <MapLayer>[
                       MapShapeLayer(
-                        delegate: MapShapeLayerDelegate(
-                          shapeFile: 'assets/world_map.json',
+                        source: MapShapeSource.asset(
+                          'assets/world_map.json',
                           shapeDataField: 'name',
                         ),
                         initialMarkersCount: 5,
@@ -596,8 +596,8 @@ Widget build(BuildContext context) {
                   SfMaps(
                     layers: <MapLayer>[
                       MapShapeLayer(
-                        delegate: MapShapeLayerDelegate(
-                          shapeFile: 'assets/world_map.json',
+                        source: MapShapeSource.asset(
+                          'assets/world_map.json',
                           shapeDataField: 'name',
                         ),
                         initialMarkersCount: 5,
