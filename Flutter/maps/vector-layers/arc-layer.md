@@ -363,6 +363,9 @@ class DataModel {
   final Color color;
 }
 
+{% endhighlight %}
+{% endtabs %}
+
 ## Width
 
 You can apply the same width for all [`MapArc`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc-class.html) in the [`arcs`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArcLayer/arcs.html) collection using the [`MapArcLayer.width`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArcLayer/width.html) property. Alternatively, you can apply different width to each [`MapArc`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc-class.html) in the [`arcs`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArcLayer/arcs.html) collection using the individual [`MapArc.width`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc/width.html) property. The default value of the [`MapArcLayer.width`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArcLayer/width.html) property is `2`.

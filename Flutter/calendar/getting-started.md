@@ -373,7 +373,7 @@ Widget build(BuildContext context) {
 * The `showNavigationArrow` property is not applicable when the `view` is set to `CalendarView.schedule`.
 
 ## Cell end padding
-You can customize the padding of appointment view end to make touch position for timeslot and month cell by using the [cellEndPadding]() property in the calendar, which allows you to tap the calendar cell when the cell has appointments.
+You can customize the padding of appointment view end to make touch position for timeslot and month cell by using the [cellEndPadding](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/cellEndPadding.html) property in the calendar, which allows you to tap the calendar cell when the cell has appointments.
 
 {% tabs %}
 {% highlight Dart %}
@@ -395,6 +395,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Cell end padding](images/getting-started/cell-end-padding.png)
 
 
 You can get the complete getting started sample from [here](https://github.com/SyncfusionExamples/flutter-calendar).
