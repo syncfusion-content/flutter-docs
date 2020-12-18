@@ -253,14 +253,8 @@ Widget build(BuildContext context) {
   return Scaffold(
       body: SfDataGridTheme(
     data: SfDataGridThemeData(
-        headerStyle: DataGridHeaderCellStyle(
-            sortIconColor: Colors.redAccent,
-            backgroundColor: SfDataGridThemeData(brightness: Brightness.light)
-                .headerStyle
-                .backgroundColor,
-            textStyle: SfDataGridThemeData(brightness: Brightness.light)
-                .headerStyle
-                .textStyle)),
+        headerStyle: 
+            DataGridHeaderCellStyle(sortIconColor: Colors.redAccent)),
     child: SfDataGrid(
       source: _employeeDataSource,
       allowSorting: true,
