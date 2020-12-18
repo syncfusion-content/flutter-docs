@@ -517,7 +517,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Circle tap support](../images/circle-layer/circle-tap-support.png)
+![Circle tap support](../images/circle-layer/circle-tap-support.gif)
 
 ## Tooltip
 
