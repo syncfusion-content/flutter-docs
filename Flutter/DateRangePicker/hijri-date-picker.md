@@ -12,7 +12,7 @@ Along with the Gregorian calendar, the picker package contains a Hijri date pick
 
 It consists of all the Gregorian calendar functionalities like min and max date, the first day of the week, different selection modes, RTL, and customization for special dates.
 
-To display the Hijri date picker, initialize the [HijriDateRangePicker]() widget as a child of any widget. Here, the Hijri date range picker added as a child of the scaffold widget.
+To display the Hijri date picker, initialize the [HijriDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfHijriDateRangePicker-class.html) widget as a child of any widget. Here, the Hijri date range picker added as a child of the scaffold widget.
 
 {% tabs %}
 {% highlight Dart %}
@@ -27,12 +27,14 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Hijri date range picker](images/hijri-picker/hijri_programattic_view_navigation.jpg)
+
 >**NOTE** 
-* Most of the properties type and classes were same from [SfDateRangePicker]() except the followings [HijriDatePickerController](), [HijriDatePickerMonthCellStyle](), [HijriDatePickerMonthViewSettings](), [HijriDatePickerViewChangedArgs](), [HijriDatePickerYearCellStyle](), [HijriDateRange]() and [HijriDatePickerView]().
-* Use the [HijriDateTime]() class to define the date for ‘SfHijriDateRangePicker’.
+* Most of the properties type and classes were same from [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) except the followings [HijriDatePickerController](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerController-class.html), [HijriDatePickerMonthCellStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerMonthCellStyle-class.html), [HijriDatePickerMonthViewSettings](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerMonthViewSettings-class.html), [HijriDatePickerViewChangedArgs](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerViewChangedArgs-class.html), [HijriDatePickerYearCellStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerYearCellStyle-class.html), [HijriDateRange](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDateRange-class.html) and [HijriDatePickerView](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerView-class.html).
+* Use the [HijriDateTime](https://pub.dev/documentation/syncfusion_flutter_core/latest/core/HijriDateTime-class.html) class to define the date for ‘SfHijriDateRangePicker’.
 
 ## Multiple picker views
-The [SfHijriDateRangePickerView]() widget provides three different types of views to display. It can be assigned to the widget constructor by using the [view]() property. The default view of the widget is the month view. By default, the current date will be displayed initially for all the date range picker views.
+The `SfHijriDateRangePicker` widget provides three different types of views to display. It can be assigned to the widget constructor by using the [view](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfHijriDateRangePicker/view.html) property. The default view of the widget is the month view. By default, the current date will be displayed initially for all the date range picker views.
 
 {% tabs %}
 {% highlight Dart %}
@@ -50,8 +52,10 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Hijri multiple picker views](images/hijri-picker/hijri_picker_views.png)
+
 ## Change first day of week
-The `SfHijriDateRangePicker` widget will be rendered with Sunday as the first day of the week but you can customize it to any day by using the [firstDayOfWeek]() property [HijriDatePickerMonthViewSettings]().
+The `SfHijriDateRangePicker` widget will be rendered with Sunday as the first day of the week but you can customize it to any day by using the [firstDayOfWeek](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerMonthViewSettings/firstDayOfWeek.html) property [HijriDatePickerMonthViewSettings](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerMonthViewSettings-class.html).
 
 {% tabs %}
 {% highlight Dart %}
@@ -70,10 +74,12 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Hijri first day of week](images/hijri-picker/hijri_first_day_of_week.png)
+
 ## Date selection
 The `SfHijriDateRangePicker` supports selecting single, multiple, and range of dates. It also supports the programmatic selection.
 
-The selected date or range details can be obtained using the [onSelectionChanged ]()callback of Hijri date range picker. The callback will return the [DateRangePickerSelectionChangedArgs](), which contains the selected date or range details.
+The selected date or range details can be obtained using the [onSelectionChanged ](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfHijriDateRangePicker/onSelectionChanged.html)callback of Hijri date range picker. The callback will return the [DateRangePickerSelectionChangedArgs](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionChangedArgs-class.html), which contains the selected date or range details.
 
 
 {% tabs %}
@@ -98,8 +104,10 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Hijri date selection](images/hijri-picker/hijri_progrmatic_selection_range.png)
+
 ## Programmatic date navigation
-You can programmatically navigate date in the Hijri date picker widget by using the [displayDate]() property from [HijriDatePickerController]().
+You can programmatically navigate date in the Hijri date picker widget by using the [displayDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerController/displayDate.html) property from [HijriDatePickerController](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerController-class.html).
 
 {% tabs %}
 {% highlight Dart %}
@@ -129,8 +137,10 @@ class MyAppState extends State<MyApp> {
 {% endhighlight %}
 {% endtabs %}
 
+![Hijri programmatic date navigation](images/hijri-picker/hijri_programattic_date_navigation.png)
+
 ## Programmatic view navigation
-You can programmatically navigate to any view in the Hijri date picker widget by using the [view]() property of `HijriDatePickerController.
+You can programmatically navigate to any view in the Hijri date picker widget by using the [view](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerController/view.html) property of `HijriDatePickerController.
 
 {% tabs %}
 {% highlight Dart %}
@@ -158,6 +168,8 @@ class MyAppState extends State<MyApp> {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Hijri programmatic view navigation](images/hijri-picker/hijri_programattic_view_navigation.jpg)
 
 ## Programmatic date selection
 You can select dates programmatically on the Hijri date picker widget by using the ‘HijriDatePickerController`.
@@ -196,6 +208,8 @@ class MyAppState extends State<MyApp> {
 {% endhighlight %}
 {% endtabs %}
 
+![Hijri programmatic single selection](images/hijri-picker/hijri_programmatic_selection_single.png)
+
 ### Multi selection
 You can select the multiple dates programmatically by using the [selectedDates](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedDates.html) property of `HijriDatePickerController`. It is only applicable when the selectionMode is set to `DateRangePickerSelectionMode.multiple`.
 
@@ -233,10 +247,12 @@ class MyAppState extends State<MyApp> {
 {% endhighlight %}
 {% endtabs %}
 
+![Hijri programmatic multi selection](images/hijri-picker/hijri_programmatic_selection_multiple.png)
+
 ### Range selection
 You can select the single date range programmatically by using the [selectedRange](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedRange.html) property of `HijriDatePickerController`. It is only applicable when the `selectionMode` is set to `DateRangePickerSelectionMode.range`.
 
-Use the [HijriDateRange]() to define the date range for the Hijri date picker.
+Use the [HijriDateRange](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDateRange-class.html) to define the date range for the Hijri date picker.
 
 {% tabs %}
 {% highlight Dart %}
@@ -267,6 +283,8 @@ class MyAppState extends State<MyApp> {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Hijri programmatic range selection](images/hijri-picker/hijri_progrmatic_selection_range.png)
 
 ### Multi-range selection
 You can select more than one date range programmatically by using the [selectedRanges](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/selectedRanges.html) property of `HijriDatePickerController`. It is only applicable when the `selectionMode` is set to `DateRangePickerSelectionMode.multiRange`.
@@ -306,15 +324,17 @@ class MyAppState extends State<MyApp> {
 {% endhighlight %}
 {% endtabs %}
 
-## Month cell customization
-You can customize the Hijri date picker month view by using the [monthCellStyle]() property of `SfHijriDateRangePicker`.
+![Hijri programmatic multi-range selection](images/hijri-picker/hijri_programmatic_selection_multi_range.png)
 
-•    **Current month dates**: You can customize the current month date’s text style and background of the `SfHijriDateRangePicker` by using the [textStyle]() and [cellDecoration]() properties of [HijriDatePickerMonthCellStyle]().
-•    **Today date**: You can customize the today date text style and background of the `SfHijriDateRangePicker` by using the [todayTextStyle]() and [todayCellDecoration]().
-•    **Blackout Dates**: You can customize the blackout dates text style and background of the `SfHijriDateRangePicker` by using the [blackoutDateTextStyle]() and [blackoutDatesDecoration]().
-•    **Disabled dates**: Disable the dates text style and background beyond of the [minDate]() and [maxDate]() in `SfHijriDateRangePicker` by using the [disableDatesTextStyle]() and [disableDatesDecoration]().
-•    **Special Dates**: You can add special dates to the `SfHijriDateRangePicker` by using the [specialDates]() property, and you can also customize the special dates text style and background by using the [specialDatesTextStyle]() and [specialDatesDecoration]().
-•    **Weekend Dates**: You can change the weekend dates to `SfHijriDateRangePicker` by using the [weekendDays]() property, and you can also customize the weekend dates text style and background by using the [weekendDatesTextStyle]() and [weekendDatesDecoration]().
+## Month cell customization
+You can customize the Hijri date picker month view by using the [monthCellStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfHijriDateRangePicker/monthCellStyle.html) property of `SfHijriDateRangePicker`.
+
+•    **Current month dates**: You can customize the current month date’s text style and background of the `SfHijriDateRangePicker` by using the [textStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerMonthCellStyle/textStyle.html) and [cellDecoration](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerMonthCellStyle/cellDecoration.html) properties of [HijriDatePickerMonthCellStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerMonthCellStyle-class.html).
+•    **Today date**: You can customize the today date text style and background of the `SfHijriDateRangePicker` by using the [todayTextStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerMonthCellStyle/todayTextStyle.html) and [todayCellDecoration](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerMonthCellStyle/todayCellDecoration.html).
+•    **Blackout Dates**: You can customize the blackout dates text style and background of the `SfHijriDateRangePicker` by using the [blackoutDateTextStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerMonthCellStyle/blackoutDateTextStyle.html) and [blackoutDatesDecoration](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerMonthCellStyle/blackoutDatesDecoration.html).
+•    **Disabled dates**: Disable the dates text style and background beyond of the [minDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfHijriDateRangePicker/minDate.html) and [maxDate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfHijriDateRangePicker/maxDate.html) in `SfHijriDateRangePicker` by using the [disableDatesTextStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerMonthCellStyle/disabledDatesTextStyle.html) and [disableDatesDecoration](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerMonthCellStyle/disabledDatesDecoration.html).
+•    **Special Dates**: You can add special dates to the `SfHijriDateRangePicker` by using the [specialDates](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerMonthViewSettings/specialDates.html) property, and you can also customize the special dates text style and background by using the [specialDatesTextStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerMonthCellStyle/specialDatesTextStyle.html) and [specialDatesDecoration]().
+•    **Weekend Dates**: You can change the weekend dates to `SfHijriDateRangePicker` by using the [weekendDays](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerMonthViewSettings/weekendDays.html) property, and you can also customize the weekend dates text style and background by using the [weekendDatesTextStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerMonthCellStyle/weekendTextStyle.html) and [weekendDatesDecoration](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerMonthCellStyle/weekendDatesDecoration.html).
 
 
 {% tabs %}
@@ -358,12 +378,14 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## Year cell customization
-You can customize the calendar year, and decade view by using the [yearCellStyle]() of `SfHijriDateRangePicker`.
+![Hijri month cell customization](images/hijri-picker/hijri_month_customization.png)
 
-•    **Current year**: You can customize the current month dates text style and background of the `SfHijriDateRangePicker` by using the [textStyle]() and [cellDecoration]() properties of [HijriDatePickerYearCellStyle]().
-•    **Disabled dates**: Disable the dates text style and background of the `SfHijriDateRangePicker` by using the [disableDatesTextStyle]() and [disableDatesDecoration]().
-•    **Today date**: You can customize the today date text style and background of the `SfHijriDateRangePicker` by using the [todayTextStyle]() and [todayCellDecoration]().
+## Year cell customization
+You can customize the calendar year, and decade view by using the [yearCellStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfHijriDateRangePicker/yearCellStyle.html) of `SfHijriDateRangePicker`.
+
+•    **Current year**: You can customize the current month dates text style and background of the `SfHijriDateRangePicker` by using the [textStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerYearCellStyle/textStyle.html) and [cellDecoration](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerYearCellStyle/cellDecoration.html) properties of [HijriDatePickerYearCellStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerYearCellStyle-class.html).
+•    **Disabled dates**: Disable the dates text style and background of the `SfHijriDateRangePicker` by using the [disableDatesTextStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerYearCellStyle/disabledDatesTextStyle.html) and [disableDatesDecoration](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerYearCellStyle/disabledDatesDecoration.html).
+•    **Today date**: You can customize the today date text style and background of the `SfHijriDateRangePicker` by using the [todayTextStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerYearCellStyle/todayTextStyle.html) and [todayCellDecoration](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerYearCellStyle/todayCellDecoration.html).
 
 
 {% tabs %}
@@ -395,4 +417,4 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-
+![Hijri year cell customization](images/hijri-picker/hijri_year_customization.png)
