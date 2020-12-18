@@ -109,6 +109,7 @@ You can change the sparkline type by setting the widget to [`SfSparkLineChart`](
                 child: Container(
                     //Initialize chart
                     child: SfSparkAreaChart(
+                        axisLIneWidth:0,
                          data: <double>[
                              10,6, 8, -5, 11, 5, -2, 7, -3, 6, 8, 10
                         ]
