@@ -11,14 +11,14 @@ documentation: ug
 
 ## Marker
 
-Markers are used to provide information about the exact point location. You can add a shape to adorn each data point. Using the [`marker`]() property, add the markers to [`SfSparkLineChart`](), and [`SfSparkAreaChart`]() widgets.
+Markers are used to provide information about the exact point location. You can add a shape to adorn each data point. Using the [`marker`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartMarker-class.html) property, add the markers to [`SfSparkLineChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart-class.html), and [`SfSparkAreaChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkAreaChart-class.html) widgets.
 
 You can use the following properties to customize the appearance:
 
-* [`displayMode`]() - Toggles the visibility of the marker. Defaults to `none`
-* [`borderWidth`]() - Represents the border width of the marker.
-* [`color`]() - Represents the color of the marker.
-* [`borderColor`]() - Represents the border color of the marker.
+* [`displayMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartMarker/displayMode.html) - Toggles the visibility of the marker. Defaults to `none`
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartMarker/borderWidth.html) - Represents the border width of the marker.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartMarker/color.html) - Represents the color of the marker.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartMarker/borderColor.html) - Represents the border color of the marker.
 
 {% highlight dart %} 
 
@@ -47,7 +47,7 @@ You can use the following properties to customize the appearance:
 
 ### Customizing marker shapes
 
-Markers can be assigned with different shapes using the [`shape`]() property. By default, markers are rendered with circle shape. The shapes of markers are listed below.
+Markers can be assigned with different shapes using the [`shape`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartMarker/shape.html) property. By default, markers are rendered with circle shape. The shapes of markers are listed below.
 
 * circle,
 * diamond,
@@ -85,16 +85,16 @@ Data labels are used to display values of data points to improve the readability
 
 ### Enable data label
 
-To enable data label for spark charts, use the [`labelDisplayMode`]() property in spark charts widgets.
+To enable data label for spark charts, use the [`labelDisplayMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart/labelDisplayMode.html) property in spark charts widgets.
 
 Following possible values are available in spark charts to render data label:
 
-* [`none`]() - Does not allow to display data points on any side.
-* [`all`]() - Allows to display data labels on all points.
-* [`high`]() - Allows to display data labels on the high point.
-* [`low`]() - Allows to display data labels on the low point.
-* [`last`]() - Allows to display data labels on the last point.
-* [`first`]() - Allows to display data labels on the first point.
+* [`none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartLabelDisplayMode-class.html) - Does not allow to display data points on any side.
+* [`all`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartLabelDisplayMode-class.html) - Allows to display data labels on all points.
+* [`high`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartLabelDisplayMode-class.html) - Allows to display data labels on the high point.
+* [`low`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartLabelDisplayMode-class.html) - Allows to display data labels on the low point.
+* [`last`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartLabelDisplayMode-class.html) - Allows to display data labels on the last point.
+* [`first`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartLabelDisplayMode-class.html) - Allows to display data labels on the first point.
 
 {% highlight dart %} 
 
@@ -117,4 +117,4 @@ Following possible values are available in spark charts to render data label:
 
 ![Sparkline datalabel](images/marker/spark-datalabel.png)
 
-N> The [`SfSparkWinLossChart`]() widget doesn't provide data label support.
+N> The [`SfSparkWinLossChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkWinLossChart-class.html) widget doesn't provide data label support.
