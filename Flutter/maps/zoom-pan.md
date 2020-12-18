@@ -19,11 +19,16 @@ The procedure for zooming and panning for both layers is very similar.
 {% highlight Dart %}
 
 MapZoomPanBehavior _zoomPanBehavior;
+MapShapeSource _dataSource;
 
 @override
 void initState() {
-    super.initState();
-    _zoomPanBehavior = MapZoomPanBehavior();
+  super.initState();
+  _dataSource = MapShapeSource.asset(
+    'assets/world_map.json',
+    shapeDataField: 'continent',
+  );
+  _zoomPanBehavior = MapZoomPanBehavior();
 }
 
 @override
@@ -32,10 +37,7 @@ Widget build(BuildContext context) {
         body: SfMaps(
             layers: [
                 MapShapeLayer(
-                    delegate: MapShapeLayerDelegate(
-                        shapeFile: 'assets/world_map.json',
-                        shapeDataField: 'continent',
-                    ),
+                    source: _dataSource,
                     zoomPanBehavior: _zoomPanBehavior,
                 ),
             ],
@@ -180,7 +182,7 @@ Widget build(BuildContext context) {
 
 ## Customizing min and max zoom level
 
-You can set the min and max zoom level of the map layer by setting the value to [`MapZoomPanBehavior.minZoomLevel`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/minZoomLevel.html) and [`MapZoomPanBehavior.maxZoomLevel`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/maxZoomLevel.html) properties. The minimum and maximum zooming levels can be restricted using these properties respectively. The default values of [`MapZoomPanBehavior.minZoomLevel`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/minZoomLevel.html) and [`MapZoomPanBehavior.maxZoomLevel`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/maxZoomLevel.html) are 0 and 15 respectively.
+You can set the min and max zoom level of the map layer by setting the value to [`MapZoomPanBehavior.minZoomLevel`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/minZoomLevel.html) and [`MapZoomPanBehavior.maxZoomLevel`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/maxZoomLevel.html) properties. The minimum and maximum zooming levels can be restricted using these properties respectively. The default values of [`MapZoomPanBehavior.minZoomLevel`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/minZoomLevel.html) and [`MapZoomPanBehavior.maxZoomLevel`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/maxZoomLevel.html) are 1 and 15 respectively.
 
 However, for [MapTileLayer](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html), [MapZoomPanBehavior.maxZoomLevel](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/maxZoomLevel.html) may slightly vary depends on the providers. Kindly check the respective official website of the map tile providers to know about the maximum zoom level it supports.
 

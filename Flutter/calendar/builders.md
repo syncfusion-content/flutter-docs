@@ -121,9 +121,9 @@ Widget build(BuildContext context) {
 ![Schedule view header builder](images/builder/schedule_view_month_header_builder.png)
 
 ## Appointment builder
-The [CalendarAppointmentBuilder]() allows you to design your custom view and assign the view to the appointment UI of the calendar by returning an appropriate widget in the [appointmentBuilder]() of `SfCalendar`.
+The [CalendarAppointmentBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarAppointmentBuilder.html) allows you to design your custom view and assign the view to the appointment UI of the calendar by returning an appropriate widget in the [appointmentBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/appointmentBuilder.html) of `SfCalendar`.
 
-[CalendarAppointmentDetails](): Returns the details of the appointment view.
+[CalendarAppointmentDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarAppointmentDetails-class.html): Returns the details of the appointment view.
 
 
 `date`: The date associate with the appointment view.
@@ -251,11 +251,13 @@ class MyAppState extends State<MyApp> {
 {% endhighlight %}
 {% endtabs %}
 
+![Appointment builder](images/builder/appointment-builder.png)
+
 
 ## Time region builder
-The [TimeRegionBuilder]() allows you to design your custom view and assign the view to the time region view of the calendar by returning an appropriate widget in the [timeRegionBuilder]() of SfCalendar.
+The [TimeRegionBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegionBuilder.html) allows you to design your custom view and assign the view to the time region view of the calendar by returning an appropriate widget in the [timeRegionBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/timeRegionBuilder.html) of SfCalendar.
 
-[TimeRegionDetails](): Returns the details of the time region view.
+[TimeRegionDetails](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegionDetails-class.html): Returns the details of the time region view.
 
 `date`: The date associate with the time region view.
 `bound`: Returns the time region view bounds.
@@ -315,3 +317,5 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Time regions builder](images/builder/timeregion-builder.png)
