@@ -394,6 +394,7 @@ The shapes or bubbles with lowest value which is [`from`](https://pub.dev/docume
 {% highlight Dart %}
 
 List<Model> data;
+MapShapeSource dataSource;
 
 @override
 void initState() {
