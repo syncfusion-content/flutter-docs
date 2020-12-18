@@ -278,7 +278,7 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
 The [`showByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/showByIndex.html) method is used to activate the trackball at the specified point index.
 
-[`pointIndex`]() - index of the point for which the trackball must be shown.
+[`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballDetails/pointIndex.html) - index of the point for which the trackball must be shown.
 
 {% highlight dart %} 
 
@@ -1064,7 +1064,7 @@ Widget build(BuildContext context) {
 
 Converts logical pixel value to the data point value.
   
-The [`pixelToPoint`]() method takes logical pixel value as input and returns a chart data point.
+The [`pixelToPoint`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeriesController/pixelToPoint.html) method takes logical pixel value as input and returns a chart data point.
   
 Since this method is in the series controller, x and y-axis associated with this particular series will be considering for conversion value.
   
@@ -1102,7 +1102,7 @@ and funnel charts.
 
 Converts chart data point value to logical pixel value.
   
-The [`pointToPixel`]() method takes chart data point value as input and returns logical pixel value.
+The [`pointToPixel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeriesController/pointToPixel.html) method takes chart data point value as input and returns logical pixel value.
   
 Since this method is in the series controller, x and y-axis associated with this particular series will be considering for conversion value.
   
