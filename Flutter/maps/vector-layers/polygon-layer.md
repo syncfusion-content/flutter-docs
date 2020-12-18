@@ -31,8 +31,8 @@ MapShapeSource dataSource;
 void initState() {
     polygon1 = <MapLatLng>[
       MapLatLng(55.7558, 37.6173),
-      MapLatLng(54.9833, 82.8964),
-      MapLatLng(47.2357, 39.7015),
+      MapLatLng(53.7596, 87.1216),
+      MapLatLng(61.5240, 105.3188),
     ];
 
     polygon2 = <MapLatLng>[
@@ -97,9 +97,9 @@ List<MapLatLng> polygon2;
 @override
 void initState() {
     polygon1 = <MapLatLng>[
-      MapLatLng(55.7558, 37.6173),
-      MapLatLng(54.9833, 82.8964),
-      MapLatLng(47.2357, 39.7015),
+       MapLatLng(55.7558, 37.6173),
+       MapLatLng(53.7596, 87.1216),
+       MapLatLng(61.5240, 105.3188),
     ];
 
     polygon2 = <MapLatLng>[
@@ -148,6 +148,8 @@ class PolygonModel {
 {% endhighlight %}
 {% endtabs %}
 
+![Default polygon shape](../images/polygon-layer/default-polygon-shape.png)
+
 ## Fill color
 
 You can apply the same color for all [`MapPolygon`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygon-class.html) in the [`polygons`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygonLayer/polygons.html) collection using the [`MapPolygonLayer.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygonLayer/color.html) property. Alternatively, you can apply different colors to each [`MapPolygon`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygon-class.html) in the [`polygons`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygonLayer/polygons.html) collection using the individual [`MapPolygon.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygon/color.html) property.
@@ -164,8 +166,8 @@ MapShapeSource dataSource;
 void initState() {
     polygon1 = <MapLatLng>[
       MapLatLng(55.7558, 37.6173),
-      MapLatLng(54.9833, 82.8964),
-      MapLatLng(47.2357, 39.7015),
+      MapLatLng(53.7596, 87.1216),
+      MapLatLng(61.5240, 105.3188),
     ];
 
     polygon2 = <MapLatLng>[
@@ -220,6 +222,8 @@ class PolygonModel {
 {% endhighlight %}
 {% endtabs %}
 
+![Polygon fill color](../images/polygon-layer/polygon-fill-color.png)
+
 ## Stroke width and color
 
 You can apply the same stroke width for all [`MapPolygon`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygon-class.html) in the [`polygons`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygonLayer/polygons.html) collection using the [`MapPolygonLayer.strokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygonLayer/strokeWidth.html) property. Alternatively, you can apply different stroke width to each [`MapPolygon`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygon-class.html) in the [`polygons`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygonLayer/polygons.html) collection using the individual [`MapPolygon.strokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygon/strokeWidth.html) property. The default value of the [`MapPolygonLayer.strokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygonLayer/strokeWidth.html) property is `2`.
@@ -237,9 +241,9 @@ MapShapeSource dataSource;
 @override
 void initState() {
     polygon1 = <MapLatLng>[
-      MapLatLng(55.7558, 37.6173),
-      MapLatLng(54.9833, 82.8964),
-      MapLatLng(47.2357, 39.7015),
+       MapLatLng(55.7558, 37.6173),
+       MapLatLng(53.7596, 87.1216),
+       MapLatLng(61.5240, 105.3188),
     ];
 
     polygon2 = <MapLatLng>[
@@ -295,6 +299,8 @@ class PolygonModel {
 {% endhighlight %}
 {% endtabs %}
 
+![Polygon stroke color](../images/polygon-layer/polygon-stroke-color.png)
+
 ## Tap
 
 You can use the [`onTap`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygon/onTap.html) callback to get a notification if the particular [`MapPolygon`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygon-class.html) is tapped. You can also customize the tapped [`MapPolygon`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygon-class.html) based on the index passed in the callback as shown in the below code snippet.
@@ -311,9 +317,9 @@ int selectedIndex;
 @override
 void initState() {
     polygon1 = <MapLatLng>[
-      MapLatLng(55.7558, 37.6173),
-      MapLatLng(54.9833, 82.8964),
-      MapLatLng(47.2357, 39.7015),
+       MapLatLng(55.7558, 37.6173),
+       MapLatLng(53.7596, 87.1216),
+       MapLatLng(61.5240, 105.3188),
     ];
 
     polygon2 = <MapLatLng>[
@@ -372,6 +378,8 @@ class PolygonModel {
 {% endhighlight %}
 {% endtabs %}
 
+![Polygon tap support](../images/polygon-layer/polygon-tap-support.gif)
+
 ## Tooltip
 
 You can show additional information about the polygon drawn using the [`MapPolygonLayer.tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygonLayer/tooltipBuilder.html) property.
@@ -388,8 +396,8 @@ MapShapeSource dataSource;
 void initState() {
     polygon1 = <MapLatLng>[
       MapLatLng(55.7558, 37.6173),
-      MapLatLng(54.9833, 82.8964),
-      MapLatLng(47.2357, 39.7015),
+      MapLatLng(53.7596, 87.1216),
+      MapLatLng(61.5240, 105.3188),
     ];
 
     polygon2 = <MapLatLng>[
@@ -461,74 +469,75 @@ You can customize the appearance of the tooltip.
 
 List<PolygonModel> polygons;
 List<MapLatLng> polygon1;
-List<MapLatLng> polygon2;
 MapShapeSource dataSource;
+MapZoomPanBehavior zoomPanBehavior;
 
 @override
 void initState() {
-    polygon1 = <MapLatLng>[
-      MapLatLng(55.7558, 37.6173),
-      MapLatLng(54.9833, 82.8964),
-      MapLatLng(47.2357, 39.7015),
-    ];
+  polygon1 = <MapLatLng>[
+    MapLatLng(27.6648, -81.5158),
+    MapLatLng(32.3078, -64.7505),
+    MapLatLng(18.2208, -66.5901),
+  ];
 
-    polygon2 = <MapLatLng>[
-      MapLatLng(64.2823, -135.0000),
-      MapLatLng(51.2538, -85.3232),
-      MapLatLng(48.4284, -123.3656),
-    ];
+  polygons = <PolygonModel>[
+    PolygonModel(polygon1),
+  ];
+  dataSource = MapShapeSource.asset(
+    'assets/world_map.json',
+    shapeDataField: 'continent',
+  );
 
-    polygons = <PolygonModel>[
-      PolygonModel(polygon1),
-      PolygonModel(polygon2),
-    ];
-    dataSource = MapShapeSource.asset(
-      'assets/world_map.json',
-      shapeDataField: 'continent',
-    );
-    super.initState();
+  zoomPanBehavior = MapZoomPanBehavior(
+    focalLatLng: MapLatLng(25.3078, -74.7505),
+    zoomLevel: 4,
+  );
+  super.initState();
 }
 
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-    body: SfMaps(
-      layers: [
-        MapShapeLayer(
-          source: dataSource,
-          tooltipSettings: const MapTooltipSettings(
-            color: Colors.white,
-            strokeColor: Colors.black,
-            strokeWidth: 2,
-          ),
-          sublayers: [
-            MapPolygonLayer(
-              polygons: List<MapPolygon>.generate(
-                polygons.length,
-                (int index) {
-                  return MapPolygon(
-                    points: polygons[index].points,
+     body: SfMaps(
+        layers: [
+          MapTileLayer(
+            urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+            zoomPanBehavior: zoomPanBehavior,
+            tooltipSettings: const MapTooltipSettings(
+              color: Colors.white,
+              strokeColor: Colors.black,
+              strokeWidth: 2,
+            ),
+            sublayers: [
+              MapPolygonLayer(
+                polygons: List<MapPolygon>.generate(
+                  polygons.length,
+                  (int index) {
+                    return MapPolygon(
+                      points: polygons[index].points,
+                    );
+                  },
+                ).toSet(),
+                tooltipBuilder: (BuildContext context, int index) {
+                  return Padding(
+                    padding: EdgeInsets.all(10),
+                    child: Text('Bermuda \n triangle'),
                   );
                 },
-              ).toSet(),
-              tooltipBuilder: (BuildContext context, int index) {
-                 return Padding(
-                    padding: EdgeInsets.all(10),
-                    child: Text('Luxurious \n restaurant'),
-                 );
-              },
-            ),
-          ],
-        ),
-      ],
-    ),
-  );
+              ),
+            ],
+          ),
+        ],
+     ),
+   );
 }
 
 class PolygonModel {
-  PolygonModel(this.points);
-  final List<MapLatLng> points;
+   PolygonModel(this.points);
+   final List<MapLatLng> points;
 }
 
 {% endhighlight %}
 {% endtabs %}
+
+![Polygon tooltip customization](../images/polygon-layer/polygon-tooltip-customization.png)
