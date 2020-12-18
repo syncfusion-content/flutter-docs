@@ -13,7 +13,7 @@ Data labels provides identification for the shapes by displaying their names. Yo
 
 ## Show data labels
 
-You can show data labels on the map using the [`MapShapeLayer.showDataLabels`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/showDataLabels.html) property. By default, the data labels are rendered based on the value of [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeDataField.html) property. The default value of the [`showDataLabels`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/showDataLabels.html) property is `false`.
+You can show data labels on the map using the [`MapShapeLayer.showDataLabels`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/showDataLabels.html) property. By default, the data labels are rendered based on the value of [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) property. The default value of the [`showDataLabels`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/showDataLabels.html) property is `false`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -29,9 +29,9 @@ Widget build(BuildContext context) {
           child: SfMaps(
             layers: [
               MapShapeLayer(
-                delegate: MapShapeLayerDelegate(
-                    shapeFile: "assets/world_map.json",
-                    shapeDataField: "continent",
+                source: MapShapeSource.asset(
+                  "assets/world_map.json",
+                  shapeDataField: "continent",
                 ),
                 showDataLabels: true,
               ),
@@ -50,7 +50,7 @@ Widget build(BuildContext context) {
 
 ## Text customization
 
-You can customize text of the data labels using the [`MapShapeLayerDelegate.dataLabelMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/dataLabelMapper.html) property.
+You can customize text of the data labels using the [`MapShapeSource.dataLabelMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/dataLabelMapper.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -81,9 +81,9 @@ Widget build(BuildContext context) {
             child: SfMaps(
               layers: [
                 MapShapeLayer(
-                  delegate: MapShapeLayerDelegate(
-                      shapeFile: "assets/world_map.json",
-                      shapeDataField: "continent",
+                  source: MapShapeSource.asset(
+                    "assets/world_map.json",
+                    shapeDataField: "continent",
                     dataCount: data.length,
                     primaryValueMapper: (int index) => data[index].continent,
                     dataLabelMapper: (int index) => data[index].code,
@@ -112,7 +112,7 @@ class Model {
 
 ## Overflow mode
 
-You can trim or remove the data label when it is overflowed from the shape using the [`MapDataLabelSettings.overflowMode`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapDataLabelSettings/overflowMode.html) property. The default value of the [`overflowMode`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapDataLabelSettings/overflowMode.html) property is `MapLabelOverflowMode.none`.
+You can trim or remove the data label when it is overflowed from the shape using the [`MapDataLabelSettings.overflowMode`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapDataLabelSettings/overflowMode.html) property. The possible values are `visible`, `ellipsis`, and `hide`. The default value of the [`overflowMode`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapDataLabelSettings/overflowMode.html) property is `MapLabelOverflow.visible`.
 
 By default, the data labels will render even if it overflows from the shape. 
 
@@ -146,8 +146,8 @@ Widget build(BuildContext context) {
             child: SfMaps(
               layers: [
                 MapShapeLayer(
-                  delegate: MapShapeLayerDelegate(
-                    shapeFile: 'assets/australia.json',
+                  source: MapShapeSource.asset(
+                    'assets/australia.json',
                     shapeDataField: 'STATE_NAME',
                     dataCount: data.length,
                     primaryValueMapper: (int index) => data[index].state,
@@ -155,7 +155,7 @@ Widget build(BuildContext context) {
                   ),
                   showDataLabels: true,
                   dataLabelSettings: MapDataLabelSettings(
-                    overflowMode: MapLabelOverflowMode.trim,
+                    overflowMode: MapLabelOverflow.ellipsis,
                   ),
                 ),
               ],
@@ -212,8 +212,8 @@ Widget build(BuildContext context) {
             child: SfMaps(
               layers: [
                 MapShapeLayer(
-                  delegate: MapShapeLayerDelegate(
-                    shapeFile: 'assets/australia.json',
+                  source: MapShapeSource.asset(
+                    'assets/australia.json',
                     shapeDataField: 'STATE_NAME',
                     dataCount: data.length,
                     primaryValueMapper: (int index) => data[index].state,
@@ -294,8 +294,8 @@ Widget build(BuildContext context) {
               child: SfMaps(
                 layers: [
                   MapShapeLayer(
-                    delegate: MapShapeLayerDelegate(
-                      shapeFile: 'assets/australia.json',
+                    source: MapShapeSource.asset(
+                      'assets/australia.json',
                       shapeDataField: 'STATE_NAME',
                       dataCount: data.length,
                       primaryValueMapper: (int index) => data[index].state,
