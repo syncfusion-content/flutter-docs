@@ -6,10 +6,9 @@ platform: flutter
 control: Sparkline
 documentation: ug
 ---
+# Syncfusion Flutter spark charts plot band 
 
-# Syncfusion Flutter Sparkline Plot Band 
-
-This feature is used to highlight a particular region in the sparkline along Y axis.
+This feature is used to highlight a particular region in the spark charts along Y axis.
 
 The following properties are used to customize the appearances:
 * [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartPlotBand/start.html) - used to configure the start plot band value in Y axis.
