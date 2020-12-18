@@ -9,11 +9,11 @@ documentation: ug
 
 # Polylines in the Flutter maps
 
-Polyline layer is a sublayer that renders a group of [`MapPolyline`] on [`MapShapeLayer`] and [`MapTileLayer`]. This section helps to learn about how to add the polylines and customize them.
+Polyline layer is a sublayer that renders a group of [`MapPolyline`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolyline-class.html) on [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html) and [`MapTileLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html). This section helps to learn about how to add the polylines and customize them.
 
 ## Adding polylines
 
-The [`polylines`] is a collection of [`MapPolyline`]. Every single [`MapPolyline`] connects multiple coordinates through a [`points`] property.
+The [`polylines`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolylineLayer/polylines.html) is a collection of [`MapPolyline`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolyline-class.html). Every single [`MapPolyline`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolyline-class.html) connects multiple coordinates through a [`points`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolyline/points.html) property.
 
 N> It is applicable for both the tile layer and shape layer.
 
@@ -157,7 +157,7 @@ class PolylineModel {
 
 ## Color
 
-You can apply the same color for all [`MapPolyline`] in the [`polylines`] collection using the [`MapPolylineLayer.color`] property. Alternatively, you can apply different colors to each [`MapPolyline`] in the [`polylines`] collection using the individual [`MapPolyline.color`] property.
+You can apply the same color for all [`MapPolyline`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolyline-class.html) in the [`polylines`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolylineLayer/polylines.html) collection using the [`MapPolylineLayer.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolylineLayer/color.html) property. Alternatively, you can apply different colors to each [`MapPolyline`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolyline-class.html) in the [`polylines`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolylineLayer/polylines.html) collection using the individual [`MapPolyline.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolyline/color.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -235,7 +235,7 @@ class PolylineModel {
 
 ## Width
 
-You can apply the same width for all [`MapPolyline`] in the [`polylines`] collection using the [`MapPolylineLayer.width`] property. Alternatively, you can apply different width to each [`MapPolyline`] in the [`polylines`] collection using the individual [`MapPolyline.width`] property. The default value of the [`MapPolylineLayer.width`] property is `2`.
+You can apply the same width for all [`MapPolyline`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolyline-class.html) in the [`polylines`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolylineLayer/polylines.html) collection using the [`MapPolylineLayer.width`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolylineLayer/width.html) property. Alternatively, you can apply different width to each [`MapPolyline`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolyline-class.html) in the [`polylines`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolylineLayer/polylines.html) collection using the individual [`MapPolyline.width`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolyline/width.html) property. The default value of the [`MapPolylineLayer.width`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolylineLayer/width.html) property is `2`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -313,7 +313,7 @@ class PolylineModel {
 
 ## Dash array
 
-You can apply dash for the polyline using the [`MapPolyline.dashArray`] property.
+You can apply dash for the polyline using the [`MapPolyline.dashArray`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolyline/dashArray.html) property.
 
 A sequence of dash and gap will be rendered based on the values in this list. Once all values of the list is rendered, it will be repeated again till the end of the polyline.
 
@@ -394,7 +394,7 @@ class PolylineModel {
 
 ## Animation
 
-You can apply animation for the [`MapPolyline`] using the [`MapPolylineLayer.animation`] property and able to customize the animation flow, curve and duration.
+You can apply animation for the [`MapPolyline`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolyline-class.html) using the [`MapPolylineLayer.animation`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolylineLayer/animation.html) property and able to customize the animation flow, curve and duration.
 
 By default, there will not be any animation.
 
@@ -492,7 +492,7 @@ class PolylineModel {
 
 ## Tap
 
-You can use the [`onTap`] callback to get a notification if the particular [`MapPolyline`] is tapped. You can also customize the tapped [`MapPolyline`] based on the index passed in the callback as shown in the below code snippet.
+You can use the [`onTap`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolyline/onTap.html) callback to get a notification if the particular [`MapPolyline`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolyline-class.html) is tapped. You can also customize the tapped [`MapPolyline`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolyline-class.html) based on the index passed in the callback as shown in the below code snippet.
 
 {% tabs %}
 {% highlight Dart %}
@@ -575,7 +575,7 @@ class PolylineModel {
 
 ## Tooltip
 
-You can show additional information about the polyline drawn using the [`MapPolylineLayer.tooltipBuilder`] property.
+You can show additional information about the polyline drawn using the [`MapPolylineLayer.tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolylineLayer/tooltipBuilder.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -679,9 +679,9 @@ class PolylineModel {
 
 You can customize the appearance of the tooltip.
 
-* Background color - Change the background color of the tooltip in the maps using the [`MapTooltipSettings.color`] property.
-* Stroke color - Change the stroke color of the tooltip in the maps using the [`MapTooltipSettings.strokeColor`] property.
-* Stroke width - Change the stroke width of the tooltip in the maps using the [`MapTooltipSettings.strokeWidth`] property.
+* Background color - Change the background color of the tooltip in the maps using the [`MapTooltipSettings.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/color.html) property.
+* Stroke color - Change the stroke color of the tooltip in the maps using the [`MapTooltipSettings.strokeColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/strokeColor.html) property.
+* Stroke width - Change the stroke width of the tooltip in the maps using the [`MapTooltipSettings.strokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/strokeWidth.html) property.
 
 {% tabs %}
 {% highlight Dart %}
