@@ -18,6 +18,17 @@ You can notify the user that the map is being loaded using the [`MapShapeLayer.l
 {% tabs %}
 {% highlight Dart %}
 
+MapShapeSource dataSource;
+
+@override
+void initState() {
+  dataSource = MapShapeSource.asset(
+    'assets/world_map.json',
+    shapeDataField: 'continent',
+  );
+  super.initState();
+}
+
 @override
 Widget build(BuildContext context) {
     return Scaffold(
@@ -26,10 +37,7 @@ Widget build(BuildContext context) {
         child: SfMaps(
           layers: <MapLayer>[
             MapShapeLayer(
-              delegate: MapShapeLayerDelegate(
-                shapeFile: 'assets/world_map.json',
-                shapeDataField: 'continent',
-              ),
+              source: dataSource,
               loadingBuilder: (BuildContext context) {
                 return Container(
                   height: 25,
@@ -58,21 +66,29 @@ You can apply color, stroke color and stroke width to the shapes using the [`Map
 {% tabs %}
 {% highlight Dart %}
 
+MapShapeSource dataSource;
+
+@override
+void initState() {
+  dataSource = MapShapeSource.asset(
+    'assets/world_map.json',
+    shapeDataField: 'continent',
+  );
+  super.initState();
+}
+
 @override
 Widget build(BuildContext context) {
-   return Scaffold(
+    return Scaffold(
       body: Padding(
         padding: EdgeInsets.all(15),
         child: SfMaps(
           layers: <MapLayer>[
             MapShapeLayer(
-              color: Colors.blue[100],
-              strokeColor: Colors.blue,
-              strokeWidth: 2,
-              delegate: MapShapeLayerDelegate(
-                shapeFile: 'assets/world_map.json',
-                shapeDataField: 'continent',
-              ),
+              source: dataSource,
+               color: Colors.blue[100],
+               strokeColor: Colors.blue,
+               strokeWidth: 2,
             ),
           ],
         ),
@@ -96,30 +112,38 @@ N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/pa
 {% tabs %}
 {% highlight Dart %}
 
+MapShapeSource dataSource;
+
+@override
+void initState() {
+  dataSource = MapShapeSource.asset(
+    'assets/world_map.json',
+    shapeDataField: 'continent',
+  );
+  super.initState();
+}
+
 @override
 Widget build(BuildContext context) {
-   return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.all(15),
-        child: SfMapsTheme(
-          data: SfMapsThemeData(
-            layerColor: Colors.blue[100],
-            layerStrokeColor: Colors.blue,
-            layerStrokeWidth: 2
-          ),
-          child: SfMaps(
-            layers: <MapLayer>[
-              MapShapeLayer(
-                delegate: MapShapeLayerDelegate(
-                  shapeFile: 'assets/world_map.json',
-                  shapeDataField: 'continent',
-                ),
-              ),
-            ],
-          ),
-        )
+  return Scaffold(
+    body: Padding(
+      padding: EdgeInsets.all(15),
+      child: SfMapsTheme(
+        data: SfMapsThemeData(
+          layerColor: Colors.blue[100],
+          layerStrokeColor: Colors.blue,
+          layerStrokeWidth: 2,
+        ),
+        child: SfMaps(
+          layers: <MapLayer>[
+            MapShapeLayer(
+              source: dataSource,
+            ),
+          ],
+        ),
       ),
-   );
+    ),
+  );
 }
 
 {% endhighlight %}
@@ -136,88 +160,56 @@ N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/pa
 {% tabs %}
 {% highlight Dart %}
 
+MapShapeSource dataSource;
+
 @override
-Widget build(BuildContext context) {
-   return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.all(15),
-        child: SfMapsTheme(
-          data: SfMapsThemeData(
-            shapeHoverColor: Colors.red[800],
-            shapeHoverStrokeColor: Colors.black,
-            shapeHoverStrokeWidth: 2,
-          ),
-          child: SfMaps(
-            layers: <MapLayer>[
-              MapShapeLayer(
-                delegate: MapShapeLayerDelegate(
-                  shapeFile: 'assets/world_map.json',
-                  shapeDataField: 'continent',
-                ),
-              ),
-            ],
-          ),
-        )
-      ),
-   );
+void initState() {
+  dataSource = MapShapeSource.asset(
+    'assets/world_map.json',
+    shapeDataField: 'continent',
+  );
+  super.initState();
 }
 
-{% endhighlight %}
-{% endtabs %}
-
-## Palette
-
-You can color the shape based on the list of colors provided in the [`MapShapeLayer.palette`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/palette.html) property in a sequential order.
-
-If the number of shapes exceeds the length of this collections, once the last color is used for a shape, color in the 0th index will be used for the next shape and so on.
-
-{% tabs %}
-{% highlight Dart %}
-
 @override
 Widget build(BuildContext context) {
-   return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.all(15),
+  return Scaffold(
+    body: Padding(
+      padding: EdgeInsets.all(15),
+      child: SfMapsTheme(
+        data: SfMapsThemeData(
+           shapeHoverColor: Colors.red[800],
+           shapeHoverStrokeColor: Colors.black,
+           shapeHoverStrokeWidth: 2,
+        ),
         child: SfMaps(
           layers: <MapLayer>[
             MapShapeLayer(
-              delegate: MapShapeLayerDelegate(
-                shapeFile: 'assets/world_map.json',
-                shapeDataField: 'continent',
-              ),
-              palette: <Color>[
-                Colors.blue[200],
-                Colors.orange[200],
-                Colors.red[200],
-                Colors.green[200],
-                Colors.purple[200],
-                Colors.lime[200]
-              ],
+              source: dataSource,
             ),
           ],
         ),
       ),
-   );
+    ),
+  );
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-![Shapes palette](images/shape-colors/shapes-palette.png)
-
 ## Applying colors based on the data
 
-If you return a color from the [`shapeColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeColorValueMapper.html), then the color will be applied to the respective shape straightaway.
+If you return a color from the [`shapeColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeColorValueMapper.html), then the color will be applied to the respective shape straightaway.
 
-If you return a value of different type other than the color from the [`shapeColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeColorValueMapper.html), then you must set the [`MapShapeLayer.shapeColorMappers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeColorMappers.html) property which is a collection of [`MapColorMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper-class.html) to apply colors for the respective shapes.
+If you return a value of different type other than the color from the [`shapeColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeColorValueMapper.html), then you must set the [`MapShapeSource.shapeColorMappers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeColorMappers.html) property which is a collection of [`MapColorMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper-class.html) to apply colors for the respective shapes.
 
-N> You can show legend using the [`MapShapeLayer.showLegend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/showLegend.html) property. The icons color of the legend is applied based on the colors returned in the [`MapShapeLayerDelegate.shapeColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeColorValueMapper.html) property and the text will be taken from the [`primaryValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/primaryValueMapper.html). It is possible to customize the legend icons color and text using the [`MapShapeLayerDelegate.shapeColorMappers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeColorMappers.html) property.
+N> You can show legend using the [`MapShapeLayer.legend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/legend.html) property. The icons color of the legend is applied based on the colors returned in the [`MapShapeSource.shapeColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeColorValueMapper.html) property and the text will be taken from the [`primaryValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/primaryValueMapper.html). It is possible to customize the legend icons color and text using the [`MapShapeSource.shapeColorMappers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeColorMappers.html) property.
 
 {% tabs %}
 {% highlight Dart %}
 
 List<Model> data;
+MapShapeSource dataSource;
 
 @override
 void initState() {
@@ -229,6 +221,14 @@ void initState() {
       Model('Australia', Color.fromRGBO(0, 45, 179, 0.8)),
       Model('North America', Color.fromRGBO(0, 38, 153, 0.8))
     ];
+
+    dataSource = MapShapeSource.asset(
+      'assets/world_map.json',
+       shapeDataField: 'continent',
+       dataCount: data.length,
+       primaryValueMapper: (int index) => data[index].country,
+       shapeColorValueMapper: (int index) => data[index].color,
+    );
     super.initState();
 }
 
@@ -243,13 +243,7 @@ Widget build(BuildContext context) {
           child: SfMaps(
             layers: <MapLayer>[
               MapShapeLayer(
-                delegate: MapShapeLayerDelegate(
-                  shapeFile: 'assets/world_map.json',
-                  shapeDataField: 'continent',
-                  dataCount: data.length,
-                  primaryValueMapper: (int index) => data[index].country,
-                  shapeColorValueMapper: (int index) => data[index].color,
-                ),
+                source: dataSource,
               ),
             ],
           ),
@@ -272,21 +266,38 @@ class Model {
 
 ## Equal color mapping
 
-You can apply color to the shape by comparing a value that returns from the [`shapeColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeColorValueMapper.html) with the [`MapColorMapper.value`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/value.html). For the matched values, the [`MapColorMapper.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/color.html) will be applied to the respective shapes.
+You can apply color to the shape by comparing a value that returns from the [`shapeColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeColorValueMapper.html) with the [`MapColorMapper.value`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/value.html). For the matched values, the [`MapColorMapper.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/color.html) will be applied to the respective shapes.
 
 {% tabs %}
 {% highlight Dart %}
 
 List<Model> data;
+MapShapeSource dataSource;
 
 @override
 void initState() {
-    super.initState();
-    data = <Model>[
-      Model('India', "Low"),
-      Model('United States of America', "High"),
-      Model('Pakistan', "Low"),
-    ];
+  data = <Model>[
+    Model('India', "Low"),
+    Model('United States of America', "High"),
+    Model('Pakistan', "Low"),
+  ];
+
+  dataSource = MapShapeSource.asset(
+    "assets/world_map.json",
+     shapeDataField: "name",
+     dataCount: data.length,
+     primaryValueMapper: (int index) {
+       return data[index].country;
+     },
+     shapeColorValueMapper: (int index) {
+       return data[index].storage;
+     },
+     shapeColorMappers: [
+       MapColorMapper(value: "Low", color: Colors.red),
+       MapColorMapper(value: "High", color: Colors.green)
+     ],
+  );
+  super.initState();
 }
 
 @override
@@ -296,22 +307,7 @@ Widget build(BuildContext context) {
         padding: EdgeInsets.only(left: 15, right: 15),
         child: SfMaps(
           layers: <MapShapeLayer>[
-            MapShapeLayer(
-              delegate: MapShapeLayerDelegate(
-                  shapeFile: "assets/world_map.json",
-                  shapeDataField: "name",
-                  dataCount: data.length,
-                  primaryValueMapper: (int index) {
-                    return data[index].country;
-                  },
-                  shapeColorValueMapper: (int index) {
-                    return data[index].storage;
-                  },
-                  shapeColorMappers: [
-                    MapColorMapper(value: "Low", color: Colors.red),
-                    MapColorMapper(value: "High", color: Colors.green)
-                  ]),
-            )
+            MapShapeLayer(source: dataSource),
           ],
         ),
       ),
@@ -332,22 +328,34 @@ class Model {
 
 ## Range color mapping
 
-You can apply color to the shape based on whether the value returned from [`shapeColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/shapeColorValueMapper.html) falls within the [`MapColorMapper.from`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/from.html) and [`MapColorMapper.to`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/to.html). Then, the [`MapColorMapper.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/color.html) will be applied to the respective shapes.
+You can apply color to the shape based on whether the value returned from [`shapeColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeColorValueMapper.html) falls within the [`MapColorMapper.from`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/from.html) and [`MapColorMapper.to`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/to.html). Then, the [`MapColorMapper.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/color.html) will be applied to the respective shapes.
 
 {% tabs %}
 {% highlight Dart %}
 
 List<Model> data;
+MapShapeSource dataSource;
 
 @override
 void initState() {
-    super.initState();
+  data = <Model>[
+    Model('India', 280),
+    Model('United States of America', 190),
+    Model('Kazakhstan', 37),
+  ];
 
-    data = <Model>[
-      Model('India', 280),
-      Model('United States of America', 190),
-      Model('Kazakhstan', 37),
-    ];
+  dataSource = MapShapeSource.asset(
+     "assets/world_map.json",
+      shapeDataField: "name",
+      dataCount: data.length,
+      primaryValueMapper: (int index) => data[index].country,
+      shapeColorValueMapper: (int index) => data[index].count,
+      shapeColorMappers: [
+        MapColorMapper(from: 0, to: 100, color: Colors.red),
+        MapColorMapper(from: 101, to: 300, color: Colors.green)
+      ],
+  );
+  super.initState();
 }
 
 @override
@@ -357,19 +365,7 @@ Widget build(BuildContext context) {
         padding: EdgeInsets.only(left: 15, right: 15),
         child: SfMaps(
           layers: [
-            MapShapeLayer(
-              delegate: MapShapeLayerDelegate(
-                  shapeFile: "assets/world_map.json",
-                  shapeDataField: "name",
-                  dataCount: data.length,
-                  primaryValueMapper: (int index) => data[index].country,
-                  shapeColorValueMapper: (int index) => data[index].count,
-                  shapeColorMappers: [
-                    MapColorMapper(from: 0, to: 100, color: Colors.red),
-                    MapColorMapper(from: 101, to: 300, color: Colors.green)
-                  ]
-               ),
-            )
+            MapShapeLayer(source: dataSource),
           ],
         ),
       ),
@@ -401,13 +397,36 @@ List<Model> data;
 
 @override
 void initState() {
-    super.initState();
+  data = <Model>[
+    Model('India', 280),
+    Model('United States of America', 190),
+    Model('Kazakhstan', 37),
+  ];
 
-    data = <Model>[
-      Model('India', 280),
-      Model('United States of America', 190),
-      Model('Kazakhstan', 37),
-    ];
+  dataSource = MapShapeSource.asset(
+    "assets/world_map.json",
+     shapeDataField: "name",
+     dataCount: data.length,
+     primaryValueMapper: (int index) => data[index].country,
+     shapeColorValueMapper: (int index) => data[index].count,
+     shapeColorMappers: [
+       MapColorMapper(
+          from: 0,
+          to: 100,
+          color: Colors.red,
+          minOpacity: 0.2,
+          maxOpacity: 0.4,
+       ),
+       MapColorMapper(
+          from: 101,
+          to: 300,
+          color: Colors.green,
+          minOpacity: 0.4,
+          maxOpacity: 0.6,
+       ),
+     ],
+  );
+  super.initState();
 }
 
 @override
@@ -417,29 +436,7 @@ Widget build(BuildContext context) {
         padding: EdgeInsets.only(left: 15, right: 15),
         child: SfMaps(
           layers: [
-            MapShapeLayer(
-              delegate: MapShapeLayerDelegate(
-                  shapeFile: "assets/world_map.json",
-                  shapeDataField: "name",
-                  dataCount: data.length,
-                  primaryValueMapper: (int index) => data[index].country,
-                  shapeColorValueMapper: (int index) => data[index].count,
-                  shapeColorMappers: [
-                    MapColorMapper(
-                        from: 0,
-                        to: 100,
-                        color: Colors.red,
-                        minOpacity: 0.2,
-                        maxOpacity: 0.4),
-                    MapColorMapper(
-                        from: 101,
-                        to: 300,
-                        color: Colors.green,
-                        minOpacity: 0.4,
-                        maxOpacity: 0.6)
-                  ]
-              ),
-            )
+            MapShapeLayer(source: dataSource),
           ],
         ),
       ),
@@ -459,4 +456,4 @@ class Model {
 ![Shape color opacity](images/shape-colors/shape-color-opacity.png)
 
 N>
-* Refer the [`MapShapeLayerDelegate.bubbleColorMappers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerDelegate/bubbleColorMappers.html), for setting the bubble colors based on the specific value.
+* Refer the [`MapShapeSource.bubbleColorMappers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/bubbleColorMappers.html), for setting the bubble colors based on the specific value.

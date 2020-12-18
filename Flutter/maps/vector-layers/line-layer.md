@@ -9,11 +9,11 @@ documentation: ug
 
 # Lines in the Flutter maps
 
-Line layer is a sublayer that renders a group of [`MapLine`] on [`MapShapeLayer`] and [`MapTileLayer`]. This section helps to learn about how to add the lines and customize them.
+Line layer is a sublayer that renders a group of [`MapLine`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLine-class.html) on [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html) and [`MapTileLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html). This section helps to learn about how to add the lines and customize them.
 
 ## Adding lines
 
-The [`lines`] is a collection of [`MapLine`]. Every single [`MapLine`] connects two location coordinates through a straight line. The start coordinate is set to [`MapLine.from`] property and the end coordinate is set to [`MapLine.to`] property.
+The [`lines`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLineLayer/lines.html) is a collection of [`MapLine`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLine-class.html). Every single [`MapLine`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLine-class.html) connects two location coordinates through a straight line. The start coordinate is set to [`MapLine.from`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLine/from.html) property and the end coordinate is set to [`MapLine.to`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLine/to.html) property.
 
 N> It is applicable for both the tile layer and shape layer.
 
@@ -131,7 +131,7 @@ class DataModel {
 
 ## Color
 
-You can apply the same color for all [`MapLine`] in the [`lines`] collection using the [`MapLineLayer.color`] property. Alternatively, you can apply different colors to each [`MapLine`] in the [`lines`] collection using the individual [`MapLine.color`] property.
+You can apply the same color for all [`MapLine`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLine-class.html) in the [`lines`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLineLayer/lines.html) collection using the [`MapLineLayer.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLineLayer/color.html) property. Alternatively, you can apply different colors to each [`MapLine`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLine-class.html) in the [`lines`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLineLayer/lines.html) collection using the individual [`MapLine.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLine/color.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -195,7 +195,7 @@ class DataModel {
 
 ## Width
 
-You can apply the same width for all [`MapLine`] in the [`lines`] collection using the [`MapLineLayer.width`] property. Alternatively, you can apply different width to each [`MapLine`] in the [`lines`] collection using the individual [`MapLine.width`] property. The default value of the [`MapLineLayer.width`] property is `2`.
+You can apply the same width for all [`MapLine`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLine-class.html) in the [`lines`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLineLayer/lines.html) collection using the [`MapLineLayer.width`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLineLayer/width.html) property. Alternatively, you can apply different width to each [`MapLine`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLine-class.html) in the [`lines`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLineLayer/lines.html) collection using the individual [`MapLine.width`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLine/width.html) property. The default value of the [`MapLineLayer.width`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLineLayer/width.html) property is `2`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -259,7 +259,7 @@ class DataModel {
 
 ## Dash array
 
-You can apply dash support for the line using the [`MapLine.dashArray`] property.
+You can apply dash support for the line using the [`MapLine.dashArray`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLine/dashArray.html) property.
 
 A sequence of dash and gap will be rendered based on the values in this list. Once all values of the list is rendered, it will be repeated again till the end of the line.
 
@@ -325,7 +325,7 @@ class DataModel {
 
 ## Animation
 
-You can apply animation for the [`MapLine`] using the [`MapLineLayer.animation`] property and able to customize the animation flow, curve and duration.
+You can apply animation for the [`MapLine`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLine-class.html) using the [`MapLineLayer.animation`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLineLayer/animation.html) property and able to customize the animation flow, curve and duration.
 
 By default, there will not be any animation.
 
@@ -407,9 +407,9 @@ class DataModel {
 
 ![Line shape animation](images/line-layer/line_shape_animation.gif)
 
-## OnTap
+## Tap
 
-You can use the [`onTap`] callback to get a notification if the particular [`MapLine`] is tapped. You can also customize the tapped [`MapLine`] based on the index passed in the callback as shown in the below code snippet.
+You can use the [`onTap`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLine/onTap.html) callback to get a notification if the particular [`MapLine`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLine-class.html) is tapped. You can also customize the tapped [`MapLine`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLine-class.html) based on the index passed in the callback as shown in the below code snippet.
 
 {% tabs %}
 {% highlight Dart %}
@@ -477,7 +477,7 @@ class DataModel {
 
 ## Tooltip
 
-You can show additional information about the line drawn using the [`MapLineLayer.tooltipBuilder`] property.
+You can show additional information about the line drawn using the [`MapLineLayer.tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLineLayer/tooltipBuilder.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -565,9 +565,9 @@ class DataModel {
 
 You can customize the appearance of the tooltip.
 
-* Background color - Change the background color of the tooltip in the maps using the [`MapTooltipSettings.color`] property.
-* Stroke color - Change the stroke color of the tooltip in the maps using the [`MapTooltipSettings.strokeColor`] property.
-* Stroke width - Change the stroke width of the tooltip in the maps using the [`MapTooltipSettings.strokeWidth`] property.
+* Background color - Change the background color of the tooltip in the maps using the [`MapTooltipSettings.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/color.html) property.
+* Stroke color - Change the stroke color of the tooltip in the maps using the [`MapTooltipSettings.strokeColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/strokeColor.html) property.
+* Stroke width - Change the stroke width of the tooltip in the maps using the [`MapTooltipSettings.strokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTooltipSettings/strokeWidth.html) property.
 
 {% tabs %}
 {% highlight Dart %}
