@@ -17,12 +17,13 @@ Markers can be used to denote the locations. It is possible to use the built-in 
 
 You can show markers at any position on the map by providing latitude and longitude position to the [`MapMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker-class.html), which is the widget returns from the [`MapShapeLayer.markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/markerBuilder.html) property.
 
-The [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/markerBuilder.html) callback will be called number of times equal to the value specified in the [`initialMarkersCount`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/initialMarkersCount.html) property. The default value of the [`initialMarkersCount`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/initialMarkersCount.html) property is `null`.
+The [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerBuilder.html) callback will be called number of times equal to the value specified in the [`initialMarkersCount`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/initialMarkersCount.html) property. The default value of the [`initialMarkersCount`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/initialMarkersCount.html) property is `null`.
 
 {% tabs %}
 {% highlight Dart %}
 
 List<Model> data;
+MapShapeSource dataSource;
 
 @override
 void initState() {
@@ -34,6 +35,12 @@ void initState() {
       Model('Russia', 61.52401, 105.318756)
     ];
 
+    dataSource = MapShapeSource.asset(
+       'assets/world_map.json',
+        shapeDataField: 'name',
+        dataCount: data.length,
+        primaryValueMapper: (index) => data[index].country,
+    );
     super.initState();
 }
 
@@ -48,12 +55,7 @@ Widget build(BuildContext context) {
           child: SfMaps(
             layers: <MapLayer>[
               MapShapeLayer(
-                 source: MapShapeSource.asset(
-                  'assets/world_map.json',
-                  shapeDataField: 'name',
-                  dataCount: data.length,
-                  primaryValueMapper: (index) => data[index].country,
-                ),
+                source: dataSource,
                 initialMarkersCount: 5,
                 markerBuilder: (BuildContext context, int index) {
                   return MapMarker(
@@ -83,7 +85,7 @@ class Model {
 ![default marker](images/markers/default_marker.png)
 
 N>
-* Refer the [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/markerBuilder.html), for returning the [`MapMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker-class.html).
+* Refer the [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerBuilder.html), for returning the [`MapMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker-class.html).
 * Refer the [`controller`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/controller.html), for dynamically updating the markers.
 
 ### Tile layer
@@ -167,6 +169,7 @@ N>
 {% highlight Dart %}
 
 List<Model> data;
+MapShapeSource dataSource;
 
 @override
 void initState() {
@@ -178,6 +181,10 @@ void initState() {
       Model(61.52401, 105.318756)
     ];
 
+    dataSource = MapShapeSource.asset(
+       'assets/world_map.json',
+       shapeDataField: 'name',
+    );
     super.initState();
 }
 
@@ -192,10 +199,7 @@ Widget build(BuildContext context) {
               child: SfMaps(
                 layers: <MapLayer>[
                   MapShapeLayer(
-                    source: MapShapeSource.asset(
-                      'assets/world_map.json',
-                      shapeDataField: 'name',
-                    ),
+                    source: dataSource,
                     initialMarkersCount: 5,
                     markerBuilder: (BuildContext context, int index){
                       return MapMarker(
@@ -238,6 +242,7 @@ You can show custom marker using the `child` property of the [`MapMarker`](https
 
 List<Model> data;
 List<Widget> iconsList;
+MapShapeSource dataSource;
 
 @override
 void initState() {
@@ -257,6 +262,10 @@ void initState() {
        Icon(Icons.account_balance)
      ];
 
+     dataSource = MapShapeSource.asset(
+        'assets/world_map.json',
+        shapeDataField: 'name',
+     );
      super.initState();
 }
 
@@ -271,10 +280,7 @@ Widget build(BuildContext context) {
                child: SfMaps(
                  layers: <MapLayer>[
                    MapShapeLayer(
-                     source: MapShapeSource.asset(
-                       'assets/world_map.json',
-                       shapeDataField: 'name',
-                     ),
+                     source: dataSource,
                      initialMarkersCount: 5,
                      markerBuilder: (BuildContext context, int index){
                        return MapMarker(
@@ -318,6 +324,7 @@ N> You can get the current markers count from [`MapShapeLayerController.markersC
 
 List<Model> data;
 MapShapeLayerController controller;
+MapShapeSource dataSource;
 Random random = Random();
 
 @override
@@ -330,6 +337,10 @@ void initState() {
       Model(61.52401, 105.318756)
     ];
 
+    dataSource = MapShapeSource.asset(
+       'assets/world_map.json',
+       shapeDataField: 'name',
+    );
     controller = MapShapeLayerController();
     super.initState();
 }
@@ -347,10 +358,7 @@ Widget build(BuildContext context) {
                   SfMaps(
                     layers: <MapLayer>[
                       MapShapeLayer(
-                        source: MapShapeSource.asset(
-                          'assets/world_map.json',
-                          shapeDataField: 'name',
-                        ),
+                        source: dataSource,
                         initialMarkersCount: 5,
                         markerBuilder: (BuildContext context, int index){
                           return MapMarker(
@@ -404,6 +412,7 @@ N> You can get the current markers count from [`MapShapeLayerController.markersC
 List<Model> data;
 MapShapeLayerController controller;
 Widget markerWidget;
+MapShapeSource dataSource;
 
 @override
 void initState() {
@@ -414,6 +423,11 @@ void initState() {
       Model(20.593684, 78.96288),
       Model(61.52401, 105.318756)
     ];
+
+    dataSource = MapShapeSource.asset(
+       'assets/world_map.json',
+        shapeDataField: 'name',
+    );
 
     controller = MapShapeLayerController();
     markerWidget =  Icon(Icons.add_location);
@@ -433,10 +447,7 @@ Widget build(BuildContext context) {
                   SfMaps(
                     layers: <MapLayer>[
                       MapShapeLayer(
-                        source: MapShapeSource.asset(
-                          'assets/world_map.json',
-                          shapeDataField: 'name',
-                        ),
+                        source: dataSource,
                         initialMarkersCount: 5,
                         markerBuilder: (BuildContext context, int index){
                           return MapMarker(
@@ -488,6 +499,7 @@ N> You can get the current markers count from [`MapShapeLayerController.markersC
 
 List<Model> data;
 MapShapeLayerController controller;
+MapShapeSource dataSource;
 
 @override
 void initState() {
@@ -498,6 +510,11 @@ void initState() {
       Model(20.593684, 78.96288),
       Model(61.52401, 105.318756)
     ];
+
+    dataSource = MapShapeSource.asset(
+       'assets/world_map.json',
+       shapeDataField: 'name',
+    );
     controller = MapShapeLayerController();
     super.initState();
 }
@@ -515,10 +532,7 @@ Widget build(BuildContext context) {
                   SfMaps(
                     layers: <MapLayer>[
                       MapShapeLayer(
-                        source: MapShapeSource.asset(
-                          'assets/world_map.json',
-                          shapeDataField: 'name',
-                        ),
+                        source: dataSource,
                         initialMarkersCount: 5,
                         markerBuilder: (BuildContext context, int index){
                           return MapMarker(
@@ -568,6 +582,7 @@ N> You can get the current markers count from [`MapShapeLayerController.markersC
 
 List<Model> data;
 MapShapeLayerController controller;
+MapShapeSource dataSource;
 
 @override
 void initState() {
@@ -579,6 +594,10 @@ void initState() {
       Model(61.52401, 105.318756)
     ];
 
+    dataSource = MapShapeSource.asset(
+       'assets/world_map.json',
+        shapeDataField: 'name',
+    );
     controller = MapShapeLayerController();
     super.initState();
 }
@@ -596,10 +615,7 @@ Widget build(BuildContext context) {
                   SfMaps(
                     layers: <MapLayer>[
                       MapShapeLayer(
-                        source: MapShapeSource.asset(
-                          'assets/world_map.json',
-                          shapeDataField: 'name',
-                        ),
+                        source: dataSource,
                         initialMarkersCount: 5,
                         markerBuilder: (BuildContext context, int index){
                           return MapMarker(
