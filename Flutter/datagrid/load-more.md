@@ -9,9 +9,9 @@ documentation: ug
 
 # Load more in Flutter Datagrid
 
-The datagrid provides support to display an interactive view when the grid reaches its maximum offset while scrolling down. You can use `loadMoreViewBuilder` builder to display the view at bottom of datagrid. 
+The datagrid provides support to display an interactive view when the grid reaches its maximum offset while scrolling down. You can use [loadMoreViewBuilder](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/loadMoreViewBuilder.html) builder to display the view at bottom of datagrid. 
 
-You should override the `DataGridSource.handleLoadMoreRows` method to load more rows and then notify the datagrid about the changes. The `DataGridSource.handleLoadMoreRows` can be called to load more rows from this builder by using the `loadMoreRows` function which is passed as a parameter to this builder.
+You should override the [DataGridSource.handleLoadMoreRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/handleLoadMoreRows.html) method to load more rows and then notify the datagrid about the changes. The `DataGridSource.handleLoadMoreRows` can be called to load more rows from this builder by using the [loadMoreRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/LoadMoreRows.html) function which is passed as a parameter to this builder.
 
 ## Infinite scrolling
 
@@ -89,7 +89,7 @@ final List<String> _designation = <String>[
   'Developer',
   'Manager',
   'Designer',
-  'System Analyst,
+  'System Analyst',
   'CEO'
 ];
 
@@ -143,6 +143,9 @@ class EmployeeDataSource extends DataGridSource<Employee> {
 
 {% endhighlight %}
 {% endtabs %}
+
+**NOTE**  
+  Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-do-the-infinite-scrolling-in-syncfusion-flutter-datatable).
 
 ![flutter datagrid shows load more with infinite scrolling behavior](images/load-more/flutter-datagrid-load-more-infinite-scrolling.gif)
 
@@ -249,7 +252,7 @@ final List<String> _designation = <String>[
   'Developer',
   'Manager',
   'Designer',
-  'System Analyst,
+  'System Analyst',
   'CEO'
 ];
 
@@ -303,5 +306,8 @@ class EmployeeDataSource extends DataGridSource<Employee> {
 
 {% endhighlight %}
 {% endtabs %}
+
+**NOTE**  
+  Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-load-rows-on-demand-in-Syncfusion-Flutter-datatable).
 
 ![flutter datagrid shows load more button behavior](images/load-more/flutter-datagrid-load-more-button.gif)
