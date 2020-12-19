@@ -818,7 +818,7 @@ When you specify the same value for both [`start`](https://pub.dev/documentation
 
 ### Plot band padding
 
-Padding to the plot band text can be added using the [`verticalTextPadding`]() or [`horizontalTextPadding`]() properties. The [`verticalTextPadding`]() is used to move the plot band text vertically and [`horizontalTextPadding`]() is used to move the plot band text horizontally.
+Padding to the plot band text can be added using the [`verticalTextPadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/verticalTextPadding.html) or [`horizontalTextPadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/horizontalTextPadding.html) properties. The [`verticalTextPadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/verticalTextPadding.html) is used to move the plot band text vertically and [`horizontalTextPadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/horizontalTextPadding.html) is used to move the plot band text horizontally.
 
 These properties takes pixel or percentage value. For pixel input should be like `10px` and for percentage input should be like `10%`. If no suffix is specified (`10`), it will be considered as pixel value. Percentage value refers to the overall width of the chart. i.e 100% is equal to the width of the chart. 
 
@@ -932,13 +932,13 @@ By default, the chart is rendered with primary x axis and primary y axis. But, t
 
 ## Axis label alignment
 
-The position of axis label can be aligned using the [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelAlignment.html) property.The following options are available in axis label alignment.
+The position of axis label can be aligned using the [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelAlignment.html) property.The following options are available in axis label alignment.
 
-* [`start`]() - If it is a horizontal axis, aligns the labels before the gridline and if it is a vertical axis, aligns the labels below the gridline.
+* [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelAlignment-class.html) - If it is a horizontal axis, aligns the labels before the gridline and if it is a vertical axis, aligns the labels below the gridline.
 
-* [`end`]() - If it is a horizontal axis, aligns the labels after the gridline and if it is a vertical axis, align the labels above the gridline.
+* [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelAlignment-class.html) - If it is a horizontal axis, aligns the labels after the gridline and if it is a vertical axis, align the labels above the gridline.
 
-* [`center`]() - Aligns the axis label to the center of the gridlines.
+* [`center`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelAlignment-class.html) - Aligns the axis label to the center of the gridlines.
 
 ### Center
 
@@ -1047,7 +1047,7 @@ N> This is applicable only to the value axis and not for other axis and applicab
 
 ## Axis label width customization
 
-The maximum width for axis labels and the space occupied by the axis labels can be controlled by using the [`maximumLabelWidth`]() and [`labelsExtent`]() properties of the axis respectively. If the provided width is lesser than the axis label's width, the label gets trimmed and the tooltip can be shown on clicking/tapping the axis label in both cases. Both properties are defaults to `null`.
+The maximum width for axis labels and the space occupied by the axis labels can be controlled by using the [`maximumLabelWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/maximumLabelWidth.html) and [`labelsExtent`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelsExtent.html) properties of the axis respectively. If the provided width is lesser than the axis label's width, the label gets trimmed and the tooltip can be shown on clicking/tapping the axis label in both cases. Both properties are defaults to `null`.
 
 
 {% highlight dart %} 
@@ -1077,7 +1077,7 @@ The maximum width for axis labels and the space occupied by the axis labels can 
 
 {% endhighlight %}
 
-N> If both [`maximumLabelWidth`]() and [`labelsExtent`]() properties are specified, then the priority goes to [`labelsExtent`]() property.
+N> If both [`maximumLabelWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/maximumLabelWidth.html) and [`labelsExtent`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelsExtent.html) properties are specified, then the priority goes to [`labelsExtent`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelsExtent.html) property.
 
 ![Axis label trim](images/axis-customization/axis-label-trim.gif)
 
