@@ -135,11 +135,11 @@ The following properties are used to customize the appearance:
 
 {% endhighlight %}
 
-![Spark Area chart](images/sparkline-types/spark-area.png)
+![Spark area chart](images/sparkline-types/spark-area.png)
 
-## Bar Sparkline chart
+## Bar chart
 
-[`SfSparkBarChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkBarChart-class.html) is used to render the sparkline series as Bar.The following properties are used to customize the appearance:
+[`SfSparkBarChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkBarChart-class.html) is used to render the spark bar type series.The following properties are used to customize the appearance:
 
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkBarChart/color.html) - Specifies the fill color of the spark bar chart.
 * [`data`]()  - Used to bind the data to spark are charts.

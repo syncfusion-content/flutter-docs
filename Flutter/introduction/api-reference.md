@@ -38,14 +38,6 @@ This page helps to navigate to the public API's available in the Syncfusion Flut
     </tr>
     <tr>
         <td>
-            Spark Charts
-        </td>
-        <td>
-            <a href="https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/sparkcharts-library.html">Link</a>
-        </td>
-    </tr>
-    <tr>
-        <td>
             DataGrid
         </td>
         <td>
@@ -114,6 +106,14 @@ This page helps to navigate to the public API's available in the Syncfusion Flut
         </td>
         <td>
             <a href="https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html">Link</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Spark Charts
+        </td>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/sparkcharts-library.html">Link</a>
         </td>
     </tr>
 </table>
