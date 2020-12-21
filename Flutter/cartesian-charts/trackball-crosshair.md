@@ -299,46 +299,50 @@ You can customize the appearance of trackball tooltip items with your template b
 
     @override
     Widget build(BuildContext context) {
-      return Scaffold(
-          child: Center(
-            child: Container(
-              child: SfCartesianChart(
-                trackballBehavior: TrackballBehavior(
-                      enable: true,
-                      builder: (BuildContext context,
-                          TrackballDetails trackballDetails) {
-                            return Container(
-                              height: 50,
-                              width: 80,
-                              decoration: BoxDecoration(
-                                  color: Color.fromRGBO(0, 8, 22, 0.75),
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(6.0))),
-                                child: Row(
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsets.only(left: 5),
-                                      child: SizedBox(
-                                       child: Image.asset('images/People_Circle16.png'),
-                                      height: 30,
-                                      width: 30,
-                                      )
-                                    ),
-                                    Center(
-                                      child: Container(
-                                        padding: EdgeInsets.only(top: 5, left: 5),
-                                      height: 40,
-                                      width: 40,
-                                      child: Text('${trackballDetails.point.x.toString()} : \$${trackballDetails.point.y.toString()}',style: TextStyle( fontSize:10, color: Color .fromRGBO( 255, 255, 255, 1)))))
-                                  ]
-                                )
-                            );
-                          },),
-                    series: <LineSeries<SalesData, String>>[
-                      LineSeries<SalesData, double>(
-                          dataSource: data,
-                          xValueMapper: (SalesData sales, _) => sales.year,
-                          yValueMapper: (SalesData sales, _) => sales.sales)
+     return Scaffold(
+       child: Center(
+         child: Container(
+            child: SfCartesianChart(
+              trackballBehavior: TrackballBehavior(
+                    enable: true,
+                    builder: (BuildContext context,
+                        TrackballDetails trackballDetails) {
+                      return Container(
+                          height: 50,
+                          width: 150,
+                          decoration: BoxDecoration(
+                            color: Color.fromRGBO(0, 8, 22, 0.75),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(6.0)),
+                          ),
+                          child: Row(children: [
+                            Padding(
+                                padding: EdgeInsets.only(left: 5),
+                                child: SizedBox(
+                                  child:
+                                      Image.asset('images/People_Circle16.png'),
+                                  height: 30,
+                                  width: 30,
+                                )),
+                            Center(
+                                child: Container(
+                                    padding: EdgeInsets.only(top: 11, left: 7),
+                                    height: 40,
+                                    width: 100,
+                                    child: Text(
+                                        '${trackballDetails.point.x.toString()} : \$${trackballDetails.point.y.toString()}',
+                                        style: TextStyle(
+                                            fontSize: 13,
+                                            color: Color.fromRGBO(
+                                                255, 255, 255, 1)))))
+                          ]));
+                    },
+                  ),
+              series: <CartesianChart<SalesData,            String>>[
+                SplineSeries<SalesData, double>(
+                    dataSource: data,
+                    xValueMapper: (SalesData sales, _) => sales.year,
+                    yValueMapper: (SalesData sales, _) => sales.sales)
                 ]
               )
             )
