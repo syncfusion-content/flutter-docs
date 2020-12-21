@@ -11,9 +11,9 @@ documentation: ug
 
 This section helps to learn about how to add tooltip in the range selector.
 
-## Show tooltips
+## Enable tooltips
 
-You can enable tooltips for both thumbs. It is used to clearly indicate the current selection of the ranges during interaction. By default, tooltip text is formatted with either [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/numberFormat.html) or [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dateFormat.html).
+You can enable tooltips for both thumbs using the [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/enableTooltip.html). It is used to clearly indicate the current selection of the ranges during interaction. By default, tooltip text is formatted with either [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/numberFormat.html) or [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dateFormat.html).
 
 {% tabs %}
 {% highlight Dart %}
@@ -45,7 +45,7 @@ Widget build(BuildContext context) {
                     interval: 2,
                     showLabels: true,
                     showTicks: true,
-                    showTooltip: true,
+                    enableTooltip: true,
                     initialValues: _values,
                     child: Container(
                     height: 130,
@@ -126,7 +126,7 @@ Widget build(BuildContext context) {
               interval: 1,
               showLabels: true,
               showTicks: true,
-              showTooltip: true,
+              enableTooltip: true,
               tooltipShape: SfPaddleTooltipShape(),
               initialValues: _values,
               child: Container(
@@ -211,7 +211,7 @@ Widget build(BuildContext context) {
                     interval: 2,
                     dateFormat: DateFormat('h:mm'),
                     dateIntervalType: DateIntervalType.hours,
-                    showTooltip: true,
+                    enableTooltip: true,
                     tooltipTextFormatterCallback: (dynamic actualValue, String formattedText) {
                         return DateFormat('h:mm a').format(actualValue);
                     },
@@ -296,7 +296,7 @@ Widget build(BuildContext context) {
                         min: _min,
                         max: _max,
                         interval: 1,
-                        showTooltip: true,
+                        enableTooltip: true,
                         showTicks: true,
                         showLabels: true,
                         initialValues: _values,
@@ -380,7 +380,7 @@ Widget build(BuildContext context) {
                         min: _min,
                         max: _max,
                         interval: 1,
-                        showTooltip: true,
+                        enableTooltip: true,
                         showTicks: true,
                         showLabels: true,
                         initialValues: _values,
@@ -464,7 +464,7 @@ Widget build(BuildContext context) {
                         min: _min,
                         max: _max,
                         interval: 1,
-                        showTooltip: true,
+                        enableTooltip: true,
                         showTicks: true,
                         showLabels: true,
                         initialValues: _values,

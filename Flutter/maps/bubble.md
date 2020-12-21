@@ -19,11 +19,11 @@ You can enable bubbles using the [`MapShapeSource.bubbleSizeMapper`](https://pub
 {% highlight Dart %}
 
 List<Model> data;
+MapShapeSource dataSource;
 
 @override
 void initState() {
    super.initState();
-
    data = <Model>[
       Model('Asia', 51),
       Model('Africa', 58),
@@ -32,6 +32,14 @@ void initState() {
       Model('South America', 14),
       Model('Australia', 23),
    ];
+
+   dataSource = MapShapeSource.asset(
+      "assets/world_map.json",
+      shapeDataField: "continent",
+      dataCount: data.length,
+      primaryValueMapper: (int index) => data[index].continent,
+      bubbleSizeMapper: (int index) => data[index].count,
+   );
 }
 
 @override
@@ -42,13 +50,8 @@ Widget build(BuildContext context) {
       child: SfMaps(
         layers: [
           MapShapeLayer(
-            source: MapShapeSource.asset("assets/world_map.json",
-                shapeDataField: "continent",
-                dataCount: data.length,
-                primaryValueMapper: (int index) => data[index].continent,
-                bubbleSizeMapper: (int index) => data[index].count,
-            ),
-          )
+            source: dataSource,
+          ),
         ],
       ),
     ),
@@ -75,6 +78,7 @@ You can enable tooltip for the bubbles using the [`MapShapeLayer.bubbleTooltipBu
 {% highlight Dart %}
 
 List<Model> data;
+MapShapeSource dataSource;
 
 @override
 void initState() {
@@ -88,6 +92,14 @@ void initState() {
     Model('South America', 12, '17,840,000 sq. km.'),
     Model('Australia', 14, '8,600,000 sq. km.'),
   ];
+
+  dataSource = MapShapeSource.asset(
+    "assets/world_map.json",
+     shapeDataField: "continent",
+     dataCount: data.length,
+     primaryValueMapper: (int index) => data[index].continent,
+     bubbleSizeMapper: (int index) => data[index].countriesCount,
+  );
 }
 
 @override
@@ -98,13 +110,7 @@ Widget build(BuildContext context) {
       child: SfMaps(
         layers: [
           MapShapeLayer(
-            source: MapShapeSource.asset(
-              "assets/world_map.json",
-              shapeDataField: "continent",
-              dataCount: data.length,
-              primaryValueMapper: (int index) => data[index].continent,
-              bubbleSizeMapper: (int index) => data[index].countriesCount,
-            ),
+            source: dataSource,
             bubbleTooltipBuilder: (BuildContext context, int index) {
                return Padding(
                   padding: EdgeInsets.all(10),
@@ -146,6 +152,7 @@ If [`bubbleColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_m
 {% highlight Dart %}
 
 List<Model> data;
+MapShapeSource dataSource;
 
 @override
 void initState() {
@@ -159,6 +166,15 @@ void initState() {
     Model('South America', 14, Colors.yellow[400]),
     Model('Australia', 23, Colors.orange[400]),
   ];
+
+  dataSource = MapShapeSource.asset(
+     "assets/world_map.json",
+     shapeDataField: "continent",
+     dataCount: data.length,
+     primaryValueMapper: (int index) => data[index].continent,
+     bubbleSizeMapper: (int index) => data[index].count,
+     bubbleColorValueMapper: (int index) => data[index].bubbleColor,
+  );
 }
 
 @override
@@ -169,14 +185,7 @@ Widget build(BuildContext context) {
        child: SfMaps(
          layers: [
            MapShapeLayer(
-             source: MapShapeSource.asset(
-               "assets/world_map.json",
-               shapeDataField: "continent",
-               dataCount: data.length,
-               primaryValueMapper: (int index) => data[index].continent,
-               bubbleSizeMapper: (int index) => data[index].count,
-               bubbleColorValueMapper: (int index) => data[index].bubbleColor,
-             ),
+             source: dataSource,
              bubbleSettings: MapBubbleSettings(
                maxRadius: 30,
                minRadius: 15,
@@ -215,11 +224,11 @@ You can customize the below appearance of the bubbles.
 {% highlight Dart %}
 
 List<Model> data;
+MapShapeSource dataSource;
 
 @override
 void initState() {
     super.initState();
-
     data = <Model>[
       Model('Asia', 51),
       Model('Africa', 58),
@@ -228,6 +237,14 @@ void initState() {
       Model('South America', 14),
       Model('Australia', 23),
     ];
+
+    dataSource = MapShapeSource.asset(
+       "assets/world_map.json",
+       shapeDataField: "continent",
+       dataCount: data.length,
+       primaryValueMapper: (int index) => data[index].continent,
+       bubbleSizeMapper: (int index) => data[index].count,
+    );
 }
 
 @override
@@ -238,13 +255,7 @@ Widget build(BuildContext context) {
         child: SfMaps(
           layers: [
             MapShapeLayer(
-              source: MapShapeSource.asset(
-                  "assets/world_map.json",
-                  shapeDataField: "continent",
-                  dataCount: data.length,
-                  primaryValueMapper: (int index) => data[index].continent,
-                  bubbleSizeMapper: (int index) => data[index].count,
-              ),
+              source: dataSource,
               bubbleSettings: MapBubbleSettings(
                 maxRadius: 30,
                 minRadius: 15,
@@ -286,11 +297,11 @@ N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/pa
 {% highlight Dart %}
 
 List<Model> data;
+MapShapeSource dataSource;
 
 @override
 void initState() {
     super.initState();
-
     data = <Model>[
       Model('Asia', 51),
       Model('Africa', 58),
@@ -299,6 +310,14 @@ void initState() {
       Model('South America', 14),
       Model('Australia', 23),
    ];
+
+   dataSource = MapShapeSource.asset(
+     "assets/world_map.json",
+      shapeDataField: "continent",
+      dataCount: data.length,
+      primaryValueMapper: (int index) => data[index].continent,
+      bubbleSizeMapper: (int index) => data[index].count,
+   );
 }
 
 @override
@@ -318,13 +337,7 @@ Widget build(BuildContext context) {
           child: SfMaps(
             layers: [
               MapShapeLayer(
-                source: MapShapeSource.asset(
-                  "assets/world_map.json",
-                  shapeDataField: "continent",
-                  dataCount: data.length,
-                  primaryValueMapper: (int index) => data[index].continent,
-                  bubbleSizeMapper: (int index) => data[index].count,
-                ),
+                source: dataSource,
                 bubbleSettings: MapBubbleSettings(
                   maxRadius: 30,
                   minRadius: 15,
