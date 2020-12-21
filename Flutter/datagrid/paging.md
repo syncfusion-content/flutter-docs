@@ -120,7 +120,7 @@ class OrderInfoDataSource extends DataGridSource<OrderInfo> {
 
 ## Callbacks
 
-You can use [onPageNavigationStart](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/onPageNavigationStart.html) and [onPageNavigationEnd](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/onPageNavigationEnd.html) callbacks to show and hide the loading indicator when navigating between pages.
+The SfDataPager provides [onPageNavigationStart](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/onPageNavigationStart.html) and [onPageNavigationEnd](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/onPageNavigationEnd.html) callbacks to listen the page navigation in widget level. 
 
 Typically, these callbacks are used to show and hide loading indicator.
 
@@ -202,6 +202,8 @@ class OrderInfoDataSource extends DataGridSource<OrderInfo> {
 ## Asynchronous data loading
 
 You can load the data asynchronously to the `SfDataPager` by overriding the `handlePageChange` method and await the method while loading the data.
+
+You can use `onPageNavigationStart` and `onPageNavigationEnd` callbacks to show and hide the loading indicator when navigating between pages.
 
 In the below example, we have set await for 2000ms and displayed the loading indicator until 2000ms.
 
