@@ -11,11 +11,11 @@ documentation: ug
 
 The datagrid provides support to display an interactive view when the grid reaches its maximum offset while scrolling down. You can use [loadMoreViewBuilder](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/loadMoreViewBuilder.html) builder to display the view at bottom of datagrid. 
 
-You should override the [DataGridSource.handleLoadMoreRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/handleLoadMoreRows.html) method to load more rows and then notify the datagrid about the changes. The `DataGridSource.handleLoadMoreRows` can be called to load more rows from this builder by using the [loadMoreRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/LoadMoreRows.html) function which is passed as a parameter to this builder.
+You should override the [DataGridSource.handleLoadMoreRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/handleLoadMoreRows.html) method to load more rows and then notify the datagrid about the changes. The `DataGridSource.handleLoadMoreRows` can be called to load more rows from this builder by using the [loadMoreRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/LoadMoreRows.html) function which is passed as a parameter to `loadMoreViewBuilder`.
 
 ## Infinite scrolling
 
-Infinite Scrolling is an approach that can be used to load more rows to the datagrid whenever the datagrid reaches the bottom without user interaction.
+Infinite Scrolling is an approach that can be used to load more rows to the datagrid whenever the datagrid reaches the bottom.
 
 The following example demonstrates infinite scrolling by showing the circular progress indicator until the rows are loaded when the datagrid reaches the bottom,
 
@@ -30,6 +30,9 @@ Widget build(BuildContext context) {
     source: employeeDataSource,
     loadMoreViewBuilder: (BuildContext context, LoadMoreRows loadMoreRows) {
       Future<String> loadRows() async {
+        // Call the loadMoreRows function to call the
+        // DataGridSource.handleLoadMoreRows method. So, additional
+        // rows can be added from handleLoadMoreRows method.
         await loadMoreRows();
         return Future<String>.value('Completed');
       }
@@ -198,6 +201,10 @@ Widget build(BuildContext context) {
                 child:
                     Text('LOAD MORE', style: TextStyle(color: Colors.white)),
                 onPressed: () async {
+                  // To avoid the "Error: setState() called after dispose():"
+                  // while scrolling the datagrid vertically and displaying the
+                  // load more view, current load more view is checked whether
+                  // loaded widget is mounted or not.
                   if (context is StatefulElement &&
                       context.state != null &&
                       context.state.mounted) {
@@ -205,7 +212,14 @@ Widget build(BuildContext context) {
                       showIndicator = true;
                     });
                   }
+                  // Call the loadMoreRows function to call the
+                  // DataGridSource.handleLoadMoreRows method. So, additional
+                  // rows can be added from handleLoadMoreRows method.
                   await loadMoreRows();
+                  // To avoid the "Error: setState() called after dispose():"
+                  // while scrolling the datagrid vertically and displaying the
+                  // load more view, current load more view is checked whether
+                  // loaded widget is mounted or not.
                   if (context is StatefulElement &&
                       context.state != null &&
                       context.state.mounted) {
