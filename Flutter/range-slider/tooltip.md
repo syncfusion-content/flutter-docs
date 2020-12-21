@@ -11,9 +11,9 @@ documentation: ug
 
 This section helps to learn about how to add tooltip in the range slider.
 
-## Show tooltips
+## Enable tooltips
 
-You can enable tooltips for both thumbs. It is used to clearly indicate the current selection of the ranges during interaction. By default, tooltip text is formatted with either [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/numberFormat.html) or [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateFormat.html).
+You can enable tooltips for both thumbs using the [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/enableTooltip.html). It is used to clearly indicate the current selection of the ranges during interaction. By default, tooltip text is formatted with either [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/numberFormat.html) or [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateFormat.html).
 
 {% tabs %}
 {% highlight Dart %}
@@ -31,7 +31,7 @@ Widget build(BuildContext context) {
                     interval: 2,
                     showTicks: true,
                     showLabels: true,
-                    showTooltip: true,
+                    enableTooltip: true,
                     values: _values,
                     onChanged: (SfRangeValues newValues) {
                         setState(() {
@@ -73,7 +73,7 @@ Widget build(BuildContext context) {
               interval: 20,
               showTicks: true,
               showLabels: true,
-              showTooltip: true,
+              enableTooltip: true,
               tooltipShape: SfPaddleTooltipShape(),
               values: _values,
               onChanged: (SfRangeValues newValues) {
@@ -118,7 +118,7 @@ Widget build(BuildContext context) {
                     interval: 3,
                     showTicks: true,
                     showLabels: true,
-                    showTooltip: true,
+                    enableTooltip: true,
                     dateFormat: DateFormat('h:mm'),
                     dateIntervalType: DateIntervalType.hours,
                     tooltipTextFormatterCallback: (dynamic actualValue, String formattedText) {
@@ -166,7 +166,7 @@ Widget build(BuildContext context) {
                         interval: 1,
                         showTicks: true,
                         showLabels: true,
-                        showTooltip: true,
+                        enableTooltip: true,
                         values: _values,
                         onChanged: (SfRangeValues newValues){
                             setState(() {
@@ -211,7 +211,7 @@ Widget build(BuildContext context) {
                      interval: 1,
                      showTicks: true,
                      showLabels: true,
-                     showTooltip: true,
+                     enableTooltip: true,
                      values: _values,
                      onChanged: (SfRangeValues newValues){
                             setState(() {
@@ -256,7 +256,7 @@ Widget build(BuildContext context) {
                      interval: 1,
                      showTicks: true,
                      showLabels: true,
-                     showTooltip: true,
+                     enableTooltip: true,
                      values: _values,
                      onChanged: (SfRangeValues newValues){
                             setState(() {
