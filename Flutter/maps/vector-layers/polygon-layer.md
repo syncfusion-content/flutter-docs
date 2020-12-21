@@ -180,7 +180,7 @@ void initState() {
        PolygonModel(polygon1, Colors.greenAccent),
        PolygonModel(polygon2, Colors.pinkAccent),
     ];
-    
+
     dataSource = MapShapeSource.asset(
       'assets/world_map.json',
       shapeDataField: 'continent',
