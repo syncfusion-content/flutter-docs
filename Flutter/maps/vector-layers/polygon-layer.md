@@ -539,5 +539,3 @@ class PolygonModel {
 
 {% endhighlight %}
 {% endtabs %}
-
-![Polygon tooltip customization](../images/polygon-layer/polygon-tooltip-customization.png)

@@ -504,6 +504,9 @@ void initState() {
 
 @override
 Widget build(BuildContext context) {
+ final ThemeData themeData = Theme.of(context);
+    final TextStyle textStyle = themeData.textTheme.caption
+        .copyWith(color: themeData.colorScheme.surface);
   return Scaffold(
     body: Padding(
       padding: EdgeInsets.all(10),
@@ -527,14 +530,14 @@ Widget build(BuildContext context) {
                     children: [
                       Row(
                         children: [
-                          Text('Flight   : '),
-                          Text('Air India'),
+                          Text('Flight   : ', style: textStyle),
+                          Text('Air India', style: textStyle),
                         ],
                       ),
                       Row(
                         children: [
-                          Text('Depart : '),
-                          Text(random.nextInt(12).toString() + 'AM'),
+                          Text('Depart : ', style: textStyle),
+                          Text(random.nextInt(12).toString() + 'AM', style: textStyle),
                         ],
                       ),
                     ],
