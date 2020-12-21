@@ -11,9 +11,9 @@ documentation: ug
 
 This section helps to learn about how to add tooltip in the slider.
 
-## Show tooltip
+## Enable tooltip
 
-You can enable tooltip for the thumb. It is used to clearly indicate the current selection of the value during interaction. By default, tooltip text is formatted with either [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/numberFormat.html) or [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/dateFormat.html).
+You can enable tooltip for the thumb using the [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/enableTooltip.html). It is used to clearly indicate the current selection of the value during interaction. By default, tooltip text is formatted with either [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/numberFormat.html) or [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/dateFormat.html).
 
 {% tabs %}
 {% highlight Dart %}
@@ -31,7 +31,7 @@ Widget build(BuildContext context) {
               interval: 2,
               showTicks: true,
               showLabels: true,
-              showTooltip: true,
+              enableTooltip: true,
               value: _value,
               onChanged: (dynamic newValue) {
                 setState(() {
@@ -73,7 +73,7 @@ Widget build(BuildContext context) {
               interval: 20,
               showTicks: true,
               showLabels: true,
-              showTooltip: true,
+              enableTooltip: true,
               tooltipShape: SfPaddleTooltipShape(),
               value: _value,
               onChanged: (dynamic newValue) {
@@ -118,7 +118,7 @@ Widget build(BuildContext context) {
               interval: 3,
               showTicks: true,
               showLabels: true,
-              showTooltip: true,
+              enableTooltip: true,
               dateFormat: DateFormat('h:mm'),
               dateIntervalType: DateIntervalType.hours,
               tooltipTextFormatterCallback: (dynamic actualValue, String formattedText) {
@@ -166,7 +166,7 @@ Widget build(BuildContext context) {
                   interval: 1,
                   showTicks: true,
                   showLabels: true,
-                  showTooltip: true,
+                  enableTooltip: true,
                   value: _value,
                   onChanged: (dynamic newValue){
                     setState(() {
@@ -211,7 +211,7 @@ Widget build(BuildContext context) {
                   interval: 1,
                   showTicks: true,
                   showLabels: true,
-                  showTooltip: true,
+                  enableTooltip: true,
                   value: _value,
                   onChanged: (dynamic newValue){
                     setState(() {

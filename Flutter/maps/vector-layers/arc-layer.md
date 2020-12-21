@@ -105,7 +105,7 @@ void initState() {
   ];
 
   zoomPanBehavior = MapZoomPanBehavior(
-    zoomLevel: 4,
+    zoomLevel: 3,
     focalLatLng: MapLatLng(22.9734, 90.6569),
   );
   super.initState();
@@ -147,6 +147,8 @@ class DataModel {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Default arc shape](../images/arc-layer/default_arc_shape.png)
 
 ## Height factor
 
@@ -221,6 +223,8 @@ class DataModel {
 {% endhighlight %}
 {% endtabs %}
 
+![Arc height factor](../images/arc-layer/arc_height_factor.png)
+
 ## Control point factor
 
 The [`MapArc.controlPointFactor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc/controlPointFactor.html) is the arc bending position. The default value of [`MapArc.controlPointFactor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc/controlPointFactor.html) property is `0.5` and the value ranges from 0 to 1.
@@ -294,6 +298,8 @@ class DataModel {
 {% endhighlight %}
 {% endtabs %}
 
+![Arc control point factor](../images/arc-layer/arc_control_point_factor.png)
+
 ## Color
 
 You can apply the same color for all [`MapArc`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc-class.html) in the [`arcs`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArcLayer/arcs.html) collection using the [`MapArcLayer.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArcLayer/color.html) property. Alternatively, you can apply different colors to each [`MapArc`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc-class.html) in the [`arcs`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArcLayer/arcs.html) collection using the individual [`MapArc.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc/color.html) property.
@@ -366,6 +372,8 @@ class DataModel {
 {% endhighlight %}
 {% endtabs %}
 
+![Arc color](../images/arc-layer/arc_color.png)
+
 ## Width
 
 You can apply the same width for all [`MapArc`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc-class.html) in the [`arcs`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArcLayer/arcs.html) collection using the [`MapArcLayer.width`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArcLayer/width.html) property. Alternatively, you can apply different width to each [`MapArc`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc-class.html) in the [`arcs`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArcLayer/arcs.html) collection using the individual [`MapArc.width`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc/width.html) property. The default value of the [`MapArcLayer.width`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArcLayer/width.html) property is `2`.
@@ -437,6 +445,8 @@ class DataModel {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Arc width](../images/arc-layer/arc_width.png)
 
 ## Dash array
 
@@ -511,6 +521,8 @@ class DataModel {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Arc dash array](../images/arc-layer/arc_dash_array.png)
 
 ## Animation
 
@@ -604,6 +616,8 @@ class DataModel {
 {% endhighlight %}
 {% endtabs %}
 
+![Arc animation](../images/arc-layer/arc_animation.gif)
+
 ## Tap
 
 You can use the [`onTap`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc/onTap.html) callback to get a notification if the particular [`MapArc`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc-class.html) is tapped. You can also customize the tapped [`MapArc`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc-class.html) based on the index passed in the callback as shown in the below code snippet.
@@ -681,6 +695,8 @@ class DataModel {
 {% endhighlight %}
 {% endtabs %}
 
+![Arc tap support](../images/arc-layer/arc_tap-support.gif)
+
 ## Tooltip
 
 You can show additional information about an arc drawn using the [`MapArcLayer.tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArcLayer/tooltipBuilder.html) property.
@@ -691,7 +707,6 @@ You can show additional information about an arc drawn using the [`MapArcLayer.t
 MapZoomPanBehavior zoomPanBehavior;
 MapShapeSource dataSource;
 List<DataModel> data;
-int selectedIndex;
 Random random = Random();
 
 @override
@@ -776,6 +791,8 @@ class DataModel {
 {% endhighlight %}
 {% endtabs %}
 
+![Arc tooltip support](../images/arc-layer/arc_tooltip.png)
+
 ## Tooltip customization
 
 You can customize the appearance of the tooltip.
@@ -790,7 +807,6 @@ You can customize the appearance of the tooltip.
 MapZoomPanBehavior zoomPanBehavior;
 MapShapeSource dataSource;
 List<DataModel> data;
-int selectedIndex;
 Random random = Random();
 
 @override
@@ -879,3 +895,5 @@ class DataModel {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Arc tooltip customization](../images/arc-layer/arc_tooltip_customization.png)
