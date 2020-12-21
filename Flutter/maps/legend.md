@@ -174,7 +174,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Bar shape legend](../images/legend/bar-shape-legend.png)
+![Bar shape legend](images/legend/bar-shape-legend.png)
 
 N>
 * Refer the [`MapLegend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html), for showing default legend.
@@ -244,7 +244,7 @@ class Model {
 {% endhighlight %}
 {% endtabs %}
 
-![Bar bubble legend](../images/legend/bar-bubble-legend.png)
+![Bar bubble legend](images/legend/bar-bubble-legend.png)
 
 N>
 * Refer the [`MapLegend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html), for showing default legend.
@@ -670,7 +670,7 @@ class Model {
 {% endhighlight %}
 {% endtabs %}
 
-![Bar legend overflow mode](../images/legend/bar-legend-overflow-mode.gif)
+![Bar legend overflow mode](images/legend/bar-legend-overflow-mode.gif)
 
 N>
 * Refer the [`iconSize`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html), for setting the size of the icon.
@@ -1228,7 +1228,7 @@ class Model {
 {% endhighlight %}
 {% endtabs %}
 
-![Bar legend solid type](../images/legend/bar-legend-solid-type.png)
+![Bar legend solid type](images/legend/bar-legend-solid-type.png)
 
 ### Gradient
 
@@ -1310,7 +1310,7 @@ class Model {
 {% endhighlight %}
 {% endtabs %}
 
-![Bar legend gradient type](../images/legend/bar-legend-gradient-type.png)
+![Bar legend gradient type](images/legend/bar-legend-gradient-type.png)
 
 ## Bar legend appearance customization
 
@@ -1401,4 +1401,4 @@ class Model {
 {% endhighlight %}
 {% endtabs %}
 
-![Bar legend customization](../images/legend/bar-legend-customization.png)
+![Bar legend customization](images/legend/bar-legend-customization.png)
