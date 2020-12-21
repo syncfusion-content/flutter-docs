@@ -174,6 +174,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Bar shape legend](images/legend/bar-shape-legend.png)
+
 N>
 * Refer the [`MapLegend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html), for showing default legend.
 
@@ -241,6 +243,8 @@ class Model {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Bar bubble legend](images/legend/bar-bubble-legend.png)
 
 N>
 * Refer the [`MapLegend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html), for showing default legend.
@@ -644,7 +648,8 @@ Widget build(BuildContext context) {
                   legend: MapLegend.bar(
                     MapElement.shape,
                     position: MapLegendPosition.bottom,
-                    overflowMode: MapLegendOverflowMode.wrap,
+                    edgeLabelsPlacement: MapLegendEdgeLabelsPlacement.center,
+                    overflowMode: MapLegendOverflowMode.scroll,
                   ),
                 )
               ],
@@ -664,6 +669,8 @@ class Model {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Bar legend overflow mode](images/legend/bar-legend-overflow-mode.gif)
 
 N>
 * Refer the [`iconSize`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html), for setting the size of the icon.
@@ -1221,6 +1228,8 @@ class Model {
 {% endhighlight %}
 {% endtabs %}
 
+![Bar legend solid type](images/legend/bar-legend-solid-type.png)
+
 ### Gradient
 
 You can set gradient color for the bar by using the [MapLegendPaintingStyle.gradient](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendPaintingStyle-class.html).
@@ -1245,27 +1254,23 @@ void initState() {
       Model('China', 148)
    ];
 
-   _shapeSource = MapShapeSource.asset("assets/world_map.json",
-        shapeDataField: "name",
-        dataCount: _data.length,
-        primaryValueMapper: (int index) => _data[index].country,
-        shapeColorValueMapper: (int index) => _data[index].density,
-        shapeColorMappers: [
-          MapColorMapper(from: 0, to: 100, color: Colors.red, text: '< 100/km'),
-          MapColorMapper(
-              from: 101, to: 200, color: Colors.green, text: '100 - 200/km'),
-          MapColorMapper(
-              from: 201, to: 300, color: Colors.blue, text: '200 - 300/km'),
-          MapColorMapper(
-              from: 301, to: 400, color: Colors.orange, text: '300 - 400/km'),
-          MapColorMapper(
-              from: 401, to: 500, color: Colors.teal, text: '400 - 500/km'),
-          MapColorMapper(
-              from: 501,
-              to: 600,
-              color: Colors.deepPurple,
-              text: '500 - 600/km'),
-        ]);
+    _shapeSource = MapShapeSource.asset("assets/world_map.json",
+           shapeDataField: "name",
+           dataCount: _data.length,
+           primaryValueMapper: (int index) => _data[index].country,
+           shapeColorValueMapper: (int index) => _data[index].density,
+           shapeColorMappers: [
+             MapColorMapper(from: 0, to: 100, color: Colors.red, text: '< 100/km'),
+             MapColorMapper(
+                 from: 101, to: 200, color: Colors.green, text: '100 - 200/km'),
+             MapColorMapper(
+                 from: 201, to: 300, color: Colors.blue, text: '200 - 300/km'),
+             MapColorMapper(
+                 from: 301,
+                 to: 600,
+                 color: Colors.deepPurple,
+                 text: '300 - 600/km'),
+    ]);
 }
 
 @override
@@ -1282,6 +1287,8 @@ Widget build(BuildContext context) {
                   source: _shapeSource,
                   legend: MapLegend.bar(
                     MapElement.shape,
+                    labelsPlacement: MapLegendLabelsPlacement.betweenItems,
+                    edgeLabelsPlacement: MapLegendEdgeLabelsPlacement.center,
                     segmentPaintingStyle: MapLegendPaintingStyle.gradient,
                   ),
                 )
@@ -1302,6 +1309,8 @@ class Model {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Bar legend gradient type](images/legend/bar-legend-gradient-type.png)
 
 ## Bar legend appearance customization
 
@@ -1335,27 +1344,23 @@ void initState() {
       Model('China', 148)
    ];
 
-   _shapeSource = MapShapeSource.asset("assets/world_map.json",
-        shapeDataField: "name",
-        dataCount: _data.length,
-        primaryValueMapper: (int index) => _data[index].country,
-        shapeColorValueMapper: (int index) => _data[index].density,
-        shapeColorMappers: [
-          MapColorMapper(from: 0, to: 100, color: Colors.red, text: '< 100/km'),
-          MapColorMapper(
-              from: 101, to: 200, color: Colors.green, text: '100 - 200/km'),
-          MapColorMapper(
-              from: 201, to: 300, color: Colors.blue, text: '200 - 300/km'),
-          MapColorMapper(
-              from: 301, to: 400, color: Colors.orange, text: '300 - 400/km'),
-          MapColorMapper(
-              from: 401, to: 500, color: Colors.teal, text: '400 - 500/km'),
-          MapColorMapper(
-              from: 501,
-              to: 600,
-              color: Colors.deepPurple,
-              text: '500 - 600/km'),
-        ]);
+    _shapeSource = MapShapeSource.asset("assets/world_map.json",
+           shapeDataField: "name",
+           dataCount: _data.length,
+           primaryValueMapper: (int index) => _data[index].country,
+           shapeColorValueMapper: (int index) => _data[index].density,
+           shapeColorMappers: [
+             MapColorMapper(from: 0, to: 100, color: Colors.red, text: '< 100/km'),
+             MapColorMapper(
+                 from: 101, to: 200, color: Colors.green, text: '100 - 200/km'),
+             MapColorMapper(
+                 from: 201, to: 300, color: Colors.blue, text: '200 - 300/km'),
+             MapColorMapper(
+                 from: 301,
+                 to: 600,
+                 color: Colors.deepPurple,
+                 text: '300 - 600/km'),
+    ]);
 }
 
 @override
@@ -1372,7 +1377,6 @@ Widget build(BuildContext context) {
                   source: _shapeSource,
                   legend: MapLegend.bar(
                     MapElement.shape,
-                    segmentSize: Size(20, 5),
                     labelsPlacement: MapLegendLabelsPlacement.betweenItems,
                     edgeLabelsPlacement: MapLegendEdgeLabelsPlacement.center,
                     segmentPaintingStyle: MapLegendPaintingStyle.gradient,
@@ -1396,3 +1400,5 @@ class Model {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Bar legend customization](images/legend/bar-legend-customization.png)
