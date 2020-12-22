@@ -521,7 +521,7 @@ Widget build(BuildContext context) {
 
 ## Tooltip
 
-You can show additional information about the circles drawn using the [`MapCircleLayer.tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircleLayer/tooltipBuilder.html) property.
+You can show additional information about the circles drawn using the [`tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapSublayer/tooltipBuilder.html) property.
 
 {% tabs %}
 {% highlight Dart %}

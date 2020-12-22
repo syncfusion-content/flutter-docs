@@ -335,7 +335,7 @@ Widget build(BuildContext context) {
 
 ## Margin
 
-You can add margin to the maps title using the `MapsTitle.margin` property.
+You can add margin to the maps title using the [`MapsTitle.margin`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTitle/margin.html) property.
 
 {% tabs %}
 {% highlight Dart %}

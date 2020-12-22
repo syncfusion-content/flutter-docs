@@ -291,6 +291,68 @@ Also refer, [marker customization](./marker-datalabel#Marker) for customizing th
 
 ![Trackball marker](images/trackball-crosshair/trackball_marker.png)
 
+### Trackball tooltip template
+
+You can customize the appearance of the trackball tooltip with your own widgets by using the [`builder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/builder.html) property of [`trackballBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior-class.html). 
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+     return Scaffold(
+       child: Center(
+         child: Container(
+            child: SfCartesianChart(
+              trackballBehavior: TrackballBehavior(
+                    enable: true,
+                    builder: (BuildContext context,
+                        TrackballDetails trackballDetails) {
+                      return Container(
+                          height: 50,
+                          width: 150,
+                          decoration: BoxDecoration(
+                            color: Color.fromRGBO(0, 8, 22, 0.75),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(6.0)),
+                          ),
+                          child: Row(children: [
+                            Padding(
+                                padding: EdgeInsets.only(left: 5),
+                                child: SizedBox(
+                                  child:
+                                      Image.asset('images/People_Circle16.png'),
+                                  height: 30,
+                                  width: 30,
+                                )),
+                            Center(
+                                child: Container(
+                                    padding: EdgeInsets.only(top: 11, left: 7),
+                                    height: 40,
+                                    width: 100,
+                                    child: Text(
+                                        '${trackballDetails.point.x.toString()} : \$${trackballDetails.point.y.toString()}',
+                                        style: TextStyle(
+                                            fontSize: 13,
+                                            color: Color.fromRGBO(
+                                                255, 255, 255, 1)))))
+                          ]));
+                    },
+                  ),
+              series: <CartesianChart<SalesData,            String>>[
+                SplineSeries<SalesData, double>(
+                    dataSource: data,
+                    xValueMapper: (SalesData sales, _) => sales.year,
+                    yValueMapper: (SalesData sales, _) => sales.sales)
+                ]
+              )
+            )
+          )
+      );
+    }
+
+{% endhighlight %}
+
+![Trackball template](images/trackball-crosshair/trackball_template.jpg)
 ## Crosshair
 
 Crosshair has a vertical and horizontal line to view the value of the axis. 
