@@ -49,8 +49,8 @@ void initState() {
   );
 
   zoomPanBehavior = MapZoomPanBehavior(
-    zoomLevel: 3,
-    focalLatLng: MapLatLng(15.3173, 76.7139),
+     zoomLevel: 2,
+     focalLatLng: MapLatLng(20.3173, 78.7139),
   );
   super.initState();
 }
@@ -115,8 +115,8 @@ void initState() {
 
   polylines = <List<MapLatLng>>[polyline];
   zoomPanBehavior = MapZoomPanBehavior(
-    zoomLevel: 3,
-    focalLatLng: MapLatLng(15.3173, 76.7139),
+    zoomLevel: 5,
+    focalLatLng: MapLatLng(20.3173, 78.7139),
   );
   super.initState();
 }
@@ -155,6 +155,8 @@ class PolylineModel {
 {% endhighlight %}
 {% endtabs %}
 
+![Default polyline shape](../images/polyline-layer/default-polyline-shape.png)
+
 ## Color
 
 You can apply the same color for all [`MapPolyline`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolyline-class.html) in the [`polylines`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolylineLayer/polylines.html) collection using the [`MapPolylineLayer.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolylineLayer/color.html) property. Alternatively, you can apply different colors to each [`MapPolyline`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolyline-class.html) in the [`polylines`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolylineLayer/polylines.html) collection using the individual [`MapPolyline.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolyline/color.html) property.
@@ -191,8 +193,8 @@ void initState() {
   );
 
   zoomPanBehavior = MapZoomPanBehavior(
-    zoomLevel: 3,
-    focalLatLng: MapLatLng(15.3173, 76.7139),
+    zoomLevel: 1,
+    focalLatLng: MapLatLng(20.3173, 78.7139),
   );
   super.initState();
 }
@@ -233,6 +235,8 @@ class PolylineModel {
 {% endhighlight %}
 {% endtabs %}
 
+![Polyline color](../images/polyline-layer/polyline-color.png)
+
 ## Width
 
 You can apply the same width for all [`MapPolyline`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolyline-class.html) in the [`polylines`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolylineLayer/polylines.html) collection using the [`MapPolylineLayer.width`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolylineLayer/width.html) property. Alternatively, you can apply different width to each [`MapPolyline`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolyline-class.html) in the [`polylines`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolylineLayer/polylines.html) collection using the individual [`MapPolyline.width`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolyline/width.html) property. The default value of the [`MapPolylineLayer.width`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolylineLayer/width.html) property is `2`.
@@ -269,8 +273,8 @@ void initState() {
   );
 
   zoomPanBehavior = MapZoomPanBehavior(
-    zoomLevel: 3,
-    focalLatLng: MapLatLng(15.3173, 76.7139),
+    zoomLevel: 2,
+    focalLatLng: MapLatLng(20.3173, 78.7139),
   );
   super.initState();
 }
@@ -311,6 +315,8 @@ class PolylineModel {
 {% endhighlight %}
 {% endtabs %}
 
+![Polyline width](../images/polyline-layer/polyline-width.png)
+
 ## Dash array
 
 You can apply dash for the polyline using the [`MapPolyline.dashArray`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolyline/dashArray.html) property.
@@ -349,8 +355,8 @@ void initState() {
   );
 
   zoomPanBehavior = MapZoomPanBehavior(
-    zoomLevel: 3,
-    focalLatLng: MapLatLng(15.3173, 76.7139),
+    zoomLevel: 2,
+    focalLatLng: MapLatLng(18.3173, 77.7139),
   );
   super.initState();
 }
@@ -373,6 +379,7 @@ Widget build(BuildContext context) {
                   );
                 },
               ).toSet(),
+              color: Colors.blue,
             ),
           ],
           zoomPanBehavior: zoomPanBehavior,
@@ -390,7 +397,7 @@ class PolylineModel {
 {% endhighlight %}
 {% endtabs %}
 
-![Line shape dash array](images/line-layer/line_shape_dash_array.png)
+![Polyline dash array](../images/polyline-layer/polyline-dash-array.png)
 
 ## Animation
 
@@ -432,8 +439,8 @@ void initState() {
   );
 
   zoomPanBehavior = MapZoomPanBehavior(
-    zoomLevel: 3,
-    focalLatLng: MapLatLng(15.3173, 76.7139),
+     zoomLevel: 2,
+     focalLatLng: MapLatLng(19.3173, 76.7139),
   );
 
   animationController = AnimationController(
@@ -468,10 +475,10 @@ Widget build(BuildContext context) {
                 (int index) {
                   return MapPolyline(
                     points: polylines[index].points,
-                    dashArray: [8, 4, 2, 4],
                   );
                 },
               ).toSet(),
+              color: Colors.blue,
               animation: animation,
             ),
           ],
@@ -489,6 +496,8 @@ class PolylineModel {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Polyline animation](../images/polyline-layer/polyline-animation.gif)
 
 ## Tap
 
@@ -527,8 +536,8 @@ void initState() {
   );
 
   zoomPanBehavior = MapZoomPanBehavior(
-    zoomLevel: 3,
-    focalLatLng: MapLatLng(15.3173, 76.7139),
+    zoomLevel: 2,
+    focalLatLng: MapLatLng(19.3173, 76.7139),
   );
   super.initState();
 }
@@ -573,6 +582,8 @@ class PolylineModel {
 {% endhighlight %}
 {% endtabs %}
 
+![Polyline tap support](../images/polyline-layer/polyline-tap-support.gif)
+
 ## Tooltip
 
 You can show additional information about the polyline drawn using the [`MapPolylineLayer.tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolylineLayer/tooltipBuilder.html) property.
@@ -610,14 +621,17 @@ void initState() {
   );
 
   zoomPanBehavior = MapZoomPanBehavior(
-    zoomLevel: 3,
-    focalLatLng: MapLatLng(15.3173, 76.7139),
+    zoomLevel: 2,
+    focalLatLng: MapLatLng(19.3173, 76.7139),
   );
   super.initState();
 }
 
 @override
 Widget build(BuildContext context) {
+  final ThemeData themeData = Theme.of(context);
+  final TextStyle textStyle = themeData.textTheme.caption
+        .copyWith(color: themeData.colorScheme.surface);
   return Scaffold(
     body: SfMaps(
       layers: [
@@ -640,20 +654,19 @@ Widget build(BuildContext context) {
                        height: 50,
                        child: Column(
                           children: [
-                            Row(
-                              children: [
-                                Text('Order item :  ',
-                                   style: TextStyle(fontWeight: FontWeight.bold)),
-                                Text('Pizza'),
-                              ],
-                            ),
-                            Row(
-                               children: [
-                                  Text('Time left    :  ',
-                                      style: TextStyle(fontWeight: FontWeight.bold)),
-                                  Text(random.nextInt(30).toString() + ' mins'),
-                               ],
-                            ),
+                              Row(
+                                children: [
+                                   Text('Order item  :  ', style: textStyle),
+                                   Text('Pizza', style: textStyle),
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                   Text('Time left    :  ', style: textStyle),
+                                   Text(random.nextInt(30).toString() + ' mins',
+                                       style: textStyle),
+                                ],
+                             ),
                           ],
                        ),
                     );
@@ -674,6 +687,8 @@ class PolylineModel {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Polyline tooltip support](../images/polyline-layer/polyline-tooltip.png)
 
 ## Tooltip customization
 
@@ -785,3 +800,5 @@ class PolylineModel {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Polyline tooltip customization](../images/polyline-layer/polyline-tooltip- customization.png)
