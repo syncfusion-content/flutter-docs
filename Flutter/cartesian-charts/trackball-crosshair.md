@@ -293,7 +293,7 @@ Also refer, [marker customization](./marker-datalabel#Marker) for customizing th
 
 ### Trackball tooltip template
 
-You can customize the appearance of trackball tooltip items with your template by using [`builder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/builder.html) property of [`trackballBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior-class.html). Here you can specify the content that needs to be displayed in the trackball tooltip.
+You can customize the appearance of the trackball tooltip with your own widgets by using the [`builder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/builder.html) property of [`trackballBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior-class.html). Here you can specify the content that needs to be displayed in the trackball tooltip.
 
 {% highlight dart %} 
 
@@ -352,7 +352,7 @@ You can customize the appearance of trackball tooltip items with your template b
 
 {% endhighlight %}
 
-![trackball template](images/trackball-crosshair/trackball_template.jpg)
+![Trackball template](images/trackball-crosshair/trackball_template.jpg)
 ## Crosshair
 
 Crosshair has a vertical and horizontal line to view the value of the axis. 
