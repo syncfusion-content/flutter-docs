@@ -477,7 +477,7 @@ class DataModel {
 
 ## Tooltip
 
-You can show additional information about the line drawn using the [`MapLineLayer.tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLineLayer/tooltipBuilder.html) property.
+You can show additional information about the line drawn using the [`tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapSublayer/tooltipBuilder.html) property.
 
 {% tabs %}
 {% highlight Dart %}

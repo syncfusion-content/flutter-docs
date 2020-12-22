@@ -383,7 +383,7 @@ class PolygonModel {
 
 ## Tooltip
 
-You can show additional information about the polygon drawn using the [`MapPolygonLayer.tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygonLayer/tooltipBuilder.html) property.
+You can show additional information about the polygon drawn using the [`tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapSublayer/tooltipBuilder.html) property.
 
 {% tabs %}
 {% highlight Dart %}

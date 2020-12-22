@@ -695,7 +695,7 @@ class DataModel {
 
 ## Tooltip
 
-You can show additional information about an arc drawn using the [`MapArcLayer.tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArcLayer/tooltipBuilder.html) property.
+You can show additional information about an arc drawn using the [`tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapSublayer/tooltipBuilder.html) property.
 
 {% tabs %}
 {% highlight Dart %}
