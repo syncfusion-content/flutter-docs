@@ -319,7 +319,7 @@ class PolylineModel {
 
 ## Dash array
 
-You can apply dash for the polyline using the [`MapPolyline.dashArray`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolyline/dashArray.html) property.
+You can apply dash support for the polyline using the [`MapPolyline.dashArray`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolyline/dashArray.html) property.
 
 A sequence of dash and gap will be rendered based on the values in this list. Once all values of the list is rendered, it will be repeated again till the end of the polyline.
 
@@ -586,7 +586,7 @@ class PolylineModel {
 
 ## Tooltip
 
-You can show additional information about the polyline drawn using the [`MapPolylineLayer.tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolylineLayer/tooltipBuilder.html) property.
+You can show additional information about the polyline drawn using the [`tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapSublayer/tooltipBuilder.html) property.
 
 {% tabs %}
 {% highlight Dart %}
