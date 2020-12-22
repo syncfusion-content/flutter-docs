@@ -136,7 +136,7 @@ Widget build(BuildContext context) {
 
 <b>From memory</b>
 
-Load .json data as bytes from [`Uint8List`].
+Load .json data as bytes from `Uint8List`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -243,7 +243,7 @@ N>
 * Refer the [`MapShapeSource.bubbleSizeMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/bubbleSizeMapper.html), for customizing the bubble size.
 * Refer the [`MapShapeSource.bubbleColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/bubbleColorValueMapper.html), for customizing the bubble colors.
 * Refer the [`MapShapeSource.dataLabelMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/dataLabelMapper.html), for customizing the data label text.
-* Refer the [`MapShapeSource.shapeColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeColorValueMapper.html), for customizing the bubble colors.
+* Refer the [`MapShapeSource.shapeColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeColorValueMapper.html), for customizing the shape colors.
 
 ## Add shape layer maps elements
 
@@ -293,40 +293,39 @@ void initState() {
 
 @override
 Widget build(BuildContext context) {
+  final ThemeData themeData = Theme.of(context);
   return Scaffold(
-    body: Center(
-      child: Container(
-        height: 520,
-        child: Padding(
-          padding: EdgeInsets.all(15),
-          child: SfMaps(
-            title: const MapTitle('Australia map'),
-            layers: <MapShapeLayer>[
-              MapShapeLayer(
-                source: dataSource,
-                showDataLabels: true,
-                legend: MapLegend(MapElement.shape),
-                shapeTooltipBuilder: (BuildContext context, int index) {
-                  return Padding(
-                    padding: EdgeInsets.all(10),
-                    child: Text(data[index].stateCode),
-                  );
-                },
-                tooltipSettings: MapTooltipSettings(
-                    color: Colors.grey[700],
-                    strokeColor: Colors.white,
-                    strokeWidth: 2),
-                strokeColor: Colors.white,
-                strokeWidth: 0.5,
-                dataLabelSettings: MapDataLabelSettings(
-                    textStyle: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                        fontSize:
-                            Theme.of(context).textTheme.caption.fontSize)),
-              ),
-            ],
-          ),
+    body: Container(
+      height: 520,
+      child: Center(
+        child: SfMaps(
+          title: const MapTitle('Australia map'),
+          layers: <MapShapeLayer>[
+            MapShapeLayer(
+              source: dataSource,
+              showDataLabels: true,
+              legend: MapLegend(MapElement.shape),
+              shapeTooltipBuilder: (BuildContext context, int index) {
+                return Padding(
+                  padding: const EdgeInsets.all(7),
+                  child: Text(data[index].stateCode,
+                      style: themeData.textTheme.caption
+                          .copyWith(color: themeData.colorScheme.surface)),
+                );
+              },
+              tooltipSettings: MapTooltipSettings(
+                  color: Colors.grey[700],
+                  strokeColor: Colors.white,
+                  strokeWidth: 2),
+              strokeColor: Colors.white,
+              strokeWidth: 0.5,
+              dataLabelSettings: MapDataLabelSettings(
+                  textStyle: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: themeData.textTheme.caption.fontSize)),
+            ),
+          ],
         ),
       ),
     ),
