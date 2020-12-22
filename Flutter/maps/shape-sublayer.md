@@ -27,7 +27,7 @@ void initState() {
   super.initState();
 
   _sublayerSource = MapShapeSource.asset(
-      'assets/australia.json',
+      'assets/africa.json',
       shapeDataField: 'name',
   );
 }
@@ -55,6 +55,8 @@ return Scaffold(
 
 {% endhighlight %}
 {% endtabs %}
+
+![Tile sublayer support](images/shape-sublayer/tile-sublayer.png)
 
 N>
 * Refer the [`MapTileLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html), for adding tile layer in [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html).
@@ -108,6 +110,8 @@ return Scaffold(
 
 {% endhighlight %}
 {% endtabs %}
+
+![Shape sublayer support](images/shape-sublayer/shape-sublayer.png)
 
 N>
 * Refer the [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html), for adding shape layer in [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html).

@@ -560,6 +560,9 @@ void initState() {
 
 @override
 Widget build(BuildContext context) {
+   final ThemeData themeData = Theme.of(context);
+   final TextStyle textStyle = themeData.textTheme.caption
+        .copyWith(color: themeData.colorScheme.surface);
    return Scaffold(
       body: SfMaps(
         layers: [
@@ -582,26 +585,19 @@ Widget build(BuildContext context) {
                          child: Column(
                              mainAxisSize: MainAxisSize.min,
                              children: [
-                               Row(
-                                 mainAxisSize: MainAxisSize.min,
-                                 children: [
-                                   Text('Disease name  :',
-                                      style: TextStyle(
-                                       color: Colors.black,
-                                        fontWeight: FontWeight.bold)),
-                                   Text('  ' + 'Corona',
-                                        style: TextStyle(color: Colors.black)),
-                                 ],
-                               ),
-                               Row(
+                                Row(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
-                                     Text('Active cases    :',
-                                          style: TextStyle(
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.bold)),
-                                     Text('  ' + random.nextInt(62342).toString(),
-                                          style: TextStyle(color: Colors.black)),
+                                     Text('Disease name  :', style: textStyle),
+                                     Text('  ' + 'Corona', style: textStyle),
+                                  ],
+                                ),
+                                Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    Text('Active cases    :', style: textStyle),
+                                    Text('  ' + random.nextInt(62342).toString(),
+                                         style: textStyle),
                                   ],
                                ),
                          ],
