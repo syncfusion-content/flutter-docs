@@ -507,3 +507,19 @@ Widget build(BuildContext context) {
 ## See also
 
 [Time label customization in the flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/11008/how-to-customize-the-time-label-in-the-flutter-event-calendar-sfcalendar)
+
+[How to customize the timeline appointment height in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12147/how-to-customize-the-timeline-appointment-height-in-the-flutter-event-calendar-sfcalendar)
+
+[How to format the date and time in timeline views in the Flutter event calendar (SfCalendar)?](https://www.syncfusion.com/kb/11997/how-to-format-the-date-and-time-in-timeline-views-in-the-flutter-event-calendar-sfcalendar)
+
+[How to use multiple recurrence rule (RRule) in special region using Flutter event calendar (SfCalendar)?](https://www.syncfusion.com/kb/11730/how-to-use-multiple-recurrence-rule-rrule-in-special-region-using-flutter-event-calendar)
+
+[How to add a special region dynamically using onTap, onViewChanged callbacks of the Fluttter event calendar (SfCalendar)?](https://www.syncfusion.com/kb/11729/how-to-add-a-special-region-dynamically-using-ontap-onviewchanged-callbacks-of-the-fluttter)
+
+[How to highlight the weekends in Flutter event calendar (SfCalendar)?](https://www.syncfusion.com/kb/11712/how-to-highlight-the-weekends-in-flutter-event-calendar-sfcalendar)
+
+[How to highlight the working and non-working hours in the Flutter event calendar (SfCalendar)?](https://www.syncfusion.com/kb/11711/how-to-highlight-the-working-and-non-working-hours-in-the-flutter-event-calendar-sfcalendar)
+
+[How to highlight the lunch hours in the Flutter event calendar (SfCalendar)?](https://www.syncfusion.com/kb/11710/how-to-highlight-the-lunch-hours-in-the-flutter-event-calendar-sfcalendar)
+
+[How to customize the special time region using custom builder in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12192/how-to-customize-the-special-time-region-using-custom-builder-in-the-flutter-event-calendar)
