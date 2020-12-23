@@ -540,7 +540,7 @@ Widget build(BuildContext context) {
                     child: Text('Update marker'),
                     onPressed: () {
                       List<int> updateList = <int>[1, 2];
-                      markerWidget = Icon(Icons.airplanemode_active);
+                      markerWidget = Icon(Icons.people);
                       controller.updateMarkers(updateList);
                     },
                   ),
