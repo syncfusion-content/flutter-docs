@@ -189,8 +189,6 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Update focalLatLng programmatically](images/zoom-pan/dynamic_focalLatLng.gif)
-
 ## Customizing the zoom level
 
 You can set the current zoom level of the map layer by using [`MapZoomPanBehavior.zoomLevel`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/zoomLevel.html) property.
@@ -294,8 +292,6 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
-
-![Update zoom level programmatically](images/zoom-pan/dynamic_zoom_level.gif)
 
 ## Customizing min and max zoom level
 
