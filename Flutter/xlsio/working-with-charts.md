@@ -18,11 +18,11 @@ Add the Syncfusion Flutter OfficeChart dependency to your pub spec file.
 {% highlight dart %}
 
 dependencies: 
-syncfusion_flutter_officechart: ^xx.x.xx
+ syncfusion_officechart: ^xx.x.xx
 
 {% endhighlight %}
 
-N> Here **xx.x.xx** denotes the current version of ['Syncfusion Flutter OfficeChart'](https://pub.dev/packages/syncfusion_flutter_xlsio/versions) package.
+N> Here **xx.x.xx** denotes the current version of ['Syncfusion Flutter OfficeChart'](https://pub.dev/packages/syncfusion_officechart/versions) package.
 
 **Get packages**
 
