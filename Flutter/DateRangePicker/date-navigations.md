@@ -377,3 +377,15 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Navigation arrow in Date Range Picker](images/date-navigations/navigationarrow.png)
+
+## See also
+
+[How to change the navigation direction in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12176/how-to-change-the-navigation-direction-in-the-flutter-date-range-picker-sfdaterangepicker)
+
+[How to do programmatic navigation using Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12140/how-to-do-programmatic-navigation-using-flutter-date-range-picker-sfdaterangepicker)
+
+[How to programmatically navigate to the adjacent dates in the Flutter date range picker (SfDateRangePicker)?](https://www.syncfusion.com/kb/12137/how-to-programmatically-navigate-to-the-adjacent-dates-in-the-flutter-date-range-picker)
+
+[How to programmatically navigate to the date in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12135/how-to-programmatically-navigate-to-the-date-in-the-flutter-date-range-picker)
+
+[How to programmatically select the date in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12114/how-to-programmatically-select-the-date-in-the-flutter-date-range-picker-sfdaterangepicker)
