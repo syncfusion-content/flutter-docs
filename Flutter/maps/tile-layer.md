@@ -22,6 +22,10 @@ The [`urlTemplate`](https://pub.dev/documentation/syncfusion_flutter_maps/latest
 
 Some of the providers may need subscription key. Please include them in the [`urlTemplate`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer/urlTemplate.html) itself as mentioned in the above example. Please note that the format may vary between each map providers. You can check the exact URL format needed for the providers on their official websites.
 
+### For OSM maps
+
+The url format of the OSM map provider as shown in the below code snippet.
+
 {% tabs %}
 {% highlight Dart %}
 
@@ -41,7 +45,7 @@ Widget build(BuildContext context) {
 
 ![OSM default view](images/tile-layer/osm_maps_default.png)
 
-**For Bing maps**
+### For Bing maps
 
 An additional step is required for the Bing maps. The format of the required URL varies from the other tile services. Hence, we have added a top-level [`getBingUrlTemplate`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/getBingUrlTemplate.html) method which returns the URL in the required format. You can use the URL returned from this method to pass it to the [`urlTemplate`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer/urlTemplate.html) property.
 
@@ -74,6 +78,8 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Bing maps default view](images/tile-layer/bing_maps_default.png)
+
+N> For other map providers, you can check respective official websites and provide the url in the above mentioned formats.
 
 ## Changing the center latitude and longitude
 
