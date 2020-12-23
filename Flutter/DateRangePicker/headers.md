@@ -109,7 +109,7 @@ Widget build(BuildContext context) {
 ![View Header appearance Date Range Picker](images/headers/viewheaderappearance.png)
 
 ### View header day format
-You can customize the view header of `DateRangePicker` by using the dayFormat[https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/dayFormat.html] property of DateRangePickerMonthViewSettings[https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings-class.html].
+You can customize the view header of `DateRangePicker` by using the [dayFormat](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings/dayFormat.html) property of [DateRangePickerMonthViewSettings](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerMonthViewSettings-class.html).
 
 {% tabs %}
 {% highlight Dart %}
@@ -127,3 +127,9 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![View Header format Date Range Picker](images/headers/viewheaderformat.png)
+
+## See also
+
+[How to replace the view header with the custom widget in Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12098/how-to-replace-the-view-header-with-the-custom-widget-in-flutter-date-range-picker)
+
+[How to restrict the year view navigation while tapping header of the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12113/how-to-restrict-the-year-view-navigation-while-tapping-header-of-the-flutter-date-range)
