@@ -93,7 +93,7 @@ Widget build(BuildContext context) {
         ],
         onQueryCellStyle: (QueryCellStyleArgs args) {
           if (args.column.mappingName == 'id') {
-            if (args.rowIndex % 2 == 0) {
+            if (args.rowIndex % 2 != 0) {
               return DataGridCellStyle(
                   textStyle: TextStyle(fontStyle: FontStyle.italic),
                   backgroundColor: Colors.blueAccent);
@@ -134,7 +134,7 @@ Widget build(BuildContext context) {
           GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
         ],
         onQueryRowStyle: (QueryRowStyleArgs args) {
-          Employee employee = _employeeCollection[args.rowIndex - 1];
+          Employee employee = _employeeCollection[args.rowIndex];
           if (employee.salary >= 10000 && employee.salary < 15000) {
             return DataGridCellStyle(
                 textStyle: TextStyle(color: Colors.white),
@@ -176,7 +176,7 @@ Widget build(BuildContext context) {
           GridTextColumn(mappingName: 'designation', headerText: 'Designation')
         ],
         onQueryRowStyle: (QueryRowStyleArgs args) {
-          if (args.rowIndex % 2 == 0) {
+          if (args.rowIndex % 2 != 0) {
             return DataGridCellStyle(backgroundColor: Colors.lightGreen[300]);
           }
           return null;
