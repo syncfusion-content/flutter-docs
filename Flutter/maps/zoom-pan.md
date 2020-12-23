@@ -252,7 +252,6 @@ MapShapeSource _dataSource;
 
 @override
 void initState() {
-  super.initState();
   _dataSource = MapShapeSource.asset(
      'assets/world_map.json',
      shapeDataField: 'continent',
@@ -261,6 +260,7 @@ void initState() {
      focalLatLng: MapLatLng(27.1751, 78.0421),
      zoomLevel: 2,
   );
+  super.initState();
 }
 
 @override
