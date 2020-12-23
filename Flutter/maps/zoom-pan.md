@@ -151,6 +151,7 @@ void initState() {
      'assets/world_map.json',
       shapeDataField: 'continent',
   );
+  
   _zoomPanBehavior = MapZoomPanBehavior(
     focalLatLng: MapLatLng(27.1751, 78.0421),
     zoomLevel: 4,
