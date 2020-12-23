@@ -168,7 +168,6 @@ void initState() {
   data = <DataModel>[
     DataModel(MapLatLng(28.6139, 77.2090), MapLatLng(39.9042, 116.4074)),
     DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(31.2304, 121.4737)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(23.1291, 113.2644)),
     DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694)),
     DataModel(MapLatLng(19.0760, 72.8777), MapLatLng(22.3193, 114.1694)),
     DataModel(MapLatLng(22.3193, 114.1694), MapLatLng(13.0827, 80.2707)),
@@ -243,10 +242,9 @@ void initState() {
   data = <DataModel>[
     DataModel(MapLatLng(28.6139, 77.2090), MapLatLng(39.9042, 116.4074)),
     DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(31.2304, 121.4737)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(23.1291, 113.2644)),
     DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694)),
     DataModel(MapLatLng(19.0760, 72.8777), MapLatLng(22.3193, 114.1694)),
-    DataModel(MapLatLng(22.3193, 114.1694), MapLatLng(13.0827, 80.2707)),
+    DataModel(MapLatLng(13.0827, 80.2707), MapLatLng(22.3193, 114.1694)),
   ];
 
   dataSource = MapShapeSource.asset(
@@ -316,8 +314,7 @@ void initState() {
  data = <DataModel>[
    DataModel(MapLatLng(28.6139, 77.2090), MapLatLng(39.9042, 116.4074), Colors.redAccent),
    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(31.2304, 121.4737), Colors.purpleAccent),
-   DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(23.1291, 113.2644), Colors.deepOrangeAccent),
-   DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694), Colors.deepOrangeAccent),
+   DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694), Colors.deepPurple),
    DataModel(MapLatLng(19.0760, 72.8777), MapLatLng(22.3193, 114.1694), Colors.blueAccent),
    DataModel(MapLatLng(22.3193, 114.1694), MapLatLng(13.0827, 80.2707), Colors.teal),
  ];
@@ -466,7 +463,6 @@ void initState() {
   data = <DataModel>[
     DataModel(MapLatLng(28.6139, 77.2090), MapLatLng(39.9042, 116.4074)),
     DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(31.2304, 121.4737)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(23.1291, 113.2644)),
     DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694)),
     DataModel(MapLatLng(19.0760, 72.8777), MapLatLng(22.3193, 114.1694)),
     DataModel(MapLatLng(22.3193, 114.1694), MapLatLng(13.0827, 80.2707)),
@@ -699,7 +695,7 @@ class DataModel {
 
 ## Tooltip
 
-You can show additional information about an arc drawn using the [`MapArcLayer.tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArcLayer/tooltipBuilder.html) property.
+You can show additional information about an arc drawn using the [`tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapSublayer/tooltipBuilder.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -712,12 +708,11 @@ Random random = Random();
 @override
 void initState() {
   data = <DataModel>[
-    DataModel(MapLatLng(28.6139, 77.2090), MapLatLng(39.9042, 116.4074)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(31.2304, 121.4737)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(23.1291, 113.2644)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694)),
-    DataModel(MapLatLng(19.0760, 72.8777), MapLatLng(22.3193, 114.1694)),
-    DataModel(MapLatLng(22.3193, 114.1694), MapLatLng(13.0827, 80.2707)),
+     DataModel(MapLatLng(28.6139, 77.2090), MapLatLng(39.9042, 116.4074)),
+     DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(31.2304, 121.4737)),
+     DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694)),
+     DataModel(MapLatLng(19.0760, 72.8777), MapLatLng(22.3193, 114.1694)),
+     DataModel(MapLatLng(22.3193, 114.1694), MapLatLng(13.0827, 80.2707)),
   ];
 
   dataSource = MapShapeSource.asset(
@@ -733,6 +728,9 @@ void initState() {
 
 @override
 Widget build(BuildContext context) {
+ final ThemeData themeData = Theme.of(context);
+    final TextStyle textStyle = themeData.textTheme.caption
+        .copyWith(color: themeData.colorScheme.surface);
   return Scaffold(
     body: SfMaps(
       layers: [
@@ -758,14 +756,14 @@ Widget build(BuildContext context) {
                        children: [
                           Row(
                             children: [
-                               Text('Flight   : '),
-                               Text('Air India'),
+                               Text('Flight   : ', style: textStyle),
+                               Text('Air India', style: textStyle),
                             ],
                           ),
                           Row(
                              children: [
-                                Text('Depart : '),
-                                Text(random.nextInt(12).toString() + 'AM'),
+                                Text('Depart : ', style: textStyle),
+                                Text(random.nextInt(12).toString() + 'AM', style: textStyle),
                              ],
                           ),
                        ],
@@ -814,7 +812,6 @@ void initState() {
   data = <DataModel>[
     DataModel(MapLatLng(28.6139, 77.2090), MapLatLng(39.9042, 116.4074)),
     DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(31.2304, 121.4737)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(23.1291, 113.2644)),
     DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694)),
     DataModel(MapLatLng(19.0760, 72.8777), MapLatLng(22.3193, 114.1694)),
     DataModel(MapLatLng(22.3193, 114.1694), MapLatLng(13.0827, 80.2707)),
