@@ -782,8 +782,8 @@ You can customize the displaying time format in the appointment widget in the mo
 
 [How to add recurring appointments until the specified date in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12158/how-to-add-recurring-appointments-until-the-specified-date-in-the-flutter-event-calendar)
 
-[How to add the appointments to the Firebase database using appointment editor in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12110/how-to-add-the-appointments-to-the-firebase-database-using-appointment-editor-in-the)
+[How to add the appointments to the Fire base database using appointment editor in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12110/how-to-add-the-appointments-to-the-firebase-database-using-appointment-editor-in-the)
 
-[How to work with the Firebase database and the Flutter event calendar (SfCalendar) for appointments](https://www.syncfusion.com/kb/12067/how-to-work-with-the-firebase-database-and-the-flutter-event-calendar-sfcalendar-for)
+[How to work with the Fire base database and the Flutter event calendar (SfCalendar) for appointments](https://www.syncfusion.com/kb/12067/how-to-work-with-the-firebase-database-and-the-flutter-event-calendar-sfcalendar-for)
 
 [How to add google calendar events to the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12116/how-to-add-google-calendar-events-to-the-flutter-event-calendar-sfcalendar)
