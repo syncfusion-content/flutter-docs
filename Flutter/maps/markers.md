@@ -319,6 +319,8 @@ Marker will be inserted at the given index if the index value is less than or eq
 
 N> You can get the current markers count from [`MapShapeLayerController.markersCount`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerController/markersCount.html).
 
+### For shape layer
+
 {% tabs %}
 {% highlight Dart %}
 
@@ -398,13 +400,87 @@ class Model {
 {% endhighlight %}
 {% endtabs %}
 
+### For Tile layer
+
+List<Model> data;
+MapTileLayerController controller;
+Random random = Random();
+
+@override
+void initState() {
+    data = <Model>[
+      Model(-14.235004, -51.92528),
+      Model(51.16569, 10.451526),
+      Model(-25.274398, 133.775136),
+      Model(20.593684, 78.96288),
+      Model(61.52401, 105.318756)
+    ];
+    controller = MapTileLayerController();
+    super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+          child: Container(
+            height: 350,
+            child: Padding(
+              padding: EdgeInsets.only(left: 15, right: 15),
+              child: Column(
+                children: [
+                  SfMaps(
+                    layers: <MapLayer>[
+                      MapTileLayer(
+                        urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                        initialMarkersCount: 5,
+                        markerBuilder: (BuildContext context, int index){
+                          return MapMarker(
+                            latitude: data[index].latitude,
+                            longitude: data[index].longitude,
+                            child: Icon(Icons.add_location),
+                          );
+                        },
+                        controller: controller,
+                      ),
+                    ],
+                  ),
+                  RaisedButton(
+                    child: Text('Add marker'),
+                    onPressed: () {
+                      data.add(Model(
+                          -180 + random.nextInt(360).toDouble(),
+                          -55 + random.nextInt(139).toDouble()));
+                      controller.insertMarker(5);
+                    },
+                  ),
+                ],
+              ),
+            ),
+          )
+      ),
+   );
+}
+
+class Model {
+  Model(this.latitude, this.longitude);
+
+  final double latitude;
+  final double longitude;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ![Add markers dynamically](images/markers/add-markers.gif)
 
 ## Updating the existing markers
 
 You can update multiple markers at a same time by passing indices to the [`updateMarkers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayerController/updateMarkers.html) method in the [`MapShapeLayerController`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerController-class.html). The [`markerBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayer/markerBuilder.html) will be called again for the respective indices once [`updateMarkers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayerController/updateMarkers.html) method is called.
 
-N> You can get the current markers count from [`MapShapeLayerController.markersCount`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerController/markersCount.html).
+N>
+* You can get the current markers count from [`MapShapeLayerController.markersCount`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerController/markersCount.html).
+* You can refer this [`snippet`](https://help.syncfusion.com/flutter/maps/markers#for-tile-layer) to update the markers dynamically for tile layer.
 
 {% tabs %}
 {% highlight Dart %}
@@ -492,7 +568,9 @@ class Model {
 
 You can remove marker at any index using the [`removeMarkerAt`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayerController/removeMarkerAt.html) method.
 
-N> You can get the current markers count from [`MapShapeLayerController.markersCount`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerController/markersCount.html).
+N>
+* You can get the current markers count from [`MapShapeLayerController.markersCount`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerController/markersCount.html).
+* You can refer this [`snippet`](https://help.syncfusion.com/flutter/maps/markers#for-tile-layer) to update the markers dynamically for tile layer.
 
 {% tabs %}
 {% highlight Dart %}
@@ -575,7 +653,9 @@ class Model {
 
 You can clear all markers using the [`clearMarkers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayerController/clearMarkers.html) method.
 
-N> You can get the current markers count from [`MapShapeLayerController.markersCount`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerController/markersCount.html).
+N>
+* You can get the current markers count from [`MapShapeLayerController.markersCount`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerController/markersCount.html).
+* You can refer this [`snippet`](https://help.syncfusion.com/flutter/maps/markers#for-tile-layer) to update the markers dynamically for tile layer.
 
 {% tabs %}
 {% highlight Dart %}
