@@ -134,7 +134,7 @@ Widget build(BuildContext context) {
 
 ## Update the center latitude and longitude programmatically
 
-You can change the center latitude and longitude of the map programmatically using the [`MapZoomPanBehavior.focalLatLng`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/focalLatLng.html) property.
+You can change the center latitude and longitude of the shape layer programmatically using the [`MapZoomPanBehavior.focalLatLng`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/focalLatLng.html) property.
 
 N> It is applicable for both shape layer and tile layer.
 
@@ -151,7 +151,7 @@ void initState() {
      'assets/world_map.json',
       shapeDataField: 'continent',
   );
-  
+
   _zoomPanBehavior = MapZoomPanBehavior(
     focalLatLng: MapLatLng(27.1751, 78.0421),
     zoomLevel: 4,
@@ -241,7 +241,7 @@ Widget build(BuildContext context) {
 
 ## Update the zoom level programmatically
 
-You can change the zoom level of the map programmatically using the [`MapZoomPanBehavior.zoomLevel`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/zoomLevel.html) property.
+You can change the zoom level of the shape layer programmatically using the [`MapZoomPanBehavior.zoomLevel`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/zoomLevel.html) property.
 
 N> It is applicable for both shape layer and tile layer.
 
