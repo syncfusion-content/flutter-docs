@@ -142,3 +142,7 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
   ![Date selection Date Range Picker](images/getting-started/range-selection.png)
+  
+## See also
+
+[How to apply theming in Flutter date range picker (SfDateRangePicker)?](https://www.syncfusion.com/kb/11898/how-to-apply-theming-in-flutter-date-range-picker-sfdaterangepicker)

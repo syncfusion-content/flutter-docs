@@ -387,3 +387,15 @@ Widget build(BuildContext context) {
 [How to customize the agenda item height in the flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/11015/how-to-customize-the-agenda-item-height-in-the-flutter-event-calendar-sfcalendar)
 
 [How to customize agenda view height based on the Flutter event calendar widget height](https://www.syncfusion.com/kb/11013/how-to-customize-agenda-view-height-based-on-the-flutter-event-calendar-widget-height)
+
+[How to change the number of weeks in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12157/how-to-change-the-number-of-weeks-in-the-flutter-event-calendar-sfcalendar)
+
+[How to display two month view Calendar in a screen using Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12091/how-to-display-two-month-view-calendar-in-a-screen-using-flutter-event-calendar-sfcalendar)
+
+[How to style the month cell in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12090/how-to-style-the-month-cell-in-the-flutter-event-calendar-sfcalendar)
+
+[How to clear the appointments in month agenda view using onViewChange callback in Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12089/how-to-clear-the-appointments-in-month-agenda-view-using-onviewchange-callback-in-flutter)
+
+[How to customize the leading and trailing dates of the month cells in the Flutter event calendar (SfCalendar)?](https://www.syncfusion.com/kb/11988/how-to-customize-the-leading-and-trailing-dates-of-the-month-cells-in-the-flutter-event)
+
+[How to customize the month cells of the Flutter event calendar (SfCalendar)?](https://www.syncfusion.com/kb/12016/how-to-customize-the-month-cells-of-the-flutter-event-calendar-sfcalendar)
