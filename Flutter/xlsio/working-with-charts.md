@@ -42,7 +42,7 @@ Import the following package in your Dart code to add charts
 
 {% highlight dart %}
 
-import 'package:syncfusion_flutter_officechart/officechart.dart';
+import 'package:syncfusion_officechart/officechart';
 
 {% endhighlight %}
 
