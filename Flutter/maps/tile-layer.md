@@ -22,8 +22,6 @@ The [`urlTemplate`](https://pub.dev/documentation/syncfusion_flutter_maps/latest
 
 Some of the providers may need subscription key. Please include them in the [`urlTemplate`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer/urlTemplate.html) itself as mentioned in the above example. Please note that the format may vary between each map providers. You can check the exact URL format needed for the providers on their official websites.
 
-N> Our tile layer is not limited or specific to any of the tile providers mentioned above. It supports requesting tiles from any of the tile providers using the unique URL for respective tile providers and renders them.
-
 ## Adding OSM/OpenStreetMap
 
 The OpenStreetMap is one of the tile/image providers which can be used free of cost. It returns map tiles for the requested coordinates for every requests. The url format of the OSM map provider as shown in the below code snippet.
@@ -84,6 +82,8 @@ Widget build(BuildContext context) {
 ![Bing maps default view](images/tile-layer/bing_maps_default.png)
 
 ## Other map tile providers
+
+Our tile layer is not limited or specific to any of the tile providers mentioned here. It supports requesting tiles from any of the tile providers using the unique URL for respective tile providers and renders them.
 
 For other map providers like TomTom, MapBox etc., you can check the respective official websites and provide the url in the format mentioned in the [`Setting URL template`](https://help.syncfusion.com/flutter/maps/tile-layer#setting-url-template) section.
 
