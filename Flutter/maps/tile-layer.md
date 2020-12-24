@@ -22,9 +22,11 @@ The [`urlTemplate`](https://pub.dev/documentation/syncfusion_flutter_maps/latest
 
 Some of the providers may need subscription key. Please include them in the [`urlTemplate`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer/urlTemplate.html) itself as mentioned in the above example. Please note that the format may vary between each map providers. You can check the exact URL format needed for the providers on their official websites.
 
-### For OSM maps
+## Adding OSM maps
 
-The url format of the OSM map provider as shown in the below code snippet.
+The OpenStreetMap is one of the tile/image providers which can be used free of cost. It returns map tiles for the requested coordinates for every requests. The url format of the OSM map provider as shown in the below code snippet.
+
+N> Though OpenStreetMap is free cost, we recommend you check the licensing terms and conditions once.
 
 {% tabs %}
 {% highlight Dart %}
@@ -45,9 +47,9 @@ Widget build(BuildContext context) {
 
 ![OSM default view](images/tile-layer/osm_maps_default.png)
 
-### For Bing maps
+## For Bing maps
 
-An additional step is required for the Bing maps. The format of the required URL varies from the other tile services. Hence, we have added a top-level [`getBingUrlTemplate`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/getBingUrlTemplate.html) method which returns the URL in the required format. You can use the URL returned from this method to pass it to the [`urlTemplate`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer/urlTemplate.html) property.
+An additional step is required for the Bing maps. The format of the required URL varies from the other tile services and subscription key is needed for bing maps. You can create a bing map key by following the steps mentioned in this [`link`](https://docs.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/getting-a-bing-maps-key). Hence, we have added a top-level [`getBingUrlTemplate`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/getBingUrlTemplate.html) method which returns the URL in the required format. You can use the URL returned from this method to pass it to the [`urlTemplate`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer/urlTemplate.html) property.
 
 Some of the providers provide different map types. For example, Bing Maps provide map types like Road, Aerial, AerialWithLabels etc. These types too can be passed in the [`urlTemplate`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer/urlTemplate.html) itself as shown in the below example. You can check the official websites of the tile providers to know about the available types and the code for it.
 
@@ -79,7 +81,19 @@ Widget build(BuildContext context) {
 
 ![Bing maps default view](images/tile-layer/bing_maps_default.png)
 
-N> For other map providers, you can check respective official websites and provide the url in the above mentioned formats.
+## Other map providers
+
+For other map providers like Tom Tom, Google maps etc., you can check respective official websites and provide the url in the format mentioned in the [`Setting URL template`](https://help.syncfusion.com/flutter/maps/tile-layer#setting-url-template) section.
+
+<b>Using TomTom</b>
+
+The TomTom map provider requires subscription key to request tiles from tile services. You can get the TomTom API key from this [`link`](https://developer.tomtom.com/maps-api) and provide the URL in required format to the [`urlTemplate`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer/urlTemplate.html) property.
+
+<b>Using Google maps</b>
+
+The Google map provides support for tile request through its unique URL and it needs an API key. You can create an API key from this [`link`](https://developers.google.com/maps/documentation/tile/).
+
+N> As mentioned in the above link, there seems to be restrictions in accessing the Google Maps Tile API for general usage. So check with the Google sales team regarding this support from Google.
 
 ## Changing the center latitude and longitude
 
