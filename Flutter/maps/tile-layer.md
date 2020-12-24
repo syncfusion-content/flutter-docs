@@ -26,7 +26,7 @@ Some of the providers may need subscription key. Please include them in the [`ur
 
 The OpenStreetMap is one of the tile/image providers which can be used free of cost. It returns map tiles for the requested coordinates for every requests. The url format of the OSM map provider as shown in the below code snippet.
 
-N> Though OpenStreetMap is free cost, we recommend you check the licensing terms and conditions once.
+N> Though the OpenStreetMap is free of cost, we recommend you check the licensing terms and conditions once before using it.
 
 {% tabs %}
 {% highlight Dart %}
@@ -89,11 +89,28 @@ For other map providers like Tom Tom, Google maps etc., you can check respective
 
 The TomTom map provider requires subscription key to request tiles from tile services. You can get the TomTom API key from this [`link`](https://developer.tomtom.com/maps-api) and provide the URL in required format to the [`urlTemplate`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer/urlTemplate.html) property.
 
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+    return SfMaps(
+        layers: [
+            MapTileLayer(
+                urlTemplate: 'http://api.tomtom.com/map/1/tile/basic/main/{z}/{x}/{y}.png?key=subscription_key',
+            ),
+        ],
+    );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 <b>Using Google maps</b>
 
 The Google map provides support for tile request through its unique URL and it needs an API key. You can create an API key from this [`link`](https://developers.google.com/maps/documentation/tile/).
 
-N> As mentioned in the above link, there seems to be restrictions in accessing the Google Maps Tile API for general usage. So check with the Google sales team regarding this support from Google.
+N> As mentioned in the above link, there seems to be restrictions in accessing the Google Maps Tile API for general usage. You can check with the Google sales team regarding this support from Google.
 
 ## Changing the center latitude and longitude
 
