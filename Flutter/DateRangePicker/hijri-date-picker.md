@@ -418,3 +418,7 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Hijri year cell customization](images/hijri-picker/hijri_year_customization.png)
+
+## See also
+
+[How to use Hijri date range picker (SfHijriDateRangePicker) in Flutter](https://www.syncfusion.com/kb/12200/how-to-use-hijri-date-range-picker-sfhijridaterangepicker-in-flutter)
