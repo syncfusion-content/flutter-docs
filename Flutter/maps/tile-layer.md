@@ -22,7 +22,7 @@ The [`urlTemplate`](https://pub.dev/documentation/syncfusion_flutter_maps/latest
 
 Some of the providers may need subscription key. Please include them in the [`urlTemplate`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer/urlTemplate.html) itself as mentioned in the above example. Please note that the format may vary between each map providers. You can check the exact URL format needed for the providers on their official websites.
 
-## Adding OSM/OpenStreetMap map
+## Adding OSM/OpenStreetMap provider
 
 The OpenStreetMap is one of the tile/image providers which can be used free of cost. It returns map tiles for the requested coordinates for every requests. The url format of the OSM map provider as shown in the below code snippet.
 
