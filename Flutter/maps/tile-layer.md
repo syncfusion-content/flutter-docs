@@ -81,7 +81,7 @@ Widget build(BuildContext context) {
 
 ![Bing maps default view](images/tile-layer/bing_maps_default.png)
 
-## Map type providers
+## Other map tile providers
 
 For other map providers like TomTom, MapBox etc., you can check the respective official websites and provide the url in the format mentioned in the [`Setting URL template`](https://help.syncfusion.com/flutter/maps/tile-layer#setting-url-template) section.
 
