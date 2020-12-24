@@ -1481,7 +1481,7 @@ class Model {
 
 ![Bar legend labels placement](images/legend/bar-legend-range-color-mapper-default.png)
 
-The labels are positioned between the segments when setting range color mapper along with setting color mapper [`MapColorMapper.text`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/text.html) property. The [`MapColorMapper.from`] value of the first item is positioned at starting point of the first segment and the [`MapColorMapper.text`] value of the first item is placed at the first segment end position. For Other segments, the value of [`MapColorMapper.text`] is positioned as label between the segments.
+The labels are positioned between the segments when setting range color mapper along with setting color mapper [`MapColorMapper.text`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/text.html) property. The [`MapColorMapper.from`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/from.html) value of the first item is positioned at starting point of the first segment and the [`MapColorMapper.text`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/text.html) value of the first item is placed at the first segment end position. For Other segments, the value of [`MapColorMapper.text`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/text.html) is positioned as label between the segments.
 
 {% tabs %}
 {% highlight Dart %}
