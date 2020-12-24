@@ -47,7 +47,7 @@ Widget build(BuildContext context) {
 
 ![OSM default view](images/tile-layer/osm_maps_default.png)
 
-## For Bing maps
+## Adding Bing maps
 
 An additional step is required for the Bing maps. The format of the required URL varies from the other tile services. Hence, we have added a top-level [`getBingUrlTemplate`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/getBingUrlTemplate.html) method which returns the URL in the required format. The subscription key is needed for bing maps. You can create an API key by following the steps mentioned in this [`link`](https://docs.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/getting-a-bing-maps-key) and append this key to the bing map url before pass it to the [`getBingUrlTemplate`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/getBingUrlTemplate.html) method. You can use the URL returned from this method to pass it to the [`urlTemplate`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer/urlTemplate.html) property.
 
@@ -85,7 +85,7 @@ Widget build(BuildContext context) {
 
 For other map providers like TomTom, MapBox etc., you can check the respective official websites and provide the url in the format mentioned in the [`Setting URL template`](https://help.syncfusion.com/flutter/maps/tile-layer#setting-url-template) section.
 
-For TomTom map provider, subscription key is required to request tiles from tile services. You can get the TomTom API key from this [`link`](https://developer.tomtom.com/maps-api) and provide the URL as shown in the below code snippet.
+For TomTom map provider, subscription key is required to request tiles from tile services. You can get the TomTom API key from this [`link`](https://developer.tomtom.com/maps-api) and provide the URL along with subscription key as shown in the below code snippet.
 
 {% tabs %}
 {% highlight Dart %}
