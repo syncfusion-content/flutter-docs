@@ -195,3 +195,7 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+## See also
+
+[How to restrict swipe gesture for range selection in Flutter date range picker (SfDateRangePicker)?](https://www.syncfusion.com/kb/12117/how-to-restrict-swipe-gesture-for-range-selection-in-flutter-date-range-picker)
