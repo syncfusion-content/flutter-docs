@@ -1499,9 +1499,9 @@ void initState() {
     Model('Italy', 201),
     Model('Cuba', 103),
     Model('China', 148),
-];
+  ];
 
-_shapeSource = MapShapeSource.asset("assets/world_map.json",
+  _shapeSource = MapShapeSource.asset("assets/world_map.json",
     shapeDataField: "name",
     dataCount: _data.length,
     primaryValueMapper: (int index) => _data[index].country,
