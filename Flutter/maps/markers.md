@@ -402,6 +402,9 @@ class Model {
 
 ### For Tile layer
 
+{% tabs %}
+{% highlight Dart %}
+
 List<Model> _data;
 MapTileLayerController _controller;
 Random random = Random();
