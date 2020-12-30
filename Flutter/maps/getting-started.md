@@ -68,20 +68,42 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## Add a GeoJSON file for shape layer from various source
+## Set GeoJSON data for shape layer from various source
 
-The [`layers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps/layers.html) in [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) contains collection of [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html). The actual geographical rendering is done in the each [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html). The [`source`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/source.html) property of the [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html) is of type [`MapShapeSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource-class.html). The [`source`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/source.html) can be set as the .json file from an asset bundle, from network or from Uint8List as bytes. Use the respective constructor depends on the type of the source.
+The [`layers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps/layers.html) in [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) contains collection of either [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html) or [`MapTileLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html). The actual geographical rendering is done in the each [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html). The [`source`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/source.html) property of the [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html) is of type [`MapShapeSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource-class.html). The [`source`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/source.html) can be set as the .json source from an asset bundle, from network or from Uint8List as bytes. Use the respective constructor depends on the type of the source.
 
-The [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) property of the [`MapShapeSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource-class.html) is used to refer the unique field name in the .json file to identify each shapes. In 'Mapping the data source' section of this document, this [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) will be used to map with respective value returned in [`primaryValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/primaryValueMapper.html) from the data source.
+The [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) property of the [`MapShapeSource`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource-class.html) is used to refer the unique field name in the .json source to identify each shapes. In [`Mapping the data source`](https://help.syncfusion.com/flutter/maps/getting-started#mapping-the-data-source-for-shape-layer) section of this document, this [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) will be used to map with respective value returned in [`primaryValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/primaryValueMapper.html) from the data source.
 
-N> You can get the [`australia.json`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/australia-json-910278184.zip) file here. Add this json file to the assets folder of your root directory and refer the json file path in the `pubspec.yaml` file.
-
-<b>From asset bundle</b>
+### From asset bundle
 
 Load .json data from an asset bundle.
 
+N> If you are using the [`MapShapeSource.asset`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/MapShapeSource.asset.html) constructor, you must add the .json file to the assets folder of your root directory and refer the json file path in the `pubspec.yaml` file as shown in the below code snippet. You can get the [`australia.json`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/australia-json-910278184.zip) file here.
+
 {% tabs %}
 {% highlight Dart %}
+
+flutter:
+  uses-material-design: true
+  assets:
+    - australia.json
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Dart %}
+
+MapShapeSource _dataSource;
+
+@override
+void initState() {
+  _dataSource = MapShapeSource.asset(
+    'assets/australia.json',
+    shapeDataField: 'STATE_NAME',
+  );
+  super.initState();
+}
 
 @override
 Widget build(BuildContext context) {
@@ -90,12 +112,7 @@ Widget build(BuildContext context) {
       padding: EdgeInsets.all(15),
       child: SfMaps(
         layers: [
-          MapShapeLayer(
-            source: MapShapeSource.asset(
-              'assets/australia.json',
-              shapeDataField: 'STATE_NAME',
-            ),
-          ),
+          MapShapeLayer(source: _dataSource),
         ],
       ),
     ),
@@ -105,13 +122,24 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-<b>From network</b>
+### From network
 
 Load .json data from the network.
 
 {% tabs %}
 {% highlight Dart %}
 
+MapShapeSource _dataSource;
+
+@override
+void initState() {
+  _dataSource = MapShapeSource.network(
+    'http://www.json-generator.com/api/json/get/bVqXoJvfjC?indent=2',
+     shapeDataField: 'name',
+  );
+  super.initState();
+}
+
 @override
 Widget build(BuildContext context) {
   return Scaffold(
@@ -119,12 +147,7 @@ Widget build(BuildContext context) {
       padding: EdgeInsets.all(15),
       child: SfMaps(
         layers: [
-          MapShapeLayer(
-            source: MapShapeSource.network(
-              'http://www.json-generator.com/api/json/get/bVqXoJvfjC?indent=2',
-              shapeDataField: 'name',
-            ),
-          ),
+          MapShapeLayer(source: _dataSource),
         ],
       ),
     ),
@@ -134,49 +157,41 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-<b>From memory</b>
+### From memory
 
-Load .json data as bytes from [`Uint8List`].
+Load .json data as bytes from `Uint8List`.
 
 {% tabs %}
 {% highlight Dart %}
 
-MapShapeSource source;
-Uint8List bytesData;
-
-@override
-void initState() {
-  fetchJsonData();
-  super.initState();
-}
-
-void fetchJsonData() async {
-  Uint8List data = (await rootBundle.load('assets/australia.json')).buffer.asUint8List();
-  setState(() => bytesData = data);
-}
-
 @override
 Widget build(BuildContext context) {
-  return Scaffold(body: _getMaps());
-}
-
-Widget _getMaps() {
-  if (bytesData == null) {
-    return CircularProgressIndicator();
-  }
-
-  return Container(
-    child: SfMaps(
-      layers: [
-        MapShapeLayer(
-          source: MapShapeSource.memory(
-            bytesData,
-            shapeDataField: 'STATE_NAME',
-          ),
-        ),
-      ],
+  return Scaffold(
+    body: FutureBuilder(
+      future: _fetchJsonData(),
+      builder: (BuildContext context, snapshot) {
+        if (snapshot.hasData) {
+          Uint8List bytesData = snapshot.data;
+          return SfMaps(
+            layers: [
+              MapShapeLayer(
+                source: MapShapeSource.memory(
+                  bytesData,
+                  shapeDataField: 'STATE_NAME',
+                ),
+              ),
+            ],
+          );
+        } else {
+          return CircularProgressIndicator();
+        }
+      },
     ),
   );
+}
+
+Future<Uint8List> _fetchJsonData() async {
+  return (await rootBundle.load('assets/australia.json')).buffer.asUint8List();
 }
 
 {% endhighlight %}
@@ -186,7 +201,7 @@ Widget _getMaps() {
 
 ## Mapping the data source for shape layer
 
-By default, the value specified for the [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) in the GeoJSON file will be used in the elements like data labels, tooltip, and legend for their respective shapes. However, it is possible to keep a data source and customize these elements based on the requirement. As mentioned above, [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) will be used to map with respective value returned in [`primaryValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/primaryValueMapper.html) from the data source.
+By default, the value specified for the [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) in the GeoJSON source will be used in the elements like data labels, tooltip, and legend for their respective shapes. However, it is possible to keep a data source and customize these elements based on the requirement. As mentioned above, [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) will be used to map with respective value returned in [`primaryValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/primaryValueMapper.html) from the data source.
 
 {% tabs %}
 {% highlight Dart %}
@@ -239,11 +254,11 @@ class Model {
 {% endtabs %}
 
 N>
-* Refer the [`MapShapeSource.primaryValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/primaryValueMapper.html), for mapping the data of the data source collection with the respective [`MapShapeSource.shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) in .json file.
+* Refer the [`MapShapeSource.primaryValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/primaryValueMapper.html), for mapping the data of the data source collection with the respective [`MapShapeSource.shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html) in .json source.
 * Refer the [`MapShapeSource.bubbleSizeMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/bubbleSizeMapper.html), for customizing the bubble size.
 * Refer the [`MapShapeSource.bubbleColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/bubbleColorValueMapper.html), for customizing the bubble colors.
 * Refer the [`MapShapeSource.dataLabelMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/dataLabelMapper.html), for customizing the data label text.
-* Refer the [`MapShapeSource.shapeColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeColorValueMapper.html), for customizing the bubble colors.
+* Refer the [`MapShapeSource.shapeColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeColorValueMapper.html), for customizing the shape colors.
 
 ## Add shape layer maps elements
 
@@ -293,40 +308,39 @@ void initState() {
 
 @override
 Widget build(BuildContext context) {
+  final ThemeData themeData = Theme.of(context);
   return Scaffold(
-    body: Center(
-      child: Container(
-        height: 520,
-        child: Padding(
-          padding: EdgeInsets.all(15),
-          child: SfMaps(
-            title: const MapTitle('Australia map'),
-            layers: <MapShapeLayer>[
-              MapShapeLayer(
-                source: dataSource,
-                showDataLabels: true,
-                legend: MapLegend(MapElement.shape),
-                shapeTooltipBuilder: (BuildContext context, int index) {
-                  return Padding(
-                    padding: EdgeInsets.all(10),
-                    child: Text(data[index].stateCode),
-                  );
-                },
-                tooltipSettings: MapTooltipSettings(
-                    color: Colors.grey[700],
-                    strokeColor: Colors.white,
-                    strokeWidth: 2),
-                strokeColor: Colors.white,
-                strokeWidth: 0.5,
-                dataLabelSettings: MapDataLabelSettings(
-                    textStyle: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                        fontSize:
-                            Theme.of(context).textTheme.caption.fontSize)),
-              ),
-            ],
-          ),
+    body: Container(
+      height: 520,
+      child: Center(
+        child: SfMaps(
+          title: const MapTitle('Australia map'),
+          layers: <MapShapeLayer>[
+            MapShapeLayer(
+              source: dataSource,
+              showDataLabels: true,
+              legend: MapLegend(MapElement.shape),
+              shapeTooltipBuilder: (BuildContext context, int index) {
+                return Padding(
+                  padding: const EdgeInsets.all(7),
+                  child: Text(data[index].stateCode,
+                      style: themeData.textTheme.caption
+                          .copyWith(color: themeData.colorScheme.surface)),
+                );
+              },
+              tooltipSettings: MapTooltipSettings(
+                  color: Colors.grey[700],
+                  strokeColor: Colors.white,
+                  strokeWidth: 2),
+              strokeColor: Colors.white,
+              strokeWidth: 0.5,
+              dataLabelSettings: MapDataLabelSettings(
+                  textStyle: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: themeData.textTheme.caption.fontSize)),
+            ),
+          ],
         ),
       ),
     ),

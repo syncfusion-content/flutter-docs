@@ -34,7 +34,7 @@ Widget build(BuildContext context) {
 
 ## Customize the text selection and its handle color
 
-The [SfPdfViewer] allows you to customize the color used for text selection and its handle based on your requirements. The properties [textSelectionColor](https://api.flutter.dev/flutter/material/ThemeData/textSelectionColor.html) and [textSelectionHandleColor](https://api.flutter.dev/flutter/material/ThemeData/textSelectionHandleColor.html) of the [ThemeData](https://api.flutter.dev/flutter/material/ThemeData-class.html) class can be used to customize them. The following code example explains the same.
+The [SfPdfViewer] allows you to customize the color used for text selection and its handle based on your requirements. The properties [selectionColor](https://api.flutter.dev/flutter/material/TextSelectionThemeData/selectionColor.html) and [selectionHandleColor](https://api.flutter.dev/flutter/material/TextSelectionThemeData/selectionHandleColor.html) of the [TextSelectionThemeData](https://api.flutter.dev/flutter/material/TextSelectionThemeData-class.html) class can be used to customize them. The following code example explains the same.
 
 {% tabs %}
 {% highlight Dart %}
@@ -42,9 +42,9 @@ The [SfPdfViewer] allows you to customize the color used for text selection and 
 void main() => runApp(MaterialApp(
       title: 'Syncfusion PDF Viewer Demo',
       theme: ThemeData(
-          primarySwatch: Colors.blue,
-          textSelectionColor: Colors.red,
-          textSelectionHandleColor: Colors.blue),
+        textSelectionTheme: TextSelectionThemeData(
+            selectionColor: Colors.red, selectionHandleColor: Colors.blue),
+      ),
       home: HomePage(),
     ));
 

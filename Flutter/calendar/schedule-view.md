@@ -189,3 +189,11 @@ The [MonthHeaderSettings](https://pub.dev/documentation/syncfusion_flutter_calen
 {% endtabs %}
 
 ![Schedule view month header customization](images/scheduleview/Schedule_view_month_header.png)
+
+## See also
+
+[How do I view schedule in Flutter event calendar (SfCalendar)?](https://www.syncfusion.com/kb/11803/how-do-i-view-schedule-in-flutter-event-calendar-sfcalendar)
+
+[How to customize the day, week, month header of Schedule view in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12178/how-to-customize-the-day-week-month-header-of-schedule-view-in-the-flutter-event-calendar)
+
+[How to customize the schedule view month header using builder in Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12064/how-to-customize-the-schedule-view-month-header-using-builder-in-flutter-event-calendar)

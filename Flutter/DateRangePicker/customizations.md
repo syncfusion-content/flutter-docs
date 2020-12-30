@@ -175,3 +175,15 @@ Widget build(BuildContext context) {
 ## See also
 
 [How to customize the month cell of the Flutter date range picker (SfDateRangePicker)?](https://www.syncfusion.com/kb/11307/how-to-customize-the-month-cell-of-the-flutter-date-range-picker-sfdaterangepicker)
+
+[How to style the current month date cell in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12190/how-to-style-the-current-month-date-cell-in-the-flutter-date-range-picker-sfdaterangepicker)
+
+[How to change the week end dates in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12182/how-to-change-the-week-end-dates-in-the-flutter-date-range-picker-sfdaterangepicker)
+
+[How to change the month format in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12169/how-to-change-the-month-format-in-the-flutter-date-range-picker-sfdaterangepicker)
+
+[How to customize the selected range cells in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12148/how-to-customize-the-selected-range-cells-in-the-flutter-date-range-picker)
+
+[How to add the indicator in the month cells of the date range picker (SfDateRangePicker), when the Flutter event calendar (SfCalendar) has an appointments?](https://www.syncfusion.com/kb/12119/how-to-add-the-indicator-in-the-month-cells-of-the-date-range-picker-sfdaterangepicker-when)
+
+[How to add custom fonts in Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12212/how-to-add-custom-fonts-in-flutter-date-range-picker-sfdaterangepicker)

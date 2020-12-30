@@ -118,6 +118,8 @@ Widget build(BuildContext context) {
         layers: [
           MapTileLayer(
             urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+            initialFocalLatLng: MapLatLng(20.5937, 78.9629),
+            initialZoomLevel: 4,
             sublayers: [
               MapCircleLayer(
                 circles: List<MapCircle>.generate(
@@ -138,6 +140,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Default circle shape](../images/circle-layer/default-circle-shape.png)
 
 ## Radius
 
@@ -206,6 +210,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Circle radius](../images/circle-layer/circle-radius.png)
+
 ## Fill color
 
 You can apply the same color for all [`MapCircle`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircle-class.html) in the [`circles`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircleLayer/circles.html) collection using the [`MapCircleLayer.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircleLayer/color.html) property. Alternatively, you can apply different colors to each [`MapCircle`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircle-class.html) in the [`circles`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircleLayer/circles.html) collection using the individual [`MapCircle.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircle/color.html) property.
@@ -272,6 +278,8 @@ class MapCircleModel {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Circle color](../images/circle-layer/circle-color.png)
 
 ## Stroke width and color
 
@@ -342,6 +350,8 @@ class MapCircleModel {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Circle stroke color](../images/circle-layer/circle-stroke-color.png)
 
 ## Animation
 
@@ -431,6 +441,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Circle animation support](../images/circle-layer/circle-animation.gif)
+
 ## Tap
 
 You can use the [`onTap`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircle/onTap.html) callback to get a notification if the particular [`MapCircle`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircle-class.html) is tapped. You can also customize the tapped [`MapCircle`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircle-class.html) based on the index passed in the callback as shown in the below code snippet.
@@ -505,9 +517,11 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Circle tap support](../images/circle-layer/circle-tap-support.gif)
+
 ## Tooltip
 
-You can show additional information about the circles drawn using the [`MapCircleLayer.tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircleLayer/tooltipBuilder.html) property.
+You can show additional information about the circles drawn using the [`tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapSublayer/tooltipBuilder.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -546,6 +560,9 @@ void initState() {
 
 @override
 Widget build(BuildContext context) {
+   final ThemeData themeData = Theme.of(context);
+   final TextStyle textStyle = themeData.textTheme.caption
+        .copyWith(color: themeData.colorScheme.surface);
    return Scaffold(
       body: SfMaps(
         layers: [
@@ -568,26 +585,19 @@ Widget build(BuildContext context) {
                          child: Column(
                              mainAxisSize: MainAxisSize.min,
                              children: [
-                               Row(
-                                 mainAxisSize: MainAxisSize.min,
-                                 children: [
-                                   Text('Disease name  :',
-                                      style: TextStyle(
-                                       color: Colors.black,
-                                        fontWeight: FontWeight.bold)),
-                                   Text('  ' + 'Corona',
-                                        style: TextStyle(color: Colors.black)),
-                                 ],
-                               ),
-                               Row(
+                                Row(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
-                                     Text('Active cases    :',
-                                          style: TextStyle(
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.bold)),
-                                     Text('  ' + random.nextInt(62342).toString(),
-                                          style: TextStyle(color: Colors.black)),
+                                     Text('Disease name  :', style: textStyle),
+                                     Text('  ' + 'Corona', style: textStyle),
+                                  ],
+                                ),
+                                Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    Text('Active cases    :', style: textStyle),
+                                    Text('  ' + random.nextInt(62342).toString(),
+                                         style: textStyle),
                                   ],
                                ),
                          ],
@@ -604,6 +614,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Circle tooltip support](../images/circle-layer/circle-tooltip.png)
 
 ## Tooltip customization
 
@@ -713,3 +725,5 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Circle tooltip customization](../images/circle-layer/circle-tooltip-customization.png)

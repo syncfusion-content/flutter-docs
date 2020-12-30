@@ -201,7 +201,7 @@ Widget build(BuildContext context) {
               dateIntervalType: DateIntervalType.years,
               showTicks: true,
               showLabels: true,
-              showTooltip: true,
+              enableTooltip: true,
               values: _values,
               onChanged: (SfRangeValues newValues) {
                 setState(() {

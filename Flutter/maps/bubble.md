@@ -104,6 +104,7 @@ void initState() {
 
 @override
 Widget build(BuildContext context) {
+  final ThemeData themeData = Theme.of(context);
   return Scaffold(
     body: Padding(
       padding: EdgeInsets.only(left: 15, right: 15),
@@ -117,7 +118,9 @@ Widget build(BuildContext context) {
                   child: Text('Continent : ' +
                      data[index].continent +
                      '\nTotal Countries : ' +
-                     data[index].countriesCount.toStringAsFixed(0)),
+                     data[index].countriesCount.toStringAsFixed(0),
+                     style: themeData.textTheme.caption
+                        .copyWith(color: themeData.colorScheme.surface)),
                );
             },
           ),

@@ -260,3 +260,19 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Allowed views](images/date-navigation/allowed_views.png)
+
+## See also
+
+[How to programmatically select the dates in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12115/how-to-programmatically-select-the-dates-in-the-flutter-event-calendar-sfcalendar)
+
+[How to programmatically navigate to the adjacent dates in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12136/how-to-programmatically-navigate-to-the-adjacent-dates-in-the-flutter-event-calendar)
+
+[How to programmatically navigate to the date in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12139/how-to-programmatically-navigate-to-the-date-in-the-flutter-event-calendar-sfcalendar)
+
+[How to do programmatic navigation using Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12141/how-to-do-programmatic-navigation-using-flutter-event-calendar-sfcalendar)	
+
+[How to restrict the visible date ranges in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12145/how-to-restrict-the-visible-date-ranges-in-the-flutter-event-calendar-sfcalendar)
+
+[How to do date navigations easily with Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12019/how-to-do-date-navigations-easily-with-flutter-event-calendar-sfcalendar)
+
+[How to integrate event calendar (SfCalendar) with date picker (SfDateRangePicker) in Flutter](https://www.syncfusion.com/kb/12047/how-to-integrate-event-calendar-sfcalendar-with-date-picker-sfdaterangepicker-in-flutter)

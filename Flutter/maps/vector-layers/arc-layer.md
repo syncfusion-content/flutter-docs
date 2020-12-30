@@ -105,7 +105,7 @@ void initState() {
   ];
 
   zoomPanBehavior = MapZoomPanBehavior(
-    zoomLevel: 4,
+    zoomLevel: 3,
     focalLatLng: MapLatLng(22.9734, 90.6569),
   );
   super.initState();
@@ -148,6 +148,8 @@ class DataModel {
 {% endhighlight %}
 {% endtabs %}
 
+![Default arc shape](../images/arc-layer/default_arc_shape.png)
+
 ## Height factor
 
 The [`heightFactor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc/heightFactor.html) is the distance from the line connecting two points to the arc bend point. The default value of [`heightFactor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc/heightFactor.html) property is `0.2` and the value ranges from -1 to 1.
@@ -166,7 +168,6 @@ void initState() {
   data = <DataModel>[
     DataModel(MapLatLng(28.6139, 77.2090), MapLatLng(39.9042, 116.4074)),
     DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(31.2304, 121.4737)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(23.1291, 113.2644)),
     DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694)),
     DataModel(MapLatLng(19.0760, 72.8777), MapLatLng(22.3193, 114.1694)),
     DataModel(MapLatLng(22.3193, 114.1694), MapLatLng(13.0827, 80.2707)),
@@ -221,6 +222,8 @@ class DataModel {
 {% endhighlight %}
 {% endtabs %}
 
+![Arc height factor](../images/arc-layer/arc_height_factor.png)
+
 ## Control point factor
 
 The [`MapArc.controlPointFactor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc/controlPointFactor.html) is the arc bending position. The default value of [`MapArc.controlPointFactor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc/controlPointFactor.html) property is `0.5` and the value ranges from 0 to 1.
@@ -239,10 +242,9 @@ void initState() {
   data = <DataModel>[
     DataModel(MapLatLng(28.6139, 77.2090), MapLatLng(39.9042, 116.4074)),
     DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(31.2304, 121.4737)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(23.1291, 113.2644)),
     DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694)),
     DataModel(MapLatLng(19.0760, 72.8777), MapLatLng(22.3193, 114.1694)),
-    DataModel(MapLatLng(22.3193, 114.1694), MapLatLng(13.0827, 80.2707)),
+    DataModel(MapLatLng(13.0827, 80.2707), MapLatLng(22.3193, 114.1694)),
   ];
 
   dataSource = MapShapeSource.asset(
@@ -294,6 +296,8 @@ class DataModel {
 {% endhighlight %}
 {% endtabs %}
 
+![Arc control point factor](../images/arc-layer/arc_control_point_factor.png)
+
 ## Color
 
 You can apply the same color for all [`MapArc`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc-class.html) in the [`arcs`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArcLayer/arcs.html) collection using the [`MapArcLayer.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArcLayer/color.html) property. Alternatively, you can apply different colors to each [`MapArc`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc-class.html) in the [`arcs`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArcLayer/arcs.html) collection using the individual [`MapArc.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc/color.html) property.
@@ -310,8 +314,7 @@ void initState() {
  data = <DataModel>[
    DataModel(MapLatLng(28.6139, 77.2090), MapLatLng(39.9042, 116.4074), Colors.redAccent),
    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(31.2304, 121.4737), Colors.purpleAccent),
-   DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(23.1291, 113.2644), Colors.deepOrangeAccent),
-   DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694), Colors.deepOrangeAccent),
+   DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694), Colors.deepPurple),
    DataModel(MapLatLng(19.0760, 72.8777), MapLatLng(22.3193, 114.1694), Colors.blueAccent),
    DataModel(MapLatLng(22.3193, 114.1694), MapLatLng(13.0827, 80.2707), Colors.teal),
  ];
@@ -365,6 +368,8 @@ class DataModel {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Arc color](../images/arc-layer/arc_color.png)
 
 ## Width
 
@@ -438,6 +443,8 @@ class DataModel {
 {% endhighlight %}
 {% endtabs %}
 
+![Arc width](../images/arc-layer/arc_width.png)
+
 ## Dash array
 
 You can apply dash support for the arc using the [MapArc.dashArray](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc/dashArray.html) property.
@@ -456,7 +463,6 @@ void initState() {
   data = <DataModel>[
     DataModel(MapLatLng(28.6139, 77.2090), MapLatLng(39.9042, 116.4074)),
     DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(31.2304, 121.4737)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(23.1291, 113.2644)),
     DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694)),
     DataModel(MapLatLng(19.0760, 72.8777), MapLatLng(22.3193, 114.1694)),
     DataModel(MapLatLng(22.3193, 114.1694), MapLatLng(13.0827, 80.2707)),
@@ -511,6 +517,8 @@ class DataModel {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Arc dash array](../images/arc-layer/arc_dash_array.png)
 
 ## Animation
 
@@ -604,6 +612,8 @@ class DataModel {
 {% endhighlight %}
 {% endtabs %}
 
+![Arc animation](../images/arc-layer/arc_animation.gif)
+
 ## Tap
 
 You can use the [`onTap`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc/onTap.html) callback to get a notification if the particular [`MapArc`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc-class.html) is tapped. You can also customize the tapped [`MapArc`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc-class.html) based on the index passed in the callback as shown in the below code snippet.
@@ -681,9 +691,11 @@ class DataModel {
 {% endhighlight %}
 {% endtabs %}
 
+![Arc tap support](../images/arc-layer/arc_tap-support.gif)
+
 ## Tooltip
 
-You can show additional information about an arc drawn using the [`MapArcLayer.tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArcLayer/tooltipBuilder.html) property.
+You can show additional information about an arc drawn using the [`tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapSublayer/tooltipBuilder.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -691,18 +703,16 @@ You can show additional information about an arc drawn using the [`MapArcLayer.t
 MapZoomPanBehavior zoomPanBehavior;
 MapShapeSource dataSource;
 List<DataModel> data;
-int selectedIndex;
 Random random = Random();
 
 @override
 void initState() {
   data = <DataModel>[
-    DataModel(MapLatLng(28.6139, 77.2090), MapLatLng(39.9042, 116.4074)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(31.2304, 121.4737)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(23.1291, 113.2644)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694)),
-    DataModel(MapLatLng(19.0760, 72.8777), MapLatLng(22.3193, 114.1694)),
-    DataModel(MapLatLng(22.3193, 114.1694), MapLatLng(13.0827, 80.2707)),
+     DataModel(MapLatLng(28.6139, 77.2090), MapLatLng(39.9042, 116.4074)),
+     DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(31.2304, 121.4737)),
+     DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694)),
+     DataModel(MapLatLng(19.0760, 72.8777), MapLatLng(22.3193, 114.1694)),
+     DataModel(MapLatLng(22.3193, 114.1694), MapLatLng(13.0827, 80.2707)),
   ];
 
   dataSource = MapShapeSource.asset(
@@ -718,6 +728,9 @@ void initState() {
 
 @override
 Widget build(BuildContext context) {
+ final ThemeData themeData = Theme.of(context);
+    final TextStyle textStyle = themeData.textTheme.caption
+        .copyWith(color: themeData.colorScheme.surface);
   return Scaffold(
     body: SfMaps(
       layers: [
@@ -743,14 +756,14 @@ Widget build(BuildContext context) {
                        children: [
                           Row(
                             children: [
-                               Text('Flight   : '),
-                               Text('Air India'),
+                               Text('Flight   : ', style: textStyle),
+                               Text('Air India', style: textStyle),
                             ],
                           ),
                           Row(
                              children: [
-                                Text('Depart : '),
-                                Text(random.nextInt(12).toString() + 'AM'),
+                                Text('Depart : ', style: textStyle),
+                                Text(random.nextInt(12).toString() + 'AM', style: textStyle),
                              ],
                           ),
                        ],
@@ -776,6 +789,8 @@ class DataModel {
 {% endhighlight %}
 {% endtabs %}
 
+![Arc tooltip support](../images/arc-layer/arc_tooltip.png)
+
 ## Tooltip customization
 
 You can customize the appearance of the tooltip.
@@ -790,7 +805,6 @@ You can customize the appearance of the tooltip.
 MapZoomPanBehavior zoomPanBehavior;
 MapShapeSource dataSource;
 List<DataModel> data;
-int selectedIndex;
 Random random = Random();
 
 @override
@@ -798,7 +812,6 @@ void initState() {
   data = <DataModel>[
     DataModel(MapLatLng(28.6139, 77.2090), MapLatLng(39.9042, 116.4074)),
     DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(31.2304, 121.4737)),
-    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(23.1291, 113.2644)),
     DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(22.3193, 114.1694)),
     DataModel(MapLatLng(19.0760, 72.8777), MapLatLng(22.3193, 114.1694)),
     DataModel(MapLatLng(22.3193, 114.1694), MapLatLng(13.0827, 80.2707)),
@@ -879,3 +892,5 @@ class DataModel {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Arc tooltip customization](../images/arc-layer/arc_tooltip_customization.png)

@@ -477,7 +477,7 @@ class DataModel {
 
 ## Tooltip
 
-You can show additional information about the line drawn using the [`MapLineLayer.tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLineLayer/tooltipBuilder.html) property.
+You can show additional information about the line drawn using the [`tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapSublayer/tooltipBuilder.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -504,6 +504,9 @@ void initState() {
 
 @override
 Widget build(BuildContext context) {
+ final ThemeData themeData = Theme.of(context);
+    final TextStyle textStyle = themeData.textTheme.caption
+        .copyWith(color: themeData.colorScheme.surface);
   return Scaffold(
     body: Padding(
       padding: EdgeInsets.all(10),
@@ -527,14 +530,14 @@ Widget build(BuildContext context) {
                     children: [
                       Row(
                         children: [
-                          Text('Flight   : '),
-                          Text('Air India'),
+                          Text('Flight   : ', style: textStyle),
+                          Text('Air India', style: textStyle),
                         ],
                       ),
                       Row(
                         children: [
-                          Text('Depart : '),
-                          Text(random.nextInt(12).toString() + 'AM'),
+                          Text('Depart : ', style: textStyle),
+                          Text(random.nextInt(12).toString() + 'AM', style: textStyle),
                         ],
                       ),
                     ],
