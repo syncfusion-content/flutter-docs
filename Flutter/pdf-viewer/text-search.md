@@ -817,3 +817,5 @@ class SearchToolbarItem extends StatelessWidget {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Text search with toolbar](images/text-search/text_search_with_toolbar.png)
