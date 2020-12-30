@@ -181,5 +181,3 @@ class _HomePageState extends State<HomePage> {
 
 {% endhighlight %}
 {% endtabs %}
-
-![Text selection with copy](images/text-selection/text_selection_with_copy.png)
