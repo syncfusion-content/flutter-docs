@@ -43,7 +43,6 @@ Widget build(BuildContext context) {
             onPressed: () async {
               _searchResult = await _pdfViewerController?.searchText('the',
                   searchOption: TextSearchOption.caseSensitive);
-              setState(() {});
               print('Total instance count: ${_searchResult.totalInstanceCount}');
             },
           ),                  ],
@@ -212,7 +211,6 @@ Widget build(BuildContext context) {
             onPressed: () async {
               _searchResult = await _pdfViewerController?.searchText('the',
                   searchOption: TextSearchOption.caseSensitive);
-              setState(() {});
             },
           ),        ],
       ),
@@ -255,7 +253,6 @@ Widget build(BuildContext context) {
             onPressed: () async {
               _searchResult = await _pdfViewerController?.searchText('pdf',
                   searchOption: TextSearchOption.caseSensitive);
-              setState(() {});
               if (_searchResult.totalInstanceCount == 0) {
                 print('No matches found.');
               }
@@ -340,7 +337,7 @@ Widget build(BuildContext context) {
               onPressed: () {
                 _searchResult?.nextInstance();
                 if(_searchResult.currentInstanceIndex == _searchResult.totalInstanceCount){
-                  print('No more occurrences found.')
+                  print('No more occurrences found.');
                 }
               },
             ),
