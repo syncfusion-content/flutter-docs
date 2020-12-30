@@ -1317,7 +1317,6 @@ class Model {
 You can customize the legend items using the following properties.
 
 * **segmentSize** - Used to change the size of individual bar segments. When gradient paint style is applied, `segmentSize` argument in the [`constructor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.bar.html) will update the whole bar.
-* **labelsPlacement** - Used to place the labels either between the segments or on the segments. The default value of the [`labelsPlacement`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.bar.html) argument in the [`constructor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.bar.html) will be `MapLegendLabelsPlacement.betweenItems` when setting range color mapper without setting color mapper text property. Otherwise, it will be `MapLegendLabelsPlacement.onItem`.
 * **labelOverflow** - Used to remove or trim the legend labels based on the bar legend size.The default value of the [`labelOverflow`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.bar.html) argument in the [`constructor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.bar.html) will be `MapLabelOverflow.hide`.
 * **edgeLabelsPlacement** - Used to place the edge labels either inside or outside of the bar legend. The default value of the [`edgeLabelsPlacement`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.bar.html) argument in the [`constructor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.bar.html) will be `MapLegendEdgeLabelsPlacement.inside`.
 * **spacing** - Used to provide space between the each legend items. The default value of the [`spacing`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/spacing.html) is `2.0`. This is not applicable for gradient legend.
@@ -1402,3 +1401,301 @@ class Model {
 {% endtabs %}
 
 ![Bar legend customization](images/legend/bar-legend-customization.png)
+
+## Bar legend label placement appearance
+
+You can place the labels either between the segments or on the segments using the [`labelsPlacement`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendLabelsPlacement-class.html) property.
+
+</b>Labels placement for range color mapper</b>
+
+The labels are positioned between the segments when setting range color mapper without setting color mapper [`MapColorMapper.text`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/text.html) property. The [`MapColorMapper.from`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/from.html) value of the first item is positioned at starting point of the first segment and the [`MapColorMapper.to`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/to.html) value of the first item is placed at the first segment end position. For other segments, the values of [`MapColorMapper.to`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/to.html) is positioned as label between the other segments.
+
+{% tabs %}
+{% highlight Dart %}
+
+List<Model> _data;
+MapShapeSource _shapeSource;
+
+@override
+void initState() {
+  super.initState();
+  _data = <Model>[
+    Model('India', 280),
+    Model('United States of America', 190),
+    Model('Kazakhstan', 37),
+    Model('Italy', 201),
+    Model('Cuba', 103),
+    Model('China', 148),
+];
+
+_shapeSource = MapShapeSource.asset("assets/world_map.json",
+    shapeDataField: "name",
+    dataCount: _data.length,
+    primaryValueMapper: (int index) => _data[index].country,
+    shapeColorValueMapper: (int index) => _data[index].density,
+    shapeColorMappers: [
+      MapColorMapper(from: 0, to: 100, color: Colors.red),
+      MapColorMapper(
+              from: 101, to: 200, color: Colors.green),
+      MapColorMapper(
+              from: 201, to: 300, color: Colors.blue),
+    ]
+  );
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+      body: Center(
+        child: Container(
+          height: 350,
+          child: Padding(
+            padding: EdgeInsets.only(left: 15, right: 15),
+            child: SfMaps(
+              layers: [
+                MapShapeLayer(
+                  source: _shapeSource,
+                  legend: MapLegend.bar(
+                    MapElement.shape,
+                    labelsPlacement: MapLegendLabelsPlacement.betweenItems,
+                    segmentPaintingStyle: MapLegendPaintingStyle.gradient,
+                  ),
+                )
+              ],
+            ),
+          ),
+        ),
+     ),
+  );
+}
+
+class Model {
+  const Model(this.country, this.density);
+
+  final String country;
+  final double density;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Bar legend labels placement](images/legend/bar-legend-range-color-mapper-default.png)
+
+The labels are positioned between the segments when setting range color mapper along with setting color mapper [`MapColorMapper.text`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/text.html) property. The [`MapColorMapper.from`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/from.html) value of the first item is positioned at starting point of the first segment and the [`MapColorMapper.text`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/text.html) value of the first item is placed at the first segment end position. For Other segments, the value of [`MapColorMapper.text`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/text.html) is positioned as label between the segments.
+
+{% tabs %}
+{% highlight Dart %}
+
+List<Model> _data;
+MapShapeSource _shapeSource;
+
+@override
+void initState() {
+  super.initState();
+  _data = <Model>[
+    Model('India', 280),
+    Model('United States of America', 190),
+    Model('Kazakhstan', 37),
+    Model('Italy', 201),
+    Model('Cuba', 103),
+    Model('China', 148),
+  ];
+
+  _shapeSource = MapShapeSource.asset("assets/world_map.json",
+    shapeDataField: "name",
+    dataCount: _data.length,
+    primaryValueMapper: (int index) => _data[index].country,
+    shapeColorValueMapper: (int index) => _data[index].density,
+    shapeColorMappers: [
+        MapColorMapper(from: 0, to: 100, color: Colors.red, text: '<100/km'),
+        MapColorMapper(from: 101, to: 200, color: Colors.green, text: '100 - 200/km'),
+        MapColorMapper(from: 201, to: 300, color: Colors.blue, text: '200 - 300/km'),
+    ]
+  );
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+      body: Center(
+        child: Container(
+          height: 350,
+          child: Padding(
+            padding: EdgeInsets.only(left: 15, right: 15),
+            child: SfMaps(
+              layers: [
+                MapShapeLayer(
+                  source: _shapeSource,
+                  legend: MapLegend.bar(
+                    MapElement.shape,
+                    labelsPlacement: MapLegendLabelsPlacement.betweenItems,
+                    segmentPaintingStyle: MapLegendPaintingStyle.gradient,
+                  ),
+                )
+              ],
+            ),
+          ),
+        ),
+     ),
+  );
+}
+
+class Model {
+  const Model(this.country, this.density);
+
+  final String country;
+  final double density;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Bar legend labels placement](images/legend/bar-legend-range-color-mapper-with-text.png)
+
+The labels are positioned at the center of the segments when setting the [`labelsPlacement`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendLabelsPlacement-class.html) property to `MapLegendLabelsPlacement.onItem`. The labels calculated based on the value of [MapColorMapper.text](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/text.html) property. If the value of [MapColorMapper.text](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/text.html) property is null, labels calculated based on the values of [`MapColorMapper.from`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/from.html) and [`MapColorMapper.to`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/to.html) properties.
+
+{% tabs %}
+{% highlight Dart %}
+
+List<Model> _data;
+MapShapeSource _shapeSource;
+
+@override
+void initState() {
+  super.initState();
+  _data = <Model>[
+    Model('India', 280),
+    Model('United States of America', 190),
+    Model('Kazakhstan', 37),
+    Model('Italy', 201),
+    Model('Cuba', 103),
+    Model('China', 148),
+];
+
+_shapeSource = MapShapeSource.asset("assets/world_map.json",
+    shapeDataField: "name",
+    dataCount: _data.length,
+    primaryValueMapper: (int index) => _data[index].country,
+    shapeColorValueMapper: (int index) => _data[index].density,
+    shapeColorMappers: [
+        MapColorMapper(from: 0, to: 100, color: Colors.red, text: '<100/km'),
+        MapColorMapper(from: 101, to: 200, color: Colors.green, text: '100 - 200/km'),
+        MapColorMapper(from: 201, to: 300, color: Colors.blue, text: '200 - 300/km'),
+    ]
+  );
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+      body: Center(
+        child: Container(
+          height: 350,
+          child: Padding(
+            padding: EdgeInsets.only(left: 15, right: 15),
+            child: SfMaps(
+              layers: [
+                MapShapeLayer(
+                  source: _shapeSource,
+                  legend: MapLegend.bar(
+                    MapElement.shape,
+                    labelsPlacement: MapLegendLabelsPlacement.onItem,
+                    edgeLabelsPlacement: MapLegendEdgeLabelsPlacement.center,
+                    segmentPaintingStyle: MapLegendPaintingStyle.gradient,
+                  ),
+                )
+              ],
+            ),
+          ),
+        ),
+     ),
+  );
+}
+
+class Model {
+  const Model(this.country, this.density);
+
+  final String country;
+  final double density;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Bar legend labels placement](images/legend/bar-legend-range-color-mapper-onItem.png)
+
+</b>Labels placement for equal color mapper</b>
+
+The `labelsPlacement` option is not applicable for the shape/bubble applied with equal color mapper. By default, the labels are positioned at center of the segment.
+
+{% tabs %}
+{% highlight Dart %}
+
+List<Model> _data;
+MapShapeSource _dataSource;
+
+@override
+void initState() {
+  _data = <Model>[
+    Model('India', "Low"),
+    Model('United States of America', "High"),
+    Model('Pakistan', "Low"),
+    Model('Brazil', "Medium"),
+  ];
+
+   _dataSource = MapShapeSource.asset(
+     "assets/world_map.json",
+     shapeDataField: "name",
+     dataCount: _data.length,
+     primaryValueMapper: (int index) {
+        return _data[index].country;
+     },
+     shapeColorValueMapper: (int index) {
+       return _data[index].storage;
+     },
+     shapeColorMappers: [
+        MapColorMapper(value: "Low", color: Colors.green),
+        MapColorMapper(value: "Medium", color: Colors.blue),
+        MapColorMapper(value: "High", color: Colors.red),
+     ],
+  );
+  super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: Center(
+       child: Container(
+          height: 350,
+          child: Padding(
+            padding: EdgeInsets.only(left: 15, right: 15),
+            child: SfMaps(
+              layers: <MapShapeLayer>[
+                MapShapeLayer(
+                  source: _dataSource,
+                  legend: MapLegend.bar(
+                    MapElement.shape,
+                    edgeLabelsPlacement: MapLegendEdgeLabelsPlacement.center,
+                    segmentPaintingStyle: MapLegendPaintingStyle.gradient,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+     ),
+  );
+}
+
+class Model {
+  const Model(this.country, this.storage);
+
+  final String country;
+  final String storage;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Bar legend labels placement](images/legend/bar-legend-equal-color-mapper-default.png)
