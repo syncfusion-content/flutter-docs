@@ -62,7 +62,7 @@ Margin to the chart can be specified using the [`margin`](https://pub.dev/docume
 
 You can customize the Area of the chart using the below properties.
 
-* [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/backgroundColor.html) – used to change the Chart area background color.
+* [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/backgroundColor.html) - used to change the Chart area background color.
 * [`backgroundImage`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/backgroundImage.html) - used to set the image path.
 
 {% highlight dart %} 

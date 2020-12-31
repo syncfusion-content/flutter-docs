@@ -57,7 +57,7 @@ Refer the following example,
        return Scaffold(
         body: Center(
           child: SfCartesianChart(
-            legend: Legend(isVisible: true,
+            legend: Legend(isVisible: true),
             indicators: <TechnicalIndicators<Sample,dynamic>>[AccumulationDistributionIndicator<Sample, dynamic>(
                   seriesName: 'HiloOpenClose')],
             series: <ChartSeries<Sample, dynamic>>[
@@ -69,7 +69,7 @@ Refer the following example,
               openValueMapper: (Sample sales, _) => sales.open,
               closeValueMapper: (Sample sales, _) => sales.close,
               name: 'HiloOpenClose'),])));
-      }}
+      }
 {% endhighlight %}
 
 ![ADIndicator](images/technical-indicators/ad.jpg)
@@ -87,17 +87,16 @@ Refer the following example,
      return Scaffold(
         body: Center(
          child: SfCartesianChart(
-          legend: Legend(isVisible: true,
+          legend: Legend(isVisible: true),
           indicators:
           <TechnicalIndicators<dynamic,   dynamic>>[
           AtrIndicator<dynamic, dynamic>(
             period: 3,
             seriesName: 'HiloOpenClose')],
     series: <CartesianSeries<Sample, dynamic>>[
-              name: 'HiloOpenClose'),
+            HiloOpenCloseSeries<Sample, dynamic>(name: 'HiloOpenClose')
               ])));
         }
-      }
 
 {% endhighlight %}
 
@@ -118,7 +117,7 @@ Refer the following example,
      return Scaffold(
        body: Center(
          child: SfCartesianChart(
-           legend: Legend(isVisible: true,
+           legend: Legend(isVisible: true),
            indicators:        <TechnicalIndicators<dynamic, dynamic>[ BollingerBandIndicator<dynamic, dynamic>(
                   period: 3,
                   seriesName: 'HiloOpenClose')],
@@ -126,7 +125,6 @@ Refer the following example,
               HiloOpenCloseSeries<Sample, dynamic>(name: 'HiloOpenClose')
               ])));         
        }
-     }
 
 {% endhighlight %}
 
@@ -147,7 +145,7 @@ Refer the following example,
       return Scaffold(
         body: Center(
           child: SfCartesianChart(
-            legend: Legend(isVisible: true,
+            legend: Legend(isVisible: true),
             indicators: <TechnicalIndicators<dynamic, dynamic>>[
         EmaIndicator<dynamic, dynamic>(
             seriesName: 'HiloOpenClose',
@@ -157,7 +155,6 @@ Refer the following example,
             name: 'HiloOpenClose')
             ])));
      }
-    }
 
 {% endhighlight %}
 
@@ -180,7 +177,7 @@ Refer the following example,
      return Scaffold(
        body: Center(
           child: SfCartesianChart(
-            legend: Legend(isVisible: true,
+            legend: Legend(isVisible: true),
             indicators: <TechnicalIndicators<dynamic, dynamic>>[
           MacdIndicator<dynamic, dynamic>(
               longPeriod: 5,
@@ -190,7 +187,6 @@ Refer the following example,
           HiloOpenCloseSeries<Sample, dynamic>(name: 'HiloOpenClose')
           ])));
        }
-     }
 
 {% endhighlight %}
 
@@ -209,7 +205,7 @@ Refer the following example,
       return Scaffold(
         body: Center(
           child: SfCartesianChart(
-            legend: Legend(isVisible: true,
+            legend: Legend(isVisible: true),
             indicators: <TechnicalIndicators<dynamic, dynamic>>[
           MomentumIndicator<dynamic, dynamic>(
             period: 3,
@@ -218,7 +214,6 @@ Refer the following example,
           HiloOpenCloseSeries<Sample, dynamic>(name: 'HiloOpenClose')
           ])));
      }
-    }
 
 {% endhighlight %}
 
@@ -238,7 +233,7 @@ Refer the following example,
       return Scaffold(
         body: Center(
           child: SfCartesianChart(
-            legend: Legend(isVisible: true,
+            legend: Legend(isVisible: true),
              indicators: <TechnicalIndicators<dynamic, dynamic>>[
           RsiIndicator<dynamic, dynamic>(
             period: 3,
@@ -248,7 +243,6 @@ Refer the following example,
             series: <ChartSeries<Sample, dynamic>>[
           HiloOpenCloseSeries<Sample, dynamic>(name: 'HiloOpenClose')])));
      }
-    }
 
 {% endhighlight %}
 
@@ -265,14 +259,14 @@ The [`Simple moving average indicator`](https://pub.dev/documentation/syncfusion
       return Scaffold(
         body: Center(
           child: SfCartesianChart(
-            legend: Legend(isVisible: true,
+            legend: Legend(isVisible: true),
             indicators: <TechnicalIndicators<dynamic, dynamic>>[
           SmaIndicator<dynamic, dynamic>(
             seriesName: 'HiloOpenClose',
             valueField: 'close')],
            series: <ChartSeries<Sample, dynamic>>[
           HiloOpenCloseSeries<Sample, dynamic>(name: 'HiloOpenClose')])));
-    }}
+    }
 
 {% endhighlight %}
 
@@ -293,7 +287,7 @@ Refer the following example,
       return Scaffold(
         body: Center(
           child: SfCartesianChart(
-            legend: Legend(isVisible: true,
+            legend: Legend(isVisible: true),
             indicators: <TechnicalIndicators<dynamic, dynamic>>[
           StochasticIndicator<dynamic, dynamic>(   
               seriesName: 'HiloOpenClose',,
@@ -301,7 +295,7 @@ Refer the following example,
               dPeriod: 3)],
              series: <ChartSeries<Sample, dynamic>>[
           HiloOpenCloseSeries<Sample, dynamic>(name: 'HiloOpenClose')])));
-    }}
+    }
 
 {% endhighlight %}
 
@@ -320,14 +314,14 @@ Refer the following example,
       return Scaffold(
         body: Center(
           child: SfCartesianChart(
-            legend: Legend(isVisible: true,
+            legend: Legend(isVisible: true),
             indicators: <TechnicalIndicators<dynamic, dynamic>>[
           TmaIndicator<Sample, dynamic>(
               seriesName: 'HiloOpenClose',
               valueField: 'low')],
             series: <ChartSeries<Sample, dynamic>>[
           HiloOpenCloseSeries<Sample, dynamic>(name: 'HiloOpenClose')])));
-    }}
+    }
 {% endhighlight %}
 
 ![TMAIndicator](images/technical-indicators/tma.jpg)
@@ -354,7 +348,7 @@ The following code example can define the legend.
             series: <ChartSeries<Sample, dynamic>>[
               HiloOpenCloseSeries<Sample, dynamic>(
                   name: 'HiloOpenClose')])));
-    }}
+    }
 
 {% endhighlight %}
 
@@ -383,7 +377,7 @@ The chart will display the segment information through the tooltip. It is used t
               HiloOpenCloseSeries<Sample, dynamic>(
                   enableTooltip: true,
                   name: 'HiloOpenClose')])));
-    }}
+    }
 
 {% endhighlight %}
 
@@ -425,7 +419,6 @@ Refer the following example below
         )
       );
     }
-  }
 
 {% endhighlight %}
 
