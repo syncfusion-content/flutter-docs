@@ -1402,11 +1402,11 @@ class Model {
 
 ![Bar legend customization](images/legend/bar-legend-customization.png)
 
-## Bar legend label placement appearance
+## Bar legend labels placement
 
 You can place the labels either between the segments or on the segments using the [`labelsPlacement`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendLabelsPlacement-class.html) property.
 
-</b>Labels placement for range color mapper</b>
+<b>Labels placement for range color mapper</b>
 
 The labels are positioned between the segments when setting range color mapper without setting color mapper [`MapColorMapper.text`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/text.html) property. The [`MapColorMapper.from`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/from.html) value of the first item is positioned at starting point of the first segment and the [`MapColorMapper.to`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/to.html) value of the first item is placed at the first segment end position. For other segments, the values of [`MapColorMapper.to`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/to.html) is positioned as label between the other segments.
 
@@ -1624,7 +1624,7 @@ class Model {
 
 ![Bar legend labels placement](images/legend/bar-legend-range-color-mapper-onItem.png)
 
-</b>Labels placement for equal color mapper</b>
+<b>Labels placement for equal color mapper</b>
 
 The `labelsPlacement` option is not applicable for the shape/bubble applied with equal color mapper. By default, the labels are positioned at center of the segment.
 

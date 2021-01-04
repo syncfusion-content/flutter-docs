@@ -106,7 +106,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-[TomTom maps default view](images/tile-layer/tom_tom_default.png)
+![TomTom maps default view](images/tile-layer/tom_tom_default.png)
 
 ## Changing the center latitude and longitude
 
