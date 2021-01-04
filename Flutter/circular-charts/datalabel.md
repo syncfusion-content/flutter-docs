@@ -367,7 +367,7 @@ Data label and its connector line in the Circular charts for the point value 0 c
                                 xValueMapper: (SalesData sales, _) => sales.xValue,
                                 yValueMapper: (SalesData sales, _) => sales.yValue,
                                 dataLabelSettings: DataLabelSettings(
-                                    isVisibleForZeroValues: false, 
+                                    showZeroValue : false, 
                                     isVisible: true
                                 )
                             )

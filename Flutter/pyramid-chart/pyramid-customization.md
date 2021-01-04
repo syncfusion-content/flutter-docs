@@ -163,7 +163,7 @@ The [`smartLabelMode`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
 * [`shift`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmartLabelMode-class.html) - Shifts the data label position when a label intersects with other label.
 * [`none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmartLabelMode-class.html) - Renders all the data label when intersect.
-* [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmartLabelMode-class.html) - Hides the intersecting data label, and it is the default value.
+* [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmartLabelMode-class.html) - Hides the intersecting data label, and is the default value.
 
 {% highlight dart %} 
 
