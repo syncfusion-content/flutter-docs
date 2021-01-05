@@ -113,7 +113,7 @@ You can select a point or series programmatically on a chart using [`initialSele
             body: Center(
                 child: Container(
                     child: SfFunnelChart(
-                        initialSelectedDataIndexes: [2, 0]
+                        initialSelectedDataIndexes: [1, 0]
                     )
                 )
             )
@@ -122,7 +122,7 @@ You can select a point or series programmatically on a chart using [`initialSele
 
 {% endhighlight %}
 
-![Initial selection](images/selection/initial_render_selection.png)
+![Initial selection](images/selection/customizing_segments.png)
 
 Also refer [selection event](./events#onselectionchanged) for customizing the selection further.
 
