@@ -98,6 +98,10 @@ class MyAppState extends State<MyApp> {
 
 ![Cell builder](images/builders/cell-builder.png)
 
+>**NOTE** 
+* Use [HijriDateRangePickerCellDetails]() for the [SfHijriDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfHijriDateRangePicker-class.html).
+
+
 ## See also
 
 [How to customize the date range picker cells using builder in the Flutter (SfDateRangePicker)](https://www.syncfusion.com/kb/12208/how-to-customize-the-date-range-picker-cells-using-builder-in-the-flutter-sfdaterangepicker)
