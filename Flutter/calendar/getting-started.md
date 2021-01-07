@@ -420,3 +420,5 @@ You can get the complete getting started sample from [here](https://github.com/S
 [How to interact with event calendar cell when appointments loaded in the Flutter (SfCalendar)](https://www.syncfusion.com/kb/12218/how-to-interact-with-event-calendar-cell-when-appointments-loaded-in-the-flutter-sfcalendar)
 
 [How to customize the selection using decoration in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12245/how-to-customize-the-selection-using-decoration-in-the-flutter-event-calendar-sfcalendar)
+
+[How to navigate to the previous or next views using navigation arrows in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12247/how-to-navigate-to-the-previous-or-next-views-using-navigation-arrows-in-the-flutter-event)
