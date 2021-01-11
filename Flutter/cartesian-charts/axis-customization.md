@@ -640,7 +640,7 @@ The following properties are used to configure the plot bands:
 * [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/start.html) - Changes the start position of the plot band.
 * [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/end.html) - Changes the end position of the plot band.
 * [`size`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/size.html) - Changes how long plot band should be expanded. This is applicable only when end is not specified.
-* [`sizeType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/sizeType.html) - Changes the date-time unit of the value specified in the size property. The values can be Year, Month, Day, Hour, Minute, Second, and Millisecond.
+* [`sizeType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/sizeType.html) - Changes the date-time unit of the value specified in the size property. The values can be year, month, day, hour, minute, second, and millisecond.
 * [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/text.html) - Changes the text of the plot band.
 * [`textAngle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/textAngle.html) - Changes the angle of the text.
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/color.html) - Changes the color of the plot band.
