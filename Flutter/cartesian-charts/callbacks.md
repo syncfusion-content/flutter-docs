@@ -501,11 +501,11 @@ Triggers when indicator is rendering. Here you can customize the name, signal li
  
 The [`onIndicatorRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs-class.html) contains following arguments.
 
-* [`indicatorName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/indicatorName.html) - Used to get and set the indicator name.
-* [`indicator`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/indicator.html) - Used to get the technical indicator information.
-* [`signalLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/signalLineColor.html) - Used to change the color of the signal line.
-* [`signalLineWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/signalLineWidth.html) - Used to change the width of the signal line.
-* [`lineDashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/lineDashArray.html) - Used to change the dash array size.
+* [`indicatorName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/indicatorName.html) - used to get and set the indicator name.
+* [`indicator`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/indicator.html) - used to get the technical indicator information.
+* [`signalLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/signalLineColor.html) - used to change the color of the signal line.
+* [`signalLineWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/signalLineWidth.html) - used to change the width of the signal line.
+* [`lineDashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/lineDashArray.html) - used to change the dash array size.
 * [`seriesName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/seriesName.html) - Specifies the series name.
 * [`index`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/index.html) - Specifies the current series index
 * [`dataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/dataPoints.html) - Specifies the current datapoints.

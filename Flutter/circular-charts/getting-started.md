@@ -75,7 +75,7 @@ Once the package has been imported, initialize the chart as a child of any widge
 
 {% endhighlight %}
 
-> **NOTE**  An empty chart will be displayed.This is charts default behavior. 
+> **NOTE**  An empty chart will be displayed. This is the charts default behaviour.
 
 ## Bind data source
 

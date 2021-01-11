@@ -15,9 +15,9 @@ You can use the following properties to customize the appearance:
 
 * [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartTrackball/borderWidth.html) - Represent the border width.
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartTrackball/borderColor.html) - Represent the border color.
-* [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartTrackball/backgroundColor.html) - Represent the background color for track ball.
-* [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartTrackball/width.html) - Represent the width of track ball line.
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartTrackball/color.html) - Represent the color of track ball line.
+* [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartTrackball/backgroundColor.html) - Represent the background color for trackball.
+* [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartTrackball/width.html) - Represent the width of trackball line.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartTrackball/color.html) - Represent the color of trackball line.
 
 {% highlight dart %} 
 

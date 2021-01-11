@@ -23,7 +23,7 @@ You can use the following properties to customize the behavior and appearance of
 * [`intercept`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/intercept.html) - Used to provide the trendline intercept values
 * [`period`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/period.html) -Used to determine the starting point for the trendline.
 * [`polynomialOrder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/polynomialOrder.html) -used to provide the polynomial order for polynomial type trendlines.
-* [` animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/animationDuration.html) -Used to animate the trendlines . By default animationDuration has a value of 1500.When animationDuration is set to zero no animation takes place.
+* [` animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/animationDuration.html) - Used to animate the trendlines. By default, animationDuration has a value of 1500. When animationDuration is set to zero no animation takes place.
 
 
 ## Types of trendlines
@@ -305,7 +305,7 @@ The value set for the backwardForecast is used to determine the past trends.
 
 ## Legend for TrendLine
 
-Legend provides information about the series rendered in the chart. Legend for trendline gets rendered  together  with the series legend when the legend is set to be visible. Also when the  [ `name` ](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/name.html)  property is assigned to a trendline,the name of the legend is changed based on the name of the trendlines. In default  rendering the [`legendIconType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/legendIconType.html)  will be a horizontal line.
+Legend for trendline gets rendered together with the series legend when the legend is set to be visible. Also when the [name](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/name.html) property is assigned to a trendline, the name of the legend is changed based on the name of the trendlines.
 
 {% highlight dart %}
 
@@ -386,7 +386,7 @@ Chart will display details about the points through tooltip, when user interacti
                 child: Container(
                     child: SfCartesianChart(
                         tooltipBehavior: TooltipBehavior(
-                        enable: true
+                           enable: true
                         ),
                         series: <ChartSeries>[
                             // Renders spline chart

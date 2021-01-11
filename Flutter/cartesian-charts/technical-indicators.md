@@ -68,8 +68,13 @@ Refer the following example,
               highValueMapper: (Sample sales, _) => sales.high,
               openValueMapper: (Sample sales, _) => sales.open,
               closeValueMapper: (Sample sales, _) => sales.close,
-              name: 'HiloOpenClose'),])));
+              name: 'HiloOpenClose'),
+              ]
+            )
+          )
+        );
       }
+
 {% endhighlight %}
 
 ![ADIndicator](images/technical-indicators/ad.jpg)
@@ -95,8 +100,11 @@ Refer the following example,
             seriesName: 'HiloOpenClose')],
     series: <CartesianSeries<Sample, dynamic>>[
             HiloOpenCloseSeries<Sample, dynamic>(name: 'HiloOpenClose')
-              ])));
-        }
+              ]
+            )
+          )
+        );
+      }
 
 {% endhighlight %}
 
@@ -123,8 +131,11 @@ Refer the following example,
                   seriesName: 'HiloOpenClose')],
            series: <CartesianSeries<Sample,dynamic>>[
               HiloOpenCloseSeries<Sample, dynamic>(name: 'HiloOpenClose')
-              ])));         
-       }
+              ]
+            )
+          )
+        );         
+      }
 
 {% endhighlight %}
 
@@ -153,8 +164,11 @@ Refer the following example,
             series: <ChartSeries<Sample, dynamic>>[
         HiloOpenCloseSeries<Sample, dynamic>(
             name: 'HiloOpenClose')
-            ])));
-     }
+            ]
+          )
+        )
+      );
+    }
 
 {% endhighlight %}
 
@@ -185,8 +199,11 @@ Refer the following example,
               seriesName: 'HiloOpenClose')],
             series: <CartesianSeries<Sample, dynamic>>[
           HiloOpenCloseSeries<Sample, dynamic>(name: 'HiloOpenClose')
-          ])));
-       }
+           ]
+          )
+        )
+      );
+    }
 
 {% endhighlight %}
 
@@ -212,8 +229,11 @@ Refer the following example,
             seriesName: 'HiloOpenClose',)],
            series: <ChartSeries<Sample, dynamic>>[
           HiloOpenCloseSeries<Sample, dynamic>(name: 'HiloOpenClose')
-          ])));
-     }
+            ]
+          )
+        )
+      );
+    }
 
 {% endhighlight %}
 
@@ -241,7 +261,11 @@ Refer the following example,
             overbought: 70,
             oversold: 30)],
             series: <ChartSeries<Sample, dynamic>>[
-          HiloOpenCloseSeries<Sample, dynamic>(name: 'HiloOpenClose')])));
+          HiloOpenCloseSeries<Sample, dynamic>(name: 'HiloOpenClose')
+            ]
+          )
+        )
+      );
      }
 
 {% endhighlight %}
@@ -265,7 +289,11 @@ The [`Simple moving average indicator`](https://pub.dev/documentation/syncfusion
             seriesName: 'HiloOpenClose',
             valueField: 'close')],
            series: <ChartSeries<Sample, dynamic>>[
-          HiloOpenCloseSeries<Sample, dynamic>(name: 'HiloOpenClose')])));
+          HiloOpenCloseSeries<Sample, dynamic>(name: 'HiloOpenClose')
+            ]
+          )
+        )
+      );
     }
 
 {% endhighlight %}
@@ -294,7 +322,11 @@ Refer the following example,
               kPeriod: 2,
               dPeriod: 3)],
              series: <ChartSeries<Sample, dynamic>>[
-          HiloOpenCloseSeries<Sample, dynamic>(name: 'HiloOpenClose')])));
+          HiloOpenCloseSeries<Sample, dynamic>(name: 'HiloOpenClose')
+            ]
+          )
+        )
+      );
     }
 
 {% endhighlight %}
@@ -320,7 +352,11 @@ Refer the following example,
               seriesName: 'HiloOpenClose',
               valueField: 'low')],
             series: <ChartSeries<Sample, dynamic>>[
-          HiloOpenCloseSeries<Sample, dynamic>(name: 'HiloOpenClose')])));
+          HiloOpenCloseSeries<Sample, dynamic>(name: 'HiloOpenClose')
+            ]
+          )
+        )
+      );
     }
 {% endhighlight %}
 
@@ -347,8 +383,12 @@ The following code example can define the legend.
                   legendItemText: 'Indicator')],
             series: <ChartSeries<Sample, dynamic>>[
               HiloOpenCloseSeries<Sample, dynamic>(
-                  name: 'HiloOpenClose')])));
-    }
+                  name: 'HiloOpenClose')
+                  ]
+                )
+              )
+            );
+          }
 
 {% endhighlight %}
 
@@ -372,12 +412,17 @@ The chart will display the segment information through the tooltip. It is used t
             indicators: <TechnicalIndicators<dynamic, dynamic>>[
               ATRIndicator<dynamic, dynamic>(
                   seriesName: 'HiloOpenClose',
-                  )],
+                  )
+                ],
             series: <ChartSeries<Sample, dynamic>>[
               HiloOpenCloseSeries<Sample, dynamic>(
                   enableTooltip: true,
-                  name: 'HiloOpenClose')])));
-    }
+                  name: 'HiloOpenClose')
+              ]
+            )
+          )
+        );
+      }
 
 {% endhighlight %}
 

@@ -122,7 +122,7 @@ The below mentioned arguments are given to the [`showByIndex`](https://pub.dev/d
 
 ### showByPixel method in tooltipBehavior
 
-The [`showByPixel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/showByPixel.html) method is used to Display the tooltip at the specified x and y-positions.
+The [`showByPixel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/showByPixel.html) method is used to display the tooltip at the specified x and y-positions.
 
 x & y - logical pixel values to position the tooltip.
 
