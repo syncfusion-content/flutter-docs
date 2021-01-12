@@ -45,7 +45,7 @@ The [`horizontalAlignment`](https://pub.dev/documentation/syncfusion_flutter_cha
 
 **Positioning based on Alignment and Radius**
 
-To Place the annotation based on the radius values, set the [`Radius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularChartAnnotation/radius.html), and for changing the alignment of the annotation use the [`horizontalAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularChartAnnotation/horizontalAlignment.html) and [`verticalAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularChartAnnotation/verticalAlignment.html) properties of annotation are shown in the following code snippet.
+To place the annotation based on the radius values, set the [`Radius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularChartAnnotation/radius.html), and for changing the alignment of the annotation use the [`horizontalAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularChartAnnotation/horizontalAlignment.html) and [`verticalAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularChartAnnotation/verticalAlignment.html) properties of annotation are shown in the following code snippet.
 
 {% highlight dart %} 
 

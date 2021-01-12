@@ -43,9 +43,9 @@ Axis visibility can be controlled using the [`isVisible`](https://pub.dev/docume
 
 The [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/title.html) property in axis provides options to customize the text and font of axis title. Axis does not display title by default. The title can be customized using following properties,
 
-* [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisTitle/text.html) – used to set the title for axis.
-* [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisTitle/textStyle.html) – used to change the text color, size, font family, font style, and font weight.
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/color.html) – used to change the color of the label.
+* [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisTitle/text.html) - used to set the title for axis.
+* [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisTitle/textStyle.html) - used to change the text color, size, font family, font style, and font weight.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/color.html) - used to change the color of the label.
 * [`fontFamily`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontFamily.html) - used to change the font family for the axis title.
 * [`fontStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontStyle.html) - used to change the font style for the axis title.
 * [`fontWeight`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontWeight.html) - used to change the font weight for the axis title.
@@ -83,7 +83,7 @@ The [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
 
 ### Axis label rotation
 
-The [`labelRotation`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelRotation.html) property of axis can be used to rotate the axis labels position. Default value of [`labelRotation`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelRotation.html) property is 0d.
+The [`labelRotation`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelRotation.html) property of axis can be used to rotate the axis labels position. Default value of [`labelRotation`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelRotation.html) property is 0.
 
 {% highlight dart %} 
 
@@ -111,8 +111,8 @@ The [`labelRotation`](https://pub.dev/documentation/syncfusion_flutter_charts/la
 
 [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) provides support to customize the style of the axis line by defining the [`axisLine`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/axisLine.html) property as shown in the below code snippet.
 
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLine/color.html) – used to change the stroke color of axis line.
-* [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLine/width.html) – used to change the stroke width of axis line.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLine/color.html) - used to change the stroke color of axis line.
+* [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLine/width.html) - used to change the stroke width of axis line.
 * [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLine/dashArray.html) - used to render axis line series with dashes.
 
 {% highlight dart %} 
@@ -144,8 +144,8 @@ The [`labelRotation`](https://pub.dev/documentation/syncfusion_flutter_charts/la
 
 The [`labelStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelStyle.html) property in axis provides options to customize the font of axis label. The axis label can be customized using following properties,
 
-* [`labelStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelStyle.html) – used to change the text color, size, font family, font style, and font weight.
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/color.html) – used to change the color of the axis label.
+* [`labelStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelStyle.html) - used to change the text color, size, font family, font style, and font weight.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/color.html) - used to change the color of the axis label.
 * [`fontFamily`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontFamily.html) - used to change the font family for the axis label.
 * [`fontStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontStyle.html) - used to change the font style for the axis label.
 * [`fontWeight`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontWeight.html) - used to change the font weight for the axis label.
@@ -637,21 +637,21 @@ Since plot bands are drawn based on the axis, you have to add plot bands using t
 
 The following properties are used to configure the plot bands:
 
-* [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/start.html) – Changes the start position of the plot band.
-* [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/end.html) – Changes the end position of the plot band.
-* [`size`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/size.html) – Changes how long plot band should be expanded. This is applicable only when end is not specified.
-* [`sizeType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/sizeType.html) – Changes the date-time unit of the value specified in the size property. The values can be Year, Month, Day, Hour, Minute, Second, and Millisecond.
-* [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/text.html) – Changes the text of the plot band.
-* [`textAngle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/textAngle.html) – Changes the angle of the text.
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/color.html) – Changes the color of the plot band.
-* [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/gradient.html) – Applies gradient color for plot band.
-* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/opacity.html) – Changes the opacity of the plot band.
-* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/borderWidth.html) – Changes the stroke width of the plot band.
-* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/borderColor.html) – Changes the stroke color of the plot band.
-* [`horizontalTextAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/horizontalTextAlignment.html) – Aligns the text horizontally.
-* [`verticalTextAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/verticalTextAlignment.html) – Aligns the text vertically.
-* [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/isVisible.html) – Changes the visibility of the plot band in chart axis.
-* [`shouldRenderAboveSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/shouldRenderAboveSeries.html) – Changes the rendering order of the plot band.
+* [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/start.html) - Changes the start position of the plot band.
+* [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/end.html) - Changes the end position of the plot band.
+* [`size`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/size.html) - Changes how long plot band should be expanded. This is applicable only when end is not specified.
+* [`sizeType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/sizeType.html) - Changes the date-time unit of the value specified in the size property. The values can be year, month, day, hour, minute, second, and millisecond.
+* [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/text.html) - Changes the text of the plot band.
+* [`textAngle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/textAngle.html) - Changes the angle of the text.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/color.html) - Changes the color of the plot band.
+* [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/gradient.html) - Applies gradient color for plot band.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/opacity.html) - Changes the opacity of the plot band.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/borderWidth.html) - Changes the stroke width of the plot band.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/borderColor.html) - Changes the stroke color of the plot band.
+* [`horizontalTextAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/horizontalTextAlignment.html) - Aligns the text horizontally.
+* [`verticalTextAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/verticalTextAlignment.html) - Aligns the text vertically.
+* [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/isVisible.html) - Changes the visibility of the plot band in chart axis.
+* [`shouldRenderAboveSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/shouldRenderAboveSeries.html) - Changes the rendering order of the plot band.
 
 ![Plotband](images/axis-customization/plotband.jpg)
 
@@ -717,8 +717,8 @@ Plot band can be added to the date-time axis by specifying date values to the [`
 
 This feature is used to enable the plot bands to be drawn repeatedly at the regular intervals. This will be useful when you need to mark an event that occurs recursively along the timeline of the chart. The following properties are used to configure this feature:
 
-* [`repeatEvery`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/repeatEvery.html) – Changes the frequency of the plot band being repeated.
-* [`repeatUntil`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/repeatUntil.html) – Specifies the end value at which point strip line has to stop repeating.
+* [`repeatEvery`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/repeatEvery.html) - Changes the frequency of the plot band being repeated.
+* [`repeatUntil`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/repeatUntil.html) - Specifies the end value at which point strip line has to stop repeating.
 
 The following code snippet and screenshot demonstrate this feature by highlighting weekends.
 

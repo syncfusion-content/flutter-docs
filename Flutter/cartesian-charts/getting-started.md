@@ -236,7 +236,6 @@ Additionally, you need to set label for each series using the [`series.name`](ht
                                 ],
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales,
-                                name: 'Sales'
                             )
                         ]
                     )

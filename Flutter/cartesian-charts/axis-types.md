@@ -44,7 +44,7 @@ Numeric axis uses numerical scale and displays numbers as labels. By default, [`
 
 ### Inversed numeric axis
 
-By using  the [isInversed](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/isInversed.html) Property in Cartesian charts, the  numeric axis can be inverted.Axis is rendered from the minimum value to the maximum value by default, and can be inverted from the maximum value to the minimum value.
+By using  the [isInversed](https://pub.dev/documentation/By using the [isInversed](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/isInversed.html) property in Cartesian charts, the numeric axis can be inverted. Axis is rendered from the minimum value to the maximum value by default, and can be inverted from the maximum value to the minimum value.
 
 {% highlight dart %} 
 
@@ -725,8 +725,8 @@ To customize the range of log axis, use the [`minimum`](https://pub.dev/document
                 child: Container(
                     child: SfCartesianChart(
                         primaryYAxis: LogarithmicAxis(
-                            minimum: 300,
-                            maximum: 10000,
+                            minimum: 100,
+                            maximum: 100000,
                             interval: 1,
                         )  
                     )

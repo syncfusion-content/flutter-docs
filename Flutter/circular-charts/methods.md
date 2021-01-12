@@ -65,7 +65,7 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
 ### showByIndex method in tooltipBehavior
 
-The [`showByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/showByIndex.html) method is used to Displays the tooltip at the specified series and point index.
+The [`showByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/showByIndex.html) method is used to display the tooltip at the specified series and point index.
 
 The below mentioned arguments are given to the [`showByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/showByIndex.html) method:
 
@@ -122,7 +122,7 @@ The below mentioned arguments are given to the [`showByIndex`](https://pub.dev/d
 
 ### showByPixel method in tooltipBehavior
 
-The [`showByPixel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/showByPixel.html) method is used to Displays the tooltip at the specified x and y-positions.
+The [`showByPixel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/showByPixel.html) method is used to display the tooltip at the specified x and y-positions.
 
 x & y - logical pixel values to position the tooltip.
 

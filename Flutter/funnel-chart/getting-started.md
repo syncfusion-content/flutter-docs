@@ -32,7 +32,7 @@ Add the Syncfusion Flutter Chart dependency to your pub spec file.
 
 {% endhighlight %}
 
-N> Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Charts`](https://pub.dev/packages/syncfusion_flutter_charts/versions) package.
+>**NOTE**  Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Charts`](https://pub.dev/packages/syncfusion_flutter_charts/versions) package.
 
 **Get packages**
 
@@ -74,7 +74,7 @@ Once the package has been imported, initialize the chart as a child of any widge
 
 {% endhighlight %}
 
-_note_ : An empty chart will be displayed.This is charts default behavior. 
+>**NOTE**: An empty chart will be displayed. This is the charts default behavior. 
 
 ## Bind data source
 
