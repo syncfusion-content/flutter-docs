@@ -84,7 +84,7 @@ Triggers while rendering the axis labels. Text and text styles such as color, fo
 * [`axisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelRenderArgs/axisName.html) - specifies the axis name.
 * [`orientation`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelRenderArgs/orientation.html) - specifies the current axis orientation.
 * [`axis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelRenderArgs/axis.html) - holds the information about the current axis.
-* [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelRenderArgs/textStyle.html) – used to change the text color, size, font family, font style, and font weight.
+* [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelRenderArgs/textStyle.html) - used to change the text color, size, font family, font style, and font weight.
 
 
 {% highlight dart %}
@@ -112,7 +112,7 @@ Triggers while rendering the axis labels. Text and text styles such as color, fo
 Triggers when data label is rendering. Text and text styles such as color, font size, and font weight can be customized. The [`onDataLabelRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onDataLabelRender.html) Callback contains the following arguments.
 
 * [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/text.html) - used to get and set the content of the data label.
-* [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/textStyle.html) – used to change the text color, size, font family, font style, and font weight.
+* [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/textStyle.html) - used to change the text color, size, font family, font style, and font weight.
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/pointIndex.html) - specifies the current point index.
 * [`seriesRenderer`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/series.html) - specifies current series and the series type may vary based on the chart type.
 * [`dataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/dataPoints.html) - used to get the data points of the series.
@@ -501,11 +501,11 @@ Triggers when indicator is rendering. Here you can customize the name, signal li
  
 The [`onIndicatorRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs-class.html) contains following arguments.
 
-* [`indicatorName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/indicatorName.html) - Used to get and set the indicator name.
+* [`indicatorName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/indicatorName.html) - used to get and set the indicator name.
 * [`indicator`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/indicator.html) - used to get the technical indicator information.
-* [`signalLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/signalLineColor.html) - Used to change the color of the signal line.
-* [`signalLineWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/signalLineWidth.html) - Used to change the width of the signal line.
-* [`lineDashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/lineDashArray.html) - Used to change the dash array size.
+* [`signalLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/signalLineColor.html) - used to change the color of the signal line.
+* [`signalLineWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/signalLineWidth.html) - used to change the width of the signal line.
+* [`lineDashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/lineDashArray.html) - used to change the dash array size.
 * [`seriesName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/seriesName.html) - Specifies the series name.
 * [`index`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/index.html) - Specifies the current series index
 * [`dataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/dataPoints.html) - Specifies the current datapoints.
@@ -685,7 +685,7 @@ The callback contains the following argument:
 
 ## onMarkerRender
 
-Triggers when the marker is being rendered. Here, you can customized the following arguments.
+Triggers when the marker is being rendered. Here, you can customize the following arguments.
 
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerRenderArgs/pointIndex.html) - to get the point index of the marker.
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerRenderArgs/seriesIndex.html) - to get the series index of the marker.
