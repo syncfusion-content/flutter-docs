@@ -203,7 +203,7 @@ Specifies a logical test to perform
 </tr>
 <tr>
 <td>
-<a href="https://help.syncfusion.com/flutter/xlsio/working-with-logical-function#and-function">AND</a>
+<a href="">AND</a>
 </td>
 <td>
 Returns TRUE if all of its arguments are TRUE
@@ -211,7 +211,7 @@ Returns TRUE if all of its arguments are TRUE
 </tr>
 <tr>
 <td>
-<a href="https://help.syncfusion.com/flutter/xlsio/working-with-logical-function#or-function">OR</a>
+<a href="">OR</a>
 </td>
 <td>
 Returns TRUE if any argument is TRUE
@@ -219,7 +219,7 @@ Returns TRUE if any argument is TRUE
 </tr>
 <tr>
 <td>
-<a href="https://help.syncfusion.com/flutter/xlsio/working-with-logical-function#not-function">NOT</a>
+<a href="">NOT</a>
 </td>
 <td>
 Reverses the logic of its argument
@@ -227,8 +227,7 @@ Reverses the logic of its argument
 </tr>
 <tr>
 <td>
-<a href="https://help.syncfusion.com/flutter/xlsio/working-with-text-functions#concatenate-function
-">CONCATENATE</a>
+<a href="">CONCATENATE</a>
 </td>
 <td>
 Joins several text items into one text item
@@ -236,7 +235,7 @@ Joins several text items into one text item
 </tr>
 <tr>
 <td>
-<a href="https://help.syncfusion.com/flutter/xlsio/working-with-text-functions#trim-function">TRIM</a>
+<a href="">TRIM</a>
 </td>
 <td>
 Removes spaces from text
@@ -244,7 +243,7 @@ Removes spaces from text
 </tr>
 <tr>
 <td>
-<a href="https://help.syncfusion.com/flutter/xlsio/working-with-text-functions#lower-function">LOWER</a>
+<a href="">LOWER</a>
 </td>
 <td>
 Converts text to lowercase
@@ -252,7 +251,7 @@ Converts text to lowercase
 </tr>
 <tr>
 <td>
-<a href="https://help.syncfusion.com/flutter/xlsio/working-with-text-functions#upper-function">UPPER</a>
+<a href="">UPPER</a>
 </td>
 <td>
 Converts text to uppercase
@@ -260,7 +259,7 @@ Converts text to uppercase
 </tr>
 <tr>
 <td>
-<a href="https://help.syncfusion.com/flutter/xlsio/working-with-time-functions#now-function">NOW</a>
+<a href="">NOW</a>
 </td>
 <td>
 Returns the serial number of the current date and time
@@ -268,7 +267,7 @@ Returns the serial number of the current date and time
 </tr>
 <tr>
 <td>
-<a href="https://help.syncfusion.com/flutter/xlsio/working-with-time-functions#today-function">TODAY</a>
+<a href="">TODAY</a>
 </td>
 <td>
 Returns the serial number of today's date
@@ -276,7 +275,7 @@ Returns the serial number of today's date
 </tr>
 <tr>
 <td>
-<a href="https://help.syncfusion.com/flutter/xlsio/working-with-lookup-references-functions#index-function">INDEX</a>
+<a href="">INDEX</a>
 </td>
 <td>
 Uses an index to choose a value from a reference or array
@@ -284,7 +283,7 @@ Uses an index to choose a value from a reference or array
 </tr>
 <tr>
 <td>
-<a href="https://help.syncfusion.com/flutter/xlsio/working-with-lookup-references-functions#match-function">MATCH</a>
+<a href="">MATCH</a>
 </td>
 <td>
 Looks up values in a reference or array
