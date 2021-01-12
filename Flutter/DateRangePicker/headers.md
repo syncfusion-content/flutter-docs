@@ -6,10 +6,11 @@ platform: Flutter
 control: SfDateRangePicker
 documentation: ug
 ---
-## Header
+
+# Header in Flutter Date Range Picker
 You can customize the header of the data range picker using the [headerStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/headerStyle.html) and [headerHeight](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/headerHeight.html) properties in date range picker.
 
-### Customize the header height
+## Customize the header height
 You can customize the height of the header of `DateRangePicker` by using the `headerHeight` property.
 
 {% tabs %}
@@ -30,7 +31,7 @@ Widget build(BuildContext context) {
 
 ![Header height Date Range Picker](images/headers/headerheight.png)
 
-### Header appearance
+## Header appearance
 You can customize the header style of the `DataRangePicker` by using the [backgroundColor](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerHeaderStyle/backgroundColor.html), [textStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerHeaderStyle/textStyle.html), and [textAlign](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerHeaderStyle/textAlign.html) properties of [DateRangePickerHeaderStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerHeaderStyle-class.html).
 
 {% tabs %}
@@ -128,7 +129,7 @@ Widget build(BuildContext context) {
 
 ![View Header format Date Range Picker](images/headers/viewheaderformat.png)
 
-## See also
+### See also
 
 [How to replace the view header with the custom widget in Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12098/how-to-replace-the-view-header-with-the-custom-widget-in-flutter-date-range-picker)
 
