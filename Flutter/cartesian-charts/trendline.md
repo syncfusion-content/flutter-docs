@@ -15,7 +15,7 @@ Trendlines can be generated for the Cartesian type series (Line, Column, Scatter
 
 You can use the following properties to customize the behavior and appearance of trendlines.
 
-* [`type`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineType-class.html) - Specifies the type of trendline the must be added to the series.
+* [`type`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineType-class.html) - Specifies the type of trendline that must be added to the series.
 * [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/isVisible.html) -Used to toggle the visibility of trendlines in a series.
 * [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/width.html) -Used to determine the width of trendline.
 * [`backwardForecast`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/backwardForecast.html) -Used to specify the range of backward forecast for the trendline.
@@ -23,7 +23,7 @@ You can use the following properties to customize the behavior and appearance of
 * [`intercept`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/intercept.html) - Used to provide the trendline intercept values
 * [`period`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/period.html) -Used to determine the starting point for the trendline.
 * [`polynomialOrder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/polynomialOrder.html) -used to provide the polynomial order for polynomial type trendlines.
-* [ ` animationDuration` ](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/animationDuration.html) -Used to animate the trendlines . By default animationDuration has a value of 1500.When animationDuration is set to zero no animation takes place.
+* [` animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/animationDuration.html) - Used to animate the trendlines. By default, animationDuration has a value of 1500. When animationDuration is set to zero no animation takes place.
 
 
 ## Types of trendlines
@@ -305,7 +305,7 @@ The value set for the backwardForecast is used to determine the past trends.
 
 ## Legend for TrendLine
 
-Legend provides information about the series rendered in the chart.Legend for trendline gets rendered  together  with the series legend when the legend is set to be visible.Also when the  [ `name` ](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/name.html)  property is assigned to a trendline,the name of the legend is changed based on the name of the trendlines.In default  rendering the [`legendIconType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/legendIconType.html)  will be a horizontal line.
+Legend for trendline gets rendered together with the series legend when the legend is set to be visible. Also when the [name](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/name.html) property is assigned to a trendline, the name of the legend is changed based on the name of the trendlines.
 
 {% highlight dart %}
 
@@ -360,7 +360,8 @@ Data markers are used to provide information about the data points in the series
                                 name:'trendline-name',
                                 markerSettings: MarkerSettings(isVisible:true),
                                 color: Colors.blue)
-                             ],
+                                ],
+                            ),
                         ]
                     )
                 )
@@ -384,6 +385,9 @@ Chart will display details about the points through tooltip, when user interacti
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        tooltipBehavior: TooltipBehavior(
+                           enable: true
+                        ),
                         series: <ChartSeries>[
                             // Renders spline chart
                             SplineSeries<SalesData, double>(
@@ -395,7 +399,8 @@ Chart will display details about the points through tooltip, when user interacti
                                  enableTooltip: true,
                                  markerSettings: MarkerSettings(isVisible:true),
                                 color: Colors.blue)
-                             ],
+                                ],
+                            )    
                         ]
                     )
                 )
