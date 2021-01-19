@@ -109,7 +109,7 @@ You can initialize the required spark charts type by specifying the widget name 
                 child: Container(
                     //Initialize the spark area chart
                     child: SfSparkAreaChart(
-                        axisLIneWidth:0,
+                        axisLineWidth:0,
                          data: <double>[
                              10,6, 8, -5, 11, 5, -2, 7, -3, 6, 8, 10
                         ]
@@ -153,7 +153,7 @@ You can add data labels to improve the readability of the chart using the [`labe
 
 ## Enable trackball for spark chart
 
-The spark charts displays additional information through trackball when touch the particular location of chart area. You can enable trackball by setting the [`trackball`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart/trackball.html) property in [`SparkChartTrackball`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartTrackball-class.html). Once it is activated, it will appear in the UI and move based on your touch movement until you stop touching on the chart.
+The spark charts displays additional information through trackball when touched on a specific location of the chart area. You can enable trackball by setting the [`trackball`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart/trackball.html) property in [`SparkChartTrackball`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartTrackball-class.html). Once it is activated, it will appear in the UI and move based on your touch movement until you stop touching on the chart.
 
 {% highlight dart %} 
 
