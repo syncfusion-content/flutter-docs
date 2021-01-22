@@ -412,3 +412,13 @@ You can get the complete getting started sample from [here](https://github.com/S
 [How to customize the cell border in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12118/how-to-customize-the-cell-border-in-the-flutter-event-calendar-sfcalendar)
 
 [How to apply theming in Flutter event calendar (SfCalendar)?](https://www.syncfusion.com/kb/11899/how-to-apply-theming-in-flutter-event-calendar-sfcalendar)
+
+[How to add an image as background in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12243/how-to-add-an-image-as-background-in-the-flutter-event-calendar-sfcalendar)
+
+[How to change the first day of week in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12222/how-to-change-the-first-day-of-week-in-the-flutter-event-calendar-sfcalendar)
+
+[How to interact with event calendar cell when appointments loaded in the Flutter (SfCalendar)](https://www.syncfusion.com/kb/12218/how-to-interact-with-event-calendar-cell-when-appointments-loaded-in-the-flutter-sfcalendar)
+
+[How to customize the selection using decoration in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12245/how-to-customize-the-selection-using-decoration-in-the-flutter-event-calendar-sfcalendar)
+
+[How to navigate to the previous or next views using navigation arrows in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12247/how-to-navigate-to-the-previous-or-next-views-using-navigation-arrows-in-the-flutter-event)
