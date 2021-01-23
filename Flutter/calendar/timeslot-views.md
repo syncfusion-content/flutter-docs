@@ -521,3 +521,5 @@ Widget build(BuildContext context) {
 [How to highlight the working and non-working hours in the Flutter event calendar (SfCalendar)?](https://www.syncfusion.com/kb/11711/how-to-highlight-the-working-and-non-working-hours-in-the-flutter-event-calendar-sfcalendar)
 
 [How to highlight the lunch hours in the Flutter event calendar (SfCalendar)?](https://www.syncfusion.com/kb/11710/how-to-highlight-the-lunch-hours-in-the-flutter-event-calendar-sfcalendar)
+
+[How to autofit the calendar to screen height in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12231/how-to-autofit-the-calendar-to-screen-height-in-the-flutter-event-calendar-sfcalendar)
