@@ -124,7 +124,7 @@ This page helps to navigate to the public API's available in the Syncfusion Flut
             <a href="https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad-class.html">Link</a>
         </td>
     </tr>
-	<tr>
+    <tr>
         <td>
             XlsIO
         </td>
