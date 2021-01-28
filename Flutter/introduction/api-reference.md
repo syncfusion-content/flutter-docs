@@ -116,4 +116,12 @@ This page helps to navigate to the public API's available in the Syncfusion Flut
             <a href="https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/sparkcharts-library.html">Link</a>
         </td>
     </tr>
+    <tr>
+        <td>
+            XlsIO
+        </td>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_xlsio/latest/xlsio/xlsio-library.html">Link</a>
+        </td>
+    </tr>
 </table>
