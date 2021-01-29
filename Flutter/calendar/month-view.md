@@ -399,3 +399,7 @@ Widget build(BuildContext context) {
 [How to customize the leading and trailing dates of the month cells in the Flutter event calendar (SfCalendar)?](https://www.syncfusion.com/kb/11988/how-to-customize-the-leading-and-trailing-dates-of-the-month-cells-in-the-flutter-event)
 
 [How to customize the month cells of the Flutter event calendar (SfCalendar)?](https://www.syncfusion.com/kb/12016/how-to-customize-the-month-cells-of-the-flutter-event-calendar-sfcalendar)
+
+[How to customize the agenda view appointment using the style proeprties in Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12271/how-to-customize-the-agenda-view-appointment-using-the-style-proeprties-in-flutter-event)
+
+[How to get the month and year of month view in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12259/how-to-get-the-month-and-year-of-month-view-in-the-flutter-event-calendar-sfcalendar)
