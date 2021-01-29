@@ -17,7 +17,6 @@ Syncfusion Flutter Charts is a data visualization library written natively in Da
 
 * Supports more than 3 different series types such as pie, doughnut, and radial bar series. Each type represents data in a unique style. It is more user friendly and has greater UI visualization.
 * Plots data against multiple scales that help to visualize the mixed types of data in a single chart.
-* Supports to render multiple series at the same time with options to compare and visualize two different chart series simultaneously.
 * Provides various options to customize the chart features, labels, legends, series, etc. and visualize them accordingly.
 
 You can get the examples in the following link:: [`Flutter Charts`](https://github.com/syncfusion/flutter-examples).

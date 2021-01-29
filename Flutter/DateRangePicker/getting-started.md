@@ -146,3 +146,5 @@ Widget build(BuildContext context) {
 ## See also
 
 [How to apply theming in Flutter date range picker (SfDateRangePicker)?](https://www.syncfusion.com/kb/11898/how-to-apply-theming-in-flutter-date-range-picker-sfdaterangepicker)
+
+[How to change the first day of week in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12221/how-to-change-the-first-day-of-week-in-the-flutter-date-range-picker-sfdaterangepicker)

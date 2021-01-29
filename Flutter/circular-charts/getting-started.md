@@ -32,7 +32,8 @@ Add the Syncfusion Flutter Chart dependency to your pub spec file.
 
 {% endhighlight %}
 
-N> Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Charts`](https://pub.dev/packages/syncfusion_flutter_charts/versions) package.
+> **NOTE** 
+Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Charts`](https://pub.dev/packages/syncfusion_flutter_charts/versions) package.
 
 **Get packages**
 
@@ -74,7 +75,7 @@ Once the package has been imported, initialize the chart as a child of any widge
 
 {% endhighlight %}
 
-_note_ : An empty chart will be displayed.This is charts default behavior. 
+> **NOTE**: An empty chart will be displayed. This is the charts default behavior.
 
 ## Bind data source
 
@@ -97,7 +98,6 @@ Based on your data, initialize the series type. In the series, you need to map t
                         // Render pie chart
                         PieSeries<ChartData, String>(
                             dataSource: chartData,
-                            pointColorMapper:(ChartData data,  _) => data.color,
                             xValueMapper: (ChartData data, _) => data.x,
                             yValueMapper: (ChartData data, _) => data.y
                         )
@@ -145,7 +145,6 @@ You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/
                                 ChartData('Apr', 32),
                                 ChartData('May', 40)
                                 ],
-                                pointColorMapper: (ChartData data, _) => data.color,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y
                             )
@@ -183,7 +182,6 @@ You can add data labels to improve the readability of the chart using the [`data
                                     SalesData('Apr', 32),
                                     SalesData('May', 40)
                                 ],
-                                pointColorMapper: (SalesData sales, _) => sales.color,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales,
                                 // Render the data label
@@ -227,7 +225,6 @@ You can use legend in chart by setting the [`isVisible`](https://pub.dev/documen
                                     SalesData('Apr', 32),
                                     SalesData('May', 40)
                                 ],
-                                pointColorMapper: (SalesData sales, _) => sales.color,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales,
                                 name: 'Sales'
@@ -275,7 +272,6 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
                                     SalesData('Apr', 32),
                                     SalesData('May', 40)
                                 ],
-                                pointColorMapper: (SalesData sales, _) => sales.color,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales
                             )
