@@ -335,7 +335,7 @@ _AppointmentDataSource _getCalendarDataSource() {
 {% endhighlight %}
 {% endtabs %}
 
-![All day appointment](images/appointments/all-day-appointment_with_expansion.png)
+![All day appointment expansion](images/appointments/all-day-appointment-with-expansion.png)
 
 ## Recurrence appointment
 
