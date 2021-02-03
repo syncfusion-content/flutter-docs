@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Excel Data Syncfusion Flutter XlsIO
-description: Learn how to import data to Excel document from Array using Syncfusion Flutter XlsIO.
+description: In this section,Learn how to import data to Excel document from objects, Collections, List using Syncfusion Flutter XlsIO.
 platform: flutter
 control: Excel
 documentation: ug

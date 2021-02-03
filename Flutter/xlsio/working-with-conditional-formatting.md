@@ -208,11 +208,11 @@ The following screenshot represents generated Excel file with specific text cond
 
 ![Specific Text](images/CFSpecificText.jpg)
 
-## Format Date occuring values
+## Format Date occurring values
 
-Date occuring Conditional Formatting is used to format the Excel range contains given date using **ExcelCFType** and **CFTimePeriods** enumeration. 
+Date occurring Conditional Formatting is used to format the Excel range contains given date using **ExcelCFType** and **CFTimePeriods** enumeration. 
 
-The below code example shows how to format date occuring conditional formatting in Flutter XlsIO.
+The below code example shows how to format date occurring conditional formatting in Flutter XlsIO.
 
 {% highlight dart %}
 
@@ -227,7 +227,7 @@ final ConditionalFormats conditions =
   sheet.getRangeByName('A1:A10').conditionalFormats;
 final ConditionalFormat condition = conditions.addCondition();
 
-//Represents conditional format rule that the date occuring contains yesterday.
+//Represents conditional format rule that the date occurring contains yesterday.
 condition.formatType = ExcelCFType.timePeriod;
 condition.timePeriodType = CFTimePeriods.yesterday;
 
@@ -284,14 +284,14 @@ sheet.autoFitColumn(1);
 
 //save and dispose.
 final List<int> bytes = workbook.saveAsStream();
-File('CFDateOccuring.xlsx').writeAsBytes(bytes);
+File('CFDateoccurring.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
 {% endhighlight %}
 
-The following screenshot represents generated Excel file with date occuring conditional format in Flutter XlsIO.
+The following screenshot represents generated Excel file with date occurring conditional format in Flutter XlsIO.
 
-![Date Occuring](images/CFDateOccuring.jpg)
+![Date occurring](images/CFDateoccurring.jpg)
 
 ## Format Unique and Duplicate Values
 
@@ -356,7 +356,7 @@ workbook.dispose();
 
 {% endhighlight %}
 
-The following screenshot represents generated Excel file with date occuring conditional format in Flutter XlsIO.
+The following screenshot represents generated Excel file with date occurring conditional format in Flutter XlsIO.
 
 ![Unique Duplicate](images/CFUniqueDuplicate.jpg)
 
