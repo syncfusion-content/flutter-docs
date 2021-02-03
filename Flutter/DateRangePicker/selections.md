@@ -207,3 +207,5 @@ Widget build(BuildContext context) {
 [How to get the start and end date of the selected range in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12248/how-to-get-the-start-and-end-date-of-the-selected-range-in-the-flutter-date-range-picker)
 
 [How to change the selection shape in Flutter date range picker (SfDateRangePicker)?](https://www.syncfusion.com/kb/11900/how-to-change-the-selection-shape-in-flutter-date-range-picker-sfdaterangepicker)
+
+[How to deselect the selected date in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12138/how-to-deselect-the-selected-date-in-the-flutter-date-range-picker-sfdaterangepicker)
