@@ -96,3 +96,5 @@ Widget build(BuildContext context) {
 [How to enable or disable the past dates in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12168/how-to-enable-or-disable-the-past-dates-in-the-flutter-date-range-picker-sfdaterangepicker)
 
 [How to add active dates in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12075/how-to-add-active-dates-in-the-flutter-date-range-picker-sfdaterangepicker)
+
+[How to restrict date range picker within the date limit in Flutter date range picker (SfDateRangePicker)?](https://www.syncfusion.com/kb/11329/how-to-restrict-date-range-picker-within-the-date-limit-in-flutter-date-range-picker)
