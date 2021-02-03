@@ -129,7 +129,7 @@ Widget build(BuildContext context) {
 
 ![View Header format Date Range Picker](images/headers/viewheaderformat.png)
 
-### See also
+## See also
 
 [How to replace the view header with the custom widget in Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12098/how-to-replace-the-view-header-with-the-custom-widget-in-flutter-date-range-picker)
 

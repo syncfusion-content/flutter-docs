@@ -525,3 +525,5 @@ Widget build(BuildContext context) {
 [How to autofit the calendar to screen height in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12231/how-to-autofit-the-calendar-to-screen-height-in-the-flutter-event-calendar-sfcalendar)
 
 [How to change the time interval width and height in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12322/how-to-change-the-time-interval-width-and-height-in-the-flutter-event-calendar-sfcalendar)
+
+[How to format the view header day and date in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12339/how-to-format-the-view-header-day-and-date-in-the-flutter-event-calendar-sfcalendar)
