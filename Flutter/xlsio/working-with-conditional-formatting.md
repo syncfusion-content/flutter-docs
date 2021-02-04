@@ -291,7 +291,7 @@ workbook.dispose();
 
 The following screenshot represents generated Excel file with date occurring conditional format in Flutter XlsIO.
 
-![Date occurring](images/CFDateoccurring.jpg)
+![Date Occurring](images/CFDateOccurring.jpg)
 
 ## Format Unique and Duplicate Values
 
