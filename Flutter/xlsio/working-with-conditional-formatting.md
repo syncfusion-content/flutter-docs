@@ -643,5 +643,216 @@ The following screenshot represents the Excel file generated with `AboveBelowAve
 
 N> `AboveBelowAverage` `stdDevValue` can be applied only if the `averageType` is `aboveStdDev` or `belowStdDev`. The `stdDevValue` value should be in a range between 1 and 3.
 
+## Advanced Conditional Format Types 
+
+In conjunction with basic conditional formatting, the new formatting visualizations such as **Color** **Scales**, **Icon** **Sets** and **Data** **Bars**, are supported in Flutter XlsIO.
+
+Color Scales let you create visual effects in your data to see how the value of a cell is compared with the values in a range of cells. A color scale uses cell shading, as opposed to bars, to communicate relative values, beyond the relative size of the value of a cell.
+
+Creation of color scales and its formatting rules using the **ColorScale** class in Flutter XlsIO is illustrated as follows.
+
+{% highlight dart %}
+
+//Create color scales for the data in specified range
+final ConditionalFormats conditionalFormats =
+    sheet.getRangeByName('B1:B11').conditionalFormats;
+final ConditionalFormat conditionalFormat = conditionalFormats.addCondition();
+conditionalFormat.formatType = ExcelCFType.colorScale;
+final ColorScale colorScale = conditionalFormat.colorScale;
+
+//Sets 3 - color scale
+colorScale.setConditionCount(3);
+colorScale.criteria[0].formatColor = '#9933FF';
+colorScale.criteria[0].type = ConditionValueType.lowestValue;
+colorScale.criteria[0].value = '0';
+
+colorScale.criteria[1].formatColor = '#4FE372';
+colorScale.criteria[1].type = ConditionValueType.percentile;
+colorScale.criteria[1].value = '50';
+
+colorScale.criteria[2].formatColor = '#F06506';
+colorScale.criteria[2].type = ConditionValueType.highestValue;
+colorScale.criteria[2].value = '0';
+
+conditionalFormat.firstFormulaR1C1 = '=R[1]C[0]';
+conditionalFormat.secondFormulaR1C1 = '=R[1]C[1]';
+
+{% endhighlight %}
+
+### Icon Sets
+
+Icon sets present data in three to five categories that are distinguished by a threshold value. Each icon represents a range of values and each cell is annotated with the icon that represents that range.
+
+Icon sets can be created and customized in Flutter XlsIO as follows.
+
+{% highlight dart %}
+
+//Create icon sets for the data in specified range
+final ConditionalFormats conditionalFormats = sheet.getRangeByName('C1:C11').conditionalFormats;
+final ConditionalFormat conditionalFormat = conditionalFormats.addCondition();
+conditionalFormat.formatType = ExcelCFType.iconSet;
+final IconSet iconSet = conditionalFormat.iconSet;
+
+//Apply three symbols icon and hide the data in the specified range
+iconSet.iconSet = ExcelIconSetType.threeSymbols;
+iconSet.iconCriteria[1].type = ConditionValueType.percent;
+iconSet.iconCriteria[1].value = "50";
+iconSet.iconCriteria[2].type = ConditionValueType.percent;
+iconSet.iconCriteria[2].value = "50";
+iconSet.showIconOnly = true;
+
+{% endhighlight %}
+
+### Custom Icon Sets
+
+You can customize the icon set by changing the IconSet and Index properties for each icon criteria.
+
+Custom Icon sets can be created and customized in Flutter XlsIO as follows.
+
+{% highlight dart %}
+
+{% endhighlight %}
+
+### Data Bars
+
+Here, the values in each of the selected cells are compared, and a data bar is drawn in each cell representing the value of that cell relative to the other cells in the selected range. This bar provides a clear visual cue for users, making it easier to pick out larger and smaller values in a range.
+
+This can be set and manipulated using the DataBar class as follows.
+
+{% highlight dart %}
+
+//Create data bars for the data in specified range.
+final ConditionalFormats conditionalFormats = sheet.getRangeByName('D1:D11').conditionalFormats;
+final ConditionalFormat conditionalFormat = conditionalFormats.addCondition();
+conditionalFormat.formatType = ExcelCFType.dataBar;
+final DataBar dataBar = conditionalFormat.dataBar;
+
+//Set the constraints
+dataBar.minPoint.type = ConditionValueType.lowestValue;
+dataBar.maxPoint.type = ConditionValueType.highestValue;
+
+//Set color for DataBar
+dataBar.barColor = '#FF7C80';
+
+//Hide the data bar values
+dataBar.showValue = false;
+
+{% endhighlight %}
+
+The application of these visualizations to a sample data and its output file is represented in the following code example.
+
+{% highlight dart %}
+
+// Create a new Excel Document.
+final Workbook workbook = Workbook();
+
+// Accessing sheet via index.
+final Worksheet sheet = workbook.worksheets[0];
+
+sheet.getRangeByName('A1').setText('Name');
+sheet.getRangeByName('A2').setText('Andy');
+sheet.getRangeByName('A3').setText('Jim');
+sheet.getRangeByName('A4').setText('Zuke');
+sheet.getRangeByName('A5').setText('Mark');
+sheet.getRangeByName('A6').setText('Steve');
+sheet.getRangeByName('A7').setText('Shan');
+sheet.getRangeByName('A8').setText('John');
+sheet.getRangeByName('A9').setText('Anne');
+sheet.getRangeByName('A10').setText('Jessi');
+sheet.getRangeByName('A11').setText('Olive');
+sheet.getRangeByName('B1').setText('Mark-1');
+sheet.getRangeByName('B2').number = 35;
+sheet.getRangeByName('B3').number = 41;
+sheet.getRangeByName('B4').number = 84;
+sheet.getRangeByName('B5').number = 90;
+sheet.getRangeByName('B6').number = 100;
+sheet.getRangeByName('B7').number = 37;
+sheet.getRangeByName('B8').number = 20;
+sheet.getRangeByName('B9').number = 46;
+sheet.getRangeByName('B10').number = 87;
+sheet.getRangeByName('B11').number = 78;
+sheet.getRangeByName('C1').setText('Mark-2');
+sheet.getRangeByName('C2').number = 45;
+sheet.getRangeByName('C3').number = 78;
+sheet.getRangeByName('C4').number = 67;
+sheet.getRangeByName('C5').number = 100;
+sheet.getRangeByName('C6').number = 89;
+sheet.getRangeByName('C7').number = 67;
+sheet.getRangeByName('C8').number = 37;
+sheet.getRangeByName('C9').number = 40;
+sheet.getRangeByName('C10').number = 88;
+sheet.getRangeByName('C11').number = 35;
+sheet.getRangeByName('D1').setText('Mark-3');
+sheet.getRangeByName('D2').number = 39;
+sheet.getRangeByName('D3').number = 78;
+sheet.getRangeByName('D4').number = 45;
+sheet.getRangeByName('D5').number = 89;
+sheet.getRangeByName('D6').number = 87;
+sheet.getRangeByName('D7').number = 94;
+sheet.getRangeByName('D8').number = 48;
+sheet.getRangeByName('D9').number = 65;
+sheet.getRangeByName('D10').number = 49;
+sheet.getRangeByName('D11').number = 88;
+
+//Create color scales for the data in specified range
+ConditionalFormats conditionalFormats =
+    sheet.getRangeByName('B1:B11').conditionalFormats;
+ConditionalFormat conditionalFormat = conditionalFormats.addCondition();
+conditionalFormat.formatType = ExcelCFType.colorScale;
+final ColorScale colorScale = conditionalFormat.colorScale;
+
+//Sets 3 - color scale
+colorScale.setConditionCount(3);
+colorScale.criteria[0].formatColor = '#2C36F6';
+colorScale.criteria[0].type = ConditionValueType.lowestValue;
+colorScale.criteria[0].value = '0';
+
+colorScale.criteria[1].formatColor = '#4FE372';
+colorScale.criteria[1].type = ConditionValueType.percentile;
+colorScale.criteria[1].value = '50';
+
+colorScale.criteria[2].formatColor = '#F06506';
+colorScale.criteria[2].type = ConditionValueType.highestValue;
+colorScale.criteria[2].value = '0';
+
+conditionalFormat.firstFormulaR1C1 = '=R[1]C[0]';
+conditionalFormat.secondFormulaR1C1 = '=R[1]C[1]';
+
+//Create icon sets for the data in specified range.
+conditionalFormats = sheet.getRangeByName('C1:C11').conditionalFormats;
+conditionalFormat = conditionalFormats.addCondition();
+conditionalFormat.formatType = ExcelCFType.iconSet;
+final IconSet iconSet = conditionalFormat.iconSet;
+
+//Apply three symbols icon and hide the data in the specified range.
+iconSet.iconSet = ExcelIconSetType.threeSymbols;
+iconSet.iconCriteria[1].type = ConditionValueType.percent;
+iconSet.iconCriteria[1].value = "50";
+iconSet.iconCriteria[2].type = ConditionValueType.percent;
+iconSet.iconCriteria[2].value = "50";
+iconSet.showIconOnly = true;
+
+//Create data bars for the data in specified range.
+conditionalFormats = sheet.getRangeByName('D1:D11').conditionalFormats;
+conditionalFormat = conditionalFormats.addCondition();
+conditionalFormat.formatType = ExcelCFType.dataBar;
+final DataBar dataBar = conditionalFormat.dataBar;
+
+//Set the constraints
+dataBar.minPoint.type = ConditionValueType.lowestValue;
+dataBar.maxPoint.type = ConditionValueType.highestValue;
+
+//Set color for DataBar
+dataBar.barColor = '#FF7C80';
+
+//Hide the data bar values
+dataBar.showValue = false;
+
+// save and dispose.
+final List<int> bytes = workbook.saveAsStream();
+File('ConditionalFormatting.xlsx').writeAsBytes(bytes);
+workbook.dispose();
+
+{% endhighlight %}
 
 

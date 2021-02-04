@@ -22,8 +22,8 @@ final Workbook workbook = Workbook();
 // Accessing sheet via index.
 final Worksheet sheet = workbook.worksheets[0];
 
-//Initialize the list Array
-final List<Object> array = [
+//Initialize the list
+final List<Object> List = [
   'Toatal Income',
   20000,
   'On Date',
@@ -31,7 +31,7 @@ final List<Object> array = [
 ];
 
 //Import the Object list to Sheet
-sheet.importList(array, 1, 1, true);
+sheet.importList(list, 1, 1, true);
 
 // Save and dispose workbook.
 final List<int> bytes = workbook.saveAsStream();
