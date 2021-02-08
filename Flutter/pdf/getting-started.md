@@ -211,34 +211,34 @@ document.dispose();
 //Creates a new PDF document
 PdfDocument document = PdfDocument();
 
-//Create a DataTable
-DataTable dataTable = DataTable(columns: const <DataColumn>[
-  DataColumn(label: Text('RollNo')),
-  DataColumn(label: Text('Name')),
-  DataColumn(label: Text('Class')),
-], rows: const <DataRow>[
-  DataRow(cells: <DataCell>[
-    DataCell(Text('1')),
-    DataCell(Text('Arya')),
-    DataCell(Text('6'))
-  ]),
-  DataRow(cells: <DataCell>[
-    DataCell(Text('12')),
-    DataCell(Text('John')),
-    DataCell(Text('9'))
-  ]),
-  DataRow(cells: <DataCell>[
-    DataCell(Text('42')),
-    DataCell(Text('Tony')),
-    DataCell(Text('8'))
-  ]),
-]);
-
 //Create a PdfGrid
 PdfGrid grid = PdfGrid();
 
-//Assign data source
-grid.dataSource = dataTable;
+//Add the columns to the grid
+grid.columns.add(count: 3);
+
+//Add header to the grid
+grid.headers.add(1);
+
+//Add the rows to the grid
+PdfGridRow header = grid.headers[0];
+header.cells[0].value = 'RollNo';
+header.cells[1].value = 'Name';
+header.cells[2].value = 'Class';
+
+//Add rows to grid
+PdfGridRow row = grid.rows.add();
+row.cells[0].value = '1';
+row.cells[1].value = 'Arya';
+row.cells[2].value = '6';
+row = grid.rows.add();
+row.cells[0].value = '12';
+row.cells[1].value = 'John';
+row.cells[2].value = '9';
+row = grid.rows.add();
+row.cells[0].value = '42';
+row.cells[1].value = 'Tony';
+row.cells[2].value = '8';
 
 //Draw grid to the page of the PDF document
 grid.draw(
@@ -363,19 +363,22 @@ Since the invoice document requires only simple cell customizations, the given c
 
 {% highlight dart %}
 
-//Creates the datasource for the table
-DataTable invoiceDetails = getProductDetailsAsDataTable();
-
 //Creates a PDF grid
 PdfGrid grid = PdfGrid();
 
-//Set padding for grid cells
-grid.style.cellPadding = PdfPaddings(left: 2, right: 2, top: 2, bottom: 2);
+//Add the columns to the grid
+grid.columns.add(count: 5);
 
-//Adds the data source
-grid.dataSource = invoiceDetails;
+//Add header to the grid
+grid.headers.add(1);
 
+//Set values to the header cells
 PdfGridRow header = grid.headers[0];
+header.cells[0].value = 'Product Id';
+header.cells[1].value = 'Product Name';
+header.cells[2].value = 'Price';
+header.cells[3].value = 'Quantity';
+header.cells[4].value = 'Total';
 
 //Creates the header style
 PdfGridCellStyle headerStyle = PdfGridCellStyle();
@@ -398,6 +401,35 @@ for (int i = 0; i < header.cells.count; i++) {
   }
   header.cells[i].style = headerStyle;
 }
+
+//Add rows to grid
+PdfGridRow row = grid.rows.add();
+row.cells[0].value = 'CA-1098';
+row.cells[1].value = 'AWC Logo Cap';
+row.cells[2].value = '\$8.99';
+row.cells[3].value = '2';
+row.cells[4].value = '\$17.98';
+row = grid.rows.add();
+row.cells[0].value = 'LJ-0192';
+row.cells[1].value = 'Long-Sleeve Logo Jersey,M';
+row.cells[2].value = '\$49.99';
+row.cells[3].value = '3';
+row.cells[4].value = '\$149.97';
+row = grid.rows.add();
+row.cells[0].value = 'So-B909-M';
+row.cells[1].value = 'Mountain Bike Socks,M';
+row.cells[2].value = '\$9.5';
+row.cells[3].value = '2';
+row.cells[4].value = '\$19';
+row = grid.rows.add();
+row.cells[0].value = 'LJ-0192';
+row.cells[1].value = 'Long-Sleeve Logo Jersey,M';
+row.cells[2].value = '\$49.99';
+row.cells[3].value = '4';
+row.cells[4].value = '\$199.96';
+
+//Set padding for grid cells
+grid.style.cellPadding = PdfPaddings(left: 2, right: 2, top: 2, bottom: 2);
 
 //Creates the grid cell styles
 PdfGridCellStyle cellStyle = PdfGridCellStyle();
