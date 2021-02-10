@@ -212,7 +212,7 @@ The [`maximumZoomLevel`](https://pub.dev/documentation/syncfusion_flutter_charts
 
 {% endhighlight %}
 
-# Panning in Cartesian Chart
+## Panning 
 
 Panning can be performed on a zoomed axis. You can able to panning the zoomed chart with [`enablePanning`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/enablePanning.html) property. Defaults to `false`.
 
