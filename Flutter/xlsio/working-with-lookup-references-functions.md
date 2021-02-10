@@ -30,10 +30,10 @@ final Workbook workbook = Workbook();
 final Worksheet sheet = workbook.worksheets[0];
 
 // set the value to the cell.
-sheet.getRangeByName('A1').number = 10;
-sheet.getRangeByName('A2').number = 5;
-sheet.getRangeByName('B1').number = 4;
-sheet.getRangeByName('B2').number = 8;
+sheet.getRangeByName('A1').setNumber(10);
+sheet.getRangeByName('A2').setNumber(5);
+sheet.getRangeByName('B1').setNumber(4);
+sheet.getRangeByName('B2').setNumber(8);
 
 // Formula calculation is enabled for the sheet.
 sheet.enableSheetCalculations();
@@ -67,10 +67,10 @@ final Workbook workbook = Workbook();
 final Worksheet sheet = workbook.worksheets[0];
 
 // set the value to the cell.
-sheet.getRangeByName('A1').number = 10;
-sheet.getRangeByName('A2').number = 8;
-sheet.getRangeByName('A3').number = 6;
-sheet.getRangeByName('A4').number = 4;
+sheet.getRangeByName('A1').setNumber(10);
+sheet.getRangeByName('A2').setNumber(8);
+sheet.getRangeByName('A3').setNumber(6);
+sheet.getRangeByName('A4').setNumber(4);
 
 // Formula calculation is enabled for the sheet.
 sheet.enableSheetCalculations();
