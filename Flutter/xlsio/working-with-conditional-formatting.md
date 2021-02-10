@@ -42,6 +42,7 @@ When the criteria set for the target range is satisfied, the defined formats (li
 {% highlight dart %}
 
 //Setting format properties to be applied when the above condition is met
+//set back color in hexa decimal value.
 condition1.backColor = '#209301';
 condition1.isBold = true;
 condition1.isItalic = true;
@@ -70,8 +71,13 @@ condition1.secondFormula = '20';
 sheet.getRangeByIndex(1, 1).setText('Enter a number between 10 and 20');
 
 //Setting format properties to be applied when the above condition is met.
+//set back color in hexa decimal value.
 condition1.backColor = '#66FF99';
+//set font color in hexa decimal value.
+condition1.fontColor = '#448EBC';
+//set font bold.
 condition1.isBold = true;
+//set font italic.
 condition1.isItalic = true;
 
 //Applying conditional formatting to "A3".
@@ -85,9 +91,13 @@ condition2.firstFormula = '100';
 sheet.getRangeByIndex(3, 1).setText('Enter the Number as 100');
 
 //Setting format properties to be applied when the above condition is met.
+//set font color in hexa decimal value.
 condition2.fontColor = '#FF1574';
+//set top border line style.
 condition2.topBorderStyle = LineStyle.thick;
+//set top border color in hexa decimal value.
 condition2.topBorderColor = '#FFCC00';
+//set number format.
 condition2.numberFormat = '0.0';
 
 //Applying conditional formatting to "A5".
@@ -100,14 +110,23 @@ condition3.operator = ExcelComparisonOperator.greaterOrEqual;
 condition3.firstFormula = '50';
 sheet
   .getRangeByIndex(5, 1)
-  .setText('Enter the number value greater than or equal to 50.');
+    .setText('Enter the number value greater than or equal to 50.');
 
 //Setting format properties to be applied when the above condition is met.
-condition3.backColor = '#F16709';
-condition3.fontColor = '#17D4E3';
+//set back color in Color RGB value.
+condition3.backColorRGB = Color.fromARGB(255, 150, 200, 50);
+//set font color in Color RGB value.
+condition3.fontColorRGB = Color.fromARGB(255, 200, 20, 100);
+//set font underline
 condition3.underline = true;
+//set right border line style
 condition3.rightBorderStyle = LineStyle.double;
-condition3.rightBorderColor = '#3333FF';
+// set right border color in Color RGB value.
+condition3.rightBorderColorRGB = Color.fromARGB(240, 24, 160, 200);
+//set bottom border line style
+condition3.bottomBorderStyle = LineStyle.thin;
+// set bottom border color in Color RGB value.
+condition3.bottomBorderColorRGB = Color.fromARGB(255, 240, 160, 200);
 
 //save and dispose.
 final List<int> bytes = workbook.saveAsStream();
@@ -571,7 +590,7 @@ workbook.dispose();
 
 {% endhighlight %}
 
-The following screenshot represents the Excel file generated with `AboveBelowAverage` conditional format with `averageType` set as `below` in XlsIO.
+The following screenshot represents the Excel file generated with `AboveBelowAverage` conditional format with `averageType` set as `below` in Flutter XlsIO.
 
 ![Above or Below Average conditional format](images/CFAboveBelowAvg.jpg)
 
@@ -637,7 +656,7 @@ workbook.dispose();
 
 {% endhighlight %}
 
-The following screenshot represents the Excel file generated with `AboveBelowAverage` conditional format when `averageType` is set as `aboveStdDev` in XlsIO.
+The following screenshot represents the Excel file generated with `AboveBelowAverage` conditional format when `averageType` is set as `aboveStdDev` in Flutter XlsIO.
 
 ![Above or Below Average conditional format](images/CFAboveBelowAvgStd.jpg)
 
@@ -662,20 +681,20 @@ final ColorScale colorScale = conditionalFormat.colorScale;
 
 //Sets 3 - color scale
 colorScale.setConditionCount(3);
-colorScale.criteria[0].formatColor = '#9933FF';
+//Set format color for colorscale in hexa decimal value.
+colorScale.criteria[0].formatColor = '#2C36F6';
 colorScale.criteria[0].type = ConditionValueType.lowestValue;
 colorScale.criteria[0].value = '0';
 
-colorScale.criteria[1].formatColor = '#4FE372';
+//Set format color for colorscale in Color RGB value.
+colorScale.criteria[1].formatColorRGB = Color.fromARGB(255, 200, 20, 100);
 colorScale.criteria[1].type = ConditionValueType.percentile;
 colorScale.criteria[1].value = '50';
 
+//Set format color for colorscale in hexa decimal value.
 colorScale.criteria[2].formatColor = '#F06506';
 colorScale.criteria[2].type = ConditionValueType.highestValue;
 colorScale.criteria[2].value = '0';
-
-conditionalFormat.firstFormulaR1C1 = '=R[1]C[0]';
-conditionalFormat.secondFormulaR1C1 = '=R[1]C[1]';
 
 {% endhighlight %}
 
@@ -711,6 +730,56 @@ Custom Icon sets can be created and customized in Flutter XlsIO as follows.
 
 {% highlight dart %}
 
+// Create a new Excel Document.
+final Workbook workbook = Workbook();
+
+// Accessing sheet via index.
+final Worksheet sheet = workbook.worksheets[0];
+
+sheet.getRangeByName('A1').number = 125;
+sheet.getRangeByName('A2').number = 279;
+sheet.getRangeByName('A3').number = 42;
+sheet.getRangeByName('A4').number = 384;
+sheet.getRangeByName('A5').number = 129;
+sheet.getRangeByName('A6').number = 212;
+sheet.getRangeByName('A7').number = 131;
+sheet.getRangeByName('A8').number = 230;
+
+//Create iconset for the data in specified range.
+final ConditionalFormats conditionalFormats =
+  sheet.getRangeByName('A1:A10').conditionalFormats;
+final ConditionalFormat conditionalFormat = conditionalFormats.addCondition();
+//Set FormatType as IconSet.
+conditionalFormat.formatType = ExcelCFType.iconSet;
+final IconSet iconSet = conditionalFormat.iconSet;
+//Set conditions for IconCriteria.
+iconSet.iconSet = ExcelIconSetType.threeFlags;
+
+final IconConditionValue iconValue1 = iconSet.iconCriteria[0];
+iconValue1.iconSet = ExcelIconSetType.fiveBoxes;
+iconValue1.index = 3;
+iconValue1.type = ConditionValueType.percent;
+iconValue1.value = '25';
+iconValue1.operator = ConditionalFormatOperator.greaterThan;
+
+final IconConditionValue iconValue2 = iconSet.iconCriteria[1];
+iconValue2.iconSet = ExcelIconSetType.threeSigns;
+iconValue2.index = 2;
+iconValue2.type = ConditionValueType.percent;
+iconValue2.value = '50';
+iconValue2.operator = ConditionalFormatOperator.greaterThan;
+
+final IconConditionValue iconValue3 = iconSet.iconCriteria[2];
+iconValue3.iconSet = ExcelIconSetType.fourRating;
+iconValue3.index = 0;
+iconValue3.type = ConditionValueType.percent;
+iconValue3.value = '75';
+iconValue3.operator = ConditionalFormatOperator.greaterThan;
+
+final List<int> bytes = workbook.saveAsStream();
+File('CustomIconSet.xlsx').writeAsBytes(bytes);
+workbook.dispose();
+
 {% endhighlight %}
 
 ### Data Bars
@@ -731,15 +800,54 @@ final DataBar dataBar = conditionalFormat.dataBar;
 dataBar.minPoint.type = ConditionValueType.lowestValue;
 dataBar.maxPoint.type = ConditionValueType.highestValue;
 
-//Set color for DataBar
+//Set color for DataBar in hexa decimal value.
 dataBar.barColor = '#FF7C80';
 
 //Hide the data bar values
 dataBar.showValue = false;
 
+// set databar as border.
+dataBar.hasBorder = true;
+
+// Set Gradient fill to false.
+dataBar.hasGradientFill = false;
+
+//Set Bar Axis Position.
+dataBar.dataBarAxisPosition = DataBarAxisPosition.middle;
+
+//Set Bar Direction
+dataBar.dataBarDirection = DataBarDirection.rightToLeft;
+
+//Set Negative Border color for DataBar in hexa value.
+dataBar.negativeBorderColor = '#ED7D31';
+
+//Set Negative Bar color for DataBar in hexa value.
+dataBar.negativeFillColor = '#013461';
+
+//Set BarAxis color for DataBar in hexa value.
+dataBar.barAxisColor = '#FFDD12';
+
+//Set Border color for DataBar in hexa value.
+dataBar.borderColor = '#12DD01';
+
+//Set bar color for DataBar in Color RGB value.
+dataBar.barColorRGB = Color.fromARGB(255, 200, 13, 145);
+
+//Set Negative Border color for DataBar in Color RGB value.
+dataBar.negativeBorderColorRGB = Color.fromARGB(255, 200, 130, 0);
+
+// Set Negative Bar color for DataBar in Color RGB value.
+dataBar.negativeFillColorRGB = Color.fromARGB(230, 201, 230, 100);
+
+// Set BarAxis color for DataBar in Color RGB value.
+dataBar.barAxisColorRGB = Color.fromARGB(255, 134, 44, 224);
+
+//Set Border color for DataBar in Color RGB value.
+dataBar.borderColorRGB = Color.fromARGB(245, 45, 244, 230);
+
 {% endhighlight %}
 
-The application of these visualizations to a sample data and its output file is represented in the following code example.
+The below code example show how to use the advanced conditional formats such as **Color Scale**, **Iconset** and **DataBar** in Flutter XlsIO.
 
 {% highlight dart %}
 
@@ -764,13 +872,13 @@ sheet.getRangeByName('B1').setText('Mark-1');
 sheet.getRangeByName('B2').number = 35;
 sheet.getRangeByName('B3').number = 41;
 sheet.getRangeByName('B4').number = 84;
-sheet.getRangeByName('B5').number = 90;
+sheet.getRangeByName('B5').number = 10;
 sheet.getRangeByName('B6').number = 100;
 sheet.getRangeByName('B7').number = 37;
 sheet.getRangeByName('B8').number = 20;
 sheet.getRangeByName('B9').number = 46;
 sheet.getRangeByName('B10').number = 87;
-sheet.getRangeByName('B11').number = 78;
+sheet.getRangeByName('B11').number = 22;
 sheet.getRangeByName('C1').setText('Mark-2');
 sheet.getRangeByName('C2').number = 45;
 sheet.getRangeByName('C3').number = 78;
@@ -785,38 +893,38 @@ sheet.getRangeByName('C11').number = 35;
 sheet.getRangeByName('D1').setText('Mark-3');
 sheet.getRangeByName('D2').number = 39;
 sheet.getRangeByName('D3').number = 78;
-sheet.getRangeByName('D4').number = 45;
+sheet.getRangeByName('D4').number = 22;
 sheet.getRangeByName('D5').number = 89;
-sheet.getRangeByName('D6').number = 87;
+sheet.getRangeByName('D6').number = 54;
 sheet.getRangeByName('D7').number = 94;
 sheet.getRangeByName('D8').number = 48;
 sheet.getRangeByName('D9').number = 65;
-sheet.getRangeByName('D10').number = 49;
-sheet.getRangeByName('D11').number = 88;
+sheet.getRangeByName('D10').number = 15;
+sheet.getRangeByName('D11').number = 70;
 
 //Create color scales for the data in specified range
 ConditionalFormats conditionalFormats =
-    sheet.getRangeByName('B1:B11').conditionalFormats;
+      sheet.getRangeByName('B1:B11').conditionalFormats;
 ConditionalFormat conditionalFormat = conditionalFormats.addCondition();
 conditionalFormat.formatType = ExcelCFType.colorScale;
 final ColorScale colorScale = conditionalFormat.colorScale;
 
 //Sets 3 - color scale
 colorScale.setConditionCount(3);
+//Set format color for colorscale in hexa decimal value.
 colorScale.criteria[0].formatColor = '#2C36F6';
 colorScale.criteria[0].type = ConditionValueType.lowestValue;
 colorScale.criteria[0].value = '0';
 
-colorScale.criteria[1].formatColor = '#4FE372';
+//Set format color for colorscale in Color RGB value.
+colorScale.criteria[1].formatColorRGB = Color.fromARGB(255, 200, 20, 100);
 colorScale.criteria[1].type = ConditionValueType.percentile;
 colorScale.criteria[1].value = '50';
 
+//Set format color for colorscale in hexa decimal value.
 colorScale.criteria[2].formatColor = '#F06506';
 colorScale.criteria[2].type = ConditionValueType.highestValue;
 colorScale.criteria[2].value = '0';
-
-conditionalFormat.firstFormulaR1C1 = '=R[1]C[0]';
-conditionalFormat.secondFormulaR1C1 = '=R[1]C[1]';
 
 //Create icon sets for the data in specified range.
 conditionalFormats = sheet.getRangeByName('C1:C11').conditionalFormats;
@@ -827,9 +935,9 @@ final IconSet iconSet = conditionalFormat.iconSet;
 //Apply three symbols icon and hide the data in the specified range.
 iconSet.iconSet = ExcelIconSetType.threeSymbols;
 iconSet.iconCriteria[1].type = ConditionValueType.percent;
-iconSet.iconCriteria[1].value = "50";
+iconSet.iconCriteria[1].value = "40";
 iconSet.iconCriteria[2].type = ConditionValueType.percent;
-iconSet.iconCriteria[2].value = "50";
+iconSet.iconCriteria[2].value = "80";
 iconSet.showIconOnly = true;
 
 //Create data bars for the data in specified range.
@@ -842,17 +950,20 @@ final DataBar dataBar = conditionalFormat.dataBar;
 dataBar.minPoint.type = ConditionValueType.lowestValue;
 dataBar.maxPoint.type = ConditionValueType.highestValue;
 
-//Set color for DataBar
-dataBar.barColor = '#FF7C80';
+//Set color for DataBar in Color RGB value.
+dataBar.barColorRGB = Color.fromARGB(255, 244, 180, 10);
 
 //Hide the data bar values
 dataBar.showValue = false;
 
 // save and dispose.
 final List<int> bytes = workbook.saveAsStream();
-File('ConditionalFormatting.xlsx').writeAsBytes(bytes);
+File('ConditionalFormat.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
 {% endhighlight %}
 
+The following screenshot represents generated Excel file with advanced conditional format in Flutter XlsIO.
+
+![Advanced CF](images/ConditionalFormats.jpg)
 
