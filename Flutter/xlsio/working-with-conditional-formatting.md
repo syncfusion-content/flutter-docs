@@ -847,7 +847,7 @@ dataBar.borderColorRGB = Color.fromARGB(245, 45, 244, 230);
 
 {% endhighlight %}
 
-The below code example show how to use the advanced conditional formats such as **Color Scale**, **Iconset** and **DataBar** in Flutter XlsIO.
+The below code example show how to use the advanced conditional formats such as **Color Scale**, **Icon set** and **DataBar** in Flutter XlsIO.
 
 {% highlight dart %}
 
