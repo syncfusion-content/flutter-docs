@@ -362,6 +362,8 @@ Markers are rendered with the series color and placed near the value in tracakba
 
 Trackball tooltip marker uses the same shape specified for the series marker. But trackball tooltip marker will render based on the value specified to this property irrespective of considering the series marker's visibility.
 
+Defaults to `true`.
+
 {% highlight dart %} 
 
     @override
