@@ -358,7 +358,7 @@ You can customize the appearance of the trackball tooltip with your own widgets 
 
 The [`canShowMarker`]() is used to toggles the visibility of the marker in the trackball tooltip.
 
-Markers are rendered with the series color and placed near the value in tracakball tooltip to convey which value belongs to which series. 
+Markers are rendered with the series color and placed near the value in trackball tooltip to convey which value belongs to which series. 
 
 Trackball tooltip marker uses the same shape specified for the series marker. But trackball tooltip marker will render based on the value specified to this property irrespective of considering the series marker's visibility.
 
