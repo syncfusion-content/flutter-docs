@@ -27,15 +27,15 @@ final Worksheet sheet = workbook.worksheets[0];
 final Style style = CellStyle(workbook);
 // set style name.
 style.name = 'Style1';
-// set back color in hexa decimal value.
+// set back color by hexa decimal.
 style.backColor = '#FF5050';
-// set back color in Color RGB value.
+// set back color by RGB values.
 style.backColorRGB = Color.fromARGB(255, 34, 244, 0);
 // set font name.
 style.fontName = 'Aldhabi';
-// set font color in hexa decimal vlaue.
+// set font color by hexa decimal.
 style.fontColor = '#138939';
-// set font color in Color RGB value.
+// set font color by RGB values.
 style.fontColorRGB = Color.fromARGB(255, 244, 0, 34);
 // set font size.
 style.fontSize = 16;
@@ -55,11 +55,11 @@ style.vAlign = VAlignType.bottom;
 style.indent = 1;
 // set top bordera line style.
 style.borders.top.lineStyle = LineStyle.double;
-// set top borders color in hexa decimal value.
+// set top borders color by hexa decimal.
 style.borders.top.color = '#FFFF66';
 // set right bordera line style.
 style.borders.right.lineStyle = LineStyle.thick;
-// set right borders color in Color RGB value.
+// set right borders color by RGB values.
 style.borders.right.colorRGB = Color.fromARGB(255, 0, 34, 244);
 // set wrap text.
 style.wrapText = true;

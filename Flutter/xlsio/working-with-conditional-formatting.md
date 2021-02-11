@@ -42,7 +42,7 @@ When the criteria set for the target range is satisfied, the defined formats (li
 {% highlight dart %}
 
 //Setting format properties to be applied when the above condition is met
-//set back color in hexa decimal value.
+//set back color by hexa decimal.
 condition1.backColor = '#209301';
 condition1.isBold = true;
 condition1.isItalic = true;
@@ -71,9 +71,9 @@ condition1.secondFormula = '20';
 sheet.getRangeByIndex(1, 1).setText('Enter a number between 10 and 20');
 
 //Setting format properties to be applied when the above condition is met.
-//set back color in hexa decimal value.
+//set back color by hexa decimal.
 condition1.backColor = '#66FF99';
-//set font color in hexa decimal value.
+//set font color by hexa decimal.
 condition1.fontColor = '#448EBC';
 //set font bold.
 condition1.isBold = true;
@@ -91,11 +91,11 @@ condition2.firstFormula = '100';
 sheet.getRangeByIndex(3, 1).setText('Enter the Number as 100');
 
 //Setting format properties to be applied when the above condition is met.
-//set font color in hexa decimal value.
+//set font color by hexa decimal.
 condition2.fontColor = '#FF1574';
 //set top border line style.
 condition2.topBorderStyle = LineStyle.thick;
-//set top border color in hexa decimal value.
+//set top border color by hexa decimal.
 condition2.topBorderColor = '#FFCC00';
 //set number format.
 condition2.numberFormat = '0.0';
@@ -113,19 +113,19 @@ sheet
     .setText('Enter the number value greater than or equal to 50.');
 
 //Setting format properties to be applied when the above condition is met.
-//set back color in Color RGB value.
+//set back color by RGB values.
 condition3.backColorRGB = Color.fromARGB(255, 150, 200, 50);
-//set font color in Color RGB value.
+//set font color by RGB values.
 condition3.fontColorRGB = Color.fromARGB(255, 200, 20, 100);
 //set font underline
 condition3.underline = true;
 //set right border line style
 condition3.rightBorderStyle = LineStyle.double;
-// set right border color in Color RGB value.
+// set right border color by RGB values.
 condition3.rightBorderColorRGB = Color.fromARGB(240, 24, 160, 200);
 //set bottom border line style
 condition3.bottomBorderStyle = LineStyle.thin;
-// set bottom border color in Color RGB value.
+// set bottom border color by RGB values.
 condition3.bottomBorderColorRGB = Color.fromARGB(255, 240, 160, 200);
 
 //save and dispose.
@@ -681,17 +681,17 @@ final ColorScale colorScale = conditionalFormat.colorScale;
 
 //Sets 3 - color scale
 colorScale.setConditionCount(3);
-//Set format color for colorscale in hexa decimal value.
+//Set format color for colorscale by hexa decimal.
 colorScale.criteria[0].formatColor = '#2C36F6';
 colorScale.criteria[0].type = ConditionValueType.lowestValue;
 colorScale.criteria[0].value = '0';
 
-//Set format color for colorscale in Color RGB value.
+//Set format color for colorscale by RGB values.
 colorScale.criteria[1].formatColorRGB = Color.fromARGB(255, 200, 20, 100);
 colorScale.criteria[1].type = ConditionValueType.percentile;
 colorScale.criteria[1].value = '50';
 
-//Set format color for colorscale in hexa decimal value.
+//Set format color for colorscale by hexa decimal.
 colorScale.criteria[2].formatColor = '#F06506';
 colorScale.criteria[2].type = ConditionValueType.highestValue;
 colorScale.criteria[2].value = '0';
@@ -800,7 +800,7 @@ final DataBar dataBar = conditionalFormat.dataBar;
 dataBar.minPoint.type = ConditionValueType.lowestValue;
 dataBar.maxPoint.type = ConditionValueType.highestValue;
 
-//Set color for DataBar in hexa decimal value.
+//Set color for DataBar by hexa decimal.
 dataBar.barColor = '#FF7C80';
 
 //Hide the data bar values
@@ -830,19 +830,19 @@ dataBar.barAxisColor = '#FFDD12';
 //Set Border color for DataBar in hexa value.
 dataBar.borderColor = '#12DD01';
 
-//Set bar color for DataBar in Color RGB value.
+//Set bar color for DataBar by RGB values.
 dataBar.barColorRGB = Color.fromARGB(255, 200, 13, 145);
 
-//Set Negative Border color for DataBar in Color RGB value.
+//Set Negative Border color for DataBar by RGB values.
 dataBar.negativeBorderColorRGB = Color.fromARGB(255, 200, 130, 0);
 
-// Set Negative Bar color for DataBar in Color RGB value.
+// Set Negative Bar color for DataBar by RGB values.
 dataBar.negativeFillColorRGB = Color.fromARGB(230, 201, 230, 100);
 
-// Set BarAxis color for DataBar in Color RGB value.
+// Set BarAxis color for DataBar by RGB values.
 dataBar.barAxisColorRGB = Color.fromARGB(255, 134, 44, 224);
 
-//Set Border color for DataBar in Color RGB value.
+//Set Border color for DataBar by RGB values.
 dataBar.borderColorRGB = Color.fromARGB(245, 45, 244, 230);
 
 {% endhighlight %}
@@ -911,17 +911,17 @@ final ColorScale colorScale = conditionalFormat.colorScale;
 
 //Sets 3 - color scale
 colorScale.setConditionCount(3);
-//Set format color for colorscale in hexa decimal value.
+//Set format color for colorscale by hexa decimal.
 colorScale.criteria[0].formatColor = '#2C36F6';
 colorScale.criteria[0].type = ConditionValueType.lowestValue;
 colorScale.criteria[0].value = '0';
 
-//Set format color for colorscale in Color RGB value.
+//Set format color for colorscale by RGB values.
 colorScale.criteria[1].formatColorRGB = Color.fromARGB(255, 200, 20, 100);
 colorScale.criteria[1].type = ConditionValueType.percentile;
 colorScale.criteria[1].value = '50';
 
-//Set format color for colorscale in hexa decimal value.
+//Set format color for colorscale by hexa decimal.
 colorScale.criteria[2].formatColor = '#F06506';
 colorScale.criteria[2].type = ConditionValueType.highestValue;
 colorScale.criteria[2].value = '0';
@@ -950,7 +950,7 @@ final DataBar dataBar = conditionalFormat.dataBar;
 dataBar.minPoint.type = ConditionValueType.lowestValue;
 dataBar.maxPoint.type = ConditionValueType.highestValue;
 
-//Set color for DataBar in Color RGB value.
+//Set color for DataBar by RGB values.
 dataBar.barColorRGB = Color.fromARGB(255, 244, 180, 10);
 
 //Hide the data bar values
