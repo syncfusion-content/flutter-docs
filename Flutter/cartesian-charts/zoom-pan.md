@@ -212,6 +212,37 @@ The [`maximumZoomLevel`](https://pub.dev/documentation/syncfusion_flutter_charts
 
 {% endhighlight %}
 
+## Panning 
+
+Panning can be performed on a zoomed axis. You can pan the zoomed chart with [`enablePanning`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/enablePanning.html) property. Defaults to `false`.
+
+If zoom mode is set to [`zoomMode.x`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomMode-class.html) means you can only pan to the  horizontal direction, in case the [`zoomMode.y`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomMode-class.html) means you can pan only to the  vertical direction and [`zoomMode.xy`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomMode-class.html) means you can pan to both horizontal and vertical directions on the chart.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: SafeArea(
+          child: Center(
+            child: Container(
+              child: SfCartesianChart(
+                zoomPanBehavior: ZoomPanBehavior(
+                    enablePinching: true,
+                    zoomMode: zoomMode.x,
+                    enablePanning: true,
+                )
+              )
+            )
+          )
+        )
+      );
+    }
+
+{% endhighlight %}
+
+![Panning](images/zooming-panning/panning.gif)
+
 Also refer [zooming](./events#onzooming), [zoom start](./events#onzoomstart) and [zoom end](./events#onzoomend) events for customizing the zooming further.
 
 ## See Also
