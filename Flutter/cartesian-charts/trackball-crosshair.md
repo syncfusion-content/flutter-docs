@@ -356,7 +356,7 @@ You can customize the appearance of the trackball tooltip with your own widgets 
 
 ## Trackball tooltip Marker
 
-The [`canShowMarker`]() is used to toggles the visibility of the marker in the trackball tooltip.
+The [`canShowMarker`]() is used to toggle the visibility of the marker in the trackball tooltip.
 
 Markers are rendered with the series color and placed near the value in trackball tooltip to convey which value belongs to which series. 
 
@@ -368,39 +368,35 @@ Defaults to `true`.
 
     @override
     Widget build(BuildContext context) {
-      return Scaffold(
-          child: Center(
+    return Scaffold(
+        child: Center(
             child: Container(
-              child: SfCartesianChart(
-                trackballBehavior: TrackballBehavior(
-                  enable: true,
-                )
-                <LineSeries<SalesData, double>>[
-                      LineSeries<SalesData, double>(
-                          dataSource: chartData,
-                          xValueMapper: (SalesData sales, _) => sales.year,
-                          yValueMapper: (SalesData sales, _) => sales.sales)
-                      LineSeries<SalesData, double>(
-                          dataSource: chartData,
-                          xValueMapper: (SalesData sales, _) => sales.year,
-                          yValueMapper: (SalesData sales, _) => sales.sales2),
-                      LineSeries<SalesData, double>(
-                          dataSource:chartData,
-                          xValueMapper: (SalesData sales, _) => sales.year,
-                          yValueMapper: (SalesData sales, _) => sales.sales3),
-                          LineSeries<SalesData, double>(
-                          dataSource: chartData,
-                          xValueMapper: (SalesData sales, _) => sales.year,
-                          yValueMapper: (SalesData sales, _) => sales.sales4),
-                          LineSeries<SalesData, double>(
-                          dataSource: chartData,
-                          xValueMapper: (SalesData sales, _) => sales.year,
-                          yValueMapper: (SalesData sales5, _) => sales.sales),
-                ]
-              )
-            )
-          )
-      );
+                child: SfCartesianChart(
+                    trackballBehavior: TrackballBehavior(
+                      enable: true,
+                    ),
+                    series: <LineSeries<SalesData, double>>[
+          LineSeries<SalesData, double>(
+              dataSource: chartData,
+              xValueMapper: (SalesData sales, _) => sales.year,
+              yValueMapper: (SalesData sales, _) => sales.sales),
+          LineSeries<SalesData, double>(
+              dataSource: chartData,
+              xValueMapper: (SalesData sales, _) => sales.year,
+              yValueMapper: (SalesData sales, _) => sales.sales2),
+          LineSeries<SalesData, double>(
+              dataSource: chartData,
+              xValueMapper: (SalesData sales, _) => sales.year,
+              yValueMapper: (SalesData sales, _) => sales.sales3),
+          LineSeries<SalesData, double>(
+              dataSource: chartData,
+              xValueMapper: (SalesData sales, _) => sales.year,
+              yValueMapper: (SalesData sales, _) => sales.sales4),
+          LineSeries<SalesData, double>(
+              dataSource: chartData,
+              xValueMapper: (SalesData sales, _) => sales.year,
+              yValueMapper: (SalesData sales5, _) => sales.sales),
+        ]))));
     }
 
 {% endhighlight %}
