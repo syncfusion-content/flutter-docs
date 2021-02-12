@@ -353,6 +353,60 @@ You can customize the appearance of the trackball tooltip with your own widgets 
 {% endhighlight %}
 
 ![Trackball template](images/trackball-crosshair/trackball_template.jpg)
+
+## Trackball tooltip Marker
+
+The [`canShowMarker`]() is used to toggle the visibility of the marker in the trackball tooltip.
+
+Markers are rendered with the series color and placed near the value in trackball tooltip to convey which value belongs to which series. 
+
+Trackball tooltip marker uses the same shape specified for the series marker. But trackball tooltip marker will render based on the value specified to this property irrespective of considering the series marker's visibility.
+
+Defaults to `true`.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+    return Scaffold(
+        child: Center(
+            child: Container(
+                child: SfCartesianChart(
+                    trackballBehavior: TrackballBehavior(
+                      enable: true,
+                    ),
+                    series: <LineSeries<SalesData, double>>[
+          LineSeries<SalesData, double>(
+              dataSource: chartData,
+              xValueMapper: (SalesData sales, _) => sales.year,
+              yValueMapper: (SalesData sales, _) => sales.sales),
+          LineSeries<SalesData, double>(
+              dataSource: chartData,
+              xValueMapper: (SalesData sales, _) => sales.year,
+              yValueMapper: (SalesData sales, _) => sales.sales2),
+          LineSeries<SalesData, double>(
+              dataSource: chartData,
+              xValueMapper: (SalesData sales, _) => sales.year,
+              yValueMapper: (SalesData sales, _) => sales.sales3),
+          LineSeries<SalesData, double>(
+              dataSource: chartData,
+              xValueMapper: (SalesData sales, _) => sales.year,
+              yValueMapper: (SalesData sales, _) => sales.sales4),
+          LineSeries<SalesData, double>(
+              dataSource: chartData,
+              xValueMapper: (SalesData sales, _) => sales.year,
+              yValueMapper: (SalesData sales5, _) => sales.sales),
+           ]
+         )
+        )
+       )
+     );
+    }
+
+{% endhighlight %}
+
+![Trackball tooltip marker](images/trackball-crosshair/trackball_tooltip_marker.png)
+
 ## Crosshair
 
 Crosshair has a vertical and horizontal line to view the value of the axis. 
