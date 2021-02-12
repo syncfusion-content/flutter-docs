@@ -396,7 +396,11 @@ Defaults to `true`.
               dataSource: chartData,
               xValueMapper: (SalesData sales, _) => sales.year,
               yValueMapper: (SalesData sales5, _) => sales.sales),
-        ]))));
+           ]
+         )
+        )
+       )
+     );
     }
 
 {% endhighlight %}
