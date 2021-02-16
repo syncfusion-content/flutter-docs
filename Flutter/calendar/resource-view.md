@@ -204,3 +204,5 @@ Widget build(BuildContext context) {
 [How to add appointment for the selected resources using appointment editor in Flutter event calendar (SfCalendar)?](https://www.syncfusion.com/kb/12109/how-to-add-appointment-for-the-selected-resources-using-appointment-editor-in-flutter-event)
 
 [How to add resources in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12070/how-to-add-resources-in-the-flutter-event-calendar-sfcalendar)
+
+[How to customize the resource view in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12351/how-to-customize-the-resource-view-in-the-flutter-event-calendar-sfcalendar)
