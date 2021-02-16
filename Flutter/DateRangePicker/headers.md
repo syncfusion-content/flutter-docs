@@ -129,8 +129,12 @@ Widget build(BuildContext context) {
 
 ![View Header format Date Range Picker](images/headers/viewheaderformat.png)
 
-### See also
+## See also
 
 [How to replace the view header with the custom widget in Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12098/how-to-replace-the-view-header-with-the-custom-widget-in-flutter-date-range-picker)
 
 [How to restrict the year view navigation while tapping header of the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12113/how-to-restrict-the-year-view-navigation-while-tapping-header-of-the-flutter-date-range)
+
+[How to customize the header in Flutter multi date range picker (SfDateRangePicker)?](https://www.syncfusion.com/kb/11897/how-to-customize-the-header-in-flutter-multi-date-range-picker-sfdaterangepicker)
+
+[How to style a header in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12342/how-to-style-a-header-in-the-flutter-date-range-picker-sfdaterangepicker)
