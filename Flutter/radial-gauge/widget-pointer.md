@@ -7,7 +7,7 @@ control: SfRadialGauge
 documentation: ug
 ---
 
-# Widget pointer
+# Widget pointer customization
 
 [`Widgetpointer`] allows pointing the desired value with any widget in a scale. You can set the desired widget to its [`child`] property to annotate the pointer value.
 
