@@ -109,6 +109,8 @@ class EmployeeDataSource extends DataGridSource<Employee> {
 {% endhighlight %}
 {% endtabs %}
 
+![flutter datagrid shows default view of refresh indicator](images/pull-to-refresh/flutter-datagrid-pull-to-refresh.gif)
+
 ## Customizing the refresh indicator
 
 Color and background color of refresh indicator can be customized by using the `ThemeData.accentColor` and  `ThemeData.canvasColor` properties.
@@ -130,7 +132,7 @@ Widget build(BuildContext context) {
       allowPullToRefresh: true,
       source: employeeDataSource,
       refreshIndicatorStrokeWidth: 3.0,
-      refreshIndicatorDisplacement: 50.0,
+      refreshIndicatorDisplacement: 60.0,
       columns: <GridColumn>[
         GridNumericColumn(mappingName: 'id', headerText: 'ID'),
         GridTextColumn(mappingName: 'name', headerText: 'Name'),
@@ -143,6 +145,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![flutter datagrid shows customized refresh indicator](images/pull-to-refresh/flutter-datagrid-customized-pull-to-refresh-indicator.gif)
 
 ## Programmatic Pull to Refresh
 
@@ -262,3 +266,5 @@ class EmployeeDataSource extends DataGridSource<Employee> {
 
 {% endhighlight %}
 {% endtabs %}
+
+![flutter datagrid shows programmatic refresh indicator](images/pull-to-refresh/flutter-datagrid-programmatic-pull-to-refresh.gif)
