@@ -127,6 +127,100 @@ Widget build(BuildContext context) {
 
 ![marker pointer customization](images/marker-pointers/marker_customization.jpg)
 
+**Marker elevation**
+
+The marker pointer can be elevated by rendering its shadow behind it and the z- coordinate position at which the shadow can be positioned relative to the marker can be controlled by the [`elevation`] property.
+
+{% highlight dart %}
+
+@override
+Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+          child: SfRadialGauge(
+        axes: <RadialAxis>[
+          RadialAxis(pointers: <GaugePointer>[
+            MarkerPointer(
+                value: 60, markerHeight: 20, markerWidth: 20, elevation: 4)
+          ])
+        ],
+      )),
+    );
+  }
+
+{% endhighlight %}
+
+![marker elevation](images/marker-pointers/marker_elevation.png)
+
+The shadow color of the pointer is black by default and the default value of [`elevation`] is 0.
+
+N> The [`elevation`] property applies to all the marker types except [`MarkerType.image`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerType-class.html) and [`MarkerType.text`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerType-class.html).
+
+**Marker overlay**
+
+The marker overlay rendered around the marker when the marker is dragged. When [`enableDragging`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugePointer/enableDragging.html) property of marker is set as true and while dragging the marker, the overlay will come around the marker pointer.
+
+{% highlight dart %}
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+          child: SfRadialGauge(
+        axes: <RadialAxis>[
+          RadialAxis(pointers: <GaugePointer>[
+            MarkerPointer(
+                value: 60,
+                markerHeight: 20,
+                markerWidth: 20,
+                enableDragging: true,
+                markerType: MarkerType.circle)
+          ])
+        ],
+      )),
+    );
+  }
+
+{% endhighlight %}
+
+![marker overlay](images/marker-pointers/marker_overlay.png)
+
+By default, the [`overlayRadius`] is calculated based on the provided [`markerHeight`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerPointer/markerHeight.html) and [`markerWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerPointer/markerWidth.html) property and [`overlayColor`] is considered based on [`marker color`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerPointer/color.html). The properties are used to customize the overlay color and its radius,
+
+* [`overlayColor`] – Allows customizing the overlay color.
+
+* [`overlayRadius`] – Allows customizing the overlay radius.
+
+{% highlight dart %}
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+          child: SfRadialGauge(
+        axes: <RadialAxis>[
+          RadialAxis(pointers: <GaugePointer>[
+            MarkerPointer(
+                value: 60,
+                markerHeight: 20,
+                markerWidth: 20,
+                enableDragging: true,
+                overlayRadius: 15,
+                overlayColor: Colors.red.withOpacity(0.12),
+                markerType: MarkerType.circle)
+          ])
+        ],
+      )),
+    );
+  }
+
+
+{% endhighlight %}
+
+![overlay customization](images/marker-pointers/marker_overlay_customization.png)
+
+N> The marker overlay applies to all the marker types except [`MarkerType.image`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerType-class.html) and [`MarkerType.text`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerType-class.html).
+
 ## Position customization
 
 The marker pointer can be moved near or far from its actual position using the [`markerOffset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerPointer/markerOffset.html) and [`offsetUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerPointer/offsetUnit.html) properties. 
