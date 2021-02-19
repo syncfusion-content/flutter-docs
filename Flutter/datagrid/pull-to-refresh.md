@@ -164,16 +164,6 @@ Widget build(BuildContext context) {
   return Scaffold(
     appBar: AppBar(
       title: Text('DataGrid Demo'),
-      actions: [
-        IconButton(
-            icon: Icon(Icons.refresh),
-            onPressed: () {
-              // Call this function to call the
-              // DataGridSource.handleRefresh method. So, additional
-              // rows can be added from handleRefresh method.
-              key.currentState.refresh();
-            })
-      ],
     ),
     body: SfDataGrid(
       key: key,
@@ -185,6 +175,12 @@ Widget build(BuildContext context) {
         GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
         GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
       ],
+    ),
+    floatingActionButton: FloatingActionButton(
+      child: Icon(Icons.refresh),
+      onPressed: () {
+        key.currentState.refresh();
+      },
     ),
   );
 }
