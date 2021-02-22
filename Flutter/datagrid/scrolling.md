@@ -70,11 +70,11 @@ The following example shows how to disable the horizontal and vertical scrolling
 {% endhighlight %}
 {% endtabs %}
 
-# Programmatic scrolling
+## Programmatic scrolling
 
 SfDataGrid provides support to scroll to a particular row and column index programmatically.
 
-## Scroll to row column index
+### Scroll to row column index
 
 Scroll programmatically to a particular cell can be achieved by passing the row and column indexes in the [scrollToCell]() method. SfDataGrid allows to enable or disable the scrolling animation by passing `true` to the `canAnimate` parameter in `scrollToCell` method. 
 
@@ -116,7 +116,7 @@ final DataGridController _controller = DataGridController();
 
 ![flutter datagrid shows programmatic scrolling with scroll to cell](images/scrolling/flutter-datagrid-programmatic-scrolling-scroll-to-cell.gif)
 
-## Scroll to row index
+### Scroll to row index
 
 Scroll programmatically to a particular row can be achieved by passing the row index in the [scrollToRow]() method. SfDataGrid allows to enable or disable the scrolling animation by passing `true` to the `canAnimate` parameter in `scrollToRow` method. 
 
@@ -158,7 +158,7 @@ final DataGridController _controller = DataGridController();
 
 ![flutter datagrid shows programmatic scrolling with scroll to row](images/scrolling/flutter-datagrid-programmatic-scrolling-scroll-to-row.gif)
 
-## Scroll to column index
+### Scroll to column index
 
 Scroll programmatically to a particular column can be achieved by passing the column index in the [scrollToColumn]() method. SfDataGrid allows to enable or disable the scrolling animation by passing `true` to the `canAnimate` parameter in `scrollToColumn` method. 
 
@@ -200,7 +200,7 @@ final DataGridController _controller = DataGridController();
 
 ![flutter datagrid shows programmatic scrolling with scroll to column](images/scrolling/flutter-datagrid-programmatic-scrolling-scroll-to-column.gif)
 
-## Scroll to specific position
+### Scroll to specific position
 
 SfDataGrid allows to position the scrolled row and column indexes in view programmatically by passing [DataGridScrollPosition]() to `rowPosition` and `columnPosition` in `scrollToCell`, `ScrollToRow`, `ScrollToColumn` methods. Below are the four types of positions. 
 
@@ -245,7 +245,7 @@ final DataGridController _controller = DataGridController();
 {% endhighlight %}
 {% endtabs %}
 
-## Scroll to particular offset
+### Scroll to particular offset
 
 SfDataGrid supports to Scroll programmatically to a particular offset value by passing the vertical and horizontal offset values to the [scrollToVerticalOffset]() and [scrollToHorizontalOffset]() method. Also, it allows to enable or disable the scrolling animation by passing `true` to the `canAnimate` parameter in `scrollToVerticalOffset` and `scrollToHorizontalOffset` method. 
 
