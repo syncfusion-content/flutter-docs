@@ -35,6 +35,21 @@ You can use the following properties to customize the appearance of trackball to
 N> The above mentioned properties are only applicable for SfCartesian types of charts.
 
 {% highlight dart %} 
+    
+    TrackballBehavior _trackballBehavior;
+
+    @override
+    void initState(){
+      _trackballBehavior = TrackballBehavior(
+                  // Enables the trackball
+                  enable: true,
+                  tooltipSettings: InteractiveTooltip(
+                    enable: true,
+                    color: Colors.red
+                  )
+                );
+      super.initState();
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -43,14 +58,7 @@ N> The above mentioned properties are only applicable for SfCartesian types of c
           child: Center(
             child: Container(
               child: SfCartesianChart(
-                trackballBehavior: TrackballBehavior(
-                  // Enables the trackball
-                  enable: true,
-                  tooltipSettings: InteractiveTooltip(
-                    enable: true,
-                    color: Colors.red
-                  )
-                )
+                trackballBehavior: _trackballBehavior,
               )
             )
           )
@@ -72,6 +80,18 @@ The [`tooltipDisplayMode`](https://pub.dev/documentation/syncfusion_flutter_char
 * [`none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballDisplayMode-class.html) - Doesn't display the label.
 
 {% highlight dart %} 
+    
+    TrackballBehavior _trackballBehavior;
+
+    @override
+    void initState(){
+      _trackballBehavior = TrackballBehavior(
+                  enable: true,
+                  // Display mode of trackball tooltip
+                  tooltipDisplayMode: TrackballDisplayMode.floatAllPoints
+                );
+      super.initState();
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -80,11 +100,7 @@ The [`tooltipDisplayMode`](https://pub.dev/documentation/syncfusion_flutter_char
           child: Center(
             child: Container(
               child: SfCartesianChart(
-                trackballBehavior: TrackballBehavior(
-                  enable: true,
-                  // Display mode of trackball tooltip
-                  tooltipDisplayMode: TrackballDisplayMode.floatAllPoints
-                )
+                trackballBehavior: _trackballBehavior, 
               )
             )
           )
@@ -105,6 +121,18 @@ The position of trackball tooltip can be changed using the [`tooltipAlignment`](
 * [`center`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAlignment-class.html) - aligns the trackball tooltip to the center position of plot area. 
 
 {% highlight dart %} 
+    
+    TrackballBehavior _trackballBehavior;
+
+    @override
+    void initState(){
+      _trackballBehavior = TrackballBehavior(
+                  enable: true,
+                  tooltipAlignment: ChartAlignment.near,
+                  tooltipDisplayMode: TrackballDisplayMode.groupAllPoints
+                );
+      super.initState();
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -113,11 +141,7 @@ The position of trackball tooltip can be changed using the [`tooltipAlignment`](
           child: Center(
             child: Container(
               child: SfCartesianChart(
-                trackballBehavior: TrackballBehavior(
-                  enable: true,
-                  tooltipAlignment: ChartAlignment.near,
-                  tooltipDisplayMode: TrackballDisplayMode.groupAllPoints
-                )
+                trackballBehavior: _trackballBehavior,
               )
             )
           )
@@ -136,6 +160,20 @@ N> This is applicable only when the [`tooltipDisplayMode`](https://pub.dev/docum
 By default, axis value will be displayed in the tooltip, and it can be customized using [`format`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/format.html) property by adding desired text as prefix or suffix.
 
 {% highlight dart %} 
+    
+    TrackballBehavior _trackballBehavior;
+
+    @override
+    void initState(){
+      _trackballBehavior = TrackballBehavior(
+                  enable: true,
+                  tooltipSettings: InteractiveTooltip(
+                    // Formatting trackball tooltip text
+                    format: 'point.x : point.y%'
+                  )
+                );
+      super.initState();
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -144,13 +182,7 @@ By default, axis value will be displayed in the tooltip, and it can be customize
           child: Center(
             child: Container(
               child: SfCartesianChart(
-                trackballBehavior: TrackballBehavior(
-                  enable: true,
-                  tooltipSettings: InteractiveTooltip(
-                    // Formatting trackball tooltip text
-                    format: 'point.x : point.y%'
-                  )
-                )
+                trackballBehavior: _trackballBehavior,
               )
             )
           )
@@ -174,6 +206,18 @@ The ActivationMode enum contains the following values:
 * [`none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode-class.html) - Hides the visibility of trackball when setting activation mode to none. It will be activated when calling the [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/show.html) method.
 
 {% highlight dart %} 
+    
+    TrackballBehavior _trackballBehavior;
+
+    @override
+    void initState(){
+      _trackballBehavior = TrackballBehavior(
+                  enable: true,
+                    // Displays the trackball on single tap
+                    activationMode: ActivationMode.singleTap
+                );
+      super.initState();
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -182,11 +226,7 @@ The ActivationMode enum contains the following values:
           child: Center(
             child: Container(
               child: SfCartesianChart(
-                trackballBehavior: TrackballBehavior(
-                  enable: true,
-                    // Displays the trackball on single tap
-                    activationMode: ActivationMode.singleTap
-                )
+                trackballBehavior: _trackballBehavior,
               )
             )
           )
@@ -201,6 +241,15 @@ The ActivationMode enum contains the following values:
 [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) provides support to avoid the overlapping of two or more tooltips of the trackball and no API is required for this feature as it will be done by default. For example, If we have 2 or more series data points rendered close to each other then, the trackball tooltips of each data point will not be overlap with each other.
 
 {% highlight dart %} 
+    
+    TrackballBehavior _trackballBehavior;
+
+    @override
+    void initState(){
+      _trackballBehavior = TrackballBehavior(
+                  enable: true);
+      super.initState();
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -208,9 +257,7 @@ The ActivationMode enum contains the following values:
           child: Center(
             child: Container(
               child: SfCartesianChart(
-                trackballBehavior: TrackballBehavior(
-                  enable: true
-                )
+                trackballBehavior: _trackballBehavior,
                 <LineSeries<SalesData, double>>[
                       LineSeries<SalesData, double>(
                           dataSource: data,
@@ -254,6 +301,18 @@ Trackball markers are used to provide information about the exact point location
 Also refer, [marker customization](./marker-datalabel#Marker) for customizing the appearance of trackball marker.  
 
 {% highlight dart %} 
+    
+    TrackballBehavior _trackballBehavior;
+
+    @override
+    void initState(){
+      _trackballBehavior = TrackballBehavior(
+                  enable: true,
+                  markerSettings: TrackballMarkerSettings(
+                    markerVisibility: TrackballVisibilityMode.visible)
+                );
+      super.initState();
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -261,12 +320,7 @@ Also refer, [marker customization](./marker-datalabel#Marker) for customizing th
           child: Center(
             child: Container(
               child: SfCartesianChart(
-                trackballBehavior: TrackballBehavior(
-                  enable: true,
-                  markerSettings: TrackballMarkerSettings(
-                    markerVisibility: TrackballVisibilityMode.visible
-                  )
-                )
+                trackballBehavior: _trackballBehavior,
                 <LineSeries<SalesData, double>>[
                       LineSeries<SalesData, double>(
                           dataSource: data,
@@ -296,14 +350,12 @@ Also refer, [marker customization](./marker-datalabel#Marker) for customizing th
 You can customize the appearance of the trackball tooltip with your own widgets by using the [`builder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/builder.html) property of [`trackballBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior-class.html). 
 
 {% highlight dart %} 
+    
+    TrackballBehavior _trackballBehavior;
 
     @override
-    Widget build(BuildContext context) {
-     return Scaffold(
-       child: Center(
-         child: Container(
-            child: SfCartesianChart(
-              trackballBehavior: TrackballBehavior(
+    void initState(){
+      _trackballBehavior = TrackballBehavior(
                     enable: true,
                     builder: (BuildContext context,
                         TrackballDetails trackballDetails) {
@@ -337,7 +389,17 @@ You can customize the appearance of the trackball tooltip with your own widgets 
                                                 255, 255, 255, 1)))))
                           ]));
                     },
-                  ),
+                  );
+      super.initState();
+    }
+
+    @override
+    Widget build(BuildContext context) {
+     return Scaffold(
+       child: Center(
+         child: Container(
+            child: SfCartesianChart(
+              trackballBehavior: _trackballBehavior,
               series: <CartesianChart<SalesData,            String>>[
                 SplineSeries<SalesData, double>(
                     dataSource: data,
@@ -362,6 +424,17 @@ Crosshair lines can be enabled by using [`enable`](https://pub.dev/documentation
 N> The above mentioned properties are only   applicable for SfCartesian types of charts.
 
 {% highlight dart %} 
+    
+    CrosshairBehavior _crosshairBehavior;
+
+    @override
+    void initState(){
+      _crosshairBehavior = CrosshairBehavior(
+                  // Enables the crosshair
+                  enable: true
+                );
+      super.initState();
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -376,10 +449,7 @@ N> The above mentioned properties are only   applicable for SfCartesian types of
                     enable: true
                   )
                 ),
-                crosshairBehavior: CrosshairBehavior(
-                  // Enables the crosshair
-                  enable: true
-                )
+                crosshairBehavior: _crosshairBehavior
               )
             )
           )
@@ -401,6 +471,20 @@ The appearance of the track line in crosshair can be customized using the follow
 * [`lineDashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/lineDashArray.html) - used to render crosshair line with dashes.
 
 {% highlight dart %} 
+    
+    CrosshairBehavior _crosshairBehavior;
+
+    @override
+    void initState(){
+      _crosshairBehavior = CrosshairBehavior(
+                  enable: true,
+                  lineColor: Colors.red,
+                  lineDashArray: <double>[5,5],
+                  lineWidth: 2,
+                  lineType: CrosshairLineType.vertical
+                );
+      super.initState();
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -409,13 +493,7 @@ The appearance of the track line in crosshair can be customized using the follow
         child: Center(
           child: Container(
             child: SfCartesianChart(
-              crosshairBehavior: CrosshairBehavior(
-                  enable: true,
-                  lineColor: Colors.red,
-                  lineDashArray: <double>[5,5],
-                  lineWidth: 2,
-                  lineType: CrosshairLineType.vertical
-                )
+              crosshairBehavior: _crosshairBehavior
               )
             )
           )
@@ -453,6 +531,18 @@ The ActivationMode enum contains the following values:
 * [`none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode-class.html) - Hides the visibility of crosshair when setting activation mode to none. It will be activated when calling the [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/show.html) method.
 
 {% highlight dart %} 
+    
+    CrosshairBehavior _crosshairBehavior;
+
+    @override
+    void initState(){
+      _crosshairBehavior = CrosshairBehavior(
+                  enable: true,
+                  // Displays the crosshair on single tap
+                  activationMode: ActivationMode.singleTap
+                );
+      super.initState();
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -461,11 +551,7 @@ The ActivationMode enum contains the following values:
           child: Center(
             child: Container(
               child: SfCartesianChart(
-                crosshairBehavior: CrosshairBehavior(
-                  enable: true,
-                  // Displays the crosshair on single tap
-                  activationMode: ActivationMode.singleTap
-                )
+                crosshairBehavior: _crosshairBehavior
               )
             )
           )
