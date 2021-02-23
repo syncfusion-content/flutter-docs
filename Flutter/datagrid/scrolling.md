@@ -92,10 +92,7 @@ final DataGridController _controller = DataGridController();
         FlatButton(
           child: Text('ScrollToCell'),
           onPressed: () {
-            _controller.scrollToCell(15, 2,
-                canAnimate: true,
-                rowPosition: DataGridScrollPosition.start,
-                columnPosition: DataGridScrollPosition.start);
+            _controller.scrollToCell(15, 2);
           },
         ),
         Expanded( child:SfDataGrid(
@@ -134,10 +131,7 @@ final DataGridController _controller = DataGridController();
         FlatButton(
           child: Text('ScrollToRow'),
           onPressed: () {
-            _controller.scrollToRow(15,
-                canAnimate: true,
-                rowPosition: DataGridScrollPosition.start,
-                columnPosition: DataGridScrollPosition.start);
+            _controller.scrollToRow(15);
           },
         ),
         Expanded( child:SfDataGrid(
@@ -176,10 +170,7 @@ final DataGridController _controller = DataGridController();
         FlatButton(
           child: Text('ScrollToColumn'),
           onPressed: () {
-            _controller.scrollToColumn(2,
-                canAnimate: true,
-                rowPosition: DataGridScrollPosition.start,
-                columnPosition: DataGridScrollPosition.start);
+            _controller.scrollToColumn(2);
           },
         ),
         Expanded( child:SfDataGrid(
@@ -245,9 +236,9 @@ final DataGridController _controller = DataGridController();
 {% endhighlight %}
 {% endtabs %}
 
-### Scroll to particular offset
+### Scroll to vertical offset
 
-SfDataGrid supports to Scroll programmatically to a particular offset value by passing the vertical and horizontal offset values to the [scrollToVerticalOffset]() and [scrollToHorizontalOffset]() method. Also, it allows to enable or disable the scrolling animation by passing `true` to the `canAnimate` parameter in `scrollToVerticalOffset` and `scrollToHorizontalOffset` method. 
+SfDataGrid supports to Scroll programmatically to a particular vertical offset by passing the offset values to the [scrollToVerticalOffset]() method. Also, it allows to enable the scrolling animation by passing `true` to the `canAnimate` parameter in `scrollToVerticalOffset` method. 
 
 N> The default value of `canAnimate` is `false`.
 
@@ -261,10 +252,9 @@ final DataGridController _controller = DataGridController();
     return Scaffold(
       body: Column(children: [
         FlatButton(
-          child: Text('ScrollToColumn'),
+          child: Text('ScrollToVerticalOffset'),
           onPressed: () {
-            _controller.scrollToVerticalOffset(500,
-                canAnimate: true);
+            _controller.scrollToVerticalOffset(500);
           },
         ),
         Expanded( child:SfDataGrid(
@@ -282,3 +272,44 @@ final DataGridController _controller = DataGridController();
 
 {% endhighlight %}
 {% endtabs %}
+
+![flutter datagrid shows programmatic scrolling with scroll to vertical offset](images/scrolling/flutter-datagrid-programmatic-scrolling-scroll-to-vertical-offset.gif)
+
+### Scroll to horizontal offset
+
+SfDataGrid supports to Scroll programmatically to a particular horizontal offset by passing the offset values to the[scrollToHorizontalOffset]() method. Also, it allows to enable the scrolling animation by passing `true` to the `canAnimate` parameter in `scrollToHorizontalOffset` method. 
+
+N> The default value of `canAnimate` is `false`.
+
+{% tabs %}
+{% highlight Dart %}
+
+final DataGridController _controller = DataGridController();
+
+ @override
+ Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(children: [
+        FlatButton(
+          child: Text('ScrollToHorizontalOffset'),
+          onPressed: () {
+            _controller.scrollToHorizontalOffset(400);
+          },
+        ),
+        Expanded( child:SfDataGrid(
+          source: _employeeDataSource,
+          columns: [
+            GridNumericColumn(mappingName: 'id', headerText: 'ID'),
+            GridTextColumn(mappingName: 'name', headerText: 'Name'),
+            GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
+            GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+          ],
+          controller: _controller,
+        )),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+![flutter datagrid shows programmatic scrolling with scroll to horizontal offset](images/scrolling/flutter-datagrid-programmatic-scrolling-scroll-to-horizontal-offset.gif)
