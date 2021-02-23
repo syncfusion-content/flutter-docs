@@ -192,8 +192,7 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
     @override
     void initState(){
       _selectionBehavior = SelectionBehavior(
-                enable: true
-              );
+                enable: true);
     super.initState();
     }
 

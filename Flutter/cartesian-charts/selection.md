@@ -14,11 +14,11 @@ The selection feature in chart let you to select a segment in a series or the se
 {% highlight dart %} 
     SelectionBehavior _selectionBehavior;
 
+    @override
     void initState(){
-      _selectionBehavior =  SelectionBehavior(
-                                    // Enables the selection
-                                    enable: true
-                                );
+      _selectionBehavior = SelectionBehavior(
+        // Enables the selection
+        enable: true);
         super.initState(); 
     }
 
@@ -60,13 +60,13 @@ You can customize the segments using the below properties.
 {% highlight dart %} 
     
     SelectionBehavior _selectionBehavior;
-
+    
+    @override
     void initState(){
-     _selectionBehavior =  SelectionBehavior(
-                                    enable: true,
-                                    selectedColor: Colors.red,
-                                    unselectedColor: Colors.grey
-                                );
+     _selectionBehavior = SelectionBehavior(
+            enable: true,
+            selectedColor: Colors.red,
+            unselectedColor: Colors.grey);
         super.initState(); 
     }
 
@@ -150,12 +150,12 @@ You can select a point or series programmatically on a chart using [`initialSele
 {% highlight dart %} 
     
     SelectionBehavior _selectionBehavior;
-
+    
+    @override
     void initState(){
     _selectionBehavior =  SelectionBehavior(
-                                    // Enables the selection
-                                    enable: true
-                                );
+         // Enables the selection
+         enable: true );
         super.initState(); 
     }
 

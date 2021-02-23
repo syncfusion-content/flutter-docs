@@ -17,8 +17,8 @@ The selection feature in chart let you to select a segment in a series or the se
 
     @override
     void initState(){
-      _selectionBehavior = SelectionBehavio( // Enables the selection
-                    enable: true);
+      _selectionBehavior = SelectionBehavio(        // Enables the selection
+             enable: true);
     super.initState();
     }
 

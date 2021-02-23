@@ -247,8 +247,7 @@ The ActivationMode enum contains the following values:
     @override
     void initState(){
       _trackballBehavior = TrackballBehavior(
-                  enable: true
-                );
+                  enable: true);
       super.initState();
     }
 
@@ -310,8 +309,7 @@ Also refer, [marker customization](./marker-datalabel#Marker) for customizing th
       _trackballBehavior = TrackballBehavior(
                   enable: true,
                   markerSettings: TrackballMarkerSettings(
-                    markerVisibility: TrackballVisibilityMode.visible
-                  )
+                    markerVisibility: TrackballVisibilityMode.visible)
                 );
       super.initState();
     }

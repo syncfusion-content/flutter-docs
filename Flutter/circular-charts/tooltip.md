@@ -18,8 +18,7 @@ Chart provides tooltip support for all the series. It is used to show informatio
     @override
     void initState(){
       _tooltipBehavior = TooltipBehavior(
-                enable: true
-              );
+                enable: true);
     super.initState();
     }
 

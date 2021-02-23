@@ -18,9 +18,8 @@ The selection feature in chart let you to select a segment in a series or the se
     @override
     void initState(){
       _selectionBehavior = SelectionBehavior(
-                                    // Enables the selection
-                                    enable: true
-                                );
+            // Enables the selection
+            enable: true);
     super.initState();
     }
 
@@ -68,10 +67,9 @@ You can customize the segments using the below properties.
     @override
     void initState(){
       _selectionBehavior = SelectionBehavior(
-                                    enable: true,
-                                    selectedColor: Colors.red,
-                                    unselectedColor: Colors.grey
-                                );
+             enable: true,
+             selectedColor: Colors.red,
+            unselectedColor: Colors.grey);
     super.initState();
     }
 

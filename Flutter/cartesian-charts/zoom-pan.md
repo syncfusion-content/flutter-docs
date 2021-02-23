@@ -17,7 +17,8 @@ Pinch zooming can be enabled by [`enablePinching`](https://pub.dev/documentation
 {% highlight dart %} 
 
     ZoomPanBehavior _zoomPanBehavior;
-
+    
+    @override
     void initState(){
      _zoomPanBehavior = ZoomPanBehavior(
                   // Enables pinch zooming
@@ -52,7 +53,8 @@ Double tap zooming can be enabled using [`enableDoubleTapZooming`](https://pub.d
 {% highlight dart %} 
     
     ZoomPanBehavior _zoomPanBehavior;
-
+    
+    @override
     void initState(){
      _zoomPanBehavior =  ZoomPanBehavior(
                   // Performs zooming on double tap
@@ -95,7 +97,8 @@ You can customize the selection rectangle using the below properties.
 {% highlight dart %} 
     
     ZoomPanBehavior _zoomPanBehavior;
-
+    
+    @override
     void initState(){
      _zoomPanBehavior =   ZoomPanBehavior(
                   enableSelectionZooming: true,
@@ -147,7 +150,8 @@ The axis tooltip on selection zooming can be enabled using [`enable`](https://pu
 
 {% highlight dart %} 
     ZoomPanBehavior _zoomPanBehavior;
-
+    
+    @override
     void initState(){
      _zoomPanBehavior = ZoomPanBehavior(
                   enableDoubleTapZooming: true,
@@ -220,11 +224,11 @@ The [`maximumZoomLevel`](https://pub.dev/documentation/syncfusion_flutter_charts
 
 {% highlight dart %} 
     ZoomPanBehavior _zoomPanBehavior;
-
+    
+    @override
     void initState(){
      _zoomPanBehavior = ZoomPanBehavior(
-                  maximumZoomLevel: 3
-                );
+                  maximumZoomLevel: 3);
       super.initState();
     }
 
@@ -254,7 +258,8 @@ If zoom mode is set to [`zoomMode.x`](https://pub.dev/documentation/syncfusion_f
 {% highlight dart %} 
     
     ZoomPanBehavior _zoomPanBehavior;
-
+    
+    @override
     void initState(){
      _zoomPanBehavior = ZoomPanBehavior(
                     enablePinching: true,

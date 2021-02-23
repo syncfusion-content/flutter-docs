@@ -404,7 +404,8 @@ The chart will display the segment information through the tooltip. It is used t
 {% highlight dart %}
    
    TooltipBehavior _tooltipBehavior;
-
+    
+    @override
     void initState(){
       _tooltipBehavior = TooltipBehavior(enable: true, shared: true);
     super.initState();
