@@ -16,6 +16,17 @@ Pinch zooming can be enabled by [`enablePinching`](https://pub.dev/documentation
 
 {% highlight dart %} 
 
+    ZoomPanBehavior _zoomPanBehavior;
+    
+    @override
+    void initState(){
+     _zoomPanBehavior = ZoomPanBehavior(
+                  // Enables pinch zooming
+                  enablePinching: true
+                );
+      super.initState();
+    }
+
     @override
     Widget build(BuildContext context) {
       return Scaffold(
@@ -25,10 +36,7 @@ Pinch zooming can be enabled by [`enablePinching`](https://pub.dev/documentation
               height: 300, 
               width: 350, 
               child: SfCartesianChart(
-                zoomPanBehavior: ZoomPanBehavior(
-                  // Enables pinch zooming
-                  enablePinching: true
-                )
+                zoomPanBehavior: _zoomPanBehavior
               )
             )
           )
@@ -43,6 +51,17 @@ Pinch zooming can be enabled by [`enablePinching`](https://pub.dev/documentation
 Double tap zooming can be enabled using [`enableDoubleTapZooming`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/enableDoubleTapZooming.html) property. Defaults to *false*.
 
 {% highlight dart %} 
+    
+    ZoomPanBehavior _zoomPanBehavior;
+    
+    @override
+    void initState(){
+     _zoomPanBehavior = ZoomPanBehavior(
+                  // Performs zooming on double tap
+                  enableDoubleTapZooming: true
+                );
+      super.initState();
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -53,10 +72,7 @@ Double tap zooming can be enabled using [`enableDoubleTapZooming`](https://pub.d
               height: 300, 
               width: 350, 
               child: SfCartesianChart(
-                zoomPanBehavior: ZoomPanBehavior(
-                  // Performs zooming on double tap
-                  enableDoubleTapZooming: true
-                )
+                zoomPanBehavior: _zoomPanBehavior
               )
             )
           )
@@ -79,6 +95,19 @@ You can customize the selection rectangle using the below properties.
 * [`selectionRectColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/selectionRectColor.html) - used to change the background color of the selection rectangle.
 
 {% highlight dart %} 
+    
+    ZoomPanBehavior _zoomPanBehavior;
+    
+    @override
+    void initState(){
+     _zoomPanBehavior = ZoomPanBehavior(
+                  enableSelectionZooming: true,
+                  selectionRectBorderColor: Colors.red,
+                  selectionRectBorderWidth: 1,
+                  selectionRectColor: Colors.grey
+                );
+      super.initState();
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -89,12 +118,7 @@ You can customize the selection rectangle using the below properties.
               height: 300, 
               width: 350, 
               child: SfCartesianChart(
-                zoomPanBehavior: ZoomPanBehavior(
-                  enableSelectionZooming: true,
-                  selectionRectBorderColor: Colors.red,
-                  selectionRectBorderWidth: 1,
-                  selectionRectColor: Colors.grey
-                )
+                zoomPanBehavior: _zoomPanBehavior
               )
             )
           )
@@ -125,6 +149,18 @@ The axis tooltip on selection zooming can be enabled using [`enable`](https://pu
 * [`textStyle.fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontStyle.html) - used to change the font size for the chart title.
 
 {% highlight dart %} 
+    ZoomPanBehavior _zoomPanBehavior;
+    
+    @override
+    void initState(){
+     _zoomPanBehavior = ZoomPanBehavior(
+                  enableDoubleTapZooming: true,
+                  enablePinching: true,
+                  // Enables the selection zooming
+                  enableSelectionZooming: true
+                );
+      super.initState();
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -148,12 +184,7 @@ The axis tooltip on selection zooming can be enabled using [`enable`](https://pu
                   borderWidth: 2
                 )
               ),
-                zoomPanBehavior: ZoomPanBehavior(
-                  enableDoubleTapZooming: true,
-                  enablePinching: true,
-                  // Enables the selection zooming
-                  enableSelectionZooming: true
-                )
+                zoomPanBehavior: _zoomPanBehavior
               )
             )
           )
@@ -192,6 +223,14 @@ The [`enableAutoIntervalOnZooming`](https://pub.dev/documentation/syncfusion_flu
 The [`maximumZoomLevel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/maximumZoomLevel.html) property defines the maximum zooming level. Zooming will be stopped after reaching this value. This defaults to null.
 
 {% highlight dart %} 
+    ZoomPanBehavior _zoomPanBehavior;
+    
+    @override
+    void initState(){
+     _zoomPanBehavior = ZoomPanBehavior(
+                  maximumZoomLevel: 3);
+      super.initState();
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -200,9 +239,7 @@ The [`maximumZoomLevel`](https://pub.dev/documentation/syncfusion_flutter_charts
           child: Center(
             child: Container(
               child: SfCartesianChart(
-                zoomPanBehavior: ZoomPanBehavior(
-                  maximumZoomLevel: 3
-                )
+                zoomPanBehavior: _zoomPanBehavior
               )
             )
           )
@@ -219,6 +256,18 @@ Panning can be performed on a zoomed axis. You can pan the zoomed chart with [`e
 If zoom mode is set to [`zoomMode.x`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomMode-class.html) means you can only pan to the  horizontal direction, in case the [`zoomMode.y`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomMode-class.html) means you can pan only to the  vertical direction and [`zoomMode.xy`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomMode-class.html) means you can pan to both horizontal and vertical directions on the chart.
 
 {% highlight dart %} 
+    
+    ZoomPanBehavior _zoomPanBehavior;
+    
+    @override
+    void initState(){
+     _zoomPanBehavior = ZoomPanBehavior(
+                    enablePinching: true,
+                    zoomMode: zoomMode.x,
+                    enablePanning: true,
+                );
+      super.initState();
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -227,11 +276,7 @@ If zoom mode is set to [`zoomMode.x`](https://pub.dev/documentation/syncfusion_f
           child: Center(
             child: Container(
               child: SfCartesianChart(
-                zoomPanBehavior: ZoomPanBehavior(
-                    enablePinching: true,
-                    zoomMode: zoomMode.x,
-                    enablePanning: true,
-                )
+                zoomPanBehavior: _zoomPanBehavior
               )
             )
           )

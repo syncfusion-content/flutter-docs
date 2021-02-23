@@ -379,15 +379,22 @@ Chart will display details about the points through tooltip, when user interacti
 
 {% highlight dart %}
 
+    TooltipBehavior _tooltipBehavior;
+    
+    @override
+    void initState(){
+      _tooltipBehavior = TooltipBehavior(
+                enable: true);
+    super.initState();
+    }
+
     @override
     Widget build(BuildContext context) {
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        tooltipBehavior: TooltipBehavior(
-                           enable: true
-                        ),
+                        tooltipBehavior: _tooltipBehavior,
                         series: <ChartSeries>[
                             // Renders spline chart
                             SplineSeries<SalesData, double>(

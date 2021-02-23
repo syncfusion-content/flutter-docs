@@ -55,6 +55,14 @@ Triggers while tooltip is rendering. Here, you can customize the text, header, x
 * [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipArgs/viewportPointIndex.html) - to get the viewport index value of the tapped data label.
 
 {% highlight dart %}
+    
+    TooltipBehavior _tooltipBehavior;
+
+    @override
+    void initState(){
+      _tooltipBehavior = TooltipBehavior(            enable: true);
+    super.initState();
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -65,7 +73,7 @@ Triggers while tooltip is rendering. Here, you can customize the text, header, x
           onTooltipRender: (TooltipArgs args){
             args.text = 'Custom Text';
           },
-          tooltipBehavior: TooltipBehavior(enable: true),
+          tooltipBehavior:_tooltipBehavior,
         )
       )
     );
@@ -178,6 +186,15 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
 * [`overallDataPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/overallDataPointIndex.html) - to get the overall point index.
 
 {% highlight dart %}
+    
+    SelectionBehavior _selectionBehavior;
+
+    @override
+    void initState(){
+      _selectionBehavior = SelectionBehavior(
+                enable: true);
+    super.initState();
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -191,9 +208,7 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
           },
           series: <CircularSeries>[
             PieSeries<ChartData, String>(
-              selectionBehavior: SelectionBehavior(
-                enable: true
-              )
+              selectionBehavior: _selectionBehavior
             )
           ]
        )
