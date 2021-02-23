@@ -56,7 +56,7 @@ Double tap zooming can be enabled using [`enableDoubleTapZooming`](https://pub.d
     
     @override
     void initState(){
-     _zoomPanBehavior =  ZoomPanBehavior(
+     _zoomPanBehavior = ZoomPanBehavior(
                   // Performs zooming on double tap
                   enableDoubleTapZooming: true
                 );
@@ -100,7 +100,7 @@ You can customize the selection rectangle using the below properties.
     
     @override
     void initState(){
-     _zoomPanBehavior =   ZoomPanBehavior(
+     _zoomPanBehavior = ZoomPanBehavior(
                   enableSelectionZooming: true,
                   selectionRectBorderColor: Colors.red,
                   selectionRectBorderWidth: 1,

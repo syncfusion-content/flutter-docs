@@ -60,7 +60,7 @@ Triggers while tooltip is rendering. Here, you can customize the text, header, x
 
     @override
     void initState(){
-        _tooltipBehavior = TooltipBehavior(enable: true);
+        _tooltipBehavior = TooltipBehavior(            enable: true);
     super.initState();
     }
 

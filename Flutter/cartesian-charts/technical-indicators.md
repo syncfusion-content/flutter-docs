@@ -407,7 +407,7 @@ The chart will display the segment information through the tooltip. It is used t
     
     @override
     void initState(){
-      _tooltipBehavior = TooltipBehavior(enable: true, shared: true);
+      _tooltipBehavior = TooltipBehavior(            enable: true, shared: true);
     super.initState();
     }
 

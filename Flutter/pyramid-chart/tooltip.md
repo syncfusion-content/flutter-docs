@@ -17,7 +17,7 @@ Chart provides tooltip support for all the series. It is used to show informatio
 
     @override
     void initState(){
-        _tooltipBehavior = TooltipBehavior(enable: true);
+        _tooltipBehavior = TooltipBehavior(            enable: true);
     super.initState();
     }
 
@@ -142,7 +142,7 @@ The tooltip can be made to display in the fixed location or at the pointer locat
 
     @override
     void initState(){
-        _tooltipBehavior =  TooltipBehavior(
+        _tooltipBehavior = TooltipBehavior(
                 enable: true, 
                 tooltipPosition: TooltipPosition.pointer
               );
@@ -176,7 +176,7 @@ You can customize the appearance of the tooltip with your own widget by using th
 
     @override
     void initState(){
-        _tooltipBehavior =  TooltipBehavior(
+        _tooltipBehavior = TooltipBehavior(
                 enable: true,
                 // Templating the tooltip
                 builder: (dynamic data, dynamic point, dynamic series,
@@ -225,7 +225,7 @@ The ActivationMode enum contains the following values:
     
     @override
     void initState(){
-        _tooltipBehavior =  TooltipBehavior(
+        _tooltipBehavior = TooltipBehavior(
                 enable: true,
                 // Tooltip will be displayed on long press
                 activationMode: ActivationMode.longPress

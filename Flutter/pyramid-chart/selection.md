@@ -160,7 +160,7 @@ N> The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter
 
     @override
     void initState(){
-      _selectionBehavior = SelectionBehavior(enable: true);
+      _selectionBehavior = TooltipBehavior(            enable: true);
     super.initState();
     }
 

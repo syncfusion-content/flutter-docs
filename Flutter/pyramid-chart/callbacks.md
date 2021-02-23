@@ -60,7 +60,7 @@ Triggers while tooltip is rendering. Here, you can customize the text, header, x
 
     @override
     void initState(){
-      _tooltipBehavior = TooltipBehavior(enable: true);
+      _tooltipBehavior = TooltipBehavior(            enable: true);
       super.initState();
     }
 
@@ -164,8 +164,7 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
     @override
     void initState(){
       _selectionBehavior = SelectionBehavior(
-                enable: true
-              );
+                enable: true);
       super.initState();
     }
 

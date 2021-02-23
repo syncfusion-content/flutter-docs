@@ -22,7 +22,7 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
     @override
     void initState(){
-      _tooltipBehavior = TooltipBehavior (enable: true);
+      _tooltipBehavior = TooltipBehavior(            enable: true);
     super.initState();
     }
 
@@ -85,7 +85,7 @@ The below mentioned arguments are given to the [`showByIndex`](https://pub.dev/d
 
     @override
     void initState(){
-      _tooltipBehavior = TooltipBehavior (enable: true);
+      _tooltipBehavior = TooltipBehavior(            enable: true);
     super.initState();
     }
 
@@ -141,7 +141,7 @@ x & y - logical pixel values to position the tooltip.
 
     @override
     void initState(){
-      _tooltipBehavior = TooltipBehavior (enable: true);
+      _tooltipBehavior = TooltipBehavior(            enable: true);
     super.initState();
     }
 
@@ -194,7 +194,7 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
     @override
     void initState(){
-      _tooltipBehavior = TooltipBehavior (enable: true);
+      _tooltipBehavior = TooltipBehavior(            enable: true);
     super.initState();
     }
 
@@ -256,7 +256,7 @@ N> The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter
 
     @override
     void initState(){
-      _selectionBehavior = SelectionBehavior (enable: true);
+      _selectionBehavior = TooltipBehavior(            enable: true);
     super.initState();
     }
 
