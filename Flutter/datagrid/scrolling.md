@@ -308,4 +308,4 @@ final DataGridController _controller = DataGridController();
 {% endhighlight %}
 {% endtabs %}
 
-N> Scrolled offset can be retrived by using [DataGridController.verticalOffset]() and [DataGridController.horizontalOffset]().
+N> Scrolled offset can be retrieved by using [DataGridController.verticalOffset]() and [DataGridController.horizontalOffset]().
