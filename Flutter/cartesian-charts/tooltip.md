@@ -12,7 +12,15 @@ documentation: ug
 Chart provides tooltip support for all the series. It is used to show information about the segment, when you tap on the segment. To enable the tooltip, you need to set [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/enableTooltip.html) property as *true*.
 
 {% highlight dart %} 
+    
+    TooltipBehavior _tooltipBehavior;
 
+    @override
+    void initState() {
+    _tooltipBehavior = TooltipBehavior(
+                enable: true);
+    super.initState();
+    }
     @override
     Widget build(BuildContext context) {
       return Scaffold(
@@ -20,9 +28,7 @@ Chart provides tooltip support for all the series. It is used to show informatio
           child: Container(
             child: SfCartesianChart(
             //Enables the tooltip for all the series
-              tooltipBehavior: TooltipBehavior(
-                enable: true
-              ),
+              tooltipBehavior: _tooltipBehavior,
               series: <CartesianSeries>[
                 LineSeries<ChartData, double>(
                 //Enables the tooltip for individual series
@@ -56,19 +62,26 @@ You can use the following properties to customize the tooltip appearance.
 * [`shadowColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/shadowColor.html) - specifies the color of the tooltip shadow.
 
 {% highlight dart %} 
+    
+    TooltipBehavior _tooltipBehavior;
 
+    @override
+    void initState() {
+    _tooltipBehavior = TooltipBehavior(
+                enable: true,
+                borderColor: Colors.red,
+                borderWidth: 5,
+                color: Colors.lightBlue
+              );
+    super.initState();
+    }
     @override
     Widget build(BuildContext context) {
       return Scaffold(
         body: Center(
           child: Container(
             child: SfCartesianChart(
-              tooltipBehavior: TooltipBehavior(
-                enable: true,
-                borderColor: Colors.red,
-                borderWidth: 5,
-                color: Colors.lightBlue
-              )
+              tooltipBehavior: _tooltipBehavior,
             )
           )
         )
@@ -89,18 +102,26 @@ By default, x and y value will be displayed in the tooltip, and it can be custom
 * Name of the series - `series.name`
 
 {% highlight dart %} 
+    
 
+    TooltipBehavior _tooltipBehavior;
+
+    @override
+    void initState() {
+    _tooltipBehavior = TooltipBehavior(
+                enable: true, 
+                // Formatting the tooltip text
+                format: 'point.y%'
+              );
+    super.initState();
+    }
     @override
     Widget build(BuildContext context) {
       return Scaffold(
         body: Center(
           child: Container(
             child: SfCartesianChart(
-              tooltipBehavior: TooltipBehavior(
-                enable: true, 
-                // Formatting the tooltip text
-                format: 'point.y%'
-              )
+              tooltipBehavior: _tooltipBehavior,
             )
           )
         )
@@ -114,17 +135,25 @@ By default, x and y value will be displayed in the tooltip, and it can be custom
 The tooltip can be made to display in the fixed location or at the pointer location itself using the `tooltipPosition` property. This defaults to `auto`.
 
 {% highlight dart %} 
+    
 
+    TooltipBehavior _tooltipBehavior;
+
+    @override
+    void initState() {
+    _tooltipBehavior = TooltipBehavior(
+                enable: true, 
+                tooltipPosition: TooltipPosition.pointer
+              );
+    super.initState();
+    } 
     @override
     Widget build(BuildContext context) {
       return Scaffold(
         body: Center(
           child: Container(
             child: SfCartesianChart(
-              tooltipBehavior: TooltipBehavior(
-                enable: true, 
-                tooltipPosition: TooltipPosition.pointer
-              )
+              tooltipBehavior: _tooltipBehavior,
             )
           )
         )
@@ -140,14 +169,12 @@ The tooltip can be made to display in the fixed location or at the pointer locat
 You can customize the appearance of the tooltip with your own widget by using the [`builder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/builder.html) property of [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/tooltipBehavior.html).
 
 {% highlight dart %} 
+    
+    TooltipBehavior _tooltipBehavior;
 
     @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        body: Center(
-          child: Container(
-            child: SfCartesianChart(
-              tooltipBehavior: TooltipBehavior(
+    void initState() {
+    _tooltipBehavior = TooltipBehavior(
                 enable: true,
                 // Templating the tooltip
                 builder: (dynamic data, dynamic point, dynamic series,
@@ -158,7 +185,17 @@ You can customize the appearance of the tooltip with your own widget by using th
                     )
                   );
                 }
-              )
+              );
+    super.initState();
+    } 
+
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: Center(
+          child: Container(
+            child: SfCartesianChart(
+              tooltipBehavior: _tooltipBehavior,
             )
           )
         )
@@ -181,6 +218,18 @@ The ActivationMode enum contains the following values:
 * [`none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode-class.html) - Hides the visibility of tooltip when setting activation mode to none.
 
 {% highlight dart %} 
+    
+    TooltipBehavior _tooltipBehavior;
+
+    @override
+    void initState() {
+    _tooltipBehavior = TooltipBehavior(
+                enable: true,
+                // Tooltip will be displayed on long press
+                activationMode: ActivationMode.longPress
+              );
+    super.initState();
+    } 
 
     @override
     Widget build(BuildContext context) {
@@ -188,11 +237,7 @@ The ActivationMode enum contains the following values:
         body: Center(
           child: Container(
             child: SfCartesianChart(
-              tooltipBehavior: TooltipBehavior(
-                enable: true,
-                // Tooltip will be displayed on long press
-                activationMode: ActivationMode.longPress
-              )
+              tooltipBehavior: _tooltipBehavior,
             )
           )
         )

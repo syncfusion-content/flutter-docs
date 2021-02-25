@@ -13,6 +13,15 @@ The selection feature in chart let you to select a segment in a series or the se
 
 {% highlight dart %} 
 
+     SelectionBehavior _selectionBehavior;
+
+    @override
+    void initState(){
+      _selectionBehavior = SelectionBehavio(        // Enables the selection
+             enable: true);
+    super.initState();
+    }
+
     @override
       Widget build(BuildContext context) {
         return Scaffold(
@@ -23,9 +32,7 @@ The selection feature in chart let you to select a segment in a series or the se
                     dataSource: chartData,
                     xValueMapper: (SalesData sales, _) =>   sales.year,
                     yValueMapper: (SalesData sales, _) => sales.sales,
-                    selectionBehavior: SelectionBehavior(
-                    // Enables the selection
-                    enable: true)
+                    selectionBehavior: _selectionBehavior
                   )
               )
             )
@@ -49,6 +56,19 @@ You can customize the segments using the below properties.
 * [`unselectedOpacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/unselectedOpacity.html) - used to control the transparency of the unselected segment.
 
 {% highlight dart %} 
+    
+    SelectionBehavior _selectionBehavior;
+
+    @override
+    void initState(){
+      _selectionBehavior = SelectionBehavior(
+                    // Enables the selection
+                    enable: true,
+                    selectedColor: Colors.red,
+                    unselectedColor: Colors.grey,
+                    );
+    super.initState();
+    }
 
     @override
       Widget build(BuildContext context) {
@@ -60,12 +80,7 @@ You can customize the segments using the below properties.
                     dataSource: chartData,
                     xValueMapper: (SalesData sales, _) =>   sales.year,
                     yValueMapper: (SalesData sales, _) => sales.sales,
-                    selectionBehavior: SelectionBehavior(
-                    // Enables the selection
-                    enable: true,
-                    selectedColor: Colors.red,
-                    unselectedColor: Colors.grey,
-                    )
+                    selectionBehavior: _selectionBehavior
                   )
               )
             )
@@ -140,7 +155,13 @@ N> The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter
 {% highlight dart %}
 
     SfFunnelChart chart;
-    SelectionBehavior selection;
+    SelectionBehavior _selectionBehavior;
+
+    @override
+    void initState(){
+      _selectionBehavior = TooltipBehavior(            enable: true);
+    super.initState();
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -150,15 +171,12 @@ N> The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter
       ChartData(20, 34)
       // Add the required data
     ];
-
-    selection = SelectionBehavior(enable: true);
-    
     chart = SfFunnelChart(
       series: FunnelSeries<ChartData, double>(
             dataSource: chartData,
             xValueMapper: (ChartData data, _) => data.x,
             yValueMapper: (ChartData data, _) => data.y,
-            selectionBehavior: selection
+            selectionBehavior: _selectionBehavior
         )
     );
     

@@ -18,7 +18,12 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 {% highlight dart %} 
 
     SfCartesianChart chart;
-    TooltipBehavior tooltip;
+    TooltipBehavior _tooltipBehavior;
+    @override
+    void initState(){
+      _tooltipBehavior = TooltipBehavior(            enable: true);
+    super.initState();
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -28,11 +33,8 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
         ChartData(20, 34),
         // Add the required data
     ];
-    
-    tooltip = TooltipBehavior (enable: true);
-
     chart = SfCartesianChart(
-      tooltipBehavior: tooltip,
+      tooltipBehavior: _tooltipBehavior,
         series: <CartesianSeries>[
           ColumnSeries<ChartData, double>(
             enableTooltip: true,
@@ -77,7 +79,13 @@ The below mentioned arguments are given to the [`showByIndex`](https://pub.dev/d
 {% highlight dart %} 
 
     SfCartesianChart chart;
-    TooltipBehavior tooltip;
+    TooltipBehavior _tooltipBehavior;
+    
+    @override
+    void initState(){
+      _tooltipBehavior = TooltipBehavior(            enable: true);
+    super.initState();
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -87,11 +95,8 @@ The below mentioned arguments are given to the [`showByIndex`](https://pub.dev/d
         ChartData(20, 34),
         // Add the required data
     ];
-    
-    tooltip = TooltipBehavior (enable: true);
-
     chart = SfCartesianChart(
-      tooltipBehavior: tooltip,
+      tooltipBehavior: _tooltipBehavior,
         series: <CartesianSeries>[
           ColumnSeries<ChartData, double>(
             enableTooltip: true,
@@ -129,7 +134,13 @@ x & y - logical pixel values to position the tooltip.
 {% highlight dart %} 
 
     SfCartesianChart chart;
-    TooltipBehavior tooltip;
+    TooltipBehavior _tooltipBehavior;
+    
+    @override
+    void initState(){
+      _tooltipBehavior = TooltipBehavior(            enable: true);
+    super.initState();
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -139,11 +150,8 @@ x & y - logical pixel values to position the tooltip.
         ChartData(20, 34),
         // Add the required data
     ];
-    
-    tooltip = TooltipBehavior (enable: true);
-
     chart = SfCartesianChart(
-      tooltipBehavior: tooltip,
+      tooltipBehavior: _tooltipBehavior,
         series: <CartesianSeries>[
           ColumnSeries<ChartData, double>(
             enableTooltip: true,
@@ -179,7 +187,13 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 {% highlight dart %} 
 
     SfCartesianChart chart;
-    TooltipBehavior tooltip;
+    TooltipBehavior _tooltipBehavior;
+    
+    @override
+    void initState(){
+      _tooltipBehavior = TooltipBehavior(            enable: true);
+    super.initState();
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -188,11 +202,8 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
         ChartData(20, 34)
     // Add the required data  
     ];
-    
-    tooltip = TooltipBehavior (enable: true);
-
     chart = SfCartesianChart(
-      tooltipBehavior: tooltip,
+      tooltipBehavior: _tooltipBehavior,
       series: <CartesianSeries>[
         ColumnSeries<ChartData, double>(
             enableTooltip: true,
@@ -232,8 +243,14 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 {% highlight dart %} 
 
     SfCartesianChart chart;
-    TrackballBehavior trackball;
-  
+    TrackballBehavior _trackballBehavior;
+    
+    @override
+    void initState(){
+      _trackballBehavior = TooltipBehavior(            enable: true);
+      super.initState();
+    }
+
     @override
     Widget build(BuildContext context) {
     
@@ -243,10 +260,8 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
       // Add the required data
     ];
     
-    trackball = TrackballBehavior(enable: true);
-    
     chart = SfCartesianChart(
-      trackballBehavior: trackball,
+      trackballBehavior: _trackballBehavior,
       series: <CartesianSeries>[
         ColumnSeries<ChartData, double>(
             enableTooltip: true,
@@ -283,7 +298,13 @@ The [`showByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 {% highlight dart %} 
 
     SfCartesianChart chart;
-    TrackballBehavior trackball;
+    TrackballBehavior _trackballBehavior;
+    
+    @override
+    void initState(){
+      _trackballBehavior = TooltipBehavior(            enable: true);
+      super.initState();
+    }
   
     @override
     Widget build(BuildContext context) {
@@ -294,10 +315,8 @@ The [`showByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/late
       // Add the required data
     ];
     
-    trackball = TrackballBehavior(enable: true);
-    
     chart = SfCartesianChart(
-      trackballBehavior: trackball,
+      trackballBehavior: _trackballBehavior,
       series: <CartesianSeries>[
         ColumnSeries<ChartData, double>(
             enableTooltip: true,
@@ -333,7 +352,13 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 {% highlight dart %} 
 
     SfCartesianChart chart;
-    TrackballBehavior trackball;
+    TrackballBehavior _trackballBehavior;
+    
+    @override
+    void initState(){
+      _trackballBehavior = TooltipBehavior(            enable: true);
+      super.initState();
+    }
   
     @override
     Widget build(BuildContext context) {
@@ -344,10 +369,8 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
       // Add the required data
     ];
     
-    trackball = TrackballBehavior(enable: true);
-    
     chart = SfCartesianChart(
-      trackballBehavior: trackball,
+      trackballBehavior: _trackballBehavior,
       series: <CartesianSeries>[
         ColumnSeries<ChartData, double>(
             enableTooltip: true,
@@ -387,7 +410,13 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 {% highlight dart %} 
 
     SfCartesianChart chart;
-    CrosshairBehavior crosshair;
+    CrosshairBehavior _crosshairBehavior;
+
+    @override
+    void initState(){
+      _crosshairBehavior = TooltipBehavior(            enable: true);
+      super.initState();
+    }
     
     @override
     Widget build(BuildContext context) {
@@ -397,10 +426,8 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
       ChartData(20, 34),
     ];
 
-    crosshair = CrosshairBehavior(enable: true);
-    
     chart = SfCartesianChart(
-      crosshairBehavior: crosshair,
+      crosshairBehavior: _crosshairBehavior,
       series: <CartesianSeries>[
         ColumnSeries<ChartData, double>(
             enableTooltip: true,
@@ -440,7 +467,13 @@ The [`showByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 {% highlight dart %} 
 
     SfCartesianChart chart;
-    CrosshairBehavior crosshair;
+    CrosshairBehavior _crosshairBehavior;
+
+    @override
+    void initState(){
+      _crosshairBehavior = TooltipBehavior(            enable: true);
+      super.initState();
+    }
     
     @override
     Widget build(BuildContext context) {
@@ -449,11 +482,8 @@ The [`showByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/late
       ChartData(10, 17),
       ChartData(20, 34),
     ];
-
-    crosshair = CrosshairBehavior(enable: true);
-    
     chart = SfCartesianChart(
-      crosshairBehavior: crosshair,
+      crosshairBehavior: _crosshairBehavior,
       series: <CartesianSeries>[
         ColumnSeries<ChartData, double>(
             enableTooltip: true,
@@ -491,7 +521,13 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 {% highlight dart %} 
 
     SfCartesianChart chart;
-    CrosshairBehavior crosshair;
+    CrosshairBehavior _crosshairBehavior;
+
+    @override
+    void initState(){
+      _crosshairBehavior = TooltipBehavior(            enable: true);
+      super.initState();
+    }
   
     @override
     Widget build(BuildContext context) {  
@@ -500,11 +536,8 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
       ChartData(20, 34)
     // Add the required data  
     ];
-    
-    crosshair = CrosshairBehavior(enable: true);
-    
     chart = SfCartesianChart(
-      crosshairBehavior: crosshair,
+      crosshairBehavior: _crosshairBehavior,
       series: <CartesianSeries>[
         ColumnSeries<ChartData, double>(
             enableTooltip: true,
@@ -549,7 +582,13 @@ N> The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter
 {% highlight dart %}
 
     SfCartesianChart chart;
-    SelectionBehavior selection;
+    SelectionBehavior _selectionBehavior;
+
+    @override
+    void initState(){
+      _selectionBehavior = TooltipBehavior(            enable: true);
+      super.initState();
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -560,15 +599,13 @@ N> The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter
       // Add the required data
     ];
 
-    selection = SelectionBehavior(enable: true);
-    
     chart = SfCartesianChart(
       series: <CartesianSeries>[
         ColumnSeries<ChartData, double>(
             dataSource: chartData,
             xValueMapper: (ChartData data, _) => data.x,
             yValueMapper: (ChartData data, _) => data.y,
-            selectionBehavior: selection
+            selectionBehavior: _selectionBehavior
         )
       ]
     );
@@ -602,7 +639,18 @@ The [`zoomIn`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
 {% highlight dart %}
 
     SfCartesianChart chart;
-    ZoomPanBehavior zooming;
+    ZoomPanBehavior _zoomPanBehavior;
+
+    @override
+    void initState(){
+      _zoomPanBehavior =  ZoomPanBehavior(
+      enableSelectionZooming: true,
+      enableDoubleTapZooming: true,
+      enablePinching: true,
+      enablePanning: true
+    );
+    super.initState();
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -612,15 +660,8 @@ The [`zoomIn`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
       //add the required data
     ];
     
-    zooming = ZoomPanBehavior(
-      enableSelectionZooming: true,
-      enableDoubleTapZooming: true,
-      enablePinching: true,
-      enablePanning: true
-    );
-    
     chart = SfCartesianChart(
-      zoomPanBehavior: zooming,
+      zoomPanBehavior: _zoomPanBehavior,
       series: <CartesianSeries>[
         ColumnSeries<ChartData, double>(
           dataSource: chartData,
@@ -658,7 +699,18 @@ The [`zoomOut`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
 {% highlight dart %}
 
     SfCartesianChart chart;
-    ZoomPanBehavior zooming;
+    ZoomPanBehavior _zoomPanBehavior;
+
+    @override
+    void initState(){
+      _zoomPanBehavior =  ZoomPanBehavior(
+      enableSelectionZooming: true,
+      enableDoubleTapZooming: true,
+      enablePinching: true,
+      enablePanning: true
+    );
+    super.initState();
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -669,15 +721,8 @@ The [`zoomOut`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
       //add the required data
     ];
     
-    zooming = ZoomPanBehavior(
-        enableSelectionZooming: true,
-        enableDoubleTapZooming: true,
-        enablePinching: true,
-        enablePanning: true
-    );
-    
     chart = SfCartesianChart(
-      zoomPanBehavior: zooming,
+      zoomPanBehavior: _zoomPanBehavior,
       series: <CartesianSeries>[
         ColumnSeries<ChartData, double>(
           dataSource: chartData,
@@ -715,7 +760,18 @@ The [`zoomByFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 {% highlight dart %}
 
     SfCartesianChart chart;
-    ZoomPanBehavior zooming;
+    ZoomPanBehavior _zoomPanBehavior;
+
+    @override
+    void initState(){
+      _zoomPanBehavior =  ZoomPanBehavior(
+      enableSelectionZooming: true,
+      enableDoubleTapZooming: true,
+      enablePinching: true,
+      enablePanning: true
+    );
+    super.initState();
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -725,16 +781,8 @@ The [`zoomByFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
       ChartData(20, 34),
       //add the required data
     ];
-    
-    zooming = ZoomPanBehavior(
-        enableSelectionZooming: true,
-        enableDoubleTapZooming: true,
-        enablePinching: true,
-        enablePanning: true
-    );
-    
     chart = SfCartesianChart(
-      zoomPanBehavior: zooming,
+      zoomPanBehavior: _zoomPanBehavior,
       series: <CartesianSeries>[
         ColumnSeries<ChartData, double>(
           dataSource: chartData,
@@ -772,7 +820,18 @@ The [`zoomByRect`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
 {% highlight dart %}
 
     SfCartesianChart chart;
-    ZoomPanBehavior zooming;
+    ZoomPanBehavior _zoomPanBehavior;
+
+    @override
+    void initState(){
+      _zoomPanBehavior =  ZoomPanBehavior(
+      enableSelectionZooming: true,
+      enableDoubleTapZooming: true,
+      enablePinching: true,
+      enablePanning: true
+    );
+    super.initState();
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -783,14 +842,8 @@ The [`zoomByRect`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
       //add the required data
     ];
     
-    zooming = ZoomPanBehavior(
-        enableSelectionZooming: true,
-        enableDoubleTapZooming: true,
-        enablePinching: true,
-        enablePanning: true);
-    
     chart = SfCartesianChart(
-      zoomPanBehavior: zooming,
+      zoomPanBehavior: _zoomPanBehavior,
       series: <CartesianSeries>[
         ColumnSeries<ChartData, double>(
           dataSource: chartData,
@@ -828,7 +881,19 @@ The [`zoomToSingleAxis`](https://pub.dev/documentation/syncfusion_flutter_charts
 {% highlight dart %}
 
     SfCartesianChart chart;
-    ZoomPanBehavior zooming;
+    ZoomPanBehavior _zoomPanBehavior;
+
+    @override
+    void initState(){
+      _zoomPanBehavior =  ZoomPanBehavior(
+      enableSelectionZooming: true,
+      enableDoubleTapZooming: true,
+      enablePinching: true,
+      enablePanning: true
+    );
+    super.initState();
+    }
+
     NumericAxis xAxis;
 
     @override
@@ -839,16 +904,9 @@ The [`zoomToSingleAxis`](https://pub.dev/documentation/syncfusion_flutter_charts
       ChartData(20, 34),
       //add required data
     ];
-    zooming = ZoomPanBehavior(
-      enableSelectionZooming: true,
-      enableDoubleTapZooming: true,
-      enablePinching: true,
-      enablePanning: true
-    );
-
     xAxis = NumericAxis();
     chart = SfCartesianChart(
-      zoomPanBehavior: zooming,
+      zoomPanBehavior: _zoomPanBehavior,
       primaryXAxis: xAxis,
       series: <CartesianSeries>[
         ColumnSeries<ChartData, double>(
@@ -889,8 +947,19 @@ The [`panToDirection`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 {% highlight dart %}
 
     SfCartesianChart chart;
-    ZoomPanBehavior zooming;
     NumericAxis xAxis;
+    ZoomPanBehavior _zoomPanBehavior;
+
+    @override
+    void initState(){
+      _zoomPanBehavior =  ZoomPanBehavior(
+      enableSelectionZooming: true,
+      enableDoubleTapZooming: true,
+      enablePinching: true,
+      enablePanning: true
+    );
+    super.initState();
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -900,16 +969,10 @@ The [`panToDirection`](https://pub.dev/documentation/syncfusion_flutter_charts/l
       ChartData(20, 34),
       //add required data
     ];
-    zooming = ZoomPanBehavior(
-        enableSelectionZooming: true,
-        enableDoubleTapZooming: true,
-        enablePinching: true,
-        enablePanning: true
-    );
 
     xAxis = NumericAxis();
     chart = SfCartesianChart(
-      zoomPanBehavior: zooming,
+      zoomPanBehavior: _zoomPanBehavior,
       primaryXAxis: xAxis,
       series: <CartesianSeries>[
         ColumnSeries<ChartData, double>(
@@ -949,7 +1012,18 @@ The [`reset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
 {% highlight dart %}
 
     SfCartesianChart chart;
-    ZoomPanBehavior zooming;
+    ZoomPanBehavior _zoomPanBehavior;
+
+    @override
+    void initState(){
+      _zoomPanBehavior =  ZoomPanBehavior(
+      enableSelectionZooming: true,
+      enableDoubleTapZooming: true,
+      enablePinching: true,
+      enablePanning: true
+    );
+    super.initState();
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -960,15 +1034,8 @@ The [`reset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
       //add the required data
     ];
     
-    zooming = ZoomPanBehavior(
-      enableSelectionZooming: true,
-      enableDoubleTapZooming: true,
-      enablePinching: true,
-      enablePanning: true
-    );
-    
     chart = SfCartesianChart(
-      zoomPanBehavior: zooming,
+      zoomPanBehavior: _zoomPanBehavior,
       series: <CartesianSeries>[
         ColumnSeries<ChartData, double>(
           dataSource: chartData,
