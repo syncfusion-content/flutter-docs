@@ -9,11 +9,11 @@ documentation: ug
 
 # Swiping in Flutter DataGrid
 
-The `SfDataGrid` provides support to enable swiping option to the data rows by setting the `SfDataGrid.allowSwiping` property to `true`. Swipe views will be displayed when swiping a data row from the `left to right` or `right to left` direction. The control provides customizable swipe widgets for swiping on the left and right sides by using the swipe action builders. The swipe dragging gesture can be restricted to a certain point on the row by setting the `SfDataGrid.maxSwipeOffset` property.
+The Flutter DataTable provides support to swipe a row by setting the `SfDataGrid.allowSwiping` property to true. Swipe actions will be displayed when swiping a row from `left to right` or `right to left` direction. The swipe dragging gesture can be restricted to a certain point on the row by setting the `SfDataGrid.maxSwipeOffset` property.
 
 ## Swipe action builders
 
-The data grid enables loading the desired widget behind the swiped row by using the `SfDataGrid.startSwipeActionsBuilder` and `SfDataGrid.endSwipeActionsBuilder` when swiping a data row towards the `left to right` and `right to left` direction. The swipe widget's width that loads from the actions builder is arranged based on the `SfDataGrid.maxSwipeOffset` property and it takes height based on the current swiping row height.
+The Flutter DataTable enables you to load the desired widget behind the swiped row by using `SfDataGrid.startSwipeActionsBuilder` and `SfDataGrid.endSwipeActionsBuilder` properties. The swipe widget's width that loads from the actions builder is arranged based on the `SfDataGrid.maxSwipeOffset` property and it takes height based on the current swiping row height.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -72,9 +72,9 @@ Widget build(BuildContext context) {
 
 The data grid provides the following callbacks to notify the swiping stages:  
 
-* `onSwipeStart`: Called when the swipe offset changes from its initial value. The swipe action can be canceled by return `false`. This callback is triggered with `DataGridSwipeStartDetails`.
-* `onSwipeUpdate`: Called while swiping a row is in progress. The swipe action can be canceled by return `false`. This event is triggered with `DataGridSwipeUpdateDetails`.
-* `onSwipeEnd`: called when the swipe offset value reaches the `SfDataGrid.maxSwipeOffset` indicating that the swipe action is completed. This event is triggered with `DataGridSwipeEndDetails`.
+* `onSwipeStart`: Called when the swipe offset changes from its initial value. The swipe action can be canceled by return `false`.
+* `onSwipeUpdate`: Called while swiping a row is in progress. The swipe action can be canceled by return `false`.
+* `onSwipeEnd`: called when the swipe offset value reaches the `SfDataGrid.maxSwipeOffset` indicating that the swipe action is completed.
 
 The swipe callbacks provide the following properties in their arguments:
 
@@ -86,7 +86,7 @@ By handling the swipe callbacks, you can use these properties value from the arg
 
 ## Customized swipes delete functionality
 
-An operation such as deleting a row when swiping a data row from one to another end in the view can be performed.
+You can perform customized swipe functionality using the swiping callbacks. The below example shows how to delete a row when swiping a data row from one to another end.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -113,12 +113,6 @@ Widget build(BuildContext context) {
             ),
           ),
         );
-      },
-      onSwipeStart: (details) {
-        if (details.swipeDirection == DataGridRowSwipeDirection.startToEnd) {
-          return true;
-        }
-        return false;
       },
       onSwipeUpdate: (details) {
         isReachedCenter =
