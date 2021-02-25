@@ -9,8 +9,8 @@ documentation: ug
 
 # Pull to Refresh in Flutter DataGrid
 
-The datagrid provides support to add more data at runtime by using the PullToRefresh feature.
-You can simply enable the PullToRefresh option by setting the `SfDataGrid.allowPullToRefresh` property to `true` and override the `DataGridSource.handleRefresh` method to include the data which is going to add to the data source at runtime and then notify the data grid about the changes. When the PullToRefresh is enabled, the control supports refreshing the data source while doing the pull to refresh action.
+The Flutter DataTable provides support to add more data at runtime by using the PullToRefresh feature.
+You can simply enable the PullToRefresh option by setting the `SfDataGrid.allowPullToRefresh` property to `true` and override the `DataGridSource.handleRefresh` method to include the data which is going to add to the data source at runtime and then notify the data grid about the changes.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -113,8 +113,9 @@ class EmployeeDataSource extends DataGridSource<Employee> {
 
 ## Customizing the refresh indicator
 
-Color and background color of refresh indicator can be customized by using the `ThemeData.accentColor` and  `ThemeData.canvasColor` properties.
-Stroke width and displacement of refresh indicator can be customized by using `SfDataGrid.refreshIndicatorStrokeWidth` and `SfDataGrid.refreshIndicatorDisplacement` properties.
+SfDataGrid displays the [RefreshIndicator](https://api.flutter.dev/flutter/material/RefreshIndicator-class.html) for `pull to refresh` action. So, you can set the Color and background color of refresh indicator by using [ThemeData.accentColor](https://api.flutter.dev/flutter/material/ThemeData/accentColor.html) and  [ThemeData.canvasColor](https://api.flutter.dev/flutter/material/ThemeData/canvasColor.html) properties.
+
+You can also change the Stroke width and displacement of refresh indicator by using `SfDataGrid.refreshIndicatorStrokeWidth` and `SfDataGrid.refreshIndicatorDisplacement` properties.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -150,7 +151,9 @@ Widget build(BuildContext context) {
 
 ## Programmatic Pull to Refresh
 
-The data grid provides the support to show refresh indicator programmatically. You can simply call refresh indicator by providing `GlobalKey` value to the `SfDataGrid` and call `GlobalKey.refresh()` method to show refresh indicator programmatically. The global key type should be `SfDataGridState`. By default, it shows a refresh indicator whenever it is called. If you want to refresh data without showing a refresh indicator, you can set false to the `showRefreshIndicator` optional parameter like `GlobalKey.refresh(false)`.
+The Flutter DataTable provides the support show refresh indicator programmatically.
+
+If you want to refresh data without showing a refresh indicator, you can pass `false` to the `showRefreshIndicator` optional parameter of `refresh` method. By doing this, `DataGridSource.handleRefresh` method will be called without showing the `RefreshIndicator` in UI.
 
 {% tabs %}
 {% highlight Dart %} 
