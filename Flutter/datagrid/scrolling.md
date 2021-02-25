@@ -76,7 +76,7 @@ The Flutter DataTable provides support to scroll to a particular row and column 
 
 ### Scroll to cell
 
-Scroll programmatically to a particular cell can be achieved by passing the row and column indexes in the `scrollToCell` method. SfDataGrid allows to enable or disable the scrolling animation by passing `true` to the `canAnimate` parameter in `scrollToCell` method. 
+Scroll programmatically to a particular cell can be achieved by passing the row and column index in the `scrollToCell` method. SfDataGrid allows to enable or disable the scrolling animation by passing `true` to the `canAnimate` parameter in `scrollToCell` method. 
 
 N> The default value of `canAnimate` is `false`.
 
@@ -191,7 +191,7 @@ final DataGridController _controller = DataGridController();
 
 ### Scroll to specific position
 
-SfDataGrid allows to position the scroll row or column in view programmatically by passing `DataGridScrollPosition` to `rowPosition` and `columnPosition` in `scrollToCell`, `ScrollToRow`, `ScrollToColumn` methods. Below are the four types of positions. 
+`SfDataGrid` allows to position the scrolled row or column in view programmatically by passing `DataGridScrollPosition` to `rowPosition` and `columnPosition` arguments respectively in `scrollToCell` and `position` argument of `scrollToRow` and `scrollToColumn` methods. Below are the four types of positions available,
 
 `makeVisible`: Scroll to make a specified row/column visible in datagrid. If the specified row/column is already in view, scrolling will not occur.
 `start`: Scroll to make the row/column positioned at the start of the datagrid.
