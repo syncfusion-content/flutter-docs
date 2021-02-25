@@ -151,8 +151,6 @@ Widget build(BuildContext context) {
 
 ## Programmatic Pull to Refresh
 
-The Flutter DataTable provides the support show refresh indicator programmatically.
-
 If you want to refresh data without showing a refresh indicator, you can pass `false` to the `showRefreshIndicator` optional parameter of `refresh` method. By doing this, `DataGridSource.handleRefresh` method will be called without showing the `RefreshIndicator` in UI.
 
 {% tabs %}
