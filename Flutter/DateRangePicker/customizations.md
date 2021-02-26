@@ -189,3 +189,5 @@ Widget build(BuildContext context) {
 [How to add custom fonts in Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12212/how-to-add-custom-fonts-in-flutter-date-range-picker-sfdaterangepicker)
 
 [How to style the year, decade, century views in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12321/how-to-style-the-year-decade-century-views-in-the-flutter-date-range-picker)
+
+[How to customize the special dates using builder in the Flutter date picker](https://www.syncfusion.com/kb/12374/how-to-customize-the-special-dates-using-builder-in-the-flutter-date-picker)

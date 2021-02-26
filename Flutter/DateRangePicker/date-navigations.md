@@ -393,3 +393,7 @@ Widget build(BuildContext context) {
 [How to navigate to the previous or next views using navigation arrows in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12270/how-to-navigate-to-the-previous-or-next-views-using-navigation-arrows-in-the-flutter-date)
 
 [How to restrict the year view navigation while tapping header of the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12113/how-to-restrict-the-year-view-navigation-while-tapping-header-of-the-flutter-date-range)
+
+[How to select previous or next dates based on the selected date in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12354/how-to-select-previous-or-next-dates-based-on-the-selected-date-in-the-flutter-date-range)
+
+[How to select all days when clicking on the day header in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12353/how-to-select-all-days-when-clicking-on-the-day-header-in-the-flutter-date-range-picker)
