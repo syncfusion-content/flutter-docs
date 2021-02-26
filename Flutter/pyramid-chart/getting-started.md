@@ -212,6 +212,14 @@ The tooltip is used when you cannot display information using the data labels du
 The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/tooltipBehavior.html) property in chart is used to enable and customize the tooltip for the pyramid series. The tooltip is enabled as demonstrated in the following code snippet.
 
 {% highlight dart %} 
+    
+    TooltipBehavior _tooltipBehavior;
+
+    @override
+    void initState(){
+        _tooltipBehavior = TooltipBehavior(            enable: true);
+    super.initState();
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -223,7 +231,7 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
                 child: Container(
                     child: SfPyramidChart(
                       // Enables the tooltip for all the series in chart
-                        tooltipBehavior: TooltipBehavior(enable: true),
+                        tooltipBehavior: _tooltipBehavior,
                         series:PyramidSeries<ChartData, String>(
                             dataSource: chartData,
                             xValueMapper: (ChartData data, _) => data.x,
