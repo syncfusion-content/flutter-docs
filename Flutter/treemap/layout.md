@@ -11,15 +11,15 @@ documentation: ug
 
 This section explains the different layout structures in the treemap widget. The available layout structures are,
 
-* Squarify
+* Squarified
 * Slice
 * Dice
 
-## Squarify
+## Squarified
 
-The Squarify layout structure start to arrange the rectangles in a row and wrapping them to the next row according to the available size. By default, Squarify layout structure is used.
+The Squarified layout structure start to arrange the rectangles in a row and wrapping them to the next row according to the available size. By default, Squarified layout structure is used.
 
-You can visualize the Squarify layout in two ways such as `Flat` and `Hierarchical` structure.
+You can visualize the Squarified layout in two ways such as `Flat` and `Hierarchical` structure.
 
 {% tabs %}
 {% highlight Dart %}
@@ -70,7 +70,7 @@ class PopulationModel {
 {% endhighlight %}
 {% endtabs %}
 
-![Squarify layout structure](images/layout/squarify-layout.png)
+![Squarified layout structure](images/layout/squarified-layout.png)
 
 ## Slice
 
