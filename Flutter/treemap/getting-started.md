@@ -103,8 +103,6 @@ Widget build(BuildContext context) {
             groupMapper: (int index) {
               return _dataSource[index].continent;
             },
-            color: Colors.teal[200],
-            padding: const EdgeInsets.all(1.5),
           ),
         ],
       ),
@@ -120,6 +118,8 @@ class PopulationModel {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Treemap default view](images/getting-started/default-view.png)
 
 N>
 * Refer the [`SfTreemap.levels`], for adding flat or hierarchical structured treemap.
