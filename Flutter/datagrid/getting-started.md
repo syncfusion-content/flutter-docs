@@ -64,10 +64,10 @@ Widget build(BuildContext context) {
     body: SfDataGrid(
       source: _employeeDataSource,
       columns: [
-        GridNumericColumn(mappingName: 'id',  headerText:'ID'),
-        GridTextColumn(mappingName: 'name', headerText: 'Name'),
-        GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-        GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+        GridTextColumn(columnName: 'id', label: Text('ID')),
+        GridTextColumn(columnName: 'name', label: Text('Name')),
+        GridTextColumn(columnName: 'designation', label: Text('Designation')),
+        GridTextColumn(columnName: 'salary', label: Text('Salary')),
       ],
     ),
   );
@@ -93,30 +93,34 @@ class Employee {
 {% endhighlight %}
 {% endtabs %}
 
-Create the collection of Employee data with the required number of data objects. Here, the `populateData` method which is used to populate the data objects is initialized in `initState()`.
+Create the collection of Employee data with the required number of data objects. Here, the `getEmployeeData` method which is used to populate the data objects is initialized in `initState()`.
 
 {% tabs %}
 {% highlight Dart %} 
    
-final List<Employee> _employees = <Employee>[];
+List<Employee> _employees = <Employee>[];
+EmployeeDataSource _employeeDataSource;
   
 @override
 void initState() {
   super.initState();
-  populateData();
+  _employees = getEmployeeData();
+  employeeDataSource = EmployeeDataSource(employeeData: _employees);
 }
   
-void populateData() {
-  _employees.add(Employee(10001, 'James', 'Project Lead', 20000));
-  _employees.add(Employee(10002, 'Kathryn', 'Manager', 30000));
-  _employees.add(Employee(10003, 'Lara', 'Developer', 15000));
-  _employees.add(Employee(10004, 'Michael', 'Designer', 15000));
-  _employees.add(Employee(10005, 'Martin', 'Developer', 15000));
-  _employees.add(Employee(10006, 'Newberry', 'Developer', 15000));
-  _employees.add(Employee(10007, 'Balnc', 'Developer', 15000));
-  _employees.add(Employee(10008, 'Perry', 'Developer', 15000));
-  _employees.add(Employee(10009, 'Gable', 'Developer', 15000));
-  _employees.add(Employee(10010, 'Grimes', 'Developer', 15000));
+List<Employee> getEmployeeData() {
+  return [
+    Employee(10001, 'James', 'Project Lead', 20000),
+    Employee(10002, 'Kathryn', 'Manager', 30000),
+    Employee(10003, 'Lara', 'Developer', 15000),
+    Employee(10004, 'Michael', 'Designer', 15000),
+    Employee(10005, 'Martin', 'Developer', 15000),
+    Employee(10006, 'Newberry', 'Developer', 15000),
+    Employee(10007, 'Balnc', 'Developer', 15000),
+    Employee(10008, 'Perry', 'Developer', 15000),
+    Employee(10009, 'Gable', 'Developer', 15000),
+    Employee(10010, 'Grimes', 'Developer', 15000)
+  ];
 }
 
 {% endhighlight %}
@@ -126,41 +130,41 @@ void populateData() {
 
 [DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) is used to obtain the row data for the `SfDataGrid`. So, create the DataSource from the DataGridSource and override the following APIs in it,
 
-* **`dataSource`** - To fetch the number of rows available for data population. Also, it is used to fetch the corresponding data object to process the selection.
-* **`getValue`** - To fetch the value for each cell.
+* **`rows`** - To fetch the number of rows available for data population. Also, it is used to fetch the corresponding data object to process the selection.
+* **`buildRow`** - To fetch the widget for each cell using the [DataGridRowAdapter]().
 
 `DataGridSource` objects are expected to be long-lived, not recreated with each build.
 
 {% tabs %}
 {% highlight Dart %} 
 
-final List<Employee> _employees = <Employee>[];
+class EmployeeDataSource extends DataGridSource {
+  List<DataGridRow> _employeeData;
+  EmployeeDataSource({List<Employee> employeeData}) {
+    _employeeData = employeeData
+        .map<DataGridRow>((e) => DataGridRow(cells: [
+              DataGridCell<int>(columnName: 'id', value: e.id),
+              DataGridCell<String>(columnName: 'name', value: e.name),
+              DataGridCell<String>(
+                  columnName: 'designation', value: e.designation),
+              DataGridCell<int>(columnName: 'salary', value: e.salary)
+            ]))
+        .toList();
+  }
 
-final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-
-class EmployeeDataSource extends DataGridSource<Employee> {
   @override
-  List<Employee> get dataSource => _employees;
+  List<DataGridRow> get rows => _employeeData;
   
   @override
-  getValue(Employee employee, String columnName) {
-    switch (columnName) {
-      case 'id':
-        return employee.id;
-        break;
-      case 'name':
-        return employee.name;
-        break;
-      case 'salary':
-        return employee.salary;
-        break;
-      case 'designation':
-        return employee.designation;
-        break;
-      default:
-        return ' ';
-        break;
-    }
+  DataGridRowAdapter buildRow(DataGridRow row) {
+    return DataGridRowAdapter(
+        cells: row.getCells().map<Widget>((e) {
+      return Container(
+        alignment: Alignment.center,
+        padding: EdgeInsets.all(8.0),
+        child: Text(e.value.toString()),
+      );
+    }).toList());
   }
 }
 
@@ -176,7 +180,7 @@ Create an instance of `DataGridSource` and set this object to `source` property 
 Widget build(BuildContext context) {
   return Scaffold(
       body: SfDataGrid(
-    source: _employeeDataSource,
+      source: _employeeDataSource,
   ));
 }
 
@@ -185,13 +189,12 @@ Widget build(BuildContext context) {
 
 ## Defining columns
 
-`SfDataGrid` supports to show different data types (int, double, String and DateTime) in different types of columns. You can add the column collection to the `columns` property. 
-You can also load any widget in a column using the [GridWidgetColumn](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridWidgetColumn-class.html) and [cellBuilder](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/cellBuilder.html) property in `SfDataGrid`.
+`SfDataGrid` supports to add any widget in a column using the [GridTextColumn]() property. You can add the column collection to the `columns` property.
 
 {% tabs %}
 {% highlight Dart %} 
 
-final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
+final EmployeeDataSource _employeeDataSource = EmployeeDataSource(employeeData: _employees);
   
 @override
 Widget build(BuildContext context) {
@@ -199,10 +202,10 @@ Widget build(BuildContext context) {
     body: SfDataGrid(
       source: _employeeDataSource,
       columns: [
-        GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-        GridTextColumn(mappingName: 'name', headerText: 'Name'),
-        GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-        GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+        GridTextColumn(columnName: 'id', label: Text('ID')),
+        GridTextColumn(columnName: 'name', label: Text('Name')),
+        GridTextColumn(columnName: 'designation', label: Text('Designation')),
+        GridTextColumn(columnName: 'salary', label: Text('Salary')),
       ],
     ),
   );
@@ -220,7 +223,7 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %} 
     
-final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
+final EmployeeDataSource _employeeDataSource = EmployeeDataSource(employeeData: _employees);
 
 @override
 Widget build(BuildContext context) {
@@ -228,10 +231,10 @@ Widget build(BuildContext context) {
     body: SfDataGrid(
       source: _employeeDataSource,
       columns: [
-        GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-        GridTextColumn(mappingName: 'name', headerText: 'Name'),
-        GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-        GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+        GridTextColumn(columnName: 'id', label: Text('ID')),
+        GridTextColumn(columnName: 'name', label: Text('Name')),
+        GridTextColumn(columnName: 'designation', label: Text('Designation')),
+        GridTextColumn(columnName: 'salary', label: Text('Salary')),
       ],
       selectionMode: SelectionMode.multiple,
     ),
@@ -250,7 +253,7 @@ The information about the rows that are selected can be retrieved using [selecte
 {% tabs %}
 {% highlight Dart %} 
 
-final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
+final EmployeeDataSource _employeeDataSource = EmployeeDataSource(employeeData: _employees);
 
 final DataGridController _controller = DataGridController();
 
@@ -273,11 +276,10 @@ Widget build(BuildContext context) {
           child: SfDataGrid(
             source: _employeeDataSource,
             columns: [
-              GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-              GridTextColumn(mappingName: 'name', headerText: 'Name'),
-              GridTextColumn(
-                  mappingName: 'designation', headerText: 'Designation'),
-              GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+              GridTextColumn(columnName: 'id', label: Text('ID')),
+              GridTextColumn(columnName: 'name', label: Text('Name')),
+              GridTextColumn(columnName: 'designation', label: Text('Designation')),
+              GridTextColumn(columnName: 'salary', label: Text('Salary')),
             ],
             controller: _controller,
             selectionMode: SelectionMode.multiple,
