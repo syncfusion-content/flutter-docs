@@ -185,7 +185,7 @@ class PopulationModel {
 
 Add tooltip
 
-You can add tooltip for the treemap usig the [`tooltipBuilder`] property of the [`TreemapLevel`] in the [`levels`] collection property in the [`SfTreemap`].
+You can add tooltip for the treemap using the [`tooltipBuilder`] property of the [`TreemapLevel`] in the [`levels`] collection property in the [`SfTreemap`].
 
 {% tabs %}
 {% highlight Dart %}
