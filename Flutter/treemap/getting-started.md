@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started for Syncfusion Flutter Treemap | Syncfusion
-description: This section explains the steps required to add the treemap widget and its elements such as tooltip and legends.
+description: This section explains the steps required to add the treemap widget and its elements such as tooltip, labels and legends.
 platform: Flutter
 control: SfTreemap
 documentation: ug
@@ -127,7 +127,7 @@ N>
 
 Add label builder
 
-You can add labels for the treemap using the [`labelBuilder`] property of the [`TreemapLevel`] in the [`levels`] collection property in the [`SfTreemap`] to show information about the particular tile.
+You can add labels to the treemap using the [`labelBuilder`] property of the [`TreemapLevel`] which is added to the [`levels`] collection property in the [`SfTreemap`].
 
 {% tabs %}
 {% highlight Dart %}
@@ -185,7 +185,7 @@ class PopulationModel {
 
 Add tooltip
 
-You can add tooltip for the treemap using the [`tooltipBuilder`] property of the [`TreemapLevel`] in the [`levels`] collection property in the [`SfTreemap`].
+You can add tooltip to the treemap using the [`tooltipBuilder`] property of the [`TreemapLevel`] which is added to the [`levels`] collection property in the [`SfTreemap`] for showing additional information about the specific tile.
 
 {% tabs %}
 {% highlight Dart %}
