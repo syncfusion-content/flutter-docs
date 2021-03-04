@@ -7,7 +7,7 @@ control: SfTreemap
 documentation: ug
 ---
 
-# Layout structures
+# Layout structure in Treemap
 
 This section explains the different layout structures in the treemap widget. The available layout structures are,
 
