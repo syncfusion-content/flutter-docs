@@ -7,7 +7,8 @@ control: SfTreemap
 documentation: ug
 ---
 
-# Layout
+# Layout structures
+
 This section explains the different layout structures in the treemap widget. The available layout structures are,
 
 * Squarify
