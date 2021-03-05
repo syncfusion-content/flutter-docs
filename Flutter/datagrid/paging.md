@@ -14,7 +14,7 @@ The datagrid interactively supports the manipulation of data using [SfDataPager]
 The datagrid performs paging of data using the `SfDataPager`. To enable paging, follow below procedure
 
 * Create a new `SfDataPager` widget, and set the [SfDataGrid.DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) to the [SfDataPager.delegate](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/delegate.html) property.
-* Set the number of pages required to displayed in data pager by setting the `SfDataPager.pageCount` property.
+* Set the number of pages required to be displayed in data pager by setting the `SfDataPager.pageCount` property.
 * Set the number of buttons that should be displayed in view by setting the [SfDataPager.visibleItemsCount](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/visibleItemsCount.html) property.
 * You can load the data for the specific page in `handlePageChanges` method. This method is called for every page navigation from data pager.
 
