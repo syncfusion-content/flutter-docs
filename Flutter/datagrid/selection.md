@@ -52,10 +52,10 @@ Widget build(BuildContext context) {
       body: SfDataGrid(
           source: _employeeDataSource,
           columns: [
-            GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-            GridTextColumn(mappingName: 'name', headerText: 'Name'),
-            GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-            GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+            GridTextColumn(columnName: 'id', label: Text('ID')),
+            GridTextColumn(columnName: 'name', label: Text('Name')),
+            GridTextColumn(columnName: 'designation', label: Text('Designation')),
+            GridTextColumn(columnName: 'salary', label: Text('Salary')),
           ],
           selectionMode: SelectionMode.single
           navigationMode: GridNavigationMode.cell
@@ -81,10 +81,10 @@ Widget build(BuildContext context){
       body: SfDataGrid(
           source: _employeeDataSource,
           columns: [
-            GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-            GridTextColumn(mappingName: 'name', headerText: 'Name'),
-            GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-            GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+            GridTextColumn(columnName: 'id', label: Text('ID')),
+            GridTextColumn(columnName: 'name', label: Text('Name')),
+            GridTextColumn(columnName: 'designation', label: Text('Designation')),
+            GridTextColumn(columnName: 'salary', label: Text('Salary')),
           ],
           selectionMode: SelectionMode.single
       )
@@ -111,10 +111,10 @@ Widget build(BuildContext context){
       body: SfDataGrid(
           source: _employeeDataSource,
           columns: [
-            GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-            GridTextColumn(mappingName: 'name', headerText: 'Name'),
-            GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-            GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+            GridTextColumn(columnName: 'id', label: Text('ID')),
+            GridTextColumn(columnName: 'name', label: Text('Name')),
+            GridTextColumn(columnName: 'designation', label: Text('Designation')),
+            GridTextColumn(columnName: 'salary', label: Text('Salary')),
           ],
           selectionMode: SelectionMode.multiple
       )
@@ -141,10 +141,10 @@ Widget build(BuildContext context){
       body: SfDataGrid(
           source: _employeeDataSource,
           columns: [
-            GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-            GridTextColumn(mappingName: 'name', headerText: 'Name'),
-            GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-            GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+            GridTextColumn(columnName: 'id', label: Text('ID')),
+            GridTextColumn(columnName: 'name', label: Text('Name')),
+            GridTextColumn(columnName: 'designation', label: Text('Designation')),
+            GridTextColumn(columnName: 'salary', label: Text('Salary')),
           ],
           selectionMode: SelectionMode.none
       )
@@ -192,10 +192,10 @@ Widget build(BuildContext context){
                 child: SfDataGrid(
                     source: _employeeDataSource,
                     columns: [
-                      GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-                      GridTextColumn(mappingName: 'name', headerText: 'Name'),
-                      GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-                      GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+                      GridTextColumn(columnName: 'id', label: Text('ID')),
+                      GridTextColumn(columnName: 'name', label: Text('Name')),
+                      GridTextColumn(columnName: 'designation', label: Text('Designation')),
+                      GridTextColumn(columnName: 'salary', label: Text('Salary')),
                     ],
                     controller: this._dataGridController,
                     selectionMode: SelectionMode.multiple
@@ -238,10 +238,10 @@ Widget build(BuildContext context){
                 child: SfDataGrid(
                     source: _employeeDataSource,
                     columns: [
-                      GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-                      GridTextColumn(mappingName: 'name', headerText: 'Name'),
-                      GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-                      GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+                      GridTextColumn(columnName: 'id', label: Text('ID')),
+                      GridTextColumn(columnName: 'name', label: Text('Name')),
+                      GridTextColumn(columnName: 'designation', label: Text('Designation')),
+                      GridTextColumn(columnName: 'salary', label: Text('Salary')),
                     ],
                     controller: this._dataGridController,
                     selectionMode: SelectionMode.single
@@ -270,16 +270,16 @@ Widget build(BuildContext context){
                 child: Text('Set Selection'),
                 onPressed: () {
                     //SelectedRow 
-                    _dataGridController.selectedRow = _employees[3];
+                    _dataGridController.selectedRow = _employeeDataSource.employeeData[3];
                 }),
             Expanded(
                 child: SfDataGrid(
                     source: _employeeDataSource,
                     columns: [
-                      GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-                      GridTextColumn(mappingName: 'name', headerText: 'Name'),
-                      GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-                      GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+                      GridTextColumn(columnName: 'id', label: Text('ID')),
+                      GridTextColumn(columnName: 'name', label: Text('Name')),
+                      GridTextColumn(columnName: 'designation', label: Text('Designation')),
+                      GridTextColumn(columnName: 'salary', label: Text('Salary')),
                     ],
                     controller: this._dataGridController,
                     selectionMode: SelectionMode.single
@@ -309,19 +309,19 @@ Widget build(BuildContext context){
                 onPressed: () {
                     //SelectedRows 
                     _dataGridController.selectedRows = [
-                            _employees[1],
-                            _employees[3],
-                            _employees[6],
+                            _employeeDataSource.employeeData[1],
+                            _employeeDataSource.employeeData[3],
+                            _employeeDataSource.employeeData[6],
                           ];
                 }),
             Expanded(
                 child: SfDataGrid(
                     source: _employeeDataSource,
                     columns: [
-                      GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-                      GridTextColumn(mappingName: 'name', headerText: 'Name'),
-                      GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-                      GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+                      GridTextColumn(columnName: 'id', label: Text('ID')),
+                      GridTextColumn(columnName: 'name', label: Text('Name')),
+                      GridTextColumn(columnName: 'designation', label: Text('Designation')),
+                      GridTextColumn(columnName: 'salary', label: Text('Salary')),
                     ],
                     controller: this._dataGridController,
                     selectionMode: SelectionMode.multiple
@@ -360,10 +360,10 @@ Widget build(BuildContext context){
                 child: SfDataGrid(
                     source: _employeeDataSource,
                     columns: [
-                      GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-                      GridTextColumn(mappingName: 'name', headerText: 'Name'),
-                      GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-                      GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+                      GridTextColumn(columnName: 'id', label: Text('ID')),
+                      GridTextColumn(columnName: 'name', label: Text('Name')),
+                      GridTextColumn(columnName: 'designation', label: Text('Designation')),
+                      GridTextColumn(columnName: 'salary', label: Text('Salary')),
                     ],
                     controller: this._dataGridController,
                     selectionMode: SelectionMode.single,
@@ -402,10 +402,10 @@ Widget build(BuildContext context){
                 child: SfDataGrid(
                     source: _employeeDataSource,
                     columns: [
-                      GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-                      GridTextColumn(mappingName: 'name', headerText: 'Name'),
-                      GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-                      GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+                      GridTextColumn(columnName: 'id', label: Text('ID')),
+                      GridTextColumn(columnName: 'name', label: Text('Name')),
+                      GridTextColumn(columnName: 'designation', label: Text('Designation')),
+                      GridTextColumn(columnName: 'salary', label: Text('Salary')),
                     ],
                     controller: this._dataGridController,
                     selectionMode: SelectionMode.single,
@@ -447,10 +447,10 @@ Widget build(BuildContext context){
                 child: SfDataGrid(
                     source: _employeeDataSource,
                     columns: [
-                      GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-                      GridTextColumn(mappingName: 'name', headerText: 'Name'),
-                      GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-                      GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+                      GridTextColumn(columnName: 'id', label: Text('ID')),
+                      GridTextColumn(columnName: 'name', label: Text('Name')),
+                      GridTextColumn(columnName: 'designation', label: Text('Designation')),
+                      GridTextColumn(columnName: 'salary', label: Text('Salary')),
                     ],
                     controller: this._dataGridController,
                     selectionMode: SelectionMode.single
@@ -485,10 +485,10 @@ Widget build(BuildContext context){
                 child: SfDataGrid(
                     source: _employeeDataSource,
                     columns: [
-                      GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-                      GridTextColumn(mappingName: 'name', headerText: 'Name'),
-                      GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-                      GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+                      GridTextColumn(columnName: 'id', label: Text('ID')),
+                      GridTextColumn(columnName: 'name', label: Text('Name')),
+                      GridTextColumn(columnName: 'designation', label: Text('Designation')),
+                      GridTextColumn(columnName: 'salary', label: Text('Salary')),
                     ],
                     controller: this._dataGridController,
                     selectionMode: SelectionMode.multiple
@@ -668,15 +668,17 @@ Widget build(BuildContext context){
       body: SfDataGrid(
         source: _employeeDataSource,
         columns: [
-          GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-          GridTextColumn(mappingName: 'name', headerText: 'Name'),
-          GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-          GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+          GridTextColumn(columnName: 'id', label: Text('ID')),
+          GridTextColumn(columnName: 'name', label: Text('Name')),
+          GridTextColumn(columnName: 'designation', label: Text('Designation')),
+          GridTextColumn(columnName: 'salary', label: Text('Salary')),
         ],
         selectionMode: SelectionMode.single,
         onSelectionChanging: (List<Object> addedRows, List<Object> removedRows){
             
-            if(addedRows.isNotEmpty && (addedRows.last as Employee).designation == 'Manager'){
+            final index = _employeeDataSource.employeeData.indexOf(addedRows.last);
+            Employee employee = _employees[index];
+            if (employee.designation == 'Manager') {
               return false;
             }
             
@@ -709,17 +711,16 @@ Widget build(BuildContext context) {
       body: SfDataGrid(
         source: _employeeDataSource,
         columns: [
-          GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-          GridTextColumn(mappingName: 'name', headerText: 'Name'),
-          GridTextColumn(
-              mappingName: 'designation', headerText: 'Designation'),
-          GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+          GridTextColumn(columnName: 'id', label: Text('ID')),
+          GridTextColumn(columnName: 'name', label: Text('Name')),
+          GridTextColumn(columnName: 'designation', label: Text('Designation')),
+          GridTextColumn(columnName: 'salary', label: Text('Salary')),
         ],
         selectionMode: SelectionMode.single,
         navigationMode: GridNavigationMode.cell,
         onCurrentCellActivating: (RowColumnIndex currentRowColumnIndex,
             RowColumnIndex previousRowColumnIndex) {
-          if (currentRowColumnIndex == RowColumnIndex(2, 3)) {
+          if (currentRowColumnIndex.rowIndex == 2 && currentRowColumnIndex.columnIndex == 3) {
             return false;
           }
 
@@ -754,10 +755,10 @@ Widget build(BuildContext context) {
     body: SfDataGrid(
       source: _employeeDataSource,
       columns: [
-        GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-        GridTextColumn(mappingName: 'name', headerText: 'Name'),
-        GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-        GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+        GridTextColumn(columnName: 'id', label: Text('ID')),
+        GridTextColumn(columnName: 'name', label: Text('Name')),
+        GridTextColumn(columnName: 'designation', label: Text('Designation')),
+        GridTextColumn(columnName: 'salary', label: Text('Salary')),
       ],
       onCellTap: (DataGridCellTapDetails details) {
         print(details);
@@ -793,10 +794,10 @@ Widget build(BuildContext context){
       body: SfDataGrid(
         source: _employeeDataSource,
         columns: [
-          GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-          GridTextColumn(mappingName: 'name', headerText: 'Name'),
-          GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-          GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+          GridTextColumn(columnName: 'id', label: Text('ID')),
+          GridTextColumn(columnName: 'name', label: Text('Name')),
+          GridTextColumn(columnName: 'designation', label: Text('Designation')),
+          GridTextColumn(columnName: 'salary', label: Text('Salary')),
         ],
         selectionMode: SelectionMode.multiple,
         selectionManager: _customSelectionManager,
@@ -838,10 +839,10 @@ Widget build(BuildContext context){
           body: SfDataGrid(
             source: _employeeDataSource,
             columns: [
-              GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-              GridTextColumn(mappingName: 'name', headerText: 'Name'),
-              GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-              GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+              GridTextColumn(columnName: 'id', label: Text('ID')),
+              GridTextColumn(columnName: 'name', label: Text('Name')),
+              GridTextColumn(columnName: 'designation', label: Text('Designation')),
+              GridTextColumn(columnName: 'salary', label: Text('Salary')),
             ],
             selectionMode: SelectionMode.multiple,
             navigationMode: GridNavigationMode.cell,
@@ -904,10 +905,10 @@ Widget build(BuildContext context) {
           child: SfDataGrid(
             source: _employeeDataSource,
             columns: [
-              GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-              GridTextColumn(mappingName: 'name', headerText: 'Name'),
-              GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-              GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+              GridTextColumn(columnName: 'id', label: Text('ID')),
+              GridTextColumn(columnName: 'name', label: Text('Name')),
+              GridTextColumn(columnName: 'designation', label: Text('Designation')),
+              GridTextColumn(columnName: 'salary', label: Text('Salary')),
             ],
             selectionMode: SelectionMode.multiple,
           ))
@@ -942,10 +943,10 @@ Widget build(BuildContext context){
           child: SfDataGrid(
             source: _employeeDataSource,
             columns: [
-              GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-              GridTextColumn(mappingName: 'name', headerText: 'Name'),
-              GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-              GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+              GridTextColumn(columnName: 'id', label: Text('ID')),
+              GridTextColumn(columnName: 'name', label: Text('Name')),
+              GridTextColumn(columnName: 'designation', label: Text('Designation')),
+              GridTextColumn(columnName: 'salary', label: Text('Salary')),
             ],
             selectionMode: SelectionMode.multiple,
             navigationMode:  GridNavigationMode.cell,
