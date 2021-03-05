@@ -274,28 +274,62 @@ Widget build(BuildContext context) {
         },
         levels: [
           TreemapLevel(
-            groupMapper: (int index) => _source[index].country,
-            color: Colors.blue,
-            padding: EdgeInsets.all(2.5),
+             groupMapper: (int index) => _source[index].country,
+             color: Colors.blue,
+             border: RoundedRectangleBorder(
+               side: BorderSide(
+                 color: Colors.blue,
+                 width: 1,
+               ),
+             ),
+             padding: EdgeInsets.all(2.5),
           ),
           TreemapLevel(
             groupMapper: (int index) => _source[index].job,
             color: Colors.orangeAccent,
+            border: RoundedRectangleBorder(
+              side: BorderSide(
+                color: Colors.orangeAccent,
+                width: 1,
+              ),
+            ),
             padding: EdgeInsets.all(2.5),
           ),
           TreemapLevel(
             groupMapper: (int index) => _source[index].group,
             color: Colors.green[300],
+            border: RoundedRectangleBorder(
+              side: BorderSide(
+                color: Colors.green,
+                width: 1,
+              ),
+            ),
             padding: EdgeInsets.all(5),
           ),
           TreemapLevel(
-            groupMapper: (int index) => _source[index].role,
-            color: Colors.pink[300],
-            padding: EdgeInsets.all(5),
+             groupMapper: (int index) => _source[index].role,
+             color: Colors.pink[300],
+             border: RoundedRectangleBorder(
+               side: BorderSide(
+                 color: Colors.pink,
+                 width: 1,
+               ),
+             ),
+             adding: EdgeInsets.all(5),
           ),
         ],
       ),
    );
+}
+
+class JobVacancyModel {
+  const JobVacancyModel(
+      {this.country, this.job, this.group, this.role, this.vacancy});
+  final String country;
+  final String job;
+  final String group;
+  final String role;
+  final double vacancy;
 }
 
 {% endhighlight %}
@@ -310,6 +344,9 @@ N>
 * Refer the `TreemapLevel.itemBuilder`, for adding and customizing the custom widget on the treemap.
 
 ### Slice
+
+{% tabs %}
+{% highlight Dart %}
 
 List<JobVacancyModel> _source;
 
@@ -379,28 +416,62 @@ Widget build(BuildContext context) {
         },
         levels: [
           TreemapLevel(
-            groupMapper: (int index) => _source[index].country,
-            color: Colors.blue,
-            padding: EdgeInsets.all(2.5),
+             groupMapper: (int index) => _source[index].country,
+             color: Colors.blue,
+             border: RoundedRectangleBorder(
+               side: BorderSide(
+                 color: Colors.blue,
+                 width: 1,
+               ),
+             ),
+             padding: EdgeInsets.all(2.5),
           ),
           TreemapLevel(
             groupMapper: (int index) => _source[index].job,
             color: Colors.orangeAccent,
+            border: RoundedRectangleBorder(
+              side: BorderSide(
+                color: Colors.orangeAccent,
+                width: 1,
+              ),
+            ),
             padding: EdgeInsets.all(2.5),
           ),
           TreemapLevel(
             groupMapper: (int index) => _source[index].group,
             color: Colors.green[300],
+            border: RoundedRectangleBorder(
+              side: BorderSide(
+                color: Colors.green,
+                width: 1,
+              ),
+            ),
             padding: EdgeInsets.all(5),
           ),
           TreemapLevel(
-            groupMapper: (int index) => _source[index].role,
-            color: Colors.pink[300],
-            padding: EdgeInsets.all(5),
+             groupMapper: (int index) => _source[index].role,
+             color: Colors.pink[300],
+             border: RoundedRectangleBorder(
+               side: BorderSide(
+                 color: Colors.pink,
+                 width: 1,
+               ),
+             ),
+             adding: EdgeInsets.all(5),
           ),
         ],
       ),
    );
+}
+
+class JobVacancyModel {
+  const JobVacancyModel(
+      {this.country, this.job, this.group, this.role, this.vacancy});
+  final String country;
+  final String job;
+  final String group;
+  final String role;
+  final double vacancy;
 }
 
 {% endhighlight %}
@@ -415,6 +486,9 @@ N>
 * Refer the `TreemapLevel.itemBuilder`, for adding and customizing the custom widget on the treemap.
 
 ### Dice
+
+{% tabs %}
+{% highlight Dart %}
 
 List<JobVacancyModel> _source;
 
@@ -484,28 +558,62 @@ Widget build(BuildContext context) {
         },
         levels: [
           TreemapLevel(
-            groupMapper: (int index) => _source[index].country,
-            color: Colors.blue,
-            padding: EdgeInsets.all(2.5),
+             groupMapper: (int index) => _source[index].country,
+             color: Colors.blue,
+             border: RoundedRectangleBorder(
+               side: BorderSide(
+                 color: Colors.blue,
+                 width: 1,
+               ),
+             ),
+             padding: EdgeInsets.all(2.5),
           ),
           TreemapLevel(
             groupMapper: (int index) => _source[index].job,
             color: Colors.orangeAccent,
+            border: RoundedRectangleBorder(
+              side: BorderSide(
+                color: Colors.orangeAccent,
+                width: 1,
+              ),
+            ),
             padding: EdgeInsets.all(2.5),
           ),
           TreemapLevel(
             groupMapper: (int index) => _source[index].group,
             color: Colors.green[300],
+            border: RoundedRectangleBorder(
+              side: BorderSide(
+                color: Colors.green,
+                width: 1,
+              ),
+            ),
             padding: EdgeInsets.all(5),
           ),
           TreemapLevel(
-            groupMapper: (int index) => _source[index].role,
-            color: Colors.pink[300],
-            padding: EdgeInsets.all(5),
+             groupMapper: (int index) => _source[index].role,
+             color: Colors.pink[300],
+             border: RoundedRectangleBorder(
+               side: BorderSide(
+                 color: Colors.pink,
+                 width: 1,
+               ),
+             ),
+             adding: EdgeInsets.all(5),
           ),
         ],
       ),
    );
+}
+
+class JobVacancyModel {
+  const JobVacancyModel(
+      {this.country, this.job, this.group, this.role, this.vacancy});
+  final String country;
+  final String job;
+  final String group;
+  final String role;
+  final double vacancy;
 }
 
 {% endhighlight %}
