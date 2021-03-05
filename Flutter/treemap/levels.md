@@ -199,7 +199,7 @@ You can customize the levels based on the following properties:
 
 * **Color** - To specify the background color for the group using the `TreemapLevel.color` property.
 
-* **Border** - To specify the border color for the group using the `TreemapLevel.border` property.
+* **Border** - To specify the border color, border width and border radius for the group using the `TreemapLevel.border` property.
 
 ### Squarified
 
