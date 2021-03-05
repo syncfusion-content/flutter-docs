@@ -17,8 +17,6 @@ You can enable shape selection on a map using the [`MapShapeLayer.onSelectionCha
 
 The [`onSelectionChanged`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/onSelectionChanged.html) callback is used to pass the index of the selected shape when the user is selecting a shape by tapping or clicking or by programmatically.
 
-If the selected shape is tapped or clicked again, the index will be passed as -1. It means that, the shape is unselected.
-
 N> You must call `setState()` in the [`MapShapeLayer.onSelectionChanged`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/onSelectionChanged.html) to observe the changes in the UI.
 
 {% tabs %}

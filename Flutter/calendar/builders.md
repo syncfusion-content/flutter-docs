@@ -328,3 +328,5 @@ Widget build(BuildContext context) {
 [How to customize the appointments using custom builder in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12191/how-to-customize-the-appointments-using-custom-builder-in-the-flutter-event-calendar)
 
 [How to customize the month cell based on the appointment using builder in the Flutter calendar (SfCalendar)](https://www.syncfusion.com/kb/12210/how-to-customize-the-month-cell-based-on-the-appointment-using-builder-in-the-flutter)
+
+[How to customize the month cell with appointment count in the Flutter event Calendar (SfCalendar)](https://www.syncfusion.com/kb/12306/how-to-customize-the-month-cell-with-appointment-count-in-the-flutter-event-calendar)

@@ -136,11 +136,11 @@ void populateData() {
 
 final List<Employee> _employees = <Employee>[];
 
-final EmployeeDataSource_employeeDataSource = EmployeeDataSource();
+final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
 
 class EmployeeDataSource extends DataGridSource<Employee> {
   @override
-  List<Employee> get dataSource => _employees
+  List<Employee> get dataSource => _employees;
   
   @override
   getValue(Employee employee, String columnName) {
