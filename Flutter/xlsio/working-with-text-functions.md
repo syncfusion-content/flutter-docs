@@ -24,7 +24,6 @@ The following code snippet illustrates on how to use CONCATENATE function formul
 
 {% highlight dart %}
 
-
 // Create a new Excel Document.
 final Workbook workbook = Workbook();
 
