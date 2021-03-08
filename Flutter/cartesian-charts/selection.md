@@ -12,6 +12,15 @@ documentation: ug
 The selection feature in chart let you to select a segment in a series or the series itself. This features allows you to select either individual or cluster of segments in the chart series.
 
 {% highlight dart %} 
+    SelectionBehavior _selectionBehavior;
+
+    @override
+    void initState(){
+      _selectionBehavior = SelectionBehavior(
+        // Enables the selection
+        enable: true);
+        super.initState(); 
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -24,10 +33,7 @@ The selection feature in chart let you to select a segment in a series or the se
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
-                                selectionBehavior: SelectionBehavior(
-                                    // Enables the selection
-                                    enable: true
-                                )
+                                selectionBehavior: _selectionBehavior
                             )
                         ]
                     )
@@ -52,6 +58,17 @@ You can customize the segments using the below properties.
 * [`unselectedOpacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/unselectedOpacity.html) - used to control the transparency of the unselected segment.
 
 {% highlight dart %} 
+    
+    SelectionBehavior _selectionBehavior;
+    
+    @override
+    void initState(){
+     _selectionBehavior = SelectionBehavior(
+            enable: true,
+            selectedColor: Colors.red,
+            unselectedColor: Colors.grey);
+        super.initState(); 
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -61,11 +78,7 @@ You can customize the segments using the below properties.
                     child: SfCartesianChart(
                         series: <CartesianSeries>[
                             ColumnSeries<ChartData, double>(
-                                selectionBehavior: SelectionBehavior(
-                                    enable: true,
-                                    selectedColor: Colors.red,
-                                    unselectedColor: Colors.grey
-                                )
+                                selectionBehavior: _selectionBehavior
                             )
                         ]
                     )
@@ -135,6 +148,16 @@ Multiple selection can be enabled using the [`enableMultiSelection`](https://pub
 You can select a point or series programmatically on a chart using [`initialSelectedDataIndexes`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/initialSelectedDataIndexes.html) property of chart.
 
 {% highlight dart %} 
+    
+    SelectionBehavior _selectionBehavior;
+    
+    @override
+    void initState(){
+    _selectionBehavior =  SelectionBehavior(
+         // Enables the selection
+         enable: true );
+        super.initState(); 
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -149,19 +172,13 @@ You can select a point or series programmatically on a chart using [`initialSele
                                 dataSource: chartData1,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
-                                selectionBehavior: SelectionBehavior(
-                                    // Enables the selection
-                                    enable: true
-                                )
+                                selectionBehavior: _selectionBehavior
                             ),
                             ColumnSeries<ChartData, double>(
                                 dataSource: chartData2,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
-                                selectionBehavior: SelectionBehavior(
-                                    // Enables the selection
-                                    enable: true
-                                )
+                                selectionBehavior: _selectionBehavior
                             )
                         ]
                     )

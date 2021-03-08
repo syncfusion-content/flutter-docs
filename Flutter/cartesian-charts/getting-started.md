@@ -256,6 +256,14 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
 {% highlight dart %} 
 
+    TooltipBehavior _tooltipBehavior;
+
+    @override
+    void initState(){
+      _tooltipBehavior =  TooltipBehavior(enable: true);
+      super.initState(); 
+    }
+
     @override
     Widget build(BuildContext context) {
         return Scaffold(
@@ -266,7 +274,7 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
                 child: Container(
                     child: SfCartesianChart(
                         // Enables the tooltip for all the series in chart
-                        tooltipBehavior: TooltipBehavior(enable: true),
+                        tooltipBehavior: _tooltipBehavior,
                         // Initialize category axis
                         primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
