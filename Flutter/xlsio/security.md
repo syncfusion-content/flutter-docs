@@ -11,41 +11,11 @@ documentation: ug
 
 You can protect an anonymous user from viewing, moving, editing or deleting important data from a worksheet or workbook by [protecting a worksheet or workbook](https://support.office.com/en-ca/article/Password-protect-worksheet-or-workbook-elements-dbf706e0-ba22-4a08-84d8-552db16eef11#bmprotectelements), with or without a password.
 
-## Protect Workbook
+## Protect workbook elements
 
-To keep others from making structural changes to your documents such as moving, deleting and adding sheets, you can protect the workbook in the following ways. 
+To keep others from making structural changes to your documents such as moving, deleting and adding sheets, you can protect the workbook in Flutter XlsIO. 
 
-### Encryption with password
-
-* **Password To Open** - This password helps to protect your workbook from unauthorized viewing or accessing.
-
-The following code snippets illustrate how to achieve the above option.
-
-{% highlight dart %}
-
-// Create a new Excel Document.
-final Workbook workbook = Workbook();
-
-// Accessing sheet via index.
-final Worksheet sheet = workbook.worksheets[0];
-
-// Assigning text to cells.
-sheet.getRangeByName('A1').text = 'The document is Encrypted';
-
-//Encrypt the workbook with password.
-workbook.passwordToOpen = 'Syncfusion';
-
-// Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
-File('Encrpty.xlsx').writeAsBytes(bytes);
-workbook.dispose();
-
-{% endhighlight %}
-
-Now, the encrypted workbook can be saved. 
-
-### Protect workbook elements
-Flutter XlsIO provides options to protect workbook elements with password. The following code example illustrates how to protect a workbook with a password.
+The following code example illustrates how to protect a workbook with a password.
 
 {% highlight dart %}
 
