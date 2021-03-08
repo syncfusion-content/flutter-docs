@@ -191,7 +191,7 @@ N>
 
 ## Hierarchical level
 
-Hierarchical level arrange the tiles in the nested type. Each tile of the treemap is a rectangle which is filled with smaller rectangles representing sub-data.
+Hierarchical level arrange the tiles in the form of nested rectangles. Each tile of the treemap is a rectangle which is filled with smaller rectangles representing sub-data. You can have more than one `TreemapLevel` in the `levels` collection to form a hierarchical treemap.
 
 You can customize the levels based on the following properties:
 
