@@ -25,22 +25,48 @@ final Worksheet sheet = workbook.worksheets[0];
 
 //Creating a new style with all properties.
 final Style style = CellStyle(workbook);
+// set style name.
 style.name = 'Style1';
+// set back color by hexa decimal.
 style.backColor = '#FF5050';
+// set back color by RGB values.
+style.backColorRGB = Color.fromARGB(255, 34, 244, 0);
+// set font name.
 style.fontName = 'Aldhabi';
+// set font color by hexa decimal.
 style.fontColor = '#138939';
+// set font color by RGB values.
+style.fontColorRGB = Color.fromARGB(255, 244, 0, 34);
+// set font size.
 style.fontSize = 16;
+// set font bold.
 style.bold = true;
+// set font italic.
 style.italic = true;
+// set font underline.
 style.underline = true;
+// set rotation.
 style.rotation = 120;
+// set horizontal alignment.
 style.hAlign = HAlignType.center;
+// set veritical alignment.
 style.vAlign = VAlignType.bottom;
+// set indent value.
 style.indent = 1;
-style.borders.all.lineStyle = LineStyle.double;
-style.borders.all.color = '#FFFF66';
+// set top bordera line style.
+style.borders.top.lineStyle = LineStyle.double;
+// set top borders color by hexa decimal.
+style.borders.top.color = '#FFFF66';
+// set right bordera line style.
+style.borders.right.lineStyle = LineStyle.thick;
+// set right borders color by RGB values.
+style.borders.right.colorRGB = Color.fromARGB(255, 0, 34, 244);
+// set wrap text.
 style.wrapText = true;
+// set number format to cell.
 style.numberFormat = '_(\$* #,##0_)';
+
+// Add style.
 workbook.styles.addStyle(style);
 
 //Apply cellStyle.
