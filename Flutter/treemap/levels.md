@@ -7,7 +7,7 @@ control: SfTreemap
 documentation: ug
 ---
 
-# Levels in Flutter Treemap
+# Levels in the Flutter Treemap
 
 The levels of the tree map can be categorized into the following two types,
 
