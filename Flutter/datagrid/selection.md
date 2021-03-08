@@ -98,7 +98,7 @@ Widget build(BuildContext context){
 
 ### Multiple row selection
 
-The SfDataGrid allows you to select multiple rows by setting `selectionMode` property as `multiple`,  where you can select multiple rows by click on SfDataGrid and also using the key modifiers.
+The SfDataGrid allows you to select multiple rows by setting `selectionMode` property as `multiple`,  where you can select multiple rows by clicking on SfDataGrid and also using the key modifiers.
 
 While using `multiple`, you can select multiple rows by pressing the key modifiers <kbd>Shift</kbd> + <kbd>Down</kbd> and <kbd>Shift</kbd> + <kbd>Up</kbd>.
 
