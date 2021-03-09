@@ -109,6 +109,8 @@ Then, declare the [SfGlobalLocalizations.delegate](https://pub.dev/documentation
 {% tabs %}
 {% highlight Dart %}
 
+final int rowsPerPage = 15;
+
 @override
 Widget build(BuildContext context) {
   return MaterialApp(
@@ -147,7 +149,7 @@ Widget build(BuildContext context) {
                 width: constraints.maxWidth,
                 child: SfDataPager(
                   delegate: _employeeDataSource,
-                  rowsPerPage: 20,
+                  pageCount: employees.length / rowsPerPage,
                   visibleItemsCount: 5,
                   direction: Axis.horizontal,
                 ),
