@@ -23,79 +23,63 @@ Widget build(BuildContext context) {
     allowPullToRefresh: true,
     source: employeeDataSource,
     columns: <GridColumn>[
-      GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-      GridTextColumn(mappingName: 'name', headerText: 'Name'),
-      GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-      GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+      GridTextColumn(columnName: 'id', label: Text('ID')),
+      GridTextColumn(columnName: 'name', label: Text('Name')),
+      GridTextColumn(columnName: 'designation', label: Text('Designation')),
+      GridTextColumn(columnName: 'salary', label: Text('Salary')),
     ],
   );
 }
 
-final List<String> _names = <String>[
-  'Welli',
-  'Blonp',
-  'Folko',
-  'Furip',
-  'Folig',
-  'Picco',
-  'Frans',
-  'Warth',
-  'Linod',
-  'Simop',
-  'Merep',
-  'Riscu',
-  'Seves',
-  'Vaffe',
-  'Alfki'
-];
-
-final List<String> _designation = <String>[
-  'Project Lead',
-  'Developer',
-  'Manager',
-  'Designer',
-  'System Analyst',
-  'CEO'
-];
-
-List<Employee> _addMoreRows(List<Employee> employeeData, int count) {
-  final Random _random = Random();
-  int startIndex = employeeData.isNotEmpty ? employeeData.length : 0,
-      endIndex = startIndex + count;
-  for (int i = startIndex; i < endIndex; i++) {
-    employeeData.add(Employee(
-      1000 + i,
-      _names[_random.nextInt(_names.length - 1)],
-      _designation[_random.nextInt(_designation.length - 1)],
-      10000 + _random.nextInt(10000),
-    ));
-  }
-  return employeeData;
+List<Employee> getEmployeeData() {
+  return [
+    Employee(10001, 'James', 'Project Lead', 20000),
+    Employee(10002, 'Kathryn', 'Manager', 30000),
+    Employee(10003, 'Lara', 'Developer', 15000),
+    Employee(10004, 'Michael', 'Designer', 15000),
+    Employee(10005, 'Martin', 'Developer', 15000),
+    Employee(10006, 'Newberry', 'Developer', 15000),
+    Employee(10007, 'Balnc', 'Developer', 15000),
+    Employee(10008, 'Perry', 'Developer', 15000),
+    Employee(10009, 'Gable', 'Developer', 15000),
+    Employee(10010, 'Grimes', 'Developer', 15000)
+  ];
 }
 
-class EmployeeDataSource extends DataGridSource<Employee> {
-  @override
-  List<Employee> get dataSource => employees;
+class EmployeeDataSource extends DataGridSource {
+  List<DataGridRow> employeeData;
+  EmployeeDataSource({List<Employee> employeesData}) {
+    getData(employeesData);
+  }
+  getData(List<Employee> employeesData) {
+    employeeData = employeesData
+        .map<DataGridRow>((e) => DataGridRow(cells: [
+              DataGridCell<int>(columnName: 'id', value: e.id),
+              DataGridCell<String>(columnName: 'name', value: e.name),
+              DataGridCell<String>(
+                  columnName: 'designation', value: e.designation),
+              DataGridCell<int>(columnName: 'salary', value: e.salary)
+            ]))
+        .toList();
+  }
 
   @override
-  Object getValue(Employee employee, String columnName) {
-    switch (columnName) {
-      case 'id':
-        return employee.id;
-        break;
-      case 'name':
-        return employee.name;
-        break;
-      case 'salary':
-        return employee.salary;
-        break;
-      case 'designation':
-        return employee.designation;
-        break;
-      default:
-        return ' ';
-        break;
-    }
+  List<DataGridRow> get rows => employeeData;
+
+  @override
+  DataGridRowAdapter buildRow(DataGridRow row) {
+    return DataGridRowAdapter(
+        cells: row.getCells().map<Widget>((e) {
+      if (e.columnName == 'image') {
+        return e.value;
+      } else {
+        return Container(
+          alignment: Alignment.center,
+          padding: EdgeInsets.all(8.0),
+          child: Text(e.value.toString()),
+        );
+      }
+    }).toList());
   }
 
   @override
@@ -103,6 +87,23 @@ class EmployeeDataSource extends DataGridSource<Employee> {
     await Future.delayed(Duration(seconds: 5));
     _addMoreRows(employees, 15);
     notifyListeners();
+  }
+
+  void _addMoreRows() {
+    employeeData.addAll([
+      Employee(10001, 'James', 'Project Lead', 20000),
+      Employee(10002, 'Kathryn', 'Manager', 30000),
+      Employee(10003, 'Lara', 'Developer', 15000),
+      Employee(10004, 'Michael', 'Designer', 15000),
+      Employee(10005, 'Martin', 'Developer', 15000),
+    ]
+        .map<DataGridRow>((e) => DataGridRow(cells: [
+              DataGridCell(columnName: 'id', value: e.id),
+              DataGridCell(columnName: 'name', value: e.name),
+              DataGridCell(columnName: 'designation', value: e.designation),
+              DataGridCell(columnName: 'salary', value: e.salary),
+            ]))
+        .toList());
   }
 }
 
@@ -135,10 +136,10 @@ Widget build(BuildContext context) {
       refreshIndicatorStrokeWidth: 3.0,
       refreshIndicatorDisplacement: 60.0,
       columns: <GridColumn>[
-        GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-        GridTextColumn(mappingName: 'name', headerText: 'Name'),
-        GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-        GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+        GridTextColumn(columnName: 'id', label: Text('ID')),
+        GridTextColumn(columnName: 'name', label: Text('Name')),
+        GridTextColumn(columnName: 'designation', label: Text('Designation')),
+        GridTextColumn(columnName: 'salary', label: Text('Salary')),
       ],
     ),
   );
@@ -171,10 +172,10 @@ Widget build(BuildContext context) {
       allowPullToRefresh: true,
       source: employeeDataSource,
       columns: <GridColumn>[
-        GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-        GridTextColumn(mappingName: 'name', headerText: 'Name'),
-        GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-        GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+        GridTextColumn(columnName: 'id', label: Text('ID')),
+        GridTextColumn(columnName: 'name', label: Text('Name')),
+        GridTextColumn(columnName: 'designation', label: Text('Designation')),
+        GridTextColumn(columnName: 'salary', label: Text('Salary')),
       ],
     ),
     floatingActionButton: FloatingActionButton(
@@ -186,71 +187,55 @@ Widget build(BuildContext context) {
   );
 }
 
-final List<String> _names = <String>[
-  'Welli',
-  'Blonp',
-  'Folko',
-  'Furip',
-  'Folig',
-  'Picco',
-  'Frans',
-  'Warth',
-  'Linod',
-  'Simop',
-  'Merep',
-  'Riscu',
-  'Seves',
-  'Vaffe',
-  'Alfki'
-];
-
-final List<String> _designation = <String>[
-  'Project Lead',
-  'Developer',
-  'Manager',
-  'Designer',
-  'System Analyst',
-  'CEO'
-];
-
-List<Employee> _addMoreRows(List<Employee> employeeData, int count) {
-  final Random _random = Random();
-  int startIndex = employeeData.isNotEmpty ? employeeData.length : 0,
-      endIndex = startIndex + count;
-  for (int i = startIndex; i < endIndex; i++) {
-    employeeData.add(Employee(
-      1000 + i,
-      _names[_random.nextInt(_names.length - 1)],
-      _designation[_random.nextInt(_designation.length - 1)],
-      10000 + _random.nextInt(10000),
-    ));
-  }
-  return employeeData;
+List<Employee> getEmployeeData() {
+  return [
+    Employee(10001, 'James', 'Project Lead', 20000),
+    Employee(10002, 'Kathryn', 'Manager', 30000),
+    Employee(10003, 'Lara', 'Developer', 15000),
+    Employee(10004, 'Michael', 'Designer', 15000),
+    Employee(10005, 'Martin', 'Developer', 15000),
+    Employee(10006, 'Newberry', 'Developer', 15000),
+    Employee(10007, 'Balnc', 'Developer', 15000),
+    Employee(10008, 'Perry', 'Developer', 15000),
+    Employee(10009, 'Gable', 'Developer', 15000),
+    Employee(10010, 'Grimes', 'Developer', 15000)
+  ];
 }
 
-class EmployeeDataSource extends DataGridSource<Employee> {
-  @override
-  List<Employee> get dataSource => employees;
+class EmployeeDataSource extends DataGridSource {
+  List<DataGridRow> employeeData;
+  EmployeeDataSource({List<Employee> employeesData}) {
+    getData(employeesData);
+  }
+  getData(List<Employee> employeesData) {
+    employeeData = employeesData
+        .map<DataGridRow>((e) => DataGridRow(cells: [
+              DataGridCell<int>(columnName: 'id', value: e.id),
+              DataGridCell<String>(columnName: 'name', value: e.name),
+              DataGridCell<String>(
+                  columnName: 'designation', value: e.designation),
+              DataGridCell<int>(columnName: 'salary', value: e.salary)
+            ]))
+        .toList();
+  }
 
   @override
-  Object getValue(Employee employee, String columnName) {
-    switch (columnName) {
-      case 'id':
-        return employee.id;
-        break;
-      case 'name':
-        return employee.name;
-        break;
-      case 'salary':
-        return employee.salary;
-        break;
-      case 'designation':
-        return employee.designation;
-        break;
-      default:
-        return ' ';
-        break;
-    }
+  List<DataGridRow> get rows => employeeData;
+
+  @override
+  DataGridRowAdapter buildRow(DataGridRow row) {
+    return DataGridRowAdapter(
+        cells: row.getCells().map<Widget>((e) {
+      if (e.columnName == 'image') {
+        return e.value;
+      } else {
+        return Container(
+          alignment: Alignment.center,
+          padding: EdgeInsets.all(8.0),
+          child: Text(e.value.toString()),
+        );
+      }
+    }).toList());
   }
 
   @override
@@ -258,6 +243,23 @@ class EmployeeDataSource extends DataGridSource<Employee> {
     await Future.delayed(Duration(seconds: 5));
     _addMoreRows(employees, 15);
     notifyListeners();
+  }
+
+  void _addMoreRows() {
+    employeeData.addAll([
+      Employee(10001, 'James', 'Project Lead', 20000),
+      Employee(10002, 'Kathryn', 'Manager', 30000),
+      Employee(10003, 'Lara', 'Developer', 15000),
+      Employee(10004, 'Michael', 'Designer', 15000),
+      Employee(10005, 'Martin', 'Developer', 15000),
+    ]
+        .map<DataGridRow>((e) => DataGridRow(cells: [
+              DataGridCell(columnName: 'id', value: e.id),
+              DataGridCell(columnName: 'name', value: e.name),
+              DataGridCell(columnName: 'designation', value: e.designation),
+              DataGridCell(columnName: 'salary', value: e.salary),
+            ]))
+        .toList());
   }
 }
 
