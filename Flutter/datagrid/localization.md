@@ -57,13 +57,10 @@ Widget build(BuildContext context) {
                   child: SfDataGrid(
                       source: _employeeDataSource,
                       columns: <GridColumn>[
-                        GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-                        GridTextColumn(mappingName: 'name', headerText: 'Name'),
-                        GridTextColumn(
-                            mappingName: 'designation',
-                            headerText: 'Designation'),
-                        GridNumericColumn(
-                            mappingName: 'salary', headerText: 'Salary')
+                          GridTextColumn(columnName: 'id', label: Text('ID')),
+                          GridTextColumn(columnName: 'name', label: Text('Name')),
+                          GridTextColumn(columnName: 'designation', label: Text('Designation')),
+                          GridTextColumn(columnName: 'salary', label: Text('Salary')),
                       ])),
               Container(
                 height: 60,
@@ -140,13 +137,10 @@ Widget build(BuildContext context) {
                   child: SfDataGrid(
                       source: _employeeDataSource,
                       columns: <GridColumn>[
-                        GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-                        GridTextColumn(mappingName: 'name', headerText: 'Name'),
-                        GridTextColumn(
-                            mappingName: 'designation',
-                            headerText: 'Designation'),
-                        GridNumericColumn(
-                            mappingName: 'salary', headerText: 'Salary')
+                          GridTextColumn(columnName: 'id', label: Text('ID')),
+                          GridTextColumn(columnName: 'name', label: Text('Name')),
+                          GridTextColumn(columnName: 'designation', label: Text('Designation')),
+                          GridTextColumn(columnName: 'salary', label: Text('Salary')),
                       ])),
               Container(
                 height: 60,

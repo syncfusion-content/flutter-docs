@@ -132,15 +132,17 @@ Widget build(BuildContext context) {
     return Scaffold(
         body: SfDataGrid(
         columns: [
-          GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-          GridNumericColumn(mappingName: 'productId', headerText: 'Product ID'),
-          GridTextColumn(mappingName: 'name', headerText: 'Customer Name'),
-          GridTextColumn(mappingName: 'product', headerText: 'Product'),
-          GridDateTimeColumn(
-              mappingName: 'orderDate', headerText: 'Order Date'),
-          GridNumericColumn(mappingName: 'quantity', headerText: 'Quantity'),
-          GridTextColumn(mappingName: 'city', headerText: 'City'),
-          GridNumericColumn(mappingName: 'unitPrice', headerText: 'Unit Price'),
+            GridTextColumn(columnName: 'id', label: Text('ID')),
+            GridTextColumn(
+                columnName: 'productId', label: Text('Product ID')),
+            GridTextColumn(columnName: 'name', label: Text('Customer Name')),
+            GridTextColumn(columnName: 'product', label: Text('Product')),
+            GridTextColumn(
+                columnName: 'orderDate', label: Text('Order Date')),
+            GridTextColumn(columnName: 'quantity', label: Text('Quantity')),
+            GridTextColumn(columnName: 'city', label: Text('City')),
+            GridTextColumn(
+                columnName: 'unitPrice', label: Text('Unit Price')),
         ],
         frozenRowsCount: 1,
         ),
@@ -161,15 +163,17 @@ Widget build(BuildContext context) {
     return Scaffold(
         body: SfDataGrid(
         columns: [
-          GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-          GridNumericColumn(mappingName: 'productId', headerText: 'Product ID'),
-          GridTextColumn(mappingName: 'name', headerText: 'Customer Name'),
-          GridTextColumn(mappingName: 'product', headerText: 'Product'),
-          GridDateTimeColumn(
-              mappingName: 'orderDate', headerText: 'Order Date'),
-          GridNumericColumn(mappingName: 'quantity', headerText: 'Quantity'),
-          GridTextColumn(mappingName: 'city', headerText: 'City'),
-          GridNumericColumn(mappingName: 'unitPrice', headerText: 'Unit Price'),
+            GridTextColumn(columnName: 'id', label: Text('ID')),
+            GridTextColumn(
+                columnName: 'productId', label: Text('Product ID')),
+            GridTextColumn(columnName: 'name', label: Text('Customer Name')),
+            GridTextColumn(columnName: 'product', label: Text('Product')),
+            GridTextColumn(
+                columnName: 'orderDate', label: Text('Order Date')),
+            GridTextColumn(columnName: 'quantity', label: Text('Quantity')),
+            GridTextColumn(columnName: 'city', label: Text('City')),
+            GridTextColumn(
+                columnName: 'unitPrice', label: Text('Unit Price')),
         ],
         footerFrozenRowsCount: 1,
         ),
@@ -204,15 +208,17 @@ Widget build(BuildContext context) {
                 frozenPaneLineColor: Colors.red, frozenPaneLineWidth: 1.5),
             child: SfDataGrid(
             columns: [
-              GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-              GridNumericColumn(mappingName: 'productId', headerText: 'Product ID'),
-              GridTextColumn(mappingName: 'name', headerText: 'Customer Name'),
-              GridTextColumn(mappingName: 'product', headerText: 'Product'),
-              GridDateTimeColumn(
-                    mappingName: 'orderDate', headerText: 'Order Date'),
-              GridNumericColumn(mappingName: 'quantity', headerText: 'Quantity'),
-              GridTextColumn(mappingName: 'city', headerText: 'City'),
-              GridNumericColumn(mappingName: 'unitPrice', headerText: 'Unit Price'),
+                GridTextColumn(columnName: 'id', label: Text('ID')),
+                GridTextColumn(
+                    columnName: 'productId', label: Text('Product ID')),
+                GridTextColumn(columnName: 'name', label: Text('Customer Name')),
+                GridTextColumn(columnName: 'product', label: Text('Product')),
+                GridTextColumn(
+                    columnName: 'orderDate', label: Text('Order Date')),
+                GridTextColumn(columnName: 'quantity', label: Text('Quantity')),
+                GridTextColumn(columnName: 'city', label: Text('City')),
+                GridTextColumn(
+                    columnName: 'unitPrice', label: Text('Unit Price')),
             ],
             frozenRowsCount: 1,
             footerFrozenRowsCount: 1,

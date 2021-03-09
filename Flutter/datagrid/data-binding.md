@@ -13,11 +13,11 @@ documentation: ug
 
  The following APIs in the `DataGridSource` are mandatory to process the data,
 
- * [dataSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/dataSource.html) - The number of rows in a datagrid and row selection depends
- on the [dataSource]. So, set the collection required for datagrid in
-`dataSource`.
-* [getValue](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/getValue.html) - The data needed for the cells is obtained from
-`getValue`.
+ * [rows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/dataSource.html) - The number of rows in a datagrid and row selection depends
+ on the [rows]. So, set the `DataGridRow` collection required for datagrid in
+`rows`.
+* [buildRow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/getValue.html) - The widget needed for the cells is obtained from
+`DataGridRowAdapter`.
 
 `DataGridSource` objects are expected to be long-lived, not recreated with each build.
 
@@ -26,31 +26,32 @@ The following example shows how to create the `DataGridSource`,
 {% tabs %}
 {% highlight dart %} 
 
-final List<Employee> _employees = <Employee>[];
+class EmployeeDataSource extends DataGridSource {
+  EmployeeDataSource() {
+    dataGridRows = _employees.map<DataGridRow>((employee) {
+      return DataGridRow(cells: [
+        DataGridCell<int>(value: employee.id, columnName: 'id'),
+        DataGridCell<String>(value: employee.name, columnName: 'name'),
+        DataGridCell<String>(
+            value: employee.designation, columnName: 'designation'),
+        DataGridCell<double>(value: employee.salary, columnName: 'salary'),
+      ]);
+    }).toList();
+  }
 
-class EmployeeDataSource extends DataGridSource<Employee> {
+  List<DataGridRow> dataGridRows;
+
   @override
-  List<Employee> get dataSource => _employees
-  
+  List<DataGridRow> get rows => dataGridRows;
+
   @override
-  getValue(Employee employee, String columnName) {
-    switch (columnName) {
-      case 'id':
-        return employee.id;
-        break;
-      case 'name':
-        return employee.name;
-        break;
-      case 'salary':
-        return employee.salary;
-        break;
-      case 'designation':
-        return employee.designation;
-        break;
-      default:
-        return ' ';
-        break;
-    }
+  DataGridRowAdapter buildRow(DataGridRow row) {
+    return DataGridRowAdapter(
+        cells: row.getCells().map<Widget>((e) {
+      return Container(
+        child: Text(e.value.toString()),
+      );
+    }).toList());
   }
 }
 
@@ -70,10 +71,10 @@ Widget build(BuildContext context) {
     body: SfDataGrid(
       source: _employeeDataSource,
       columns: [
-        GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-        GridTextColumn(mappingName: 'name', headerText: 'Name'),
-        GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-        GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+        GridTextColumn(columnName: 'id', label: Text('ID')),
+        GridTextColumn(columnName: 'name', label: Text('Name')),
+        GridTextColumn(columnName: 'designation', label: Text('Designation')),
+        GridTextColumn(columnName: 'salary', label: Text('Salary')),
       ],
     ),
   );
@@ -110,17 +111,18 @@ Widget build(BuildContext context) {
         FlatButton(
             child: const Text('Add row'),
             onPressed: () {
-              _employees.add(Employee(10011, 'Steve', 'Designer', 15000));
+              _employees
+                  .add(Employee(10011, 'Steve', 'Designer', 15000));
+              _employeeDataSource.buildDataGridRows();
               _employeeDataSource.updateDataGridSource();
             }),
         SfDataGrid(
           source: _employeeDataSource,
           columns: <GridColumn>[
-            GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-            GridTextColumn(mappingName: 'name', headerText: 'Name'),
-            GridTextColumn(
-                mappingName: 'designation', headerText: 'Designation'),
-            GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+            GridTextColumn(columnName: 'id', label: Text('ID')),
+            GridTextColumn(columnName: 'name', label: Text('Name')),
+            GridTextColumn(columnName: 'designation', label: Text('Designation')),
+            GridTextColumn(columnName: 'salary', label: Text('Salary')),
           ],
         ),
       ],
@@ -128,30 +130,36 @@ Widget build(BuildContext context) {
   );
 }
 
-class EmployeeDataSource extends DataGridSource<Employee> {
- 
+class EmployeeDataSource extends DataGridSource {
+  EmployeeDataSource() {
+    buildDataGridRow();
+  }
+
+  List<DataGridRow> dataGridRows = [];
+
+  void buildDataGridRows() {
+    dataGridRows = _employees
+        .map<DataGridRow>((e) => DataGridRow(cells: [
+              DataGridCell<int>(columnName: 'id', value: e.id),
+              DataGridCell<String>(columnName: 'name', value: e.name),
+              DataGridCell<String>(
+                  columnName: 'designation', value: e.designation),
+              DataGridCell<int>(columnName: 'salary', value: e.salary),
+            ]))
+        .toList();
+  }
+
   @override
-  List<Employee> get dataSource => _employees
-  
+  List<DataGridRow> get rows => dataGridRows;
+
   @override
-  getValue(Employee employee, String columnName) {
-    switch (columnName) {
-      case 'id':
-        return employee.id;
-        break;
-      case 'name':
-        return employee.name;
-        break;
-      case 'salary':
-        return employee.salary;
-        break;
-      case 'designation':
-        return employee.designation;
-        break;
-      default:
-        return ' ';
-        break;
-    }
+  DataGridRowAdapter buildRow(DataGridRow row) {
+    return DataGridRowAdapter(
+        cells: row.getCells().map<Widget>((e) {
+      return Container(
+        child: Text(e.value.toString()),
+      );
+    }).toList());
   }
 
   void updateDataGridSource() {
@@ -186,17 +194,26 @@ Widget build(BuildContext context) {
             child: const Text('Update cell value'),
             onPressed: () {
               _employees[0].salary = 25000;
+              _employeeDataSource.dataGridRows[0] = DataGridRow(cells: [
+                DataGridCell(value: employees[0].id, columnName: 'id'),
+                DataGridCell(value: employees[0].name, columnName: 'name'),
+                DataGridCell(
+                    value: employees[0].designation,
+                    columnName: 'designation'),
+                DataGridCell(
+                    value: employees[0].salary, columnName: 'salary'),
+              ]);
+
               _employeeDataSource.updateDataGridSource(
                   rowColumnIndex: RowColumnIndex(0, 3));
             }),
         SfDataGrid(
           source: _employeeDataSource,
           columns: <GridColumn>[
-            GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-            GridTextColumn(mappingName: 'name', headerText: 'Name'),
-            GridTextColumn(
-                mappingName: 'designation', headerText: 'Designation'),
-            GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+            GridTextColumn(columnName: 'id', label: Text('ID')),
+            GridTextColumn(columnName: 'name', label: Text('Name')),
+            GridTextColumn(columnName: 'designation', label: Text('Designation')),
+            GridTextColumn(columnName: 'salary', label: Text('Salary')),
           ],
         ),
       ],
@@ -204,30 +221,36 @@ Widget build(BuildContext context) {
   );
 }
 
-class EmployeeDataSource extends DataGridSource<Employee> {
+class EmployeeDataSource extends DataGridSource {
+  EmployeeDataSource() {
+    buildDataGridRow();
+  }
+
+  List<DataGridRow> dataGridRows = [];
+
+  void buildDataGridRow() {
+    dataGridRows = _employees
+        .map<DataGridRow>((e) => DataGridRow(cells: [
+              DataGridCell<int>(columnName: 'id', value: e.id),
+              DataGridCell<String>(columnName: 'name', value: e.name),
+              DataGridCell<String>(
+                  columnName: 'designation', value: e.designation),
+              DataGridCell<int>(columnName: 'salary', value: e.salary),
+            ]))
+        .toList();
+  }
 
   @override
-  List<Employee> get dataSource => _employees
-  
+  List<DataGridRow> get rows => dataGridRows;
+
   @override
-  getValue(Employee employee, String columnName) {
-    switch (columnName) {
-      case 'id':
-        return employee.id;
-        break;
-      case 'name':
-        return employee.name;
-        break;
-      case 'salary':
-        return employee.salary;
-        break;
-      case 'designation':
-        return employee.designation;
-        break;
-      default:
-        return ' ';
-        break;
-    }
+  DataGridRowAdapter buildRow(DataGridRow row) {
+    return DataGridRowAdapter(
+        cells: row.getCells().map<Widget>((e) {
+      return Container(
+        child: Text(e.value.toString()),
+      );
+    }).toList());
   }
 
   void updateDataGridSource({RowColumnIndex rowColumnIndex}) {

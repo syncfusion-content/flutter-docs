@@ -61,87 +61,95 @@ Widget build(BuildContext context) {
       );
     },
     columns: <GridColumn>[
-      GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-      GridTextColumn(mappingName: 'name', headerText: 'Name'),
-      GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-      GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+        GridTextColumn(columnName: 'id', label: Text('ID')),
+        GridTextColumn(columnName: 'name', label: Text('Name')),
+        GridTextColumn(columnName: 'designation', label: Text('Designation')),
+        GridTextColumn(columnName: 'salary', label: Text('Salary')),
     ],
   );
 }
 
-final List<String> _names = <String>[
-  'Welli',
-  'Blonp',
-  'Folko',
-  'Furip',
-  'Folig',
-  'Picco',
-  'Frans',
-  'Warth',
-  'Linod',
-  'Simop',
-  'Merep',
-  'Riscu',
-  'Seves',
-  'Vaffe',
-  'Alfki'
-];
-
-final List<String> _designation = <String>[
-  'Project Lead',
-  'Developer',
-  'Manager',
-  'Designer',
-  'System Analyst',
-  'CEO'
-];
-
-List<Employee> _addMoreRows(List<Employee> employeeData, int count) {
-  final Random _random = Random();
-  int startIndex = employeeData.isNotEmpty ? employeeData.length : 0,
-      endIndex = startIndex + count;
-  for (int i = startIndex; i < endIndex; i++) {
-    employeeData.add(Employee(
-      1000 + i,
-      _names[_random.nextInt(_names.length - 1)],
-      _designation[_random.nextInt(_designation.length - 1)],
-      10000 + _random.nextInt(10000),
-    ));
+class EmployeeDataSource extends DataGridSource {
+  EmployeeDataSource() {
+    buildDataGridRow();
   }
-  return employeeData;
-}
 
-class EmployeeDataSource extends DataGridSource<Employee> {
-  @override
-  List<Employee> get dataSource => employees;
+  List<DataGridRow> dataGridRows = [];
 
   @override
-  Object getValue(Employee employee, String columnName) {
-    switch (columnName) {
-      case 'id':
-        return employee.id;
-        break;
-      case 'name':
-        return employee.name;
-        break;
-      case 'salary':
-        return employee.salary;
-        break;
-      case 'designation':
-        return employee.designation;
-        break;
-      default:
-        return ' ';
-        break;
-    }
+  List<DataGridRow> get rows => dataGridRows;
+
+  @override
+  DataGridRowAdapter buildRow(DataGridRow row) {
+    return DataGridRowAdapter(
+        cells: row.getCells().map<Widget>((e) {
+      return Container(
+        child: Text(e.value.toString()),
+      );
+    }).toList());
   }
 
   @override
   Future<void> handleLoadMoreRows() async {
     await Future.delayed(Duration(seconds: 5));
     _addMoreRows(employees, 15);
+    buildDataGridRow();
     notifyListeners();
   }
+
+  void buildDataGridRow() {
+    dataGridRows = employees
+        .map<DataGridRow>((e) => DataGridRow(cells: [
+              DataGridCell<int>(columnName: 'id', value: e.id),
+              DataGridCell<String>(columnName: 'name', value: e.name),
+              DataGridCell<String>(
+                  columnName: 'designation', value: e.designation),
+              DataGridCell<int>(columnName: 'salary', value: e.salary),
+            ]))
+        .toList();
+  }
+
+  List<Employee> _addMoreRows(List<Employee> employeeData, int count) {
+    final Random _random = Random();
+    final startIndex = employeeData.isNotEmpty ? employeeData.length : 0,
+        endIndex = startIndex + count;
+    for (int i = startIndex; i < endIndex; i++) {
+      employeeData.add(Employee(
+        1000 + i,
+        _names[_random.nextInt(_names.length - 1)],
+        _designation[_random.nextInt(_designation.length - 1)],
+        10000 + _random.nextInt(10000),
+      ));
+    }
+    return employeeData;
+  }
+
+  final List<String> _names = <String>[
+    'Welli',
+    'Blonp',
+    'Folko',
+    'Furip',
+    'Folig',
+    'Picco',
+    'Frans',
+    'Warth',
+    'Linod',
+    'Simop',
+    'Merep',
+    'Riscu',
+    'Seves',
+    'Vaffe',
+    'Alfki'
+  ];
+
+  final List<String> _designation = <String>[
+    'Project Lead',
+    'Developer',
+    'Manager',
+    'Designer',
+    'System Analyst',
+    'CEO'
+  ];
 }
 
 {% endhighlight %}
@@ -235,87 +243,95 @@ Widget build(BuildContext context) {
       });
     },
     columns: <GridColumn>[
-      GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-      GridTextColumn(mappingName: 'name', headerText: 'Name'),
-      GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-      GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+        GridTextColumn(columnName: 'id', label: Text('ID')),
+        GridTextColumn(columnName: 'name', label: Text('Name')),
+        GridTextColumn(columnName: 'designation', label: Text('Designation')),
+        GridTextColumn(columnName: 'salary', label: Text('Salary')),
     ],
   );
 }
 
-final List<String> _names = <String>[
-  'Welli',
-  'Blonp',
-  'Folko',
-  'Furip',
-  'Folig',
-  'Picco',
-  'Frans',
-  'Warth',
-  'Linod',
-  'Simop',
-  'Merep',
-  'Riscu',
-  'Seves',
-  'Vaffe',
-  'Alfki'
-];
-
-final List<String> _designation = <String>[
-  'Project Lead',
-  'Developer',
-  'Manager',
-  'Designer',
-  'System Analyst',
-  'CEO'
-];
-
-List<Employee> _addMoreRows(List<Employee> employeeData, int count) {
-  final Random _random = Random();
-  int startIndex = employeeData.isNotEmpty ? employeeData.length : 0,
-      endIndex = startIndex + count;
-  for (int i = startIndex; i < endIndex; i++) {
-    employeeData.add(Employee(
-      1000 + i,
-      _names[_random.nextInt(_names.length - 1)],
-      _designation[_random.nextInt(_designation.length - 1)],
-      10000 + _random.nextInt(10000),
-    ));
+class EmployeeDataSource extends DataGridSource {
+  EmployeeDataSource() {
+    buildDataGridRow();
   }
-  return employeeData;
-}
 
-class EmployeeDataSource extends DataGridSource<Employee> {
-  @override
-  List<Employee> get dataSource => employees;
+  List<DataGridRow> dataGridRows = [];
 
   @override
-  Object getValue(Employee employee, String columnName) {
-    switch (columnName) {
-      case 'id':
-        return employee.id;
-        break;
-      case 'name':
-        return employee.name;
-        break;
-      case 'salary':
-        return employee.salary;
-        break;
-      case 'designation':
-        return employee.designation;
-        break;
-      default:
-        return ' ';
-        break;
-    }
+  List<DataGridRow> get rows => dataGridRows;
+
+  @override
+  DataGridRowAdapter buildRow(DataGridRow row) {
+    return DataGridRowAdapter(
+        cells: row.getCells().map<Widget>((e) {
+      return Container(
+        child: Text(e.value.toString()),
+      );
+    }).toList());
   }
 
   @override
   Future<void> handleLoadMoreRows() async {
     await Future.delayed(Duration(seconds: 5));
     _addMoreRows(employees, 15);
+    buildDataGridRow();
     notifyListeners();
   }
+
+  void buildDataGridRow() {
+    dataGridRows = employees
+        .map<DataGridRow>((e) => DataGridRow(cells: [
+              DataGridCell<int>(columnName: 'id', value: e.id),
+              DataGridCell<String>(columnName: 'name', value: e.name),
+              DataGridCell<String>(
+                  columnName: 'designation', value: e.designation),
+              DataGridCell<int>(columnName: 'salary', value: e.salary),
+            ]))
+        .toList();
+  }
+
+  List<Employee> _addMoreRows(List<Employee> employeeData, int count) {
+    final Random _random = Random();
+    final startIndex = employeeData.isNotEmpty ? employeeData.length : 0,
+        endIndex = startIndex + count;
+    for (int i = startIndex; i < endIndex; i++) {
+      employeeData.add(Employee(
+        1000 + i,
+        _names[_random.nextInt(_names.length - 1)],
+        _designation[_random.nextInt(_designation.length - 1)],
+        10000 + _random.nextInt(10000),
+      ));
+    }
+    return employeeData;
+  }
+
+  final List<String> _names = <String>[
+    'Welli',
+    'Blonp',
+    'Folko',
+    'Furip',
+    'Folig',
+    'Picco',
+    'Frans',
+    'Warth',
+    'Linod',
+    'Simop',
+    'Merep',
+    'Riscu',
+    'Seves',
+    'Vaffe',
+    'Alfki'
+  ];
+
+  final List<String> _designation = <String>[
+    'Project Lead',
+    'Developer',
+    'Manager',
+    'Designer',
+    'System Analyst',
+    'CEO'
+  ];
 }
 
 {% endhighlight %}
