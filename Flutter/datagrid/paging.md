@@ -14,7 +14,7 @@ The datagrid interactively supports the manipulation of data using [SfDataPager]
 The datagrid performs paging of data using the `SfDataPager`. To enable paging, follow below procedure
 
 * Create a new `SfDataPager` widget, and set the [SfDataGrid.DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) to the [SfDataPager.delegate](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/delegate.html) property.
-* Set the number of page count to created the pages in datapager [SfDataPager.pageCount] property.
+* Set the number of pages required to be displayed in data pager by setting the `SfDataPager.pageCount` property.
 * Set the number of buttons that should be displayed in view by setting the [SfDataPager.visibleItemsCount](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/visibleItemsCount.html) property.
 * You can load the data for the specific page in `handlePageChanges` method. This method is called for every page navigation from data pager.
 
@@ -30,6 +30,8 @@ final int rowsPerPage = 15;
 List<OrderInfo> orders = [];
 
 List<OrderInfo> paginatedOrders = [];
+
+final int rowsPerPage = 10;
 
 final OrderInfoDataSource _orderInfoDataSource = OrderInfoDataSource();
 
@@ -94,16 +96,14 @@ class OrderInfoDataSource extends DataGridSource<OrderInfo> {
   @override
   Future<bool> handlePageChange(int oldPageIndex, int newPageIndex) async {
     int startIndex = newPageIndex * rowsPerPage;
-    int endIndex = startIndex + rowsPerPage;
-    if (endIndex > orders.length) {
-      endIndex = orders.length - 1;
+    int endIndex = startRowIndex + rowsPerPage;
+    if(startIndex < orders.length && endIndex <=  orders.length){
+        await Future.delayed(Duration(milliseconds: 2000));
+        paginatedOrders = orders.getRange(startRowIndex, endIndex).toList(growable: false);
+        buildPaginatedDataGridRows();
+        notifyListeners();
+        return true;
     }
-
-    paginatedOrders =
-        orders.getRange(startIndex, endIndex).toList(growable: false);
-    buildPaginatedDataGridRows();
-    notifyListeners();
-    return true;
   }
 
   void buildPaginatedDataGridRows() {
@@ -184,22 +184,18 @@ Widget buildDataGrid(BoxConstraints constraint) {
 }
 
 class OrderInfoDataSource extends DataGridSource<OrderInfo> {
-
   @override
   Future<bool> handlePageChange(int oldPageIndex, int newPageIndex) async {
     int startIndex = newPageIndex * rowsPerPage;
-    int endIndex = startIndex + rowsPerPage;
-    if (endIndex > orders.length) {
-      endIndex = orders.length - 1;
+    int endIndex = startRowIndex + rowsPerPage;
+    if(startIndex < orders.length && endIndex <=  orders.length)
+    {
+        await Future.delayed(Duration(milliseconds: 2000));
+        paginatedOrders = orders.getRange(startRowIndex, endIndex).toList(growable: false);
+        buildPaginatedDataGridRows();
+        notifyListeners();
+        return true;
     }
-
-    await Future.delayed(Duration(milliseconds: 2000));
-
-    paginatedOrders =
-        orders.getRange(startIndex, endIndex).toList(growable: false);
-    buildPaginatedDataGridRows();
-    notifyListeners();
-    return true;
   }
 }
 
@@ -306,18 +302,15 @@ class OrderInfoDataSource extends DataGridSource<OrderInfo> {
   @override
   Future<bool> handlePageChange(int oldPageIndex, int newPageIndex) async {
     int startIndex = newPageIndex * rowsPerPage;
-    int endIndex = startIndex + rowsPerPage;
-    if (endIndex > orders.length) {
-      endIndex = orders.length - 1;
+    int endIndex = startRowIndex + rowsPerPage;
+    if(startIndex < orders.length && endIndex <=  orders.length)
+    {
+        await Future.delayed(Duration(milliseconds: 2000));
+        paginatedOrders = orders.getRange(startRowIndex, endIndex).toList(growable: false);
+        buildPaginatedDataGridRows();
+        notifyListeners();
+        return true;
     }
-
-    await Future.delayed(Duration(milliseconds: 2000));
-
-    paginatedOrders =
-        orders.getRange(startIndex, endIndex).toList(growable: false);
-    buildPaginatedDataGridRows();
-    notifyListeners();
-    return true;
   }
 }
 
@@ -391,8 +384,7 @@ Widget build(BuildContext context) {
     ),
     child: SfDataPager(
       delegate: _orderInfoDataSource,
-      pageCount:
-        orders.length / rowsPerPage,
+      pageCount: orders.length / rowsPerPage,
       direction: Axis.horizontal,
     ),
   ));
