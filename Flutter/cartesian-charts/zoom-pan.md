@@ -194,6 +194,40 @@ The axis tooltip on selection zooming can be enabled using [`enable`](https://pu
 
 {% endhighlight %}
 
+## Mouse wheel zooming
+
+The [enableMouseWheelZooming](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/enableMouseWheelZooming.html) can be performed by rolling the mouse wheel up or down. The place where the cursor is hovering gets zoomed io or out according to the mouse wheel rolling up or down.
+
+{% highlight dart %} 
+
+    ZoomPanBehavior _zoomPanBehavior;
+    
+    @override
+    void initState(){
+     _zoomPanBehavior = ZoomPanBehavior(
+            enableMouseWheelZooming : true);
+      super.initState();
+    }
+
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: SafeArea(
+          child: Center(
+            child: Container(
+              height: 300, 
+              width: 350, 
+              child: SfCartesianChart(
+                zoomPanBehavior: _zoomPanBehavior
+              )
+            )
+          )
+        )
+      );
+    }
+
+{% endhighlight %}
+
 ## Auto interval on zooming
 
 The [`enableAutoIntervalOnZooming`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/enableAutoIntervalOnZooming.html) property determines the update of axis internal based on the current visible range while zooming the chart. Default value of this property is true. If this property is false, the nice internal will not be calculated for new range after zoom in and actual interval will be sustained.
