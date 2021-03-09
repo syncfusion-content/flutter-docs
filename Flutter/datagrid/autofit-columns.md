@@ -31,17 +31,67 @@ Widget build(BuildContext context) {
     body: SfDataGrid(
       source: _employeeDataSource,
       columnWidthMode: ColumnWidthMode.fill,
-      columns: [
-        GridTextColumn(columnName: 'id', label: Text('ID')),
-        GridTextColumn(columnName: 'name', label: Text('Name')),
-        GridTextColumn(columnName: 'designation', label: Text('Designation')),
-        GridTextColumn(columnName: 'city', label: Text('City')),
-        GridTextColumn(columnName: 'salary', label: Text('Salary')),
+      columns: <GridColumn>[
+        GridTextColumn(
+          columnName: 'id',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'ID',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'name',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Name',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'designation',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Designation',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'city',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'city',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'salary',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'Salary',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
       ],
     ),
   );
 }
-
+  
 {% endhighlight %}
 {% endtabs %}
 
@@ -61,13 +111,53 @@ While setting `SfDataGrid.columnWidthMode` as `lastColumnFill` remaining width i
 Widget build(BuildContext context) {
   return Scaffold(
     body: SfDataGrid(
-      source: _employeeDataSource,
+      source: employeeDataSource,
       columnWidthMode: ColumnWidthMode.lastColumnFill,
-      columns: [
-        GridTextColumn(columnName: 'id', label: Text('ID')),
-        GridTextColumn(columnName: 'name', label: Text('Name')),
-        GridTextColumn(columnName: 'salary', label: Text('Salary')),
-        GridTextColumn(columnName: 'designation', label: Text('Designation')),
+      columns: <GridColumn>[
+        GridTextColumn(
+          columnName: 'id',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'ID',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'name',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Name',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'salary',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'Salary',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'designation',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Designation',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
       ],
     ),
   );
@@ -87,14 +177,53 @@ The below example shows Name column is set as `lastColumnFill` mode.
 Widget build(BuildContext context) {
   return Scaffold(
     body: SfDataGrid(
-      source: _employeeDataSource,
-      columnWidthMode: ColumnWidthMode.auto,
-      columns: [
-        GridTextColumn(columnName: 'id', label: Text('ID')),
-        GridTextColumn(columnName: 'name', label: Text('Name'), 
-                 columnWidthMode: ColumnWidthMode.lastColumnFill),
-        GridTextColumn(columnName: 'designation', label: Text('Designation')),
-        GridTextColumn(columnName: 'salary', label: Text('Salary')),
+      source: employeeDataSource,
+      columns: <GridColumn>[
+        GridTextColumn(
+          columnName: 'id',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'ID',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'name',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Name',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'salary',
+          columnWidthMode: ColumnWidthMode.lastColumnFill,
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'Salary',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'designation',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Designation',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
       ],
     ),
   );
@@ -115,16 +244,17 @@ Returning true may impact performance as the column widths are recalculated agai
 {% highlight Dart %} 
 
 class EmployeeDataSource extends DataGridSource {
-  EmployeeDataSource(List<Employee> employees) {
-    dataGridRows = employees.map<DataGridRow>((employee) {
-      return DataGridRow(cells: [
-        DataGridCell<int>(value: employee.id, columnName: 'id'),
-        DataGridCell<String>(value: employee.name, columnName: 'name'),
-        DataGridCell<String>(
-            value: employee.designation, columnName: 'designation'),
-        DataGridCell<double>(value: employee.salary, columnName: 'salary'),
-      ]);
-    }).toList();
+  EmployeeDataSource() {
+    dataGridRows = employees
+        .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
+              DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
+              DataGridCell<String>(columnName: 'name', value: dataGridRow.name),
+              DataGridCell<int>(
+                  columnName: 'salary', value: dataGridRow.salary),
+              DataGridCell<String>(
+                  columnName: 'designation', value: dataGridRow.designation),
+            ]))
+        .toList();
   }
 
   List<DataGridRow> dataGridRows;
@@ -135,10 +265,26 @@ class EmployeeDataSource extends DataGridSource {
   @override
   DataGridRowAdapter buildRow(DataGridRow row) {
     return DataGridRowAdapter(
-        cells: row.getCells().map<Widget>((e) {
-      return Container(
-        child: Text(e.value.toString()),
-      );
+        cells: row.getCells().map<Widget>((dataGridCell) {
+      if (dataGridCell.columnName == 'id' ||
+          dataGridCell.columnName == 'salary') {
+        return Container(
+          alignment: Alignment.centerRight,
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          child: Text(
+            dataGridCell.value.toString(),
+            overflow: TextOverflow.ellipsis,
+          ),
+        );
+      } else {
+        return Container(
+            alignment: Alignment.centerLeft,
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            child: Text(
+              dataGridCell.value.toString(),
+              overflow: TextOverflow.ellipsis,
+            ));
+      }
     }).toList());
   }
 
