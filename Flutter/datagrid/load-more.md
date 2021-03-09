@@ -71,7 +71,7 @@ Widget build(BuildContext context) {
 
 class EmployeeDataSource extends DataGridSource {
   EmployeeDataSource() {
-    buildDataGridRow();
+    buildDataGridRows();
   }
 
   List<DataGridRow> dataGridRows = [];
@@ -93,11 +93,11 @@ class EmployeeDataSource extends DataGridSource {
   Future<void> handleLoadMoreRows() async {
     await Future.delayed(Duration(seconds: 5));
     _addMoreRows(employees, 15);
-    buildDataGridRow();
+    buildDataGridRows();
     notifyListeners();
   }
 
-  void buildDataGridRow() {
+  void buildDataGridRows() {
     dataGridRows = employees
         .map<DataGridRow>((e) => DataGridRow(cells: [
               DataGridCell<int>(columnName: 'id', value: e.id),
@@ -253,7 +253,7 @@ Widget build(BuildContext context) {
 
 class EmployeeDataSource extends DataGridSource {
   EmployeeDataSource() {
-    buildDataGridRow();
+    buildDataGridRows();
   }
 
   List<DataGridRow> dataGridRows = [];
@@ -275,11 +275,11 @@ class EmployeeDataSource extends DataGridSource {
   Future<void> handleLoadMoreRows() async {
     await Future.delayed(Duration(seconds: 5));
     _addMoreRows(employees, 15);
-    buildDataGridRow();
+    buildDataGridRows();
     notifyListeners();
   }
 
-  void buildDataGridRow() {
+  void buildDataGridRows() {
     dataGridRows = employees
         .map<DataGridRow>((e) => DataGridRow(cells: [
               DataGridCell<int>(columnName: 'id', value: e.id),

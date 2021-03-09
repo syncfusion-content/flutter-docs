@@ -132,7 +132,7 @@ Widget build(BuildContext context) {
 
 class EmployeeDataSource extends DataGridSource {
   EmployeeDataSource() {
-    buildDataGridRow();
+    buildDataGridRows();
   }
 
   List<DataGridRow> dataGridRows = [];
@@ -223,12 +223,12 @@ Widget build(BuildContext context) {
 
 class EmployeeDataSource extends DataGridSource {
   EmployeeDataSource() {
-    buildDataGridRow();
+    buildDataGridRows();
   }
 
   List<DataGridRow> dataGridRows = [];
 
-  void buildDataGridRow() {
+  void buildDataGridRows() {
     dataGridRows = _employees
         .map<DataGridRow>((e) => DataGridRow(cells: [
               DataGridCell<int>(columnName: 'id', value: e.id),
