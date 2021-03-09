@@ -196,7 +196,7 @@ The axis tooltip on selection zooming can be enabled using [`enable`](https://pu
 
 ## Mouse wheel zooming
 
-The [enableMouseWheelZooming](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/enableMouseWheelZooming.html) can be performed by rolling the mouse wheel up or down. The place where the cursor is hovering gets zoomed io or out according to the mouse wheel rolling up or down.
+The [enableMouseWheelZooming](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/enableMouseWheelZooming.html) can be performed by rolling the mouse wheel up or down. The place where the cursor is hovering gets zoomed in or out according to the mouse wheel rolling up or down.
 
 {% highlight dart %} 
 

@@ -27,7 +27,7 @@ You can use the following properties to customize the behavior and appearance of
 * [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLine/dashArray.html) - pattern of dashes and gaps used to stroke the trendline.
 * [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/opacity.html) - opacity of the trendline.
 * [`valueField`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/valueField.html) - used to choose the valueField(low or high) to render the trendline. Defaults to low.
-* [`isVisibleInLegend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/isVisibleInLegend.html) - show/hides the legend for trenline.
+* [`isVisibleInLegend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/isVisibleInLegend.html) - show/hides the legend for trendline.
 * [`legendIconType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/legendIconType.html) - specifies the type of legend icon for trendline
 
 
