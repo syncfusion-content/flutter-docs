@@ -111,7 +111,7 @@ While setting `SfDataGrid.columnWidthMode` as `lastColumnFill` remaining width i
 Widget build(BuildContext context) {
   return Scaffold(
     body: SfDataGrid(
-      source: employeeDataSource,
+      source: _employeeDataSource,
       columnWidthMode: ColumnWidthMode.lastColumnFill,
       columns: <GridColumn>[
         GridTextColumn(
@@ -177,7 +177,7 @@ The below example shows Name column is set as `lastColumnFill` mode.
 Widget build(BuildContext context) {
   return Scaffold(
     body: SfDataGrid(
-      source: employeeDataSource,
+      source: _employeeDataSource,
       columns: <GridColumn>[
         GridTextColumn(
           columnName: 'id',

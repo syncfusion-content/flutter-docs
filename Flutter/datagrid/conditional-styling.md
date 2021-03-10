@@ -9,7 +9,7 @@ documentation: ug
 
 # Conditional Styling in Flutter DataGrid
 
-The [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) allows to customize the style of the individual cells and rows based on the requirements. You can customize your widget in the `DataGridSource.buildRow` method with the helpe of `DataGridRowAdapater`.
+The [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) allows to customize the style of the individual cells and rows based on the requirements. You can customize your widget in the `DataGridSource.buildRow` method with the help of `DataGridRowAdapter`.
 
 ## Cells
 

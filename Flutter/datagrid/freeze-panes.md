@@ -63,7 +63,7 @@ The following code example shows how to freeze a column at left using `frozenCol
 Widget build(BuildContext context) {
   return Scaffold(
     body: SfDataGrid(
-      source: employeeDataSource,
+      source: _employeeDataSource,
       frozenColumnsCount: 1,
       columns: <GridColumn>[
         GridTextColumn(
@@ -174,7 +174,7 @@ The following code example shows how to freeze a column at right using `footerFr
 Widget build(BuildContext context) {
   return Scaffold(
     body: SfDataGrid(
-      source: employeeDataSource,
+      source: _employeeDataSource,
       footerFrozenColumnsCount: 1,
       columns: <GridColumn>[
         GridTextColumn(
@@ -292,7 +292,7 @@ The following code example shows how to freeze a row at top using `frozenRowsCou
 Widget build(BuildContext context) {
   return Scaffold(
     body: SfDataGrid(
-      source: employeeDataSource,
+      source: _employeeDataSource,
       frozenRowsCount: 1,
       columns: <GridColumn>[
         GridTextColumn(
@@ -402,7 +402,7 @@ The following code example shows how to freeze a row at bottom using `footerFroz
 Widget build(BuildContext context) {
   return Scaffold(
     body: SfDataGrid(
-      source: employeeDataSource,
+      source: _employeeDataSource,
       footerFrozenRowsCount: 1,
       columns: <GridColumn>[
         GridTextColumn(
