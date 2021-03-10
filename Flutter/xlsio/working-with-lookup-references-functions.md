@@ -13,6 +13,7 @@ Lookup and References Function Formulas includes the following functions:
 
 * INDEX
 * MATCH
+* VLOOKUP
 
 ## INDEX Function
 
@@ -29,10 +30,10 @@ final Workbook workbook = Workbook();
 final Worksheet sheet = workbook.worksheets[0];
 
 // set the value to the cell.
-sheet.getRangeByName('A1').number = 10;
-sheet.getRangeByName('A2').number = 5;
-sheet.getRangeByName('B1').number = 4;
-sheet.getRangeByName('B2').number = 8;
+sheet.getRangeByName('A1').setNumber(10);
+sheet.getRangeByName('A2').setNumber(5);
+sheet.getRangeByName('B1').setNumber(4);
+sheet.getRangeByName('B2').setNumber(8);
 
 // Formula calculation is enabled for the sheet.
 sheet.enableSheetCalculations();
@@ -66,10 +67,10 @@ final Workbook workbook = Workbook();
 final Worksheet sheet = workbook.worksheets[0];
 
 // set the value to the cell.
-sheet.getRangeByName('A1').number = 10;
-sheet.getRangeByName('A2').number = 8;
-sheet.getRangeByName('A3').number = 6;
-sheet.getRangeByName('A4').number = 4;
+sheet.getRangeByName('A1').setNumber(10);
+sheet.getRangeByName('A2').setNumber(8);
+sheet.getRangeByName('A3').setNumber(6);
+sheet.getRangeByName('A4').setNumber(4);
 
 // Formula calculation is enabled for the sheet.
 sheet.enableSheetCalculations();
@@ -86,6 +87,47 @@ File('MATCHFunction.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
 {% endhighlight %}
+
+## VLOOKUP Function
+
+Looks in the first column of an array and moves across the row to return the value of a cell.
+
+The following code snippet illustrates on how to use VLOOKUP function formula.
+
+{% highlight dart %}
+
+// Create a new Excel Document.
+final Workbook workbook = Workbook();
+
+// Accessing sheet via index.
+final Worksheet sheet = workbook.worksheets[0];
+
+// set the value to the cell.
+sheet.getRangeByName('A1').setText('John');
+sheet.getRangeByName('A2').setText('Mark');
+sheet.getRangeByName('A3').setText('Park');
+sheet.getRangeByName('A4').setText('Zuck');
+sheet.getRangeByName('B1').setNumber(10);
+sheet.getRangeByName('B2').setNumber(8);
+sheet.getRangeByName('B3').setNumber(6);
+sheet.getRangeByName('B4').setNumber(4);
+
+// Formula calculation is enabled for the sheet.
+sheet.enableSheetCalculations();
+
+// Setting formula in the cell.
+Range range = sheet.getRangeByName('A6');
+range.setFormula('=VLOOKUP(A3,A1:B4,2,FALSE)');
+range = sheet.getRangeByName('A7');
+range.setFormula('=VLOOKUP("John",A1:B4,2,TRUE)');
+
+// Save and dispose workbook.
+final List<int> bytes = workbook.saveAsStream();
+File('VLOOKUPFunction.xlsx').writeAsBytes(bytes);
+workbook.dispose();
+
+{% endhighlight %}
+
 
 
 

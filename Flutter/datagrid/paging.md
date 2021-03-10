@@ -14,9 +14,8 @@ The datagrid interactively supports the manipulation of data using [SfDataPager]
 The datagrid performs paging of data using the `SfDataPager`. To enable paging, follow below procedure
 
 * Create a new `SfDataPager` widget, and set the [SfDataGrid.DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) to the [SfDataPager.delegate](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/delegate.html) property.
-* Set the number of rows to be displayed on a page by setting the [SfDataPager.rowsPerPage](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/rowsPerPage.html) property.
+* Set the number of pages required to be displayed in data pager by setting the `SfDataPager.pageCount` property.
 * Set the number of buttons that should be displayed in view by setting the [SfDataPager.visibleItemsCount](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/visibleItemsCount.html) property.
-* Override the [SfDataPager.delegate.rowCount](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataPagerDelegate/rowCount.html) property and [SfDataPager.delegate.handlePageChanges](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataPagerDelegate/handlePageChange.html) method in `SfDataGrid.DataGridSource`. 
 * You can load the data for the specific page in `handlePageChanges` method. This method is called for every page navigation from data pager.
 
 N> The `SfDataPager.visibleItemsCount` property default value is 5.
@@ -27,6 +26,8 @@ The following code example illustrates using `SfDataPager` with the datagrid con
 {% highlight Dart %}
 
 List<OrderInfo> paginatedDataSource = [];
+
+final int rowsPerPage = 10;
 
 final OrderInfoDataSource _orderInfoDataSource = OrderInfoDataSource();
 
@@ -59,7 +60,7 @@ Widget build(BuildContext context) {
               height: 60,
               child: SfDataPager(
                 delegate: _orderInfoDataSource,
-                rowsPerPage: 20,
+                pageCount: orderInfos.length / rowsPerPage ,
                 direction: Axis.horizontal,
               ),
             )
@@ -96,20 +97,18 @@ class OrderInfoDataSource extends DataGridSource<OrderInfo> {
   }
 
   @override
-  int get rowCount => orderInfos.length;
-
-  @override
-  Future<bool> handlePageChange(int oldPageIndex, int newPageIndex,
-      int startRowIndex, int rowsPerPage) async {
+  Future<bool> handlePageChange(int oldPageIndex, int newPageIndex) async {
+    int startIndex = newPageIndex * rowsPerPage;
     int endIndex = startRowIndex + rowsPerPage;
-    if (endIndex > orderInfos.length) {
-      endIndex = orderInfos.length - 1;
-    }
-    
-    paginatedDataSource = List.from(
+    if(startIndex < orderInfos.length && endIndex <=  orderInfos.length)
+    {
+         await Future.delayed(Duration(milliseconds: 2000));
+          paginatedDataSource = List.from(
         orderInfos.getRange(startRowIndex, endIndex).toList(growable: false));
-    notifyListeners();
-    return true;
+        notifyListeners();
+        return true;
+    }
+   
   }
 }
 
@@ -145,7 +144,7 @@ Widget build(BuildContext context) {
                 height: 60,
                 width: constraints.maxWidth,
                 child: SfDataPager(
-                  rowsPerPage: 20,
+                  pageCount: orderInfos.length / rowsPerPage ,
                   direction: Axis.horizontal,
                   onPageNavigationStart: (int pageIndex) {
                     //You can do your customization
@@ -179,20 +178,18 @@ Widget buildDataGrid(BoxConstraints constraint) {
 }
 
 class OrderInfoDataSource extends DataGridSource<OrderInfo> {
-  @override
-  Future<bool> handlePageChange(int oldPageIndex, int newPageIndex,
-      int startRowIndex, int rowsPerPage) async {
+   @override
+  Future<bool> handlePageChange(int oldPageIndex, int newPageIndex) async {
+    int startIndex = newPageIndex * rowsPerPage;
     int endIndex = startRowIndex + rowsPerPage;
-    if (endIndex > orderInfos.length) {
-      endIndex = orderInfos.length - 1;
-    }
-
-    await Future.delayed(Duration(milliseconds: 2000));
-
-    paginatedDataSource = List.from(
+    if(startIndex < orderInfos.length && endIndex <=  orderInfos.length)
+    {
+         await Future.delayed(Duration(milliseconds: 2000));
+          paginatedDataSource = List.from(
         orderInfos.getRange(startRowIndex, endIndex).toList(growable: false));
-    notifyListeners();
-    return true;
+        notifyListeners();
+        return true;
+    }
   }
 }
 
@@ -230,7 +227,7 @@ Widget build(BuildContext context) {
                 height: 60,
                 width: constraints.maxWidth,
                 child: SfDataPager(
-                  rowsPerPage: 20,
+                 pageCount: orderInfos.length / rowsPerPage,
                   direction: Axis.horizontal,
                   onPageNavigationStart: (int pageIndex) {
                     setState(() {
@@ -295,20 +292,18 @@ Widget buildStack(BoxConstraints constraints) {
 }
 
 class OrderInfoDataSource extends DataGridSource<OrderInfo> {
-  @override
-  Future<bool> handlePageChange(int oldPageIndex, int newPageIndex,
-      int startRowIndex, int rowsPerPage) async {
+ @override
+  Future<bool> handlePageChange(int oldPageIndex, int newPageIndex) async {
+    int startIndex = newPageIndex * rowsPerPage;
     int endIndex = startRowIndex + rowsPerPage;
-    if (endIndex > orderInfos.length) {
-      endIndex = orderInfos.length - 1;
-    }
-
-    await Future.delayed(Duration(milliseconds: 2000));
-
-    paginatedDataSource = List.from(
+    if(startIndex < orderInfos.length && endIndex <=  orderInfos.length)
+    {
+         await Future.delayed(Duration(milliseconds: 2000));
+          paginatedDataSource = List.from(
         orderInfos.getRange(startRowIndex, endIndex).toList(growable: false));
-    notifyListeners();
-    return true;
+        notifyListeners();
+        return true;
+    }
   }
 }
 
@@ -382,7 +377,7 @@ Widget build(BuildContext context) {
     ),
     child: SfDataPager(
       delegate: _orderInfoDataSource,
-      rowsPerPage: 20,
+      pageCount: orderInfos.length / rowsPerPage,
       direction: Axis.horizontal,
     ),
   ));
