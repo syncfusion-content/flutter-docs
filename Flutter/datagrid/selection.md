@@ -52,10 +52,42 @@ Widget build(BuildContext context) {
       body: SfDataGrid(
           source: _employeeDataSource,
           columns: [
-            GridTextColumn(columnName: 'id', label: Text('ID')),
-            GridTextColumn(columnName: 'name', label: Text('Name')),
-            GridTextColumn(columnName: 'designation', label: Text('Designation')),
-            GridTextColumn(columnName: 'salary', label: Text('Salary')),
+            GridTextColumn(
+              columnName: 'id',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+            GridTextColumn(
+              columnName: 'name',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Name',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+            GridTextColumn(
+              columnName: 'designation',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Designation',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+            GridTextColumn(
+              columnName: 'salary',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Salary',
+                  overflow: TextOverflow.ellipsis,
+                ))),
           ],
           selectionMode: SelectionMode.single
           navigationMode: GridNavigationMode.cell
@@ -81,10 +113,42 @@ Widget build(BuildContext context){
       body: SfDataGrid(
           source: _employeeDataSource,
           columns: [
-            GridTextColumn(columnName: 'id', label: Text('ID')),
-            GridTextColumn(columnName: 'name', label: Text('Name')),
-            GridTextColumn(columnName: 'designation', label: Text('Designation')),
-            GridTextColumn(columnName: 'salary', label: Text('Salary')),
+            GridTextColumn(
+              columnName: 'id',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+            GridTextColumn(
+              columnName: 'name',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Name',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+            GridTextColumn(
+              columnName: 'designation',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Designation',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+            GridTextColumn(
+              columnName: 'salary',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Salary',
+                  overflow: TextOverflow.ellipsis,
+                ))),
           ],
           selectionMode: SelectionMode.single
       )
@@ -111,10 +175,42 @@ Widget build(BuildContext context){
       body: SfDataGrid(
           source: _employeeDataSource,
           columns: [
-            GridTextColumn(columnName: 'id', label: Text('ID')),
-            GridTextColumn(columnName: 'name', label: Text('Name')),
-            GridTextColumn(columnName: 'designation', label: Text('Designation')),
-            GridTextColumn(columnName: 'salary', label: Text('Salary')),
+            GridTextColumn(
+              columnName: 'id',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+            GridTextColumn(
+              columnName: 'name',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Name',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+            GridTextColumn(
+              columnName: 'designation',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Designation',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+            GridTextColumn(
+              columnName: 'salary',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Salary',
+                  overflow: TextOverflow.ellipsis,
+                ))),
           ],
           selectionMode: SelectionMode.multiple
       )
@@ -141,10 +237,42 @@ Widget build(BuildContext context){
       body: SfDataGrid(
           source: _employeeDataSource,
           columns: [
-            GridTextColumn(columnName: 'id', label: Text('ID')),
-            GridTextColumn(columnName: 'name', label: Text('Name')),
-            GridTextColumn(columnName: 'designation', label: Text('Designation')),
-            GridTextColumn(columnName: 'salary', label: Text('Salary')),
+            GridTextColumn(
+              columnName: 'id',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+            GridTextColumn(
+              columnName: 'name',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Name',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+            GridTextColumn(
+              columnName: 'designation',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Designation',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+            GridTextColumn(
+              columnName: 'salary',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Salary',
+                  overflow: TextOverflow.ellipsis,
+                ))),
           ],
           selectionMode: SelectionMode.none
       )
@@ -192,10 +320,42 @@ Widget build(BuildContext context){
                 child: SfDataGrid(
                     source: _employeeDataSource,
                     columns: [
-                      GridTextColumn(columnName: 'id', label: Text('ID')),
-                      GridTextColumn(columnName: 'name', label: Text('Name')),
-                      GridTextColumn(columnName: 'designation', label: Text('Designation')),
-                      GridTextColumn(columnName: 'salary', label: Text('Salary')),
+                      GridTextColumn(
+                        columnName: 'id',
+                        label: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 8.0),
+                          alignment: Alignment.centerRight,
+                          child: Text(
+                            'ID',
+                            overflow: TextOverflow.ellipsis,
+                          ))),
+                      GridTextColumn(
+                        columnName: 'name',
+                        label: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 8.0),
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            'Name',
+                            overflow: TextOverflow.ellipsis,
+                          ))),
+                      GridTextColumn(
+                        columnName: 'designation',
+                        label: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 8.0),
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            'Designation',
+                            overflow: TextOverflow.ellipsis,
+                          ))),
+                      GridTextColumn(
+                        columnName: 'salary',
+                        label: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 8.0),
+                          alignment: Alignment.centerRight,
+                          child: Text(
+                            'Salary',
+                            overflow: TextOverflow.ellipsis,
+                          ))),
                     ],
                     controller: this._dataGridController,
                     selectionMode: SelectionMode.multiple
@@ -238,10 +398,42 @@ Widget build(BuildContext context){
                 child: SfDataGrid(
                     source: _employeeDataSource,
                     columns: [
-                      GridTextColumn(columnName: 'id', label: Text('ID')),
-                      GridTextColumn(columnName: 'name', label: Text('Name')),
-                      GridTextColumn(columnName: 'designation', label: Text('Designation')),
-                      GridTextColumn(columnName: 'salary', label: Text('Salary')),
+                      GridTextColumn(
+                        columnName: 'id',
+                        label: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 8.0),
+                          alignment: Alignment.centerRight,
+                          child: Text(
+                            'ID',
+                            overflow: TextOverflow.ellipsis,
+                          ))),
+                      GridTextColumn(
+                        columnName: 'name',
+                        label: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 8.0),
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            'Name',
+                            overflow: TextOverflow.ellipsis,
+                          ))),
+                      GridTextColumn(
+                        columnName: 'designation',
+                        label: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 8.0),
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            'Designation',
+                            overflow: TextOverflow.ellipsis,
+                          ))),
+                      GridTextColumn(
+                        columnName: 'salary',
+                        label: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 8.0),
+                          alignment: Alignment.centerRight,
+                          child: Text(
+                            'Salary',
+                            overflow: TextOverflow.ellipsis,
+                          ))),
                     ],
                     controller: this._dataGridController,
                     selectionMode: SelectionMode.single
@@ -276,10 +468,42 @@ Widget build(BuildContext context){
                 child: SfDataGrid(
                     source: _employeeDataSource,
                     columns: [
-                      GridTextColumn(columnName: 'id', label: Text('ID')),
-                      GridTextColumn(columnName: 'name', label: Text('Name')),
-                      GridTextColumn(columnName: 'designation', label: Text('Designation')),
-                      GridTextColumn(columnName: 'salary', label: Text('Salary')),
+                      GridTextColumn(
+                        columnName: 'id',
+                        label: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 8.0),
+                          alignment: Alignment.centerRight,
+                          child: Text(
+                            'ID',
+                            overflow: TextOverflow.ellipsis,
+                          ))),
+                      GridTextColumn(
+                        columnName: 'name',
+                        label: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 8.0),
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            'Name',
+                            overflow: TextOverflow.ellipsis,
+                          ))),
+                      GridTextColumn(
+                        columnName: 'designation',
+                        label: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 8.0),
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            'Designation',
+                            overflow: TextOverflow.ellipsis,
+                          ))),
+                      GridTextColumn(
+                        columnName: 'salary',
+                        label: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 8.0),
+                          alignment: Alignment.centerRight,
+                          child: Text(
+                            'Salary',
+                            overflow: TextOverflow.ellipsis,
+                          ))),
                     ],
                     controller: this._dataGridController,
                     selectionMode: SelectionMode.single
@@ -318,10 +542,42 @@ Widget build(BuildContext context){
                 child: SfDataGrid(
                     source: _employeeDataSource,
                     columns: [
-                      GridTextColumn(columnName: 'id', label: Text('ID')),
-                      GridTextColumn(columnName: 'name', label: Text('Name')),
-                      GridTextColumn(columnName: 'designation', label: Text('Designation')),
-                      GridTextColumn(columnName: 'salary', label: Text('Salary')),
+                      GridTextColumn(
+                        columnName: 'id',
+                        label: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 8.0),
+                          alignment: Alignment.centerRight,
+                          child: Text(
+                            'ID',
+                            overflow: TextOverflow.ellipsis,
+                          ))),
+                      GridTextColumn(
+                        columnName: 'name',
+                        label: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 8.0),
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            'Name',
+                            overflow: TextOverflow.ellipsis,
+                          ))),
+                      GridTextColumn(
+                        columnName: 'designation',
+                        label: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 8.0),
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            'Designation',
+                            overflow: TextOverflow.ellipsis,
+                          ))),
+                      GridTextColumn(
+                        columnName: 'salary',
+                        label: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 8.0),
+                          alignment: Alignment.centerRight,
+                          child: Text(
+                            'Salary',
+                            overflow: TextOverflow.ellipsis,
+                          ))),
                     ],
                     controller: this._dataGridController,
                     selectionMode: SelectionMode.multiple
@@ -360,10 +616,42 @@ Widget build(BuildContext context){
                 child: SfDataGrid(
                     source: _employeeDataSource,
                     columns: [
-                      GridTextColumn(columnName: 'id', label: Text('ID')),
-                      GridTextColumn(columnName: 'name', label: Text('Name')),
-                      GridTextColumn(columnName: 'designation', label: Text('Designation')),
-                      GridTextColumn(columnName: 'salary', label: Text('Salary')),
+                      GridTextColumn(
+                        columnName: 'id',
+                        label: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 8.0),
+                          alignment: Alignment.centerRight,
+                          child: Text(
+                            'ID',
+                            overflow: TextOverflow.ellipsis,
+                          ))),
+                      GridTextColumn(
+                        columnName: 'name',
+                        label: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 8.0),
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            'Name',
+                            overflow: TextOverflow.ellipsis,
+                          ))),
+                      GridTextColumn(
+                        columnName: 'designation',
+                        label: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 8.0),
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            'Designation',
+                            overflow: TextOverflow.ellipsis,
+                          ))),
+                      GridTextColumn(
+                        columnName: 'salary',
+                        label: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 8.0),
+                          alignment: Alignment.centerRight,
+                          child: Text(
+                            'Salary',
+                            overflow: TextOverflow.ellipsis,
+                          ))),
                     ],
                     controller: this._dataGridController,
                     selectionMode: SelectionMode.single,
@@ -402,10 +690,42 @@ Widget build(BuildContext context){
                 child: SfDataGrid(
                     source: _employeeDataSource,
                     columns: [
-                      GridTextColumn(columnName: 'id', label: Text('ID')),
-                      GridTextColumn(columnName: 'name', label: Text('Name')),
-                      GridTextColumn(columnName: 'designation', label: Text('Designation')),
-                      GridTextColumn(columnName: 'salary', label: Text('Salary')),
+                      GridTextColumn(
+                        columnName: 'id',
+                        label: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 8.0),
+                          alignment: Alignment.centerRight,
+                          child: Text(
+                            'ID',
+                            overflow: TextOverflow.ellipsis,
+                          ))),
+                      GridTextColumn(
+                        columnName: 'name',
+                        label: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 8.0),
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            'Name',
+                            overflow: TextOverflow.ellipsis,
+                          ))),
+                      GridTextColumn(
+                        columnName: 'designation',
+                        label: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 8.0),
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            'Designation',
+                            overflow: TextOverflow.ellipsis,
+                          ))),
+                      GridTextColumn(
+                        columnName: 'salary',
+                        label: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 8.0),
+                          alignment: Alignment.centerRight,
+                          child: Text(
+                            'Salary',
+                            overflow: TextOverflow.ellipsis,
+                          ))),
                     ],
                     controller: this._dataGridController,
                     selectionMode: SelectionMode.single,
@@ -447,10 +767,42 @@ Widget build(BuildContext context){
                 child: SfDataGrid(
                     source: _employeeDataSource,
                     columns: [
-                      GridTextColumn(columnName: 'id', label: Text('ID')),
-                      GridTextColumn(columnName: 'name', label: Text('Name')),
-                      GridTextColumn(columnName: 'designation', label: Text('Designation')),
-                      GridTextColumn(columnName: 'salary', label: Text('Salary')),
+                      GridTextColumn(
+                        columnName: 'id',
+                        label: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 8.0),
+                          alignment: Alignment.centerRight,
+                          child: Text(
+                            'ID',
+                            overflow: TextOverflow.ellipsis,
+                          ))),
+                      GridTextColumn(
+                        columnName: 'name',
+                        label: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 8.0),
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            'Name',
+                            overflow: TextOverflow.ellipsis,
+                          ))),
+                      GridTextColumn(
+                        columnName: 'designation',
+                        label: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 8.0),
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            'Designation',
+                            overflow: TextOverflow.ellipsis,
+                          ))),
+                      GridTextColumn(
+                        columnName: 'salary',
+                        label: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 8.0),
+                          alignment: Alignment.centerRight,
+                          child: Text(
+                            'Salary',
+                            overflow: TextOverflow.ellipsis,
+                          ))),
                     ],
                     controller: this._dataGridController,
                     selectionMode: SelectionMode.single
@@ -485,10 +837,42 @@ Widget build(BuildContext context){
                 child: SfDataGrid(
                     source: _employeeDataSource,
                     columns: [
-                      GridTextColumn(columnName: 'id', label: Text('ID')),
-                      GridTextColumn(columnName: 'name', label: Text('Name')),
-                      GridTextColumn(columnName: 'designation', label: Text('Designation')),
-                      GridTextColumn(columnName: 'salary', label: Text('Salary')),
+                      GridTextColumn(
+                        columnName: 'id',
+                        label: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 8.0),
+                          alignment: Alignment.centerRight,
+                          child: Text(
+                            'ID',
+                            overflow: TextOverflow.ellipsis,
+                          ))),
+                      GridTextColumn(
+                        columnName: 'name',
+                        label: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 8.0),
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            'Name',
+                            overflow: TextOverflow.ellipsis,
+                          ))),
+                      GridTextColumn(
+                        columnName: 'designation',
+                        label: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 8.0),
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            'Designation',
+                            overflow: TextOverflow.ellipsis,
+                          ))),
+                      GridTextColumn(
+                        columnName: 'salary',
+                        label: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 8.0),
+                          alignment: Alignment.centerRight,
+                          child: Text(
+                            'Salary',
+                            overflow: TextOverflow.ellipsis,
+                          ))),
                     ],
                     controller: this._dataGridController,
                     selectionMode: SelectionMode.multiple
@@ -668,10 +1052,42 @@ Widget build(BuildContext context){
       body: SfDataGrid(
         source: _employeeDataSource,
         columns: [
-          GridTextColumn(columnName: 'id', label: Text('ID')),
-          GridTextColumn(columnName: 'name', label: Text('Name')),
-          GridTextColumn(columnName: 'designation', label: Text('Designation')),
-          GridTextColumn(columnName: 'salary', label: Text('Salary')),
+          GridTextColumn(
+            columnName: 'id',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'ID',
+                overflow: TextOverflow.ellipsis,
+              ))),
+          GridTextColumn(
+            columnName: 'name',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Name',
+                overflow: TextOverflow.ellipsis,
+              ))),
+          GridTextColumn(
+            columnName: 'designation',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Designation',
+                overflow: TextOverflow.ellipsis,
+              ))),
+          GridTextColumn(
+            columnName: 'salary',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'Salary',
+                overflow: TextOverflow.ellipsis,
+              ))),
         ],
         selectionMode: SelectionMode.single,
         onSelectionChanging: (List<Object> addedRows, List<Object> removedRows){
@@ -711,10 +1127,42 @@ Widget build(BuildContext context) {
       body: SfDataGrid(
         source: _employeeDataSource,
         columns: [
-          GridTextColumn(columnName: 'id', label: Text('ID')),
-          GridTextColumn(columnName: 'name', label: Text('Name')),
-          GridTextColumn(columnName: 'designation', label: Text('Designation')),
-          GridTextColumn(columnName: 'salary', label: Text('Salary')),
+          GridTextColumn(
+            columnName: 'id',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'ID',
+                overflow: TextOverflow.ellipsis,
+              ))),
+          GridTextColumn(
+            columnName: 'name',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Name',
+                overflow: TextOverflow.ellipsis,
+              ))),
+          GridTextColumn(
+            columnName: 'designation',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Designation',
+                overflow: TextOverflow.ellipsis,
+              ))),
+          GridTextColumn(
+            columnName: 'salary',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'Salary',
+                overflow: TextOverflow.ellipsis,
+              ))),
         ],
         selectionMode: SelectionMode.single,
         navigationMode: GridNavigationMode.cell,
@@ -755,10 +1203,42 @@ Widget build(BuildContext context) {
     body: SfDataGrid(
       source: _employeeDataSource,
       columns: [
-        GridTextColumn(columnName: 'id', label: Text('ID')),
-        GridTextColumn(columnName: 'name', label: Text('Name')),
-        GridTextColumn(columnName: 'designation', label: Text('Designation')),
-        GridTextColumn(columnName: 'salary', label: Text('Salary')),
+        GridTextColumn(
+          columnName: 'id',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'ID',
+              overflow: TextOverflow.ellipsis,
+            ))),
+        GridTextColumn(
+          columnName: 'name',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Name',
+              overflow: TextOverflow.ellipsis,
+            ))),
+        GridTextColumn(
+          columnName: 'designation',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Designation',
+              overflow: TextOverflow.ellipsis,
+            ))),
+        GridTextColumn(
+          columnName: 'salary',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'Salary',
+              overflow: TextOverflow.ellipsis,
+            ))),
       ],
       onCellTap: (DataGridCellTapDetails details) {
         print(details);
@@ -794,10 +1274,42 @@ Widget build(BuildContext context){
       body: SfDataGrid(
         source: _employeeDataSource,
         columns: [
-          GridTextColumn(columnName: 'id', label: Text('ID')),
-          GridTextColumn(columnName: 'name', label: Text('Name')),
-          GridTextColumn(columnName: 'designation', label: Text('Designation')),
-          GridTextColumn(columnName: 'salary', label: Text('Salary')),
+          GridTextColumn(
+            columnName: 'id',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'ID',
+                overflow: TextOverflow.ellipsis,
+              ))),
+          GridTextColumn(
+            columnName: 'name',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Name',
+                overflow: TextOverflow.ellipsis,
+              ))),
+          GridTextColumn(
+            columnName: 'designation',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Designation',
+                overflow: TextOverflow.ellipsis,
+              ))),
+          GridTextColumn(
+            columnName: 'salary',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'Salary',
+                overflow: TextOverflow.ellipsis,
+              ))),
         ],
         selectionMode: SelectionMode.multiple,
         selectionManager: _customSelectionManager,
@@ -839,10 +1351,42 @@ Widget build(BuildContext context){
           body: SfDataGrid(
             source: _employeeDataSource,
             columns: [
-              GridTextColumn(columnName: 'id', label: Text('ID')),
-              GridTextColumn(columnName: 'name', label: Text('Name')),
-              GridTextColumn(columnName: 'designation', label: Text('Designation')),
-              GridTextColumn(columnName: 'salary', label: Text('Salary')),
+              GridTextColumn(
+                columnName: 'id',
+                label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 8.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'ID',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+              GridTextColumn(
+                columnName: 'name',
+                label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 8.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Name',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+              GridTextColumn(
+                columnName: 'designation',
+                label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 8.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Designation',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+              GridTextColumn(
+                columnName: 'salary',
+                label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 8.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Salary',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
             ],
             selectionMode: SelectionMode.multiple,
             navigationMode: GridNavigationMode.cell,
@@ -905,10 +1449,42 @@ Widget build(BuildContext context) {
           child: SfDataGrid(
             source: _employeeDataSource,
             columns: [
-              GridTextColumn(columnName: 'id', label: Text('ID')),
-              GridTextColumn(columnName: 'name', label: Text('Name')),
-              GridTextColumn(columnName: 'designation', label: Text('Designation')),
-              GridTextColumn(columnName: 'salary', label: Text('Salary')),
+              GridTextColumn(
+                columnName: 'id',
+                label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 8.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'ID',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+              GridTextColumn(
+                columnName: 'name',
+                label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 8.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Name',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+              GridTextColumn(
+                columnName: 'designation',
+                label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 8.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Designation',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+              GridTextColumn(
+                columnName: 'salary',
+                label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 8.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Salary',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
             ],
             selectionMode: SelectionMode.multiple,
           ))
@@ -943,10 +1519,42 @@ Widget build(BuildContext context){
           child: SfDataGrid(
             source: _employeeDataSource,
             columns: [
-              GridTextColumn(columnName: 'id', label: Text('ID')),
-              GridTextColumn(columnName: 'name', label: Text('Name')),
-              GridTextColumn(columnName: 'designation', label: Text('Designation')),
-              GridTextColumn(columnName: 'salary', label: Text('Salary')),
+              GridTextColumn(
+                columnName: 'id',
+                label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 8.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'ID',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+              GridTextColumn(
+                columnName: 'name',
+                label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 8.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Name',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+              GridTextColumn(
+                columnName: 'designation',
+                label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 8.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Designation',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+              GridTextColumn(
+                columnName: 'salary',
+                label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 8.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Salary',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
             ],
             selectionMode: SelectionMode.multiple,
             navigationMode:  GridNavigationMode.cell,

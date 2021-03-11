@@ -23,10 +23,42 @@ Widget build(BuildContext context) {
     allowPullToRefresh: true,
     source: employeeDataSource,
     columns: <GridColumn>[
-      GridTextColumn(columnName: 'id', label: Text('ID')),
-      GridTextColumn(columnName: 'name', label: Text('Name')),
-      GridTextColumn(columnName: 'designation', label: Text('Designation')),
-      GridTextColumn(columnName: 'salary', label: Text('Salary')),
+      GridTextColumn(
+        columnName: 'id',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          alignment: Alignment.centerRight,
+          child: Text(
+            'ID',
+            overflow: TextOverflow.ellipsis,
+          ))),
+      GridTextColumn(
+        columnName: 'name',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'Name',
+            overflow: TextOverflow.ellipsis,
+          ))),
+      GridTextColumn(
+        columnName: 'designation',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'Designation',
+            overflow: TextOverflow.ellipsis,
+          ))),
+      GridTextColumn(
+        columnName: 'salary',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          alignment: Alignment.centerRight,
+          child: Text(
+            'Salary',
+            overflow: TextOverflow.ellipsis,
+          ))),
     ],
   );
 }
@@ -136,10 +168,42 @@ Widget build(BuildContext context) {
       refreshIndicatorStrokeWidth: 3.0,
       refreshIndicatorDisplacement: 60.0,
       columns: <GridColumn>[
-        GridTextColumn(columnName: 'id', label: Text('ID')),
-        GridTextColumn(columnName: 'name', label: Text('Name')),
-        GridTextColumn(columnName: 'designation', label: Text('Designation')),
-        GridTextColumn(columnName: 'salary', label: Text('Salary')),
+        GridTextColumn(
+          columnName: 'id',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'ID',
+              overflow: TextOverflow.ellipsis,
+            ))),
+        GridTextColumn(
+          columnName: 'name',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Name',
+              overflow: TextOverflow.ellipsis,
+            ))),
+        GridTextColumn(
+          columnName: 'designation',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Designation',
+              overflow: TextOverflow.ellipsis,
+            ))),
+        GridTextColumn(
+          columnName: 'salary',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'Salary',
+              overflow: TextOverflow.ellipsis,
+            ))),
       ],
     ),
   );
@@ -172,10 +236,42 @@ Widget build(BuildContext context) {
       allowPullToRefresh: true,
       source: employeeDataSource,
       columns: <GridColumn>[
-        GridTextColumn(columnName: 'id', label: Text('ID')),
-        GridTextColumn(columnName: 'name', label: Text('Name')),
-        GridTextColumn(columnName: 'designation', label: Text('Designation')),
-        GridTextColumn(columnName: 'salary', label: Text('Salary')),
+        GridTextColumn(
+          columnName: 'id',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'ID',
+              overflow: TextOverflow.ellipsis,
+            ))),
+        GridTextColumn(
+          columnName: 'name',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Name',
+              overflow: TextOverflow.ellipsis,
+            ))),
+        GridTextColumn(
+          columnName: 'designation',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Designation',
+              overflow: TextOverflow.ellipsis,
+            ))),
+        GridTextColumn(
+          columnName: 'salary',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'Salary',
+              overflow: TextOverflow.ellipsis,
+            ))),
       ],
     ),
     floatingActionButton: FloatingActionButton(

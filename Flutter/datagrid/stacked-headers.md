@@ -26,10 +26,42 @@ Widget build(BuildContext context) {
     headerGridLinesVisibility: GridLinesVisibility.both,
     source: _productDataSource,
     columns: <GridColumn>[
-      GridTextColumn(columnName: 'orderId', label: Text('ID')),
-      GridTextColumn(columnName: 'customerName', label: Text('Name')),
-      GridTextColumn(columnName: 'productId', label: Text('ID')),
-      GridTextColumn(columnName: 'product', label: Text('Product')),
+      GridTextColumn(
+        columnName: 'orderId',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          alignment: Alignment.centerRight,
+          child: Text(
+            'ID',
+            overflow: TextOverflow.ellipsis,
+          ))),
+      GridTextColumn(
+        columnName: 'customerName',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'Name',
+            overflow: TextOverflow.ellipsis,
+          ))),
+      GridTextColumn(
+        columnName: 'productId',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          alignment: Alignment.centerRight,
+          child: Text(
+            'ID',
+            overflow: TextOverflow.ellipsis,
+          ))),
+      GridTextColumn(
+        columnName: 'product',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'Product',
+            overflow: TextOverflow.ellipsis,
+          ))),
     ],
     stackedHeaderRows: <StackedHeaderRow>[
       StackedHeaderRow(cells: [
@@ -70,10 +102,42 @@ Widget build(BuildContext context) {
     headerGridLinesVisibility: GridLinesVisibility.both,
     source: _productDataSource,
     columns: <GridColumn>[
-      GridTextColumn(columnName: 'orderId', label: Text('ID')),
-      GridTextColumn(columnName: 'customerName', label: Text('Name')),
-      GridTextColumn(columnName: 'productId', label: Text('ID')),
-      GridTextColumn(columnName: 'product', label: Text('Product')),
+      GridTextColumn(
+        columnName: 'orderId',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          alignment: Alignment.centerRight,
+          child: Text(
+            'ID',
+            overflow: TextOverflow.ellipsis,
+          ))),
+      GridTextColumn(
+        columnName: 'customerName',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'Name',
+            overflow: TextOverflow.ellipsis,
+          ))),
+      GridTextColumn(
+        columnName: 'productId',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          alignment: Alignment.centerRight,
+          child: Text(
+            'ID',
+            overflow: TextOverflow.ellipsis,
+          ))),
+      GridTextColumn(
+        columnName: 'product',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'Product',
+            overflow: TextOverflow.ellipsis,
+          ))),
     ],
     stackedHeaderRows: <StackedHeaderRow>[
       StackedHeaderRow(cells: [
@@ -129,10 +193,42 @@ Widget build(BuildContext context) {
       return null;
     },
     columns: <GridColumn>[
-      GridTextColumn(columnName: 'orderId', label: Text('ID')),
-      GridTextColumn(columnName: 'customerName', label: Text('Name')),
-      GridTextColumn(columnName: 'productId', label: Text('ID')),
-      GridTextColumn(columnName: 'product', label: Text('Product')),
+      GridTextColumn(
+        columnName: 'orderId',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          alignment: Alignment.centerRight,
+          child: Text(
+            'ID',
+            overflow: TextOverflow.ellipsis,
+          ))),
+      GridTextColumn(
+        columnName: 'customerName',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'Name',
+            overflow: TextOverflow.ellipsis,
+          ))),
+      GridTextColumn(
+        columnName: 'productId',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          alignment: Alignment.centerRight,
+          child: Text(
+            'ID',
+            overflow: TextOverflow.ellipsis,
+          ))),
+      GridTextColumn(
+        columnName: 'product',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'Product',
+            overflow: TextOverflow.ellipsis,
+          ))),
     ],
     stackedHeaderRows: <StackedHeaderRow>[
       StackedHeaderRow(cells: [

@@ -27,10 +27,42 @@ N> The default value of `isScrollbarAlwaysShown` is false.
         source: _employeeDataSource,
         isScrollbarAlwaysShown: true,
         columns: [
-          GridTextColumn(columnName: 'id', label: Text('ID')),
-          GridTextColumn(columnName: 'name', label: Text('Name')),
-          GridTextColumn(columnName: 'designation', label: Text('Designation')),
-          GridTextColumn(columnName: 'salary', label: Text('Salary')),
+          GridTextColumn(
+            columnName: 'id',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'ID',
+                overflow: TextOverflow.ellipsis,
+              ))),
+          GridTextColumn(
+            columnName: 'name',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Name',
+                overflow: TextOverflow.ellipsis,
+              ))),
+          GridTextColumn(
+            columnName: 'designation',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Designation',
+                overflow: TextOverflow.ellipsis,
+              ))),
+          GridTextColumn(
+            columnName: 'salary',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'Salary',
+                overflow: TextOverflow.ellipsis,
+              ))),
         ],
       ),
     );
@@ -58,10 +90,42 @@ The following example shows how to disable the horizontal and vertical scrolling
         horizontalScrollPhysics: NeverScrollableScrollPhysics(),
         verticalScrollPhysics: NeverScrollableScrollPhysics(),
         columns: [
-          GridTextColumn(columnName: 'id', label: Text('ID')),
-          GridTextColumn(columnName: 'name', label: Text('Name')),
-          GridTextColumn(columnName: 'designation', label: Text('Designation')),
-          GridTextColumn(columnName: 'salary', label: Text('Salary')),
+          GridTextColumn(
+            columnName: 'id',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'ID',
+                overflow: TextOverflow.ellipsis,
+              ))),
+          GridTextColumn(
+            columnName: 'name',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Name',
+                overflow: TextOverflow.ellipsis,
+              ))),
+          GridTextColumn(
+            columnName: 'designation',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Designation',
+                overflow: TextOverflow.ellipsis,
+              ))),
+          GridTextColumn(
+            columnName: 'salary',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'Salary',
+                overflow: TextOverflow.ellipsis,
+              ))),
         ],
       ),
     );
@@ -98,10 +162,42 @@ final DataGridController _controller = DataGridController();
         Expanded( child:SfDataGrid(
           source: _employeeDataSource,
           columns: [
-            GridTextColumn(columnName: 'id', label: Text('ID')),
-            GridTextColumn(columnName: 'name', label: Text('Name')),
-            GridTextColumn(columnName: 'designation', label: Text('Designation')),
-            GridTextColumn(columnName: 'salary', label: Text('Salary')),
+            GridTextColumn(
+              columnName: 'id',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+            GridTextColumn(
+              columnName: 'name',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Name',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+            GridTextColumn(
+              columnName: 'designation',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Designation',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+            GridTextColumn(
+              columnName: 'salary',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Salary',
+                  overflow: TextOverflow.ellipsis,
+                ))),
           ],
           controller: _controller,
         )),
@@ -137,10 +233,42 @@ final DataGridController _controller = DataGridController();
         Expanded( child:SfDataGrid(
           source: _employeeDataSource,
           columns: [
-            GridTextColumn(columnName: 'id', label: Text('ID')),
-            GridTextColumn(columnName: 'name', label: Text('Name')),
-            GridTextColumn(columnName: 'designation', label: Text('Designation')),
-            GridTextColumn(columnName: 'salary', label: Text('Salary')),
+            GridTextColumn(
+              columnName: 'id',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+            GridTextColumn(
+              columnName: 'name',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Name',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+            GridTextColumn(
+              columnName: 'designation',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Designation',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+            GridTextColumn(
+              columnName: 'salary',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Salary',
+                  overflow: TextOverflow.ellipsis,
+                ))),
           ],
           controller: _controller,
         )),
@@ -174,10 +302,42 @@ final DataGridController _controller = DataGridController();
         Expanded( child:SfDataGrid(
           source: _employeeDataSource,
           columns: [
-            GridTextColumn(columnName: 'id', label: Text('ID')),
-            GridTextColumn(columnName: 'name', label: Text('Name')),
-            GridTextColumn(columnName: 'designation', label: Text('Designation')),
-            GridTextColumn(columnName: 'salary', label: Text('Salary')),
+            GridTextColumn(
+              columnName: 'id',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+            GridTextColumn(
+              columnName: 'name',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Name',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+            GridTextColumn(
+              columnName: 'designation',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Designation',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+            GridTextColumn(
+              columnName: 'salary',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Salary',
+                  overflow: TextOverflow.ellipsis,
+                ))),
           ],
           controller: _controller,
         )),
@@ -221,10 +381,42 @@ final DataGridController _controller = DataGridController();
         Expanded( child:SfDataGrid(
           source: _employeeDataSource,
           columns: [
-            GridTextColumn(columnName: 'id', label: Text('ID')),
-            GridTextColumn(columnName: 'name', label: Text('Name')),
-            GridTextColumn(columnName: 'designation', label: Text('Designation')),
-            GridTextColumn(columnName: 'salary', label: Text('Salary')),
+            GridTextColumn(
+              columnName: 'id',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+            GridTextColumn(
+              columnName: 'name',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Name',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+            GridTextColumn(
+              columnName: 'designation',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Designation',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+            GridTextColumn(
+              columnName: 'salary',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Salary',
+                  overflow: TextOverflow.ellipsis,
+                ))),
           ],
           controller: _controller,
         )),
@@ -258,10 +450,42 @@ final DataGridController _controller = DataGridController();
         Expanded( child:SfDataGrid(
           source: _employeeDataSource,
           columns: [
-            GridTextColumn(columnName: 'id', label: Text('ID')),
-            GridTextColumn(columnName: 'name', label: Text('Name')),
-            GridTextColumn(columnName: 'designation', label: Text('Designation')),
-            GridTextColumn(columnName: 'salary', label: Text('Salary')),
+            GridTextColumn(
+              columnName: 'id',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+            GridTextColumn(
+              columnName: 'name',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Name',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+            GridTextColumn(
+              columnName: 'designation',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Designation',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+            GridTextColumn(
+              columnName: 'salary',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Salary',
+                  overflow: TextOverflow.ellipsis,
+                ))),
           ],
           controller: _controller,
         )),
@@ -295,10 +519,42 @@ final DataGridController _controller = DataGridController();
         Expanded( child:SfDataGrid(
           source: _employeeDataSource,
           columns: [
-            GridTextColumn(columnName: 'id', label: Text('ID')),
-            GridTextColumn(columnName: 'name', label: Text('Name')),
-            GridTextColumn(columnName: 'designation', label: Text('Designation')),
-            GridTextColumn(columnName: 'salary', label: Text('Salary')),
+            GridTextColumn(
+              columnName: 'id',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+            GridTextColumn(
+              columnName: 'name',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Name',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+            GridTextColumn(
+              columnName: 'designation',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Designation',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+            GridTextColumn(
+              columnName: 'salary',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Salary',
+                  overflow: TextOverflow.ellipsis,
+                ))),
           ],
           controller: _controller,
         )),

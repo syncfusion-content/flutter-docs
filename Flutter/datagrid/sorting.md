@@ -34,10 +34,42 @@ Widget build(BuildContext context) {
         SfDataGrid(
           source: _employeeDataSource,
           columns: [
-            GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-            GridTextColumn(mappingName: 'name', headerText: 'Name'),
-            GridTextColumn(mappingName: 'city', headerText: 'City'),
-            GridNumericColumn(mappingName: 'freight', headerText: 'Freight')
+            GridTextColumn(
+              columnName: 'id',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+            GridTextColumn(
+              columnName: 'name',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Name',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+            GridTextColumn(
+              columnName: 'city',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'City',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+            GridTextColumn(
+              columnName: 'freight',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Freight',
+                  overflow: TextOverflow.ellipsis,
+                ))),
           ],
         ),
         Padding(
@@ -79,10 +111,42 @@ Widget build(BuildContext context) {
     allowSorting: true,
     allowMultiColumnSorting: true,
     columns: [
-      GridTextColumn(columnName: 'id', label: Text('ID')),
-      GridTextColumn(columnName: 'name', label: Text('Name')),
-      GridTextColumn(columnName: 'city', label: Text('City')),
-      GridTextColumn(columnName: 'freight', label: Text('Freight')),
+      GridTextColumn(
+        columnName: 'id',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          alignment: Alignment.centerRight,
+          child: Text(
+            'ID',
+            overflow: TextOverflow.ellipsis,
+          ))),
+      GridTextColumn(
+        columnName: 'name',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'Name',
+            overflow: TextOverflow.ellipsis,
+          ))),
+      GridTextColumn(
+        columnName: 'city',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'City',
+            overflow: TextOverflow.ellipsis,
+          ))),
+      GridTextColumn(
+        columnName: 'freight',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          alignment: Alignment.centerRight,
+          child: Text(
+            'Freight',
+            overflow: TextOverflow.ellipsis,
+          ))),
     ],
   ));
 }
@@ -110,10 +174,42 @@ Widget build(BuildContext context) {
     allowMultiColumnSorting: true,
     allowTriStateSorting: true,
     columns: [
-      GridTextColumn(columnName: 'id', label: Text('ID')),
-      GridTextColumn(columnName: 'name', label: Text('Name')),
-      GridTextColumn(columnName: 'city', label: Text('City')),
-      GridTextColumn(columnName: 'freight', label: Text('Freight')),
+      GridTextColumn(
+        columnName: 'id',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          alignment: Alignment.centerRight,
+          child: Text(
+            'ID',
+            overflow: TextOverflow.ellipsis,
+          ))),
+      GridTextColumn(
+        columnName: 'name',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'Name',
+            overflow: TextOverflow.ellipsis,
+          ))),
+      GridTextColumn(
+        columnName: 'city',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'City',
+            overflow: TextOverflow.ellipsis,
+          ))),
+      GridTextColumn(
+        columnName: 'freight',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          alignment: Alignment.centerRight,
+          child: Text(
+            'Freight',
+            overflow: TextOverflow.ellipsis,
+          ))),
     ],
   ));
 }
@@ -140,10 +236,42 @@ Widget build(BuildContext context) {
     allowSorting: true,
     sortingGestureType: SortingGestureType.doubleTap,
     columns: [
-      GridTextColumn(columnName: 'id', label: Text('ID')),
-      GridTextColumn(columnName: 'name', label: Text('Name')),
-      GridTextColumn(columnName: 'city', label: Text('City')),
-      GridTextColumn(columnName: 'freight', label: Text('Freight')),
+      GridTextColumn(
+        columnName: 'id',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          alignment: Alignment.centerRight,
+          child: Text(
+            'ID',
+            overflow: TextOverflow.ellipsis,
+          ))),
+      GridTextColumn(
+        columnName: 'name',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'Name',
+            overflow: TextOverflow.ellipsis,
+          ))),
+      GridTextColumn(
+        columnName: 'city',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'City',
+            overflow: TextOverflow.ellipsis,
+          ))),
+      GridTextColumn(
+        columnName: 'freight',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          alignment: Alignment.centerRight,
+          child: Text(
+            'Freight',
+            overflow: TextOverflow.ellipsis,
+          ))),
     ],
   ));
 }
@@ -169,10 +297,42 @@ Widget build(BuildContext context) {
     allowMultiColumnSorting: true,
     showSortNumbers: true,
     columns: [
-      GridTextColumn(columnName: 'id', label: Text('ID')),
-      GridTextColumn(columnName: 'name', label: Text('Name')),
-      GridTextColumn(columnName: 'city', label: Text('City')),
-      GridTextColumn(columnName: 'freight', label: Text('Freight')),
+      GridTextColumn(
+        columnName: 'id',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          alignment: Alignment.centerRight,
+          child: Text(
+            'ID',
+            overflow: TextOverflow.ellipsis,
+          ))),
+      GridTextColumn(
+        columnName: 'name',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'Name',
+            overflow: TextOverflow.ellipsis,
+          ))),
+      GridTextColumn(
+        columnName: 'city',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'City',
+            overflow: TextOverflow.ellipsis,
+          ))),
+      GridTextColumn(
+        columnName: 'freight',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          alignment: Alignment.centerRight,
+          child: Text(
+            'Freight',
+            overflow: TextOverflow.ellipsis,
+          ))),
     ],
   ));
 }
@@ -198,10 +358,42 @@ Widget build(BuildContext context) {
     source: _employeeDataSource,
     allowSorting: true,
     columns: [
-      GridTextColumn(columnName: 'id', label: Text('ID')),
-      GridTextColumn(columnName: 'name', label: Text('Name')),
-      GridTextColumn(columnName: 'city', label: Text('City')),
-      GridTextColumn(columnName: 'freight', label: Text('Freight')),
+      GridTextColumn(
+        columnName: 'id',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          alignment: Alignment.centerRight,
+          child: Text(
+            'ID',
+            overflow: TextOverflow.ellipsis,
+          ))),
+      GridTextColumn(
+        columnName: 'name',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'Name',
+            overflow: TextOverflow.ellipsis,
+          ))),
+      GridTextColumn(
+        columnName: 'city',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'City',
+            overflow: TextOverflow.ellipsis,
+          ))),
+      GridTextColumn(
+        columnName: 'freight',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          alignment: Alignment.centerRight,
+          child: Text(
+            'Freight',
+            overflow: TextOverflow.ellipsis,
+          ))),
     ],
   ));
 }
@@ -232,10 +424,42 @@ Widget build(BuildContext context) {
       allowSorting: true,
       allowMultiColumnSorting: true,
       columns: [
-        GridTextColumn(columnName: 'id', label: Text('ID')),
-        GridTextColumn(columnName: 'name', label: Text('Name')),
-        GridTextColumn(columnName: 'city', label: Text('City')),
-        GridTextColumn(columnName: 'freight', label: Text('Freight')),
+        GridTextColumn(
+          columnName: 'id',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'ID',
+              overflow: TextOverflow.ellipsis,
+            ))),
+        GridTextColumn(
+          columnName: 'name',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Name',
+              overflow: TextOverflow.ellipsis,
+            ))),
+        GridTextColumn(
+          columnName: 'city',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'City',
+              overflow: TextOverflow.ellipsis,
+            ))),
+        GridTextColumn(
+          columnName: 'freight',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'Freight',
+              overflow: TextOverflow.ellipsis,
+            ))),
       ],
     ),
   ));
