@@ -7,7 +7,7 @@ control: PDF
 documentation: ug
 ---
 
-# Working with PDF Security
+# Working with Digital Signature
 
 Flutter PDF allows you to add a digital signature to the PDF document. You can sign the PDF document internally by using a certificate with private keys or externally by using the digital signature created from various sources such as cloud services like DigitalSign.
 
