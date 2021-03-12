@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form fields of Syncfusion Flutter PDF
-description: Learn how to create, modify, and delete the form fields in a PDF document.
+description: Learn how to create, modify, and delete the form fields in the Flutter PDF document.
 platform: flutter
 control: PDF
 documentation: ug
@@ -15,7 +15,7 @@ An interactive form sometimes referred to as an AcroForm is a collection of fiel
 
 Flutter PDF allows you to create and manage the form (AcroForm) in PDF documents by using the PdfForm class. The PdfFormFieldCollection class represents the entire field collection of the form.
 
-## Adding the text box field
+### Adding the text box field
 
 The [`PdfTextBoxField `](#) class is used to create a text box field in PDF forms.
 
@@ -66,7 +66,7 @@ File('output.pdf').writeAsBytesSync(document.save());
 
 {% endhighlight %}
 
-## Adding the combo box field
+### Adding the combo box field
 
 The PdfComboBoxField class is used to create a combo box field in PDF forms. You can add a list of items to the combo box by using the PdfListFieldItem class.
 
@@ -121,7 +121,7 @@ File('output.pdf').writeAsBytesSync(document.save());
 
 {% endhighlight %}
 
-## Adding the radio button field
+### Adding the radio button field
 
 To create the radio button in the PDF forms, you can use the PdfRadioButtonListField class and you can create the radio button list items by using the PdfRadioButtonListItem class.
 
@@ -200,7 +200,7 @@ File('output.pdf').writeAsBytesSync(document.save());
 
 {% endhighlight %}
 
-## Retrieving option values from the acroform radio button
+### Retrieving option values from the acroform radio button
 
 The Flutter PDF supports retrieving values from the acroform radio button. The value property is used to get values of the PdfRadioButtonListItem instance.
 
@@ -223,7 +223,7 @@ File('output.pdf').writeAsBytesSync(document.save());
 
 {% endhighlight %}
 
-## Adding the list box field
+### Adding the list box field
 
 You can create the list box field in PDF forms using the PdfListBoxField class.
 
@@ -280,7 +280,7 @@ File('output.pdf').writeAsBytesSync(document.save());
 
 {% endhighlight %}
 
-## Adding the check Box field
+### Adding the check Box field
 
 You can create the check box field in PDF forms using the PdfCheckBoxField class.
 
@@ -333,7 +333,7 @@ File('output.pdf').writeAsBytesSync(document.save());
 
 {% endhighlight %}
 
-## Adding the signature field
+### Adding the signature field
 
 You can add the signature field in PDF forms using the PdfSignatureField class.
 
@@ -370,7 +370,7 @@ File('output.pdf').writeAsBytesSync(document.save());
 
 {% endhighlight %}
 
-## Adding the button field
+### Adding the button field
 
 To create button fields in PDF forms, you can use the PdfButtonField class.
 
@@ -425,7 +425,7 @@ File('output.pdf').writeAsBytesSync(document.save());
 
 {% endhighlight %}
 
-# Set appearance to the PDF form fields
+## Set appearance to the PDF form fields
 
 After filling the form fields in the PDF document, it may appear empty due to the absence of the appearance dictionary. By setting the setDefaultAppearance method in PdfForm class to false, you can create the appearance dictionary. By this, the text will be visible in all PDF Viewers. 
 
@@ -448,7 +448,7 @@ File('output.pdf').writeAsBytesSync(document.save());
 
 {% endhighlight %}
 
-# Modifying the existing form field in a PDF document
+## Modifying the existing form field in a PDF document
 
 You can modify an existing form field by getting the field from the PdfFormFieldCollection. You can retrieve a field from the field collection by index or by field name.
 
@@ -503,11 +503,11 @@ File('output.pdf').writeAsBytesSync(document.save());
 
 {% endhighlight %}
 
-# Filling form fields in an existing PDF Document
+## Filling form fields in an existing PDF Document
 
 Flutter PDF allows you to fill the form fields using the PdfField class.
 
-## Filling the text box field
+### Filling the text box field
 
 You can fill a text box field using the text property of PdfTextBoxField class. The following code sample explains this.
 
@@ -525,7 +525,7 @@ File('output.pdf').writeAsBytesSync(document.save());
 
 {% endhighlight %}
 
-## Filling the combo box field
+### Filling the combo box field
 
 You can fill a combo box field using the selectedValue or selectedIndex properties of PdfLoadedComboBoxField class. Please refer to the following code sample to fill the combo box field in an existing PDF document.
 
@@ -546,7 +546,7 @@ File('output.pdf').writeAsBytesSync(document.save());
 
 {% endhighlight %}
 
-## Filling the radio button field
+### Filling the radio button field
 
 You can fill a radio button field using the selectedValue or selectedIndex properties of PdfRadioButtonListField class. Please refer to the following code sample to fill the radio button field in an existing PDF document.
 
@@ -567,7 +567,7 @@ File('output.pdf').writeAsBytesSync(document.save());
 
 {% endhighlight %}
 
-## Filling the list box field
+### Filling the list box field
 
 The following code sample explains how to fill the list box field in an existing PDF document using the selectedIndex property of PdfListBoxField class.
 
@@ -585,7 +585,7 @@ File('output.pdf').writeAsBytesSync(document.save());
 
 {% endhighlight %}
 
-## Filling the check box field
+### Filling the check box field
 
 You can fill a check box field by enabling the checked property of PdfCheckBoxField class. Please refer to the following code sample to fill the check box field.
 
@@ -603,7 +603,7 @@ File('output.pdf').writeAsBytesSync(document.save());
 
 {% endhighlight %}
 
-## Enumerate the form fields
+### Enumerate the form fields
 
 All the form fields are maintained in the PdfFormFieldCollection class. You can enumerate the fields from this form field collection and fill them.
 
@@ -628,7 +628,7 @@ File('output.pdf').writeAsBytesSync(document.save());
 
 {% endhighlight %}
 
-# Removing editing capability of form fields
+## Removing editing capability of form fields
 
 The form field editing or filling capabilities can be removed by either flattening the PDF document or marking the form or field as read-only.
 
@@ -713,7 +713,7 @@ File('output.pdf').writeAsBytesSync(document.save());
 
 {% endhighlight %}
 
-# Removing the form fields from the existing PDF document
+## Removing the form fields from the existing PDF document
 
 You can remove the form fields from an existing PDF document using the remove or removeAt methods of PdfFormFieldCollection class.
 
@@ -739,7 +739,7 @@ File('output.pdf').writeAsBytesSync(document.save());
 
 {% endhighlight %}
 
-# Auto naming of form fields
+## Auto naming of form fields
 
 Flutter PDF supports auto naming of form fields in a PDF document while creating form fields with the same name. The fieldAutoNaming property of PdfForm is used to enable or disable auto naming of a form field.
 
@@ -772,7 +772,7 @@ File('output.pdf').writeAsBytesSync(document.save());
 
 {% endhighlight %}
 
-# Adding an action to the form field
+## Adding an action to the form field
 
 Flutter PDF provides support to add various actions to the form fields. The PdfFieldActions class is used to create the form field actions.
 
@@ -799,7 +799,7 @@ File('output.pdf').writeAsBytesSync(document.save());
 
 {% endhighlight %}
 
-# Troubleshooting
+## Troubleshooting
 
 Sometimes, Form fields may appear empty in an adobe reader due to the absence of the appearance dictionary. To resolve this, you need to enable the Adobe Reader default appearance by using the setDefaultAppearance method in PdfForm class.
 
