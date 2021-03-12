@@ -142,7 +142,7 @@ A range is a visual element that helps you quickly visualize where a range falls
 
 ## Add marker pointer
 
-The Linear Gauge supports two marker pointers - shape pointer and widget pointer. Shape pointer will have a default set of pre-build icons to point a value in an axis track, while the widget pointes facilitate using any Flutter widgets to point a value in an axis track. 
+The Linear Gauge supports two marker pointers - shape pointer and widget pointer. Shape pointer will have a default set of pre-build icons to point a value in an axis track, while the widget pointer facilitate using any Flutter widget to point a value in an axis track. 
 
 The below code snippet demonstrates adding a shape pointer.
 
