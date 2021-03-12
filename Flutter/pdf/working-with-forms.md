@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form fields of Syncfusion Flutter PDF
-description: Learn how to create, modify, and delete the form fields in the Flutter PDF document.
+description: Learn how to create, modify, retrieve and delete the form fields in the Flutter PDF document.
 platform: flutter
 control: PDF
 documentation: ug
