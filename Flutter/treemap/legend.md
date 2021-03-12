@@ -43,7 +43,7 @@ Widget build(BuildContext context) {
         },
         levels: [
           TreemapLevel(
-            padding: const EdgeInsets.all(2.5),
+            padding: const EdgeInsets.all(1.5),
             groupMapper: (int index) {
               return _source[index].country;
             },
@@ -100,7 +100,7 @@ Widget build(BuildContext context) {
         },
         levels: [
           TreemapLevel(
-            padding: const EdgeInsets.all(2.5),
+            padding: const EdgeInsets.all(1.5),
             groupMapper: (int index) {
               return _source[index].country;
             },
@@ -164,7 +164,7 @@ Widget build(BuildContext context) {
         },
         levels: [
           TreemapLevel(
-            padding: const EdgeInsets.all(2.5),
+            padding: const EdgeInsets.all(1.5),
             groupMapper: (int index) {
               return _source[index].country;
             },
@@ -283,7 +283,7 @@ Widget build(BuildContext context) {
         },
         levels: [
           TreemapLevel(
-            padding: const EdgeInsets.all(2.5),
+            padding: const EdgeInsets.all(1.5),
             groupMapper: (int index) {
               return _source[index].country;
             },
@@ -316,6 +316,60 @@ You can wrap or scroll the legend items using the `TreemapLegend.overflowMode` p
 If the legend position is `left` or `right`, then the default scroll direction is `vertical`.
 
 If the legend position is `top` or `bottom`, then the default scroll direction is `horizontal`.
+
+{% tabs %}
+{% highlight Dart %}
+
+List<SocialMediaUsers> _source;
+
+@override
+void initState() {
+   _source = <SocialMediaUsers>[
+      SocialMediaUsers('India', 'Facebook', 25.4),
+      SocialMediaUsers('USA', 'Instagram', 19.11),
+      SocialMediaUsers('Japan', 'Facebook', 13.3),
+      SocialMediaUsers('China', 'Facebook', 12.3),
+      SocialMediaUsers('Germany', 'Instagram', 10.65),
+      SocialMediaUsers('France', 'Twitter', 7.54),
+      SocialMediaUsers('South America', 'Twitter', 5.54),
+      SocialMediaUsers('United Kingdom', 'Instagram', 4.93),
+   ];
+   super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+     body: SfTreemap(
+        dataCount: _source.length,
+        weightValueMapper: (int index) {
+          return _source[index].usersInMillions;
+        },
+        levels: [
+          TreemapLevel(
+            padding: const EdgeInsets.all(1.5),
+            groupMapper: (int index) {
+              return _source[index].country;
+            },
+          ),
+        ],
+        legend: TreemapLegend(
+          overflowMode: TreemapLegendOverflowMode.scroll,
+        ),
+      ),
+   );
+}
+
+class SocialMediaUsers {
+  const SocialMediaUsers(this.country, this.socialMedia, this.usersInMillions);
+
+  final String country;
+  final String socialMedia;
+  final double usersInMillions;
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 <b>For bar legend</b>
 
