@@ -25,90 +25,165 @@ The following code example illustrates using `SfDataPager` with the datagrid con
 {% tabs %}
 {% highlight Dart %}
 
-List<OrderInfo> paginatedDataSource = [];
+final int rowsPerPage = 15;
 
-final int rowsPerPage = 10;
+final double dataPagerHeight = 60.0;
+
+List<OrderInfo> orders = [];
+
+List<OrderInfo> paginatedOrders = [];
 
 final OrderInfoDataSource _orderInfoDataSource = OrderInfoDataSource();
 
 @override
 Widget build(BuildContext context) {
-  return Scaffold(
-    body: LayoutBuilder(
-      builder: (context, constraint) {
-        return Column(
-          children: [
-            SizedBox(
-              height: constraint.maxHeight - 60,
-              width: constraint.maxWidth,
-              child: SfDataGrid(
-                  source: _orderInfoDataSource,
-                  columnWidthMode: ColumnWidthMode.fill,
-                  columns: <GridColumn>[
-                    GridNumericColumn(
-                        mappingName: 'orderID', headerText: 'Order ID'),
-                    GridTextColumn(
-                        mappingName: 'customerID',
-                        headerText: 'Customer Name'),
-                    GridDateTimeColumn(
-                        mappingName: 'orderDate', headerText: 'Order Date'),
-                    GridNumericColumn(
-                        mappingName: 'freight', headerText: 'Freight'),
-                  ]),
-            ),
-            Container(
-              height: 60,
-              child: SfDataPager(
-                delegate: _orderInfoDataSource,
-                pageCount: orderInfos.length / rowsPerPage ,
-                direction: Axis.horizontal,
+  return LayoutBuilder(builder: (context, constraint) {
+    return Column(
+      children: [
+        SizedBox(
+          height: constraint.maxHeight - dataPagerHeight,
+          width: constraint.maxWidth,
+          child: SfDataGrid(
+            source: _orderInfoDataSource,
+            columnWidthMode: ColumnWidthMode.fill,
+            columns: <GridColumn>[
+              GridTextColumn(
+                columnName: 'orderID',
+                label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 8.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Order ID',
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
               ),
-            )
-          ],
-        );
-      },
-    ),
-  );
+              GridTextColumn(
+                  columnName: 'customerID',
+                  label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 8.0),
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Customer Name',
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  )),
+              GridTextColumn(
+                columnName: 'orderDate',
+                label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 8.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Order Date',
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+              ),
+              GridTextColumn(
+                columnName: 'freight',
+                label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 8.0),
+                  alignment: Alignment.center,
+                  child: Text(
+                    'Freight',
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+        Container(
+          height: dataPagerHeight,
+          child: SfDataPager(
+            delegate: _orderInfoDataSource,
+            pageCount: orders.length / rowsPerPage,
+            direction: Axis.horizontal,
+          ),
+        )
+      ],
+    );
+  });
 }
 
-class OrderInfoDataSource extends DataGridSource<OrderInfo> {
-  @override
-  List<OrderInfo> get dataSource => paginatedDataSource;
-
-  @override
-  Object getValue(OrderInfo orderInfos, String columnName) {
-    switch (columnName) {
-      case 'orderID':
-        return orderInfos.orderID;
-        break;
-      case 'customerID':
-        return orderInfos.customerID;
-        break;
-      case 'freight':
-        return orderInfos.freight;
-        break;
-      case 'orderDate':
-        return orderInfos.orderData;
-        break;
-      default:
-        return '';
-        break;
-    }
+class OrderInfoDataSource extends DataGridSource{
+  OrderInfoDataSource() {
+    paginatedOrders = orders.getRange(0, 19).toList(growable: false);
+    buildPaginateDataGridRows();
   }
 
+  List<DataGridRow> dataGridRows = [];
+
+  @override
+  List<DataGridRow> get rows => dataGridRows;
+
+  @override
+  DataGridRowAdapter buildRow(DataGridRow row) {
+    return DataGridRowAdapter(
+        cells: row.getCells().map<Widget>((dataGridCell) {
+      if (dataGridCell.columnName == 'orderID') {
+        return Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          alignment: Alignment.centerRight,
+          child: Text(
+            dataGridCell.value.toString(),
+            overflow: TextOverflow.ellipsis,
+          ),
+        );
+      } else if (dataGridCell.columnName == 'customerID') {
+        return Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              dataGridCell.value.toString(),
+              overflow: TextOverflow.ellipsis,
+            ));
+      } else if (dataGridCell.columnName == 'orderDate') {
+        return Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              DateFormat.yMd().format(dataGridCell.value).toString(),
+              overflow: TextOverflow.ellipsis,
+            ));
+      } else {
+        return Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.center,
+            child: Text(
+              NumberFormat.currency(locale: 'en_US', symbol: '\$')
+                  .format(dataGridCell.value)
+                  .toString(),
+              overflow: TextOverflow.ellipsis,
+            ));
+      }
+    }).toList());
+  }
+  
   @override
   Future<bool> handlePageChange(int oldPageIndex, int newPageIndex) async {
     int startIndex = newPageIndex * rowsPerPage;
-    int endIndex = startRowIndex + rowsPerPage;
-    if(startIndex < orderInfos.length && endIndex <=  orderInfos.length)
-    {
-         await Future.delayed(Duration(milliseconds: 2000));
-          paginatedDataSource = List.from(
-        orderInfos.getRange(startRowIndex, endIndex).toList(growable: false));
-        notifyListeners();
-        return true;
+    int endIndex = startIndex + rowsPerPage;
+    if(startIndex < orders.length && endIndex <=  orders.length){
+      paginatedOrders = orders.getRange(startIndex, endIndex).toList(growable: false);
+      buildPaginatedDataGridRows();
+      notifyListeners();
+    }else{
+      paginatedOrders = [];
     }
-   
+
+    return true;
+  }
+
+  void buildPaginatedDataGridRows() {
+    dataGridRows = paginatedOrders.map<DataGridRow>((dataGridRow) {
+      return DataGridRow(cells: [
+        DataGridCell(columnName: 'orderID', value: dataGridRow.orderID),
+        DataGridCell(columnName: 'customerID', value: dataGridRow.customerID),
+        DataGridCell(columnName: 'orderDate', value: dataGridRow.orderData),
+        DataGridCell(columnName: 'freight', value: dataGridRow.freight),
+      ]);
+    }).toList(growable: false);
   }
 }
 
@@ -144,7 +219,7 @@ Widget build(BuildContext context) {
                 height: 60,
                 width: constraints.maxWidth,
                 child: SfDataPager(
-                  pageCount: orderInfos.length / rowsPerPage ,
+                  pageCount: orders.length / rowsPerPage,
                   direction: Axis.horizontal,
                   onPageNavigationStart: (int pageIndex) {
                     //You can do your customization
@@ -168,28 +243,131 @@ Widget buildDataGrid(BoxConstraints constraint) {
       source: _orderInfoDataSource,
       columnWidthMode: ColumnWidthMode.fill,
       columns: <GridColumn>[
-        GridNumericColumn(mappingName: 'orderID', headerText: 'Order ID'),
         GridTextColumn(
-            mappingName: 'customerID', headerText: 'Customer Name'),
-        GridDateTimeColumn(
-            mappingName: 'orderDate', headerText: 'Order Date'),
-        GridNumericColumn(mappingName: 'freight', headerText: 'Freight'),
-      ]);
+          columnName: 'orderID',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'Order ID',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+            columnName: 'customerID',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Customer Name',
+                overflow: TextOverflow.ellipsis,
+              ),
+            )),
+        GridTextColumn(
+          columnName: 'orderDate',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'Order Date',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'freight',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.center,
+            child: Text(
+              'Freight',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+      ],
+    );
 }
 
-class OrderInfoDataSource extends DataGridSource<OrderInfo> {
-   @override
+class OrderInfoDataSource extends DataGridSource{
+  OrderInfoDataSource() {
+    paginatedOrders = orders.getRange(0, 19).toList(growable: false);
+    buildPaginatedDataGridRows();
+  }
+
+  List<DataGridRow> dataGridRows = [];
+
+  @override
+  List<DataGridRow> get rows => dataGridRows;
+
+  @override
+  DataGridRowAdapter buildRow(DataGridRow row) {
+    return DataGridRowAdapter(
+        cells: row.getCells().map<Widget>((dataGridCell) {
+      if (dataGridCell.columnName == 'orderID') {
+        return Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          alignment: Alignment.centerRight,
+          child: Text(
+            dataGridCell.value.toString(),
+            overflow: TextOverflow.ellipsis,
+          ),
+        );
+      } else if (dataGridCell.columnName == 'customerID') {
+        return Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              dataGridCell.value.toString(),
+              overflow: TextOverflow.ellipsis,
+            ));
+      } else if (dataGridCell.columnName == 'orderDate') {
+        return Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              DateFormat.yMd().format(dataGridCell.value).toString(),
+              overflow: TextOverflow.ellipsis,
+            ));
+      } else {
+        return Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.center,
+            child: Text(
+              NumberFormat.currency(locale: 'en_US', symbol: '\$')
+                  .format(dataGridCell.value)
+                  .toString(),
+              overflow: TextOverflow.ellipsis,
+            ));
+      }
+    }).toList());
+  }
+  
+  @override
   Future<bool> handlePageChange(int oldPageIndex, int newPageIndex) async {
     int startIndex = newPageIndex * rowsPerPage;
-    int endIndex = startRowIndex + rowsPerPage;
-    if(startIndex < orderInfos.length && endIndex <=  orderInfos.length)
-    {
-         await Future.delayed(Duration(milliseconds: 2000));
-          paginatedDataSource = List.from(
-        orderInfos.getRange(startRowIndex, endIndex).toList(growable: false));
-        notifyListeners();
-        return true;
+    int endIndex = startIndex + rowsPerPage;
+    if(startIndex < orders.length && endIndex <=  orders.length){
+      paginatedOrders = orders.getRange(startIndex, endIndex).toList(growable: false);
+      buildPaginatedDataGridRows();
+      notifyListeners();
+    }else{
+      paginatedOrders = [];
     }
+
+    return true;
+  }
+
+  void buildPaginatedDataGridRows() {
+    dataGridRows = paginatedOrders.map<DataGridRow>((dataGridRow) {
+      return DataGridRow(cells: [
+        DataGridCell(columnName: 'orderID', value: dataGridRow.orderID),
+        DataGridCell(columnName: 'customerID', value: dataGridRow.customerID),
+        DataGridCell(columnName: 'orderDate', value: dataGridRow.orderData),
+        DataGridCell(columnName: 'freight', value: dataGridRow.freight),
+      ]);
+    }).toList(growable: false);
   }
 }
 
@@ -211,6 +389,7 @@ final OrderInfoDataSource _orderInfoDataSource = OrderInfoDataSource();
 
 bool showLoadingIndicator = true;
 
+
 @override
 Widget build(BuildContext context) {
   return Scaffold(
@@ -227,7 +406,8 @@ Widget build(BuildContext context) {
                 height: 60,
                 width: constraints.maxWidth,
                 child: SfDataPager(
-                 pageCount: orderInfos.length / rowsPerPage,
+                  pageCount:
+                    orders.length / rowsPerPage,
                   direction: Axis.horizontal,
                   onPageNavigationStart: (int pageIndex) {
                     setState(() {
@@ -255,13 +435,51 @@ Widget buildDataGrid(BoxConstraints constraint) {
       source: _orderInfoDataSource,
       columnWidthMode: ColumnWidthMode.fill,
       columns: <GridColumn>[
-        GridNumericColumn(mappingName: 'orderID', headerText: 'Order ID'),
         GridTextColumn(
-            mappingName: 'customerID', headerText: 'Customer Name'),
-        GridDateTimeColumn(
-            mappingName: 'orderDate', headerText: 'Order Date'),
-        GridNumericColumn(mappingName: 'freight', headerText: 'Freight'),
-      ]);
+          columnName: 'orderID',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'Order ID',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+            columnName: 'customerID',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Customer Name',
+                overflow: TextOverflow.ellipsis,
+              ),
+            )),
+        GridTextColumn(
+          columnName: 'orderDate',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'Order Date',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'freight',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.center,
+            child: Text(
+              'Freight',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+      ],
+    );
 }
 
 Widget buildStack(BoxConstraints constraints) {
@@ -291,19 +509,85 @@ Widget buildStack(BoxConstraints constraints) {
   );
 }
 
-class OrderInfoDataSource extends DataGridSource<OrderInfo> {
- @override
+class OrderInfoDataSource extends DataGridSource{
+  OrderInfoDataSource() {
+    paginatedOrders = orders.getRange(0, 19).toList(growable: false);
+    buildPaginateDataGridRows();
+  }
+
+  List<DataGridRow> dataGridRows = [];
+
+  @override
+  List<DataGridRow> get rows => dataGridRows;
+
+  @override
+  DataGridRowAdapter buildRow(DataGridRow row) {
+    return DataGridRowAdapter(
+        cells: row.getCells().map<Widget>((dataGridCell) {
+      if (dataGridCell.columnName == 'orderID') {
+        return Container(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          alignment: Alignment.centerRight,
+          child: Text(
+            dataGridCell.value.toString(),
+            overflow: TextOverflow.ellipsis,
+          ),
+        );
+      } else if (dataGridCell.columnName == 'customerID') {
+        return Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              dataGridCell.value.toString(),
+              overflow: TextOverflow.ellipsis,
+            ));
+      } else if (dataGridCell.columnName == 'orderDate') {
+        return Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              DateFormat.yMd().format(dataGridCell.value).toString(),
+              overflow: TextOverflow.ellipsis,
+            ));
+      } else {
+        return Container(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            alignment: Alignment.center,
+            child: Text(
+              NumberFormat.currency(locale: 'en_US', symbol: '\$')
+                  .format(dataGridCell.value)
+                  .toString(),
+              overflow: TextOverflow.ellipsis,
+            ));
+      }
+    }).toList());
+  }
+  
+  @override
   Future<bool> handlePageChange(int oldPageIndex, int newPageIndex) async {
     int startIndex = newPageIndex * rowsPerPage;
-    int endIndex = startRowIndex + rowsPerPage;
-    if(startIndex < orderInfos.length && endIndex <=  orderInfos.length)
-    {
-         await Future.delayed(Duration(milliseconds: 2000));
-          paginatedDataSource = List.from(
-        orderInfos.getRange(startRowIndex, endIndex).toList(growable: false));
-        notifyListeners();
-        return true;
+    int endIndex = startIndex + rowsPerPage;
+    if(startIndex < orders.length && endIndex <= orders.length){
+      await Future.delayed(Duration(milliseconds: 2000)); 
+      paginatedOrders = orders.getRange(startIndex, endIndex).toList(growable: false);
+      buildPaginatedDataGridRows();
+      notifyListeners();
+    }else{
+      paginatedOrders = [];
     }
+
+    return true;
+  }
+
+  void buildPaginatedDataGridRows() {
+    dataGridRows = paginatedOrders.map<DataGridRow>((dataGridRow) {
+      return DataGridRow(cells: [
+        DataGridCell(columnName: 'orderID', value: dataGridRow.orderID),
+        DataGridCell(columnName: 'customerID', value: dataGridRow.customerID),
+        DataGridCell(columnName: 'orderDate', value: dataGridRow.orderData),
+        DataGridCell(columnName: 'freight', value: dataGridRow.freight),
+      ]);
+    }).toList(growable: false);
   }
 }
 
@@ -369,18 +653,19 @@ The following code example illustrates using `SfDataPagerThemeData` with the dat
 Widget build(BuildContext context) {
   return Scaffold(
     body: SfDataPagerTheme(
-    data: SfDataPagerThemeData(
-      itemColor: Colors.white,
-      selectedItemColor: Colors.lightGreen,
-      itemBorderRadius: BorderRadius.circular(5),
-      backgroundColor: Colors.teal,
+      data: SfDataPagerThemeData(
+        itemColor: Colors.white,
+        selectedItemColor: Colors.lightGreen,
+        itemBorderRadius: BorderRadius.circular(5),
+        backgroundColor: Colors.teal,
+      ),
+      child: SfDataPager(
+        delegate: _orderInfoDataSource,
+        pageCount: orders.length / rowsPerPage,
+        direction: Axis.horizontal,
+      ),
     ),
-    child: SfDataPager(
-      delegate: _orderInfoDataSource,
-      pageCount: orderInfos.length / rowsPerPage,
-      direction: Axis.horizontal,
-    ),
-  ));
+  );
 }
 
 {% endhighlight %}
