@@ -462,7 +462,7 @@ Widget build(BuildContext context){
                 child: Text('Set Selection'),
                 onPressed: () {
                     //SelectedRow 
-                    _dataGridController.selectedRow = _employeeDataSource.employeeData[3];
+                    _dataGridController.selectedRow = _employeeDataSource.dataGridRows[3];
                 }),
             Expanded(
                 child: SfDataGrid(
@@ -533,9 +533,9 @@ Widget build(BuildContext context){
                 onPressed: () {
                     //SelectedRows 
                     _dataGridController.selectedRows = [
-                            _employeeDataSource.employeeData[1],
-                            _employeeDataSource.employeeData[3],
-                            _employeeDataSource.employeeData[6],
+                            _employeeDataSource.dataGridRows[1],
+                            _employeeDataSource.dataGridRows[3],
+                            _employeeDataSource.dataGridRows[6],
                           ];
                 }),
             Expanded(
@@ -1092,7 +1092,7 @@ Widget build(BuildContext context){
         selectionMode: SelectionMode.single,
         onSelectionChanging: (List<Object> addedRows, List<Object> removedRows){
             
-            final index = _employeeDataSource.employeeData.indexOf(addedRows.last);
+            final index = _employeeDataSource.dataGridRows.indexOf(addedRows.last);
             Employee employee = _employees[index];
             if (employee.designation == 'Manager') {
               return false;

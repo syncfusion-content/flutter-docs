@@ -28,8 +28,8 @@ Widget build(BuildContext context) {
       startSwipeActionsBuilder: (BuildContext context, DataGridRow row) {
         return GestureDetector(
           onTap: () {
-            _employeeDataSource.employeeData.insert(
-            _employeeDataSource.employeeData.indexOf(row),
+            _employeeDataSource.dataGridRows.insert(
+            _employeeDataSource.dataGridRows.indexOf(row),
             DataGridRow(cells: [
               DataGridCell(value: 1011, columnName: 'id'),
               DataGridCell(value: 'Tom Bass', columnName: 'name'),
@@ -49,8 +49,8 @@ Widget build(BuildContext context) {
     endSwipeActionsBuilder: (BuildContext context, DataGridRow row) {
       return GestureDetector(
         onTap: () {
-          _employeeDataSource.employeeData.removeAt(
-            _employeeDataSource.employeeData.indexOf(row));
+          _employeeDataSource.dataGridRows.removeAt(
+            _employeeDataSource.dataGridRows.indexOf(row));
           _employeeDataSource.updateDataSource();
         },
         child: Container(
@@ -142,8 +142,8 @@ Widget build(BuildContext context) {
       startSwipeActionsBuilder: (BuildContext context, DataGridRow row) {
         return GestureDetector(
           onTap: () {
-            _employeeDataSource.employeeData.removeAt(
-              _employeeDataSource.employeeData.indexOf(row));
+            _employeeDataSource.dataGridRows.removeAt(
+              _employeeDataSource.dataGridRows.indexOf(row));
             _employeeDataSource.updateDataSource();
           },
           child: Container(
@@ -161,8 +161,8 @@ Widget build(BuildContext context) {
       },
       onSwipeEnd: (details) async {
         if (isReachedCenter &&
-          _employeeDataSource.employeeData.isNotEmpty) {
-            _employeeDataSource.employeeData.removeAt(details.rowIndex);
+          _employeeDataSource.dataGridRows.isNotEmpty) {
+            _employeeDataSource.dataGridRows.removeAt(details.rowIndex);
           _employeeDataSource.updateDataSource();
           isReachedCenter = false;
         }

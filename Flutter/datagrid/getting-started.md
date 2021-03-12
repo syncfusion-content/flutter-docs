@@ -171,15 +171,14 @@ List<Employee> getEmployeeData() {
 {% highlight Dart %} 
 
 class EmployeeDataSource extends DataGridSource {
-  List<DataGridRow> _employeeData;
+  List<DataGridRow> dataGridRows;
   EmployeeDataSource({List<Employee> employeeData}) {
-    _employeeData = employeeData
-        .map<DataGridRow>((e) => DataGridRow(cells: [
-              DataGridCell<int>(columnName: 'id', value: e.id),
-              DataGridCell<String>(columnName: 'name', value: e.name),
-              DataGridCell<String>(
-                  columnName: 'designation', value: e.designation),
-              DataGridCell<int>(columnName: 'salary', value: e.salary)
+    dataGridRows = employeeData
+        .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
+              DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
+              DataGridCell<String>(columnName: 'name', value: dataGridRow.name),
+              DataGridCell<String>(columnName: 'designation', value: dataGridRow.designation),
+              DataGridCell<int>(columnName: 'salary', value: dataGridRow.salary),
             ]))
         .toList();
   }
@@ -190,11 +189,11 @@ class EmployeeDataSource extends DataGridSource {
   @override
   DataGridRowAdapter buildRow(DataGridRow row) {
     return DataGridRowAdapter(
-        cells: row.getCells().map<Widget>((e) {
+        cells: row.getCells().map<Widget>((dataGridCell) {
       return Container(
         alignment: Alignment.center,
         padding: EdgeInsets.all(8.0),
-        child: Text(e.value.toString()),
+        child: Text(dataGridCell.value.toString()),
       );
     }).toList());
   }

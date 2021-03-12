@@ -487,30 +487,30 @@ The following code shows how to perform custom sorting for the columns based on 
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
 class EmployeeDataSource extends DataGridSource {
-  List<DataGridRow> employeeData;
+  List<DataGridRow> dataGridRows;
   EmployeeDataSource({List<Employee> employeesData}) {
-    employeeData = employeesData
-        .map<DataGridRow>((e) => DataGridRow(cells: [
-              DataGridCell<int>(columnName: 'id', value: e.id),
-              DataGridCell<String>(columnName: 'name', value: e.name),
+    dataGridRows = employeesData
+        .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
+              DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
+              DataGridCell<String>(columnName: 'name', value: dataGridRow.name),
               DataGridCell<String>(
-                  columnName: 'designation', value: e.designation),
-              DataGridCell<int>(columnName: 'salary', value: e.salary)
+                  columnName: 'designation', value: dataGridRow.designation),
+              DataGridCell<int>(columnName: 'salary', value: dataGridRow.salary)
             ]))
         .toList();
   }
 
   @override
-  List<DataGridRow> get rows => employeeData;
+  List<DataGridRow> get rows => dataGridRows;
 
   @override
   DataGridRowAdapter buildRow(DataGridRow row) {
     return DataGridRowAdapter(
-        cells: row.getCells().map<Widget>((e) {
+        cells: row.getCells().map<Widget>((dataGridCell) {
       return Container(
         alignment: Alignment.center,
         padding: EdgeInsets.all(8.0),
-        child: Text(e.value.toString()),
+        child: Text(dataGridCell.value.toString()),
       );
     }).toList());
   }
@@ -561,30 +561,30 @@ The following code shows how to perform custom sorting for the columns based on 
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
 class EmployeeDataSource extends DataGridSource<Employee> {
-  List<DataGridRow> employeeData;
+  List<DataGridRow> dataGridRows;
   EmployeeDataSource({List<Employee> employeesData}) {
-    employeeData = employeesData
-        .map<DataGridRow>((e) => DataGridRow(cells: [
-              DataGridCell<int>(columnName: 'id', value: e.id),
-              DataGridCell<String>(columnName: 'name', value: e.name),
+    dataGridRows = employeesData
+        .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
+              DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
+              DataGridCell<String>(columnName: 'name', value: dataGridRow.name),
               DataGridCell<String>(
-                  columnName: 'designation', value: e.designation),
-              DataGridCell<int>(columnName: 'salary', value: e.salary)
+                  columnName: 'designation', value: dataGridRow.designation),
+              DataGridCell<int>(columnName: 'salary', value: dataGridRow.salary)
             ]))
         .toList();
   }
 
   @override
-  List<DataGridRow> get rows => employeeData;
+  List<DataGridRow> get rows => dataGridRows;
   
   @override
   DataGridRowAdapter buildRow(DataGridRow row) {
     return DataGridRowAdapter(
-        cells: row.getCells().map<Widget>((e) {
+        cells: row.getCells().map<Widget>((dataGridCell) {
       return Container(
         alignment: Alignment.center,
         padding: EdgeInsets.all(8.0),
-        child: Text(e.value.toString()),
+        child: Text(dataGridCell.value.toString()),
       );
     }).toList());
   }
