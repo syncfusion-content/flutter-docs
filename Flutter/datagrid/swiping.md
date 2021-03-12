@@ -25,14 +25,20 @@ Widget build(BuildContext context) {
   return SfDataGrid(
     allowSwiping: true,
     source: employeeDataSource,
-    startSwipeActionsBuilder: (BuildContext context, int rowIndex) {
-      return GestureDetector(
-        onTap: () {
-          employees.insert(
-              rowIndex, Employee(1011, 'Tom Bass', 'Developer', 20000));
-          employeeDataSource.notifyListeners();
-        },
-        child: Container(
+      startSwipeActionsBuilder: (BuildContext context, DataGridRow row) {
+        return GestureDetector(
+          onTap: () {
+            _employeeDataSource.dataGridRows.insert(
+            _employeeDataSource.dataGridRows.indexOf(row),
+            DataGridRow(cells: [
+              DataGridCell(value: 1011, columnName: 'id'),
+              DataGridCell(value: 'Tom Bass', columnName: 'name'),
+              DataGridCell(value: 'Developer', columnName: 'designation'),
+              DataGridCell(value: 20000, columnName: 'salary')
+            ]));
+            _employeeDataSource.updateDataSource();
+          },
+          child: Container(
           color: Colors.greenAccent,
           child: Center(
             child: Icon(Icons.add),
@@ -40,11 +46,12 @@ Widget build(BuildContext context) {
         ),
       );
     },
-    endSwipeActionsBuilder: (BuildContext context, int rowIndex) {
+    endSwipeActionsBuilder: (BuildContext context, DataGridRow row) {
       return GestureDetector(
         onTap: () {
-          employees.removeAt(rowIndex);
-          employeeDataSource.notifyListeners();
+          _employeeDataSource.dataGridRows.removeAt(
+            _employeeDataSource.dataGridRows.indexOf(row));
+          _employeeDataSource.updateDataSource();
         },
         child: Container(
           color: Colors.redAccent,
@@ -55,10 +62,42 @@ Widget build(BuildContext context) {
       );
     },
     columns: <GridColumn>[
-      GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-      GridTextColumn(mappingName: 'name', headerText: 'Name'),
-      GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-      GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+      GridTextColumn(
+        columnName: 'id',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
+          alignment: Alignment.centerRight,
+          child: Text(
+            'ID',
+            overflow: TextOverflow.ellipsis,
+          ))),
+      GridTextColumn(
+        columnName: 'name',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'Name',
+            overflow: TextOverflow.ellipsis,
+          ))),
+      GridTextColumn(
+        columnName: 'designation',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'Designation',
+            overflow: TextOverflow.ellipsis,
+          ))),
+      GridTextColumn(
+        columnName: 'salary',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
+          alignment: Alignment.centerRight,
+          child: Text(
+            'Salary',
+            overflow: TextOverflow.ellipsis,
+          ))),
     ],
   );
 }
@@ -100,11 +139,12 @@ Widget build(BuildContext context) {
       allowSwiping: true,
       swipeMaxOffset: constraints.maxWidth,
       source: employeeDataSource,
-      startSwipeActionsBuilder: (BuildContext context, int rowIndex) {
+      startSwipeActionsBuilder: (BuildContext context, DataGridRow row) {
         return GestureDetector(
           onTap: () {
-            employees.removeAt(rowIndex);
-            employeeDataSource.notifyListeners();
+            _employeeDataSource.dataGridRows.removeAt(
+              _employeeDataSource.dataGridRows.indexOf(row));
+            _employeeDataSource.updateDataSource();
           },
           child: Container(
             color: Colors.greenAccent,
@@ -121,17 +161,49 @@ Widget build(BuildContext context) {
       },
       onSwipeEnd: (details) async {
         if (isReachedCenter &&
-            employeeDataSource.dataSource.isNotEmpty) {
-          employeeDataSource.dataSource.removeAt(details.rowIndex);
-          employeeDataSource.notifyListeners();
+          _employeeDataSource.dataGridRows.isNotEmpty) {
+            _employeeDataSource.dataGridRows.removeAt(details.rowIndex);
+          _employeeDataSource.updateDataSource();
           isReachedCenter = false;
         }
       },
       columns: <GridColumn>[
-        GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-        GridTextColumn(mappingName: 'name', headerText: 'Name'),
-        GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-        GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+        GridTextColumn(
+          columnName: 'id',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'ID',
+              overflow: TextOverflow.ellipsis,
+            ))),
+        GridTextColumn(
+          columnName: 'name',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Name',
+              overflow: TextOverflow.ellipsis,
+            ))),
+        GridTextColumn(
+          columnName: 'designation',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Designation',
+              overflow: TextOverflow.ellipsis,
+            ))),
+        GridTextColumn(
+          columnName: 'salary',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'Salary',
+              overflow: TextOverflow.ellipsis,
+            ))),
       ],
     );
   });
