@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started for Syncfusion Flutter Linear Gauge
-description: A quick tour to initial users about Syncfusion Linear Gauge widget for the Flutter platform. It provide overview on SfLinearGauge. 
+description: A quick tour to initial users about Syncfusion Linear Gauge widget for the Flutter platform. It provides overview on SfLinearGauge. 
 platform: flutter
 control: SfLinearGauge
 documentation: ug
@@ -142,9 +142,9 @@ A range is a visual element that helps you quickly visualize where a range falls
 
 ## Add marker pointer
 
-The Linear Gauge supports two marker pointers - shape pointer and widget pointer. Shape pointer will have a default set of pre-build icons to point a value in an axis track, while the widget pointes facilitates using any Flutter widgets to point a value in an axis track. 
+The Linear Gauge supports two marker pointers - shape pointer and widget pointer. Shape pointer will have a default set of pre-build icons to point a value in an axis track, while the widget pointes facilitate using any Flutter widgets to point a value in an axis track. 
 
-The below code snippet demonstartes adding a shape pointer.
+The below code snippet demonstrates adding a shape pointer.
 
 {% highlight dart %} 
 
@@ -156,7 +156,7 @@ The below code snippet demonstartes adding a shape pointer.
 
 ![shape pointer in linear gauge](images/getting-started/add_shape_pointer.png)
 
-The below code snippet demonstartes adding a widget pointer.
+The below code snippet demonstrates adding a widget pointer.
 
 {% highlight dart %} 
 
