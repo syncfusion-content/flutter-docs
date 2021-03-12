@@ -35,9 +35,9 @@ Video tutorials of our widgets can be found [here](https://www.syncfusion.com/tu
 ## Demos
 Explore the full capabilities of our Flutter widgets on your device by installing our sample browser applications from the below app stores, and view samples code in GitHub.
 
-Play store - https://play.google.com/store/apps/details?id=com.syncfusion.flutter.examples
+Play Store - https://play.google.com/store/apps/details?id=com.syncfusion.flutter.examples
 
-App store - https://apps.apple.com/us/app/syncfusion-flutter-ui-widgets/id1475231341
+App Store - https://apps.apple.com/us/app/syncfusion-flutter-ui-widgets/id1475231341
 
 View web demos - https://flutter.syncfusion.com/
 
