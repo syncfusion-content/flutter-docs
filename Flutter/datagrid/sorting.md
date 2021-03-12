@@ -37,7 +37,7 @@ Widget build(BuildContext context) {
             GridTextColumn(
               columnName: 'id',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.centerRight,
                 child: Text(
                   'ID',
@@ -46,7 +46,7 @@ Widget build(BuildContext context) {
             GridTextColumn(
               columnName: 'name',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.centerLeft,
                 child: Text(
                   'Name',
@@ -55,7 +55,7 @@ Widget build(BuildContext context) {
             GridTextColumn(
               columnName: 'city',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.centerLeft,
                 child: Text(
                   'City',
@@ -64,7 +64,7 @@ Widget build(BuildContext context) {
             GridTextColumn(
               columnName: 'freight',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.centerRight,
                 child: Text(
                   'Freight',
@@ -73,7 +73,7 @@ Widget build(BuildContext context) {
           ],
         ),
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           child: FlatButton(
               onPressed: () {
                 _employeeDataSource.sortedColumns.add(SortColumnDetails(
@@ -114,7 +114,7 @@ Widget build(BuildContext context) {
       GridTextColumn(
         columnName: 'id',
         label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerRight,
           child: Text(
             'ID',
@@ -123,7 +123,7 @@ Widget build(BuildContext context) {
       GridTextColumn(
         columnName: 'name',
         label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerLeft,
           child: Text(
             'Name',
@@ -132,7 +132,7 @@ Widget build(BuildContext context) {
       GridTextColumn(
         columnName: 'city',
         label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerLeft,
           child: Text(
             'City',
@@ -141,7 +141,7 @@ Widget build(BuildContext context) {
       GridTextColumn(
         columnName: 'freight',
         label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerRight,
           child: Text(
             'Freight',
@@ -177,7 +177,7 @@ Widget build(BuildContext context) {
       GridTextColumn(
         columnName: 'id',
         label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerRight,
           child: Text(
             'ID',
@@ -186,7 +186,7 @@ Widget build(BuildContext context) {
       GridTextColumn(
         columnName: 'name',
         label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerLeft,
           child: Text(
             'Name',
@@ -195,7 +195,7 @@ Widget build(BuildContext context) {
       GridTextColumn(
         columnName: 'city',
         label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerLeft,
           child: Text(
             'City',
@@ -204,7 +204,7 @@ Widget build(BuildContext context) {
       GridTextColumn(
         columnName: 'freight',
         label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerRight,
           child: Text(
             'Freight',
@@ -239,7 +239,7 @@ Widget build(BuildContext context) {
       GridTextColumn(
         columnName: 'id',
         label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerRight,
           child: Text(
             'ID',
@@ -248,7 +248,7 @@ Widget build(BuildContext context) {
       GridTextColumn(
         columnName: 'name',
         label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerLeft,
           child: Text(
             'Name',
@@ -257,7 +257,7 @@ Widget build(BuildContext context) {
       GridTextColumn(
         columnName: 'city',
         label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerLeft,
           child: Text(
             'City',
@@ -266,7 +266,7 @@ Widget build(BuildContext context) {
       GridTextColumn(
         columnName: 'freight',
         label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerRight,
           child: Text(
             'Freight',
@@ -300,7 +300,7 @@ Widget build(BuildContext context) {
       GridTextColumn(
         columnName: 'id',
         label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerRight,
           child: Text(
             'ID',
@@ -309,7 +309,7 @@ Widget build(BuildContext context) {
       GridTextColumn(
         columnName: 'name',
         label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerLeft,
           child: Text(
             'Name',
@@ -318,7 +318,7 @@ Widget build(BuildContext context) {
       GridTextColumn(
         columnName: 'city',
         label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerLeft,
           child: Text(
             'City',
@@ -327,7 +327,7 @@ Widget build(BuildContext context) {
       GridTextColumn(
         columnName: 'freight',
         label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerRight,
           child: Text(
             'Freight',
@@ -361,7 +361,7 @@ Widget build(BuildContext context) {
       GridTextColumn(
         columnName: 'id',
         label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerRight,
           child: Text(
             'ID',
@@ -370,7 +370,7 @@ Widget build(BuildContext context) {
       GridTextColumn(
         columnName: 'name',
         label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerLeft,
           child: Text(
             'Name',
@@ -379,7 +379,7 @@ Widget build(BuildContext context) {
       GridTextColumn(
         columnName: 'city',
         label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerLeft,
           child: Text(
             'City',
@@ -388,7 +388,7 @@ Widget build(BuildContext context) {
       GridTextColumn(
         columnName: 'freight',
         label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerRight,
           child: Text(
             'Freight',
@@ -427,7 +427,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'id',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'ID',
@@ -436,7 +436,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'name',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'Name',
@@ -445,7 +445,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'city',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'City',
@@ -454,7 +454,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'freight',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'Freight',
@@ -509,7 +509,7 @@ class EmployeeDataSource extends DataGridSource {
         cells: row.getCells().map<Widget>((dataGridCell) {
       return Container(
         alignment: Alignment.center,
-        padding: EdgeInsets.all(8.0),
+        padding: EdgeInsets.symmetric(horizontal: 16.0),
         child: Text(dataGridCell.value.toString()),
       );
     }).toList());
@@ -519,12 +519,12 @@ class EmployeeDataSource extends DataGridSource {
   int compare(DataGridRow a, DataGridRow b, SortColumnDetails sortColumn) {
     final String stringA = a
         .getCells()
-        .firstWhere((element) => element.columnName == 'name',
+        .firstWhere((element) => element.columnName == sortColumn.name,
             orElse: () => null)
         ?.value;
     final String stringB = b
         .getCells()
-        .firstWhere((element) => element.columnName == 'name',
+        .firstWhere((element) => element.columnName == sortColumn.name,
             orElse: () => null)
         .value;
 
@@ -583,7 +583,7 @@ class EmployeeDataSource extends DataGridSource<Employee> {
         cells: row.getCells().map<Widget>((dataGridCell) {
       return Container(
         alignment: Alignment.center,
-        padding: EdgeInsets.all(8.0),
+        padding: EdgeInsets.symmetric(horizontal: 16.0),
         child: Text(dataGridCell.value.toString()),
       );
     }).toList());
@@ -594,12 +594,12 @@ class EmployeeDataSource extends DataGridSource<Employee> {
     if (sortColumn.name == 'name') {
       final String stringA = a
         .getCells()
-        .firstWhere((element) => element.columnName == 'name',
+        .firstWhere((element) => element.columnName == sortColumn.name,
           orElse: () => null)
         ?.value;
       final String stringB = b
         .getCells()
-        .firstWhere((element) => element.columnName == 'name',
+        .firstWhere((element) => element.columnName == sortColumn.name,
           orElse: () => null)
         ?.value;
       if (sortColumn.sortDirection == DataGridSortDirection.ascending) {

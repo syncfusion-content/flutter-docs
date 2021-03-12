@@ -30,7 +30,7 @@ N> The default value of `isScrollbarAlwaysShown` is false.
           GridTextColumn(
             columnName: 'id',
             label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
               alignment: Alignment.centerRight,
               child: Text(
                 'ID',
@@ -39,7 +39,7 @@ N> The default value of `isScrollbarAlwaysShown` is false.
           GridTextColumn(
             columnName: 'name',
             label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
               alignment: Alignment.centerLeft,
               child: Text(
                 'Name',
@@ -48,7 +48,7 @@ N> The default value of `isScrollbarAlwaysShown` is false.
           GridTextColumn(
             columnName: 'designation',
             label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
               alignment: Alignment.centerLeft,
               child: Text(
                 'Designation',
@@ -57,7 +57,7 @@ N> The default value of `isScrollbarAlwaysShown` is false.
           GridTextColumn(
             columnName: 'salary',
             label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
               alignment: Alignment.centerRight,
               child: Text(
                 'Salary',
@@ -93,7 +93,7 @@ The following example shows how to disable the horizontal and vertical scrolling
           GridTextColumn(
             columnName: 'id',
             label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
               alignment: Alignment.centerRight,
               child: Text(
                 'ID',
@@ -102,7 +102,7 @@ The following example shows how to disable the horizontal and vertical scrolling
           GridTextColumn(
             columnName: 'name',
             label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
               alignment: Alignment.centerLeft,
               child: Text(
                 'Name',
@@ -111,7 +111,7 @@ The following example shows how to disable the horizontal and vertical scrolling
           GridTextColumn(
             columnName: 'designation',
             label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
               alignment: Alignment.centerLeft,
               child: Text(
                 'Designation',
@@ -120,7 +120,7 @@ The following example shows how to disable the horizontal and vertical scrolling
           GridTextColumn(
             columnName: 'salary',
             label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
               alignment: Alignment.centerRight,
               child: Text(
                 'Salary',
@@ -165,7 +165,7 @@ final DataGridController _controller = DataGridController();
             GridTextColumn(
               columnName: 'id',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.centerRight,
                 child: Text(
                   'ID',
@@ -174,7 +174,7 @@ final DataGridController _controller = DataGridController();
             GridTextColumn(
               columnName: 'name',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.centerLeft,
                 child: Text(
                   'Name',
@@ -183,7 +183,7 @@ final DataGridController _controller = DataGridController();
             GridTextColumn(
               columnName: 'designation',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.centerLeft,
                 child: Text(
                   'Designation',
@@ -192,7 +192,7 @@ final DataGridController _controller = DataGridController();
             GridTextColumn(
               columnName: 'salary',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.centerRight,
                 child: Text(
                   'Salary',
@@ -236,7 +236,7 @@ final DataGridController _controller = DataGridController();
             GridTextColumn(
               columnName: 'id',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.centerRight,
                 child: Text(
                   'ID',
@@ -245,7 +245,7 @@ final DataGridController _controller = DataGridController();
             GridTextColumn(
               columnName: 'name',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.centerLeft,
                 child: Text(
                   'Name',
@@ -254,7 +254,7 @@ final DataGridController _controller = DataGridController();
             GridTextColumn(
               columnName: 'designation',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.centerLeft,
                 child: Text(
                   'Designation',
@@ -263,7 +263,7 @@ final DataGridController _controller = DataGridController();
             GridTextColumn(
               columnName: 'salary',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.centerRight,
                 child: Text(
                   'Salary',
@@ -305,7 +305,7 @@ final DataGridController _controller = DataGridController();
             GridTextColumn(
               columnName: 'id',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.centerRight,
                 child: Text(
                   'ID',
@@ -314,7 +314,7 @@ final DataGridController _controller = DataGridController();
             GridTextColumn(
               columnName: 'name',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.centerLeft,
                 child: Text(
                   'Name',
@@ -323,7 +323,7 @@ final DataGridController _controller = DataGridController();
             GridTextColumn(
               columnName: 'designation',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.centerLeft,
                 child: Text(
                   'Designation',
@@ -332,7 +332,7 @@ final DataGridController _controller = DataGridController();
             GridTextColumn(
               columnName: 'salary',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.centerRight,
                 child: Text(
                   'Salary',
@@ -384,7 +384,7 @@ final DataGridController _controller = DataGridController();
             GridTextColumn(
               columnName: 'id',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.centerRight,
                 child: Text(
                   'ID',
@@ -393,7 +393,7 @@ final DataGridController _controller = DataGridController();
             GridTextColumn(
               columnName: 'name',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.centerLeft,
                 child: Text(
                   'Name',
@@ -402,7 +402,7 @@ final DataGridController _controller = DataGridController();
             GridTextColumn(
               columnName: 'designation',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.centerLeft,
                 child: Text(
                   'Designation',
@@ -411,7 +411,7 @@ final DataGridController _controller = DataGridController();
             GridTextColumn(
               columnName: 'salary',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.centerRight,
                 child: Text(
                   'Salary',
@@ -453,7 +453,7 @@ final DataGridController _controller = DataGridController();
             GridTextColumn(
               columnName: 'id',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.centerRight,
                 child: Text(
                   'ID',
@@ -462,7 +462,7 @@ final DataGridController _controller = DataGridController();
             GridTextColumn(
               columnName: 'name',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.centerLeft,
                 child: Text(
                   'Name',
@@ -471,7 +471,7 @@ final DataGridController _controller = DataGridController();
             GridTextColumn(
               columnName: 'designation',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.centerLeft,
                 child: Text(
                   'Designation',
@@ -480,7 +480,7 @@ final DataGridController _controller = DataGridController();
             GridTextColumn(
               columnName: 'salary',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.centerRight,
                 child: Text(
                   'Salary',
@@ -522,7 +522,7 @@ final DataGridController _controller = DataGridController();
             GridTextColumn(
               columnName: 'id',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.centerRight,
                 child: Text(
                   'ID',
@@ -531,7 +531,7 @@ final DataGridController _controller = DataGridController();
             GridTextColumn(
               columnName: 'name',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.centerLeft,
                 child: Text(
                   'Name',
@@ -540,7 +540,7 @@ final DataGridController _controller = DataGridController();
             GridTextColumn(
               columnName: 'designation',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.centerLeft,
                 child: Text(
                   'Designation',
@@ -549,7 +549,7 @@ final DataGridController _controller = DataGridController();
             GridTextColumn(
               columnName: 'salary',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.centerRight,
                 child: Text(
                   'Salary',

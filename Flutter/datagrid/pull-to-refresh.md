@@ -26,7 +26,7 @@ Widget build(BuildContext context) {
       GridTextColumn(
         columnName: 'id',
         label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerRight,
           child: Text(
             'ID',
@@ -35,7 +35,7 @@ Widget build(BuildContext context) {
       GridTextColumn(
         columnName: 'name',
         label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerLeft,
           child: Text(
             'Name',
@@ -44,7 +44,7 @@ Widget build(BuildContext context) {
       GridTextColumn(
         columnName: 'designation',
         label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerLeft,
           child: Text(
             'Designation',
@@ -53,7 +53,7 @@ Widget build(BuildContext context) {
       GridTextColumn(
         columnName: 'salary',
         label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerRight,
           child: Text(
             'Salary',
@@ -63,35 +63,10 @@ Widget build(BuildContext context) {
   );
 }
 
-List<Employee> getEmployeeData() {
-  return [
-    Employee(10001, 'James', 'Project Lead', 20000),
-    Employee(10002, 'Kathryn', 'Manager', 30000),
-    Employee(10003, 'Lara', 'Developer', 15000),
-    Employee(10004, 'Michael', 'Designer', 15000),
-    Employee(10005, 'Martin', 'Developer', 15000),
-    Employee(10006, 'Newberry', 'Developer', 15000),
-    Employee(10007, 'Balnc', 'Developer', 15000),
-    Employee(10008, 'Perry', 'Developer', 15000),
-    Employee(10009, 'Gable', 'Developer', 15000),
-    Employee(10010, 'Grimes', 'Developer', 15000)
-  ];
-}
-
 class EmployeeDataSource extends DataGridSource {
   List<DataGridRow> dataGridRows;
   EmployeeDataSource({List<Employee> employeesData}) {
-    getData(employeesData);
-  }
-  getData(List<Employee> employeesData) {
-    dataGridRows = employeeData
-        .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
-              DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
-              DataGridCell<String>(columnName: 'name', value: dataGridRow.name),
-              DataGridCell<String>(columnName: 'designation', value: dataGridRow.designation),
-              DataGridCell<int>(columnName: 'salary', value: dataGridRow.salary),
-            ]))
-        .toList();
+    buildDataGridRows();
   }
 
   @override
@@ -100,12 +75,12 @@ class EmployeeDataSource extends DataGridSource {
   @override
   DataGridRowAdapter buildRow(DataGridRow row) {
     return DataGridRowAdapter(
-        cells: row.getCells().map<Widget>((dataGridCell) {
-        return Container(
-          alignment: Alignment.center,
-          padding: EdgeInsets.all(8.0),
+      cells: row.getCells().map<Widget>((dataGridCell) {
+      return Container(
+        alignment: Alignment.center,
+        padding: EdgeInsets.symmetric(horizontal: 16.0),
           child: Text(dataGridCell.value.toString()),
-        );
+      );
     }).toList());
   }
 
@@ -113,25 +88,64 @@ class EmployeeDataSource extends DataGridSource {
   Future<void> handleRefresh() async {
     await Future.delayed(Duration(seconds: 5));
     _addMoreRows(employees, 15);
+    buildDataGridRows();
     notifyListeners();
   }
 
-  void _addMoreRows() {
-    employeeData.addAll([
-      Employee(10001, 'James', 'Project Lead', 20000),
-      Employee(10002, 'Kathryn', 'Manager', 30000),
-      Employee(10003, 'Lara', 'Developer', 15000),
-      Employee(10004, 'Michael', 'Designer', 15000),
-      Employee(10005, 'Martin', 'Developer', 15000),
-    ]
+  void buildDataGridRows() {
+    dataGridRows = employees
         .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
-              DataGridCell(columnName: 'id', value: dataGridRow.id),
-              DataGridCell(columnName: 'name', value: dataGridRow.name),
-              DataGridCell(columnName: 'designation', value: dataGridRow.designation),
-              DataGridCell(columnName: 'salary', value: dataGridRow.salary),
+              DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
+              DataGridCell<String>(columnName: 'name', value: dataGridRow.name),
+              DataGridCell<String>(
+                  columnName: 'designation', value: dataGridRow.designation),
+              DataGridCell<int>(
+                  columnName: 'salary', value: dataGridRow.salary),
             ]))
-        .toList());
+        .toList();
   }
+
+  List<Employee> _addMoreRows(List<Employee> employeeData, int count) {
+    final Random _random = Random();
+    final startIndex = employeeData.isNotEmpty ? employeeData.length : 0,
+        endIndex = startIndex + count;
+    for (int i = startIndex; i < endIndex; i++) {
+      employeeData.add(Employee(
+        1000 + i,
+        _names[_random.nextInt(_names.length - 1)],
+        _designation[_random.nextInt(_designation.length - 1)],
+        10000 + _random.nextInt(10000),
+      ));
+    }
+    return employeeData;
+  }
+
+  final List<String> _names = <String>[
+    'Welli',
+    'Blonp',
+    'Folko',
+    'Furip',
+    'Folig',
+    'Picco',
+    'Frans',
+    'Warth',
+    'Linod',
+    'Simop',
+    'Merep',
+    'Riscu',
+    'Seves',
+    'Vaffe',
+    'Alfki'
+  ];
+
+  final List<String> _designation = <String>[
+    'Project Lead',
+    'Developer',
+    'Manager',
+    'Designer',
+    'System Analyst',
+    'CEO'
+  ];
 }
 
 {% endhighlight %}
@@ -166,7 +180,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'id',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'ID',
@@ -175,7 +189,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'name',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'Name',
@@ -184,7 +198,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'designation',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'Designation',
@@ -193,7 +207,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'salary',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'Salary',
@@ -234,7 +248,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'id',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'ID',
@@ -243,7 +257,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'name',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'Name',
@@ -252,7 +266,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'designation',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'Designation',
@@ -261,7 +275,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'salary',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'Salary',
@@ -278,40 +292,15 @@ Widget build(BuildContext context) {
   );
 }
 
-List<Employee> getEmployeeData() {
-  return [
-    Employee(10001, 'James', 'Project Lead', 20000),
-    Employee(10002, 'Kathryn', 'Manager', 30000),
-    Employee(10003, 'Lara', 'Developer', 15000),
-    Employee(10004, 'Michael', 'Designer', 15000),
-    Employee(10005, 'Martin', 'Developer', 15000),
-    Employee(10006, 'Newberry', 'Developer', 15000),
-    Employee(10007, 'Balnc', 'Developer', 15000),
-    Employee(10008, 'Perry', 'Developer', 15000),
-    Employee(10009, 'Gable', 'Developer', 15000),
-    Employee(10010, 'Grimes', 'Developer', 15000)
-  ];
-}
-
 class EmployeeDataSource extends DataGridSource {
-  List<DataGridRow> employeeData;
   EmployeeDataSource({List<Employee> employeesData}) {
-    getData(employeesData);
+    buildDataGridRows();
   }
-  getData(List<Employee> employeesData) {
-    employeeData = employeesData
-        .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
-              DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
-              DataGridCell<String>(columnName: 'name', value: dataGridRow.name),
-              DataGridCell<String>(
-                  columnName: 'designation', value: dataGridRow.designation),
-              DataGridCell<int>(columnName: 'salary', value: dataGridRow.salary)
-            ]))
-        .toList();
-  }
+
+  List<DataGridRow> dataGridRows = [];
 
   @override
-  List<DataGridRow> get rows => employeeData;
+  List<DataGridRow> get rows => dataGridRows;
 
   @override
   DataGridRowAdapter buildRow(DataGridRow row) {
@@ -319,35 +308,74 @@ class EmployeeDataSource extends DataGridSource {
       cells: row.getCells().map<Widget>((dataGridCell) {
       return Container(
         alignment: Alignment.center,
-        padding: EdgeInsets.all(8.0),
-        child: Text(e.value.toString()),
+        padding: EdgeInsets.symmetric(horizontal: 16.0),
+        child: Text(dataGridCell.value.toString()),
       );
     }).toList());
   }
 
   @override
-  Future<void> handleRefresh() async {
+  Future<void> handleLoadMoreRows() async {
     await Future.delayed(Duration(seconds: 5));
     _addMoreRows(employees, 15);
+    buildDataGridRows();
     notifyListeners();
   }
 
-  void _addMoreRows() {
-    employeeData.addAll([
-      Employee(10001, 'James', 'Project Lead', 20000),
-      Employee(10002, 'Kathryn', 'Manager', 30000),
-      Employee(10003, 'Lara', 'Developer', 15000),
-      Employee(10004, 'Michael', 'Designer', 15000),
-      Employee(10005, 'Martin', 'Developer', 15000),
-    ]
+  void buildDataGridRows() {
+    dataGridRows = employees
         .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
-              DataGridCell(columnName: 'id', value: dataGridRow.id),
-              DataGridCell(columnName: 'name', value: dataGridRow.name),
-              DataGridCell(columnName: 'designation', value: dataGridRow.designation),
-              DataGridCell(columnName: 'salary', value: dataGridRow.salary),
+              DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
+              DataGridCell<String>(columnName: 'name', value: dataGridRow.name),
+              DataGridCell<String>(
+                  columnName: 'designation', value: dataGridRow.designation),
+              DataGridCell<int>(
+                  columnName: 'salary', value: dataGridRow.salary),
             ]))
-        .toList());
+        .toList();
   }
+
+  List<Employee> _addMoreRows(List<Employee> employeeData, int count) {
+    final Random _random = Random();
+    final startIndex = employeeData.isNotEmpty ? employeeData.length : 0,
+        endIndex = startIndex + count;
+    for (int i = startIndex; i < endIndex; i++) {
+      employeeData.add(Employee(
+        1000 + i,
+        _names[_random.nextInt(_names.length - 1)],
+        _designation[_random.nextInt(_designation.length - 1)],
+        10000 + _random.nextInt(10000),
+      ));
+    }
+    return employeeData;
+  }
+
+  final List<String> _names = <String>[
+    'Welli',
+    'Blonp',
+    'Folko',
+    'Furip',
+    'Folig',
+    'Picco',
+    'Frans',
+    'Warth',
+    'Linod',
+    'Simop',
+    'Merep',
+    'Riscu',
+    'Seves',
+    'Vaffe',
+    'Alfki'
+  ];
+
+  final List<String> _designation = <String>[
+    'Project Lead',
+    'Developer',
+    'Manager',
+    'Designer',
+    'System Analyst',
+    'CEO'
+  ];
 }
 
 {% endhighlight %}

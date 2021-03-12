@@ -29,7 +29,7 @@ Widget build(BuildContext context) {
       GridTextColumn(
         columnName: 'orderId',
         label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerRight,
           child: Text(
             'ID',
@@ -38,7 +38,7 @@ Widget build(BuildContext context) {
       GridTextColumn(
         columnName: 'customerName',
         label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerLeft,
           child: Text(
             'Name',
@@ -47,7 +47,7 @@ Widget build(BuildContext context) {
       GridTextColumn(
         columnName: 'productId',
         label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerRight,
           child: Text(
             'ID',
@@ -56,7 +56,7 @@ Widget build(BuildContext context) {
       GridTextColumn(
         columnName: 'product',
         label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerLeft,
           child: Text(
             'Product',
@@ -105,7 +105,7 @@ Widget build(BuildContext context) {
       GridTextColumn(
         columnName: 'orderId',
         label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerRight,
           child: Text(
             'ID',
@@ -114,7 +114,7 @@ Widget build(BuildContext context) {
       GridTextColumn(
         columnName: 'customerName',
         label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerLeft,
           child: Text(
             'Name',
@@ -123,7 +123,7 @@ Widget build(BuildContext context) {
       GridTextColumn(
         columnName: 'productId',
         label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerRight,
           child: Text(
             'ID',
@@ -132,7 +132,7 @@ Widget build(BuildContext context) {
       GridTextColumn(
         columnName: 'product',
         label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerLeft,
           child: Text(
             'Product',
@@ -196,7 +196,7 @@ Widget build(BuildContext context) {
       GridTextColumn(
         columnName: 'orderId',
         label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerRight,
           child: Text(
             'ID',
@@ -205,7 +205,7 @@ Widget build(BuildContext context) {
       GridTextColumn(
         columnName: 'customerName',
         label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerLeft,
           child: Text(
             'Name',
@@ -214,7 +214,7 @@ Widget build(BuildContext context) {
       GridTextColumn(
         columnName: 'productId',
         label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerRight,
           child: Text(
             'ID',
@@ -223,7 +223,7 @@ Widget build(BuildContext context) {
       GridTextColumn(
         columnName: 'product',
         label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerLeft,
           child: Text(
             'Product',
