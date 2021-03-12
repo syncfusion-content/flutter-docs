@@ -88,6 +88,12 @@ PdfDocument document =
 //Gets the first signature field of the PDF document.
 PdfSignatureField field = document.form.fields[0] as PdfSignatureField;
 
+//Creates a digital signature.
+field.signature = PdfSignature(
+    //Creates a certificate instance from the PFX file with a private key.
+    certificate:
+        PdfCertificate(File('PDF.pfx').readAsBytesSync(), 'password123'));
+
 //Gets the signature field appearance graphics.
 PdfGraphics graphics = field.appearance.normal.graphics;
 
