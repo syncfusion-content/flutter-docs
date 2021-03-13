@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Documentation about the Axis ticks in Flutter linear gauge | Tutorials Flutter Linear Gauge widget| Syncfusion
-description: Overview about the available styles of Axis ticks on Linear Gauge Flutter widget.
+title: Customize ticks in a linear gauge | Linear Gauge widget| Syncfusion
+description: Tutorial about the available styles of ticks on Linear Gauge Flutter widget.| Flutter Linear Gauge widget|
 platform: flutter
 control: Overview
 documentation: ug

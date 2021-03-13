@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Add and update Axis in a Flutter linear gauge | Tutorials Flutter Linear Gauge widget| Syncfusion
-description: Overview about the list of available features of Axis element on Linear Gauge  Flutter widget.
+title: Customize axis in a linear gauge | Linear Gauge widget| Syncfusion
+description: Tutorial about deatils of the axis on Linear Gauge Flutter widget | Flutter Linear Gauge widget documentation|
 platform: flutter
 control: Overview
 documentation: ug
