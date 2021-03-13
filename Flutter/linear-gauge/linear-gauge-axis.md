@@ -109,9 +109,9 @@ Widget build(BuildContext context) {
 
 ## Change the color of Axis Track
 
-The color and gradient properties in axisTrackStyle alloes to change the color of the axis track. The color property allows to set a solid color, while the gradient property allows to set linear-gradient colors to the axis tarck.
+The color and gradient properties in axisTrackStyle allows to change the color of the axis track. The color property allows to set a solid color, while the gradient property allows to set linear-gradient colors to the axis track.
 
-The below code snippet sets a set of linear gardient colors to the axis track.
+The below code snippet sets a set of linear gradient colors to the axis track.
 
 {% highlight dart %} 
 

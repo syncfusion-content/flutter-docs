@@ -9,7 +9,7 @@ documentation: ug
 
 # Default Linear Gauge Labels
 
-The default style of axis lables are as below.
+The default style of axis labels are as below.
 
 ![Initialize linear gauge for axis](images/getting-started/default_linear_gauge.png)
 

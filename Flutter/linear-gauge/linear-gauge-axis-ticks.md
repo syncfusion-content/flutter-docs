@@ -44,7 +44,7 @@ Widget build(BuildContext context) {
 
 ## Customize minor tick interval
 
-The major ticks are generated based on the interval property which is documented in 'Custmize the interval between labels' topic. The minor ticks are calculated using the minorTicksPerInterval property of SfLinearGauge. By default, the value of this property is 1.
+The major ticks are generated based on the interval property which is documented in 'Customize the interval between labels' topic. The minor ticks are calculated using the minorTicksPerInterval property of SfLinearGauge. By default, the value of this property is 1.
 
 {% highlight dart %} 
 
