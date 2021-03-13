@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Flutter Widgets Catalog | Syncfusion
-description:  List of available Syncfusion Flutter widgets and the pub package links to use them.
+description:  List of available Syncfusion Flutter cross platform UI widgets and libraries along with it's pub package links to use them.
 platform: flutter
 control: flutter
 documentation: ug
 ---
 
-# Widgets Catalog
+# Flutter Widgets Catalog
 
 The Syncfusion Flutter cross platform UI widgets and libraries are an ideal choice for developing rich cross platform iOS, Android, and Web applications from a single shared code base. You can build more responsive, interactive, and creative application that run on multiple platforms and devices with various form factors. Some of the cool features like theming and customization options makes the widgets a perfect one for your cross-platform application.
 

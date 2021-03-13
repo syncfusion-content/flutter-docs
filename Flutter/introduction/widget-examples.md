@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Flutter Widgets Examples | Syncfusion
-description:  List of available Syncfusion Flutter widgets and the example github links to use them.
+description:  List of available Syncfusion Flutter cross platform UI widgets and libraries along with it's github example links to use them.
 platform: flutter
 control: flutter
 documentation: ug
 ---
 
-# Widgets Examples
+# Flutter Widgets Examples
 
 The section contains the GitHub link for each widget’s example codes. This is very useful when you want to learn by practice.
 
