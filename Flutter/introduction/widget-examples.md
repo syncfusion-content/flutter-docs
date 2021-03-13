@@ -9,7 +9,7 @@ documentation: ug
 
 # Widgets Examples
 
-The section contains the GitHub link for each widget’s example codes. This is very useful when you want to learn by practise.
+The section contains the GitHub link for each widget’s example codes. This is very useful when you want to learn by practice.
 
 <table>
 <tr>
@@ -30,60 +30,60 @@ The section contains the GitHub link for each widget’s example codes. This is 
 <p>Data Visualization</p>
 </td>
 
-<td><p>Barcode Generator</p></td>
+<td><p>Barcode</p></td>
 
 <td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/barcodes">samples/barcodes</a></p></td>
 
 </tr>
 
 <tr>
-<td><p>Cartesian Chart</p></td>
-<td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/chart/cartesian_charts">samples/chart/cartesian_charts</a></p></td>
+<td><p>CartesianChart</p></td>
+<td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/chart/cartesian_charts">samples/chart/Cartesian_charts</a></p></td>
 </tr>
 
 <tr>
-<td><p>Circular Chart</p></td>
+<td><p>CircularChart</p></td>
 <td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/chart/circular_charts">samples/chart/circular_charts</a></p></td>
 </tr>
 
 <tr>
-<td><p>Pyramid Chart</p></td>
+<td><p>PyramidChart</p></td>
 <td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/chart/pyramid_charts">samples/chart/pyramid_charts</a></p></td>
 </tr>
 
 <tr>
-<td><p>Funnel Chart</p></td>
+<td><p>FunnelChart</p></td>
 <td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/chart/funnel_charts">samples/chart/funnel_charts</a></p></td>
 </tr>
 
 <tr>
-<td><p>Sparkline Chart</p></td>
+<td><p>SparkLineChart</p></td>
 <td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/chart">samples/chart</a></p></td>
 </tr>
 
 <tr>
-<td><p>Sparkarea Chart</p></td>
+<td><p>SparkAreaChart</p></td>
 <td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/chart">samples/chart</a></p></td>
 </tr>
 
 <tr>
-<td><p>Sparkbar Chart</p></td>
+<td><p>SparkBarChart</p></td>
 <td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/chart">samples/chart</a></p></td>
 </tr>
 
 <tr>
-<td><p>Sparkwinloss Chart</p></td>
+<td><p>SparkWinLossChart</p></td>
 <td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/chart">samples/chart</a></p></td>
 </tr>
 
 <tr>
-<td><p>Radial Gauge</p></td>
+<td><p>RadialGauge</p></td>
 <td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/gauge">samples/gauge</a></p>
 </td>
 </tr>
 
 <tr>
-<td><p>Linear Gauge</p></td>
+<td><p>LinearGauge</p></td>
 <td><p><a href="https://pub.dev/packages/syncfusion_flutter_gauges">samples/gauge</a></p></td>
 </tr>
 
@@ -99,12 +99,12 @@ The section contains the GitHub link for each widget’s example codes. This is 
 
 <tr>
 <td rowspan="2"><p>Calendar</p></td>
-<td><p>Event Calendar</p></td>
+<td><p>EventCalendar</p></td>
 <td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/calendar">samples/calendar</a></p></td>
 </tr>
 
 <tr>
-<td><p>Date Range Picker</p></td>
+<td><p>DateRangePicker</p></td>
 <td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/date_picker">samples/date_picker</a></p>
 </td>
 </tr>
@@ -134,18 +134,18 @@ The section contains the GitHub link for each widget’s example codes. This is 
 </tr>
 
 <tr>
-<td><p>Range slider</p></td>
+<td><p>RangeSlider</p></td>
 <td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/sliders/range_slider">samples/sliders/range_slider</a></p>
 </td>
 </tr>
 
 <tr>
-<td><p>Range Selector</p></td>
+<td><p>RangeSelector</p></td>
 <td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/sliders/range_slider">samples/sliders/range_slider</a></p></td>
 </tr>
 
 <tr>
-<td><p>Signature Pad</p></td>
+<td><p>SignaturePad</p></td>
 <td><p>SignaturePad</p></td>
 <td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/signature_pad">samples/signature_pad</a></p></td>
 </tr>

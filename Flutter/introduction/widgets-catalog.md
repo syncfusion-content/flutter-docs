@@ -32,60 +32,60 @@ This section provides you the user guide link for each widget and its package li
 <p>Data Visualization</p>
 </td>
 
-<td><p>Barcode Generator</p></td>
+<td><p>Barcode</p></td>
 
 <td><p><a href="https://pub.dev/packages/syncfusion_flutter_barcodes">syncfusion_flutter_barcodes</a></p></td>
 
 </tr>
 
 <tr>
-<td><p>Cartesian Chart</p></td>
+<td><p>CartesianChart</p></td>
 <td><p><a href="https://pub.dev/packages/syncfusion_flutter_charts">syncfusion_flutter_charts</a></p></td>
 </tr>
 
 <tr>
-<td><p>Circular Chart</p></td>
+<td><p>CircularChart</p></td>
 <td><p><a href="https://pub.dev/packages/syncfusion_flutter_charts">syncfusion_flutter_charts</a></p></td>
 </tr>
 
 <tr>
-<td><p>Pyramid Chart</p></td>
+<td><p>PyramidChart</p></td>
 <td><p><a href="https://pub.dev/packages/syncfusion_flutter_charts">syncfusion_flutter_charts</a></p></td>
 </tr>
 
 <tr>
-<td><p>Funnel Chart</p></td>
+<td><p>FunnelChart</p></td>
 <td><p><a href="https://pub.dev/packages/syncfusion_flutter_charts">syncfusion_flutter_charts</a></p></td>
 </tr>
 
 <tr>
-<td><p>Sparkline Chart</p></td>
+<td><p>SparkLineChart</p></td>
 <td><p><a href="https://pub.dev/packages/syncfusion_flutter_charts">syncfusion_flutter_charts</a></p></td>
 </tr>
 
 <tr>
-<td><p>Sparkarea Chart</p></td>
+<td><p>SparkAreaChart</p></td>
 <td><p><a href="https://pub.dev/packages/syncfusion_flutter_charts">syncfusion_flutter_charts</a></p></td>
 </tr>
 
 <tr>
-<td><p>Sparkbar Chart</p></td>
+<td><p>SparkBarChart</p></td>
 <td><p><a href="https://pub.dev/packages/syncfusion_flutter_charts">syncfusion_flutter_charts</a></p></td>
 </tr>
 
 <tr>
-<td><p>Sparkwinloss Chart</p></td>
+<td><p>SparkWinLossChart</p></td>
 <td><p><a href="https://pub.dev/packages/syncfusion_flutter_charts">syncfusion_flutter_charts</a></p></td>
 </tr>
 
 <tr>
-<td><p>Radial Gauge</p></td>
+<td><p>RadialGauge</p></td>
 <td><p><a href="https://pub.dev/packages/syncfusion_flutter_gauges">syncfusion_flutter_gauges</a></p>
 </td>
 </tr>
 
 <tr>
-<td><p>Linear Gauge</p></td>
+<td><p>LinearGauge</p></td>
 <td><p><a href="https://pub.dev/packages/syncfusion_flutter_gauges">syncfusion_flutter_gauges</a></p></td>
 </tr>
 
@@ -101,12 +101,12 @@ This section provides you the user guide link for each widget and its package li
 
 <tr>
 <td rowspan="2"><p>Calendar</p></td>
-<td><p>Event Calendar</p></td>
+<td><p>EventCalendar</p></td>
 <td><p><a href="https://pub.dev/packages/syncfusion_flutter_calendar">syncfusion_flutter_calendar</a></p></td>
 </tr>
 
 <tr>
-<td><p>Date Range Picker</p></td>
+<td><p>DateRangePicker</p></td>
 <td><p><a href="https://pub.dev/packages/syncfusion_flutter_datepicker">syncfusion_flutter_datepicker</a></p>
 </td>
 </tr>
@@ -114,7 +114,7 @@ This section provides you the user guide link for each widget and its package li
 <tr>
 <td><p>Viewer</p></td>
 <td><p>PDFViewer</p></td>
-<td><p><a href="https://pub.dev/packages/syncfusion_flutter_pdfviewer">syncfusion_flutter_pdfviewer</a></p>
+<td><p><a href="https://pub.dev/packages/syncfusion_flutter_pdfviewer">syncfusion_flutter_pdf_viewer</a></p>
 </td></tr>
 
 <tr>
@@ -136,20 +136,20 @@ This section provides you the user guide link for each widget and its package li
 </tr>
 
 <tr>
-<td><p>Range slider</p></td>
+<td><p>RangeSlider</p></td>
 <td><p><a href="https://pub.dev/packages/syncfusion_flutter_sliders">syncfusion_flutter_sliders</a></p>
 </td>
 </tr>
 
 <tr>
-<td><p>Range Selector</p></td>
+<td><p>RangeSelector</p></td>
 <td><p><a href="https://pub.dev/packages/syncfusion_flutter_sliders">syncfusion_flutter_sliders</a></p></td>
 </tr>
 
 <tr>
-<td><p>Signature Pad</p></td>
 <td><p>SignaturePad</p></td>
-<td><p><a href="https://pub.dev/packages/syncfusion_flutter_signaturepad">syncfusion_flutter_signaturepad</a></p></td>
+<td><p>SignaturePad</p></td>
+<td><p><a href="https://pub.dev/packages/syncfusion_flutter_signaturepad">syncfusion_flutter_signature_pad</a></p></td>
 </tr>
 
 </table>
