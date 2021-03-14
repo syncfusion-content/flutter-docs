@@ -17,18 +17,16 @@ By default axis will have the minimum scale value as 0 and the maximum scale val
 
 {% highlight dart %} 
 
-    @override
-    Widget build(BuildContext context) {
-        return MaterialApp(
-            home: Scaffold(
-                body: Center(
-                    child: Container(
-                        child:SfLinearGauge()
-                        )
-                    )
-                )      
-            );
-        }
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: SfLinearGauge(),
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 
@@ -39,128 +37,169 @@ By default axis will have the minimum scale value as 0 and the maximum scale val
 The minimum and maximum properties of a Linear Gauge can be used to customize the axis scale. In the below code snippet the axis scale is customized to have the minimum value of -50 to maximum value of 50. The scale values are displayed by the axis labels. Customizing these label styles are further explained in next topics.  
 
 {% highlight dart %} 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
-          body: Center(
-              child: Container(
-                  child: SfLinearGauge(minimum: -50, maximum: 50)))));
-}
+        body: Center(
+          child: SfLinearGauge(minimum: -50, maximum: 50),
+        ),
+      ),
+    );
+  }
 {% endhighlight %}
 
 ![Update linear gauge for axis scale](images/axis/minmax_axis_linear_gauge.png)
 
 ## Customize the axis track style
 
-The linear axis track can be customized using the axisTrackStyle property. 
+The linear axis track can be customized using the 'axisTrackStyle' property. The 'axisTrackStyle' have the below properties.
 
 * thickness – Customizes the thickness of axis track.
 * color – Customizes the color of the axis track with a solid color.
 * gradient - Customizes the color of the axis track with a gradient color.
+* borderWidth - Customizes the border width of axis track.
+* borderColor - Customizes the border color of axis track.
+
+The below code snippet demonstrates customizing the thickness and color.
 
 {% highlight dart %} 
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
-          body: Center(
-              child: Container(
-                  child: SfLinearGauge(
-                    axisTrackStyle: LinearAxisTrackStyle(
-                        thickness: 13,
-                        color: Colors.lightBlue)),
-              )
-          )
-      )
-  );
-}
+        body: Center(
+          child: Container(
+            child: SfLinearGauge(
+                axisTrackStyle: LinearAxisTrackStyle(thickness: 15)),
+          ),
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 
-![Update linear gauge for axis scale](images/axis/axis_track_customization.png)
+![Update linear gauge for axis scale](images/axis/axis_thickness.png)
 
-## Customize the corners of an axis track
+## Apply solid color
 
-The edgeStyle property of axisTrackStyle specifies the corner type for the axis track. The corners can be customized using the bothFlat, bothCurve, startCurve, and endCurve options. The default value of this property is bothFlat.
-
-{% highlight dart %} 
-
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: Container(
-                  child: SfLinearGauge(
-                      axisTrackStyle: LinearAxisTrackStyle(thickness: 20,
-                        edgeStyle: LinearEdgeStyle.bothCurve
-                        )),
-              )
-          )
-      )
-  );
-}
-
-{% endhighlight %}
-
-![Update linear gauge for axis scale](images/axis/axis_corner_style.png)
-
-## Change the color of an axis track
-
-The color and gradient properties in axisTrackStyle allows to change the color of the axis track. The color property allows to set a solid color, while the gradient property allows to set linear-gradient colors to the axis track.
-
-The below code snippet sets a set of linear gradient colors to the axis track.
-
-{% highlight dart %} 
-
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: Container(
-                child: SfLinearGauge(
-                    axisTrackStyle: LinearAxisTrackStyle(
-                        gradient: LinearGradient(
-                            colors: [Colors.deepOrange, Colors.deepPurple],
-                            begin: const FractionalOffset(0.0, 0.0),
-                            end: const FractionalOffset(0.5, 0.0),
-                            stops: [0.0, 1.0],
-                            tileMode: TileMode.clamp))),
-              )
-          )
-      )
-  );
-}
-
-{% endhighlight %}
-
-![Update linear gauge for axis color](images/axis/axis_corner_style.png)
+The color property of 'axisTrackStyle' allows to set a solid color, while the gradient property of 'axisTrackStyle' allows to set linear-gradient colors to the axis track.
 
 The below code snippet sets a solid color to the axis track.
 
 {% highlight dart %} 
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
-          body: Center(
-              child: Container(
-                child: SfLinearGauge(
-                    axisTrackStyle: LinearAxisTrackStyle(
-                        color:Colors.blue)),
-              )
-          )
-      )
-  );
-}
+        body: Center(
+          child: Container(
+            child: SfLinearGauge(
+                axisTrackStyle: LinearAxisTrackStyle(
+                    gradient: LinearGradient(
+                        colors: [Colors.deepOrange, Colors.deepPurple],
+                        begin: const FractionalOffset(0.0, 0.0),
+                        end: const FractionalOffset(0.5, 0.0),
+                        stops: [0.0, 1.0],
+                        tileMode: TileMode.clamp))),
+          ),
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 
 ![Update linear gauge for axis color](images/axis/axis_corner_style.png)
+
+## Apply gradient colors
+
+The below code snippet sets linear gardient colors to the axis track.
+
+{% highlight dart %} 
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: Container(
+            child: SfLinearGauge(
+                axisTrackStyle: LinearAxisTrackStyle(color: Colors.blue)),
+          ),
+        ),
+      ),
+    );
+  }
+
+{% endhighlight %}
+
+![Update linear gauge for axis color](images/axis/axis_corner_style.png)
+
+## Customize the borders
+
+## Apply solid color
+
+The 'borderColor' and 'borderWidth' properties of 'axisTrackStyle' allows to set a border to the axis track.
+
+The below code snippet sets a boder to the axis track.
+
+{% highlight dart %} 
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: Container(
+            child: SfLinearGauge(
+                axisTrackStyle: LinearAxisTrackStyle(
+                    // Sets axis thickness for the better visibility of border
+                    thickness: 15,
+                    // Hides axis axis color for the better visibility of border
+                    color: Colors.transparent,
+                    //Sets the border color
+                    borderColor: Colors.blueGrey,
+                    //Sets the border width
+                    borderWidth: 2),
+                ),
+          ),
+        ),
+      ),
+    );
+  }
+
+{% endhighlight %}
+
+![Update linear gauge for axis color](images/axis/axis_border.png)
+
+## Customize the corners
+
+The edgeStyle property of axisTrackStyle specifies the corner type for the axis track. The corners can be customized using the bothFlat, bothCurve, startCurve, and endCurve options. The default value of this property is bothFlat.
+
+{% highlight dart %} 
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: Container(
+            child: SfLinearGauge(
+                axisTrackStyle: LinearAxisTrackStyle(
+                    thickness: 20, edgeStyle: LinearEdgeStyle.bothCurve)),
+          ),
+        ),
+      ),
+    );
+  }
+
+{% endhighlight %}
+
+![Update linear gauge for axis scale](images/axis/axis_corner_style.png)
 
 ## Inverse the axis track
 
@@ -169,19 +208,18 @@ When the isAxisInversed property is true, the axis can be placed in inverse dire
 
 {% highlight dart %} 
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-    home: Scaffold(
-      body: Center(
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
           child: Container(
-              child: SfLinearGauge(
-               isAxisInversed: true )
-          )
-      )
-    )
-  );
-}
+            child: SfLinearGauge(isAxisInversed: true),
+          ),
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 
@@ -189,26 +227,49 @@ You can see that the axis values are displayed from 100 to 0 as the axis track i
 
 ![inverse linear gauge for axis](images/axis/axis_inversed.png)
 
-## Axis track visibility
+## Extend the axis
 
-You can also hide the axis track by setting the showAxisTrack property to false. The default value of this property is true.
+The axis track can be extended by the 'axisTrackExtent' property. This will extend the axis track in both ends. The below code snippet demonstrates this. 
 
 {% highlight dart %} 
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      color: Colors.white,
       home: Scaffold(
-          body: Center(
-              child: Container(
-                  child: SfLinearGauge(
-                 showAxisTrack: false
-                  )
-              )
-          )
-      )
-  );
-}
+        body: Center(
+          child: SfLinearGauge(
+            maximum: 50,
+            axisTrackExtent: 50,
+          ),
+        ),
+      ),
+    );
+  }
+
+{% endhighlight %}
+
+![extend linear gauge axis tack](images/axis/extend_axis.png)
+
+## Change axis track visibility
+
+You can hide the axis track by setting the showAxisTrack property to false. The default value of this property is true.
+
+{% highlight dart %} 
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: Container(
+            child: SfLinearGauge(showAxisTrack: false),
+          ),
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 
