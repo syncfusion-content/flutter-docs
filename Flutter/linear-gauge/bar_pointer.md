@@ -101,7 +101,7 @@ The bar pointer edge style can be changed with the 'edgeStyle' property of bar p
 
 ## Change the position
 
-By default, the bar pointer is positioned cross to the axis. This position can be changed by the 'position' property of a bar pointer. It is possible to position the bar pointer inside, cross, and outside the axis. The below code snippet demonstrates changing the bar pointer position to inside the axis. 
+By default, the bar pointer is positioned cross to the axis. This position can be changed by the 'position' property of a bar pointer. It is possible to position the bar pointer 'inside', 'cross', and 'outside' the axis. The below code snippet demonstrates changing the bar pointer position to inside the axis. 
 
 {% highlight dart %} 
 
