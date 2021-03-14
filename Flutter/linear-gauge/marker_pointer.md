@@ -40,7 +40,7 @@ The below is the default appearance of default shape pointer.
 
 ## Change the size
 
-The size of the marker pointer can be changed by the 'height' and 'width' properties of 'LinearShapePointer'. The below code snippet demonstartes changing the size of a shape pointer.
+The size of the marker pointer can be changed by the 'height' and 'width' properties of 'LinearShapePointer'. The below code snippet demonstrates changing the size of a shape pointer.
 
 {% highlight dart %} 
 
@@ -68,7 +68,7 @@ The size of the marker pointer can be changed by the 'height' and 'width' proper
 
 ## Change the color
 
-The color of the shape pointer can be changed by the 'color' porperty. The below code example demonstartes the same.
+The color of the shape pointer can be changed by the 'color' property. The below code example demonstrates the same.
 
 {% highlight dart %} 
 
