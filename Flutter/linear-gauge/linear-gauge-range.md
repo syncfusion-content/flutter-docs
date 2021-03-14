@@ -9,7 +9,7 @@ documentation: ug
 
 # Default Linear Gauge range
 
-A range is a visual element that helps you quickly visualize where a range falls on the axis track. Multiple ranges with different styles can be added to a linear gauge. The default style of axis range is as below.
+A range is a visual element that helps you quickly visualize where a range falls on the axis track. Multiple ranges with different styles can be added to a linear gauge. The default style of range will be as below. 
 
 {% highlight dart %} 
 
@@ -128,7 +128,7 @@ The color of a range can be changed by setting the color property of a range. Th
 
 ## Add radial gradient colors to a range
 
-The gardiean colors can be applyed by using the shaderCallback property of range. The below code snippet demonstrates applying a RadialGradient color to the range.
+The gradient colors can be applied by using the shaderCallback property of range. The below code snippet demonstrates applying a RadialGradient color to the range.
 
 {% highlight dart %} 
 
@@ -219,7 +219,8 @@ The below code snippet demonstrates applying a LinearGradient color to the range
                         ],
                         tileMode: TileMode.mirror,
                         center: Alignment.bottomRight,
-                      ).createShader(bounds)),
+                      ).createShader(bounds),
+                    ),
             ],
           ),
             ],
@@ -233,3 +234,27 @@ The below code snippet demonstrates applying a LinearGradient color to the range
 
 ![Initialize linear gauge for range](images/gauge-range/sweep_gradient_range.png)
 
+## Position the range
+
+It is possible to position the ranges inside, cross, and outside the axis. By default, the range will be positioned outside the axis. The position property of the range is used to position the range. The below code snippet demonstrates the same.
+
+{% highlight dart %} 
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      color: Colors.white,
+      home: Scaffold(
+        body: Center(
+          child: SfLinearGauge(
+            //Here the range is positioned inside the axis.
+            ranges: [LinearGaugeRange(position: LinearElementPosition.inside)],
+          ),
+        ),
+      ),
+    );
+  }
+  
+{% endhighlight %}
+
+![Position the linear gauge range](images/gauge-range/range_position.png)

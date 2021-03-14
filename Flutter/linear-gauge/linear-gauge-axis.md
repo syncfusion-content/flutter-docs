@@ -81,7 +81,7 @@ Widget build(BuildContext context) {
 
 ![Update linear gauge for axis scale](images/axis/axis_track_customization.png)
 
-## Customize the corners of Axis track
+## Customize the corners of an axis track
 
 The edgeStyle property of axisTrackStyle specifies the corner type for the axis track. The corners can be customized using the bothFlat, bothCurve, startCurve, and endCurve options. The default value of this property is bothFlat.
 
@@ -107,7 +107,7 @@ Widget build(BuildContext context) {
 
 ![Update linear gauge for axis scale](images/axis/axis_corner_style.png)
 
-## Change the color of Axis Track
+## Change the color of an axis track
 
 The color and gradient properties in axisTrackStyle allows to change the color of the axis track. The color property allows to set a solid color, while the gradient property allows to set linear-gradient colors to the axis track.
 
