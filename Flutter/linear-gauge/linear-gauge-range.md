@@ -37,7 +37,7 @@ A range is a visual element that helps you quickly visualize where a range falls
 
 ## Add multiple ranges
 
-You can add multiple ranges for an axis. The below code sipper demonstartes adding 3 ranges in a Linear Gauge.
+You can add multiple ranges for an axis. The below code sipper demonstrates adding 3 ranges in a Linear Gauge.
 
 {% highlight dart %} 
 

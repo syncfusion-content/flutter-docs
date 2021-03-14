@@ -117,7 +117,7 @@ The below code snippet sets a solid color to the axis track.
 
 ## Apply gradient colors
 
-The below code snippet sets linear gardient colors to the axis track.
+The below code snippet sets linear gradient colors to the axis track.
 
 {% highlight dart %} 
 
@@ -145,7 +145,7 @@ The below code snippet sets linear gardient colors to the axis track.
 
 The 'borderColor' and 'borderWidth' properties of 'axisTrackStyle' allows to set a border to the axis track.
 
-The below code snippet sets a boder to the axis track.
+The below code snippet sets a border to the axis track.
 
 {% highlight dart %} 
 

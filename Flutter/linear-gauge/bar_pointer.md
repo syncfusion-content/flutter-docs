@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customize bar pointer in a linear gauge | Linear Gauge widget| Syncfusion
-description: Tutorial about the bar pointer on Linear Gauge Flutter widget.| Flutter Linear Gauge widget|
+title: Customize bar pointer in a linear gauge | Linear Gauge widget |
+description: Detailed tutorial about the bar pointer on Linear Gauge Flutter widget.| Flutter Linear Gauge widget|
 platform: flutter
 control: Overview
 documentation: ug
@@ -40,7 +40,7 @@ The code snippet creates a default bar pointer with the value 50.
 
 ## Change the bar pointer thickness
 
-The thickness can be changed by the 'thickness' property of the bar pointer. The below code snippet demonstartes the same. 
+The thickness can be changed by the 'thickness' property of the bar pointer. The below code snippet demonstrates the same. 
 
 {% highlight dart %} 
 
@@ -101,7 +101,7 @@ The bar pointer edge style can be changed with the 'edgeStyle' property of bar p
 
 ## Change the position
 
-By default, the bar pointer is positioned cross to the axis. This position can be changed by the 'position' property of a bar pointer. It is possible to position the bar pointer inside, cross, and outside the axis. The below code snippet demonstartes changing the bar pointer position to inside the axis. 
+By default, the bar pointer is positioned cross to the axis. This position can be changed by the 'position' property of a bar pointer. It is possible to position the bar pointer inside, cross, and outside the axis. The below code snippet demonstrates changing the bar pointer position to inside the axis. 
 
 {% highlight dart %} 
 
@@ -266,7 +266,7 @@ The gradient colors can be applied by using the shaderCallback property of bar p
 
 ## Change the offset
 
-In addition to position the bar pointer, it is also possible to change the offset of the bar pointer. The offset is caluclated as the distance from the axis. The offset cannot be negative and the cross positioned elements will not get affected by the offset value. The below code snippet demonstrates changing the offset value of the bar pointer. 
+In addition to position the bar pointer, it is also possible to change the offset of the bar pointer. The offset is calculated as the distance from the axis. The offset cannot be negative and the cross positioned elements will not get affected by the offset value. The below code snippet demonstrates changing the offset value of the bar pointer. 
 
 {% highlight dart %} 
 
@@ -296,7 +296,7 @@ In addition to position the bar pointer, it is also possible to change the offse
 
 ## Customize the border
 
-The border can be customized with 'borderWidth' and 'borderColor' properties of bar pointer. The below code snippet demonstartes the same.
+The border can be customized with 'borderWidth' and 'borderColor' properties of bar pointer. The below code snippet demonstrates the same.
 
 {% highlight dart %} 
 
