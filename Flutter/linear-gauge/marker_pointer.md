@@ -7,11 +7,7 @@ control: Overview
 documentation: ug
 ---
 
-# Linear Gauge Marker Pointers
-
-A marker pointer is used to indicate a specific value on an axis. So the 'value' is a required property in marker pointers.  In Linear Gauge there are two marker pointers - shape pointer and widget pointer. The shape pointer is having built-in shapes and the widget pointer allows to use any FLutter widgets to mark a specific value in axis. 
-
-## Shape Pointer
+# Linear Gauge Shape Marker Pointers
 
 The shapePointer in 'SfLinearGauge' have the below pre-defined shapes to mark a specific value. The default shape pointer is inverted triangle. 
 
@@ -40,5 +36,118 @@ The below is the default appearance of default shape pointer.
   
 {% endhighlight %}
 
-![Initialize linear gauge for shape pointer](images/bar-pointer/shape-pointer.png)
+![Initialize linear gauge for shape pointer](images/shape-pointer/default_shape_pointer.png)
+
+## Change the size
+
+The size of the marker pointer can be changed by the 'height' and 'width' properties of 'LinearShapePointer'. The below code snippet demonstartes changing the size of a shape pointer.
+
+{% highlight dart %} 
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      color: Colors.white,
+      home: Scaffold(
+        body: Center(
+          child: SfLinearGauge(markerPointers: [
+            LinearShapePointer(
+              value: 50,
+              height: 25,
+              width: 25,
+            ),
+          ]),
+        ),
+      ),
+    );
+  }
+  
+{% endhighlight %}
+
+![Initialize linear gauge for shape pointer](images/shape-pointer/shape_pointer_size.png)
+
+## Change the color
+
+The color of the shape pointer can be changed by the 'color' porperty. The below code example demonstartes the same.
+
+{% highlight dart %} 
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      color: Colors.white,
+      home: Scaffold(
+        body: Center(
+          child: SfLinearGauge(markerPointers: [
+            LinearShapePointer(
+              value: 50,
+              color: Colors.redAccent,
+            ),
+          ]),
+        ),
+      ),
+    );
+  }
+  
+{% endhighlight %}
+
+![Change shape pointer color](images/shape-pointer/shape_pointer_color.png)
+
+## Customize the border
+
+The border can be customized by the 'borderColor' and 'borderWidth' of the 'LinearShapePointer'.
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      color: Colors.white,
+      home: Scaffold(
+        body: Center(
+          child: SfLinearGauge(markerPointers: [
+            LinearShapePointer(
+              value: 50,
+              borderColor: Colors.redAccent,
+              borderWidth: 2,
+            ),
+          ]),
+        ),
+      ),
+    );
+  }
+
+![Change shape pointer border](images/shape-pointer/shape_border.png)
+
+## Customize the elevation
+
+The elevation can be customized by the 'elevation' and 'elevationColor' properties.
+
+{% highlight dart %} 
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      color: Colors.white,
+      home: Scaffold(
+        body: Center(
+          child: Container(
+            color: Colors.white,
+            child: SfLinearGauge(markerPointers: [
+              LinearShapePointer(
+                value: 50,
+                shapeType: LinearShapePointerType.circle,
+                elevation: 5,
+                elevationColor: Colors.blueGrey,
+              ),
+            ]),
+          ),
+        ),
+      ),
+    );
+  }
+  
+{% endhighlight %}
+
+![Change shape pointer elevation](images/shape-pointer/pointer_elevation.png)
+
+
 
