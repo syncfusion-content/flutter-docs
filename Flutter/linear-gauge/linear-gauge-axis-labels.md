@@ -96,7 +96,7 @@ Widget build(BuildContext context) {
 
 ![set maximum labels interval in axis track](images/axis-labels/axis_label_interval.png)
 
-## Label placement customization
+## Change the label position
 
 The linear axis allows to position the labels either inside or outside the axis track using the labelsPosition properties. By default, labels are positioned inside the axis track.
 
@@ -123,9 +123,9 @@ Widget build(BuildContext context) {
 ![flutter linear gauge label placement](images/axis-labels/label-placement.png)
 
 
-## Label position customization with offset
+## Change the label offset
 
-The labelOffset property allows to adjust the distance between the tick end and the labels. By default, the value of the label offset is 15.
+The 'labelOffset' property allows to adjust the distance between the tick-end and the labels. 
 
 {% highlight dart %} 
 
@@ -148,7 +148,7 @@ Widget build(BuildContext context) {
 
 ![set maximum labels position in axis track](images/axis-labels/label_offset.png)
 
-##  Maximum number of labels per 100 logical pixels
+##  Customize the maximum number of visible labels
 
 By default, a maximum of three labels are displayed for each 100 logical pixels in an axis. The maximum number of labels that should present within 100 logical pixels length can be customized using the maximumLabels property of the axis. 
 
