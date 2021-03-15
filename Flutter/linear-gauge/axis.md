@@ -3,7 +3,7 @@ layout: post
 title: Customize axis in a linear gauge | Linear Gauge widget| Syncfusion
 description: Tutorial about deatils of the axis on Linear Gauge Flutter widget | Flutter Linear Gauge widget documentation|
 platform: flutter
-control: Overview
+control: SfLinearGauge
 documentation: ug
 ---
 

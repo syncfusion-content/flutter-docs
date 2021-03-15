@@ -3,7 +3,7 @@ layout: post
 title: Customize labels in a linear gauge | Linear Gauge widget| Syncfusion
 description: Tutorial about the available styles of labels on Linear Gauge Flutter widget.| Flutter Linear Gauge widget|
 platform: flutter
-control: Overview
+control: SfLinearGauge
 documentation: ug
 ---
 
