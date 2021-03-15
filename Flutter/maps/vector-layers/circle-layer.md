@@ -738,7 +738,7 @@ You can customize the inverted circle using the following properties:
 * **Stroke width** - Change the stroke width of the circle using the `strokeWidth` property. The default value of the `strokeWidth` property is `1`.
 * **Overlay color** - Change the outer portion color of the circle using the `color` property.
 * **Tooltip** - You can enable tooltip for the inverted circle using the `tooltipBuilder` property.
-* **Animation** - You can apply animation for the inverted circle using the `animation` property and able to customize the aniamtion curve and duration.
+* **Animation** - You can apply animation for the inverted circle using the `animation` property and able to customize the animation curve and duration.
 
 N> It is applicable for both the tile layer and shape layer.
 
