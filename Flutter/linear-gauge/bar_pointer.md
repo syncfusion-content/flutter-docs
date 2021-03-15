@@ -3,7 +3,7 @@ layout: post
 title: Customize bar pointer in linear gauge|Linear Gauge widget| Syncfusion
 description: Detailed tutorial about the bar pointer on Linear Gauge Flutter widget.| Flutter Linear Gauge widget|
 platform: flutter
-control: Overview
+control: SfLinearGauge
 documentation: ug
 ---
 

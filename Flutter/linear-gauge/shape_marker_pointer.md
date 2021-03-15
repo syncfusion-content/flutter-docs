@@ -3,7 +3,7 @@ layout: post
 title: Customize shape pointers in a linear gauge | Syncfusion
 description: Detailed tutorial about the shape pointers on Linear Gauge Flutter widget | Flutter Linear Gauge widget|
 platform: flutter
-control: Overview
+control: SfLinearGauge
 documentation: ug
 ---
 
