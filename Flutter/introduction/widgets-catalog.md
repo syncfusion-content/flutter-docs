@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Flutter Widgets Catalog | Syncfusion
-description:  List of available Syncfusion Flutter cross platform UI widgets and libraries along with it's pub package links to use them.
+description: The list of available Flutter widgets and File Format (excel and pdf) packages. |Syncfusion Flutter Widgets|
 platform: flutter
 control: flutter
 documentation: ug

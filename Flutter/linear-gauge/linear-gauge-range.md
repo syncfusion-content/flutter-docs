@@ -126,7 +126,7 @@ The color of a range can be changed by setting the color property of a range. Th
 
 ![Initialize linear gauge for range](images/gauge-range/color_range.png)
 
-## Add radial gradient colors to a range
+## Apply radial gradient colors to a range
 
 The gradient colors can be applied by using the shaderCallback property of range. The below code snippet demonstrates applying a RadialGradient color to the range.
 
@@ -161,7 +161,7 @@ The gradient colors can be applied by using the shaderCallback property of range
 
 ![Initialize linear gauge for range](images/gauge-range/radail_gardient_range.png)
 
-## Add linear gradient colors to a range
+## Apply linear gradient colors to a range
 
 The below code snippet demonstrates applying a LinearGradient color to the range.
 
@@ -193,7 +193,7 @@ The below code snippet demonstrates applying a LinearGradient color to the range
 
 ![Initialize linear gauge for range](images/gauge-range/linear_gardient_range.png)
 
-## Add sweep gradient colors to a range
+## Apply sweep gradient colors to a range
 
 The below code snippet demonstrates applying a LinearGradient color to the range.
 
