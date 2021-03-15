@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Flutter Widgets Catalog | Syncfusion
-description:  The code examples of Syncfusion Flutter Widgets and File Format (excel and pdf) libraries.
+description: The list of available Flutter widgets and File Format (excel and pdf) packages. |Syncfusion Flutter Widgets|
 platform: flutter
 control: flutter
 documentation: ug
