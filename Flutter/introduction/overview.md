@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Introduction to Flutter Widgets Documentation | Tutorials | Syncfusion
-description: Overview about the available features in Syncfusion Flutter widgets and steps to use the guide.
+description: Overview about the available features in Syncfusion Flutter widgets and steps to use the guide. | Flutter Widgets |
 platform: flutter
 control: Overview
 documentation: ug
