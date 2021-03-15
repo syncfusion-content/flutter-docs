@@ -386,12 +386,12 @@ class Model {
 
 ![Legend text customization](images/legend/legend-text-customization.png)
 
-## First label customization
+## First segment label customization
 
 {% tabs %}
 {% highlight Dart %}
 
-You can customize the first label of the legend using the [`MapColorMapper.text`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/text.html) property. By default, the [`MapColorMapper.from`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/from.html) value is placed at the starting position of first segment and the [`MapColorMapper.to`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/to.html) value is placed at the ending position of the first segment.
+You can customize the first segment label of the legend using the [`MapColorMapper.text`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/text.html) property. By default, the [`MapColorMapper.from`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/from.html) value is placed at the starting position of first segment and the [`MapColorMapper.to`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/to.html) value is placed at the ending position of the first segment.
 
 List<DataModel> _data;
 MapShapeSource _shapeSource;
