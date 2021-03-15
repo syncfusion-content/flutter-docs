@@ -790,3 +790,7 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Inverted circle](../images/circle-layer/inverted-circle.png)
+
+N>
+* Refer `tooltip` section, for adding and customizing tooltip to the inverted circle.
+* Refer `animation` section, for applying animation to the inverted circle.
