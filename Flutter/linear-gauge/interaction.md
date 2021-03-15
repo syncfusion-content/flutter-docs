@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Details about the interaction in linear gauge | Linear Gauge widget| Syncfusion
+title: Interaction in linear gauge | Linear Gauge widget| Syncfusion
 description: Tutorial about deatils of the interaction on Linear Gauge Flutter widget | Flutter Linear Gauge widget documentation|
 platform: flutter
 control: SfLinearGauge
@@ -15,7 +15,7 @@ The shape and widget marker pointers in a Linear Gauge can be moved from one val
 
 The `onValueChanged` call back is used to change the value of the marker pointer.
 
-The below code snippet demonstartes updating the marker pointer value based on swipe or drag gesture.
+The below code snippet demonstrates updating the marker pointer value based on swipe or drag gesture.
 
 {% highlight dart %}
 

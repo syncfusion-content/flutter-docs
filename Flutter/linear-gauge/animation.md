@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize annimation in a linear gauge | Linear Gauge widget| Syncfusion
+title: Animation in a linear gauge | Linear Gauge widget| Syncfusion
 description: Tutorial about deatils of the annimation on Linear Gauge Flutter widget | Flutter Linear Gauge widget documentation|
 platform: flutter
 control: SfLinearGauge
@@ -9,11 +9,11 @@ documentation: ug
 
 # Flutter Linear Gauge Animation
 
-All Linear Gauge elements such as axis along with ticks and labels, range, bar pointer, shape marker pointer and widget marker pointer can be animated seperately. 
+All Linear Gauge elements such as axis along with ticks and labels, range, bar pointer, shape marker pointer and widget marker pointer can be animated separately. 
 
 ## Animate axis
 
-The `animateAxis` and `animationDuration` properties in `SfLinearGauge` is used to  animate the axis track along with the ticks and labels. The axis will be have a fade-in with opactiy animation when this `animateAxis` is set to true. By default, the `animateAxis` is set to false. 
+The `animateAxis` and `animationDuration` properties in `SfLinearGauge` is used to  animate the axis track along with the ticks and labels. The axis will be have a fade-in with opacity animation when this `animateAxis` is set to true. By default, the `animateAxis` is set to false. 
 
 {% highlight dart %}
 
@@ -65,11 +65,11 @@ The animation behavior is common for all the pointers in Linear Gauge. There are
 
 All the above three pointers have the below properties for animation. 
 
-*  `enableAnimation` - Enable or disable the animation for bar pointer. The deafult value is `true`
+*  `enableAnimation` - Enable or disable the animation for bar pointer. The default value is `true`
 *  `animationDuration` - Sets the animation duration. The default value is 1000
 *  `animationType` - Sets the animation type. 
 
-The `animationType` supports the below animations. The deafult animation type is `animationType.ease`.
+The `animationType` supports the below animations. The default animation type is `animationType.ease`.
 
 * `bounceOut`
 * `ease`
@@ -81,7 +81,7 @@ The `animationType` supports the below animations. The deafult animation type is
 
 ### Animate bar pointer
 
-The below code example demonstartes updating the animation for bar pointer.
+The below code example demonstrates updating the animation for bar pointer.
 
 {% highlight dart %} 
 
@@ -132,7 +132,7 @@ The below code example demonstartes updating the animation for bar pointer.
 
 ## Animate Shape and Widget Marker Pointer
 
-Both the shape and widget marker pointers will have the same set of properties and behave simillarly for animation. So we have demonstarted the `LinearShapePointer` only but the same is appllicable for `LinearWidgetPointer` too. 
+Both the shape and widget marker pointers will have the same set of properties and behave similarly for animation. So we have demonstrated the `LinearShapePointer` only but the same is applicable for `LinearWidgetPointer` too. 
 
 ### Marker pointer with `bounceOut` animation
 
