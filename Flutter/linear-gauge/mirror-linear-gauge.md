@@ -9,7 +9,7 @@ documentation: ug
 
 # Flutter Linear Gauge Mirroring
 
-The `isMirrored` property in `SfLinearGauge` mirrors all the gauge elements in the `SfLinearGauge`. The below code snippet demonstartes setting the `isMirrored` property.
+The `isMirrored` property in `SfLinearGauge` mirrors all the gauge elements in the `SfLinearGauge`. The below code snippet demonstrates setting the `isMirrored` property.
 
 {% highlight dart %}
 
@@ -28,6 +28,6 @@ The `isMirrored` property in `SfLinearGauge` mirrors all the gauge elements in t
 
 ## Comparison for the mirrored and normal gauge
 
-The below screenshot provides a comparion for the mirrored and normal linear gauge. 
+The below screenshot provides a comparison for the mirrored and normal linear gauge. 
 
 ![mirror linear gauge](images/mirrored/mirror_comparison.png)

@@ -73,7 +73,7 @@ The `animationType` supports the below animations. The default animation type is
 
 * `bounceOut`
 * `ease`
-* `easeInCirc`
+* `easeInCircle`
 * `easeOutBack`
 * `elasticOut`
 * `linear`
