@@ -50,7 +50,7 @@ Widget build(BuildContext context) {
               GridTextColumn(
                 columnName: 'orderID',
                 label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 8.0),
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
                   alignment: Alignment.centerRight,
                   child: Text(
                     'Order ID',
@@ -61,7 +61,7 @@ Widget build(BuildContext context) {
               GridTextColumn(
                   columnName: 'customerID',
                   label: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 8.0),
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
                     alignment: Alignment.centerLeft,
                     child: Text(
                       'Customer Name',
@@ -71,7 +71,7 @@ Widget build(BuildContext context) {
               GridTextColumn(
                 columnName: 'orderDate',
                 label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 8.0),
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
                   alignment: Alignment.centerRight,
                   child: Text(
                     'Order Date',
@@ -82,7 +82,7 @@ Widget build(BuildContext context) {
               GridTextColumn(
                 columnName: 'freight',
                 label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 8.0),
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
                   alignment: Alignment.center,
                   child: Text(
                     'Freight',
@@ -123,7 +123,7 @@ class OrderInfoDataSource extends DataGridSource{
         cells: row.getCells().map<Widget>((dataGridCell) {
       if (dataGridCell.columnName == 'orderID') {
         return Container(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerRight,
           child: Text(
             dataGridCell.value.toString(),
@@ -132,7 +132,7 @@ class OrderInfoDataSource extends DataGridSource{
         );
       } else if (dataGridCell.columnName == 'customerID') {
         return Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               dataGridCell.value.toString(),
@@ -140,7 +140,7 @@ class OrderInfoDataSource extends DataGridSource{
             ));
       } else if (dataGridCell.columnName == 'orderDate') {
         return Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               DateFormat.yMd().format(dataGridCell.value).toString(),
@@ -148,7 +148,7 @@ class OrderInfoDataSource extends DataGridSource{
             ));
       } else {
         return Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.center,
             child: Text(
               NumberFormat.currency(locale: 'en_US', symbol: '\$')
@@ -246,7 +246,7 @@ Widget buildDataGrid(BoxConstraints constraint) {
         GridTextColumn(
           columnName: 'orderID',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'Order ID',
@@ -257,7 +257,7 @@ Widget buildDataGrid(BoxConstraints constraint) {
         GridTextColumn(
             columnName: 'customerID',
             label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
               alignment: Alignment.centerLeft,
               child: Text(
                 'Customer Name',
@@ -267,7 +267,7 @@ Widget buildDataGrid(BoxConstraints constraint) {
         GridTextColumn(
           columnName: 'orderDate',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'Order Date',
@@ -278,7 +278,7 @@ Widget buildDataGrid(BoxConstraints constraint) {
         GridTextColumn(
           columnName: 'freight',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.center,
             child: Text(
               'Freight',
@@ -307,7 +307,7 @@ class OrderInfoDataSource extends DataGridSource{
         cells: row.getCells().map<Widget>((dataGridCell) {
       if (dataGridCell.columnName == 'orderID') {
         return Container(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerRight,
           child: Text(
             dataGridCell.value.toString(),
@@ -316,7 +316,7 @@ class OrderInfoDataSource extends DataGridSource{
         );
       } else if (dataGridCell.columnName == 'customerID') {
         return Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               dataGridCell.value.toString(),
@@ -324,7 +324,7 @@ class OrderInfoDataSource extends DataGridSource{
             ));
       } else if (dataGridCell.columnName == 'orderDate') {
         return Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               DateFormat.yMd().format(dataGridCell.value).toString(),
@@ -332,7 +332,7 @@ class OrderInfoDataSource extends DataGridSource{
             ));
       } else {
         return Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.center,
             child: Text(
               NumberFormat.currency(locale: 'en_US', symbol: '\$')
@@ -438,7 +438,7 @@ Widget buildDataGrid(BoxConstraints constraint) {
         GridTextColumn(
           columnName: 'orderID',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'Order ID',
@@ -449,7 +449,7 @@ Widget buildDataGrid(BoxConstraints constraint) {
         GridTextColumn(
             columnName: 'customerID',
             label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
               alignment: Alignment.centerLeft,
               child: Text(
                 'Customer Name',
@@ -459,7 +459,7 @@ Widget buildDataGrid(BoxConstraints constraint) {
         GridTextColumn(
           columnName: 'orderDate',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'Order Date',
@@ -470,7 +470,7 @@ Widget buildDataGrid(BoxConstraints constraint) {
         GridTextColumn(
           columnName: 'freight',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.center,
             child: Text(
               'Freight',
@@ -526,7 +526,7 @@ class OrderInfoDataSource extends DataGridSource{
         cells: row.getCells().map<Widget>((dataGridCell) {
       if (dataGridCell.columnName == 'orderID') {
         return Container(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerRight,
           child: Text(
             dataGridCell.value.toString(),
@@ -535,7 +535,7 @@ class OrderInfoDataSource extends DataGridSource{
         );
       } else if (dataGridCell.columnName == 'customerID') {
         return Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               dataGridCell.value.toString(),
@@ -543,7 +543,7 @@ class OrderInfoDataSource extends DataGridSource{
             ));
       } else if (dataGridCell.columnName == 'orderDate') {
         return Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               DateFormat.yMd().format(dataGridCell.value).toString(),
@@ -551,7 +551,7 @@ class OrderInfoDataSource extends DataGridSource{
             ));
       } else {
         return Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.center,
             child: Text(
               NumberFormat.currency(locale: 'en_US', symbol: '\$')
