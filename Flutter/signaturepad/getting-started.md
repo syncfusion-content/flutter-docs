@@ -78,7 +78,7 @@ Widget build(BuildContext context) {
 
 ## Customize signature stroke color
 
-You can customize the stroke color of the SignaturePad widget by using the ['strokeColor'](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/strokeColor.html) property. The default stroke color for the dark theme is `Colors.white` and the default color for the light theme is `Colors.black`.
+You can customize the stroke color of the SignaturePad widget by using the [`strokeColor`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/strokeColor.html) property. The default stroke color for the dark theme is `Colors.white` and the default color for the light theme is `Colors.black`.
 {% tabs %}
 {% highlight Dart %}
 
