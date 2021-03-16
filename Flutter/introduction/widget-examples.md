@@ -20,7 +20,7 @@ The section contains the GitHub link for each widget’s code examples. This is 
 
 <tr>
 <td>GRID</td>
-<td>Data Grid</td>
+<td><a href = "https://help.syncfusion.com/flutter/datagrid/overview">DataGrid</a></td>
 <td><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/datagrid">samples/datagrid</a></td>
 </tr>
 <tr>
