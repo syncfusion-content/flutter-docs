@@ -3,7 +3,7 @@ layout: post
 title: Customize widget pointers in a linear gauge | Syncfusion
 description: Detailed tutorial about the widget pointers on Linear Gauge Flutter widget | Flutter Linear Gauge widget|
 platform: flutter
-control: Overview
+control: SfLinearGauge
 documentation: ug
 ---
 
