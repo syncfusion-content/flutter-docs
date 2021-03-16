@@ -97,6 +97,8 @@ The color of the shape pointer can be changed by the 'color' property. The below
 
 The border can be customized by the 'borderColor' and 'borderWidth' of the 'LinearShapePointer'.
 
+{% highlight dart %} 
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -114,6 +116,8 @@ The border can be customized by the 'borderColor' and 'borderWidth' of the 'Line
       ),
     );
   }
+  
+{% endhighlight %}
 
 ![Change shape pointer border](images/shape-pointer/shape_border.png)
 
