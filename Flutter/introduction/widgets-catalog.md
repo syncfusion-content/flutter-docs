@@ -28,14 +28,10 @@ This section provides the user guide link for each widget and its package link.
 <tr>
 
 <td rowspan="11">
-
 <p>Data Visualization</p>
 </td>
-
-<td><p><a href="(https://help.syncfusion.com/flutter/barcode/overview)">Barcode<a></p></td>
-
+<td><p><a href="https://help.syncfusion.com/flutter/barcode/overview">Barcode</a></p></td>
 <td><p><a href="https://pub.dev/packages/syncfusion_flutter_barcodes">syncfusion_flutter_barcodes</a></p></td>
-
 </tr>
 
 <tr>
