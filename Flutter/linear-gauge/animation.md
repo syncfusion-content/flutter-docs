@@ -110,25 +110,6 @@ The below code example demonstrates updating the animation for bar pointer.
 
 ![shape pointer in linear gauge](images/animation/bar-pointer/bounceout.gif)
 
-### Bar pointer with `ease` animation
-
-![shape pointer in linear gauge](images/animation/bar-pointer/ease.gif)
-
-### Bar pointer with `easeOutBack` animation
-
-![shape pointer in linear gauge](images/animation/bar-pointer/easeoutback.gif)
-
-### Bar pointer with `elasticOut` animation
-
-![shape pointer in linear gauge](images/animation/bar-pointer/elasticout.gif)
-
-### Bar pointer with `linear` animation
-
-![shape pointer in linear gauge](images/animation/bar-pointer/bounceout.gif)
-
-### Bar pointer with `slowMiddle` animation
-
-![shape pointer in linear gauge](images/animation/bar-pointer/slowmiddle.gif)
 
 ### Animate Marker Pointers (Shape and Widget Pointers)
 
@@ -137,26 +118,6 @@ Both the shape and widget marker pointers will have the same set of properties a
 ### Marker pointer with `bounceOut` animation
 
 ![shape pointer in linear gauge](images/animation/shape-pointer/bounceout.gif)
-
-### Marker pointer with `ease` animation
-
-![shape pointer in linear gauge](images/animation/shape-pointer/ease.gif)
-
-### Marker pointer with `easeOutBack` animation
-
-![shape pointer in linear gauge](images/animation/shape-pointer/easeoutback.gif)
-
-### Marker pointer with `elasticOut` animation
-
-![shape pointer in linear gauge](images/animation/shape-pointer/elasticout.gif)
-
-### Marker pointer with `linear` animation
-
-![shape pointer in linear gauge](images/animation/shape-pointer/linear.gif)
-
-### Marker pointer with `slowMiddle` animation
-
-![shape pointer in linear gauge](images/animation/shape-pointer/slowmiddle.gif)
 
 
 

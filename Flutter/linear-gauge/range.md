@@ -234,7 +234,7 @@ The below code snippet demonstrates applying a sweep gradient colors to the rang
 
 ![Initialize linear gauge for range](images/gauge-range/sweep_gradient_range.png)
 
-## Customize the range poistion
+## Customize the range position
 
 It is possible to position the ranges `inside`, `cross`, and `outside` the axis. By default, the range will be positioned `outside` the axis. The `position` property of the range is used to position the range. The below code snippet demonstrates the same.
 

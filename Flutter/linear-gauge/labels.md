@@ -125,7 +125,7 @@ Widget build(BuildContext context) {
 
 ## Change the label offset
 
-The `labelOffse` property allows to adjust the distance between the tick-end and the labels. 
+The `labelOffset` property allows to adjust the distance between the tick-end and the labels. 
 
 {% highlight dart %} 
 

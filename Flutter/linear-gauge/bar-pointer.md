@@ -297,7 +297,7 @@ The gradient colors can be applied by using the `shaderCallback` property of bar
 
 ## Customize the border
 
-The border can be customized with `borderWidth` and `borderColor` properties of bar pointer. The below code exampls demonstrates the same.
+The border can be customized with `borderWidth` and `borderColor` properties of bar pointer. The below code examapls demonstrates the same.
 
 {% highlight dart %} 
 
