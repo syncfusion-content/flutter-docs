@@ -116,7 +116,7 @@ This section provides the user guide link for each widget and its package link.
 
 <tr>
 <td rowspan="3"><p>Sliders</p></td>
-<td><p><a href="http://172.16.0.76/flutter/slider/overview">Slider</a></p></td>
+<td><p><a href="https://help.syncfusion.com/flutter/slider/overview">Slider</a></p></td>
 <td><p><a href="https://pub.dev/packages/syncfusion_flutter_sliders">syncfusion_flutter_sliders</a></p>
 </td>
 </tr>
