@@ -70,22 +70,22 @@ Widget build(BuildContext context) {
 
 ## Populate data source
 
-To visualize the treemap, populate the quantitative analysis data source and set its count to the [`dataCount`] property, map the quantitative value of the underlying data to the [`weightValueMapper`] property, and define the grouping order based on the value of the [`TreemapLevel.groupMapper`] property of [`levels`] collection in the [`SfTreemap`].
+To populate the data source, set its count to the `dataCount` property of the treemap. The data will be grouped based on the values returned from the `TreemapLevel.groupMapper` callback. You can have more than one TreemapLevel in the treemap `levels` collection to form a hierarchical treemap. The quantitative value of the underlying data has to be returned from the `weightValueMapper` callback. Based on this value, every tile (rectangle) will have its size.
 
 {% tabs %}
 {% highlight Dart %}
 
-List<PopulationModel> _dataSource;
+List<SocialMediaUsers> _source;
 
 @override
 void initState() {
-   _dataSource = <PopulationModel>[
-      PopulationModel('Asia', 25.4),
-      PopulationModel('South America', 19.11),
-      PopulationModel('North America', 13.3),
-      PopulationModel('Europe', 10.65),
-      PopulationModel('Africa', 7.54),
-      PopulationModel('Australia', 4.93),
+   _source = <SocialMediaUsers>[
+      SocialMediaUsers('India', 'Facebook', 25.4),
+      SocialMediaUsers('USA', 'Instagram', 19.11),
+      SocialMediaUsers('Japan', 'Facebook', 13.3),
+      SocialMediaUsers('Germany', 'Instagram', 10.65),
+      SocialMediaUsers('France', 'Twitter', 7.54),
+      SocialMediaUsers('UK', 'Instagram', 4.93),
    ];
    super.initState();
 }
@@ -94,14 +94,14 @@ void initState() {
 Widget build(BuildContext context) {
   return Scaffold(
      body: SfTreemap(
-        dataCount: _dataSource.length,
+        dataCount: _source.length,
         weightValueMapper: (int index) {
-          return _dataSource[index].populationInMillions;
+          return _source[index].usersInMillions;
         },
         levels: [
           TreemapLevel(
             groupMapper: (int index) {
-              return _dataSource[index].continent;
+              return _source[index].country;
             },
           ),
         ],
@@ -109,11 +109,12 @@ Widget build(BuildContext context) {
    );
 }
 
-class PopulationModel {
-  const PopulationModel(this.continent, this.populationInMillions);
+class SocialMediaUsers {
+  const SocialMediaUsers(this.country, this.socialMedia, this.usersInMillions);
 
-  final String continent;
-  final double populationInMillions;
+  final String country;
+  final String socialMedia;
+  final double usersInMillions;
 }
 
 {% endhighlight %}
@@ -125,24 +126,24 @@ N>
 * Refer the [`SfTreemap.levels`], for adding flat or hierarchical structured treemap.
 * Refer the [`SfTreemap.colorMappers`], for customizing the tiles color.
 
-Add label builder
+## Add labels
 
-You can add labels to the treemap using the [`labelBuilder`] property of the [`TreemapLevel`] which is added to the [`levels`] collection property in the [`SfTreemap`].
+You can add any type of custom widgets to the tiles as labels based on the index using the `TreemapLevel.labelBuilder` property.
 
 {% tabs %}
 {% highlight Dart %}
 
-List<PopulationModel> _dataSource;
+List<SocialMediaUsers> _source;
 
 @override
 void initState() {
-   _dataSource = <PopulationModel>[
-      PopulationModel('Asia', 25.4),
-      PopulationModel('South America', 19.11),
-      PopulationModel('North America', 13.3),
-      PopulationModel('Europe', 10.65),
-      PopulationModel('Africa', 7.54),
-      PopulationModel('Australia', 4.93),
+   _source = <SocialMediaUsers>[
+      SocialMediaUsers('India', 'Facebook', 25.4),
+      SocialMediaUsers('USA', 'Instagram', 19.11),
+      SocialMediaUsers('Japan', 'Facebook', 13.3),
+      SocialMediaUsers('Germany', 'Instagram', 10.65),
+      SocialMediaUsers('France', 'Twitter', 7.54),
+      SocialMediaUsers('UK', 'Instagram', 4.93),
    ];
    super.initState();
 }
@@ -151,56 +152,55 @@ void initState() {
 Widget build(BuildContext context) {
   return Scaffold(
      body: SfTreemap(
-        dataCount: _dataSource.length,
+        dataCount: _source.length,
         weightValueMapper: (int index) {
-          return _dataSource[index].populationInMillions;
+          return _source[index].usersInMillions;
         },
         levels: [
-          TreemapLevel(
-            groupMapper: (int index) {
-              return _dataSource[index].continent;
-            },
-            color: Colors.teal[200],
-            padding: const EdgeInsets.all(1.5),
-            labelBuilder: (BuildContext context, TreemapTile tile) {
-               return Text('${tile.group}');
-             },
-           ),
+          TreemapLevel(groupMapper: (int index) {
+            return _source[index].country;
+          }, labelBuilder: (BuildContext context, TreemapTile tile) {
+            return Padding(
+              padding: EdgeInsets.all(2.5),
+              child: Text(tile.group),
+            );
+          }),
         ],
       ),
    );
 }
 
-class PopulationModel {
-  const PopulationModel(this.continent, this.populationInMillions);
+class SocialMediaUsers {
+  const SocialMediaUsers(this.country, this.socialMedia, this.usersInMillions);
 
-  final String continent;
-  final double populationInMillions;
+  final String country;
+  final String socialMedia;
+  final double usersInMillions;
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-![Treemap label builder](images/getting-started/label_builder.png)
+![Treemap labels](images/getting-started/labels.png)
 
-Add tooltip
+## Add tooltip
 
-You can add tooltip to the treemap using the [`tooltipBuilder`] property of the [`TreemapLevel`] which is added to the [`levels`] collection property in the [`SfTreemap`] for showing additional information about the specific tile.
+You can enable tooltip for any tile in the treemap and able to return the completely customized widget using the `tooltipBuilder` property.
 
 {% tabs %}
 {% highlight Dart %}
 
-List<PopulationModel> _dataSource;
+List<SocialMediaUsers> _source;
 
 @override
 void initState() {
-   _dataSource = <PopulationModel>[
-      PopulationModel('Asia', 25.4),
-      PopulationModel('South America', 19.11),
-      PopulationModel('North America', 13.3),
-      PopulationModel('Europe', 10.65),
-      PopulationModel('Africa', 7.54),
-      PopulationModel('Australia', 4.93),
+   _source = <SocialMediaUsers>[
+      SocialMediaUsers('India', 'Facebook', 25.4),
+      SocialMediaUsers('USA', 'Instagram', 19.11),
+      SocialMediaUsers('Japan', 'Facebook', 13.3),
+      SocialMediaUsers('Germany', 'Instagram', 10.65),
+      SocialMediaUsers('France', 'Twitter', 7.54),
+      SocialMediaUsers('UK', 'Instagram', 4.93),
    ];
    super.initState();
 }
@@ -209,38 +209,35 @@ void initState() {
 Widget build(BuildContext context) {
   return Scaffold(
      body: SfTreemap(
-        dataCount: _dataSource.length,
+        dataCount: _source.length,
         weightValueMapper: (int index) {
-          return _dataSource[index].populationInMillions;
+          return _source[index].usersInMillions;
         },
         levels: [
           TreemapLevel(
             groupMapper: (int index) {
-              return _dataSource[index].continent;
-            },
-            color: Colors.teal[200],
-            padding: const EdgeInsets.all(1.5),
-            labelBuilder: (BuildContext context, TreemapTile tile) {
-               return Text('${tile.group}');
+              return _source[index].country;
             },
             tooltipBuilder: (BuildContext context, TreemapTile tile) {
-               return Padding(
-                  padding: const EdgeInsets.all(10),
-                     child: Text('Continent   : ${tile.group}\nPopulation : ${tile.weight}M',
-                         style: TextStyle(color: Colors.white)),
-                     );
-                },
-            ),
+              return Padding(
+                padding: const EdgeInsets.all(10),
+                child: Text(
+                    'Country          : ${tile.group}\nSocial media : ${tile.weight}M',
+                    style: TextStyle(color: Colors.white)),
+              );
+            },
+          ),
         ],
       ),
    );
 }
 
-class PopulationModel {
-  const PopulationModel(this.continent, this.populationInMillions);
+class SocialMediaUsers {
+  const SocialMediaUsers(this.country, this.socialMedia, this.usersInMillions);
 
-  final String continent;
-  final double populationInMillions;
+  final String country;
+  final String socialMedia;
+  final double usersInMillions;
 }
 
 {% endhighlight %}
@@ -248,24 +245,24 @@ class PopulationModel {
 
 ![Treemap tooltip](images/getting-started/tooltip.png)
 
-Add legend
+## Add legend
 
-You can show clear information about the data plotted on the treemap and it can be added using the [`legend`] property in the [`SfTreemap`].
+You can show legend by initializing the `legend` property in the `SfTreemap`. It is possible to customize the legend item's color and text using the `SfTreemap.colorMappers` property.
 
 {% tabs %}
 {% highlight Dart %}
 
-List<PopulationModel> _dataSource;
+List<SocialMediaUsers> _source;
 
 @override
 void initState() {
-   _dataSource = <PopulationModel>[
-      PopulationModel('Asia', 25.4),
-      PopulationModel('South America', 19.11),
-      PopulationModel('North America', 13.3),
-      PopulationModel('Europe', 10.65),
-      PopulationModel('Africa', 7.54),
-      PopulationModel('Australia', 4.93),
+   _source = <SocialMediaUsers>[
+      SocialMediaUsers('India', 'Facebook', 25.4),
+      SocialMediaUsers('USA', 'Instagram', 19.11),
+      SocialMediaUsers('Japan', 'Facebook', 13.3),
+      SocialMediaUsers('Germany', 'Instagram', 10.65),
+      SocialMediaUsers('France', 'Twitter', 7.54),
+      SocialMediaUsers('UK', 'Instagram', 4.93),
    ];
    super.initState();
 }
@@ -274,19 +271,14 @@ void initState() {
 Widget build(BuildContext context) {
   return Scaffold(
      body: SfTreemap(
-        dataCount: _dataSource.length,
+        dataCount: _source.length,
         weightValueMapper: (int index) {
-          return _dataSource[index].populationInMillions;
+          return _source[index].usersInMillions;
         },
         levels: [
           TreemapLevel(
             groupMapper: (int index) {
-              return _dataSource[index].continent;
-            },
-            color: Colors.teal[200],
-            padding: const EdgeInsets.all(1.5),
-            labelBuilder: (BuildContext context, TreemapTile tile) {
-              return Text('${tile.group}');
+              return _source[index].country;
             },
           ),
         ],
@@ -295,11 +287,12 @@ Widget build(BuildContext context) {
    );
 }
 
-class PopulationModel {
-  const PopulationModel(this.continent, this.populationInMillions);
+class SocialMediaUsers {
+  const SocialMediaUsers(this.country, this.socialMedia, this.usersInMillions);
 
-  final String continent;
-  final double populationInMillions;
+  final String country;
+  final String socialMedia;
+  final double usersInMillions;
 }
 
 {% endhighlight %}
