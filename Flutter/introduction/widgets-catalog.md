@@ -21,7 +21,7 @@ This section provides the user guide link for each widget and its package link.
 </tr>
 
 <tr>
-<td>GRID</td>
+<td>Grid</td>
 <td><a href = "https://help.syncfusion.com/flutter/datagrid/overview">DataGrid</a></td>
 <td><a href="https://pub.dev/packages/syncfusion_flutter_datagrid">syncfusion_flutter_datagrid</a></td>
 </tr>
