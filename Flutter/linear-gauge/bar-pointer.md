@@ -125,7 +125,7 @@ By default, the bar pointer is positioned cross to the axis. This position can b
   
 {% endhighlight %}
 
-![Customize linear gauge for bar pointer position](images/bar-pointer/default_bar_pointer.png)
+![Customize linear gauge for bar pointer position](images/bar-pointer/bar_pointer_change_position.png)
 
 ## Change the offset
 
