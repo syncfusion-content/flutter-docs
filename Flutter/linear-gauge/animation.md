@@ -9,11 +9,11 @@ documentation: ug
 
 # Flutter Linear Gauge Animation
 
-All Linear Gauge elements such as axis along with ticks and labels, range, bar pointer, shape marker pointer and widget marker pointer can be animated separately. 
+All Linear Gauge elements such as `axis` along with `ticks` and `labels`, `range`, `bar pointer`, `shape marker pointer` and `widget marker pointer` can be animated separately. 
 
 ## Animate axis
 
-The `animateAxis` and `animationDuration` properties in `SfLinearGauge` is used to  animate the axis track along with the ticks and labels. The axis will be have a fade-in with opacity animation when this `animateAxis` is set to true. By default, the `animateAxis` is set to false. 
+The `animateAxis` and `animationDuration` properties in `SfLinearGauge` is used to  animate the axis track along with the ticks and labels. The axis will have a fade-in with opacity animation when this `animateAxis` is set to true. By default, the `animateAxis` is set to false. 
 
 {% highlight dart %}
 
@@ -73,7 +73,7 @@ The `animationType` supports the below animations. The default animation type is
 
 * `bounceOut`
 * `ease`
-* `easeInCircle`
+* `easeInCir`
 * `easeOutBack`
 * `elasticOut`
 * `linear`
@@ -108,27 +108,8 @@ The below code example demonstrates updating the animation for bar pointer.
 
 ### Bar pointer with `bounceOut` animation
 
-![shape pointer in linear gauge](images/getting-started/add_shape_pointer.png)
+![shape pointer in linear gauge](images/animation/bar-pointer/bounceout.gif)
 
-### Bar pointer with `ease` animation
-
-![shape pointer in linear gauge](images/getting-started/add_shape_pointer.png)
-
-### Bar pointer with `easeOutBack` animation
-
-![shape pointer in linear gauge](images/getting-started/add_shape_pointer.png)
-
-### Bar pointer with `elasticOut` animation
-
-![shape pointer in linear gauge](images/getting-started/add_shape_pointer.png)
-
-### Bar pointer with `linear` animation
-
-![shape pointer in linear gauge](images/getting-started/add_shape_pointer.png)
-
-### Bar pointer with `slowMiddle` animation
-
-![shape pointer in linear gauge](images/getting-started/add_shape_pointer.png)
 
 ### Animate Marker Pointers (Shape and Widget Pointers)
 
@@ -136,27 +117,7 @@ Both the shape and widget marker pointers will have the same set of properties a
 
 ### Marker pointer with `bounceOut` animation
 
-![shape pointer in linear gauge](images/getting-started/add_shape_pointer.png)
-
-### Marker pointer with `ease` animation
-
-![shape pointer in linear gauge](images/getting-started/add_shape_pointer.png)
-
-### Marker pointer with `easeOutBack` animation
-
-![shape pointer in linear gauge](images/getting-started/add_shape_pointer.png)
-
-### Marker pointer with `elasticOut` animation
-
-![shape pointer in linear gauge](images/getting-started/add_shape_pointer.png)
-
-### Marker pointer with `linear` animation
-
-![shape pointer in linear gauge](images/getting-started/add_shape_pointer.png)
-
-### Marker pointer with `slowMiddle` animation
-
-![shape pointer in linear gauge](images/getting-started/add_shape_pointer.png)
+![shape pointer in linear gauge](images/animation/shape-pointer/bounceout.gif)
 
 
 

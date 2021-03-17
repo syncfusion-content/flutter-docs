@@ -40,7 +40,7 @@ The code snippet creates a default bar pointer with the value 50.
 
 ## Change the bar pointer thickness
 
-The thickness can be changed by the 'thickness' property of the bar pointer. The below code snippet demonstrates the same. 
+The thickness can be changed by the `thickness` property of the bar pointer. The below code snippet demonstrates the same. 
 
 {% highlight dart %} 
 
@@ -69,7 +69,7 @@ The thickness can be changed by the 'thickness' property of the bar pointer. The
 
 ## Change the edge style
 
-The bar pointer edge style can be changed with the 'edgeStyle' property of bar pointer. The edge style can be startCurve, endCurve, bothCurve, and bothFlat.The default value is bothFlat.
+The edge style can be changed with the `edgeStyle` property of bar pointer. The edge style can be any of the `startCurve`, `endCurve`, `bothCurve`, and `bothFlat` options.The default value is `bothFlat`.
 
 {% highlight dart %} 
 
@@ -127,9 +127,39 @@ By default, the bar pointer is positioned cross to the axis. This position can b
 
 ![Customize linear gauge for bar pointer position](images/bar-pointer/default_bar_pointer.png)
 
+## Change the offset
+
+In addition to position the bar pointer, it is also possible to change the offset of the bar pointer. The `offset` is the distance from the axis. The `offset` cannot be negative and the cross positioned elements will not get affected by the `offset` value. The below code snippet demonstrates changing the offset value of the bar pointer. 
+
+{% highlight dart %} 
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      color: Colors.white,
+      home: Scaffold(
+        body: Center(
+          child: SfLinearGauge(
+            barPointers: [
+              LinearBarPointer(
+                value: 50,
+                position: LinearElementPosition.outside,
+                offset: 5,
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+  
+{% endhighlight %}
+
+![Customize linear gauge bar pointer offset](images/bar-pointer/bar_pointer_offset.png)
+
 ## Apply color to bar pointer
 
-The color of the bar pointer can be changed by the 'color' property. The below code snippet demonstrates the same. 
+The color of the bar pointer can be changed by the `color` property. The below code snippet demonstrates the same. 
 
 {% highlight dart %} 
 
@@ -159,7 +189,7 @@ The color of the bar pointer can be changed by the 'color' property. The below c
 
 ## Apply radial gradient colors
 
-The gradient colors can be applied by using the shaderCallback property of bar pointer. The below code snippet demonstrates applying a radial gradient colors to the bar pointer.
+The gradient colors can be applied by using the `shaderCallback` property of bar pointer. The below code snippet demonstrates applying a radial gradient colors to the bar pointer.
 
 {% highlight dart %} 
 
@@ -196,7 +226,7 @@ The gradient colors can be applied by using the shaderCallback property of bar p
 
 ## Apply linear gradient colors
 
-The gradient colors can be applied by using the shaderCallback property of bar pointer. The below code snippet demonstrates applying a linear gradient colors to the bar pointer.
+The gradient colors can be applied by using the `shaderCallback` property of bar pointer. The below code snippet demonstrates applying a linear gradient colors to the bar pointer.
 
 {% highlight dart %} 
 
@@ -231,7 +261,7 @@ The gradient colors can be applied by using the shaderCallback property of bar p
 
 ## Apply sweep gradient colors
 
-The gradient colors can be applied by using the shaderCallback property of bar pointer. The below code snippet demonstrates applying a sweep gradient colors to the bar pointer.
+The gradient colors can be applied by using the `shaderCallback` property of bar pointer. The below code snippet demonstrates applying a sweep gradient colors to the bar pointer.
 
 {% highlight dart %} 
 
@@ -264,39 +294,10 @@ The gradient colors can be applied by using the shaderCallback property of bar p
 
 ![Apply radial gradient color](images/bar-pointer/sweep_gradient_bar.png)
 
-## Change the offset
-
-In addition to position the bar pointer, it is also possible to change the offset of the bar pointer. The offset is calculated as the distance from the axis. The offset cannot be negative and the cross positioned elements will not get affected by the offset value. The below code snippet demonstrates changing the offset value of the bar pointer. 
-
-{% highlight dart %} 
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      color: Colors.white,
-      home: Scaffold(
-        body: Center(
-          child: SfLinearGauge(
-            barPointers: [
-              LinearBarPointer(
-                value: 50,
-                position: LinearElementPosition.outside,
-                offset: 5,
-              )
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-  
-{% endhighlight %}
-
-![Customize linear gauge bar pointer offset](images/bar-pointer/bar_pointer_offset.png)
 
 ## Customize the border
 
-The border can be customized with 'borderWidth' and 'borderColor' properties of bar pointer. The below code snippet demonstrates the same.
+The border can be customized with `borderWidth` and `borderColor` properties of bar pointer. The below code examples demonstrates the same.
 
 {% highlight dart %} 
 
