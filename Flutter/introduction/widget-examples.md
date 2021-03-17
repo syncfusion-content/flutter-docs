@@ -31,9 +31,7 @@ The section contains the GitHub link for each widget’s code examples. This is 
 </td>
 
 <td><p><a href="https://help.syncfusion.com/flutter/barcode/overview">Barcode</a></p></td>
-
 <td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/barcodes">samples/barcodes</a></p></td>
-
 </tr>
 
 <tr>
@@ -77,7 +75,7 @@ The section contains the GitHub link for each widget’s code examples. This is 
 </tr>
 
 <tr>
-<td><p><a href="https://help.syncfusion.com/flutter/radial-gauge/overview">Radial Gauge</a></p></td>
+<td><p><a href="https://help.syncfusion.com/flutter/radial-gauge/overview">Radial gauge</a></p></td>
 <td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/gauge">samples/gauge</a></p>
 </td>
 </tr>
@@ -102,7 +100,7 @@ The section contains the GitHub link for each widget’s code examples. This is 
 <tr>
 <td><p>Viewer</p></td>
 <td><p><a href="http://172.16.0.76/flutter/pdf-viewer/overview">PDF viewer</a></p></td>
-<td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/pdf_viewer">samples/pdf_viewer</a></p>
+<td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/pdf_viewer">samples/pdfviewer</a></p>
 </td></tr>
 
 <tr>
@@ -137,7 +135,7 @@ The section contains the GitHub link for each widget’s code examples. This is 
 <tr>
 <td><p>Signature pad</p></td>
 <td><p><a href="https://help.syncfusion.com/flutter/signaturepad/overview">Signature pad</a></p></td>
-<td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/signature_pad">samples/signature_pad</a></p></td>
+<td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/signature_pad">samples/signaturepad</a></p></td>
 </tr>
 
 </table>
