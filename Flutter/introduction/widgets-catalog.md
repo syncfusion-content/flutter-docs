@@ -100,7 +100,7 @@ This section provides the user guide link for each widget and its package link.
 <tr>
 <td><p>Viewer</p></td>
 <td><p><a href="https://help.syncfusion.com/flutter/pdf-viewer/overview">PDF viewer</a></p></td>
-<td><p><a href="https://pub.dev/packages/syncfusion_flutter_pdfviewer">syncfusion_flutter_pdf_viewer</a></p>
+<td><p><a href="https://pub.dev/packages/syncfusion_flutter_pdfviewer">syncfusion_flutter_pdfviewer</a></p>
 </td></tr>
 
 <tr>
@@ -135,7 +135,7 @@ This section provides the user guide link for each widget and its package link.
 <tr>
 <td><p>Signature pad</p></td>
 <td><p><a href="https://help.syncfusion.com/flutter/signaturepad/overview">Signature pad</a></p></td>
-<td><p><a href="https://pub.dev/packages/syncfusion_flutter_signaturepad">syncfusion_flutter_signature_pad</a></p></td>
+<td><p><a href="https://pub.dev/packages/syncfusion_flutter_signaturepad">syncfusion_flutter_signaturepad</a></p></td>
 </tr>
 
 </table>
