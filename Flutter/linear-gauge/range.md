@@ -7,9 +7,9 @@ control: SfLinearGauge
 documentation: ug
 ---
 
-# Default Linear Gauge range
+# Default Linear Gauge Range
 
-A range is a visual element that helps you quickly visualize where a range falls on the axis track. Multiple ranges with different styles can be added to a linear gauge. The default style of range will be as below. 
+A `range` is a visual element that helps you quickly visualize where a range falls on the axis track. Multiple ranges with different styles can be added to a linear gauge. The default style of range will be as below. 
 
 {% highlight dart %} 
 
@@ -37,7 +37,7 @@ A range is a visual element that helps you quickly visualize where a range falls
 
 ## Add multiple ranges
 
-You can add multiple ranges for an axis. The below code sipper demonstrates adding 3 ranges in a Linear Gauge.
+You can add multiple ranges for an axis. The below code example demonstrates adding 3 ranges in a Linear Gauge.
 
 {% highlight dart %} 
 
@@ -70,7 +70,7 @@ You can add multiple ranges for an axis. The below code sipper demonstrates addi
 
 ## Customize the range shape and thickness
 
-A Linear Gauge range has 3 values to draw a range - start value, mid value and end value.These values indicate where the range falls in the axis. In addition to this values, the range can be updated with the thickness of a range in it's individual start, mid and end positions. To draw a line or rectangle, just start value, start width, end value and end width are enough - as like the above code snippet in 'Default Linear Gauge range'. But to draw a concave, convex and exponential shapes for a range the mid value and mid width properties are needed. For this the rangeShapeType is used to bring the curve. The below code snippet demonstrates how to draw a concave shape in range using the min value.
+A Linear Gauge range has 3 values to draw a range - `startValue`, `midValue` and `endValue`.These values indicate where the range falls in the axis. In addition to this values, the shape of the range can be customized by `startWidth`, `midWidth` and `endWidth` properties. To draw a line or rectangle, just `startValue`, `startWidth`, `endValue` and `endWidth` are enough - as like the above code snippet in 'Default Linear Gauge Range' topic. But to draw a concave, convex and exponential like shapes the `midValue` and `midWidth` properties are needed. For this the `rangeShapeType` is used to bring the curve. The below code snippet demonstrates how to bring a concave shape for a range.
 
 {% highlight dart %} 
 
@@ -103,7 +103,7 @@ A Linear Gauge range has 3 values to draw a range - start value, mid value and e
 
 ## Change the color of a range
 
-The color of a range can be changed by setting the color property of a range. The below code snippet demonstrates changes the color property of the range.
+The color of a range can be changed by setting the `color` property of a range. The below code example demonstrates changing the color property of the range.
 
 {% highlight dart %} 
 
@@ -128,7 +128,7 @@ The color of a range can be changed by setting the color property of a range. Th
 
 ## Apply radial gradient colors to a range
 
-The gradient colors can be applied by using the shaderCallback property of range. The below code snippet demonstrates applying a RadialGradient color to the range.
+The gradient colors can be applied by using the `shaderCallback` property of a range. The below code example demonstrates applying a radial gradient color to the range.
 
 {% highlight dart %} 
 
@@ -163,7 +163,7 @@ The gradient colors can be applied by using the shaderCallback property of range
 
 ## Apply linear gradient colors to a range
 
-The below code snippet demonstrates applying a LinearGradient color to the range.
+The below code snippet demonstrates applying a linear gradient colors to the range.
 
 {% highlight dart %} 
 
@@ -195,7 +195,7 @@ The below code snippet demonstrates applying a LinearGradient color to the range
 
 ## Apply sweep gradient colors to a range
 
-The below code snippet demonstrates applying a LinearGradient color to the range.
+The below code snippet demonstrates applying a sweep gradient colors to the range.
 
 {% highlight dart %} 
 
@@ -234,9 +234,9 @@ The below code snippet demonstrates applying a LinearGradient color to the range
 
 ![Initialize linear gauge for range](images/gauge-range/sweep_gradient_range.png)
 
-## Position the range
+## Customize the range poistion
 
-It is possible to position the ranges inside, cross, and outside the axis. By default, the range will be positioned outside the axis. The position property of the range is used to position the range. The below code snippet demonstrates the same.
+It is possible to position the ranges `inside`, `cross`, and `outside` the axis. By default, the range will be positioned `outside` the axis. The `position` property of the range is used to position the range. The below code snippet demonstrates the same.
 
 {% highlight dart %} 
 

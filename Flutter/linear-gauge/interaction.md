@@ -7,13 +7,13 @@ control: SfLinearGauge
 documentation: ug
 ---
 
-# Flutter Linear Gauge Interaction
+# Flutter Linear Gauge interaction
 
 The shape and widget marker pointers in a Linear Gauge can be moved from one value to another with swipe or drag gestures.
 
-## Interaction with marker pointer
+## Interaction with marker pointers
 
-The `onValueChanged` call back is used to change the value of the marker pointer.
+The `onValueChanged` call back is used to change the value of the marker pointer at run-time.
 
 The below code snippet demonstrates updating the marker pointer value based on swipe or drag gesture.
 
