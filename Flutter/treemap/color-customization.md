@@ -224,7 +224,7 @@ Widget build(BuildContext context) {
         },
         levels: [
           TreemapLevel(
-            padding: const EdgeInsets.all(2.5),
+            padding: EdgeInsets.all(2.5),
             groupMapper: (int index) {
               return _source[index].country;
             },
@@ -239,7 +239,7 @@ Widget build(BuildContext context) {
 }
 
 class SocialMediaUsers {
-  const SocialMediaUsers(this.country, this.socialMedia, this.usersInMillions);
+  SocialMediaUsers(this.country, this.socialMedia, this.usersInMillions);
 
   final String country;
   final String socialMedia;
