@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of Syncfusion Flutter Treemap
-description: A Flutter Treemap library for creating interactive treemap to visualize flat and hierarchical data as rectangles that are sized and colored based on quantitative variables using squarified, slice, and dice algorithms.
+description: A Flutter Treemap library for creating interactive treemap to visualize flat and hierarchical data that are sized and colored based on quantitative variables.
 platform: Flutter
 control: SfTreemap
 documentation: ug
