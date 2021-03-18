@@ -100,10 +100,10 @@ The below code snippet sets a gradient color to the axis track.
             child: SfLinearGauge(
                 axisTrackStyle: LinearAxisTrackStyle(
                     gradient: LinearGradient(
-                        colors: [Colors.deepOrange, Colors.deepPurple],
-                        begin: const FractionalOffset(0.0, 0.0),
-                        end: const FractionalOffset(0.5, 0.0),
-                        stops: [0.0, 1.0],
+                        colors: [Colors.purple, Colors.blue],
+                        begin: Alignment.centerLeft,
+                        end: Alignment.centerRight,
+                        stops: [0.1, 0.5],
                         tileMode: TileMode.clamp))),
           ),
         ),
