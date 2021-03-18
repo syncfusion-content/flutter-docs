@@ -19,13 +19,29 @@ The below code snippet demonstrates updating the marker pointer value based on s
 
 {% highlight dart %}
 
+  double _pointerValue = 55;
   @override
   Widget build(BuildContext context) {
-    return SfLinearGauge(
-      isMirrored: true,
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: Container(
+                  child: SfLinearGauge(
+                      markerPointers: [
+                        LinearShapePointer(
+                          value: _pointerValue,
+                          onValueChanged: (value) => {
+                            setState(() => {_pointerValue = value})
+                          },
+                        )
+                  ]),
+                )
+            )
+        )
     );
   }
+}
 
 {% endhighlight %}
 
-![shape pointer in linear gauge](images/getting-started/add_shape_pointer.png)
+![shape pointer in linear gauge](images/interaction/interactions.png)

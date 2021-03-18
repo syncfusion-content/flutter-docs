@@ -113,7 +113,7 @@ The below code snippet sets a gradient color to the axis track.
 
 {% endhighlight %}
 
-![Update linear gauge for axis color](images/axis/axis_corner_style.png)
+![Update linear gauge for axis color](images/axis/axis_gradient.png)
 
 ## Apply solid color
 
@@ -137,7 +137,7 @@ The below code snippet sets solid gradient colors to the axis track.
 
 {% endhighlight %}
 
-![Update linear gauge for axis color](images/axis/axis_corner_style.png)
+![Update linear gauge for axis color](images/axis/axis_solid_color.png)
 
 ## Customize the borders
 
