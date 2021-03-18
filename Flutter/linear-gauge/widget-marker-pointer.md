@@ -3,13 +3,13 @@ layout: post
 title: Customize widget pointers in a linear gauge | Syncfusion
 description: Detailed tutorial about the widget pointers on Linear Gauge Flutter widget | Flutter Linear Gauge widget|
 platform: flutter
-control: Overview
+control: SfLinearGauge
 documentation: ug
 ---
 
 # Linear Gauge Shape Marker Pointers
 
-The 'LinearWidgetPointer' in 'SfLinearGauge' allows to use any Flutter widget as marker pointer. The below code snippet uses a container as marker widget.
+The `LinearWidgetPointer` in `SfLinearGauge` allows to use any Flutter widget as marker pointer. The below code snippet uses a [`container`](https://api.flutter.dev/flutter/widgets/Container-class.html) as marker widget.
 
 {% highlight dart %} 
 
@@ -39,7 +39,7 @@ The 'LinearWidgetPointer' in 'SfLinearGauge' allows to use any Flutter widget as
 
 ## Change marker alignment
 
-The marker alignment can be changed by the 'markerAlignment' property of 'LinearWidgetPointer'. The available marker positions are 'start', 'end', and 'center'. 
+The widget marker pointer's alignment can be changed by the `markerAlignment` property of `LinearWidgetPointer`. The available marker positions are `start`, `end`, and `center`. 
 
 {% highlight dart %} 
 
@@ -65,7 +65,7 @@ The marker alignment can be changed by the 'markerAlignment' property of 'Linear
 
 ## Change the position
 
-By default, the shape pointer is positioned outside to the axis. This position can be changed by the 'position' property of a 'LinearShapePointer'. It is possible to position the shape pointer 'inside', 'cross', and 'outside' the axis. The below code snippet demonstrates changing the shape pointer position to inside the axis. 
+By default, the shape pointer is positioned `outside` to the axis. This position can be changed by the `position` property of a `LinearShapePointer`. It is possible to position the shape pointer as `inside`, `cross`, and `outside` to the axis. The below code snippet demonstrates changing the shape pointer position to `inside` the axis. 
 
 {% highlight dart %} 
 
@@ -96,7 +96,7 @@ By default, the shape pointer is positioned outside to the axis. This position c
 
 ## Change the offset
 
-In addition to position the shape pointer, it is also possible to change the offset of the shape pointer. The offset is calculated as the distance from the axis. The offset cannot be negative and the cross positioned elements will not get affected by the offset value. The below code snippet demonstrates changing the offset value of the shape pointer. 
+In addition to position the widget marker pointer, it is also possible to change the offset of the shape pointer. The `offset` is the distance from the axis and it cannot be negative. The cross positioned elements will not get affected by the `offset` value. The below code snippet demonstrates changing the offset value of the shape pointer. 
 
 {% highlight dart %} 
 

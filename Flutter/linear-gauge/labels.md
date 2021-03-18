@@ -3,7 +3,7 @@ layout: post
 title: Customize labels in a linear gauge | Linear Gauge widget| Syncfusion
 description: Tutorial about the available styles of labels on Linear Gauge Flutter widget.| Flutter Linear Gauge widget|
 platform: flutter
-control: Overview
+control: SfLinearGauge
 documentation: ug
 ---
 
@@ -15,13 +15,13 @@ The default style of axis labels are as below.
 
 ## Customize Linear Gauge label styles
 
-Axis labels can be customized using the axisLabelStyle property of SfLinearGauge. The axisLabelStyle property have the below properties to customize the axis labels.
+Axis labels can be customized using the `axisLabelStyle` property of `SfLinearGauge`. The `axisLabelStyle` property have the below properties to customize the axis labels.
 
-* color – Allows to customize the color of the labels.
-* fontFamily – Allows to specify the font family for labels.
-* fontStyle – Allows to specify the font style for labels.
-* fontWeight – Allows to specify the font weight for labels.
-* fontSize – Allows to specify the font size for labels.
+* `color` – Allows to customize the color of the labels.
+* `fontFamily` – Allows to specify the font family for labels.
+* `fontStyle` – Allows to specify the font style for labels.
+* `fontWeight` – Allows to specify the font weight for labels.
+* `fontSize` – Allows to specify the font size for labels.
 
 {% highlight dart %} 
 
@@ -51,7 +51,7 @@ Widget build(BuildContext context) {
 
 ## Switch Linear Gauge label visibility
 
-The showLabels property of SfLinearGauge allows to show or hide the visibility of axis labels. The default value of the property is true.
+The `showLabels` property of `SfLinearGauge` allows to show or hide the visibility of axis labels. The default value of the property is true.
 
 {% highlight dart %} 
 
@@ -73,7 +73,7 @@ Widget build(BuildContext context) {
 
 ## Customize the interval between labels
 
-The interval between labels can be customized using the interval property of SfLinearGauge. The major ticks are generated based on this interval property.
+The `interval` between labels can be customized using the interval property of `SfLinearGauge`. The major ticks are generated based on this interval property.
 
 {% highlight dart %} 
 
@@ -98,7 +98,7 @@ Widget build(BuildContext context) {
 
 ## Change the label position
 
-The linear axis allows to position the labels either inside or outside the axis track using the labelsPosition properties. By default, labels are positioned inside the axis track.
+The linear axis allows to position the labels either `inside` or `outside` the axis track using the `labelsPosition` property. By default, labels are positioned `inside` the axis track.
 
 {% highlight dart %} 
 
@@ -125,7 +125,7 @@ Widget build(BuildContext context) {
 
 ## Change the label offset
 
-The 'labelOffset' property allows to adjust the distance between the tick-end and the labels. 
+The `labelOffset` property allows to adjust the distance between the tick-end and the labels. 
 
 {% highlight dart %} 
 
@@ -150,7 +150,7 @@ Widget build(BuildContext context) {
 
 ##  Customize the maximum number of visible labels
 
-By default, a maximum of three labels are displayed for each 100 logical pixels in an axis. The maximum number of labels that should present within 100 logical pixels length can be customized using the maximumLabels property of the axis. 
+By default, a maximum of three labels are displayed for each 100 logical pixels in an axis. The maximum number of labels that should present within 100 logical pixels length can be customized using the `maximumLabels` property of the axis. 
 
 {% highlight dart %} 
 

@@ -3,22 +3,22 @@ layout: post
 title: Customize ticks in a linear gauge | Linear Gauge widget| Syncfusion
 description: Tutorial about the available styles of ticks on Linear Gauge Flutter widget.| Flutter Linear Gauge widget|
 platform: flutter
-control: Overview
+control: SfLinearGauge
 documentation: ug
 ---
 
-# Default Linear Gauge ticks
+# Default Linear Gauge Ticks
 
 The default style of axis ticks are as below.
 
 ![Initialize linear gauge for axis](images/getting-started/default_linear_gauge.png)
 
-## Customize Linear Gauge ticks
+## Customize Linear Gauge Ticks
 
-There are two type of ticks in the Flutter Linear Gauge namely major and minor ticks. In the above image, the comparatively larger ticks are major ticks and the ticks between the major ticks are minor ticks. The major and minor tick of a SfLinearGauge can be customized using the majorTickStyle and minorTickStyle properties. The following properties can be customized for both the major and the minor ticks:
-* color – Allows to customize the tick color.
-* thickness – Allows to customize the thickness of ticks.
-* length – Specifics the length of ticks.
+There are two type of ticks in the Flutter Linear Gauge namely major and minor ticks. In the above image, the comparatively larger ticks are major ticks and the ticks between the major ticks are minor ticks. The major and minor tick of a `SfLinearGauge` can be customized using the `majorTickStyle` and `minorTickStyle` properties. The following properties can be customized for both the major and the minor ticks:
+* `color` – Allows to customize the tick color.
+* `thickness` – Allows to customize the thickness of ticks.
+* `length` – Specifics the length of ticks.
 
 {% highlight dart %} 
 
@@ -44,7 +44,7 @@ Widget build(BuildContext context) {
 
 ## Customize minor tick interval
 
-The major ticks are generated based on the interval property which is documented in 'Customize the interval between labels' topic. The minor ticks are calculated using the minorTicksPerInterval property of SfLinearGauge. By default, the value of this property is 1.
+The major ticks are generated based on the `interval` property which is documented in 'Customize the interval between labels' topic. The minor ticks are calculated using the `minorTicksPerInterval` property of `SfLinearGauge`. By default, the value of this property is 1.
 
 {% highlight dart %} 
 
@@ -69,13 +69,13 @@ Widget build(BuildContext context) {
 
 ## Switch tick visibility
 
-The showTicks property of the axis is used to enable or disable the visibility of both the major and the minor ticks of axis. The default value of this property is true.
+The `showTicks` property of the axis is used to enable or disable the visibility of both the major and the minor ticks. The default value of this property is true.
 
 ![customize linear gauge ticks visibility](images/axis-ticks/linear-gauge-tick-visibility.png)
 
 ## Customize tick placement
 
-The linear axis allows to position the ticks either inside or outside the axis track using the ticksPosition property. By default, ticks are positioned inside the axis track.
+The linear axis allows to position the ticks either inside or outside the axis track using the `ticksPosition` property. By default, ticks are positioned inside the axis track.
 
 {% highlight dart %} 
 
@@ -100,10 +100,9 @@ Widget build(BuildContext context) {
 ![customize linear gauge ticks visibility](images/axis-ticks/tick-placement.png)
 
 
+## Customize tick offset
 
-## Customize tick position with offset
-
-The ticks can be moved near or far to the axis line using the tickOffset property. The default value of tick offset is 0. While setting offset for the ticks, the axis labels are also moved along with the ticks.
+The ticks can be moved near or far to the axis line using the `tickOffset` property. The default value of tick offset is 0. While setting offset for the ticks, the axis labels are also moved along with the ticks.
 
 {% highlight dart %} 
 

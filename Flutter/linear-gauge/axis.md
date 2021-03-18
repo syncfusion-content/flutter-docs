@@ -3,7 +3,7 @@ layout: post
 title: Customize axis in a linear gauge | Linear Gauge widget| Syncfusion
 description: Tutorial about deatils of the axis on Linear Gauge Flutter widget | Flutter Linear Gauge widget documentation|
 platform: flutter
-control: Overview
+control: SfLinearGauge
 documentation: ug
 ---
 
@@ -55,11 +55,11 @@ The minimum and maximum properties of a Linear Gauge can be used to customize th
 
 The linear axis track can be customized using the 'axisTrackStyle' property. The 'axisTrackStyle' have the below properties.
 
-* thickness – Customizes the thickness of axis track.
-* color – Customizes the color of the axis track with a solid color.
-* gradient - Customizes the color of the axis track with a gradient color.
-* borderWidth - Customizes the border width of axis track.
-* borderColor - Customizes the border color of axis track.
+* `thickness` – Customizes the thickness of axis track.
+* `color` – Customizes the color of the axis track with a solid color.
+* `gradient` - Customizes the color of the axis track with a gradient color.
+* `borderWidth` - Customizes the border width of axis track.
+* `borderColor` - Customizes the border color of axis track.
 
 The below code snippet demonstrates customizing the thickness and color.
 
@@ -83,11 +83,11 @@ The below code snippet demonstrates customizing the thickness and color.
 
 ![Update linear gauge for axis scale](images/axis/axis_thickness.png)
 
-## Apply solid color
+## Apply gradient colors
 
-The color property of 'axisTrackStyle' allows to set a solid color, while the gradient property of 'axisTrackStyle' allows to set linear-gradient colors to the axis track.
+The `color` property of `axisTrackStyle` allows to set a solid color, while the `gradient` property of `axisTrackStyle` allows to set linear-gradient colors to the axis track.
 
-The below code snippet sets a solid color to the axis track.
+The below code snippet sets a gradient color to the axis track.
 
 {% highlight dart %} 
 
@@ -115,9 +115,9 @@ The below code snippet sets a solid color to the axis track.
 
 ![Update linear gauge for axis color](images/axis/axis_corner_style.png)
 
-## Apply gradient colors
+## Apply solid color
 
-The below code snippet sets linear gradient colors to the axis track.
+The below code snippet sets solid gradient colors to the axis track.
 
 {% highlight dart %} 
 
@@ -141,9 +141,7 @@ The below code snippet sets linear gradient colors to the axis track.
 
 ## Customize the borders
 
-## Apply solid color
-
-The 'borderColor' and 'borderWidth' properties of 'axisTrackStyle' allows to set a border to the axis track.
+The `borderColor` and `borderWidth` properties of `axisTrackStyle` allows to set a border to the axis track.
 
 The below code snippet sets a border to the axis track.
 
@@ -178,7 +176,7 @@ The below code snippet sets a border to the axis track.
 
 ## Customize the corners
 
-The edgeStyle property of axisTrackStyle specifies the corner type for the axis track. The corners can be customized using the bothFlat, bothCurve, startCurve, and endCurve options. The default value of this property is bothFlat.
+The `edgeStyle` property of `axisTrackStyle` specifies the corner type for the axis track. The corners can be customized with `bothFlat`, `bothCurve`, `startCurve`, and `endCurve` options. The default value of this property is `bothFlat`.
 
 {% highlight dart %} 
 
@@ -203,8 +201,8 @@ The edgeStyle property of axisTrackStyle specifies the corner type for the axis 
 
 ## Inverse the axis track
 
-The direction of linear gauge axis can be customized by its isAxisInversed property.
-When the isAxisInversed property is true, the axis can be placed in inverse direction. The default value of the isAxisInversed property is false.
+The direction of linear gauge axis can be customized by `isAxisInversed` property.
+When the `isAxisInversed` property is true, the axis can be placed in inverse direction. The default value of the `isAxisInversed property` is false.
 
 {% highlight dart %} 
 
@@ -229,7 +227,7 @@ You can see that the axis values are displayed from 100 to 0 as the axis track i
 
 ## Extend the axis
 
-The axis track can be extended by the 'axisTrackExtent' property. This will extend the axis track in both ends. The below code snippet demonstrates this. 
+The axis track can be extended by the `axisTrackExtent` property. This will extend the axis track in both ends. The below code snippet demonstrates this. 
 
 {% highlight dart %} 
 
@@ -254,7 +252,7 @@ The axis track can be extended by the 'axisTrackExtent' property. This will exte
 
 ## Change axis track visibility
 
-You can hide the axis track by setting the showAxisTrack property to false. The default value of this property is true.
+You can hide the axis track by setting the `showAxisTrack` property to false. The default value of this property is true.
 
 {% highlight dart %} 
 

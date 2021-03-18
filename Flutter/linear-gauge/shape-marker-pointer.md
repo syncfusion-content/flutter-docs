@@ -3,19 +3,19 @@ layout: post
 title: Customize shape pointers in a linear gauge | Syncfusion
 description: Detailed tutorial about the shape pointers on Linear Gauge Flutter widget | Flutter Linear Gauge widget|
 platform: flutter
-control: Overview
+control: SfLinearGauge
 documentation: ug
 ---
 
 # Linear Gauge Shape Marker Pointers
 
-The 'LinearShapePointer' in 'SfLinearGauge' have the below pre-defined shapes to mark a specific value. The default shape pointer is inverted triangle. 
+The `LinearShapePointer` in `SfLinearGauge` have the below pre-defined shapes to mark a specific value. The default shape pointer is inverted `invertedTriangle`. 
 
-1. Triangle
-2. Inverted Triangle
-3. Circle
-4. Diamond
-5. Rectangle
+1. `Triangle`
+2. `Inverted Triangle`
+3. `Circle`
+4. `Diamond`
+5. `Rectangle`
 
 The below is the default appearance of default shape pointer.
 
@@ -40,7 +40,7 @@ The below is the default appearance of default shape pointer.
 
 ## Change the size
 
-The size of the marker pointer can be changed by the 'height' and 'width' properties of 'LinearShapePointer'. The below code snippet demonstrates changing the size of a shape pointer.
+The size of the marker pointer can be changed by the `height` and `width` properties of `LinearShapePointer`. The below code snippet demonstrates changing the size of a shape pointer.
 
 {% highlight dart %} 
 
@@ -68,7 +68,7 @@ The size of the marker pointer can be changed by the 'height' and 'width' proper
 
 ## Change the color
 
-The color of the shape pointer can be changed by the 'color' property. The below code example demonstrates the same.
+The color of the shape pointer can be changed by the `color` property. The below code example demonstrates the same.
 
 {% highlight dart %} 
 
@@ -95,7 +95,9 @@ The color of the shape pointer can be changed by the 'color' property. The below
 
 ## Customize the border
 
-The border can be customized by the 'borderColor' and 'borderWidth' of the 'LinearShapePointer'.
+The border can be customized by the `borderColor` and `borderWidth` of the `LinearShapePointer`.
+
+{% highlight dart %} 
 
   @override
   Widget build(BuildContext context) {
@@ -114,12 +116,14 @@ The border can be customized by the 'borderColor' and 'borderWidth' of the 'Line
       ),
     );
   }
+  
+{% endhighlight %}
 
 ![Change shape pointer border](images/shape-pointer/shape_border.png)
 
 ## Customize the elevation
 
-The elevation can be customized by the 'elevation' and 'elevationColor' properties.
+The elevation can be customized by the `elevation` and `elevationColor` properties.
 
 {% highlight dart %} 
 
@@ -151,7 +155,7 @@ The elevation can be customized by the 'elevation' and 'elevationColor' properti
 
 ## Change marker alignment
 
-The marker alignment can be changed by the 'markerAlignment' property of 'LinearShapePointer'.The available marker alignments are 'start', 'end', and 'center'.
+The marker pointer alignment can be changed by the `markerAlignment` property of `LinearShapePointer`.The available marker pointer alignments are `start`, `end`, and `center`.
 
 {% highlight dart %} 
 
@@ -177,7 +181,7 @@ The marker alignment can be changed by the 'markerAlignment' property of 'Linear
 
 ## Change the position
 
-By default, the shape pointer is positioned outside to the axis. This position can be changed by the 'position' property of a 'LinearShapePointer'. It is possible to position the shape pointer 'inside', 'cross', and 'outside' the axis. The below code snippet demonstrates changing the shape pointer position to inside the axis.  
+By default, the shape pointer is positioned `outside` to the axis. This position can be changed by the `position` property of a `LinearShapePointer`. It is possible to position the shape pointer `inside`, `cross`, and `outside` the axis. The below code snippet demonstrates changing the shape pointer position to inside the axis.  
 
 {% highlight dart %} 
 
@@ -204,7 +208,7 @@ By default, the shape pointer is positioned outside to the axis. This position c
 
 ## Change the offset
 
-In addition to position the shape pointer, it is also possible to change the offset of the shape pointer. The offset is calculated as the distance from the axis. The offset cannot be negative and the cross positioned elements will not get affected by the offset value. The below code snippet demonstrates changing the offset value of the shape pointer. 
+In addition to position the shape pointer, it is also possible to change the offset of the shape pointer. The `offset` is the distance from the axis. The `offset` cannot be negative and the cross positioned elements will not get affected by the `offset` value. The below code snippet demonstrates changing the `offset` value of the shape pointer. 
 
 {% highlight dart %} 
 
