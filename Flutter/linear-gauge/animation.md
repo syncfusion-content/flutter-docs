@@ -33,8 +33,6 @@ The `animateAxis` and `animationDuration` properties in `SfLinearGauge` is used 
 
 {% endhighlight %}
 
-![shape pointer in linear gauge](images/getting-started/add_shape_pointer.png)
-
 ## Animate range
 
 The `animateRange` and `animationDuration` properties in `SfLinearGauge` is used to  animate the axis track along with the ticks and labels. The range will be have a fade-in with opacity animation when this `animateRange` is set to true. By default, the `animateRange` is set to false. 
@@ -56,8 +54,6 @@ The `animateRange` and `animationDuration` properties in `SfLinearGauge` is used
   }
 
   {% endhighlight %}
-
-![shape pointer in linear gauge](images/getting-started/add_shape_pointer.png)
 
 ## Pointer animation
 
