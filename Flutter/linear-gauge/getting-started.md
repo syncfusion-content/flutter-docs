@@ -159,9 +159,11 @@ The below code snippet demonstrates adding a widget pointer.
         markerPointers: [
           LinearWidgetPointer(
             value: 40,
+              child: Container(
               height: 20,
               width: 20,
-              decoration: BoxDecoration(color: Colors.blueAccent)          
+              decoration: BoxDecoration(color: Colors.blueAccent),
+            ), 
           ),
         ],
       ),
