@@ -23,20 +23,17 @@ There are two type of ticks in the Flutter Linear Gauge namely major and minor t
 {% highlight dart %} 
 
 @override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: Container(
-                child: SfLinearGauge(
-                  majorTickStyle:LinearTickStyle(length: 10, thickness: 2.5, color: Colors.black),
-                  minorTickStyle:LinearTickStyle(length: 5, thickness: 1.75, color: Colors.black)
-                ),
-              )
-          )
-      )
-  );
-}
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+              child: SfLinearGauge(
+                  majorTickStyle: LinearTickStyle(length: 10, thickness: 2.5, color: Colors.black),
+                  minorTickStyle: LinearTickStyle(length: 5, thickness: 1.75, color: Colors.black)),
+            )
+        )
+    );
+  }
 
 {% endhighlight %}
 
@@ -52,12 +49,10 @@ The major ticks are generated based on the `interval` property which is document
 Widget build(BuildContext context) {
   return MaterialApp(
       home: Scaffold(
-          body: Center(
-              child: Container(
+          body: Center(             
                 child: SfLinearGauge(
                  minorTicksPerInterval: 4,
-                ),
-              )
+                ),           
           )
       )
   );
@@ -84,12 +79,10 @@ Widget build(BuildContext context) {
   return MaterialApp(
       home: Scaffold(
           body: Center(
-              child: Container(
                 child: SfLinearGauge(
                     tickPosition: LinearElementPosition.outside,
                     labelPosition: LinearLabelPosition.outside
                 ),
-              )
           )
       )
   );
@@ -111,11 +104,9 @@ Widget build(BuildContext context) {
   return MaterialApp(
       home: Scaffold(
           body: Center(
-              child: Container(
                 child: SfLinearGauge(
                    tickOffset: 20,
                 ),
-              )
           )
       )
   );
