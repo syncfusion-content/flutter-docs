@@ -25,25 +25,23 @@ Axis labels can be customized using the `axisLabelStyle` property of `SfLinearGa
 
 {% highlight dart %} 
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: Container(
-                  child: SfLinearGauge(
+ @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: SfLinearGauge(
                     axisLabelStyle: TextStyle(
                         color: Colors.red,
                         fontSize: 15,
                         fontStyle: FontStyle.italic,
                         fontWeight: FontWeight.bold,
                         fontFamily: 'Times')
-                  )
-              )
-          )
-      )
-  );
-}
+                )
+            )
+        )
+    );
+  }
 
 {% endhighlight %}
 
@@ -59,12 +57,10 @@ The `showLabels` property of `SfLinearGauge` allows to show or hide the visibili
 Widget build(BuildContext context) {
   return MaterialApp(
       home: Scaffold(
-          body: Center(
-              child: Container(
-                  child: SfLinearGauge(
-                   showLabels: false)))
-      )
-  );
+          body: Center( 
+                  child: SfLinearGauge(showLabels: false)) 
+        )
+    );
 }
 
 {% endhighlight %}
@@ -81,15 +77,13 @@ The `interval` between labels can be customized using the interval property of `
 Widget build(BuildContext context) {
   return MaterialApp(
       home: Scaffold(
-          body: Center(
-              child: Container(
+          body: Center( 
                   child: SfLinearGauge(
-                   interval: 20,
-                  )
-              )
-          )
-      )
-  );
+                   interval: 20 
+                )
+            )
+        )
+    );
 }
 
 {% endhighlight %}
@@ -106,16 +100,14 @@ The linear axis allows to position the labels either `inside` or `outside` the a
 Widget build(BuildContext context) {
   return MaterialApp(
       home: Scaffold(
-          body: Center(
-              child: Container(
+          body: Center( 
                 child: SfLinearGauge(
                     tickPosition: LinearElementPosition.outside,
                     labelPosition: LinearLabelPosition.outside
-                ),
-              )
-          )
-      )
-  );
+                ), 
+            )
+        )
+    );
 }
 
 {% endhighlight %}
@@ -133,15 +125,13 @@ The `labelOffset` property allows to adjust the distance between the tick-end an
 Widget build(BuildContext context) {
   return MaterialApp(
       home: Scaffold(
-          body: Center(
-              child: Container(
+          body: Center( 
                 child: SfLinearGauge(
                   labelOffset:20,
-                ),
-              )
-          )
-      )
-  );
+                ),             
+            )
+        )
+    );
 }
 
 {% endhighlight %}
@@ -158,15 +148,13 @@ By default, a maximum of three labels are displayed for each 100 logical pixels 
 Widget build(BuildContext context) {
   return MaterialApp(
       home: Scaffold(
-          body: Center(
-              child: Container(
+          body: Center( 
                   child: SfLinearGauge(
                     maximumLabels: 5
-                  )
-              )
-          )
-      )
-  );
+                ) 
+            )
+        )
+    );
 }
 
 {% endhighlight %}
