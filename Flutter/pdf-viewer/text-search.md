@@ -17,6 +17,8 @@ The [searchText](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/late
 
 To differentiate the highlighted texts, the current text instance highlight color will be dark, while the rest of the instances will be light. The following code example explains how to perform the text search and retrieve the results for the same.
 
+N> Import **'package:syncfusion_flutter_pdf/pdf.dart'** in the Dart code if you use the [TextSearchOption](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/TextSearchOption-class.html) parameter.
+
 {% tabs %}
 {% highlight Dart %}
 
