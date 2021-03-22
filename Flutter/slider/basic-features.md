@@ -172,7 +172,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Date slider](images/basic-features/vertical-date-labels.png)
+![Date slider](images/basic-features/vertical_date_labels.png)
 
 **Handle value change**
 
@@ -244,7 +244,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Enable slider](images/basic-features/vertical-enabled-state.png)
+![Enable slider](images/basic-features/vertical_enabled_state.png)
 
 ## Active color
 
@@ -322,7 +322,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Active color support](images/basic-features/vertical-active-color.png)
+![Active color support](images/basic-features/vertical_active_color.png)
 
 ## Inactive color
 
@@ -404,7 +404,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Inactive color support](images/basic-features/vertical-inactive-color.png)
+![Inactive color support](images/basic-features/vertical_inactive_color.png)
 
 ### For customizing individual items
 
