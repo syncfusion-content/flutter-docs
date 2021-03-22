@@ -94,7 +94,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Numeric slider](images/basic-features/vertical-numeric-labels.png)
+![Numeric slider](images/basic-features/vertical_numeric_labels.png)
 
 **Date slider**
 
