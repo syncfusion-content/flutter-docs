@@ -15,7 +15,7 @@ The section contains the GitHub link for each widget’s code examples. This is 
 <tr>
 <th>Category</th>
 <th>Widget/Library</th>
-<th>Package</th>
+<th>Code Examples</th>
 </tr>
 
 <tr>
@@ -36,7 +36,7 @@ The section contains the GitHub link for each widget’s code examples. This is 
 
 <tr>
 <td><p><a href="https://help.syncfusion.com/flutter/cartesian-charts/overview">Cartesian chart</a></p></td>
-<td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/chart/cartesian_charts">samples/chart/Cartesian_charts</a></p></td>
+<td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/chart/cartesian_charts">samples/chart/cartesian_charts</a></p></td>
 </tr>
 
 <tr>
