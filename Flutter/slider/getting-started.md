@@ -179,7 +179,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Handle slider](images/getting-started/vertical-handle-slider-state.png)
+![Handle slider](images/getting-started/vertical_handle_slider_state.png)
 
 ## Set numeric value
 
