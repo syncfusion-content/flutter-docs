@@ -249,7 +249,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Step size support](images/interval/step-size-support.gif)
+![Step size support](images/interval/vertical-step-size-support.gif)
 
 ## Discrete selection for date values
 
@@ -331,4 +331,4 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Step duration support](images/interval/step-duration-support.gif)
+![Step duration support](images/interval/vertical-step-duration-support.gif)
