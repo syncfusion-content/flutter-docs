@@ -249,8 +249,6 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Step size support](images/interval/vertical-step-size-support.gif)
-
 ## Discrete selection for date values
 
 You can move the thumb in discrete manner for date values using the [`stepDuration`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/stepDuration.html) property in the slider.
@@ -331,4 +329,3 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Step duration support](images/interval/vertical-step-duration-support.gif)
