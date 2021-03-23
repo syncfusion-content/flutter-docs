@@ -128,7 +128,7 @@ The color of a range can be changed by setting the `color` property of a range. 
 
 ## Apply radial gradient colors to a range
 
-The gradient colors can be applied by using the `shaderCallback` property of a range. The below code example demonstrates applying a radial gradient color to the range.
+The gradient colors can be applied by using the `shaderCallback` property of a range. The below code example demonstrates applying a radial gradient to the range.
 
 {% highlight dart %} 
 
@@ -163,7 +163,7 @@ The gradient colors can be applied by using the `shaderCallback` property of a r
 
 ## Apply linear gradient colors to a range
 
-The below code snippet demonstrates applying a linear gradient colors to the range.
+The below code snippet demonstrates applying a linear gradient to the range.
 
 {% highlight dart %} 
 
@@ -195,7 +195,7 @@ The below code snippet demonstrates applying a linear gradient colors to the ran
 
 ## Apply sweep gradient colors to a range
 
-The below code snippet demonstrates applying a sweep gradient colors to the range.
+The below code snippet demonstrates applying a sweep gradient to the range.
 
 {% highlight dart %} 
 
@@ -261,7 +261,7 @@ It is possible to position the ranges `inside`, `cross`, and `outside` the axis.
 
 ## Use Range Color For Axis
 
-You can set range color to axis labels and ticks using the useRangeColorForAxis property of axis
+You can set range color to axis elements using the useRangeColorForAxis property of axis
 
 {% highlight dart %} 
 
