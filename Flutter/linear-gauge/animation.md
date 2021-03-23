@@ -91,7 +91,7 @@ The below code example demonstrates updating the animation for bar pointer.
               LinearBarPointer(
                 value: 50,
                 animationDuration: 2000,
-                animationType: LinearAnimationType.slowMiddle,
+                animationType: LinearAnimationType.bounceOut,
               ),
             ],
           ),
