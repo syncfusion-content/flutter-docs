@@ -15,6 +15,8 @@ This section helps to learn about the enabled and disabled state in the Flutter 
 
 The slider will be in enabled state if [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/onChanged.html) is set.
 
+### Horizontal
+
 {% tabs %}
 {% highlight Dart %}
 
@@ -45,9 +47,44 @@ Widget build(BuildContext context) {
 
 ![Enabled state](images/enabled-and-disabled/enabled-state.png)
 
+### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+double _value = 5.0;
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfSlider.vertical(
+                min: 0.0,
+                max: 10.0,
+                value: _value,
+                onChanged: (dynamic newValue) {
+                  setState(() {
+                    _value = newValue;
+                  });
+                },
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Enabled state](images/enabled-and-disabled/vertical-enabled-state.png)
+
+
 ## Disabled state
 
 The slider will be in disabled state if [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/onChanged.html) is `null`.
+
+### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
@@ -72,6 +109,32 @@ Widget build(BuildContext context) {
 
 ![Disabled slider](images/enabled-and-disabled/disabled-state.png)
 
+### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfSlider.vertical(
+                min: 0.0,
+                max: 10.0,
+                value: 5.0,
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Disabled slider](images/enabled-and-disabled/vertical-disabled-state.png)
+
+
 ## Disabled color
 
 You can change,
@@ -83,6 +146,8 @@ You can change,
 * The color of the thumb in disabled state using the [`disabledThumbColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/disabledThumbColor.html) property.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderTheme-class.html).
+
+### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
@@ -125,3 +190,47 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Disabled color support](images/enabled-and-disabled/slider-disabled-color.png)
+
+### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+double _value = 6.0;
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfSliderTheme(
+                data: SfSliderThemeData(
+                  disabledActiveTrackColor: Colors.orange,
+                  disabledInactiveTrackColor: Colors.orange[200],
+                  disabledActiveTickColor: Colors.orange,
+                  disabledInactiveTickColor: Colors.orange[200],
+                  disabledActiveMinorTickColor: Colors.orange,
+                  disabledInactiveMinorTickColor: Colors.orange[200],
+                  disabledActiveDivisorColor: Colors.purple,
+                  disabledInactiveDivisorColor: Colors.purple[200],
+                  disabledThumbColor: Colors.orange,
+                ),
+                child: SfSlider.vertical(
+                  min: 2.0,
+                  max: 10.0,
+                  interval: 2,
+                  showTicks: true,
+                  minorTicksPerInterval: 1,
+                  showDivisors: true,
+                  value: _value,
+                ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Disabled color support](images/enabled-and-disabled/vertical-slider-disabled-color.png)
