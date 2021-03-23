@@ -632,7 +632,7 @@ Widget build(BuildContext context) {
                   activeLabelStyle: TextStyle(color: Colors.red, fontSize: 12, fontStyle: FontStyle.italic),
                   inactiveLabelStyle: TextStyle(color: Colors.red[200], fontSize: 12, fontStyle: FontStyle.italic),
                 ),
-                child:  SfSlider(
+                child:  SfSlider.vertical(
                   min: 2.0,
                   max: 10.0,
                   value: _value,
@@ -720,7 +720,7 @@ Widget build(BuildContext context) {
           body: Center(
               child: SfSliderTheme(
                 data: SfSliderThemeData(
-                  labelOffset: Offset(0.0, 10.0),
+                  labelOffset: Offset(10.0, 0.0),
                 ),
                 child:  SfSlider.vertical(
                   min: 2.0,

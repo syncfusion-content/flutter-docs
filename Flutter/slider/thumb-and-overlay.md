@@ -349,7 +349,7 @@ Widget build(BuildContext context) {
                 max: 10.0,
                 interval: 1,
                 thumbIcon: Icon(
-                    Icons.arrow_forward_ios,
+                    Icons.keyboard_arrow_up_outlined,
                     color: Colors.blue,
                     size: 20.0),
                 showLabels: true,
