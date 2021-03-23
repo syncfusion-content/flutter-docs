@@ -55,6 +55,8 @@ After importing the package, initialize the range slider widget as a child of an
 
 N> The range slider passes the new values to the [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onChanged.html) callback but does not change its state until the parent widget rebuilds the range slider with new values.
 
+### Horizontal
+
 {% tabs %}
 {% highlight Dart %}
 
@@ -85,11 +87,15 @@ Widget build(BuildContext context) {
 
 ![Default range slider](images/getting-started/default_range_slider.png)
 
+### Vertical
+
 ## Handle range change
 
 The [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onChanged.html) callback is used to get the current value of the range slider when the user selects a value through interaction.
 
 N> The range slider passes the new values to the callback but does not change its state until the parent widget rebuilds the range slider with new values.
+
+### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
@@ -121,9 +127,13 @@ Widget build(BuildContext context) {
 
 ![Handle range slider](images/getting-started/handle-range-slider-state.png)
 
+### Vertical
+
 ## Set numeric range
 
 You can show numeric values in the range slider by setting `double` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) and [`values`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/values.html) properties.
+
+### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
@@ -159,11 +169,15 @@ Widget build(BuildContext context) {
 
 ![Numeric range slider](images/getting-started/numeric_range_slider.png)
 
+### Vertical
+
 ## Set date range
 
 You can show date values in the range slider by setting `DateTime` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) and [`values`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/values.html) properties.
 
 N> You must import [`intl`](https://pub.dev/packages/intl) package for formatting date range slider using the [`DateFormat`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
+
+### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
@@ -201,9 +215,13 @@ Widget build(BuildContext context) {
 
 ![DateTime range slider](images/getting-started/date_range_slider.png)
 
+### Vertical
+
 ## Enable ticks
 
 You can enable ticks in the range slider using the [`showTicks`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/showTicks.html) property.
+
+### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
@@ -240,6 +258,8 @@ Widget build(BuildContext context) {
 
 ![Numeric range slider](images/getting-started/range_slider_with_tick.png)
 
+### Vertical
+
 ## Add prefix/suffix to labels
 
 You can add prefix or suffix to the labels using the [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/numberFormat.html) or [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateFormat.html) properties.
@@ -247,6 +267,8 @@ You can add prefix or suffix to the labels using the [`numberFormat`](https://pu
 N> The format type (numeric or date) of the range slider is determined based on the values specified in [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) and [`values`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/values.html) properties.
 
 I> You must import [`intl`](https://pub.dev/packages/intl) package for formatting date range slider using the [`DateFormat`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class and for formatting numeric range slider using the [`NumberFormat`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html) class.
+
+### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
@@ -283,3 +305,5 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Format label](images/getting-started/slider_with_formatted_label.png)
+
+### Vertical

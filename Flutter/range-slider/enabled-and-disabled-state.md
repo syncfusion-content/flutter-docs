@@ -15,6 +15,8 @@ This section helps to learn about the enabled and disabled state in the Flutter 
 
 The range slider will be in enabled state if [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onChanged.html) is set.
 
+### Horizontal
+
 {% tabs %}
 {% highlight Dart %}
 
@@ -45,9 +47,13 @@ Widget build(BuildContext context) {
 
 ![Enabled state](images/enabled-and-disabled/enabled-state.png)
 
+### Vertical
+
 ## Disabled state
 
 The range slider will be in disabled state if [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onChanged.html) is `null`.
+
+### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
@@ -74,6 +80,8 @@ Widget build(BuildContext context) {
 
 ![Disabled range slider](images/enabled-and-disabled/disabled-state.png)
 
+### Vertical
+
 ## Disabled color
 
 You can change,
@@ -85,6 +93,8 @@ You can change,
 * The color of the thumb in disabled state using the [`disabledThumbColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/disabledThumbColor.html) property.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderTheme-class.html).
+
+### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
@@ -127,3 +137,5 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Disabled color support](images/enabled-and-disabled/slider-disabled-color.png)
+
+### Vertical

@@ -28,6 +28,8 @@ For date values, the range slider does not have auto interval support. So, it is
 
 You can show numeric values in the range slider by setting `double` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) and [`values`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/values.html) properties.
 
+### Horizontal
+
 {% tabs %}
 {% highlight Dart %}
 
@@ -60,11 +62,15 @@ Widget build(BuildContext context) {
 
 ![Numeric range slider](images/basic-features/numeric-labels.png)
 
+### Vertical
+
 **Date range slider**
 
 You can show date values in the range slider by setting `DateTime` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) and [`values`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/values.html) properties.
 
 N> You must import [`intl`](https://pub.dev/packages/intl) package for formatting date range slider using the [`DateFormat`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
+
+### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
@@ -100,6 +106,8 @@ Widget build(BuildContext context) {
 
 ![Date range slider](images/basic-features/date-labels.png)
 
+### Vertical
+
 **Handle value change**
 
 The [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onChanged.html) callback is called when the user selects a value through interaction.
@@ -107,6 +115,8 @@ The [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/lates
 N> The range slider passes the new values to the callback but does not change its state until the parent widget rebuilds the range slider with new values.
 
 N> If it is null, the range slider will be disabled.
+
+### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
@@ -138,9 +148,13 @@ Widget build(BuildContext context) {
 
 ![Enabled range slider](images/basic-features/enabled-state.png)
 
+### Vertical
+
 ## Active color
 
 It represents the color applied to the active track, thumb, overlay, and inactive divisors. The active side of the range slider is between the start and end thumbs.
+
+### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
@@ -174,6 +188,8 @@ Widget build(BuildContext context) {
 
 ![Active color support](images/basic-features/active-color.png)
 
+### Vertical
+
 ## Inactive color
 
 It represents the color applied to the inactive track and active divisors.
@@ -181,6 +197,8 @@ It represents the color applied to the inactive track and active divisors.
 The inactive side of the range slider is between the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html) value and the left thumb, and the right thumb and the [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) value.
 
 For RTL, the inactive side is between the [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) value and the left thumb, and the right thumb and the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html) value.
+
+### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
@@ -214,6 +232,8 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Inactive color support](images/basic-features/inactive-color.png)
+
+### Vertical
 
 ### For customizing individual items
 

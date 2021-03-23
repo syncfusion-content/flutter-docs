@@ -15,6 +15,8 @@ This section helps to learn about how to add tooltip in the range slider.
 
 You can enable tooltips for both thumbs using the [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/enableTooltip.html). It is used to clearly indicate the current selection of the ranges during interaction. By default, tooltip text is formatted with either [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/numberFormat.html) or [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateFormat.html).
 
+### Horizontal
+
 {% tabs %}
 {% highlight Dart %}
 
@@ -49,6 +51,8 @@ Widget build(BuildContext context) {
 
 ![Range slider tooltip support](images/tooltip/show-tooltip.png)
 
+### Vertical
+
 N>
 * Refer the [`tooltipTextFormatterCallback`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/tooltipTextFormatterCallback.html) for changing the default tooltip text.
 * Refer the [`SfRangeSliderThemeData`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData-class.html) for customizing the appearance of the tooltip text.
@@ -56,6 +60,8 @@ N>
 ## Tooltip shape
 
 You can show tooltip in rectangular or paddle shape using the [`tooltipShape`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/tooltipShape.html) property. The default value of the [`tooltipShape`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/tooltipShape.html) property is `SfRectangularTooltipShape`.
+
+### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
@@ -92,6 +98,8 @@ Widget build(BuildContext context) {
 
 ![Range slider tooltip shape](images/tooltip/range-tooltip-shape.png)
 
+### Vertical
+
 ## Tooltip text format
 
 By default it is formatted based on [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/numberFormat.html) property and [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateFormat.html) property based on whether it is date type [`SfRangeSlider`](https://help.syncfusion.com/flutter/range-slider/getting-started#set-date-range) or numeric [`SfRangeSlider`](https://help.syncfusion.com/flutter/range-slider/getting-started#set-numeric-range).
@@ -100,6 +108,8 @@ You can format or change the whole tooltip label text using the [`tooltipTextFor
 
 * actualValue – either `DateTime` or `double` based on given [`values`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/values.html).
 * formattedText – If the actual value is `double`, it is formatted by [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/numberFormat.html) and if the actual value is `DateTime`, it is formatted by [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateFormat.html).
+
+### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
@@ -140,11 +150,15 @@ Widget build(BuildContext context) {
 
 ![Tooltip formatter support](images/tooltip/tooltip-formatter.png)
 
+### Vertical
+
 ## Tooltip color
 
 You can change the background color of the tooltip in the range slider using the [`tooltipBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/tooltipBackgroundColor.html) property.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderTheme-class.html).
+
+### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
@@ -185,11 +199,15 @@ Widget build(BuildContext context) {
 
 ![Tooltip color support](images/tooltip/slider-tooltip-color.png)
 
+### Vertical
+
 ## Tooltip label style
 
 You can change the appearance of the tooltip text in the range slider using the [`tooltipTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/tooltipTextStyle.html) property.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderTheme-class.html).
+
+### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
@@ -230,11 +248,15 @@ Widget build(BuildContext context) {
 
 ![Tooltip style support](images/tooltip/slider-tooltip-style.png)
 
+### Vertical
+
 ## Tooltip overlap stroke color
 
 You can change the overlap stroke color of the tooltip in the range slider using the [`overlappingTooltipStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/overlappingTooltipStrokeColor.html) property.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderTheme-class.html).
+
+### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
@@ -274,3 +296,5 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Tooltip overlap support](images/tooltip/slider-tooltip-overlap.png)
+
+### Vertical

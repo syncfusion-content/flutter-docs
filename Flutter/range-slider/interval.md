@@ -16,6 +16,8 @@ Range slider elements like labels, ticks and divisors are rendered based on the 
 
 For example, if [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html) is 0.0 and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) is 10.0 and [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/interval.html) is 2.0, the range slider will render the labels, major ticks, and divisors at 0.0, 2.0, 4.0 and so on.
 
+### Horizontal
+
 {% tabs %}
 {% highlight Dart %}
 
@@ -49,6 +51,8 @@ Widget build(BuildContext context) {
 
 ![Numeric interval support](images/interval/numeric-interval.png)
 
+### Vertical
+
 N>
 * Refer the [`showDivisors`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/showDivisors.html) to know about the rendering of divisors at given interval.
 * Refer the [`showTicks`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/showTicks.html) to know about the rendering of major ticks at given interval.
@@ -61,6 +65,8 @@ The type of date interval. It can be years to seconds. It is mandatory for date 
 For date values, the range slider does not have auto interval support. So, it is mandatory to set [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/interval.html), [`dateIntervalType`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateIntervalType.html), and [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateFormat.html) for date values.
 
 For example, if [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html) is `DateTime(2000, 01, 01)` and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) is `DateTime(2005, 01, 01)` and [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/interval.html) is `1`, [`dateIntervalType`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateIntervalType.html) is `DateIntervalType.years`, [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateFormat.html) is `DateFormat.y()` then the range slider will render the labels, major ticks, and divisors at 2000, 2001, 2002 and so on.
+
+### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
@@ -97,9 +103,13 @@ Widget build(BuildContext context) {
 
 ![Date interval type support](images/interval/date-interval-type.png)
 
+### Vertical
+
 ## Discrete selection for numeric values
 
 You can move the thumb in discrete manner for numeric values using the [`stepSize`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/stepSize.html) property in the range slider.
+
+### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
@@ -136,11 +146,15 @@ Widget build(BuildContext context) {
 
 ![Step size support](images/interval/step-size-support.gif)
 
+### Vertical
+
 ## Discrete selection for date values
 
 You can move the thumb in discrete manner for date values based on the value provided in the [`stepDuration`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/stepDuration.html) property in the range slider.
 
 For example, if [min](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html) is DateTime(2015, 01, 01) and [max](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) is DateTime(2020, 01, 01) and [stepDuration](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/stepDuration.html) is SliderDuration(years: 1, months: 6),the range slider will move the thumbs at DateTime(2015, 01, 01), DateTime(2016, 07, 01), DateTime(2018, 01, 01),and DateTime(2019, 07, 01).
+
+### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
@@ -178,9 +192,13 @@ Widget build(BuildContext context) {
 
 ![Step duration support](images/interval/range-step-duration-support.gif)
 
+### Vertical
+
 ## Enable interval selection
 
 You can select a particular interval by tapping when setting the [`enableIntervalSelection`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/enableIntervalSelection.html) property as `true`. Both the thumbs will be moved to the current interval with animation.
+
+### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
@@ -218,3 +236,5 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Interval selection support](images/interval/range-interval-selection-support.gif)
+
+### Vertical
