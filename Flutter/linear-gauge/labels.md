@@ -160,3 +160,51 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 
 ![set maximum labels interval in axis track](images/axis-labels/axis_label_visibility.png)
+
+## Customize Label Text
+
+You can format or change the whole numeric label text using the labelFormatterCallback.
+
+{% highlight dart %}
+
+SfLinearGauge(
+    labelFormatterCallback: (label) {
+      if (label == '0') {
+        return 'Start';
+      }
+
+      if (label == '50') {
+        return 'Mid';
+      }
+
+      if (label == '100') {
+        return 'End';
+      }
+
+      return label;
+    }
+)
+
+{% endhighlight %}
+
+![set Label Format for Axis Label](images/axis-labels/axis_label_visibility.png)
+
+## Number Format
+
+The numberFormat property is used to format the numeric labels. The default value of numberFormat property is null.
+
+{% highlight dart %} 
+
+    NOTE: You must import intl package for formatting numeric slider using the NumberFormat class.
+
+{% endhighlight %}
+
+{% highlight dart %}
+
+SfLinearGauge(
+  numberFormat: NumberFormat("\$"),
+),
+
+{% endhighlight %}
+
+![set Label Format for Axis Label](images/axis-labels/axis_label_visibility.png)
