@@ -272,7 +272,7 @@ Linear gauge allows you to display a set of values along with a custom scale bas
 
 double pointerValue = 50.0;
 
-/// To return the label value based on interval
+// To return the label value based on interval
 double _calculateLabelValue(num value) {
   if (value == 0) {
     return 0;
