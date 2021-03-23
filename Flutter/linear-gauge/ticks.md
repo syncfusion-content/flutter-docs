@@ -62,7 +62,7 @@ Widget build(BuildContext context) {
 
 ![customize linear gauge ticks per interval](images/axis-ticks/minor-ticks-per-interval.png)
 
-## Switch tick visibility
+## Change tick visibility
 
 The `showTicks` property of the axis is used to enable or disable the visibility of both the major and the minor ticks. The default value of this property is true.
 
