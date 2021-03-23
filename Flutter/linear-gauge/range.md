@@ -258,3 +258,38 @@ It is possible to position the ranges `inside`, `cross`, and `outside` the axis.
 {% endhighlight %}
 
 ![Position the linear gauge range](images/gauge-range/range_position.png)
+
+## Use Range Color For Axis
+
+You can set range color to axis labels and ticks using the useRangeColorForAxis property of axis
+
+{% highlight dart %} 
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfLinearGauge(
+                        useRangeColorForAxis: true,
+                        ranges: <LinearGaugeRange>[
+                          LinearGaugeRange(
+                              color: Colors.purple,
+                              startValue: 30,
+                              endValue: 65,
+                              midValue: 47,
+                              startWidth: 12,
+                              midWidth: 12,
+                              endWidth: 12)
+                            ]
+                         )
+                       )
+                    )
+                )
+            );
+  }
+  
+{% endhighlight %}
+
+![Position the linear gauge range](images/gauge-range/range_userangeforaxis.png)

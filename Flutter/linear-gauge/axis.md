@@ -70,12 +70,11 @@ The below code snippet demonstrates customizing the thickness and color.
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Container(
             child: SfLinearGauge(
-                axisTrackStyle: LinearAxisTrackStyle(thickness: 15)),
+                axisTrackStyle: LinearAxisTrackStyle(thickness: 15)
+            ),
           ),
         ),
-      ),
     );
   }
 
@@ -99,21 +98,24 @@ The below code snippet sets a gradient color to the axis track.
           child: Container(
             child: SfLinearGauge(
                 axisTrackStyle: LinearAxisTrackStyle(
-                    gradient: LinearGradient(
-                        colors: [Colors.deepOrange, Colors.deepPurple],
-                        begin: const FractionalOffset(0.0, 0.0),
-                        end: const FractionalOffset(0.5, 0.0),
-                        stops: [0.0, 1.0],
-                        tileMode: TileMode.clamp))),
+                  gradient: LinearGradient(
+                        colors: [Colors.purple, Colors.blue],
+                        begin: Alignment.centerLeft,
+                        end: Alignment.centerRight,
+                        stops: [0.1, 0.5],
+                        tileMode: TileMode.clamp
+                  )
+                )
+              ),
+            ),
           ),
-        ),
       ),
     );
   }
 
 {% endhighlight %}
 
-![Update linear gauge for axis color](images/axis/axis_corner_style.png)
+![Update linear gauge for axis color](images/axis/axis_gradient.png)
 
 ## Apply solid color
 
@@ -126,10 +128,8 @@ The below code snippet sets solid gradient colors to the axis track.
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Container(
             child: SfLinearGauge(
                 axisTrackStyle: LinearAxisTrackStyle(color: Colors.blue)),
-          ),
         ),
       ),
     );
@@ -137,7 +137,7 @@ The below code snippet sets solid gradient colors to the axis track.
 
 {% endhighlight %}
 
-![Update linear gauge for axis color](images/axis/axis_corner_style.png)
+![Update linear gauge for axis color](images/axis/axis_solid_color.png)
 
 ## Customize the borders
 
@@ -147,24 +147,21 @@ The below code snippet sets a border to the axis track.
 
 {% highlight dart %} 
 
-  @override
+   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Container(
-            child: SfLinearGauge(
-                axisTrackStyle: LinearAxisTrackStyle(
-                    // Sets axis thickness for the better visibility of border
-                    thickness: 15,
-                    // Hides axis axis color for the better visibility of border
-                    color: Colors.transparent,
-                    //Sets the border color
-                    borderColor: Colors.blueGrey,
-                    //Sets the border width
-                    borderWidth: 2),
-                ),
-          ),
+          child: SfLinearGauge(
+              axisTrackStyle: LinearAxisTrackStyle(
+                  // Sets axis thickness for the better visibility of border
+                  thickness: 15,
+                  // Hides axis axis color for the better visibility of border
+                  color: Colors.transparent,
+                  //Sets the border color
+                  borderColor: Colors.blueGrey,
+                  //Sets the border width
+                  borderWidth: 2)),
         ),
       ),
     );
@@ -185,11 +182,9 @@ The `edgeStyle` property of `axisTrackStyle` specifies the corner type for the a
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Container(
             child: SfLinearGauge(
                 axisTrackStyle: LinearAxisTrackStyle(
-                    thickness: 20, edgeStyle: LinearEdgeStyle.bothCurve)),
-          ),
+                    thickness: 20, edgeStyle: LinearEdgeStyle.bothCurve)),          
         ),
       ),
     );
@@ -211,9 +206,7 @@ When the `isAxisInversed` property is true, the axis can be placed in inverse di
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Container(
-            child: SfLinearGauge(isAxisInversed: true),
-          ),
+            child: SfLinearGauge(isAxisInversed: true)         
         ),
       ),
     );
@@ -261,9 +254,7 @@ You can hide the axis track by setting the `showAxisTrack` property to false. Th
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Container(
-            child: SfLinearGauge(showAxisTrack: false),
-          ),
+            child: SfLinearGauge(showAxisTrack: false)
         ),
       ),
     );

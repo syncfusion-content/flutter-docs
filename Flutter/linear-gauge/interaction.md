@@ -19,13 +19,119 @@ The below code snippet demonstrates updating the marker pointer value based on s
 
 {% highlight dart %}
 
+  double shapePointerValue = 85;
+  double barPointerValue = 85;
+  double widgetPointerValue = 26;
   @override
   Widget build(BuildContext context) {
-    return SfLinearGauge(
-      isMirrored: true,
-    );
-  }
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+			child: Column(
+			children: [
+			SfLinearGauge(
+            barPointers: [LinearBarPointer(value: shapePointerValue)],
+            markerPointers: [
+              LinearShapePointer(
+                value: shapePointerValue,
+                onValueChanged: (value) {
+                  setState(() {
+                    shapePointerValue = value;
+                  });
+                },
+                color: Colors.blue[800],
+              ),
+            ],
+          ),
+		  
+          SizedBox(height: 30),
+          SfLinearGauge(
+            barPointers: [LinearBarPointer(value: barPointerValue)],
+            markerPointers: [
+              LinearWidgetPointer(
+			  position: LinearElementPosition.outside,
+			  value: barPointerValue,
+			  onValueChanged: (value) {
+                  setState(() {
+                    barPointerValue = value;
+                  });
+                },
+                child: Container(
+                  height: 20,
+                  width: 20,
+                  decoration: BoxDecoration(
+                      color: Colors.orange[500], shape: BoxShape.circle),
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 25),
+          SfLinearGauge(
+            axisTrackStyle: LinearAxisTrackStyle(
+              thickness: 10,
+            ),
+            markerPointers: [
+              LinearShapePointer(
+                value: widgetPointerValue,
+                shapeType: LinearShapePointerType.invertedTriangle,
+                position: LinearElementPosition.cross,
+                onValueChanged: (value) {
+                  setState(() {
+                    widgetPointerValue = value;
+                  });
+                },
+                color: widgetPointerValue < 40
+                    ? Colors.green
+                    : widgetPointerValue < 80
+                        ? Colors.orange
+                        : Colors.red,
+              ),
+              LinearWidgetPointer(
+                value: widgetPointerValue,
+                onValueChanged: (value) {
+                  setState(() {
+                    widgetPointerValue = value;
+                  });
+                },
+                child: Container(
+                  width: 55,
+                  height: 45,
+                  child: Center(
+                    child: Text(
+                      widgetPointerValue.toStringAsFixed(0),
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 20,
+                        color: widgetPointerValue < 40
+                            ? Colors.green
+                            : widgetPointerValue < 80
+                                ? Colors.orange
+                                : Colors.red,
+                      ),
+                    ),
+                  ),
+                ),
+                position: LinearElementPosition.outside,
+              ),
+            ],
+            ranges: [
+              LinearGaugeRange(
+                  endValue: widgetPointerValue,
+                  color: widgetPointerValue < 40
+                      ? Colors.green
+                      : widgetPointerValue < 80
+                          ? Colors.orange
+                          : Colors.red,
+                  position: LinearElementPosition.cross)
+            ],
+          ),
+        ],
+        mainAxisAlignment: MainAxisAlignment.center,
+    )),
+    
+	)
+);
 
 {% endhighlight %}
 
-![shape pointer in linear gauge](images/getting-started/add_shape_pointer.png)
+![shape pointer in linear gauge](images/interaction/interaction.gif)
