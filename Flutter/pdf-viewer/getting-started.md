@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Getting started for Syncfusion Flutter PDF Viewer | Syncfusion
-description: This section explains about the steps required to add the PDF Viewer widget and its elements such as scroll head, scroll status and page navigation dialog.
+description: This section explains about the steps required to add the PDF Viewer plugin and its elements such as scroll head, scroll status and page navigation dialog.
 platform: Flutter
 control: SfPdfViewer
 documentation: ug
 ---
 
 # Getting Started with Flutter PDF Viewer (SfPdfViewer)
-This section explains the steps required to add the [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) widget and its features. This section covers only the basic features needed to get started with the Syncfusion Flutter PDF Viewer widget.
+This section explains the steps required to add the [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) plugin and its features. This section covers only the basic features needed to get started with the Syncfusion Flutter PDF Viewer plugin.
 
 ## Add the Flutter PDF Viewer to an application
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
@@ -26,6 +26,19 @@ syncfusion_flutter_pdfviewer: ^xx.x.xx
 {% endhighlight %}
 
 N> Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter PDF Viewer`](https://pub.dev/packages/syncfusion_flutter_pdfviewer/versions) package.
+
+For web platform, we have used [PdfJs](https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js) for rendering the PDF pages, so the script file must be referred to in your `web/index.html` file.
+
+On your `web/index.html` file, add the following `script` tags, somewhere in the `body` of the document:
+
+```html
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js"></script>
+<script type="text/javascript">
+   pdfjsLib.GlobalWorkerOptions.workerSrc = "//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.worker.min.js";
+</script>
+
+```
 
 **Get packages** 
 
