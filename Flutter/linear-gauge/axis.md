@@ -84,9 +84,9 @@ The below code snippet demonstrates customizing the thickness and color.
 
 ## Apply gradient colors
 
-The `color` property of `axisTrackStyle` allows to set a solid color, while the `gradient` property of `axisTrackStyle` allows to set linear-gradient colors to the axis track.
+The `color` property of `axisTrackStyle` allows to set a solid color, while the `gradient` property of `axisTrackStyle` allows to apply linear-gradient to axis track.
 
-The below code snippet sets a gradient color to the axis track.
+The below code snippet applies gradient to axis track.
 
 {% highlight dart %} 
 
@@ -119,7 +119,7 @@ The below code snippet sets a gradient color to the axis track.
 
 ## Apply solid color
 
-The below code snippet sets solid gradient colors to the axis track.
+The below code snippet sets solid colors to the axis track.
 
 {% highlight dart %} 
 
