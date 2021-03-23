@@ -63,6 +63,40 @@ Widget build(BuildContext context) {
 
 ### Vertical
 
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 7.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                        activeTrackColor: Colors.red,
+                        inactiveTrackColor: Colors.red[100],
+                    ),
+                    child:  SfRangeSlider.vertical(
+                        min: 2.0,
+                        max: 10.0,
+                        values: _values,
+                        onChanged: (SfRangeValues newValues){
+                            setState(() {
+                                _values = newValues;
+                            });
+                        },
+                    ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Track height
 
 You can change the track height of the range slider using the [`activeTrackHeight`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/activeTrackHeight.html) and the [`inactiveTrackHeight`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/inactiveTrackHeight.html) properties. The default value of the [`activeTrackHeight`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/activeTrackHeight.html) and the [`inactiveTrackHeight`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/inactiveTrackHeight.html) properties are `6.0` and `4.0`.
@@ -108,6 +142,41 @@ Widget build(BuildContext context) {
 ![Track size support](images/track/slider-track-size.png)
 
 ### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 7.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                        activeTrackHeight: 8,
+                        inactiveTrackHeight: 8,
+                    ),
+                    child:  SfRangeSlider.vertical(
+                        min: 2.0,
+                        max: 10.0,
+                        values: _values,
+                        onChanged: (SfRangeValues newValues){
+                            setState(() {
+                                _values = newValues;
+                            });
+                        },
+                    ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 
 ## Track corner radius
 
@@ -155,3 +224,38 @@ Widget build(BuildContext context) {
 ![Track corner radius support](images/track/slider-track-corner-radius.png)
 
 ### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 7.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                        activeTrackHeight: 10,
+                        inactiveTrackHeight: 10,
+                        trackCornerRadius: 5,
+                    ),
+                    child: SfRangeSlider.vertical(
+                        min: 2.0,
+                        max: 10.0,
+                        values: _values,
+                        onChanged: (SfRangeValues newValues){
+                            setState(() {
+                                _values = newValues;
+                            });
+                        },
+                    ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}

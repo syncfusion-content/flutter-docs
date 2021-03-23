@@ -50,6 +50,37 @@ Widget build(BuildContext context) {
 ![Range slider label support](images/label-and-divisor/show-labels.png)
 
 ### Vertical
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 6.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSlider.vertical(
+                    min: 0.0,
+                    max: 10.0,
+                    interval: 2,
+                    showLabels: true,
+                    showTicks: true,
+                    values: _values,
+                    onChanged: (SfRangeValues newValues) {
+                        setState(() {
+                            _values = newValues;
+                        });
+                   },
+              ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 
 N>
 * Refer the [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/numberFormat.html) and [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateFormat.html) for formatting the numeric and date labels respectively.
@@ -99,6 +130,38 @@ Widget build(BuildContext context) {
 
 ### Vertical
 
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 6.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSlider.vertical(
+                     min: 0.0,
+                     max: 10.0,
+                     values: _values,
+                     interval: 2,
+                     showTicks: true,
+                     showLabels: true,
+                     numberFormat: NumberFormat("\$"),
+                     onChanged: (SfRangeValues newValues) {
+                        setState(() {
+                            _values = newValues;
+                        });
+                   },
+              ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Date format
 
 The [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateFormat.html) property is used to format the date labels. It is mandatory for date [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html). For date values, the range slider does not have auto interval support. So, it is mandatory to set [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/interval.html), [`dateIntervalType`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateIntervalType.html), and [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateFormat.html) for date values. The default value of [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateFormat.html) property is `null`.
@@ -146,6 +209,39 @@ Widget build(BuildContext context) {
 
 #### Vertical
 
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(DateTime(2002, 01, 01), DateTime(2003, 01, 01));
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSlider.vertical(
+                    min: DateTime(2000, 01, 01, 00),
+                    max: DateTime(2004, 12, 31, 24),
+                    values: _values,
+                    interval: 1,
+                    showLabels: true,
+                    showTicks: true,
+                    dateFormat: DateFormat.y(),
+                    dateIntervalType: DateIntervalType.years,
+                    onChanged: (SfRangeValues newValues) {
+                        setState(() {
+                            _values = newValues;
+                        });
+                   },
+              ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ### Month format
 
 #### Horizontal
@@ -187,6 +283,39 @@ Widget build(BuildContext context) {
 
 #### Vertical
 
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(DateTime(2000, 03, 01), DateTime(2000, 07, 01));
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSlider.vertical(
+                    min: DateTime(2000, 01, 01, 00),
+                    max: DateTime(2000, 09, 01, 24),
+                    values: _values,
+                    interval: 2,
+                    showLabels: true,
+                    showTicks: true,
+                    dateFormat: DateFormat.yM(),
+                    dateIntervalType: DateIntervalType.months,
+                    onChanged: (SfRangeValues newValues) {
+                        setState(() {
+                            _values = newValues;
+                        });
+                    },
+              ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ### Hour format
 
 #### Horizontal
@@ -227,6 +356,39 @@ Widget build(BuildContext context) {
 ![Hour date format support](images/label-and-divisor/hour-date-format.png)
 
 #### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(DateTime(2000, 01, 01, 07, 00, 00), DateTime(2000, 01, 01, 17, 00, 00));
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSlider.vertical(
+                  min: DateTime(2000, 01, 01, 02, 00, 00),
+                  max: DateTime(2000, 01, 01, 22, 00, 00),
+                  values: _values,
+                  interval: 5,
+                  showLabels: true,
+                  showTicks: true,
+                  dateFormat: DateFormat('h:mm a'),
+                  dateIntervalType: DateIntervalType.hours,
+                  onChanged: (SfRangeValues newValues) {
+                       setState(() {
+                            _values = newValues;
+                       });
+                  },
+              ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 N> Refer the [`DateFormat`](https://api.flutter.dev/flutter/intl/DateFormat-class.html) class for other date format.
 
@@ -274,6 +436,40 @@ Widget build(BuildContext context) {
 
 ### Vertical
 
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(DateTime(2002, 01, 01), DateTime(2003, 01, 01));
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSlider.vertical(
+                    min: DateTime(2000, 01, 01, 00),
+                    max: DateTime(2004, 12, 31, 24),
+                    values: _values,
+                    interval: 1,
+                    showLabels: true,
+                    showTicks: true,
+                    labelPlacement: LabelPlacement.betweenTicks,
+                    dateFormat: DateFormat.y(),
+                    dateIntervalType: DateIntervalType.years,
+                    onChanged: (SfRangeValues newValues) {
+                        setState(() {
+                            _values = newValues;
+                        });
+                   },
+              ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Customize label text
 
 You can format or change the whole numeric or date label text using the [`labelFormatterCallback`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/labelFormatterCallback.html). Its arguments are,
@@ -319,6 +515,39 @@ Widget build(BuildContext context) {
 ![Label formatter support](images/label-and-divisor/label-formattercallback.png)
 
 ### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(100.0, 9900.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSlider.vertical(
+                    min: 100.0,
+                    max: 10000.0,
+                    values: _values,
+                    showLabels: true,
+                    interval: 9900,
+                    labelFormatterCallback: (dynamic actualValue, String formattedText) {
+                        return actualValue == 10000 ? '\$ $formattedText+' : '\$ $formattedText';
+                    },
+                    onChanged: (SfRangeValues newValues) {
+                        setState(() {
+                            _values = newValues;
+                        });
+                   },
+              ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Label style
 
@@ -375,16 +604,53 @@ Widget build(BuildContext context) {
 
 ### Vertical
 
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                         activeLabelStyle: TextStyle(color: Colors.red, fontSize: 12, fontStyle: FontStyle.italic),
+                         inactiveLabelStyle: TextStyle(color: Colors.red[200], fontSize: 12, fontStyle: FontStyle.italic),
+                    ),
+                    child:  SfRangeSlider.vertical(
+                       min: 2.0,
+                       max: 10.0,
+                       values: _values,
+                       interval: 1,
+                       showLabels: true,
+                       showTicks: true,
+                       onChanged: (SfRangeValues newValues){
+                            setState(() {
+                                _values = newValues;
+                            });
+                        },
+                    ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Label offset
 
 You can adjust the space between ticks and labels of the range slider using the [`labelOffset`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/labelOffset.html) property.
 
-The default value of [`labelOffset`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/labelOffset.html) property is `Offset(0.0, 13.0)` if the [`showTicks`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/showTicks.html) property is `false`.
-The default value of [`labelOffset`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/labelOffset.html) property is `Offset(0.0, 5.0)` if the [`showTicks`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/showTicks.html) property is `true`.
-
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderTheme-class.html).
 
 ### Horizontal
+
+The default value of [`labelOffset`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/labelOffset.html) property is `Offset(0.0, 13.0)` if the [`showTicks`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/showTicks.html) property is `false`.
+The default value of [`labelOffset`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/labelOffset.html) property is `Offset(0.0, 5.0)` if the [`showTicks`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/showTicks.html) property is `true`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -425,6 +691,45 @@ Widget build(BuildContext context) {
 ![Labels offset support](images/label-and-divisor/slider-labels-offset.png)
 
 ### Vertical
+
+The default value of [`labelOffset`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/labelOffset.html) property is `Offset(13.0, 0.0)` if the [`showTicks`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/showTicks.html) property is `false`.
+The default value of [`labelOffset`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/labelOffset.html) property is `Offset(5.0, 0.0)` if the [`showTicks`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/showTicks.html) property is `true`.
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                        labelOffset: Offset(10.0, 0.0),
+                    ),
+                    child:  SfRangeSlider.vertical(
+                       min: 2.0,
+                       max: 10.0,
+                       values: _values,
+                       interval: 2,
+                       showTicks: true,
+                       showLabels: true,
+                       onChanged: (SfRangeValues newValues){
+                            setState(() {
+                                _values = newValues;
+                            });
+                        },
+                    ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Show divisors
 
@@ -473,6 +778,42 @@ Widget build(BuildContext context) {
 ![Range slider divisor support](images/label-and-divisor/show-divisor.png)
 
 ### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 6.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                 data: SfRangeSliderThemeData(
+                    activeTrackHeight: 5,
+                    inactiveTrackHeight: 5,
+                 ),
+                 child: SfRangeSlider.vertical(
+                    min: 0.0,
+                    max: 10.0,
+                    interval: 2,
+                    showDivisors: true,
+                    values: _values,
+                    onChanged: (SfRangeValues newValues) {
+                        setState(() {
+                           _values = newValues;
+                        });
+                    },
+                 ),
+              ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Divisor radius
 
@@ -523,6 +864,44 @@ Widget build(BuildContext context) {
 ![Divisor radius support](images/label-and-divisor/range-slider-divisor-radius.png)
 
 ### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(3.0, 7.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                 data: SfRangeSliderThemeData(
+                    activeTrackHeight: 10,
+                    inactiveTrackHeight: 10,
+                    activeDivisorRadius: 5,
+                    inactiveDivisorRadius: 5
+                 ),
+                 child: SfRangeSlider.vertical(
+                    min: 0.0,
+                    max: 10.0,
+                    interval: 1,
+                    showDivisors: true,
+                    values: _values,
+                    onChanged: (SfRangeValues newValues) {
+                        setState(() {
+                           _values = newValues;
+                        });
+                    },
+                 ),
+              ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Divisor stroke width and stroke color
 
@@ -578,6 +957,46 @@ Widget build(BuildContext context) {
 
 ### Vertical
 
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(3.0, 7.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                 data: SfRangeSliderThemeData(
+                     activeTrackHeight: 10,
+                     inactiveTrackHeight: 10,
+                     activeDivisorStrokeColor: Colors.red,
+                     activeDivisorStrokeWidth: 2,
+                     inactiveDivisorStrokeWidth: 2,
+                     inactiveDivisorStrokeColor: Colors.red,
+                 ),
+                 child: SfRangeSlider.vertical(
+                    min: 0.0,
+                    max: 10.0,
+                    interval: 1,
+                    showDivisors: true,
+                    values: _values,
+                    onChanged: (SfRangeValues newValues) {
+                        setState(() {
+                           _values = newValues;
+                        });
+                    },
+                 ),
+              ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Divisor color
 
 You can change the active and inactive divisor color of the range slider using the [`activeDivisorColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/activeDivisorColor.html) and [`inactiveDivisorColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/inactiveDivisorColor.html) properties respectively.
@@ -627,3 +1046,41 @@ Widget build(BuildContext context) {
 ![Divisor color support](images/label-and-divisor/slider-divisor-color.png)
 
 ### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(2.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                         activeTrackHeight: 5,
+                         inactiveTrackHeight: 5,
+                         activeDivisorColor: Colors.red,
+                         inactiveDivisorColor: Colors.red[200],
+                    ),
+                    child:  SfRangeSlider.vertical(
+                      min: 2.0,
+                      max: 10.0,
+                      interval: 1,
+                      showDivisors: true,
+                      values: _values,
+                      onChanged: (SfRangeValues newValues){
+                            setState(() {
+                                _values = newValues;
+                            });
+                        },
+                    )
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}

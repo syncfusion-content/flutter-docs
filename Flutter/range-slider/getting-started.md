@@ -89,6 +89,34 @@ Widget build(BuildContext context) {
 
 ### Vertical
 
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = const SfRangeValues(0.3, 0.7);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: Container(
+                  child: SfRangeSlider.vertical(
+                    values: _values,
+                    onChanged: (dynamic values){
+                      setState(() {
+                        _values = values;
+                      });
+                    },
+                  )
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Handle range change
 
 The [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onChanged.html) callback is used to get the current value of the range slider when the user selects a value through interaction.
@@ -128,6 +156,34 @@ Widget build(BuildContext context) {
 ![Handle range slider](images/getting-started/handle-range-slider-state.png)
 
 ### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(3.0, 7.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSlider.vertical(
+                    min: 0.0,
+                    max: 10.0,
+                    values: _values,
+                    onChanged: (SfRangeValues newValues) {
+                       setState(() {
+                           _values = newValues;
+                        });
+                   },
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Set numeric range
 
@@ -170,6 +226,38 @@ Widget build(BuildContext context) {
 ![Numeric range slider](images/getting-started/numeric_range_slider.png)
 
 ### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 0;
+final double _max = 100;
+SfRangeValues _values = const SfRangeValues(40.0, 60.0);
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: Center(
+      child: Container(
+        child: SfRangeSlider.vertical(
+          min: _min,
+          max: _max,
+          values: _values,
+          interval: 20,
+          showLabels: true,
+          onChanged: (SfRangeValues value) {
+            setState(() {
+              _values = value;
+            });
+          },
+        ),
+      ),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Set date range
 
@@ -217,6 +305,40 @@ Widget build(BuildContext context) {
 
 ### Vertical
 
+{% tabs %}
+{% highlight Dart %}
+
+DateTime _min = DateTime(2008, 01, 01);
+DateTime _max = DateTime(2018, 01, 01);
+SfRangeValues _values = SfRangeValues(DateTime(2012, 01, 01), DateTime(2014, 01, 01));
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: Center(
+      child: Container(
+        child: SfRangeSlider.vertical(
+          min: _min,
+          max: _max,
+          values: _values,
+          interval: 2,
+          showLabels: true,
+          dateIntervalType: DateIntervalType.years,
+          dateFormat: DateFormat.y(),
+          onChanged: (SfRangeValues value) {
+            setState(() {
+              _values = value;
+            });
+          },
+        ),
+      ),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Enable ticks
 
 You can enable ticks in the range slider using the [`showTicks`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/showTicks.html) property.
@@ -259,6 +381,39 @@ Widget build(BuildContext context) {
 ![Numeric range slider](images/getting-started/range_slider_with_tick.png)
 
 ### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 0;
+final double _max = 100;
+SfRangeValues _values = const SfRangeValues(40.0, 60.0);
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: Center(
+      child: Container(
+        child: SfRangeSlider.vertical(
+          min: _min,
+          max: _max,
+          values: _values,
+          interval: 20,
+          showTicks: true,
+          showLabels: true,
+          onChanged: (SfRangeValues value) {
+            setState(() {
+              _values = value;
+            });
+          },
+        ),
+      ),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Add prefix/suffix to labels
 
@@ -307,3 +462,37 @@ Widget build(BuildContext context) {
 ![Format label](images/getting-started/slider_with_formatted_label.png)
 
 ### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 0;
+final double _max = 100;
+SfRangeValues _values = const SfRangeValues(40.0, 60.0);
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: Center(
+      child: Container(
+        child: SfRangeSlider.vertical(
+          min: _min,
+          max: _max,
+          values: _values,
+          interval: 20,
+          showTicks: true,
+          showLabels: true,
+          numberFormat: NumberFormat("\$"),
+          onChanged: (SfRangeValues value) {
+            setState(() {
+              _values = value;
+            });
+          },
+        ),
+      ),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}

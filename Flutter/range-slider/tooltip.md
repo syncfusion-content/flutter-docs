@@ -53,6 +53,38 @@ Widget build(BuildContext context) {
 
 ### Vertical
 
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 6.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSlider.vertical(
+                    min: 0.0,
+                    max: 10.0,
+                    interval: 2,
+                    showTicks: true,
+                    showLabels: true,
+                    enableTooltip: true,
+                    values: _values,
+                    onChanged: (SfRangeValues newValues) {
+                        setState(() {
+                            _values = newValues;
+                        });
+                   },
+              ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 N>
 * Refer the [`tooltipTextFormatterCallback`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/tooltipTextFormatterCallback.html) for changing the default tooltip text.
 * Refer the [`SfRangeSliderThemeData`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData-class.html) for customizing the appearance of the tooltip text.
@@ -99,6 +131,40 @@ Widget build(BuildContext context) {
 ![Range slider tooltip shape](images/tooltip/range-tooltip-shape.png)
 
 ### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(40.0, 60.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+            child: SfRangeSlider.vertical(
+              min: 0.0,
+              max: 100.0,
+              interval: 20,
+              showTicks: true,
+              showLabels: true,
+              enableTooltip: true,
+              tooltipShape: SfPaddleTooltipShape(),
+              values: _values,
+              onChanged: (SfRangeValues newValues) {
+                setState(() {
+                  _values = newValues;
+                });
+              },
+            ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 
 ## Tooltip text format
 
@@ -152,6 +218,43 @@ Widget build(BuildContext context) {
 
 ### Vertical
 
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(DateTime(2010, 01, 01, 12, 00, 00), DateTime(2010, 01, 01, 18, 00, 00));
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSlider.vertical(
+                    min: DateTime(2010, 01, 01, 9, 00, 00),
+                    max: DateTime(2010, 01, 01, 21, 05, 00),
+                    values: _values,
+                    interval: 3,
+                    showTicks: true,
+                    showLabels: true,
+                    enableTooltip: true,
+                    dateFormat: DateFormat('h:mm'),
+                    dateIntervalType: DateIntervalType.hours,
+                    tooltipTextFormatterCallback: (dynamic actualValue, String formattedText) {
+                        return DateFormat('h:mm a').format(actualValue);
+                    },
+                    onChanged: (SfRangeValues newValues) {
+                        setState(() {
+                            _values = newValues;
+                        });
+                    },
+              ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Tooltip color
 
 You can change the background color of the tooltip in the range slider using the [`tooltipBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/tooltipBackgroundColor.html) property.
@@ -200,6 +303,43 @@ Widget build(BuildContext context) {
 ![Tooltip color support](images/tooltip/slider-tooltip-color.png)
 
 ### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                        tooltipBackgroundColor: Colors.red[300],
+                    ),
+                    child:  SfRangeSlider.vertical(
+                        min: 2.0,
+                        max: 10.0,
+                        interval: 1,
+                        showTicks: true,
+                        showLabels: true,
+                        enableTooltip: true,
+                        values: _values,
+                        onChanged: (SfRangeValues newValues){
+                            setState(() {
+                                _values = newValues;
+                            });
+                        },
+                    ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Tooltip label style
 
@@ -250,6 +390,43 @@ Widget build(BuildContext context) {
 
 ### Vertical
 
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                        tooltipTextStyle: TextStyle(color: Colors.red, fontSize: 16, fontStyle: FontStyle.italic),
+                    ),
+                    child:  SfRangeSlider.vertical(
+                     min: 2.0,
+                     max: 10.0,
+                     interval: 1,
+                     showTicks: true,
+                     showLabels: true,
+                     enableTooltip: true,
+                     values: _values,
+                     onChanged: (SfRangeValues newValues){
+                            setState(() {
+                                _values = newValues;
+                            });
+                        },
+                    ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Tooltip overlap stroke color
 
 You can change the overlap stroke color of the tooltip in the range slider using the [`overlappingTooltipStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/overlappingTooltipStrokeColor.html) property.
@@ -298,3 +475,40 @@ Widget build(BuildContext context) {
 ![Tooltip overlap support](images/tooltip/slider-tooltip-overlap.png)
 
 ### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                        overlappingTooltipStrokeColor: Colors.white,
+                    ),
+                    child:  SfRangeSlider.vertical(
+                     min: 2.0,
+                     max: 10.0,
+                     interval: 1,
+                     showTicks: true,
+                     showLabels: true,
+                     enableTooltip: true,
+                     values: _values,
+                     onChanged: (SfRangeValues newValues){
+                            setState(() {
+                                _values = newValues;
+                            });
+                        },
+                    ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}

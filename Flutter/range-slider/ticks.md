@@ -54,6 +54,38 @@ Widget build(BuildContext context) {
 
 ### Vertical
 
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 6.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSlider.vertical(
+                    min: 0.0,
+                    max: 10.0,
+                    interval: 2,
+                    showTicks: true,
+                    showLabels: true,
+                    values: _values,
+                    onChanged: (SfRangeValues newValues) {
+                        setState(() {
+                            _values = newValues;
+                        });
+                   },
+               ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+
 N> Refer the [`tickShape`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/tickShape.html) and [`SfRangeSliderThemeData`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData-class.html) for customizing the major tick’s visual appearance.
 
 ## Show minor ticks
@@ -99,6 +131,38 @@ Widget build(BuildContext context) {
 ![Range slider minor tick support](images/tick/minor-tick.png)
 
 ### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 6.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSlider.vertical(
+                    min: 0.0,
+                    max: 10.0,
+                    interval: 2,
+                    showTicks: true,
+                    minorTicksPerInterval: 1,
+                    showLabels: true,
+                    values: _values,
+                    onChanged: (SfRangeValues newValues) {
+                        setState(() {
+                            _values = newValues;
+                        });
+                   },
+               ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 N>
 * Refer the [`showTicks`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/showTicks.html) to know about the rendering major ticks at given interval.
@@ -158,6 +222,42 @@ Widget build(BuildContext context) {
 
 ### Vertical
 
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                        activeTickColor: Colors.red,
+                        inactiveTickColor: Colors.red[100],
+                    ),
+                    child:  SfRangeSlider.vertical(
+                        min: 2.0,
+                        max: 10.0,
+                        values: _values,
+                        interval: 1,
+                        showTicks: true,
+                        onChanged: (SfRangeValues newValues){
+                            setState(() {
+                                _values = newValues;
+                            });
+                        },
+                    ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Minor ticks color
 
 You can change the active and inactive minor ticks color of the range slider using the [`activeMinorTickColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/activeMinorTickColor.html) and [`inactiveMinorTickColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/inactiveMinorTickColor.html) properties respectively.
@@ -213,13 +313,52 @@ Widget build(BuildContext context) {
 
 ### Vertical
 
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                        activeMinorTickColor: Colors.red,
+                        inactiveMinorTickColor: Colors.red[200],
+                    ),
+                    child:  SfRangeSlider.vertical(
+                        min: 2.0,
+                        max: 10.0,
+                        values: _values,
+                        interval: 2,
+                        minorTicksPerInterval: 1,
+                        showTicks: true,
+                        onChanged: (SfRangeValues newValues){
+                            setState(() {
+                                _values = newValues;
+                            });
+                        },
+                    ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Ticks size
 
-You can change the major and minor ticks size of the range slider using the [`tickSize`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/tickSize.html) and [`minorTickSize`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/minorTickSize.html) properties respectively. The default value of the [`tickSize`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/tickSize.html) property is `Size(1.0, 8.0)` and [`minorTickSize`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/minorTickSize.html) property is `Size(1.0, 5.0)`.
+You can change the major and minor ticks size of the range slider using the [`tickSize`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/tickSize.html) and [`minorTickSize`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/minorTickSize.html) properties respectively.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderTheme-class.html).
 
 ### Horizontal
+
+The default value of the [`tickSize`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/tickSize.html) property is `Size(1.0, 8.0)` and [`minorTickSize`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/minorTickSize.html) property is `Size(1.0, 5.0)`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -261,6 +400,45 @@ Widget build(BuildContext context) {
 ![Ticks size support](images/tick/slider-ticks-size.png)
 
 ### Vertical
+
+The default value of the [`tickSize`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/tickSize.html) property is `Size(8.0, 1.0)` and [`minorTickSize`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/minorTickSize.html) property is `Size(5.0, 1.0)`.
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                         tickSize: Size(12.0, 3.0),
+                         minorTickSize: Size(8.0, 3.0),
+                    ),
+                    child:  SfRangeSlider.vertical(
+                         min: 2.0,
+                         max: 10.0,
+                         interval: 2,
+                         minorTicksPerInterval: 1,
+                         showTicks: true,
+                         values: _values,
+                        onChanged: (SfRangeValues newValues){
+                            setState(() {
+                                _values = newValues;
+                            });
+                        },
+                    ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Ticks offset
 
@@ -309,3 +487,39 @@ Widget build(BuildContext context) {
 ![Ticks offset support](images/tick/slider-ticks-offset.png)
 
 ### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                        tickOffset: Offset(10.0, 0.0),
+                    ),
+                    child: SfRangeSlider.vertical(
+                         min: 2.0,
+                         max: 10.0,
+                         interval: 2,
+                         minorTicksPerInterval: 1,
+                         showTicks: true,
+                         values: _values,
+                        onChanged: (SfRangeValues newValues){
+                            setState(() {
+                                _values = newValues;
+                            });
+                        },
+                    ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}

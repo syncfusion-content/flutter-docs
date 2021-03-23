@@ -64,6 +64,36 @@ Widget build(BuildContext context) {
 
 ### Vertical
 
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(3.0, 7.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSlider.vertical(
+                    min: 0.0,
+                    max: 10.0,
+                    values: _values,
+                    interval: 2,
+                    showLabels: true,
+                    onChanged: (SfRangeValues newValues) {
+                        setState(() {
+                            _values = newValues;
+                        });
+                    },
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 **Date range slider**
 
 You can show date values in the range slider by setting `DateTime` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) and [`values`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/values.html) properties.
@@ -108,6 +138,38 @@ Widget build(BuildContext context) {
 
 ### Vertical
 
+{% tabs %}
+{% highlight Dart %}
+
+ SfRangeValues _values = SfRangeValues(DateTime(2002, 01, 01), DateTime(2004, 01, 01));
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSlider.vertical(
+                    min: DateTime(2000, 01, 01, 00),
+                    max: DateTime(2004, 12, 31, 24),
+                    values: _values,
+                    interval: 1,
+                    showLabels: true,
+                    dateFormat: DateFormat.y(),
+                    dateIntervalType: DateIntervalType.years,
+                    onChanged: (SfRangeValues newValues) {
+                          setState(() {
+                                _values = newValues;
+                          });
+                    },
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 **Handle value change**
 
 The [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onChanged.html) callback is called when the user selects a value through interaction.
@@ -150,6 +212,34 @@ Widget build(BuildContext context) {
 
 ### Vertical
 
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(3.0, 7.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSlider.vertical(
+                    min: 0.0,
+                    max: 10.0,
+                    values: _values,
+                    onChanged: (SfRangeValues newValues) {
+                       setState(() {
+                           _values = newValues;
+                        });
+                   },
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Active color
 
 It represents the color applied to the active track, thumb, overlay, and inactive divisors. The active side of the range slider is between the start and end thumbs.
@@ -189,6 +279,36 @@ Widget build(BuildContext context) {
 ![Active color support](images/basic-features/active-color.png)
 
 ### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(3.0, 7.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSlider.vertical(
+                    min: 0.0,
+                    max: 10.0,
+                    values: _values,
+                    activeColor: Colors.red,
+                    showDivisors: true,
+                    onChanged: (SfRangeValues newValues) {
+                        setState(() {
+                            _values = newValues;
+                        });
+                    },
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Inactive color
 
@@ -234,6 +354,37 @@ Widget build(BuildContext context) {
 ![Inactive color support](images/basic-features/inactive-color.png)
 
 ### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(3.0, 7.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSlider.vertical(
+                    min: 0.0,
+                    max: 10.0,
+                    values: _values,
+                    activeColor: Colors.red,
+                    inactiveColor: Colors.red.withOpacity(0.2),
+                    showDivisors: true,
+                    onChanged: (SfRangeValues newValues) {
+                        setState(() {
+                            _values = newValues;
+                        });
+                    },
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ### For customizing individual items
 

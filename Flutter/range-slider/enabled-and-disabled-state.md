@@ -49,6 +49,34 @@ Widget build(BuildContext context) {
 
 ### Vertical
 
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(3.0, 7.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSlider.vertical(
+                    min: 0.0,
+                    max: 10.0,
+                    values: _values,
+                    onChanged: (SfRangeValues newValues) {
+                       setState(() {
+                           _values = newValues;
+                        });
+                   },
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Disabled state
 
 The range slider will be in disabled state if [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onChanged.html) is `null`.
@@ -81,6 +109,29 @@ Widget build(BuildContext context) {
 ![Disabled range slider](images/enabled-and-disabled/disabled-state.png)
 
 ### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(3.0, 7.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSlider.vertical(
+                    min: 0.0,
+                    max: 10.0,
+                    values: _values,
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Disabled color
 
@@ -139,3 +190,43 @@ Widget build(BuildContext context) {
 ![Disabled color support](images/enabled-and-disabled/slider-disabled-color.png)
 
 ### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                        disabledActiveTrackColor: Colors.orange,
+                        disabledInactiveTrackColor: Colors.orange[200],
+                        disabledActiveTickColor: Colors.orange,
+                        disabledInactiveTickColor: Colors.orange[200],
+                        disabledActiveMinorTickColor: Colors.orange,
+                        disabledInactiveMinorTickColor: Colors.orange[200],
+                        disabledActiveDivisorColor: Colors.purple,
+                        disabledInactiveDivisorColor: Colors.purple[200],
+                        disabledThumbColor: Colors.orange,
+                    ),
+                    child:  SfRangeSlider.vertical(
+                     min: 2.0,
+                     max: 10.0,
+                     interval: 2,
+                     showTicks: true,
+                     minorTicksPerInterval: 1,
+                     showDivisors: true,
+                     values: _values,
+                  ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}

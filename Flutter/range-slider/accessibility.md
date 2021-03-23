@@ -48,3 +48,37 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ## Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(40.0, 60.0);
+
+@override
+Widget build(BuildContext context) {
+   return MaterialApp(
+      home: Scaffold(
+          body: Center(
+            child: SfRangeSlider.vertical(
+              min: 0.0,
+              max: 100.0,
+              values: _values,
+              interval: 20,
+              showTicks: true,
+              showLabels: true,
+              semanticFormatterCallback: (SfRangeValues values){
+                return 'SfRangeValues ${values.start} ${values.end}';
+              },
+              onChanged: (SfRangeValues newValues) {
+                setState(() {
+                  _values = newValues;
+                });
+              },
+            ),
+          )
+      ),
+   );
+}
+
+{% endhighlight %}
+{% endtabs %}

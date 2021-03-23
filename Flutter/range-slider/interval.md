@@ -53,6 +53,37 @@ Widget build(BuildContext context) {
 
 ### Vertical
 
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 6.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSlider.vertical(
+                    min: 0.0,
+                    max: 10.0,
+                    interval: 2,
+                    showTicks: true,
+                    showLabels: true,
+                    values: _values,
+                    onChanged: (SfRangeValues newValues) {
+                        setState(() {
+                            _values = newValues;
+                        });
+                   },
+               ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 N>
 * Refer the [`showDivisors`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/showDivisors.html) to know about the rendering of divisors at given interval.
 * Refer the [`showTicks`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/showTicks.html) to know about the rendering of major ticks at given interval.
@@ -105,6 +136,39 @@ Widget build(BuildContext context) {
 
 ### Vertical
 
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(DateTime(2002, 01, 01), DateTime(2003, 01, 01));
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child:  SfRangeSlider.vertical(
+                    min: DateTime(2000, 01, 01, 00),
+                    max: DateTime(2004, 12, 31, 24),
+                    values: _values,
+                    interval: 1,
+                    showLabels: true,
+                    showTicks: true,
+                    dateFormat: DateFormat.y(),
+                    dateIntervalType: DateIntervalType.years,
+                    onChanged: (SfRangeValues newValues) {
+                        setState(() {
+                            _values = newValues;
+                        });
+                   },
+              ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Discrete selection for numeric values
 
 You can move the thumb in discrete manner for numeric values using the [`stepSize`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/stepSize.html) property in the range slider.
@@ -147,6 +211,39 @@ Widget build(BuildContext context) {
 ![Step size support](images/interval/step-size-support.gif)
 
 ### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 6.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSlider.vertical(
+                  min: 0.0,
+                  max: 10.0,
+                  interval: 2,
+                  stepSize: 2,
+                  showTicks: true,
+                  minorTicksPerInterval: 1,
+                  showLabels: true,
+                  values: _values,
+                  onChanged: (SfRangeValues newValues) {
+                      setState(() {
+                          _values = newValues;
+                      });
+                  },
+              ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Discrete selection for date values
 
@@ -194,6 +291,40 @@ Widget build(BuildContext context) {
 
 ### Vertical
 
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(DateTime(2004, 01, 01), DateTime(2006, 01, 01));
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+            child: SfRangeSlider.vertical(
+              min: DateTime(2000, 01, 01),
+              max: DateTime(2010, 01, 01),
+              interval: 2,
+              stepDuration: SliderStepDuration(years: 2),
+              dateFormat: DateFormat.y(),
+              dateIntervalType: DateIntervalType.years,
+              showTicks: true,
+              showLabels: true,
+              values: _values,
+              onChanged: (SfRangeValues newValues) {
+                setState(() {
+                  _values = newValues;
+                });
+              },
+            ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Enable interval selection
 
 You can select a particular interval by tapping when setting the [`enableIntervalSelection`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/enableIntervalSelection.html) property as `true`. Both the thumbs will be moved to the current interval with animation.
@@ -238,3 +369,38 @@ Widget build(BuildContext context) {
 ![Interval selection support](images/interval/range-interval-selection-support.gif)
 
 ### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(DateTime(2004, 01, 01), DateTime(2006, 01, 01));
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+            child: SfRangeSlider.vertical(
+              min: DateTime(2000, 01, 01),
+              max: DateTime(2010, 01, 01),
+              interval: 2,
+              enableIntervalSelection: true,
+              dateFormat: DateFormat.y(),
+              dateIntervalType: DateIntervalType.years,
+              showTicks: true,
+              showLabels: true,
+              enableTooltip: true,
+              values: _values,
+              onChanged: (SfRangeValues newValues) {
+                setState(() {
+                  _values = newValues;
+                });
+              },
+            ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}

@@ -62,6 +62,43 @@ Widget build(BuildContext context) {
 
 ### Vertical
 
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                        thumbRadius: 13,
+                    ),
+                    child:  SfRangeSlider.vertical(
+                     min: 2.0,
+                     max: 10.0,
+                     interval: 1,
+                     showTicks: true,
+                     showLabels: true,
+                     values: _values,
+                     onChanged: (SfRangeValues newValues){
+                            setState(() {
+                                _values = newValues;
+                            });
+                        },
+                    ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+
 ## Thumb color
 
 You can change the color of the thumb in the range slider using the [`thumbColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/thumbColor.html) property.
@@ -109,6 +146,42 @@ Widget build(BuildContext context) {
 ![Thumb color support](images/thumb-and-overlay/slider-thumb-color.png)
 
 ### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                        thumbColor: Colors.red,
+                    ),
+                    child:  SfRangeSlider.vertical(
+                     min: 2.0,
+                     max: 10.0,
+                     interval: 1,
+                     showTicks: true,
+                     showLabels: true,
+                     values: _values,
+                     onChanged: (SfRangeValues newValues){
+                            setState(() {
+                                _values = newValues;
+                            });
+                        },
+                    ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Thumb stroke width and stroke color
 
@@ -158,6 +231,43 @@ Widget build(BuildContext context) {
 ![Thumb stroke color support](images/thumb-and-overlay/range-slider-thumb-stroke-color.png)
 
 ### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                data: SfRangeSliderThemeData(
+                  thumbStrokeWidth: 3,
+                  thumbStrokeColor: Colors.red,
+                ),
+                child: SfRangeSlider.vertical(
+                  min: 2.0,
+                  max: 10.0,
+                  interval: 1,
+                  showTicks: true,
+                  showLabels: true,
+                  values: _values,
+                  onChanged: (SfRangeValues newValues){
+                    setState(() {
+                      _values = newValues;
+                    });
+                  },
+                ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Thumb icon
 
@@ -214,6 +324,53 @@ Widget build(BuildContext context) {
 
 ![Thumb icon support](images/thumb-and-overlay/range-slider-thumb-icon.png)
 
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(5.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                data: SfRangeSliderThemeData(
+                    thumbColor: Colors.white,
+                    thumbRadius: 15,
+                    thumbStrokeWidth: 2,
+                    thumbStrokeColor: Colors.blue
+                ),
+                child: SfRangeSlider.vertical(
+                  min: 2.0,
+                  max: 10.0,
+                  interval: 1,
+                  showTicks: true,
+                  showLabels: true,
+                  values: _values,
+                  startThumbIcon: Icon(
+                      Icons.arrow_back_ios,
+                      color: Colors.blue,
+                      size: 20.0),
+                  endThumbIcon: Icon(
+                      Icons.arrow_forward_ios,
+                      color: Colors.blue,
+                      size: 20.0),
+                  onChanged: (SfRangeValues newValues){
+                    setState(() {
+                      _values = newValues;
+                    });
+                  },
+                ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ### Vertical
 
 ## Thumb overlay size
@@ -264,6 +421,44 @@ Widget build(BuildContext context) {
 
 ### Vertical
 
+### Horizontal
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                        overlayRadius: 22,
+                    ),
+                    child:  SfRangeSlider.vertical(
+                     min: 2.0,
+                     max: 10.0,
+                     interval: 1,
+                     showTicks: true,
+                     showLabels: true,
+                     values: _values,
+                     onChanged: (SfRangeValues newValues){
+                            setState(() {
+                                _values = newValues;
+                            });
+                        },
+                    ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Thumb overlay color
 
 You can change the color of the thumb overlay in the range slider using the [`overlayColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/overlayColor.html) property.
@@ -312,6 +507,42 @@ Widget build(BuildContext context) {
 
 ### Vertical
 
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                        overlayColor: Colors.red[50],
+                    ),
+                    child:  SfRangeSlider.vertical(
+                     min: 2.0,
+                     max: 10.0,
+                     interval: 1,
+                     showTicks: true,
+                     showLabels: true,
+                     values: _values,
+                     onChanged: (SfRangeValues newValues){
+                            setState(() {
+                                _values = newValues;
+                            });
+                        },
+                    ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Thumb overlap stroke color
 
 You can change the overlap stroke color of the thumb in the range slider using the [`overlappingThumbStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/overlappingThumbStrokeColor.html) property.
@@ -359,3 +590,39 @@ Widget build(BuildContext context) {
 ![Thumb overlap stroke color support](images/thumb-and-overlay/slider-overlap-stroke-color.png)
 
 ### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                        overlappingThumbStrokeColor: Colors.red,
+                    ),
+                    child:  SfRangeSlider.vertical(
+                     min: 2.0,
+                     max: 10.0,
+                     interval: 1,
+                     showTicks: true,
+                     showLabels: true,
+                     values: _values,
+                     onChanged: (SfRangeValues newValues){
+                            setState(() {
+                                _values = newValues;
+                            });
+                        },
+                    ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
