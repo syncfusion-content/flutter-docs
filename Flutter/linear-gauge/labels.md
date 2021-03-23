@@ -187,7 +187,7 @@ SfLinearGauge(
 
 {% endhighlight %}
 
-![set Label Format for Axis Label](images/axis-labels/axis_label_visibility.png)
+![set Label Format for Axis Label](images/axis-labels/axis_label_formatter.png)
 
 ## Number Format
 
@@ -207,4 +207,4 @@ SfLinearGauge(
 
 {% endhighlight %}
 
-![set Label Format for Axis Label](images/axis-labels/axis_label_visibility.png)
+![set Label Format for Axis Label](images/axis-labels/axis_label_number_format.png)
