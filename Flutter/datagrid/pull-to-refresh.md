@@ -73,7 +73,7 @@ class EmployeeDataSource extends DataGridSource {
   List<DataGridRow> get rows => dataGridRows;
 
   @override
-  DataGridRowAdapter buildRow(DataGridRow row) {
+  DataGridRowAdapter? buildRow(DataGridRow row) {
     return DataGridRowAdapter(
       cells: row.getCells().map<Widget>((dataGridCell) {
       return Container(
@@ -303,7 +303,7 @@ class EmployeeDataSource extends DataGridSource {
   List<DataGridRow> get rows => dataGridRows;
 
   @override
-  DataGridRowAdapter buildRow(DataGridRow row) {
+  DataGridRowAdapter? buildRow(DataGridRow row) {
     return DataGridRowAdapter(
       cells: row.getCells().map<Widget>((dataGridCell) {
       return Container(
@@ -315,7 +315,7 @@ class EmployeeDataSource extends DataGridSource {
   }
 
   @override
-  Future<void> handleLoadMoreRows() async {
+  Future<void> handleRefresh() async {
     await Future.delayed(Duration(seconds: 5));
     _addMoreRows(employees, 15);
     buildDataGridRows();

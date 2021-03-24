@@ -369,6 +369,7 @@ Widget build(BuildContext context) {
           ))),
       GridTextColumn(
         columnName: 'name',
+        allowSorting: false,
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerLeft,
@@ -516,30 +517,34 @@ class EmployeeDataSource extends DataGridSource {
   }
 
   @override
-  int compare(DataGridRow a, DataGridRow b, SortColumnDetails sortColumn) {
-    final String stringA = a
-        .getCells()
-        .firstWhere((element) => element.columnName == sortColumn.name,
-            orElse: () => null)
-        ?.value;
-    final String stringB = b
-        .getCells()
-        .firstWhere((element) => element.columnName == sortColumn.name,
-            orElse: () => null)
-        .value;
-
-    int aLength = stringA.length;
-    int bLength = stringB.length;
-    if (aLength.compareTo(bLength) > 0)
-      return sortColumn.sortDirection == DataGridSortDirection.ascending
-          ? 1
-          : -1;
-    else if (aLength.compareTo(bLength) == -1)
-      return sortColumn.sortDirection == DataGridSortDirection.ascending
-          ? -1
-          : 1;
-    else
-      return 0;
+  int compare(DataGridRow? a, DataGridRow? b, SortColumnDetails sortColumn) {
+      final String? stringA = a
+            ?.getCells()
+            .firstWhereOrNull((element) => element.columnName == sortColumn.name)
+            ?.value;
+      final String? stringB = b
+            ?.getCells()
+            .firstWhereOrNull((element) => element.columnName == sortColumn.name)
+            ?.value;
+  
+      int? aLength = stringA?.length;
+      int? bLength = stringB?.length;
+  
+      if (aLength == null || bLength == null) {
+        return 0;
+      }
+  
+      if (aLength.compareTo(bLength) > 0) {
+        return sortColumn.sortDirection == DataGridSortDirection.ascending
+            ? 1
+            : -1;
+      } else if (aLength.compareTo(bLength) == -1) {
+        return sortColumn.sortDirection == DataGridSortDirection.ascending
+            ? -1
+            : 1;
+      } else {
+        return 0;
+      }
   }
 }
 
@@ -590,25 +595,29 @@ class EmployeeDataSource extends DataGridSource<Employee> {
   }
 
   @override
-  int compare(DataGridRow a, DataGridRow b, SortColumnDetails sortColumn) {
-    if (sortColumn.name == 'name') {
-      final String stringA = a
-        .getCells()
-        .firstWhere((element) => element.columnName == sortColumn.name,
-          orElse: () => null)
-        ?.value;
-      final String stringB = b
-        .getCells()
-        .firstWhere((element) => element.columnName == sortColumn.name,
-          orElse: () => null)
-        ?.value;
-      if (sortColumn.sortDirection == DataGridSortDirection.ascending) {
-        return stringA.compareTo(stringB);
-      } else {
-        return stringB.compareTo(stringA);
-      }
-    }
-    return super.compare(a, b, sortColumn);
+  int compare(DataGridRow? a, DataGridRow? b, SortColumnDetails sortColumn) {
+     if (sortColumn.name == 'name') {
+        final String? stringA = a
+            ?.getCells()
+            .firstWhereOrNull((element) => element.columnName == sortColumn.name)
+            ?.value;
+        final String? stringB = b
+            ?.getCells()
+            .firstWhereOrNull((element) => element.columnName == sortColumn.name)
+            ?.value;
+  
+        if (stringA == null || stringB == null) {
+          return 0;
+        }
+  
+        if (sortColumn.sortDirection == DataGridSortDirection.ascending) {
+          return stringA.compareTo(stringB);
+        } else {
+          return stringB.compareTo(stringA);
+        }
+     }
+     
+     return super.compare(a, b, sortColumn);
   }
 }
 
