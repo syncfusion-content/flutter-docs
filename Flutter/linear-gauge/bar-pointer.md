@@ -172,7 +172,7 @@ The color of the bar pointer can be changed by the `color` property. The below c
           child: SfLinearGauge(
             barPointers: [
               LinearBarPointer(
-                value: 100,
+                value: 50,
                 //Change the color
                 color: Colors.redAccent,
               )
