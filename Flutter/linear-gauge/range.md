@@ -159,7 +159,7 @@ The gradient colors can be applied by using the `shaderCallback` property of a r
   
 {% endhighlight %}
 
-![Initialize linear gauge for range](images/gauge-range/radail_gardient_range.png)
+![Initialize linear gauge for range](images/gauge-range/radial_gardient_range.png)
 
 ## Apply linear gradient colors to a range
 
