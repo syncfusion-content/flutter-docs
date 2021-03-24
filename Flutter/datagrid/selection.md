@@ -1414,6 +1414,8 @@ class CustomSelectionManager extends RowSelectionManager{
  
 SfDataGrid allows to customize the appearance of the selected rows and current cell through [SfDataGridTheme.SfDataGridThemeData](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData-class.html) property.
 
+All the style such as [selectionColor], [DataGridCurrentCellStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/DataGridCurrentCellStyle-class.html) related to `SfDataGrid` are available in the [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) package. To access those classes, import the below file in your application,
+
 {% tabs %}
 {% highlight Dart %} 
 
