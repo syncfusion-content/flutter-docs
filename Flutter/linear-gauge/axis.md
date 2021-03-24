@@ -37,6 +37,7 @@ By default axis will have the minimum scale value as 0 and the maximum scale val
 The minimum and maximum properties of a Linear Gauge can be used to customize the axis scale. In the below code snippet the axis scale is customized to have the minimum value of -50 to maximum value of 50. The scale values are displayed by the axis labels. Customizing these label styles are further explained in next topics.  
 
 {% highlight dart %} 
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -47,6 +48,7 @@ The minimum and maximum properties of a Linear Gauge can be used to customize th
       ),
     );
   }
+  
 {% endhighlight %}
 
 ![Update linear gauge for axis scale](images/axis/minmax_axis_linear_gauge.png)
