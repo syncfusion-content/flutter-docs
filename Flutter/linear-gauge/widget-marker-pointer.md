@@ -52,6 +52,11 @@ The widget marker pointer's alignment can be changed by the `markerAlignment` pr
             LinearWidgetPointer(
               value: 0,
               markerAlignment: LinearMarkerAlignment.center,
+              child: Container(
+                     height: 14,
+                     width: 14,
+                     color: Colors.redAccent,
+                   )
             ),
           ]),
         ),
@@ -106,12 +111,16 @@ In addition to position the widget marker pointer, it is also possible to change
       home: Scaffold(
         body: Center(
           child: SfLinearGauge(markerPointers: [
-            LinearShapePointer(
+            LinearWidgetPointer(
               value: 50,
               offset: 25,
-              shapeType: LinearShapePointerType.triangle,
               position: LinearElementPosition.inside,
-            ),
+              child: Container(
+                height: 14,
+                width: 14,
+                color: Colors.redAccent
+              ),
+            ),  
           ]),
         ),
       ),
