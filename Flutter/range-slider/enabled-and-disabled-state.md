@@ -77,6 +77,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Enabled state](images/enabled-and-disabled/vertical-enabled-state.png)
+
 ## Disabled state
 
 The range slider will be in disabled state if [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onChanged.html) is `null`.
@@ -132,6 +134,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Disabled range slider](images/enabled-and-disabled/vertical-disabled-state.png)
 
 ## Disabled color
 
@@ -230,3 +234,5 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Disabled color support](images/enabled-and-disabled/vertical-slider-disabled-color.png)

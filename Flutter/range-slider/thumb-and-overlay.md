@@ -98,6 +98,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Thumb size support](images/thumb-and-overlay/vertical-slider-thumb-size.png)
 
 ## Thumb color
 
@@ -182,6 +183,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Thumb color support](images/thumb-and-overlay/vertical-slider-thumb-color.png)
 
 ## Thumb stroke width and stroke color
 

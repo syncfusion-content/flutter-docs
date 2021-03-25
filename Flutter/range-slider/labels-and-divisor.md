@@ -185,7 +185,7 @@ Widget build(BuildContext context) {
   return MaterialApp(
       home: Scaffold(
           body: Center(
-              child: SfRangeSlider(
+              child: SfRangeSlider.vertical(
                     min: DateTime(2000, 01, 01, 00),
                     max: DateTime(2004, 12, 31, 24),
                     values: _values,
@@ -244,6 +244,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Year date format support](images/label-and-divisor/vertical-year-date-format.png)
 
 ### Month format
 
@@ -319,6 +321,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Month date format support](images/label-and-divisor/vertical-month-date-format.png)
+
 ### Hour format
 
 #### Horizontal
@@ -392,6 +396,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Hour date format support](images/label-and-divisor/vertical-hour-date-format.png)
 
 N> Refer the [`DateFormat`](https://api.flutter.dev/flutter/intl/DateFormat-class.html) class for other date format.
 
@@ -473,6 +479,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Label placement support](images/label-and-divisor/vertical-label-placement.png)
+
 ## Customize label text
 
 You can format or change the whole numeric or date label text using the [`labelFormatterCallback`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/labelFormatterCallback.html). Its arguments are,
@@ -551,6 +559,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Label formatter support](images/label-and-divisor/vertical-label-formattercallback.png)
 
 ## Label style
 
@@ -644,6 +654,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Labels style support](images/label-and-divisor/vertical-slider-labels-color.png)
+
 ## Label offset
 
 You can adjust the space between ticks and labels of the range slider using the [`labelOffset`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/labelOffset.html) property.
@@ -734,6 +746,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Labels offset support](images/label-and-divisor/vertical-slider-labels-offset.png)
+
 ## Show divisors
 
 The [`showDivisors`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/showDivisors.html) property is used to render the divisors on the track. The default value of [`showDivisors`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/showDivisors.html) property is `false`. It is a shape which is used to represent the major interval points of the track.
@@ -817,6 +831,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Range slider divisor support](images/label-and-divisor/vertical-show-divisor.png)
 
 ## Divisor radius
 
@@ -906,6 +922,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Divisor radius support](images/label-and-divisor/vertical-range-slider-divisor-radius.png)
+
 ## Divisor stroke width and stroke color
 
 You can change the active and inactive divisor stroke width of the range slider using the [`activeDivisorStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/activeDivisorStrokeWidth.html) and the [`inactiveDivisorStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/inactiveDivisorStrokeWidth.html) properties respectively.
@@ -930,6 +948,8 @@ Widget build(BuildContext context) {
                  data: SfRangeSliderThemeData(
                      activeTrackHeight: 10,
                      inactiveTrackHeight: 10,
+                     activeDivisorRadius:4 ,
+                     inactiveDivisorRadius: 4,
                      activeDivisorStrokeColor: Colors.red,
                      activeDivisorStrokeWidth: 2,
                      inactiveDivisorStrokeWidth: 2,
@@ -974,6 +994,8 @@ Widget build(BuildContext context) {
                  data: SfRangeSliderThemeData(
                      activeTrackHeight: 10,
                      inactiveTrackHeight: 10,
+                     activeDivisorRadius:4 ,
+                     inactiveDivisorRadius: 4,
                      activeDivisorStrokeColor: Colors.red,
                      activeDivisorStrokeWidth: 2,
                      inactiveDivisorStrokeWidth: 2,
@@ -999,6 +1021,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Divisor stroke width and color support](images/label-and-divisor/vertical-range-slider-divisor-stroke-color.png)
 
 ## Divisor color
 
@@ -1026,7 +1050,7 @@ Widget build(BuildContext context) {
                          inactiveDivisorColor: Colors.red[200],
                     ),
                     child:  SfRangeSlider(
-                      min: 2.0,
+                      min: 0.0,
                       max: 10.0,
                       interval: 1,
                       showDivisors: true,
@@ -1068,7 +1092,7 @@ Widget build(BuildContext context) {
                          inactiveDivisorColor: Colors.red[200],
                     ),
                     child:  SfRangeSlider.vertical(
-                      min: 2.0,
+                      min: 0.0,
                       max: 10.0,
                       interval: 1,
                       showDivisors: true,
@@ -1087,3 +1111,5 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Divisor color support](images/label-and-divisor/vertical-slider-divisor-color.png)
