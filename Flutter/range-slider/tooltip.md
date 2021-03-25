@@ -95,6 +95,8 @@ N>
 
 You can show tooltip in rectangular or paddle shape using the [`tooltipShape`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/tooltipShape.html) property. The default value of the [`tooltipShape`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/tooltipShape.html) property is `SfRectangularTooltipShape`.
 
+N> The paddle tooltip shape is not applicable for vertical orientation of the range sliders.
+
 ### Horizontal
 
 {% tabs %}
@@ -131,6 +133,47 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Range slider tooltip shape](images/tooltip/range-tooltip-shape.png)
+
+## Tooltip position
+
+N> This is only applicable for vertical orientation of the range sliders.
+
+You can show tooltip in left or right positions using the [`tooltipPosition`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/tooltipPosition.html) property. The default value of the [`tooltipPosition`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/tooltipPosition.html) property is `SliderTooltipPosition.left`.
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(40.0, 60.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+            child: SfRangeSlider.vertical(
+              min: 0.0,
+              max: 100.0,
+              interval: 20,
+              showTicks: true,
+              showLabels: true,
+              enableTooltip: true,
+              tooltipPosition:SliderTooltipPosition.right,
+              values: _values,
+              onChanged: (SfRangeValues newValues) {
+                setState(() {
+                  _values = newValues;
+                });
+              },
+            ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Range slider tooltip shape](images/tooltip/range-right-tooltip-shape.png)
 
 ## Tooltip text format
 
