@@ -16,9 +16,7 @@ The `isMirrored` property in `SfLinearGauge` mirrors all the gauge elements in t
   @override
   Widget build(BuildContext context) {
     return Center(
-        child: SfLinearGauge(
-          isMirrored: true,
-        ),
+      child: SfLinearGauge(isMirrored: true)
     );
   }
 

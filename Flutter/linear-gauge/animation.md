@@ -24,7 +24,7 @@ The `animateAxis` and `animationDuration` properties in `SfLinearGauge` is used 
         body: Center(
           child: SfLinearGauge(
             animateAxis: true,
-            animationDuration: 3000,
+            animationDuration: 3000
           ),
         ),
       ),
@@ -46,7 +46,7 @@ The `animateRange` and `animationDuration` properties in `SfLinearGauge` is used
         body: Center(
           child: SfLinearGauge(
             animateRange: true,
-            animationDuration: 3000,
+            animationDuration: 3000
           ),
         ),
       ),
@@ -91,7 +91,7 @@ The below code example demonstrates updating the animation for bar pointer.
               LinearBarPointer(
                 value: 50,
                 animationDuration: 2000,
-                animationType: LinearAnimationType.slowMiddle,
+                animationType: LinearAnimationType.bounceOut
               ),
             ],
           ),

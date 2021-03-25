@@ -21,13 +21,13 @@ The below is the default appearance of default shape pointer.
 
 {% highlight dart %} 
 
-  @override
+ @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         body: Center(
           child: SfLinearGauge(
-            markerPointers: [LinearShapePointer(value: 50,)],
+            markerPointers: [LinearShapePointer(value: 50)]
           ),
         ),
       ),
@@ -51,11 +51,7 @@ The size of the marker pointer can be changed by the `height` and `width` proper
       home: Scaffold(
         body: Center(
           child: SfLinearGauge(markerPointers: [
-            LinearShapePointer(
-              value: 50,
-              height: 25,
-              width: 25,
-            ),
+            LinearShapePointer(value: 50, height: 25, width: 25)
           ]),
         ),
       ),
@@ -72,22 +68,18 @@ The color of the shape pointer can be changed by the `color` property. The below
 
 {% highlight dart %} 
 
-  @override
+ @override
   Widget build(BuildContext context) {
     return MaterialApp(
       color: Colors.white,
       home: Scaffold(
         body: Center(
           child: SfLinearGauge(markerPointers: [
-            LinearShapePointer(
-              value: 50,
-              color: Colors.redAccent,
-            ),
+            LinearShapePointer(value: 50, color: Colors.redAccent)
           ]),
         ),
       ),
     );
-  }
   
 {% endhighlight %}
 
@@ -107,10 +99,7 @@ The border can be customized by the `borderColor` and `borderWidth` of the `Line
         body: Center(
           child: SfLinearGauge(markerPointers: [
             LinearShapePointer(
-              value: 50,
-              borderColor: Colors.redAccent,
-              borderWidth: 2,
-            ),
+                value: 50, borderColor: Colors.redAccent, borderWidth: 2)
           ]),
         ),
       ),
@@ -127,7 +116,7 @@ The elevation can be customized by the `elevation` and `elevationColor` properti
 
 {% highlight dart %} 
 
-  @override
+   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       color: Colors.white,
@@ -137,11 +126,10 @@ The elevation can be customized by the `elevation` and `elevationColor` properti
             color: Colors.white,
             child: SfLinearGauge(markerPointers: [
               LinearShapePointer(
-                value: 50,
-                shapeType: LinearShapePointerType.circle,
-                elevation: 5,
-                elevationColor: Colors.blueGrey,
-              ),
+                  value: 50,
+                  shapeType: LinearShapePointerType.circle,
+                  elevation: 5,
+                  elevationColor: Colors.blueGrey)
             ]),
           ),
         ),
@@ -159,16 +147,14 @@ The marker pointer alignment can be changed by the `markerAlignment` property of
 
 {% highlight dart %} 
 
-  @override
+ @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         body: Center(
           child: SfLinearGauge(axisTrackExtent: 30, markerPointers: [
             LinearShapePointer(
-              value: 0,
-              markerAlignment: LinearMarkerAlignment.center,
-            ),
+                value: 0, markerAlignment: LinearMarkerAlignment.center)
           ]),
         ),
       ),
@@ -192,10 +178,9 @@ By default, the shape pointer is positioned `outside` to the axis. This position
         body: Center(
           child: SfLinearGauge(markerPointers: [
             LinearShapePointer(
-              value: 55,
-              shapeType: LinearShapePointerType.triangle,
-              position: LinearElementPosition.inside,
-            ),
+                value: 55,
+                shapeType: LinearShapePointerType.triangle,
+                position: LinearElementPosition.inside)
           ]),
         ),
       ),
@@ -219,11 +204,10 @@ In addition to position the shape pointer, it is also possible to change the off
         body: Center(
           child: SfLinearGauge(markerPointers: [
             LinearShapePointer(
-              value: 50,
-              offset: 25,
-              shapeType: LinearShapePointerType.triangle,
-              position: LinearElementPosition.inside,
-            ),
+                value: 50,
+                offset: 25,
+                shapeType: LinearShapePointerType.triangle,
+                position: LinearElementPosition.inside)
           ]),
         ),
       ),
