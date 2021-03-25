@@ -60,7 +60,7 @@ The size of the marker pointer can be changed by the `height` and `width` proper
   
 {% endhighlight %}
 
-![Initialize linear gauge for shape pointer](images/shape-pointer/shape_pointer_size.png)
+![Set size of linear gauge shape pointer](images/shape-pointer/shape_pointer_size.png)
 
 ## Change the color
 
@@ -108,7 +108,7 @@ The border can be customized by the `borderColor` and `borderWidth` of the `Line
   
 {% endhighlight %}
 
-![Change shape pointer border](images/shape-pointer/shape_border.png)
+![Customize shape pointer border](images/shape-pointer/shape_border.png)
 
 ## Customize the elevation
 
@@ -163,7 +163,7 @@ The marker pointer alignment can be changed by the `markerAlignment` property of
   
 {% endhighlight %}
 
-![Change shape pointer elevation](images/shape-pointer/shape_marker_alignment.png)
+![Change shape pointer alignment](images/shape-pointer/shape_marker_alignment.png)
 
 ## Change the position
 
@@ -189,7 +189,7 @@ By default, the shape pointer is positioned `outside` to the axis. This position
   
 {% endhighlight %}
 
-![Change shape pointer elevation](images/shape-pointer/shape_pointer_position.png)
+![Change shape pointer position](images/shape-pointer/shape_pointer_position.png)
 
 ## Change the offset
 

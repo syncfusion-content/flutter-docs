@@ -89,7 +89,7 @@ The Linear Gauge axis is a scale where a set of values can be plotted. You can s
 
 {% endhighlight %}
 
-![Axis to linear gauge](images/getting-started/add_axis.png)
+![Add axis to linear gauge](images/getting-started/add_axis.png)
 
 ## Update Orientation
 
@@ -103,7 +103,7 @@ SfLinearGauge(
 
 {% endhighlight %}
 
-![Add ranges to a linear gauge](images/getting-started/vertical_orientation.png)
+![Update Orientation of linear gauge](images/getting-started/vertical_orientation.png)
 
 ## Add Range
 
@@ -138,7 +138,7 @@ The below code snippet demonstrates adding a shape pointer.
 
 {% endhighlight %}
 
-![shape pointer in linear gauge](images/getting-started/add_shape_pointer.png)
+![Add shape pointer in linear gauge](images/getting-started/add_shape_pointer.png)
 
 The below code snippet demonstrates adding a widget pointer.
 
@@ -159,7 +159,7 @@ The below code snippet demonstrates adding a widget pointer.
 
 {% endhighlight %}
 
-![shape pointer in linear gauge](images/getting-started/add_widget_pointer.png)
+![Add widget pointer in linear gauge](images/getting-started/add_widget_pointer.png)
 
 ## Add Bar Pointer
 
@@ -173,7 +173,7 @@ The bar pointer in a linear gauge is used specify a value in an axis track, but 
 
 {% endhighlight %}
 
-![bar pointer added to a linear gauge](images/getting-started/add_bar_pointer.png)
+![Bar pointer added to a linear gauge](images/getting-started/add_bar_pointer.png)
 
 The following code example gives you the complete code of above configurations.
 
@@ -226,4 +226,4 @@ The following code example gives you the complete code of above configurations.
 
 {% endhighlight %}
 
-![a linear gauge](images/getting-started/all_basic_elements.png)
+![A Linear gauge](images/getting-started/all_basic_elements.png)
