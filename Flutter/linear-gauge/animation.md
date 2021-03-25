@@ -106,11 +106,6 @@ The below code example demonstrates updating the animation for bar pointer.
 
 {% endhighlight %}
 
-### Bar pointer with `bounceOut` animation
-
-![Animate bar pointer in linear gauge](images/animation/bar-pointer/bounceout.gif)
-
-
 ### Animate Marker Pointers (Shape and Widget Pointers)
 
 Both the shape and widget marker pointers will have the same set of properties and behave similarly for animation. So we have demonstrated the `LinearShapePointer` only but the same is applicable for `LinearWidgetPointer` too. 
