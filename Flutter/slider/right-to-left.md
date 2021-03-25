@@ -47,4 +47,4 @@ Widget build(BuildContext context) {
 
 ![RTL support](images/right-to-left/right-to-left-support.png)
 
-N> RTL is not applicable for vertical orientation of the sliders.
+N> RTL is not applicable for vertical orientation of the slider.
