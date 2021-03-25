@@ -22,10 +22,10 @@ The `isMirrored` property in `SfLinearGauge` mirrors all the gauge elements in t
 
 {% endhighlight %}
 
-![mirror linear gauge](images/mirrored/mirrored.png)
+![Mirror linear gauge](images/mirrored/mirrored.png)
 
 ## Comparison for the mirrored and normal gauge
 
 The below screenshot provides a comparison for the mirrored and normal linear gauge. 
 
-![mirrored linear gauge comparsion](images/mirrored/mirror_comparison.png)
+![Mirrored linear gauge comparsion](images/mirrored/mirror_comparison.png)

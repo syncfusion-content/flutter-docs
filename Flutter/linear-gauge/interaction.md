@@ -45,7 +45,7 @@ double shapePointerValue = 25;
 
 {% endhighlight %}
 
-![simple shape pointer interaction in linear gauge](images/interaction/simple_interaction.gif)
+![Simple pointer interaction in linear gauge](images/interaction/simple_interaction.gif)
 
 The below code snippet demonstrates updating multiple marker pointer value based on swipe or drag gesture.
 
@@ -165,4 +165,4 @@ The below code snippet demonstrates updating multiple marker pointer value based
 
 {% endhighlight %}
 
-![shape pointer interaction in linear gauge](images/interaction/interaction.gif)
+![Shape pointer interaction in linear gauge](images/interaction/interaction.gif)

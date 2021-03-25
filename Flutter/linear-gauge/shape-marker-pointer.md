@@ -108,7 +108,7 @@ The border can be customized by the `borderColor` and `borderWidth` of the `Line
   
 {% endhighlight %}
 
-![customize shape pointer border](images/shape-pointer/shape_border.png)
+![Customize shape pointer border](images/shape-pointer/shape_border.png)
 
 ## Customize the elevation
 

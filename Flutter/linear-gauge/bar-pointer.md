@@ -65,7 +65,7 @@ The thickness can be changed by the `thickness` property of the bar pointer. The
   
 {% endhighlight %}
 
-![change the bar pointer thickness](images/bar-pointer/bar_thickness.png)
+![Change the bar pointer thickness](images/bar-pointer/bar_thickness.png)
 
 ## Change the edge style
 
@@ -97,7 +97,7 @@ The edge style can be changed with the `edgeStyle` property of bar pointer. The 
   
 {% endhighlight %}
 
-![change the bar pointer edge style](images/bar-pointer/edge_style.png)
+![Change the bar pointer edge style](images/bar-pointer/edge_style.png)
 
 ## Change the position
 

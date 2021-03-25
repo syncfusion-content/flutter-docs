@@ -226,4 +226,4 @@ The following code example gives you the complete code of above configurations.
 
 {% endhighlight %}
 
-![a linear gauge](images/getting-started/all_basic_elements.png)
+![A Linear gauge](images/getting-started/all_basic_elements.png)

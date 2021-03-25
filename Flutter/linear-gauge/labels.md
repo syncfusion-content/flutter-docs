@@ -65,7 +65,7 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 
-![switch linear gauge axis label visibility](images/axis-labels/axis_label_visibility.png)
+![Switch linear gauge axis label visibility](images/axis-labels/axis_label_visibility.png)
 
 ## Customize the interval between labels
 
@@ -88,7 +88,7 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 
-![set maximum labels interval in axis track](images/axis-labels/axis_label_interval.png)
+![Set maximum labels interval in axis track](images/axis-labels/axis_label_interval.png)
 
 ## Change the label position
 
@@ -112,7 +112,7 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 
-![set linear gauge label placement](images/axis-labels/label-placement.png)
+![Set linear gauge label placement](images/axis-labels/label-placement.png)
 
 
 ## Change the label offset
@@ -136,7 +136,7 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 
-![set linear gauge label offset](images/axis-labels/label_offset.png)
+![Set linear gauge label offset](images/axis-labels/label_offset.png)
 
 ##  Customize the maximum number of visible labels
 
@@ -159,7 +159,7 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 
-![set maximum number of labels in axis track](images/axis-labels/axis_label_visibility.png)
+![Set maximum number of labels in axis track](images/axis-labels/axis_label_visibility.png)
 
 ## Customize Label Text
 
@@ -187,7 +187,7 @@ SfLinearGauge(
 
 {% endhighlight %}
 
-![customize Label Text in axis track](images/axis-labels/custom_label_text.png)
+![Customize Label Text in axis track](images/axis-labels/custom_label_text.png)
 
 ## Number Format
 

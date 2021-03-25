@@ -82,7 +82,7 @@ The below code snippet demonstrates customizing the thickness and color.
 
 {% endhighlight %}
 
-![change axis track thickness in linear gauge](images/axis/axis_thickness.png)
+![Change axis track thickness in linear gauge](images/axis/axis_thickness.png)
 
 ## Apply gradient colors
 
@@ -218,7 +218,7 @@ When the `isAxisInversed` property is true, the axis can be placed in inverse di
 
 You can see that the axis values are displayed from 100 to 0 as the axis track is inversed.
 
-![inverse linear gauge for axis](images/axis/axis_inversed.png)
+![Inverse linear gauge for axis](images/axis/axis_inversed.png)
 
 ## Extend the axis
 
@@ -240,7 +240,7 @@ The axis track can be extended by the `axisTrackExtent` property. This will exte
 
 {% endhighlight %}
 
-![extend linear gauge axis tack](images/axis/extend_axis.png)
+![Extend linear gauge axis tack](images/axis/extend_axis.png)
 
 ## Change axis track visibility
 
@@ -261,7 +261,7 @@ You can hide the axis track by setting the `showAxisTrack` property to false. Th
 
 {% endhighlight %}
 
-![hide linear gauge axis track](images/axis/hide_axis_track.png)
+![Hide linear gauge axis track](images/axis/hide_axis_track.png)
 
 ## Custom Axis
 
@@ -356,4 +356,4 @@ Widget _getLinearGauge() {
 
 {% endhighlight %}
 
-![custom axis track](images/axis/custom_axis.png)
+![Custom axis track](images/axis/custom_axis.png)
