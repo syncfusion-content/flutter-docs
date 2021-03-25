@@ -117,6 +117,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Default range slider](images/getting-started/vertical_default_range_slider.png)
+
 ## Handle range change
 
 The [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onChanged.html) callback is used to get the current value of the range slider when the user selects a value through interaction.
@@ -185,6 +187,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Handle range slider](images/getting-started/vertical-handle-range-slider-state.png)
+
 ## Set numeric range
 
 You can show numeric values in the range slider by setting `double` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) and [`values`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/values.html) properties.
@@ -239,16 +243,16 @@ Widget build(BuildContext context) {
   return Scaffold(
     body: Center(
       child: Container(
-        child: SfRangeSlider.vertical(
-          min: _min,
-          max: _max,
-          values: _values,
-          interval: 20,
-          showLabels: true,
-          onChanged: (SfRangeValues value) {
-            setState(() {
-              _values = value;
-            });
+       child: SfRangeSlider.vertical(
+                 min: _min,
+                 max: _max,
+                 values: _values,
+                 interval: 20,
+                 showLabels: true,
+                 onChanged: (SfRangeValues value) {
+                   setState(() {
+                     _values = value;
+                   });
           },
         ),
       ),
@@ -258,6 +262,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Numeric range slider](images/getting-started/vertical_numeric_range_slider.png)
 
 ## Set date range
 
@@ -339,6 +345,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![DateTime range slider](images/getting-started/vertical_date_range_slider.png)
+
 ## Enable ticks
 
 You can enable ticks in the range slider using the [`showTicks`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/showTicks.html) property.
@@ -414,6 +422,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Numeric range slider](images/getting-started/vertical_range_slider_with_tick.png)
 
 ## Add prefix/suffix to labels
 
@@ -496,3 +506,5 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Format label](images/getting-started/vertical_slider_with_formatted_label.png)

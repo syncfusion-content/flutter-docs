@@ -81,6 +81,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Range slider label support](images/label-and-divisor/vertical-show-labels.png)
 
 N>
 * Refer the [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/numberFormat.html) and [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateFormat.html) for formatting the numeric and date labels respectively.
@@ -161,6 +162,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Number format support](images/label-and-divisor/vertical-number-format.png)
 
 ## Date format
 

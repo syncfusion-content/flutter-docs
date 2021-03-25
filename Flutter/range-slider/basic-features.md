@@ -94,6 +94,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Numeric range slider](images/basic-features/vertical-numeric-labels.png)
+
 **Date range slider**
 
 You can show date values in the range slider by setting `DateTime` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) and [`values`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/values.html) properties.
@@ -170,6 +172,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Date range slider](images/basic-features/vertical-date-labels.png)
+
 **Handle value change**
 
 The [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onChanged.html) callback is called when the user selects a value through interaction.
@@ -240,6 +244,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Enabled range slider](images/basic-features/vertical-enabled-state.png)
+
 ## Active color
 
 It represents the color applied to the active track, thumb, overlay, and inactive divisors. The active side of the range slider is between the start and end thumbs.
@@ -309,6 +315,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Active color support](images/basic-features/vertical-active-color.png)
 
 ## Inactive color
 
@@ -385,6 +393,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Inactive color support](images/basic-features/vertical-inactive-color.png)
 
 ### For customizing individual items
 

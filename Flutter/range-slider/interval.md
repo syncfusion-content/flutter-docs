@@ -84,6 +84,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Numeric interval support](images/interval/vertical-numeric-interval.png)
+
 N>
 * Refer the [`showDivisors`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/showDivisors.html) to know about the rendering of divisors at given interval.
 * Refer the [`showTicks`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/showTicks.html) to know about the rendering of major ticks at given interval.
@@ -168,6 +170,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Date interval type support](images/interval/vertical-date-interval-type.png)
 
 ## Discrete selection for numeric values
 

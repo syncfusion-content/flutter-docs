@@ -97,6 +97,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Track color support](images/track/vertical-slider-track-color.png)
+
 ## Track height
 
 You can change the track height of the range slider using the [`activeTrackHeight`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/activeTrackHeight.html) and the [`inactiveTrackHeight`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/inactiveTrackHeight.html) properties. The default value of the [`activeTrackHeight`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/activeTrackHeight.html) and the [`inactiveTrackHeight`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/inactiveTrackHeight.html) properties are `6.0` and `4.0`.
@@ -177,6 +179,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Track size support](images/track/vertical-slider-track-size.png)
 
 ## Track corner radius
 
@@ -259,3 +262,5 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Track corner radius support](images/track/vertical-slider-track-corner-radius.png)

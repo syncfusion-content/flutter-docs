@@ -85,6 +85,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Range slider tick support](images/tick/vertical-major-tick.png)
 
 N> Refer the [`tickShape`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/tickShape.html) and [`SfRangeSliderThemeData`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData-class.html) for customizing the major tick’s visual appearance.
 
@@ -163,6 +164,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Range slider minor tick support](images/tick/vertical-minor-tick.png)
 
 N>
 * Refer the [`showTicks`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/showTicks.html) to know about the rendering major ticks at given interval.
@@ -258,6 +261,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Major ticks color](images/tick/vertical-slider-major-ticks.png)
+
 ## Minor ticks color
 
 You can change the active and inactive minor ticks color of the range slider using the [`activeMinorTickColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/activeMinorTickColor.html) and [`inactiveMinorTickColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/inactiveMinorTickColor.html) properties respectively.
@@ -350,6 +355,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Minor ticks color](images/tick/vertical-slider-minor-ticks.png)
+
 ## Ticks size
 
 You can change the major and minor ticks size of the range slider using the [`tickSize`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/tickSize.html) and [`minorTickSize`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/minorTickSize.html) properties respectively.
@@ -440,6 +447,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Ticks size support](images/tick/vertical-slider-ticks-size.png)
+
 ## Ticks offset
 
 You can adjust the space between track and ticks of the range slider using the [`tickOffset`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/tickOffset.html) property in the [`SfRangeSliderThemeData`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData-class.html). The default value of the [`tickOffset`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/tickOffset.html) property is `null`.
@@ -523,3 +532,5 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Ticks offset support](images/tick/vertical-slider-ticks-offset.png)
