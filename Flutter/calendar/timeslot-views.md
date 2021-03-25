@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Day, week, work week views of Flutter Calendar | Scheduler
+title: Day, week, work week views of Flutter Calendar | Syncfusion
 description: Learn how to customize the Calendar timeslot view settings and its appearance in SfCalendar widget in Flutter
 platform: flutter
 control: SfCalendar
