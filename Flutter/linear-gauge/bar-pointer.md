@@ -276,11 +276,17 @@ The gradient colors can be applied by using the `shaderCallback` property of bar
                   value: 100,
                   thickness: 10,
                   //Apply linear gradient
-                  shaderCallback: (bounds) => LinearGradient(
-                          begin: Alignment.centerLeft,
-                          end: Alignment.centerRight,
-                          colors: [Colors.redAccent, Colors.blueAccent])
-                      .createShader(bounds))
+                  shaderCallback: (bounds) => SweepGradient(
+                  startAngle: 0.1,
+                  endAngle: 0.2,
+                  colors: [
+                    Colors.blueAccent,
+                    Colors.greenAccent,
+                    Colors.orangeAccent,
+                  ],
+                  tileMode: TileMode.mirror,
+                  center: Alignment.bottomRight,
+                ).createShader(bounds)
             ],
           ),
         ),
