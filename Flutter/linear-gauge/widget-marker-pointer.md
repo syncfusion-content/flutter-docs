@@ -21,11 +21,7 @@ The `LinearWidgetPointer` in `SfLinearGauge` allows to use any Flutter widget as
           child: SfLinearGauge(markerPointers: [
             LinearWidgetPointer(
               value: 50,
-              child: Container(
-                height: 14,
-                width: 14,
-                color: Colors.redAccent,
-              ),
+              child: Container(height: 14, width: 14, color: Colors.redAccent),
             ),
           ]),
         ),
@@ -50,14 +46,10 @@ The widget marker pointer's alignment can be changed by the `markerAlignment` pr
         body: Center(
           child: SfLinearGauge(axisTrackExtent: 30, markerPointers: [
             LinearWidgetPointer(
-              value: 0,
-              markerAlignment: LinearMarkerAlignment.center,
-              child: Container(
-                     height: 14,
-                     width: 14,
-                     color: Colors.redAccent,
-                   )
-            ),
+                value: 0,
+                markerAlignment: LinearMarkerAlignment.center,
+                child:
+                    Container(height: 14, width: 14, color: Colors.redAccent)),
           ]),
         ),
       ),
@@ -74,7 +66,7 @@ By default, the shape pointer is positioned `outside` to the axis. This position
 
 {% highlight dart %} 
 
-  @override
+ @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
@@ -83,11 +75,7 @@ By default, the shape pointer is positioned `outside` to the axis. This position
             LinearWidgetPointer(
               value: 55,
               position: LinearElementPosition.inside,
-              child: Container(
-                height: 14,
-                width: 14,
-                color: Colors.redAccent,
-              ),
+              child: Container(height: 14, width: 14, color: Colors.redAccent),
             ),
           ]),
         ),

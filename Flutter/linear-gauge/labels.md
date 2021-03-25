@@ -127,7 +127,7 @@ Widget build(BuildContext context) {
       home: Scaffold(
           body: Center( 
                 child: SfLinearGauge(
-                  labelOffset:20,
+                  labelOffset:20
                 ),             
             )
         )
@@ -202,7 +202,7 @@ The numberFormat property is used to format the numeric labels. The default valu
 {% highlight dart %}
 
 SfLinearGauge(
-  numberFormat: NumberFormat("\$"),
+  numberFormat: NumberFormat("\$")
 ),
 
 {% endhighlight %}

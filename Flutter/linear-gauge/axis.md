@@ -22,7 +22,7 @@ By default axis will have the minimum scale value as 0 and the maximum scale val
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: SfLinearGauge(),
+          child: SfLinearGauge()
         ),
       ),
     );
@@ -43,7 +43,7 @@ The minimum and maximum properties of a Linear Gauge can be used to customize th
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: SfLinearGauge(minimum: -50, maximum: 50),
+          child: SfLinearGauge(minimum: -50, maximum: 50)
         ),
       ),
     );
@@ -131,7 +131,7 @@ The below code snippet sets solid colors to the axis track.
       home: Scaffold(
         body: Center(
             child: SfLinearGauge(
-                axisTrackStyle: LinearAxisTrackStyle(color: Colors.blue)),
+                axisTrackStyle: LinearAxisTrackStyle(color: Colors.blue))
         ),
       ),
     );
@@ -163,7 +163,7 @@ The below code snippet sets a border to the axis track.
                   //Sets the border color
                   borderColor: Colors.blueGrey,
                   //Sets the border width
-                  borderWidth: 2)),
+                  borderWidth: 2))
         ),
       ),
     );
@@ -186,7 +186,7 @@ The `edgeStyle` property of `axisTrackStyle` specifies the corner type for the a
         body: Center(
             child: SfLinearGauge(
                 axisTrackStyle: LinearAxisTrackStyle(
-                    thickness: 20, edgeStyle: LinearEdgeStyle.bothCurve)),          
+                    thickness: 20, edgeStyle: LinearEdgeStyle.bothCurve))         
         ),
       ),
     );
@@ -232,10 +232,7 @@ The axis track can be extended by the `axisTrackExtent` property. This will exte
       color: Colors.white,
       home: Scaffold(
         body: Center(
-          child: SfLinearGauge(
-            maximum: 50,
-            axisTrackExtent: 50,
-          ),
+          child: child: SfLinearGauge(maximum: 50, axisTrackExtent: 50),
         ),
       ),
     );
@@ -351,7 +348,7 @@ Widget _getLinearGauge() {
               width: 24,
               position: LinearElementPosition.cross,
               shapeType: LinearShapePointerType.triangle,
-              height: 16),
+              height: 16)
         ],
       ),
       margin: EdgeInsets.all(10));

@@ -22,7 +22,7 @@ A `range` is a visual element that helps you quickly visualize where a range fal
               ranges: [
                 LinearGaugeRange(
                   startValue: 20,
-                  endValue: 70,
+                  endValue: 70
                 )
               ],
             ),
@@ -56,7 +56,7 @@ You can add multiple ranges for an axis. The below code example demonstrates add
                     startValue: 50, endValue: 70, color: Colors.redAccent),
                 //Third range.
                 LinearGaugeRange(
-                    startValue: 70, endValue: 100, color: Colors.greenAccent),
+                    startValue: 70, endValue: 100, color: Colors.greenAccent)
               ],
             ),
         ),
@@ -88,7 +88,7 @@ A Linear Gauge range has 3 values to draw a range - `startValue`, `midValue` and
                   startWidth: 70,
                   midWidth: -20,
                   endWidth: 70,
-                  rangeShapeType: LinearRangeShapeType.curve,
+                  rangeShapeType: LinearRangeShapeType.curve
                 ),
               ],
             ),
@@ -115,7 +115,7 @@ The color of a range can be changed by setting the `color` property of a range. 
           child: SfLinearGauge(
             ranges: [
               //Changes the color. The start and end values are 0 to 100 by default
-              LinearGaugeRange(color: Colors.blueAccent),
+              LinearGaugeRange(color: Colors.blueAccent)
             ],
           ),
         ),
@@ -149,7 +149,7 @@ The gradient colors can be applied by using the `shaderCallback` property of a r
                           colors: [
                             Colors.greenAccent,
                             Colors.blueAccent,
-                          ]).createShader(bounds)),
+                          ]).createShader(bounds))
             ],
           ),
         ),
@@ -174,14 +174,14 @@ The below code snippet demonstrates applying a linear gradient to the range.
         body: Center(
           child: SfLinearGauge(
             ranges: [
-              //Applies radial gardient color. The start and end values are 0 to 100 by default
+              //Applies linear gradient color. The start and end values are 0 to 100 by default
               LinearGaugeRange(
                   startWidth: 50,
                   shaderCallback: (bounds) => LinearGradient(
-                          begin: Alignment.topCenter,
-                          end: Alignment.bottomCenter,
-                          colors: [Colors.greenAccent, Colors.blueAccent])
-                      .createShader(bounds)),
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [Colors.greenAccent, Colors.blueAccent])
+                      .createShader(bounds))
             ],
           ),
         ),
@@ -206,23 +206,21 @@ The below code snippet demonstrates applying a sweep gradient to the range.
         body: Center(
           child: SfLinearGauge(
             ranges: [
-              //Applies sweep gardient color. The start and end values are 0 to 100 by default
+              //Applies sweep gradient color. The start and end values are 0 to 100 by default
               LinearGaugeRange(
-                  startWidth: 50,
-                  shaderCallback: (bounds) => SweepGradient(
-                        startAngle: 0.1,
-                        endAngle: 0.2,
-                        colors: [
-                          Colors.blueAccent,
-                          Colors.greenAccent,
-                          Colors.orangeAccent,
-                        ],
-                        tileMode: TileMode.mirror,
-                        center: Alignment.bottomRight,
-                      ).createShader(bounds),
-                    ),
-            ],
-          ),
+                startWidth: 50,
+                shaderCallback: (bounds) => SweepGradient(
+                  startAngle: 0.1,
+                  endAngle: 0.2,
+                  colors: [
+                    Colors.blueAccent,
+                    Colors.greenAccent,
+                    Colors.orangeAccent,
+                  ],
+                  tileMode: TileMode.mirror,
+                  center: Alignment.bottomRight,
+                ).createShader(bounds)
+              ),
             ],
           ),
         ),
@@ -247,9 +245,10 @@ It is possible to position the ranges `inside`, `cross`, and `outside` the axis.
       home: Scaffold(
         body: Center(
           child: SfLinearGauge(
-            //Here the range is positioned inside the axis.
-            ranges: [LinearGaugeRange(position: LinearElementPosition.inside)],
-          ),
+              //Here the range is positioned inside the axis.
+              ranges: [
+                LinearGaugeRange(position: LinearElementPosition.inside)
+              ]),
         ),
       ),
     );
@@ -265,36 +264,31 @@ You can set range color to axis elements using the useRangeColorForAxis property
 
 {% highlight dart %} 
 
-  Container(
-    child: SfLinearGauge(
-      minorTicksPerInterval: 4,
-      useRangeColorForAxis: true,
-      animateAxis: true,
-      axisTrackStyle: LinearAxisTrackStyle(
-        thickness: 1,
-      ),
-      ranges: <LinearGaugeRange>[
-        LinearGaugeRange(
-          startValue: 0,
-          endValue: 33,
-          position: LinearElementPosition.outside,
-          color: Color(0xffF45656) 
-        ),
-        LinearGaugeRange(
-          startValue: 33,
-          endValue: 66,
-          position: LinearElementPosition.outside,
-          color: Color(0xffFFC93E),
-        ),
-        LinearGaugeRange(
-          startValue: 66,
-          endValue: 100,
-          position: LinearElementPosition.outside,
-          color: Color(0xff0DC9AB),
-        ),
-      ],
-    )
-  );
+ Container(
+          child: SfLinearGauge(
+          minorTicksPerInterval: 4,
+          useRangeColorForAxis: true,
+          animateAxis: true,
+          axisTrackStyle: LinearAxisTrackStyle(thickness: 1),
+          ranges: <LinearGaugeRange>[
+            LinearGaugeRange(
+                startValue: 0,
+                endValue: 33,
+                position: LinearElementPosition.outside,
+                color: Color(0xffF45656)),
+            LinearGaugeRange(
+                startValue: 33,
+                endValue: 66,
+                position: LinearElementPosition.outside,
+                color: Color(0xffFFC93E)),
+            LinearGaugeRange(
+                startValue: 66,
+                endValue: 100,
+                position: LinearElementPosition.outside,
+                color: Color(0xff0DC9AB)),
+          ],
+        )
+      )
 
   
 {% endhighlight %}
