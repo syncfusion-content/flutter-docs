@@ -286,7 +286,7 @@ The gradient colors can be applied by using the `shaderCallback` property of bar
                   ],
                   tileMode: TileMode.mirror,
                   center: Alignment.bottomRight,
-                ).createShader(bounds)
+                ).createShader(bounds))
             ],
           ),
         ),
