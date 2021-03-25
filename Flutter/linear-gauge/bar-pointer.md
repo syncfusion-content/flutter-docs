@@ -25,7 +25,7 @@ The code snippet creates a default bar pointer with the value 50.
           child: SfLinearGauge(
             barPointers: [
               LinearBarPointer(
-                value: 50,
+                value: 50
               )
             ],
           ),
@@ -54,7 +54,7 @@ The thickness can be changed by the `thickness` property of the bar pointer. The
             barPointers: [
               LinearBarPointer(
                 value: 50,
-                thickness: 10,
+                thickness: 10
               )
             ],
           ),
@@ -86,7 +86,7 @@ The edge style can be changed with the `edgeStyle` property of bar pointer. The 
                 // Changed the thickness to make the curve visible
                 thickness: 10,
                 //Updated the edge style as curve at end position
-                edgeStyle: LinearEdgeStyle.endCurve,
+                edgeStyle: LinearEdgeStyle.endCurve
               )
             ],
           ),
@@ -114,7 +114,7 @@ By default, the bar pointer is positioned cross to the axis. This position can b
             barPointers: [
               LinearBarPointer(
                 value: 50,
-                position: LinearElementPosition.inside,
+                position: LinearElementPosition.inside
               )
             ],
           ),
@@ -144,7 +144,7 @@ In addition to position the bar pointer, it is also possible to change the offse
               LinearBarPointer(
                 value: 50,
                 position: LinearElementPosition.outside,
-                offset: 5,
+                offset: 5
               )
             ],
           ),
@@ -172,9 +172,9 @@ The color of the bar pointer can be changed by the `color` property. The below c
           child: SfLinearGauge(
             barPointers: [
               LinearBarPointer(
-                value: 100,
+                value: 50,
                 //Change the color
-                color: Colors.redAccent,
+                color: Colors.redAccent
               )
             ],
           ),
@@ -193,7 +193,7 @@ The gradient colors can be applied by using the `shaderCallback` property of bar
 
 {% highlight dart %} 
 
-  @override
+   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       color: Colors.white,
@@ -202,17 +202,16 @@ The gradient colors can be applied by using the `shaderCallback` property of bar
           child: SfLinearGauge(
             barPointers: [
               LinearBarPointer(
-                value: 100,
-                //Apply radial gradient
-                shaderCallback: (bounds) => RadialGradient(
-                  radius: 30,
-                  colors: [
-                    Colors.redAccent,
-                    Colors.blueAccent,
-                    Colors.greenAccent,
-                  ],
-                ).createShader(bounds),
-              ),
+                  value: 100,
+                  //Apply radial gradient
+                  shaderCallback: (bounds) => RadialGradient(
+                        radius: 30,
+                        colors: [
+                          Colors.redAccent,
+                          Colors.blueAccent,
+                          Colors.greenAccent,
+                        ],
+                      ).createShader(bounds))
             ],
           ),
         ),
@@ -246,7 +245,7 @@ The gradient colors can be applied by using the `shaderCallback` property of bar
                         begin: Alignment.centerLeft,
                         end: Alignment.centerRight,
                         colors: [Colors.redAccent, Colors.blueAccent])
-                    .createShader(bounds),
+                    .createShader(bounds)
               ),
             ],
           ),
@@ -265,7 +264,7 @@ The gradient colors can be applied by using the `shaderCallback` property of bar
 
 {% highlight dart %} 
 
-  @override
+   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       color: Colors.white,
@@ -274,15 +273,14 @@ The gradient colors can be applied by using the `shaderCallback` property of bar
           child: SfLinearGauge(
             barPointers: [
               LinearBarPointer(
-                value: 100,
-                thickness: 10,
-                //Apply linear gradient
-                shaderCallback: (bounds) => LinearGradient(
-                        begin: Alignment.centerLeft,
-                        end: Alignment.centerRight,
-                        colors: [Colors.redAccent, Colors.blueAccent])
-                    .createShader(bounds),
-              ),
+                  value: 100,
+                  thickness: 10,
+                  //Apply linear gradient
+                  shaderCallback: (bounds) => LinearGradient(
+                          begin: Alignment.centerLeft,
+                          end: Alignment.centerRight,
+                          colors: [Colors.redAccent, Colors.blueAccent])
+                      .createShader(bounds))
             ],
           ),
         ),
@@ -309,11 +307,10 @@ The border can be customized with `borderWidth` and `borderColor` properties of 
           child: SfLinearGauge(
             barPointers: [
               LinearBarPointer(
-                value: 80,
-                thickness: 10,
-                borderWidth: 3,
-                borderColor: Colors.cyanAccent,
-              ),
+                  value: 80,
+                  thickness: 10,
+                  borderWidth: 3,
+                  borderColor: Colors.cyanAccent)
             ],
           ),
         ),

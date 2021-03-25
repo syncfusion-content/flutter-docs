@@ -22,7 +22,7 @@ By default axis will have the minimum scale value as 0 and the maximum scale val
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: SfLinearGauge(),
+          child: SfLinearGauge()
         ),
       ),
     );
@@ -37,16 +37,18 @@ By default axis will have the minimum scale value as 0 and the maximum scale val
 The minimum and maximum properties of a Linear Gauge can be used to customize the axis scale. In the below code snippet the axis scale is customized to have the minimum value of -50 to maximum value of 50. The scale values are displayed by the axis labels. Customizing these label styles are further explained in next topics.  
 
 {% highlight dart %} 
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: SfLinearGauge(minimum: -50, maximum: 50),
+          child: SfLinearGauge(minimum: -50, maximum: 50)
         ),
       ),
     );
   }
+  
 {% endhighlight %}
 
 ![Update linear gauge for axis scale](images/axis/minmax_axis_linear_gauge.png)
@@ -84,9 +86,9 @@ The below code snippet demonstrates customizing the thickness and color.
 
 ## Apply gradient colors
 
-The `color` property of `axisTrackStyle` allows to set a solid color, while the `gradient` property of `axisTrackStyle` allows to set linear-gradient colors to the axis track.
+The `color` property of `axisTrackStyle` allows to set a solid color, while the `gradient` property of `axisTrackStyle` allows to apply linear-gradient to axis track.
 
-The below code snippet sets a gradient color to the axis track.
+The below code snippet applies gradient to axis track.
 
 {% highlight dart %} 
 
@@ -119,7 +121,7 @@ The below code snippet sets a gradient color to the axis track.
 
 ## Apply solid color
 
-The below code snippet sets solid gradient colors to the axis track.
+The below code snippet sets solid colors to the axis track.
 
 {% highlight dart %} 
 
@@ -129,7 +131,7 @@ The below code snippet sets solid gradient colors to the axis track.
       home: Scaffold(
         body: Center(
             child: SfLinearGauge(
-                axisTrackStyle: LinearAxisTrackStyle(color: Colors.blue)),
+                axisTrackStyle: LinearAxisTrackStyle(color: Colors.blue))
         ),
       ),
     );
@@ -161,7 +163,7 @@ The below code snippet sets a border to the axis track.
                   //Sets the border color
                   borderColor: Colors.blueGrey,
                   //Sets the border width
-                  borderWidth: 2)),
+                  borderWidth: 2))
         ),
       ),
     );
@@ -184,7 +186,7 @@ The `edgeStyle` property of `axisTrackStyle` specifies the corner type for the a
         body: Center(
             child: SfLinearGauge(
                 axisTrackStyle: LinearAxisTrackStyle(
-                    thickness: 20, edgeStyle: LinearEdgeStyle.bothCurve)),          
+                    thickness: 20, edgeStyle: LinearEdgeStyle.bothCurve))         
         ),
       ),
     );
@@ -230,10 +232,7 @@ The axis track can be extended by the `axisTrackExtent` property. This will exte
       color: Colors.white,
       home: Scaffold(
         body: Center(
-          child: SfLinearGauge(
-            maximum: 50,
-            axisTrackExtent: 50,
-          ),
+          child: child: SfLinearGauge(maximum: 50, axisTrackExtent: 50),
         ),
       ),
     );
@@ -262,4 +261,99 @@ You can hide the axis track by setting the `showAxisTrack` property to false. Th
 
 {% endhighlight %}
 
-![hide linear gauge axis tack](images/axis/hide_axis_track.png)
+![hide linear gauge axis track](images/axis/hide_axis_track.png)
+
+## Custom Axis
+
+Linear gauge allows you to display a set of values along with a custom scale based on your business logic by using the onGenerateLabels and valueToFactorCallback callbacks.
+
+{% highlight dart %} 
+
+double pointerValue = 50.0;
+
+// To return the label value based on interval
+double _calculateLabelValue(num value) {
+  if (value == 0) {
+    return 0;
+  } else if (value == 1) {
+    return 2;
+  } else if (value == 2) {
+    return 5;
+  } else if (value == 3) {
+    return 10;
+  } else if (value == 4) {
+    return 20;
+  } else if (value == 5) {
+    return 30;
+  } else if (value == 6) {
+    return 50;
+  } else if (value == 7) {
+    return 100;
+  } else {
+    return 150;
+  }
+}
+
+Widget _getLinearGauge() {
+  return Container(
+      child: SfLinearGauge(
+        minimum: 0,
+        maximum: 150.0,
+        interval: 18.75,
+        animateAxis: true,
+        animateRange: true,
+        labelPosition: LinearLabelPosition.outside,
+        tickPosition: LinearElementPosition.outside,
+        valueToFactorCallback: (value) {
+          if (value >= 0 && value <= 2) {
+            return (value * 0.125) / 2;
+          } else if (value > 2 && value <= 5) {
+            return (((value - 2) * 0.125) / (5 - 2)) + (1 * 0.125);
+          } else if (value > 5 && value <= 10) {
+            return (((value - 5) * 0.125) / (10 - 5)) + (2 * 0.125);
+          } else if (value > 10 && value <= 20) {
+            return (((value - 10) * 0.125) / (20 - 10)) + (3 * 0.125);
+          } else if (value > 20 && value <= 30) {
+            return (((value - 20) * 0.125) / (30 - 20)) + (4 * 0.125);
+          } else if (value > 30 && value <= 50) {
+            return (((value - 30) * 0.125) / (50 - 30)) + (5 * 0.125);
+          } else if (value > 50 && value <= 100) {
+            return (((value - 50) * 0.125) / (100 - 50)) + (6 * 0.125);
+          } else if (value > 100 && value <= 150) {
+            return (((value - 100) * 0.125) / (150 - 100)) + (7 * 0.125);
+          } else {
+            return 1;
+          }
+        },
+        onGenerateLabels: () {
+          final List<LinearAxisLabel> _visibleLabels = <LinearAxisLabel>[];
+          for (num i = 0; i < 9; i++) {
+            final double _value = _calculateLabelValue(i);
+            final LinearAxisLabel label = LinearAxisLabel(
+                text: _value.toInt().toString(),
+                value: (i * 18.75).toDouble());
+            _visibleLabels.add(label);
+          }
+
+          return _visibleLabels;
+        },
+        markerPointers: [
+          LinearShapePointer(
+              value: pointerValue,
+              onValueChanged: (value) =>
+              {
+                setState(() => {pointerValue = value})
+              },
+              color: Color(0xff06589C),
+              width: 24,
+              position: LinearElementPosition.cross,
+              shapeType: LinearShapePointerType.triangle,
+              height: 16)
+        ],
+      ),
+      margin: EdgeInsets.all(10));
+}
+
+{% endhighlight %}
+
+![custom axis track](images/axis/custom_axis.png)

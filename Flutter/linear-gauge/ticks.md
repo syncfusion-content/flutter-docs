@@ -29,7 +29,7 @@ There are two type of ticks in the Flutter Linear Gauge namely major and minor t
             body: Center(
               child: SfLinearGauge(
                   majorTickStyle: LinearTickStyle(length: 10, thickness: 2.5, color: Colors.black),
-                  minorTickStyle: LinearTickStyle(length: 5, thickness: 1.75, color: Colors.black)),
+                  minorTickStyle: LinearTickStyle(length: 5, thickness: 1.75, color: Colors.black))
             )
         )
     );
@@ -50,9 +50,7 @@ Widget build(BuildContext context) {
   return MaterialApp(
       home: Scaffold(
           body: Center(             
-                child: SfLinearGauge(
-                 minorTicksPerInterval: 4,
-                ),           
+               child: SfLinearGauge(minorTicksPerInterval: 4)         
           )
       )
   );
@@ -62,7 +60,7 @@ Widget build(BuildContext context) {
 
 ![customize linear gauge ticks per interval](images/axis-ticks/minor-ticks-per-interval.png)
 
-## Switch tick visibility
+## Change tick visibility
 
 The `showTicks` property of the axis is used to enable or disable the visibility of both the major and the minor ticks. The default value of this property is true.
 
@@ -104,12 +102,10 @@ Widget build(BuildContext context) {
   return MaterialApp(
       home: Scaffold(
           body: Center(
-                child: SfLinearGauge(
-                   tickOffset: 20,
-                ),
+                child: SfLinearGauge(tickOffset: 20),
           )
       )
-  );
+    );
 }
 
 {% endhighlight %}
