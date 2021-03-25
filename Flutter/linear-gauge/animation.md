@@ -33,6 +33,8 @@ The `animateAxis` and `animationDuration` properties in `SfLinearGauge` is used 
 
 {% endhighlight %}
 
+![Animate axis in linear gauge](images/animation/animation_axis_range/animation_axis.gif)
+
 ## Animate range
 
 The `animateRange` and `animationDuration` properties in `SfLinearGauge` is used to  animate the axis track along with the ticks and labels. The range will be have a fade-in with opacity animation when this `animateRange` is set to true. By default, the `animateRange` is set to false. 
@@ -54,6 +56,8 @@ The `animateRange` and `animationDuration` properties in `SfLinearGauge` is used
   }
 
   {% endhighlight %}
+
+  ![Animate range in linear gauge](images/animation/animation_axis_range/animation_range.gif)
 
 ## Pointer animation
 
@@ -104,7 +108,7 @@ The below code example demonstrates updating the animation for bar pointer.
 
 ### Bar pointer with `bounceOut` animation
 
-![shape pointer in linear gauge](images/animation/bar-pointer/bounceout.gif)
+![Animate bar pointer in linear gauge](images/animation/bar-pointer/bounceout.gif)
 
 
 ### Animate Marker Pointers (Shape and Widget Pointers)
@@ -113,7 +117,7 @@ Both the shape and widget marker pointers will have the same set of properties a
 
 ### Marker pointer with `bounceOut` animation
 
-![shape pointer in linear gauge](images/animation/shape-pointer/bounceout.gif)
+![Animate marker pointer in linear gauge](images/animation/shape-pointer/bounceout.gif)
 
 
 

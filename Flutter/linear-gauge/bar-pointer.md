@@ -97,7 +97,7 @@ The edge style can be changed with the `edgeStyle` property of bar pointer. The 
   
 {% endhighlight %}
 
-![change the bar pointer thickness](images/bar-pointer/edge_style.png)
+![change the bar pointer edge style](images/bar-pointer/edge_style.png)
 
 ## Change the position
 
@@ -185,7 +185,7 @@ The color of the bar pointer can be changed by the `color` property. The below c
   
 {% endhighlight %}
 
-![Apply radial gradient color](images/bar-pointer/bar_color.png)
+![Apply color to bar pointer](images/bar-pointer/bar_color.png)
 
 ## Apply radial gradient colors
 
@@ -221,7 +221,7 @@ The gradient colors can be applied by using the `shaderCallback` property of bar
   
 {% endhighlight %}
 
-![Apply radial gradient color](images/bar-pointer/radial_gradient_bar.png)
+![Apply radial gradient to bar pointer](images/bar-pointer/radial_gradient_bar.png)
 
 ## Apply linear gradient colors
 
@@ -256,7 +256,7 @@ The gradient colors can be applied by using the `shaderCallback` property of bar
   
 {% endhighlight %}
 
-![Apply radial gradient color](images/bar-pointer/linear_gradient_bar.png)
+![Apply linear gradient to bar pointer](images/bar-pointer/linear_gradient_bar.png)
 
 ## Apply sweep gradient colors
 
@@ -290,7 +290,7 @@ The gradient colors can be applied by using the `shaderCallback` property of bar
   
 {% endhighlight %}
 
-![Apply radial gradient color](images/bar-pointer/sweep_gradient_bar.png)
+![Apply sweep gradient to bar pointer](images/bar-pointer/sweep_gradient_bar.png)
 
 
 ## Customize the border

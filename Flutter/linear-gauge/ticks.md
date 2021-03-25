@@ -88,7 +88,7 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 
-![customize linear gauge ticks visibility](images/axis-ticks/tick-placement.png)
+![customize linear gauge ticks placement](images/axis-ticks/tick-placement.png)
 
 
 ## Customize tick offset

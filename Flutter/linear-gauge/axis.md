@@ -82,7 +82,7 @@ The below code snippet demonstrates customizing the thickness and color.
 
 {% endhighlight %}
 
-![Update linear gauge for axis scale](images/axis/axis_thickness.png)
+![change axis track thickness in linear gauge](images/axis/axis_thickness.png)
 
 ## Apply gradient colors
 
@@ -117,7 +117,7 @@ The below code snippet applies gradient to axis track.
 
 {% endhighlight %}
 
-![Update linear gauge for axis color](images/axis/axis_gradient.png)
+![Apply gradient to axis in linear guage](images/axis/axis_gradient.png)
 
 ## Apply solid color
 
@@ -139,7 +139,7 @@ The below code snippet sets solid colors to the axis track.
 
 {% endhighlight %}
 
-![Update linear gauge for axis color](images/axis/axis_solid_color.png)
+![Apply color to axis in linear guage](images/axis/axis_solid_color.png)
 
 ## Customize the borders
 
@@ -171,7 +171,7 @@ The below code snippet sets a border to the axis track.
 
 {% endhighlight %}
 
-![Update linear gauge for axis color](images/axis/axis_border.png)
+![Customize axis track border](images/axis/axis_border.png)
 
 ## Customize the corners
 
@@ -194,7 +194,7 @@ The `edgeStyle` property of `axisTrackStyle` specifies the corner type for the a
 
 {% endhighlight %}
 
-![Update linear gauge for axis scale](images/axis/axis_corner_style.png)
+![Change axis track edge style](images/axis/axis_corner_style.png)
 
 ## Inverse the axis track
 

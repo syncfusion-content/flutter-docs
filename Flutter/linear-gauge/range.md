@@ -124,7 +124,7 @@ The color of a range can be changed by setting the `color` property of a range. 
   }
 {% endhighlight %}
 
-![Initialize linear gauge for range](images/gauge-range/color_range.png)
+![set linear gauge range color](images/gauge-range/color_range.png)
 
 ## Apply radial gradient colors to a range
 
@@ -159,7 +159,7 @@ The gradient colors can be applied by using the `shaderCallback` property of a r
   
 {% endhighlight %}
 
-![Initialize linear gauge for range](images/gauge-range/radial_gardient_range.png)
+![apply radial gradient to linear guage range](images/gauge-range/radial_gardient_range.png)
 
 ## Apply linear gradient colors to a range
 
@@ -191,7 +191,7 @@ The below code snippet demonstrates applying a linear gradient to the range.
   
 {% endhighlight %}
 
-![Initialize linear gauge for range](images/gauge-range/linear_gardient_range.png)
+![apply linear gradient to linear guage range](images/gauge-range/linear_gardient_range.png)
 
 ## Apply sweep gradient colors to a range
 
@@ -230,7 +230,7 @@ The below code snippet demonstrates applying a sweep gradient to the range.
   
 {% endhighlight %}
 
-![Initialize linear gauge for range](images/gauge-range/sweep_gradient_range.png)
+![apply sweep gradient to linear guage range](images/gauge-range/sweep_gradient_range.png)
 
 ## Customize the range position
 
@@ -293,4 +293,4 @@ You can set range color to axis elements using the useRangeColorForAxis property
   
 {% endhighlight %}
 
-![Position the linear gauge range](images/gauge-range/range_userangeforaxis.png)
+![Set range color to axis element](images/gauge-range/range_userangeforaxis.png)

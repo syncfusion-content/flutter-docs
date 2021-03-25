@@ -112,7 +112,7 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 
-![flutter linear gauge label placement](images/axis-labels/label-placement.png)
+![set linear gauge label placement](images/axis-labels/label-placement.png)
 
 
 ## Change the label offset
@@ -136,7 +136,7 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 
-![set maximum labels position in axis track](images/axis-labels/label_offset.png)
+![set linear gauge label offset](images/axis-labels/label_offset.png)
 
 ##  Customize the maximum number of visible labels
 
@@ -159,7 +159,7 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 
-![set maximum labels interval in axis track](images/axis-labels/axis_label_visibility.png)
+![set maximum number of labels in axis track](images/axis-labels/axis_label_visibility.png)
 
 ## Customize Label Text
 
@@ -207,4 +207,4 @@ SfLinearGauge(
 
 {% endhighlight %}
 
-![set Label Format for Axis Label](images/axis-labels/axis_label_number_format.png)
+![Customize Label Format in Axis Label](images/axis-labels/axis_label_number_format.png)
