@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started for Syncfusion Cartesian Charts (SfCartesianChart)
+title: Getting started for Cartesian Charts (SfCartesianChart)
 description:  Learn how to create the syncfusion Flutter charts, add series, legend ,markers and other features in Chart.
 platform: flutter
 control: Chart
