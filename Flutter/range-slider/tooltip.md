@@ -85,6 +85,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Range slider tooltip support](images/tooltip/vertical-show-tooltip.png)
+
 N>
 * Refer the [`tooltipTextFormatterCallback`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/tooltipTextFormatterCallback.html) for changing the default tooltip text.
 * Refer the [`SfRangeSliderThemeData`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData-class.html) for customizing the appearance of the tooltip text.
@@ -129,42 +131,6 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Range slider tooltip shape](images/tooltip/range-tooltip-shape.png)
-
-### Vertical
-
-{% tabs %}
-{% highlight Dart %}
-
-SfRangeValues _values = SfRangeValues(40.0, 60.0);
-
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-            child: SfRangeSlider.vertical(
-              min: 0.0,
-              max: 100.0,
-              interval: 20,
-              showTicks: true,
-              showLabels: true,
-              enableTooltip: true,
-              tooltipShape: SfPaddleTooltipShape(),
-              values: _values,
-              onChanged: (SfRangeValues newValues) {
-                setState(() {
-                  _values = newValues;
-                });
-              },
-            ),
-          )
-      )
-  );
-}
-
-{% endhighlight %}
-{% endtabs %}
-
 
 ## Tooltip text format
 
@@ -255,6 +221,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Tooltip formatter support](images/tooltip/vertical-tooltip-formatter.png)
+
 ## Tooltip color
 
 You can change the background color of the tooltip in the range slider using the [`tooltipBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/tooltipBackgroundColor.html) property.
@@ -340,6 +308,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Tooltip color support](images/tooltip/vertical-slider-tooltip-color.png)
 
 ## Tooltip label style
 
@@ -427,6 +397,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Tooltip style support](images/tooltip/vertical-slider-tooltip-style.png)
+
 ## Tooltip overlap stroke color
 
 You can change the overlap stroke color of the tooltip in the range slider using the [`overlappingTooltipStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/overlappingTooltipStrokeColor.html) property.
@@ -512,3 +484,5 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Tooltip overlap support](images/tooltip/vertical-slider-tooltip-overlap.png)

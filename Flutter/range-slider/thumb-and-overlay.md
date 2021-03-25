@@ -272,6 +272,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Thumb stroke color support](images/thumb-and-overlay/vertical-range-slider-thumb-stroke-color.png)
+
 ## Thumb icon
 
 You can show the custom widgets like icon or text inside the thumbs using the [`startThumbIcon`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/startThumbIcon.html) and the [`endThumbIcon`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/endThumbIcon.html) properties.
@@ -327,6 +329,8 @@ Widget build(BuildContext context) {
 
 ![Thumb icon support](images/thumb-and-overlay/range-slider-thumb-icon.png)
 
+### Vertical
+
 {% tabs %}
 {% highlight Dart %}
 
@@ -352,11 +356,11 @@ Widget build(BuildContext context) {
                   showLabels: true,
                   values: _values,
                   startThumbIcon: Icon(
-                      Icons.arrow_back_ios,
+                      Icons.keyboard_arrow_down_outlined,
                       color: Colors.blue,
                       size: 20.0),
                   endThumbIcon: Icon(
-                      Icons.arrow_forward_ios,
+                      Icons.keyboard_arrow_up_outlined,
                       color: Colors.blue,
                       size: 20.0),
                   onChanged: (SfRangeValues newValues){
@@ -374,7 +378,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-### Vertical
+![Thumb icon support](images/thumb-and-overlay/vertical-range-slider-thumb-icon.png)
 
 ## Thumb overlay size
 
@@ -424,8 +428,6 @@ Widget build(BuildContext context) {
 
 ### Vertical
 
-### Horizontal
-
 {% tabs %}
 {% highlight Dart %}
 
@@ -461,6 +463,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Thumb overlay size support](images/thumb-and-overlay/vertical-slider-overlay-size.png)
 
 ## Thumb overlay color
 
@@ -546,6 +550,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+![Thumb overlay color support](images/thumb-and-overlay/vertical-slider-overlay-color.png)
+
 ## Thumb overlap stroke color
 
 You can change the overlap stroke color of the thumb in the range slider using the [`overlappingThumbStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/overlappingThumbStrokeColor.html) property.
@@ -629,3 +635,5 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Thumb overlap stroke color support](images/thumb-and-overlay/vertical-slider-overlap-stroke-color.png)
