@@ -114,6 +114,75 @@ To position the annotation based on the pixel values, set the [`CoordinateUnit`]
 
 ![Positioning based on coordinateUnit as pixels](images/annotation/annotation_pixel.jpg)
 
+**Positioning based on region**
+
+Annotations can be placed with respect to either [`AnnotationRegion.plotArea`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AnnotationRegion-class.html)  or [`AnnotationRegion.chart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AnnotationRegion-class.html) in [`region`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/region.html) property.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: SafeArea(
+          child: Center(
+            child: Container(
+              child: SfCartesianChart(
+                annotations: <CartesianChartAnnotation>[
+                  CartesianChartAnnotation(
+                    widget: Container(
+                      child: const Text('Text')
+                    ),
+                    region: AnnotationRegion.chartArea,
+                    coordinateUnit: CoordinateUnit.logicalPixel,
+                    x: 150,
+                    y: 200
+                  )
+                ]
+              )
+            )
+          )
+        )
+      );
+    }
+
+{% endhighlight %}
+
+## Alignment of annotation
+
+[`CartesianChartAnnotation`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation-class.html) can be aligned to center, near and far using the [`horizontalAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/horizontalAlignment.html) and [`verticalAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/verticalAlignment.html) properties of annotation.
+
+The following code example demonstrates how to set the [`horizontalAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/horizontalAlignment.html) for annotation
+
+{% highlight dart %}
+
+ @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: SafeArea(
+          child: Center(
+            child: Container(
+              child: SfCartesianChart(
+                annotations: <CartesianChartAnnotation>[
+                  CartesianChartAnnotation(
+                    widget: Container(
+                      child: const Text('Text')
+                    ),
+                    region: AnnotationRegion.chartArea,
+                    coordinateUnit: CoordinateUnit.logicalPixel,
+                    x: 150,
+                    y: 200,
+                    HorizontalAlignment: HorizontalAlignment.near,
+                  )
+                ]
+              )
+            )
+          )
+        )
+      );
+    }
+
+{% endhighlight %}
+
 ## Adding multiple annotation
 
 You can add multiple annotations to the Chart by adding multiple widgets to the [`annotations`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation-class.html) property. as depicted in below code snippet.

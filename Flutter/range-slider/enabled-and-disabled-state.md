@@ -15,6 +15,8 @@ This section helps to learn about the enabled and disabled state in the Flutter 
 
 The range slider will be in enabled state if [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onChanged.html) is set.
 
+### Horizontal
+
 {% tabs %}
 {% highlight Dart %}
 
@@ -45,9 +47,43 @@ Widget build(BuildContext context) {
 
 ![Enabled state](images/enabled-and-disabled/enabled-state.png)
 
+### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(3.0, 7.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSlider.vertical(
+                    min: 0.0,
+                    max: 10.0,
+                    values: _values,
+                    onChanged: (SfRangeValues newValues) {
+                       setState(() {
+                           _values = newValues;
+                        });
+                   },
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Enabled state](images/enabled-and-disabled/vertical-enabled-state.png)
+
 ## Disabled state
 
 The range slider will be in disabled state if [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onChanged.html) is `null`.
+
+### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
@@ -74,6 +110,33 @@ Widget build(BuildContext context) {
 
 ![Disabled range slider](images/enabled-and-disabled/disabled-state.png)
 
+### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(3.0, 7.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSlider.vertical(
+                    min: 0.0,
+                    max: 10.0,
+                    values: _values,
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Disabled range slider](images/enabled-and-disabled/vertical-disabled-state.png)
+
 ## Disabled color
 
 You can change,
@@ -85,6 +148,8 @@ You can change,
 * The color of the thumb in disabled state using the [`disabledThumbColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/disabledThumbColor.html) property.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderTheme-class.html).
+
+### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
@@ -127,3 +192,47 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Disabled color support](images/enabled-and-disabled/slider-disabled-color.png)
+
+### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfRangeSliderTheme(
+                    data: SfRangeSliderThemeData(
+                        disabledActiveTrackColor: Colors.orange,
+                        disabledInactiveTrackColor: Colors.orange[200],
+                        disabledActiveTickColor: Colors.orange,
+                        disabledInactiveTickColor: Colors.orange[200],
+                        disabledActiveMinorTickColor: Colors.orange,
+                        disabledInactiveMinorTickColor: Colors.orange[200],
+                        disabledActiveDivisorColor: Colors.purple,
+                        disabledInactiveDivisorColor: Colors.purple[200],
+                        disabledThumbColor: Colors.orange,
+                    ),
+                    child:  SfRangeSlider.vertical(
+                     min: 2.0,
+                     max: 10.0,
+                     interval: 2,
+                     showTicks: true,
+                     minorTicksPerInterval: 1,
+                     showDivisors: true,
+                     values: _values,
+                  ),
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Disabled color support](images/enabled-and-disabled/vertical-slider-disabled-color.png)

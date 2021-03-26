@@ -11,6 +11,8 @@ documentation: ug
 
 The [`SfSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html) can easily be accessed by screen readers. By default, it will read the current value. You can change the reading format using the [`semanticFormatterCallback`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/semanticFormatterCallback.html) property.
 
+## Horizontal
+
 {% tabs %}
 {% highlight Dart %}
 
@@ -22,6 +24,43 @@ Widget build(BuildContext context) {
       home: Scaffold(
           body: Center(
             child: SfSlider(
+              min: 0.0,
+              max: 100.0,
+              value: _value,
+              interval: 20,
+              showTicks: true,
+              showLabels: true,
+              semanticFormatterCallback: (dynamic value){
+                return 'The selected value is ${value}';
+              },
+              onChanged: (dynamic newValue) {
+                setState(() {
+                  _value = newValue;
+                });
+              },
+            ),
+          )
+      ),
+   );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+
+## Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+double _value = 40.0;
+
+@override
+Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+          body: Center(
+            child: SfSlider.vertical(
               min: 0.0,
               max: 100.0,
               value: _value,

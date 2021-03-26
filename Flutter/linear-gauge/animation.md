@@ -24,7 +24,7 @@ The `animateAxis` and `animationDuration` properties in `SfLinearGauge` is used 
         body: Center(
           child: SfLinearGauge(
             animateAxis: true,
-            animationDuration: 3000,
+            animationDuration: 3000
           ),
         ),
       ),
@@ -32,6 +32,8 @@ The `animateAxis` and `animationDuration` properties in `SfLinearGauge` is used 
   }
 
 {% endhighlight %}
+
+![Animate axis in linear gauge](images/animation/animation_axis_range/animation_axis.gif)
 
 ## Animate range
 
@@ -46,7 +48,7 @@ The `animateRange` and `animationDuration` properties in `SfLinearGauge` is used
         body: Center(
           child: SfLinearGauge(
             animateRange: true,
-            animationDuration: 3000,
+            animationDuration: 3000
           ),
         ),
       ),
@@ -54,6 +56,8 @@ The `animateRange` and `animationDuration` properties in `SfLinearGauge` is used
   }
 
   {% endhighlight %}
+
+  ![Animate range in linear gauge](images/animation/animation_axis_range/animation_range.gif)
 
 ## Pointer animation
 
@@ -91,7 +95,7 @@ The below code example demonstrates updating the animation for bar pointer.
               LinearBarPointer(
                 value: 50,
                 animationDuration: 2000,
-                animationType: LinearAnimationType.slowMiddle,
+                animationType: LinearAnimationType.bounceOut
               ),
             ],
           ),
@@ -102,18 +106,13 @@ The below code example demonstrates updating the animation for bar pointer.
 
 {% endhighlight %}
 
-### Bar pointer with `bounceOut` animation
-
-![shape pointer in linear gauge](images/animation/bar-pointer/bounceout.gif)
-
-
 ### Animate Marker Pointers (Shape and Widget Pointers)
 
 Both the shape and widget marker pointers will have the same set of properties and behave similarly for animation. So we have demonstrated the `LinearShapePointer` only but the same is applicable for `LinearWidgetPointer` too. 
 
 ### Marker pointer with `bounceOut` animation
 
-![shape pointer in linear gauge](images/animation/shape-pointer/bounceout.gif)
+![Animate marker pointer in linear gauge](images/animation/shape-pointer/bounceout.gif)
 
 
 
