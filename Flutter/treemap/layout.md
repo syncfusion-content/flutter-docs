@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Different layout structure in Syncfusion Flutter Treemap | Syncfusion
-description: This section explains the steps required to visualize the treemap widget in the different layout structures.
+title: Different layouts in Syncfusion Flutter Treemap | Syncfusion
+description: This section explains the steps required to visualize the treemap widget in the different layout.
 platform: Flutter
 control: SfTreemap
 documentation: ug
 ---
 
-# Layout structure in Treemap
+# Layouts in Flutter Treemap
 
-This section explains the different layout structures in the treemap widget. The available layout structures are,
+This section explains the different layouts in the treemap widget. The available layouts are,
 
 * Squarified
 * Slice
@@ -17,24 +17,22 @@ This section explains the different layout structures in the treemap widget. The
 
 ## Squarified
 
-The Squarified layout structure start to arrange the rectangles in a row and wrapping them to the next row according to the available size. By default, Squarified layout structure is used.
-
-You can visualize the Squarified layout in two ways such as `Flat` and `Hierarchical` structure.
+The squarified layout will arrange the rectangles in a row and wrap them to the next row according to the available size. The size of the particular rectangle is based on the value returned from `weightValueMapper` callback. By default, squarified layout is used.
 
 {% tabs %}
 {% highlight Dart %}
 
-List<PopulationModel> _dataSource;
+late List<PopulationModel> _dataSource;
 
 @override
 void initState() {
    _dataSource = <PopulationModel>[
-      PopulationModel('Asia', 25.4),
-      PopulationModel('South America', 19.11),
-      PopulationModel('North America', 13.3),
-      PopulationModel('Europe', 10.65),
-      PopulationModel('Africa', 7.54),
-      PopulationModel('Australia', 4.93),
+      PopulationModel(continent: 'Asia', populationInMillions: 25.4),
+      PopulationModel(continent: 'South America', populationInMillions: 19.11),
+      PopulationModel(continent: 'North America', populationInMillions: 13.3),
+      PopulationModel(continent: 'Europe', populationInMillions: 10.65),
+      PopulationModel(continent: 'Africa', populationInMillions: 7.54),
+      PopulationModel(continent: 'Australia', populationInMillions: 4.93),
    ];
    super.initState();
 }
@@ -61,7 +59,10 @@ Widget build(BuildContext context) {
 }
 
 class PopulationModel {
-  const PopulationModel(this.continent, this.populationInMillions);
+  const PopulationModel({
+    required this.continent,
+    required this.populationInMillions,
+  });
 
   final String continent;
   final double populationInMillions;
@@ -72,26 +73,24 @@ class PopulationModel {
 
 ![Squarified layout structure](images/layout/squarified-layout.png)
 
-## Slice
+## Dlice
 
-The Slice layout structure start to arrange each rectangle in a horizontally direction and the size of the rectangle based on the value of [`weightValueMapper`] property and the available height.
-
-You can visualize the Slice layout in two ways such as `Flat` and `Hierarchical` structure.
+The slice layout will start to arrange each rectangle in a horizontal direction and the size of the rectangle will be based on the value returned from `weightValueMapper` callback and the available height.
 
 {% tabs %}
 {% highlight Dart %}
 
-List<PopulationModel> _dataSource;
+late List<PopulationModel> _dataSource;
 
 @override
 void initState() {
    _dataSource = <PopulationModel>[
-      PopulationModel('Asia', 25.4),
-      PopulationModel('South America', 19.11),
-      PopulationModel('North America', 13.3),
-      PopulationModel('Europe', 10.65),
-      PopulationModel('Africa', 7.54),
-      PopulationModel('Australia', 4.93),
+      PopulationModel(continent: 'Asia', populationInMillions: 25.4),
+      PopulationModel(continent: 'South America', populationInMillions: 19.11),
+      PopulationModel(continent: 'North America', populationInMillions: 13.3),
+      PopulationModel(continent: 'Europe', populationInMillions: 10.65),
+      PopulationModel(continent: 'Africa', populationInMillions: 7.54),
+      PopulationModel(continent: 'Australia', populationInMillions: 4.93),
    ];
    super.initState();
 }
@@ -118,7 +117,10 @@ Widget build(BuildContext context) {
 }
 
 class PopulationModel {
-  const PopulationModel(this.continent, this.populationInMillions);
+  const PopulationModel({
+    required this.continent,
+    required this.populationInMillions,
+  });
 
   final String continent;
   final double populationInMillions;
@@ -131,24 +133,22 @@ class PopulationModel {
 
 ## Dice
 
-The Dice layout structure start to arrange each rectangle in vertical direction and the size of the rectangle based on the value of [`weightValueMapper`] property and the available width.
-
-You can visualize the Dice layout in two ways such as `Flat` and `Hierarchical` structure.
+The dice structure will start to arrange each rectangle in the vertical direction and the size of the rectangle will be based on the value returned from the `weightValueMapper` callback and the available width.
 
 {% tabs %}
 {% highlight Dart %}
 
-List<PopulationModel> _dataSource;
+late List<PopulationModel> _dataSource;
 
 @override
 void initState() {
    _dataSource = <PopulationModel>[
-      PopulationModel('Asia', 25.4),
-      PopulationModel('South America', 19.11),
-      PopulationModel('North America', 13.3),
-      PopulationModel('Europe', 10.65),
-      PopulationModel('Africa', 7.54),
-      PopulationModel('Australia', 4.93),
+      PopulationModel(continent: 'Asia', populationInMillions: 25.4),
+      PopulationModel(continent: 'South America', populationInMillions: 19.11),
+      PopulationModel(continent: 'North America', populationInMillions: 13.3),
+      PopulationModel(continent: 'Europe', populationInMillions: 10.65),
+      PopulationModel(continent: 'Africa', populationInMillions: 7.54),
+      PopulationModel(continent: 'Australia', populationInMillions: 4.93),
    ];
    super.initState();
 }
@@ -175,7 +175,10 @@ Widget build(BuildContext context) {
 }
 
 class PopulationModel {
-  const PopulationModel(this.continent, this.populationInMillions);
+  const PopulationModel({
+    required this.continent,
+    required this.populationInMillions,
+  });
 
   final String continent;
   final double populationInMillions;
