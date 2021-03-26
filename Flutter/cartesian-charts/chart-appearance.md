@@ -13,6 +13,11 @@ documentation: ug
 
 Chart renders based on the parent widget size. If you need the chart to be rendered in specific size, then set the size(width/height) to the parent widget.
 
+You can also customize the following properties:
+* [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/backgroundColor.html) - used to changes the background color of the chart.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - used to change the border width.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - used to change the color of the chart border.
+ 
 {% highlight dart %} 
 
     @override

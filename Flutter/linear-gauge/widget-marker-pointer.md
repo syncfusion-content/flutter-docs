@@ -31,7 +31,7 @@ The `LinearWidgetPointer` in `SfLinearGauge` allows to use any Flutter widget as
   
 {% endhighlight %}
 
-![Change shape pointer elevation](images/widget-pointer/default_widget_pointer.png)
+![Initialize linear gauge for widget pointer](images/widget-pointer/default_widget_pointer.png)
 
 ## Change marker alignment
 
@@ -58,7 +58,7 @@ The widget marker pointer's alignment can be changed by the `markerAlignment` pr
   
 {% endhighlight %}
 
-![Change shape pointer elevation](images/widget-pointer/widget_alignment.png)
+![Customize size of widget pointer](images/widget-pointer/widget_alignment.png)
 
 ## Change the position
 
@@ -85,7 +85,7 @@ By default, the shape pointer is positioned `outside` to the axis. This position
   
 {% endhighlight %}
 
-![Change shape pointer elevation](images/widget-pointer/widget_pointer_position.png)
+![Change widget pointer position](images/widget-pointer/widget_pointer_position.png)
 
 ## Change the offset
 
