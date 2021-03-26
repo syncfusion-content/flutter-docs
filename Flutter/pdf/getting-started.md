@@ -314,8 +314,7 @@ element.brush = PdfBrushes.white;
 
 //Draws the heading on the page
 PdfLayoutResult result = element.draw(
-    page: page,
-    bounds: Rect.fromLTWH(10, bounds.top + 8, 0, 0)) as PdfLayoutResult;
+    page: page, bounds: Rect.fromLTWH(10, bounds.top + 8, 0, 0))!;
 String currentDate = 'DATE ' + DateFormat.yMMMd().format(DateTime.now());
 
 //Measures the width of the text to place it in the correct location
@@ -337,26 +336,20 @@ element = PdfTextElement(
         style: PdfFontStyle.bold));
 element.brush = PdfSolidBrush(PdfColor(126, 155, 203));
 result = element.draw(
-        page: page,
-        bounds: Rect.fromLTWH(10, result.bounds.bottom + 25, 0, 0))
-    as PdfLayoutResult;
+    page: page, bounds: Rect.fromLTWH(10, result.bounds.bottom + 25, 0, 0))!;
 
 PdfFont timesRoman = PdfStandardFont(PdfFontFamily.timesRoman, 10);
 
 element = PdfTextElement(text: 'Victuailles en stock ', font: timesRoman);
 element.brush = PdfBrushes.black;
 result = element.draw(
-        page: page,
-        bounds: Rect.fromLTWH(10, result.bounds.bottom + 10, 0, 0))
-    as PdfLayoutResult;
+    page: page, bounds: Rect.fromLTWH(10, result.bounds.bottom + 10, 0, 0))!;
 
 element = PdfTextElement(
     text: '2, rue du Commerce, Lyon, France ', font: timesRoman);
 element.brush = PdfBrushes.black;
 result = element.draw(
-        page: page,
-        bounds: Rect.fromLTWH(10, result.bounds.bottom + 10, 0, 0))
-    as PdfLayoutResult;
+    page: page, bounds: Rect.fromLTWH(10, result.bounds.bottom + 10, 0, 0))!;
 
 //Draws a line at the bottom of the address
 graphics.drawLine(
@@ -470,7 +463,7 @@ PdfLayoutResult gridResult = grid.draw(
     page: page,
     bounds: Rect.fromLTWH(0, result.bounds.bottom + 20,
         graphics.clientSize.width, graphics.clientSize.height - 100),
-    format: layoutFormat) as PdfLayoutResult;
+    format: layoutFormat)!;
 
 gridResult.page.graphics.drawString(
     'Grand Total :                             \$386.91', subHeadingFont,
