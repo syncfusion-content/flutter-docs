@@ -70,7 +70,7 @@ Widget build(BuildContext context) {
           columnName: 'id',
           label: Container(
             alignment: Alignment.centerRight,
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             child: Text(
               'ID',
               overflow: TextOverflow.ellipsis,
@@ -80,7 +80,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'productId',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'Product ID',
@@ -91,7 +91,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'name',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'Customer Name',
@@ -102,7 +102,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'product',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'Product',
@@ -113,7 +113,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'orderDate',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.center,
             child: Text(
               'Order Date',
@@ -124,7 +124,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'quantity',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'Quantity',
@@ -135,7 +135,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'city',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'City',
@@ -146,7 +146,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'unitPrice',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'Unit Price',
@@ -181,7 +181,7 @@ Widget build(BuildContext context) {
           columnName: 'id',
           label: Container(
             alignment: Alignment.centerRight,
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             child: Text(
               'ID',
               overflow: TextOverflow.ellipsis,
@@ -191,7 +191,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'productId',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'Product ID',
@@ -202,7 +202,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'name',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'Customer Name',
@@ -213,7 +213,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'product',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'Product',
@@ -224,7 +224,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'orderDate',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.center,
             child: Text(
               'Order Date',
@@ -235,7 +235,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'quantity',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'Quantity',
@@ -246,7 +246,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'city',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'City',
@@ -257,7 +257,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'unitPrice',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'Unit Price',
@@ -299,7 +299,7 @@ Widget build(BuildContext context) {
           columnName: 'id',
           label: Container(
             alignment: Alignment.centerRight,
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             child: Text(
               'ID',
               overflow: TextOverflow.ellipsis,
@@ -309,7 +309,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'productId',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'Product ID',
@@ -320,7 +320,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'name',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'Customer Name',
@@ -331,7 +331,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'product',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'Product',
@@ -342,7 +342,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'orderDate',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.center,
             child: Text(
               'Order Date',
@@ -353,7 +353,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'quantity',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'Quantity',
@@ -364,7 +364,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'city',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'City',
@@ -375,7 +375,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'unitPrice',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'Unit Price',
@@ -409,7 +409,7 @@ Widget build(BuildContext context) {
           columnName: 'id',
           label: Container(
             alignment: Alignment.centerRight,
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             child: Text(
               'ID',
               overflow: TextOverflow.ellipsis,
@@ -419,7 +419,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'productId',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'Product ID',
@@ -430,7 +430,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'name',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'Customer Name',
@@ -441,7 +441,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'product',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'Product',
@@ -452,7 +452,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'orderDate',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.center,
             child: Text(
               'Order Date',
@@ -463,7 +463,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'quantity',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'Quantity',
@@ -474,7 +474,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'city',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'City',
@@ -485,7 +485,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'unitPrice',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'Unit Price',
@@ -535,7 +535,7 @@ Widget build(BuildContext context) {
               columnName: 'id',
               label: Container(
                 alignment: Alignment.centerRight,
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 child: Text(
                   'ID',
                   overflow: TextOverflow.ellipsis,
@@ -545,7 +545,7 @@ Widget build(BuildContext context) {
             GridTextColumn(
               columnName: 'productId',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.centerRight,
                 child: Text(
                   'Product ID',
@@ -556,7 +556,7 @@ Widget build(BuildContext context) {
             GridTextColumn(
               columnName: 'name',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.centerLeft,
                 child: Text(
                   'Customer Name',
@@ -567,7 +567,7 @@ Widget build(BuildContext context) {
             GridTextColumn(
               columnName: 'product',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.centerLeft,
                 child: Text(
                   'Product',
@@ -578,7 +578,7 @@ Widget build(BuildContext context) {
             GridTextColumn(
               columnName: 'orderDate',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.center,
                 child: Text(
                   'Order Date',
@@ -589,7 +589,7 @@ Widget build(BuildContext context) {
             GridTextColumn(
               columnName: 'quantity',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.centerRight,
                 child: Text(
                   'Quantity',
@@ -600,7 +600,7 @@ Widget build(BuildContext context) {
             GridTextColumn(
               columnName: 'city',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.centerLeft,
                 child: Text(
                   'City',
@@ -611,7 +611,7 @@ Widget build(BuildContext context) {
             GridTextColumn(
               columnName: 'unitPrice',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.centerRight,
                 child: Text(
                   'Unit Price',

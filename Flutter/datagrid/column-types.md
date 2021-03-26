@@ -37,7 +37,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'id',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'ID',
@@ -48,7 +48,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'name',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'Name',
@@ -59,7 +59,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'salary',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'Salary',
@@ -70,7 +70,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'designation',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'Designation',
@@ -105,7 +105,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'id',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'ID',
@@ -116,7 +116,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'name',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'Name',
@@ -128,7 +128,7 @@ Widget build(BuildContext context) {
           columnName: 'salary',
           visible: false,
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'Salary',
@@ -139,7 +139,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'designation',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'Designation',
@@ -174,7 +174,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'id',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'ID',
@@ -186,7 +186,7 @@ Widget build(BuildContext context) {
           columnName: 'name',
           width: 100.0,
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'Name',
@@ -197,7 +197,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'salary',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'Salary',
@@ -208,7 +208,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'designation',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'Designation',
@@ -240,7 +240,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'id',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'ID',
@@ -251,7 +251,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'name',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'Name',
@@ -262,7 +262,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'salary',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'Salary',
@@ -273,7 +273,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'designation',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'Designation',
