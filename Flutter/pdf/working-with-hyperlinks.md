@@ -62,7 +62,7 @@ PdfDocumentLinkAnnotation docLink = PdfDocumentLinkAnnotation(
     PdfDestination(document.pages.add(), Offset(10, 0)));
 
 //Set the destination mode
-docLink.destination.mode = PdfDestinationMode.fitToPage;
+docLink.destination!.mode = PdfDestinationMode.fitToPage;
 
 //Add the document link to the page
 page.annotations.add(docLink);

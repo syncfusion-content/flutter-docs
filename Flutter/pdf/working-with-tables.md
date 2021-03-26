@@ -429,7 +429,8 @@ row2.cells[2].value = 'Rs: 1200';
 
 //Draw grid on the page of PDF document and store the grid position in PdfLayoutResult
 PdfLayoutResult result = grid.draw(
-    page: document.pages.add(), bounds: const Rect.fromLTWH(0, 0, 400, 300));
+    page: document.pages.add(),
+    bounds: const Rect.fromLTWH(0, 0, 400, 300)) as PdfLayoutResult;
 
 //Create a second PdfGrid in the same page
 PdfGrid grid2 = PdfGrid();
