@@ -746,7 +746,7 @@ Widget build(BuildContext context) {
 
 ## Hide freeze pane elevation
 
-By default, SfDataGrid provides the elevation to the frozen column and row. If you want to hide the freeze pane elevation, you can simply set `SfDataGridThemeData.frozenPaneElevation` property to 0. Henceforth, it will be shown only the frozen line for the frozen column and row. You can customize the appearance of frozen line by using `SfDataGridThemeData.frozenPaneLineColor` and `SfDataGridThemeData.frozenPaneLineWidth` properties.
+By default, elevation effect is applied to frozen panes. If you want to hide the freeze pane elevation and show only the frozen pane line, you can simply set `SfDataGridThemeData.frozenPaneElevation` property to 0. You can customize the appearance of frozen line by using `SfDataGridThemeData.frozenPaneLineColor` and `SfDataGridThemeData.frozenPaneLineWidth` properties.
 
 {% tabs %}
 {% highlight Dart %}
