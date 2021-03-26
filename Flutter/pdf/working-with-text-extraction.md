@@ -78,7 +78,7 @@ PdfDocument document =
 
 //Extracts the text line collection from the document
 final List<TextLine> textLine =
-    PdfTextExtractor(document).extractTextWithLine();
+    PdfTextExtractor(document).extractTextLines();
 
 //Gets specific line from the collection
 TextLine line = textLine[0];
@@ -118,7 +118,7 @@ PdfDocument document =
 
 //Extracts the text line collection from the page 2
 final List<TextLine> textLine =
-    PdfTextExtractor(document).extractTextWithLine(startPageIndex: 1);
+    PdfTextExtractor(document).extractTextLines(startPageIndex: 1);
 
 //Gets the specific line from the collection
 TextLine line = textLine[0];
@@ -164,7 +164,7 @@ PdfDocument document =
 
 //Extracts the text line collection from the pages 2 to 3
 final List<TextLine> textLine = PdfTextExtractor(document)
-    .extractTextWithLine(startPageIndex: 1, endPageIndex: 2);
+    .extractTextLines(startPageIndex: 1, endPageIndex: 2);
 
 //Gets the specific line from the collection
 TextLine line = textLine[0];
