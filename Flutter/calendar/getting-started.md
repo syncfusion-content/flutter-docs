@@ -398,6 +398,28 @@ Widget build(BuildContext context) {
 
 ![Cell end padding](images/getting-started/cell-end-padding.png)
 
+## Current time indicator
+
+You can display the current time indicator in all timeslot views of SfCalendar by using the [showCurrentTimeIndicator]() property and you can also customize the color of current time indicator by using the [todayHighlightColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/todayHighlightColor.html) property. 
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+    return Container(
+      child: SfCalendar(
+        view: CalendarView.day,
+        showCurrentTimeIndicator: true,
+              ),
+  );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+![showCurrentTimeIndicator](images/getting-started/current_time_indicator.png)
+
 
 You can get the complete getting started sample from [here](https://github.com/SyncfusionExamples/flutter-calendar).
 

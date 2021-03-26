@@ -124,11 +124,9 @@ You can enable a multi-date range picker by using the [enableMultiView](https://
           body: SfDateRangePicker(
             enableMultiView: true,
             viewSpacing: 20,
-            selectionMode: DateRangePickerSelectionMode.range,
-            initialSelectedRange: PickerDateRange(
-                DateTime(2020,6,20),
-                DateTime(2020,6,24)),
-          ),
+            headerStyle: DateRangePickerHeaderStyle(
+              textAlign: TextAlign.center
+            ),
         ));
   }
 }

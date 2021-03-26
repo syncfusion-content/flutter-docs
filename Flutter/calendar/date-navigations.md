@@ -54,7 +54,7 @@ Widget build(BuildContext context) {
 
 ### Disabled timeslot improvement
 
-![minDate and maxDate]() 
+![minDate and maxDate](images/date-navigation/min_maxDate.gif) 
 
 >**NOTE**
 * You can navigate as minimum/maximum as to the given date, and dates before that date/dates after that date will be disabled for interaction and highlights the disabled slots in timeslot views.
@@ -268,6 +268,29 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Allowed views](images/date-navigation/allowed_views.png)
+
+## Enable or disable swipe interaction
+
+You can customize the swipe interaction of SfCalendar by using the [viewNavigationMode](). You can allow or restrict to switching to previous or next views through the swipe interaction of SfCalendar. By default , the `viewNavigationMode` is set as snap.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfCalendar(
+         view: CalendarView.day,
+        viewNavigationMode: ViewNavigationMode.snap,
+    ),);
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+>**NOTE**
+* Not applicable when the view set as schedule. 
+* It will not impact scrolling timeslot views, [forward](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/forward.html), [backward](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/backward.html) and [showNavigationArrow](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/showNavigationArrow.html).
 
 ## See also
 

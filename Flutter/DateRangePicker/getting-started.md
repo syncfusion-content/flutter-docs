@@ -143,6 +143,41 @@ Widget build(BuildContext context) {
 
   ![Date selection Date Range Picker](images/getting-started/range-selection.png)
   
+## Action buttons
+
+You can display action buttons at the bottom of the date range picker by using the [showActionButtons]() property of `SfDateRangePicker`. It allows to confirm and cancel the selection values of SfDateRangePicker.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+  Widget build(BuildContext context) {
+    return Scaffold(
+         body: TextButton(
+          child: Text('Show picker'),
+          onPressed: () {
+            showDialog<Widget>(
+                context: context,
+                builder: (BuildContext context) {
+                  return SfDateRangePicker(
+                    showActionButtons: true,
+                    onSubmit: (Object value) {
+                      Navigator.pop(context);
+                    },
+                    onCancel: () {
+                     Navigator.pop(context);
+                    },
+                  );
+                });
+          },
+        ));
+  }       
+
+{% endhighlight %}
+{% endtabs %}
+
+![showActionButtons](images/getting-started/cancel-confirm-button.png)  
+  
 ## See also
 
 [How to apply theming in Flutter date range picker (SfDateRangePicker)?](https://www.syncfusion.com/kb/11898/how-to-apply-theming-in-flutter-date-range-picker-sfdaterangepicker)
