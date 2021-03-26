@@ -357,6 +357,35 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+
+### Date range picker navigation mode
+You can customize the navigation mode of date range picker by using the [navigationMode] () property of [SfDateRangePicker] (), which has options to disable the view navigation through swipe interaction, also allows to scroll the view. By default the [navigationMode] () set as ‘DateRangePickerNavigationMode.snap’.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: SfDateRangePicker(
+              navigationDirection: DateRangePickerNavigationDirection.vertical,
+              navigationMode: DateRangePickerNavigationMode.scroll,
+            ),),);
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+![navigationMode]()
+
+>**NOTE**
+When the navigation mode set as NavigationMode.scroll
+* Swipe selection is not supported when range and multi-range are the selection modes.
+* onViewChanged will be called when the view reaches the starting position of the date range picker view.
+* DateRangePickerController.forward(), DateRangePickerController.backward() and showNavigationArrow is not supported.
+
+
 ## Show navigation arrow
 Using the [showNavigationArrow](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/showNavigationArrow.html) property of the `DateRangePicker` you can move to the next or previous views of the picker without swiping.
 

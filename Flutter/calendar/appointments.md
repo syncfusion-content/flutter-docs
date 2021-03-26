@@ -284,6 +284,40 @@ _AppointmentDataSource _getCalendarDataSource() {
 >**NOTE**
 * Appointment which lasts through an entire day (exact 24 hours) will be considered as all day appointment without setting the IsAllDay property. For example, 06/12/2019 12:00AM to 06/12/2019 12:00AM.
 
+## Appointment helper
+
+### Get visible appointments
+
+You can get the list of visible appointments by using [GetVisibleAppointments] () method available in Calendar data source.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: SfCalendar(
+          view: CalendarView.month,
+          dataSource: _getCalendarDataSource(),
+      onViewChanged: (ViewChangedDetails details) {
+            String calendarTimeZone = '';
+            _AppointmentDataSource datasource = _getCalendarDataSource();
+            List<Appointment> appointments = datasource.getVisibleAppointments(
+                DateTime(2021, 3, 7), calendarTimeZone, DateTime(2021, 3, 10));
+            return appointments;
+      },
+      monthViewSettings: MonthViewSettings(
+          appointmentDisplayMode: MonthAppointmentDisplayMode.appointment),
+    ));
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+>**NOTE**
+* The startTime is required for the starting date from which to obtain the appointments
+
 ## Recurrence appointment
 
 Recurring appointment on a daily, weekly, monthly, or yearly interval. Recurring appointments can be created by setting the [recurrenceRule](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceRule.html) property in `Appointment`.
@@ -543,6 +577,11 @@ The following occurrence dates can be retrieved from the given RRULE:
 var date0 = 3/15/2019;
 var date1 = 3/16/2019;
 var date2 = 3/16/2019;
+
+### Negative value support
+
+>**NOTE**
+* If the property value is set to -1 and -2, the appointment will be added to the last week and second last week of the month
 
 ## Recurrence pattern exceptions
 
