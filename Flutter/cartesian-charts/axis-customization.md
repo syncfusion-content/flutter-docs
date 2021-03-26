@@ -1083,7 +1083,7 @@ N> If both [`maximumLabelWidth`](https://pub.dev/documentation/syncfusion_flutte
 
 ## Auto scrolling
 
-Auto scrolling feature available in SfCartesianChart is used to ensure that specified range of data is always visible in the chart and You can view the remaining data points by scrolling. The [`autoScrollingDelta `](~) property of the chart axis can be used to set the number of data points to be always visible in the chart. It always shows the recently added data points and scrolling will be reset to the start or end of the range, based on [`autoScrollingMode`](~) property's value, whenever a new point is added dynamically.
+Auto scrolling feature available in SfCartesianChart is used to ensure that specified range of data is always visible in the chart and you can view the remaining data points by scrolling. The [`autoScrollingDelta `](~) property of the chart axis can be used to set the number of data points to be always visible in the chart. It always shows the recently added data points and scrolling will be reset to the start or end of the range, based on [`autoScrollingMode`](~) property's value, whenever a new point is added dynamically.
 
 {% highlight dart %}
 
