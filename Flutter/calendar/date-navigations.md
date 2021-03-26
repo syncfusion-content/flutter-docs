@@ -52,6 +52,14 @@ Widget build(BuildContext context) {
 
 ![MinMaxDate Calendar](images/date-navigation/minmaxdate.png)
 
+### Disabled timeslot improvement
+
+![minDate and maxDate]() 
+
+>**NOTE**
+* You can navigate as minimum/maximum as to the given date, and dates before that date/dates after that date will be disabled for interaction and highlights the disabled slots in timeslot views.
+
+
 ## Programmatic date navigation
 You can programmatically navigate dates in calendar widget by using the [displayDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/displayDate.html) property of [CalendarController](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController-class.html).
 
