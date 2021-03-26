@@ -26,11 +26,11 @@ PdfDocument document = PdfDocument();
 PdfTemplate template = PdfTemplate(100, 50);
 
 //Draw a rectangle on the template graphics
-template.graphics.drawRectangle(
+template.graphics!.drawRectangle(
     brush: PdfBrushes.burlyWood, bounds: Rect.fromLTWH(0, 0, 100, 50));
 
 //Draw a string using the graphics of the template.
-template.graphics.drawString(
+template.graphics!.drawString(
     'Hello World', PdfStandardFont(PdfFontFamily.helvetica, 14),
     brush: PdfBrushes.black, bounds: Rect.fromLTWH(5, 5, 0, 0));
 

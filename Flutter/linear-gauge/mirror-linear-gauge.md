@@ -16,18 +16,16 @@ The `isMirrored` property in `SfLinearGauge` mirrors all the gauge elements in t
   @override
   Widget build(BuildContext context) {
     return Center(
-        child: SfLinearGauge(
-          isMirrored: true,
-        ),
+      child: SfLinearGauge(isMirrored: true)
     );
   }
 
 {% endhighlight %}
 
-![mirror linear gauge](images/mirrored/mirrored.png)
+![Mirror linear gauge](images/mirrored/mirrored.png)
 
 ## Comparison for the mirrored and normal gauge
 
 The below screenshot provides a comparison for the mirrored and normal linear gauge. 
 
-![mirror linear gauge](images/mirrored/mirror_comparison.png)
+![Mirrored linear gauge comparsion](images/mirrored/mirror_comparison.png)
