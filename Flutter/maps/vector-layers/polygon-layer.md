@@ -540,3 +540,73 @@ class PolygonModel {
 
 {% endhighlight %}
 {% endtabs %}
+
+## Inverted polygon
+
+You can apply color to the inverted polygon by initializing the `MapPolygonLayer.inverted` constructor. The inner polygon color is transparent and the outer portion of the polygon covered by an overlay color.
+
+You can customize the inverted polygon using the following properties:
+
+* **Stroke color** - Change the stroke color of the polygon using the `strokeColor` property.
+* **Stroke width** - Change the stroke width of the polygon using the `strokeWidth` property. The default value of the `strokeWidth` property is `1`.
+* **Overlay color** - Change the outer portion color of the polygon using the `color` property.
+* **Tooltip** - You can enable tooltip for the inverted polygon using the `tooltipBuilder` property.
+
+N> It is applicable for both the tile layer and shape layer.
+
+I> The individual polygon customization like `MapPolygon.color`, `MapPolygon.strokeColor` and `MapPolygon.strokeWidth` are not supported for the inverted polygon.
+
+{% tabs %}
+{% highlight Dart %}
+
+MapZoomPanBehavior zoomPanBehavior;
+List<MapLatLng> _polygon;
+
+@override
+void initState() {
+   _polygon = <MapLatLng>[
+      MapLatLng(27.6648, -81.5158),
+      MapLatLng(32.3078, -64.7505),
+      MapLatLng(18.2208, -66.5901),
+   ];
+
+   zoomPanBehavior = MapZoomPanBehavior(zoomLevel: 4);
+   super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+     body: SfMaps(
+        layers: [
+          MapTileLayer(
+            urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+            initialFocalLatLng: MapLatLng(25.0119, -73.4842),
+            sublayers: [
+              MapPolygonLayer.inverted(
+                polygons: List<MapPolygon>.generate(
+                  1,
+                  (int index) {
+                    return MapPolygon(
+                      points: _polygon,
+                    );
+                  },
+                ).toSet(),
+                color: Colors.black.withOpacity(0.3),
+                strokeColor: Colors.red,
+                strokeWidth: 1,
+              ),
+            ],
+            zoomPanBehavior: zoomPanBehavior,
+          ),
+        ],
+      ),
+   );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Inverted polgon](../images/polygon-layer/inverted-polygon.png)
+
+N> Refer `tooltip` section, for adding and customizing tooltip to the inverted polygon.
