@@ -75,12 +75,17 @@ class EmployeeDataSource extends DataGridSource {
   @override
   DataGridRowAdapter? buildRow(DataGridRow row) {
     return DataGridRowAdapter(
-      cells: row.getCells().map<Widget>((dataGridCell) {
-      return Container(
-        alignment: Alignment.center,
-        padding: EdgeInsets.symmetric(horizontal: 16.0),
-          child: Text(dataGridCell.value.toString()),
-      );
+        cells: row.getCells().map<Widget>((dataGridCell) {
+        return Container(
+            alignment: (dataGridCell.columnName == 'id' ||
+                  dataGridCell.columnName == 'salary')
+                  ? Alignment.centerRight
+                  : Alignment.centerLeft,
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            child: Text(
+            dataGridCell.value.toString(),
+            overflow: TextOverflow.ellipsis,
+            ));
     }).toList());
   }
 
@@ -305,12 +310,17 @@ class EmployeeDataSource extends DataGridSource {
   @override
   DataGridRowAdapter? buildRow(DataGridRow row) {
     return DataGridRowAdapter(
-      cells: row.getCells().map<Widget>((dataGridCell) {
-      return Container(
-        alignment: Alignment.center,
-        padding: EdgeInsets.symmetric(horizontal: 16.0),
-        child: Text(dataGridCell.value.toString()),
-      );
+        cells: row.getCells().map<Widget>((dataGridCell) {
+        return Container(
+            alignment: (dataGridCell.columnName == 'id' ||
+                  dataGridCell.columnName == 'salary')
+                  ? Alignment.centerRight
+                  : Alignment.centerLeft,
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            child: Text(
+            dataGridCell.value.toString(),
+            overflow: TextOverflow.ellipsis,
+            ));
     }).toList());
   }
 

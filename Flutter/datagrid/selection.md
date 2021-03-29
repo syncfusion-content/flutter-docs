@@ -1516,40 +1516,32 @@ class EmployeeDataSource extends DataGridSource {
     
     @override
     DataGridRowAdapter? buildRow(DataGridRow row) {
-        TextStyle? getSelectionTextStyle() {
-            return dataGridController.selectedRows.contains(row)
-                ? TextStyle(
+      TextStyle? getSelectionTextStyle() {
+        return dataGridController.selectedRows.contains(row)
+            ? TextStyle(
                 fontFamily: 'Raleway',
                 fontWeight: FontWeight.w300,
                 color: Colors.white,
-                )
-                : null;
-        }
-    
-        return DataGridRowAdapter(
-            cells: row.getCells().map<Widget>((dataGridCell) {
-          if (dataGridCell.columnName == 'id' ||
-              dataGridCell.columnName == 'salary') {
-            return Container(
-              alignment: Alignment.centerRight,
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              child: Text(
-                dataGridCell.value.toString(),
-                overflow: TextOverflow.ellipsis,
-                style: getSelectionTextStyle(),
-              ),
-            );
-          } else {
-            return Container(
-                alignment: Alignment.centerLeft,
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                child: Text(
-                  dataGridCell.value.toString(),
-                  overflow: TextOverflow.ellipsis,
-                  style: getSelectionTextStyle(),
-                ));
-          }
-        }).toList());
+              )
+            : null;
+      }
+
+      return DataGridRowAdapter(
+          cells: row.getCells().map<Widget>((dataGridCell) {
+        return Container(
+          color: Colors.transparent,
+          alignment: (dataGridCell.columnName == 'id' ||
+                  dataGridCell.columnName == 'salary')
+              ? Alignment.centerRight
+              : Alignment.centerLeft,
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
+          child: Text(
+            dataGridCell.value.toString(),
+            overflow: TextOverflow.ellipsis,
+            style: getSelectionTextStyle(),
+          ),
+        );
+      }).toList());
     }
 }
 

@@ -96,7 +96,8 @@ Widget build(BuildContext context) {
 ## Multi-column sorting
 
 The datagrid sorts the data against more than one columns by setting the [SfDataGrid.allowMultiColumnSorting](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowMultiColumnSorting.html) property to true. The number of columns by which the data can be sorted is unlimited. To apply sorting for multiple columns, tap the desired column headers after setting the `SfDataGrid.allowMultiColumnSorting` property.
-To apply sorting for multiple columns in web, you can click the column header by pressing the <kbd>Ctrl</kbd> key.
+
+To apply sorting for multiple columns in web and desktop, you can click the column header by pressing the <kbd>Ctrl</kbd> key.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -505,14 +506,19 @@ class EmployeeDataSource extends DataGridSource {
   List<DataGridRow> get rows => dataGridRows;
 
   @override
-  DataGridRowAdapter buildRow(DataGridRow row) {
+  DataGridRowAdapter? buildRow(DataGridRow row) {
     return DataGridRowAdapter(
         cells: row.getCells().map<Widget>((dataGridCell) {
-      return Container(
-        alignment: Alignment.center,
-        padding: EdgeInsets.symmetric(horizontal: 16.0),
-        child: Text(dataGridCell.value.toString()),
-      );
+        return Container(
+            alignment: (dataGridCell.columnName == 'id' ||
+                  dataGridCell.columnName == 'salary')
+                  ? Alignment.centerRight
+                  : Alignment.centerLeft,
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            child: Text(
+            dataGridCell.value.toString(),
+            overflow: TextOverflow.ellipsis,
+            ));
     }).toList());
   }
 
@@ -583,14 +589,19 @@ class EmployeeDataSource extends DataGridSource<Employee> {
   List<DataGridRow> get rows => dataGridRows;
   
   @override
-  DataGridRowAdapter buildRow(DataGridRow row) {
+  DataGridRowAdapter? buildRow(DataGridRow row) {
     return DataGridRowAdapter(
         cells: row.getCells().map<Widget>((dataGridCell) {
-      return Container(
-        alignment: Alignment.center,
-        padding: EdgeInsets.symmetric(horizontal: 16.0),
-        child: Text(dataGridCell.value.toString()),
-      );
+        return Container(
+            alignment: (dataGridCell.columnName == 'id' ||
+                  dataGridCell.columnName == 'salary')
+                  ? Alignment.centerRight
+                  : Alignment.centerLeft,
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            child: Text(
+            dataGridCell.value.toString(),
+            overflow: TextOverflow.ellipsis,
+            ));
     }).toList());
   }
 

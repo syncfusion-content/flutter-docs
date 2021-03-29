@@ -266,24 +266,16 @@ class EmployeeDataSource extends DataGridSource {
   DataGridRowAdapter? buildRow(DataGridRow row) {
     return DataGridRowAdapter(
         cells: row.getCells().map<Widget>((dataGridCell) {
-      if (dataGridCell.columnName == 'id' ||
-          dataGridCell.columnName == 'salary') {
         return Container(
-          alignment: Alignment.centerRight,
-          padding: EdgeInsets.symmetric(horizontal: 16.0),
-          child: Text(
-            dataGridCell.value.toString(),
-            overflow: TextOverflow.ellipsis,
-          ),
-        );
-      } else {
-        return Container(
-            alignment: Alignment.centerLeft,
+            alignment: (dataGridCell.columnName == 'id' ||
+                  dataGridCell.columnName == 'salary')
+                  ? Alignment.centerRight
+                  : Alignment.centerLeft,
             padding: EdgeInsets.symmetric(horizontal: 16.0),
             child: Text(
-              dataGridCell.value.toString(),
-              overflow: TextOverflow.ellipsis,
-      }
+            dataGridCell.value.toString(),
+            overflow: TextOverflow.ellipsis,
+            ));
     }).toList());
   }
 
