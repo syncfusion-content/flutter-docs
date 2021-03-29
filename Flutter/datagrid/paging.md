@@ -118,7 +118,7 @@ class OrderInfoDataSource extends DataGridSource{
   List<DataGridRow> get rows => dataGridRows;
 
   @override
-  DataGridRowAdapter buildRow(DataGridRow row) {
+  DataGridRowAdapter? buildRow(DataGridRow row) {
     return DataGridRowAdapter(
         cells: row.getCells().map<Widget>((dataGridCell) {
       if (dataGridCell.columnName == 'orderID') {
@@ -302,7 +302,7 @@ class OrderInfoDataSource extends DataGridSource{
   List<DataGridRow> get rows => dataGridRows;
 
   @override
-  DataGridRowAdapter buildRow(DataGridRow row) {
+  DataGridRowAdapter? buildRow(DataGridRow row) {
     return DataGridRowAdapter(
         cells: row.getCells().map<Widget>((dataGridCell) {
       if (dataGridCell.columnName == 'orderID') {
