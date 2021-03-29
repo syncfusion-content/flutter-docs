@@ -31,7 +31,7 @@ document.form.fields.add(PdfTextBoxField(
     document.pages.add(), 'TextBox', Rect.fromLTWH(100, 20, 200, 20),
     text: 'toType',
     font: PdfStandardFont(PdfFontFamily.courier, 12),
-    password: false,
+    isPassword: false,
     spellCheck: true,
     backColor: PdfColor(0, 255, 0),
     borderColor: PdfColor(255, 0, 0),
@@ -55,7 +55,7 @@ document.form.fields.add(PdfTextBoxField(
     document.pages[0], 'TextBox', Rect.fromLTWH(100, 20, 200, 20),
     text: 'toType',
     font: PdfStandardFont(PdfFontFamily.courier, 12),
-    password: false,
+    isPassword: false,
     spellCheck: true,
     backColor: PdfColor(0, 255, 0),
     borderColor: PdfColor(255, 0, 0),
@@ -210,12 +210,13 @@ The following code example shows how to get values from the acroform radio butto
 
 //Loads an existing PDF document.
 final PdfDocument document =
-    PdfDocument(inputBytes: File(input.pdf').readAsBytesSync());
+    PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
 
 // Get a radio button and select the item.
-final PdfRadioButtonListField radioButtonListField = document.form.fields[0];
-if (radioButtonListField.selectedIndex != 1) {
-radioButtonListField.selectedValue = radioButtonListField.items[1].value;
+final PdfField radioButtonListField = document.form.fields[0];
+if (radioButtonListField is PdfRadioButtonListField &&
+    radioButtonListField.selectedIndex != 1) {
+  radioButtonListField.selectedValue = radioButtonListField.items[1].value;
 }
 
 //Save the PDF document.
@@ -301,7 +302,7 @@ document.form.fields.add(PdfCheckBoxField(
     foreColor: PdfColor(255, 153, 0),
     borderWidth: 1,
     style: PdfCheckBoxStyle.diamond,
-    checked: true));
+    isChecked: true));
 
 //Save the PDF document.
 File('output.pdf').writeAsBytesSync(document.save());
@@ -326,7 +327,7 @@ document.form.fields.add(PdfCheckBoxField(
     foreColor: PdfColor(255, 153, 0),
     borderWidth: 1,
     style: PdfCheckBoxStyle.diamond,
-    checked: true));
+    isChecked: true));
 
 //Save the PDF document.
 File('output.pdf').writeAsBytesSync(document.save());
@@ -345,8 +346,8 @@ Please refer to the following code sample for adding the signature field in a ne
 final PdfDocument document = PdfDocument();
 
 // Create a signature form field and add it to the document.
-document.form.fields.add(PdfSignatureField(
-    document.pages.add(), 'Sign', Rect.fromLTWH(100, 100, 100, 50)));
+document.form.fields.add(PdfSignatureField(document.pages.add(), 'Sign',
+    bounds: Rect.fromLTWH(100, 100, 100, 50)));
 
 //Save the PDF document.
 File('output.pdf').writeAsBytesSync(document.save());
@@ -362,8 +363,8 @@ final PdfDocument document =
     PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
 
 // Create a signature form field and add it to the existing document.
-document.form.fields.add(PdfSignatureField(
-    document.pages[0], 'Sign', Rect.fromLTWH(100, 100, 100, 50)));
+document.form.fields.add(PdfSignatureField(document.pages[0], 'Sign',
+    bounds: Rect.fromLTWH(100, 100, 100, 50)));
 
 //Save the PDF document.
 File('output.pdf').writeAsBytesSync(document.save());
@@ -461,14 +462,16 @@ final PdfDocument document =
     PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
 
 //Get the loaded form field and modify the properties.
-final PdfTextBoxField field = document.form.fields[0];
-field.multiline = false;
-field.password = false;
-field.text = 'new Text';
-field.maxLength = 0;
-field.spellCheck = false;
-field.defaultValue = 'new defaultValue';
-field.scrollable = false;
+final PdfField field = document.form.fields[0];
+if (field is PdfTextBoxField) {
+  field.multiline = false;
+  field.isPassword = false;
+  field.text = 'new Text';
+  field.maxLength = 0;
+  field.spellCheck = false;
+  field.defaultValue = 'new defaultValue';
+  field.scrollable = false;
+}
 
 //Save the PDF document.
 File('output.pdf').writeAsBytesSync(document.save());
@@ -486,18 +489,19 @@ final PdfDocument document =
     PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
 
 //Get the loaded form field.
-final PdfTextBoxField field = document.form.fields[0];
+final PdfField field = document.form.fields[0];
 
-//Get colors from the loaded field.
-PdfColor fColor = field.foreColor;
-PdfColor brColor = field.borderColor;
-PdfColor bColor = field.backColor;
+if (field is PdfTextBoxField) {
+  //Get colors from the loaded field.
+  PdfColor fColor = field.foreColor;
+  PdfColor brColor = field.borderColor;
+  PdfColor bColor = field.backColor;
 
-//Set colors for the loaded field.
-field.foreColor = brColor;
-field.borderColor = bColor;
-field.backColor = fColor;
-
+  //Set colors for the loaded field.
+  field.foreColor = brColor;
+  field.borderColor = bColor;
+  field.backColor = fColor;
+}
 //Save the PDF document.
 File('output.pdf').writeAsBytesSync(document.save());
 
@@ -536,9 +540,9 @@ final PdfDocument document =
     PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
 
 // Get a combo box field and select the item.
-final PdfComboBoxField comboBox = document.form.fields[0];
-if (comboBox.selectedIndex != 1) {
-comboBox.selectedValue = comboBox.items[1].value;
+final PdfField comboBox = document.form.fields[0];
+if (comboBox is PdfComboBoxField && comboBox.selectedIndex != 1) {
+  comboBox.selectedValue = comboBox.items[1].value;
 }
 
 //Save the PDF document.
@@ -554,12 +558,13 @@ You can fill a radio button field using the selectedValue or selectedIndex prope
 
 //Loads an existing PDF document.
 final PdfDocument document =
-    PdfDocument(inputBytes: File(input.pdf').readAsBytesSync());
+    PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
 
 // Get a radio button and select the item.
-final PdfRadioButtonListField radioButtonListField = document.form.fields[0];
-if (radioButtonListField.selectedIndex != 1) {
-radioButtonListField.selectedValue = radioButtonListField.items[1].value;
+final PdfField radioButtonListField = document.form.fields[0];
+if (radioButtonListField is PdfRadioButtonListField &&
+    radioButtonListField.selectedIndex != 1) {
+  radioButtonListField.selectedValue = radioButtonListField.items[1].value;
 }
 
 //Save the PDF document.
@@ -596,7 +601,7 @@ final PdfDocument document =
     PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
 
 // Get and fill the check box field.
-(document.form.fields[0] as PdfCheckBoxField).checked = true;
+(document.form.fields[0] as PdfCheckBoxField).isChecked = true;
 
 //Save the PDF document.
 File('output.pdf').writeAsBytesSync(document.save());
@@ -616,11 +621,11 @@ final PdfDocument document =
     PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
 
 //Enumerates the form fields.
-for(int i=0; i<document.form.fields.count; i++) {
-PdfField field = document.form.fields[i];
-if(field is PdfTextBoxField) {
+for (int i = 0; i < document.form.fields.count; i++) {
+  PdfField field = document.form.fields[i];
+  if (field is PdfTextBoxField) {
     field.text = 'Updated';
-}
+  }
 }
 
 //Save the PDF document.
@@ -641,15 +646,13 @@ Please refer to the sample for flattening the form fields in a new PDF document.
 //Create a new PDF document.
 final PdfDocument document = PdfDocument();
 
-//Flatten the whole form fields. 
-document.form.flatten = true;
+//Flatten the whole form fields.
+document.form.flattenAllFields();
 
 // Create a textbox form field and add it to the document.
 document.form.fields.add(PdfTextBoxField(
     document.pages.add(), 'TextBox', Rect.fromLTWH(100, 20, 200, 20),
-    text: 'toType',
-    password: true,
-    spellCheck: true));
+    text: 'toType', isPassword: true, spellCheck: true));
 
 //Save the PDF document.
 File('output.pdf').writeAsBytesSync(document.save());
@@ -668,7 +671,7 @@ final PdfDocument document =
 (document.form.fields[0] as PdfTextBoxField).text = 'Updated';
 
 //Flatten the whole existing form fields. 
-document.form.flatten = true;
+document.form.flattenAllFields();
 
 //Save the PDF document.
 File('output.pdf').writeAsBytesSync(document.save());
@@ -690,9 +693,7 @@ document.form.readOnly = true;
 // Create a text box form field and add it to the document.
 document.form.fields.add(PdfTextBoxField(
     document.pages.add(), 'TextBox', Rect.fromLTWH(100, 20, 200, 20),
-    text: 'toType',
-    password: true,
-    spellCheck: true));
+    text: 'toType', isPassword: true, spellCheck: true));
 
 //Save the PDF document.
 File('output.pdf').writeAsBytesSync(document.save());
