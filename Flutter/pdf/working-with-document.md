@@ -116,7 +116,7 @@ PDF [`sections`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf
 PdfDocument document = PdfDocument();
 
 //Add a section to PDF document
-PdfSection section = document.sections.add();
+PdfSection section = document.sections!.add();
 
 //Draw the text by section page graphics
 section.pages.add().graphics.drawString(
