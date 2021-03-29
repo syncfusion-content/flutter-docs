@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Flutter Treemap (SfTreemap)
 
-This section explains the steps required to add the treemap widget and its elements such as tooltip, assignable colors based on region, and legends. This section covers only basic features needed to know to get started with Syncfusion treemap.
+This section explains the steps required to add the treemap widget and enable its features such as labels, tooltip, assigning colors based on region, and legends. This section covers only basic features needed to know to get started with Syncfusion treemap.
 
 ## Add Flutter treemap to an application
 
@@ -85,9 +85,7 @@ void initState() {
 Widget build(BuildContext context) {
   return Scaffold(
      body: Center(
-        child: Container(
-          height: 415,
-          width: 407,
+        child: Padding(
           padding: EdgeInsets.all(10),
           child: SfTreemap(
             dataCount: _source.length,
@@ -160,9 +158,7 @@ void initState() {
 Widget build(BuildContext context) {
   return Scaffold(
      body: Center(
-        child: Container(
-          height: 415,
-          width: 407,
+        child: Padding(
           padding: EdgeInsets.all(10),
           child: SfTreemap(
             dataCount: _source.length,
@@ -237,15 +233,14 @@ void initState() {
 Widget build(BuildContext context) {
   return Scaffold(
      body: Center(
-        child: Container(
-          height: 415,
-          width: 407,
+        child: Padding(
           padding: EdgeInsets.all(10),
           child: SfTreemap(
             dataCount: _source.length,
             weightValueMapper: (int index) {
               return _source[index].usersInMillions;
             },
+            tooltipSettings: TreemapTooltipSettings(color: Colors.black),
             levels: [
               TreemapLevel(
                 groupMapper: (int index) {
@@ -323,15 +318,14 @@ void initState() {
 Widget build(BuildContext context) {
   return Scaffold(
      body: Center(
-        child: Container(
-          height: 415,
-          width: 407,
+        child: Padding(
           padding: EdgeInsets.all(10),
           child: SfTreemap(
             dataCount: _source.length,
             weightValueMapper: (int index) {
               return _source[index].usersInMillions;
             },
+            tooltipSettings: TreemapTooltipSettings(color: Colors.black),
             levels: [
               TreemapLevel(
                 groupMapper: (int index) {
@@ -341,6 +335,15 @@ Widget build(BuildContext context) {
                   return Padding(
                     padding: EdgeInsets.only(left: 2.5, right: 2.4, top: 1),
                     child: Text(tile.group),
+                  );
+                },
+                tooltipBuilder: (BuildContext context, TreemapTile tile) {
+                  return Padding(
+                    padding: const EdgeInsets.only(
+                         left: 5, right: 5, top: 2, bottom: 3),
+                    child: Text(
+                        'Country          : ${tile.group}\nSocial media : ${tile.weight}M',
+                        style: TextStyle(color: Colors.white)),
                   );
                 },
               ),
