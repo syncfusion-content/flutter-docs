@@ -16,7 +16,7 @@ Vertical(Y) axis always uses numerical scale. Horizontal(X) axis supports the fo
 * Category
 * Numeric
 * Date-time
-* Date-time Category
+* Date-time category
 * Logarithmic
 
 ## Numeric axis
@@ -691,7 +691,7 @@ Also refer [label format](./axis-customization#formatting-axis-label-content) an
 
 ## Date-time category axis
 
-Date-time category axis is used to display the date-time values with non-linear intervals. For example, the business days alone have been depicted in a week here.
+Date-time category axis is a combinaion of both [`DateTimeAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/DateTimeAxis.html) and [`CategoryAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CategoryAxis-class.html). Date-time category axis is used to display the date-time values with non-linear intervals. For example, the business days alone have been depicted in a week here.
 
 {% highlight dart %} 
 
