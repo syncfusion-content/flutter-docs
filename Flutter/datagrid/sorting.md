@@ -524,17 +524,17 @@ class EmployeeDataSource extends DataGridSource {
 
   @override
   int compare(DataGridRow? a, DataGridRow? b, SortColumnDetails sortColumn) {
-      final String? stringA = a
+      final String? value1 = a
             ?.getCells()
             .firstWhereOrNull((element) => element.columnName == sortColumn.name)
             ?.value;
-      final String? stringB = b
+      final String? value2 = b
             ?.getCells()
             .firstWhereOrNull((element) => element.columnName == sortColumn.name)
             ?.value;
   
-      int? aLength = stringA?.length;
-      int? bLength = stringB?.length;
+      int? aLength = value1?.length;
+      int? bLength = value2?.length;
   
       if (aLength == null || bLength == null) {
         return 0;
@@ -608,23 +608,23 @@ class EmployeeDataSource extends DataGridSource<Employee> {
   @override
   int compare(DataGridRow? a, DataGridRow? b, SortColumnDetails sortColumn) {
      if (sortColumn.name == 'name') {
-        final String? stringA = a
+        final String? value1 = a
             ?.getCells()
             .firstWhereOrNull((element) => element.columnName == sortColumn.name)
             ?.value;
-        final String? stringB = b
+        final String? value2 = b
             ?.getCells()
             .firstWhereOrNull((element) => element.columnName == sortColumn.name)
             ?.value;
   
-        if (stringA == null || stringB == null) {
+        if (value1 == null || value2 == null) {
           return 0;
         }
   
         if (sortColumn.sortDirection == DataGridSortDirection.ascending) {
-          return stringA.compareTo(stringB);
+          return value1.compareTo(value2);
         } else {
-          return stringB.compareTo(stringA);
+          return value2.compareTo(value1);
         }
      }
      
