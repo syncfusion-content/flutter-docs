@@ -73,7 +73,7 @@ class PopulationModel {
 
 ![Squarified layout structure](images/layout/squarified-layout.png)
 
-## Dlice
+## Slice
 
 The slice layout will start to arrange each rectangle in a horizontal direction and the size of the rectangle will be based on the value returned from `weightValueMapper` callback and the available height.
 

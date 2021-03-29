@@ -13,7 +13,7 @@ This section explains about the customization of color for the tiles based on sp
 
 ## Level color
 
-You can apply unique color to the levels to differentiate the rendering of multiple levels using the `TreemapLevel.color` property.
+You can apply uniform color to the whole level using the `TreemapLevel.color` property.
 
 {% tabs %}
 {% highlight Dart %}

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Flat and hierarchical level in Syncfusion Flutter Treemap | Syncfusion
+title: Flat and hierarchical levels in Syncfusion Flutter Treemap | Syncfusion
 description: This section explains the steps required to visualize the treemap widget in flat and hierarchical structures.
 platform: Flutter
 control: SfTreemap
@@ -9,7 +9,7 @@ documentation: ug
 
 # Levels in the Flutter Treemap
 
-The levels of the tree map can be categorized into the following two types,
+The levels of the treemap can be categorized into the following two types,
 
 * Flat level.
 * Hierarchical level.
