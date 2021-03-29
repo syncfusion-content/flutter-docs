@@ -84,7 +84,7 @@ You can customize the header date format by using the [headerDateFormat]() prope
 {% endhighlight %}
 {% endtabs %}
 
-![headerDateFormat](images/headers/headerDateFormat.png)
+![headerDateFormat](images/headers/headerDateFormat.jpg)
 
 ## View header
 

@@ -418,7 +418,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![showCurrentTimeIndicator](images/getting-started/current_time_indicator.png)
+![showCurrentTimeIndicator](images/getting-started/current_time_indicator.jpg)
 
 
 You can get the complete getting started sample from [here](https://github.com/SyncfusionExamples/flutter-calendar).

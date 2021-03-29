@@ -377,7 +377,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![navigationMode](images/date-navigations/freescroll.gif)
+![navigationMode](images/date-navigations/freescroll.jpg)
 
 >**NOTE**
 When the navigation mode set as NavigationMode.scroll
