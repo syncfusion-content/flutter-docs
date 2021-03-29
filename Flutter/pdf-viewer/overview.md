@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of Syncfusion Flutter PDF Viewer | Syncfusion
-description: Flutter PDF Viewer library has highly interactive and customizable features such as magnification, virtual scrolling, page navigation, text selection, text search, and bookmark navigation.
+description: Flutter PDF Viewer library has highly interactive and customizable features such as magnification, page navigation, text selection, search, and bookmark navigation.
 platform: Flutter
 control: SfPdfViewer
 documentation: ug
