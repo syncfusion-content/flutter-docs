@@ -46,3 +46,5 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![RTL support](images/right-to-left/right-to-left-support.png)
+
+N> This RTL support is not applicable for the vertical orientation of the range slider.

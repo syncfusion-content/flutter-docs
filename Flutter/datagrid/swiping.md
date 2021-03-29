@@ -24,6 +24,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 Widget build(BuildContext context) {
   return SfDataGrid(
     allowSwiping: true,
+    swipeMaxOffset: 100.0,
     source: employeeDataSource,
       startSwipeActionsBuilder: (BuildContext context, DataGridRow row) {
         return GestureDetector(
@@ -147,10 +148,10 @@ Widget build(BuildContext context) {
             _employeeDataSource.updateDataSource();
           },
           child: Container(
-            color: Colors.greenAccent,
-            child: Center(
-              child: Text('Deleted', style: TextStyle(color: Colors.white)),
-            ),
+            color: Colors.green,
+            padding: EdgeInsets.only(left: 30.0),
+            alignment: Alignment.centerLeft,
+            child: Text('Delete', style: TextStyle(color: Colors.white)),
           ),
         );
       },

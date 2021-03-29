@@ -70,7 +70,7 @@ Widget build(BuildContext context) {
           columnName: 'id',
           label: Container(
             alignment: Alignment.centerRight,
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             child: Text(
               'ID',
               overflow: TextOverflow.ellipsis,
@@ -80,7 +80,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'productId',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'Product ID',
@@ -91,7 +91,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'name',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'Customer Name',
@@ -102,7 +102,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'product',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'Product',
@@ -113,7 +113,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'orderDate',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.center,
             child: Text(
               'Order Date',
@@ -124,7 +124,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'quantity',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'Quantity',
@@ -135,7 +135,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'city',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'City',
@@ -146,7 +146,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'unitPrice',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'Unit Price',
@@ -181,7 +181,7 @@ Widget build(BuildContext context) {
           columnName: 'id',
           label: Container(
             alignment: Alignment.centerRight,
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             child: Text(
               'ID',
               overflow: TextOverflow.ellipsis,
@@ -191,7 +191,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'productId',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'Product ID',
@@ -202,7 +202,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'name',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'Customer Name',
@@ -213,7 +213,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'product',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'Product',
@@ -224,7 +224,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'orderDate',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.center,
             child: Text(
               'Order Date',
@@ -235,7 +235,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'quantity',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'Quantity',
@@ -246,7 +246,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'city',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'City',
@@ -257,7 +257,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'unitPrice',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'Unit Price',
@@ -299,7 +299,7 @@ Widget build(BuildContext context) {
           columnName: 'id',
           label: Container(
             alignment: Alignment.centerRight,
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             child: Text(
               'ID',
               overflow: TextOverflow.ellipsis,
@@ -309,7 +309,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'productId',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'Product ID',
@@ -320,7 +320,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'name',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'Customer Name',
@@ -331,7 +331,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'product',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'Product',
@@ -342,7 +342,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'orderDate',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.center,
             child: Text(
               'Order Date',
@@ -353,7 +353,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'quantity',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'Quantity',
@@ -364,7 +364,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'city',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'City',
@@ -375,7 +375,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'unitPrice',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'Unit Price',
@@ -409,7 +409,7 @@ Widget build(BuildContext context) {
           columnName: 'id',
           label: Container(
             alignment: Alignment.centerRight,
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             child: Text(
               'ID',
               overflow: TextOverflow.ellipsis,
@@ -419,7 +419,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'productId',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'Product ID',
@@ -430,7 +430,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'name',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'Customer Name',
@@ -441,7 +441,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'product',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'Product',
@@ -452,7 +452,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'orderDate',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.center,
             child: Text(
               'Order Date',
@@ -463,7 +463,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'quantity',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'Quantity',
@@ -474,7 +474,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'city',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'City',
@@ -485,7 +485,7 @@ Widget build(BuildContext context) {
         GridTextColumn(
           columnName: 'unitPrice',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'Unit Price',
@@ -511,7 +511,7 @@ N> Header row is frozen by default and works regardless of the `frozenRowsCount`
 
 ## Appearance
 
-`SfDataGrid` allows to customize the appearance of the freeze pane through [SfDataGridTheme.SfDataGridThemeData](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData-class.html) property.
+`SfDataGrid` allows to customize the appearance of the freeze pane through [SfDataGridTheme.SfDataGridThemeData](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData-class.html) property. The frozen line will be shown only the `SfDataGridThemeData.frozenPaneElevation` property to 0.
 
 The freeze pane line and freeze pane width can be changed by [frozenPaneLineColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/frozenPaneLineColor.html) and [frozenPaneLineWidth](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/frozenPaneLineWidth.html). 
 
@@ -523,7 +523,9 @@ Widget build(BuildContext context) {
   return Scaffold(
     body: SfDataGridTheme(
         data: SfDataGridThemeData(
-            frozenPaneLineColor: Colors.red, frozenPaneLineWidth: 1.5),
+          frozenPaneElevation: 0.0,
+          frozenPaneLineColor: Colors.red, 
+          frozenPaneLineWidth: 1.5),
         child: SfDataGrid(
           source: _orderDataGridSource,
           frozenRowsCount: 1,
@@ -535,7 +537,7 @@ Widget build(BuildContext context) {
               columnName: 'id',
               label: Container(
                 alignment: Alignment.centerRight,
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 child: Text(
                   'ID',
                   overflow: TextOverflow.ellipsis,
@@ -545,7 +547,7 @@ Widget build(BuildContext context) {
             GridTextColumn(
               columnName: 'productId',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.centerRight,
                 child: Text(
                   'Product ID',
@@ -556,7 +558,7 @@ Widget build(BuildContext context) {
             GridTextColumn(
               columnName: 'name',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.centerLeft,
                 child: Text(
                   'Customer Name',
@@ -567,7 +569,7 @@ Widget build(BuildContext context) {
             GridTextColumn(
               columnName: 'product',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.centerLeft,
                 child: Text(
                   'Product',
@@ -578,7 +580,7 @@ Widget build(BuildContext context) {
             GridTextColumn(
               columnName: 'orderDate',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.center,
                 child: Text(
                   'Order Date',
@@ -589,7 +591,7 @@ Widget build(BuildContext context) {
             GridTextColumn(
               columnName: 'quantity',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.centerRight,
                 child: Text(
                   'Quantity',
@@ -600,7 +602,7 @@ Widget build(BuildContext context) {
             GridTextColumn(
               columnName: 'city',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.centerLeft,
                 child: Text(
                   'City',
@@ -611,7 +613,7 @@ Widget build(BuildContext context) {
             GridTextColumn(
               columnName: 'unitPrice',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
                 alignment: Alignment.centerRight,
                 child: Text(
                   'Unit Price',
@@ -628,3 +630,234 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![flutter datagrid shows freeze pane customization](images/frozen-pane/flutter-datagrid-frozen-pane-customization.png)
+
+`SfDataGrid` allows to customize the appearance of the freeze pane elevation by using the `SfDataGridThemeData.frozenPaneElevation`. The default value of frozenPaneElevation is 5.0.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDataGridTheme(
+        data: SfDataGridThemeData(frozenPaneElevation: 7.0),
+        child: SfDataGrid(
+          source: _orderDataGridSource,
+          frozenRowsCount: 1,
+          frozenColumnsCount: 1,
+          columns: <GridColumn>[
+            GridTextColumn(
+              columnName: 'id',
+              label: Container(
+                alignment: Alignment.centerRight,
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'productId',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Product ID',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'name',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Customer Name',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'product',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Product',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'orderDate',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.center,
+                child: Text(
+                  'Order Date',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'quantity',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Quantity',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'city',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'City',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'unitPrice',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Unit Price',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+          ],
+        )),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![flutter datagrid shows customization of freeze pane elevation](images/frozen-pane/flutter-datagrid-customized-frozen-elevation.png)
+
+## Hide freeze pane elevation
+
+By default, elevation effect is applied to frozen panes. If you want to hide the freeze pane elevation and show only the frozen pane line, you can simply set `SfDataGridThemeData.frozenPaneElevation` property to 0. You can customize the appearance of frozen line by using `SfDataGridThemeData.frozenPaneLineColor` and `SfDataGridThemeData.frozenPaneLineWidth` properties.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDataGridTheme(
+        data: SfDataGridThemeData(
+          frozenPaneElevation: 0.0,
+          frozenPaneLineColor: Colors.red, 
+          frozenPaneLineWidth: 1.5),
+        child: SfDataGrid(
+          source: _orderDataGridSource,
+          frozenRowsCount: 1,
+          frozenColumnsCount: 1,
+          columns: <GridColumn>[
+            GridTextColumn(
+              columnName: 'id',
+              label: Container(
+                alignment: Alignment.centerRight,
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'productId',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Product ID',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'name',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Customer Name',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'product',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Product',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'orderDate',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.center,
+                child: Text(
+                  'Order Date',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'quantity',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Quantity',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'city',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'City',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'unitPrice',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Unit Price',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+          ],
+        )),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![flutter datagrid shows how to hide the frozen pane elevation](images/frozen-pane/flutter-datagrid-hide-frozen-elevation.png)

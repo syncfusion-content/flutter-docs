@@ -64,7 +64,7 @@ PdfGraphics graphics = document.pages.add().graphics;
 PdfGraphicsState state = graphics.save();
 graphics.setTransparency(0.25);
 graphics.drawImage(
-    PdfBitmap.fromBase64String(alphaPng),
+    PdfBitmap.fromBase64String(imageData),
     Rect.fromLTWH(
         0, 0, graphics.clientSize.width, graphics.clientSize.height));
 graphics.restore(state);
