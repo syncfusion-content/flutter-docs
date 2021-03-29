@@ -1102,8 +1102,6 @@ Auto scrolling feature available in SfCartesianChart is used to ensure that spec
 
 {% endhighlight %}
 
-![Auto scrolling](images/axis-customization/auto_scrolling.gif)
-
 ### AutoScrollingMode
 
 [`AutoScrollingMode`](~) property can be used to determine whether the axis should be scrolled from start position or end position. The default value of [`AutoScrollingMode`](~) is `end`.
