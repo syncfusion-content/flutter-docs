@@ -114,7 +114,9 @@ N>
 
 ## Equal color mapping
 
-You can apply color to the tiles by comparing a value that returns from the `TreemapColorMapper.value` property. For the matched values, the `TreemapColorMapper.color` will be applied to the respective tiles.
+If you return a value of different type other than the color from the `TreemapLevel.colorValueMapper`, then you must set the `colorMappers` property which is a collection of `TreemapColorMapper`.
+
+The value returned from the `TreemapLevel.colorValueMapper` callback will be used for the comparison in the `TreemapColorMapper.value`. For the matched values, the `TreemapColorMapper.color` will be applied to the respective tiles.
 
 N> You can customize the legend icons color and texts using the `TreemapColorMapper.color` and the `TreemapColorMapper.value` properties respectively.
 
@@ -185,7 +187,9 @@ N>
 
 ## Range color mapping
 
-You can apply color to the tiles based on whether the value returned from the `TreemapColorMapper.from` and `TreemapColorMapper.to` range. Then, the `TreemapColorMapper.color` will be applied to the respective tiles.
+If you return a range value in the `TreemapLevel.colorValueMapper`, then you must set the `colorMappers` property.
+
+The value returned from the `TreemapLevel.colorValueMapper` callback will be checked whether it lies in the `TreemapColorMapper.from` and `TreemapColorMapper.to` range. For the matched values, the `TreemapColorMapper.color` will be applied to the respective tiles.
 
 N> You can customize the legend icons color and texts using the `TreemapColorMapper.color` and the `TreemapColorMapper.from` and `TreemapColorMapper.to` properties.
 
