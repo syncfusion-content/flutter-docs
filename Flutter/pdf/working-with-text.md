@@ -267,9 +267,9 @@ PdfLayoutFormat layoutFormat = PdfLayoutFormat(
 //Draw the first paragraph
 PdfLayoutResult result = textElement.draw(
     page: page,
-    bounds: Rect.fromLTWH(
-        0, 0, page.getClientSize().width / 2, page.getClientSize().height),
-    format: layoutFormat);
+    bounds: Rect.fromLTWH(0, 0, page.getClientSize().width / 2,
+        page.getClientSize().height),
+    format: layoutFormat)!;
 
 //Draw the second paragraph from the first paragraph end position
 textElement.draw(
