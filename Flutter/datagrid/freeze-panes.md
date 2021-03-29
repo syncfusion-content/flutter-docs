@@ -751,9 +751,6 @@ By default, elevation effect is applied to frozen panes. If you want to hide the
 {% tabs %}
 {% highlight Dart %}
 
-{% tabs %}
-{% highlight Dart %}
-
 @override
 Widget build(BuildContext context) {
   return Scaffold(
