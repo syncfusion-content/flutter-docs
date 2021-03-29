@@ -162,8 +162,9 @@ List<Employee> getEmployeeData() {
 
 [DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) is used to obtain the row data for the `SfDataGrid`. So, create the DataSource from the DataGridSource and override the following APIs in it,
 
-* **`rows`** - To fetch the number of rows available for data population. Also, it is used to fetch the corresponding data object to process the selection.
-* **`buildRow`** - To fetch the widget for each cell using the [DataGridRowAdapter]().
+* **`rows`** - Fetches the rows available for data population. Also, it is used to fetch the corresponding data object to process the selection. This contains the collection of `DataGridRow` where each row contains the collection of `DataGridCell`. Each cell should have the cell value in `value` property. `value` is used to perform the sorting for columns.
+
+* **`buildRow`** - Fetches the widget for each cell with `DataGridRowAdapter`.
 
 `DataGridSource` objects are expected to be long-lived, not recreated with each build.
 
@@ -225,7 +226,7 @@ Widget build(BuildContext context) {
 
 ## Defining columns
 
-`SfDataGrid` supports to add any widget in a column using the [GridTextColumn]() property. You can add the column collection to the `columns` property.
+`SfDataGrid` supports to add any widget in a column using the [GridTextColumn] property. You can add the column collection to the `columns` property.
 
 {% tabs %}
 {% highlight Dart %} 
