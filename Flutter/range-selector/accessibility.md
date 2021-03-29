@@ -28,8 +28,8 @@ Widget build(BuildContext context) {
               interval: 20,
               showTicks: true,
               showLabels: true,
-              semanticFormatterCallback: (SfRangeValues values){
-                return 'SfRangeValues ${values.start} ${values.end}';
+              semanticFormatterCallback: (dynamic value, SfThumb thumb){
+                return 'The ${thumb} value is ${value}';
               },
               onChanged: (SfRangeValues newValues) {
                 setState(() {
