@@ -325,7 +325,7 @@ The callback contains the following argument:
 
 ## onCreateShader
 
-Using this callback, you can be able to fill the data points of circular charts series with gradient and image shaders.
+Using this callback, you can fill the data points of circular charts series with gradient and image shader.
 
 The callback contains the following argument:
 

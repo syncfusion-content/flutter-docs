@@ -112,7 +112,7 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
 
 ## Gradient and image shader
 
-The [`onCreateShader`](~) callback is used to fill the circular chart series data points with gradient and image shaders. This callback is called once while rendering
+The [`onCreateShader`](~) callback is used to fill the circular chart series data points with gradient and image shader. This callback is called once while rendering
 the data points and legend.
 
 N> All the data points of the circular chart are considered together as a single segment and the shader is applied commonly.
@@ -237,7 +237,7 @@ The data points of pie, doughnut and radial bar charts can be filled with three 
 
 ### Image fill
 
-The data points of pie, doughnut and radial bar charts can also be filled with image by returning [`ImageShader`](https://api.flutter.dev/flutter/dart-ui/ImageShader-class.html) with rqeuired parameters.
+The data points of pie, doughnut and radial bar charts can also be filled with image by returning [`ImageShader`](https://api.flutter.dev/flutter/dart-ui/ImageShader-class.html) with required parameters.
 
 {% highlight dart %}
 
@@ -287,7 +287,7 @@ The data points of pie, doughnut and radial bar charts can also be filled with i
 
 ## Shader mapping for data points
 
-The [`pointShaderMapper`](~) property is used to map the shader field from the chart data source. You can map different [`gradient`](https://api.flutter.dev/flutter/dart-ui/Gradient-class.html) types and [`image shaders`](https://api.flutter.dev/flutter/dart-ui/ImageShader-class.html) for different data points using this mapper callback.
+The [`pointShaderMapper`](~) property is used to map the shader field from the chart data source. You can map different [`gradient`](https://api.flutter.dev/flutter/dart-ui/Gradient-class.html) types and [`image shader`](https://api.flutter.dev/flutter/dart-ui/ImageShader-class.html) for individual data points using this mapper callback.
 
 {% endhighlight %}
 
