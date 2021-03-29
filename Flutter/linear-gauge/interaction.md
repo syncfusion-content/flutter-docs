@@ -15,7 +15,39 @@ The shape and widget marker pointers in a Linear Gauge can be moved from one val
 
 The `onValueChanged` call back is used to change the value of the marker pointer at run-time.
 
-The below code snippet demonstrates updating the marker pointer value based on swipe or drag gesture.
+The below code snippet demonstrates updating simple marker pointer value based on swipe or drag gesture.
+
+{% highlight dart %}
+
+double shapePointerValue = 25;
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: SfLinearGauge(
+            markerPointers: [
+              LinearShapePointer(
+                  value: shapePointerValue,
+                  //Changes the value of shape pointer based on interaction
+                  onValueChanged: (value) {
+                    setState(() {
+                      shapePointerValue = value;
+                    });
+                  },
+                  color: Colors.blue[800]),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+{% endhighlight %}
+
+![Simple pointer interaction in linear gauge](images/interaction/simple_interaction.gif)
+
+The below code snippet demonstrates updating multiple marker pointer value based on swipe or drag gesture.
 
 {% highlight dart %}
 
@@ -39,7 +71,7 @@ The below code snippet demonstrates updating the marker pointer value based on s
                     shapePointerValue = value;
                   });
                 },
-                color: Colors.blue[800],
+                color: Colors.blue[800]
               ),
             ],
           ),
@@ -60,7 +92,7 @@ The below code snippet demonstrates updating the marker pointer value based on s
                   height: 20,
                   width: 20,
                   decoration: BoxDecoration(
-                      color: Colors.orange[500], shape: BoxShape.circle),
+                      color: Colors.orange[500], shape: BoxShape.circle)
                 ),
               ),
             ],
@@ -68,7 +100,7 @@ The below code snippet demonstrates updating the marker pointer value based on s
           SizedBox(height: 25),
           SfLinearGauge(
             axisTrackStyle: LinearAxisTrackStyle(
-              thickness: 10,
+              thickness: 10
             ),
             markerPointers: [
               LinearShapePointer(
@@ -84,7 +116,7 @@ The below code snippet demonstrates updating the marker pointer value based on s
                     ? Colors.green
                     : widgetPointerValue < 80
                         ? Colors.orange
-                        : Colors.red,
+                        : Colors.red
               ),
               LinearWidgetPointer(
                 value: widgetPointerValue,
@@ -106,7 +138,7 @@ The below code snippet demonstrates updating the marker pointer value based on s
                             ? Colors.green
                             : widgetPointerValue < 80
                                 ? Colors.orange
-                                : Colors.red,
+                                : Colors.red
                       ),
                     ),
                   ),
@@ -126,12 +158,11 @@ The below code snippet demonstrates updating the marker pointer value based on s
             ],
           ),
         ],
-        mainAxisAlignment: MainAxisAlignment.center,
-    )),
-    
+        mainAxisAlignment: MainAxisAlignment.center
+    )),    
 	)
 );
 
 {% endhighlight %}
 
-![shape pointer in linear gauge](images/interaction/interaction.gif)
+![Shape pointer interaction in linear gauge](images/interaction/interaction.gif)
