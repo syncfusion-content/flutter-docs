@@ -13,9 +13,9 @@ You can select a tile in order to highlight that area on a treemap. You can use 
 
 ## Enable tile selection
 
-You can enable tile selection on a treemap using the `SfTreemap.onSelectionChanged` property. The descendant tiles of the selected tile are also selected along with the selected tile when doing selecting for hierarchical level.
+You can enable tile selection on a treemap using the `SfTreemap.onSelectionChanged` property. The descendant tiles of the selected tile are also selected along with the selected tile when doing selection for hierarchical level.
 
-The `onSelectionChanged` callback is used to pass the details of the selected tile when the user is selecting a tile by tapping and able to do any specific functionalities like showing pop-up or navigate to a different page.
+The `onSelectionChanged` callback will be called with the details of the selected tile when the user is selecting a tile by tapping and you will be able to do any specific functionalities like showing pop-up or navigate to a different page.
 
 {% tabs %}
 {% highlight Dart %}

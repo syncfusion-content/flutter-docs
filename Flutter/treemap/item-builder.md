@@ -13,9 +13,7 @@ You can add any type of custom widgets such as image widget as a background of t
 
 ## Add images
 
-You can add images as a background of the tiles using the `TreemapLevel.itemBuilder` property which is added in the `SfTreemap.levels` collection.
-
-The rendering area of the descendants tile is not based on the space occupied by the widget which is return from the `TreemapLevel.itemBuilder` property.
+You can add images as a background of the tiles using the `TreemapLevel.itemBuilder` callback.
 
 {% tabs %}
 {% highlight Dart %}

@@ -15,7 +15,7 @@ Tooltip is used to provide information about the tile during the tap, or click i
 
 It is used to clearly indicate the tile information on the tap or click. To show tooltip for the tile, return a widget in `TreemapLevel.tooltipBuilder`. This widget will then be wrapped in the builtin shape which comes with the nose at the bottom.
 
-The `TreemapLevel.tooltipBuilder` will be called with the corresponding tile every time when you interacts with the tile i.e., while tapping in touch devices and hover enter in the mouse enabled devices.
+The `TreemapLevel.tooltipBuilder` will be called with the corresponding tile details every time you interact with the tile i.e., while tapping in touch devices and hover enter in the mouse enabled devices.
 
 {% tabs %}
 {% highlight Dart %}

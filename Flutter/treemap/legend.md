@@ -934,7 +934,7 @@ class SocialMediaUsers {
 
 ![Bar legend labels placement](images/legend/bar-legend-range-color-mapper-with-text.png)
 
-The labels are positioned at the center of the segments when setting the `labelsPlacement` property to `TreemapLegendLabelsPlacement.onItem. The labels calculated based on the value of `TreemapColorMapper.name` property. If the value of `TreemapColorMapper.name` property is null, labels calculated based on the values of `TreemapColorMapper.from` and `TreemapColorMapper.to` properties.
+The labels are positioned at the center of the segments when setting the `labelsPlacement` property to `TreemapLegendLabelsPlacement.onItem`. The labels will based on the value of `TreemapColorMapper.name` property. If the value of `TreemapColorMapper.name` property is null, labels will be based on the values of `TreemapColorMapper.from` and `TreemapColorMapper.to` properties.
 
 {% tabs %}
 {% highlight Dart %}

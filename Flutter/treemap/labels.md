@@ -13,9 +13,7 @@ You can add any type of widgets like text widget to improve the readability of t
 
 ## Add labels
 
-You can add labels on the tiles using the `TreemapLevel.labelBuilder` property which is added in the `SfTreemap.levels` collection.
-
-The rendering area of the descendants tile is measured at the hierarchical level based on the space occupied by the labels.
+You can add labels on the tiles using the `TreemapLevel.labelBuilder` callback which is available in the `SfTreemap.levels` collection.
 
 {% tabs %}
 {% highlight Dart %}
