@@ -96,7 +96,8 @@ Widget build(BuildContext context) {
 ## Multi-column sorting
 
 The datagrid sorts the data against more than one columns by setting the [SfDataGrid.allowMultiColumnSorting](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowMultiColumnSorting.html) property to true. The number of columns by which the data can be sorted is unlimited. To apply sorting for multiple columns, tap the desired column headers after setting the `SfDataGrid.allowMultiColumnSorting` property.
-To apply sorting for multiple columns in web, you can click the column header by pressing the <kbd>Ctrl</kbd> key.
+
+To apply sorting for multiple columns in web and desktop, you can click the column header by pressing the <kbd>Ctrl</kbd> key.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -369,6 +370,7 @@ Widget build(BuildContext context) {
           ))),
       GridTextColumn(
         columnName: 'name',
+        allowSorting: false,
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerLeft,
@@ -504,42 +506,51 @@ class EmployeeDataSource extends DataGridSource {
   List<DataGridRow> get rows => dataGridRows;
 
   @override
-  DataGridRowAdapter buildRow(DataGridRow row) {
+  DataGridRowAdapter? buildRow(DataGridRow row) {
     return DataGridRowAdapter(
         cells: row.getCells().map<Widget>((dataGridCell) {
-      return Container(
-        alignment: Alignment.center,
-        padding: EdgeInsets.symmetric(horizontal: 16.0),
-        child: Text(dataGridCell.value.toString()),
-      );
+        return Container(
+            alignment: (dataGridCell.columnName == 'id' ||
+                  dataGridCell.columnName == 'salary')
+                  ? Alignment.centerRight
+                  : Alignment.centerLeft,
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            child: Text(
+            dataGridCell.value.toString(),
+            overflow: TextOverflow.ellipsis,
+            ));
     }).toList());
   }
 
   @override
-  int compare(DataGridRow a, DataGridRow b, SortColumnDetails sortColumn) {
-    final String stringA = a
-        .getCells()
-        .firstWhere((element) => element.columnName == sortColumn.name,
-            orElse: () => null)
-        ?.value;
-    final String stringB = b
-        .getCells()
-        .firstWhere((element) => element.columnName == sortColumn.name,
-            orElse: () => null)
-        .value;
-
-    int aLength = stringA.length;
-    int bLength = stringB.length;
-    if (aLength.compareTo(bLength) > 0)
-      return sortColumn.sortDirection == DataGridSortDirection.ascending
-          ? 1
-          : -1;
-    else if (aLength.compareTo(bLength) == -1)
-      return sortColumn.sortDirection == DataGridSortDirection.ascending
-          ? -1
-          : 1;
-    else
-      return 0;
+  int compare(DataGridRow? a, DataGridRow? b, SortColumnDetails sortColumn) {
+      final String? value1 = a
+            ?.getCells()
+            .firstWhereOrNull((element) => element.columnName == sortColumn.name)
+            ?.value;
+      final String? value2 = b
+            ?.getCells()
+            .firstWhereOrNull((element) => element.columnName == sortColumn.name)
+            ?.value;
+  
+      int? aLength = value1?.length;
+      int? bLength = value2?.length;
+  
+      if (aLength == null || bLength == null) {
+        return 0;
+      }
+  
+      if (aLength.compareTo(bLength) > 0) {
+        return sortColumn.sortDirection == DataGridSortDirection.ascending
+            ? 1
+            : -1;
+      } else if (aLength.compareTo(bLength) == -1) {
+        return sortColumn.sortDirection == DataGridSortDirection.ascending
+            ? -1
+            : 1;
+      } else {
+        return 0;
+      }
   }
 }
 
@@ -578,37 +589,46 @@ class EmployeeDataSource extends DataGridSource<Employee> {
   List<DataGridRow> get rows => dataGridRows;
   
   @override
-  DataGridRowAdapter buildRow(DataGridRow row) {
+  DataGridRowAdapter? buildRow(DataGridRow row) {
     return DataGridRowAdapter(
         cells: row.getCells().map<Widget>((dataGridCell) {
-      return Container(
-        alignment: Alignment.center,
-        padding: EdgeInsets.symmetric(horizontal: 16.0),
-        child: Text(dataGridCell.value.toString()),
-      );
+        return Container(
+            alignment: (dataGridCell.columnName == 'id' ||
+                  dataGridCell.columnName == 'salary')
+                  ? Alignment.centerRight
+                  : Alignment.centerLeft,
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            child: Text(
+            dataGridCell.value.toString(),
+            overflow: TextOverflow.ellipsis,
+            ));
     }).toList());
   }
 
   @override
-  int compare(DataGridRow a, DataGridRow b, SortColumnDetails sortColumn) {
-    if (sortColumn.name == 'name') {
-      final String stringA = a
-        .getCells()
-        .firstWhere((element) => element.columnName == sortColumn.name,
-          orElse: () => null)
-        ?.value;
-      final String stringB = b
-        .getCells()
-        .firstWhere((element) => element.columnName == sortColumn.name,
-          orElse: () => null)
-        ?.value;
-      if (sortColumn.sortDirection == DataGridSortDirection.ascending) {
-        return stringA.compareTo(stringB);
-      } else {
-        return stringB.compareTo(stringA);
-      }
-    }
-    return super.compare(a, b, sortColumn);
+  int compare(DataGridRow? a, DataGridRow? b, SortColumnDetails sortColumn) {
+     if (sortColumn.name == 'name') {
+        final String? value1 = a
+            ?.getCells()
+            .firstWhereOrNull((element) => element.columnName == sortColumn.name)
+            ?.value;
+        final String? value2 = b
+            ?.getCells()
+            .firstWhereOrNull((element) => element.columnName == sortColumn.name)
+            ?.value;
+  
+        if (value1 == null || value2 == null) {
+          return 0;
+        }
+  
+        if (sortColumn.sortDirection == DataGridSortDirection.ascending) {
+          return value1.compareTo(value2);
+        } else {
+          return value2.compareTo(value1);
+        }
+     }
+     
+     return super.compare(a, b, sortColumn);
   }
 }
 
