@@ -322,3 +322,14 @@ The callback contains the following argument:
   }
 
 {% endhighlight %}
+
+## onCreateShader
+
+Using this callback, you can be able to fill the data points of circular charts series with gradient and image shaders.
+
+The callback contains the following argument:
+
+* [`ChartShaderDetails`](~) - provides options to get the outer rect, inner rect, and render type (either series or legend)
+
+The onCreateShader callback is called once while rendering
+the data points and legend. For further reference on this callback, Check the [Gradient and image shader](./circular-series-customization#Gradient-fill-and-shader) section.
