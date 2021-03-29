@@ -21,7 +21,7 @@ This section provides the user guide link for each widget and its package link.
 </tr>
 
 <tr>
-<td>GRID</td>
+<td>Grid</td>
 <td><a href = "https://help.syncfusion.com/flutter/datagrid/overview">DataGrid</a></td>
 <td><a href="https://pub.dev/packages/syncfusion_flutter_datagrid">syncfusion_flutter_datagrid</a></td>
 </tr>
@@ -75,7 +75,7 @@ This section provides the user guide link for each widget and its package link.
 </tr>
 
 <tr>
-<td><p><a href="https://help.syncfusion.com/flutter/radial-gauge/overview">Radial Gauge</a></p></td>
+<td><p><a href="https://help.syncfusion.com/flutter/radial-gauge/overview">Radial gauge</a></p></td>
 <td><p><a href="https://pub.dev/packages/syncfusion_flutter_gauges">syncfusion_flutter_gauges</a></p>
 </td>
 </tr>
@@ -100,7 +100,7 @@ This section provides the user guide link for each widget and its package link.
 <tr>
 <td><p>Viewer</p></td>
 <td><p><a href="https://help.syncfusion.com/flutter/pdf-viewer/overview">PDF viewer</a></p></td>
-<td><p><a href="https://pub.dev/packages/syncfusion_flutter_pdfviewer">syncfusion_flutter_pdf_viewer</a></p>
+<td><p><a href="https://pub.dev/packages/syncfusion_flutter_pdfviewer">syncfusion_flutter_pdfviewer</a></p>
 </td></tr>
 
 <tr>
@@ -116,7 +116,7 @@ This section provides the user guide link for each widget and its package link.
 
 <tr>
 <td rowspan="3"><p>Sliders</p></td>
-<td><p><a href="http://172.16.0.76/flutter/slider/overview">Slider</a></p></td>
+<td><p><a href="https://help.syncfusion.com/flutter/slider/overview">Slider</a></p></td>
 <td><p><a href="https://pub.dev/packages/syncfusion_flutter_sliders">syncfusion_flutter_sliders</a></p>
 </td>
 </tr>
@@ -135,7 +135,7 @@ This section provides the user guide link for each widget and its package link.
 <tr>
 <td><p>Signature pad</p></td>
 <td><p><a href="https://help.syncfusion.com/flutter/signaturepad/overview">Signature pad</a></p></td>
-<td><p><a href="https://pub.dev/packages/syncfusion_flutter_signaturepad">syncfusion_flutter_signature_pad</a></p></td>
+<td><p><a href="https://pub.dev/packages/syncfusion_flutter_signaturepad">syncfusion_flutter_signaturepad</a></p></td>
 </tr>
 
 </table>

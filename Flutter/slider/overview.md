@@ -27,3 +27,4 @@ Syncfusion Flutter Slider is a highly interactive UI control, allowing users to 
 
 * **Highly customizable** - In addition to the rich set of built-in features, the control is fully customizable through its wide range options.
 
+* **Orientation** - Supports both horizontal and vertical orientations.

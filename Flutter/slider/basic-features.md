@@ -28,6 +28,8 @@ For date values, the slider does not have auto interval support. So, it is manda
 
 You can show numeric values in the slider by setting `double` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) and [`value`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/value.html) properties.
 
+### Horizontal
+
 {% tabs %}
 {% highlight Dart %}
 
@@ -60,11 +62,47 @@ Widget build(BuildContext context) {
 
 ![Numeric slider](images/basic-features/numeric-labels.png)
 
+### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+double _value = 4.0;
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfSlider.vertical(
+                min: 0.0,
+                max: 10.0,
+                value: _value,
+                interval: 2,
+                showLabels: true,
+                onChanged: (dynamic newValue) {
+                  setState(() {
+                    _value = newValue;
+                  });
+                },
+              )
+          )
+      )
+   );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Numeric slider](images/basic-features/vertical_numeric_labels.png)
+
 **Date slider**
 
 You can show date values in the slider by setting `DateTime` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) and [`value`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/value.html) properties.
 
 N> You must import [`intl`](https://pub.dev/packages/intl) package for formatting date slider using the [`DateFormat`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
+
+### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
@@ -100,6 +138,42 @@ Widget build(BuildContext context) {
 
 ![Date slider](images/basic-features/date-labels.png)
 
+### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+DateTime _value = DateTime(2002, 01, 01);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfSlider.vertical(
+                min: DateTime(2000, 01, 01, 00),
+                max: DateTime(2004, 12, 31, 24),
+                value: _value,
+                interval: 1,
+                showLabels: true,
+                dateFormat: DateFormat.y(),
+                dateIntervalType: DateIntervalType.years,
+                onChanged: (dynamic newValue) {
+                  setState(() {
+                    _value = newValue;
+                  });
+                },
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Date slider](images/basic-features/vertical_date_labels.png)
+
 **Handle value change**
 
 The [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/onChanged.html) callback is called when the user selects a value through interaction.
@@ -107,6 +181,8 @@ The [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/lates
 N> The slider passes the new value to the callback but does not change its state until the parent widget rebuilds the slider with new value.
 
 N> If it is null, the slider will be disabled.
+
+### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
@@ -138,9 +214,43 @@ Widget build(BuildContext context) {
 
 ![Enable slider](images/basic-features/enabled-state.png)
 
+### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+double _value = 4.0;
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+           body: Center(
+              child: SfSlider.vertical(
+                min: 0.0,
+                max: 10.0,
+                value: _value,
+                onChanged: (dynamic newValue) {
+                  setState(() {
+                    _value = newValue;
+                  });
+                },
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Enable slider](images/basic-features/vertical_enabled_state.png)
+
 ## Active color
 
 It represents the color applied to the active track, thumb, overlay, and inactive divisors. The active side of the slider is between the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html) value and the thumb.
+
+### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
@@ -177,11 +287,50 @@ Widget build(BuildContext context) {
 
 ![Active color support](images/basic-features/active-color.png)
 
+### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+double _value = 4.0;
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfSlider.vertical(
+                min: 0.0,
+                max: 10.0,
+                value: _value,
+                interval: 2,
+                activeColor: Colors.red,
+                showDivisors: true,
+                showTicks: true,
+                showLabels: true,
+                onChanged: (dynamic newValue) {
+                  setState(() {
+                    _value = newValue;
+                  });
+                },
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Active color support](images/basic-features/vertical_active_color.png)
+
 ## Inactive color
 
 It represents the color applied to the inactive track and active divisors.
 
 The inactive side of the slider is between the thumb and the [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) value.
+
+### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
@@ -218,6 +367,44 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Inactive color support](images/basic-features/inactive-color.png)
+
+### Horizontal
+
+{% tabs %}
+{% highlight Dart %}
+
+double _value = 4.0;
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfSlider.vertical(
+                min: 0.0,
+                max: 10.0,
+                value: _value,
+                interval: 2,
+                activeColor: Colors.red,
+                inactiveColor: Colors.red.withOpacity(0.2),
+                showDivisors: true,
+                showTicks: true,
+                showLabels: true,
+                onChanged: (dynamic newValue) {
+                  setState(() {
+                    _value = newValue;
+                  });
+                },
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Inactive color support](images/basic-features/vertical_inactive_color.png)
 
 ### For customizing individual items
 

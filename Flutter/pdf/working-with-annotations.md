@@ -288,7 +288,7 @@ The following code example explains how to add the Text Web Link annotation in a
 PdfDocument document = PdfDocument();
 
 //Adds a new PDF page
-PdfPage page = document.pages.add()
+PdfPage page = document.pages.add();
 
 //Creates a new text web link annotation
 PdfTextWebLink textWebLink = PdfTextWebLink(
@@ -314,7 +314,7 @@ document.dispose();
 
 Annotations can be flattened by removing the existing annotation and replacing it with the graphics objects that would resemble the annotation and it cannot be edited.
 
-This can be achieved by enabling the Flatten property. Please refer to the sample for flattening all the annotations in the PDF document.
+This can be achieved by enabling the flattenAllAnnotations method . Please refer to the sample for flattening all the annotations in the PDF document.
 
 {% highlight dart %}
 
@@ -332,7 +332,7 @@ for (int i = 0; i < document.pages.count; i++) {
   PdfAnnotationCollection annotationCollection = page.annotations;
 
   //Flattens all the annotations in the page
-  annotationCollection.flatten = true;
+  annotationCollection.flattenAllAnnotations();
 }
 
 //Saves the document
@@ -370,7 +370,7 @@ for (int i = 0; i < document.pages.count; i++) {
     if (annotation is PdfRectangleAnnotation) {
         
       //Flattens the rectangle annotation
-      annotation.flatten = true;
+      annotation.flatten();
     }
   }
 }
@@ -397,7 +397,8 @@ PdfDocument document =
 PdfPage page = document.pages[0];
 
 //Gets the first annotation and modify the properties
-PdfRectangleAnnotation annotation = page.annotations[0];
+PdfRectangleAnnotation annotation =
+    page.annotations[0] as PdfRectangleAnnotation;
 annotation.border = PdfAnnotationBorder(4);
 annotation.bounds = Rect.fromLTWH(300, 300, 100, 100);
 annotation.color = PdfColor(0, 0, 255);

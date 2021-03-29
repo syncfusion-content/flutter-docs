@@ -23,24 +23,21 @@ There are two type of ticks in the Flutter Linear Gauge namely major and minor t
 {% highlight dart %} 
 
 @override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: Container(
-                child: SfLinearGauge(
-                  majorTickStyle:LinearTickStyle(length: 10, thickness: 2.5, color: Colors.black),
-                  minorTickStyle:LinearTickStyle(length: 5, thickness: 1.75, color: Colors.black)
-                ),
-              )
-          )
-      )
-  );
-}
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+              child: SfLinearGauge(
+                  majorTickStyle: LinearTickStyle(length: 10, thickness: 2.5, color: Colors.black),
+                  minorTickStyle: LinearTickStyle(length: 5, thickness: 1.75, color: Colors.black))
+            )
+        )
+    );
+  }
 
 {% endhighlight %}
 
-![customize the linear gauge axis tick style](images/axis-ticks/axis-tick-style.png)
+![Customize the linear gauge axis tick style](images/axis-ticks/axis-tick-style.png)
 
 ## Customize minor tick interval
 
@@ -52,12 +49,8 @@ The major ticks are generated based on the `interval` property which is document
 Widget build(BuildContext context) {
   return MaterialApp(
       home: Scaffold(
-          body: Center(
-              child: Container(
-                child: SfLinearGauge(
-                 minorTicksPerInterval: 4,
-                ),
-              )
+          body: Center(             
+               child: SfLinearGauge(minorTicksPerInterval: 4)         
           )
       )
   );
@@ -65,13 +58,13 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 
-![customize linear gauge ticks per interval](images/axis-ticks/minor-ticks-per-interval.png)
+![Customize linear gauge ticks per interval](images/axis-ticks/minor-ticks-per-interval.png)
 
-## Switch tick visibility
+## Change tick visibility
 
 The `showTicks` property of the axis is used to enable or disable the visibility of both the major and the minor ticks. The default value of this property is true.
 
-![customize linear gauge ticks visibility](images/axis-ticks/linear-gauge-tick-visibility.png)
+![Customize linear gauge ticks visibility](images/axis-ticks/linear-gauge-tick-visibility.png)
 
 ## Customize tick placement
 
@@ -84,12 +77,10 @@ Widget build(BuildContext context) {
   return MaterialApp(
       home: Scaffold(
           body: Center(
-              child: Container(
                 child: SfLinearGauge(
                     tickPosition: LinearElementPosition.outside,
                     labelPosition: LinearLabelPosition.outside
                 ),
-              )
           )
       )
   );
@@ -97,7 +88,7 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 
-![customize linear gauge ticks visibility](images/axis-ticks/tick-placement.png)
+![Customize linear gauge ticks placement](images/axis-ticks/tick-placement.png)
 
 
 ## Customize tick offset
@@ -111,17 +102,13 @@ Widget build(BuildContext context) {
   return MaterialApp(
       home: Scaffold(
           body: Center(
-              child: Container(
-                child: SfLinearGauge(
-                   tickOffset: 20,
-                ),
-              )
+                child: SfLinearGauge(tickOffset: 20),
           )
       )
-  );
+    );
 }
 
 {% endhighlight %}
 
-![customize linear gauge ticks offset from axis](images/axis-ticks/customize-tick-offset.png)
+![Customize linear gauge ticks offset from axis](images/axis-ticks/customize-tick-offset.png)
 

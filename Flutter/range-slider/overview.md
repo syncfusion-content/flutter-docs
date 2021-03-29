@@ -20,3 +20,4 @@ Syncfusion Flutter Range Slider is a highly interactive UI control, allowing use
 * **Ticks and divisors** - Provides the option to show ticks and divisors based on the interval. Also enables minor ticks to indicate the values between each interval. These options present the selected range in a more intuitive way for end users.
 * **Highly customizable** - In addition to the rich set of built-in features, fully customize the control in a much simpler way using the wide range of provided options.
 * **Tooltips** - Render tooltips to show the selected range clearly. It is also possible to customize the format of the text shown in the tooltip.
+* **Orientation** - Supports both horizontal and vertical orientations.

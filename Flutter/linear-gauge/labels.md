@@ -25,25 +25,23 @@ Axis labels can be customized using the `axisLabelStyle` property of `SfLinearGa
 
 {% highlight dart %} 
 
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Center(
-              child: Container(
-                  child: SfLinearGauge(
+ @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+                child: SfLinearGauge(
                     axisLabelStyle: TextStyle(
                         color: Colors.red,
                         fontSize: 15,
                         fontStyle: FontStyle.italic,
                         fontWeight: FontWeight.bold,
                         fontFamily: 'Times')
-                  )
-              )
-          )
-      )
-  );
-}
+                )
+            )
+        )
+    );
+  }
 
 {% endhighlight %}
 
@@ -59,17 +57,15 @@ The `showLabels` property of `SfLinearGauge` allows to show or hide the visibili
 Widget build(BuildContext context) {
   return MaterialApp(
       home: Scaffold(
-          body: Center(
-              child: Container(
-                  child: SfLinearGauge(
-                   showLabels: false)))
-      )
-  );
+          body: Center( 
+                  child: SfLinearGauge(showLabels: false)) 
+        )
+    );
 }
 
 {% endhighlight %}
 
-![switch linear gauge axis label visibility](images/axis-labels/axis_label_visibility.png)
+![Switch linear gauge axis label visibility](images/axis-labels/axis_label_visibility.png)
 
 ## Customize the interval between labels
 
@@ -81,20 +77,18 @@ The `interval` between labels can be customized using the interval property of `
 Widget build(BuildContext context) {
   return MaterialApp(
       home: Scaffold(
-          body: Center(
-              child: Container(
+          body: Center( 
                   child: SfLinearGauge(
-                   interval: 20,
-                  )
-              )
-          )
-      )
-  );
+                   interval: 20 
+                )
+            )
+        )
+    );
 }
 
 {% endhighlight %}
 
-![set maximum labels interval in axis track](images/axis-labels/axis_label_interval.png)
+![Set maximum labels interval in axis track](images/axis-labels/axis_label_interval.png)
 
 ## Change the label position
 
@@ -106,21 +100,19 @@ The linear axis allows to position the labels either `inside` or `outside` the a
 Widget build(BuildContext context) {
   return MaterialApp(
       home: Scaffold(
-          body: Center(
-              child: Container(
+          body: Center( 
                 child: SfLinearGauge(
                     tickPosition: LinearElementPosition.outside,
                     labelPosition: LinearLabelPosition.outside
-                ),
-              )
-          )
-      )
-  );
+                ), 
+            )
+        )
+    );
 }
 
 {% endhighlight %}
 
-![flutter linear gauge label placement](images/axis-labels/label-placement.png)
+![Set linear gauge label placement](images/axis-labels/label-placement.png)
 
 
 ## Change the label offset
@@ -133,20 +125,18 @@ The `labelOffset` property allows to adjust the distance between the tick-end an
 Widget build(BuildContext context) {
   return MaterialApp(
       home: Scaffold(
-          body: Center(
-              child: Container(
+          body: Center( 
                 child: SfLinearGauge(
-                  labelOffset:20,
-                ),
-              )
-          )
-      )
-  );
+                  labelOffset:20
+                ),             
+            )
+        )
+    );
 }
 
 {% endhighlight %}
 
-![set maximum labels position in axis track](images/axis-labels/label_offset.png)
+![Set linear gauge label offset](images/axis-labels/label_offset.png)
 
 ##  Customize the maximum number of visible labels
 
@@ -158,17 +148,63 @@ By default, a maximum of three labels are displayed for each 100 logical pixels 
 Widget build(BuildContext context) {
   return MaterialApp(
       home: Scaffold(
-          body: Center(
-              child: Container(
+          body: Center( 
                   child: SfLinearGauge(
                     maximumLabels: 5
-                  )
-              )
-          )
-      )
-  );
+                ) 
+            )
+        )
+    );
 }
 
 {% endhighlight %}
 
-![set maximum labels interval in axis track](images/axis-labels/axis_label_visibility.png)
+![Set maximum number of labels in axis track](images/axis-labels/axis_label_visibility.png)
+
+## Customize Label Text
+
+You can format or change the whole numeric label text using the labelFormatterCallback.
+
+{% highlight dart %}
+
+SfLinearGauge(
+    labelFormatterCallback: (label) {
+      if (label == '0') {
+        return 'Start';
+      }
+
+      if (label == '50') {
+        return 'Mid';
+      }
+
+      if (label == '100') {
+        return 'End';
+      }
+
+      return label;
+    }
+)
+
+{% endhighlight %}
+
+![Customize Label Text in axis track](images/axis-labels/custom_label_text.png)
+
+## Number Format
+
+The numberFormat property is used to format the numeric labels. The default value of numberFormat property is null.
+
+{% highlight dart %} 
+
+    NOTE: You must import intl package for formatting numeric slider using the NumberFormat class.
+
+{% endhighlight %}
+
+{% highlight dart %}
+
+SfLinearGauge(
+  numberFormat: NumberFormat("\$")
+),
+
+{% endhighlight %}
+
+![Customize Label Format in Axis Label](images/axis-labels/axis_label_number_format.png)

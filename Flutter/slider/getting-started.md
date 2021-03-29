@@ -55,6 +55,8 @@ After importing the package, initialize the slider widget as a child of any widg
 
 N> The slider passes the new value to the [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/onChanged.html) callback but does not change its state until the parent widget rebuilds the slider with new value.
 
+### Horizontal
+
 {% tabs %}
 {% highlight Dart %}
 
@@ -81,11 +83,41 @@ Widget build(BuildContext context) {
 
 ![Default slider](images/getting-started/default_slider.png)
 
+### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+double _value = 0.5;
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: Center(
+      child: SfSlider.vertical(
+        value: _value,
+        onChanged: (dynamic newValue){
+          setState(() {
+            _value = newValue;
+          });
+        },
+      ),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Default slider](images/getting-started/vertical_default_slider.png)
+
 ## Handle value change
 
 The [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/onChanged.html) callback is used to get the current value of the slider when the user selects a value through interaction.
 
 N> The slider passes the new value to the callback but does not change its state until the parent widget rebuilds the slider with new value.
+
+### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
@@ -117,9 +149,43 @@ Widget build(BuildContext context) {
 
 ![Handle slider](images/getting-started/handle-slider-state.png)
 
+### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+double _value = 5.0;
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+              child: SfSlider.vertical(
+                min: 0.0,
+                max: 10.0,
+                value: _value,
+                onChanged: (dynamic newValue) {
+                  setState(() {
+                    _value = newValue;
+                  });
+                },
+              )
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Handle slider](images/getting-started/vertical_handle_slider_state.png)
+
 ## Set numeric value
 
 You can show numeric values in the slider by setting `double` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) and [`value`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/value.html) properties.
+
+### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
@@ -155,11 +221,49 @@ Widget build(BuildContext context) {
 
 ![Numeric slider](images/getting-started/numeric_slider.png)
 
+### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 0;
+final double _max = 100;
+double _value = 40.0;
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+            child: SfSlider.vertical(
+              min: _min,
+              max: _max,
+              value: _value,
+              interval: 20,
+              showLabels: true,
+              onChanged: (dynamic newValue) {
+                setState(() {
+                  _value = newValue;
+                });
+              },
+            ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Numeric slider](images/getting-started/vertical_numeric_slider.png)
+
 ## Set date value
 
 You can show date values in the slider by setting `DateTime` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) and [`value`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/value.html) properties.
 
 N> You must import [`intl`](https://pub.dev/packages/intl) package for formatting date slider using the [`DateFormat`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
+
+### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
@@ -195,9 +299,47 @@ Widget build(BuildContext context) {
 
 ![DateTime slider](images/getting-started/date_slider.png)
 
+### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+DateTime _min = DateTime(2008, 01, 01);
+DateTime _max = DateTime(2018, 01, 01);
+DateTime _value = DateTime(2012, 01, 01);
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: Center(
+      child: SfSlider.vertical(
+        min: _min,
+        max: _max,
+        value: _value,
+        interval: 2,
+        showLabels: true,
+        dateIntervalType: DateIntervalType.years,
+        dateFormat: DateFormat.y(),
+        onChanged: (dynamic newValue) {
+          setState(() {
+            _value = newValue;
+          });
+        },
+      ),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![DateTime slider](images/getting-started/vertical_date_slider.png)
+
 ## Enable ticks
 
 You can enable ticks in the slider using the [`showTicks`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/showTicks.html) property.
+
+### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
@@ -232,6 +374,41 @@ Widget build(BuildContext context) {
 
 ![Numeric slider](images/getting-started/slider_with_tick.png)
 
+### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 0;
+final double _max = 100;
+double _value = 40.0;
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: Center(
+      child: SfSlider.vertical(
+        min: _min,
+        max: _max,
+        value: _value,
+        interval: 20,
+        showTicks: true,
+        showLabels: true,
+        onChanged: (dynamic newValue) {
+          setState(() {
+            _value = newValue;
+          });
+        },
+      ),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Numeric slider](images/getting-started/vertical_slider_with_tick.png)
+
 ## Add prefix/suffix to labels
 
 You can add prefix or suffix to the labels using the [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/numberFormat.html) or [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/dateFormat.html) properties.
@@ -239,6 +416,8 @@ You can add prefix or suffix to the labels using the [`numberFormat`](https://pu
 N> The format type (numeric or date) of the slider is determined based on the values specified in [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) and [`value`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/value.html) properties.
 
 I> You must import [`intl`](https://pub.dev/packages/intl) package for formatting date slider using the [`DateFormat`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class and for formatting numeric slider using the [`NumberFormat`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html) class.
+
+### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
@@ -273,3 +452,39 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Format label](images/getting-started/slider_with_formatted_label.png)
+
+### Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+final double _min = 0;
+final double _max = 100;
+double _value = 40.0;
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: Center(
+      child: SfSlider.vertical(
+        min: _min,
+        max: _max,
+        value: _value,
+        interval: 20,
+        showTicks: true,
+        showLabels: true,
+        numberFormat: NumberFormat("\$"),
+        onChanged: (dynamic newValue) {
+          setState(() {
+            _value = newValue;
+          });
+        },
+      ),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Format label](images/getting-started/vertical_slider_with_formatted_label.png)
