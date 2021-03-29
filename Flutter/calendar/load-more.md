@@ -7,7 +7,7 @@ control: SfCalendar
 documentation: ug
 ---
 
-# Load more
+# Load more in flutter calendar
 
 SfCalendar provides support to display an interactive view when the calendar view changed, or schedule view reaches its start/end offset. You can use [loadMoreViewBuilder]() builder to display the view while load appointments in calendar.
 
