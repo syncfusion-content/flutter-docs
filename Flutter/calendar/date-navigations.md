@@ -57,7 +57,7 @@ Widget build(BuildContext context) {
 ![minDate and maxDate](images/date-navigation/min_maxDate.jpg) 
 
 >**NOTE**
-* You can navigate as minimum/maximum as to the given date, and dates before that date/dates after that date will be disabled for interaction and highlights the disabled slots in timeslot views.
+* The timeslots falls beyond the minimum/maximum date time will be disabled, and user interaction were restricted in timeslot views.
 
 
 ## Programmatic date navigation
@@ -269,9 +269,9 @@ Widget build(BuildContext context) {
 
 ![Allowed views](images/date-navigation/allowed_views.png)
 
-## Enable or disable swipe interaction
+## View navigation mode
 
-You can customize the swipe interaction of SfCalendar by using the [viewNavigationMode](). You can allow or restrict to switching to previous or next views through the swipe interaction of SfCalendar. By default , the [viewNavigationMode.snap]().
+You can customize the swipe interaction of SfCalendar by using the [viewNavigationMode](). You can allow or restrict to switching to previous or next views through the swipe interaction of SfCalendar. By default , the view navigation mode set as [viewNavigationMode.snap]().
 
 {% tabs %}
 {% highlight Dart %}
