@@ -7,7 +7,7 @@ control: SfLinearGauge
 documentation: ug
 ---
 
-# Flutter Linear Gauge Animation
+# Flutter Linear Gauge animation
 
 All Linear Gauge elements such as `axis` along with `ticks` and `labels`, `range`, `bar pointer`, `shape marker pointer` and `widget marker pointer` can be animated separately. 
 

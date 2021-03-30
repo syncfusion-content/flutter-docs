@@ -7,7 +7,7 @@ control: SfLinearGauge
 documentation: ug
 ---
 
-# Linear Gauge Bar Pointer
+# Linear Gauge bar pointer
 
 A bar pointer is an accenting line or shaded background that can be placed on a linear gauge to mark any current value in the axis track. The bar pointers always starts from the minimum value of the axis and ends in the specified value. So the 'value' property is a required parameter for creating a bar pointer.
 
