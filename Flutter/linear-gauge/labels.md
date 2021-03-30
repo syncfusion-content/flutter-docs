@@ -7,7 +7,7 @@ control: SfLinearGauge
 documentation: ug
 ---
 
-# Default Linear Gauge Labels
+# Default Linear Gauge labels
 
 The default style of axis labels are as below.
 

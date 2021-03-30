@@ -7,7 +7,7 @@ control: SfLinearGauge
 documentation: ug
 ---
 
-# Default Linear Gauge Ticks
+# Default Linear Gauge ticks
 
 The default style of axis ticks are as below.
 

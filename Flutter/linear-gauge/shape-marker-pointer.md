@@ -7,7 +7,7 @@ control: SfLinearGauge
 documentation: ug
 ---
 
-# Linear Gauge Shape Marker Pointers
+# Linear Gauge shape marker pointers
 
 The `LinearShapePointer` in `SfLinearGauge` have the below pre-defined shapes to mark a specific value. The default shape pointer is inverted `invertedTriangle`. 
 
