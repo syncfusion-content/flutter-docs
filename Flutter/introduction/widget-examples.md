@@ -25,7 +25,7 @@ The section contains the GitHub link for each widget’s code examples. This is 
 </tr>
 <tr>
 
-<td rowspan="11">
+<td rowspan="12">
 
 <p>Data Visualization</p>
 </td>
@@ -83,6 +83,11 @@ The section contains the GitHub link for each widget’s code examples. This is 
 <tr>
 <td><p><a href="https://help.syncfusion.com/flutter/maps/overview">Maps</a></p></td>
 <td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/maps">samples/maps</a></p></td>
+</tr>
+
+<tr>
+<td><p><a href="https://help.syncfusion.com/flutter/treemap/overview">Treemap</a></p></td>
+<td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/treemap">samples/treemap</a></p></td>
 </tr>
 
 <tr>
