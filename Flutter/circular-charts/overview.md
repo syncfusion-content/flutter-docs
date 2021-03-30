@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Overview of Syncfusion Flutter Charts
-description: Learn the key features available in Syncfusion Flutter Charts and overview about SYncfusion Flutter Charts.
+title: Overview of Syncfusion Flutter Circular Charts
+description: Learn the key features available in Syncfusion Flutter Charts and overview about Circular Charts in Flutter.
 platform: flutter
 control: Chart
 documentation: ug

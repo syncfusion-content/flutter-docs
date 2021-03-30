@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Document link annotation in Syncfusion Flutter PDF Viewer | Syncfusion
+title: Document link annotation in Flutter PDF Viewer | Syncfusion
 description: This section explains about how to navigate to the desired topic in a PDF document by tapping the document link annotation in the table of contents.
 platform: Flutter
 control: SfPdfViewer
