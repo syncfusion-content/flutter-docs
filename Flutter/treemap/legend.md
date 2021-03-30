@@ -196,6 +196,74 @@ class SocialMediaUsers {
 
 ![legend icon color](images/legend/icon-color.png)
 
+## First segment label customization
+
+You can customize the first segment label of the legend using the `TreemapColorMapper.name` property with curly braces. The first curly brace value will be applied as segment start label and the next curly brace value will be applied as segment end label. By default, the `TreemapColorMapper.from` value is placed at the starting position of first segment and the `TreemapColorMapper.to` value is placed at the ending position of the first segment.
+
+{% tabs %}
+{% highlight Dart %}
+
+late List<SocialMediaUsers> _source;
+late List<TreemapColorMapper> _colorMappers;
+
+@override
+void initState() {
+   _source = <SocialMediaUsers>[
+      SocialMediaUsers('India', 'Facebook', 25.4),
+      SocialMediaUsers('USA', 'Instagram', 19.11),
+      SocialMediaUsers('Japan', 'Facebook', 13.3),
+      SocialMediaUsers('Germany', 'Instagram', 10.65),
+      SocialMediaUsers('France', 'Twitter', 7.54),
+      SocialMediaUsers('UK', 'Instagram', 4.93),
+   ];
+
+   _colorMappers = <TreemapColorMapper>[
+      TreemapColorMapper.range(
+          from: 0, to: 10, color: Colors.blue[200]!, name: '{>0},{10.0}'),
+      TreemapColorMapper.range(from: 10, to: 20, color: Colors.deepOrange),
+      TreemapColorMapper.range(from: 20, to: 30, color: Colors.blue[800]!),
+   ];
+   super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+     body: SfTreemap(
+        dataCount: _source.length,
+        weightValueMapper: (int index) {
+          return _source[index].usersInMillions;
+        },
+        levels: [
+          TreemapLevel(
+            padding: const EdgeInsets.all(1.5),
+            groupMapper: (int index) {
+              return _source[index].country;
+            },
+            colorValueMapper: (TreemapTile tile) {
+              return tile.weight;
+            },
+          ),
+        ],
+        colorMappers: _colorMappers,
+        legend: TreemapLegend.bar(),
+     ),
+  );
+}
+
+class SocialMediaUsers {
+  const SocialMediaUsers(this.country, this.socialMedia, this.usersInMillions);
+
+  final String country;
+  final String socialMedia;
+  final double usersInMillions;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![First label customization](images/legend/first-label-customization.png)
+
 ## Position
 
 You can position the legend items in different directions using the `TreemapLegend.position` property. The default value of the `position` property is `TreemapLegendPosition.top`. The possible values are `left`, `right`, `top`, and `bottom`.
@@ -314,8 +382,6 @@ class SocialMediaUsers {
 
 {% endhighlight %}
 {% endtabs %}
-
-![legend custom position](images/legend/legend-custom-position.png)
 
 ## Overflow mode
 

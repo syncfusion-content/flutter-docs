@@ -180,6 +180,9 @@ class SocialMediaUsers {
   final double usersInMillions;
 }
 
+{% endhighlight %}
+{% endtabs %}
+
 ![Equal color mapping](images/colors/equal-color-mapping.png)
 
 N>
