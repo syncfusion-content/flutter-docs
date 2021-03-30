@@ -802,7 +802,37 @@ N> This callback will not be called, when the builder is specified for data labe
 
 {% endhighlight %}
 
+## onPlotAreaSwipe
 
+Triggers while swiping on the plot area. Whenever the swiping happens on the plot area (the series rendering area), [`onPlotAreaSwipe`](~) callback will be called. It provides options to get the direction of swiping. If the chart is swiped from left to right direction, the direction is [`ChartSwipeDirection.start`](~) and if the swipe happens from right to left direction, the direction is [`ChartSwipeDirection.end`](~). Using this callback, the user will be able to achieve pagination functionality (i.e., on swiping over chart area, next set of data points can be loaded to the chart).
+
+{% highlight dart %}
+
+    Widget build(BuildContext context) {
+      return Container(
+         child: SfCartesianChart(
+            onPlotAreaSwipe:
+              (ChartSwipeDirection direction) =>
+                  performSwipe(direction),
+            series: <ChartSeries<SalesData, num>>[
+                 AreaSeries<SalesData, num>(
+                     dataSource: chartData,
+                 ),
+            ],
+         )
+      );
+    }
+
+    Widget performSwipe(ChartSwipeDirection direction) {
+        if (direction == ChartSwipeDirection.end) {
+            chartData.add(ChartSampleData(
+                x: chartData[chartData.length - 1].x + 1,
+                y: 10));
+            seriesController.updateDataSource(addedDataIndex: chartData.length - 1);
+      }
+    }
+
+{% endhighlight %}
 
 ## See Also
 

@@ -1414,7 +1414,7 @@ class CustomSelectionManager extends RowSelectionManager{
  
 SfDataGrid allows to customize the appearance of the selected rows and current cell through [SfDataGridTheme.SfDataGridThemeData](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData-class.html) property.
 
-All the style classes such as [DataGridCellStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/DataGridCellStyle-class.html), [DataGridHeaderCellStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/DataGridHeaderCellStyle-class.html), [DataGridCurrentCellStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/DataGridCurrentCellStyle-class.html) related to `SfDataGrid` are available in the [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) package. To access those classes, import the below file in your application,
+All the style such as [selectionColor], [DataGridCurrentCellStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/DataGridCurrentCellStyle-class.html) related to `SfDataGrid` are available in the [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) package. To access those classes, import the below file in your application,
 
 {% tabs %}
 {% highlight Dart %} 
@@ -1425,7 +1425,7 @@ import 'package:syncfusion_flutter_core/theme.dart';
 {% endtabs %}
 
 ### Selection
-The selection background and foreground color can be changed by [selectionStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/selectionStyle.html) property of `SfDataGridThemeData` in [SfDataGridTheme](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridTheme-class.html).
+The selection background can be changed by [selectionColor] property of `SfDataGridThemeData` in [SfDataGridTheme](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridTheme-class.html).
 
 {% tabs %}
 {% highlight Dart %}
@@ -1433,19 +1433,21 @@ The selection background and foreground color can be changed by [selectionStyle]
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 import 'package:syncfusion_flutter_core/theme.dart';
 
+final DataGridController _dataGridController = DataGridController();
+
+EmployeeDataSource _employeeDataSource;
+
+@override
+void initState() {
+    super.initState();
+    employeeDataSource = EmployeeDataSource(_dataGridController);
+}
+
 @override
 Widget build(BuildContext context) {
   return Scaffold(
       body: SfDataGridTheme(
-          data: SfDataGridThemeData(
-              selectionStyle: DataGridCellStyle(
-                  backgroundColor: Colors.red,
-                  textStyle: TextStyle(
-                    fontFamily: 'Raleway',
-                    fontWeight: FontWeight.w300,
-                    color: Colors.white,
-                  )
-              )),
+          data: SfDataGridThemeData(selectionColor: Colors.red),
           child: SfDataGrid(
             source: _employeeDataSource,
             columns: [
@@ -1489,6 +1491,58 @@ Widget build(BuildContext context) {
             selectionMode: SelectionMode.multiple,
           ))
   );
+}
+
+class EmployeeDataSource extends DataGridSource {
+    EmployeeDataSource(this.dataGridController) {
+        dataGridRows = employees
+            .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
+                DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
+                DataGridCell<String>(columnName: 'name', value: dataGridRow.name),
+                DataGridCell<String>(
+                columnName: 'designation', value: dataGridRow.designation),
+                DataGridCell<int>(
+                columnName: 'salary', value: dataGridRow.salary),
+            ]))
+            .toList();
+    }
+    
+    final DataGridController dataGridController;
+    
+    List<DataGridRow> dataGridRows = [];
+    
+    @override
+    List<DataGridRow> get rows => dataGridRows;
+    
+    @override
+    DataGridRowAdapter? buildRow(DataGridRow row) {
+      TextStyle? getSelectionTextStyle() {
+        return dataGridController.selectedRows.contains(row)
+            ? TextStyle(
+                fontFamily: 'Raleway',
+                fontWeight: FontWeight.w300,
+                color: Colors.white,
+              )
+            : null;
+      }
+
+      return DataGridRowAdapter(
+          cells: row.getCells().map<Widget>((dataGridCell) {
+        return Container(
+          color: Colors.transparent,
+          alignment: (dataGridCell.columnName == 'id' ||
+                  dataGridCell.columnName == 'salary')
+              ? Alignment.centerRight
+              : Alignment.centerLeft,
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
+          child: Text(
+            dataGridCell.value.toString(),
+            overflow: TextOverflow.ellipsis,
+            style: getSelectionTextStyle(),
+          ),
+        );
+      }).toList());
+    }
 }
 
 {% endhighlight %}

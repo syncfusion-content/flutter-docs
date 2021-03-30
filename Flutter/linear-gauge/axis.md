@@ -7,11 +7,11 @@ control: SfLinearGauge
 documentation: ug
 ---
 
-# Flutter Linear Gauge Axis
+# Flutter Linear Gauge axis
 
 The Linear Gauge axis is a scale where a set of values can be plotted. An axis can be customized by changing the thickness, color and edge styles. Axis elements such as labels and ticks can also be easily customized. You can also inverse the axis.
 
-## Default Axis
+## Default axis
 
 By default axis will have the minimum scale value as 0 and the maximum scale value as 100. Without any changes the default axis of the Linear Gauge will be displayed as below. 
 
@@ -59,7 +59,7 @@ The linear axis track can be customized using the 'axisTrackStyle' property. The
 
 * `thickness` – Customizes the thickness of axis track.
 * `color` – Customizes the color of the axis track with a solid color.
-* `gradient` - Customizes the color of the axis track with a gradient color.
+* `gradient` - Customizes the color of the axis track with a gradient.
 * `borderWidth` - Customizes the border width of axis track.
 * `borderColor` - Customizes the border color of axis track.
 
@@ -84,7 +84,7 @@ The below code snippet demonstrates customizing the thickness and color.
 
 ![Change axis track thickness in linear gauge](images/axis/axis_thickness.png)
 
-## Apply gradient colors
+## Apply gradient
 
 The `color` property of `axisTrackStyle` allows to set a solid color, while the `gradient` property of `axisTrackStyle` allows to apply linear-gradient to axis track.
 
@@ -263,7 +263,7 @@ You can hide the axis track by setting the `showAxisTrack` property to false. Th
 
 ![Hide linear gauge axis track](images/axis/hide_axis_track.png)
 
-## Custom Axis
+## Custom axis
 
 Linear gauge allows you to display a set of values along with a custom scale based on your business logic by using the onGenerateLabels and valueToFactorCallback callbacks.
 

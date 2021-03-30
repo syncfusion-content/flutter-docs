@@ -180,9 +180,9 @@ Widget build(BuildContext context) {
             columnSizer: _columnSizer,
             onQueryRowHeight: (RowHeightDetails details) {
               if (details.rowIndex == 0) {
-                return 100;
+                return 100.0;
               }
-              return 50; 
+              return 50.0; 
             },
             columns: <GridColumn>[
               GridTextColumn(

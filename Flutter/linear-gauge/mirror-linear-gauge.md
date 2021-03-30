@@ -7,7 +7,7 @@ control: SfLinearGauge
 documentation: ug
 ---
 
-# Flutter Linear Gauge Mirroring
+# Flutter Linear Gauge mirroring
 
 The `isMirrored` property in `SfLinearGauge` mirrors all the gauge elements in the `SfLinearGauge`. The below code snippet demonstrates setting the `isMirrored` property.
 

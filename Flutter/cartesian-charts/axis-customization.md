@@ -1083,6 +1083,63 @@ N> If both [`maximumLabelWidth`](https://pub.dev/documentation/syncfusion_flutte
 
 ![Axis label trim](images/axis-customization/axis-label-trim.gif)
 
+## Auto scrolling
+
+Auto scrolling feature available in SfCartesianChart is used to ensure that specified range of data is always visible in the chart and you can view the remaining data points by scrolling. The [`autoScrollingDelta `](~) property of the chart axis can be used to set the number of data points to be always visible in the chart. It always shows the recently added data points and scrolling will be reset to the start or end of the range, based on [`autoScrollingMode`](~) property's value, whenever a new point is added dynamically.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      return Container(
+          child: SfCartesianChart(
+             primaryYAxis: DateTimeAxis(
+                 autoScrollingDelta: 7
+             ),
+          )
+      );
+    }
+
+{% endhighlight %}
+
+### AutoScrollingMode
+
+[`AutoScrollingMode`](~) property can be used to determine whether the axis should be scrolled from start position or end position. The default value of [`AutoScrollingMode`](~) is `end`.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      return Container(
+          child: SfCartesianChart(
+             primaryYAxis: NumericAxis(
+                 autoScrollingMode: AutoScrollingMode.start
+             ),
+          )
+      );
+    }
+
+{% endhighlight %}
+
+### AutoScrollingDeltaType
+
+In [`DateTimeAxis`](~), you can apply auto scrolling delta value in Years, Months, Days, Hours, Minutes, Seconds and auto by setting [`AutoScrollingDeltaType`](~) property. Default value of this property is `auto` and the delta will be calculated automatically based on range.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      return Container(
+          child: SfCartesianChart(
+             primaryYAxis: DateTimeAxis(
+                 autoScrollingDeltaType: DateTimeIntervalType.months
+             ),
+          )
+      );
+    }
+
+{% endhighlight %}
+
 ## See Also
 
 * [Rendering a particular part of a data using visible minimum and visible maximum in the Cartesian chart](https://www.syncfusion.com/kb/11308/how-to-render-particular-part-of-a-data-in-cartesian-charts-sfcartesianchart).

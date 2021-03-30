@@ -187,9 +187,9 @@ The color of the bar pointer can be changed by the `color` property. The below c
 
 ![Apply color to bar pointer](images/bar-pointer/bar_color.png)
 
-## Apply radial gradient colors
+## Apply radial gradient
 
-The gradient colors can be applied by using the `shaderCallback` property of bar pointer. The below code snippet demonstrates applying a radial gradient colors to the bar pointer.
+The gradient can be applied by using the `shaderCallback` property of bar pointer. The below code snippet demonstrates applying a radial gradient to the bar pointer.
 
 {% highlight dart %} 
 
@@ -223,9 +223,9 @@ The gradient colors can be applied by using the `shaderCallback` property of bar
 
 ![Apply radial gradient to bar pointer](images/bar-pointer/radial_gradient_bar.png)
 
-## Apply linear gradient colors
+## Apply linear gradient
 
-The gradient colors can be applied by using the `shaderCallback` property of bar pointer. The below code snippet demonstrates applying a linear gradient colors to the bar pointer.
+The gradient can be applied by using the `shaderCallback` property of bar pointer. The below code snippet demonstrates applying a linear gradient to the bar pointer.
 
 {% highlight dart %} 
 
@@ -258,9 +258,9 @@ The gradient colors can be applied by using the `shaderCallback` property of bar
 
 ![Apply linear gradient to bar pointer](images/bar-pointer/linear_gradient_bar.png)
 
-## Apply sweep gradient colors
+## Apply sweep gradient
 
-The gradient colors can be applied by using the `shaderCallback` property of bar pointer. The below code snippet demonstrates applying a sweep gradient colors to the bar pointer.
+The gradient can be applied by using the `shaderCallback` property of bar pointer. The below code snippet demonstrates applying a sweep gradient to the bar pointer.
 
 {% highlight dart %} 
 
