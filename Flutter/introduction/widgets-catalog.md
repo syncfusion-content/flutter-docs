@@ -86,6 +86,11 @@ This section provides the user guide link for each widget and its package link.
 </tr>
 
 <tr>
+<td><p><a href="https://help.syncfusion.com/flutter/treemap/overview">Treemap</a></p></td>
+<td><p><a href="https://pub.dev/packages/syncfusion_flutter_treemap">syncfusion_flutter_treemap</a></p></td>
+</tr>
+
+<tr>
 <td rowspan="2"><p>Calendar</p></td>
 <td><p><a href="https://help.syncfusion.com/flutter/calendar/overview">Event Calendar</a></p></td>
 <td><p><a href="https://pub.dev/packages/syncfusion_flutter_calendar">syncfusion_flutter_calendar</a></p></td>
