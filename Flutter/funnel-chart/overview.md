@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Overview of Syncfusion Flutter Funnel Chart Control
-description: Learn the key features available in Syncfusion Flutter Charts and overview about Funnel Charts Control.
+title: Overview of Syncfusion Flutter Funnel Chart
+description: Learn the key features available in Syncfusion Flutter Charts and overview about Funnel Charts in Flutter.
 platform: flutter
 control: Chart
 documentation: ug
