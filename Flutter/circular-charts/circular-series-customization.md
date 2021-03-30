@@ -289,7 +289,7 @@ The data points of pie, doughnut and radial bar charts can also be filled with i
 
 The [`pointShaderMapper`](~) property is used to map the shader field from the chart data source. You can map different [`gradient`](https://api.flutter.dev/flutter/dart-ui/Gradient-class.html) types and [`image shader`](https://api.flutter.dev/flutter/dart-ui/ImageShader-class.html) for individual data points using this mapper callback.
 
-{% endhighlight %}
+{% highlight dart %}
 
     /// Package import
     import 'dart:async';
@@ -445,7 +445,7 @@ The [`pointRenderMode`](~) property is used to define the painting mode for the 
 
 N> This property is applicable only if the [`onCreateShader`](~) or [`pointShaderMapper`](~) is null.
 
-{% endhighlight %}
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
