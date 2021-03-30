@@ -9,91 +9,7 @@ documentation: ug
 
 # Styling in Flutter DataGrid
 
-The data grid applies style for all its elements by writing a Style class overriding from `DataGridCellStyle`. The styling can be applied to DataGrid by using the [SfDataGridThemeData](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData-class.html) in [SfDataGridTheme](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridTheme-class.html). The DataGrid should be wrapped inside the `SfDataGridTheme`.
-
-All the style classes such as [DataGridCellStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/DataGridCellStyle-class.html), [DataGridHeaderCellStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/DataGridHeaderCellStyle-class.html) related to `SfDataGrid` are available in the [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) package. To access those classes, import the below file in your application,
-
-{% tabs %}
-{% highlight Dart %} 
-
-import 'package:syncfusion_flutter_core/theme.dart';
-
-{% endhighlight %}
-{% endtabs %}
-
-## Styling row
-
-The appearance of cell can be customized by using the [SfDataGridThemeData.cellStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/cellStyle.html). It is applicable for all the record cells except column header.
-
-{% tabs %}
-{% highlight Dart %} 
-
-import 'package:syncfusion_flutter_datagrid/datagrid.dart';
-import 'package:syncfusion_flutter_core/theme.dart';
-
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfDataGridTheme(
-      data: SfDataGridThemeData(
-          cellStyle: DataGridCellStyle(
-              textStyle: TextStyle(color: Colors.white),
-              backgroundColor: Colors.indigo[300])),
-      child: SfDataGrid(
-        source: _employeeDataSource,
-        columns: <GridColumn>[
-          GridNumericColumn(mappingName: 'id', headerText: 'Order ID'),
-          GridTextColumn(mappingName: 'name', headerText: 'Name'),
-          GridTextColumn(mappingName: 'designation',
-            headerText: 'Designation'),
-          GridNumericColumn(mappingName: 'salary',headerText: 'Salary',
-        ],
-      ),
-    ),
-  );
-}
-    
-{% endhighlight %}
-{% endtabs %}
-
-![flutter datagrid shows rows with styling](images/styles/flutter-datagrid-rows-styling.png)
-
-## Styling column header
-
-The appearance of cell can be customized by using the `SfDataGridThemeData.cellStyle`. It is applicable for all the record cells except column header.
-
-{% tabs %}
-{% highlight Dart %} 
-
-import 'package:syncfusion_flutter_datagrid/datagrid.dart';
-import 'package:syncfusion_flutter_core/theme.dart';
-
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfDataGridTheme(
-      data: SfDataGridThemeData(
-          headerStyle: DataGridHeaderCellStyle(
-              textStyle:
-                  TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
-              backgroundColor: Colors.teal)),
-      child: SfDataGrid(
-        source: _employeeDataSource,
-        columns: <GridColumn>[
-          GridNumericColumn(mappingName: 'id', headerText: 'Order ID'),
-          GridTextColumn(mappingName: 'name', headerText: 'Name'),
-          GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
-          GridTextColumn(mappingName: 'designation',headerText: 'Designation')
-        ],
-      ),
-    ),
-  );
-}
-    
-{% endhighlight %}
-{% endtabs %}
-
-![flutter datagrid shows column header with styling](images/styles/flutter-datagrid-column-header-styling.png)
+The DataGrid supports to change the appearance of the grid by using the [SfDataGridThemeData](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData-class.html) in [SfDataGridTheme](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridTheme-class.html). The DataGrid should be wrapped inside the `SfDataGridTheme`.
 
 ## Styling grid lines
 
@@ -111,11 +27,42 @@ Widget build(BuildContext context) {
         child: SfDataGrid(
         source: _employeeDataSource,
         columns: <GridColumn>[
-          GridNumericColumn(mappingName: 'id', headerText: 'Order ID'),
-          GridTextColumn(mappingName: 'name', headerText: 'Name'),
-          GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
-          GridTextColumn(mappingName: 'designation',
-            headerText: 'Designation')
+          GridTextColumn(
+            columnName: 'id',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'ID',
+                overflow: TextOverflow.ellipsis,
+              ))),
+          GridTextColumn(
+            columnName: 'name',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Name',
+                overflow: TextOverflow.ellipsis,
+              ))),
+          GridTextColumn(
+            columnName: 'designation',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Designation',
+                overflow: TextOverflow.ellipsis,
+              ))),
+          GridTextColumn(
+            columnName: 'salary',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'Salary',
+                overflow: TextOverflow.ellipsis,
+              ))),
         ],
       ),
     ),
@@ -152,10 +99,42 @@ Widget build(BuildContext context) {
     body: SfDataGrid(
         source: _employeeDataSource,
         columns: <GridColumn>[
-          GridNumericColumn(mappingName: 'id',headerText: 'Order ID'),
-          GridTextColumn(mappingName: 'name', headerText: 'Name'),
-          GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
-          GridTextColumn(mappingName: 'designation',headerText: 'Designation'),
+          GridTextColumn(
+            columnName: 'id',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'ID',
+                overflow: TextOverflow.ellipsis,
+              ))),
+          GridTextColumn(
+            columnName: 'name',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Name',
+                overflow: TextOverflow.ellipsis,
+              ))),
+          GridTextColumn(
+            columnName: 'designation',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Designation',
+                overflow: TextOverflow.ellipsis,
+              ))),
+          GridTextColumn(
+            columnName: 'salary',
+            label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'Salary',
+                overflow: TextOverflow.ellipsis,
+              ))),
         ],
         gridLinesVisibility: GridLinesVisibility.both,
         headerGridLinesVisibility: GridLinesVisibility.both),

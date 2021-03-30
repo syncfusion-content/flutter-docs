@@ -9,7 +9,9 @@ documentation: ug
 
 # Accessibility with Flutter Range Slider (SfRangeSlider)
 
-The [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html) can easily be accessed by screen readers. The default reading format is `The start value is ${values.start} and the end value is ${values.end}`. You can change the reading format using the [`semanticFormatterCallback`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/semanticFormatterCallback.html) property.
+The [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html) can easily be accessed by screen readers. The default reading format for start thumb is `The start value is ${values.start}` and end thumb is `the end value is ${values.end}`. You can change the reading format using the [`semanticFormatterCallback`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/semanticFormatterCallback.html) property.
+
+## Horizontal
 
 {% tabs %}
 {% highlight Dart %}
@@ -28,8 +30,44 @@ Widget build(BuildContext context) {
               interval: 20,
               showTicks: true,
               showLabels: true,
-              semanticFormatterCallback: (SfRangeValues values){
-                return 'SfRangeValues ${values.start} ${values.end}';
+              semanticFormatterCallback: (dynamic value, SfThumb thumb){
+                return 'The ${thumb} value is ${value}';
+              },
+              onChanged: (SfRangeValues newValues) {
+                setState(() {
+                  _values = newValues;
+                });
+              },
+            ),
+          )
+      ),
+   );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Vertical
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(40.0, 60.0);
+
+@override
+Widget build(BuildContext context) {
+   return MaterialApp(
+      home: Scaffold(
+          body: Center(
+            child: SfRangeSlider.vertical(
+              min: 0.0,
+              max: 100.0,
+              values: _values,
+              interval: 20,
+              showTicks: true,
+              showLabels: true,
+              semanticFormatterCallback: (dynamic value, SfThumb thumb){
+                return 'The ${thumb} value is ${value}';
               },
               onChanged: (SfRangeValues newValues) {
                 setState(() {

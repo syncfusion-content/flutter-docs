@@ -13,11 +13,9 @@ documentation: ug
 
  The following APIs in the `DataGridSource` are mandatory to process the data,
 
- * [dataSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/dataSource.html) - The number of rows in a datagrid and row selection depends
- on the [dataSource]. So, set the collection required for datagrid in
-`dataSource`.
-* [getValue](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/getValue.html) - The data needed for the cells is obtained from
-`getValue`.
+ * [rows] - The number of rows in a datagrid and row selection depends on the [rows]. So, set the `DataGridRow` collection required for datagrid in
+`rows`.
+* [buildRow]- The widget needed for the cells is obtained from `DataGridRowAdapter`.
 
 `DataGridSource` objects are expected to be long-lived, not recreated with each build.
 
@@ -26,31 +24,40 @@ The following example shows how to create the `DataGridSource`,
 {% tabs %}
 {% highlight dart %} 
 
-final List<Employee> _employees = <Employee>[];
+class EmployeeDataSource extends DataGridSource {
+  EmployeeDataSource() {
+    dataGridRows = employees
+        .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
+              DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
+              DataGridCell<String>(columnName: 'name', value: dataGridRow.name),
+              DataGridCell<String>(
+                  columnName: 'designation', value: dataGridRow.designation),
+              DataGridCell<int>(
+                  columnName: 'salary', value: dataGridRow.salary),
+            ]))
+        .toList();
+  }
 
-class EmployeeDataSource extends DataGridSource<Employee> {
+  List<DataGridRow> dataGridRows;
+
   @override
-  List<Employee> get dataSource => _employees
-  
+  List<DataGridRow> get rows => dataGridRows;
+
   @override
-  getValue(Employee employee, String columnName) {
-    switch (columnName) {
-      case 'id':
-        return employee.id;
-        break;
-      case 'name':
-        return employee.name;
-        break;
-      case 'salary':
-        return employee.salary;
-        break;
-      case 'designation':
-        return employee.designation;
-        break;
-      default:
-        return ' ';
-        break;
-    }
+  DataGridRowAdapter? buildRow(DataGridRow row) {
+    return DataGridRowAdapter(
+        cells: row.getCells().map<Widget>((dataGridCell) {
+        return Container(
+            alignment: (dataGridCell.columnName == 'id' ||
+                  dataGridCell.columnName == 'salary')
+                  ? Alignment.centerRight
+                  : Alignment.centerLeft,
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            child: Text(
+            dataGridCell.value.toString(),
+            overflow: TextOverflow.ellipsis,
+            ));
+    }).toList());
   }
 }
 
@@ -69,11 +76,52 @@ Widget build(BuildContext context) {
   return Scaffold(
     body: SfDataGrid(
       source: _employeeDataSource,
-      columns: [
-        GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-        GridTextColumn(mappingName: 'name', headerText: 'Name'),
-        GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-        GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+      columnWidthMode: ColumnWidthMode.lastColumnFill,
+      columns: <GridColumn>[
+        GridTextColumn(
+          columnName: 'id',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'ID',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'name',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Name',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'designation',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Designation',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'salary',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'Salary',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
       ],
     ),
   );
@@ -102,25 +150,63 @@ final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-    appBar: AppBar(
-      title: const Text('Syncfusion Flutter DataGrid'),
-    ),
     body: Column(
       children: [
         FlatButton(
             child: const Text('Add row'),
             onPressed: () {
-              _employees.add(Employee(10011, 'Steve', 'Designer', 15000));
+              _employees
+                  .add(Employee(10011, 'Steve', 'Designer', 15000));
+              _employeeDataSource.buildDataGridRows();
               _employeeDataSource.updateDataGridSource();
             }),
         SfDataGrid(
           source: _employeeDataSource,
           columns: <GridColumn>[
-            GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-            GridTextColumn(mappingName: 'name', headerText: 'Name'),
             GridTextColumn(
-                mappingName: 'designation', headerText: 'Designation'),
-            GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+              columnName: 'id',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'name',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Name',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'designation',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Designation',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'salary',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Salary',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
           ],
         ),
       ],
@@ -128,30 +214,44 @@ Widget build(BuildContext context) {
   );
 }
 
-class EmployeeDataSource extends DataGridSource<Employee> {
- 
+class EmployeeDataSource extends DataGridSource {
+  EmployeeDataSource(List<Employee> employees) {
+    buildDataGridRows();
+  }
+
+  void buildDataGridRows() {
+    dataGridRows = employees
+        .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
+              DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
+              DataGridCell<String>(columnName: 'name', value: dataGridRow.name),
+              DataGridCell<String>(
+                  columnName: 'designation', value: dataGridRow.designation),
+              DataGridCell<int>(
+                  columnName: 'salary', value: dataGridRow.salary),
+            ]))
+        .toList();
+  }
+
+  List<DataGridRow> dataGridRows;
+
   @override
-  List<Employee> get dataSource => _employees
-  
+  List<DataGridRow> get rows => dataGridRows;
+
   @override
-  getValue(Employee employee, String columnName) {
-    switch (columnName) {
-      case 'id':
-        return employee.id;
-        break;
-      case 'name':
-        return employee.name;
-        break;
-      case 'salary':
-        return employee.salary;
-        break;
-      case 'designation':
-        return employee.designation;
-        break;
-      default:
-        return ' ';
-        break;
-    }
+  DataGridRowAdapter? buildRow(DataGridRow row) {
+    return DataGridRowAdapter(
+        cells: row.getCells().map<Widget>((dataGridCell) {
+        return Container(
+            alignment: (dataGridCell.columnName == 'id' ||
+                  dataGridCell.columnName == 'salary')
+                  ? Alignment.centerRight
+                  : Alignment.centerLeft,
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            child: Text(
+            dataGridCell.value.toString(),
+            overflow: TextOverflow.ellipsis,
+            ));
+    }).toList());
   }
 
   void updateDataGridSource() {
@@ -186,17 +286,66 @@ Widget build(BuildContext context) {
             child: const Text('Update cell value'),
             onPressed: () {
               _employees[0].salary = 25000;
+              _employeeDataSource.dataGridRows[0] = DataGridRow(cells: [
+                DataGridCell(value: employees[0].id, columnName: 'id'),
+                DataGridCell(value: employees[0].name, columnName: 'name'),
+                DataGridCell(
+                    value: employees[0].designation,
+                    columnName: 'designation'),
+                DataGridCell(
+                    value: employees[0].salary, columnName: 'salary'),
+              ]);
+
               _employeeDataSource.updateDataGridSource(
                   rowColumnIndex: RowColumnIndex(0, 3));
             }),
         SfDataGrid(
           source: _employeeDataSource,
           columns: <GridColumn>[
-            GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-            GridTextColumn(mappingName: 'name', headerText: 'Name'),
             GridTextColumn(
-                mappingName: 'designation', headerText: 'Designation'),
-            GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+              columnName: 'id',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'name',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Name',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'designation',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Designation',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'salary',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Salary',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
           ],
         ),
       ],
@@ -204,30 +353,44 @@ Widget build(BuildContext context) {
   );
 }
 
-class EmployeeDataSource extends DataGridSource<Employee> {
+class EmployeeDataSource extends DataGridSource {
+  EmployeeDataSource() {
+    buildDataGridRows();
+  }
+
+  void buildDataGridRows() {
+    dataGridRows = employees
+        .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
+              DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
+              DataGridCell<String>(columnName: 'name', value: dataGridRow.name),
+              DataGridCell<String>(
+                  columnName: 'designation', value: dataGridRow.designation),
+              DataGridCell<int>(
+                  columnName: 'salary', value: dataGridRow.salary),
+            ]))
+        .toList();
+  }
+
+  List<DataGridRow> dataGridRows = [];
 
   @override
-  List<Employee> get dataSource => _employees
-  
+  List<DataGridRow> get rows => dataGridRows;
+
   @override
-  getValue(Employee employee, String columnName) {
-    switch (columnName) {
-      case 'id':
-        return employee.id;
-        break;
-      case 'name':
-        return employee.name;
-        break;
-      case 'salary':
-        return employee.salary;
-        break;
-      case 'designation':
-        return employee.designation;
-        break;
-      default:
-        return ' ';
-        break;
-    }
+  DataGridRowAdapter? buildRow(DataGridRow row) {
+    return DataGridRowAdapter(
+        cells: row.getCells().map<Widget>((dataGridCell) {
+        return Container(
+            alignment: (dataGridCell.columnName == 'id' ||
+                  dataGridCell.columnName == 'salary')
+                  ? Alignment.centerRight
+                  : Alignment.centerLeft,
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            child: Text(
+            dataGridCell.value.toString(),
+            overflow: TextOverflow.ellipsis,
+            ));
+    }).toList());
   }
 
   void updateDataGridSource({RowColumnIndex rowColumnIndex}) {

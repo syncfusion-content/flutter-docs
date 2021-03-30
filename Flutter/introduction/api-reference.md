@@ -110,6 +110,14 @@ This page helps to navigate to the public API's available in the Syncfusion Flut
     </tr>
     <tr>
         <td>
+            Treemap
+        </td>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_charts/latest/treemap/SfTreemap-class.html">Link</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
             Spark Charts
         </td>
         <td>

@@ -727,3 +727,70 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Circle tooltip customization](../images/circle-layer/circle-tooltip-customization.png)
+
+## Inverted circle
+
+You can apply color to the inverted circle by initializing the `MapCircleLayer.inverted` constructor. The inner circle color is transparent and the outer portion of the circle covered by an overlay color.
+
+You can customize the inverted circle using the following properties:
+
+* **Stroke color** - Change the stroke color of the circle using the `strokeColor` property.
+* **Stroke width** - Change the stroke width of the circle using the `strokeWidth` property. The default value of the `strokeWidth` property is `1`.
+* **Overlay color** - Change the outer portion color of the circle using the `color` property.
+* **Tooltip** - You can enable tooltip for the inverted circle using the `tooltipBuilder` property.
+* **Animation** - You can apply animation for the inverted circle using the `animation` property and able to customize the animation curve and duration.
+
+N> It is applicable for both the tile layer and shape layer.
+
+I> The individual circle customization like `MapCircle.color`, `MapCircle.strokeColor` and `MapCircle.strokeWidth` are not supported for the inverted circle.
+
+{% tabs %}
+{% highlight Dart %}
+
+MapZoomPanBehavior zoomPanBehavior;
+
+@override
+void initState() {
+  zoomPanBehavior = MapZoomPanBehavior(zoomLevel: 4, maxZoomLevel: 15);
+  super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+     body: SfMaps(
+        layers: [
+          MapTileLayer(
+            urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+            initialFocalLatLng: MapLatLng(-14.2350, -51.9253),
+            sublayers: [
+              MapCircleLayer.inverted(
+                circles: List<MapCircle>.generate(
+                  1,
+                      (int index) {
+                    return MapCircle(
+                      center: MapLatLng(-14.2350, -51.9253),
+                      radius: 50,
+                    );
+                  },
+                ).toSet(),
+                color: Colors.black.withOpacity(0.3),
+                strokeColor: Colors.red,
+                strokeWidth: 1,
+              ),
+            ],
+            zoomPanBehavior: zoomPanBehavior,
+          ),
+        ],
+      ),
+   );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Inverted circle](../images/circle-layer/inverted-circle.png)
+
+N>
+* Refer `tooltip` section, for adding and customizing tooltip to the inverted circle.
+* Refer `animation` section, for applying animation to the inverted circle.

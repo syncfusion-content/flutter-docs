@@ -90,7 +90,7 @@ PdfFont font = PdfStandardFont(PdfFontFamily.helvetica, 14);
 
 //Section - 1
 //Add section to the document
-PdfSection section = document.sections.add();
+PdfSection section = document.sections!.add();
 
 //Create page settings to the section
 section.pageSettings.rotate = PdfPageRotateAngle.rotateAngle0;
@@ -102,7 +102,7 @@ section.pages.add().graphics.drawString('Rotated by 0 degrees', font,
 
 //Section - 2
 //Add section to the document
-section = document.sections.add();
+section = document.sections!.add();
 
 //Create page settings to the section
 section.pageSettings.rotate = PdfPageRotateAngle.rotateAngle90;
@@ -114,7 +114,7 @@ section.pages.add().graphics.drawString('Rotated by 90 degrees', font,
 
 //Section - 3
 //Add section to the document
-section = document.sections.add();
+section = document.sections!.add();
 
 //Create page settings to the section
 section.pageSettings.rotate = PdfPageRotateAngle.rotateAngle180;
@@ -126,7 +126,7 @@ section.pages.add().graphics.drawString('Rotated by 180 degrees', font,
 
 //Section - 4
 //Add section to the document
-section = document.sections.add();
+section = document.sections!.add();
 
 //Create page settings to the section
 section.pageSettings.rotate = PdfPageRotateAngle.rotateAngle270;
@@ -170,7 +170,7 @@ You can [`rotate`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/p
 PdfDocument document = PdfDocument();
 
 //Add section to the document
-PdfSection section = document.sections.add();
+PdfSection section = document.sections!.add();
 
 //Create page settings to the section
 section.pageSettings.rotate = PdfPageRotateAngle.rotateAngle180;
@@ -182,7 +182,7 @@ section.pages.add().graphics.drawString(
     brush: PdfBrushes.black, bounds: const Rect.fromLTWH(20, 20, 0, 0));
 
 //Add section to the document
-section = document.sections.add();
+section = document.sections!.add();
 
 //Create page settings to the section
 section.pageSettings.rotate = PdfPageRotateAngle.rotateAngle270;

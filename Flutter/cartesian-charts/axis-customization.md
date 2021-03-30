@@ -652,6 +652,8 @@ The following properties are used to configure the plot bands:
 * [`verticalTextAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/verticalTextAlignment.html) - Aligns the text vertically.
 * [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/isVisible.html) - Changes the visibility of the plot band in chart axis.
 * [`shouldRenderAboveSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/shouldRenderAboveSeries.html) - Changes the rendering order of the plot band.
+* [`isRepeatable`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/isRepeatable.html) - specifies the plot band need to be repeated in specified interval.
+* [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/textStyle.html) - customizes the text style of plot band.
 
 ![Plotband](images/axis-customization/plotband.jpg)
 
@@ -1080,6 +1082,63 @@ The maximum width for axis labels and the space occupied by the axis labels can 
 N> If both [`maximumLabelWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/maximumLabelWidth.html) and [`labelsExtent`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelsExtent.html) properties are specified, then the priority goes to [`labelsExtent`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelsExtent.html) property.
 
 ![Axis label trim](images/axis-customization/axis-label-trim.gif)
+
+## Auto scrolling
+
+Auto scrolling feature available in SfCartesianChart is used to ensure that specified range of data is always visible in the chart and you can view the remaining data points by scrolling. The [`autoScrollingDelta `](~) property of the chart axis can be used to set the number of data points to be always visible in the chart. It always shows the recently added data points and scrolling will be reset to the start or end of the range, based on [`autoScrollingMode`](~) property's value, whenever a new point is added dynamically.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      return Container(
+          child: SfCartesianChart(
+             primaryYAxis: DateTimeAxis(
+                 autoScrollingDelta: 7
+             ),
+          )
+      );
+    }
+
+{% endhighlight %}
+
+### AutoScrollingMode
+
+[`AutoScrollingMode`](~) property can be used to determine whether the axis should be scrolled from start position or end position. The default value of [`AutoScrollingMode`](~) is `end`.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      return Container(
+          child: SfCartesianChart(
+             primaryYAxis: NumericAxis(
+                 autoScrollingMode: AutoScrollingMode.start
+             ),
+          )
+      );
+    }
+
+{% endhighlight %}
+
+### AutoScrollingDeltaType
+
+In [`DateTimeAxis`](~), you can apply auto scrolling delta value in Years, Months, Days, Hours, Minutes, Seconds and auto by setting [`AutoScrollingDeltaType`](~) property. Default value of this property is `auto` and the delta will be calculated automatically based on range.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      return Container(
+          child: SfCartesianChart(
+             primaryYAxis: DateTimeAxis(
+                 autoScrollingDeltaType: DateTimeIntervalType.months
+             ),
+          )
+      );
+    }
+
+{% endhighlight %}
 
 ## See Also
 

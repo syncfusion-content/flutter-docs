@@ -74,6 +74,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+N> On a desktop web browser, this `enableDoubleTapZooming` property will have no effect with mouse interaction.
+
 ## Callbacks
 
 The `SfPdfViewer` magnification supports the [PdfZoomLevelChangedCallback](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfZoomLevelChangedCallback.html) to notify the zoom level changes.

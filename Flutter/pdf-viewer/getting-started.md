@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Getting started for Syncfusion Flutter PDF Viewer | Syncfusion
-description: This section explains about the steps required to add the PDF Viewer widget and its elements such as scroll head, scroll status and page navigation dialog.
+description: This section explains about the steps required to add the PDF Viewer plugin and its elements such as scroll head, scroll status and page navigation dialog.
 platform: Flutter
 control: SfPdfViewer
 documentation: ug
 ---
 
 # Getting Started with Flutter PDF Viewer (SfPdfViewer)
-This section explains the steps required to add the [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) widget and its features. This section covers only the basic features needed to get started with the Syncfusion Flutter PDF Viewer widget.
+This section explains the steps required to add the [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) plugin and its features. This section covers only the basic features needed to get started with the Syncfusion Flutter PDF Viewer plugin.
 
 ## Add the Flutter PDF Viewer to an application
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
@@ -26,6 +26,19 @@ syncfusion_flutter_pdfviewer: ^xx.x.xx
 {% endhighlight %}
 
 N> Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter PDF Viewer`](https://pub.dev/packages/syncfusion_flutter_pdfviewer/versions) package.
+
+For web platform, we have used [PdfJs](https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js) for rendering the PDF pages, so the script file must be referred to in your `web/index.html` file.
+
+On your `web/index.html` file, add the following `script` tags, somewhere in the `body` of the document:
+
+```html
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js"></script>
+<script type="text/javascript">
+   pdfjsLib.GlobalWorkerOptions.workerSrc = "//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.worker.min.js";
+</script>
+
+```
 
 **Get packages** 
 
@@ -154,6 +167,44 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+## Get the current scroll offset position
+
+The `SfPdfViewer` allows you to get the current scroll offset position using the [scrollOffset](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/scrollOffset.html) property. The following code example explains the same.
+
+{% tabs %}
+{% highlight Dart %}
+
+final PdfViewerController _pdfViewerController=PdfViewerController();
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    appBar: AppBar(
+      title: Text('Syncfusion Flutter PDF Viewer'),
+      actions: <Widget>[
+        IconButton(
+          icon: Icon(
+            Icons.arrow_drop_down_circle,
+            color: Colors.white,
+          ),
+          onPressed: () {
+            _pdfViewerController.jumpToPage(3);
+            print( _pdfViewerController.scrollOffset.dy);
+            print( _pdfViewerController.scrollOffset.dx);
+          },
+        ),
+      ],
+    ),
+    body: SfPdfViewer.network(
+      'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
+      controller: _pdfViewerController,
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Customize the space being displayed between the PDF pages 
 
 By default, the `SfPdfViewer` displays the spacing between the PDF pages with the value of **4 pixels**. You can customize the space being displayed using the [pageSpacing](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/pageSpacing.html) property. The following code example explains the same.
@@ -193,6 +244,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+N> On a desktop or mobile web browser, this `canShowScrollHead` property will have no effect since the scroll head will not be displayed there.
+
 ## Customize the visibility of page navigation dialog
 
 By default, the page navigation dialog will be displayed when the scroll head is tapped. You can customize the visibility of the page navigation dialog using the [canShowPaginationDialog](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/canShowPaginationDialog.html) property. The following code example explains the same.
@@ -211,6 +264,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+N> On a desktop or mobile web browser, this `canShowPaginationDialog` property will have no effect since the pagination dialog will not be displayed there.
 
 ## Callbacks
 

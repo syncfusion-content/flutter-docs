@@ -25,10 +25,42 @@ Widget build(BuildContext context) {
     source: _employeeDatasource,
     headerRowHeight: 70,
     columns: <GridColumn>[
-      GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-      GridTextColumn(mappingName: 'name', headerText: 'Name'),
-      GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-      GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+      GridTextColumn(
+        columnName: 'id',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
+          alignment: Alignment.centerRight,
+          child: Text(
+            'ID',
+            overflow: TextOverflow.ellipsis,
+          ))),
+      GridTextColumn(
+        columnName: 'name',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'Name',
+            overflow: TextOverflow.ellipsis,
+          ))),
+      GridTextColumn(
+        columnName: 'designation',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'Designation',
+            overflow: TextOverflow.ellipsis,
+          ))),
+      GridTextColumn(
+        columnName: 'salary',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
+          alignment: Alignment.centerRight,
+          child: Text(
+            'Salary',
+            overflow: TextOverflow.ellipsis,
+          ))),
     ],
   ));
 }
@@ -52,10 +84,42 @@ Widget build(BuildContext context) {
     source: _employeeDatasource,
     rowHeight: 60,
     columns: <GridColumn>[
-      GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-      GridTextColumn(mappingName: 'name', headerText: 'Name'),
-      GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-      GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
+      GridTextColumn(
+        columnName: 'id',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
+          alignment: Alignment.centerRight,
+          child: Text(
+            'ID',
+            overflow: TextOverflow.ellipsis,
+          ))),
+      GridTextColumn(
+        columnName: 'name',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'Name',
+            overflow: TextOverflow.ellipsis,
+          ))),
+      GridTextColumn(
+        columnName: 'designation',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'Designation',
+            overflow: TextOverflow.ellipsis,
+          ))),
+      GridTextColumn(
+        columnName: 'salary',
+        label: Container(
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
+          alignment: Alignment.centerRight,
+          child: Text(
+            'Salary',
+            overflow: TextOverflow.ellipsis,
+          ))),
     ],
   ));
 }
@@ -64,237 +128,6 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![flutter datagrid shows rows except header row with custom height](images/row-height-customization/flutter-datagrid-row-height.jpg)
-
-## Fit row height based on its content
-
-The row height can be fitted based on its content in [onQueryRowHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onQueryRowHeight.html) callback using [getAutoRowHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/ColumnSizer/getAutoRowHeight.html) method which is available in [ColumnSizer](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/ColumnSizer-class.html).
-
-To access the `getAutoRowHeight` method, create an instance of `ColumnSizer`, set this instance in `columnSizer` property and use it in `onQueryRowHeight` callback. 
-
-`ColumnSizer` objects are expected to be long-lived, not recreated with each build. 
- 
->**NOTE**
-    By default, the display text’s overflow behavior is ellipsis. So, to enable the wrap for the display text, set the `softWrap` property as `true` and `overflow` property as clip.
-
-
-{% tabs %}
-{% highlight Dart %} 
-
-final ColumnSizer _columnSizer = ColumnSizer();
-
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      body: SfDataGrid(
-          source: _employeeDatasource,
-          columnSizer: _columnSizer,
-          onQueryRowHeight: (RowHeightDetails details) {
-            double height = _columnSizer.getAutoRowHeight(details.rowIndex);
-            return height;
-          },
-          columns: <GridColumn>[
-        GridTextColumn(mappingName: 'id',
-          softWrap: true,
-          overflow: TextOverflow.clip,
-          headerText: 'ID'),
-        GridTextColumn(mappingName: 'contactName',
-          softWrap: true,
-          overflow: TextOverflow.clip,
-          headerText: 'Contact Name'),
-        GridTextColumn(mappingName: 'companyName',
-          softWrap: true,
-          overflow: TextOverflow.clip,
-          headerText: 'Company Name'),
-        GridTextColumn(mappingName: 'city',
-          softWrap: true,
-          overflow: TextOverflow.clip,
-          headerText: 'City'),
-        GridTextColumn(mappingName: 'address',
-          softWrap: true,
-          overflow: TextOverflow.clip,
-          headerText: 'Address'),
-        GridTextColumn(mappingName: 'designation',
-          softWrap: true,
-          overflow: TextOverflow.clip,
-          headerText: 'Designation'),
-        GridTextColumn(mappingName: 'country',
-          softWrap: true,
-          overflow: TextOverflow.clip,
-          headerText: 'Country'),
-      ]));
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-![rows are fitted in flutter datagrid ](images/row-height-customization/flutter-datagrid-auto-fit-row.jpg)
-
-### Auto fit row height options
-
-#### Exclude the certain columns from auto-fit row calculation
-                
-By default, `getAutoRowHeight` method calculates the row height based on all columns. To skip the specific columns from the row height calculation, add that columns to the `excludeColumns` parameter in `getAutoRowHeight` method.
-
-{% tabs %}
-{% highlight Dart %} 
-
-final List<String> _excludeColumns = [
-  'designation',
-  'address',
-  'city',
-];
-
-final ColumnSizer _columnSizer = ColumnSizer();
-
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      body: SfDataGrid(
-          source: _autoRowHeightDataGridSource,
-          columnSizer: _columnSizer,
-          onQueryRowHeight: (RowHeightDetails details) {
-            final double height = _columnSizer.getAutoRowHeight(details.rowIndex,
-                excludedColumns: _excludeColumns);
-            return height;
-          },
-          columns: <GridColumn>[
-        GridTextColumn(mappingName: 'id',
-          softWrap: true,
-          overflow: TextOverflow.clip,
-          headerText: 'ID'),
-        GridTextColumn(mappingName: 'contactName',
-          softWrap: true,
-          overflow: TextOverflow.clip,
-          headerText: 'Contact Name'),
-        GridTextColumn(mappingName: 'companyName',
-          softWrap: true,
-          overflow: TextOverflow.clip,
-          headerText: 'Company Name'),
-        GridTextColumn(mappingName: 'address',
-          softWrap: true,
-          overflow: TextOverflow.clip,
-          headerText: 'Address'),
-        GridTextColumn(mappingName: 'city',
-          softWrap: true,
-          overflow: TextOverflow.clip,
-          headerText: 'City'),
-        GridTextColumn(mappingName: 'designation',
-          softWrap: true,
-          overflow: TextOverflow.clip,
-          headerText: 'Designation'),
-        GridTextColumn(mappingName: 'country',
-          softWrap: true,
-          overflow: TextOverflow.clip,
-          headerText: 'Country'),
-      ]));
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-
-#### Include the hidden columns in auto-fit row calculation
-
-The hidden columns can also be considered for the row height calculation by using the `canIncludeHiddenColumns` parameter in 
-`getAutoRowHeight` method.
-
-
-{% tabs %}
-{% highlight Dart %} 
-
-final ColumnSizer _columnSizer = ColumnSizer();
-
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      body: SfDataGrid(
-          source: _autoRowHeightDataGridSource,
-          columnSizer: _columnSizer,
-          onQueryRowHeight: (RowHeightDetails details) {
-            final double height = _columnSizer.getAutoRowHeight(details.rowIndex,
-                canIncludeHiddenColumns: true);
-            return height;
-          },
-          columns: <GridColumn>[
-        GridTextColumn(mappingName: 'id',
-          softWrap: true,
-          overflow: TextOverflow.clip,
-          headerText: 'ID'),
-        GridTextColumn(mappingName: 'contactName',
-          softWrap: true,
-          overflow: TextOverflow.clip,
-          headerText: 'Contact Name'),
-        GridTextColumn(mappingName: 'companyName',
-          softWrap: true,
-          overflow: TextOverflow.clip,
-          headerText: 'Company Name'),
-        GridTextColumn(mappingName: 'country',
-          softWrap: true,
-          overflow: TextOverflow.clip,
-          headerText: 'Country'),
-        GridTextColumn(mappingName: 'address',
-          softWrap: true,
-          visible: false,
-          overflow: TextOverflow.clip,
-          headerText: 'Address'),
-        GridTextColumn(mappingName: 'city',
-          softWrap: true,
-          visible: false,
-          overflow: TextOverflow.clip,
-          headerText: 'City'),
-        GridTextColumn(mappingName: 'designation',
-          softWrap: true,
-          visible: false,
-          overflow: TextOverflow.clip,
-          headerText: 'Designation'),
-      ]));
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Fit header row height based on its content
-
-The datagrid allows you to customize the height of the header row based on its content using the `onQueryRowHeight` callback and  getAutoRowHeight method which is available in ColumnSizer.
-
->**NOTE**
-   By default, the header text’s overflow behavior is ellipsis. So, to enable the wrap for the display text, set the [headerTextSoftWrap](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/headerTextSoftWrap.html) property as true and [headerTextOverflow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/headerTextOverflow.html) property as clip.
-
-{% tabs %}
-{% highlight Dart %} 
-
-final ColumnSizer _columnSizer = ColumnSizer();
-        
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      body: SfDataGrid(
-    source: _employeeDatasource,
-    columnSizer: _columnSizer,
-    onQueryRowHeight: (RowHeightDetails details) {
-      final double height = _columnSizer.getAutoRowHeight(details.rowIndex);
-      // The header row index.
-      if(details.rowIndex == 0) {
-        return height;
-      }
-      return 49.0;
-    },
-    columns: <GridColumn>[
-      GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-      GridTextColumn(mappingName: 'name', headerText: 'Name'),
-      GridTextColumn(mappingName: 'designation',
-        headerTextSoftWrap: true,
-        headerTextOverflow: TextOverflow.clip,
-        headerText: 'Employee Designation'),
-      GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
-    ],
-  ));
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-![flutter datagrid shows header row with custom height](images/row-height-customization/flutter-datagrid-auto-fit-header-row.png)
 
 ## Refresh row height for specific row
 
@@ -314,9 +147,9 @@ In the below example, row data is updated when the `refreshRow` is called in `on
 {% tabs %}
 {% highlight Dart %} 
 
-final List<Employee> _employees = <Employee>[];
+List<Employee> _employees;
 
-final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
+EmployeeDataSource _employeeDataSource;
 
 final DataGridController _controller = DataGridController();
 
@@ -338,20 +171,56 @@ Widget build(BuildContext context) {
                 _employeeData[0].designation = 'Sales Representative';
                 _employees[0].salary = 25000;
                 _controller.refreshRow(0);
+                _employeeDataSource.getData(_employees);
+                _employeeDataSource.updateDataSource();
               }),
           SfDataGrid(
             source: _employeeDataSource,
             controller: _controller,
             columnSizer: _columnSizer,
             onQueryRowHeight: (RowHeightDetails details) {
-                    return _columnSizer.getAutoRowHeight(details.rowIndex);
-              },
+              if (details.rowIndex == 0) {
+                return 100.0;
+              }
+              return 50.0; 
+            },
             columns: <GridColumn>[
-              GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-              GridTextColumn(mappingName: 'name', headerText: 'Name'),
               GridTextColumn(
-                  mappingName: 'designation', headerText: 'Designation'),
-              GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+                columnName: 'id',
+                label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'ID',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+              GridTextColumn(
+                columnName: 'name',
+                label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Name',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+              GridTextColumn(
+                columnName: 'designation',
+                label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Designation',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+              GridTextColumn(
+                columnName: 'salary',
+                label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Salary',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
             ],
           ),
         ],
@@ -367,9 +236,9 @@ In the below example, row data is refreshed along with its row height when the `
 {% tabs %}
 {% highlight Dart %} 
 
-final List<Employee> _employees = <Employee>[];
+List<Employee> _employees;
 
-final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
+EmployeeDataSource _employeeDataSource;
 
 final DataGridController _controller = DataGridController();
 
@@ -391,20 +260,56 @@ Widget build(BuildContext context) {
                 _employeeData[0].designation = 'Sales Representative';
                 _employees[0].salary = 25000;
                 _controller.refreshRow(0, recalculateRowHeight: true);
+                _employeeDataSource.getData(_employees);
+                _employeeDataSource.updateDataSource();
               }),
           SfDataGrid(
             source: _employeeDataSource,
             controller: _controller,
             columnSizer: _columnSizer,
             onQueryRowHeight: (RowHeightDetails details) {
-                    return _columnSizer.getAutoRowHeight(details.rowIndex);
-              },
+              if (details.rowIndex == 0) {
+                return 100;
+              }
+              return 50;    
+            },
             columns: <GridColumn>[
-              GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-              GridTextColumn(mappingName: 'name', headerText: 'Name'),
               GridTextColumn(
-                  mappingName: 'designation', headerText: 'Designation'),
-              GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
+                columnName: 'id',
+                label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'ID',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+              GridTextColumn(
+                columnName: 'name',
+                label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Name',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+              GridTextColumn(
+                columnName: 'designation',
+                label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Designation',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+              GridTextColumn(
+                columnName: 'salary',
+                label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Salary',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
             ],
           ),
         ],
@@ -414,8 +319,3 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
-
-
-
-
-   

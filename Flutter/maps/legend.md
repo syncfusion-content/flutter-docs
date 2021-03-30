@@ -249,6 +249,73 @@ class Model {
 N>
 * Refer the [`MapLegend`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.html), for showing default legend.
 
+## Title
+
+You can add title to the legend using the `MapLegend.title` property.
+
+N> It is applicable for both shape and bar legend.
+
+{% tabs %}
+{% highlight Dart %}
+
+MapShapeSource _dataSource;
+List<DataModel> _data;
+
+@override
+void initState() {
+   _data = const <DataModel>[
+      DataModel('Asia', 280),
+      DataModel('Europe', 120),
+      DataModel('Africa', 40),
+      DataModel('North America', 90),
+      DataModel('South America', 190),
+      DataModel('Australia', 210),
+   ];
+
+   _dataSource = MapShapeSource.asset(
+      'assets/world_map.json',
+      shapeDataField: 'continent',
+      dataCount: _data.length,
+      primaryValueMapper: (int index) => _data[index].continent,
+   );
+   super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+     body: Column(
+        children: [
+          SfMaps(
+            layers: <MapShapeLayer>[
+              MapShapeLayer(
+                source: _dataSource,
+                legend: MapLegend(
+                  MapElement.shape,
+                  title: Text('Continents',
+                      style:
+                          TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+   );
+}
+
+class DataModel {
+  const DataModel(this.continent, this.size);
+
+  final String continent;
+  final double size;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Legend title](images/legend/legend-title.png)
+
 ## Icon and text customization
 
 The icons color of the legend is applied based on the colors returned from the [`MapShapeLayerDelegate.shapeColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeColorValueMapper.html) property and the text is taken from the [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeDataField.html). It is possible to customize the legend icons color and texts using the [`MapColorMapper.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/color.html) and [`MapColorMapper.text`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/text.html) properties based on the [`MapColorMapper.value`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/value.html) or [`MapColorMapper.from`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/from.html) and [`MapColorMapper.to`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/to.html) properties.
@@ -318,6 +385,82 @@ class Model {
 {% endtabs %}
 
 ![Legend text customization](images/legend/legend-text-customization.png)
+
+## First segment label customization
+
+You can customize the first segment label of the legend using the [`MapColorMapper.text`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/text.html) property with curly braces. The first curly brace value will be applied as segment start label and the next curly brace value will be applied as segment end label. By default, the [`MapColorMapper.from`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/from.html) value is placed at the starting position of first segment and the [`MapColorMapper.to`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/to.html) value is placed at the ending position of the first segment.
+
+{% tabs %}
+{% highlight Dart %}
+
+List<DataModel> _data;
+MapShapeSource _shapeSource;
+
+@override
+void initState() {
+   _data = <DataModel>[
+      DataModel('India', 280),
+      DataModel('United States of America', 190),
+      DataModel('Kazakhstan', 37),
+      DataModel('Italy', 201),
+      DataModel('Korea', 512),
+      DataModel('Japan', 335),
+      DataModel('Cuba', 103),
+      DataModel('China', 148)
+   ];
+
+    _shapeSource = MapShapeSource.asset("assets/world_map.json",
+        shapeDataField: "name",
+        dataCount: _data.length,
+        primaryValueMapper: (int index) => _data[index].country,
+        shapeColorValueMapper: (int index) => _data[index].density,
+        shapeColorMappers: [
+          MapColorMapper(from: 0, to: 100, color: Colors.red, text: '{>0.0},{100.0}'),
+          MapColorMapper(from: 101, to: 200, color: Colors.green),
+          MapColorMapper(from: 201, to: 300, color: Colors.blue),
+          MapColorMapper(from: 301, to: 400, color: Colors.orange),
+          MapColorMapper(from: 401, to: 500, color: Colors.teal),
+          MapColorMapper(from: 501, to: 600, color: Colors.deepPurple),
+        ],
+    );
+    super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+     body: Center(
+        child: Container(
+          height: 350,
+          child: Padding(
+            padding: const EdgeInsets.only(left: 15, right: 15),
+            child: SfMaps(
+              layers: [
+                MapShapeLayer(
+                  source: _shapeSource,
+                  legend: MapLegend.bar(
+                    MapElement.shape,
+                  ),
+                )
+              ],
+            ),
+          ),
+        ),
+      ),
+   );
+}
+
+class DataModel {
+  const DataModel(this.country, this.density);
+
+  final String country;
+  final double density;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![First label customization](images/legend/first-label-customization.png)
 
 ## Position
 
