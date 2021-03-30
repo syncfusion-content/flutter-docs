@@ -391,7 +391,7 @@ class Model {
 {% tabs %}
 {% highlight Dart %}
 
-You can customize the first segment label of the legend using the [`MapColorMapper.text`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/text.html) property. By default, the [`MapColorMapper.from`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/from.html) value is placed at the starting position of first segment and the [`MapColorMapper.to`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/to.html) value is placed at the ending position of the first segment.
+You can customize the first segment label of the legend using the [`MapColorMapper.text`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/text.html) property with curly braces. The first curly brace value will be applied as segment start label and the next curly brace value will be applied as segment end label. By default, the [`MapColorMapper.from`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/from.html) value is placed at the starting position of first segment and the [`MapColorMapper.to`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/to.html) value is placed at the ending position of the first segment.
 
 List<DataModel> _data;
 MapShapeSource _shapeSource;
@@ -415,7 +415,7 @@ void initState() {
         primaryValueMapper: (int index) => _data[index].country,
         shapeColorValueMapper: (int index) => _data[index].density,
         shapeColorMappers: [
-          MapColorMapper(from: 0, to: 100, color: Colors.red, text: '0 - 100'),
+          MapColorMapper(from: 0, to: 100, color: Colors.red, text: '{0.0},{0 - 100}'),
           MapColorMapper(from: 101, to: 200, color: Colors.green),
           MapColorMapper(from: 201, to: 300, color: Colors.blue),
           MapColorMapper(from: 301, to: 400, color: Colors.orange),
