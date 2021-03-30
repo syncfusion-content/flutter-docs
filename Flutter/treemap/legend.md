@@ -315,8 +315,6 @@ class SocialMediaUsers {
 {% endhighlight %}
 {% endtabs %}
 
-![legend custom position](images/legend/legend-custom-position.png)
-
 ## Overflow mode
 
 <b>For default legend</b>
