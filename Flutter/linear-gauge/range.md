@@ -126,9 +126,9 @@ The color of a range can be changed by setting the `color` property of a range. 
 
 ![Set linear gauge range color](images/gauge-range/color_range.png)
 
-## Apply radial gradient colors to a range
+## Apply radial gradient to a range
 
-The gradient colors can be applied by using the `shaderCallback` property of a range. The below code example demonstrates applying a radial gradient to the range.
+The gradient can be applied by using the `shaderCallback` property of a range. The below code example demonstrates applying a radial gradient to the range.
 
 {% highlight dart %} 
 
@@ -140,7 +140,7 @@ The gradient colors can be applied by using the `shaderCallback` property of a r
         body: Center(
           child: SfLinearGauge(
             ranges: [
-              //Applies a radial gradient color. The start and end values are 0 to 100 by default
+              //Applies a radial gradient. The start and end values are 0 to 100 by default
               LinearGaugeRange(
                   startWidth: 50,
                   shaderCallback: (bounds) => RadialGradient(
@@ -161,7 +161,7 @@ The gradient colors can be applied by using the `shaderCallback` property of a r
 
 ![Apply radial gradient to linear guage range](images/gauge-range/radial_gardient_range.png)
 
-## Apply linear gradient colors to a range
+## Apply linear gradient to a range
 
 The below code snippet demonstrates applying a linear gradient to the range.
 
@@ -174,7 +174,7 @@ The below code snippet demonstrates applying a linear gradient to the range.
         body: Center(
           child: SfLinearGauge(
             ranges: [
-              //Applies linear gradient color. The start and end values are 0 to 100 by default
+              //Applies linear gradient. The start and end values are 0 to 100 by default
               LinearGaugeRange(
                   startWidth: 50,
                   shaderCallback: (bounds) => LinearGradient(
@@ -193,7 +193,7 @@ The below code snippet demonstrates applying a linear gradient to the range.
 
 ![Apply linear gradient to linear guage range](images/gauge-range/linear_gardient_range.png)
 
-## Apply sweep gradient colors to a range
+## Apply sweep gradient to a range
 
 The below code snippet demonstrates applying a sweep gradient to the range.
 
@@ -206,7 +206,7 @@ The below code snippet demonstrates applying a sweep gradient to the range.
         body: Center(
           child: SfLinearGauge(
             ranges: [
-              //Applies sweep gradient color. The start and end values are 0 to 100 by default
+              //Applies sweep gradient. The start and end values are 0 to 100 by default
               LinearGaugeRange(
                 startWidth: 50,
                 shaderCallback: (bounds) => SweepGradient(
@@ -258,7 +258,7 @@ It is possible to position the ranges `inside`, `cross`, and `outside` the axis.
 
 ![Position the linear gauge range](images/gauge-range/range_position.png)
 
-## Setting Range Color to Axis Element
+## Setting range color to axis element
 
 You can set range color to axis elements using the useRangeColorForAxis property of axis
 
