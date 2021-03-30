@@ -1,7 +1,7 @@
 ---
 layout: post 
 title: Load more support in Syncfusion Flutter Calendar
-description: Learn about loading more appointment on demand lazily with Syncfusion Flutter Calendar.
+description: Learn about loading more appointments on demand lazily with Syncfusion Flutter Calendar.
 platform: flutter
 control: SfCalendar
 documentation: ug
