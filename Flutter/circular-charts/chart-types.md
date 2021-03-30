@@ -17,6 +17,8 @@ To render a pie chart, create an instance of [`PieSeries`](https://pub.dev/docum
 * [`strokeWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/borderWidth.html) - Changes the stroke width of the series.
 * [`strokeColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/borderColor.html) - Changes the stroke color of the series.
 * [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointColorMapper.html) - Maps the color for individual points from the data source.
+* [`pointShaderMapper`](~) - Maps the shader (gradient or image shader) for individual points from the data source.
+* [`pointRenderMode`](~) - Defines the painting mode for the data points either as segment or gradient.
 
 {% highlight dart %} 
 
@@ -273,6 +275,9 @@ To render a doughnut chart, create an instance of [`DoughnutSeries`](https://pub
 * [`strokeWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPoint/strokeWidth.html) - Changes the stroke width of the series.
 * [`strokeColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPoint/strokeColor.html) - Changes the stroke color of the series.
 * [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointColorMapper.html) - Maps the color for individual points from the data source.
+* [`pointShaderMapper`](~) - Maps the shader (gradient or image shader) for individual points from the data source.
+* [`pointRenderMode`](~) - Defines the painting mode for the data points either as segment or gradient.
+
 
 {% highlight dart %} 
 
@@ -638,6 +643,7 @@ The radial bar chart is used for showing the comparisons among the categories us
 * [`trackBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/trackBorderWidth.html) - Changes the width of the track border.
 * [`trackOpacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/trackOpacity.html) - Controls the transparency of the track area.
 * [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries/useSeriesColor.html) - Uses the point color for filling the track area.
+* [`pointShaderMapper`](~) - Maps the shader (gradient or image shader) for individual points from the data source.
 
 {% highlight dart %} 
 
