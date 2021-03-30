@@ -171,6 +171,154 @@ return Scaffold(
 
 ![Shape sublayer color](images/shape-sublayer/sublayer-color.png)
 
+## Equal color mapping
+
+You can apply color to the sublayer shape by comparing a value that returns from the [`shapeColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeColorValueMapper.html) with the [`MapColorMapper.value`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/value.html). For the matched values, the [`MapColorMapper.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/color.html) will be applied to the respective shapes.
+
+{% tabs %}
+{% highlight Dart %}
+
+List<Model> data;
+MapShapeSource sublayerDataSource;
+MapShapeSource shapeDataSource;
+
+@override
+void initState() {
+    data = <Model>[
+      Model('Algeria', "Low"),
+      Model('Nigeria', "High"),
+      Model('Libya', "High"),
+    ];
+
+    shapeDataSource = MapShapeSource.asset(
+      "assets/world_map.json",
+      shapeDataField: 'continent',
+    );
+
+    sublayerDataSource = MapShapeSource.asset(
+      "assets/africa.json",
+      shapeDataField: "name",
+      dataCount: data.length,
+      primaryValueMapper: (int index) {
+        return data[index].state;
+      },
+      shapeColorValueMapper: (int index) {
+        return data[index].storage;
+      },
+      shapeColorMappers: [
+        MapColorMapper(value: "Low", color: Colors.red),
+        MapColorMapper(value: "High", color: Colors.green)
+      ],
+   );
+   super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+     body: Padding(
+        padding: EdgeInsets.only(left: 15, right: 15),
+        child: SfMaps(
+          layers: <MapShapeLayer>[
+            MapShapeLayer(
+              source: shapeDataSource,
+              sublayers: [
+                MapShapeSublayer(
+                  source: sublayerDataSource,
+                )
+              ],
+            ),
+          ],
+        ),
+      ),
+   );
+}
+
+class Model {
+  const Model(this.state, this.storage);
+
+  final String state;
+  final String storage;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Equal color mapping](images/shape-sublayer/equal_color_mapping.png)
+
+## Range color mapping
+
+You can apply color to the sublayer shape based on whether the value returned from [`shapeColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/shapeColorValueMapper.html) falls within the [`MapColorMapper.from`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/from.html) and [`MapColorMapper.to`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/to.html). Then, the [`MapColorMapper.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/color.html) will be applied to the respective shapes.
+
+{% tabs %}
+{% highlight Dart %}
+
+List<Model> data;
+MapShapeSource sublayerDataSource;
+MapShapeSource shapeDataSource;
+
+@override
+void initState() {
+    data = <Model>[
+      Model('Algeria', 196),
+      Model('Nigeria', 280),
+      Model('Libya', 45),
+    ];
+
+    shapeDataSource = MapShapeSource.asset(
+      "assets/world_map.json",
+      shapeDataField: 'continent',
+    );
+
+    sublayerDataSource = MapShapeSource.asset(
+      "assets/africa.json",
+      shapeDataField: "name",
+      dataCount: data.length,
+      primaryValueMapper: (int index) {
+        return data[index].state;
+      },
+      shapeColorValueMapper: (int index) => data[index].count,
+      shapeColorMappers: [
+        MapColorMapper(from: 0, to: 100, color: Colors.red),
+        MapColorMapper(from: 101, to: 300, color: Colors.green)
+      ],
+    );
+   super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+     body: Padding(
+        padding: EdgeInsets.only(left: 15, right: 15),
+        child: SfMaps(
+          layers: <MapShapeLayer>[
+            MapShapeLayer(
+              source: shapeDataSource,
+              sublayers: [
+                MapShapeSublayer(
+                  source: sublayerDataSource,
+                )
+              ],
+            ),
+          ],
+        ),
+      ),
+   );
+}
+
+class Model {
+  const Model(this.state, this.count);
+
+  final String state;
+  final double count;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Range color mapping](images/shape-sublayer/range_color_mapping.png)
+
 ## Enable data labels and its customization
 
 You can enable data labels to the shape sublayer using the [`showDataLabels`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSublayer/showDataLabels.html) property and customize the data labels text using the [`dataLabelMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/dataLabelMapper.html) property.

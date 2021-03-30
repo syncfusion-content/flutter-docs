@@ -322,7 +322,7 @@ If zoom mode is set to [`zoomMode.x`](https://pub.dev/documentation/syncfusion_f
 
 ![Panning](images/zooming-panning/panning.gif)
 
-Also refer [zooming](./events#onzooming), [zoom start](./events#onzoomstart) and [zoom end](./events#onzoomend) events for customizing the zooming further.
+Also refer [zooming](./callbacks#onzooming), [zoom start](./callbacks#onzoomstart) and [zoom end](./callbacks#onzoomend) events for customizing the zooming further.
 
 ## See Also
 
