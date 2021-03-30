@@ -271,7 +271,7 @@ Widget build(BuildContext context) {
 
 ## Enable or disable swipe interaction
 
-You can customize the swipe interaction of SfCalendar by using the [viewNavigationMode](). You can allow or restrict to switching to previous or next views through the swipe interaction of SfCalendar. By default , the `viewNavigationMode` is set as snap.
+You can customize the swipe interaction of SfCalendar by using the [viewNavigationMode](). You can allow or restrict to switching to previous or next views through the swipe interaction of SfCalendar. By default , the [viewNavigationMode.snap]().
 
 {% tabs %}
 {% highlight Dart %}

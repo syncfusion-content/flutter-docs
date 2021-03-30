@@ -288,28 +288,37 @@ _AppointmentDataSource _getCalendarDataSource() {
 
 ### Get visible appointments
 
-You can get the list of visible appointments by using [GetVisibleAppointments] () method available in Calendar data source.
+You can get the list of visible appointments by using [getVisibleAppointments]() method available in Calendar data source.
 
 {% tabs %}
 {% highlight Dart %}
 
 @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        body: SfCalendar(
-          view: CalendarView.month,
-          dataSource: _getCalendarDataSource(),
-      onViewChanged: (ViewChangedDetails details) {
-            String calendarTimeZone = '';
-            _AppointmentDataSource datasource = _getCalendarDataSource();
-            List<Appointment> appointments = datasource.getVisibleAppointments(
-                DateTime(2021, 3, 7), calendarTimeZone, DateTime(2021, 3, 10));
-            return appointments;
-      },
-      monthViewSettings: MonthViewSettings(
-          appointmentDisplayMode: MonthAppointmentDisplayMode.appointment),
-    ));
-  }
+initState() {
+  _calendarController = CalendarController();
+  _dataSource = _getCalendarDataSource();
+  super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+    home: Scaffold(
+      body: SfCalendar(
+        view: CalendarView.month,
+        controller: _calendarController,
+        dataSource: _dataSource,
+        onViewChanged: (ViewChangedDetails details) {
+          List<DateTime> dates = details.visibleDates;
+          String calendarTimeZone = '';
+          List<Object> appointment = _dataSource.getVisibleAppointments(
+              dates[0], calendarTimeZone,
+              dates[(details.visibleDates.length) - 1]);
+         },
+       ),
+     ),
+   );
+ }
 }
 
 {% endhighlight %}

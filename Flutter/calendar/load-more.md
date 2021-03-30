@@ -1,7 +1,7 @@
 ---
 layout: post 
-title: Load More in Syncfusion Flutter Calendar
-description: Learn about load more in Syncfusion Flutter Calendar and loading the appointments through the loadMoreWidgetBuilder
+title: Load more support in Syncfusion Flutter Calendar
+description: Learn about loading appointments on demand with Syncfusion Flutter Calendar.
 platform: flutter
 control: SfCalendar
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 SfCalendar provides support to display an interactive view when the calendar view changed, or schedule view reaches its start/end offset. You can use [loadMoreViewBuilder]() builder to display the view while load appointments in calendar.
 
-You should use the `loadMoreWidgetBuilder` method to load more appointments and then notify the calendar about the changes. The `loadMoreWidgetBuilder` can be called to load more appointments from this builder by using the loadMoreAppointments function which is passed as a parameter to loadMoreViewBuilder.
+You should use the `loadMoreWidgetBuilder` method to load more appointments and then notify the calendar about the changes. The `loadMoreWidgetBuilder` can be called to load more appointments from this builder by using the [loadMoreAppointments]() function which is passed as a parameter to `loadMoreViewBuilder`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -50,5 +50,5 @@ Widget build(BuildContext context) {
 ![loadMoreWidgetBuilder](images/load-more/loadmore.jpg)
 
 >**NOTE**
-* This callback will be called after the onViewChanged callback.
-* The widget returned from this builder will be removed from SfCalendar when the CalendarDataSource.notifyListeners is called.
+* This callback will be called after the `onViewChanged` callback.
+* The widget returned from this builder will be removed from SfCalendar when the `CalendarDataSource.notifyListeners` is called.

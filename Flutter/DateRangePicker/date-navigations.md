@@ -359,7 +359,7 @@ Widget build(BuildContext context) {
 
 
 ### Navigation mode
-You can customize the navigation mode of date range picker by using the [navigationMode]() property of `SfDateRangePicker`, which has options to disable the view navigation through swipe interaction, also allows to scroll the view. By default the `navigationMode` set as `DateRangePickerNavigationMode.snap`.
+You can customize the navigation mode of date range picker by using the [navigationMode]() property of `SfDateRangePicker`, which has options to disable the view navigation through swipe interaction, also allows to scroll the view. By default the `navigationMode` set as [DateRangePickerNavigationMode.snap]().
 
 {% tabs %}
 {% highlight Dart %}
