@@ -86,11 +86,6 @@ The section contains the GitHub link for each widget’s code examples. This is 
 </tr>
 
 <tr>
-<td><p><a href="https://help.syncfusion.com/flutter/treemap/overview">Treemap</a></p></td>
-<td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/treemap">samples/treemap</a></p></td>
-</tr>
-
-<tr>
 <td rowspan="2"><p>Calendar</p></td>
 <td><p><a href="http://172.16.0.76/flutter/calendar/overview">Event calendar</a></p></td>
 <td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/calendar">samples/calendar</a></p></td>
