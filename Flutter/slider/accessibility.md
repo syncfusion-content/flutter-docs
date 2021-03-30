@@ -11,6 +11,8 @@ documentation: ug
 
 The [`SfSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html) can easily be accessed by screen readers. By default, it will read the current value. You can change the reading format using the [`semanticFormatterCallback`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/semanticFormatterCallback.html) property.
 
+You can adjust the value of thumb by tapping it and then pressing the volume buttons to increase or decrease the value.
+
 ## Horizontal
 
 {% tabs %}
