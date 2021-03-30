@@ -98,57 +98,45 @@ class EmployeeDataSource extends DataGridSource {
   List<DataGridRow> get rows => dataGridRows;
 
   @override
-  DataGridRowAdapter buildRow(DataGridRow row) {
+  DataGridRowAdapter? buildRow(DataGridRow row) {
     return DataGridRowAdapter(
         cells: row.getCells().map<Widget>((dataGridCell) {
-      if (dataGridCell.columnName == 'id' ||
-          dataGridCell.columnName == 'salary') {
-        return Container(
-          alignment: Alignment.centerRight,
+      Color getColor() {
+        if (dataGridCell.columnName == 'designation') {
+          if (dataGridCell.value == 'Developer') {
+            return Colors.tealAccent;
+          } else if (dataGridCell.value == 'Manager') {
+            return Colors.blue[200]!;
+          }
+        }
+
+        return Colors.transparent;
+      }
+
+      TextStyle? getTextStyle() {
+        if (dataGridCell.columnName == 'designation') {
+          if (dataGridCell.value == 'Developer') {
+            return TextStyle(fontStyle: FontStyle.italic);
+          } else if (dataGridCell.value == 'Manager') {
+            return TextStyle(fontStyle: FontStyle.italic);
+          }
+        }
+
+        return null;
+      }
+
+      return Container(
+          color: getColor(),
+          alignment: (dataGridCell.columnName == 'id' ||
+                  dataGridCell.columnName == 'salary')
+              ? Alignment.centerRight
+              : Alignment.centerLeft,
           padding: EdgeInsets.symmetric(horizontal: 16.0),
           child: Text(
             dataGridCell.value.toString(),
             overflow: TextOverflow.ellipsis,
-          ),
-        );
-      } else if (dataGridCell.columnName == 'designation') {
-        Color getColor() {
-          if (dataGridCell.value == 'Developer') {
-            return Colors.tealAccent;
-          } else if (dataGridCell.value == 'Manager') {
-            return Colors.blue[200];
-          }
-
-          return Colors.transparent;
-        }
-
-        TextStyle getTextStyle() {
-          if (dataGridCell.value == 'Developer') {
-            return TextStyle(fontStyle: FontStyle.italic);
-          } else if (dataGridCell.value == 'Manager') {
-            return TextStyle(fontStyle: FontStyle.italic);
-          }
-          return null;
-        }
-
-        return Container(
-            color: getColor(),
-            alignment: Alignment.centerLeft,
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            child: Text(
-              dataGridCell.value.toString(),
-              overflow: TextOverflow.ellipsis,
-              style: getTextStyle(),
-            ));
-      } else {
-        return Container(
-            alignment: Alignment.centerLeft,
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            child: Text(
-              dataGridCell.value.toString(),
-              overflow: TextOverflow.ellipsis,
-            ));
-      }
+            style: getTextStyle(),
+          ));
     }).toList());
   }
 }
@@ -185,49 +173,32 @@ class EmployeeDataSource extends DataGridSource {
   List<DataGridRow> get rows => dataGridRows;
 
   @override
-  DataGridRowAdapter buildRow(DataGridRow row) {
+  DataGridRowAdapter? buildRow(DataGridRow row) {
     return DataGridRowAdapter(
         cells: row.getCells().map<Widget>((dataGridCell) {
       if (dataGridCell.columnName == 'id') {
         final int index = dataGridRows.indexOf(row);
-        if (index % 2 != 0) {
-          return Container(
-              color: Colors.blueAccent,
-              alignment: Alignment.centerRight,
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              child: Text(
-                dataGridCell.value.toString(),
-                overflow: TextOverflow.ellipsis,
-                style: TextStyle(fontStyle: FontStyle.italic),
-              ));
-        } else {
-          return Container(
+        return Container(
+            color: (index % 2 != 0) ? Colors.blueAccent : Colors.transparent,
             alignment: Alignment.centerRight,
             padding: EdgeInsets.symmetric(horizontal: 16.0),
             child: Text(
               dataGridCell.value.toString(),
               overflow: TextOverflow.ellipsis,
-            ),
-          );
-        }
-      } else if (dataGridCell.columnName == 'salary') {
-        return Container(
-          alignment: Alignment.centerRight,
+              style: (index % 2 != 0)
+                  ? TextStyle(fontStyle: FontStyle.italic)
+                  : null,
+            ));
+      }
+      return Container(
+          alignment: (dataGridCell.columnName == 'salary')
+              ? Alignment.centerRight
+              : Alignment.centerLeft,
           padding: EdgeInsets.symmetric(horizontal: 16.0),
           child: Text(
             dataGridCell.value.toString(),
             overflow: TextOverflow.ellipsis,
-          ),
-        );
-      } else {
-        return Container(
-            alignment: Alignment.centerLeft,
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            child: Text(
-              dataGridCell.value.toString(),
-              overflow: TextOverflow.ellipsis,
-            ));
-      }
+          ));
     }).toList());
   }
 }
@@ -272,15 +243,15 @@ class EmployeeDataSource extends DataGridSource {
     Color getRowBackgroundColor() {
       final int salary = row.getCells()[3].value;
       if (salary >= 10000 && salary < 15000) {
-        return Colors.blue[300];
+        return Colors.blue[300]!;
       } else if (salary <= 15000) {
-        return Colors.orange[300];
+        return Colors.orange[300]!;
       }
 
       return Colors.transparent;
     }
 
-    TextStyle getTextStyle() {
+    TextStyle? getTextStyle() {
       final int salary = row.getCells()[3].value;
       if (salary >= 10000 && salary < 15000) {
         return TextStyle(color: Colors.white);
@@ -294,27 +265,17 @@ class EmployeeDataSource extends DataGridSource {
     return DataGridRowAdapter(
         color: getRowBackgroundColor(),
         cells: row.getCells().map<Widget>((dataGridCell) {
-          if (dataGridCell.columnName == 'id' ||
-              dataGridCell.columnName == 'salary') {
-            return Container(
-              alignment: Alignment.centerRight,
+          return Container(
+              alignment: (dataGridCell.columnName == 'id' ||
+                      dataGridCell.columnName == 'salary')
+                  ? Alignment.centerRight
+                  : Alignment.centerLeft,
               padding: EdgeInsets.symmetric(horizontal: 16.0),
               child: Text(
                 dataGridCell.value.toString(),
                 overflow: TextOverflow.ellipsis,
                 style: getTextStyle(),
-              ),
-            );
-          } else {
-            return Container(
-                alignment: Alignment.centerLeft,
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                child: Text(
-                  dataGridCell.value.toString(),
-                  overflow: TextOverflow.ellipsis,
-                  style: getTextStyle(),
-                ));
-          }
+              ));
         }).toList());
   }
 }
@@ -353,37 +314,29 @@ class EmployeeDataSource extends DataGridSource {
   List<DataGridRow> get rows => dataGridRows;
 
   @override
-  DataGridRowAdapter buildRow(DataGridRow row) {
+  DataGridRowAdapter? buildRow(DataGridRow row) {
     Color getRowBackgroundColor() {
       final int index = dataGridRows.indexOf(row);
       if (index % 2 != 0) {
-        return Colors.lightGreen[300];
+        return Colors.lightGreen[300]!;
       }
-      return null;
+
+      return Colors.transparent;
     }
 
     return DataGridRowAdapter(
         color: getRowBackgroundColor(),
         cells: row.getCells().map<Widget>((dataGridCell) {
-          if (dataGridCell.columnName == 'id' ||
-              dataGridCell.columnName == 'salary') {
-            return Container(
-              alignment: Alignment.centerRight,
+          return Container(
+              alignment: (dataGridCell.columnName == 'id' ||
+                      dataGridCell.columnName == 'salary')
+                  ? Alignment.centerRight
+                  : Alignment.centerLeft,
               padding: EdgeInsets.symmetric(horizontal: 16.0),
               child: Text(
                 dataGridCell.value.toString(),
                 overflow: TextOverflow.ellipsis,
-              ),
-            );
-          } else {
-            return Container(
-                alignment: Alignment.centerLeft,
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                child: Text(
-                  dataGridCell.value.toString(),
-                  overflow: TextOverflow.ellipsis,
-                ));
-          }
+              ));
         }).toList());
   }
 }
