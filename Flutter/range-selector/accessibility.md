@@ -11,6 +11,8 @@ documentation: ug
 
 The [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html) can easily be accessed by screen readers. The default reading format for start thumb is `The start value is ${values.start}` and end thumb is `the end value is ${values.end}`. You can change the reading format using the [`semanticFormatterCallback`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/semanticFormatterCallback.html) property.
 
+You can adjust the value of each thumb by tapping it and then pressing the volume buttons to increase or decrease the value.
+
 {% tabs %}
 {% highlight Dart %}
 
