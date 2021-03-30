@@ -7,7 +7,7 @@ control: SfLinearGauge
 documentation: ug
 ---
 
-# Flutter Linear Gauge interaction
+# Flutter Linear Gauge Interaction
 
 The shape and widget marker pointers in a Linear Gauge can be moved from one value to another with swipe or drag gestures.
 

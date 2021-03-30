@@ -59,7 +59,7 @@ The linear axis track can be customized using the 'axisTrackStyle' property. The
 
 * `thickness` – Customizes the thickness of axis track.
 * `color` – Customizes the color of the axis track with a solid color.
-* `gradient` - Customizes the color of the axis track with a gradient color.
+* `gradient` - Customizes the color of the axis track with a gradient.
 * `borderWidth` - Customizes the border width of axis track.
 * `borderColor` - Customizes the border color of axis track.
 
@@ -84,7 +84,7 @@ The below code snippet demonstrates customizing the thickness and color.
 
 ![Change axis track thickness in linear gauge](images/axis/axis_thickness.png)
 
-## Apply gradient colors
+## Apply gradient
 
 The `color` property of `axisTrackStyle` allows to set a solid color, while the `gradient` property of `axisTrackStyle` allows to apply linear-gradient to axis track.
 
