@@ -47,7 +47,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![loadMoreWidgetBuilder](images/load-more/loadmore.jpg)
+![loadMoreWidgetBuilder](images/load-more/loadmore.gif)
 
 >**NOTE**
 * This callback will be called after the `onViewChanged` callback.

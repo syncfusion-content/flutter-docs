@@ -54,7 +54,7 @@ Widget build(BuildContext context) {
 
 ### Disabled timeslot improvement
 
-![minDate and maxDate](images/date-navigation/min_maxDate.jpg) 
+![minDate and maxDate](images/date-navigation/min-maxDate.png) 
 
 >**NOTE**
 * The timeslots falls beyond the minimum/maximum date time will be disabled, and user interaction were restricted in timeslot views.
