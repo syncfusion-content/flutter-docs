@@ -9,62 +9,138 @@ documentation: ug
 
 # Conditional Styling in Flutter DataGrid
 
-The [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) allows to customize the style of the individual cells and rows based on the requirements. It can be customized in the following ways:
-
-* Using [onQueryCellStyle](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onQueryCellStyle.html) Callback
-* Using [onQueryRowStyle](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onQueryRowStyle.html) Callback
-
-All the style classes such as [DataGridCellStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/DataGridCellStyle-class.html), [DataGridHeaderCellStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/DataGridHeaderCellStyle-class.html) related to `SfDataGrid` are available in the [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) package. To access those classes, import the below file in your application,
-
-{% tabs %}
-{% highlight Dart %} 
-
-import 'package:syncfusion_flutter_core/theme.dart';
-
-{% endhighlight %}
-{% endtabs %}
+The [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) allows to customize the style of the individual cells and rows based on the requirements. You can customize your widget in the `DataGridSource.buildRow` method with the help of `DataGridRowAdapter`.
 
 ## Cells
 
 ### Styling based on content
 
-The appearance of the cells in `SfDataGrid` can be customized conditionally based on the content by handling the `SfDataGrid.onQueryCellStyle` callback. 
-Callback requires [QueryCellStyleArgs](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/QueryCellStyleArgs-class.html) as parameter which provides all the required options to know about the cell.
+The appearance of the cells in `SfDataGrid` can be customized conditionally based on the content and set your widget to the `DataGridRowAdapter.cells`.
 
 {% tabs %}
 {% highlight Dart %} 
 
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
-import 'package:syncfusion_flutter_core/theme.dart';
 
 @override
 Widget build(BuildContext context) {
   return Scaffold(
     body: SfDataGrid(
-        source: _employeeDataSource,
-        columns: <GridColumn>[
-          GridNumericColumn(mappingName: 'id', headerText: 'Order ID'),
-          GridTextColumn(mappingName: 'name', headerText: 'Name'),
-          GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-          GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
-        ],
-        onQueryCellStyle: (QueryCellStyleArgs args) {
-          if (args.column.mappingName == 'designation') {
-            if (args.cellValue == 'Developer') {
-              return DataGridCellStyle(
-                  textStyle: TextStyle(fontStyle: FontStyle.italic),
-                  backgroundColor: Colors.tealAccent);
-            } else if (args.cellValue == 'Manager') {
-              return DataGridCellStyle(
-                  textStyle: TextStyle(fontStyle: FontStyle.italic),
-                  backgroundColor: Colors.blue[200]);
-            }
-          }
-          return null;
-        }),
+      source: _employeeDataSource,
+      columnWidthMode: ColumnWidthMode.lastColumnFill,
+      columns: <GridColumn>[
+        GridTextColumn(
+          columnName: 'id',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'ID',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'name',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Name',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'designation',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Designation',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'salary',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'Salary',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+      ],
+    ),
   );
 }
-    
+
+class EmployeeDataSource extends DataGridSource {
+  EmployeeDataSource() {
+    dataGridRows = employees
+        .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
+              DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
+              DataGridCell<String>(columnName: 'name', value: dataGridRow.name),
+              DataGridCell<String>(
+                  columnName: 'designation', value: dataGridRow.designation),
+              DataGridCell<int>(
+                  columnName: 'salary', value: dataGridRow.salary),
+            ]))
+        .toList();
+  }
+
+  List<DataGridRow> dataGridRows;
+
+  @override
+  List<DataGridRow> get rows => dataGridRows;
+
+  @override
+  DataGridRowAdapter? buildRow(DataGridRow row) {
+    return DataGridRowAdapter(
+        cells: row.getCells().map<Widget>((dataGridCell) {
+      Color getColor() {
+        if (dataGridCell.columnName == 'designation') {
+          if (dataGridCell.value == 'Developer') {
+            return Colors.tealAccent;
+          } else if (dataGridCell.value == 'Manager') {
+            return Colors.blue[200]!;
+          }
+        }
+
+        return Colors.transparent;
+      }
+
+      TextStyle? getTextStyle() {
+        if (dataGridCell.columnName == 'designation') {
+          if (dataGridCell.value == 'Developer') {
+            return TextStyle(fontStyle: FontStyle.italic);
+          } else if (dataGridCell.value == 'Manager') {
+            return TextStyle(fontStyle: FontStyle.italic);
+          }
+        }
+
+        return null;
+      }
+
+      return Container(
+          color: getColor(),
+          alignment: (dataGridCell.columnName == 'id' ||
+                  dataGridCell.columnName == 'salary')
+              ? Alignment.centerRight
+              : Alignment.centerLeft,
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
+          child: Text(
+            dataGridCell.value.toString(),
+            overflow: TextOverflow.ellipsis,
+            style: getTextStyle(),
+          ));
+    }).toList());
+  }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -72,38 +148,61 @@ Widget build(BuildContext context) {
 
 ### Styling alternate cells
 
-The appearance of the alternating cells in a column can be customized conditionally by using the `SfDataGrid.onQueryCellStyle` callback.
+The appearance of the alternating cells in a column can be customized conditionally by using the `DataGridSource.buildRow` method.
 
 {% tabs %}
 {% highlight Dart %} 
 
-import 'package:syncfusion_flutter_datagrid/datagrid.dart';
-import 'package:syncfusion_flutter_core/theme.dart';
+class EmployeeDataSource extends DataGridSource {
+  EmployeeDataSource() {
+    dataGridRows = employees
+        .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
+              DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
+              DataGridCell<String>(columnName: 'name', value: dataGridRow.name),
+              DataGridCell<String>(
+                  columnName: 'designation', value: dataGridRow.designation),
+              DataGridCell<int>(
+                  columnName: 'salary', value: dataGridRow.salary),
+            ]))
+        .toList();
+  }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfDataGrid(
-        source: _employeeDataSource,
-        columns: <GridColumn>[
-          GridNumericColumn(mappingName: 'id', headerText: 'Order ID'),
-          GridTextColumn(mappingName: 'name', headerText: 'Name'),
-          GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-          GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
-        ],
-        onQueryCellStyle: (QueryCellStyleArgs args) {
-          if (args.column.mappingName == 'id') {
-            if (args.rowIndex % 2 != 0) {
-              return DataGridCellStyle(
-                  textStyle: TextStyle(fontStyle: FontStyle.italic),
-                  backgroundColor: Colors.blueAccent);
-            }
-          }
-          return null;
-        }),
-  );
+  List<DataGridRow> dataGridRows;
+
+  @override
+  List<DataGridRow> get rows => dataGridRows;
+
+  @override
+  DataGridRowAdapter? buildRow(DataGridRow row) {
+    return DataGridRowAdapter(
+        cells: row.getCells().map<Widget>((dataGridCell) {
+      if (dataGridCell.columnName == 'id') {
+        final int index = dataGridRows.indexOf(row);
+        return Container(
+            color: (index % 2 != 0) ? Colors.blueAccent : Colors.transparent,
+            alignment: Alignment.centerRight,
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            child: Text(
+              dataGridCell.value.toString(),
+              overflow: TextOverflow.ellipsis,
+              style: (index % 2 != 0)
+                  ? TextStyle(fontStyle: FontStyle.italic)
+                  : null,
+            ));
+      }
+      return Container(
+          alignment: (dataGridCell.columnName == 'salary')
+              ? Alignment.centerRight
+              : Alignment.centerLeft,
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
+          child: Text(
+            dataGridCell.value.toString(),
+            overflow: TextOverflow.ellipsis,
+          ));
+    }).toList());
+  }
 }
-    
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -113,42 +212,74 @@ Widget build(BuildContext context) {
 
 ### Styling based on content
 
-The appearance of the rows in `SfDataGrid` can be customized conditionally based on the content by handling the `SfDataGrid.onQueryRowStyle` callback.
-Callback requires [QueryRowStyleArgs](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/QueryRowStyleArgs-class.html) as parameter which provides all the required options to know about the cell.
+The appearance of the rows in `SfDataGrid` can be customized conditionally based on the content in `DataGridRowAdapter.color`.
 
 {% tabs %}
 {% highlight Dart %} 
 
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
-import 'package:syncfusion_flutter_core/theme.dart';
       
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfDataGrid(
-        source: _employeeDataSource,
-        columns: <GridColumn>[
-          GridNumericColumn(mappingName: 'id', headerText: 'Order ID'),
-          GridTextColumn(mappingName: 'name', headerText: 'Name'),
-          GridTextColumn(mappingName: 'designation', headerText: 'Designation'),
-          GridNumericColumn(mappingName: 'salary', headerText: 'Salary')
-        ],
-        onQueryRowStyle: (QueryRowStyleArgs args) {
-          Employee employee = _employeeCollection[args.rowIndex];
-          if (employee.salary >= 10000 && employee.salary < 15000) {
-            return DataGridCellStyle(
-                textStyle: TextStyle(color: Colors.white),
-                backgroundColor: Colors.blue[300]);
-          } else if (employee.salary <= 15000) {
-            return DataGridCellStyle(
-                textStyle: TextStyle(color: Colors.white),
-                backgroundColor: Colors.orange[300]);
-          }
-          return null;
-        }),
-  );
+class EmployeeDataSource extends DataGridSource {
+  EmployeeDataSource() {
+    dataGridRows = employees
+        .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
+              DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
+              DataGridCell<String>(columnName: 'name', value: dataGridRow.name),
+              DataGridCell<String>(
+                  columnName: 'designation', value: dataGridRow.designation),
+              DataGridCell<int>(
+                  columnName: 'salary', value: dataGridRow.salary),
+            ]))
+        .toList();
+  }
+
+  List<DataGridRow> dataGridRows;
+
+  @override
+  List<DataGridRow> get rows => dataGridRows;
+
+  @override
+  DataGridRowAdapter buildRow(DataGridRow row) {
+    Color getRowBackgroundColor() {
+      final int salary = row.getCells()[3].value;
+      if (salary >= 10000 && salary < 15000) {
+        return Colors.blue[300]!;
+      } else if (salary <= 15000) {
+        return Colors.orange[300]!;
+      }
+
+      return Colors.transparent;
+    }
+
+    TextStyle? getTextStyle() {
+      final int salary = row.getCells()[3].value;
+      if (salary >= 10000 && salary < 15000) {
+        return TextStyle(color: Colors.white);
+      } else if (salary <= 15000) {
+        return TextStyle(color: Colors.white);
+      }
+
+      return null;
+    }
+
+    return DataGridRowAdapter(
+        color: getRowBackgroundColor(),
+        cells: row.getCells().map<Widget>((dataGridCell) {
+          return Container(
+              alignment: (dataGridCell.columnName == 'id' ||
+                      dataGridCell.columnName == 'salary')
+                  ? Alignment.centerRight
+                  : Alignment.centerLeft,
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              child: Text(
+                dataGridCell.value.toString(),
+                overflow: TextOverflow.ellipsis,
+                style: getTextStyle(),
+              ));
+        }).toList());
+  }
 }
-    
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -156,32 +287,58 @@ Widget build(BuildContext context) {
 
 ### Styling alternate rows
 
-The appearance of the alternating rows in `SfDataGrid` can be customized by using the `SfDataGrid.onQueryRowStyle` callback.
+The appearance of the alternating rows in `SfDataGrid` can be customized by using the `DataGridRowAdapter.color`.
 
 {% tabs %}
 {% highlight Dart %} 
 
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
-import 'package:syncfusion_flutter_core/theme.dart';
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: SfDataGrid(
-        source: _employeeDataSource,
-        columns: <GridColumn>[
-          GridNumericColumn(mappingName: 'id', headerText: 'Order ID'),
-          GridTextColumn(mappingName: 'name', headerText: 'Name'),
-          GridNumericColumn(mappingName: 'salary', headerText: 'Salary'),
-          GridTextColumn(mappingName: 'designation', headerText: 'Designation')
-        ],
-        onQueryRowStyle: (QueryRowStyleArgs args) {
-          if (args.rowIndex % 2 != 0) {
-            return DataGridCellStyle(backgroundColor: Colors.lightGreen[300]);
-          }
-          return null;
-        }),
-  );
+class EmployeeDataSource extends DataGridSource {
+  EmployeeDataSource() {
+    dataGridRows = employees
+        .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
+              DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
+              DataGridCell<String>(columnName: 'name', value: dataGridRow.name),
+              DataGridCell<String>(
+                  columnName: 'designation', value: dataGridRow.designation),
+              DataGridCell<int>(
+                  columnName: 'salary', value: dataGridRow.salary),
+            ]))
+        .toList();
+  }
+
+  List<DataGridRow> dataGridRows;
+
+  @override
+  List<DataGridRow> get rows => dataGridRows;
+
+  @override
+  DataGridRowAdapter? buildRow(DataGridRow row) {
+    Color getRowBackgroundColor() {
+      final int index = dataGridRows.indexOf(row);
+      if (index % 2 != 0) {
+        return Colors.lightGreen[300]!;
+      }
+
+      return Colors.transparent;
+    }
+
+    return DataGridRowAdapter(
+        color: getRowBackgroundColor(),
+        cells: row.getCells().map<Widget>((dataGridCell) {
+          return Container(
+              alignment: (dataGridCell.columnName == 'id' ||
+                      dataGridCell.columnName == 'salary')
+                  ? Alignment.centerRight
+                  : Alignment.centerLeft,
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              child: Text(
+                dataGridCell.value.toString(),
+                overflow: TextOverflow.ellipsis,
+              ));
+        }).toList());
+  }
 }
 
 {% endhighlight %}

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Public API | Flutter | Syncfusion
+title: Flutter Widgets API Documentation | Syncfusion
 description: The reference and a summary with a sample code snippet for public API's available in Syncfusion Flutter widgets.
 platform: flutter
 control: API
@@ -106,6 +106,14 @@ This page helps to navigate to the public API's available in the Syncfusion Flut
         </td>
         <td>
             <a href="https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html">Link</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Treemap
+        </td>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap-class.html">Link</a>
         </td>
     </tr>
     <tr>

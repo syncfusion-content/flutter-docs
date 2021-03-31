@@ -402,13 +402,21 @@ Also refer [`technical indicators event`](https://pub.dev/documentation/syncfusi
 The chart will display the segment information through the tooltip. It is used to show information about the segment when you tap on the segment. The technical indicator tooltip has the same [`ActivationMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/activationMode.html)  that has been given in the [`TooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior-class.html)  of the series.
 
 {% highlight dart %}
-
+   
+   TooltipBehavior _tooltipBehavior;
+    
     @override
+    void initState(){
+      _tooltipBehavior = TooltipBehavior(            enable: true, shared: true);
+    super.initState();
+    }
+
+   @override
     Widget build(BuildContext context){
       return Scaffold(
         body: Center(
           child: SfCartesianChart(
-            tooltipBehavior: TooltipBehavior(enable: true, shared: true),
+            tooltipBehavior: _tooltipBehavior,
             indicators: <TechnicalIndicators<dynamic, dynamic>>[
               ATRIndicator<dynamic, dynamic>(
                   seriesName: 'HiloOpenClose',

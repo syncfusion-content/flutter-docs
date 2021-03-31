@@ -18,7 +18,13 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 {% highlight dart %} 
 
     SfCircularChart chart;
-    TooltipBehavior tooltip;
+    TooltipBehavior _tooltipBehavior;
+
+    @override
+    void initState(){
+      _tooltipBehavior = TooltipBehavior(            enable: true);
+    super.initState();
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -28,11 +34,9 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
         ChartData(20, 34),
         // Add the required data
     ];
-    
-    tooltip = TooltipBehavior (enable: true);
 
     chart = SfCircularChart(
-      tooltipBehavior: tooltip,
+      tooltipBehavior: _tooltipBehavior,
         series: <CircularSeries>[
           ColumnSeries<ChartData, double>(
             enableTooltip: true,
@@ -77,7 +81,13 @@ The below mentioned arguments are given to the [`showByIndex`](https://pub.dev/d
 {% highlight dart %} 
 
     SfCircularChart chart;
-    TooltipBehavior tooltip;
+    TooltipBehavior _tooltipBehavior;
+
+    @override
+    void initState(){
+      _tooltipBehavior = TooltipBehavior(            enable: true);
+    super.initState();
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -87,11 +97,9 @@ The below mentioned arguments are given to the [`showByIndex`](https://pub.dev/d
         ChartData(20, 34),
         // Add the required data
     ];
-    
-    tooltip = TooltipBehavior (enable: true);
 
     chart = SfCircularChart(
-      tooltipBehavior: tooltip,
+      tooltipBehavior: _tooltipBehavior,
         series: <CircularSeries>[
           ColumnSeries<ChartData, double>(
             enableTooltip: true,
@@ -129,7 +137,13 @@ x & y - logical pixel values to position the tooltip.
 {% highlight dart %} 
 
     SfCircularChart chart;
-    TooltipBehavior tooltip;
+    TooltipBehavior _tooltipBehavior;
+
+    @override
+    void initState(){
+      _tooltipBehavior = TooltipBehavior(            enable: true);
+    super.initState();
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -139,11 +153,9 @@ x & y - logical pixel values to position the tooltip.
         ChartData(20, 34),
         // Add the required data
     ];
-    
-    tooltip = TooltipBehavior (enable: true);
 
     chart = SfCircularChart(
-      tooltipBehavior: tooltip,
+      tooltipBehavior: _tooltipBehavior,
         series: <CircularSeries>[
           ColumnSeries<ChartData, double>(
             enableTooltip: true,
@@ -178,7 +190,13 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 {% highlight dart %} 
 
     SfCircularChart chart;
-    TooltipBehavior tooltip;
+    TooltipBehavior _tooltipBehavior;
+
+    @override
+    void initState(){
+      _tooltipBehavior = TooltipBehavior(            enable: true);
+    super.initState();
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -187,11 +205,9 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
         ChartData(20, 34)
     // Add the required data  
     ];
-    
-    tooltip = TooltipBehavior (enable: true);
 
     chart = SfCircularChart(
-      tooltipBehavior: tooltip,
+      tooltipBehavior: _tooltipBehavior,
       series: <CircularSeries>[
         ColumnSeries<ChartData, double>(
             enableTooltip: true,
@@ -236,7 +252,13 @@ N> The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter
 {% highlight dart %}
 
     SfCircularChart chart;
-    SelectionBehavior selection;
+    SelectionBehavior _selectionBehavior;
+
+    @override
+    void initState(){
+      _selectionBehavior = TooltipBehavior(            enable: true);
+    super.initState();
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -246,16 +268,13 @@ N> The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter
       ChartData(20, 34)
       // Add the required data
     ];
-
-    selection = SelectionBehavior(enable: true);
-    
     chart = SfCircularChart(
       series: <CircularSeries>[
         PieSeries<ChartData, double>(
             dataSource: chartData,
             xValueMapper: (ChartData data, _) => data.x,
             yValueMapper: (ChartData data, _) => data.y,
-            selectionBehavior: selection
+            selectionBehavior: _selectionBehavior
         )
       ]
     );

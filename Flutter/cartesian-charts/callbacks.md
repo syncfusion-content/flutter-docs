@@ -26,12 +26,20 @@ Triggers when the tooltip is rendering. Here, you can customize the text, header
 
  {% highlight dart %}
 
+    TooltipBehavior _tooltipBehavior;
+
+    @override
+    void initState(){
+      _tooltipBehavior =  TooltipBehavior(enable: true);
+      super.initState(); 
+    }
+
      @override
      Widget build(BuildContext context) {
        return Scaffold(
          body: Center(
            child: SfCartesianChart(
-             tooltipBehavior: TooltipBehavior(enable: true),
+             tooltipBehavior: _tooltipBehavior,
              onTooltipRender: (TooltipArgs args) {
                args.text = 'Customized Text';
              }
@@ -220,6 +228,16 @@ Triggers while the crosshair position is changing. Here, you can customize the t
 * [`lineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairRenderArgs/lineColor.html) - used to get and set the color of the crosshair line.
 
 {% highlight dart %}
+    
+    CrosshairBehavior _crosshairBehavior;
+
+    @override
+    void initState(){
+      _crosshairBehavior = CrosshairBehavior(
+            enable: true
+          );
+      super.initState(); 
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -230,9 +248,7 @@ Triggers while the crosshair position is changing. Here, you can customize the t
           onCrosshairPositionChanging: (CrosshairRenderArgs args){
             args.text = 'crosshair';
           },
-          crosshairBehavior: CrosshairBehavior(
-            enable: true
-          )
+          crosshairBehavior: _crosshairBehavior
         )
       );
     }
@@ -250,6 +266,19 @@ Triggers when the zooming action is in progress. The [`onZooming`](https://pub.d
 * [`previousZoomFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/previousZoomFactor.html) - specifies the previous zoom factor of an axis.
 
 {% highlight dart %}
+    
+    ZoomPanBehavior _zoomPanBehavior;
+
+    @override
+    void initState(){
+      _zoomPanBehavior = ZoomPanBehavior(
+            enableDoubleTapZooming: true,
+            enablePanning: true,
+            enablePinching: true,
+            enableSelectionZooming: true
+          );
+      super.initState(); 
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -257,12 +286,7 @@ Triggers when the zooming action is in progress. The [`onZooming`](https://pub.d
     return Scaffold(
       body: Center(
         child: SfCartesianChart(
-          zoomPanBehavior: ZoomPanBehavior(
-            enableDoubleTapZooming: true,
-            enablePanning: true,
-            enablePinching: true,
-            enableSelectionZooming: true
-          ),
+          zoomPanBehavior: _zoomPanBehavior,
           onZooming: (ZoomPanArgs args){
               print(args.currentZoomFactor);
               print(args.currentZoomPosition);
@@ -284,6 +308,19 @@ Triggers when zooming action begins. The [`onZoomStart`](https://pub.dev/documen
 * [`previousZoomFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/previousZoomFactor.html) - specifies the previous zoom factor of an axis.
 
 {% highlight dart %}
+    
+    ZoomPanBehavior _zoomPanBehavior;
+
+    @override
+    void initState(){
+      _zoomPanBehavior = ZoomPanBehavior(
+            enableDoubleTapZooming: true,
+            enablePanning: true,
+            enablePinching: true,
+            enableSelectionZooming: true
+          );
+      super.initState(); 
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -291,12 +328,7 @@ Triggers when zooming action begins. The [`onZoomStart`](https://pub.dev/documen
     return Scaffold(
       body: Center(
         child: SfCartesianChart(
-          zoomPanBehavior: ZoomPanBehavior(
-            enableDoubleTapZooming: true,
-            enablePanning: true,
-            enablePinching: true,
-            enableSelectionZooming: true
-          ),
+          zoomPanBehavior: _zoomPanBehavior,
           onZoomStart: (ZoomPanArgs args){
               print(args.currentZoomFactor);
               print(args.currentZoomPosition);
@@ -318,6 +350,19 @@ Triggers when the zooming action is completed. The [`onZoomEnd`](https://pub.dev
 * [`previousZoomFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/previousZoomFactor.html) - specifies the previous zoom factor of an axis.
 
 {% highlight dart %}
+    
+    ZoomPanBehavior _zoomPanBehavior;
+
+    @override
+    void initState(){
+      _zoomPanBehavior = ZoomPanBehavior(
+            enableDoubleTapZooming: true,
+            enablePanning: true,
+            enablePinching: true,
+            enableSelectionZooming: true
+          );
+      super.initState(); 
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -325,12 +370,7 @@ Triggers when the zooming action is completed. The [`onZoomEnd`](https://pub.dev
     return Scaffold(
       body: Center(
         child: SfCartesianChart(
-          zoomPanBehavior: ZoomPanBehavior(
-            enableDoubleTapZooming: true,
-            enablePanning: true,
-            enablePinching: true,
-            enableSelectionZooming: true
-          ),
+          zoomPanBehavior: _zoomPanBehavior,
           onZoomEnd: (ZoomPanArgs args){
               print(args.currentZoomFactor);
               print(args.currentZoomPosition);
@@ -352,6 +392,19 @@ Triggers when zoomed state is reset. The  [`onZoomReset`](https://pub.dev/docume
 * [`previousZoomFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/previousZoomFactor.html) - specifies the previous zoom factor of an axis.
 
 {% highlight dart %}
+    
+    ZoomPanBehavior _zoomPanBehavior;
+
+    @override
+    void initState(){
+      _zoomPanBehavior = ZoomPanBehavior(
+            enableDoubleTapZooming: true,
+            enablePanning: true,
+            enablePinching: true,
+            enableSelectionZooming: true
+          );
+      super.initState(); 
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -359,12 +412,7 @@ Triggers when zoomed state is reset. The  [`onZoomReset`](https://pub.dev/docume
     return Scaffold(
       body: Center(
         child: SfCartesianChart(
-          zoomPanBehavior: ZoomPanBehavior(
-            enableDoubleTapZooming: true,
-            enablePanning: true,
-            enablePinching: true,
-            enableSelectionZooming: true
-          ),
+          zoomPanBehavior: _zoomPanBehavior,
           onZoomReset: (ZoomPanArgs args){
               print(args.currentZoomFactor);
               print(args.currentZoomPosition);
@@ -754,7 +802,37 @@ N> This callback will not be called, when the builder is specified for data labe
 
 {% endhighlight %}
 
+## onPlotAreaSwipe
 
+Triggers while swiping on the plot area. Whenever the swiping happens on the plot area (the series rendering area), [`onPlotAreaSwipe`](~) callback will be called. It provides options to get the direction of swiping. If the chart is swiped from left to right direction, the direction is [`ChartSwipeDirection.start`](~) and if the swipe happens from right to left direction, the direction is [`ChartSwipeDirection.end`](~). Using this callback, the user will be able to achieve pagination functionality (i.e., on swiping over chart area, next set of data points can be loaded to the chart).
+
+{% highlight dart %}
+
+    Widget build(BuildContext context) {
+      return Container(
+         child: SfCartesianChart(
+            onPlotAreaSwipe:
+              (ChartSwipeDirection direction) =>
+                  performSwipe(direction),
+            series: <ChartSeries<SalesData, num>>[
+                 AreaSeries<SalesData, num>(
+                     dataSource: chartData,
+                 ),
+            ],
+         )
+      );
+    }
+
+    Widget performSwipe(ChartSwipeDirection direction) {
+        if (direction == ChartSwipeDirection.end) {
+            chartData.add(ChartSampleData(
+                x: chartData[chartData.length - 1].x + 1,
+                y: 10));
+            seriesController.updateDataSource(addedDataIndex: chartData.length - 1);
+      }
+    }
+
+{% endhighlight %}
 
 ## See Also
 

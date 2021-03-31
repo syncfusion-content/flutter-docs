@@ -61,23 +61,104 @@ The following code example shows how to freeze a column at left using `frozenCol
 
 @override
 Widget build(BuildContext context) {
-    return Scaffold(
-        body: SfDataGrid(
-        columns: [
-          GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-          GridNumericColumn(mappingName: 'productId', headerText: 'Product ID'),
-          GridTextColumn(mappingName: 'name', headerText: 'Customer Name'),
-          GridTextColumn(mappingName: 'product', headerText: 'Product'),
-          GridDateTimeColumn(
-              mappingName: 'orderDate', headerText: 'Order Date'),
-          GridNumericColumn(mappingName: 'quantity', headerText: 'Quantity'),
-          GridTextColumn(mappingName: 'city', headerText: 'City'),
-          GridNumericColumn(mappingName: 'unitPrice', headerText: 'Unit Price'),
-        ],
-        frozenColumnsCount: 1,
+  return Scaffold(
+    body: SfDataGrid(
+      source: _employeeDataSource,
+      frozenColumnsCount: 1,
+      columns: <GridColumn>[
+        GridTextColumn(
+          columnName: 'id',
+          label: Container(
+            alignment: Alignment.centerRight,
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            child: Text(
+              'ID',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
         ),
-    );
+        GridTextColumn(
+          columnName: 'productId',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'Product ID',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'name',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Customer Name',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'product',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Product',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'orderDate',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.center,
+            child: Text(
+              'Order Date',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'quantity',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'Quantity',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'city',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'City',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'unitPrice',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'Unit Price',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+      ],
+    ),
+  );
 }
+
 
 {% endhighlight %}
 {% endtabs %}
@@ -91,22 +172,102 @@ The following code example shows how to freeze a column at right using `footerFr
 
 @override
 Widget build(BuildContext context) {
-    return Scaffold(
-        body: SfDataGrid(
-        columns: [
-          GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-          GridNumericColumn(mappingName: 'productId', headerText: 'Product ID'),
-          GridTextColumn(mappingName: 'name', headerText: 'Customer Name'),
-          GridTextColumn(mappingName: 'product', headerText: 'Product'),
-          GridDateTimeColumn(
-              mappingName: 'orderDate', headerText: 'Order Date'),
-          GridNumericColumn(mappingName: 'quantity', headerText: 'Quantity'),
-          GridTextColumn(mappingName: 'city', headerText: 'City'),
-          GridNumericColumn(mappingName: 'unitPrice', headerText: 'Unit Price'),
-        ],
-        footerFrozenColumnsCount: 1,
+  return Scaffold(
+    body: SfDataGrid(
+      source: _employeeDataSource,
+      footerFrozenColumnsCount: 1,
+      columns: <GridColumn>[
+        GridTextColumn(
+          columnName: 'id',
+          label: Container(
+            alignment: Alignment.centerRight,
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            child: Text(
+              'ID',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
         ),
-    );
+        GridTextColumn(
+          columnName: 'productId',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'Product ID',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'name',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Customer Name',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'product',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Product',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'orderDate',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.center,
+            child: Text(
+              'Order Date',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'quantity',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'Quantity',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'city',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'City',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'unitPrice',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'Unit Price',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+      ],
+    ),
+  );
 }
 
 {% endhighlight %}
@@ -129,23 +290,104 @@ The following code example shows how to freeze a row at top using `frozenRowsCou
 
 @override
 Widget build(BuildContext context) {
-    return Scaffold(
-        body: SfDataGrid(
-        columns: [
-          GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-          GridNumericColumn(mappingName: 'productId', headerText: 'Product ID'),
-          GridTextColumn(mappingName: 'name', headerText: 'Customer Name'),
-          GridTextColumn(mappingName: 'product', headerText: 'Product'),
-          GridDateTimeColumn(
-              mappingName: 'orderDate', headerText: 'Order Date'),
-          GridNumericColumn(mappingName: 'quantity', headerText: 'Quantity'),
-          GridTextColumn(mappingName: 'city', headerText: 'City'),
-          GridNumericColumn(mappingName: 'unitPrice', headerText: 'Unit Price'),
-        ],
-        frozenRowsCount: 1,
+  return Scaffold(
+    body: SfDataGrid(
+      source: _employeeDataSource,
+      frozenRowsCount: 1,
+      columns: <GridColumn>[
+        GridTextColumn(
+          columnName: 'id',
+          label: Container(
+            alignment: Alignment.centerRight,
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            child: Text(
+              'ID',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
         ),
-    );
+        GridTextColumn(
+          columnName: 'productId',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'Product ID',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'name',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Customer Name',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'product',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Product',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'orderDate',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.center,
+            child: Text(
+              'Order Date',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'quantity',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'Quantity',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'city',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'City',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'unitPrice',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'Unit Price',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+      ],
+    ),
+  );
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -158,22 +400,102 @@ The following code example shows how to freeze a row at bottom using `footerFroz
 
 @override
 Widget build(BuildContext context) {
-    return Scaffold(
-        body: SfDataGrid(
-        columns: [
-          GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-          GridNumericColumn(mappingName: 'productId', headerText: 'Product ID'),
-          GridTextColumn(mappingName: 'name', headerText: 'Customer Name'),
-          GridTextColumn(mappingName: 'product', headerText: 'Product'),
-          GridDateTimeColumn(
-              mappingName: 'orderDate', headerText: 'Order Date'),
-          GridNumericColumn(mappingName: 'quantity', headerText: 'Quantity'),
-          GridTextColumn(mappingName: 'city', headerText: 'City'),
-          GridNumericColumn(mappingName: 'unitPrice', headerText: 'Unit Price'),
-        ],
-        footerFrozenRowsCount: 1,
+  return Scaffold(
+    body: SfDataGrid(
+      source: _employeeDataSource,
+      footerFrozenRowsCount: 1,
+      columns: <GridColumn>[
+        GridTextColumn(
+          columnName: 'id',
+          label: Container(
+            alignment: Alignment.centerRight,
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            child: Text(
+              'ID',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
         ),
-    );
+        GridTextColumn(
+          columnName: 'productId',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'Product ID',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'name',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Customer Name',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'product',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Product',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'orderDate',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.center,
+            child: Text(
+              'Order Date',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'quantity',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'Quantity',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'city',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'City',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridTextColumn(
+          columnName: 'unitPrice',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'Unit Price',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+      ],
+    ),
+  );
 }
 
 {% endhighlight %}
@@ -189,7 +511,7 @@ N> Header row is frozen by default and works regardless of the `frozenRowsCount`
 
 ## Appearance
 
-`SfDataGrid` allows to customize the appearance of the freeze pane through [SfDataGridTheme.SfDataGridThemeData](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData-class.html) property.
+`SfDataGrid` allows to customize the appearance of the freeze pane through [SfDataGridTheme.SfDataGridThemeData](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData-class.html) property. The frozen line will be shown only the `SfDataGridThemeData.frozenPaneElevation` property to 0.
 
 The freeze pane line and freeze pane width can be changed by [frozenPaneLineColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/frozenPaneLineColor.html) and [frozenPaneLineWidth](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/frozenPaneLineWidth.html). 
 
@@ -198,31 +520,344 @@ The freeze pane line and freeze pane width can be changed by [frozenPaneLineColo
 
 @override
 Widget build(BuildContext context) {
-    return Scaffold(
-        body: SfDataGridTheme(
-            data: SfDataGridThemeData(
-                frozenPaneLineColor: Colors.red, frozenPaneLineWidth: 1.5),
-            child: SfDataGrid(
-            columns: [
-              GridNumericColumn(mappingName: 'id', headerText: 'ID'),
-              GridNumericColumn(mappingName: 'productId', headerText: 'Product ID'),
-              GridTextColumn(mappingName: 'name', headerText: 'Customer Name'),
-              GridTextColumn(mappingName: 'product', headerText: 'Product'),
-              GridDateTimeColumn(
-                    mappingName: 'orderDate', headerText: 'Order Date'),
-              GridNumericColumn(mappingName: 'quantity', headerText: 'Quantity'),
-              GridTextColumn(mappingName: 'city', headerText: 'City'),
-              GridNumericColumn(mappingName: 'unitPrice', headerText: 'Unit Price'),
-            ],
-            frozenRowsCount: 1,
-            footerFrozenRowsCount: 1,
-            frozenColumnsCount: 1,
-            footerFrozenColumnsCount: 1,
-            )),
-    );
+  return Scaffold(
+    body: SfDataGridTheme(
+        data: SfDataGridThemeData(
+          frozenPaneElevation: 0.0,
+          frozenPaneLineColor: Colors.red, 
+          frozenPaneLineWidth: 1.5),
+        child: SfDataGrid(
+          source: _orderDataGridSource,
+          frozenRowsCount: 1,
+          footerFrozenRowsCount: 1,
+          frozenColumnsCount: 1,
+          footerFrozenColumnsCount: 1,
+          columns: <GridColumn>[
+            GridTextColumn(
+              columnName: 'id',
+              label: Container(
+                alignment: Alignment.centerRight,
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'productId',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Product ID',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'name',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Customer Name',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'product',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Product',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'orderDate',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.center,
+                child: Text(
+                  'Order Date',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'quantity',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Quantity',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'city',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'City',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'unitPrice',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Unit Price',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+          ],
+        )),
+  );
 }
 
 {% endhighlight %}
 {% endtabs %}
 
 ![flutter datagrid shows freeze pane customization](images/frozen-pane/flutter-datagrid-frozen-pane-customization.png)
+
+`SfDataGrid` allows to customize the appearance of the freeze pane elevation by using the `SfDataGridThemeData.frozenPaneElevation`. The default value of frozenPaneElevation is 5.0.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDataGridTheme(
+        data: SfDataGridThemeData(frozenPaneElevation: 7.0),
+        child: SfDataGrid(
+          source: _orderDataGridSource,
+          frozenRowsCount: 1,
+          frozenColumnsCount: 1,
+          columns: <GridColumn>[
+            GridTextColumn(
+              columnName: 'id',
+              label: Container(
+                alignment: Alignment.centerRight,
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'productId',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Product ID',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'name',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Customer Name',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'product',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Product',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'orderDate',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.center,
+                child: Text(
+                  'Order Date',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'quantity',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Quantity',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'city',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'City',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'unitPrice',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Unit Price',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+          ],
+        )),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![flutter datagrid shows customization of freeze pane elevation](images/frozen-pane/flutter-datagrid-customized-frozen-elevation.png)
+
+## Hide freeze pane elevation
+
+By default, elevation effect is applied to frozen panes. If you want to hide the freeze pane elevation and show only the frozen pane line, you can simply set `SfDataGridThemeData.frozenPaneElevation` property to 0. You can customize the appearance of frozen line by using `SfDataGridThemeData.frozenPaneLineColor` and `SfDataGridThemeData.frozenPaneLineWidth` properties.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDataGridTheme(
+        data: SfDataGridThemeData(
+          frozenPaneElevation: 0.0,
+          frozenPaneLineColor: Colors.red, 
+          frozenPaneLineWidth: 1.5),
+        child: SfDataGrid(
+          source: _orderDataGridSource,
+          frozenRowsCount: 1,
+          frozenColumnsCount: 1,
+          columns: <GridColumn>[
+            GridTextColumn(
+              columnName: 'id',
+              label: Container(
+                alignment: Alignment.centerRight,
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'productId',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Product ID',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'name',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Customer Name',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'product',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Product',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'orderDate',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.center,
+                child: Text(
+                  'Order Date',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'quantity',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Quantity',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'city',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'City',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            GridTextColumn(
+              columnName: 'unitPrice',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Unit Price',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+          ],
+        )),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![flutter datagrid shows how to hide the frozen pane elevation](images/frozen-pane/flutter-datagrid-hide-frozen-elevation.png)

@@ -12,6 +12,16 @@ documentation: ug
 The selection feature in chart let you to select a segment in a series or the series itself. This features allows you to select either individual or cluster of segments in the chart series.
 
 {% highlight dart %} 
+    
+    SelectionBehavior _selectionBehavior;
+
+    @override
+    void initState(){
+      _selectionBehavior = SelectionBehavior(
+            // Enables the selection
+            enable: true);
+    super.initState();
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -24,10 +34,7 @@ The selection feature in chart let you to select a segment in a series or the se
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
-                                selectionBehavior: SelectionBehavior(
-                                    // Enables the selection
-                                    enable: true
-                                )
+                                selectionBehavior: _selectionBehavior
                             )
                         ]
                     )
@@ -52,8 +59,20 @@ You can customize the segments using the below properties.
 * [`unselectedBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/unselectedBorderWidth.html) - used to change the stroke width of the unselected segment.
 * [`selectedOpacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/selectedOpacity.html) - used to control the transparency of the selected segment.
 * [`unselectedOpacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/unselectedOpacity.html) - used to control the transparency of the unselected segment.
+* [`selectionController`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/selectionController.html) - used to customize the minimum range of selected series or points.
 
 {% highlight dart %} 
+    
+    SelectionBehavior _selectionBehavior;
+
+    @override
+    void initState(){
+      _selectionBehavior = SelectionBehavior(
+             enable: true,
+             selectedColor: Colors.red,
+            unselectedColor: Colors.grey);
+    super.initState();
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -63,11 +82,7 @@ You can customize the segments using the below properties.
                     child: SfCircularChart(
                         series: <CircularSeries>[
                             PieSeries<ChartData, double>(
-                                selectionBehavior: SelectionBehavior(
-                                    enable: true,
-                                    selectedColor: Colors.red,
-                                    unselectedColor: Colors.grey
-                                )
+                                selectionBehavior: _selectionBehavior
                             )
                         ]
                     )
