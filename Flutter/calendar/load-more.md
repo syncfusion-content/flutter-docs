@@ -9,9 +9,9 @@ documentation: ug
 
 # Load more in flutter calendar
 
-SfCalendar provides support to display an interactive view when the calendar view changed, or schedule view reaches its start/end offset. You can use [loadMoreViewBuilder]() builder to display the view while load appointments in calendar.
+SfCalendar provides support to display an interactive view when the calendar view changed, or schedule view reaches its start/end offset. You can use [loadMoreViewBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/loadMoreWidgetBuilder.html) builder to display the view while load appointments in calendar.
 
-You should use the `loadMoreWidgetBuilder` method to load more appointments and then notify the calendar about the changes. The `loadMoreWidgetBuilder` can be called to load more appointments from this builder by using the [loadMoreAppointments]() function which is passed as a parameter to `loadMoreViewBuilder`.
+You should use the `loadMoreWidgetBuilder` method to load more appointments and then notify the calendar about the changes. The `loadMoreWidgetBuilder` can be called to load more appointments from this builder by using the [loadMoreAppointments](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/LoadMoreWidgetBuilder.html) function which is passed as a parameter to `loadMoreViewBuilder`.
 
 {% tabs %}
 {% highlight Dart %}

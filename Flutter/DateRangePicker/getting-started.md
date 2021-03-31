@@ -145,7 +145,7 @@ Widget build(BuildContext context) {
   
 ## Action buttons
 
-You can display action buttons at the bottom of the date range picker by using the [showActionButtons]() property of `SfDateRangePicker`. It allows to confirm and cancel the selection values of SfDateRangePicker.
+You can display action buttons at the bottom of the date range picker by using the [showActionButtons](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/showActionButtons.html) property of `SfDateRangePicker`. It allows to confirm and cancel the selection values of SfDateRangePicker.
 
 {% tabs %}
 {% highlight Dart %}

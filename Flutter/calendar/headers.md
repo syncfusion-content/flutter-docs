@@ -64,7 +64,7 @@ Widget build(BuildContext context) {
 
 ### Header date format
 
-You can customize the header date format by using the [headerDateFormat]() property of the SfCalendar. The `headerDateFormat` can be specified with a pattern String.
+You can customize the header date format by using the [headerDateFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/headerDateFormat.html) property of the SfCalendar. The `headerDateFormat` can be specified with a pattern String.
 
 {% tabs %}
 {% highlight Dart %}

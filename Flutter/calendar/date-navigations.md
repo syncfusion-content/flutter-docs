@@ -271,7 +271,7 @@ Widget build(BuildContext context) {
 
 ## View navigation mode
 
-You can customize the swipe interaction of SfCalendar by using the [viewNavigationMode](). You can allow or restrict to switching to previous or next views through the swipe interaction of SfCalendar. By default , the view navigation mode set as [viewNavigationMode.snap]().
+You can customize the swipe interaction of SfCalendar by using the [viewNavigationMode](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/viewNavigationMode.html). You can allow or restrict to switching to previous or next views through the swipe interaction of SfCalendar. By default , the view navigation mode set as [viewNavigationMode.snap](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ViewNavigationMode-class.html).
 
 {% tabs %}
 {% highlight Dart %}
