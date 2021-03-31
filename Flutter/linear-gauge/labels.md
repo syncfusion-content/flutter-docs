@@ -7,7 +7,7 @@ control: SfLinearGauge
 documentation: ug
 ---
 
-# Default Linear Gauge labels
+# Default Linear Gauge Labels
 
 The default style of axis labels are as below.
 
@@ -161,7 +161,7 @@ Widget build(BuildContext context) {
 
 ![Set maximum number of labels in axis track](images/axis-labels/axis_label_visibility.png)
 
-## Customize label text
+## Customize Label Text
 
 You can format or change the whole numeric label text using the labelFormatterCallback.
 
@@ -189,7 +189,7 @@ SfLinearGauge(
 
 ![Customize Label Text in axis track](images/axis-labels/custom_label_text.png)
 
-## Number format
+## Number Format
 
 The numberFormat property is used to format the numeric labels. The default value of numberFormat property is null.
 

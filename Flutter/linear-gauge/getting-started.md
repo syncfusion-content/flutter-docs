@@ -70,7 +70,7 @@ After the package has been imported, initialize the SfLinearGauge as a child of 
 
 ![Initialize linear gauge](images/getting-started/default_linear_gauge.png)
 
-## Add axis
+## Add Axis
 
 The Linear Gauge axis is a scale where a set of values can be plotted. You can specify the minimum and maximum values of axis using the minimum and maximum properties as demonstrated in the following code snippet.
 
@@ -91,7 +91,7 @@ The Linear Gauge axis is a scale where a set of values can be plotted. You can s
 
 ![Add axis to linear gauge](images/getting-started/add_axis.png)
 
-## Update orientation
+## Update Orientation
 
 As you could see in the above image, the default orientation of the Linear gauge is horizontal. But you can change it with the orientation property of Linear Gauge widget.
 
@@ -105,7 +105,7 @@ SfLinearGauge(
 
 ![Update Orientation of linear gauge](images/getting-started/vertical_orientation.png)
 
-## Add range
+## Add Range
 
 A range is a visual element that helps you quickly visualize where a range falls on the axis track. Multiple ranges with different styles can be added to a linear gauge. You can specify the start value, end value, and color for a range as demonstrated in the following code.  
 
@@ -124,7 +124,7 @@ A range is a visual element that helps you quickly visualize where a range falls
 
 ![Add ranges to a linear gauge](images/getting-started/add_ranges.png)
 
-## Add marker pointer
+## Add Marker Pointer
 
 The Linear Gauge supports two marker pointers - shape pointer and widget pointer. Shape pointer will have a default set of pre-build icons to point a value in an axis track, while the widget pointer facilitate using any Flutter widget to point a value in an axis track. 
 
@@ -161,7 +161,7 @@ The below code snippet demonstrates adding a widget pointer.
 
 ![Add widget pointer in linear gauge](images/getting-started/add_widget_pointer.png)
 
-## Add bar pointer
+## Add Bar Pointer
 
 The bar pointer in a linear gauge is used specify a value in an axis track, but unlike marker pointers which denotes that particular value,  the bar pointer draws a track staring from the minimum value of the axis to that particular value. 
 

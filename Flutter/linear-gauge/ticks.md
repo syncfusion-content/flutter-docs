@@ -7,13 +7,13 @@ control: SfLinearGauge
 documentation: ug
 ---
 
-# Default Linear Gauge ticks
+# Default Linear Gauge Ticks
 
 The default style of axis ticks are as below.
 
 ![Initialize linear gauge for axis](images/getting-started/default_linear_gauge.png)
 
-## Customize Linear Gauge ticks
+## Customize Linear Gauge Ticks
 
 There are two type of ticks in the Flutter Linear Gauge namely major and minor ticks. In the above image, the comparatively larger ticks are major ticks and the ticks between the major ticks are minor ticks. The major and minor tick of a `SfLinearGauge` can be customized using the `majorTickStyle` and `minorTickStyle` properties. The following properties can be customized for both the major and the minor ticks:
 * `color` – Allows to customize the tick color.
