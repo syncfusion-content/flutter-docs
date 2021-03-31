@@ -74,7 +74,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-N> On a desktop web browser, this `enableDoubleTapZooming` property will have no effect with mouse interaction.
+N> On a desktop web browser, this `enableDoubleTapZooming` property will have no effect on mouse interaction.
 
 ## Callbacks
 
