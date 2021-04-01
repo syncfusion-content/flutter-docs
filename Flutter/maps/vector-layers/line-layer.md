@@ -22,8 +22,8 @@ N> It is applicable for both the tile layer and shape layer.
 {% tabs %}
 {% highlight Dart %}
 
-MapShapeSource dataSource;
-List<DataModel> data;
+late MapShapeSource dataSource;
+late List<DataModel> data;
 
 @override
 void initState() {
@@ -80,7 +80,7 @@ class DataModel {
 {% tabs %}
 {% highlight Dart %}
 
-List<DataModel> data;
+late List<DataModel> data;
 
 @override
 void initState() {
@@ -136,8 +136,8 @@ You can apply the same color for all [`MapLine`](https://pub.dev/documentation/s
 {% tabs %}
 {% highlight Dart %}
 
-MapShapeSource dataSource;
-List<DataModel> data;
+late MapShapeSource dataSource;
+late List<DataModel> data;
 
 @override
 void initState() {
@@ -200,8 +200,8 @@ You can apply the same width for all [`MapLine`](https://pub.dev/documentation/s
 {% tabs %}
 {% highlight Dart %}
 
-MapShapeSource dataSource;
-List<DataModel> data;
+late MapShapeSource dataSource;
+late List<DataModel> data;
 
 @override
 void initState() {
@@ -266,8 +266,8 @@ A sequence of dash and gap will be rendered based on the values in this list. On
 {% tabs %}
 {% highlight Dart %}
 
-MapShapeSource dataSource;
-List<DataModel> data;
+late MapShapeSource dataSource;
+late List<DataModel> data;
 
 @override
 void initState() {
@@ -332,10 +332,10 @@ By default, there will not be any animation.
 {% tabs %}
 {% highlight Dart %}
 
-MapShapeSource dataSource;
-List<DataModel> data;
-AnimationController animationController;
-Animation animation;
+late MapShapeSource dataSource;
+late List<DataModel> data;
+late AnimationController animationController;
+late Animation animation;
 
 @override
 void initState() {
@@ -414,9 +414,9 @@ You can use the [`onTap`](https://pub.dev/documentation/syncfusion_flutter_maps/
 {% tabs %}
 {% highlight Dart %}
 
-MapShapeSource dataSource;
-List<DataModel> data;
-int selectedIndex;
+late MapShapeSource dataSource;
+late List<DataModel> data;
+late int selectedIndex;
 
 @override
 void initState() {
@@ -431,6 +431,8 @@ void initState() {
     'assets/world_map.json',
     shapeDataField: 'continent',
   );
+
+  selectedIndex = -1;
   super.initState();
 }
 
@@ -482,9 +484,9 @@ You can show additional information about the line drawn using the [`tooltipBuil
 {% tabs %}
 {% highlight Dart %}
 
-MapShapeSource dataSource;
-List<DataModel> data;
-Random random = Random();
+late MapShapeSource dataSource;
+late List<DataModel> data;
+late Random random;
 
 @override
 void initState() {
@@ -499,13 +501,15 @@ void initState() {
     'assets/world_map.json',
     shapeDataField: 'continent',
   );
+
+  random = Random();
   super.initState();
 }
 
 @override
 Widget build(BuildContext context) {
  final ThemeData themeData = Theme.of(context);
-    final TextStyle textStyle = themeData.textTheme.caption
+    final TextStyle textStyle = themeData.textTheme.caption!
         .copyWith(color: themeData.colorScheme.surface);
   return Scaffold(
     body: Padding(
@@ -575,9 +579,9 @@ You can customize the appearance of the tooltip.
 {% tabs %}
 {% highlight Dart %}
 
-MapShapeSource dataSource;
-List<DataModel> data;
-Random random = Random();
+late MapShapeSource dataSource;
+late List<DataModel> data;
+late Random random;
 
 @override
 void initState() {
@@ -592,6 +596,8 @@ void initState() {
     'assets/world_map.json',
     shapeDataField: 'continent',
   );
+
+  random = Random();
   super.initState();
 }
 
