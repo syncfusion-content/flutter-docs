@@ -81,6 +81,13 @@ The section contains the GitHub link for each widget’s code examples. This is 
 </tr>
 
 <tr>
+<td><p><a href="https://help.syncfusion.com/flutter/linear-gauge/overview">Linear gauge</a></p></td>
+<td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/linear_gauge">samples/gauge</a></p>
+</td>
+</tr>
+
+
+<tr>
 <td><p><a href="https://help.syncfusion.com/flutter/maps/overview">Maps</a></p></td>
 <td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/maps">samples/maps</a></p></td>
 </tr>
