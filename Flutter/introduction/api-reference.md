@@ -110,14 +110,6 @@ This page helps to navigate to the public API's available in the Syncfusion Flut
     </tr>
     <tr>
         <td>
-            Treemap
-        </td>
-        <td>
-            <a href="https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap-class.html">Link</a>
-        </td>
-    </tr>
-    <tr>
-        <td>
             Spark Charts
         </td>
         <td>
@@ -130,6 +122,14 @@ This page helps to navigate to the public API's available in the Syncfusion Flut
         </td>
         <td>
             <a href="https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad-class.html">Link</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Treemap
+        </td>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap-class.html">Link</a>
         </td>
     </tr>
     <tr>
