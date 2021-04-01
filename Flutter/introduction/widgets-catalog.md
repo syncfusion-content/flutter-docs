@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Flutter Widgets Catalog | Syncfusion
+title: Flutter Widgets Documentation | Syncfusion
 description: The list of available Flutter widgets and File Format (Excel and PDF) packages. |Syncfusion Flutter Widgets|
 platform: flutter
 control: flutter
@@ -79,6 +79,13 @@ This section provides the user guide link for each widget and its package link.
 <td><p><a href="https://pub.dev/packages/syncfusion_flutter_gauges">syncfusion_flutter_gauges</a></p>
 </td>
 </tr>
+
+<tr>
+<td><p><a href="https://help.syncfusion.com/flutter/linear-gauge/overview">Linear gauge</a></p></td>
+<td><p><a href="https://pub.dev/packages/syncfusion_flutter_gauges">syncfusion_flutter_gauges</a></p>
+</td>
+</tr>
+
 
 <tr>
 <td><p><a href="https://help.syncfusion.com/flutter/maps/overview">Maps</a></p></td>
