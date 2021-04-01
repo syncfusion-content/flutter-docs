@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Flutter Widgets Catalog | Syncfusion
+title: Flutter Widgets Documentation | Syncfusion
 description: The list of available Flutter widgets and File Format (Excel and PDF) packages. |Syncfusion Flutter Widgets|
 platform: flutter
 control: flutter
@@ -55,22 +55,22 @@ This section provides the user guide link for each widget and its package link.
 </tr>
 
 <tr>
-<td><p><a href="https://help.syncfusion.com/flutter/sparkcharts/overview">Sparkline chart</a></p></td>
+<td><p><a href="https://help.syncfusion.com/flutter/sparkcharts/overview">Spark line chart</a></p></td>
 <td><p><a href="https://pub.dev/packages/syncfusion_flutter_charts">syncfusion_flutter_charts</a></p></td>
 </tr>
 
 <tr>
-<td><p><a href="https://help.syncfusion.com/flutter/sparkcharts/overview">Sparkarea chart</a></p></td>
+<td><p><a href="https://help.syncfusion.com/flutter/sparkcharts/overview">Spark area chart</a></p></td>
 <td><p><a href="https://pub.dev/packages/syncfusion_flutter_charts">syncfusion_flutter_charts</a></p></td>
 </tr>
 
 <tr>
-<td><p><a href="https://help.syncfusion.com/flutter/sparkcharts/overview">Sparkbar chart</a></p></td>
+<td><p><a href="https://help.syncfusion.com/flutter/sparkcharts/overview">Spark bar chart</a></p></td>
 <td><p><a href="https://pub.dev/packages/syncfusion_flutter_charts">syncfusion_flutter_charts</a></p></td>
 </tr>
 
 <tr>
-<td><p><a href="https://help.syncfusion.com/flutter/sparkcharts/overview">Spark Win-Loss chart</a></p></td>
+<td><p><a href="https://help.syncfusion.com/flutter/sparkcharts/overview">Spark win-loss chart</a></p></td>
 <td><p><a href="https://pub.dev/packages/syncfusion_flutter_charts">syncfusion_flutter_charts</a></p></td>
 </tr>
 
@@ -79,6 +79,13 @@ This section provides the user guide link for each widget and its package link.
 <td><p><a href="https://pub.dev/packages/syncfusion_flutter_gauges">syncfusion_flutter_gauges</a></p>
 </td>
 </tr>
+
+<tr>
+<td><p><a href="https://help.syncfusion.com/flutter/linear-gauge/overview">Linear gauge</a></p></td>
+<td><p><a href="https://pub.dev/packages/syncfusion_flutter_gauges">syncfusion_flutter_gauges</a></p>
+</td>
+</tr>
+
 
 <tr>
 <td><p><a href="https://help.syncfusion.com/flutter/maps/overview">Maps</a></p></td>

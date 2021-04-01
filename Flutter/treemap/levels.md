@@ -23,7 +23,7 @@ There will be a tile for each unique value returned in the `TreemapLevel.groupMa
 {% tabs %}
 {% highlight Dart %}
 
-List<PopulationModel> _source;
+late List<PopulationModel> _source;
 
 @override
 void initState() {
@@ -86,7 +86,7 @@ The first level will work similarly to the flat level. From the next level in th
 {% tabs %}
 {% highlight Dart %}
 
-List<JobVacancyModel> _source;
+late List<JobVacancyModel> _source;
 
 @override
 void initState() {
@@ -153,18 +153,10 @@ Widget build(BuildContext context) {
           return _source[index].vacancy;
         },
         levels: [
-          TreemapLevel(
-             groupMapper: (int index) => _source[index].country,
-          ),
-          TreemapLevel(
-            groupMapper: (int index) => _source[index].job,
-          ),
-          TreemapLevel(
-            groupMapper: (int index) => _source[index].group,
-          ),
-          TreemapLevel(
-             groupMapper: (int index) => _source[index].role,
-          ),
+          TreemapLevel(groupMapper: (int index) => _source[index].country),
+          TreemapLevel(groupMapper: (int index) => _source[index].job),
+          TreemapLevel(groupMapper: (int index) => _source[index].group),
+          TreemapLevel(groupMapper: (int index) => _source[index].role),
         ],
       ),
    );
@@ -172,11 +164,15 @@ Widget build(BuildContext context) {
 
 class JobVacancyModel {
   const JobVacancyModel(
-      {this.country, this.job, this.group, this.role, this.vacancy});
+      {required this.country,
+      required this.job,
+      this.group,
+      this.role,
+      required this.vacancy});
   final String country;
   final String job;
-  final String group;
-  final String role;
+  final String? group;
+  final String? role;
   final double vacancy;
 }
 
@@ -206,7 +202,7 @@ You can customize the levels using the following properties:
 {% tabs %}
 {% highlight Dart %}
 
-List<JobVacancyModel> _source;
+late List<JobVacancyModel> _source;
 
 @override
 void initState() {
@@ -324,11 +320,15 @@ Widget build(BuildContext context) {
 
 class JobVacancyModel {
   const JobVacancyModel(
-      {this.country, this.job, this.group, this.role, this.vacancy});
+      {required this.country,
+      required this.job,
+      this.group,
+      this.role,
+      required this.vacancy});
   final String country;
   final String job;
-  final String group;
-  final String role;
+  final String? group;
+  final String? role;
   final double vacancy;
 }
 

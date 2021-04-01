@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Flutter Linear Gauge (SfLinearGauge)
 
-This section explains the steps required to add the linear gauge and its elements such as axis, range and pointer. This section covers only basic features needed to know to get started with Syncfusion Linear Gauge. 
+This section explains the steps required to add the linear gauge and its elements such as axis, range and pointer. This section covers only basic features needed to know to get started with the Linear Gauge widget.
 
 ## Add Flutter Linear Gauge to an application
 
