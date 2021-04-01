@@ -25,7 +25,7 @@ The section contains the GitHub link for each widget’s code examples. This is 
 </tr>
 <tr>
 
-<td rowspan="11">
+<td rowspan="12">
 
 <p>Data Visualization</p>
 </td>
@@ -36,7 +36,7 @@ The section contains the GitHub link for each widget’s code examples. This is 
 
 <tr>
 <td><p><a href="https://help.syncfusion.com/flutter/cartesian-charts/overview">Cartesian chart</a></p></td>
-<td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/chart/cartesian_charts">samples/chart/cartesian_charts</a></p></td>
+<td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/chart/cartesian_charts">samples/chart/Cartesian_charts</a></p></td>
 </tr>
 
 <tr>
@@ -86,6 +86,11 @@ The section contains the GitHub link for each widget’s code examples. This is 
 </tr>
 
 <tr>
+<td><p><a href="https://help.syncfusion.com/flutter/treemap/overview">Treemap</a></p></td>
+<td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/treemap">samples/treemap</a></p></td>
+</tr>
+
+<tr>
 <td rowspan="2"><p>Calendar</p></td>
 <td><p><a href="http://172.16.0.76/flutter/calendar/overview">Event calendar</a></p></td>
 <td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/calendar">samples/calendar</a></p></td>
@@ -129,7 +134,7 @@ The section contains the GitHub link for each widget’s code examples. This is 
 
 <tr>
 <td><p><a href="https://help.syncfusion.com/flutter/range-selector/overview">Range selector</a></p></td>
-<td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/sliders/range_slider">samples/sliders/range_slider</a></p></td>
+<td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/sliders/range_selector">samples/sliders/range_selector</a></p></td>
 </tr>
 
 <tr>

@@ -91,6 +91,7 @@ Triggers when data label is rendering. Text and text styles such as color, font 
 * [`seriesRenderer`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/seriesRenderer.html) - specifies current series.
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/color.html) - to get and set the color of data label.
 * [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/viewportPointIndex.html) - to get the viewport index value of the tapped data label.
+* [`dataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/dataPoints.html) - to get the data points of the series.
 
 {% highlight dart %}
 
@@ -183,7 +184,7 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
 * [`selectedBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/selectedBorderWidth.html) - specifies border width of the selected data points or series.
 * [`unselectedBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/unselectedBorderColor.html) - specifies border color of the unselected data points or series.
 * [`unselectedBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/unselectedBorderWidth.html) - specifies border width of the unselected data points or series.
-* [`overallDataPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/overallDataPointIndex.html) - to get the overall point index.
+* [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/viewportPointIndex.html) - to get the overall point index.
 
 {% highlight dart %}
     
@@ -252,3 +253,83 @@ N> This callback will not be called, when the builder is specified for data labe
     }
 
 {% endhighlight %}
+
+## onChartTouchInteractionUp
+
+Triggers when tapped or clicked on the chart area. You can get the position of the taped region using this callback.
+
+The callback contains the following argument:
+
+* [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) - used to get the position of the touch interaction.
+
+{% highlight dart %}
+
+  Widget build(BuildContext context) {
+     return Container(
+          child: SfCircularChart(
+              onChartTouchInteractionUp: (ChartTouchInteractionArgs args){
+                 print(args.position.dx.toString());
+                 print(args.position.dy.toString());
+               }
+          )
+      );
+  }
+
+{% endhighlight %}
+
+## onChartTouchInteractionMove
+
+Triggers when touched or clicked and moved on the chart area. You can get the position of the moving region using this callback.
+
+The callback contains the following argument:
+
+* [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) - used to get the position of the touch interaction.
+
+{% highlight dart %}
+
+  Widget build(BuildContext context) {
+      return Container(
+          child: SfCircularChart(
+              onChartTouchInteractionMove: (ChartTouchInteractionArgs args){
+                 print(args.position.dx.toString());
+                 print(args.position.dy.toString());
+               }
+          )
+      );
+  }
+
+{% endhighlight %}
+
+## onChartTouchInteractionDown
+
+Triggers when touched or clicked on the chart area. You can get the position of the touched region using this callback.
+
+The callback contains the following argument:
+
+* [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) - used to get the position of the touch interaction.
+
+{% highlight dart %}
+
+  Widget build(BuildContext context) {
+      return Container(
+         child: SfCircularChart(
+              onChartTouchInteractionDown: (ChartTouchInteractionArgs args){
+                 print(args.position.dx.toString());
+                 print(args.position.dy.toString());
+               }
+          )
+      );
+  }
+
+{% endhighlight %}
+
+## onCreateShader
+
+Using this callback, you can fill the data points of circular charts series with gradient and image shader.
+
+The callback contains the following argument:
+
+* [`ChartShaderDetails`](~) - provides options to get the outer rect, inner rect, and render type (either series or legend)
+
+The onCreateShader callback is called once while rendering
+the data points and legend. For further reference on this callback, Check the [Gradient and image shader](./circular-series-customization#Gradient-fill-and-shader) section.

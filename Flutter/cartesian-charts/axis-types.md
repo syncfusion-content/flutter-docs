@@ -16,6 +16,7 @@ Vertical(Y) axis always uses numerical scale. Horizontal(X) axis supports the fo
 * Category
 * Numeric
 * Date-time
+* Date-time category
 * Logarithmic
 
 ## Numeric axis
@@ -685,6 +686,120 @@ The [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
 {% endhighlight %}
 
 ![Date format](images/axis-types/datetime_labelFormat.jpg)
+
+Also refer [label format](./axis-customization#formatting-axis-label-content) and [number format](#formatting-the-labels) for formatting the labels further.
+
+## Date-time category axis
+
+Date-time category axis is a combination of both [`DateTimeAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/DateTimeAxis.html) and [`CategoryAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CategoryAxis-class.html). Date-time category axis is used to display the date-time values with non-linear intervals. For example, the business days alone have been depicted in a week here.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis: DateTimeCategoryAxis() 
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![DateTimeCategory axis](images/axis-types/datetimecategory.jpg)
+
+### Customizing range
+
+To customize the range of an axis, use the [`minimum`](~) and [`maximum`](~) properties of [`DateTimeCategoryAxis`](~). By default, nice range will be calculated automatically based on the provided data.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis: DateTimeCategoryAxis(
+                            minimum: DateTime(2010, 2, 3),
+                            maximum: DateTime(2010, 2, 10)
+                        )
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![DateTimeCategory range](images/axis-types/datetimecategory_range.jpg)
+
+### Date-time intervals
+
+The date-time category intervals can be customized using the [`interval`](~) and [`intervalType`](~) properties of [`DateTimeCategoryAxis`](~). For example, To display the axis labels after a fixed interval n, set the [`interval`](~) property of ChartAxis to n and to display the labels in months, set the [`intervalType`](~) property of DateTimeCategoryAxis as months.
+
+The Flutter Chart supports the following types of interval for date-time category axis:
+
+* auto
+* years
+* months
+* days
+* hours
+* minutes
+* seconds
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis: DateTimeCategoryAxis(
+                            // Interval type will be years
+                            intervalType: DateTimeIntervalType.months,
+                            interval: 2
+                        )
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![DateTimeCategory intervals](images/axis-types/datetimecategory_interval.jpg)
+
+### Formatting the labels
+
+The [`dateFormat`](~) property formats the date-time category axis labels. The default data-time category axis label can be formatted with various built-in [`date formats`](https://api.flutter.dev/flutter/intl/DateFormat-class.html), which depend on the given data source.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis: DateTimeCategoryAxis(
+                            // X axis labels will be rendered based on the below format
+                            dateFormat: DateFormat.yMMMd()
+                        )  
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![DateTimeCategory  date format](images/axis-types/datetimecategory_dateFormat.jpg)
 
 Also refer [label format](./axis-customization#formatting-axis-label-content) and [number format](#formatting-the-labels) for formatting the labels further.
 

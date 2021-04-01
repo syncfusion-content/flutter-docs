@@ -190,7 +190,7 @@ Widget build(BuildContext context) {
       if (details.rowIndex == 0) {
         return 70.0;
       }
-      return null;
+      return details.rowHeight;;
     },
     columns: <GridColumn>[
       GridTextColumn(
