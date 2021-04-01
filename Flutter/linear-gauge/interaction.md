@@ -13,7 +13,7 @@ The shape and widget marker pointers in a Linear Gauge can be moved from one val
 
 ## Interaction with marker pointers
 
-The `onValueChanged` call back is used to change the value of the marker pointer at run-time.
+The [`onValueChanged`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/onValueChanged.html) call back is used to change the value of the marker pointer at run-time.
 
 The below code snippet demonstrates updating simple marker pointer value based on swipe or drag gesture.
 

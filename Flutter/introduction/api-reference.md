@@ -86,6 +86,14 @@ This page helps to navigate to the public API's available in the Syncfusion Flut
     </tr>
     <tr>
         <td>
+            Linear Gauge
+        </td>
+        <td>
+            <a href="https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/gauges-library.html">Link</a>
+        </td>
+    </tr>
+	<tr>
+        <td>
             Range Selector
         </td>
         <td>
