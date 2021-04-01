@@ -11,13 +11,13 @@ documentation: ug
 
 On a touch device, the [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) allows you to select a text in the PDF page by long pressing on it, which in turn displays the selection handles or bubbles at the top-left and bottom-right corners of its bounds. Then, you can use the left handle to select the text at the left and top, and the right handle to select the text at the right and bottom directions.
 
-And, on a desktop web browser, the text selection can also be performed using mouse dragging with `[selection](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfInteractionMode-class.html)` interaction mode enabled.
+And on a desktop web browser, the text selection can also be performed using mouse dragging with the `[selection](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfInteractionMode-class.html)` interaction mode enabled.
 
-N> The images in the document will not be selected and, the multiple page text selection is not supported for now. 
+N> The images in the document will not be selected and, the multiple-page text selection is not supported for now. 
 
 ## Enable or disable text selection
 
-You can enable or disable the text selection in the PDF page using the [enableTextSelection](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/enableTextSelection.html) property. The following code example explains the same
+You can enable or disable the text selection in the PDF page using the [enableTextSelection](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/enableTextSelection.html) property. The following code example explains the same.
 
 {% tabs %}
 {% highlight Dart %}
@@ -34,7 +34,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-N> On a desktop web browser, this `enableTextSelection` property will have no effect with `[pan](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfInteractionMode-class.html)` interaction mode.
+N> On a desktop web browser, this `enableTextSelection` property will have no effect on the `[pan](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfInteractionMode-class.html)` interaction mode.
 
 ## Customize the text selection and its handle color
 
