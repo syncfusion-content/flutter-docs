@@ -55,23 +55,23 @@ The section contains the GitHub link for each widget’s code examples. This is 
 </tr>
 
 <tr>
-<td><p><a href="https://help.syncfusion.com/flutter/sparkcharts/overview">Sparkline chart</a></p></td>
-<td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/sparkline">samples/chart</a></p></td>
+<td><p><a href="https://help.syncfusion.com/flutter/sparkcharts/overview">Spark line chart</a></p></td>
+<td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/sparkline">samples/sparkline</a></p></td>
 </tr>
 
 <tr>
-<td><p><a href="https://help.syncfusion.com/flutter/sparkcharts/overview">Sparkarea chart</a></p></td>
-<td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/sparkline">samples/chart</a></p></td>
+<td><p><a href="https://help.syncfusion.com/flutter/sparkcharts/overview">Spark area chart</a></p></td>
+<td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/sparkline">samples/sparkline</a></p></td>
 </tr>
 
 <tr>
-<td><p><a href="https://help.syncfusion.com/flutter/sparkcharts/overview">Sparkbar chart</a></p></td>
-<td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/sparkline">samples/chart</a></p></td>
+<td><p><a href="https://help.syncfusion.com/flutter/sparkcharts/overview">Spark bar chart</a></p></td>
+<td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/sparkline">samples/sparkline</a></p></td>
 </tr>
 
 <tr>
-<td><p><a href="https://help.syncfusion.com/flutter/sparkcharts/overview">Spark Win-Loss chart</a></p></td>
-<td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/sparkline">samples/chart</a></p></td>
+<td><p><a href="https://help.syncfusion.com/flutter/sparkcharts/overview">Spark win-loss chart</a></p></td>
+<td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/sparkline">samples/sparkline</a></p></td>
 </tr>
 
 <tr>
