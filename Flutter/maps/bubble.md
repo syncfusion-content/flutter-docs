@@ -18,8 +18,8 @@ You can enable bubbles using the [`MapShapeSource.bubbleSizeMapper`](https://pub
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> data;
-MapShapeSource dataSource;
+late List<Model> data;
+late MapShapeSource dataSource;
 
 @override
 void initState() {
@@ -77,8 +77,8 @@ You can enable tooltip for the bubbles using the [`MapShapeLayer.bubbleTooltipBu
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> data;
-MapShapeSource dataSource;
+late List<Model> data;
+late MapShapeSource dataSource;
 
 @override
 void initState() {
@@ -119,7 +119,7 @@ Widget build(BuildContext context) {
                      data[index].continent +
                      '\nTotal Countries : ' +
                      data[index].countriesCount.toStringAsFixed(0),
-                     style: themeData.textTheme.caption
+                     style: themeData.textTheme.caption!
                         .copyWith(color: themeData.colorScheme.surface)),
                );
             },
@@ -154,20 +154,20 @@ If [`bubbleColorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_m
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> data;
-MapShapeSource dataSource;
+late List<Model> data;
+late MapShapeSource dataSource;
 
 @override
 void initState() {
   super.initState();
 
   data = <Model>[
-    Model('Asia', 51, Colors.red[400]),
-    Model('Africa', 58, Colors.green[400]),
-    Model('Europe', 48, Colors.blue[400]),
-    Model('North America', 41, Colors.purple[400]),
-    Model('South America', 14, Colors.yellow[400]),
-    Model('Australia', 23, Colors.orange[400]),
+    Model('Asia', 51, Colors.red[400]!),
+    Model('Africa', 58, Colors.green[400]!),
+    Model('Europe', 48, Colors.blue[400]!),
+    Model('North America', 41, Colors.purple[400]!),
+    Model('South America', 14, Colors.yellow[400]!),
+    Model('Australia', 23, Colors.orange[400]!),
   ];
 
   dataSource = MapShapeSource.asset(
@@ -226,8 +226,8 @@ You can customize the below appearance of the bubbles.
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> data;
-MapShapeSource dataSource;
+late List<Model> data;
+late MapShapeSource dataSource;
 
 @override
 void initState() {
@@ -299,8 +299,8 @@ N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/pa
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> data;
-MapShapeSource dataSource;
+late List<Model> data;
+late MapShapeSource dataSource;
 
 @override
 void initState() {
