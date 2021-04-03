@@ -22,8 +22,8 @@ N> It is applicable for both the tile layer and shape layer.
 {% tabs %}
 {% highlight Dart %}
 
-List<MapLatLng> circles;
-MapShapeSource dataSource;
+late List<MapLatLng> circles;
+late MapShapeSource dataSource;
 
 @override
 void initState() {
@@ -86,7 +86,7 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-List<MapLatLng> circles;
+late List<MapLatLng> circles;
 
 @override
 void initState() {
@@ -150,8 +150,8 @@ You can change the size of the circles using the [`MapCircle.radius`](https://pu
 {% tabs %}
 {% highlight Dart %}
 
-List<MapLatLng> circles;
-MapShapeSource dataSource;
+late List<MapLatLng> circles;
+late MapShapeSource dataSource;
 
 @override
 void initState() {
@@ -219,8 +219,8 @@ You can apply the same color for all [`MapCircle`](https://pub.dev/documentation
 {% tabs %}
 {% highlight Dart %}
 
-List<MapCircleModel> circles;
-MapShapeSource dataSource;
+late List<MapCircleModel> circles;
+late MapShapeSource dataSource;
 
 @override
 void initState() {
@@ -290,8 +290,8 @@ You can apply the same stroke color for all [`MapCircle`](https://pub.dev/docume
 {% tabs %}
 {% highlight Dart %}
 
-List<MapCircleModel> circles;
-MapShapeSource dataSource;
+late List<MapCircleModel> circles;
+late MapShapeSource dataSource;
 
 @override
 void initState() {
@@ -362,10 +362,10 @@ By default, there will not be any animation.
 {% tabs %}
 {% highlight Dart %}
 
-List<MapLatLng> circles;
-MapShapeSource dataSource;
-AnimationController animationController;
-Animation animation;
+late List<MapLatLng> circles;
+late MapShapeSource dataSource;
+late AnimationController animationController;
+late Animation animation;
 
 @override
 void initState() {
@@ -407,7 +407,7 @@ void initState() {
 
 @override
 void dispose() {
-  animationController?.dispose();
+  animationController.dispose();
   super.dispose();
 }
 
@@ -450,9 +450,9 @@ You can use the [`onTap`](https://pub.dev/documentation/syncfusion_flutter_maps/
 {% tabs %}
 {% highlight Dart %}
 
-List<MapLatLng> circles;
-MapShapeSource dataSource;
-int selectedIndex;
+late List<MapLatLng> circles;
+late MapShapeSource dataSource;
+late int selectedIndex;
 
 @override
 void initState() {
@@ -479,6 +479,8 @@ void initState() {
       'assets/india.json',
       shapeDataField: 'name',
     );
+
+    selectedIndex = -1;
     super.initState();
 }
 
@@ -526,9 +528,9 @@ You can show additional information about the circles drawn using the [`tooltipB
 {% tabs %}
 {% highlight Dart %}
 
-List<MapLatLng> circles;
-MapShapeSource dataSource;
-Random random = Random();
+late List<MapLatLng> circles;
+late MapShapeSource dataSource;
+late Random random;
 
 @override
 void initState() {
@@ -555,13 +557,15 @@ void initState() {
       'assets/india.json',
       shapeDataField: 'name',
     );
+
+    random = Random();
     super.initState();
 }
 
 @override
 Widget build(BuildContext context) {
    final ThemeData themeData = Theme.of(context);
-   final TextStyle textStyle = themeData.textTheme.caption
+   final TextStyle textStyle = themeData.textTheme.caption!
         .copyWith(color: themeData.colorScheme.surface);
    return Scaffold(
       body: SfMaps(
@@ -628,9 +632,9 @@ You can customize the appearance of the tooltip.
 {% tabs %}
 {% highlight Dart %}
 
-List<MapLatLng> circles;
-MapShapeSource dataSource;
-Random random = Random();
+late List<MapLatLng> circles;
+late MapShapeSource dataSource;
+late Random random;
 
 @override
 void initState() {
@@ -657,6 +661,8 @@ void initState() {
       'assets/india.json',
       shapeDataField: 'name',
     );
+
+    random = Random();
     super.initState();
 }
 
@@ -747,7 +753,7 @@ I> The individual circle customization like `MapCircle.color`, `MapCircle.stroke
 {% tabs %}
 {% highlight Dart %}
 
-MapZoomPanBehavior zoomPanBehavior;
+late MapZoomPanBehavior zoomPanBehavior;
 
 @override
 void initState() {

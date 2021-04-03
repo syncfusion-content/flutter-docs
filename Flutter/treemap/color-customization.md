@@ -18,7 +18,7 @@ You can apply uniform color to the whole level using the `TreemapLevel.color` pr
 {% tabs %}
 {% highlight Dart %}
 
-List<JobVacancyModel> _source;
+late List<JobVacancyModel> _source;
 
 @override
 void initState() {
@@ -95,11 +95,15 @@ void initState() {
 
 class JobVacancyModel {
   const JobVacancyModel(
-      {this.country, this.job, this.group, this.role, this.vacancy});
+      {required this.country,
+      required this.job,
+      this.group,
+      this.role,
+      required this.vacancy});
   final String country;
   final String job;
-  final String group;
-  final String role;
+  final String? group;
+  final String? role;
   final double vacancy;
 }
 
@@ -123,8 +127,8 @@ N> You can customize the legend icons color and texts using the `TreemapColorMap
 {% tabs %}
 {% highlight Dart %}
 
-List<SocialMediaUsers> _source;
-List<TreemapColorMapper> _colorMappers;
+late List<SocialMediaUsers> _source;
+late List<TreemapColorMapper> _colorMappers;
 
 @override
 void initState() {
@@ -138,10 +142,10 @@ void initState() {
    ];
 
    _colorMappers = <TreemapColorMapper>[
-      TreemapColorMapper.value('Facebook', Colors.blue[200]),
-      TreemapColorMapper.value('Instagram', Colors.deepOrange),
-      TreemapColorMapper.value('Twitter', Colors.blue[800]),
-   ];
+      TreemapColorMapper.value(value: 'Facebook', color: Colors.blue[200]!),
+      TreemapColorMapper.value(value: 'Instagram', color: Colors.deepOrange),
+      TreemapColorMapper.value(value: 'Twitter', color: Colors.blue[800]!),
+    ];
    super.initState();
 }
 
@@ -199,8 +203,8 @@ N> You can customize the legend icons color and texts using the `TreemapColorMap
 {% tabs %}
 {% highlight Dart %}
 
-List<SocialMediaUsers> _source;
-List<TreemapColorMapper> _colorMappers;
+late List<SocialMediaUsers> _source;
+late List<TreemapColorMapper> _colorMappers;
 
 @override
 void initState() {
@@ -214,10 +218,10 @@ void initState() {
    ];
 
    _colorMappers = <TreemapColorMapper>[
-      TreemapColorMapper.range(0, 10, Colors.blue[200]),
-      TreemapColorMapper.range(10, 20, Colors.deepOrange),
-      TreemapColorMapper.range(20, 30, Colors.blue[800]),
-   ];
+      TreemapColorMapper.range(from: 0, to: 10, color: Colors.blue[200]!),
+      TreemapColorMapper.range(from: 10, to: 20, color: Colors.deepOrange),
+      TreemapColorMapper.range(from: 20, to: 30, color: Colors.blue[800]!),
+    ];
    super.initState();
 }
 

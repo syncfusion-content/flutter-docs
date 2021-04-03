@@ -30,13 +30,13 @@ The following is the minimum Flutter SDK version required for our widgets:
     <tr>
         <td>Stable</td>
         <td style="text-align:center">
-            <a href="https://storage.googleapis.com/flutter_infra/releases/stable/windows/flutter_windows_1.20.1-stable.zip">v1.22</a>
+            <a href="https://storage.googleapis.com/flutter_infra/releases/stable/windows/flutter_windows_2.0.0-stable.zip">v2.0.0</a>
         </td>
     </tr>
     <tr>
         <td>Beta</td>
         <td style="text-align:center">
-            <a href="https://storage.googleapis.com/flutter_infra/releases/beta/windows/flutter_windows_1.20.0-7.4.pre-beta.zip">v1.20.0-7.4.pre</a>
+            <a href="https://storage.googleapis.com/flutter_infra/releases/beta/windows/flutter_windows_2.0.0-beta.zip">v2.0.0</a>
         </td>
     </tr>
 </table>
@@ -104,6 +104,23 @@ The following table lists the platforms supported by our Flutter controls.
         </td>
         <td>
             All major browsers
+            <br/>
+            <br/>
+        </td>
+        <td>
+            -
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Desktop
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Windows, macOS, Linux
             <br/>
             <br/>
         </td>

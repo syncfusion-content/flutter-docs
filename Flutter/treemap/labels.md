@@ -18,7 +18,7 @@ You can add labels on the tiles using the `TreemapLevel.labelBuilder` callback w
 {% tabs %}
 {% highlight Dart %}
 
-List<JobVacancyModel> _source;
+late List<JobVacancyModel> _source;
 
 @override
 void initState() {
@@ -122,11 +122,15 @@ Widget build(BuildContext context) {
 
 class JobVacancyModel {
   const JobVacancyModel(
-      {this.country, this.job, this.group, this.role, this.vacancy});
+      {required this.country,
+      required this.job,
+      this.group,
+      this.role,
+      required this.vacancy});
   final String country;
   final String job;
-  final String group;
-  final String role;
+  final String? group;
+  final String? role;
   final double vacancy;
 }
 
@@ -144,7 +148,7 @@ By default, the labels will render even if it overflows from the tile.
 {% tabs %}
 {% highlight Dart %}
 
-List<JobVacancyModel> _source;
+late List<JobVacancyModel> _source;
 
 @override
 void initState() {
@@ -257,11 +261,15 @@ Widget build(BuildContext context) {
 
 class JobVacancyModel {
   const JobVacancyModel(
-      {this.country, this.job, this.group, this.role, this.vacancy});
+      {required this.country,
+      required this.job,
+      this.group,
+      this.role,
+      required this.vacancy});
   final String country;
   final String job;
-  final String group;
-  final String role;
+  final String? group;
+  final String? role;
   final double vacancy;
 }
 
@@ -277,7 +285,7 @@ You can change the labels alignment by wrapping the text widget using the [`Alig
 {% tabs %}
 {% highlight Dart %}
 
-List<JobVacancyModel> _source;
+late List<JobVacancyModel> _source;
 
 @override
 void initState() {
@@ -381,11 +389,15 @@ Widget build(BuildContext context) {
 
 class JobVacancyModel {
   const JobVacancyModel(
-      {this.country, this.job, this.group, this.role, this.vacancy});
+      {required this.country,
+      required this.job,
+      this.group,
+      this.role,
+      required this.vacancy});
   final String country;
   final String job;
-  final String group;
-  final String role;
+  final String? group;
+  final String? role;
   final double vacancy;
 }
 

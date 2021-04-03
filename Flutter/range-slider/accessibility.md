@@ -33,7 +33,7 @@ Widget build(BuildContext context) {
               showTicks: true,
               showLabels: true,
               semanticFormatterCallback: (dynamic value, SfThumb thumb){
-                return 'The ${thumb} value is ${value}';
+                return 'The $thumb value is $value';
               },
               onChanged: (SfRangeValues newValues) {
                 setState(() {
@@ -69,7 +69,7 @@ Widget build(BuildContext context) {
               showTicks: true,
               showLabels: true,
               semanticFormatterCallback: (dynamic value, SfThumb thumb){
-                return 'The ${thumb} value is ${value}';
+                return 'The $thumb value is $value';
               },
               onChanged: (SfRangeValues newValues) {
                 setState(() {
