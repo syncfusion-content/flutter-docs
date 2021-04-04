@@ -18,7 +18,7 @@ You can notify the user that the map is being loaded using the [`MapShapeLayer.l
 {% tabs %}
 {% highlight Dart %}
 
-MapShapeSource dataSource;
+late MapShapeSource dataSource;
 
 @override
 void initState() {
@@ -66,7 +66,7 @@ You can apply color, stroke color and stroke width to the shapes using the [`Map
 {% tabs %}
 {% highlight Dart %}
 
-MapShapeSource dataSource;
+late MapShapeSource dataSource;
 
 @override
 void initState() {
@@ -112,7 +112,7 @@ N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/pa
 {% tabs %}
 {% highlight Dart %}
 
-MapShapeSource dataSource;
+late MapShapeSource dataSource;
 
 @override
 void initState() {
@@ -160,7 +160,7 @@ N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/pa
 {% tabs %}
 {% highlight Dart %}
 
-MapShapeSource dataSource;
+late MapShapeSource dataSource;
 
 @override
 void initState() {
@@ -208,8 +208,8 @@ N> You can show legend using the [`MapShapeLayer.legend`](https://pub.dev/docume
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> data;
-MapShapeSource dataSource;
+late List<Model> data;
+late MapShapeSource dataSource;
 
 @override
 void initState() {
@@ -271,8 +271,8 @@ You can apply color to the shape by comparing a value that returns from the [`sh
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> data;
-MapShapeSource dataSource;
+late List<Model> data;
+late MapShapeSource dataSource;
 
 @override
 void initState() {
@@ -333,8 +333,8 @@ You can apply color to the shape based on whether the value returned from [`shap
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> data;
-MapShapeSource dataSource;
+late List<Model> data;
+late MapShapeSource dataSource;
 
 @override
 void initState() {
@@ -393,8 +393,8 @@ The shapes or bubbles with lowest value which is [`from`](https://pub.dev/docume
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> data;
-MapShapeSource dataSource;
+late List<Model> data;
+late MapShapeSource dataSource;
 
 @override
 void initState() {
