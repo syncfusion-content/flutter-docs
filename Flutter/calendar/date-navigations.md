@@ -244,7 +244,7 @@ Widget build(BuildContext context) {
           CalendarView.workWeek,
           CalendarView.month,
           CalendarView.schedule
-        ];
+        ],
     );
 }
 
