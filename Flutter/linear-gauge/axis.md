@@ -13,7 +13,7 @@ The Linear Gauge axis is a scale where a set of values can be plotted. An axis c
 
 ## Default axis
 
-By default axis will have the [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/minimum.html) scale value as 0 and the [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/maximum.html) scale value as 100. Without any changes the default axis of the Linear Gauge will be displayed as below. 
+By default axis will have the [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/minimum.html) axis value as 0 and the [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/maximum.html) axis value as 100. Without any changes the default axis of the Linear Gauge will be displayed as below. 
 
 {% highlight dart %} 
 
@@ -34,7 +34,7 @@ By default axis will have the [`minimum`](https://pub.dev/documentation/syncfusi
 
 ## Customize the minimum and maximum axis values
 
-The [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/minimum.html) and [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/maximum.html) properties of a Linear Gauge can be used to customize the axis scale. In the below code snippet the axis scale is customized to have the [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/minimum.html) value of -50 to [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/maximum.html) value of 50. The scale values are displayed by the axis labels. Customizing these label styles are further explained in next topics.  
+The [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/minimum.html) and [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/maximum.html) properties of a Linear Gauge can be used to customize the axis values. In the below code snippet the axis is customized to have the [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/minimum.html) value of -50 to [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/maximum.html) value of 50. The axis values are displayed by the labels. Customizing these label styles are further explained in next topics.  
 
 {% highlight dart %} 
 
@@ -265,7 +265,7 @@ You can hide the axis track by setting the [`showAxisTrack`](https://pub.dev/doc
 
 ## Custom axis
 
-Linear gauge allows you to display a set of values along with a custom scale based on your business logic by using the [`onGenerateLabels`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/onGenerateLabels.html) and [`valueToFactorCallback`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/valueToFactorCallback.html) callbacks.
+Linear gauge allows you to display a set of values along with a custom axis based on your business logic by using the [`onGenerateLabels`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/onGenerateLabels.html) and [`valueToFactorCallback`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/valueToFactorCallback.html) callbacks.
 
 {% highlight dart %} 
 
