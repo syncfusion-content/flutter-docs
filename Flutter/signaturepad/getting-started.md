@@ -129,7 +129,7 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 
-## Save signatures as images in Android, iOS, Desktop platforms
+## Save signatures as images in Mobile and Desktop platforms
 
 You can save the signature drawn in the SignaturePad as an image using the [`toImage()`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePadState/toImage.html) method as shown in the below code example in Android, iOS and Desktop platforms. Since this [`toImage()`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePadState/toImage.html) method is defined in the state object of SignaturePad, you have to use a global key assigned to the SignaturePad instance to call this method. Optionally, the `pixelRatio` parameter may be used to set the pixel ratio of the image. The higher the pixel ratio value, the high-quality picture you get. The default value of the pixel ratio parameter is 1.
 
