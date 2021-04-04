@@ -147,13 +147,11 @@ In the below example, row data is updated when the `refreshRow` is called in `on
 {% tabs %}
 {% highlight Dart %} 
 
-List<Employee> _employees;
+List<Employee> _employees = [];
 
-EmployeeDataSource _employeeDataSource;
+final EmployeeDataSource _employeeDataSource = EmployeeDataSource();;
 
 final DataGridController _controller = DataGridController();
-
-final ColumnSizer _columnSizer = ColumnSizer();
 
 @override
 Widget build(BuildContext context) {
@@ -182,7 +180,8 @@ Widget build(BuildContext context) {
               if (details.rowIndex == 0) {
                 return 100.0;
               }
-              return 50.0; 
+              
+              return details.rowHeight; 
             },
             columns: <GridColumn>[
               GridTextColumn(
@@ -236,13 +235,11 @@ In the below example, row data is refreshed along with its row height when the `
 {% tabs %}
 {% highlight Dart %} 
 
-List<Employee> _employees;
+List<Employee> _employees = [];
 
-EmployeeDataSource _employeeDataSource;
+final EmployeeDataSource _employeeDataSource = EmployeeDataSource();;
 
 final DataGridController _controller = DataGridController();
-
-final ColumnSizer _columnSizer = ColumnSizer();
 
 @override
 Widget build(BuildContext context) {
@@ -271,7 +268,7 @@ Widget build(BuildContext context) {
               if (details.rowIndex == 0) {
                 return 100;
               }
-              return 50;    
+              return details.rowHeight;  
             },
             columns: <GridColumn>[
               GridTextColumn(
