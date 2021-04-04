@@ -86,7 +86,6 @@ This section provides the user guide link for each widget and its package link.
 </td>
 </tr>
 
-
 <tr>
 <td><p><a href="https://help.syncfusion.com/flutter/maps/overview">Maps</a></p></td>
 <td><p><a href="https://pub.dev/packages/syncfusion_flutter_maps">syncfusion_flutter_maps</a></p></td>

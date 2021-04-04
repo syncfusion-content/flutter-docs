@@ -86,7 +86,6 @@ The section contains the GitHub link for each widget’s code examples. This is 
 </td>
 </tr>
 
-
 <tr>
 <td><p><a href="https://help.syncfusion.com/flutter/maps/overview">Maps</a></p></td>
 <td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/maps">samples/maps</a></p></td>
