@@ -113,11 +113,10 @@ You can programmatically navigate date in the Hijri date picker widget by using 
 {% highlight Dart %}
 
 class MyAppState extends State<MyApp> {
-  HijriDatePickerController _controller;
+  HijriDatePickerController _controller = HijriDatePickerController();
 
   @override
   void initState() {
-    _controller = HijriDatePickerController();
     _controller.displayDate = HijriDateTime(1445, 02, 05);
     super.initState();
   }
@@ -146,11 +145,10 @@ You can programmatically navigate to any view in the Hijri date picker widget by
 {% highlight Dart %}
 
 class MyAppState extends State<MyApp> {
-  HijriDatePickerController _controller;
+  HijriDatePickerController _controller = HijriDatePickerController();
 
   @override
   void initState() {
-    _controller = HijriDatePickerController();
     _controller.view = HijriDatePickerView.month;
     super.initState();
   }
@@ -183,11 +181,10 @@ You can select the date programmatically by using the [selectedDate](https://pub
 {% highlight Dart %}
 
 class MyAppState extends State<MyApp> {
-  HijriDatePickerController _controller;
+  HijriDatePickerController _controller = HijriDatePickerController();
 
   @override
   void initState() {
-    _controller = HijriDatePickerController();
     _controller.view = HijriDatePickerView.month;
     _controller.selectedDate = HijriDateTime.now().add(Duration(days: 1));
     super.initState();
@@ -198,9 +195,9 @@ class MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
           body: SfHijriDateRangePicker(
-        selectionMode: DateRangePickerSelectionMode.single,
-        controller: _controller,
-      )),
+            selectionMode: DateRangePickerSelectionMode.single,
+            controller: _controller,
+          )),
     );
   }
 }
@@ -217,11 +214,10 @@ You can select the multiple dates programmatically by using the [selectedDates](
 {% highlight Dart %}
 
 class MyAppState extends State<MyApp> {
-  HijriDatePickerController _controller;
+  HijriDatePickerController _controller = HijriDatePickerController();
 
   @override
   void initState() {
-    _controller = HijriDatePickerController();
     _controller.view = HijriDatePickerView.month;
     _controller.selectedDates = <HijriDateTime>[
       HijriDateTime.now().add(Duration(days: 2)),
@@ -258,11 +254,10 @@ Use the [HijriDateRange](https://pub.dev/documentation/syncfusion_flutter_datepi
 {% highlight Dart %}
 
 class MyAppState extends State<MyApp> {
-  HijriDatePickerController _controller;
+  HijriDatePickerController _controller = HijriDatePickerController();
 
   @override
   void initState() {
-    _controller = HijriDatePickerController();
     _controller.view = HijriDatePickerView.month;
     _controller.selectedRange = HijriDateRange(
         HijriDateTime(1442, 03, 01), HijriDateTime(1442, 03, 05));
@@ -293,11 +288,10 @@ You can select more than one date range programmatically by using the [selectedR
 {% highlight Dart %}
 
 class MyAppState extends State<MyApp> {
-  HijriDatePickerController _controller;
+  HijriDatePickerController _controller = HijriDatePickerController();
 
   @override
   void initState() {
-    _controller = HijriDatePickerController();
     _controller.view = HijriDatePickerView.month;
     _controller.selectedRanges = <HijriDateRange>[
       HijriDateRange(HijriDateTime.now().add(Duration(days: 4)),
