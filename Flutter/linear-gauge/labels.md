@@ -7,7 +7,7 @@ control: SfLinearGauge
 documentation: ug
 ---
 
-# Default Linear Gauge Labels
+# Default Linear Gauge labels
 
 The default style of axis labels are as below.
 
@@ -15,7 +15,7 @@ The default style of axis labels are as below.
 
 ## Customize Linear Gauge label styles
 
-Axis labels can be customized using the `axisLabelStyle` property of `SfLinearGauge`. The `axisLabelStyle` property have the below properties to customize the axis labels.
+Axis labels can be customized using the [`axisLabelStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/axisLabelStyle.html) property of [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html). The [`axisLabelStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/axisLabelStyle.html) property have the below properties to customize the axis labels.
 
 * `color` – Allows to customize the color of the labels.
 * `fontFamily` – Allows to specify the font family for labels.
@@ -49,7 +49,7 @@ Axis labels can be customized using the `axisLabelStyle` property of `SfLinearGa
 
 ## Switch Linear Gauge label visibility
 
-The `showLabels` property of `SfLinearGauge` allows to show or hide the visibility of axis labels. The default value of the property is true.
+The [`showLabels`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/showLabels.html) property of [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html) allows to show or hide the visibility of axis labels. The default value of the property is true.
 
 {% highlight dart %} 
 
@@ -69,7 +69,7 @@ Widget build(BuildContext context) {
 
 ## Customize the interval between labels
 
-The `interval` between labels can be customized using the interval property of `SfLinearGauge`. The major ticks are generated based on this interval property.
+The [`interval`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/interval.html) between labels can be customized using the interval property of [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html). The major ticks are generated based on this interval property.
 
 {% highlight dart %} 
 
@@ -88,11 +88,11 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 
-![Set maximum labels interval in axis track](images/axis-labels/axis_label_interval.png)
+![Set label interval in axis track](images/axis-labels/axis_label_interval.png)
 
 ## Change the label position
 
-The linear axis allows to position the labels either `inside` or `outside` the axis track using the `labelsPosition` property. By default, labels are positioned `inside` the axis track.
+The linear axis allows to position the labels either `inside` or `outside` the axis track using the [`labelsPosition`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/labelPosition.html) property. By default, labels are positioned `inside` the axis track.
 
 {% highlight dart %} 
 
@@ -112,12 +112,12 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 
-![Set linear gauge label placement](images/axis-labels/label-placement.png)
+![Set linear gauge label position](images/axis-labels/label-placement.png)
 
 
 ## Change the label offset
 
-The `labelOffset` property allows to adjust the distance between the tick-end and the labels. 
+The [`labelOffset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/labelOffset.html) property allows to adjust the distance between the tick-end and the labels. 
 
 {% highlight dart %} 
 
@@ -140,7 +140,7 @@ Widget build(BuildContext context) {
 
 ##  Customize the maximum number of visible labels
 
-By default, a maximum of three labels are displayed for each 100 logical pixels in an axis. The maximum number of labels that should present within 100 logical pixels length can be customized using the `maximumLabels` property of the axis. 
+By default, a maximum of three labels are displayed for each 100 logical pixels in an axis. The maximum number of labels that should present within 100 logical pixels length can be customized using the [`maximumLabels`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/maximumLabels.html) property of the axis. 
 
 {% highlight dart %} 
 
@@ -161,9 +161,9 @@ Widget build(BuildContext context) {
 
 ![Set maximum number of labels in axis track](images/axis-labels/axis_label_visibility.png)
 
-## Customize Label Text
+## Customize label text
 
-You can format or change the whole numeric label text using the labelFormatterCallback.
+You can format or change the whole numeric label text using the [`labelFormatterCallback`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/labelFormatterCallback.html).
 
 {% highlight dart %}
 
@@ -189,9 +189,9 @@ SfLinearGauge(
 
 ![Customize Label Text in axis track](images/axis-labels/custom_label_text.png)
 
-## Number Format
+## Number format
 
-The numberFormat property is used to format the numeric labels. The default value of numberFormat property is null.
+The [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/numberFormat.html) property is used to format the numeric labels. The default value of numberFormat property is null.
 
 {% highlight dart %} 
 

@@ -27,8 +27,8 @@ Syncfusion Flutter widgets support formatting dates and numbers based on culture
             SfCartesianChart
         </td>
         <td>
-             <a href="https://help.syncfusion.com/flutter/chart/axis-types#formatting-the-labels">Number</a> <br/>
-             <a href="https://help.syncfusion.com/flutter/chart/axis-types#formatting-the-labels-1">Date</a>
+             <a href="https://help.syncfusion.com/flutter/cartesian-charts/axis-types#numeric-axis">Number</a> <br/>
+             <a href="https://help.syncfusion.com/flutter/cartesian-charts/axis-types#date-time-axis">Date</a>
         </td>
     </tr>
 	<tr>

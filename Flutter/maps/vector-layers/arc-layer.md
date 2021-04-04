@@ -22,9 +22,9 @@ N> It is applicable for both the tile layer and shape layer.
 {% tabs %}
 {% highlight Dart %}
 
-MapZoomPanBehavior zoomPanBehavior;
-MapShapeSource dataSource;
-List<DataModel> data;
+late MapZoomPanBehavior zoomPanBehavior;
+late MapShapeSource dataSource;
+late List<DataModel> data;
 
 @override
 void initState() {
@@ -90,8 +90,8 @@ class DataModel {
 {% tabs %}
 {% highlight Dart %}
 
-MapZoomPanBehavior zoomPanBehavior;
-List<DataModel> data;
+late MapZoomPanBehavior zoomPanBehavior;
+late List<DataModel> data;
 
 @override
 void initState() {
@@ -159,9 +159,9 @@ By default, the arc will always render above the [`MapArc.from`](https://pub.dev
 {% tabs %}
 {% highlight Dart %}
 
-MapZoomPanBehavior zoomPanBehavior;
-MapShapeSource dataSource;
-List<DataModel> data;
+late MapZoomPanBehavior zoomPanBehavior;
+late MapShapeSource dataSource;
+late List<DataModel> data;
 
 @override
 void initState() {
@@ -233,9 +233,9 @@ By default, the arc will bend at the center between the [`MapArc.from`](https://
 {% tabs %}
 {% highlight Dart %}
 
-MapZoomPanBehavior zoomPanBehavior;
-MapShapeSource dataSource;
-List<DataModel> data;
+late MapZoomPanBehavior zoomPanBehavior;
+late MapShapeSource dataSource;
+late List<DataModel> data;
 
 @override
 void initState() {
@@ -305,9 +305,9 @@ You can apply the same color for all [`MapArc`](https://pub.dev/documentation/sy
 {% tabs %}
 {% highlight Dart %}
 
-MapZoomPanBehavior zoomPanBehavior;
-MapShapeSource dataSource;
-List<DataModel> data;
+late MapZoomPanBehavior zoomPanBehavior;
+late MapShapeSource dataSource;
+late List<DataModel> data;
 
 @override
 void initState() {
@@ -378,9 +378,9 @@ You can apply the same width for all [`MapArc`](https://pub.dev/documentation/sy
 {% tabs %}
 {% highlight Dart %}
 
-MapZoomPanBehavior zoomPanBehavior;
-MapShapeSource dataSource;
-List<DataModel> data;
+late MapZoomPanBehavior zoomPanBehavior;
+late MapShapeSource dataSource;
+late List<DataModel> data;
 
 @override
 void initState() {
@@ -454,9 +454,9 @@ A sequence of dash and gap will be rendered based on the values in this list. On
 {% tabs %}
 {% highlight Dart %}
 
-MapZoomPanBehavior zoomPanBehavior;
-MapShapeSource dataSource;
-List<DataModel> data;
+late MapZoomPanBehavior zoomPanBehavior;
+late MapShapeSource dataSource;
+late List<DataModel> data;
 
 @override
 void initState() {
@@ -529,11 +529,11 @@ By default, there will not be any animation.
 {% tabs %}
 {% highlight Dart %}
 
-MapZoomPanBehavior zoomPanBehavior;
-MapShapeSource dataSource;
-List<DataModel> data;
-AnimationController animationController;
-Animation animation;
+late MapZoomPanBehavior zoomPanBehavior;
+late MapShapeSource dataSource;
+late List<DataModel> data;
+late AnimationController animationController;
+late Animation animation;
 
 @override
 void initState() {
@@ -569,7 +569,7 @@ void initState() {
 
 @override
 void dispose() {
-  animationController?.dispose();
+  animationController.dispose();
   super.dispose();
 }
 
@@ -621,10 +621,10 @@ You can use the [`onTap`](https://pub.dev/documentation/syncfusion_flutter_maps/
 {% tabs %}
 {% highlight Dart %}
 
-MapZoomPanBehavior zoomPanBehavior;
-MapShapeSource dataSource;
-List<DataModel> data;
-int selectedIndex;
+late MapZoomPanBehavior zoomPanBehavior;
+late MapShapeSource dataSource;
+late List<DataModel> data;
+late int selectedIndex;
 
 @override
 void initState() {
@@ -645,6 +645,8 @@ void initState() {
     zoomLevel: 4,
     focalLatLng: MapLatLng(22.9734, 90.6569),
   );
+
+  selectedIndex = -1;
   super.initState();
 }
 
@@ -700,10 +702,10 @@ You can show additional information about an arc drawn using the [`tooltipBuilde
 {% tabs %}
 {% highlight Dart %}
 
-MapZoomPanBehavior zoomPanBehavior;
-MapShapeSource dataSource;
-List<DataModel> data;
-Random random = Random();
+late MapZoomPanBehavior zoomPanBehavior;
+late MapShapeSource dataSource;
+late List<DataModel> data;
+late Random random;
 
 @override
 void initState() {
@@ -723,13 +725,15 @@ void initState() {
     zoomLevel: 4,
     focalLatLng: MapLatLng(22.9734, 90.6569),
   );
+
+  random = Random();
   super.initState();
 }
 
 @override
 Widget build(BuildContext context) {
  final ThemeData themeData = Theme.of(context);
-    final TextStyle textStyle = themeData.textTheme.caption
+    final TextStyle textStyle = themeData.textTheme.caption!
         .copyWith(color: themeData.colorScheme.surface);
   return Scaffold(
     body: SfMaps(
@@ -802,10 +806,10 @@ You can customize the appearance of the tooltip.
 {% tabs %}
 {% highlight Dart %}
 
-MapZoomPanBehavior zoomPanBehavior;
-MapShapeSource dataSource;
-List<DataModel> data;
-Random random = Random();
+late MapZoomPanBehavior zoomPanBehavior;
+late MapShapeSource dataSource;
+late List<DataModel> data;
+late Random random;
 
 @override
 void initState() {
@@ -825,6 +829,8 @@ void initState() {
     zoomLevel: 4,
     focalLatLng: MapLatLng(22.9734, 90.6569),
   );
+
+  random = Random();
   super.initState();
 }
 
@@ -852,25 +858,27 @@ Widget build(BuildContext context) {
                 },
               ).toSet(),
               tooltipBuilder: (BuildContext context, int index) {
-                 return Container(
-                    padding: EdgeInsets.only(left: 5, top: 5),
-                    height: 40,
-                    width: 100,
+                 return Padding(
+                    padding: EdgeInsets.all(5),
                     child: Column(
-                       children: [
-                          Row(
-                            children: [
-                               Text('Flight   : '),
-                               Text('Air India'),
-                            ],
-                          ),
-                          Row(
-                             children: [
-                                Text('Depart : '),
-                                Text(random.nextInt(12).toString() + 'AM'),
-                             ],
-                          ),
-                       ],
+                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text('Flight   : '),
+                            Text('Air India'),
+                          ],
+                        ),
+                        Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text('Depart : '),
+                            Text(random.nextInt(12).toString() + 'AM'),
+                          ],
+                        ),
+                      ],
                     ),
                 );
               },

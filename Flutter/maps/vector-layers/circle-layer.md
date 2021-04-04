@@ -22,8 +22,8 @@ N> It is applicable for both the tile layer and shape layer.
 {% tabs %}
 {% highlight Dart %}
 
-List<MapLatLng> circles;
-MapShapeSource dataSource;
+late List<MapLatLng> circles;
+late MapShapeSource dataSource;
 
 @override
 void initState() {
@@ -86,7 +86,7 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-List<MapLatLng> circles;
+late List<MapLatLng> circles;
 
 @override
 void initState() {
@@ -150,8 +150,8 @@ You can change the size of the circles using the [`MapCircle.radius`](https://pu
 {% tabs %}
 {% highlight Dart %}
 
-List<MapLatLng> circles;
-MapShapeSource dataSource;
+late List<MapLatLng> circles;
+late MapShapeSource dataSource;
 
 @override
 void initState() {
@@ -219,8 +219,8 @@ You can apply the same color for all [`MapCircle`](https://pub.dev/documentation
 {% tabs %}
 {% highlight Dart %}
 
-List<MapCircleModel> circles;
-MapShapeSource dataSource;
+late List<MapCircleModel> circles;
+late MapShapeSource dataSource;
 
 @override
 void initState() {
@@ -290,8 +290,8 @@ You can apply the same stroke color for all [`MapCircle`](https://pub.dev/docume
 {% tabs %}
 {% highlight Dart %}
 
-List<MapCircleModel> circles;
-MapShapeSource dataSource;
+late List<MapCircleModel> circles;
+late MapShapeSource dataSource;
 
 @override
 void initState() {
@@ -362,10 +362,10 @@ By default, there will not be any animation.
 {% tabs %}
 {% highlight Dart %}
 
-List<MapLatLng> circles;
-MapShapeSource dataSource;
-AnimationController animationController;
-Animation animation;
+late List<MapLatLng> circles;
+late MapShapeSource dataSource;
+late AnimationController animationController;
+late Animation animation;
 
 @override
 void initState() {
@@ -407,7 +407,7 @@ void initState() {
 
 @override
 void dispose() {
-  animationController?.dispose();
+  animationController.dispose();
   super.dispose();
 }
 
@@ -450,9 +450,9 @@ You can use the [`onTap`](https://pub.dev/documentation/syncfusion_flutter_maps/
 {% tabs %}
 {% highlight Dart %}
 
-List<MapLatLng> circles;
-MapShapeSource dataSource;
-int selectedIndex;
+late List<MapLatLng> circles;
+late MapShapeSource dataSource;
+late int selectedIndex;
 
 @override
 void initState() {
@@ -479,6 +479,8 @@ void initState() {
       'assets/india.json',
       shapeDataField: 'name',
     );
+
+    selectedIndex = -1;
     super.initState();
 }
 
@@ -526,9 +528,9 @@ You can show additional information about the circles drawn using the [`tooltipB
 {% tabs %}
 {% highlight Dart %}
 
-List<MapLatLng> circles;
-MapShapeSource dataSource;
-Random random = Random();
+late List<MapLatLng> circles;
+late MapShapeSource dataSource;
+late Random random;
 
 @override
 void initState() {
@@ -555,13 +557,15 @@ void initState() {
       'assets/india.json',
       shapeDataField: 'name',
     );
+
+    random = Random();
     super.initState();
 }
 
 @override
 Widget build(BuildContext context) {
    final ThemeData themeData = Theme.of(context);
-   final TextStyle textStyle = themeData.textTheme.caption
+   final TextStyle textStyle = themeData.textTheme.caption!
         .copyWith(color: themeData.colorScheme.surface);
    return Scaffold(
       body: SfMaps(
@@ -628,9 +632,9 @@ You can customize the appearance of the tooltip.
 {% tabs %}
 {% highlight Dart %}
 
-List<MapLatLng> circles;
-MapShapeSource dataSource;
-Random random = Random();
+late List<MapLatLng> circles;
+late MapShapeSource dataSource;
+late Random random;
 
 @override
 void initState() {
@@ -657,6 +661,8 @@ void initState() {
       'assets/india.json',
       shapeDataField: 'name',
     );
+
+    random = Random();
     super.initState();
 }
 
@@ -727,3 +733,70 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Circle tooltip customization](../images/circle-layer/circle-tooltip-customization.png)
+
+## Inverted circle
+
+You can apply color to the inverted circle by initializing the `MapCircleLayer.inverted` constructor. The inner circle color is transparent and the outer portion of the circle covered by an overlay color.
+
+You can customize the inverted circle using the following properties:
+
+* **Stroke color** - Change the stroke color of the circle using the `strokeColor` property.
+* **Stroke width** - Change the stroke width of the circle using the `strokeWidth` property. The default value of the `strokeWidth` property is `1`.
+* **Overlay color** - Change the outer portion color of the circle using the `color` property.
+* **Tooltip** - You can enable tooltip for the inverted circle using the `tooltipBuilder` property.
+* **Animation** - You can apply animation for the inverted circle using the `animation` property and able to customize the animation curve and duration.
+
+N> It is applicable for both the tile layer and shape layer.
+
+I> The individual circle customization like `MapCircle.color`, `MapCircle.strokeColor` and `MapCircle.strokeWidth` are not supported for the inverted circle.
+
+{% tabs %}
+{% highlight Dart %}
+
+late MapZoomPanBehavior zoomPanBehavior;
+
+@override
+void initState() {
+  zoomPanBehavior = MapZoomPanBehavior(zoomLevel: 4, maxZoomLevel: 15);
+  super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+     body: SfMaps(
+        layers: [
+          MapTileLayer(
+            urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+            initialFocalLatLng: MapLatLng(-14.2350, -51.9253),
+            sublayers: [
+              MapCircleLayer.inverted(
+                circles: List<MapCircle>.generate(
+                  1,
+                      (int index) {
+                    return MapCircle(
+                      center: MapLatLng(-14.2350, -51.9253),
+                      radius: 50,
+                    );
+                  },
+                ).toSet(),
+                color: Colors.black.withOpacity(0.3),
+                strokeColor: Colors.red,
+                strokeWidth: 1,
+              ),
+            ],
+            zoomPanBehavior: zoomPanBehavior,
+          ),
+        ],
+      ),
+   );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Inverted circle](../images/circle-layer/inverted-circle.png)
+
+N>
+* Refer `tooltip` section, for adding and customizing tooltip to the inverted circle.
+* Refer `animation` section, for applying animation to the inverted circle.
