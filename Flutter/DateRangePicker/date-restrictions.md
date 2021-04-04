@@ -79,13 +79,13 @@ In `DateRangePicker`, [blackoutDates](https://pub.dev/documentation/syncfusion_f
 
 @override
 Widget build(BuildContext context) {
-    return Scaffold(
-        body: SfDateRangePicker(
-          view: DateRangePickerView.year,
-          monthViewSettings: DateRangePickerMonthViewSettings(blackoutDates:[DateTime(2022,11,12)]),
-        )
-    );
-  }
+  return Scaffold(
+      body: SfDateRangePicker(
+        view: DateRangePickerView.year,
+        monthViewSettings: DateRangePickerMonthViewSettings(blackoutDates:[DateTime(2020, 03, 18), DateTime(2020, 03, 19)]),
+      )
+  );
+}
 
 {% endhighlight %}
 {% endtabs %}
