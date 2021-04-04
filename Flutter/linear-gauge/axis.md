@@ -13,7 +13,7 @@ The Linear Gauge axis is a scale where a set of values can be plotted. An axis c
 
 ## Default axis
 
-By default axis will have the minimum scale value as 0 and the maximum scale value as 100. Without any changes the default axis of the Linear Gauge will be displayed as below. 
+By default axis will have the [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/minimum.html) axis value as 0 and the [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/maximum.html) axis value as 100. Without any changes the default axis of the Linear Gauge will be displayed as below. 
 
 {% highlight dart %} 
 
@@ -32,9 +32,9 @@ By default axis will have the minimum scale value as 0 and the maximum scale val
 
 ![Initialize linear gauge for axis](images/getting-started/default_linear_gauge.png)
 
-## Customize the minimum and maximum scale values
+## Customize the minimum and maximum axis values
 
-The [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/minimum.html) and [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/maximum.html) properties of a Linear Gauge can be used to customize the axis scale. In the below code snippet the axis scale is customized to have the [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/minimum.html) value of -50 to [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/maximum.html) value of 50. The scale values are displayed by the axis labels. Customizing these label styles are further explained in next topics.  
+The [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/minimum.html) and [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/maximum.html) properties of a Linear Gauge can be used to customize the axis values. In the below code snippet the axis is customized to have the [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/minimum.html) value of -50 to [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/maximum.html) value of 50. The axis values are displayed by the labels. Customizing these label styles are further explained in next topics.  
 
 {% highlight dart %} 
 
@@ -84,6 +84,28 @@ The below code snippet demonstrates customizing the [`thickness`](https://pub.de
 
 ![Change axis track thickness in linear gauge](images/axis/axis_thickness.png)
 
+## Apply solid color
+
+The below code snippet sets solid colors to the axis track.
+
+{% highlight dart %} 
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+            child: SfLinearGauge(
+                axisTrackStyle: LinearAxisTrackStyle(color: Colors.blue))
+        ),
+      ),
+    );
+  }
+
+{% endhighlight %}
+
+![Apply color to axis in linear guage](images/axis/axis_solid_color.png)
+
 ## Apply gradient
 
 The [`color`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearAxisTrackStyle/color.html) property of [`axisTrackStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearAxisTrackStyle/LinearAxisTrackStyle.html) allows to set a solid color, while the [`gradient`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearAxisTrackStyle/gradient.html) property of [`axisTrackStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearAxisTrackStyle/LinearAxisTrackStyle.html) allows to apply linear-gradient to axis track.
@@ -118,28 +140,6 @@ The below code snippet applies gradient to axis track.
 {% endhighlight %}
 
 ![Apply gradient to axis in linear guage](images/axis/axis_gradient.png)
-
-## Apply solid color
-
-The below code snippet sets solid colors to the axis track.
-
-{% highlight dart %} 
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: Center(
-            child: SfLinearGauge(
-                axisTrackStyle: LinearAxisTrackStyle(color: Colors.blue))
-        ),
-      ),
-    );
-  }
-
-{% endhighlight %}
-
-![Apply color to axis in linear guage](images/axis/axis_solid_color.png)
 
 ## Customize the borders
 
@@ -196,7 +196,7 @@ The [`edgeStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest
 
 ![Change axis track edge style](images/axis/axis_corner_style.png)
 
-## Inverse the axis track
+## Inverse the axis
 
 The direction of linear gauge axis can be customized by [`isAxisInversed`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/isAxisInversed.html) property.
 When the [`isAxisInversed`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/isAxisInversed.html) property is true, the axis can be placed in inverse direction. The default value of the [`isAxisInversed`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/isAxisInversed.html) property is false.
@@ -265,7 +265,7 @@ You can hide the axis track by setting the [`showAxisTrack`](https://pub.dev/doc
 
 ## Custom axis
 
-Linear gauge allows you to display a set of values along with a custom scale based on your business logic by using the [`onGenerateLabels`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/onGenerateLabels.html) and [`valueToFactorCallback`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/valueToFactorCallback.html) callbacks.
+Linear gauge allows you to display a set of values along with a custom axis based on your business logic by using the [`onGenerateLabels`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/onGenerateLabels.html) and [`valueToFactorCallback`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/valueToFactorCallback.html) callbacks.
 
 {% highlight dart %} 
 
