@@ -25,7 +25,7 @@ The section contains the GitHub link for each widget’s code examples. This is 
 </tr>
 <tr>
 
-<td rowspan="12">
+<td rowspan="13">
 
 <p>Data Visualization</p>
 </td>
