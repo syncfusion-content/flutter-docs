@@ -149,7 +149,7 @@ In the below example, row data is updated when the `refreshRow` is called in `on
 
 List<Employee> _employees = [];
 
-final EmployeeDataSource _employeeDataSource = EmployeeDataSource();;
+final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
 
 final DataGridController _controller = DataGridController();
 
@@ -181,7 +181,7 @@ Widget build(BuildContext context) {
                 return 100.0;
               }
               
-              return details.rowHeight; 
+              return 50.0; 
             },
             columns: <GridColumn>[
               GridTextColumn(
@@ -268,7 +268,7 @@ Widget build(BuildContext context) {
               if (details.rowIndex == 0) {
                 return 100;
               }
-              return details.rowHeight;  
+              return 50.0;  
             },
             columns: <GridColumn>[
               GridTextColumn(

@@ -516,7 +516,7 @@ Widget build(BuildContext context){
 {% endhighlight %}
 {% endtabs %}
 
-Multiple rows can be selected by adding `DataGridRow` to `selectedRows` property.
+Multiple rows can be selected by adding  collection of `DataGridRow` to `selectedRows` property.
 
 {% tabs %}
 {% highlight Dart %}
