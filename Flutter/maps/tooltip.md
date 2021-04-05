@@ -20,8 +20,8 @@ The [`MapShapeLayer.shapeTooltipBuilder`](https://pub.dev/documentation/syncfusi
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> _data;
-MapShapeSource _shapeSource;
+late List<Model> _data;
+late MapShapeSource _shapeSource;
 
 @override
 void initState() {
@@ -69,7 +69,7 @@ Widget build(BuildContext context) {
                               color: Colors.white,
                               fontSize: Theme.of(context)
                                       .textTheme
-                                      .bodyText2
+                                      .bodyText2!
                                       .fontSize),
                           ),
                         ),
@@ -90,7 +90,7 @@ Widget build(BuildContext context) {
                       style: TextStyle(
                       color: Colors.white,
                       fontSize:
-                        Theme.of(context).textTheme.bodyText2.fontSize),
+                        Theme.of(context).textTheme.bodyText2!.fontSize),
                     ),
                   ],
                 ),
@@ -132,8 +132,8 @@ The [MapShapeLayer.bubbleTooltipBuilder](https://pub.dev/documentation/syncfusio
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> _data;
-MapShapeSource _shapeSource;
+late List<Model> _data;
+late MapShapeSource _shapeSource;
 
 @override
 void initState() {
@@ -182,7 +182,7 @@ Widget build(BuildContext context) {
                               color: Colors.white,
                               fontSize: Theme.of(context)
                                       .textTheme
-                                      .bodyText2
+                                      .bodyText2!
                                       .fontSize),
                           ),
                         ),
@@ -204,7 +204,7 @@ Widget build(BuildContext context) {
                       style: TextStyle(
                         color: Colors.white,
                         fontSize:
-                          Theme.of(context).textTheme.bodyText2.fontSize),
+                          Theme.of(context).textTheme.bodyText2!.fontSize),
                     ),
                   ],
                 ),
@@ -250,8 +250,8 @@ The [MapLayer.markerTooltipBuilder](https://pub.dev/documentation/syncfusion_flu
 {% tabs %}
 {% highlight Dart %}
 
-List<WorldWonderModel> _data;
-MapShapeSource _shapeSource;
+late List<WorldWonderModel> _data;
+late MapShapeSource _shapeSource;
 
 @override
 void initState() {
@@ -337,7 +337,7 @@ Widget build(BuildContext context) {
                                   color: Colors.white,
                                   fontSize: Theme.of(context)
                                       .textTheme
-                                      .bodyText2
+                                      .bodyText2!
                                       .fontSize),
                             ),
                           ),
@@ -358,7 +358,7 @@ Widget build(BuildContext context) {
                         style: TextStyle(
                             color: Colors.white,
                             fontSize:
-                                Theme.of(context).textTheme.bodyText2.fontSize),
+                                Theme.of(context).textTheme.bodyText2!.fontSize),
                       ),
                     ],
                   ),
@@ -378,7 +378,10 @@ Widget build(BuildContext context) {
 
 class WorldWonderModel {
   const WorldWonderModel(
-      {this.place, this.country, this.latitude, this.longitude});
+      {required this.place,
+      required this.country,
+      required this.latitude,
+      required this.longitude});
 
   final String place;
   final String country;
@@ -405,8 +408,8 @@ You can customize the below appearances of the tooltip.
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> _data;
-MapShapeSource _shapeSource;
+late List<Model> _data;
+late MapShapeSource _shapeSource;
 
 @override
 void initState() {
@@ -510,8 +513,8 @@ N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/pa
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> _data;
-MapShapeSource _shapeSource;
+late List<Model> _data;
+late MapShapeSource _shapeSource;
 
 @override
 void initState() {
