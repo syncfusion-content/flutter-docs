@@ -16,47 +16,30 @@ Chart provides tooltip support for all the series. It is used to show informatio
     late TooltipBehavior _tooltipBehavior;
 
     @override
-    void initState(){
-      _tooltipBehavior =  TooltipBehavior(enable: true);
-      super.initState(); 
+    void initState() {
+      _tooltipBehavior = TooltipBehavior(
+                  enable: true);
+      super.initState();
     }
-
     @override
     Widget build(BuildContext context) {
-        return Scaffold(
-            appBar: AppBar(
-                title: Text('afadff'),
-            ),
-            body: Center(
-                child: Container(
-                    child: SfCartesianChart(
-                        // Enables the tooltip for all the series in chart
-                        tooltipBehavior: _tooltipBehavior,
-                        // Initialize category axis
-                        primaryXAxis: CategoryAxis(),
-                        series: <ChartSeries>[
-                            // Initialize line series
-                            LineSeries<SalesData, String>(
-                                // Enables the tooltip for individual series
-                                enableTooltip: true, 
-                                dataSource: [
-                                    // Bind data source
-                                    SalesData('Jan', 35),
-                                    SalesData('Feb', 28),
-                                    SalesData('Mar', 34),
-                                    SalesData('Apr', 32),
-                                    SalesData('May', 40)
-                                ],
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
-                            )
-                        ]
-                    )
+      return Scaffold(
+        body: Center(
+          child: Container(
+            child: SfCartesianChart(
+            //Enables the tooltip for all the series
+              tooltipBehavior: _tooltipBehavior,
+              series: <CartesianSeries>[
+                LineSeries<ChartData, double>(
+                //Enables the tooltip for individual series
+                  enableTooltip: true, 
                 )
+              ]
             )
-        );
+          )
+        )
+      );
     }
-
 
 {% endhighlight %}
 
@@ -85,17 +68,17 @@ You can use the following properties to customize the tooltip appearance.
 
 {% highlight dart %} 
     
-    TooltipBehavior _tooltipBehavior;
+    late TooltipBehavior _tooltipBehavior;
 
     @override
     void initState() {
-    _tooltipBehavior = TooltipBehavior(
-                enable: true,
-                borderColor: Colors.red,
-                borderWidth: 5,
-                color: Colors.lightBlue
-              );
-    super.initState();
+      _tooltipBehavior = TooltipBehavior(
+                  enable: true,
+                  borderColor: Colors.red,
+                  borderWidth: 5,
+                  color: Colors.lightBlue
+                );
+      super.initState();
     }
     @override
     Widget build(BuildContext context) {
@@ -123,19 +106,18 @@ By default, x and y value will be displayed in the tooltip, and it can be custom
 * Bubble size - `point.size`
 * Name of the series - `series.name`
 
-{% highlight dart %} 
-    
+{% highlight dart %}     
 
-    TooltipBehavior _tooltipBehavior;
+    late TooltipBehavior _tooltipBehavior;
 
     @override
     void initState() {
-    _tooltipBehavior = TooltipBehavior(
-                enable: true, 
-                // Formatting the tooltip text
-                format: 'point.y%'
-              );
-    super.initState();
+      _tooltipBehavior = TooltipBehavior(
+                  enable: true, 
+                  // Formatting the tooltip text
+                  format: 'point.y%'
+                );
+      super.initState();
     }
     @override
     Widget build(BuildContext context) {
@@ -157,9 +139,8 @@ By default, x and y value will be displayed in the tooltip, and it can be custom
 The tooltip can be made to display in the fixed location or at the pointer location itself using the `tooltipPosition` property. This defaults to `auto`.
 
 {% highlight dart %} 
-    
 
-    TooltipBehavior _tooltipBehavior;
+    late TooltipBehavior _tooltipBehavior;
 
     @override
     void initState() {
@@ -192,7 +173,7 @@ You can customize the appearance of the tooltip with your own widget by using th
 
 {% highlight dart %} 
     
-    TooltipBehavior _tooltipBehavior;
+    late TooltipBehavior _tooltipBehavior;
 
     @override
     void initState() {
@@ -241,7 +222,7 @@ The ActivationMode enum contains the following values:
 
 {% highlight dart %} 
     
-    TooltipBehavior _tooltipBehavior;
+    late TooltipBehavior _tooltipBehavior;
 
     @override
     void initState() {
