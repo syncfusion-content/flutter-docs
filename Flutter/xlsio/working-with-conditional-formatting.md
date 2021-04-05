@@ -169,7 +169,7 @@ workbook.dispose();
 
 {% endhighlight %}
 
-## Format Specific Text values
+## Format Specific Text
 
 Specific text Conditional Formatting is used to format the Excel range contains given text using **ExcelCFType** enumeration and **text** property. 
 
@@ -227,7 +227,7 @@ The following screenshot represents generated Excel file with specific text cond
 
 ![Specific Text](images/CFSpecificText.jpg)
 
-## Format Date occurring values
+## Format Date Occurring
 
 Date occurring Conditional Formatting is used to format the Excel range contains given date using **ExcelCFType** and **CFTimePeriods** enumeration. 
 
@@ -389,7 +389,7 @@ The properties of `TopBottom` class are:
 * **percent** - Specifies whether the rank is determined by a percentage value.
 * **rank** - Specifies the maximum number or percentage of cells to be highlighted.
 
-### Top/Bottom ‘n’ rank values
+### Top/Bottom ‘n’ rank Values
 
 The below code example shows how to format top 8 rank values from the given data range using `TopBottom` `type` and `rank` properties in XlsIO.
 
@@ -455,7 +455,7 @@ The following screenshot represents the Excel file generated with TopBottom cond
 
 N> `TopBottom` `rank` value should be in a range between 1 and 1000.
 
-### Top/Bottom ‘n’% rank values
+### Top/Bottom ‘n’% rank Values
 
 The below code example shows how to format top 50 percentage rank values from the given data range using `TopBottom` `type`, `rank` and `percent` properties in XlsIO
 
@@ -594,7 +594,7 @@ The following screenshot represents the Excel file generated with `AboveBelowAve
 
 ![Above or Below Average conditional format](images/CFAboveBelowAvg.jpg)
 
-### Above or Below Standard Deviation values
+### Above or Below Standard Deviation Values
 
 The below code example shows how to format a range with values above standard deviation, using `AboveBelowAverage` `averageType` and `stdDevValue` properties in XlsIO.
 
