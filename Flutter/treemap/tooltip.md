@@ -20,7 +20,7 @@ The `TreemapLevel.tooltipBuilder` will be called with the corresponding tile det
 {% tabs %}
 {% highlight Dart %}
 
-List<SocialMediaUsers> _source;
+late List<SocialMediaUsers> _source;
 
 @override
 void initState() {
@@ -115,7 +115,7 @@ You can customize the appearance of the tooltip.
 {% tabs %}
 {% highlight Dart %}
 
-List<SocialMediaUsers> _source;
+late List<SocialMediaUsers> _source;
 
 @override
 void initState() {

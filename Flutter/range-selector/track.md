@@ -69,8 +69,8 @@ Widget build(BuildContext context) {
                                 SplineAreaSeries<Data, double>(
                                     color: Color.fromARGB(255, 126, 184, 253),
                                         dataSource: chartData,
-                                            xValueMapper: (Data sales, _) => sales.x,
-                                            yValueMapper: (Data sales, _) => sales.y)
+                                            xValueMapper: (Data sales, int index) => sales.x,
+                                            yValueMapper: (Data sales, int index) => sales.y)
                                 ],
                             ),
                         ),
@@ -81,14 +81,8 @@ Widget build(BuildContext context) {
   );
 }
 
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight Dart %}
-
 class Data {
-  Data({this.x, this.y});
+  Data({required this.x, required this.y});
   final double x;
   final double y;
 }
@@ -150,8 +144,8 @@ Widget build(BuildContext context) {
                                 SplineAreaSeries<Data, double>(
                                     color: Color.fromARGB(255, 126, 184, 253),
                                         dataSource: chartData,
-                                            xValueMapper: (Data sales, _) => sales.x,
-                                            yValueMapper: (Data sales, _) => sales.y)
+                                            xValueMapper: (Data sales, int index) => sales.x,
+                                            yValueMapper: (Data sales, int index) => sales.y)
                                 ],
                             ),
                         ),
@@ -162,14 +156,8 @@ Widget build(BuildContext context) {
   );
 }
 
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight Dart %}
-
 class Data {
-  Data({this.x, this.y});
+  Data({required this.x, required this.y});
   final double x;
   final double y;
 }
@@ -232,8 +220,8 @@ Widget build(BuildContext context) {
                                 SplineAreaSeries<Data, double>(
                                     color: Color.fromARGB(255, 126, 184, 253),
                                         dataSource: chartData,
-                                            xValueMapper: (Data sales, _) => sales.x,
-                                            yValueMapper: (Data sales, _) => sales.y)
+                                            xValueMapper: (Data sales, int index) => sales.x,
+                                            yValueMapper: (Data sales, int index) => sales.y)
                                 ],
                             ),
                         ),
@@ -244,14 +232,8 @@ Widget build(BuildContext context) {
   );
 }
 
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight Dart %}
-
 class Data {
-  Data({this.x, this.y});
+  Data({required this.x, required this.y});
   final double x;
   final double y;
 }

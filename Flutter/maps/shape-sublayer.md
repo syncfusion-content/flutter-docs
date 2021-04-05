@@ -20,7 +20,7 @@ The [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/lat
 {% tabs %}
 {% highlight Dart %}
 
-MapShapeSource _sublayerSource;
+late MapShapeSource _sublayerSource;
 
 @override
 void initState() {
@@ -70,8 +70,8 @@ The [`shapeDataField`](https://pub.dev/documentation/syncfusion_flutter_maps/lat
 {% tabs %}
 {% highlight Dart %}
 
-MapShapeSource _shapeSource;
-MapShapeSource _sublayerSource;
+late MapShapeSource _shapeSource;
+late MapShapeSource _sublayerSource;
 
 @override
 void initState() {
@@ -125,8 +125,8 @@ N> It is applicable for both tile layer and shape layer.
 {% tabs %}
 {% highlight Dart %}
 
-MapShapeSource _shapeSource;
-MapShapeSource _sublayerSource;
+late MapShapeSource _shapeSource;
+late MapShapeSource _sublayerSource;
 
 @override
 void initState() {
@@ -178,9 +178,9 @@ You can apply color to the sublayer shape by comparing a value that returns from
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> data;
-MapShapeSource sublayerDataSource;
-MapShapeSource shapeDataSource;
+late List<Model> data;
+late MapShapeSource sublayerDataSource;
+late MapShapeSource shapeDataSource;
 
 @override
 void initState() {
@@ -253,9 +253,9 @@ You can apply color to the sublayer shape based on whether the value returned fr
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> data;
-MapShapeSource sublayerDataSource;
-MapShapeSource shapeDataSource;
+late List<Model> data;
+late MapShapeSource sublayerDataSource;
+late MapShapeSource shapeDataSource;
 
 @override
 void initState() {
@@ -328,10 +328,10 @@ N> Refer the [`DataLabels`](https://help.syncfusion.com/flutter/maps/data-labels
 {% tabs %}
 {% highlight Dart %}
 
-MapShapeSource _shapeSource;
-MapShapeSource _sublayerSource;
-List<DataModel> _sublayerData;
-MapZoomPanBehavior _zoomPanBehavior;
+late MapShapeSource _shapeSource;
+late MapShapeSource _sublayerSource;
+late List<DataModel> _sublayerData;
+late MapZoomPanBehavior _zoomPanBehavior;
 
 @override
 void initState() {
@@ -421,10 +421,10 @@ N> Refer the [`Bubbles`](https://help.syncfusion.com/flutter/maps/bubble#tooltip
 {% tabs %}
 {% highlight Dart %}
 
-MapShapeSource _shapeSource;
-MapShapeSource _sublayerSource;
-List<DataModel> _sublayerData;
-MapZoomPanBehavior _zoomPanBehavior;
+late MapShapeSource _shapeSource;
+late MapShapeSource _sublayerSource;
+late List<DataModel> _sublayerData;
+late MapZoomPanBehavior _zoomPanBehavior;
 
 @override
 void initState() {
@@ -536,10 +536,10 @@ N> Refer the [`Tooltip`](https://help.syncfusion.com/flutter/maps/tooltip) secti
 {% tabs %}
 {% highlight Dart %}
 
-MapShapeSource _shapeSource;
-MapShapeSource _sublayerSource;
-List<DataModel> _sublayerData;
-MapZoomPanBehavior _zoomPanBehavior;
+late MapShapeSource _shapeSource;
+late MapShapeSource _sublayerSource;
+late List<DataModel> _sublayerData;
+late MapZoomPanBehavior _zoomPanBehavior;
 
 @override
 void initState() {
@@ -650,10 +650,10 @@ N> Refer the [`Shape selection`](https://help.syncfusion.com/flutter/maps/select
 {% tabs %}
 {% highlight Dart %}
 
-MapShapeSource _shapeSource;
-MapShapeSource _sublayerSource;
-List<DataModel> _sublayerData;
-MapZoomPanBehavior _zoomPanBehavior;
+late MapShapeSource _shapeSource;
+late MapShapeSource _sublayerSource;
+late List<DataModel> _sublayerData;
+late MapZoomPanBehavior _zoomPanBehavior;
 int _selectedIndex = 0;
 
 @override
@@ -749,11 +749,11 @@ N>
 {% tabs %}
 {% highlight Dart %}
 
-MapShapeSource _shapeSource;
-MapShapeSource _sublayerSource;
-List<DataModel> _sublayerData;
-MapZoomPanBehavior _zoomPanBehavior;
-List<MapLatLng> _markerData;
+late MapShapeSource _shapeSource;
+late MapShapeSource _sublayerSource;
+late List<DataModel> _sublayerData;
+late MapZoomPanBehavior _zoomPanBehavior;
+late List<MapLatLng> _markerData;
 
 @override
 void initState() {

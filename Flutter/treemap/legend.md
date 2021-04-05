@@ -18,7 +18,7 @@ You can show legend by initializing the `SfTreemap.legend` property. By default,
 {% tabs %}
 {% highlight Dart %}
 
-List<SocialMediaUsers> _source;
+late List<SocialMediaUsers> _source;
 
 @override
 void initState() {
@@ -77,7 +77,7 @@ You can show bar shape legend by initializing the `SfTreemap.legend` property as
 {% tabs %}
 {% highlight Dart %}
 
-List<SocialMediaUsers> _source;
+late List<SocialMediaUsers> _source;
 
 @override
 void initState() {
@@ -136,8 +136,8 @@ The icons color and text of the legend is applied based on the `TreemapLevel.col
 {% tabs %}
 {% highlight Dart %}
 
-List<SocialMediaUsers> _source;
-List<TreemapColorMapper> _colorMappers;
+late List<SocialMediaUsers> _source;
+late List<TreemapColorMapper> _colorMappers;
 
 @override
 void initState() {
@@ -151,10 +151,10 @@ void initState() {
    ];
 
    _colorMappers = <TreemapColorMapper>[
-      TreemapColorMapper.range(0, 10, Colors.blue[200]),
-      TreemapColorMapper.range(10, 20, Colors.deepOrange),
-      TreemapColorMapper.range(20, 30, Colors.blue[800]),
-   ];
+      TreemapColorMapper.range(from: 0, to: 10, color: Colors.blue[200]!),
+      TreemapColorMapper.range(from: 10, to: 20, color: Colors.deepOrange),
+      TreemapColorMapper.range(from: 20, to: 30, color: Colors.blue[800]!),
+    ];
    super.initState();
 }
 
@@ -271,7 +271,7 @@ You can position the legend items in different directions using the `TreemapLege
 {% tabs %}
 {% highlight Dart %}
 
-List<SocialMediaUsers> _source;
+late List<SocialMediaUsers> _source;
 
 @override
 void initState() {
@@ -334,7 +334,7 @@ If the property `TreemapLegend.offset` has been set with the property `TreemapLe
 {% tabs %}
 {% highlight Dart %}
 
-List<SocialMediaUsers> _source;
+late List<SocialMediaUsers> _source;
 
 @override
 void initState() {
@@ -396,7 +396,7 @@ If the legend position is `top` or `bottom`, then the default scroll direction i
 {% tabs %}
 {% highlight Dart %}
 
-List<SocialMediaUsers> _source;
+late List<SocialMediaUsers> _source;
 
 @override
 void initState() {
@@ -460,7 +460,7 @@ If the legend position is `top` or `bottom`, then the default scroll direction i
 {% tabs %}
 {% highlight Dart %}
 
-List<SocialMediaUsers> _source;
+late List<SocialMediaUsers> _source;
 
 @override
 void initState() {
@@ -521,7 +521,7 @@ You can customize the legend item's text style using the `TreemapLegend.textStyl
 {% tabs %}
 {% highlight Dart %}
 
-List<SocialMediaUsers> _source;
+late List<SocialMediaUsers> _source;
 
 @override
 void initState() {
@@ -590,7 +590,7 @@ You can customize the legend items using the following properties.
 {% tabs %}
 {% highlight Dart %}
 
-List<SocialMediaUsers> _source;
+late List<SocialMediaUsers> _source;
 
 @override
 void initState() {
@@ -657,8 +657,8 @@ You can set solid color for the bar by using the `TreemapLegendPaintingStyle.sol
 {% tabs %}
 {% highlight Dart %}
 
-List<SocialMediaUsers> _source;
-List<TreemapColorMapper> _colorMappers;
+late List<SocialMediaUsers> _source;
+late List<TreemapColorMapper> _colorMappers;
 
 @override
 void initState() {
@@ -672,10 +672,10 @@ void initState() {
    ];
 
    _colorMappers = <TreemapColorMapper>[
-      TreemapColorMapper.range(0, 10, Colors.blue[200]),
-      TreemapColorMapper.range(10, 20, Colors.deepOrange),
-      TreemapColorMapper.range(20, 30, Colors.blue[800]),
-   ];
+      TreemapColorMapper.range(from: 0, to: 10, color: Colors.blue[200]!),
+      TreemapColorMapper.range(from: 10, to: 20, color: Colors.deepOrange),
+      TreemapColorMapper.range(from: 20, to: 30, color: Colors.blue[800]!),
+    ];
    super.initState();
 }
 
@@ -726,8 +726,8 @@ You can set gradient color for the bar by using the `TreemapLegendPaintingStyle.
 {% tabs %}
 {% highlight Dart %}
 
-List<SocialMediaUsers> _source;
-List<TreemapColorMapper> _colorMappers;
+late List<SocialMediaUsers> _source;
+late List<TreemapColorMapper> _colorMappers;
 
 @override
 void initState() {
@@ -741,10 +741,10 @@ void initState() {
    ];
 
    _colorMappers = <TreemapColorMapper>[
-      TreemapColorMapper.range(0, 10, Colors.blue[200]),
-      TreemapColorMapper.range(10, 20, Colors.deepOrange),
-      TreemapColorMapper.range(20, 30, Colors.blue[800]),
-   ];
+      TreemapColorMapper.range(from: 0, to: 10, color: Colors.blue[200]!),
+      TreemapColorMapper.range(from: 10, to: 20, color: Colors.deepOrange),
+      TreemapColorMapper.range(from: 20, to: 30, color: Colors.blue[800]!),
+    ];
    super.initState();
 }
 
@@ -802,7 +802,7 @@ You can customize the legend items using the following properties.
 {% tabs %}
 {% highlight Dart %}
 
-List<SocialMediaUsers> _source;
+late List<SocialMediaUsers> _source;
 
 @override
 void initState() {
@@ -869,8 +869,8 @@ The labels are positioned between the segments when setting range color mapper w
 {% tabs %}
 {% highlight Dart %}
 
-List<SocialMediaUsers> _source;
-List<TreemapColorMapper> _colorMappers;
+late List<SocialMediaUsers> _source;
+late List<TreemapColorMapper> _colorMappers;
 
 @override
 void initState() {
@@ -884,10 +884,10 @@ void initState() {
    ];
 
    _colorMappers = <TreemapColorMapper>[
-      TreemapColorMapper.range(0, 10, Colors.blue[200]),
-      TreemapColorMapper.range(10, 20, Colors.deepOrange),
-      TreemapColorMapper.range(20, 30, Colors.blue[800]),
-   ];
+      TreemapColorMapper.range(from: 0, to: 10, color: Colors.blue[200]!),
+      TreemapColorMapper.range(from: 10, to: 20, color: Colors.deepOrange),
+      TreemapColorMapper.range(from: 20, to: 30, color: Colors.blue[800]!),
+    ];
    super.initState();
 }
 
@@ -937,8 +937,8 @@ The labels are positioned between the segments when setting range color mapper a
 {% tabs %}
 {% highlight Dart %}
 
-List<SocialMediaUsers> _source;
-List<TreemapColorMapper> _colorMappers;
+late List<SocialMediaUsers> _source;
+late List<TreemapColorMapper> _colorMappers;
 
 @override
 void initState() {
@@ -952,10 +952,13 @@ void initState() {
    ];
 
    _colorMappers = <TreemapColorMapper>[
-      TreemapColorMapper.range(0, 10, Colors.blue[200], name: '<10'),
-      TreemapColorMapper.range(10, 20, Colors.deepOrange, name: '10 - 20'),
-      TreemapColorMapper.range(20, 30, Colors.blue[800], name: '20 - 30'),
-   ];
+      TreemapColorMapper.range(
+          from: 0, to: 10, color: Colors.blue[200]!, name: '<10'),
+      TreemapColorMapper.range(
+          from: 10, to: 20, color: Colors.deepOrange, name: '10 - 20'),
+      TreemapColorMapper.range(
+          from: 20, to: 30, color: Colors.blue[800]!, name: '20 - 30'),
+    ];
    super.initState();
 }
 
@@ -1005,8 +1008,8 @@ The labels are positioned at the center of the segments when setting the `labels
 {% tabs %}
 {% highlight Dart %}
 
-List<SocialMediaUsers> _source;
-List<TreemapColorMapper> _colorMappers;
+late List<SocialMediaUsers> _source;
+late List<TreemapColorMapper> _colorMappers;
 
 @override
 void initState() {
@@ -1020,10 +1023,13 @@ void initState() {
    ];
 
    _colorMappers = <TreemapColorMapper>[
-      TreemapColorMapper.range(0, 10, Colors.blue[200], name: '<10'),
-      TreemapColorMapper.range(10, 20, Colors.deepOrange, name: '10 - 20'),
-      TreemapColorMapper.range(20, 30, Colors.blue[800], name: '20 - 30'),
-   ];
+      TreemapColorMapper.range(
+          from: 0, to: 10, color: Colors.blue[200]!, name: '<10'),
+      TreemapColorMapper.range(
+          from: 10, to: 20, color: Colors.deepOrange, name: '10 - 20'),
+      TreemapColorMapper.range(
+          from: 20, to: 30, color: Colors.blue[800]!, name: '20 - 30'),
+    ];
    super.initState();
 }
 
@@ -1076,8 +1082,8 @@ The `labelsPlacement` option is not applicable for the legend label applied with
 {% tabs %}
 {% highlight Dart %}
 
-List<SocialMediaUsers> _source;
-List<TreemapColorMapper> _colorMappers;
+late List<SocialMediaUsers> _source;
+late List<TreemapColorMapper> _colorMappers;
 
 @override
 void initState() {
@@ -1091,10 +1097,10 @@ void initState() {
    ];
 
    _colorMappers = <TreemapColorMapper>[
-      TreemapColorMapper.value('Facebook', Colors.blue[200]),
-      TreemapColorMapper.value('Instagram', Colors.deepOrange),
-      TreemapColorMapper.value('Twitter', Colors.blue[800]),
-   ];
+      TreemapColorMapper.value(value: 'Facebook', color: Colors.blue[200]!),
+      TreemapColorMapper.value(value: 'Instagram', color: Colors.deepOrange),
+      TreemapColorMapper.value(value: 'Twitter', color: Colors.blue[800]!),
+    ];
    super.initState();
 }
 
