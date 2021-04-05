@@ -31,7 +31,7 @@ Widget build(BuildContext context) {
 
 >**NOTE** 
 * Most of the properties type and classes were same from [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) except the followings [HijriDatePickerController](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerController-class.html), [HijriDatePickerMonthCellStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerMonthCellStyle-class.html), [HijriDatePickerMonthViewSettings](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerMonthViewSettings-class.html), [HijriDatePickerViewChangedArgs](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerViewChangedArgs-class.html), [HijriDatePickerYearCellStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerYearCellStyle-class.html), [HijriDateRange](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDateRange-class.html) and [HijriDatePickerView](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerView-class.html).
-* Use the [HijriDateTime](https://pub.dev/documentation/syncfusion_flutter_core/latest/core/HijriDateTime-class.html) class to define the date for ‘SfHijriDateRangePicker’.
+* Use the [HijriDateTime](https://pub.dev/documentation/syncfusion_flutter_core/latest/core/HijriDateTime-class.html) class to define the date for `SfHijriDateRangePicker`.
 
 ## Multiple picker views
 The `SfHijriDateRangePicker` widget provides three different types of views to display. It can be assigned to the widget constructor by using the [view](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfHijriDateRangePicker/view.html) property. The default view of the widget is the month view. By default, the current date will be displayed initially for all the date range picker views.
@@ -172,7 +172,7 @@ class MyAppState extends State<MyApp> {
 ![Hijri programmatic view navigation](images/hijri-picker/hijri_programattic_view_navigation.jpg)
 
 ## Programmatic date selection
-You can select dates programmatically on the Hijri date picker widget by using the ‘HijriDatePickerController`.
+You can select dates programmatically on the Hijri date picker widget by using the `HijriDatePickerController`.
 
 For selection [refer](https://help.syncfusion.com/flutter/daterangepicker/selections).
 
