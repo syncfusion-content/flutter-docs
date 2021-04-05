@@ -25,7 +25,7 @@ The section contains the GitHub link for each widget’s code examples. This is 
 </tr>
 <tr>
 
-<td rowspan="12">
+<td rowspan="13">
 
 <p>Data Visualization</p>
 </td>
@@ -85,7 +85,6 @@ The section contains the GitHub link for each widget’s code examples. This is 
 <td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/linear_gauge">samples/linear_gauge</a></p>
 </td>
 </tr>
-
 
 <tr>
 <td><p><a href="https://help.syncfusion.com/flutter/maps/overview">Maps</a></p></td>
