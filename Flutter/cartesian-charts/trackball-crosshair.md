@@ -36,7 +36,7 @@ N> The above mentioned properties are only applicable for SfCartesian types of c
 
 {% highlight dart %} 
     
-    TrackballBehavior _trackballBehavior;
+    late TrackballBehavior _trackballBehavior;
 
     @override
     void initState(){
@@ -81,7 +81,7 @@ The [`tooltipDisplayMode`](https://pub.dev/documentation/syncfusion_flutter_char
 
 {% highlight dart %} 
     
-    TrackballBehavior _trackballBehavior;
+    late TrackballBehavior _trackballBehavior;
 
     @override
     void initState(){
@@ -122,7 +122,7 @@ The position of trackball tooltip can be changed using the [`tooltipAlignment`](
 
 {% highlight dart %} 
     
-    TrackballBehavior _trackballBehavior;
+    late TrackballBehavior _trackballBehavior;
 
     @override
     void initState(){
@@ -161,7 +161,7 @@ By default, axis value will be displayed in the tooltip, and it can be customize
 
 {% highlight dart %} 
     
-    TrackballBehavior _trackballBehavior;
+    late TrackballBehavior _trackballBehavior;
 
     @override
     void initState(){
@@ -207,7 +207,7 @@ The ActivationMode enum contains the following values:
 
 {% highlight dart %} 
     
-    TrackballBehavior _trackballBehavior;
+    late TrackballBehavior _trackballBehavior;
 
     @override
     void initState(){
@@ -242,7 +242,7 @@ The ActivationMode enum contains the following values:
 
 {% highlight dart %} 
     
-    TrackballBehavior _trackballBehavior;
+    late TrackballBehavior _trackballBehavior;
 
     @override
     void initState(){
@@ -302,7 +302,7 @@ Also refer, [marker customization](./marker-datalabel#Marker) for customizing th
 
 {% highlight dart %} 
     
-    TrackballBehavior _trackballBehavior;
+    late TrackballBehavior _trackballBehavior;
 
     @override
     void initState(){
@@ -351,7 +351,7 @@ You can customize the appearance of the trackball tooltip with your own widgets 
 
 {% highlight dart %} 
     
-    TrackballBehavior _trackballBehavior;
+    late TrackballBehavior _trackballBehavior;
 
     @override
     void initState(){
@@ -437,41 +437,49 @@ Defaults to `true`.
 
 {% highlight dart %} 
 
+    late TrackballBehavior _trackballBehavior;
+
+    @override
+    void initState(){
+      _trackballBehavior = TrackballBehavior(
+                      enable: true,
+                    );
+      super.initState();
+    }
+    
     @override
     Widget build(BuildContext context) {
-    return Scaffold(
+      return Scaffold(
         child: Center(
             child: Container(
                 child: SfCartesianChart(
-                    trackballBehavior: TrackballBehavior(
-                      enable: true,
-                    ),
+                    trackballBehavior: _trackballBehavior,
                     series: <LineSeries<SalesData, double>>[
-          LineSeries<SalesData, double>(
-              dataSource: chartData,
-              xValueMapper: (SalesData sales, _) => sales.year,
-              yValueMapper: (SalesData sales, _) => sales.sales),
-          LineSeries<SalesData, double>(
-              dataSource: chartData,
-              xValueMapper: (SalesData sales, _) => sales.year,
-              yValueMapper: (SalesData sales, _) => sales.sales2),
-          LineSeries<SalesData, double>(
-              dataSource: chartData,
-              xValueMapper: (SalesData sales, _) => sales.year,
-              yValueMapper: (SalesData sales, _) => sales.sales3),
-          LineSeries<SalesData, double>(
-              dataSource: chartData,
-              xValueMapper: (SalesData sales, _) => sales.year,
-              yValueMapper: (SalesData sales, _) => sales.sales4),
-          LineSeries<SalesData, double>(
-              dataSource: chartData,
-              xValueMapper: (SalesData sales, _) => sales.year,
-              yValueMapper: (SalesData sales5, _) => sales.sales),
-           ]
-         )
+                      LineSeries<SalesData, double>(
+                          dataSource: chartData,
+                          xValueMapper: (SalesData sales, _) => sales.year,
+                          yValueMapper: (SalesData sales, _) => sales.sales),
+                      LineSeries<SalesData, double>(
+                          dataSource: chartData,
+                          xValueMapper: (SalesData sales, _) => sales.year,
+                          yValueMapper: (SalesData sales, _) => sales.sales2),
+                      LineSeries<SalesData, double>(
+                          dataSource: chartData,
+                          xValueMapper: (SalesData sales, _) => sales.year,
+                          yValueMapper: (SalesData sales, _) => sales.sales3),
+                      LineSeries<SalesData, double>(
+                          dataSource: chartData,
+                          xValueMapper: (SalesData sales, _) => sales.year,
+                          yValueMapper: (SalesData sales, _) => sales.sales4),
+                      LineSeries<SalesData, double>(
+                          dataSource: chartData,
+                          xValueMapper: (SalesData sales, _) => sales.year,
+                          yValueMapper: (SalesData sales5, _) => sales.sales),
+                    ]
+                )
+            )
         )
-       )
-     );
+      );
     }
 
 {% endhighlight %}
@@ -488,7 +496,7 @@ N> The above mentioned properties are only   applicable for SfCartesian types of
 
 {% highlight dart %} 
     
-    CrosshairBehavior _crosshairBehavior;
+    late CrosshairBehavior _crosshairBehavior;
 
     @override
     void initState(){
@@ -536,7 +544,7 @@ The appearance of the track line in crosshair can be customized using the follow
 
 {% highlight dart %} 
     
-    CrosshairBehavior _crosshairBehavior;
+    late CrosshairBehavior _crosshairBehavior;
 
     @override
     void initState(){
@@ -596,7 +604,7 @@ The ActivationMode enum contains the following values:
 
 {% highlight dart %} 
     
-    CrosshairBehavior _crosshairBehavior;
+    late CrosshairBehavior _crosshairBehavior;
 
     @override
     void initState(){
