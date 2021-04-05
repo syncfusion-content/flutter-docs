@@ -489,7 +489,6 @@ The following code shows how to perform custom sorting for the columns based on 
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
 class EmployeeDataSource extends DataGridSource {
-  List<DataGridRow> dataGridRows;
   EmployeeDataSource({List<Employee> employeesData}) {
     dataGridRows = employeesData
         .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
@@ -501,6 +500,8 @@ class EmployeeDataSource extends DataGridSource {
             ]))
         .toList();
   }
+
+  List<DataGridRow> dataGridRows = [];
 
   @override
   List<DataGridRow> get rows => dataGridRows;
@@ -572,7 +573,6 @@ The following code shows how to perform custom sorting for the columns based on 
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
 class EmployeeDataSource extends DataGridSource<Employee> {
-  List<DataGridRow> dataGridRows;
   EmployeeDataSource({List<Employee> employeesData}) {
     dataGridRows = employeesData
         .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
@@ -584,6 +584,8 @@ class EmployeeDataSource extends DataGridSource<Employee> {
             ]))
         .toList();
   }
+
+  List<DataGridRow> dataGridRows = [];
 
   @override
   List<DataGridRow> get rows => dataGridRows;
