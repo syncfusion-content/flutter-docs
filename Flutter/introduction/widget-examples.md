@@ -98,12 +98,12 @@ The section contains the GitHub link for each widget’s code examples. This is 
 
 <tr>
 <td rowspan="2"><p>Calendar</p></td>
-<td><p><a href="http://172.16.0.76/flutter/calendar/overview">Event calendar</a></p></td>
+<td><p><a href="https://help.syncfusion.com/flutter/calendar/overview">Event calendar</a></p></td>
 <td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/calendar">samples/calendar</a></p></td>
 </tr>
 
 <tr>
-<td><p><a href="http://172.16.0.76/flutter/daterangepicker/overview">Date range picker</a></p></td>
+<td><p><a href="https://help.syncfusion.com/flutter/daterangepicker/overview">Date range picker</a></p></td>
 <td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/date_picker">samples/date_picker</a></p>
 </td>
 </tr>
