@@ -79,7 +79,7 @@ Widget build(BuildContext context) {
 }
 
 class EmployeeDataSource extends DataGridSource {
-  EmployeeDataSource() {
+  EmployeeDataSource(List<Employee> employees) {
     dataGridRows = employees
         .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
               DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
@@ -92,7 +92,7 @@ class EmployeeDataSource extends DataGridSource {
         .toList();
   }
 
-  List<DataGridRow> dataGridRows;
+  List<DataGridRow> dataGridRows = [];
 
   @override
   List<DataGridRow> get rows => dataGridRows;
@@ -154,7 +154,7 @@ The appearance of the alternating cells in a column can be customized conditiona
 {% highlight Dart %} 
 
 class EmployeeDataSource extends DataGridSource {
-  EmployeeDataSource() {
+  EmployeeDataSource(List<Employee> employees) {
     dataGridRows = employees
         .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
               DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
@@ -167,7 +167,7 @@ class EmployeeDataSource extends DataGridSource {
         .toList();
   }
 
-  List<DataGridRow> dataGridRows;
+  List<DataGridRow> dataGridRows = [];
 
   @override
   List<DataGridRow> get rows => dataGridRows;
@@ -220,7 +220,7 @@ The appearance of the rows in `SfDataGrid` can be customized conditionally based
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
       
 class EmployeeDataSource extends DataGridSource {
-  EmployeeDataSource() {
+  EmployeeDataSource(List<Employee> employees) {
     dataGridRows = employees
         .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
               DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
@@ -233,7 +233,7 @@ class EmployeeDataSource extends DataGridSource {
         .toList();
   }
 
-  List<DataGridRow> dataGridRows;
+  List<DataGridRow> dataGridRows = [];
 
   @override
   List<DataGridRow> get rows => dataGridRows;
@@ -295,7 +295,7 @@ The appearance of the alternating rows in `SfDataGrid` can be customized by usin
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
 class EmployeeDataSource extends DataGridSource {
-  EmployeeDataSource() {
+  EmployeeDataSource(List<Employee> employees) {
     dataGridRows = employees
         .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
               DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
@@ -308,7 +308,7 @@ class EmployeeDataSource extends DataGridSource {
         .toList();
   }
 
-  List<DataGridRow> dataGridRows;
+  List<DataGridRow> dataGridRows = [];
 
   @override
   List<DataGridRow> get rows => dataGridRows;

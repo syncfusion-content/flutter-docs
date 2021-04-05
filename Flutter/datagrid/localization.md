@@ -31,6 +31,7 @@ Next, import the `flutter_localizations` library and specify [localizationsDeleg
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 final int rowsPerPage = 15;
+
 @override
 Widget build(BuildContext context) {
   return MaterialApp(
