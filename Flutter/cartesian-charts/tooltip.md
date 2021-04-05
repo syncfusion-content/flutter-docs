@@ -13,33 +13,50 @@ Chart provides tooltip support for all the series. It is used to show informatio
 
 {% highlight dart %} 
     
-    TooltipBehavior _tooltipBehavior;
+    late TooltipBehavior _tooltipBehavior;
 
     @override
-    void initState() {
-    _tooltipBehavior = TooltipBehavior(
-                enable: true);
-    super.initState();
+    void initState(){
+      _tooltipBehavior =  TooltipBehavior(enable: true);
+      super.initState(); 
     }
+
     @override
     Widget build(BuildContext context) {
-      return Scaffold(
-        body: Center(
-          child: Container(
-            child: SfCartesianChart(
-            //Enables the tooltip for all the series
-              tooltipBehavior: _tooltipBehavior,
-              series: <CartesianSeries>[
-                LineSeries<ChartData, double>(
-                //Enables the tooltip for individual series
-                  enableTooltip: true, 
+        return Scaffold(
+            appBar: AppBar(
+                title: Text('afadff'),
+            ),
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        // Enables the tooltip for all the series in chart
+                        tooltipBehavior: _tooltipBehavior,
+                        // Initialize category axis
+                        primaryXAxis: CategoryAxis(),
+                        series: <ChartSeries>[
+                            // Initialize line series
+                            LineSeries<SalesData, String>(
+                                // Enables the tooltip for individual series
+                                enableTooltip: true, 
+                                dataSource: [
+                                    // Bind data source
+                                    SalesData('Jan', 35),
+                                    SalesData('Feb', 28),
+                                    SalesData('Mar', 34),
+                                    SalesData('Apr', 32),
+                                    SalesData('May', 40)
+                                ],
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales
+                            )
+                        ]
+                    )
                 )
-              ]
             )
-          )
-        )
-      );
+        );
     }
+
 
 {% endhighlight %}
 
