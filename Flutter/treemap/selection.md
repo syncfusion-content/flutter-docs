@@ -20,7 +20,7 @@ The `onSelectionChanged` callback will be called with the details of the selecte
 {% tabs %}
 {% highlight Dart %}
 
-List<SocialMediaUsers> _source;
+late List<SocialMediaUsers> _source;
 
 @override
 void initState() {
@@ -81,7 +81,7 @@ You can customize the below appearance of the selected tile.
 {% tabs %}
 {% highlight Dart %}
 
-List<SocialMediaUsers> _source;
+late List<SocialMediaUsers> _source;
 
 @override
 void initState() {

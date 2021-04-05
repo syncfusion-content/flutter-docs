@@ -68,7 +68,7 @@ Widget build(BuildContext context) {
                 return SfMaps(
                     layers: [
                         MapTileLayer(
-                            urlTemplate: snapshot.data,
+                            urlTemplate: snapshot.data as String,
                         ),
                     ],
                 );

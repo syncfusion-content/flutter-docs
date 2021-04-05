@@ -9,16 +9,16 @@ documentation: ug
 
 # Interaction modes in Flutter PDF Viewer (SfPdfViewer)
 
-The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) supports following interaction modes for easy interaction with the PDF documents on a desktop web browser,
+The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) supports the following interaction modes for easy interaction with the PDF documents on a desktop web browser,
 
 * selection
 * pan
 
-N> On a touch device, setting the `[interactionMode](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/interactionMode.html)` property to `selection` mode will have no effect since panning is the default mode for scrolling and the selection is made by long pressing a word in the document.
+N> On a touch device, setting the [interactionMode](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/interactionMode.html) property to the `selection` mode will have no effect since panning is the default mode for scrolling and the selection is made by long-pressing a word in the document.
 
 ## Selection mode
 
-By default, `selection` interaction mode will be enabled on a desktop web browser and allows users to select and copy text from the PDF files. This is helpful for copying and sharing text content. Refer to the following code to enable the `selection` mode in `SfPdfViewer`.
+By default, the `selection` interaction mode will be enabled on a desktop web browser and allows users to select and copy text from the PDF files. This also helps to copy and share the text content. Refer to the following code to enable the `selection` mode in `SfPdfViewer`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -37,7 +37,7 @@ Widget build(BuildContext context) {
 
 ## Pan mode
 
-In `pan` mode, the dragging and scrolling of the pages can be performed in any direction using mouse and touch interactions on a desktop web browser, but the text selection cannot be performed. Refer to the following code to enable the `pan` mode in `SfPdfViewer`.
+In `pan` mode, the dragging and scrolling of the pages can be performed in any direction using the mouse and touch interactions on a desktop web browser, but the text selection cannot be performed. Refer to the following code to enable the `pan` mode in `SfPdfViewer`.
 
 {% tabs %}
 {% highlight Dart %}

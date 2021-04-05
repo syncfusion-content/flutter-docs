@@ -22,8 +22,8 @@ N> You must call `setState()` in the [`MapShapeLayer.onSelectionChanged`](https:
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> data;
-MapShapeSource dataSource;
+late List<Model> data;
+late MapShapeSource dataSource;
 int selectedIndex = 1;
 
 @override
@@ -101,8 +101,8 @@ You can customize the below appearance of the selected shape.
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> data;
-MapShapeSource dataSource;
+late List<Model> data;
+late MapShapeSource dataSource;
 int selectedIndex = 5;
 
 @override
@@ -182,8 +182,8 @@ N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/pa
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> data;
-MapShapeSource dataSource;
+late List<Model> data;
+late MapShapeSource dataSource;
 int selectedIndex = 5;
 
 @override

@@ -18,7 +18,7 @@ You can show data labels on the map using the [`MapShapeLayer.showDataLabels`](h
 {% tabs %}
 {% highlight Dart %}
 
-MapShapeSource dataSource;
+late MapShapeSource dataSource;
 
 @override
 void initState() {
@@ -30,11 +30,9 @@ void initState() {
 }
 
 @override
-Widget build(BuildContext context) {
-  return Scaffold(
-    body: Center(
-      child: Container(
-        height: 350,
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
         child: Padding(
           padding: EdgeInsets.only(left: 15, right: 15),
           child: SfMaps(
@@ -44,7 +42,6 @@ Widget build(BuildContext context) {
                 showDataLabels: true,
               ),
             ],
-          ),
         ),
       ),
     ),
@@ -63,8 +60,8 @@ You can customize text of the data labels using the [`MapShapeSource.dataLabelMa
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> data;
-MapShapeSource dataSource;
+late List<Model> data;
+late MapShapeSource dataSource;
 
 @override
 void initState() {
@@ -89,24 +86,21 @@ void initState() {
 
 @override
 Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Container(
-          height: 350,
-          child: Padding(
-            padding: EdgeInsets.only(left: 15, right: 15),
-            child: SfMaps(
-              layers: [
-                MapShapeLayer(
-                  source: dataSource,
-                  showDataLabels: true,
-                ),
-              ],
+  return Scaffold(
+    body: Center(
+      child: Padding(
+        padding: EdgeInsets.only(left: 15, right: 15),
+        child: SfMaps(
+          layers: [
+            MapShapeLayer(
+              source: dataSource,
+              showDataLabels: true,
             ),
-          ),
+          ],
         ),
       ),
-   );
+    ),
+  );
 }
 
 class Model {
@@ -130,8 +124,8 @@ By default, the data labels will render even if it overflows from the shape.
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> data;
-MapShapeSource dataSource;
+late List<Model> data;
+late MapShapeSource dataSource;
 
 @override
 void initState() {
@@ -157,27 +151,24 @@ void initState() {
 
 @override
 Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Container(
-          height: 350,
-          child: Padding(
-            padding: EdgeInsets.only(left: 15, right: 15),
-            child: SfMaps(
-              layers: [
-                MapShapeLayer(
-                  source: dataSource,
-                  showDataLabels: true,
-                  dataLabelSettings: MapDataLabelSettings(
-                    overflowMode: MapLabelOverflow.ellipsis,
-                  ),
-                ),
-              ],
+  return Scaffold(
+    body: Center(
+      child: Padding(
+        padding: EdgeInsets.only(left: 15, right: 15),
+        child: SfMaps(
+          layers: [
+            MapShapeLayer(
+              source: dataSource,
+              showDataLabels: true,
+              dataLabelSettings: MapDataLabelSettings(
+                overflowMode: MapLabelOverflow.ellipsis,
+              ),
             ),
-          ),
+          ],
         ),
       ),
-   );
+    ),
+  );
 }
 
 class Model {
@@ -199,8 +190,8 @@ You can customize the data labels using the [`MapDataLabelSettings.textStyle`](h
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> data;
-MapShapeSource dataSource;
+late List<Model> data;
+late MapShapeSource dataSource;
 
 @override
 void initState() {
@@ -226,33 +217,29 @@ void initState() {
 
 @override
 Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Container(
-          height: 350,
-          child: Padding(
-            padding: EdgeInsets.only(left: 15, right: 15),
-            child: SfMaps(
-              layers: [
-                MapShapeLayer(
-                  source: dataSource,
-                  showDataLabels: true,
-                  dataLabelSettings: MapDataLabelSettings(
-                    textStyle: const TextStyle(
-                        color: Colors.red,
-                        fontSize: 12,
-                        fontWeight: FontWeight.bold,
-                        fontStyle: FontStyle.italic,
-                        fontFamily: 'Times'
-                    ),
-                  ),
-                ),
-              ],
+  return Scaffold(
+    body: Center(
+      child: Padding(
+        padding: EdgeInsets.only(left: 15, right: 15),
+        child: SfMaps(
+          layers: [
+            MapShapeLayer(
+              source: dataSource,
+              showDataLabels: true,
+              dataLabelSettings: MapDataLabelSettings(
+                textStyle: const TextStyle(
+                    color: Colors.red,
+                    fontSize: 12,
+                    fontWeight: FontWeight.bold,
+                    fontStyle: FontStyle.italic,
+                    fontFamily: 'Times'),
+              ),
             ),
-          ),
+          ],
         ),
       ),
-   );
+    ),
+  );
 }
 
 class Model {
@@ -274,8 +261,8 @@ N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/pa
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> data;
-MapShapeSource dataSource;
+late List<Model> data;
+late MapShapeSource dataSource;
 
 @override
 void initState() {
@@ -301,35 +288,31 @@ void initState() {
 
 @override
 Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Container(
-          height: 350,
-          child: Padding(
-            padding: EdgeInsets.only(left: 15, right: 15),
-            child: SfMapsTheme(
-              data: SfMapsThemeData(
-                dataLabelTextStyle: TextStyle(
-                    color: Colors.red,
-                    fontSize: 12,
-                    fontWeight: FontWeight.bold,
-                    fontStyle: FontStyle.italic,
-                    fontFamily: 'Times'
-                ),
+  return Scaffold(
+    body: Center(
+      child: Padding(
+        padding: EdgeInsets.only(left: 15, right: 15),
+        child: SfMapsTheme(
+          data: SfMapsThemeData(
+            dataLabelTextStyle: TextStyle(
+                color: Colors.red,
+                fontSize: 12,
+                fontWeight: FontWeight.bold,
+                fontStyle: FontStyle.italic,
+                fontFamily: 'Times'),
+          ),
+          child: SfMaps(
+            layers: [
+              MapShapeLayer(
+                source: dataSource,
+                showDataLabels: true,
               ),
-              child: SfMaps(
-                layers: [
-                  MapShapeLayer(
-                    source: dataSource,
-                    showDataLabels: true,
-                  ),
-                ],
-              ),
-            ),
+            ],
           ),
         ),
       ),
-   );
+    ),
+  );
 }
 
 class Model {
