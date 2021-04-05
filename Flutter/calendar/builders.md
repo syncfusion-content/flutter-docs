@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Builders in flutter calendar
-The calendar allows you to create a responsive UI with conditions based on a widgetâ€™s details, to design and create your custom view to the month cells and month header of schedule view in the calendar.
+The calendar allows you to create a responsive UI with conditions based on a widget’s details, to design and create your custom view to the month cells and month header of schedule view in the calendar.
 
 The calendar has two builders to create and assign your custom view:
 * Month cell builder
@@ -30,18 +30,18 @@ The [MonthCellBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar
 
 @override
 Widget build(BuildContext context) {
-  return MaterialApp(
-    home: Scaffold(
+    return MaterialApp(
+      home: Scaffold(
         body: SfCalendar(
             view: CalendarView.month,
             monthCellBuilder:
                 (BuildContext buildContext, MonthCellDetails details) {
               final Color backgroundColor =
-              _getMonthCellBackgroundColor(details.date);
-              final Color defaultColor = model.themeData != null &&
-                  model.themeData.brightness == Brightness.dark
-                  ? Colors.black54
-                  : Colors.white;
+                  _getMonthCellBackgroundColor(details.date);
+              final Color defaultColor =
+                  Theme.of(context).brightness == Brightness.dark
+                      ? Colors.black54
+                      : Colors.white;
               return Container(
                 decoration: BoxDecoration(
                     color: backgroundColor,
@@ -49,8 +49,7 @@ Widget build(BuildContext context) {
                 child: Center(
                   child: Text(
                     details.date.day.toString(),
-                    style: TextStyle(
-                        color: _getCellTextColor(backgroundColor)),
+                    style: TextStyle(color: _getCellTextColor(backgroundColor)),
                   ),
                 ),
               );
@@ -59,9 +58,9 @@ Widget build(BuildContext context) {
             monthViewSettings: MonthViewSettings(
               showTrailingAndLeadingDates: false,
             )),
-    ),
-  );
-}
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -135,24 +134,19 @@ The [CalendarAppointmentBuilder](https://pub.dev/documentation/syncfusion_flutte
 {% highlight Dart %}
 
 class MyAppState extends State<MyApp> {
-  CalendarController _controller;
-
-  @override
-  void initState() {
-    _controller = CalendarController();
-    super.initState();
-  }
+  CalendarController _controller = CalendarController();
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
           body: SfCalendar(
-        view: CalendarView.day,
-		dataSource: _getDataSource(),
-        appointmentBuilder: (BuildContext context,
-                (BuildContext context, CalendarAppointmentDetails details) {
-              final Appointment meeting = details.appointments.first;
+            view: CalendarView.day,
+            dataSource: _getCalendarDataSource(),
+            appointmentBuilder: (BuildContext context,
+                CalendarAppointmentDetails details) {
+              final Appointment meeting =
+                  details.appointments.first;
               final String image = _getImage();
               if (_controller.view != CalendarView.month &&
                   _controller.view != CalendarView.schedule) {
@@ -172,31 +166,31 @@ class MyAppState extends State<MyApp> {
                         ),
                         child: SingleChildScrollView(
                             child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              meeting.subject,
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 12,
-                                fontWeight: FontWeight.w500,
-                              ),
-                              maxLines: 3,
-                              softWrap: false,
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                            !kIsWeb
-                                ? Container()
-                                : Text(
-                                    'Time: ${DateFormat('hh:mm a').format(meeting.startTime)} - ' +
-                                        '${DateFormat('hh:mm a').format(meeting.endTime)}',
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 10,
-                                    ),
-                                  )
-                          ],
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  meeting.subject,
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                  maxLines: 3,
+                                  softWrap: false,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                                !kIsWeb
+                                    ? Container()
+                                    : Text(
+                                        'Time: ${DateFormat('hh:mm a').format(meeting.startTime)} - ' +
+                                            '${DateFormat('hh:mm a').format(meeting.endTime)}',
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 10,
+                                        ),
+                                      )
+                              ],
                         )),
                       ),
                       Container(
@@ -206,25 +200,25 @@ class MyAppState extends State<MyApp> {
                         alignment: Alignment.topLeft,
                         child: SingleChildScrollView(
                             child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                                padding: EdgeInsets.symmetric(vertical: 5),
-                                child: Image(
-                                    image: ExactAssetImage(
-                                        'images/' + image + '.png'),
-                                    fit: BoxFit.contain,
-                                    width: details.bounds.width,
-                                    height: 60)),
-                            Text(
-                              meeting.notes,
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 10,
-                              ),
-                            )
-                          ],
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Padding(
+                                    padding: EdgeInsets.symmetric(vertical: 5),
+                                    child: Image(
+                                        image:
+                                            ExactAssetImage('images/' + image + '.png'),
+                                        fit: BoxFit.contain,
+                                        width: details.bounds.width,
+                                        height: 60)),
+                                Text(
+                                  meeting.notes!,
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 10,
+                                  ),
+                                )
+                              ],
                         )),
                       ),
                       Container(
@@ -241,8 +235,10 @@ class MyAppState extends State<MyApp> {
                   ),
                 );
               }
+              return Container(
+                child: Text(meeting.subject),
+              );
             },
-        },
       )),
     );
   }
@@ -289,27 +285,26 @@ Widget build(BuildContext context) {
       specialRegions: _getTimeRegions(),
       timeRegionBuilder:
           (BuildContext context, TimeRegionDetails timeRegionDetails) {
-        if (details.region.text == 'Lunch') {
-                return Container(
-                  color: details.region.color,
-                  alignment: Alignment.center,
-                  child: Icon(
-                    Icons.restaurant,
-                    color: Colors.grey.withOpacity(0.5),
-                  ),
-                );
-              } else if (details.region.text == 'Not Available') {
-                return Container(
-                  color: details.region.color,
-                  alignment: Alignment.center,
-                  child: Icon(
-                    Icons.block,
-                    color: Colors.grey.withOpacity(0.5),
-                  ),
-                );
-              }
-
-              return Container(color: details.region.color);
+        if (timeRegionDetails.region.text == 'Lunch') {
+          return Container(
+            color: timeRegionDetails.region.color,
+            alignment: Alignment.center,
+            child: Icon(
+              Icons.restaurant,
+              color: Colors.grey.withOpacity(0.5),
+            ),
+          );
+        } else if (timeRegionDetails.region.text == 'Not Available') {
+          return Container(
+            color: timeRegionDetails.region.color,
+            alignment: Alignment.center,
+            child: Icon(
+              Icons.block,
+              color: Colors.grey.withOpacity(0.5),
+            ),
+          );
+        }
+       return Container(color: timeRegionDetails.region.color);
       },
     )),
   );
