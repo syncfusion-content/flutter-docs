@@ -18,7 +18,7 @@ You can add images as a background of the tiles using the `TreemapLevel.itemBuil
 {% tabs %}
 {% highlight Dart %}
 
-List<SocialMediaUsers> _source;
+late List<SocialMediaUsers> _source;
 
 @override
 void initState() {
@@ -50,7 +50,7 @@ Widget build(BuildContext context) {
               return Align(
                 alignment: Alignment.center,
                 child: Image.asset(
-                  _getImageSource(tile),
+                  _getImageSource(tile)!,
                 ),
               );
             },
@@ -60,7 +60,7 @@ Widget build(BuildContext context) {
    );
 }
 
-String _getImageSource(TreemapTile tile) {
+String? _getImageSource(TreemapTile tile) {
   if (_source[tile.indices[0]].socialMedia == 'Facebook') {
     return 'images/facebook.png';
   } else if (_source[tile.indices[0]].socialMedia == 'Instagram') {

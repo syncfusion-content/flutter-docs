@@ -22,10 +22,10 @@ N> It is applicable for both the tile layer and shape layer.
 {% tabs %}
 {% highlight Dart %}
 
-List<PolygonModel> polygons;
-List<MapLatLng> polygon1;
-List<MapLatLng> polygon2;
-MapShapeSource dataSource;
+late List<PolygonModel> polygons;
+late List<MapLatLng> polygon1;
+late List<MapLatLng> polygon2;
+late MapShapeSource dataSource;
 
 @override
 void initState() {
@@ -90,9 +90,9 @@ class PolygonModel {
 {% tabs %}
 {% highlight Dart %}
 
-List<PolygonModel> polygons;
-List<MapLatLng> polygon1;
-List<MapLatLng> polygon2;
+late List<PolygonModel> polygons;
+late List<MapLatLng> polygon1;
+late List<MapLatLng> polygon2;
 
 @override
 void initState() {
@@ -157,10 +157,10 @@ You can apply the same color for all [`MapPolygon`](https://pub.dev/documentatio
 {% tabs %}
 {% highlight Dart %}
 
-List<PolygonModel> polygons;
-List<MapLatLng> polygon1;
-List<MapLatLng> polygon2;
-MapShapeSource dataSource;
+late List<PolygonModel> polygons;
+late List<MapLatLng> polygon1;
+late List<MapLatLng> polygon2;
+late MapShapeSource dataSource;
 
 @override
 void initState() {
@@ -234,10 +234,10 @@ You can apply the same stroke color for all [`MapPolygon`](https://pub.dev/docum
 {% tabs %}
 {% highlight Dart %}
 
-List<PolygonModel> polygons;
-List<MapLatLng> polygon1;
-List<MapLatLng> polygon2;
-MapShapeSource dataSource;
+late List<PolygonModel> polygons;
+late List<MapLatLng> polygon1;
+late List<MapLatLng> polygon2;
+late MapShapeSource dataSource;
 
 @override
 void initState() {
@@ -309,11 +309,11 @@ You can use the [`onTap`](https://pub.dev/documentation/syncfusion_flutter_maps/
 {% tabs %}
 {% highlight Dart %}
 
-List<PolygonModel> polygons;
-List<MapLatLng> polygon1;
-List<MapLatLng> polygon2;
-MapShapeSource dataSource;
-int selectedIndex;
+late List<PolygonModel> polygons;
+late List<MapLatLng> polygon1;
+late List<MapLatLng> polygon2;
+late MapShapeSource dataSource;
+late int selectedIndex;
 
 @override
 void initState() {
@@ -337,6 +337,8 @@ void initState() {
       'assets/world_map.json',
       shapeDataField: 'continent',
     );
+
+    selectedIndex = -1;
     super.initState();
 }
 
@@ -388,10 +390,10 @@ You can show additional information about the polygon drawn using the [`tooltipB
 {% tabs %}
 {% highlight Dart %}
 
-List<PolygonModel> polygons;
-List<MapLatLng> polygon1;
-List<MapLatLng> polygon2;
-MapShapeSource dataSource;
+late List<PolygonModel> polygons;
+late List<MapLatLng> polygon1;
+late List<MapLatLng> polygon2;
+late MapShapeSource dataSource;
 
 @override
 void initState() {
@@ -468,10 +470,10 @@ You can customize the appearance of the tooltip.
 {% tabs %}
 {% highlight Dart %}
 
-List<PolygonModel> polygons;
-List<MapLatLng> polygon1;
-MapShapeSource dataSource;
-MapZoomPanBehavior zoomPanBehavior;
+late List<PolygonModel> polygons;
+late List<MapLatLng> polygon1;
+late MapShapeSource dataSource;
+late MapZoomPanBehavior zoomPanBehavior;
 
 @override
 void initState() {
@@ -559,8 +561,8 @@ I> The individual polygon customization like `MapPolygon.color`, `MapPolygon.str
 {% tabs %}
 {% highlight Dart %}
 
-MapZoomPanBehavior zoomPanBehavior;
-List<MapLatLng> _polygon;
+late MapZoomPanBehavior zoomPanBehavior;
+late List<MapLatLng> _polygon;
 
 @override
 void initState() {

@@ -58,8 +58,8 @@ You can navigate to the desired bookmark topic programmatically using the [jumpT
 {% tabs %}
 {% highlight Dart %}
 
-PdfViewerController _pdfViewerController;
-PdfBookmark _pdfBookmark;
+late PdfViewerController _pdfViewerController;
+late PdfBookmark _pdfBookmark;
 
 @override
 void initState() {

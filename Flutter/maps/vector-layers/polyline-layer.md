@@ -22,10 +22,10 @@ N> It is applicable for both the tile layer and shape layer.
 {% tabs %}
 {% highlight Dart %}
 
-List<MapLatLng> polyline;
-List<List<MapLatLng>> polylines;
-MapShapeSource dataSource;
-MapZoomPanBehavior zoomPanBehavior;
+late List<MapLatLng> polyline;
+late List<List<MapLatLng>> polylines;
+late MapShapeSource dataSource;
+late MapZoomPanBehavior zoomPanBehavior;
 
 @override
 void initState() {
@@ -94,9 +94,9 @@ class PolylineModel {
 {% tabs %}
 {% highlight Dart %}
 
-List<MapLatLng> polyline;
-List<List<MapLatLng>> polylines;
-MapZoomPanBehavior zoomPanBehavior;
+late List<MapLatLng> polyline;
+late List<List<MapLatLng>> polylines;
+late MapZoomPanBehavior zoomPanBehavior;
 
 @override
 void initState() {
@@ -164,10 +164,10 @@ You can apply the same color for all [`MapPolyline`](https://pub.dev/documentati
 {% tabs %}
 {% highlight Dart %}
 
-List<MapLatLng> polyline;
-List<PolylineModel> polylines;
-MapShapeSource dataSource;
-MapZoomPanBehavior zoomPanBehavior;
+late List<MapLatLng> polyline;
+late List<PolylineModel> polylines;
+late MapShapeSource dataSource;
+late MapZoomPanBehavior zoomPanBehavior;
 
 @override
 void initState() {
@@ -244,10 +244,10 @@ You can apply the same width for all [`MapPolyline`](https://pub.dev/documentati
 {% tabs %}
 {% highlight Dart %}
 
-List<MapLatLng> polyline;
-List<PolylineModel> polylines;
-MapShapeSource dataSource;
-MapZoomPanBehavior zoomPanBehavior;
+late List<MapLatLng> polyline;
+late List<PolylineModel> polylines;
+late MapShapeSource dataSource;
+late MapZoomPanBehavior zoomPanBehavior;
 
 @override
 void initState() {
@@ -326,10 +326,10 @@ A sequence of dash and gap will be rendered based on the values in this list. On
 {% tabs %}
 {% highlight Dart %}
 
-List<MapLatLng> polyline;
-List<PolylineModel> polylines;
-MapShapeSource dataSource;
-MapZoomPanBehavior zoomPanBehavior;
+late List<MapLatLng> polyline;
+late List<PolylineModel> polylines;
+late MapShapeSource dataSource;
+late MapZoomPanBehavior zoomPanBehavior;
 
 @override
 void initState() {
@@ -408,12 +408,12 @@ By default, there will not be any animation.
 {% tabs %}
 {% highlight Dart %}
 
-List<MapLatLng> polyline;
-List<PolylineModel> polylines;
-MapShapeSource dataSource;
-MapZoomPanBehavior zoomPanBehavior;
-AnimationController animationController;
-Animation animation;
+late List<MapLatLng> polyline;
+late List<PolylineModel> polylines;
+late MapShapeSource dataSource;
+late MapZoomPanBehavior zoomPanBehavior;
+late AnimationController animationController;
+late Animation animation;
 
 @override
 void initState() {
@@ -457,7 +457,7 @@ void initState() {
 
 @override
 void dispose() {
-  animationController?.dispose();
+  animationController.dispose();
   super.dispose();
 }
 
@@ -506,11 +506,11 @@ You can use the [`onTap`](https://pub.dev/documentation/syncfusion_flutter_maps/
 {% tabs %}
 {% highlight Dart %}
 
-List<MapLatLng> polyline;
-List<PolylineModel> polylines;
-MapShapeSource dataSource;
-MapZoomPanBehavior zoomPanBehavior;
-int selectedIndex;
+late List<MapLatLng> polyline;
+late List<PolylineModel> polylines;
+late MapShapeSource dataSource;
+late MapZoomPanBehavior zoomPanBehavior;
+late int selectedIndex;
 
 @override
 void initState() {
@@ -539,6 +539,8 @@ void initState() {
     zoomLevel: 2,
     focalLatLng: MapLatLng(19.3173, 76.7139),
   );
+
+  selectedIndex = -1;
   super.initState();
 }
 
@@ -591,11 +593,11 @@ You can show additional information about the polyline drawn using the [`tooltip
 {% tabs %}
 {% highlight Dart %}
 
-List<MapLatLng> polyline;
-List<PolylineModel> polylines;
-MapShapeSource dataSource;
-MapZoomPanBehavior zoomPanBehavior;
-Random random = Random();
+late List<MapLatLng> polyline;
+late List<PolylineModel> polylines;
+late MapShapeSource dataSource;
+late MapZoomPanBehavior zoomPanBehavior;
+late Random random;
 
 @override
 void initState() {
@@ -624,13 +626,15 @@ void initState() {
     zoomLevel: 2,
     focalLatLng: MapLatLng(19.3173, 76.7139),
   );
+
+  random = Random();
   super.initState();
 }
 
 @override
 Widget build(BuildContext context) {
   final ThemeData themeData = Theme.of(context);
-  final TextStyle textStyle = themeData.textTheme.caption
+  final TextStyle textStyle = themeData.textTheme.caption!
         .copyWith(color: themeData.colorScheme.surface);
   return Scaffold(
     body: SfMaps(
@@ -701,11 +705,11 @@ You can customize the appearance of the tooltip.
 {% tabs %}
 {% highlight Dart %}
 
-List<MapLatLng> polyline;
-List<PolylineModel> polylines;
-MapShapeSource dataSource;
-MapZoomPanBehavior zoomPanBehavior;
-Random random = Random();
+late List<MapLatLng> polyline;
+late List<PolylineModel> polylines;
+late MapShapeSource dataSource;
+late MapZoomPanBehavior zoomPanBehavior;
+late Random random;
 
 @override
 void initState() {
@@ -734,6 +738,8 @@ void initState() {
     zoomLevel: 3,
     focalLatLng: MapLatLng(15.3173, 76.7139),
   );
+
+  random = Random();
   super.initState();
 }
 

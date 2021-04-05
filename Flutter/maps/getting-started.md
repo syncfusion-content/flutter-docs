@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Getting Started with Flutter Maps (SfMaps)
-This section explains the steps required to add the maps widget with shape layer and its elements such as data labels, tooltip, title, assignable colors based on region, and legends. It also explains about adding tile layer with OpenStreetMap. This section covers only basic features needed to know to get started with Syncfusion maps.
+This section explains the steps required to add the maps widget with shape layer and its elements such as data labels, tooltip, assignable colors based on region, and legends. It also explains about adding tile layer with OpenStreetMap. This section covers only basic features needed to know to get started with Syncfusion maps.
 
 ## Add Flutter maps to an application
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
@@ -94,7 +94,7 @@ flutter:
 {% tabs %}
 {% highlight Dart %}
 
-MapShapeSource _dataSource;
+late MapShapeSource _dataSource;
 
 @override
 void initState() {
@@ -129,7 +129,7 @@ Load .json data from the network.
 {% tabs %}
 {% highlight Dart %}
 
-MapShapeSource _dataSource;
+late MapShapeSource _dataSource;
 
 @override
 void initState() {
@@ -171,7 +171,7 @@ Widget build(BuildContext context) {
       future: _fetchJsonData(),
       builder: (BuildContext context, snapshot) {
         if (snapshot.hasData) {
-          Uint8List bytesData = snapshot.data;
+          Uint8List bytesData = snapshot.data as Uint8List;
           return SfMaps(
             layers: [
               MapShapeLayer(
@@ -206,7 +206,7 @@ By default, the value specified for the [`shapeDataField`](https://pub.dev/docum
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> data;
+late List<Model> data;
 
 @override
 void initState() {
@@ -262,9 +262,7 @@ N>
 
 ## Add shape layer maps elements
 
-Add the basic maps elements such as title, data labels, legend, and tooltip as shown in the below code snippet.
-
-* **Title** - You can add a title to the maps to provide a quick information about the data plotted in the map using the [`SfMaps.title`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps/title.html) property.
+Add the basic maps elements such as data labels, legend, and tooltip as shown in the below code snippet.
 
 * **Data labels** - You can show data labels using the [`MapShapeLayer.showDataLabels`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer/showDataLabels.html) property and also, it is possible to show data labels only for the particular shapes/or show custom text using the [`MapShapeSource.dataLabelMapper`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/dataLabelMapper.html) property.
 
@@ -275,46 +273,45 @@ Add the basic maps elements such as title, data labels, legend, and tooltip as s
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> data;
-MapShapeSource dataSource;
+late List<Model> data;
+late MapShapeSource dataSource;
 
 @override
 void initState() {
-    data = <Model>[
-      Model('New South Wales', Color.fromRGBO(255, 215, 0, 1.0),
-          '       New\nSouth Wales'),
-      Model('Queensland', Color.fromRGBO(72, 209, 204, 1.0), 'Queensland'),
-      Model('Northern Territory', Colors.red.withOpacity(0.85),
-          'Northern\nTerritory'),
-      Model('Victoria', Color.fromRGBO(171, 56, 224, 0.75), 'Victoria'),
-      Model('South Australia', Color.fromRGBO(126, 247, 74, 0.75),
-          'South Australia'),
-      Model('Western Australia', Color.fromRGBO(79, 60, 201, 0.7),
-          'Western Australia'),
-      Model('Tasmania', Color.fromRGBO(99, 164, 230, 1), 'Tasmania'),
-      Model('Australian Capital Territory', Colors.teal, 'ACT')
-    ];
+  data = <Model>[
+    Model('New South Wales', Color.fromRGBO(255, 215, 0, 1.0),
+        '       New\nSouth Wales'),
+    Model('Queensland', Color.fromRGBO(72, 209, 204, 1.0), 'Queensland'),
+    Model('Northern Territory', Colors.red.withOpacity(0.85),
+        'Northern\nTerritory'),
+    Model('Victoria', Color.fromRGBO(171, 56, 224, 0.75), 'Victoria'),
+    Model('South Australia', Color.fromRGBO(126, 247, 74, 0.75),
+        'South Australia'),
+    Model('Western Australia', Color.fromRGBO(79, 60, 201, 0.7),
+        'Western Australia'),
+    Model('Tasmania', Color.fromRGBO(99, 164, 230, 1), 'Tasmania'),
+    Model('Australian Capital Territory', Colors.teal, 'ACT')
+  ];
 
-    dataSource = MapShapeSource.asset(
-      'assets/australia.json',
-       shapeDataField: 'STATE_NAME',
-       dataCount: data.length,
-       primaryValueMapper: (int index) => data[index].state,
-       dataLabelMapper: (int index) => data[index].stateCode,
-       shapeColorValueMapper: (int index) => data[index].color,
-    );
-    super.initState();
+  dataSource = MapShapeSource.asset(
+    'assets/australia.json',
+    shapeDataField: 'STATE_NAME',
+    dataCount: data.length,
+    primaryValueMapper: (int index) => data[index].state,
+    dataLabelMapper: (int index) => data[index].stateCode,
+    shapeColorValueMapper: (int index) => data[index].color,
+  );
+  super.initState();
 }
 
 @override
 Widget build(BuildContext context) {
   final ThemeData themeData = Theme.of(context);
   return Scaffold(
-    body: Container(
-      height: 520,
-      child: Center(
+    body: Center(
+      child: SizedBox(
+        height: MediaQuery.of(context).size.height * 0.55,
         child: SfMaps(
-          title: const MapTitle('Australia map'),
           layers: <MapShapeLayer>[
             MapShapeLayer(
               source: dataSource,
@@ -324,7 +321,7 @@ Widget build(BuildContext context) {
                 return Padding(
                   padding: const EdgeInsets.all(7),
                   child: Text(data[index].stateCode,
-                      style: themeData.textTheme.caption
+                      style: themeData.textTheme.caption!
                           .copyWith(color: themeData.colorScheme.surface)),
                 );
               },
@@ -338,7 +335,7 @@ Widget build(BuildContext context) {
                   textStyle: TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight.bold,
-                      fontSize: themeData.textTheme.caption.fontSize)),
+                      fontSize: themeData.textTheme.caption!.fontSize)),
             ),
           ],
         ),
@@ -371,13 +368,13 @@ Kindly refer the [tile layer](https://help.syncfusion.com/flutter/maps/tile-laye
 
 @override
 Widget build(BuildContext context) {
-    return SfMaps(
-        layers: [
-            MapTileLayer(
-                urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-            ),
-        ],
-    );
+  return SfMaps(
+    layers: [
+      MapTileLayer(
+        urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+      ),
+    ],
+  );
 }
  
 {% endhighlight %}

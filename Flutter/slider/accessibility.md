@@ -33,7 +33,7 @@ Widget build(BuildContext context) {
               showTicks: true,
               showLabels: true,
               semanticFormatterCallback: (dynamic value){
-                return 'The selected value is ${value}';
+                return 'The selected value is $value';
               },
               onChanged: (dynamic newValue) {
                 setState(() {
@@ -70,7 +70,7 @@ Widget build(BuildContext context) {
               showTicks: true,
               showLabels: true,
               semanticFormatterCallback: (dynamic value){
-                return 'The selected value is ${value}';
+                return 'The selected value is $value';
               },
               onChanged: (dynamic newValue) {
                 setState(() {
