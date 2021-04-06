@@ -18,7 +18,7 @@ You can show shape legend by setting the [`MapShapeLayer.legend`](https://pub.de
 {% tabs %}
 {% highlight Dart %}
 
-MapShapeSource _shapeSource;
+late MapShapeSource _shapeSource;
 
 @override
 void initState() {
@@ -34,7 +34,7 @@ void initState() {
 Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Container(
+        child: SizedBox(
           height: 350,
           child: Padding(
             padding: const EdgeInsets.only(left: 15, right: 15),
@@ -67,8 +67,8 @@ You can show bubble legend by setting the [`MapShapeLayer.legend`](https://pub.d
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> _data;
-MapShapeSource _shapeSource;
+late List<Model> _data;
+late MapShapeSource _shapeSource;
 
 @override
 void initState() {
@@ -137,7 +137,7 @@ You can show bar shape legend by setting the [`MapShapeLayer.legend`](https://pu
 {% tabs %}
 {% highlight Dart %}
 
-MapShapeSource _shapeSource;
+late MapShapeSource _shapeSource;
 
 @override
 void initState() {
@@ -186,8 +186,8 @@ You can show bar bubble legend by setting the [`MapShapeLayer.legend`](https://p
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> _data;
-MapShapeSource _shapeSource;
+late List<Model> _data;
+late MapShapeSource _shapeSource;
 
 @override
 void initState() {
@@ -258,8 +258,8 @@ N> It is applicable for both shape and bar legend.
 {% tabs %}
 {% highlight Dart %}
 
-MapShapeSource _dataSource;
-List<DataModel> _data;
+late MapShapeSource _dataSource;
+late List<DataModel> _data;
 
 @override
 void initState() {
@@ -323,8 +323,8 @@ The icons color of the legend is applied based on the colors returned from the [
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> _data;
-MapShapeSource _shapeSource;
+late List<Model> _data;
+late MapShapeSource _shapeSource;
 
 @override
 void initState() {
@@ -393,8 +393,8 @@ You can customize the first segment label of the legend using the [`MapColorMapp
 {% tabs %}
 {% highlight Dart %}
 
-List<DataModel> _data;
-MapShapeSource _shapeSource;
+late List<DataModel> _data;
+late MapShapeSource _shapeSource;
 
 @override
 void initState() {
@@ -469,8 +469,8 @@ You can position the legend items in different directions using the [`MapLegend.
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> _data;
-MapShapeSource _shapeSource;
+late List<Model> _data;
+late MapShapeSource _shapeSource;
 
 @override
 void initState() {
@@ -558,8 +558,8 @@ If the property [`MapLegend.offset`](https://pub.dev/documentation/syncfusion_fl
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> _data;
-MapShapeSource _shapeSource;
+late List<Model> _data;
+late MapShapeSource _shapeSource;
 
 @override
 void initState() {
@@ -647,8 +647,8 @@ If the legend position is `top` or `bottom`, then the default scroll direction i
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> _data;
-MapShapeSource _shapeSource;
+late List<Model> _data;
+late MapShapeSource _shapeSource;
 
 @override
 void initState() {
@@ -736,8 +736,8 @@ If the legend position is `top` or `bottom`, then the default scroll direction i
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> _data;
-MapShapeSource _shapeSource;
+late List<Model> _data;
+late MapShapeSource _shapeSource;
 
 @override
 void initState() {
@@ -832,8 +832,8 @@ You can enable toggling the legend items and the corresponding shapes or bubbles
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> _data;
-MapShapeSource _shapeSource;
+late List<Model> _data;
+late MapShapeSource _shapeSource;
 
 @override
 void initState() {
@@ -923,8 +923,8 @@ N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/pa
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> _data;
-MapShapeSource _shapeSource;
+late List<Model> _data;
+late MapShapeSource _shapeSource;
 
 @override
 void initState() {
@@ -1014,8 +1014,8 @@ You can customize the legend item's text style using the [`MapLegend.textStyle`]
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> _data;
-MapShapeSource _shapeSource;
+late List<Model> _data;
+late MapShapeSource _shapeSource;
 
 @override
 void initState() {
@@ -1104,8 +1104,8 @@ N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/pa
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> _data;
-MapShapeSource _shapeSource;
+late List<Model> _data;
+late MapShapeSource _shapeSource;
 
 @override
 void initState() {
@@ -1203,8 +1203,8 @@ You can customize the legend items using the following properties.
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> _data;
-MapShapeSource _shapeSource;
+late List<Model> _data;
+late MapShapeSource _shapeSource;
 
 @override
 void initState() {
@@ -1296,8 +1296,8 @@ You can set solid color for the bar by using the [MapLegendPaintingStyle.solid](
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> _data;
-MapShapeSource _shapeSource;
+late List<Model> _data;
+late MapShapeSource _shapeSource;
 
 @override
 void initState() {
@@ -1380,8 +1380,8 @@ You can set gradient color for the bar by using the [MapLegendPaintingStyle.grad
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> _data;
-MapShapeSource _shapeSource;
+late List<Model> _data;
+late MapShapeSource _shapeSource;
 
 @override
 void initState() {
@@ -1469,8 +1469,8 @@ You can customize the legend items using the following properties.
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> _data;
-MapShapeSource _shapeSource;
+late List<Model> _data;
+late MapShapeSource _shapeSource;
 
 @override
 void initState() {
@@ -1556,8 +1556,8 @@ The labels are positioned between the segments when setting range color mapper w
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> _data;
-MapShapeSource _shapeSource;
+late List<Model> _data;
+late MapShapeSource _shapeSource;
 
 @override
 void initState() {
@@ -1629,8 +1629,8 @@ The labels are positioned between the segments when setting range color mapper a
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> _data;
-MapShapeSource _shapeSource;
+late List<Model> _data;
+late MapShapeSource _shapeSource;
 
 @override
 void initState() {
@@ -1700,8 +1700,8 @@ The labels are positioned at the center of the segments when setting the [`label
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> _data;
-MapShapeSource _shapeSource;
+late List<Model> _data;
+late MapShapeSource _shapeSource;
 
 @override
 void initState() {
@@ -1774,8 +1774,8 @@ The `labelsPlacement` option is not applicable for the shape/bubble applied with
 {% tabs %}
 {% highlight Dart %}
 
-List<Model> _data;
-MapShapeSource _dataSource;
+late List<Model> _data;
+late MapShapeSource _dataSource;
 
 @override
 void initState() {

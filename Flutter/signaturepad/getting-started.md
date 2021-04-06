@@ -129,9 +129,9 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 
-## Save signatures as images in Android and iOS platforms
+## Save signatures as images in Mobile and Desktop platforms
 
-You can save the signature drawn in the SignaturePad as an image using the [`toImage()`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePadState/toImage.html) method as shown in the below code example in Android and iOS platforms. Since this toImage() method is defined in the state object of SignaturePad, you have to use a global key assigned to the SignaturePad instance to call this method. Optionally, the pixelRatio parameter may be used to set the pixel ratio of the image. The higher the pixel ratio value, the high-quality picture you get. The default value of the pixel ratio parameter is 1.
+You can save the signature drawn in the SignaturePad as an image using the [`toImage()`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePadState/toImage.html) method as shown in the below code example in Android, iOS and Desktop platforms. Since this [`toImage()`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePadState/toImage.html) method is defined in the state object of SignaturePad, you have to use a global key assigned to the SignaturePad instance to call this method. Optionally, the `pixelRatio` parameter may be used to set the pixel ratio of the image. The higher the pixel ratio value, the high-quality picture you get. The default value of the pixel ratio parameter is 1.
 
 {% tabs %}
 {% highlight Dart %}
@@ -164,7 +164,42 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## Save signatures as images in web platform
+## Save signatures as images in web (Desktop browser)
+
+This is similar to the mobile and desktop platforms. You can save the signature drawn in the SignaturePad as an image using the [`toImage()`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePadState/toImage.html) method as shown in the below code example in web platform (Desktop browser). Since this [`toImage()`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePadState/toImage.html) method is defined in the state object of SignaturePad, you have to use a global key assigned to the SignaturePad instance to call this method. Optionally, the `pixelRatio` parameter may be used to set the pixel ratio of the image. The higher the pixel ratio value, the high-quality picture you get. The default value of the pixel ratio parameter is 1.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  GlobalKey<SfSignaturePadState> _signaturePadKey = GlobalKey();
+  return Scaffold(
+    body: Column(
+      children: [
+        Container(
+          child: SfSignaturePad(
+            key: _signaturePadKey,
+            backgroundColor: Colors.grey[200],
+          ),
+          height: 200,
+          width: 300,
+        ),
+        RaisedButton(
+            child: Text("Save As Image"),
+            onPressed: () async {
+              ui.Image image =
+                 await _signaturePadKey.currentState.toImage();
+            }),
+      ],
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Save signatures as images in web (mobile browser)
 
 You can save the signature drawn in the SignaturePad as an image using the [`renderToContext2D`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePadState/renderToContext2D.html) method as show in the below code snippet. Since this [`renderToContext2D()`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePadState/renderToContext2D.html) method is defined in the state object of SignaturePad, you have to use a global key assigned to the SignaturePad instance to call this method.
 
@@ -214,6 +249,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+N> Since Flutter uses two separate default web renderers, here we have two different code snippets to convert signatures to images in desktop and mobile browsers. Please refer to this Flutter [`web-renderers`](https://flutter.dev/docs/development/tools/web-renderers) page for more details. 
 
 ## Clear the existing signature in SignaturePad
 You can clear the signature drawn in the SignaturePad using the [`clear()`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePadState/clear.html) method as show in the below code snippet. Since this [`clear()`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePadState/clear.html) method is defined in the state object of SignaturePad, you have to use a global key assigned to the SignaturePad instance to call this method.
