@@ -18,7 +18,7 @@ You can change or control the zoom level factor programmatically using the [zoom
 {% tabs %}
 {% highlight Dart %}
 
-PdfViewerController _pdfViewerController;
+late PdfViewerController _pdfViewerController;
 
 @override
 void initState() {

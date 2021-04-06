@@ -47,57 +47,59 @@ If you wish to perform initial rendering animation again in the existing series,
 
 {% highlight dart %} 
 
+    @override
     Widget build(BuildContext context) {
-    ChartSeriesController _chartSeriesController;
-     return Column(
-       children: <Widget>[
-         Container(
-           child: SfCartesianChart(
-              series: <ChartSeries<_ChartSampleData, String>>[
-                    ColumnSeries<_ChartSampleData, String>(
-                        animationDuration: 2000,
-                        onRendererCreated: (ChartSeriesController controller) {
-                          _chartSeriesController1 = controller;
-                        },
-                        dataSource: chartData,
-                        xValueMapper: (_ChartSampleData sales, _) => sales.x,
-                        yValueMapper: (_ChartSampleData sales, _) => sales.y,
-                        name: 'Unit Sold'),
-                    LineSeries<_ChartSampleData, String>(
-                        animationDuration: 4500,
-                        dataSource: chartData,
-                        onRendererCreated: (ChartSeriesController controller) {
-                          _chartSeriesController2 = controller;
-                        },
-                        xValueMapper: (_ChartSampleData sales, _) => sales.x,
-                        yValueMapper: (_ChartSampleData sales, _) =>
-                            sales.secondSeriesYValue,
-                        yAxisName: 'yAxis1',
-                        markerSettings: MarkerSettings(isVisible: true),
-                        name: 'Total Transaction')
-                       ],
-                        )),
-                        Container(
-                       Row(children: [
-                      child: Container(
-                          child: RaisedButton(
-                            color: Colors.grey[400],
-                            onPressed: () {
-                              _chartSeriesController2?.animate();
-                            },
-                            child: Text('Line'),
-                          )),
-                    ),
-                    Container(
-                        child: RaisedButton(
-                          color: Colors.grey[400],
-                          onPressed: () {
-                            _chartSeriesController1?.animate();
-                          },
-                          child: Text('Column'),
-                        ))],
-                   ),]
-    );
+        ChartSeriesController? _chartSeriesController1, _chartSeriesController2;
+        return Column(children: <Widget>[
+        Container(
+            child: SfCartesianChart(
+            series: <ChartSeries<_ChartSampleData, String>>[
+            ColumnSeries<_ChartSampleData, String>(
+                animationDuration: 2000,
+                onRendererCreated: (ChartSeriesController controller) {
+                    _chartSeriesController1 = controller;
+                },
+                dataSource: chartData,
+                xValueMapper: (_ChartSampleData sales, _) => sales.x,
+                yValueMapper: (_ChartSampleData sales, _) => sales.y,
+                name: 'Unit Sold'),
+            LineSeries<_ChartSampleData, String>(
+                animationDuration: 4500,
+                dataSource: chartData,
+                onRendererCreated: (ChartSeriesController controller) {
+                    _chartSeriesController2 = controller;
+                },
+                xValueMapper: (_ChartSampleData sales, _) => sales.x,
+                yValueMapper: (_ChartSampleData sales, _) =>
+                    sales.secondSeriesYValue,
+                yAxisName: 'yAxis1',
+                markerSettings: MarkerSettings(isVisible: true),
+                name: 'Total Transaction')
+            ],
+        )),
+        Container(
+            child: Row(
+            children: [
+                Container(
+                    child: RaisedButton(
+                color: Colors.grey[400],
+                onPressed: () {
+                    _chartSeriesController2?.animate();
+                },
+                child: Text('Line'),
+                )),
+                Container(
+                    child: RaisedButton(
+                color: Colors.grey[400],
+                onPressed: () {
+                    _chartSeriesController1?.animate();
+                },
+                child: Text('Column'),
+                ))
+            ],
+            ),
+        )
+        ]);
     }
 
 {% endhighlight %}
@@ -236,8 +238,8 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
     @override
     Widget build(BuildContext context) {
         final List<Color> color = <Color>[];
-        color.add(Colors.deepOrange[50]);
-        color.add(Colors.deepOrange[200]);
+        color.add(Colors.deepOrange[50]!);
+        color.add(Colors.deepOrange[200]!);
         color.add(Colors.deepOrange);
 
         final List<double> stops = <double>[];
@@ -254,12 +256,11 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
                     child: SfCartesianChart(
                         series: <CartesianSeries>[
                             AreaSeries<ChartData, double>(
-                                dataSource: chartData,
-                                xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) => data.y,
-                                // Applies gradient color
-                                gradient: gradientColors
-                            )
+                            dataSource: chartData,
+                            xValueMapper: (ChartData data, _) => data.x,
+                            yValueMapper: (ChartData data, _) => data.y,
+                            // Applies gradient color
+                            gradient: gradientColors)
                         ]
                     )
                 )
@@ -289,6 +290,9 @@ If the properties of both [`borderColor`](https://pub.dev/documentation/syncfusi
                     child: SfCartesianChart(
                         series: <CartesianSeries>[
                             AreaSeries<ChartData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
                                 borderWidth: 4,
                                 borderGradient: const LinearGradient(
                                     colors: <Color>[
@@ -300,7 +304,7 @@ If the properties of both [`borderColor`](https://pub.dev/documentation/syncfusi
                                                     0.9
                                             ]
                                 ),
-                           )
+                            )
                         ]
                     )
                 )

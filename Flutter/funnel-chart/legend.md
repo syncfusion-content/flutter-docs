@@ -13,7 +13,7 @@ The [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
 
 {% highlight dart %} 
 
-    @override
+      @override
       Widget build(BuildContext context) {
         return Scaffold(
           body: Center(
@@ -51,7 +51,7 @@ The [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
 {% highlight dart %} 
 
-    @override
+      @override
       Widget build(BuildContext context) {
         return Scaffold(
           appBar: AppBar(actions: <Widget>[Text('')],),
@@ -92,7 +92,7 @@ The following properties are used to define and customize the [`title`](https://
 
 {% highlight dart %} 
 
-    @override
+      @override
       Widget build(BuildContext context) {
         return Scaffold(
           appBar: AppBar(actions: <Widget>[Text('')],),
@@ -131,7 +131,7 @@ You can control the visibility of the series by tapping the legend item. You can
 
 {% highlight dart %} 
 
-    @override
+      @override
       Widget build(BuildContext context) {
         return Scaffold(
           appBar: AppBar(actions: <Widget>[Text('')],),
@@ -161,7 +161,7 @@ The [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
 
 {% highlight dart %} 
 
-    @override
+      @override
       Widget build(BuildContext context) {
         return Scaffold(
           appBar: AppBar(actions: <Widget>[Text('')],),
@@ -191,7 +191,7 @@ The legend items can be placed in multiple rows or scroll can be enabled using t
 
 {% highlight dart %} 
 
-    @override
+      @override
       Widget build(BuildContext context) {
         return Scaffold(
           appBar: AppBar(actions: <Widget>[Text('')],),
@@ -228,7 +228,7 @@ You can change the position of the legend inside the chart. The following proper
 
 {% highlight dart %} 
 
-    @override
+      @override
       Widget build(BuildContext context) {
         return Scaffold(
           appBar: AppBar(actions: <Widget>[Text('')],),
@@ -261,7 +261,7 @@ You can customize the appearance of legend items with your template by using [`l
 
 {% highlight dart %} 
 
-    @override
+      @override
       Widget build(BuildContext context) {
         return Scaffold(
           appBar: AppBar(actions: <Widget>[Text('')],),

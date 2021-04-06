@@ -244,7 +244,7 @@ Returning true may impact performance as the column widths are recalculated agai
 {% highlight Dart %} 
 
 class EmployeeDataSource extends DataGridSource {
-  EmployeeDataSource() {
+  EmployeeDataSource(List<Employee> employees) {
     dataGridRows = employees
         .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
               DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
@@ -257,7 +257,7 @@ class EmployeeDataSource extends DataGridSource {
         .toList();
   }
 
-  List<DataGridRow> dataGridRows;
+  List<DataGridRow> dataGridRows = [];
 
   @override
   List<DataGridRow> get rows => dataGridRows;

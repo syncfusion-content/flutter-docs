@@ -26,7 +26,7 @@ Triggers when the tooltip is rendering. Here, you can customize the text, header
 
  {% highlight dart %}
 
-    TooltipBehavior _tooltipBehavior;
+    late TooltipBehavior _tooltipBehavior;
 
     @override
     void initState(){
@@ -34,19 +34,19 @@ Triggers when the tooltip is rendering. Here, you can customize the text, header
       super.initState(); 
     }
 
-     @override
-     Widget build(BuildContext context) {
-       return Scaffold(
-         body: Center(
-           child: SfCartesianChart(
-             tooltipBehavior: _tooltipBehavior,
-             onTooltipRender: (TooltipArgs args) {
-               args.text = 'Customized Text';
-             }
-            )
-           )
-         );
-        }
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: Center(
+          child: SfCartesianChart(
+            tooltipBehavior: _tooltipBehavior,
+            onTooltipRender: (TooltipArgs args) {
+              args.text = 'Customized Text';
+            }
+          )
+        )
+      );
+    }
 
 {% endhighlight %}
 
@@ -103,9 +103,10 @@ Triggers while rendering the axis labels. Text and text styles such as color, fo
         body: Center(
           child: SfCartesianChart(
             onAxisLabelRender: (AxisLabelRenderArgs args) {
-              if(args.axisName == 'primaryXAxis'){
+              if (args.axisName == 'primaryXAxis') {
                 args.text = 'Text';
-                args.textStyle.color = Colors.red;
+                TextStyle textStyle = args.textStyle;
+                args.textStyle =  textStyle.copyWith(color: Colors.red);
               }
             }
           )
@@ -133,30 +134,30 @@ Triggers when data label is rendering. Text and text styles such as color, font 
     @override
     Widget build(BuildContext context) {
     
-    return Scaffold(
-      body: Center(
-        child: SfCartesianChart(
-          onDataLabelRender:(DataLabelRenderArgs args){
-            args.text = 'Data label';
-            CartesianSeries<dynamic, dynamic> series = args.seriesRenderer;
-            //Changed the background color of the data label based on the series type
-            if (series.name == 'Product A') {
-              args.color = Colors.blue;
-            } else if(series.name == 'Product B'){
-              args.color = Colors.red;
-            }
-          },
-          series: <CartesianSeries>[
-            ColumnSeries<ChartData, double>(
-              dataLabelSettings: DataLabelSettings(
-                isVisible: true
+      return Scaffold(
+        body: Center(
+          child: SfCartesianChart(
+            onDataLabelRender:(DataLabelRenderArgs args){
+              args.text = 'Data label';
+              CartesianSeries<dynamic, dynamic> series = args.seriesRenderer;
+              //Changed the background color of the data label based on the series type
+              if (series.name == 'Product A') {
+                args.color = Colors.blue;
+              } else if(series.name == 'Product B'){
+                args.color = Colors.red;
+              }
+            },
+            series: <CartesianSeries>[
+              ColumnSeries<ChartData, double>(
+                dataLabelSettings: DataLabelSettings(
+                  isVisible: true
+                )
               )
-            )
-          ]
+            ]
+          )
         )
-      )
-    );
-   }
+      );
+    }
 
 {% endhighlight %}
 
@@ -175,18 +176,18 @@ Triggers when the legend item is rendering. Here, you can customize the legend�
     @override
     Widget build(BuildContext context) {
     
-    return Scaffold(
-      body: Center(
-        child: SfCartesianChart(
-          legend: Legend(isVisible: true),
-          onLegendItemRender: (LegendRenderArgs args){
-            args.text = 'Legend Text';
-            args.legendIconType = LegendIconType.diamond;
-          }
+      return Scaffold(
+        body: Center(
+          child: SfCartesianChart(
+            legend: Legend(isVisible: true),
+            onLegendItemRender: (LegendRenderArgs args){
+              args.text = 'Legend Text';
+              args.legendIconType = LegendIconType.diamond;
+            }
+          )
         )
-      )
-    );
-  }
+      );
+    }
 
 {% endhighlight %}
 
@@ -201,16 +202,17 @@ Triggers while the trackball position is changing. Here, you can customize the t
     @override
     Widget build(BuildContext context) {
     
-    return Scaffold(
-      body: Center(
-        child: SfCartesianChart(
-          onTrackballPositionChanging: (TrackballArgs args) {
-            args.chartPointInfo.label = 'Custom Text';
-          },
-          trackballBehavior: TrackballBehavior(
-            enable: true
+      return Scaffold(
+        body: Center( 
+          child: SfCartesianChart(
+              onTrackballPositionChanging: (TrackballArgs args) {
+                args.chartPointInfo.label = 'Custom Text';
+              },
+              trackballBehavior: TrackballBehavior(
+                enable: true
+              )
+            )
           )
-        )
       );
     }
 
@@ -229,7 +231,7 @@ Triggers while the crosshair position is changing. Here, you can customize the t
 
 {% highlight dart %}
     
-    CrosshairBehavior _crosshairBehavior;
+    late CrosshairBehavior _crosshairBehavior;
 
     @override
     void initState(){
@@ -242,13 +244,14 @@ Triggers while the crosshair position is changing. Here, you can customize the t
     @override
     Widget build(BuildContext context) {
     
-    return Scaffold(
-      body: Center(
-        child: SfCartesianChart(
-          onCrosshairPositionChanging: (CrosshairRenderArgs args){
-            args.text = 'crosshair';
-          },
-          crosshairBehavior: _crosshairBehavior
+      return Scaffold(
+        body: Center(
+          child: SfCartesianChart(
+            onCrosshairPositionChanging: (CrosshairRenderArgs args){
+              args.text = 'crosshair';
+            },
+            crosshairBehavior: _crosshairBehavior
+          )
         )
       );
     }
@@ -267,7 +270,7 @@ Triggers when the zooming action is in progress. The [`onZooming`](https://pub.d
 
 {% highlight dart %}
     
-    ZoomPanBehavior _zoomPanBehavior;
+    late ZoomPanBehavior _zoomPanBehavior;
 
     @override
     void initState(){
@@ -283,17 +286,18 @@ Triggers when the zooming action is in progress. The [`onZooming`](https://pub.d
     @override
     Widget build(BuildContext context) {
     
-    return Scaffold(
-      body: Center(
-        child: SfCartesianChart(
-          zoomPanBehavior: _zoomPanBehavior,
-          onZooming: (ZoomPanArgs args){
-              print(args.currentZoomFactor);
-              print(args.currentZoomPosition);
-          }
-      )
-    );
-  }
+      return Scaffold(
+          body: Center(
+            child: SfCartesianChart(
+              zoomPanBehavior: _zoomPanBehavior,
+              onZooming: (ZoomPanArgs args){
+                  print(args.currentZoomFactor);
+                  print(args.currentZoomPosition);
+              }
+            )
+          )
+      );
+    }
 
 {% endhighlight %}
 
@@ -309,7 +313,7 @@ Triggers when zooming action begins. The [`onZoomStart`](https://pub.dev/documen
 
 {% highlight dart %}
     
-    ZoomPanBehavior _zoomPanBehavior;
+    late ZoomPanBehavior _zoomPanBehavior;
 
     @override
     void initState(){
@@ -325,17 +329,18 @@ Triggers when zooming action begins. The [`onZoomStart`](https://pub.dev/documen
     @override
     Widget build(BuildContext context) {
     
-    return Scaffold(
-      body: Center(
-        child: SfCartesianChart(
-          zoomPanBehavior: _zoomPanBehavior,
-          onZoomStart: (ZoomPanArgs args){
-              print(args.currentZoomFactor);
-              print(args.currentZoomPosition);
-          }
-      )
-    );
-  }
+      return Scaffold(
+        body: Center(
+          child: SfCartesianChart(
+            zoomPanBehavior: _zoomPanBehavior,
+            onZoomStart: (ZoomPanArgs args){
+                print(args.currentZoomFactor);
+                print(args.currentZoomPosition);
+            }
+          )
+        )
+      );
+    }
 
 {% endhighlight %}
 
@@ -351,7 +356,7 @@ Triggers when the zooming action is completed. The [`onZoomEnd`](https://pub.dev
 
 {% highlight dart %}
     
-    ZoomPanBehavior _zoomPanBehavior;
+    late ZoomPanBehavior _zoomPanBehavior;
 
     @override
     void initState(){
@@ -367,17 +372,18 @@ Triggers when the zooming action is completed. The [`onZoomEnd`](https://pub.dev
     @override
     Widget build(BuildContext context) {
     
-    return Scaffold(
-      body: Center(
-        child: SfCartesianChart(
-          zoomPanBehavior: _zoomPanBehavior,
-          onZoomEnd: (ZoomPanArgs args){
-              print(args.currentZoomFactor);
-              print(args.currentZoomPosition);
-          }
-      )
-    );
-  }
+      return Scaffold(
+        body: Center(
+          child: SfCartesianChart(
+            zoomPanBehavior: _zoomPanBehavior,
+            onZoomEnd: (ZoomPanArgs args){
+                print(args.currentZoomFactor);
+                print(args.currentZoomPosition);
+            }
+          )
+        )
+      );
+    }
 
 {% endhighlight %}
 
@@ -393,7 +399,7 @@ Triggers when zoomed state is reset. The  [`onZoomReset`](https://pub.dev/docume
 
 {% highlight dart %}
     
-    ZoomPanBehavior _zoomPanBehavior;
+    late ZoomPanBehavior _zoomPanBehavior;
 
     @override
     void initState(){
@@ -409,15 +415,16 @@ Triggers when zoomed state is reset. The  [`onZoomReset`](https://pub.dev/docume
     @override
     Widget build(BuildContext context) {
     
-    return Scaffold(
-      body: Center(
-        child: SfCartesianChart(
-          zoomPanBehavior: _zoomPanBehavior,
-          onZoomReset: (ZoomPanArgs args){
-              print(args.currentZoomFactor);
-              print(args.currentZoomPosition);
-          }
-       )
+      return Scaffold(
+        body: Center(
+          child: SfCartesianChart(
+            zoomPanBehavior: _zoomPanBehavior,
+            onZoomReset: (ZoomPanArgs args){
+                print(args.currentZoomFactor);
+                print(args.currentZoomPosition);
+            }
+          )
+        )
       );
     }
 
@@ -437,13 +444,14 @@ Triggers when tapping the series point. The [`onPointTapped`](https://pub.dev/do
     @override
     Widget build(BuildContext context) {
     
-    return Scaffold(
-      body: Center(
-        child: SfCartesianChart(
-           onPointTapped: (PointTapArgs args){
-            print(args.seriesIndex);
-            print(args.pointIndex);
-          }
+      return Scaffold(
+        body: Center(
+          child: SfCartesianChart(
+            onPointTapped: (PointTapArgs args){
+              print(args.seriesIndex);
+              print(args.pointIndex);
+            }
+          )
         )
       );
     }
@@ -464,12 +472,13 @@ Triggers when tapping the axis label. The  [`onAxisLabelTapped`](https://pub.dev
     @override
     Widget build(BuildContext context) {
     
-    return Scaffold(
-      body: Center(
-        child: SfCartesianChart(
-           onAxisLabelTapped: (AxisLabelTapArgs args) {
-            print(args.text);
-           }
+      return Scaffold(
+        body: Center(
+          child: SfCartesianChart(
+            onAxisLabelTapped: (AxisLabelTapArgs args) {
+              print(args.text);
+            }
+          )
         )
       );
     }
@@ -490,16 +499,17 @@ Triggers when tapping the legend item. The  [`onLegendTapped`](https://pub.dev/d
     @override
     Widget build(BuildContext context) {
     
-    return Scaffold(
-      body: Center(
-        child: SfCartesianChart(
-          onLegendTapped: (LegendTapArgs args) {
-            print(args.seriesIndex);
-          },
-          legend: Legend(isVisible: true)
-      )
-    );
-  }
+      return Scaffold(
+        body: Center(
+          child: SfCartesianChart(
+            onLegendTapped: (LegendTapArgs args) {
+              print(args.seriesIndex);
+            },
+            legend: Legend(isVisible: true)
+          )
+        )
+      );
+    }
 
 {% endhighlight %}
 
@@ -523,21 +533,22 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
     @override
     Widget build(BuildContext context) {
     
-    return Scaffold(
-      body: Center(
-        child: SfCartesianChart(
-          onSelectionChanged: (SelectionArgs args){
-            args.selectedColor = Colors.red;
-            args.unselectedColor = Colors.lightGreen;
-          },
-          series: <CartesianSeries>[
-            ColumnSeries<ChartData, double>(
-              selectionBehavior: SelectionBehavior(
-                enable: true,
-              )
+      return Scaffold(
+          body: Center(
+            child: SfCartesianChart(
+              onSelectionChanged: (SelectionArgs args){
+                args.selectedColor = Colors.red;
+                args.unselectedColor = Colors.lightGreen;
+              },
+              series: <CartesianSeries>[
+                ColumnSeries<ChartData, double>(
+                  selectionBehavior: SelectionBehavior(
+                    enable: true,
+                  )
+                )
+              ]
             )
-          ]
-        )
+          )
       );
     }
 
@@ -564,17 +575,17 @@ The [`onIndicatorRender`](https://pub.dev/documentation/syncfusion_flutter_chart
     Widget build(BuildContext context) {
       return Scaffold(
         body:Center(
-            child: SfCartesianChart(
-              onIndicatorRender: (IndicatorRenderArgs args)
+          child: SfCartesianChart(
+            onIndicatorRender: (IndicatorRenderArgs args)
+            {
+              if(args.index==0) 
               {
-                if(args.index==0) 
-                {
-                  args.indicatorname='changed1';
-                  args.signalLineColor=Colors.green;
-                  args.signalLineWidth=6.0;
-                }
+                args.indicatorname='changed1';
+                args.signalLineColor=Colors.green;
+                args.signalLineWidth=6.0;
               }
-            )
+            }
+          )
         )
       );
     }
@@ -600,18 +611,18 @@ Triggers when the trendline gets rendered. Trendline properties like color,opaci
     @override
     Widget build(BuildContext context) {
     
-    return Scaffold(
-      body: Center(
-        child: SfCartesianChart(
-          onTrendlineRender: (TrendlineRenderArgs args) {
-            args.color = Colors.greenAccent;
-            args.opacity = 0.18;
-            args.dashArray = <double>[5, 3];
-           }
+      return Scaffold(
+        body: Center(
+          child: SfCartesianChart(
+            onTrendlineRender: (TrendlineRenderArgs args) {
+              args.color = Colors.greenAccent;
+              args.opacity = 0.18;
+              args.dashArray = <double>[5, 3];
+            }
+          )
         )
-      )
-    );
-  }
+      );
+    }
 
 {% endhighlight %}
 
@@ -621,44 +632,46 @@ Triggers when the series renderer is created. Using this callback, able to get t
 
 {% highlight dart %}
 
-  Widget build(BuildContext context) {
-
     //Initialize the series controller
-    ChartSeriesController _chartSeriesController;
+    ChartSeriesController? _chartSeriesController;
+    
+    @override
+    Widget build(BuildContext context) {
 
-    return Column(
-     children: <Widget>[
-      Container(
-       child: SfCartesianChart(
-            series: <LineSeries<SalesData, num>>[
-                LineSeries<SalesData, num>(
-                  dataSource: chartData,
-                  //Initialize the onRendererCreated event and store the controller for the respective series
-                  onRendererCreated: (ChartSeriesController controller) {
-                      _chartSeriesController = controller;
-                  },
-                ),
-              ],
-        )
-      ),
-      Container(
-        child: RaisedButton(
-          onPressed: () {
-            //Removed a point from data source
-            chartData.removeAt(0);
-            //Added a point to the data source
-            chartData.add(ChartData(3,23));
-            //Here accessed the public method of the series.
-            _chartSeriesController.updateDataSource(
-              addedDataIndexes: <int>[chartData.length -1],
-              removedDataIndexes: <int>[0],
-            );
-          }
-        )
-      )
-    ]
-  );
- }
+      return Column(
+        children: <Widget>[
+          Container(
+          child: SfCartesianChart(
+                series: <LineSeries<SalesData, num>>[
+                    LineSeries<SalesData, num>(
+                      dataSource: chartData,
+                      //Initialize the onRendererCreated event and store the controller for the respective series
+                      onRendererCreated: (ChartSeriesController controller) {
+                          _chartSeriesController = controller;
+                      },
+                    ),
+                  ],
+            )
+          ),
+          Container(
+            child: ElevatedButton(
+              onPressed: () {
+                //Removed a point from data source
+                chartData.removeAt(0);
+                //Added a point to the data source
+                chartData.add(ChartData(3,23));
+                //Here accessed the public method of the series.
+                _chartSeriesController?.updateDataSource(
+                  addedDataIndexes: <int>[chartData.length -1],
+                  removedDataIndexes: <int>[0],
+                );
+              },
+              child: Container(child: Text('Add a point'),)
+            )
+          )
+        ]
+      );
+    }
 
 {% endhighlight %}
 
@@ -672,16 +685,17 @@ The callback contains the following argument:
 
 {% highlight dart %}
 
-  Widget build(BuildContext context) {
-      return Container(
-         child: SfCartesianChart(
-              onChartTouchInteractionDown: (ChartTouchInteractionArgs args){
-                 print(args.position.dx.toString());
-                 print(args.position.dy.toString());
-               }
-          )
-      );
-  }
+    @override
+    Widget build(BuildContext context) {
+        return Container(
+          child: SfCartesianChart(
+                onChartTouchInteractionDown: (ChartTouchInteractionArgs args){
+                  print(args.position.dx.toString());
+                  print(args.position.dy.toString());
+                }
+            )
+        );
+    }
 
 {% endhighlight %}
 
@@ -695,15 +709,16 @@ The callback contains the following argument:
 
 {% highlight dart %}
 
+  @override
   Widget build(BuildContext context) {
      return Container(
-          child: SfCartesianChart(
-              onChartTouchInteractionUp: (ChartTouchInteractionArgs args){
-                 print(args.position.dx.toString());
-                 print(args.position.dy.toString());
-               }
-          )
-      );
+        child: SfCartesianChart(
+            onChartTouchInteractionUp: (ChartTouchInteractionArgs args){
+                print(args.position.dx.toString());
+                print(args.position.dy.toString());
+              }
+        )
+    );
   }
 
 {% endhighlight %}
@@ -718,15 +733,16 @@ The callback contains the following argument:
 
 {% highlight dart %}
 
+  @override
   Widget build(BuildContext context) {
       return Container(
-          child: SfCartesianChart(
-              onChartTouchInteractionMove: (ChartTouchInteractionArgs args){
-                 print(args.position.dx.toString());
-                 print(args.position.dy.toString());
-               }
-          )
-      );
+        child: SfCartesianChart(
+            onChartTouchInteractionMove: (ChartTouchInteractionArgs args){
+                print(args.position.dx.toString());
+                print(args.position.dy.toString());
+              }
+        )
+    );
   }
 
 {% endhighlight %}
@@ -747,22 +763,23 @@ Triggers when the marker is being rendered. Here, you can customize the followin
 
 {% highlight dart %}
 
-  Widget build(BuildContext context) {
-      return Container(
-          child: SfCartesianChart(
-              onMarkerRender: (MarkerRenderArgs args) {
-                if (args.pointIndex == 1) {
-                  args.color = Colors.red;
-                  args.markerHeight = 20;
-                  args.markerWidth = 20;
-                  args.shape = DataMarkerType.diamond;
-                  args.borderColor = Colors.green;
-                  args.borderWidth = 2;
-                }
-              },
-          )
-      );
-  }
+    @override
+    Widget build(BuildContext context) {
+        return Container(
+            child: SfCartesianChart(
+                onMarkerRender: (MarkerRenderArgs args) {
+                  if (args.pointIndex == 1) {
+                    args.color = Colors.red;
+                    args.markerHeight = 20;
+                    args.markerWidth = 20;
+                    args.shape = DataMarkerType.diamond;
+                    args.borderColor = Colors.green;
+                    args.borderWidth = 2;
+                  }
+                },
+            )
+        );
+    }
 
 {% endhighlight %}
 
@@ -781,6 +798,7 @@ N> This callback will not be called, when the builder is specified for data labe
 
 {% highlight dart %}
 
+    @override
     Widget build(BuildContext context) {
       return Container(
           child: SfCartesianChart(
@@ -808,6 +826,10 @@ Triggers while swiping on the plot area. Whenever the swiping happens on th
 
 {% highlight dart %}
 
+    //Initialize the series controller
+    ChartSeriesController? SeriesController;
+    
+    @override
     Widget build(BuildContext context) {
       return Container(
          child: SfCartesianChart(
@@ -828,7 +850,7 @@ Triggers while swiping on the plot area. Whenever the swiping happens on th
             chartData.add(ChartSampleData(
                 x: chartData[chartData.length - 1].x + 1,
                 y: 10));
-            seriesController.updateDataSource(addedDataIndex: chartData.length - 1);
+            seriesController?.updateDataSource(addedDataIndex: chartData.length - 1);
       }
     }
 
