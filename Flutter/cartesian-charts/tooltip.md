@@ -13,13 +13,13 @@ Chart provides tooltip support for all the series. It is used to show informatio
 
 {% highlight dart %} 
     
-    late TooltipBehavior _tooltipBehavior;
+    TooltipBehavior _tooltipBehavior;
 
     @override
     void initState() {
-      _tooltipBehavior = TooltipBehavior(
-                  enable: true);
-      super.initState();
+    _tooltipBehavior = TooltipBehavior(
+                enable: true);
+    super.initState();
     }
     @override
     Widget build(BuildContext context) {
@@ -68,17 +68,17 @@ You can use the following properties to customize the tooltip appearance.
 
 {% highlight dart %} 
     
-    late TooltipBehavior _tooltipBehavior;
+    TooltipBehavior _tooltipBehavior;
 
     @override
     void initState() {
-      _tooltipBehavior = TooltipBehavior(
-                  enable: true,
-                  borderColor: Colors.red,
-                  borderWidth: 5,
-                  color: Colors.lightBlue
-                );
-      super.initState();
+    _tooltipBehavior = TooltipBehavior(
+                enable: true,
+                borderColor: Colors.red,
+                borderWidth: 5,
+                color: Colors.lightBlue
+              );
+    super.initState();
     }
     @override
     Widget build(BuildContext context) {
@@ -106,18 +106,19 @@ By default, x and y value will be displayed in the tooltip, and it can be custom
 * Bubble size - `point.size`
 * Name of the series - `series.name`
 
-{% highlight dart %}     
+{% highlight dart %} 
+    
 
-    late TooltipBehavior _tooltipBehavior;
+    TooltipBehavior _tooltipBehavior;
 
     @override
     void initState() {
-      _tooltipBehavior = TooltipBehavior(
-                  enable: true, 
-                  // Formatting the tooltip text
-                  format: 'point.y%'
-                );
-      super.initState();
+    _tooltipBehavior = TooltipBehavior(
+                enable: true, 
+                // Formatting the tooltip text
+                format: 'point.y%'
+              );
+    super.initState();
     }
     @override
     Widget build(BuildContext context) {
@@ -139,8 +140,9 @@ By default, x and y value will be displayed in the tooltip, and it can be custom
 The tooltip can be made to display in the fixed location or at the pointer location itself using the `tooltipPosition` property. This defaults to `auto`.
 
 {% highlight dart %} 
+    
 
-    late TooltipBehavior _tooltipBehavior;
+    TooltipBehavior _tooltipBehavior;
 
     @override
     void initState() {
@@ -173,7 +175,7 @@ You can customize the appearance of the tooltip with your own widget by using th
 
 {% highlight dart %} 
     
-    late TooltipBehavior _tooltipBehavior;
+    TooltipBehavior _tooltipBehavior;
 
     @override
     void initState() {
@@ -222,7 +224,7 @@ The ActivationMode enum contains the following values:
 
 {% highlight dart %} 
     
-    late TooltipBehavior _tooltipBehavior;
+    TooltipBehavior _tooltipBehavior;
 
     @override
     void initState() {

@@ -13,34 +13,32 @@ The selection feature in chart let you to select a segment in a series or the se
 
 {% highlight dart %} 
 
-    late SelectionBehavior _selectionBehavior;
+     SelectionBehavior _selectionBehavior;
 
     @override
     void initState(){
-      _selectionBehavior = SelectionBehavio(
-             // Enables the selection
-             enable: true
-      );
-      super.initState();
+      _selectionBehavior = SelectionBehavio(        // Enables the selection
+             enable: true);
+    super.initState();
     }
 
     @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        body: Center(
-          child: Container(
-            child: SfFunnelChart(
-              series: FunnelSeries<SalesData, String>(
-                  dataSource: chartData,
-                  xValueMapper: (SalesData sales, _) =>   sales.year,
-                  yValueMapper: (SalesData sales, _) => sales.sales,
-                  selectionBehavior: _selectionBehavior
-                )
+      Widget build(BuildContext context) {
+        return Scaffold(
+          body: Center(
+            child: Container(
+              child: SfFunnelChart(
+                series: FunnelSeries<SalesData, String>(
+                    dataSource: chartData,
+                    xValueMapper: (SalesData sales, _) =>   sales.year,
+                    yValueMapper: (SalesData sales, _) => sales.sales,
+                    selectionBehavior: _selectionBehavior
+                  )
+              )
             )
           )
-        )
-      );
-    }
+        );
+      }
 
 {% endhighlight %}
 
@@ -59,7 +57,7 @@ You can customize the segments using the below properties.
 
 {% highlight dart %} 
     
-    late SelectionBehavior _selectionBehavior;
+    SelectionBehavior _selectionBehavior;
 
     @override
     void initState(){
@@ -69,26 +67,26 @@ You can customize the segments using the below properties.
                     selectedColor: Colors.red,
                     unselectedColor: Colors.grey,
                     );
-      super.initState();
+    super.initState();
     }
 
     @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        body: Center(
-          child: Container(
-            child: SfFunnelChart(
-              series: FunnelSeries<SalesData, String>(
-                  dataSource: chartData,
-                  xValueMapper: (SalesData sales, _) =>   sales.year,
-                  yValueMapper: (SalesData sales, _) => sales.sales,
-                  selectionBehavior: _selectionBehavior
-                )
+      Widget build(BuildContext context) {
+        return Scaffold(
+          body: Center(
+            child: Container(
+              child: SfFunnelChart(
+                series: FunnelSeries<SalesData, String>(
+                    dataSource: chartData,
+                    xValueMapper: (SalesData sales, _) =>   sales.year,
+                    yValueMapper: (SalesData sales, _) => sales.sales,
+                    selectionBehavior: _selectionBehavior
+                  )
+              )
             )
           )
-        )
-      );
-    }
+        );
+      }
 
 {% endhighlight %}
 
@@ -156,13 +154,13 @@ N> The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter
 
 {% highlight dart %}
 
-    late SfFunnelChart chart;
-    late SelectionBehavior _selectionBehavior;
+    SfFunnelChart chart;
+    SelectionBehavior _selectionBehavior;
 
     @override
     void initState(){
-      _selectionBehavior = SelectionBehavior(enable: true);
-      super.initState();
+      _selectionBehavior = TooltipBehavior(            enable: true);
+    super.initState();
     }
 
     @override
@@ -197,7 +195,7 @@ N> The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter
     );
     }
     void select() {
-        _selectionBehavior.selectDataPoints(1, 0);
+        selection.selectDataPoints(1, 0);
     }
 
 {% endhighlight %}

@@ -17,55 +17,55 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
 {% highlight dart %} 
 
-    late SfCircularChart chart;
-    late TooltipBehavior _tooltipBehavior;
+    SfCircularChart chart;
+    TooltipBehavior _tooltipBehavior;
 
     @override
     void initState(){
-      _tooltipBehavior = TooltipBehavior(enable: true);
-      super.initState();
+      _tooltipBehavior = TooltipBehavior(            enable: true);
+    super.initState();
     }
 
     @override
     Widget build(BuildContext context) {
 
-      final List<ChartData> chartData = [
-          ChartData(10, 17),
-          ChartData(20, 34),
-          // Add the required data
-      ];
+    final List<ChartData> chartData = [
+        ChartData(10, 17),
+        ChartData(20, 34),
+        // Add the required data
+    ];
 
-      chart = SfCircularChart(
-        tooltipBehavior: _tooltipBehavior,
-          series: <CircularSeries>[
-            ColumnSeries<ChartData, double>(
-              enableTooltip: true,
-              dataSource: chartData,
-              xValueMapper: (ChartData data, _) => data.x,
-              yValueMapper: (ChartData data, _) => data.y)
-        ]
-      );
+    chart = SfCircularChart(
+      tooltipBehavior: _tooltipBehavior,
+        series: <CircularSeries>[
+          ColumnSeries<ChartData, double>(
+            enableTooltip: true,
+            dataSource: chartData,
+            xValueMapper: (ChartData data, _) => data.x,
+            yValueMapper: (ChartData data, _) => data.y)
+      ]
+    );
 
-      return Scaffold(
-        body: Center(
-          child: Column(
-            children: <Widget>[
-              TextButton(
-                child: Text('Show'),
-                onPressed: show
-              ),
-              Container(child: chart)
-            ]
-          )
+    return Scaffold(
+      body: Center(
+        child: Column(
+          children: <Widget>[
+            FlatButton(
+              child: Text('Show'),
+              onPressed: show
+            ),
+            Container(child: chart)
+          ]
         )
-      );
-    }
+      )
+    );
+  }
 
     void show() {
-      _tooltipBehavior.show(10, 17);
+      tooltip.show(10, 17);
     }
   
-{% endhighlight %}
+  {% endhighlight %}
 
 ### showByIndex method in tooltipBehavior
 
@@ -80,53 +80,53 @@ The below mentioned arguments are given to the [`showByIndex`](https://pub.dev/d
 
 {% highlight dart %} 
 
-    late SfCircularChart chart;
-    late TooltipBehavior _tooltipBehavior;
+    SfCircularChart chart;
+    TooltipBehavior _tooltipBehavior;
 
     @override
     void initState(){
-      _tooltipBehavior = TooltipBehavior(enable: true);
-      super.initState();
+      _tooltipBehavior = TooltipBehavior(            enable: true);
+    super.initState();
     }
 
     @override
     Widget build(BuildContext context) {
 
-      final List<ChartData> chartData = [
-          ChartData(10, 17),
-          ChartData(20, 34),
-          // Add the required data
-      ];
+    final List<ChartData> chartData = [
+        ChartData(10, 17),
+        ChartData(20, 34),
+        // Add the required data
+    ];
 
-      chart = SfCircularChart(
-        tooltipBehavior: _tooltipBehavior,
-          series: <CircularSeries>[
-            ColumnSeries<ChartData, double>(
-              enableTooltip: true,
-              dataSource: chartData,
-              xValueMapper: (ChartData data, _) => data.x,
-              yValueMapper: (ChartData data, _) => data.y)
-        ]
-      );
+    chart = SfCircularChart(
+      tooltipBehavior: _tooltipBehavior,
+        series: <CircularSeries>[
+          ColumnSeries<ChartData, double>(
+            enableTooltip: true,
+            dataSource: chartData,
+            xValueMapper: (ChartData data, _) => data.x,
+            yValueMapper: (ChartData data, _) => data.y)
+      ]
+    );
 
-      return Scaffold(
-        body: Center(
-          child: Column(
-            children: <Widget>[
-              TextButton(
-                child: Text('Show'),
-                onPressed:(){
-                    _tooltipBehavior.showByIndex(0,1);
-                }
-              ),
-              Container(child: chart)
-            ]
-          )
+    return Scaffold(
+      body: Center(
+        child: Column(
+          children: <Widget>[
+            FlatButton(
+              child: Text('Show'),
+              onPressed:(){
+                   tooltip.showByIndex(0,1);
+              }
+            ),
+            Container(child: chart)
+          ]
         )
-      );
+      )
+    );
     }
 
-{% endhighlight %}
+  {% endhighlight %}
 
 ### showByPixel method in tooltipBehavior
 
@@ -136,53 +136,52 @@ x & y - logical pixel values to position the tooltip.
 
 {% highlight dart %} 
 
-    late SfCircularChart chart;
-    late TooltipBehavior _tooltipBehavior;
+    SfCircularChart chart;
+    TooltipBehavior _tooltipBehavior;
 
     @override
     void initState(){
-      _tooltipBehavior = TooltipBehavior(enable: true);
-      super.initState();
+      _tooltipBehavior = TooltipBehavior(            enable: true);
+    super.initState();
     }
 
     @override
     Widget build(BuildContext context) {
 
-      final List<ChartData> chartData = [
-          ChartData(10, 17),
-          ChartData(20, 34),
-          // Add the required data
-      ];
+    final List<ChartData> chartData = [
+        ChartData(10, 17),
+        ChartData(20, 34),
+        // Add the required data
+    ];
 
-      chart = SfCircularChart(
-        tooltipBehavior: _tooltipBehavior,
-          series: <CircularSeries>[
-            ColumnSeries<ChartData, double>(
-              enableTooltip: true,
-              dataSource: chartData,
-              xValueMapper: (ChartData data, _) => data.x,
-              yValueMapper: (ChartData data, _) => data.y)
-        ]
-      );
+    chart = SfCircularChart(
+      tooltipBehavior: _tooltipBehavior,
+        series: <CircularSeries>[
+          ColumnSeries<ChartData, double>(
+            enableTooltip: true,
+            dataSource: chartData,
+            xValueMapper: (ChartData data, _) => data.x,
+            yValueMapper: (ChartData data, _) => data.y)
+      ]
+    );
 
-      return Scaffold(
-        body: Center(
-          child: Column(
-            children: <Widget>[
-              TextButton(
-                child: Text('Show'),
-                onPressed:(){
-                  _tooltipBehavior.showByPixel(230.0,470.0);
-                }
-              ),
-              Container(child: chart)
-            ]
-          )
+    return Scaffold(
+      body: Center(
+        child: Column(
+          children: <Widget>[
+            FlatButton(
+              child: Text('Show'),
+              onPressed:(){
+                tooltip.showByPixel(230.0,470.0);
+              }
+            ),
+            Container(child: chart)
+          ]
         )
-      );
+      )
+    );
     }
-
-{% endhighlight %}
+  {% endhighlight %}
 
 ### Hide method in tooltipBehavior
 
@@ -190,54 +189,54 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
 {% highlight dart %} 
 
-    late SfCircularChart chart;
-    late TooltipBehavior _tooltipBehavior;
+    SfCircularChart chart;
+    TooltipBehavior _tooltipBehavior;
 
     @override
     void initState(){
-      _tooltipBehavior = TooltipBehavior(enable: true);
-      super.initState();
+      _tooltipBehavior = TooltipBehavior(            enable: true);
+    super.initState();
     }
 
     @override
     Widget build(BuildContext context) {
-      final List<ChartData> chartData = [
-          ChartData(10, 17),
-          ChartData(20, 34)
-      // Add the required data  
-      ];
+    final List<ChartData> chartData = [
+        ChartData(10, 17),
+        ChartData(20, 34)
+    // Add the required data  
+    ];
 
-      chart = SfCircularChart(
-        tooltipBehavior: _tooltipBehavior,
-        series: <CircularSeries>[
-          ColumnSeries<ChartData, double>(
-              enableTooltip: true,
-              dataSource: chartData,
-              xValueMapper: (ChartData data, _) => data.x,
-              yValueMapper: (ChartData data, _) => data.y)
+    chart = SfCircularChart(
+      tooltipBehavior: _tooltipBehavior,
+      series: <CircularSeries>[
+        ColumnSeries<ChartData, double>(
+            enableTooltip: true,
+            dataSource: chartData,
+            xValueMapper: (ChartData data, _) => data.x,
+            yValueMapper: (ChartData data, _) => data.y)
+        ]
+    );
+
+    return Scaffold(
+      body: Center(
+        child: Column(
+          children: <Widget>[
+            FlatButton(
+              child: Text('Hide'),
+              onPressed: hide
+            ),
+            Container(child: chart)
           ]
-      );
-
-      return Scaffold(
-        body: Center(
-          child: Column(
-            children: <Widget>[
-              TextButton(
-                child: Text('Hide'),
-                onPressed: hide
-              ),
-              Container(child: chart)
-            ]
-          )
         )
-      );
+      )
+    );
     }
 
     void hide(){
-        _tooltipBehavior.hide();
+        tooltip.hide();
     }
 
-{% endhighlight %}
+  {% endhighlight %}
 
 ## Methods in selectionBehavior
 
@@ -252,51 +251,51 @@ N> The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter
 
 {% highlight dart %}
 
-    late SfCircularChart chart;
-    late SelectionBehavior _selectionBehavior;
+    SfCircularChart chart;
+    SelectionBehavior _selectionBehavior;
 
     @override
     void initState(){
-      _selectionBehavior = SelectionBehavior(enable: true);
-      super.initState();
+      _selectionBehavior = TooltipBehavior(            enable: true);
+    super.initState();
     }
 
     @override
     Widget build(BuildContext context) {
-      
-      final List<ChartData> chartData = [
-        ChartData(10, 17),
-        ChartData(20, 34)
-        // Add the required data
-      ];
-      chart = SfCircularChart(
-        series: <CircularSeries>[
-          PieSeries<ChartData, double>(
-              dataSource: chartData,
-              xValueMapper: (ChartData data, _) => data.x,
-              yValueMapper: (ChartData data, _) => data.y,
-              selectionBehavior: _selectionBehavior
-          )
-        ]
-      );
-      
-      return Scaffold(
-        body: Center(
-          child: Column(
-            children: <Widget>[
-              TextButton(
-                child: Text('Select'),
-                onPressed: select
-              ),
-              Container(child: chart)
-            ]
-          )
+    
+    final List<ChartData> chartData = [
+      ChartData(10, 17),
+      ChartData(20, 34)
+      // Add the required data
+    ];
+    chart = SfCircularChart(
+      series: <CircularSeries>[
+        PieSeries<ChartData, double>(
+            dataSource: chartData,
+            xValueMapper: (ChartData data, _) => data.x,
+            yValueMapper: (ChartData data, _) => data.y,
+            selectionBehavior: _selectionBehavior
         )
-      );
+      ]
+    );
+    
+    return Scaffold(
+      body: Center(
+        child: Column(
+          children: <Widget>[
+            FlatButton(
+              child: Text('Select'),
+              onPressed: select
+            ),
+            Container(child: chart)
+          ]
+        )
+      )
+    );
     }
 
     void select() {
-        _selectionBehavior.selectDataPoints(1, 0);
+        selection.selectDataPoints(1, 0);
     }
 
 {% endhighlight %}

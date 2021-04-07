@@ -53,17 +53,17 @@ The data points that has null value are considered as empty points. Empty data p
         return Scaffold(
             body: Center(
                 child: SfPyramidChart(
-                    series:PyramidSeries<ChartData, String>(
-                        dataSource: chartData,
-                        dataLabelSettings: DataLabelSettings(isVisible:true),
-                        emptyPointSettings: EmptyPointSettings(mode: EmptyPointMode.average),
-                        xValueMapper: (ChartData data, _) => data.x,
-                        yValueMapper: (ChartData data, _) => data.y
+                        series:PyramidSeries<ChartData, String>(
+                            dataSource: chartData,
+                            dataLabelSettings: DataLabelSettings(isVisible:true),
+                            emptyPointSettings: EmptyPointSettings(mode: EmptyPointMode.average),
+                            xValueMapper: (ChartData data, _) => data.x,
+                            yValueMapper: (ChartData data, _) => data.y
+                        )
                     )
                 )
-            )
-        );
-    }
+            );
+        }
 
 {% endhighlight %}
 
@@ -77,16 +77,16 @@ Specific color for empty point can be set by [`color`](https://pub.dev/documenta
 
     @override
     Widget build(BuildContext context) {
-        final List<ChartData> chartData = [
-        ChartData('David', null),
-        ChartData('Steve', 38),
-        ChartData('Jack', 34),
-        ChartData('Others', 52)
-        ];
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfPyramidChart(
+     final List<ChartData> chartData = [
+      ChartData('David', null),
+      ChartData('Steve', 38),
+      ChartData('Jack', 34),
+      ChartData('Others', 52)
+    ];
+    return Scaffold(
+        body: Center(
+            child: Container(
+                child: SfPyramidChart(
                         series:PyramidSeries<ChartData, String>(
                             dataSource: chartData,
                             dataLabelSettings: DataLabelSettings(isVisible:true),
@@ -114,18 +114,18 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
 {% highlight dart %} 
 
     @override
-    Widget build(BuildContext context) {
-            static dynamic chartData = <SalesData>[
-                SalesData('Rent', 1000,Colors.teal),
-                SalesData('Food', 2500,Colors.lightBlue),
-                SalesData('Savings', 760,Colors.brown),
-                SalesData('Tax', 1897,Colors.grey),
-                SalesData('Others', 2987,Colors.blueGrey)
-            ];
-            return Scaffold(
-                body: Center(
-                    child: Container(
-                        child: SfPyramidChart(
+     Widget build(BuildContext context) {
+    static dynamic chartData = <SalesData>[
+    SalesData('Rent', 1000,Colors.teal),
+    SalesData('Food', 2500,Colors.lightBlue),
+    SalesData('Savings', 760,Colors.brown),
+    SalesData('Tax', 1897,Colors.grey),
+    SalesData('Others', 2987,Colors.blueGrey)
+     ];
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfPyramidChart(
                         series:PyramidSeries<ChartData, String>(
                             dataSource: chartData,
                             xValueMapper: (ChartData data, _) => data.x,

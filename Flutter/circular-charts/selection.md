@@ -13,14 +13,14 @@ The selection feature in chart let you to select a segment in a series or the se
 
 {% highlight dart %} 
     
-    late SelectionBehavior _selectionBehavior;
+    SelectionBehavior _selectionBehavior;
 
     @override
     void initState(){
-        _selectionBehavior = SelectionBehavior(
+      _selectionBehavior = SelectionBehavior(
             // Enables the selection
             enable: true);
-        super.initState();
+    super.initState();
     }
 
     @override
@@ -63,15 +63,15 @@ You can customize the segments using the below properties.
 
 {% highlight dart %} 
     
-    late SelectionBehavior _selectionBehavior;
+    SelectionBehavior _selectionBehavior;
 
     @override
     void initState(){
-        _selectionBehavior = SelectionBehavior(
+      _selectionBehavior = SelectionBehavior(
              enable: true,
              selectedColor: Colors.red,
             unselectedColor: Colors.grey);
-        super.initState();
+    super.initState();
     }
 
     @override

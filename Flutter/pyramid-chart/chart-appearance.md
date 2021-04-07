@@ -39,24 +39,24 @@ Margin to the chart can be specified using the [`margin`](https://pub.dev/docume
 {% highlight dart %} 
 
     @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        body: SafeArea(
-          child: Center(
-            child: Container(
-              height: 300,
-              width: 350,
-              child: SfPyramidChart(
-                borderColor: Colors.red,
-                borderWidth: 2,
-                // Sets 15 logical pixels as margin for all the 4 sides.
-                margin: EdgeInsets.all(15)
+      Widget build(BuildContext context) {
+        return Scaffold(
+          body: SafeArea(
+            child: Center(
+              child: Container(
+                height: 300,
+                width: 350,
+                child: SfPyramidChart(
+                  borderColor: Colors.red,
+                  borderWidth: 2,
+                  // Sets 15 logical pixels as margin for all the 4 sides.
+                  margin: EdgeInsets.all(15)
+                  )
                 )
               )
             )
-          )
-      );
-    }
+        );
+      }
 
 {% endhighlight %}
 

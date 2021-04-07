@@ -13,31 +13,31 @@ Chart provides tooltip support for all the series. It is used to show informatio
 
 {% highlight dart %} 
     
-    late TooltipBehavior _tooltipBehavior;
+    TooltipBehavior _tooltipBehavior;
 
     @override
     void initState(){
-      _tooltipBehavior = TooltipBehavior(enable: true);
-      super.initState();
+        _tooltipBehavior = TooltipBehavior(            enable: true);
+    super.initState();
     }
 
     @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        body: Center(
-          child: Container(
-            child: SfFunnelChart(
-              tooltipBehavior: _tooltipBehavior,
-              series: FunnelSeries<SalesData, String>(
-                  dataSource: chartData,
-                  xValueMapper: (SalesData sales, _) =>   sales.year,
-                  yValueMapper: (SalesData sales, _) => sales.sales
-                )
+      Widget build(BuildContext context) {
+        return Scaffold(
+          body: Center(
+            child: Container(
+              child: SfFunnelChart(
+                tooltipBehavior: _tooltipBehavior,
+                series: FunnelSeries<SalesData, String>(
+                    dataSource: chartData,
+                    xValueMapper: (SalesData sales, _) =>   sales.year,
+                    yValueMapper: (SalesData sales, _) => sales.sales
+                  )
+              )
             )
           )
-        )
-      );
-    }
+        );
+      }
 
 {% endhighlight %}
 
@@ -61,7 +61,7 @@ You can use the following properties to customize the tooltip appearance.
 
 {% highlight dart %} 
     
-    late TooltipBehavior _tooltipBehavior;
+    TooltipBehavior _tooltipBehavior;
 
     @override
     void initState(){
@@ -71,23 +71,23 @@ You can use the following properties to customize the tooltip appearance.
                 borderWidth: 2,
                 color: Colors.lightBlue
               );
-        super.initState();
+    super.initState();
     }
 
     @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        body: Center(
-          child: Container(
-            height: 350,
-            width: 350,
-            child: SfFunnelChart(
-              tooltipBehavior: _tooltipBehavior,
+      Widget build(BuildContext context) {
+        return Scaffold(
+          body: Center(
+            child: Container(
+              height: 350,
+              width: 350,
+              child: SfFunnelChart(
+                tooltipBehavior: _tooltipBehavior,
+              )
             )
           )
-        )
-      );
-    }
+        );
+      }
 
 {% endhighlight %}
 
@@ -104,7 +104,7 @@ By default, x and y value will be displayed in the tooltip, and it can be custom
 
 {% highlight dart %} 
     
-    late TooltipBehavior _tooltipBehavior;
+    TooltipBehavior _tooltipBehavior;
 
     @override
     void initState(){
@@ -113,7 +113,7 @@ By default, x and y value will be displayed in the tooltip, and it can be custom
                 // Formatting the tooltip text
                 format: 'point.y%'
               );
-        super.initState();
+    super.initState();
     }
 
     @override
@@ -139,7 +139,7 @@ The tooltip can be made to display in the fixed location or at the pointer locat
 
 {% highlight dart %} 
     
-    late TooltipBehavior _tooltipBehavior;
+    TooltipBehavior _tooltipBehavior;
 
     @override
     void initState(){
@@ -147,7 +147,7 @@ The tooltip can be made to display in the fixed location or at the pointer locat
                 enable: true, 
                 tooltipPosition: TooltipPosition.pointer
               );
-        super.initState();
+    super.initState();
     }
 
     @override
@@ -173,7 +173,7 @@ You can customize the appearance of the tooltip with your own widget by using th
 
 {% highlight dart %} 
     
-    late TooltipBehavior _tooltipBehavior;
+    TooltipBehavior _tooltipBehavior;
 
     @override
     void initState(){
@@ -189,7 +189,7 @@ You can customize the appearance of the tooltip with your own widget by using th
                   );
                 }
               );
-        super.initState();
+    super.initState();
     }
 
     @override
@@ -222,7 +222,7 @@ The ActivationMode enum contains the following values:
 
 {% highlight dart %} 
     
-    late TooltipBehavior _tooltipBehavior;
+    TooltipBehavior _tooltipBehavior;
 
     @override
     void initState(){
@@ -231,7 +231,7 @@ The ActivationMode enum contains the following values:
                 // Tooltip will be displayed on long press
                 activationMode: ActivationMode.longPress
               );
-        super.initState();
+    super.initState();
     }
 
     @override

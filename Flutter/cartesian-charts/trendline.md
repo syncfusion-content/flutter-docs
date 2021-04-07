@@ -15,15 +15,15 @@ Trendlines can be generated for the Cartesian type series (Line, Column, Scatter
 
 You can use the following properties to customize the behavior and appearance of trendlines.
 
-* [`type`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineType-class.html) - Specifies the type of trendline that must be added to the series.
-* [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/isVisible.html) -Used to toggle the visibility of trendlines in a series.
-* [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/width.html) -Used to determine the width of trendline.
-* [`backwardForecast`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/backwardForecast.html) -Used to specify the range of backward forecast for the trendline.
-* [`forwardForecast`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/forwardForecast.html) -Used to specify the range of forward forecast for the trendline.
-* [`intercept`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/intercept.html) - Used to provide the trendline intercept values
-* [`period`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/period.html) -Used to determine the starting point for the trendline.
+* [`type`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineType-class.html) - specifies the type of trendline that must be added to the series.
+* [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/isVisible.html) - used to toggle the visibility of trendlines in a series.
+* [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/width.html) - used to determine the width of trendline.
+* [`backwardForecast`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/backwardForecast.html) - used to specify the range of backward forecast for the trendline.
+* [`forwardForecast`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/forwardForecast.html) - used to specify the range of forward forecast for the trendline.
+* [`intercept`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/intercept.html) - used to provide the trendline intercept values
+* [`period`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/period.html) - used to determine the starting point for the trendline.
 * [`polynomialOrder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/polynomialOrder.html) -used to provide the polynomial order for polynomial type trendlines.
-* [` animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/animationDuration.html) - Used to animate the trendlines. By default, animationDuration has a value of 1500. When animationDuration is set to zero no animation takes place.
+* [` animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/animationDuration.html) - used to animate the trendlines. By default, animationDuration has a value of 1500. When animationDuration is set to zero no animation takes place.
 * [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLine/dashArray.html) - pattern of dashes and gaps used to stroke the trendline.
 * [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/opacity.html) - opacity of the trendline.
 * [`valueField`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/valueField.html) - used to choose the valueField(low or high) to render the trendline. Defaults to low.
@@ -384,7 +384,7 @@ Chart will display details about the points through tooltip, when user interacti
 
 {% highlight dart %}
 
-    late TooltipBehavior _tooltipBehavior;
+    TooltipBehavior _tooltipBehavior;
     
     @override
     void initState(){

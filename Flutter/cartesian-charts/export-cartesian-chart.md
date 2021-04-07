@@ -18,7 +18,7 @@ To export the Cartesian chart as a PNG image, we can get the image by calling [`
 {% highlight dart %} 
 
     Future<void> _renderCartesianImage() async {
-      dart_ui.Image data = await _cartesianKey.currentState!.toImage(pixelRatio: 3.0);
+      dart_ui.Image data = await _cartesianKey.currentState.toImage(pixelRatio: 3.0);
       final bytes = await data.toByteData(format: dart_ui.ImageByteFormat.png);
       if (data != null) {
       await Navigator.of(context).push(
@@ -29,15 +29,15 @@ To export the Cartesian chart as a PNG image, we can get the image by calling [`
               body: Center(
                 child: Container(
                   color: Colors.white,
-                  child: Image.memory(bytes!.buffer.asUint8List()),
+                  child: Image.memory(bytes.buffer.asUint8List()),
+                   ),
                 ),
-              ),
-            );
-          },
-        ),
-      );
+              );
+            },
+          ),
+        );
+      }
     }
-  }
 
   {% endhighlight %}
 
@@ -50,10 +50,10 @@ Similar to the above way, we can also export the rendered chart as a PDF documen
     Future<void> _renderCartesianPDF() async {
       var document = PdfDocument();
       PdfPage page = document.pages.add();
-      dart_ui.Image data = await _cartesianKey. currentState!.toImage(pixelRatio: 3.0);
+      dart_ui.Image data = await _cartesianKey. currentState.toImage(pixelRatio: 3.0);
       final bytes = await data.toByteData(format: dart_ui.ImageByteFormat.png);
       final Uint8List imageBytes =
-          bytes!.buffer.asUint8List(bytes.offsetInBytes, bytes.lengthInBytes);
+          bytes.buffer.asUint8List(bytes.offsetInBytes, bytes.lengthInBytes);
       page.graphics
           .drawImage(PdfBitmap(imageBytes), Rect.fromLTWH(25, 50, 300, 300));
       var byteData = document.save();

@@ -26,18 +26,18 @@ Triggers when the legend item is rendering. Here, you can customize the legendâ€
     @override
     Widget build(BuildContext context) {
     
-      return Scaffold(
-        body: Center(
-          child: SfCircularChart(
-            legend: Legend(isVisible: true),
-            onLegendItemRender: (LegendRenderArgs args){
-              args.text = 'Legend Text';
-              args.legendIconType = LegendIconType.diamond;
-            }
-          )
+    return Scaffold(
+      body: Center(
+        child: SfCircularChart(
+          legend: Legend(isVisible: true),
+          onLegendItemRender: (LegendRenderArgs args){
+            args.text = 'Legend Text';
+            args.legendIconType = LegendIconType.diamond;
+          }
         )
-      );
-    }
+      )
+    );
+  }
 
 {% endhighlight %}
 
@@ -56,28 +56,28 @@ Triggers while tooltip is rendering. Here, you can customize the text, header, x
 
 {% highlight dart %}
     
-    late TooltipBehavior _tooltipBehavior;
+    TooltipBehavior _tooltipBehavior;
 
     @override
     void initState(){
-      _tooltipBehavior = TooltipBehavior(enable: true);
-      super.initState();
+      _tooltipBehavior = TooltipBehavior(            enable: true);
+    super.initState();
     }
 
     @override
     Widget build(BuildContext context) {
     
-      return Scaffold(
-        body: Center(
-          child: SfCircularChart(
-            onTooltipRender: (TooltipArgs args){
-              args.text = 'Custom Text';
-            },
-            tooltipBehavior:_tooltipBehavior,
-          )
+    return Scaffold(
+      body: Center(
+        child: SfCircularChart(
+          onTooltipRender: (TooltipArgs args){
+            args.text = 'Custom Text';
+          },
+          tooltipBehavior:_tooltipBehavior,
         )
-      );
-    }
+      )
+    );
+  }
 
 {% endhighlight %}
 
@@ -98,23 +98,23 @@ Triggers when data label is rendering. Text and text styles such as color, font 
     @override
     Widget build(BuildContext context) {
     
-      return Scaffold(
-        body: Center(
-          child: SfCircularChart(
-            onDataLabelRender:(DataLabelRenderArgs args){
-              args.text = 'Data label';
-            },
-            series: <CircularSeries>[
-              PieSeries<ChartData, String>(
-              dataLabelSettings: DataLabelSettings(
-                  isVisible: true
-              )
-              )
-            ]
-          )
+    return Scaffold(
+      body: Center(
+        child: SfCircularChart(
+          onDataLabelRender:(DataLabelRenderArgs args){
+            args.text = 'Data label';
+          },
+          series: <CircularSeries>[
+            PieSeries<ChartData, String>(
+             dataLabelSettings: DataLabelSettings(
+                isVisible: true
+             )
+            )
+          ]
         )
-      );
-    }
+      )
+    );
+  }
 
 {% endhighlight %}
 
@@ -131,15 +131,14 @@ Triggers when tapping the series point. The [`onPointTapped`](https://pub.dev/do
     @override
     Widget build(BuildContext context) {
     
-      return Scaffold(
-        body: Center(
-          child: SfCircularChart(
-            onPointTapped: (PointTapArgs args){
-              print(args.seriesIndex);
-              print(args.pointIndex);
-            }
-          )
-        )  
+    return Scaffold(
+      body: Center(
+        child: SfCircularChart(
+           onPointTapped: (PointTapArgs args){
+            print(args.seriesIndex);
+            print(args.pointIndex);
+          }
+        )
       );
     }
 
@@ -159,17 +158,16 @@ Triggers when tapping the legend item. The [`onLegendTapped`](https://pub.dev/do
     @override
     Widget build(BuildContext context) {
     
-      return Scaffold(
-        body: Center(
-          child: SfCircularChart(
-            onLegendTapped: (LegendTapArgs args) {
-              print(args.seriesIndex);
-            },
-            legend: Legend(isVisible: true)
-          )
-        )
-      );
-    }
+    return Scaffold(
+      body: Center(
+        child: SfCircularChart(
+          onLegendTapped: (LegendTapArgs args) {
+            print(args.seriesIndex);
+          },
+          legend: Legend(isVisible: true)
+      )
+    );
+  }
 
 {% endhighlight %}
 
@@ -190,32 +188,31 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
 
 {% highlight dart %}
     
-    late SelectionBehavior _selectionBehavior;
+    SelectionBehavior _selectionBehavior;
 
     @override
     void initState(){
       _selectionBehavior = SelectionBehavior(
                 enable: true);
-      super.initState();
+    super.initState();
     }
 
     @override
     Widget build(BuildContext context) {
     
-      return Scaffold(
-        body: Center(
-          child: SfCircularChart(
-          onSelectionChanged: (SelectionArgs args){
-              args.selectedColor = Colors.red;
-              args.unselectedColor = Colors.lightGreen;
-            },
-            series: <CircularSeries>[
-              PieSeries<ChartData, String>(
-                selectionBehavior: _selectionBehavior
-              )
-            ]
-          )
-        )
+    return Scaffold(
+      body: Center(
+        child: SfCircularChart(
+         onSelectionChanged: (SelectionArgs args){
+            args.selectedColor = Colors.red;
+            args.unselectedColor = Colors.lightGreen;
+          },
+          series: <CircularSeries>[
+            PieSeries<ChartData, String>(
+              selectionBehavior: _selectionBehavior
+            )
+          ]
+       )
       );
     }
 
@@ -236,7 +233,6 @@ N> This callback will not be called, when the builder is specified for data labe
 
 {% highlight dart %}
 
-    @override
     Widget build(BuildContext context) {
       return Container(
         child: SfCartesianChart(
@@ -268,17 +264,16 @@ The callback contains the following argument:
 
 {% highlight dart %}
 
-    @override
-    Widget build(BuildContext context) {
-      return Container(
-            child: SfCircularChart(
-                onChartTouchInteractionUp: (ChartTouchInteractionArgs args){
-                  print(args.position.dx.toString());
-                  print(args.position.dy.toString());
-                }
-            )
-        );
-    }
+  Widget build(BuildContext context) {
+     return Container(
+          child: SfCircularChart(
+              onChartTouchInteractionUp: (ChartTouchInteractionArgs args){
+                 print(args.position.dx.toString());
+                 print(args.position.dy.toString());
+               }
+          )
+      );
+  }
 
 {% endhighlight %}
 
@@ -292,17 +287,16 @@ The callback contains the following argument:
 
 {% highlight dart %}
 
-    @override
-    Widget build(BuildContext context) {
-        return Container(
-            child: SfCircularChart(
-                onChartTouchInteractionMove: (ChartTouchInteractionArgs args){
-                  print(args.position.dx.toString());
-                  print(args.position.dy.toString());
-                }
-            )
-        );
-    }
+  Widget build(BuildContext context) {
+      return Container(
+          child: SfCircularChart(
+              onChartTouchInteractionMove: (ChartTouchInteractionArgs args){
+                 print(args.position.dx.toString());
+                 print(args.position.dy.toString());
+               }
+          )
+      );
+  }
 
 {% endhighlight %}
 
@@ -316,17 +310,16 @@ The callback contains the following argument:
 
 {% highlight dart %}
 
-    @override
-    Widget build(BuildContext context) {
-        return Container(
-          child: SfCircularChart(
-                onChartTouchInteractionDown: (ChartTouchInteractionArgs args){
-                  print(args.position.dx.toString());
-                  print(args.position.dy.toString());
-                }
-            )
-        );
-    }
+  Widget build(BuildContext context) {
+      return Container(
+         child: SfCircularChart(
+              onChartTouchInteractionDown: (ChartTouchInteractionArgs args){
+                 print(args.position.dx.toString());
+                 print(args.position.dy.toString());
+               }
+          )
+      );
+  }
 
 {% endhighlight %}
 

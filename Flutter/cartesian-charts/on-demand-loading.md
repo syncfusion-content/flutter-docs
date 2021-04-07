@@ -19,7 +19,6 @@ The below example demonstrates the infinite scrolling by showing the ci
 
 {% highlight dart %}
 
-    @override
     Widget build(BuildContext context) {
       return Container(
           child: SfCartesianChart(
