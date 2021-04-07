@@ -96,7 +96,7 @@ Widget build(BuildContext context) {
           child: SfPdfViewer.network(
         'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
         onTextSelectionChanged: (PdfTextSelectionChangedDetails details) {
-          if (details?.selectedText != null) {
+          if (details.selectedText != null) {
             print(details.selectedText);
           }
         },
@@ -131,8 +131,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  PdfViewerController _pdfViewerController;
-  OverlayEntry _overlayEntry;
+  late PdfViewerController _pdfViewerController;
+  OverlayEntry? _overlayEntry;
   @override
   void initState() {
     _pdfViewerController = PdfViewerController();
@@ -141,24 +141,25 @@ class _HomePageState extends State<HomePage> {
 
   void _showContextMenu(
       BuildContext context, PdfTextSelectionChangedDetails details) {
-    final OverlayState _overlayState = Overlay.of(context);
+    final OverlayState _overlayState = Overlay.of(context)!;
     _overlayEntry = OverlayEntry(
       builder: (context) => Positioned(
-        top: details.globalSelectedRegion.center.dy - 55,
-        left: details.globalSelectedRegion.bottomLeft.dx,
+        top: details.globalSelectedRegion!.center.dy - 55,
+        left: details.globalSelectedRegion!.bottomLeft.dx,
         child: RaisedButton(
-          child: Text('Copy', style: TextStyle(fontSize: 17)),
           onPressed: () {
             Clipboard.setData(ClipboardData(text: details.selectedText));
-            print('Text copied to clipboard: ' + details.selectedText);
+            print(
+                'Text copied to clipboard: ' + details.selectedText.toString());
             _pdfViewerController.clearSelection();
           },
           color: Colors.white,
           elevation: 10,
+          child: Text('Copy', style: TextStyle(fontSize: 17)),
         ),
       ),
     );
-    _overlayState.insert(_overlayEntry);
+    _overlayState.insert(_overlayEntry!);
   }
 
   @override
@@ -168,11 +169,11 @@ class _HomePageState extends State<HomePage> {
           title: Text('Syncfusion Flutter PDF Viewer'),
         ),
         body: Container(
-            child: SfPdfViewer.asset(
-          'assets/pdf_succinctly.pdf',
+            child: SfPdfViewer.network(
+          'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
           onTextSelectionChanged: (PdfTextSelectionChangedDetails details) {
             if (details.selectedText == null && _overlayEntry != null) {
-              _overlayEntry.remove();
+              _overlayEntry!.remove();
               _overlayEntry = null;
             } else if (details.selectedText != null && _overlayEntry == null) {
               _showContextMenu(context, details);
@@ -182,6 +183,5 @@ class _HomePageState extends State<HomePage> {
         )));
   }
 }
-
 {% endhighlight %}
 {% endtabs %}

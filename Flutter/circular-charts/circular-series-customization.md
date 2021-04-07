@@ -20,21 +20,22 @@ documentation: ug
         return Scaffold(
             body: Center(
                 child: Container(
-                    child: SfCircularChart(series: <CircularSeries<ChartData,dynamic>>[
-                        // Render pie chart
-                        PieSeries<ChartData, String>(
-                            dataSource: chartData,
-                            pointColorMapper:(ChartData data,  _) => data.color,
-                            xValueMapper: (ChartData data, _) => data.x,
-                            yValueMapper: (ChartData data, _) => data.y,
-                            animationDuration: 1000
-                        )
-                    ]
+                    child: SfCircularChart(
+                        series: <CircularSeries<ChartData,dynamic>>[
+                            // Render pie chart
+                            PieSeries<ChartData, String>(
+                                dataSource: chartData,
+                                pointColorMapper:(ChartData data,  _) => data.color,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                animationDuration: 1000
+                            )
+                        ]
+                    )
                 )
             )
-        )
-    );
-    }}
+        );
+    }
 
 {% endhighlight %}
 
@@ -53,19 +54,19 @@ documentation: ug
                     child: SfCircularChart(
                         palette: <Color>[Colors.amber, Colors.brown, Colors.green, Colors.redAccent, Colors.blueAccent, Colors.teal],
                         series: <CircularSeries<ChartData,dynamic>>[
-                        // Render pie chart
-                        PieSeries<ChartData, String>(
-                            dataSource: chartData,
-                            pointColorMapper:(ChartData data,  _) => data.color,
-                            xValueMapper: (ChartData data, _) => data.x,
-                            yValueMapper: (ChartData data, _) => data.y,
-                        )
-                    ]
+                            // Render pie chart
+                            PieSeries<ChartData, String>(
+                                dataSource: chartData,
+                                pointColorMapper:(ChartData data,  _) => data.color,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                            )
+                        ]
+                    )
                 )
             )
-        )
-    );
-    }}
+        );
+    }
 
 {% endhighlight %}
 
@@ -245,7 +246,7 @@ The data points of pie, doughnut and radial bar charts can also be filled with i
     import 'dart:async';
     import 'dart:ui' as ui;
 
-    Image image;
+    ui.Image? image;
 
     Future<void> getImage() async {
         const ImageProvider imageProvider = AssetImage('assets/apple.png');
@@ -265,7 +266,7 @@ The data points of pie, doughnut and radial bar charts can also be filled with i
             child: SfCircularChart(
                 onCreateShader: (ChartShaderDetails chartShaderDetails) {
                     return ImageShader(
-                                image,
+                                ui.image!,
                                 TileMode.mirror,
                                 TileMode.mirror,
                                 Matrix4.identity().scaled(0.4).storage
@@ -295,10 +296,10 @@ The [`pointShaderMapper`](~) property is used to map the shader field from the c
     import 'dart:async';
     import 'dart:ui' as ui;
 
-    ui.Image image1;
-    ui.Image image2;
-    ui.Image image3;
-    ui.Image image4;
+    ui.Image? image1;
+    ui.Image? image2;
+    ui.Image? image3;
+    ui.Image? image4;
 
     // To get the images from asset folder
     void getImage() async {
@@ -340,7 +341,7 @@ The [`pointShaderMapper`](~) property is used to map the shader field from the c
         }));
     }
 
-    Widget renderWidget;
+    Widget? renderWidget;
 
     @override
     Widget build(BuildContext context) {
@@ -356,7 +357,7 @@ The [`pointShaderMapper`](~) property is used to map the shader field from the c
                                 25,
                                 '25%',
                                 ui.ImageShader(
-                                    image1,
+                                    image1!,
                                     TileMode.repeated,
                                     TileMode.repeated,
                                     Matrix4.identity().scaled(0.5).storage,
@@ -367,7 +368,7 @@ The [`pointShaderMapper`](~) property is used to map the shader field from the c
                                 35,
                                 '35%',
                                 ui.ImageShader(
-                                    image2,
+                                    image2!,
                                     TileMode.repeated,
                                     TileMode.repeated,
                                     Matrix4.identity().scaled(0.6).storage,
@@ -378,7 +379,7 @@ The [`pointShaderMapper`](~) property is used to map the shader field from the c
                                 22,
                                 '22%',
                                 ui.ImageShader(
-                                    image3,
+                                    image3!,
                                     TileMode.repeated,
                                     TileMode.repeated,
                                     Matrix4.identity().scaled(0.6).storage,
@@ -389,7 +390,7 @@ The [`pointShaderMapper`](~) property is used to map the shader field from the c
                                 18,
                                 '18%',
                                 ui.ImageShader(
-                                    image4,
+                                    image4!,
                                     TileMode.repeated,
                                     TileMode.repeated,
                                     Matrix4.identity().scaled(0.5).storage,
@@ -415,7 +416,7 @@ The [`pointShaderMapper`](~) property is used to map the shader field from the c
             renderWidget = Center(child: CircularProgressIndicator());
         }
         return Scaffold(
-            body: renderWidget
+            body: renderWidget!
         );
     }
 
@@ -501,8 +502,12 @@ The data points that has null value are considered as empty points. Empty data p
                       EmptyPointSettings(mode: EmptyPointMode.average),
                             pointColorMapper:(ChartData data,  _) => data.color,
                             xValueMapper: (ChartData data, _) => data.x,
-                            yValueMapper: (ChartData data, _) => data.y,)])));
-    }}
+                            yValueMapper: (ChartData data, _) => data.y,)
+                    ]
+                )
+            )
+        );
+    }
 
 {% endhighlight %}
 
@@ -516,29 +521,33 @@ Specific color for empty point can be set by [`color`](https://pub.dev/documenta
 
     @override
     Widget build(BuildContext context) {
-     final List<ChartData> chartData = [
-      ChartData('David', null),
-      ChartData('Steve', 38),
-      ChartData('Jack', 34),
-      ChartData('Others', 52)
-    ];
-    return Scaffold(
-        body: Center(
-            child: Container(
-                child: SfCircularChart(
-                    series: <CircularSeries<ChartData, dynamic>>[
-          PieSeries<ChartData, String>(
-              dataSource: chartData,
-              dataLabelSettings: DataLabelSettings(isVisible: true),
-              emptyPointSettings: EmptyPointSettings(
-                  mode: EmptyPointMode.average,
-                  color: Colors.red,
-                  borderColor: Colors.black,
-                  borderWidth: 2),
-              xValueMapper: (ChartData data, _) => data.x,
-              yValueMapper: (ChartData data, _) => data.y)
-        ]))));
-      }}
+        final List<ChartData> chartData = [
+        ChartData('David', null),
+        ChartData('Steve', 38),
+        ChartData('Jack', 34),
+        ChartData('Others', 52)
+        ];
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCircularChart(
+                        series: <CircularSeries<ChartData, dynamic>>[
+                            PieSeries<ChartData, String>(
+                            dataSource: chartData,
+                            dataLabelSettings: DataLabelSettings(isVisible: true),
+                            emptyPointSettings: EmptyPointSettings(
+                                mode: EmptyPointMode.average,
+                                color: Colors.red,
+                                borderColor: Colors.black,
+                                borderWidth: 2),
+                            xValueMapper: (ChartData data, _) => data.x,
+                            yValueMapper: (ChartData data, _) => data.y)
+                        ]
+                    )
+                )
+            )
+        );
+    }
 
 {% endhighlight %}
 
@@ -553,7 +562,7 @@ The chart’s data source can be sorted using the [`sortingOrder`](https://pub.d
     @override
     Widget build(BuildContext context) {
         
-         final List<ChartData> chartData = [
+        final List<ChartData> chartData = [
             ChartData('David', 25),
             ChartData('Steve', 38),
             ChartData('Jack', 34),
@@ -564,7 +573,6 @@ The chart’s data source can be sorted using the [`sortingOrder`](https://pub.d
             body: Center(
                 child: Container(
                     child: SfCircularChart(
-                      
                       series: <CircularSeries<ChartData,dynamic>>[
                         // Render pie chart
                         PieSeries<ChartData, String>(
