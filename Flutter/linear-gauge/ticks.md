@@ -64,6 +64,23 @@ Widget build(BuildContext context) {
 
 The [`showTicks`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/showTicks.html) property of the axis is used to enable or disable the visibility of both the major and the minor ticks. The default value of this property is true.
 
+{% highlight dart %} 
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+                child: SfLinearGauge(
+                    showTicks: false
+                ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
+
 ![Customize linear gauge ticks visibility](images/axis-ticks/linear-gauge-tick-visibility.png)
 
 ## Customize tick placement
