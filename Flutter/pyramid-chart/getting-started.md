@@ -213,12 +213,12 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
 {% highlight dart %} 
     
-    TooltipBehavior _tooltipBehavior;
+    late TooltipBehavior _tooltipBehavior;
 
     @override
     void initState(){
         _tooltipBehavior = TooltipBehavior(            enable: true);
-    super.initState();
+        super.initState();
     }
 
     @override

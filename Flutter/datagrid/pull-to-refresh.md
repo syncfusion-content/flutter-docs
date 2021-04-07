@@ -10,7 +10,7 @@ documentation: ug
 # Pull to Refresh in Flutter DataGrid
 
 The Flutter DataTable provides support to add more data at runtime by using the PullToRefresh feature.
-You can simply enable the PullToRefresh option by setting the `SfDataGrid.allowPullToRefresh` property to `true` and override the `DataGridSource.handleRefresh` method to include the data which is going to add to the data source at runtime and then notify the data grid about the changes.
+You can simply enable the PullToRefresh option by setting the [SfDataGrid.allowPullToRefresh](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowPullToRefresh.html) property to `true` and override the [DataGridSource.handleRefresh](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/handleRefresh.html) method to include the data which is going to add to the data source at runtime and then notify the data grid about the changes.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -21,7 +21,7 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 Widget build(BuildContext context) {
   return SfDataGrid(
     allowPullToRefresh: true,
-    source: employeeDataSource,
+    source: _employeeDataSource,
     columns: <GridColumn>[
       GridTextColumn(
         columnName: 'id',
@@ -64,10 +64,11 @@ Widget build(BuildContext context) {
 }
 
 class EmployeeDataSource extends DataGridSource {
-  List<DataGridRow> dataGridRows;
-  EmployeeDataSource({List<Employee> employeesData}) {
+  EmployeeDataSource() {
     buildDataGridRows();
   }
+
+  List<DataGridRow> dataGridRows = [];
 
   @override
   List<DataGridRow> get rows => dataGridRows;
@@ -92,13 +93,13 @@ class EmployeeDataSource extends DataGridSource {
   @override
   Future<void> handleRefresh() async {
     await Future.delayed(Duration(seconds: 5));
-    _addMoreRows(employees, 15);
+    _addMoreRows(_employees, 15);
     buildDataGridRows();
     notifyListeners();
   }
 
   void buildDataGridRows() {
-    dataGridRows = employees
+    dataGridRows = _employees
         .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
               DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
               DataGridCell<String>(columnName: 'name', value: dataGridRow.name),
@@ -110,19 +111,18 @@ class EmployeeDataSource extends DataGridSource {
         .toList();
   }
 
-  List<Employee> _addMoreRows(List<Employee> employeeData, int count) {
+  void _addMoreRows(List<Employee> employees, int count) {
     final Random _random = Random();
-    final startIndex = employeeData.isNotEmpty ? employeeData.length : 0,
+    final startIndex = employees.isNotEmpty ? employees.length : 0,
         endIndex = startIndex + count;
     for (int i = startIndex; i < endIndex; i++) {
-      employeeData.add(Employee(
+      employees.add(Employee(
         1000 + i,
         _names[_random.nextInt(_names.length - 1)],
         _designation[_random.nextInt(_designation.length - 1)],
         10000 + _random.nextInt(10000),
       ));
     }
-    return employeeData;
   }
 
   final List<String> _names = <String>[
@@ -162,7 +162,7 @@ class EmployeeDataSource extends DataGridSource {
 
 SfDataGrid displays the [RefreshIndicator](https://api.flutter.dev/flutter/material/RefreshIndicator-class.html) for `pull to refresh` action. So, you can set the color and background color of refresh indicator by using [ThemeData.accentColor](https://api.flutter.dev/flutter/material/ThemeData/accentColor.html) and  [ThemeData.canvasColor](https://api.flutter.dev/flutter/material/ThemeData/canvasColor.html) properties.
 
-You can also change the stroke width and displacement of refresh indicator by using `SfDataGrid.refreshIndicatorStrokeWidth` and `SfDataGrid.refreshIndicatorDisplacement` properties.
+You can also change the stroke width and displacement of refresh indicator by using [SfDataGrid.refreshIndicatorStrokeWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/refreshIndicatorStrokeWidth.html) and [SfDataGrid.refreshIndicatorDisplacement](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/refreshIndicatorDisplacement.html) properties.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -230,7 +230,7 @@ Widget build(BuildContext context) {
 
 ## Programmatic Pull to Refresh
 
-If you want to refresh data without showing a refresh indicator, you can pass `false` to the `showRefreshIndicator` optional parameter of `refresh` method. By doing this, `DataGridSource.handleRefresh` method will be called without showing the `RefreshIndicator` in UI.
+If you want to refresh data without showing a refresh indicator, you can pass `false` to the `showRefreshIndicator` optional parameter of [refresh](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGridState/refresh.html) method. By doing this, `DataGridSource.handleRefresh` method will be called without showing the `RefreshIndicator` in UI.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -327,7 +327,7 @@ class EmployeeDataSource extends DataGridSource {
   @override
   Future<void> handleRefresh() async {
     await Future.delayed(Duration(seconds: 5));
-    _addMoreRows(employees, 15);
+    _addMoreRows(_employees, 15);
     buildDataGridRows();
     notifyListeners();
   }
@@ -345,19 +345,18 @@ class EmployeeDataSource extends DataGridSource {
         .toList();
   }
 
-  List<Employee> _addMoreRows(List<Employee> employeeData, int count) {
+  void _addMoreRows(List<Employee> employees, int count) {
     final Random _random = Random();
-    final startIndex = employeeData.isNotEmpty ? employeeData.length : 0,
+    final startIndex = employees.isNotEmpty ? employees.length : 0,
         endIndex = startIndex + count;
     for (int i = startIndex; i < endIndex; i++) {
-      employeeData.add(Employee(
+      employees.add(Employee(
         1000 + i,
         _names[_random.nextInt(_names.length - 1)],
         _designation[_random.nextInt(_designation.length - 1)],
         10000 + _random.nextInt(10000),
       ));
     }
-    return employeeData;
   }
 
   final List<String> _names = <String>[

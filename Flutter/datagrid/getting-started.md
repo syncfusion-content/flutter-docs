@@ -129,15 +129,16 @@ Create the collection of Employee data with the required number of data objects.
 
 {% tabs %}
 {% highlight Dart %} 
-   
+
+late EmployeeDataSource _employeeDataSource;
+
 List<Employee> _employees = <Employee>[];
-EmployeeDataSource _employeeDataSource;
-  
+
 @override
 void initState() {
   super.initState();
   _employees = getEmployeeData();
-  employeeDataSource = EmployeeDataSource(employeeData: _employees);
+  employeeDataSource = EmployeeDataSource(employees: _employees);
 }
   
 List<Employee> getEmployeeData() {
@@ -172,9 +173,8 @@ List<Employee> getEmployeeData() {
 {% highlight Dart %} 
 
 class EmployeeDataSource extends DataGridSource {
-  List<DataGridRow> dataGridRows;
-  EmployeeDataSource({List<Employee> employeeData}) {
-    dataGridRows = employeeData
+  EmployeeDataSource(List<Employee> employees) {
+    dataGridRows = employees
         .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
               DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
               DataGridCell<String>(columnName: 'name', value: dataGridRow.name),
@@ -184,8 +184,10 @@ class EmployeeDataSource extends DataGridSource {
         .toList();
   }
 
+  List<DataGridRow> dataGridRows = [];
+
   @override
-  List<DataGridRow> get rows => _employeeData;
+  List<DataGridRow> get rows => dataGridRows;
   
   @override
   DataGridRowAdapter? buildRow(DataGridRow row) {
@@ -231,7 +233,7 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %} 
 
-final EmployeeDataSource _employeeDataSource = EmployeeDataSource(employeeData: _employees);
+late EmployeeDataSource _employeeDataSource;
   
 @override
 Widget build(BuildContext context) {
@@ -292,7 +294,7 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %} 
     
-final EmployeeDataSource _employeeDataSource = EmployeeDataSource(employeeData: _employees);
+late EmployeeDataSource _employeeDataSource;
 
 @override
 Widget build(BuildContext context) {
@@ -354,7 +356,7 @@ The information about the rows that are selected can be retrieved using [selecte
 {% tabs %}
 {% highlight Dart %} 
 
-final EmployeeDataSource _employeeDataSource = EmployeeDataSource(employeeData: _employees);
+late EmployeeDataSource _employeeDataSource;
 
 final DataGridController _controller = DataGridController();
 
@@ -367,8 +369,8 @@ Widget build(BuildContext context) {
             child: Text('Get Selection Information'),
             onPressed: () {
               int selectedIndex = _controller.selectedIndex;
-              Object selectedRow = _controller.selectedRow;
-              List<Object> selectedRows = _controller.selectedRows;
+              DataGridRow selectedRow = _controller.selectedRow;
+              List<DataGridRow> selectedRows = _controller.selectedRows;
               print(selectedIndex);
               print(selectedRow);
               print(selectedRows);

@@ -16,11 +16,11 @@ Pinch zooming can be enabled by [`enablePinching`](https://pub.dev/documentation
 
 {% highlight dart %} 
 
-    ZoomPanBehavior _zoomPanBehavior;
+    late ZoomPanBehavior _zoomPanBehavior;
     
     @override
     void initState(){
-     _zoomPanBehavior = ZoomPanBehavior(
+      _zoomPanBehavior = ZoomPanBehavior(
                   // Enables pinch zooming
                   enablePinching: true
                 );
@@ -52,7 +52,7 @@ Double tap zooming can be enabled using [`enableDoubleTapZooming`](https://pub.d
 
 {% highlight dart %} 
     
-    ZoomPanBehavior _zoomPanBehavior;
+    late ZoomPanBehavior _zoomPanBehavior;
     
     @override
     void initState(){
@@ -96,11 +96,11 @@ You can customize the selection rectangle using the below properties.
 
 {% highlight dart %} 
     
-    ZoomPanBehavior _zoomPanBehavior;
+    late ZoomPanBehavior _zoomPanBehavior;
     
     @override
     void initState(){
-     _zoomPanBehavior = ZoomPanBehavior(
+      _zoomPanBehavior = ZoomPanBehavior(
                   enableSelectionZooming: true,
                   selectionRectBorderColor: Colors.red,
                   selectionRectBorderWidth: 1,
@@ -149,7 +149,8 @@ The axis tooltip on selection zooming can be enabled using [`enable`](https://pu
 * [`textStyle.fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontStyle.html) - used to change the font size for the chart title.
 
 {% highlight dart %} 
-    ZoomPanBehavior _zoomPanBehavior;
+
+    late ZoomPanBehavior _zoomPanBehavior;
     
     @override
     void initState(){
@@ -200,7 +201,7 @@ The [enableMouseWheelZooming](https://pub.dev/documentation/syncfusion_flutter_c
 
 {% highlight dart %} 
 
-    ZoomPanBehavior _zoomPanBehavior;
+    late ZoomPanBehavior _zoomPanBehavior;
     
     @override
     void initState(){
@@ -247,8 +248,10 @@ The [`enableAutoIntervalOnZooming`](https://pub.dev/documentation/syncfusion_flu
                 )
               )
             )
-          );
-        }
+          )
+        ) 
+      );
+    }
 
 {% endhighlight %}
 
@@ -257,7 +260,8 @@ The [`enableAutoIntervalOnZooming`](https://pub.dev/documentation/syncfusion_flu
 The [`maximumZoomLevel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/maximumZoomLevel.html) property defines the maximum zooming level. Zooming will be stopped after reaching this value. This defaults to null.
 
 {% highlight dart %} 
-    ZoomPanBehavior _zoomPanBehavior;
+
+    late ZoomPanBehavior _zoomPanBehavior;
     
     @override
     void initState(){
@@ -291,7 +295,7 @@ If zoom mode is set to [`zoomMode.x`](https://pub.dev/documentation/syncfusion_f
 
 {% highlight dart %} 
     
-    ZoomPanBehavior _zoomPanBehavior;
+    late ZoomPanBehavior _zoomPanBehavior;
     
     @override
     void initState(){
