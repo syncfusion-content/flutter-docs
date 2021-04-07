@@ -13,33 +13,33 @@ The selection feature in chart let you to select a segment in a series or the se
 
 {% highlight dart %} 
     
-    SelectionBehavior _selectionBehavior;
+    late SelectionBehavior _selectionBehavior;
 
     @override
     void initState(){
       _selectionBehavior = SelectionBehavior(
                     // Enables the selection
                     enable: true);
-    super.initState();
+      super.initState();
     }
 
     @override
-      Widget build(BuildContext context) {
-        return Scaffold(
-          body: Center(
-            child: Container(
-              child: SfPyramidChart(
-                series: PyramidSeries<SalesData, String>(
-                    dataSource: chartData,
-                    xValueMapper: (SalesData sales, _) =>   sales.year,
-                    yValueMapper: (SalesData sales, _) => sales.sales,
-                    selectionBehavior: _selectionBehavior
-                  )
-              )
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: Center(
+          child: Container(
+            child: SfPyramidChart(
+              series: PyramidSeries<SalesData, String>(
+                  dataSource: chartData,
+                  xValueMapper: (SalesData sales, _) =>   sales.year,
+                  yValueMapper: (SalesData sales, _) => sales.sales,
+                  selectionBehavior: _selectionBehavior
+                )
             )
           )
-        );
-      }
+        )
+      );
+    }
 
 {% endhighlight %}
 
@@ -58,7 +58,7 @@ You can customize the segments using the below properties.
 
 {% highlight dart %} 
     
-    SelectionBehavior _selectionBehavior;
+    late SelectionBehavior _selectionBehavior;
 
     @override
     void initState(){
@@ -68,26 +68,26 @@ You can customize the segments using the below properties.
                     selectedColor: Colors.red,
                     unselectedColor: Colors.grey,
                     );
-    super.initState();
+      super.initState();
     }
 
     @override
-      Widget build(BuildContext context) {
-        return Scaffold(
-          body: Center(
-            child: Container(
-              child: SfPyramidChart(
-                series: PyramidSeries<SalesData, String>(
-                    dataSource: chartData,
-                    xValueMapper: (SalesData sales, _) =>   sales.year,
-                    yValueMapper: (SalesData sales, _) => sales.sales,
-                    selectionBehavior: _selectionBehavior
-                  )
-              )
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: Center(
+          child: Container(
+            child: SfPyramidChart(
+              series: PyramidSeries<SalesData, String>(
+                  dataSource: chartData,
+                  xValueMapper: (SalesData sales, _) =>   sales.year,
+                  yValueMapper: (SalesData sales, _) => sales.sales,
+                  selectionBehavior: _selectionBehavior
+                )
             )
           )
-        );
-      }
+        )
+      );
+    }
 
 {% endhighlight %}
 
@@ -155,51 +155,52 @@ N> The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter
 
 {% highlight dart %}
 
-    SfPyramidChart chart;
-    SelectionBehavior _selectionBehavior;
+    late SfPyramidChart chart;
+    late SelectionBehavior _selectionBehavior;
 
     @override
     void initState(){
-      _selectionBehavior = TooltipBehavior(            enable: true);
+      _selectionBehavior = SelectionBehavior(enable: true);
     super.initState();
     }
 
     @override
     Widget build(BuildContext context) {
     
-    final List<ChartData> chartData = [
-      ChartData(10, 17),
-      ChartData(20, 34)
-      // Add the required data
-    ];
+      final List<ChartData> chartData = [
+        ChartData(10, 17),
+        ChartData(20, 34)
+        // Add the required data
+      ];
 
-    selection = ;
-    
-    chart = SfPyramidChart(
-      series: PyramidSeries<ChartData, double>(
-            dataSource: chartData,
-            xValueMapper: (ChartData data, _) => data.x,
-            yValueMapper: (ChartData data, _) => data.y,
-            selectionBehavior: _selectionBehavior
+      selection = ;
+      
+      chart = SfPyramidChart(
+        series: PyramidSeries<ChartData, double>(
+              dataSource: chartData,
+              xValueMapper: (ChartData data, _) => data.x,
+              yValueMapper: (ChartData data, _) => data.y,
+              selectionBehavior: _selectionBehavior
+          )
+      );
+      
+      return Scaffold(
+        body: Center(
+          child: Column(
+            children: <Widget>[
+              FlatButton(
+                child: Text('Select'),
+                onPressed: select
+              ),
+              Container(child: chart)
+            ]
+          )
         )
-    );
-    
-    return Scaffold(
-      body: Center(
-        child: Column(
-          children: <Widget>[
-            FlatButton(
-              child: Text('Select'),
-              onPressed: select
-            ),
-            Container(child: chart)
-          ]
-        )
-      )
-    );
+      );
     }
+
     void select() {
-        selection.selectDataPoints(1, 0);
+        _selectionBehavior.selectDataPoints(1, 0);
     }
 
 {% endhighlight %}

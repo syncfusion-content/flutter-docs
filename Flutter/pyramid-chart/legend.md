@@ -14,22 +14,22 @@ The [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
 {% highlight dart %} 
 
     @override
-      Widget build(BuildContext context) {
-        return Scaffold(
-          body: Center(
-            child: Container(
-              child: SfPyramidChart(
-              legend: Legend(isVisible: true),
-              series: PyramidSeries<SalesData, String>(
-                    dataSource:chartData,
-                    xValueMapper: (SalesData sales, _) =>   sales.year,
-                    yValueMapper: (SalesData sales, _) => sales.sales
-                  )
-              )
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: Center(
+          child: Container(
+            child: SfPyramidChart(
+            legend: Legend(isVisible: true),
+            series: PyramidSeries<SalesData, String>(
+                  dataSource:chartData,
+                  xValueMapper: (SalesData sales, _) =>   sales.year,
+                  yValueMapper: (SalesData sales, _) => sales.sales
+                )
             )
           )
-        );
-      }
+        )
+      );
+    }
 
 {% endhighlight %}
 
@@ -56,27 +56,27 @@ The [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 {% highlight dart %} 
 
     @override
-      Widget build(BuildContext context) {
-        return Scaffold(
-          appBar: AppBar(actions: <Widget>[Text('')],),
-          body: Center(
-            child: Container(
-              child: SfPyramidChart(
-              legend: Legend(isVisible: true,
-              // Border color and border width of legend
-                borderColor: Colors.black,
-                borderWidth: 2
-              ),
-              series: PyramidSeries<SalesData, String>(
-                    dataSource:chartData,
-                    xValueMapper: (SalesData sales, _) =>   sales.year,
-                    yValueMapper: (SalesData sales, _) => sales.sales
-                  )
-              )
+    Widget build(BuildContext context) {
+      return Scaffold(
+        appBar: AppBar(actions: <Widget>[Text('')],),
+        body: Center(
+          child: Container(
+            child: SfPyramidChart(
+            legend: Legend(isVisible: true,
+            // Border color and border width of legend
+              borderColor: Colors.black,
+              borderWidth: 2
+            ),
+            series: PyramidSeries<SalesData, String>(
+                  dataSource:chartData,
+                  xValueMapper: (SalesData sales, _) =>   sales.year,
+                  yValueMapper: (SalesData sales, _) => sales.sales
+                )
             )
           )
-        );
-      }
+        )
+      );
+    }
 
 {% endhighlight %}
 
@@ -97,33 +97,33 @@ The following properties are used to define and customize the [`title`](https://
 {% highlight dart %} 
 
     @override
-      Widget build(BuildContext context) {
-        return Scaffold(
-          appBar: AppBar(actions: <Widget>[Text('')],),
-          body: Center(
-            child: Container(
-              child: SfPyramidChart(
-              legend: Legend(isVisible: true,
-              title: LegendTitle(
-                      text:'Months',
-                      textStyle: ChartTextStyle(
-                      color: Colors.red,
-                      fontSize: 15,
-                      fontStyle: FontStyle.italic,
-                      fontWeight: FontWeight.w900
-                    )
-                  ),
-              ),
-              series: PyramidSeries<SalesData, String>(
-                    dataSource:chartData,
-                    xValueMapper: (SalesData sales, _) =>   sales.year,
-                    yValueMapper: (SalesData sales, _) => sales.sales
+    Widget build(BuildContext context) {
+      return Scaffold(
+        appBar: AppBar(actions: <Widget>[Text('')],),
+        body: Center(
+          child: Container(
+            child: SfPyramidChart(
+            legend: Legend(isVisible: true,
+            title: LegendTitle(
+                    text:'Months',
+                    textStyle: ChartTextStyle(
+                    color: Colors.red,
+                    fontSize: 15,
+                    fontStyle: FontStyle.italic,
+                    fontWeight: FontWeight.w900
                   )
-              )
+                ),
+            ),
+            series: PyramidSeries<SalesData, String>(
+                  dataSource:chartData,
+                  xValueMapper: (SalesData sales, _) =>   sales.year,
+                  yValueMapper: (SalesData sales, _) => sales.sales
+                )
             )
           )
-        );
-      }
+        )
+      );
+    }
 
 {% endhighlight %}
 
@@ -136,26 +136,26 @@ You can control the visibility of the series by tapping the legend item. You can
 {% highlight dart %} 
 
     @override
-      Widget build(BuildContext context) {
-        return Scaffold(
-          appBar: AppBar(actions: <Widget>[Text('')],),
-          body: Center(
-            child: Container(
-              child: SfPyramidChart(
-              legend: Legend(isVisible: true,
-               // Toogles the series visibility on tapping the legend item
-                toggleSeriesVisibility: true
-              ),
-              series: PyramidSeries<SalesData, String>(
-                    dataSource:chartData,
-                    xValueMapper: (SalesData sales, _) =>   sales.year,
-                    yValueMapper: (SalesData sales, _) => sales.sales
-                  )
-              )
+    Widget build(BuildContext context) {
+      return Scaffold(
+        appBar: AppBar(actions: <Widget>[Text('')],),
+        body: Center(
+          child: Container(
+            child: SfPyramidChart(
+            legend: Legend(isVisible: true,
+              // Toogles the series visibility on tapping the legend item
+              toggleSeriesVisibility: true
+            ),
+            series: PyramidSeries<SalesData, String>(
+                  dataSource:chartData,
+                  xValueMapper: (SalesData sales, _) =>   sales.year,
+                  yValueMapper: (SalesData sales, _) => sales.sales
+                )
             )
           )
-        );
-      }
+        )
+      );
+    }
 
 {% endhighlight %}
 
@@ -166,26 +166,26 @@ The [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
 {% highlight dart %} 
 
     @override
-      Widget build(BuildContext context) {
-        return Scaffold(
-          appBar: AppBar(actions: <Widget>[Text('')],),
-          body: Center(
-            child: Container(
-              child: SfPyramidChart(
-              legend: Legend(
-                // Visibility of legend
-                isVisible: false
-              ),
-              series: PyramidSeries<SalesData, String>(
-                    dataSource:chartData,
-                    xValueMapper: (SalesData sales, _) =>   sales.year,
-                    yValueMapper: (SalesData sales, _) => sales.sales
-                  )
-              )
+    Widget build(BuildContext context) {
+      return Scaffold(
+        appBar: AppBar(actions: <Widget>[Text('')],),
+        body: Center(
+          child: Container(
+            child: SfPyramidChart(
+            legend: Legend(
+              // Visibility of legend
+              isVisible: false
+            ),
+            series: PyramidSeries<SalesData, String>(
+                  dataSource:chartData,
+                  xValueMapper: (SalesData sales, _) =>   sales.year,
+                  yValueMapper: (SalesData sales, _) => sales.sales
+                )
             )
           )
-        );
-      }
+        )
+      );
+    }
 
 {% endhighlight %}
 
@@ -196,27 +196,27 @@ The legend items can be placed in multiple rows or scroll can be enabled using t
 {% highlight dart %} 
 
     @override
-      Widget build(BuildContext context) {
-        return Scaffold(
-          appBar: AppBar(actions: <Widget>[Text('')],),
-          body: Center(
-            child: Container(
-              child: SfPyramidChart(
-              legend: Legend(
-                isVisible: true,
-                // Overflowing legend content will be wraped
-                overflowMode: LegendItemOverflowMode.wrap
-              ),
-              series: PyramidSeries<SalesData, String>(
-                    dataSource:chartData,
-                    xValueMapper: (SalesData sales, _) =>   sales.year,
-                    yValueMapper: (SalesData sales, _) => sales.sales
-                  )
-              )
+    Widget build(BuildContext context) {
+      return Scaffold(
+        appBar: AppBar(actions: <Widget>[Text('')],),
+        body: Center(
+          child: Container(
+            child: SfPyramidChart(
+            legend: Legend(
+              isVisible: true,
+              // Overflowing legend content will be wraped
+              overflowMode: LegendItemOverflowMode.wrap
+            ),
+            series: PyramidSeries<SalesData, String>(
+                  dataSource:chartData,
+                  xValueMapper: (SalesData sales, _) =>   sales.year,
+                  yValueMapper: (SalesData sales, _) => sales.sales
+                )
             )
           )
-        );
-      }
+        )
+      );
+    }
 
 {% endhighlight %}
 
@@ -233,27 +233,27 @@ You can change the position of the legend inside the chart. The following proper
 {% highlight dart %} 
 
     @override
-      Widget build(BuildContext context) {
-        return Scaffold(
-          appBar: AppBar(actions: <Widget>[Text('')],),
-          body: Center(
-            child: Container(
-              child: SfPyramidChart(
-              legend: Legend(
-                isVisible: true,
-                // Legend will be placed at the left
-                position: LegendPosition.left
-              ),
-              series: PyramidSeries<SalesData, String>(
-                    dataSource:chartData,
-                    xValueMapper: (SalesData sales, _) =>   sales.year,
-                    yValueMapper: (SalesData sales, _) => sales.sales
-                  )
-              )
+    Widget build(BuildContext context) {
+      return Scaffold(
+        appBar: AppBar(actions: <Widget>[Text('')],),
+        body: Center(
+          child: Container(
+            child: SfPyramidChart(
+            legend: Legend(
+              isVisible: true,
+              // Legend will be placed at the left
+              position: LegendPosition.left
+            ),
+            series: PyramidSeries<SalesData, String>(
+                  dataSource:chartData,
+                  xValueMapper: (SalesData sales, _) =>   sales.year,
+                  yValueMapper: (SalesData sales, _) => sales.sales
+                )
             )
           )
-        );
-      }
+        )
+      );
+    }
 
 {% endhighlight %}
 
@@ -266,32 +266,32 @@ You can customize the appearance of legend items with your template by using [`l
 {% highlight dart %} 
 
     @override
-      Widget build(BuildContext context) {
-        return Scaffold(
-          appBar: AppBar(actions: <Widget>[Text('')],),
-          body: Center(
-            child: Container(
-              child: SfPyramidChart(
-              legend: Legend(
-                isVisible: true,
-                // Templating the legend item
-                legendItemBuilder: (String name, dynamic series, dynamic point, int index) {
-                  return Container(
-                    height: 20,
-                    width: 10,
-                    child: Container(child: Text(point.y.toString()))
-                  );
-                }
-              ),
-              series: PyramidSeries<SalesData, String>(
-                    dataSource:chartData,
-                    xValueMapper: (SalesData sales, _) =>   sales.year,
-                    yValueMapper: (SalesData sales, _) => sales.sales
-                  )
-              )
+    Widget build(BuildContext context) {
+      return Scaffold(
+        appBar: AppBar(actions: <Widget>[Text('')],),
+        body: Center(
+          child: Container(
+            child: SfPyramidChart(
+            legend: Legend(
+              isVisible: true,
+              // Templating the legend item
+              legendItemBuilder: (String name, dynamic series, dynamic point, int index) {
+                return Container(
+                  height: 20,
+                  width: 10,
+                  child: Container(child: Text(point.y.toString()))
+                );
+              }
+            ),
+            series: PyramidSeries<SalesData, String>(
+                  dataSource:chartData,
+                  xValueMapper: (SalesData sales, _) =>   sales.year,
+                  yValueMapper: (SalesData sales, _) => sales.sales
+                )
             )
           )
-        );
-      }
+        )
+      );
+    }
 
 {% endhighlight %}

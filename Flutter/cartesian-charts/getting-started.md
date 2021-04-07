@@ -256,7 +256,7 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
 {% highlight dart %} 
 
-    TooltipBehavior _tooltipBehavior;
+    late TooltipBehavior _tooltipBehavior;
 
     @override
     void initState(){
@@ -268,7 +268,7 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
     Widget build(BuildContext context) {
         return Scaffold(
             appBar: AppBar(
-                title: Text(widget.title),
+                title: Text('afadff'),
             ),
             body: Center(
                 child: Container(
