@@ -13,9 +13,9 @@ You can select a tile in order to highlight that area on a treemap. You can use 
 
 ## Enable tile selection
 
-You can enable tile selection on a treemap using the `SfTreemap.onSelectionChanged` property. The descendant tiles of the selected tile are also selected along with the selected tile when doing selection for hierarchical level.
+You can enable tile selection on a treemap using the [`SfTreemap.onSelectionChanged`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/onSelectionChanged.html) property. The descendant tiles of the selected tile are also selected along with the selected tile when doing selection for hierarchical level.
 
-The `onSelectionChanged` callback will be called with the details of the selected tile when the user is selecting a tile by tapping and you will be able to do any specific functionalities like showing pop-up or navigate to a different page.
+The [`onSelectionChanged`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/onSelectionChanged.html) callback will be called with the details of the selected tile when the user is selecting a tile by tapping and you will be able to do any specific functionalities like showing pop-up or navigate to a different page.
 
 {% tabs %}
 {% highlight Dart %}
@@ -69,14 +69,14 @@ class SocialMediaUsers {
 ![Enable tile selection](images/selection/enable-tile-selection.gif)
 
 N>
-* Refer the `TreemapSelectionSettings`, for customizing the selected tile's appearance.
+* Refer the [`TreemapSelectionSettings`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapSelectionSettings-class.html), for customizing the selected tile's appearance.
 
 ## Appearance customization
 
 You can customize the below appearance of the selected tile.
 
-* **Background color** - Change the background color of the selected tile using the `TreemapSelectionSettings.color` property.
-* **Border** - Change the border color, border stroke width using the `BorderSide.color` and `BorderSide.width` properties in the `RoundedRectangleBorder`. Also apply rounded border using the `RoundedRectangleBorder.borderRadius` property.
+* **Background color** - Change the background color of the selected tile using the [`TreemapSelectionSettings.color`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapSelectionSettings/color.html) property.
+* **Border** - Change the border color, border stroke width using the [`BorderSide.color`](https://api.flutter.dev/flutter/painting/BorderSide/color.html) and [`BorderSide.width`](https://api.flutter.dev/flutter/painting/BorderSide/width.html) properties in the [`RoundedRectangleBorder`](https://api.flutter.dev/flutter/painting/RoundedRectangleBorder-class.html). Also apply rounded border using the [`RoundedRectangleBorder.borderRadius`](https://api.flutter.dev/flutter/painting/RoundedRectangleBorder/borderRadius.html) property.
 
 {% tabs %}
 {% highlight Dart %}

@@ -398,32 +398,36 @@ late MapShapeSource _shapeSource;
 
 @override
 void initState() {
-   _data = <DataModel>[
-      DataModel('India', 280),
-      DataModel('United States of America', 190),
-      DataModel('Kazakhstan', 37),
-      DataModel('Italy', 201),
-      DataModel('Korea', 512),
-      DataModel('Japan', 335),
-      DataModel('Cuba', 103),
-      DataModel('China', 148)
-   ];
+  _data = <DataModel>[
+    DataModel('India', 280),
+    DataModel('United States of America', 190),
+    DataModel('Kazakhstan', 37),
+    DataModel('Italy', 201),
+    DataModel('Korea', 512),
+    DataModel('Japan', 335),
+    DataModel('Cuba', 103),
+    DataModel('China', 148)
+  ];
 
-    _shapeSource = MapShapeSource.asset("assets/world_map.json",
-        shapeDataField: "name",
-        dataCount: _data.length,
-        primaryValueMapper: (int index) => _data[index].country,
-        shapeColorValueMapper: (int index) => _data[index].density,
-        shapeColorMappers: [
-          MapColorMapper(from: 0, to: 100, color: Colors.red, text: '{>0.0},{100.0}'),
-          MapColorMapper(from: 101, to: 200, color: Colors.green),
-          MapColorMapper(from: 201, to: 300, color: Colors.blue),
-          MapColorMapper(from: 301, to: 400, color: Colors.orange),
-          MapColorMapper(from: 401, to: 500, color: Colors.teal),
-          MapColorMapper(from: 501, to: 600, color: Colors.deepPurple),
-        ],
-    );
-    super.initState();
+  _shapeSource = MapShapeSource.asset(
+    "assets/world_map.json",
+    shapeDataField: "name",
+    dataCount: _data.length,
+    primaryValueMapper: (int index) => _data[index].country,
+    shapeColorValueMapper: (int index) => _data[index].density,
+    shapeColorMappers: [
+      MapColorMapper(
+          from: 0, to: 100, color: Colors.red, text: '{0/km},{100/km}'),
+      MapColorMapper(from: 101, to: 200, color: Colors.green, text: '200/km'),
+      MapColorMapper(from: 201, to: 300, color: Colors.blue, text: '300/km'),
+      MapColorMapper(from: 301, to: 400, color: Colors.orange, text: '400/km'),
+      MapColorMapper(from: 401, to: 500, color: Colors.teal, text: '500/km'),
+      MapColorMapper(
+          from: 501, to: 600, color: Colors.deepPurple, text: '600/km'),
+    ],
+  );
+  
+  super.initState();
 }
 
 @override

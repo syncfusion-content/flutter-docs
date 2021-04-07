@@ -13,7 +13,7 @@ You can add any type of widgets like text widget to improve the readability of t
 
 ## Add labels
 
-You can add labels on the tiles using the `TreemapLevel.labelBuilder` callback which is available in the `SfTreemap.levels` collection.
+You can add labels on the tiles using the [`TreemapLevel.labelBuilder`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/labelBuilder.html) callback which is available in the [`SfTreemap.levels`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/levels.html) collection.
 
 {% tabs %}
 {% highlight Dart %}
