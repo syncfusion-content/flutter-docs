@@ -38,7 +38,7 @@ The code snippet creates a default bar pointer with the value 50.
 
 ![Initialize linear gauge for bar pointer](images/bar-pointer/default_bar_pointer.png)
 
-## Change the bar pointer thickness
+## Customize bar pointer thickness
 
 The thickness can be changed by the [`thickness`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/thickness.html) property of the bar pointer. The below code snippet demonstrates the same. 
 
@@ -67,7 +67,7 @@ The thickness can be changed by the [`thickness`](https://pub.dev/documentation/
 
 ![Change the bar pointer thickness](images/bar-pointer/bar_thickness.png)
 
-## Change the edge style
+## Customize edge style
 
 The edge style can be changed with the [`edgeStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/edgeStyle.html) property of bar pointer. The edge style can be any of the `startCurve`, `endCurve`, `bothCurve`, and `bothFlat` options.The default value is `bothFlat`.
 
@@ -99,7 +99,7 @@ The edge style can be changed with the [`edgeStyle`](https://pub.dev/documentati
 
 ![Change the bar pointer edge style](images/bar-pointer/edge_style.png)
 
-## Change the position
+## Customize the position
 
 By default, the bar pointer is positioned cross to the axis. This position can be changed by the [`position`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/position.html) property of a bar pointer. It is possible to position the bar pointer 'inside', 'cross', and 'outside' the axis. The below code snippet demonstrates changing the bar pointer position to inside the axis. 
 
@@ -127,7 +127,7 @@ By default, the bar pointer is positioned cross to the axis. This position can b
 
 ![Customize linear gauge for bar pointer position](images/bar-pointer/bar_pointer_change_position.png)
 
-## Change the offset
+## Customize the offset
 
 In addition to position the bar pointer, it is also possible to change the offset of the bar pointer. The [`offset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/offset.html) is the distance from the axis. The [`offset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/offset.html) cannot be negative and the cross positioned elements will not get affected by the [`offset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/offset.html) value. The below code snippet demonstrates changing the offset value of the bar pointer. 
 
@@ -157,7 +157,7 @@ In addition to position the bar pointer, it is also possible to change the offse
 
 ![Customize linear gauge bar pointer offset](images/bar-pointer/bar_pointer_offset.png)
 
-## Apply color to bar pointer
+## Change the color of bar pointer 
 
 The color of the bar pointer can be changed by the [`color`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/color.html) property. The below code snippet demonstrates the same. 
 
@@ -299,7 +299,7 @@ The gradient can be applied by using the [`shaderCallback`](https://pub.dev/docu
 ![Apply sweep gradient to bar pointer](images/bar-pointer/sweep_gradient_bar.png)
 
 
-## Customize the border
+## Customize border
 
 The border can be customized with [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/borderWidth.html) and [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/borderColor.html) properties of bar pointer. The below code examples demonstrates the same.
 

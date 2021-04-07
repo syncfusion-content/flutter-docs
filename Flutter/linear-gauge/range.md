@@ -68,7 +68,7 @@ You can add multiple ranges for an axis. The below code example demonstrates add
 
 ![Add multiple ranges in a linear gauge](images/gauge-range/multiple_ranges.png)
 
-## Customize the range shape and thickness
+## Customize range shape and thickness
 
 A Linear Gauge range has three values to draw a range - [`startValue`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearGaugeRange/startValue.html), [`midValue`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearGaugeRange/midValue.html) and [`endValue`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearGaugeRange/endValue.html).These values indicate where the range falls in the axis. In addition to this values, the shape of the range can be customized by [`startWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearGaugeRange/startWidth.html), [`midWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearGaugeRange/midWidth.html) and [`endWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearGaugeRange/endWidth.html) properties. To draw a line or rectangle, just [`startValue`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearGaugeRange/startValue.html), [`startWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearGaugeRange/startWidth.html), [`endValue`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearGaugeRange/endValue.html) and [`endWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearGaugeRange/endWidth.html) are enough - as like the above code snippet in 'Default Linear Gauge Range' topic. But to draw a concave, convex and exponential like shapes the [`midValue`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearGaugeRange/midValue.html) and [`midWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearGaugeRange/midWidth.html) properties are needed. For this the [`rangeShapeType`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearGaugeRange/rangeShapeType.html) is used to bring the curve. The below code snippet demonstrates how to bring a concave shape for a range.
 
@@ -101,7 +101,7 @@ A Linear Gauge range has three values to draw a range - [`startValue`](https://p
 
 ![Draw linear gauge concave range](images/gauge-range/range-concave.png)
 
-## Change the color of a range
+## Customize color of a range
 
 The color of a range can be changed by setting the [`color`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearGaugeRange/color.html) property of a range. The below code example demonstrates changing the color property of the range.
 
@@ -232,7 +232,7 @@ The below code snippet demonstrates applying a sweep gradient to the range.
 
 ![Apply sweep gradient to linear guage range](images/gauge-range/sweep_gradient_range.png)
 
-## Customize the range position
+## Customize range position
 
 It is possible to position the ranges `inside`, `cross`, and `outside` the axis. By default, the range will be positioned `outside` the axis. The [`position`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearGaugeRange/position.html) property of the range is used to position the range. The below code snippet demonstrates the same.
 

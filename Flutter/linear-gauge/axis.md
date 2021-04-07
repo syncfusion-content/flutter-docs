@@ -32,7 +32,7 @@ By default axis will have the minimum scale value as 0 and the maximum scale val
 
 ![Initialize linear gauge for axis](images/getting-started/default_linear_gauge.png)
 
-## Customize the minimum and maximum scale values
+## Customize minimum and maximum scale values
 
 The [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/minimum.html) and [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/maximum.html) properties of a Linear Gauge can be used to customize the axis scale. In the below code snippet the axis scale is customized to have the [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/minimum.html) value of -50 to [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/maximum.html) value of 50. The scale values are displayed by the axis labels. Customizing these label styles are further explained in next topics.  
 
@@ -53,7 +53,7 @@ The [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/g
 
 ![Update linear gauge for axis scale](images/axis/minmax_axis_linear_gauge.png)
 
-## Customize the axis track style
+## Customize axis track style
 
 The linear axis track can be customized using the [`axisTrackStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/axisTrackStyle.html) property. The [`axisTrackStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/axisTrackStyle.html) have the below properties.
 
@@ -141,7 +141,7 @@ The below code snippet sets solid colors to the axis track.
 
 ![Apply color to axis in linear guage](images/axis/axis_solid_color.png)
 
-## Customize the borders
+## Customize borders
 
 The [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearAxisTrackStyle/borderColor.html) and [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearAxisTrackStyle/borderWidth.html) properties of [`axisTrackStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearAxisTrackStyle/LinearAxisTrackStyle.html) allows to set a border to the axis track.
 
@@ -173,7 +173,7 @@ The below code snippet sets a border to the axis track.
 
 ![Customize axis track border](images/axis/axis_border.png)
 
-## Customize the corners
+## Customize corners
 
 The [`edgeStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearAxisTrackStyle/edgeStyle.html) property of [`axisTrackStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearAxisTrackStyle/LinearAxisTrackStyle.html) specifies the corner type for the axis track. The corners can be customized with `bothFlat`, `bothCurve`, `startCurve`, and `endCurve` options. The default value of this property is `bothFlat`.
 
