@@ -11,7 +11,7 @@ documentation: ug
 
 A bar pointer is an accenting line or shaded background that can be placed on a linear gauge to mark any current value in the axis track. The bar pointers always starts from the minimum value of the axis and ends in the specified value. So the [`value`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/value.html) property is a required parameter for creating a bar pointer.
 
-## Default Linear Gauge bar pointer
+## Default bar pointer
 
 The code snippet creates a default bar pointer with the value 50. 
 
@@ -327,3 +327,34 @@ The border can be customized with [`borderWidth`](https://pub.dev/documentation/
 {% endhighlight %}
 
 ![Customize linear gauge bar pointer border](images/bar-pointer/bar_border.png)
+
+
+## Add multiple bar pointers
+
+You can add multiple bar pointers for an axis. The below code example demonstrates adding two bar pointer with offset set to one of the bar pointer in a Linear Gauge.
+
+{% highlight dart %} 
+
+@override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: SfLinearGauge(
+              barPointers: [
+              LinearBarPointer(
+                value: 20
+              ),
+              LinearBarPointer(
+                value: 40, offset: 10,position: LinearElementPosition.outside
+              ),
+            ],
+            ),
+        ),
+      ),
+    );
+  }
+
+{% endhighlight %}
+
+![Add multiple bar pointers in a linear gauge](images/bar-pointer/multiple_bar_pointer.PNG)

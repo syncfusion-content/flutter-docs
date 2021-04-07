@@ -263,7 +263,7 @@ You can hide the axis track by setting the [`showAxisTrack`](https://pub.dev/doc
 
 ![Hide linear gauge axis track](images/axis/hide_axis_track.png)
 
-## Custom axis
+## Customize axis values
 
 Linear gauge allows you to display a set of values along with a custom scale based on your business logic by using the [`onGenerateLabels`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/onGenerateLabels.html) and [`valueToFactorCallback`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/valueToFactorCallback.html) callbacks.
 
