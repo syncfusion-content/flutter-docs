@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Builders in flutter calendar
-The calendar allows you to create a responsive UI with conditions based on a widget's details, to design and create your custom view to the month cells and month header of schedule view in the calendar.
+The calendar allows you to create a responsive UI with conditions based on a widget’s details, to design and create your custom view to the month cells and month header of schedule view in the calendar.
 
 The calendar has two builders to create and assign your custom view:
 * Month cell builder
