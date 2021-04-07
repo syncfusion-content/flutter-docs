@@ -65,24 +65,32 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
     
     @override
     Widget build(BuildContext context) {
+        final List<SalesData> chartData = [
+        SalesData("2010", 35),
+        SalesData("2011", 28),
+        SalesData('2012', 34),
+        SalesData('2013', 32),
+        SalesData('2014', 40)
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
                             LineSeries<SalesData, String>(
                                 dataSource: chartData,
                                 // Dash values for line
-                                dashArray: <double>[5,5],
+                                dashArray: <double>[5, 5],
                                 xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
-                            )
+                                yValueMapper: (SalesData sales, _) => sales.sales)
                         ]
                     )
                 )
             )
         );
-    }
+  }
+
 
 {% endhighlight %}
 
@@ -254,8 +262,8 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
     @override
     Widget build(BuildContext context) {
          final List<Color> color = <Color>[];
-        color.add(Colors.blue[50]);
-        color.add(Colors.blue[200]);
+        color.add(Colors.blue[50]!);
+        color.add(Colors.blue[200]!);
         color.add(Colors.blue);
 
         final List<double> stops = <double>[];
@@ -265,6 +273,7 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
 
         final LinearGradient gradientColors =
             LinearGradient(colors: color, stops: stops);
+        
         return Scaffold(
             body: Center(
                 child: Container(
@@ -933,8 +942,8 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
     @override
     Widget build(BuildContext context) {
         final List<Color> color = <Color>[];
-        color.add(Colors.blue[50]);
-        color.add(Colors.blue[200]);
+        color.add(Colors.blue[50]!);
+        color.add(Colors.blue[200]!);
         color.add(Colors.blue);
 
         final List<double> stops = <double>[];
