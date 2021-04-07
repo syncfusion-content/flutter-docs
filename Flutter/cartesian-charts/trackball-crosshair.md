@@ -26,17 +26,17 @@ You can use the following properties to customize the appearance of trackball to
 * [`tooltipSettings.arrowWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/InteractiveTooltip/arrowWidth.html) - specifies the width of the tooltip arrow.
 * [`tooltipSettings.format`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/InteractiveTooltip/format.html) - by default, axis value will be displayed in the tooltip, and it can be customized by adding desired text as prefix or suffix.
 * [`tooltipSettings.textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/InteractiveTooltip/textStyle.html) - used to change the text color, size, font family, fontStyle, and font weight.
-* [`tooltipSettings.textStyle.color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/color.html) - used to change the color of the tooltip text.
-* [`tooltipSettings.textStyle.fontFamily`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontFamily.html) - used to change the font family for tooltip text.
-* [`tooltipSettings.textStyle.fontStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontStyle.html) - used to change the font style for tooltip text.
-* [`tooltipSettings.textStyle.fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontSize.html) - used to change the font size for tooltip text.
+* [`tooltipSettings.textStyle.color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/color.html) - used to change the color of the tooltip text.
+* [`tooltipSettings.textStyle.fontFamily`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontFamily.html) - used to change the font family for tooltip text.
+* [`tooltipSettings.textStyle.fontStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontStyle.html) - used to change the font style for tooltip text.
+* [`tooltipSettings.textStyle.fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontSize.html) - used to change the font size for tooltip text.
 * [`hideDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/hideDelay.html ) - used to specify disappear delay for trackball.
 
 N> The above mentioned properties are only applicable for SfCartesian types of charts.
 
 {% highlight dart %} 
     
-    TrackballBehavior _trackballBehavior;
+    late TrackballBehavior _trackballBehavior;
 
     @override
     void initState(){
@@ -81,7 +81,7 @@ The [`tooltipDisplayMode`](https://pub.dev/documentation/syncfusion_flutter_char
 
 {% highlight dart %} 
     
-    TrackballBehavior _trackballBehavior;
+    late TrackballBehavior _trackballBehavior;
 
     @override
     void initState(){
@@ -122,7 +122,7 @@ The position of trackball tooltip can be changed using the [`tooltipAlignment`](
 
 {% highlight dart %} 
     
-    TrackballBehavior _trackballBehavior;
+    late TrackballBehavior _trackballBehavior;
 
     @override
     void initState(){
@@ -161,7 +161,7 @@ By default, axis value will be displayed in the tooltip, and it can be customize
 
 {% highlight dart %} 
     
-    TrackballBehavior _trackballBehavior;
+    late TrackballBehavior _trackballBehavior;
 
     @override
     void initState(){
@@ -207,7 +207,7 @@ The ActivationMode enum contains the following values:
 
 {% highlight dart %} 
     
-    TrackballBehavior _trackballBehavior;
+    late TrackballBehavior _trackballBehavior;
 
     @override
     void initState(){
@@ -242,7 +242,7 @@ The ActivationMode enum contains the following values:
 
 {% highlight dart %} 
     
-    TrackballBehavior _trackballBehavior;
+    late TrackballBehavior _trackballBehavior;
 
     @override
     void initState(){
@@ -302,7 +302,7 @@ Also refer, [marker customization](./marker-datalabel#Marker) for customizing th
 
 {% highlight dart %} 
     
-    TrackballBehavior _trackballBehavior;
+    late TrackballBehavior _trackballBehavior;
 
     @override
     void initState(){
@@ -351,7 +351,7 @@ You can customize the appearance of the trackball tooltip with your own widgets 
 
 {% highlight dart %} 
     
-    TrackballBehavior _trackballBehavior;
+    late TrackballBehavior _trackballBehavior;
 
     @override
     void initState(){
@@ -437,41 +437,49 @@ Defaults to `true`.
 
 {% highlight dart %} 
 
+    late TrackballBehavior _trackballBehavior;
+
+    @override
+    void initState(){
+      _trackballBehavior = TrackballBehavior(
+                      enable: true,
+                    );
+      super.initState();
+    }
+    
     @override
     Widget build(BuildContext context) {
-    return Scaffold(
+      return Scaffold(
         child: Center(
             child: Container(
                 child: SfCartesianChart(
-                    trackballBehavior: TrackballBehavior(
-                      enable: true,
-                    ),
+                    trackballBehavior: _trackballBehavior,
                     series: <LineSeries<SalesData, double>>[
-          LineSeries<SalesData, double>(
-              dataSource: chartData,
-              xValueMapper: (SalesData sales, _) => sales.year,
-              yValueMapper: (SalesData sales, _) => sales.sales),
-          LineSeries<SalesData, double>(
-              dataSource: chartData,
-              xValueMapper: (SalesData sales, _) => sales.year,
-              yValueMapper: (SalesData sales, _) => sales.sales2),
-          LineSeries<SalesData, double>(
-              dataSource: chartData,
-              xValueMapper: (SalesData sales, _) => sales.year,
-              yValueMapper: (SalesData sales, _) => sales.sales3),
-          LineSeries<SalesData, double>(
-              dataSource: chartData,
-              xValueMapper: (SalesData sales, _) => sales.year,
-              yValueMapper: (SalesData sales, _) => sales.sales4),
-          LineSeries<SalesData, double>(
-              dataSource: chartData,
-              xValueMapper: (SalesData sales, _) => sales.year,
-              yValueMapper: (SalesData sales5, _) => sales.sales),
-           ]
-         )
+                      LineSeries<SalesData, double>(
+                          dataSource: chartData,
+                          xValueMapper: (SalesData sales, _) => sales.year,
+                          yValueMapper: (SalesData sales, _) => sales.sales),
+                      LineSeries<SalesData, double>(
+                          dataSource: chartData,
+                          xValueMapper: (SalesData sales, _) => sales.year,
+                          yValueMapper: (SalesData sales, _) => sales.sales2),
+                      LineSeries<SalesData, double>(
+                          dataSource: chartData,
+                          xValueMapper: (SalesData sales, _) => sales.year,
+                          yValueMapper: (SalesData sales, _) => sales.sales3),
+                      LineSeries<SalesData, double>(
+                          dataSource: chartData,
+                          xValueMapper: (SalesData sales, _) => sales.year,
+                          yValueMapper: (SalesData sales, _) => sales.sales4),
+                      LineSeries<SalesData, double>(
+                          dataSource: chartData,
+                          xValueMapper: (SalesData sales, _) => sales.year,
+                          yValueMapper: (SalesData sales5, _) => sales.sales),
+                    ]
+                )
+            )
         )
-       )
-     );
+      );
     }
 
 {% endhighlight %}
@@ -488,7 +496,7 @@ N> The above mentioned properties are only   applicable for SfCartesian types of
 
 {% highlight dart %} 
     
-    CrosshairBehavior _crosshairBehavior;
+    late CrosshairBehavior _crosshairBehavior;
 
     @override
     void initState(){
@@ -536,7 +544,7 @@ The appearance of the track line in crosshair can be customized using the follow
 
 {% highlight dart %} 
     
-    CrosshairBehavior _crosshairBehavior;
+    late CrosshairBehavior _crosshairBehavior;
 
     @override
     void initState(){
@@ -578,10 +586,10 @@ The axis tooltip can be enabled using [`enable`](https://pub.dev/documentation/s
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/InteractiveTooltip/borderColor.html) - used to change the stroke color of the axis tooltip.
 * [`format`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/InteractiveTooltip/format.html) - by default, axis value will be displayed in the tooltip, and it can be customized by adding desired text as prefix or suffix.
 * [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/InteractiveTooltip/textStyle.html) - used to change the text color, size, font family, fontStyle, and font weight.
-* [`textStyle.color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/color.html) - used to change the color of the text.
-* [`textStyle.fontFamily`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontFamily.html) - used to change the font family for chart title. 
-* [`textStyle.fontStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontStyle.html) - used to change the font style for the chart title.
-* [`textStyle.fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontSize.html) - used to change the font size for the chart title.
+* [`textStyle.color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/color.html) - used to change the color of the text.
+* [`textStyle.fontFamily`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontFamily.html) - used to change the font family for chart title. 
+* [`textStyle.fontStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontStyle.html) - used to change the font style for the chart title.
+* [`textStyle.fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontSize.html) - used to change the font size for the chart title.
 
 ### Activation mode
 
@@ -596,7 +604,7 @@ The ActivationMode enum contains the following values:
 
 {% highlight dart %} 
     
-    CrosshairBehavior _crosshairBehavior;
+    late CrosshairBehavior _crosshairBehavior;
 
     @override
     void initState(){

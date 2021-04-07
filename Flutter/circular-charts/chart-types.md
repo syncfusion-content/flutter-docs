@@ -33,27 +33,28 @@ To render a pie chart, create an instance of [`PieSeries`](https://pub.dev/docum
         return Scaffold(
             body: Center(
                 child: Container(
-                    child: SfCircularChart(series: <CircularSeries>[
-                        // Render pie chart
-                        PieSeries<ChartData, String>(
-                            dataSource: chartData,
-                            pointColorMapper:(ChartData data,  _) => data.color,
-                            xValueMapper: (ChartData data, _) => data.x,
-                            yValueMapper: (ChartData data, _) => data.y
-                        )
-                    ]
+                    child: SfCircularChart(
+                        series: <CircularSeries>[
+                            // Render pie chart
+                            PieSeries<ChartData, String>(
+                                dataSource: chartData,
+                                pointColorMapper:(ChartData data,  _) => data.color,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
+                            )
+                        ]
+                    )
                 )
             )
-        )
-    );
-}
+        );
+    }
 
-class ChartData {
-    ChartData(this.x, this.y, [this.color]);
-    final String x;
-    final double y;
-    final Color color;
-}
+    class ChartData {
+        ChartData(this.x, this.y, [this.color]);
+        final String x;
+        final double y;
+        final Color color;
+    }
 
 {% endhighlight %}
 
@@ -769,10 +770,10 @@ Data labels can be enabled using the [`isVisible`](https://pub.dev/documentation
 
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/color.html) - Changes the label background color.
 * [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/textStyle.html) - Changes the text color, size, font family, fontStyle, and font weight.
-* [`textStyle.color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/color.html) - Changes the color of the text.
-* [`textStyle.fontFamily`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontFamily.html) - Changes the font family for chart title. 
-* [`textStyle.fontStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontStyle.html) - Changes the font style for the chart title.
-* [`textStyle.fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontSize.html) - Changes the font size for the chart title.
+* [`textStyle.color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/color.html) - Changes the color of the text.
+* [`textStyle.fontFamily`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontFamily.html) - Changes the font family for chart title. 
+* [`textStyle.fontStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontStyle.html) - Changes the font style for the chart title.
+* [`textStyle.fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontSize.html) - Changes the font size for the chart title.
 * [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/opacity.html) - Controls the transparency of the label background color.
 * [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/borderRadius.html) - Customizes the data label border radius.
 * [`angle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/angle.html) - Rotates the labels.

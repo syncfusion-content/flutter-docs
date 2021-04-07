@@ -27,9 +27,8 @@ Markers are used to provide information about the exact point location. You can 
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis: CategoryAxis(),
                         series: <CartesianSeries>[
-                            LineSeries<ChartData, String>(
+                            LineSeries<ChartData, double>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
@@ -51,7 +50,7 @@ Markers are used to provide information about the exact point location. You can 
 
 ### Customizing marker shapes
 
-Markers can be assigned with different shapes using the [`shape`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/shape.html) property. By default, markers are rendered with [`circle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataMarkerType-class.html) shape. The available shapes of markers are listed below.
+Markers can be assigned with different shapes using the [`shape`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/shape.html) property. By default, markers are rendered with [`circle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataMarkerType-class.html) shape. The shapes of markers are listed below.
 
 * circle
 * rectangle
@@ -71,9 +70,8 @@ Markers can be assigned with different shapes using the [`shape`](https://pub.de
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis: CategoryAxis(),
                         series: <CartesianSeries>[
-                            LineSeries<ChartData, String>(
+                            LineSeries<ChartData, double>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
@@ -106,9 +104,8 @@ The markers can be rendered with desired image as shape. For this you have to sp
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis: CategoryAxis(),
                         series: <CartesianSeries>[
-                            LineSeries<ChartData, String>(
+                            LineSeries<ChartData, double>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
@@ -132,7 +129,7 @@ The markers can be rendered with desired image as shape. For this you have to sp
 
 ## Data label
 
-Data label can be added to a chart series by enabling the [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/isVisible.html) property in the [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/dataLabelSettings.html). You can use the following properties to customize the appearance.
+Data label can be added to a chart series by enabling the [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/isVisible.html) option in the [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/dataLabelSettings.html). You can use the following properties to customize the appearance.
 
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/color.html) - used to change the background color of the data label shape.
 * [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/borderWidth.html) - used to change the stroke width of the data label shape.
@@ -140,10 +137,10 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
 * [`alignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/alignment.html) - aligns the data label text to [`near`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAlignment-class.html), [`center`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAlignment-class.html) and [`far`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAlignment-class.html).
 * [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/textStyle.html) - used to change the data label text color, size, font family, font style, and font weight.
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/color.html) - used to change the color of the data label.
-* [`fontFamily`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontFamily.html) - used to change the font family for the data label.
-* [`fontStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontStyle.html) - used to change the font style for the data label.
-* [`fontWeight`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontWeight.html) - used to change the font weight for the data label.
-* [`fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontSize.html) - used to change the font size for the data label.
+* [`fontFamily`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontFamily.html) - used to change the font family for the data label.
+* [`fontStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontStyle.html) - used to change the font style for the data label.
+* [`fontWeight`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontWeight.html) - used to change the font weight for the data label.
+* [`fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontSize.html) - used to change the font size for the data label.
 * [`margin`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/margin.html) - used to change the margin size for data labels.
 * [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/opacity.html) - used to control the transparency of the data label.
 * [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelAlignment.html) - used to align the Cartesian data label positions. The available options to customize the positions are [`outer`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelAlignment-class.html), [`auto`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelAlignment-class.html), [`top`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelAlignment-class.html), [`bottom`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelAlignment-class.html) and [`middle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelAlignment-class.html).
@@ -162,9 +159,8 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis: CategoryAxis(),
                         series: <CartesianSeries>[
-                            LineSeries<ChartData, String>(
+                            LineSeries<ChartData, double>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
@@ -186,7 +182,7 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
 
 ### Formatting label content
 
-Data label considers the format used in the vertical axis by default. In the below code snippet, we have specified format to y-axis and you can see that the same format is applied to the data label.
+Data label considers the format used in the vertical axis by default. In the below code snippet, we have specified format to y-axis and you can see the same format is applied to the data label.
 
 {% highlight dart %} 
 
@@ -199,7 +195,7 @@ Data label considers the format used in the vertical axis by default. In the bel
                         // Applies currency format for y axis labels and also for data labels
                         primaryYAxis: NumericAxis(numberFormat: NumberFormat.simpleCurrency()),
                         series: <CartesianSeries>[
-                            LineSeries<ChartData, String>(
+                            LineSeries<ChartData, double>(
                                 dataSource: chartData,
                                 color: Colors.red,
                                 xValueMapper: (ChartData data, _) => data.x,
@@ -217,8 +213,6 @@ Data label considers the format used in the vertical axis by default. In the bel
 
 {% endhighlight %}
 
-Import
-
 ![DataLabel format](images/marker-datalabel/datalabel_format.jpg)
 
 ### Label position
@@ -233,9 +227,8 @@ The [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/l
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
                         series: <CartesianSeries>[
-                            AreaSeries<ChartData, DateTime>(
+                            AreaSeries<ChartData, double>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
@@ -259,7 +252,7 @@ The [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
 ### Apply series color
 
-The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/useSeriesColor.html) property is used to apply the series color to background color of the data labels. The default value of this property is false.
+The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/useSeriesColor.html) property is used to apply the series color to background color of the data labels. The default value of this property is *false*.
 
 {% highlight dart %} 
 
@@ -269,9 +262,8 @@ The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
                         series: <CartesianSeries>[
-                            AreaSeries<ChartData, DateTime>(
+                            AreaSeries<ChartData, double>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
@@ -314,7 +306,6 @@ The [`dataLabelMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/
             body: Center(
                 child: Container(
                     child:SfCartesianChart(
-                        primaryXAxis: CategoryAxis(),
                         series: <CartesianSeries>[
                             AreaSeries<ChartData, String>(
                                 dataSource: chartData,
@@ -355,7 +346,6 @@ You can customize the appearance of the data label with your own template using 
             body: Center(
                 child: Container(
                     child:SfCartesianChart(
-                        primaryXAxis: CategoryAxis(),
                         series: <CartesianSeries>[
                             AreaSeries<ChartData, String>(
                                 dataSource: chartData,
@@ -387,7 +377,7 @@ You can customize the appearance of the data label with your own template using 
 
 ### Hide data label for 0 value
 
-Data label and its connector line in the Cartesian charts for the point value 0 can be hidden using the [`showZeroValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/showZeroValue.html) property. This defaults to true.
+Data label and its connector line in the Cartesian charts for the point value 0 can be hidden using the [`showZeroValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/showZeroValue.html) property. This defaults to *true*.
 
 {% highlight dart %} 
 
@@ -415,9 +405,9 @@ Data label and its connector line in the Cartesian charts for the point value 0 
 
 ### Data label padding
 
-The [`offset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/offset.html) property of [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/dataLabelSettings.html) can be used to add padding for the data label to move it in both vertically and horizontally direction from its position. It takes the logical pixel value for x and y values as input.
+The [`offset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/offset.html) property of [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/dataLabelSettings.html) is used to add padding for the data label to move it in both vertically and horizontally direction from its position. It takes the logical pixel value for x and y values as input.
 
->**NOTE**: This is not applicable for Circular, Pyramid and Funnel charts.
+N> This is not applicable for other widgets like Circular, Pyramid and Funnel.
 
 #### Horizontal padding
 
