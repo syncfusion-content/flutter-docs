@@ -9,11 +9,11 @@ documentation: ug
 
 # Swiping in Flutter DataGrid
 
-The Flutter DataTable provides support to swipe a row by setting the `SfDataGrid.allowSwiping` property to true. Swipe actions will be displayed when swiping a row from `left to right` or `right to left` direction. The swipe dragging gesture can be restricted to a certain point on the row by setting the `SfDataGrid.maxSwipeOffset` property.
+The Flutter DataTable provides support to swipe a row by setting the [SfDataGrid.allowSwiping](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowSwiping.html) property to true. Swipe actions will be displayed when swiping a row from `left to right` or `right to left` direction. The swipe dragging gesture can be restricted to a certain point on the row by setting the [SfDataGrid.swipeMaxOffset](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/swipeMaxOffset.html) property.
 
 ## Swipe action builders
 
-The Flutter DataTable enables you to load the desired widget behind the swiped row by using `SfDataGrid.startSwipeActionsBuilder` and `SfDataGrid.endSwipeActionsBuilder` properties. The swipe widget's width that loads from the actions builder is arranged based on the `SfDataGrid.maxSwipeOffset` property and it takes height based on the current swiping row height.
+The Flutter DataTable enables you to load the desired widget behind the swiped row by using [SfDataGrid.startSwipeActionsBuilder](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/startSwipeActionsBuilder.html) and [SfDataGrid.endSwipeActionsBuilder](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/endSwipeActionsBuilder.html) properties. The swipe widget's width that loads from the actions builder is arranged based on the `SfDataGrid.swipeMaxOffset` property and it takes height based on the current swiping row height.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -112,15 +112,15 @@ Widget build(BuildContext context) {
 
 The data grid provides the following callbacks to notify the swiping stages:  
 
-* `onSwipeStart`: Called when the swipe offset changes from its initial value. The swipe action can be canceled by return `false`.
-* `onSwipeUpdate`: Called while swiping a row is in progress. The swipe action can be canceled by return `false`.
-* `onSwipeEnd`: called when the swipe offset value reaches the `SfDataGrid.maxSwipeOffset` indicating that the swipe action is completed.
+* [onSwipeStart](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onSwipeStart.html): Called when the swipe offset changes from its initial value. The swipe action can be canceled by return `false`.
+* [onSwipeUpdate](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onSwipeUpdate.html): Called while swiping a row is in progress. The swipe action can be canceled by return `false`.
+* [onSwipeEnd](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onSwipeEnd.html): called when the swipe offset value reaches the `SfDataGrid.maxSwipeOffset` indicating that the swipe action is completed.
 
 The swipe callbacks provide the following properties in their arguments:
 
-* `RowIndex`: Defines the swiping row index.
-* `SwipeDirection`: Defines the swipe direction of the swiped row.
-* `SwipeOffset`: Defines the current swipe offset of the row being swiped.
+* [RowIndex](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSwipeUpdateDetails/rowIndex.html): Defines the swiping row index.
+* [SwipeDirection](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSwipeUpdateDetails/swipeDirection.html): Defines the swipe direction of the swiped row.
+* [SwipeOffset](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSwipeUpdateDetails/swipeOffset.html): Defines the current swipe offset of the row being swiped.
 
 By handling the swipe callbacks, you can use these properties value from the arguments to perform any desired action such as deleting the row, editing the data, etc.
 
