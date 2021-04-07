@@ -403,7 +403,6 @@ void initState() {
     DataModel('United States of America', 190),
     DataModel('Kazakhstan', 37),
     DataModel('Italy', 201),
-    DataModel('Korea', 512),
     DataModel('Japan', 335),
     DataModel('Cuba', 103),
     DataModel('China', 148)
@@ -422,36 +421,33 @@ void initState() {
       MapColorMapper(from: 201, to: 300, color: Colors.blue, text: '300/km'),
       MapColorMapper(from: 301, to: 400, color: Colors.orange, text: '400/km'),
       MapColorMapper(from: 401, to: 500, color: Colors.teal, text: '500/km'),
-      MapColorMapper(
-          from: 501, to: 600, color: Colors.deepPurple, text: '600/km'),
     ],
   );
-  
   super.initState();
 }
 
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-     body: Center(
-        child: Container(
-          height: 350,
-          child: Padding(
-            padding: const EdgeInsets.only(left: 15, right: 15),
-            child: SfMaps(
-              layers: [
-                MapShapeLayer(
-                  source: _shapeSource,
-                  legend: MapLegend.bar(
-                    MapElement.shape,
-                  ),
-                )
-              ],
-            ),
+    body: Center(
+      child: Container(
+        height: 350,
+        child: Padding(
+          padding: const EdgeInsets.only(left: 15, right: 15),
+          child: SfMaps(
+            layers: [
+              MapShapeLayer(
+                source: _shapeSource,
+                legend: MapLegend.bar(
+                  MapElement.shape,
+                ),
+              )
+            ],
           ),
         ),
       ),
-   );
+    ),
+  );
 }
 
 class DataModel {
