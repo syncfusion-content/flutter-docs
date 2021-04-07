@@ -109,7 +109,7 @@ Widget build(BuildContext context) {
 }
 
 List<Meeting> _getDataSource() {
-  List<Meeting> meetings = <Meeting>[];
+  final List<Meeting> meetings = <Meeting>[];
   final DateTime today = DateTime.now();
   final DateTime startTime =
       DateTime(today.year, today.month, today.day, 9, 0, 0);
