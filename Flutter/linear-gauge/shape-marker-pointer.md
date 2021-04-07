@@ -154,7 +154,7 @@ The marker pointer alignment can be changed by the [`markerAlignment`](https://p
         body: Center(
           child: SfLinearGauge(axisTrackExtent: 30, markerPointers: [
             LinearShapePointer(
-                value: 0, markerAlignment: LinearMarkerAlignment.center)
+                value: 0, markerAlignment: LinearMarkerAlignment.start)
           ]),
         ),
       ),

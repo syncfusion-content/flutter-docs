@@ -193,11 +193,6 @@ SfLinearGauge(
 
 The [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/numberFormat.html) property is used to format the numeric labels. The default value of numberFormat property is null.
 
-{% highlight dart %} 
-
-    NOTE: You must import intl package for formatting numeric slider using the NumberFormat class.
-
-{% endhighlight %}
 
 {% highlight dart %}
 
