@@ -331,7 +331,7 @@ The border can be customized with [`borderWidth`](https://pub.dev/documentation/
 
 ## Add multiple bar pointers
 
-You can add multiple bar pointers for an axis. The below code example demonstrates adding two bar pointer with offset set to one of the bar pointer in a Linear Gauge.
+You can add multiple bar pointers for an axis. The bar pointers by default will overlap each other. So while adding a bar pointer offset value is needed to be specified. The below code example demonstrates adding two bar pointer with offset diffrent offset
 
 {% highlight dart %} 
 
@@ -343,10 +343,14 @@ You can add multiple bar pointers for an axis. The below code example demonstrat
           child: SfLinearGauge(
               barPointers: [
               LinearBarPointer(
-                value: 20
+                value: 20, 
+                position: LinearElementPosition.outside
               ),
               LinearBarPointer(
-                value: 40, offset: 10,position: LinearElementPosition.outside
+                value: 40,
+                // Setting offset to move the bar from previos one
+                offset: 10,
+                position: LinearElementPosition.outside
               ),
             ],
             ),
