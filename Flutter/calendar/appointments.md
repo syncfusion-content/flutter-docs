@@ -82,37 +82,37 @@ class MeetingDataSource extends CalendarDataSource {
 
   @override
   DateTime getStartTime(int index) {
-    return appointments[index].from;
+    return appointments![index].from;
   }
 
   @override
   DateTime getEndTime(int index) {
-    return appointments[index].to;
+    return appointments![index].to;
   }
 
   @override
   bool isAllDay(int index) {
-    return appointments[index].isAllDay;
+    return appointments![index].isAllDay;
   }
 
   @override
   String getSubject(int index) {
-    return appointments[index].eventName;
+    return appointments![index].eventName;
   }
 
   @override
   String getStartTimeZone(int index) {
-    return appointments[index].startTimeZone;
+    return appointments![index].startTimeZone;
   }
 
   @override
   String getEndTimeZone(int index) {
-    return appointments[index].endTimeZone;
+    return appointments![index].endTimeZone;
   }
 
   @override
   Color getColor(int index) {
-    return appointments[index].background;
+    return appointments![index].background;
   }
 }
 
@@ -138,7 +138,7 @@ You can create a custom class `Meeting` with mandatory fields `from`, and `to`.
 {% highlight Dart %}
 
 class Meeting {
-  Meeting({this.eventName, this.from, this.to, this.background, this.isAllDay});
+  Meeting({this.eventName = '', required this.from, required this.to, required this.background, this.isAllDay = false});
 
   String eventName;
   DateTime from;
@@ -162,37 +162,37 @@ class MeetingDataSource extends CalendarDataSource {
 
   @override
   DateTime getStartTime(int index) {
-    return appointments[index].from;
+    return appointments![index].from;
   }
 
   @override
   DateTime getEndTime(int index) {
-    return appointments[index].to;
+    return appointments![index].to;
   }
 
   @override
   bool isAllDay(int index) {
-    return appointments[index].isAllDay;
+    return appointments![index].isAllDay;
   }
 
   @override
   String getSubject(int index) {
-    return appointments[index].eventName;
+    return appointments![index].eventName;
   }
 
   @override
   String getStartTimeZone(int index) {
-    return appointments[index].startTimeZone;
+    return appointments![index].startTimeZone;
   }
 
   @override
   String getEndTimeZone(int index) {
-    return appointments[index].endTimeZone;
+    return appointments![index].endTimeZone;
   }
 
   @override
   Color getColor(int index) {
-    return appointments[index].background;
+    return appointments![index].background;
   }
 }
 
@@ -400,11 +400,11 @@ For creating custom recurrence appointment, you need to create a custom class `M
 
 class Meeting {
   Meeting(
-      {this.eventName,
-      this.from,
-      this.to,
-      this.background,
-      this.isAllDay,
+      {this.eventName = '',
+      required this.from,
+      required this.to,
+      required this.background,
+      this.isAllDay = false,
       this.recurrenceRule});
 
   String eventName;
@@ -412,7 +412,7 @@ class Meeting {
   DateTime to;
   Color background;
   bool isAllDay;
-  String recurrenceRule;
+  String? recurrenceRule;
 }
 
 {% endhighlight %}
@@ -430,32 +430,32 @@ class MeetingDataSource extends CalendarDataSource {
 
   @override
   DateTime getStartTime(int index) {
-    return appointments[index].from;
+    return appointments![index].from;
   }
 
   @override
   DateTime getEndTime(int index) {
-    return appointments[index].to;
+    return appointments![index].to;
   }
 
   @override
   bool isAllDay(int index) {
-    return appointments[index].isAllDay;
+    return appointments![index].isAllDay;
   }
 
   @override
   String getSubject(int index) {
-    return appointments[index].eventName;
+    return appointments![index].eventName;
   }
 
   @override
   Color getColor(int index) {
-    return appointments[index].background;
+    return appointments![index].background;
   }
 
   @override
   String getRecurrenceRule(int index) {
-    return appointments[index].recurrenceRule;
+    return appointments![index].recurrenceRule;
   }
 }
 
@@ -500,41 +500,41 @@ class MeetingDataSource extends CalendarDataSource {
 
   @override
   DateTime getStartTime(int index) {
-    return appointments[index].from;
+    return appointments![index].from;
   }
 
   @override
   DateTime getEndTime(int index) {
-    return appointments[index].to;
+    return appointments![index].to;
   }
 
   @override
   bool isAllDay(int index) {
-    return appointments[index].isAllDay;
+    return appointments![index].isAllDay;
   }
 
   @override
   String getSubject(int index) {
-    return appointments[index].eventName;
+    return appointments![index].eventName;
   }
 
   @override
   Color getColor(int index) {
-    return appointments[index].background;
+    return appointments![index].background;
   }
 
   @override
   String getRecurrenceRule(int index) {
-    return appointments[index].recurrenceRule;
+    return appointments![index].recurrenceRule;
   }
 }
 
 class Meeting {
-  Meeting({this.eventName,
-    this.from,
-    this.to,
-    this.background,
-    this.isAllDay,
+  Meeting({this.eventName = '',
+    required this.from,
+    required this.to,
+    required this.background,
+    this.isAllDay = false,
     this.recurrenceRule});
 
   String eventName;
@@ -542,7 +542,7 @@ class Meeting {
   DateTime to;
   Color background;
   bool isAllDay;
-  String recurrenceRule;
+  String? recurrenceRule;
 }
 
 {% endhighlight %}
@@ -667,16 +667,16 @@ To add the exception dates in the recurrence series of custom appointment, add t
 
 @override
 Widget build(BuildContext context) {
-  return MaterialApp(
-    home: Scaffold(
-      body: Container(
-        child: SfCalendar(
-          view: CalendarView.week,
-          dataSource: _getCalendarDataSource(),
+    return MaterialApp(
+      home: Scaffold(
+        body: Container(
+          child: SfCalendar(
+            view: CalendarView.week,
+            dataSource: _getCalendarDataSource(),
+          ),
         ),
       ),
-    ),
-  );
+    );
 }
 
 MeetingDataSource _getCalendarDataSource() {
@@ -702,47 +702,47 @@ class MeetingDataSource extends CalendarDataSource {
 
   @override
   DateTime getStartTime(int index) {
-    return appointments[index].from;
+    return appointments![index].from;
   }
 
   @override
   DateTime getEndTime(int index) {
-    return appointments[index].to;
+    return appointments![index].to;
   }
 
   @override
   bool isAllDay(int index) {
-    return appointments[index].isAllDay;
+    return appointments![index].isAllDay;
   }
 
   @override
   String getSubject(int index) {
-    return appointments[index].eventName;
+    return appointments![index].eventName;
   }
 
   @override
   Color getColor(int index) {
-    return appointments[index].background;
+    return appointments![index].background;
   }
 
   @override
   String getRecurrenceRule(int index) {
-    return appointments[index].recurrenceRule;
+    return appointments![index].recurrenceRule;
   }
 
   @override
   List<DateTime> getRecurrenceExceptionDates(int index) {
-    return appointments[index].exceptionDates;
+    return appointments![index].exceptionDates;
   }
 }
 
 class Meeting {
   Meeting(
-      {this.eventName,
-      this.from,
-      this.to,
-      this.background,
-      this.isAllDay,
+      {this.eventName = '',
+      required this.from,
+      required this.to,
+      required this.background,
+      this.isAllDay = false,
       this.recurrenceRule,
       this.exceptionDates});
 
@@ -751,8 +751,8 @@ class Meeting {
   DateTime to;
   Color background;
   bool isAllDay;
-  String recurrenceRule;
-  List<DateTime> exceptionDates;
+  String? recurrenceRule;
+  List<DateTime>? exceptionDates;
 }
 
 {% endhighlight %}

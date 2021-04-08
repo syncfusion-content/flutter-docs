@@ -100,7 +100,7 @@ You can also map custom appointment data to our calendar.
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-      body: SfCalendar(
+    body: SfCalendar(
     view: CalendarView.month,
     dataSource: MeetingDataSource(_getDataSource()),
     monthViewSettings: MonthViewSettings(
@@ -109,7 +109,7 @@ Widget build(BuildContext context) {
 }
 
 List<Meeting> _getDataSource() {
-  meetings = <Meeting>[];
+  final List<Meeting> meetings = <Meeting>[];
   final DateTime today = DateTime.now();
   final DateTime startTime =
       DateTime(today.year, today.month, today.day, 9, 0, 0);
@@ -119,34 +119,35 @@ List<Meeting> _getDataSource() {
   return meetings;
 }
 
+
 class MeetingDataSource extends CalendarDataSource {
-  MeetingDataSource(List<Meeting> source){
+  MeetingDataSource(List<Meeting> source) {
     appointments = source;
   }
 
   @override
   DateTime getStartTime(int index) {
-    return appointments[index].from;
+    return appointments![index].from;
   }
 
   @override
   DateTime getEndTime(int index) {
-    return appointments[index].to;
+    return appointments![index].to;
   }
 
   @override
   String getSubject(int index) {
-    return appointments[index].eventName;
+    return appointments![index].eventName;
   }
 
   @override
   Color getColor(int index) {
-    return appointments[index].background;
+    return appointments![index].background;
   }
 
   @override
   bool isAllDay(int index) {
-    return appointments[index].isAllDay;
+    return appointments![index].isAllDay;
   }
 }
 

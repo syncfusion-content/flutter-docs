@@ -66,26 +66,27 @@ You can programmatically navigate dates in calendar widget by using the [display
 {% tabs %}
 {% highlight Dart %}
 
-class MyAppState extends State<MyApp>{
-        CalendarController _calendarController;
-        @override
-        initState(){
-            _calendarController = CalendarController();
-            _calendarController.displayDate = DateTime(2022, 02, 05);
-            super.initState();
-      }
+class MyAppState extends State<MyApp> {
+  CalendarController _calendarController = CalendarController();
 
   @override
-     Widget build(BuildContext context) {
-         return MaterialApp(
-             home: Scaffold(
-             body: SfCalendar(
-             view: CalendarView.month,
-             controller: _calendarController,
-            ),
+  initState() {
+    _calendarController.displayDate = DateTime(2022, 02, 05);
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: SfCalendar(
+          view: CalendarView.month,
+          controller: _calendarController,
         ),
+      ),
     );
- }
+  }
+}
  
 {% endhighlight %}
 {% endtabs %}
@@ -96,25 +97,26 @@ You can programmatically select the dates in calendar widget by [selectedDate](h
 {% tabs %}
 {% highlight Dart %}
 
-class MyAppState extends State<MyApp>{
-        CalendarController _calendarController;
-        @override
-        initState(){
-            _calendarController = CalendarController();
-            _calendarController.selectedDate = DateTime(2020, 04, 10);
-            super.initState();
- }
+class MyAppState extends State<MyApp> {
+  CalendarController _calendarController = CalendarController();
 
-    @override
-    Widget build(BuildContext context) {
-        return MaterialApp(
-            home: Scaffold(
-            body: SfCalendar(
-            view: CalendarView.month,
-            controller: _calendarController,
+  @override
+  initState() {
+    _calendarController.selectedDate = DateTime(2020, 04, 10);
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: SfCalendar(
+          view: CalendarView.month,
+          controller: _calendarController,
         ),
       ),
-   );
+    );
+  }
 }
 
 {% endhighlight %}
@@ -130,34 +132,29 @@ You can use the `forward` method of `CalendarController` for viewing the next im
 {% highlight Dart %}
 
 class MyAppState extends State<MyApp> {
-    CalendarController _calendarController;
-
+  CalendarController _calendarController = CalendarController();
+  
   @override
-        initState() {
-            _calendarController = CalendarController();
-            super.initState();
-  }
-
- @override
- Widget build(BuildContext context) {
-     return MaterialApp(
-         home: Scaffold(
-         appBar: AppBar(
-             title: Text('Calendar Demo'),
-             actions: <Widget>[
-             IconButton(icon: Icon(Icons.arrow_forward),
-             onPressed: () {
-             _calendarController.forward();
-         },
-     ),
-  ],
-),
-         body: SfCalendar(
-             view: CalendarView.month,
-             controller: _calendarController,
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Calendar Demo'),
+          actions: <Widget>[
+            IconButton(icon: Icon(Icons.arrow_forward),
+              onPressed: () {
+                _calendarController.forward!();
+              },
+            ),
+          ],
         ),
-     ),
-  );
+        body: SfCalendar(
+          view: CalendarView.month,
+          controller: _calendarController,
+        ),
+      ),
+    );
+  }
 }
 
 {% endhighlight %}
@@ -170,13 +167,7 @@ You can use the `backward` method of `controller` for viewing the previous immed
 {% highlight Dart %}
 
 class MyAppState extends State<MyApp> {
-  CalendarController _calendarController;
-
-  @override
-  initState() {
-    _calendarController = CalendarController();
-    super.initState();
-  }
+  CalendarController _calendarController = CalendarController();
 
   @override
   Widget build(BuildContext context) {
@@ -185,13 +176,13 @@ class MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: Text('Calendar Demo'),
           actions: <Widget>[
-              IconButton(
-                  icon: Icon(Icons.arrow_back),
-                  onPressed: () {
-                      _calendarController.backward();
-                      },
-              ),
-           ],
+            IconButton(
+              icon: Icon(Icons.arrow_back),
+              onPressed: () {
+                _calendarController.backward!();
+              },
+            ),
+          ],
         ),
         body: SfCalendar(
           view: CalendarView.month,
@@ -200,6 +191,7 @@ class MyAppState extends State<MyApp> {
       ),
     );
   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -260,7 +252,7 @@ Widget build(BuildContext context) {
           CalendarView.workWeek,
           CalendarView.month,
           CalendarView.schedule
-        ];
+        ],
     );
 }
 
