@@ -16,7 +16,7 @@ The levels of the treemap can be categorized into the following two types,
 
 ## Flat level
 
-There will be a tile for each unique value returned in the `TreemapLevel.groupMapper` callback which is added to the `levels` collection property of `SfTreemap`.
+There will be a tile for each unique value returned in the [`TreemapLevel.groupMapper`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/groupMapper.html) callback which is added to the [`levels`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/levels.html) collection property of [`SfTreemap`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap-class.html).
 
 ### Squarified
 
@@ -70,16 +70,16 @@ class PopulationModel {
 ![Squarified flat level](images/levels/squarified-flat-level.png)
 
 N>
-* Refer the `TreemapLevel.colorMapper`, for customizing the tile color.
-* Refer the `TreemapLevel.tooltipBuilder`, for adding and customizing the tooltip on the treemap.
-* Refer the `TreemapLevel.labelBuilder`, for adding and customizing the label on the tile.
-* Refer the `TreemapLevel.itemBuilder`, for adding and customizing the custom widget on the treemap.
+* Refer the [`TreemapLevel.colorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/colorValueMapper.html), for customizing the tile color.
+* Refer the [`TreemapLevel.tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/tooltipBuilder.html), for adding and customizing the tooltip on the treemap.
+* Refer the [`TreemapLevel.labelBuilder`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/labelBuilder.html), for adding and customizing the label on the tile.
+* Refer the [`TreemapLevel.itemBuilder`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/itemBuilder.html), for adding and customizing the custom widget on the treemap.
 
 ## Hierarchical level
 
-Hierarchical level arrange the tiles in the form of nested rectangles. Each tile of the treemap is a rectangle which is filled with smaller rectangles representing sub-data. You can have more than one `TreemapLevel` in the `levels` collection to form a hierarchical treemap.
+Hierarchical level arrange the tiles in the form of nested rectangles. Each tile of the treemap is a rectangle which is filled with smaller rectangles representing sub-data. You can have more than one [`TreemapLevel`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel-class.html) in the [`levels`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/levels.html) collection to form a hierarchical treemap.
 
-The first level will work similarly to the flat level. From the next level in the `levels` collection, the items returned from the `TreemapLevel.groupMapper` for the indices, will be placed inside the rectangle for the same indices returned from the `TreemapLevel.groupMapper` in the previous level. This will go on until the last level in the `levels` collection.
+The first level will work similarly to the flat level. From the next level in the [`levels`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/levels.html) collection, the items returned from the [`TreemapLevel.groupMapper`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/groupMapper.html) for the indices, will be placed inside the rectangle for the same indices returned from the [`TreemapLevel.groupMapper`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/groupMapper.html) in the previous level. This will go on until the last level in the [`levels`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/levels.html) collection.
 
 ### Squarified
 
@@ -182,20 +182,20 @@ class JobVacancyModel {
 ![Squarified hierarchical level](images/levels/squarified-hierarchical-level.png)
 
 N>
-* Refer the `TreemapLevel.colorMapper`, for customizing the tile color.
-* Refer the `TreemapLevel.tooltipBuilder`, for adding and customizing the tooltip on the treemap.
-* Refer the `TreemapLevel.labelBuilder`, for adding and customizing the label on the tile.
-* Refer the `TreemapLevel.itemBuilder`, for adding and customizing the custom widget on the treemap.
+* Refer the [`TreemapLevel.colorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/colorValueMapper.html), for customizing the tile color.
+* Refer the [`TreemapLevel.tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/tooltipBuilder.html), for adding and customizing the tooltip on the treemap.
+* Refer the [`TreemapLevel.labelBuilder`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/labelBuilder.html), for adding and customizing the label on the tile.
+* Refer the [`TreemapLevel.itemBuilder`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/itemBuilder.html), for adding and customizing the custom widget on the treemap.
 
 ## Appearance customization
 
 You can customize the levels using the following properties:
 
-* **Padding** - Specifies the gap between the groups. The default value of the `TreemapLevel.padding` property is `EdgeInsets.all(1.0)`.
+* **Padding** - Specifies the gap between the groups. The default value of the [`TreemapLevel.padding`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/padding.html) property is `EdgeInsets.all(1.0)`.
 
-* **Color** - Specifies the background color for the group using the `TreemapLevel.color` property.
+* **Color** - Specifies the background color for the group using the [`TreemapLevel.color`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/color.html) property.
 
-* **Border** - Specifies the border color, border width and border radius for the group using the `TreemapLevel.border` property.
+* **Border** - Specifies the border color, border width and border radius for the group using the [`TreemapLevel.border`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/border.html) property.
 
 ### Squarified
 
@@ -338,7 +338,7 @@ class JobVacancyModel {
 ![Appearance customized levels](images/levels/levels-customization.png)
 
 N>
-* Refer the `TreemapLevel.colorMapper`, for customizing the tile color.
-* Refer the `TreemapLevel.tooltipBuilder`, for adding and customizing the tooltip on the treemap.
-* Refer the `TreemapLevel.labelBuilder`, for adding and customizing the label on the tile.
-* Refer the `TreemapLevel.itemBuilder`, for adding and customizing the custom widget on the treemap.
+* Refer the [`TreemapLevel.colorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/colorValueMapper.html), for customizing the tile color.
+* Refer the [`TreemapLevel.tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/tooltipBuilder.html), for adding and customizing the tooltip on the treemap.
+* Refer the [`TreemapLevel.labelBuilder`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/labelBuilder.html), for adding and customizing the label on the tile.
+* Refer the [`TreemapLevel.itemBuilder`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/itemBuilder.html), for adding and customizing the custom widget on the treemap.

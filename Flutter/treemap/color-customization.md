@@ -13,7 +13,7 @@ This section explains about the customization of color for the tiles based on sp
 
 ## Level color
 
-You can apply uniform color to the whole level using the `TreemapLevel.color` property.
+You can apply uniform color to the whole level using the [`TreemapLevel.color`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/color.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -113,16 +113,16 @@ class JobVacancyModel {
 ![Levels color customization](images/colors/levels-color.png)
 
 N>
-* Refer the `TreemapColorMapper.value`, for applying tile color based on specific value.
-* Refer the `TreemapColorMapper.range`, for applying tile color based on range of values.
+* Refer the [`TreemapColorMapper.value`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/TreemapColorMapper.value.html), for applying tile color based on specific value.
+* Refer the [`TreemapColorMapper.range`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/TreemapColorMapper.range.html), for applying tile color based on range of values.
 
 ## Equal color mapping
 
-If you return a value of different type other than the color from the `TreemapLevel.colorValueMapper`, then you must set the `colorMappers` property which is a collection of `TreemapColorMapper`.
+If you return a value of different type other than the color from the [`TreemapLevel.colorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/colorValueMapper.html), then you must set the [`colorMappers`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/colorMappers.html) property which is a collection of [`TreemapColorMapper`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper-class.html).
 
-The value returned from the `TreemapLevel.colorValueMapper` callback will be used for the comparison in the `TreemapColorMapper.value`. For the matched values, the `TreemapColorMapper.color` will be applied to the respective tiles.
+The value returned from the [`TreemapLevel.colorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/colorValueMapper.html) callback will be used for the comparison in the [`TreemapColorMapper.value`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/TreemapColorMapper.value.html). For the matched values, the [`TreemapColorMapper.color`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/color.html) will be applied to the respective tiles.
 
-N> You can customize the legend icons color and texts using the `TreemapColorMapper.color` and the `TreemapColorMapper.value` properties respectively.
+N> You can customize the legend icons color and texts using the [`TreemapColorMapper.color`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/color.html) and the [`TreemapColorMapper.value`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/TreemapColorMapper.value.html) properties respectively.
 
 {% tabs %}
 {% highlight Dart %}
@@ -190,15 +190,15 @@ class SocialMediaUsers {
 ![Equal color mapping](images/colors/equal-color-mapping.png)
 
 N>
-* Refer the `TreemapColorMapper.range`, for applying color based on range of values.
+* Refer the [`TreemapColorMapper.range`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/TreemapColorMapper.range.html), for applying color based on range of values.
 
 ## Range color mapping
 
-If you return a range value in the `TreemapLevel.colorValueMapper`, then you must set the `colorMappers` property.
+If you return a range value in the [`TreemapLevel.colorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/colorValueMapper.html), then you must set the [`colorMappers`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/colorMappers.html) property.
 
-The value returned from the `TreemapLevel.colorValueMapper` callback will be checked whether it lies in the `TreemapColorMapper.from` and `TreemapColorMapper.to` range. For the matched values, the `TreemapColorMapper.color` will be applied to the respective tiles.
+The value returned from the [`TreemapLevel.colorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/colorValueMapper.html) callback will be checked whether it lies in the [`TreemapColorMapper.from`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/from.html) and [`TreemapColorMapper.to`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/to.html) range. For the matched values, the [`TreemapColorMapper.color`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/color.html) will be applied to the respective tiles.
 
-N> You can customize the legend icons color and texts using the `TreemapColorMapper.color` and the `TreemapColorMapper.from` and `TreemapColorMapper.to` properties.
+N> You can customize the legend icons color and texts using the [`TreemapColorMapper.color`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/color.html) and the [`TreemapColorMapper.from`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/from.html) and [`TreemapColorMapper.to`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/to.html) properties.
 
 {% tabs %}
 {% highlight Dart %}
@@ -263,4 +263,4 @@ class SocialMediaUsers {
 ![Range color mapping](images/colors/range-color-mapping.png)
 
 N>
-* Refer the `TreemapColorMapper.value`, for applying color to the tiles based on the specific value.
+* Refer the [`TreemapColorMapper.value`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/TreemapColorMapper.value.html), for applying color to the tiles based on the specific value.
