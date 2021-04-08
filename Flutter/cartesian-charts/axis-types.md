@@ -282,8 +282,7 @@ The [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 Also refer [label format](./axis-customization#formatting-axis-label-content) and [date format](#formatting-the-labels-1) for formatting the labels 
 further.
 
-N> : 
-Import the following package to use number format in your package.`import "package:intl/intl.dart";`.
+N> You must import [`intl`](https://pub.dev/packages/intl) package for formatting labels using the [`NumberFormat`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html) class and  [`date Format`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
 
 
 ### Decimal places
@@ -698,8 +697,7 @@ The [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
 
 Also refer [label format](./axis-customization#formatting-axis-label-content) and [number format](#formatting-the-labels) for formatting the labels further.
 
-N> : 
-Import the following package to use date format in your package.`import "package:intl/intl.dart";`.
+N> You must import [`intl`](https://pub.dev/packages/intl) package for formatting labels using the [`NumberFormat`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html) class and  [`date Format`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
 
 ## Date-time category axis
 
@@ -815,8 +813,7 @@ The [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
 
 Also refer [label format](./axis-customization#formatting-axis-label-content) and [number format](#formatting-the-labels) for formatting the labels further.
 
-N> : 
-Import the following package to use date format in your package.`import "package:intl/intl.dart";`.
+N> You must import [`intl`](https://pub.dev/packages/intl) package for formatting labels using the [`NumberFormat`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html) class and  [`date Format`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
 
 ## Logarithmic axis
 
