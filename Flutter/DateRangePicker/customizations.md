@@ -35,33 +35,31 @@ You can customize the calendar month view by using the `monthCellStyle` of `SfDa
 
 @override
 Widget build(BuildContext context) {
-   return Scaffold(
-       body: SfDateRangePicker(
-       view: DateRangePickerView.month,
-       monthViewSettings:DateRangePickerMonthViewSettings(blackoutDates:List<DateTime>()
-           ..add(DateTime(2020, 03, 26)),
-      weekendDays: List<int>()
-           ..add(7)..add(6),
-      specialDates:List<DateTime>()
-           ..add(DateTime(2020, 03, 20))..add(DateTime(2020, 03, 16))..add(DateTime(2020,03,17)),showTrailingAndLeadingDates: true),
-      monthCellStyle: DateRangePickerMonthCellStyle(
-         blackoutDatesDecoration: BoxDecoration(
-               color: Colors.red,
-               border: Border.all(color: const Color(0xFFF44436), width: 1),
-               shape: BoxShape.circle),
-        weekendDatesDecoration: BoxDecoration(
-              color: const Color(0xFFDFDFDF),
-              border: Border.all(color: const Color(0xFFB6B6B6), width: 1),
-              shape: BoxShape.circle),
-       specialDatesDecoration: BoxDecoration(
-              color: Colors.green,
-              border: Border.all(color: const Color(0xFF2B732F), width: 1),
-              shape: BoxShape.circle),
-       blackoutDateTextStyle: TextStyle(color: Colors.white, decoration: TextDecoration.lineThrough),
-      specialDatesTextStyle: const TextStyle(color: Colors.white),
-      ),
-    )
-  );
+    return Scaffold(
+        body: SfDateRangePicker(
+          view: DateRangePickerView.month,
+          monthViewSettings:DateRangePickerMonthViewSettings(blackoutDates:[DateTime(2020, 03, 26)],
+              weekendDays: [7,6],
+              specialDates:[DateTime(2020, 03, 20),DateTime(2020, 03, 16),DateTime(2020,03,17)],
+              showTrailingAndLeadingDates: true),
+          monthCellStyle: DateRangePickerMonthCellStyle(
+            blackoutDatesDecoration: BoxDecoration(
+                color: Colors.red,
+                border: Border.all(color: const Color(0xFFF44436), width: 1),
+                shape: BoxShape.circle),
+            weekendDatesDecoration: BoxDecoration(
+                color: const Color(0xFFDFDFDF),
+                border: Border.all(color: const Color(0xFFB6B6B6), width: 1),
+                shape: BoxShape.circle),
+            specialDatesDecoration: BoxDecoration(
+                color: Colors.green,
+                border: Border.all(color: const Color(0xFF2B732F), width: 1),
+                shape: BoxShape.circle),
+            blackoutDateTextStyle: TextStyle(color: Colors.white, decoration: TextDecoration.lineThrough),
+            specialDatesTextStyle: const TextStyle(color: Colors.white),
+          ),
+        )
+    );
 }
 
 {% endhighlight %}
