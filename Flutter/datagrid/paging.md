@@ -633,7 +633,7 @@ Arranges all the navigation buttons and numeric buttons vertically by setting Ax
 
 SfDataPager allows to customize the appearance of the data pager using the [SfDataPagerThemeData](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataPagerThemeData-class.html) in [SfDataPagerTheme](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataPagerTheme-class.html). The `SfDataPager` should be wrapped inside the `SfDataPagerTheme`.
 
-Import the following class from the syncfusion_flutter_core package.
+Import the following class from the [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) package.
 
 {% tabs %}
 {% highlight Dart %}
