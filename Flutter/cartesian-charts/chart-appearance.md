@@ -58,6 +58,8 @@ Margin to the chart can be specified using the [`margin`](https://pub.dev/docume
               borderWidth: 2,
               // Sets 15 logical pixels as margin for all the 4 sides.
               margin: EdgeInsets.all(15)
+              )
+            )
           )
         )
       );

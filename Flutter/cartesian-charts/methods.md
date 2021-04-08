@@ -1072,7 +1072,7 @@ Used to process only the newly added, updated, and removed data points in a seri
 
 To re-render the chart with modified data points, setState() will be called. This will render the chart from scratch and thus, the app’s performance will be degraded on continuous updates.
 
-To overcome this problem, the `updateDataSource` method can be called by passing updated data points indexes. The chart widget will process only that point and skip various steps like bounds calculation,
+To overcome this problem, the [`updateDataSource`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeriesController/updateDataSource.html) method can be called by passing updated data points indexes. The chart widget will process only that point and skip various steps like bounds calculation,
 old data points processing, etc. Thus, this will improve the app’s performance.
 
 The following are the arguments of this method.
@@ -1128,6 +1128,10 @@ Widget build(BuildContext context) {
     }
 
 {% endhighlight %}
+
+#### See Also
+
+*[Rendering real time live charts using updateDataSource method](https://www.syncfusion.com/kb/12316/how-to-create-flutter-real-time-charts-using-the-cartesian-charts-widget-sfcartesianchart)
 
 ## PixelToPoint 
 

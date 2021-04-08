@@ -107,6 +107,12 @@ If you wish to perform the initial rendering animation again in the existing ser
 
 ![Dynamic series animation](images/cartesian-customization/dynamicanimation.gif)
 
+#### See Also
+
+* [Create dynamic animated series on addition of data points in the series](https://www.syncfusion.com/kb/12290/how-to-create-flutter-animated-charts-using-the-charts-widget-sfcartesianchart)
+
+* [Dynamically animate chart using public methods](https://www.syncfusion.com/kb/12205/how-to-animate-the-chart-series-dynamically-using-the-public-method-sfcartesianchart)
+
 ## Transpose the series
 
 The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/isTransposed.html) property of [`CartesianSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries-class.html) is used to transpose the horizontal and vertical axes, to view the data in a different perspective. Using this feature, you can render vertical charts.
@@ -272,6 +278,10 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
 {% endhighlight %}
 
 ![Gradient color](images/cartesian-customization/gradient.png)
+
+#### See Also
+
+* [Rotating the gradient applied to a chart in cartesian charts](https://www.syncfusion.com/kb/12054/how-to-apply-and-rotate-gradient-in-the-chart-sfcartesainchart)
 
 >**NOTE**: The gradient is not applicable for spline, step line, candle, hilo, hilo open close, and line type charts. However, in line type gradient is applicable for [`FastLineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FastLineSeries-class.html) alone.
 
@@ -444,3 +454,7 @@ The chart’s data source can be sorted using the [`sortingOrder`](https://pub.d
 {% endhighlight %}
 
 ![Sorting](images/cartesian-customization/sortings.jpg)
+
+#### See Also
+
+* [Rendering a chart using JSON data retrieved from a firebase](https://www.syncfusion.com/kb/11883/how-to-render-chart-using-json-data-stored-in-firebase-database-sfcartesianchart).

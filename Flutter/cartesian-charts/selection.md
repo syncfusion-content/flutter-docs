@@ -194,3 +194,7 @@ You can select a point or series programmatically on a chart using [`initialSele
 ![Initial selection](images/selection/initial_render_selection.jpg)
 
 Also refer [selection event](./events#onselectionchanged) for customizing the selection further.
+
+#### See Also
+
+* [Dynamically selecting the data points in a chart](https://www.syncfusion.com/kb/11811/how-to-select-the-data-points-dynamically-in-cartesian-charts-sfcartesianchart).

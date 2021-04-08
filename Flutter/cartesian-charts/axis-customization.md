@@ -1152,3 +1152,7 @@ In [`DateTimeAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 ## See Also
 
 * [Rendering a particular part of a data using visible minimum and visible maximum in the Cartesian chart](https://www.syncfusion.com/kb/11308/how-to-render-particular-part-of-a-data-in-cartesian-charts-sfcartesianchart).
+
+* [Creating a flutter master-detail chart using range controller in the Cartesian chart](https://www.syncfusion.com/kb/12318/how-to-create-flutter-master-detail-chart-using-the-cartesian-charts-widget).
+
+* [Changing the visible range of chart using range selector in the Cartesian chart](https://www.syncfusion.com/kb/12053/how-to-change-the-visible-chart-range-using-the-range-selector-widget-sfcartesianchart).

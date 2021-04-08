@@ -97,6 +97,10 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
 
 ![Dashed line chart](images/cartesian-chart-types/dashed_line.jpg)
 
+#### See Also
+
+*[Applying dashed pattern for line chart](https://www.syncfusion.com/kb/12349/how-to-create-dash-pattern-line-chart-in-flutter-using-cartesian-charts-widget)
+
 ### Multi-colored line
 
 To render a multi-colored line series, map the individual colors to the data using the [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/pointColorMapper.html) property.
@@ -652,6 +656,12 @@ The [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
 ![Rounded corners](images/cartesian-chart-types/rounded_column.jpg)
 
+#### See Also
+
+* [Rendering each data points with different border radius in column charts](https://www.syncfusion.com/kb/12074/how-to-set-different-border-radius-for-each-rect-series-data-points-by-extending-the)
+
+* [Adding rounded corners for the specific sides in column charts](https://www.syncfusion.com/kb/12059/how-to-add-rounded-corners-for-specific-sides-in-the-rect-series-types-sfcartesianchart)
+
 ### Track customization
 
 Renders column with track. Track is a rectangular bar rendered from the start to the end of the axis. Column series will be rendered above the track. The [`isTrackVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ColumnSeries/isTrackVisible.html) property is used to enable the track. The following properties can be used to customize the appearance:
@@ -825,6 +835,12 @@ You can render the bar chart with track. Track is a rectangular bar rendered fro
 ![Bar track](images/cartesian-chart-types/track_bar.jpg)
 
 Also refer, [color palette](./series-customization#color-palette), [color mapping](./series-customization#color-mapping-for-data-points), [animation](./series-customization#animation), [gradient](./series-customization#gradient-fill) and [empty points](./series-customization#empty-points) for customizing the bar series further.
+
+#### See Also
+
+*[Create vertical bar chart](https://www.syncfusion.com/kb/12348/how-to-create-vertical-bar-chart-in-flutter-using-cartesian-charts-widget-sfcartesianchart)
+
+*[Create horizontal bar chart](https://www.syncfusion.com/kb/12347/how-to-create-horizontal-bar-chart-in-flutter-using-cartesian-charts-widget)
 
 ## Bubble chart
 
@@ -2841,8 +2857,8 @@ To render a Candle chart, create an instance of [` CandleSeries`](https://pub.de
 * [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
 * [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - changes the stroke width of the series.
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - changes the stroke color of the series.
-* [`showIndicationForSameValues`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CandleSeries/showIndicationForSameValues.html)- Used to show indication of the data point with a thin line when its high and low values are same and also when all the values of high, low, open and close are same for the data point. By default is set to be false.
-* [`enableSolidCandles`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CandleSeries/enableSolidCandles.html)- Used to enable/disable the solid candles. By default is set to be false. The fill color of the candle will be defined by its opening and closing values.
+* [`showIndicationForSameValues`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CandleSeries/showIndicationForSameValues.html)- used to show indication of the data point with a thin line when its high and low values are same and also when all the values of high, low, open and close are same for the data point. By default is set to be false.
+* [`enableSolidCandles`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CandleSeries/enableSolidCandles.html)- used to enable/disable the solid candles. By default is set to be false. The fill color of the candle will be defined by its opening and closing values.
 * [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/lowValueMapper.html) - used to get the low values from the series.
 * [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/highValueMapper.html) - used to get the high values from the series.
 * [`openValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CandleSeries/openValueMapper.html) - used to get the open values from the series.
@@ -2882,6 +2898,10 @@ To render a Candle chart, create an instance of [` CandleSeries`](https://pub.de
 {% endhighlight %}
 
 ![candle chart](images/cartesian-chart-types/candle.png)
+
+#### See Also 
+
+* [Rendering flutter candle stick chart](https://www.syncfusion.com/kb/12288/how-to-render-flutter-candlestick-chart-using-the-charts-widget-sfcartesianchart)
 
 ### Indication for same values
 
@@ -2931,9 +2951,8 @@ The following are the types of indication when the combination of high, low, ope
                         ]
                     ),
                 )   
-            )
-        );
-    }
+            );
+        }
 
 {% endhighlight %}
 

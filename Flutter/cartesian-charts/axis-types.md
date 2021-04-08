@@ -528,11 +528,15 @@ The Flutter Chart supports the following types of interval for date-time axis:
 
 ![DateTime range](images/axis-types/datetime_interval.jpg)
 
+#### See Also
+
+* [Rendering flutter time series chart with hours interval](https://www.syncfusion.com/kb/12289/how-to-render-flutter-time-series-chart-using-the-charts-widget-sfcartesianchart)
+
 ### Double range support
 
 Date-time axis [`interval`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/interval.html) property can be customized using double value.
 
-For example, if you are rendering a series with months in x-axis with an interval of 0.5, then the interval will be calculated in days. The interval calculation may vary dependsing upon the number of days in the month.
+For example, if you are rendering a series with months in x-axis with an interval of 0.5, then the interval will be calculated in days. The interval calculation may vary depending upon the number of days in the month.
 
 
 {% highlight dart %} 
