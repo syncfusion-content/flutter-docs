@@ -86,10 +86,10 @@ chart.dataRange = sheet.getRangeByName('A1:B4');
 sheet.charts = charts;
 
 // save and dispose the workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int>? bytes = workbook.saveAsStream();
 workbook.dispose();
 
-File('Chart.xlsx').writeAsBytes(bytes);
+File('Chart.xlsx').writeAsBytes(bytes!);
 
 {% endhighlight %}
 
@@ -150,7 +150,7 @@ chart.chartTitleArea.bold = true;
 chart.chartTitleArea.size = 12;
 
 // setting legend position.
-chart.legend.position = ExcelLegendPosition.bottom;
+chart.legend!.position = ExcelLegendPosition.bottom;
 
 // setting the chart position.
 chart.topRow = 0;
@@ -181,10 +181,10 @@ chart.linePatternColor = '#0000FF';
 sheet.charts = charts;
 
 // save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int>? bytes = workbook.saveAsStream();
 workbook.dispose();
 
-File('ChartElement.xlsx').writeAsBytes(bytes);
+File('ChartElement.xlsx').writeAsBytes(bytes!);
 
 {% endhighlight %}
 
