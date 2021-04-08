@@ -26,4 +26,4 @@ You can get the examples in the following link:: [`Flutter Charts`](https://gith
 
 #### See Also
 
-* [Integrating synfusion flutter charts in a flutter web application](https://www.syncfusion.com/kb/11551/how-to-integrate-syncfusion-charts-in-flutter-web-application-sfcartesianchart)
+* [Integrating syncfusion flutter charts in a flutter web application](https://www.syncfusion.com/kb/11551/how-to-integrate-syncfusion-charts-in-flutter-web-application-sfcartesianchart)

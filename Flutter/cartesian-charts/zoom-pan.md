@@ -12,7 +12,7 @@ documentation: ug
 
 ## Pinch zooming
 
-Pinch zooming can be enabled by [`enablePinching`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/enablePinching.html) property and defaults to *false*. Pinching can be performed by moving two fingers over the chart.
+Pinch zooming can be enabled by [`enablePinching`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/enablePinching.html) property and defaults to `false`. Pinching can be performed by moving two fingers over the chart.
 
 {% highlight dart %} 
 
@@ -48,7 +48,7 @@ Pinch zooming can be enabled by [`enablePinching`](https://pub.dev/documentation
 
 ## Double tap zooming
 
-Double tap zooming can be enabled using [`enableDoubleTapZooming`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/enableDoubleTapZooming.html) property. Defaults to *false*.
+Double tap zooming can be enabled using [`enableDoubleTapZooming`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/enableDoubleTapZooming.html) property. Defaults to `false`.
 
 {% highlight dart %} 
     
@@ -257,7 +257,7 @@ The [`enableAutoIntervalOnZooming`](https://pub.dev/documentation/syncfusion_flu
 
 ## Maximum zoom level
 
-The [`maximumZoomLevel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/maximumZoomLevel.html) property defines the maximum zooming level. Zooming will be stopped after reaching this value. This defaults to null.
+The [`maximumZoomLevel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/maximumZoomLevel.html) property defines the maximum zooming level. Zooming will be stopped after reaching this value. This defaults to `null`.
 
 {% highlight dart %} 
 

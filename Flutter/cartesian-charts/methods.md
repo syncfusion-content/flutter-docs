@@ -1141,7 +1141,7 @@ The [`pixelToPoint`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
   
 Since this method is in the series controller, x and y-axis associated with this particular series will be considering for conversion value.
   
->**NOTE** This method is only applicable for Cartesian chart, not for the circular, pyramid,
+N> This method is only applicable for Cartesian chart, not for the circular, pyramid,
 and funnel charts.
 
 {% highlight dart %}
@@ -1181,7 +1181,7 @@ The [`pointToPixel`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
   
 Since this method is in the series controller, x and y-axis associated with this particular series will be considering for conversion value.
   
->**NOTE** This method is only applicable for Cartesian chart, not for the circular, pyramid,
+N> This method is only applicable for Cartesian chart, not for the circular, pyramid,
 and funnel charts.
   
 {% highlight dart %}

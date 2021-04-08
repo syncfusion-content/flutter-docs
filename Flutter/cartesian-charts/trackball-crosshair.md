@@ -32,7 +32,7 @@ You can use the following properties to customize the appearance of trackball to
 * [`tooltipSettings.textStyle.fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontSize.html) - used to change the font size for tooltip text.
 * [`hideDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/hideDelay.html ) - used to specify disappear delay for trackball.
 
->**Note** The above mentioned properties are only applicable for SfCartesian types of charts.
+N> The above mentioned properties are only applicable for SfCartesian types of charts.
 
 {% highlight dart %} 
     
@@ -349,7 +349,7 @@ Also refer, [marker customization](./marker-datalabel#Marker) for customizing th
 
 #### See Also
 
-* [Disbale marker for a specific series in trackball](https://www.syncfusion.com/kb/12107/how-to-disable-the-trackball-marker-for-specific-series-in-cartesian-charts)
+* [Disable marker for a specific series in trackball](https://www.syncfusion.com/kb/12107/how-to-disable-the-trackball-marker-for-specific-series-in-cartesian-charts)
 
 ### Trackball tooltip template
 
@@ -440,7 +440,7 @@ Markers are rendered with the series color and placed near the value in trackbal
 
 Trackball tooltip marker uses the same shape specified for the series marker. But trackball tooltip marker will render based on the value specified to this property irrespective of considering the series marker's visibility.
 
-Defaults to true.
+Defaults to `true`.
 
 {% highlight dart %} 
 
@@ -496,7 +496,7 @@ Defaults to true.
 
 #### See Also
 
-* [Synchronize trackball with multiple charts in cartesian charts](https://www.syncfusion.com/kb/11881/how-to-synchronize-trackball-in-multiple-charts-sfcartesianchart).
+* [Synchronize trackball with multiple charts in Cartesian charts](https://www.syncfusion.com/kb/11881/how-to-synchronize-trackball-in-multiple-charts-sfcartesianchart).
 
 ## Crosshair
 
@@ -504,7 +504,7 @@ Crosshair has a vertical and horizontal line to view the value of the axis.
 
 Crosshair lines can be enabled by using [`enable`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/enable.html) property in the [`crosshairBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/CrosshairBehavior.html). Likewise tooltip label for an axis can be enabled by using [`enable`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/enable.html) property of [`interactiveTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/interactiveTooltip.html) in the corresponding axis. The [`hideDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/hideDelay.html) property can be used to specify a disappear delay for the crosshair.
 
->**Note** The above mentioned properties are only   applicable for SfCartesian types of charts.
+N> The above mentioned properties are only   applicable for SfCartesian types of charts.
 
 {% highlight dart %} 
     
@@ -552,7 +552,7 @@ The appearance of the track line in crosshair can be customized using the follow
 * [`lineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/lineColor.html) - specifies the color of the crosshair line.
 * [`lineWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/lineWidth.html) - specifies the stroke width of the crosshair line.
 * [`lineDashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/lineDashArray.html) - used to render crosshair line with dashes.
-* [`shouldAlwaysShow`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/shouldAlwaysShow.html) - enables or disables the crosshair. Defaults to false.
+* [`shouldAlwaysShow`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/shouldAlwaysShow.html) - enables or disables the crosshair. Defaults to `false`.
 
 {% highlight dart %} 
     

@@ -282,7 +282,7 @@ The [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 Also refer [label format](./axis-customization#formatting-axis-label-content) and [date format](#formatting-the-labels-1) for formatting the labels 
 further.
 
->**NOTE** : 
+N> : 
 Import the following package to use number format in your package.`import "package:intl/intl.dart";`.
 
 
@@ -315,7 +315,7 @@ The [`decimalPlaces`](https://pub.dev/documentation/syncfusion_flutter_charts/la
 
 ![Decimal Places](images/axis-types/numeric_decimalplaces.jpg)
 
->**NOTE**
+N>
 * In order to control the decimal places of the y-axis labels, you need to use [`decimalPlaces`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/decimalPlaces.html) property of the axis along with setting the [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangePadding.html) to [`none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding-class.html).
 * For x-axis labels, setting the [`decimalPlaces`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/decimalPlaces.html) alone is enough.
 
@@ -698,7 +698,7 @@ The [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
 
 Also refer [label format](./axis-customization#formatting-axis-label-content) and [number format](#formatting-the-labels) for formatting the labels further.
 
->**NOTE** : 
+N> : 
 Import the following package to use date format in your package.`import "package:intl/intl.dart";`.
 
 ## Date-time category axis
@@ -815,7 +815,7 @@ The [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
 
 Also refer [label format](./axis-customization#formatting-axis-label-content) and [number format](#formatting-the-labels) for formatting the labels further.
 
->**NOTE** : 
+N> : 
 Import the following package to use date format in your package.`import "package:intl/intl.dart";`.
 
 ## Logarithmic axis

@@ -2376,7 +2376,7 @@ To render a 100% stacked area chart, create an instance of `StackingArea100Serie
 * [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
 * [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - changes the stroke width of the series.
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - changes the stroke color of the series.
-* `borderDrawMode` - specifies the type of the border mode and it defaults to *top*.
+* `borderDrawMode` - specifies the type of the border mode and it defaults to `top`.
 
 {% highlight dart %} 
 
