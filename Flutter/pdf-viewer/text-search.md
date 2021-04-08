@@ -22,37 +22,40 @@ N> Import **'package:syncfusion_flutter_pdf/pdf.dart'** in the Dart code if you 
 {% tabs %}
 {% highlight Dart %}
 
-PdfViewerController _pdfViewerController;
-PdfTextSearchResult _searchResult;
+late PdfViewerController _pdfViewerController;
+late PdfTextSearchResult _searchResult;
 
 @override
 void initState() {
-  _pdfViewerController = PdfViewerController();
-  super.initState();
-}
+    _pdfViewerController = PdfViewerController();
+    _searchResult = PdfTextSearchResult();
+    super.initState();
+  }
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      appBar: AppBar(
-        title: Text('Syncfusion Flutter PDF Viewer'),
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(
-              Icons.search,
-              color: Colors.white,
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: Text('Syncfusion Flutter PDF Viewer'),
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(
+                Icons.search,
+                color: Colors.white,
+              ),
+              onPressed: () async {
+                _searchResult = await _pdfViewerController.searchText('the',
+                    searchOption: TextSearchOption.caseSensitive);
+                print(
+                    'Total instance count: ${_searchResult.totalInstanceCount}');
+              },
             ),
-            onPressed: () async {
-              _searchResult = await _pdfViewerController?.searchText('the',
-                  searchOption: TextSearchOption.caseSensitive);
-              print('Total instance count: ${_searchResult.totalInstanceCount}');
-            },
-          ),                  ],
-      ),
-      body: SfPdfViewer.network(
-          'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
-          controller:_pdfViewerController));
-}
+          ],
+        ),
+        body: SfPdfViewer.network(
+            'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
+            controller: _pdfViewerController));
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -64,13 +67,15 @@ The [nextInstance](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/la
 {% tabs %}
 {% highlight Dart %}
 
-PdfViewerController _pdfViewerController;
-PdfTextSearchResult _searchResult;
+
+late PdfViewerController _pdfViewerController;
+late PdfTextSearchResult _searchResult;
 
 @override
 void initState() {
-  _pdfViewerController = PdfViewerController();
-  super.initState();
+    _pdfViewerController = PdfViewerController();
+    _searchResult = PdfTextSearchResult();
+    super.initState();
 }
 
 @override
@@ -85,32 +90,32 @@ Widget build(BuildContext context) {
               color: Colors.white,
             ),
             onPressed: () async {
-              _searchResult = await _pdfViewerController?.searchText('the',
+              _searchResult = await _pdfViewerController.searchText('the',
                   searchOption: TextSearchOption.caseSensitive);
               setState(() {});
             },
           ),          
           Visibility(
-            visible: _searchResult?.hasResult ?? false,
+            visible: _searchResult.hasResult,
             child: IconButton(
               icon: Icon(
                 Icons.keyboard_arrow_up,
                 color: Colors.white,
               ),
               onPressed: () {
-                  _searchResult?.previousInstance();
+                  _searchResult.previousInstance();
               },
             ),
           ),
           Visibility(
-            visible: _searchResult?.hasResult ?? false,
+            visible: _searchResult.hasResult,
             child: IconButton(
               icon: Icon(
                 Icons.keyboard_arrow_down,
                 color: Colors.white,
               ),
               onPressed: () {
-                _searchResult?.nextInstance();
+                _searchResult.nextInstance();
               },
             ),
           ),
@@ -131,13 +136,14 @@ The [clear](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pd
 {% tabs %}
 {% highlight Dart %}
 
-PdfViewerController _pdfViewerController;
-PdfTextSearchResult _searchResult;
+late PdfViewerController _pdfViewerController;
+late PdfTextSearchResult _searchResult;
 
 @override
 void initState() {
-  _pdfViewerController = PdfViewerController();
-  super.initState();
+    _pdfViewerController = PdfViewerController();
+    _searchResult = PdfTextSearchResult();
+    super.initState();
 }
 
 @override
@@ -152,13 +158,13 @@ Widget build(BuildContext context) {
               color: Colors.white,
             ),
             onPressed: () async {
-              _searchResult = await _pdfViewerController?.searchText('the',
+              _searchResult = await _pdfViewerController.searchText('the',
                   searchOption: TextSearchOption.caseSensitive);
               setState(() {});
             },
           ),
           Visibility(
-            visible: _searchResult?.hasResult ?? false,
+            visible: _searchResult.hasResult,
             child: IconButton(
               icon: Icon(
                 Icons.clear,
@@ -190,13 +196,14 @@ The following code example explains how to customize the search text highlight c
 {% tabs %}
 {% highlight Dart %}
 
-PdfViewerController _pdfViewerController;
-PdfTextSearchResult _searchResult;
+late PdfViewerController _pdfViewerController;
+late PdfTextSearchResult _searchResult;
 
 @override
 void initState() {
-  _pdfViewerController = PdfViewerController();
-  super.initState();
+    _pdfViewerController = PdfViewerController();
+    _searchResult = PdfTextSearchResult();
+    super.initState();
 }
 
 @override
@@ -211,7 +218,7 @@ Widget build(BuildContext context) {
               color: Colors.white,
             ),
             onPressed: () async {
-              _searchResult = await _pdfViewerController?.searchText('the',
+              _searchResult = await _pdfViewerController.searchText('the',
                   searchOption: TextSearchOption.caseSensitive);
             },
           ),        ],
@@ -232,13 +239,14 @@ The [totalInstanceCount](https://pub.dev/documentation/syncfusion_flutter_pdfvie
 {% tabs %}
 {% highlight Dart %}
 
-PdfViewerController _pdfViewerController;
-PdfTextSearchResult _searchResult;
+late PdfViewerController _pdfViewerController;
+late PdfTextSearchResult _searchResult;
 
 @override
 void initState() {
-  _pdfViewerController = PdfViewerController();
-  super.initState();
+    _pdfViewerController = PdfViewerController();
+    _searchResult = PdfTextSearchResult();
+    super.initState();
 }
 
 @override
@@ -253,7 +261,7 @@ Widget build(BuildContext context) {
               color: Colors.white,
             ),
             onPressed: () async {
-              _searchResult = await _pdfViewerController?.searchText('pdf',
+              _searchResult = await _pdfViewerController.searchText('pdf',
                   searchOption: TextSearchOption.caseSensitive);
               if (_searchResult.totalInstanceCount == 0) {
                 print('No matches found.');
@@ -277,13 +285,14 @@ The [totalInstanceCount](https://pub.dev/documentation/syncfusion_flutter_pdfvie
 {% tabs %}
 {% highlight Dart %}
 
-PdfViewerController _pdfViewerController;
-PdfTextSearchResult _searchResult;
+late PdfViewerController _pdfViewerController;
+late PdfTextSearchResult _searchResult;
 
 @override
 void initState() {
-  _pdfViewerController = PdfViewerController();
-  super.initState();
+    _pdfViewerController = PdfViewerController();
+    _searchResult = PdfTextSearchResult();
+    super.initState();
 }
 
 @override
@@ -298,13 +307,13 @@ Widget build(BuildContext context) {
               color: Colors.white,
             ),
             onPressed: () async {
-              _searchResult = await _pdfViewerController?.searchText('the',
+              _searchResult = await _pdfViewerController.searchText('the',
                   searchOption: TextSearchOption.caseSensitive);
               setState(() {});
             },
           ),
           Visibility(
-            visible: _searchResult?.hasResult ?? false,
+            visible: _searchResult.hasResult,
             child: IconButton(
               icon: Icon(
                 Icons.clear,
@@ -318,26 +327,26 @@ Widget build(BuildContext context) {
             ),
           ),
           Visibility(
-            visible: _searchResult?.hasResult ?? false,
+            visible: _searchResult.hasResult,
             child: IconButton(
               icon: Icon(
                 Icons.keyboard_arrow_up,
                 color: Colors.white,
               ),
               onPressed: () {
-                _searchResult?.previousInstance();
+                _searchResult.previousInstance();
               },
             ),
           ),
           Visibility(
-            visible: _searchResult?.hasResult ?? false,
+            visible: _searchResult.hasResult,
             child: IconButton(
               icon: Icon(
                 Icons.keyboard_arrow_down,
                 color: Colors.white,
               ),
               onPressed: () {
-                _searchResult?.nextInstance();
+                _searchResult.nextInstance();
                 if(_searchResult.currentInstanceIndex == _searchResult.totalInstanceCount){
                   print('No more occurrences found.');
                 }
@@ -389,12 +398,11 @@ class HomePage extends StatefulWidget {
 class _HomePage extends State<HomePage> {
   final PdfViewerController _pdfViewerController = PdfViewerController();
   final GlobalKey<SearchToolbarState> _textSearchKey = GlobalKey();
-
-  bool _showToolbar;
-  bool _showScrollHead;
+  late bool _showToolbar;
+  late bool _showScrollHead;
 
   /// Ensure the entry history of Text search.
-  LocalHistoryEntry _historyEntry;
+  LocalHistoryEntry? _historyEntry;
 
   @override
   void initState() {
@@ -403,18 +411,20 @@ class _HomePage extends State<HomePage> {
     super.initState();
   }
 
+  /// Ensure the entry history of text search.
   void _ensureHistoryEntry() {
     if (_historyEntry == null) {
-      final ModalRoute<dynamic> route = ModalRoute.of(context);
+      final ModalRoute<dynamic>? route = ModalRoute.of(context);
       if (route != null) {
         _historyEntry = LocalHistoryEntry(onRemove: _handleHistoryEntryRemoved);
-        route.addLocalHistoryEntry(_historyEntry);
+        route.addLocalHistoryEntry(_historyEntry!);
       }
     }
   }
-
+  
+  /// Remove history entry for text search.
   void _handleHistoryEntryRemoved() {
-    _textSearchKey?.currentState?.clearSearch();
+    _textSearchKey.currentState?.clearSearch();
     setState(() {
       _showToolbar = false;
     });
@@ -441,13 +451,13 @@ class _HomePage extends State<HomePage> {
                         }
                       });
                     }
-                    if (toolbarItem.toString() == 'onSubmit') {
+                    if (toolbarItem.toString() == 'noResultFound') {
                       setState(() {
-                        _textSearchKey?.currentState?._showToast = true;
+                        _textSearchKey.currentState?._showToast = true;
                       });
-                      await Future.delayed(Duration(seconds: 2));
+                      await Future.delayed(Duration(seconds: 1));
                       setState(() {
-                        _textSearchKey?.currentState?._showToast = false;
+                        _textSearchKey.currentState?._showToast = false;
                       });
                     }
                   },
@@ -487,7 +497,7 @@ class _HomePage extends State<HomePage> {
             canShowScrollHead: _showScrollHead,
           ),
           Visibility(
-            visible: _textSearchKey?.currentState?._showToast ?? false,
+            visible: _textSearchKey.currentState?._showToast ?? false,
             child: Align(
               alignment: Alignment.center,
               child: Flex(
@@ -532,17 +542,17 @@ class SearchToolbar extends StatefulWidget {
     this.controller,
     this.onTap,
     this.showTooltip = true,
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   /// Indicates whether the tooltip for the search toolbar items need to be shown or not.
   final bool showTooltip;
 
   /// An object that is used to control the [SfPdfViewer].
-  final PdfViewerController controller;
+  final PdfViewerController? controller;
 
   /// Called when the search toolbar item is selected.
-  final SearchTapCallback onTap;
+  final SearchTapCallback? onTap;
 
   @override
   SearchToolbarState createState() => SearchToolbarState();
@@ -550,21 +560,22 @@ class SearchToolbar extends StatefulWidget {
 
 /// State for the SearchToolbar widget
 class SearchToolbarState extends State<SearchToolbar> {
-  bool _showItem = false;
-  bool _showToast = false;
-  int _totalTextValue = 0;
-  double _dialogBoxWidth;
+  int _searchTextLength = 0;
 
-  /// An object that is used to control the Text Field.
+  /// Indicates whether search toolbar items need to be shown or not.
+  bool _showItem = false;
+
+  /// Indicates whether search toast need to be shown or not.
+  bool _showToast = false;
+
+  ///An object that is used to retrieve the current value of the TextField.
   final TextEditingController _editingController = TextEditingController();
 
   /// An object that is used to retrieve the text search result.
   PdfTextSearchResult _pdfTextSearchResult = PdfTextSearchResult();
 
-  /// Define the focus node. To manage the lifecycle, create the FocusNode in
-  /// the initState method, and clean it up in the dispose method.
-
-  FocusNode focusNode;
+  ///An object that is used to obtain keyboard focus and to handle keyboard events.
+  FocusNode? focusNode;
 
   @override
   void initState() {
@@ -572,7 +583,6 @@ class SearchToolbarState extends State<SearchToolbar> {
 
     focusNode = FocusNode();
     focusNode?.requestFocus();
-    _dialogBoxWidth = 328.0;
   }
 
   @override
@@ -587,11 +597,6 @@ class SearchToolbarState extends State<SearchToolbar> {
     _pdfTextSearchResult.clear();
   }
 
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-  }
-
   ///Display the Alert dialog to search from the beginning
   void _showSearchAlertDialog(BuildContext context) {
     showDialog(
@@ -601,24 +606,46 @@ class SearchToolbarState extends State<SearchToolbar> {
           insetPadding: EdgeInsets.all(0),
           title: Text('Search Result'),
           content: Container(
-              width: _dialogBoxWidth,
+              width: 328.0,
               child: Text(
                   'No more occurrences found. Would you like to continue to search from the beginning?')),
           actions: <Widget>[
-            FlatButton(
-              child: Text('YES'),
+            TextButton(
               onPressed: () {
-                _pdfTextSearchResult?.nextInstance();
+                setState(() {
+                  _pdfTextSearchResult.nextInstance();
+                });
                 Navigator.of(context).pop();
               },
+              child: Text(
+                'YES',
+                style: TextStyle(
+                    color: Color(0x00000000).withOpacity(0.87),
+                    fontFamily: 'Roboto',
+                    fontStyle: FontStyle.normal,
+                    fontWeight: FontWeight.w500,
+                    decoration: TextDecoration.none),
+              ),
             ),
-            FlatButton(
-              child: Text('NO'),
+            TextButton(
               onPressed: () {
-                _pdfTextSearchResult?.clear();
-                _editingController.clear();
+                setState(() {
+                  _pdfTextSearchResult.clear();
+                  _editingController.clear();
+                  _showItem = false;
+                  focusNode?.requestFocus();
+                });
                 Navigator.of(context).pop();
               },
+              child: Text(
+                'NO',
+                style: TextStyle(
+                    color: Color(0x00000000).withOpacity(0.87),
+                    fontFamily: 'Roboto',
+                    fontStyle: FontStyle.normal,
+                    fontWeight: FontWeight.w500,
+                    decoration: TextDecoration.none),
+              ),
             ),
           ],
         );
@@ -630,186 +657,151 @@ class SearchToolbarState extends State<SearchToolbar> {
   Widget build(BuildContext context) {
     return Row(
       children: <Widget>[
-        SearchToolbarItem(
+        Material(
+          color: Colors.transparent,
+          child: IconButton(
+            icon: Icon(
+              Icons.arrow_back,
+              color: Color(0x00000000).withOpacity(0.54),
+              size: 24,
+            ),
+            onPressed: () {
+              widget.onTap?.call('Cancel Search');
+              _editingController.clear();
+              _pdfTextSearchResult.clear();
+            },
+          ),
+        ),
+        Flexible(
+          child: TextFormField(
+            style: TextStyle(
+                color: Color(0x00000000).withOpacity(0.87), fontSize: 16),
+            enableInteractiveSelection: false,
+            focusNode: focusNode,
+            keyboardType: TextInputType.text,
+            textInputAction: TextInputAction.search,
+            controller: _editingController,
+            decoration: InputDecoration(
+              border: InputBorder.none,
+              hintText: 'Find...',
+              hintStyle: TextStyle(color: Color(0x00000000).withOpacity(0.34)),
+            ),
+            onChanged: (text) {
+              if (_searchTextLength < _editingController.value.text.length) {
+                setState(() {});
+                _searchTextLength = _editingController.value.text.length;
+              }
+              if (_editingController.value.text.length < _searchTextLength) {
+                setState(() {
+                  _showItem = false;
+                });
+              }
+            },
+            onFieldSubmitted: (String value) async {
+              _pdfTextSearchResult =
+                  await widget.controller!.searchText(_editingController.text);
+              if (_pdfTextSearchResult.totalInstanceCount == 0) {
+                widget.onTap?.call('noResultFound');
+              } else {
+                setState(() {
+                  _showItem = true;
+                });
+              }
+            },
+          ),
+        ),
+        Visibility(
+          visible: _editingController.text.isNotEmpty,
           child: Material(
             color: Colors.transparent,
             child: IconButton(
               icon: Icon(
-                Icons.arrow_back,
-                color: Color(0x000000).withOpacity(0.54),
+                Icons.clear,
+                color: Color.fromRGBO(0, 0, 0, 0.54),
                 size: 24,
               ),
               onPressed: () {
-                widget.onTap?.call('Cancel Search');
-                _editingController.clear();
-                _pdfTextSearchResult?.clear();
+                setState(() {
+                  _editingController.clear();
+                  _pdfTextSearchResult.clear();
+                  widget.controller!.clearSelection();
+                  _showItem = false;
+                  focusNode!.requestFocus();
+                });
+                widget.onTap!.call('Clear Text');
               },
+              tooltip: widget.showTooltip ? 'Clear Text' : null,
             ),
           ),
         ),
-        SearchToolbarItem(
-          child: Flexible(
-            child: TextFormField(
-              style: TextStyle(
-                  color: Color(0x000000).withOpacity(0.87), fontSize: 16),
-              enableInteractiveSelection: false,
-              focusNode: focusNode,
-              keyboardType: TextInputType.text,
-              textInputAction: TextInputAction.search,
-              controller: _editingController,
-              decoration: InputDecoration(
-                border: InputBorder.none,
-                hintText: 'Find...',
-                hintStyle: TextStyle(color: Color(0x000000).withOpacity(0.34)),
+        Visibility(
+          visible: _showItem,
+          child: Row(
+            children: [
+              Text(
+                '${_pdfTextSearchResult.currentInstanceIndex}',
+                style: TextStyle(
+                    color: Color.fromRGBO(0, 0, 0, 0.54).withOpacity(0.87),
+                    fontSize: 16),
               ),
-              onChanged: (text) {
-                if (_totalTextValue < _editingController.value.text.length) {
-                  _totalTextValue = _editingController.value.text.length;
-                }
-                if (_editingController.value.text.length < _totalTextValue) {
-                  setState(() {
-                    _showItem = false;
-                  });
-                }
-              },
-              onFieldSubmitted: (String value) async {
-                _pdfTextSearchResult =
-                    await widget.controller.searchText(_editingController.text);
-                if (_pdfTextSearchResult.totalInstanceCount == 0) {
-                  widget.onTap?.call('onSubmit');
-                } else {
-                  setState(() {
-                    _showItem = true;
-                  });
-                }
-              },
-            ),
-          ),
-        ),
-        SearchToolbarItem(
-          child: Visibility(
-            visible: _editingController.text.isNotEmpty,
-            child: Material(
-              color: Colors.transparent,
-              child: IconButton(
-                icon: Icon(
-                  Icons.clear,
-                  color: Color.fromRGBO(0, 0, 0, 0.54),
-                  size: 24,
-                ),
-                onPressed: () {
-                  setState(() {
-                    _editingController.clear();
-                    _pdfTextSearchResult?.clear();
-                    widget.controller.clearSelection();
-                    _showItem = false;
-                    focusNode.requestFocus();
-                  });
-                  widget.onTap?.call('Clear Text');
-                },
-                tooltip: widget.showTooltip ? 'Clear Text' : null,
+              Text(
+                ' of ',
+                style: TextStyle(
+                    color: Color.fromRGBO(0, 0, 0, 0.54).withOpacity(0.87),
+                    fontSize: 16),
               ),
-            ),
+              Text(
+                '${_pdfTextSearchResult.totalInstanceCount}',
+                style: TextStyle(
+                    color: Color.fromRGBO(0, 0, 0, 0.54).withOpacity(0.87),
+                    fontSize: 16),
+              ),
+              Material(
+                color: Colors.transparent,
+                child: IconButton(
+                  icon: Icon(
+                    Icons.navigate_before,
+                    color: Color.fromRGBO(0, 0, 0, 0.54),
+                    size: 24,
+                  ),
+                  onPressed: () {
+                    setState(() {
+                      _pdfTextSearchResult.previousInstance();
+                    });
+                    widget.onTap!.call('Previous Instance');
+                  },
+                  tooltip: widget.showTooltip ? 'Previous' : null,
+                ),
+              ),
+              Material(
+                color: Colors.transparent,
+                child: IconButton(
+                  icon: Icon(
+                    Icons.navigate_next,
+                    color: Color.fromRGBO(0, 0, 0, 0.54),
+                    size: 24,
+                  ),
+                  onPressed: () {
+                    setState(() {
+                      if (_pdfTextSearchResult.currentInstanceIndex ==
+                              _pdfTextSearchResult.totalInstanceCount &&
+                          _pdfTextSearchResult.currentInstanceIndex != 0 &&
+                          _pdfTextSearchResult.totalInstanceCount != 0) {
+                        _showSearchAlertDialog(context);
+                      } else {
+                        widget.controller!.clearSelection();
+                        _pdfTextSearchResult.nextInstance();
+                      }
+                    });
+                    widget.onTap!.call('Next Instance');
+                  },
+                  tooltip: widget.showTooltip ? 'Next' : null,
+                ),
+              ),
+            ],
           ),
         ),
-        SearchToolbarItem(
-          child: Visibility(
-            visible: _showItem,
-            child: Row(
-              children: [
-                Text(
-                  '${_pdfTextSearchResult?.currentInstanceIndex}',
-                  style: TextStyle(
-                      color: Color.fromRGBO(0, 0, 0, 0.54).withOpacity(0.87),
-                      fontSize: 16),
-                ),
-                Text(
-                  ' of ',
-                  style: TextStyle(
-                      color: Color.fromRGBO(0, 0, 0, 0.54).withOpacity(0.87),
-                      fontSize: 16),
-                ),
-                Text(
-                  '${_pdfTextSearchResult?.totalInstanceCount}',
-                  style: TextStyle(
-                      color: Color.fromRGBO(0, 0, 0, 0.54).withOpacity(0.87),
-                      fontSize: 16),
-                ),
-                Material(
-                  color: Colors.transparent,
-                  child: IconButton(
-                    icon: Icon(
-                      Icons.navigate_before,
-                      color: Color.fromRGBO(0, 0, 0, 0.54),
-                      size: 24,
-                    ),
-                    onPressed: () {
-                      setState(() {
-                        _pdfTextSearchResult?.previousInstance();
-                      });
-                      widget.onTap?.call('Previous Instance');
-                    },
-                    tooltip: widget.showTooltip ? 'Previous' : null,
-                  ),
-                ),
-                Material(
-                  color: Colors.transparent,
-                  child: IconButton(
-                    icon: Icon(
-                      Icons.navigate_next,
-                      color: Color.fromRGBO(0, 0, 0, 0.54),
-                      size: 24,
-                    ),
-                    onPressed: () {
-                      setState(() {
-                        if (_pdfTextSearchResult?.currentInstanceIndex ==
-                                _pdfTextSearchResult?.totalInstanceCount &&
-                            _pdfTextSearchResult?.currentInstanceIndex != 0 &&
-                            _pdfTextSearchResult?.totalInstanceCount != 0) {
-                          _showSearchAlertDialog(context);
-                        } else {
-                          widget.controller.clearSelection();
-                          _pdfTextSearchResult?.nextInstance();
-                        }
-                      });
-                      widget.onTap?.call('Next Instance');
-                    },
-                    tooltip: widget.showTooltip ? 'Next' : null,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        )
       ],
-    );
-  }
-}
-
-/// SearchToolbar item widget
-class SearchToolbarItem extends StatelessWidget {
-  ///Creates a search toolbar item
-  SearchToolbarItem({
-    this.height,
-    this.width,
-    @required this.child,
-  });
-
-  /// Height of the search toolbar item
-  final double height;
-
-  /// Width of the search toolbar item
-  final double width;
-
-  /// Child widget of the search toolbar item
-  final Widget child;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: height,
-      width: width,
-      child: child,
     );
   }
 }

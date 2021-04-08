@@ -12,7 +12,8 @@ documentation: ug
 The selection feature in chart let you to select a segment in a series or the series itself. This features allows you to select either individual or cluster of segments in the chart series.
 
 {% highlight dart %} 
-    SelectionBehavior _selectionBehavior;
+    
+    late SelectionBehavior _selectionBehavior;
 
     @override
     void initState(){
@@ -60,7 +61,7 @@ You can customize the segments using the below properties.
 
 {% highlight dart %} 
     
-    SelectionBehavior _selectionBehavior;
+    late SelectionBehavior _selectionBehavior;
     
     @override
     void initState(){
@@ -150,7 +151,7 @@ You can select a point or series programmatically on a chart using [`initialSele
 
 {% highlight dart %} 
     
-    SelectionBehavior _selectionBehavior;
+    late SelectionBehavior _selectionBehavior;
     
     @override
     void initState(){

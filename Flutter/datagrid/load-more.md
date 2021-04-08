@@ -139,13 +139,13 @@ class EmployeeDataSource extends DataGridSource {
   @override
   Future<void> handleLoadMoreRows() async {
     await Future.delayed(Duration(seconds: 5));
-    _addMoreRows(employees, 15);
+    _addMoreRows(_employees, 15);
     buildDataGridRows();
     notifyListeners();
   }
 
   void buildDataGridRows() {
-    dataGridRows = employees
+    dataGridRows = _employees
         .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
               DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
               DataGridCell<String>(columnName: 'name', value: dataGridRow.name),
@@ -157,19 +157,18 @@ class EmployeeDataSource extends DataGridSource {
         .toList();
   }
 
-  List<Employee> _addMoreRows(List<Employee> employeeData, int count) {
+  void _addMoreRows(List<Employee> employees, int count) {
     final Random _random = Random();
-    final startIndex = employeeData.isNotEmpty ? employeeData.length : 0,
+    final startIndex = employees.isNotEmpty ? employees.length : 0,
         endIndex = startIndex + count;
     for (int i = startIndex; i < endIndex; i++) {
-      employeeData.add(Employee(
+      employees.add(Employee(
         1000 + i,
         _names[_random.nextInt(_names.length - 1)],
         _designation[_random.nextInt(_designation.length - 1)],
         10000 + _random.nextInt(10000),
       ));
     }
-    return employeeData;
   }
 
   final List<String> _names = <String>[
@@ -369,7 +368,7 @@ class EmployeeDataSource extends DataGridSource {
   @override
   Future<void> handleLoadMoreRows() async {
     await Future.delayed(Duration(seconds: 5));
-    _addMoreRows(employees, 15);
+    _addMoreRows(_employees, 15);
     buildDataGridRows();
     notifyListeners();
   }
@@ -387,19 +386,18 @@ class EmployeeDataSource extends DataGridSource {
         .toList();
   }
 
-  List<Employee> _addMoreRows(List<Employee> employeeData, int count) {
+  void _addMoreRows(List<Employee> employees, int count) {
     final Random _random = Random();
-    final startIndex = employeeData.isNotEmpty ? employeeData.length : 0,
+    final startIndex = employees.isNotEmpty ? employees.length : 0,
         endIndex = startIndex + count;
     for (int i = startIndex; i < endIndex; i++) {
-      employeeData.add(Employee(
+      employees.add(Employee(
         1000 + i,
         _names[_random.nextInt(_names.length - 1)],
         _designation[_random.nextInt(_designation.length - 1)],
         10000 + _random.nextInt(10000),
       ));
     }
-    return employeeData;
   }
 
   final List<String> _names = <String>[
