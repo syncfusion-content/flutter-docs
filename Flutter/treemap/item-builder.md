@@ -13,7 +13,7 @@ You can add any type of custom widgets such as image widget as a background of t
 
 ## Add images
 
-You can add images as a background of the tiles using the `TreemapLevel.itemBuilder` callback.
+You can add images as a background of the tiles using the [`TreemapLevel.itemBuilder`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/itemBuilder.html) callback.
 
 {% tabs %}
 {% highlight Dart %}
@@ -86,4 +86,4 @@ class SocialMediaUsers {
 
 N>
 * Refer the [`Align`](https://api.flutter.dev/flutter/widgets/Align-class.html) widget, to change the position of the widget.
-* Refer the `TreemapLevel.labelBuilder`, to add labels on the tiles.
+* Refer the [`TreemapLevel.labelBuilder`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/labelBuilder.html), to add labels on the tiles.

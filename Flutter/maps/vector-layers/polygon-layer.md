@@ -545,18 +545,18 @@ class PolygonModel {
 
 ## Inverted polygon
 
-You can apply color to the inverted polygon by initializing the `MapPolygonLayer.inverted` constructor. The inner polygon color is transparent and the outer portion of the polygon covered by an overlay color.
+You can apply color to the inverted polygon by initializing the [`MapPolygonLayer.inverted`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygonLayer/MapPolygonLayer.inverted.html) constructor. The inner polygon color is transparent and the outer portion of the polygon covered by an overlay color.
 
 You can customize the inverted polygon using the following properties:
 
-* **Stroke color** - Change the stroke color of the polygon using the `strokeColor` property.
-* **Stroke width** - Change the stroke width of the polygon using the `strokeWidth` property. The default value of the `strokeWidth` property is `1`.
-* **Overlay color** - Change the outer portion color of the polygon using the `color` property.
-* **Tooltip** - You can enable tooltip for the inverted polygon using the `tooltipBuilder` property.
+* **Stroke color** - Change the stroke color of the polygon using the [`strokeColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygonLayer/strokeColor.html) property.
+* **Stroke width** - Change the stroke width of the polygon using the [`strokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygonLayer/strokeWidth.html) property. The default value of the `strokeWidth` property is `1`.
+* **Overlay color** - Change the outer portion color of the polygon using the [`color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygonLayer/color.html) property.
+* **Tooltip** - You can enable tooltip for the inverted polygon using the [`tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapSublayer/tooltipBuilder.html) property.
 
 N> It is applicable for both the tile layer and shape layer.
 
-I> The individual polygon customization like `MapPolygon.color`, `MapPolygon.strokeColor` and `MapPolygon.strokeWidth` are not supported for the inverted polygon.
+I> The individual polygon customization like [`MapPolygon.color`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygon/color.html), [`MapPolygon.strokeColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygon/strokeColor.html) and [`MapPolygon.strokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygon/strokeWidth.html) are not supported for the inverted polygon.
 
 {% tabs %}
 {% highlight Dart %}
@@ -611,4 +611,4 @@ Widget build(BuildContext context) {
 
 ![Inverted polgon](../images/polygon-layer/inverted-polygon.png)
 
-N> Refer `tooltip` section, for adding and customizing tooltip to the inverted polygon.
+N> Refer [`tooltip`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapSublayer/tooltipBuilder.html) section, for adding and customizing tooltip to the inverted polygon.

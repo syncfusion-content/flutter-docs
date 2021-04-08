@@ -55,7 +55,7 @@ import 'package:syncfusion_flutter_treemap/treemap.dart';
 
 After importing the package, initialize the treemap widget as a child of any widget.
 
-To populate the data source, set its count to the `dataCount` property of the treemap. The data will be grouped based on the values returned from the `TreemapLevel.groupMapper` callback. You can have more than one TreemapLevel in the `levels` collection to form a hierarchical treemap. The quantitative value of the underlying data has to be returned from the `weightValueMapper` callback. Based on this value, every tile (rectangle) will have its size.
+To populate the data source, set its count to the [`dataCount`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/dataCount.html) property of the treemap. The data will be grouped based on the values returned from the [`TreemapLevel.groupMapper`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/groupMapper.html) callback. You can have more than one TreemapLevel in the [`levels`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/levels.html) collection to form a hierarchical treemap. The quantitative value of the underlying data has to be returned from the [`weightValueMapper`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/weightValueMapper.html) callback. Based on this value, every tile (rectangle) will have its size.
 
 {% tabs %}
 {% highlight Dart %}
@@ -123,12 +123,12 @@ class SocialMediaUsers {
 ![Treemap default view](images/getting-started/default-view.png)
 
 N>
-* Refer the [`SfTreemap.levels`], for adding flat or hierarchical structured treemap.
-* Refer the [`SfTreemap.colorMappers`], for customizing the tiles color.
+* Refer the [`SfTreemap.levels`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/levels.html), for adding flat or hierarchical structured treemap.
+* Refer the [`SfTreemap.colorMappers`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/colorMappers.html), for customizing the tiles color.
 
 ## Add labels
 
-You can add any type of custom widgets to the tiles as labels based on the index using the `TreemapLevel.labelBuilder` property.
+You can add any type of custom widgets to the tiles as labels based on the index using the [`TreemapLevel.labelBuilder`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/labelBuilder.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -203,7 +203,7 @@ class SocialMediaUsers {
 
 ## Add tooltip
 
-You can enable tooltip for any tile in the treemap and able to return the completely customized widget using the `tooltipBuilder` property.
+You can enable tooltip for any tile in the treemap and able to return the completely customized widget using the [`tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/tooltipBuilder.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -288,7 +288,7 @@ class SocialMediaUsers {
 
 ## Add legend
 
-You can show legend by initializing the `legend` property in the `SfTreemap`. It is possible to customize the legend item's color and text using the `SfTreemap.colorMappers` property.
+You can show legend by initializing the [`legend`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/legend.html) property in the [`SfTreemap`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap-class.html). It is possible to customize the legend item's color and text using the [`SfTreemap.colorMappers`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/colorMappers.html) property.
 
 {% tabs %}
 {% highlight Dart %}
