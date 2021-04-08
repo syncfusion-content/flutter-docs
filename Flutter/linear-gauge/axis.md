@@ -143,7 +143,7 @@ The below code snippet applies gradient to axis track.
 
 ## Customize the borders
 
-The [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearAxisTrackStyle/borderColor.html) and `borderWidth` properties of [`axisTrackStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearAxisTrackStyle/LinearAxisTrackStyle.html) allows to set a border to the axis track.
+The [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearAxisTrackStyle/borderColor.html) and [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearAxisTrackStyle/borderWidth.html) properties of [`axisTrackStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearAxisTrackStyle/LinearAxisTrackStyle.html) allows to set a border to the axis track.
 
 The below code snippet sets a border to the axis track.
 
