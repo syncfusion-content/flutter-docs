@@ -22,13 +22,7 @@ The [DateRangePickerCellBuilder](https://pub.dev/documentation/syncfusion_flutte
 {% highlight Dart %}
 
 class MyAppState extends State<MyApp> {
-  DateRangePickerController _controller;
-
-  @override
-  void initState() {
-    _controller = DateRangePickerController();
-    super.initState();
-  }
+  DateRangePickerController _controller = DateRangePickerController();
 
   @override
   Widget build(BuildContext context) {

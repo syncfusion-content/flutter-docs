@@ -13,7 +13,7 @@ The default style of axis ticks are as below.
 
 ![Initialize linear gauge for axis](images/getting-started/default_linear_gauge.png)
 
-## Customize Linear Gauge ticks
+## Customize tick style
 
 There are two type of ticks in the Flutter Linear Gauge namely major and minor ticks. In the above image, the comparatively larger ticks are major ticks and the ticks between the major ticks are minor ticks. The major and minor tick of a [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html) can be customized using the [`majorTickStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/majorTickStyle.html) and [`minorTickStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MinorTickStyle-class.html) properties. The following properties can be customized for both the major and the minor ticks:
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MajorTickStyle/color.html) – Allows to customize the tick color.
@@ -63,6 +63,23 @@ Widget build(BuildContext context) {
 ## Change tick visibility
 
 The [`showTicks`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/showTicks.html) property of the axis is used to enable or disable the visibility of both the major and the minor ticks. The default value of this property is true.
+
+{% highlight dart %} 
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Center(
+                child: SfLinearGauge(
+                    showTicks: false
+                ),
+          )
+      )
+  );
+}
+
+{% endhighlight %}
 
 ![Customize linear gauge ticks visibility](images/axis-ticks/linear-gauge-tick-visibility.png)
 

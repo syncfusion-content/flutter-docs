@@ -613,20 +613,22 @@ class EmployeeDataSource extends DataGridSource<Employee> {
         final String? value1 = a
             ?.getCells()
             .firstWhereOrNull((element) => element.columnName == sortColumn.name)
-            ?.value;
+            ?.value
+            .toString();
         final String? value2 = b
             ?.getCells()
             .firstWhereOrNull((element) => element.columnName == sortColumn.name)
-            ?.value;
+            ?.value
+            .toString();
   
         if (value1 == null || value2 == null) {
           return 0;
         }
   
         if (sortColumn.sortDirection == DataGridSortDirection.ascending) {
-          return value1.compareTo(value2);
+          return value1.toLowerCase().compareTo(value2.toLowerCase());
         } else {
-          return value2.compareTo(value1);
+          return value2.toLowerCase().compareTo(value1.toLowerCase());
         }
      }
      
