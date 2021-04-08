@@ -7,9 +7,9 @@ control: SfLinearGauge
 documentation: ug
 ---
 
-# Flutter Linear Gauge mirroring
+# Flutter Linear Gauge Mirroring
 
-The [`isMirrored`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/isMirrored.html) property in [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html) mirrors all the gauge elements in the `SfLinearGauge`. The below code snippet demonstrates setting the [`isMirrored`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/isMirrored.html) property.
+The [`isMirrored`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/isMirrored.html) property in [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html) mirrors all the Gauge elements in the `SfLinearGauge`. The following code sample demonstrates how to setting the [`isMirrored`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/isMirrored.html) property.
 
 {% highlight dart %}
 
@@ -26,6 +26,6 @@ The [`isMirrored`](https://pub.dev/documentation/syncfusion_flutter_gauges/lates
 
 ## Comparison for the mirrored and normal gauge
 
-The below screenshot provides a comparison for the mirrored and normal linear gauge. 
+The following screenshot provides a comparison for the mirrored and normal Linear Gauge. 
 
 ![Mirrored linear gauge comparsion](images/mirrored/mirror_comparison.png)
