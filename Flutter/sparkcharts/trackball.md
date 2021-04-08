@@ -26,8 +26,8 @@ You can use the following properties to customize the appearance:
       return Scaffold(
         body: Center(
           child: SfSparkLineChart(
+            axisLineWidth: 0,
             trackball: SparkChartTrackball(
-              axisLineWidth: 0,
               backgroundColor: Colors.red.withOpacity(0.8),
               borderColor: Colors.red.withOpacity(0.8),
               borderWidth: 2,

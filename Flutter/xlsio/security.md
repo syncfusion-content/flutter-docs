@@ -36,8 +36,8 @@ final bool isProtectContent = true;
 workbook.protect(isProtectWindow, isProtectContent, 'password');
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
-File('WorkbookProtect.xlsx').writeAsBytes(bytes);
+final List<int>? bytes = workbook.saveAsStream();
+File('WorkbookProtect.xlsx').writeAsBytes(bytes!);
 workbook.dispose();
 
 {% endhighlight %}
@@ -68,8 +68,8 @@ options.all = true;
 sheet.protect('Password', options);
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
-File('WorksheetProtect.xlsx').writeAsBytes(bytes);
+final List<int>? bytes = workbook.saveAsStream();
+File('WorksheetProtect.xlsx').writeAsBytes(bytes!);
 workbook.dispose();
 
 {% endhighlight %}
@@ -101,8 +101,8 @@ sheet.protect('Password');
 range.cellStyle.locked = false;
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
-File('ProtectCell.xlsx').writeAsBytes(bytes);
+final List<int>? bytes = workbook.saveAsStream();
+File('ProtectCell.xlsx').writeAsBytes(bytes!);
 workbook.dispose();
 
 {% endhighlight %}

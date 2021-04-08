@@ -10,6 +10,11 @@ documentation: ug
 # Getting Started with Flutter Maps (SfMaps)
 This section explains the steps required to add the maps widget with shape layer and its elements such as data labels, tooltip, assignable colors based on region, and legends. It also explains about adding tile layer with OpenStreetMap. This section covers only basic features needed to know to get started with Syncfusion maps.
 
+To get start quickly with our Flutter Maps widget, you can check on this video.
+
+<style>#flutterMapsVideoTutorial{width : 90% !important; height: 300px !important }</style>
+<iframe id='flutterMapsVideoTutorial' src='https://www.youtube.com/watch?v=TNnAHfXXTFM'></iframe>
+
 ## Add Flutter maps to an application
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
 
