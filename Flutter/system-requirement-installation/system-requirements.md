@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Installation and Deployment process for Syncfusion Flutter widgets
-description: Describes the supported platforms and the system requirements to install the Syncfusion Flutter widgets.
+description: Describes about system requirements to install the Syncfusion Flutter widgets
 platform: flutter
 control: Installation and Deployment
 documentation: ug
 
 ---
 
-# System Requirements for Flutter
+# System Requirements
 
 ### Development Environment
 
@@ -20,26 +20,7 @@ Refer to the following links for recommended development environment in Flutter.
 
 ### SDK Version
 
-The following is the minimum Flutter SDK version required for our widgets:
-
-<table>
-    <tr>
-        <th>Channel</th>
-        <th>Version</th>
-    </tr>
-    <tr>
-        <td>Stable</td>
-        <td style="text-align:center">
-            <a href="https://storage.googleapis.com/flutter_infra/releases/stable/windows/flutter_windows_2.0.0-stable.zip">v2.0.0</a>
-        </td>
-    </tr>
-    <tr>
-        <td>Beta</td>
-        <td style="text-align:center">
-            <a href="https://storage.googleapis.com/flutter_infra/releases/beta/windows/flutter_windows_2.0.0-beta.zip">v2.0.0</a>
-        </td>
-    </tr>
-</table>
+The minimum Flutter SDK version required for our component is [`v1.7.8`](https://flutter.dev/docs/development/tools/sdk/releases)
 
 ### Supported Platforms
 
@@ -50,7 +31,7 @@ The following table lists the platforms supported by our Flutter controls.
         <th>Platform<br/>
             <br/></th>        
         <th>
-          Supported Mediums
+          Device Types
             <br/>
             <br/>
         </th>
@@ -92,40 +73,6 @@ The following table lists the platforms supported by our Flutter controls.
         </td>
         <td>
             iOS 8 and later versions
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Web
-            <br/>
-            <br/>
-        </td>
-        <td>
-            All major browsers
-            <br/>
-            <br/>
-        </td>
-        <td>
-            -
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Desktop
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Windows, macOS, Linux
-            <br/>
-            <br/>
-        </td>
-        <td>
-            -
             <br/>
             <br/>
         </td>

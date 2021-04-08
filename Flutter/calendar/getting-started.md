@@ -7,7 +7,7 @@ control: SfCalendar
 documentation: ug
 ---
 
-# Getting Started of flutter calendar
+# Getting Started
 This section explains the steps required to add the calendar widget and populate appointments to the calendar widget. This section covers only basic features needed to get started with Syncfusion calendar widget.
 
 ## Add flutter calendar to an application
@@ -21,11 +21,9 @@ Add the Syncfusion flutter calendar dependency to your pubspec.yaml file.
 
 dependencies:
 
-syncfusion_flutter_calendar: ^xx.x.xx
+syncfusion_flutter_calendar: ^17.4.39-beta
 
 {% endhighlight %}
-
-N> Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Calendar`](https://pub.dev/packages/syncfusion_flutter_calendar/versions) package.
 
 **Get packages** 
 
@@ -347,86 +345,4 @@ Widget build(BuildContext context) {
 
 ![Background color](images/getting-started/calendar-background-color.png)
 
-## Navigation arrow
-Using the [showNavigationArrow](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/showNavigationArrow.html) property of the `SfCalendar`, you can navigate to the next or previous views of the calendar without swiping.
-
-{% tabs %}
-{% highlight Dart %}
-
-@override
-Widget build(BuildContext context) {
-    return Container(
-      child: SfCalendar(
-        view: CalendarView.month,
-        showNavigationArrow: true,
-      ),
-    );
-  }
-
-{% endhighlight %}
-{% endtabs %}
-
-![Show Navigation Arrow](images/getting-started/show-navigation-arrow.jpg)
-
-
->**NOTE** 
-* The `showNavigationArrow` property is not applicable when the `view` is set to `CalendarView.schedule`.
-
-## Cell end padding
-You can customize the padding of appointment view end to make touch position for timeslot and month cell by using the [cellEndPadding](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/cellEndPadding.html) property in the calendar, which allows you to tap the calendar cell when the cell has appointments.
-
-{% tabs %}
-{% highlight Dart %}
-
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-    home: Scaffold(
-        body: SfCalendar(
-      view: CalendarView.month,
-      cellEndPadding: 5,
-      dataSource: _getCalendarDataSource(),
-	  monthViewSettings: MonthViewSettings(
-            appointmentDisplayMode:
-                MonthAppointmentDisplayMode.appointment),
-    )),
-  );
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-![Cell end padding](images/getting-started/cell-end-padding.png)
-
-
 You can get the complete getting started sample from [here](https://github.com/SyncfusionExamples/flutter-calendar).
-
-## See also
-
-[How to switch between views of the event calendar in Flutter?](https://www.syncfusion.com/kb/10944/how-to-switch-between-views-of-the-event-calendar-in-flutter)
-
-[How to update event calendar (SfCalendar) DisplayDate using showDatePicker in flutter](https://www.syncfusion.com/kb/11010/how-to-update-event-calendar-sfcalendar-displaydate-using-showdatepicker-in-flutter)
-
-[How can we move to specific time while switching from month to day view in Flutter event calendar](https://www.syncfusion.com/kb/10943/how-can-we-move-to-specific-time-while-switching-from-month-to-day-view-in-flutter-event)
-
-[How to customize the cell border in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12118/how-to-customize-the-cell-border-in-the-flutter-event-calendar-sfcalendar)
-
-[How to apply theming in Flutter event calendar (SfCalendar)?](https://www.syncfusion.com/kb/11899/how-to-apply-theming-in-flutter-event-calendar-sfcalendar)
-
-[How to add an image as background in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12243/how-to-add-an-image-as-background-in-the-flutter-event-calendar-sfcalendar)
-
-[How to change the first day of week in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12222/how-to-change-the-first-day-of-week-in-the-flutter-event-calendar-sfcalendar)
-
-[How to interact with event calendar cell when appointments loaded in the Flutter (SfCalendar)](https://www.syncfusion.com/kb/12218/how-to-interact-with-event-calendar-cell-when-appointments-loaded-in-the-flutter-sfcalendar)
-
-[How to customize the selection using decoration in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12245/how-to-customize-the-selection-using-decoration-in-the-flutter-event-calendar-sfcalendar)
-
-[How to navigate to the previous or next views using navigation arrows in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12247/how-to-navigate-to-the-previous-or-next-views-using-navigation-arrows-in-the-flutter-event)
-
-[How to customize the current day color in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12336/how-to-customize-the-current-day-color-in-the-flutter-event-calendar-sfcalendar)
-
-[How to show a particular week in a day view of Flutter event calendar(SfCalendar)](https://www.syncfusion.com/kb/12310/how-to-show-a-particular-week-in-a-day-view-of-flutter-event-calendarsfcalendar)
-
-[How to customize the selection using decoration in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12245/how-to-customize-the-selection-using-decoration-in-the-flutter-event-calendar-sfcalendar)
-
-[How to format the view header day and date in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12339/how-to-format-the-view-header-day-and-date-in-the-flutter-event-calendar-sfcalendar)
