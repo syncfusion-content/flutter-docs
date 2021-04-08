@@ -331,7 +331,7 @@ The border can be customized with [`borderWidth`](https://pub.dev/documentation/
 
 ## Add multiple bar pointers
 
-You can add multiple bar pointers for an axis. The bar pointers by default will overlap each other. So while adding a bar pointer offset value is needed to be specified. The below code example demonstrates adding two bar pointer with offset diffrent offset
+You can add multiple bar pointers for an axis. The bar pointers by default will overlap each other. So while adding a bar pointer offset value is needed to be specified. The below code example demonstrates adding two bar pointer with different offset
 
 {% highlight dart %} 
 
