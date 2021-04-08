@@ -27,7 +27,7 @@ Widget build(BuildContext context) {
         child: SfCalendar(
           view: CalendarView.week,
           onViewChanged: (ViewChangedDetails details) {
-            dates = details.visibleDates;
+            List<DateTime> dates = details.visibleDates;
           },
         ),
       ),
@@ -60,9 +60,9 @@ Widget build(BuildContext context) {
         child: SfCalendar(
           view: CalendarView.week,
           onTap: (CalendarTapDetails details) {
-            appointment = details.appointments;
-            date = details.date;
-            element = details.targetElement;
+            dynamic appointment = details.appointments;
+            DateTime date = details.date!;
+            CalendarElement element = details.targetElement;
           },
         ),
       ),
@@ -93,7 +93,7 @@ Widget build(BuildContext context) {
       child: SfCalendar(
         view: CalendarView.week,
         onLongPress: (CalendarLongPressDetails details) {
-          DateTime date = details.date;
+          DateTime date = details.date!;
           dynamic appointments = details.appointments;
           CalendarElement view = details.targetElement;
         },

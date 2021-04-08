@@ -13,7 +13,7 @@ You can provide clear information on the data plotted on the treemap using legen
 
 ## Enable default legend
 
-You can show legend by initializing the `SfTreemap.legend` property. By default, the legend item's text is rendered based on the value of `TreemapLevel.groupMapper` property. The default value of the `legend` property is `null` and hence the legend will not be shown by default.
+You can show legend by initializing the [`SfTreemap.legend`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/legend.html) property. By default, the legend item's text is rendered based on the value of [`TreemapLevel.groupMapper`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/groupMapper.html) property. The default value of the [`legend`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/legend.html) property is `null` and hence the legend will not be shown by default.
 
 {% tabs %}
 {% highlight Dart %}
@@ -68,11 +68,11 @@ class SocialMediaUsers {
 ![default legend](images/legend/default-legend.png)
 
 N>
-* Refer the `TreemapLegend.bar`, for showing bar shape legend.
+* Refer the [`TreemapLegend.bar`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/TreemapLegend.bar.html), for showing bar shape legend.
 
 ## Bar shape legend
 
-You can show bar shape legend by initializing the `SfTreemap.legend` property as `TreemapLegend.bar`. By default, the legend item's text is rendered based on the value of `TreemapLevel.groupMapper` property.
+You can show bar shape legend by initializing the [`SfTreemap.legend`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/legend.html) property as [`TreemapLegend.bar`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/TreemapLegend.bar.html). By default, the legend item's text is rendered based on the value of [`TreemapLevel.groupMapper`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/groupMapper.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -127,11 +127,11 @@ class SocialMediaUsers {
 ![bar legend](images/legend/bar-legend.png)
 
 N>
-* Refer the `TreemapLegend`, for showing default legend.
+* Refer the [`TreemapLegend`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/TreemapLegend.html), for showing default legend.
 
 ## Icon and text customization
 
-The icons color and text of the legend is applied based on the `TreemapLevel.color` and `TreemapLevel.groupMapper` properties respectively by default. It is possible to customize the legend icons color and texts using the `TreemapColorMapper.color` based on the `TreemapColorMapper.value` or `TreemapColorMapper.from` and `TreemapColorMapper.to` properties. You can also customize the legend item's text using the `TreemapColorMapper.legendItemText` when setting the `TreemapColorMapper.range` color mapper constructor.
+The icons color and text of the legend is applied based on the [`TreemapLevel.color`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/color.html) and [`TreemapLevel.groupMapper`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/groupMapper.html) properties respectively by default. It is possible to customize the legend icons color and texts using the [`TreemapColorMapper.color`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/color.html) based on the `TreemapColorMapper.value` or [`TreemapColorMapper.from`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/from.html) and [`TreemapColorMapper.to`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/to.html) properties. You can also customize the legend item's text using the [`TreemapColorMapper.name`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/name.html) when setting the [`TreemapColorMapper.range`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/TreemapColorMapper.range.html) color mapper constructor.
 
 {% tabs %}
 {% highlight Dart %}
@@ -198,7 +198,7 @@ class SocialMediaUsers {
 
 ## First segment label customization
 
-You can customize the first segment label of the legend using the `TreemapColorMapper.name` property with curly braces. The first curly brace value will be applied as segment start label and the next curly brace value will be applied as segment end label. By default, the `TreemapColorMapper.from` value is placed at the starting position of first segment and the `TreemapColorMapper.to` value is placed at the ending position of the first segment.
+You can customize the first segment label of the legend using the [`TreemapColorMapper.name`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/name.html) property with curly braces. The first curly brace value will be applied as segment start label and the next curly brace value will be applied as segment end label. By default, the [`TreemapColorMapper.from`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/from.html) value is placed at the starting position of first segment and the [`TreemapColorMapper.to`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/to.html) value is placed at the ending position of the first segment.
 
 {% tabs %}
 {% highlight Dart %}
@@ -208,46 +208,48 @@ late List<TreemapColorMapper> _colorMappers;
 
 @override
 void initState() {
-   _source = <SocialMediaUsers>[
-      SocialMediaUsers('India', 'Facebook', 25.4),
-      SocialMediaUsers('USA', 'Instagram', 19.11),
-      SocialMediaUsers('Japan', 'Facebook', 13.3),
-      SocialMediaUsers('Germany', 'Instagram', 10.65),
-      SocialMediaUsers('France', 'Twitter', 7.54),
-      SocialMediaUsers('UK', 'Instagram', 4.93),
-   ];
+  _source = <SocialMediaUsers>[
+    SocialMediaUsers('India', 'Facebook', 25.4),
+    SocialMediaUsers('USA', 'Instagram', 19.11),
+    SocialMediaUsers('Japan', 'Facebook', 13.3),
+    SocialMediaUsers('Germany', 'Instagram', 10.65),
+    SocialMediaUsers('France', 'Twitter', 7.54),
+    SocialMediaUsers('UK', 'Instagram', 4.93),
+  ];
 
-   _colorMappers = <TreemapColorMapper>[
-      TreemapColorMapper.range(
-          from: 0, to: 10, color: Colors.blue[200]!, name: '{>0},{10.0}'),
-      TreemapColorMapper.range(from: 10, to: 20, color: Colors.deepOrange),
-      TreemapColorMapper.range(from: 20, to: 30, color: Colors.blue[800]!),
-   ];
-   super.initState();
+  _colorMappers = <TreemapColorMapper>[
+    TreemapColorMapper.range(
+        from: 0, to: 10, color: Colors.blue[200]!, name: '{0M},{10M}'),
+    TreemapColorMapper.range(
+        from: 10, to: 20, color: Colors.deepOrange, name: '20M'),
+    TreemapColorMapper.range(
+        from: 20, to: 30, color: Colors.blue[800]!, name: '30M'),
+  ];
+  super.initState();
 }
 
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-     body: SfTreemap(
-        dataCount: _source.length,
-        weightValueMapper: (int index) {
-          return _source[index].usersInMillions;
-        },
-        levels: [
-          TreemapLevel(
-            padding: const EdgeInsets.all(1.5),
-            groupMapper: (int index) {
-              return _source[index].country;
-            },
-            colorValueMapper: (TreemapTile tile) {
-              return tile.weight;
-            },
-          ),
-        ],
-        colorMappers: _colorMappers,
-        legend: TreemapLegend.bar(),
-     ),
+    body: SfTreemap(
+      dataCount: _source.length,
+      weightValueMapper: (int index) {
+        return _source[index].usersInMillions;
+      },
+      levels: [
+        TreemapLevel(
+          padding: const EdgeInsets.all(1.5),
+          groupMapper: (int index) {
+            return _source[index].country;
+          },
+          colorValueMapper: (TreemapTile tile) {
+            return tile.weight;
+          },
+        ),
+      ],
+      colorMappers: _colorMappers,
+      legend: TreemapLegend.bar(),
+    ),
   );
 }
 
@@ -266,7 +268,7 @@ class SocialMediaUsers {
 
 ## Position
 
-You can position the legend items in different directions using the `TreemapLegend.position` property. The default value of the `position` property is `TreemapLegendPosition.top`. The possible values are `left`, `right`, `top`, and `bottom`.
+You can position the legend items in different directions using the [`TreemapLegend.position`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/position.html) property. The default value of the `position` property is [`TreemapLegendPosition.top`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegendPosition-class.html). The possible values are `left`, `right`, `top`, and `bottom`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -323,13 +325,13 @@ class SocialMediaUsers {
 ![legend position](images/legend/legend-position.png)
 
 N>
-* Refer the `offset`, for placing the legend in custom position.
+* Refer the [`offset`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/offset.html), for placing the legend in custom position.
 
 ## Offset
 
-You can place the legend in custom position using the `TreemapLegend.offset` property. The default value of the `offset` property is `null`.
+You can place the legend in custom position using the [`TreemapLegend.offset`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/offset.html) property. The default value of the `offset` property is `null`.
 
-If the property `TreemapLegend.offset` has been set with the property `TreemapLegend.position` as top, then the legend will be placed in top but with absolute position, i.e. legend will not take dedicated position for it and will be drawn at the top of the map.
+If the property [`TreemapLegend.offset`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/offset.html) has been set with the property [`TreemapLegend.position`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/position.html) as top, then the legend will be placed in top but with absolute position, i.e. legend will not take dedicated position for it and will be drawn at the top of the map.
 
 {% tabs %}
 {% highlight Dart %}
@@ -387,7 +389,7 @@ class SocialMediaUsers {
 
 <b>For default legend</b>
 
-You can wrap or scroll the legend items using the `TreemapLegend.overflowMode` property. The default value of the `overflowMode` property is `TreemapLegendOverflowMode.wrap`. The possible values are `scroll` and `wrap`.
+You can wrap or scroll the legend items using the [`TreemapLegend.overflowMode`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/overflowMode.html) property. The default value of the `overflowMode` property is [`TreemapLegendOverflowMode.wrap`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegendOverflowMode-class.html). The possible values are `scroll` and `wrap`.
 
 If the legend position is `left` or `right`, then the default scroll direction is `vertical`.
 
@@ -451,7 +453,7 @@ class SocialMediaUsers {
 
 <b>For bar legend</b>
 
-You can wrap or scroll the bar legend items using the `TreemapLegend.overflowMode` property. The default value of the `overflowMode` property is `TreemapLegendOverflowMode.scroll`. The possible values are `scroll` and `wrap`.
+You can wrap or scroll the bar legend items using the [`TreemapLegend.overflowMode`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/overflowMode.html) property. The default value of the `overflowMode` property is [`TreemapLegendOverflowMode.scroll`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegendOverflowMode-class.html). The possible values are `scroll` and `wrap`.
 
 If the legend position is `left` or `right`, then the default scroll direction is `vertical`.
 
@@ -512,11 +514,11 @@ class SocialMediaUsers {
 ![bar legend overflow mode](images/legend/bar-legend-overflow-mode.gif)
 
 N>
-* Refer the `iconSize`, for changing the size of the icon.
+* Refer the [`iconSize`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/TreemapLegend.html), for changing the size of the icon.
 
 ## Text style
 
-You can customize the legend item's text style using the `TreemapLegend.textStyle` property.
+You can customize the legend item's text style using the [`TreemapLegend.textStyle`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/textStyle.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -581,11 +583,11 @@ class SocialMediaUsers {
 
 You can customize the legend items using the following properties.
 
-* **iconType** - Used to change the icon shape. The default value of the `iconType` argument in the `constructor` is `TreemapIconType.circle`. The possible values are `circle`, `rectangle`, `triangle`, and `diamond`.
-* **iconSize** - Used to change the size of the icon. The default value of `iconSize` argument in the `constructor` is `Size(8.0, 8.0)`.
-* **spacing** - Used to provide space between the each legend items. The default value of the `spacing` argument in the `constructor`is `10.0`.
-* **direction** - Used to arrange the legend items in either horizontal or vertical direction. The default value of `direction` property is `horizontal`, if the value of the `position` property is `top`, `bottom` and defaults to `vertical`, if the value of the `position` property is `left` or `right`.
-* **padding** - Used to set padding around the legend. The default value of the `padding` property is `EdgeInsets.all(10.0)`.
+* **iconType** - Used to change the icon shape. The default value of the [`iconType`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/TreemapLegend.html) argument in the constructor is `TreemapIconType.circle`. The possible values are `circle`, `rectangle`, `triangle`, and `diamond`.
+* **iconSize** - Used to change the size of the icon. The default value of [`iconSize`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/TreemapLegend.html) argument in the constructor is `Size(8.0, 8.0)`.
+* **spacing** - Used to provide space between the each legend items. The default value of the [`spacing`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/spacing.html) argument in the constructor is `10.0`.
+* **direction** - Used to arrange the legend items in either horizontal or vertical direction. The default value of [`direction`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/direction.html) property is `horizontal`, if the value of the `position` property is `top`, `bottom` and defaults to `vertical`, if the value of the `position` property is `left` or `right`.
+* **padding** - Used to set padding around the legend. The default value of the [`padding`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/padding.html) property is `EdgeInsets.all(10.0)`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -652,7 +654,7 @@ N>
 
 ### Solid
 
-You can set solid color for the bar by using the `TreemapLegendPaintingStyle.solid`. By defaults `TreemapLegendPaintingStyle` will be `solid`.
+You can set solid color for the bar by using the `TreemapLegendPaintingStyle.solid`. By defaults [`TreemapLegendPaintingStyle`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegendPaintingStyle-class.html) will be `solid`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -721,7 +723,7 @@ class SocialMediaUsers {
 
 ### Gradient
 
-You can set gradient color for the bar by using the `TreemapLegendPaintingStyle.gradient`.
+You can set gradient color for the bar by using the [`TreemapLegendPaintingStyle.gradient`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegendPaintingStyle-class.html).
 
 {% tabs %}
 {% highlight Dart %}
@@ -792,12 +794,12 @@ class SocialMediaUsers {
 
 You can customize the legend items using the following properties.
 
-* **segmentSize** - Used to change the size of individual bar segments. When gradient paint style is applied, `segmentSize` argument in the `constructor` will update the whole bar. The default value of the `segmentSize` property is `Size(80.0, 12.0)`.
-* **labelOverflow** - Used to remove or trim the legend labels based on the bar legend size.The default value of the `labelOverflow` argument in the `constructor` will be `TreemapLabelOverflow.visible`.
-* **edgeLabelsPlacement** - Used to place the edge labels either inside or outside of the bar legend. The default value of the `edgeLabelsPlacement` argument in the `constructor` will be `TreemapLegendEdgeLabelsPlacement.inside`.
-* **spacing** - Used to provide space between the each legend items. The default value of the `spacing` is `2.0`. This is not applicable for gradient legend.
-* **direction** - Used to arrange the legend items in either horizontal or vertical direction. The default value of `direction` property is `horizontal`, if the value of the `position` property is `top`, `bottom` and defaults to `vertical`, if the value of the `position` property is `left` or `right`.
-* **padding** - Used to set padding around the legend. The default value of the `padding` property is `EdgeInsets.all(10.0)`.
+* **segmentSize** - Used to change the size of individual bar segments. When gradient paint style is applied, [`segmentSize`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/TreemapLegend.bar.html) argument in the constructor will update the whole bar. The default value of the [`segmentSize`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/TreemapLegend.bar.html) property is `Size(80.0, 12.0)`.
+* **labelOverflow** - Used to remove or trim the legend labels based on the bar legend size.The default value of the [`labelOverflow`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/TreemapLegend.bar.html) argument in the constructor will be `TreemapLabelOverflow.visible`.
+* **edgeLabelsPlacement** - Used to place the edge labels either inside or outside of the bar legend. The default value of the [`edgeLabelsPlacement`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/TreemapLegend.bar.html) argument in the constructor will be `TreemapLegendEdgeLabelsPlacement.inside`.
+* **spacing** - Used to provide space between the each legend items. The default value of the [`spacing`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/TreemapLegend.bar.html) is `2.0`. This is not applicable for gradient legend.
+* **direction** - Used to arrange the legend items in either horizontal or vertical direction. The default value of [`direction`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/TreemapLegend.bar.html) property is `horizontal`, if the value of the `position` property is `top`, `bottom` and defaults to `vertical`, if the value of the [`position`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/TreemapLegend.bar.html) property is `left` or `right`.
+* **padding** - Used to set padding around the legend. The default value of the [`padding`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/TreemapLegend.bar.html) property is `EdgeInsets.all(10.0)`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -860,11 +862,11 @@ class SocialMediaUsers {
 
 ## Bar legend labels placement
 
-You can place the labels either between the segments or on the segments using the `labelsPlacement` property.
+You can place the labels either between the segments or on the segments using the [`labelsPlacement`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/TreemapLegend.bar.html) property.
 
 <b>Labels placement for range color mapper</b>
 
-The labels are positioned between the segments when setting range color mapper without setting color mapper `TreemapColorMapper.name` property. The `TreemapColorMapper.from` value of the first item is positioned at starting point of the first segment and the `TreemapColorMapper.to` value of the first item is placed at the first segment end position. For other segments, the values of `TreemapColorMapper.to` is positioned as label between the other segments.
+The labels are positioned between the segments when setting range color mapper without setting color mapper [`TreemapColorMapper.name`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/name.html) property. The [`TreemapColorMapper.from`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/from.html) value of the first item is positioned at starting point of the first segment and the [`TreemapColorMapper.to`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/to.html) value of the first item is placed at the first segment end position. For other segments, the values of [`TreemapColorMapper.to`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/to.html) is positioned as label between the other segments.
 
 {% tabs %}
 {% highlight Dart %}
@@ -932,7 +934,7 @@ class SocialMediaUsers {
 
 ![Bar legend labels placement](images/legend/bar-legend-range-color-mapper-default.png)
 
-The labels are positioned between the segments when setting range color mapper along with setting color mapper `TreemapColorMapper.name` property. The `TreemapColorMapper.from` value of the first item is positioned at starting point of the first segment and the `TreemapColorMapper.name` value of the first item is placed at the first segment end position. For Other segments, the value of `TreemapColorMapper.name` is positioned as label between the segments.
+The labels are positioned between the segments when setting range color mapper along with setting color mapper [`TreemapColorMapper.name`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/name.html) property. The [`TreemapColorMapper.from`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/from.html) value of the first item is positioned at starting point of the first segment and the [`TreemapColorMapper.name`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/name.html) value of the first item is placed at the first segment end position. For Other segments, the value of [`TreemapColorMapper.name`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/name.html) is positioned as label between the segments.
 
 {% tabs %}
 {% highlight Dart %}
@@ -1003,7 +1005,7 @@ class SocialMediaUsers {
 
 ![Bar legend labels placement](images/legend/bar-legend-range-color-mapper-with-text.png)
 
-The labels are positioned at the center of the segments when setting the `labelsPlacement` property to `TreemapLegendLabelsPlacement.onItem`. The labels will based on the value of `TreemapColorMapper.name` property. If the value of `TreemapColorMapper.name` property is null, labels will be based on the values of `TreemapColorMapper.from` and `TreemapColorMapper.to` properties.
+The labels are positioned at the center of the segments when setting the [`labelsPlacement`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/TreemapLegend.bar.html) property to `TreemapLegendLabelsPlacement.onItem`. The labels will based on the value of [`TreemapColorMapper.name`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/name.html) property. If the value of [`TreemapColorMapper.name`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/name.html) property is null, labels will be based on the values of [`TreemapColorMapper.from`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/from.html) and [`TreemapColorMapper.to`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/to.html) properties.
 
 {% tabs %}
 {% highlight Dart %}
