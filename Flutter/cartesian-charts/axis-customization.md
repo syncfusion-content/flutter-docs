@@ -225,7 +225,7 @@ The [`labelFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 Also refer [number format](./axis-types#formatting-the-labels) and [date format](./axis-types#formatting-the-labels-1) for formatting the labels further.
 
 >**NOTE** : 
-Import the following package to use label format in your package.'import "package:intl/intl.dart";'
+Import the following package to use label format in your package.`import "package:intl/intl.dart";`.
 
 ### Label and tick positioning
 

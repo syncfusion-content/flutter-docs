@@ -283,7 +283,7 @@ Also refer [label format](./axis-customization#formatting-axis-label-content) an
 further.
 
 >**NOTE** : 
-Import the following package to use number format in your package.'import "package:intl/intl.dart";'
+Import the following package to use number format in your package.`import "package:intl/intl.dart";`.
 
 
 ### Decimal places
@@ -699,7 +699,7 @@ The [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
 Also refer [label format](./axis-customization#formatting-axis-label-content) and [number format](#formatting-the-labels) for formatting the labels further.
 
 >**NOTE** : 
-Import the following package to use date format in your package.'import "package:intl/intl.dart";'
+Import the following package to use date format in your package.`import "package:intl/intl.dart";`.
 
 ## Date-time category axis
 
@@ -816,7 +816,7 @@ The [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
 Also refer [label format](./axis-customization#formatting-axis-label-content) and [number format](#formatting-the-labels) for formatting the labels further.
 
 >**NOTE** : 
-Import the following package to use date format in your package.'import "package:intl/intl.dart";'
+Import the following package to use date format in your package.`import "package:intl/intl.dart";`.
 
 ## Logarithmic axis
 

@@ -222,7 +222,7 @@ import
 
 ![DataLabel format](images/marker-datalabel/datalabel_format.jpg)
 
-Import the following package to use label format in your package. 'in your application, import "package:intl/intl.dart";'
+Import the following package to use label format in your package in your application, `import "package:intl/intl.dart";`.
 
 ### Label position
 
