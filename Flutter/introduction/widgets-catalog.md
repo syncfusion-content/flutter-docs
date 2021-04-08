@@ -27,7 +27,7 @@ This section provides the user guide link for each widget and its package link.
 </tr>
 <tr>
 
-<td rowspan="12">
+<td rowspan="13">
 <p>Data Visualization</p>
 </td>
 <td><p><a href="https://help.syncfusion.com/flutter/barcode/overview">Barcode</a></p></td>
@@ -85,7 +85,6 @@ This section provides the user guide link for each widget and its package link.
 <td><p><a href="https://pub.dev/packages/syncfusion_flutter_gauges">syncfusion_flutter_gauges</a></p>
 </td>
 </tr>
-
 
 <tr>
 <td><p><a href="https://help.syncfusion.com/flutter/maps/overview">Maps</a></p></td>

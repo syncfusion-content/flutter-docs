@@ -384,7 +384,7 @@ Chart will display details about the points through tooltip, when user interacti
 
 {% highlight dart %}
 
-    TooltipBehavior _tooltipBehavior;
+    late TooltipBehavior _tooltipBehavior;
     
     @override
     void initState(){

@@ -24,19 +24,19 @@ final Workbook workbook = Workbook();
 final Worksheet sheet = workbook.worksheets[0];
 
 //Creating a new style with all properties.
-final Style style = CellStyle(workbook);
+final CellStyle style = CellStyle(workbook);
 // set style name.
 style.name = 'Style1';
 // set back color by hexa decimal.
 style.backColor = '#FF5050';
 // set back color by RGB values.
-style.backColorRGB = Color.fromARGB(255, 34, 244, 0);
+style.backColorRgb = Color.fromARGB(255, 34, 244, 0);
 // set font name.
 style.fontName = 'Aldhabi';
 // set font color by hexa decimal.
 style.fontColor = '#138939';
 // set font color by RGB values.
-style.fontColorRGB = Color.fromARGB(255, 244, 0, 34);
+style.fontColorRgb = Color.fromARGB(255, 244, 0, 34);
 // set font size.
 style.fontSize = 16;
 // set font bold.
@@ -60,7 +60,7 @@ style.borders.top.color = '#FFFF66';
 // set right bordera line style.
 style.borders.right.lineStyle = LineStyle.thick;
 // set right borders color by RGB values.
-style.borders.right.colorRGB = Color.fromARGB(255, 0, 34, 244);
+style.borders.right.colorRgb = Color.fromARGB(255, 0, 34, 244);
 // set wrap text.
 style.wrapText = true;
 // set number format to cell.
@@ -73,10 +73,10 @@ workbook.styles.addStyle(style);
 sheet.getRangeByName('A1').cellStyle = style;
 
 // Save and dispose the document.
-final List<int> bytes = workbook.saveAsStream();
+final List<int>? bytes = workbook.saveAsStream();
 workbook.dispose();
 
-File('CreateCellStyle.xlsx').writeAsBytes(bytes);
+File('CreateCellStyle.xlsx').writeAsBytes(bytes!);
 
 {% endhighlight %}
 
@@ -85,7 +85,6 @@ File('CreateCellStyle.xlsx').writeAsBytes(bytes);
 The Flutter XlsIO adds styles globally that can be applied to one or more cells in a workbook. This is a recommended approach to apply single style in different rows and columns, which improves memory and performance considerably.
 
 The following code snippet illustrates how to apply global style.
-
 
 {% highlight dart %}
 
@@ -144,10 +143,10 @@ sheet.getRangeByName('A1:D1').cellStyle = globalStyle;
 sheet.getRangeByName('B2:D4').cellStyle = globalStyle1;
 
 // Save and dispose the document.
-final List<int> bytes = workbook.saveAsStream();
+final List<int>? bytes = workbook.saveAsStream();
 workbook.dispose();
 
-File('ApplyGlobalStyle.xlsx').writeAsBytes(bytes);
+File('ApplyGlobalStyle.xlsx').writeAsBytes(bytes!);
 
 {% endhighlight %}
 
@@ -550,10 +549,10 @@ sheet.getRangeByName('A1').columnWidth = 21;
 sheet.getRangeByName('B1:C1').columnWidth = 13;
 
 // save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int>? bytes = workbook.saveAsStream();
 workbook.dispose();
 
-File('NumberFormats.xlsx').writeAsBytes(bytes);
+File('NumberFormats.xlsx').writeAsBytes(bytes!);
 
 {% endhighlight %}
 
@@ -583,10 +582,10 @@ range1.setNumber(10);
 range1.displayText;
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int>? bytes = workbook.saveAsStream();
 workbook.dispose();
 
-File('DisplayText.xlsx').writeAsBytes(bytes);
+File('DisplayText.xlsx').writeAsBytes(bytes!);
 
 {% endhighlight %}
 
@@ -627,10 +626,10 @@ sheet.getRangeByName('A1:C16').merge();
 sheet.getRangeByName('A1:C16').unmerge();
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int>? bytes = workbook.saveAsStream();
 workbook.dispose();
 
-File('MergeUnMerge.xlsx').writeAsBytes(bytes);
+File('MergeUnMerge.xlsx').writeAsBytes(bytes!);
 
 {% endhighlight %}
 
@@ -653,10 +652,10 @@ sheet.getRangeByName('A2').setText('Sample');
 sheet.getRangeByName('A2').builtInStyle = BuiltInStyles.checkCell;
 
 // save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int>? bytes = workbook.saveAsStream();
 workbook.dispose();
 
-File('BuiltInStyle.xlsx').writeAsBytes(bytes);
+File('BuiltInStyle.xlsx').writeAsBytes(bytes!);
 
 {% endhighlight %}
 

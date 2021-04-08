@@ -17,7 +17,7 @@ This section explains the different layouts in the treemap widget. The available
 
 ## Squarified
 
-The squarified layout will arrange the rectangles in a row and wrap them to the next row according to the available size. The size of the particular rectangle is based on the value returned from `weightValueMapper` callback. By default, squarified layout is used.
+The [`squarified`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/SfTreemap.html) layout will arrange the rectangles in a row and wrap them to the next row according to the available size. The size of the particular rectangle is based on the value returned from [`weightValueMapper`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/weightValueMapper.html) callback. By default, squarified layout is used.
 
 {% tabs %}
 {% highlight Dart %}
@@ -75,7 +75,7 @@ class PopulationModel {
 
 ## Slice
 
-The slice layout will start to arrange each rectangle in a horizontal direction and the size of the rectangle will be based on the value returned from `weightValueMapper` callback and the available height.
+The [`slice`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/SfTreemap.slice.html) layout will start to arrange each rectangle in a horizontal direction and the size of the rectangle will be based on the value returned from [`weightValueMapper`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/weightValueMapper.html) callback and the available height.
 
 {% tabs %}
 {% highlight Dart %}
@@ -133,7 +133,7 @@ class PopulationModel {
 
 ## Dice
 
-The dice structure will start to arrange each rectangle in the vertical direction and the size of the rectangle will be based on the value returned from the `weightValueMapper` callback and the available width.
+The [`dice`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/SfTreemap.dice.html) structure will start to arrange each rectangle in the vertical direction and the size of the rectangle will be based on the value returned from the [`weightValueMapper`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap/weightValueMapper.html) callback and the available width.
 
 {% tabs %}
 {% highlight Dart %}

@@ -18,8 +18,8 @@ The procedure for zooming and panning for both layers is very similar.
 {% tabs %}
 {% highlight Dart %}
 
-MapZoomPanBehavior _zoomPanBehavior;
-MapShapeSource _dataSource;
+late MapZoomPanBehavior _zoomPanBehavior;
+late MapShapeSource _dataSource;
 
 @override
 void initState() {
@@ -53,7 +53,7 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-MapZoomPanBehavior _zoomPanBehavior;
+late MapZoomPanBehavior _zoomPanBehavior;
 
 @override
 void initState() {
@@ -71,7 +71,7 @@ Widget build(BuildContext context) {
                 return SfMaps(
                     layers: [
                         MapTileLayer(
-                            urlTemplate: snapshot.data,
+                            urlTemplate: snapshot.data as String,
                             zoomPanBehavior: _zoomPanBehavior,
                         ),
                     ],
@@ -96,7 +96,7 @@ To enable panning, set the instance of [`MapZoomPanBehavior`](https://pub.dev/do
 {% tabs %}
 {% highlight Dart %}
 
-MapZoomPanBehavior _zoomPanBehavior;
+late MapZoomPanBehavior _zoomPanBehavior;
 
 @override
 void initState() {
@@ -116,7 +116,7 @@ Widget build(BuildContext context) {
                 return SfMaps(
                     layers: [
                         MapTileLayer(
-                            urlTemplate: snapshot.data,
+                            urlTemplate: snapshot.data as String,
                             zoomPanBehavior: _zoomPanBehavior,
                         ),
                     ],
@@ -141,8 +141,8 @@ N> It is applicable for both shape layer and tile layer.
 {% tabs %}
 {% highlight Dart %}
 
-MapZoomPanBehavior _zoomPanBehavior;
-MapShapeSource _dataSource;
+late MapZoomPanBehavior _zoomPanBehavior;
+late MapShapeSource _dataSource;
 
 @override
 void initState() {
@@ -200,7 +200,7 @@ To enable zooming, set the instance of [`MapZoomPanBehavior`](https://pub.dev/do
 {% tabs %}
 {% highlight Dart %}
 
-MapZoomPanBehavior _zoomPanBehavior;
+late MapZoomPanBehavior _zoomPanBehavior;
 
 @override
 void initState() {
@@ -221,7 +221,7 @@ Widget build(BuildContext context) {
                 return SfMaps(
                     layers: [
                         MapTileLayer(
-                            urlTemplate: snapshot.data,
+                            urlTemplate: snapshot.data as String,
                             zoomPanBehavior: _zoomPanBehavior,
                         ),
                     ],
@@ -246,8 +246,8 @@ N> It is applicable for both shape layer and tile layer.
 {% tabs %}
 {% highlight Dart %}
 
-MapZoomPanBehavior _zoomPanBehavior;
-MapShapeSource _dataSource;
+late MapZoomPanBehavior _zoomPanBehavior;
+late MapShapeSource _dataSource;
 
 @override
 void initState() {
@@ -302,7 +302,7 @@ However, for [MapTileLayer](https://pub.dev/documentation/syncfusion_flutter_map
 {% tabs %}
 {% highlight Dart %}
 
-MapZoomPanBehavior _zoomPanBehavior;
+late MapZoomPanBehavior _zoomPanBehavior;
 
 @override
 void initState() {
@@ -325,7 +325,7 @@ Widget build(BuildContext context) {
                 return SfMaps(
                     layers: [
                         MapTileLayer(
-                            urlTemplate: snapshot.data,
+                            urlTemplate: snapshot.data as String,
                             zoomPanBehavior: _zoomPanBehavior,
                         ),
                     ],
@@ -361,12 +361,12 @@ Whenever zooming happens, this method is called. If it returns false, zooming wi
 {% tabs %}
 {% highlight Dart %}
 
-MapZoomPanBehavior _zoomPanBehavior;
+late MapZoomPanBehavior _zoomPanBehavior;
 
 @override
 void initState() {
     super.initState();
-    _zoomPanBehavior = _CustomZoomPanBehavior();
+    _zoomPanBehavior = MapZoomPanBehavior()
 }
 
 @override
@@ -379,7 +379,7 @@ Widget build(BuildContext context) {
                 return SfMaps(
                     layers: [
                         MapTileLayer(
-                            urlTemplate: snapshot.data,
+                            urlTemplate: snapshot.data as String,
                             zoomPanBehavior: _zoomPanBehavior,
                             onWillZoom: (MapZoomDetails detail) {
                                 return true;
@@ -411,12 +411,12 @@ Whenever panning happens, this method is called. If it returns false, panning wi
 {% tabs %}
 {% highlight Dart %}
 
-MapZoomPanBehavior _zoomPanBehavior;
+late MapZoomPanBehavior _zoomPanBehavior;
 
 @override
 void initState() {
     super.initState();
-    _zoomPanBehavior = _CustomZoomPanBehavior();
+    _zoomPanBehavior = MapZoomPanBehavior();
 }
 
 @override
@@ -429,7 +429,7 @@ Widget build(BuildContext context) {
                 return SfMaps(
                     layers: [
                         MapTileLayer(
-                            urlTemplate: snapshot.data,
+                            urlTemplate: snapshot.data as String,
                             zoomPanBehavior: _zoomPanBehavior,
                             onWillPan: (MapPanDetails detail) {
                                 return true;
@@ -465,7 +465,7 @@ Whenever zooming happens, this method is called. Subclasses can override this me
 {% tabs %}
 {% highlight Dart %}
 
-MapZoomPanBehavior _zoomPanBehavior;
+late MapZoomPanBehavior _zoomPanBehavior;
 
 @override
 void initState() {
@@ -483,7 +483,7 @@ Widget build(BuildContext context) {
                 return SfMaps(
                     layers: [
                         MapTileLayer(
-                            urlTemplate: snapshot.data,
+                            urlTemplate: snapshot.data as String,
                             zoomPanBehavior: _zoomPanBehavior,
                         ),
                     ],
@@ -525,7 +525,7 @@ Whenever panning happens, this method is called. Subclasses can override this me
 {% tabs %}
 {% highlight Dart %}
 
-MapZoomPanBehavior _zoomPanBehavior;
+late MapZoomPanBehavior _zoomPanBehavior;
 
 @override
 void initState() {
@@ -543,7 +543,7 @@ Widget build(BuildContext context) {
                 return SfMaps(
                     layers: [
                         MapTileLayer(
-                            urlTemplate: snapshot.data,
+                            urlTemplate: snapshot.data as String,
                             zoomPanBehavior: _zoomPanBehavior,
                         ),
                     ],
@@ -576,7 +576,7 @@ You can [`reset`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/m
 {% tabs %}
 {% highlight Dart %}
 
-MapZoomPanBehavior _zoomPanBehavior;
+late MapZoomPanBehavior _zoomPanBehavior;
 
 @override
 void initState() {
@@ -596,7 +596,7 @@ Widget build(BuildContext context) {
                         return SfMaps(
                             layers: [
                                 MapTileLayer(
-                                    urlTemplate: snapshot.data,
+                                    urlTemplate: snapshot.data as String,
                                     zoomPanBehavior: _zoomPanBehavior,
                                 ),
                             ],
@@ -625,7 +625,7 @@ You can override this method to handle pointer events that hit this render objec
 {% tabs %}
 {% highlight Dart %}
 
-MapZoomPanBehavior _zoomPanBehavior;
+late MapZoomPanBehavior _zoomPanBehavior;
 
 @override
 void initState() {
@@ -643,7 +643,7 @@ Widget build(BuildContext context) {
                 return SfMaps(
                     layers: [
                         MapTileLayer(
-                            urlTemplate: snapshot.data,
+                            urlTemplate: snapshot.data as String,
                             zoomPanBehavior: _zoomPanBehavior,
                         ),
                     ],
@@ -673,7 +673,7 @@ You can paint this render object into the given context at the given offset.
 {% tabs %}
 {% highlight Dart %}
 
-MapZoomPanBehavior _zoomPanBehavior;
+late MapZoomPanBehavior _zoomPanBehavior;
 
 @override
 void initState() {
@@ -691,7 +691,7 @@ Widget build(BuildContext context) {
                 return SfMaps(
                     layers: [
                         MapTileLayer(
-                            urlTemplate: snapshot.data,
+                            urlTemplate: snapshot.data as String,
                             zoomPanBehavior: _zoomPanBehavior,
                         ),
                     ],
