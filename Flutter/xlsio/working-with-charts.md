@@ -150,7 +150,7 @@ chart.chartTitleArea.bold = true;
 chart.chartTitleArea.size = 12;
 
 // setting legend position.
-chart.legend?.position = ExcelLegendPosition.bottom;
+chart.legend!.position = ExcelLegendPosition.bottom;
 
 // setting the chart position.
 chart.topRow = 0;
