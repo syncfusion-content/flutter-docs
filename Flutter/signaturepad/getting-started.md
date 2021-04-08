@@ -154,7 +154,7 @@ Widget build(BuildContext context) {
             child: Text("Save As Image"),
             onPressed: () async {
               ui.Image image =
-                 await _signaturePadKey.currentState.toImage();
+                 await _signaturePadKey.currentState!.toImage();
             }),
       ],
     ),
@@ -194,7 +194,7 @@ Widget build(BuildContext context) {
                 final context = canvas.context2D;
 				
 				//Get the signature in the canvas context.
-                _signaturePadKey.currentState.renderToContext2D(context);
+                _signaturePadKey.currentState!.renderToContext2D(context);
 				
 				//Get the image from the canvas context
                 final blob = await canvas.toBlob('image/jpeg', 1.0);
@@ -239,7 +239,7 @@ Widget build(BuildContext context) {
             child: Text("Save As Image"),
             onPressed: () async {
               ui.Image image =
-                 _signaturePadKey.currentState.clear();
+                 _signaturePadKey.currentState!.clear();
             }),
       ],
     ),
