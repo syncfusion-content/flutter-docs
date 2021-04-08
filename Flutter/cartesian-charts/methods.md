@@ -634,7 +634,7 @@ N> The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter
 
 ### ZoomIn method in zoomPanBehavior
 
-The [`zoomIn`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/zoomIn.html) method is used to increases the magnification of the plot area.
+The [`zoomIn`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/zoomIn.html) method is used to increase the magnification of the plot area.
 
 {% highlight dart %}
 
@@ -694,7 +694,7 @@ The [`zoomIn`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
 
 ### ZoomOut method in zoomPanBehavior
 
-The [`zoomOut`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/zoomOut.html) method is used to decreases the magnification of the plot area.
+The [`zoomOut`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/zoomOut.html) method is used to decrease the magnification of the plot area.
 
 {% highlight dart %}
 

@@ -17,10 +17,10 @@ Following properties are used to customize its appearance.
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTitle/borderColor.html) - used to change the border color.
 * [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTitle/borderWidth.html) - used to change the border width.
 * [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTitle/textStyle.html) - used to change the text color, size, font family, fontStyle, and font weight.
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/color.html) - used to change the color of the text.
-* [`fontFamily`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontFamily.html) - used to change the font family for chart title. 
-* [`fontStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontStyle.html) - used to change the font style for the chart title.
-* [`fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontSize.html) - used to change the font size for the chart title.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/color.html) - used to change the color of the text.
+* [`fontFamily`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontFamily.html) - used to change the font family for chart title. 
+* [`fontStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontStyle.html) - used to change the font style for the chart title.
+* [`fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontSize.html) - used to change the font size for the chart title.
 
 ### Title Alignment
 
@@ -41,7 +41,7 @@ You can align the title text content horizontally to the near, center or far of 
                 borderWidth: 2,
                 // Aligns the chart title to left
                 alignment: ChartAlignment.near,
-                textStyle: ChartTextStyle(
+                textStyle: TextStyle(
                   color: Colors.red,
                   fontFamily: 'Roboto',
                   fontStyle: FontStyle.italic,

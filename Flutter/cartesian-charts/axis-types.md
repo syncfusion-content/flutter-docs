@@ -45,7 +45,7 @@ Numeric axis uses numerical scale and displays numbers as labels. By default, [`
 
 ### Inversed numeric axis
 
-By using  the [isInversed](https://pub.dev/documentation/By using the [isInversed](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/isInversed.html) property in Cartesian charts, the numeric axis can be inverted. Axis is rendered from the minimum value to the maximum value by default, and can be inverted from the maximum value to the minimum value.
+By using the [isInversed](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/isInversed.html) property in Cartesian charts, the numeric axis can be inverted. Axis is rendered from the minimum value to the maximum value by default, and can be inverted from the maximum value to the minimum value.
 
 {% highlight dart %} 
 
@@ -279,7 +279,13 @@ The [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
 ![Number format](images/axis-types/number_format.jpg)
 
-Also refer [label format](./axis-customization#formatting-axis-label-content) and [date format](#formatting-the-labels-1) for formatting the labels further.
+Also refer [label format](./axis-customization#formatting-axis-label-content) and [date format](#formatting-the-labels-1) for formatting the labels 
+further.
+
+>**NOTE** : 
+Import the following import to use number Format.
+ import "package:intl/intl.dart";
+
 
 ### Decimal places
 
@@ -488,7 +494,7 @@ To customize the range of an axis, use the [`minimum`](https://pub.dev/documenta
 
 ### Date-time intervals
 
-The date-time intervals can be customized using the [`interval`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/interval.html) and [`intervalType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/intervalType.html) properties of [`DateTimeAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/DateTimeAxis.html). For example, setting [`interval`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/interval.html) as 2 and [`intervalType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/intervalType.html) as years will consider 2 years as interval.
+The date-time intervals can be customized using the [`interval`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/interval.html) and [`intervalType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/intervalType.html) properties of [`DateTimeAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/DateTimeAxis.html). For example, setting [`interval`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/interval.html) as 2 and [`intervalType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/intervalType.html) to years, would consider 2 years to be an interval.
 
 The Flutter Chart supports the following types of interval for date-time axis:
 
@@ -525,9 +531,9 @@ The Flutter Chart supports the following types of interval for date-time axis:
 
 ### Double range support
 
-Date-time axis [`interval`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/interval.html) property can be customize using double value.
+Date-time axis [`interval`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/interval.html) property can be customized using double value.
 
-For example, if you are rendering a series with months in x-axis with an interval of 0.5, then the interval will be calculated in days. The interval calculation may vary depends upon the number of days in the month.
+For example, if you are rendering a series with months in x-axis with an interval of 0.5, then the interval will be calculated in days. The interval calculation may vary dependsing upon the number of days in the month.
 
 
 {% highlight dart %} 
@@ -638,7 +644,7 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
 
 **normal**
 
-When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangePadding.html) property is [`normal`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding-class.html), padding is applied to the axis based on the default range calculation.
+When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangePadding.html) property is [`normal`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding-class.html), padding will be applied to the axis based on the default range calculation.
 
 {% highlight dart %} 
 
@@ -740,7 +746,7 @@ To customize the range of an axis, use the [`minimum`](~) and [`maximum`](~) pro
 
 ### Date-time intervals
 
-The date-time category intervals can be customized using the [`interval`](~) and [`intervalType`](~) properties of [`DateTimeCategoryAxis`](~). For example, To display the axis labels after a fixed interval n, set the [`interval`](~) property of ChartAxis to n and to display the labels in months, set the [`intervalType`](~) property of DateTimeCategoryAxis as months.
+The date-time category intervals can be customized using the [`interval`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/interval.html) and [`intervalType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoryAxis/intervalType.html) properties of [`DateTimeCategoryAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoryAxis-class.html). For example, To display the axis labels after a fixed interval n, set the [`interval`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/interval.html) property of ChartAxis to n and to display the labels in months, set the [`intervalType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoryAxis/intervalType.html) property of DateTimeCategoryAxis as months.
 
 The Flutter Chart supports the following types of interval for date-time category axis:
 
@@ -802,6 +808,8 @@ The [`dateFormat`](~) property formats the date-time category axis labels. The d
 ![DateTimeCategory  date format](images/axis-types/datetimecategory_dateFormat.jpg)
 
 Also refer [label format](./axis-customization#formatting-axis-label-content) and [number format](#formatting-the-labels) for formatting the labels further.
+
+import
 
 ## Logarithmic axis
 
@@ -881,7 +889,7 @@ To customize the log base value, use the [`logBase`](https://pub.dev/documentati
 
 ### Inversed logarithmic axis 
 
-By using  the [isInversed](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/isInversed.html) Property in Cartesian charts, the  logarithmic axis can be inverted.Axis is rendered from the minimum value to the maximum value by default, and can be inverted from the maximum value to the minimum value.
+By using  the [isInversed](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/isInversed.html) Property in Cartesian charts, the  logarithmic axis can be inverted. Axis gets rendered from the minimum value to the maximum value by default and can be inverted from the maximum value to the minimum value.
 
 {% highlight dart %}
 
