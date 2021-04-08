@@ -52,9 +52,9 @@ sheet.enableSheetCalculations();
 
 // Setting formula in the cell.
 Range range = sheet.getRangeByName('C6');
-range.setFormula('=AVERAGEIFS(B1:B5,C1:C5,\'>2\')');
+range.setFormula('=AVERAGEIFS(B1:B5,C1:C5,\">2\")');
 range = sheet.getRangeByName('C7');
-range.setFormula('=AVERAGEIFS(B1:B5,A1:A5,\'Apple\')');
+range.setFormula('=AVERAGEIFS(B1:B5,A1:A5,\"Apple\")');
 
 // Save and dispose workbook.
 final List<int> bytes = workbook.saveAsStream();
@@ -96,9 +96,9 @@ sheet.enableSheetCalculations();
 
 // Setting formula in the cell.
 Range range = sheet.getRangeByName('C6');
-range.setFormula('=MINIFS(B1:B5,C1:C5,\'>2\')');
+range.setFormula('=MINIFS(B1:B5,C1:C5,\">2\")');
 range = sheet.getRangeByName('C7');
-range.setFormula('=MINIFS(B1:B5,A1:A5,\'Apple\')');
+range.setFormula('=MINIFS(B1:B5,A1:A5,\"Apple\")');
 
 // Save and dispose workbook.
 final List<int> bytes = workbook.saveAsStream();
@@ -140,9 +140,9 @@ sheet.enableSheetCalculations();
 
 // Setting formula in the cell.
 Range range = sheet.getRangeByName('C6');
-range.setFormula('=MAXIFS(B1:B5,C1:C5,\'>2\')');
+range.setFormula('=MAXIFS(B1:B5,C1:C5,\">2\")');
 range = sheet.getRangeByName('C7');
-range.setFormula('=MAXIFS(B1:B5,A1:A5,\'Apple\')');
+range.setFormula('=MAXIFS(B1:B5,A1:A5,\"Apple\")');
 
 // Save and dispose workbook.
 final List<int> bytes = workbook.saveAsStream();
@@ -187,9 +187,9 @@ sheet.enableSheetCalculations();
 
 // Setting formula in the cell.
 Range range = sheet.getRangeByName('C8');
-range.setFormula('=COUNTIFS(A1:A5,\'Grapes\')');
+range.setFormula('=COUNTIFS(A1:A5,\"Grapes\")');
 range = sheet.getRangeByName('C9');
-range.setFormula('=COUNTIFS(A1:A5,\'Apple\',C1:C5,\'>2\')');
+range.setFormula('=COUNTIFS(A1:A5,\"Apple\",C1:C5,\">2\")');
 
 // Save and dispose workbook.
 final List<int> bytes = workbook.saveAsStream();
