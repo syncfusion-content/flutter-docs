@@ -29,10 +29,10 @@ final Worksheet sheet = workbook.worksheets[0];
 sheet.enableSheetCalculations();
 
 // Save and dispose workbook
-final List<int> bytes = workbook.saveAsStream();
+final List<int>? bytes = workbook.saveAsStream();
 workbook.dispose();
 
-File('Output.xlsx').writeAsBytes(bytes);
+File('Output.xlsx').writeAsBytes(bytes!);
 
 {% endhighlight %}
 
@@ -58,10 +58,10 @@ sheet.getRangeByName('A2').setNumber(20);
 sheet.getRangeByName('A3').setFormula('=A1+A2');
 
 //Save and dispose a workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int>? bytes = workbook.saveAsStream();
 workbook.dispose();
 
-File('Formula.xlsx').writeAsBytes(bytes);
+File('Formula.xlsx').writeAsBytes(bytes!);
 
 {% endhighlight %}
 
@@ -93,10 +93,10 @@ sheet.getRangeByName('A3').setFormula('=A1+A2');
 String calculatedValue = sheet.getRangeByName('A3').calculatedValue;
 
 // Save and dispose a workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int>? bytes = workbook.saveAsStream();
 workbook.dispose();
 
-File('Formula.xlsx').writeAsBytes(bytes);
+File('Formula.xlsx').writeAsBytes(bytes!);
 
 {% endhighlight %}
 
@@ -140,8 +140,8 @@ range.setFormula(
   '=IF(SUM(AVERAGE(B4:B9), MAX(COUNT(B4,D4), MIN(B5,D5))) > 50, \'PASS\', \'FAIL\')');
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
-File('NestedFunction.xlsx').writeAsBytes(bytes);
+final List<int>? bytes = workbook.saveAsStream();
+File('NestedFunction.xlsx').writeAsBytes(bytes!);
 workbook.dispose();
 
 {% endhighlight %}
