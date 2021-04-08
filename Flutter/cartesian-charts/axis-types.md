@@ -283,8 +283,7 @@ Also refer [label format](./axis-customization#formatting-axis-label-content) an
 further.
 
 >**NOTE** : 
-Import the following import to use number Format.
- import "package:intl/intl.dart";
+Import the following package to use number format in your package.'import "package:intl/intl.dart";'
 
 
 ### Decimal places
@@ -695,6 +694,9 @@ The [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
 
 Also refer [label format](./axis-customization#formatting-axis-label-content) and [number format](#formatting-the-labels) for formatting the labels further.
 
+>**NOTE** : 
+Import the following package to use date format in your package.'import "package:intl/intl.dart";'
+
 ## Date-time category axis
 
 Date-time category axis is a combination of both [`DateTimeAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/DateTimeAxis.html) and [`CategoryAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CategoryAxis-class.html). Date-time category axis is used to display the date-time values with non-linear intervals. For example, the business days alone have been depicted in a week here.
@@ -720,7 +722,7 @@ Date-time category axis is a combination of both [`DateTimeAxis`](https://pub.de
 
 ### Customizing range
 
-To customize the range of an axis, use the [`minimum`](~) and [`maximum`](~) properties of [`DateTimeCategoryAxis`](~). By default, nice range will be calculated automatically based on the provided data.
+To customize the range of an axis, use the [`minimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoryAxis/minimum.html) and [`maximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoryAxis/maximum.html) properties of [`DateTimeCategoryAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoryAxis-class.html). By default, nice range will be calculated automatically based on the provided data.
 
 {% highlight dart %} 
 
@@ -783,7 +785,7 @@ The Flutter Chart supports the following types of interval for date-time categor
 
 ### Formatting the labels
 
-The [`dateFormat`](~) property formats the date-time category axis labels. The default data-time category axis label can be formatted with various built-in [`date formats`](https://api.flutter.dev/flutter/intl/DateFormat-class.html), which depend on the given data source.
+The [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoryAxis/dateFormat.html) property formats the date-time category axis labels. The default data-time category axis label can be formatted with various built-in [`date formats`](https://api.flutter.dev/flutter/intl/DateFormat-class.html), which depend on the given data source.
 
 {% highlight dart %} 
 
@@ -809,7 +811,8 @@ The [`dateFormat`](~) property formats the date-time category axis labels. The d
 
 Also refer [label format](./axis-customization#formatting-axis-label-content) and [number format](#formatting-the-labels) for formatting the labels further.
 
-import
+>**NOTE** : 
+Import the following package to use date format in your package.'import "package:intl/intl.dart";'
 
 ## Logarithmic axis
 

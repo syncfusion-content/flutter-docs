@@ -224,6 +224,9 @@ The [`labelFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 
 Also refer [number format](./axis-types#formatting-the-labels) and [date format](./axis-types#formatting-the-labels-1) for formatting the labels further.
 
+>**NOTE** : 
+Import the following package to use label format in your package.'import "package:intl/intl.dart";'
+
 ### Label and tick positioning
 
 Axis labels and ticks can be positioned inside or outside the chart area by using [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelPosition.html) and [`tickPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/tickPosition.html) properties of ChartAxis. By default labels and ticks will be positioned outside the chart area.
@@ -1129,7 +1132,7 @@ Auto scrolling feature available in SfCartesianChart is used to ensure that spec
 
 ### AutoScrollingDeltaType
 
-In [`DateTimeAxis`](~), you can apply auto scrolling delta value in Years, Months, Days, Hours, Minutes, Seconds and auto by setting [`AutoScrollingDeltaType`](~) property. Default value of this property is `auto` and the delta will be calculated automatically based on range.
+In [`DateTimeAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis-class.html), you can apply auto scrolling delta value in Years, Months, Days, Hours, Minutes, Seconds and auto by setting [`AutoScrollingDeltaType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/autoScrollingDeltaType.html) property. Default value of this property is auto and the delta will be calculated automatically based on range.
 
 {% highlight dart %}
 

@@ -20,10 +20,10 @@ You can use the following properties to customize the behavior and appearance of
 * [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/width.html) - used to determine the width of trendline.
 * [`backwardForecast`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/backwardForecast.html) - used to specify the range of backward forecast for the trendline.
 * [`forwardForecast`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/forwardForecast.html) - used to specify the range of forward forecast for the trendline.
-* [`intercept`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/intercept.html) - Used to provide the trendline intercept values
+* [`intercept`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/intercept.html) - used to provide the trendline intercept values
 * [`period`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/period.html) - used to determine the starting point for the trendline.
 * [`polynomialOrder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/polynomialOrder.html) -used to provide the polynomial order for polynomial type trendlines.
-* [` animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/animationDuration.html) - Used to animate the trendlines. By default, animationDuration has a value of 1500. When animationDuration is set to zero no animation takes place.
+* [` animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/animationDuration.html) - used to animate the trendlines. By default, animationDuration has a value of 1500. When animationDuration is set to zero no animation takes place.
 * [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLine/dashArray.html) - pattern of dashes and gaps used to stroke the trendline.
 * [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/opacity.html) - opacity of the trendline.
 * [`valueField`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/valueField.html) - used to choose the valueField(low or high) to render the trendline. Defaults to low.
@@ -47,15 +47,17 @@ A linear trendline is a best fit straight line that is used with simpler data se
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis:DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders spline chart
-                            SplineSeries<SalesData, double>(
+                            SplineSeries<SalesData, dateTime>(
                                 dataSource: chartData,
                                 trendlines:<Trendline>[
                                  Trendline(
                                 type: TrendlineType.linear, 
                                 color: Colors.blue)
-                             ]
+                                ]
+                            )
                         ]
                     )
                 )
@@ -81,15 +83,17 @@ To render an exponential trendline, use trendline type as Exponential.
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis:DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders spline chart
-                            SplineSeries<SalesData, double>(
+                            SplineSeries<SalesData, dateTime>(
                                 dataSource: chartData,
                                 trendlines:<Trendline>[
                                  Trendline(
                                 type: TrendlineType.exponential, 
                                 color: Colors.blue)
                              ],
+                            )
                         ]
                     )
                 )
@@ -115,15 +119,17 @@ To render a logarithmic trendline, use trendline type as Logarithmic
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis:DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders spline chart
-                            SplineSeries<SalesData, double>(
+                            SplineSeries<SalesData, dateTime>(
                                 dataSource: chartData,
                                 trendlines:<Trendline>[
                                  Trendline(
                                 type: TrendlineType.logarithmic, 
                                 color: Colors.blue)
-                             ],
+                                ],
+                            )
                         ]
                     )
                 )
@@ -149,15 +155,17 @@ To render a polynomial trendline, use trendline type as Polynomial.
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis:DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders spline chart
-                            SplineSeries<SalesData, double>(
+                            SplineSeries<SalesData, dateTime>(
                                 dataSource: chartData,
                                 trendlines:<Trendline>[
                                  Trendline(
                                 type: TrendlineType.polynomial, 
                                 color: Colors.blue)
-                             ],
+                                ],
+                            )
                         ]
                     )
                 )
@@ -183,15 +191,17 @@ To render a power trendline, use trendline type as Power
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis:DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders spline chart
-                            SplineSeries<SalesData, double>(
+                            SplineSeries<SalesData, dateTime>(
                                 dataSource: chartData,
                                 trendlines:<Trendline>[
                                  Trendline(
                                 type: TrendlineType.power, 
                                 color: Colors.blue)
-                             ],
+                                ],
+                            )
                         ]
                     )
                 )
@@ -216,15 +226,17 @@ To render a moving average trendline, use trendline type as MovingAverage
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis:DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders spline chart
-                            SplineSeries<SalesData, double>(
+                            SplineSeries<SalesData, dateTime>(
                                 dataSource: chartData,
                                 trendlines:<Trendline>[
                                  Trendline(
                                 type: TrendlineType.MovingAverage,
                                 color: Colors.blue)
-                             ],
+                                ],
+                            )
                         ]
                     )
                 )
@@ -254,17 +266,19 @@ The value set for forwardForecast is used to determine the distance moving towar
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis:DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders spline chart
-                            SplineSeries<SalesData, double>(
+                            SplineSeries<SalesData, dateTime>(
                                 dataSource: chartData,
                                 trendlines:<Trendline>[
                                  Trendline(
                                 type: TrendlineType.linear, 
                                 forwardForecast:10,
                                 color: Colors.blue),
-                             ],
-                        ]
+                                ],
+                            )
+                        ]                
                     )
                 )
             )
@@ -287,16 +301,18 @@ The value set for the backwardForecast is used to determine the past trends.
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis:DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders spline chart
-                            SplineSeries<SalesData, double>(
+                            SplineSeries<SalesData, dateTime>(
                                 dataSource: chartData,
                                 trendlines:<Trendline>[
                                  Trendline(
                                 type: TrendlineType.linear, 
                                 backwardForecast:10,
                                 color: Colors.blue)
-                             ],
+                                ],
+                            )   
                         ]
                     )
                 )
@@ -320,9 +336,10 @@ Legend for trendline gets rendered together with the series legend when the lege
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis:DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders spline chart
-                            SplineSeries<SalesData, double>(
+                            SplineSeries<SalesData, dateTime>(
                                 dataSource: chartData,
                                 trendlines:<Trendline>[
                                  Trendline(
@@ -330,7 +347,8 @@ Legend for trendline gets rendered together with the series legend when the lege
                                 name:'trendline-name',
                                 legendIconType: LegendIconType.diamond,
                                 color: Colors.blue)
-                             ],
+                                 ],
+                            )
                         ]
                     )
                 )
@@ -355,9 +373,10 @@ Data markers are used to provide information about the data points in the series
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis:DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders spline chart
-                            SplineSeries<SalesData, double>(
+                            SplineSeries<SalesData, dateTime>(
                                 dataSource: chartData,
                                 trendlines:<Trendline>[
                                  Trendline(
@@ -400,9 +419,10 @@ Chart will display details about the points through tooltip, when user interacti
                 child: Container(
                     child: SfCartesianChart(
                         tooltipBehavior: _tooltipBehavior,
+                        primaryXAxis:DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders spline chart
-                            SplineSeries<SalesData, double>(
+                            SplineSeries<SalesData, dateTime>(
                                 dataSource: chartData,
                                 trendlines:<Trendline>[
                                  Trendline(
