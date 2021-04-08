@@ -1414,7 +1414,7 @@ class CustomSelectionManager extends RowSelectionManager{
  
 SfDataGrid allows to customize the appearance of the selected rows and current cell through [SfDataGridTheme.SfDataGridThemeData](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData-class.html) property.
 
-All the style such as [selectionColor], [DataGridCurrentCellStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/DataGridCurrentCellStyle-class.html) related to `SfDataGrid` are available in the [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) package. To access those classes, import the below file in your application,
+All the style such as [selectionColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/selectionColor.html), [DataGridCurrentCellStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/DataGridCurrentCellStyle-class.html) related to `SfDataGrid` are available in the [syncfusion_flutter_core](https://pub.dev/packages/syncfusion_flutter_core) package. To access those classes, import the below file in your application,
 
 {% tabs %}
 {% highlight Dart %} 
@@ -1425,7 +1425,7 @@ import 'package:syncfusion_flutter_core/theme.dart';
 {% endtabs %}
 
 ### Selection
-The selection background can be changed by [selectionColor] property of `SfDataGridThemeData` in [SfDataGridTheme](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridTheme-class.html).
+The selection background can be changed by `selectionColor` property of `SfDataGridThemeData` in [SfDataGridTheme](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridTheme-class.html).
 
 {% tabs %}
 {% highlight Dart %}

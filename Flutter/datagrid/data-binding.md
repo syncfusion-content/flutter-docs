@@ -13,9 +13,9 @@ documentation: ug
 
  The following APIs in the `DataGridSource` are mandatory to process the data,
 
- * [rows] - The number of rows in a datagrid and row selection depends on the [rows]. So, set the `DataGridRow` collection required for datagrid in
+ * [rows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/rows.html) - The number of rows in a datagrid and row selection depends on the `rows`. So, set the `DataGridRow` collection required for datagrid in
 `rows`.
-* [buildRow]- The widget needed for the cells is obtained from `DataGridRowAdapter`.
+* [buildRow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/buildRow.html) - The widget needed for the cells is obtained from `DataGridRowAdapter`.
 
 `DataGridSource` objects are expected to be long-lived, not recreated with each build.
 
