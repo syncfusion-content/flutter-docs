@@ -27,10 +27,11 @@ Chart provides tooltip support for all the series. It is used to show informatio
         body: Center(
           child: Container(
             child: SfCartesianChart(
+              primaryXAxis: CategoryAxis(),
             //Enables the tooltip for all the series
               tooltipBehavior: _tooltipBehavior,
               series: <CartesianSeries>[
-                LineSeries<ChartData, double>(
+                LineSeries<ChartData, String>(
                 //Enables the tooltip for individual series
                   enableTooltip: true, 
                 )

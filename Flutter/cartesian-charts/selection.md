@@ -78,8 +78,9 @@ You can customize the segments using the below properties.
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: CategoryAxis(),
                         series: <CartesianSeries>[
-                            ColumnSeries<ChartData, double>(
+                            ColumnSeries<ChartData, String>(
                                 selectionBehavior: _selectionBehavior
                             )
                         ]
@@ -167,8 +168,9 @@ You can select a point or series programmatically on a chart using [`initialSele
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: CategoryAxis(),
                         series: <CartesianSeries>[
-                            ColumnSeries<ChartData, double>(
+                            ColumnSeries<ChartData, String>(
                                 // Initially selected the data at point index - 1.
                                 initialSelectedDataIndexes: <int>[1],
                                 dataSource: chartData1,
@@ -176,7 +178,7 @@ You can select a point or series programmatically on a chart using [`initialSele
                                 yValueMapper: (ChartData data, _) => data.y,
                                 selectionBehavior: _selectionBehavior
                             ),
-                            ColumnSeries<ChartData, double>(
+                            ColumnSeries<ChartData, String>(
                                 dataSource: chartData2,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,

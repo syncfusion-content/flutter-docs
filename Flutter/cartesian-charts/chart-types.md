@@ -50,7 +50,7 @@ To render a line chart, create an instance of [`LineSeries`](https://pub.dev/doc
 
     class SalesData {
         SalesData(this.year, this.sales);
-            final double year;
+            final dateTime year;
             final double sales;
     }
 
@@ -205,9 +205,10 @@ The following properties can be used to customize the appearance:
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders area chart
-                            AreaSeries<SalesData, double>(
+                            AreaSeries<SalesData, dateTime>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales
@@ -887,7 +888,7 @@ Bubble chart requires three fields (X, Y, and Size) to plot a point. Here, [`siz
 
     class ChartData {
         ChartData(this.x, this.y, this.size);
-            final double x;
+            final DateTime x;
             final double y;
             final double size;
     }
@@ -1268,7 +1269,7 @@ In the range column chart when data label is enabled, by default there will be t
                                 highValueMapper: (ChartData sales, _) => sales.high,
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true, 
-                                    position: CartesianLabelPosition.top
+                                    labelAlignment: ChartDataLabelAlignment.top
                                 ),
                             )
                         ]
@@ -1426,7 +1427,7 @@ To render a spline area chart, create an instance of [`SplineAreaSeries`](https:
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales
                             ),
-                            SplineAreaSeries<SalesData, double>(
+                            SplineAreaSeries<SalesData, DateTime>(
                                 dataSource: chartData1,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales
