@@ -99,9 +99,9 @@ sheet.enableSheetCalculations();
 
 // Setting formula in the cell.
 Range range = sheet.getRangeByName('C8');
-range.setFormula('=SUMIFS(B1:B5,C1:C5,\'>=2\')');
+range.setFormula('=SUMIFS(B1:B5,C1:C5,\">=2\")');
 range = sheet.getRangeByName('C9');
-range.setFormula('=SUMIFS(B1:B5,A1:A5,\'Apple\')');
+range.setFormula('=SUMIFS(B1:B5,A1:A5,\"Apple\")');
 
 // Save and dispose workbook.
 final List<int> bytes = workbook.saveAsStream();
@@ -148,7 +148,7 @@ sheet.enableSheetCalculations();
 Range range = sheet.getRangeByName('C8');
 range.setFormula('=SUMPRODUCT(B1:B5,C1:C5)');
 range = sheet.getRangeByName('C9');
-range.setFormula('=SUMPRODUCT(--(A1:A5=\'Apple\'), B1:B5, C1:C5)');
+range.setFormula('=SUMPRODUCT(--(A1:A5=\"Apple\"), B1:B5, C1:C5)');
 
 // Save and dispose workbook.
 final List<int> bytes = workbook.saveAsStream();
