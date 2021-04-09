@@ -54,7 +54,7 @@ A Linear Gauge range has three values to draw a range - [`startValue`](https://p
                   midValue: 50,
                   endValue: 100,
                   startWidth: 70,
-                  midWidth: -20,
+                  midWidth: 20,
                   endWidth: 70,
                   rangeShapeType: LinearRangeShapeType.curve
                 ),
