@@ -11,7 +11,7 @@ documentation: ug
 
 Tooltip is used to provide information about the tile during the tap, or click interaction. This section helps to learn about how to show tooltip on a tile and customize them.
 
-## Tooltip for the shapes
+## Tooltip for the tiles
 
 It is used to clearly indicate the tile information on the tap or click. To show tooltip for the tile, return a widget in [`TreemapLevel.tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/tooltipBuilder.html). This widget will then be wrapped in the builtin shape which comes with the nose at the bottom.
 
