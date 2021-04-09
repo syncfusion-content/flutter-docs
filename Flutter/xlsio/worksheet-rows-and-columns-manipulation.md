@@ -36,8 +36,8 @@ sheet.insertRow(1, 1, ExcelInsertOptions.formatAsAfter);
 sheet.insertColumn(2, 1, ExcelInsertOptions.formatAsBefore);
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
-File('InsertRowandColumn.xlsx').writeAsBytes(bytes);
+final List<int>? bytes = workbook.saveAsStream();
+File('InsertRowandColumn.xlsx').writeAsBytes(bytes!);
 workbook.dispose();
 
 {% endhighlight %}
@@ -69,8 +69,8 @@ sheet.deleteRow(1, 1);
 sheet.deleteColumn(2, 1);
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
-File('DeleteRowandColumn.xlsx').writeAsBytes(bytes);
+final List<int>? bytes = workbook.saveAsStream();
+File('DeleteRowandColumn.xlsx').writeAsBytes(bytes!);
 workbook.dispose();
 
 {% endhighlight %}
@@ -99,12 +99,11 @@ range1.cellStyle.wrapText = true;
 sheet.autoFitRow(1);
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
-File('AutoFitRow.xlsx').writeAsBytes(bytes);
+final List<int>? bytes = workbook.saveAsStream();
+File('AutoFitRow.xlsx').writeAsBytes(bytes!);
 workbook.dispose();
 
 {% endhighlight %}
-
 
 The following code snippet shows how a Column is re-sized to its content.
 
@@ -123,8 +122,8 @@ range1.setText('This is long text');
 sheet.autoFitColumn(1);
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
-File('AutoFitColumn.xlsx').writeAsBytes(bytes);
+final List<int>? bytes = workbook.saveAsStream();
+File('AutoFitColumn.xlsx').writeAsBytes(bytes!);
 workbook.dispose();
 
 {% endhighlight %}
@@ -153,8 +152,8 @@ range.cellStyle.wrapText = true;
 range.autoFitRows();
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
-File('AutoFitRows.xlsx').writeAsBytes(bytes);
+final List<int>? bytes = workbook.saveAsStream();
+File('AutoFitRows.xlsx').writeAsBytes(bytes!);
 workbook.dispose();
 
 {% endhighlight %}
@@ -178,8 +177,8 @@ range.setText('This is Long Text');
 range.autoFitColumns();
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
-File('AutoFitColumns.xlsx').writeAsBytes(bytes);
+final List<int>? bytes = workbook.saveAsStream();
+File('AutoFitColumns.xlsx').writeAsBytes(bytes!);
 workbook.dispose();
 
 {% endhighlight %}
