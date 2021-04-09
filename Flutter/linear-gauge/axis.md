@@ -119,16 +119,27 @@ The following code sample sets solid colors to the axis track.
     return MaterialApp(
       home: Scaffold(
         body: Center(
+          child: Container(
             child: SfLinearGauge(
-                axisTrackStyle: LinearAxisTrackStyle(color: Colors.blue))
-        ),
+                axisTrackStyle: LinearAxisTrackStyle(
+                  gradient: LinearGradient(
+                        colors: [Colors.purple, Colors.blue],
+                        begin: Alignment.centerLeft,
+                        end: Alignment.centerRight,
+                        stops: [0.1, 0.5],
+                        tileMode: TileMode.clamp
+                  )
+                )
+              ),
+            ),
+          ),
       ),
     );
   }
 
 {% endhighlight %}
 
-![Apply color to axis in linear guage](images/axis/axis_solid_color.png)
+![Apply color to axis in linear guage](images/axis/axis_gradient.png)
 
 ## Customize borders
 
