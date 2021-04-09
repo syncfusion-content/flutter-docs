@@ -41,7 +41,7 @@ documentation: ug
 
 ## Color Palette
 
-[`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) provides Color Palette property called [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/palette.html) for the data points in the chart series. If the series color is not specified, then the series will be rendered with appropriate palette color. Ten colors are available by default.
+[`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) provides support for color palette property called [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/palette.html) for the data points in the chart series. If the series color is not specified, then the series will be rendered with appropriate palette color. Ten colors are available by default.
 
 
 {% highlight dart %} 
@@ -193,7 +193,7 @@ The data points of pie, doughnut and radial bar charts can be filled with three 
             ));
     }
 
-    // otate the sweep gradient according to the start angle 
+    // Rotate the sweep gradient according to the start angle 
     Float64List _resolveTransform(Rect bounds, TextDirection textDirection) {
         final GradientTransform transform = GradientRotation(_degreeToRadian(-90));
         return transform.transform(bounds, textDirection: textDirection)!.storage;
@@ -288,7 +288,7 @@ The data points of pie, doughnut and radial bar charts can also be filled with i
 
 ## Shader mapping for data points
 
-The [`pointShaderMapper`](~) property is used to map the shader field from the chart data source. You can map different [`gradient`](https://api.flutter.dev/flutter/dart-ui/Gradient-class.html) types and [`image shader`](https://api.flutter.dev/flutter/dart-ui/ImageShader-class.html) for individual data points using this mapper callback.
+The [`pointShaderMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointShaderMapper.html) property is used to map the shader field from the chart data source. You can map different [`gradient`](https://api.flutter.dev/flutter/dart-ui/Gradient-class.html) types and [`image shader`](https://api.flutter.dev/flutter/dart-ui/ImageShader-class.html) for individual data points using this mapper callback.
 
 {% highlight dart %}
 
@@ -438,13 +438,13 @@ The [`pointShaderMapper`](~) property is used to map the shader field from the c
 
 ## Point render mode
 
-The [`pointRenderMode`](~) property is used to define the painting mode for the data points. The data points in the pie and doughnut chart can be filled either with solid colors or with sweep gradient by using this property. This property is not applicable for [`RadialBarSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries-class.html).
+The [`pointRenderMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointRenderMode.html) property is used to define the painting mode for the data points. The data points in the pie and doughnut chart can be filled either with solid colors or with sweep gradient by using this property. This property is not applicable for [`RadialBarSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries-class.html).
 
 * If `PointRenderMode.segment` is specified, the data points are filled with solid colors from the palette or with the colors mentioned in [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointColorMapper.html) property.
 
 *  If `PointRenderMode.gradient` is specified, a sweep gradient is formed with the solid colors and fills the data points.
 
-N> This property is applicable only if the [`onCreateShader`](~) or [`pointShaderMapper`](~) is null.
+N> This property is applicable only if the [`onCreateShader`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onCreateShader.html) and [`pointShaderMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointShaderMapper.html) are null.
 
 {% highlight dart %}
 
@@ -585,8 +585,12 @@ The chart’s data source can be sorted using the [`sortingOrder`](https://pub.d
                             yValueMapper: (ChartData data, _) => data.y,
                             animationDuration: 1000
                         )]))));
-    }}
+    }
 
 {% endhighlight %}
 
 ![Sorting](images/circular-customization/sortings.jpg)
+
+#### See Also
+
+* [Creating a circular drilldown chart using SfCircular charts](https://www.syncfusion.com/kb/11640/how-to-drilldown-with-syncfusion-flutter-chart-widget-sfcircularchart)
