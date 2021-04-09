@@ -339,6 +339,42 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+## Double tap zooming
+
+Double tap zooming can be enabled using [`enableDoubleTapZooming`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/enableDoubleTapZooming.html) property. The default value of the [`enableDoubleTapZooming`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/enableDoubleTapZooming.html) is `false`.
+
+N> It is applicable for both tile layer and shape layer.
+
+{% tabs %}
+{% highlight Dart %}
+
+late MapZoomPanBehavior _zoomPanBehavior;
+
+@override
+void initState() {
+  _zoomPanBehavior = MapZoomPanBehavior(enableDoubleTapZooming: true);
+  super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfMaps(
+       layers: [
+         MapTileLayer(
+           urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+           zoomPanBehavior: _zoomPanBehavior,
+         ),
+       ],
+     ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Double tap zooming](images/zoom-pan/double_tap_zoom.gif)
+
 ## Toolbar
 
 You can use the toolbar to customize the visible bound for the web platform. By default, the [MapZoomPanBehavior.showToolbar](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/showToolbar.html) property is `true`.
