@@ -53,9 +53,9 @@ range4.setNumber(-22);
 range4.numberFormat = '#,##0.00000_)';
 
 // Save and dispose workbook.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
-File('Number.xlsx').writeAsBytes(bytes!);
+File('Number.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -88,9 +88,9 @@ range3.setNumber(111);
 range3.numberFormat = '[BLUE]\$0.0000';
 
 // Save and dispose workbook.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
-File('Currency.xlsx').writeAsBytes(bytes!);
+File('Currency.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -123,9 +123,9 @@ range3.setNumber(0.111);
 range3.numberFormat = '0.0000%';
 
 // Save and dispose workbook.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
-File('Percentage.xlsx').writeAsBytes(bytes!);
+File('Percentage.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -202,9 +202,9 @@ range14.setDateTime(DateTime(2012, 11, 22, 5, 45, 45));
 range14.numberFormat = 'm/d/yy h:mm';
 
 // Save and dispose workbook.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
-File('Date.xlsx').writeAsBytes(bytes!);
+File('Date.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -245,9 +245,9 @@ range5.setDateTime(DateTime(1999, 7, 30, 5, 34, 40));
 range5.numberFormat = '[h]:mm:ss';
 
 // Save and dispose workbook.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
-File('Time.xlsx').writeAsBytes(bytes!);
+File('Time.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -280,9 +280,9 @@ range3.setNumber(1.1291);
 range3.numberFormat = '_(\$* #,##0.0000_)';
 
 // Save and dispose workbook.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
-File('Accounting.xlsx').writeAsBytes(bytes!);
+File('Accounting.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -315,9 +315,9 @@ range3.setNumber(11.1);
 range3.numberFormat = '0.0E+00';
 
 // Save and dispose workbook.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
-File('Scientific.xlsx').writeAsBytes(bytes!);
+File('Scientific.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -370,9 +370,9 @@ range8.setNumber(49.56);
 range8.numberFormat = '# ??/100';
 
 // Save and dispose workbook.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
-File('Fraction.xlsx').writeAsBytes(bytes!);
+File('Fraction.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -407,8 +407,8 @@ range3.setNumber(11.4);
 range3.numberFormat = '^ @';
 
 // Save and dispose workbook.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
-File('Text.xlsx').writeAsBytes(bytes!);
+File('Text.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}

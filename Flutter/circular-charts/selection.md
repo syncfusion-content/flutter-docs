@@ -120,3 +120,7 @@ Multiple selection can be enabled using the [`enableMultiSelection`](https://pub
 ![Multi selection](images/selection/multi_select.jpg)
 
 Also refer [selection event](./events#onselectionchanged) for customizing the selection further.
+
+#### See Also
+
+* [Creating a clickable pie chart using selection in circular charts](https://www.syncfusion.com/kb/12346/how-to-create-clickable-pie-chart-in-flutter-using-circular-charts-widget-sfcircularchart).

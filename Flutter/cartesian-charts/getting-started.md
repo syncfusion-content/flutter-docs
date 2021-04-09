@@ -56,7 +56,7 @@ Import the following package in your Dart code.
 
 ## Initialize chart
 
-Once the package has been imported, initialize the chart as a child of any widget. There are two kinds of chart widgets - SfCartesianChart and SfCircularChart. SfCartesianChart is used to render all kinds of charts which need to be plotted in Cartesian coordinates. SfCircularChart can be used to render pie, doughnut and radial bar charts. Here, as we are plotting line chart, initialize SfCartesianChart widget as a child of Container widget.
+Once the package has been imported, initialize the chart as a child of any widget. SfCartesianChart is used to render all kinds of charts which need to be plotted in Cartesian coordinates. Here, as we are plotting line chart, initialize SfCartesianChart widget as a child of Container widget.
 
 {% highlight dart %} 
 
@@ -209,7 +209,7 @@ The legend provides information about the series rendered in the chart.
 
 You can use legend in chart by setting the [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/isVisible.html) property to true in [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend-class.html).
 
-Additionally, you need to set label for each series using the [`series.name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/name.html) property. The labels will be displayed in corresponding legends.
+Additionally, the [`series.name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/name.html) property can be used to set the label for each series. The labels will be displayed in corresponding legends.
 
 {% highlight dart %} 
 
@@ -252,7 +252,7 @@ Additionally, you need to set label for each series using the [`series.name`](ht
 
 The tooltip is used when you cannot display information using the data labels due to space constraints.
 
-The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/tooltipBehavior.html) property in chart is used to enable and customize the tooltip for all the series whereas the [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/enableTooltip.html) property in series is used to toggle the tooltip visibility of each series. The tooltip is enabled as demonstrated in the following code snippet.
+The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/tooltipBehavior.html) property in chart is used to enable and customize the tooltip for all the series whereas the [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/enableTooltip.html) property in series is used to toggle the tooltip visibility of each series. The tooltip can be enabled, as demonstrated in the following code snippet.
 
 {% highlight dart %} 
 

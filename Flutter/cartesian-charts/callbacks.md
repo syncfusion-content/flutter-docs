@@ -116,6 +116,10 @@ Triggers while rendering the axis labels. Text and text styles such as color, fo
 
 {% endhighlight %}
 
+#### See Also
+
+* [Using dateTime values in y-axis using onAxisLabelRender callback](https://www.syncfusion.com/kb/12224/how-to-use-datetime-values-in-the-y-axis-sfcartesianchart).
+
 ## onDataLabelRender
 
 Triggers when data label is rendering. Text and text styles such as color, font size, and font weight can be customized. The [`onDataLabelRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onDataLabelRender.html) Callback contains the following arguments.
@@ -485,6 +489,10 @@ Triggers when tapping the axis label. The  [`onAxisLabelTapped`](https://pub.dev
 
 {% endhighlight %}
 
+#### See Also
+
+* [Navigating to an hyperlink on axis label tap](https://www.syncfusion.com/kb/12202/how-to-navigate-to-a-hyperlink-when-clicked-on-chart-axis-label-sfcartesianchart).
+
 ## onLegendTapped
 
 Triggers when tapping the legend item. The  [`onLegendTapped`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onLegendTapped.html) Callback contains the following arguments.
@@ -565,9 +573,9 @@ The [`onIndicatorRender`](https://pub.dev/documentation/syncfusion_flutter_chart
 * [`signalLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/signalLineColor.html) - used to change the color of the signal line.
 * [`signalLineWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/signalLineWidth.html) - used to change the width of the signal line.
 * [`lineDashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/lineDashArray.html) - used to change the dash array size.
-* [`seriesName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/seriesName.html) - Specifies the series name.
-* [`index`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/index.html) - Specifies the current series index
-* [`dataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/dataPoints.html) - Specifies the current datapoints.
+* [`seriesName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/seriesName.html) - specifies the series name.
+* [`index`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/index.html) - specifies the current series index
+* [`dataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/dataPoints.html) - specifies the current datapoints.
 
 {% highlight dart %}
 
@@ -594,17 +602,17 @@ The [`onIndicatorRender`](https://pub.dev/documentation/syncfusion_flutter_chart
 
 ## onTrendlineRender
 
-Triggers when the trendline gets rendered. Trendline properties like color,opacity can be customized using trendlineRender Callbacks. The [`onTrendlineRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs-class.html) Callback contains the following arguments.
+Triggers when the trendline gets rendered. Trendline properties like color,opacity can be customized using trendlineRender Callback. The [`onTrendlineRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs-class.html) Callback contains the following arguments.
 
-* [`trendlineIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/trendlineIndex.html) - Specifies the  index of the trendlines.
-* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/opacity.html) - Specifies the opacity of the trendlines.
-* [`seriesName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/seriesName.html) - Specifies the series name of the trendline.
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/color.html) - Specifies the color of the trendline.
-* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/seriesIndex.html) - Specifies the seriesIndex.
-* [`data`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/data.html) - Specifies the data points of the series.
-* [`trendlineName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/trendlineName.html) - Specifies the name of the trendline.
-* [`intercept`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/intercept.html) - Specifies the intercept value of the trendline.
-* [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/dashArray.html) - Specifies and set the dashArray for trendlines.
+* [`trendlineIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/trendlineIndex.html) - specifies the  index of the trendline.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/opacity.html) - specifies the opacity of the trendline.
+* [`seriesName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/seriesName.html) - specifies the series name of the trendline.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/color.html) - specifies the color of the trendline.
+* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/seriesIndex.html) - specifies the seriesIndex.
+* [`data`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/data.html) - specifies the data points of the series.
+* [`trendlineName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/trendlineName.html) - specifies the name of the trendline.
+* [`intercept`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/intercept.html) - specifies the intercept value of the trendline.
+* [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/dashArray.html) - specifies and sets the trendline's dashArray.
 
 {% highlight dart %}
 
@@ -628,7 +636,7 @@ Triggers when the trendline gets rendered. Trendline properties like color,opaci
 
 ## onRendererCreated
 
-Triggers when the series renderer is created. Using this callback, able to get the `ChartSeriesController` instance, which is used to access the public methods in the series.
+Triggers when the series renderer is created. This callback can be used to obtain the [`ChartSeriesController`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeriesController-class.html) instance, which is used to access the the public methods in the series.
 
 {% highlight dart %}
 
@@ -701,7 +709,7 @@ The callback contains the following argument:
 
 ## onChartTouchInteractionUp
 
-Triggers when tapped or clicked on the chart area. You can get the position of the taped region using this callback.
+Triggers when tapped or clicked on the chart area. You can get the position of the tapped region using this callback.
 
 The callback contains the following argument:
 
@@ -709,8 +717,8 @@ The callback contains the following argument:
 
 {% highlight dart %}
 
-  @override
-  Widget build(BuildContext context) {
+    @override
+    Widget build(BuildContext context) {
      return Container(
         child: SfCartesianChart(
             onChartTouchInteractionUp: (ChartTouchInteractionArgs args){
@@ -787,14 +795,14 @@ Triggers when the marker is being rendered. Here, you can customize the followin
 Triggers when tapping on the data label of the data point in the series. The [`onDataLabelTapped`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onDataLabelTapped.html) Callback contains the following arguments.
 
 * [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/position.html) - specifies the position of the tapped data label in logical pixels.
-* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/seriesIndex.html) - Specifies the series index of the tapped data label
-* [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/pointIndex.html) - Specifies the point index of the tapped data label.
-* [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/text.html) - Specifies the content of the tapped data label.
+* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/seriesIndex.html) - specifies the series index of the tapped data label
+* [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/pointIndex.html) - specifies the point index of the tapped data label.
+* [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/text.html) - specifies the content of the tapped data label.
 * [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/dataLabelSettings.html) - to get the data label customization options specified in that particular series.
 * [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/viewportPointIndex.html) - to get the viewport index value of the tapped data label.
 
 
-N> This callback will not be called, when the builder is specified for data label (data label template). For this case, custom widget specified in the [`DataLabelSettings.builder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/builder.html) property can be wrapped using the [`GestureDetector`](https://api.flutter.dev/flutter/widgets/GestureDetector-class.html) and this functionality can be achieved in the application level.
+N>  This callback will not be called, when the builder is specified for data label (data label template). For this case, custom widget specified in the [`DataLabelSettings.builder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/builder.html) property can be wrapped using the [`GestureDetector`](https://api.flutter.dev/flutter/widgets/GestureDetector-class.html) and this functionality can be achieved in the application level.
 
 {% highlight dart %}
 
@@ -822,7 +830,7 @@ N> This callback will not be called, when the builder is specified for data labe
 
 ## onPlotAreaSwipe
 
-Triggers while swiping on the plot area. Whenever the swiping happens on the plot area (the series rendering area), [`onPlotAreaSwipe`](~) callback will be called. It provides options to get the direction of swiping. If the chart is swiped from left to right direction, the direction is [`ChartSwipeDirection.start`](~) and if the swipe happens from right to left direction, the direction is [`ChartSwipeDirection.end`](~). Using this callback, the user will be able to achieve pagination functionality (i.e., on swiping over chart area, next set of data points can be loaded to the chart).
+Triggers while swiping on the plot area. Whenever the swiping happens on the plot area (the series rendering area), [`onPlotAreaSwipe`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onPlotAreaSwipe.html) callback will be called. It provides options to get the direction of swiping. If the chart is swiped from left to right direction, the direction is [`ChartSwipeDirection.start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSwipeDirection-class.html) and if the swipe happens from right to left direction, the direction is [`ChartSwipeDirection.end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSwipeDirection-class.html). Using this callback, the user will be able to achieve pagination functionality (i.e., on swiping over chart area, next set of data points can be loaded to the chart).
 
 {% highlight dart %}
 
