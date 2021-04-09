@@ -585,8 +585,12 @@ The chart’s data source can be sorted using the [`sortingOrder`](https://pub.d
                             yValueMapper: (ChartData data, _) => data.y,
                             animationDuration: 1000
                         )]))));
-    }}
+    }
 
 {% endhighlight %}
 
 ![Sorting](images/circular-customization/sortings.jpg)
+
+#### See Also
+
+* [Creating a circular drilldown chart using SfCircular charts](https://www.syncfusion.com/kb/11640/how-to-drilldown-with-syncfusion-flutter-chart-widget-sfcircularchart)
