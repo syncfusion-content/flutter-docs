@@ -27,10 +27,10 @@ final Worksheet sheet = workbook.worksheets[0];
 sheet.getRangeByName('A1').setText('Hello World');
 
 // Save and dispose workbook
-final List<int>? bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
 
-File('Output.xlsx').writeAsBytes(bytes!);
+File('Output.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -52,10 +52,10 @@ final Worksheet sheet = workbook.worksheets[0];
 sheet.getRangeByName('A1').setNumber(4444);
 
 // Save workbook
-final List<int>? bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
 
-File('Output.xlsx').writeAsBytes(bytes!);
+File('Output.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -77,10 +77,10 @@ final Worksheet sheet = workbook.worksheets[0];
 sheet.getRangeByName('A1').setDateTime(DateTime(2020, 7, 7, 1, 0, 0));
 
 // Save workbook
-final List<int>? bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
 
-File('Output.xlsx').writeAsBytes(bytes!);
+File('Output.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -102,10 +102,10 @@ final Worksheet sheet = workbook.worksheets[0];
 sheet.getRangeByName('A1').setValue(44);
 
 // Save and dispose workbook
-final List<int>? bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
 
-File('Output.xlsx').writeAsBytes(bytes!);
+File('Output.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -159,8 +159,8 @@ hyperlink4.screenTip = 'Click Here';
 hyperlink4.textToDisplay = 'Hyperlink to cell A15';
 
 // Save and dispose workbook.
-final List<int>? bytes = workbook.saveAsStream();
-File('Hyperlinks.xlsx').writeAsBytes(bytes!);
+final List<int> bytes = workbook.saveAsStream();
+File('Hyperlinks.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
 {% endhighlight %}
@@ -184,8 +184,8 @@ final Hyperlink link = sheet.hyperlinks
 link.screenTip = 'About Syncfusion';
 
 // Save and dispose workbook.
-final List<int>? bytes = workbook.saveAsStream();
-File('HyperlinksPicture.xlsx').writeAsBytes(bytes!);
+final List<int> bytes = workbook.saveAsStream();
+File('HyperlinksPicture.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
 {% endhighlight %}
