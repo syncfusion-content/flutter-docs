@@ -139,7 +139,7 @@ The following code sample sets solid colors to the axis track.
 
 {% endhighlight %}
 
-![Apply color to axis in linear guage](images/axis/axis_solid_color.png)
+![Apply color to axis in linear guage](images/axis/axis_gradient.png)
 
 ## Customize borders
 
