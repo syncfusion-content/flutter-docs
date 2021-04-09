@@ -44,7 +44,7 @@ sheet.getRangeByName('B4').setNumber(11);
 sheet.enableSheetCalculations();
 
 //Setting formula in the cell.
-sheet.getRangeByName('A6').setFormula('=IF(A4 > B3, \'Yes\', \'No\')');
+sheet.getRangeByName('A6').setFormula('=IF(A4 > B3, \"Yes\", \"No\")');
 sheet.getRangeByName('B6').setFormula('=IF(A4 < B3, A1+B1, A1-B1)');
 
 //Save and dispose a workbook.
@@ -119,9 +119,9 @@ sheet.enableSheetCalculations();
 
 // Setting formula in the cell.
 Range range = sheet.getRangeByName('B1');
-range.setFormula('=OR(A1=\'Green\',A1=\'Red\')');
+range.setFormula('=OR(A1=\"Green\",A1=\"Red\")');
 range = sheet.getRangeByName('B5');
-range.setFormula('=OR(A3=\'Green\',A3=\'Red\')');
+range.setFormula('=OR(A3=\"Green\",A3=\"Red\")');
 
 // Save and dispose workbook.
 final List<int> bytes = workbook.saveAsStream();
@@ -157,9 +157,9 @@ sheet.enableSheetCalculations();
 
 // Setting formula in the cell.
 Range range = sheet.getRangeByName('B1');
-range.setFormula('=NOT(A1=\'Green\')');
+range.setFormula('=NOT(A1=\"Green\")');
 range = sheet.getRangeByName('B5');
-range.setFormula('=NOT(A3=\'Red\')');
+range.setFormula('=NOT(A3=\"Red\")');
 
 // Save and dispose workbook.
 final List<int> bytes = workbook.saveAsStream();

@@ -24,9 +24,7 @@ final Workbook workbook = Workbook();
 final Worksheet sheet = workbook.worksheets[0];
 
 //Creating a new style with all properties.
-final CellStyle style = CellStyle(workbook);
-// set style name.
-style.name = 'Style1';
+final Style style = workbook.styles.add('Style1');
 // set back color by hexa decimal.
 style.backColor = '#FF5050';
 // set back color by RGB values.
@@ -73,10 +71,10 @@ workbook.styles.addStyle(style);
 sheet.getRangeByName('A1').cellStyle = style;
 
 // Save and dispose the document.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
 
-File('CreateCellStyle.xlsx').writeAsBytes(bytes!);
+File('CreateCellStyle.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -143,10 +141,10 @@ sheet.getRangeByName('A1:D1').cellStyle = globalStyle;
 sheet.getRangeByName('B2:D4').cellStyle = globalStyle1;
 
 // Save and dispose the document.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
 
-File('ApplyGlobalStyle.xlsx').writeAsBytes(bytes!);
+File('ApplyGlobalStyle.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -549,10 +547,10 @@ sheet.getRangeByName('A1').columnWidth = 21;
 sheet.getRangeByName('B1:C1').columnWidth = 13;
 
 // save and dispose workbook.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
 
-File('NumberFormats.xlsx').writeAsBytes(bytes!);
+File('NumberFormats.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -582,10 +580,10 @@ range1.setNumber(10);
 range1.displayText;
 
 // Save and dispose workbook.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
 
-File('DisplayText.xlsx').writeAsBytes(bytes!);
+File('DisplayText.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -626,10 +624,10 @@ sheet.getRangeByName('A1:C16').merge();
 sheet.getRangeByName('A1:C16').unmerge();
 
 // Save and dispose workbook.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
 
-File('MergeUnMerge.xlsx').writeAsBytes(bytes!);
+File('MergeUnMerge.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -652,10 +650,10 @@ sheet.getRangeByName('A2').setText('Sample');
 sheet.getRangeByName('A2').builtInStyle = BuiltInStyles.checkCell;
 
 // save and dispose workbook.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
 
-File('BuiltInStyle.xlsx').writeAsBytes(bytes!);
+File('BuiltInStyle.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
