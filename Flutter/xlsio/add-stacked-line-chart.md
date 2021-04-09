@@ -58,10 +58,10 @@ chart1.isSeriesInRows = false;
 sheet.charts = charts;
 
 //save and dispose workbook.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
 
-File('LineStackedChart.xlsx').writeAsBytes(bytes!);
+File('LineStackedChart.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 

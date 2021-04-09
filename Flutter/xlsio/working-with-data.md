@@ -35,8 +35,8 @@ final List<Object> list = [
 sheet.importList(list, 1, 1, true);
 
 // Save and dispose workbook.
-final List<int>? bytes = workbook.saveAsStream();
-File('Importlist.xlsx').writeAsBytes(bytes!);
+final List<int> bytes = workbook.saveAsStream();
+File('Importlist.xlsx').writeAsBytes(bytes);
 workbook.dispose();
 
 {% endhighlight %}

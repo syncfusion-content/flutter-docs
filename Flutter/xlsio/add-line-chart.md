@@ -52,10 +52,10 @@ chart.isSeriesInRows = false;
 sheet.charts = charts;
 
 //save and dispose workbook.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
 
-File('LineChart.xlsx').writeAsBytes(bytes!);
+File('LineChart.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
