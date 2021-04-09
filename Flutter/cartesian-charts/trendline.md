@@ -47,7 +47,7 @@ A linear trendline is a best fit straight line that is used with simpler data se
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders spline chart
                             SplineSeries<SalesData, dateTime>(
@@ -83,7 +83,7 @@ To render an exponential trendline, use trendline type as Exponential.
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders spline chart
                             SplineSeries<SalesData, dateTime>(
@@ -119,7 +119,7 @@ To render a logarithmic trendline, use trendline type as Logarithmic
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders spline chart
                             SplineSeries<SalesData, dateTime>(
@@ -155,7 +155,7 @@ To render a polynomial trendline, use trendline type as Polynomial.
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders spline chart
                             SplineSeries<SalesData, dateTime>(
@@ -191,7 +191,7 @@ To render a power trendline, use trendline type as Power
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders spline chart
                             SplineSeries<SalesData, dateTime>(
@@ -226,7 +226,7 @@ To render a moving average trendline, use trendline type as MovingAverage
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders spline chart
                             SplineSeries<SalesData, dateTime>(
@@ -266,7 +266,7 @@ The value set for forwardForecast is used to determine the distance moving towar
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders spline chart
                             SplineSeries<SalesData, dateTime>(
@@ -301,7 +301,7 @@ The value set for the backwardForecast is used to determine the past trends.
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders spline chart
                             SplineSeries<SalesData, dateTime>(
@@ -336,7 +336,7 @@ Legend for trendline gets rendered together with the series legend when the lege
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders spline chart
                             SplineSeries<SalesData, dateTime>(
@@ -373,7 +373,7 @@ Data markers are used to provide information about the data points in the series
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders spline chart
                             SplineSeries<SalesData, dateTime>(
@@ -419,7 +419,7 @@ Chart will display details about the points through tooltip, when user interacti
                 child: Container(
                     child: SfCartesianChart(
                         tooltipBehavior: _tooltipBehavior,
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders spline chart
                             SplineSeries<SalesData, dateTime>(

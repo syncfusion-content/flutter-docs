@@ -47,7 +47,7 @@ Chart provides tooltip support for all the series. It is used to show informatio
 
 #### See Also
 
-* [Activate chart tooltip after the chart got rendered](https://www.syncfusion.com/kb/12223/how-to-activate-chart-tooltip-initially-after-the-chart-widget-got-rendered)
+* [Activate chart tooltip after the chart got rendered](https://www.syncfusion.com/kb/12223/how-to-activate-chart-tooltip-initially-after-the-chart-widget-got-rendered).
 
 ## Customizing the appearance
 

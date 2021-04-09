@@ -19,7 +19,7 @@ The [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
         body: Center(
           child: Container(
               child:SfCartesianChart(
-                primaryXAxis:DateTimeAxis(),
+                primaryXAxis: DateTimeAxis(),
                 // Enables the legend
                 legend: Legend(isVisible: true),
                 series: <LineSeries>[
@@ -67,7 +67,7 @@ The [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
         body: Center(
           child: Container(
             child:SfCartesianChart(
-              primaryXAxis:DateTimeAxis(),
+              primaryXAxis: DateTimeAxis(),
               legend: Legend(
                 isVisible: true,
                 name:legend,
@@ -113,7 +113,7 @@ The following properties can be used to define and customize the [`title`](https
         body: Center(
             child: Container(
                 child:SfCartesianChart(
-                primaryXAxis:DateTimeAxis(),
+                primaryXAxis: DateTimeAxis(),
                 legend: Legend(
                     isVisible: true,
                     // Legend title
@@ -305,7 +305,7 @@ You can change the position of the legend inside the chart. The following proper
         body: Center(
           child: Container(
             child: SfCartesianChart(
-              primaryXAxis:DateTimeAxis(),
+              primaryXAxis: DateTimeAxis(),
               legend: Legend(
                 isVisible: true,
                 // Legend will be placed at the left

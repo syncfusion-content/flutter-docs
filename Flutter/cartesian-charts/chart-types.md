@@ -33,7 +33,7 @@ To render a line chart, create an instance of [`LineSeries`](https://pub.dev/doc
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders line chart
                             LineSeries<SalesData, dateTime>(
@@ -99,7 +99,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
 
 #### See Also
 
-*[Applying dashed pattern for line chart](https://www.syncfusion.com/kb/12349/how-to-create-dash-pattern-line-chart-in-flutter-using-cartesian-charts-widget)
+*[Applying dashed pattern for line chart](https://www.syncfusion.com/kb/12349/how-to-create-dash-pattern-line-chart-in-flutter-using-cartesian-charts-widget).
 
 ### Multi-colored line
 
@@ -164,7 +164,7 @@ Also refer, [color palette](./series-customization#color-palette), [color mappin
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders fast line chart
                             FastLineSeries<SalesData, DateTime>(
@@ -235,7 +235,7 @@ The borders of the area chart can be customized using the [`borderDrawMode`](htt
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             AreaSeries<SalesData, DateTime>(
                                 dataSource: chartData,
@@ -285,7 +285,7 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders area chart
                             AreaSeries<SalesData, DateTime>(
@@ -317,7 +317,7 @@ Data points with a null value are considered empty points. Empty data points are
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             AreaSeries<SalesData, DateTime>(
                                 dataSource: chartData,
@@ -350,7 +350,7 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
                 child: Container(
                     child: SfCartesianChart(
                         isTransposed: true,
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             AreaSeries<SalesData, DateTime>(
                                 dataSource: chartData,
@@ -384,7 +384,7 @@ To render a spline chart, create an instance of [`SplineSeries`](https://pub.dev
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders spline chart
                             SplineSeries<SalesData, DateTime>(
@@ -415,7 +415,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             SplineSeries<SalesData, DateTime>(
                                 dataSource: chartData,
@@ -456,7 +456,7 @@ The following code sample demonstrates how to set the [`splineType`](https://pub
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             SplineSeries<SalesData, DateTime>(
                                 dataSource: chartData,
@@ -565,7 +565,7 @@ By default, all the column series that have the same x and y-axes are placed sid
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         // Columns will be rendered back to back
                         enableSideBySideSeriesPlacement: false,
                         series: <ChartSeries>[
@@ -658,7 +658,7 @@ The [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
 #### See Also
 
-* [Rendering each data points with different border radius in column charts](https://www.syncfusion.com/kb/12074/how-to-set-different-border-radius-for-each-rect-series-data-points-by-extending-the)
+* [Rendering each data points with different border radius in column charts](https://www.syncfusion.com/kb/12074/how-to-set-different-border-radius-for-each-rect-series-data-points-by-extending-the).
 
 * [Adding rounded corners for the specific sides in column charts](https://www.syncfusion.com/kb/12059/how-to-add-rounded-corners-for-specific-sides-in-the-rect-series-types-sfcartesianchart)
 
@@ -838,7 +838,7 @@ Also refer, [color palette](./series-customization#color-palette), [color mappin
 
 #### See Also
 
-*[Create vertical bar chart](https://www.syncfusion.com/kb/12348/how-to-create-vertical-bar-chart-in-flutter-using-cartesian-charts-widget-sfcartesianchart)
+*[Create vertical bar chart](https://www.syncfusion.com/kb/12348/how-to-create-vertical-bar-chart-in-flutter-using-cartesian-charts-widget-sfcartesianchart).
 
 *[Create horizontal bar chart](https://www.syncfusion.com/kb/12347/how-to-create-horizontal-bar-chart-in-flutter-using-cartesian-charts-widget)
 
@@ -869,7 +869,7 @@ Bubble chart requires three fields (X, Y, and Size) to plot a point. Here, [`siz
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders bubble chart
                             BubbleSeries<ChartData, DateTime>(
@@ -908,7 +908,7 @@ The [`minimumRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/la
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             BubbleSeries<ChartData, DateTime>(
                                 dataSource: chartData,
@@ -1070,7 +1070,7 @@ To render a scatter chart, create an instance of [`ScatterSeries`](https://pub.d
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders scatter chart
                             ScatterSeries<ChartData, DateTime>(
@@ -1103,7 +1103,7 @@ The [`height`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             ScatterSeries<ChartData, DateTime>(
                                 dataSource: chartData,
@@ -1145,7 +1145,7 @@ To render a step line chart, create an instance of [`StepLineSeries`](https://pu
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders step line chart
                             StepLineSeries<ChartData, DateTime>(
@@ -1176,7 +1176,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             StepLineSeries<ChartData, DateTime>(
                                 dataSource: chartData,
@@ -1343,7 +1343,7 @@ Since the [`RangeAreaSeries`](https://pub.dev/documentation/syncfusion_flutter_c
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             RangeAreaSeries<ChartData, DateTime>(
                                 dataSource: chartData,
@@ -1381,7 +1381,7 @@ The borders of the range area chart can be customized using the [`borderDrawMode
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             RangeAreaSeries<SalesData, DateTime>(
                                 dataSource: chartData,
@@ -1419,7 +1419,7 @@ To render a spline area chart, create an instance of [`SplineAreaSeries`](https:
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             SplineAreaSeries<SalesData, DateTime>(
                                 dataSource: chartData,
@@ -1454,7 +1454,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             SplineAreaSeries<SalesData, DateTime>(
                                 dataSource: chartData,
@@ -1494,7 +1494,7 @@ The following code sample demonstrates how to set the `splineType` value to `car
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             SplineAreaSeries<SalesData, DateTime>(
                                 dataSource: chartData,
@@ -1637,7 +1637,7 @@ To render a spline area chart, create an instance of `StepAreaSeries`, and add i
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             StepAreaSeries<SalesData, DateTime>(
                                 dataSource: chartData,
@@ -1672,7 +1672,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             StepAreaSeries<SalesData, DateTime>(
                                 dataSource: chartData,
@@ -2386,7 +2386,7 @@ To render a 100% stacked area chart, create an instance of `StackingArea100Serie
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             StackedArea100Series<ChartData, DateTime>(
                                 dataSource: chartData,
@@ -2721,7 +2721,7 @@ To render a HiLo chart, create an instance of [`HiloSeries`](https://pub.dev/doc
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders bar chart
                             HiloSeries<SalesData, DateTime>(
@@ -2769,7 +2769,7 @@ To render a OpenHighLowClose chart, create an instance of [` hiloOpenCloseSeries
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders hiloOpenCloseSeries 
                             hiloOpenCloseSeries<SalesData, DateTime>(
@@ -2876,7 +2876,7 @@ To render a Candle chart, create an instance of [` CandleSeries`](https://pub.de
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders CandleSeries
                             CandleSeries<SalesData, DateTime>(
@@ -2901,7 +2901,7 @@ To render a Candle chart, create an instance of [` CandleSeries`](https://pub.de
 
 #### See Also 
 
-* [Rendering flutter candle stick chart](https://www.syncfusion.com/kb/12288/how-to-render-flutter-candlestick-chart-using-the-charts-widget-sfcartesianchart)
+* [Rendering flutter candle stick chart](https://www.syncfusion.com/kb/12288/how-to-render-flutter-candlestick-chart-using-the-charts-widget-sfcartesianchart).
 
 ### Indication for same values
 

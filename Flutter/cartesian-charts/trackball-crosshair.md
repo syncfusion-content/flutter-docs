@@ -257,7 +257,7 @@ The ActivationMode enum contains the following values:
           child: Center(
             child: Container(
               child: SfCartesianChart(
-                primaryXAxis:DateTimeAxis(),
+                primaryXAxis: DateTimeAxis(),
                 trackballBehavior: _trackballBehavior,
                 <LineSeries<SalesData, dateTime>>[
                       LineSeries<SalesData, dateTime>(
@@ -321,7 +321,7 @@ Also refer, [marker customization](./marker-datalabel#Marker) for customizing th
           child: Center(
             child: Container(
               child: SfCartesianChart(
-                primaryXAxis:DateTimeAxis(),
+                primaryXAxis: DateTimeAxis(),
                 trackballBehavior: _trackballBehavior,
                 <LineSeries<SalesData, dateTime>>[
                       LineSeries<SalesData, dateTime>(
@@ -349,7 +349,7 @@ Also refer, [marker customization](./marker-datalabel#Marker) for customizing th
 
 #### See Also
 
-* [Disable marker for a specific series in trackball](https://www.syncfusion.com/kb/12107/how-to-disable-the-trackball-marker-for-specific-series-in-cartesian-charts)
+* [Disable marker for a specific series in trackball](https://www.syncfusion.com/kb/12107/how-to-disable-the-trackball-marker-for-specific-series-in-cartesian-charts).
 
 ### Trackball tooltip template
 

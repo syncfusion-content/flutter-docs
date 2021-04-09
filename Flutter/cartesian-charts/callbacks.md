@@ -118,7 +118,7 @@ Triggers while rendering the axis labels. Text and text styles such as color, fo
 
 #### See Also
 
-* [Using dateTime values in y-axis using onAxisLabelRender callback](https://www.syncfusion.com/kb/12224/how-to-use-datetime-values-in-the-y-axis-sfcartesianchart)
+* [Using dateTime values in y-axis using onAxisLabelRender callback](https://www.syncfusion.com/kb/12224/how-to-use-datetime-values-in-the-y-axis-sfcartesianchart).
 
 ## onDataLabelRender
 
@@ -491,7 +491,7 @@ Triggers when tapping the axis label. The  [`onAxisLabelTapped`](https://pub.dev
 
 #### See Also
 
-* [Navigating to an hyperlink on axis label tap.](https://www.syncfusion.com/kb/12202/how-to-navigate-to-a-hyperlink-when-clicked-on-chart-axis-label-sfcartesianchart)
+* [Navigating to an hyperlink on axis label tap](https://www.syncfusion.com/kb/12202/how-to-navigate-to-a-hyperlink-when-clicked-on-chart-axis-label-sfcartesianchart).
 
 ## onLegendTapped
 

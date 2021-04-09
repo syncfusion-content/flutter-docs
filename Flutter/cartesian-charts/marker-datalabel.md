@@ -236,7 +236,7 @@ The [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/l
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         series: <CartesianSeries>[
                             AreaSeries<ChartData, DateTime>(
                                 dataSource: chartData,
@@ -272,7 +272,7 @@ The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         series: <CartesianSeries>[
                             AreaSeries<ChartData, DateTime>(
                                 dataSource: chartData,

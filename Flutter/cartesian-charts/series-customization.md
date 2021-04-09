@@ -109,9 +109,9 @@ If you wish to perform the initial rendering animation again in the existing ser
 
 #### See Also
 
-* [Create dynamic animated series on addition of data points in the series](https://www.syncfusion.com/kb/12290/how-to-create-flutter-animated-charts-using-the-charts-widget-sfcartesianchart)
+* [Create dynamic animated series on addition of data points in the series](https://www.syncfusion.com/kb/12290/how-to-create-flutter-animated-charts-using-the-charts-widget-sfcartesianchart).
 
-* [Dynamically animate chart using public methods](https://www.syncfusion.com/kb/12205/how-to-animate-the-chart-series-dynamically-using-the-public-method-sfcartesianchart)
+* [Dynamically animate chart using public methods](https://www.syncfusion.com/kb/12205/how-to-animate-the-chart-series-dynamically-using-the-public-method-sfcartesianchart).
 
 ## Transpose the series
 
@@ -281,7 +281,7 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
 
 #### See Also
 
-* [Rotating the gradient applied to a chart in Cartesian charts](https://www.syncfusion.com/kb/12054/how-to-apply-and-rotate-gradient-in-the-chart-sfcartesainchart)
+* [Rotating the gradient applied to a chart in Cartesian charts](https://www.syncfusion.com/kb/12054/how-to-apply-and-rotate-gradient-in-the-chart-sfcartesainchart).
 
 N>: The gradient is not applicable for spline, step line, candle, hilo, hilo open close, and line type charts. However, in line type gradient is applicable for [`FastLineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FastLineSeries-class.html) alone.
 

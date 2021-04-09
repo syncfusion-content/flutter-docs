@@ -529,7 +529,7 @@ The Flutter Chart supports the following types of interval for date-time axis:
 
 #### See Also
 
-* [Rendering flutter time series chart with hours interval](https://www.syncfusion.com/kb/12289/how-to-render-flutter-time-series-chart-using-the-charts-widget-sfcartesianchart)
+* [Rendering flutter time series chart with hours interval](https://www.syncfusion.com/kb/12289/how-to-render-flutter-time-series-chart-using-the-charts-widget-sfcartesianchart).
 
 ### Double range support
 

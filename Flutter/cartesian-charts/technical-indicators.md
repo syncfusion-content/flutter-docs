@@ -57,7 +57,7 @@ Refer the following example,
        return Scaffold(
         body: Center(
           child: SfCartesianChart(
-            primaryXAxis:DateTimeAxis(),
+            primaryXAxis: DateTimeAxis(),
             legend: Legend(isVisible: true),
             indicators: <TechnicalIndicators<Sample,dynamic>>[AccumulationDistributionIndicator<Sample, dynamic>(
                   seriesName: 'HiloOpenClose')],
@@ -93,7 +93,7 @@ Refer the following example,
      return Scaffold(
         body: Center(
          child: SfCartesianChart(
-          primaryXAxis:DateTimeAxis(),
+          primaryXAxis: DateTimeAxis(),
           legend: Legend(isVisible: true),
           indicators:
           <TechnicalIndicators<dynamic,   dynamic>>[
@@ -127,7 +127,7 @@ Refer the following example,
      return Scaffold(
        body: Center(
          child: SfCartesianChart(
-           primaryXAxis:DateTimeAxis(),
+           primaryXAxis: DateTimeAxis(),
            legend: Legend(isVisible: true),
            indicators:        <TechnicalIndicators<dynamic, dynamic>[ BollingerBandIndicator<dynamic, dynamic>(
                   period: 3,
@@ -159,7 +159,7 @@ Refer the following example,
       return Scaffold(
         body: Center(
           child: SfCartesianChart(
-            primaryXAxis:DateTimeAxis(),
+            primaryXAxis: DateTimeAxis(),
             legend: Legend(isVisible: true),
             indicators: <TechnicalIndicators<dynamic, dynamic>>[
         EmaIndicator<dynamic, dynamic>(
@@ -182,7 +182,7 @@ Refer the following example,
 
 This is mostly using indicator having [`shortPeriod`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdIndicator/shortPeriod.html) and [`longPeriod`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdIndicator/longPeriod.html) for defining the motion of the indicator.
 
-Also you can draw Line, Histogram MACD or Both types using the  [`macdType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdIndicator/macdType.html) property,
+Also you can draw `Line`, `Histogram` MACD or `Both` types using the  [`macdType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdIndicator/macdType.html) property,
 
 The [`macdLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdIndicator/macdLineColor.html) property is used to define the color for the MACD line and the [`histogramNegativeColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdIndicator/histogramNegativeColor.html) and [`histogramPositiveColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdIndicator/histogramPositiveColor.html) property is used to define the color for the MACD histogram.
 
@@ -195,7 +195,7 @@ Refer the following example,
      return Scaffold(
        body: Center(
           child: SfCartesianChart(
-            primaryXAxis:DateTimeAxis(),
+            primaryXAxis: DateTimeAxis(),
             legend: Legend(isVisible: true),
             indicators: <TechnicalIndicators<dynamic, dynamic>>[
           MacdIndicator<dynamic, dynamic>(
@@ -227,7 +227,7 @@ Refer the following example,
       return Scaffold(
         body: Center(
           child: SfCartesianChart(
-            primaryXAxis:DateTimeAxis(),
+            primaryXAxis: DateTimeAxis(),
             legend: Legend(isVisible: true),
             indicators: <TechnicalIndicators<dynamic, dynamic>>[
           MomentumIndicator<dynamic, dynamic>(
@@ -259,7 +259,7 @@ Refer the following example,
       return Scaffold(
         body: Center(
           child: SfCartesianChart(
-            primaryXAxis:DateTimeAxis(),
+            primaryXAxis: DateTimeAxis(),
             legend: Legend(isVisible: true),
              indicators: <TechnicalIndicators<dynamic, dynamic>>[
           RsiIndicator<dynamic, dynamic>(
@@ -290,7 +290,7 @@ The [`Simple moving average indicator`](https://pub.dev/documentation/syncfusion
       return Scaffold(
         body: Center(
           child: SfCartesianChart(
-            primaryXAxis:DateTimeAxis(),
+            primaryXAxis: DateTimeAxis(),
             legend: Legend(isVisible: true),
             indicators: <TechnicalIndicators<dynamic, dynamic>>[
           SmaIndicator<dynamic, dynamic>(
@@ -323,7 +323,7 @@ Refer the following example,
       return Scaffold(
         body: Center(
           child: SfCartesianChart(
-            primaryXAxis:DateTimeAxis(),
+            primaryXAxis: DateTimeAxis(),
             legend: Legend(isVisible: true),
             indicators: <TechnicalIndicators<dynamic, dynamic>>[
           StochasticIndicator<dynamic, dynamic>(   
@@ -355,7 +355,7 @@ Refer the following example,
       return Scaffold(
         body: Center(
           child: SfCartesianChart(
-            primaryXAxis:DateTimeAxis(),
+            primaryXAxis: DateTimeAxis(),
             legend: Legend(isVisible: true),
             indicators: <TechnicalIndicators<dynamic, dynamic>>[
           TmaIndicator<Sample, dynamic>(
@@ -386,7 +386,7 @@ The following code example can define the legend.
       return Scaffold(
         body: Center(
           child: SfCartesianChart(
-            primaryXAxis:DateTimeAxis(),
+            primaryXAxis: DateTimeAxis(),
             indicators: <TechnicalIndicators<dynamic, dynamic>>[
               MomentumIndicator<dynamic, dynamic>(
                   seriesName: 'HiloOpenClose',
@@ -427,7 +427,7 @@ The chart will display the segment information through the tooltip. It is used t
       return Scaffold(
         body: Center(
           child: SfCartesianChart(
-            primaryXAxis:DateTimeAxis(),
+            primaryXAxis: DateTimeAxis(),
             tooltipBehavior: _tooltipBehavior,
             indicators: <TechnicalIndicators<dynamic, dynamic>>[
               ATRIndicator<dynamic, dynamic>(
