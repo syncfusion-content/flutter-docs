@@ -51,9 +51,9 @@ chart1.isSeriesInRows = false;
 sheet.charts = charts;
 
 // save and dispose the workbook.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
 
-File('ExcelColumnChart.xlsx').writeAsBytes(bytes!);
+File('ExcelColumnChart.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}

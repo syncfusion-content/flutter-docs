@@ -15,7 +15,7 @@ Customization of features such as axis title, labels, grid lines and tick lines 
 
 ### Axis Visibility
 
-Axis visibility can be controlled using the [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/isVisible.html) property of axis. Default value of [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/isVisible.html) is *true*. When the axis visibility is set to false, then the axis elements like ticks, labels, title, etc will be hidden.
+Axis visibility can be controlled using the [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/isVisible.html) property of axis. Default value of [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/isVisible.html) is `true`. When the axis visibility is set to false, then the axis elements like ticks, labels, title, etc will be hidden.
 
 {% highlight dart %} 
 
@@ -45,11 +45,11 @@ The [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
 
 * [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisTitle/text.html) - used to set the title for axis.
 * [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisTitle/textStyle.html) - used to change the text color, size, font family, font style, and font weight.
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/color.html) - used to change the color of the label.
-* [`fontFamily`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontFamily.html) - used to change the font family for the axis title.
-* [`fontStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontStyle.html) - used to change the font style for the axis title.
-* [`fontWeight`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontWeight.html) - used to change the font weight for the axis title.
-* [`fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontSize.html) - used to change the font size for the axis title.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/color.html) - used to change the color of the label.
+* [`fontFamily`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontFamily.html) - used to change the font family for the axis title.
+* [`fontStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontStyle.html) - used to change the font style for the axis title.
+* [`fontWeight`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontWeight.html) - used to change the font weight for the axis title.
+* [`fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontSize.html) - used to change the font size for the axis title.
 
 {% highlight dart %} 
 
@@ -62,7 +62,7 @@ The [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
                         primaryXAxis: CategoryAxis(
                             title: AxisTitle(
                                 text: 'X-Axis',
-                                textStyle: ChartTextStyle(
+                                textStyle: TextStyle(
                                     color: Colors.deepOrange,
                                     fontFamily: 'Roboto',
                                     fontSize: 16,
@@ -145,11 +145,11 @@ The [`labelRotation`](https://pub.dev/documentation/syncfusion_flutter_charts/la
 The [`labelStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelStyle.html) property in axis provides options to customize the font of axis label. The axis label can be customized using following properties,
 
 * [`labelStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelStyle.html) - used to change the text color, size, font family, font style, and font weight.
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/color.html) - used to change the color of the axis label.
-* [`fontFamily`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontFamily.html) - used to change the font family for the axis label.
-* [`fontStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontStyle.html) - used to change the font style for the axis label.
-* [`fontWeight`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontWeight.html) - used to change the font weight for the axis label.
-* [`fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontSize.html) - used to change the font size for the axis label.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/color.html) - used to change the color of the axis label.
+* [`fontFamily`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontFamily.html) - used to change the font family for the axis label.
+* [`fontStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontStyle.html) - used to change the font style for the axis label.
+* [`fontWeight`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontWeight.html) - used to change the font weight for the axis label.
+* [`fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontSize.html) - used to change the font size for the axis label.
 
 {% highlight dart %} 
 
@@ -159,8 +159,8 @@ The [`labelStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis: NumericAxis(
-                            labelStyle: ChartTextStyle(
+                        primaryXAxis: CategoryAxis(
+                            labelStyle: TextStyle(
                                 color: Colors.deepOrange,
                                 fontFamily: 'Roboto',
                                 fontSize: 14,
@@ -180,7 +180,7 @@ The [`labelStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
 
 ### Axis animation
 
-The axis animation can be enabled using the `enableAxisAnimation` property of the chart. It defaults to false and this is applicable for all the primary and secondary axis in the chart.
+The axis animation can be enabled using the `enableAxisAnimation` property of the chart. It defaults to `false` and this is applicable for all the primary and secondary axis in the chart.
 
 On setting the `enableAxisAnimation` property to true, the axis elements like grid lines, tick lines, and labels will be animated when the axis range is changed dynamically. Axis visible range will be changed while zooming, panning, or while updating the data points.
 
@@ -224,6 +224,8 @@ The [`labelFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 
 Also refer [number format](./axis-types#formatting-the-labels) and [date format](./axis-types#formatting-the-labels-1) for formatting the labels further.
 
+N> You must import [`intl`](https://pub.dev/packages/intl) package for formatting axis label using the [`NumberFormat`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html) class and  [`date Format`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
+
 ### Label and tick positioning
 
 Axis labels and ticks can be positioned inside or outside the chart area by using [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelPosition.html) and [`tickPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/tickPosition.html) properties of ChartAxis. By default labels and ticks will be positioned outside the chart area.
@@ -252,7 +254,7 @@ Axis labels and ticks can be positioned inside or outside the chart area by usin
 
 ### Edge label placement
 
-Labels with long text at the edges of an axis may appear partially outside the chart. The [`edgeLabelPlacement`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/edgeLabelPlacement.html) property can be used to avoid the partial appearance of labels at the corners. Default value of this property is *none*. Other available options of [`edgeLabelPlacement`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/edgeLabelPlacement.html) are shift and hide. *shift* option will move the edge labels inside the axis bounds, where the *hide* option will hides the edge labels. 
+Labels with long text at the edges of an axis may appear partially outside the chart. The [`edgeLabelPlacement`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/edgeLabelPlacement.html) property can be used to avoid the partial appearance of labels at the corners. Default value of this property is `none`. Other available options of [`edgeLabelPlacement`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/edgeLabelPlacement.html) are shift and hide. `shift` option will move the edge labels inside the axis bounds, where the `hide` option will hides the edge labels.
 
 {% highlight dart %} 
 
@@ -313,7 +315,7 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
 
 ### Tick lines customization
 
-The [`majorTickLines`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/majorTickLines.html) and [`minorTickLines`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/minorTickLines.html) properties in axis are used to customize the major tick lines of an axis and minor tick lines of an axis respectively. We have provided options to change the [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MajorTickLines/width.html), [`size`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MajorTickLines/size.html), [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MajorTickLines/color.html) and [`minorTicksPerInterval`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/minorTicksPerInterval.html) of tick lines. By default minor tick lines will not be visible.
+The [`majorTickLines`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/majorTickLines.html) and [`minorTickLines`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/minorTickLines.html) properties in axis are used to customize the major tick lines of an axis and minor tick lines of an axis respectively. We have provided options to customize the [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MajorTickLines/width.html), [`size`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MajorTickLines/size.html), [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MajorTickLines/color.html) and [`minorTicksPerInterval`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/minorTicksPerInterval.html) of tick lines. By default minor tick lines will not be visible.
 
 {% highlight dart %} 
 
@@ -348,7 +350,7 @@ The [`majorTickLines`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
 ### Inversing axis
 
-Axis can be inversed using the [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/isInversed.html) property of an axis. Default value of [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/isInversed.html) property is *false*.
+Axis can be inversed using the [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/isInversed.html) property of an axis. Default value of [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/isInversed.html) property is `false`.
 
 {% highlight dart %} 
 
@@ -374,7 +376,7 @@ Axis can be inversed using the [`isInversed`](https://pub.dev/documentation/sync
 
 ### Placing axes at the opposite side
 
-The [`opposedPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/opposedPosition.html) property of axis can be used to place the axis at the opposite side of its default position. Default value of [`opposedPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/opposedPosition.html) property is *false*.
+The [`opposedPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/opposedPosition.html) property of axis can be used to place the axis at the opposite side of its default position. Default value of [`opposedPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/opposedPosition.html) property is `false`.
 
 {% highlight dart %} 
 
@@ -400,7 +402,7 @@ The [`opposedPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
 ### Offset the rendering
 
-The [`plotOffset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/plotOffset.html) property is used to offset the rendering of the axis at start and end position. The following code snippet demonstrates to apply the plot offset of an axis.
+The [`plotOffset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/plotOffset.html) property is used to offset the rendering of the axis at start and end position. The following code snippet demonstrates how to apply the plot offset of an axis.
 
 {% highlight dart %} 
 
@@ -426,7 +428,7 @@ The [`plotOffset`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
 
 ### Maximum number of labels per 100 logical pixels
 
-By default, a maximum of 3 labels are displayed for each 100 logical pixels in axis. The maximum number of labels that should be present within 100 logical pixels length can be customized using the [`maximumLabels`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/maximumLabels.html) property of an axis. This property is applicable only for automatic range calculation and will not work if you set value for **interval** property of an axis.
+By default, a maximum of 3 labels are displayed for each 100 logical pixels in axis. The maximum number of labels that should be present within 100 logical pixels length can be customized using the [`maximumLabels`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/maximumLabels.html) property of an axis. This property is applicable only for automatic range calculation and will not work if you set value for `interval` property of an axis.
 
 {% highlight dart %} 
 
@@ -474,7 +476,7 @@ Also refer [minimum](./axis-types) and [maximum](./axis-types) range of an axis.
 
 ### Visible maximum
 
-The [`visibleMaximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/visibleMaximum.html) property is used to set the minimum visible range of an axis.When panning is enabled, you can pan to the actual maximum range of an axis.
+The [`visibleMaximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/visibleMaximum.html) property is used to set the minimum visible range of an axis. When panning is enabled, you can pan to the actual maximum range of an axis.
 
 {% highlight dart %} 
 
@@ -523,7 +525,7 @@ Axis labels may overlap with each other based on chart dimensions and label size
 
 ## Axis crossing
 
-Axis can be positioned anywhere in the plot area using the [`crossesAt`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/crossesAt.html) property. This property specifies where the horizontal axis should intersect or cross the vertical axis, or vice-versa. The default value of the [`crossesAt`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/crossesAt.html) property is *null*.
+Axis can be positioned anywhere in the plot area using the [`crossesAt`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/crossesAt.html) property. This property specifies where the horizontal axis should intersect or cross the vertical axis, or vice-versa. The default value of the [`crossesAt`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/crossesAt.html) property is `null`.
 
 {% highlight dart %} 
    
@@ -533,7 +535,7 @@ Axis can be positioned anywhere in the plot area using the [`crossesAt`](https:/
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:NumericAxis(
+                        primaryXAxis: NumericAxis(
                             crossesAt: 0
                         ),
                         primaryYAxis:NumericAxis(
@@ -587,7 +589,7 @@ For crossing in horizontal date-time axis, date value should be provided for the
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:DateTimeAxis(),
+                        primaryXAxis: DateTimeAxis(),
                         primaryYAxis:NumericAxis(
                             crossesAt: DateTime(2018, 4, 1)
                         )
@@ -603,7 +605,7 @@ For crossing in horizontal date-time axis, date value should be provided for the
 
 ### Positioning the axis labels when crossing
 
-The [`placeLabelsNearAxisLine`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/placeLabelsNearAxisLine.html) property is used to determine whether the axis labels of crossed axis should be placed near to the axis line or not. The default value of [`placeLabelsNearAxisLine`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/placeLabelsNearAxisLine.html) property is *false*.
+The [`placeLabelsNearAxisLine`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/placeLabelsNearAxisLine.html) property is used to determine whether the axis labels of crossed axis should be placed near to the axis line or not. The default value of [`placeLabelsNearAxisLine`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/placeLabelsNearAxisLine.html) property is `false`.
 
 {% highlight dart %}
 
@@ -613,7 +615,7 @@ The [`placeLabelsNearAxisLine`](https://pub.dev/documentation/syncfusion_flutter
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis:NumericAxis(
+                        primaryXAxis: NumericAxis(
                             placeLabelNearToAxisLine: false
                         ),
                         primaryYAxis:NumericAxis(
@@ -637,21 +639,19 @@ Since plot bands are drawn based on the axis, you have to add plot bands using t
 
 The following properties are used to configure the plot bands:
 
-* [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/start.html) - Changes the start position of the plot band.
-* [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/end.html) - Changes the end position of the plot band.
-* [`size`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/size.html) - Changes how long plot band should be expanded. This is applicable only when end is not specified.
-* [`sizeType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/sizeType.html) - Changes the date-time unit of the value specified in the size property. The values can be year, month, day, hour, minute, second, and millisecond.
-* [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/text.html) - Changes the text of the plot band.
-* [`textAngle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/textAngle.html) - Changes the angle of the text.
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/color.html) - Changes the color of the plot band.
-* [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/gradient.html) - Applies gradient color for plot band.
-* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/opacity.html) - Changes the opacity of the plot band.
-* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/borderWidth.html) - Changes the stroke width of the plot band.
-* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/borderColor.html) - Changes the stroke color of the plot band.
-* [`horizontalTextAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/horizontalTextAlignment.html) - Aligns the text horizontally.
-* [`verticalTextAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/verticalTextAlignment.html) - Aligns the text vertically.
-* [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/isVisible.html) - Changes the visibility of the plot band in chart axis.
-* [`shouldRenderAboveSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/shouldRenderAboveSeries.html) - Changes the rendering order of the plot band.
+* [`size`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/size.html) - changes how long plot band should be expanded. This is applicable only when end is not specified.
+* [`sizeType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/sizeType.html) - changes the date-time unit of the value specified in the size property. The values can be year, month, day, hour, minute, second, and millisecond.
+* [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/text.html) - changes the text of the plot band.
+* [`textAngle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/textAngle.html) - changes the angle of the text.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/color.html) - changes the color of the plot band.
+* [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/gradient.html) - applies gradient color for plot band.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/opacity.html) - changes the opacity of the plot band.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/borderWidth.html) - changes the stroke width of the plot band.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/borderColor.html) - changes the stroke color of the plot band.
+* [`horizontalTextAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/horizontalTextAlignment.html) - aligns the text horizontally.
+* [`verticalTextAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/verticalTextAlignment.html) - aligns the text vertically.
+* [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/isVisible.html) - changes the visibility of the plot band in chart axis.
+* [`shouldRenderAboveSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/shouldRenderAboveSeries.html) - changes the rendering order of the plot band.
 * [`isRepeatable`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/isRepeatable.html) - specifies the plot band need to be repeated in specified interval.
 * [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/textStyle.html) - customizes the text style of plot band.
 
@@ -705,10 +705,12 @@ Plot band can be added to the date-time axis by specifying date values to the [`
                             start: DateTime(2018, 2, 1),
                             end:  DateTime(2018, 4, 1),
                         ),
-                    )
-                )
-            )
-        );
+                     ],
+                  )
+              )
+          )
+        )  
+      );
     }
 
 {% endhighlight %}
@@ -719,8 +721,8 @@ Plot band can be added to the date-time axis by specifying date values to the [`
 
 This feature is used to enable the plot bands to be drawn repeatedly at the regular intervals. This will be useful when you need to mark an event that occurs recursively along the timeline of the chart. The following properties are used to configure this feature:
 
-* [`repeatEvery`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/repeatEvery.html) - Changes the frequency of the plot band being repeated.
-* [`repeatUntil`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/repeatUntil.html) - Specifies the end value at which point strip line has to stop repeating.
+* [`repeatEvery`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/repeatEvery.html) - changes the frequency of the plot band being repeated.
+* [`repeatUntil`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PlotBand/repeatUntil.html) - specifies the end value at which point strip line has to stop repeating.
 
 The following code snippet and screenshot demonstrate this feature by highlighting weekends.
 
@@ -741,11 +743,13 @@ The following code snippet and screenshot demonstrate this feature by highlighti
                             size: 1,
                             sizeType: DateTimeIntervalType.months,
                             repeatUntil: DateTime(2018, 6, 1),
-                        ),
+                            ),
+                        ],
                     )
                 )
             )
-        );
+         ) 
+      );
     }
 
 {% endhighlight %}
@@ -777,10 +781,12 @@ Suppose, you need to draw a plot band that should not stretch along its associat
                             shouldRenderAboveSeries: true,
                             color: const Color.fromRGBO(224, 155, 0, 1)
                         ),
+                      ]
                     )
                 )
             )
-        );
+        )
+      );
     }
 
 {% endhighlight %}
@@ -806,13 +812,15 @@ When you specify the same value for both [`start`](https://pub.dev/documentation
                           start: 13,
                           end: 13,
                           borderWidth: 2,
-                        )
-                      ]
+                        borderColor: Colors.black,
+                               )
+                           ]
+                         )
+                      )
                     )
-                   )
                 )
-              );  
-           }
+            );  
+        }
 
 {% endhighlight %}
 
@@ -909,7 +917,7 @@ By default, the chart is rendered with primary x axis and primary y axis. But, t
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales
                             ),
-                            LineSeries<SalesData, double>(
+                            LineSeries<SalesData, String>(
                                 dataSource: [
                                     SalesData('Jan', 15, 1),
                                     SalesData('Feb', 11, 2),
@@ -936,11 +944,11 @@ By default, the chart is rendered with primary x axis and primary y axis. But, t
 
 The position of axis label can be aligned using the [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelAlignment.html) property.The following options are available in axis label alignment.
 
-* [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelAlignment-class.html) - If it is a horizontal axis, aligns the labels before the gridline and if it is a vertical axis, aligns the labels below the gridline.
+* [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelAlignment-class.html) - if it is a horizontal axis, aligns the labels before the gridline and if it is a vertical axis, aligns the labels below the gridline.
 
-* [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelAlignment-class.html) - If it is a horizontal axis, aligns the labels after the gridline and if it is a vertical axis, align the labels above the gridline.
+* [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelAlignment-class.html) - if it is a horizontal axis, aligns the labels after the gridline and if it is a vertical axis, align the labels above the gridline.
 
-* [`center`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelAlignment-class.html) - Aligns the axis label to the center of the gridlines.
+* [`center`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelAlignment-class.html) - aligns the axis label to the center of the gridlines.
 
 ### Center
 
@@ -1026,11 +1034,11 @@ If it is a horizontal axis, aligns the labels after the gridline and if it is a 
 ## Auto range calculation
 Determines the value axis range, based on the visible data points or based on the overall data points available in chart. 
 
-By default, value axis range will be calculated automatically based on the visible data points on dynamic changes. The visible data points are changed on performing interactions like pinch zooming, selection zooming, panning and also on specifying [visibleMinimum](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/visibleMinimum.html) and [visibleMaximum](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/visibleMaximum.html) values.
+By default, value axis range will be calculated automatically based on the visible data points on dynamic changes. The visible data points are changed on performing interactions like pinch zooming, selection zooming, panning and also on specifying [`visibleMinimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/visibleMinimum.html) and [`visibleMaximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/visibleMaximum.html) values.
   
 To toggle this functionality, [`anchorRangeToVisiblePoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/anchorRangeToVisiblePoints.html) property can be used. i.e. on setting this property to false, the value axis range will be calculated based on all the data points in chart irrespective of visible points.
   
-N> This is applicable only to the value axis and not for other axis and applicable only when zoom mode is set to x.
+N>: This is applicable only to the value axis and not for other axis and applicable only when zoom mode is set to x.
   
 {% highlight dart %} 
 
@@ -1049,7 +1057,7 @@ N> This is applicable only to the value axis and not for other axis and applicab
 
 ## Axis label width customization
 
-The maximum width for axis labels and the space occupied by the axis labels can be controlled by using the [`maximumLabelWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/maximumLabelWidth.html) and [`labelsExtent`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelsExtent.html) properties of the axis respectively. If the provided width is lesser than the axis label's width, the label gets trimmed and the tooltip can be shown on clicking/tapping the axis label in both cases. Both properties are defaults to `null`.
+The maximum width for axis labels and the space occupied by the axis labels can be controlled by using the [`maximumLabelWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/maximumLabelWidth.html) and [`labelsExtent`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelsExtent.html) properties of the axis respectively. If the provided width is lesser than the axis label's width, the label gets trimmed and the tooltip  is shown when clicking/tapping the axis label in both cases. Both properties default to `null`.
 
 
 {% highlight dart %} 
@@ -1079,13 +1087,13 @@ The maximum width for axis labels and the space occupied by the axis labels can 
 
 {% endhighlight %}
 
-N> If both [`maximumLabelWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/maximumLabelWidth.html) and [`labelsExtent`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelsExtent.html) properties are specified, then the priority goes to [`labelsExtent`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelsExtent.html) property.
+N>:  If both [`maximumLabelWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/maximumLabelWidth.html) and [`labelsExtent`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelsExtent.html) properties are specified, then the priority goes to [`labelsExtent`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelsExtent.html) property.
 
 ![Axis label trim](images/axis-customization/axis-label-trim.gif)
 
 ## Auto scrolling
 
-Auto scrolling feature available in SfCartesianChart is used to ensure that specified range of data is always visible in the chart and you can view the remaining data points by scrolling. The [`autoScrollingDelta `](~) property of the chart axis can be used to set the number of data points to be always visible in the chart. It always shows the recently added data points and scrolling will be reset to the start or end of the range, based on [`autoScrollingMode`](~) property's value, whenever a new point is added dynamically.
+Auto scrolling feature available in SfCartesianChart is used to ensure that specified range of data is always visible in the chart and you can view the remaining data points by scrolling. The [`autoScrollingDelta `](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/autoScrollingDelta.html) property of the chart axis can be used to set the number of data points to be always visible in the chart. It always shows the recently added data points and scrolling will be reset to the start or end of the range, based on [`autoScrollingMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/autoScrollingMode.html) property's value, whenever a new point is added dynamically.
 
 {% highlight dart %}
 
@@ -1104,7 +1112,7 @@ Auto scrolling feature available in SfCartesianChart is used to ensure that spec
 
 ### AutoScrollingMode
 
-[`AutoScrollingMode`](~) property can be used to determine whether the axis should be scrolled from start position or end position. The default value of [`AutoScrollingMode`](~) is `end`.
+[`AutoScrollingMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/autoScrollingMode.html) property can be used to determine whether the axis should be scrolled from start position or end position. The default value of [`AutoScrollingMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/autoScrollingMode.html) is `end`.
 
 {% highlight dart %}
 
@@ -1123,7 +1131,7 @@ Auto scrolling feature available in SfCartesianChart is used to ensure that spec
 
 ### AutoScrollingDeltaType
 
-In [`DateTimeAxis`](~), you can apply auto scrolling delta value in Years, Months, Days, Hours, Minutes, Seconds and auto by setting [`AutoScrollingDeltaType`](~) property. Default value of this property is `auto` and the delta will be calculated automatically based on range.
+In [`DateTimeAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis-class.html), you can apply auto scrolling delta value in Years, Months, Days, Hours, Minutes, Seconds and auto by setting [`AutoScrollingDeltaType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/autoScrollingDeltaType.html) property. Default value of this property is `auto` and the delta will be calculated automatically based on range.
 
 {% highlight dart %}
 
@@ -1143,3 +1151,7 @@ In [`DateTimeAxis`](~), you can apply auto scrolling delta value in Years, Month
 ## See Also
 
 * [Rendering a particular part of a data using visible minimum and visible maximum in the Cartesian chart](https://www.syncfusion.com/kb/11308/how-to-render-particular-part-of-a-data-in-cartesian-charts-sfcartesianchart).
+
+* [Creating a flutter master-detail chart using range controller in the Cartesian chart](https://www.syncfusion.com/kb/12318/how-to-create-flutter-master-detail-chart-using-the-cartesian-charts-widget).
+
+* [Changing the visible range of chart using range selector in the Cartesian chart](https://www.syncfusion.com/kb/12053/how-to-change-the-visible-chart-range-using-the-range-selector-widget-sfcartesianchart).

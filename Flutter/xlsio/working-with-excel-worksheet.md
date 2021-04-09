@@ -33,10 +33,10 @@ final Worksheet sheet1 = workbook.worksheets.addWithName('Sample');
 final Worksheet sheet2 = workbook.worksheets.add();
 
 // Save and dispose workbook.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
 
-File('Output.xlsx').writeAsBytes(bytes!);
+File('Output.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -62,10 +62,10 @@ final Worksheet sheet = workbook.worksheets[0];
 final Worksheet namedSheet = workbook.worksheets['Sample'];
 
 // Save and dispose workbook.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
 
-File('Output.xlsx').writeAsBytes(bytes!);
+File('Output.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -87,10 +87,10 @@ final Worksheet sheet = workbook.worksheets[0];
 sheet.showGridlines = false;
 
 //Save and dispose workbook.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
 
-File('Output.xlsx').writeAsBytes(bytes!);
+File('Output.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -117,10 +117,10 @@ sheet.getRangeByName('A1').columnWidth = 20;
 sheet.getRangeByName('A2:A5').columnWidth = 30;
 
 // Save and dispose workbook.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
 
-File('Output.xlsx').writeAsBytes(bytes!);
+File('Output.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
