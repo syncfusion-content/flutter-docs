@@ -27,10 +27,10 @@ final Worksheet sheet = workbook.worksheets[0];
 sheet.pictures.addBase64(1, 1, image1jpg);
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
+final List<int>? bytes = workbook.saveAsStream();
 workbook.dispose();
 
-File('AddImage.xlsx').writeAsBytes(bytes);
+File('AddImage.xlsx').writeAsBytes(bytes!);
 
 {% endhighlight %}
 
@@ -61,10 +61,10 @@ picture.rotation = 100;
 picture.horizontalFlip = true;
 
 // save and dispose workbook
-final List<int> bytes = workbook.saveAsStream();
+final List<int>? bytes = workbook.saveAsStream();
 workbook.dispose();
 
-File('Image.xlsx').writeAsBytes(bytes);
+File('Image.xlsx').writeAsBytes(bytes!);
 
 {% endhighlight %}
 

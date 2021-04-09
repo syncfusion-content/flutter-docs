@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Flutter Linear Gauge (SfLinearGauge)
 
-This section explains the steps required to add the linear gauge and its elements such as axis, range and pointer. This section covers only basic features needed to know to get started with the Linear Gauge widget.
+This section explains the steps required to add the Linear Gauge and its elements such as axis, range, and pointer and also covers basic features needed to know to get started with the Linear Gauge widget.
 
 ## Add Linear Gauge to an application
 
@@ -27,7 +27,7 @@ Add the Syncfusion Flutter Gauge dependency to your pubspec.yaml file.
 
 {% endhighlight %}
 
-N> Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Gauge`](https://pub.dev/packages/syncfusion_flutter_gauges/versions) package.
+N> Here **xx.x.xx** denotes the current version of the [`Syncfusion Flutter Gauge`](https://pub.dev/packages/syncfusion_flutter_gauges/versions) package.
 
 **Get packages**
 
@@ -51,7 +51,7 @@ Import the following package in your Dart code.
 
 ## Initialize the Linear Gauge
 
-After the package has been imported, initialize the [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/SfLinearGauge.html) as a child of any widget such as center widget.
+After the package has been imported, initialize the SfLinearGauge as a child of any widget such as container widget.
 
 {% highlight dart %} 
 
@@ -72,7 +72,7 @@ After the package has been imported, initialize the [`SfLinearGauge`](https://pu
 
 ## Add axis
 
-The Linear Gauge axis is a scale where a set of values can be plotted. You can specify the minimum and maximum values of axis using the [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/minimum.html) and [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/maximum.html) properties as demonstrated in the following code snippet.
+The Linear Gauge axis is a scale where a set of values can be plotted. You can specify the minimum and maximum values of the axis using the minimum and maximum properties as demonstrated in the following code sample.
 
 {% highlight dart %} 
 
@@ -93,7 +93,7 @@ The Linear Gauge axis is a scale where a set of values can be plotted. You can s
 
 ## Update orientation
 
-As you could see in the above image, the default orientation of the Linear gauge is horizontal. But you can change it with the [`orientation`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/orientation.html) property of [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/SfLinearGauge.html) widget.
+As you can see in the above image, the default orientation of the Linear Gauge is horizontal. But you can change it with the orientation property of the Linear Gauge widget.
 
 {% highlight dart %} 
 
@@ -107,7 +107,7 @@ SfLinearGauge(
 
 ## Add range
 
-A range is a visual element that helps you quickly visualize where a range falls on the axis track. In [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html) the range is specified by [`LinearGaugeRange`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearGaugeRange-class.html) . Multiple ranges with different styles can be added to a linear gauge. You can specify the [`startValue`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearGaugeRange/startValue.html), [`endValue`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearGaugeRange/endValue.html), and [`color`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearGaugeRange/color.html) for a range as demonstrated in the following code.  
+A range is a visual element that helps you to quickly visualize where a range falls on the axis track. Multiple ranges with different styles can be added to a Linear gauge. You can also specify the start value, end value, and color for a range as demonstrated in the following code sample.  
 
 {% highlight dart %} 
 
@@ -126,9 +126,9 @@ A range is a visual element that helps you quickly visualize where a range falls
 
 ## Add marker pointer
 
-The Linear Gauge supports two marker pointers - shape pointer and widget pointer. Shape pointer will have a default set of pre-build icons to point a value in an axis track, while the widget pointer facilitate using any Flutter widget to point a value in an axis track. The marker pointers ( [`LinearShapePointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer-class.html) and [`LinearWidgetPointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearWidgetPointer-class.html) ) can be added or removed in/from [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html) by using the [`markerPointers`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/markerPointers.html) property.
+The Linear Gauge supports two marker pointers - shape pointer and widget pointer. The shape pointer will have a default set of pre-build icons to point a value in an axis track, while the widget pointer facilitates using any Flutter widget to point a value in an axis track. 
 
-The below code snippet demonstrates adding a shape pointer.
+The following code sample demonstrates how to add a shape pointer.
 
 {% highlight dart %} 
 
@@ -140,7 +140,7 @@ The below code snippet demonstrates adding a shape pointer.
 
 ![Add shape pointer in linear gauge](images/getting-started/add_shape_pointer.png)
 
-The below code snippet demonstrates adding a widget pointer.
+The following code sample demonstrates how to add a widget pointer.
 
 {% highlight dart %} 
 
@@ -163,7 +163,7 @@ The below code snippet demonstrates adding a widget pointer.
 
 ## Add bar pointer
 
-The bar pointer in a linear gauge is used specify a value in an axis track, but unlike marker pointers which denotes that particular value,  the bar pointer draws a track staring from the minimum value of the axis to that particular value. Bar pointers can be added or removed in/from a [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html) by using the [`barPointers`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/barPointers.html) property. 
+In a Linear Gauge, the bar pointer is used to specify a value in an axis track by drawing a track from the axis’s minimum value to its specified value
 
 {% highlight dart %} 
 
@@ -175,7 +175,7 @@ The bar pointer in a linear gauge is used specify a value in an axis track, but 
 
 ![Bar pointer added to a linear gauge](images/getting-started/add_bar_pointer.png)
 
-The following code example gives you the complete code of above configurations.
+The following code example gives you the complete view of the above configurations.
 
 {% highlight dart %} 
 

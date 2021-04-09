@@ -18,7 +18,7 @@ To export the Radial Gauge as a PNG image, we can get the image by calling [`toI
 {% highlight dart %} 
 
     Future<void> _renderRadialGaugeImage() async {
-      dart_ui.Image data = await _RadialGaugeKey.currentState.toImage(pixelRatio: 3.0);
+      dart_ui.Image data = await _RadialGaugeKey.currentState!.toImage(pixelRatio: 3.0);
       final bytes = await data.toByteData(format: dart_ui.ImageByteFormat.png);
       if (data != null) {
         await Navigator.of(context).push(
@@ -29,7 +29,7 @@ To export the Radial Gauge as a PNG image, we can get the image by calling [`toI
                 body: Center(
                   child: Container(
                     color: Colors.white,
-                    child: Image.memory(bytes.buffer.asUint8List()),
+                    child: Image.memory(bytes!.buffer.asUint8List()),
                   ),
                 ),
               );
@@ -50,10 +50,10 @@ Similar to the above way, we can also export the rendered chart as a PDF documen
     Future<void> _renderRadialGaugePDF() async {
       var document = PdfDocument();
       PdfPage page = document.pages.add();
-      dart_ui.Image data = await _RadialGaugeKey. currentState.toImage(pixelRatio: 3.0);
+      dart_ui.Image data = await _RadialGaugeKey.currentState!.toImage(pixelRatio: 3.0);
       final bytes = await data.toByteData(format: dart_ui.ImageByteFormat.png);
       final Uint8List imageBytes =
-          bytes.buffer.asUint8List(bytes.offsetInBytes, bytes.lengthInBytes);
+          bytes!.buffer.asUint8List(bytes.offsetInBytes, bytes.lengthInBytes);
       page.graphics
           .drawImage(PdfBitmap(imageBytes), Rect.fromLTWH(25, 50, 300, 300));
       var byteData = document.save();
