@@ -374,7 +374,7 @@ Widget build(BuildContext context) {
 >**NOTE**
 When the navigation mode set as NavigationMode.scroll
 * Swipe selection is not supported when range and multi-range are the selection modes.
-* onViewChanged will be called when the view reaches the starting position of the date range picker view.
+* `onViewChanged` will be called when the view reaches the starting position of the date range picker view.
 * [forward](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/forward.html), [backward](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/backward.html) and [showNavigationArrow](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/showNavigationArrow.html) is not supported.
 
 
