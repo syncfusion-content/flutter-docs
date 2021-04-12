@@ -11,11 +11,11 @@ documentation: ug
 
 Tooltip is used to provide information about the tile during the tap, or click interaction. This section helps to learn about how to show tooltip on a tile and customize them.
 
-## Tooltip for the shapes
+## Tooltip for the tiles
 
-It is used to clearly indicate the tile information on the tap or click. To show tooltip for the tile, return a widget in `TreemapLevel.tooltipBuilder`. This widget will then be wrapped in the builtin shape which comes with the nose at the bottom.
+It is used to clearly indicate the tile information on the tap or click. To show tooltip for the tile, return a widget in [`TreemapLevel.tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/tooltipBuilder.html). This widget will then be wrapped in the builtin shape which comes with the nose at the bottom.
 
-The `TreemapLevel.tooltipBuilder` will be called with the corresponding tile details every time you interact with the tile i.e., while tapping in touch devices and hover enter in the mouse enabled devices.
+The [`TreemapLevel.tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/tooltipBuilder.html) will be called with the corresponding tile details every time you interact with the tile i.e., while tapping in touch devices and hover enter in the mouse enabled devices.
 
 {% tabs %}
 {% highlight Dart %}
@@ -101,16 +101,16 @@ class SocialMediaUsers {
 ![Treemap tooltip builder](images/tooltip/tile_tooltip_builder.png)
 
 N>
-* Refer the `TreemapTooltipSettings`, for customizing the tooltip shape.
+* Refer the [`TreemapTooltipSettings`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapTooltipSettings/TreemapTooltipSettings.html), for customizing the tooltip shape.
 
 ## Appearance customization
 
 You can customize the appearance of the tooltip.
 
-* **Background color** - Change the background color of the tooltip in the treemap using the `TreemapTooltipSettings.color` property.
-* **Border color** - Change the border color of the tooltip in the treemap using the `TreemapTooltipSettings.borderColor` property.
-* **Border width** - Change the border width of the tooltip in the treemap using the `TreemapTooltipSettings.borderWidth` property.
-* **Border radius** - Change the border radius of the tooltip in the treemap using the `TreemapTooltipSettings.borderRadius` property.
+* **Background color** - Change the background color of the tooltip in the treemap using the [`TreemapTooltipSettings.color`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapTooltipSettings/color.html) property.
+* **Border color** - Change the border color of the tooltip in the treemap using the [`TreemapTooltipSettings.borderColor`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapTooltipSettings/borderColor.html) property.
+* **Border width** - Change the border width of the tooltip in the treemap using the [`TreemapTooltipSettings.borderWidth`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapTooltipSettings/borderWidth.html) property.
+* **Border radius** - Change the border radius of the tooltip in the treemap using the [`TreemapTooltipSettings.borderRadius`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapTooltipSettings/borderRadius.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -199,4 +199,4 @@ class SocialMediaUsers {
 ![Treemap tooltip appearance customization](images/tooltip/tooltip_customization.png)
 
 N>
-* Refer the `TreemapLevel.tooltipBuilder`, for enabling tooltip for the tile.
+* Refer the [`TreemapLevel.tooltipBuilder`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/tooltipBuilder.html), for enabling tooltip for the tile.

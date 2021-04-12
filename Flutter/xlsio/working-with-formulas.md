@@ -137,7 +137,7 @@ sheet.enableSheetCalculations();
 // Setting formula in the cell.
 final Range range = sheet.getRangeByName('B11');
 range.setFormula(
-  '=IF(SUM(AVERAGE(B4:B9), MAX(COUNT(B4,D4), MIN(B5,D5))) > 50, \'PASS\', \'FAIL\')');
+  '=IF(SUM(AVERAGE(B4:B9), MAX(COUNT(B4,D4), MIN(B5,D5))) > 50, \"PASS\", \"FAIL\")');
 
 // Save and dispose workbook.
 final List<int> bytes = workbook.saveAsStream();

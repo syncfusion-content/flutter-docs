@@ -114,19 +114,19 @@ sheet
 
 //Setting format properties to be applied when the above condition is met.
 //set back color by RGB values.
-condition3.backColorRGB = Color.fromARGB(255, 150, 200, 50);
+condition3.backColorRgb = Color.fromARGB(255, 150, 200, 50);
 //set font color by RGB values.
-condition3.fontColorRGB = Color.fromARGB(255, 200, 20, 100);
+condition3.fontColorRgb = Color.fromARGB(255, 200, 20, 100);
 //set font underline
 condition3.underline = true;
 //set right border line style
 condition3.rightBorderStyle = LineStyle.double;
 // set right border color by RGB values.
-condition3.rightBorderColorRGB = Color.fromARGB(240, 24, 160, 200);
+condition3.rightBorderColorRgb = Color.fromARGB(240, 24, 160, 200);
 //set bottom border line style
 condition3.bottomBorderStyle = LineStyle.thin;
 // set bottom border color by RGB values.
-condition3.bottomBorderColorRGB = Color.fromARGB(255, 240, 160, 200);
+condition3.bottomBorderColorRgb = Color.fromARGB(255, 240, 160, 200);
 
 //save and dispose.
 final List<int> bytes = workbook.saveAsStream();
@@ -154,13 +154,25 @@ final Workbook workbook = Workbook();
 
 // Accessing sheet via index.
 final Worksheet sheet = workbook.worksheets[0];
+sheet.getRangeByIndex(1, 1).setNumber(123);
+sheet.getRangeByIndex(2, 1).setNumber(23);
+sheet.getRangeByIndex(3, 1).setNumber(25);
+sheet.getRangeByIndex(4, 1).setNumber(5);
+sheet.getRangeByIndex(5, 1).setNumber(44);
+sheet.getRangeByIndex(6, 1).setNumber(2);
+sheet.getRangeByIndex(7, 1).setNumber(67);
+sheet.getRangeByIndex(8, 1).setNumber(92);
+sheet.getRangeByIndex(9, 1).setNumber(68);
+sheet.getRangeByIndex(10, 1).setNumber(84);
 
 //Applying conditional formatting to "A1:D4".
 final ConditionalFormats conditions =
-    sheet.getRangeByName('A1:D4').conditionalFormats;
+sheet.getRangeByName('A1:D4').conditionalFormats;
 final ConditionalFormat condition1 = conditions.addCondition();
+condition1.formatType = ExcelCFType.cellValue;
+condition1.operator = ExcelComparisonOperator.between;
 condition1.firstFormulaR1C1 = '=R[1]C[0]';
-condition1.secondFormulaR1C1 = '=R[1]C[1]';
+condition1.secondFormulaR1C1 = '=R[8]C[0]';
 
 //save and dispose.
 final List<int> bytes = workbook.saveAsStream();
@@ -169,7 +181,7 @@ workbook.dispose();
 
 {% endhighlight %}
 
-## Format Specific Text values
+## Format Specific Text
 
 Specific text Conditional Formatting is used to format the Excel range contains given text using **ExcelCFType** enumeration and **text** property. 
 
@@ -227,7 +239,7 @@ The following screenshot represents generated Excel file with specific text cond
 
 ![Specific Text](images/CFSpecificText.jpg)
 
-## Format Date occurring values
+## Format Date Occurring
 
 Date occurring Conditional Formatting is used to format the Excel range contains given date using **ExcelCFType** and **CFTimePeriods** enumeration. 
 
@@ -389,7 +401,7 @@ The properties of `TopBottom` class are:
 * **percent** - Specifies whether the rank is determined by a percentage value.
 * **rank** - Specifies the maximum number or percentage of cells to be highlighted.
 
-### Top/Bottom ‘n’ rank values
+### Top/Bottom ‘n’ rank Values
 
 The below code example shows how to format top 8 rank values from the given data range using `TopBottom` `type` and `rank` properties in XlsIO.
 
@@ -430,7 +442,7 @@ final ConditionalFormat condition = conditions.addCondition();
 
 //Applying top or bottom rule in the conditional formatting.
 condition.formatType = ExcelCFType.topBottom;
-final TopBottom topBottom = condition.topBottom;
+final TopBottom topBottom = condition.topBottom!;
 
 //Set type as Top for TopBottom rule.
 topBottom.type = ExcelCFTopBottomType.top;
@@ -455,7 +467,7 @@ The following screenshot represents the Excel file generated with TopBottom cond
 
 N> `TopBottom` `rank` value should be in a range between 1 and 1000.
 
-### Top/Bottom ‘n’% rank values
+### Top/Bottom ‘n’% rank Values
 
 The below code example shows how to format top 50 percentage rank values from the given data range using `TopBottom` `type`, `rank` and `percent` properties in XlsIO
 
@@ -496,7 +508,7 @@ final ConditionalFormat condition = conditions.addCondition();
 
 //Applying top or bottom rule in the conditional formatting.
 condition.formatType = ExcelCFType.topBottom;
-final TopBottom topBottom = condition.topBottom;
+final TopBottom topBottom = condition.topBottom!;
 
 //Set type as Top for TopBottom rule.
 topBottom.type = ExcelCFTopBottomType.bottom;
@@ -572,7 +584,7 @@ final ConditionalFormat condition = conditions.addCondition();
 
 //Applying above or below average rule in the conditional formatting.
 condition.formatType = ExcelCFType.aboveBelowAverage;
-final AboveBelowAverage aboveBelowAverage = condition.aboveBelowAverage;
+final AboveBelowAverage aboveBelowAverage = condition.aboveBelowAverage!;
 
 //Set AverageType as Below for AboveBelowAverage rule.
 aboveBelowAverage.averageType = ExcelCFAverageType.below;
@@ -594,7 +606,7 @@ The following screenshot represents the Excel file generated with `AboveBelowAve
 
 ![Above or Below Average conditional format](images/CFAboveBelowAvg.jpg)
 
-### Above or Below Standard Deviation values
+### Above or Below Standard Deviation Values
 
 The below code example shows how to format a range with values above standard deviation, using `AboveBelowAverage` `averageType` and `stdDevValue` properties in XlsIO.
 
@@ -635,7 +647,7 @@ final ConditionalFormat condition = conditions.addCondition();
 
 //Applying above or below average rule in the conditional formatting.
 condition.formatType = ExcelCFType.aboveBelowAverage;
-final AboveBelowAverage aboveBelowAverage = condition.aboveBelowAverage;
+final AboveBelowAverage aboveBelowAverage = condition.aboveBelowAverage!;
 
 //Set AverageType as AboveStdDev for AboveBelowAverage rule.
 aboveBelowAverage.averageType = ExcelCFAverageType.aboveStdDev;
@@ -677,7 +689,7 @@ final ConditionalFormats conditionalFormats =
     sheet.getRangeByName('B1:B11').conditionalFormats;
 final ConditionalFormat conditionalFormat = conditionalFormats.addCondition();
 conditionalFormat.formatType = ExcelCFType.colorScale;
-final ColorScale colorScale = conditionalFormat.colorScale;
+final ColorScale colorScale = conditionalFormat.colorScale!;
 
 //Sets 3 - color scale
 colorScale.setConditionCount(3);
@@ -687,7 +699,7 @@ colorScale.criteria[0].type = ConditionValueType.lowestValue;
 colorScale.criteria[0].value = '0';
 
 //Set format color for colorscale by RGB values.
-colorScale.criteria[1].formatColorRGB = Color.fromARGB(255, 200, 20, 100);
+colorScale.criteria[1].formatColorRgb = Color.fromARGB(255, 200, 20, 100);
 colorScale.criteria[1].type = ConditionValueType.percentile;
 colorScale.criteria[1].value = '50';
 
@@ -710,7 +722,7 @@ Icon sets can be created and customized in Flutter XlsIO as follows.
 final ConditionalFormats conditionalFormats = sheet.getRangeByName('C1:C11').conditionalFormats;
 final ConditionalFormat conditionalFormat = conditionalFormats.addCondition();
 conditionalFormat.formatType = ExcelCFType.iconSet;
-final IconSet iconSet = conditionalFormat.iconSet;
+final IconSet iconSet = conditionalFormat.iconSet!;
 
 //Apply three symbols icon and hide the data in the specified range
 iconSet.iconSet = ExcelIconSetType.threeSymbols;
@@ -751,25 +763,25 @@ final ConditionalFormats conditionalFormats =
 final ConditionalFormat conditionalFormat = conditionalFormats.addCondition();
 //Set FormatType as IconSet.
 conditionalFormat.formatType = ExcelCFType.iconSet;
-final IconSet iconSet = conditionalFormat.iconSet;
+final IconSet iconSet = conditionalFormat.iconSet!;
 //Set conditions for IconCriteria.
 iconSet.iconSet = ExcelIconSetType.threeFlags;
 
-final IconConditionValue iconValue1 = iconSet.iconCriteria[0];
+final IconConditionValue iconValue1 = iconSet.iconCriteria[0] as IconConditionValue;
 iconValue1.iconSet = ExcelIconSetType.fiveBoxes;
 iconValue1.index = 3;
 iconValue1.type = ConditionValueType.percent;
 iconValue1.value = '25';
 iconValue1.operator = ConditionalFormatOperator.greaterThan;
 
-final IconConditionValue iconValue2 = iconSet.iconCriteria[1];
+final IconConditionValue iconValue2 = iconSet.iconCriteria[1] as IconConditionValue;
 iconValue2.iconSet = ExcelIconSetType.threeSigns;
 iconValue2.index = 2;
 iconValue2.type = ConditionValueType.percent;
 iconValue2.value = '50';
 iconValue2.operator = ConditionalFormatOperator.greaterThan;
 
-final IconConditionValue iconValue3 = iconSet.iconCriteria[2];
+final IconConditionValue iconValue3 = iconSet.iconCriteria[2] as IconConditionValue;
 iconValue3.iconSet = ExcelIconSetType.fourRating;
 iconValue3.index = 0;
 iconValue3.type = ConditionValueType.percent;
@@ -794,7 +806,7 @@ This can be set and manipulated using the DataBar class as follows.
 final ConditionalFormats conditionalFormats = sheet.getRangeByName('D1:D11').conditionalFormats;
 final ConditionalFormat conditionalFormat = conditionalFormats.addCondition();
 conditionalFormat.formatType = ExcelCFType.dataBar;
-final DataBar dataBar = conditionalFormat.dataBar;
+final DataBar dataBar = conditionalFormat.dataBar!;
 
 //Set the constraints
 dataBar.minPoint.type = ConditionValueType.lowestValue;
@@ -831,19 +843,19 @@ dataBar.barAxisColor = '#FFDD12';
 dataBar.borderColor = '#12DD01';
 
 //Set bar color for DataBar by RGB values.
-dataBar.barColorRGB = Color.fromARGB(255, 200, 13, 145);
+dataBar.barColorRgb = Color.fromARGB(255, 200, 13, 145);
 
 //Set Negative Border color for DataBar by RGB values.
-dataBar.negativeBorderColorRGB = Color.fromARGB(255, 200, 130, 0);
+dataBar.negativeBorderColorRgb = Color.fromARGB(255, 200, 130, 0);
 
 // Set Negative Bar color for DataBar by RGB values.
-dataBar.negativeFillColorRGB = Color.fromARGB(230, 201, 230, 100);
+dataBar.negativeFillColorRgb = Color.fromARGB(230, 201, 230, 100);
 
 // Set BarAxis color for DataBar by RGB values.
-dataBar.barAxisColorRGB = Color.fromARGB(255, 134, 44, 224);
+dataBar.barAxisColorRgb = Color.fromARGB(255, 134, 44, 224);
 
 //Set Border color for DataBar by RGB values.
-dataBar.borderColorRGB = Color.fromARGB(245, 45, 244, 230);
+dataBar.borderColorRgb = Color.fromARGB(245, 45, 244, 230);
 
 {% endhighlight %}
 
@@ -907,7 +919,7 @@ ConditionalFormats conditionalFormats =
       sheet.getRangeByName('B1:B11').conditionalFormats;
 ConditionalFormat conditionalFormat = conditionalFormats.addCondition();
 conditionalFormat.formatType = ExcelCFType.colorScale;
-final ColorScale colorScale = conditionalFormat.colorScale;
+final ColorScale colorScale = conditionalFormat.colorScale!;
 
 //Sets 3 - color scale
 colorScale.setConditionCount(3);
@@ -917,7 +929,7 @@ colorScale.criteria[0].type = ConditionValueType.lowestValue;
 colorScale.criteria[0].value = '0';
 
 //Set format color for colorscale by RGB values.
-colorScale.criteria[1].formatColorRGB = Color.fromARGB(255, 200, 20, 100);
+colorScale.criteria[1].formatColorRgb = Color.fromARGB(255, 200, 20, 100);
 colorScale.criteria[1].type = ConditionValueType.percentile;
 colorScale.criteria[1].value = '50';
 
@@ -930,7 +942,7 @@ colorScale.criteria[2].value = '0';
 conditionalFormats = sheet.getRangeByName('C1:C11').conditionalFormats;
 conditionalFormat = conditionalFormats.addCondition();
 conditionalFormat.formatType = ExcelCFType.iconSet;
-final IconSet iconSet = conditionalFormat.iconSet;
+final IconSet iconSet = conditionalFormat.iconSet!;
 
 //Apply three symbols icon and hide the data in the specified range.
 iconSet.iconSet = ExcelIconSetType.threeSymbols;
@@ -944,14 +956,14 @@ iconSet.showIconOnly = true;
 conditionalFormats = sheet.getRangeByName('D1:D11').conditionalFormats;
 conditionalFormat = conditionalFormats.addCondition();
 conditionalFormat.formatType = ExcelCFType.dataBar;
-final DataBar dataBar = conditionalFormat.dataBar;
+final DataBar dataBar = conditionalFormat.dataBar!;
 
 //Set the constraints
 dataBar.minPoint.type = ConditionValueType.lowestValue;
 dataBar.maxPoint.type = ConditionValueType.highestValue;
 
 //Set color for DataBar by RGB values.
-dataBar.barColorRGB = Color.fromARGB(255, 244, 180, 10);
+dataBar.barColorRgb = Color.fromARGB(255, 244, 180, 10);
 
 //Hide the data bar values
 dataBar.showValue = false;

@@ -11,11 +11,11 @@ documentation: ug
 
 ## Line chart
 
-To render a line chart, create an instance of [`LineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LineSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties are used to customize the appearance:
+To render a line chart, create an instance of [`LineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LineSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties can be used to customize the appearance:
 
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - Changes the color of the line.
-* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
-* [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) - Changes the stroke width of the line.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - changes the color of the line.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
+* [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) - changes the stroke width of the line.
 
 {% highlight dart %} 
 
@@ -33,9 +33,10 @@ To render a line chart, create an instance of [`LineSeries`](https://pub.dev/doc
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders line chart
-                            LineSeries<SalesData, double>(
+                            LineSeries<SalesData, dateTime>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales
@@ -49,7 +50,7 @@ To render a line chart, create an instance of [`LineSeries`](https://pub.dev/doc
 
     class SalesData {
         SalesData(this.year, this.sales);
-            final double year;
+            final dateTime year;
             final double sales;
     }
 
@@ -65,28 +66,40 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
     
     @override
     Widget build(BuildContext context) {
+        final List<SalesData> chartData = [
+        SalesData("2010", 35),
+        SalesData("2011", 28),
+        SalesData('2012', 34),
+        SalesData('2013', 32),
+        SalesData('2014', 40)
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
-                            LineSeries<SalesData, String>(
+                            LineSeries<SalesData, DateTime>(
                                 dataSource: chartData,
                                 // Dash values for line
-                                dashArray: <double>[5,5],
+                                dashArray: <double>[5, 5],
                                 xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
-                            )
+                                yValueMapper: (SalesData sales, _) => sales.sales)
                         ]
                     )
                 )
             )
         );
-    }
+  }
+
 
 {% endhighlight %}
 
 ![Dashed line chart](images/cartesian-chart-types/dashed_line.jpg)
+
+#### See Also
+
+*[Applying dashed pattern for line chart](https://www.syncfusion.com/kb/12349/how-to-create-dash-pattern-line-chart-in-flutter-using-cartesian-charts-widget).
 
 ### Multi-colored line
 
@@ -124,7 +137,7 @@ To render a multi-colored line series, map the individual colors to the data usi
 
     class SalesData {
         SalesData(this.year, this.sales, this.segmentColor);
-        final double year;
+        final String year;
         final double sales;
         final Color segmentColor;
     }
@@ -137,11 +150,11 @@ Also refer, [color palette](./series-customization#color-palette), [color mappin
 
 ## Fast line chart
 
-[`FastLineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FastLineSeries-class.html) is a line chart, but it loads faster than [`LineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LineSeries-class.html). You can use this when there are large number of points to be loaded in a chart. To render a fast line chart, create an instance of [`FastLineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FastLineSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). The following properties are used to customize the appearance of fast line segment:
+[`FastLineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FastLineSeries-class.html) is a line chart, but it loads faster than [`LineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LineSeries-class.html). You can use this when there are large number of points to be loaded in a chart. To render a fast line chart, create an instance of [`FastLineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FastLineSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). The following properties can be used to customize the appearance of fast line segment:
 
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - Changes the color of the line.
-* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
-* [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) - Changes the stroke width of the line.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - changes the color of the line.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
+* [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) - changes the stroke width of the line.
 
 {% highlight dart %} 
 
@@ -151,9 +164,10 @@ Also refer, [color palette](./series-customization#color-palette), [color mappin
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders fast line chart
-                            FastLineSeries<SalesData, double>(
+                            FastLineSeries<SalesData, DateTime>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales
@@ -176,12 +190,12 @@ Also refer, [color palette](./series-customization#color-palette), [color mappin
 
 To render an area chart, create an instance of [`AreaSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AreaSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The area chart shows the filled area to represent the data, but when there are more than a series, this may hide the other series. To get rid of this, increase or decrease the transparency of the series. 
 
-The following properties are used to customize the appearance:
+The following properties can be used to customize the appearance:
 
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - Changes the color of the series.
-* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
-* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - Changes the stroke width of the series.
-* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - Changes the stroke color of the series.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - changes the color of the series.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - changes the stroke width of the series.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - changes the stroke color of the series.
 
 {% highlight dart %} 
 
@@ -191,9 +205,10 @@ The following properties are used to customize the appearance:
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders area chart
-                            AreaSeries<SalesData, double>(
+                            AreaSeries<SalesData, dateTime>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales
@@ -221,8 +236,9 @@ The borders of the area chart can be customized using the [`borderDrawMode`](htt
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
-                            AreaSeries<SalesData, double>(
+                            AreaSeries<SalesData, DateTime>(
                                 dataSource: chartData,
                                 color: Colors.deepOrange[300],
                                 borderMode: AreaBorderMode.excludeBottom,
@@ -254,8 +270,8 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
     @override
     Widget build(BuildContext context) {
          final List<Color> color = <Color>[];
-        color.add(Colors.blue[50]);
-        color.add(Colors.blue[200]);
+        color.add(Colors.blue[50]!);
+        color.add(Colors.blue[200]!);
         color.add(Colors.blue);
 
         final List<double> stops = <double>[];
@@ -265,13 +281,15 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
 
         final LinearGradient gradientColors =
             LinearGradient(colors: color, stops: stops);
+        
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders area chart
-                            AreaSeries<SalesData, double>(
+                            AreaSeries<SalesData, DateTime>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales,
@@ -300,8 +318,9 @@ Data points with a null value are considered empty points. Empty data points are
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
-                            AreaSeries<SalesData, double>(
+                            AreaSeries<SalesData, DateTime>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales
@@ -332,8 +351,9 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
                 child: Container(
                     child: SfCartesianChart(
                         isTransposed: true,
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
-                            AreaSeries<SalesData, double>(
+                            AreaSeries<SalesData, DateTime>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales
@@ -351,11 +371,11 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
 ## Spline chart
 
-To render a spline chart, create an instance of [`SplineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties are used to customize the appearance of spline segment:
+To render a spline chart, create an instance of [`SplineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties can be used to customize the appearance of spline segment:
 
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - Changes the color of the series.
-* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
-* [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) - Changes the stroke width of the series.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - changes the color of the series.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
+* [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) - changes the stroke width of the series.
 
 {% highlight dart %} 
 
@@ -365,9 +385,10 @@ To render a spline chart, create an instance of [`SplineSeries`](https://pub.dev
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders spline chart
-                            SplineSeries<SalesData, double>(
+                            SplineSeries<SalesData, DateTime>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales
@@ -395,8 +416,9 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
-                            SplineSeries<SalesData, String>(
+                            SplineSeries<SalesData, DateTime>(
                                 dataSource: chartData,
                                 // Dash values for spline
                                 dashArray: <double>[5, 5],
@@ -416,7 +438,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
 
 ###	Spline rendering types
 
-The [`splineType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineSeries/splineType.html) allows you to change the spline curve in series. The following types are used in [`SplineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineSeries/SplineSeries.html):
+The [`splineType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineSeries/splineType.html) allows you to change the spline curve in series. The following types can be used in [`SplineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineSeries/SplineSeries.html):
 
 * natural
 * monotonic
@@ -435,8 +457,9 @@ The following code sample demonstrates how to set the [`splineType`](https://pub
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
-                            SplineSeries<SalesData, double>(
+                            SplineSeries<SalesData, DateTime>(
                                 dataSource: chartData,
                                 // Type of spline
                                 splineType: SplineType.cardinal,
@@ -470,8 +493,9 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
                 child: Container(
                     child: SfCartesianChart(
                         isTransposed: true,
+                        primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
-                            SplineSeries<SalesData, double>(
+                            SplineSeries<SalesData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales
@@ -489,12 +513,12 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
 ## Column chart
 
-To render a column chart, create an instance of [`ColumnSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ColumnSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/XyDataSeries-class.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties are used to customize the appearance:
+To render a column chart, create an instance of [`ColumnSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ColumnSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/XyDataSeries-class.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties can be used to customize the appearance:
 
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - Changes the color of the series.
-* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
-* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - Changes the stroke width of the series.
-* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - Changes the stroke color of the series.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - changes the color of the series.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - changes the stroke width of the series.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - changes the stroke color of the series.
 
 {% highlight dart %} 
     
@@ -542,15 +566,16 @@ By default, all the column series that have the same x and y-axes are placed sid
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: DateTimeAxis(),
                         // Columns will be rendered back to back
                         enableSideBySideSeriesPlacement: false,
                         series: <ChartSeries>[
-                            ColumnSeries<SalesData, double>(
+                            ColumnSeries<SalesData, DateTime>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales
                             ),
-                            ColumnSeries<SalesData, double>(
+                            ColumnSeries<SalesData, DateTime>(
                                 opacity: 0.9,
                                 width: 0.4,
                                 dataSource: chartData,
@@ -632,14 +657,20 @@ The [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
 ![Rounded corners](images/cartesian-chart-types/rounded_column.jpg)
 
+#### See Also
+
+* [Rendering each data points with different border radius in column charts](https://www.syncfusion.com/kb/12074/how-to-set-different-border-radius-for-each-rect-series-data-points-by-extending-the).
+
+* [Adding rounded corners for the specific sides in column charts](https://www.syncfusion.com/kb/12059/how-to-add-rounded-corners-for-specific-sides-in-the-rect-series-types-sfcartesianchart)
+
 ### Track customization
 
-Renders column with track. Track is a rectangular bar rendered from the start to the end of the axis. Column series will be rendered above the track. The [`isTrackVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ColumnSeries/isTrackVisible.html) property is used to enable the track. The following properties are used to customize the appearance:
+Renders column with track. Track is a rectangular bar rendered from the start to the end of the axis. Column series will be rendered above the track. The [`isTrackVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ColumnSeries/isTrackVisible.html) property is used to enable the track. The following properties can be used to customize the appearance:
 
-* [`trackColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ColumnSeries/trackColor.html) - Changes the color of the track.
-* [`trackBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ColumnSeries/trackBorderWidth.html) - Changes the stroke width of the track.
-* [`trackBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ColumnSeries/trackBorderColor.html) - Changes the stroke color of the track.
-* [`trackPadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ColumnSeries/trackPadding.html) - Adds padding to the track.
+* [`trackColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ColumnSeries/trackColor.html) - changes the color of the track.
+* [`trackBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ColumnSeries/trackBorderWidth.html) - changes the stroke width of the track.
+* [`trackBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ColumnSeries/trackBorderColor.html) - changes the stroke color of the track.
+* [`trackPadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ColumnSeries/trackPadding.html) - adds padding to the track.
 
 {% highlight dart %} 
     
@@ -672,12 +703,12 @@ Also refer, [color palette](./series-customization#color-palette), [color mappin
 
 ## Bar chart
 
-To render a bar chart, create an instance of [`BarSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BarSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties are used to customize the appearance:
+To render a bar chart, create an instance of [`BarSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BarSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties can be used to customize the appearance:
 
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - Changes the color of the series.
-* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
-* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - Changes the stroke width of the series.
-* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - Changes the stroke color of the series.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - changes the color of the series.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - changes the stroke width of the series.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - changes the stroke color of the series.
 
 {% highlight dart %} 
     
@@ -770,11 +801,11 @@ The [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
 ### Track customization
 
-You can render the bar chart with track. Track is a rectangular bar rendered from the start to the end of the axis. Bar series will be rendered above the track. The [`isTrackVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BarSeries/isTrackVisible.html) property is used to enable the track. The following properties are used to customize the appearance:
+You can render the bar chart with track. Track is a rectangular bar rendered from the start to the end of the axis. Bar series will be rendered above the track. The [`isTrackVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BarSeries/isTrackVisible.html) property is used to enable the track. The following properties can be used to customize the appearance:
 
-* [`trackColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BarSeries/trackColor.html) - Changes the color of the track.
-* [`trackBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BarSeries/trackBorderWidth.html) - Changes the stroke width of the track.
-* [`trackBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BarSeries/trackBorderColor.html) - Changes the stroke color of the track.
+* [`trackColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BarSeries/trackColor.html) - changes the color of the track.
+* [`trackBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BarSeries/trackBorderWidth.html) - changes the stroke width of the track.
+* [`trackBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BarSeries/trackBorderColor.html) - changes the stroke color of the track.
 * [`trackPadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BarSeries/trackPadding.html) - Adds padding to the track.
 
 {% highlight dart %} 
@@ -806,16 +837,22 @@ You can render the bar chart with track. Track is a rectangular bar rendered fro
 
 Also refer, [color palette](./series-customization#color-palette), [color mapping](./series-customization#color-mapping-for-data-points), [animation](./series-customization#animation), [gradient](./series-customization#gradient-fill) and [empty points](./series-customization#empty-points) for customizing the bar series further.
 
+#### See Also
+
+*[Create vertical bar chart](https://www.syncfusion.com/kb/12348/how-to-create-vertical-bar-chart-in-flutter-using-cartesian-charts-widget-sfcartesianchart).
+
+*[Create horizontal bar chart](https://www.syncfusion.com/kb/12347/how-to-create-horizontal-bar-chart-in-flutter-using-cartesian-charts-widget)
+
 ## Bubble chart
 
 To render a bubble chart, create an instance of [`BubbleSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BubbleSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html).
 
 Bubble chart requires three fields (X, Y, and Size) to plot a point. Here, [`sizeValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/sizeValueMapper.html) is used to map the size of each bubble segment from data source.
 
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - Changes the color of the series.
-* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
-* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - Changes the stroke width of the series.
-* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - Changes the stroke color of the series.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - changes the color of the series.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - changes the stroke width of the series.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - changes the stroke color of the series.
 
 {% highlight dart %} 
     
@@ -833,9 +870,10 @@ Bubble chart requires three fields (X, Y, and Size) to plot a point. Here, [`siz
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders bubble chart
-                            BubbleSeries<ChartData, double>(
+                            BubbleSeries<ChartData, DateTime>(
                                 dataSource: chartData,
                                 sizeValueMapper: (ChartData sales, _) => sales.size,
                                 xValueMapper: (ChartData sales, _) => sales.x,
@@ -850,7 +888,7 @@ Bubble chart requires three fields (X, Y, and Size) to plot a point. Here, [`siz
 
     class ChartData {
         ChartData(this.x, this.y, this.size);
-            final double x;
+            final DateTime x;
             final double y;
             final double size;
     }
@@ -871,8 +909,9 @@ The [`minimumRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/la
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
-                            BubbleSeries<ChartData, double>(
+                            BubbleSeries<ChartData, DateTime>(
                                 dataSource: chartData,
                                 sizeValueMapper: (ChartData sales, _) => sales.size,
                                 minimumRadius:9, // Minimum radius of bubble
@@ -905,8 +944,9 @@ Using the [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
-                            BubbleSeries<ChartData, double>(
+                            BubbleSeries<ChartData, String>(
                                 dataSource: chartData,
                                 sizeValueMapper: (ChartData sales, _) => sales.size,
                                 pointColorMapper:(ChartData sales, _) => sales.pointColor,
@@ -933,8 +973,8 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
     @override
     Widget build(BuildContext context) {
         final List<Color> color = <Color>[];
-        color.add(Colors.blue[50]);
-        color.add(Colors.blue[200]);
+        color.add(Colors.blue[50]!);
+        color.add(Colors.blue[200]!);
         color.add(Colors.blue);
 
         final List<double> stops = <double>[];
@@ -949,8 +989,9 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: CategoryAxis(),
                         series: <CartesianSeries>[
-                            BubbleSeries<ChartData, double>(
+                            BubbleSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y,
@@ -1015,12 +1056,12 @@ Using the [`datasource`](https://pub.dev/documentation/syncfusion_flutter_charts
 
 ## Scatter chart
 
-To render a scatter chart, create an instance of [`ScatterSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ScatterSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). The following properties are used to customize the scatter segment appearance.
+To render a scatter chart, create an instance of [`ScatterSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ScatterSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). The following properties can be used to customize the scatter segment appearance.
 
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - Changes the color of the series.
-* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
-* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - Changes the stroke width of the series.
-* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - Changes the stroke color of the series.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - changes the color of the series.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - changes the stroke width of the series.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - changes the stroke color of the series.
 
 {% highlight dart %} 
     
@@ -1030,9 +1071,10 @@ To render a scatter chart, create an instance of [`ScatterSeries`](https://pub.d
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders scatter chart
-                            ScatterSeries<ChartData, double>(
+                            ScatterSeries<ChartData, DateTime>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y
@@ -1052,7 +1094,7 @@ To render a scatter chart, create an instance of [`ScatterSeries`](https://pub.d
 
 The [`shape`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/shape.html) property is used to change the rendering shape of scatter series. The available shapes are [`circle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataMarkerType-class.html), [`rectangle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataMarkerType-class.html), [`pentagon`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataMarkerType-class.html), [`verticalLine`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataMarkerType-class.html), [`horizontalLine`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataMarkerType-class.html), [`diamond`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataMarkerType-class.html), [`triangle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataMarkerType-class.html), [`image`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataMarkerType-class.html), and [`invertedTriangle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataMarkerType-class.html). If [`image`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/image.html) shape is specified, then you can assign the image using the [`image`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/image.html) property.
 
-The [`height`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/height.html) and [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/width.html) properties of [`markerSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/markerSettings.html) are used to change the height and width of the scatter series, respectively.
+The [`height`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/height.html) and [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/width.html) properties of [`markerSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/markerSettings.html) can be used to change the height and width of the scatter series, respectively.
 
 {% highlight dart %} 
     
@@ -1062,8 +1104,9 @@ The [`height`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
-                            ScatterSeries<ChartData, double>(
+                            ScatterSeries<ChartData, DateTime>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y,
@@ -1089,11 +1132,11 @@ Also refer, [color palette](./series-customization#color-palette), [color mappin
 
 ## Step line chart
 
-To render a step line chart, create an instance of [`StepLineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StepLineSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). The following properties are used to customize the appearance of spline segment:
+To render a step line chart, create an instance of [`StepLineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StepLineSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). The following properties can be used to customize the appearance of spline segment:
 
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - Changes the color of the line.
-* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
-* [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) - Changes the stroke width of the line.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - changes the color of the line.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
+* [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) - changes the stroke width of the line.
 
 {% highlight dart %} 
     
@@ -1103,9 +1146,10 @@ To render a step line chart, create an instance of [`StepLineSeries`](https://pu
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders step line chart
-                            StepLineSeries<ChartData, double>(
+                            StepLineSeries<ChartData, DateTime>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y
@@ -1133,8 +1177,9 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
-                            StepLineSeries<ChartData, double>(
+                            StepLineSeries<ChartData, DateTime>(
                                 dataSource: chartData,
                                 // Dashes for step line
                                 dashArray: <double>[5, 5],
@@ -1160,8 +1205,8 @@ To render a range column chart, create an instance of [`RangeColumnSeries`](http
 
 Since the [`RangeColumnSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RangeColumnSeries-class.html) requires two Y values for a point, your data should contain high and low values. High and low value specifies the maximum and minimum range of the point. 
 
-* [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/highValueMapper.html) - Field in the data source, which is considered as high value for the data points.
-* [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/lowValueMapper.html) - Field in the data source, which is considered as low value for the data points. 
+* [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/highValueMapper.html) - field in the data source, which is considered as high value for the data points.
+* [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/lowValueMapper.html) - field in the data source, which is considered as low value for the data points. 
 
 {% highlight dart %} 
     
@@ -1173,7 +1218,7 @@ Since the [`RangeColumnSeries`](https://pub.dev/documentation/syncfusion_flutter
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
-                            RangeColumnSeries<ChartData, double>(
+                            RangeColumnSeries<ChartData, String>(
                                 dataSource: <ChartData>[
                                     ChartData('Jan', 3, 9),
                                     ChartData('Feb', 4, 11),
@@ -1217,14 +1262,14 @@ In the range column chart when data label is enabled, by default there will be t
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
-                            RangeColumnSeries<ChartData, double>(
+                            RangeColumnSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 lowValueMapper: (ChartData sales, _) => sales.low,
                                 highValueMapper: (ChartData sales, _) => sales.high,
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true, 
-                                    position: CartesianLabelPosition.top
+                                    labelAlignment: ChartDataLabelAlignment.top
                                 ),
                             )
                         ]
@@ -1253,7 +1298,7 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
                         isTransposed: true,
                         primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
-                            RangeColumnSeries<ChartData, double>(
+                            RangeColumnSeries<ChartData, String>(
                                 dataSource: <ChartData>[
                                     ChartData('Jan', 3, 9),
                                     ChartData('Feb', 4, 11),
@@ -1286,10 +1331,10 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
 To render a range area chart, create an instance of `RangeAreaSeries` and add to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). 
 
-Since the `RangeAreaSeries` requires two Y values for a point, your data should contain high and low values. High and low value specifies the maximum and minimum range of the point. 
+Since the [`RangeAreaSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RangeAreaSeries-class.html) requires two Y values for a point, your data should contain high and low values. High and low value specifies the maximum and minimum range of the point. 
 
-* [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/highValueMapper.html) - Field in the data source, which is considered as high value for the data points.
-* [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/lowValueMapper.html) - Field in the data source, which is considered as low value for the data points. 
+* [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/highValueMapper.html) - field in the data source, which is considered as high value for the data points.
+* [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/lowValueMapper.html) - field in the data source, which is considered as low value for the data points. 
 
 {% highlight dart %} 
     
@@ -1299,8 +1344,9 @@ Since the `RangeAreaSeries` requires two Y values for a point, your data should 
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
-                            RangeAreaSeries<ChartData, double>(
+                            RangeAreaSeries<ChartData, DateTime>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 lowValueMapper: (ChartData sales, _) => sales.low,
@@ -1315,7 +1361,7 @@ Since the `RangeAreaSeries` requires two Y values for a point, your data should 
 
     class ChartData {
         ChartData(this.x, this.high, this.low);
-            final double x;
+            final DateTime x;
             final double high;
             final double low;
     }
@@ -1326,7 +1372,7 @@ Since the `RangeAreaSeries` requires two Y values for a point, your data should 
 
 ###	Border customization
 
-The borders of the range area chart can be customized using the `borderDrawMode` property. The default value of the `borderMode` property is `all` and the other value is `excludeSides`.
+The borders of the range area chart can be customized using the [`borderDrawMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RangeAreaSeries/borderDrawMode.html) property. The default value of the [`RangeAreaBorderMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RangeAreaBorderMode-class.html) property is `all` and the other value is `excludeSides`.
 
 {% highlight dart %} 
 
@@ -1336,8 +1382,9 @@ The borders of the range area chart can be customized using the `borderDrawMode`
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
-                            RangeAreaSeries<SalesData, double>(
+                            RangeAreaSeries<SalesData, DateTime>(
                                 dataSource: chartData,
                                 color: Color.fromRGB(224, 242, 241,1),
                                 borderDrawMode: RangeAreaBorderMode.excludeSides,
@@ -1359,11 +1406,11 @@ The borders of the range area chart can be customized using the `borderDrawMode`
 
 ## Spline area chart
 
-To render a spline area chart, create an instance of `SplineAreaSeries`, and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties are used to customize the appearance of spline area chart:
+To render a spline area chart, create an instance of [`SplineAreaSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineAreaSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties can be used to customize the appearance of spline area chart:
 
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - Changes the color of the series.
-* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
-* [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) - Changes the stroke width of the series.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - changes the color of the series.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
+* [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) - changes the stroke width of the series.
 
 {% highlight dart %} 
 
@@ -1373,13 +1420,14 @@ To render a spline area chart, create an instance of `SplineAreaSeries`, and add
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
-                            SplineAreaSeries<SalesData, double>(
+                            SplineAreaSeries<SalesData, DateTime>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales
                             ),
-                            SplineAreaSeries<SalesData, double>(
+                            SplineAreaSeries<SalesData, DateTime>(
                                 dataSource: chartData1,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales
@@ -1407,8 +1455,9 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
-                            SplineAreaSeries<SalesData, double>(
+                            SplineAreaSeries<SalesData, DateTime>(
                                 dataSource: chartData,
                                 dashArray: <double>[5, 5],
                                 xValueMapper: (SalesData sales, _) => sales.year,
@@ -1427,7 +1476,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
 
 ###	Spline area rendering types
 
-The `splineType` allows you to change the spline area curve in series. The following types are used in `SplineAreaSeries`:
+The `splineType` allows you to change the spline area curve in series. The following types can be used in `SplineAreaSeries`:
 
 * natural
 * monotonic
@@ -1446,8 +1495,9 @@ The following code sample demonstrates how to set the `splineType` value to `car
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
-                            SplineAreaSeries<SalesData, double>(
+                            SplineAreaSeries<SalesData, DateTime>(
                                 dataSource: chartData,
                                 splineType: SplineType.cardinal,
                                 cardinalSplineTension: 0.9,
@@ -1472,8 +1522,8 @@ To render a spline range area chart, create an instance of the [`SplineRangeArea
 
  `SplineRangeAreaSeries` requires two Y values for a point, data should contain high and low values. The high and low values specify the maximum and minimum ranges of a point.
 
-* [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/highValueMapper.html) - Field in the data source, which is considered as high value for the data points.
-* [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/lowValueMapper.html) - Field in the data source, which is considered as low value for the data points.
+* [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/highValueMapper.html) - field in the data source, which is considered as high value for the data points.
+* [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/lowValueMapper.html) - field in the data source, which is considered as low value for the data points.
 
 {% highlight dart %} 
 
@@ -1504,7 +1554,7 @@ To render a spline range area chart, create an instance of the [`SplineRangeArea
 
 ###	Spline rendering types
 
-The [`splineType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineSeries/splineType.html) allows you to change the spline curve in series. The following types are used in [`SplineRangeAreaSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineRangeAreaSeries-class.html).
+The [`splineType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineSeries/splineType.html) allows you to change the spline curve in series. The following types can be used in [`SplineRangeAreaSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineRangeAreaSeries-class.html).
 
 * natural
 * monotonic
@@ -1574,11 +1624,11 @@ The borders of the spline range area chart can be customized using the [`borderD
 
 ## Step area chart
 
-To render a spline area chart, create an instance of `StepAreaSeries`, and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties are used to customize the appearance of spline area chart.
+To render a spline area chart, create an instance of `StepAreaSeries`, and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties can be used to customize the appearance of spline area chart.
 
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - Changes the color of the series.
-* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
-* [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) - Changes the stroke width of the series.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - changes the color of the series.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
+* [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) - changes the stroke width of the series.
 
 {% highlight dart %} 
 
@@ -1588,13 +1638,14 @@ To render a spline area chart, create an instance of `StepAreaSeries`, and add i
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
-                            StepAreaSeries<SalesData, double>(
+                            StepAreaSeries<SalesData, DateTime>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales
                             ),
-                            StepAreaSeries<SalesData, double>(
+                            StepAreaSeries<SalesData, DateTime>(
                                 dataSource: chartData1,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales
@@ -1622,8 +1673,9 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
-                            StepAreaSeries<SalesData, double>(
+                            StepAreaSeries<SalesData, DateTime>(
                                 dataSource: chartData,
                                 dashArray: <double>[5, 5],
                                 xValueMapper: (SalesData sales, _) => sales.year,
@@ -1654,13 +1706,13 @@ If no value is specified for this property, then the interval will be calculated
 
 You can collapse the normal distribution curve using the [`showNormalDistributionCurve`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/HistogramSeries/showNormalDistributionCurve.html) property. You can use the following properties to customize the appearance.
 
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - Changes the color of the series.
-* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
-* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - Changes the stroke width of the series.
-* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - Changes the stroke color of the series.
-* [`curveColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/HistogramSeries/curveColor.html) - Changes the color of the normal distribution curve.
-* [`curveWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/HistogramSeries/curveWidth.html) - Changes the width of the normal distribution curve.
-* [`curveDashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/HistogramSeries/curveDashArray.html) -  Renders the normal distribution curve  with dashes.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - changes the color of the series.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - changes the stroke width of the series.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - changes the stroke color of the series.
+* [`curveColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/HistogramSeries/curveColor.html) - changes the color of the normal distribution curve.
+* [`curveWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/HistogramSeries/curveWidth.html) - changes the width of the normal distribution curve.
+* [`curveDashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/HistogramSeries/curveDashArray.html) - renders the normal distribution curve  with dashes.
 
 {% highlight dart %} 
 
@@ -1692,11 +1744,11 @@ You can collapse the normal distribution curve using the [`showNormalDistributio
 
 ## Stacked line chart
 
-To render a stacked line chart, create an instance of [`StackedLineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedLineSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). The following properties are used to customize the appearance of stacked line series:
+To render a stacked line chart, create an instance of [`StackedLineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedLineSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). The following properties can be used to customize the appearance of stacked line series:
 
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - Changes the color of the line.
-* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
-* [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) - Changes the stroke width of the line.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - changes the color of the line.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
+* [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) - changes the stroke width of the line.
 
 
 {% highlight dart %} 
@@ -1707,23 +1759,24 @@ To render a stacked line chart, create an instance of [`StackedLineSeries`](http
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
-                            StackedLineSeries<ChartData, double>(
+                            StackedLineSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y1
                             ),
-                            StackedLineSeries<ChartData, double>(
+                            StackedLineSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y2
                             ),
-                             StackedLineSeries<ChartData, double>(
+                             StackedLineSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y3
                             ),
-                            StackedLineSeries<ChartData, double>(
+                            StackedLineSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y4
@@ -1751,8 +1804,9 @@ You can group and stack the similar stacked series types using the [`groupName`]
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
-                            StackedLineSeries<ChartData, double>(
+                            StackedLineSeries<ChartData, String>(
                                 groupName: 'Group A',
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true,
@@ -1762,7 +1816,7 @@ You can group and stack the similar stacked series types using the [`groupName`]
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y1
                             ),
-                            StackedLineSeries<ChartData, double>(
+                            StackedLineSeries<ChartData, String>(
                                 groupName: 'Group B',
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true,
@@ -1772,7 +1826,7 @@ You can group and stack the similar stacked series types using the [`groupName`]
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y2
                             ),
-                            StackedLineSeries<ChartData, double>(
+                            StackedLineSeries<ChartData, String>(
                                 groupName: 'Group A',
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true,
@@ -1805,8 +1859,9 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
-                            StackedLineSeries<ChartData, double>(
+                            StackedLineSeries<ChartData, String>(
                                 groupName: 'Group A',
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true,
@@ -1817,7 +1872,7 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y1
                             ),
-                            StackedLineSeries<ChartData, double>(
+                            StackedLineSeries<ChartData, String>(
                                 groupName: 'Group B',
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true,
@@ -1828,7 +1883,7 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y2
                             ),
-                            StackedLineSeries<ChartData, double>(
+                            StackedLineSeries<ChartData, String>(
                                 groupName: 'Group A',
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true,
@@ -1852,12 +1907,12 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
 
 ## Stacked area chart
 
-To render a stacked area chart, create an instance of [`StackedAreaSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedAreaSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). The following properties are used to customize the appearance of stacked line series:
+To render a stacked area chart, create an instance of [`StackedAreaSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedAreaSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). The following properties can be used to customize the appearance of stacked line series:
 
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - Changes the color of the line.
-* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
-* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - Changes the stroke width of the series.
-* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - Changes the stroke color of the series.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - changes the color of the line.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - changes the stroke width of the series.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - changes the stroke color of the series.
 
 
 {% highlight dart %} 
@@ -1868,18 +1923,19 @@ To render a stacked area chart, create an instance of [`StackedAreaSeries`](http
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
-                            StackedAreaSeries<ChartData, double>(
+                            StackedAreaSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y1
                             ),
-                            StackedAreaSeries<ChartData, double>(
+                            StackedAreaSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y2
                             ),
-                            StackedAreaSeries<ChartData, double>(
+                            StackedAreaSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y3
@@ -1907,8 +1963,9 @@ You can group and stack the similar stacked series types using the [`groupName`]
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
-                            StackedAreaSeries<ChartData, double>(
+                            StackedAreaSeries<ChartData, String>(
                                 groupName: 'Group A',
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true,
@@ -1918,7 +1975,7 @@ You can group and stack the similar stacked series types using the [`groupName`]
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y1
                             ),
-                            StackedAreaSeries<ChartData, double>(
+                            StackedAreaSeries<ChartData, String>(
                                 groupName: 'Group B',
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true,
@@ -1928,7 +1985,7 @@ You can group and stack the similar stacked series types using the [`groupName`]
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y2
                             ),
-                            StackedAreaSeries<ChartData, double>(
+                            StackedAreaSeries<ChartData, String>(
                                 groupName: 'Group A',
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true,
@@ -1961,8 +2018,9 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
-                            StackedAreaSeries<ChartData, double>(
+                            StackedAreaSeries<ChartData, String>(
                                 groupName: 'Group A',
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true,
@@ -1973,7 +2031,7 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y1
                             ),
-                            StackedAreaSeries<ChartData, double>(
+                            StackedAreaSeries<ChartData, String>(
                                 groupName: 'Group B',
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true,
@@ -1984,7 +2042,7 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y2
                             ),
-                            StackedAreaSeries<ChartData, double>(
+                            StackedAreaSeries<ChartData, String>(
                                 groupName: 'Group A',
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true,
@@ -2008,12 +2066,12 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
 
 ## Stacked column chart
 
-To render a stacked column chart, create an instance of [`StackedColumnSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedColumnSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). The following properties are used to customize the appearance of stacked line series:
+To render a stacked column chart, create an instance of [`StackedColumnSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedColumnSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). The following properties can be used to customize the appearance of stacked line series:
 
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - Changes the color of the line.
-* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
-* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - Changes the stroke width of the series.
-* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - Changes the stroke color of the series.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - changes the color of the line.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - changes the stroke width of the series.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - changes the stroke color of the series.
 
 
 {% highlight dart %} 
@@ -2024,23 +2082,24 @@ To render a stacked column chart, create an instance of [`StackedColumnSeries`](
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
-                            StackedColumnSeries<ChartData, double>(
+                            StackedColumnSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y1
                             ),
-                            StackedColumnSeries<ChartData, double>(
+                            StackedColumnSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y2
                             ),
-                             StackedColumnSeries<ChartData, double>(
+                             StackedColumnSeries<ChartData,String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y3
                             ),
-                            StackedColumnSeries<ChartData, double>(
+                            StackedColumnSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y4
@@ -2068,26 +2127,27 @@ You can group and stack the similar stacked series types using the [`groupName`]
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
-                            StackedColumnSeries<ChartData, double>(
+                            StackedColumnSeries<ChartData, String>(
                                 groupName: 'Group A',
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y1
                             ),
-                            StackedColumnSeries<ChartData, double>(
+                            StackedColumnSeries<ChartData, String>(
                                 groupName: 'Group B',
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y2
                             ),
-                            StackedColumnSeries<ChartData, double>(
+                            StackedColumnSeries<ChartData, String>(
                                 groupName: 'Group A',
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y3
                             ),
-                            StackedColumnSeries<ChartData, double>(
+                            StackedColumnSeries<ChartData, String>(
                                 groupName: 'Group B',
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
@@ -2116,29 +2176,30 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
-                            StackedColumnSeries<ChartData, double>(
+                            StackedColumnSeries<ChartData, String>(
                                 groupName: 'Group A',
                                 dataLabelSettings: DataLabelSettings(isVisible:true, showCumulativeValues: true),
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y1
                             ),
-                            StackedColumnSeries<ChartData, double>(
+                            StackedColumnSeries<ChartData, String>(
                                 groupName: 'Group B',
                                 dataLabelSettings: DataLabelSettings(isVisible:true, showCumulativeValues: true),
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y2
                             ),
-                            StackedColumnSeries<ChartData, double>(
+                            StackedColumnSeries<ChartData, String>(
                                 groupName: 'Group A',
                                 dataLabelSettings: DataLabelSettings(isVisible:true, showCumulativeValues: true),
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y3
                             ),
-                            StackedColumnSeries<ChartData, double>(
+                            StackedColumnSeries<ChartData, String>(
                                 groupName: 'Group B',
                                 dataLabelSettings: DataLabelSettings(isVisible:true, showCumulativeValues: true),
                                 dataSource: chartData,
@@ -2158,12 +2219,12 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
 
 ## Stacked bar chart
 
-To render a stacked bar chart, create an instance of [`StackedBarSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedBarSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). The following properties are used to customize the appearance of stacked line series:
+To render a stacked bar chart, create an instance of [`StackedBarSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedBarSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). The following properties can be used to customize the appearance of stacked line series:
 
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - Changes the color of the line.
-* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
-* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - Changes the stroke width of the series.
-* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - Changes the stroke color of the series.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - changes the color of the line.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - changes the stroke width of the series.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - changes the stroke color of the series.
 
 {% highlight dart %} 
     
@@ -2173,23 +2234,24 @@ To render a stacked bar chart, create an instance of [`StackedBarSeries`](https:
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
-                            StackedBarSeries<ChartData, double>(
+                            StackedBarSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y1
                             ),
-                            StackedBarSeries<ChartData, double>(
+                            StackedBarSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y2
                             ),
-                             StackedBarSeries<ChartData, double>(
+                             StackedBarSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y3
                             ),
-                            StackedBarSeries<ChartData, double>(
+                            StackedBarSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y4
@@ -2217,26 +2279,27 @@ You can group and stack the similar stacked series types using the [`groupName`]
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
-                            StackedBarSeries<ChartData, double>(
+                            StackedBarSeries<ChartData, String>(
                                 groupName: 'Group A',
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y1
                             ),
-                            StackedBarSeries<ChartData, double>(
+                            StackedBarSeries<ChartData, String>(
                                 groupName: 'Group B',
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y2
                             ),
-                            StackedBarSeries<ChartData, double>(
+                            StackedBarSeries<ChartData, String>(
                                 groupName: 'Group A',
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y3
                             ),
-                            StackedBarSeries<ChartData, double>(
+                            StackedBarSeries<ChartData, String>(
                                 groupName: 'Group B',
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
@@ -2265,29 +2328,30 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
-                            StackedBarSeries<ChartData, double>(
+                            StackedBarSeries<ChartData, String>(
                                 groupName: 'Group A',
                                 dataLabelSettings: DataLabelSettings(isVisible:true, showCumulativeValues: true),
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y1
                             ),
-                            StackedBarSeries<ChartData, double>(
+                            StackedBarSeries<ChartData, String>(
                                 groupName: 'Group B',
                                 dataLabelSettings: DataLabelSettings(isVisible:true, showCumulativeValues: true),
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y2
                             ),
-                            StackedBarSeries<ChartData, double>(
+                            StackedBarSeries<ChartData, String>(
                                 groupName: 'Group A',
                                 dataLabelSettings: DataLabelSettings(isVisible:true, showCumulativeValues: true),
                                 dataSource: chartData,
                                 xValueMapper: (ChartData sales, _) => sales.x,
                                 yValueMapper: (ChartData sales, _) => sales.y3
                             ),
-                            StackedBarSeries<ChartData, double>(
+                            StackedBarSeries<ChartData, String>(
                                 groupName: 'Group B',
                                 dataLabelSettings: DataLabelSettings(isVisible:true, showCumulativeValues: true),
                                 dataSource: chartData,
@@ -2309,11 +2373,11 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
 
 To render a 100% stacked area chart, create an instance of `StackingArea100Series` and add to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). You can use the following properties to customize the 100% stacked area appearance.
 
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - Changes the color of the series.
-* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
-* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - Changes the stroke width of the series.
-* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - Changes the stroke color of the series.
-* `borderDrawMode` - Specifies the type of the border mode and it defaults to *top*.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - changes the color of the series.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - changes the stroke width of the series.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - changes the stroke color of the series.
+* `borderDrawMode` - specifies the type of the border mode and it defaults to `top`.
 
 {% highlight dart %} 
 
@@ -2323,6 +2387,7 @@ To render a 100% stacked area chart, create an instance of `StackingArea100Serie
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             StackedArea100Series<ChartData, DateTime>(
                                 dataSource: chartData,
@@ -2357,12 +2422,12 @@ To render a 100% stacked area chart, create an instance of `StackingArea100Serie
 
 ## 100% Stacked Column Chart
 
-To render a 100% stacked column chart, create an instance of [`StackedColumn100Series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedColumnSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/XyDataSeries-class.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties are used to customize the appearance:
+To render a 100% stacked column chart, create an instance of [`StackedColumn100Series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedColumnSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/XyDataSeries-class.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties can be used to customize the appearance:
 
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - Changes the color of the series.
-* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
-* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - Changes the stroke width of the series.
-* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - Changes the stroke color of the series.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - changes the color of the series.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - changes the stroke width of the series.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - changes the stroke color of the series.
 * [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedColumnSeries/borderRadius.html) -  used to add the rounded corners to the rectangle.
 
 {% highlight dart %} 
@@ -2373,23 +2438,24 @@ To render a 100% stacked column chart, create an instance of [`StackedColumn100S
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
-                            StackedColumn100Series<SalesData, double>(
+                            StackedColumn100Series<SalesData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales
                             ),
-                            StackedColumn100Series<SalesData, double>(
+                            StackedColumn100Series<SalesData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales2
                             ),
-                            StackedColumn100Series<SalesData, double>(
+                            StackedColumn100Series<SalesData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales3
                             ),
-                            StackedColumn100Series<SalesData, double>(
+                            StackedColumn100Series<SalesData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales4
@@ -2419,15 +2485,16 @@ The `width` property is used to change the width of the rectangle. The default v
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
-                            StackedColumn100Series<SalesData, double>(
+                            StackedColumn100Series<SalesData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales,
                                 width: 0.8, // Width of the columns
                                 spacing: 0.2 // Spacing between the columns
                             ),
-                            StackedColumn100Series<SalesData, double>(
+                            StackedColumn100Series<SalesData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales2,
@@ -2447,12 +2514,12 @@ The `width` property is used to change the width of the rectangle. The default v
 
 ## 100% Stacked Bar Chart
 
-To render a 100% stacked bar chart, create an instance of [`StackedBar100Series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedBar100Series-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties are used to customize the appearance:
+To render a 100% stacked bar chart, create an instance of [`StackedBar100Series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedBar100Series-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties can be used to customize the appearance:
 
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - Changes the color of the series.
-* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
-* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - Changes the stroke width of the series.
-* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - Changes the stroke color of the series.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - changes the color of the series.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - changes the stroke width of the series.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - changes the stroke color of the series.
 * [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedBar100Series/borderRadius.html) -  used to add the rounded corners to the rectangle.
 
 {% highlight dart %} 
@@ -2463,23 +2530,24 @@ To render a 100% stacked bar chart, create an instance of [`StackedBar100Series`
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
-                            StackedBar100Series<SalesData, double>(
+                            StackedBar100Series<SalesData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales
                             ),
-                            StackedBar100Series<SalesData, double>(
+                            StackedBar100Series<SalesData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales2
                             ),
-                            StackedBar100Series<SalesData, double>(
+                            StackedBar100Series<SalesData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales3
                             ),
-                            StackedBar100Series<SalesData, double>(
+                            StackedBar100Series<SalesData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales4
@@ -2509,15 +2577,16 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
-                            StackedBar100Series<SalesData, double>(
+                            StackedBar100Series<SalesData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales,
                                 width: 0.8, 
                                 spacing: 0.2 
                             ),
-                            StackedBar100Series<SalesData, double>(
+                            StackedBar100Series<SalesData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales2,
@@ -2537,11 +2606,11 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
 
 ## 100% Stacked Line Chart
 
-To render a 100% stacked line chart, create an instance of `StackedLine100Series`, and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties are used to customize the appearance:
+To render a 100% stacked line chart, create an instance of [`StackedLine100Series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedLine100Series-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties can be used to customize the appearance:
 
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - Changes the color of the line.
-* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
-* [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) - Changes the stroke width of the line.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - changes the color of the line.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
+* [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) - changes the stroke width of the line.
 
 {% highlight dart %} 
 
@@ -2551,23 +2620,24 @@ To render a 100% stacked line chart, create an instance of `StackedLine100Series
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
-                            StackedLine100Series<SalesData, double>(
+                            StackedLine100Series<SalesData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales
                             ),
-                            StackedLine100Series<SalesData, double>(
+                            StackedLine100Series<SalesData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales2
                             ),
-                            StackedLine100Series<SalesData, double>(
+                            StackedLine100Series<SalesData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales3
                             ),
-                            StackedLine100Series<SalesData, double>(
+                            StackedLine100Series<SalesData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales4
@@ -2595,6 +2665,7 @@ The `dashArray` property of `StackedLine100Series` is used to render line series
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
                             StackedLine100Series<SalesData, String>(
                                 dataSource: chartData,
@@ -2634,12 +2705,12 @@ The `dashArray` property of `StackedLine100Series` is used to render line series
 ## HiLo chart
 HiLo Series illustrates the price movements in stock using the high and low values.
 
-To render a HiLo chart, create an instance of [`HiloSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/HiloSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties are used to customize the appearance:
+To render a HiLo chart, create an instance of [`HiloSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/HiloSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties can be used to customize the appearance:
 
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - Changes the color of the series.
-* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
-* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - Changes the stroke width of the series.
-* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - Changes the stroke color of the series.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - changes the color of the series.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - changes the stroke width of the series.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - changes the stroke color of the series.
 * [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/lowValueMapper.html) - used to get the low values from the series.
 * [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/highValueMapper.html) - used to get the high values from the series.
 
@@ -2651,9 +2722,10 @@ To render a HiLo chart, create an instance of [`HiloSeries`](https://pub.dev/doc
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders bar chart
-                            HiloSeries<SalesData, double>(
+                            HiloSeries<SalesData, DateTime>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                   lowValueMapper: (Sample sales, _) => sales.low,
@@ -2674,13 +2746,13 @@ To render a HiLo chart, create an instance of [`HiloSeries`](https://pub.dev/doc
 
  OpenHighLowClose series is used to represent the low, high, open and closing values over time.
 
-To render a OpenHighLowClose chart, create an instance of [` hiloOpenCloseSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/HiloOpenCloseSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties are used to customize the appearance:
+To render a OpenHighLowClose chart, create an instance of [` hiloOpenCloseSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/HiloOpenCloseSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties can be used to customize the appearance:
 
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - Changes the color of the series.
-* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
-* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - Changes the stroke width of the series.
-* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - Changes the stroke color of the series.
-* [`showIndicationForSameValues`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/HiloOpenCloseSeries/showIndicationForSameValues.html)- Used to show indication of the data point with a thin line when its high and low values are same and also when all the values of high, low, open and close are same for the data point. By default is set to be false.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - changes the color of the series.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - changes the stroke width of the series.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - changes the stroke color of the series.
+* [`showIndicationForSameValues`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/HiloOpenCloseSeries/showIndicationForSameValues.html)- used to show indication of the data point with a thin line when its high and low values are same and also when all the values of high, low, open and close are same for the data point. By default is set to be `false`.
 * [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/lowValueMapper.html) - used to get the low values from the series.
 * [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/highValueMapper.html) - used to get the high values from the series.
 * [`openValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/HiloOpenCloseSeries/openValueMapper.html) - used to get the open values from the series.
@@ -2698,9 +2770,10 @@ To render a OpenHighLowClose chart, create an instance of [` hiloOpenCloseSeries
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders hiloOpenCloseSeries 
-                            hiloOpenCloseSeries<SalesData, double>(
+                            hiloOpenCloseSeries<SalesData, DateTime>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 lowValueMapper: (Sample sales, _) => sales.low,
@@ -2722,7 +2795,7 @@ To render a OpenHighLowClose chart, create an instance of [` hiloOpenCloseSeries
 
 ### Indication for same values
 
-In the OHLC series, there is a feature for the datapoints indication when their high and low values are same or open and close values or high, low, open and close values are same for a datapoint. For using this indication feature, [`showIndicationForSameValues`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/HiloOpenCloseSeries/showIndicationForSameValues.html) property can be set to true.
+In the OHLC series, there is a feature for the datapoints indication when their high and low values are same or open and close values or high, low, open and close values are same for a datapoint. For using this indication feature, [`showIndicationForSameValues`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/HiloOpenCloseSeries/showIndicationForSameValues.html) property can be set to `true`.
 
 The following are the types of indication when the combination of high, low, open and close values are same for a datapoint.
 
@@ -2779,14 +2852,14 @@ The following are the types of indication when the combination of high, low, ope
 
 Candle series is similar to HiLo Open Close series, used to represent the low, high, open and closing price over time.
 
-To render a Candle chart, create an instance of [` CandleSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CandleSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties are used to customize the appearance:
+To render a Candle chart, create an instance of [` CandleSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CandleSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties can be used to customize the appearance:
 
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - Changes the color of the series.
-* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
-* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - Changes the stroke width of the series.
-* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - Changes the stroke color of the series.
-* [`showIndicationForSameValues`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CandleSeries/showIndicationForSameValues.html)- Used to show indication of the data point with a thin line when its high and low values are same and also when all the values of high, low, open and close are same for the data point. By default is set to be false.
-* [`enableSolidCandles`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CandleSeries/enableSolidCandles.html)- Used to enable/disable the solid candles. By default is set to be false. The fill color of the candle will be defined by its opening and closing values.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - changes the color of the series.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - changes the stroke width of the series.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - changes the stroke color of the series.
+* [`showIndicationForSameValues`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CandleSeries/showIndicationForSameValues.html)- used to show indication of the data point with a thin line when its high and low values are same and also when all the values of high, low, open and close are same for the data point. By default is set to be `false`.
+* [`enableSolidCandles`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CandleSeries/enableSolidCandles.html)- used to enable/disable the solid candles. By default is set to be `false`. The fill color of the candle will be defined by its opening and closing values.
 * [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/lowValueMapper.html) - used to get the low values from the series.
 * [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/highValueMapper.html) - used to get the high values from the series.
 * [`openValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CandleSeries/openValueMapper.html) - used to get the open values from the series.
@@ -2804,9 +2877,10 @@ To render a Candle chart, create an instance of [` CandleSeries`](https://pub.de
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
+                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders CandleSeries
-                            CandleSeries<SalesData, double>(
+                            CandleSeries<SalesData, DateTime>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 lowValueMapper: (Sample sales, _) => sales.low,
@@ -2826,9 +2900,13 @@ To render a Candle chart, create an instance of [` CandleSeries`](https://pub.de
 
 ![candle chart](images/cartesian-chart-types/candle.png)
 
+#### See Also 
+
+* [Rendering flutter candle stick chart](https://www.syncfusion.com/kb/12288/how-to-render-flutter-candlestick-chart-using-the-charts-widget-sfcartesianchart).
+
 ### Indication for same values
 
-In the Candle series, there is a feature for the datapoints indication when their high and low values are same or open and close values or high, low, open and close values are same for a datapoint. For using this indication feature, [`showIndicationForSameValues`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CandleSeries/showIndicationForSameValues.html) property can be set to true.
+In the Candle series, there is a feature for the datapoints indication when their high and low values are same or open and close values or high, low, open and close values are same for a datapoint. For using this indication feature, [`showIndicationForSameValues`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CandleSeries/showIndicationForSameValues.html) property can be set to `true`.
 
 The following are the types of indication when the combination of high, low, open and close values are same for a datapoint.
 
@@ -2874,9 +2952,8 @@ The following are the types of indication when the combination of high, low, ope
                         ]
                     ),
                 )   
-            )
-        );
-    }
+            );
+        }
 
 {% endhighlight %}
 
@@ -2884,17 +2961,17 @@ The following are the types of indication when the combination of high, low, ope
 
 ## Box and Whisker chart
 
-The Box and Whisker charts are used to visualize a group of numerical data through their quartiles. It is also referred as box plot. Box plots may also have lines extending vertically from the boxes (whiskers) indicating variability outside the upper and lower quartiles.
+The Box and Whisker charts can be used to visualize a group of numerical data through their quartiles. It is also referred as box plot. Box plots may also have lines extending vertically from the boxes (whiskers) indicating variability outside the upper and lower quartiles.
 
 To render a Box and Whisker chart, create an instance of [`BoxAndWhiskerSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BoxAndWhiskerSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties to customize the appearance.
 
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - Changes the color of the series.
-* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - Controls the transparency of the chart series.
-* [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) - Changes the stroke width of the series.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - changes the color of the series.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
+* [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) - changes the stroke width of the series.
 * [`BoxPlotMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BoxPlotMode-class.html) - used to change the box plot rendering mode. This property is applicable for 
 `normal`, `exclusive`, and `inclusive` values.
-* [`showMean`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BoxAndWhiskerSeries/showMean.html) - Indication for mean value in box plot. It is set to be true, a cross symbol will be displayed at the mean value, for each data point in box plot. Else, it will not be displayed.
-* [`spacing`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BoxAndWhiskerSeries/spacing.html) - Spacing between the box plots.The value ranges from 0 to 1, where 1 represents 100% and 0 represents 0% of the available space.
+* [`showMean`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BoxAndWhiskerSeries/showMean.html) - indication for mean value in box plot. It is set to be true, a cross symbol will be displayed at the mean value, for each data point in box plot. Else, it will not be displayed.
+* [`spacing`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BoxAndWhiskerSeries/spacing.html) - spacing between the box plots.The value ranges from 0 to 1, where 1 represents 100% and 0 represents 0% of the available space.
 
 {% highlight dart %}
 
@@ -2928,9 +3005,9 @@ The waterfall chart explains gradual changes in the quantitative value of an ent
 
 To render a waterfall chart, create an instance of [`WaterfallSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/WaterfallSeries-class.html) and add to the[`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html)collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties to customize the appearance.
 
-* [`negativePointsColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/WaterfallSeries/negativePointsColor.html) - Changes the color of the negative data points in the series. If no color is specified, then the negative data points will be rendered with the series default color.
-* [`intermediateSumColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/WaterfallSeries/intermediateSumColor.html) - Changes the Color of the intermediate sum points in the series. If no color is specified, then the intermediate sum points will be rendered with the series default color.
-* [`totalSumColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/WaterfallSeries/totalSumColor.html) - Changes the color of the total sum points in the series. If no color is specified, then the total sum points will be rendered with the series default color.
+* [`negativePointsColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/WaterfallSeries/negativePointsColor.html) - changes the color of the negative data points in the series. If no color is specified, then the negative data points will be rendered with the series default color.
+* [`intermediateSumColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/WaterfallSeries/intermediateSumColor.html) - changes the Color of the intermediate sum points in the series. If no color is specified, then the intermediate sum points will be rendered with the series default color.
+* [`totalSumColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/WaterfallSeries/totalSumColor.html) - changes the color of the total sum points in the series. If no color is specified, then the total sum points will be rendered with the series default color.
 * [`connectorLineSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/WaterfallSeries/connectorLineSettings.html) - used to customize the waterfall chart connector line. Data points in waterfall chart are connected using the connector line. Provides the options to change the [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ConnectorLineSettings/width.html), [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ConnectorLineSettings/color.html) and [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/WaterfallConnectorLineSettings/dashArray.html) of the connector line to customize the appearance.
 * [`spacing`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/WaterfallSeries/spacing.html) - used to provide spacing between the data points in waterfall chart. The value ranges from 0 to 1, where 1 represents 100% and 0 represents 0% of the available space.
 

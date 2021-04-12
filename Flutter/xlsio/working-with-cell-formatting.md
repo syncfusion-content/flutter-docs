@@ -24,19 +24,17 @@ final Workbook workbook = Workbook();
 final Worksheet sheet = workbook.worksheets[0];
 
 //Creating a new style with all properties.
-final Style style = CellStyle(workbook);
-// set style name.
-style.name = 'Style1';
+final Style style = workbook.styles.add('Style1');
 // set back color by hexa decimal.
 style.backColor = '#FF5050';
 // set back color by RGB values.
-style.backColorRGB = Color.fromARGB(255, 34, 244, 0);
+style.backColorRgb = Color.fromARGB(255, 34, 244, 0);
 // set font name.
 style.fontName = 'Aldhabi';
 // set font color by hexa decimal.
 style.fontColor = '#138939';
 // set font color by RGB values.
-style.fontColorRGB = Color.fromARGB(255, 244, 0, 34);
+style.fontColorRgb = Color.fromARGB(255, 244, 0, 34);
 // set font size.
 style.fontSize = 16;
 // set font bold.
@@ -60,7 +58,7 @@ style.borders.top.color = '#FFFF66';
 // set right bordera line style.
 style.borders.right.lineStyle = LineStyle.thick;
 // set right borders color by RGB values.
-style.borders.right.colorRGB = Color.fromARGB(255, 0, 34, 244);
+style.borders.right.colorRgb = Color.fromARGB(255, 0, 34, 244);
 // set wrap text.
 style.wrapText = true;
 // set number format to cell.
@@ -85,7 +83,6 @@ File('CreateCellStyle.xlsx').writeAsBytes(bytes);
 The Flutter XlsIO adds styles globally that can be applied to one or more cells in a workbook. This is a recommended approach to apply single style in different rows and columns, which improves memory and performance considerably.
 
 The following code snippet illustrates how to apply global style.
-
 
 {% highlight dart %}
 

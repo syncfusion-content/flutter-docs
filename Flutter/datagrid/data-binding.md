@@ -13,9 +13,9 @@ documentation: ug
 
  The following APIs in the `DataGridSource` are mandatory to process the data,
 
- * [rows] - The number of rows in a datagrid and row selection depends on the [rows]. So, set the `DataGridRow` collection required for datagrid in
+ * [rows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/rows.html) - The number of rows in a datagrid and row selection depends on the `rows`. So, set the `DataGridRow` collection required for datagrid in
 `rows`.
-* [buildRow]- The widget needed for the cells is obtained from `DataGridRowAdapter`.
+* [buildRow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/buildRow.html) - The widget needed for the cells is obtained from `DataGridRowAdapter`.
 
 `DataGridSource` objects are expected to be long-lived, not recreated with each build.
 
@@ -25,7 +25,7 @@ The following example shows how to create the `DataGridSource`,
 {% highlight dart %} 
 
 class EmployeeDataSource extends DataGridSource {
-  EmployeeDataSource() {
+  EmployeeDataSource(List<Employee> employees) {
     dataGridRows = employees
         .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
               DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
@@ -38,7 +38,7 @@ class EmployeeDataSource extends DataGridSource {
         .toList();
   }
 
-  List<DataGridRow> dataGridRows;
+  List<DataGridRow> dataGridRows = [];
 
   @override
   List<DataGridRow> get rows => dataGridRows;
@@ -69,7 +69,16 @@ The following example shows how to set the `source` property in `SfDataGrid`
 {% tabs %}
 {% highlight dart %}
 
-final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
+late EmployeeDataSource _employeeDataSource;
+
+List<Employee> _employees = <Employee>[];
+
+@override
+void initState() {
+  super.initState();
+  _employees = getEmployeeData();
+  employeeDataSource = EmployeeDataSource(employees: _employees);
+}
   
 @override
 Widget build(BuildContext context) {
@@ -136,7 +145,7 @@ Widget build(BuildContext context) {
 
 If row is added, removed or replaced in an underlying datasource, you can call the [notifyListeners](https://api.flutter.dev/flutter/foundation/ChangeNotifier/notifyListeners.html). 
 
-In the following example, row is added and `notifyListeners` is called in `onPressed` callback of the `FlatButton`.
+In the following example, row is added and `notifyListeners` is called in `onPressed` callback of the `TextButton`.
 
 N> `notifyListeners` should be called from inside the `DataGridSource`.
 
@@ -215,12 +224,12 @@ Widget build(BuildContext context) {
 }
 
 class EmployeeDataSource extends DataGridSource {
-  EmployeeDataSource(List<Employee> employees) {
+  EmployeeDataSource() {
     buildDataGridRows();
   }
 
   void buildDataGridRows() {
-    dataGridRows = employees
+    dataGridRows = _employees
         .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
               DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
               DataGridCell<String>(columnName: 'name', value: dataGridRow.name),
@@ -232,7 +241,7 @@ class EmployeeDataSource extends DataGridSource {
         .toList();
   }
 
-  List<DataGridRow> dataGridRows;
+  List<DataGridRow> dataGridRows = [];
 
   @override
   List<DataGridRow> get rows => dataGridRows;
@@ -265,7 +274,7 @@ class EmployeeDataSource extends DataGridSource {
 If the value of the specific cell is updated, you can `notifyDataSourceListeners` method with [RowColumnIndex](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/RowColumnIndex-class.html) argument where it refers the corresponding row and column index of the cell. 
 So, DataGrid refreshes the corresponding cell alone.
 
-In the following example, cell value is updated and `notifyDataSourceListeners` is called in `onPressed` callback of the `FlatButton`.
+In the following example, cell value is updated and `notifyDataSourceListeners` is called in `onPressed` callback of the `TextButton`.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -359,7 +368,7 @@ class EmployeeDataSource extends DataGridSource {
   }
 
   void buildDataGridRows() {
-    dataGridRows = employees
+    dataGridRows = _employees
         .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
               DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
               DataGridCell<String>(columnName: 'name', value: dataGridRow.name),

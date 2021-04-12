@@ -24,7 +24,8 @@ final Workbook workbook = Workbook();
 final Worksheet sheet = workbook.worksheets[0];
 
 // Adding an image.
-sheet.pictures.addBase64(1, 1, image1jpg);
+final List<int> imageBytes = File('image.jpeg').readAsBytesSync();
+sheet.picutes.addStream(1, 1, imageBytes);
 
 // Save and dispose workbook.
 final List<int> bytes = workbook.saveAsStream();
@@ -48,7 +49,8 @@ final Workbook workbook = Workbook();
 final Worksheet sheet = workbook.worksheets[0];
 
 // Add a image.
-final Picture picture = sheet.pictures.addBase64(1, 1, image1jpg);
+final List<int> imageBytes = File('image.jpeg').readAsBytesSync();
+sheet.picutes.addStream(1, 1, imageBytes);
 
 // Re-size an image
 picture.height = 200;

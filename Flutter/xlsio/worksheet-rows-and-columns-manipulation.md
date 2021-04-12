@@ -105,7 +105,6 @@ workbook.dispose();
 
 {% endhighlight %}
 
-
 The following code snippet shows how a Column is re-sized to its content.
 
 {% highlight dart %}

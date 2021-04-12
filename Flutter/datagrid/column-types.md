@@ -169,7 +169,7 @@ Widget build(BuildContext context) {
 Widget build(BuildContext context) {
   return Scaffold(
     body: SfDataGrid(
-      source: employeeDataSource,
+      source: _employeeDataSource,
       columns: <GridColumn>[
         GridTextColumn(
           columnName: 'id',
