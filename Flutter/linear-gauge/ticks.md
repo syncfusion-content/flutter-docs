@@ -83,7 +83,7 @@ Widget build(BuildContext context) {
 
 ![Customize linear gauge ticks visibility](images/axis-ticks/linear-gauge-tick-visibility.png)
 
-## Customize tick placement
+## Customize tick position
 
 The linear axis allows to position the ticks either inside or outside the axis track using the [`tickPosition`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/tickPosition.html) property. By default, ticks are positioned inside the axis track.
 
