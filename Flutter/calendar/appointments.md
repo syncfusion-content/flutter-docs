@@ -325,7 +325,7 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 >**NOTE**
-* The startTime is required for the starting date from which to obtain the appointments.
+* The `startTime` is required for the starting date from which to obtain the appointments.
 
 ## Recurrence appointment
 

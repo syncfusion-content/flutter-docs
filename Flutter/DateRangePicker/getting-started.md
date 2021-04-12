@@ -176,7 +176,7 @@ You can display action buttons at the bottom of the date range picker by using t
 {% endhighlight %}
 {% endtabs %}
 
-![showActionButtons](images/getting-started/cancel-confirm-button.png)  
+![showActionButtons](images/getting-started/confirm_and_cancel_buttons.png)  
   
 ## See also
 
