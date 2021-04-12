@@ -47,7 +47,7 @@ Axis labels can be customized using the [`axisLabelStyle`](https://pub.dev/docum
 
 ![Customize linear gauge axis label style](images/axis-labels/customize_label_style.png)
 
-## Switch Linear Gauge label visibility
+## Change visibility
 
 The [`showLabels`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/showLabels.html) property of [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html) allows
 you to show or hide the visibility of axis labels. The default value of this property is true.
@@ -66,7 +66,7 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 
-![Switch linear gauge axis label visibility](images/axis-labels/axis_label_visibility.png)
+![Change visibility](images/axis-labels/axis_label_visibility.png)
 
 ## Customize interval between labels
 
