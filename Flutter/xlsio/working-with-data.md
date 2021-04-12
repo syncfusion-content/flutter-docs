@@ -8,9 +8,9 @@ documentation: ug
 ---
 
 # Importing Data to Worksheets
-Flutter XlsIO provides the ability to import data into a worksheet using List<Object>.
+Flutter XlsIO provides the ability to import data into a worksheet using List\<Object>.
 
-## Import Data from List<Object>
+## Import Data from List\<Object>
 
 The following code snippet shows how to import list of data into a worksheet using **importList** method.
 Using **importList** method, we can import list of data with different data types.
