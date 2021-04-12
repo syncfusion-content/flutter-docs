@@ -52,8 +52,6 @@ Widget build(BuildContext context) {
 
 ![MinMaxDate Calendar](images/date-navigation/minmaxdate.png)
 
-### Disabled timeslot improvement
-
 ![minDate and maxDate](images/date-navigation/min-maxDate.png) 
 
 >**NOTE**
