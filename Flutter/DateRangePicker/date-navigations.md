@@ -351,7 +351,7 @@ Widget build(BuildContext context) {
 
 
 ### Navigation mode
-You can customize the navigation mode of date range picker by using the [navigationMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/navigationMode.html) property of `SfDateRangePicker`, which has options to disable the view navigation through swipe interaction, also allows to scroll the view. By default the `navigationMode` set as [DateRangePickerNavigationMode.snap](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerNavigationMode-class.html).
+You can customize the navigation mode of the date range picker by using the [navigationMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/navigationMode.html) property of `SfDateRangePicker`, which has options to disable the view navigation using the swipe interaction, also allows to scroll the view. By default, the `navigationMode` is set to [DateRangePickerNavigationMode.snap](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerNavigationMode-class.html).
 
 {% tabs %}
 {% highlight Dart %}
@@ -372,9 +372,9 @@ Widget build(BuildContext context) {
 ![navigationMode](images/date-navigations/navigation_mode.gif)
 
 >**NOTE**
-When the navigation mode set as NavigationMode.scroll
-* Swipe selection is not supported when range and multi-range are the selection modes.
-* `onViewChanged` will be called when the view reaches the starting position of the date range picker view.
+When the navigation mode is set to NavigationMode.scroll
+* Swipe selection is not supported when the range and multi-range are the selection modes.
+* The `onViewChanged` will be called when the view reaches the starting position of the date range picker view.
 * [forward](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/forward.html), [backward](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerController/backward.html) and [showNavigationArrow](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/showNavigationArrow.html) is not supported.
 
 

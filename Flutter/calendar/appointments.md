@@ -288,7 +288,7 @@ _AppointmentDataSource _getCalendarDataSource() {
 
 ### Get visible appointments
 
-You can get the list of visible appointments by using [getVisibleAppointments](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getVisibleAppointments.html) method available in Calendar data source.
+You can get the list of visible appointments by using the [getVisibleAppointments](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getVisibleAppointments.html) method available in the Calendar data source.
 
 {% tabs %}
 {% highlight Dart %}

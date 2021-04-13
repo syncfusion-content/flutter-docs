@@ -55,7 +55,7 @@ Widget build(BuildContext context) {
 ![minDate and maxDate](images/date-navigation/min-maxDate.png) 
 
 >**NOTE**
-* The timeslots falls beyond the minimum/maximum date time will be disabled, and user interaction were restricted in timeslot views.
+* The timeslot falls beyond the minimum or maximum date-time will be disabled, and the user interaction was restricted in the timeslot views.
 
 
 ## Programmatic date navigation
@@ -261,7 +261,7 @@ Widget build(BuildContext context) {
 
 ## View navigation mode
 
-You can customize the swipe interaction of SfCalendar by using the [viewNavigationMode](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/viewNavigationMode.html). You can allow or restrict to switching to previous or next views through the swipe interaction of SfCalendar. By default , the view navigation mode set as [viewNavigationMode.snap](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ViewNavigationMode-class.html).
+You can customize the swipe interaction of SfCalendar by using the [viewNavigationMode](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/viewNavigationMode.html). You can allow or restrict switching to the previous or next views using the swipe interaction of SfCalendar. By default, the view navigation mode is set to [viewNavigationMode.snap](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ViewNavigationMode-class.html).
 
 {% tabs %}
 {% highlight Dart %}
@@ -279,8 +279,8 @@ You can customize the swipe interaction of SfCalendar by using the [viewNavigati
 {% endtabs %}
 
 >**NOTE**
-* Not applicable when the view set as schedule. 
-* It will not impact scrolling timeslot views, [forward](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/forward.html), [backward](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/backward.html) and [showNavigationArrow](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/showNavigationArrow.html).
+* Not applicable when the view is set to schedule. 
+* It will not impact scrolling timeslot views, [forward](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/forward.html), [backward](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/backward.html), and [showNavigationArrow](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/showNavigationArrow.html).
 
 ## See also
 
