@@ -644,6 +644,8 @@ The following code example shows how to navigate the previous page programmatica
         ], 
       ); 
     }), 
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
