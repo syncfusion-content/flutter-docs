@@ -62,6 +62,30 @@ Widget build(BuildContext context) {
 
 ![Header appearance](images/headers/header-style.png)
 
+### Header date format
+
+You can customize the header date format by using the [headerDateFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/headerDateFormat.html) property of the `SfCalendar`. The `headerDateFormat` can be specified with a pattern string.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+  Widget build(BuildContext context) {
+    return Scaffold(appBar: AppBar(title: Text('Calendar'),),
+      body: SfCalendar(
+        view: CalendarView.month,
+        monthViewSettings: MonthViewSettings(numberOfWeeksInView: 3),
+        headerDateFormat: 'MMM,yyy',
+      ),
+    );
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![headerDateFormat](images/headers/headerDateFormat.png)
+
 ## View header
 
 You can customize the view header of the calendar using the [viewHeaderStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/viewHeaderStyle.html) and [viewHeaderHeight](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/viewHeaderHeight.html) properties in calendar.
