@@ -1,6 +1,6 @@
 ---
 layout: post  
-title: Load more support in Flutter Calendar | Lazy loading events
+title: Load more support in Syncfusion Flutter Calendar | Lazy loading events
 description: Learn about lazily loading more appointments on-demand with an intuitive interface using Flutter Calendar.
 platform: flutter
 control: SfCalendar
