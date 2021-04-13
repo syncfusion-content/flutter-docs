@@ -598,6 +598,57 @@ class OrderInfoDataSource extends DataGridSource{
 >**NOTE**  
   Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-show-loading-indicator-on-loading-page-in-flutter-datatable).
 
+
+## Programmatic page navigation
+
+The sfdatagrid provides the support to navigate between the pages programmatically using [controller](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController-class.html) with following option,
+
+* [nextPage](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataPagerController/nextPage.html), 
+* [previousPage](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataPagerController/previousPage.html), 
+* [LastPage](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataPagerController/lastPage.html), 
+* [firstPage](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataPagerController/firstPage.html)
+
+The following code example shows how to navigate the previous page using programmatical scrolling,
+
+{% tabs %}
+{% highlight Dart %}
+@override 
+  Widget build(BuildContext context) { 
+    return Scaffold( 
+      body: LayoutBuilder(builder: (context, constraint) { 
+      return Column( 
+        children: [ 
+          MaterialButton( 
+            onPressed: () { 
+              controller.previousPage(); 
+            }, 
+            child: Text('Move Previous page'), 
+          ), 
+          SizedBox( 
+              height: constraint.maxHeight - 120, 
+              width: constraint.maxWidth, 
+              child: _buildDataGrid()), 
+          Container( 
+            height: 60, 
+            child: Align( 
+                alignment: Alignment.center, 
+                child: SfDataPager( 
+                  delegate: orderInfoDataSource, 
+                  initialPageIndex: index, 
+                  controller: controller, 
+                  pageCount: orderInfoDataSource.orders.length / 
+                      orderInfoDataSource.rowsPerPage, 
+                  direction: Axis.horizontal, 
+                )), 
+          ) 
+        ], 
+      ); 
+    }), 
+
+{% endhighlight %}
+{% endtabs %}
+
+
 ## Orientation
 
 `SfDataPager` allows you to arrange the child elements either horizontally or vertically. This can be achieved by using the [direction](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/direction.html) Property. `direction` is an Enum type.
