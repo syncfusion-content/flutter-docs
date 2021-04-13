@@ -9,7 +9,7 @@ documentation: ug
 
 # Callbacks in Circular charts
 
-The below Callbacks are for Circular chart.
+Circular chart contains the below listed callbacks
 
 ## onLegendItemRender
 
@@ -128,8 +128,8 @@ Triggers when tapping the series point. The [`onPointTapped`](https://pub.dev/do
 * [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PointTapArgs/viewportPointIndex.html) - to get the viewport index value of the tapped data label.
 {% highlight dart %}
 
-    @override
-    Widget build(BuildContext context) {
+      @override
+      Widget build(BuildContext context) {
     
       return Scaffold(
         body: Center(
@@ -141,7 +141,7 @@ Triggers when tapping the series point. The [`onPointTapped`](https://pub.dev/do
           )
         )  
       );
-    }
+      }
 
 {% endhighlight %}
 
@@ -260,7 +260,7 @@ N> This callback will not be called, when the builder is specified for data labe
 
 ## onChartTouchInteractionUp
 
-Triggers when tapped or clicked on the chart area. You can get the position of the taped region using this callback.
+Triggers when tapped or clicked on the chart area. You can get the position of the tapped region using this callback.
 
 The callback contains the following argument:
 

@@ -77,7 +77,7 @@ class _AppointmentDataSource extends CalendarDataSource {
 
   @override
   List<Object> getResourceIds(int index) {
-    return appointments[index].ids;
+    return appointments![index].ids;
   }
 }
 

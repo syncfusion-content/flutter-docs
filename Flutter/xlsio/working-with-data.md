@@ -8,11 +8,12 @@ documentation: ug
 ---
 
 # Importing Data to Worksheets
- Flutter XlsIO provides the ability to import data into a worksheet using List.
+Flutter XlsIO provides the ability to import data into a worksheet using List<Object>.
 
-## Import Data from List
+## Import Data from List<Object>
 
 The following code snippet shows how to import list of data into a worksheet using **importList** method.
+Using **importList** method, we can import list of data with different data types.
 
 {% highlight dart %}
 
@@ -22,8 +23,8 @@ final Workbook workbook = Workbook();
 // Accessing sheet via index.
 final Worksheet sheet = workbook.worksheets[0];
 
-//Initialize the list
-final List<Object> List = [
+//Initialize the list<Object>
+final List<Object> list = [
   'Toatal Income',
   20000,
   'On Date',

@@ -84,7 +84,7 @@ final Workbook workbook = Workbook();
 final Worksheet sheet = workbook.worksheets[0];
 
 //Hide grid line.
-sheet.showGridLines = false;
+sheet.showGridlines = false;
 
 //Save and dispose workbook.
 final List<int> bytes = workbook.saveAsStream();
