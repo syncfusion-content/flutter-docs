@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize widget pointers in a linear gauge | Syncfusion
-description: This section explains about how to add and customize the appearance of widget marker pointer and its element of linear gauge in Flutter platform.
+description: This section explains about how to add and customize the appearance of widget marker pointer in Flutter linear gauge.
 platform: flutter
 control: SfLinearGauge
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mirroring the a linear gauge | Linear Gauge widget| Syncfusion
-description: This section explains about how to add mirroring and comparision of linear gauge in Flutter platform.
+description: This section explains about how to mirror the linear gauges in the Flutter platform, also shows a diffrence between normal and mirrored gauge.
 platform: flutter
 control: SfLinearGauge
 documentation: ug
