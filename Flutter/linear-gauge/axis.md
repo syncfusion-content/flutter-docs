@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize axis in a linear gauge | Linear Gauge widget| Syncfusion
-description: Tutorial about deatils of the axis on Linear Gauge Flutter widget | Flutter Linear Gauge widget documentation|
+description: This section explains about how to add and customize the appearance of axis and its element of linear gauge in Flutter platform.
 platform: flutter
 control: SfLinearGauge
 documentation: ug
