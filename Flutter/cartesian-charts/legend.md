@@ -19,10 +19,11 @@ The [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
         body: Center(
           child: Container(
               child:SfCartesianChart(
+                primaryXAxis: DateTimeAxis(),
                 // Enables the legend
                 legend: Legend(isVisible: true),
                 series: <LineSeries>[
-                  LineSeries<ChartData, String>(
+                  LineSeries<ChartData, DateTime>(
                     dataSource: chartData,
                     xValueMapper: (ChartData data, _) => data.x,
                     yValueMapper: (ChartData data, _) => data.y
@@ -66,6 +67,7 @@ The [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
         body: Center(
           child: Container(
             child:SfCartesianChart(
+              primaryXAxis: DateTimeAxis(),
               legend: Legend(
                 isVisible: true,
                 name:legend,
@@ -74,7 +76,7 @@ The [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
                 borderWidth: 2
               ),
               series: <CartesianSeries>[
-                LineSeries<ChartData, String>(
+                LineSeries<ChartData, DateTime>(
                   name:'line-series',
                   dataSource: chartData,
                   xValueMapper: (ChartData data, _) => data.x,
@@ -93,15 +95,15 @@ The [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
 ## Legend title
 
-The following properties are used to define and customize the [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/title.html) of [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/legend.html).
+The following properties can be used to define and customize the [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/title.html) of [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/legend.html).
 
 * [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendTitle/text.html) - used to change the text of the title.
 * [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/textStyle.html) - used to change the text color, size, font family, fontStyle, and font weight.
-* [`textStyle.color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/color.html) - used to change the color of the text.
-* [`textStyle.fontFamily`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontFamily.html) - used to change the font family for legend text. 
-* [`textStyle.fontStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontStyle.html) - used to change the font style for the legend text.
-* [`textStyle.fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontSize.html) - used to change the font size for the legend text.
-* [`alignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/alignment.html) - used to change the alignment of the title text; it can be near, center, or far.
+* [`textStyle.color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/color.html) - used to change the color of the text.
+* [`textStyle.fontFamily`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontFamily.html) - used to change the font family for legend text. 
+* [`textStyle.fontStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontStyle.html) - used to change the font style for the legend text.
+* [`textStyle.fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontSize.html) - used to change the font size for the legend text.
+* [`alignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/alignment.html) - used to change the alignment of the title text, it can be near, center, or far.
 
 {% highlight dart %} 
 
@@ -111,26 +113,27 @@ The following properties are used to define and customize the [`title`](https://
         body: Center(
             child: Container(
                 child:SfCartesianChart(
+                primaryXAxis: DateTimeAxis(),
                 legend: Legend(
                     isVisible: true,
                     // Legend title
                     title: LegendTitle(
                       text:'Country',
-                      textStyle: ChartTextStyle(
+                      textStyle: TextStyle(
                       color: Colors.red,
                       fontSize: 15,
                       fontStyle: FontStyle.italic,
                       fontWeight: FontWeight.w900
                     )
                   ),
+                ),
                 series: <CartesianSeries>[
-                  LineSeries<ChartData, String>(
+                  LineSeries<ChartData, DateTime>(
                     dataSource: chartData,
                     xValueMapper: (ChartData data, _) => data.x,
                     yValueMapper: (ChartData data, _) => data.y
               ),
-                series: <CartesianSeries>[
-                  LineSeries<ChartData, String>(
+                  LineSeries<ChartData, DateTime>(
                     dataSource: chartData,
                     xValueMapper: (ChartData data, _) => data.x,
                     yValueMapper: (ChartData data, _) => data.y
@@ -158,6 +161,7 @@ You can control the visibility of the series by tapping the legend item. You can
         body: Center(
           child: Container(
             child:SfCartesianChart(
+              primaryXAxis: CategoryAxis(),
               legend: Legend(
                 isVisible: true,
                 // Toogles the series visibility on tapping the legend item
@@ -190,6 +194,7 @@ The [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
         body: Center(
           child: Container(
             child:SfCartesianChart(
+              primaryXAxis: CategoryAxis(),
               legend: Legend(
                 // Visibility of legend
                 isVisible: false
@@ -211,7 +216,7 @@ The [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
 
 ## Legend item visibility
 
-You can control the visibility of a particular series legend item using the [`isVisibleInLegend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/isVisibleInLegend.html) property of series. The default value of the [`isVisibleInLegend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/isVisibleInLegend.html) property is *true*. If it is set to false, then the legend item for this specific series will not be displayed in the legend.
+You can control the visibility of a particular series legend item using the [`isVisibleInLegend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/isVisibleInLegend.html) property of series. The default value of the [`isVisibleInLegend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/isVisibleInLegend.html) property is true. If it is set to false, then the legend item for this specific series will not be displayed in the legend.
 
 {% highlight dart %} 
 
@@ -261,6 +266,7 @@ The legend items can be placed in multiple rows or scroll can be enabled using t
         body: Center(
           child: Container(
             child: SfCartesianChart(
+              primaryXAxis: CategoryAxis(),
               legend: Legend(
                 isVisible: true,
                 // Overflowing legend content will be wraped
@@ -286,10 +292,10 @@ The legend items can be placed in multiple rows or scroll can be enabled using t
 
 ## Positioning the legend
 
-You can change the position of the legend inside the chart. The following properties are used to customize the position of legend. **auto** position will place the legend at the right, if the chart's width is greater than the chart's height. Else the legend will be placed at the bottom position.
+You can change the position of the legend inside the chart. The following properties can be used to customize the position of legend. auto position will place the legend at the right, if the chart's width is greater than the chart's height. Else the legend will be placed at the bottom position.
 
-* [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendPosition-class.html) - used to position the legend relatively. The available options are auto, bottom, left, right, and top. Defaults to auto.
-* [`orientation`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/orientation.html) - used to change the orientation of the legend, the default value is **auto**. Also you can set [`horizontal`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendItemOrientation-class.html) or [`vertical`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendItemOrientation-class.html).
+* [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendPosition-class.html) - used to position the legend relatively. The available options are auto, bottom, left, right, and top. Defaults to `auto`.
+* [`orientation`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/orientation.html) - used to change the orientation of the legend, the default value is auto. Also you can set [`horizontal`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendItemOrientation-class.html) or [`vertical`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendItemOrientation-class.html).
 
 {% highlight dart %} 
 
@@ -299,13 +305,14 @@ You can change the position of the legend inside the chart. The following proper
         body: Center(
           child: Container(
             child: SfCartesianChart(
+              primaryXAxis: DateTimeAxis(),
               legend: Legend(
                 isVisible: true,
                 // Legend will be placed at the left
                 position: LegendPosition.left
               ),
               series: <CartesianSeries>[
-                AreaSeries<ChartData, String>(
+                AreaSeries<ChartData, DateTime>(
                   dataSource: chartData,
                   xValueMapper: (ChartData data, _) => data.x,
                   yValueMapper: (ChartData data, _) => data.y
@@ -333,13 +340,14 @@ You can customize the appearance of legend items with your template by using [`l
         body: Center(
           child: Container(
             child: SfCartesianChart(
+              primaryXAxis: CategoryAxis(),
               legend: Legend(
                 isVisible: true,
                 // Templating the legend item
                 legendItemBuilder: (String name, dynamic series, dynamic point, int index) {
                   return Container(
                     child: Container(
-                      child: Text('template')
+                      child: Text('template'))
                   );
                 }
               ),

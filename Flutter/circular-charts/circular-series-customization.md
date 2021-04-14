@@ -20,27 +20,28 @@ documentation: ug
         return Scaffold(
             body: Center(
                 child: Container(
-                    child: SfCircularChart(series: <CircularSeries<ChartData,dynamic>>[
-                        // Render pie chart
-                        PieSeries<ChartData, String>(
-                            dataSource: chartData,
-                            pointColorMapper:(ChartData data,  _) => data.color,
-                            xValueMapper: (ChartData data, _) => data.x,
-                            yValueMapper: (ChartData data, _) => data.y,
-                            animationDuration: 1000
-                        )
-                    ]
+                    child: SfCircularChart(
+                        series: <CircularSeries<ChartData,dynamic>>[
+                            // Render pie chart
+                            PieSeries<ChartData, String>(
+                                dataSource: chartData,
+                                pointColorMapper:(ChartData data,  _) => data.color,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                animationDuration: 1000
+                            )
+                        ]
+                    )
                 )
             )
-        )
-    );
-    }}
+        );
+    }
 
 {% endhighlight %}
 
 ## Color Palette
 
-[`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) provides Color Palette property called [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/palette.html) for the data points in the chart series. If the series color is not specified, then the series will be rendered with appropriate palette color. Ten colors are available by default.
+[`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) provides support for color palette property called [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/palette.html) for the data points in the chart series. If the series color is not specified, then the series will be rendered with appropriate palette color. Ten colors are available by default.
 
 
 {% highlight dart %} 
@@ -53,19 +54,19 @@ documentation: ug
                     child: SfCircularChart(
                         palette: <Color>[Colors.amber, Colors.brown, Colors.green, Colors.redAccent, Colors.blueAccent, Colors.teal],
                         series: <CircularSeries<ChartData,dynamic>>[
-                        // Render pie chart
-                        PieSeries<ChartData, String>(
-                            dataSource: chartData,
-                            pointColorMapper:(ChartData data,  _) => data.color,
-                            xValueMapper: (ChartData data, _) => data.x,
-                            yValueMapper: (ChartData data, _) => data.y,
-                        )
-                    ]
+                            // Render pie chart
+                            PieSeries<ChartData, String>(
+                                dataSource: chartData,
+                                pointColorMapper:(ChartData data,  _) => data.color,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                            )
+                        ]
+                    )
                 )
             )
-        )
-    );
-    }}
+        );
+    }
 
 {% endhighlight %}
 
@@ -192,7 +193,7 @@ The data points of pie, doughnut and radial bar charts can be filled with three 
             ));
     }
 
-    // otate the sweep gradient according to the start angle 
+    // Rotate the sweep gradient according to the start angle 
     Float64List _resolveTransform(Rect bounds, TextDirection textDirection) {
         final GradientTransform transform = GradientRotation(_degreeToRadian(-90));
         return transform.transform(bounds, textDirection: textDirection)!.storage;
@@ -245,7 +246,7 @@ The data points of pie, doughnut and radial bar charts can also be filled with i
     import 'dart:async';
     import 'dart:ui' as ui;
 
-    Image image;
+    ui.Image? image;
 
     Future<void> getImage() async {
         const ImageProvider imageProvider = AssetImage('assets/apple.png');
@@ -265,7 +266,7 @@ The data points of pie, doughnut and radial bar charts can also be filled with i
             child: SfCircularChart(
                 onCreateShader: (ChartShaderDetails chartShaderDetails) {
                     return ImageShader(
-                                image,
+                                ui.image!,
                                 TileMode.mirror,
                                 TileMode.mirror,
                                 Matrix4.identity().scaled(0.4).storage
@@ -287,7 +288,7 @@ The data points of pie, doughnut and radial bar charts can also be filled with i
 
 ## Shader mapping for data points
 
-The [`pointShaderMapper`](~) property is used to map the shader field from the chart data source. You can map different [`gradient`](https://api.flutter.dev/flutter/dart-ui/Gradient-class.html) types and [`image shader`](https://api.flutter.dev/flutter/dart-ui/ImageShader-class.html) for individual data points using this mapper callback.
+The [`pointShaderMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointShaderMapper.html) property is used to map the shader field from the chart data source. You can map different [`gradient`](https://api.flutter.dev/flutter/dart-ui/Gradient-class.html) types and [`image shader`](https://api.flutter.dev/flutter/dart-ui/ImageShader-class.html) for individual data points using this mapper callback.
 
 {% highlight dart %}
 
@@ -295,10 +296,10 @@ The [`pointShaderMapper`](~) property is used to map the shader field from the c
     import 'dart:async';
     import 'dart:ui' as ui;
 
-    ui.Image image1;
-    ui.Image image2;
-    ui.Image image3;
-    ui.Image image4;
+    ui.Image? image1;
+    ui.Image? image2;
+    ui.Image? image3;
+    ui.Image? image4;
 
     // To get the images from asset folder
     void getImage() async {
@@ -340,7 +341,7 @@ The [`pointShaderMapper`](~) property is used to map the shader field from the c
         }));
     }
 
-    Widget renderWidget;
+    Widget? renderWidget;
 
     @override
     Widget build(BuildContext context) {
@@ -356,7 +357,7 @@ The [`pointShaderMapper`](~) property is used to map the shader field from the c
                                 25,
                                 '25%',
                                 ui.ImageShader(
-                                    image1,
+                                    image1!,
                                     TileMode.repeated,
                                     TileMode.repeated,
                                     Matrix4.identity().scaled(0.5).storage,
@@ -367,7 +368,7 @@ The [`pointShaderMapper`](~) property is used to map the shader field from the c
                                 35,
                                 '35%',
                                 ui.ImageShader(
-                                    image2,
+                                    image2!,
                                     TileMode.repeated,
                                     TileMode.repeated,
                                     Matrix4.identity().scaled(0.6).storage,
@@ -378,7 +379,7 @@ The [`pointShaderMapper`](~) property is used to map the shader field from the c
                                 22,
                                 '22%',
                                 ui.ImageShader(
-                                    image3,
+                                    image3!,
                                     TileMode.repeated,
                                     TileMode.repeated,
                                     Matrix4.identity().scaled(0.6).storage,
@@ -389,7 +390,7 @@ The [`pointShaderMapper`](~) property is used to map the shader field from the c
                                 18,
                                 '18%',
                                 ui.ImageShader(
-                                    image4,
+                                    image4!,
                                     TileMode.repeated,
                                     TileMode.repeated,
                                     Matrix4.identity().scaled(0.5).storage,
@@ -415,7 +416,7 @@ The [`pointShaderMapper`](~) property is used to map the shader field from the c
             renderWidget = Center(child: CircularProgressIndicator());
         }
         return Scaffold(
-            body: renderWidget
+            body: renderWidget!
         );
     }
 
@@ -437,13 +438,13 @@ The [`pointShaderMapper`](~) property is used to map the shader field from the c
 
 ## Point render mode
 
-The [`pointRenderMode`](~) property is used to define the painting mode for the data points. The data points in the pie and doughnut chart can be filled either with solid colors or with sweep gradient by using this property. This property is not applicable for [`RadialBarSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries-class.html).
+The [`pointRenderMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointRenderMode.html) property is used to define the painting mode for the data points. The data points in the pie and doughnut chart can be filled either with solid colors or with sweep gradient by using this property. This property is not applicable for [`RadialBarSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries-class.html).
 
 * If `PointRenderMode.segment` is specified, the data points are filled with solid colors from the palette or with the colors mentioned in [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointColorMapper.html) property.
 
 *  If `PointRenderMode.gradient` is specified, a sweep gradient is formed with the solid colors and fills the data points.
 
-N> This property is applicable only if the [`onCreateShader`](~) or [`pointShaderMapper`](~) is null.
+N> This property is applicable only if the [`onCreateShader`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onCreateShader.html) and [`pointShaderMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointShaderMapper.html) are null.
 
 {% highlight dart %}
 
@@ -501,8 +502,12 @@ The data points that has null value are considered as empty points. Empty data p
                       EmptyPointSettings(mode: EmptyPointMode.average),
                             pointColorMapper:(ChartData data,  _) => data.color,
                             xValueMapper: (ChartData data, _) => data.x,
-                            yValueMapper: (ChartData data, _) => data.y,)])));
-    }}
+                            yValueMapper: (ChartData data, _) => data.y,)
+                    ]
+                )
+            )
+        );
+    }
 
 {% endhighlight %}
 
@@ -516,29 +521,33 @@ Specific color for empty point can be set by [`color`](https://pub.dev/documenta
 
     @override
     Widget build(BuildContext context) {
-     final List<ChartData> chartData = [
-      ChartData('David', null),
-      ChartData('Steve', 38),
-      ChartData('Jack', 34),
-      ChartData('Others', 52)
-    ];
-    return Scaffold(
-        body: Center(
-            child: Container(
-                child: SfCircularChart(
-                    series: <CircularSeries<ChartData, dynamic>>[
-          PieSeries<ChartData, String>(
-              dataSource: chartData,
-              dataLabelSettings: DataLabelSettings(isVisible: true),
-              emptyPointSettings: EmptyPointSettings(
-                  mode: EmptyPointMode.average,
-                  color: Colors.red,
-                  borderColor: Colors.black,
-                  borderWidth: 2),
-              xValueMapper: (ChartData data, _) => data.x,
-              yValueMapper: (ChartData data, _) => data.y)
-        ]))));
-      }}
+        final List<ChartData> chartData = [
+        ChartData('David', null),
+        ChartData('Steve', 38),
+        ChartData('Jack', 34),
+        ChartData('Others', 52)
+        ];
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCircularChart(
+                        series: <CircularSeries<ChartData, dynamic>>[
+                            PieSeries<ChartData, String>(
+                            dataSource: chartData,
+                            dataLabelSettings: DataLabelSettings(isVisible: true),
+                            emptyPointSettings: EmptyPointSettings(
+                                mode: EmptyPointMode.average,
+                                color: Colors.red,
+                                borderColor: Colors.black,
+                                borderWidth: 2),
+                            xValueMapper: (ChartData data, _) => data.x,
+                            yValueMapper: (ChartData data, _) => data.y)
+                        ]
+                    )
+                )
+            )
+        );
+    }
 
 {% endhighlight %}
 
@@ -553,7 +562,7 @@ The chart’s data source can be sorted using the [`sortingOrder`](https://pub.d
     @override
     Widget build(BuildContext context) {
         
-         final List<ChartData> chartData = [
+        final List<ChartData> chartData = [
             ChartData('David', 25),
             ChartData('Steve', 38),
             ChartData('Jack', 34),
@@ -564,7 +573,6 @@ The chart’s data source can be sorted using the [`sortingOrder`](https://pub.d
             body: Center(
                 child: Container(
                     child: SfCircularChart(
-                      
                       series: <CircularSeries<ChartData,dynamic>>[
                         // Render pie chart
                         PieSeries<ChartData, String>(
@@ -577,8 +585,12 @@ The chart’s data source can be sorted using the [`sortingOrder`](https://pub.d
                             yValueMapper: (ChartData data, _) => data.y,
                             animationDuration: 1000
                         )]))));
-    }}
+    }
 
 {% endhighlight %}
 
 ![Sorting](images/circular-customization/sortings.jpg)
+
+#### See Also
+
+* [Creating a circular drilldown chart using SfCircular charts](https://www.syncfusion.com/kb/11640/how-to-drilldown-with-syncfusion-flutter-chart-widget-sfcircularchart)

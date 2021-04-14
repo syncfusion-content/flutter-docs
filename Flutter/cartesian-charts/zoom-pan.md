@@ -12,15 +12,15 @@ documentation: ug
 
 ## Pinch zooming
 
-Pinch zooming can be enabled by [`enablePinching`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/enablePinching.html) property and defaults to *false*. Pinching can be performed by moving two fingers over the chart.
+Pinch zooming can be enabled by [`enablePinching`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/enablePinching.html) property and defaults to `false`. Pinching can be performed by moving two fingers over the chart.
 
 {% highlight dart %} 
 
-    ZoomPanBehavior _zoomPanBehavior;
+    late ZoomPanBehavior _zoomPanBehavior;
     
     @override
     void initState(){
-     _zoomPanBehavior = ZoomPanBehavior(
+      _zoomPanBehavior = ZoomPanBehavior(
                   // Enables pinch zooming
                   enablePinching: true
                 );
@@ -48,11 +48,11 @@ Pinch zooming can be enabled by [`enablePinching`](https://pub.dev/documentation
 
 ## Double tap zooming
 
-Double tap zooming can be enabled using [`enableDoubleTapZooming`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/enableDoubleTapZooming.html) property. Defaults to *false*.
+Double tap zooming can be enabled using [`enableDoubleTapZooming`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/enableDoubleTapZooming.html) property. Defaults to `false`.
 
 {% highlight dart %} 
     
-    ZoomPanBehavior _zoomPanBehavior;
+    late ZoomPanBehavior _zoomPanBehavior;
     
     @override
     void initState(){
@@ -96,11 +96,11 @@ You can customize the selection rectangle using the below properties.
 
 {% highlight dart %} 
     
-    ZoomPanBehavior _zoomPanBehavior;
+    late ZoomPanBehavior _zoomPanBehavior;
     
     @override
     void initState(){
-     _zoomPanBehavior = ZoomPanBehavior(
+      _zoomPanBehavior = ZoomPanBehavior(
                   enableSelectionZooming: true,
                   selectionRectBorderColor: Colors.red,
                   selectionRectBorderWidth: 1,
@@ -143,13 +143,14 @@ The axis tooltip on selection zooming can be enabled using [`enable`](https://pu
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/InteractiveTooltip/borderColor.html) - used to change the stroke color of the axis tooltip.
 * [`format`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/InteractiveTooltip/format.html) - by default, axis value will be displayed in the tooltip, and it can be customized by adding desired text as prefix or suffix.
 * [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/InteractiveTooltip/textStyle.html) - used to change the text color, size, font family, fontStyle, and font weight.
-* [`textStyle.color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/color.html) - used to change the color of the text.
-* [`textStyle.fontFamily`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontFamily.html) - used to change the font family for chart title. 
-* [`textStyle.fontStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontStyle.html) - used to change the font style for the chart title.
-* [`textStyle.fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontStyle.html) - used to change the font size for the chart title.
+* [`textStyle.color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/color.html) - used to change the color of the text.
+* [`textStyle.fontFamily`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontFamily.html) - used to change the font family for chart title. 
+* [`textStyle.fontStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontStyle.html) - used to change the font style for the chart title.
+* [`textStyle.fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontStyle.html) - used to change the font size for the chart title.
 
 {% highlight dart %} 
-    ZoomPanBehavior _zoomPanBehavior;
+
+    late ZoomPanBehavior _zoomPanBehavior;
     
     @override
     void initState(){
@@ -200,7 +201,7 @@ The [enableMouseWheelZooming](https://pub.dev/documentation/syncfusion_flutter_c
 
 {% highlight dart %} 
 
-    ZoomPanBehavior _zoomPanBehavior;
+    late ZoomPanBehavior _zoomPanBehavior;
     
     @override
     void initState(){
@@ -247,17 +248,20 @@ The [`enableAutoIntervalOnZooming`](https://pub.dev/documentation/syncfusion_flu
                 )
               )
             )
-          );
-        }
+          )
+        ) 
+      );
+    }
 
 {% endhighlight %}
 
 ## Maximum zoom level
 
-The [`maximumZoomLevel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/maximumZoomLevel.html) property defines the maximum zooming level. Zooming will be stopped after reaching this value. This defaults to null.
+The [`maximumZoomLevel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/maximumZoomLevel.html) property defines the maximum zooming level. Zooming will be stopped after reaching this value. This defaults to `null`.
 
 {% highlight dart %} 
-    ZoomPanBehavior _zoomPanBehavior;
+
+    late ZoomPanBehavior _zoomPanBehavior;
     
     @override
     void initState(){
@@ -291,7 +295,7 @@ If zoom mode is set to [`zoomMode.x`](https://pub.dev/documentation/syncfusion_f
 
 {% highlight dart %} 
     
-    ZoomPanBehavior _zoomPanBehavior;
+    late ZoomPanBehavior _zoomPanBehavior;
     
     @override
     void initState(){

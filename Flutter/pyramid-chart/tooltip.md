@@ -9,35 +9,35 @@ documentation: ug
 
 # Tooltip in Pyramid chart
 
-Chart provides tooltip support for all the series. It is used to show information about the segment, when you tap on the segment. To enable the tooltip, you need to set [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/enableTooltip.html) property as *true*.
+Chart provides tooltip support for all the series. It is used to show information about the segment, when you tap on the segment. To enable the tooltip, you need to set [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/enableTooltip.html) property as `true`.
 
 {% highlight dart %} 
     
-    TooltipBehavior _tooltipBehavior;
+    late TooltipBehavior _tooltipBehavior;
 
     @override
     void initState(){
-        _tooltipBehavior = TooltipBehavior(            enable: true);
-    super.initState();
+        _tooltipBehavior = TooltipBehavior(enable: true);
+      super.initState();
     }
 
     @override
-      Widget build(BuildContext context) {
-        return Scaffold(
-          body: Center(
-            child: Container(
-              child: SfPyramidChart(
-                tooltipBehavior: _tooltipBehavior,
-                series: PyramidSeries<SalesData, String>(
-                    dataSource: chartData,
-                    xValueMapper: (SalesData sales, _) =>   sales.year,
-                    yValueMapper: (SalesData sales, _) => sales.sales
-                  )
-              )
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: Center(
+          child: Container(
+            child: SfPyramidChart(
+              tooltipBehavior: _tooltipBehavior,
+              series: PyramidSeries<SalesData, String>(
+                  dataSource: chartData,
+                  xValueMapper: (SalesData sales, _) =>   sales.year,
+                  yValueMapper: (SalesData sales, _) => sales.sales
+                )
             )
           )
-        );
-      }
+        )
+      );
+    }
 
 {% endhighlight %}
 
@@ -51,8 +51,8 @@ You can use the following properties to customize the tooltip appearance.
 * [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/borderWidth.html) - used to change the stroke width of the tooltip.
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/borderColor.html) - used to change the stroke color of the tooltip.
 * [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/opacity.html) - used to control the transparency of the tooltip.
-* [`duration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/duration.html) - specifies the duration for displaying the tooltip that defaults to 3000.
-* [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/animationDuration.html) - specifies the duration for animating the tooltip that default to 350.
+* [`duration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/duration.html) - specifies the duration for displaying the tooltip that defaults to `3000`.
+* [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/animationDuration.html) - specifies the duration for animating the tooltip that default to `350`.
 * [`elevation`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/elevation.html) - specifies the elevation of tooltip.
 * [`canShowMarker`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/canShowMarker.html) - toggles the visibility of the marker in the tooltip.
 * [`header`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/header.html) - specifies the header for tooltip. By default, the series name will be displayed in the header.
@@ -60,12 +60,13 @@ You can use the following properties to customize the tooltip appearance.
 * [`shadowColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/shadowColor.html) - specifies the color of the tooltip shadow.
 * [`shouldAlwaysShow`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/shouldAlwaysShow.html) - used to shows or hides the tooltip.
 * [`textAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/textAlignment.html) - alignment of the text in the tooltip.
-* [`decimalPlaces`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/decimalPlaces.html) - used to specifies the number decimals to be displayed in tooltip text.
+* [`decimalPlaces`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/decimalPlaces.html) - used to specify the number decimals to be displayed in tooltip text.
 * [`shared`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/shared.html) - used to share the tooltip with same index points.
 
 
 {% highlight dart %} 
-    TooltipBehavior _tooltipBehavior;
+    
+    late TooltipBehavior _tooltipBehavior;
 
     @override
     void initState(){
@@ -75,23 +76,23 @@ You can use the following properties to customize the tooltip appearance.
                 borderWidth: 2,
                 color: Colors.lightBlue
               );
-    super.initState();
+        super.initState();
     }
 
     @override
-      Widget build(BuildContext context) {
-        return Scaffold(
-          body: Center(
-            child: Container(
-              height: 350,
-              width: 350,
-              child: SfPyramidChart(
-                tooltipBehavior: _tooltipBehavior,
-              )
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: Center(
+          child: Container(
+            height: 350,
+            width: 350,
+            child: SfPyramidChart(
+              tooltipBehavior: _tooltipBehavior,
             )
           )
-        );
-      }
+        )
+      );
+    }
 
 {% endhighlight %}
 
@@ -108,7 +109,7 @@ By default, x and y value will be displayed in the tooltip, and it can be custom
 
 {% highlight dart %} 
     
-    TooltipBehavior _tooltipBehavior;
+    late TooltipBehavior _tooltipBehavior;
 
     @override
     void initState(){
@@ -117,7 +118,7 @@ By default, x and y value will be displayed in the tooltip, and it can be custom
                 // Formatting the tooltip text
                 format: 'point.y%'
               );
-    super.initState();
+        super.initState();
     }
 
     @override
@@ -143,7 +144,7 @@ The tooltip can be made to display in the fixed location or at the pointer locat
 
 {% highlight dart %} 
     
-    TooltipBehavior _tooltipBehavior;
+    late TooltipBehavior _tooltipBehavior;
 
     @override
     void initState(){
@@ -151,7 +152,7 @@ The tooltip can be made to display in the fixed location or at the pointer locat
                 enable: true, 
                 tooltipPosition: TooltipPosition.pointer
               );
-    super.initState();
+        super.initState();
     }
 
     @override
@@ -177,7 +178,7 @@ You can customize the appearance of the tooltip with your own widget by using th
 
 {% highlight dart %} 
     
-    TooltipBehavior _tooltipBehavior;
+    late TooltipBehavior _tooltipBehavior;
 
     @override
     void initState(){
@@ -193,7 +194,7 @@ You can customize the appearance of the tooltip with your own widget by using th
                   );
                 }
               );
-    super.initState();
+        super.initState();
     }
 
     @override
@@ -219,14 +220,14 @@ The [`activationMode`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
 The ActivationMode enum contains the following values:
 
-* [`longPress`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode-class.html) - Activates tooltip only when performing the long press action.
-* [`singleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode-class.html) - Activates tooltip only when performing single tap action.
-* [`doubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode-class.html) - Activates tooltip only when performing double tap action.
-* [`none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode-class.html) - Hides the visibility of tooltip when setting activation mode to none.
+* [`longPress`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode-class.html) - activates tooltip only when performing the long press action.
+* [`singleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode-class.html) - activates tooltip only when performing single tap action.
+* [`doubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode-class.html) - activates tooltip only when performing double tap action.
+* [`none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode-class.html) - hides the visibility of tooltip when setting activation mode to none.
 
 {% highlight dart %} 
     
-    TooltipBehavior _tooltipBehavior;
+    late TooltipBehavior _tooltipBehavior;
     
     @override
     void initState(){
@@ -235,7 +236,7 @@ The ActivationMode enum contains the following values:
                 // Tooltip will be displayed on long press
                 activationMode: ActivationMode.longPress
               );
-    super.initState();
+        super.initState();
     }
 
     @override

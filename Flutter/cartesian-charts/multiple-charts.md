@@ -54,7 +54,7 @@ Also refer [multiple axes](./axis-customization#multiple-axes) for customizing t
 
 ## Combination series
 
-[`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) allows you to render a combination of different types of series. In the following code snippet, the column and line type series have been combined.
+[`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) allows you to render a combination of different types of series. The column and line type series have been combined in the following code snippet.
 
 {% highlight dart %} 
 

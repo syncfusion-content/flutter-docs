@@ -20,6 +20,7 @@ Chart supports annotations which allows you to mark the specific area of interes
           child: Center(
             child: Container(
               child: SfCartesianChart(
+                primaryXAxis: CategoryAxis(),
                 annotations: <CartesianChartAnnotation>[
                   CartesianChartAnnotation(
                     widget: 
@@ -48,7 +49,7 @@ The [`x`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/
 
 **Positioning based on coordinateUnit as point**
 
-To position the annotation based on axis, set the [`x`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/x.html) and [`y`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/y.html)properties based on axis range values, and set the [`coordinateUnit`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html) value as [`point`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html).
+To position the annotation based on axis, set the [`x`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/x.html) and [`y`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/y.html) properties based on axis range values, and set the [`coordinateUnit`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html) value as [`point`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html).
 
 
 {% highlight dart %} 
@@ -81,7 +82,7 @@ To position the annotation based on axis, set the [`x`](https://pub.dev/document
 
 **Positioning based on coordinateUnit as pixels**
 
-To position the annotation based on the pixel values, set the [`CoordinateUnit`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html) value as [`logicalPixel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html), and the pixel values in [`x`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/x.html) and [`y`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/y.html) properties of annotation are shown in the following code snippet.
+To position the annotation based on the pixel values, set the [`CoordinateUnit`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html) value as [`logicalPixel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html), and the pixel values in [`x`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/x.html) and [`y`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/y.html) properties of annotation as shown in the following code snippet.
 
 {% highlight dart %} 
 
@@ -92,6 +93,7 @@ To position the annotation based on the pixel values, set the [`CoordinateUnit`]
           child: Center(
             child: Container(
               child: SfCartesianChart(
+                primaryXAxis: CategoryAxis(),
                 annotations: <CartesianChartAnnotation>[
                   CartesianChartAnnotation(
                     widget: Container(
@@ -116,7 +118,7 @@ To position the annotation based on the pixel values, set the [`CoordinateUnit`]
 
 **Positioning based on region**
 
-Annotations can be placed with respect to either [`AnnotationRegion.plotArea`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AnnotationRegion-class.html)  or [`AnnotationRegion.chart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AnnotationRegion-class.html) in [`region`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/region.html) property.
+Annotations can be placed with respect to either [`AnnotationRegion.plotArea`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AnnotationRegion-class.html)  or [`AnnotationRegion.chart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AnnotationRegion-class.html) using [`region`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/region.html) property.
 
 {% highlight dart %} 
 
@@ -196,6 +198,7 @@ You can add multiple annotations to the Chart by adding multiple widgets to the 
           child: Center(
             child: Container(
               child: SfCartesianChart(
+                primaryXAxis: CategoryAxis(),
                 annotations: <CartesianChartAnnotation>[
                // first annotation
                CartesianChartAnnotation(
@@ -242,6 +245,7 @@ When there are multiple axes in the chart, annotation can be added for a particu
           child: Center(
             child: Container(
               child: SfCartesianChart(
+                primaryXAxis: CategoryAxis(),
                 annotations: <CartesianChartAnnotation>[
                   CartesianChartAnnotation(
                     widget: Container(child: const Text('Low')),

@@ -13,13 +13,13 @@ Chart provides tooltip support for all the series. It is used to show informatio
 
 {% highlight dart %} 
     
-    TooltipBehavior _tooltipBehavior;
+    late TooltipBehavior _tooltipBehavior;
 
     @override
     void initState() {
-    _tooltipBehavior = TooltipBehavior(
-                enable: true);
-    super.initState();
+      _tooltipBehavior = TooltipBehavior(
+                  enable: true);
+      super.initState();
     }
     @override
     Widget build(BuildContext context) {
@@ -27,10 +27,11 @@ Chart provides tooltip support for all the series. It is used to show informatio
         body: Center(
           child: Container(
             child: SfCartesianChart(
+              primaryXAxis: CategoryAxis(),
             //Enables the tooltip for all the series
               tooltipBehavior: _tooltipBehavior,
               series: <CartesianSeries>[
-                LineSeries<ChartData, double>(
+                LineSeries<ChartData, String>(
                 //Enables the tooltip for individual series
                   enableTooltip: true, 
                 )
@@ -45,6 +46,10 @@ Chart provides tooltip support for all the series. It is used to show informatio
 
 ![Tooltip](images/tooltip/default_tooltip.jpg)
 
+#### See Also
+
+* [Activate chart tooltip after the chart got rendered](https://www.syncfusion.com/kb/12223/how-to-activate-chart-tooltip-initially-after-the-chart-widget-got-rendered).
+
 ## Customizing the appearance
 
 You can use the following properties to customize the tooltip appearance.
@@ -53,14 +58,14 @@ You can use the following properties to customize the tooltip appearance.
 * [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/borderWidth.html) - used to change the stroke width of the tooltip.
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/borderColor.html) - used to change the stroke color of the tooltip.
 * [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/opacity.html) - used to control the transparency of the tooltip.
-* [`duration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/duration.html) - specifies the duration for displaying the tooltip that defaults to 3000.
+* [`duration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/duration.html) - specifies the duration for displaying the tooltip that defaults to `3000`.
 * [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/animationDuration.html) - specifies the duration for animating the tooltip that default to 350.
 * [`elevation`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/elevation.html) - specifies the elevation of tooltip.
 * [`canShowMarker`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/canShowMarker.html) - toggles the visibility of the marker in the tooltip.
 * [`header`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/header.html) - specifies the header for tooltip. By default, the series name will be displayed in the header.
 * [`format`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/format.html) - formats the tooltip text. By default, the tooltip will be rendered with x and y-values. You can add prefix or suffix to x, y, and series name values in the tooltip by formatting them.
 * [`shadowColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/shadowColor.html) - specifies the color of the tooltip shadow.
-* [`shouldAlwaysShow`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/shouldAlwaysShow.html) - Shows or hides the tooltip. By default, the tooltip will be hidden on touch. To avoid this, set this property to true.
+* [`shouldAlwaysShow`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/shouldAlwaysShow.html) - shows or hides the tooltip. By default, the tooltip will be hidden on touch. To avoid this, set this property to true.
 * [`textAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/textAlignment.html) - alignment of the text in the tooltip.
 * [`header`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/header.html) - header of the tooltip. By default, the series name will be displayed in the header.
 * [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/textStyle.html) - customizes the tooltip text.
@@ -68,17 +73,17 @@ You can use the following properties to customize the tooltip appearance.
 
 {% highlight dart %} 
     
-    TooltipBehavior _tooltipBehavior;
+    late TooltipBehavior _tooltipBehavior;
 
     @override
     void initState() {
-    _tooltipBehavior = TooltipBehavior(
-                enable: true,
-                borderColor: Colors.red,
-                borderWidth: 5,
-                color: Colors.lightBlue
-              );
-    super.initState();
+      _tooltipBehavior = TooltipBehavior(
+                  enable: true,
+                  borderColor: Colors.red,
+                  borderWidth: 5,
+                  color: Colors.lightBlue
+                );
+      super.initState();
     }
     @override
     Widget build(BuildContext context) {
@@ -86,6 +91,7 @@ You can use the following properties to customize the tooltip appearance.
         body: Center(
           child: Container(
             child: SfCartesianChart(
+              primaryXAxis: CategoryAxis(),
               tooltipBehavior: _tooltipBehavior,
             )
           )
@@ -106,19 +112,18 @@ By default, x and y value will be displayed in the tooltip, and it can be custom
 * Bubble size - `point.size`
 * Name of the series - `series.name`
 
-{% highlight dart %} 
-    
+{% highlight dart %}     
 
-    TooltipBehavior _tooltipBehavior;
+    late TooltipBehavior _tooltipBehavior;
 
     @override
     void initState() {
-    _tooltipBehavior = TooltipBehavior(
-                enable: true, 
-                // Formatting the tooltip text
-                format: 'point.y%'
-              );
-    super.initState();
+      _tooltipBehavior = TooltipBehavior(
+                  enable: true, 
+                  // Formatting the tooltip text
+                  format: 'point.y%'
+                );
+      super.initState();
     }
     @override
     Widget build(BuildContext context) {
@@ -140,9 +145,8 @@ By default, x and y value will be displayed in the tooltip, and it can be custom
 The tooltip can be made to display in the fixed location or at the pointer location itself using the `tooltipPosition` property. This defaults to `auto`.
 
 {% highlight dart %} 
-    
 
-    TooltipBehavior _tooltipBehavior;
+    late TooltipBehavior _tooltipBehavior;
 
     @override
     void initState() {
@@ -158,6 +162,7 @@ The tooltip can be made to display in the fixed location or at the pointer locat
         body: Center(
           child: Container(
             child: SfCartesianChart(
+               primaryXAxis: CategoryAxis(),
               tooltipBehavior: _tooltipBehavior,
             )
           )
@@ -175,7 +180,7 @@ You can customize the appearance of the tooltip with your own widget by using th
 
 {% highlight dart %} 
     
-    TooltipBehavior _tooltipBehavior;
+    late TooltipBehavior _tooltipBehavior;
 
     @override
     void initState() {
@@ -200,6 +205,7 @@ You can customize the appearance of the tooltip with your own widget by using th
         body: Center(
           child: Container(
             child: SfCartesianChart(
+              primaryXAxis: CategoryAxis(),
               tooltipBehavior: _tooltipBehavior,
             )
           )
@@ -224,7 +230,7 @@ The ActivationMode enum contains the following values:
 
 {% highlight dart %} 
     
-    TooltipBehavior _tooltipBehavior;
+    late TooltipBehavior _tooltipBehavior;
 
     @override
     void initState() {

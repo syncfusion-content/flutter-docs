@@ -13,14 +13,14 @@ The selection feature in chart let you to select a segment in a series or the se
 
 {% highlight dart %} 
     
-    SelectionBehavior _selectionBehavior;
+    late SelectionBehavior _selectionBehavior;
 
     @override
     void initState(){
-      _selectionBehavior = SelectionBehavior(
+        _selectionBehavior = SelectionBehavior(
             // Enables the selection
             enable: true);
-    super.initState();
+        super.initState();
     }
 
     @override
@@ -63,15 +63,15 @@ You can customize the segments using the below properties.
 
 {% highlight dart %} 
     
-    SelectionBehavior _selectionBehavior;
+    late SelectionBehavior _selectionBehavior;
 
     @override
     void initState(){
-      _selectionBehavior = SelectionBehavior(
+        _selectionBehavior = SelectionBehavior(
              enable: true,
              selectedColor: Colors.red,
             unselectedColor: Colors.grey);
-    super.initState();
+        super.initState();
     }
 
     @override
@@ -120,3 +120,7 @@ Multiple selection can be enabled using the [`enableMultiSelection`](https://pub
 ![Multi selection](images/selection/multi_select.jpg)
 
 Also refer [selection event](./events#onselectionchanged) for customizing the selection further.
+
+#### See Also
+
+* [Creating a clickable pie chart using selection in circular charts](https://www.syncfusion.com/kb/12346/how-to-create-clickable-pie-chart-in-flutter-using-circular-charts-widget-sfcircularchart).

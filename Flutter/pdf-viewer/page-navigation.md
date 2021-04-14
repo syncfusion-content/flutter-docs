@@ -20,7 +20,7 @@ The [jumpToPage](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/late
 {% tabs %}
 {% highlight Dart %}
 
-PdfViewerController _pdfViewerController;
+late PdfViewerController _pdfViewerController;
 
 @override
 void initState() {
@@ -62,7 +62,7 @@ The [nextPage](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest
 {% tabs %}
 {% highlight Dart %}
 
-PdfViewerController _pdfViewerController;
+late PdfViewerController _pdfViewerController;
 
 @override
 void initState() {
@@ -113,7 +113,7 @@ The [firstPage](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/lates
 {% tabs %}
 {% highlight Dart %}
 
-PdfViewerController _pdfViewerController;
+late PdfViewerController _pdfViewerController;
 
 @override
 void initState() {
@@ -166,7 +166,7 @@ N> Both the `xOffset` and `yOffset` are optional parameters and if the offset va
 {% tabs %}
 {% highlight Dart %}
 
-PdfViewerController _pdfViewerController;
+late PdfViewerController _pdfViewerController;
 
 @override
 void initState() {

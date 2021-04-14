@@ -100,7 +100,7 @@ You can also map custom appointment data to our calendar.
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-      body: SfCalendar(
+    body: SfCalendar(
     view: CalendarView.month,
     dataSource: MeetingDataSource(_getDataSource()),
     monthViewSettings: MonthViewSettings(
@@ -109,7 +109,7 @@ Widget build(BuildContext context) {
 }
 
 List<Meeting> _getDataSource() {
-  meetings = <Meeting>[];
+  final List<Meeting> meetings = <Meeting>[];
   final DateTime today = DateTime.now();
   final DateTime startTime =
       DateTime(today.year, today.month, today.day, 9, 0, 0);
@@ -119,34 +119,35 @@ List<Meeting> _getDataSource() {
   return meetings;
 }
 
+
 class MeetingDataSource extends CalendarDataSource {
-  MeetingDataSource(List<Meeting> source){
+  MeetingDataSource(List<Meeting> source) {
     appointments = source;
   }
 
   @override
   DateTime getStartTime(int index) {
-    return appointments[index].from;
+    return appointments![index].from;
   }
 
   @override
   DateTime getEndTime(int index) {
-    return appointments[index].to;
+    return appointments![index].to;
   }
 
   @override
   String getSubject(int index) {
-    return appointments[index].eventName;
+    return appointments![index].eventName;
   }
 
   @override
   Color getColor(int index) {
-    return appointments[index].background;
+    return appointments![index].background;
   }
 
   @override
   bool isAllDay(int index) {
-    return appointments[index].isAllDay;
+    return appointments![index].isAllDay;
   }
 }
 
@@ -397,6 +398,28 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Cell end padding](images/getting-started/cell-end-padding.png)
+
+## Current time indicator
+
+You can display the current time indicator in all timeslot views of SfCalendar by using the [showCurrentTimeIndicator](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/showCurrentTimeIndicator.html) property and you can also customize the color of current time indicator by using the [todayHighlightColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/todayHighlightColor.html) property. 
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+    return Container(
+      child: SfCalendar(
+        view: CalendarView.day,
+        showCurrentTimeIndicator: true,
+              ),
+  );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+![showCurrentTimeIndicator](images/getting-started/current-time-indicator.png)
 
 
 You can get the complete getting started sample from [here](https://github.com/SyncfusionExamples/flutter-calendar).

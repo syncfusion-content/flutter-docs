@@ -15,7 +15,7 @@ Syncfusion Flutter Charts is a data visualization library written natively in Da
 
 ## Key Features
 
-* It Supports Pyramid chart series and it is more user friendly and has greater UI visualization.
+* It Supports [`Pyramid`](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/pyramid-chart) chart series and it is more user friendly and has greater UI visualization.
 * Plots data against multiple scales that help to visualize the mixed types of data in a single chart.
 * Provides various options to customize the chart features, labels, legends, series, etc. and visualize them accordingly.
 

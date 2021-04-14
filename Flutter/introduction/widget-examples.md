@@ -25,7 +25,7 @@ The section contains the GitHub link for each widget’s code examples. This is 
 </tr>
 <tr>
 
-<td rowspan="12">
+<td rowspan="13">
 
 <p>Data Visualization</p>
 </td>
@@ -82,10 +82,9 @@ The section contains the GitHub link for each widget’s code examples. This is 
 
 <tr>
 <td><p><a href="https://help.syncfusion.com/flutter/linear-gauge/overview">Linear gauge</a></p></td>
-<td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/linear_gauge">samples/gauge</a></p>
+<td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/linear_gauge">samples/linear_gauge</a></p>
 </td>
 </tr>
-
 
 <tr>
 <td><p><a href="https://help.syncfusion.com/flutter/maps/overview">Maps</a></p></td>
@@ -99,12 +98,12 @@ The section contains the GitHub link for each widget’s code examples. This is 
 
 <tr>
 <td rowspan="2"><p>Calendar</p></td>
-<td><p><a href="http://172.16.0.76/flutter/calendar/overview">Event calendar</a></p></td>
+<td><p><a href="https://help.syncfusion.com/flutter/calendar/overview">Event calendar</a></p></td>
 <td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/calendar">samples/calendar</a></p></td>
 </tr>
 
 <tr>
-<td><p><a href="http://172.16.0.76/flutter/daterangepicker/overview">Date range picker</a></p></td>
+<td><p><a href="https://help.syncfusion.com/flutter/daterangepicker/overview">Date range picker</a></p></td>
 <td><p><a href="https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/date_picker">samples/date_picker</a></p>
 </td>
 </tr>
