@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize labels in a linear gauge | Linear Gauge widget| Syncfusion
-description: This section explains about the available styles of labels on linear gauge in Flutter platform.
+description: This section explains about how to add labels styles and its element on linear gauge in Flutter platform.
 platform: flutter
 control: SfLinearGauge
 documentation: ug
