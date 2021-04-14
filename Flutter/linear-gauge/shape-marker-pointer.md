@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize shape pointers in a linear gauge | Syncfusion
-description: This section explains about how to add and customize the appearance of shape marker pointer and its element of linear gauge in Flutter platform.
+description: This section explains about how to add and customize the appearance of shape marker pointer and its properties of linear gauge in Flutter platform.
 platform: flutter
 control: SfLinearGauge
 documentation: ug

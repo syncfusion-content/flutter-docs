@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Animation in a linear gauge | Linear Gauge widget| Syncfusion
-description: This section explains about how to add animation and its element of linear gauge in Flutter platform.
+description: This section explains about how to animate the linear gauge elements in Flutter platform.
 platform: flutter
 control: SfLinearGauge
 documentation: ug

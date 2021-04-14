@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize ticks in a linear gauge | Linear Gauge widget| Syncfusion
-description: This section explains about how to add and customize the appearance of ticks and its element on linear gauge in Flutter platform.
+description: This section explains about how to add and customize the appearance of ticks on linear gauge in Flutter platform.
 platform: flutter
 control: SfLinearGauge
 documentation: ug
