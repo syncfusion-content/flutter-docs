@@ -52,6 +52,12 @@ Widget build(BuildContext context) {
 
 ![MinMaxDate Calendar](images/date-navigation/minmaxdate.png)
 
+![minDate and maxDate](images/date-navigation/min-maxDate.png) 
+
+>**NOTE**
+* The timeslot falls beyond the minimum or maximum date-time will be disabled, and the user interaction was restricted in the timeslot views.
+
+
 ## Programmatic date navigation
 You can programmatically navigate dates in calendar widget by using the [displayDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/displayDate.html) property of [CalendarController](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController-class.html).
 
@@ -252,6 +258,29 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Allowed views](images/date-navigation/allowed_views.png)
+
+## View navigation mode
+
+You can customize the swipe interaction of SfCalendar by using the [viewNavigationMode](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/viewNavigationMode.html). You can allow or restrict switching to the previous or next views using the swipe interaction of SfCalendar. By default, the view navigation mode is set to [viewNavigationMode.snap](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ViewNavigationMode-class.html).
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfCalendar(
+         view: CalendarView.day,
+        viewNavigationMode: ViewNavigationMode.snap,
+    ),);
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+>**NOTE**
+* Not applicable when the view is set to schedule. 
+* It will not impact scrolling timeslot views, [forward](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/forward.html), [backward](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/backward.html), and [showNavigationArrow](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/showNavigationArrow.html).
 
 ## See also
 
