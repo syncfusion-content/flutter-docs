@@ -9,49 +9,84 @@ documentation: ug
 
 # Load more in flutter calendar
 
-SfCalendar provides the support to display an interactive view when the calendar view changed, or the schedule view reaches its start/end offset. You can use the [loadMoreViewBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/loadMoreWidgetBuilder.html) builder to display the view while loading appointments in the calendar.
+SfCalendar provides the support to display an interactive view when the calendar view changed, or the schedule view reaches its start/end offset. You can use the [loadMoreWidgetBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/loadMoreWidgetBuilder.html) builder to display the view while loading appointments in the calendar.
 
 ## Building load more widget
 
 Build your own custom widget, that will be displayed as a loading indicator in calendar when the calendar view changes and in Calendar schedule view, the loading indicator will be displayed when it reaches the start or bottom position to load more appointments.
-You can build the custom widget for loading indicator by using the `loadMoreWidgetBuilder` property in calendar.
-
-You should use the `loadMoreWidgetBuilder` method to load more appointments and then notify the calendar about the changes. You can use the [loadMoreViewBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/loadMoreWidgetBuilder.html) builder to display the view while loading appointments in the calendar.
-
-## Load appointments
-
-Update the appointments on demand, when the loading indicator displaying in calendar by using the `loadMoreWidgetBuilder` method in the `CalendarDataSource`, which allows to add the appointments to the data source, update the data source and notify the listener to update the appointment on view.You should use the `loadMoreWidgetBuilder` method to load more appointments and then notify the calendar about the changes. The `loadMoreWidgetBuilder` can be called to load more appointments from this builder by using the [loadMoreAppointments](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/LoadMoreWidgetBuilder.html) function which is passed as a parameter to `loadMoreViewBuilder`.
 
 {% tabs %}
 {% highlight Dart %}
 
-@override
-Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: SfCalendar(
-            controller: _controller,
-            loadMoreWidgetBuilder:
-                (BuildContext context, CalendarLoadMoreCallback loadMoreAppointments) {
-              return FutureBuilder<String>(
-                initialData: 'loading',
-                future: loadMoreAppointments(),
-                builder: (context, snapShot) {
-                    return Container(
-                        height: _controller.view == CalendarView.schedule ? 50 : double.infinity,
-                        width: double.infinity,
-                        color: Colors.white38,
-                        alignment: Alignment.center,
-                        child: CircularProgressIndicator(
-                            valueColor:
-                                AlwaysStoppedAnimation(Colors.deepPurple)));
-                },
-              );
+return SfCalendar(
+        controller: calendarController,
+        dataSource: calendarDataSource,
+        allowedViews: _allowedViews,
+        loadMoreWidgetBuilder:
+            (BuildContext context, LoadMoreCallback loadMoreAppointments) {
+          return FutureBuilder<void>(
+            future: loadMoreAppointments(),
+            builder: (context, snapShot) {
+              return Container(
+                  height: _calendarController.view == CalendarView.schedule
+                      ? 50
+                      : double.infinity,
+                  width: double.infinity,
+                  alignment: Alignment.center,
+                  child: CircularProgressIndicator(
+                      valueColor: AlwaysStoppedAnimation(Colors.blue)));
             },
-            dataSource: _dataSource),
-      ),
-    );
+          );
+        },
+        monthViewSettings: MonthViewSettings(
+            appointmentDisplayMode: MonthAppointmentDisplayMode.appointment,
+            appointmentDisplayCount: 4),
+        timeSlotViewSettings: TimeSlotViewSettings(
+            minimumAppointmentDuration: const Duration(minutes: 60)));
+
+{% endhighlight %}
+{% endtabs %}
+
+## Load appointments
+
+Update the appointments on demand, when the loading indicator displaying in calendar by using the `handleLoadMore` method in the `CalendarDataSource`, which allows to add the appointments to the data source, update the data source and notify the listener to update the appointment on view.
+
+{% tabs %}
+{% highlight Dart %}
+
+class _MeetingDataSource extends CalendarDataSource {
+  _MeetingDataSource(List<Appointment> source) {
+    appointments = source;
   }
+
+  @override
+  Future<void> handleLoadMore(DateTime startDate, DateTime endDate) async {
+    await Future.delayed(Duration(seconds: 1));
+    final List<Appointment> meetings = <Appointment>[];
+    DateTime date = DateTime(startDate.year, startDate.month, startDate.day);
+    final DateTime appEndDate =
+        DateTime(endDate.year, endDate.month, endDate.day, 23, 59, 59);
+    while (date.isBefore(appEndDate)) {
+      final List<Appointment>? data = _dataCollection[date];
+      if (data == null) {
+        date = date.add(Duration(days: 1));
+        continue;
+      }
+
+      for (final Appointment meeting in data) {
+        if (appointments!.contains(meeting)) {
+          continue;
+        }
+
+        meetings.add(meeting);
+      }
+      date = date.add(Duration(days: 1));
+    }
+
+    appointments!.addAll(meetings);
+    notifyListeners(CalendarDataSourceAction.add, meetings);
+  }
+}
 
 {% endhighlight %}
 {% endtabs %}
