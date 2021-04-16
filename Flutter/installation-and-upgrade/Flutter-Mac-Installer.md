@@ -8,9 +8,9 @@ documentation: ug
 
 ---
 
-# Mac Installation
+# Syncfusion Flutter Mac Installation
 
-The steps below show how to instal the Flutter Mac installer. 
+The steps below show how to install the Flutter Mac installer. 
 
 1. Open the Syncfusion Flutter Mac Installer(.pkg) file from downloaded location by double-clicking it. The Syncfusion Essential Studio Flutter Mac Installer's welcome wizard will be displayed. Click the Continue button.
 
@@ -28,7 +28,7 @@ The steps below show how to instal the Flutter Mac installer. 
    
    N> The Unlock key is not required to install the Mac installer. The Syncfusion Mac installer can be used for development purposes without registering the Unlock key..
 
-4. The Distination select wizard will appear. You can choose which disc to instal the Syncfusion Essential Studio for Flutter installer on here.
+4. The Destination select wizard will appear. You can choose which disc to install the Syncfusion Essential Studio for Flutter installer on here.
 
    ![license wizard](Mac-Installer_images/Mac_Installer11.png)
 
