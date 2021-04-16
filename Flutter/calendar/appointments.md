@@ -284,49 +284,6 @@ _AppointmentDataSource _getCalendarDataSource() {
 >**NOTE**
 * Appointment which lasts through an entire day (exact 24 hours) will be considered as all day appointment without setting the IsAllDay property. For example, 06/12/2019 12:00AM to 06/12/2019 12:00AM.
 
-## Appointment helper
-
-### Get visible appointments
-
-You can get the list of visible appointments by using the [getVisibleAppointments](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getVisibleAppointments.html) method available in the Calendar data source.
-
-{% tabs %}
-{% highlight Dart %}
-
-@override
-initState() {
-  _calendarController = CalendarController();
-  _dataSource = _getCalendarDataSource();
-  super.initState();
-}
-
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-    home: Scaffold(
-      body: SfCalendar(
-        view: CalendarView.month,
-        controller: _calendarController,
-        dataSource: _dataSource,
-        onViewChanged: (ViewChangedDetails details) {
-          List<DateTime> dates = details.visibleDates;
-          String calendarTimeZone = '';
-          List<Object> appointment = _dataSource.getVisibleAppointments(
-              dates[0], calendarTimeZone,
-              dates[(details.visibleDates.length) - 1]);
-         },
-       ),
-     ),
-   );
- }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
->**NOTE**
-* The `startTime` is required for the starting date from which to obtain the appointments.
-
 ## Recurrence appointment
 
 Recurring appointment on a daily, weekly, monthly, or yearly interval. Recurring appointments can be created by setting the [recurrenceRule](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceRule.html) property in `Appointment`.
@@ -812,6 +769,49 @@ You can customize the displaying time format in the appointment widget in the mo
 {% endtabs %}
 
 ![Appointment time format](images/appointments/appointment_time_format.png)
+
+## Appointment helper
+
+### Get visible appointments
+
+You can get the list of visible appointments by using the [getVisibleAppointments](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getVisibleAppointments.html) method available in the Calendar data source.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+initState() {
+  _calendarController = CalendarController();
+  _dataSource = _getCalendarDataSource();
+  super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+    home: Scaffold(
+      body: SfCalendar(
+        view: CalendarView.month,
+        controller: _calendarController,
+        dataSource: _dataSource,
+        onViewChanged: (ViewChangedDetails details) {
+          List<DateTime> dates = details.visibleDates;
+          String calendarTimeZone = '';
+          List<Object> appointment = _dataSource.getVisibleAppointments(
+              dates[0], calendarTimeZone,
+              dates[(details.visibleDates.length) - 1]);
+         },
+       ),
+     ),
+   );
+ }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+>**NOTE**
+* The `startTime` is required for the starting date from which to obtain the appointments.
 
 ## See also
 
