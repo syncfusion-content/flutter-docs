@@ -35,6 +35,7 @@ Our 30-day trial can be downloaded in two ways.
    ![Trial and downloads of Syncfusion Essential Studio](download-images/trial-download.png)
 
 ### Start Trial Page
+
 1. You can also evaluate our 30-day free trial from the [Start Trial](https://www.syncfusion.com/account/manage-trials/start-trials) page.
    
    ![Trial and downloads of Syncfusion Essential Studio](download-images/start-trial-download.png)
