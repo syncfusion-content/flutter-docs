@@ -15,7 +15,7 @@ This article describes the most common installation errors, as well as the cause
 * [License has expired](https://help.syncfusion.com/flutter/installation-and-upgrade/installation-errors#license-has-expired)
 * [Unable to find a valid license](https://help.syncfusion.com/flutter/installation-and-upgrade/installation-errors#unable-to-find-a-valid-license)
 * [Unable to find a valid license or trial](https://help.syncfusion.com/flutter/installation-and-upgrade/installation-errors#unable-to-find-a-valid-license-or-trial)
-* [Unable to install because of another installation?](https://help.syncfusion.com/flutter/installation-and-upgrade/installation-errors#unable-to-install-because-of-another-installation)
+* [Unable to install because of another installation](https://help.syncfusion.com/flutter/installation-and-upgrade/installation-errors#unable-to-install-because-of-another-installation)
 * [Unable to install due to controlled folder access](http://help.syncfusion.com/flutter/installation-and-upgrade/installation-errors#unable-to-install-due-to-controlled-folder-access)
 
 ## Unlocking the license installer using the trial key
@@ -92,7 +92,7 @@ The following are possible causes of this error:
 
 Please check your subscription status [here](https://www.syncfusion.com/sales/products), or contact <salessupport@syncfusion.com>. You can also continue the 30-day trial period.
 
-## Unable to install because of another installation?
+## Unable to install because of another installation
 
 ### Problem
 
