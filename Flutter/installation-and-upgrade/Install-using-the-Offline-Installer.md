@@ -14,9 +14,9 @@ You can refer to the [**Download**](https://help.syncfusion.com/flutter/installa
 
 ## Installing with UI   
 
-The steps below show how to install the Essential Studio Flutter platform.
+The steps below show how to install the Essential Studio Flutter product.
 
-1.	Open the Syncfusion Flutter platform offline installer file from downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package
+1.	Open the Syncfusion Flutter offline installer file from downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package
 
     ![Installer extraction wizard](Platform_images/Step-by-Step-Installation_img1.png)
 
@@ -66,7 +66,7 @@ The steps below show how to install the Essential Studio Flutter platform.
 
 
 
-5.	If any previous versions of the current platform is installed, the Uninstall Previous Version(s) wizard will be opened. Select **Uninstall** checkbox to uninstall the previous versions and then click the Proceed button.
+5.	If any previous versions of the current product is installed, the Uninstall Previous Version(s) wizard will be opened. Select **Uninstall** checkbox to uninstall the previous versions and then click the Proceed button.
 
 
     ![Advanced options](Platform_images/Step-by-Step-Installation_img7.png)
@@ -89,7 +89,7 @@ The steps below show how to install the Essential Studio Flutter platform.
 	
 	![Installing wizard](Platform_images/Step-by-Step-Installation_img5.png)
 
-    N> The Completed screen is displayed once the Flutter platform is installed. If any version is selected to uninstall, The completed screen will display both install and uninstall status.
+    N> The Completed screen is displayed once the Flutter product is installed. If any version is selected to uninstall, The completed screen will display both install and uninstall status.
 	
 	![Completed wizard](Platform_images/Step-by-Step-Installation_img10.png)
 	
@@ -100,7 +100,7 @@ The steps below show how to install the Essential Studio Flutter platform.
 
 ## Installing in silent mode
 
-The Syncfusion Essential Studio Flutter Installer supports installation and uninstallation via the command line. The sections that follow demonstrate this ability.
+The Syncfusion Essential Studio Flutter Installer supports installation and uninstallation via the command line.
 
 ### Command Line Installation
 
@@ -114,7 +114,7 @@ To install through the Command Line in Silent mode, follow the steps below.
 6.	Run Command Prompt in administrator mode and enter the following arguments.
 
 
-    **Arguments:** “installer file path\SyncfusionEssentialStudio(platform)_(version).exe” /Install silent /PIDKEY:“(product unlock key)” [/log “{Log file path}”] [/InstallPath:{Location to install}] [/InstallSamples:{true/false}] [/CreateShortcut:{true/false}] [/CreateStartMenuShortcut:{true/false}]
+    **Arguments:** “installer file path\SyncfusionEssentialStudio(product)_(version).exe” /Install silent /PIDKEY:“(product unlock key)” [/log “{Log file path}”] [/InstallPath:{Location to install}] [/InstallSamples:{true/false}] [/CreateShortcut:{true/false}] [/CreateStartMenuShortcut:{true/false}]
 
 
     N> [..] – Arguments inside the square brackets are optional.
@@ -129,7 +129,7 @@ To install through the Command Line in Silent mode, follow the steps below.
 
 ### Command Line Uninstallation
 
-Syncfusion Essential Flutter can be uninstalled silently using the Command Line. The steps below demonstrate this.
+Syncfusion Essential Flutter can be uninstalled silently using the Command Line.
 
 1.	Run the Syncfusion Flutter installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
 2.	The file syncfusionessentialflutter_(version).exe file will be extracted into the Temp directory.

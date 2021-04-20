@@ -9,7 +9,7 @@ documentation: ug
 
 # Upgrading Syncfusion Flutter
 
-Syncfusion releases new volumes once every three months, with exciting new features. There may be one or two Service Pack releases for this volume releases. Service Pack releases are provided to address major bug fixes in the volume releases.
+Syncfusion releases new volumes once every three months, with exciting new features. There will be one Service Pack release for this volume releases. Service Pack releases are provided to address major bug fixes in the volume releases.
 
 You can upgrade to our latest version from any installed Syncfusion version.
 
@@ -31,4 +31,8 @@ It is not required to install the Volume release before installing the Service P
 ## Upgrade from trial version to license version
 
 Uninstall the trial version and install the fully licensed installer from the [License and Downloads](https://www.syncfusion.com/account/downloads) section of our website to upgrade from the trial version.
+
+N> * The License key registration is no longer required for Flutter from version 18.3.0.x. As a result, there is no need to generate or register Syncfusion Flutter license keys in your Flutter projects.
+* If you are using Syncfusion controls prior to version 18.3.0.x, please use this [link](https://help.syncfusion.com/common/essential-studio/licensing/license-key#flutter) to register your license key.
+
 

@@ -11,14 +11,14 @@ documentation: ug
 
 This article describes the most common installation errors, as well as the causes and solutions to those errors.
 
-* [Couldn't use the Trial key to unlock the Licensed installer?](https://help.syncfusion.com/flutter/installation-and-upgrade/installation-errors#couldnt-use-the-trial-key-to-unlock-the-licensed-installer)
-* [The license has expired! What should I do?](https://help.syncfusion.com/flutter/installation-and-upgrade/installation-errors#the-license-has-expired-what-should-i-do)
-* [Not a Valid license holder?](https://help.syncfusion.com/flutter/installation-and-upgrade/installation-errors#not-a-valid-license-holder)
-* [Can't find a license or a trial?](https://help.syncfusion.com/flutter/installation-and-upgrade/installation-errors#cant-find-a-license-or-a-trial)
+* [Unlocking the license installer using the trial key](https://help.syncfusion.com/flutter/installation-and-upgrade/installation-errors#unlocking-the-license-installer-using-the-trial-key)
+* [License has expired](https://help.syncfusion.com/flutter/installation-and-upgrade/installation-errors#license-has-expired)
+* [Unable to find a valid license](https://help.syncfusion.com/flutter/installation-and-upgrade/installation-errors#unable-to-find-a-valid-license)
+* [Unable to find a valid license or trial](https://help.syncfusion.com/flutter/installation-and-upgrade/installation-errors#unable-to-find-a-valid-license-or-trial)
 * [Unable to install because of another installation?](https://help.syncfusion.com/flutter/installation-and-upgrade/installation-errors#unable-to-install-because-of-another-installation)
 * [Unable to install due to controlled folder access](http://help.syncfusion.com/flutter/installation-and-upgrade/installation-errors#unable-to-install-due-to-controlled-folder-access)
 
-## Couldn't use the Trial key to unlock the Licensed installer?
+## Unlocking the license installer using the trial key
 
 ### Problem
 
@@ -35,7 +35,7 @@ You are attempting to use a Trial unlock key to unlock the licensed installer.
 Only a licensed unlock key can unlock a licensed installer. So, to unlock the Licensed installer, use the Licensed unlock key. To generate the licensed unlock key, refer to [this](http://syncfusion.com/kb/2326) article.
 
 
-## The license has expired! What should I do?
+## License has expired
 
 ### Problem
 
@@ -54,7 +54,7 @@ This error message will appear if your license has expired.
 You can renew your subscription [here](https://www.syncfusion.com/sales/products), or you can contact our sales team at <salessupport@syncfusion.com>. You can also extend the 30-day trial period after your license has expired.
 
 
-## Not a Valid license holder?
+## Unable to find a valid license
 
 ### Problem
 
@@ -73,11 +73,11 @@ The following are possible causes of this error:
 
 You can renew your subscription [here](https://www.syncfusion.com/sales/products), or you can contact our sales team at <salessupport@syncfusion.com>.
 
-## Can't find a license or a trial?
+## Unable to find a valid license or trial
 
 ### Problem
 
-**Error Message:** Sorry, we are unable to find a license or trial for Essential Studio for Flutter under your account.
+**Error Message:** Sorry, we are unable to find a license or trial for Essential Studio for WinUI under your account.
 
 ![Warning Message](Errors/Installation_Errors_img6.PNG)
 
