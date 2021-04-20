@@ -12,8 +12,8 @@ documentation: ug
 
 The Syncfusion Flutter installer can be downloaded from the [Syncfusion](https://www.syncfusion.com/flutter-widgets) website. You can either download the licensed installer or try our trial installer depending on your license. 
 
-   -	Trial Installer for evaluation customers,
-   -	Licensed Installer for paid customers.
+   -	Trial Installer
+   -	Licensed Installer
 
 
 ## Download the Trial Version
