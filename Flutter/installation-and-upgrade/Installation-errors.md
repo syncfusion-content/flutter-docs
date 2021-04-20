@@ -60,7 +60,7 @@ You can renew your subscription [here](https://www.syncfusion.com/sales/products
 
 **Error Message:** Sorry, we are unable to find a valid license for Essential Studio for Flutter under your account.
 
-![Alert Message](Errors/Installation_Errors_img3.PNG)
+![Alert Message](Errors/Installation_Errors_img3.png)
 
 ### Reason
 
@@ -92,7 +92,7 @@ The following are possible causes of this error:
 
 Please check your subscription status [here](https://www.syncfusion.com/sales/products), or contact <salessupport@syncfusion.com>. You can also continue the 30-day trial period.
 
-## Unable to install because of another installation
+## Unable to install because of another installationmjnhhhhhhhhh
 
 ### Problem
 
