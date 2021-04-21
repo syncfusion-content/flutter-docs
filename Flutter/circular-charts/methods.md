@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Syncfusion Flutter Circular Chart Public Methods
-description: Learn what are all the public methods available in Syncfusion Flutter Circular Charts along with their properties.
+title: Methods in Flutter Circular Charts control | Syncfusion 
+description: Learn here all about available Methods of Syncfusion Flutter Circular Charts (SfCircularChart) control and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Methods in Circular charts
+# Methods in in Flutter Circular Charts (SfCircularChart)
 
 ## Methods in tooltipBehavior
 

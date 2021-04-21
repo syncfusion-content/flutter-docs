@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Syncfusion Flutter Circular Charts Data Point Selection
-description: Learn how to select and customize the data point in SfCircular Charts and enable the multi selection in SfCircular Charts.
+title: Selection in Flutter Circular Charts control | Syncfusion 
+description: Learn here all about Selection feature of Syncfusion Flutter Circular Charts (SfCircularChart) control and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Selection in Circular charts
+# Selection in Flutter Circular Charts (SfCircularChart)
 
 The selection feature in chart let you to select a segment in a series or the series itself. This features allows you to select either individual or cluster of segments in the chart series.
 
