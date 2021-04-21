@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Syncfusion Flutter Chart Public Methods
-description: Learn what are all the public methods available in Syncfusion Flutter Charts along with their properties.
+title: Methods in Flutter Cartesian Charts widget | Syncfusion 
+description: Learn here all about available Methods of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Methods in Cartesian charts
+# Methods in Flutter Cartesian Charts (SfCartesianChart)
 
 ## Methods in tooltipBehavior
 

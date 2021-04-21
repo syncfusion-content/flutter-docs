@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Axis customization in Syncfusion Flutter Charts
-description: Learn how to customize the visibility, title, labels, grid lines and tick lines of the SFcartesian chart axis.
+title: Axis customization in Flutter Cartesian Charts widget | Syncfusion 
+description: Learn here all about Axis customization feature of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Axis customization in Cartesian charts
+# Axis customization in Flutter Cartesian Charts (SfCartesianChart)
 
 ## Common axis features
 

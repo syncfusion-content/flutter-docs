@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Syncfusion Flutter Charts Data Point Selection
-description: Learn how to select the data point in  SfCartesian  Charts and the selection modes available for SfCartesian Charts.
+title: Selection in Flutter Cartesian Charts widget | Syncfusion 
+description: Learn here all about Selection feature of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Selection in Cartesian charts
+# Selection in Flutter Cartesian Charts (SfCartesianChart)
 
 The selection feature in chart let you to select a segment in a series or the series itself. This features allows you to select either individual or cluster of segments in the chart series.
 

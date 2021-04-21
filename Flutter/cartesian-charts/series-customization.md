@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Cartesian series customization in Syncfusion Flutter charts
-description: Learn how to customize the series features like animation, transpose, color palette, gradient, etc., in cartesian chart
+title: Series customization in Flutter Cartesian Charts widget | Syncfusion 
+description: Learn here all about Series customization of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Series customization in Cartesian charts
+# Series customization in Flutter Cartesian Charts (SfCartesianChart)
 
 ## Animation
 

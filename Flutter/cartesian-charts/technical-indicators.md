@@ -1,13 +1,13 @@
 ---
 layout: post
-title: TechnicalIndicators in Syncfusion Flutter Charts
-description: Learn how to add and customize the TechnicalIndicators available in the Syncfusion Flutter Chart widget.
+title: Technical indicators in Flutter Cartesian Charts widget | Syncfusion 
+description: Learn here all about Technical indicators feature of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Technical indicators in Cartesian charts
+# Technical indicators in Flutter Cartesian Charts (SfCartesianChart)
 
 
 The different types of technical indicators available in chart are follows:
