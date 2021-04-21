@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Syncfusion Flutter Charts Data Point Selection
-description: Learn how to select and customize the data point in SfFunnel Charts and enable the multi selection in SfFunnel Charts.
+title: Selection in Flutter Funnel Charts widget | Syncfusion 
+description: Learn here all about Selection feature of Syncfusion Flutter Funnel Charts (SfFunnelChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Selection in Funnel chart
+# Selection in Flutter Funnel Charts (SfFunnelChart)
 
 The selection feature in chart let you to select a segment in a series or the series itself. This features allows you to select either individual or cluster of segments in the chart series.
 
