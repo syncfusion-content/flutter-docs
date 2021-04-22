@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tooltip in Flutter Pyramid Charts widget | Syncfusion 
-description: Learn here all about Tooltip feature of Syncfusion Flutter Pyramid Charts (SfPyramidChart) widget and more.
+title: Tooltip in Flutter Pyramid Chart widget | Syncfusion 
+description: Learn here all about Tooltip feature of Syncfusion Flutter Pyramid Chart (SfPyramidChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Tooltip in Flutter Pyramid Charts (SfPyramidChart)
+# Tooltip in Flutter Pyramid Chart (SfPyramidChart)
 
 Chart provides tooltip support for all the series. It is used to show information about the segment, when you tap on the segment. To enable the tooltip, you need to set [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/enableTooltip.html) property as `true`.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: About Flutter Funnel Charts widget | Syncfusion
-description: Learn here all about introduction of Syncfusion Flutter Funnel Charts (SfFunnelChart) widget, its features, and more
+title: About Flutter Funnel Chart widget | Syncfusion
+description: Learn here all about introduction of Syncfusion Flutter Funnel Chart (SfFunnelChart) widget, its features, and more
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Flutter Funnel Charts (SfFunnelChart) Overview
+# Flutter Funnel Chart (SfFunnelChart) Overview
 
 Syncfusion Flutter Charts is a data visualization library written natively in Dart for creating beautiful and high-performance charts, which are used to craft high-quality mobile app user interfaces using Flutter.
 

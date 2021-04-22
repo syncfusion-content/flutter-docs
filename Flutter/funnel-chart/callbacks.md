@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Callbacks in Flutter Funnel Charts widget | Syncfusion 
-description: Learn here all about Data Binding feature of Syncfusion Flutter Funnel Charts (SfFunnelChart) widget and more.
+title: Callbacks in Flutter Funnel Chart widget | Syncfusion 
+description: Learn here all about Data Binding feature of Syncfusion Flutter Funnel Chart (SfFunnelChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Callbacks in Flutter Funnel Charts (SfCircularChart)
+# Callbacks in Flutter Funnel Chart (SfFunnelChart)
 
 The below Callbacks are for Funnel chart.
 

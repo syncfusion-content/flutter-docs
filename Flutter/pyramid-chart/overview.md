@@ -1,13 +1,13 @@
 ---
 layout: post
-title: About Flutter Pyramid Charts widget | Syncfusion
-description: Learn here all about introduction of Syncfusion Flutter Pyramid Charts (SfPyramidChart) widget, its features, and more.
+title: About Flutter Pyramid Chart widget | Syncfusion
+description: Learn here all about introduction of Syncfusion Flutter Pyramid Chart (SfPyramidChart) widget, its features, and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Flutter Pyramid Charts (SfPyramidChart) Overview
+# Flutter Pyramid Chart (SfPyramidChart) Overview
 
 Syncfusion Flutter Charts is a data visualization library written natively in Dart for creating beautiful and high-performance charts, which are used to craft high-quality mobile app user interfaces using Flutter.
 

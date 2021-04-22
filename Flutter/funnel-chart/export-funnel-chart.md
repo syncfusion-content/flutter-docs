@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Exporting in Flutter Funnel Charts widget | Syncfusion 
-description: Learn here all about Exporting feature of Syncfusion Flutter Funnel Charts (SfFunnelChart) widget and more.
+title: Exporting in Flutter Funnel Chart widget | Syncfusion 
+description: Learn here all about Exporting feature of Syncfusion Flutter Funnel Chart (SfFunnelChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Exporting in Flutter Funnel Charts (SfFunnelChart)
+# Exporting in Flutter Funnel Chart (SfFunnelChart)
 
 [`SfFunnelChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart-class.html) provides support to export the funnel chart as a PNG image or as PDF document.
 

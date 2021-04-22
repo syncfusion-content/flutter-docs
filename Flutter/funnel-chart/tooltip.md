@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tooltip in Flutter Funnel Charts widget | Syncfusion 
-description: Learn here all about Tooltip of Syncfusion Flutter Funnel Charts (SfFunnelChart) widget and more.
+title: Tooltip in Flutter Funnel Chart widget | Syncfusion 
+description: Learn here all about Tooltip of Syncfusion Flutter Funnel Chart (SfFunnelChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Tooltip in Flutter Funnel Charts (SfFunnelChart)
+# Tooltip in Flutter Funnel Chart (SfFunnelChart)
 
 Chart provides tooltip support for all the series. It is used to show information about the segment, when you tap on the segment. To enable the tooltip, you need to set [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/enableTooltip.html) property as `true`.
 

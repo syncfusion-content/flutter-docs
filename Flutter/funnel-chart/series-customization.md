@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Series customization in Flutter Funnel Charts widget | Syncfusion 
-description: Learn here all about Series customization feature of Syncfusion Flutter Funnel Charts (SfFunnelChart) widget and more.
+title: Series customization in Flutter Funnel Chart widget | Syncfusion 
+description: Learn here all about Series customization feature of Syncfusion Flutter Funnel Chart (SfFunnelChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Series customization in Flutter Funnel Charts (SfFunnelChart)
+# Series customization in Flutter Funnel Chart (SfFunnelChart)
 
 ## Animation
 

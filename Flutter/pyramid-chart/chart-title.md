@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Chart title in Flutter Pyramid Charts widget | Syncfusion 
-description: Learn here all about Chart title feature of Syncfusion Flutter Pyramid Charts (SfPyramidChart) widget and more.
+title: Chart title in Flutter Pyramid Chart widget | Syncfusion 
+description: Learn here all about Chart title feature of Syncfusion Flutter Pyramid Chart (SfPyramidChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Chart title in Flutter Pyramid Charts (SfPyramidChart)
+# Chart title in Flutter Pyramid Chart (SfPyramidChart)
 
 You can define and customize the Chart title using [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/title.html) property of [`SfPyramidChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart-class.html). The [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTitle/text.html) property of [`ChartTitle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTitle-class.html) is used to set the text for the title. 
 

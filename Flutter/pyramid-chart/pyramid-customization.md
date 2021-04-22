@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customization in Flutter Pyramid Charts widget | Syncfusion 
-description: Learn here all about Customization of Syncfusion Flutter Pyramid Charts (SfPyramidChart) widget and more.
+title: Customization in Flutter Pyramid Chart widget | Syncfusion 
+description: Learn here all about Customization of Syncfusion Flutter Pyramid Chart (SfPyramidChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Customization in Flutter Pyramid Charts (SfPyramidChart)
+# Customization in Flutter Pyramid Chart (SfPyramidChart)
 
 To render a pyramid chart, create an instance of [`PyramidSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/series.html) property of [`SfPyramidChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart-class.html). The following properties can be used to customize the appearance of a pyramid segment.
 

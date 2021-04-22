@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting started with Flutter Pyramid Charts widget | Syncfusion
-description: Learn here about getting started with Syncfusion Flutter Pyramid Charts (SfPyramidChart) widget, its elements, and more.
+title: Getting started with Flutter Pyramid Chart widget | Syncfusion
+description: Learn here about getting started with Syncfusion Flutter Pyramid Chart (SfPyramidChart) widget, its elements, and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Getting started with Flutter Pyramid Charts (SfPyramidChart)
+# Getting started with Flutter Pyramid Chart (SfPyramidChart)
 
 This section explains the steps required to populate the chart with data, title, data labels, legend, and tooltips. This section covers only the minimal features needed to know to get started with the chart.
 
@@ -56,7 +56,7 @@ Import the following package in your Dart code.
 
 ## Initialize chart
 
-Once the package has been imported, initialize the chart as a child of any widget. SfPyramidChart can be used to render pyramid charts. Here, as we are rendering pyramid chart, initialize SfPyramidChart widget as a child of Container widget.
+Once the package has been imported, initialize the chart as a child of any widget. SfPyramidChart can be used to render Pyramid Chart. Here, as we are rendering pyramid chart, initialize SfPyramidChart widget as a child of Container widget.
 
 {% highlight dart %} 
 

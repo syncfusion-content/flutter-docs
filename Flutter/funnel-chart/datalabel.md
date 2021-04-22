@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data label in Flutter Funnel Charts widget | Syncfusion 
-description: Learn here all about Data label feature of Syncfusion Flutter Funnel Charts (SfFunnelChart) widget and more.
+title: Data label in Flutter Funnel Chart widget | Syncfusion 
+description: Learn here all about Data label feature of Syncfusion Flutter Funnel Chart (SfFunnelChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Data label in Flutter Funnel Charts (SfFunnelChart)
+# Data label in Flutter Funnel Chart (SfFunnelChart)
 
 Data label can be added to a chart series by enabling the [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/isVisible.html) option in the [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/dataLabelSettings.html). You can use the following properties to customize the appearance.
 
@@ -127,7 +127,7 @@ The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
 ### Hide data label for 0 value
 
-Data label and its connector line in the Funnel charts for the point value 0 can be hidden using the [`showZeroValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/showZeroValue.html) property. This defaults to `true`.
+Data label and its connector line in the Funnel Chart for the point value 0 can be hidden using the [`showZeroValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/showZeroValue.html) property. This defaults to `true`.
 
 {% highlight dart %} 
 

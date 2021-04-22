@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Exporting in Flutter Pyramid Charts widget | Syncfusion 
-description: Learn here all about Exporting feature of Syncfusion Flutter Pyramid Charts (SfPyramidChart) widget and more.
+title: Exporting in Flutter Pyramid Chart widget | Syncfusion 
+description: Learn here all about Exporting feature of Syncfusion Flutter Pyramid Chart (SfPyramidChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Exporting in Flutter Pyramid Charts (SfPyramidChart)
+# Exporting in Flutter Pyramid Chart (SfPyramidChart)
 
 [`SfPyramidChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart-class.html) provides support to export the pyramid chart as a PNG image or as PDF document.
 
