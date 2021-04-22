@@ -56,7 +56,7 @@ Import the following package in your Dart code.
 
 ## Initialize chart
 
-Once the package has been imported, initialize the chart as a child of any widget. SfFunnelChart can be used to render Funnel Chart. Here, as we are rendering Funnel chart, initialize SfFunnelChart widget as a child of Container widget.
+Once the package has been imported, initialize the chart as a child of any widget. SfFunnelChart can be used to render Funnel charts. Here, as we are rendering Funnel chart, initialize SfFunnelChart widget as a child of Container widget.
 
 {% highlight dart %} 
 

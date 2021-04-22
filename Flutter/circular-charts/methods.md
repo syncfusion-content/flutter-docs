@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Methods in in Flutter Circular Charts (SfCircularChart)
+# Methods in Flutter Circular Charts (SfCircularChart)
 
 ## Methods in tooltipBehavior
 

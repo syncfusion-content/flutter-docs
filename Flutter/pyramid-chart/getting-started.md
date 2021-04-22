@@ -56,7 +56,7 @@ Import the following package in your Dart code.
 
 ## Initialize chart
 
-Once the package has been imported, initialize the chart as a child of any widget. SfPyramidChart can be used to render Pyramid Chart. Here, as we are rendering pyramid chart, initialize SfPyramidChart widget as a child of Container widget.
+Once the package has been imported, initialize the chart as a child of any widget. SfPyramidChart can be used to render pyramid charts. Here, as we are rendering pyramid chart, initialize SfPyramidChart widget as a child of Container widget.
 
 {% highlight dart %} 
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About Flutter Cartesian Charts widget | Syncfusion
-description: Learn here all about introduction of Syncfusion Flutter Cartesian charts (SfCartesianChart) widget, its features, and more.
+description: Learn here all about introduction of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget, its features, and more.
 platform: flutter
 control: Chart
 documentation: ug
