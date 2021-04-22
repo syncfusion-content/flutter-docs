@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview of Syncfusion Flutter Charts
-description: Learn the key features available in Syncfusion Flutter Charts and overview about SYncfusion Flutter Charts.
+title: About Flutter Cartesian Charts widget | Syncfusion
+description: Learn here all about introduction of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget, its features, and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Overview Of Syncfusion Flutter Charts
+# Flutter Cartesian Charts (SfCartesianChart) Overview
 
 Syncfusion Flutter Charts is a data visualization library written natively in Dart for creating beautiful and high-performance charts, which are used to craft high-quality mobile app user interfaces using Flutter.
 

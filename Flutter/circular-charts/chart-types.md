@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Chart types | Circular Charts | Flutter | Syncfusion
-description: You can learn here about chart types support in Syncfusion Flutter Circular Charts control and more details.
+title: Chart types in Flutter Circular Charts widget | Syncfusion 
+description: Learn here all about available Chart types of Syncfusion Flutter Circular Charts (SfCircularChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Chart types in Circular charts
+# Chart types in Flutter Circular Charts (SfCircularChart)
 
 ## Pie chart
 

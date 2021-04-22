@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting started for Syncfusion Funnel Charts (SfFunnelChart) 
-description: Learn how to create the Syncfusion Flutter Funnel charts, add series, legend ,markers and other features in Chart.
+title: Getting started with Flutter Funnel Chart widget | Syncfusion
+description: Learn here about getting started with Syncfusion Flutter Funnel Chart (SfFunnelChart) widget, its elements, and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Getting Started with Flutter Funnel Chart(SfFunnelChart)
+# Getting started with Flutter Funnel Chart (SfFunnelChart)
 
 This section explains the steps required to populate the chart with data, title, data labels, legend, and tooltips. This section covers only the minimal features needed to know to get started with the chart.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Funnel series customization in Syncfusion Flutter charts
-description: Learn how to customize the series features like animation, empty points mode, gradient, etc., in SfFunnel chart
+title: Series customization in Flutter Funnel Chart widget | Syncfusion 
+description: Learn here all about Series customization feature of Syncfusion Flutter Funnel Chart (SfFunnelChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# series customization in Funnel chart
+# Series customization in Flutter Funnel Chart (SfFunnelChart)
 
 ## Animation
 

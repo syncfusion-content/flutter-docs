@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Syncfusion Flutter Charts Trendlines
-description: Learn how to enable and customize the trendlines and its features available in the Syncfusion Flutter Charts widget.
+title: Trendlines in Flutter Cartesian Charts widget | Syncfusion 
+description: Learn here all about Trendlines feature of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Trendlines in Cartesian charts
+# Trendlines in Flutter Cartesian Charts (SfCartesianChart)
 
 Trendlines are used to show the direction and speed of price.
 

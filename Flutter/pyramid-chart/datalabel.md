@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data labels in Syncfusion Pyramid Charts
-description: Learn how to add the Data point labels to the series available in the Syncfusion Flutter Pyramid Chart widget.
+title: Data label in Flutter Pyramid Chart widget | Syncfusion 
+description: Learn here all about Data label feature of Syncfusion Flutter Pyramid Chart (SfPyramidChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Data label in Pyramid chart
+# Data label in Flutter Pyramid Chart (SfPyramidChart)
 
 Data label can be added to a chart series by enabling the [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/isVisible.html) option in the [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidSeries/dataLabelSettings.html). You can use the following properties to customize the appearance.
 

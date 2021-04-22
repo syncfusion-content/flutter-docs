@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customizing the appearance of Syncfusion Flutter Charts
-description: Learn how to customize the appearance of SfFunnel Charts and the customizing properties available in SfFunnel charts.
+title: Appearance customization in Flutter Funnel Chart widget | Syncfusion 
+description: Learn here all about Appearance customization of Syncfusion Flutter Funnel Chart (SfFunnelChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Appearance of Funnel chart
+# Appearance customization in Flutter Funnel Chart (SfFunnelChart)
 
 ## Chart sizing
 
