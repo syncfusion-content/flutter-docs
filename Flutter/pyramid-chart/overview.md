@@ -9,16 +9,16 @@ documentation: ug
 
 # Flutter Pyramid Chart (SfPyramidChart) Overview
 
-Syncfusion Flutter Pyramid Chart (SfPyramidChart) is written natively in Dart for creating beautiful and high-performance charts, which are used to craft high-quality mobile applications using Flutter.
+Syncfusion Flutter Pyramid Chart (SfPyramidChart) widget is written natively in Dart for creating beautiful and high-performance Pyramid chart, which are used to craft high-quality applications using Flutter.
 
   ![Overview Flutter chart](images/overview/overview_pyramid.png)
 
 ## Key Features
 
-* It Supports [`Pyramid`](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/pyramid-chart) chart series and it is more user friendly and has greater UI visualization.
+* It Supports [`Pyramid`](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/pyramid-chart) chart series and it is more user friendly and has greater UI visualization. 
 
-* User interaction - The end-user experience is greatly enhanced by including the user interaction features such as callbacks, selection, tooltip, and explode in chart. 
+* The end-user experience is greatly enhanced by including the user interaction features such as callbacks, selection, tooltip, and explode in chart. 
 
-* Legends - Display additional information about the chart series. The chart legend can also be used to collapse the series. The legends can be wrapped or scrolled if an item exceeds the available bounds. 
+* Legends displays additional information about the chart series. The chart legend can also be used to collapse the series. The legends can be wrapped or scrolled if an item exceeds the available bounds. 
 
 * Provides various options to customize the chart features, labels, legends, series, etc. and visualize them accordingly.

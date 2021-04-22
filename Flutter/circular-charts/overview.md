@@ -9,22 +9,21 @@ documentation: ug
 
 # Flutter Circular Charts (SfCircularChart) Overview
 
-Syncfusion Flutter Circular Charts (SfCircularChart) is written natively in Dart for creating beautiful and high-performance charts, which are used to craft high-quality mobile applications using Flutter.
+Syncfusion Flutter Circular Charts (SfCircularChart) widget is written natively in Dart for creating beautiful and high-performance Circular charts, which are used to craft high-quality applications using Flutter.
 
 ![Overview Flutter chart](images/overview/overview.png)
 
 ## Key Features
 
-* Supports 3 different series types such as [`pie`](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/pie-chart), [`doughnut`](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/doughnut-chart), and [`radial bar`](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/radial-bar-chart) series. Each type represents data in a unique style. It is more user friendly and has greater UI visualization.
+* **Chart types** - Supports 3 different series types such as [`pie`](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/pie-chart), [`doughnut`](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/doughnut-chart), and [`radial bar`](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/radial-bar-chart) series. Each type represents data in a unique style. It is more user friendly and has greater UI visualization.
 
   ![Chart Types](images/overview/chart_types_circular.png)
 
-* User interaction - The end-user experience is greatly enhanced by including the user interaction features such as callbacks, selection, tooltip, and explode in chart. 
+* **User interaction** - The end-user experience is greatly enhanced by including the user interaction features such as callbacks, selection, tooltip, and explode in chart. 
 
-* Legends - Display additional information about the chart series. The chart legend can also be used to collapse the series. The legends can be wrapped or scrolled if an item exceeds the available bounds. 
+* **Legends** - Display additional information about the chart series. The chart legend can also be used to collapse the series. The legends can be wrapped or scrolled if an item exceeds the available bounds. 
 
   ![Legend](images/overview/chart_legend_circular.png)
 
-* Dynamic update - Updates the chart dynamically or lazily with live data that changes over seconds or minutes like stock prices, temperature, speed, etc.
+* **Dynamic update** - Updates the chart dynamically or lazily with live data that changes over seconds or minutes like stock prices, temperature, speed, etc.
 
-* Provides various options to customize the chart features, labels, legends, series, etc. and visualize them accordingly.
