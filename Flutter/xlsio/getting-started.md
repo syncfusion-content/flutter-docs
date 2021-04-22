@@ -84,6 +84,7 @@ sheet.getRangeByName('A1').setText('Hello World!');
 final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
 
+// Save the Excel file in the local machine.
 File('Output.xlsx').writeAsBytes(bytes);
 
 }
@@ -183,8 +184,6 @@ sheet.getRangeByName('A1').setText('Hello World!');
 // Save and dispose the document.
 final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
-
-File('Output.xlsx').writeAsBytes(bytes);
 
 js.context['excelData'] = base64.encode(bytes);
 js.context['filename'] = 'Output.xlsx'; 
