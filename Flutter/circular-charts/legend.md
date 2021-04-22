@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Legend in Flutter Circular Charts control | Syncfusion 
-description: Learn here all about Legend feature of Syncfusion Flutter Circular Charts (SfCircularChart) control and more.
+title: Legend in Flutter Circular Charts widget | Syncfusion 
+description: Learn here all about Legend feature of Syncfusion Flutter Circular Charts (SfCircularChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug

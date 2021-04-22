@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Chart title in Flutter Circular Charts control | Syncfusion 
-description: Learn here all about Chart title feature of Syncfusion Flutter Circular Charts (SfCircularChart) control and more.
+title: Chart title in Flutter Circular Charts widget | Syncfusion 
+description: Learn here all about Chart title feature of Syncfusion Flutter Circular Charts (SfCircularChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
