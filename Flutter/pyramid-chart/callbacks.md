@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Syncfusion Flutter Chart Callbacks
-description: Learn what are all the Callbacks available in Flutter Charts. Callbacks will be triggered on some specific actions in SfPyramid chart.
+title: Callbacks in Flutter Pyramid Charts widget | Syncfusion 
+description: Learn here all about Callbacks feature of Syncfusion Flutter Pyramid Charts (SfPyramidChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Callbacks in Pyramid chart
+# Callbacks in Flutter Pyramid Charts (SfPyramidChart)
 
 The below Callbacks are for Pyramid chart.
 

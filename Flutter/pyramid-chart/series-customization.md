@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Pyramid series customization in Syncfusion Flutter charts
-description: Learn how to customize the series features like animation, empty points mode, gradient, etc., in SfPyramid chart
+title: Series customization in Flutter Pyramid Charts widget | Syncfusion 
+description: Learn here all about Series customization of Syncfusion Flutter Pyramid Charts (SfPyramidChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# series customization in Pyramid chart
+# Series customization in Flutter Pyramid Charts (SfPyramidChart)
 
 ## Animation
 
