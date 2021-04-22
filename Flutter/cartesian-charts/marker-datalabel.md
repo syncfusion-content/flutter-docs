@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Markers and data labels in Syncfusion Flutter Charts
-description: Learn how to add the markers and data point labels to the series available in the Syncfusion Flutter Chart widget.
+title: Marker and data label in Flutter Cartesian Charts widget | Syncfusion 
+description: Learn here all about Marker and data label feature of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Marker and data label
+# Marker and data label in Flutter Cartesian Charts (SfCartesianChart)
 
 ## Marker
 

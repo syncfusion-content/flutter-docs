@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Syncfusion Flutter Circular Chart legend
-description: Learn how to configure the legend and customize the appearance of its element in Syncfusion Circular Charts.
+title: Legend in Flutter Circular Charts widget | Syncfusion 
+description: Learn here all about Legend feature of Syncfusion Flutter Circular Charts (SfCircularChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Legend in Circular charts
+# Legend in Flutter Circular Charts (SfCircularChart)
 
 The [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/legend.html) contains list of data points in chart. The information provided in each legend item helps to identify the corresponding data points in chart.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: On demand loading feature in Syncfusion Flutter charts
-description: Learn how to achieve infinite scrolling functionality in Syncfusion Flutter Cartesian charts using the on demand loading feature.
+title: On-demand loading in Flutter Cartesian Charts widget | Syncfusion 
+description: Learn here all about On-demand loading feature of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# On-demand loading in Cartesian chart
+# On-demand loading in Flutter Cartesian Charts (SfCartesianChart)
 
 [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) provides support to return a widget which can be used to load more data to the chart when the visible range reaches the end on dragging in the chart with the help of the [`loadMoreIndicatorBuilder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/loadMoreIndicatorBuilder.html) builder.
 

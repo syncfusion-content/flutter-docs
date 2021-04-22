@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data labels in Syncfusion Funnel Charts
-description: Learn how to add the Data point labels to the series available in the Syncfusion Flutter Funnel Chart widget.
+title: Data label in Flutter Funnel Chart widget | Syncfusion 
+description: Learn here all about Data label feature of Syncfusion Flutter Funnel Chart (SfFunnelChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Data label in Funnel chart
+# Data label in Flutter Funnel Chart (SfFunnelChart)
 
 Data label can be added to a chart series by enabling the [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/isVisible.html) option in the [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/dataLabelSettings.html). You can use the following properties to customize the appearance.
 
