@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Circular series customization in Syncfusion Flutter charts
-description: Learn how to customize the series features like animation, color palette, gradient, etc., in SfCircular chart
+title: Series customization in Flutter Circular Charts widget | Syncfusion 
+description: Learn here all about Series customization of Syncfusion Flutter Circular Charts (SfCircularChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Series customization in Circular charts 
+# Series customization in Flutter Circular Charts (SfCircularChart)
 
 ## Animation
 
@@ -113,7 +113,7 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
 
 ## Gradient and image shader
 
-The [`onCreateShader`](~) callback is used to fill the circular chart series data points with gradient and image shader. This callback is called once while rendering
+The [`onCreateShader`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onCreateShader.html) callback is used to fill the circular chart series data points with gradient and image shader. This callback is called once while rendering
 the data points and legend.
 
 N> All the data points of the circular chart are considered together as a single segment and the shader is applied commonly.

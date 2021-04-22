@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Syncfusion Flutter Chart Title
-description: Learn how to add chart title and customize its appearance such as text alignment in the SfCircular Charts.
+title: Chart title in Flutter Circular Charts widget | Syncfusion 
+description: Learn here all about Chart title feature of Syncfusion Flutter Circular Charts (SfCircularChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Chart title in Circular charts
+# Chart title in Flutter Circular Charts (SfCircularChart)
 
 You can define and customize the chart title using [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/title.html) property of [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html). The [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTitle/text.html) property of [`ChartTitle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTitle-class.html) is used to set the text for the title. 
 

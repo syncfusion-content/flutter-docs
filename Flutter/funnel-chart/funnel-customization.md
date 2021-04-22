@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Syncfusion Funnel Chart Types.
-description: Learn how to add and customize the funnel type of charts available in the Syncfusion Flutter Chart widget.
+title: Customization in Flutter Funnel Chart widget | Syncfusion 
+description: Learn here all about Customization of Syncfusion Flutter Funnel Chart (SfFunnelChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Features of Funnel chart
+# Customization in Flutter Funnel Chart (SfFunnelChart)
 
 To render a funnel chart, create an instance of [`FunnelSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/series.html) property of [`SfFunnelChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart-class.html). The following properties are used to customize the appearance of a funnel segment:
 

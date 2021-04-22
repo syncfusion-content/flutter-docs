@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Syncfusion Flutter Chart legend
-description: Learn how to configure the legend and customize the appearance of its element in Syncfusion Funnel Charts.
+title: Legend in Flutter Pyramid Chart widget | Syncfusion 
+description: Learn here all about Legend feature of Syncfusion Flutter Pyramid Chart (SfPyramidChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Legend in Pyramid chart
+# Legend in Flutter Pyramid Chart (SfPyramidChart)
 
 The [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/legend.html) contains list of chart series/data points in chart. The information provided in each legend item helps to identify the corresponding data series in chart.
 
