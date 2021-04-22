@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appearance customization in Flutter Circular Charts control | Syncfusion 
-description: Learn here all about Appearance customization of Syncfusion Flutter Circular Charts (SfCircularChart) control and more.
+title: Customization in Flutter Circular Charts control | Syncfusion 
+description: Learn here all about Customization of Syncfusion Flutter Circular Charts (SfCircularChart) control and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Appearance customization in Flutter Circular Charts (SfCircularChart)
+# Customization in Flutter Circular Charts (SfCircularChart)
 
 ## Chart sizing
 
