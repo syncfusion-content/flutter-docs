@@ -247,4 +247,4 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
 ![Tooltip in chart](images/getting-started/tooltip.png)
 
-You can find the complete getting started example  from this [`link`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/chart_example2131351808).
+You can find the complete getting started example from this [`link`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/pyramid_chart_example-1124328856).
