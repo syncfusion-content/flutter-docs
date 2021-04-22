@@ -53,6 +53,8 @@ workbook.dispose();
 
 {% endhighlight %}
 
+The following screenshot represents generated Excel file when importing List\<Object> in vertical into Excel worksheet using Flutter XlsIO.
+
 ![importList](images/ImportListV.jpg)
 
 The following code snippet shows how to import list of data in horizontal into a worksheet using **importList** method.
@@ -93,5 +95,7 @@ File('Importlist.xlsx').writeAsBytes(bytes!);
 workbook.dispose();
 
 {% endhighlight %}
+
+The following screenshot represents generated Excel file when importing List\<Object> in horizontal into Excel worksheet using Flutter XlsIO.
 
 ![importList](images/ImportListH.jpg)
