@@ -8,12 +8,13 @@ documentation: ug
 ---
 
 # Importing Data to Worksheets
-Flutter XlsIO provides the ability to import data into a worksheet using List<Object>.
+Flutter XlsIO provides the ability to import data into a worksheet using List\<Object>.
 
-## Import Data from List<Object>
+## Import Data from List\<Object>
 
-The following code snippet shows how to import list of data into a worksheet using **importList** method.
 Using **importList** method, we can import list of data with different data types.
+
+The following code snippet shows how to import list of data in vertical into a worksheet using **importList** method.
 
 {% highlight dart %}
 
@@ -31,12 +32,66 @@ final List<Object> list = [
   DateTime(2021, 11, 11)
 ];
 
+// Represent the starting row.
+final int firstRow = 1;
+
+// Represent the starting column.
+final int firstColumn = 1;
+
+// Represent the data should import in vertical.
+final bool isVertical = true;
+
 //Import the Object list to Sheet
-sheet.importList(list, 1, 1, true);
+sheet.importList(list, firstRow, firstColumn, isVertical);
+
+sheet.autoFitColumn(1);
 
 // Save and dispose workbook.
-final List<int> bytes = workbook.saveAsStream();
-File('Importlist.xlsx').writeAsBytes(bytes);
+final List<int>? bytes = workbook.saveAsStream();
+File('Importlist.xlsx').writeAsBytes(bytes!);
 workbook.dispose();
 
 {% endhighlight %}
+
+![importList](images/ImportListV.jpg)
+
+The following code snippet shows how to import list of data in horizontal into a worksheet using **importList** method.
+
+{% highlight dart %}
+
+// Create a new Excel Document.
+final Workbook workbook = Workbook();
+
+// Accessing sheet via index.
+final Worksheet sheet = workbook.worksheets[0];
+
+//Initialize the list<Object>
+final List<Object> list = [
+  'Toatal Income',
+  20000,
+  'On Date',
+  DateTime(2021, 11, 11)
+];
+
+// Represent the starting row.
+final int firstRow = 1;
+
+// Represent the starting column.
+final int firstColumn = 1;
+
+// Represent the data should import in Horizontal.
+final bool isVertical = false;
+
+//Import the Object list to Sheet
+sheet.importList(list, firstRow, firstColumn, isVertical);
+
+sheet.getRangeByIndex(1, 1, 1, 4).autoFitColumns();
+
+// Save and dispose workbook.
+final List<int>? bytes = workbook.saveAsStream();
+File('Importlist.xlsx').writeAsBytes(bytes!);
+workbook.dispose();
+
+{% endhighlight %}
+
+![importList](images/ImportListH.jpg)
