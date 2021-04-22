@@ -19,6 +19,6 @@ Syncfusion Flutter Pyramid Chart (SfPyramidChart) widget is written natively in 
 
 * The end-user experience is greatly enhanced by including the user interaction features such as callbacks, selection, tooltip, and explode in chart. 
 
-* Legends displays additional information about the chart series. The chart legend can also be used to collapse the series. The legends can be wrapped or scrolled if an item exceeds the available bounds. 
+* Legends display additional information about the chart series. The chart legend can also be used to collapse the series. The legends can be wrapped or scrolled if an item exceeds the available bounds. 
 
 * Provides various options to customize the chart features, labels, legends, series, etc. and visualize them accordingly.
