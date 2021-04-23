@@ -117,15 +117,18 @@ You can enable a multi-date range picker by using the [enableMultiView](https://
 {% tabs %}
 {% highlight Dart %}
 
-Widget build(BuildContext context) {
-  return MaterialApp(
-    home: Scaffold(
-      body: SfDateRangePicker(
-        enableMultiView: true,
-        viewSpacing: 20,
-      ),
-    ),
-  );
+@override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+          body: SfDateRangePicker(
+            enableMultiView: true,
+            viewSpacing: 20,
+            headerStyle: DateRangePickerHeaderStyle(
+              textAlign: TextAlign.center
+            ),
+        ));
+  }
 }
 
 {% endhighlight %}

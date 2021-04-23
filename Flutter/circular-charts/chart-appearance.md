@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customizing the appearance of Syncfusion Circular Charts
-description: Learn how to customize the appearance of SfCircular Charts and the customizing properties available in SfCircular charts.
+title: Customization in Flutter Circular Charts widget | Syncfusion 
+description: Learn here all about Customization of Syncfusion Flutter Circular Charts (SfCircularChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Appearance of Circular charts
+# Customization in Flutter Circular Charts (SfCircularChart)
 
 ## Chart sizing
 
@@ -51,6 +51,8 @@ Margin to the chart can be specified using the [`margin`](https://pub.dev/docume
               borderWidth: 2,
               // Sets 15 logical pixels as margin for all the 4 sides.
               margin: EdgeInsets.all(15)
+              )
+            )
           )
         )
       );
@@ -60,9 +62,9 @@ Margin to the chart can be specified using the [`margin`](https://pub.dev/docume
 
 ## Chart area customization
 
-You can customize the Area of the chart using the below properties.
+You can customize the area of the chart using the below properties.
 
-* [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/backgroundColor.html) - used to change the Chart area background color.
+* [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/backgroundColor.html) - used to change the chart area background color.
 * [`backgroundImage`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/backgroundImage.html) - used to set the image path.
 * [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/borderWidth.html) - used to change chart area the border width.
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/bordeColor.html) - used to change the chart area border color.

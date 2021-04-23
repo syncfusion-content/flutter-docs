@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Annotation in Syncfusion Circular Charts
-description: Learn how to add and customize the Circular annotations available in the Syncfusion Circular Chart widget.
+title: Annotation in Flutter Circular Charts widget | Syncfusion 
+description: Learn here all about Annotation feature of Syncfusion Flutter Circular Charts (SfCircularChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Annotation in Circular charts
+# Annotation in Flutter Circular Charts (SfCircularChart)
 
 Chart supports annotations which allows you to mark the specific area of interest in the chart area. You can add the custom widgets using this annotations feature as depicted below.
 
@@ -41,7 +41,7 @@ Chart supports annotations which allows you to mark the specific area of interes
 
 ## Positioning the annotation
 
-The [`horizontalAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularChartAnnotation/horizontalAlignment.html) and [`verticalAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularChartAnnotation/verticalAlignment.html) values can be specified to align the annotation widget either horizontally or vertically, and the also the property [`radius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularChartAnnotation/radius.html) can be used for placing the annotation whose values range from '0%' to '100%'. Defaults to '0%'
+The [`horizontalAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularChartAnnotation/horizontalAlignment.html) and [`verticalAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularChartAnnotation/verticalAlignment.html) values can be specified to align the annotation widget either horizontally or vertically, and the also the property [`radius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularChartAnnotation/radius.html) can be used for placing the annotation whose values range from '0%' to '100%'. Defaults to `0%`.
 
 **Positioning based on Alignment and Radius**
 
@@ -64,6 +64,7 @@ To place the annotation based on the radius values, set the [`Radius`](https://p
                     radius: '50%',
                     verticalAlignment: ChartAlignment.center,
                     horizontalAlignment: ChartAlignment.far  
+                  )
                 ]
               )
             )

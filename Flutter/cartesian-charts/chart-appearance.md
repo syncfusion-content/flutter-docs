@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customizing the appearance of Syncfusion Flutter Charts
-description: Learn how to customize the appearance of SfCartesian Charts and the customizing properties available in SfCartesian charts.
+title: Customization in Flutter Cartesian Charts widget | Syncfusion 
+description: Learn here all about Customization feature of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Appearance Of Cartesian charts
+# Customization in Flutter Cartesian Charts (SfCartesianChart)
 
 ## Chart sizing
 
@@ -58,6 +58,8 @@ Margin to the chart can be specified using the [`margin`](https://pub.dev/docume
               borderWidth: 2,
               // Sets 15 logical pixels as margin for all the 4 sides.
               margin: EdgeInsets.all(15)
+              )
+            )
           )
         )
       );
@@ -72,8 +74,8 @@ Margin to the chart can be specified using the [`margin`](https://pub.dev/docume
 You can customize the plot area of the chart using the below properties.
 
 * [`plotAreaBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/plotAreaBackgroundColor.html) - used to change the plot area background color.
-* [`plotAreaBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/plotAreaBorderColor.html) - used to change the stroke width of the plot area.
-* [`plotAreaBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/plotAreaBorderWidth.html) - used to change the stroke color of the plot area.
+* [`plotAreaBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/plotAreaBorderColor.html) - used to change the stroke color of the plot area.
+* [`plotAreaBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/plotAreaBorderWidth.html) - used to change the stroke width of the plot area.
 * [`plotAreaBackgroundImageUrl`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/plotAreaBackgroundImageUrl.html) - used to set the image path.
 
 {% highlight dart %} 

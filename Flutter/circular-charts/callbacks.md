@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Syncfusion Flutter Chart Callbacks
-description: Learn what are all the Callbacks available in Flutter Charts. Callbacks will be triggered on some specific actions in SfCircular chart.
+title: Callbacks in Flutter Circular Charts widget | Syncfusion 
+description: Learn here all about available Callbacks feature of Syncfusion Flutter Circular Charts (SfCircularChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Callbacks in Circular charts
+# Callbacks in Flutter Circular Charts (SfCircularChart)
 
-The below Callbacks are for Circular chart.
+Circular chart contains the below listed callbacks
 
 ## onLegendItemRender
 
@@ -128,8 +128,8 @@ Triggers when tapping the series point. The [`onPointTapped`](https://pub.dev/do
 * [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PointTapArgs/viewportPointIndex.html) - to get the viewport index value of the tapped data label.
 {% highlight dart %}
 
-    @override
-    Widget build(BuildContext context) {
+      @override
+      Widget build(BuildContext context) {
     
       return Scaffold(
         body: Center(
@@ -141,7 +141,7 @@ Triggers when tapping the series point. The [`onPointTapped`](https://pub.dev/do
           )
         )  
       );
-    }
+      }
 
 {% endhighlight %}
 
@@ -260,7 +260,7 @@ N> This callback will not be called, when the builder is specified for data labe
 
 ## onChartTouchInteractionUp
 
-Triggers when tapped or clicked on the chart area. You can get the position of the taped region using this callback.
+Triggers when tapped or clicked on the chart area. You can get the position of the tapped region using this callback.
 
 The callback contains the following argument:
 
@@ -336,7 +336,7 @@ Using this callback, you can fill the data points of circular charts series with
 
 The callback contains the following argument:
 
-* [`ChartShaderDetails`](~) - provides options to get the outer rect, inner rect, and render type (either series or legend)
+* [`ChartShaderDetails`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartShaderDetails-class.html) - provides options to get the outer rect, inner rect, and render type (either series or legend)
 
 The onCreateShader callback is called once while rendering
 the data points and legend. For further reference on this callback, Check the [Gradient and image shader](./circular-series-customization#Gradient-fill-and-shader) section.

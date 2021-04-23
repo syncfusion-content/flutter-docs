@@ -1,19 +1,19 @@
 ---
 layout: post
-title: On demand loading feature in Syncfusion Flutter charts
-description: Learn how to achieve infinite scrolling functionality in Syncfusion Flutter Cartesian charts using the on demand loading feature.
+title: On-demand loading in Flutter Cartesian Charts widget | Syncfusion 
+description: Learn here all about On-demand loading feature of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# On-demand loading in Cartesian chart
+# On-demand loading in Flutter Cartesian Charts (SfCartesianChart)
 
-[`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) provides support to return a widget which can be used to load more data to the chart when the visible range reaches the end on dragging in the chart with the help of the [`loadMoreIndicatorBuilder`](~) builder.
+[`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) provides support to return a widget which can be used to load more data to the chart when the visible range reaches the end on dragging in the chart with the help of the [`loadMoreIndicatorBuilder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/loadMoreIndicatorBuilder.html) builder.
 
 ## Infinite scrolling
 
-The [`loadMoreIndicatorBuilder`](~) builds the widget at the top of the chart area (ex., loading indicator or load more button) when horizontal scrolling reaches the start or end of the chart and if the chart is transposed then, this will be called when the vertical scrolling reaches the top or bottom of the chart. this can be used to achieve the functionalities like infinite scrolling in the chart.
+The [`loadMoreIndicatorBuilder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/loadMoreIndicatorBuilder.html) builds the widget at the top of the chart area (ex., loading indicator or load more button) when horizontal scrolling reaches the start or end of the chart and if the chart is transposed then, this will be called when the vertical scrolling reaches the top or bottom of the chart. this can be used to achieve the functionalities like infinite scrolling in the chart.
 
 The below example demonstrates the infinite scrolling by showing the circular progress indicator until the data is loaded when horizontal scrolling reaches the end of the chart.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customizing the appearance of Syncfusion Flutter Charts
-description: Learn how to customize the appearance of SfPyramid Charts and the customizing properties available in SfPyramid charts.
+title: Appearance customization in Flutter Pyramid Chart widget | Syncfusion 
+description: Learn here all about Appearance customization of Syncfusion Flutter Pyramid Chart (SfPyramidChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Appearance of Pyramid chart
+# Appearance customization in Flutter Pyramid Chart (SfPyramidChart)
 
 ## Chart sizing
 
@@ -62,7 +62,7 @@ Margin to the chart can be specified using the [`margin`](https://pub.dev/docume
 
 ## Chart area customization
 
-You can customize the Area of the chart using the below properties.
+You can customize the area of the chart using the below properties.
 
 * [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/backgroundColor.html) - used to change the chart area background color.
 * [`backgroundImage`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/backgroundImage.html) - used to set the image path.

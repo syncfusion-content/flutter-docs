@@ -1,13 +1,13 @@
 ---
 layout: post
-title: TechnicalIndicators in Syncfusion Flutter Charts
-description: Learn how to add and customize the TechnicalIndicators available in the Syncfusion Flutter Chart widget.
+title: Technical indicators in Flutter Cartesian Charts widget | Syncfusion 
+description: Learn here all about Technical indicators feature of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Technical indicators in Cartesian charts
+# Technical indicators in Flutter Cartesian Charts (SfCartesianChart)
 
 
 The different types of technical indicators available in chart are follows:
@@ -25,7 +25,7 @@ The different types of technical indicators available in chart are follows:
 
 ## Adding Technical indicator into Chart
  
-To render any indicator, add it to the [`TechnicalIndicators`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators-class.html) collection using the indicators in [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html).The following properties are used to customize the appearance:
+To render any indicator, add it to the [`TechnicalIndicators`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators-class.html) collection using the indicators in [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html).The following properties can be used to customize the appearance:
 
 * [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/isVisible.html) - To check the visibility of the indicator.
 * [`period`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/period.html)- Used to indicates the moving average period.
@@ -40,7 +40,7 @@ To render any indicator, add it to the [`TechnicalIndicators`](https://pub.dev/d
 * [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/dashArray.html) - Used to render the indicators with dashes.
 
 
-N> If you giving series and indicator in the chart, you can add the same [`seriesName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/seriesName.html) to the series and indicator, otherwise you can directly bind the [`dataSource`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/dataSource.html) to the [`indicators`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/indicators.html) property.
+N>: If you giving series and indicator in the chart, you can add the same [`seriesName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/seriesName.html) to the series and indicator, otherwise you can directly bind the [`dataSource`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/dataSource.html) to the [`indicators`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/indicators.html) property.
 
 ## Indicator Types
 
@@ -57,6 +57,7 @@ Refer the following example,
        return Scaffold(
         body: Center(
           child: SfCartesianChart(
+            primaryXAxis: DateTimeAxis(),
             legend: Legend(isVisible: true),
             indicators: <TechnicalIndicators<Sample,dynamic>>[AccumulationDistributionIndicator<Sample, dynamic>(
                   seriesName: 'HiloOpenClose')],
@@ -92,6 +93,7 @@ Refer the following example,
      return Scaffold(
         body: Center(
          child: SfCartesianChart(
+          primaryXAxis: DateTimeAxis(),
           legend: Legend(isVisible: true),
           indicators:
           <TechnicalIndicators<dynamic,   dynamic>>[
@@ -112,9 +114,9 @@ Refer the following example,
 
 ### Bollinger band Indicator
 
-This indicator also having [`upperLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BollingerBandIndicator/upperLineColor.html), [`lowerLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BollingerBandIndicator/lowerLineColor.html)  property for defining the brushes for the indicator lines.
+This indicator also has [`upperLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BollingerBandIndicator/upperLineColor.html) and [`lowerLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BollingerBandIndicator/lowerLineColor.html) properties that can be used to define the brushes for the indicator lines.
 
-Also, we can specify standard deviation values for BollingerBand indicator using [`standardDeviation`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BollingerBandIndicator/standardDeviation.html) property.
+Also, we can specify standard deviation values for the BollingerBand indicator using [`standardDeviation`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BollingerBandIndicator/standardDeviation.html) property.
 
 Refer the following example,
 
@@ -125,6 +127,7 @@ Refer the following example,
      return Scaffold(
        body: Center(
          child: SfCartesianChart(
+           primaryXAxis: DateTimeAxis(),
            legend: Legend(isVisible: true),
            indicators:        <TechnicalIndicators<dynamic, dynamic>[ BollingerBandIndicator<dynamic, dynamic>(
                   period: 3,
@@ -156,6 +159,7 @@ Refer the following example,
       return Scaffold(
         body: Center(
           child: SfCartesianChart(
+            primaryXAxis: DateTimeAxis(),
             legend: Legend(isVisible: true),
             indicators: <TechnicalIndicators<dynamic, dynamic>>[
         EmaIndicator<dynamic, dynamic>(
@@ -178,7 +182,7 @@ Refer the following example,
 
 This is mostly using indicator having [`shortPeriod`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdIndicator/shortPeriod.html) and [`longPeriod`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdIndicator/longPeriod.html) for defining the motion of the indicator.
 
-Also you can draw **Line**, **Histogram** MACD or **Both** using the  [`macdType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdIndicator/macdType.html) property,
+Also you can draw `Line`, `Histogram` MACD or `Both` types using the  [`macdType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdIndicator/macdType.html) property,
 
 The [`macdLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdIndicator/macdLineColor.html) property is used to define the color for the MACD line and the [`histogramNegativeColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdIndicator/histogramNegativeColor.html) and [`histogramPositiveColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MacdIndicator/histogramPositiveColor.html) property is used to define the color for the MACD histogram.
 
@@ -191,6 +195,7 @@ Refer the following example,
      return Scaffold(
        body: Center(
           child: SfCartesianChart(
+            primaryXAxis: DateTimeAxis(),
             legend: Legend(isVisible: true),
             indicators: <TechnicalIndicators<dynamic, dynamic>>[
           MacdIndicator<dynamic, dynamic>(
@@ -211,7 +216,7 @@ Refer the following example,
 
 ### Momentum Indicator
 
-This indicator also having a centerline. The [`centerLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MomentumIndicator/centerLineColor.html) and [`centerLineWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MomentumIndicator/centerLineWidth.html) property is used to define center line.
+This indicator also has a centerline. The [`centerLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MomentumIndicator/centerLineColor.html) and [`centerLineWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MomentumIndicator/centerLineWidth.html) properties are used to define center line.
 
 Refer the following example,
 
@@ -222,6 +227,7 @@ Refer the following example,
       return Scaffold(
         body: Center(
           child: SfCartesianChart(
+            primaryXAxis: DateTimeAxis(),
             legend: Legend(isVisible: true),
             indicators: <TechnicalIndicators<dynamic, dynamic>>[
           MomentumIndicator<dynamic, dynamic>(
@@ -240,7 +246,7 @@ Refer the following example,
 ![MomentumIndicator](images/technical-indicators/momentum.jpg)
 
 ### Relative strength index Indicator(RSI)
-The RSI indicator has an additional two lines other than the signal line.They indicate the [`overBought`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RsiIndicator/overbought.html) and[`overSold`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RsiIndicator/oversold.html) region.
+The RSI indicator has an additional two lines other than the signal line.They indicate the [`overBought`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RsiIndicator/overbought.html) and [`overSold`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RsiIndicator/oversold.html) region.
 
 The [`upperLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RsiIndicator/upperLineColor.html) property is used to define the color for the line that indicates [`overBought`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RsiIndicator/overbought.html) region, and the [`lowerLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RsiIndicator/lowerLineColor.html) property is used to define the color for the line that indicates [`overSold`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RsiIndicator/oversold.html) region.
 
@@ -253,6 +259,7 @@ Refer the following example,
       return Scaffold(
         body: Center(
           child: SfCartesianChart(
+            primaryXAxis: DateTimeAxis(),
             legend: Legend(isVisible: true),
              indicators: <TechnicalIndicators<dynamic, dynamic>>[
           RsiIndicator<dynamic, dynamic>(
@@ -283,6 +290,7 @@ The [`Simple moving average indicator`](https://pub.dev/documentation/syncfusion
       return Scaffold(
         body: Center(
           child: SfCartesianChart(
+            primaryXAxis: DateTimeAxis(),
             legend: Legend(isVisible: true),
             indicators: <TechnicalIndicators<dynamic, dynamic>>[
           SmaIndicator<dynamic, dynamic>(
@@ -315,6 +323,7 @@ Refer the following example,
       return Scaffold(
         body: Center(
           child: SfCartesianChart(
+            primaryXAxis: DateTimeAxis(),
             legend: Legend(isVisible: true),
             indicators: <TechnicalIndicators<dynamic, dynamic>>[
           StochasticIndicator<dynamic, dynamic>(   
@@ -346,6 +355,7 @@ Refer the following example,
       return Scaffold(
         body: Center(
           child: SfCartesianChart(
+            primaryXAxis: DateTimeAxis(),
             legend: Legend(isVisible: true),
             indicators: <TechnicalIndicators<dynamic, dynamic>>[
           TmaIndicator<Sample, dynamic>(
@@ -376,6 +386,7 @@ The following code example can define the legend.
       return Scaffold(
         body: Center(
           child: SfCartesianChart(
+            primaryXAxis: DateTimeAxis(),
             indicators: <TechnicalIndicators<dynamic, dynamic>>[
               MomentumIndicator<dynamic, dynamic>(
                   seriesName: 'HiloOpenClose',
@@ -416,6 +427,7 @@ The chart will display the segment information through the tooltip. It is used t
       return Scaffold(
         body: Center(
           child: SfCartesianChart(
+            primaryXAxis: DateTimeAxis(),
             tooltipBehavior: _tooltipBehavior,
             indicators: <TechnicalIndicators<dynamic, dynamic>>[
               ATRIndicator<dynamic, dynamic>(

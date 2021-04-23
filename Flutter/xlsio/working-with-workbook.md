@@ -19,10 +19,10 @@ You can save the created or manipulated workbook to file system using SaveAsStre
 final Workbook workbook = Workbook();
 
 // Save the workbook in file system as XLSX format.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
 
-File('Output.xlsx').writeAsBytes(bytes!);
+File('Output.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
@@ -36,12 +36,12 @@ Once after the workbook manipulation and save operation are completed, you shoul
 final Workbook workbook = new Workbook();
 
 // Save the workbook in file system as XLSX format.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveAsStream();
 
 // Dipose the workbook.
 workbook.dispose();
 
-File('Output.xlsx').writeAsBytes(bytes!);
+File('Output.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting started for Syncfusion Circular Charts (SfCircularChart) 
-description: Learn how to create the Syncfusion Flutter Circular charts, add series, legend ,markers and other features in Chart.
+title: Getting started with Flutter Circular Charts widget | Syncfusion
+description: Learn here about getting started with Syncfusion Flutter Circular Charts (SfCircularChart) widget, its elements, and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Getting Started with Flutter Circular Charts (SfCircularChart)
+#  Getting started with Flutter Circular Charts (SfCircularChart)
 
 This section explains the steps required to populate the chart with data, title, data labels, legend, and tooltips. This section covers only the minimal features needed to know to get started with the chart.
 
@@ -57,7 +57,7 @@ Import the following package in your Dart code.
 
 ## Initialize chart
 
-Once the package has been imported, initialize the chart as a child of any widget. There are two kinds of chart widgets - SfCartesianChart and SfCircularChart. SfCircularChart can be used to render pie, doughnut and radial bar charts. Here, as we are rendering pie chart, initialize SfCircularChart widget as a child of Container widget.
+Once the package has been imported, initialize the chart as a child of any widget. SfCircularChart can be used to render pie, doughnut and radial bar charts. Here, as we are rendering pie chart, initialize SfCircularChart widget as a child of Container widget.
 
 {% highlight dart %} 
 
@@ -244,7 +244,7 @@ You can use legend in chart by setting the [`isVisible`](https://pub.dev/documen
 
 The tooltip is used when you cannot display information using the data labels due to space constraints.
 
-The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/tooltipBehavior.html) property in chart is used to enable and customize the tooltip for all the series whereas the [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/enableTooltip.html) property in series is used to toggle the tooltip visibility of each series. The tooltip is enabled as demonstrated in the following code snippet.
+The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/tooltipBehavior.html) property in chart is used to enable and customize the tooltip for all the series whereas the [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/enableTooltip.html) property in series is used to toggle the tooltip visibility of each series. The tooltip can be enabled as demonstrated in the following code snippet.
 
 {% highlight dart %} 
 
@@ -286,4 +286,4 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
 ![Tooltip in chart](images/getting-started/tooltip.png)
 
-You can find the complete getting started example from this [`link`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/chart_example2131351808).
+You can find the complete getting started example from this [`link`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/circular_chart_example1927608018).

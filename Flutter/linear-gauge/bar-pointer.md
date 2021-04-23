@@ -7,13 +7,13 @@ control: SfLinearGauge
 documentation: ug
 ---
 
-# Linear Gauge bar pointer
+# Linear Gauge Bar Pointer
 
-A bar pointer is an accenting line or shaded background that can be placed on a linear gauge to mark any current value in the axis track. The bar pointers always starts from the minimum value of the axis and ends in the specified value. So the [`value`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/value.html) property is a required parameter for creating a bar pointer.
+A bar pointer is an accenting line or shaded background that can be placed on a Linear Gauge to mark any current value in the axis track. The bar pointers always start from the minimum value of the axis and end with the specified value. So the [`value`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/value.html) property is a required parameter for creating a bar pointer.
 
 ## Default bar pointer
 
-The code snippet creates a default bar pointer with the value 50. 
+The following code sample creates a default bar pointer with the value 50. 
 
 {% highlight dart %} 
 
@@ -40,7 +40,7 @@ The code snippet creates a default bar pointer with the value 50.
 
 ## Customize bar pointer thickness
 
-The thickness can be changed by the [`thickness`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/thickness.html) property of the bar pointer. The below code snippet demonstrates the same. 
+The thickness can be changed by the [`thickness`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/thickness.html) property of the bar pointer. The following code sample demonstrates the same. 
 
 {% highlight dart %} 
 
@@ -69,7 +69,7 @@ The thickness can be changed by the [`thickness`](https://pub.dev/documentation/
 
 ## Customize edge style
 
-The edge style can be changed with the [`edgeStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/edgeStyle.html) property of bar pointer. The edge style can be any of the `startCurve`, `endCurve`, `bothCurve`, and `bothFlat` options.The default value is `bothFlat`.
+The edge style can be changed with the [`edgeStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/edgeStyle.html) property of the bar pointer. The edge style can be any of the `startCurve`, `endCurve`, `bothCurve`, and `bothFlat` options.The default value is `bothFlat`.
 
 {% highlight dart %} 
 
@@ -101,7 +101,7 @@ The edge style can be changed with the [`edgeStyle`](https://pub.dev/documentati
 
 ## Customize the position
 
-By default, the bar pointer is positioned cross to the axis. This position can be changed by the [`position`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/position.html) property of a bar pointer. It is possible to position the bar pointer 'inside', 'cross', and 'outside' the axis. The below code snippet demonstrates changing the bar pointer position to inside the axis. 
+By default, the bar pointer is positioned cross to the axis. This position can be changed by the [`position`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/position.html) property of a bar pointer. It is possible to position the bar pointer 'inside', 'cross', or 'outside' the axis. The following code sample demonstrates how to change the bar pointer position to inside the axis. 
 
 {% highlight dart %} 
 
@@ -129,7 +129,7 @@ By default, the bar pointer is positioned cross to the axis. This position can b
 
 ## Customize the offset
 
-In addition to position the bar pointer, it is also possible to change the offset of the bar pointer. The [`offset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/offset.html) is the distance from the axis. The [`offset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/offset.html) cannot be negative and the cross positioned elements will not get affected by the [`offset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/offset.html) value. The below code snippet demonstrates changing the offset value of the bar pointer. 
+In addition to position the bar pointer, it is also possible to change the offset of the bar pointer. The [`offset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/offset.html) is the distance from the axis and it cannot be negative and the cross positioned elements will not get affected by the [`offset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/offset.html) value. The following  code sample demonstrates how to change the offset value of the bar pointer. 
 
 {% highlight dart %} 
 
@@ -159,7 +159,7 @@ In addition to position the bar pointer, it is also possible to change the offse
 
 ## Change the color of bar pointer 
 
-The color of the bar pointer can be changed by the [`color`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/color.html) property. The below code snippet demonstrates the same. 
+The color of the bar pointer can be changed by the [`color`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/color.html) property. The following code sample demonstrates the same. 
 
 {% highlight dart %} 
 
@@ -189,7 +189,7 @@ The color of the bar pointer can be changed by the [`color`](https://pub.dev/doc
 
 ## Apply radial gradient
 
-The gradient can be applied by using the [`shaderCallback`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/shaderCallback.html) property of bar pointer. The below code snippet demonstrates applying a radial gradient to the bar pointer.
+The gradient can be applied by using the [`shaderCallback`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/shaderCallback.html) property of bar pointer. The following code sample demonstrates how to apply a radial gradient to the bar pointer.
 
 {% highlight dart %} 
 
@@ -225,7 +225,7 @@ The gradient can be applied by using the [`shaderCallback`](https://pub.dev/docu
 
 ## Apply linear gradient
 
-The gradient can be applied by using the [`shaderCallback`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/shaderCallback.html) property of bar pointer. The below code snippet demonstrates applying a linear gradient to the bar pointer.
+The gradient can be applied by using the [`shaderCallback`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/shaderCallback.html) property of bar pointer. The following code sample demonstrates how to apply a linear gradient to the bar pointer.
 
 {% highlight dart %} 
 
@@ -260,7 +260,7 @@ The gradient can be applied by using the [`shaderCallback`](https://pub.dev/docu
 
 ## Apply sweep gradient
 
-The gradient can be applied by using the [`shaderCallback`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/shaderCallback.html) property of bar pointer. The below code snippet demonstrates applying a sweep gradient to the bar pointer.
+The gradient can be applied by using the [`shaderCallback`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/shaderCallback.html) property of the bar pointer. The following code sample demonstrates how to apply a sweep gradient to the bar pointer.
 
 {% highlight dart %} 
 
@@ -301,7 +301,7 @@ The gradient can be applied by using the [`shaderCallback`](https://pub.dev/docu
 
 ## Customize border
 
-The border can be customized with [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/borderWidth.html) and [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/borderColor.html) properties of bar pointer. The below code examples demonstrates the same.
+The border can be customized with [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/borderWidth.html) and [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/borderColor.html) properties of the bar pointer. The following code examples demonstrates the same.
 
 {% highlight dart %} 
 
@@ -327,6 +327,7 @@ The border can be customized with [`borderWidth`](https://pub.dev/documentation/
 {% endhighlight %}
 
 ![Customize linear gauge bar pointer border](images/bar-pointer/bar_border.png)
+
 
 ## Add multiple bar pointers
 

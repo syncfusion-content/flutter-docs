@@ -1034,7 +1034,7 @@ All rows or cells will be selected.
 The datagrid provides the following callbacks for selection:
 
  * `onSelectionChanging` : This callback is raised while selecting a row at the execution time before the row is selected. So it allows canceling the selection action by return `false`.
- * `onSelectionChanged` : This callback is raised after the column is selected.
+ * `onSelectionChanged` : This callback is raised after the row is selected.
 
 The followings are the parameters of the [onSelectionChanging](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onSelectionChanging.html) and [onSelectionChanged](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onSelectionChanged.html) callbacks,
 

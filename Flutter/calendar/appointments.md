@@ -301,7 +301,7 @@ The `recurrenceRule` is a string value (RRULE) that contains the details of the 
 | BYDAY | It holds the “DAY” values of an appointment to render.For example, when you create the weekly appointment, select the day(s) from the day options (Monday/Tuesday/Wednesday/Thursday/Friday/Saturday/Sunday).  When Monday is selected, the first two letters of the selected day “MO” is stored in the “BYDAY” property.  When you select multiple days, the values are separated by commas. Example: FREQ=WEEKLY;INTERVAL=1;BYDAY=MO,WE;COUNT=10 |
 | BYMONTHDAY | This property is used to store the date value of the Month while creating the Month recurrence appointment. For example, when you create a Monthly recurrence appointment in the date 3, it means the BYMONTHDAY holds the value 3 and creates the appointment on 3rd day of every month. Example: FREQ=MONTHLY;BYMONTHDAY=3;INTERVAL=1;COUNT=10 |
 | BYMONTH | This property is used to store the index value of the selected Month while creating the yearly appointments. For example, when you create the yearly appointment in the Month June, it means the index value for June month is 6 and it is stored in the BYMONTH field.  The appointment is created on every 6th month of a year. Example: FREQ=YEARLY;BYMONTHDAY=16;BYMONTH=6;INTERVAL=1;COUNT=10 |
-| BYSETPOS | This property is used to store the index value of the week. For example, when you create the monthly appointment in second week of the month, the index value of the second week (2) is stored in BYSETPOS. Example: FREQ=MONTHLY;BYDAY=MO;BYSETPOS=2;UNTIL=20200810T183000Z |
+| BYSETPOS | This property is used to store the index value of the week. For example, when you create the monthly appointment in second week of the month, the index value of the second week (2) is stored in BYSETPOS. Example: FREQ=MONTHLY;BYDAY=MO;BYSETPOS=2;UNTIL=20200810T183000Z . If the property value is set to -1 and -2, the appointment will be added to the last week and second last week of the month.|
 
 ### Adding recurrence appointment
 
@@ -769,6 +769,49 @@ You can customize the displaying time format in the appointment widget in the mo
 {% endtabs %}
 
 ![Appointment time format](images/appointments/appointment_time_format.png)
+
+## Appointment helper
+
+### Get visible appointments
+
+You can get the list of visible appointments by using the [getVisibleAppointments](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getVisibleAppointments.html) method available in the Calendar data source.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+initState() {
+  _calendarController = CalendarController();
+  _dataSource = _getCalendarDataSource();
+  super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+    home: Scaffold(
+      body: SfCalendar(
+        view: CalendarView.month,
+        controller: _calendarController,
+        dataSource: _dataSource,
+        onViewChanged: (ViewChangedDetails details) {
+          List<DateTime> dates = details.visibleDates;
+          String calendarTimeZone = '';
+          List<Object> appointment = _dataSource.getVisibleAppointments(
+              dates[0], calendarTimeZone,
+              dates[(details.visibleDates.length) - 1]);
+         },
+       ),
+     ),
+   );
+ }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+>**NOTE**
+* The `startTime` is required for the starting date from which to obtain the appointments.
 
 ## See also
 

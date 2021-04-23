@@ -81,10 +81,11 @@ final Worksheet sheet = workbook.worksheets[0];
 sheet.getRangeByName('A1').setText('Hello World!');
 
 // Save and dispose the document.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
 
-File('Output.xlsx').writeAsBytes(bytes!);
+// Save the Excel file in the local machine.
+File('Output.xlsx').writeAsBytes(bytes);
 
 }
 
@@ -130,7 +131,7 @@ final Worksheet sheet = workbook.worksheets[0];
 sheet.getRangeByName('A1').setText('Hello World!');
 
 // Save and dispose the document.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
 
 // Get external storage directory
@@ -143,7 +144,7 @@ final path = directory.path;
 File file = File('$path/Output.xlsx');
 
 // Write Excel data
-await file.writeAsBytes(bytes!, flush: true);
+await file.writeAsBytes(bytes, flush: true);
 
 // Open the Excel document in mobile
 OpenFile.open('$path/Output.xlsx');
@@ -181,12 +182,10 @@ final Worksheet sheet = workbook.worksheets[0];
 sheet.getRangeByName('A1').setText('Hello World!');
 
 // Save and dispose the document.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
 
-File('Output.xlsx').writeAsBytes(bytes!);
-
-js.context['excelData'] = base64.encode(bytes!);
+js.context['excelData'] = base64.encode(bytes);
 js.context['filename'] = 'Output.xlsx'; 
 Timer.run(() { 
 js.context.callMethod('_createExcel');

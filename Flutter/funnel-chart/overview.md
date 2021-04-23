@@ -1,22 +1,24 @@
 ---
 layout: post
-title: Overview of Syncfusion Flutter Charts
-description: Learn the key features available in Syncfusion Flutter Charts and overview about SYncfusion Flutter Charts.
+title: About Flutter Funnel Chart widget | Syncfusion
+description: Learn here all about introduction of Syncfusion Flutter Funnel Chart (SfFunnelChart) widget, its features, and more
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Overview of Syncfusion Flutter Charts
+# Flutter Funnel Chart (SfFunnelChart) Overview
 
-Syncfusion Flutter Charts is a data visualization library written natively in Dart for creating beautiful and high-performance charts, which are used to craft high-quality mobile app user interfaces using Flutter.
+Syncfusion Flutter Funnel Chart (SfFunnelChart) widget is written natively in Dart for creating beautiful and high-performance Funnel chart, which are used to craft high-quality applications using Flutter.
 
-![Overview Flutter chart](images/overview/overview.png)
+  ![Overview Flutter chart](images/overview/overview_funnel.png)
 
 ## Key Features
 
-* It Supports Funnel chart series and it is more user friendly and has greater UI visualization.
-* Plots data against multiple scales that help to visualize the mixed types of data in a single chart.
-* Provides various options to customize the chart features, labels, legends, series, etc. and visualize them accordingly.
+* It supports [`Funnel`](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/funnel-chart) chart series and it is more user friendly and has greater UI visualization.
 
-You can get the examples in the following link:: [`Flutter Charts`](https://github.com/syncfusion/flutter-examples).
+* The end-user experience is greatly enhanced by including the user interaction features such as callbacks, selection, tooltip, and explode in chart. 
+
+* Legends display additional information about the chart series. The chart legend can also be used to collapse the series. The legends can be wrapped or scrolled if an item exceeds the available bounds. 
+
+* Provides various options to customize the chart features, labels, legends, series, etc. and visualize them accordingly.

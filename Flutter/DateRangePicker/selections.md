@@ -35,7 +35,7 @@ Widget build(BuildContext context) {
 
 >**NOTE**
 * The year, decade, and century view allow you to select cells only when the `enableViewNavigation` is set to false.
-* In this scenario, the `selection changed` call back will return the first date of the month, year, or decade of the selected cell when the selection mode set to `single` and `multiple`.
+* In this scenario, the `selection changed` callback will return the first date of the month, year, or decade of the selected cell when the selection mode set to `single` and `multiple`.
 Eg: 
 * In the year view, when the May month cell is selected then the selected date value will be 01-05-2020.
 * In the decade view, when the (2025) year cell is selected then the selected date value will be 01-01-2025.
@@ -86,7 +86,7 @@ Widget build(BuildContext context) {
 
 >**NOTE**
 * The year, decade, and century view allow you to select cells only when the `enableViewNavigation` set is as false.
-* In this scenario, the `selection changed` call back will return the first and last date of the month, year, or decade of the selected cell when the selection mode is set to `range` and `multi-range`.
+* In this scenario, the `selection changed` callback will return the first and last date of the month, year, or decade of the selected cell when the selection mode is set to `range` and `multi-range`.
 Eg: 
 * In the year view, when the range is selected as May – June, then the range value will be 01-05-2020 to 30-06-2020.
 * In the decade view, when the range is selected as 2025 – 2030, then the range value will be 01-01-2025 to 31-12-2030.

@@ -7,9 +7,9 @@ control: SfLinearGauge
 documentation: ug
 ---
 
-# Linear Gauge shape marker pointers
+# Linear Gauge Shape Marker Pointers
 
-The [`LinearShapePointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer-class.html) in [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html) have the below pre-defined shapes to mark a specific value. The default shape pointer is inverted `invertedTriangle`. 
+The [`LinearShapePointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer-class.html) in [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html) have the following pre-defined shapes to mark a specific value. The default shape pointer is `invertedTriangle`. 
 
 1. `Triangle`
 2. `Inverted Triangle`
@@ -17,7 +17,7 @@ The [`LinearShapePointer`](https://pub.dev/documentation/syncfusion_flutter_gaug
 4. `Diamond`
 5. `Rectangle`
 
-The below is the default appearance of default shape pointer.
+The following is the default appearance of default shape pointer.
 
 {% highlight dart %} 
 
@@ -40,7 +40,7 @@ The below is the default appearance of default shape pointer.
 
 ## Change the size
 
-The size of the marker pointer can be changed by the [`height`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/height.html) and [`width`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/width.html) properties of [`LinearShapePointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer-class.html). The below code snippet demonstrates changing the size of a shape pointer.
+The size of the marker pointer can be changed by the [`height`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/height.html) and [`width`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/width.html) properties of [`LinearShapePointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer-class.html). The following code sample demonstrates how to change the size of a shape pointer.
 
 {% highlight dart %} 
 
@@ -64,7 +64,7 @@ The size of the marker pointer can be changed by the [`height`](https://pub.dev/
 
 ## Customize color
 
-The color of the shape pointer can be changed by the [`color`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/color.html) property. The below code example demonstrates the same.
+The color of the shape pointer can be changed by the [`color`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/color.html) property. The following code example demonstrates the same.
 
 {% highlight dart %} 
 
@@ -87,7 +87,7 @@ The color of the shape pointer can be changed by the [`color`](https://pub.dev/d
 
 ## Customize the border
 
-The border can be customized by the [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/borderColor.html) and [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/borderWidth.html) of the [`LinearShapePointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer-class.html).
+The border can be customized by the [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/borderColor.html) and [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/borderWidth.html) properties of the [`LinearShapePointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer-class.html).
 
 {% highlight dart %} 
 
@@ -167,7 +167,7 @@ The marker pointer alignment can be changed by the [`markerAlignment`](https://p
 
 ## Customize position
 
-By default, the shape pointer is positioned `outside` to the axis. This position can be changed by the [`position`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/position.html) property of a [`LinearShapePointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer-class.html). It is possible to position the shape pointer `inside`, `cross`, and `outside` the axis. The below code snippet demonstrates changing the shape pointer position to inside the axis.  
+By default, the shape pointer is positioned `outside` the axis. This position can be changed by the [`position`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/position.html) property of a [`LinearShapePointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer-class.html). It is possible to position the shape pointer `inside`, `cross`, or `outside` the axis. The following code sample demonstrates how to change the shape pointer position to inside the axis.  
 
 {% highlight dart %} 
 
@@ -193,7 +193,7 @@ By default, the shape pointer is positioned `outside` to the axis. This position
 
 ## Customize offset
 
-In addition to position the shape pointer, it is also possible to change the offset of the shape pointer. The [`offset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/offset.html) is the distance from the axis. The [`offset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/offset.html) cannot be negative and the cross positioned elements will not get affected by the [`offset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/offset.html) value. The below code snippet demonstrates changing the [`offset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/offset.html) value of the shape pointer. 
+In addition to position the shape pointer, it is also possible to change the offset of the shape pointer. The [`offset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/offset.html) is the distance from the axis and it cannot be negative and The cross positioned elements will not get affected by the [`offset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/offset.html) value. The following code sample demonstrates how to change the [`offset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/offset.html) value of the shape pointer. 
 
 {% highlight dart %} 
 

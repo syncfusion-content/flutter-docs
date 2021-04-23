@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Syncfusion Flutter Chart legend
-description: Learn how to configure the legend and customize the appearance of its element in Syncfusion Funnel Charts.
+title: Legend in Flutter Pyramid Chart widget | Syncfusion 
+description: Learn here all about Legend feature of Syncfusion Flutter Pyramid Chart (SfPyramidChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Legend in Pyramid chart
+# Legend in Flutter Pyramid Chart (SfPyramidChart)
 
 The [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/legend.html) contains list of chart series/data points in chart. The information provided in each legend item helps to identify the corresponding data series in chart.
 
@@ -88,10 +88,10 @@ The following properties are used to define and customize the [`title`](https://
 
 * [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendTitle/text.html) - used to change the text of the title.
 * [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/textStyle.html) - used to change the text color, size, font family, fontStyle, and font weight.
-* [`textStyle.color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/color.html) - used to change the color of the text.
-* [`textStyle.fontFamily`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontFamily.html) - used to change the font family for legend text. 
-* [`textStyle.fontStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontStyle.html) - used to change the font style for the legend text.
-* [`textStyle.fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontSize.html) - used to change the font size for the legend text.
+* [`textStyle.color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/color.html) - used to change the color of the text.
+* [`textStyle.fontFamily`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontFamily.html) - used to change the font family for legend text. 
+* [`textStyle.fontStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontStyle.html) - used to change the font style for the legend text.
+* [`textStyle.fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontSize.html) - used to change the font size for the legend text.
 * [`alignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/alignment.html) - used to change the alignment of the title text; it can be near, center, or far.
 
 {% highlight dart %} 
@@ -106,7 +106,7 @@ The following properties are used to define and customize the [`title`](https://
             legend: Legend(isVisible: true,
             title: LegendTitle(
                     text:'Months',
-                    textStyle: ChartTextStyle(
+                    textStyle: TextStyle(
                     color: Colors.red,
                     fontSize: 15,
                     fontStyle: FontStyle.italic,
@@ -227,7 +227,7 @@ The legend items can be placed in multiple rows or scroll can be enabled using t
 
 You can change the position of the legend inside the chart. The following properties are used to customize the position of legend. **auto** position will place the legend at the right, if the chart's width is greater than the chart's height. Else the legend will be placed at the bottom position.
 
-* [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendPosition-class.html) - used to position the legend relatively. The available options are auto, bottom, left, right, and top. Defaults to auto.
+* [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendPosition-class.html) - used to position the legend relatively. The available options are auto, bottom, left, right, and top. Defaults to `auto`.
 * [`orientation`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/orientation.html) - used to change the orientation of the legend, the default value is **auto**. Also you can set [`horizontal`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendItemOrientation-class.html) or [`vertical`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendItemOrientation-class.html).
 
 {% highlight dart %} 

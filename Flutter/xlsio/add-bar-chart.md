@@ -59,9 +59,9 @@ chart1.isSeriesInRows = false;
 sheet.charts = charts;
 
 // save and dispose the workbook.
-final List<int>? bytes = workbook.saveAsStream();
+final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
 
-File('BarChart.xlsx').writeAsBytes(bytes!);
+File('BarChart.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}

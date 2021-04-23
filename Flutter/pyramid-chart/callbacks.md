@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Syncfusion Flutter Chart Callbacks
-description: Learn what are all the Callbacks available in Flutter Charts. Callbacks will be triggered on some specific actions in SfPyramid chart.
+title: Callbacks in Flutter Pyramid Chart widget | Syncfusion 
+description: Learn here all about Callbacks feature of Syncfusion Flutter Pyramid Chart (SfPyramidChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Callbacks in Pyramid chart
+# Callbacks in Flutter Pyramid Chart (SfPyramidChart)
 
 The below Callbacks are for Pyramid chart.
 
@@ -193,9 +193,9 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
 Triggers when tapping on the data label of the data point in the series. The [`onDataLabelTapped`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/onDataLabelTapped.html) Callback contains the following arguments.
 
 * [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/position.html) - specifies the position of the tapped data label in logical pixels.
-* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/seriesIndex.html) - Specifies the series index of the tapped data label
-* [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/pointIndex.html) - Specifies the point index of the tapped data label.
-* [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/text.html) - Specifies the content of the tapped data label.
+* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/seriesIndex.html) - specifies the series index of the tapped data label
+* [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/pointIndex.html) - specifies the point index of the tapped data label.
+* [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/text.html) - specifies the content of the tapped data label.
 * [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/dataLabelSettings.html) - to get the data label customization options specified in that particular series.
 * [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/viewportPointIndex.html) - to get the viewport index value of the tapped data label.
 

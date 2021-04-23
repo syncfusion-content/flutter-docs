@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Syncfusion Flutter Chart Public Methods
-description: Learn what are all the public methods available in Syncfusion Flutter Charts along with their properties.
+title: Methods in Flutter Cartesian Charts widget | Syncfusion 
+description: Learn here all about available Methods of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Methods in Cartesian charts
+# Methods in Flutter Cartesian Charts (SfCartesianChart)
 
 ## Methods in tooltipBehavior
 
@@ -634,7 +634,7 @@ N> The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter
 
 ### ZoomIn method in zoomPanBehavior
 
-The [`zoomIn`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/zoomIn.html) method is used to increases the magnification of the plot area.
+The [`zoomIn`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/zoomIn.html) method is used to increase the magnification of the plot area.
 
 {% highlight dart %}
 
@@ -694,7 +694,7 @@ The [`zoomIn`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
 
 ### ZoomOut method in zoomPanBehavior
 
-The [`zoomOut`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/zoomOut.html) method is used to decreases the magnification of the plot area.
+The [`zoomOut`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanBehavior/zoomOut.html) method is used to decrease the magnification of the plot area.
 
 {% highlight dart %}
 
@@ -1072,7 +1072,7 @@ Used to process only the newly added, updated, and removed data points in a seri
 
 To re-render the chart with modified data points, setState() will be called. This will render the chart from scratch and thus, the app’s performance will be degraded on continuous updates.
 
-To overcome this problem, the `updateDataSource` method can be called by passing updated data points indexes. The chart widget will process only that point and skip various steps like bounds calculation,
+To overcome this problem, the [`updateDataSource`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeriesController/updateDataSource.html) method can be called by passing updated data points indexes. The chart widget will process only that point and skip various steps like bounds calculation,
 old data points processing, etc. Thus, this will improve the app’s performance.
 
 The following are the arguments of this method.
@@ -1129,6 +1129,10 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 
+#### See Also
+
+*[Rendering real time live charts using updateDataSource method](https://www.syncfusion.com/kb/12316/how-to-create-flutter-real-time-charts-using-the-cartesian-charts-widget-sfcartesianchart).
+
 ## PixelToPoint 
 
 Converts logical pixel value to the data point value.
@@ -1137,7 +1141,7 @@ The [`pixelToPoint`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
   
 Since this method is in the series controller, x and y-axis associated with this particular series will be considering for conversion value.
   
->**NOTE** This method is only applicable for Cartesian chart, not for the circular, pyramid,
+N> This method is only applicable for Cartesian chart, not for the circular, pyramid,
 and funnel charts.
 
 {% highlight dart %}
@@ -1177,7 +1181,7 @@ The [`pointToPixel`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
   
 Since this method is in the series controller, x and y-axis associated with this particular series will be considering for conversion value.
   
->**NOTE** This method is only applicable for Cartesian chart, not for the circular, pyramid,
+N> This method is only applicable for Cartesian chart, not for the circular, pyramid,
 and funnel charts.
   
 {% highlight dart %}
