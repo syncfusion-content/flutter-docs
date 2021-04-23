@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customizations in Flutter Date Range Picker widget | Syncfusion | Date Picker
+title: Customizations in Flutter Date Range Picker widget | Syncfusion
 description: Learn here all about Customizations features of Syncfusion Flutter Date Range Picker (SfDateRangePicker) widget and more. 
 platform: Flutter
 control: SfDateRangePicker
