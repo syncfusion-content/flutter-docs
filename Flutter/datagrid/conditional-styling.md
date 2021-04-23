@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Conditional Styling in Flutter DataGrid control | Syncfusion | DataTable
+title: Conditional Styling in Flutter DataGrid control | Syncfusion
 description: Learn here all about Conditional Styling feature of Syncfusion Flutter DataGrid (SfDataGrid) control and more.
 platform: flutter
 control: SfDataGrid
