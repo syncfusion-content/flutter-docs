@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Syncfusion Flutter Gauge Pointers
-description: This article describes how to add and customizes the appearence of pointers of radial gauge control in flutter platform
+title: Widget Pointer in Flutter Radial Gauge widget | Syncfusion
+description: Learn here all about adding and customizing Widget Pointer of Syncfusion Flutter Radial Gauge (SfRadialGauge) widget and more.
 platform: flutter
 control: SfRadialGauge
 documentation: ug
 ---
 
-# Widget pointer customization
+# Widget Pointer in Fluter Radial Gauge (SfRadialGauge)
 
 [`Widgetpointer`] allows pointing the desired value with any widget in a scale. You can set the desired widget to its [`child`] property to annotate the pointer value.
 

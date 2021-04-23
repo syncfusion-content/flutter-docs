@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview of Syncfusion Flutter Linear Gauge
-description: The Flutter gauges package includes a linear gauge widget to create modern, interactive, animated gauges.
+title: About Flutter Linear Gauge widget | Syncfusion
+description: Learn here all about introduction of Syncfusion Flutter Linear Gauge (SfLinearGauge) widget, its features, and more.
 platform: flutter
 control: SfLinearGauge
 documentation: ug
 ---
 
-# Overview of Linear Gauge
+# Flutter Linear Gauge (SfLinearGauge) Overview
 
 Syncfusion Flutter Linear Gauge is a data visualization widget to display data on a linear scale. Use this widget to craft high-quality mobile app user interfaces.
 
