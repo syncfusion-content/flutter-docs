@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Syncfusion Flutter Gauge Animation
-description: This article describes how to add and customizes the appearence gauge annotation of radial gauge control in flutter platform
+title: Animation in Flutter Radial Gauge widget | Syncfusion
+description: Learn here all about adding and customizing animation of Syncfusion Flutter Radial Gauge (SfRadialGauge) widget and more.
 platform: flutter
 control: SfRadialGauge
 documentation: ug
 ---
 
-# Animation in  radial gauge
+# Animation in Fluter Radial Gauge (SfRadialGauge)
 
 ## Initial animation
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Syncfusion Flutter Gauge Annotation
-description: This article describes how to add and customizes the appearence gauge annotation of radial gauge control in flutter platform
+title: Annotation in Flutter Radial Gauge widget | Syncfusion
+description: Learn here all about adding and customizing Annotation in Syncfusion Flutter Radial Gauge (SfRadialGauge) widget and more.
 platform: flutter
 control: SfRadialGauge
 documentation: ug
 ---
 
-# Annotation
+# Annotation in Fluter Radial Gauge (SfRadialGauge)
 
 [`Radial axis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis-class.html) allows you to add multiple widgets such as text and image as an annotation to a specific point of interest in radial gauge.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Syncfusion Flutter Gauge Pointers
-description: This article describes how to add and customizes the appearence of pointers of radial gauge control in flutter platform
+title: Marker Pointer in Flutter Radial Gauge widget | Syncfusion
+description: Learn here all about adding and customizing Marker Pointer of Syncfusion Flutter Radial Gauge (SfRadialGauge) widget and more.
 platform: flutter
 control: SfRadialGauge
 documentation: ug
 ---
 
-# Marker pointer customization
+# Marker pointer in Fluter Radial Gauge (SfRadialGauge)
 
 Different types of markers are used to mark the pointer values in a scale. You can change the marker type using the [`markerType`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerPointer/markerType.html) property. 
 

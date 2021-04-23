@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Interaction in linear gauge | Linear Gauge widget| Syncfusion
-description: Tutorial about deatils of the interaction on Linear Gauge Flutter widget | Flutter Linear Gauge widget documentation|
+title: Interaction in Flutter Linear Gauge widget | Syncfusion
+description: Learn here all about the interactions in Syncfusion Flutter Linear Gauge (SfLinearGauge) widget and more
 platform: flutter
 control: SfLinearGauge
 documentation: ug
 ---
 
-# Flutter Linear Gauge Interaction
+# Interaction in Fluter Linear Gauge (SfLinearGauge)
 
 The shape and widget marker pointers in a Linear Gauge can be moved from one value to another by swiping or drag gestures.
 

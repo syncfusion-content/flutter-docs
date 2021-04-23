@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize bar pointer in linear gauge|Linear Gauge widget| Syncfusion
-description: Detailed tutorial about the bar pointer on Linear Gauge Flutter widget.| Flutter Linear Gauge widget|
+title: Bar Pointer in Flutter Linear Gauge widget | Syncfusion
+description: Learn here all about adding and customizing Bar Pointer of Syncfusion Flutter Linear Gauge (SfLinearGauge) widget and more.
 platform: flutter
 control: SfLinearGauge
 documentation: ug
 ---
 
-# Linear Gauge Bar Pointer
+# Bar Pointer in Fluter Linear Gauge (SfLinearGauge)
 
 A bar pointer is an accenting line or shaded background that can be placed on a Linear Gauge to mark any current value in the axis track. The bar pointers always start from the minimum value of the axis and end with the specified value. So the [`value`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/value.html) property is a required parameter for creating a bar pointer.
 
