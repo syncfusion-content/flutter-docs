@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mirror in Flutter Linear Gauge widget | Syncfusion
-description: Learn here all about adding and customizing Mirroring of Syncfusion Flutter Linear Gauge (SfLinearGauge) widget and more.
+description: Learn here about mirroring Syncfusion Flutter Linear Gauge (SfLinearGauge) widget
 platform: flutter
 control: SfLinearGauge
 documentation: ug

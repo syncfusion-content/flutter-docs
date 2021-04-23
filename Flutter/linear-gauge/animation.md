@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Animation in Flutter Linear Gauge widget | Syncfusion
-description: Learn here all about adding and customizing Animation of Syncfusion Flutter Linear Gauge (SfLinearGauge) widget and more.
+description: Learn here all about adding and customizing animation of Syncfusion Flutter Linear Gauge (SfLinearGauge) widget and more.
 platform: flutter
 control: SfLinearGauge
 documentation: ug
