@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Localization of Syncfusion Flutter DataGrid | DataPager
-description: Describes how to Localize static string of DataGrid (SfDataGrid) | DataPager (SfDataPager) control in Flutter | Globalization | Internationalization 
+title: Localization in Flutter DataGrid control | Syncfusion | DataPager
+description: Learn here all about DataPager feature of Syncfusion Flutter DataPager (SfDataPager) control and more.
 platform: flutter
 control: SfDataGrid
 documentation: ug

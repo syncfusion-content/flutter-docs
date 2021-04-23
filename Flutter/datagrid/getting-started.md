@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting started for Syncfusion Flutter DataGrid | DataTable
-description: Learn how to create the Syncfusion Flutter DataGrid and it's basic features such as data binding, column definition and selection.
+title: Getting started with Flutter DataGrid control | Syncfusion | DataTable
+description: Learn here about getting started with Syncfusion Flutter DataGrid (SfDataGrid) control, its elements, and more.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Getting Started with Flutter DataGrid (SfDataGrid)
+# Getting started with Flutter DataGrid (SfDataGrid)
 
 This section explains the steps required to add the DataGrid widget and its features. This section covers only basic features needed to get started with the Syncfusion Flutter DataGrid widget. 
 

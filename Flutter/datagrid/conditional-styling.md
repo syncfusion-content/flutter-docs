@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Conditional Styling feature in Syncfusion Flutter DataGrid | DataTable
-description: Learn how to customize the appearance of rows and cells by using conditional styling feature in Syncfusion Flutter DataGrid.
+title: Conditional Styling in Flutter DataGrid control | Syncfusion | DataTable
+description: Learn here all about Conditional Styling feature of Syncfusion Flutter DataGrid (SfDataGrid) control and more.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Conditional Styling in Flutter DataGrid
+# Conditional Styling in Flutter DataGrid (SfDataGrid)
 
 The [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) allows to customize the style of the individual cells and rows based on the requirements. You can customize your widget in the `DataGridSource.buildRow` method with the help of `DataGridRowAdapter`.
 

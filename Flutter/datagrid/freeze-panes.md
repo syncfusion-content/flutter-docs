@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Freeze panes for Syncfusion Flutter DataGrid | DataTable
-description: Learn how to freeze the row and column in Syncfusion Flutter DataGrid with support to customize the freeze count in the runtime.
+title: Freeze panes in Flutter DataGrid control | Syncfusion | DataTable
+description: Learn here all about Freeze Panes feature of Syncfusion Flutter DataGrid (SfDataGrid) control and more.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Freeze Panes in Flutter (SfDataGrid)
+# Freeze Panes in Flutter DataGrid (SfDataGrid)
 
 The rows and columns can freeze in view like Excel. The rows and columns can be freeze by setting following properties,
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Swiping in Flutter DataGrid | DataTable | Syncfusion
-description: Learn about how to provide swiping support to the data rows in both directions in Syncfusion Flutter DataGrid.
+title: Swiping in Flutter DataGrid control | Syncfusion | DataTable
+description: Learn here all about Swiping feature of Syncfusion Flutter DataGrid (SfDataGrid) control and more.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Swiping in Flutter DataGrid
+# Swiping in Flutter DataGrid (SfDataGrid)
 
 The Flutter DataTable provides support to swipe a row by setting the [SfDataGrid.allowSwiping](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowSwiping.html) property to true. Swipe actions will be displayed when swiping a row from `left to right` or `right to left` direction. The swipe dragging gesture can be restricted to a certain point on the row by setting the [SfDataGrid.swipeMaxOffset](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/swipeMaxOffset.html) property.
 
