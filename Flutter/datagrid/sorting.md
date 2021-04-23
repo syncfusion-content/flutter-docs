@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Sorting in Flutter DataGrid control | Syncfusion | DataTable
-description: Learn here all about Sorting feature of Syncfusion Flutter DataGrid (SfDataGrid) control and more.
+description: Learn here all about Sorting feature of Syncfusion Flutter DataGrid (SfDataGrid) |
+DataTable control and more.
 platform: flutter
 control: SfDataGrid
 documentation: ug
