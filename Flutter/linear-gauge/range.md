@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize range in a linear gauge | Linear Gauge widget| Syncfusion
-description: Tutorial about the available styles of range on Linear Gauge Flutter widget.| Flutter Linear Gauge widget|
+description: This section discusses how to add ranges and apply different styles to ranges in linear gauges for the Flutter platform.
 platform: flutter
 control: SfLinearGauge
 documentation: ug
