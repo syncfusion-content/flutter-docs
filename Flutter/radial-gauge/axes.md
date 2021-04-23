@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Axis of Syncfusion Flutter Gauge
-description: This article describes how to add and customizes the appearence of radial axis and its element of radial gauge in flutter platform
+title: Axis in Flutter Radial Gauge widget | Syncfusion
+description: Learn here all about adding and customizing Axis of Syncfusion Flutter Radial Gauge (SfRadialGauge) widget and more.
 platform: flutter
 control: SfRadialGauge
 documentation: ug
 ---
 
-# Radial axis customization
+# Axis in Fluter Radial Gauge (SfRadialGauge)
 
 The [`radial axis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis-class.html) is a circular arc in which a set of values are displayed along a linear or custom scale based on the design requirements. Axis elements such as  labels, ticks, and axis line can be easily customized with built-in properties.
 

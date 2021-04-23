@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize range in a linear gauge | Linear Gauge widget| Syncfusion
-description: Tutorial about the available styles of range on Linear Gauge Flutter widget.| Flutter Linear Gauge widget|
+title: Range in Flutter Linear Gauge widget | Syncfusion
+description: Learn here all about adding and customizing Range of Syncfusion Flutter Linear Gauge (SfLinearGauge) widget and more.
 platform: flutter
 control: SfLinearGauge
 documentation: ug
 ---
 
-# Default Linear Gauge range
+# Range in Fluter Linear Gauge (SfLinearGauge)
 
 A range is a visual element that helps you quickly visualize where a range falls on the axis track. Multiple ranges with different styles can be added to a linear gauge. The default style of range will be as below. 
 

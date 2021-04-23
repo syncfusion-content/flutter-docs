@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Animation in a linear gauge | Linear Gauge widget| Syncfusion
-description: Tutorial about deatils of the annimation on Linear Gauge Flutter widget | Flutter Linear Gauge widget documentation|
+title: Animation in Flutter Linear Gauge widget | Syncfusion
+description: Learn here all about adding and customizing animation of Syncfusion Flutter Linear Gauge (SfLinearGauge) widget and more.
 platform: flutter
 control: SfLinearGauge
 documentation: ug
 ---
 
-# Flutter Linear Gauge animation
+# Animation in Fluter Linear Gauge (SfLinearGauge)
 
 All Linear Gauge elements such as axis along with ticks and labels, range, bar pointer, shape marker pointer and widget marker pointer can be animated separately. 
 

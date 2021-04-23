@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize labels in a linear gauge | Linear Gauge widget| Syncfusion
-description: Tutorial about the available styles of labels on Linear Gauge Flutter widget.| Flutter Linear Gauge widget|
+title: Labels in Flutter Linear Gauge widget | Syncfusion
+description: Learn here all about adding and customizing Labels of Syncfusion Flutter Linear Gauge (SfLinearGauge) widget and more.
 platform: flutter
 control: SfLinearGauge
 documentation: ug
 ---
 
-# Default Linear Gauge Labels
+# Labels in Fluter Linear Gauge (SfLinearGauge)
 
 The default style of axis labels is as follows.
 
