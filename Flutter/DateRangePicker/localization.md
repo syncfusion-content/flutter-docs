@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Localization in Flutter Date Range Picker widget | Syncfusion | Date Picker | Localization | Globalization | Internationalization
+title: Localization in Flutter Date Range Picker widget | Syncfusion
 description: Learn here all about Localization feature of Syncfusion Flutter Date Range Picker (SfDateRangePicker) widget and more. 
 platform: flutter
 control: SfDateRangePicker

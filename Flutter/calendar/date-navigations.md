@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Date Navigations in Flutter Event Calendar widget | Syncfusion | Scheduler
+title: Date Navigations in Flutter Event Calendar widget | Syncfusion
 description: Learn here all about date navigation features of Syncfusion Flutter Calendar (SfCalendar) widget and more.
 platform: flutter
 control: SfCalendar

@@ -1,6 +1,6 @@
 ---
 layout: post 
-title: Load more in Flutter Event Calendar widget | Syncfusion | Lazy loading events
+title: Load more in Flutter Event Calendar widget | Syncfusion
 description: Learn here all about load more feature of Syncfusion Flutter Event Calendar (SfCalendar) widget and more.
 platform: flutter
 control: SfCalendar

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Time zone in Flutter Event Calendar widget | Syncfusoin | Scheduler
+title: Time zone in Flutter Event Calendar widget | Syncfusion | Scheduler
 description: Learn here all about Time zone feature of Syncfusion Flutter Event Calendar (SfCalendar) widget and more.
 platform: flutter
 control: SfCalendar

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Resource view in the Flutter Event Calendar widget | Syncfusion | Scheduler
+title: Resource view in the Flutter Event Calendar widget | Syncfusion
 description: Learn here all about Resource view feature of Syncfusion Flutter Event Calendar (SfCalendar) widget and more.
 platform: flutter
 control: SfCalendar

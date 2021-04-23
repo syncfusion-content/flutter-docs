@@ -1,6 +1,6 @@
 ---
 layout: post
-title: About Flutter Hijri Date Range Picker widget | Syncfusion | Date Picker | Date Selection
+title: About Flutter Hijri Date Range Picker widget | Syncfusion | Date Picker
 description: Learn here all about introduction of Syncfusion Hijri Date Range Picker (SfHijriDateRangePicker) widget and more.
 platform: flutter
 control: SfDateRangePicker

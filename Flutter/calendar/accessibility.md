@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Accessibility in Flutter Event Calendar widget | Syncfusion | Scheduler
+title: Accessibility in Flutter Event Calendar widget | Syncfusion
 description: Learn here all about accessibility feature of Syncfusion Flutter Calendar (SfCalendar) widget and more.
 platform: flutter
 control: SfCalendar

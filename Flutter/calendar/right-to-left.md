@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Right to Left in Flutter Event Calendar widget | Syncfusion | Scheduler
+title: Right to Left in Flutter Event Calendar widget | Syncfusion
 description: Learn here all about Right to Left feature of Syncfusion Flutter Event Calendar (SfCalendar) widget and more.
 platform: flutter
 control: SfCalendar

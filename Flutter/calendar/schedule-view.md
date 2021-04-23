@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Schedule view in Flutter Event Calendar widget | Syncfusion | Scheduler
+title: Schedule view in Flutter Event Calendar widget | Syncfusion
 description: Learn here all about Schedule view feature of Syncfusion Flutter Event Calendar (SfCalendar) widget and more.
 platform: flutter
 control: SfCalendar
