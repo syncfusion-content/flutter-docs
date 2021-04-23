@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize shape pointers in a linear gauge | Syncfusion
-description: This section explains about how to add and customize the appearance of shape marker pointer and its properties of linear gauge in Flutter platform.
+title: Shape Marker Pointer in Flutter Linear Gauge widget | Syncfusion
+description: Learn here all about adding and customizing Shape Marker Pointer of Syncfusion Flutter Linear Gauge (SfLinearGauge) widget and more.
 platform: flutter
 control: SfLinearGauge
 documentation: ug
 ---
 
-# Linear Gauge Shape Marker Pointers
+# Shape Marker Pointer in Fluter Linear Gauge (SfLinearGauge)
 
 The [`LinearShapePointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer-class.html) in [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html) have the following pre-defined shapes to mark a specific value. The default shape pointer is `invertedTriangle`. 
 

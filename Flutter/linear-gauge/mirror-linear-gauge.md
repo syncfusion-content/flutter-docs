@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Mirroring the a linear gauge | Linear Gauge widget| Syncfusion
-description: This section explains about how to mirror the linear gauges in the Flutter platform, also shows a diffrence between normal and mirrored gauge.
+title: Mirror in Flutter Linear Gauge widget | Syncfusion
+description: Learn here about mirroring the Syncfusion Flutter Linear Gauge (SfLinearGauge) widget with isMirrored property
 platform: flutter
 control: SfLinearGauge
 documentation: ug
 ---
 
-# Flutter Linear Gauge Mirroring
+# Mirrored in Fluter Linear Gauge (SfLinearGauge)
 
 The [`isMirrored`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/isMirrored.html) property in [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html) mirrors all the Gauge elements in the `SfLinearGauge`. The following code sample demonstrates how to setting the [`isMirrored`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/isMirrored.html) property.
 

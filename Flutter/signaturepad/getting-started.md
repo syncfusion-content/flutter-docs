@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started for Syncfusion Flutter SignaturePad | Syncfusion
-description: This section explains how to use the SignaturePad widget in flutter applciations and how to save a signature as image in flutter applciations.
+title: Getting started with Flutter Signature Pad widget | Syncfusion
+description: Learn here about getting started with Syncfusion Flutter Signature Pad (SfSignaturePad) widget, its elements, and more.
 platform: Flutter
 control: SfSignaturePad
 documentation: ug

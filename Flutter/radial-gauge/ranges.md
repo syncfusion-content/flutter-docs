@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Syncfusion Flutter Gauge Range
-description: This article describes how to add and customizes the appearence of ranges of radial gauge control in flutter platform
+title: Ranges in Flutter Radial Gauge widget | Syncfusion
+description: Learn here all about adding and customizing Ranges of Syncfusion Flutter Radial Gauge (SfRadialGauge) widget and more.
 platform: flutter
 control: SfRadialGauge
 documentation: ug
 ---
 
-# Gauge range customization
+# Ranges in Fluter Radial Gauge (SfRadialGauge)
 
 Gauge range is a visual element that helps to quickly visualize where a value falls on the axis. The text can be easily annotated in range to improve the readability.
 
