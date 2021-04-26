@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Flutter Widgets API Documentation | Syncfusion
-description: The reference and a summary with a sample code snippet for public API's available in Syncfusion Flutter widgets.
+description: Learn here all about Syncfusion Flutter Widgets API Documentation and their API reference links for each widget.
 platform: flutter
 control: API
 documentation: ug
