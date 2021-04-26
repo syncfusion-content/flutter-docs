@@ -1,7 +1,7 @@
 ---
 layout: post
 title: RTL in Flutter Slider widget | Syncfusion
-description: Learn here all about adding the RTL feature of Syncfusion Flutter Slider (SfSlider) widget and more.
+description: Learn here all about enabling the RTL rendering in the Syncfusion Flutter Slider (SfSlider) widget and more.
 platform: Flutter
 control: SfSlider
 documentation: ug

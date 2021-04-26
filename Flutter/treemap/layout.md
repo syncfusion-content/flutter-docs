@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Layouts in Flutter Treemap widget | Syncfusion
-description: Learn here all about adding the Layouts feature of Syncfusion Flutter Treemap (SfTreemap) widget and more.
+description: Learn here all about adding different layouts of the Syncfusion Flutter Treemap (SfTreemap) widget and more.
 platform: Flutter
 control: SfTreemap
 documentation: ug
