@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Controller in Syncfusion Flutter Range Selector | Syncfusion
-description: This section explains about how to use the range controller for getting and setting values in the Flutter range selector.
+title: Controller in Flutter Range Selector widget | Syncfusion
+description: Learn here all about adding the Controller feature in Syncfusion Flutter Range Selector (SfRangeSelector) widget and more.  
 platform: Flutter
 control: SfRangeSelector
 documentation: ug
 ---
 
-# Range controller in range selector
+# Controller in Flutter Range Selector (SfRangeSelector)
 
 You can use [`RangeController`](https://pub.dev/documentation/syncfusion_flutter_core/latest/core/RangeController-class.html) for setting and getting current selected values of range selector.
 

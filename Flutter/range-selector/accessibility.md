@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  Accessibility of Syncfusion Flutter Range Selector | Syncfusion
-description: This section explains about the accessibility support in Syncfusion Flutter SfRangeSelector widget in Flutter.
+title:  Accessibility in Flutter Range Selector widget | Syncfusion
+description: Learn here all about adding the accessibility support in Syncfusion Flutter Range Selector (SfRangeSelector) widget and more. 
 platform: Flutter
 control: SfRangeSelector
 documentation: ug
 ---
 
-# Accessibility with Flutter Range Selector (SfRangeSelector)
+# Accessibility in Flutter Range Selector (SfRangeSelector) 
 
 The [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html) can easily be accessed by screen readers. The default reading format for start thumb is `The start value is ${values.start}` and end thumb is `the end value is ${values.end}`. You can change the reading format using the [`semanticFormatterCallback`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/semanticFormatterCallback.html) property.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Enable & disable state in Syncfusion Flutter Range Slider | Syncfusion
-description: This section explains about how to render range slider in disabled state and customize its appearance.
+title: Enable & disable state in Flutter Range Slider widget | Syncfusion
+description: Learn here all about adding the enable & disable state support in Syncfusion Flutter Range Slider (SfRangeSlider) widget and more.
 platform: Flutter
 control: SfRangeSlider
 documentation: ug
 ---
 
-# Enabled and disabled state in range slider
+# Enabled and disabled state in Flutter Range Slider (SfRangeSlider)
 
 This section helps to learn about the enabled and disabled state in the Flutter range slider.
 

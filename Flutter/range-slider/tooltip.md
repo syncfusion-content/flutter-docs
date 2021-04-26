@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tooltip features in Syncfusion Flutter Range Slider | Syncfusion
-description: This section explains about how to show tooltips and customize its appearance in the Flutter range slider.
+title: Tooltip in Flutter Range Slider widget | Syncfusion
+description: Learn here all about adding the Tooltips feature in Syncfusion Flutter Range Slider (SfRangeSlider) widget and more.
 platform: Flutter
 control: SfRangeSlider
 documentation: ug
 ---
 
-# Tooltip features in range slider
+# Tooltip in Flutter Range Slider (SfRangeSlider)
 
 This section helps to learn about how to add tooltip in the range slider.
 
