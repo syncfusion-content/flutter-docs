@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  Accessibility of Syncfusion Flutter Slider | Syncfusion
-description: This section explains about the accessibility support in Syncfusion Flutter SfSlider widget in Flutter.
+title:  Accessibility in Flutter Slider widget | Syncfusion
+description: Learn here all about the accessibility support in Syncfusion Flutter Slider (SfSlider) widget and how to customize the text.
 platform: Flutter
 control: SfSlider
 documentation: ug
 ---
 
-# Accessibility with Flutter Slider (SfSlider)
+# Accessibility in Flutter Slider (SfSlider)
 
 The [`SfSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html) can easily be accessed by screen readers. By default, it will read the current value. You can change the reading format using the [`semanticFormatterCallback`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/semanticFormatterCallback.html) property.
 

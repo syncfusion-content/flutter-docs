@@ -1,13 +1,13 @@
 ---
 layout: post
-title: RTL feature in Syncfusion Flutter Range Selector | Syncfusion
-description: This section explains about how to render the Flutter range selector in right to left direction using Directionality widget.
+title: RTL in Flutter Range Selector widget | Syncfusion
+description: Learn here all about the RTL rendering in Syncfusion Flutter Range Selector (SfRangeSelector) widget.
 platform: Flutter
 control: SfRangeSelector
 documentation: ug
 ---
 
-# Right to Left (RTL) in range selector
+# Right to Left (RTL) in Flutter Range Selector (SfRangeSelector)
 
 The SfRangeSelector supports changing the layout direction of the widget in the right-to-left direction by setting the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to `rtl` in the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget.
 

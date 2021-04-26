@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Thumb and Thumb Overlay in Flutter Slider widget | Syncfusion
-description: Learn here all about the Thumb and Thumb Overlay feature of Syncfusion Flutter Slider (SfSlider) widget and more.
+description: Learn here all about the Thumb and Thumb Overlay features of Syncfusion Flutter Slider (SfSlider) widget and more.
 platform: Flutter
 control: SfSlider
 documentation: ug

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Basic features for Syncfusion Flutter Range Selector | Syncfusion
-description: This section explains about how to add numeric range selector and date range selector in Flutter application.
+title: Basic features in Flutter Range Selector widget | Syncfusion
+description: Learn here all about adding the Basic features in Syncfusion Flutter Range Selector (SfRangeSelector) widget and more. 
 platform: Flutter
 control: SfRangeSelector
 documentation: ug
 ---
 
-# Basic features of range selector
+# Basic features in Flutter Range Selector (SfRangeSelector)
 This section explains about how to add the numeric and date range selector.
 
 ## Minimum
