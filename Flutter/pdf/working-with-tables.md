@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tables in Flutter PDF library | Syncfusion
-description: Learn here all about Tables feature of Syncfusion Flutter PDF library and more.
+description: Learn here all about draw and customize cells, rows, and columns in Tables feature of Syncfusion Flutter PDF non-UI library and more.
 platform: flutter
 control: PDF
 documentation: ug

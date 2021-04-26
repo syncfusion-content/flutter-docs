@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Headers and Footers in Flutter PDF library | Syncfusion
-description: Learn here all about Headers and Footers feature of Syncfusion Flutter PDF library and more.
+description: Learn here all about drawing Headers and Footers feature of Syncfusion Flutter PDF non-UI library and more.
 platform: flutter
 control: PDF
 documentation: ug

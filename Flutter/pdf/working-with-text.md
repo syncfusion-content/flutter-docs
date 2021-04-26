@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Text drawing in Flutter PDF library | Syncfusion
-description: Learn here all about Text drawing feature of Syncfusion Flutter PDF library and more.
+description: Learn here all about Text extraction and find text feature of Syncfusion Flutter PDF non-UI library and more.
 platform: flutter
 control: PDF
 documentation: ug

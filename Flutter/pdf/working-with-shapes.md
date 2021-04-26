@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Shapes drawing in Flutter PDF library | Syncfusion
-description: Learn here all about Shapes drawing feature of Syncfusion Flutter PDF library and more.
+description: Learn here all about drawing different types of Shapes feature of Syncfusion Flutter PDF non-UI library and more.
 platform: flutter
 control: PDF
 documentation: ug
