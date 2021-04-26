@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Basic features for Syncfusion Flutter Slider | Syncfusion
-description: This section explains about how to add the numeric slider and date slider in the Flutter application.
+title: Basic features in Flutter Slider widget | Syncfusion
+description: Learn here all about adding the Basic feature of Syncfusion Flutter Slider (SfSlider) widget and more.
 platform: Flutter
 control: SfSlider
 documentation: ug
 ---
 
-# Basic features of slider
+# Basic features  in Flutter Slider (SfSlider)
 This section explains about how to add the numeric and date slider.
 
 ## Minimum

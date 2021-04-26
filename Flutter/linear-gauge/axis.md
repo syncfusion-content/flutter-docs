@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize axis in a linear gauge | Linear Gauge widget| Syncfusion
-description: Tutorial about deatils of the axis on Linear Gauge Flutter widget | Flutter Linear Gauge widget documentation|
+title: Axis in Flutter Linear Gauge widget | Syncfusion
+description: Learn here all about adding and customizing Axis of Syncfusion Flutter Linear Gauge (SfLinearGauge) widget and more.
 platform: flutter
 control: SfLinearGauge
 documentation: ug
 ---
 
-# Flutter Linear Gauge Axis
+# Axis in Fluter Linear Gauge (SfLinearGauge)
 
 The Linear Gauge axis is a scale where a set of values can be plotted. An axis can be customized by changing the thickness, color and edge styles. Axis elements such as labels and ticks can also be easily customized and you can also inverse the axis.
 

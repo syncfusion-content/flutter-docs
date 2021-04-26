@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Syncfusion Flutter Gauge Pointers
-description: This article describes how to add and customizes the appearence of pointers of radial gauge control in flutter platform
+title: Pointers in Flutter Radial Gauge widget | Syncfusion
+description: Learn here all about adding and customizing Pointers of Syncfusion Flutter Radial Gauge (SfRadialGauge) widget and more.
 platform: flutter
 control: SfRadialGauge
 documentation: ug
 ---
 
-# Pointers in radial gauge
+# Pointers in Fluter Radial Gauge (SfRadialGauge)
 
  Pointer is used to indicate values on an axis. The radial gauge control has three types of pointers: 
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Callbacks in Flutter Date Range Picker | Date Picker | Syncfusion
-description: This session describes the Date Range Picker callbacks in the SfDateRangePicker widget in the Flutter.
+title: Callbacks in Flutter Date Range Picker widget | Syncfusion
+description: Learn here all about Callbacks of Syncfusion Flutter Date Range Picker (SfDateRangePicker) widget and more.
 platform: Flutter
 control: SfDateRangePicker
 documentation: ug
 ---
 
-## Callbacks in Flutter date range picker
+## Callbacks in Flutter Date Range Picker (SfDateRangePicker)
 Calendar supports the `ViewChangedCallback` and `SelectionChangedCallback` to interact with the Flutter date range picker.
 
 ### View changed callback

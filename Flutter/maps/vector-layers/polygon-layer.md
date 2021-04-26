@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Adding polygons in Syncfusion Flutter maps | Syncfusion
-description: This section explains how to add polygons on the map and customize its appearance in the Flutter maps.
+title: Adding polygons in Flutter Maps widget | Syncfusion
+description: Learn here all about adding the Polygons feature of Syncfusion Flutter Maps (SfMaps) widget and more.
 platform: Flutter
 control: SfMaps
 documentation: ug
 ---
 
-# Polygons in the Flutter maps
+# Polygons in Flutter Maps (SfMaps)
 
 Polygon layer is a sublayer that renders a group of [`MapPolygon`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolygon-class.html) on [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html) and [`MapTileLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html). This section helps to learn about how to add the polygons and customize them.
 

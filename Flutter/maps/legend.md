@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Legend in Syncfusion Flutter Maps | Syncfusion
-description: This section explains how to show legend in the Flutter maps and customize its appearance including text, icon, position, etc.
+title: Legend in Flutter Maps widget | Syncfusion
+description: Learn here all about the Legend feature of Syncfusion Flutter Maps (SfMaps) widget to customize its appearance including text, icon and more.
 platform: Flutter
 control: SfMaps
 documentation: ug
 ---
 
-# Legend in the Flutter Maps
+# Legend in Flutter Maps (SfMaps)
 
 You can provide clear information on the data plotted on the map using legend.
 

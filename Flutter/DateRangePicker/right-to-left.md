@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Right to Left of Syncfusion Flutter Date Range Picker | Date Picker
-description: Describe how DateRangePicker works on right-to-left direction in Syncfusion SfDateRangePicker widget in Flutter
+title: Right to Left in Flutter Date Range Picker widget | Syncfusion
+description: Learn here all about Right to Left feature in Syncfusion Flutter Date Range Picker (SfDateRangePicker) widget and more.
 platform: flutter
 control: SfDateRangePicker
 documentation: ug
 ---
 
-# Right to Left (RTL) in Flutter DateRangePicker (SfDateRangePicker)
+# Right to Left (RTL) in Flutter Date Range Picker (SfDateRangePicker)
 
 The `SfDateRangePicker` supports changing the layout direction of the widget in the right-to-left direction by using the `Directionality` widget `textDirection` property to rtl.
 

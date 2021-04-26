@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Flutter Date Range Picker | Date Picker | Date Selection | Syncfusion
-description: The Syncfusion Flutter Date Range Picker widget allows users to easily select dates or a range of dates. It allows us to quickly navigate to the desired date.
+title: Getting started with Flutter Date Range Picker widget | Syncfusion
+description: Learn here about getting started with Syncfusion Flutter Date Range Picker (SfDateRangePicker) widget, its elements, and more.
 platform: flutter
 control: SfDateRangePicker
 documentation: ug
 ---
 
-# Getting Started with Flutter Date Range Picker (SfDateRangePicker)
+# Getting started with Flutter Date Range Picker (SfDateRangePicker)
 This section explains the steps required to add the date range picker widget. This section covers only basic features needed to get started with Syncfusion date range picker widget.
 
 ## Add flutter Date Range Picker to an application

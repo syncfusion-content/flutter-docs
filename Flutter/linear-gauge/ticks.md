@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize ticks in a linear gauge | Linear Gauge widget| Syncfusion
-description: Tutorial about the available styles of ticks on Linear Gauge Flutter widget.| Flutter Linear Gauge widget|
+title: Ticks in Flutter Linear Gauge widget | Syncfusion
+description: Learn here all about adding and customizing Ticks of Syncfusion Flutter Linear Gauge (SfLinearGauge) widget and more.
 platform: flutter
 control: SfLinearGauge
 documentation: ug
 ---
 
-# Default Linear Gauge ticks
+# Ticks in Fluter Linear Gauge (SfLinearGauge)
 
 The default style of axis ticks is as follows.
 
