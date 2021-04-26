@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Adding arcs in Syncfusion Flutter maps | Syncfusion
-description: This section explains about how to add arcs on the map and customize its appearance in the Flutter maps.
+title: Adding Arc layer in Flutter Maps widget | Syncfusion
+description: Learn here all about adding the Arc Layer feature of Syncfusion Flutter Maps (SfMaps) widget and more.
 platform: Flutter
 control: SfMaps
 documentation: ug
 ---
 
-# Arcs in the Flutter maps
+# Arc Layer in Flutter Maps (SfMaps)
 
 Arc layer is a sublayer that renders a group of [`MapArc`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapArc-class.html) on [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html) and [`MapTileLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html). This section helps to learn about how to add the arcs and customize them.
 

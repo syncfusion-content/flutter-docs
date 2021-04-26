@@ -1,13 +1,13 @@
 ---
 layout: post
-title: RTL feature in Syncfusion Flutter Slider | Syncfusion
-description: This section explains about how to render the Flutter slider in right to left direction using Directionality widget.
+title: RTL in Flutter Slider widget | Syncfusion
+description: Learn here all about enabling the RTL rendering in the Syncfusion Flutter Slider (SfSlider) widget and more.
 platform: Flutter
 control: SfSlider
 documentation: ug
 ---
 
-# Right to Left (RTL) in Flutter slider
+# Right to Left (RTL) in Flutter Slider (SfSlider) 
 
 The Slider supports changing the layout direction of the widget in the right-to-left direction by setting the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to `rtl` in the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget.
 

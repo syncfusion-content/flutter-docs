@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Place icons and images in Syncfusion Flutter Treemap | Syncfusion
-description: This section explains about how to place icons and images on the tiles and customize its appearance in the Flutter treemap.
+title: Item Builder in Flutter Treemap widget | Syncfusion
+description: Learn here all about the Item Builder feature of Syncfusion Flutter Treemap (SfTreemap) widget and more. 
 platform: Flutter
 control: SfTreemap
 documentation: ug
 ---
 
-# Item builder in the Flutter Treemap
+# Item Builder in Flutter Treemap (SfTreemap)
 
 You can add any type of custom widgets such as image widget as a background of the tiles to easily visualize the type of data that a particular tile shows.
 

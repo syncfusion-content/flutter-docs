@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data labels in Syncfusion Flutter Maps | Syncfusion
-description: This section explains about how to show data labels to the shapes and customize its appearance in the Flutter maps.
+title: Data Labels in Flutter Maps widget | Syncfusion
+description: Learn here all about the Data Labels feature of Syncfusion Flutter Maps (SfMaps) widget to add labels to the shapes and more.
 platform: Flutter
 control: SfMaps
 documentation: ug
 ---
 
-# Data labels in the Flutter Maps
+# Data Labels  in Flutter Maps (SfMaps)
 
 Data labels provides identification for the shapes by displaying their names. You can trim or hide the labels if they exceed the shape bounds.
 

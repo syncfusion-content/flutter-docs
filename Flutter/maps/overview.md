@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview of Syncfusion Flutter Maps
-description: Syncfusion Flutter maps provides a rich set of features such as data labels, selection, markers, bubbles, assignable colors based on region, and legends.
+title: About Flutter Maps widget | Syncfusion 
+description: Learn here all about the introduction of Syncfusion Flutter Maps (SfMaps) widget, its features, and more.
 platform: Flutter
 control: SfMaps
 documentation: ug
 ---
 
-# Overview of Flutter Maps
+# Flutter Maps (SfMaps) Overview
 
 Syncfusion Flutter Maps is a powerful data visualization component that displays statistical information for a geographical area. Its rich feature set includes tile rendering from OpenStreetMap, Bing Maps, and other tile providers with marker support and shape layer with features like selection, legends, labels, markers, tooltips, bubbles, color mapping, and much more.
 
