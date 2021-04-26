@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started for Syncfusion Flutter Maps | Syncfusion
-description: This section explains the steps required to add the maps widget and its elements such as data labels, markers, bubbles, and legends.
+title:  Getting started with Flutter Maps widget | Syncfusion
+description: Learn here about getting started with Syncfusion Flutter Maps (SfMaps) widget, its elements, and more.
 platform: Flutter
 control: SfMaps
 documentation: ug
 ---
 
-# Getting Started with Flutter Maps (SfMaps)
+# Getting started with Flutter Maps (SfMaps)
 This section explains the steps required to add the maps widget with shape layer and its elements such as data labels, tooltip, assignable colors based on region, and legends. It also explains about adding tile layer with OpenStreetMap. This section covers only basic features needed to know to get started with Syncfusion maps.
 
 To get start quickly with our Flutter Maps widget, you can check on this video.

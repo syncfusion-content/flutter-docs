@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Time zone in Syncfusion Flutter Calendar | Scheduler
-description: Learn about the Time zone and the usage of it with events in Syncfusion Flutter Calendar | Scheduler.
+title: Time zone in Flutter Event Calendar widget | Syncfusion | Scheduler
+description: Learn here all about Time zone feature of Syncfusion Flutter Event Calendar (SfCalendar) widget and more.
 platform: flutter
 control: SfCalendar
 documentation: ug
 ---
 
-# Time zone in Flutter Calendar (SfCalendar)
+# Time zone in Flutter Event Calendar (SfCalendar)
 
 Calendar allows you to create appointments in various time zones and display them in users’ time zone or any other time zone. You can use a time zone in the following four different ways:
 

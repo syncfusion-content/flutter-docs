@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Date Navigations of Syncfusion Flutter Date Range Picker | Syncfusion
-description: Learn about the complete navigation and gesture support in Syncfusion SfDateRangePicker widget in Flutter
+title: Date Navigations in Flutter Date Range Picker widget | Syncfusion
+description: Learn here all about Date navigations feature of Syncfusion Flutter Date Range Picker (SfDateRangePicker) widget and more.
 platform: Flutter
 control: SfDateRangePicker
 documentation: ug

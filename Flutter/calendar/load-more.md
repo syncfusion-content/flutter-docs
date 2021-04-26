@@ -1,13 +1,13 @@
 ---
 layout: post 
-title: Load more support in Syncfusion Flutter Calendar | Lazy loading events
-description: Learn about lazily loading more appointments on-demand with an intuitive interface using Flutter Calendar.
+title: Load more in Flutter Event Calendar widget | Syncfusion
+description: Learn here all about load more feature of Syncfusion Flutter Event Calendar (SfCalendar) widget and more.
 platform: flutter
 control: SfCalendar
 documentation: ug
 ---
 
-# Load more in flutter calendar
+# Load more in Flutter Event Calendar (SfCalendar).
 
 The Calendar provides the support to display an interactive view when the calendar view is changed, or the schedule view reaches its start or end offset. You can use the [loadMoreWidgetBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/loadMoreWidgetBuilder.html) builder to display the view while loading appointments in the calendar.
 

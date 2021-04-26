@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Callbacks in the Flutter Calendar | Scheduler | Syncfusion
-description: Learn about the callbacks in Syncfusion Flutter Calendar and the return values and usage of the callbacks
+title: Callbacks in Flutter Event Calendar widget | Syncfusion | Scheduler
+description: Learn here all about callbacks feature of Syncfusion Flutter Event Calendar (SfCalendar) widget and more.
 platform: flutter
 control: SfCalendar
 documentation: ug
 ---
 
-# Callbacks in flutter calendar
+# Callbacks in Flutter Event Calendar (SfCalendar)
 Calendar supports the [ViewChangedCallback](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/ViewChangedCallback.html) and [CalendarTapCallback](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarTapCallback.html) to interact with Flutter calendar.
 
 ## View changed callback
