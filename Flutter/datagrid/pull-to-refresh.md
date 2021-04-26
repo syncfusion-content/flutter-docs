@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Pull to Refresh in Flutter DataGrid | Syncfusion | DataTable
-description: Learn here all about Pull to Refresh feature of Syncfusion Flutter DataGrid (SfDataGrid) control and more.
+title: Pull to Refresh in Flutter DataGrid | DataTable | Syncfusion
+description: Learn here all about pull to refresh feature of Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
 platform: flutter
 control: SfDataGrid
 documentation: ug

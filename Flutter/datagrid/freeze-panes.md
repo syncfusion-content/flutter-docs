@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Freeze panes in Flutter DataGrid | Syncfusion | DataTable
-description: Learn here all about Freeze Panes feature of Syncfusion Flutter DataGrid (SfDataGrid) control and more.
+title: Freeze panes in Flutter DataGrid | DataTable | Syncfusion
+description: Learn here all about freeze Panes (fixed headers) feature of Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
 platform: flutter
 control: SfDataGrid
 documentation: ug

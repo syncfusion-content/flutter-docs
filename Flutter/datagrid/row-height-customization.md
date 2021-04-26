@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Row Height Customization in Flutter DataGrid | Syncfusion | DataTable
-description: Learn here all about Row Height Customization feature of Syncfusion Flutter DataGrid (SfDataGrid) control and more.
+title: Row Height Customization in Flutter DataGrid | DataTable | Syncfusion
+description: Learn here all about how to customize the row heights in Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
 platform: flutter
 control: SfDataGrid
 documentation: ug

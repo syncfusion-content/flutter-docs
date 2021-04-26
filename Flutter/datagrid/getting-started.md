@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with Flutter DataGrid | Syncfusion | DataTable
-description: Learn here about getting started with Syncfusion Flutter DataGrid (SfDataGrid) control, its elements, and more.
+title: Getting started with Flutter DataGrid | DataTable | Syncfusion
+description: Learn here about getting started with Syncfusion Flutter DataGrid (SfDataGrid) widget, its basic features, and more.
 platform: flutter
 control: SfDataGrid
 documentation: ug

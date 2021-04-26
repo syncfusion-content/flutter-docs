@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Binding in Flutter DataGrid | Syncfusion | DataTable
-description: Learn here all about Data Binding feature of Syncfusion Flutter DataGrid (SfDataGrid) control and more.
+title: Data Binding in Flutter DataGrid | DataTable | Syncfusion
+description: Learn here all about how to set datasource for Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
 platform: flutter
 control: SfDataGrid
 documentation: ug
