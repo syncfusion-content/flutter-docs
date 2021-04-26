@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Syncfusion Flutter Spark charts types
-description: Learn what are the different types of Spark charts available in the Syncfusion Flutter Spark chart widgets.
+title: Chart types in Flutter Spark Charts widget | Syncfusion 
+description: Learn here all about available Chart types of Syncfusion Spark Charts widget and more.
 platform: flutter
 control: Sparkline
 documentation: ug
 ---
 
-# Chart types in Spark charts
+# Chart types in Flutter Spark Charts
 
 ## Line chart
 

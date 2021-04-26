@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Supported one dimensional symbology for Syncfusion Flutter Barcode
-description: This article explains the supported one dimensional symbology types of syncfusion flutter barcode generator widget.
+title: One-dimensional symbology in Flutter Barcode widget | Syncfusion 
+description: Learn here all about One-dimensional symbology feature of Syncfusion Flutter Barcode (SfBarcodeGenerator) widget and more.
 platform: flutter
 control: SfBarcodeGenerator
 documentation: ug
 ---
 
-# One-dimensional symbology
+# One-dimensional symbology in Flutter Barcode (SfBarcodeGenerator)
 
 The one-dimensional barcode represents the data by varying the widths and spacings of the parallel lines. These barcode types are also known as linear barcode types. The Syncfusion flutter barcode generator supports the following one-dimensional barcode types:
 
