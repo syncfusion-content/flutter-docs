@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview of Syncfusion Flutter Slider
-description: Syncfusion Flutter slider provides a rich set of features such as support for numeric and date values, tooltip, labels, and ticks.
+title: About Flutter Slider widget | Syncfusion 
+description: Learn here all about the introduction of Syncfusion Flutter Slider (SfSlider) widget, its features, and more.
 platform: Flutter
 control: SfSlider
 documentation: ug
 ---
 
-# Overview of Flutter Slider
+# Flutter Slider (SfSlider) Overview
 
 Syncfusion Flutter Slider is a highly interactive UI control, allowing users to select a single value from a range of values. It provides rich features, such as numeric and date values, labels, ticks, divisors, and tooltip.
 

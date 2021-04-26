@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Date Navigations of Syncfusion Flutter Calendar | Scheduler
-description: Learn about the complete navigation and gesture support in Syncfusion Flutter Calendar (SfCalendar) widget | Scheduler
+title: Date Navigations in Flutter Event Calendar widget | Syncfusion
+description: Learn here all about date navigation features of Syncfusion Flutter Calendar (SfCalendar) widget and more.
 platform: flutter
 control: SfCalendar
 documentation: ug
 ---
 
-# Date Navigations in Flutter Calendar (SfCalendar)
+# Date Navigations in Flutter Event Calendar (SfCalendar)
 
 ## Range for visible dates
 Visible dates can be restricted between certain range of dates, using [minDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/minDate.html) and [maxDate](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/maxDate.html) properties in `SfCalendar`. It is applicable in all the schedule views.

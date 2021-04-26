@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Track features in Syncfusion Flutter Slider | Syncfusion
-description: This section explains about how to customize the appearance of the track in the Flutter application.
+title: Track in Flutter Slider widget | Syncfusion
+description: Learn here all about adding the Track feature of Syncfusion Flutter Slider (SfSlider) widget and more.
 platform: Flutter
 control: SfSlider
 documentation: ug
 ---
 
-# Track features in Flutter slider
+# Track in Flutter Slider (SfSlider)
 
 This section helps to learn about how to customize the track in the slider.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Selections in Syncfusion Flutter Date Range Picker | Syncfusion
-description: This session describes the multiple selections in SfDateRangePicker widget in Flutter | DatePicker | Syncfusion
+title: Selections in Flutter Date Range Picker widget | Syncfusion
+description: Learn here all about Selections feature in Syncfusion Flutter Date Range Picker (SfDateRangePicker) widget and more.
 platform: Flutter
 control: SfDateRangePicker
 documentation: ug

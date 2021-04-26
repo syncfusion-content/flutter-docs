@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Views of Syncfusion Flutter Date Range Picker | Syncfusion
-description: This session describes the Date Range Picker views in SfDateRangePicker widget in Flutter | Date Picker
+title: Views in Flutter Date Range Picker widget | Syncfusion
+description: Learn here all about Views feature of Syncfusion Flutter Date Range Picker (SfDateRangePicker) widget and more.
 platform: Flutter
 control: SfDateRangePicker
 documentation: ug
 ---
 
-# Multiple picker Views in Flutter Date Range Picker (SfDateRangePicker)
+# Multiple Picker Views in Flutter Date Range Picker (SfDateRangePicker)
 The `SfDateRangePicker` widget provides four different types of views to display. It can be assigned to the widget constructor by using the [view](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/view.html) property. Default view of the widget is month view. By default the current date will be displayed initially for all the date range picker views.
 
 ## Month view
