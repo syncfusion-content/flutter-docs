@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  Accessibility of Syncfusion Flutter Date Range Picker | Date Picker
-description: Learn about the accessibility support in Syncfusion Flutter SfDateRangePicker widget in Flutter | DatePicker
+title:  Accessibility in Flutter Date Range Picker widget | Syncfusion
+description: Learn here all about Accessibility feature of Syncfusion Flutter Date Range Picker (SfDateRangePicker) widget and more.
 platform: flutter
 control: SfDateRangePicker
 documentation: ug
 ---
 
-# Accessibility with Flutter DateRangePicker (SfDateRangePicker)
+# Accessibility in Flutter DateRangePicker (SfDateRangePicker)
 
 The `SfDateRangePicker` can easily be accessed by screen readers. Please find the following table  for inner elements.
 

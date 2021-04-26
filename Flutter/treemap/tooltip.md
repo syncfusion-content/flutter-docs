@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tooltip in Syncfusion Flutter treemap | Syncfusion
-description: This section explains how to show tooltip on a tile and customize its appearance in the Flutter treemap.
+title: Tooltip in Flutter Treemap widget | Syncfusion
+description: Learn here all about adding the Tooltip feature of Syncfusion Flutter Treemap (SfTreemap) widget and more.
 platform: Flutter
 control: SfTreemap
 documentation: ug
 ---
 
-# Tooltip features in treemap
+# Tooltip in Flutter Treemap (SfTreemap)
 
 Tooltip is used to provide information about the tile during the tap, or click interaction. This section helps to learn about how to show tooltip on a tile and customize them.
 

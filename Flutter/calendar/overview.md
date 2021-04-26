@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview of Syncfusion Flutter calendar | Scheduler
-description: Learn the key features of Syncfusion Flutter Calendar (SfCalendar) widget and more details | Scheduler.
+title: About Flutter Event Calendar widget | Syncfusion | Scheduler
+description: Learn here all about introduction of Syncfusion Flutter Event Calendar (SfCalendar) widget, its features, and more.
 platform: flutter
 control: SfCalendar
 documentation: ug
 ---
 
-# Overview of Syncfusion Flutter calendar
+# Flutter Event Calendar (SfCalendar) Overview
 
 The Syncfusion Flutter Calendar library was written natively in Dart and has seven types of built-in configurable view modes that provide basic functionality for scheduling, managing, and representing appointments efficiently. The Calendar Widget exposes a clean and convenient user interface for custom working days and hours and basic calendar operations such as date navigation and selection.
 

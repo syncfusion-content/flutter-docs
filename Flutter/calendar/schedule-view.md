@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Schedule view of Syncfusion Flutter Calendar | Scheduler
-description: Learn how to customize the schedule view and its appearance customization in Flutter event calendar.
+title: Schedule view in Flutter Event Calendar widget | Syncfusion
+description: Learn here all about Schedule view feature of Syncfusion Flutter Event Calendar (SfCalendar) widget and more.
 platform: flutter
 control: SfCalendar
 documentation: ug
 ---
 
-# Schedule view in flutter calendar
+# Schedule view in Flutter Event Calendar (SfCalendar)
 
 The `schedule` view of SfCalendar shows a list of scheduled appointments grouped by week, between min, and max dates, by default displaying the appointments from the current date. If the `DataSource` property of `SfCalendar` is null then the schedule view will display the month, week, and date headers alone in the view.
 

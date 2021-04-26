@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Month and agenda view of Syncfusion Flutter Calendar | Scheduler
-description: Learn how to customize the Calendar month view settings and its appearance in SfCalendar widget in Flutter
+title: Month view in Flutter Event Calendar widget | Syncfusion
+description: Learn here all about Month view feature of Syncfusion Flutter Event Calendar (SfCalendar) widget and more.
 platform: flutter
 control: SfCalendar
 documentation: ug
 ---
 
-# Month view in flutter calendar
+# Month view in Flutter Event Calendar (SfCalendar)
 
 The `month` view of SfCalendar used to display entire dates of the specific month and current month by default initially. Current date color is differentiated with other dates of the current month, also the color differentiation for dates will be applicable for previous and next month dates.
 

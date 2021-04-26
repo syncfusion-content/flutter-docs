@@ -1,11 +1,14 @@
 ---
 layout: post
-title: Header of Syncfusion Flutter Calendar | Scheduler
-description: Learn about the header and view header and their customization in Syncfusion Flutter Calendar widget
+title: Headers in Flutter Event Calendar widget | Syncfusion | Scheduler
+description: Learn here all about headers feature of Syncfusion Flutter Event Calendar (SfCalendar) widget and more.
 platform: flutter
 control: SfCalendar
 documentation: ug
 ---
+
+# Headers in Flutter Event Calendar (SfCalendar)
+
 ## Header
 
 

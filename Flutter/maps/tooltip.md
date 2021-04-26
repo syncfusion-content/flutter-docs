@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tooltip in Syncfusion Flutter maps | Syncfusion
-description: This section explains how to show tooltips in shape, bubble, and marker and customize its appearance in the Flutter maps.
+title: Tooltip in Flutter Maps widget | Syncfusion 
+description: Learn here all about adding the Tooltip feature of Syncfusion Flutter Maps (SfMaps) widget and more.
 platform: Flutter
 control: SfMaps
 documentation: ug
 ---
 
-# Tooltip features in maps
+# Tooltip in Flutter Maps (SfMaps)
 
 Tooltip is used to indicate the shape, bubble, marker information during the tap, or click interaction. This section helps to learn about how to show tooltip for the shapes, bubbles, and markers in the maps and customize them.
 
