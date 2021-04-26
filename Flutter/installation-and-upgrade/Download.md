@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Flutter Installation and Deployment | Syncfusion
-description: Learn here all about downloading, installing and deploying the Flutter installer and more.
+description: Learn here all about downloading and installing the Syncfusion Flutter installer and deploying the application
 platform: flutter
 control: Installation and Deployment
 documentation: ug
