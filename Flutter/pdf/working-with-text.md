@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Text of Syncfusion Flutter PDF
-description: Learn how to draw text using standard, true type and CJK fonts and apply text directions in the Flutter PDF.
+title: Text drawing in Flutter PDF library | Syncfusion
+description: Learn here all about Text drawing feature of Syncfusion Flutter PDF library and more.
 platform: flutter
 control: PDF
 documentation: ug
 ---
 
-# Working with PDF Text
+# Text Drawing in Flutter PDF
 
 ## Drawing text in PDF document
 

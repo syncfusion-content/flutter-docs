@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Images of Syncfusion Flutter PDF
-description: Learn how to draw raster images and applying transparency and rotation to the images in the Flutter PDF.
+title: Images in Flutter PDF library | Syncfusion
+description: Learn here all about Images feature of Syncfusion Flutter PDF library and more.
 platform: flutter
 control: PDF
 documentation: ug
 ---
 
-# Working with PDF Images
+# Images in Flutter PDF
 
 Images are supported through the [`PdfImage`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfImage-class.html) class, which is an abstract base class that provides functionality for [`PdfBitmap`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfBitmap-class.html) class.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Bookmarks of Syncfusion Flutter PDF
-description: Learn how to add bookmarks to navigate interactively from one part of the document to another in the Flutter PDF.
+title: Bookmarks in Flutter PDF library | Syncfusion
+description: Learn here all about Bookmarks feature of Syncfusion Flutter PDF library and more.
 platform: flutter
 control: PDF
 documentation: ug
 ---
 
-# Working with PDF Bookmarks
+# Bookmarks in Flutter PDF
 
 The Syncfusion Flutter PDF provides support to add [`bookmarks`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument/bookmarks.html) to a PDF document to navigate interactively from one part of the document to another. It provides customization such as title font, color, size and more. It also provides support to [`insert`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfBookmarkBase/insert.html), [`remove`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfBookmarkBase/remove.html), and modify the bookmarks in an existing PDF Document.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Document of Syncfusion Flutter PDF
-description: Learn how to protect PDF document using encryption and set permission to the PDF document operations in the Flutter PDF.
+title: Security in Flutter PDF library | Syncfusion
+description: Learn here all about Security feature of Syncfusion Flutter PDF library and more.
 platform: flutter
 control: PDF
 documentation: ug
 ---
 
-# Working with PDF Security
+# Security in Flutter PDF
 
 Flutter PDF allows you to protect the PDF document using encryption and set permission to the PDF document operations like printing, editing, copy content etc. using user password and owner password. Two types of encryption algorithms are available
 

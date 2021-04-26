@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Document of Syncfusion Flutter PDF
-description: Learn how to sign PDF document internally by using certificate with private keys or externally by using the digital signature created from various sources.
+title: Digital Signature in Flutter PDF library | Syncfusion
+description: Learn here all about Digital Signature feature of Syncfusion Flutter PDF library and more.
 platform: flutter
 control: PDF
 documentation: ug
 ---
 
-# Working with Digital Signature
+# Digital Signature in Flutter PDF
 
 Flutter PDF allows you to add a digital signature to the PDF document. You can sign the PDF document internally by using a certificate with private keys or externally by using the digital signature created from various sources such as cloud services like DigitalSign.
 
