@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with Flutter Spark Charts widget | Syncfusion
-description: Learn here about getting started with Syncfusion Flutter Spark Charts widget, its elements, and more.
+title: Getting started with Flutter Spark Charts | Sparkline | Syncfusion
+description: Learn here about getting started with Syncfusion Flutter Spark Charts widget (Sparkline), its elements, and more.
 platform: flutter
 control: Sparkline
 documentation: ug

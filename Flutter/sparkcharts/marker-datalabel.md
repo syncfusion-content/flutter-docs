@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Marker and data label in Flutter Spark Charts widget | Syncfusion 
-description: Learn here all about Marker and data label feature of Syncfusion Spark Charts widget, its features and more.
+description: Learn here all about marker and data label feature of Syncfusion Spark Charts widget, its features and more.
 platform: flutter
 control: Sparkline
 documentation: ug

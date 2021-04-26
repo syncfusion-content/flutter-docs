@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Flutter Widgets API Documentation | Syncfusion
-description: Learn here all about Syncfusion Flutter Widgets API Documentation and their API reference links for each widget repository.
+description: Learn here all about Syncfusion Flutter Widgets API Documentation and their API reference links for each widget.
 platform: flutter
 control: API
 documentation: ug
