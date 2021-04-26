@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Column types in Flutter DataGrid control | Syncfusion | DataTable
-description: Learn here all about Column types feature of Syncfusion Flutter DataGrid (SfDataGrid) control and more.
+title: Column types in Flutter DataGrid | Syncfusion | DataTable
+description: Learn here all about how to add columns to Syncfusion Flutter DataGrid (SfDataGrid) control and more.
 platform: flutter
 control: SfDataGrid
 documentation: ug

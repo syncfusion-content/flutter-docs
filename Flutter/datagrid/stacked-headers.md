@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Stacked Headers in Flutter DataGrid control | Syncfusion | DataTable
+title: Stacked Headers in Flutter DataGrid | Syncfusion | DataTable
 description: Learn here all about Stacked Headers feature of Syncfusion Flutter DataGrid (SfDataGrid) control and more.
 platform: flutter
 control: SfDataGrid

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Load More in Flutter DataGrid control | Syncfusion | DataTable
+title: Load More in Flutter DataGrid | Syncfusion | DataTable
 description: Learn here all about Load More feature of Syncfusion Flutter DataGrid (SfDataGrid) control and more.
 platform: flutter
 control: SfDataGrid

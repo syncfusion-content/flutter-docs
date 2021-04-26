@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Selection in Flutter DataGrid control | Syncfusion | DataTable
+title: Selection in Flutter DataGrid | Syncfusion | DataTable
 description: Learn here all about Selection feature of Syncfusion Flutter DataGrid (SfDataGrid) control and more.
 platform: flutter
 control: SfDataGrid

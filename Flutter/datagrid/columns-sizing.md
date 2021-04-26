@@ -1,13 +1,13 @@
 ---
 layout: post
-title: AutoFit Columns in Flutter DataGrid control | Syncfusion | DataTable
-description: Learn here all about AutoFit Columns feature of Syncfusion Flutter DataGrid (SfDataGrid) control and more.
+title: Columns sizing in Flutter DataGrid | Syncfusion | DataTable
+description: Learn here all about how to set the width for columns in Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Autofit Columns in Flutter DataGrid (SfDataGrid)
+# Column sizing in Flutter DataGrid (SfDataGrid)
 
 [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) allows to set the column widths based on certain logic using [SfDataGrid.columnWidthMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/columnWidthMode.html) or [GridColumn.columnWidthMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/columnWidthMode.html) property. Below are the list of predefined column sizing options available.
 

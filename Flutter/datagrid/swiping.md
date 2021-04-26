@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Swiping in Flutter DataGrid control | Syncfusion | DataTable
+title: Swiping in Flutter DataGrid | Syncfusion | DataTable
 description: Learn here all about Swiping feature of Syncfusion Flutter DataGrid (SfDataGrid) | DataTable control and more.
 platform: flutter
 control: SfDataGrid

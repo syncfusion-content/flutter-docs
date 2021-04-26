@@ -1,6 +1,6 @@
 ---
 layout: post
-title: About Flutter DataGrid control | Syncfusion | DataTable
+title: About Flutter DataGrid | Syncfusion | DataTable
 description: Learn here all about introduction of Syncfusion Flutter DataGrid (SfDataGrid) control, its features, and more.
 platform: flutter
 control: SfDataGrid
