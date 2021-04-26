@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Plot band in Flutter Spark Charts widget | Syncfusion 
-description:  Learn here all about the Plot band feature of Syncfusion Spark Charts widget, its features, and more.
+description: Learn here all about the Plot band feature of Syncfusion Spark Charts widget, its properties, and more.
 platform: flutter
 control: Sparkline
 documentation: ug
