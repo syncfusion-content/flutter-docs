@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started for Syncfusion Flutter Range Slider | Syncfusion
-description: This section explains the steps required to add the range slider widget and its elements such as numeric and date values, ticks, labels and tooltips
+title: Getting started with Flutter Range Slider widget | Syncfusion
+description: Learn here about getting started with Syncfusion Flutter Range Slider (SfRangeSlider) widget, its elements, and more.
 platform: Flutter
 control: SfRangeSlider
 documentation: ug
 ---
 
-# Getting Started with Flutter Range Slider (SfRangeSlider)
+# Getting started with Flutter Range Slider (SfRangeSlider)
 This section explains the steps required to add the range slider widget and its elements such as numeric and date values, ticks, labels and tooltips. This section covers only basic features needed to know to get started with Syncfusion range slider.
 
 ## Add Flutter range slider to an application
