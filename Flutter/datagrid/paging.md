@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Paging in Flutter DataGrid | DataPager | Syncfusion
-description: Learn here all about paging feature of Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
+description: Learn here all about paging feature and how to customize its apperance in Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
 platform: flutter
 control: SfDataGrid
 documentation: ug
