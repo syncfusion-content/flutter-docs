@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Localization of Syncfusion Flutter Date Range Picker | Date Picker
-description: Describe how to Localize the contents in Syncfusion SfDateRangePicker widget in Flutter | Globalization | Internationalization | Date picker
+title: Localization in Flutter Date Range Picker widget | Syncfusion
+description: Learn here all about Localization feature of Syncfusion Flutter Date Range Picker (SfDateRangePicker) widget and more. 
 platform: flutter
 control: SfDateRangePicker
 documentation: ug
 ---
 
-# Localization in Flutter DateRangePicker (SfDateRangePicker)
+# Localization in Flutter Date Range Picker (SfDateRangePicker)
 
 By default, the calendar widget supports US English localizations. You can change other languages by specifying the `MaterialApp` properties and adding the `flutter_localizations` package to your application.
 
