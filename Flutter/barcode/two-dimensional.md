@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Two-dimensional symbology in Flutter Barcode widget | Syncfusion 
-description: Learn here all about Two-dimensional symbology feature of Syncfusion Flutter Barcode (SfBarcodeGenerator) widget and more.
+title: Two-dimensional symbology in Flutter Barcodes widget | Syncfusion 
+description: Learn here all about Two-dimensional symbology feature of Syncfusion Flutter Barcodes (SfBarcodeGenerator) widget and more.
 platform: flutter
 control: SfBarcodeGenerator
 documentation: ug
 ---
 
-# Two-dimensional symbology in Flutter Barcode (SfBarcodeGenerator)
+# Two-dimensional symbology in Flutter Barcodes (SfBarcodeGenerator)
 
 Two dimensional Barcode is a way to represent information by using the two-dimensional approach. It is similar to one dimensional Barcode, but can represent more data per unit area. The barcode generator control supports the following two dimensional symbology:
 
