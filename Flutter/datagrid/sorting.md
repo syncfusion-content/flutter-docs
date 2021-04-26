@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sorting in Flutter DataGrid | DataTable | Syncfusion
-description: Learn here all about how to sort one or more columns with the tristate sorting in Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
+description: Learn here all about sorting feature of Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
 platform: flutter
 control: SfDataGrid
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Stacked Headers in Flutter DataGrid | DataTable | Syncfusion
-description: Learn here all about how to add stacked header rows and customize its height in Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
+description: Learn here all about how to add multi column headers (stacked headers) in Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
 platform: flutter
 control: SfDataGrid
 documentation: ug
