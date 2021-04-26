@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Adding polylines in Syncfusion Flutter maps | Syncfusion
-description: This section explains how to add polylines on the map and customize its appearance in the Flutter maps.
+title: Adding Polylines in Flutter Maps widget | Syncfusion
+description: Learn here all about adding the Polylines feature of Syncfusion Flutter Maps (SfMaps) widget and more.
 platform: Flutter
 control: SfMaps
 documentation: ug
 ---
 
-# Polylines in the Flutter maps
+# Polylines in Flutter Maps (SfMaps)
 
 Polyline layer is a sublayer that renders a group of [`MapPolyline`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolyline-class.html) on [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html) and [`MapTileLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html). This section helps to learn about how to add the polylines and customize them.
 
