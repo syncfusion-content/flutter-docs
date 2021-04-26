@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Installation and Deployment process for Syncfusion Flutter products
-description: Learn here all about Installation using Offline Installer and more.
+title: Installation using Offline Installer | Syncfusion
+description: Learn here all about the steps involved in the Installation process for Syncfusion Flutter products using Offline Installer.
 platform: flutter
 control: Installation and Deployment
 documentation: ug

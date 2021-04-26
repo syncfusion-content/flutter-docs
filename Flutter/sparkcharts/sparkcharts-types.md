@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Chart types in Flutter Spark Charts widget | Syncfusion 
-description: Learn here all about available Chart types of Syncfusion Spark Charts widget and more.
+description: Learn here all about the Plotband feature of Syncfusion Spark Charts widget, its features and more.
 platform: flutter
 control: Sparkline
 documentation: ug

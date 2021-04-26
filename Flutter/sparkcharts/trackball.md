@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Trackball in Flutter Spark Charts widget | Syncfusion 
-description: Learn here all about Trackball feature of Syncfusion Spark Charts widget and more.
+description: Learn here all about Trackball feature of Syncfusion Spark Charts widget, its features and more.
 platform: flutter
 control: Sparkline
 documentation: ug

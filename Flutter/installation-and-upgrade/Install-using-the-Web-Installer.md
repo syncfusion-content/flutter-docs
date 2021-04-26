@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Installation process for Syncfusion Flutter products
-description: Learn here all about Installation and more.
+description: Learn here all about the steps involved in the Installation process for Syncfusion Flutter products.
 platform: flutter
 control: Installation and Deployment
 documentation: ug

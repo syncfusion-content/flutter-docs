@@ -1,7 +1,7 @@
 ---
 layout: post
 title: System Requirements for Flutter | Syncfusion
-description: Learn here all about System Requirements for Flutter and more.
+description: Learn here all about the System Requirements for Flutter installation in your system.
 platform: flutter
 control: Installation and Deployment
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Flutter Widgets Examples | Syncfusion
-description: Learn here all about Syncfusion Flutter Widgets Examples and more.
+description: Learn here all about Syncfusion Flutter Widgets repositories and their samples for further demonstrations.
 platform: flutter
 control: flutter
 documentation: ug

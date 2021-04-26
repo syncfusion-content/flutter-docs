@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Flutter Widgets Catalog | Syncfusion
-description: Learn here all about Syncfusion Flutter Widgets Catalog and more.
+description: Learn here all about Syncfusion Flutter Widgets Catalog, its features and reference links of the respective widgets.
 platform: flutter
 control: flutter
 documentation: ug
