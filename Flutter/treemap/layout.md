@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Different layouts in Syncfusion Flutter Treemap | Syncfusion
-description: This section explains the steps required to visualize the treemap widget in the different layouts based on slice, dice, and squarified algorithms.
+title: Layouts in Flutter Treemap widget | Syncfusion
+description: Learn here all about adding the Layouts feature of Syncfusion Flutter Treemap (SfTreemap) widget and more.
 platform: Flutter
 control: SfTreemap
 documentation: ug
 ---
 
-# Layouts in Flutter Treemap
+# Layouts in Flutter Treemap (SfTreemap)
 
 This section explains the different layouts in the treemap widget. The available layouts are,
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tick features in Syncfusion Flutter Slider | Syncfusion
-description: This section explains about how to show minor ticks, major ticks and how to customize them in the slider.
+title: Tick in Flutter Slider widget | Syncfusion 
+description: Learn here all about adding the Tick feature of Syncfusion Flutter Slider (SfSlider) widget and more.
 platform: Flutter
 control: SfSlider
 documentation: ug
 ---
 
-# Ticks features in Flutter slider
+# Tick in Flutter Slider (SfSlider)
 
 This section helps to learn about how to add major and minor ticks in the slider.
 

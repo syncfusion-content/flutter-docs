@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Shape selection in Syncfusion Flutter Maps | Syncfusion
-description: This section explains about how to enable shape selection and explains how to perform any action during selection.
+title: Shape Selection in Flutter Maps widget | Syncfusion
+description: Learn here all about the Shape Selection feature of Syncfusion Flutter Maps (SfMaps) widget and more.
 platform: Flutter
 control: SfMaps
 documentation: ug
 ---
 
-# Shape selection in the Flutter Maps
+# Shape Selection in Flutter Maps (SfMaps)
 
 You can select a shape in order to highlight that area on a map. You can use the callback for performing any action during shape selection.
 

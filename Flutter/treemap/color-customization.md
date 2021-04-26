@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Colors customization in Syncfusion Flutter Treemap | Syncfusion
-description: This section explains the steps required to apply colors to the tiles based on specific value or range of values.
+title: Colors Customization in Flutter Treemap widget | Syncfusion
+description: Learn here all about the Colors Customization feature of Syncfusion Flutter Treemap (SfTreemap) widget and more. 
 platform: Flutter
 control: SfTreemap
 documentation: ug
 ---
 
-# Colors in the Flutter Treemap
+# Colors Customization in Flutter Treemap (SfTreemap)
 
 This section explains about the customization of color for the tiles based on specific value or range of values.
 

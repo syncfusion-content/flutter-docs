@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Adding circles in Syncfusion Flutter maps | Syncfusion
-description: This section explains about how to add circles on the map and customize its appearance in the Flutter maps.
+title: Adding Circle Layer in Flutter Maps widget | Syncfusion
+description: Learn here all about adding Circle Layer feature of Syncfusion Flutter Maps (SfMaps) widget and more.
 platform: Flutter
 control: SfMaps
 documentation: ug
 ---
 
-# Circles in the Flutter maps
+# Circle Layer in Flutter Maps (SfMaps)
 
 Circle layer is a sublayer that renders a group of [`MapCircle`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapCircle-class.html) on [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html) and [`MapTileLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html). This section helps to learn about how to add the circles and customize them.
 
