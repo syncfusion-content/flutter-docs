@@ -1,7 +1,7 @@
 ---
 layout: post
 title: RTL in Flutter Range Selector widget | Syncfusion
-description: Learn here all about adding the RTL feature in Syncfusion Flutter Range Selector (SfRangeSelector) widget and more.
+description: Learn here all about the RTL rendering in Syncfusion Flutter Range Selector (SfRangeSelector) widget.
 platform: Flutter
 control: SfRangeSelector
 documentation: ug

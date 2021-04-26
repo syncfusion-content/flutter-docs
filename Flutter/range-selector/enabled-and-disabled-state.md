@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Disabled state in Flutter Range Selector widget | Syncfusion
-description: Learn here all about adding the Disabled state feature in Syncfusion Flutter Range Selector (SfRangeSelector) widget and more. 
+description: Learn here all about the Disabled state in Syncfusion Flutter Range Selector (SfRangeSelector) widget. 
 platform: Flutter
 control: SfRangeSelector
 documentation: ug

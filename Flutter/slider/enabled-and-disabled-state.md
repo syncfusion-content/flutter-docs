@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Enable & disable state in Flutter Slider widget | Syncfusion
+title: Enable & disable states in Flutter Slider widget | Syncfusion
 description: Learn here all about the enabled and disabled states of the Syncfusion Flutter Slider (SfSlider) widget and how to customize them.
 platform: Flutter
 control: SfSlider
 documentation: ug
 ---
 
-# Enabled and disabled state in Flutter Slider (SfSlider)
+# Enabled and disabled states in Flutter Slider (SfSlider)
 
 This section helps to learn about the enabled and disabled state in the Flutter slider.
 

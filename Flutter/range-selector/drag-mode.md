@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Drag modes in Flutter Range Selector widget | Syncfusion
-description: Learn here all about adding the Drag modes feature in Syncfusion Flutter Range Selector (SfRangeSelector) widget and more. 
+description: Learn here all about adding the multiple Drag modes in Syncfusion Flutter Range Selector (SfRangeSelector) widget and more. 
 platform: Flutter
 control: SfRangeSelector
 documentation: ug

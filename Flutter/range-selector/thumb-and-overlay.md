@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Thumb in Flutter Range Selector widget | Syncfusion
-description:  Learn here all about adding the thumb and thumb overlay feature in Syncfusion Flutter Range Selector (SfRangeSelector) widget and more.
+description:  Learn here all about adding the thumb and thumb overlay features in Syncfusion Flutter Range Selector (SfRangeSelector) widget and more.
 platform: Flutter
 control: SfRangeSelector
 documentation: ug

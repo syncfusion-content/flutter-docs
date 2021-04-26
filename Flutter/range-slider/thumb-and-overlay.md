@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Thumb in Flutter Range Slider widget | Syncfusion
-description: Learn here all about adding the thumb and thumb overlay feature in Syncfusion Flutter Range Slider (SfRangeSlider) widget and more. 
+description: Learn here all about adding the thumb and thumb overlay features in Syncfusion Flutter Range Slider (SfRangeSlider) widget and more. 
 platform: Flutter
 control: SfRangeSlider
 documentation: ug
