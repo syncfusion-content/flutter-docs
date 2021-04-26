@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Pull to Refresh in Flutter DataGrid | DataTable | Syncfusion
-description: Learn about how to add more data at runtime by using pull to refresh support and how to show refresh indicator programmatically in Syncfusion Flutter DataGrid.
+description: Learn here all about pull to refresh feature of Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Pull to Refresh in Flutter DataGrid
+# Pull to Refresh in Flutter DataGrid (SfDataGrid)
 
 The Flutter DataTable provides support to add more data at runtime by using the PullToRefresh feature.
 You can simply enable the PullToRefresh option by setting the [SfDataGrid.allowPullToRefresh](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowPullToRefresh.html) property to `true` and override the [DataGridSource.handleRefresh](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/handleRefresh.html) method to include the data which is going to add to the data source at runtime and then notify the data grid about the changes.
