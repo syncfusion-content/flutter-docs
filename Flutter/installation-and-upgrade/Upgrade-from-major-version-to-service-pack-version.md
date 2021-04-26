@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Upgrade from major version to service pack version|Syncfusion
-description: upgrade from major version to service pack version
+title: Upgrade from major version to service pack version | Syncfusion
+description: Learn here all about Upgrading from major version to service pack version and more.
 platform: flutter
 control: Essential Studio
 documentation: ug

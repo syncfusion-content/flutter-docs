@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Installation and Deployment process for Syncfusion Flutter widgets
-description: Describes the supported platforms and the system requirements to install the Syncfusion Flutter widgets.
+title: System Requirements for Flutter | Syncfusion
+description: Learn here all about System Requirements for Flutter and more.
 platform: flutter
 control: Installation and Deployment
 documentation: ug
