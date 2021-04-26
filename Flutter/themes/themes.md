@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Theme for Syncfusion Flutter widgets | SYncfusion
-description:  Learn here all about applying Theme for Syncfusion Flutter widgets, its features and more.
+description: Learn here all about applying Theme for Syncfusion Flutter widgets, using Theme (SfTheme) widget , its features, and more.
 platform: flutter
 control: General
 documentation: ug
