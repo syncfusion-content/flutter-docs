@@ -42,7 +42,7 @@ The Syncfusion Flutter Date Range Picker is a lightweight widget that allows use
 
    ![Blackout dates Date Range Picker](images/overview/blackoutdates.png)
 
-* **Highlight holidays and weekends**: Highlight any date or every weekend in a month as special days using decoration in flutter date range picker.
+* **Highlight holidays and weekends**: Highlight any date or every weekend in a month as special days using decoration in Flutter date range picker.
 
   ![Highlight holidays and weekends Date Range Picker](images/overview/customization.png)
 

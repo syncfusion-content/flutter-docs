@@ -8,6 +8,7 @@ documentation: ug
 ---
 
 # Headers in Flutter Event Calendar (SfCalendar)
+You can learn about the header and view header height, date format, and appearance support of SfCalendar.
 
 ## Header
 
