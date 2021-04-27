@@ -45,7 +45,7 @@ Explore the full capabilities of our Flutter widgets on your device by installin
 <p align="center">
   <a href="https://play.google.com/store/apps/details?id=com.syncfusion.flutter.examples"><img src="https://cdn.syncfusion.com/content/images/FTControl/google-play.png"/></a>
   <a href="https://apps.apple.com/us/app/syncfusion-flutter-ui-widgets/id1475231341"><img src="https://cdn.syncfusion.com/content/images/FTControl/apple-button.png"/></a>
-  <br>
+  
   <a href="https://github.com/syncfusion/flutter-examples"><img src="https://cdn.syncfusion.com/content/images/FTControl/GitHub.png"/></a>
   <a href="https://flutter.syncfusion.com"><img src="https://cdn.syncfusion.com/content/images/FTControl/web_sample_browser.png"/></a>  
 </p>
@@ -102,6 +102,12 @@ background-color:transparent!important;
 
 <table id="table">
 <tbody>
+<colgroup>
+<col style="width: 220px">
+<col style="width: 260px">
+<col style="width: 220px">
+<col style="width: 220px">
+</colgroup>
   <tr>
     <th id="title">GRIDS</th>
     <th id="title">LAYOUT</th>
@@ -112,12 +118,12 @@ background-color:transparent!important;
 
   <tr>
     <td><a id="anchor"  href="https://help.syncfusion.com/wpf/datagrid/getting-started">DataGrid</a> </td>
-    <td><a id="anchor"  href="https://help.syncfusion.com/wpf/docking/getting-started" >Docking</a> <br></td>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/tabcontrol/getting-started">TabControl</a></td>
-    <td> <br><a id="anchor" style="text-decoration: none;" href="https://help.syncfusion.com/wpf/maskedtextbox/getting-started">MaskedTextBox</a></td>
+    <td><a id="anchor"  href="https://help.syncfusion.com/wpf/docking/getting-started" >Docking</a> </td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/tabcontrol/getting-started">TabControl</a></td>
+    <td> <a id="anchor" style="text-decoration: none;" href="https://help.syncfusion.com/wpf/maskedtextbox/getting-started">MaskedTextBox</a></td>
   </tr>
   <tr>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/treegrid/getting-started" >TreeGrid</a> </td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/treegrid/getting-started" >TreeGrid</a> </td>
     <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/carousel/getting-started">Carousel</a> </td>
     <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/ribbon/gettingstarted">Ribbon</a> </td>
     <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/color-picker/getting-started">Color Picker</a> </td>
@@ -125,125 +131,125 @@ background-color:transparent!important;
   <tr>
     <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/propertygrid/getting-started">PropertyGrid</a> </td>
     <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/card-view/getting-started">Card View</a> </td>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/treeview/getting-started">TreeView</a></td>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/color-palette/getting-started">Color Palette</a></td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/treeview/getting-started">TreeView</a></td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/color-palette/getting-started">Color Palette</a></td>
   </tr>
   <tr>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/gridcontrol/getting-started" >Excel-like Grid</a> </td>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/tabbed-mdi-form/getting-started" >Tabbed MDI Form</a> <br></td>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/breadcrumb/getting-started">BreadCrumb</a></td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/gridcontrol/getting-started" >Excel-like Grid</a> </td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/tabbed-mdi-form/getting-started" >Tabbed MDI Form</a> </td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/breadcrumb/getting-started">BreadCrumb</a></td>
     <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/color-picker-palette/getting-started">Color Picker Palette</a> </td>
   </tr>
   <tr>
     <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/datapager/getting-started" >DataPager</a></td>
     <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/chromeless-window/getting-started">Chromeless Window</a> </td>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/accordion/getting-started">Accordion</a></td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/accordion/getting-started">Accordion</a></td>
     <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/currency-textbox/getting-started">Currency TextBox</a> </td>
   </tr>
   <tr>
     <td></td>
     <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/tab-splitter/getting-started">Tab Splitter</a> </td>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/navigation-pane/getting-started">Navigation Pane</a></td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/navigation-pane/getting-started">Navigation Pane</a></td>
     <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/integer-textbox/getting-started">Integer TextBox</a> </td>
   </tr>
   <tr>
     <td id="title">DATA VISUALIZATION</td>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/gridsplitter/getting-started" >GridSplitter</a>  <br></td>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/navigation-drawer/getting-started">Navigation Drawer</a></td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/gridsplitter/getting-started" >GridSplitter</a>  </td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/navigation-drawer/getting-started">Navigation Drawer</a></td>
     <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/double-textbox/getting-started">Double TextBox</a> </td>
   </tr>
   <tr>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/charts/getting-started" >Charts</a></td>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/tile-view/getting-started" >Tile View</a>  <br></td>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/menu/getting-started">Menu</a></td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/charts/getting-started" >Charts</a></td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/tile-view/getting-started" >Tile View</a>  </td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/menu/getting-started">Menu</a></td>
     <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/percent-textbox/getting-started">Percent TextBox</a> </td>
   </tr>
   <tr>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/diagram/getting-started" >Diagram</a></td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/diagram/getting-started" >Diagram</a></td>
     <td></td>
     <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/taskbar/getting-started">TaskBar</a> </td>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/domain-updown/getting-started">Domain Updown</a></td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/domain-updown/getting-started">Domain Updown</a></td>
   </tr>
   <tr>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/maps/getting-started" >Map</a> </td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/maps/getting-started" >Map</a> </td>
     <td id="title" >FILE VIEWERS &amp; EDITORS</td>
     <td><a id="anchor"  href="https://help.syncfusion.com/wpf/tab-navigation/getting-started">Tab Navigation</a></td>
     <td><a id="anchor"  href="https://help.syncfusion.com/wpf/numericupdown/getting-started">NumericUpdown</a></td>
   </tr>
   <tr>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/surface-chart/getting-started" >Surface Chart</a></td>
-    <td><a id="anchor"  href="https://help.syncfusion.com/wpf/pdf-viewer/getting-started" >PDF Viewer</a> <br></td>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/radial-menu/getting-started">Radial Menu</a></td>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/radial-slider/getting-started">Radial Slider</a></td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/surface-chart/getting-started" >Surface Chart</a></td>
+    <td><a id="anchor"  href="https://help.syncfusion.com/wpf/pdf-viewer/getting-started" >PDF Viewer</a> </td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/radial-menu/getting-started">Radial Menu</a></td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/radial-slider/getting-started">Radial Slider</a></td>
   </tr>
   <tr>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/smith-chart/getting-started" >Smith Chart</a></td>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/image-editor/getting-started" >ImageEditor</a> <br></td>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/toolbar/getting-started">Toolbar</a></td>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/range-slider/getting-started">Range Slider</a></td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/smith-chart/getting-started" >Smith Chart</a></td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/image-editor/getting-started" >ImageEditor</a> </td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/toolbar/getting-started">Toolbar</a></td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/range-slider/getting-started">Range Slider</a></td>
   </tr>
   <tr>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/gantt/getting-started" >Gantt</a></td>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/spreadsheet/getting-started" >Spreadsheet</a> <br></td>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/tree-navigator/getting-started">Tree Navigator</a></td>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/rating/getting-started">Rating</a></td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/gantt/getting-started" >Gantt</a></td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/spreadsheet/getting-started" >Spreadsheet</a> </td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/tree-navigator/getting-started">Tree Navigator</a></td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/rating/getting-started">Rating</a></td>
   </tr>
   <tr>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/radial-gauge/getting-started" >Radial Gauge</a></td>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/richtextbox/getting-started" >RichTextBox</a> <br></td>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/wizard-control/getting-started">Wizard</a></td>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/calculator/getting-started">Calculator</a></td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/radial-gauge/getting-started" >Radial Gauge</a></td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/richtextbox/getting-started" >RichTextBox</a> </td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/wizard-control/getting-started">Wizard</a></td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/calculator/getting-started">Calculator</a></td>
   </tr>
   <tr>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/digital-gauge/getting-started" >Digital Gauge</a></td>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/syntax-editor/getting-started" >Syntax Editor</a></td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/digital-gauge/getting-started" >Digital Gauge</a></td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/syntax-editor/getting-started" >Syntax Editor</a></td>
     <td></td>
     <td></td>
   </tr>
   <tr>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/linear-gauge/getting-started" >Linear Gauge</a></td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/linear-gauge/getting-started" >Linear Gauge</a></td>
     <td></td>
     <td></td>
     <td></td>
   </tr>
   <tr>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/kanban-board/getting-started" >Kanban Board</a></td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/kanban-board/getting-started" >Kanban Board</a></td>
     <td id="title">FILE FORMAT FRAMEWORKS </td>
     <td></td>
     <td></td>
   </tr>
   <tr>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/barcode/getting-started" >Barcode</a></td>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/file-formats/xlsio/getting-started-create-excel-file-csharp-vbnet" >Excel</a>  <br></td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/barcode/getting-started" >Barcode</a></td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/file-formats/xlsio/getting-started-create-excel-file-csharp-vbnet" >Excel</a>  </td>
     <td></td>
     <td></td>
   </tr>
   <tr>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/bullet-graph/getting-started" >Bullet Graph</a></td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/bullet-graph/getting-started" >Bullet Graph</a></td>
     <td> <a id="anchor"  href="https://help.syncfusion.com/file-formats/pdf/create-pdf-file-in-wpf" >PDF</a> </td>
     <td></td>
     <td></td>
   </tr>
   <tr>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/sunburst-chart/getting-started" >Sunburst Chart</a> <br></td>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/file-formats/docio/getting-started" >Word</a></td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/sunburst-chart/getting-started" >Sunburst Chart</a> </td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/file-formats/docio/getting-started" >Word</a></td>
     <td></td>
     <td></td>
   </tr>
   <tr>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/sparkline/getting-started" >Sparkline</a></td>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/file-formats/presentation/getting-started" >PowerPoint</a></td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/sparkline/getting-started" >Sparkline</a></td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/file-formats/presentation/getting-started" >PowerPoint</a></td>
     <td></td>
     <td></td>
   </tr>
   <tr>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/range-selector/getting-started" >Range Selector</a> </td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/range-selector/getting-started" >Range Selector</a> </td>
     <td></td>
     <td></td>
     <td></td>
   </tr>
   <tr>
-    <td> <br><a id="anchor"  href="https://help.syncfusion.com/wpf/treemap/getting-started" >TreeMap</a></td>
+    <td> <a id="anchor"  href="https://help.syncfusion.com/wpf/treemap/getting-started" >TreeMap</a></td>
     <td></td>
     <td></td>
     <td></td>
