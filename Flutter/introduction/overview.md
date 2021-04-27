@@ -64,6 +64,7 @@ N> The name of the Visual Studio Toolbox entry provided when the common control 
 #table
 {
 border:0 !important;
+line-height: 2!important;
 }
 
 tr
