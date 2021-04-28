@@ -10,6 +10,8 @@ documentation: ug
 
 # System Requirements for Flutter
 
+The system requirements for using our Syncfusion Flutter platform are as follows
+
 ### Operating Systems
 
 * Windows 7 SP1
@@ -26,7 +28,7 @@ documentation: ug
 
 ### Development Environment
 
-For a recommended development environment in Flutter, see the links below.
+See the links below for the recommended Flutter development environments
 
 * Windows - [`https://flutter.dev/docs/get-started/install/windows`](https://flutter.dev/docs/get-started/install/windows)
 * MacOS - [`https://flutter.dev/docs/get-started/install/macos`](https://flutter.dev/docs/get-started/install/macos)
