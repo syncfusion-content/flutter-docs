@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Axis customization in Syncfusion Flutter Spark charts.
-description: Learn how to customize the axis types, labels, min and max values, colors, width and dashArray of the SfSparkline chart axis.
+title: Axis types in Flutter Spark Charts widget | Syncfusion 
+description: Learn here all about the available axis types of Syncfusion Spark Charts widget, its features and more.
 platform: flutter
 control: Sparkline
 documentation: ug
 ---
 
-# Axis types of Spark charts
+# Axis types in Flutter Spark Charts
 
 Charts typically have two axes that are used to measure and categorize data: a vertical (Y) axis, and a horizontal (X) axis.
 

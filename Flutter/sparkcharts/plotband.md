@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Plotband for Syncfusion Flutter Sparkline
-description: Learn how to customize the plot band, color, borderColor, borderWidth of the Syncfusion Flutter Sparkline Chart.
+title: Plot band in Flutter Spark Charts widget | Syncfusion 
+description: Learn here all about the plot band feature of Syncfusion Spark Charts widget, its properties, and more.
 platform: flutter
 control: Sparkline
 documentation: ug
 ---
-# Syncfusion Flutter spark charts plot band 
+# Plot band in Flutter Spark Charts 
 
 This feature is used to highlight a particular region in the spark charts along Y axis.
 

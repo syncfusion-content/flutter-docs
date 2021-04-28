@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Installation and Deployment process for Syncfusion Flutter products
-description: Learn how to install and deploy the Syncfusion Flutter component
+title: Upgrade from trial version to license version | Syncfusion
+description: Learn here all about Upgrading the packages from trial version to license version using the link provided.
 platform: flutter
 control: Installation and Deployment
 documentation: ug

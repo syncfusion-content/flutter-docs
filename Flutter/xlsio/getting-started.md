@@ -162,9 +162,8 @@ You can create a Excel document in web by using the following steps.
 
 {% highlight dart %}
 
-import 'dart:async';
 import 'dart:convert';
-import 'dart:js' as js;
+import 'dart:html';
 
 {% endhighlight %}
 
@@ -185,27 +184,11 @@ sheet.getRangeByName('A1').setText('Hello World!');
 final List<int> bytes = workbook.saveAsStream();
 workbook.dispose();
 
-js.context['excelData'] = base64.encode(bytes);
-js.context['filename'] = 'Output.xlsx'; 
-Timer.run(() { 
-js.context.callMethod('_createExcel');
- });
-
-{% endhighlight %}
-
-Add the following code in the header section of index.html file under the web folder.
-
-{% highlight dart %}
-
-<script>
- async function _createExcel() {
-  var excelAsDataUri = "data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64, " + exceldata;
-  var link = document.createElement('a');
-  link.download = filename;
-  link.href = excelAsDataUri;
-  link.type = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
-  link.click();
-}
-</script>
+//Download the output file in web.
+AnchorElement(
+    href:
+        "data:application/octet-stream;charset=utf-16le;base64,${base64.encode(bytes)}")
+  ..setAttribute("download", "output.xlsx")
+  ..click();
 
 {% endhighlight %}
