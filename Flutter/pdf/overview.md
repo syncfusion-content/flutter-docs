@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview of Syncfusion Flutter PDF
-description: Learn how to create or generate a PDF file in Windows Forms with easy steps using Syncfusion .NET PDF library without depending on Adobe.
+title: About Flutter PDF library | Syncfusion
+description: Learn here all about introduction of Syncfusion Flutter PDF non-UI library and its features, and more.
 platform: flutter
 control: PDF
 documentation: ug
 ---
 
-# Overview of Syncfusion Flutter PDF
+# Flutter PDF Overview
 
 The Syncfusion Flutter PDF is a library written natively in Dart for creating the PDF documents from scratch. The library can be used in Flutter Mobile and Web platforms without the dependency of Adobe Acrobat. The creation of PDF follows the most popular PDF 1.7 (ISO 32000-1) and latest PDF 2.0 (ISO 32000-2) specifications.
 

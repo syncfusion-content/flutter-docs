@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Document of Syncfusion Flutter PDF
-description: Learn how to add document settings like standard and custom page size, orientation and rotation in the Flutter PDF.
+title: Document in Flutter PDF library | Syncfusion
+description: Learn here all about different types of Document settings feature of Syncfusion Flutter PDF non-UI library and more.
 platform: flutter
 control: PDF
 documentation: ug
 ---
 
-# Working with PDF Document
+# Document in Flutter PDF
 
 ## Adding the document settings
 

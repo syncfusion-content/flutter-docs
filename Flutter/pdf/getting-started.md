@@ -1,13 +1,12 @@
 ---
 layout: post
-title: Getting Started for Syncfusion Flutter PDF
-description: Learn how to create PDF document with all basic elements and save it in browser or mobile devices by using Syncfusion Flutter PDF.
-platform: flutter
+title: Getting started with Flutter PDF library | Syncfusion
+description: Learn here about getting started with Syncfusion Flutter PDF non-UI library, its elements, and more.
 control: PDF
 documentation: ug
 ---
 
-# Getting Started for Syncfusion Flutter PDF
+# Getting started with Flutter PDF
 
 This section explains the steps required to create a PDF document by a single button click. This section covers only the minimal features needed to learn to get started with the PDF.
 

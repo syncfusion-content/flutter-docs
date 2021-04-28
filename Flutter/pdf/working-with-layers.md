@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Layers of Syncfusion Flutter PDF
-description: Learn how to add, remove, and modify the layers in a PDF document and its pages for the Flutter PDF.
+title: Layers in Flutter PDF library | Syncfusion
+description: Learn here all about add, remove, and modify the layers feature of Syncfusion Flutter PDF non-UI library and more.
 platform: flutter
 control: PDF
 documentation: ug
 ---
 
-# Working with layers in a PDF document
+# Layers in Flutter PDF
 
 Layers also known as Option content, refer to sections of content in a PDF document that can be selectively viewed or hidden by document authors or consumers.
 
