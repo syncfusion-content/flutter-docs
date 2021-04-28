@@ -21,7 +21,7 @@ The Syncfusion Flutter installer can be downloaded from the [Syncfusion](https:/
 Our 30-day trial can be downloaded in two ways.
 
    * Download Free Trial Setup
-   * Start Trials if using components through [Nuget.org](https://www.nuget.org/packages?q=syncfusion)
+   * Start Trials if using components through [Pub.dev](https://pub.dev/packages?q=Syncfusion)
 
 
 ### Download Free Trial Setup
@@ -42,16 +42,16 @@ Our 30-day trial can be downloaded in two ways.
 
    ![License and downloads of Syncfusion Essential Studio](download-images/start-trial-download-offline-installer.png)
    
-### Start Trials if using components through [Nuget.org](https://www.nuget.org/packages?q=syncfusion)
+### Start Trials if using components through [Pub.dev](https://pub.dev/packages?q=Syncfusion)
 
-You should initiate an evaluation if you have already obtained our components through [NuGet.org](https://www.nuget.org/packages?q=syncfusion)
+You should initiate an evaluation if you have already obtained our components through [Pub.dev](https://pub.dev/packages?q=Syncfusion)
 
 1. You can start your 30-day free trial for Flutter from the [Start Trial](https://www.syncfusion.com/account/manage-trials/start-trials) page from your account.
    
    ![Trial and downloads of Syncfusion Essential Studio](download-images/start-trial-download.png)
    
 2. To access this page, you must sign up\log in with your Syncfusion account.
-3. Begin your trial by selecting the WinUI product. 
+3. Begin your trial by selecting the Flutter product. 
 
    N> If you've already used the trial products and they haven't expired, you won't be able to start the trial for the same product again.
 
