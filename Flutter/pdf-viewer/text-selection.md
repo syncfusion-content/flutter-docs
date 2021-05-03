@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Text selection in Syncfusion Flutter PDF Viewer | Syncfusion
-description: This section explains about how to select a text in the PDF page and customize the selection color using the Flutter PDF Viewer.
+title: Text selection in Flutter PDF Viewer widget | Syncfusion
+description: Learn here all about text selection feature of Syncfusion Flutter PDF Viewer (SfPdfViewer) widget and more.
 platform: Flutter
 control: SfPdfViewer
 documentation: ug

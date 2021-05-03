@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Overview of Syncfusion Flutter PDF Viewer | Syncfusion
-description: Flutter PDF Viewer plugin has highly interactive and customizable features such as magnification, text selection, search, bookmark and page navigation.
+title: About Flutter PDF Viewer widget | Syncfusion
+description: Learn here all about introduction of Syncfusion Flutter PDF Viewer widget, its features, and more.
 platform: Flutter
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Overview of Syncfusion Flutter PDF Viewer
+# Flutter PDF Viewer (SfPdfViewer) Overview
 
-The Syncfusion Flutter PDF Viewer plugin lets you view PDF documents seamlessly and efficiently in Android, iOS and Web platforms. It has highly interactive and customizable features such as magnification, virtual scrolling, page navigation, text selection, text search, and bookmark navigation.
+The Syncfusion Flutter PDF Viewer widget lets you view PDF documents seamlessly and efficiently in Android, iOS and Web platforms. It has highly interactive and customizable features such as magnification, virtual scrolling, page navigation, text selection, text search, and bookmark navigation.
 
 ## Key Features
 

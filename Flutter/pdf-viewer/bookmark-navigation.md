@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Bookmark navigation in Syncfusion Flutter PDF Viewer | Syncfusion
-description: This section explains about how to navigate to the desired bookmark topics in the Flutter PDF Viewer.
+title: Bookmark navigation in Flutter PDF Viewer widget | Syncfusion
+description: Learn here all about bookmark navigation feature of Syncfusion Flutter PDF Viewer (SfPdfViewer) widget and more.
 platform: Flutter
 control: SfPdfViewer
 documentation: ug
