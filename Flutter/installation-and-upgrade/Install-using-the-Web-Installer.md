@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Installation using web installer | Syncfusion
-description: Learn here all about the steps involved in the installation process of Syncfusion Flutter products using web installer.
+title: Installation process for Syncfusion Flutter products
+description: This section provides information regarding the Syncfusion Flutter installer and steps for installing it
 platform: flutter
 control: Installation and Deployment
 documentation: ug
@@ -33,27 +33,15 @@ The following procedure illustrates how to install Essential Studio Platform Onl
 	![Additional Software Alert](WebInstaller/Step-by-Step-Installation_img5.png)
 		
 	
-4.	If previous version(s) installed for the selected platforms, then Uninstall previous version wizard will be displayed. Here you can view the list of installed previous versions for the selected platforms. Select **Uninstall All** checkbox to select all the versions. Click Next.
+4. Confirmation wizard will be displayed. Here you can view and modify the list of platforms that will be installed.
 
-	![Existing Version for install](WebInstaller/Step-by-Step-Installation_img20.png)
-	
-	N> From the 2021 Volume 1 release, Syncfusion has provided option to uninstall the previous versions from 18.1 while installing the new version.
-	
-	
-5.	Pop up screen will be displayed to get the confirmation to uninstall selected previous versions.
-
-	![Existing Version for install](WebInstaller/Step-by-Step-Installation_img21.png)
-	
-	
-6. Confirmation wizard will be displayed. Here you can view and modify the list of platforms that will be installed/uninstalled.
-
-    ![Confirmation for install/uninstall](WebInstaller/Step-by-Step-Installation_img15.png)
+    ![Confirmation for install](WebInstaller/Step-by-Step-Installation_img6.png)
 	
 	N> You can check the Estimated size of the Download and Installation by clicking the **Download Size and Installation Size** link.
 	
-	![Downaload and Installation size install/uninstall](WebInstaller/Step-by-Step-Installation_img16.png)
+	![Downaload and Installation size](WebInstaller/Step-by-Step-Installation_img7.png)
 
-7.  Configuration wizard will be displayed. Here you can change the Download, Install and samples location. Also, you can change the Additional settings by platform basis. To install using the default configuration, click Next.
+5.  Configuration wizard will be displayed. Here you can change the Download, Install and samples location. Also, you can change the Additional settings by platform basis. To install using the default configuration, click Next.
 
     ![Install and samples location for install](WebInstaller/Step-by-Step-Installation_img8.png)
 	
@@ -68,37 +56,28 @@ The following procedure illustrates how to install Essential Studio Platform Onl
 	
 
     * Select the **Install Demos** check box to install Syncfusion samples, or leave the check box clear, when you do not want to install Syncfusion samples.
-    * Select the **Register Syncfusion Assemblies in GAC** check box to install the latest Syncfusion assemblies in GAC, or clear this check box when you do not want to install the latest assemblies in GAC.
-    * Select the **Configure Syncfusion controls in Visual Studio** check box to configure the Syncfusion controls in the Visual Studio toolbox, or clear this check box when you do not want to configure the Syncfusion controls in the Visual Studio toolbox during installation. Note that you must also select the Register Syncfusion assemblies in GAC check box when you select this check box.
-    * Select the **Configure Syncfusion Extensions controls in Visual Studio** checkbox to configure the Syncfusion Extensions in Visual Studio or clear this check box when you do not want to configure the Syncfusion Extensions in Visual Studio.
-	* Select the **Create Desktop Shortcut** checkbox to create the desktop shortcut for Syncfusion Control Panel.
+    * Select the **Create Desktop Shortcut** checkbox to create the desktop shortcut for Syncfusion Control Panel or leave the check box clear, when you do not want to create desktop shortcut.
 
 
-8.  After reading the License Terms and Conditions, check the **I agree to the License Terms and Privacy Policy** check box. Click Next.
+6.  After reading the License Terms and Conditions, check the **I agree to the License Terms and Privacy Policy** check box. Click Next.
 
-9. Login wizard will be displayed. You should enter your Syncfusion Direct-Trac login credentials. If you don't have Syncfusion Direct-Trac login credentials, then you can click on **Create an Account**. Else if you forgot your password, click on **Forgot Password** to create new password. Click Install. 
+7. Login wizard will be displayed. You should enter your Syncfusion Direct-Trac login credentials. If you don't have Syncfusion Direct-Trac login credentials, then you can click on **Create an Account**. Else if you forgot your password, click on **Forgot Password** to create new password. Click Install. 
 
     ![Login wizard install](WebInstaller/Step-by-Step-Installation_img9.png)
 	
 	I> The selected platforms will be installed based on your Syncfusion License (Trial or Licensed).
 
-10. Download and Installation progress will be displayed.
+8. Download and Installation progress will be displayed.
 
     ![Download and Installation progress install](WebInstaller/Step-by-Step-Installation_img10.png)
 
-11. Once the Installation is complete, **Summary** wizard will be displayed. Here you can check the list of platforms which are installed successfully and failed. Click Finish to exit the Summary wizard. 
+9. Once the Installation is complete, **Summary** wizard will be displayed. Here you can check the list of platforms which are installed successfully and failed. Click Finish to exit the Summary wizard. 
 
     ![Installation Summary](WebInstaller/Step-by-Step-Installation_img11.png)
 	
 	* Click **Launch Control Panel** to open the Syncfusion Control Panel.
 
-12. You can find the Essential Studio installed information from the windows control panel.
 
-    ![Control Panel](WebInstaller/Step-by-Step-Installation_img19.png)
-	
-	N> Starting with the version v18.1 (2020 Volume 1 release), Syncfusion started providing separate entry in windows control panel for Essential Studio. 
-	
-	
 ## Uninstallation
 
 Till version 17.2, Syncfusion Web Installer had option for installation alone. Starting with the version 17.3 (2019 Vol 3), Syncfusion provides option for uninstalling the platforms of the same version from the Web Installer application itself. Select the list of the platforms to be uninstalled and Web Installer will uninstall those platforms one by one.
@@ -154,17 +133,7 @@ The following procedure illustrates how to install/uninstall Essential Studio Pl
 	
     ![Platform Selection wizard Installed](WebInstaller/Step-by-Step-Installation_img4.png)
 	
-4.	If previous version(s) installed for the selected platforms, then Uninstall previous version wizard will be displayed. Here you can view the list of installed previous versions for the selected platforms. Select **Uninstall All** checkbox to select all the versions. Click Next.
-
-	![Existing Version for install](WebInstaller/Step-by-Step-Installation_img20.png)
-	
-	N> From the 2021 Volume 1 release, Syncfusion has provided option to uninstall the previous versions from 18.1 while installing the new version.
-	
-5.	Pop up screen will be displayed to get the confirmation to uninstall selected previous versions.
-
-	![Existing Version for install](WebInstaller/Step-by-Step-Installation_img21.png)
-	
-6. Confirmation wizard will be displayed. Here you can view and modify the list of platforms that will be installed/uninstalled.
+4. Confirmation wizard will be displayed. Here you can view and modify the list of platforms that will be installed/uninstalled.
 
     ![Confirmation for install/uninstall](WebInstaller/Step-by-Step-Installation_img15.png)
 	
@@ -172,25 +141,25 @@ The following procedure illustrates how to install/uninstall Essential Studio Pl
 	
 	![Downaload and Installation size install/uninstall](WebInstaller/Step-by-Step-Installation_img16.png)
 
-7.  Configuration wizard will be displayed. Here you can change the Download, Install and samples location. Also, you can change the Additional settings by platform basis. To install using the default configuration, click Next.
+5.  Configuration wizard will be displayed. Here you can change the Download, Install and samples location. Also, you can change the Additional settings by platform basis. To install using the default configuration, click Next.
 
     ![Install and samples location install/uninstall](WebInstaller/Step-by-Step-Installation_img8.png)
 	
 	I> From version 17.3 (2019 Vol 3), Syncfusion provides option to provide custom download location.
 	
-8.  After reading the License Terms and Conditions, check the **I agree to the License Terms and Privacy Policy** check box. Click Next.
+6.  After reading the License Terms and Conditions, check the **I agree to the License Terms and Privacy Policy** check box. Click Next.
 
-9. Login wizard will be displayed. You should enter your Syncfusion Direct-Trac login credentials. If you don't have Syncfusion Direct-Trac login credentials, then you can click on **Create an Account**. Else if you forgot your password, click on **Forgot Password** to create new password. Click Install. 
+7. Login wizard will be displayed. You should enter your Syncfusion Direct-Trac login credentials. If you don't have Syncfusion Direct-Trac login credentials, then you can click on **Create an Account**. Else if you forgot your password, click on **Forgot Password** to create new password. Click Install. 
 
     ![Login wizard install/uninstall](WebInstaller/Step-by-Step-Installation_img9.png)
 	
 	I> The selected platforms will be installed based on your Syncfusion License (Trial or Licensed).
 
-10. Download, Installation and Uninstallation progress will be displayed.
+8. Download, Installation and Uninstallation progress will be displayed.
 
     ![Download and Installation progress install/uninstall](WebInstaller/Step-by-Step-Installation_img17.png)
 
-11. Once the Installation is complete, **Summary** wizard will be displayed. Here you can check the list of platforms which are **installed/uninstalled** successfully and failed. Click Finish to exit the Summary wizard. 
+9. Once the Installation is complete, **Summary** wizard will be displayed. Here you can check the list of platforms which are **installed/uninstalled** successfully and failed. Click Finish to exit the Summary wizard. 
 
     ![Summary install/uninstall](WebInstaller/Step-by-Step-Installation_img18.png)
 	

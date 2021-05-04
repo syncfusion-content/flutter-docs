@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Flutter Installation and Deployment | Syncfusion
-description: Learn here all about downloading and installing the Syncfusion Flutter installer and deploying the application
+title: Installation and Deployment process for Syncfusion Flutter products
+description: Learn how to install and deploy the Syncfusion Flutter component
 platform: flutter
 control: Installation and Deployment
 documentation: ug
 
 ---
 
-# Download Flutter Installer
+# Download Installer
 
 You can download the installer from [Syncfusion.com](https://www.syncfusion.com) website. 
 
@@ -30,9 +30,9 @@ There are two ways to download our 30-day trial.
 ### Start Trial Page
 1. You can evaluate our 30-day free trial from [Start Trial](https://www.syncfusion.com/account/manage-trials/start-trials) page.
 2. You should login using your Syncfusion account to access this page.
-3. You can start your trial by clicking on the required product. 
+3. You can start your trail by clicking on the required product. 
 
-N> If you already using the trial products and it’s not expired, you couldn’t start the trial again for same product.
+N> If you already using the trail products and it’s not expired, you couldn’t start the trial again for same product.
 
 4. After you started the trial, you can download the latest version trial installer using the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page. 
 5. In [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page, you can find your current active trial products. Trials, which you done in both Free Trial Page and Start trial pages are listed here.
