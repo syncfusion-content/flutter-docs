@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Interval in Syncfusion Flutter Range Selector | Syncfusion
-description: This section explains about how to add intervals in numeric and date range selector in Flutter application.
+title: Interval in Flutter Range Selector widget | Syncfusion
+description: Learn here all about adding the Interval feature in Syncfusion Flutter Range Selector (SfRangeSelector) widget and more.
 platform: Flutter
 control: SfRangeSelector
 documentation: ug
 ---
 
-# Range selector interval
+# Interval in Flutter Range Selector (SfRangeSelector)
 This section explains about how to add the interval for numeric and date range selector.
 
 ## Numeric interval

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Hyperlinks of Syncfusion Flutter PDF
-description: Learn how to draw hyperlinks to allow the users to navigate to another part of a PDF file and web page in the Flutter PDF.
+title: Hyperlinks in Flutter PDF library | Syncfusion
+description: Learn here all about Hyperlinks or Web navigation feature of Syncfusion Flutter PDF non-UI library and more.
 platform: flutter
 control: PDF
 documentation: ug
 ---
 
-# Working with Hyperlinks
+# Hyperlinks in Flutter PDF
 
 In PDF, hyperlinks can be added to allow the users to navigate to another part of a PDF file and web page.
 

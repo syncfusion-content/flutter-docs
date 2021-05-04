@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Syncfusion Flutter Spark charts trackball 
-description: Learn how to enable and customize the trackball available in the Syncfusion Flutter Spark charts widgets.
+title: Trackball in Flutter Spark Charts widget | Syncfusion 
+description: Learn here all about the trackball feature of Syncfusion Spark Charts widget, its features, and more.
 platform: flutter
 control: Sparkline
 documentation: ug
 ---
 
-## Trackball
+## Trackball in Flutter Spark Charts
 
 Trackball feature displays the tooltip for the data points that are closer to the point where you touch on the chart area. This feature, especially can be used instead of data label feature when you cannot show data labels for all data points due to space constraint. This feature can be enabled using enable property of [`trackball`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SfSparkLineChart/trackball.html). Trackball will be activated using [`activationMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartTrackball/activationMode.html) property. Once it is activated, it will appear in the UI and move based on your touch movement until you stop touching on the chart.
 

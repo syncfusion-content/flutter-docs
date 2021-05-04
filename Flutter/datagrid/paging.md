@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Paging for Syncfusion Flutter DataGrid | DataTable
-description: Learn how to create Syncfusion Flutter DataPager with DataGrid and customize the apperance of the DataPager.
+title: Paging in Flutter DataGrid | DataPager | Syncfusion
+description: Learn here all about paging feature and how to customize its apperance in Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
 platform: flutter
 control: SfDataGrid
 documentation: ug
 ---
 
-# Paging in Flutter (SfDataGrid)
+# Paging in Flutter DataGrid (SfDataGrid)
 
 The datagrid interactively supports the manipulation of data using [SfDataPager](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager-class.html) control. This provides support to load data in segments when dealing with large volumes of data. `SfDataPager` can be placed above or below based on the requirement to easily manage data paging.
 
@@ -601,11 +601,11 @@ class OrderInfoDataSource extends DataGridSource{
 
 ## Programmatic page navigation
 
-The [SfDataPager] provides the support to navigate between the pages programmatically using [controller](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController-class.html) with following options,
+The `SfDataPager` provides the support to navigate between the pages programmatically using [controller](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController-class.html) with following options,
 
-* [nextPage](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataPagerController/nextPage.html), 
-* [previousPage](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataPagerController/previousPage.html), 
-* [LastPage](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataPagerController/lastPage.html), 
+* [nextPage](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataPagerController/nextPage.html) 
+* [previousPage](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataPagerController/previousPage.html) 
+* [LastPage](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataPagerController/lastPage.html)
 * [firstPage](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataPagerController/firstPage.html)
 
 The following code example shows how to navigate the previous page programmatically,

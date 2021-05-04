@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Flutter Widgets Documentation | Syncfusion
-description: The list of available Flutter widgets and File Format (Excel and PDF) packages. |Syncfusion Flutter Widgets|
+title: Flutter Widgets Catalog | Syncfusion
+description: Learn here all about Syncfusion Flutter Widgets Catalog, its features and reference links of the respective widgets.
 platform: flutter
 control: flutter
 documentation: ug

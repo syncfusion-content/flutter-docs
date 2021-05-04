@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tick features in Syncfusion Flutter Range Selector | Syncfusion
-description: This section explains about how to show major ticks, minor ticks and how to customize them in the range selector.
+title: Tick in Flutter Range Selector widget | Syncfusion
+description: Learn here all about adding the Ticks feature in Syncfusion Flutter Range Selector (SfRangeSelector) widget and more.
 platform: Flutter
 control: SfRangeSelector
 documentation: ug
 ---
 
-# Ticks features in range selector
+# Ticks in Flutter Range Selector (SfRangeSelector)
 
 This section helps to learn about how to add major and minor ticks in the range selector.
 

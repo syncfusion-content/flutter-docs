@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Page navigation in Syncfusion Flutter PDF Viewer | Syncfusion
-description: This section explains about how to navigate to the desired pages in a PDF document using the Flutter PDF Viewer.
+title: Page navigation in Flutter PDF Viewer widget | Syncfusion
+description: Learn here all about page navigation feature of Syncfusion Flutter PDF Viewer (SfPdfViewer) widget and more.
 platform: Flutter
 control: SfPdfViewer
 documentation: ug

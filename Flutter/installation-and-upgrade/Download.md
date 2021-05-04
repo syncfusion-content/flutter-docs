@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Installation and Deployment process for Syncfusion Flutter products
-description: This page explains about how to download and install Syncfusion Essential Studio Flutter installer and deploy the Syncfusion Flutter component
+title: Flutter Installation and Deployment | Syncfusion
+description: Learn here all about downloading and installing the Syncfusion Flutter installer and deploying the application
 platform: flutter
 control: Installation and Deployment
 documentation: ug

@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Mac installation process for Syncfusion Essential Studio Flutter
-description: This section provides information regarding the Syncfusion Flutter Mac installer and steps for installing it
+description: Learn here all about the Syncfusion Essential Studio Flutter for Mac installer and steps for installing it.
 platform: flutter
 control: Installation and Deployment
 documentation: ug
 
 ---
 
-# Mac Installation
+# Mac installation process for Syncfusion Essential Studio Flutter
 
 The following procedure illustrates how to install Flutter Mac installer. 
 

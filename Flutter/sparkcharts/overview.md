@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview of Syncfusion Flutter Spark charts
-description: Learn the key features available in Syncfusion Flutter Spark chart and overview about Syncfusion Flutter Spark charts
+title: About Flutter Spark Charts widget | Syncfusion
+description: Learn here all about introduction of Syncfusion Flutter Spark Charts widget, its features, and more.
 platform: flutter
 control: Sparkline
 documentation: ug
 ---
 
-# Overview Of Syncfusion Flutter Spark charts
+# Flutter Spark Charts Overview
 
 Syncfusion Flutter Spark/Micro charts are light weight chart, typically drawn without axes or coordinates. It presents the general shape of data’s in a simple and highly condensed way.
 

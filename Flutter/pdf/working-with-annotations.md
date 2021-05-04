@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Annotations of Syncfusion Flutter PDF
-description: Learn how to add, remove, and modify properties of interactive annotations in a PDF document using Flutter PDF.
+title: Annotations in Flutter PDF library | Syncfusion
+description: Learn here all about interactive Annotations feature of Syncfusion Flutter PDF non-UI library and more.
 platform: flutter
 control: PDF
 documentation: ug
 ---
 
-# Working with Annotations
+# Annotations in Flutter PDF
 
 The Syncfusion Flutter PDF provides support for interactive annotations.
 

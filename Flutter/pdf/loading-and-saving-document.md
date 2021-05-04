@@ -1,13 +1,12 @@
 ---
 layout: post
-title: Loading and Saving of Syncfusion Flutter PDF
-description: Learn how to load an existing PDF document and save the document to the file system using the Flutter PDF.
-platform: flutter
+title: Open and save PDF file in Flutter PDF library | Syncfusion
+description: Learn here all about Open and save PDF file feature of Syncfusion Flutter PDF non-UI library and more.
 control: PDF
 documentation: ug
 ---
 
-# Open and Save PDF file in dart
+# Open and save PDF file in Flutter PDF
 
 ## Opening an existing PDF document
 

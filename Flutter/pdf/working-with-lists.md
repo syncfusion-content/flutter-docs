@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Bullets and lists of Syncfusion Flutter PDF.
-description: Learn how to add ordered and unordered lists such as list with numerics, alphabets, bullets, circles and images as a prefix in the Flutter PDF.
+title: Bullets and Lists in Flutter PDF library | Syncfusion
+description: Learn here all about add ordered and unordered lists feature of Syncfusion Flutter PDF non-UI library and more.
 platform: flutter
 control: PDF
 documentation: ug
 ---
 
-# Working with Bullets and Lists
+# Bullets and Lists in Flutter PDF
 
 The Syncfusion Flutter PDF allows you list the content in ordered and unordered list. The ordered list can be number or alphabets and the unordered list can be bullets, circles, and images.
 

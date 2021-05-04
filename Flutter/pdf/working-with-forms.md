@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Working with Forms | Syncfusion
-description: This section explains how to create, fill, modify, read only and flatten form fields in the PDF document
+title: Forms in Flutter PDF library | Syncfusion
+description: Learn here all about different types of Forms feature of Syncfusion Flutter PDF non-UI library and more.
 platform: flutter
 control: PDF
 documentation: UG
 ---
 
-# Working with PDF Forms
+# Forms in Flutter PDF
 
 An interactive form sometimes referred to as an AcroForm is a collection of fields for gathering information. A PDF document can contain any number of fields appearing on any combination of pages, all that makes a single, globally interactive form spanning the entire document.
 

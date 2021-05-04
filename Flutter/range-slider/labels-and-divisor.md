@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Labels features in Syncfusion Flutter Range Slider | Syncfusion
-description: This section explains about how to show labels, divisors and how to customize them in the range slider.
+title: Labels in Flutter Range Slider widget | Syncfusion
+description: Learn here all about adding the Labels feature in Syncfusion Flutter Range Slider (SfRangeSlider) widget and more. 
 platform: Flutter
 control: SfRangeSlider
 documentation: ug
 ---
 
-# Labels and divisors in range slider
+# Labels in Flutter Range Slider (SfRangeSlider)
 This section explains about how to add the labels and divisors in the range slider.
 
 ## Show labels

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Text Extraction of Syncfusion Flutter PDF
-description: Learn how to extract text, extract text with bounds and find text from an existing PDF document using the Flutter PDF.
+title: Text extraction in Flutter PDF library | Syncfusion
+description: Learn here all about different types of fonts and draw Text feature of Syncfusion Flutter PDF non-UI library and more.
 platform: flutter
 control: PDF
 documentation: ug
 ---
 
-# Working with Text Extraction
+# Text Extraction in Flutter PDF
 
 The Syncfusion Flutter PDF allows you to extract or find the text from a particular page or the entire PDF document.
 
