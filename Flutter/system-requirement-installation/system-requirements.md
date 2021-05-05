@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Installation and Deployment process for Syncfusion Flutter widgets
-description: Describes about system requirements to install the Syncfusion Flutter widgets
+title: System Requirements for Flutter | Syncfusion
+description: Learn here all about the System Requirements needed for performing Flutter installation in your system.
 platform: flutter
 control: Installation and Deployment
 documentation: ug
 
 ---
 
-# System Requirements
+# System Requirements for Flutter
 
 ### Development Environment
 
@@ -20,62 +20,29 @@ Refer to the following links for recommended development environment in Flutter.
 
 ### SDK Version
 
-The minimum Flutter SDK version required for our component is [`v1.7.8`](https://flutter.dev/docs/development/tools/sdk/releases)
-
-### Supported Platforms
-
-The following table lists the platforms supported by our Flutter controls.
+The following is the minimum Flutter SDK version required for our widgets:
 
 <table>
     <tr>
-        <th>Platform<br/>
-            <br/></th>        
-        <th>
-          Device Types
-            <br/>
-            <br/>
-        </th>
-        <th>
-            Supported Versions
-            <br/>
-            <br/>
-        </th>
+        <th>Channel</th>
+        <th>Version</th>
     </tr>
     <tr>
-        <td rowspan="2">
-            Android
-            <br/>
-            <br/>
-        </td>
-        <td rowspan="2">
-        Phone, Tablet
-        <br/>
-        <br/>
-        </td>
-    </tr>
-     <tr>
-        <td>
-            API level 16 and later versions
-            <br/>
-            <br/>
+        <td>Stable</td>
+        <td style="text-align:center">
+            <a href="https://storage.googleapis.com/flutter_infra/releases/stable/windows/flutter_windows_2.0.0-stable.zip">v2.0.0</a>
         </td>
     </tr>
     <tr>
-        <td>
-            iOS
-            <br/>
-            <br/>
-        </td>
-        <td>
-            iPhone, iPod, iPad
-            <br/>
-            <br/>
-        </td>
-        <td>
-            iOS 8 and later versions
-            <br/>
-            <br/>
+        <td>Beta</td>
+        <td style="text-align:center">
+            <a href="https://storage.googleapis.com/flutter_infra/releases/beta/windows/flutter_windows_2.0.0-beta.zip">v2.0.0</a>
         </td>
     </tr>
-    
 </table>
+
+### Supported Platforms
+
+Our [Flutter packages](https://pub.dev/publishers/syncfusion.com/packages) support iOS, Android, Web, Windows, macOS, and Linux. For the supported version, you can check the below link,
+
+[`https://flutter.dev/docs/development/tools/sdk/release-notes/supported-platforms#supported-platforms`](https://flutter.dev/docs/development/tools/sdk/release-notes/supported-platforms#supported-platforms)
