@@ -1,11 +1,15 @@
 ---
 layout: post
-title: Header of Syncfusion Flutter Calendar | Scheduler
-description: Learn about the header and view header and their customization in Syncfusion Flutter Calendar widget
+title: Headers in Flutter Event Calendar widget | Syncfusion | Scheduler
+description: Learn here all about headers feature of Syncfusion Flutter Event Calendar (SfCalendar) widget and more.
 platform: flutter
 control: SfCalendar
 documentation: ug
 ---
+
+# Headers in Flutter Event Calendar (SfCalendar)
+You can learn about the header and view header height, date format, and appearance support of SfCalendar.
+
 ## Header
 
 
@@ -61,6 +65,30 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Header appearance](images/headers/header-style.png)
+
+### Header date format
+
+You can customize the header date format by using the [headerDateFormat](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/headerDateFormat.html) property of the `SfCalendar`. The `headerDateFormat` can be specified with a pattern string.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+  Widget build(BuildContext context) {
+    return Scaffold(appBar: AppBar(title: Text('Calendar'),),
+      body: SfCalendar(
+        view: CalendarView.month,
+        monthViewSettings: MonthViewSettings(numberOfWeeksInView: 3),
+        headerDateFormat: 'MMM,yyy',
+      ),
+    );
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![headerDateFormat](images/headers/headerDateFormat.png)
 
 ## View header
 
@@ -122,3 +150,9 @@ Widget build(BuildContext context) {
 
 >**NOTE**
 * The `dateTextStyle` property not applicable for view header in month view of calendar.
+
+## See also
+
+[How to add custom header and view header in Flutter event calendar widget](https://www.syncfusion.com/kb/10997/how-to-add-custom-header-and-view-header-in-flutter-event-calendar-widget)
+
+[How to style a header in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12144/how-to-style-a-header-in-the-flutter-event-calendar-sfcalendar)
