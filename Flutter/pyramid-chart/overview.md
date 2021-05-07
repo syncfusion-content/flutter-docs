@@ -11,7 +11,7 @@ documentation: ug
 
 Syncfusion Flutter Pyramid Chart (SfPyramidChart) widget is written natively in Dart for creating beautiful and high-performance Pyramid chart, which are used to craft high-quality applications using Flutter.
 
-  ![Overview Flutter chart](images/overview/overview_pyramid.png)
+  ![Overview Flutter chart](images/overview/overview.png)
 
 ## Key Features
 
