@@ -8,9 +8,12 @@ documentation: ug
 ---
 
 # Accessibility in Flutter Event Calendar (SfCalendar)
+
+## Screen reader support
+
 The `SfCalendar` can easily be accessed by screen readers. Please find the following table  for inner elements.
 
-## Month view
+** Month view **
 
 | View              | Format                       | Example                                       |
 |-------------------|------------------------------|-----------------------------------------------|
@@ -18,7 +21,7 @@ The `SfCalendar` can easily be accessed by screen readers. Please find the follo
 | No events         | EEE, dd/MMMM/yyyy, No events | Wednesday the 15th of January 2020, No events |
 | No selected dates | No selected date             | No selected date                              |                                               
 
-## TimeSlot view
+** TimeSlot view **
 
 | View                   | Format                                     | Example                                        |
 |------------------------|--------------------------------------------|------------------------------------------------|
@@ -27,7 +30,7 @@ The `SfCalendar` can easily be accessed by screen readers. Please find the follo
 | All day expander view  | + appointment Count                        | +3                                             |
 
 
-## Appointments
+** Appointments **
 
 | View                          | Format                                              | Example                                                                      |
 |-------------------------------|-----------------------------------------------------|------------------------------------------------------------------------------|
@@ -37,7 +40,7 @@ The `SfCalendar` can easily be accessed by screen readers. Please find the follo
 | Spanning appointment          | Subject hh mm a dd/MMMM/yyyy - hh mm a dd/MMMM/yyyy | General meeting 12AM the 23rd of January 2020 – 1AM the 30th of January 2020 |
 
 
-## Headers
+** Headers **
 
 | View                     | Format                  | Example                              |
 |--------------------------|-------------------------|--------------------------------------|
@@ -46,3 +49,44 @@ The `SfCalendar` can easily be accessed by screen readers. Please find the follo
 | Timeline workweek header | dd/MMMM to dd/MMMM/yyyy | 16th of January to 20th January 2020 |
 | Month view header        | EEE                     | Monday                               |
 | TimeSlot view header     | EEE, dd/MMMM/yyyy       | Wednesday the 29th of January 2020   |
+
+## Sufficient contrast
+
+Provides a uniform and consistent look to the Calendar’s appearance and format. Theming support provides a consistent look to the calendar. Provides support to get the color code from the user for all the elements in calendar.
+Kindly refer [here](https://help.syncfusion.com/flutter/themes/themes)for full details about theming support.
+
+Provided API support to get color code from users for the following elements
+* [todayHighlightColor](https://help.syncfusion.com/flutter/calendar/getting-started#today-highlight-color)
+* [cellBorderColor](https://help.syncfusion.com/flutter/calendar/getting-started#cell-border-color)
+* [backgroundColor](https://help.syncfusion.com/flutter/calendar/getting-started#background-color)
+* [selectionDecoration](https://help.syncfusion.com/flutter/calendar/getting-started#selection-decoration)
+* [agendasStyle](https://help.syncfusion.com/flutter/calendar/month-view#agenda-view-appearance)
+* [monthCellStyle](https://help.syncfusion.com/flutter/calendar/month-view#month-cell-appearance)
+* [dayHeaderSettings](https://help.syncfusion.com/flutter/calendar/schedule-view#day-header-customization)
+* [weekHeaderSettings](https://help.syncfusion.com/flutter/calendar/schedule-view#week-header-customization)
+* [monthHeaderSettings](https://help.syncfusion.com/flutter/calendar/schedule-view#month-header-customization)
+* [resourceViewSettings](https://help.syncfusion.com/flutter/calendar/resource-view#customization)
+
+## Large fonts
+
+Provides the support to change the font size based on device setting. Additionally, provided API to get the font size from customer for all the elements in calendar.
+* [appointmentTextStyle](https://help.syncfusion.com/flutter/calendar/appointments#appearance-customization)
+* [timeTextStyle](https://help.syncfusion.com/flutter/calendar/timeslot-views#time-text-appearance)
+* [dateTextStyle](https://help.syncfusion.com/flutter/calendar/schedule-view#day-header-customization)
+* [dayTextStyle](https://help.syncfusion.com/flutter/calendar/schedule-view#day-header-customization)
+* [displayNameText style](https://help.syncfusion.com/flutter/calendar/resource-view#customization)
+
+## Keyboard navigation
+
+The `SfCalendar` supports selection using keyboard interactions.
+
+| Key              | Description                     														   |
+|------------------|-------------------------------------------------------------------------------------------|
+| Up arrow         | Moves selection to the next calendar cell directly above the currently selected time slot |
+| Down arrow       | Moves selection to the next calendar cell directly below the currently selected time slot |
+| Right arrow      | Moves selection to the same time slot on the next day                                     |
+| Left arrow       | Moves selection to the same time slot on the previous day                                 |
+| Tab              | Focuses the next clickable element, except appointments, cells							   |
+| Shift + tab      | Focuses the previous clickable element, except appointment, cells                         |
+
+
