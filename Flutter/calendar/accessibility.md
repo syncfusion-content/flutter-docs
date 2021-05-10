@@ -53,7 +53,7 @@ The `SfCalendar` can easily be accessed by screen readers. Please find the follo
 ## Sufficient contrast
 
 Provides a uniform and consistent look to the Calendar’s appearance and format. Theming support provides a consistent look to the calendar. Provides support to get the color code from the user for all the elements in calendar.
-Kindly refer [here](https://help.syncfusion.com/flutter/themes/themes)for full details about theming support.
+Kindly refer [here](https://help.syncfusion.com/flutter/themes/themes) for full details about theming support.
 
 Provided API support to get color code from users for the following elements
 * [todayHighlightColor](https://help.syncfusion.com/flutter/calendar/getting-started#today-highlight-color)
