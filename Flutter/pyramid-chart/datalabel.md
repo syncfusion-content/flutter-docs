@@ -241,3 +241,9 @@ Data label and its connector line in the Pyramid charts for the point value 0 ca
 {% endhighlight %}
 
 ![hide_0_value](images/datalabel/dataLabel_0_value.png)
+
+### Data label saturation color
+
+If the user didn’t provide text color to the data label, then by default, the saturation color is applied to the data label text. i.e., if the data points background color intensity is dark, then the data label will render in white color (#FFFFFF) and if the data points background color intensity is light, data label will render in black color (#000000).
+
+![label_saturation](images/datalabel/pyramid_saturation.png)

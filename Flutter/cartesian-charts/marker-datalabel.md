@@ -476,3 +476,9 @@ In Vertical padding, providing positive value for y moves the data lab
 {% endhighlight %}
 
 ![Vertical padding](images/marker-datalabel/vertical_padding.png)
+
+### Data label saturation color
+
+If the user didn’t provide text color to the data label, then by default, the saturation color is applied to the data label text. i.e., if the data points background color intensity is dark, then the data label will render in white color (#FFFFFF) and if the data points background color intensity is light, data label will render in black color (#000000).
+
+![label_saturation](images/marker-datalabel/cartesian_saturation.png)

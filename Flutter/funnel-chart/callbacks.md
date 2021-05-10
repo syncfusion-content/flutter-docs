@@ -221,3 +221,30 @@ N> This callback will not be called, when the builder is specified for data labe
     }
 
 {% endhighlight %}
+
+## onPointTapped
+
+Triggers when tapping the series point. The [`onPointTapped`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/onPointTapped.html) Callback contains the following arguments.
+
+* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PointTapArgs/seriesIndex.html) - specifies the current series index.
+* [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PointTapArgs/pointIndex.html) - specifies the current point index.
+* [`dataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PointTapArgs/dataPoints.html) - holds the data point collection.
+* [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PointTapArgs/viewportPointIndex.html) - to get the viewport index value of the tapped data label.
+
+{% highlight dart %}
+
+      @override
+      Widget build(BuildContext context) {
+      return Scaffold(
+        body: Center(
+          child: SfFunnelChart(
+            onPointTapped: (PointTapArgs args){
+              print(args.seriesIndex);
+              print(args.pointIndex);
+            }
+          )
+        )  
+      );
+      }
+
+{% endhighlight %}
