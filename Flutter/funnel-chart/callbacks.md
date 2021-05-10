@@ -235,7 +235,6 @@ Triggers when tapping the series point. The [`onPointTapped`](https://pub.dev/do
 
       @override
       Widget build(BuildContext context) {
-    
       return Scaffold(
         body: Center(
           child: SfFunnelChart(

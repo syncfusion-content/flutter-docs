@@ -385,7 +385,7 @@ Data label and its connector line in the Circular charts for the point value 0 c
 
 ![datalabel0value](images/datalabel/datalabel_0_value.png)
 
-### Data label Saturation Color
+### Data label saturation color
 
 By default, data label saturation color gets applied to the data labels. For example, if the series background color is dark, a light color will get applied as saturation color. If the series background color is light, dark color gets applied for saturation color.
 
