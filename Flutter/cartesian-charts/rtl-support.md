@@ -69,13 +69,7 @@ To change the chart rendering direction from right to left, you can change the [
 
 Right to left rendering is effective only for the legend in the chart. Legend items will be rendered from right to left direction.
 
-### Legend rendered in LTR direction
-
-![legend LTR](images/rtl-support/legend_ltr.jpg)
-
-### Legend rendered in RTL direction
-
-![legend RTL](images/rtl-support/legend_rtl.jpg)
+![legend RTL](images/rtl-support/cartesian_legend_rtl.png)
 
 In addition, if you want the chart series and axis to look like it is rendering from right to left direction, set the [`opposedPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/opposedPosition.html) property in [`primaryXAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/primaryXAxis.html) to true and [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/isInversed.html) property in [`primaryYAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/primaryYAxis.html) to true.
 
@@ -109,10 +103,4 @@ Also, if you want to change the tooltip’s content, to look like it is renderin
 
 {% endhighlight %}
 
-### Tooltip content rendered in LTR direction
-
-![Tooltip LTR](images/rtl-support/tooltip_ltr.jpg)
-
-### Tooltip content rendered in RTL direction
-
-![Tooltip RTL](images/rtl-support/tooltip_rtl.jpg)
+![Tooltip RTL](images/rtl-support/cartesian_tooltip_rtl.png)

@@ -69,13 +69,7 @@ To change the chart rendering direction from right to left, you can change the [
 
 Right to left rendering is effective only for the legend in the chart. Legend items will be rendered from right to left direction.
 
-### Legend rendered in LTR direction
-
-![legend LTR](images/rtl-support/funnel_legend_ltr.jpg)
-
-### Legend rendered in RTL direction
-
-![legend RTL](images/rtl-support/funnel_legend_rtl.jpg)
+![legend RTL](images/rtl-support/funnel_legend_rtl.png)
 
 In addition, if you want to change the tooltip’s content, to look like it is rendering from right to left, then you can set the [`format`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/format.html) property in [`TooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior-class.html) as `"point.y : point.x"`. By default, the tooltip format will be `"point.x : point.y"`.
 
@@ -91,10 +85,4 @@ In addition, if you want to change the tooltip’s content, to look like it is r
 
 {% endhighlight %}
 
-### Tooltip content rendered in LTR direction
-
-![Tooltip LTR](images/rtl-support/funnel_tooltip_ltr.jpg)
-
-### Tooltip content rendered in RTL direction
-
-![Tooltip RTL](images/rtl-support/funnel_tooltip_rtl.jpg)
+![Tooltip RTL](images/rtl-support/funnel_tooltip_rtl.png)
