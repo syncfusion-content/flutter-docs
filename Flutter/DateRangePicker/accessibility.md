@@ -55,7 +55,7 @@ The `SfDateRangePicker` can easily be accessed by screen readers. Please find th
 
 ## Sufficient contrast
 
-The `SfDateRangePicker` [themingSupport](https://help.syncfusion.com/flutter/themes/themes) offers a consistent and standardized look, as well as the ability to set the colors for all components.
+The `SfDateRangePicker` [theming](https://help.syncfusion.com/flutter/themes/themes) support offers a consistent and standardized look, as well as the ability to set the colors for all components.
 
 The following APIs allow you to customize the colors of the following elements.
 * [viewHeaderStyle](https://help.syncfusion.com/flutter/daterangepicker/headers#view-header) 

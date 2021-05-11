@@ -52,7 +52,7 @@ The `SfCalendar` can easily be accessed by screen readers. Please find the follo
 
 ## Sufficient contrast
 
-The `SfCalendar` [themingSupport](https://help.syncfusion.com/flutter/themes/themes) offers a consistent and standardized look, as well as the ability to set the colors for all components.
+The `SfCalendar` [theming](https://help.syncfusion.com/flutter/themes/themes) support offers a consistent and standardized look, as well as the ability to set the colors for all components.
 
 The following APIs allow you to customize the colors of the following elements.
 * [todayHighlightColor](https://help.syncfusion.com/flutter/calendar/getting-started#today-highlight-color)
