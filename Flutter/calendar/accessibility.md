@@ -68,7 +68,7 @@ The following APIs allow you to customize the colors of the following elements.
 
 ## Large fonts
 
-Allows you to adjust the font size depending on your device's settings. It allows you to change the font size of all elements in the date range picker.
+Allows to adjust the font size depending on the device settings. It allows to change the font size of all elements in the calendar.
 * [appointmentTextStyle](https://help.syncfusion.com/flutter/calendar/appointments#appearance-customization)
 * [timeTextStyle](https://help.syncfusion.com/flutter/calendar/timeslot-views#time-text-appearance)
 * [dateTextStyle](https://help.syncfusion.com/flutter/calendar/schedule-view#day-header-customization)
@@ -77,7 +77,7 @@ Allows you to adjust the font size depending on your device's settings. It allow
 
 ## Keyboard navigation
 
-Following keyboard interactions are supported by the `SfCalendar`.
+The following keyboard interactions are supported by the `SfCalendar`.
 
 | Key              | Description                     														   |
 |------------------|-------------------------------------------------------------------------------------------|
@@ -85,7 +85,7 @@ Following keyboard interactions are supported by the `SfCalendar`.
 | Down arrow       | Moves selection to the next calendar cell directly below the currently selected time slot |
 | Right arrow      | Moves selection to the same time slot on the next day                                     |
 | Left arrow       | Moves selection to the same time slot on the previous day                                 |
-| Tab              | Focuses the next clickable element, except appointments, cells							   |
-| Shift + tab      | Focuses the previous clickable element, except appointment, cells                         |
+| Tab              | Focuses the next clickable element, except appointments and cells						   |
+| Shift + tab      | Focuses the previous clickable element, except appointment and cells                      |
 
 
