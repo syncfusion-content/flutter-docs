@@ -54,7 +54,7 @@ The `SfCalendar` can easily be accessed by screen readers. Please find the follo
 
 The `SfCalendar` [themingSupport](https://help.syncfusion.com/flutter/themes/themes) offers a consistent and standardized look, as well as the ability to set the colors for all components.
 
-Provided API support to get color code from users for the following elements
+The following APIs allow you to customize the colors of the following elements.
 * [todayHighlightColor](https://help.syncfusion.com/flutter/calendar/getting-started#today-highlight-color)
 * [cellBorderColor](https://help.syncfusion.com/flutter/calendar/getting-started#cell-border-color)
 * [backgroundColor](https://help.syncfusion.com/flutter/calendar/getting-started#background-color)
