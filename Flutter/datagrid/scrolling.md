@@ -140,7 +140,7 @@ The Flutter DataTable provides support to scroll to a particular row and column 
 
 ### Scroll to cell
 
-Scroll programmatically to a particular cell can be achieved by passing the row and column index in the `scrollToCell` method. SfDataGrid allows to enable or disable the scrolling animation by passing `true` to the `canAnimate` parameter in `scrollToCell` method. 
+Scroll programmatically to a particular cell can be achieved by passing the row and column index in the [scrollToCell](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/scrollToCell.html) method. SfDataGrid allows to enable or disable the scrolling animation by passing `true` to the `canAnimate` parameter in `scrollToCell` method. 
 
 N> The default value of `canAnimate` is `false`.
 
@@ -211,7 +211,7 @@ final DataGridController _controller = DataGridController();
 
 ### Scroll to row
 
-You can scroll programmatically to a particular row by passing the row index in the `scrollToRow` method. SfDataGrid allows to enable or disable the scrolling animation by passing `true` to the `canAnimate` parameter in `scrollToRow` method. 
+You can scroll programmatically to a particular row by passing the row index in the [scrollToRow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/scrollToRow.html) method. SfDataGrid allows to enable or disable the scrolling animation by passing `true` to the `canAnimate` parameter in `scrollToRow` method. 
 
 N> The default value of `canAnimate` is `false`.
 
@@ -280,7 +280,7 @@ final DataGridController _controller = DataGridController();
 
 ### Scroll to column
 
-You can scroll programmatically to a particular column by passing the column index in the `scrollToColumn` method. SfDataGrid allows to enable or disable the scrolling animation by passing `true` to the `canAnimate` parameter in `scrollToColumn` method. 
+You can scroll programmatically to a particular column by passing the column index in the [scrollToColumn](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/scrollToColumn.html) method. SfDataGrid allows to enable or disable the scrolling animation by passing `true` to the `canAnimate` parameter in `scrollToColumn` method. 
 
 N> The default value of `canAnimate` is `false`.
 
@@ -351,7 +351,7 @@ final DataGridController _controller = DataGridController();
 
 ### Scroll to specific position
 
-`SfDataGrid` allows to position the scrolled row or column in view programmatically by passing `DataGridScrollPosition` to `rowPosition` and `columnPosition` arguments respectively in `scrollToCell` and `position` argument of `scrollToRow` and `scrollToColumn` methods. Below are the four types of positions available,
+`SfDataGrid` allows to position the scrolled row or column in view programmatically by passing [DataGridScrollPosition](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridScrollPosition-class.html) to `rowPosition` and `columnPosition` arguments respectively in `scrollToCell` and `position` argument of `scrollToRow` and `scrollToColumn` methods. Below are the four types of positions available,
 
 `makeVisible`: Scroll to make a specified row/column visible in datagrid. If the specified row/column is already in view, scrolling will not occur.
 `start`: Scroll to make the row/column positioned at the start of the datagrid.
@@ -428,7 +428,7 @@ final DataGridController _controller = DataGridController();
 
 ### Scroll to vertical offset
 
-The Flutter DataTable supports to scroll programmatically to a particular vertical offset by passing the offset value to the `scrollToVerticalOffset` method. Also, it allows to enable the scrolling animation by passing `true` to the `canAnimate` parameter in `scrollToVerticalOffset` method. 
+The Flutter DataTable supports to scroll programmatically to a particular vertical offset by passing the offset value to the [scrollToVerticalOffset](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/scrollToVerticalOffset.html) method. Also, it allows to enable the scrolling animation by passing `true` to the `canAnimate` parameter in `scrollToVerticalOffset` method. 
 
 N> The default value of `canAnimate` is `false`.
 
@@ -497,7 +497,7 @@ final DataGridController _controller = DataGridController();
 
 ### Scroll to horizontal offset
 
-The Flutter DataTable supports to scroll programmatically to a particular horizontal offset by passing the offset value to the `scrollToHorizontalOffset` method. Also, it allows to enable the scrolling animation by passing `true` to the `canAnimate` parameter in `scrollToHorizontalOffset` method. 
+The Flutter DataTable supports to scroll programmatically to a particular horizontal offset by passing the offset value to the [scrollToHorizontalOffset](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/scrollToHorizontalOffset.html) method. Also, it allows to enable the scrolling animation by passing `true` to the `canAnimate` parameter in `scrollToHorizontalOffset` method. 
 
 N> The default value of `canAnimate` is `false`.
 
