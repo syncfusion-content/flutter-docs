@@ -13,7 +13,7 @@ documentation: ug
 
 The `SfCalendar` can easily be accessed by screen readers. Please find the following table  for inner elements.
 
-** Month view **
+### Month view
 
 | View              | Format                       | Example                                       |
 |-------------------|------------------------------|-----------------------------------------------|
@@ -21,7 +21,7 @@ The `SfCalendar` can easily be accessed by screen readers. Please find the follo
 | No events         | EEE, dd/MMMM/yyyy, No events | Wednesday the 15th of January 2020, No events |
 | No selected dates | No selected date             | No selected date                              |                                               
 
-** TimeSlot view **
+### TimeSlot view
 
 | View                   | Format                                     | Example                                        |
 |------------------------|--------------------------------------------|------------------------------------------------|
@@ -30,7 +30,7 @@ The `SfCalendar` can easily be accessed by screen readers. Please find the follo
 | All day expander view  | + appointment Count                        | +3                                             |
 
 
-** Appointments **
+### Appointments
 
 | View                          | Format                                              | Example                                                                      |
 |-------------------------------|-----------------------------------------------------|------------------------------------------------------------------------------|
@@ -40,7 +40,7 @@ The `SfCalendar` can easily be accessed by screen readers. Please find the follo
 | Spanning appointment          | Subject hh mm a dd/MMMM/yyyy - hh mm a dd/MMMM/yyyy | General meeting 12AM the 23rd of January 2020 – 1AM the 30th of January 2020 |
 
 
-** Headers **
+### Headers
 
 | View                     | Format                  | Example                              |
 |--------------------------|-------------------------|--------------------------------------|

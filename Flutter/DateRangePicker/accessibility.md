@@ -12,7 +12,7 @@ documentation: ug
 ## Screen reader support
 The `SfDateRangePicker` can easily be accessed by screen readers. Please find the following table  for inner elements.
 
-** Month view **
+### Month view
 
 | View                                                              | Format                           | Example                                  |
 |-------------------------------------------------------------------|----------------------------------|------------------------------------------|
@@ -22,7 +22,7 @@ The `SfDateRangePicker` can easily be accessed by screen readers. Please find th
 | Disabled cells (Enable dates in past, dates exceed min/max dates) | EEE, dd/MMMM/yyyy, Disabled date | Friday, 31st January 2020, Disabled date |
 | Blackout date                                                     | EEE, dd/MMMM/yyyy, blackout date | 6th February 2020, Blackout date         |
 
-** Year view **
+### Year view
 
 | View                                                             | Format                   | Example                      |
 |------------------------------------------------------------------|--------------------------|------------------------------|
@@ -30,7 +30,7 @@ The `SfDateRangePicker` can easily be accessed by screen readers. Please find th
 | Header                                                           | yyyy                     | 2020                         |
 | Disabled cell (Enable dates in past, dates exceeds min/max date) | MMMM yyyy, Disabled cell | December 2019, Disabled cell |
 
-** Decade view **
+### Decade view
 
 | View                                                             | Format              | Example            |
 |------------------------------------------------------------------|---------------------|--------------------|
@@ -38,7 +38,7 @@ The `SfDateRangePicker` can easily be accessed by screen readers. Please find th
 | Decade cell                                                      | yyyy                | 2020               |
 | Disabled cell (Enable dates in past, dates exceeds min/max date) | yyyy, Disabled cell | 2019 Disabled cell |
 
-** Century view **
+### Century view
 
 | View                                                             | Format      | Example                     |
 |------------------------------------------------------------------|-------------|-----------------------------|
@@ -46,7 +46,7 @@ The `SfDateRangePicker` can easily be accessed by screen readers. Please find th
 | Century cell                                                     | yyyy - yyyy | 2020 to 2029                |
 | Disabled cell (Enable dates in past, dates exceeds min/max date) | yyyy - yyyy | 2010 to 2019, Disabled cell |
 
-** Navigation arrows **
+### Navigation arrows
 
 | View                      | Format | Example         |
 |---------------------------|--------|-----------------|
