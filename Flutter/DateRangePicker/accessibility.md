@@ -55,8 +55,7 @@ The `SfDateRangePicker` can easily be accessed by screen readers. Please find th
 
 ## Sufficient contrast
 
-Provides a uniform and consistent look to the DateRangePicker’s appearance and format. Theming support provides a consistent look to the date range picker. Provides support to get the color code from the user for all the elements in date range picker.
-Kindly refer [here](https://help.syncfusion.com/flutter/themes/themes)for full details about theming support.
+The `SfDateRangePicker` [themingSupport](https://help.syncfusion.com/flutter/themes/themes) offers a consistent and standardized look, as well as the ability to set the colors for all components.
 
 Provided API support to get color code from users for the following elements
 * [viewHeaderStyle](https://help.syncfusion.com/flutter/daterangepicker/headers#view-header) 
@@ -75,7 +74,7 @@ Provided API support to get color code from users for the following elements
 
 ## Large fonts
 
-Provides the support to change the font size based on device setting. Additionally, provided API to get the font size from customer for all the elements in date range picker.
+Allows you to adjust the font size depending on your device's settings. It allows you to change the font size of all elements in the date range picker.
 * [todayTextStyle](https://help.syncfusion.com/flutter/daterangepicker/customizations)
 * [leadingDatesTextStyle](https://help.syncfusion.com/flutter/daterangepicker/customizations)
 * [trailingDatesTextStyle](https://help.syncfusion.com/flutter/daterangepicker/customizations)
@@ -89,7 +88,7 @@ Provides the support to change the font size based on device setting. Additional
 
 ## Keyboard navigation
 
-The `SfDateRangePicker` supports selection using keyboard interactions.
+Following keyboard interactions are supported by the `SfDateRangePicker`.
 
 | Key                   | Description                     									  					                 |
 |-----------------------|--------------------------------------------------------------------------------------------------------|

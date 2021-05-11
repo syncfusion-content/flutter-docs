@@ -78,7 +78,7 @@ Provides the support to change the font size based on device setting. Additional
 
 ## Keyboard navigation
 
-The `SfCalendar` supports selection using keyboard interactions.
+Following keyboard interactions are supported by the `SfCalendar`.
 
 | Key              | Description                     														   |
 |------------------|-------------------------------------------------------------------------------------------|
