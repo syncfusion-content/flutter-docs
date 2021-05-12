@@ -10,7 +10,7 @@ documentation: ug
 # Accessibility in Flutter DateRangePicker (SfDateRangePicker)
 
 ## Screen reader support
-The `SfDateRangePicker` can easily be accessed by screen readers. Please find the following table  for inner elements.
+The `SfDateRangePicker` can easily be accessed by screen readers. Please find the following table to get spoken feedback about the inner element contents of the screen.
 
 ### Month view
 
@@ -55,7 +55,7 @@ The `SfDateRangePicker` can easily be accessed by screen readers. Please find th
 
 ## Sufficient contrast
 
-The `SfDateRangePicker` [theming](https://help.syncfusion.com/flutter/themes/themes) support offers a consistent and standardized look, as well as the ability to set the colors for all components.
+The `SfDateRangePicker` [theming](https://help.syncfusion.com/flutter/themes/themes) support offers a consistent and standardized look, as well as the ability to set the colors for all UI elements.
 
 The following APIs allows to customize the colors of the following elements.
 * [viewHeaderStyle](https://help.syncfusion.com/flutter/daterangepicker/headers#view-header) 
@@ -74,7 +74,7 @@ The following APIs allows to customize the colors of the following elements.
 
 ## Large fonts
 
-The `SfDateRangePicker` font size can be adjusted automatically based on device settings, the font size scaled based on the `MediaQueryData.textScaleFactor`. And also it allows to change the font size of all elements in date range picker.
+The `SfDateRangePicker` font size can be adjusted automatically based on device settings and the font size scaled based on the `MediaQueryData.textScaleFactor`. And also it allows to change the font size of all elements in date range picker.
 * [todayTextStyle](https://help.syncfusion.com/flutter/daterangepicker/customizations)
 * [leadingDatesTextStyle](https://help.syncfusion.com/flutter/daterangepicker/customizations)
 * [trailingDatesTextStyle](https://help.syncfusion.com/flutter/daterangepicker/customizations)
