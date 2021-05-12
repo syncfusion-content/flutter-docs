@@ -74,7 +74,7 @@ The following APIs allows to customize the colors of the following elements.
 
 ## Large fonts
 
-Allows to adjust the font size depending on the device settings. It allows to change the font size of all elements in the date range picker.
+The `SfDateRangePicker` font size can be adjusted automatically based on device settings, the font size scaled based on the `MediaQueryData.textScaleFactor`. And also it allows to change the font size of all elements in date range picker.
 * [todayTextStyle](https://help.syncfusion.com/flutter/daterangepicker/customizations)
 * [leadingDatesTextStyle](https://help.syncfusion.com/flutter/daterangepicker/customizations)
 * [trailingDatesTextStyle](https://help.syncfusion.com/flutter/daterangepicker/customizations)

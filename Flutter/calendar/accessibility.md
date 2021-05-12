@@ -68,7 +68,7 @@ The following APIs allow you to customize the colors of the following elements.
 
 ## Large fonts
 
-Allows to adjust the font size depending on the device settings. It allows to change the font size of all elements in the calendar.
+The `SfCalendar` font size can be adjusted automatically based on device settings, the font size scaled based on the `MediaQueryData.textScaleFactor`. And also it allows to change the font size of all elements in calendar.
 * [appointmentTextStyle](https://help.syncfusion.com/flutter/calendar/appointments#appearance-customization)
 * [timeTextStyle](https://help.syncfusion.com/flutter/calendar/timeslot-views#time-text-appearance)
 * [dateTextStyle](https://help.syncfusion.com/flutter/calendar/schedule-view#day-header-customization)
