@@ -1,7 +1,7 @@
 ---
 layout: post
 title: RTL support in Flutter Cartesian Charts widget | Syncfusion 
-description: Learn here all RTL related support in Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+description: Learn here about the RTL support in Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug

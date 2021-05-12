@@ -1,7 +1,7 @@
 ---
 layout: post
 title: RTL support in Flutter Funnel Chart widget | Syncfusion 
-description: Learn here all RTL related support in Syncfusion Flutter Funnel Chart (SfFunnelChart) widget and more.
+description: Learn here about the RTL support in Syncfusion Flutter Funnel Chart (SfFunnelChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug

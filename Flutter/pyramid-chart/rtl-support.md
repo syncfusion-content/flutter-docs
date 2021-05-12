@@ -1,7 +1,7 @@
 ---
 layout: post
 title: RTL support in Flutter Pyramid Chart widget | Syncfusion 
-description: Learn here all RTL related support in Syncfusion Flutter Pyramid Chart (SfPyramidChart) widget and more.
+description: Learn here about the RTL support in Syncfusion Flutter Pyramid Chart (SfPyramidChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
