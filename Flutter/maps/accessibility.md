@@ -1,0 +1,38 @@
+---
+layout: post
+title:  Accessibility in Flutter maps widget | Syncfusion
+description: Learn here all about the accessibility support in Syncfusion Flutter maps (SfMaps) widget.
+platform: Flutter
+control: SfMaps
+documentation: ug
+---
+
+# Accessibility in Flutter Maps (SfMaps)
+
+## Sufficient contrast
+
+You can customize the color of the [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) elements using the following APIs,
+
+* [`Shape`](https://help.syncfusion.com/flutter/maps/shape#shape-color)
+* [`Bubble`](https://help.syncfusion.com/flutter/maps/bubble#color)
+* [`Data labels`](https://help.syncfusion.com/flutter/maps/data-labels#appearance-customization)
+* [`Legend`](https://help.syncfusion.com/flutter/maps/legend#icon-and-text-customization)
+* [`Tooltip`](https://help.syncfusion.com/flutter/maps/tooltip#appearance-customization)
+* [`Sublayer`](https://help.syncfusion.com/flutter/maps/shape-sublayer#color-and-stroke-color)
+* [`Line layer`](https://help.syncfusion.com/flutter/maps/vector-layers/line-layer#color)
+* [`Arc layer`](https://help.syncfusion.com/flutter/maps/vector-layers/arc-layer#color)
+* [`Polyline layer`](https://help.syncfusion.com/flutter/maps/vector-layers/polyline-layer#color)
+* [`Polygon layer`](https://help.syncfusion.com/flutter/maps/vector-layers/polygon-layer#fill-color)
+* [`Circle layer`](https://help.syncfusion.com/flutter/maps/vector-layers/circle-layer#fill-color)
+
+## Large fonts
+
+The font size of the [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) can be automatically scaled based on the device settings. Also, you can change the font size of the [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) elements using the following API's:
+
+* [`Data label style`](https://help.syncfusion.com/flutter/maps/data-labels#appearance-customization)
+* [`Legend text style`](https://help.syncfusion.com/flutter/maps/legend#text-style)
+* [`Tooltip label style`](https://help.syncfusion.com/flutter/maps/tooltip#tooltip-for-the-shapes)
+
+## Easily touch targets
+
+The [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) has touch target as 48 * 48 as per the standard.
