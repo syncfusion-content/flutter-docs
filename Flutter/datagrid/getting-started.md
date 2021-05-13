@@ -9,7 +9,11 @@ documentation: ug
 
 # Getting started with Flutter DataGrid (SfDataGrid)
 
-This section explains the steps required to add the DataGrid widget and its features. This section covers only basic features needed to get started with the Syncfusion Flutter DataGrid widget. 
+This section explains the steps required to add the DataGrid widget and its features. This section covers only basic features needed to get started with the Syncfusion Flutter DataGrid widget.
+
+To get start quickly with Flutter DataGrid, you can check on this video:
+<style>#FlutterDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style>
+<iframe id='FlutterDataGridVideoTutorial' src='https://www.youtube.com/watch?v=-ULsEfjxFuY'></iframe>
 
 ## Add Flutter DataGrid to an application
 
