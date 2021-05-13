@@ -9,13 +9,15 @@ documentation: ug
 
 # Accessibility in Flutter Range Slider (SfRangeSlider)
 
+## Screen reader
+
 The [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html) can easily be accessed by screen readers. The default reading format for start thumb is `The start value is ${values.start}` and end thumb is `the end value is ${values.end}`. You can change the reading format using the [`semanticFormatterCallback`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/semanticFormatterCallback.html) property.
 
 For android, you can adjust the value of each thumb by tapping it and then pressing the volume buttons to increase or decrease the value.
 
 For iOS, you can adjust the value of each thumb by tapping it and then swiping up or down to increase or decrease the value respectively.
 
-## Horizontal
+### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
@@ -51,7 +53,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## Vertical
+### Vertical
 
 {% tabs %}
 {% highlight Dart %}
@@ -86,3 +88,26 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+## Sufficient contrast
+
+You can customize the color of the [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html) elements using the following APIs,
+
+* [`Track`](https://help.syncfusion.com/flutter/range-slider/track#track-color)
+* [`Major ticks`](https://help.syncfusion.com/flutter/range-slider/ticks#major-ticks-color)
+* [`Minor ticks`](https://help.syncfusion.com/flutter/range-slider/ticks#minor-ticks-color)
+* [`Labels`](https://help.syncfusion.com/flutter/range-slider/labels-and-divisor#label-style)
+* [`Divisors`](https://help.syncfusion.com/flutter/range-slider/labels-and-divisor#divisor-color)
+* [`Thumb`](https://help.syncfusion.com/flutter/range-slider/thumb-and-overlay#thumb-color)
+* [`Thumb overlay`](https://help.syncfusion.com/flutter/range-slider/thumb-and-overlay#thumb-overlay-color)
+
+## Large fonts
+
+The font size of the [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html) can be automatically scaled based on the device settings. Also, you can change the font size of the [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html) elements using the following API's:
+
+* [`Label style`](https://help.syncfusion.com/flutter/range-slider/labels-and-divisor#label-style)
+* [`Tooltip label style`](https://help.syncfusion.com/flutter/range-slider/tooltip#tooltip-label-style)
+
+## Easily tappable targets
+
+The [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html) has tappable target as 48 * 48 as per the standard.

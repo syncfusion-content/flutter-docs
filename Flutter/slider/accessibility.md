@@ -17,7 +17,7 @@ For android, you can adjust the value of thumb by tapping it and then pressing t
 
 For iOS, you can adjust the value of thumb by tapping it and then swiping up or down to increase or decrease the value respectively.
 
-## Horizontal
+### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
@@ -53,7 +53,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## Vertical
+### Vertical
 
 {% tabs %}
 {% highlight Dart %}
@@ -110,4 +110,4 @@ The font size of the [`SfSlider`](https://pub.dev/documentation/syncfusion_flutt
 
 ## Easily tappable targets
 
-The [`SfSlider`] has tappable target as 48 * 48 as per the standard.
+The [`SfSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html) has tappable target as 48 * 48 as per the standard.
