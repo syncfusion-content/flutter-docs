@@ -146,7 +146,7 @@ Triggers when tapping the legend item. The [`onLegendTapped`](https://pub.dev/do
 
 Triggers while selection changes. Here you can customize the selectedColor, unselectedColor, selectedBorderColor, selectedBorderWidth, unselectedBorderColor, and unselectedBorderWidth properties. The [`onSelectionChanged`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/onSelectionChanged.html) Callback contains the following arguments.
 
-* [`seriesRenderer`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/series.html) - specifies current series.
+* [`seriesRenderer`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/seriesRenderer.html) - specifies current series.
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/pointIndex.html) - specifies the current series index.
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/pointIndex.html) - specifies the current point index.
 * [`selectedColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/selectedColor.html) - specifies color of the selected data points or series.
@@ -223,3 +223,31 @@ N> This callback will not be called, when the builder is specified for data labe
     }
 
 {% endhighlight %}
+
+## onPointTapped
+
+Triggers when tapping the series point. The [`onPointTapped`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/onPointTapped.html) Callback contains the following arguments.
+
+* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PointTapArgs/seriesIndex.html) - specifies the current series index.
+* [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PointTapArgs/pointIndex.html) - specifies the current point index.
+* [`dataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PointTapArgs/dataPoints.html) - holds the data point collection.
+* [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PointTapArgs/viewportPointIndex.html) - to get the viewport index value of the tapped data label.
+
+{% highlight dart %}
+
+      @override
+      Widget build(BuildContext context) {
+      return Scaffold(
+        body: Center(
+          child: SfPyramidChart(
+            onPointTapped: (PointTapArgs args){
+              print(args.seriesIndex);
+              print(args.pointIndex);
+            }
+          )
+        )  
+      );
+      }
+
+{% endhighlight %}
+
