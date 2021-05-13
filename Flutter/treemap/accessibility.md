@@ -11,7 +11,7 @@ documentation: ug
 
 ## Sufficient contrast
 
-You can customize the color of the [`SfTreemap`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap-class.html) elements using the following APIs,
+You can customize the color of the [`SfTreemap`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap-class.html) elements using the following APIs for the sufficient contrast.
 
 * [`Level`](https://help.syncfusion.com/flutter/treemap/color-customization#level-color)
 * [`Labels`](https://help.syncfusion.com/flutter/treemap/labels)
@@ -28,4 +28,4 @@ The font size of the [`SfTreemap`](https://pub.dev/documentation/syncfusion_flut
 
 ## Easily touch targets
 
-The [`SfTreemap`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap-class.html) has touch target as 48 * 48 as per the standard.
+The [`SfTreemap`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap-class.html) has touch target as 48 * 48 as per the standard for all the elements.

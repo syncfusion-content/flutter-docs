@@ -91,7 +91,7 @@ Widget build(BuildContext context) {
 
 ## Sufficient contrast
 
-You can customize the color of the [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html) elements using the following APIs,
+You can customize the color of the [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html) elements using the following APIs for the sufficient contrast.
 
 * [`Track`](https://help.syncfusion.com/flutter/range-slider/track#track-color)
 * [`Major ticks`](https://help.syncfusion.com/flutter/range-slider/ticks#major-ticks-color)
@@ -110,4 +110,4 @@ The font size of the [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_
 
 ## Easily touch targets
 
-The [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html) has touch target as 48 * 48 as per the standard.
+The [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html) has touch target as 48 * 48 as per the standard for all the elements.

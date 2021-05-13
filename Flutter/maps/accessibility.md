@@ -11,7 +11,7 @@ documentation: ug
 
 ## Sufficient contrast
 
-You can customize the color of the [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) elements using the following APIs,
+You can customize the color of the [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) elements using the following APIs for the sufficient contrast.
 
 * [`Shape`](https://help.syncfusion.com/flutter/maps/shape#shape-color)
 * [`Bubble`](https://help.syncfusion.com/flutter/maps/bubble#color)
@@ -35,4 +35,4 @@ The font size of the [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter
 
 ## Easily touch targets
 
-The [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) has touch target as 48 * 48 as per the standard.
+The [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) has touch target as 48 * 48 as per the standard for all the elements.
