@@ -108,6 +108,6 @@ The font size of the [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_
 * [`Label style`](https://help.syncfusion.com/flutter/range-slider/labels-and-divisor#label-style)
 * [`Tooltip label style`](https://help.syncfusion.com/flutter/range-slider/tooltip#tooltip-label-style)
 
-## Easily tappable targets
+## Easily touch targets
 
-The [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html) has tappable target as 48 * 48 as per the standard.
+The [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html) has touch target as 48 * 48 as per the standard.
