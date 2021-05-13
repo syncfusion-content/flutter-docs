@@ -9,6 +9,64 @@ documentation: ug
 
 # Right to Left (RTL) in Flutter Range Slider (SfRangeSlider)
 
+### Using locale
+
+You can change the right to left direction by specifying locale, which support RTL language such as (Arabic ,Persian ,Hebrew, Pashto, Urdu) by specifying the MaterialApp properties such as `localizationsDelegates`, `supportedLocales`, `locale` and adding the flutter_localizations package to your pubspec.yaml file.
+
+{% tabs %}
+{% highlight Dart %}
+
+dependencies:
+  flutter_localizations:
+    sdk: flutter
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(40.0, 60.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+    theme: ThemeData(
+      primarySwatch: Colors.blue,
+    ),
+    localizationsDelegates: [
+      GlobalCupertinoLocalizations.delegate,
+      GlobalMaterialLocalizations.delegate,
+      GlobalWidgetsLocalizations.delegate,
+    ],
+    supportedLocales: [
+      Locale("fa", "IR"),
+    ],
+    locale: Locale("fa", "IR"),
+    home: Scaffold(
+      backgroundColor: Colors.white,
+      body: SfRangeSlider(
+        min: 0.0,
+        max: 100.0,
+        values: _values,
+        interval: 20.0,
+        showLabels: true,
+        showTicks: true,
+        onChanged: (SfRangeValues newValues) {
+          setState(() {
+            _values = newValues;
+          });
+        },
+      ),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Using Directionality widget
+
 The SfRangeSlider supports changing the layout direction of the widget in the right-to-left direction by setting the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to `rtl` in the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget.
 
 {% tabs %}
