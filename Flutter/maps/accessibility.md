@@ -9,6 +9,72 @@ documentation: ug
 
 # Accessibility in Flutter Maps (SfMaps)
 
+## Screen reader
+
+The [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) can be accessed by the screen readers by wrapping the [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) widget to the [`Semantics`](https://api.flutter.dev/flutter/widgets/Semantics-class.html) widget. It will read the value when double tapped on the widget.
+
+{% tabs %}
+{% highlight Dart %}
+
+late List<PopulationModel> _data;
+late MapShapeSource _dataSource;
+late String _semanticLabel = ' ';
+
+@override
+void initState() {
+  _data = const <PopulationModel>[
+    PopulationModel('Asia', 456.07),
+    PopulationModel('Africa', 121.61),
+    PopulationModel('Europe', 74.64),
+    PopulationModel('North America', 57.9),
+    PopulationModel('South America', 42.25),
+    PopulationModel('Australia', 2.54),
+  ];
+
+  _dataSource = MapShapeSource.asset(
+    'assets/world_map.json',
+    shapeDataField: 'continent',
+    dataCount: _data.length,
+    primaryValueMapper: (int index) => _data[index].continent,
+   );
+   super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+     body: Center(
+        child: Semantics(
+          label: 'Syncfusion Flutter Maps',
+          value: _semanticLabel,
+          onTap: () {
+            setState(() {
+              _semanticLabel =
+                  'Asia is the most populated continent and Australia is the least populated continent.';
+            });
+          },
+          child: SfMaps(
+            layers: <MapLayer>[
+              MapShapeLayer(
+                source: _dataSource,
+              ),
+            ],
+          ),
+        ),
+      ),
+   );
+}
+
+class PopulationModel {
+  const PopulationModel(this.continent, this.populationInCrores);
+
+  final String continent;
+  final double populationInCrores;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Sufficient contrast
 
 You can customize the color of the [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) elements using the following APIs for the sufficient contrast.
