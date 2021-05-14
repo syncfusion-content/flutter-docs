@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Flow Layout of Syncfusion Flutter PDF
-description: Learn how to add image, paragraph text, header text, and a table using flow layout by maintaining the drawn positions in the Flutter PDF.
+title: Flow layout in Flutter PDF library | Syncfusion
+description: Learn here all about drawing images, paragraph text, header text and tables using Flow layout feature of Syncfusion Flutter non-UI PDF library and more.
 platform: flutter
 control: PDF
 documentation: ug
 ---
 
-# Working with flow layout
+# Flow layout in Flutter PDF
 
 The Syncfusion Flutter PDF supports creating a PDF document with flow model by maintaining the position of previously drawn element.
 

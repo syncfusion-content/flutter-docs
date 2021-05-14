@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Localization in Syncfusion Flutter PDF Viewer | Syncfusion
-description: This section explains about how to localize the contents and custom text elements in the Flutter PDF Viewer.
+title: Localization in Flutter PDF Viewer widget | Syncfusion
+description: Learn here all about localization feature of Syncfusion Flutter PDF Viewer (SfPdfViewer) widget and more.
 platform: Flutter
 control: SfPdfViewer
 documentation: ug

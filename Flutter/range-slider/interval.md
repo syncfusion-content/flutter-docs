@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Interval in Syncfusion Flutter Range Slider | Syncfusion
-description: This section explains about how to add intervals for numeric and date range slider in Flutter application.
+title: Interval in Flutter Range Slider widget | Syncfusion
+description: Learn here all about adding the Interval feature in Syncfusion Flutter Range Slider (SfRangeSlider) widget and more.
 platform: Flutter
 control: SfRangeSlider
 documentation: ug
 ---
 
-# Range slider interval
+# Interval in Flutter Range Slider (SfRangeSlider)
 This section explains about how to add the interval for numeric and date range slider.
 
 ## Numeric interval

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Shapes of Syncfusion Flutter PDF
-description: Learn how to draw shapes like line, rectangle, ellipse, polygon, curve, arc, pie, bezier and path in the Flutter PDF.
+title: Shapes drawing in Flutter PDF library | Syncfusion
+description: Learn here all about drawing different types of Shapes feature of Syncfusion Flutter PDF non-UI library and more.
 platform: flutter
 control: PDF
 documentation: ug
 ---
 
-# Working with Shapes Drawing
+# Shapes Drawing in Flutter PDF
 
 Syncfusion Flutter PDF has support for adding the following shapes:
 

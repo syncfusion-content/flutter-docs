@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Templates of Syncfusion Flutter PDF
-description: Learn how to add templates in PDF document and add headers, footers and stamp with PDF templates by using the Syncfusion Flutter PDF.
+title: Templates in Flutter PDF library | Syncfusion
+description: Learn here all about add headers and footers and stamp by Templates feature of Syncfusion Flutter PDF non-UI library and more.
 platform: flutter
 control: PDF
 documentation: ug
 ---
 
-# Working with PDF Templates
+# Templates in Flutter PDF
 
 A PDF template is a drawing surface, where contents can be added. All the elements that can be added to a [`PdfPage`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfPage-class.html) is supported in [`PdfTemplate`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfTemplate-class.html) as well. The template in turn can be drawn over the page or can be positioned at any part of the page.
 

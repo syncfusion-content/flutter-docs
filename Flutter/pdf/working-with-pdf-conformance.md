@@ -1,13 +1,13 @@
 ---
 layout: post
-title: PDF Conformance of Syncfusion Flutter PDF
-description: Learn how to create a PDF conformance document specialized for uses such as archiving, long-term preservation and more using Flutter PDF.
+title: Conformance in Flutter PDF library | Syncfusion
+description: Learn here all about different types of Conformance feature of Syncfusion Flutter PDF non-UI library and more.
 platform: flutter
 control: PDF
 documentation: ug
 ---
 
-# Working with PDF Conformance
+# Conformance in Flutter PDF
 
 The Syncfusion Flutter PDF currently supports the following PDF conformances:
 
