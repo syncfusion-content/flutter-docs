@@ -17,7 +17,7 @@ The [`SfTreemap`](https://pub.dev/documentation/syncfusion_flutter_treemap/lates
 {% highlight Dart %}
 
 late List<PopulationModel> _source;
-late String _semanticLabel = ' ';
+late String _semanticLabel = 'Asia is the most populated continent and Australia is the least populated continent';
 
 @override
 void initState() {
@@ -44,12 +44,6 @@ Widget build(BuildContext context) {
      body: Semantics(
         label: 'Syncfusion Flutter Treemap',
         value: _semanticLabel,
-        onTap: () {
-          setState(() {
-            _semanticLabel =
-                'Asia is the most populated continent and Australia is the least populated continent';
-          });
-        },
         child: Column(
           children: [
             Expanded(
