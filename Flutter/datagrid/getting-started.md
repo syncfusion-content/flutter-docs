@@ -13,7 +13,7 @@ This section explains the steps required to add the DataGrid widget and its feat
 
 To get start quickly with Flutter DataGrid, you can check on this video:
 <style>#FlutterDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style>
-<iframe id='FlutterDataGridVideoTutorial' src='https://www.youtube.com/watch?v=-ULsEfjxFuY'></iframe>
+<iframe id='FlutterDataGridVideoTutorial' src='https://www.youtube.com/embed/-ULsEfjxFuY'></iframe>
 
 ## Add Flutter DataGrid to an application
 
