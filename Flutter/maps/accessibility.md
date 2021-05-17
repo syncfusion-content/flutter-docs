@@ -95,4 +95,4 @@ The font size of the [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter
 
 ## Easily touch targets
 
-The [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) has touch target as 48 * 48 as per the standard for all the elements.
+The [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) has touch target as 48 * 48 as per the standard for all the elements except marker and vector linear shapes like MapLineLayer, MapArcLayer, and MapPolygonLayer. However, you can increase touch area of those elements by increasing the size of the marker and value of the vector layer width property.
