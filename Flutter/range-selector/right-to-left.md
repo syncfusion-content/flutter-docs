@@ -9,7 +9,7 @@ documentation: ug
 
 # Right to Left (RTL) in Flutter Range Selector (SfRangeSelector)
 
-### Using locale
+## Using locale
 
 The range selector will render in right to left direction if the locale belongs to RTL languages such as (Arabic ,Persian ,Hebrew, Pashto, Urdu). It can be achieved by specifying the MaterialApp properties such as `localizationsDelegates`, `supportedLocales`, `locale` and adding the flutter_localizations package to your pubspec.yaml file.
 
@@ -60,7 +60,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-### Using Directionality widget
+## Using Directionality widget
 
 The range selector can also be wrapped inside the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and you can set the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to `rtl`.
 

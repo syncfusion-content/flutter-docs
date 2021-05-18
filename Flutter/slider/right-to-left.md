@@ -1,7 +1,7 @@
 ---
 layout: post
 title: RTL in Flutter Slider widget | Syncfusion
-description: Learn here all about the RTL rendering in Syncfusion Flutter Slider (SfSlider) widget.
+description: This section explains about the right to left (RTL) rendering in Syncfusion Flutter Slider (SfSlider) widget.
 platform: Flutter
 control: SfSlider
 documentation: ug

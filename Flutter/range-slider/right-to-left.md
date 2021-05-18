@@ -1,7 +1,7 @@
 ---
 layout: post
 title: RTL in Flutter Range Slider widget | Syncfusion
-description: Learn here all about the RTL rendering in Syncfusion Flutter Range Slider (SfRangeSlider) widget.
+description: This section explains about the RTL rendering in Syncfusion Flutter Range Slider (SfRangeSlider) widget.
 platform: Flutter
 control: SfRangeSlider
 documentation: ug
