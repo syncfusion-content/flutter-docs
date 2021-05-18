@@ -7,52 +7,11 @@ control: SfRangeSelector
 documentation: ug
 ---
 
-# Right To Left (RTL) in Flutter Range Selector (SfRangeSelector)
+# Right to Left (RTL) in Flutter Range Selector (SfRangeSelector)
 
-## RTL rendering ways
+### Using locale
 
-Right to left rendering can be switched in the following ways:
-
-### Wrapping the SfRangeSelector with Directionality widget
-
-The SfRangeSelector supports changing the layout direction of the widget in the right-to-left direction by setting the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to `rtl` in the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget.
-
-{% tabs %}
-{% highlight Dart %}
-
-SfRangeValues _initialValues = SfRangeValues(4.0, 8.0);
-
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Directionality(
-            textDirection: TextDirection.rtl,
-            child: Center(
-              child: SfRangeSelector(
-                min: 2.0,
-                max: 10.0,
-                interval: 1,
-                showLabels: true,
-                showTicks: true,
-                initialValues: _initialValues,
-                child: Container(
-                    color: Colors.pink[200],
-                    height: 150,
-                 ),
-              ),
-            )
-         ),
-      )
-  );
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-### Changing the locale to RTL languages
-
-To change the range selector rendering direction from right to left, you can change the locale to any of the RTL languages such as Arabic, Persian, Hebrew, Pashto, and Urdu.
+The range selector will render in right to left direction if the locale belongs to RTL languages such as (Arabic ,Persian ,Hebrew, Pashto, Urdu). It can be achieved by specifying the MaterialApp properties such as `localizationsDelegates`, `supportedLocales`, `locale` and adding the flutter_localizations package to your pubspec.yaml file.
 
 {% tabs %}
 {% highlight Dart %}
@@ -101,6 +60,41 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![RTL support](images/right-to-left/right-to-left-support.png)
+### Using Directionality widget
 
-N> The RTL support is not applicable for the child of the SfRangeSelector. It depends on the behavior of the child added.
+The range selector can also be wrapped inside the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and you can set the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to `rtl`.
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _initialValues = SfRangeValues(4.0, 8.0);
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Directionality(
+            textDirection: TextDirection.rtl,
+            child: Center(
+              child: SfRangeSelector(
+                min: 2.0,
+                max: 10.0,
+                interval: 1,
+                showLabels: true,
+                showTicks: true,
+                initialValues: _initialValues,
+                child: Container(
+                    color: Colors.pink[200],
+                    height: 150,
+                 ),
+              ),
+            )
+         ),
+      )
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![RTL support](images/right-to-left/right-to-left-support.png)
