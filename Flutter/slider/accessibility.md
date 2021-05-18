@@ -11,11 +11,11 @@ documentation: ug
 
 ## Screen reader
 
-The [`SfSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html) can easily be accessed by screen readers. By default, it will read the current value. You can change the reading format using the [`semanticFormatterCallback`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/semanticFormatterCallback.html) property.
+The [`SfSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html) can be accessed by screen readers. By default, it will read the current value. You can change the reading format using the [`semanticFormatterCallback`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/semanticFormatterCallback.html) property.
 
-For android, you can adjust the value of thumb by tapping it and then pressing the volume buttons to increase or decrease the value.
+For android, you can adjust the value of thumb by moving the focus to it and then pressing the volume buttons to increase or decrease the value.
 
-For iOS, you can adjust the value of thumb by tapping it and then swiping up or down to increase or decrease the value respectively.
+For iOS, you can adjust the value of thumb by moving the focus to it and then swiping up or down to increase or decrease the value respectively.
 
 ### Horizontal
 
@@ -103,11 +103,11 @@ You can customize the color of the [`SfSlider`](https://pub.dev/documentation/sy
 
 ## Large fonts
 
-The font size of the [`SfSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html) can be automatically scaled based on the device settings. Also, you can change the font size of the [`SfSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html) elements using the following API's:
+The font size of the [`SfSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html) will be automatically scaled based on the device settings. Also, you can change the font size of the [`SfSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html) elements using the following APIs:
 
 * [`Label style`](https://help.syncfusion.com/flutter/slider/labels-and-divisor#label-style)
 * [`Tooltip label style`](https://help.syncfusion.com/flutter/slider/tooltip#tooltip-label-style)
 
-## Easily touch targets
+## Easier touch targets
 
 The [`SfSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html) has touch target as 48 * 48 as per the standard for all the elements.

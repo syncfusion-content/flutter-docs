@@ -50,7 +50,7 @@ You can customize the color of the [`SfLinearGauge`](https://pub.dev/documentati
 
 ## Large fonts
 
-The font size of the [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html) can't be automatically scaled based on the device settings. However, you can change the font size of the [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html) elements using the following API's:
+You can change the font size of the [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html) elements using the following API:
 
 * [`Labels`](https://help.syncfusion.com/flutter/linear-gauge/labels#customize-label-styles)
 
