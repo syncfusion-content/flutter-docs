@@ -24,9 +24,9 @@ The customization the colors can be done for the following chart elements.
 * [Legend title](https://help.syncfusion.com/flutter/cartesian-charts/legend#legend-title)
 * [Legend item text](https://help.syncfusion.com/flutter/cartesian-charts/legend#customizing-legend)
 * [Series tooltip](https://help.syncfusion.com/flutter/cartesian-charts/tooltip#customizing-the-appearance)
-* [Traclball tooltip](https://help.syncfusion.com/flutter/cartesian-charts/trackball-crosshair#trackball)
+* [Trackball tooltip](https://help.syncfusion.com/flutter/cartesian-charts/trackball-crosshair#trackball)
 * [Crosshair tooltip](https://help.syncfusion.com/flutter/cartesian-charts/trackball-crosshair#show-axis-tooltip)
-* [Plotband](https://help.syncfusion.com/flutter/cartesian-charts/axis-customization#plot-bands)
+* [Plot band](https://help.syncfusion.com/flutter/cartesian-charts/axis-customization#plot-bands)
 * [Empty points data](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#empty-point-customization)
 * [Selected data points](https://help.syncfusion.com/flutter/cartesian-charts/selection#customizing-the-segments)
 * [Selection zooming](https://help.syncfusion.com/flutter/cartesian-charts/zoom-pan#selection-zooming)
@@ -41,9 +41,9 @@ The `SfCartesianChart` font size can be adjusted automatically based on device s
 * [Legend title](https://help.syncfusion.com/flutter/cartesian-charts/legend#legend-title)
 * [Legend item text](https://help.syncfusion.com/flutter/cartesian-charts/legend#customizing-legend)
 * [Series tooltip](https://help.syncfusion.com/flutter/cartesian-charts/tooltip#customizing-the-appearance)
-* [Traclball tooltip](https://help.syncfusion.com/flutter/cartesian-charts/trackball-crosshair#trackball)
+* [Trackball tooltip](https://help.syncfusion.com/flutter/cartesian-charts/trackball-crosshair#trackball)
 * [Crosshair tooltip](https://help.syncfusion.com/flutter/cartesian-charts/trackball-crosshair#show-axis-tooltip)
-* [Plotband text](https://help.syncfusion.com/flutter/cartesian-charts/axis-customization#plot-bands)
+* [Plot band text](https://help.syncfusion.com/flutter/cartesian-charts/axis-customization#plot-bands)
 
 ## Easily tappable targets
 
