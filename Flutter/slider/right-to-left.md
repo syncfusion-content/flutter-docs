@@ -45,7 +45,7 @@ Widget build(BuildContext context) {
         min: 0.0,
         max: 100.0,
         value: _value,
-        interval: 20.0,
+        interval: 20,
         showLabels: true,
         showTicks: true,
         onChanged: (dynamic newValue) {
