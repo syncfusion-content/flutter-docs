@@ -132,9 +132,3 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
-
-## RTL supported datagrid elements
-
-Right to left rendering is effective only for the columns in the datagrid. The columns will be rendered from right to left direction.
-
-![flutter datagrid with RTL direction](images/rtl-support/flutter-datagrid-rtl.png)
