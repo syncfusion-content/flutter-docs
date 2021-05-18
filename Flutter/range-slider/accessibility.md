@@ -11,11 +11,11 @@ documentation: ug
 
 ## Screen reader
 
-The [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html) can easily be accessed by screen readers. The default reading format for start thumb is `The start value is ${values.start}` and end thumb is `the end value is ${values.end}`. You can change the reading format using the [`semanticFormatterCallback`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/semanticFormatterCallback.html) property.
+The [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html) can be accessed by screen readers. The default reading format for start thumb is `The start value is ${values.start}` and end thumb is `the end value is ${values.end}`. You can change the reading format using the [`semanticFormatterCallback`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/semanticFormatterCallback.html) property.
 
-For android, you can adjust the value of each thumb by tapping it and then pressing the volume buttons to increase or decrease the value.
+For android, you can adjust the value of each thumb by moving the focus to it and then pressing the volume buttons to increase or decrease the value.
 
-For iOS, you can adjust the value of each thumb by tapping it and then swiping up or down to increase or decrease the value respectively.
+For iOS, you can adjust the value of each thumb by moving the focus to it and then swiping up or down to increase or decrease the value respectively.
 
 ### Horizontal
 
@@ -103,7 +103,7 @@ You can customize the color of the [`SfRangeSlider`](https://pub.dev/documentati
 
 ## Large fonts
 
-The font size of the [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html) can be automatically scaled based on the device settings. Also, you can change the font size of the [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html) elements using the following API's:
+The font size of the [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html) will be automatically scaled based on the device settings. Also, you can change the font size of the [`SfRangeSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider-class.html) elements using the following APIs:
 
 * [`Label style`](https://help.syncfusion.com/flutter/range-slider/labels-and-divisor#label-style)
 * [`Tooltip label style`](https://help.syncfusion.com/flutter/range-slider/tooltip#tooltip-label-style)

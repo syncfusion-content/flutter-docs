@@ -11,11 +11,11 @@ documentation: ug
 
 ## Screen reader
 
-The [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html) can easily be accessed by screen readers. The default reading format for start thumb is `The start value is ${values.start}` and end thumb is `the end value is ${values.end}`. You can change the reading format using the [`semanticFormatterCallback`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/semanticFormatterCallback.html) property.
+The [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html) can be accessed by screen readers. The default reading format for start thumb is `The start value is ${values.start}` and end thumb is `the end value is ${values.end}`. You can change the reading format using the [`semanticFormatterCallback`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/semanticFormatterCallback.html) property.
 
-For android, you can adjust the value of each thumb by tapping it and then pressing the volume buttons to increase or decrease the value.
+For android, you can adjust the value of each thumb by moving the focus to the thumb and then pressing the volume buttons to increase or decrease the value.
 
-For iOS, you can adjust the value of each thumb by tapping it and then swiping up or down to increase or decrease the value respectively.
+For iOS, you can adjust the value of each thumb by moving the focus to the thumb and then swiping up or down to increase or decrease the value respectively.
 
 {% tabs %}
 {% highlight Dart %}
@@ -71,11 +71,11 @@ You can customize the color of the [`SfRangeSelector`](https://pub.dev/documenta
 
 ## Large fonts
 
-The font size of the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html) can be automatically scaled based on the device settings. Also, you can change the font size of the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html) elements using the following API's:
+The font size of the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html) will be automatically scaled based on the device settings. Also, you can change the font size of the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html) elements using the following APIs:
 
 * [`Label style`](https://help.syncfusion.com/flutter/range-selector/labels-and-divisor#label-style)
 * [`Tooltip label style`](https://help.syncfusion.com/flutter/range-selector/tooltip#tooltip-label-style)
 
-## Easily touch targets
+## Easier touch targets
 
 The [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html) has touch target as 48 * 48 as per the standard for all the elements.

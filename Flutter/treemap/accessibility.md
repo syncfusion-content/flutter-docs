@@ -88,12 +88,12 @@ You can customize the color of the [`SfTreemap`](https://pub.dev/documentation/s
 
 ## Large fonts
 
-The font size of the [`SfTreemap`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap-class.html) can be automatically scaled based on the device settings. Also, you can change the font size of the [`SfTreemap`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap-class.html) elements using the following API's:
+The font size of the [`SfTreemap`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap-class.html) will be automatically scaled based on the device settings. Also, you can change the font size of the [`SfTreemap`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap-class.html) elements using the following APIs:
 
 * [`Label style`](https://help.syncfusion.com/flutter/treemap/labels#add-labels)
 * [`Legend text style`](https://help.syncfusion.com/flutter/treemap/legend#text-style)
 * [`Tooltip label style`](https://help.syncfusion.com/flutter/treemap/tooltip#tooltip-for-the-tiles)
 
-## Easily touch targets
+## Easier touch targets
 
 The [`SfTreemap`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/SfTreemap-class.html) has touch target as 48 * 48 as per the standard for all the elements.

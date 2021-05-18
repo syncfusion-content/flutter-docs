@@ -50,12 +50,12 @@ You can customize the color of the [`SfRadialGauge`](https://pub.dev/documentati
 
 ## Large fonts
 
-The font size of the [`SfRadialGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfRadialGauge-class.html) can't be automatically scaled based on the device settings. However, you can change the font size of the [`SfRadialGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfRadialGauge-class.html) elements using the following API's:
+You can change the font size of the [`SfRadialGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfRadialGauge-class.html) elements using the following APIs:
 
 * [`Title`](https://help.syncfusion.com/flutter/radial-gauge/radial-gauge-title#text-alignment)
 * [`Axis labels`](https://help.syncfusion.com/flutter/radial-gauge/axes#label-style-customization)
 * [`Annotation`](https://help.syncfusion.com/flutter/radial-gauge/annotation#alignment-of-annotation)
 
-## Easily touch targets
+## Easier touch targets
 
 The [`SfRadialGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfRadialGauge-class.html) has touch target as 48 * 48 as per the standard for all the elements.

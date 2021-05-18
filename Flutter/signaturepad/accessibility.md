@@ -22,7 +22,7 @@ Widget build(BuildContext context) {
     body: Center(
       child: Semantics(
         label: 'Syncfusion Flutter SignaturePad',
-        hint: 'Mark your signature on the signature pad',
+        hint: 'Mark your signature in this',
         child: Container(
           child: SfSignaturePad(
             strokeColor: Colors.black,
@@ -48,6 +48,6 @@ You can customize the color of the [`SfSignaturePad`](https://pub.dev/documentat
 * [`Background`](https://help.syncfusion.com/flutter/signaturepad/getting-started#initialize-signaturepad)
 * [`Stroke`](https://help.syncfusion.com/flutter/signaturepad/getting-started#customize-signature-stroke-color)
 
-## Easily touch targets
+## Easier touch targets
 
 The [`SfSignaturePad`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad-class.html) has touch target as 48 * 48 as per the standard.
