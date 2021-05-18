@@ -7,7 +7,7 @@ control: SfRangeSlider
 documentation: ug
 ---
 
-# Right To Left (RTL) in Flutter Range Slider (SfRangeSlider)
+# Right to Left (RTL) in Flutter Range Slider (SfRangeSlider)
 
 ## Using locale
 
