@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Flutter DataGrid | DataTable | Syncfusion
-description: Learn here all about the accessibility feature of the Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
+description: Learn here all about the accessibility of the Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
 platform: flutter
 control: SfDataGrid
 documentation: ug
@@ -11,17 +11,15 @@ documentation: ug
 
 ## Screen reader support
 
-The `SfDataGrid` can easily be accessed by screen readers. Please find the following ways to navigate cells in the datagrid by using Talk back.
+The `SfDataGrid` can be accessed easily by screen readers in following ways in Android and iOS platforms,
 
-* Swipe right or left move between cells.
-* Tap to read cell content.
-* Drag two fingers to scroll vertically and horizontally.
+* Cell contents can be read by tapping the required cell.
+* You can read the adjecent cell's content by swiping right or left.
+* You can scroll the datagrid vertically and horizontally by dragging two fingers.
 
 ## Sufficient contrast
 
-The `SfDataGrid` [theming](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData-class.html) support offers a consistent and standardized look, as well as the ability to set the colors for all the UI elements.
-
-The following APIs allow you to customize the colors of the following elements.
+The `SfDataGrid` provides the sufficient color contrast to make the cell content easier. You can use the following properties to customize the appearance of the datagrid elements,
 
 * [currentCellStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/currentCellStyle.html)
 * [frozenPaneElevation](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/frozenPaneElevation.html)
@@ -34,7 +32,7 @@ The following APIs allow you to customize the colors of the following elements.
 
 ## Large fonts
 
-The `SfDataGrid` font size can be adjusted automatically based on device settings and the font size scaled based on the `MediaQueryData.textScaleFactor`.
+As `SfDataGrid` gets the widget from user end for each cell, the font size in that widget will be automatically changed based on OS settings in Android and iOS platforms. To clearly view the cell content, the row heights in the datagrid will be automatically adjusted based on `MediaQueryData.textScaleFactor`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -103,13 +101,11 @@ Widget build(BuildContext context) {
 
 ## Keyboard navigation
 
-The `SfDataGrid` provides the keyboard navigation support when the [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/selectionMode.html) or [navigationMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/navigationMode.html) is enabled.
-
-* [Keyboard navigation keys](selection.md#Keyboard-behavior)
+The `SfDataGrid` provides the keyboard navigation support when the [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/selectionMode.html) and [navigationMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/navigationMode.html) are enabled. You can refer this [link](https://help.syncfusion.com/flutter/datagrid/selection#keyboard-behavior) for supported keys and their purpose.
 
 ## Visual density
 
-The `SfDataGrid` provides visual density support. The row heights will be changed based on the visual density properties.
+The row heights in `SfDataGrid` will be automatically adjusted based on the [visualDensity](https://api.flutter.dev/flutter/material/ThemeData/visualDensity.html).
 
 {% tabs %}
 {% highlight Dart %}
