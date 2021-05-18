@@ -1,7 +1,7 @@
 ---
 layout: post
 title: RTL support in Flutter DataGrid | DataTable | Syncfusion 
-description: Learn here about the RTL support in Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
+description: Learn here about the right to left (RTL) support in Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
 platform: flutter
 control: SfDataGrid
 documentation: ug

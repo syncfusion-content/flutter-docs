@@ -11,7 +11,7 @@ documentation: ug
 
 ## Screen reader support
 
-The `SfDataGrid` can easily be accessed by screen readers. Please find the following ways to navigate cells in the datagrid by using Talkback.
+The `SfDataGrid` can easily be accessed by screen readers. Please find the following ways to navigate cells in the datagrid by using Talk back.
 
 * Swipe right or left move between cells.
 * Tap to read cell content.
@@ -100,15 +100,6 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
-
-## Easily tappable targets
-
-The `SfDataGrid` provides the following callbacks to handle tapping interactions to the cells,
-
-* [onCellTap](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onCellTap.html)
-* [onCellDoubleTap](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onCellDoubleTap.html)
-* [onCellLongPress](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onCellLongPress.html) 
-* [onCellSecondaryTap](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onCellSecondaryTap.html)
 
 ## Keyboard navigation
 
