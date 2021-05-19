@@ -11,7 +11,7 @@ documentation: ug
 
 ## RTL rendering ways
 
-Right to left rendering can be switched in the following ways:
+Right to left rendering can be achieved in the following ways:
 
 ### Wrapping the SfTreemap with Directionality widget
 
