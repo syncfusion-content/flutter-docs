@@ -11,15 +11,15 @@ documentation: ug
 
 ## Screen reader support
 
-The `SfDataGrid` can be accessed easily by screen readers in following ways in Android and iOS platforms,
+The `SfDataGrid` can be accessed easily by the screen readers in the following ways in Android and iOS platforms:
 
 * Cell contents can be read by tapping the required cell.
-* You can read the adjecent cell's content by swiping right or left.
-* You can scroll the datagrid vertically and horizontally by dragging two fingers.
+* Read the adjacent cell's content by swiping right or left.
+* Scroll the datagrid vertically and horizontally by dragging two fingers.
 
 ## Sufficient contrast
 
-The `SfDataGrid` provides the sufficient color contrast to make the cell content easier. You can use the following properties to customize the appearance of the datagrid elements,
+The `SfDataGrid` provides the sufficient color contrast to make the cell content easier. Use the following properties to customize the appearance of the datagrid elements.
 
 * [currentCellStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/currentCellStyle.html)
 * [frozenPaneElevation](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/frozenPaneElevation.html)
@@ -101,7 +101,7 @@ Widget build(BuildContext context) {
 
 ## Keyboard navigation
 
-The `SfDataGrid` provides the keyboard navigation support when the [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/selectionMode.html) and [navigationMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/navigationMode.html) are enabled. You can refer this [link](https://help.syncfusion.com/flutter/datagrid/selection#keyboard-behavior) for supported keys and their purpose.
+The `SfDataGrid` provides the keyboard navigation support when the [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/selectionMode.html) and [navigationMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/navigationMode.html) are enabled. Refer this [link](https://help.syncfusion.com/flutter/datagrid/selection#keyboard-behavior) for supported keys and their purpose.
 
 ## Visual density
 
