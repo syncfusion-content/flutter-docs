@@ -9,7 +9,43 @@ documentation: ug
 
 # Right to Left (RTL) in Flutter Maps (SfMaps)
 
-## Using locale
+## RTL rendering ways
+
+Right to left rendering can be achieved in the following ways:
+
+### Wrapping the SfMaps with Directionality widget
+
+The maps can be wrapped inside the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and you can set the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to `rtl`.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+      home: Scaffold(
+          body: Directionality(
+              textDirection: TextDirection.rtl,
+              child: Center(
+                child: SfMaps(
+                  layers: [
+                    MapShapeLayer(
+                      source: const MapShapeSource.asset(
+                          "assets/world_map.json",
+                          shapeDataField: "continent"),
+                    ),
+                  ],
+                ),
+              )
+          ),
+       ),
+   );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Changing the locale to RTL languages
 
 The maps elements will render in right to left direction if the locale belongs to RTL languages such as (Arabic ,Persian ,Hebrew, Pashto, Urdu). It can be achieved by specifying the MaterialApp properties such as `localizationsDelegates`, `supportedLocales`, `locale` and adding the flutter_localizations package to your pubspec.yaml file.
 
@@ -49,38 +85,6 @@ Widget build(BuildContext context) {
           ],
         ),
       ),
-   );
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Using Directionality widget
-
-The maps can also be wrapped inside the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and you can set the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to `rtl`.
-
-{% tabs %}
-{% highlight Dart %}
-
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-          body: Directionality(
-              textDirection: TextDirection.rtl,
-              child: Center(
-                child: SfMaps(
-                  layers: [
-                    MapShapeLayer(
-                      source: const MapShapeSource.asset(
-                          "assets/world_map.json",
-                          shapeDataField: "continent"),
-                    ),
-                  ],
-                ),
-              )
-          ),
-       ),
    );
 }
 
