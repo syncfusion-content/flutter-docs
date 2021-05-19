@@ -49,7 +49,7 @@ The `SfPdfViewer` supports the following keyboard interactions.
     <th style="text-align:left" colspan="2">Shortcuts for Zooming</th>
   </tr>
    <tr>
-    <td>Ctrl +</td>
+    <td>Ctrl + =</td>
     <td>Perform zoom in operation</td>
   </tr>
   <tr>
