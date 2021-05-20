@@ -34,7 +34,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-N> On a desktop web browser, this `enableTextSelection` property will have no effect on the `[pan](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfInteractionMode-class.html)` interaction mode.
+N> On a desktop web browser, this `enableTextSelection` property will have no effect on the [`pan`](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfInteractionMode-class.html) interaction mode.
 
 ## Customize the text selection and its handle color
 
