@@ -9,7 +9,77 @@ documentation: ug
 
 # Right to Left (RTL) in Flutter Treemap (SfTreemap)
 
-## Using locale
+## RTL rendering ways
+
+Right to left rendering can be achieved in the following ways:
+
+### Wrapping the SfTreemap with Directionality widget
+
+The treemap can be wrapped inside the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and you can set the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to `rtl`.
+
+{% tabs %}
+{% highlight Dart %}
+
+late List<PopulationModel> _source;
+
+@override
+void initState() {
+   _source = <PopulationModel>[
+      PopulationModel('Asia', 25.4),
+      PopulationModel('Africa', 19.11),
+      PopulationModel('Europe', 13.3),
+      PopulationModel('North America', 10.65),
+      PopulationModel('South America', 7.54),
+      PopulationModel('Australia', 4.93),
+   ];
+   super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+     body: Column(
+        children: [
+          Expanded(
+            child: Directionality(
+              textDirection: TextDirection.rtl,
+              child: SfTreemap(
+                dataCount: _source.length,
+                weightValueMapper: (int index) {
+                  return _source[index].populationInMillions;
+                },
+                levels: [
+                  TreemapLevel(
+                    groupMapper: (int index) {
+                      return _source[index].continent;
+                    },
+                    labelBuilder: (BuildContext context, TreemapTile tile) {
+                      return Padding(
+                        padding: const EdgeInsets.all(5.0),
+                        child: Text(tile.group),
+                      );
+                    },
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+   );
+}
+
+class PopulationModel {
+  const PopulationModel(this.continent, this.populationInMillions);
+
+  final String continent;
+  final double populationInMillions;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Changing the locale to RTL languages
 
 The treemap elements will render in right to left direction if the locale belongs to RTL languages such as (Arabic ,Persian ,Hebrew, Pashto, Urdu). It can be achieved by specifying the MaterialApp properties such as `localizationsDelegates`, `supportedLocales`, `locale` and adding the flutter_localizations package to your pubspec.yaml file.
 
@@ -73,72 +143,6 @@ Widget build(BuildContext context) {
             ),
           ],
         ),
-      ),
-   );
-}
-
-class PopulationModel {
-  const PopulationModel(this.continent, this.populationInMillions);
-
-  final String continent;
-  final double populationInMillions;
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Using Directionality widget
-
-The treemap can also be wrapped inside the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and you can set the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to `rtl`.
-
-{% tabs %}
-{% highlight Dart %}
-
-late List<PopulationModel> _source;
-
-@override
-void initState() {
-   _source = <PopulationModel>[
-      PopulationModel('Asia', 25.4),
-      PopulationModel('Africa', 19.11),
-      PopulationModel('Europe', 13.3),
-      PopulationModel('North America', 10.65),
-      PopulationModel('South America', 7.54),
-      PopulationModel('Australia', 4.93),
-   ];
-   super.initState();
-}
-
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-     body: Column(
-        children: [
-          Expanded(
-            child: Directionality(
-              textDirection: TextDirection.rtl,
-              child: SfTreemap(
-                dataCount: _source.length,
-                weightValueMapper: (int index) {
-                  return _source[index].populationInMillions;
-                },
-                levels: [
-                  TreemapLevel(
-                    groupMapper: (int index) {
-                      return _source[index].continent;
-                    },
-                    labelBuilder: (BuildContext context, TreemapTile tile) {
-                      return Padding(
-                        padding: const EdgeInsets.all(5.0),
-                        child: Text(tile.group),
-                      );
-                    },
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ],
       ),
    );
 }
