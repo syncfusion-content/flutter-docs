@@ -9,13 +9,15 @@ documentation: ug
 
 # Accessibility in Flutter Slider (SfSlider)
 
-The [`SfSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html) can easily be accessed by screen readers. By default, it will read the current value. You can change the reading format using the [`semanticFormatterCallback`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/semanticFormatterCallback.html) property.
+## Screen reader
 
-For android, you can adjust the value of thumb by tapping it and then pressing the volume buttons to increase or decrease the value.
+The [`SfSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html) can be accessed by screen readers. By default, it will read the current value. You can change the reading format using the [`semanticFormatterCallback`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/semanticFormatterCallback.html) property.
 
-For iOS, you can adjust the value of thumb by tapping it and then swiping up or down to increase or decrease the value respectively.
+For android, you can adjust the value of thumb by moving the focus to it and then pressing the volume buttons to increase or decrease the value.
 
-## Horizontal
+For iOS, you can adjust the value of thumb by moving the focus to it and then swiping up or down to increase or decrease the value respectively.
+
+### Horizontal
 
 {% tabs %}
 {% highlight Dart %}
@@ -51,8 +53,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-
-## Vertical
+### Vertical
 
 {% tabs %}
 {% highlight Dart %}
@@ -87,3 +88,26 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+## Sufficient contrast
+
+You can customize the color of the [`SfSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html) elements using the following APIs for the sufficient contrast.
+
+* [`Track`](https://help.syncfusion.com/flutter/slider/track#track-color)
+* [`Major ticks`](https://help.syncfusion.com/flutter/slider/ticks#major-ticks-color)
+* [`Minor ticks`](https://help.syncfusion.com/flutter/slider/ticks#minor-ticks-color)
+* [`Labels`](https://help.syncfusion.com/flutter/slider/labels-and-divisor#label-style)
+* [`Divisors`](https://help.syncfusion.com/flutter/slider/labels-and-divisor#divisor-color)
+* [`Thumb`](https://help.syncfusion.com/flutter/slider/thumb-and-overlay#thumb-color)
+* [`Thumb overlay`](https://help.syncfusion.com/flutter/slider/thumb-and-overlay#thumb-overlay-color)
+
+## Large fonts
+
+The font size of the [`SfSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html) will be automatically scaled based on the device settings. Also, you can change the font size of the [`SfSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html) elements using the following APIs:
+
+* [`Label style`](https://help.syncfusion.com/flutter/slider/labels-and-divisor#label-style)
+* [`Tooltip label style`](https://help.syncfusion.com/flutter/slider/tooltip#tooltip-label-style)
+
+## Easier touch targets
+
+The [`SfSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html) has touch target as 48 * 48 as per the standard for all the elements.
