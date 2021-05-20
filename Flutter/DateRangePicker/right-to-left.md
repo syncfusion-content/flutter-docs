@@ -8,15 +8,12 @@ documentation: ug
 ---
 
 # Right to Left (RTL) in Flutter Date Range Picker (SfDateRangePicker)
-
-`SfDateRangePicker` support Right to left rendering, all the date picker elements rendering direction will be changed.
+`SfDateRangePicker` supports Right to left rendering and all the date picker elements rendering direction will be changed.
 
 ## RTL rendering ways
-
 Right to left rendering can be switched in the following ways:
 
 ### Wrapping the SfDateRangePicker with Directionality widget
-
 The `SfDateRangePicker` supports changing the layout direction of the widget in the right-to-left direction by using the `Directionality` widget and set the `textDirection` property as [TextDirection.rtl](https://api.flutter.dev/flutter/dart-ui/TextDirection-class.html).
 
 {% tabs %}
@@ -43,8 +40,7 @@ Widget build(BuildContext context) {
 ![RTL Date Range Picker](images/rtl/right_to_left.png)
 
 ### Changing the locale to RTL languages
-
-To change the date range picker rendering direction from right to left, you can change the locale to any of the RTL languages such as Arabic, Persian, Hebrew, Pashto, Urdu.
+To change the date range picker rendering direction from right to left, change the locale to any of the RTL languages such as Arabic, Persian, Hebrew, Pashto, and Urdu.
 
 {% tabs %}
 {% highlight Dart %}
@@ -74,7 +70,6 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ## RTL supported date range picker elements
-
 Right to left rendering is supported for all the elements in the `SfDateRangePicker`.
 
 {% tabs %}
