@@ -30,7 +30,7 @@ This page helps to navigate to the Accessibility feature available in the Syncfu
     </tr>
     <tr>
         <td>
-            Cartesian Chart
+            Cartesian Charts
         </td>
         <td>
             <a href="https://help.syncfusion.com/flutter/cartesian-charts/accessibility">Link</a>
