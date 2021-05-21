@@ -45,24 +45,24 @@ To change the event calendar rendering direction from right to left, change the 
 
 @override
 Widget build(BuildContext context) {
-	return MaterialApp(
-		localizationsDelegates: [
-			GlobalMaterialLocalizations.delegate,
-			GlobalWidgetsLocalizations.delegate,
-		],
-		supportedLocales: <Locale>[
-			Locale('en'),
-			Locale('ar'),
-			// ... other locales the app supports
-		],
-		locale: Locale('ar'),
-		home: Scaffold(
-			body: SfCalendar(
-				//...
-			),
-		)
-	);
+return MaterialApp(
+	localizationsDelegates: [
+	  GlobalMaterialLocalizations.delegate,
+	  GlobalWidgetsLocalizations.delegate,
+	],
+	supportedLocales: <Locale>[
+	  Locale('en'),
+	  Locale('ar'),
+	  // ... other locales the app supports
+	],
+	locale: Locale('ar'),
+	home: Scaffold(
+	  body: SfCalendar(
+		  //...
+		  ),
+	));
 }
+
 	
 {% endhighlight %}
 {% endtabs %}
@@ -77,27 +77,30 @@ Right to left rendering is supported for all the elements in the `SfCalendar`.
 
 @override
 Widget build(BuildContext context) {
-       return Scaffold(
-           appBar: AppBar(
-               title: Text('Right to Left'),
-           ),
-           body: Directionality(
-               textDirection: TextDirection.rtl,
-               child: SfCalendar(
-               view: CalendarView.month,
-			   allowedViews: [CalendarView.day,
-				  CalendarView.week,
-				  CalendarView.workWeek,
-				  CalendarView.month,
-				  CalendarView.schedule,
-				  CalendarView.timelineDay,
-				  CalendarView.timelineWeek,
-				  CalendarView.timelineWorkWeek,
-				  CalendarView.timelineMonth],
-           ),
-       ),
-   );
+  return Scaffold(
+    appBar: AppBar(
+      title: Text('Right to Left'),
+    ),
+    body: Directionality(
+      textDirection: TextDirection.rtl,
+      child: SfCalendar(
+        view: CalendarView.month,
+        allowedViews: [
+          CalendarView.day,
+          CalendarView.week,
+          CalendarView.workWeek,
+          CalendarView.month,
+          CalendarView.schedule,
+          CalendarView.timelineDay,
+          CalendarView.timelineWeek,
+          CalendarView.timelineWorkWeek,
+          CalendarView.timelineMonth
+        ],
+      ),
+    ),
+  );
 }
+
    
 {% endhighlight %}
 {% endtabs %}

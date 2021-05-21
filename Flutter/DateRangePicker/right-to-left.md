@@ -21,15 +21,15 @@ The `SfDateRangePicker` supports changing the layout direction of the widget in 
 
 @override
 Widget build(BuildContext context) {
-       return Scaffold(
-           appBar: AppBar(
-           title: Text('Right to Left'),
-          ),
-       body: Directionality(
-       textDirection: TextDirection.rtl,
-       child: SfDateRangePicker(
-       view: DateRangePickerView.month,
-       ),
+  return Scaffold(
+    appBar: AppBar(
+      title: Text('Right to Left'),
+    ),
+    body: Directionality(
+      textDirection: TextDirection.rtl,
+      child: SfDateRangePicker(
+        view: DateRangePickerView.month,
+      ),
     ),
   );
 }
@@ -47,23 +47,22 @@ To change the date range picker rendering direction from right to left, change t
 
 @override
 Widget build(BuildContext context) {
-	return MaterialApp(
-		localizationsDelegates: [
-			GlobalMaterialLocalizations.delegate,
-			GlobalWidgetsLocalizations.delegate,
-		],
-		supportedLocales: <Locale>[
-			Locale('en'),
-			Locale('ar'),
-			// ... other locales the app supports
-		],
-		locale: Locale('ar'),
-		home: Scaffold(
-			body: SfDateRangePicker(
-				//...
-			),
-		)
-	);
+  return MaterialApp(
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: <Locale>[
+        Locale('en'),
+        Locale('ar'),
+        // ... other locales the app supports
+      ],
+      locale: Locale('ar'),
+      home: Scaffold(
+        body: SfDateRangePicker(
+            //...
+            ),
+      ));
 }
 	
 {% endhighlight %}
@@ -77,27 +76,19 @@ Right to left rendering is supported for all the elements in the `SfDateRangePic
 
 @override
 Widget build(BuildContext context) {
-       return Scaffold(
-           appBar: AppBar(
-               title: Text('Right to Left'),
-           ),
-           body: Directionality(
-               textDirection: TextDirection.rtl,
-               child: SfDateRangePicker(
-               view: DateRangePickerView.month,
-			   allowedViews: [DateRangePickerView.day,
-				  DateRangePickerView.week,
-				  DateRangePickerView.workWeek,
-				  DateRangePickerView.month,
-				  DateRangePickerView.schedule,
-				  DateRangePickerView.timelineDay,
-				  DateRangePickerView.timelineWeek,
-				  DateRangePickerView.timelineWorkWeek,
-				  DateRangePickerView.timelineMonth],
-           ),
-       ),
-   );
+  return Scaffold(
+    appBar: AppBar(
+      title: Text('Right to Left'),
+    ),
+    body: Directionality(
+      textDirection: TextDirection.rtl,
+      child: SfDateRangePicker(
+        view: DateRangePickerView.month,
+      ),
+    ),
+  );
 }
+
    
 {% endhighlight %}
 {% endtabs %}
