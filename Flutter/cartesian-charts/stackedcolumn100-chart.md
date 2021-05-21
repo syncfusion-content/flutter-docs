@@ -1,0 +1,100 @@
+---
+layout: post
+title: 100% Stacked column in Flutter Cartesian Charts widget | Syncfusion 
+description: Learn here all about 100% Stacked Column Chart of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+platform: flutter
+control: Chart
+documentation: ug
+---
+
+# 100% Stacked column in Flutter Cartesian Charts (SfCartesianChart)
+
+To render a 100% stacked column chart, create an instance of [`StackedColumn100Series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedColumnSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/XyDataSeries-class.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties can be used to customize the appearance:
+
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - changes the color of the series.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - changes the stroke width of the series.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - changes the stroke color of the series.
+* [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedColumnSeries/borderRadius.html) -  used to add the rounded corners to the rectangle.
+
+{% highlight dart %} 
+    
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis: CategoryAxis(),
+                        series: <ChartSeries>[
+                            StackedColumn100Series<SalesData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales
+                            ),
+                            StackedColumn100Series<SalesData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales2
+                            ),
+                            StackedColumn100Series<SalesData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales3
+                            ),
+                            StackedColumn100Series<SalesData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales4
+                            )
+                        ]
+                    )
+                )      
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![Stacked 100 column chart](images/cartesian-chart-types/stacked_column_100.png)
+
+## Column width and spacing
+
+The `spacing` property is used to change the spacing between two segments. The default value of spacing is 0, and the value ranges from 0 to 1. Here, 1 and 0 correspond to 100% and 0% of the available space, respectively.
+
+The `width` property is used to change the width of the rectangle. The default value of the width is 0.7, and the value ranges from 0 to 1. Here, 1 and 0 correspond to 100% and 0% of the available width, respectively.
+
+{% highlight dart %} 
+    
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis: CategoryAxis(),
+                        series: <ChartSeries>[
+                            StackedColumn100Series<SalesData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales,
+                                width: 0.8, // Width of the columns
+                                spacing: 0.2 // Spacing between the columns
+                            ),
+                            StackedColumn100Series<SalesData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales2,
+                                width: 0.8, // Width of the columns
+                                spacing: 0.2 // Spacing between the columns
+                            )
+                        ]
+                    )
+                )   
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![Stacked 100 column width and spacing](images/cartesian-chart-types/stacked_column_100_size.png)

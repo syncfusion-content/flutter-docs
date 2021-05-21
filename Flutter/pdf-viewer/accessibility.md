@@ -17,6 +17,17 @@ The following APIs allow you to customize the colors of the following elements.
 * [searchTextHighlightColor](https://help.syncfusion.com/flutter/pdf-viewer/text-search#customize-the-search-text-highlight-color)
 * [selectionColor and selectionHandleColor](https://help.syncfusion.com/flutter/pdf-viewer/text-selection#customize-the-text-selection-and-its-handle-color)
 
+## Large fonts
+
+The font size of the [`SfPdfViewer`](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) will be automatically scaled based on the device settings. 
+
+Also, you can change the font size of the [`SfPdfViewer`](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) elements using the following APIs:
+
+* [`Pagination dialog style`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfPdfViewerThemeData/paginationDialogStyle.html)
+* [`Bookmark view style`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfPdfViewerThemeData/bookmarkViewStyle.html)
+* [`Scroll head style`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfPdfViewerThemeData/scrollHeadStyle.html)
+* [`Scroll status style`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfPdfViewerThemeData/scrollStatusStyle.html)
+
 ## Keyboard navigation
 
 The `SfPdfViewer` supports the following keyboard interactions.
