@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Spline range area in Flutter Cartesian Charts widget | Syncfusion 
-description: Learn here all about Spline range area Chart of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+description: Learn here all about spline range area chart of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Histogram Chart in Flutter Cartesian Charts widget | Syncfusion 
-description: Learn here all about Histogram Chart of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+description: Learn here all about histogram chart of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug

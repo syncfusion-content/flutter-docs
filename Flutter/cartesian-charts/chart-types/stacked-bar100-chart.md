@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 100% Stacked bar in Flutter Cartesian Charts widget | Syncfusion 
-description: Learn here all about 100% Stacked bar Chart of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+description: Learn here all about 100% stacked bar chart of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Box and Whisker Chart in Flutter Cartesian Charts widget | Syncfusion 
-description: Learn here all about Box and Whisker Chart of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+description: Learn here all about box and whisker chart of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug

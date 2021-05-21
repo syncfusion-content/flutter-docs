@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Step area Chart in Flutter Cartesian Charts widget | Syncfusion 
-description: Learn here all about Step area Chart of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+description: Learn here all about step area chart of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Doughnut Chart in Flutter Circular Charts widget | Syncfusion 
-description: Learn here all about Doughnut Chart of Syncfusion Flutter Circular Charts (SfCircularChart) widget and more.
+description: Learn here all about doughnut chart of Syncfusion Flutter Circular Charts (SfCircularChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open High Low Close in Flutter Cartesian Charts widget | Syncfusion 
-description: Learn here all about Open High Low Close Chart of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+description: Learn here all about open high low close chart of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
