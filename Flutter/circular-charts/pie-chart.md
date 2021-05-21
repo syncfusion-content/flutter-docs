@@ -1,0 +1,267 @@
+---
+layout: post
+title: Pie Chart in Flutter Circular Charts widget | Syncfusion 
+description: Learn here all about Pie Chart of Syncfusion Flutter Circular Charts (SfCircularChart) widget and more.
+platform: flutter
+control: Chart
+documentation: ug
+---
+
+# Pie Chart in Flutter Circular Charts (SfCircularChart)
+
+To render a pie chart, create an instance of [`PieSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PieSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries-class.html) collection property of [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html). The following properties can be used to customize the appearance of pie segment:
+
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/opacity.html) - controls the transparency of the chart series.
+* [`strokeWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/borderWidth.html) - changes the stroke width of the series.
+* [`strokeColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/borderColor.html) - changes the stroke color of the series.
+* [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointColorMapper.html) - maps the color for individual points from the data source.
+* [`pointShaderMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointShaderMapper.html) - maps the shader (gradient or image shader) for individual points from the data source.
+* [`pointRenderMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointRenderMode.html) - defines the painting mode for the data points either as segment or gradient.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData('David', 25),
+            ChartData('Steve', 38),
+            ChartData('Jack', 34),
+            ChartData('Others', 52)
+        ];
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCircularChart(
+                        series: <CircularSeries>[
+                            // Render pie chart
+                            PieSeries<ChartData, String>(
+                                dataSource: chartData,
+                                pointColorMapper:(ChartData data,  _) => data.color,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
+                            )
+                        ]
+                    )
+                )
+            )
+        );
+    }
+
+    class ChartData {
+        ChartData(this.x, this.y, [this.color]);
+        final String x;
+        final double y;
+        final Color color;
+    }
+
+{% endhighlight %}
+
+![Pie chart](images/circular-chart-types/pie.jpg)
+
+## Changing pie size
+
+You can use the [`radius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/radius.html) property to change the diameter of the pie chart with respect to the plot area. The default value is 80%.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCircularChart(
+                        series: <CircularSeries>[
+                            PieSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                // Radius of pie
+                                radius: '50%'
+                            )
+                        ]
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![Pie size](images/circular-chart-types/pie_sizing.jpg)
+
+## Exploding a segment
+
+You can explode a pie segment by enabling the [`explode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/explode.html) property. The following properties can be used to customize the explode options:
+
+* [`explodeIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/explodeIndex.html) - specifies the index of the slice to explode it at the initial rendering.
+* [`explodeOffset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/explodeOffset.html) - specifies the offset of exploded slice. The value ranges from 0% to 100%.
+* [`explodeGesture`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/explodeOffset.html) - gesture for activating the explode. Explode can be activated in single tap, double tap, and long press. The available gesture types are [`singleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode-class.html), [`doubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode-class.html), [`longPress`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode-class.html), and [`none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode-class.html) and the default value is [`singleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActivationMode-class.html).
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCircularChart(
+                        series: <CircularSeries>[
+                            PieSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                // Segments will explode on tap
+                                explode: true,
+                                // First segment will be exploded on initial rendering 
+                                explodeIndex: 1
+                            )
+                        ]
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![Pie explode](images/circular-chart-types/pie_explode.jpg)
+
+## Exploding all the segments
+
+Using the [`explodeAll`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/explodeAll.html) property of [`PieSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PieSeries-class.html), you can explode all the pie segments.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCircularChart(
+                        series: <CircularSeries>[
+                            PieSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                explode: true,
+                                // All the segments will be exploded
+                                explodeAll: true
+                            )
+                        ]
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![Pie explode all](images/circular-chart-types/pie_explodeAll.jpg)
+
+## Angle of pie
+
+[`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) allows you to render all the data points or segments in semi-pie, quarter-pie, or in any sector using the [`startAngle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/startAngle.html) and [`endAngle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/endAngle.html) properties.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCircularChart(
+                        series: <CircularSeries>[
+                            PieSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                startAngle: 270, // starting angle of pie
+                                endAngle: 90 // ending angle of pie
+                            )
+                        ]
+                    )
+                )
+            )
+        );
+    } 
+
+{% endhighlight %}
+
+![Pie angle](images/circular-chart-types/pie_angle.jpg)
+
+## Grouping data points
+
+The small segments in the pie chart can be grouped into **others** category using the [`groupTo`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/groupTo.html) and [`groupMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/groupMode.html) properties of [`PieSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PieSeries-class.html). The [`groupMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/groupMode.html) property specifies the grouping type based on the actual data point value or by points length, and the [`groupTo`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/groupTo.html) property sets the limit to group data points into a single slice. The grouped segment is labeled as **Others** in legend and toggled as any other segment. The default value of the [`groupTo`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/groupTo.html) property is null, and the default value of [`groupMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/groupMode.html) property is [`point`]().
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCircularChart(
+                        series: <CircularSeries>[
+                            PieSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                groupMode: CircularChartGroupMode.point,
+                                // As the grouping mode is point, 2 points will be grouped
+                                groupTo: 2
+                            )
+                        ]
+                    )
+                )
+            )
+        );
+    }
+
+
+{% endhighlight %}
+
+![Pie grouping](images/circular-chart-types/pie_grouping.jpg)
+
+## Various radius for each slice
+
+The [`pointRadiusMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointRadiusMapper.html) maps the field name, which will be considered for calculating the radius of the data points.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData('USA', 10, '70%'),
+            ChartData('China', 11, '60%'),
+            ChartData('Russia', 9, '52%'),
+            ChartData('Germany', 10, '40%')
+        ];
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCircularChart(
+                        series: <CircularSeries>[
+                            PieSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                // Radius for each segment from data source
+                                pointRadiusMapper: (ChartData data, _) => data.size
+                            )
+                        ]
+                    )
+                )
+            )
+        );
+    }
+
+    class ChartData {
+        ChartData(this.x, this.y, this.size);
+        final String x;
+        final double y;
+        final String size;
+    }
+
+{% endhighlight %}
+
+![Pie various radius](images/circular-chart-types/pie_radius.jpg)
