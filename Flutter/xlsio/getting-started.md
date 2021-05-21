@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started for Syncfusion Flutter XlsIO
 
-This section explains the steps required to create a Excel document by few lines of code. This section covers only the minimal features needed to learn to get started with the Excel.
+This section explains the steps required to create an Excel document by few lines of code. This section covers only the minimal features needed to learn to get started with the Excel.
 
 ## Steps to create Excel document in Flutter application
 
@@ -66,7 +66,7 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 
-Include the following code snippet in the button click event to create a Excel file.
+Include the following code snippet in the button click event to create an Excel file.
 
 {% highlight dart %}
 
@@ -91,9 +91,9 @@ File('Output.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
-## Create a Excel document in mobile
+## Create an Excel document in mobile
 
-You can create a Excel document in mobile by using the following steps:
+You can create an Excel document in mobile by using the following steps:
 
 **Add dependency**
 
@@ -116,7 +116,7 @@ import 'package:path_provider/path_provider.dart';
 
 {% endhighlight %}
 
-Include the following code snippet to create a Excel document in mobile.
+Include the following code snippet to create an Excel document in mobile.
 
 {% highlight dart %}
 
@@ -154,9 +154,9 @@ OpenFile.open('$path/Output.xlsx');
 
 {% endhighlight %}
 
-## Create a Excel document in web
+## Create an Excel document in web
 
-You can create a Excel document in web by using the following steps.
+You can create an Excel document in web by using the following steps.
 
 **Import package**
 
@@ -167,7 +167,7 @@ import 'dart:html';
 
 {% endhighlight %}
 
-Include the following code snippet to create a excel document in web.
+Include the following code snippet to create an Excel document in web.
 
 {% highlight dart %}
 Future<void> _createExcel() async {
@@ -192,3 +192,69 @@ AnchorElement(
   ..click();
 
 {% endhighlight %}
+
+## Create an Excel document in Desktop
+
+Follow the steps provide in [link](https://flutter.dev/desktop) to create desktop support in Flutter.
+ 
+You can create an Excel document in desktop by using the following steps:
+
+**Add dependency**
+
+Add the following packages to your pub spec file.
+
+{% highlight dart %}
+
+path_provider: ^2.0.1
+
+{% endhighlight %}
+
+**Import package**
+
+{% highlight dart %}
+
+import 'package:path_provider/path_provider.dart';
+
+{% endhighlight %}
+
+Include the following code snippet to create an Excel document in desktop.
+
+{% highlight dart %}
+
+Future<void> _createExcel() async {
+
+//Create an Excel document.
+//Creating a workbook.
+final Workbook workbook = Workbook();
+
+//Accessing via index
+final Worksheet sheet = workbook.worksheets[0];
+
+// Set the text value.
+sheet.getRangeByName('A1').setText('Hello!!');
+
+//Save and launch the excel.
+final List<int> bytes = workbook.saveAsStream();
+//Dispose the document.
+workbook.dispose();
+
+//Get the storage folder location using path_provider package.
+final Directory directory =
+    await path_provider.getApplicationSupportDirectory();
+final String path = directory.path;
+final File file =
+    File(Platform.isWindows ? '$path\\output.xlsx' : '$path/output.xlsx');
+await file.writeAsBytes(bytes, flush: true);
+if (Platform.isWindows) {
+  await Process.run('start', <String>['$path\\output.xlsx'],
+      runInShell: true);
+} else if (Platform.isMacOS) {
+  await Process.run('open', <String>['$path/output.xlsx'],
+      runInShell: true);
+} else if (Platform.isLinux) {
+  await Process.run('xdg-open', <String>['$path/output.xlsx'],
+  runInShell: true);
+}
+}
+
+{% endhighlight %}   
