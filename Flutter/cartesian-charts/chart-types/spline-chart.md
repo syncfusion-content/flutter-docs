@@ -40,7 +40,7 @@ To render a spline chart, create an instance of [`SplineSeries`](https://pub.dev
 
 {% endhighlight %}
 
-![Spline border](images/cartesian-chart-types/spline.jpg)
+![Spline border](cartesian-chart-types/spline.jpg)
 
 ## Dashed spline
 
@@ -72,7 +72,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
 
 {% endhighlight %}
 
-![Dashed spline chart](images/cartesian-chart-types/dashed_spline.jpg)
+![Dashed spline chart](cartesian-chart-types/dashed_spline.jpg)
 
 ###	Spline rendering types
 
@@ -114,7 +114,7 @@ The following code sample demonstrates how to set the [`splineType`](https://pub
 
 {% endhighlight %}
 
-![Spline type](images/cartesian-chart-types/cardinal_spline.jpg)
+![Spline type](cartesian-chart-types/cardinal_spline.jpg)
 
 Also refer, [color palette](./series-customization#color-palette), [color mapping](./series-customization#color-mapping-for-data-points), [animation](./series-customization#animation), [gradient](./series-customization#gradient-fill) and [empty points](./series-customization#empty-points) for customizing the spline series further.
 
@@ -147,4 +147,4 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
 {% endhighlight %}
 
-![Vertical spline chart](images/cartesian-chart-types/inversed-spline.png)
+![Vertical spline chart](cartesian-chart-types/inversed-spline.png)

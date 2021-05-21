@@ -44,7 +44,7 @@ To render a spline area chart, create an instance of `StepAreaSeries`, and add i
 
 {% endhighlight %}
 
-![Step area chart](images/cartesian-chart-types/step_area.png)
+![Step area chart](cartesian-chart-types/step_area.png)
 
 ## Dashed step area
 
@@ -75,4 +75,4 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
 
 {% endhighlight %}
 
-![Dashed step area chart](images/cartesian-chart-types/step_area_dashed.png)
+![Dashed step area chart](cartesian-chart-types/step_area_dashed.png)

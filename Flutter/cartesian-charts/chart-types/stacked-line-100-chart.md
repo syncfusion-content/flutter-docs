@@ -54,7 +54,7 @@ To render a 100% stacked line chart, create an instance of [`StackedLine100Serie
 
 {% endhighlight %}
 
-![Stacked 100 line chart](images/cartesian-chart-types/stacked_line_100.png)
+![Stacked 100 line chart](cartesian-chart-types/stacked_line_100.png)
 
 ## Dashed line
 
@@ -103,4 +103,4 @@ The `dashArray` property of `StackedLine100Series` is used to render line series
 
 {% endhighlight %}
 
-![Dashed line chart](images/cartesian-chart-types/stacked_line_100_dashes.png)
+![Dashed line chart](cartesian-chart-types/stacked_line_100_dashes.png)

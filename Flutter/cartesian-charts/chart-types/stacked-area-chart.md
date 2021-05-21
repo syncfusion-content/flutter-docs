@@ -51,7 +51,7 @@ To render a stacked area chart, create an instance of [`StackedAreaSeries`](http
 
 {% endhighlight %}
 
-![Stacked area](images/cartesian-chart-types/stacked_area.jpg)
+![Stacked area](cartesian-chart-types/stacked_area.jpg)
 
 ## Grouping series
 
@@ -106,7 +106,7 @@ You can group and stack the similar stacked series types using the [`groupName`]
 
 {% endhighlight %}
 
-![Stacked area grouping](images/cartesian-chart-types/stacked_area_grouping.jpg)
+![Stacked area grouping](cartesian-chart-types/stacked_area_grouping.jpg)
 
 ## Display cumulative values
 
@@ -164,4 +164,4 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
 
 {% endhighlight %}
 
-![Stacked area cumulative](images/cartesian-chart-types/stacked_area_cumulative.jpg)
+![Stacked area cumulative](cartesian-chart-types/stacked_area_cumulative.jpg)

@@ -56,7 +56,7 @@ To render a 100% stacked bar chart, create an instance of [`StackedBar100Series`
 
 {% endhighlight %}
 
-![Stacked 100 bar chart](images/cartesian-chart-types/stacked100_bar.png)
+![Stacked 100 bar chart](cartesian-chart-types/stacked100_bar.png)
 
 ## Bar width and spacing
 
@@ -97,4 +97,4 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
 
 {% endhighlight %}
 
-![Stacked 100 bar width and spacing](images/cartesian-chart-types/stacked_bar_100_sizing.png)
+![Stacked 100 bar width and spacing](cartesian-chart-types/stacked_bar_100_sizing.png)

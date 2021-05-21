@@ -55,4 +55,4 @@ You can collapse the normal distribution curve using the [`showNormalDistributio
 
 {% endhighlight %}
 
-![histogram chart](images/cartesian-chart-types/Histogram.png)
+![histogram chart](cartesian-chart-types/Histogram.png)

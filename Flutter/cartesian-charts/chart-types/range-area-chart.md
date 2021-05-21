@@ -48,7 +48,7 @@ Since the [`RangeAreaSeries`](https://pub.dev/documentation/syncfusion_flutter_c
 
 {% endhighlight %}
 
-![Range area chart](images/cartesian-chart-types/range_area.png)
+![Range area chart](cartesian-chart-types/range_area.png)
 
 ###	Border customization
 
@@ -82,4 +82,4 @@ The borders of the range area chart can be customized using the [`borderDrawMode
 
 {% endhighlight %}
 
-![Range area border](images/cartesian-chart-types/range_area_border.png)
+![Range area border](cartesian-chart-types/range_area_border.png)

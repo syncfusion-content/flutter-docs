@@ -57,7 +57,7 @@ To render a doughnut chart, create an instance of [`DoughnutSeries`](https://pub
 
 {% endhighlight %}
 
-![Doughnut chart](images/circular-chart-types/doughnut.jpg)
+![Doughnut chart](circular-chart-types/doughnut.jpg)
 
 ## Rounded corners
 
@@ -88,7 +88,7 @@ The [`cornerStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 
 {% endhighlight %}
 
-![Doughnut corner style](images/circular-chart-types/doughnut_roundCorner.jpg)
+![Doughnut corner style](circular-chart-types/doughnut_roundCorner.jpg)
 
 ## Doughnut with center elevation
 
@@ -135,7 +135,7 @@ You can use the Annotations property in charts, to provide center elevation text
 
 {% endhighlight %}
 
-![Doughnut elevation](images/circular-chart-types/doughnut_elevation.png)
+![Doughnut elevation](circular-chart-types/doughnut_elevation.png)
 
 ## Doughnut with color mapping
 
@@ -168,7 +168,7 @@ You can use the [`pointColorMapper`](https://pub.dev/documentation/syncfusion_fl
 
 {% endhighlight %}
 
-![Doughnut color mapping](images/circular-chart-types/doughnut_colormapping.png)
+![Doughnut color mapping](circular-chart-types/doughnut_colormapping.png)
 
 ## Changing the doughnut size
 
@@ -200,7 +200,7 @@ You can use the [`radius`](https://pub.dev/documentation/syncfusion_flutter_char
 
 {% endhighlight %}
 
-![Doughnut size](images/circular-chart-types/doughnut_size.jpg)
+![Doughnut size](circular-chart-types/doughnut_size.jpg)
 
 ## Changing doughnut inner radius
 
@@ -231,7 +231,7 @@ You can change the inner radius of doughnut chart using the [`innerRadius`](http
 
 {% endhighlight %}
 
-![Doughnut innner radius](images/circular-chart-types/doughnut_innerRadius.jpg)
+![Doughnut innner radius](circular-chart-types/doughnut_innerRadius.jpg)
 
 ## Exploding a segment
 
@@ -268,7 +268,7 @@ You can explode a doughnut segment by enabling the [`explode`](https://pub.dev/d
 
 {% endhighlight %}
 
-![Doughnut explode](images/circular-chart-types/doughnut_explode.jpg)
+![Doughnut explode](circular-chart-types/doughnut_explode.jpg)
 
 ## Exploding all the segments
 
@@ -301,7 +301,7 @@ Using the [`explodeAll`](https://pub.dev/documentation/syncfusion_flutter_charts
 
 {% endhighlight %}
 
-![Pie explode all](images/circular-chart-types/doughnut_explodeAll.jpg)
+![Pie explode all](circular-chart-types/doughnut_explodeAll.jpg)
 
 ## Angle of doughnut
 
@@ -333,7 +333,7 @@ Using the [`explodeAll`](https://pub.dev/documentation/syncfusion_flutter_charts
 
 {% endhighlight %}
 
-![Doughnut angle](images/circular-chart-types/doughnut_angle.jpg)
+![Doughnut angle](circular-chart-types/doughnut_angle.jpg)
 
 ## Grouping data points
 
@@ -366,4 +366,4 @@ The small segments in the doughnut chart can be grouped into **others** category
 
 {% endhighlight %}
 
-![Doughnut grouping](images/circular-chart-types/doughnut_grouping.jpg)
+![Doughnut grouping](circular-chart-types/doughnut_grouping.jpg)
