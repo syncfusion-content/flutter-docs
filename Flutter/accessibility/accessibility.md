@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Flutter Widgets | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Flutter Widgets and their reference links for each widget.
+description: Learn here all about accessibility in Syncfusion Flutter Widgets and their reference links for each widget.
 platform: flutter
 control: API
 documentation: ug
@@ -30,10 +30,34 @@ This page helps to navigate to the Accessibility feature available in the Syncfu
     </tr>
     <tr>
         <td>
-            Charts
+            Cartesian Charts
         </td>
         <td>
             <a href="https://help.syncfusion.com/flutter/cartesian-charts/accessibility">Link</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Circular Charts
+        </td>
+        <td>
+            <a href="https://help.syncfusion.com/flutter/circular-charts/accessibility">Link</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+           Funnel Chart
+        </td>
+        <td>
+            <a href="https://help.syncfusion.com/flutter/funnel-chart/accessibility">Link</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Pyramid Chart
+        </td>
+        <td>
+            <a href="https://help.syncfusion.com/flutter/pyramid-chart/accessibility">Link</a>
         </td>
     </tr>
     <tr>
