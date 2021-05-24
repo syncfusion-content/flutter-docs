@@ -40,7 +40,7 @@ To render a column chart, create an instance of [`ColumnSeries`](https://pub.dev
 
 {% endhighlight %}
 
-![Column chart](cartesian-chart-types/column.jpg)
+![Column chart](cartesian-chart-types-images/column.jpg)
 
 ## Side-by-side series placement
 
@@ -87,7 +87,7 @@ By default, all the column series that have the same x and y-axes are placed sid
 
 {% endhighlight %}
 
-![Column side by side placement](cartesian-chart-types/sidebySidePlacement.jpg)
+![Column side by side placement](cartesian-chart-types-images/sidebySidePlacement.jpg)
 
 ## Column width and spacing
 
@@ -120,7 +120,7 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
 
 {% endhighlight %}
 
-![Column width and spacing](cartesian-chart-types/column_width_spacing.jpg)
+![Column width and spacing](cartesian-chart-types-images/column_width_spacing.jpg)
 
 ## Rounded corners
 
@@ -151,7 +151,7 @@ The [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
 {% endhighlight %}
 
-![Rounded corners](cartesian-chart-types/rounded_column.jpg)
+![Rounded corners](cartesian-chart-types-images/rounded_column.jpg)
 
 ### See Also
 
@@ -193,6 +193,6 @@ Renders column with track. Track is a rectangular bar rendered from the start to
 
 {% endhighlight %}
 
-![Track](cartesian-chart-types/track_column.jpg)
+![Track](cartesian-chart-types-images/track_column.jpg)
 
 Also refer, [color palette](./series-customization#color-palette), [color mapping](./series-customization#color-mapping-for-data-points), [animation](./series-customization#animation), [gradient](./series-customization#gradient-fill) and [empty points](./series-customization#empty-points) for customizing the column series further.

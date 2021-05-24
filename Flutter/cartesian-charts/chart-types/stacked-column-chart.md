@@ -56,7 +56,7 @@ To render a stacked column chart, create an instance of [`StackedColumnSeries`](
 
 {% endhighlight %}
 
-![Stacked column](cartesian-chart-types/stacked_column.jpg)
+![Stacked column](cartesian-chart-types-images/stacked_column.jpg)
 
 ## Grouping series
 
@@ -105,7 +105,7 @@ You can group and stack the similar stacked series types using the [`groupName`]
 
 {% endhighlight %}
 
-![Stacked column grouping](cartesian-chart-types/stacked_column_grouping.jpg)
+![Stacked column grouping](cartesian-chart-types-images/stacked_column_grouping.jpg)
 
 ## Display cumulative values
 
@@ -158,4 +158,4 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
 
 {% endhighlight %}
 
-![Stacked column cumulative](cartesian-chart-types/stacked_column_cumulative.jpg)
+![Stacked column cumulative](cartesian-chart-types-images/stacked_column_cumulative.jpg)

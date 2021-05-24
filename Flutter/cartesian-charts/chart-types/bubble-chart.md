@@ -59,7 +59,7 @@ Bubble chart requires three fields (X, Y, and Size) to plot a point. Here, [`siz
 
 {% endhighlight %}
 
-![Bubble chart](cartesian-chart-types/bubble.jpg)
+![Bubble chart](cartesian-chart-types-images/bubble.jpg)
 
 ## Change the min and max radius of bubble
 
@@ -92,7 +92,7 @@ The [`minimumRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/la
 
 {% endhighlight %}
 
-![Bubble size](cartesian-chart-types/bubble_radius.jpg)
+![Bubble size](cartesian-chart-types-images/bubble_radius.jpg)
 
 Also refer, [color palette](./series-customization#color-palette), [color mapping](./series-customization#color-mapping-for-data-points), [animation](./series-customization#animation), [gradient](./series-customization#gradient-fill) and [empty points](./series-customization#empty-points) for customizing the bubble series further.
 
@@ -126,7 +126,7 @@ Using the [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_
 
 {% endhighlight %}
 
-![Bubble various color](cartesian-chart-types/bubble_variouscolors.png)
+![Bubble various color](cartesian-chart-types-images/bubble_variouscolors.png)
 
 ## Bubble with gradients
 
@@ -172,7 +172,7 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
 
 {% endhighlight %}
 
-![Bubble gradients](cartesian-chart-types/bubble_gradients.png)
+![Bubble gradients](cartesian-chart-types-images/bubble_gradients.png)
 
 ## Bubble with multiple series
 
@@ -216,4 +216,4 @@ Using the [`datasource`](https://pub.dev/documentation/syncfusion_flutter_charts
 
 {% endhighlight %}
 
-![Bubble nultiple series](cartesian-chart-types/bubble_with_multiple.png)
+![Bubble nultiple series](cartesian-chart-types-images/bubble_with_multiple.png)

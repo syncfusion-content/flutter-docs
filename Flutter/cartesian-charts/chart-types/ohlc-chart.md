@@ -56,7 +56,7 @@ To render a OpenHighLowClose chart, create an instance of [` hiloOpenCloseSeries
 
 {% endhighlight %}
 
-![hiLoopenclose chart](cartesian-chart-types/hilo_open_close.png)
+![hiLoopenclose chart](cartesian-chart-types-images/hilo_open_close.png)
 
 ## Indication for same values
 
@@ -111,4 +111,4 @@ The following are the types of indication when the combination of high, low, ope
 
 {% endhighlight %}
 
-![OHLC Indication](cartesian-chart-types/hilo_open_close_indication.jpg)
+![OHLC Indication](cartesian-chart-types-images/hilo_open_close_indication.jpg)
