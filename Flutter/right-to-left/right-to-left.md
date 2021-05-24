@@ -25,7 +25,7 @@ This page helps to navigate to the documentation of Right to left (RTL) support 
             Cartesian Charts
         </td>
         <td>
-            <a href="https://help.syncfusion.com/flutter/cartesian-charts/rtl-support">Link</a>
+            <a href="https://help.syncfusion.com/flutter/cartesian-charts/right-to-left">Link</a>
         </td>
     </tr>
     <tr>
@@ -33,7 +33,7 @@ This page helps to navigate to the documentation of Right to left (RTL) support 
             Circular Charts
         </td>
         <td>
-            <a href="https://help.syncfusion.com/flutter/circular-charts/rtl-support">Link</a>
+            <a href="https://help.syncfusion.com/flutter/circular-charts/right-to-left">Link</a>
         </td>
     </tr>
     <tr>
@@ -41,7 +41,7 @@ This page helps to navigate to the documentation of Right to left (RTL) support 
            Funnel Chart
         </td>
         <td>
-            <a href="https://help.syncfusion.com/flutter/funnel-chart/rtl-support">Link</a>
+            <a href="https://help.syncfusion.com/flutter/funnel-chart/right-to-left">Link</a>
         </td>
     </tr>
     <tr>
@@ -49,7 +49,7 @@ This page helps to navigate to the documentation of Right to left (RTL) support 
             Pyramid Chart
         </td>
         <td>
-            <a href="https://help.syncfusion.com/flutter/pyramid-chart/rtl-support">Link</a>
+            <a href="https://help.syncfusion.com/flutter/pyramid-chart/right-to-left">Link</a>
         </td>
     </tr>
     <tr>
@@ -57,7 +57,7 @@ This page helps to navigate to the documentation of Right to left (RTL) support 
             DataGrid
         </td>
         <td>
-            <a href="https://help.syncfusion.com/flutter/datagrid/rtl-support">Link</a>
+            <a href="https://help.syncfusion.com/flutter/datagrid/right-to-left">Link</a>
         </td>
     </tr>
     <tr>
