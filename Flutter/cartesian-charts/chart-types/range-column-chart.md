@@ -54,7 +54,7 @@ Since the [`RangeColumnSeries`](https://pub.dev/documentation/syncfusion_flutter
 
 {% endhighlight %}
 
-![Range column chart](cartesian-chart-types/range_column.jpg)
+![Range column chart](cartesian-chart-types-images/range_column.jpg)
 
 ## Data label
 
@@ -89,7 +89,7 @@ In the range column chart when data label is enabled, by default there will be t
 
 {% endhighlight %}
 
-![Range column datalabel](cartesian-chart-types/range_column_datalabel.jpg)
+![Range column datalabel](cartesian-chart-types-images/range_column_datalabel.jpg)
 
 ## Transposed range column
 

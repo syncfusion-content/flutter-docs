@@ -46,4 +46,4 @@ To render a HiLo chart, create an instance of [`HiloSeries`](https://pub.dev/doc
 
 {% endhighlight %}
 
-![hiLo chart](cartesian-chart-types/hilo_chart.png)
+![hiLo chart](cartesian-chart-types-images/hilo_chart.png)

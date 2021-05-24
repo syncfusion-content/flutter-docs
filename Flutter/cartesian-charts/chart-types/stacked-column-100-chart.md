@@ -56,7 +56,7 @@ To render a 100% stacked column chart, create an instance of [`StackedColumn100S
 
 {% endhighlight %}
 
-![Stacked 100 column chart](cartesian-chart-types/stacked_column_100.png)
+![Stacked 100 column chart](cartesian-chart-types-images/stacked_column_100.png)
 
 ## Column width and spacing
 
@@ -97,4 +97,4 @@ The `width` property is used to change the width of the rectangle. The default v
 
 {% endhighlight %}
 
-![Stacked 100 column width and spacing](cartesian-chart-types/stacked_column_100_size.png)
+![Stacked 100 column width and spacing](cartesian-chart-types-images/stacked_column_100_size.png)

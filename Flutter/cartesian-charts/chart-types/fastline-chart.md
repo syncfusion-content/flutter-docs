@@ -41,6 +41,6 @@ documentation: ug
 
 {% endhighlight %}
 
-![Fast line chart](cartesian-chart-types/fastline.jpg)
+![Fast line chart](cartesian-chart-types-images/fastline.jpg)
 
 Also refer, [color palette](./series-customization#color-palette), [color mapping](./series-customization#color-mapping-for-data-points), [animation](./series-customization#animation), [gradient](./series-customization#gradient-fill) and [empty points](./series-customization#empty-points) for customizing the fast line series further.
