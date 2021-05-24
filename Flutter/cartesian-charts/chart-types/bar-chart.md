@@ -40,7 +40,7 @@ To render a bar chart, create an instance of [`BarSeries`](https://pub.dev/docum
 
 {% endhighlight %}
 
-![Bar chart](cartesian-chart-types/bar.jpg)
+![Bar chart](cartesian-chart-types-images/bar.jpg)
 
 ## Bar width and spacing
 
@@ -73,7 +73,7 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
 
 {% endhighlight %}
 
-![Bar width and spacing](cartesian-chart-types/bar_width_spacing.jpg)
+![Bar width and spacing](cartesian-chart-types-images/bar_width_spacing.jpg)
 
 ## Rounded corners
 
@@ -103,7 +103,7 @@ The [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
 {% endhighlight %}
 
-![Bar rounded corners](cartesian-chart-types/rounded_bar.jpg)
+![Bar rounded corners](cartesian-chart-types-images/rounded_bar.jpg)
 
 ## Track customization
 
@@ -139,7 +139,7 @@ You can render the bar chart with track. Track is a rectangular bar rendered fro
 
 {% endhighlight %}
 
-![Bar track](cartesian-chart-types/track_bar.jpg)
+![Bar track](cartesian-chart-types-images/track_bar.jpg)
 
 Also refer, [color palette](./series-customization#color-palette), [color mapping](./series-customization#color-mapping-for-data-points), [animation](./series-customization#animation), [gradient](./series-customization#gradient-fill) and [empty points](./series-customization#empty-points) for customizing the bar series further.
 

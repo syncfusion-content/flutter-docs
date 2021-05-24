@@ -41,7 +41,7 @@ To render a scatter chart, create an instance of [`ScatterSeries`](https://pub.d
 
 {% endhighlight %}
 
-![Scatter chart](cartesian-chart-types/scatter.jpg)
+![Scatter chart](cartesian-chart-types-images/scatter.jpg)
 
 ###	Change shape and size of the scatter
 
@@ -79,6 +79,6 @@ The [`height`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
 
 {% endhighlight %}
 
-![Scatter shape](cartesian-chart-types/scatter_shape.jpg)
+![Scatter shape](cartesian-chart-types-images/scatter_shape.jpg)
 
 Also refer, [color palette](./series-customization#color-palette), [color mapping](./series-customization#color-mapping-for-data-points), [animation](./series-customization#animation), [gradient](./series-customization#gradient-fill) and [empty points](./series-customization#empty-points) for customizing the scatter series further.

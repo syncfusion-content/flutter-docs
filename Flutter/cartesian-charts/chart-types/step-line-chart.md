@@ -40,7 +40,7 @@ To render a step line chart, create an instance of [`StepLineSeries`](https://pu
 
 {% endhighlight %}
 
-![Step line chart](cartesian-chart-types/stepline.jpg)
+![Step line chart](cartesian-chart-types-images/stepline.jpg)
 
 ## Dashed step line
 
@@ -72,6 +72,6 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
 
 {% endhighlight %}
 
-![Step line chart](cartesian-chart-types/dashed_stepline.jpg)
+![Step line chart](cartesian-chart-types-images/dashed_stepline.jpg)
 
 Also refer, [color palette](./series-customization#color-palette), [color mapping](./series-customization#color-mapping-for-data-points), [animation](./series-customization#animation), [gradient](./series-customization#gradient-fill) and [empty points](./series-customization#empty-points) for customizing the step line series further.

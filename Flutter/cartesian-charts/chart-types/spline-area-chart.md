@@ -44,7 +44,7 @@ To render a spline area chart, create an instance of [`SplineAreaSeries`](https:
 
 {% endhighlight %}
 
-![Spline area chart](cartesian-chart-types/spline_area.png)
+![Spline area chart](cartesian-chart-types-images/spline_area.png)
 
 ## Dashed spline area
 
@@ -75,7 +75,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
 
 {% endhighlight %}
 
-![Dashed spline area chart](cartesian-chart-types/spline_area_dashed.png)
+![Dashed spline area chart](cartesian-chart-types-images/spline_area_dashed.png)
 
 ###	Spline area rendering types
 
@@ -116,4 +116,4 @@ The following code sample demonstrates how to set the `splineType` value to `car
 
 {% endhighlight %}
 
-![Spline area type](cartesian-chart-types/spline_area_types.png)
+![Spline area type](cartesian-chart-types-images/spline_area_types.png)

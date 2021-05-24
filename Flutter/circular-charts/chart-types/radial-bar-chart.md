@@ -48,7 +48,7 @@ The radial bar chart is used for showing the comparisons among the categories us
 
 {% endhighlight %}
 
-![Radial bar chart](circular-chart-types/radialbar.jpg)
+![Radial bar chart](circular-chart-types-images/radialbar.jpg)
 
 ## Changing the radial bar size
 
@@ -80,7 +80,7 @@ You can use the [`radius`](https://pub.dev/documentation/syncfusion_flutter_char
 
 {% endhighlight %}
 
-![Radial bar size](circular-chart-types/radialbar_sizing.jpg)
+![Radial bar size](circular-chart-types-images/radialbar_sizing.jpg)
 
 ## Changing the radial bar inner radius
 
@@ -140,7 +140,7 @@ The [`cornerStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 
 {% endhighlight %}
 
-![Radial bar corner style](circular-chart-types/radialbar_roundCorner.jpg)
+![Radial bar corner style](circular-chart-types-images/radialbar_roundCorner.jpg)
 
 ## Rendering data labels
 
@@ -186,4 +186,4 @@ Data labels can be enabled using the [`isVisible`](https://pub.dev/documentation
 
 {% endhighlight %}
 
-![Radial bar data label](circular-chart-types/radialbar_dataLabel.jpg)
+![Radial bar data label](circular-chart-types-images/radialbar_dataLabel.jpg)
