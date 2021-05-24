@@ -57,7 +57,7 @@ To render a Candle chart, create an instance of [` CandleSeries`](https://pub.de
 
 {% endhighlight %}
 
-![candle chart](cartesian-chart-types/candle.png)
+![candle chart](cartesian-chart-types-images/candle.png)
 
 ### See Also 
 
@@ -116,4 +116,4 @@ The following are the types of indication when the combination of high, low, ope
 
 {% endhighlight %}
 
-![Candle Indication](cartesian-chart-types/candle_indication.jpg)
+![Candle Indication](cartesian-chart-types-images/candle_indication.jpg)
