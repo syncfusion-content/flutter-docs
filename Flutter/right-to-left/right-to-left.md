@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Right to Left(RTL) in Flutter Widgets | Syncfusion
-description: Learn here all about right to leftfeature in Syncfusion Flutter Widgets and their reference links for each widget.
+description: Learn here all about right to left feature in Syncfusion Flutter Widgets and their reference links for each widget.
 platform: flutter
 control: API
 documentation: ug
