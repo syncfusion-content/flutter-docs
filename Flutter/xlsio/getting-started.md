@@ -195,7 +195,7 @@ AnchorElement(
 
 ## Create an Excel document in Desktop
 
-Follow the steps provide in [link](https://flutter.dev/desktop) to create desktop support in Flutter.
+Follow the steps provide in [link](https://flutter.dev/desktop) to set desktop support in Flutter.
  
 You can create an Excel document in desktop by using the following steps:
 
