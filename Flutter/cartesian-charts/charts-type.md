@@ -113,7 +113,7 @@ This page helps to navigate to the Chart types available in the Syncfusion Flutt
             Spline range area Chart
         </td>
         <td>
-            <a href="https://help.syncfusion.com/flutter/cartesian-charts/chart-types/spline-rangearea-chart">Link</a>
+            <a href="https://help.syncfusion.com/flutter/cartesian-charts/chart-types/spline-range-area-chart">Link</a>
         </td>
     </tr>
     <tr>
@@ -121,7 +121,7 @@ This page helps to navigate to the Chart types available in the Syncfusion Flutt
            Step area Chart
         </td>
         <td>
-            <a href="https://help.syncfusion.com/flutter/cartesian-charts/chart-types/steparea-chart">Link</a>
+            <a href="https://help.syncfusion.com/flutter/cartesian-charts/chart-types/step-area-chart">Link</a>
         </td>
     </tr>
      <tr>
