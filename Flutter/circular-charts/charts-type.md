@@ -33,7 +33,7 @@ This page helps to navigate to the Chart types available in the Syncfusion Flutt
             Radial bar Chart
         </td>
         <td>
-            <a href="https://help.syncfusion.com/flutter/circular-charts/radialbar-chart">Link</a>
+            <a href="https://help.syncfusion.com/flutter/circular-charts/radial-bar-chart">Link</a>
         </td>
     </tr>
 </table>
