@@ -57,7 +57,7 @@ Once the required package has been imported, initialize [`SfTheme`](https://pub.
 
 {% endhighlight %}
 
-![Chart theme](images/chart_light.png)
+![Chart theme](themes-images/chart_light.png)
 
 In the above code snippet, [`chartThemeData`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfThemeData/chartThemeData.html) property has been configured with [`SfChartThemeData`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfChartThemeData-class.html) instance. Similarly, the [`SfThemeData`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfThemeData-class.html) class has theme data properties for other widgets also. Refer the following table to know about the theme data classes that are applicable for respective widgets.
 
@@ -188,7 +188,7 @@ By default, the light theme will be applied. You can apply a dark theme using th
 
 {% endhighlight %}
 
-![Dark theme](images/theme_chart.png)
+![Dark theme](themes-images/theme_chart.png)
 
 ## Specialized theme widget
 

@@ -222,7 +222,7 @@ And some languages may require more than language code to differentiate properly
 
 {% endhighlight %}
 
-![Chinese culture](images/localization_zh.png)
+![Chinese culture](globalization-images/localization_zh.png)
 
 ### Custom culture support
 
@@ -318,7 +318,7 @@ Import the created dart file in your application and specify the `localizationsD
 
 {% endhighlight %}
 
-![Localization](images/localization_extendability.png)
+![Localization](globalization-images/localization_extendability.png)
 
 The sample for reference can be found below.
 
