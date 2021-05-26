@@ -17,7 +17,7 @@ This page helps to navigate to the Chart types available in the Syncfusion Flutt
             Pie Chart
         </td>
         <td>
-            <a href="https://help.syncfusion.com/flutter/circular-charts/pie-chart">Link</a>
+            <a href="https://help.syncfusion.com/flutter/circular-charts/chart-types/pie-chart">Link</a>
         </td>
     </tr>
      <tr>
@@ -25,7 +25,7 @@ This page helps to navigate to the Chart types available in the Syncfusion Flutt
             Doughnut Chart
         </td>
         <td>
-            <a href="https://help.syncfusion.com/flutter/circular-charts/doughnut-chart">Link</a>
+            <a href="https://help.syncfusion.com/flutter/circular-charts/chart-types/doughnut-chart">Link</a>
         </td>
     </tr>
     <tr>
@@ -33,7 +33,7 @@ This page helps to navigate to the Chart types available in the Syncfusion Flutt
             Radial bar Chart
         </td>
         <td>
-            <a href="https://help.syncfusion.com/flutter/circular-charts/radialbar-chart">Link</a>
+            <a href="https://help.syncfusion.com/flutter/circular-charts/chart-types/radial-bar-chart">Link</a>
         </td>
-
+    </tr>
 </table>
