@@ -51,7 +51,7 @@ import 'package:syncfusion_flutter_sliders/sliders.dart';
 
 ## Initialize range selector
 
-After importing the package, initialize the range selector widget as a child of any widget. Here, the range selector widget is added as a child of the Container widget. The default value of the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) properties of the SfRangeSelector is 0.0 and 1.0 respectively. So, the [`initialValues`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/initialValues.html) property must be given within the range. You can add any kind of widget as a child of range selector. Here, [Chart](https://help.syncfusion.com/flutter/chart/getting-started) widget is added as a child.
+After importing the package, initialize the range selector widget as a child of any widget. Here, the range selector widget is added as a child of the Container widget. The default value of the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) properties of the SfRangeSelector is 0.0 and 1.0 respectively. So, the [`initialValues`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/initialValues.html) property must be given within the range. You can add any kind of widget as a child of range selector. Here, [Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts) widget is added as a child.
 
 {% tabs %}
 {% highlight Dart %}
