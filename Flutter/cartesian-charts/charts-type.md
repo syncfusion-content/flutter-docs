@@ -81,7 +81,7 @@ This page helps to navigate to the Chart types available in the Syncfusion Flutt
             Step line Chart
         </td>
         <td>
-            <a href="https://help.syncfusion.com/flutter/cartesian-charts/chart-types/stepline-chart">Link</a>
+            <a href="https://help.syncfusion.com/flutter/cartesian-charts/chart-types/step-line-chart">Link</a>
         </td>
     </tr>
     <tr>
@@ -89,7 +89,7 @@ This page helps to navigate to the Chart types available in the Syncfusion Flutt
             Range column Chart
         </td>
         <td>
-            <a href="https://help.syncfusion.com/flutter/cartesian-charts/chart-types/rangecolumn-chart">Link</a>
+            <a href="https://help.syncfusion.com/flutter/cartesian-charts/chart-types/range-column-chart">Link</a>
         </td>
     </tr>
     <tr>
@@ -97,7 +97,7 @@ This page helps to navigate to the Chart types available in the Syncfusion Flutt
             Range area Chart
         </td>
         <td>
-            <a href="https://help.syncfusion.com/flutter/cartesian-charts/chart-types/rangearea-chart">Link</a>
+            <a href="https://help.syncfusion.com/flutter/cartesian-charts/chart-types/range-area-chart">Link</a>
         </td>
     </tr>
     <tr>
@@ -105,7 +105,7 @@ This page helps to navigate to the Chart types available in the Syncfusion Flutt
             Spline area Chart
         </td>
         <td>
-            <a href="https://help.syncfusion.com/flutter/cartesian-charts/chart-types/splinearea-chart">Link</a>
+            <a href="https://help.syncfusion.com/flutter/cartesian-charts/chart-types/spline-area-chart">Link</a>
         </td>
     </tr>
     <tr>
@@ -113,7 +113,7 @@ This page helps to navigate to the Chart types available in the Syncfusion Flutt
             Spline range area Chart
         </td>
         <td>
-            <a href="https://help.syncfusion.com/flutter/cartesian-charts/chart-types/splinerangearea-chart">Link</a>
+            <a href="https://help.syncfusion.com/flutter/cartesian-charts/chart-types/spline-range-area-chart">Link</a>
         </td>
     </tr>
     <tr>
@@ -121,7 +121,7 @@ This page helps to navigate to the Chart types available in the Syncfusion Flutt
            Step area Chart
         </td>
         <td>
-            <a href="https://help.syncfusion.com/flutter/cartesian-charts/chart-types/steparea-chart">Link</a>
+            <a href="https://help.syncfusion.com/flutter/cartesian-charts/chart-types/step-area-chart">Link</a>
         </td>
     </tr>
      <tr>
@@ -137,7 +137,7 @@ This page helps to navigate to the Chart types available in the Syncfusion Flutt
            Stacked line Chart
         </td>
         <td>
-            <a href="https://help.syncfusion.com/flutter/cartesian-charts/chart-types/stackedline-chart">Link</a>
+            <a href="https://help.syncfusion.com/flutter/cartesian-charts/chart-types/stacked-line-chart">Link</a>
         </td>
     </tr>
     <tr>
@@ -145,7 +145,7 @@ This page helps to navigate to the Chart types available in the Syncfusion Flutt
             Stacked area Chart
         </td>
         <td>
-            <a href="https://help.syncfusion.com/flutter/cartesian-charts/chart-types/stackedarea-chart">Link</a>
+            <a href="https://help.syncfusion.com/flutter/cartesian-charts/chart-types/stacked-area-chart">Link</a>
         </td>
     </tr>
     <tr>
@@ -153,7 +153,7 @@ This page helps to navigate to the Chart types available in the Syncfusion Flutt
             Stacked column Chart
         </td>
         <td>
-            <a href="https://help.syncfusion.com/flutter/cartesian-charts/chart-types/stackedcolumn-chart">Link</a>
+            <a href="https://help.syncfusion.com/flutter/cartesian-charts/chart-types/stacked-column-chart">Link</a>
         </td>
     </tr>
     <tr>
@@ -161,7 +161,7 @@ This page helps to navigate to the Chart types available in the Syncfusion Flutt
             Stacked bar Chart
         </td>
         <td>
-            <a href="https://help.syncfusion.com/flutter/cartesian-charts/chart-types/stackedbar-chart">Link</a>
+            <a href="https://help.syncfusion.com/flutter/cartesian-charts/chart-types/stacked-bar-chart">Link</a>
         </td>
     </tr>
     <tr>
@@ -169,7 +169,7 @@ This page helps to navigate to the Chart types available in the Syncfusion Flutt
             Stacked area 100 Chart
         </td>
         <td>
-            <a href="https://help.syncfusion.com/flutter/cartesian-charts/chart-types/stackedarea100-chart">Link</a>
+            <a href="https://help.syncfusion.com/flutter/cartesian-charts/chart-types/stacked-area-100-chart">Link</a>
         </td>
     </tr>
     <tr>
@@ -177,7 +177,7 @@ This page helps to navigate to the Chart types available in the Syncfusion Flutt
           Stacked column 100 Chart
         </td>
        <td>
-           <a href="https://help.syncfusion.com/flutter/cartesian-charts/chart-types/stackedcolumn100-chart">Link</a>
+           <a href="https://help.syncfusion.com/flutter/cartesian-charts/chart-types/stacked-column-100-chart">Link</a>
       </td>
     </tr>
       <tr>
@@ -185,7 +185,7 @@ This page helps to navigate to the Chart types available in the Syncfusion Flutt
             Stacked bar 100 Chart
         </td>
         <td>
-            <a href="https://help.syncfusion.com/flutter/cartesian-charts/chart-types/stackedbar100-chart">Link</a>
+            <a href="https://help.syncfusion.com/flutter/cartesian-charts/chart-types/stacked-bar-100-chart">Link</a>
         </td>
     </tr>
      <tr>
@@ -193,7 +193,7 @@ This page helps to navigate to the Chart types available in the Syncfusion Flutt
            Stacked line 100 Chart
         </td>
         <td>
-            <a href="https://help.syncfusion.com/flutter/cartesian-charts/chart-types/stackedline100-chart">Link</a>
+            <a href="https://help.syncfusion.com/flutter/cartesian-charts/chart-types/stacked-line-100-chart">Link</a>
         </td>
     </tr>
     <tr>
@@ -225,7 +225,7 @@ This page helps to navigate to the Chart types available in the Syncfusion Flutt
             Box and Whisker Chart
         </td>
         <td>
-            <a href="https://help.syncfusion.com/flutter/cartesian-charts/chart-types/boxandwhisker-chart">Link</a>
+            <a href="https://help.syncfusion.com/flutter/cartesian-charts/chart-types/box-and-whisker-chart">Link</a>
         </td>
     </tr>
     <tr>
