@@ -1,0 +1,48 @@
+---
+layout: post
+title: Box and Whisker Chart in Flutter Cartesian Charts widget | Syncfusion 
+description: Learn here all about box and whisker chart of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+platform: flutter
+control: Chart
+documentation: ug
+---
+
+# Box and Whisker Chart in Flutter Cartesian Charts (SfCartesianChart)
+
+The Box and Whisker charts can be used to visualize a group of numerical data through their quartiles. It is also referred as box plot. Box plots may also have lines extending vertically from the boxes (whiskers) indicating variability outside the upper and lower quartiles.
+
+To render a Box and Whisker chart, create an instance of [`BoxAndWhiskerSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BoxAndWhiskerSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties to customize the appearance.
+
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - changes the color of the series.
+* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
+* [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) - changes the stroke width of the series.
+* [`BoxPlotMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BoxPlotMode-class.html) - used to change the box plot rendering mode. This property is applicable for 
+`normal`, `exclusive`, and `inclusive` values.
+* [`showMean`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BoxAndWhiskerSeries/showMean.html) - indication for mean value in box plot. It is set to be true, a cross symbol will be displayed at the mean value, for each data point in box plot. Else, it will not be displayed.
+* [`spacing`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BoxAndWhiskerSeries/spacing.html) - spacing between the box plots.The value ranges from 0 to 1, where 1 represents 100% and 0 represents 0% of the available space.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <ChartSeries<SalesData, double>>[
+                           BoxAndWhiskerSeries<SalesData, double>(
+                                dataSource: data,
+                                boxPlotMode: BoxPlotMode.exclusive,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.number
+                            )
+                        ]
+                    )
+                )
+            )   
+        );
+    }
+
+{% endhighlight %}
+
+![box and whisker chart](cartesian-chart-types-images/box_and_whisker.png)
