@@ -275,6 +275,12 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
         );
     }
 
+    class ChartData{
+        ChartData(this.x, this.y);
+        final double x;
+        final double y;
+      }
+
 {% endhighlight %}
 
 ![Gradient color](images/cartesian-customization/gradient.png)
@@ -323,6 +329,12 @@ If the properties of both [`borderColor`](https://pub.dev/documentation/syncfusi
         );
     }
 
+    class ChartData{
+        ChartData(this.x, this.y);
+        final double x;
+        final double y;
+      }
+
 {% endhighlight %}
 
 ![stroke_gradient](images/cartesian-customization/stroke_gradient.png)
@@ -364,6 +376,12 @@ The data points that has null value are considered as empty points. Empty data p
             )
         );
     }
+
+    class ChartData{
+        ChartData(this.x, this.y);
+        final double x;
+        final double y;
+      }
 
 {% endhighlight %}
 
@@ -410,6 +428,12 @@ Specific color for empty point can be set by [`color`](https://pub.dev/documenta
         );
     }
 
+    class ChartData{
+        ChartData(this.x, this.y);
+        final double x;
+        final double y;
+      }
+
 {% endhighlight %}
 
 ![Empty points customization](images/cartesian-customization/emptyPointcustomization.jpg)
@@ -451,6 +475,12 @@ The chart’s data source can be sorted using the [`sortingOrder`](https://pub.d
         );
     }
 
+    class ChartData{
+        ChartData(this.x, this.y);
+        final String x;
+        final double y;
+      }
+
 {% endhighlight %}
 
 ![Sorting](images/cartesian-customization/sortings.jpg)
@@ -458,3 +488,5 @@ The chart’s data source can be sorted using the [`sortingOrder`](https://pub.d
 #### See Also
 
 * [Rendering a chart using JSON data retrieved from a fire base](https://www.syncfusion.com/kb/11883/how-to-render-chart-using-json-data-stored-in-firebase-database-sfcartesianchart).
+
+N> `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.

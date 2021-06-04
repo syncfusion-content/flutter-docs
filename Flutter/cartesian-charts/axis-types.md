@@ -437,6 +437,12 @@ Category axis can also be rendered based on the index values of data source by s
         );
     }
 
+    Class ChartData{
+    ChartData(this.x, this.y);
+    final String x;
+    final double y;
+    }
+
 {% endhighlight %}
 
 ![Indexed category axis](images/axis-types/category_arrangebyIndex.jpg)

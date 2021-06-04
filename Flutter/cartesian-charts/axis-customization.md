@@ -1085,6 +1085,12 @@ The maximum width for axis labels and the space occupied by the axis labels can 
       );
     }
 
+    Class SalesData {
+    SalesData(this.year, this.sales);
+    final String year;
+    final int sales;
+    }
+
 {% endhighlight %}
 
 N>:  If both [`maximumLabelWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/maximumLabelWidth.html) and [`labelsExtent`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelsExtent.html) properties are specified, then the priority goes to [`labelsExtent`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelsExtent.html) property.
