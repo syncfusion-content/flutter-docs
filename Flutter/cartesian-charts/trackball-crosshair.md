@@ -26,10 +26,10 @@ You can use the following properties to customize the appearance of trackball to
 * [`tooltipSettings.arrowWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/InteractiveTooltip/arrowWidth.html) - specifies the width of the tooltip arrow.
 * [`tooltipSettings.format`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/InteractiveTooltip/format.html) - by default, axis value will be displayed in the tooltip, and it can be customized by adding desired text as prefix or suffix.
 * [`tooltipSettings.textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/InteractiveTooltip/textStyle.html) - used to change the text color, size, font family, fontStyle, and font weight.
-* [`tooltipSettings.textStyle.color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/color.html) - used to change the color of the tooltip text.
-* [`tooltipSettings.textStyle.fontFamily`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontFamily.html) - used to change the font family for tooltip text.
-* [`tooltipSettings.textStyle.fontStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontStyle.html) - used to change the font style for tooltip text.
-* [`tooltipSettings.textStyle.fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontSize.html) - used to change the font size for tooltip text.
+* [`tooltipSettings.textStyle.color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/InteractiveTooltip/textStyle.html) - used to change the color of the tooltip text.
+* [`tooltipSettings.textStyle.fontFamily`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/InteractiveTooltip/textStyle.html) - used to change the font family for tooltip text.
+* [`tooltipSettings.textStyle.fontStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/InteractiveTooltip/textStyle.html) - used to change the font style for tooltip text.
+* [`tooltipSettings.textStyle.fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/InteractiveTooltip/textStyle.html) - used to change the font size for tooltip text.
 * [`hideDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/hideDelay.html ) - used to specify disappear delay for trackball.
 
 N> The above mentioned properties are only applicable for SfCartesian types of charts.
