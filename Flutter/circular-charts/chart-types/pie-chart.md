@@ -9,6 +9,11 @@ documentation: ug
 
 # Pie Chart in Flutter Circular Charts (SfCircularChart)
 
+To create a Flutter pie chart quickly, you can check this video.
+
+<style>#flutterPieChartTutorial{width : 90% !important; height: 300px !important }</style>
+<iframe id='flutterPieChartTutorial' src='https://www.youtube.com/watch?v=VJxPp7-2nGk'></iframe>
+
 To render a pie chart, create an instance of [`PieSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PieSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries-class.html) collection property of [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html). The following properties can be used to customize the appearance of pie segment:
 
 * [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/opacity.html) - controls the transparency of the chart series.

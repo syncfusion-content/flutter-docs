@@ -9,6 +9,11 @@ documentation: ug
 
 # Range area Chart in Flutter Cartesian Charts (SfCartesianChart)
 
+To create a Flutter range area chart quickly, you can check this video.
+
+<style>#flutterRangeareaChartTutorial{width : 90% !important; height: 300px !important }</style>
+<iframe id='flutterRangeareaChartTutorial' src='https://www.youtube.com/watch?v=uSsKhlRzC2Q'></iframe>
+
 To render a range area chart, create an instance of `RangeAreaSeries` and add to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). 
 
 Since the [`RangeAreaSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RangeAreaSeries-class.html) requires two Y values for a point, your data should contain high and low values. High and low value specifies the maximum and minimum range of the point. 

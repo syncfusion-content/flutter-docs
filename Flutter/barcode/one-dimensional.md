@@ -11,38 +11,25 @@ documentation: ug
 
 The one-dimensional barcode represents the data by varying the widths and spacings of the parallel lines. These barcode types are also known as linear barcode types. The Syncfusion flutter barcode generator supports the following one-dimensional barcode types:
 
-[`Codabar`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Codabar-class.html)
-
-[`Code39`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code39-class.html)
-
-[`Code39Extended`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code39Extended-class.html)
-
-[`Code93`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code93-class.html)
-
-[`UPCA`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/UPCA-class.html)
-
-[`UPCE`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/UPCE-class.html)
-
-[`EAN8`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/EAN8-class.html)
-
-[`EAN13`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/EAN13-class.html)
-
-[`Code128`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code128-class.html)
-
-[`Code128A`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code128A-class.html)
-
-[`Code128B`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code128B-class.html)
-
-[`Code128C`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code128C-class.html)
+* [`Codabar`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Codabar-class.html)
+* [`Code39`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code39-class.html)
+* [`Code39Extended`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code39Extended-class.html)
+* [`Code93`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code93-class.html)
+* [`UPCA`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/UPCA-class.html)
+* [`UPCE`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/UPCE-class.html)
+* [`EAN8`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/EAN8-class.html)
+* [`EAN13`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/EAN13-class.html)
+* [`Code128`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code128-class.html)
+* [`Code128A`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code128A-class.html)
+* [`Code128B`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code128B-class.html)
+* [`Code128C`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code128C-class.html)
 
 ## Codabar
 
-[`Codabar`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Codabar-class.html) is a discrete numeric symbology that is used in libraries, blood banks and a variety of other information processing applications.
+* [`Codabar`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Codabar-class.html) is a discrete numeric symbology that is used in libraries, blood banks and a variety of other information processing applications.
 
 * Encodes only numeric characters and some special characters like dash (-), colon (:), slash (/), plus (+).
-
 * Each character has three bars and four spaces.
-
 * Uses characters of A, B, C, D as start and stop characters.
 
 {% highlight dart %} 
@@ -72,7 +59,6 @@ The one-dimensional barcode represents the data by varying the widths and spacin
 [`Code 39`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code39-class.html) is a discrete, variable-length symbology that encodes alphanumeric characters into a series of bars. A special start / stop character is placed at the beginning and ending of each barcode. Code 39 is self-checking, a check digit is not usually required for common use. For certain cases, applications requiring an extremely high level of accuracy of the checksum digit might be added.
 
 * Allows character set of digits (0-9), upper case alphabets (A-Z), and symbols like space, minus (-), plus (+), period (.), dollar sign ($), slash (/), and percent (%).
-
 * Each character is encoded with 5 bars and 4 spaces where 3 are wide and 6 are narrow.
 
 {% highlight dart %} 
@@ -126,14 +112,13 @@ The [`enableCheckSum`](https://pub.dev/documentation/syncfusion_flutter_barcodes
 
 ![code39 extended symbology](images/one-dimensional/code39-extended.jpg)
 
-As like [`Code39`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code39-class.html), the [`Code39 Extended`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code39Extended-class.html) supports the [`enableCheckSum`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code39Extended/enableCheckSum.html) property.
+As like [`Code39`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code39-class.html), the [`Code39 Extended`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code39Extended-class.html) supports the [`enableCheckSum`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code39/enableCheckSum.html) property.
 
 ## Code93
 
 [`Code93`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code93-class.html) is designed to complement and enhance [`Code39`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code39-class.html). It represents the complete ASCII character set by using a combination of 2 characters. It is a continuous, variable-length symbology and produces a denser code.
 
 * Encodes character set of uppercase alphabets (A-Z), digits (0-9), and special characters such as asterisk (*), dash (-), dollar ($), percent (%), Space, dot (.), slash (/), plus (+) and so on. 
-
 * The asterisk (*) is not a true encoding character, but it is the start and stop symbol for [`Code93`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code93-class.html) Symbology.
 
 {% highlight dart %} 

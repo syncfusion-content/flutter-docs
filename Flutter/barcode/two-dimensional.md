@@ -11,18 +11,15 @@ documentation: ug
 
 Two dimensional Barcode is a way to represent information by using the two-dimensional approach. It is similar to one dimensional Barcode, but can represent more data per unit area. The barcode generator control supports the following two dimensional symbology:
 
-[`QR Code`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/QRCode-class.html),
-
-[`Data Matrix`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/DataMatrix-class.html)
+* [`QR Code`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/QRCode-class.html)
+* [`Data Matrix`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/DataMatrix-class.html)
 
 ## QR Code
 
 A [`QR Code`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/QRCode-class.html) is a two-dimensional barcode that consists of a grid of dark and light dots or blocks that form a square. The data encoded in the barcode can be numeric, alphanumeric, or Shift JIS characters.
 
 * The QR Code uses version from 1 to 40. Version 1 measures 21 modules x 21 modules, Version 2 measures 25 modules x 25 modules, and so on. The number of modules increases in steps of 4 modules per side up to Version 40 that measures 177 modules x 177 modules. 
-
 * Each version has its own capacity. By default, the barcode control automatically sets the version according to the length of the input text.
-
 * The QR Barcodes are designed for industrial uses and also commonly used in consumer advertising.
 
 {% highlight dart %} 
@@ -51,9 +48,7 @@ A [`QR Code`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/b
 The data that can be stored in the QR code depends upon the following property:
 
 * [`Error correction level`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/QRCode/errorCorrectionLevel.html)
-
 * [`QR code version`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/QRCode/codeVersion.html)
-
 * [`Input mode`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/QRCode/inputMode.html)
 
 
@@ -191,11 +186,9 @@ Length - Data Matrix can store up to 2335 alphanumeric characters or 3116 number
 
 Type - Data Matrix supports the following data types,
 
-`Numeric`,
-
-`Alpha Numeric`,
-
-`Byte`
+* Numeric
+* Alpha Numeric
+* Byte
 
 The [`encoded data size`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/DataMatrix/dataMatrixSize.html) depends upon the length and data type of provided input values.
 
@@ -203,13 +196,10 @@ The [`encoded data size`](https://pub.dev/documentation/syncfusion_flutter_barco
 
 Data Matrix supports following [`encoding types`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/DataMatrix/encoding.html), 
 
-`Auto`,
-
-`ASCII`,
-
-`ASCIINumeric`,
-
-`Base256`
+* Auto
+* ASCII
+* ASCIINumeric
+* Base256
 
 By default, the encoding types is `auto`.
 

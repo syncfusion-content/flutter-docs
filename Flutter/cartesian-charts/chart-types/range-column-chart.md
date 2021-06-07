@@ -9,6 +9,11 @@ documentation: ug
 
 # Range column Chart in Flutter Cartesian Charts (SfCartesianChart)
 
+To create a Flutter range column chart quickly, you can check this video.
+
+<style>#flutterRangecolumnChartTutorial{width : 90% !important; height: 300px !important }</style>
+<iframe id='flutterRangecolumnChartTutorial' src='https://www.youtube.com/watch?v=uSsKhlRzC2Q'></iframe>
+
 To render a range column chart, create an instance of [`RangeColumnSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RangeColumnSeries-class.html) and add to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). 
 
 Since the [`RangeColumnSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RangeColumnSeries-class.html) requires two Y values for a point, your data should contain high and low values. High and low value specifies the maximum and minimum range of the point. 
