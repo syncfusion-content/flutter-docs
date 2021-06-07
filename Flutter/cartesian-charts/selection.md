@@ -160,7 +160,7 @@ Multiple selection can be enabled using the [`enableMultiSelection`](https://pub
 
 ## Selection on initial rendering
 
-You can select a point or series programmatically on a chart using [`initialSelectedDataIndexes`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/initialSelectedDataIndexes.html) property of chart.
+You can select a point or series programmatically on a chart using [`initialSelectedDataIndexes`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/initialSelectedDataIndexes.html) property of chart.
 
 {% highlight dart %} 
     
