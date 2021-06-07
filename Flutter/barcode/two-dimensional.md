@@ -11,9 +11,9 @@ documentation: ug
 
 Two dimensional Barcode is a way to represent information by using the two-dimensional approach. It is similar to one dimensional Barcode, but can represent more data per unit area. The barcode generator control supports the following two dimensional symbology:
 
-[`QR Code`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/QRCode-class.html),
+* [`QR Code`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/QRCode-class.html)
 
-[`Data Matrix`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/DataMatrix-class.html)
+* [`Data Matrix`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/DataMatrix-class.html)
 
 ## QR Code
 
@@ -191,11 +191,11 @@ Length - Data Matrix can store up to 2335 alphanumeric characters or 3116 number
 
 Type - Data Matrix supports the following data types,
 
-`Numeric`,
+* Numeric
 
-`Alpha Numeric`,
+* Alpha Numeric
 
-`Byte`
+* Byte
 
 The [`encoded data size`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/DataMatrix/dataMatrixSize.html) depends upon the length and data type of provided input values.
 
@@ -203,13 +203,13 @@ The [`encoded data size`](https://pub.dev/documentation/syncfusion_flutter_barco
 
 Data Matrix supports following [`encoding types`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/DataMatrix/encoding.html), 
 
-`Auto`,
+* Auto
 
-`ASCII`,
+* ASCII
 
-`ASCIINumeric`,
+* ASCIINumeric
 
-`Base256`
+* Base256
 
 By default, the encoding types is `auto`.
 

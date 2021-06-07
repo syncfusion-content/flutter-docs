@@ -11,33 +11,33 @@ documentation: ug
 
 The one-dimensional barcode represents the data by varying the widths and spacings of the parallel lines. These barcode types are also known as linear barcode types. The Syncfusion flutter barcode generator supports the following one-dimensional barcode types:
 
-[`Codabar`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Codabar-class.html)
+* [`Codabar`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Codabar-class.html)
 
-[`Code39`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code39-class.html)
+* [`Code39`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code39-class.html)
 
-[`Code39Extended`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code39Extended-class.html)
+* [`Code39Extended`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code39Extended-class.html)
 
-[`Code93`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code93-class.html)
+* [`Code93`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code93-class.html)
 
-[`UPCA`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/UPCA-class.html)
+* [`UPCA`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/UPCA-class.html)
 
-[`UPCE`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/UPCE-class.html)
+* [`UPCE`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/UPCE-class.html)
 
-[`EAN8`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/EAN8-class.html)
+* [`EAN8`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/EAN8-class.html)
 
-[`EAN13`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/EAN13-class.html)
+* [`EAN13`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/EAN13-class.html)
 
-[`Code128`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code128-class.html)
+* [`Code128`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code128-class.html)
 
-[`Code128A`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code128A-class.html)
+* [`Code128A`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code128A-class.html)
 
-[`Code128B`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code128B-class.html)
+* [`Code128B`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code128B-class.html)
 
-[`Code128C`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code128C-class.html)
+* [`Code128C`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code128C-class.html)
 
 ## Codabar
 
-[`Codabar`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Codabar-class.html) is a discrete numeric symbology that is used in libraries, blood banks and a variety of other information processing applications.
+* [`Codabar`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Codabar-class.html) is a discrete numeric symbology that is used in libraries, blood banks and a variety of other information processing applications.
 
 * Encodes only numeric characters and some special characters like dash (-), colon (:), slash (/), plus (+).
 
