@@ -437,7 +437,7 @@ Category axis can also be rendered based on the index values of data source by s
         );
     }
 
-    class ChartData{
+    class ChartData {
         ChartData(this.x, this.y);
         final String x;
         final double? y;

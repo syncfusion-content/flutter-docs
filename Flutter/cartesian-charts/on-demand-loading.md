@@ -52,7 +52,7 @@ The below example demonstrates the infinite scrolling by showing the ci
        }
     }
 
-    class SalesData{
+    class SalesData {
         SalesData(this.x, this.y);
         final num x;
         final double? y;

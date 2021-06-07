@@ -46,7 +46,7 @@ You can add multiple series to the [`series`](https://pub.dev/documentation/sync
         );
     }
 
-     class ChartData{
+     class ChartData {
         ChartData(this.x, this.y, this.y2, this.y3);
         final String x;
         final double? y;
@@ -93,7 +93,7 @@ Also refer [multiple axes](./axis-customization#multiple-axes) for customizing t
         );
     }
 
-    class ChartData{
+    class ChartData {
         ChartData(this.x, this.y, this.y1);
         final String x;
         final double? y;

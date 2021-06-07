@@ -163,7 +163,7 @@ Triggers when data label is rendering. Text and text styles such as color, font 
       );
     }
 
-    class ChartData{
+    class ChartData {
       ChartData(this.x, this.y);
       final double x;
       final double? y;
@@ -566,7 +566,7 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
       );
     }
 
-    class ChartData{
+    class ChartData {
       ChartData(this.x, this.y);
       final double x;
       final double? y;
@@ -693,7 +693,7 @@ Triggers when the series renderer is created. This callback can be used to obtai
       );
     }
 
-    class SalesData{
+    class SalesData {
       SalesData(this.x, this.y);
       final num x;
       final double? y;
@@ -886,7 +886,7 @@ Triggers while swiping on the plot area. Whenever the swiping happens on th
       }
     }
 
-    class SalesData{
+    class SalesData {
       SalesData(this.x, this.y);
       final num x;
       final double? y;

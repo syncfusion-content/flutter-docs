@@ -37,7 +37,7 @@ documentation: ug
         );
     }
 
-    class ChartData{
+    class ChartData {
         ChartData(this.x, this.y);
         final String x;
         final double? y;
@@ -154,7 +154,7 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
         );
     }
 
-    class ChartData{
+    class ChartData {
         ChartData(this.x, this.y)'
         final String x;
         final double? y;
@@ -206,7 +206,7 @@ The [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
         );
     }
 
-    class ChartData{
+    class ChartData {
      ChartData(this.x, this.y, this.y1, this.y2);
      final String x;
      final double? y;
@@ -303,7 +303,7 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
         );
     }
 
-    class ChartData{
+    class ChartData {
         ChartData(this.x, this.y);
         final double x;
         final double? y;
@@ -357,7 +357,7 @@ If the properties of both [`borderColor`](https://pub.dev/documentation/syncfusi
         );
     }
 
-    class ChartData{
+    class ChartData {
         ChartData(this.x, this.y);
         final double x;
         final double? y;
@@ -405,7 +405,7 @@ The data points that has null value are considered as empty points. Empty data p
         );
     }
 
-    class ChartData{
+    class ChartData {
         ChartData(this.x, this.y);
         final double x;
         final double? y;
@@ -456,7 +456,7 @@ Specific color for empty point can be set by [`color`](https://pub.dev/documenta
         );
     }
 
-    class ChartData{
+    class ChartData {
         ChartData(this.x, this.y);
         final double x;
         final double? y;
@@ -503,7 +503,7 @@ The chart’s data source can be sorted using the [`sortingOrder`](https://pub.d
         );
     }
 
-    class ChartData{
+    class ChartData {
         ChartData(this.x, this.y);
         final String x;
         final double? y;

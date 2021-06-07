@@ -63,7 +63,7 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
         _tooltipBehavior.show(20, 34);
     }
 
-    class ChartData{
+    class ChartData {
         ChartData(this.x, this.y);
         final double x;
         final double? y;
@@ -129,7 +129,7 @@ The below mentioned arguments are given to the [`showByIndex`](https://pub.dev/d
       );
     }
 
-     class ChartData{
+     class ChartData {
         ChartData(this.x, this.y);
         final double x;
         final double? y;
@@ -191,7 +191,7 @@ x & y - logical pixel values to position the tooltip.
       );
     }
 
-     class ChartData{
+     class ChartData {
         ChartData(this.x, this.y);
         final double x;
         final double? y;
@@ -252,7 +252,7 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
       _tooltipBehavior.hide();
     }
 
-     class ChartData{
+     class ChartData {
         ChartData(this.x, this.y);
         final double x;
         final double? y;
@@ -313,7 +313,7 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
     );
   }
 
-    class ChartData{
+    class ChartData {
         ChartData(this.x, this.y);
         final double x;
         final double? y;
@@ -375,7 +375,7 @@ The [`showByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/late
       );
     }
 
-     class ChartData{
+     class ChartData {
         ChartData(this.x, this.y);
         final double x;
         final double? y;
@@ -438,7 +438,7 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
         _trackballBehavior.hide();
     }
 
-     class ChartData{
+     class ChartData {
         ChartData(this.x, this.y);
         final double x;
         final double? y;
@@ -500,7 +500,7 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
       );
     }
 
-     class ChartData{
+     class ChartData {
         ChartData(this.x, this.y);
         final double x;
         final double? y;
@@ -563,7 +563,7 @@ The [`showByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/late
       );
     }
 
-     class ChartData{
+     class ChartData {
         ChartData(this.x, this.y);
         final double x;
         final double? y;
@@ -624,7 +624,7 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
         _crosshairBehavior.hide();
     }
 
-     class ChartData{
+     class ChartData {
         ChartData(this.x, this.y);
         final double x;
         final double? y;
@@ -694,7 +694,7 @@ N> The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter
         _selectionBehavior.selectDataPoints(1, 0);
     }
 
-     class ChartData{
+     class ChartData {
         ChartData(this.x, this.y);
         final double x;
         final double? y;
@@ -763,7 +763,7 @@ The [`zoomIn`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
         _zoomPanBehavior.zoomIn();
     }
 
-     class ChartData{
+     class ChartData {
         ChartData(this.x, this.y);
         final double x;
         final double? y;
@@ -831,7 +831,7 @@ The [`zoomOut`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
         _zoomPanBehavior.zoomOut();
     }
 
-     class ChartData{
+     class ChartData {
         ChartData(this.x, this.y);
         final double x;
         final double? y;
@@ -898,7 +898,7 @@ The [`zoomByFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
         _zoomPanBehavior.zoomByFactor(0.5);
     }
 
-     class ChartData{
+     class ChartData {
         ChartData(this.x, this.y);
         final double x;
         final double? y;
@@ -966,7 +966,7 @@ The [`zoomByRect`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
         _zoomPanBehavior.zoomByRect(const Rect.fromLTRB(200, 300, 300, 400));
     }
 
-     class ChartData{
+     class ChartData {
         ChartData(this.x, this.y);
         final double x;
         final double? y;
@@ -1039,7 +1039,7 @@ The [`zoomToSingleAxis`](https://pub.dev/documentation/syncfusion_flutter_charts
         _zoomPanBehavior.zoomToSingleAxis(xAxis,zoomPosition,zoomFactor);
     }
 
-     class ChartData{
+     class ChartData {
         ChartData(this.x, this.y);
         final double x;
         final double? y;
@@ -1111,7 +1111,7 @@ The [`panToDirection`](https://pub.dev/documentation/syncfusion_flutter_charts/l
         _zoomPanBehavior.panToDirection('top'); 
     }
 
-     class ChartData{
+     class ChartData {
         ChartData(this.x, this.y);
         final double x;
         final double? y;
@@ -1178,7 +1178,7 @@ The [`reset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
       _zoomPanBehavior.reset();
     }
 
-     class ChartData{
+     class ChartData {
         ChartData(this.x, this.y);
         final double x;
         final double? y;
@@ -1248,7 +1248,7 @@ Widget build(BuildContext context) {
       );
     }
 
-     class ChartData{
+     class ChartData {
         ChartData(this.x, this.y);
         final num x;
         final double? y;

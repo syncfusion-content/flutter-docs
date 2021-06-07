@@ -35,7 +35,7 @@ The [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
         );
       }
 
-      class ChartData{
+      class ChartData {
           ChartData(this.x, this.y);
           final DateTime x;
           final double? y;
@@ -95,7 +95,7 @@ The [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
       );
     }
 
-     class ChartData{
+     class ChartData {
         ChartData(this.x, this.y);
         final DateTime x;
         final double? y;
@@ -157,7 +157,7 @@ The following properties can be used to define and customize the [`title`](https
       );
     }
 
-     class ChartData{
+     class ChartData {
         ChartData(this.x, this.y);
         final DateTime x;
         final double? y;
@@ -198,7 +198,7 @@ You can control the visibility of the series by tapping the legend item. You can
       );
     }
 
-     class ChartData{
+     class ChartData {
         ChartData(this.x, this.y);
         final String x;
         final double? y;
@@ -236,7 +236,7 @@ The [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
       );
     }
 
-    class ChartData{
+    class ChartData {
         ChartData(this.x, this.y);
         final String x;
         final double? y;
@@ -280,7 +280,7 @@ You can control the visibility of a particular series legend item using the [`is
       );
     }
 
-    class ChartData{
+    class ChartData {
         ChartData(this.x, this.y);
         final String x;
         final double? y;
@@ -321,7 +321,7 @@ The legend items can be placed in multiple rows or scroll can be enabled using t
       );
     }
 
-    class ChartData{
+    class ChartData {
         ChartData(this.x, this.y);
         final DateTime x;
         final double? y;
@@ -366,7 +366,7 @@ You can change the position of the legend inside the chart. The following proper
       );
     }
 
-    class ChartData{
+    class ChartData {
         ChartData(this.x, this.y);
         final DateTime x;
         final double? y;
@@ -412,7 +412,7 @@ You can customize the appearance of legend items with your template by using [`l
       );
     }
 
-    class ChartData{
+    class ChartData {
         ChartData(this.x, this.y);
         final String x;
         final double? y;

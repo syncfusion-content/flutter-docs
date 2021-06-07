@@ -937,10 +937,10 @@ By default, the chart is rendered with primary x axis and primary y axis. But, t
     }
 
     class SalesData {
-     SalesData(this.year, this.sales, [this.numeric]);
-    final String year;
-    final double? sales;
-    final double? numeric;
+        SalesData(this.year, this.sales, [this.numeric]);
+        final String year;
+        final double? sales;
+        final double? numeric;
     }
 
 {% endhighlight %}

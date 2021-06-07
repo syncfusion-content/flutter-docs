@@ -65,7 +65,7 @@ A linear trendline is a best fit straight line that is used with simpler data se
         );
     }
 
-    class SalesData{
+    class SalesData {
         SalesData(this.year, this.sales);
         final DateTime year;
         final double? sales;
@@ -107,7 +107,7 @@ To render an exponential trendline, use trendline type as Exponential.
         );
     }
 
-    class SalesData{
+    class SalesData {
         SalesData(this.year, this.sales);
         final DateTime year;
         final double? sales;
@@ -149,7 +149,7 @@ To render a logarithmic trendline, use trendline type as Logarithmic
         );
     }
 
-    class SalesData{
+    class SalesData {
         SalesData(this.year, this.sales);
         final DateTime year;
         final double? sales;
@@ -191,7 +191,7 @@ To render a polynomial trendline, use trendline type as Polynomial.
         );
     }
 
-    class SalesData{
+    class SalesData {
         SalesData(this.year, this.sales);
         final DateTime year;
         final double? sales;
@@ -233,7 +233,7 @@ To render a power trendline, use trendline type as Power
         );
     }
 
-    class SalesData{
+    class SalesData {
         SalesData(this.year, this.sales);
         final DateTime year;
         final double? sales;
@@ -274,7 +274,7 @@ To render a moving average trendline, use trendline type as MovingAverage
         );
     }
 
-    class SalesData{
+    class SalesData {
         SalesData(this.year, this.sales);
         final DateTime year;
         final double? sales;
@@ -321,7 +321,7 @@ The value set for forwardForecast is used to determine the distance moving towar
         );
     }
 
-    class SalesData{
+    class SalesData {
         SalesData(this.year, this.sales);
         final DateTime year;
         final double? sales;
@@ -362,7 +362,7 @@ The value set for the backwardForecast is used to determine the past trends.
         );
     }
 
-    class SalesData{
+    class SalesData {
         SalesData(this.year, this.sales);
         final DateTime year;
         final double? sales;
@@ -404,7 +404,7 @@ Legend for trendline gets rendered together with the series legend when the lege
         );
     }
 
-    class SalesData{
+    class SalesData {
         SalesData(this.year, this.sales);
         final DateTime year;
         final double? sales;
@@ -447,7 +447,7 @@ Data markers are used to provide information about the data points in the series
         );
     }
 
-    class SalesData{
+    class SalesData {
         SalesData(this.year, this.sales);
         final DateTime year;
         final double? sales;
@@ -500,7 +500,7 @@ Chart will display details about the points through tooltip, when user interacti
         );
     }
 
-    class SalesData{
+    class SalesData {
         SalesData(this.year, this.sales);
         final DateTime year;
         final double? sales;

@@ -76,7 +76,7 @@ Refer the following example,
         );
       }
 
-      class ChartData{
+      class ChartData {
         ChartData(this.x, this.low, this.high, this.open, this.close);
         final DateTime x;
         final double? low;
@@ -117,7 +117,7 @@ Refer the following example,
           )
         );
       }
-      class ChartData{
+      class ChartData {
         ChartData(this.x, this.low, this.high, this.open, this.close);
         final DateTime x;
         final double? low;
@@ -158,7 +158,7 @@ Refer the following example,
         );         
       }
 
-      class ChartData{
+      class ChartData {
         ChartData(this.x, this.low, this.high, this.open, this.close);
         final DateTime x;
         final double? low;
@@ -201,7 +201,7 @@ Refer the following example,
       );
     }
 
-    class ChartData{
+    class ChartData {
         ChartData(this.x, this.low, this.high, this.open, this.close);
         final DateTime x;
         final double? low;
@@ -247,7 +247,7 @@ Refer the following example,
       );
     }
 
-     class ChartData{
+     class ChartData {
         ChartData(this.x, this.low, this.high, this.open, this.close);
         final DateTime x;
         final double? low;
@@ -287,7 +287,7 @@ Refer the following example,
       );
     }
 
-     class ChartData{
+     class ChartData {
         ChartData(this.x, this.low, this.high, this.open, this.close);
         final DateTime x;
         final double? low;
@@ -330,7 +330,7 @@ Refer the following example,
       );
      }
 
-      class ChartData{
+      class ChartData {
         ChartData(this.x, this.low, this.high, this.open, this.close);
         final DateTime x;
         final double? low;
@@ -369,7 +369,7 @@ The [`Simple moving average indicator`](https://pub.dev/documentation/syncfusion
       );
     }
 
-     class ChartData{
+     class ChartData {
         ChartData(this.x, this.low, this.high, this.open, this.close);
         final DateTime x;
         final double? low;
@@ -412,7 +412,7 @@ Refer the following example,
       );
     }
 
-     class ChartData{
+     class ChartData {
         ChartData(this.x, this.low, this.high, this.open, this.close);
         final DateTime x;
         final double? low;
@@ -453,7 +453,7 @@ Refer the following example,
       );
     }
 
-     class ChartData{
+     class ChartData {
         ChartData(this.x, this.low, this.high, this.open, this.close);
         final DateTime x;
         final double? low;
@@ -494,7 +494,7 @@ The following code example can define the legend.
             );
           }
 
-      class ChartData{
+      class ChartData {
         ChartData(this.x, this.low, this.high, this.open, this.close);
         final DateTime x;
         final double? low;
@@ -546,7 +546,7 @@ The chart will display the segment information through the tooltip. It is used t
         );
       }
 
-       class ChartData{
+       class ChartData {
         ChartData(this.x, this.low, this.high, this.open, this.close);
         final DateTime x;
         final double? low;
@@ -596,7 +596,7 @@ Refer the following example below
       );
     }
 
-     class SalesData{
+     class SalesData {
         SalesData(this.x, this.low, this.high, this.open, this.close);
         final num x;
         final double? low;

@@ -45,7 +45,7 @@ Markers are used to provide information about the exact point location. You can 
         );
     }
 
-    class ChartData{
+    class ChartData {
         ChartData(this.x, this.y);
         final String x;
         final double? y;
@@ -96,7 +96,7 @@ Markers can be assigned with different shapes using the [`shape`](https://pub.de
         );
     }
 
-    class ChartData{
+    class ChartData {
         ChartData(this.x, this.y);
         final String x;
         final double? y;
@@ -138,7 +138,7 @@ The markers can be rendered with desired image as shape. For this you have to sp
         );
     }
 
-    class ChartData{
+    class ChartData {
         ChartData(this.x, this.y);
         final String x;
         final double? y;
@@ -198,7 +198,7 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
         );
     }
 
-    class ChartData{
+    class ChartData {
         ChartData(this.x, this.y);
         final String x;
         final double? y;
@@ -240,7 +240,7 @@ Data label considers the format used in the vertical axis by default. In the bel
         );
     }
 
-    class ChartData{
+    class ChartData {
         ChartData(this.x, this.y);
         final String x;
         final double? y;
@@ -285,7 +285,7 @@ The [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/l
         );
     }
 
-    class ChartData{
+    class ChartData {
         ChartData(this.x, this.y);
         final DateTime x;
         final double? y;
@@ -327,7 +327,7 @@ The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
         );
     }
 
-    class ChartData{
+    class ChartData {
         ChartData(this.x, this.y);
         final DateTime x;
         final double? y;
@@ -425,7 +425,7 @@ You can customize the appearance of the data label with your own template using 
         );
     }
 
-    class ChartData{
+    class ChartData {
         ChartData(this.x, this.y);
         final String x;
         final double? y;
@@ -459,7 +459,7 @@ Data label and its connector line in the Cartesian charts for the point value 0 
         );
     }
 
-    class SalesData{
+    class SalesData {
         SalesData(this.x, this.y);
         final num x;
         final double? y;
@@ -499,7 +499,7 @@ In Horizontal padding, providing positive value for x moves the data l
         );
     }
 
-    class SalesData{
+    class SalesData {
         SalesData(this.x, this.y);
         final num x;
         final double? y;
@@ -533,7 +533,7 @@ In Vertical padding, providing positive value for y moves the data lab
         );
     }
 
-     class SalesData{
+     class SalesData {
         SalesData(this.x, this.y);
         final num x;
         final double? y;
