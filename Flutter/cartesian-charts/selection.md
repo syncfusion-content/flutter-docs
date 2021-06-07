@@ -43,12 +43,6 @@ The selection feature in chart let you to select a segment in a series or the se
         );  
     }
 
-    class ChartData{
-        ChartData(this.x, this.y);
-        final double x;
-        final double? y;
-      }
-
 {% endhighlight %}
 
 ## Customizing the segments
@@ -95,12 +89,6 @@ You can customize the segments using the below properties.
             )
         );
     }
-
-    class ChartData{
-        ChartData(this.x, this.y);
-        final String x;
-        final double? y;
-      }
 
 {% endhighlight %}
 
@@ -203,12 +191,6 @@ You can select a point or series programmatically on a chart using [`initialSele
         );
     }
 
-    class ChartData{
-        ChartData(this.x, this.y);
-        final String x;
-        final double? y;
-      }
-
 {% endhighlight %}
 
 ![Initial selection](images/selection/initial_render_selection.jpg)
@@ -218,5 +200,3 @@ Also refer [selection event](./events#onselectionchanged) for customizing the se
 #### See Also
 
 * [Dynamically selecting the data points in a chart](https://www.syncfusion.com/kb/11811/how-to-select-the-data-points-dynamically-in-cartesian-charts-sfcartesianchart).
-
-N> `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.

@@ -63,12 +63,6 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
         _tooltipBehavior.show(20, 34);
     }
 
-    class ChartData{
-        ChartData(this.x, this.y);
-        final double x;
-        final double? y;
-      }
-
 {% endhighlight %}
 
 ### showByIndex method in tooltipBehavior
@@ -129,13 +123,6 @@ The below mentioned arguments are given to the [`showByIndex`](https://pub.dev/d
       );
     }
 
-     class ChartData{
-        ChartData(this.x, this.y);
-        final double x;
-        final double? y;
-      }
-
-
   {% endhighlight %}
 
 ### showByPixel method in tooltipBehavior
@@ -190,13 +177,6 @@ x & y - logical pixel values to position the tooltip.
         )
       );
     }
-
-     class ChartData{
-        ChartData(this.x, this.y);
-        final double x;
-        final double? y;
-      }
-
   
 {% endhighlight %}
 
@@ -252,12 +232,6 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
       _tooltipBehavior.hide();
     }
 
-     class ChartData{
-        ChartData(this.x, this.y);
-        final double x;
-        final double? y;
-      }
-
 {% endhighlight %}
 
 ## Methods in trackballBehavior
@@ -279,7 +253,6 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
   @override
   Widget build(BuildContext context) {
-
     final List<ChartData> chartData = [
       ChartData(10, 17),
       ChartData(20, 34)
@@ -312,12 +285,6 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
       )
     );
   }
-
-    class ChartData{
-        ChartData(this.x, this.y);
-        final double x;
-        final double? y;
-      }
 
 {% endhighlight %}
 
@@ -375,13 +342,6 @@ The [`showByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/late
       );
     }
 
-     class ChartData{
-        ChartData(this.x, this.y);
-        final double x;
-        final double? y;
-      }
-
-
 {% endhighlight %}
 
 ### Hide method in trackballBehavior
@@ -438,11 +398,6 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
         _trackballBehavior.hide();
     }
 
-     class ChartData{
-        ChartData(this.x, this.y);
-        final double x;
-        final double? y;
-      }
 {% endhighlight %}
 
 ## Methods in crosshairBehavior
@@ -500,13 +455,6 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
       );
     }
 
-     class ChartData{
-        ChartData(this.x, this.y);
-        final double x;
-        final double? y;
-      }
-
-
 {% endhighlight %}
 
 ### showByIndex method in crosshairBehavior
@@ -563,13 +511,6 @@ The [`showByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/late
       );
     }
 
-     class ChartData{
-        ChartData(this.x, this.y);
-        final double x;
-        final double? y;
-      }
-
-
 {% endhighlight %}
 
 ### Hide method in crosshairBehavior
@@ -623,13 +564,6 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
     void hide() {
         _crosshairBehavior.hide();
     }
-
-     class ChartData{
-        ChartData(this.x, this.y);
-        final double x;
-        final double? y;
-      }
-
 
 {% endhighlight %}
 
@@ -694,13 +628,6 @@ N> The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter
         _selectionBehavior.selectDataPoints(1, 0);
     }
 
-     class ChartData{
-        ChartData(this.x, this.y);
-        final double x;
-        final double? y;
-      }
-
-
 {% endhighlight %}
 
 ## Methods in zoomPanBehavior
@@ -763,13 +690,6 @@ The [`zoomIn`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
         _zoomPanBehavior.zoomIn();
     }
 
-     class ChartData{
-        ChartData(this.x, this.y);
-        final double x;
-        final double? y;
-      }
-
-
 {% endhighlight %}
 
 ### ZoomOut method in zoomPanBehavior
@@ -831,13 +751,6 @@ The [`zoomOut`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
         _zoomPanBehavior.zoomOut();
     }
 
-     class ChartData{
-        ChartData(this.x, this.y);
-        final double x;
-        final double? y;
-      }
-
-
 {% endhighlight %}
 
 ### zoomByFactor method in zoomPanBehavior
@@ -897,13 +810,6 @@ The [`zoomByFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
     void zoom() {
         _zoomPanBehavior.zoomByFactor(0.5);
     }
-
-     class ChartData{
-        ChartData(this.x, this.y);
-        final double x;
-        final double? y;
-      }
-
 
 {% endhighlight %}
 
@@ -965,13 +871,6 @@ The [`zoomByRect`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
     void zoom() {
         _zoomPanBehavior.zoomByRect(const Rect.fromLTRB(200, 300, 300, 400));
     }
-
-     class ChartData{
-        ChartData(this.x, this.y);
-        final double x;
-        final double? y;
-      }
-
 
 {% endhighlight %}
 
@@ -1039,13 +938,6 @@ The [`zoomToSingleAxis`](https://pub.dev/documentation/syncfusion_flutter_charts
         _zoomPanBehavior.zoomToSingleAxis(xAxis,zoomPosition,zoomFactor);
     }
 
-     class ChartData{
-        ChartData(this.x, this.y);
-        final double x;
-        final double? y;
-      }
-
-
 {% endhighlight %}
 
 ### PanToDirection method in zoomPanBehavior
@@ -1111,12 +1003,6 @@ The [`panToDirection`](https://pub.dev/documentation/syncfusion_flutter_charts/l
         _zoomPanBehavior.panToDirection('top'); 
     }
 
-     class ChartData{
-        ChartData(this.x, this.y);
-        final double x;
-        final double? y;
-      }
-
 {% endhighlight %}
 
 ### Reset method in zoomPanBehavior
@@ -1177,13 +1063,6 @@ The [`reset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
     void zoom() {
       _zoomPanBehavior.reset();
     }
-
-     class ChartData{
-        ChartData(this.x, this.y);
-        final double x;
-        final double? y;
-      }
-
 
 {% endhighlight %}
 
@@ -1248,13 +1127,6 @@ Widget build(BuildContext context) {
       );
     }
 
-     class ChartData{
-        ChartData(this.x, this.y);
-        final num x;
-        final double? y;
-      }
-
-
 {% endhighlight %}
 
 #### See Also
@@ -1299,13 +1171,6 @@ and funnel charts.
        );
     }
 
-     class ChartSampleData{
-        ChartSampleData(this.x, this.y);
-        final num x;
-        final double? y;
-      }
-
-
 {% endhighlight %}
 
 ## PointToPixel 
@@ -1348,12 +1213,6 @@ and funnel charts.
       );
     }
 
-    class ChartSampleData{
-        ChartSampleData(this.x, this.y);
-        final num x;
-        final double? y;
-      }
-
 {% endhighlight %}
 
 ## See Also
@@ -1361,5 +1220,3 @@ and funnel charts.
 * [Show or hide tooltip dynamically in Cartesian chart](https://www.syncfusion.com/kb/11490/how-to-show-or-hide-the-tooltip-dynamically-in-cartesian-charts-sfcartesianchart).
 * [Show or hide trackball dynamically in Cartesian chart](https://www.syncfusion.com/kb/11489/how-to-show-or-hide-trackball-dynamically-in-cartesian-charts-sfcartesianchart).
 * [Show or hide crosshair dynamically in Cartesian chart](https://www.syncfusion.com/kb/11488/how-to-show-or-hide-crosshair-dynamically-in-cartesian-charts-sfcartesianchart).
-
-N> `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.

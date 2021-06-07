@@ -72,12 +72,6 @@ You can align the title text content horizontally to the near, center or far of 
         );
       }
 
-      class SalesData{
-        SalesData(this.year, this.sales);
-        final String year;
-        final double? sales;
-      }
-
 {% endhighlight %}
 
 ![Chart title](images/chart-title/chart_title.jpg)

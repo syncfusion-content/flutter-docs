@@ -45,12 +45,6 @@ Markers are used to provide information about the exact point location. You can 
         );
     }
 
-    class ChartData{
-        ChartData(this.x, this.y);
-        final String x;
-        final double? y;
-      }
-
 {% endhighlight %}
 
 ![Marker](images/marker-datalabel/default_marker.jpg)
@@ -96,12 +90,6 @@ Markers can be assigned with different shapes using the [`shape`](https://pub.de
         );
     }
 
-    class ChartData{
-        ChartData(this.x, this.y);
-        final String x;
-        final double? y;
-      }
-
 {% endhighlight %}
 
 ![Marker Shapes](images/marker-datalabel/marker_shape.jpg)
@@ -137,12 +125,6 @@ The markers can be rendered with desired image as shape. For this you have to sp
             )
         );
     }
-
-    class ChartData{
-        ChartData(this.x, this.y);
-        final String x;
-        final double? y;
-      }
 
 {% endhighlight %}
 
@@ -198,12 +180,6 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
         );
     }
 
-    class ChartData{
-        ChartData(this.x, this.y);
-        final String x;
-        final double? y;
-      }
-
 {% endhighlight %}
 
 ![DataLabel](images/marker-datalabel/default_datalabel.jpg)
@@ -239,12 +215,6 @@ Data label considers the format used in the vertical axis by default. In the bel
             )
         );
     }
-
-    class ChartData{
-        ChartData(this.x, this.y);
-        final String x;
-        final double? y;
-      }
 
 {% endhighlight %}
 
@@ -285,12 +255,6 @@ The [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/l
         );
     }
 
-    class ChartData{
-        ChartData(this.x, this.y);
-        final DateTime x;
-        final double? y;
-      }
-
 {% endhighlight %}
 
 ![Data label position](images/marker-datalabel/datalabel_alignment.png)
@@ -326,12 +290,6 @@ The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
             )
         );
     }
-
-    class ChartData{
-        ChartData(this.x, this.y);
-        final DateTime x;
-        final double? y;
-      }
 
 {% endhighlight %}
 
@@ -381,7 +339,7 @@ The [`dataLabelMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/
     class ChartData {
         ChartData(this.x, this.y);
         final String x;
-        final double? y;
+        final double y;
     }
 
 {% endhighlight %}
@@ -425,12 +383,6 @@ You can customize the appearance of the data label with your own template using 
         );
     }
 
-    class ChartData{
-        ChartData(this.x, this.y);
-        final String x;
-        final double? y;
-      }
-
 {% endhighlight %}
 
 ![Label template](images/marker-datalabel/datalabel_builder.png)
@@ -458,12 +410,6 @@ Data label and its connector line in the Cartesian charts for the point value 0 
             )
         );
     }
-
-    class SalesData{
-        SalesData(this.x, this.y);
-        final num x;
-        final double? y;
-      }
     
 {% endhighlight %}
 
@@ -498,12 +444,6 @@ In Horizontal padding, providing positive value for x moves the data l
             )
         );
     }
-
-    class SalesData{
-        SalesData(this.x, this.y);
-        final num x;
-        final double? y;
-      }
     
 {% endhighlight %}
 
@@ -532,12 +472,6 @@ In Vertical padding, providing positive value for y moves the data lab
             )
         );
     }
-
-     class SalesData{
-        SalesData(this.x, this.y);
-        final num x;
-        final double? y;
-      }
     
 {% endhighlight %}
 
@@ -548,5 +482,3 @@ In Vertical padding, providing positive value for y moves the data lab
 If the user didn’t provide text color to the data label, then by default, the saturation color is applied to the data label text. i.e., if the data points background color intensity is dark, then the data label will render in white color (#FFFFFF) and if the data points background color intensity is light, data label will render in black color (#000000).
 
 ![label_saturation](images/marker-datalabel/cartesian_saturation.png)
-
-N> `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.

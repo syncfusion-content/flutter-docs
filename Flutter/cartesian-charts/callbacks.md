@@ -163,12 +163,6 @@ Triggers when data label is rendering. Text and text styles such as color, font 
       );
     }
 
-    class ChartData{
-      ChartData(this.x, this.y);
-      final double x;
-      final double? y;
-    }
-
 {% endhighlight %}
 
 ## onLegendItemRender
@@ -566,12 +560,6 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
       );
     }
 
-    class ChartData{
-      ChartData(this.x, this.y);
-      final double x;
-      final double? y;
-    }
-
 {% endhighlight %}
 
 ## onIndicatorRender
@@ -691,12 +679,6 @@ Triggers when the series renderer is created. This callback can be used to obtai
           )
         ]
       );
-    }
-
-    class SalesData{
-    SalesData(this.x, this.y);
-    final num x;
-    final double? y;
     }
 
 {% endhighlight %}
@@ -833,7 +815,7 @@ N>  This callback will not be called, when the builder is specified for data lab
               },
               series: <ChartSeries<Sample, DateTime>>[
                   LineSeries<Sample, DateTime>(
-                    dataSource: chartData,
+                    dataSource: sample,
                     xValueMapper: (Sample sales, _) => sales.x,
                     yValueMapper: (Sample sales, _) => sales.y,
                     dataLabelSettings: DataLabelSettings(
@@ -842,12 +824,6 @@ N>  This callback will not be called, when the builder is specified for data lab
               ]
           )
       );
-    }
-
-    class Sample{
-      Sample(this.x, this,y);
-      final DateTime x;
-      final double? y;
     }
 
 {% endhighlight %}
@@ -886,12 +862,6 @@ Triggers while swiping on the plot area. Whenever the swiping happens on th
       }
     }
 
-    class SalesData{
-      SalesData(this.x, this.y);
-      final num x;
-      final double? y;
-    }
-
 {% endhighlight %}
 
 ## See Also
@@ -901,5 +871,3 @@ Triggers while swiping on the plot area. Whenever the swiping happens on th
 * [Customize the data labels using its callback event](https://www.syncfusion.com/kb/11679/how-to-customize-data-labels-using-callback-events-sfcartesianchart).
 * [Disabling trackball tooltip for particular series using its callback event](https://www.syncfusion.com/kb/11638/how-to-disable-trackball-tooltip-for-particular-series-in-cartesian-charts-sfcartesianchart).
 * [To Synchronize panning in multiple charts](https://www.syncfusion.com/kb/11533/how-to-synchronize-panning-in-multiple-charts-sfcartesianchart).
-
-N> `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.

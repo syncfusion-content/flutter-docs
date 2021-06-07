@@ -261,22 +261,22 @@ The ActivationMode enum contains the following values:
                 trackballBehavior: _trackballBehavior,
                 <LineSeries<SalesData, dateTime>>[
                       LineSeries<SalesData, dateTime>(
-                          dataSource: ChartData,
+                          dataSource: data,
                           markerSettings: MarkerSettings(enable: true),
                           xValueMapper: (SalesData sales, _) => sales.year,
                           yValueMapper: (SalesData sales, _) => sales.sales)
                       LineSeries<SalesData, dateTime>(
-                          dataSource: ChartData1,
+                          dataSource: data2,
                           markerSettings: MarkerSettings(enable: true),
                           xValueMapper: (SalesData sales, _) => sales.year,
                           yValueMapper: (SalesData sales, _) => sales.sales),
                       LineSeries<SalesData, dateTime>(
-                          dataSource: ChartDat2,
+                          dataSource:data3,
                           markerSettings: MarkerSettings(enable: true),
                           xValueMapper: (SalesData sales, _) => sales.year,
                           yValueMapper: (SalesData sales, _) => sales.sales),
                       LineSeries<SalesData, dateTime>(
-                          dataSource: ChartData3,
+                          dataSource:data4,
                           markerSettings: MarkerSettings(enable: true),
                           xValueMapper: (SalesData sales, _) => sales.year,
                           yValueMapper: (SalesData sales, _) => sales.sales)
@@ -286,12 +286,6 @@ The ActivationMode enum contains the following values:
         )
       );
     }
-
-    class SalesData{
-        SalesData(this.year, this.sales);
-        final DateTime year;
-        final double? sales;
-      }
 
 {% endhighlight %}
 
@@ -331,15 +325,15 @@ Also refer, [marker customization](./marker-datalabel#Marker) for customizing th
                 trackballBehavior: _trackballBehavior,
                 <LineSeries<SalesData, dateTime>>[
                       LineSeries<SalesData, dateTime>(
-                          dataSource: ChartData,
+                          dataSource: data,
                           xValueMapper: (SalesData sales, _) => sales.year,
                           yValueMapper: (SalesData sales, _) => sales.sales)
                       LineSeries<SalesData, dateTime>(
-                          dataSource: ChartData1,
+                          dataSource: data2,
                           xValueMapper: (SalesData sales, _) => sales.year,
                           yValueMapper: (SalesData sales, _) => sales.sales),
                       LineSeries<SalesData, dateTime>(
-                          dataSource: ChartData2,
+                          dataSource:data3,
                           xValueMapper: (SalesData sales, _) => sales.year,
                           yValueMapper: (SalesData sales, _) => sales.sales),
                 ]
@@ -348,13 +342,6 @@ Also refer, [marker customization](./marker-datalabel#Marker) for customizing th
           )
       );
     }
-
-    class SalesData{
-        SalesData(this.year, this.sales);
-        final DateTime year;
-        final double? sales;
-      }
-
 
 {% endhighlight %}
 
@@ -422,7 +409,7 @@ You can customize the appearance of the trackball tooltip with your own widgets 
               trackballBehavior: _trackballBehavior,
               series: <CartesianChart<SalesData, String>>[
                 SplineSeries<SalesData, String>(
-                    dataSource: ChartData,
+                    dataSource: data,
                     xValueMapper: (SalesData sales, _) => sales.year,
                     yValueMapper: (SalesData sales, _) => sales.sales)
                 ]
@@ -431,12 +418,6 @@ You can customize the appearance of the trackball tooltip with your own widgets 
           )
       );
     }
-
-    class SalesData{
-        SalesData(this.year, this.sales);
-        final String year;
-        final double? sales;
-      }
 
 {% endhighlight %}
 
@@ -489,29 +470,24 @@ Defaults to `true`.
                       LineSeries<SalesData, String>(
                           dataSource: chartData,
                           xValueMapper: (SalesData sales, _) => sales.year,
-                          yValueMapper: (SalesData sales, _) => sales.sales1),
-                      LineSeries<SalesData, String>(
-                          dataSource: chartData,
-                          xValueMapper: (SalesData sales, _) => sales.year,
                           yValueMapper: (SalesData sales, _) => sales.sales2),
                       LineSeries<SalesData, String>(
                           dataSource: chartData,
                           xValueMapper: (SalesData sales, _) => sales.year,
                           yValueMapper: (SalesData sales, _) => sales.sales3),
+                      LineSeries<SalesData, String>(
+                          dataSource: chartData,
+                          xValueMapper: (SalesData sales, _) => sales.year,
+                          yValueMapper: (SalesData sales, _) => sales.sales4),
+                      LineSeries<SalesData, String>(
+                          dataSource: chartData,
+                          xValueMapper: (SalesData sales, _) => sales.year,
+                          yValueMapper: (SalesData sales5, _) => sales.sales),
                     ]
                 )
             )
         )
       );
-    }
-
-    class SalesData{
-      SalesData(this.year, this.sales, this,sales1, this.sales2, this.sales3);
-      final String year;
-      final double? sales;
-      final double? sales1;
-      final double? sales2;
-      final double? sales3;
     }
 
 {% endhighlight %}
@@ -674,5 +650,3 @@ Also refer [crosshair](./events#oncrosshairpositionchanging) and [trackball](./e
 ## See Also
 
 * [Disabling trackball tooltip for particular series in Cartesian chart](https://www.syncfusion.com/kb/11638/how-to-disable-trackball-tooltip-for-particular-series-in-cartesian-charts-sfcartesianchart).
-
-N> `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.

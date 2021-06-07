@@ -35,12 +35,6 @@ The [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
         );
       }
 
-      class ChartData{
-        ChartData(this.x, this.y);
-        final DateTime x;
-        final double? y;
-      }
-
 {% endhighlight %}
 
 ![Legend](images/legend/legend.png)
@@ -95,12 +89,6 @@ The [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
       );
     }
 
-     class ChartData{
-        ChartData(this.x, this.y);
-        final DateTime x;
-        final double? y;
-      }
-
 {% endhighlight %}
 
 ![Customized Legend](images/legend/customized_legend.png)
@@ -146,7 +134,7 @@ The following properties can be used to define and customize the [`title`](https
                     yValueMapper: (ChartData data, _) => data.y
               ),
                   LineSeries<ChartData, DateTime>(
-                    dataSource: chartData1,
+                    dataSource: chartData,
                     xValueMapper: (ChartData data, _) => data.x,
                     yValueMapper: (ChartData data, _) => data.y
                 )
@@ -156,12 +144,6 @@ The following properties can be used to define and customize the [`title`](https
         )
       );
     }
-
-     class ChartData{
-        ChartData(this.x, this.y);
-        final DateTime x;
-        final double? y;
-      }
 
 {% endhighlight %}
 
@@ -198,12 +180,6 @@ You can control the visibility of the series by tapping the legend item. You can
       );
     }
 
-     class ChartData{
-        ChartData(this.x, this.y);
-        final String x;
-        final double? y;
-      }
-
 {% endhighlight %}
 
 ## Legend visibility
@@ -236,12 +212,6 @@ The [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
       );
     }
 
-    class ChartData{
-        ChartData(this.x, this.y);
-        final String x;
-        final double? y;
-      }
-
 {% endhighlight %}
 
 ## Legend item visibility
@@ -269,7 +239,7 @@ You can control the visibility of a particular series legend item using the [`is
                 ColumnSeries<ChartData, String>(
                   // Hiding the legend item for this series
                   isVisibleInLegend: false,
-                  dataSource: chartData1,
+                  dataSource: chartData,
                   xValueMapper: (ChartData data, _) => data.x,
                   yValueMapper: (ChartData data, _) => data.y
                 )
@@ -279,12 +249,6 @@ You can control the visibility of a particular series legend item using the [`is
         )
       );
     }
-
-    class ChartData{
-        ChartData(this.x, this.y);
-        final String x;
-        final double? y;
-      }
 
 {% endhighlight %}
 
@@ -302,14 +266,14 @@ The legend items can be placed in multiple rows or scroll can be enabled using t
         body: Center(
           child: Container(
             child: SfCartesianChart(
-              primaryXAxis: DateTimeAxis(),
+              primaryXAxis: CategoryAxis(),
               legend: Legend(
                 isVisible: true,
                 // Overflowing legend content will be wraped
                 overflowMode: LegendItemOverflowMode.wrap
               ),
               series: <CartesianSeries>[
-                LineSeries<ChartData, DateTime>(
+                LineSeries<ChartData, String>(
                   dataSource: chartData,
                   xValueMapper: (ChartData data, _) => data.x,
                   yValueMapper: (ChartData data, _) => data.y
@@ -321,15 +285,9 @@ The legend items can be placed in multiple rows or scroll can be enabled using t
       );
     }
 
-    class ChartData{
-        ChartData(this.x, this.y);
-        final DateTime x;
-        final double? y;
-      }
-
 {% endhighlight %}
 
-![Legend](images/legend/overflow_wrap.png)
+![Legend](images/legend/overflow_wrap.png))
 
 
 ## Positioning the legend
@@ -366,15 +324,9 @@ You can change the position of the legend inside the chart. The following proper
       );
     }
 
-    class ChartData{
-        ChartData(this.x, this.y);
-        final DateTime x;
-        final double? y;
-      }
-
 {% endhighlight %}
 
-![Legend](images/legend/legend_position.png)
+![Legend](images/legend/legend_position.png))
 
 ## Legend item template
 
@@ -412,12 +364,4 @@ You can customize the appearance of legend items with your template by using [`l
       );
     }
 
-    class ChartData{
-        ChartData(this.x, this.y);
-        final String x;
-        final double? y;
-      }
-
 {% endhighlight %}
-
-N> `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.
