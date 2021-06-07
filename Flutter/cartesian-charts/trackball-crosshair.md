@@ -26,10 +26,10 @@ You can use the following properties to customize the appearance of trackball to
 * [`tooltipSettings.arrowWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/InteractiveTooltip/arrowWidth.html) - specifies the width of the tooltip arrow.
 * [`tooltipSettings.format`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/InteractiveTooltip/format.html) - by default, axis value will be displayed in the tooltip, and it can be customized by adding desired text as prefix or suffix.
 * [`tooltipSettings.textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/InteractiveTooltip/textStyle.html) - used to change the text color, size, font family, fontStyle, and font weight.
-* [`tooltipSettings.textStyle.color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/color.html) - used to change the color of the tooltip text.
-* [`tooltipSettings.textStyle.fontFamily`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontFamily.html) - used to change the font family for tooltip text.
-* [`tooltipSettings.textStyle.fontStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontStyle.html) - used to change the font style for tooltip text.
-* [`tooltipSettings.textStyle.fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontSize.html) - used to change the font size for tooltip text.
+* [`tooltipSettings.textStyle.color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/InteractiveTooltip/textStyle.html) - used to change the color of the tooltip text.
+* [`tooltipSettings.textStyle.fontFamily`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/InteractiveTooltip/textStyle.html) - used to change the font family for tooltip text.
+* [`tooltipSettings.textStyle.fontStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/InteractiveTooltip/textStyle.html) - used to change the font style for tooltip text.
+* [`tooltipSettings.textStyle.fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/InteractiveTooltip/textStyle.html) - used to change the font size for tooltip text.
 * [`hideDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/hideDelay.html ) - used to specify disappear delay for trackball.
 
 N> The above mentioned properties are only applicable for SfCartesian types of charts.
@@ -261,22 +261,22 @@ The ActivationMode enum contains the following values:
                 trackballBehavior: _trackballBehavior,
                 <LineSeries<SalesData, dateTime>>[
                       LineSeries<SalesData, dateTime>(
-                          dataSource: data,
+                          dataSource: ChartData,
                           markerSettings: MarkerSettings(enable: true),
                           xValueMapper: (SalesData sales, _) => sales.year,
                           yValueMapper: (SalesData sales, _) => sales.sales)
                       LineSeries<SalesData, dateTime>(
-                          dataSource: data2,
+                          dataSource: ChartData1,
                           markerSettings: MarkerSettings(enable: true),
                           xValueMapper: (SalesData sales, _) => sales.year,
                           yValueMapper: (SalesData sales, _) => sales.sales),
                       LineSeries<SalesData, dateTime>(
-                          dataSource:data3,
+                          dataSource: ChartDat2,
                           markerSettings: MarkerSettings(enable: true),
                           xValueMapper: (SalesData sales, _) => sales.year,
                           yValueMapper: (SalesData sales, _) => sales.sales),
                       LineSeries<SalesData, dateTime>(
-                          dataSource:data4,
+                          dataSource: ChartData3,
                           markerSettings: MarkerSettings(enable: true),
                           xValueMapper: (SalesData sales, _) => sales.year,
                           yValueMapper: (SalesData sales, _) => sales.sales)
@@ -286,6 +286,12 @@ The ActivationMode enum contains the following values:
         )
       );
     }
+
+    class SalesData {
+        SalesData(this.year, this.sales);
+        final DateTime year;
+        final double? sales;
+      }
 
 {% endhighlight %}
 
@@ -325,15 +331,15 @@ Also refer, [marker customization](./marker-datalabel#Marker) for customizing th
                 trackballBehavior: _trackballBehavior,
                 <LineSeries<SalesData, dateTime>>[
                       LineSeries<SalesData, dateTime>(
-                          dataSource: data,
+                          dataSource: ChartData,
                           xValueMapper: (SalesData sales, _) => sales.year,
                           yValueMapper: (SalesData sales, _) => sales.sales)
                       LineSeries<SalesData, dateTime>(
-                          dataSource: data2,
+                          dataSource: ChartData1,
                           xValueMapper: (SalesData sales, _) => sales.year,
                           yValueMapper: (SalesData sales, _) => sales.sales),
                       LineSeries<SalesData, dateTime>(
-                          dataSource:data3,
+                          dataSource: ChartData2,
                           xValueMapper: (SalesData sales, _) => sales.year,
                           yValueMapper: (SalesData sales, _) => sales.sales),
                 ]
@@ -342,6 +348,13 @@ Also refer, [marker customization](./marker-datalabel#Marker) for customizing th
           )
       );
     }
+
+    class SalesData {
+        SalesData(this.year, this.sales);
+        final DateTime year;
+        final double? sales;
+      }
+
 
 {% endhighlight %}
 
@@ -409,7 +422,7 @@ You can customize the appearance of the trackball tooltip with your own widgets 
               trackballBehavior: _trackballBehavior,
               series: <CartesianChart<SalesData, String>>[
                 SplineSeries<SalesData, String>(
-                    dataSource: data,
+                    dataSource: ChartData,
                     xValueMapper: (SalesData sales, _) => sales.year,
                     yValueMapper: (SalesData sales, _) => sales.sales)
                 ]
@@ -418,6 +431,12 @@ You can customize the appearance of the trackball tooltip with your own widgets 
           )
       );
     }
+
+    class SalesData {
+        SalesData(this.year, this.sales);
+        final String year;
+        final double? sales;
+      }
 
 {% endhighlight %}
 
@@ -470,24 +489,29 @@ Defaults to `true`.
                       LineSeries<SalesData, String>(
                           dataSource: chartData,
                           xValueMapper: (SalesData sales, _) => sales.year,
+                          yValueMapper: (SalesData sales, _) => sales.sales1),
+                      LineSeries<SalesData, String>(
+                          dataSource: chartData,
+                          xValueMapper: (SalesData sales, _) => sales.year,
                           yValueMapper: (SalesData sales, _) => sales.sales2),
                       LineSeries<SalesData, String>(
                           dataSource: chartData,
                           xValueMapper: (SalesData sales, _) => sales.year,
                           yValueMapper: (SalesData sales, _) => sales.sales3),
-                      LineSeries<SalesData, String>(
-                          dataSource: chartData,
-                          xValueMapper: (SalesData sales, _) => sales.year,
-                          yValueMapper: (SalesData sales, _) => sales.sales4),
-                      LineSeries<SalesData, String>(
-                          dataSource: chartData,
-                          xValueMapper: (SalesData sales, _) => sales.year,
-                          yValueMapper: (SalesData sales5, _) => sales.sales),
                     ]
                 )
             )
         )
       );
+    }
+
+    class SalesData {
+      SalesData(this.year, this.sales, this,sales1, this.sales2, this.sales3);
+      final String year;
+      final double? sales;
+      final double? sales1;
+      final double? sales2;
+      final double? sales3;
     }
 
 {% endhighlight %}
@@ -598,10 +622,10 @@ The axis tooltip can be enabled using [`enable`](https://pub.dev/documentation/s
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/InteractiveTooltip/borderColor.html) - used to change the stroke color of the axis tooltip.
 * [`format`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/InteractiveTooltip/format.html) - by default, axis value will be displayed in the tooltip, and it can be customized by adding desired text as prefix or suffix.
 * [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/InteractiveTooltip/textStyle.html) - used to change the text color, size, font family, fontStyle, and font weight.
-* [`textStyle.color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/color.html) - used to change the color of the text.
-* [`textStyle.fontFamily`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontFamily.html) - used to change the font family for chart title. 
-* [`textStyle.fontStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontStyle.html) - used to change the font style for the chart title.
-* [`textStyle.fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontSize.html) - used to change the font size for the chart title.
+* [`textStyle.color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/InteractiveTooltip/textStyle.html) - used to change the color of the text.
+* [`textStyle.fontFamily`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/InteractiveTooltip/textStyle.html) - used to change the font family for chart title. 
+* [`textStyle.fontStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/InteractiveTooltip/textStyle.html) - used to change the font style for the chart title.
+* [`textStyle.fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/InteractiveTooltip/textStyle.html) - used to change the font size for the chart title.
 
 ### Activation mode
 
@@ -650,3 +674,5 @@ Also refer [crosshair](./events#oncrosshairpositionchanging) and [trackball](./e
 ## See Also
 
 * [Disabling trackball tooltip for particular series in Cartesian chart](https://www.syncfusion.com/kb/11638/how-to-disable-trackball-tooltip-for-particular-series-in-cartesian-charts-sfcartesianchart).
+
+N> `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.
