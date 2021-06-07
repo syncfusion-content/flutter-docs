@@ -105,9 +105,6 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ## See also
-
 * [How to get visible dates details from the flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/11026/how-to-get-visible-dates-details-from-the-flutter-event-calendar-sfcalendar)
-
 * [How to get Datetime details while tapping the Flutter event calendar elements](https://www.syncfusion.com/kb/10998/how-to-get-datetime-details-while-tapping-the-flutter-event-calendar-elements)
-
 * [How to handle the long press action on date selection in the Flutter event calendar (SfCalendar)?](https://www.syncfusion.com/kb/12121/how-to-handle-the-long-press-action-on-date-selection-in-the-flutter-event-calendar)

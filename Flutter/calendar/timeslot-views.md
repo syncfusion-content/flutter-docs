@@ -507,11 +507,8 @@ Widget build(BuildContext context) {
 ## See also
 
 * [Time label customization in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/11008/how-to-customize-the-time-label-in-the-flutter-event-calendar-sfcalendar)
-
 * [How to customize the timeline appointment height in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12147/how-to-customize-the-timeline-appointment-height-in-the-flutter-event-calendar-sfcalendar)
-
 * [How to format the date and time in timeline views in the Flutter event calendar (SfCalendar)?](https://www.syncfusion.com/kb/11997/how-to-format-the-date-and-time-in-timeline-views-in-the-flutter-event-calendar-sfcalendar)
-
 * [How to use multiple recurrence rule (RRule) in special region using Flutter event calendar (SfCalendar)?](https://www.syncfusion.com/kb/11730/how-to-use-multiple-recurrence-rule-rrule-in-special-region-using-flutter-event-calendar)
 
 * [How to add a special region dynamically using onTap, onViewChanged callbacks of the Flutter event calendar (SfCalendar)?](https://www.syncfusion.com/kb/11729/how-to-add-a-special-region-dynamically-using-ontap-onviewchanged-callbacks-of-the-fluttter)
