@@ -286,7 +286,7 @@ You can customize the swipe interaction of SfCalendar by using the [viewNavigati
 
 * [How to programmatically select the dates in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12115/how-to-programmatically-select-the-dates-in-the-flutter-event-calendar-sfcalendar)
 
-* [How to programmatically navigate to the adjacent dates in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12136/how-to-programmatically-navigate-to-the-adjacent-dates-in-the-flutter-event-calendar)
+* [How to programmatically navigate to the adjacent dates in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12654/how-to-programmatically-navigate-to-the-adjacent-dates-in-the-flutter-calendar)
 
 * [How to programmatically navigate to the date in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12139/how-to-programmatically-navigate-to-the-date-in-the-flutter-event-calendar-sfcalendar)
 

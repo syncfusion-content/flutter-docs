@@ -126,7 +126,7 @@ The [`enableCheckSum`](https://pub.dev/documentation/syncfusion_flutter_barcodes
 
 ![code39 extended symbology](images/one-dimensional/code39-extended.jpg)
 
-As like [`Code39`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code39-class.html), the [`Code39 Extended`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code39Extended-class.html) supports the [`enableCheckSum`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code39Extended/enableCheckSum.html) property.
+As like [`Code39`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code39-class.html), the [`Code39 Extended`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code39Extended-class.html) supports the [`enableCheckSum`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code39/enableCheckSum.html) property.
 
 ## Code93
 
