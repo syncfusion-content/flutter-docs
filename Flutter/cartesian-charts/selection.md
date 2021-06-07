@@ -46,7 +46,7 @@ The selection feature in chart let you to select a segment in a series or the se
     class ChartData{
         ChartData(this.x, this.y);
         final double x;
-        final double y;
+        final double? y;
       }
 
 {% endhighlight %}
@@ -99,7 +99,7 @@ You can customize the segments using the below properties.
     class ChartData{
         ChartData(this.x, this.y);
         final String x;
-        final double y;
+        final double? y;
       }
 
 {% endhighlight %}
@@ -206,7 +206,7 @@ You can select a point or series programmatically on a chart using [`initialSele
     class ChartData{
         ChartData(this.x, this.y);
         final String x;
-        final double y;
+        final double? y;
       }
 
 {% endhighlight %}

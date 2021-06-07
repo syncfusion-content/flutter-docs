@@ -290,7 +290,7 @@ The ActivationMode enum contains the following values:
     class SalesData{
         SalesData(this.year, this.sales);
         final DateTime year;
-        final double sales;
+        final double? sales;
       }
 
 {% endhighlight %}
@@ -352,7 +352,7 @@ Also refer, [marker customization](./marker-datalabel#Marker) for customizing th
     class SalesData{
         SalesData(this.year, this.sales);
         final DateTime year;
-        final double sales;
+        final double? sales;
       }
 
 
@@ -435,7 +435,7 @@ You can customize the appearance of the trackball tooltip with your own widgets 
     class SalesData{
         SalesData(this.year, this.sales);
         final String year;
-        final double sales;
+        final double? sales;
       }
 
 {% endhighlight %}
@@ -508,10 +508,10 @@ Defaults to `true`.
     class SalesData{
       SalesData(this.year, this.sales, this,sales1, this.sales2, this.sales3);
       final String year;
-      final double sales;
-      final double sales1;
-      final double sales2;
-      final double sales3;
+      final double? sales;
+      final double? sales1;
+      final double? sales2;
+      final double? sales3;
     }
 
 {% endhighlight %}

@@ -166,7 +166,7 @@ Triggers when data label is rendering. Text and text styles such as color, font 
     class ChartData{
       ChartData(this.x, this.y);
       final double x;
-      final num y;
+      final double? y;
     }
 
 {% endhighlight %}
@@ -569,7 +569,7 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
     class ChartData{
       ChartData(this.x, this.y);
       final double x;
-      final double y;
+      final double? y;
     }
 
 {% endhighlight %}
@@ -696,7 +696,7 @@ Triggers when the series renderer is created. This callback can be used to obtai
     class SalesData{
     SalesData(this.x, this.y);
     final num x;
-    final num y;
+    final double? y;
     }
 
 {% endhighlight %}
@@ -833,7 +833,7 @@ N>  This callback will not be called, when the builder is specified for data lab
               },
               series: <ChartSeries<Sample, DateTime>>[
                   LineSeries<Sample, DateTime>(
-                    dataSource: sample,
+                    dataSource: chartData,
                     xValueMapper: (Sample sales, _) => sales.x,
                     yValueMapper: (Sample sales, _) => sales.y,
                     dataLabelSettings: DataLabelSettings(
@@ -847,7 +847,7 @@ N>  This callback will not be called, when the builder is specified for data lab
     class Sample{
       Sample(this.x, this,y);
       final DateTime x;
-      final num y;
+      final double? y;
     }
 
 {% endhighlight %}
@@ -889,7 +889,7 @@ Triggers while swiping on the plot area. Whenever the swiping happens on th
     class SalesData{
       SalesData(this.x, this.y);
       final num x;
-      final num y;
+      final double? y;
     }
 
 {% endhighlight %}

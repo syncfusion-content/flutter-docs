@@ -79,10 +79,10 @@ Refer the following example,
       class ChartData{
         ChartData(this.x, this.low, this.high, this.open, this.close);
         final DateTime x;
-        final double low;
-        final double high;
-        final double open;
-        final double close;
+        final double? low;
+        final double? high;
+        final double? open;
+        final double? close;
       }
 
 {% endhighlight %}
@@ -120,10 +120,10 @@ Refer the following example,
       class ChartData{
         ChartData(this.x, this.low, this.high, this.open, this.close);
         final DateTime x;
-        final double low;
-        final double high;
-        final double open;
-        final double close;
+        final double? low;
+        final double? high;
+        final double? open;
+        final double? close;
       }
 
 {% endhighlight %}
@@ -161,10 +161,10 @@ Refer the following example,
       class ChartData{
         ChartData(this.x, this.low, this.high, this.open, this.close);
         final DateTime x;
-        final double low;
-        final double high;
-        final double open;
-        final double close;
+        final double? low;
+        final double? high;
+        final double? open;
+        final double? close;
       }
 
 {% endhighlight %}
@@ -204,10 +204,10 @@ Refer the following example,
     class ChartData{
         ChartData(this.x, this.low, this.high, this.open, this.close);
         final DateTime x;
-        final double low;
-        final double high;
-        final double open;
-        final double close;
+        final double? low;
+        final double? high;
+        final double? open;
+        final double? close;
       }
 
 {% endhighlight %}
@@ -250,10 +250,10 @@ Refer the following example,
      class ChartData{
         ChartData(this.x, this.low, this.high, this.open, this.close);
         final DateTime x;
-        final double low;
-        final double high;
-        final double open;
-        final double close;
+        final double? low;
+        final double? high;
+        final double? open;
+        final double? close;
       }
 
 {% endhighlight %}
@@ -290,10 +290,10 @@ Refer the following example,
      class ChartData{
         ChartData(this.x, this.low, this.high, this.open, this.close);
         final DateTime x;
-        final double low;
-        final double high;
-        final double open;
-        final double close;
+        final double? low;
+        final double? high;
+        final double? open;
+        final double? close;
       }
 
 {% endhighlight %}
@@ -333,10 +333,10 @@ Refer the following example,
       class ChartData{
         ChartData(this.x, this.low, this.high, this.open, this.close);
         final DateTime x;
-        final double low;
-        final double high;
-        final double open;
-        final double close;
+        final double? low;
+        final double? high;
+        final double? open;
+        final double? close;
       }
 
 {% endhighlight %}
@@ -372,10 +372,10 @@ The [`Simple moving average indicator`](https://pub.dev/documentation/syncfusion
      class ChartData{
         ChartData(this.x, this.low, this.high, this.open, this.close);
         final DateTime x;
-        final double low;
-        final double high;
-        final double open;
-        final double close;
+        final double? low;
+        final double? high;
+        final double? open;
+        final double? close;
       }
 
 {% endhighlight %}
@@ -415,10 +415,10 @@ Refer the following example,
      class ChartData{
         ChartData(this.x, this.low, this.high, this.open, this.close);
         final DateTime x;
-        final double low;
-        final double high;
-        final double open;
-        final double close;
+        final double? low;
+        final double? high;
+        final double? open;
+        final double? close;
       }
 
 {% endhighlight %}
@@ -456,10 +456,10 @@ Refer the following example,
      class ChartData{
         ChartData(this.x, this.low, this.high, this.open, this.close);
         final DateTime x;
-        final double low;
-        final double high;
-        final double open;
-        final double close;
+        final double? low;
+        final double? high;
+        final double? open;
+        final double? close;
       }
 {% endhighlight %}
 
@@ -497,10 +497,10 @@ The following code example can define the legend.
       class ChartData{
         ChartData(this.x, this.low, this.high, this.open, this.close);
         final DateTime x;
-        final double low;
-        final double high;
-        final double open;
-        final double close;
+        final double? low;
+        final double? high;
+        final double? open;
+        final double? close;
       }
 
 {% endhighlight %}
@@ -524,7 +524,7 @@ The chart will display the segment information through the tooltip. It is used t
     super.initState();
     }
 
-   @override
+    @override
     Widget build(BuildContext context){
       return Scaffold(
         body: Center(
@@ -549,10 +549,10 @@ The chart will display the segment information through the tooltip. It is used t
        class ChartData{
         ChartData(this.x, this.low, this.high, this.open, this.close);
         final DateTime x;
-        final double low;
-        final double high;
-        final double open;
-        final double close;
+        final double? low;
+        final double? high;
+        final double? open;
+        final double? close;
       }
 
 {% endhighlight %}
@@ -587,21 +587,28 @@ Refer the following example below
               LineSeries<SalesData, num>(
                   color: Colors.purple,
                   dataSource: chartData,
-                  xValueMapper: (SalesData sales, _) => sales.x,
-                  yValueMapper: (SalesData sales, _) => sales.y,
+                  xValueMapper: (SalesData1 sales, _) => sales.x,
+                  yValueMapper: (SalesData1 sales, _) => sales.y,
               )
             ]
           )
         )
       );
     }
+
      class SalesData{
         SalesData(this.x, this.low, this.high, this.open, this.close);
         final num x;
-        final double low;
-        final double high;
-        final double open;
-        final double close;
+        final double? low;
+        final double? high;
+        final double? open;
+        final double? close;
+      }
+
+      class SalesData1{
+        SalesData1(this.x, this.y);
+        final num x;
+        final double y;
       }
 
 {% endhighlight %}

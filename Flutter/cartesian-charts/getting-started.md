@@ -114,7 +114,7 @@ Based on your data, initialize the appropriate axis type and series type. In the
     class SalesData{
         SalesData(this.year, this.sales);
         final String year;
-        final double sales;
+        final double? sales;
     }
 
 {% endhighlight %}
@@ -160,7 +160,7 @@ You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/
     class SalesData{
      SalesData(this.year, this.sales);
      final String year;
-     final double sales;
+     final double? sales;
     }
 
 {% endhighlight %}
@@ -208,7 +208,7 @@ You can add data labels to improve the readability of the chart using the [`data
     class SalesData{
      SalesData(this.year, this.sales);
      final String year;
-     final double sales;
+     final double? sales;
     }
 
 {% endhighlight %}
@@ -259,7 +259,7 @@ Additionally, the [`series.name`](https://pub.dev/documentation/syncfusion_flutt
     class SalesData{
         SalesData(this.year, this.sales);
         final String year;
-        final double sales;
+        final double? sales;
     }
 
 {% endhighlight %}
@@ -321,7 +321,7 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
      class SalesData{
         SalesData(this.year, this.sales);
         final String year;
-        final double sales;
+        final double? sales;
     }
 
 {% endhighlight %}

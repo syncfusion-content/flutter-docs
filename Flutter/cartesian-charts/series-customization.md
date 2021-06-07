@@ -37,6 +37,12 @@ documentation: ug
         );
     }
 
+    class ChartData{
+        ChartData(this.x, this.y);
+        final String x;
+        final double? y;
+    }
+
 {% endhighlight %}
 
 ### Dynamic series animation
@@ -103,6 +109,13 @@ If you wish to perform the initial rendering animation again in the existing ser
         ]);
     }
 
+    class _ChartSampleData{
+        _ChartSampleData(this.x, this.y, this.secondSeriesYValue);
+        final String x;
+        final double? y;
+        final double? secondSeriesYValue;
+    }
+
 {% endhighlight %}
 
 ![Dynamic series animation](images/cartesian-customization/dynamicanimation.gif)
@@ -141,6 +154,12 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
         );
     }
 
+    class ChartData{
+        ChartData(this.x, this.y)'
+        final String x;
+        final double? y;
+    }
+
 {% endhighlight %}
 
 ![Transposed chart](images/cartesian-customization/transposes.jpg)
@@ -173,12 +192,12 @@ The [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
                             ColumnSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) => data.y2
+                                yValueMapper: (ChartData data, _) => data.y1
                             ),
                             ColumnSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) => data.y3
+                                yValueMapper: (ChartData data, _) => data.y2
                             )
                         ]
                     )
@@ -186,6 +205,15 @@ The [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
             )
         );
     }
+
+    class ChartData{
+     ChartData(this.x, this.y, this.y1, this.y2);
+     final String x;
+     final double? y;
+     final double? y1;
+     final double? y2;
+    } 
+     
 
 {% endhighlight %}
 
@@ -228,8 +256,8 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
     class ChartData {
         ChartData(this.x, this.y, this.color);
             final String x;
-            final double y;
-            final Color color;
+            final double? y;
+            final Color? color;
     }
 
 {% endhighlight %}
@@ -278,7 +306,7 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
     class ChartData{
         ChartData(this.x, this.y);
         final double x;
-        final double y;
+        final double? y;
       }
 
 {% endhighlight %}
@@ -332,7 +360,7 @@ If the properties of both [`borderColor`](https://pub.dev/documentation/syncfusi
     class ChartData{
         ChartData(this.x, this.y);
         final double x;
-        final double y;
+        final double? y;
       }
 
 {% endhighlight %}
@@ -380,7 +408,7 @@ The data points that has null value are considered as empty points. Empty data p
     class ChartData{
         ChartData(this.x, this.y);
         final double x;
-        final double y;
+        final double? y;
       }
 
 {% endhighlight %}
@@ -431,7 +459,7 @@ Specific color for empty point can be set by [`color`](https://pub.dev/documenta
     class ChartData{
         ChartData(this.x, this.y);
         final double x;
-        final double y;
+        final double? y;
       }
 
 {% endhighlight %}
@@ -478,7 +506,7 @@ The chart’s data source can be sorted using the [`sortingOrder`](https://pub.d
     class ChartData{
         ChartData(this.x, this.y);
         final String x;
-        final double y;
+        final double? y;
       }
 
 {% endhighlight %}

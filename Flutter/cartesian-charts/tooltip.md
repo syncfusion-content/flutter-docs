@@ -45,7 +45,7 @@ Chart provides tooltip support for all the series. It is used to show informatio
     class ChartData{
         ChartData(this.x, this.y);
         final String x;
-        final double y;
+        final double? y;
       }
 
 {% endhighlight %}
