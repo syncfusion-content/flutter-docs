@@ -48,8 +48,8 @@ To render a line chart, create an instance of [`LineSeries`](https://pub.dev/doc
 
     class SalesData {
         SalesData(this.year, this.sales);
-            final dateTime year;
-            final double sales;
+        final dateTime year;
+        final double sales;
     }
 
 {% endhighlight %}
