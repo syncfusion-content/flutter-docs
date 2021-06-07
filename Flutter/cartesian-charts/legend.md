@@ -36,9 +36,9 @@ The [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
       }
 
       class ChartData{
-        ChartData(this.x, this.y);
-        final DateTime x;
-        final double? y;
+          ChartData(this.x, this.y);
+          final DateTime x;
+          final double? y;
       }
 
 {% endhighlight %}

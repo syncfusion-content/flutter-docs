@@ -694,9 +694,9 @@ Triggers when the series renderer is created. This callback can be used to obtai
     }
 
     class SalesData{
-    SalesData(this.x, this.y);
-    final num x;
-    final double? y;
+      SalesData(this.x, this.y);
+      final num x;
+      final double? y;
     }
 
 {% endhighlight %}

@@ -176,7 +176,7 @@ To render a polynomial trendline, use trendline type as Polynomial.
                         primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders spline chart
-                            SplineSeries<SalesData, DteTime>(
+                            SplineSeries<SalesData, DateTime>(
                                 dataSource: chartData,
                                 trendlines:<Trendline>[
                                  Trendline(

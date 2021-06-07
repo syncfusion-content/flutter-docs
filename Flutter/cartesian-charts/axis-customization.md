@@ -1093,9 +1093,9 @@ The maximum width for axis labels and the space occupied by the axis labels can 
     }
 
     class SalesData {
-    SalesData(this.year, this.sales);
-    final String year;
-    final double sales;
+        SalesData(this.year, this.sales);
+        final String year;
+        final double sales;
     }
 
 {% endhighlight %}
