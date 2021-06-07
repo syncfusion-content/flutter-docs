@@ -59,21 +59,30 @@ Refer the following example,
           child: SfCartesianChart(
             primaryXAxis: DateTimeAxis(),
             legend: Legend(isVisible: true),
-            indicators: <TechnicalIndicators<Sample,dynamic>>[AccumulationDistributionIndicator<Sample, dynamic>(
+            indicators: <TechnicalIndicators<ChartData,DateTime>>[AccumulationDistributionIndicator<ChartData, DateTime>(
                   seriesName: 'HiloOpenClose')],
-            series: <ChartSeries<Sample, dynamic>>[
-              HiloOpenCloseSeries<Sample, dynamic>(
-              dataSource: sample,
-              xValueMapper: (Sample sales, _) => sales.x,
-              lowValueMapper: (Sample sales, _) => sales.low,
-              highValueMapper: (Sample sales, _) => sales.high,
-              openValueMapper: (Sample sales, _) => sales.open,
-              closeValueMapper: (Sample sales, _) => sales.close,
+            series: <ChartSeries<ChartData, DateTime>>[
+              HiloOpenCloseSeries<ChartData, DateTime>(
+              dataSource: ChartData,
+              xValueMapper: (ChartData sales, _) => sales.x,
+              lowValueMapper: (ChartData sales, _) => sales.low,
+              highValueMapper: (ChartData sales, _) => sales.high,
+              openValueMapper: (ChartData sales, _) => sales.open,
+              closeValueMapper: (ChartData sales, _) => sales.close,
               name: 'HiloOpenClose'),
               ]
             )
           )
         );
+      }
+
+      class ChartData {
+        ChartData(this.x, this.low, this.high, this.open, this.close);
+        final DateTime x;
+        final double? low;
+        final double? high;
+        final double? open;
+        final double? close;
       }
 
 {% endhighlight %}
@@ -100,12 +109,21 @@ Refer the following example,
           AtrIndicator<dynamic, dynamic>(
             period: 3,
             seriesName: 'HiloOpenClose')],
-    series: <CartesianSeries<Sample, dynamic>>[
-            HiloOpenCloseSeries<Sample, dynamic>(name: 'HiloOpenClose')
+    series: <CartesianSeries<ChartData, DateTime>>[
+            HiloOpenCloseSeries<ChartData, DateTime>(
+              name: 'HiloOpenClose')
               ]
             )
           )
         );
+      }
+      class ChartData {
+        ChartData(this.x, this.low, this.high, this.open, this.close);
+        final DateTime x;
+        final double? low;
+        final double? high;
+        final double? open;
+        final double? close;
       }
 
 {% endhighlight %}
@@ -132,12 +150,21 @@ Refer the following example,
            indicators:        <TechnicalIndicators<dynamic, dynamic>[ BollingerBandIndicator<dynamic, dynamic>(
                   period: 3,
                   seriesName: 'HiloOpenClose')],
-           series: <CartesianSeries<Sample,dynamic>>[
-              HiloOpenCloseSeries<Sample, dynamic>(name: 'HiloOpenClose')
+           series: <CartesianSeries<ChartData, DateTime>>[
+              HiloOpenCloseSeries<ChartData, DateTime>(name: 'HiloOpenClose')
               ]
             )
           )
         );         
+      }
+
+      class ChartData {
+        ChartData(this.x, this.low, this.high, this.open, this.close);
+        final DateTime x;
+        final double? low;
+        final double? high;
+        final double? open;
+        final double? close;
       }
 
 {% endhighlight %}
@@ -165,14 +192,23 @@ Refer the following example,
         EmaIndicator<dynamic, dynamic>(
             seriesName: 'HiloOpenClose',
             valueField: 'high',)],
-            series: <ChartSeries<Sample, dynamic>>[
-        HiloOpenCloseSeries<Sample, dynamic>(
+            series: <ChartSeries<ChartData, DateTime>>[
+        HiloOpenCloseSeries<ChartData, DateTime>(
             name: 'HiloOpenClose')
             ]
           )
         )
       );
     }
+
+    class ChartData {
+        ChartData(this.x, this.low, this.high, this.open, this.close);
+        final DateTime x;
+        final double? low;
+        final double? high;
+        final double? open;
+        final double? close;
+      }
 
 {% endhighlight %}
 
@@ -202,13 +238,23 @@ Refer the following example,
               longPeriod: 5,
               shortPeriod: 2,
               seriesName: 'HiloOpenClose')],
-            series: <CartesianSeries<Sample, dynamic>>[
-          HiloOpenCloseSeries<Sample, dynamic>(name: 'HiloOpenClose')
+            series: <CartesianSeries<ChartData, DateTime>>[
+          HiloOpenCloseSeries<ChartData, DateTime>(
+            name: 'HiloOpenClose')
            ]
           )
         )
       );
     }
+
+     class ChartData {
+        ChartData(this.x, this.low, this.high, this.open, this.close);
+        final DateTime x;
+        final double? low;
+        final double? high;
+        final double? open;
+        final double? close;
+      }
 
 {% endhighlight %}
 
@@ -233,13 +279,22 @@ Refer the following example,
           MomentumIndicator<dynamic, dynamic>(
             period: 3,
             seriesName: 'HiloOpenClose',)],
-           series: <ChartSeries<Sample, dynamic>>[
-          HiloOpenCloseSeries<Sample, dynamic>(name: 'HiloOpenClose')
+           series: <ChartSeries<ChartData, DateTime>>[
+          HiloOpenCloseSeries<ChartData, DateTime>(name: 'HiloOpenClose')
             ]
           )
         )
       );
     }
+
+     class ChartData {
+        ChartData(this.x, this.low, this.high, this.open, this.close);
+        final DateTime x;
+        final double? low;
+        final double? high;
+        final double? open;
+        final double? close;
+      }
 
 {% endhighlight %}
 
@@ -267,13 +322,22 @@ Refer the following example,
             seriesName: 'HiloOpenClose',
             overbought: 70,
             oversold: 30)],
-            series: <ChartSeries<Sample, dynamic>>[
-          HiloOpenCloseSeries<Sample, dynamic>(name: 'HiloOpenClose')
+            series: <ChartSeries<ChartData, DateTime>>[
+          HiloOpenCloseSeries<ChartData, DateTime>(name: 'HiloOpenClose')
             ]
           )
         )
       );
      }
+
+      class ChartData {
+        ChartData(this.x, this.low, this.high, this.open, this.close);
+        final DateTime x;
+        final double? low;
+        final double? high;
+        final double? open;
+        final double? close;
+      }
 
 {% endhighlight %}
 
@@ -296,13 +360,23 @@ The [`Simple moving average indicator`](https://pub.dev/documentation/syncfusion
           SmaIndicator<dynamic, dynamic>(
             seriesName: 'HiloOpenClose',
             valueField: 'close')],
-           series: <ChartSeries<Sample, dynamic>>[
-          HiloOpenCloseSeries<Sample, dynamic>(name: 'HiloOpenClose')
+           series: <ChartSeries<ChartData, DateTime>>[
+          HiloOpenCloseSeries<ChartData, DateTime>(
+            name: 'HiloOpenClose')
             ]
           )
         )
       );
     }
+
+     class ChartData {
+        ChartData(this.x, this.low, this.high, this.open, this.close);
+        final DateTime x;
+        final double? low;
+        final double? high;
+        final double? open;
+        final double? close;
+      }
 
 {% endhighlight %}
 
@@ -330,13 +404,22 @@ Refer the following example,
               seriesName: 'HiloOpenClose',,
               kPeriod: 2,
               dPeriod: 3)],
-             series: <ChartSeries<Sample, dynamic>>[
-          HiloOpenCloseSeries<Sample, dynamic>(name: 'HiloOpenClose')
+             series: <ChartSeries<ChartData, DateTime>>[
+          HiloOpenCloseSeries<ChartData, DateTime>(name: 'HiloOpenClose')
             ]
           )
         )
       );
     }
+
+     class ChartData {
+        ChartData(this.x, this.low, this.high, this.open, this.close);
+        final DateTime x;
+        final double? low;
+        final double? high;
+        final double? open;
+        final double? close;
+      }
 
 {% endhighlight %}
 
@@ -358,16 +441,26 @@ Refer the following example,
             primaryXAxis: DateTimeAxis(),
             legend: Legend(isVisible: true),
             indicators: <TechnicalIndicators<dynamic, dynamic>>[
-          TmaIndicator<Sample, dynamic>(
+          TmaIndicator<ChartData, dynamic>(
               seriesName: 'HiloOpenClose',
               valueField: 'low')],
-            series: <ChartSeries<Sample, dynamic>>[
-          HiloOpenCloseSeries<Sample, dynamic>(name: 'HiloOpenClose')
+            series: <ChartSeries<ChartData, DateTime>>[
+          HiloOpenCloseSeries<ChartData, DateTime>(
+            name: 'HiloOpenClose')
             ]
           )
         )
       );
     }
+
+     class ChartData {
+        ChartData(this.x, this.low, this.high, this.open, this.close);
+        final DateTime x;
+        final double? low;
+        final double? high;
+        final double? open;
+        final double? close;
+      }
 {% endhighlight %}
 
 ![TMAIndicator](images/technical-indicators/tma.jpg)
@@ -392,14 +485,23 @@ The following code example can define the legend.
                   seriesName: 'HiloOpenClose',
                   legendIconType: LegendIconType.diamond,
                   legendItemText: 'Indicator')],
-            series: <ChartSeries<Sample, dynamic>>[
-              HiloOpenCloseSeries<Sample, dynamic>(
+            series: <ChartSeries<ChartData, DateTime>>[
+              HiloOpenCloseSeries<ChartData, DateTime>(
                   name: 'HiloOpenClose')
                   ]
                 )
               )
             );
           }
+
+      class ChartData {
+        ChartData(this.x, this.low, this.high, this.open, this.close);
+        final DateTime x;
+        final double? low;
+        final double? high;
+        final double? open;
+        final double? close;
+      }
 
 {% endhighlight %}
 
@@ -422,7 +524,7 @@ The chart will display the segment information through the tooltip. It is used t
     super.initState();
     }
 
-   @override
+    @override
     Widget build(BuildContext context){
       return Scaffold(
         body: Center(
@@ -434,14 +536,23 @@ The chart will display the segment information through the tooltip. It is used t
                   seriesName: 'HiloOpenClose',
                   )
                 ],
-            series: <ChartSeries<Sample, dynamic>>[
-              HiloOpenCloseSeries<Sample, dynamic>(
+            series: <ChartSeries<ChartData, DateTime>>[
+              HiloOpenCloseSeries<ChartData, DateTime>(
                   enableTooltip: true,
                   name: 'HiloOpenClose')
               ]
             )
           )
         );
+      }
+
+       class ChartData {
+        ChartData(this.x, this.low, this.high, this.open, this.close);
+        final DateTime x;
+        final double? low;
+        final double? high;
+        final double? open;
+        final double? close;
       }
 
 {% endhighlight %}
@@ -476,14 +587,29 @@ Refer the following example below
               LineSeries<SalesData, num>(
                   color: Colors.purple,
                   dataSource: chartData,
-                  xValueMapper: (SalesData sales, _) => sales.x,
-                  yValueMapper: (SalesData sales, _) => sales.y,
+                  xValueMapper: (SalesData1 sales, _) => sales.x,
+                  yValueMapper: (SalesData1 sales, _) => sales.y,
               )
             ]
           )
         )
       );
     }
+
+     class SalesData {
+        SalesData(this.x, this.low, this.high, this.open, this.close);
+        final num x;
+        final double? low;
+        final double? high;
+        final double? open;
+        final double? close;
+      }
+
+      class SalesData1{
+        SalesData1(this.x, this.y);
+        final num x;
+        final double y;
+      }
 
 {% endhighlight %}
 
@@ -509,3 +635,5 @@ _Note_ : Each indicators has their own number of value mappers available,
 *	[`Stochastic indicator`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StochasticIndicator-class.html) - can be rendered with five value mappers ([`xValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/xValueMapper.html), [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/lowValueMapper.html), [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/highValueMapper.html), [`openValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/openValueMapper.html), [`closeValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/closeValueMapper.html)).
 
 *	[`Triangular moving average indicator`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TmaIndicator-class.html) (TMA) - can be rendered with five value mappers ([`xValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/xValueMapper.html), [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/lowValueMapper.html), [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/highValueMapper.html), [`openValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/openValueMapper.html), [`closeValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/closeValueMapper.html)).
+
+N> `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.
