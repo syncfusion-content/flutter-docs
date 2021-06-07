@@ -9,6 +9,11 @@ documentation: ug
 
 # Area Chart in Flutter Cartesian Charts (SfCartesianChart)
 
+To create a Flutter area chart quickly, you can check this video.
+
+<style>#flutterAreaChartTutorial{width : 90% !important; height: 300px !important }</style>
+<iframe id='flutterAreaChartTutorial' src='https://www.youtube.com/watch?v=E_odUnOsBtQ'></iframe>
+
 To render an area chart, create an instance of [`AreaSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AreaSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The area chart shows the filled area to represent the data, but when there are more than a series, this may hide the other series. To get rid of this, increase or decrease the transparency of the series. 
 
 The following properties can be used to customize the appearance:

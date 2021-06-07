@@ -9,6 +9,11 @@ documentation: ug
 
 # Candle Chart in Flutter Cartesian Charts (SfCartesianChart)
 
+To create a Flutter candle chart quickly, you can check this video.
+
+<style>#flutterCandleChartTutorial{width : 90% !important; height: 300px !important }</style>
+<iframe id='flutterCandleChartTutorial' src='https://www.youtube.com/watch?v=g5cniDExpRw'></iframe>
+
 Candle series is similar to HiLo Open Close series, used to represent the low, high, open and closing price over time.
 
 To render a Candle chart, create an instance of [` CandleSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CandleSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties can be used to customize the appearance:
