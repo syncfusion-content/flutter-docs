@@ -9,7 +9,7 @@ documentation: ug
 
 # Radial bar Chart in Flutter Circular Charts (SfCircularChart)
 
-To create a Flutter radial chart quickly, you can check this video.
+To create a Flutter radial bar chart quickly, you can check this video.
 
 <style>#flutterRadialbarChartTutorial{width : 90% !important; height: 300px !important }</style>
 <iframe id='flutterRadialbarChartTutorial' src='https://www.youtube.com/watch?v=VJxPp7-2nGk'></iframe>

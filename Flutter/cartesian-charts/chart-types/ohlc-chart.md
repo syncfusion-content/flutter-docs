@@ -9,7 +9,7 @@ documentation: ug
 
 # Open High Low Close in Flutter Cartesian Charts (SfCartesianChart)
 
-To create a Flutter ohlc chart quickly, you can check this video.
+To create a Flutter open high low close chart quickly, you can check this video.
 
 <style>#flutterohlcChartTutorial{width : 90% !important; height: 300px !important }</style>
 <iframe id='flutterohlcChartTutorial' src='https://www.youtube.com/watch?v=g5cniDExpRw'></iframe>
