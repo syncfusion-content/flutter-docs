@@ -9,6 +9,11 @@ documentation: ug
 
 # Open High Low Close in Flutter Cartesian Charts (SfCartesianChart)
 
+To create a Flutter open high low close chart quickly, you can check this video.
+
+<style>#flutterohlcChartTutorial{width : 90% !important; height: 300px !important }</style>
+<iframe id='flutterohlcChartTutorial' src='https://www.youtube.com/watch?v=g5cniDExpRw'></iframe>
+
  OpenHighLowClose series is used to represent the low, high, open and closing values over time.
 
 To render a OpenHighLowClose chart, create an instance of [` hiloOpenCloseSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/HiloOpenCloseSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties can be used to customize the appearance:

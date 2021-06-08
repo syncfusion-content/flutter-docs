@@ -9,6 +9,11 @@ documentation: ug
 
 # Stacked line Chart in Flutter Cartesian Charts (SfCartesianChart)
 
+To create a Flutter stacked line chart quickly, you can check this video.
+
+<style>#flutterstackedlineChartTutorial{width : 90% !important; height: 300px !important }</style>
+<iframe id='flutterstackedlineChartTutorial' src='https://www.youtube.com/watch?v=NCUDBD_ClHo'></iframe>
+
 To render a stacked line chart, create an instance of [`StackedLineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedLineSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html). The following properties can be used to customize the appearance of stacked line series:
 
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - changes the color of the line.

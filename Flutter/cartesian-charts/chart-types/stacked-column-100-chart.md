@@ -9,6 +9,11 @@ documentation: ug
 
 # 100% Stacked column in Flutter Cartesian Charts (SfCartesianChart)
 
+To create a Flutter 100% stacked column chart quickly, you can check this video.
+
+<style>#flutter100stackedcolumnChartTutorial{width : 90% !important; height: 300px !important }</style>
+<iframe id='flutter100stackedcolumnChartTutorial' src='https://www.youtube.com/watch?v=NCUDBD_ClHo'></iframe>
+
 To render a 100% stacked column chart, create an instance of [`StackedColumn100Series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedColumnSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/XyDataSeries-class.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties can be used to customize the appearance:
 
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - changes the color of the series.

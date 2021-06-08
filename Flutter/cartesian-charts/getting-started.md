@@ -14,7 +14,7 @@ This section explains the steps required to populate the chart with data, title,
 To get start quickly with our Flutter chart widget, you can check on this video.
 
 <style>#flutterChartVideoTutorial{width : 90% !important; height: 300px !important }</style>
-<iframe id='flutterChartVideoTutorial' src='https://www.youtube.com/embed/t3Dczqj8-10'></iframe>
+<iframe id='flutterChartVideoTutorial' src='https://www.youtube.com/watch?v=JAAnmOfoqg8'></iframe>
 
 ## Add Flutter Charts to an application
 
@@ -111,10 +111,10 @@ Based on your data, initialize the appropriate axis type and series type. In the
         );
     }
 
-    class SalesData{
+    class SalesData {
         SalesData(this.year, this.sales);
         final String year;
-        final double sales;
+        final double? sales;
     }
 
 {% endhighlight %}
@@ -157,6 +157,12 @@ You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/
         );
     }
 
+    class SalesData {
+        SalesData(this.year, this.sales);
+        final String year;
+        final double? sales;
+    }
+
 {% endhighlight %}
 
 ![Title to chart](images/getting-started/title_chart.jpg)
@@ -197,6 +203,12 @@ You can add data labels to improve the readability of the chart using the [`data
                 )
             )
         );
+    }
+
+    class SalesData {
+        SalesData(this.year, this.sales);
+        final String year;
+        final double? sales;
     }
 
 {% endhighlight %}
@@ -242,6 +254,12 @@ Additionally, the [`series.name`](https://pub.dev/documentation/syncfusion_flutt
                 )      
             )
         );
+    }
+
+    class SalesData {
+        SalesData(this.year, this.sales);
+        final String year;
+        final double? sales;
     }
 
 {% endhighlight %}
@@ -298,6 +316,12 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
                 )
             )
         );
+    }
+
+     class SalesData {
+        SalesData(this.year, this.sales);
+        final String year;
+        final double? sales;
     }
 
 {% endhighlight %}

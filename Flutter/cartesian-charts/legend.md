@@ -35,6 +35,12 @@ The [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
         );
       }
 
+      class ChartData {
+          ChartData(this.x, this.y);
+          final DateTime x;
+          final double? y;
+      }
+
 {% endhighlight %}
 
 ![Legend](images/legend/legend.png)
@@ -89,6 +95,12 @@ The [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
       );
     }
 
+     class ChartData {
+        ChartData(this.x, this.y);
+        final DateTime x;
+        final double? y;
+      }
+
 {% endhighlight %}
 
 ![Customized Legend](images/legend/customized_legend.png)
@@ -99,11 +111,11 @@ The following properties can be used to define and customize the [`title`](https
 
 * [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendTitle/text.html) - used to change the text of the title.
 * [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/textStyle.html) - used to change the text color, size, font family, fontStyle, and font weight.
-* [`textStyle.color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/color.html) - used to change the color of the text.
-* [`textStyle.fontFamily`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontFamily.html) - used to change the font family for legend text. 
-* [`textStyle.fontStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontStyle.html) - used to change the font style for the legend text.
-* [`textStyle.fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontSize.html) - used to change the font size for the legend text.
-* [`alignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/alignment.html) - used to change the alignment of the title text, it can be near, center, or far.
+* [`textStyle.color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/textStyle.html) - used to change the color of the text.
+* [`textStyle.fontFamily`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/textStyle.html) - used to change the font family for legend text. 
+* [`textStyle.fontStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/textStyle.html) - used to change the font style for the legend text.
+* [`textStyle.fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/textStyle.html) - used to change the font size for the legend text.
+* [`alignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/textStyle.html) - used to change the alignment of the title text, it can be near, center, or far.
 
 {% highlight dart %} 
 
@@ -134,7 +146,7 @@ The following properties can be used to define and customize the [`title`](https
                     yValueMapper: (ChartData data, _) => data.y
               ),
                   LineSeries<ChartData, DateTime>(
-                    dataSource: chartData,
+                    dataSource: chartData1,
                     xValueMapper: (ChartData data, _) => data.x,
                     yValueMapper: (ChartData data, _) => data.y
                 )
@@ -144,6 +156,12 @@ The following properties can be used to define and customize the [`title`](https
         )
       );
     }
+
+     class ChartData {
+        ChartData(this.x, this.y);
+        final DateTime x;
+        final double? y;
+      }
 
 {% endhighlight %}
 
@@ -180,6 +198,12 @@ You can control the visibility of the series by tapping the legend item. You can
       );
     }
 
+     class ChartData {
+        ChartData(this.x, this.y);
+        final String x;
+        final double? y;
+      }
+
 {% endhighlight %}
 
 ## Legend visibility
@@ -212,6 +236,12 @@ The [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
       );
     }
 
+    class ChartData {
+        ChartData(this.x, this.y);
+        final String x;
+        final double? y;
+      }
+
 {% endhighlight %}
 
 ## Legend item visibility
@@ -239,7 +269,7 @@ You can control the visibility of a particular series legend item using the [`is
                 ColumnSeries<ChartData, String>(
                   // Hiding the legend item for this series
                   isVisibleInLegend: false,
-                  dataSource: chartData,
+                  dataSource: chartData1,
                   xValueMapper: (ChartData data, _) => data.x,
                   yValueMapper: (ChartData data, _) => data.y
                 )
@@ -249,6 +279,12 @@ You can control the visibility of a particular series legend item using the [`is
         )
       );
     }
+
+    class ChartData {
+        ChartData(this.x, this.y);
+        final String x;
+        final double? y;
+      }
 
 {% endhighlight %}
 
@@ -266,14 +302,14 @@ The legend items can be placed in multiple rows or scroll can be enabled using t
         body: Center(
           child: Container(
             child: SfCartesianChart(
-              primaryXAxis: CategoryAxis(),
+              primaryXAxis: DateTimeAxis(),
               legend: Legend(
                 isVisible: true,
                 // Overflowing legend content will be wraped
                 overflowMode: LegendItemOverflowMode.wrap
               ),
               series: <CartesianSeries>[
-                LineSeries<ChartData, String>(
+                LineSeries<ChartData, DateTime>(
                   dataSource: chartData,
                   xValueMapper: (ChartData data, _) => data.x,
                   yValueMapper: (ChartData data, _) => data.y
@@ -285,9 +321,15 @@ The legend items can be placed in multiple rows or scroll can be enabled using t
       );
     }
 
+    class ChartData {
+        ChartData(this.x, this.y);
+        final DateTime x;
+        final double? y;
+      }
+
 {% endhighlight %}
 
-![Legend](images/legend/overflow_wrap.png))
+![Legend](images/legend/overflow_wrap.png)
 
 
 ## Positioning the legend
@@ -324,9 +366,15 @@ You can change the position of the legend inside the chart. The following proper
       );
     }
 
+    class ChartData {
+        ChartData(this.x, this.y);
+        final DateTime x;
+        final double? y;
+      }
+
 {% endhighlight %}
 
-![Legend](images/legend/legend_position.png))
+![Legend](images/legend/legend_position.png)
 
 ## Legend item template
 
@@ -364,4 +412,12 @@ You can customize the appearance of legend items with your template by using [`l
       );
     }
 
+    class ChartData {
+        ChartData(this.x, this.y);
+        final String x;
+        final double? y;
+      }
+
 {% endhighlight %}
+
+N> `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.

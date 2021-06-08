@@ -10,6 +10,11 @@ documentation: ug
 # Getting started with Flutter Date Range Picker (SfDateRangePicker)
 This section explains the steps required to add the date range picker widget. This section covers only basic features needed to get started with Syncfusion date range picker widget.
 
+To get start quickly with our Flutter date range picker widget, you can check on this video.
+
+<style>#flutterDateRangePickerVideoTutorial{width : 90% !important; height: 300px !important }</style>
+<iframe id='flutterDateRangePickerVideoTutorial' src='https://www.youtube.com/embed/3TyuUVExuPs'></iframe>
+
 ## Add Flutter Date Range Picker to an application
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
 
@@ -180,6 +185,5 @@ You can display action buttons at the bottom of the date range picker by using t
   
 ## See also
 
-[How to apply theming in Flutter date range picker (SfDateRangePicker)?](https://www.syncfusion.com/kb/11898/how-to-apply-theming-in-flutter-date-range-picker-sfdaterangepicker)
-
-[How to change the first day of week in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12221/how-to-change-the-first-day-of-week-in-the-flutter-date-range-picker-sfdaterangepicker)
+* [How to apply theming in Flutter date range picker (SfDateRangePicker)?](https://www.syncfusion.com/kb/11898/how-to-apply-theming-in-flutter-date-range-picker-sfdaterangepicker)
+* [How to change the first day of week in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12221/how-to-change-the-first-day-of-week-in-the-flutter-date-range-picker-sfdaterangepicker)

@@ -9,6 +9,11 @@ documentation: ug
 
 # HiLo Chart in Flutter Cartesian Charts (SfCartesianChart)
 
+To create a Flutter hilo chart quickly, you can check this video.
+
+<style>#flutterHiloChartTutorial{width : 90% !important; height: 300px !important }</style>
+<iframe id='flutterHiloChartTutorial' src='https://www.youtube.com/watch?v=uSsKhlRzC2Q'></iframe>
+
 HiLo Series illustrates the price movements in stock using the high and low values.
 
 To render a HiLo chart, create an instance of [`HiloSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/HiloSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties can be used to customize the appearance:

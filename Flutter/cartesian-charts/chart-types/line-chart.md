@@ -9,6 +9,11 @@ documentation: ug
 
 # Line Chart in Flutter Cartesian Charts (SfCartesianChart)
 
+To create a Flutter line chart quickly, you can check this video.
+
+<style>#flutterLineChartTutorial{width : 90% !important; height: 300px !important }</style>
+<iframe id='flutterLineChartTutorial' src='https://www.youtube.com/watch?v=zhcxdh4-Jt8'></iframe>
+
 To render a line chart, create an instance of [`LineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LineSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties can be used to customize the appearance:
 
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - changes the color of the line.
@@ -48,8 +53,8 @@ To render a line chart, create an instance of [`LineSeries`](https://pub.dev/doc
 
     class SalesData {
         SalesData(this.year, this.sales);
-            final dateTime year;
-            final double sales;
+        final dateTime year;
+        final double sales;
     }
 
 {% endhighlight %}
