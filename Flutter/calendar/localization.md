@@ -116,4 +116,4 @@ Widget build(BuildContext context) {
 
 ## See also
 
-[How to override the localization in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12328/how-to-override-the-localization-in-the-flutter-event-calendar-sfcalendar)
+* [How to override the localization in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12328/how-to-override-the-localization-in-the-flutter-event-calendar-sfcalendar)

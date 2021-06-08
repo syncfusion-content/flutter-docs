@@ -9,6 +9,11 @@ documentation: ug
 
 # Doughnut Chart in Flutter Circular Charts (SfCircularChart)
 
+To create a Flutter doughnut chart quickly, you can check this video.
+
+<style>#flutterDoughnutChartTutorial{width : 90% !important; height: 300px !important }</style>
+<iframe id='flutterDoughnutChartTutorial' src='https://www.youtube.com/watch?v=VJxPp7-2nGk'></iframe>
+
 To render a doughnut chart, create an instance of [`DoughnutSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DoughnutSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/series.html) collection property of [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html). The following properties can be used to customize the appearance of doughnut segment:
 
 * [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/opacity.html) - controls the transparency of the chart series.
