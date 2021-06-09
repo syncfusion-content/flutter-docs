@@ -12,7 +12,7 @@ documentation: ug
 To create a Flutter hilo chart quickly, you can check this video.
 
 <style>#flutterHiloChartTutorial{width : 90% !important; height: 300px !important }</style>
-<iframe id='flutterHiloChartTutorial' src='https://www.youtube.com/watch?v=uSsKhlRzC2Q'></iframe>
+<iframe id='flutterHiloChartTutorial' src='https://www.youtube.com/embed/uSsKhlRzC2Q'></iframe>
 
 HiLo Series illustrates the price movements in stock using the high and low values.
 

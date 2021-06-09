@@ -12,7 +12,7 @@ documentation: ug
 To create a Flutter spline range area chart quickly, you can check this video.
 
 <style>#flutterSplinerangecolumnChartTutorial{width : 90% !important; height: 300px !important }</style>
-<iframe id='flutterSplinerangecolumnChartTutorial' src='https://www.youtube.com/watch?v=uSsKhlRzC2Q'></iframe>
+<iframe id='flutterSplinerangecolumnChartTutorial' src='https://www.youtube.com/embed/uSsKhlRzC2Q'></iframe>
 
 To render a spline range area chart, create an instance of the [`SplineRangeAreaSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineRangeAreaSeries-class.html), and add to the series collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html).
 
