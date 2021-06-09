@@ -12,7 +12,7 @@ documentation: ug
 To create a Flutter radial bar chart quickly, you can check this video.
 
 <style>#flutterRadialbarChartTutorial{width : 90% !important; height: 300px !important }</style>
-<iframe id='flutterRadialbarChartTutorial' src='https://www.youtube.com/watch?v=VJxPp7-2nGk'></iframe>
+<iframe id='flutterRadialbarChartTutorial' src='https://www.youtube.com/embed/VJxPp7-2nGk'></iframe>
 
 The radial bar chart is used for showing the comparisons among the categories using the circular shapes. To render a radial bar chart, create an instance of [`RadialBarSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RadialBarSeries-class.html), and add to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/series.html) collection property of [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html). The following properties can be used to customize the appearance of radial bar segment:
 

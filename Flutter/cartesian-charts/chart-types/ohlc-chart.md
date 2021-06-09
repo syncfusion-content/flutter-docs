@@ -12,7 +12,7 @@ documentation: ug
 To create a Flutter open high low close chart quickly, you can check this video.
 
 <style>#flutterohlcChartTutorial{width : 90% !important; height: 300px !important }</style>
-<iframe id='flutterohlcChartTutorial' src='https://www.youtube.com/watch?v=g5cniDExpRw'></iframe>
+<iframe id='flutterohlcChartTutorial' src='https://www.youtube.com/embed/g5cniDExpRw'></iframe>
 
  OpenHighLowClose series is used to represent the low, high, open and closing values over time.
 

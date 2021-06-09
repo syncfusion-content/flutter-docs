@@ -12,7 +12,7 @@ documentation: ug
 To create a Flutter 100% stacked bar chart quickly, you can check this video.
 
 <style>#flutter100stackedbarChartTutorial{width : 90% !important; height: 300px !important }</style>
-<iframe id='flutter100stackedbarChartTutorial' src='https://www.youtube.com/watch?v=NCUDBD_ClHo'></iframe>
+<iframe id='flutter100stackedbarChartTutorial' src='https://www.youtube.com/embed/NCUDBD_ClHo'></iframe>
 
 To render a 100% stacked bar chart, create an instance of [`StackedBar100Series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedBar100Series-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties can be used to customize the appearance:
 
