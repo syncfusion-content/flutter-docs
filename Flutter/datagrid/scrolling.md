@@ -568,7 +568,7 @@ N> The vertical and horizontal scrolled offset can be retrieved by using `DataGr
 
 ## Listen the scroll changes
 
-The Flutter Datatable provides the support to listen the vertical and horizontal scrolling changes.
+The Flutter DataTable provides the support to listen the vertical and horizontal scrolling changes.
 
 ### Listen the vertical Scroll changes
 
