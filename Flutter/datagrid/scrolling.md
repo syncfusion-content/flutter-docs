@@ -565,3 +565,117 @@ final DataGridController _controller = DataGridController();
 {% endtabs %}
 
 N> The vertical and horizontal scrolled offset can be retrieved by using `DataGridController.verticalOffset` and `DataGridController.horizontalOffset` properties.
+
+## Listen the scroll changes
+
+The Flutter Datatable provides the support to listen the vertical and horizontal scrolling changes.
+
+### Listen the vertical Scroll changes
+
+You can listen the vertical scroll position while do the vertical scrolling by using the `verticalScrollController`.
+
+The following example demonstrate load more rows when vertical scrolling reaches 70 percent of vertical maxScrollExtent.
+
+{% tabs %}
+{% highlight Dart %}
+
+late _EmployeeDataSource employeeDataSource;
+late ScrollController verticalScrollController;
+
+  void verticalListner() {
+    if (verticalScrollController.position.pixels >=
+        verticalScrollController.position.maxScrollExtent * (70 / 100)) {
+      employeeDataSource.loadMoreRows();
+    }
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    employeeDataSource = _EmployeeDataSource();
+    verticalScrollController = ScrollController()..addListener(verticalListner);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Flutter DataGrid Sample'),
+      ),
+      body: SfDataGrid(
+          source: employeeDataSource,
+          verticalScrollController: verticalScrollController,
+          columnWidthMode: ColumnWidthMode.fill,
+          columns: _getColumns()),
+    );
+  }
+
+class _EmployeeDataSource extends DataGridSource {
+  _EmployeeDataSource() {
+    loadEmployees(25);
+  }
+
+  List<_Employee> employees = [];
+
+  List<DataGridRow> dataGridRows = [];
+
+  @override
+  List<DataGridRow> get rows => dataGridRows;
+
+  @override
+  DataGridRowAdapter buildRow(DataGridRow row) {
+    return DataGridRowAdapter(cells: [
+      Container(
+        padding: EdgeInsets.all(8),
+        alignment: Alignment.centerRight,
+        child: Text(
+          row.getCells()[0].value.toString(),
+          overflow: TextOverflow.ellipsis,
+        ),
+      ),
+      Container(
+        padding: EdgeInsets.all(8),
+        alignment: Alignment.centerRight,
+        child: Text(
+          row.getCells()[1].value.toString(),
+          overflow: TextOverflow.ellipsis,
+        ),
+      ),
+      Container(
+        padding: EdgeInsets.all(8),
+        alignment: Alignment.centerLeft,
+        child: Text(
+          row.getCells()[2].value.toString(),
+          overflow: TextOverflow.ellipsis,
+        ),
+      ),
+      Container(
+        padding: EdgeInsets.all(8),
+        alignment: Alignment.centerRight,
+        child: Text(
+          NumberFormat.currency(locale: 'en_US', symbol: '\$')
+              .format(row.getCells()[3].value)
+              .toString(),
+          overflow: TextOverflow.ellipsis,
+        ),
+      ),
+    ]);
+  }
+
+  void loadMoreRows() {
+    loadEmployees(15);
+    notifyListeners();
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Flutter DataTable shows programmatic scrolling to column](images/scrolling/flutter_datagrid_vertical_scroll_controller_load_more.gif)
+
+## Listen the horizontal Scroll changes
+
+You can listen the horizontal scroll position while do horizontal scrolling by using the `horizontalScrollController`.
+
+
+
+
