@@ -724,3 +724,97 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![flutter datapager with customization](images/paging/flutter-datapager-customization.png)
+
+## Visible button item Count
+SfDataPager provides the support to change the visible button count by using [SfDataPager.visibleItemsCount](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/visibleItemsCount.html).
+
+The following code example shows how to change the visible button item count,
+
+{% tabs %}
+{% highlight Dart %}
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: Text('Flutter DataGrid Sample'),
+        ),
+        body: LayoutBuilder(builder: (context, constraint) {
+          return Column(
+            children: [
+              SizedBox(
+                  height: constraint.maxHeight - dataPagerHeight,
+                  width: constraint.maxWidth,
+                  child: _buildDataGrid()),
+              Container(
+                height: dataPagerHeight,
+                child: SfDataPager(
+                  visibleItemsCount: 1,
+                  delegate: orderInfoDataSource,
+                  pageCount: orderInfoDataSource.orders.length /
+                      orderInfoDataSource.rowsPerPage,
+                  direction: Axis.horizontal,
+                ),
+              )
+            ],
+          );
+        }));
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+## Load any widget in page button
+
+SfDataPager provides the support to load any widget in page button by using [SfDataPager.pageItemBuilder](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/pageItemBuilder.html).
+
+The following code example shows how to load  the widget in page button,
+
+{% tabs %}
+{% highlight Dart %}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: Text('Flutter DataGrid Sample'),
+        ),
+        body: LayoutBuilder(builder: (context, constraint) {
+          return Column(
+            children: [
+              SizedBox(
+                  height: constraint.maxHeight - dataPagerHeight,
+                  width: constraint.maxWidth,
+                  child: _buildDataGrid()),
+              Container(
+                height: dataPagerHeight,
+                child: SfDataPagerTheme(
+                  data: SfDataPagerThemeData(
+                    itemBorderColor: Colors.blue,
+                    itemBorderWidth: 1,
+                    backgroundColor: Colors.transparent,
+                    itemBorderRadius: BorderRadius.circular(0),
+                  ),
+                  child: SfDataPager(
+                    pageItemBuilder: (String value) {
+                      return Container(
+                          child: Text(
+                        value,
+                        style: TextStyle(
+                            fontSize: 10, fontWeight: FontWeight.w700),
+                      ));
+                    },
+                    delegate: orderInfoDataSource,
+                    pageCount: orderInfoDataSource.orders.length /
+                        orderInfoDataSource.rowsPerPage,
+                    direction: Axis.horizontal,
+                  ),
+                ),
+              )
+            ],
+          );
+        }));
+  }
+{% endhighlight %}
+{% endtabs %}
+
+
