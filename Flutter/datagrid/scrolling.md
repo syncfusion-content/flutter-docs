@@ -670,8 +670,7 @@ class _EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
-![Flutter DataTable shows programmatic scrolling to column](images/scrolling/flutter_datagrid_listener_load_more.gif)
-
+![Flutter DataTable shows programmatic scrolling to column](images/scrolling/flutter_datagrid_vertical_scroll_controller_load_more.gif)
 ## Listen the horizontal Scroll changes
 
 You can listen the horizontal scroll position while do horizontal scrolling by using the `horizontalScrollController`.
