@@ -376,6 +376,49 @@ You can change the position of the legend inside the chart. The following proper
 
 ![Legend](images/legend/legend_position.png)
 
+## Customize the legend position
+
+Places the legend in custom position.
+If the [offset](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/offset.html) has been set, the legend is moved from its actual position.
+For example, if the [position](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendPosition-class.html) is `top`, then the legend will be placed in the top but in the position added to the actual top position. 
+Also, the legend will not take a dedicated position for it and will be drawn on the top of the chart's plot area.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: Center(
+          child: Container(
+            child: SfCartesianChart(
+              primaryXAxis: DateTimeAxis(),
+              legend: Legend(
+                isVisible: true,
+                // Legend will placed at the specified offset
+                offset: Offset(20,40)
+              ),
+              series: <CartesianSeries>[
+                AreaSeries<ChartData, DateTime>(
+                  dataSource: chartData,
+                  xValueMapper: (ChartData data, _) => data.x,
+                  yValueMapper: (ChartData data, _) => data.y
+                ),
+              ]
+            )
+          )
+        )
+      );
+    }
+
+    class ChartData {
+        ChartData(this.x, this.y);
+        final DateTime x;
+        final double? y;
+      }
+
+
+{% endhighlight %}
+
 ## Legend item template
 
 You can customize the appearance of legend items with your template by using [`legendItemBuilder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/legendItemBuilder.html) property of [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/legend.html). Here you can specify the content that needs to be displayed in the legend text as widget.

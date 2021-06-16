@@ -192,3 +192,35 @@ Data labels can be enabled using the [`isVisible`](https://pub.dev/documentation
 {% endhighlight %}
 
 ![Radial bar data label](circular-chart-types-images/radialbar_dataLabel.jpg)
+
+## Overfilled radial bar
+
+The overfilled radial bar is a graphical representation of the exit value of the radial bar.
+For example, if you set the maximum value of the radial bar to 100% but the given data is more than the maximum value it shows the extra value as an overfilled.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCircularChart(
+                        series: <CircularSeries>[
+                            RadialBarSeries<_ChartData, String>(
+                                maximumValue: 6000,
+                                radius: '100%',
+                                gap: '3%',
+                                dataSource: chartData,
+                                cornerStyle: CornerStyle.bothCurve,
+                                xValueMapper: (_ChartData data, _) => data.x,
+                                yValueMapper: (_ChartData data, _) => data.y,
+                                pointColorMapper: (_ChartData data, _) => data.color)
+                        ]
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
