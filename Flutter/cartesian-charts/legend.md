@@ -419,6 +419,8 @@ Also, the legend will not take a dedicated position for it and will be drawn on 
 
 {% endhighlight %}
 
+![Floating legend](images/legend/floating-legend.jpg)
+
 ## Legend item template
 
 You can customize the appearance of legend items with your template by using [`legendItemBuilder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/legendItemBuilder.html) property of [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/legend.html). Here you can specify the content that needs to be displayed in the legend text as widget.

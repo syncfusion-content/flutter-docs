@@ -251,6 +251,8 @@ Defaults to `true`.
 
 {% endhighlight %}
 
+![Toggle selection](images/selection/deselection.gif)
+
 Also refer [selection event](./events#onselectionchanged) for customizing the selection further.
 
 #### See Also

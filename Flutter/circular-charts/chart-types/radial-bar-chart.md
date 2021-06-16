@@ -224,3 +224,5 @@ For example, if you set the maximum value of the radial bar to 100% but the give
     }
 
 {% endhighlight %}
+
+![Overfilled radial bar](circular-chart-types-images/overfilled-radial-bar.jpg)
