@@ -14,7 +14,7 @@ The datagrid interactively supports the manipulation of data using [SfDataPager]
 The datagrid performs paging of data using the `SfDataPager`. To enable paging, follow below procedure
 
 * Create a new `SfDataPager` widget, and set the [SfDataGrid.DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) to the [SfDataPager.delegate](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/delegate.html) property.
-* Set the number of pages required to be displayed in data pager by setting the `SfDataPager.pageCount` property.
+* Set the number of pages required to be displayed in data pager by setting the [SfDataPager.pageCount](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/pageCount.html) property.
 * Set the number of buttons that should be displayed in view by setting the [SfDataPager.visibleItemsCount](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/visibleItemsCount.html) property.
 * You can load the data for the specific page in `handlePageChanges` method. This method is called for every page navigation from data pager.
 
@@ -724,3 +724,94 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![flutter datapager with customization](images/paging/flutter-datapager-customization.png)
+
+## Change the number of visible items (buttons) in view
+
+You can change the number of visible items i.e. page buttons in view by using the [SfDataPager.visibleItemsCount](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/visibleItemsCount.html).
+
+{% tabs %}
+{% highlight Dart %}
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: Text('Flutter DataGrid Sample'),
+        ),
+        body: LayoutBuilder(builder: (context, constraint) {
+          return Column(
+            children: [
+              SizedBox(
+                  height: constraint.maxHeight - dataPagerHeight,
+                  width: constraint.maxWidth,
+                  child: _buildDataGrid()),
+              Container(
+                height: dataPagerHeight,
+                child: SfDataPager(
+                  visibleItemsCount: 1,
+                  delegate: orderInfoDataSource,
+                  pageCount: orderInfoDataSource.orders.length /
+                      orderInfoDataSource.rowsPerPage,
+                  direction: Axis.horizontal,
+                ),
+              )
+            ],
+          );
+        }));
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+## Load any widget in page button
+
+You can load any widget to page button by using [SfDataPager.pageItemBuilder](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/pageItemBuilder.html).
+
+{% tabs %}
+{% highlight Dart %}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: Text('Flutter DataGrid Sample'),
+        ),
+        body: LayoutBuilder(builder: (context, constraint) {
+          return Column(
+            children: [
+              SizedBox(
+                  height: constraint.maxHeight - dataPagerHeight,
+                  width: constraint.maxWidth,
+                  child: _buildDataGrid()),
+              Container(
+                height: dataPagerHeight,
+                child: SfDataPagerTheme(
+                  data: SfDataPagerThemeData(
+                    itemBorderColor: Colors.blue,
+                    itemBorderWidth: 1,
+                    backgroundColor: Colors.transparent,
+                    itemBorderRadius: BorderRadius.circular(0),
+                  ),
+                  child: SfDataPager(
+                    pageItemBuilder: (String value) {
+                      return Container(
+                          child: Text(
+                        value,
+                        style: TextStyle(
+                            fontSize: 10, fontWeight: FontWeight.w700),
+                      ));
+                    },
+                    delegate: orderInfoDataSource,
+                    pageCount: orderInfoDataSource.orders.length /
+                        orderInfoDataSource.rowsPerPage,
+                    direction: Axis.horizontal,
+                  ),
+                ),
+              )
+            ],
+          );
+        }));
+  }
+{% endhighlight %}
+{% endtabs %}
+
+
