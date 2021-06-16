@@ -725,10 +725,9 @@ Widget build(BuildContext context) {
 
 ![flutter datapager with customization](images/paging/flutter-datapager-customization.png)
 
-## Visible button item Count
-SfDataPager provides the support to change the visible button count by using [SfDataPager.visibleItemsCount](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/visibleItemsCount.html).
+## Change the number of visible items (buttons) in view
 
-The following code example shows how to change the visible button item count,
+You can change the number of visible items i.e. page buttons in view by using the [SfDataPager.visibleItemsCount](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/visibleItemsCount.html).
 
 {% tabs %}
 {% highlight Dart %}
@@ -766,9 +765,7 @@ The following code example shows how to change the visible button item count,
 
 ## Load any widget in page button
 
-SfDataPager provides the support to load any widget in page button by using [SfDataPager.pageItemBuilder](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/pageItemBuilder.html).
-
-The following code example shows how to load  the widget in page button,
+You can load any widget to page button by using [SfDataPager.pageItemBuilder](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/pageItemBuilder.html).
 
 {% tabs %}
 {% highlight Dart %}
