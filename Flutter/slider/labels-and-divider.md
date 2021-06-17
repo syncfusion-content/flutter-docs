@@ -816,7 +816,7 @@ Widget build(BuildContext context) {
                 min: 0.0,
                 max: 10.0,
                 interval: 2,
-                showDivisors: true,
+                showDividers: true,
                 value: _value,
                 onChanged: (dynamic newValue) {
                   setState(() {
@@ -881,7 +881,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Divisor radius support](images/label-and-divisor/slider-divisor-radius.png)
+![Divider radius support](images/label-and-divider/slider-divider-radius.png)
 
 ### Vertical
 
@@ -899,14 +899,14 @@ Widget build(BuildContext context) {
                   data: SfSliderThemeData(
                     activeTrackHeight: 10,
                     inactiveTrackHeight: 10,
-                    activeDivisorRadius: 5,
-                    inactiveDivisorRadius: 5,
+                    activeDividerRadius: 5,
+                    inactiveDividerRadius: 5,
                   ),
                   child: SfSlider.vertical(
                     min: 2.0,
                     max: 10.0,
                     interval: 1,
-                    showDivisors: true,
+                    showDividers: true,
                     value: _value,
                     onChanged: (dynamic newValue){
                       setState(() {
@@ -923,14 +923,14 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Divisor radius support](images/label-and-divisor/vertical-slider-divisor-radius.png)
+![Divider radius support](images/label-and-divider/vertical-slider-divider-radius.png)
 
 
-## Divisor stroke width and stroke color
+## Divider stroke width and stroke color
 
-You can change the active and inactive divisor stroke width of the slider using the [`activeDivisorStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/activeDivisorStrokeWidth.html) and the [`inactiveDivisorStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/inactiveDivisorStrokeWidth.html) properties respectively.
+You can change the active and inactive divider stroke width of the slider using the [`activeDividerStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/activeDividerStrokeWidth.html) and the [`inactiveDividerStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/inactiveDividerStrokeWidth.html) properties respectively.
 
-Also, you can change the active and inactive divisor stroke color of the slider using the [`activeDivisorStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/activeDivisorStrokeColor.html) and the [`inactiveDivisorStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/inactiveDivisorStrokeColor.html) properties respectively.
+Also, you can change the active and inactive divider stroke color of the slider using the [`activeDividerStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/activeDividerStrokeColor.html) and the [`inactiveDividerStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/inactiveDividerStrokeColor.html) properties respectively.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderTheme-class.html).
 
@@ -950,16 +950,16 @@ Widget build(BuildContext context) {
                   data: SfSliderThemeData(
                     activeTrackHeight: 10,
                     inactiveTrackHeight: 10,
-                    activeDivisorStrokeColor: Colors.red,
-                    activeDivisorStrokeWidth: 2,
-                    inactiveDivisorStrokeWidth: 2,
-                    inactiveDivisorStrokeColor: Colors.red,
+                    activeDividerStrokeColor: Colors.red,
+                    activeDividerStrokeWidth: 2,
+                    inactiveDividerStrokeWidth: 2,
+                    inactiveDividerStrokeColor: Colors.red,
                   ),
                   child: SfSlider(
                     min: 2.0,
                     max: 10.0,
                     interval: 1,
-                    showDivisors: true,
+                    showDividers: true,
                     value: _value,
                     onChanged: (dynamic newValue){
                       setState(() {
@@ -976,7 +976,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Divisor stroke width and color support](images/label-and-divisor/slider-divisor-stroke-color.png)
+![Divider stroke width and color support](images/label-and-divider/slider-divider-stroke-color.png)
 
 ### Vertical
 
@@ -994,16 +994,16 @@ Widget build(BuildContext context) {
                   data: SfSliderThemeData(
                     activeTrackHeight: 10,
                     inactiveTrackHeight: 10,
-                    activeDivisorStrokeColor: Colors.red,
-                    activeDivisorStrokeWidth: 2,
-                    inactiveDivisorStrokeWidth: 2,
-                    inactiveDivisorStrokeColor: Colors.red,
+                    activeDividerStrokeColor: Colors.red,
+                    activeDividerStrokeWidth: 2,
+                    inactiveDividerStrokeWidth: 2,
+                    inactiveDividerStrokeColor: Colors.red,
                   ),
                   child: SfSlider.vertical(
                     min: 2.0,
                     max: 10.0,
                     interval: 1,
-                    showDivisors: true,
+                    showDividers: true,
                     value: _value,
                     onChanged: (dynamic newValue){
                       setState(() {
@@ -1020,12 +1020,12 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Divisor stroke width and color support](images/label-and-divisor/vertical-slider-divisor-stroke-color.png)
+![Divider stroke width and color support](images/label-and-divider/vertical-slider-divider-stroke-color.png)
 
 
-## Divisor color
+## Divider color
 
-You can change the active and inactive divisor color of the slider using the [`activeDivisorColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/activeDivisorColor.html) and [`inactiveDivisorColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/inactiveDivisorColor.html) properties respectively.
+You can change the active and inactive divider color of the slider using the [`activeDividerColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/activeDividerColor.html) and [`inactiveDividerColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/inactiveDividerColor.html) properties respectively.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderTheme-class.html).
 
@@ -1045,14 +1045,14 @@ Widget build(BuildContext context) {
                   data: SfSliderThemeData(
                     activeTrackHeight: 5,
                     inactiveTrackHeight: 5,
-                    activeDivisorColor: Colors.red,
-                    inactiveDivisorColor: Colors.red[200],
+                    activeDividerColor: Colors.red,
+                    inactiveDividerColor: Colors.red[200],
                   ),
                   child: SfSlider(
                     min: 2.0,
                     max: 10.0,
                     interval: 1,
-                    showDivisors: true,
+                    showDividers: true,
                     value: _value,
                     onChanged: (dynamic newValue){
                       setState(() {
@@ -1069,7 +1069,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Divisor color support](images/label-and-divisor/slider-divisor-color.png)
+![Divider color support](images/label-and-divider/slider-divider-color.png)
 
 ### Vertical
 
@@ -1087,14 +1087,14 @@ Widget build(BuildContext context) {
                   data: SfSliderThemeData(
                     activeTrackHeight: 5,
                     inactiveTrackHeight: 5,
-                    activeDivisorColor: Colors.red,
-                    inactiveDivisorColor: Colors.red[200],
+                    activeDividerColor: Colors.red,
+                    inactiveDividerColor: Colors.red[200],
                   ),
                   child: SfSlider.vertical(
                     min: 2.0,
                     max: 10.0,
                     interval: 1,
-                    showDivisors: true,
+                    showDividers: true,
                     value: _value,
                     onChanged: (dynamic newValue){
                       setState(() {
@@ -1111,5 +1111,4 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Divisor color support](images/label-and-divisor/vertical-slider-divisor-color.png)
-
+![Divider color support](images/label-and-divider/vertical-slider-divider-color.png)
