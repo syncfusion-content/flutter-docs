@@ -566,11 +566,7 @@ final DataGridController _controller = DataGridController();
 
 N> The vertical and horizontal scrolled offset can be retrieved by using `DataGridController.verticalOffset` and `DataGridController.horizontalOffset` properties.
 
-## Listen the scroll changes
-
-The Flutter DataTable provides the support to listen the vertical and horizontal scrolling changes.
-
-### Listen the vertical Scroll changes
+## Listen the vertical Scroll changes
 
 You can listen the vertical scroll position while do the vertical scrolling by using the `verticalScrollController`.
 
