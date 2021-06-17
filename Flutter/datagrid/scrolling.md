@@ -658,10 +658,49 @@ class _EmployeeDataSource extends DataGridSource {
     ]);
   }
 
+  void loadEmployees(int count) {
+    final Random random = Random();
+    final int startIndex = employees.isNotEmpty ? employees.length : 0,
+        endIndex = startIndex + count;
+
+    for (int i = startIndex; i < endIndex; i++) {
+      var employee = _Employee(
+        1000 + i,
+        1700 + i,
+        names[i < names.length ? i : random.nextInt(names.length - 1)],
+        random.nextInt(1000) + random.nextDouble(),
+        cities[random.nextInt(cities.length - 1)],
+        1500.0 + random.nextInt(100),
+      );
+      employees.add(employee);
+      dataGridRows.add(employee.getDataGridRow);
+    }
+  }
+
   void loadMoreRows() {
     loadEmployees(15);
     notifyListeners();
   }
+
+    void loadEmployees(int count) {
+    final Random random = Random();
+    final int startIndex = employees.isNotEmpty ? employees.length : 0,
+        endIndex = startIndex + count;
+
+    for (int i = startIndex; i < endIndex; i++) {
+      var employee = _Employee(
+        1000 + i,
+        1700 + i,
+        names[i < names.length ? i : random.nextInt(names.length - 1)],
+        random.nextInt(1000) + random.nextDouble(),
+        cities[random.nextInt(cities.length - 1)],
+        1500.0 + random.nextInt(100),
+      );
+      employees.add(employee);
+      dataGridRows.add(employee.getDataGridRow);
+    }
+  }
+}
 
 {% endhighlight %}
 {% endtabs %}
