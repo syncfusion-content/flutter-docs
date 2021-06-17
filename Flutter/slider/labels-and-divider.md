@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Labels and Divisors in Flutter Slider widget | Syncfusion 
-description: Learn here all about the Labels and Divisors feature of Syncfusion Flutter Slider (SfSlider) widget and more.
+title: Labels and Dividers in Flutter Slider widget | Syncfusion
+description: Learn here all about the Labels and Dividers feature of Syncfusion Flutter Slider (SfSlider) widget and more.
 platform: Flutter
 control: SfSlider
 documentation: ug
 ---
 
-# Labels and Divisors in Flutter Treemap (SfTreemap)
-This section explains about how to add the labels and divisors in the slider.
+# Labels and Dividers in Flutter Treemap (SfTreemap)
+This section explains about how to add the labels and dividers in the slider.
 
 ## Show labels
 
@@ -47,7 +47,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Slider label support](images/label-and-divisor/show-labels.png)
+![Slider label support](images/label-and-divider/show-labels.png)
 
 ### Vertical
 
@@ -82,7 +82,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Slider label support](images/label-and-divisor/vertical-show-labels.png)
+![Slider label support](images/label-and-divider/vertical-show-labels.png)
 
 N>
 * Refer the [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/numberFormat.html) and [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/dateFormat.html) for formatting the numeric and date labels respectively.
@@ -128,7 +128,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Number format support](images/label-and-divisor/number-format.png)
+![Number format support](images/label-and-divider/number-format.png)
 
 ### Vertical
 
@@ -164,7 +164,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Number format support](images/label-and-divisor/vertical-number-format.png)
+![Number format support](images/label-and-divider/vertical-number-format.png)
 
 ## Date format
 
@@ -209,7 +209,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Year date format support](images/label-and-divisor/year-date-format.png)
+![Year date format support](images/label-and-divider/year-date-format.png)
 
 #### Vertical
 
@@ -246,7 +246,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Year date format support](images/label-and-divisor/vertical-year-date-format.png)
+![Year date format support](images/label-and-divider/vertical-year-date-format.png)
 
 ### Month format
 
@@ -285,7 +285,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Month date format support](images/label-and-divisor/month-date-format.png)
+![Month date format support](images/label-and-divider/month-date-format.png)
 
 #### Vertical
 
@@ -322,7 +322,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Month date format support](images/label-and-divisor/vertical-month-date-format.png)
+![Month date format support](images/label-and-divider/vertical-month-date-format.png)
 
 
 ### Hour format
@@ -362,7 +362,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Hour date format support](images/label-and-divisor/hour-date-format.png)
+![Hour date format support](images/label-and-divider/hour-date-format.png)
 
 #### Vertical
 
@@ -399,7 +399,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Hour date format support](images/label-and-divisor/vertical-hour-date-format.png)
+![Hour date format support](images/label-and-divider/vertical-hour-date-format.png)
 
 N> Refer the [`DateFormat`](https://api.flutter.dev/flutter/intl/DateFormat-class.html) class for other date format.
 
@@ -443,7 +443,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Label placement support](images/label-and-divisor/label-placement.png)
+![Label placement support](images/label-and-divider/label-placement.png)
 
 ### Vertical
 
@@ -481,7 +481,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Label placement support](images/label-and-divisor/vertical-label-placement.png)
+![Label placement support](images/label-and-divider/vertical-label-placement.png)
 
 ## Customize label text
 
@@ -525,7 +525,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Label formatter support](images/label-and-divisor/label-formattercallback.png)
+![Label formatter support](images/label-and-divider/label-formattercallback.png)
 
 ### Vertical
 
@@ -562,7 +562,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Label formatter support](images/label-and-divisor/vertical-label-formattercallback.png)
+![Label formatter support](images/label-and-divider/vertical-label-formattercallback.png)
 
 ## Label style
 
@@ -613,7 +613,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Labels style support](images/label-and-divisor/slider-labels-color.png)
+![Labels style support](images/label-and-divider/slider-labels-color.png)
 
 ### Vertical
 
@@ -654,7 +654,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Labels style support](images/label-and-divisor/vertical-slider-labels-color.png)
+![Labels style support](images/label-and-divider/vertical-slider-labels-color.png)
 
 
 ## Label offset
@@ -704,7 +704,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Labels offset support](images/label-and-divisor/slider-labels-offset.png)
+![Labels offset support](images/label-and-divider/slider-labels-offset.png)
 
 ### Vertical
 
@@ -747,13 +747,13 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Labels offset support](images/label-and-divisor/vertical-slider-labels-offset.png)
+![Labels offset support](images/label-and-divider/vertical-slider-labels-offset.png)
 
-## Show divisors
+## Show dividers
 
-The [`showDivisors`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/showDivisors.html) property is used to render the divisors on the track. The default value of the [`showDivisors`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/showDivisors.html) property is `false`. It is a shape which is used to represent the major interval points of the track.
+The [`showDividers`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/showDividers.html) property is used to render the dividers on the track. The default value of the [`showDividers`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/showDividers.html) property is `false`. It is a shape which is used to represent the major interval points of the track.
 
-For example, if [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html) is 0.0 and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) is 10.0 and [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/interval.html) is 2.0, the slider will render the divisors at 0.0, 2.0, 4.0 and so on.
+For example, if [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html) is 0.0 and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) is 10.0 and [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/interval.html) is 2.0, the slider will render the dividers at 0.0, 2.0, 4.0 and so on.
 
 ### Horizontal
 
@@ -776,7 +776,7 @@ Widget build(BuildContext context) {
                 min: 0.0,
                 max: 10.0,
                 interval: 2,
-                showDivisors: true,
+                showDividers: true,
                 value: _value,
                 onChanged: (dynamic newValue) {
                   setState(() {
@@ -793,7 +793,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Slider divisor support](images/label-and-divisor/show-divisor.png)
+![Slider divider support](images/label-and-divider/show-divider.png)
 
 ### Vertical
 
@@ -833,11 +833,11 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Slider divisor support](images/label-and-divisor/vertical-show-divisor.png)
+![Slider divider support](images/label-and-divider/vertical-show-divider.png)
 
-## Divisor radius
+## Divider radius
 
-You can change the active and inactive divisor radius of the slider using the [`activeDivisorRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/activeDivisorRadius.html) and the [`inactiveDivisorRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/inactiveDivisorRadius.html) properties respectively.
+You can change the active and inactive divider radius of the slider using the [`activeDividerRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/activeDividerRadius.html) and the [`inactiveDividerRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/inactiveDividerRadius.html) properties respectively.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderTheme-class.html).
 
@@ -857,14 +857,14 @@ Widget build(BuildContext context) {
                   data: SfSliderThemeData(
                     activeTrackHeight: 10,
                     inactiveTrackHeight: 10,
-                    activeDivisorRadius: 5,
-                    inactiveDivisorRadius: 5,
+                    activeDividerRadius: 5,
+                    inactiveDividerRadius: 5,
                   ),
                   child: SfSlider(
                     min: 2.0,
                     max: 10.0,
                     interval: 1,
-                    showDivisors: true,
+                    showDividers: true,
                     value: _value,
                     onChanged: (dynamic newValue){
                       setState(() {

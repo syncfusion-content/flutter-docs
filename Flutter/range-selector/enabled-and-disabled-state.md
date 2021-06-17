@@ -86,7 +86,7 @@ You can change,
 * The color of the active and inactive track in disabled state using the [`disabledActiveTrackColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/disabledActiveTrackColor.html) and [`disabledInactiveTrackColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/disabledInactiveTrackColor.html) properties.
 * The color of the active and inactive major ticks in disabled state using the [`disabledActiveTickColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/disabledActiveTickColor.html) and [`disabledInactiveTickColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/disabledInactiveTickColor.html) properties.
 * The color of the active and inactive minor ticks in disabled state using the [`disabledActiveMinorTickColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/disabledActiveMinorTickColor.html) and [`disabledInactiveMinorTickColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/disabledInactiveMinorTickColor.html) properties.
-* The color of the active and inactive divisors in disabled state using the [`disabledActiveDivisorColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/disabledActiveDivisorColor.html) and [`disabledInactiveDivisorColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/disabledInactiveDivisorColor.html) properties.
+* The color of the active and inactive dividers in disabled state using the [`disabledActiveDividerColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/disabledActiveDividerColor.html) and [`disabledInactiveDividerColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/disabledInactiveDividerColor.html) properties.
 * The color of the thumb in disabled state using the [`disabledThumbColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/disabledThumbColor.html) property.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorTheme-class.html).
@@ -123,8 +123,8 @@ final List<Data> _chartData = <Data>[
                      disabledInactiveTickColor: Colors.red[200],
                      disabledActiveMinorTickColor: Colors.red[900],
                      disabledInactiveMinorTickColor: Colors.red[200],
-                     disabledActiveDivisorColor: Colors.blue[900],
-                     disabledInactiveDivisorColor: Colors.blue[200],
+                     disabledActiveDividerColor: Colors.blue[900],
+                     disabledInactiveDividerColor: Colors.blue[200],
                      disabledThumbColor: Colors.red,
                      activeTrackHeight: 4,
                      inactiveTrackHeight: 4,
@@ -136,7 +136,7 @@ final List<Data> _chartData = <Data>[
                   showLabels: true,
                   enabled: false,
                   showTicks: true,
-                  showDivisors: true,
+                  showDividers: true,
                   initialValues: _initialValues,
                   child: Container(
                     height: 130,

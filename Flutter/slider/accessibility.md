@@ -96,8 +96,8 @@ You can customize the color of the [`SfSlider`](https://pub.dev/documentation/sy
 * [`Track`](https://help.syncfusion.com/flutter/slider/track#track-color)
 * [`Major ticks`](https://help.syncfusion.com/flutter/slider/ticks#major-ticks-color)
 * [`Minor ticks`](https://help.syncfusion.com/flutter/slider/ticks#minor-ticks-color)
-* [`Labels`](https://help.syncfusion.com/flutter/slider/labels-and-divisor#label-style)
-* [`Divisors`](https://help.syncfusion.com/flutter/slider/labels-and-divisor#divisor-color)
+* [`Labels`](https://help.syncfusion.com/flutter/slider/labels-and-divider#label-style)
+* [`Dividers`](https://help.syncfusion.com/flutter/slider/labels-and-divider#divider-color)
 * [`Thumb`](https://help.syncfusion.com/flutter/slider/thumb-and-overlay#thumb-color)
 * [`Thumb overlay`](https://help.syncfusion.com/flutter/slider/thumb-and-overlay#thumb-overlay-color)
 
@@ -105,7 +105,7 @@ You can customize the color of the [`SfSlider`](https://pub.dev/documentation/sy
 
 The font size of the [`SfSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html) will be automatically scaled based on the device settings. Also, you can change the font size of the [`SfSlider`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider-class.html) elements using the following APIs:
 
-* [`Label style`](https://help.syncfusion.com/flutter/slider/labels-and-divisor#label-style)
+* [`Label style`](https://help.syncfusion.com/flutter/slider/labels-and-divider#label-style)
 * [`Tooltip label style`](https://help.syncfusion.com/flutter/slider/tooltip#tooltip-label-style)
 
 ## Easier touch targets

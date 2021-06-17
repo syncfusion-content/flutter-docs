@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Labels in Flutter Range Slider (SfRangeSlider)
-This section explains about how to add the labels and divisors in the range slider.
+This section explains about how to add the labels and dividers in the range slider.
 
 ## Show labels
 
@@ -47,7 +47,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Range slider label support](images/label-and-divisor/show-labels.png)
+![Range slider label support](images/label-and-divider/show-labels.png)
 
 ### Vertical
 {% tabs %}
@@ -81,7 +81,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Range slider label support](images/label-and-divisor/vertical-show-labels.png)
+![Range slider label support](images/label-and-divider/vertical-show-labels.png)
 
 N>
 * Refer the [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/numberFormat.html) and [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateFormat.html) for formatting the numeric and date labels respectively.
@@ -127,7 +127,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Number format support](images/label-and-divisor/number-format.png)
+![Number format support](images/label-and-divider/number-format.png)
 
 ### Vertical
 
@@ -163,7 +163,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Number format support](images/label-and-divisor/vertical-number-format.png)
+![Number format support](images/label-and-divider/vertical-number-format.png)
 
 ## Date format
 
@@ -208,7 +208,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Year date format support](images/label-and-divisor/year-date-format.png)
+![Year date format support](images/label-and-divider/year-date-format.png)
 
 #### Vertical
 
@@ -245,7 +245,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Year date format support](images/label-and-divisor/vertical-year-date-format.png)
+![Year date format support](images/label-and-divider/vertical-year-date-format.png)
 
 ### Month format
 
@@ -284,7 +284,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Month date format support](images/label-and-divisor/month-date-format.png)
+![Month date format support](images/label-and-divider/month-date-format.png)
 
 #### Vertical
 
@@ -321,7 +321,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Month date format support](images/label-and-divisor/vertical-month-date-format.png)
+![Month date format support](images/label-and-divider/vertical-month-date-format.png)
 
 ### Hour format
 
@@ -360,7 +360,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Hour date format support](images/label-and-divisor/hour-date-format.png)
+![Hour date format support](images/label-and-divider/hour-date-format.png)
 
 #### Vertical
 
@@ -397,7 +397,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Hour date format support](images/label-and-divisor/vertical-hour-date-format.png)
+![Hour date format support](images/label-and-divider/vertical-hour-date-format.png)
 
 N> Refer the [`DateFormat`](https://api.flutter.dev/flutter/intl/DateFormat-class.html) class for other date format.
 
@@ -441,7 +441,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Label placement support](images/label-and-divisor/label-placement.png)
+![Label placement support](images/label-and-divider/label-placement.png)
 
 ### Vertical
 
@@ -479,7 +479,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Label placement support](images/label-and-divisor/vertical-label-placement.png)
+![Label placement support](images/label-and-divider/vertical-label-placement.png)
 
 ## Customize label text
 
@@ -523,7 +523,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Label formatter support](images/label-and-divisor/label-formattercallback.png)
+![Label formatter support](images/label-and-divider/label-formattercallback.png)
 
 ### Vertical
 
@@ -560,7 +560,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Label formatter support](images/label-and-divisor/vertical-label-formattercallback.png)
+![Label formatter support](images/label-and-divider/vertical-label-formattercallback.png)
 
 ## Label style
 
@@ -613,7 +613,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Labels style support](images/label-and-divisor/slider-labels-color.png)
+![Labels style support](images/label-and-divider/slider-labels-color.png)
 
 ### Vertical
 
@@ -654,7 +654,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Labels style support](images/label-and-divisor/vertical-slider-labels-color.png)
+![Labels style support](images/label-and-divider/vertical-slider-labels-color.png)
 
 ## Label offset
 
@@ -703,7 +703,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Labels offset support](images/label-and-divisor/slider-labels-offset.png)
+![Labels offset support](images/label-and-divider/slider-labels-offset.png)
 
 ### Vertical
 
@@ -746,13 +746,13 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Labels offset support](images/label-and-divisor/vertical-slider-labels-offset.png)
+![Labels offset support](images/label-and-divider/vertical-slider-labels-offset.png)
 
-## Show divisors
+## Show dividers
 
-The [`showDivisors`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/showDivisors.html) property is used to render the divisors on the track. The default value of [`showDivisors`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/showDivisors.html) property is `false`. It is a shape which is used to represent the major interval points of the track.
+The [`showDividers`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/showDividers.html) property is used to render the dividers on the track. The default value of [`showDividers`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/showDividers.html) property is `false`. It is a shape which is used to represent the major interval points of the track.
 
-For example, if [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html) is 0.0 and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) is 10.0 and [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/interval.html) is 2.0, the range slider will render the divisors at 0.0, 2.0, 4.0 and so on.
+For example, if [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html) is 0.0 and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) is 10.0 and [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/interval.html) is 2.0, the range slider will render the dividers at 0.0, 2.0, 4.0 and so on.
 
 ### Horizontal
 
@@ -775,7 +775,7 @@ Widget build(BuildContext context) {
                     min: 0.0,
                     max: 10.0,
                     interval: 2,
-                    showDivisors: true,
+                    showDividers: true,
                     values: _values,
                     onChanged: (SfRangeValues newValues) {
                         setState(() {
@@ -792,7 +792,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Range slider divisor support](images/label-and-divisor/show-divisor.png)
+![Range slider divider support](images/label-and-divider/show-divider.png)
 
 ### Vertical
 
@@ -815,7 +815,7 @@ Widget build(BuildContext context) {
                     min: 0.0,
                     max: 10.0,
                     interval: 2,
-                    showDivisors: true,
+                    showDividers: true,
                     values: _values,
                     onChanged: (SfRangeValues newValues) {
                         setState(() {
@@ -832,11 +832,11 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Range slider divisor support](images/label-and-divisor/vertical-show-divisor.png)
+![Range slider divider support](images/label-and-divider/vertical-show-divider.png)
 
-## Divisor radius
+## Divider radius
 
-You can change the active and inactive divisor radius of the range slider using the [`activeDivisorRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/activeDivisorRadius.html) and the [`inactiveDivisorRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/inactiveDivisorRadius.html) properties respectively.
+You can change the active and inactive divider radius of the range slider using the [`activeDividerRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/activeDividerRadius.html) and the [`inactiveDividerRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/inactiveDividerRadius.html) properties respectively.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderTheme-class.html).
 
@@ -856,14 +856,14 @@ Widget build(BuildContext context) {
                  data: SfRangeSliderThemeData(
                     activeTrackHeight: 10,
                     inactiveTrackHeight: 10,
-                    activeDivisorRadius: 5,
-                    inactiveDivisorRadius: 5
+                    activeDividerRadius: 5,
+                    inactiveDividerRadius: 5
                  ),
                  child: SfRangeSlider(
                     min: 0.0,
                     max: 10.0,
                     interval: 1,
-                    showDivisors: true,
+                    showDividers: true,
                     values: _values,
                     onChanged: (SfRangeValues newValues) {
                         setState(() {
@@ -880,7 +880,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Divisor radius support](images/label-and-divisor/range-slider-divisor-radius.png)
+![Divider radius support](images/label-and-divider/range-slider-divider-radius.png)
 
 ### Vertical
 
@@ -898,14 +898,14 @@ Widget build(BuildContext context) {
                  data: SfRangeSliderThemeData(
                     activeTrackHeight: 10,
                     inactiveTrackHeight: 10,
-                    activeDivisorRadius: 5,
-                    inactiveDivisorRadius: 5
+                    activeDividerRadius: 5,
+                    inactiveDividerRadius: 5
                  ),
                  child: SfRangeSlider.vertical(
                     min: 0.0,
                     max: 10.0,
                     interval: 1,
-                    showDivisors: true,
+                    showDividers: true,
                     values: _values,
                     onChanged: (SfRangeValues newValues) {
                         setState(() {
@@ -922,13 +922,13 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Divisor radius support](images/label-and-divisor/vertical-range-slider-divisor-radius.png)
+![Divider radius support](images/label-and-divider/vertical-range-slider-divider-radius.png)
 
-## Divisor stroke width and stroke color
+## Divider stroke width and stroke color
 
-You can change the active and inactive divisor stroke width of the range slider using the [`activeDivisorStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/activeDivisorStrokeWidth.html) and the [`inactiveDivisorStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/inactiveDivisorStrokeWidth.html) properties respectively.
+You can change the active and inactive divider stroke width of the range slider using the [`activeDividerStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/activeDividerStrokeWidth.html) and the [`inactiveDividerStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/inactiveDividerStrokeWidth.html) properties respectively.
 
-Also, you can change the active and inactive divisor stroke color of the range slider using the [`activeDivisorStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/activeDivisorStrokeColor.html) and the [`inactiveDivisorStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/inactiveDivisorStrokeColor.html) properties respectively.
+Also, you can change the active and inactive divider stroke color of the range slider using the [`activeDividerStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/activeDividerStrokeColor.html) and the [`inactiveDividerStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/inactiveDividerStrokeColor.html) properties respectively.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderTheme-class.html).
 
@@ -948,18 +948,18 @@ Widget build(BuildContext context) {
                  data: SfRangeSliderThemeData(
                      activeTrackHeight: 10,
                      inactiveTrackHeight: 10,
-                     activeDivisorRadius:4 ,
-                     inactiveDivisorRadius: 4,
-                     activeDivisorStrokeColor: Colors.red,
-                     activeDivisorStrokeWidth: 2,
-                     inactiveDivisorStrokeWidth: 2,
-                     inactiveDivisorStrokeColor: Colors.red,
+                     activeDividerRadius:4 ,
+                     inactiveDividerRadius: 4,
+                     activeDividerStrokeColor: Colors.red,
+                     activeDividerStrokeWidth: 2,
+                     inactiveDividerStrokeWidth: 2,
+                     inactiveDividerStrokeColor: Colors.red,
                  ),
                  child: SfRangeSlider(
                     min: 0.0,
                     max: 10.0,
                     interval: 1,
-                    showDivisors: true,
+                    showDividers: true,
                     values: _values,
                     onChanged: (SfRangeValues newValues) {
                         setState(() {
@@ -976,7 +976,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Divisor stroke width and color support](images/label-and-divisor/range-slider-divisor-stroke-color.png)
+![Divider stroke width and color support](images/label-and-divider/range-slider-divider-stroke-color.png)
 
 ### Vertical
 
@@ -994,18 +994,18 @@ Widget build(BuildContext context) {
                  data: SfRangeSliderThemeData(
                      activeTrackHeight: 10,
                      inactiveTrackHeight: 10,
-                     activeDivisorRadius:4 ,
-                     inactiveDivisorRadius: 4,
-                     activeDivisorStrokeColor: Colors.red,
-                     activeDivisorStrokeWidth: 2,
-                     inactiveDivisorStrokeWidth: 2,
-                     inactiveDivisorStrokeColor: Colors.red,
+                     activeDividerRadius:4 ,
+                     inactiveDividerRadius: 4,
+                     activeDividerStrokeColor: Colors.red,
+                     activeDividerStrokeWidth: 2,
+                     inactiveDividerStrokeWidth: 2,
+                     inactiveDividerStrokeColor: Colors.red,
                  ),
                  child: SfRangeSlider.vertical(
                     min: 0.0,
                     max: 10.0,
                     interval: 1,
-                    showDivisors: true,
+                    showDividers: true,
                     values: _values,
                     onChanged: (SfRangeValues newValues) {
                         setState(() {
@@ -1022,11 +1022,11 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Divisor stroke width and color support](images/label-and-divisor/vertical-range-slider-divisor-stroke-color.png)
+![Divider stroke width and color support](images/label-and-divider/vertical-range-slider-divider-stroke-color.png)
 
-## Divisor color
+## Divider color
 
-You can change the active and inactive divisor color of the range slider using the [`activeDivisorColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/activeDivisorColor.html) and [`inactiveDivisorColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/inactiveDivisorColor.html) properties respectively.
+You can change the active and inactive divider color of the range slider using the [`activeDividerColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/activeDividerColor.html) and [`inactiveDividerColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/inactiveDividerColor.html) properties respectively.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderTheme-class.html).
 
@@ -1046,14 +1046,14 @@ Widget build(BuildContext context) {
                     data: SfRangeSliderThemeData(
                          activeTrackHeight: 5,
                          inactiveTrackHeight: 5,
-                         activeDivisorColor: Colors.red,
-                         inactiveDivisorColor: Colors.red[200],
+                         activeDividerColor: Colors.red,
+                         inactiveDividerColor: Colors.red[200],
                     ),
                     child:  SfRangeSlider(
                       min: 0.0,
                       max: 10.0,
                       interval: 1,
-                      showDivisors: true,
+                      showDividers: true,
                       values: _values,
                       onChanged: (SfRangeValues newValues){
                             setState(() {
@@ -1070,7 +1070,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Divisor color support](images/label-and-divisor/slider-divisor-color.png)
+![Divider color support](images/label-and-divider/slider-divider-color.png)
 
 ### Vertical
 
@@ -1088,14 +1088,14 @@ Widget build(BuildContext context) {
                     data: SfRangeSliderThemeData(
                          activeTrackHeight: 5,
                          inactiveTrackHeight: 5,
-                         activeDivisorColor: Colors.red,
-                         inactiveDivisorColor: Colors.red[200],
+                         activeDividerColor: Colors.red,
+                         inactiveDividerColor: Colors.red[200],
                     ),
                     child:  SfRangeSlider.vertical(
                       min: 0.0,
                       max: 10.0,
                       interval: 1,
-                      showDivisors: true,
+                      showDividers: true,
                       values: _values,
                       onChanged: (SfRangeValues newValues){
                             setState(() {
@@ -1112,4 +1112,4 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Divisor color support](images/label-and-divisor/vertical-slider-divisor-color.png)
+![Divider color support](images/label-and-divider/vertical-slider-divider-color.png)

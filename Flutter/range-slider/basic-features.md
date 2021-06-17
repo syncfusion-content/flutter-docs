@@ -248,7 +248,7 @@ Widget build(BuildContext context) {
 
 ## Active color
 
-It represents the color applied to the active track, thumb, overlay, and inactive divisors. The active side of the range slider is between the start and end thumbs.
+It represents the color applied to the active track, thumb, overlay, and inactive dividers. The active side of the range slider is between the start and end thumbs.
 
 ### Horizontal
 
@@ -267,7 +267,7 @@ Widget build(BuildContext context) {
                     max: 10.0,
                     values: _values,
                     activeColor: Colors.red,
-                    showDivisors: true,
+                    showDividers: true,
                     onChanged: (SfRangeValues newValues) {
                         setState(() {
                             _values = newValues;
@@ -301,7 +301,7 @@ Widget build(BuildContext context) {
                     max: 10.0,
                     values: _values,
                     activeColor: Colors.red,
-                    showDivisors: true,
+                    showDividers: true,
                     onChanged: (SfRangeValues newValues) {
                         setState(() {
                             _values = newValues;
@@ -320,7 +320,7 @@ Widget build(BuildContext context) {
 
 ## Inactive color
 
-It represents the color applied to the inactive track and active divisors.
+It represents the color applied to the inactive track and active dividers.
 
 The inactive side of the range slider is between the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/min.html) value and the left thumb, and the right thumb and the [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/max.html) value.
 
@@ -344,7 +344,7 @@ Widget build(BuildContext context) {
                     values: _values,
                     activeColor: Colors.red,
                     inactiveColor: Colors.red.withOpacity(0.2),
-                    showDivisors: true,
+                    showDividers: true,
                     onChanged: (SfRangeValues newValues) {
                         setState(() {
                             _values = newValues;
@@ -379,7 +379,7 @@ Widget build(BuildContext context) {
                     values: _values,
                     activeColor: Colors.red,
                     inactiveColor: Colors.red.withOpacity(0.2),
-                    showDivisors: true,
+                    showDividers: true,
                     onChanged: (SfRangeValues newValues) {
                         setState(() {
                             _values = newValues;
@@ -400,6 +400,6 @@ Widget build(BuildContext context) {
 
 * Track - [`Link`](https://help.syncfusion.com/flutter/range-slider/track)
 * Ticks - [`Link`](https://help.syncfusion.com/flutter/range-slider/ticks)
-* Labels and divisors - [`Link`](https://help.syncfusion.com/flutter/range-slider/labels-and-divisor)
+* Labels and dividers - [`Link`](https://help.syncfusion.com/flutter/range-slider/labels-and-divider)
 * Tooltips - [`Link`](https://help.syncfusion.com/flutter/range-slider/tooltip)
 * Thumb and overlay - [`Link`](https://help.syncfusion.com/flutter/range-slider/thumb-and-overlay)
