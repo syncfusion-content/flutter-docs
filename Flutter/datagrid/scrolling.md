@@ -566,11 +566,11 @@ final DataGridController _controller = DataGridController();
 
 N> The vertical and horizontal scrolled offset can be retrieved by using `DataGridController.verticalOffset` and `DataGridController.horizontalOffset` properties.
 
-## Listen the vertical Scroll changes
+## Listen the scroll changes
 
-You can listen the vertical scroll position while do the vertical scrolling by using the `verticalScrollController`.
+You can listen the vertical and horizontal scroll changes by using the `verticalScrollController` and `horizontalScrollController` properties respectively . You can set the listener in ` verticalScrollController` and `horizontalScrollController` through addListener method. By subscribing this listener, the subscribed method in sample level will be called on vertical or horizontal scrolling.
 
-The following example demonstrate load more rows when vertical scrolling reaches 70 percent of vertical maxScrollExtent.
+The following example demonstrates how to load more rows when vertical scrolling reaches the 70% of the vertical maxScrollExtent,
 
 {% tabs %}
 {% highlight Dart %}
@@ -666,10 +666,6 @@ class _EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
-![Flutter DataTable shows programmatic scrolling to column](images/scrolling/flutter_datagrid_vertical_scroll_controller_load_more.gif)
-## Listen the horizontal Scroll changes
-
-You can listen the horizontal scroll position while do horizontal scrolling by using the `horizontalScrollController`.
 
 
 
