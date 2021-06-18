@@ -1845,7 +1845,7 @@ class Model {
 
 ## Show pointer
 
-You can show pointer on the bar gradient legend while hover on the shape or bubble using the `showPointerOnHover` property. The default value of the `showPointerOnHover` property is `false`.
+You may show a pointer on the bar gradient legend while hovering over a shape or bubble using the `showPointerOnHover` property. The default value of the `showPointerOnHover` property is `false`.
 
 N> It is applicable for gradient type bar legend.
 
@@ -1925,7 +1925,7 @@ class Model {
 
 It returns a widget for the given value.
 
-The pointer is used to indicate the exact color of the hovering shape or bubble on the segment.
+The pointer is used to indicate the exact color of the hovering shape or bubble on the legend segment.
 
 The `pointerBuilder` will be called when the user interacts with the shapes or bubbles i.e., while tapping in touch devices and hovering in the mouse enabled devices.
 
