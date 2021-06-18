@@ -2011,19 +2011,19 @@ You can customize the size and color of the pointer using the `pointerSize` and 
 {% tabs %}
 {% highlight Dart %}
 
-late List<Model1> _data;
+late List<Model> _data;
 late MapShapeSource _shapeSource;
 
 @override
 void initState() {
    super.initState();
-   _data = <Model1>[
-      Model1('India', 280),
-      Model1('United States of America', 190),
-      Model1('Kazakhstan', 37),
-      Model1('Italy', 201),
-      Model1('Cuba', 103),
-      Model1('China', 148),
+   _data = <Model>[
+      Model('India', 280),
+      Model('United States of America', 190),
+      Model('Kazakhstan', 37),
+      Model('Italy', 201),
+      Model('Cuba', 103),
+      Model('China', 148),
     ];
 
     _shapeSource = MapShapeSource.asset(
