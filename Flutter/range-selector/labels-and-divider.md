@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Labels in Flutter Range Selector (SfRangeSelector)
-This section explains about how to add the labels and divisors in the range selector.
+This section explains about how to add the labels and dividers in the range selector.
 
 ## Show labels
 
@@ -78,7 +78,7 @@ class Data {
 {% endhighlight %}
 {% endtabs %}
 
-![Range selector labels](images/label-and-divisor/selector_show_label.png)
+![Range selector labels](images/label-and-divider/selector_show_label.png)
 
 N>
 * Refer the [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/numberFormat.html) and [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/dateFormat.html) for formatting the numeric and date labels respectively.
@@ -155,7 +155,7 @@ class Data {
 {% endhighlight %}
 {% endtabs %}
 
-![Number format support](images/label-and-divisor/selector_number_format.png)
+![Number format support](images/label-and-divider/selector_number_format.png)
 
 ## Date format
 
@@ -232,7 +232,7 @@ class Data {
 {% endhighlight %}
 {% endtabs %}
 
-![Year date format support](images/label-and-divisor/selector_year_date_format.png)
+![Year date format support](images/label-and-divider/selector_year_date_format.png)
 
 ### Month format
 
@@ -303,7 +303,7 @@ class Data {
 {% endhighlight %}
 {% endtabs %}
 
-![Month date format support](images/label-and-divisor/selector_month_date_format.png)
+![Month date format support](images/label-and-divider/selector_month_date_format.png)
 
 ### Hour format
 
@@ -374,7 +374,7 @@ class Data {
 {% endhighlight %}
 {% endtabs %}
 
-![Hour date format support](images/label-and-divisor/selector_hour_date_format.png)
+![Hour date format support](images/label-and-divider/selector_hour_date_format.png)
 
 N> Refer the [`DateFormat`](https://api.flutter.dev/flutter/intl/DateFormat-class.html) class for other date format.
 
@@ -450,7 +450,7 @@ class Data {
 {% endhighlight %}
 {% endtabs %}
 
-![Label placement support](images/label-and-divisor/selector_label_placement.png)
+![Label placement support](images/label-and-divider/selector_label_placement.png)
 
 ## Customize label text
 
@@ -526,11 +526,11 @@ class Data {
 {% endhighlight %}
 {% endtabs %}
 
-![Label formatter support](images/label-and-divisor/selector_label_formatter.png)
+![Label formatter support](images/label-and-divider/selector_label_formatter.png)
 
 ## Label style
 
-You can change the active and inactive label appearance of the range selector using the [`activeLabelStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/activeLabelStyle.html) and [`inactiveLabelStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/inactiveLabelStyle.html) properties respectively.
+You can change the active and inactive label appearance of the range selector using the [`activeLabelStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/activeLabelStyle.html) and [`inactiveLabelStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/inactiveLabelStyle.html) properties respectively.
 
 The active side of the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html) is between start and end thumbs.
 
@@ -610,14 +610,14 @@ class Data {
 {% endhighlight %}
 {% endtabs %}
 
-![Labels color support](images/label-and-divisor/selector-labels-color.png)
+![Labels color support](images/label-and-divider/selector-labels-color.png)
 
 ## Label offset
 
-You can adjust the space between ticks and labels of the range selector using the [`labelOffset`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/labelOffset.html) property.
+You can adjust the space between ticks and labels of the range selector using the [`labelOffset`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/labelOffset.html) property.
 
-The default value of [`labelOffset`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/labelOffset.html) property is `Offset(0.0, 13.0)` if  the [`showTicks`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/showTicks.html) property is `false`.
-The default value of [`labelOffset`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/labelOffset.html) property is `Offset(0.0, 5.0)` if the [`showTicks`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/showTicks.html) property is `true`.
+The default value of [`labelOffset`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/labelOffset.html) property is `Offset(0.0, 13.0)` if  the [`showTicks`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/showTicks.html) property is `false`.
+The default value of [`labelOffset`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/labelOffset.html) property is `Offset(0.0, 5.0)` if the [`showTicks`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/showTicks.html) property is `true`.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorTheme-class.html).
 
@@ -655,7 +655,7 @@ Widget build(BuildContext context) {
                         max: _max,
                         interval: 1,
                         showLabels: true,
-                        showDivisors: true,
+                        showDividers: true,
                         initialValues: _values,
                         child: Container(
                         height: 130,
@@ -691,13 +691,13 @@ class Data {
 {% endhighlight %}
 {% endtabs %}
 
-![Labels offset support](images/label-and-divisor/selector-labels-offset.png)
+![Labels offset support](images/label-and-divider/selector-labels-offset.png)
 
-## Show divisors
+## Show dividers
 
-The [`showDivisors`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/showDivisors.html) property is used to render the divisors on the track. The default value of [`showDivisors`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/showDivisors.html) property is `false`. It is a shape which is used to represent the major interval points of the track.
+The `showDividers` property is used to render the dividers on the track. The default value of `showDividers` property is `false`. It is a shape which is used to represent the major interval points of the track.
 
-For example, if [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) is 0.0 and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) is 10.0 and [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/interval.html) is 2.0, the range selector will render the divisors at 0.0, 2.0, 4.0 and so on.
+For example, if [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) is 0.0 and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) is 10.0 and [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/interval.html) is 2.0, the range selector will render the dividers at 0.0, 2.0, 4.0 and so on.
 
 {% tabs %}
 {% highlight Dart %}
@@ -727,7 +727,7 @@ Widget build(BuildContext context) {
                     min: _min,
                     max: _max,
                     interval: 1,
-                    showDivisors: true,
+                    showDividers: true,
                     showLabels: true,
                     initialValues: _values,
                     child: Container(
@@ -763,11 +763,11 @@ class Data {
 {% endhighlight %}
 {% endtabs %}
 
-![Range selector divisors](images/label-and-divisor/selector_show_divisor.png)
+![Range selector dividers](images/label-and-divider/selector_show_divider.png)
 
-## Divisor radius
+## Divider radius
 
-You can change the active and inactive divisor radius of the range selector using the [`activeDivisorRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/activeDivisorRadius.html) and the [`inactiveDivisorRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/inactiveDivisorRadius.html) properties respectively.
+You can change the active and inactive divider radius of the range selector using the `activeDividerRadius` and the `inactiveDividerRadius` properties respectively.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorTheme-class.html).
 
@@ -799,14 +799,14 @@ Widget build(BuildContext context) {
                     data: SfRangeSelectorThemeData(
                         activeTrackHeight: 10,
                         inactiveTrackHeight: 10,
-                        activeDivisorRadius: 5,
-                        inactiveDivisorRadius: 5
+                        activeDividerRadius: 5,
+                        inactiveDividerRadius: 5
                     ),
                     child: SfRangeSelector(
                         min: _min,
                         max: _max,
                         interval: 1,
-                        showDivisors: true,
+                        showDividers: true,
                         initialValues: _values,
                         child: Container(
                         height: 130,
@@ -842,13 +842,13 @@ class Data {
 {% endhighlight %}
 {% endtabs %}
 
-![Divisor radius support](images/label-and-divisor/range-selector-divisor-radius.png)
+![Divider radius support](images/label-and-divider/range-selector-divider-radius.png)
 
-## Divisor stroke width and stroke color
+## Divider stroke width and stroke color
 
-You can change the active and inactive divisor stroke width of the range selector using the [`activeDivisorStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/activeDivisorStrokeWidth.html) and the [`inactiveDivisorStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/inactiveDivisorStrokeWidth.html) properties respectively.
+You can change the active and inactive divider stroke width of the range selector using the `activeDividerStrokeWidth` and the `inactiveDividerStrokeWidth` properties respectively.
 
-Also, you can change the active and inactive divisor stroke color of the range selector using the [`activeDivisorStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/activeDivisorStrokeColor.html) and the [`inactiveDivisorStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/inactiveDivisorStrokeColor.html) properties respectively.
+Also, you can change the active and inactive divider stroke color of the range selector using the `activeDividerStrokeColor` and the `inactiveDividerStrokeColor` properties respectively.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorTheme-class.html).
 
@@ -880,16 +880,16 @@ Widget build(BuildContext context) {
                     data: SfRangeSelectorThemeData(
                        activeTrackHeight: 10,
                        inactiveTrackHeight: 10,
-                       activeDivisorStrokeColor: Colors.red,
-                       activeDivisorStrokeWidth: 2,
-                       inactiveDivisorStrokeWidth: 2,
-                       inactiveDivisorStrokeColor: Colors.red,
+                       activeDividerStrokeColor: Colors.red,
+                       activeDividerStrokeWidth: 2,
+                       inactiveDividerStrokeWidth: 2,
+                       inactiveDividerStrokeColor: Colors.red,
                     ),
                     child: SfRangeSelector(
                         min: _min,
                         max: _max,
                         interval: 1,
-                        showDivisors: true,
+                        showDividers: true,
                         initialValues: _values,
                         child: Container(
                         height: 130,
@@ -925,11 +925,11 @@ class Data {
 {% endhighlight %}
 {% endtabs %}
 
-![Divisor stroke width and color support](images/label-and-divisor/range-selector-divisor-stroke-color.png)
+![Divider stroke width and color support](images/label-and-divider/range-selector-divider-stroke-color.png)
 
-## Divisor color
+## Divider color
 
-You can change the active and inactive divisor color of the range selector using the [`activeDivisorColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/activeDivisorColor.html) and [`inactiveDivisorColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/inactiveDivisorColor.html) properties respectively.
+You can change the active and inactive divider color of the range selector using the `activeDividerColor` and `inactiveDividerColor` properties respectively.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorTheme-class.html).
 
@@ -961,14 +961,14 @@ Widget build(BuildContext context) {
                     data: SfRangeSelectorThemeData(
                         activeTrackHeight: 5,
                         inactiveTrackHeight: 5,
-                        activeDivisorColor: Colors.red,
-                        inactiveDivisorColor: Colors.red[200],
+                        activeDividerColor: Colors.red,
+                        inactiveDividerColor: Colors.red[200],
                     ),
                     child:  SfRangeSelector(
                         min: _min,
                         max: _max,
                         interval: 1,
-                        showDivisors: true,
+                        showDividers: true,
                         initialValues: _values,
                         child: Container(
                         height: 130,
@@ -1004,4 +1004,4 @@ class Data {
 {% endhighlight %}
 {% endtabs %}
 
-![Divisor color support](images/label-and-divisor/selector-divisor-color.png)
+![Divider color support](images/label-and-divider/selector-divider-color.png)
