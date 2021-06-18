@@ -695,7 +695,7 @@ class Data {
 
 ## Show dividers
 
-The [`showDividers`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/showDividers.html) property is used to render the dividers on the track. The default value of [`showDividers`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/showDividers.html) property is `false`. It is a shape which is used to represent the major interval points of the track.
+The `showDividers` property is used to render the dividers on the track. The default value of `showDividers` property is `false`. It is a shape which is used to represent the major interval points of the track.
 
 For example, if [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) is 0.0 and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) is 10.0 and [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/interval.html) is 2.0, the range selector will render the dividers at 0.0, 2.0, 4.0 and so on.
 
@@ -767,7 +767,7 @@ class Data {
 
 ## Divider radius
 
-You can change the active and inactive divider radius of the range selector using the [`activeDividerRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/activeDividerRadius.html) and the [`inactiveDividerRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/inactiveDividerRadius.html) properties respectively.
+You can change the active and inactive divider radius of the range selector using the `activeDividerRadius` and the `inactiveDividerRadius` properties respectively.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorTheme-class.html).
 
@@ -846,9 +846,9 @@ class Data {
 
 ## Divider stroke width and stroke color
 
-You can change the active and inactive divider stroke width of the range selector using the [`activeDividerStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/activeDividerStrokeWidth.html) and the [`inactiveDividerStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/inactiveDividerStrokeWidth.html) properties respectively.
+You can change the active and inactive divider stroke width of the range selector using the `activeDividerStrokeWidth` and the `inactiveDividerStrokeWidth` properties respectively.
 
-Also, you can change the active and inactive divider stroke color of the range selector using the [`activeDividerStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/activeDividerStrokeColor.html) and the [`inactiveDividerStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/inactiveDividerStrokeColor.html) properties respectively.
+Also, you can change the active and inactive divider stroke color of the range selector using the `activeDividerStrokeColor` and the `inactiveDividerStrokeColor` properties respectively.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorTheme-class.html).
 
@@ -929,7 +929,7 @@ class Data {
 
 ## Divider color
 
-You can change the active and inactive divider color of the range selector using the [`activeDividerColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/activeDividerColor.html) and [`inactiveDividerColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorThemeData/inactiveDividerColor.html) properties respectively.
+You can change the active and inactive divider color of the range selector using the `activeDividerColor` and `inactiveDividerColor` properties respectively.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSelectorTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSelectorTheme-class.html).
 

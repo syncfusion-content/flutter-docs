@@ -751,7 +751,7 @@ Widget build(BuildContext context) {
 
 ## Show dividers
 
-The [`showDividers`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/showDividers.html) property is used to render the dividers on the track. The default value of the [`showDividers`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/showDividers.html) property is `false`. It is a shape which is used to represent the major interval points of the track.
+The `showDividers` property is used to render the dividers on the track. The default value of the `showDividers` property is `false`. It is a shape which is used to represent the major interval points of the track.
 
 For example, if [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html) is 0.0 and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) is 10.0 and [`interval`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/interval.html) is 2.0, the slider will render the dividers at 0.0, 2.0, 4.0 and so on.
 
@@ -837,7 +837,7 @@ Widget build(BuildContext context) {
 
 ## Divider radius
 
-You can change the active and inactive divider radius of the slider using the [`activeDividerRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/activeDividerRadius.html) and the [`inactiveDividerRadius`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/inactiveDividerRadius.html) properties respectively.
+You can change the active and inactive divider radius of the slider using the `activeDividerRadius` and the `inactiveDividerRadius` properties respectively.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderTheme-class.html).
 
@@ -928,9 +928,9 @@ Widget build(BuildContext context) {
 
 ## Divider stroke width and stroke color
 
-You can change the active and inactive divider stroke width of the slider using the [`activeDividerStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/activeDividerStrokeWidth.html) and the [`inactiveDividerStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/inactiveDividerStrokeWidth.html) properties respectively.
+You can change the active and inactive divider stroke width of the slider using the `activeDividerStrokeWidth` and the `inactiveDividerStrokeWidth` properties respectively.
 
-Also, you can change the active and inactive divider stroke color of the slider using the [`activeDividerStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/activeDividerStrokeColor.html) and the [`inactiveDividerStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/inactiveDividerStrokeColor.html) properties respectively.
+Also, you can change the active and inactive divider stroke color of the slider using the `activeDividerStrokeColor` and the `inactiveDividerStrokeColor` properties respectively.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderTheme-class.html).
 
@@ -1025,7 +1025,7 @@ Widget build(BuildContext context) {
 
 ## Divider color
 
-You can change the active and inactive divider color of the slider using the [`activeDividerColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/activeDividerColor.html) and [`inactiveDividerColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/inactiveDividerColor.html) properties respectively.
+You can change the active and inactive divider color of the slider using the `activeDividerColor` and `inactiveDividerColor` properties respectively.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderTheme-class.html).
 

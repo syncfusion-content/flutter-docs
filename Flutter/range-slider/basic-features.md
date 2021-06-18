@@ -400,6 +400,6 @@ Widget build(BuildContext context) {
 
 * Track - [`Link`](https://help.syncfusion.com/flutter/range-slider/track)
 * Ticks - [`Link`](https://help.syncfusion.com/flutter/range-slider/ticks)
-* Labels and dividers - [`Link`](https://help.syncfusion.com/flutter/range-slider/labels-and-divider)
+* Labels and dividers - `Link`
 * Tooltips - [`Link`](https://help.syncfusion.com/flutter/range-slider/tooltip)
 * Thumb and overlay - [`Link`](https://help.syncfusion.com/flutter/range-slider/thumb-and-overlay)
