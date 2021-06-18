@@ -568,9 +568,9 @@ N> The vertical and horizontal scrolled offset can be retrieved by using `DataGr
 
 ## Listen the scroll changes
 
-You can listen the vertical and horizontal scroll changes by using the `verticalScrollController` and `horizontalScrollController` properties respectively . You can set the listener in ` verticalScrollController` and `horizontalScrollController` through `addListener` method. By subscribing this listener, the subscribed method in sample level will be called on vertical or horizontal scrolling.
+Listen to the vertical and horizontal scroll changes by using the `verticalScrollController` and the `horizontalScrollController` properties respectively . Set the listener in the ` verticalScrollController` and the `horizontalScrollController` using the `addListener` method. By subscribing to this listener, the subscribed method in the sample level will be called on vertical or horizontal scrolling.
 
-The following example demonstrates how to load more rows when vertical scrolling reaches the 70% of the vertical maxScrollExtent,
+The following example demonstrates how to load more rows when vertical scrolling reaches 70% of the vertical maxScrollExtent,
 
 {% tabs %}
 {% highlight Dart %}
