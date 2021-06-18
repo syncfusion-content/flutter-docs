@@ -565,3 +565,123 @@ final DataGridController _controller = DataGridController();
 {% endtabs %}
 
 N> The vertical and horizontal scrolled offset can be retrieved by using `DataGridController.verticalOffset` and `DataGridController.horizontalOffset` properties.
+
+## Listen the scroll changes
+
+Listen to the vertical and horizontal scroll changes by using the `verticalScrollController` and the `horizontalScrollController` properties respectively . Set the listener in the ` verticalScrollController` and the `horizontalScrollController` using the `addListener` method. By subscribing to this listener, the subscribed method in the sample level will be called on vertical or horizontal scrolling.
+
+The following example demonstrates how to load more rows when vertical scrolling reaches 70% of the vertical maxScrollExtent,
+
+{% tabs %}
+{% highlight Dart %}
+
+late _EmployeeDataSource employeeDataSource;
+late ScrollController verticalScrollController;
+
+  void verticalListner() {
+    if (verticalScrollController.position.pixels >=
+        verticalScrollController.position.maxScrollExtent * (70 / 100)) {
+      employeeDataSource.loadMoreRows();
+    }
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    employeeDataSource = _EmployeeDataSource();
+    verticalScrollController = ScrollController()..addListener(verticalListner);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Flutter DataGrid Sample'),
+      ),
+      body: SfDataGrid(
+          source: employeeDataSource,
+          verticalScrollController: verticalScrollController,
+          columnWidthMode: ColumnWidthMode.fill,
+          columns: _getColumns()),
+    );
+  }
+
+class _EmployeeDataSource extends DataGridSource {
+  _EmployeeDataSource() {
+    loadEmployees(25);
+  }
+
+  List<_Employee> employees = [];
+
+  List<DataGridRow> dataGridRows = [];
+
+  @override
+  List<DataGridRow> get rows => dataGridRows;
+
+  @override
+  DataGridRowAdapter buildRow(DataGridRow row) {
+    return DataGridRowAdapter(cells: [
+      Container(
+        padding: EdgeInsets.all(8),
+        alignment: Alignment.centerRight,
+        child: Text(
+          row.getCells()[0].value.toString(),
+          overflow: TextOverflow.ellipsis,
+        ),
+      ),
+      Container(
+        padding: EdgeInsets.all(8),
+        alignment: Alignment.centerRight,
+        child: Text(
+          row.getCells()[1].value.toString(),
+          overflow: TextOverflow.ellipsis,
+        ),
+      ),
+      Container(
+        padding: EdgeInsets.all(8),
+        alignment: Alignment.centerLeft,
+        child: Text(
+          row.getCells()[2].value.toString(),
+          overflow: TextOverflow.ellipsis,
+        ),
+      ),
+      Container(
+        padding: EdgeInsets.all(8),
+        alignment: Alignment.centerRight,
+        child: Text(
+          NumberFormat.currency(locale: 'en_US', symbol: '\$')
+              .format(row.getCells()[3].value)
+              .toString(),
+          overflow: TextOverflow.ellipsis,
+        ),
+      ),
+    ]);
+  }
+
+  void loadEmployees(int count) {
+    final Random random = Random();
+    final int startIndex = employees.isNotEmpty ? employees.length : 0,
+        endIndex = startIndex + count;
+
+    for (int i = startIndex; i < endIndex; i++) {
+      var employee = _Employee(
+        1000 + i,
+        1700 + i,
+        names[i < names.length ? i : random.nextInt(names.length - 1)],
+        random.nextInt(1000) + random.nextDouble(),
+        cities[random.nextInt(cities.length - 1)],
+        1500.0 + random.nextInt(100),
+      );
+      employees.add(employee);
+      dataGridRows.add(employee.getDataGridRow);
+    }
+  }
+
+  void loadMoreRows() {
+    loadEmployees(15);
+    notifyListeners();
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
