@@ -248,7 +248,7 @@ Widget build(BuildContext context) {
 
 ## Active color
 
-It represents the color applied to the active track, thumb, overlay, and inactive divisors. The active side of the slider is between the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html) value and the thumb.
+It represents the color applied to the active track, thumb, overlay, and inactive dividers. The active side of the slider is between the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/min.html) value and the thumb.
 
 ### Horizontal
 
@@ -268,7 +268,7 @@ Widget build(BuildContext context) {
                 value: _value,
                 interval: 2,
                 activeColor: Colors.red,
-                showDivisors: true,
+                showDividers: true,
                 showTicks: true,
                 showLabels: true,
                 onChanged: (dynamic newValue) {
@@ -305,7 +305,7 @@ Widget build(BuildContext context) {
                 value: _value,
                 interval: 2,
                 activeColor: Colors.red,
-                showDivisors: true,
+                showDividers: true,
                 showTicks: true,
                 showLabels: true,
                 onChanged: (dynamic newValue) {
@@ -326,7 +326,7 @@ Widget build(BuildContext context) {
 
 ## Inactive color
 
-It represents the color applied to the inactive track and active divisors.
+It represents the color applied to the inactive track and active dividers.
 
 The inactive side of the slider is between the thumb and the [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/max.html) value.
 
@@ -349,7 +349,7 @@ Widget build(BuildContext context) {
                 interval: 2,
                 activeColor: Colors.red,
                 inactiveColor: Colors.red.withOpacity(0.2),
-                showDivisors: true,
+                showDividers: true,
                 showTicks: true,
                 showLabels: true,
                 onChanged: (dynamic newValue) {
@@ -387,7 +387,7 @@ Widget build(BuildContext context) {
                 interval: 2,
                 activeColor: Colors.red,
                 inactiveColor: Colors.red.withOpacity(0.2),
-                showDivisors: true,
+                showDividers: true,
                 showTicks: true,
                 showLabels: true,
                 onChanged: (dynamic newValue) {
@@ -410,6 +410,6 @@ Widget build(BuildContext context) {
 
 * Track - [`Link`](https://help.syncfusion.com/flutter/slider/track)
 * Ticks - [`Link`](https://help.syncfusion.com/flutter/slider/ticks)
-* Labels and divisors - [`Link`](https://help.syncfusion.com/flutter/slider/labels-and-divisor)
+* Labels and dividers - `Link`
 * Tooltip - [`Link`](https://help.syncfusion.com/flutter/slider/tooltip)
 * Thumb and overlay - [`Link`](https://help.syncfusion.com/flutter/slider/thumb-and-overlay)
