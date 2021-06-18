@@ -1842,3 +1842,242 @@ class Model {
 {% endtabs %}
 
 ![Bar legend labels placement](images/legend/bar-legend-equal-color-mapper-default.png)
+
+## Show pointer
+
+You can show pointer on the bar gradient legend while hover on the shape or bubble using the `showPointerOnHover` property. The default value of the `showPointerOnHover` property is `false`.
+
+N> It is applicable for gradient type bar legend.
+
+{% tabs %}
+{% highlight Dart %}
+
+late List<Model> _data;
+late MapShapeSource _shapeSource;
+
+@override
+void initState() {
+   super.initState();
+   _data = <Model>[
+      Model('India', 280),
+      Model('United States of America', 190),
+      Model('Kazakhstan', 37),
+      Model('Italy', 201),
+      Model('Cuba', 103),
+      Model('China', 148),
+    ];
+
+    _shapeSource = MapShapeSource.asset(
+      "assets/world_map.json",
+      shapeDataField: "name",
+      dataCount: _data.length,
+      primaryValueMapper: (int index) => _data[index].country,
+      shapeColorValueMapper: (int index) => _data[index].density,
+      shapeColorMappers: [
+        MapColorMapper(from: 0, to: 100, color: Colors.red, text: '0 - 100'),
+        MapColorMapper(
+            from: 101, to: 200, color: Colors.green, text: '101 - 200'),
+        MapColorMapper(
+            from: 201, to: 300, color: Colors.blue, text: '201 - 300'),
+      ],
+    );
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+     body: Center(
+        child: Container(
+          height: 350,
+          child: Padding(
+            padding: EdgeInsets.only(left: 15, right: 15),
+            child: SfMaps(
+              layers: [
+                MapShapeLayer(
+                  source: _shapeSource,
+                  legend: MapLegend.bar(
+                    MapElement.shape,
+                    segmentPaintingStyle: MapLegendPaintingStyle.gradient,
+                    showPointerOnHover: true,
+                  ),
+                )
+              ],
+            ),
+          ),
+        ),
+      ),
+   );
+}
+
+class Model {
+  const Model(this.country, this.density);
+
+  final String country;
+  final double density;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Bar legend pointer](images/legend/bar-legend-pointer.gif)
+
+## Pointer builder
+
+It returns a widget for the given value.
+
+The pointer is used to indicate the exact color of the hovering shape or bubble on the segment.
+
+The `pointerBuilder` will be called when the user interacts with the shapes or bubbles i.e., while tapping in touch devices and hovering in the mouse enabled devices.
+
+{% tabs %}
+{% highlight Dart %}
+
+late List<Model> _data;
+late MapShapeSource _shapeSource;
+
+@override
+void initState() {
+   super.initState();
+   _data = <Model>[
+      Model('India', 280),
+      Model('United States of America', 190),
+      Model('Kazakhstan', 37),
+      Model('Italy', 201),
+      Model('Cuba', 103),
+      Model('China', 148),
+   ];
+
+   _shapeSource = MapShapeSource.asset(
+      "assets/world_map.json",
+      shapeDataField: "name",
+      dataCount: _data.length,
+      primaryValueMapper: (int index) => _data[index].country,
+      shapeColorValueMapper: (int index) => _data[index].density,
+      shapeColorMappers: [
+        MapColorMapper(from: 0, to: 100, color: Colors.red, text: '0 - 100'),
+        MapColorMapper(
+            from: 101, to: 200, color: Colors.green, text: '101 - 200'),
+        MapColorMapper(
+            from: 201, to: 300, color: Colors.blue, text: '201 - 300'),
+     ],
+   );
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+     body: Center(
+        child: Container(
+          height: 350,
+          child: Padding(
+            padding: EdgeInsets.only(left: 15, right: 15),
+            child: SfMaps(
+              layers: [
+                MapShapeLayer(
+                  source: _shapeSource,
+                  legend: MapLegend.bar(
+                    MapElement.shape,
+                    segmentPaintingStyle: MapLegendPaintingStyle.gradient,
+                    showPointerOnHover: true,
+                    pointerBuilder: (BuildContext context, dynamic value) {
+                      return Icon(Icons.arrow_downward, size: 15);
+                    },
+                  ),
+                )
+              ],
+            ),
+          ),
+        ),
+      ),
+   );
+}
+
+class Model {
+  const Model(this.country, this.density);
+
+  final String country;
+  final double density;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Bar legend custom pointer](images/legend/bar-legend-custom-pointer.png)
+
+## Pointer customization
+
+You can customize the size and color of the pointer using the `pointerSize` and `pointerColor` properties. The default value of the `pointerSize` property is `Size(16, 12)`.
+
+{% tabs %}
+{% highlight Dart %}
+
+late List<Model1> _data;
+late MapShapeSource _shapeSource;
+
+@override
+void initState() {
+   super.initState();
+   _data = <Model1>[
+      Model1('India', 280),
+      Model1('United States of America', 190),
+      Model1('Kazakhstan', 37),
+      Model1('Italy', 201),
+      Model1('Cuba', 103),
+      Model1('China', 148),
+    ];
+
+    _shapeSource = MapShapeSource.asset(
+      "assets/world_map.json",
+      shapeDataField: "name",
+      dataCount: _data.length,
+      primaryValueMapper: (int index) => _data[index].country,
+      shapeColorValueMapper: (int index) => _data[index].density,
+      shapeColorMappers: [
+        MapColorMapper(from: 0, to: 100, color: Colors.red, text: '0 - 100'),
+        MapColorMapper(
+            from: 101, to: 200, color: Colors.green, text: '101 - 200'),
+        MapColorMapper(
+            from: 201, to: 300, color: Colors.blue, text: '201 - 300'),
+      ],
+   );
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+     body: Center(
+        child: Container(
+          height: 350,
+          child: Padding(
+            padding: EdgeInsets.only(left: 15, right: 15),
+            child: SfMaps(
+              layers: [
+                MapShapeLayer(
+                  source: _shapeSource,
+                  legend: MapLegend.bar(
+                    MapElement.shape,
+                    segmentPaintingStyle: MapLegendPaintingStyle.gradient,
+                    showPointerOnHover: true,
+                    pointerSize: Size(20, 20),
+                    pointerColor: Colors.deepPurple,
+                  ),
+                )
+              ],
+            ),
+          ),
+        ),
+      ),
+   );
+}
+
+class Model {
+  const Model(this.country, this.density);
+
+  final String country;
+  final double density;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Bar legend pointer customization](images/legend/bar-legend-pointer-customization.png)
