@@ -12,7 +12,7 @@ documentation: ug
 To create a Flutter candle chart quickly, you can check this video.
 
 <style>#flutterCandleChartTutorial{width : 90% !important; height: 300px !important }</style>
-<iframe id='flutterCandleChartTutorial' src='https://www.youtube.com/watch?v=g5cniDExpRw'></iframe>
+<iframe id='flutterCandleChartTutorial' src='https://www.youtube.com/embed/g5cniDExpRw'></iframe>
 
 Candle series is similar to HiLo Open Close series, used to represent the low, high, open and closing price over time.
 

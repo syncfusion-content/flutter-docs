@@ -12,7 +12,7 @@ documentation: ug
 To create a Flutter bar chart quickly, you can check this video.
 
 <style>#flutterBarChartTutorial{width : 90% !important; height: 300px !important }</style>
-<iframe id='flutterBarChartTutorial' src='https://www.youtube.com/watch?v=MHQzCN_jD1Q'></iframe>
+<iframe id='flutterBarChartTutorial' src='https://www.youtube.com/embed/MHQzCN_jD1Q'></iframe>
 
 To render a bar chart, create an instance of [`BarSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BarSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/series.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties can be used to customize the appearance:
 
