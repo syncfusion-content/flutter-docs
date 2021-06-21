@@ -11,6 +11,506 @@ documentation: ug
 
 This section explains about options to customize the header row height and the row height of all the grid rows or particular row based on your requirements.
 
+## Set the height for specific row
+
+The row height of particular row can be set by using the `SfDataGrid.onQueryRowHeight` callback.
+
+{% tabs %}
+{% highlight dart %} 
+
+@override
+Widget build(BuildContext context) {
+  return SfDataGrid(
+    source: rowHeightDataGridSource,
+    onQueryRowHeight: (details) {
+      // Set the row height as 70.0 to the column header row.
+      return details.rowIndex == 0 ? 70.0 : 49.0;
+    },
+    columns: <GridColumn>[
+      GridColumn(
+        columnName: 'ID',
+        label: Container(
+          padding: EdgeInsets.all(16.0),
+          alignment: Alignment.centerRight,
+          child: Text(
+            'ID',
+            softWrap: true,
+          ),
+        ),
+      ),
+      GridColumn(
+        columnName: 'Contact Name',
+        label: Container(
+          padding: EdgeInsets.all(16.0),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'Contact Name',
+            softWrap: true,
+          ),
+        ),
+      ),
+      GridColumn(
+        columnName: 'Company Name',
+        label: Container(
+          padding: EdgeInsets.all(16.0),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'Company Name',
+            softWrap: true,
+          ),
+        ),
+      ),
+      GridColumn(
+        columnName: 'City',
+        label: Container(
+          padding: EdgeInsets.all(16.0),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'City',
+            softWrap: true,
+          ),
+        ),
+      ),
+    ],
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![flutter datagrid shows custom row height for the specific row](images/row-height-customization/flutter-datagrid-specific-row-height-customization.png)
+
+## Fit the row height based on its content
+
+The row height can be autofitted based on its content in the `SfDataGrid.onQueryRowHeight` callback and using the `RowHeightDetails.getIntrinsicRowHeight` method. It calculates the row heights based on the content and improves the readability of the data grid rows. It fetches the header and cell contents from the `GridColumn.columnName` and `DataGridCell.value` properties. By default, it is calculated the height of header and data rows.
+
+{% tabs %}
+{% highlight dart %} 
+
+@override
+Widget build(BuildContext context) {
+  return SfDataGrid(
+    source: rowHeightDataGridSource,
+    onQueryRowHeight: (details) {
+      return details.getIntrinsicRowHeight(details.rowIndex);
+    },
+    columns: <GridColumn>[
+      GridColumn(
+        columnName: 'ID',
+        label: Container(
+          padding: EdgeInsets.all(16.0),
+          alignment: Alignment.centerRight,
+          child: Text(
+            'ID',
+            softWrap: true,
+          ),
+        ),
+      ),
+      GridColumn(
+        columnName: 'Contact Name',
+        label: Container(
+          padding: EdgeInsets.all(16.0),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'Contact Name',
+            softWrap: true,
+          ),
+        ),
+      ),
+      GridColumn(
+        columnName: 'Company Name',
+        label: Container(
+          padding: EdgeInsets.all(16.0),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'Company Name',
+            softWrap: true,
+          ),
+        ),
+      ),
+      GridColumn(
+        columnName: 'City',
+        label: Container(
+          padding: EdgeInsets.all(16.0),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'City',
+            softWrap: true,
+          ),
+        ),
+      ),
+    ],
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![flutter datagrid shows autofit the row height based on content](images/row-height-customization/flutter-datagrid-autofit-rows.png)
+
+The `RowHeightDetails.getIntrinsicRowHeight` method provides some properties to customize the autofit calculation,
+
+* excludeColumns – By default, the `getIntrinsicRowHeight` method calculates the row height based on all columns. To skip the specific columns from the row height calculation, add that column's `GridColumn.columnName` to the excludeColumns collection.
+
+* canIncludeHiddenColumns – The hidden columns can also be consider for the row height calculation by setting the `canIncludeHiddenColumns` as true.
+
+{% tabs %}
+{% highlight dart %}
+
+@override
+Widget build(BuildContext context) {
+  return SfDataGrid(
+    source: rowHeightDataGridSource,
+    onQueryRowHeight: (details) {
+      return details.getIntrinsicRowHeight(details.rowIndex,
+          excludedColumns: ['Cotact Name'], canIncludeHiddenColumns: true);
+    },
+    columns: <GridColumn>[
+      GridColumn(
+        columnName: 'ID',
+        autoFitPadding: EdgeInsets.all(16.0),
+        label: Container(
+          alignment: Alignment.centerRight,
+          child: Text(
+            'ID',
+            softWrap: true,
+          ),
+        ),
+      ),
+      GridColumn(
+        columnName: 'Contact Name',
+        autoFitPadding: EdgeInsets.all(16.0),
+        label: Container(
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'Contact Name',
+            softWrap: true,
+          ),
+        ),
+      ),
+      GridColumn(
+        columnName: 'Company Name',
+        visible: false,
+        autoFitPadding: EdgeInsets.all(16.0),
+        width: 100.0,
+        label: Container(
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'Company Name',
+            softWrap: true,
+          ),
+        ),
+      ),
+      GridColumn(
+        columnName: 'City',
+        label: Container(
+          padding: EdgeInsets.all(16.0),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'City',
+            softWrap: true,
+          ),
+        ),
+      ),
+      GridColumn(
+        columnName: 'Country',
+        label: Container(
+          padding: EdgeInsets.all(16.0),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'Country',
+            softWrap: true,
+          ),
+        ),
+      ),
+    ],
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![flutter datagrid shows customization of autofit row height calculation](images/row-height-customization/flutter-datagrid-autofit-customization.png)
+
+## Fit the row based on different TextStyle
+
+The datagrid provides the support to customize the autofit calculation based on the different text style. If you want to autofit the rows with the different text style for the header and data rows, you can override the `ColumnSizer.computeHeaderCellHeight` and `ColumnSizer.computeCellHeight` methods and provide your customized text style to those methods `textStyle` parameter.
+
+{% tabs %}
+{% highlight dart %}
+
+final CustomColumnSizer _customColumnSizer = CustomColumnSizer();
+
+@override
+Widget build(BuildContext context) {
+  return SfDataGrid(
+    source: employeeDataSource,
+    columnSizer: _customColumnSizer,
+    onQueryRowHeight: (details) {
+      return details.getIntrinsicRowHeight(details.rowIndex);
+    },
+    columns: <GridColumn>[
+      GridColumn(
+        columnName: 'ID',
+        autoFitPadding: EdgeInsets.all(10.0),
+        label: Container(
+          padding: EdgeInsets.all(10.0),
+          alignment: Alignment.centerRight,
+          child: Text('ID',
+              softWrap: true,
+              style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.grey[800])),
+        ),
+      ),
+      GridColumn(
+        columnName: 'Contact Name',
+        autoFitPadding: EdgeInsets.all(10.0),
+        label: Container(
+          padding: EdgeInsets.all(10.0),
+          alignment: Alignment.centerLeft,
+          child: Text('Contact Name',
+              softWrap: true,
+              style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.grey[800])),
+        ),
+      ),
+      GridColumn(
+        columnName: 'Company Name',
+        visible: true,
+        autoFitPadding: EdgeInsets.all(10.0),
+        width: 100.0,
+        label: Container(
+          padding: EdgeInsets.all(10.0),
+          alignment: Alignment.centerLeft,
+          child: Text('Company Name',
+              softWrap: true,
+              style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.grey[800])),
+        ),
+      ),
+      GridColumn(
+        columnName: 'City',
+        autoFitPadding: EdgeInsets.all(10.0)EdgeInsets.all(10.0),
+        label: Container(
+          padding: EdgeInsets.all(10.0)EdgeInsets.all(10.0),
+          alignment: Alignment.centerLeft,
+          child: Text('City',
+              softWrap: true,
+              style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.grey[800])),
+        ),
+      ),
+    ],
+  );
+}
+
+class EmployeeDataSource extends DataGridSource {
+  EmployeeDataSource({required List<_Employee> employees}) {
+    dataGridRows = employees.map<DataGridRow>((dataGridRow) {
+      return DataGridRow(cells: [
+        DataGridCell<int>(columnName: 'ID', value: dataGridRow.id),
+        DataGridCell<String>(
+            columnName: 'Contact Name', value: dataGridRow.contactName),
+        DataGridCell<String>(
+            columnName: 'Company Name', value: dataGridRow.companyName),
+        DataGridCell<String>(columnName: 'City', value: dataGridRow.city),
+      ]);
+    }).toList();
+  }
+
+  List<DataGridRow> dataGridRows = [];
+
+  @override
+  List<DataGridRow> get rows => dataGridRows;
+
+  @override
+  DataGridRowAdapter buildRow(DataGridRow row) {
+    return DataGridRowAdapter(
+        cells: row.getCells().map<Widget>((dataCell) {
+      return Container(
+        padding: EdgeInsets.all(10.0),
+        alignment: dataCell.columnName == 'ID'
+            ? Alignment.centerRight
+            : Alignment.centerLeft,
+        child: Text(dataCell.value.toString(),
+            style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.bold,
+                color: Colors.grey[800])),
+      );
+    }).toList());
+  }
+}
+
+class CustomColumnSizer extends ColumnSizer {
+  @override
+  double computeHeaderCellHeight(GridColumn column, TextStyle textStyle) {
+    // Replace your customized TextStyle here.
+    textStyle = TextStyle(
+        fontSize: 15, fontWeight: FontWeight.bold, color: Colors.grey[800]);
+    return super.computeHeaderCellHeight(column, textStyle);
+  }
+
+  @override
+  double computeCellHeight(GridColumn column, DataGridRow row,
+      Object? cellValue, TextStyle textStyle) {
+    // Replace your customized TextStyle here.
+    textStyle = TextStyle(
+        fontSize: 15, fontWeight: FontWeight.bold, color: Colors.grey[800]);
+    
+    return super.computeCellHeight(column, row, cellValue, textStyle);
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![flutter datagrid shows autofit the row height based on different text style](images/row-height-customization/flutter-datagrid-autofit-textstyle-customization.png)
+
+## Fit the row based on formatted value
+
+The data grid provides the support to customize the autofit calculation based on the formatted cell values. If you want to autofit the rows based on the formatted values (i.e, NumberFormat and DateFormat) for the data rows, you can override the `ColumnSizer.computeCellHeight` method and provide your formatted value to that method `cellValue` parameter.
+
+{% tabs %}
+{% highlight dart %}
+
+final CustomColumnSizer _customColumnSizer = CustomColumnSizer();
+
+@override
+Widget build(BuildContext context) {
+  return SfDataGrid(
+    source: employeeDataSource,
+    columnSizer: _customColumnSizer,
+    onQueryRowHeight: (details) {
+      return details.getIntrinsicRowHeight(details.rowIndex);
+    },
+    columns: <GridColumn>[
+      GridColumn(
+        columnName: 'ID',
+        autoFitPadding: EdgeInsets.all(10.0),
+        label: Container(
+          padding: EdgeInsets.all(10.0),
+          alignment: Alignment.centerRight,
+          child: Text(
+            'ID',
+            softWrap: true,
+          ),
+        ),
+      ),
+      GridColumn(
+        columnName: 'Contact Name',
+        autoFitPadding: EdgeInsets.all(10.0),
+        label: Container(
+          padding: EdgeInsets.all(10.0),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'Contact Name',
+            softWrap: true,
+          ),
+        ),
+      ),
+      GridColumn(
+        columnName: 'Date of Birth',
+        visible: true,
+        autoFitPadding: EdgeInsets.all(10.0),
+        width: 100.0,
+        label: Container(
+          padding: EdgeInsets.all(10.0),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'Date of Birth',
+            softWrap: true,
+          ),
+        ),
+      ),
+      GridColumn(
+        columnName: 'Salary',
+        autoFitPadding: EdgeInsets.all(10.0),
+        label: Container(
+          padding: EdgeInsets.all(10.0),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'Salary',
+            softWrap: true,
+          ),
+        ),
+      ),
+    ],
+  );
+}
+
+class EmployeeDataSource extends DataGridSource {
+  EmployeeDataSource({required List<_Employee> employees}) {
+    dataGridRows = employees.map<DataGridRow>((dataGridRow) {
+      return DataGridRow(cells: [
+        DataGridCell<int>(columnName: 'ID', value: dataGridRow.id),
+        DataGridCell<String>(
+            columnName: 'Contact Name', value: dataGridRow.contactName),
+        DataGridCell<DateTime>(
+            columnName: 'Date of Birth', value: dataGridRow.dob),
+        DataGridCell<int>(columnName: 'Salary', value: dataGridRow.salary),
+      ]);
+    }).toList();
+  }
+
+  List<DataGridRow> dataGridRows = [];
+
+  @override
+  List<DataGridRow> get rows => dataGridRows;
+
+  @override
+  DataGridRowAdapter buildRow(DataGridRow row) {
+    return DataGridRowAdapter(
+        cells: row.getCells().map<Widget>((dataCell) {
+      late String cellValue;
+      if (dataCell.columnName == 'Date of Birth') {
+        cellValue = DateFormat.yMMMMd('en_US').format(dataCell.value);
+      } else if (dataCell.columnName == 'Salary') {
+        cellValue = NumberFormat.simpleCurrency(decimalDigits: 0)
+            .format(dataCell.value);
+      } else {
+        cellValue = dataCell.value.toString();
+      }
+
+      return Container(
+        padding: EdgeInsets.all(10.0),
+        alignment: dataCell.columnName == 'ID'
+            ? Alignment.centerRight
+            : Alignment.centerLeft,
+        child: Text(cellValue),
+      );
+    }).toList());
+  }
+}
+
+class CustomColumnSizer extends ColumnSizer {
+  @override
+  double computeCellHeight(GridColumn column, DataGridRow row,
+      Object? cellValue, TextStyle textStyle) {
+    if (column.columnName == 'Date of Birth') {
+      cellValue = DateFormat.yMMMMd('en_US').format(cellValue as DateTime);
+    } else if (column.columnName == 'Salary') {
+      cellValue =
+          NumberFormat.simpleCurrency(decimalDigits: 0).format(cellValue);
+    }
+
+    return super.computeCellHeight(column, row, cellValue, textStyle);
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![flutter datagrid shows autofit the row height based on formatted cell value](images/row-height-customization/flutter-datagrid-formatted-cellvalue.png)
+
 ## Set height for header row
 
 [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) allows you to customize the height of the header row by using the [headerRowHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/headerRowHeight.html) property.
