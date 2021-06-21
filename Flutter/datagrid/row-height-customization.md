@@ -82,7 +82,7 @@ Widget build(BuildContext context) {
 
 ## Fit the row height based on its content
 
-The row height can be autofitted based on its content in the `SfDataGrid.onQueryRowHeight` callback and using the `RowHeightDetails.getIntrinsicRowHeight` method. It calculates the row heights based on the content and improves the readability of the data grid rows. It fetches the header and cell contents from the `GridColumn.columnName` and `DataGridCell.value` properties. By default, it is calculated the height of header and data rows.
+The row height can be autofit based on its content in the `SfDataGrid.onQueryRowHeight` callback and using the `RowHeightDetails.getIntrinsicRowHeight` method. It calculates the row heights based on the content and improves the readability of the data grid rows. It fetches the header and cell contents from the `GridColumn.columnName` and `DataGridCell.value` properties. By default, it is calculated the height of header and data rows.
 
 {% tabs %}
 {% highlight dart %} 
