@@ -11,7 +11,7 @@ documentation: ug
 
 ## Sufficient contrast
 
-The `SfPdfViewer` [theming](https://help.syncfusion.com/flutter/themes/themes) support provides a consistent and standardized appearance, as well as the ability to set the colors for all UI elements.
+The `SfPdfViewer` [theming](https://help.syncfusion.com/flutter/themes) support provides a consistent and standardized appearance, as well as the ability to set the colors for all UI elements.
 
 The following APIs allow you to customize the colors of the following elements.
 * [searchTextHighlightColor](https://help.syncfusion.com/flutter/pdf-viewer/text-search#customize-the-search-text-highlight-color)
@@ -47,12 +47,12 @@ The `SfPdfViewer` supports the following keyboard interactions.
   </tr>
   <tr>
     <td>Home</td>
-    <td>fn+Left arrow</td>
+    <td>Fn+Left arrow</td>
     <td>Navigate to the first page</td>
   </tr>
   <tr>
     <td>End</td>
-    <td>fn+Right arrow</td>
+    <td>Fn+Right arrow</td>
     <td>Navigate to the last page</td>
   </tr>
   <tr>
