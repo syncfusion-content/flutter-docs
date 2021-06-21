@@ -43,7 +43,7 @@ The `SfPdfViewer` supports the following keyboard interactions.
     <th style="text-align:left">macOs</th>
   </tr>
      <tr>
-  <th style="text-align:left" colspan="2">Shortcuts for page navigation</th>
+  <th style="text-align:left" colspan="3">Shortcuts for page navigation</th>
   </tr>
   <tr>
     <td>Home</td>
@@ -66,7 +66,7 @@ The `SfPdfViewer` supports the following keyboard interactions.
     <td>Navigate to the next page</td>
   </tr>
    <tr>
-    <th style="text-align:left" colspan="2">Shortcuts for Zooming</th>
+    <th style="text-align:left" colspan="3">Shortcuts for Zooming</th>
   </tr>
    <tr>
     <td>Ctrl + =</td>
@@ -86,7 +86,7 @@ The `SfPdfViewer` supports the following keyboard interactions.
     <td>Retain the zoom level to 1</td>
   </tr>
    <tr>
-    <th style="text-align:left" colspan="2">Shortcut for Text Search</th>
+    <th style="text-align:left" colspan="3">Shortcut for Text Search</th>
   </tr>
   <tr>
     <td>Ctrl + f</td>
@@ -94,7 +94,7 @@ The `SfPdfViewer` supports the following keyboard interactions.
     <td>Open the search toolbar</td>
   </tr>
    <tr>
-    <th style="text-align:left" colspan="2">Shortcut for Text Selection</th>
+    <th style="text-align:left" colspan="3">Shortcut for Text Selection</th>
   </tr>
   <tr>
     <td>Ctrl + c</td>
