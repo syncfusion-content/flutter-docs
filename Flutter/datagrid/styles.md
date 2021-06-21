@@ -146,9 +146,9 @@ Widget build(BuildContext context) {
 
 ![flutter datagrid shows both grid lines](images/styles/flutter-datagrid-gridlines.png)
 
-## Highlight rows for desktop
+## Disable the row highlighting
 
-The DataGrid supports to highlight the rows when mouse hover over it. You can enable or disable highlighting by using the [SfDataGrid.highlightRowOnHover]() property.
+The DataGrid supports to highlight the rows when mouse hover over it. By default, hovering is enabled for the desktop platforms. You can disable highlighting by using the `SfDataGrid.highlightRowOnHover` property.
 
 N> The default value of `highlightRowOnHover` is 'true'.
 
@@ -159,6 +159,7 @@ N> The default value of `highlightRowOnHover` is 'true'.
   Widget build(BuildContext context) {
     return Scaffold(
       body: SfDataGrid(
+        highlightRowOnHover: false,
         source: _employeeDataSource,
         columns: <GridColumn>[
           GridColumn(
@@ -190,7 +191,6 @@ N> The default value of `highlightRowOnHover` is 'true'.
                 child: Text('Salary'),
               )),
         ],
-        highlightRowOnHover: false,
       ),
     );
   }
@@ -198,7 +198,9 @@ N> The default value of `highlightRowOnHover` is 'true'.
 {% endhighlight %}
 {% endtabs %}
 
-You can change the highlighting color and textStyle of the hovered row by using [SfDataGridThemeData.rowHoverColor]() and [SfDataGridThemeData.rowHoverTextStyle]() properties.
+## Change the row highlighting background color and text style
+
+You can change the highlighting color and textStyle of the hovered row by using `SfDataGridThemeData.rowHoverColor` and `SfDataGridThemeData.rowHoverTextStyle` properties.
 
 {% tabs %}
 {% highlight Dart %} 
