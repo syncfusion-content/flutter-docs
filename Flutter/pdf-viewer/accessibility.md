@@ -47,12 +47,12 @@ The `SfPdfViewer` supports the following keyboard interactions.
   </tr>
   <tr>
     <td>Home</td>
-    <td>fn+Left arrow</td>
+    <td>Function+Left arrow</td>
     <td>Navigate to the first page</td>
   </tr>
   <tr>
     <td>End</td>
-    <td>fn+Right arrow</td>
+    <td>Function+Right arrow</td>
     <td>Navigate to the last page</td>
   </tr>
   <tr>
