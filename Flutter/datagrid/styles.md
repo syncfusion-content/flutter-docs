@@ -200,7 +200,7 @@ N> The default value of `highlightRowOnHover` is 'true'.
 
 ## Change the row highlighting background color and text style
 
-You can change the highlighting color and textStyle of the hovered row by using `SfDataGridThemeData.rowHoverColor` and `SfDataGridThemeData.rowHoverTextStyle` properties.
+You can change the highlighting color and text style of the hovered row by using `SfDataGridThemeData.rowHoverColor` and `SfDataGridThemeData.rowHoverTextStyle` properties.
 
 {% tabs %}
 {% highlight Dart %} 
