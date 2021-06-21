@@ -771,7 +771,7 @@ Widget build(BuildContext context) {
         ],
         colorMappers: _colorMappers,
         legend: TreemapLegend.bar(
-          segmentPaintingStyle: TreemapLegendPaintingStyle.solid,
+          segmentPaintingStyle: TreemapLegendPaintingStyle.gradient,
         ),
       ),
    );

@@ -702,7 +702,7 @@ Widget build(BuildContext context) {
                   legend: MapLegend(
                     MapElement.shape,
                     position: MapLegendPosition.bottom,
-                    overflowMode: MapLegendOverflowMode.wrap,
+                    overflowMode: MapLegendOverflowMode.scroll,
                   ),
                 )
               ],
