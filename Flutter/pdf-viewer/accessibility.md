@@ -34,25 +34,34 @@ The `SfPdfViewer` supports the following keyboard interactions.
 
 <table>
   <tr>
-    <th>Key</th>
-    <th>Description</th>
-  </tr>
   <tr>
+    <th  style="text-align:left" colspan="2">Key</th>
+    <th>Description</th>
+    </tr>
+     <tr>
+    <th style="text-align:left">Windows</th>
+    <th style="text-align:left">macOs</th>
+  </tr>
+     <tr>
   <th style="text-align:left" colspan="2">Shortcuts for page navigation</th>
   </tr>
   <tr>
     <td>Home</td>
+    <td>fn+Left arrow</td>
     <td>Navigate to the first page</td>
   </tr>
   <tr>
     <td>End</td>
+    <td>fn+Right arrow</td>
     <td>Navigate to the last page</td>
   </tr>
   <tr>
     <td>Left arrow</td>
+    <td>Left arrow</td>
     <td>Navigate to the previous page</td>
   </tr>
   <tr>
+    <td>Right arrow</td>
     <td>Right arrow</td>
     <td>Navigate to the next page</td>
   </tr>
@@ -61,16 +70,19 @@ The `SfPdfViewer` supports the following keyboard interactions.
   </tr>
    <tr>
     <td>Ctrl + =</td>
+     <td>command + =</td>
     <td>Perform zoom in operation</td>
   </tr>
   <tr>
   </tr>
    <tr>
     <td>Ctrl + -</td>
+    <td>command + -</td>
     <td>Perform zoom out operation</td>
   </tr>
   <tr>
     <td>Ctrl + 0</td>
+    <td>command + 0</td>
     <td>Retain the zoom level to 1</td>
   </tr>
    <tr>
@@ -78,6 +90,7 @@ The `SfPdfViewer` supports the following keyboard interactions.
   </tr>
   <tr>
     <td>Ctrl + f</td>
+     <td>command + f</td>
     <td>Open the search toolbar</td>
   </tr>
    <tr>
@@ -85,6 +98,7 @@ The `SfPdfViewer` supports the following keyboard interactions.
   </tr>
   <tr>
     <td>Ctrl + c</td>
+    <td>command + c</td>
     <td>Copy the selected text</td>
   </tr>
 </table>
