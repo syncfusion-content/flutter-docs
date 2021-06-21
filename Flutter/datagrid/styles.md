@@ -254,4 +254,7 @@ You can change the highlighting color and text style of the hovered row by using
 {% endhighlight %}
 {% endtabs %}
 
+**Note**
+  Download demo application from [GitHub]().
+
 ![flutter datagrid highlight rows](images/styles/flutter-datagrid-highlight-rows.gif)
