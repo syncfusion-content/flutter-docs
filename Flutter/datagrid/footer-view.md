@@ -9,7 +9,7 @@ documentation: ug
 
 # Footer view in Flutter DataGrid
 
-The `SfDataGrid` provides support to load additional row to the datagrid rows collection. It is called footer view. The footer view can be displayed below to the last data row and it has a single cell that is filled to the parent width of `SfDataGrid`. You can allow the footer view by setting any type of widget to the `SfDataGrid.footer` property. The default value of the footer is `null`.
+Creates an additional row that can be displayed below to the last row. Widgets can be displayed to the additional row by setting the `SfDataGrid.footer` property.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -68,7 +68,7 @@ Widget build(BuildContext context) {
 
 ## Change the footer row height
 
-The footer view height can be customized by using the `SfDataGrid.footerHeight` property. The default value of the footer view height is 49.0.
+An additional row height can be personalized by using the `SfDataGrid.footerHeight` property. The default value of the additional row is 49.0.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -128,7 +128,7 @@ Widget build(BuildContext context) {
 
 ## Show footer row always
 
-The footer can be displayed at bottom of the last data row. If you want to show the footer view always on the view bottom, you can simply set the `SfDataGrid.frozenFooterRowsCount` property to 1. 
+By default, the additional row can be displayed below to the last row. If you want to show the additional row always on the view bottom, you can simply set the `SfDataGrid.frozenFooterRowsCount` property to 1.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -139,7 +139,6 @@ Widget build(BuildContext context) {
     source: _employeeDataSource,
     footerFrozenRowsCount: 1,
     footer: Container(
-      color: Colors.grey[400],
       child: Center(
         child: Text(
           'FOOTER VIEW',
@@ -184,4 +183,4 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid shows footer view always on bottom](images/footer-view/flutter-datagrid-footer-view-on-bottom.png)
+![flutter datagrid shows footer view always on bottom](images/footer-view/flutter-datagrid-footer-view-on-bottom.gif)
