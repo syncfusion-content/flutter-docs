@@ -182,7 +182,7 @@ By default, the EdgeInsets.all(16.0) is added with the auto width or height valu
 Widget build(BuildContext context) {
   return SfDataGrid(
     source: _employeeDataSource,
-    columnWidthMode: ColumnWidthMode.fitByCellValue,
+    columnWidthMode: ColumnWidthMode.auto,
     columns: <GridColumn>[
       GridColumn(
         columnName: 'ID',
@@ -408,7 +408,7 @@ Widget build(BuildContext context) {
   return SfDataGrid(
     source: _employeeDataSource,
     columnSizer: _customColumnSizer,
-    columnWidthMode: ColumnWidthMode.auto,
+    columnWidthMode: ColumnWidthMode.fitByCellValue,
     columns: <GridColumn>[
       GridColumn(
         columnName: 'ID',

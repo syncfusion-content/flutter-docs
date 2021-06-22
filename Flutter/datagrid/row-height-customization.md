@@ -21,7 +21,7 @@ The row height of particular row can be set by using the `SfDataGrid.onQueryRowH
 @override
 Widget build(BuildContext context) {
   return SfDataGrid(
-    source: rowHeightDataGridSource,
+    source: employeeDataSource,
     onQueryRowHeight: (details) {
       // Set the row height as 70.0 to the column header row.
       return details.rowIndex == 0 ? 70.0 : 49.0;
@@ -90,7 +90,7 @@ The row height can be autofit based on its content in the `SfDataGrid.onQueryRow
 @override
 Widget build(BuildContext context) {
   return SfDataGrid(
-    source: rowHeightDataGridSource,
+    source: employeeDataSource,
     onQueryRowHeight: (details) {
       return details.getIntrinsicRowHeight(details.rowIndex);
     },
@@ -150,9 +150,9 @@ Widget build(BuildContext context) {
 
 The `RowHeightDetails.getIntrinsicRowHeight` method provides some properties to customize the autofit calculation,
 
-* excludeColumns – By default, the `getIntrinsicRowHeight` method calculates the row height based on all columns. To skip the specific columns from the row height calculation, add that column's `GridColumn.columnName` to the `excludeColumns` collection.
+* `excludeColumns` – By default, the `getIntrinsicRowHeight` method calculates the row height based on all columns. To skip the specific columns from the row height calculation, add that column's `GridColumn.columnName` to the `excludeColumns` collection.
 
-* canIncludeHiddenColumns – The hidden columns can also be consider for the row height calculation by setting the `canIncludeHiddenColumns` as true.
+* `canIncludeHiddenColumns` – The hidden columns (`GridColumn.visible` is false) can also be considered for the row height calculation by setting the `canIncludeHiddenColumns` as true.
 
 {% tabs %}
 {% highlight dart %}
@@ -160,10 +160,10 @@ The `RowHeightDetails.getIntrinsicRowHeight` method provides some properties to 
 @override
 Widget build(BuildContext context) {
   return SfDataGrid(
-    source: rowHeightDataGridSource,
+    source: employeeDataSource,
     onQueryRowHeight: (details) {
       return details.getIntrinsicRowHeight(details.rowIndex,
-          excludedColumns: ['Cotact Name'], canIncludeHiddenColumns: true);
+          excludedColumns: ['Contact Name'], canIncludeHiddenColumns: true);
     },
     columns: <GridColumn>[
       GridColumn(
