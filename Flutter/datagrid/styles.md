@@ -145,3 +145,111 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![flutter datagrid shows both grid lines](images/styles/flutter-datagrid-gridlines.png)
+
+## Disable the row highlighting
+
+By default, the row highlighting on hovering support is enabled for the web and desktop platforms. Disable the row highlighting by setting the `SfDataGrid.highlightRowOnHover` property to `false`.
+
+{% tabs %}
+{% highlight Dart %} 
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfDataGrid(
+        highlightRowOnHover: false,
+        source: _employeeDataSource,
+        columns: <GridColumn>[
+          GridColumn(
+              columnName: 'id',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text('ID'),
+              )),
+          GridColumn(
+              columnName: 'name',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text('Name'),
+              )),
+          GridColumn(
+              columnName: 'designation',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text('Designation'),
+              )),
+          GridColumn(
+              columnName: 'salary',
+              label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text('Salary'),
+              )),
+        ],
+      ),
+    );
+  }
+    
+{% endhighlight %}
+{% endtabs %}
+
+## Change the row highlighting background color and text style
+
+Change the row highlighting color and text style by using the `SfDataGridThemeData.rowHoverColor` and the `SfDataGridThemeData.rowHoverTextStyle` properties.
+
+{% tabs %}
+{% highlight Dart %} 
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SfDataGridTheme(
+        data: SfDataGridThemeData(
+            rowHoverColor: Colors.yellow,
+            rowHoverTextStyle: TextStyle(
+              color: Colors.red,
+              fontSize: 14,
+            )),
+        child: SfDataGrid(
+          source: _employeeDataSource,
+          columns: <GridColumn>[
+            GridColumn(
+                columnName: 'id',
+                label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text('ID'),
+                )),
+            GridColumn(
+                columnName: 'name',
+                label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text('Name'),
+                )),
+            GridColumn(
+                columnName: 'designation',
+                label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text('Designation'),
+                )),
+            GridColumn(
+                columnName: 'salary',
+                label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text('Salary'),
+                )),
+          ],
+        ),
+      ),
+    );
+  }
+{% endhighlight %}
+{% endtabs %}
+
+![flutter datagrid highlight rows](images/styles/flutter-datagrid-highlight-rows.gif)

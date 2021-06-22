@@ -36,22 +36,27 @@ void initState() {
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-     body: SfTreemap(
-        dataCount: _source.length,
-        weightValueMapper: (int index) {
-          return _source[index].usersInMillions;
-        },
-        levels: [
-          TreemapLevel(
-            padding: const EdgeInsets.all(1.5),
-            groupMapper: (int index) {
-              return _source[index].country;
+     body: Center(
+        child: Container(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].usersInMillions;
             },
+            levels: [
+              TreemapLevel(
+                groupMapper: (int index) {
+                  return _source[index].country;
+                },
+              ),
+            ],
+            legend: TreemapLegend(),
           ),
-        ],
-        legend: TreemapLegend(),
-     ),
-  );
+        ),
+      ),
+   );
 }
 
 class SocialMediaUsers {
@@ -95,22 +100,27 @@ void initState() {
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-     body: SfTreemap(
-        dataCount: _source.length,
-        weightValueMapper: (int index) {
-          return _source[index].usersInMillions;
-        },
-        levels: [
-          TreemapLevel(
-            padding: const EdgeInsets.all(1.5),
-            groupMapper: (int index) {
-              return _source[index].country;
+     body: Center(
+        child: Container(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].usersInMillions;
             },
+            levels: [
+              TreemapLevel(
+                groupMapper: (int index) {
+                  return _source[index].country;
+                },
+              ),
+            ],
+            legend: TreemapLegend.bar(),
           ),
-        ],
-        legend: TreemapLegend.bar(),
-     ),
-  );
+        ),
+      ),
+   );
 }
 
 class SocialMediaUsers {
@@ -291,24 +301,29 @@ void initState() {
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-     body: SfTreemap(
-        dataCount: _source.length,
-        weightValueMapper: (int index) {
-          return _source[index].usersInMillions;
-        },
-        levels: [
-          TreemapLevel(
-            padding: const EdgeInsets.all(2.5),
-            groupMapper: (int index) {
-              return _source[index].country;
+     body: Center(
+        child: Container(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].usersInMillions;
             },
+            levels: [
+              TreemapLevel(
+                groupMapper: (int index) {
+                  return _source[index].country;
+                },
+              ),
+            ],
+            legend: TreemapLegend(
+              position: TreemapLegendPosition.bottom,
+            ),
           ),
-        ],
-        legend: TreemapLegend(
-          position: TreemapLegendPosition.bottom,
         ),
-     ),
-  );
+      ),
+   );
 }
 
 class SocialMediaUsers {
@@ -354,24 +369,29 @@ void initState() {
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-     body: SfTreemap(
-        dataCount: _source.length,
-        weightValueMapper: (int index) {
-          return _source[index].usersInMillions;
-        },
-        levels: [
-          TreemapLevel(
-            padding: const EdgeInsets.all(1.5),
-            groupMapper: (int index) {
-              return _source[index].country;
+     body: Center(
+        child: Container(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].usersInMillions;
             },
+            levels: [
+              TreemapLevel(
+                groupMapper: (int index) {
+                  return _source[index].country;
+                },
+              ),
+            ],
+            legend: TreemapLegend(
+              offset: Offset(70, 250),
+            ),
           ),
-        ],
-        legend: TreemapLegend(
-          offset: Offset(70, 250),
         ),
-     ),
-  );
+      ),
+   );
 }
 
 class SocialMediaUsers {
@@ -384,6 +404,8 @@ class SocialMediaUsers {
 
 {% endhighlight %}
 {% endtabs %}
+
+![legend offset](images/legend/legend-offset.png)
 
 ## Overflow mode
 
@@ -418,21 +440,26 @@ void initState() {
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-     body: SfTreemap(
-        dataCount: _source.length,
-        weightValueMapper: (int index) {
-          return _source[index].usersInMillions;
-        },
-        levels: [
-          TreemapLevel(
-            padding: const EdgeInsets.all(1.5),
-            groupMapper: (int index) {
-              return _source[index].country;
+     body: Center(
+        child: Container(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].usersInMillions;
             },
+            levels: [
+              TreemapLevel(
+                groupMapper: (int index) {
+                  return _source[index].country;
+                },
+              ),
+            ],
+            legend: TreemapLegend(
+              overflowMode: TreemapLegendOverflowMode.scroll,
+            ),
           ),
-        ],
-        legend: TreemapLegend(
-          overflowMode: TreemapLegendOverflowMode.scroll,
         ),
       ),
    );
@@ -479,22 +506,27 @@ void initState() {
 
 @override
 Widget build(BuildContext context) {
-   return Scaffold(
-      body: SfTreemap(
-        dataCount: _source.length,
-        weightValueMapper: (int index) {
-          return _source[index].usersInMillions;
-        },
-        levels: [
-          TreemapLevel(
-            padding: const EdgeInsets.all(1.5),
-            groupMapper: (int index) {
-              return _source[index].country;
+  return Scaffold(
+     body: Center(
+        child: Container(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].usersInMillions;
             },
+            levels: [
+              TreemapLevel(
+                groupMapper: (int index) {
+                  return _source[index].country;
+                },
+              ),
+            ],
+            legend: TreemapLegend.bar(
+              overflowMode: TreemapLegendOverflowMode.scroll,
+            ),
           ),
-        ],
-        legend: TreemapLegend.bar(
-          overflowMode: TreemapLegendOverflowMode.scroll,
         ),
       ),
    );
@@ -541,25 +573,30 @@ void initState() {
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-     body: SfTreemap(
-        dataCount: _source.length,
-        weightValueMapper: (int index) {
-          return _source[index].usersInMillions;
-        },
-        levels: [
-          TreemapLevel(
-            padding: const EdgeInsets.all(1.5),
-            groupMapper: (int index) {
-              return _source[index].country;
+     body: Center(
+        child: Container(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].usersInMillions;
             },
-          ),
-        ],
-        legend: TreemapLegend(
-          textStyle: TextStyle(
-            color: Colors.red,
-            fontSize: 14,
-            fontWeight: FontWeight.bold,
-            fontStyle: FontStyle.italic,
+            levels: [
+              TreemapLevel(
+                groupMapper: (int index) {
+                  return _source[index].country;
+                },
+              ),
+            ],
+            legend: TreemapLegend(
+              textStyle: TextStyle(
+                color: Colors.red,
+                fontSize: 14,
+                fontWeight: FontWeight.bold,
+                fontStyle: FontStyle.italic,
+              ),
+            ),
           ),
         ),
       ),
@@ -610,25 +647,30 @@ void initState() {
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-     body: SfTreemap(
-        dataCount: _source.length,
-        weightValueMapper: (int index) {
-          return _source[index].usersInMillions;
-        },
-        levels: [
-          TreemapLevel(
-            padding: const EdgeInsets.all(1.5),
-            groupMapper: (int index) {
-              return _source[index].country;
+     body: Center(
+        child: Container(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].usersInMillions;
             },
+            levels: [
+              TreemapLevel(
+                groupMapper: (int index) {
+                  return _source[index].country;
+                },
+              ),
+            ],
+            legend: TreemapLegend(
+              iconType: TreemapIconType.triangle,
+              iconSize: Size(12.0, 12.0),
+              spacing: 15,
+              padding: EdgeInsets.all(12.0),
+              direction: Axis.vertical,
+            ),
           ),
-        ],
-        legend: TreemapLegend(
-          iconType: TreemapIconType.triangle,
-          iconSize: Size(12.0, 12.0),
-          spacing: 15,
-          padding: EdgeInsets.all(12.0),
-          direction: Axis.vertical,
         ),
       ),
    );
@@ -822,26 +864,31 @@ void initState() {
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-     body: SfTreemap(
-        dataCount: _source.length,
-        weightValueMapper: (int index) {
-          return _source[index].usersInMillions;
-        },
-        levels: [
-          TreemapLevel(
-            padding: const EdgeInsets.all(1.5),
-            groupMapper: (int index) {
-              return _source[index].country;
+     body: Center(
+        child: Container(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].usersInMillions;
             },
+            levels: [
+              TreemapLevel(
+                groupMapper: (int index) {
+                  return _source[index].country;
+                },
+              ),
+            ],
+            legend: TreemapLegend.bar(
+              segmentSize: Size(60, 12),
+              labelOverflow: TreemapLabelOverflow.ellipsis,
+              edgeLabelsPlacement: TreemapLegendEdgeLabelsPlacement.center,
+              padding: EdgeInsets.all(12),
+              direction: Axis.horizontal,
+              spacing: 5,
+            ),
           ),
-        ],
-        legend: TreemapLegend.bar(
-          segmentSize: Size(60, 12),
-          labelOverflow: TreemapLabelOverflow.ellipsis,
-          edgeLabelsPlacement: TreemapLegendEdgeLabelsPlacement.center,
-          padding: EdgeInsets.all(12),
-          direction: Axis.horizontal,
-          spacing: 5,
         ),
       ),
    );

@@ -40,19 +40,25 @@ void initState() {
 
 @override
 Widget build(BuildContext context) {
-   return Scaffold(
-      body: SfTreemap(
-        dataCount: _source.length,
-        weightValueMapper: (int index) {
-          return _source[index].populationInMillions;
-        },
-        levels: [
-          TreemapLevel(
-            groupMapper: (int index) {
-              return _source[index].continent;
+  return Scaffold(
+     body: Center(
+        child: Container(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].populationInMillions;
             },
+            levels: [
+              TreemapLevel(
+                groupMapper: (int index) {
+                  return _source[index].continent;
+                },
+              ),
+            ],
           ),
-        ],
+        ),
       ),
    );
 }
@@ -146,18 +152,24 @@ void initState() {
 
 @override
 Widget build(BuildContext context) {
-   return Scaffold(
-      body: SfTreemap(
-        dataCount: _source.length,
-        weightValueMapper: (int index) {
-          return _source[index].vacancy;
-        },
-        levels: [
-          TreemapLevel(groupMapper: (int index) => _source[index].country),
-          TreemapLevel(groupMapper: (int index) => _source[index].job),
-          TreemapLevel(groupMapper: (int index) => _source[index].group),
-          TreemapLevel(groupMapper: (int index) => _source[index].role),
-        ],
+  return Scaffold(
+     body: Center(
+        child: Container(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].vacancy;
+            },
+            levels: [
+              TreemapLevel(groupMapper: (int index) => _source[index].country),
+              TreemapLevel(groupMapper: (int index) => _source[index].job),
+              TreemapLevel(groupMapper: (int index) => _source[index].group),
+              TreemapLevel(groupMapper: (int index) => _source[index].role),
+            ],
+          ),
+        ),
       ),
    );
 }
@@ -191,7 +203,7 @@ N>
 
 You can customize the levels using the following properties:
 
-* **Padding** - Specifies the gap between the groups. The default value of the [`TreemapLevel.padding`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/padding.html) property is `EdgeInsets.all(1.0)`.
+* **Padding** - Specifies the gap between the groups. The default value of the [`TreemapLevel.padding`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/padding.html) property is `EdgeInsets.all(0.5)`.
 
 * **Color** - Specifies the background color for the group using the [`TreemapLevel.color`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/color.html) property.
 
