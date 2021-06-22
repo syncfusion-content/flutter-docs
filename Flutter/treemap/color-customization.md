@@ -198,6 +198,8 @@ If you return a range value in the [`TreemapLevel.colorValueMapper`](https://pub
 
 The value returned from the [`TreemapLevel.colorValueMapper`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLevel/colorValueMapper.html) callback will be checked whether it lies in the [`TreemapColorMapper.from`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/from.html) and [`TreemapColorMapper.to`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/to.html) range. For the matched values, the [`TreemapColorMapper.color`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/color.html) will be applied to the respective tiles.
 
+* **MinSaturation and MaxSaturation** - The tiles with the lowest value which is `from` will be applied a `minSaturation` and the tiles with the highest value which is `to` will be applied a `maxSaturation`. The tiles with values in-between the range will get a saturation based on their respective value.
+
 N> You can customize the legend icons color and texts using the [`TreemapColorMapper.color`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/color.html) and the [`TreemapColorMapper.from`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/from.html) and [`TreemapColorMapper.to`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapColorMapper/to.html) properties.
 
 {% tabs %}
@@ -218,35 +220,55 @@ void initState() {
    ];
 
    _colorMappers = <TreemapColorMapper>[
-      TreemapColorMapper.range(from: 0, to: 10, color: Colors.blue[200]!),
-      TreemapColorMapper.range(from: 10, to: 20, color: Colors.deepOrange),
-      TreemapColorMapper.range(from: 20, to: 30, color: Colors.blue[800]!),
-    ];
+      TreemapColorMapper.range(
+          from: 0,
+          to: 10,
+          minSaturation: 0.5,
+          maxSaturation: 1,
+          color: Colors.blue[200]!),
+      TreemapColorMapper.range(
+          from: 10,
+          to: 20,
+          minSaturation: 0.5,
+          maxSaturation: 1,
+          color: Colors.deepOrange),
+      TreemapColorMapper.range(
+          from: 20,
+          to: 30,
+          minSaturation: 0.5,
+          maxSaturation: 1,
+          color: Colors.blue[800]!),
+   ];
    super.initState();
 }
 
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-     body:  SfTreemap(
-        dataCount: _source.length,
-        weightValueMapper: (int index) {
-          return _source[index].usersInMillions;
-        },
-        levels: [
-          TreemapLevel(
-            padding: EdgeInsets.all(2.5),
-            groupMapper: (int index) {
-              return _source[index].country;
+      body: Center(
+        child: Container(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].usersInMillions;
             },
-            colorValueMapper: (TreemapTile tile) {
-              return tile.weight;
-            },
+            levels: [
+              TreemapLevel(
+                groupMapper: (int index) {
+                  return _source[index].country;
+                },
+                colorValueMapper: (TreemapTile tile) {
+                  return tile.weight;
+                },
+              ),
+            ],
+            colorMappers: _colorMappers,
           ),
-        ],
-        colorMappers: _colorMappers,
-     ),
-  );
+        ),
+      ),
+   );
 }
 
 class SocialMediaUsers {
