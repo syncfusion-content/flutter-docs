@@ -150,7 +150,7 @@ Widget build(BuildContext context) {
 
 The `RowHeightDetails.getIntrinsicRowHeight` method provides some properties to customize the autofit calculation,
 
-* excludeColumns – By default, the `getIntrinsicRowHeight` method calculates the row height based on all columns. To skip the specific columns from the row height calculation, add that column's `GridColumn.columnName` to the excludeColumns collection.
+* excludeColumns – By default, the `getIntrinsicRowHeight` method calculates the row height based on all columns. To skip the specific columns from the row height calculation, add that column's `GridColumn.columnName` to the `excludeColumns` collection.
 
 * canIncludeHiddenColumns – The hidden columns can also be consider for the row height calculation by setting the `canIncludeHiddenColumns` as true.
 

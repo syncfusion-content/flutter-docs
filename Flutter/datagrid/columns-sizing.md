@@ -170,7 +170,7 @@ Widget build(BuildContext context) {
 
 ## Change the padding value for autofit calculation
 
-By default, the EdgeInsets.all(16.0) is added with the auto width or height value. You can change the padding for specific columns by using the GridColumn.autoFitPadding property.
+By default, the EdgeInsets.all(16.0) is added with the auto width or height value. You can change the padding for specific columns by using the `GridColumn.autoFitPadding` property.
 
 >**NOTE** 
   `GridColumn.autoFitPadding` is applicable for header cell also.
