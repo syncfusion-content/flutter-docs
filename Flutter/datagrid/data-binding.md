@@ -145,7 +145,7 @@ Widget build(BuildContext context) {
 
 If row is added, removed or replaced in an underlying datasource, you can call the [notifyListeners](https://api.flutter.dev/flutter/foundation/ChangeNotifier/notifyListeners.html). 
 
-In the following example, row is added and `notifyListeners` is called in `onPressed` callback of the `TextButton`.
+In the following example, row is added and `notifyListeners` is called in `onPressed` callback of the `TextButton`. As the `notifyListeners` is the protected method, we have introduced the `updateDataGridSource` method in EmployeeDataSource class and called the `notifyListeners` method. So, users can call `updateDataGridSource` methods in widget level to refresh the datagrid.
 
 N> `notifyListeners` should be called from inside the `DataGridSource`.
 
