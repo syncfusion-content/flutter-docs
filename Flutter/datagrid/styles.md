@@ -148,9 +148,7 @@ Widget build(BuildContext context) {
 
 ## Disable the row highlighting
 
-The DataGrid supports to highlight the rows when mouse hover over it. By default, hovering is enabled for the desktop platforms. You can disable highlighting by using the `SfDataGrid.highlightRowOnHover` property.
-
-N> The default value of `highlightRowOnHover` is 'true'.
+By default, row highlighting on hovering support is enabled for the web and desktop platforms. You can disable the row highlighting by setting the `SfDataGrid.highlightRowOnHover` property as `false`.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -200,7 +198,7 @@ N> The default value of `highlightRowOnHover` is 'true'.
 
 ## Change the row highlighting background color and text style
 
-You can change the highlighting color and text style of the hovered row by using `SfDataGridThemeData.rowHoverColor` and `SfDataGridThemeData.rowHoverTextStyle` properties.
+You can change the row highlighting color and text style by using `SfDataGridThemeData.rowHoverColor` and `SfDataGridThemeData.rowHoverTextStyle` properties.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -210,9 +208,9 @@ You can change the highlighting color and text style of the hovered row by using
     return Scaffold(
       body: SfDataGridTheme(
         data: SfDataGridThemeData(
-            rowHoverColor: Colors.red,
+            rowHoverColor: Colors.yellow,
             rowHoverTextStyle: TextStyle(
-              color: Colors.yellow,
+              color: Colors.red,
               fontSize: 14,
             )),
         child: SfDataGrid(
@@ -253,8 +251,5 @@ You can change the highlighting color and text style of the hovered row by using
   }
 {% endhighlight %}
 {% endtabs %}
-
-**Note**
-  Download demo application from [GitHub]().
 
 ![flutter datagrid highlight rows](images/styles/flutter-datagrid-highlight-rows.gif)
