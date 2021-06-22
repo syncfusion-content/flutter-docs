@@ -89,15 +89,15 @@ The `SfPdfViewer` supports the following keyboard interactions.
   </tr>
   <tr>
   <td>Open the search toolbar</td>
-    <td>CONTROL + f</td>
-     <td>COMMAND + f</td>
+    <td>CONTROL + F</td>
+     <td>COMMAND + F</td>
   </tr>
    <tr>
     <th style="text-align:left" colspan="3">Shortcut for Text Selection</th>
   </tr>
   <tr>
     <td>Copy the selected text</td>
-    <td>CONTROL + c</td>
-    <td>COMMAND + c</td>
+    <td>CONTROL + C</td>
+    <td>COMMAND + C</td>
   </tr>
 </table>
