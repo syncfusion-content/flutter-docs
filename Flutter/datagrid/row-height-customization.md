@@ -82,7 +82,7 @@ Widget build(BuildContext context) {
 
 ## Fit the row height based on its content
 
-The row height can be autofit based on its content in the `SfDataGrid.onQueryRowHeight` callback and using the `RowHeightDetails.getIntrinsicRowHeight` method. It calculates the row heights based on the content and improves the readability of the data grid rows. It fetches the header and cell contents from the `GridColumn.columnName` and `DataGridCell.value` properties. By default, it is calculated the height of header and data rows.
+The row height can be autofit based on its content in the `SfDataGrid.onQueryRowHeight` callback and using the `RowHeightDetails.getIntrinsicRowHeight` method.
 
 {% tabs %}
 {% highlight dart %} 
@@ -234,7 +234,7 @@ Widget build(BuildContext context) {
 
 ## Fit the row based on different TextStyle
 
-The datagrid provides the support to customize the autofit calculation based on the different text style. If you want to autofit the rows with the different text style for the header and data rows, you can override the `ColumnSizer.computeHeaderCellHeight` and `ColumnSizer.computeCellHeight` methods and provide your customized text style to those methods `textStyle` parameter.
+By default, the rows can't be autofitted based on different cell text style. However, the autofit calculation can be calculated based on the `ColumnSizer.computeHeaderCellHeight` and `ColumnSizer.computeCellHeight` methods. So, you can override those methods and provide your customized text style to the `textStyle` parameter.
 
 {% tabs %}
 {% highlight dart %}
@@ -256,12 +256,10 @@ Widget build(BuildContext context) {
         label: Container(
           padding: EdgeInsets.all(10.0),
           alignment: Alignment.centerRight,
-          child: Text('ID',
-              softWrap: true,
-              style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.grey[800])),
+          child: Text(
+            'ID',
+            softWrap: true,
+          ),
         ),
       ),
       GridColumn(
@@ -270,12 +268,12 @@ Widget build(BuildContext context) {
         label: Container(
           padding: EdgeInsets.all(10.0),
           alignment: Alignment.centerLeft,
-          child: Text('Contact Name',
-              softWrap: true,
-              style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.grey[800])),
+          child: Text(
+            'Contact Name',
+            softWrap: true,
+            style: TextStyle(
+                fontWeight: FontWeight.bold, fontStyle: FontStyle.italic),
+          ),
         ),
       ),
       GridColumn(
@@ -286,12 +284,10 @@ Widget build(BuildContext context) {
         label: Container(
           padding: EdgeInsets.all(10.0),
           alignment: Alignment.centerLeft,
-          child: Text('Company Name',
-              softWrap: true,
-              style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.grey[800])),
+          child: Text(
+            'Company Name',
+            softWrap: true,
+          ),
         ),
       ),
       GridColumn(
@@ -300,12 +296,12 @@ Widget build(BuildContext context) {
         label: Container(
           padding: EdgeInsets.all(10.0)EdgeInsets.all(10.0),
           alignment: Alignment.centerLeft,
-          child: Text('City',
-              softWrap: true,
-              style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.grey[800])),
+          child: Text(
+            'City',
+            softWrap: true,
+            style: TextStyle(
+                fontWeight: FontWeight.bold, fontStyle: FontStyle.italic),
+          ),
         ),
       ),
     ],
@@ -340,11 +336,14 @@ class EmployeeDataSource extends DataGridSource {
         alignment: dataCell.columnName == 'ID'
             ? Alignment.centerRight
             : Alignment.centerLeft,
-        child: Text(dataCell.value.toString(),
-            style: TextStyle(
-                fontSize: 15,
-                fontWeight: FontWeight.bold,
-                color: Colors.grey[800])),
+        child: Text(
+          dataCell.value.toString(),
+          style: (dataCell.columnName == 'City' ||
+                  dataCell.columnName == 'Contact Name')
+              ? TextStyle(
+                  fontWeight: FontWeight.bold, fontStyle: FontStyle.italic)
+              : null,
+        ),
       );
     }).toList());
   }
@@ -353,19 +352,20 @@ class EmployeeDataSource extends DataGridSource {
 class CustomColumnSizer extends ColumnSizer {
   @override
   double computeHeaderCellHeight(GridColumn column, TextStyle textStyle) {
-    // Replace your customized TextStyle here.
-    textStyle = TextStyle(
-        fontSize: 15, fontWeight: FontWeight.bold, color: Colors.grey[800]);
+    if (column.columnName == 'Contact Name' || column.columnName == 'City') {
+      textStyle =
+          TextStyle(fontWeight: FontWeight.bold, fontStyle: FontStyle.italic);
+    }
     return super.computeHeaderCellHeight(column, textStyle);
   }
 
   @override
   double computeCellHeight(GridColumn column, DataGridRow row,
       Object? cellValue, TextStyle textStyle) {
-    // Replace your customized TextStyle here.
-    textStyle = TextStyle(
-        fontSize: 15, fontWeight: FontWeight.bold, color: Colors.grey[800]);
-    
+    if (column.columnName == 'Contact Name' || column.columnName == 'City') {
+      textStyle =
+          TextStyle(fontWeight: FontWeight.bold, fontStyle: FontStyle.italic);
+    }
     return super.computeCellHeight(column, row, cellValue, textStyle);
   }
 }
@@ -377,7 +377,7 @@ class CustomColumnSizer extends ColumnSizer {
 
 ## Fit the row based on formatted value
 
-The data grid provides the support to customize the autofit calculation based on the formatted cell values. If you want to autofit the rows based on the formatted values (i.e, NumberFormat and DateFormat) for the data rows, you can override the `ColumnSizer.computeCellHeight` method and provide your formatted value to that method `cellValue` parameter.
+By default, the rows can't be autofitted based on the formatted cell value. However, the autofit calculation can be calculated based on the `ColumnSizer.computeCellHeight` method. So, you can override the method and provide your formatted value to the `cellValue` parameter.
 
 {% tabs %}
 {% highlight dart %}

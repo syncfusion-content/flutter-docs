@@ -13,9 +13,9 @@ documentation: ug
 
 | Mode                      | Description                                         |
 |---------------------------|-----------------------------------------------------|
-| ColumnWidthMode.auto      | Calculates the width of column based on header and cell contents. So, the header and cell contents are not truncated. Fetches the contents for the header and cell from the `GridColumn.columName` and `DataGridCell.value` properties. |
-| ColumnWidthMode.fitByCellValue | Calculates the width of column based on cell contents. So, the cell contents are not truncated. |
-| ColumnWidthMode.fitByColumnName | Calculates the width of column based on header content. So, the header contents are not truncated. |
+| ColumnWidthMode.auto      | Calculates the width of column based on `GridColumn.columName` and `DataGridCell.value` properties. So, the header and cell contents are not truncated. |
+| ColumnWidthMode.fitByCellValue | Calculates the width of column based on `DataGridCell.value` property. So, the cell contents are not truncated. |
+| ColumnWidthMode.fitByColumnName | Calculates the width of column based on `GridColumn.columName` property. So, the header contents are not truncated. |
 | ColumnWidthMode.lastColumnFill | Applies default Column width to all the columns except last column which is visible and the remaining width from total width of SfDataGrid is set to last column. |
 | ColumnWidthMode.fill      | Divides the total width equally for columns.         |
 | ColumnWidthMode.none      | No sizing. Default column width or defined width set to column. |
@@ -105,7 +105,7 @@ Widget build(BuildContext context) {
 
 ## Consider all the rows to calculate the autofit size
 
-The datagrid provides the support to specify the calculation range to autofit the columns by using the `SfDataGrid.columnWidthCalculationRange` property.  The default value of `ColumnWidthCalculationRange` is `ColumnWidthCalculationRange.visibleRows`. So, the columns can be autofitted only for the visible rows by default. If you want to consider all the rows to the auto fit calculation, you can simply set the `SfDataGrid.columnWidthCalculationRange` property to `ColumnWidthCalculationRange.allRows`.
+Autofit calculation range can be customized by the `SfDataGrid.columnWidthCalculationRange` property.The default value of `ColumnWidthCalculationRange` is `ColumnWidthCalculationRange.visibleRows`. The autofit calculation range can be considered to all the rows by setting the `columnWidthCalculationRange` property to `ColumnWidthCalculationRange.allRows`.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -170,7 +170,7 @@ Widget build(BuildContext context) {
 
 ## Change the padding value for autofit calculation
 
-The cell padding value for the autofit calculation can be considered from the `GridColumn.autoFitPadding` property. So, the whole column cells can be autofitted based on the `GridColumn.autoFitPadding` and `DataGridCell.value` properties. The default value of `autoFitPadding` is 16.0.
+By default, the cell padding value can't be provided to the autofit calculation. So, the cell padding value for the autofit calculation can be considered from the `GridColumn.autoFitPadding` property. The default value of `autoFitPadding` is 16.0.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -272,7 +272,7 @@ class EmployeeDataSource extends DataGridSource {
 
 ## Autofit calculation based on different TextStyle
 
-The datagrid provides the support to customize the autofit calculation based on the different text style. If you want to autofit the columns with the different text style for the header and data cell, you can override the `ColumnSizer.computeHeaderCellWidth` and `ColumnSizer.computeCellWidth` methods and assign the customized text style to those methods `textStyle` parameter.
+By default, the cell can't be autofitted based on different cell text style. However, the autofit calculation can be calculated based on the `ColumnSizer.computeHeaderCellWidth` and `ColumnSizer.computeCellWidth` methods. Hence you can override those methods and provide your customized text style to the `textStyle` parameter.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -287,65 +287,45 @@ Widget build(BuildContext context) {
     columnWidthMode: ColumnWidthMode.auto,
     columns: <GridColumn>[
       GridColumn(
-        columnName: 'ID',
-        label: Container(
-          padding: EdgeInsets.all(16.0),
-          alignment: Alignment.centerRight,
-          child: Text(
-            'ID',
-            softWrap: false,
-            style: TextStyle(
-              fontSize: 15, 
-              fontWeight: FontWeight.bold, 
-              color: Colors.grey[800]),
-          ),
-        ),
-      ),
+          columnName: 'ID',
+          autoFitPadding: EdgeInsets.all(12.0),
+          label: Container(
+              padding: EdgeInsets.all(12.0),
+              alignment: Alignment.center,
+              child: Text(
+                'ID',
+              ))),
       GridColumn(
-        columnName: 'Name',
-        label: Container(
-          padding: EdgeInsets.all(16.0),
-          alignment: Alignment.centerLeft,
-          child: Text(
-            'Name',
-            softWrap: false,
-            style: TextStyle(
-              fontSize: 15, 
+          columnName: 'Name',
+          autoFitPadding: EdgeInsets.all(12.0),
+          label: Container(
+              padding: EdgeInsets.all(12.0),
+              alignment: Alignment.center,
+              child: Text('Name',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
               fontWeight: FontWeight.bold, 
-              color: Colors.grey[800]),
-          ),
-        ),
-      ),
+                      fontWeight: FontWeight.bold,
+                      fontStyle: FontStyle.italic)))),
       GridColumn(
-        columnName: 'Designation',
-        label: Container(
-          padding: EdgeInsets.all(16.0),
-          alignment: Alignment.centerLeft,
-          child: Text(
-            'Designation',
-            softWrap: false,
-            style: TextStyle(
-              fontSize: 15, 
-              fontWeight: FontWeight.bold, 
-              color: Colors.grey[800]),
-          ),
-        ),
-      ),
+          columnName: 'Designation',
+          autoFitPadding: EdgeInsets.all(12.0),
+          label: Container(
+              padding: EdgeInsets.all(12.0),
+              alignment: Alignment.center,
+              child: Text(
+                'Designation',
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(
+                    fontWeight: FontWeight.bold, fontStyle: FontStyle.italic),
+              ))),
       GridColumn(
-        columnName: 'Salary',
-        label: Container(
-          padding: EdgeInsets.all(16.0),
-          alignment: Alignment.centerRight,
-          child: Text(
-            'Salary',
-            softWrap: false,
-            style: TextStyle(
-              fontSize: 15, 
-              fontWeight: FontWeight.bold, 
-              color: Colors.grey[800]),
-          ),
-        ),
-      ),
+          columnName: 'Salary',
+          autoFitPadding: EdgeInsets.all(12.0),
+          label: Container(
+              padding: EdgeInsets.all(12.0),
+              alignment: Alignment.center,
+              child: Text('Salary'))),
     ],
   );
 }
@@ -374,12 +354,12 @@ class EmployeeDataSource extends DataGridSource {
         cells: row.getCells().map<Widget>((e) {
       return Container(
         alignment: Alignment.center,
-        padding: EdgeInsets.all(16.0),
+        padding: EdgeInsets.all(12.0),
         child: Text(e.value.toString(),
-            style: TextStyle(
-              fontSize: 15, 
-              fontWeight: FontWeight.bold, 
-              color: Colors.grey[800])),
+            style: (e.columnName == 'Name' || e.columnName == 'Designation')
+                ? TextStyle(
+                    fontWeight: FontWeight.bold, fontStyle: FontStyle.italic)
+                : null),
       );
     }).toList());
   }
@@ -388,20 +368,20 @@ class EmployeeDataSource extends DataGridSource {
 class CustomColumnSizer extends ColumnSizer {
   @override
   double computeHeaderCellWidth(GridColumn column, TextStyle style) {
-    // Replace your customized TextStyle here.
-    style = TextStyle(
-        fontSize: 15, fontWeight: FontWeight.bold, color: Colors.grey[800]);
-    
+    if (column.columnName == 'Name' || column.columnName == 'Designation') {
+      style =
+          TextStyle(fontWeight: FontWeight.bold, fontStyle: FontStyle.italic);
+    }
     return super.computeHeaderCellWidth(column, style);
   }
 
   @override
   double computeCellWidth(GridColumn column, DataGridRow row, Object? cellValue,
       TextStyle textStyle) {
-    // Replace your customized TextStyle here.
-    textStyle = TextStyle(
-        fontSize: 15, fontWeight: FontWeight.bold, color: Colors.grey[800]);
-    
+    if (column.columnName == 'Name' || column.columnName == 'Designation') {
+      textStyle =
+          TextStyle(fontWeight: FontWeight.bold, fontStyle: FontStyle.italic);
+    }
     return super.computeCellWidth(column, row, cellValue, textStyle);
   }
 }
@@ -413,7 +393,7 @@ class CustomColumnSizer extends ColumnSizer {
 
 ## Autofit calculation based on the formatted value 
 
-The data grid provides the support to customize the autofit calculation based on the formatted cell value. If you want to autofit the columns based on the formatted values (i.e, NumberFormat and DateFormat) for the data cell, you can override the `ColumnSizer.computeCellWidth` method and provide your formatted value to that method `cellValue` parameter. 
+By default, the cell can't be autofitted based on the formatted cell value. However, the autofit calculation can be calculated based on the `ColumnSizer.computeCellWidth` method. Hence you can override the method and provide your formatted value to the `cellValue` parameter.
 
 {% tabs %}
 {% highlight Dart %} 
