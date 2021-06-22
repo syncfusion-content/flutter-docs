@@ -384,7 +384,7 @@ N>
 
 ## Zooming callback
 
-Whenever zooming happens, this method is called. If it returns false, zooming will not happen.
+Whenever zooming happens, this callback is called. If it returns false, zooming will not happen.
 
 [MapZoomDetails](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomDetails-class.html) contains following properties.
     * [MapZoomDetails.previousVisibleBounds](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomDetails/previousVisibleBounds.html) - provides the visible bounds before the current zooming operation completes i.e. current visible bounds.
@@ -434,7 +434,7 @@ Widget build(BuildContext context) {
 
 ## Panning callback
 
-Whenever panning happens, this method is called. If it returns false, panning will not happen.
+Whenever panning happens, this callback is called. If it returns false, panning will not happen.
  
 [MapPanDetails](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPanDetails-class.html) contains following properties.
     * [MapPanDetails.previousVisibleBounds](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPanDetails/previousVisibleBounds.html) - provides the visible bounds before the current panning operation completes i.e. current visible bounds.

@@ -188,3 +188,145 @@ class PopulationModel {
 {% endtabs %}
 
 ![Dice layout structure](images/layout/dice-layout.png)
+
+## Layout direction
+
+Tiles start to layout from the top-left to the bottom-right of the rectangle by default. The `layoutDirection` property allows you to start the layout from any corner of the rectangle. The possible `layoutDirection` values are `topLeft`, `topRight`, `bottomLeft`, and `bottomRight`.
+
+N> It is applicable for squarified treemap.
+
+{% tabs %}
+{% highlight Dart %}
+
+late List<PopulationModel> _dataSource;
+
+@override
+void initState() {
+   _dataSource = <PopulationModel>[
+      PopulationModel(continent: 'Asia', populationInMillions: 25.4),
+      PopulationModel(continent: 'South America', populationInMillions: 19.11),
+      PopulationModel(continent: 'North America', populationInMillions: 13.3),
+      PopulationModel(continent: 'Europe', populationInMillions: 10.65),
+      PopulationModel(continent: 'Africa', populationInMillions: 7.54),
+      PopulationModel(continent: 'Australia', populationInMillions: 4.93),
+   ];
+   super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+     body: Center(
+        child: Container(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _dataSource.length,
+            weightValueMapper: (int index) {
+              return _dataSource[index].populationInMillions;
+            },
+            layoutDirection: TreemapLayoutDirection.bottomRight,
+            levels: [
+              TreemapLevel(groupMapper: (int index) {
+                return _dataSource[index].continent;
+              }, labelBuilder: (BuildContext context, TreemapTile tile) {
+                return Padding(
+                  padding: const EdgeInsets.all(4.0),
+                  child: Text(
+                    tile.group,
+                    style: TextStyle(color: Colors.black),
+                  ),
+                );
+              }),
+            ],
+          ),
+        ),
+     ),
+  );
+}
+
+class PopulationModel {
+  const PopulationModel({
+    required this.continent,
+    required this.populationInMillions,
+  });
+
+  final String continent;
+  final double populationInMillions;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Squarified layout direction](images/layout/squarified-layout-direction.png)
+
+## Sorting
+
+You can sort the tiles either in ascending or descending order based on the `sortAscending` property. The default value of the `sortAscending` property is `false`.
+
+N> It is applicable for slice and dice treemap.
+
+{% tabs %}
+{% highlight Dart %}
+
+late List<PopulationModel> _dataSource;
+
+@override
+void initState() {
+   _dataSource = <PopulationModel>[
+      PopulationModel(continent: 'Asia', populationInMillions: 25.4),
+      PopulationModel(continent: 'South America', populationInMillions: 19.11),
+      PopulationModel(continent: 'North America', populationInMillions: 13.3),
+      PopulationModel(continent: 'Europe', populationInMillions: 10.65),
+      PopulationModel(continent: 'Africa', populationInMillions: 7.54),
+      PopulationModel(continent: 'Australia', populationInMillions: 4.93),
+   ];
+   super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+     body: Center(
+        child: Container(
+          height: 400,
+          width: 400,
+          child: SfTreemap.slice(
+            dataCount: _dataSource.length,
+            weightValueMapper: (int index) {
+              return _dataSource[index].populationInMillions;
+            },
+            sortAscending: true,
+            levels: [
+              TreemapLevel(groupMapper: (int index) {
+                return _dataSource[index].continent;
+              }, labelBuilder: (BuildContext context, TreemapTile tile) {
+                return Padding(
+                  padding: const EdgeInsets.all(4.0),
+                  child: Text(
+                    tile.group,
+                    style: TextStyle(color: Colors.black),
+                  ),
+                );
+              }),
+            ],
+          ),
+        ),
+     ),
+  );
+}
+
+class PopulationModel {
+  const PopulationModel({
+    required this.continent,
+    required this.populationInMillions,
+  });
+
+  final String continent;
+  final double populationInMillions;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Slice sorting](images/layout/slice-sorting.png)
