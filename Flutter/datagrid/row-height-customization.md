@@ -234,7 +234,7 @@ Widget build(BuildContext context) {
 
 ## Fit the row based on different TextStyle
 
-By default, the rows can't be autofitted based on different cell text style. However, the autofit calculation can be calculated based on the `ColumnSizer.computeHeaderCellHeight` and `ColumnSizer.computeCellHeight` methods. So, you can override those methods and provide your customized text style to the `textStyle` parameter.
+By default, the rows can't be auto fitted based on different cell text style. However, the autofit calculation can be calculated based on the `ColumnSizer.computeHeaderCellHeight` and `ColumnSizer.computeCellHeight` methods. So, you can override those methods and provide your customized text style to the `textStyle` parameter.
 
 {% tabs %}
 {% highlight dart %}
@@ -377,7 +377,7 @@ class CustomColumnSizer extends ColumnSizer {
 
 ## Fit the row based on formatted value
 
-By default, the rows can't be autofitted based on the formatted cell value. However, the autofit calculation can be calculated based on the `ColumnSizer.computeCellHeight` method. So, you can override the method and provide your formatted value to the `cellValue` parameter.
+By default, the rows can't be auto fitted based on the formatted cell value. However, the autofit calculation can be calculated based on the `ColumnSizer.computeCellHeight` method. So, you can override the method and provide your formatted value to the `cellValue` parameter.
 
 {% tabs %}
 {% highlight dart %}
