@@ -234,7 +234,7 @@ Widget build(BuildContext context) {
 
 ## Fit the row based on different TextStyle
 
-By default, the rows can't be auto fitted based on different cell text style. However, the autofit calculation can be calculated based on the `ColumnSizer.computeHeaderCellHeight` and `ColumnSizer.computeCellHeight` methods. So, you can override those methods and provide your customized text style to the `textStyle` parameter.
+By default, the cell height is calculated based on the default text style. To calculate the cell height based on different [TextStyle](https://api.flutter.dev/flutter/painting/TextStyle-class.html), just override the `computeHeaderCellHeight` method for header and `computeCellHeight` method for cell and return the super method with the required `TextStyle`.
 
 {% tabs %}
 {% highlight dart %}
@@ -377,7 +377,7 @@ class CustomColumnSizer extends ColumnSizer {
 
 ## Fit the row based on formatted value
 
-By default, the rows can't be auto fitted based on the formatted cell value. However, the autofit calculation can be calculated based on the `ColumnSizer.computeCellHeight` method. So, you can override the method and provide your formatted value to the `cellValue` parameter.
+By default, the cell height is calculated based on the `DataGridCell.value` property. To autofit the cell height based on the displayed formatted value (i.e, DateFormat and NumberFormat), simply override the `computeCellHeight` method and return the super method with the required `cellValue`.
 
 {% tabs %}
 {% highlight dart %}

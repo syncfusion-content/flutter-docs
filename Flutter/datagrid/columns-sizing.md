@@ -13,7 +13,7 @@ documentation: ug
 
 | Mode                      | Description                                         |
 |---------------------------|-----------------------------------------------------|
-| ColumnWidthMode.auto      | Calculates the width of column based on `GridColumn.columName` and `DataGridCell.value` properties. So, the header and cell contents are not truncated. |
+| ColumnWidthMode.auto      | Calculates the width of column based on [GridColumn.columName](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/columnName.html) and [DataGridCell.value](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridCell/value.html) properties. So, the header and cell contents are not truncated. |
 | ColumnWidthMode.fitByCellValue | Calculates the width of column based on `DataGridCell.value` property. So, the cell contents are not truncated. |
 | ColumnWidthMode.fitByColumnName | Calculates the width of column based on `GridColumn.columName` property. So, the header contents are not truncated. |
 | ColumnWidthMode.lastColumnFill | Applies default Column width to all the columns except last column which is visible and the remaining width from total width of SfDataGrid is set to last column. |
@@ -105,7 +105,7 @@ Widget build(BuildContext context) {
 
 ## Consider all the rows to calculate the autofit size
 
-Autofit calculation range can be customized by the `SfDataGrid.columnWidthCalculationRange` property.The default value of `ColumnWidthCalculationRange` is `ColumnWidthCalculationRange.visibleRows`. The autofit calculation range can be considered to all the rows by setting the `columnWidthCalculationRange` property to `ColumnWidthCalculationRange.allRows`.
+By default, the autofit calculation is performed for only visible rows. You can use the `SfDataGrid.columnWidthCalculationRange` property as `ColumnWidthCalculationRange.allRows` to perform the autofit calculation for all the available rows.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -170,7 +170,10 @@ Widget build(BuildContext context) {
 
 ## Change the padding value for autofit calculation
 
-By default, the cell padding value can't be provided to the autofit calculation. So, the cell padding value for the autofit calculation can be considered from the `GridColumn.autoFitPadding` property. The default value of `autoFitPadding` is 16.0.
+By default, the EdgeInsets.all(16.0) is added with the auto width or height value. You can change the padding for specific columns by using the GridColumn.autoFitPadding property.
+
+>**NOTE** 
+  `GridColumn.autoFitPadding` is applicable for header cell also.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -272,7 +275,7 @@ class EmployeeDataSource extends DataGridSource {
 
 ## Autofit calculation based on different TextStyle
 
-By default, the cell can't be autofitted based on different cell text style. However, the autofit calculation can be calculated based on the `ColumnSizer.computeHeaderCellWidth` and `ColumnSizer.computeCellWidth` methods. Hence you can override those methods and provide your customized text style to the `textStyle` parameter.
+By default, the cell width is calculated based on the default text style. To calculate the cell width based on different [TextStyle](https://api.flutter.dev/flutter/painting/TextStyle-class.html), just override the `computeHeaderCellWidth` method for header and `computeCellWidth` method for cell and return the super method with the required `TextStyle`.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -393,7 +396,7 @@ class CustomColumnSizer extends ColumnSizer {
 
 ## Autofit calculation based on the formatted value 
 
-By default, the cell can't be autofitted based on the formatted cell value. However, the autofit calculation can be calculated based on the `ColumnSizer.computeCellWidth` method. Hence you can override the method and provide your formatted value to the `cellValue` parameter.
+By default, the cell width is calculated based on the `DataGridCell.value` property. To autofit the cell width based on the displayed formatted value (i.e, DateFormat and NumberFormat), simply override the `computeCellWidth` method and return the super method with the required `cellValue`.
 
 {% tabs %}
 {% highlight Dart %} 
