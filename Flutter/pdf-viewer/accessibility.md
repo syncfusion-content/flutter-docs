@@ -69,35 +69,35 @@ The `SfPdfViewer` supports the following keyboard interactions.
   </tr>
    <tr>
    <td>Perform zoom in operation</td>
-    <td>Ctrl + =</td>
-     <td>command + =</td> 
+    <td>CONTROL + =</td>
+     <td>COMMAND + =</td> 
   </tr>
   <tr>
   </tr>
    <tr>
     <td>Perform zoom out operation</td>
-    <td>Ctrl + -</td>
-    <td>command + -</td>
+    <td>CONTROL + -</td>
+    <td>COMMAND + -</td>
   </tr>
   <tr>
    <td>Retain the zoom level to 1</td>
-    <td>Ctrl + 0</td>
-    <td>command + 0</td>
+    <td>CONTROL + 0</td>
+    <td>COMMAND + 0</td>
   </tr>
    <tr>
     <th style="text-align:left" colspan="3">Shortcut for Text Search</th>
   </tr>
   <tr>
   <td>Open the search toolbar</td>
-    <td>Ctrl + f</td>
-     <td>command + f</td>
+    <td>CONTROL + f</td>
+     <td>COMMAND + f</td>
   </tr>
    <tr>
     <th style="text-align:left" colspan="3">Shortcut for Text Selection</th>
   </tr>
   <tr>
     <td>Copy the selected text</td>
-    <td>Ctrl + c</td>
-    <td>command + c</td>
+    <td>CONTROL + c</td>
+    <td>COMMAND + c</td>
   </tr>
 </table>
