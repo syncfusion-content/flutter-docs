@@ -105,3 +105,5 @@ The following keyboard interactions are supported by the `SfDateRangePicker`.
 | Shift + down arrow    | Selects the same day in next week to complete range selection or add the day in multiple selection     |
 | Shift + left arrow    | Selects the day before to complete range selection or add the day in multiple selection                |
 | Shift + right arrow   | Selects the day after to complete range selection or add the day in multiple selection                 |
+| Ctrl  + left arrow    | To navigate to the previous date period                                                                |
+| Ctrl  + right arrow   | To navigate to the next date period                                                                    |

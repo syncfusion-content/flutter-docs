@@ -114,6 +114,32 @@ Widget build(BuildContext context) {
 
 ![MultiRangeSelection Date Range Picker](images/selections/multirange.jpg)
 
+## Extendable Range Selection
+You can extend the selected range with the new selected date in any date range picker view by setting the ‘DateRangePickerSelectionMode’ to [extendableRange]().
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+      body: SfDateRangePicker(
+        view: DateRangePickerView.month,
+        selectionMode: DateRangePickerSelectionMode.extendableRange,
+      ),
+    ));
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Extendable Range Selection](images/selections/Picker-extendable-range-month.png)
+
+>**NOTE**
+* The hovering effect which occurrs while extend the range will not be displayed when the `DateRangePickerNavigationMode` set as `DateRangePickerNavigationMode.scroll`.
+
+
 ## Selection radius
 You can customize the radius of the selection using the [selectionRadius](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectionRadius.html) property of the `SfDateRangePicker`.
 

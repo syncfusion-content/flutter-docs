@@ -315,6 +315,52 @@ Widget build(BuildContext context) {
 
 ![Time regions builder](images/builder/timeregion-builder.png)
 
+## Resource View Header Builder
+The [ResourceViewHeaderBuilder]() - allows you to design your custom view and assign the view to the resource view header of the calendar by returning an appropriate widget in the [ResourceViewHeaderBuilder]() of [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html).
+
+[ResourceViewHeaderDetails]() - returns the required details of the resource view header builder.
+
+`bound`: returns the resource view header bound.
+`resource`: returns the display name, color, id and image.
+
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: SfCalendar(
+            view: CalendarView.timelineMonth,
+            resourceViewHeaderBuilder:
+                (BuildContext context, ResourceViewHeaderDetails details) {
+              if (details.resource.image != null) {
+                return Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    CircleAvatar(backgroundColor: details.resource.image),
+                    Text(details.resource.displayName)
+                  ],
+                );
+              } else {
+                return Container(
+                  color: details.resource.color,
+                  child: Text(details.resource.displayName),
+                );
+              }
+            }),
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+![ResourceViewHeaderBuilder](images/builder/resource-view-header-builder.png)
+
 ## See also
 
 

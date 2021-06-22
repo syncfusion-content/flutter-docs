@@ -79,13 +79,23 @@ The `SfCalendar` font size can be adjusted automatically based on device setting
 
 The following keyboard interactions are supported by the `SfCalendar`.
 
-| Key              | Description                     														   |
-|------------------|-------------------------------------------------------------------------------------------|
-| Up arrow         | Moves selection to the next calendar cell directly above the currently selected time slot |
-| Down arrow       | Moves selection to the next calendar cell directly below the currently selected time slot |
-| Right arrow      | Moves selection to the same time slot on the next day                                     |
-| Left arrow       | Moves selection to the same time slot on the previous day                                 |
-| Tab              | Focuses the next clickable element, except appointments and cells						   |
-| Shift + tab      | Focuses the previous clickable element, except appointment and cells                      |
 
+| Key               | Description                     														    |
+|-------------------|-------------------------------------------------------------------------------------------|
+| Up arrow          | Moves selection to the next calendar cell directly above the currently selected time slot |
+| Down arrow        | Moves selection to the next calendar cell directly below the currently selected time slot |
+| Right arrow       | Moves selection to the same time slot on the next day                                     |
+| Left arrow        | Moves selection to the same time slot on the previous day                                 |
+| Tab               | Focuses the next clickable element, except appointments and cells						    |
+| Shift + tab       | Focuses the previous clickable element, except appointment and cells                      |
+| Alt + number      | Calendar view changes in the order of Schedule, Day, Week, Work week, Month, and Timeline |
+| Ctrl + left arrow | To navigate to the previous date period                                                   |
+| Ctrl + right arrow| To navigate to the next date period                                                       |
+| Page up/down      | Scrolls through the work cells area                                                       |
 
+### Appointments
+
+| Key               | Description                     														                                                                                      |
+|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Tab               | Moves selection to the next appointment of the currently selected appointment. If no appointment selected use tab traversal and move to focus to the next clickable item    |
+| Shift + Tab       | Moves selection to the previous appointment of the currently selected appointment. If no appointment selected use tab traversal and move to focus to the next clickable item|
