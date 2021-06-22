@@ -35,12 +35,11 @@ The `SfPdfViewer` supports the following keyboard interactions.
 <table>
   <tr>
   <tr>
-    <th  style="text-align:left" colspan="2">Key</th>
+    <th  style="text-align:left" colspan="1">Windows</th>
+    <th>macOS</th>
     <th>Description</th>
     </tr>
      <tr>
-    <th style="text-align:left">Windows</th>
-    <th style="text-align:left">macOs</th>
   </tr>
      <tr>
   <th style="text-align:left" colspan="3">Shortcuts for page navigation</th>
