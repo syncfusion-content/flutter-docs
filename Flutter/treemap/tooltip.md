@@ -38,51 +38,58 @@ void initState() {
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-     body: SfTreemap(
-        dataCount: _source.length,
-        weightValueMapper: (int index) {
-          return _source[index].usersInMillions;
-        },
-        levels: [
-          TreemapLevel(
-            groupMapper: (int index) {
-              return _source[index].country;
+     body: Center(
+        child: Container(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].usersInMillions;
             },
-            tooltipBuilder: (BuildContext context, TreemapTile tile) {
-              return Padding(
-                padding: EdgeInsets.all(5),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
+            levels: [
+              TreemapLevel(
+                groupMapper: (int index) {
+                  return _source[index].country;
+                },
+                tooltipBuilder: (BuildContext context, TreemapTile tile) {
+                  return Padding(
+                    padding: EdgeInsets.all(5),
+                    child: Column(
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Country          : ',
-                            style: TextStyle(color: Colors.white)),
-                        Text(tile.group, style: TextStyle(color: Colors.white)),
+                        Row(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('Country          : ',
+                                style: TextStyle(color: Colors.black)),
+                            Text(tile.group,
+                                style: TextStyle(color: Colors.black)),
+                          ],
+                        ),
+                        Row(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('Social media : ',
+                                style: TextStyle(color: Colors.black)),
+                            Text(tile.weight.toString(),
+                                style: TextStyle(color: Colors.black)),
+                          ],
+                        ),
                       ],
                     ),
-                    Row(
-                      mainAxisSize: MainAxisSize.min,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text('Social media : ',
-                            style: TextStyle(color: Colors.white)),
-                        Text(tile.weight.toString(),
-                            style: TextStyle(color: Colors.white)),
-                      ],
-                    ),
-                  ],
-                ),
-              );
-            },
+                  );
+                },
+              ),
+            ],
           ),
-        ],
+        ),
       ),
    );
 }
@@ -133,53 +140,63 @@ void initState() {
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-     body: SfTreemap(
-        dataCount: _source.length,
-        weightValueMapper: (int index) {
-          return _source[index].usersInMillions;
-        },
-        levels: [
-          TreemapLevel(
-            groupMapper: (int index) {
-              return _source[index].country;
+     body: Center(
+        child: Container(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].usersInMillions;
             },
-            tooltipBuilder: (BuildContext context, TreemapTile tile) {
-              return Padding(
-                padding: EdgeInsets.all(5),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
+            levels: [
+              TreemapLevel(
+                groupMapper: (int index) {
+                  return _source[index].country;
+                },
+                tooltipBuilder: (BuildContext context, TreemapTile tile) {
+                  return Padding(
+                    padding: EdgeInsets.all(5),
+                    child: Column(
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Country          : '),
-                        Text(tile.group),
+                        Row(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('Country          : ',
+                                style: TextStyle(color: Colors.black)),
+                            Text(tile.group,
+                                style: TextStyle(color: Colors.black)),
+                          ],
+                        ),
+                        Row(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('Social media : ',
+                                style: TextStyle(color: Colors.black)),
+                            Text(tile.weight.toString(),
+                                style: TextStyle(color: Colors.black)),
+                          ],
+                        ),
                       ],
                     ),
-                    Row(
-                      mainAxisSize: MainAxisSize.min,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text('Social media : '),
-                        Text(tile.weight.toString()),
-                      ],
-                    ),
-                  ],
-                ),
-              );
-            },
+                  );
+                },
+              ),
+            ],
+            tooltipSettings: TreemapTooltipSettings(
+              color: Colors.orange[300],
+              borderColor: Colors.deepOrange[900],
+              borderWidth: 2,
+              borderRadius: BorderRadius.circular(10),
+            ),
           ),
-        ],
-        tooltipSettings: TreemapTooltipSettings(
-          color: Colors.orange[300],
-          borderColor: Colors.deepOrange[900],
-          borderWidth: 2,
-          borderRadius: BorderRadius.circular(10),
         ),
       ),
    );
