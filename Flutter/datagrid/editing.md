@@ -520,7 +520,7 @@ The `SfDataGrid.endEdit` method can be called to programmatically end editing. T
 {% tabs %}
 {% highlight dart %} 
 
-final DataGridController _dataGridController = DataGridController();
+final DataGridController _dataGridControlle r = DataGridController();
 
 @override
 Widget build(BuildContext context) {
@@ -598,7 +598,7 @@ Widget build(BuildContext context) {
 
 ## Cancel the editing for specific cell or column at run time
 
-The `DataGridSource.onCellBeginEdit` will call every time before when `CurrentCell` enter into the edit mode. Based on the return value `DataGridSource.buidEditWidget` will call. By default the return type is `true`.   
+The `DataGridSource.onCellBeginEdit` will call every time before when `CurrentCell` enter into the edit mode. Based on the return value `DataGridSource.buildEditWidget` will call. By default the return type is `true`.   
 
 {% tabs %}
 {% highlight dart %} 
@@ -643,7 +643,7 @@ class EmployeeDataSource extends DataGridSource {
 
 ## Cancel edited cell value from being committed
 
-The `DataGridSource.canSubmitCell` callback will call every time before `DataGridSource.onCellSubmit` callback. We can validate the edited value in `canSumbitCell` and return `true` or `false` to prevent calling the `DataGridSource.onCellSubmit` callback and committing from invalid value from it. By default its returns `true`.
+The `DataGridSource.canSubmitCell` callback will call every time before `DataGridSource.onCellSubmit` callback. We can validate the edited value in `canSubmitCell` and return `true` or `false` to prevent calling the `DataGridSource.onCellSubmit` callback and committing from invalid value from it. By default its returns `true`.
 
 {% tabs %}
 {% highlight dart %} 
