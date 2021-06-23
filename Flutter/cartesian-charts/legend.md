@@ -378,9 +378,7 @@ You can change the position of the legend inside the chart. The following proper
 
 ## Customize the legend position
 
-Places the legend in custom position.
-If the [offset]() has been set, the legend is moved from its actual position.
-For example, if the [position](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendPosition-class.html) is `top`, then the legend will be placed in the top but in the position added to the actual top position. 
+Places the legend in custom position.If the [offset]() has been set, the legend is moved from its actual position.For example, if the [position](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendPosition-class.html) is `top`, then the legend will be placed in the top but in the position added to the actual top position. 
 Also, the legend will not take a dedicated position for it and will be drawn on the top of the chart's plot area.
 
 {% highlight dart %}
@@ -388,33 +386,27 @@ Also, the legend will not take a dedicated position for it and will be drawn on 
     @override
     Widget build(BuildContext context) {
       return Scaffold(
-        body: Center(
-          child: Container(
-            child: SfCartesianChart(
-              primaryXAxis: DateTimeAxis(),
-              legend: Legend(
-                isVisible: true,
-                // Legend will placed at the specified offset
-                offset: Offset(20,40)
-              ),
-              series: <CartesianSeries>[
-                AreaSeries<ChartData, DateTime>(
-                  dataSource: chartData,
-                  xValueMapper: (ChartData data, _) => data.x,
-                  yValueMapper: (ChartData data, _) => data.y
-                ),
-              ]
-            )
-          )
-        )
-      );
+          body: Center(
+              child: Container(
+                  child: SfCartesianChart(
+                      primaryXAxis: DateTimeAxis(),
+                      legend: Legend(
+                          isVisible: true,
+                          // Legend will placed at the specified offset
+                          offset: Offset(20, 40)),
+                     series: <CartesianSeries>[
+            AreaSeries<ChartData, DateTime>(
+                dataSource: chartData,
+                xValueMapper: (ChartData data, _) => data.x,
+                yValueMapper: (ChartData data, _) => data.y),
+          ]))));
     }
 
     class ChartData {
         ChartData(this.x, this.y);
         final DateTime x;
         final double? y;
-      }
+    }
 
 
 {% endhighlight %}
