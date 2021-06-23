@@ -86,7 +86,7 @@ The `DataGridSource.buildEditWidget` must to override in `DataGridSource` and it
 * `Column`: Gets the Grid Column of the SfDataGrid.
 * `CellSubmit`: Programmatically call to end editing.
 
->N In Mobile platforms must to call the `CellSubmit` inside the respective callback of editable widget, i.e `TextField.onSubmitted` and `DropDownWidget.onChanged`. After calling the `CellSubmit`, from it `canSubmitCell` and `onCellSubmit` will call.
+>N In Mobile platforms must to call the `CellSubmit` inside the respective callback of editable widget, i.e `TextField.onSubmitted` and `DropDownButton.onChanged`. After calling the `CellSubmit`, from it `canSubmitCell` and `onCellSubmit` will call.
 
 >N In desktop platform, we will call the `canSubmitCell` and `onCellSubmit` on key navigation itself and no need to call the  `CellSubmit` callback inside editable widget.
 
