@@ -98,10 +98,10 @@ You can display the Week Number of the year in MonthView by setting [showWeekNum
 {% endhighlight %}
 {% endtabs %}
 
-![Hijri date selection](images/hijri-picker/hijri-picker-week-number.png)
+![Hijri week number](images/hijri-picker/hijri-picker-week-number.png)
 
 ## Week Number Appearance
-You can customize the week number style by using [textStyle]() and [backgroundColor() properties of [DateRangePickerWeekNumberStyle]().
+You can customize the week number style by using [textStyle]() and [backgroundColor]() properties of [DateRangePickerWeekNumberStyle]().
 
 {% tabs %}
 {% highlight Dart %}
@@ -125,7 +125,7 @@ You can customize the week number style by using [textStyle]() and [backgroundCo
 {% endhighlight %}
 {% endtabs %}
 
-![Hijri date selection](images/hijri-picker/hijri-week-number-style.png)
+![Hijri week number appearance](images/hijri-picker/hijri-week-number-style.png)
 
 
 ## Date selection
