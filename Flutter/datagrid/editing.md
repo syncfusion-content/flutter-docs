@@ -426,7 +426,7 @@ class EmployeeDataSource extends DataGridSource {
 
 ### onCellSubmit
 
-The `DataGridSource.onCellSubmit` callback will call when `DataGridSource.canSubmitCell` return true and it's common place to committing the edited cell value into the repective collection and `SfDataGrid.DataGridCell`. The `DataGridRow`, `RowColumnIndex` and `GridColumn` has the following members which provides information for `DataGridSource.onCellSubmit` callback.
+The `DataGridSource.onCellSubmit` callback will call when `DataGridSource.canSubmitCell` return true and it's common place to committing the edited cell value into the respective collection and `SfDataGrid.DataGridCell`. The `DataGridRow`, `RowColumnIndex` and `GridColumn` has the following members which provides information for `DataGridSource.onCellSubmit` callback.
 
 >N No need to call the notifyListener inside it.
 
