@@ -428,7 +428,7 @@ Widget build(BuildContext context) {
 
 ## Week Number
 
-You can display the Week Number of the year in month, week and work week views of `SfCalendar` by using the [showWeekNumber]() property. Set as false in default, the week number will display based on ISO standard.
+You can display the Week Number of the year in month, week and work week views of `SfCalendar` by using the [showWeekNumber]() property as true and by default it is false. Week numbers will be displayed based on ISO standard.
 
 {% tabs %}
 {% highlight Dart %}
@@ -448,7 +448,7 @@ You can display the Week Number of the year in month, week and work week views o
 {% endhighlight %}
 {% endtabs %}
 
-![week-number](images\getting-started\week-number.png)
+![Week Number in Flutter Calendar](images\getting-started\flutter-calendar-week-number.png)
 
 ## Week Number Appearance
 
@@ -476,7 +476,7 @@ You can customize the Week Number text style of calendar by  using [WeekNumberSt
 {% endhighlight %}
 {% endtabs %}
 
-![week-number](images\getting-started\week-number-style.png)
+![Week Number Appearance in Flutter Calendar](images\getting-started\flutter-calendar-week-number-appearance.png)
 
 You can get the complete getting started sample from [here](https://github.com/SyncfusionExamples/flutter-calendar).
 

@@ -33,7 +33,7 @@ Widget build(BuildContext context) {
 
 ### Week Number
 
-You can display the Week Number of the year in MonthView by setting [showWeekNumber]() property of `DateRangePickerMonthViewSettings` as true. Set as false in default, the week number will display based on ISO standard.
+You can display the Week Number of the year in MonthView by setting [showWeekNumber]() property of `DateRangePickerMonthViewSettings` as true and by default it is false. Week numbers will be displayed based on ISO standard.
 {% tabs %}
 {% highlight Dart %}
 
@@ -53,7 +53,7 @@ You can display the Week Number of the year in MonthView by setting [showWeekNum
 {% endhighlight %}
 {% endtabs %}
 
-![week-number](images\views\picker-week-number.png)
+![Week Number in Flutter Date Range Picker](images\views\flutter-date-range-picker-week-number.png)
 
 ### Week Number Appearance
 You can customize the week number style by using [textStyle]() and [backgroundColor]() properties of [DateRangePickerWeekNumberStyle]().
@@ -80,7 +80,7 @@ You can customize the week number style by using [textStyle]() and [backgroundCo
 {% endhighlight %}
 {% endtabs %}
 
-![week-number](images\views\picker-week-number-style.png)
+![Week Number Appearance in Flutter Date Range Picker](images\views\flutter-date-range-picker-week-number-appearance.png)
 
 
 ## Year view

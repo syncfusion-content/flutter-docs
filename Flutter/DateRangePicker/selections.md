@@ -134,7 +134,7 @@ You can extend the selected range with the new selected date in any date range p
 {% endhighlight %}
 {% endtabs %}
 
-![Extendable Range Selection](images/selections/picker-extendable-range.png)
+![Extendable Range Selection in Flutter Date Range Picker](images/selections/flutter-date-range-picker-extendable-range-selection.png)
 
 >**NOTE**
 * The hovering effect which occurs while extend the range will not be displayed when the `DateRangePickerNavigationMode` set as `DateRangePickerNavigationMode.scroll`.

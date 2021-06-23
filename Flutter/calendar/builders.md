@@ -316,7 +316,7 @@ Widget build(BuildContext context) {
 ![Time regions builder](images/builder/timeregion-builder.png)
 
 ## Resource View Header Builder
-The [ResourceViewHeaderBuilder]() - allows you to design your custom view and assign the view to the resource view header of the calendar by returning an appropriate widget in the [ResourceViewHeaderBuilder]() of [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html).
+The [ResourceViewHeaderBuilder]() allows you to design your custom view and assign the view to the resource view header of the calendar by returning an appropriate widget in the [ResourceViewHeaderBuilder]() of [SfCalendar](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar-class.html).
 
 [ResourceViewHeaderDetails]() - returns the required details of the resource view header builder.
 
@@ -359,7 +359,7 @@ The [ResourceViewHeaderBuilder]() - allows you to design your custom view and as
 {% endhighlight %}
 {% endtabs %}
 
-![ResourceViewHeaderBuilder](images/builder/resource-view-header-builder.png)
+![Resource View Header Builder in Flutter Calendar](images/builder/flutter-calendar-resource-view-header-builder.png)
 
 ## See also
 

@@ -718,7 +718,7 @@ class Meeting {
 >**NOTE**
 * Exception dates should be Universal Time Coordinates (UTC) time zone.
 
-### Add exception appointment to the recurrence pattern
+### Add exception appointment to the recurrence series
 
 You can change any occurrence appointment which is an exception from the recurrence pattern appointment by using the [RecurrenceId]() property which is used to map the exception appointment with recurrence pattern appointment. The `RecurrenceId` of changed occurrence should holds the exact recurrence pattern appointment [Id](). You should add the created exception recurrence appointment to the calendar `datasource`.
 
@@ -769,7 +769,7 @@ AppointmentDataSource _getDataSource() {
 {% endhighlight %}
 {% endtabs %}
 
-![Recurrence pattern](images/appointments/recurrence-id.png)
+![Recurrence Series in Flutter Calendar](images/appointments/flutter-calendar-recurrence-series.png)
 
 >**NOTE**
 * The RecurrenceId of changed occurrence should holds the exact recurrence pattern appointment Id.

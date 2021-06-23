@@ -77,7 +77,7 @@ Widget build(BuildContext context) {
 ![Hijri first day of week](images/hijri-picker/hijri_first_day_of_week.png)
 
 ## Week Number
-You can display the Week Number of the year in MonthView by setting [showWeekNumber]() property of `HijriDatePickerMonthViewSettings` as true. Set as false in default, the week number will display based on ISO standard.
+You can display the Week Number of the year in month view by setting [showWeekNumber]() property of `HijriDatePickerMonthViewSettings` as true and by default it is false. Week numbers will be displayed based on ISO standard.
 
 {% tabs %}
 {% highlight Dart %}
@@ -98,7 +98,7 @@ You can display the Week Number of the year in MonthView by setting [showWeekNum
 {% endhighlight %}
 {% endtabs %}
 
-![Hijri week number](images/hijri-picker/hijri-picker-week-number.png)
+![Hijri Week Number in Flutter Date Range Picker](images/hijri-picker/flutter-hijri-date-range-picker-week-number.png)
 
 ## Week Number Appearance
 You can customize the week number style by using [textStyle]() and [backgroundColor]() properties of [DateRangePickerWeekNumberStyle]().
@@ -125,7 +125,7 @@ You can customize the week number style by using [textStyle]() and [backgroundCo
 {% endhighlight %}
 {% endtabs %}
 
-![Hijri week number appearance](images/hijri-picker/hijri-week-number-style.png)
+![Hijri Week Number Appearance in Flutter Date Range Picker](images/hijri-picker/flutter-hijri-date-range-picker-week-number-appearance.png)
 
 
 ## Date selection
@@ -373,7 +373,7 @@ class MyAppState extends State<MyApp> {
 ![Hijri programmatic multi-range selection](images/hijri-picker/hijri_programmatic_selection_multi_range.png)
 
 ### Extendable Range Selection
-You can extend the selected range with the new selected date in any date range picker view by setting the `DateRangePickerSelectionMode` to `extendableRange`.
+You can extend the selected range with the new selected date in any date range picker view by setting the `DateRangePickerSelectionMode` to [extendableRange]().
 
 {% tabs %}
 {% highlight Dart %}
@@ -404,7 +404,7 @@ class MyAppState extends State<MyApp> {
 {% endhighlight %}
 {% endtabs %}
 
-![Extendable Range Selection](images/hijri-picker/hijri-picker-extendable-range.png)
+![Hijri Extendable Range Selection in Flutter Date Range Picker](images/hijri-picker/flutter-hijri-date-range-picker-extendable-range-selection.png)
 
 >**NOTE**
 * The hovering effect which occurs while extend the range will not be displayed when the `DateRangePickerNavigationMode` set as `DateRangePickerNavigationMode.scroll`.
