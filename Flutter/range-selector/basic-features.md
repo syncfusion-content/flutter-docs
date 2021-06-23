@@ -228,7 +228,7 @@ class Data {
 
 ## Active color
 
-It represents the color applied to the active track, thumb, overlay, and inactive divisors.
+It represents the color applied to the active track, thumb, overlay, and inactive dividers.
 
 The active side of the range selector is between start and end thumbs.
 
@@ -301,7 +301,7 @@ class Data {
 
 ## Inactive color
 
-It represents the color applied to the inactive track and active divisors.
+It represents the color applied to the inactive track and active dividers.
 
 The active side of the [`SfRangeSelector`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector-class.html) is between start and end thumbs.
 
@@ -537,6 +537,6 @@ class Data {
 
 * Track - [`Link`](https://help.syncfusion.com/flutter/range-selector/track)
 * Ticks - [`Link`](https://help.syncfusion.com/flutter/range-selector/ticks)
-* Labels and divisors - [`Link`](https://help.syncfusion.com/flutter/range-selector/labels-and-divisor)
+* Labels and dividers - `Link`
 * Tooltips - [`Link`](https://help.syncfusion.com/flutter/range-selector/tooltip)
 * Thumb and overlay - [`Link`](https://help.syncfusion.com/flutter/range-selector/thumb-and-overlay)

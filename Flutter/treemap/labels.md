@@ -79,43 +79,49 @@ void initState() {
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-     body: SfTreemap(
-        dataCount: _source.length,
-        weightValueMapper: (int index) {
-          return _source[index].vacancy;
-        },
-        levels: [
-          TreemapLevel(
-            groupMapper: (int index) => _source[index].country,
-            color: Colors.pink,
-            labelBuilder: (BuildContext context, TreemapTile tile) {
-              return Padding(
-                padding: EdgeInsets.all(5),
-                child: Text(tile.group),
-              );
+     body: Center(
+        child: Container(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].vacancy;
             },
+            levels: [
+              TreemapLevel(
+                groupMapper: (int index) => _source[index].country,
+                color: Colors.pink,
+                labelBuilder: (BuildContext context, TreemapTile tile) {
+                  return Padding(
+                    padding: EdgeInsets.all(5),
+                    child: Text(tile.group),
+                  );
+                },
+              ),
+              TreemapLevel(
+                groupMapper: (int index) => _source[index].job,
+                color: Colors.green,
+                labelBuilder: (BuildContext context, TreemapTile tile) {
+                  return Padding(
+                    padding: EdgeInsets.all(5),
+                    child: Text(tile.group),
+                  );
+                },
+              ),
+              TreemapLevel(
+                groupMapper: (int index) => _source[index].group,
+                color: Colors.blue,
+                labelBuilder: (BuildContext context, TreemapTile tile) {
+                  return Padding(
+                    padding: EdgeInsets.all(5),
+                    child: Text(tile.group),
+                  );
+                },
+              ),
+            ],
           ),
-          TreemapLevel(
-            groupMapper: (int index) => _source[index].job,
-            color: Colors.green,
-            labelBuilder: (BuildContext context, TreemapTile tile) {
-              return Padding(
-                padding: EdgeInsets.all(5),
-                child: Text(tile.group),
-              );
-            },
-          ),
-          TreemapLevel(
-            groupMapper: (int index) => _source[index].group,
-            color: Colors.blue,
-            labelBuilder: (BuildContext context, TreemapTile tile) {
-              return Padding(
-                padding: EdgeInsets.all(5),
-                child: Text(tile.group),
-              );
-            },
-          ),
-        ],
+        ),
       ),
    );
 }
@@ -209,52 +215,58 @@ void initState() {
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-     body: SfTreemap(
-        dataCount: _source.length,
-        weightValueMapper: (int index) {
-          return _source[index].vacancy;
-        },
-        levels: [
-          TreemapLevel(
-            groupMapper: (int index) => _source[index].country,
-            color: Colors.pink,
-            labelBuilder: (BuildContext context, TreemapTile tile) {
-              return Padding(
-                padding: EdgeInsets.all(5),
-                child: Text(
-                  tile.group,
-                  overflow: TextOverflow.ellipsis,
-                ),
-              );
+       body: Center(
+        child: Container(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].vacancy;
             },
+            levels: [
+              TreemapLevel(
+                groupMapper: (int index) => _source[index].country,
+                color: Colors.pink,
+                labelBuilder: (BuildContext context, TreemapTile tile) {
+                  return Padding(
+                    padding: EdgeInsets.all(5),
+                    child: Text(
+                      tile.group,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  );
+                },
+              ),
+              TreemapLevel(
+                groupMapper: (int index) => _source[index].job,
+                color: Colors.green,
+                labelBuilder: (BuildContext context, TreemapTile tile) {
+                  return Padding(
+                    padding: EdgeInsets.all(5),
+                    child: Text(
+                      tile.group,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  );
+                },
+              ),
+              TreemapLevel(
+                groupMapper: (int index) => _source[index].group,
+                color: Colors.blue,
+                labelBuilder: (BuildContext context, TreemapTile tile) {
+                  return Padding(
+                    padding: EdgeInsets.all(5),
+                    child: Text(
+                      tile.group,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  );
+                },
+              ),
+            ],
           ),
-          TreemapLevel(
-            groupMapper: (int index) => _source[index].job,
-            color: Colors.green,
-            labelBuilder: (BuildContext context, TreemapTile tile) {
-              return Padding(
-                padding: EdgeInsets.all(5),
-                child: Text(
-                  tile.group,
-                  overflow: TextOverflow.ellipsis,
-                ),
-              );
-            },
-          ),
-          TreemapLevel(
-            groupMapper: (int index) => _source[index].group,
-            color: Colors.blue,
-            labelBuilder: (BuildContext context, TreemapTile tile) {
-              return Padding(
-                padding: EdgeInsets.all(5),
-                child: Text(
-                  tile.group,
-                  overflow: TextOverflow.ellipsis,
-                ),
-              );
-            },
-          ),
-        ],
+        ),
       ),
    );
 }
@@ -346,43 +358,49 @@ void initState() {
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-     body: SfTreemap(
-        dataCount: _source.length,
-        weightValueMapper: (int index) {
-          return _source[index].vacancy;
-        },
-        levels: [
-          TreemapLevel(
-            groupMapper: (int index) => _source[index].country,
-            color: Colors.pink,
-            labelBuilder: (BuildContext context, TreemapTile tile) {
-               return Align(
-                  alignment: Alignment.center,
-                  child: Text(tile.group),
-               );
+     body: Center(
+        child: Container(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].vacancy;
             },
+            levels: [
+              TreemapLevel(
+                groupMapper: (int index) => _source[index].country,
+                color: Colors.pink,
+                labelBuilder: (BuildContext context, TreemapTile tile) {
+                  return Align(
+                    alignment: Alignment.center,
+                    child: Text(tile.group),
+                  );
+                },
+              ),
+              TreemapLevel(
+                groupMapper: (int index) => _source[index].job,
+                color: Colors.green,
+                labelBuilder: (BuildContext context, TreemapTile tile) {
+                  return Align(
+                    alignment: Alignment.center,
+                    child: Text(tile.group),
+                  );
+                },
+              ),
+              TreemapLevel(
+                groupMapper: (int index) => _source[index].group,
+                color: Colors.blue,
+                labelBuilder: (BuildContext context, TreemapTile tile) {
+                  return Align(
+                    alignment: Alignment.center,
+                    child: Text(tile.group),
+                  );
+                },
+              ),
+            ],
           ),
-          TreemapLevel(
-            groupMapper: (int index) => _source[index].job,
-            color: Colors.green,
-             labelBuilder: (BuildContext context, TreemapTile tile) {
-               return Align(
-                  alignment: Alignment.center,
-                  child: Text(tile.group),
-               );
-             },
-          ),
-          TreemapLevel(
-            groupMapper: (int index) => _source[index].group,
-            color: Colors.blue,
-             labelBuilder: (BuildContext context, TreemapTile tile) {
-                return Align(
-                   alignment: Alignment.center,
-                   child: Text(tile.group),
-                );
-             },
-          ),
-        ],
+        ),
       ),
    );
 }
