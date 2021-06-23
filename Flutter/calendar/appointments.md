@@ -720,7 +720,7 @@ class Meeting {
 
 ### Add exception appointment to the recurrence series
 
-Add an exception appointment which is changed or modified occurrence of the recurrence pattern appointment to the dateSource of SfCalendar. To add a changed occurrence, ensure to set the RecurrenceId of that occurrence and add the date of that occurrence to the RecurrenceExceptionDates of recurrence pattern appointment. The RecurrenceId of changed occurrence should holds the exact recurrence pattern appointment Id.
+Add an exception appointment which is changed or modified occurrence of the recurrence pattern appointment to the `dateSource` of `SfCalendar`. To add a changed occurrence, ensure to set the [RecurrenceId]() of that occurrence and add the date of that occurrence to the [RecurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceExceptionDates.html) of recurrence pattern appointment. The `RecurrenceId` of changed occurrence should holds the exact recurrence pattern appointment [Id]().
 
 {% tabs %}
 {% highlight Dart %}
