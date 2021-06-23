@@ -9,7 +9,7 @@ documentation: ug
 
 # Editing in Flutter DataGrid
 
-`SfDataGrid` supports to editing the cell values by setting the `SfDataGrid.allowEditing` property, `SfDataGrid.navigationMode` as Cell and setting the `SfDataGrid.selectionMode` as any other than None and return the editable widget in `DataGridSource.buildEditWidget`.
+`SfDataGrid` supports to editing the cell values by setting the `SfDataGrid.allowEditing` property, `SfDataGrid.navigationMode` as Cell, `SfDataGrid.selectionMode` as any other than None and return the editable widget in `DataGridSource.buildEditWidget`.
 
 The editable widget should load at the user's end by default. For, that override the `DataGridSource.buildEditWidget` in `DataGridSource` and it will call every time when `CurrentCell` enter into edit mode. We can load any type of editable widget in cell and if its return `null` the `CurrentCell` will not enter into edit mode.The `DataGridRow`, `RowColumnIndex`, `GridColumn` and `CellSubmit` has the following members which provides information for `DataGridSource.buildEditWidget` callback.
 
