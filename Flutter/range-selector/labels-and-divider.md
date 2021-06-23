@@ -647,8 +647,7 @@ Widget build(BuildContext context) {
           body: Center(
               child: SfRangeSelectorTheme(
                     data: SfRangeSelectorThemeData(
-                        activeTrackHeight: 5,
-                        inactiveTrackHeight: 5,
+                      labelOffset: Offset(0, 15),
                     ),
                     child:  SfRangeSelector(
                         min: _min,
