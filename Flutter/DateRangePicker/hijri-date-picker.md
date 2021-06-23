@@ -76,8 +76,8 @@ Widget build(BuildContext context) {
 
 ![Hijri first day of week](images/hijri-picker/hijri_first_day_of_week.png)
 
-## Week Number of the year
-You can display the Week Number of the year in MonthView by setting [showWeekNumber]() property of HijriDatePickerMonthViewSettings as true, by default is false. Will show the week number according to the ISO-8601 standard.
+## Week Number
+You can display the Week Number of the year in MonthView by setting [showWeekNumber]() property of `HijriDatePickerMonthViewSettings` as true. Set as false in default, the week number will display based on ISO standard.
 
 {% tabs %}
 {% highlight Dart %}
@@ -101,7 +101,7 @@ You can display the Week Number of the year in MonthView by setting [showWeekNum
 ![Hijri date selection](images/hijri-picker/hijri-picker-week-number.png)
 
 ## Week Number Appearance
-You can customize the week number style by using `textStyle` and `backgroundColor` properties of [WeekNumberStyle]().
+You can customize the week number style by using [textStyle]() and [backgroundColor() properties of [DateRangePickerWeekNumberStyle]().
 
 {% tabs %}
 {% highlight Dart %}
@@ -404,7 +404,10 @@ class MyAppState extends State<MyApp> {
 {% endhighlight %}
 {% endtabs %}
 
-![Extendable Range Selection](images/hijri-picker/hijri-picker-extendable-range-month.png)
+![Extendable Range Selection](images/hijri-picker/hijri-picker-extendable-range.png)
+
+>**NOTE**
+* The hovering effect which occurs while extend the range will not be displayed when the `DateRangePickerNavigationMode` set as `DateRangePickerNavigationMode.scroll`.
 
 ## Month cell customization
 You can customize the Hijri date picker month view by using the [monthCellStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfHijriDateRangePicker/monthCellStyle.html) property of `SfHijriDateRangePicker`.

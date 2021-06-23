@@ -134,10 +134,10 @@ You can extend the selected range with the new selected date in any date range p
 {% endhighlight %}
 {% endtabs %}
 
-![Extendable Range Selection](images/selections/Picker-extendable-range-month.png)
+![Extendable Range Selection](images/selections/picker-extendable-range.png)
 
 >**NOTE**
-* The hovering effect which occurrs while extend the range will not be displayed when the `DateRangePickerNavigationMode` set as `DateRangePickerNavigationMode.scroll`.
+* The hovering effect which occurs while extend the range will not be displayed when the `DateRangePickerNavigationMode` set as `DateRangePickerNavigationMode.scroll`.
 
 
 ## Selection radius

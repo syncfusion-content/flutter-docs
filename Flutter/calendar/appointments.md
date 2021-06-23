@@ -739,7 +739,7 @@ You can change any occurrence appointment which is an exception from the recurre
     );
   }
 AppointmentDataSource _getDataSource() {
-  List<Appointment> appointments = <Appointment>[];
+  final List<Appointment> appointments = <Appointment>[];
   final DateTime exceptionDate = DateTime(2021, 04, 20);
 
   final Appointment recurrenceAppointment = Appointment(

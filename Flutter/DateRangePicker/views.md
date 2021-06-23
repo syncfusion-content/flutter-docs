@@ -30,6 +30,59 @@ Widget build(BuildContext context) {
 
 ![Month view Date Range Picker](images/views/monthview.png)
 
+
+### Week Number
+
+You can display the Week Number of the year in MonthView by setting [showWeekNumber]() property of `DateRangePickerMonthViewSettings` as true. Set as false in default, the week number will display based on ISO standard.
+{% tabs %}
+{% highlight Dart %}
+
+@override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+      body: SfDateRangePicker(
+        view: DateRangePickerView.month,
+        monthViewSettings: const DateRangePickerMonthViewSettings(
+          showWeekNumber: true,
+        ),
+      ),
+    ));
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+![week-number](images\views\picker-week-number.png)
+
+### Week Number Appearance
+You can customize the week number style by using [textStyle]() and [backgroundColor]() properties of [DateRangePickerWeekNumberStyle]().
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+      body: SfDateRangePicker(
+        view: DateRangePickerView.month,
+        monthViewSettings: const DateRangePickerMonthViewSettings(
+          showWeekNumber: true,
+          weekNumberStyle: DateRangePickerWeekNumberStyle(
+              textStyle: TextStyle(fontStyle: FontStyle.italic),
+              backgroundColor: Colors.purple),
+        ),
+      ),
+    ));
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+![week-number](images\views\picker-week-number-style.png)
+
+
 ## Year view
 This displays the entire month of a particular year. By default, the current year will be displayed on loading. You can navigate between months quickly by selecting the particular month in a `year view`.
 
