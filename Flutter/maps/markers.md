@@ -718,3 +718,159 @@ class Model {
 
 {% endhighlight %}
 {% endtabs %}
+
+## Marker controller
+
+You can position the marker at the tapped position by converting touch pixel point into coordinates using the [`MapTileLayerController`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayerController-class.html) in the [`MapTileLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html) and the [`MapShapeLayerController`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerController-class.html) in the [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html).
+
+N> It is applicable for both tile layer and shape layer.
+
+### Tile layer
+
+{% tabs %}
+{% highlight Dart %}
+
+late MapLatLng _markerPosition;
+late _CustomZoomPanBehavior _mapZoomPanBehavior;
+late MapTileLayerController _controller;
+
+@override
+void initState() {
+   _controller = MapTileLayerController();
+   _mapZoomPanBehavior = _CustomZoomPanBehavior()
+      ..focalLatLng = MapLatLng(-25.5595, -45.9375)
+      ..zoomLevel = 2
+      ..onTap = updateMarkerChange;
+   super.initState();
+}
+
+void updateMarkerChange(Offset position) {
+  _markerPosition = _controller.pixelToLatLng(position);
+
+  /// Removed [MapTileLayer.initialMarkersCount] property and updated
+  /// markers only when the user taps.
+  if (_controller.markersCount > 0) {
+    _controller.clearMarkers();
+  }
+  _controller.insertMarker(0);
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+     body: Center(
+        child: Container(
+          height: 400,
+          width: 400,
+          child: MapTileLayer(
+            urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+            zoomPanBehavior: _mapZoomPanBehavior,
+            controller: _controller,
+            markerBuilder: (BuildContext context, int index) {
+              return MapMarker(
+                  latitude: _markerPosition.latitude,
+                  longitude: _markerPosition.longitude,
+                  child: Icon(
+                    Icons.location_on,
+                    color: Colors.red,
+                    size: 20,
+                  ));
+            },
+          ),
+        ),
+      ),
+   );
+}
+
+class _CustomZoomPanBehavior extends MapZoomPanBehavior {
+  _CustomZoomPanBehavior();
+  late MapTapCallback onTap;
+
+  @override
+  void handleEvent(PointerEvent event) {
+    if (event is PointerUpEvent) {
+      onTap(event.localPosition);
+    }
+    super.handleEvent(event);
+  }
+}
+
+typedef MapTapCallback = void Function(Offset position);
+
+{% endhighlight %}
+{% endtabs %}
+
+### Shape layer
+
+late MapLatLng _markerPosition;
+late _CustomZoomPanBehavior _mapZoomPanBehavior;
+late MapShapeLayerController _controller;
+
+@override
+void initState() {
+  _controller = MapShapeLayerController();
+  _mapZoomPanBehavior = _CustomZoomPanBehavior()
+    ..zoomLevel = 1
+    ..onTap = updateMarkerChange;
+  super.initState();
+}
+
+void updateMarkerChange(Offset position) {
+  _markerPosition = _controller.pixelToLatLng(position);
+
+  /// Removed [MapTileLayer.initialMarkersCount] property and updated
+  /// markers only when the user taps.
+  if (_controller.markersCount > 0) {
+    _controller.clearMarkers();
+  }
+  _controller.insertMarker(0);
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+     body: Center(
+        child: Container(
+          height: 400,
+          width: 400,
+          child: MapShapeLayer(
+            source: const MapShapeSource.asset(
+              'assets/world_map.json',
+              shapeDataField: 'continent',
+            ),
+            zoomPanBehavior: _mapZoomPanBehavior,
+            controller: _controller,
+            markerBuilder: (BuildContext context, int index) {
+              return MapMarker(
+                latitude: _markerPosition.latitude,
+                longitude: _markerPosition.longitude,
+                child: Icon(
+                  Icons.location_on,
+                  color: Colors.red,
+                  size: 20,
+                ),
+              );
+            },
+          ),
+        ),
+      ),
+   );
+}
+
+class _CustomZoomPanBehavior extends MapZoomPanBehavior {
+  _CustomZoomPanBehavior();
+  late MapTapCallback onTap;
+
+  @override
+  void handleEvent(PointerEvent event) {
+    if (event is PointerUpEvent) {
+      onTap(event.localPosition);
+    }
+    super.handleEvent(event);
+  }
+}
+
+typedef MapTapCallback = void Function(Offset position);
+
+{% endhighlight %}
+{% endtabs %}
