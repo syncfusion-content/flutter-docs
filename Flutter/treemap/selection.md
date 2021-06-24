@@ -24,7 +24,7 @@ late List<SocialMediaUsers> _source;
 
 @override
 void initState() {
-  _source = <SocialMediaUsers>[
+   _source = <SocialMediaUsers>[
       SocialMediaUsers('India', 'Facebook', 25.4),
       SocialMediaUsers('USA', 'Instagram', 19.11),
       SocialMediaUsers('Japan', 'Facebook', 13.3),
@@ -38,19 +38,25 @@ void initState() {
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-     body: SfTreemap(
-        dataCount: _source.length,
-        weightValueMapper: (int index) {
-          return _source[index].usersInMillions;
-        },
-        onSelectionChanged: (TreemapTile) {},
-        levels: [
-          TreemapLevel(
-            groupMapper: (int index) {
-              return _source[index].country;
+     body: Center(
+        child: Container(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].usersInMillions;
             },
+            onSelectionChanged: (TreemapTile) {},
+            levels: [
+              TreemapLevel(
+                groupMapper: (int index) {
+                  return _source[index].country;
+                },
+              ),
+            ],
           ),
-        ],
+        ),
       ),
    );
 }
@@ -99,29 +105,35 @@ void initState() {
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-     body: SfTreemap(
-        dataCount: _source.length,
-        weightValueMapper: (int index) {
-          return _source[index].usersInMillions;
-        },
-        onSelectionChanged: (TreemapTile) {},
-        selectionSettings: TreemapSelectionSettings(
-          color: Colors.orange,
-          border: RoundedRectangleBorder(
-            side: BorderSide(
-              color: Colors.deepOrange,
-              width: 1,
+     body: Center(
+        child: Container(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].usersInMillions;
+            },
+            onSelectionChanged: (TreemapTile) {},
+            selectionSettings: TreemapSelectionSettings(
+              color: Colors.orange,
+              border: RoundedRectangleBorder(
+                side: BorderSide(
+                  color: Colors.deepOrange,
+                  width: 1,
+                ),
+                borderRadius: BorderRadius.circular(10),
+              ),
             ),
-            borderRadius: BorderRadius.circular(10),
+            levels: [
+              TreemapLevel(
+                groupMapper: (int index) {
+                  return _source[index].country;
+                },
+              ),
+            ],
           ),
         ),
-        levels: [
-          TreemapLevel(
-            groupMapper: (int index) {
-              return _source[index].country;
-            },
-          ),
-        ],
       ),
    );
 }

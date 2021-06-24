@@ -509,6 +509,7 @@ The Flutter Chart supports the following types of interval for date-time axis:
 * hours
 * minutes
 * seconds
+* milliseconds
 
 {% highlight dart %} 
 
@@ -767,6 +768,7 @@ The Flutter Chart supports the following types of interval for date-time categor
 * hours
 * minutes
 * seconds
+* milliseconds
 
 {% highlight dart %} 
 
