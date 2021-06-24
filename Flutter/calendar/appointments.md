@@ -720,7 +720,7 @@ class Meeting {
 
 ### Add exception appointment to the recurrence series
 
-Add an exception appointment which is changed or modified occurrence of the recurrence pattern appointment to the `dateSource` of `SfCalendar`. To add a changed occurrence, ensure to set the [RecurrenceId]() of that occurrence and add the date of that occurrence to the [RecurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceExceptionDates.html) of recurrence pattern appointment. The `RecurrenceId` of changed occurrence should holds the exact recurrence pattern appointment [Id]().
+Add an exception appointment that is changed or modified occurrence of the recurrence pattern appointment to the `dateSource` of the `SfCalendar`. To add a changed occurrence, ensure to set the [RecurrenceId]() of that occurrence, and add the date of that occurrence to the [RecurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceExceptionDates.html) of recurrence pattern appointment. The `RecurrenceId` of the changed occurrence should hold the exact recurrence pattern appointment [Id]().
 
 {% tabs %}
 {% highlight Dart %}
@@ -772,12 +772,13 @@ AppointmentDataSource _getDataSource() {
 ![Recurrence Series in Flutter Calendar](images/appointments/flutter-calendar-recurrence-series.png)
 
 >**NOTE**
-* The RecurrenceId of changed occurrence should holds the exact recurrence pattern appointment Id.
-* The exception appointment should be a normal appointment and should not be created as recurring appointment, since its occurrence from recurrence pattern.
+* The RecurrenceId of the changed occurrence should hold the exact recurrence pattern appointment Id.
+* The exception appointment should be a normal appointment, and should not be created as recurring appointment, since its occurrence is from recurrence pattern.
 * The exception recurrence appointment does not have the RecurrenceRule, so for an exception appointment, it will be reset to empty.
 
+
 ## Appearance customization
-Calendar appointment text style can be customized by using the [appointmentTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/appointmentTextStyle.html) property of calendar.
+The Calendar appointment text style can be customized by using the [appointmentTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/appointmentTextStyle.html) property of the calendar.
 
 {% tabs %}
 {% highlight Dart %}

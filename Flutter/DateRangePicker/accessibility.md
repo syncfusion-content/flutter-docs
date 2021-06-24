@@ -55,7 +55,7 @@ The `SfDateRangePicker` can easily be accessed by screen readers. Please find th
 
 ## Sufficient contrast
 
-The `SfDateRangePicker` [theming](https://help.syncfusion.com/flutter/themes) support offers a consistent and standardized look, as well as the ability to set the colors for all UI elements.
+The `SfDateRangePicker` [theming](https://help.syncfusion.com/flutter/themes) support offers a consistent and a standardized look, as well as the ability to set the colors for all the UI elements.
 
 The following APIs allows to customize the colors of the following elements.
 * [viewHeaderStyle](https://help.syncfusion.com/flutter/daterangepicker/headers#view-header) 
@@ -90,20 +90,20 @@ The `SfDateRangePicker` font size can be adjusted automatically based on device 
 
 The following keyboard interactions are supported by the `SfDateRangePicker`.
 
-| Key                   | Description                     									  					                 |
-|-----------------------|--------------------------------------------------------------------------------------------------------|
-| Up arrow              | Selects the same day of the previous week                                                              |
-| Down arrow     		| Selects the same day of the next week                                                                  |
-| Right arrow           | Selects the day after                                                                                  |
-| Left arrow            | Selects the day before                                                                                 |
-| Alt+1                 | Displays month view                                           							             |
-| Alt+2                 | Displays year view                                                                                     |
-| Alt+3                 | Displays decade view                                                                                   |
-| Alt+4                 | Displays century view                                                                                  |
-| Tap                   | Focuses the next clickable element                                                                     |
-| Shift + upper arrow   | Selects the same day in previous week to complete range selection or add the day in multiple selection |
-| Shift + down arrow    | Selects the same day in next week to complete range selection or add the day in multiple selection     |
-| Shift + left arrow    | Selects the day before to complete range selection or add the day in multiple selection                |
-| Shift + right arrow   | Selects the day after to complete range selection or add the day in multiple selection                 |
-| Ctrl  + left arrow    | To navigate to the previous view                                                                       |
-| Ctrl  + right arrow   | To navigate to the next view                                                                           |
+| Key                   | Description                     									  					                         |
+|-----------------------|----------------------------------------------------------------------------------------------------------------|
+| Up arrow              | Selects the same day of the previous week                                                                      |
+| Down arrow     		| Selects the same day of the next week                                                                          |
+| Right arrow           | Selects the day after                                                                                          |
+| Left arrow            | Selects the day before                                                                                         |
+| Alt+1                 | Displays month view                                           							                     |
+| Alt+2                 | Displays year view                                                                                             |
+| Alt+3                 | Displays decade view                                                                                           |
+| Alt+4                 | Displays century view                                                                                          |
+| Tap                   | Focuses the next clickable element                                                                             |
+| Shift + upper arrow   | Selects the same day in previous week to complete the range selection or add the day in the multiple selection |
+| Shift + down arrow    | Selects the same day in next week to complete the range selection or add the day in the multiple selection     |
+| Shift + left arrow    | Selects the day before to complete the range selection or add the day in the multiple selection                |
+| Shift + right arrow   | Selects the day after to complete the range selection or add the day in the multiple selection                 |
+| Ctrl  + left arrow    | To navigate to the previous view                                                                               |
+| Ctrl  + right arrow   | To navigate to the next view                                                                                   |

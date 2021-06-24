@@ -31,9 +31,9 @@ Widget build(BuildContext context) {
 ![Month view Date Range Picker](images/views/monthview.png)
 
 
-### Week Number
+### Week number
 
-You can display the Week Number of the year in MonthView by setting [showWeekNumber]() property of `DateRangePickerMonthViewSettings` as true and by default it is false. Week numbers will be displayed based on ISO standard.
+Display the Week number of the year in the MonthView by setting the [showWeekNumber]() property of the `DateRangePickerMonthViewSettings` as true, and by default it is false. Week numbers will be displayed based on the ISO standard.
 {% tabs %}
 {% highlight Dart %}
 
@@ -55,8 +55,8 @@ You can display the Week Number of the year in MonthView by setting [showWeekNum
 
 ![Week Number in Flutter Date Range Picker](images\views\flutter-date-range-picker-week-number.png)
 
-### Week Number Appearance
-You can customize the week number style by using [textStyle]() and [backgroundColor]() properties of [DateRangePickerWeekNumberStyle]().
+### Week number appearance
+Customize the Week number style by using the [textStyle]() and the  [backgroundColor]() properties of the [DateRangePickerWeekNumberStyle]().
 
 {% tabs %}
 {% highlight Dart %}
@@ -84,7 +84,7 @@ You can customize the week number style by using [textStyle]() and [backgroundCo
 
 
 ## Year view
-This displays the entire month of a particular year. By default, the current year will be displayed on loading. You can navigate between months quickly by selecting the particular month in a `year view`.
+This displays the entire month of a particular year. By default, the current year will be displayed on loading. Navigate between the months quickly by selecting the particular month in a `year view`.
 
 {% tabs %}
 {% highlight Dart %}

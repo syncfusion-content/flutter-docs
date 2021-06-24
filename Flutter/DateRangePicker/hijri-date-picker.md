@@ -76,8 +76,8 @@ Widget build(BuildContext context) {
 
 ![Hijri first day of week](images/hijri-picker/hijri_first_day_of_week.png)
 
-## Week Number
-You can display the Week Number of the year in month view by setting [showWeekNumber]() property of `HijriDatePickerMonthViewSettings` as true and by default it is false. Week numbers will be displayed based on ISO standard.
+## Week number
+Display the Week number of the year in the month view by setting the [showWeekNumber]() property of the `HijriDatePickerMonthViewSettings` as true, and by default it is false. The Week numbers will be displayed based on the ISO standard.
 
 {% tabs %}
 {% highlight Dart %}
@@ -100,8 +100,8 @@ You can display the Week Number of the year in month view by setting [showWeekNu
 
 ![Hijri Week Number in Flutter Date Range Picker](images/hijri-picker/flutter-hijri-date-range-picker-week-number.png)
 
-## Week Number Appearance
-You can customize the week number style by using [textStyle]() and [backgroundColor]() properties of [DateRangePickerWeekNumberStyle]().
+## Week number appearance
+Customize the Week number style by using the [textStyle]() and the  [backgroundColor]() properties of the [DateRangePickerWeekNumberStyle]().
 
 {% tabs %}
 {% highlight Dart %}
@@ -372,8 +372,8 @@ class MyAppState extends State<MyApp> {
 
 ![Hijri programmatic multi-range selection](images/hijri-picker/hijri_programmatic_selection_multi_range.png)
 
-### Extendable Range Selection
-You can extend the selected range with the new selected date in any date range picker view by setting the `DateRangePickerSelectionMode` to [extendableRange]().
+### Extendable range selection
+Extend the selected range with the new selected date in any date range picker view by setting the `DateRangePickerSelectionMode` to [extendableRange]().
 
 {% tabs %}
 {% highlight Dart %}
@@ -407,10 +407,10 @@ class MyAppState extends State<MyApp> {
 ![Hijri Extendable Range Selection in Flutter Date Range Picker](images/hijri-picker/flutter-hijri-date-range-picker-extendable-range-selection.png)
 
 >**NOTE**
-* The hovering effect which occurs while extend the range will not be displayed when the `DateRangePickerNavigationMode` set as `DateRangePickerNavigationMode.scroll`.
+* The hovering effect which occurs while extending the range will not be displayed when the `DateRangePickerNavigationMode` is set as `DateRangePickerNavigationMode.scroll`.
 
 ## Month cell customization
-You can customize the Hijri date picker month view by using the [monthCellStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfHijriDateRangePicker/monthCellStyle.html) property of `SfHijriDateRangePicker`.
+Customize the Hijri date picker month view by using the [monthCellStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfHijriDateRangePicker/monthCellStyle.html) property of `SfHijriDateRangePicker`.
 
 •    **Current month dates**: You can customize the current month date’s text style and background of the `SfHijriDateRangePicker` by using the [textStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerMonthCellStyle/textStyle.html) and [cellDecoration](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerMonthCellStyle/cellDecoration.html) properties of [HijriDatePickerMonthCellStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerMonthCellStyle-class.html).
 •    **Today date**: You can customize the today date text style and background of the `SfHijriDateRangePicker` by using the [todayTextStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerMonthCellStyle/todayTextStyle.html) and [todayCellDecoration](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerMonthCellStyle/todayCellDecoration.html).
