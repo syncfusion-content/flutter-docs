@@ -9,18 +9,16 @@ documentation: ug
 
 # Editing in Flutter DataGrid
 
-`SfDataGrid` supports to editing the cell values by setting the `SfDataGrid.allowEditing` property, `SfDataGrid.navigationMode` as Cell, `SfDataGrid.selectionMode` as any other than None and return the editable widget in `DataGridSource.buildEditWidget`.
+`SfDataGrid` supports to editing the cell values by setting the `SfDataGrid.allowEditing` property, `SfDataGrid.navigationMode` as Cell, `SfDataGrid.selectionMode` as any other than None and return the editable widget in `DataGridSource.buildEditWidget`callback.
 
-The editable widget should load at the user's end by default. For, that override the `DataGridSource.buildEditWidget` in `DataGridSource` and it will call every time when `CurrentCell` enter into edit mode. We can load any type of editable widget in cell and if its return `null` the `CurrentCell` will not enter into edit mode.The `DataGridRow`, `RowColumnIndex`, `GridColumn` and `CellSubmit` has the following members which provides information for `DataGridSource.buildEditWidget` callback.
+The editable widget should load at the user's end by default. Override the `DataGridSource.buildEditWidget` in `DataGridSource` and it will call every time when `CurrentCell` enter into edit mode. We can load any type of editable widget in cell. The callback returns `null` the `CurrentCell` will not enter into edit mode.The `DataGridRow`, `RowColumnIndex`, `GridColumn` and `CellSubmit` has the following members which provides information for `DataGridSource.buildEditWidget` callback.
 
 * `DataGridRow`: Gets the DataGridRow of the SfDataGrid.
 * `RowColumnIndex`: Gets the current row and column index of the DataGrid.
 * `Column`: Gets the Grid Column of the SfDataGrid.
 * `CellSubmit`: Programmatically call to end editing.
 
->N In Mobile platforms must to call the `CellSubmit` inside the respective callback of editable widget, i.e `TextField.onSubmitted` and `DropDownButton.onChanged`. After calling the `CellSubmit`, from it `canSubmitCell` and `onCellSubmit` will call.
-
->N In desktop platform, we will call the `canSubmitCell` and `onCellSubmit` on key navigation itself and no need to call the  `CellSubmit` callback inside editable widget.
+>N In Mobile platforms must to call the `CellSubmit` inside the respective callback of editable widget, i.e `TextField.onSubmitted` and `DropDownButton.onChanged`. After calling the `CellSubmit`, `canSubmitCell` and `onCellSubmit` will call.
 
 To enable editing, follow the code example:
 
@@ -155,6 +153,8 @@ class EmployeeDataSource extends DataGridSource {
 
 {% endhighlight %}
 {% endtabs %}
+
+>N In desktop platform, we will call the `canSubmitCell` and `onCellSubmit` on key navigation itself and no need to call the  `CellSubmit` callback inside editable widget.
 
 >N `DataGridSource.onCellSubmit` will call when the `DataGridSource.canSubmitCell` return true.
 
@@ -643,7 +643,7 @@ class EmployeeDataSource extends DataGridSource {
 
 ## Cancel edited cell value from being committed
 
-The `DataGridSource.canSubmitCell` callback will call every time before `DataGridSource.onCellSubmit` callback. We can validate the edited value in `canSubmitCell` and return `true` or `false` to prevent calling the `DataGridSource.onCellSubmit` callback and committing from invalid value from it. By default its returns `true`.
+The `DataGridSource.canSubmitCell` callback will call every time before `DataGridSource.onCellSubmit` callback. We can validate the edited value in `canSubmitCell` and return `true` or `false` to prevent calling the `DataGridSource.onCellSubmit` callback and committing the invalid value. By default its returns `true`.
 
 {% tabs %}
 {% highlight dart %} 
@@ -651,11 +651,13 @@ The `DataGridSource.canSubmitCell` callback will call every time before `DataGri
 class EmployeeDataSource extends DataGridSource {
   @override
   bool canSubmitCell(DataGridRow dataGridRow, RowColumnIndex rowColumnIndex,
-      GridColumn column) { 
-    // Editing widget will retain in view.         
+      GridColumn column) {         
     if (newCellValue == null || newCellValue == '') {
+      // Editing widget will retain in view.
+      // onCellSubmit callback will not fire.
       return false;
     } else {
+      // Allow to call the onCellSumbit.
       return true;
     }
   }
