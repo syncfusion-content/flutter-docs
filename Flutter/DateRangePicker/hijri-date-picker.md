@@ -101,7 +101,7 @@ Display the Week number of the year in the month view by setting the [showWeekNu
 ![Hijri Week Number in Flutter Date Range Picker](images/hijri-picker/flutter-hijri-date-range-picker-week-number.png)
 
 ## Week number appearance
-Customize the Week number style by using the [textStyle]() and the  [backgroundColor]() properties of the [DateRangePickerWeekNumberStyle]().
+Customize the Week number style by using the [textStyle]() and the [backgroundColor]() properties of the [DateRangePickerWeekNumberStyle]().
 
 {% tabs %}
 {% highlight Dart %}
