@@ -718,8 +718,67 @@ class Meeting {
 >**NOTE**
 * Exception dates should be Universal Time Coordinates (UTC) time zone.
 
+### Add exception appointment to the recurrence series
+
+Add an exception appointment that is changed or modified occurrence of the recurrence pattern appointment to the `dateSource` of the `SfCalendar`. To add a changed occurrence, ensure to set the [RecurrenceId]() of that occurrence, and add the date of that occurrence to the [RecurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceExceptionDates.html) of recurrence pattern appointment. The `RecurrenceId` of the changed occurrence should hold the exact recurrence pattern appointment [Id]().
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Container(
+          child: SfCalendar(
+            view: CalendarView.week,
+            dataSource: _getDataSource(),
+          ),
+        ),
+      ),
+    );
+  }
+AppointmentDataSource _getDataSource() {
+  final List<Appointment> appointments = <Appointment>[];
+  final DateTime exceptionDate = DateTime(2021, 04, 20);
+
+  final Appointment recurrenceAppointment = Appointment(
+    startTime: DateTime(2021, 04, 12, 10),
+    endTime: DateTime(2021, 04, 12, 12),
+    subject: 'Scrum meeting',
+    id: '01',
+    recurrenceRule: 'FREQ=DAILY;INTERVAL=1;COUNT=10',
+    color: Colors.purple,
+    recurrenceExceptionDates: <DateTime>[exceptionDate],
+  );
+  appointments.add(recurrenceAppointment);
+
+  final Appointment exceptionAppointment = Appointment(
+      startTime: exceptionDate.add(const Duration(hours: 14)),
+      endTime: exceptionDate.add(const Duration(hours: 15)),
+      subject: 'Meeting',
+      id: '02',
+      color: Colors.pinkAccent,
+      recurrenceId: recurrenceAppointment.id);
+
+  appointments.add(exceptionAppointment);
+
+  return AppointmentDataSource(appointments);
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Recurrence Series in Flutter Calendar](images/appointments/flutter-calendar-recurrence-series.png)
+
+>**NOTE**
+* The RecurrenceId of the changed occurrence should hold the exact recurrence pattern appointment Id.
+* The exception appointment should be a normal appointment, and should not be created as recurring appointment, since its occurrence is from recurrence pattern.
+* The exception recurrence appointment does not have the RecurrenceRule, so for an exception appointment, it will be reset to empty.
+
+
 ## Appearance customization
-Calendar appointment text style can be customized by using the [appointmentTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/appointmentTextStyle.html) property of calendar.
+The Calendar appointment text style can be customized by using the [appointmentTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/appointmentTextStyle.html) property of the calendar.
 
 {% tabs %}
 {% highlight Dart %}
