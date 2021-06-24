@@ -59,7 +59,7 @@ Widget build(BuildContext context) {
                 child: SfDataGrid(
                   source: _employeeDataSource,
                   columns: <GridColumn>[
-                    GridTextColumn(
+                    GridColumn(
                       columnName: 'id',
                       label: Container(
                         padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -70,7 +70,7 @@ Widget build(BuildContext context) {
                         ),
                       ),
                     ),
-                    GridTextColumn(
+                    GridColumn(
                       columnName: 'name',
                       label: Container(
                         padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -81,7 +81,7 @@ Widget build(BuildContext context) {
                         ),
                       ),
                     ),
-                    GridTextColumn(
+                    GridColumn(
                       columnName: 'designation',
                       label: Container(
                         padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -92,7 +92,7 @@ Widget build(BuildContext context) {
                         ),
                       ),
                     ),
-                    GridTextColumn(
+                    GridColumn(
                       columnName: 'salary',
                       label: Container(
                         padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -183,7 +183,7 @@ Widget build(BuildContext context) {
                 child: SfDataGrid(
                   source: _employeeDataSource,
                   columns: <GridColumn>[
-                    GridTextColumn(
+                    GridColumn(
                       columnName: 'id',
                       label: Container(
                         padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -194,7 +194,7 @@ Widget build(BuildContext context) {
                         ),
                       ),
                     ),
-                    GridTextColumn(
+                    GridColumn(
                       columnName: 'name',
                       label: Container(
                         padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -205,7 +205,7 @@ Widget build(BuildContext context) {
                         ),
                       ),
                     ),
-                    GridTextColumn(
+                    GridColumn(
                       columnName: 'designation',
                       label: Container(
                         padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -216,7 +216,7 @@ Widget build(BuildContext context) {
                         ),
                       ),
                     ),
-                    GridTextColumn(
+                    GridColumn(
                       columnName: 'salary',
                       label: Container(
                         padding: EdgeInsets.symmetric(horizontal: 16.0),
