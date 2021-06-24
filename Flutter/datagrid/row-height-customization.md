@@ -525,7 +525,7 @@ Widget build(BuildContext context) {
     source: _employeeDatasource,
     headerRowHeight: 70,
     columns: <GridColumn>[
-      GridTextColumn(
+      GridColumn(
         columnName: 'id',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -534,7 +534,7 @@ Widget build(BuildContext context) {
             'ID',
             overflow: TextOverflow.ellipsis,
           ))),
-      GridTextColumn(
+      GridColumn(
         columnName: 'name',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -543,7 +543,7 @@ Widget build(BuildContext context) {
             'Name',
             overflow: TextOverflow.ellipsis,
           ))),
-      GridTextColumn(
+      GridColumn(
         columnName: 'designation',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -552,7 +552,7 @@ Widget build(BuildContext context) {
             'Designation',
             overflow: TextOverflow.ellipsis,
           ))),
-      GridTextColumn(
+      GridColumn(
         columnName: 'salary',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -584,7 +584,7 @@ Widget build(BuildContext context) {
     source: _employeeDatasource,
     rowHeight: 60,
     columns: <GridColumn>[
-      GridTextColumn(
+      GridColumn(
         columnName: 'id',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -593,7 +593,7 @@ Widget build(BuildContext context) {
             'ID',
             overflow: TextOverflow.ellipsis,
           ))),
-      GridTextColumn(
+      GridColumn(
         columnName: 'name',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -602,7 +602,7 @@ Widget build(BuildContext context) {
             'Name',
             overflow: TextOverflow.ellipsis,
           ))),
-      GridTextColumn(
+      GridColumn(
         columnName: 'designation',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -611,7 +611,7 @@ Widget build(BuildContext context) {
             'Designation',
             overflow: TextOverflow.ellipsis,
           ))),
-      GridTextColumn(
+      GridColumn(
         columnName: 'salary',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -684,7 +684,7 @@ Widget build(BuildContext context) {
               return 50.0; 
             },
             columns: <GridColumn>[
-              GridTextColumn(
+              GridColumn(
                 columnName: 'id',
                 label: Container(
                   padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -693,7 +693,7 @@ Widget build(BuildContext context) {
                     'ID',
                     overflow: TextOverflow.ellipsis,
                   ))),
-              GridTextColumn(
+              GridColumn(
                 columnName: 'name',
                 label: Container(
                   padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -702,7 +702,7 @@ Widget build(BuildContext context) {
                     'Name',
                     overflow: TextOverflow.ellipsis,
                   ))),
-              GridTextColumn(
+              GridColumn(
                 columnName: 'designation',
                 label: Container(
                   padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -711,7 +711,7 @@ Widget build(BuildContext context) {
                     'Designation',
                     overflow: TextOverflow.ellipsis,
                   ))),
-              GridTextColumn(
+              GridColumn(
                 columnName: 'salary',
                 label: Container(
                   padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -771,7 +771,7 @@ Widget build(BuildContext context) {
               return 50.0;  
             },
             columns: <GridColumn>[
-              GridTextColumn(
+              GridColumn(
                 columnName: 'id',
                 label: Container(
                   padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -780,7 +780,7 @@ Widget build(BuildContext context) {
                     'ID',
                     overflow: TextOverflow.ellipsis,
                   ))),
-              GridTextColumn(
+              GridColumn(
                 columnName: 'name',
                 label: Container(
                   padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -789,7 +789,7 @@ Widget build(BuildContext context) {
                     'Name',
                     overflow: TextOverflow.ellipsis,
                   ))),
-              GridTextColumn(
+              GridColumn(
                 columnName: 'designation',
                 label: Container(
                   padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -798,7 +798,7 @@ Widget build(BuildContext context) {
                     'Designation',
                     overflow: TextOverflow.ellipsis,
                   ))),
-              GridTextColumn(
+              GridColumn(
                 columnName: 'salary',
                 label: Container(
                   padding: EdgeInsets.symmetric(horizontal: 16.0),

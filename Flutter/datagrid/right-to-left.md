@@ -32,7 +32,7 @@ Widget build(BuildContext context) {
       source: employeeDataSource,
       columnWidthMode: ColumnWidthMode.fill,
       columns: <GridColumn>[
-        GridTextColumn(
+        GridColumn(
             columnName: 'id',
             label: Container(
                 padding: EdgeInsets.all(16.0),
@@ -40,13 +40,13 @@ Widget build(BuildContext context) {
                 child: Text(
                   'ID',
                 ))),
-        GridTextColumn(
+        GridColumn(
             columnName: 'name',
             label: Container(
                 padding: EdgeInsets.all(8.0),
                 alignment: Alignment.center,
                 child: Text('Name'))),
-        GridTextColumn(
+        GridColumn(
             columnName: 'designation',
             label: Container(
                 padding: EdgeInsets.all(8.0),
@@ -55,7 +55,7 @@ Widget build(BuildContext context) {
                   'Designation',
                   overflow: TextOverflow.ellipsis,
                 ))),
-        GridTextColumn(
+        GridColumn(
             columnName: 'salary',
             label: Container(
                 padding: EdgeInsets.all(8.0),
@@ -96,7 +96,7 @@ Widget build(BuildContext context) {
       source: employeeDataSource,
       columnWidthMode: ColumnWidthMode.fill,
       columns: <GridColumn>[
-        GridTextColumn(
+        GridColumn(
             columnName: 'id',
             label: Container(
                 padding: EdgeInsets.all(16.0),
@@ -104,13 +104,13 @@ Widget build(BuildContext context) {
                 child: Text(
                   'ID',
                 ))),
-        GridTextColumn(
+        GridColumn(
             columnName: 'name',
             label: Container(
                 padding: EdgeInsets.all(8.0),
                 alignment: Alignment.center,
                 child: Text('Name'))),
-        GridTextColumn(
+        GridColumn(
             columnName: 'designation',
             label: Container(
                 padding: EdgeInsets.all(8.0),
@@ -119,7 +119,7 @@ Widget build(BuildContext context) {
                   'Designation',
                   overflow: TextOverflow.ellipsis,
                 ))),
-        GridTextColumn(
+        GridColumn(
             columnName: 'salary',
             label: Container(
                 padding: EdgeInsets.all(8.0),

@@ -47,7 +47,7 @@ Widget build(BuildContext context) {
             source: _orderInfoDataSource,
             columnWidthMode: ColumnWidthMode.fill,
             columns: <GridColumn>[
-              GridTextColumn(
+              GridColumn(
                 columnName: 'orderID',
                 label: Container(
                   padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -58,7 +58,7 @@ Widget build(BuildContext context) {
                   ),
                 ),
               ),
-              GridTextColumn(
+              GridColumn(
                   columnName: 'customerID',
                   label: Container(
                     padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -68,7 +68,7 @@ Widget build(BuildContext context) {
                       overflow: TextOverflow.ellipsis,
                     ),
                   )),
-              GridTextColumn(
+              GridColumn(
                 columnName: 'orderDate',
                 label: Container(
                   padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -79,7 +79,7 @@ Widget build(BuildContext context) {
                   ),
                 ),
               ),
-              GridTextColumn(
+              GridColumn(
                 columnName: 'freight',
                 label: Container(
                   padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -243,7 +243,7 @@ Widget buildDataGrid(BoxConstraints constraint) {
       source: _orderInfoDataSource,
       columnWidthMode: ColumnWidthMode.fill,
       columns: <GridColumn>[
-        GridTextColumn(
+        GridColumn(
           columnName: 'orderID',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -254,7 +254,7 @@ Widget buildDataGrid(BoxConstraints constraint) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
             columnName: 'customerID',
             label: Container(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -264,7 +264,7 @@ Widget buildDataGrid(BoxConstraints constraint) {
                 overflow: TextOverflow.ellipsis,
               ),
             )),
-        GridTextColumn(
+        GridColumn(
           columnName: 'orderDate',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -275,7 +275,7 @@ Widget buildDataGrid(BoxConstraints constraint) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'freight',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -434,7 +434,7 @@ Widget buildDataGrid(BoxConstraints constraint) {
       source: _orderInfoDataSource,
       columnWidthMode: ColumnWidthMode.fill,
       columns: <GridColumn>[
-        GridTextColumn(
+        GridColumn(
           columnName: 'orderID',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -445,7 +445,7 @@ Widget buildDataGrid(BoxConstraints constraint) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
             columnName: 'customerID',
             label: Container(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -455,7 +455,7 @@ Widget buildDataGrid(BoxConstraints constraint) {
                 overflow: TextOverflow.ellipsis,
               ),
             )),
-        GridTextColumn(
+        GridColumn(
           columnName: 'orderDate',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -466,7 +466,7 @@ Widget buildDataGrid(BoxConstraints constraint) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'freight',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
