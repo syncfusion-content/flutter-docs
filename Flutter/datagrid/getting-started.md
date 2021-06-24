@@ -68,7 +68,7 @@ Widget build(BuildContext context) {
     body: SfDataGrid(
       source: _employeeDataSource,
       columns: [
-        GridTextColumn(
+        GridColumn(
           columnName: 'id',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -77,7 +77,7 @@ Widget build(BuildContext context) {
               'ID',
               overflow: TextOverflow.ellipsis,
             ))),
-        GridTextColumn(
+        GridColumn(
           columnName: 'name',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -86,7 +86,7 @@ Widget build(BuildContext context) {
               'Name',
               overflow: TextOverflow.ellipsis,
             ))),
-        GridTextColumn(
+        GridColumn(
           columnName: 'designation',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -95,7 +95,7 @@ Widget build(BuildContext context) {
               'Designation',
               overflow: TextOverflow.ellipsis,
             ))),
-        GridTextColumn(
+        GridColumn(
           columnName: 'salary',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -232,7 +232,7 @@ Widget build(BuildContext context) {
 
 ## Defining columns
 
-`SfDataGrid` supports to add any widget in a column using the [GridTextColumn] property. You can add the column collection to the `columns` property.
+`SfDataGrid` supports to add any widget in a column using the `GridColumn` property. You can add the column collection to the `columns` property.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -245,7 +245,7 @@ Widget build(BuildContext context) {
     body: SfDataGrid(
       source: _employeeDataSource,
       columns: [
-        GridTextColumn(
+        GridColumn(
           columnName: 'id',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -254,7 +254,7 @@ Widget build(BuildContext context) {
               'ID',
               overflow: TextOverflow.ellipsis,
             ))),
-        GridTextColumn(
+        GridColumn(
           columnName: 'name',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -263,7 +263,7 @@ Widget build(BuildContext context) {
               'Name',
               overflow: TextOverflow.ellipsis,
             ))),
-        GridTextColumn(
+        GridColumn(
           columnName: 'designation',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -272,7 +272,7 @@ Widget build(BuildContext context) {
               'Designation',
               overflow: TextOverflow.ellipsis,
             ))),
-        GridTextColumn(
+        GridColumn(
           columnName: 'salary',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -306,7 +306,7 @@ Widget build(BuildContext context) {
     body: SfDataGrid(
       source: _employeeDataSource,
       columns: [
-        GridTextColumn(
+        GridColumn(
           columnName: 'id',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -315,7 +315,7 @@ Widget build(BuildContext context) {
               'ID',
               overflow: TextOverflow.ellipsis,
             ))),
-        GridTextColumn(
+        GridColumn(
           columnName: 'name',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -324,7 +324,7 @@ Widget build(BuildContext context) {
               'Name',
               overflow: TextOverflow.ellipsis,
             ))),
-        GridTextColumn(
+        GridColumn(
           columnName: 'designation',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -333,7 +333,7 @@ Widget build(BuildContext context) {
               'Designation',
               overflow: TextOverflow.ellipsis,
             ))),
-        GridTextColumn(
+        GridColumn(
           columnName: 'salary',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -383,7 +383,7 @@ Widget build(BuildContext context) {
           child: SfDataGrid(
             source: _employeeDataSource,
             columns: [
-              GridTextColumn(
+              GridColumn(
                 columnName: 'id',
                 label: Container(
                   padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -392,7 +392,7 @@ Widget build(BuildContext context) {
                     'ID',
                     overflow: TextOverflow.ellipsis,
                   ))),
-              GridTextColumn(
+              GridColumn(
                 columnName: 'name',
                 label: Container(
                   padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -401,7 +401,7 @@ Widget build(BuildContext context) {
                     'Name',
                     overflow: TextOverflow.ellipsis,
                   ))),
-              GridTextColumn(
+              GridColumn(
                 columnName: 'designation',
                 label: Container(
                   padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -410,7 +410,7 @@ Widget build(BuildContext context) {
                     'Designation',
                     overflow: TextOverflow.ellipsis,
                   ))),
-              GridTextColumn(
+              GridColumn(
                 columnName: 'salary',
                 label: Container(
                   padding: EdgeInsets.symmetric(horizontal: 16.0),

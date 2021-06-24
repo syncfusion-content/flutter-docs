@@ -46,7 +46,7 @@ Widget build(BuildContext context) {
     child: SfDataGrid(
       source: employeeDataSource,
       columns: <GridColumn>[
-        GridTextColumn(
+        GridColumn(
           columnName: 'id',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -57,7 +57,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'name',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -68,7 +68,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'salary',
           visible: false,
           label: Container(
@@ -80,7 +80,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'designation',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -119,7 +119,7 @@ Widget build(BuildContext context) {
     child: SfDataGrid(
       source: employeeDataSource,
       columns: <GridColumn>[
-        GridTextColumn(
+        GridColumn(
           columnName: 'id',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -130,7 +130,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'name',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -141,7 +141,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'salary',
           visible: false,
           label: Container(
@@ -153,7 +153,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'designation',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),

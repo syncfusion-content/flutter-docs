@@ -35,7 +35,7 @@ Widget build(BuildContext context) {
       source: _employeeDataSource,
       columnWidthMode: ColumnWidthMode.fill,
       columns: <GridColumn>[
-        GridTextColumn(
+        GridColumn(
           columnName: 'id',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -46,7 +46,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'name',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -57,7 +57,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'designation',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -68,7 +68,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'city',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -79,7 +79,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'salary',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -530,7 +530,7 @@ Widget build(BuildContext context) {
       source: _employeeDataSource,
       columnWidthMode: ColumnWidthMode.lastColumnFill,
       columns: <GridColumn>[
-        GridTextColumn(
+        GridColumn(
           columnName: 'id',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -541,7 +541,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'name',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -552,7 +552,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'salary',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -563,7 +563,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'designation',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -595,7 +595,7 @@ Widget build(BuildContext context) {
     body: SfDataGrid(
       source: _employeeDataSource,
       columns: <GridColumn>[
-        GridTextColumn(
+        GridColumn(
           columnName: 'id',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -606,7 +606,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'name',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -617,7 +617,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'salary',
           columnWidthMode: ColumnWidthMode.lastColumnFill,
           label: Container(
@@ -629,7 +629,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'designation',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
