@@ -128,7 +128,7 @@ Widget build(BuildContext context) {
 
 ## Show the footer row always
 
-By default, the additional row will be displayed below the last row. To show the additional row always on the view bottom, simply set the `SfDataGrid.frozenFooterRowsCount` property to 1.
+By default, the additional row will be displayed below the last row. To show the additional row always on the view bottom, simply set the [SfDataGrid.footerFrozenRowsCount](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/footerFrozenRowsCount.html) property to 1.
 
 {% tabs %}
 {% highlight Dart %} 
