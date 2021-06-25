@@ -1,0 +1,120 @@
+---
+layout: post
+title: Spline range area in Flutter Cartesian Charts widget | Syncfusion 
+description: Learn here all about spline range area chart of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+platform: flutter
+control: Chart
+documentation: ug
+---
+
+# Spline range area Chart in Flutter Cartesian Charts (SfCartesianChart)
+
+To create a Flutter spline range area chart quickly, you can check this video.
+
+<style>#flutterSplinerangecolumnChartTutorial{width : 90% !important; height: 300px !important }</style>
+<iframe id='flutterSplinerangecolumnChartTutorial' src='https://www.youtube.com/embed/uSsKhlRzC2Q'></iframe>
+
+To render a spline range area chart, create an instance of the [`SplineRangeAreaSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineRangeAreaSeries-class.html), and add to the series collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html).
+
+
+ `SplineRangeAreaSeries` requires two Y values for a point, data should contain high and low values. The high and low values specify the maximum and minimum ranges of a point.
+
+* [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/highValueMapper.html) - field in the data source, which is considered as high value for the data points.
+* [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/lowValueMapper.html) - field in the data source, which is considered as low value for the data points.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <CartesianSeries<SalesData, num>>[
+                        SplineRangeAreaSeries<SalesData, num>(
+                          dataSource: chartData,
+                          xValueMapper: (SalesData sales, _) => sales.xValue,
+                          lowValueMapper: (SalesData sales, _) =>
+                              sales.lowValue,
+                          highValueMapper: (SalesData sales, _) =>
+                              sales.highValue,),
+                    ]
+                )
+             )
+          )
+       );
+    }
+
+{% endhighlight %}
+
+![splinerangearea](cartesian-chart-types-images/splinerangearea.png)
+
+###	Spline rendering types
+
+The [`splineType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineSeries/splineType.html) allows you to change the spline curve in series. The following types can be used in [`SplineRangeAreaSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineRangeAreaSeries-class.html).
+
+* natural
+* monotonic
+* cardinal
+* clamped
+
+By default, the value of [`splineType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineSeries/splineType.html) is [`natural`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineType-class.html).
+
+The following code sample demonstrates how to set the [`splineType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineSeries/splineType.html) value to [`cardinal`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineType-class.html). When you set the cardinal type, you can specify the desired line tension of the [`cardinal`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineType-class.html) spline using the [`cardinalSplineTension`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineSeries/cardinalSplineTension.html) property. The value of this property ranges from 0 to 1.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <CartesianSeries<SalesData, num>>[
+                            SplineRangeAreaSeries<SalesData, num>(
+                                dataSource: chartData,
+                                splineType: SplineType.cardinal,
+                                cardinalSplineTension: 0.8,
+                                xValueMapper: (SalesData sales, _) => sales.xValue,
+                                lowValueMapper: (SalesData sales, _) => sales.lowValue,
+                                highValueMapper: (SalesData sales, _) => sales.highValue
+                            )
+                        ]
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![splinerangearea](cartesian-chart-types-images/splinerangeareatype.png)
+
+## Border customization
+
+The borders of the spline range area chart can be customized using the [`borderDrawMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineRangeAreaSeries/borderDrawMode.html) property. The default value of the [`borderDrawMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineRangeAreaSeries/borderDrawMode.html) property is `all` and the other value is `excludeSides`.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        series: <CartesianSeries<SalesData, num>>[
+                            SplineRangeAreaSeries<SalesData, num>(
+                                borderDrawMode: RangeAreaBorderMode.all,
+                                borderWidth:2,
+                                borderColor: Colors.red
+                            )
+                        ]
+                    )
+                )
+            )
+        );
+    }
+
+{% endhighlight %}
+
+![splinerangearea_bordermode](cartesian-chart-types-images/splinerangearea_bordermode.png)

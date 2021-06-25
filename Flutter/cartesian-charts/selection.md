@@ -43,6 +43,12 @@ The selection feature in chart let you to select a segment in a series or the se
         );  
     }
 
+    class ChartData {
+        ChartData(this.x, this.y);
+        final double x;
+        final double? y;
+      }
+
 {% endhighlight %}
 
 ## Customizing the segments
@@ -89,6 +95,12 @@ You can customize the segments using the below properties.
             )
         );
     }
+
+    class ChartData {
+        ChartData(this.x, this.y);
+        final String x;
+        final double? y;
+      }
 
 {% endhighlight %}
 
@@ -148,7 +160,7 @@ Multiple selection can be enabled using the [`enableMultiSelection`](https://pub
 
 ## Selection on initial rendering
 
-You can select a point or series programmatically on a chart using [`initialSelectedDataIndexes`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/initialSelectedDataIndexes.html) property of chart.
+You can select a point or series programmatically on a chart using [`initialSelectedDataIndexes`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/initialSelectedDataIndexes.html) property of chart.
 
 {% highlight dart %} 
     
@@ -191,12 +203,50 @@ You can select a point or series programmatically on a chart using [`initialSele
         );
     }
 
+    class ChartData {
+        ChartData(this.x, this.y);
+        final String x;
+        final double? y;
+      }
+
 {% endhighlight %}
 
 ![Initial selection](images/selection/initial_render_selection.jpg)
+
+## Toggle selection
+
+You can decide, whether to deselect the selected data point/series or remain selected when interacted with it again by setting the [`toggleSelection`]() property `true` or `false`.If set to true, deselection will be performed else the point will not get deselected.
+This works even while calling public methods, in various selection modes, with multi-selection, and also on dynamic changes.
+Defaults to `true`.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+          body: Center(
+              child: Container(
+                  child:
+                      SfCircularChart(series: <CircularSeries<ChartData, String>>[
+          PieSeries<ChartData, String>(
+            dataSource: chartData1,
+            xValueMapper: (ChartData data, _) => data.x,
+            yValueMapper: (ChartData data, _) => data.y,
+            selectionBehavior: SelectionBehavior(
+                enable: true,
+                toggleSelection: false,
+              ))
+        ]))));
+    }
+
+{% endhighlight %}
+
+![Toggle selection](images/selection/deselection.gif)
 
 Also refer [selection event](./events#onselectionchanged) for customizing the selection further.
 
 #### See Also
 
 * [Dynamically selecting the data points in a chart](https://www.syncfusion.com/kb/11811/how-to-select-the-data-points-dynamically-in-cartesian-charts-sfcartesianchart).
+
+N> `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.

@@ -718,8 +718,67 @@ class Meeting {
 >**NOTE**
 * Exception dates should be Universal Time Coordinates (UTC) time zone.
 
+### Add exception appointment to the recurrence series
+
+Add an exception appointment that is changed or modified occurrence of the recurrence pattern appointment to the `dateSource` of the `SfCalendar`. To add a changed occurrence, ensure to set the [RecurrenceId]() of that occurrence, and add the date of that occurrence to the [RecurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/Appointment/recurrenceExceptionDates.html) of recurrence pattern appointment. The `RecurrenceId` of the changed occurrence should hold the exact recurrence pattern appointment [Id]().
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Container(
+          child: SfCalendar(
+            view: CalendarView.week,
+            dataSource: _getDataSource(),
+          ),
+        ),
+      ),
+    );
+  }
+AppointmentDataSource _getDataSource() {
+  final List<Appointment> appointments = <Appointment>[];
+  final DateTime exceptionDate = DateTime(2021, 04, 20);
+
+  final Appointment recurrenceAppointment = Appointment(
+    startTime: DateTime(2021, 04, 12, 10),
+    endTime: DateTime(2021, 04, 12, 12),
+    subject: 'Scrum meeting',
+    id: '01',
+    recurrenceRule: 'FREQ=DAILY;INTERVAL=1;COUNT=10',
+    color: Colors.purple,
+    recurrenceExceptionDates: <DateTime>[exceptionDate],
+  );
+  appointments.add(recurrenceAppointment);
+
+  final Appointment exceptionAppointment = Appointment(
+      startTime: exceptionDate.add(const Duration(hours: 14)),
+      endTime: exceptionDate.add(const Duration(hours: 15)),
+      subject: 'Meeting',
+      id: '02',
+      color: Colors.pinkAccent,
+      recurrenceId: recurrenceAppointment.id);
+
+  appointments.add(exceptionAppointment);
+
+  return AppointmentDataSource(appointments);
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Recurrence Series in Flutter Calendar](images/appointments/flutter-calendar-recurrence-series.png)
+
+>**NOTE**
+* The RecurrenceId of the changed occurrence should hold the exact recurrence pattern appointment Id.
+* The exception appointment should be a normal appointment, and should not be created as recurring appointment, since its occurrence is from recurrence pattern.
+* The exception recurrence appointment does not have the RecurrenceRule, so for an exception appointment, it will be reset to empty.
+
+
 ## Appearance customization
-Calendar appointment text style can be customized by using the [appointmentTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/appointmentTextStyle.html) property of calendar.
+The Calendar appointment text style can be customized by using the [appointmentTextStyle](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/appointmentTextStyle.html) property of the calendar.
 
 {% tabs %}
 {% highlight Dart %}
@@ -815,34 +874,24 @@ Widget build(BuildContext context) {
 
 ## See also
 
-[How to design and configure your appointment editor in event calendar widget Flutter](https://www.syncfusion.com/kb/11204/how-to-design-and-configure-your-appointment-editor-in-event-calendar-widget-flutter)
-
-[How to get appointment details from the OnTap event of the Flutter event calendar](https://www.syncfusion.com/kb/10999/how-to-get-appointment-details-from-the-ontap-event-of-the-flutter-event-calendar)
-
-[How to style the appointment in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12162/how-to-style-the-appointment-in-the-flutter-event-calendar-sfcalendar)
-
-[How to exclude the dates from recurrence appointments in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12161/how-to-exclude-the-dates-from-recurrence-appointments-in-the-flutter-event-calendar)
-
-[How to add recurring appointments until the specified date in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12158/how-to-add-recurring-appointments-until-the-specified-date-in-the-flutter-event-calendar)
-
-[How to add the appointments to the Fire base database using appointment editor in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12110/how-to-add-the-appointments-to-the-firebase-database-using-appointment-editor-in-the)
-
-[How to work with the Fire base database and the Flutter event calendar (SfCalendar) for appointments](https://www.syncfusion.com/kb/12067/how-to-work-with-the-firebase-database-and-the-flutter-event-calendar-sfcalendar-for)
-
-[How to add google calendar events to the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12116/how-to-add-google-calendar-events-to-the-flutter-event-calendar-sfcalendar)
-
-[How to add additional attributes in events in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12209/how-to-add-additional-attributes-in-events-in-the-flutter-event-calendar-sfcalendar)
-
-[How to add the appointments using the onTap callback in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12306/how-to-customize-the-month-cell-with-appointment-count-in-the-flutter-event-calendar)
-
-[How to set the arbitrary height to appointments in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12279/how-to-set-the-arbitrary-height-to-appointments-in-the-flutter-event-calendar-sfcalendar)
-
-[How to get the recurrence date collection in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12344/how-to-get-the-recurrence-date-collection-in-the-flutter-event-calendar-sfcalendar)
-
-[How to get the recurrence properties from RRULE in the Flutter calendar](https://www.syncfusion.com/kb/12370/how-to-get-the-recurrence-properties-from-rrule-in-the-flutter-calendar)
-
-[How to update blackout dates using onViewChanged callback in the Flutter calendar](https://www.syncfusion.com/kb/12368/how-to-update-blackout-dates-using-onviewchanged-callback-in-the-flutter-calendar)
-
-[How to use navigation drawer for view switching in the Flutter calendar](https://www.syncfusion.com/kb/12361/how-to-use-navigation-drawer-for-view-switching-in-the-flutter-calendar)
-
-[How to show the tapped appointment details on another page in the Flutter event calendar](https://www.syncfusion.com/kb/12358/how-to-show-the-tapped-appointment-details-on-another-page-in-the-flutter-event-calendar)
+* [How to design and configure your appointment editor in event calendar widget Flutter](https://www.syncfusion.com/kb/11204/how-to-design-and-configure-your-appointment-editor-in-event-calendar-widget-flutter)
+* [How to get appointment details from the OnTap event of the Flutter event calendar](https://www.syncfusion.com/kb/10999/how-to-get-appointment-details-from-the-ontap-event-of-the-flutter-event-calendar)
+* [How to style the appointment in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12162/how-to-style-the-appointment-in-the-flutter-event-calendar-sfcalendar)
+* [How to exclude the dates from recurrence appointments in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12161/how-to-exclude-the-dates-from-recurrence-appointments-in-the-flutter-event-calendar)
+* [How to add recurring appointments until the specified date in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12158/how-to-add-recurring-appointments-until-the-specified-date-in-the-flutter-event-calendar)
+* [How to add the appointments to the Fire base database using appointment editor in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12110/how-to-add-the-appointments-to-the-firebase-database-using-appointment-editor-in-the)
+* [How to work with the Fire base database and the Flutter event calendar (SfCalendar) for appointments](https://www.syncfusion.com/kb/12067/how-to-work-with-the-firebase-database-and-the-flutter-event-calendar-sfcalendar-for)
+* [How to add google calendar events to the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12116/how-to-add-google-calendar-events-to-the-flutter-event-calendar-sfcalendar)
+* [How to add additional attributes in events in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12209/how-to-add-additional-attributes-in-events-in-the-flutter-event-calendar-sfcalendar)
+* [How to add the appointments using the onTap callback in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12300/how-to-add-the-appointments-using-the-ontap-callback-in-the-flutter-calendar)
+* [How to set the arbitrary height to appointments in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12279/how-to-set-the-arbitrary-height-to-appointments-in-the-flutter-event-calendar-sfcalendar)
+* [How to get the recurrence date collection in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/12344/how-to-get-the-recurrence-date-collection-in-the-flutter-event-calendar-sfcalendar)
+* [How to get the recurrence properties from RRULE in the Flutter calendar](https://www.syncfusion.com/kb/12370/how-to-get-the-recurrence-properties-from-rrule-in-the-flutter-calendar)
+* [How to update blackout dates using onViewChanged callback in the Flutter calendar](https://www.syncfusion.com/kb/12368/how-to-update-blackout-dates-using-onviewchanged-callback-in-the-flutter-calendar)
+* [How to use navigation drawer for view switching in the Flutter calendar](https://www.syncfusion.com/kb/12361/how-to-use-navigation-drawer-for-view-switching-in-the-flutter-calendar)
+* [How to show the tapped appointment details on another page in the Flutter event calendar](https://www.syncfusion.com/kb/12358/how-to-show-the-tapped-appointment-details-on-another-page-in-the-flutter-event-calendar)
+* [How to load appointments On-Demand in Flutter Calendar](https://www.syncfusion.com/kb/12658/how-to-load-appointments-on-demand-in-flutter-calendar)
+* [How to load the google calendar events to the Flutter Calendar (SfCalendar) in iOS](https://www.syncfusion.com/kb/12647/how-to-load-the-google-calendar-events-to-the-flutter-calendar-sfcalendar-in-ios)
+* [How to perform the CRUD operations in Flutter Calendar using Fire base database](https://www.syncfusion.com/kb/12623/how-to-perform-the-crud-operations-in-flutter-calendar-using-firebase-database)
+* [How to add the appointments to Fire store Database using Flutter Calendar](https://www.syncfusion.com/kb/12616/how-to-add-the-appointments-to-firestore-database-using-flutter-calendar)
+* [How to perform the CRUD operations in Flutter Calendar using Fire store database](https://www.syncfusion.com/kb/12661/how-to-perform-the-crud-operations-in-flutter-calendar-using-firestore-database)

@@ -36,22 +36,27 @@ void initState() {
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-     body: SfTreemap(
-        dataCount: _source.length,
-        weightValueMapper: (int index) {
-          return _source[index].usersInMillions;
-        },
-        levels: [
-          TreemapLevel(
-            padding: const EdgeInsets.all(1.5),
-            groupMapper: (int index) {
-              return _source[index].country;
+     body: Center(
+        child: Container(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].usersInMillions;
             },
+            levels: [
+              TreemapLevel(
+                groupMapper: (int index) {
+                  return _source[index].country;
+                },
+              ),
+            ],
+            legend: TreemapLegend(),
           ),
-        ],
-        legend: TreemapLegend(),
-     ),
-  );
+        ),
+      ),
+   );
 }
 
 class SocialMediaUsers {
@@ -95,22 +100,27 @@ void initState() {
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-     body: SfTreemap(
-        dataCount: _source.length,
-        weightValueMapper: (int index) {
-          return _source[index].usersInMillions;
-        },
-        levels: [
-          TreemapLevel(
-            padding: const EdgeInsets.all(1.5),
-            groupMapper: (int index) {
-              return _source[index].country;
+     body: Center(
+        child: Container(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].usersInMillions;
             },
+            levels: [
+              TreemapLevel(
+                groupMapper: (int index) {
+                  return _source[index].country;
+                },
+              ),
+            ],
+            legend: TreemapLegend.bar(),
           ),
-        ],
-        legend: TreemapLegend.bar(),
-     ),
-  );
+        ),
+      ),
+   );
 }
 
 class SocialMediaUsers {
@@ -291,24 +301,29 @@ void initState() {
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-     body: SfTreemap(
-        dataCount: _source.length,
-        weightValueMapper: (int index) {
-          return _source[index].usersInMillions;
-        },
-        levels: [
-          TreemapLevel(
-            padding: const EdgeInsets.all(2.5),
-            groupMapper: (int index) {
-              return _source[index].country;
+     body: Center(
+        child: Container(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].usersInMillions;
             },
+            levels: [
+              TreemapLevel(
+                groupMapper: (int index) {
+                  return _source[index].country;
+                },
+              ),
+            ],
+            legend: TreemapLegend(
+              position: TreemapLegendPosition.bottom,
+            ),
           ),
-        ],
-        legend: TreemapLegend(
-          position: TreemapLegendPosition.bottom,
         ),
-     ),
-  );
+      ),
+   );
 }
 
 class SocialMediaUsers {
@@ -354,24 +369,29 @@ void initState() {
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-     body: SfTreemap(
-        dataCount: _source.length,
-        weightValueMapper: (int index) {
-          return _source[index].usersInMillions;
-        },
-        levels: [
-          TreemapLevel(
-            padding: const EdgeInsets.all(1.5),
-            groupMapper: (int index) {
-              return _source[index].country;
+     body: Center(
+        child: Container(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].usersInMillions;
             },
+            levels: [
+              TreemapLevel(
+                groupMapper: (int index) {
+                  return _source[index].country;
+                },
+              ),
+            ],
+            legend: TreemapLegend(
+              offset: Offset(70, 250),
+            ),
           ),
-        ],
-        legend: TreemapLegend(
-          offset: Offset(70, 250),
         ),
-     ),
-  );
+      ),
+   );
 }
 
 class SocialMediaUsers {
@@ -384,6 +404,8 @@ class SocialMediaUsers {
 
 {% endhighlight %}
 {% endtabs %}
+
+![legend offset](images/legend/legend-offset.png)
 
 ## Overflow mode
 
@@ -418,21 +440,26 @@ void initState() {
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-     body: SfTreemap(
-        dataCount: _source.length,
-        weightValueMapper: (int index) {
-          return _source[index].usersInMillions;
-        },
-        levels: [
-          TreemapLevel(
-            padding: const EdgeInsets.all(1.5),
-            groupMapper: (int index) {
-              return _source[index].country;
+     body: Center(
+        child: Container(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].usersInMillions;
             },
+            levels: [
+              TreemapLevel(
+                groupMapper: (int index) {
+                  return _source[index].country;
+                },
+              ),
+            ],
+            legend: TreemapLegend(
+              overflowMode: TreemapLegendOverflowMode.scroll,
+            ),
           ),
-        ],
-        legend: TreemapLegend(
-          overflowMode: TreemapLegendOverflowMode.scroll,
         ),
       ),
    );
@@ -479,22 +506,27 @@ void initState() {
 
 @override
 Widget build(BuildContext context) {
-   return Scaffold(
-      body: SfTreemap(
-        dataCount: _source.length,
-        weightValueMapper: (int index) {
-          return _source[index].usersInMillions;
-        },
-        levels: [
-          TreemapLevel(
-            padding: const EdgeInsets.all(1.5),
-            groupMapper: (int index) {
-              return _source[index].country;
+  return Scaffold(
+     body: Center(
+        child: Container(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].usersInMillions;
             },
+            levels: [
+              TreemapLevel(
+                groupMapper: (int index) {
+                  return _source[index].country;
+                },
+              ),
+            ],
+            legend: TreemapLegend.bar(
+              overflowMode: TreemapLegendOverflowMode.scroll,
+            ),
           ),
-        ],
-        legend: TreemapLegend.bar(
-          overflowMode: TreemapLegendOverflowMode.scroll,
         ),
       ),
    );
@@ -541,25 +573,30 @@ void initState() {
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-     body: SfTreemap(
-        dataCount: _source.length,
-        weightValueMapper: (int index) {
-          return _source[index].usersInMillions;
-        },
-        levels: [
-          TreemapLevel(
-            padding: const EdgeInsets.all(1.5),
-            groupMapper: (int index) {
-              return _source[index].country;
+     body: Center(
+        child: Container(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].usersInMillions;
             },
-          ),
-        ],
-        legend: TreemapLegend(
-          textStyle: TextStyle(
-            color: Colors.red,
-            fontSize: 14,
-            fontWeight: FontWeight.bold,
-            fontStyle: FontStyle.italic,
+            levels: [
+              TreemapLevel(
+                groupMapper: (int index) {
+                  return _source[index].country;
+                },
+              ),
+            ],
+            legend: TreemapLegend(
+              textStyle: TextStyle(
+                color: Colors.red,
+                fontSize: 14,
+                fontWeight: FontWeight.bold,
+                fontStyle: FontStyle.italic,
+              ),
+            ),
           ),
         ),
       ),
@@ -610,25 +647,30 @@ void initState() {
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-     body: SfTreemap(
-        dataCount: _source.length,
-        weightValueMapper: (int index) {
-          return _source[index].usersInMillions;
-        },
-        levels: [
-          TreemapLevel(
-            padding: const EdgeInsets.all(1.5),
-            groupMapper: (int index) {
-              return _source[index].country;
+     body: Center(
+        child: Container(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].usersInMillions;
             },
+            levels: [
+              TreemapLevel(
+                groupMapper: (int index) {
+                  return _source[index].country;
+                },
+              ),
+            ],
+            legend: TreemapLegend(
+              iconType: TreemapIconType.triangle,
+              iconSize: Size(12.0, 12.0),
+              spacing: 15,
+              padding: EdgeInsets.all(12.0),
+              direction: Axis.vertical,
+            ),
           ),
-        ],
-        legend: TreemapLegend(
-          iconType: TreemapIconType.triangle,
-          iconSize: Size(12.0, 12.0),
-          spacing: 15,
-          padding: EdgeInsets.all(12.0),
-          direction: Axis.vertical,
         ),
       ),
    );
@@ -771,7 +813,7 @@ Widget build(BuildContext context) {
         ],
         colorMappers: _colorMappers,
         legend: TreemapLegend.bar(
-          segmentPaintingStyle: TreemapLegendPaintingStyle.solid,
+          segmentPaintingStyle: TreemapLegendPaintingStyle.gradient,
         ),
       ),
    );
@@ -822,26 +864,31 @@ void initState() {
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-     body: SfTreemap(
-        dataCount: _source.length,
-        weightValueMapper: (int index) {
-          return _source[index].usersInMillions;
-        },
-        levels: [
-          TreemapLevel(
-            padding: const EdgeInsets.all(1.5),
-            groupMapper: (int index) {
-              return _source[index].country;
+     body: Center(
+        child: Container(
+          height: 400,
+          width: 400,
+          child: SfTreemap(
+            dataCount: _source.length,
+            weightValueMapper: (int index) {
+              return _source[index].usersInMillions;
             },
+            levels: [
+              TreemapLevel(
+                groupMapper: (int index) {
+                  return _source[index].country;
+                },
+              ),
+            ],
+            legend: TreemapLegend.bar(
+              segmentSize: Size(60, 12),
+              labelOverflow: TreemapLabelOverflow.ellipsis,
+              edgeLabelsPlacement: TreemapLegendEdgeLabelsPlacement.center,
+              padding: EdgeInsets.all(12),
+              direction: Axis.horizontal,
+              spacing: 5,
+            ),
           ),
-        ],
-        legend: TreemapLegend.bar(
-          segmentSize: Size(60, 12),
-          labelOverflow: TreemapLabelOverflow.ellipsis,
-          edgeLabelsPlacement: TreemapLegendEdgeLabelsPlacement.center,
-          padding: EdgeInsets.all(12),
-          direction: Axis.horizontal,
-          spacing: 5,
         ),
       ),
    );
@@ -1149,3 +1196,248 @@ class SocialMediaUsers {
 {% endtabs %}
 
 ![Bar legend labels placement](images/legend/bar-legend-equal-color-mapper-default.png)
+
+## Show pointer
+
+You may show a pointer on the bar gradient legend while hovering over a tile using the `showPointerOnHover` property. The default value of the `showPointerOnHover` property is `false`.
+
+N> It is applicable for gradient type bar legend.
+
+{% tabs %}
+{% highlight Dart %}
+
+late List<IndianPopulation> _population;
+late List<TreemapColorMapper> _colorMappers;
+
+@override
+void initState() {
+   _population = <IndianPopulation>[
+      IndianPopulation('Gujarat', 54612),
+      IndianPopulation('Bangalore', 473069),
+      IndianPopulation('Chennai', 210312),
+      IndianPopulation('Andra', 95419),
+      IndianPopulation('Kashmir', 80599),
+      IndianPopulation('Delhi', 39000),
+      IndianPopulation('Mumbai', 122897),
+      IndianPopulation('Kolkatta', 184135),
+   ];
+
+   _colorMappers = <TreemapColorMapper>[
+      TreemapColorMapper.range(from: 0, to: 10, color: Colors.blueGrey),
+      TreemapColorMapper.range(from: 10, to: 20, color: Colors.green),
+      TreemapColorMapper.range(from: 20, to: 30, color: Colors.lime),
+      TreemapColorMapper.range(from: 30, to: 50, color: Colors.teal),
+   ];
+   super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+     home: Scaffold(
+       body: Center(
+         child: Container(
+            height: 400,
+            width: 400,
+            child: SfTreemap(
+              dataCount: _population.length,
+              weightValueMapper: (int index) =>
+                  _population[index].population.toDouble(),
+              colorMappers: _colorMappers,
+              legend: TreemapLegend.bar(
+                segmentPaintingStyle: TreemapLegendPaintingStyle.gradient,
+                showPointerOnHover: true,
+              ),
+              levels: [
+                TreemapLevel(
+                  groupMapper: (int index) {
+                    return _population[index].state;
+                  },
+                  colorValueMapper: (TreemapTile tile) {
+                    return _population[tile.indices[0]].population / 10000;
+                  },
+                )
+              ],
+            ),
+          ),
+        ),
+      ),
+   );
+}
+
+class IndianPopulation {
+  const IndianPopulation(this.state, this.population);
+
+  final String state;
+  final int population;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Bar legend pointer](images/legend/bar-legend-pointer.gif)
+
+## Pointer builder
+
+It returns a widget for the given value.
+
+The pointer is used to indicate the exact color of the hovering tile on the legend segment.
+
+The `pointerBuilder` will be called when the user interacts with the tiles i.e., while tapping in touch devices and hovering in the mouse enabled devices.
+
+{% tabs %}
+{% highlight Dart %}
+
+late List<IndianPopulation> _population;
+late List<TreemapColorMapper> _colorMappers;
+
+@override
+void initState() {
+   _population = <IndianPopulation>[
+      IndianPopulation('Gujarat', 54612),
+      IndianPopulation('Bangalore', 473069),
+      IndianPopulation('Chennai', 210312),
+      IndianPopulation('Andra', 95419),
+      IndianPopulation('Kashmir', 80599),
+      IndianPopulation('Delhi', 39000),
+      IndianPopulation('Mumbai', 122897),
+      IndianPopulation('Kolkatta', 184135),
+   ];
+
+   _colorMappers = <TreemapColorMapper>[
+      TreemapColorMapper.range(from: 0, to: 10, color: Colors.blueGrey),
+      TreemapColorMapper.range(from: 10, to: 20, color: Colors.green),
+      TreemapColorMapper.range(from: 20, to: 30, color: Colors.lime),
+      TreemapColorMapper.range(from: 30, to: 50, color: Colors.teal),
+   ];
+   super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+   return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: Container(
+            height: 400,
+            width: 400,
+            child: SfTreemap(
+              dataCount: _population.length,
+              weightValueMapper: (int index) =>
+                  _population[index].population.toDouble(),
+              colorMappers: _colorMappers,
+              legend: TreemapLegend.bar(
+                segmentPaintingStyle: TreemapLegendPaintingStyle.gradient,
+                showPointerOnHover: true,
+                pointerBuilder: (BuildContext context, dynamic value) {
+                  return Icon(Icons.arrow_downward, size: 15);
+                },
+              ),
+              levels: [
+                TreemapLevel(
+                  groupMapper: (int index) {
+                    return _population[index].state;
+                  },
+                  colorValueMapper: (TreemapTile tile) {
+                    return _population[tile.indices[0]].population / 10000;
+                  },
+                )
+              ],
+            ),
+          ),
+        ),
+      ),
+   );
+}
+
+class IndianPopulation {
+  const IndianPopulation(this.state, this.population);
+
+  final String state;
+  final int population;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Bar legend custom pointer](images/legend/bar-legend-custom-pointer.png)
+
+## Pointer customization
+
+You can customize the size and color of the pointer using the `pointerSize` and `pointerColor` properties. The default value of the `pointerSize` property is `Size(16, 12)`.
+
+{% tabs %}
+{% highlight Dart %}
+
+late List<IndianPopulation> _population;
+late List<TreemapColorMapper> _colorMappers;
+
+@override
+void initState() {
+   _population = <IndianPopulation>[
+      IndianPopulation('Gujarat', 54612),
+      IndianPopulation('Bangalore', 473069),
+      IndianPopulation('Chennai', 210312),
+      IndianPopulation('Andra', 95419),
+      IndianPopulation('Kashmir', 80599),
+      IndianPopulation('Delhi', 39000),
+      IndianPopulation('Mumbai', 122897),
+      IndianPopulation('Kolkatta', 184135),
+   ];
+
+   _colorMappers = <TreemapColorMapper>[
+      TreemapColorMapper.range(from: 0, to: 10, color: Colors.blueGrey),
+      TreemapColorMapper.range(from: 10, to: 20, color: Colors.green),
+      TreemapColorMapper.range(from: 20, to: 30, color: Colors.lime),
+      TreemapColorMapper.range(from: 30, to: 50, color: Colors.teal),
+   ];
+   super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+     home: Scaffold(
+        body: Center(
+          child: Container(
+            height: 400,
+            width: 400,
+            child: SfTreemap(
+              dataCount: _population.length,
+              weightValueMapper: (int index) =>
+                  _population[index].population.toDouble(),
+              colorMappers: _colorMappers,
+              legend: TreemapLegend.bar(
+                segmentPaintingStyle: TreemapLegendPaintingStyle.gradient,
+                showPointerOnHover: true,
+                pointerSize: Size(20, 20),
+                pointerColor: Colors.deepPurple,
+              ),
+              levels: [
+                TreemapLevel(
+                  groupMapper: (int index) {
+                    return _population[index].state;
+                  },
+                  colorValueMapper: (TreemapTile tile) {
+                    return _population[tile.indices[0]].population / 10000;
+                  },
+                )
+              ],
+            ),
+          ),
+        ),
+      ),
+   );
+}
+
+class IndianPopulation {
+  const IndianPopulation(this.state, this.population);
+
+  final String state;
+  final int population;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Bar legend pointer customization](images/legend/bar-legend-pointer-customization.png)

@@ -50,7 +50,7 @@ A linear trendline is a best fit straight line that is used with simpler data se
                         primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders spline chart
-                            SplineSeries<SalesData, dateTime>(
+                            SplineSeries<SalesData, DateTime>(
                                 dataSource: chartData,
                                 trendlines:<Trendline>[
                                  Trendline(
@@ -64,6 +64,12 @@ A linear trendline is a best fit straight line that is used with simpler data se
             )
         );
     }
+
+    class SalesData {
+        SalesData(this.year, this.sales);
+        final DateTime year;
+        final double? sales;
+      }
 
 {% endhighlight %}
 
@@ -86,7 +92,7 @@ To render an exponential trendline, use trendline type as Exponential.
                         primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders spline chart
-                            SplineSeries<SalesData, dateTime>(
+                            SplineSeries<SalesData, DateTime>(
                                 dataSource: chartData,
                                 trendlines:<Trendline>[
                                  Trendline(
@@ -100,6 +106,12 @@ To render an exponential trendline, use trendline type as Exponential.
             )
         );
     }
+
+    class SalesData {
+        SalesData(this.year, this.sales);
+        final DateTime year;
+        final double? sales;
+      }
 
 {% endhighlight %}
 
@@ -122,7 +134,7 @@ To render a logarithmic trendline, use trendline type as Logarithmic
                         primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders spline chart
-                            SplineSeries<SalesData, dateTime>(
+                            SplineSeries<SalesData, DateTime>(
                                 dataSource: chartData,
                                 trendlines:<Trendline>[
                                  Trendline(
@@ -136,6 +148,12 @@ To render a logarithmic trendline, use trendline type as Logarithmic
             )
         );
     }
+
+    class SalesData {
+        SalesData(this.year, this.sales);
+        final DateTime year;
+        final double? sales;
+      }
 
 {% endhighlight %}
  
@@ -158,7 +176,7 @@ To render a polynomial trendline, use trendline type as Polynomial.
                         primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders spline chart
-                            SplineSeries<SalesData, dateTime>(
+                            SplineSeries<SalesData, DateTime>(
                                 dataSource: chartData,
                                 trendlines:<Trendline>[
                                  Trendline(
@@ -172,6 +190,12 @@ To render a polynomial trendline, use trendline type as Polynomial.
             )
         );
     }
+
+    class SalesData {
+        SalesData(this.year, this.sales);
+        final DateTime year;
+        final double? sales;
+      }
 
 {% endhighlight %}
 
@@ -194,7 +218,7 @@ To render a power trendline, use trendline type as Power
                         primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders spline chart
-                            SplineSeries<SalesData, dateTime>(
+                            SplineSeries<SalesData, DateTime>(
                                 dataSource: chartData,
                                 trendlines:<Trendline>[
                                  Trendline(
@@ -208,6 +232,12 @@ To render a power trendline, use trendline type as Power
             )
         );
     }
+
+    class SalesData {
+        SalesData(this.year, this.sales);
+        final DateTime year;
+        final double? sales;
+      }
 
 {% endhighlight %}
 
@@ -229,7 +259,7 @@ To render a moving average trendline, use trendline type as MovingAverage
                         primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders spline chart
-                            SplineSeries<SalesData, dateTime>(
+                            SplineSeries<SalesData, DateTime>(
                                 dataSource: chartData,
                                 trendlines:<Trendline>[
                                  Trendline(
@@ -243,6 +273,12 @@ To render a moving average trendline, use trendline type as MovingAverage
             )
         );
     }
+
+    class SalesData {
+        SalesData(this.year, this.sales);
+        final DateTime year;
+        final double? sales;
+      }
 
 {% endhighlight %}
 
@@ -269,7 +305,7 @@ The value set for forwardForecast is used to determine the distance moving towar
                         primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders spline chart
-                            SplineSeries<SalesData, dateTime>(
+                            SplineSeries<SalesData, DateTime>(
                                 dataSource: chartData,
                                 trendlines:<Trendline>[
                                  Trendline(
@@ -284,6 +320,12 @@ The value set for forwardForecast is used to determine the distance moving towar
             )
         );
     }
+
+    class SalesData {
+        SalesData(this.year, this.sales);
+        final DateTime year;
+        final double? sales;
+      }
 
 {% endhighlight %}
 
@@ -304,7 +346,7 @@ The value set for the backwardForecast is used to determine the past trends.
                         primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders spline chart
-                            SplineSeries<SalesData, dateTime>(
+                            SplineSeries<SalesData, DateTime>(
                                 dataSource: chartData,
                                 trendlines:<Trendline>[
                                  Trendline(
@@ -319,6 +361,12 @@ The value set for the backwardForecast is used to determine the past trends.
             )
         );
     }
+
+    class SalesData {
+        SalesData(this.year, this.sales);
+        final DateTime year;
+        final double? sales;
+      }
 
 {% endhighlight %}
 
@@ -339,7 +387,7 @@ Legend for trendline gets rendered together with the series legend when the lege
                         primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders spline chart
-                            SplineSeries<SalesData, dateTime>(
+                            SplineSeries<SalesData, DateTime>(
                                 dataSource: chartData,
                                 trendlines:<Trendline>[
                                  Trendline(
@@ -355,6 +403,12 @@ Legend for trendline gets rendered together with the series legend when the lege
             )
         );
     }
+
+    class SalesData {
+        SalesData(this.year, this.sales);
+        final DateTime year;
+        final double? sales;
+      }
 
 {% endhighlight %}
 
@@ -376,7 +430,7 @@ Data markers are used to provide information about the data points in the series
                         primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders spline chart
-                            SplineSeries<SalesData, dateTime>(
+                            SplineSeries<SalesData, DateTime>(
                                 dataSource: chartData,
                                 trendlines:<Trendline>[
                                  Trendline(
@@ -392,6 +446,12 @@ Data markers are used to provide information about the data points in the series
             )
         );
     }
+
+    class SalesData {
+        SalesData(this.year, this.sales);
+        final DateTime year;
+        final double? sales;
+      }
 
 {% endhighlight %}
 
@@ -422,7 +482,7 @@ Chart will display details about the points through tooltip, when user interacti
                         primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders spline chart
-                            SplineSeries<SalesData, dateTime>(
+                            SplineSeries<SalesData, DateTime>(
                                 dataSource: chartData,
                                 trendlines:<Trendline>[
                                  Trendline(
@@ -440,9 +500,17 @@ Chart will display details about the points through tooltip, when user interacti
         );
     }
 
+    class SalesData {
+        SalesData(this.year, this.sales);
+        final DateTime year;
+        final double? sales;
+      }
+
 {% endhighlight %}
 
 
 ![tooltip](images/trendline/tooltip.png)
 
 Also refer [`trendline event`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs-class.html) for customizing the tooltip further.
+
+N> `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.

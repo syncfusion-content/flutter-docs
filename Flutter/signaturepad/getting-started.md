@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Getting Started with Flutter SignaturePad (SfSignaturePad)
-This section explains the steps required to add the SignaturePad widget and its elements such as minimum and maximum stroke widths, stroke color and background color. This section also covers how to save the signature as image, clear the existing signature in SignaturePad and handle the [`onSignStart`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/onSignStart.html) and [`onSignEnd`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/onSignEnd.html) callbacks in the SignaturePad widget.
+This section explains the steps required to add the SignaturePad widget and its elements such as minimum and maximum stroke widths, stroke color and background color. This section also covers how to save the signature as image, clear the existing signature in SignaturePad and handle the `onDrawStart` and `onDrawEnd` callbacks in the SignaturePad widget.
 
 ## Add Flutter SignaturePad to an application
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
@@ -253,6 +253,7 @@ Widget build(BuildContext context) {
 N> Since Flutter uses two separate default web renderers, here we have two different code snippets to convert signatures to images in desktop and mobile browsers. Please refer to this Flutter [`web-renderers`](https://flutter.dev/docs/development/tools/web-renderers) page for more details. 
 
 ## Clear the existing signature in SignaturePad
+
 You can clear the signature drawn in the SignaturePad using the [`clear()`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePadState/clear.html) method as show in the below code snippet. Since this [`clear()`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePadState/clear.html) method is defined in the state object of SignaturePad, you have to use a global key assigned to the SignaturePad instance to call this method.
 
 {% tabs %}
@@ -287,9 +288,46 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## Handle onSignStart and onSignEnd callbacks
+## Signature path collection
 
-The widget allows to handle the onSignStart and onSignEnd callbacks for every strokes updated to the SignaturePad.The [`onSignStart`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/onSignStart.html) callback will be called when the user starts signing on `SfSignaturePad`and the [`onSignEnd`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/onSignEnd.html) callback will be called when the user completes signing on [`SfSignaturePad`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/SfSignaturePad.html).
+You can get the path collection of the signature drawn in the SignaturePad using the `toPathList()` method. Since this `toPathList()` method is defined in the state object of SignaturePad, you have to use a global key assigned to the SignaturePad instance to call this method.
+
+{% tabs %}
+{% highlight Dart %}
+
+GlobalKey<SfSignaturePadState> _signatureGlobalKey = GlobalKey();
+
+@override
+Widget build(BuildContext context) {
+   return Scaffold(
+      body: Column(
+        children: [
+          Container(
+            child: SfSignaturePad(
+              key: _signatureGlobalKey,
+              backgroundColor: Colors.grey[200],
+            ),
+            height: 200,
+            width: 300,
+          ),
+          ElevatedButton(
+              child: Text("Path collection"),
+              onPressed: () {
+                List<Path> paths =
+                    _signatureGlobalKey.currentState!.toPathList();
+              },
+          ),
+        ],
+      ),
+   );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Handle onDrawStart, onDraw, and onDrawEnd callbacks
+
+The widget allows to handle the onDrawStart, onDraw, and onDrawEnd callbacks for every strokes updated to the SignaturePad.The `onDrawStart` callback will be called when the user starts signing on `SfSignaturePad`, the `onDraw` callback will be called when updating a stroke on the `SfSignaturePad` and the `onDrawEnd` callback will be called when the user completes signing on [`SfSignaturePad`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/SfSignaturePad.html).
 
 {% tabs %}
 {% highlight Dart %}
@@ -297,20 +335,24 @@ The widget allows to handle the onSignStart and onSignEnd callbacks for every st
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-    body: Container(
-          child: SfSignaturePad(
-            backgroundColor: Colors.grey[200],
-			onSignStart: ()=> {
-               print("Signature has been initiated in SignaturePad");
-            },
-			onSignEnd: ()=> {
-               print("Signature has been completed in SignaturePad");
-            },
-          ),
-          height: 200,
-          width: 300,
+     body: Container(
+        child: SfSignaturePad(
+          backgroundColor: Colors.grey[200],
+          onDrawStart: () {
+            return false;
+          },
+          onDraw: (offset, time) {
+            Offset offsetValue = offset;
+            DateTime dateTime = time;
+          },
+          onDrawEnd: () {
+            print("Signature has been completed in Signature Pad");
+          },
         ),
-  );
+        height: 200,
+        width: 300,
+      ),
+   );
 }
 
 {% endhighlight %}

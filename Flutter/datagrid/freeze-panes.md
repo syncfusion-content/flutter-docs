@@ -66,7 +66,7 @@ Widget build(BuildContext context) {
       source: _employeeDataSource,
       frozenColumnsCount: 1,
       columns: <GridColumn>[
-        GridTextColumn(
+        GridColumn(
           columnName: 'id',
           label: Container(
             alignment: Alignment.centerRight,
@@ -77,7 +77,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'productId',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -88,7 +88,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'name',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -99,7 +99,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'product',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -110,7 +110,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'orderDate',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -121,7 +121,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'quantity',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -132,7 +132,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'city',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -143,7 +143,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'unitPrice',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -177,7 +177,7 @@ Widget build(BuildContext context) {
       source: _employeeDataSource,
       footerFrozenColumnsCount: 1,
       columns: <GridColumn>[
-        GridTextColumn(
+        GridColumn(
           columnName: 'id',
           label: Container(
             alignment: Alignment.centerRight,
@@ -188,7 +188,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'productId',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -199,7 +199,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'name',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -210,7 +210,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'product',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -221,7 +221,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'orderDate',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -232,7 +232,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'quantity',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -243,7 +243,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'city',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -254,7 +254,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'unitPrice',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -295,7 +295,7 @@ Widget build(BuildContext context) {
       source: _employeeDataSource,
       frozenRowsCount: 1,
       columns: <GridColumn>[
-        GridTextColumn(
+        GridColumn(
           columnName: 'id',
           label: Container(
             alignment: Alignment.centerRight,
@@ -306,7 +306,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'productId',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -317,7 +317,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'name',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -328,7 +328,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'product',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -339,7 +339,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'orderDate',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -350,7 +350,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'quantity',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -361,7 +361,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'city',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -372,7 +372,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'unitPrice',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -405,7 +405,7 @@ Widget build(BuildContext context) {
       source: _employeeDataSource,
       footerFrozenRowsCount: 1,
       columns: <GridColumn>[
-        GridTextColumn(
+        GridColumn(
           columnName: 'id',
           label: Container(
             alignment: Alignment.centerRight,
@@ -416,7 +416,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'productId',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -427,7 +427,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'name',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -438,7 +438,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'product',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -449,7 +449,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'orderDate',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -460,7 +460,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'quantity',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -471,7 +471,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'city',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -482,7 +482,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'unitPrice',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -533,7 +533,7 @@ Widget build(BuildContext context) {
           frozenColumnsCount: 1,
           footerFrozenColumnsCount: 1,
           columns: <GridColumn>[
-            GridTextColumn(
+            GridColumn(
               columnName: 'id',
               label: Container(
                 alignment: Alignment.centerRight,
@@ -544,7 +544,7 @@ Widget build(BuildContext context) {
                 ),
               ),
             ),
-            GridTextColumn(
+            GridColumn(
               columnName: 'productId',
               label: Container(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -555,7 +555,7 @@ Widget build(BuildContext context) {
                 ),
               ),
             ),
-            GridTextColumn(
+            GridColumn(
               columnName: 'name',
               label: Container(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -566,7 +566,7 @@ Widget build(BuildContext context) {
                 ),
               ),
             ),
-            GridTextColumn(
+            GridColumn(
               columnName: 'product',
               label: Container(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -577,7 +577,7 @@ Widget build(BuildContext context) {
                 ),
               ),
             ),
-            GridTextColumn(
+            GridColumn(
               columnName: 'orderDate',
               label: Container(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -588,7 +588,7 @@ Widget build(BuildContext context) {
                 ),
               ),
             ),
-            GridTextColumn(
+            GridColumn(
               columnName: 'quantity',
               label: Container(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -599,7 +599,7 @@ Widget build(BuildContext context) {
                 ),
               ),
             ),
-            GridTextColumn(
+            GridColumn(
               columnName: 'city',
               label: Container(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -610,7 +610,7 @@ Widget build(BuildContext context) {
                 ),
               ),
             ),
-            GridTextColumn(
+            GridColumn(
               columnName: 'unitPrice',
               label: Container(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -646,7 +646,7 @@ Widget build(BuildContext context) {
           frozenRowsCount: 1,
           frozenColumnsCount: 1,
           columns: <GridColumn>[
-            GridTextColumn(
+            GridColumn(
               columnName: 'id',
               label: Container(
                 alignment: Alignment.centerRight,
@@ -657,7 +657,7 @@ Widget build(BuildContext context) {
                 ),
               ),
             ),
-            GridTextColumn(
+            GridColumn(
               columnName: 'productId',
               label: Container(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -668,7 +668,7 @@ Widget build(BuildContext context) {
                 ),
               ),
             ),
-            GridTextColumn(
+            GridColumn(
               columnName: 'name',
               label: Container(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -679,7 +679,7 @@ Widget build(BuildContext context) {
                 ),
               ),
             ),
-            GridTextColumn(
+            GridColumn(
               columnName: 'product',
               label: Container(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -690,7 +690,7 @@ Widget build(BuildContext context) {
                 ),
               ),
             ),
-            GridTextColumn(
+            GridColumn(
               columnName: 'orderDate',
               label: Container(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -701,7 +701,7 @@ Widget build(BuildContext context) {
                 ),
               ),
             ),
-            GridTextColumn(
+            GridColumn(
               columnName: 'quantity',
               label: Container(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -712,7 +712,7 @@ Widget build(BuildContext context) {
                 ),
               ),
             ),
-            GridTextColumn(
+            GridColumn(
               columnName: 'city',
               label: Container(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -723,7 +723,7 @@ Widget build(BuildContext context) {
                 ),
               ),
             ),
-            GridTextColumn(
+            GridColumn(
               columnName: 'unitPrice',
               label: Container(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -764,7 +764,7 @@ Widget build(BuildContext context) {
           frozenRowsCount: 1,
           frozenColumnsCount: 1,
           columns: <GridColumn>[
-            GridTextColumn(
+            GridColumn(
               columnName: 'id',
               label: Container(
                 alignment: Alignment.centerRight,
@@ -775,7 +775,7 @@ Widget build(BuildContext context) {
                 ),
               ),
             ),
-            GridTextColumn(
+            GridColumn(
               columnName: 'productId',
               label: Container(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -786,7 +786,7 @@ Widget build(BuildContext context) {
                 ),
               ),
             ),
-            GridTextColumn(
+            GridColumn(
               columnName: 'name',
               label: Container(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -797,7 +797,7 @@ Widget build(BuildContext context) {
                 ),
               ),
             ),
-            GridTextColumn(
+            GridColumn(
               columnName: 'product',
               label: Container(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -808,7 +808,7 @@ Widget build(BuildContext context) {
                 ),
               ),
             ),
-            GridTextColumn(
+            GridColumn(
               columnName: 'orderDate',
               label: Container(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -819,7 +819,7 @@ Widget build(BuildContext context) {
                 ),
               ),
             ),
-            GridTextColumn(
+            GridColumn(
               columnName: 'quantity',
               label: Container(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -830,7 +830,7 @@ Widget build(BuildContext context) {
                 ),
               ),
             ),
-            GridTextColumn(
+            GridColumn(
               columnName: 'city',
               label: Container(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -841,7 +841,7 @@ Widget build(BuildContext context) {
                 ),
               ),
             ),
-            GridTextColumn(
+            GridColumn(
               columnName: 'unitPrice',
               label: Container(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),

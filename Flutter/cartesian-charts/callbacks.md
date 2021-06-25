@@ -127,7 +127,7 @@ Triggers when data label is rendering. Text and text styles such as color, font 
 * [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/text.html) - used to get and set the content of the data label.
 * [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/textStyle.html) - used to change the text color, size, font family, font style, and font weight.
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/pointIndex.html) - specifies the current point index.
-* [`seriesRenderer`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/series.html) - specifies current series and the series type may vary based on the chart type.
+* [`seriesRenderer`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/seriesRenderer.html) - specifies current series and the series type may vary based on the chart type.
 * [`dataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/dataPoints.html) - used to get the data points of the series.
 * [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/viewportPointIndex.html) - to get the viewport index value of the tapped data label.
 * [`offset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/offset.html) - used to get and set the horizontal/vertical position of the data label. The first argument sets the horizontal component to x, while the second argument sets the vertical component to y.
@@ -161,6 +161,12 @@ Triggers when data label is rendering. Text and text styles such as color, font 
           )
         )
       );
+    }
+
+    class ChartData {
+      ChartData(this.x, this.y);
+      final double x;
+      final double? y;
     }
 
 {% endhighlight %}
@@ -434,32 +440,96 @@ Triggers when zoomed state is reset. The  [`onZoomReset`](https://pub.dev/docume
 
 {% endhighlight %}
 
-## onPointTapped
+## onPointTap
 
-Triggers when tapping the series point. The [`onPointTapped`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onPointTapped.html) Callback contains the following arguments.
+Triggers when tapping on the series point. The [onPointTap]() callback contains the following arguments.
 
-* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PointTapArgs/seriesIndex.html) - specifies the current series index.
-* [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PointTapArgs/pointIndex.html) - specifies the current point index.
-* [`dataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PointTapArgs/dataPoints.html) - holds the data point collection.
-* [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PointTapArgs/viewportPointIndex.html) - specifies the viewport index value of the tapped data point.
+* [`seriesIndex`]() - specifies the current series index.
+* [`pointIndex`]() - specifies the current point index.
+* [`dataPoints`]() - holds the data point collection.
+* [`viewportPointIndex`]() - specifies the viewport index value of the tapped data point.
 
 {% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
-    
       return Scaffold(
         body: Center(
           child: SfCartesianChart(
-            onPointTapped: (PointTapArgs args){
-              print(args.seriesIndex);
-              print(args.pointIndex);
-            }
+            series: <ChartSeries<ChartData,num>>[
+              ColumnSeries(
+                onPointTap: (ChartPointDetails details) {
+                  print(details.pointIndex);
+                  print(details.seriesIndex);
+                }
+              )
+            ],
           )
         )
       );
     }
 
+{% endhighlight %}
+
+## onPointDoubleTap
+
+Triggers when double-tap the series point. The [onPointDoubleTap]() callback contains the following arguments.
+
+* [`seriesIndex`]() - specifies the current series index.
+* [`pointIndex`]() - specifies the current point index.
+* [`dataPoints`]() - holds the data point collection.
+* [`viewportPointIndex`]() - specifies the viewport index value of the double-tapped data point.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: Center(
+          child: SfCartesianChart(
+            series: <ChartSeries<ChartData,num>>[
+              ColumnSeries(
+                onPointDoubleTap: (ChartPointDetails details) {
+                  print(details.pointIndex);
+                  print(details.seriesIndex);
+                }
+              )
+            ],
+          )
+        )
+      );
+    }
+
+{% endhighlight %}
+
+## onPointLongPress
+
+Triggers when long press on the series point. The [onPointLongPress]() callback contains the following arguments.
+
+* [`seriesIndex`]() - specifies the current series index.
+* [`pointIndex`]() - specifies the current point index.
+* [`dataPoints`]() - holds the data point collection.
+* [`viewportPointIndex`]() - specifies the viewport index value of the long pressed data point.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: Center(
+          child: SfCartesianChart(
+            series: <ChartSeries<ChartData,num>>[
+              ColumnSeries(
+                onPointLongPress: (ChartPointDetails details) {
+                  print(details.pointIndex);
+                  print(details.seriesIndex);
+                }
+              )
+            ],
+          )
+        )
+      );
+    }
 {% endhighlight %}
 
 ## onAxisLabelTapped
@@ -525,7 +595,7 @@ Triggers when tapping the legend item. The  [`onLegendTapped`](https://pub.dev/d
 
 Triggers while selection changes. Here you can customize the selectedColor, unselectedColor, selectedBorderColor, selectedBorderWidth, unselectedBorderColor, and unselectedBorderWidth properties. The [`onSelectionChanged`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onSelectionChanged.html) Callback contains the following arguments.
 
-* [`seriesRenderer`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/series.html) - specifies current series.
+* [`seriesRenderer`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/seriesRenderer.html) - specifies current series.
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/seriesIndex.html) - specifies the current series index.
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/pointIndex.html) - specifies the current point index.
 * [`selectedColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/selectedColor.html) - used to get and set the color of the selected data points or series.
@@ -560,39 +630,42 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
       );
     }
 
+    class ChartData {
+      ChartData(this.x, this.y);
+      final double x;
+      final double? y;
+    }
+
 {% endhighlight %}
 
-## onIndicatorRender
+## onRenderDetailsUpdate
  
-Triggers when indicator is rendering. Here you can customize the name, signal line color, signal line width,dash array and so on.
+Triggers when the indicator is rendering. Here you can customize the name, calculated data points, signal line color, signal line width, signal line dash array, and so on.
  
-The [`onIndicatorRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs-class.html) contains following arguments.
+The [`onRenderDetailsUpdate`]() contains following arguments.
 
-* [`indicatorName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/indicatorName.html) - used to get and set the indicator name.
-* [`indicator`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/indicator.html) - used to get the technical indicator information.
-* [`signalLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/signalLineColor.html) - used to change the color of the signal line.
-* [`signalLineWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/signalLineWidth.html) - used to change the width of the signal line.
-* [`lineDashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/lineDashArray.html) - used to change the dash array size.
-* [`seriesName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/seriesName.html) - specifies the series name.
-* [`index`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/index.html) - specifies the current series index
-* [`dataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderArgs/dataPoints.html) - specifies the current datapoints.
+* [`name`]() - used to get and set the indicator name.
+* [`calculatedDataPoints`]() - used to get the calculated indicator data points details.
+* [`signalLineColor`]() - used to change the color of the signal line.
+* [`signalLineWidth`]() - used to change the width of the signal line.
+* [`signalLineDashArray`]() - used to change the dash array size of the signal line.
 
 {% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
+      List<double> signalLineDashArray = <double>[5,5];
+      double signalLineWidth = 3.0;
+      Color signalLineColor = Colors.cyan;
       return Scaffold(
         body:Center(
           child: SfCartesianChart(
-            onIndicatorRender: (IndicatorRenderArgs args)
-            {
-              if(args.index==0) 
-              {
-                args.indicatorname='changed1';
-                args.signalLineColor=Colors.green;
-                args.signalLineWidth=6.0;
-              }
-            }
+            indicators: <TechnicalIndicators<dynamic, dynamic>>[
+              SmaIndicator<dynamic, dynamic>(
+                onRenderDetailsUpdate: (IndicatorRenderParams params) {
+                  return TechnicalIndicatorRenderDetails(signalLineColor, signalLineWidth, signalLineDashArray);
+                },
+            )],
           )
         )
       );
@@ -679,6 +752,12 @@ Triggers when the series renderer is created. This callback can be used to obtai
           )
         ]
       );
+    }
+
+    class SalesData {
+      SalesData(this.x, this.y);
+      final num x;
+      final double? y;
     }
 
 {% endhighlight %}
@@ -815,7 +894,7 @@ N>  This callback will not be called, when the builder is specified for data lab
               },
               series: <ChartSeries<Sample, DateTime>>[
                   LineSeries<Sample, DateTime>(
-                    dataSource: sample,
+                    dataSource: chartData,
                     xValueMapper: (Sample sales, _) => sales.x,
                     yValueMapper: (Sample sales, _) => sales.y,
                     dataLabelSettings: DataLabelSettings(
@@ -824,6 +903,12 @@ N>  This callback will not be called, when the builder is specified for data lab
               ]
           )
       );
+    }
+
+    class Sample{
+      Sample(this.x, this,y);
+      final DateTime x;
+      final double? y;
     }
 
 {% endhighlight %}
@@ -862,6 +947,12 @@ Triggers while swiping on the plot area. Whenever the swiping happens on th
       }
     }
 
+    class SalesData {
+      SalesData(this.x, this.y);
+      final num x;
+      final double? y;
+    }
+
 {% endhighlight %}
 
 ## See Also
@@ -871,3 +962,5 @@ Triggers while swiping on the plot area. Whenever the swiping happens on th
 * [Customize the data labels using its callback event](https://www.syncfusion.com/kb/11679/how-to-customize-data-labels-using-callback-events-sfcartesianchart).
 * [Disabling trackball tooltip for particular series using its callback event](https://www.syncfusion.com/kb/11638/how-to-disable-trackball-tooltip-for-particular-series-in-cartesian-charts-sfcartesianchart).
 * [To Synchronize panning in multiple charts](https://www.syncfusion.com/kb/11533/how-to-synchronize-panning-in-multiple-charts-sfcartesianchart).
+
+N> `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.

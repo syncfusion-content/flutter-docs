@@ -114,8 +114,34 @@ Widget build(BuildContext context) {
 
 ![MultiRangeSelection Date Range Picker](images/selections/multirange.jpg)
 
+## Extendable range selection
+Extend the selected range with the new selected date in any date range picker view by setting the `DateRangePickerSelectionMode` to [extendableRange]().
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+      body: SfDateRangePicker(
+        view: DateRangePickerView.month,
+        selectionMode: DateRangePickerSelectionMode.extendableRange,
+      ),
+    ));
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Extendable Range Selection in Flutter Date Range Picker](images/selections/flutter-date-range-picker-extendable-range-selection.png)
+
+>**NOTE**
+* The hovering effect which occurs while extending the range will not be displayed when the `DateRangePickerNavigationMode` is set as `DateRangePickerNavigationMode.scroll`.
+
+
 ## Selection radius
-You can customize the radius of the selection using the [selectionRadius](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectionRadius.html) property of the `SfDateRangePicker`.
+Customize the radius of the selection using the [selectionRadius](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectionRadius.html) property of the `SfDateRangePicker`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -198,18 +224,11 @@ Widget build(BuildContext context) {
 
 ## See also
 
-[How to restrict swipe gesture for range selection in Flutter date range picker (SfDateRangePicker)?](https://www.syncfusion.com/kb/12117/how-to-restrict-swipe-gesture-for-range-selection-in-flutter-date-range-picker)
-
-[How to change the selection radius in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12230/how-to-change-the-selection-radius-in-the-flutter-date-range-picker-sfdaterangepicker)
-
-[How to add an image as background in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12233/how-to-add-an-image-as-background-in-the-flutter-date-range-picker-sfdaterangepicker)
-
-[How to get the start and end date of the selected range in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12248/how-to-get-the-start-and-end-date-of-the-selected-range-in-the-flutter-date-range-picker)
-
-[How to change the selection shape in Flutter date range picker (SfDateRangePicker)?](https://www.syncfusion.com/kb/11900/how-to-change-the-selection-shape-in-flutter-date-range-picker-sfdaterangepicker)
-
-[How to deselect the selected date in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12138/how-to-deselect-the-selected-date-in-the-flutter-date-range-picker-sfdaterangepicker)
-
-[How to select previous or next dates based on the selected date in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12354/how-to-select-previous-or-next-dates-based-on-the-selected-date-in-the-flutter-date-range)
-
-[How to select all days when clicking on the day header in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12353/how-to-select-all-days-when-clicking-on-the-day-header-in-the-flutter-date-range-picker)
+* [How to restrict swipe gesture for range selection in Flutter date range picker (SfDateRangePicker)?](https://www.syncfusion.com/kb/12117/how-to-restrict-swipe-gesture-for-range-selection-in-flutter-date-range-picker)
+* [How to change the selection radius in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12230/how-to-change-the-selection-radius-in-the-flutter-date-range-picker-sfdaterangepicker)
+* [How to add an image as background in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12233/how-to-add-an-image-as-background-in-the-flutter-date-range-picker-sfdaterangepicker)
+* [How to get the start and end date of the selected range in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12248/how-to-get-the-start-and-end-date-of-the-selected-range-in-the-flutter-date-range-picker)
+* [How to change the selection shape in Flutter date range picker (SfDateRangePicker)?](https://www.syncfusion.com/kb/11900/how-to-change-the-selection-shape-in-flutter-date-range-picker-sfdaterangepicker)
+* [How to deselect the selected date in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12138/how-to-deselect-the-selected-date-in-the-flutter-date-range-picker-sfdaterangepicker)
+* [How to select previous or next dates based on the selected date in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12354/how-to-select-previous-or-next-dates-based-on-the-selected-date-in-the-flutter-date-range)
+* [How to select all days when clicking on the day header in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12353/how-to-select-all-days-when-clicking-on-the-day-header-in-the-flutter-date-range-picker)

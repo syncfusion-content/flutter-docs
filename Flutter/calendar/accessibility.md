@@ -52,7 +52,7 @@ The `SfCalendar` can easily be accessed by screen readers. Please find the follo
 
 ## Sufficient contrast
 
-The `SfCalendar` [theming](https://help.syncfusion.com/flutter/themes/themes) support offers a consistent and standardized look, as well as the ability to set the colors for all UI elements.
+The `SfCalendar` [theming](https://help.syncfusion.com/flutter/themes) support offers a consistent and standardized look, as well as the ability to set the colors for all UI elements.
 
 The following APIs allow you to customize the colors of the following elements.
 * [todayHighlightColor](https://help.syncfusion.com/flutter/calendar/getting-started#today-highlight-color)
@@ -79,13 +79,23 @@ The `SfCalendar` font size can be adjusted automatically based on device setting
 
 The following keyboard interactions are supported by the `SfCalendar`.
 
-| Key              | Description                     														   |
-|------------------|-------------------------------------------------------------------------------------------|
-| Up arrow         | Moves selection to the next calendar cell directly above the currently selected time slot |
-| Down arrow       | Moves selection to the next calendar cell directly below the currently selected time slot |
-| Right arrow      | Moves selection to the same time slot on the next day                                     |
-| Left arrow       | Moves selection to the same time slot on the previous day                                 |
-| Tab              | Focuses the next clickable element, except appointments and cells						   |
-| Shift + tab      | Focuses the previous clickable element, except appointment and cells                      |
 
+| Key               | Description                     														                                                                                                             |
+|-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Up arrow          | Moves selection to the next calendar cell directly above the currently selected time slot                                                                                                          |
+| Down arrow        | Moves selection to the next calendar cell directly below the currently selected time slot                                                                                                          |
+| Right arrow       | Moves selection to the same time slot on the next day                                                                                                                                              |
+| Left arrow        | Moves selection to the same time slot on the previous day                                                                                                                                          |
+| Tab               | Focuses the next clickable element, except appointments and cells						                                                                                                             |
+| Shift + tab       | Focuses the previous clickable element, except appointment and cells                                                                                                                               |
+| Alt + number      | Calendar view changes in the order of day, week, work week, month, timeline and schedule. Also view change will be restricted if it is not mentioned in the allowed views property of the calendar |
+| Ctrl + left arrow | To navigate to the previous view                                                                                                                                                                   |
+| Ctrl + right arrow| To navigate to the next view                                                                                                                                                                       |
+| Page up/down      | Vertically scrolls through the timeslot views                                                                                                                                                      |
 
+### Appointments
+
+| Key               | Description                     														                                                                                                       |
+|-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Tab               | Moves selection to the next appointment from the currently selected appointment. If no appointment is selected, then use the tab traversal and move the focus to the next clickable item     |
+| Shift + Tab       | Moves selection to the previous appointment from the currently selected appointment. If no appointment is selected, then use the tab traversal and move the focus to the next clickable item |

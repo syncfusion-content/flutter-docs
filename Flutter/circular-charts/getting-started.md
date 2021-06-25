@@ -14,7 +14,7 @@ This section explains the steps required to populate the chart with data, title,
 To get start quickly with our Flutter chart widget, you can check on this video.
 
 <style>#flutterChartVideoTutorial{width : 90% !important; height: 300px !important }</style>
-<iframe id='flutterChartVideoTutorial' src='https://www.youtube.com/embed/t3Dczqj8-10'></iframe>
+<iframe id='flutterChartVideoTutorial' src='https://www.youtube.com/embed/VJxPp7-2nGk'></iframe>
 
 ## Add Flutter Charts to an application
 

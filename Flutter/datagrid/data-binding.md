@@ -87,7 +87,7 @@ Widget build(BuildContext context) {
       source: _employeeDataSource,
       columnWidthMode: ColumnWidthMode.lastColumnFill,
       columns: <GridColumn>[
-        GridTextColumn(
+        GridColumn(
           columnName: 'id',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -98,7 +98,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'name',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -109,7 +109,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'designation',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -120,7 +120,7 @@ Widget build(BuildContext context) {
             ),
           ),
         ),
-        GridTextColumn(
+        GridColumn(
           columnName: 'salary',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -145,7 +145,7 @@ Widget build(BuildContext context) {
 
 If row is added, removed or replaced in an underlying datasource, you can call the [notifyListeners](https://api.flutter.dev/flutter/foundation/ChangeNotifier/notifyListeners.html). 
 
-In the following example, row is added and `notifyListeners` is called in `onPressed` callback of the `TextButton`.
+In the following example, row is added and `notifyListeners` is called in `onPressed` callback of the `TextButton`. As the `notifyListeners` is the protected method, we have introduced the `updateDataGridSource` method in EmployeeDataSource class and called the `notifyListeners` method. So, users can call `updateDataGridSource` methods in widget level to refresh the datagrid.
 
 N> `notifyListeners` should be called from inside the `DataGridSource`.
 
@@ -172,7 +172,7 @@ Widget build(BuildContext context) {
         SfDataGrid(
           source: _employeeDataSource,
           columns: <GridColumn>[
-            GridTextColumn(
+            GridColumn(
               columnName: 'id',
               label: Container(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -183,7 +183,7 @@ Widget build(BuildContext context) {
                 ),
               ),
             ),
-            GridTextColumn(
+            GridColumn(
               columnName: 'name',
               label: Container(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -194,7 +194,7 @@ Widget build(BuildContext context) {
                 ),
               ),
             ),
-            GridTextColumn(
+            GridColumn(
               columnName: 'designation',
               label: Container(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -205,7 +205,7 @@ Widget build(BuildContext context) {
                 ),
               ),
             ),
-            GridTextColumn(
+            GridColumn(
               columnName: 'salary',
               label: Container(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -311,7 +311,7 @@ Widget build(BuildContext context) {
         SfDataGrid(
           source: _employeeDataSource,
           columns: <GridColumn>[
-            GridTextColumn(
+            GridColumn(
               columnName: 'id',
               label: Container(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -322,7 +322,7 @@ Widget build(BuildContext context) {
                 ),
               ),
             ),
-            GridTextColumn(
+            GridColumn(
               columnName: 'name',
               label: Container(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -333,7 +333,7 @@ Widget build(BuildContext context) {
                 ),
               ),
             ),
-            GridTextColumn(
+            GridColumn(
               columnName: 'designation',
               label: Container(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -344,7 +344,7 @@ Widget build(BuildContext context) {
                 ),
               ),
             ),
-            GridTextColumn(
+            GridColumn(
               columnName: 'salary',
               label: Container(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
