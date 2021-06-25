@@ -21,41 +21,34 @@ You can change the size and shape of the track using the [`trackShape`](https://
 {% tabs %}
 {% highlight Dart %}
 
-double _min = 0.0;
-double _max = 10.0;
-double _value = 6.0;
+ double _value = 5.0;
 
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-     body: SfSlider(
-        min: _min,
-        max: _max,
-        value: _value,
-        trackShape: _SfTrackShape(_min, _max),
-        onChanged: (dynamic newValue) {
-          setState(() {
-            _value = newValue;
-          });
-        },
+     body: Center(
+        child: SfSliderTheme(
+          data: SfSliderThemeData(
+            activeTrackHeight: 10,
+            inactiveTrackHeight: 10,
+          ),
+          child: SfSlider(
+            min: 0.0,
+            max: 10.0,
+            value: _value,
+            trackShape: _SfTrackShape(),
+            onChanged: (dynamic newValue) {
+              setState(() {
+                _value = newValue;
+              });
+            },
+          ),
+        ),
       ),
    );
 }
 
 class _SfTrackShape extends SfTrackShape {
-  _SfTrackShape(dynamic min, dynamic max) {
-    this.min = min.runtimeType == DateTime
-        ? min.millisecondsSinceEpoch.toDouble()
-        : min;
-    this.max = max.runtimeType == DateTime
-        ? max.millisecondsSinceEpoch.toDouble()
-        : max;
-  }
-
-  late double min;
-  late double max;
-  double? trackIntermediatePos;
-
   @override
   void paint(PaintingContext context, Offset offset, Offset? thumbCenter,
       Offset? startThumbCenter, Offset? endThumbCenter,
@@ -67,41 +60,50 @@ class _SfTrackShape extends SfTrackShape {
       required Paint? inactivePaint,
       required Paint? activePaint,
       required TextDirection textDirection}) {
-    final Rect trackRect = getPreferredRect(parentBox, themeData, offset);
-    final double actualValue = currentValue.runtimeType == DateTime
-        ? currentValue.millisecondsSinceEpoch.toDouble()
-        : currentValue;
-    final double actualValueInPercent =
-        ((actualValue - min) * 100) / (max - min);
-    trackIntermediatePos = _getTrackIntermediatePosition(trackRect);
+    final Radius radius = Radius.circular(themeData.trackCornerRadius!);
+    Rect inactiveTrackRect =
+        getPreferredRect(parentBox, themeData, offset, isActive: false);
+    final Rect activeTrackRect =
+        getPreferredRect(parentBox, themeData, offset, isActive: true);
 
-    // low volume track.
-    final Paint trackPaint = Paint();
-    trackPaint.color = actualValueInPercent <= 80.0 ? Colors.green : Colors.red;
-    final Rect lowVolumeRect = Rect.fromLTRB(
-        trackRect.left, trackRect.top, thumbCenter!.dx, trackRect.bottom);
-    context.canvas.drawRect(lowVolumeRect, trackPaint);
-
-    if (actualValueInPercent <= 80.0) {
-      trackPaint.color = Colors.green.withOpacity(0.40);
-      final Rect lowVolumeRectWithLessOpacity = Rect.fromLTRB(thumbCenter.dx,
-          trackRect.top, trackIntermediatePos!, trackRect.bottom);
-      context.canvas.drawRect(lowVolumeRectWithLessOpacity, trackPaint);
+    if (inactivePaint == null) {
+      inactivePaint = Paint();
+      final ColorTween inactiveTrackColorTween = ColorTween(
+          begin: themeData.disabledInactiveTrackColor,
+          end: themeData.inactiveTrackColor);
+      inactivePaint.color = inactiveTrackColorTween.evaluate(enableAnimation)!;
     }
 
-    trackPaint.color = Colors.red.withOpacity(0.40);
-    final double highTrackLeft =
-        actualValueInPercent >= 80.0 ? thumbCenter.dx : trackIntermediatePos!;
-    final Rect highVolumeRectWithLessOpacity = Rect.fromLTRB(highTrackLeft,
-        trackRect.top, trackRect.width + trackRect.left, trackRect.bottom);
-    context.canvas.drawRect(highVolumeRectWithLessOpacity, trackPaint);
-  }
+    if (activePaint == null) {
+      activePaint = Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 1;
+      final ColorTween activeTrackColorTween = ColorTween(
+          begin: themeData.disabledActiveTrackColor,
+          end: themeData.activeTrackColor);
+      activePaint.color = activeTrackColorTween.evaluate(enableAnimation)!;
+    }
 
-  double _getTrackIntermediatePosition(Rect trackRect) {
-    final double actualValue = ((80 * (max - min)) + min) / 100;
-    return (((actualValue - min) / (max - min)) * trackRect.width) +
-        trackRect.left;
-  }
+    // Drawing active track.
+    Rect trackRect = Rect.fromLTRB(activeTrackRect.left, activeTrackRect.top,
+        thumbCenter!.dx, activeTrackRect.bottom);
+    final RRect activeTrackRRect = RRect.fromRectAndCorners(trackRect,
+        topLeft: radius, bottomLeft: radius);
+
+    context.canvas.drawRRect(activeTrackRRect, activePaint);
+    // Drawing inactive track.
+    trackRect = Rect.fromLTRB(
+        thumbCenter.dx,
+        inactiveTrackRect.top,
+        inactiveTrackRect.width + inactiveTrackRect.left,
+        inactiveTrackRect.bottom);
+    final RRect inactiveTrackRRect = RRect.fromRectAndCorners(trackRect,
+        topLeft: Radius.zero,
+        topRight: radius,
+        bottomLeft: Radius.zero,
+        bottomRight: radius);
+
+    context.canvas.drawRRect(inactiveTrackRRect, inactivePaint);
 }
 
 {% endhighlight %}
