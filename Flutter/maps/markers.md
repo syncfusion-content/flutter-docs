@@ -746,7 +746,7 @@ void initState() {
 void updateMarkerChange(Offset position) {
   _markerPosition = _controller.pixelToLatLng(position);
 
-  /// Removed [MapTileLayer.initialMarkersCount] property and updated
+  /// Removed [MapShapeLayer.initialMarkersCount] property and updated
   /// markers only when the user taps.
   if (_controller.markersCount > 0) {
     _controller.clearMarkers();
