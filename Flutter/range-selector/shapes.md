@@ -91,53 +91,17 @@ class _TrackShape extends SfTrackShape {
       required Paint? inactivePaint,
       required Paint? activePaint,
       required TextDirection textDirection}) {
-    final Radius radius = Radius.circular(themeData.trackCornerRadius!);
-    Rect inactiveTrackRect =
-        getPreferredRect(parentBox, themeData, offset, isActive: false);
-    Rect activeTrackRect =
-        getPreferredRect(parentBox, themeData, offset, isActive: true);
-
-    if (inactivePaint == null) {
-      inactivePaint = Paint();
-      final ColorTween inactiveTrackColorTween = ColorTween(
-          begin: themeData.disabledInactiveTrackColor,
-          end: themeData.inactiveTrackColor);
-      inactivePaint.color = inactiveTrackColorTween.evaluate(enableAnimation)!;
-    }
-    if (activePaint == null) {
-      activePaint = Paint()
-        ..style = PaintingStyle.stroke
-        ..strokeWidth = 2;
-      final ColorTween activeTrackColorTween = ColorTween(
-          begin: themeData.disabledActiveTrackColor,
-          end: themeData.activeTrackColor);
-      activePaint.color = activeTrackColorTween.evaluate(enableAnimation)!;
-    }
-
-    // Drawing inactive track.
-    Rect trackRect = Rect.fromLTRB(inactiveTrackRect.left,
-        inactiveTrackRect.top, startThumbCenter!.dx, inactiveTrackRect.bottom);
-    RRect inactiveTrackRRect = RRect.fromRectAndCorners(trackRect,
-        topLeft: radius, bottomLeft: radius);
-    context.canvas.drawRRect(inactiveTrackRRect, inactivePaint);
-
-    // Drawing active track.
-    final Rect activeTrackRRect = Rect.fromLTRB(startThumbCenter.dx,
-        activeTrackRect.top, endThumbCenter!.dx, activeTrackRect.bottom);
-    context.canvas.drawRect(activeTrackRRect, activePaint);
-
-    // Drawing inactive track.
-    trackRect = Rect.fromLTRB(
-        endThumbCenter.dx,
-        inactiveTrackRect.top,
-        inactiveTrackRect.width + inactiveTrackRect.left,
-        inactiveTrackRect.bottom);
-    inactiveTrackRRect = RRect.fromRectAndCorners(trackRect,
-        topLeft: Radius.zero,
-        topRight: radius,
-        bottomLeft: Radius.zero,
-        bottomRight: radius);
-    context.canvas.drawRRect(inactiveTrackRRect, inactivePaint);
+    Paint paint = Paint()
+      ..color = themeData.activeTrackColor!
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1;
+    super.paint(context, offset, thumbCenter, startThumbCenter, endThumbCenter,
+        parentBox: parentBox,
+        themeData: themeData,
+        enableAnimation: enableAnimation,
+        inactivePaint: inactivePaint,
+        activePaint: paint,
+        textDirection: textDirection);
   }
 }
 

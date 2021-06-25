@@ -60,50 +60,18 @@ class _SfTrackShape extends SfTrackShape {
       required Paint? inactivePaint,
       required Paint? activePaint,
       required TextDirection textDirection}) {
-    final Radius radius = Radius.circular(themeData.trackCornerRadius!);
-    Rect inactiveTrackRect =
-        getPreferredRect(parentBox, themeData, offset, isActive: false);
-    final Rect activeTrackRect =
-        getPreferredRect(parentBox, themeData, offset, isActive: true);
-
-    if (inactivePaint == null) {
-      inactivePaint = Paint();
-      final ColorTween inactiveTrackColorTween = ColorTween(
-          begin: themeData.disabledInactiveTrackColor,
-          end: themeData.inactiveTrackColor);
-      inactivePaint.color = inactiveTrackColorTween.evaluate(enableAnimation)!;
-    }
-
-    if (activePaint == null) {
-      activePaint = Paint()
-        ..style = PaintingStyle.stroke
-        ..strokeWidth = 1;
-      final ColorTween activeTrackColorTween = ColorTween(
-          begin: themeData.disabledActiveTrackColor,
-          end: themeData.activeTrackColor);
-      activePaint.color = activeTrackColorTween.evaluate(enableAnimation)!;
-    }
-
-    // Drawing active track.
-    Rect trackRect = Rect.fromLTRB(activeTrackRect.left, activeTrackRect.top,
-        thumbCenter!.dx, activeTrackRect.bottom);
-    final RRect activeTrackRRect = RRect.fromRectAndCorners(trackRect,
-        topLeft: radius, bottomLeft: radius);
-
-    context.canvas.drawRRect(activeTrackRRect, activePaint);
-    // Drawing inactive track.
-    trackRect = Rect.fromLTRB(
-        thumbCenter.dx,
-        inactiveTrackRect.top,
-        inactiveTrackRect.width + inactiveTrackRect.left,
-        inactiveTrackRect.bottom);
-    final RRect inactiveTrackRRect = RRect.fromRectAndCorners(trackRect,
-        topLeft: Radius.zero,
-        topRight: radius,
-        bottomLeft: Radius.zero,
-        bottomRight: radius);
-
-    context.canvas.drawRRect(inactiveTrackRRect, inactivePaint);
+    Paint paint = Paint()
+      ..color = themeData.activeTrackColor!
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1;
+    super.paint(context, offset, thumbCenter, startThumbCenter, endThumbCenter,
+        parentBox: parentBox,
+        themeData: themeData,
+        enableAnimation: enableAnimation,
+        inactivePaint: inactivePaint,
+        activePaint: paint,
+        textDirection: textDirection);
+  }
 }
 
 {% endhighlight %}
