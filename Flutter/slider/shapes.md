@@ -77,7 +77,7 @@ class _SfTrackShape extends SfTrackShape {
 {% endhighlight %}
 {% endtabs %}
 
-![Track shape](images/shapes/track-shape.gif)
+![Track shape](images/shapes/track-shape.png)
 
 ## Thumb shape
 
