@@ -19,6 +19,7 @@ The Syncfusion Flutter DataGrid is used to display and manipulate data in a tabu
 * **Column types** - Support to load any widget in a each column.
 * **Column sizing** - Set the width of columns with various sizing options. Fit the columns based on the value of the cells to improve readability.
 * **Row height** - Set the height for header and data rows. Fit the rows based on the value of the cells to improve readability. Also, set the different height for specific rows.
+* **Editing** - Allows users to edit cell values. An editor widget can be loaded based on the column type to edit cell values.
 * **Sorting** - Sort one or more columns in the ascending or descending order. 
 * **Selection** - Select one or more rows. Keyboard navigation is supported for web platforms.
 * **Styling** - Customize the appearance of cells and headers. Conditional styling is also supported.
@@ -32,4 +33,3 @@ The Syncfusion Flutter DataGrid is used to display and manipulate data in a tabu
 * **Accessibility** - The DataGrid can easily be accessed by screen readers.
 * **Right to Left (RTL)** - Right-to-left direction support for users working in RTL languages like Hebrew and Arabic.
 * **Footer** - Show an additional row that can be displayed below to last row. Widgets can also be displayed in the footer row.
-* **Editing** - Allows users to edit cell values. An editor widget can be loaded based on the column type to edit cell values.
