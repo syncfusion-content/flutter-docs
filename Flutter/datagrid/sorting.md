@@ -34,7 +34,7 @@ Widget build(BuildContext context) {
         SfDataGrid(
           source: _employeeDataSource,
           columns: [
-            GridTextColumn(
+            GridColumn(
               columnName: 'id',
               label: Container(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -43,7 +43,7 @@ Widget build(BuildContext context) {
                   'ID',
                   overflow: TextOverflow.ellipsis,
                 ))),
-            GridTextColumn(
+            GridColumn(
               columnName: 'name',
               label: Container(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -52,7 +52,7 @@ Widget build(BuildContext context) {
                   'Name',
                   overflow: TextOverflow.ellipsis,
                 ))),
-            GridTextColumn(
+            GridColumn(
               columnName: 'city',
               label: Container(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -61,7 +61,7 @@ Widget build(BuildContext context) {
                   'City',
                   overflow: TextOverflow.ellipsis,
                 ))),
-            GridTextColumn(
+            GridColumn(
               columnName: 'freight',
               label: Container(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -112,7 +112,7 @@ Widget build(BuildContext context) {
     allowSorting: true,
     allowMultiColumnSorting: true,
     columns: [
-      GridTextColumn(
+      GridColumn(
         columnName: 'id',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -121,7 +121,7 @@ Widget build(BuildContext context) {
             'ID',
             overflow: TextOverflow.ellipsis,
           ))),
-      GridTextColumn(
+      GridColumn(
         columnName: 'name',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -130,7 +130,7 @@ Widget build(BuildContext context) {
             'Name',
             overflow: TextOverflow.ellipsis,
           ))),
-      GridTextColumn(
+      GridColumn(
         columnName: 'city',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -139,7 +139,7 @@ Widget build(BuildContext context) {
             'City',
             overflow: TextOverflow.ellipsis,
           ))),
-      GridTextColumn(
+      GridColumn(
         columnName: 'freight',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -175,7 +175,7 @@ Widget build(BuildContext context) {
     allowMultiColumnSorting: true,
     allowTriStateSorting: true,
     columns: [
-      GridTextColumn(
+      GridColumn(
         columnName: 'id',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -184,7 +184,7 @@ Widget build(BuildContext context) {
             'ID',
             overflow: TextOverflow.ellipsis,
           ))),
-      GridTextColumn(
+      GridColumn(
         columnName: 'name',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -193,7 +193,7 @@ Widget build(BuildContext context) {
             'Name',
             overflow: TextOverflow.ellipsis,
           ))),
-      GridTextColumn(
+      GridColumn(
         columnName: 'city',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -202,7 +202,7 @@ Widget build(BuildContext context) {
             'City',
             overflow: TextOverflow.ellipsis,
           ))),
-      GridTextColumn(
+      GridColumn(
         columnName: 'freight',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -237,7 +237,7 @@ Widget build(BuildContext context) {
     allowSorting: true,
     sortingGestureType: SortingGestureType.doubleTap,
     columns: [
-      GridTextColumn(
+      GridColumn(
         columnName: 'id',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -246,7 +246,7 @@ Widget build(BuildContext context) {
             'ID',
             overflow: TextOverflow.ellipsis,
           ))),
-      GridTextColumn(
+      GridColumn(
         columnName: 'name',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -255,7 +255,7 @@ Widget build(BuildContext context) {
             'Name',
             overflow: TextOverflow.ellipsis,
           ))),
-      GridTextColumn(
+      GridColumn(
         columnName: 'city',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -264,7 +264,7 @@ Widget build(BuildContext context) {
             'City',
             overflow: TextOverflow.ellipsis,
           ))),
-      GridTextColumn(
+      GridColumn(
         columnName: 'freight',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -298,7 +298,7 @@ Widget build(BuildContext context) {
     allowMultiColumnSorting: true,
     showSortNumbers: true,
     columns: [
-      GridTextColumn(
+      GridColumn(
         columnName: 'id',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -307,7 +307,7 @@ Widget build(BuildContext context) {
             'ID',
             overflow: TextOverflow.ellipsis,
           ))),
-      GridTextColumn(
+      GridColumn(
         columnName: 'name',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -316,7 +316,7 @@ Widget build(BuildContext context) {
             'Name',
             overflow: TextOverflow.ellipsis,
           ))),
-      GridTextColumn(
+      GridColumn(
         columnName: 'city',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -325,7 +325,7 @@ Widget build(BuildContext context) {
             'City',
             overflow: TextOverflow.ellipsis,
           ))),
-      GridTextColumn(
+      GridColumn(
         columnName: 'freight',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -359,7 +359,7 @@ Widget build(BuildContext context) {
     source: _employeeDataSource,
     allowSorting: true,
     columns: [
-      GridTextColumn(
+      GridColumn(
         columnName: 'id',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -368,7 +368,7 @@ Widget build(BuildContext context) {
             'ID',
             overflow: TextOverflow.ellipsis,
           ))),
-      GridTextColumn(
+      GridColumn(
         columnName: 'name',
         allowSorting: false,
         label: Container(
@@ -378,7 +378,7 @@ Widget build(BuildContext context) {
             'Name',
             overflow: TextOverflow.ellipsis,
           ))),
-      GridTextColumn(
+      GridColumn(
         columnName: 'city',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -387,7 +387,7 @@ Widget build(BuildContext context) {
             'City',
             overflow: TextOverflow.ellipsis,
           ))),
-      GridTextColumn(
+      GridColumn(
         columnName: 'freight',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -426,7 +426,7 @@ Widget build(BuildContext context) {
       allowSorting: true,
       allowMultiColumnSorting: true,
       columns: [
-        GridTextColumn(
+        GridColumn(
           columnName: 'id',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -435,7 +435,7 @@ Widget build(BuildContext context) {
               'ID',
               overflow: TextOverflow.ellipsis,
             ))),
-        GridTextColumn(
+        GridColumn(
           columnName: 'name',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -444,7 +444,7 @@ Widget build(BuildContext context) {
               'Name',
               overflow: TextOverflow.ellipsis,
             ))),
-        GridTextColumn(
+        GridColumn(
           columnName: 'city',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -453,7 +453,7 @@ Widget build(BuildContext context) {
               'City',
               overflow: TextOverflow.ellipsis,
             ))),
-        GridTextColumn(
+        GridColumn(
           columnName: 'freight',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),

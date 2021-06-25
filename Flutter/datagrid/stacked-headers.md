@@ -26,7 +26,7 @@ Widget build(BuildContext context) {
     headerGridLinesVisibility: GridLinesVisibility.both,
     source: _productDataSource,
     columns: <GridColumn>[
-      GridTextColumn(
+      GridColumn(
         columnName: 'orderId',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -35,7 +35,7 @@ Widget build(BuildContext context) {
             'ID',
             overflow: TextOverflow.ellipsis,
           ))),
-      GridTextColumn(
+      GridColumn(
         columnName: 'customerName',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -44,7 +44,7 @@ Widget build(BuildContext context) {
             'Name',
             overflow: TextOverflow.ellipsis,
           ))),
-      GridTextColumn(
+      GridColumn(
         columnName: 'productId',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -53,7 +53,7 @@ Widget build(BuildContext context) {
             'ID',
             overflow: TextOverflow.ellipsis,
           ))),
-      GridTextColumn(
+      GridColumn(
         columnName: 'product',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -102,7 +102,7 @@ Widget build(BuildContext context) {
     headerGridLinesVisibility: GridLinesVisibility.both,
     source: _productDataSource,
     columns: <GridColumn>[
-      GridTextColumn(
+      GridColumn(
         columnName: 'orderId',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -111,7 +111,7 @@ Widget build(BuildContext context) {
             'ID',
             overflow: TextOverflow.ellipsis,
           ))),
-      GridTextColumn(
+      GridColumn(
         columnName: 'customerName',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -120,7 +120,7 @@ Widget build(BuildContext context) {
             'Name',
             overflow: TextOverflow.ellipsis,
           ))),
-      GridTextColumn(
+      GridColumn(
         columnName: 'productId',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -129,7 +129,7 @@ Widget build(BuildContext context) {
             'ID',
             overflow: TextOverflow.ellipsis,
           ))),
-      GridTextColumn(
+      GridColumn(
         columnName: 'product',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -193,7 +193,7 @@ Widget build(BuildContext context) {
       return details.rowHeight;;
     },
     columns: <GridColumn>[
-      GridTextColumn(
+      GridColumn(
         columnName: 'orderId',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -202,7 +202,7 @@ Widget build(BuildContext context) {
             'ID',
             overflow: TextOverflow.ellipsis,
           ))),
-      GridTextColumn(
+      GridColumn(
         columnName: 'customerName',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -211,7 +211,7 @@ Widget build(BuildContext context) {
             'Name',
             overflow: TextOverflow.ellipsis,
           ))),
-      GridTextColumn(
+      GridColumn(
         columnName: 'productId',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -220,7 +220,7 @@ Widget build(BuildContext context) {
             'ID',
             overflow: TextOverflow.ellipsis,
           ))),
-      GridTextColumn(
+      GridColumn(
         columnName: 'product',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),

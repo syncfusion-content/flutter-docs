@@ -30,8 +30,61 @@ Widget build(BuildContext context) {
 
 ![Month view Date Range Picker](images/views/monthview.png)
 
+
+### Week number
+
+Display the Week number of the year in the MonthView by setting the [showWeekNumber]() property of the `DateRangePickerMonthViewSettings` as true, and by default it is false. Week numbers will be displayed based on the ISO standard.
+{% tabs %}
+{% highlight Dart %}
+
+@override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+      body: SfDateRangePicker(
+        view: DateRangePickerView.month,
+        monthViewSettings: const DateRangePickerMonthViewSettings(
+          showWeekNumber: true,
+        ),
+      ),
+    ));
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Week Number in Flutter Date Range Picker](images\views\flutter-date-range-picker-week-number.png)
+
+### Week number appearance
+Customize the Week number style by using the [textStyle]() and the  [backgroundColor]() properties of the [DateRangePickerWeekNumberStyle]().
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+      body: SfDateRangePicker(
+        view: DateRangePickerView.month,
+        monthViewSettings: const DateRangePickerMonthViewSettings(
+          showWeekNumber: true,
+          weekNumberStyle: DateRangePickerWeekNumberStyle(
+              textStyle: TextStyle(fontStyle: FontStyle.italic),
+              backgroundColor: Colors.purple),
+        ),
+      ),
+    ));
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Week Number Appearance in Flutter Date Range Picker](images\views\flutter-date-range-picker-week-number-appearance.png)
+
+
 ## Year view
-This displays the entire month of a particular year. By default, the current year will be displayed on loading. You can navigate between months quickly by selecting the particular month in a `year view`.
+This displays the entire month of a particular year. By default, the current year will be displayed on loading. Navigate between the months quickly by selecting the particular month in a `year view`.
 
 {% tabs %}
 {% highlight Dart %}
