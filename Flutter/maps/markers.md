@@ -634,8 +634,6 @@ class Model {
 {% endhighlight %}
 {% endtabs %}
 
-![Remove marker dynamically](images/markers/remove-marker.gif)
-
 ## Clearing the markers
 
 You can clear all markers using the [`clearMarkers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLayerController/clearMarkers.html) method.
@@ -730,14 +728,19 @@ N> It is applicable for both tile layer and shape layer.
 late MapLatLng _markerPosition;
 late _CustomZoomPanBehavior _mapZoomPanBehavior;
 late MapShapeLayerController _controller;
+late MapShapeSource _mapSource;
 
 @override
 void initState() {
-  _controller = MapShapeLayerController();
-  _mapZoomPanBehavior = _CustomZoomPanBehavior()
-    ..zoomLevel = 1
-    ..onTap = updateMarkerChange;
-  super.initState();
+   _controller = MapShapeLayerController();
+   _mapZoomPanBehavior = _CustomZoomPanBehavior()
+      ..zoomLevel = 1
+      ..onTap = updateMarkerChange;
+   _mapSource = MapShapeSource.asset(
+      'assets/world_map.json',
+      shapeDataField: 'continent',
+   );
+   super.initState();
 }
 
 void updateMarkerChange(Offset position) {
@@ -747,7 +750,7 @@ void updateMarkerChange(Offset position) {
   /// markers only when the user taps.
   if (_controller.markersCount > 0) {
     _controller.clearMarkers();
-  }
+   }
   _controller.insertMarker(0);
 }
 
@@ -759,10 +762,7 @@ Widget build(BuildContext context) {
           height: 400,
           width: 400,
           child: MapShapeLayer(
-            source: const MapShapeSource.asset(
-              'assets/world_map.json',
-              shapeDataField: 'continent',
-            ),
+            source: _mapSource,
             zoomPanBehavior: _mapZoomPanBehavior,
             controller: _controller,
             markerBuilder: (BuildContext context, int index) {
