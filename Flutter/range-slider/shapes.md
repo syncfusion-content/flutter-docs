@@ -11,6 +11,107 @@ documentation: ug
 
 This section helps to learn about how to customize the shapes of the range slider elements.
 
+## Track shape
+
+You can change the size and shape of the track using the [`trackShape`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/trackShape.html) property in the `SfRangeSlider`.
+
+* getPreferredSize() - Returns the size based on the values passed to it.
+* paint() - Used to change the track shape.
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(3.0, 7.0);
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+     body: SfRangeSliderTheme(
+        data: SfRangeSliderThemeData(
+          activeTrackHeight: 10,
+          inactiveTrackHeight: 10,
+        ),
+        child: SfRangeSlider(
+          min: 0.0,
+          max: 10.0,
+          values: _values,
+          trackShape: _TrackShape(),
+          onChanged: (SfRangeValues newValues) {
+            setState(() {
+              _values = newValues;
+            });
+          },
+        ),
+      ),
+   );
+}
+
+class _TrackShape extends SfTrackShape {
+  void paint(PaintingContext context, Offset offset, Offset? thumbCenter,
+      Offset? startThumbCenter, Offset? endThumbCenter,
+      {required RenderBox parentBox,
+      required SfSliderThemeData themeData,
+      SfRangeValues? currentValues,
+      dynamic currentValue,
+      required Animation<double> enableAnimation,
+      required Paint? inactivePaint,
+      required Paint? activePaint,
+      required TextDirection textDirection}) {
+    final Radius radius = Radius.circular(themeData.trackCornerRadius!);
+    Rect inactiveTrackRect =
+        getPreferredRect(parentBox, themeData, offset, isActive: false);
+    Rect activeTrackRect =
+        getPreferredRect(parentBox, themeData, offset, isActive: true);
+
+    if (inactivePaint == null) {
+      inactivePaint = Paint();
+      final ColorTween inactiveTrackColorTween = ColorTween(
+          begin: themeData.disabledInactiveTrackColor,
+          end: themeData.inactiveTrackColor);
+      inactivePaint.color = inactiveTrackColorTween.evaluate(enableAnimation)!;
+    }
+    if (activePaint == null) {
+      activePaint = Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 1;
+      final ColorTween activeTrackColorTween = ColorTween(
+          begin: themeData.disabledActiveTrackColor,
+          end: themeData.activeTrackColor);
+      activePaint.color = activeTrackColorTween.evaluate(enableAnimation)!;
+    }
+
+    // Drawing inactive track.
+    Rect trackRect = Rect.fromLTRB(inactiveTrackRect.left,
+        inactiveTrackRect.top, startThumbCenter!.dx, inactiveTrackRect.bottom);
+    RRect inactiveTrackRRect = RRect.fromRectAndCorners(trackRect,
+        topLeft: radius, bottomLeft: radius);
+    context.canvas.drawRRect(inactiveTrackRRect, inactivePaint);
+
+    // Drawing active track.
+    final Rect activeTrackRRect = Rect.fromLTRB(startThumbCenter.dx,
+        activeTrackRect.top, endThumbCenter!.dx, activeTrackRect.bottom);
+    context.canvas.drawRect(activeTrackRRect, activePaint);
+
+    // Drawing inactive track.
+    trackRect = Rect.fromLTRB(
+        endThumbCenter.dx,
+        inactiveTrackRect.top,
+        inactiveTrackRect.width + inactiveTrackRect.left,
+        inactiveTrackRect.bottom);
+    inactiveTrackRRect = RRect.fromRectAndCorners(trackRect,
+        topLeft: Radius.zero,
+        topRight: radius,
+        bottomLeft: Radius.zero,
+        bottomRight: radius);
+    context.canvas.drawRRect(inactiveTrackRRect, inactivePaint);
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Track shape](images/shapes/track-shape.png)
+
 ## Thumb shape
 
 You can change the size and shape of the thumb using the [`thumbShape`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/thumbShape.html) property in the `SfRangeSlider`.
