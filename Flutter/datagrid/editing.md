@@ -9,21 +9,21 @@ documentation: ug
 
 # Editing in Flutter DataGrid
 
-SfDataGrid supports to edit the cell values by setting the SfDataGrid.allowEditing property as true and SfDataGrid.navigationMode as Cell, SfDataGrid.selectionMode as other than None. 
+SfDataGrid supports to edit the cell values by setting the `SfDataGrid.allowEditing` property as true and `SfDataGrid.navigationMode` as Cell, `SfDataGrid.selectionMode` as other than None. 
 
-By default, SfDataGrid does not load any widget when cell is moved into edit mode. Users must load any widget when cell is moved into edit mode by returning the required widget through `DataGridSource.buildEditWidget` method in `DataGridSource` class.
+By default, SfDataGrid does not load any widget when cell is moved into edit mode. Users must load any widget when cell is moved into edit mode by returning the required widget through `DataGridSource.buildEditWidget` method in `DataGridSource` class. 
 
-`SfDataGrid` supports to editing the cell values by setting the `SfDataGrid.allowEditing` property, `SfDataGrid.navigationMode` as Cell, `SfDataGrid.selectionMode` as any other than None and return the editable widget in `DataGridSource.buildEditWidget`callback.
-The `DataGridRow`, `RowColumnIndex`, `GridColumn` and `CellSubmit` has the following members which provides information for `DataGridSource.buildEditWidget` callback.
+The following arguments are passed in `buildEditWidget` method,
 
-* `DataGridRow`: Gets the DataGridRow of the SfDataGrid.
-* `RowColumnIndex`: Gets the current row and column index of the DataGrid.
-* `Column`: Gets the Grid Column of the SfDataGrid.
-* `CellSubmit`: Programmatically call to end editing.
+* `row`: Gets the DataGridRow of the SfDataGrid.
+* `rowColumnIndex`: Gets the current row and column index of the DataGrid.
+* `column`: Gets the Grid Column of the SfDataGrid.
+* `submitCell`: Programmatically call to end the editing. Typically, this method can be called when the widget completes its 
+editing. For example, `TextField.onSubmitted` method is called whenever TextField ends its editing. So, you can simply call submitCell method. This will automatically call the DataGridSource.
 
->N In Mobile platforms must to call the `CellSubmit` inside the respective callback of editable widget, i.e `TextField.onSubmitted` and `DropDownButton.onChanged`. After calling the `CellSubmit`, `canSubmitCell` and `onCellSubmit` will call.
+We recommend you save the edited value through editors in `DataGridSource.onCellSubmit` method. The `onCellSubmit` method will be called whenever the submitCell method from buildEditWidget method is called or other cells are navigated when a cell is in edit mode.
 
-To enable editing, follow the code example:
+The following example show how to enable editing in datagrid and committing the edited cell value in `onCellSubmit` callback.
 
 {% tabs %}
 {% highlight dart %} 
@@ -96,6 +96,41 @@ class EmployeeDataSource extends DataGridSource {
   TextEditingController editingController = TextEditingController();
 
   @override
+  void onCellSubmit(DataGridRow dataGridRow, RowColumnIndex rowColumnIndex,
+      GridColumn column) {
+    final dynamic oldValue = dataGridRow
+            .getCells()
+            .firstWhereOrNull((DataGridCell dataGridCell) =>
+                dataGridCell.columnName == column.columnName)
+            ?.value ??
+        '';
+
+    final int dataRowIndex = dataGridRows.indexOf(dataGridRow);
+
+    if (newCellValue == null || oldValue == newCellValue) {
+      return;
+    }
+
+    if (column.columnName == 'id') {
+      dataGridRows[dataRowIndex].getCells()[rowColumnIndex.columnIndex] =
+          DataGridCell<int>(columnName: 'id', value: newCellValue);
+      _employees[dataRowIndex].id = newCellValue as int;
+    } else if (column.columnName == 'name') {
+      dataGridRows[dataRowIndex].getCells()[rowColumnIndex.columnIndex] =
+          DataGridCell<String>(columnName: 'name', value: newCellValue);
+      _employees[dataRowIndex].name = newCellValue.toString();
+    } else if (column.columnName == 'designation') {
+      dataGridRows[dataRowIndex].getCells()[rowColumnIndex.columnIndex] =
+          DataGridCell<String>(columnName: 'designation', value: newCellValue);
+      _employees[dataRowIndex].designation = newCellValue.toString();
+    } else {
+      dataGridRows[dataRowIndex].getCells()[rowColumnIndex.columnIndex] =
+          DataGridCell<int>(columnName: 'salary', value: newCellValue);
+      _employees[dataRowIndex].salary = newCellValue as int;
+    }
+  }
+
+  @override
   Widget? buildEditWidget(DataGridRow dataGridRow,
       RowColumnIndex rowColumnIndex, GridColumn column, CellSubmit submitCell) {
     // Text going to display on editable widget
@@ -157,15 +192,9 @@ class EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
->N In desktop platform, we will call the `canSubmitCell` and `onCellSubmit` on key navigation itself and no need to call the  `CellSubmit` callback inside editable widget.
-
->N `DataGridSource.onCellSubmit` will call when the `DataGridSource.canSubmitCell` return true.
-
 ### Disable the editing for specific column
 
-By default, the `GridColumn.allowEditing` is `true`.To disable the editing for a particular column, set the `GridColumn.allowEditing` property as `false`.
-
-The following code example shows how to disable the editing for first column.
+To disable the editing for a particular column, set the `GridColumn.allowEditing` property as `false`.
 
 {% tabs %}
 {% highlight dart %} 
@@ -305,11 +334,11 @@ Widget build(BuildContext context) {
 
 ### onCellBeginEdit
 
-The `DataGridSource.onCellBeginEdit` callback occurs before when the `CurrentCell` enters into edit mode. If does not want to enter into edit mode, you can return `false`. Otherwise return `true`. The `DataGridRow`, `RowColumnIndex` and `GridColumn` has the following members which provides information for `DataGridSource.onCellBeginEdit` callback.
+The `DataGridSource.onCellBeginEdit` callback is called when the cell enters into edit mode. You can return false if you don’t want to move any specific cells to edit mode. The following arguments are passed in this method,
 
-* `DataGridRow`: Gets the DataGridRow of the SfDataGrid.
-* `RowColumnIndex`: Gets the current row and column index of the DataGrid.
-* `Column`: Gets the Grid Column of the SfDataGrid.
+* `row`: Gets the DataGridRow of the SfDataGrid.
+* `rowColumnIndex`: Gets the current row and column index of the DataGrid.
+* `column`: Gets the Grid Column of the SfDataGrid.
 
 {% tabs %}
 {% highlight dart %} 
@@ -332,11 +361,11 @@ class EmployeeDataSource extends DataGridSource {
 
 ### canSubmitCell
 
-The `DataGridSource.canSubmitCell` occurs before cell’s editing is completed. If you want to restrict the cell from being end its editing, you can return false. Otherwise, return true. `onCellSubmit` will be called only if the `canSubmitCell` returns true.The `DataGridRow`, `RowColumnIndex` and `GridColumn` has the following members which provides information for `DataGridSource.canSubmitCell` callback.
+The `DataGridSource.canSubmitCell` is called before the cell is ending its editing. If you want to restrict the cell from being end its editing, you can return false. `onCellSubmit` will be called only if the `canSubmitCell` returns true. The following arguments are passed in this method,
 
-* `DataGridRow`: Gets the DataGridRow of the SfDataGrid.
-* `RowColumnIndex`: Gets the current row and column index of the DataGrid.
-* `Column`: Gets the Grid Column of the SfDataGrid.
+* `row`: Gets the DataGridRow of the SfDataGrid.
+* `rowColumnIndex`: Gets the current row and column index of the DataGrid.
+* `column`: Gets the Grid Column of the SfDataGrid.
 
 {% tabs %}
 {% highlight dart %} 
@@ -350,7 +379,7 @@ class EmployeeDataSource extends DataGridSource {
       // To avoid null value for cell
       return false;
     } else {
-      return true; // or super.canSubmitCell(dataGridRow, rowColumnIndex, column);
+      return true; 
     }
   }
 }
@@ -358,15 +387,11 @@ class EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %} 
 
->N In Mobile platforms must to call the `CellSubmit` inside the respective callback of editable widget, i.e `TextField.onSubmitted` and `DropDownButton.onChanged`. After calling the `CellSubmit`, from it `canSubmitCell` and `onCellSubmit` will call.
-
->N In desktop platform, we will call the `canSubmitCell` and `onCellSubmit` on key navigation itself and no need to call the  `CellSubmit` callback inside editable widget.
-
 ### onCellSubmit
 
-The `DataGridSource.onCellSubmit` callback will call when `DataGridSource.canSubmitCell` return true and it's common place to committing the edited cell value into the respective collection and `SfDataGrid.DataGridCell`. The `DataGridRow`, `RowColumnIndex` and `GridColumn` has the following members which provides information for `DataGridSource.onCellSubmit` callback.
+The `DataGridSource.onCellSubmit` callback is called when the editing is completed. We recommend you save the edited values to underlying collection in this method. It makes sense to handle the entire editing operation in this single method. 
 
->N No need to call the notifyListener inside it.
+>N There is no need to call the `notifyListeners` after you update the DataGridRows. DataGrid will refresh the UI automatically.
 
 {% tabs %}
 {% highlight dart %}
@@ -414,7 +439,7 @@ class EmployeeDataSource extends DataGridSource {
 
 ### onCellCancelEdit
 
-The `DataGridSource.onCellCancelEdit` callback will call when press the `Escape` key. The `canSubmitCell` and `onCellSubmit` will not call when `Escape` key is pressed.
+The `DataGridSource.onCellCancelEdit` callback is called when you press the `Esc` key from Web and Desktop platforms. The `canSubmitCell` and `onCellSubmit` will not be called when `Esc` key is pressed.
 
 >N No need to call the notifyListener inside it.
 
@@ -435,7 +460,7 @@ class EmployeeDataSource extends DataGridSource {
 
 ### BeginEdit
 
-The SfDataGrid allows to edit the cell programmatically by calling the `SfDataGrid.beginEdit` method. By calling this method, the particular cell enters into edit mode. It edits the data manually or programmatically. To edit a cell programmatically, follow the code example:
+The SfDataGrid allows to move the cell into edit mode programmatically by calling the `DataGridController.beginEdit` method. 
 
 {% tabs %}
 {% highlight dart %} 
@@ -518,7 +543,7 @@ Widget build(BuildContext context) {
 
 ### EndEdit
 
-The `SfDataGrid.endEdit` method can be called to programmatically end editing. To end the editing programmatically, follow the code example:
+The `SfDataGrid.endEdit` method can be called to programmatically end the editing for specific cell. 
 
 {% tabs %}
 {% highlight dart %} 
@@ -599,9 +624,11 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## Cancel the editing for specific cell or column at run time
+## Restrict specific cell or column from being entered into edit mode at run time
 
-The `DataGridSource.onCellBeginEdit` will call every time before when `CurrentCell` enter into the edit mode. Based on the return value `DataGridSource.buildEditWidget` will call. By default the return type is `true`.   
+In order to cancel the editing for specific cell or column at run time, you can override the onCellBeginEdit method in DataGridSource class and return false for specific cell or column.
+
+The following example shows how to cancel the specific cell from being entered into edit mode, 
 
 {% tabs %}
 {% highlight dart %} 
@@ -624,7 +651,7 @@ class EmployeeDataSource extends DataGridSource {
 {% endtabs %}
 
 
-The following code example shows how to cancel the editing for specific column.
+The following code example shows how to cancel the specific column from being entered into edit mode, 
 
 {% tabs %}
 {% highlight dart %} 
@@ -646,7 +673,7 @@ class EmployeeDataSource extends DataGridSource {
 
 ## Cancel edited cell value from being committed
 
-The `DataGridSource.canSubmitCell` callback will call every time before `DataGridSource.onCellSubmit` callback. We can validate the edited value in `canSubmitCell` and return `true` or `false` to prevent calling the `DataGridSource.onCellSubmit` callback and committing the invalid value. By default its returns `true`.
+You can override the canSubmitCell from DataGridSource class and return false based on your criteria. 
 
 {% tabs %}
 {% highlight dart %} 
