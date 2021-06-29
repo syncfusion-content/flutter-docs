@@ -85,8 +85,9 @@ void initState() {
 Widget build(BuildContext context) {
   return Scaffold(
      body: Center(
-        child: Padding(
-          padding: EdgeInsets.all(10),
+        child: Container(
+          height: 400,
+          width: 400,
           child: SfTreemap(
             dataCount: _source.length,
             weightValueMapper: (int index) {
@@ -158,8 +159,9 @@ void initState() {
 Widget build(BuildContext context) {
   return Scaffold(
      body: Center(
-        child: Padding(
-          padding: EdgeInsets.all(10),
+        child: Container(
+          height: 400,
+          width: 400,
           child: SfTreemap(
             dataCount: _source.length,
             weightValueMapper: (int index) {
@@ -173,7 +175,8 @@ Widget build(BuildContext context) {
                 labelBuilder: (BuildContext context, TreemapTile tile) {
                   return Padding(
                     padding: EdgeInsets.only(left: 2.5, right: 2.4, top: 1),
-                    child: Text(tile.group),
+                    child:
+                        Text(tile.group, style: TextStyle(color: Colors.black)),
                   );
                 },
               ),
@@ -185,15 +188,15 @@ Widget build(BuildContext context) {
 }
 
 class SocialMediaUsers {
-   const SocialMediaUsers({
-     required this.country,
-     required this.socialMedia,
-     required this.usersInMillions,
-   });
+  const SocialMediaUsers({
+    required this.country,
+    required this.socialMedia,
+    required this.usersInMillions,
+  });
 
-   final String country;
-   final String socialMedia;
-   final double usersInMillions;
+  final String country;
+  final String socialMedia;
+  final double usersInMillions;
 }
 
 {% endhighlight %}
@@ -212,7 +215,7 @@ late List<SocialMediaUsers> _source;
 
 @override
 void initState() {
-    _source = <SocialMediaUsers>[
+   _source = <SocialMediaUsers>[
       SocialMediaUsers(
           country: 'India', socialMedia: 'Facebook', usersInMillions: 25.4),
       SocialMediaUsers(
@@ -225,22 +228,22 @@ void initState() {
           country: 'France', socialMedia: 'Twitter', usersInMillions: 7.54),
       SocialMediaUsers(
           country: 'UK', socialMedia: 'Instagram', usersInMillions: 4.93),
-    ];
-    super.initState();
+   ];
+   super.initState();
 }
 
 @override
 Widget build(BuildContext context) {
   return Scaffold(
      body: Center(
-        child: Padding(
-          padding: EdgeInsets.all(10),
+        child: Container(
+          height: 400,
+          width: 400,
           child: SfTreemap(
             dataCount: _source.length,
             weightValueMapper: (int index) {
               return _source[index].usersInMillions;
             },
-            tooltipSettings: TreemapTooltipSettings(color: Colors.black),
             levels: [
               TreemapLevel(
                 groupMapper: (int index) {
@@ -249,16 +252,17 @@ Widget build(BuildContext context) {
                 labelBuilder: (BuildContext context, TreemapTile tile) {
                   return Padding(
                     padding: EdgeInsets.only(left: 2.5, right: 2.4, top: 1),
-                    child: Text(tile.group),
+                    child:
+                        Text(tile.group, style: TextStyle(color: Colors.black)),
                   );
                 },
                 tooltipBuilder: (BuildContext context, TreemapTile tile) {
                   return Padding(
                     padding: const EdgeInsets.only(
-                         left: 5, right: 5, top: 2, bottom: 3),
+                        left: 5, right: 5, top: 2, bottom: 3),
                     child: Text(
                         'Country          : ${tile.group}\nSocial media : ${tile.weight}M',
-                        style: TextStyle(color: Colors.white)),
+                        style: TextStyle(color: Colors.black)),
                   );
                 },
               ),
@@ -297,7 +301,7 @@ late List<SocialMediaUsers> _source;
 
 @override
 void initState() {
-    _source = <SocialMediaUsers>[
+   _source = <SocialMediaUsers>[
       SocialMediaUsers(
           country: 'India', socialMedia: 'Facebook', usersInMillions: 25.4),
       SocialMediaUsers(
@@ -310,22 +314,22 @@ void initState() {
           country: 'France', socialMedia: 'Twitter', usersInMillions: 7.54),
       SocialMediaUsers(
           country: 'UK', socialMedia: 'Instagram', usersInMillions: 4.93),
-    ];
-    super.initState();
+   ];
+   super.initState();
 }
 
 @override
 Widget build(BuildContext context) {
   return Scaffold(
      body: Center(
-        child: Padding(
-          padding: EdgeInsets.all(10),
+        child: Container(
+          height: 400,
+          width: 400,
           child: SfTreemap(
             dataCount: _source.length,
             weightValueMapper: (int index) {
               return _source[index].usersInMillions;
             },
-            tooltipSettings: TreemapTooltipSettings(color: Colors.black),
             levels: [
               TreemapLevel(
                 groupMapper: (int index) {
@@ -334,16 +338,17 @@ Widget build(BuildContext context) {
                 labelBuilder: (BuildContext context, TreemapTile tile) {
                   return Padding(
                     padding: EdgeInsets.only(left: 2.5, right: 2.4, top: 1),
-                    child: Text(tile.group),
+                    child:
+                        Text(tile.group, style: TextStyle(color: Colors.black)),
                   );
                 },
                 tooltipBuilder: (BuildContext context, TreemapTile tile) {
                   return Padding(
                     padding: const EdgeInsets.only(
-                         left: 5, right: 5, top: 2, bottom: 3),
+                        left: 5, right: 5, top: 2, bottom: 3),
                     child: Text(
                         'Country          : ${tile.group}\nSocial media : ${tile.weight}M',
-                        style: TextStyle(color: Colors.white)),
+                        style: TextStyle(color: Colors.black)),
                   );
                 },
               ),

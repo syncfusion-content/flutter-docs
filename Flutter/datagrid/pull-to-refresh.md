@@ -23,7 +23,7 @@ Widget build(BuildContext context) {
     allowPullToRefresh: true,
     source: _employeeDataSource,
     columns: <GridColumn>[
-      GridTextColumn(
+      GridColumn(
         columnName: 'id',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -32,7 +32,7 @@ Widget build(BuildContext context) {
             'ID',
             overflow: TextOverflow.ellipsis,
           ))),
-      GridTextColumn(
+      GridColumn(
         columnName: 'name',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -41,7 +41,7 @@ Widget build(BuildContext context) {
             'Name',
             overflow: TextOverflow.ellipsis,
           ))),
-      GridTextColumn(
+      GridColumn(
         columnName: 'designation',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -50,7 +50,7 @@ Widget build(BuildContext context) {
             'Designation',
             overflow: TextOverflow.ellipsis,
           ))),
-      GridTextColumn(
+      GridColumn(
         columnName: 'salary',
         label: Container(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -182,7 +182,7 @@ Widget build(BuildContext context) {
       refreshIndicatorStrokeWidth: 3.0,
       refreshIndicatorDisplacement: 60.0,
       columns: <GridColumn>[
-        GridTextColumn(
+        GridColumn(
           columnName: 'id',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -191,7 +191,7 @@ Widget build(BuildContext context) {
               'ID',
               overflow: TextOverflow.ellipsis,
             ))),
-        GridTextColumn(
+        GridColumn(
           columnName: 'name',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -200,7 +200,7 @@ Widget build(BuildContext context) {
               'Name',
               overflow: TextOverflow.ellipsis,
             ))),
-        GridTextColumn(
+        GridColumn(
           columnName: 'designation',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -209,7 +209,7 @@ Widget build(BuildContext context) {
               'Designation',
               overflow: TextOverflow.ellipsis,
             ))),
-        GridTextColumn(
+        GridColumn(
           columnName: 'salary',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -250,7 +250,7 @@ Widget build(BuildContext context) {
       allowPullToRefresh: true,
       source: employeeDataSource,
       columns: <GridColumn>[
-        GridTextColumn(
+        GridColumn(
           columnName: 'id',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -259,7 +259,7 @@ Widget build(BuildContext context) {
               'ID',
               overflow: TextOverflow.ellipsis,
             ))),
-        GridTextColumn(
+        GridColumn(
           columnName: 'name',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -268,7 +268,7 @@ Widget build(BuildContext context) {
               'Name',
               overflow: TextOverflow.ellipsis,
             ))),
-        GridTextColumn(
+        GridColumn(
           columnName: 'designation',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -277,7 +277,7 @@ Widget build(BuildContext context) {
               'Designation',
               overflow: TextOverflow.ellipsis,
             ))),
-        GridTextColumn(
+        GridColumn(
           columnName: 'salary',
           label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),

@@ -1,0 +1,696 @@
+---
+layout: post
+title: Editing in Flutter DataGrid | Flutter DataTable | Syncfusion
+description: Learn here all about how to perform editing in Syncfusion Flutter DataGrid (SfDataGrid) widget and more.
+platform: flutter
+control: SfDataGrid
+documentation: ug
+---
+
+# Editing in Flutter DataGrid
+
+`SfDataGrid` supports to edit the cell values by setting the `SfDataGrid.allowEditing` property as true and `SfDataGrid.navigationMode` as Cell, `SfDataGrid.selectionMode` as other than None.
+
+By default, `SfDataGrid` does not load any widget when cell is moved into edit mode. Users must load any widget when cell is moved into edit mode by returning the required widget through `DataGridSource.buildEditWidget` method in `DataGridSource` class.
+
+The following arguments are passed in `buildEditWidget` method,
+
+* `row`: Gets the DataGridRow of the SfDataGrid.
+* `rowColumnIndex`: Gets the current row and column index of the DataGrid.
+* `column`: Gets the Grid Column of the SfDataGrid.
+* `submitCell`: Programmatically call to end the editing. Typically, this method can be called when the widget completes its
+editing. For example, `TextField.onSubmitted` method is called whenever TextField ends its editing. So, you can simply call submitCell method. This will automatically call the DataGridSource.
+
+We recommend you save the edited value through editors in `DataGridSource.onCellSubmit` method. The `onCellSubmit` method will be called whenever the `submitCell` method from `buildEditWidget` method is called or other cells are navigated when a cell is in edit mode.
+
+The following example show how to enable editing in datagrid and committing the edited cell value in `onCellSubmit` callback.
+
+{% tabs %}
+{% highlight dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDataGrid(
+      source: _employeeDataSource,
+      allowEditing: true,
+      selectionMode: SelectionMode.single,
+      navigationMode: GridNavigationMode.cell,
+      columns: [
+        GridColumn(
+          columnName: 'id',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'ID',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridColumn(
+          columnName: 'name',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Name',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridColumn(
+          columnName: 'designation',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Designation',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridColumn(
+          columnName: 'salary',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'Salary',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+      ],
+    ),
+  );
+}
+
+class EmployeeDataSource extends DataGridSource {
+  /// Helps to hold the new value of all editable widget.
+  /// Based on the new value we will commit the new value into the corresponding
+  /// DataGridCell on onCellSubmit method.
+  dynamic newCellValue;
+
+  /// Help to control the editable text in [TextField] widget.
+  TextEditingController editingController = TextEditingController();
+
+  @override
+  void onCellSubmit(DataGridRow dataGridRow, RowColumnIndex rowColumnIndex,
+      GridColumn column) {
+    final dynamic oldValue = dataGridRow
+            .getCells()
+            .firstWhereOrNull((DataGridCell dataGridCell) =>
+                dataGridCell.columnName == column.columnName)
+            ?.value ??
+        '';
+
+    final int dataRowIndex = dataGridRows.indexOf(dataGridRow);
+
+    if (newCellValue == null || oldValue == newCellValue) {
+      return;
+    }
+
+    if (column.columnName == 'id') {
+      dataGridRows[dataRowIndex].getCells()[rowColumnIndex.columnIndex] =
+          DataGridCell<int>(columnName: 'id', value: newCellValue);
+      _employees[dataRowIndex].id = newCellValue as int;
+    } else if (column.columnName == 'name') {
+      dataGridRows[dataRowIndex].getCells()[rowColumnIndex.columnIndex] =
+          DataGridCell<String>(columnName: 'name', value: newCellValue);
+      _employees[dataRowIndex].name = newCellValue.toString();
+    } else if (column.columnName == 'designation') {
+      dataGridRows[dataRowIndex].getCells()[rowColumnIndex.columnIndex] =
+          DataGridCell<String>(columnName: 'designation', value: newCellValue);
+      _employees[dataRowIndex].designation = newCellValue.toString();
+    } else {
+      dataGridRows[dataRowIndex].getCells()[rowColumnIndex.columnIndex] =
+          DataGridCell<int>(columnName: 'salary', value: newCellValue);
+      _employees[dataRowIndex].salary = newCellValue as int;
+    }
+  }
+
+  @override
+  Widget? buildEditWidget(DataGridRow dataGridRow,
+      RowColumnIndex rowColumnIndex, GridColumn column, CellSubmit submitCell) {
+    // Text going to display on editable widget
+    final String displayText = dataGridRow
+            .getCells()
+            .firstWhereOrNull((DataGridCell dataGridCell) =>
+                dataGridCell.columnName == column.columnName)
+            ?.value
+            ?.toString() ??
+        '';
+
+    // The new cell value must be reset.
+    // To avoid committing the [DataGridCell] value that was previously edited
+    // into the current non-modified [DataGridCell].
+    newCellValue = null;    
+
+    final bool isTextAlignRight =
+        column.columnName == 'id' || column.columnName == 'salary';
+
+    final bool isNumericKeyBoardType =
+        column.columnName == 'id' || column.columnName == 'salary';
+
+    return Container(
+      padding: const EdgeInsets.all(8.0),
+      alignment:
+          isTextAlignRight ? Alignment.centerRight : Alignment.centerLeft,
+      child: TextField(
+        autofocus: true,
+        controller: editingController..text = displayText,
+        textAlign: isTextAlignRight ? TextAlign.right : TextAlign.left,
+        decoration: InputDecoration(
+            contentPadding: const EdgeInsets.fromLTRB(0, 0, 0, 16.0),
+            focusedBorder: UnderlineInputBorder(
+                borderSide: BorderSide(color: Colors.black))),
+        keyboardType:
+            isNumericKeyBoardType ? TextInputType.number : TextInputType.text,
+        onChanged: (String value) {
+          if (value.isNotEmpty) {
+            if (isNumericKeyBoardType) {
+              newCellValue = int.parse(value);
+            } else {
+              newCellValue = value;
+            }
+          } else {
+            newCellValue = null;
+          }
+        },
+        onSubmitted: (String value) {
+          // In Mobile Platform.
+          // Call [CellSubmit] callback to fire the canSubmitCell and
+          // onCellSubmit to commit the new value in single place.
+          submitCell();
+        },
+      ),
+    );
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Disable the editing for specific column
+
+To disable the editing for a particular column, set the `GridColumn.allowEditing` property as `false`.
+
+{% tabs %}
+{% highlight dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDataGrid(
+      source: _employeeDataSource,
+      allowEditing: true,
+      selectionMode: SelectionMode.single,
+      navigationMode: GridNavigationMode.cell,
+      columns: [
+        GridColumn(
+          columnName: 'id',
+          allowEditing: false,
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'ID',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridColumn(
+          columnName: 'name',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Name',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridColumn(
+          columnName: 'designation',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Designation',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridColumn(
+          columnName: 'salary',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'Salary',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+      ],
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Entering edit mode
+
+By default, cell will be moved to edit mode when you double tap the cells. You can enable the editing to be performed on tapping, set the `SfDataGrid.editingGestureType` property as tap.
+
+{% tabs %}
+{% highlight dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfDataGrid(
+      source: _employeeDataSource,
+      allowEditing: true,
+      selectionMode: SelectionMode.single,
+      navigationMode: GridNavigationMode.cell,
+      editingGestureType: EditingGestureType.tap,
+      columns: [
+        GridColumn(
+          columnName: 'id',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'ID',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridColumn(
+          columnName: 'name',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Name',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridColumn(
+          columnName: 'designation',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Designation',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+        GridColumn(
+          columnName: 'salary',
+          label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'Salary',
+              overflow: TextOverflow.ellipsis,
+            ),
+          ),
+        ),
+      ],
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Callbacks
+
+### onCellBeginEdit
+
+The `DataGridSource.onCellBeginEdit` callback is called when the cell enters into edit mode. You can return false if you don’t want to move any specific cells to edit mode. The following arguments are passed in this method,
+
+* `row`: Gets the DataGridRow of the SfDataGrid.
+* `rowColumnIndex`: Gets the current row and column index of the DataGrid.
+* `column`: Gets the Grid Column of the SfDataGrid.
+
+{% tabs %}
+{% highlight dart %}
+
+class EmployeeDataSource extends DataGridSource {
+  @override
+  bool onCellBeginEdit(DataGridRow dataGridRow, RowColumnIndex rowColumnIndex,
+      GridColumn column) {
+    if(column.columnName == 'id'){
+      // Return false, to restrict entering into the editing.
+      return false;
+    }else{
+      return true;
+    }
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### canSubmitCell
+
+The `DataGridSource.canSubmitCell` is called before the cell is ending its editing. If you want to restrict the cell from being end its editing, you can return false. `onCellSubmit` will be called only if the `canSubmitCell` returns true. The following arguments are passed in this method,
+
+* `row`: Gets the DataGridRow of the SfDataGrid.
+* `rowColumnIndex`: Gets the current row and column index of the DataGrid.
+* `column`: Gets the Grid Column of the SfDataGrid.
+
+{% tabs %}
+{% highlight dart %}
+
+class EmployeeDataSource extends DataGridSource {
+   @override
+  bool canSubmitCell(DataGridRow dataGridRow, RowColumnIndex rowColumnIndex,
+      GridColumn column) {
+    if (column.columnName == 'id' && newCellValue == null) {
+      // Return false, to retain in edit mode.
+      // To avoid null value for cell
+      return false;
+    } else {
+      return true;
+    }
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### onCellSubmit
+
+The `DataGridSource.onCellSubmit` callback is called when the editing is completed. We recommend you save the edited values to underlying collection in this method. It makes sense to handle the entire editing operation in this single method.
+
+>N There is no need to call the `notifyListeners` after you update the DataGridRows. DataGrid will refresh the UI automatically.
+
+{% tabs %}
+{% highlight dart %}
+
+class EmployeeDataSource extends DataGridSource {
+  
+  @override
+  void onCellSubmit(DataGridRow dataGridRow, RowColumnIndex rowColumnIndex,
+      GridColumn column) {
+    final dynamic oldValue = dataGridRow
+            .getCells()
+            .firstWhereOrNull((DataGridCell dataGridCell) =>
+                dataGridCell.columnName == column.columnName)
+            ?.value ??
+        '';
+
+    final int dataRowIndex = dataGridRows.indexOf(dataGridRow);
+
+    if (newCellValue == null || oldValue == newCellValue) {
+      return;
+    }
+
+    if (column.columnName == 'id') {
+      dataGridRows[dataRowIndex].getCells()[rowColumnIndex.columnIndex] =
+          DataGridCell<int>(columnName: 'id', value: newCellValue);
+      _employees[dataRowIndex].id = newCellValue as int;
+    } else if (column.columnName == 'name') {
+      dataGridRows[dataRowIndex].getCells()[rowColumnIndex.columnIndex] =
+          DataGridCell<String>(columnName: 'name', value: newCellValue);
+      _employees[dataRowIndex].name = newCellValue.toString();
+    } else if (column.columnName == 'designation') {
+      dataGridRows[dataRowIndex].getCells()[rowColumnIndex.columnIndex] =
+          DataGridCell<String>(columnName: 'designation', value: newCellValue);
+      _employees[dataRowIndex].designation = newCellValue.toString();
+    } else {
+      dataGridRows[dataRowIndex].getCells()[rowColumnIndex.columnIndex] =
+          DataGridCell<int>(columnName: 'salary', value: newCellValue);
+      _employees[dataRowIndex].salary = newCellValue as int;
+    }
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### onCellCancelEdit
+
+The `DataGridSource.onCellCancelEdit` callback is called when you press the `Esc` key from Web and Desktop platforms. The `canSubmitCell` and `onCellSubmit` will not be called when `Esc` key is pressed.
+
+>N No need to call the notifyListener inside it.
+
+{% tabs %}
+{% highlight dart %}
+
+class EmployeeDataSource extends DataGridSource {
+  @override
+  void onCellCancelEdit(DataGridRow dataGridRow, RowColumnIndex rowColumnIndex, GridColumn column) {
+    // handle the cancel editing code here
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Programmatic editing
+
+### BeginEdit
+
+The SfDataGrid allows to move the cell into edit mode programmatically by calling the `DataGridController.beginEdit` method.
+
+{% tabs %}
+{% highlight dart %}
+
+final DataGridController _dataGridController = DataGridController();
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: Column(
+      children: [
+        TextButton(
+          child: Text("Begin Edit"),
+          onPressed: () {
+            _dataGridController.beginEdit(RowColumnIndex(2, 3));
+          },
+        ),
+        Expanded(
+          child: SfDataGrid(
+            source: _employeeDataSource,
+            allowEditing: true,
+            selectionMode: SelectionMode.single,
+            navigationMode: GridNavigationMode.cell,
+            controller: _dataGridController,
+            columns: [
+              GridColumn(
+                columnName: 'id',
+                label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'ID',
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+              ),
+              GridColumn(
+                columnName: 'name',
+                label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Name',
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+              ),
+              GridColumn(
+                columnName: 'designation',
+                label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Designation',
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+              ),
+              GridColumn(
+                columnName: 'salary',
+                label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Salary',
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### EndEdit
+
+The `SfDataGrid.endEdit` method can be called to programmatically end the editing for specific cell.
+
+{% tabs %}
+{% highlight dart %}
+
+final DataGridController _dataGridControlle r = DataGridController();
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: Column(
+      children: [
+        TextButton(
+          child: Text("End Edit"),
+          onPressed: () {
+            _dataGridController.endEdit();
+          },
+        ),
+        Expanded(
+          child: SfDataGrid(
+            source: _employeeDataSource,
+            allowEditing: true,
+            selectionMode: SelectionMode.single,
+            navigationMode: GridNavigationMode.cell,
+            controller: _dataGridController,
+            columns: [
+              GridColumn(
+                columnName: 'id',
+                label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'ID',
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+              ),
+              GridColumn(
+                columnName: 'name',
+                label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Name',
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+              ),
+              GridColumn(
+                columnName: 'designation',
+                label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Designation',
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+              ),
+              GridColumn(
+                columnName: 'salary',
+                label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Salary',
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Restrict specific cell or column from being entered into edit mode at run time
+
+In order to cancel the editing for specific cell or column at run time, you can override the `onCellBeginEdit` method in `DataGridSource` class and return false for specific cell or column.
+
+The following example shows how to cancel the specific cell from being entered into edit mode,
+
+{% tabs %}
+{% highlight dart %}
+
+class EmployeeDataSource extends DataGridSource {
+  @override
+  bool onCellBeginEdit(DataGridRow dataGridRow, RowColumnIndex rowColumnIndex,
+      GridColumn column) {
+
+    // Editing prevented for the cell at RowColumnIndex(2,2).    
+    if (rowColumnIndex.equals(RowColumnIndex(2, 2))) {
+      return false;
+    } else {
+      return false;
+    }
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+The following code example shows how to cancel the specific column from being entered into edit mode,
+
+{% tabs %}
+{% highlight dart %}
+
+class EmployeeDataSource extends DataGridSource {
+  @override
+  bool onCellBeginEdit(DataGridRow dataGridRow, RowColumnIndex rowColumnIndex,
+      GridColumn column) {
+    if (column.columnName == 'id' || column.columnName == 'salary') {
+      return false;
+    } else {
+      return true;
+    }
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Cancel edited cell value from being committed
+
+You can override the `canSubmitCell` from `DataGridSource` class and return false based on your criteria.
+
+{% tabs %}
+{% highlight dart %}
+
+class EmployeeDataSource extends DataGridSource {
+  @override
+  bool canSubmitCell(DataGridRow dataGridRow, RowColumnIndex rowColumnIndex,
+      GridColumn column) {
+    if (newCellValue == null || newCellValue == '') {
+      // Editing widget will retain in view.
+      // onCellSubmit callback will not fire.
+      return false;
+    } else {
+      // Allow to call the onCellSumbit.
+      return true;
+    }
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
