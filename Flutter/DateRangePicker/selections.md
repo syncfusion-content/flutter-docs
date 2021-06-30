@@ -115,7 +115,7 @@ Widget build(BuildContext context) {
 ![MultiRangeSelection Date Range Picker](images/selections/multirange.jpg)
 
 ## Extendable range selection
-Extend the selected range with the new selected date in any date range picker view by setting the `DateRangePickerSelectionMode` to [extendableRange]().
+Extend the selected range with the new selected date in any date range picker view by setting the `DateRangePickerSelectionMode` to `extendableRange`.
 
 {% tabs %}
 {% highlight Dart %}

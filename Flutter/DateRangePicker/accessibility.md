@@ -21,6 +21,7 @@ The `SfDateRangePicker` can easily be accessed by screen readers. Please find th
 | View header                                                       | EEE                              | Monday                                   |
 | Disabled cells (Enable dates in past, dates exceed min/max dates) | EEE, dd/MMMM/yyyy, Disabled date | Friday, 31st January 2020, Disabled date |
 | Blackout date                                                     | EEE, dd/MMMM/yyyy, blackout date | 6th February 2020, Blackout date         |
+| Week number panel                                                 | Week, Weeknumber                 | Week 26                                  |
 
 ### Year view
 

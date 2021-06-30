@@ -19,7 +19,8 @@ The `SfCalendar` can easily be accessed by screen readers. Please find the follo
 |-------------------|------------------------------|-----------------------------------------------|
 | Month cell        | EEE, dd/MMMM/yyyy            | Thursday the 2nd of January 2020              |
 | No events         | EEE, dd/MMMM/yyyy, No events | Wednesday the 15th of January 2020, No events |
-| No selected dates | No selected date             | No selected date                              |                                               
+| No selected dates | No selected date             | No selected date                              |
+| Week number panel | Week, Weeknumber             | Week 26                                       |        
 
 ### TimeSlot view
 
@@ -28,6 +29,7 @@ The `SfCalendar` can easily be accessed by screen readers. Please find the follo
 | Timeslot view          | hh mm a dd/MMMM/yyyy                       | 11AM the 28th of January 2020                  |
 | All day expander icons | Expand all day panelCollapse all day panel | Expand all day sectionCollapse all day section |
 | All day expander view  | + appointment Count                        | +3                                             |
+| Week number panel      | Week, Weeknumber                           | Week 26                                        |
 
 
 ### Appointments
