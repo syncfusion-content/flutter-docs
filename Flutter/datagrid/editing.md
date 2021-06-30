@@ -180,7 +180,7 @@ class EmployeeDataSource extends DataGridSource {
         },
         onSubmitted: (String value) {
           // In Mobile Platform.
-          // Call [CellSubmit] method to fire the canSubmitCell and
+          // Call [CellSubmit] callback to fire the canSubmitCell and
           // onCellSubmit to commit the new value in single place.
           submitCell();
         },
