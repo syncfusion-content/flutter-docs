@@ -271,23 +271,21 @@ Also, the legend will not take a dedicated position for it and will be drawn on 
       return Scaffold(
           body: Center(
               child: Container(
-                  child: SfCartesianChart(
-                      primaryXAxis: DateTimeAxis(),
+                  child: SfPyramidChart(
                       legend: Legend(
                           isVisible: true,
                           // Legend will placed at the specified offset
                           offset: Offset(20, 40)),
-                     series: <CartesianSeries>[
-            AreaSeries<ChartData, DateTime>(
+            series: PyramidSeries<SalesData, String>(
                 dataSource: chartData,
                 xValueMapper: (ChartData data, _) => data.x,
                 yValueMapper: (ChartData data, _) => data.y),
-          ]))));
+          ))));
     }
 
     class ChartData {
         ChartData(this.x, this.y);
-        final DateTime x;
+        final String x;
         final double? y;
     }
 

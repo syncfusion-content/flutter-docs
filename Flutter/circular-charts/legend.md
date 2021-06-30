@@ -283,16 +283,15 @@ Also, the legend will not take a dedicated position for it and will be drawn on 
     @override
     Widget build(BuildContext context) {
       return Scaffold(
-          body: Center(
-              child: Container(
-                  child: SfCartesianChart(
-                      primaryXAxis: DateTimeAxis(),
-                      legend: Legend(
-                          isVisible: true,
-                          // Legend will placed at the specified offset
-                          offset: Offset(20, 40)),
-                     series: <CartesianSeries>[
-            AreaSeries<ChartData, DateTime>(
+        body: Center(
+          child: Container(
+            child: SfCircularChart(
+              legend: Legend(
+                isVisible: true,
+                // Legend will placed at the specified offset
+                offset: Offset(20, 40)),
+              series: <PieSeries>[
+              PieSeries<ChartData, String>(
                 dataSource: chartData,
                 xValueMapper: (ChartData data, _) => data.x,
                 yValueMapper: (ChartData data, _) => data.y),
@@ -301,7 +300,7 @@ Also, the legend will not take a dedicated position for it and will be drawn on 
 
     class ChartData {
         ChartData(this.x, this.y);
-        final DateTime x;
+        final String x;
         final double? y;
     }
 

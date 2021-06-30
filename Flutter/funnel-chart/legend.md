@@ -266,24 +266,22 @@ Also, the legend will not take a dedicated position for it and will be drawn on 
     Widget build(BuildContext context) {
       return Scaffold(
           body: Center(
-              child: Container(
-                  child: SfCartesianChart(
-                      primaryXAxis: DateTimeAxis(),
-                      legend: Legend(
-                          isVisible: true,
-                          // Legend will placed at the specified offset
-                          offset: Offset(20, 40)),
-                     series: <CartesianSeries>[
-            AreaSeries<ChartData, DateTime>(
+            child: Container(
+              child: SfFunnelChart(
+                legend: Legend(
+                  isVisible: true,
+                  // Legend will placed at the specified offset
+                  offset: Offset(20, 40)),
+            series: FunnelSeries<SalesData, String>(
                 dataSource: chartData,
                 xValueMapper: (ChartData data, _) => data.x,
                 yValueMapper: (ChartData data, _) => data.y),
-          ]))));
+          ))));
     }
 
     class ChartData {
         ChartData(this.x, this.y);
-        final DateTime x;
+        final String x;
         final double? y;
     }
 
