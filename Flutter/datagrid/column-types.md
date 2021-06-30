@@ -11,12 +11,6 @@ documentation: ug
 
 [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) provides support for load any type of widget in each column.
 
-The following table describes the types of columns and its usage:
-
-| Column Type           | Renderer                        | Description                            |
-|-----------------------|---------------------------------|----------------------------------------|
-| GridColumn            | GridCellTextFieldRenderer       | Use to display the String data         |
-
 ## GridColumn
 
 GridColumn is a class that provides base functionalities for all the column types in `SfDataGrid`.
