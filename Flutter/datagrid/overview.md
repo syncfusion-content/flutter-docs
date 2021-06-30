@@ -28,8 +28,8 @@ The Syncfusion Flutter DataGrid is used to display and manipulate data in a tabu
 * **Paging** - Load data in segments. It is useful when loading huge amounts of data.
 * **Freeze Panes** - Freeze the rows and columns when scrolling the grid. 
 * **Swiping** - Swipe a row right to left or left to right for custom actions such as deleting, editing, and so on. When the user swipes a row, the row will be moved and the swipe view will show the custom actions.
+* **Footer** - Show an additional row that can be displayed below to last row. Widgets can also be displayed in the footer row.
 * **Pull to refresh** - Allows users to refresh data when the DataGrid is pulled down.
 * **Theme** - Use a dark or light theme.
 * **Accessibility** - The DataGrid can easily be accessed by screen readers.
 * **Right to Left (RTL)** - Right-to-left direction support for users working in RTL languages like Hebrew and Arabic.
-* **Footer** - Show an additional row that can be displayed below to last row. Widgets can also be displayed in the footer row.
