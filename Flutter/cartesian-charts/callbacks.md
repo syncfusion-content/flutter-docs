@@ -442,12 +442,12 @@ Triggers when zoomed state is reset. The  [`onZoomReset`](https://pub.dev/docume
 
 ## onPointTap
 
-Triggers when tapping on the series point. The [onPointTap]() callback contains the following arguments.
+Triggers when tapping on the series point. The [onPointTap](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/onPointTap.html) callback contains the following arguments.
 
-* [`seriesIndex`]() - specifies the current series index.
-* [`pointIndex`]() - specifies the current point index.
-* [`dataPoints`]() - holds the data point collection.
-* [`viewportPointIndex`]() - specifies the viewport index value of the tapped data point.
+* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/seriesIndex.html) - specifies the current series index.
+* [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/pointIndex.html) - specifies the current point index.
+* [`dataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/dataPoints.html) - holds the data point collection.
+* [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/viewportPointIndex.html) - specifies the viewport index value of the tapped data point.
 
 {% highlight dart %}
 
@@ -473,12 +473,12 @@ Triggers when tapping on the series point. The [onPointTap]() callback contains 
 
 ## onPointDoubleTap
 
-Triggers when double-tap the series point. The [onPointDoubleTap]() callback contains the following arguments.
+Triggers when double-tap the series point. The [onPointDoubleTap](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/onPointDoubleTap.html) callback contains the following arguments.
 
-* [`seriesIndex`]() - specifies the current series index.
-* [`pointIndex`]() - specifies the current point index.
-* [`dataPoints`]() - holds the data point collection.
-* [`viewportPointIndex`]() - specifies the viewport index value of the double-tapped data point.
+* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/seriesIndex.html) - specifies the current series index.
+* [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/pointIndex.html) - specifies the current point index.
+* [`dataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/dataPoints.html) - holds the data point collection.
+* [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/viewportPointIndex.html) - specifies the viewport index value of the double-tapped data point.
 
 {% highlight dart %}
 
@@ -504,12 +504,12 @@ Triggers when double-tap the series point. The [onPointDoubleTap]() callback con
 
 ## onPointLongPress
 
-Triggers when long press on the series point. The [onPointLongPress]() callback contains the following arguments.
+Triggers when long press on the series point. The [onPointLongPress](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/onPointLongPress.html) callback contains the following arguments.
 
-* [`seriesIndex`]() - specifies the current series index.
-* [`pointIndex`]() - specifies the current point index.
-* [`dataPoints`]() - holds the data point collection.
-* [`viewportPointIndex`]() - specifies the viewport index value of the long pressed data point.
+* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/seriesIndex.html) - specifies the current series index.
+* [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/pointIndex.html) - specifies the current point index.
+* [`dataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/dataPoints.html) - holds the data point collection.
+* [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/viewportPointIndex.html) - specifies the viewport index value of the long pressed data point.
 
 {% highlight dart %}
 
