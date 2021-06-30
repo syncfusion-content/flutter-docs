@@ -638,17 +638,17 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
 
 {% endhighlight %}
 
-## onRenderDetailsUpdate
+## onRenderDetailsUpdate (TechnicalIndicators)
  
 Triggers when the indicator is rendering. Here you can customize the name, calculated data points, signal line color, signal line width, signal line dash array, and so on.
  
-The [`onRenderDetailsUpdate`]() contains following arguments.
+The [`onRenderDetailsUpdate`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/onRenderDetailsUpdate.html) contains following arguments.
 
-* [`name`]() - used to get and set the indicator name.
-* [`calculatedDataPoints`]() - used to get the calculated indicator data points details.
-* [`signalLineColor`]() - used to change the color of the signal line.
-* [`signalLineWidth`]() - used to change the width of the signal line.
-* [`signalLineDashArray`]() - used to change the dash array size of the signal line.
+* [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderParams/name.html) - used to get and set the indicator name.
+* [`calculatedDataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderParams/calculatedDataPoints.html) - used to get the calculated indicator data points details.
+* [`signalLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicatorRenderDetails/signalLineColor.html) - used to change the color of the signal line.
+* [`signalLineWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicatorRenderDetails/signalLineWidth.html) - used to change the width of the signal line.
+* [`signalLineDashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicatorRenderDetails/signalLineDashArray.html) - used to change the dash array size of the signal line.
 
 {% highlight dart %}
 
