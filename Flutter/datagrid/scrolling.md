@@ -568,7 +568,7 @@ N> The vertical and horizontal scrolled offset can be retrieved by using `DataGr
 
 ## Listen the scroll changes
 
-Listen to the vertical and horizontal scroll changes by using the `verticalScrollController` and the `horizontalScrollController` properties respectively . Set the listener in the `verticalScrollController` and the `horizontalScrollController` using the `addListener` method. By subscribing to this listener, the subscribed method in the sample level will be called on vertical or horizontal scrolling.
+Listen to the vertical and horizontal scroll changes by using the [verticalScrollController](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/verticalScrollController.html) and the [horizontalScrollController](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/horizontalScrollController.html) properties respectively . Set the listener in the `verticalScrollController` and the `horizontalScrollController` using the `addListener` method. By subscribing to this listener, the subscribed method in the sample level will be called on vertical or horizontal scrolling.
 
 The following example demonstrates how to load more rows when vertical scrolling reaches 70% of the vertical maxScrollExtent,
 
@@ -685,3 +685,6 @@ class _EmployeeDataSource extends DataGridSource {
 
 {% endhighlight %}
 {% endtabs %}
+
+**NOTE**  
+  Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-load-data-lazily-when-scrolling-reaches-70-in-flutter-datatable-sfdatagrid).
