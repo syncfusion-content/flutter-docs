@@ -148,7 +148,7 @@ Widget build(BuildContext context) {
 
 ## Disable the row highlighting
 
-By default, the row highlighting on hovering support is enabled for the web and desktop platforms. Disable the row highlighting by setting the `SfDataGrid.highlightRowOnHover` property to `false`.
+By default, the row highlighting on hovering support is enabled for the web and desktop platforms. Disable the row highlighting by setting the [SfDataGrid.highlightRowOnHover](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/highlightRowOnHover.html) property to `false`.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -198,7 +198,7 @@ By default, the row highlighting on hovering support is enabled for the web and 
 
 ## Change the row highlighting background color and text style
 
-Change the row highlighting color and text style by using the `SfDataGridThemeData.rowHoverColor` and the `SfDataGridThemeData.rowHoverTextStyle` properties.
+Change the row highlighting color and text style by using the [SfDataGridThemeData.rowHoverColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/rowHoverColor.html) and the [SfDataGridThemeData.rowHoverTextStyle](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/rowHoverTextStyle.html) properties.
 
 {% tabs %}
 {% highlight Dart %} 
