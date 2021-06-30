@@ -132,8 +132,7 @@ Defaults to `true`.
       return Scaffold(
         body: Center(
             child: Container(
-                child:
-                    SfCircularChart(
+                child: SfCircularChart(
                     series: <CircularSeries<ChartData, String>>[
                        PieSeries<ChartData, String>(
                         dataSource: chartData1,

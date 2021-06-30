@@ -226,8 +226,7 @@ Defaults to `true`.
         return Scaffold(
             body: Center(
                 child: Container(
-                    child:
-                      SfCartesianChart(
+                    child: SfCartesianChart(
                         series: <ColumnSeries<ChartData, String>>[
                           ColumnSeries<ChartData, String>(
                            dataSource: chartData1,

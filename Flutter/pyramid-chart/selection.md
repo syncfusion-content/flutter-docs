@@ -128,19 +128,18 @@ Defaults to `true`.
     @override
     Widget build(BuildContext context) {
       return Scaffold(
-          body: Center(
-              child: Container(
-                  child:
-                      SfCircularChart(series: <CircularSeries<ChartData, String>>[
-          PieSeries<ChartData, String>(
-            dataSource: chartData1,
-            xValueMapper: (ChartData data, _) => data.x,
-            yValueMapper: (ChartData data, _) => data.y,
-            selectionBehavior: SelectionBehavior(
-                enable: true,
-                toggleSelection: false,
-              ))
-        ]))));
+        body: Center(
+          child: Container(
+            child: SfPyramidChart(
+              series: PyramidSeries<SalesData, String>(
+                dataSource: chartData1,
+                xValueMapper: (ChartData data, _) => data.x,
+                yValueMapper: (ChartData data, _) => data.y,
+                selectionBehavior: SelectionBehavior(
+                  enable: true,
+                  toggleSelection: false,
+                ))
+        ))));
     }
 
 {% endhighlight %}
