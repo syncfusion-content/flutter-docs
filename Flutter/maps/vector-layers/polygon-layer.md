@@ -390,74 +390,62 @@ You can show additional information about the polygon drawn using the [`tooltipB
 {% tabs %}
 {% highlight Dart %}
 
-late List<PolygonModel> polygons;
-late List<MapLatLng> polygon1;
-late List<MapLatLng> polygon2;
-late MapShapeSource dataSource;
+late List<MapLatLng> polygon;
 
 @override
 void initState() {
-    polygon1 = <MapLatLng>[
-      MapLatLng(55.7558, 37.6173),
-      MapLatLng(53.7596, 87.1216),
-      MapLatLng(61.5240, 105.3188),
-    ];
-
-    polygon2 = <MapLatLng>[
-      MapLatLng(64.2823, -135.0000),
-      MapLatLng(51.2538, -85.3232),
-      MapLatLng(48.4284, -123.3656),
-    ];
-
-    polygons = <PolygonModel>[
-      PolygonModel(polygon1),
-      PolygonModel(polygon2),
-    ];
-    dataSource = MapShapeSource.asset(
-      'assets/world_map.json',
-      shapeDataField: 'continent',
-    );
-    super.initState();
+   polygon = <MapLatLng>[
+     MapLatLng(27.6648, -81.5158),
+     MapLatLng(32.3078, -64.7505),
+     MapLatLng(18.2208, -66.5901),
+   ];
+   super.initState();
 }
 
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-    body: SfMaps(
-      layers: [
-        MapShapeLayer(
-          source: dataSource,
-          sublayers: [
-            MapPolygonLayer(
-              polygons: List<MapPolygon>.generate(
-                polygons.length,
-                (int index) {
-                  return MapPolygon(
-                    points: polygons[index].points,
-                  );
-                },
-              ).toSet(),
-              tooltipBuilder: (BuildContext context, int index) {
-                 return Padding(
-                    padding: EdgeInsets.all(10),
-                    child: Text('Luxurious \n restaurant'),
-                 );
-              },
-            ),
-          ],
+     body: Center(
+        child: Container(
+          height: 400,
+          width: 400,
+          child: SfMaps(
+            layers: [
+              MapTileLayer(
+                urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                initialFocalLatLng: MapLatLng(27.6648, -81.5158),
+                initialZoomLevel: 3,
+                sublayers: [
+                  MapPolygonLayer(
+                    polygons: List<MapPolygon>.generate(
+                      1,
+                      (int index) {
+                        return MapPolygon(
+                          points: polygon,
+                        );
+                      },
+                    ).toSet(),
+                    tooltipBuilder: (BuildContext context, int index) {
+                      return Padding(
+                        padding: EdgeInsets.all(10),
+                        child: Text('Bermuda triangle',
+                            style: TextStyle(color: Colors.white)),
+                      );
+                    },
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
-      ],
-    ),
-  );
-}
-
-class PolygonModel {
-  PolygonModel(this.points);
-  final List<MapLatLng> points;
+      ),
+   );
 }
 
 {% endhighlight %}
 {% endtabs %}
+
+![Polygon tooltip support](../images/polygon-layer/tooltip.png)
 
 ## Tooltip customization
 
@@ -470,78 +458,66 @@ You can customize the appearance of the tooltip.
 {% tabs %}
 {% highlight Dart %}
 
-late List<PolygonModel> polygons;
-late List<MapLatLng> polygon1;
-late MapShapeSource dataSource;
-late MapZoomPanBehavior zoomPanBehavior;
+late List<MapLatLng> polygon;
 
 @override
 void initState() {
-  polygon1 = <MapLatLng>[
-    MapLatLng(27.6648, -81.5158),
-    MapLatLng(32.3078, -64.7505),
-    MapLatLng(18.2208, -66.5901),
-  ];
-
-  polygons = <PolygonModel>[
-    PolygonModel(polygon1),
-  ];
-  dataSource = MapShapeSource.asset(
-    'assets/world_map.json',
-    shapeDataField: 'continent',
-  );
-
-  zoomPanBehavior = MapZoomPanBehavior(
-    focalLatLng: MapLatLng(25.3078, -74.7505),
-    zoomLevel: 4,
-  );
-  super.initState();
+   polygon = <MapLatLng>[
+      MapLatLng(27.6648, -81.5158),
+      MapLatLng(32.3078, -64.7505),
+      MapLatLng(18.2208, -66.5901),
+   ];
+   super.initState();
 }
 
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-     body: SfMaps(
-        layers: [
-          MapTileLayer(
-            urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-            zoomPanBehavior: zoomPanBehavior,
-            tooltipSettings: const MapTooltipSettings(
-              color: Colors.white,
-              strokeColor: Colors.black,
-              strokeWidth: 2,
-            ),
-            sublayers: [
-              MapPolygonLayer(
-                polygons: List<MapPolygon>.generate(
-                  polygons.length,
-                  (int index) {
-                    return MapPolygon(
-                      points: polygons[index].points,
-                    );
-                  },
-                ).toSet(),
-                tooltipBuilder: (BuildContext context, int index) {
-                  return Padding(
-                    padding: EdgeInsets.all(10),
-                    child: Text('Bermuda \n triangle'),
-                  );
-                },
+     body: Center(
+        child: Container(
+          height: 400,
+          width: 400,
+          child: SfMaps(
+            layers: [
+              MapTileLayer(
+                urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                initialFocalLatLng: MapLatLng(27.6648, -81.5158),
+                initialZoomLevel: 3,
+                tooltipSettings: const MapTooltipSettings(
+                  color: Colors.white,
+                  strokeColor: Colors.teal,
+                  strokeWidth: 2,
+                ),
+                sublayers: [
+                  MapPolygonLayer(
+                    polygons: List<MapPolygon>.generate(
+                      1,
+                      (int index) {
+                        return MapPolygon(
+                          points: polygon,
+                        );
+                      },
+                    ).toSet(),
+                    tooltipBuilder: (BuildContext context, int index) {
+                      return Padding(
+                        padding: EdgeInsets.all(10),
+                        child: Text('Bermuda triangle'),
+                      );
+                    },
+                  ),
+                ],
               ),
             ],
           ),
-        ],
-     ),
+        ),
+      ),
    );
-}
-
-class PolygonModel {
-   PolygonModel(this.points);
-   final List<MapLatLng> points;
 }
 
 {% endhighlight %}
 {% endtabs %}
+
+![Polygon tooltip customization](../images/polygon-layer/tooltip_customization.png)
 
 ## Inverted polygon
 
