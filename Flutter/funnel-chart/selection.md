@@ -141,6 +141,33 @@ You can select a point or series programmatically on a chart using [`initialSele
 
 ![Initial selection](images/selection/customizing_segments.png)
 
+## Toggle selection
+
+You can decide, whether to deselect the selected data point/series or remain selected when interacted with it again by setting the [`toggleSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/toggleSelection.html) property `true` or `false`. If set to true, deselection will be performed else the point will not get deselected.
+This works even while calling public methods, in various selection modes, with multi-selection, and also on dynamic changes.
+Defaults to `true`.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: Center(
+          child: Container(
+            child: SfFunnelChart(
+              series: FunnelSeries<SalesData, String>(
+              dataSource: chartData1,
+              xValueMapper: (ChartData data, _) => data.x,
+              yValueMapper: (ChartData data, _) => data.y,
+              selectionBehavior: SelectionBehavior(
+                enable: true,
+                toggleSelection: false,
+              ))
+        ))));
+    }
+
+{% endhighlight %}
+
 Also refer [selection event](./events#onselectionchanged) for customizing the selection further.
 
 ## Methods in SelectionBehavior

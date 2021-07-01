@@ -222,29 +222,88 @@ N> This callback will not be called, when the builder is specified for data labe
 
 {% endhighlight %}
 
-## onPointTapped
+## onPointTap
 
-Triggers when tapping the series point. The [`onPointTapped`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/onPointTapped.html) Callback contains the following arguments.
+Triggers when tapping on the series point. The [onPointTap](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/onPointTap.html) callback contains the following arguments.
 
-* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PointTapArgs/seriesIndex.html) - specifies the current series index.
-* [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PointTapArgs/pointIndex.html) - specifies the current point index.
-* [`dataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PointTapArgs/dataPoints.html) - holds the data point collection.
-* [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PointTapArgs/viewportPointIndex.html) - to get the viewport index value of the tapped data label.
+* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/seriesIndex.html) - specifies the current series index.
+* [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/pointIndex.html) - specifies the current point index.
+* [`dataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/dataPoints.html) - holds the data point collection.
+* [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/viewportPointIndex.html) - specifies the viewport index value of the tapped data point.
 
 {% highlight dart %}
 
-      @override
-      Widget build(BuildContext context) {
+    @override
+    Widget build(BuildContext context) {
       return Scaffold(
         body: Center(
           child: SfFunnelChart(
-            onPointTapped: (PointTapArgs args){
-              print(args.seriesIndex);
-              print(args.pointIndex);
-            }
+            series: FunnelSeries<Sample, DateTime>(
+                onPointTap: (ChartPointDetails details) {
+                  print(details.pointIndex);
+                  print(details.seriesIndex);
+                }
+              )
           )
-        )  
+        )
       );
-      }
+    }
 
+{% endhighlight %}
+
+## onPointDoubleTap
+
+Triggers when double-tap the series point. The [onPointDoubleTap](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/onPointDoubleTap.html) callback contains the following arguments.
+
+* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/seriesIndex.html) - specifies the current series index.
+* [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/pointIndex.html) - specifies the current point index.
+* [`dataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/dataPoints.html) - holds the data point collection.
+* [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/viewportPointIndex.html) - specifies the viewport index value of the double-tapped data point.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: Center(
+          child: SfFunnelChart(
+              series: FunnelSeries<Sample, DateTime>(
+                onPointDoubleTap: (ChartPointDetails details) {
+                  print(details.pointIndex);
+                  print(details.seriesIndex);
+                }
+              )
+          )
+        )
+      );
+    }
+
+{% endhighlight %}
+
+## onPointLongPress
+
+Triggers when long press on the series point. The [onPointLongPress](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/onPointLongPress.html) callback contains the following arguments.
+
+* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/seriesIndex.html) - specifies the current series index.
+* [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/pointIndex.html) - specifies the current point index.
+* [`dataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/dataPoints.html) - holds the data point collection.
+* [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/viewportPointIndex.html) - specifies the viewport index value of the long pressed data point.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: Center(
+          child: SfFunnelChart(
+              series: FunnelSeries<Sample, DateTime>(
+                onPointLongPress: (ChartPointDetails details) {
+                  print(details.pointIndex);
+                  print(details.seriesIndex);
+                }
+              )
+          )
+        )
+      );
+    }
 {% endhighlight %}
