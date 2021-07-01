@@ -923,10 +923,13 @@ Gets the pattern appointment for the specified occurrence by using the [getPatte
           controller: _calendarController,
           dataSource: _dataSource,
           onTap: (CalendarTapDetails details) {
-            final dynamic occurrenceAppointment = details.appointments![0];
-            final Appointment? patternAppointment =
-                _dataSource.getPatternAppointment(occurrenceAppointment, '')
-                    as Appointment?;
+            if (details.appointments!.isNotEmpty &&
+                details.appointments != null) {
+              final dynamic occurrenceAppointment = details.appointments![0];
+              final Appointment? patternAppointment =
+                  _dataSource.getPatternAppointment(occurrenceAppointment, '')
+                      as Appointment?;
+            }
           },
         ),
       ),
