@@ -118,31 +118,96 @@ Triggers when data label is rendering. Text and text styles such as color, font 
 
 {% endhighlight %}
 
-## onPointTapped
+## onPointTap
 
-Triggers when tapping the series point. The [`onPointTapped`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onPointTapped.html) Callback contains the following arguments.
+Triggers when tapping on the series point. The [onPointTap](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/onPointTap.html) callback contains the following arguments.
 
-* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PointTapArgs/seriesIndex.html) - specifies the current series index.
-* [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PointTapArgs/pointIndex.html) - specifies the current point index.
-* [`dataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PointTapArgs/dataPoints.html) - holds the data point collection.
-* [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PointTapArgs/viewportPointIndex.html) - to get the viewport index value of the tapped data label.
+* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/seriesIndex.html) - specifies the current series index.
+* [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/pointIndex.html) - specifies the current point index.
+* [`dataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/dataPoints.html) - holds the data point collection.
+* [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/viewportPointIndex.html) - specifies the viewport index value of the tapped data point.
+
 {% highlight dart %}
 
-      @override
-      Widget build(BuildContext context) {
-    
+    @override
+    Widget build(BuildContext context) {
       return Scaffold(
         body: Center(
           child: SfCircularChart(
-            onPointTapped: (PointTapArgs args){
-              print(args.seriesIndex);
-              print(args.pointIndex);
-            }
+             series: <CircularSeries>[
+              PieSeries<ChartData, String>(
+                onPointTap: (ChartPointDetails details) {
+                  print(details.pointIndex);
+                  print(details.seriesIndex);
+                }
+              )
+            ],
           )
-        )  
+        )
       );
-      }
+    }
 
+{% endhighlight %}
+
+## onPointDoubleTap
+
+Triggers when double-tap the series point. The [onPointDoubleTap](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/onPointDoubleTap.html) callback contains the following arguments.
+
+* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/seriesIndex.html) - specifies the current series index.
+* [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/pointIndex.html) - specifies the current point index.
+* [`dataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/dataPoints.html) - holds the data point collection.
+* [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/viewportPointIndex.html) - specifies the viewport index value of the double-tapped data point.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: Center(
+          child: SfCircularChart(
+             series: <CircularSeries>[
+              PieSeries<ChartData, String>(
+                onPointDoubleTap: (ChartPointDetails details) {
+                  print(details.pointIndex);
+                  print(details.seriesIndex);
+                }
+              )
+            ],
+          )
+        )
+      );
+    }
+
+{% endhighlight %}
+
+## onPointLongPress
+
+Triggers when long press on the series point. The [onPointLongPress](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/onPointLongPress.html) callback contains the following arguments.
+
+* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/seriesIndex.html) - specifies the current series index.
+* [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/pointIndex.html) - specifies the current point index.
+* [`dataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/dataPoints.html) - holds the data point collection.
+* [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/viewportPointIndex.html) - specifies the viewport index value of the long pressed data point.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: Center(
+          child: SfCircularChart(
+             series: <CircularSeries>[
+              PieSeries<ChartData, String>(
+                onPointLongPress: (ChartPointDetails details) {
+                  print(details.pointIndex);
+                  print(details.seriesIndex);
+                }
+              )
+            ],
+          )
+        )
+      );
+    }
 {% endhighlight %}
 
 ## onLegendTapped
@@ -177,7 +242,7 @@ Triggers when tapping the legend item. The [`onLegendTapped`](https://pub.dev/do
 
 Triggers while selection changes. Here you can customize the selectedColor, unselectedColor, selectedBorderColor, selectedBorderWidth, unselectedBorderColor, and unselectedBorderWidth properties. The [`onSelectionChanged`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onSelectionChanged.html) Callback contains the following arguments.
 
-* [`seriesRenderer`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/series.html) - specifies current series.
+* [`seriesRenderer`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/seriesRenderer.html) - specifies current series.
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/pointIndex.html) - specifies the current series index.
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/pointIndex.html) - specifies the current point index.
 * [`selectedColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/selectedColor.html) - specifies color of the selected data points or series.
