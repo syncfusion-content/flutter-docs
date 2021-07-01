@@ -376,9 +376,9 @@ You can change the position of the legend inside the chart. The following proper
 
 ![Legend](images/legend/legend_position.png)
 
-## Customize the legend position
+## Floating legend
 
-Places the legend in custom position.If the [offset]() has been set, the legend is moved from its actual position.For example, if the [position](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendPosition-class.html) is `top`, then the legend will be placed in the top but in the position added to the actual top position. 
+Places the legend in custom position. If the [`offset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/offset.html) has been set, the legend is moved from its actual position. For example, if the [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendPosition-class.html) is `top`, then the legend will be placed in the top but in the position added to the actual top position. 
 Also, the legend will not take a dedicated position for it and will be drawn on the top of the chart's plot area.
 
 {% highlight dart %}
