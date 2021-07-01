@@ -872,6 +872,114 @@ Widget build(BuildContext context) {
 >**NOTE**
 * The `startTime` is required for the starting date from which to obtain the appointments.
 
+
+### Get occurrence appointment
+
+Gets an occurrence at the specified date within a series of recurring appointments by using the [getOccurenceAppointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getOccurrenceAppointment.html). 
+
+{% tabs %}
+{% highlight Dart %}
+
+Appointment? getOccurrenceAppointment(
+    Object? patternAppointment, DateTime date, String calendarTimeZone) {
+  if (patternAppointment == null) {
+    return null;
+  }
+
+  final List<dynamic> patternAppointmentColl = <dynamic>[patternAppointment];
+  final List<CalendarAppointment> patternAppointments =
+      AppointmentHelper.generateCalendarAppointments(
+          this, calendarTimeZone, patternAppointmentColl);
+  final CalendarAppointment patternCalendarAppointment =
+      patternAppointments[0];
+
+  if (patternCalendarAppointment.recurrenceRule == null ||
+      patternCalendarAppointment.recurrenceRule!.isEmpty) {
+    return null;
+  } else if (CalendarViewHelper.isDateInDateCollection(
+      patternCalendarAppointment.recurrenceExceptionDates, date)) {
+    final List<CalendarAppointment> dataSourceAppointments =
+        AppointmentHelper.generateCalendarAppointments(
+            this, calendarTimeZone);
+    for (int i = 0; i < dataSourceAppointments.length; i++) {
+      final CalendarAppointment dataSourceAppointment =
+          dataSourceAppointments[i];
+      if (patternCalendarAppointment.id ==
+              dataSourceAppointment.recurrenceId &&
+          (isSameDate(dataSourceAppointment.startTime, date))) {
+        return dataSourceAppointment.convertToCalendarAppointment();
+      }
+    }
+  } else {
+    final List<CalendarAppointment> occurrenceAppointments =
+        AppointmentHelper.getVisibleAppointments(
+            date, date, patternAppointments, calendarTimeZone, false,
+            canCreateNewAppointment: false);
+
+    if (occurrenceAppointments.isEmpty) {
+      return null;
+    }
+
+    return occurrenceAppointments[0].convertToCalendarAppointment();
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+>**NOTE**
+* If there is no appointment occurring on the date specified, null is returned.
+* The `patternAppointment` is required for the start appointment in a recurrence series from which the occurrence appointments are cloned with pattern appointment characteristics.
+* The `date` is required for the occurrence appointment.
+
+
+### Get pattern appointment
+
+Gets the pattern appointment for the specified occurrence by using the [getPatternAppointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getPatternAppointment.html).
+
+{% tabs %}
+{% highlight Dart %}
+
+Object? getPatternAppointment(
+    Object? occurrenceAppointment, String calendarTimeZone) {
+  if (occurrenceAppointment == null) {
+    return null;
+  }
+  final List<dynamic> occurrenceAppointmentColl = <dynamic>[
+    occurrenceAppointment
+  ];
+  final List<CalendarAppointment> occurrenceAppointments =
+      AppointmentHelper.generateCalendarAppointments(
+          this, calendarTimeZone, occurrenceAppointmentColl);
+  final CalendarAppointment occurrenceCalendarAppointment =
+      occurrenceAppointments[0];
+  if ((occurrenceCalendarAppointment.recurrenceRule == null ||
+          occurrenceCalendarAppointment.recurrenceRule!.isEmpty) &&
+      occurrenceCalendarAppointment.recurrenceId == null) {
+    return null;
+  }
+  final List<CalendarAppointment> dataSourceAppointments =
+      AppointmentHelper.generateCalendarAppointments(
+          this, calendarTimeZone, appointments);
+
+  for (int i = 0; i < dataSourceAppointments.length; i++) {
+    final CalendarAppointment dataSourceAppointment =
+        dataSourceAppointments[i];
+    if ((dataSourceAppointment.id ==
+            occurrenceCalendarAppointment.recurrenceId) ||
+        (dataSourceAppointment.id == occurrenceCalendarAppointment.id)) {
+      return dataSourceAppointment.data;
+    }
+  }
+  return null;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+>**NOTE**
+* The `occurrenceAppointment` is required for which the Pattern appointment is obtained.
+
 ## See also
 
 * [How to design and configure your appointment editor in event calendar widget Flutter](https://www.syncfusion.com/kb/11204/how-to-design-and-configure-your-appointment-editor-in-event-calendar-widget-flutter)
