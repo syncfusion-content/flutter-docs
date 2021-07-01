@@ -880,12 +880,6 @@ Gets an occurrence at the specified date within a series of recurring appointmen
 {% tabs %}
 {% highlight Dart %}
 
-class MyAppState extends State<MyApp>{
-
- CalendarController _calendarController;
- _AppointmentDataSource _dataSource;
- Appointment recurrenceApp;
- 
  @override
  Widget build(BuildContext context) {
    return MaterialApp(
@@ -904,7 +898,6 @@ class MyAppState extends State<MyApp>{
      ),
    );
  }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -921,12 +914,6 @@ Gets the pattern appointment for the specified occurrence by using the [getPatte
 
 {% tabs %}
 {% highlight Dart %}
-
-class MyAppState extends State<MyApp>{
-
- CalendarController _calendarController;
- _AppointmentDataSource _dataSource;
- Appointment recurrenceApp;
  
  @override
  Widget build(BuildContext context) {
@@ -946,7 +933,6 @@ class MyAppState extends State<MyApp>{
      ),
    );
  }
-}
 
 {% endhighlight %}
 {% endtabs %}
