@@ -875,7 +875,7 @@ Widget build(BuildContext context) {
 
 ### Get occurrence appointment
 
-Gets an occurrence at the specified date within a series of recurring appointments by using the [getOccurenceAppointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getOccurrenceAppointment.html). 
+Gets an occurrence at the specified date within a series of recurring appointments by using the [getOccurrenceAppointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getOccurrenceAppointment.html). 
 
 {% tabs %}
 {% highlight Dart %}
