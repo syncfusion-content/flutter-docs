@@ -870,7 +870,7 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 >**NOTE**
-* The `startTime` is required for the starting date from which to obtain the appointments.
+* The `startTime` specifies the starting date from which the appointments should be obtained.
 
 
 ### Get occurrence appointment
@@ -911,7 +911,7 @@ class MyAppState extends State<MyApp>{
 
 >**NOTE**
 * If there is no appointment occurring on the date specified, null is returned.
-* The `patternAppointment` is required for the start appointment in a recurrence series from which the occurrence appointments are cloned with pattern appointment characteristics.
+* The `patternAppointment` is required for the start appointment in a recurrence series, from which the occurrence appointments are cloned with the pattern appointment characteristics.
 * The `date` is required for the occurrence appointment.
 
 
@@ -952,7 +952,7 @@ class MyAppState extends State<MyApp>{
 {% endtabs %}
 
 >**NOTE**
-* The `occurrenceAppointment` is required for which the Pattern appointment is obtained.
+* The `occurrenceAppointment` is necessary in order to receive the Pattern appointment.
 
 ## See also
 
