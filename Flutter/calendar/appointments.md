@@ -881,23 +881,22 @@ Gets an occurrence at the specified date within a series of recurring appointmen
 {% highlight Dart %}
 
  @override
- Widget build(BuildContext context) {
-   return MaterialApp(
-     home: Scaffold(
-       body: SfCalendar(
-         view: CalendarView.month,
-         controller: _calendarController,
-		       dataSource: _dataSource,
-		       onTap: (CalendarTapDetails details) {
-         	DateTime date = details.date;
-         	String calendarTimeZone = '';
-         	Appointment appointment = _dataSource.getOccurrenceAppointment(
-             	recurrenceApp, date, calendarTimeZone);
-       },
-       ),
-     ),
-   );
- }
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: SfCalendar(
+          view: CalendarView.month,
+          controller: _calendarController,
+          dataSource: _dataSource,
+          onTap: (CalendarTapDetails details) {
+            final DateTime? date = details.date;
+            final Appointment? occurrenceAppointment =
+                _dataSource.getOccurrenceAppointment(recurrenceApp, date!, '');
+          },
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
@@ -916,23 +915,23 @@ Gets the pattern appointment for the specified occurrence by using the [getPatte
 {% highlight Dart %}
  
  @override
- Widget build(BuildContext context) {
-   return MaterialApp(
-     home: Scaffold(
-       body: SfCalendar(
-         view: CalendarView.month,
-         controller: _calendarController,
-		       dataSource: _dataSource,
-		       onTap: (CalendarTapDetails details) {
-         	DateTime date = details.date;
-         	String calendarTimeZone = '';
-         	Appointment appointment = _dataSource.getPatternAppointment(
-             	occurrenceAppointment, calendarTimeZone);
-       },
-       ),
-     ),
-   );
- }
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: SfCalendar(
+          view: CalendarView.month,
+          controller: _calendarController,
+          dataSource: _dataSource,
+          onTap: (CalendarTapDetails details) {
+            final dynamic occurrenceAppointment = details.appointments![0];
+            final Appointment? patternAppointment =
+                _dataSource.getPatternAppointment(occurrenceAppointment, '')
+                    as Appointment?;
+          },
+        ),
+      ),
+    );
+  }
 
 {% endhighlight %}
 {% endtabs %}
