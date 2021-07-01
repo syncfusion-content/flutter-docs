@@ -13,7 +13,7 @@ This section explains about options to customize the header row height and the r
 
 ## Set the height for specific row
 
-The row height of particular row can be set by using the `SfDataGrid.onQueryRowHeight` callback.
+The row height of particular row can be set by using the [SfDataGrid.onQueryRowHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/onQueryRowHeight.html) callback.
 
 {% tabs %}
 {% highlight dart %} 
@@ -82,7 +82,7 @@ Widget build(BuildContext context) {
 
 ## Fit the row height based on its content
 
-The row height can be autofit based on its content in the `SfDataGrid.onQueryRowHeight` callback and using the `RowHeightDetails.getIntrinsicRowHeight` method.
+The row height can be autofit based on its content in the `SfDataGrid.onQueryRowHeight` callback and using the [RowHeightDetails.getIntrinsicRowHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/RowHeightDetails/getIntrinsicRowHeight.html) method.
 
 {% tabs %}
 {% highlight dart %} 
@@ -150,9 +150,9 @@ Widget build(BuildContext context) {
 
 The `RowHeightDetails.getIntrinsicRowHeight` method provides some properties to customize the autofit calculation,
 
-* `excludeColumns` – By default, the `getIntrinsicRowHeight` method calculates the row height based on all columns. To skip the specific columns from the row height calculation, add that column's `GridColumn.columnName` to the `excludeColumns` collection.
+* `excludeColumns` – By default, the `getIntrinsicRowHeight` method calculates the row height based on all columns. To skip the specific columns from the row height calculation, add that column's [GridColumn.columnName](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/columnName.html) to the `excludeColumns` collection.
 
-* `canIncludeHiddenColumns` – The hidden columns (`GridColumn.visible` is false) can also be considered for the row height calculation by setting the `canIncludeHiddenColumns` as true.
+* `canIncludeHiddenColumns` – The hidden columns ([GridColumn.visible](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/visible.html) is false) can also be considered for the row height calculation by setting the `canIncludeHiddenColumns` as true.
 
 {% tabs %}
 {% highlight dart %}
@@ -234,7 +234,7 @@ Widget build(BuildContext context) {
 
 ## Fit the row based on different TextStyle
 
-By default, the cell height is calculated based on the default text style. To calculate the cell height based on different [TextStyle](https://api.flutter.dev/flutter/painting/TextStyle-class.html), just override the `computeHeaderCellHeight` method for header and `computeCellHeight` method for cell and return the super method with the required `TextStyle`.
+By default, the cell height is calculated based on the default text style. To calculate the cell height based on different [TextStyle](https://api.flutter.dev/flutter/painting/TextStyle-class.html), just override the [computeHeaderCellHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/ColumnSizer/computeHeaderCellHeight.html) method for header and [computeCellHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/ColumnSizer/computeCellHeight.html) method for cell and return the super method with the required `TextStyle`.
 
 {% tabs %}
 {% highlight dart %}
@@ -373,6 +373,9 @@ class CustomColumnSizer extends ColumnSizer {
 {% endhighlight %}
 {% endtabs %}
 
+**NOTE**  
+  Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-fit-the-rows-based-on-the-different-text-style-in-Flutter-DataTable-sfdatagrid).
+
 ![flutter datagrid shows autofit the row height based on different text style](images/row-height-customization/flutter-datagrid-autofit-textstyle-customization.png)
 
 ## Fit the row based on formatted value
@@ -508,6 +511,9 @@ class CustomColumnSizer extends ColumnSizer {
 
 {% endhighlight %}
 {% endtabs %}
+
+**NOTE**  
+  Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-fit-the-rows-based-on-the-formatted-value-in-Flutter-datatable-sfdatagrid).
 
 ![flutter datagrid shows autofit the row height based on formatted cell value](images/row-height-customization/flutter-datagrid-formatted-cellvalue.png)
 

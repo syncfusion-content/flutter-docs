@@ -88,10 +88,10 @@ The following properties are used to define and customize the [`title`](https://
 
 * [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendTitle/text.html) - used to change the text of the title.
 * [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/textStyle.html) - used to change the text color, size, font family, fontStyle, and font weight.
-* [`textStyle.color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/color.html) - used to change the color of the text.
-* [`textStyle.fontFamily`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontFamily.html) - used to change the font family for legend text. 
-* [`textStyle.fontStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontStyle.html) - used to change the font style for the legend text.
-* [`textStyle.fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontSize.html) - used to change the font size for the legend text.
+* [`textStyle.color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/textStyle.html) - used to change the color of the text.
+* [`textStyle.fontFamily`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/textStyle.html) - used to change the font family for legend text. 
+* [`textStyle.fontStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/textStyle.html) - used to change the font style for the legend text.
+* [`textStyle.fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/textStyle.html) - used to change the font size for the legend text.
 * [`alignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/alignment.html) - used to change the alignment of the title text; it can be near, center, or far.
 
 {% highlight dart %} 
@@ -258,6 +258,39 @@ You can change the position of the legend inside the chart. The following proper
 {% endhighlight %}
 
 ![Legend](images/legend/legend_position.png)
+
+## Floating legend
+
+Places the legend in custom position. If the [`offset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/offset.html) has been set, the legend is moved from its actual position. For example, if the [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendPosition-class.html) is `top`, then the legend will be placed in the top but in the position added to the actual top position. 
+Also, the legend will not take a dedicated position for it and will be drawn on the top of the chart's plot area.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+          body: Center(
+              child: Container(
+                  child: SfPyramidChart(
+                      legend: Legend(
+                          isVisible: true,
+                          // Legend will placed at the specified offset
+                          offset: Offset(20, 40)),
+            series: PyramidSeries<SalesData, String>(
+                dataSource: chartData,
+                xValueMapper: (ChartData data, _) => data.x,
+                yValueMapper: (ChartData data, _) => data.y),
+          ))));
+    }
+
+    class ChartData {
+        ChartData(this.x, this.y);
+        final String x;
+        final double? y;
+    }
+
+
+{% endhighlight %}
 
 ## Legend item template
 
