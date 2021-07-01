@@ -105,7 +105,7 @@ Widget build(BuildContext context) {
 
 ## Consider all the rows to calculate the autofit size
 
-By default, the autofit calculation is performed for only visible rows. You can use the `SfDataGrid.columnWidthCalculationRange` property as `ColumnWidthCalculationRange.allRows` to perform the autofit calculation for all the available rows.
+By default, the autofit calculation is performed for only visible rows. You can use the [SfDataGrid.columnWidthCalculationRange](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/columnWidthCalculationRange.html) property as [ColumnWidthCalculationRange.allRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/ColumnWidthCalculationRange-class.html) to perform the autofit calculation for all the available rows.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -170,7 +170,7 @@ Widget build(BuildContext context) {
 
 ## Change the padding value for autofit calculation
 
-By default, the EdgeInsets.all(16.0) is added with the auto width or height value. You can change the padding for specific columns by using the `GridColumn.autoFitPadding` property.
+By default, the EdgeInsets.all(16.0) is added with the auto width or height value. You can change the padding for specific columns by using the [GridColumn.autoFitPadding](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/autoFitPadding.html) property.
 
 >**NOTE** 
   `GridColumn.autoFitPadding` is applicable for header cell also.
@@ -275,7 +275,7 @@ class EmployeeDataSource extends DataGridSource {
 
 ## Autofit calculation based on different TextStyle
 
-By default, the cell width is calculated based on the default text style. To calculate the cell width based on different [TextStyle](https://api.flutter.dev/flutter/painting/TextStyle-class.html), just override the `computeHeaderCellWidth` method for header and `computeCellWidth` method for cell and return the super method with the required `TextStyle`.
+By default, the cell width is calculated based on the default text style. To calculate the cell width based on different [TextStyle](https://api.flutter.dev/flutter/painting/TextStyle-class.html), just override the [computeHeaderCellWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/ColumnSizer/computeHeaderCellWidth.html) method for header and [computeCellWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/ColumnSizer/computeCellWidth.html) method for cell and return the super method with the required `TextStyle`.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -391,6 +391,9 @@ class CustomColumnSizer extends ColumnSizer {
 
 {% endhighlight %}
 {% endtabs %} 
+
+**NOTE**  
+  Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-fit-the-column-based-on-the-different-text-style-in-Flutter-DataTable-sfdatagrid).
 
 ![flutter datagrid shows autofit the columns based on different text style](images/autofit-columns/flutter-datagrid-textstyle-customization.png)
 
@@ -513,6 +516,9 @@ class CustomColumnSizer extends ColumnSizer {
 
 {% endhighlight %}
 {% endtabs %} 
+
+**NOTE**  
+  Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-fit-the-columns-based-on-the-formatted-value-in-Flutter-datatable-sfdatagrid).
 
 ![flutter datagrid shows autofit the columns based on formatted cell value](images/autofit-columns/flutter-datagrid-formatted-cellvalue.png)
 

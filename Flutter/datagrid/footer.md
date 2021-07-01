@@ -9,7 +9,7 @@ documentation: ug
 
 # Footer in Flutter DataGrid (SfDataGrid)
 
-Creates an additional row that can be displayed below to the last row. Widgets can be displayed to the additional row by setting the `SfDataGrid.footer` property.
+Creates an additional row that can be displayed below to the last row. Widgets can be displayed to the additional row by setting the [SfDataGrid.footer](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/footer.html) property.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -68,7 +68,7 @@ Widget build(BuildContext context) {
 
 ## Change the footer row height
 
-An additional row height can be personalized by using the `SfDataGrid.footerHeight` property. The default value of the additional row is 49.0.
+An additional row height can be personalized by using the [SfDataGrid.footerHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/footerHeight.html) property. The default value of the additional row is 49.0.
 
 {% tabs %}
 {% highlight Dart %} 
