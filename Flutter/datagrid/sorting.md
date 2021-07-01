@@ -476,7 +476,7 @@ Widget build(BuildContext context) {
 
 The datagrid allows to sort columns based on custom logic. For each column, you can provide different sorting criteria by overriding the following methods from [DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html),
 
-* **[handleSort](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/handleSort.html)** : This method will be called when you tap the column header and sorting is being applied. You can override this method to provide the entire logic for sorting for columns.
+* **[performSorting](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/performSorting.html)** : Called when the sorting is applied to the column. Overriding this method gives complete control over sorting. You can handle the sorting completely in your own way. 
 * **[compare](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/compare.html)** : You can override this method to compare two objects and return the sorting order based on the criteria.
 
 ### Sort column based on string length
