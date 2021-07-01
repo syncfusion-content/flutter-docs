@@ -880,48 +880,30 @@ Gets an occurrence at the specified date within a series of recurring appointmen
 {% tabs %}
 {% highlight Dart %}
 
-Appointment? getOccurrenceAppointment(
-    Object? patternAppointment, DateTime date, String calendarTimeZone) {
-  if (patternAppointment == null) {
-    return null;
-  }
+class MyAppState extends State<MyApp>{
 
-  final List<dynamic> patternAppointmentColl = <dynamic>[patternAppointment];
-  final List<CalendarAppointment> patternAppointments =
-      AppointmentHelper.generateCalendarAppointments(
-          this, calendarTimeZone, patternAppointmentColl);
-  final CalendarAppointment patternCalendarAppointment =
-      patternAppointments[0];
-
-  if (patternCalendarAppointment.recurrenceRule == null ||
-      patternCalendarAppointment.recurrenceRule!.isEmpty) {
-    return null;
-  } else if (CalendarViewHelper.isDateInDateCollection(
-      patternCalendarAppointment.recurrenceExceptionDates, date)) {
-    final List<CalendarAppointment> dataSourceAppointments =
-        AppointmentHelper.generateCalendarAppointments(
-            this, calendarTimeZone);
-    for (int i = 0; i < dataSourceAppointments.length; i++) {
-      final CalendarAppointment dataSourceAppointment =
-          dataSourceAppointments[i];
-      if (patternCalendarAppointment.id ==
-              dataSourceAppointment.recurrenceId &&
-          (isSameDate(dataSourceAppointment.startTime, date))) {
-        return dataSourceAppointment.convertToCalendarAppointment();
-      }
-    }
-  } else {
-    final List<CalendarAppointment> occurrenceAppointments =
-        AppointmentHelper.getVisibleAppointments(
-            date, date, patternAppointments, calendarTimeZone, false,
-            canCreateNewAppointment: false);
-
-    if (occurrenceAppointments.isEmpty) {
-      return null;
-    }
-
-    return occurrenceAppointments[0].convertToCalendarAppointment();
-  }
+ CalendarController _calendarController;
+ _AppointmentDataSource _dataSource;
+ Appointment recurrenceApp;
+ 
+ @override
+ Widget build(BuildContext context) {
+   return MaterialApp(
+     home: Scaffold(
+       body: SfCalendar(
+         view: CalendarView.month,
+         controller: _calendarController,
+		       dataSource: _dataSource,
+		       onTap: (CalendarTapDetails details) {
+         	DateTime date = details.date;
+         	String calendarTimeZone = '';
+         	Appointment appointment = _dataSource.getOccurrenceAppointment(
+             	recurrenceApp, date, calendarTimeZone);
+       },
+       ),
+     ),
+   );
+ }
 }
 
 {% endhighlight %}
@@ -940,38 +922,30 @@ Gets the pattern appointment for the specified occurrence by using the [getPatte
 {% tabs %}
 {% highlight Dart %}
 
-Object? getPatternAppointment(
-    Object? occurrenceAppointment, String calendarTimeZone) {
-  if (occurrenceAppointment == null) {
-    return null;
-  }
-  final List<dynamic> occurrenceAppointmentColl = <dynamic>[
-    occurrenceAppointment
-  ];
-  final List<CalendarAppointment> occurrenceAppointments =
-      AppointmentHelper.generateCalendarAppointments(
-          this, calendarTimeZone, occurrenceAppointmentColl);
-  final CalendarAppointment occurrenceCalendarAppointment =
-      occurrenceAppointments[0];
-  if ((occurrenceCalendarAppointment.recurrenceRule == null ||
-          occurrenceCalendarAppointment.recurrenceRule!.isEmpty) &&
-      occurrenceCalendarAppointment.recurrenceId == null) {
-    return null;
-  }
-  final List<CalendarAppointment> dataSourceAppointments =
-      AppointmentHelper.generateCalendarAppointments(
-          this, calendarTimeZone, appointments);
+class MyAppState extends State<MyApp>{
 
-  for (int i = 0; i < dataSourceAppointments.length; i++) {
-    final CalendarAppointment dataSourceAppointment =
-        dataSourceAppointments[i];
-    if ((dataSourceAppointment.id ==
-            occurrenceCalendarAppointment.recurrenceId) ||
-        (dataSourceAppointment.id == occurrenceCalendarAppointment.id)) {
-      return dataSourceAppointment.data;
-    }
-  }
-  return null;
+ CalendarController _calendarController;
+ _AppointmentDataSource _dataSource;
+ Appointment recurrenceApp;
+ 
+ @override
+ Widget build(BuildContext context) {
+   return MaterialApp(
+     home: Scaffold(
+       body: SfCalendar(
+         view: CalendarView.month,
+         controller: _calendarController,
+		       dataSource: _dataSource,
+		       onTap: (CalendarTapDetails details) {
+         	DateTime date = details.date;
+         	String calendarTimeZone = '';
+         	Appointment appointment = _dataSource.getPatternAppointment(
+             	occurrenceAppointment, calendarTimeZone);
+       },
+       ),
+     ),
+   );
+ }
 }
 
 {% endhighlight %}
