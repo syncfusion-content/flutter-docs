@@ -513,7 +513,7 @@ class CustomColumnSizer extends ColumnSizer {
 {% endtabs %}
 
 **NOTE**  
-  Download demo application from [GitHub](https://github.com/NeelakandanKannan/SyncfusionExamples-how-to-fit-the-rows-based-on-the-formatted-value-in-Flutter-datatable-sfdatagrid).
+  Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-fit-the-rows-based-on-the-formatted-value-in-Flutter-datatable-sfdatagrid).
 
 ![flutter datagrid shows autofit the row height based on formatted cell value](images/row-height-customization/flutter-datagrid-formatted-cellvalue.png)
 
