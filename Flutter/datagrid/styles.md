@@ -72,7 +72,7 @@ Change the header background color by using [SfDataGridThemeData.headerColor](ht
 
 ## Change the header hover color
 
-Change the color of the header highlighting on hovering by using the [headerHoverColor]( https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/headerHoverColor.html) property.
+Change the color of the header on hovering by using the [headerHoverColor]( https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/headerHoverColor.html) property.
 
 {% tabs %}
 {% highlight Dart %} 
