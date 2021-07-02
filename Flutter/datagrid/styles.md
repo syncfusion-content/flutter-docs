@@ -253,3 +253,61 @@ Change the row highlighting color and text style by using the [SfDataGridThemeDa
 {% endtabs %}
 
 ![flutter datagrid highlight rows](images/styles/flutter-datagrid-highlight-rows.gif)
+
+## Change the header background color
+
+Change the header background color by using [SfDataGridThemeData.headerColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/headerColor.html) property of SfDataGridThemeData.
+
+{% tabs %}
+{% highlight Dart %} 
+@override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Syncfusion Flutter DataGrid'),
+      ),
+      body: SfDataGridTheme(
+        data: SfDataGridThemeData(
+            headerColor: const Color(0xff009889)),
+        child: SfDataGrid(
+          source: employeeDataSource,
+          columnWidthMode: ColumnWidthMode.fill,
+          columns: <GridColumn>[
+            GridColumn(
+                columnName: 'id',
+                label: Container(
+                    padding: EdgeInsets.all(16.0),
+                    alignment: Alignment.center,
+                    child: Text(
+                      'ID',
+                    ))),
+            GridColumn(
+                columnName: 'name',
+                label: Container(
+                    padding: EdgeInsets.all(8.0),
+                    alignment: Alignment.center,
+                    child: Text('Name'))),
+            GridColumn(
+                columnName: 'designation',
+                label: Container(
+                    padding: EdgeInsets.all(8.0),
+                    alignment: Alignment.center,
+                    child: Text(
+                      'Designation',
+                      overflow: TextOverflow.ellipsis,
+                    ))),
+            GridColumn(
+                columnName: 'salary',
+                label: Container(
+                    padding: EdgeInsets.all(8.0),
+                    alignment: Alignment.center,
+                    child: Text('Salary'))),
+          ],
+        ),
+      ),
+    );
+  }
+{% endhighlight %}
+{% endtabs %}
+
+![flutter datagrid header background color](images/styles/flutter-datagrid-column-header-styling.png)
