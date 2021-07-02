@@ -74,7 +74,7 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 >**NOTE**
-* When tapped the recurrence appointment, then the return appointment details will be appointment type.
+* For recurrence appointment the tap details will return as `Appointment` always, even for the custom business object.
 
 ## Long press callback
 The [onLongPress](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onLongPress.html) callback called whenever the `SfCalendar` elements long pressed on view.
@@ -108,7 +108,7 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 >**NOTE**
-* When long pressed the recurrence appointment, then the return appointment details will be appointment type.
+* For recurrence appointment the long pressed details will return as `Appointment` always, even for the custom business object.
 
 ## See also
 * [How to get visible dates details from the flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/11026/how-to-get-visible-dates-details-from-the-flutter-event-calendar-sfcalendar)

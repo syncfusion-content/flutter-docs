@@ -250,7 +250,7 @@ class MyAppState extends State<MyApp> {
 ![Appointment builder](images/builder/appointment-builder.png)
 
 >**NOTE**
-* If the appointment is recurrence, then the return appointment type will be appointment.
+* For recurring appointments, this will return as `Appointment` always, even for the custom business objects.
 
 
 ## Time region builder
