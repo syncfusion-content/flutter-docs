@@ -143,7 +143,7 @@ Triggers when data label is rendering. Text and text styles such as color, font 
           child: SfCartesianChart(
             onDataLabelRender:(DataLabelRenderArgs args){
               args.text = 'Data label';
-              CartesianSeries<dynamic, dynamic> series = args.seriesRenderer;
+              CartesianSeries<ChartData, double> series = args.seriesRenderer;
               //Changed the background color of the data label based on the series type
               if (series.name == 'Product A') {
                 args.color = Colors.blue;
