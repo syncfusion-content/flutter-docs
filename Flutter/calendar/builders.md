@@ -249,6 +249,9 @@ class MyAppState extends State<MyApp> {
 
 ![Appointment builder](images/builder/appointment-builder.png)
 
+>**NOTE**
+* For recurring appointments, this will always return as `Appointment`, even for the custom business objects.
+
 
 ## Time region builder
 The [TimeRegionBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeRegionBuilder.html) allows you to design your custom view and assign the view to the time region view of the calendar by returning an appropriate widget in the [timeRegionBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/timeRegionBuilder.html) of SfCalendar.

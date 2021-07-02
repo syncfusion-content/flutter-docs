@@ -870,7 +870,77 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 >**NOTE**
-* The `startTime` is required for the starting date from which to obtain the appointments.
+* The `startTime` specifies the starting date from which the appointments should be obtained.
+
+
+### Get occurrence appointment
+
+Gets an occurrence at the specified date within a series of recurring appointments by using the [getOccurrenceAppointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getOccurrenceAppointment.html). 
+
+{% tabs %}
+{% highlight Dart %}
+
+ @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: SfCalendar(
+          view: CalendarView.month,
+          controller: _calendarController,
+          dataSource: _dataSource,
+          onTap: (CalendarTapDetails details) {
+            final DateTime? date = details.date;
+            final Appointment? occurrenceAppointment =
+                _dataSource.getOccurrenceAppointment(recurrenceApp, date!, '');
+          },
+        ),
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+>**NOTE**
+* If there is no appointment occurring on the date specified, null is returned.
+* The `patternAppointment` is required for the start appointment in a recurrence series, from which the occurrence appointments are cloned with the pattern appointment characteristics.
+* The `date` is required for the occurrence appointment.
+
+
+### Get pattern appointment
+
+Gets the pattern appointment for the specified occurrence by using the [getPatternAppointment](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getPatternAppointment.html).
+
+{% tabs %}
+{% highlight Dart %}
+ 
+ @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: SfCalendar(
+          view: CalendarView.month,
+          controller: _calendarController,
+          dataSource: _dataSource,
+          onTap: (CalendarTapDetails details) {
+            if (details.appointments!.isNotEmpty &&
+                details.appointments != null) {
+              final dynamic occurrenceAppointment = details.appointments![0];
+              final Appointment? patternAppointment =
+                  _dataSource.getPatternAppointment(occurrenceAppointment, '')
+                      as Appointment?;
+            }
+          },
+        ),
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+>**NOTE**
+* The `occurrenceAppointment` is necessary in order to receive the Pattern appointment.
 
 ## See also
 
