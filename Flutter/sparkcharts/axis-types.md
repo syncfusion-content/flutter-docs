@@ -51,7 +51,7 @@ To use the numeric values or to bind the custom data source use the [`SfSparkBar
  
     class SalesData {
       SalesData({this.xval, this.yval});
-      final dynamic xval;
+      final double xval;
       final double yval;
     }
 
@@ -107,7 +107,7 @@ To use the date-time values i.e to bind the custom data source use the [`SfSpark
  
     class SalesData {
       SalesData({this.xval, this.yval});
-      final dynamic xval;
+      final DateTime xval;
       final double yval;
     }
 
@@ -152,7 +152,7 @@ To use the category values i.e to bind the custom data source use the [`SfSparkB
  
     class SalesData {
       SalesData({this.xval, this.yval});
-      final dynamic xval;
+      final String xval;
       final double yval;
     }
 

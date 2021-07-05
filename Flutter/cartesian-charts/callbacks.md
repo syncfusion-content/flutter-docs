@@ -143,7 +143,7 @@ Triggers when data label is rendering. Text and text styles such as color, font 
           child: SfCartesianChart(
             onDataLabelRender:(DataLabelRenderArgs args){
               args.text = 'Data label';
-              CartesianSeries<dynamic, dynamic> series = args.seriesRenderer;
+              CartesianSeries<ChartData, double> series = args.seriesRenderer;
               //Changed the background color of the data label based on the series type
               if (series.name == 'Product A') {
                 args.color = Colors.blue;
@@ -209,6 +209,14 @@ Triggers while the trackball position is changing. Here, you can customize the t
 
 {% highlight dart %}
 
+  late TrackballBehavior _trackballBehavior;
+
+    @override
+    void initState(){
+      _trackballBehavior =  TrackballBehavior(enable: true);
+      super.initState(); 
+    }
+
     @override
     Widget build(BuildContext context) {
     
@@ -218,9 +226,7 @@ Triggers while the trackball position is changing. Here, you can customize the t
               onTrackballPositionChanging: (TrackballArgs args) {
                 args.chartPointInfo.label = 'Custom Text';
               },
-              trackballBehavior: TrackballBehavior(
-                enable: true
-              )
+              trackballBehavior: _trackballBehavior
             )
           )
       );
@@ -607,6 +613,14 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
 * [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/viewportPointIndex.html) - used to get the viewport index value of the selected data points.
 
 {% highlight dart %}
+    
+    late SelectionBehavior _selectionBehavior;
+
+    @override
+    void initState(){
+      _selectionBehavior =  SelectionBehavior(enable: true);
+      super.initState(); 
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -620,9 +634,7 @@ Triggers while selection changes. Here you can customize the selectedColor, unse
               },
               series: <CartesianSeries>[
                 ColumnSeries<ChartData, double>(
-                  selectionBehavior: SelectionBehavior(
-                    enable: true,
-                  )
+                  selectionBehavior: _selectionBehavior
                 )
               ]
             )

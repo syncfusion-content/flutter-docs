@@ -124,6 +124,17 @@ This works even while calling public methods, in various selection modes, with m
 Defaults to `true`.
 
 {% highlight dart %} 
+    
+    late SelectionBehavior _selectionBehavior;
+
+    @override
+    void initState(){
+      _selectionBehavior =  SelectionBehavior(
+                  enable: true,
+                  toggleSelection: false,
+                );
+      super.initState(); 
+    }
 
     @override
     Widget build(BuildContext context) {
@@ -135,10 +146,7 @@ Defaults to `true`.
                 dataSource: chartData1,
                 xValueMapper: (ChartData data, _) => data.x,
                 yValueMapper: (ChartData data, _) => data.y,
-                selectionBehavior: SelectionBehavior(
-                  enable: true,
-                  toggleSelection: false,
-                ))
+                selectionBehavior: _selectionBehavior)
         ))));
     }
 

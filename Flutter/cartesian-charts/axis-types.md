@@ -32,11 +32,25 @@ Numeric axis uses numerical scale and displays numbers as labels. By default, [`
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: NumericAxis(), 
-                        primaryYAxis: NumericAxis() 
+                        primaryYAxis: NumericAxis(),
+                        series: <ChartSeries<SalesData, double>>[
+                            // Renders column chart
+                            ColumnSeries<SalesData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales
+                            )
+                        ]
                     )
                 )
             )
         );
+    }
+
+    class SalesData{
+        SalesData(this.year, this.sales);
+        final double year;
+        final double sales;
     }
 
 {% endhighlight %}
@@ -330,11 +344,25 @@ Category axis displays text labels instead of numbers. When the string values ar
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis: CategoryAxis()
+                        primaryXAxis: CategoryAxis(),
+                        series: <ChartSeries<SalesData, String>>[
+                            // Renders column chart
+                            ColumnSeries<SalesData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales
+                            )
+                        ]
                     )
                 )
             )
         );
+    }
+
+    class SalesData{
+        SalesData(this.year, this.sales);
+        final String year;
+        final double sales;
     }
 
 {% endhighlight %}
@@ -459,11 +487,25 @@ The date-time axis uses date-time scale and displays date-time values as axis la
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis: DateTimeAxis() 
+                        primaryXAxis: DateTimeAxis(),
+                         series: <ChartSeries<SalesData, DateTime>>[
+                            // Renders line chart
+                            LineSeries<SalesData, DateTime>(
+                                dataSource: chartData,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales
+                            )
+                        ]
                     )
                 )
             )
         );
+    }
+
+    class SalesData{
+        SalesData(this.year, this.sales);
+        final DateTime year;
+        final double sales;
     }
 
 {% endhighlight %}
@@ -718,11 +760,25 @@ Date-time category axis is a combination of both [`DateTimeAxis`](https://pub.de
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis: DateTimeCategoryAxis() 
+                        primaryXAxis: DateTimeCategoryAxis(),
+                        series: <ChartSeries<SalesData, DateTime>>[
+                            // Renders Column chart
+                            ColumnSeries<SalesData, DateTime>(
+                                dataSource: chartData,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales
+                            )
+                        ] 
                     )
                 )
             )
         );
+    }
+
+    class SalesData{
+        SalesData(this.year, this.sales);
+        final DateTime year;
+        final double sales;
     }
 
 {% endhighlight %}
@@ -836,11 +892,25 @@ Logarithmic axis uses logarithmic scale and displays numbers as axis labels.
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: NumericAxis(),
-                        primaryYAxis: LogarithmicAxis() 
+                        primaryYAxis: LogarithmicAxis(),
+                        series: <ChartSeries<SalesData, double>>[
+                            // Renders Column chart
+                            ColumnSeries<SalesData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (SalesData sales, _) => sales.year,
+                                yValueMapper: (SalesData sales, _) => sales.sales
+                            )
+                        ] 
                     )
                 )
             )
         );
+    }
+
+    class SalesData{
+        SalesData(this.year, this.sales);
+        final double year;
+        final double sales;
     }
 
 {% endhighlight %}
@@ -927,3 +997,5 @@ By using the [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_cha
 ## See Also
 
 * [Applying currency format to axis labels](https://www.syncfusion.com/kb/11519/how-to-apply-the-currency-format-to-the-axis-labels-sfcartesianchart).
+
+N> `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.

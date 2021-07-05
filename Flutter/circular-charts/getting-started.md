@@ -248,6 +248,13 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
 {% highlight dart %} 
 
+    late TooltipBehavior _tooltipBehavior;
+
+    @override
+    void initState(){
+      _tooltipBehavior =  TooltipBehavior(enable: true);
+      super.initState(); 
+    }
     @override
     Widget build(BuildContext context) {
         return Scaffold(
@@ -258,7 +265,7 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
                 child: Container(
                     child: SfCircularChart(
                         // Enables the tooltip for all the series in chart
-                        tooltipBehavior: TooltipBehavior(enable: true),
+                        tooltipBehavior: _tooltipBehavior,
                         series: <ChartSeries>[
                             // Initialize line series
                             PieSeries<SalesData, String>(
