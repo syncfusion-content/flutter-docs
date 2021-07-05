@@ -226,7 +226,7 @@ Triggers while the trackball position is changing. Here, you can customize the t
               onTrackballPositionChanging: (TrackballArgs args) {
                 args.chartPointInfo.label = 'Custom Text';
               },
-              trackballBehavior: trackballBehavior
+              trackballBehavior: _trackballBehavior
             )
           )
       );
