@@ -470,9 +470,9 @@ N> This property is applicable only if the [`onCreateShader`](https://pub.dev/do
 
 ![Image pointshadermapper](images/circular-customization/pie_rendermode.jpg)
 
-## String animation
+## Dynamic animation
 
-[`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) also provide the String animation support for the series. The Strings added in the chart's series will get animated based on the timer value. when you set the [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/animationDuration.html) value to 0, the series won't be animated. 
+[`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) also provide the dynamic animation support for the series. The series can be dynamically added to the charts, it will animated by setting the timer value. when you set the [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/animationDuration.html) value to 0, the series won't be animated. 
 
 
 ## Empty points
