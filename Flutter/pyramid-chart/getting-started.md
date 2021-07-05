@@ -217,7 +217,7 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
     @override
     void initState(){
-        _tooltipBehavior = TooltipBehavior(            enable: true);
+        _tooltipBehavior = TooltipBehavior(enable: true);
         super.initState();
     }
 

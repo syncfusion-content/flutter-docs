@@ -92,12 +92,17 @@ In addition, if you want the chart series and axis to look like it is rendering 
 Also, if you want to change the tooltip’s content, to look like it is rendering from right to left, then you can set the [`format`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/format.html) property in [`TooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior-class.html) as `"point.y : point.x"`. By default, the tooltip format will be `"point.x : point.y"`.
 
 {% highlight dart %}
+    
+    late TooltipBehavior _tooltipBehavior;
 
+    @override
+    void initState(){
+      _tooltipBehavior =  TooltipBehavior(enable: true,
+      format: “point.y : point.x);
+      super.initState(); 
+    }
     SfCartesianChart(
-        tooltipBehavior: TooltipBehavior(
-            enable: true,
-            format: “point.y : point.x”
-        )
+        tooltipBehavior: _tooltipBehavior,
         //...
     )
 
