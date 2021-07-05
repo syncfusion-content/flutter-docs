@@ -146,7 +146,7 @@ Defaults to `true`.
                 dataSource: chartData1,
                 xValueMapper: (ChartData data, _) => data.x,
                 yValueMapper: (ChartData data, _) => data.y,
-                selectionBehavior: _selectionBehavior )
+                selectionBehavior: _selectionBehavior)
         ))));
     }
 

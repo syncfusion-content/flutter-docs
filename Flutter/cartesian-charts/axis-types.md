@@ -33,7 +33,7 @@ Numeric axis uses numerical scale and displays numbers as labels. By default, [`
                     child: SfCartesianChart(
                         primaryXAxis: NumericAxis(), 
                         primaryYAxis: NumericAxis(),
-                        series: <ChartSeries<SalesData, String>>[
+                        series: <ChartSeries<SalesData, double>>[
                             // Renders column chart
                             ColumnSeries<SalesData, double>(
                                 dataSource: chartData,
