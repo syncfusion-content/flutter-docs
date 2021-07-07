@@ -21,7 +21,7 @@ documentation: ug
             body: Center(
                 child: Container(
                     child: SfCircularChart(
-                        series: <CircularSeries<ChartData,dynamic>>[
+                        series: <CircularSeries<ChartData,String>>[
                             // Render pie chart
                             PieSeries<ChartData, String>(
                                 dataSource: chartData,
@@ -53,7 +53,7 @@ documentation: ug
                 child: Container(
                     child: SfCircularChart(
                         palette: <Color>[Colors.amber, Colors.brown, Colors.green, Colors.redAccent, Colors.blueAccent, Colors.teal],
-                        series: <CircularSeries<ChartData,dynamic>>[
+                        series: <CircularSeries<ChartData,String>>[
                             // Render pie chart
                             PieSeries<ChartData, String>(
                                 dataSource: chartData,
@@ -80,7 +80,7 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
 
     @override
     Widget build(BuildContext context) {
-        static dynamic chartData = <SalesData>[
+        static List<SalesData> chartData = <SalesData>[
             SalesData('Rent', 1000,Colors.teal),
             SalesData('Food', 2500,Colors.lightBlue),
             SalesData('Savings', 760,Colors.brown),
@@ -150,8 +150,8 @@ The data points of pie, doughnut and radial bar charts can be filled with three 
                     return Gradient.linear(chartShaderDetails.outerRect.topRight,
                         chartShaderDetails.outerRect.centerLeft, colors, stops);
                 },
-                series: <CircularSeries<_SalesData, dynamic>>[
-                    PieSeries<_SalesData, dynamic>(
+                series: <CircularSeries<_SalesData, String>>[
+                    PieSeries<_SalesData, String>(
                         dataSource: chartData,
                         xValueMapper: (_SalesData sales, _) => sales.year,
                         xValueMapper: (_SalesData sales, _) => sales.year,
@@ -183,8 +183,8 @@ The data points of pie, doughnut and radial bar charts can be filled with three 
                         _resolveTransform(chartShaderDetails.outerRect, TextDirection.ltr)
                     );
                 },
-                series: <CircularSeries<_SalesData, dynamic>>[
-                    RadialBarSeries<_SalesData, dynamic>(
+                series: <CircularSeries<_SalesData, String>>[
+                    RadialBarSeries<_SalesData, String>(
                         dataSource: chartData,
                         xValueMapper: (_SalesData sales, _) => sales.year,
                         xValueMapper: (_SalesData sales, _) => sales.year,
@@ -222,8 +222,8 @@ The data points of pie, doughnut and radial bar charts can be filled with three 
                         stops
                     );
                 },
-                series: <CircularSeries<_SalesData, dynamic>>[
-                    DoughnutSeries<_SalesData, dynamic>(
+                series: <CircularSeries<_SalesData, String>>[
+                    DoughnutSeries<_SalesData, String>(
                         dataSource: chartData,
                         xValueMapper: (_SalesData sales, _) => sales.year,
                         xValueMapper: (_SalesData sales, _) => sales.year,
@@ -272,8 +272,8 @@ The data points of pie, doughnut and radial bar charts can also be filled with i
                                 Matrix4.identity().scaled(0.4).storage
                     );
                 },
-                series: <CircularSeries<_SalesData, dynamic>>[
-                    PieSeries<_SalesData, dynamic>(
+                series: <CircularSeries<_SalesData, String>>[
+                    PieSeries<_SalesData, String>(
                         dataSource: chartData,
                         xValueMapper: (_SalesData sales, _) => sales.year,
                         xValueMapper: (_SalesData sales, _) => sales.year,
@@ -453,8 +453,8 @@ N> This property is applicable only if the [`onCreateShader`](https://pub.dev/do
         getImage();
         return Container(
             child: SfCircularChart(
-                series: <CircularSeries<_SalesData, dynamic>>[
-                    PieSeries<_SalesData, dynamic>(
+                series: <CircularSeries<_SalesData, String>>[
+                    PieSeries<_SalesData, String>(
                         dataSource: chartData,
                         // Sweep gradient will be formed with default palette colors.
                         pointRenderMode: PointRenderMode.gradient,
@@ -493,7 +493,7 @@ The data points that has null value are considered as empty points. Empty data p
         return Scaffold(
             body: Center(
                 child: SfCircularChart(
-                    series: <CircularSeries<ChartData,dynamic>>[
+                    series: <CircularSeries<ChartData,String>>[
                         // Render pie chart
                         PieSeries<ChartData, String>(
                             dataSource: chartData,
@@ -531,7 +531,7 @@ Specific color for empty point can be set by [`color`](https://pub.dev/documenta
             body: Center(
                 child: Container(
                     child: SfCircularChart(
-                        series: <CircularSeries<ChartData, dynamic>>[
+                        series: <CircularSeries<ChartData, String>>[
                             PieSeries<ChartData, String>(
                             dataSource: chartData,
                             dataLabelSettings: DataLabelSettings(isVisible: true),
@@ -573,7 +573,7 @@ The chart’s data source can be sorted using the [`sortingOrder`](https://pub.d
             body: Center(
                 child: Container(
                     child: SfCircularChart(
-                      series: <CircularSeries<ChartData,dynamic>>[
+                      series: <CircularSeries<ChartData,String>>[
                         // Render pie chart
                         PieSeries<ChartData, String>(
                             dataSource: chartData,
