@@ -146,29 +146,25 @@ class EmployeeDataSource extends DataGridSource {
     // into the current non-modified [DataGridCell].
     newCellValue = null;    
 
-    final bool isTextAlignRight =
-        column.columnName == 'id' || column.columnName == 'salary';
-
-    final bool isNumericKeyBoardType =
+    final bool isNumericType =
         column.columnName == 'id' || column.columnName == 'salary';
 
     return Container(
       padding: const EdgeInsets.all(8.0),
       alignment:
-          isTextAlignRight ? Alignment.centerRight : Alignment.centerLeft,
+          isNumericType ? Alignment.centerRight : Alignment.centerLeft,
       child: TextField(
         autofocus: true,
         controller: editingController..text = displayText,
-        textAlign: isTextAlignRight ? TextAlign.right : TextAlign.left,
+        textAlign: isNumericType ? TextAlign.right : TextAlign.left,
         decoration: InputDecoration(
             contentPadding: const EdgeInsets.fromLTRB(0, 0, 0, 16.0),
-            focusedBorder: UnderlineInputBorder(
-                borderSide: BorderSide(color: Colors.black))),
+        ),
         keyboardType:
-            isNumericKeyBoardType ? TextInputType.number : TextInputType.text,
+            isNumericType ? TextInputType.number : TextInputType.text,
         onChanged: (String value) {
           if (value.isNotEmpty) {
-            if (isNumericKeyBoardType) {
+            if (isNumericType) {
               newCellValue = int.parse(value);
             } else {
               newCellValue = value;
