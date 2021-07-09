@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Builders in the Flutter Event Calendar widget | Syncfusion | Scheduler
+title: Builders in the Flutter Event Calendar widget | Syncfusion
 description: Learn here all about builders feature of Syncfusion Flutter Event Calendar (SfCalendar) widget and more.
 platform: flutter
 control: SfCalendar
