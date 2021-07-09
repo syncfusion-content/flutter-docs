@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Introduction to Flutter Widgets Documentation | Tutorials | Syncfusion
-description: Overview about the available features in Syncfusion Flutter widgets and steps to use the guide. | Flutter Widgets |
+title: About Essential Studio Flutter | Syncfusion
+description: Learn here all about introduction of Syncfusion Essential Studio Flutter, its elements, features and more.
 platform: flutter
 control: Overview
 documentation: ug

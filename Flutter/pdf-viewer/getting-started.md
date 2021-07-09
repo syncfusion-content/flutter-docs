@@ -109,6 +109,14 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+To load PDF from network using [SfPdfViewer.network](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/SfPdfViewer.network.html) in macOS, network access must be enabled in your macOS application. On your `macos/Runner/DebugProfile.entitlements` file, add the following lines inside the `<dict>`
+tag to enable the network access in your application:
+
+```html
+<key>com.apple.security.network.client</key>
+<true/>
+```
+
 ### Load document from the File
 
 The [SfPdfViewer.file](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/SfPdfViewer.file.html) creates a widget that displays the PDF document obtained from a [`File`](https://api.flutter.dev/flutter/dart-io/File-class.html). The following code example explains the same.
