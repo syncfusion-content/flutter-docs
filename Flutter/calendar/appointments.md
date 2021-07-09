@@ -1,6 +1,6 @@
 ---
 layout: post 
-title: Appointments in Flutter Event Calendar Control | Syncfusion
+title: Appointments in Flutter Event Calendar widget | Syncfusion
 description: Learn here all about Appointments feature of Syncfusion Flutter Event Calendar (SfCalendar) widget and more.
 platform: flutter
 control: SfCalendar
