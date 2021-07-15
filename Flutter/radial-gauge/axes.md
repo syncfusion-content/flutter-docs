@@ -15,7 +15,7 @@ The [`radial axis`](https://pub.dev/documentation/syncfusion_flutter_gauges/late
 
 **Axis minimum and maximum** 
 
-The [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/minimum.html) and [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/maximum.html) properties of an axis can be used to customize the axis range.The default value of [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/minimum.html) is 0, and the default value of [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/maximum.html) is 100.
+The [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/minimum.html) and [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/maximum.html) properties of an axis can be used to customize the axis range.The default value of [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/minimum.html) is 0, and the default value of [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/maximum.html) is 100.
 
 {% highlight dart %}
 
@@ -181,9 +181,9 @@ Widget build(BuildContext context) {
 
 **Axis direction customization**
 
-The direction of [`radial axis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis-class.html) can be customized by its [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/isInversed.html) property. 
+The direction of [`radial axis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis-class.html) can be customized by its [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/isInversed.html) property.
 
-When the [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/isInversed.html) property is true, the axis can be placed in counter-clockwise direction. When the  [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/isInversed.html) property is set to false, the axis will be positioned in clockwise direction.
+When the [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/isInversed.html) property is true, the axis can be placed in counter-clockwise direction. When the  [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/isInversed.html) property is set to false, the axis will be positioned in clockwise direction.
 
 {% highlight dart %}
 
@@ -204,7 +204,7 @@ Widget build(BuildContext context) {
 
 **Maximum number of labels per 100 logical pixels**
 
-By default, a maximum of three labels are displayed for each 100 logical pixels in an axis. The maximum number of labels that should present within 100 logical pixels length can be customized using the [`maximumLabels`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/maximumLabels.html) property of the axis. This property is applicable only for automatic range calculation and will not work if you set value for interval property of an axis.
+By default, a maximum of three labels are displayed for each 100 logical pixels in an axis. The maximum number of labels that should present within 100 logical pixels length can be customized using the [`maximumLabels`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/maximumLabels.html) property of the axis. This property is applicable only for automatic range calculation and will not work if you set value for interval property of an axis.
 
 {% highlight dart %}
 
@@ -225,7 +225,7 @@ Widget build(BuildContext context) {
 
 **Interval**
 
-The interval between labels can be customized using the [`interval`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/interval.html) property of axis.
+The interval between labels can be customized using the [`interval`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/interval.html) property of axis.
 
 {% highlight dart %}
 
@@ -246,7 +246,7 @@ Widget build(BuildContext context) {
 
 **Axis line customization**
 
-The radial axis line can be customized using the [`axisLineStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/axisLineStyle.html) property. The following properties can be customized using [`axisLineStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/axisLineStyle.html).
+The radial axis line can be customized using the [`axisLineStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/axisLineStyle.html) property. The following properties can be customized using [`axisLineStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/axisLineStyle.html).
 
 * [`thickness`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLineStyle/thickness.html) – Customizes the thickness of axis line.
 * [`thicknessUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLineStyle/thicknessUnit.html) – Allows to specify the thickness of the axis either in logical pixel or factor. Its default value is logicalPixel.
@@ -352,7 +352,7 @@ Widget build(BuildContext context) {
 
 **Axis line visibility**
 
-The visibility of the axis line can be customized using the [`showAxisLine`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/showAxisLine.html) property of axis. By default, this property is set to true.
+The visibility of the axis line can be customized using the [`showAxisLine`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/showAxisLine.html) property of axis. By default, this property is set to true.
 
 {% highlight dart %}
 
@@ -488,7 +488,7 @@ Widget build(BuildContext context) {
 
 ## Label style customization
 
-The axis labels can be customized using the [`axisLabelStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/axisLabelStyle.html) property of axis. The following properties can be customized using the [`axisLabelStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/axisLabelStyle.html)
+The axis labels can be customized using the [`axisLabelStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/axisLabelStyle.html) property of axis. The following properties can be customized using the [`axisLabelStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/axisLabelStyle.html).
 
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeTextStyle/color.html) – Allows to customize the color of the labels.
 * [`fontFamily`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeTextStyle/fontFamily.html) – Allows to specify the font family for labels.
@@ -521,7 +521,7 @@ Widget build(BuildContext context) {
 
 The following property of the axis allows to customize the axis label text.
 
-* [`labelFormat`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/labelFormat.html) - Allows to add prefix or suffix with the axis labels.
+* [`labelFormat`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/labelFormat.html) - Allows to add prefix or suffix with the axis labels.
 
 {% highlight dart %}
 
@@ -540,7 +540,7 @@ Widget build(BuildContext context) {
 
 ![axis label format](images/axis/axis_labelFormat.jpg)
 
-* [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/numberFormat.html)- Allows to customize the axis label with the [`globalized label format`](https://api.flutter.dev/flutter/intl/NumberFormat-class.html).
+* [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/numberFormat.html)- Allows to customize the axis label with the [`globalized label format`](https://api.flutter.dev/flutter/intl/NumberFormat-class.html).
 
 {% highlight dart %}
 
@@ -565,7 +565,7 @@ Widget build(BuildContext context) {
 
 **Label visibility**
 
-The [`showLabels`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/showLabels.html) property of axis allows to enable or disable the visibility of labels. The default value of the property is true.
+The [`showLabels`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/showLabels.html) property of axis allows to enable or disable the visibility of labels. The default value of the property is true.
 
 {% highlight dart %}
 
@@ -587,7 +587,7 @@ Widget build(BuildContext context) {
 
 ## Tick customization
 
-The major and minor tick lines of an axis can be customized using the [`majorTickStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/majorTickStyle.html) and [`minorTickStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/minorTickStyle.html) properties respectively. The following properties can be customized for both the major and the minor ticks:
+The major and minor tick lines of an axis can be customized using the [`majorTickStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/majorTickStyle.html) and [`minorTickStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/minorTickStyle.html) properties respectively. The following properties can be customized for both the major and the minor ticks:
 
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MajorTickStyle/color.html) – Allows to customize the tick color.
 
