@@ -2,12 +2,12 @@
 layout: post
 title: Labels in Flutter Linear Gauge widget | Syncfusion
 description: Learn here all about adding and customizing Labels of Syncfusion Flutter Linear Gauge (SfLinearGauge) widget and more.
-platform: flutter
+platform: Flutter
 control: SfLinearGauge
 documentation: ug
 ---
 
-# Labels in Fluter Linear Gauge (SfLinearGauge)
+# Labels in Flutter Linear Gauge (SfLinearGauge)
 
 The default style of axis labels is as follows.
 
@@ -49,8 +49,7 @@ Axis labels can be customized using the [`axisLabelStyle`](https://pub.dev/docum
 
 ## Change visibility
 
-The [`showLabels`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/showLabels.html) property of [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html) allows
-you to show or hide the visibility of axis labels. The default value of this property is true.
+The [`showLabels`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/showLabels.html) property of [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html) allows you to show or hide the visibility of axis labels. The default value of this property is true.
 
 {% highlight dart %} 
 
@@ -93,7 +92,7 @@ Widget build(BuildContext context) {
 
 ## Change label position
 
-The linear axis allows to position the labels either `inside` or `outside` the axis track using the [`labelsPosition`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/labelPosition.html) property. By default, labels are positioned `inside` the axis track.
+The linear axis allows to position the labels either `inside` or `outside` the axis track using the [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/labelPosition.html) property. By default, labels are positioned `inside` the axis track.
 
 {% highlight dart %} 
 

@@ -2,14 +2,14 @@
 layout: post
 title: Axis in Flutter Radial Gauge widget | Syncfusion
 description: Learn here all about adding and customizing Axis of Syncfusion Flutter Radial Gauge (SfRadialGauge) widget and more.
-platform: flutter
+platform: Flutter
 control: SfRadialGauge
 documentation: ug
 ---
 
-# Axis in Fluter Radial Gauge (SfRadialGauge)
+# Axis in Flutter Radial Gauge (SfRadialGauge)
 
-The [`radial axis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis-class.html) is a circular arc in which a set of values are displayed along a linear or custom scale based on the design requirements. Axis elements such as  labels, ticks, and axis line can be easily customized with built-in properties.
+The [`radial axis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis-class.html) is a circular arc in which a set of values are displayed along a linear or custom scale based on the design requirements. Axis elements such as labels, ticks, and axis line can be easily customized with built-in properties.
 
 ## Axis Customization
 
@@ -225,7 +225,7 @@ Widget build(BuildContext context) {
 
 **Interval**
 
-The [`interval`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/interval.html) between labels can be customized using the  [`interval`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/interval.html) property of axis.
+The interval between labels can be customized using the [`interval`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/interval.html) property of axis.
 
 {% highlight dart %}
 
@@ -587,7 +587,7 @@ Widget build(BuildContext context) {
 
 ## Tick customization
 
-The major and minor tick lines of an axis can be customized using the [`majorTickStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/majorTickStyle.html) and [`minorTickStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/minorTickStyle.html) properties, respectively. The following properties can be customized for both the major and the minor ticks:
+The major and minor tick lines of an axis can be customized using the [`majorTickStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/majorTickStyle.html) and [`minorTickStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/minorTickStyle.html) properties respectively. The following properties can be customized for both the major and the minor ticks:
 
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MajorTickStyle/color.html) – Allows to customize the tick color.
 
@@ -646,7 +646,7 @@ Widget build(BuildContext context) {
 
 **Minor tick interval**
 
-The major ticks are generated based on the [`interval`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/interval.html) property.Like major ticks, the minor ticks are calculated using the [`minorTicksPerInterval`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/minorTicksPerInterval.html) property of axis.  By default, the value of this property is 1.
+The major ticks are generated based on the [`interval`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/interval.html) property. Like major ticks, the minor ticks are calculated using the [`minorTicksPerInterval`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/minorTicksPerInterval.html) property of axis.  By default, the value of this property is 1.
 
 {% highlight dart %}
 
@@ -901,7 +901,7 @@ void axisTapped(double _tappedValue){
 
 ## Custom scale
 
-[`Radial gauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfRadialGauge-class.html) allows you to display a set of values along with a custom scale based on your business logic using the `onCreateAxisRenderer` event of the axis. The `onCreateAxisRenderer` event allows returning the custom renderer for the axis. In that, we can override methods of `RadialAxisRenderer` to create the custom axis.
+[`Radial gauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfRadialGauge-class.html) allows you to display a set of values along with a custom scale based on your business logic using the [`onCreateAxisRenderer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/onCreateAxisRenderer.html) event of the axis. The `onCreateAxisRenderer` event allows returning the custom renderer for the axis. In that, we can override methods of `RadialAxisRenderer` to create the custom axis.
 
 {% highlight dart %}
  @override
@@ -992,4 +992,3 @@ class _CustomAxisRenderer extends RadialAxisRenderer {
 {% endhighlight %}
 
 ![custom scale](images/axis/custom_scale.jpg)
-

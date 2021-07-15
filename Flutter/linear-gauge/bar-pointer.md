@@ -2,12 +2,12 @@
 layout: post
 title: Bar Pointer in Flutter Linear Gauge widget | Syncfusion
 description: Learn here all about adding and customizing Bar Pointer of Syncfusion Flutter Linear Gauge (SfLinearGauge) widget and more.
-platform: flutter
+platform: Flutter
 control: SfLinearGauge
 documentation: ug
 ---
 
-# Bar Pointer in Fluter Linear Gauge (SfLinearGauge)
+# Bar Pointer in Flutter Linear Gauge (SfLinearGauge)
 
 A bar pointer is an accenting line or shaded background that can be placed on a Linear Gauge to mark any current value in the axis track. The bar pointers always start from the minimum value of the axis and end with the specified value. So the [`value`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/value.html) property is a required parameter for creating a bar pointer.
 
@@ -101,7 +101,7 @@ The edge style can be changed with the [`edgeStyle`](https://pub.dev/documentati
 
 ## Customize the position
 
-By default, the bar pointer is positioned cross to the axis. This position can be changed by the [`position`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/position.html) property of a bar pointer. It is possible to position the bar pointer 'inside', 'cross', or 'outside' the axis. The following code sample demonstrates how to change the bar pointer position to inside the axis. 
+By default, the bar pointer is positioned cross to the axis. This position can be changed by the [`position`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearBarPointer/position.html) property of a bar pointer. It is possible to position the bar pointer `inside`, `cross`, or `outside` the axis. The following code sample demonstrates how to change the bar pointer position to inside the axis.
 
 {% highlight dart %} 
 
