@@ -22,7 +22,7 @@ All the pointers can be customized as needed. You can add multiple pointers to t
 
 ## Multiple pointers
 
-In addition to the default pointer, you can add n number of pointers to an axis by adding in the [`pointers`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/pointers.html) property.
+In addition to the default pointer, you can add n number of pointers to an axis by adding in the [`pointers`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/pointers.html) property.
 
 {% highlight dart %}
 
