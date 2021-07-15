@@ -14,7 +14,7 @@ documentation: ug
 [`Marker pointer`](https://help.syncfusion.com/flutter/radial-gauge/marker-pointer)
 [`Needle pointer`](https://help.syncfusion.com/flutter/radial-gauge/needle-pointer)
 [`Range pointer`](https://help.syncfusion.com/flutter/radial-gauge/range-pointer)
-[`Widget pointer`]
+[`Widget pointer`](https://help.syncfusion.com/flutter/radial-gauge/widget-pointer)
 
 All the pointers can be customized as needed. You can add multiple pointers to the gauge to point multiple values on the same scale. The value of the pointer is set using the [`value`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugePointer/value.html) property.
 
@@ -22,7 +22,7 @@ All the pointers can be customized as needed. You can add multiple pointers to t
 
 ## Multiple pointers
 
-In addition to the default pointer, you can add n number of pointers to an axis by adding in the [`pointers`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/pointers.html) property.
+In addition to the default pointer, you can add n number of pointers to an axis by adding in the [`pointers`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/pointers.html) property.
 
 {% highlight dart %}
 
