@@ -144,7 +144,7 @@ Widget build(BuildContext context) {
 
 ## Setting range color to axis elements
 
-You can set range color to axis labels and ticks using the [`useRangeColorForAxis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/useRangeColorForAxis.html) property of axis,
+You can set range color to axis labels and ticks using the [`useRangeColorForAxis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/useRangeColorForAxis.html) property of axis.
 
 {% highlight dart %}
 

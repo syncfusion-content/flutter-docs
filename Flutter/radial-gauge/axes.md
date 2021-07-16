@@ -622,7 +622,7 @@ Widget build(BuildContext context) {
 
 **Dashed tick lines**
 
-The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MajorTickStyle/dashArray.html) property of both the [`majorTickStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/majorTickStyle.html) and [`minorTickStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/minorTickStyle.html) allows to draw the tick line as dashed line.
+The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MajorTickStyle/dashArray.html) property of both the [`majorTickStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/majorTickStyle.html) and [`minorTickStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/minorTickStyle.html) allows to draw the tick line as dashed line.
 
 {% highlight dart %}
 
@@ -646,7 +646,7 @@ Widget build(BuildContext context) {
 
 **Minor tick interval**
 
-The major ticks are generated based on the [`interval`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/interval.html) property. Like major ticks, the minor ticks are calculated using the [`minorTicksPerInterval`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/minorTicksPerInterval.html) property of axis.  By default, the value of this property is 1.
+The major ticks are generated based on the [`interval`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/interval.html) property. Like major ticks, the minor ticks are calculated using the [`minorTicksPerInterval`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/minorTicksPerInterval.html) property of axis. By default, the value of this property is 1.
 
 {% highlight dart %}
 
@@ -669,7 +669,7 @@ Widget build(BuildContext context) {
 
 **Tick line visibility**
 
-The [`showTicks`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/showTicks.html) property of the axis is used to enable or disable the visibility of both the major and the minor ticks of axis. The default value of this property is true.
+The [`showTicks`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/showTicks.html) property of the axis is used to enable or disable the visibility of both the major and the minor ticks of axis. The default value of this property is true.
 
 {% highlight dart %}
 
@@ -686,11 +686,11 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 
-![tick line visibilty](images/axis/axis_showticks.jpg)
+![tick line visibility](images/axis/axis_showticks.jpg)
 
 **Label and tick Placement**
 
-The [`radial axis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis-class.html)  allows to position the labels and ticks either inside or outside the axis line using the [`labelsPosition`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/labelsPosition.html) and [`ticksPosition`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/ticksPosition.html) properties.By default, both labels and ticks are positioned inside the axis line.
+The [`radial axis`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis-class.html) allows to position the labels and ticks either inside or outside the axis line using the [`labelsPosition`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/labelsPosition.html) and [`ticksPosition`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/ticksPosition.html) properties. By default, both labels and ticks are positioned inside the axis line.
 
 {% highlight dart %}
 
@@ -713,7 +713,7 @@ Widget build(BuildContext context) {
 
 **Tick position customization**
 
-The ticks can be moved near or far to the axis line using the [`tickOffset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/tickOffset.html) property. The [`offsetUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/offsetUnit.html) property of axis allows to specify the tick offset either in factor or logical pixels, and the default value of [`offsetUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/offsetUnit.html) is logicalPixel.
+The ticks can be moved near or far to the axis line using the [`tickOffset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/tickOffset.html) property. The [`offsetUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/offsetUnit.html) property of axis allows to specify the tick offset either in factor or logical pixels, and the default value of [`offsetUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/offsetUnit.html) is logicalPixel.
 
 The default value of tick offset is 0. While setting offset for the ticks, the axis labels are also moved along with the ticks.
 
@@ -735,7 +735,7 @@ Widget build(BuildContext context) {
 
 ![axis tick offset](images/axis/axis_tickOffset.jpg)
 
-The following code example shows how to tick offset with the [`offsetUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/offsetUnit.html) property of axis.
+The following code example shows how to add tick offset with the [`offsetUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/offsetUnit.html) property of axis.
 
 {% highlight dart %}
 
@@ -760,7 +760,7 @@ Widget build(BuildContext context) {
 
 **Label position customization**
 
-The [`labelOffset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/labelOffset.html) property allows to adjust the distance between the tick end and the labels. The [`offsetUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/offsetUnit.html) property of axis allows to specify the label offset either in factor or logical pixels. By default, the value of the label offset is 15.
+The [`labelOffset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/labelOffset.html) property allows to adjust the distance between the tick end and the labels. The [`offsetUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/offsetUnit.html) property of axis allows to specify the label offset either in factor or logical pixels. By default, the value of the label offset is 15.
 
 {% highlight dart %}
 
@@ -782,7 +782,7 @@ Widget build(BuildContext context) {
 
 ![axis label offset](images/axis/axis_labelOffset.jpg)
 
-The [`offsetUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/offsetUnit.html)  property of axis is common for both the [`tickOffset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/tickOffset.html) and [`labelOffset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/labelOffset.html)
+The [`offsetUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/offsetUnit.html)  property of axis is common for both the [`tickOffset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/tickOffset.html) and [`labelOffset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/labelOffset.html).
 
 N> [`GaugeSizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeSizeUnit-class.html) allows to specify the value either in logical pixels or in factor. GaugeSizeUnit.factor ranges from 0 to 1. For example, when setting factor as 0.5, the half of axis radius value will be considered.
 
