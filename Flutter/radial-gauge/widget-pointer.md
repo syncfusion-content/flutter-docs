@@ -2,14 +2,14 @@
 layout: post
 title: Widget Pointer in Flutter Radial Gauge widget | Syncfusion
 description: Learn here all about adding and customizing Widget Pointer of Syncfusion Flutter Radial Gauge (SfRadialGauge) widget and more.
-platform: flutter
+platform: Flutter
 control: SfRadialGauge
 documentation: ug
 ---
 
-# Widget Pointer in Fluter Radial Gauge (SfRadialGauge)
+# Widget Pointer in Flutter Radial Gauge (SfRadialGauge)
 
-[`Widgetpointer`] allows pointing the desired value with any widget in a scale. You can set the desired widget to its [`child`] property to annotate the pointer value.
+[`WidgetPointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/WidgetPointer-class.html) allows pointing the desired value with any widget in a scale. You can set the desired widget to its [`child`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/WidgetPointer/child.html) property to annotate the pointer value.
 
 {% highlight dart %}
 
@@ -65,9 +65,9 @@ Widget build(BuildContext context) {
 
 ## Position customization
 
-The widget pointer can be moved near or far from its actual position using the [`offset`] and [`offsetUnit`] properties.
+The widget pointer can be moved near or far from its actual position using the [`offset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/WidgetPointer/offset.html) and [`offsetUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/WidgetPointer/offsetUnit.html) properties.
 
-When you set [`offsetUnit`] to logical pixel, then the widget pointer will be moved based on the logical pixel value. If you set [`offsetUnit`] to factor, then provided factor will be multiplied with the axis radius value, and then the pointer will be moved to corresponding value. The default value of [`offsetUnit`] is [`GaugeSizeUnit.logicalPixel`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeSizeUnit-class.html).
+When you set [`offsetUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/WidgetPointer/offsetUnit.html) to logical pixel, then the widget pointer will be moved based on the logical pixel value. If you set [`offsetUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/WidgetPointer/offsetUnit.html) to factor, then provided factor will be multiplied with the axis radius value, and then the pointer will be moved to corresponding value. The default value of [`offsetUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/WidgetPointer/offsetUnit.html) is [`GaugeSizeUnit.logicalPixel`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeSizeUnit-class.html).
 
 {% highlight dart %}
 @override

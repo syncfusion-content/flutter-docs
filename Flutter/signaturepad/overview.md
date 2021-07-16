@@ -7,7 +7,7 @@ control: SfSignaturePad
 documentation: ug
 ---
 
-# Fluter Signature Pad (SfSignaturePad) Overview
+# Flutter Signature Pad (SfSignaturePad) Overview
 
 The SignaturePad is a widget for capturing smooth and realistic signatures. This widget allows you to save signatures as images and sync them across devices and documents that need signatures. You can use your finger, pen, or mouse on a tablet, touchscreen, etc., to draw your own signature on this SignaturePad widget.
 
