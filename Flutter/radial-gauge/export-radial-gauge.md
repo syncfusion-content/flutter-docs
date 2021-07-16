@@ -2,12 +2,12 @@
 layout: post
 title: Export in Flutter Radial Gauge widget | Syncfusion
 description: Learn here all about Export feature of Syncfusion Flutter Radial Gauge (SfRadialGauge) widget and more.
-platform: flutter
+platform: Flutter
 control: SfRadialGauge
 documentation: ug
 ---
 
-# Export in Fluter Radial Gauge (SfRadialGauge)
+# Export in Flutter Radial Gauge (SfRadialGauge)
 
 [`SfRadialGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfRadialGauge-class.html) provides support to export the Radial Gauge as a PNG image or as PDF document.
 
