@@ -136,7 +136,7 @@ Following screenshot shows the zoomed area
 
 **Show axis tooltip**
 
-The axis tooltip on selection zooming can be enabled using [`enable`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/enable.html) property of [`crosshairTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/crosshairTooltip.html). You can customize the appearance of axis tooltip using the following properties.
+The axis tooltip on selection zooming can be enabled using [`enable`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/enable.html) property of [`InteractiveTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/InteractiveTooltip-class.html). You can customize the appearance of axis tooltip using the following properties.
 
 * [`enable`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/InteractiveTooltip/enable.html) - used to enable the axis tooltip.
 * [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/InteractiveTooltip/borderWidth.html) - used to change the stroke width of the axis tooltip.
@@ -171,15 +171,16 @@ The axis tooltip on selection zooming can be enabled using [`enable`](https://pu
             child: Container(
               child: SfCartesianChart(
                 primaryXAxis: NumericAxis(
-                  crosshairTooltip: InteractiveTooltip(
-                  // Displays the axis tooltip
+                  interactiveTooltip: InteractiveTooltip(
+                  // Displays the x-axis tooltip
                   enable: true,
                   borderColor: Colors.red,
                   borderWidth: 2
                 )
               ),
                 primaryYAxis: NumericAxis(
-                  crosshairTooltip: InteractiveTooltip(
+                  interactiveTooltip: InteractiveTooltip(
+                  // Displays the y-axis tooltip
                   enable: true,
                   borderColor: Colors.red,
                   borderWidth: 2
