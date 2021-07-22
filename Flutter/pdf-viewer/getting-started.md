@@ -29,7 +29,7 @@ N> Here **xx.x.xx** denotes the current version of the [`Syncfusion Flutter PDF 
 
 For the web platform, we have used [PdfJs](https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js) for rendering the PDF pages, so the script file must be referred to in your `web/index.html` file.
 
-On your `web/index.html` file, add the following `script` tags, somewhere in the `body` of the document:
+On your `web/index.html` file, add the following `script` tags, somewhere in the `head` or `body` of the document:
 
 ```html
 
