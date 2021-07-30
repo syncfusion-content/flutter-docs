@@ -13,6 +13,9 @@ Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget is written nativel
 
 ![Overview flutter chart](images/overview/overview.png)
 
+<style>#flutterChartOverview{width : 90% !important; height: 300px !important }</style>
+<iframe id='flutterChartVideoTutorial' src='https://www.youtube.com/embed/FwUSJtv-3NY'></iframe>
+
 ## Key Features
 
 * **Chart types** - Supports more than 30+ different chart types such as  [`line`](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/line-chart), [`spline
