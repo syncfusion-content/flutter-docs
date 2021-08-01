@@ -11,14 +11,14 @@ documentation: ug
 
 The Syncfusion Flutter Barcode Generator is a data visualization widget used to generate and display data in a machine-readable format. It provides a perfect approach to encode text using supported symbology types.
 
-![Overview flutter barcode](images/getting-started/overview1.jpg)
-
-![Overview flutter QR Code](images/getting-started/getting_started3.jpg)
-
 To get start quickly with our Flutter barcode widget, you can check on this video.
 
 <style>#flutterChartOverview{width : 90% !important; height: 300px !important }</style>
-<iframe id='flutterChartVideoTutorial' src='https://www.youtube.com/embed/ckAHrT2CR8A'></iframe>
+<iframe id='flutterChartOverview' src='https://www.youtube.com/embed/ckAHrT2CR8A'></iframe>
+
+![Overview flutter barcode](images/getting-started/overview1.jpg)
+
+![Overview flutter QR Code](images/getting-started/getting_started3.jpg)
 
 ## Key Features
 
