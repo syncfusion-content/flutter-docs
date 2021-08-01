@@ -13,8 +13,8 @@ The Syncfusion Flutter Barcode Generator is a data visualization widget used to 
 
 To get start quickly with our Flutter barcode widget, you can check on this video.
 
-<style>#flutterChartOverview{width : 90% !important; height: 300px !important }</style>
-<iframe id='flutterChartOverview' src='https://www.youtube.com/embed/ckAHrT2CR8A'></iframe>
+<style>#flutterChartVideoTutorial{width : 90% !important; height: 300px !important }</style>
+<iframe id='flutterChartVideoTutorial' src='https://www.youtube.com/embed/ckAHrT2CR8A'></iframe>
 
 ![Overview flutter barcode](images/getting-started/overview1.jpg)
 
