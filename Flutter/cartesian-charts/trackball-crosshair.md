@@ -259,23 +259,23 @@ The ActivationMode enum contains the following values:
               child: SfCartesianChart(
                 primaryXAxis: DateTimeAxis(),
                 trackballBehavior: _trackballBehavior,
-                <LineSeries<SalesData, dateTime>>[
-                      LineSeries<SalesData, dateTime>(
+                <LineSeries<SalesData, DateTime>>[
+                      LineSeries<SalesData, DateTime>(
                           dataSource: ChartData,
                           markerSettings: MarkerSettings(enable: true),
                           xValueMapper: (SalesData sales, _) => sales.year,
                           yValueMapper: (SalesData sales, _) => sales.sales)
-                      LineSeries<SalesData, dateTime>(
+                      LineSeries<SalesData, DateTime>(
                           dataSource: ChartData1,
                           markerSettings: MarkerSettings(enable: true),
                           xValueMapper: (SalesData sales, _) => sales.year,
                           yValueMapper: (SalesData sales, _) => sales.sales),
-                      LineSeries<SalesData, dateTime>(
+                      LineSeries<SalesData, DateTime>(
                           dataSource: ChartDat2,
                           markerSettings: MarkerSettings(enable: true),
                           xValueMapper: (SalesData sales, _) => sales.year,
                           yValueMapper: (SalesData sales, _) => sales.sales),
-                      LineSeries<SalesData, dateTime>(
+                      LineSeries<SalesData, DateTime>(
                           dataSource: ChartData3,
                           markerSettings: MarkerSettings(enable: true),
                           xValueMapper: (SalesData sales, _) => sales.year,
@@ -329,16 +329,16 @@ Also refer, [marker customization](./marker-datalabel#Marker) for customizing th
               child: SfCartesianChart(
                 primaryXAxis: DateTimeAxis(),
                 trackballBehavior: _trackballBehavior,
-                <LineSeries<SalesData, dateTime>>[
-                      LineSeries<SalesData, dateTime>(
+                <LineSeries<SalesData, DateTime>>[
+                      LineSeries<SalesData, DateTime>(
                           dataSource: ChartData,
                           xValueMapper: (SalesData sales, _) => sales.year,
                           yValueMapper: (SalesData sales, _) => sales.sales)
-                      LineSeries<SalesData, dateTime>(
+                      LineSeries<SalesData, DateTime>(
                           dataSource: ChartData1,
                           xValueMapper: (SalesData sales, _) => sales.year,
                           yValueMapper: (SalesData sales, _) => sales.sales),
-                      LineSeries<SalesData, dateTime>(
+                      LineSeries<SalesData, DateTime>(
                           dataSource: ChartData2,
                           xValueMapper: (SalesData sales, _) => sales.year,
                           yValueMapper: (SalesData sales, _) => sales.sales),
