@@ -1161,6 +1161,66 @@ In [`DateTimeAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 
 {% endhighlight %}
 
+## RangeController
+
+[`RangeController`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangeController.html) property used to set the maximum and minimum values for the chart. By providing the range controller, the maximum and The minimum range of charts can be customized.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        children: <Widget>[
+          Expanded(
+            flex: 7,
+            child: SfCartesianChart(
+              primaryXAxis: DateTimeAxis(
+                  maximum: rangeController.end,
+                  minimum: rangeController.start,
+                  rangeController: rangeController),
+              primaryYAxis: NumericAxis(),
+              series: <SplineSeries<ChartSampleData, DateTime>>[
+                SplineSeries<ChartSampleData, DateTime>(
+                  dataSource: splineSeriesData,
+                  animationDuration: 0,
+                  xValueMapper: (ChartSampleData sales, _) =>
+                      sales.x as DateTime,
+                  yValueMapper: (ChartSampleData sales, _) => sales.y,
+                )
+              ],
+            ),
+          ),
+          Expanded(
+              flex: 3,
+              child: SfRangeSelectorTheme(
+                data: SfRangeSelectorThemeData(),
+                child: SfRangeSelector(
+                  min: min,
+                  max: max,
+                  controller: rangeController,
+                  showTicks: true,
+                  showLabels: true,
+                  dragMode: SliderDragMode.both,
+                  onChanged: (SfRangeValues value) {
+                    rangeController.start = value.start;
+                    rangeController.end = value.end;
+                    setState(() {});
+                  },
+                  child: Container(
+                    child: columnChart,
+                  ),
+                ),
+              )),
+        ],
+      ),
+    );
+    }
+
+{% endhighlight %}
+
+![RangeController](images/axis-customization/rangeController.gif)
+
 ## See Also
 
 * [Rendering a particular part of a data using visible minimum and visible maximum in the Cartesian chart](https://www.syncfusion.com/kb/11308/how-to-render-particular-part-of-a-data-in-cartesian-charts-sfcartesianchart).
