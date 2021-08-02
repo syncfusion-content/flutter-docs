@@ -1157,7 +1157,9 @@ In [`DateTimeAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/late
              ),
           )
       );
-    }<style>#flutterChartOverview{width : 90% !important
+    }
+
+{% endhighlight %}
 
 ## See Also
 
