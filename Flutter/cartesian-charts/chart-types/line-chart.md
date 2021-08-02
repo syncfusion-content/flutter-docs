@@ -39,7 +39,7 @@ To render a line chart, create an instance of [`LineSeries`](https://pub.dev/doc
                         primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders line chart
-                            LineSeries<SalesData, dateTime>(
+                            LineSeries<SalesData, DateTime>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales
@@ -53,7 +53,7 @@ To render a line chart, create an instance of [`LineSeries`](https://pub.dev/doc
 
     class SalesData {
         SalesData(this.year, this.sales);
-        final dateTime year;
+        final DateTime year;
         final double sales;
     }
 
