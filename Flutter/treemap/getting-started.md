@@ -11,6 +11,11 @@ documentation: ug
 
 This section explains the steps required to add the treemap widget and enable its features such as labels, tooltip, assigning colors based on region, and legends. This section covers only basic features needed to know to get started with Syncfusion treemap.
 
+To get start quickly with our Flutter Treemap widget, you can check on this video.
+
+<style>#FlutterTreemapVideoTutorial{width : 90% !important; height: 300px !important }</style>
+<iframe id='FlutterTreemapVideoTutorial' src='https://www.youtube.com/embed/HlWevbXU0Hs'></iframe>
+
 ## Add Flutter treemap to an application
 
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.

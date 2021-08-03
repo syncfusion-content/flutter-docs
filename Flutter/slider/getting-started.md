@@ -10,6 +10,11 @@ documentation: ug
 # Getting started with Flutter Slider (Slider)
 This section explains the steps required to add the slider widget and its elements such as numeric and date values, ticks, labels and tooltip. This section covers only basic features needed to know to get started with Syncfusion slider.
 
+To get start quickly with our Flutter Slider widget, you can check on this video.
+
+<style>#FlutterSliderVideoTutorial{width : 90% !important; height: 300px !important }</style>
+<iframe id='FlutterSliderVideoTutorial' src='https://www.youtube.com/embed/f2ws1N6lvqo'></iframe>
+
 ## Add Flutter slider to an application
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
 
