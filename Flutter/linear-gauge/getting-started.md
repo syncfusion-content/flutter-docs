@@ -11,6 +11,11 @@ documentation: ug
 
 This section explains the steps required to add the Linear Gauge and its elements such as axis, range, and pointer and also covers basic features needed to know to get started with the Linear Gauge widget.
 
+To get start quickly with our Flutter Linear Gauge widget, you can check on this video.
+
+<style>#FlutterLinearGaugeVideoTutorial{width : 90% !important; height: 300px !important }</style>
+<iframe id='FlutterLinearGaugeVideoTutorial' src='https://www.youtube.com/embed/8NmzRA-kM5Y'></iframe>
+
 ## Add Linear Gauge to an application
 
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.

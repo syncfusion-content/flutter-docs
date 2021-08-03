@@ -10,6 +10,11 @@ documentation: ug
 # Getting Started with Flutter SignaturePad (SfSignaturePad)
 This section explains the steps required to add the SignaturePad widget and its elements such as minimum and maximum stroke widths, stroke color and background color. This section also covers how to save the signature as image, clear the existing signature in SignaturePad and handle the `onDrawStart` and `onDrawEnd` callbacks in the SignaturePad widget.
 
+To get start quickly with our Flutter SignaturePad widget, you can check on this video.
+
+<style>#FlutterSignaturePadVideoTutorial{width : 90% !important; height: 300px !important }</style>
+<iframe id='FlutterSignaturePadVideoTutorial' src='https://www.youtube.com/embed/z2fx1Vg518Q'></iframe>
+
 ## Add Flutter SignaturePad to an application
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
 
