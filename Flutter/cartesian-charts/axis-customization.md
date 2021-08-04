@@ -1163,20 +1163,26 @@ In [`DateTimeAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 
 ## RangeController
 
-[`RangeController`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangeController.html) property used to set the maximum and minimum values for the chart. By providing the range controller, the maximum and The minimum range of charts can be customized.
+The [`rangeController`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangeController.html) property is used to set the maximum and minimum values for the chart. By providing the range controller, the maximum and the minimum range of charts can be customized.
 
 {% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: <Widget>[
-          Expanded(
-            flex: 7,
-            child: SfCartesianChart(
+      RangeController rangeController = RangeController(
+        start: //start value, 
+        end: //end value),
+      );
+      return Scaffold(
+        body: 
+        Column(
+          children: <Widget>[
+            Expanded(
+              child: SfCartesianChart(
               primaryXAxis: DateTimeAxis(
+                  // set maximum value from the range controller
                   maximum: rangeController.end,
+                  // set minimum value from the range controller
                   minimum: rangeController.start,
                   rangeController: rangeController),
               primaryYAxis: NumericAxis(),
@@ -1203,7 +1209,9 @@ In [`DateTimeAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/late
                   showLabels: true,
                   dragMode: SliderDragMode.both,
                   onChanged: (SfRangeValues value) {
+                    // set the start value to rangeController from this callback
                     rangeController.start = value.start;
+                    // set the end value to rangeController from this callback
                     rangeController.end = value.end;
                     setState(() {});
                   },
@@ -1212,9 +1220,9 @@ In [`DateTimeAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/late
                   ),
                 ),
               )),
-        ],
-      ),
-    );
+          ],
+        ),
+      );
     }
 
 {% endhighlight %}
