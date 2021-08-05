@@ -1227,8 +1227,6 @@ The [`rangeController`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
 {% endhighlight %}
 
-![RangeController](images/axis-customization/rangeController.gif)
-
 ## See Also
 
 * [Rendering a particular part of a data using visible minimum and visible maximum in the Cartesian chart](https://www.syncfusion.com/kb/11308/how-to-render-particular-part-of-a-data-in-cartesian-charts-sfcartesianchart).
