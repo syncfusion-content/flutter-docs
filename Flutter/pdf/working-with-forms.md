@@ -800,6 +800,169 @@ File('output.pdf').writeAsBytesSync(document.save());
 
 {% endhighlight %}
 
+## Importing FDF file to PDF
+
+FDF (Forms Data Format) is a file format for representing form data and annotations that are contained in a PDF form. You can import the FDF file to PDF using the importData method available in the ['PdfForm'](#) class.
+
+The following code sample explains how to import the FDF file to PDF.
+
+{% highlight dart %}
+
+//Loads an existing PDF document.
+final PdfDocument document =
+    PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
+
+//Import the FDF into the existing form.
+document.form
+  ..importData(File('Import.fdf').readAsBytesSync(), DataFormat.fdf);
+
+//Save the PDF document.
+File('output.pdf').writeAsBytesSync(document.save());
+
+{% endhighlight %}
+
+## Importing XFDF file to PDF
+
+XFDF (XML Forms Data Format) is used to save the form data that can be imported into a PDF document. You can import the XFDF file to PDF using the importData method available in the ['PdfForm'](#) class.
+
+The following code sample explains how to import the XFDF file to PDF.
+
+{% highlight dart %}
+
+//Loads an existing PDF document.
+final PdfDocument document =
+    PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
+
+//Import the XFDF into the existing form.
+document.form
+  ..importData(File('Import.xfdf').readAsBytesSync(), DataFormat.xfdf);
+
+//Save the PDF document.
+File('output.pdf').writeAsBytesSync(document.save());
+
+{% endhighlight %}
+
+## Importing JSON file to PDF
+
+JSON (JavaScript Object Notation) file is used to save the form data that can be imported into a PDF document. You can import the JSON file to PDF using the importData method available in the ['PdfForm'](#) class.
+
+The following code sample explains how to import JSON files to PDF.
+
+{% highlight dart %}
+
+//Loads an existing PDF document.
+final PdfDocument document =
+    PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
+
+//Import the JSON into the existing form.
+document.form
+  ..importData(File('Import.json').readAsBytesSync(), DataFormat.json);
+
+//Enable the form default appearance.
+document.form.setDefaultAppearance(true);
+
+//Save the PDF document.
+File('output.pdf').writeAsBytesSync(document.save());
+
+{% endhighlight %}
+
+## Importing XML file to PDF
+
+XML stands for an extensible markup language. The XML file is used to save the form data that can be imported into a PDF document. You can import the JSON file to PDF using the importData method available in the ['PdfForm'](#) class.
+
+The following code sample explains how to import XML files to PDF.
+
+{% highlight dart %}
+
+//Loads an existing PDF document.
+final PdfDocument document =
+    PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
+
+//Import the XML into the existing form.
+document.form
+  ..importData(File('Import.xml').readAsBytesSync(), DataFormat.xml);
+
+//Save the PDF document.
+File('output.pdf').writeAsBytesSync(document.save());
+
+{% endhighlight %}
+
+## Export PDF file to FDF
+
+To export the FDF file from a PDF document, you can use the exportData method available in the ['PdfForm'](#) class.
+
+The following code sample explains how to export the FDF file from a PDF document.
+
+{% highlight dart %}
+
+//Load the existing PDF document.
+PdfDocument document = PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
+
+//Export the form data to FDF format.
+File('Export.fdf').writeAsBytesSync(document.form.exportData(DataFormat.fdf));
+
+//Dispose the PDF document.
+document.dispose();
+
+{% endhighlight %}
+
+## Export PDF file to XFDF
+
+To export the XFDF file from a PDF document, you can use the exportData method available in the ['PdfForm'](#) class.
+
+The following code sample explains how to export the XFDF file from a PDF document.
+
+{% highlight dart %}
+
+//Load the existing PDF document.
+PdfDocument document = PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
+
+//Export the form data to XFDF format.
+File('Export.xfdf').writeAsBytesSync(document.form.exportData(DataFormat.xfdf));
+
+//Dispose the PDF document.
+document.dispose();
+
+{% endhighlight %}
+
+## Export PDF file to JSON
+
+To export the JSON file from a PDF document, you can use the exportData method available in the ['PdfForm'](#) class.
+
+The following code sample explains how to export JSON files from a PDF document.
+
+{% highlight dart %}
+//Load the existing PDF document.
+PdfDocument document = PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
+
+//Export the form data to JSON format.
+File('Export.json').writeAsBytesSync(document.form.exportData(DataFormat.json));
+
+//Dispose the PDF document.
+document.dispose();
+
+{% endhighlight %}
+
+## Export PDF file to XML
+
+To export the XML file from a PDF document, you can use the exportData method available in the ['PdfForm'](#) class.
+
+The following code sample explains how to export an XML file from a PDF document.
+
+{% highlight dart %}
+
+//Load the existing PDF document.
+PdfDocument document = PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
+
+//Export the form data to XML format.
+File('Export.xml').writeAsBytesSync(document.form.exportData(DataFormat.xml));
+
+//Dispose the PDF document.
+document.dispose();
+
+{% endhighlight %}
+
+
 ## Troubleshooting
 
 Sometimes, Form fields may appear empty in an adobe reader due to the absence of the appearance dictionary. To resolve this, you need to enable the Adobe Reader default appearance by using the setDefaultAppearance method in PdfForm class.
