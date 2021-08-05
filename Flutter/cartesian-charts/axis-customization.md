@@ -1171,7 +1171,7 @@ The [`rangeController`](https://pub.dev/documentation/syncfusion_flutter_charts/
     Widget build(BuildContext context) {
       RangeController rangeController = RangeController(
         start: //start value, 
-        end: //end value),
+        end: //end value,
       );
       return Scaffold(
         body: 
