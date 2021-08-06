@@ -1198,7 +1198,6 @@ The [`rangeController`](https://pub.dev/documentation/syncfusion_flutter_charts/
             ),
           ),
           Expanded(
-              flex: 3,
               child: SfRangeSelectorTheme(
                 data: SfRangeSelectorThemeData(),
                 child: SfRangeSelector(
