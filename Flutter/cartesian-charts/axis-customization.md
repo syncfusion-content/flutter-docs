@@ -1163,27 +1163,48 @@ In [`DateTimeAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 
 ## RangeController
 
-The [`rangeController`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangeController.html) property is used to set the maximum and minimum values for the chart. By providing the range controller, the maximum and the minimum range of charts can be customized.
+The [`rangeController`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangeController.html) property is used to set the maximum and minimum values for the chart in the viewport. In the minimum and maximum properties of the axis, you can specify the minimum and maximum values with respect to the entire data source. In the visibleMinium and visibleMaximum properties, you can specify the values to be viewed in the viewed port i.e. range controller's start and end values respectively.
+
+Here you need to specify the minimum, maximum, visibleMinimum, and visibleMaximum properties to the axis and the axis values will be visible with respect to visibleMinimum and visibleMaximum properties.
 
 {% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
-      RangeController rangeController = RangeController(
-        start: //start value, 
-        end: //end value,
-      );
-      return Scaffold(
-        body: 
-        Column(
-          children: <Widget>[
-            Expanded(
-              child: SfCartesianChart(
+    RangeController rangeController = RangeController(
+      start: DateTime(2020, 2, 1),
+      end: DateTime(2020, 2, 30),
+    );
+    SfCartesianChart columnChart = SfCartesianChart(
+      margin: const EdgeInsets.all(0),
+      primaryXAxis:
+          DateTimeAxis(isVisible: false, maximum: DateTime(2018, 1, 1)),
+      primaryYAxis: NumericAxis(isVisible: false),
+      plotAreaBorderWidth: 0,
+      series: <SplineAreaSeries<ChartSampleData, DateTime>>[
+        SplineAreaSeries<ChartSampleData, DateTime>(
+          dataSource: splineSeriesData,
+          borderColor: const Color.fromRGBO(0, 193, 187, 1),
+          color: const Color.fromRGBO(163, 226, 224, 1),
+          borderDrawMode: BorderDrawMode.excludeBottom,
+          borderWidth: 1,
+          xValueMapper: (ChartSampleData sales, _) => sales.x as DateTime,
+          yValueMapper: (ChartSampleData sales, _) => sales.y,
+        )
+      ],
+    );
+    return Scaffold(
+      body: Column(
+        children: <Widget>[
+          Expanded(
+            child: SfCartesianChart(
               primaryXAxis: DateTimeAxis(
+                  maximum: DateTime(2020, 1, 1),
+                  minimum: DateTime(2020, 3, 30),
                   // set maximum value from the range controller
-                  maximum: rangeController.end,
+                  visibleMaximum: rangeController.end,
                   // set minimum value from the range controller
-                  minimum: rangeController.start,
+                  visibleMinimum: rangeController.start,
                   rangeController: rangeController),
               primaryYAxis: NumericAxis(),
               series: <SplineSeries<ChartSampleData, DateTime>>[
@@ -1199,29 +1220,30 @@ The [`rangeController`](https://pub.dev/documentation/syncfusion_flutter_charts/
           ),
           Expanded(
               child: SfRangeSelectorTheme(
-                data: SfRangeSelectorThemeData(),
-                child: SfRangeSelector(
-                  min: min,
-                  max: max,
-                  controller: rangeController,
-                  showTicks: true,
-                  showLabels: true,
-                  dragMode: SliderDragMode.both,
-                  onChanged: (SfRangeValues value) {
-                    // set the start value to rangeController from this callback
-                    rangeController.start = value.start;
-                    // set the end value to rangeController from this callback
-                    rangeController.end = value.end;
-                    setState(() {});
-                  },
-                  child: Container(
-                    child: columnChart,
-                  ),
-                ),
-              )),
-          ],
-        ),
-      );
+            data: SfRangeSelectorThemeData(),
+            child: SfRangeSelector(
+              min: min,
+              max: max,
+              controller: rangeController,
+              showTicks: true,
+              showLabels: true,
+              dragMode: SliderDragMode.both,
+              onChanged: (SfRangeValues value) {
+                // set the start value to rangeController from this callback
+                rangeController.start = value.start;
+                // set the end value to rangeController from this callback
+                rangeController.end = value.end;
+                setState(() {});
+              },
+              child: Container(
+                child: columnChart,
+              ),
+            ),
+          )),
+        ],
+      ),
+    );
+    }
     }
 
 {% endhighlight %}
