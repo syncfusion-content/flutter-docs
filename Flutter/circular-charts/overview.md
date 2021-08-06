@@ -13,6 +13,11 @@ Syncfusion Flutter Circular Charts (SfCircularChart) widget is written natively 
 
 ![Overview Flutter chart](images/overview/overview.png)
 
+To get start quickly with our Flutter circular chart widget, you can check on this video.
+
+<style>#flutterChartVideoTutorial{width : 90% !important; height: 300px !important }</style>
+<iframe id='flutterChartVideoTutorial' src='https://www.youtube.com/embed/FwUSJtv-3NY'></iframe>
+
 ## Key Features
 
 * **Chart types** - Supports 3 different series types such as [`pie`](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/pie-chart), [`doughnut`](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/doughnut-chart), and [`radial bar`](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/radial-bar-chart) series. Each type represents data in a unique style. It is more user friendly and has greater UI visualization.
