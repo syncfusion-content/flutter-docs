@@ -1175,21 +1175,15 @@ Here you need to specify the [`minimum`](https://pub.dev/documentation/syncfusio
       start: DateTime(2020, 2, 1),
       end: DateTime(2020, 2, 30),
     );
-    SfCartesianChart columnChart = SfCartesianChart(
+    SfCartesianChart sliderChart = SfCartesianChart(
       margin: const EdgeInsets.all(0),
       primaryXAxis:
-          DateTimeAxis(isVisible: false, maximum: DateTime(2018, 1, 1)),
+          DateTimeAxis(isVisible: false),
       primaryYAxis: NumericAxis(isVisible: false),
       plotAreaBorderWidth: 0,
       series: <SplineAreaSeries<ChartSampleData, DateTime>>[
         SplineAreaSeries<ChartSampleData, DateTime>(
-          dataSource: splineSeriesData,
-          borderColor: const Color.fromRGBO(0, 193, 187, 1),
-          color: const Color.fromRGBO(163, 226, 224, 1),
-          borderDrawMode: BorderDrawMode.excludeBottom,
-          borderWidth: 1,
-          xValueMapper: (ChartSampleData sales, _) => sales.x as DateTime,
-          yValueMapper: (ChartSampleData sales, _) => sales.y,
+          //  Add required property.
         )
       ],
     );
@@ -1210,10 +1204,10 @@ Here you need to specify the [`minimum`](https://pub.dev/documentation/syncfusio
               series: <SplineSeries<ChartSampleData, DateTime>>[
                 SplineSeries<ChartSampleData, DateTime>(
                   dataSource: splineSeriesData,
-                  animationDuration: 0,
                   xValueMapper: (ChartSampleData sales, _) =>
                       sales.x as DateTime,
                   yValueMapper: (ChartSampleData sales, _) => sales.y,
+                  //  Add required property.
                 )
               ],
             ),
@@ -1236,14 +1230,13 @@ Here you need to specify the [`minimum`](https://pub.dev/documentation/syncfusio
                 setState(() {});
               },
               child: Container(
-                child: columnChart,
+                child: sliderChart,
               ),
             ),
           )),
         ],
       ),
     );
-    }
     }
 
 {% endhighlight %}
