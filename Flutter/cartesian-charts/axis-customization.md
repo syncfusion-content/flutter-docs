@@ -1183,7 +1183,7 @@ Here you need to specify the [`minimum`](https://pub.dev/documentation/syncfusio
       plotAreaBorderWidth: 0,
       series: <SplineAreaSeries<ChartSampleData, DateTime>>[
         SplineAreaSeries<ChartSampleData, DateTime>(
-          //  Add required property.
+          //  Add required properties.
         )
       ],
     );
@@ -1207,7 +1207,7 @@ Here you need to specify the [`minimum`](https://pub.dev/documentation/syncfusio
                   xValueMapper: (ChartSampleData sales, _) =>
                       sales.x as DateTime,
                   yValueMapper: (ChartSampleData sales, _) => sales.y,
-                  //  Add required property.
+                  //  Add required properties.
                 )
               ],
             ),
