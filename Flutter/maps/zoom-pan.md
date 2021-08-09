@@ -377,10 +377,60 @@ Widget build(BuildContext context) {
 
 ## Toolbar
 
-You can use the toolbar to customize the visible bound for the web platform. By default, the [MapZoomPanBehavior.showToolbar](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/showToolbar.html) property is `true`.
+The toolbar can be used to perform zoom in, zoom out, and reset operations in the web and desktop platforms. By default, the [MapZoomPanBehavior.showToolbar](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/showToolbar.html) property is `true`.
 
-N>
-* Refer [MapZoomPanBehavior.toolbarSettings](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior/toolbarSettings.html) for customizing the appearance of the toolbar. You can customize its positions, direction, icon color, item hover color and item background color.
+## Toolbar customization
+
+You can customize the toolbar items using the following properties:
+
+* Position - Used to position the toolbar item at the four corners of the map visual bounds using the [`position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapToolbarSettings/position.html) property. The default value of the [`position`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapToolbarSettings/position.html) property is `MapToolbarPosition.topRight`. The possible values are `topRight`, `topLeft`, `bottomLeft`, and `bottomRight`.
+* Icon color - used to set color to the three icons using the [`iconColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapToolbarSettings/iconColor.html) property.
+* Item background color - Used to set background color of the toolbar icons using the [`itemBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapToolbarSettings/itemBackgroundColor.html) property.
+* Item hover color - Used to set color while hover over the icon using the [`itemHoverColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapToolbarSettings/itemHoverColor.html) property.
+
+{% tabs %}
+{% highlight Dart %}
+
+late MapZoomPanBehavior _zoomPanBehavior;
+
+@override
+void initState() {
+  _zoomPanBehavior = MapZoomPanBehavior(
+    focalLatLng: MapLatLng(27.1751, 78.0421),
+    zoomLevel: 3,
+    showToolbar: true,
+    toolbarSettings: MapToolbarSettings(
+      position: MapToolbarPosition.topLeft,
+      iconColor: Colors.red,
+      itemBackgroundColor: Colors.green,
+      itemHoverColor: Colors.blue,
+    ),
+  );
+  super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: Container(
+      height: 350,
+      width: 350,
+      child: SfMaps(
+        layers: [
+          MapTileLayer(
+            urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+            zoomPanBehavior: _zoomPanBehavior,
+          ),
+        ],
+      ),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Toolbar customization](images/zoom-pan/toolbar_customization.gif)
 
 ## Zooming callback
 
