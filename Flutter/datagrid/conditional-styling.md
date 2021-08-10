@@ -345,3 +345,62 @@ class EmployeeDataSource extends DataGridSource {
 {% endtabs %}
 
 ![flutter datagrid shows styling alternate rows](images/conditional-styling/flutter-datagrid-alternate-rows-styling.png)
+
+You can also customize the appearance by using the index of [effectiveRows]() collection to maintain styling for the visible rows even sorting is applied.
+
+{% tabs %}
+{% highlight Dart %} 
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+
+class EmployeeDataSource extends DataGridSource {
+  EmployeeDataSource(List<Employee> employees) {
+    dataGridRows = employees
+        .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
+              DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
+              DataGridCell<String>(columnName: 'name', value: dataGridRow.name),
+              DataGridCell<String>(
+                  columnName: 'designation', value: dataGridRow.designation),
+              DataGridCell<int>(
+                  columnName: 'salary', value: dataGridRow.salary),
+            ]))
+        .toList();
+  }
+
+  List<DataGridRow> dataGridRows = [];
+
+  @override
+  List<DataGridRow> get rows => dataGridRows;
+
+  @override
+  DataGridRowAdapter? buildRow(DataGridRow row) {
+    Color getRowBackgroundColor() {
+      final int index = effectiveRows.indexOf(row);
+      if (index % 2 != 0) {
+        return Colors.lightGreen[300]!;
+      }
+
+      return Colors.transparent;
+    }
+
+    return DataGridRowAdapter(
+        color: getRowBackgroundColor(),
+        cells: row.getCells().map<Widget>((dataGridCell) {
+          return Container(
+              alignment: (dataGridCell.columnName == 'id' ||
+                      dataGridCell.columnName == 'salary')
+                  ? Alignment.centerRight
+                  : Alignment.centerLeft,
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              child: Text(
+                dataGridCell.value.toString(),
+                overflow: TextOverflow.ellipsis,
+              ));
+        }).toList());
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![flutter datagrid shows styling alternate sorted rows](images/conditional-styling/flutter-datagrid-alternate-sorted-rows-styling.png)
