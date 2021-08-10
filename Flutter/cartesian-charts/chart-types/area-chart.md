@@ -34,7 +34,7 @@ The following properties can be used to customize the appearance:
                         primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders area chart
-                            AreaSeries<SalesData, dateTime>(
+                            AreaSeries<SalesData, DateTime>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales

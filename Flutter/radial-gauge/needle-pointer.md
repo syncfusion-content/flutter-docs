@@ -2,14 +2,14 @@
 layout: post
 title: Needle Pointer in Flutter Radial Gauge widget | Syncfusion
 description: Learn here all about adding and customizing Needle Pointer of Syncfusion Flutter Radial Gauge (SfRadialGauge) widget and more.
-platform: flutter
+platform: Flutter
 control: SfRadialGauge
 documentation: ug
 ---
 
-# Needle Pointer in Fluter Radial Gauge (SfRadialGauge)
+# Needle Pointer in Flutter Radial Gauge (SfRadialGauge)
 
-[`Needle Pointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer-class.html) contains three parts, namely needle, [`knob`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer/knobStyle.html), and [`tail`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer/tailStyle.html) and that can be placed on a gauge to mark the values.
+[`Needle Pointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer-class.html) contains three parts namely needle, [`knob`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer/knobStyle.html), and [`tail`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer/tailStyle.html) and that can be placed on a gauge to mark the values.
 
 {% highlight dart %}
 @override

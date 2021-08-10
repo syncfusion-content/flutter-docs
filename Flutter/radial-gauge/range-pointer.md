@@ -2,12 +2,12 @@
 layout: post
 title: Range Pointer in Flutter Radial Gauge widget | Syncfusion
 description: Learn here all about adding and customizing Range Pointer of Syncfusion Flutter Radial Gauge (SfRadialGauge) widget and more.
-platform: flutter
+platform: Flutter
 control: SfRadialGauge
 documentation: ug
 ---
 
-# Range Pointer in Fluter Radial Gauge (SfRadialGauge)
+# Range Pointer in Flutter Radial Gauge (SfRadialGauge)
 
 A range pointer is an accenting line or shaded background range that can be placed on a gauge to mark the current value.
 

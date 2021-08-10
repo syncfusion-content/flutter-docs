@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Introduction to Flutter Widgets Documentation | Tutorials | Syncfusion
-description: Overview about the available features in Syncfusion Flutter widgets and steps to use the guide. | Flutter Widgets |
+title: About Essential Studio Flutter | Syncfusion
+description: Learn here all about introduction of Syncfusion Essential Studio Flutter, its elements, features and more.
 platform: flutter
 control: Overview
 documentation: ug
@@ -43,17 +43,17 @@ Video tutorials of our widgets can be found [here](https://www.syncfusion.com/tu
 Explore the full capabilities of our Flutter widgets on your device by installing our sample browser applications from the below app stores, and view code samples in GitHub.
 
 <p align="center">
-  <a href="https://play.google.com/store/apps/details?id=com.syncfusion.flutter.examples"><img src="https://cdn.syncfusion.com/content/images/FTControl/google-play-store.png"/></a>
-  <a href="https://apps.apple.com/us/app/syncfusion-flutter-ui-widgets/id1475231341"><img src="https://cdn.syncfusion.com/content/images/FTControl/ios-store.png"/></a>
-  <a href="https://flutter.syncfusion.com"><img src="https://cdn.syncfusion.com/content/images/FTControl/web-sample-browser.png"/></a> 
+  <a href="https://play.google.com/store/apps/details?id=com.syncfusion.flutter.examples"><img alt="Flutter Google Play Store" src="https://cdn.syncfusion.com/content/images/FTControl/google-play-store.png"/></a>
+  <a href="https://apps.apple.com/us/app/syncfusion-flutter-ui-widgets/id1475231341"><img alt="Flutter iOS App Store" src="https://cdn.syncfusion.com/content/images/FTControl/ios-store.png"/></a>
+  <a href="https://flutter.syncfusion.com"><img alt="Flutter Web Sample Browser" src="https://cdn.syncfusion.com/content/images/FTControl/web-sample-browser.png"/></a> 
 </p>
 <p align="center">
-  <a href="https://www.microsoft.com/en-us/p/syncfusion-flutter-gallery/9nhnbwcsf85d?activetab=pivot:overviewtab"><img src="https://cdn.syncfusion.com/content/images/FTControl/windows-store.png"/></a> 
-  <a href="https://install.appcenter.ms/orgs/syncfusion-demos/apps/syncfusion-flutter-gallery/distribution_groups/release"><img src="https://cdn.syncfusion.com/content/images/FTControl/macos-app-center.png"/></a>
-  <a href="https://snapcraft.io/syncfusion-flutter-gallery"><img src="https://cdn.syncfusion.com/content/images/FTControl/snap-store.png"/></a>
+  <a href="https://www.microsoft.com/en-us/p/syncfusion-flutter-gallery/9nhnbwcsf85d?activetab=pivot:overviewtab"><img alt="Flutter Windows Store" src="https://cdn.syncfusion.com/content/images/FTControl/windows-store.png"/></a> 
+  <a href="https://install.appcenter.ms/orgs/syncfusion-demos/apps/syncfusion-flutter-gallery/distribution_groups/release"><img alt="Flutter macOS App Center" src="https://cdn.syncfusion.com/content/images/FTControl/macos-app-center.png"/></a>
+  <a href="https://snapcraft.io/syncfusion-flutter-gallery"><img alt="Flutter Snap Store" src="https://cdn.syncfusion.com/content/images/FTControl/snap-store.png"/></a>
 </p>
 <p align="center">
-  <a href="https://github.com/syncfusion/flutter-examples"><img src="https://cdn.syncfusion.com/content/images/FTControl/github-samples.png"/></a>
+  <a href="https://github.com/syncfusion/flutter-examples"><img alt="Flutter GitHub Samples" src="https://cdn.syncfusion.com/content/images/FTControl/github-samples.png"/></a>
 </p>
 
 

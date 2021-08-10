@@ -39,7 +39,7 @@ To render a line chart, create an instance of [`LineSeries`](https://pub.dev/doc
                         primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders line chart
-                            LineSeries<SalesData, dateTime>(
+                            LineSeries<SalesData, DateTime>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales
@@ -53,7 +53,7 @@ To render a line chart, create an instance of [`LineSeries`](https://pub.dev/doc
 
     class SalesData {
         SalesData(this.year, this.sales);
-        final dateTime year;
+        final DateTime year;
         final double sales;
     }
 
@@ -149,4 +149,4 @@ To render a multi-colored line series, map the individual colors to the data usi
 
 ![Multi-colored line](cartesian-chart-types-images/multiColored_line.jpg)
 
-Also refer, [color palette](./series-customization#color-palette), [color mapping](./series-customization#color-mapping-for-data-points), [animation](./series-customization#animation), [gradient](./series-customization#gradient-fill) and [empty points](./series-customization#empty-points) for customizing the line series further.
+Also refer, [color palette](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#color-palette), [color mapping](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#color-mapping-for-data-points), [animation](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#animation), [gradient](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#gradient-fill) and [empty points](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#empty-points) for customizing the line series further.

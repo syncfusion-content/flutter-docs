@@ -2,12 +2,12 @@
 layout: post
 title: Animation in Flutter Radial Gauge widget | Syncfusion
 description: Learn here all about adding and customizing animation of Syncfusion Flutter Radial Gauge (SfRadialGauge) widget and more.
-platform: flutter
+platform: Flutter
 control: SfRadialGauge
 documentation: ug
 ---
 
-# Animation in Fluter Radial Gauge (SfRadialGauge)
+# Animation in Flutter Radial Gauge (SfRadialGauge)
 
 ## Initial animation
 
@@ -43,6 +43,7 @@ Widget build(BuildContext context) {
 ![gauge loading animation](images/animation/initial_Animation.gif)
 
 ## Pointer Animation
+
 The [`enableAnimation`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugePointer/enableAnimation.html) property of pointer allows to enable or disable animation for pointer. The gauge pointer has the following animation type:
 
 * `bounceOut`
@@ -53,7 +54,7 @@ The [`enableAnimation`](https://pub.dev/documentation/syncfusion_flutter_gauges/
 * `linear`
 * `slowMiddle`
 
-The animation type can be changed using the [`animationType`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugePointer/animationType.html)property of pointer. By default, the animation type is linear.
+The animation type can be changed using the [`animationType`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugePointer/animationType.html) property of pointer. By default, the animation type is linear.
 
 {% highlight dart %}
 

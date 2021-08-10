@@ -2,12 +2,12 @@
 layout: post
 title: Ticks in Flutter Linear Gauge widget | Syncfusion
 description: Learn here all about adding and customizing Ticks of Syncfusion Flutter Linear Gauge (SfLinearGauge) widget and more.
-platform: flutter
+platform: Flutter
 control: SfLinearGauge
 documentation: ug
 ---
 
-# Ticks in Fluter Linear Gauge (SfLinearGauge)
+# Ticks in Flutter Linear Gauge (SfLinearGauge)
 
 The default style of axis ticks is as follows.
 
@@ -41,7 +41,7 @@ There are two types of ticks in the Flutter Linear Gauge namely major and minor 
 
 ## Customize minor tick interval
 
-The major ticks are generated based on the [`interval`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/interval.html) property which is documented in 'Customize the interval between labels' topic. The minor ticks are calculated using the [`minorTicksPerInterval`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/minorTicksPerInterval.html) property of [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html). By default, the value of this property is 1.
+The major ticks are generated based on the [`interval`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/interval.html) property which is documented in `Customize the interval between labels` topic. The minor ticks are calculated using the [`minorTicksPerInterval`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/minorTicksPerInterval.html) property of [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge-class.html). By default, the value of this property is 1.
 
 {% highlight dart %} 
 

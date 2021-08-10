@@ -2,7 +2,7 @@
 layout: post
 title: Getting started with Flutter Linear Gauge widget | Syncfusion
 description: Learn here about getting started with Syncfusion Flutter Linear Gauge (SfLinearGauge) widget, its elements, and more. 
-platform: flutter
+platform: Flutter
 control: SfLinearGauge
 documentation: ug
 ---
@@ -56,7 +56,7 @@ Import the following package in your Dart code.
 
 ## Initialize the Linear Gauge
 
-After the package has been imported, initialize the SfLinearGauge as a child of any widget such as container widget.
+After the package has been imported, initialize the [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/SfLinearGauge.html) as a child of any widget such as container widget.
 
 {% highlight dart %} 
 
@@ -77,7 +77,7 @@ After the package has been imported, initialize the SfLinearGauge as a child of 
 
 ## Add axis
 
-The Linear Gauge axis is a scale where a set of values can be plotted. You can specify the minimum and maximum values of the axis using the minimum and maximum properties as demonstrated in the following code sample.
+The Linear Gauge axis is a scale where a set of values can be plotted. You can specify the minimum and maximum values of the axis using the [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/minimum.html) and [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/maximum.html) properties as demonstrated in the following code sample.
 
 {% highlight dart %} 
 
@@ -98,7 +98,7 @@ The Linear Gauge axis is a scale where a set of values can be plotted. You can s
 
 ## Update orientation
 
-As you can see in the above image, the default orientation of the Linear Gauge is horizontal. But you can change it with the orientation property of the Linear Gauge widget.
+As you can see in the above image, the default orientation of the Linear Gauge is horizontal. But you can change it with the [`orientation`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/orientation.html) property of the Linear Gauge widget.
 
 {% highlight dart %} 
 

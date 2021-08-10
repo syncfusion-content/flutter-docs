@@ -2,19 +2,19 @@
 layout: post
 title: Pointers in Flutter Radial Gauge widget | Syncfusion
 description: Learn here all about adding and customizing Pointers of Syncfusion Flutter Radial Gauge (SfRadialGauge) widget and more.
-platform: flutter
+platform: Flutter
 control: SfRadialGauge
 documentation: ug
 ---
 
-# Pointers in Fluter Radial Gauge (SfRadialGauge)
+# Pointers in Flutter Radial Gauge (SfRadialGauge)
 
- Pointer is used to indicate values on an axis. The radial gauge control has three types of pointers: 
+ Pointer is used to indicate values on an axis. The radial gauge control has four types of pointers:
 
 [`Marker pointer`](https://help.syncfusion.com/flutter/radial-gauge/marker-pointer)
 [`Needle pointer`](https://help.syncfusion.com/flutter/radial-gauge/needle-pointer)
 [`Range pointer`](https://help.syncfusion.com/flutter/radial-gauge/range-pointer)
-[`Widget pointer`]
+[`Widget pointer`](https://help.syncfusion.com/flutter/radial-gauge/widget-pointer)
 
 All the pointers can be customized as needed. You can add multiple pointers to the gauge to point multiple values on the same scale. The value of the pointer is set using the [`value`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugePointer/value.html) property.
 
@@ -22,7 +22,7 @@ All the pointers can be customized as needed. You can add multiple pointers to t
 
 ## Multiple pointers
 
-In addition to the default pointer, you can add n number of pointers to an axis by adding in the [`pointers`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/pointers.html) property.
+In addition to the default pointer, you can add n number of pointers to an axis by adding in the [`pointers`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/pointers.html) property.
 
 {% highlight dart %}
 

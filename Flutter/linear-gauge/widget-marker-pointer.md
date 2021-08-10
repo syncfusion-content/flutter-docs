@@ -2,12 +2,12 @@
 layout: post
 title: Widget Marker Pointer in Flutter Linear Gauge widget | Syncfusion
 description: Learn here all about adding and customizing Widget Marker Pointer of Syncfusion Flutter Linear Gauge (SfLinearGauge) widget and more.
-platform: flutter
+platform: Flutter
 control: SfLinearGauge
 documentation: ug
 ---
 
-# Widget Marker Pointer in Fluter Linear Gauge (SfLinearGauge)
+# Widget Marker Pointer in Flutter Linear Gauge (SfLinearGauge)
 
 The [`LinearWidgetPointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearWidgetPointer/LinearWidgetPointer.html) in [`SfLinearGauge`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfLinearGauge/SfLinearGauge.html) allows to use any Flutter widget as marker pointer. The following code sample uses a [`container`](https://api.flutter.dev/flutter/widgets/Container-class.html) as marker widget.
 

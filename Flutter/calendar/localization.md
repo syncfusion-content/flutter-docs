@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Localization in Flutter Event Calendar widget | Syncfusion | Scheduler
+title: Localization in Flutter Event Calendar widget | Syncfusion
 description: Learn here all about Localization feature of Syncfusion Flutter Event Calendar (SfCalendar) widget and more.
 platform: flutter
 control: SfCalendar

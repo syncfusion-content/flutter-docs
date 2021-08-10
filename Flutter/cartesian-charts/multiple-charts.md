@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Combinational Charts in Flutter Cartesian Charts widget | Syncfusion 
+title: Multiple Charts in Flutter Cartesian Charts | Syncfusion 
 description: Learn here all about Combinational Charts of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Combinational Charts in Flutter Cartesian Charts (SfCartesianChart)
+# Multiple Charts in Flutter Cartesian Charts (SfCartesianChart)
 
 
 ## Multiple series

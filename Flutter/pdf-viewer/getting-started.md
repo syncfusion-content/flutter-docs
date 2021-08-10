@@ -29,7 +29,7 @@ N> Here **xx.x.xx** denotes the current version of the [`Syncfusion Flutter PDF 
 
 For the web platform, we have used [PdfJs](https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js) for rendering the PDF pages, so the script file must be referred to in your `web/index.html` file.
 
-On your `web/index.html` file, add the following `script` tags, somewhere in the `body` of the document:
+On your `web/index.html` file, add the following `script` tags, somewhere in the `head` or `body` of the document:
 
 ```html
 
@@ -108,6 +108,14 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+To load PDF from network using [SfPdfViewer.network](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/SfPdfViewer.network.html) in macOS, network access must be enabled in your macOS application. On your `macos/Runner/DebugProfile.entitlements` file, add the following lines inside the `<dict>`
+tag to enable the network access in your application:
+
+```html
+<key>com.apple.security.network.client</key>
+<true/>
+```
 
 ### Load document from the File
 

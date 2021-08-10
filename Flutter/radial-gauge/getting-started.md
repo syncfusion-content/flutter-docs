@@ -2,7 +2,7 @@
 layout: post
 title: Getting started with Flutter Radial Gauge widget | Syncfusion
 description: Learn here about getting started with Syncfusion Flutter Radial Gauge (SfRadialGauge) control, its elements, and more. 
-platform: flutter
+platform: Flutter
 control: SfRadialGauge
 documentation: ug
 ---
@@ -105,7 +105,7 @@ You can add a title to the radial gauge to provide information to users about th
 
 ## Add axis
 
-Axes contain a list of axis elements, where you can add any number of radial axes inside the gauge. You can specify the minimum and maximum values of axis using the [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/minimum.html) and [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeAxis/maximum.html) properties as demonstrated in the following code snippet.
+Axes contain a list of axis elements, where you can add any number of radial axes inside the gauge. You can specify the minimum and maximum values of axis using the [`minimum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/minimum.html) and [`maximum`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/maximum.html) properties as demonstrated in the following code snippet.
 
 {% highlight dart %} 
 
@@ -149,7 +149,7 @@ Ranges contain a list of range elements, where you can add any number of ranges 
 
 ## Add pointer
 
-Pointers contains a list of pointer elements, where you can add any number of gauge pointers such as [`needlePointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer-class.html), [`rangePointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RangePointer-class.html) and [`markerPointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerPointer-class.html) inside the axis to indicate the value. 
+Pointers contains a list of pointer elements, where you can add any number of gauge pointers such as [`needlePointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/NeedlePointer-class.html), [`rangePointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RangePointer-class.html), [`markerPointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerPointer-class.html), and [`widgetPointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/WidgetPointer-class.html) inside the axis to indicate the value.
 
 {% highlight dart %} 
 

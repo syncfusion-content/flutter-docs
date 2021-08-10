@@ -15,6 +15,11 @@ The Syncfusion Flutter Barcode Generator is a data visualization widget used to 
 
 ![Overview flutter QR Code](images/getting-started/getting_started3.jpg)
 
+To get start quickly with our Flutter barcode generator widget, you can check on this video.
+
+<style>#flutterChartVideoTutorial{width : 90% !important; height: 300px !important }</style>
+<iframe id='flutterChartVideoTutorial' src='https://www.youtube.com/embed/ckAHrT2CR8A'></iframe>
+
 ## Key Features
 
 * **One-dimensional barcodes** - Barcode Generator supports different one-dimensional barcode symbologies such as [`Code128`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code128-class.html), [`EAN8`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/EAN8-class.html), [`EAN13`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/EAN13-class.html), [`UPC-A`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/UPCA-class.html), [`UPC-E`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/UPCE-class.html), [`Code39`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code39-class.html), [`Code39 Extended`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code39Extended-class.html), [`Code93`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Code93-class.html), and [`Codabar`](https://pub.dev/documentation/syncfusion_flutter_barcodes/latest/barcodes/Codabar-class.html). 

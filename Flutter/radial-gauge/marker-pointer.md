@@ -2,12 +2,12 @@
 layout: post
 title: Marker Pointer in Flutter Radial Gauge widget | Syncfusion
 description: Learn here all about adding and customizing Marker Pointer of Syncfusion Flutter Radial Gauge (SfRadialGauge) widget and more.
-platform: flutter
+platform: Flutter
 control: SfRadialGauge
 documentation: ug
 ---
 
-# Marker pointer in Fluter Radial Gauge (SfRadialGauge)
+# Marker pointer in Flutter Radial Gauge (SfRadialGauge)
 
 Different types of markers are used to mark the pointer values in a scale. You can change the marker type using the [`markerType`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerPointer/markerType.html) property. 
 
@@ -129,7 +129,7 @@ Widget build(BuildContext context) {
 
 **Marker elevation**
 
-The marker pointer can be elevated by rendering its shadow behind it and the z- coordinate position at which the shadow can be positioned relative to the marker can be controlled by the [`elevation`] property.
+The marker pointer can be elevated by rendering its shadow behind it and the z- coordinate position at which the shadow can be positioned relative to the marker can be controlled by the [`elevation`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerPointer/elevation.html) property.
 
 {% highlight dart %}
 
@@ -152,9 +152,9 @@ Widget build(BuildContext context) {
 
 ![marker elevation](images/marker-pointers/marker_elevation.png)
 
-The shadow color of the pointer is black by default and the default value of [`elevation`] is 0.
+The shadow color of the pointer is black by default and the default value of [`elevation`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerPointer/elevation.html) is 0.
 
-N> The [`elevation`] property applies to all the marker types except [`MarkerType.image`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerType-class.html) and [`MarkerType.text`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerType-class.html).
+N> The [`elevation`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerPointer/elevation.html) property applies to all the marker types except [`MarkerType.image`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerType-class.html) and [`MarkerType.text`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerType-class.html).
 
 **Marker overlay**
 
@@ -185,11 +185,11 @@ The marker overlay rendered around the marker when the marker is dragged. When [
 
 ![marker overlay](images/marker-pointers/marker_overlay.png)
 
-By default, the [`overlayRadius`] is calculated based on the provided [`markerHeight`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerPointer/markerHeight.html) and [`markerWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerPointer/markerWidth.html) property and [`overlayColor`] is considered based on [`marker color`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerPointer/color.html). The properties are used to customize the overlay color and its radius,
+By default, the [`overlayRadius`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerPointer/overlayRadius.html) is calculated based on the provided [`markerHeight`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerPointer/markerHeight.html) and [`markerWidth`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerPointer/markerWidth.html) property and [`overlayColor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerPointer/overlayColor.html) is considered based on [`marker color`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerPointer/color.html). The properties are used to customize the overlay color and its radius,
 
-* [`overlayColor`] – Allows customizing the overlay color.
+* [`overlayColor`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerPointer/overlayColor.html) – Allows customizing the overlay color.
 
-* [`overlayRadius`] – Allows customizing the overlay radius.
+* [`overlayRadius`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/MarkerPointer/overlayRadius.html) – Allows customizing the overlay radius.
 
 {% highlight dart %}
 

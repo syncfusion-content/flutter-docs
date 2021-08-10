@@ -8,7 +8,12 @@ documentation: ug
 ---
 
 # Getting Started with Flutter SignaturePad (SfSignaturePad)
-This section explains the steps required to add the SignaturePad widget and its elements such as minimum and maximum stroke widths, stroke color and background color. This section also covers how to save the signature as image, clear the existing signature in SignaturePad and handle the `onDrawStart` and `onDrawEnd` callbacks in the SignaturePad widget.
+This section explains the steps required to add the SignaturePad widget and its elements such as minimum and maximum stroke widths, stroke color and background color. This section also covers how to save the signature as image, clear the existing signature in SignaturePad and handle the [`onDrawStart`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/onDrawStart.html) and [`onDrawEnd`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/onDrawEnd.html) callbacks in the SignaturePad widget.
+
+To get start quickly with our Flutter SignaturePad widget, you can check on this video.
+
+<style>#FlutterSignaturePadVideoTutorial{width : 90% !important; height: 300px !important }</style>
+<iframe id='FlutterSignaturePadVideoTutorial' src='https://www.youtube.com/embed/z2fx1Vg518Q'></iframe>
 
 To get start quickly with our Flutter SignaturePad widget, you can check on this video.
 
@@ -295,7 +300,7 @@ Widget build(BuildContext context) {
 
 ## Signature path collection
 
-You can get the path collection of the signature drawn in the SignaturePad using the `toPathList()` method. Since this `toPathList()` method is defined in the state object of SignaturePad, you have to use a global key assigned to the SignaturePad instance to call this method.
+You can get the path collection of the signature drawn in the SignaturePad using the [`toPathList()`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePadState/toPathList.html) method. Since this [`toPathList()`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePadState/toPathList.html) method is defined in the state object of SignaturePad, you have to use a global key assigned to the SignaturePad instance to call this method.
 
 {% tabs %}
 {% highlight Dart %}
@@ -332,7 +337,7 @@ Widget build(BuildContext context) {
 
 ## Handle onDrawStart, onDraw, and onDrawEnd callbacks
 
-The widget allows to handle the onDrawStart, onDraw, and onDrawEnd callbacks for every strokes updated to the SignaturePad.The `onDrawStart` callback will be called when the user starts signing on `SfSignaturePad`, the `onDraw` callback will be called when updating a stroke on the `SfSignaturePad` and the `onDrawEnd` callback will be called when the user completes signing on [`SfSignaturePad`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/SfSignaturePad.html).
+The widget allows to handle the [`onDrawStart`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/onDrawStart.html), [`onDraw`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/onDraw.html), and [`onDrawEnd`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/onDrawEnd.html) callbacks for every strokes updated to the SignaturePad. The [`onDrawStart`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/onDrawStart.html) callback will be called when the user starts signing on `SfSignaturePad`, the [`onDraw`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/onDraw.html) callback will be called when updating a stroke on the [`SfSignaturePad`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/SfSignaturePad.html) and the [`onDrawEnd`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/onDrawEnd.html) callback will be called when the user completes signing on [`SfSignaturePad`](https://pub.dev/documentation/syncfusion_flutter_signaturepad/latest/signaturepad/SfSignaturePad/SfSignaturePad.html).
 
 {% tabs %}
 {% highlight Dart %}
