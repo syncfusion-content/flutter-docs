@@ -26,11 +26,12 @@ Widget build(BuildContext context) {
     allowSwiping: true,
     swipeMaxOffset: 100.0,
     source: employeeDataSource,
-      startSwipeActionsBuilder: (BuildContext context, DataGridRow row) {
+      startSwipeActionsBuilder: 
+          (BuildContext context, DataGridRow row, int rowIndex) {
         return GestureDetector(
           onTap: () {
             _employeeDataSource.dataGridRows.insert(
-            _employeeDataSource.dataGridRows.indexOf(row),
+            rowIndex,
             DataGridRow(cells: [
               DataGridCell(value: 1011, columnName: 'id'),
               DataGridCell(value: 'Tom Bass', columnName: 'name'),
@@ -47,11 +48,11 @@ Widget build(BuildContext context) {
         ),
       );
     },
-    endSwipeActionsBuilder: (BuildContext context, DataGridRow row) {
+    endSwipeActionsBuilder: 
+        (BuildContext context, DataGridRow row, int rowIndex) {
       return GestureDetector(
         onTap: () {
-          _employeeDataSource.dataGridRows.removeAt(
-            _employeeDataSource.dataGridRows.indexOf(row));
+          _employeeDataSource.dataGridRows.removeAt(rowIndex);
           _employeeDataSource.updateDataSource();
         },
         child: Container(
@@ -140,11 +141,11 @@ Widget build(BuildContext context) {
       allowSwiping: true,
       swipeMaxOffset: constraints.maxWidth,
       source: employeeDataSource,
-      startSwipeActionsBuilder: (BuildContext context, DataGridRow row) {
+      startSwipeActionsBuilder: 
+          (BuildContext context, DataGridRow row, int rowIndex) {
         return GestureDetector(
           onTap: () {
-            _employeeDataSource.dataGridRows.removeAt(
-              _employeeDataSource.dataGridRows.indexOf(row));
+            _employeeDataSource.dataGridRows.removeAt(rowIndex);
             _employeeDataSource.updateDataSource();
           },
           child: Container(
