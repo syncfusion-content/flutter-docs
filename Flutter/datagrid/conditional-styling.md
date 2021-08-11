@@ -287,7 +287,7 @@ class EmployeeDataSource extends DataGridSource {
 
 ### Styling alternate rows
 
-The appearance of the alternating rows in `SfDataGrid` can be customized by using the `DataGridRowAdapter.color`. The updated rows collection are maintained in [effectiveRows](). You can use [effectiveRows]() collection to apply styling.
+The appearance of the alternating rows in `SfDataGrid` can be customized by using the `DataGridRowAdapter.color`. Use the [effectiveRows]() property to get the index of the row. This collection contains the sorted collection if the sorting is applied.
 
 {% tabs %}
 {% highlight Dart %} 
