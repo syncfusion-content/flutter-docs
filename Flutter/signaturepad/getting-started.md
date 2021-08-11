@@ -15,6 +15,11 @@ To get start quickly with our Flutter SignaturePad widget, you can check on this
 <style>#FlutterSignaturePadVideoTutorial{width : 90% !important; height: 300px !important }</style>
 <iframe id='FlutterSignaturePadVideoTutorial' src='https://www.youtube.com/embed/z2fx1Vg518Q'></iframe>
 
+To get start quickly with our Flutter SignaturePad widget, you can check on this video.
+
+<style>#FlutterSignaturePadVideoTutorial{width : 90% !important; height: 300px !important }</style>
+<iframe id='FlutterSignaturePadVideoTutorial' src='https://www.youtube.com/embed/z2fx1Vg518Q'></iframe>
+
 ## Add Flutter SignaturePad to an application
 Create a simple project using the instructions given in the [Getting Started with your first Flutter app](https://flutter.dev/docs/get-started/test-drive?tab=vscode#create-app) documentation.
 
