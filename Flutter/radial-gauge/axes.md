@@ -843,6 +843,7 @@ The [`onLabelCreated`](https://pub.dev/documentation/syncfusion_flutter_gauges/l
 * [`labelStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLabelCreatedArgs/labelStyle.html) – Customizes the label color, font style, font family, and font weight.
 * [`canRotate`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLabelCreatedArgs/canRotate.html) – Specifies whether to rotate the label based on its current angle.
 
+N> If both [`axisLabelStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/axisLabelStyle.html) property of radial axis and [`labelStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLabelCreatedArgs/labelStyle.html) property of the [`onLabelCreated`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/onLabelCreated.html) event args are set, the values of the [`labelStyle`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/AxisLabelCreatedArgs/labelStyle.html) property of the event args will take precedence.
 
 {% highlight dart %}
 
