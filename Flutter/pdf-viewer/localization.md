@@ -50,7 +50,7 @@ Widget build(BuildContext context) {
         title: Text('Syncfusion Flutter PDF Viewer'),
       ),
       body: SfPdfViewer.network(
-          'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf'),
+          'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf' ),
     ),
   );
 }
