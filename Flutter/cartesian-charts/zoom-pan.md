@@ -232,7 +232,7 @@ The [enableMouseWheelZooming](https://pub.dev/documentation/syncfusion_flutter_c
 
 ## Auto interval on zooming
 
-The [`enableAutoIntervalOnZooming`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/enableAutoIntervalOnZooming.html) property determines the update of axis interval based on the current visible range while zooming the chart. Default value of this property is true. If this property is false, the nice internal will not be calculated for new range after zoom in and actual interval will be sustained.
+The [`enableAutoIntervalOnZooming`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/enableAutoIntervalOnZooming.html) property determines the update of axis interval based on the current visible range while zooming and panning the chart. Default value of this property is true. If this property is false, the nice interval will not be calculated for new range after zoom in and actual interval will be sustained.
 
 {% highlight dart %} 
 
@@ -244,7 +244,7 @@ The [`enableAutoIntervalOnZooming`](https://pub.dev/documentation/syncfusion_flu
             child: Container(
               child: SfCartesianChart(
                 primaryXAxis: DateTimeAxis(
-                  // Intervals will be fixed, not calculated automatically based on the visible range on zooming
+                  // Intervals will be fixed, not calculated automatically based on the visible range on zooming and panning
                   enableAutoIntervalOnZooming: false
                 )
               )
