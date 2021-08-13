@@ -26,6 +26,13 @@ To render a stacked column chart, create an instance of [`StackedColumnSeries`](
     
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+          ChartData('China', 12, 10, 14, 20),
+          ChartData('USA', 14, 11, 18, 23),
+          ChartData('UK', 16, 10, 15, 20),
+          ChartData('Brazil', 18, 16, 18, 24)
+        ];
+
          return Scaffold(
             body: Center(
                 child: Container(
@@ -57,6 +64,15 @@ To render a stacked column chart, create an instance of [`StackedColumnSeries`](
                 )   
             )
         );
+    }
+
+    class ChartData{
+        ChartData(this.x, this.y1, this.y2, this.y3, this.y4);
+        final String x;
+        final String y1;
+        final String y2;
+        final String y3;
+        final String y4;
     }
 
 {% endhighlight %}
@@ -106,6 +122,15 @@ You can group and stack the similar stacked series types using the [`groupName`]
                 )   
             )
         );
+    }
+
+    class ChartData{
+        ChartData(this.x, this.y1, this.y2, this.y3, this.y4);
+        final String x;
+        final String y1;
+        final String y2;
+        final String y3;
+        final String y4;
     }
 
 {% endhighlight %}
@@ -159,6 +184,15 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
                 )   
             )
         );
+    }
+
+    class ChartData{
+        ChartData(this.x, this.y1, this.y2, this.y3, this.y4);
+        final String x;
+        final String y1;
+        final String y2;
+        final String y3;
+        final String y4;
     }
 
 {% endhighlight %}
