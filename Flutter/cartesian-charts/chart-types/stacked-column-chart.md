@@ -59,6 +59,15 @@ To render a stacked column chart, create an instance of [`StackedColumnSeries`](
         );
     }
 
+    class ChartData{
+        ChartData(this.x, this.y1, this.y2, this.y3, this.y4);
+        final String x;
+        final String y1;
+        final String y2;
+        final String y3;
+        final String y4;
+    }
+
 {% endhighlight %}
 
 ![Stacked column](cartesian-chart-types-images/stacked_column.jpg)
@@ -106,6 +115,15 @@ You can group and stack the similar stacked series types using the [`groupName`]
                 )   
             )
         );
+    }
+
+    class ChartData{
+        ChartData(this.x, this.y1, this.y2, this.y3, this.y4);
+        final String x;
+        final String y1;
+        final String y2;
+        final String y3;
+        final String y4;
     }
 
 {% endhighlight %}
@@ -159,6 +177,15 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
                 )   
             )
         );
+    }
+
+    class ChartData{
+        ChartData(this.x, this.y1, this.y2, this.y3, this.y4);
+        final String x;
+        final String y1;
+        final String y2;
+        final String y3;
+        final String y4;
     }
 
 {% endhighlight %}
