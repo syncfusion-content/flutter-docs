@@ -551,7 +551,7 @@ N> The above mentioned properties are only applicable for SfCartesian types of c
             child: Container(
               child: SfCartesianChart(
                 primaryXAxis: NumericAxis(
-                  crosshairTooltip: InteractiveTooltip(
+                  interactiveTooltip: InteractiveTooltip(
                     // Enables the crosshair tooltip
                     enable: true
                   )
