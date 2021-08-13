@@ -26,6 +26,13 @@ To render a stacked column chart, create an instance of [`StackedColumnSeries`](
     
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+          ChartData('China', 12, 10, 14, 20),
+          ChartData('USA', 14, 11, 18, 23),
+          ChartData('UK', 16, 10, 15, 20),
+          ChartData('Brazil', 18, 16, 18, 24)
+        ];
+
          return Scaffold(
             body: Center(
                 child: Container(
