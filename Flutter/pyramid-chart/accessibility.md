@@ -11,7 +11,7 @@ documentation: ug
 
 ## Sufficient contrast
 
-The `SfPyramidChart` [theming](https://help.syncfusion.com/flutter/themes/themes) support offers a consistent and standardized look, as well as the ability to set the colors for all UI elements.
+The `SfPyramidChart` [theming](https://help.syncfusion.com/flutter/themes) support offers a consistent and standardized look, as well as the ability to set the colors for all UI elements.
 
 The customization the colors can be done for the following chart elements.
 * [Chart title](https://help.syncfusion.com/flutter/pyramid-chart/chart-title)
@@ -35,6 +35,6 @@ The `SfPyramidChart` font size can be adjusted automatically based on device set
 ## Easily tappable targets
 
 The `SfPyramidChart` Provides callback support to notify when tapping on the essential elements in the chart.
-* [Data points](https://help.syncfusion.com/flutter/pyramid-chart/callbacks#onpointtapped)
+* [Data points](https://help.syncfusion.com/flutter/pyramid-chart/callbacks#onpointtap)
 * [Data labels](https://help.syncfusion.com/flutter/pyramid-chart/callbacks#ondatalabeltapped)
 * [Legend](https://help.syncfusion.com/flutter/pyramid-chart/callbacks#onlegendtapped)
