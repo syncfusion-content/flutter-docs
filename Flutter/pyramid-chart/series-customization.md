@@ -43,26 +43,30 @@ The data points that has null value are considered as empty points. Empty data p
 
     @override
     Widget build(BuildContext context) {
-        
-         final List<ChartData> chartData = [
-            ChartData('David', null),
-            ChartData('Steve', 38),
-            ChartData('Jack', 34),
-            ChartData('Others', 52)
-        ];
-        return Scaffold(
-            body: Center(
-                child: SfPyramidChart(
-                    series:PyramidSeries<ChartData, String>(
-                        dataSource: chartData,
-                        dataLabelSettings: DataLabelSettings(isVisible:true),
-                        emptyPointSettings: EmptyPointSettings(mode: EmptyPointMode.average),
-                        xValueMapper: (ChartData data, _) => data.x,
-                        yValueMapper: (ChartData data, _) => data.y
-                    )
-                )
-            )
-        );
+    final List<ChartData> chartData = [
+      ChartData('David', null),
+      ChartData('Steve', 38),
+      ChartData('Jack', 34),
+      ChartData('Others', 52)
+    ];
+    return Scaffold(
+        body: Center(
+            child: SfPyramidChart(
+                series: PyramidSeries<ChartData, String>(
+                    dataSource: chartData,
+                    dataLabelSettings: DataLabelSettings(isVisible: true),
+                    emptyPointSettings:
+                        EmptyPointSettings(mode: EmptyPointMode.average),
+                    xValueMapper: (ChartData data, _) => data.x,
+                    yValueMapper: (ChartData data, _) => data.y))));
+        }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.color]);
+    final String x;
+    final double? y;
+    final Color? color;
     }
 
 {% endhighlight %}
@@ -77,30 +81,34 @@ Specific color for empty point can be set by [`color`](https://pub.dev/documenta
 
     @override
     Widget build(BuildContext context) {
-        final List<ChartData> chartData = [
-        ChartData('David', null),
-        ChartData('Steve', 38),
-        ChartData('Jack', 34),
-        ChartData('Others', 52)
-        ];
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfPyramidChart(
-                        series:PyramidSeries<ChartData, String>(
-                            dataSource: chartData,
-                            dataLabelSettings: DataLabelSettings(isVisible:true),
-                            emptyPointSettings: EmptyPointSettings(mode: EmptyPointMode.average,
+    final List<ChartData> chartData = [
+      ChartData('David', null),
+      ChartData('Steve', 38),
+      ChartData('Jack', 34),
+      ChartData('Others', 52)
+    ];
+    return Scaffold(
+        body: Center(
+            child: Container(
+                child: SfPyramidChart(
+                    series: PyramidSeries<ChartData, String>(
+                        dataSource: chartData,
+                        dataLabelSettings: DataLabelSettings(isVisible: true),
+                        emptyPointSettings: EmptyPointSettings(
+                            mode: EmptyPointMode.average,
                             color: Colors.red,
                             borderColor: Colors.black,
                             borderWidth: 2),
-                            xValueMapper: (ChartData data, _) => data.x,
-                            yValueMapper: (ChartData data, _) => data.y
-                        )
-                    )
-                )
-            )
-        );
+                        xValueMapper: (ChartData data, _) => data.x,
+                        yValueMapper: (ChartData data, _) => data.y)))));
+        }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.color]);
+    final String x;
+    final double? y;
+    final Color? color;
     }
 
 {% endhighlight %}
@@ -115,28 +123,32 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
 
     @override
     Widget build(BuildContext context) {
-            static List<SalesData> chartData = <ChartData>[
-                ChartData('Rent', 1000,Colors.teal),
-                ChartData('Food', 2500,Colors.lightBlue),
-                ChartData('Savings', 760,Colors.brown),
-                ChartData('Tax', 1897,Colors.grey),
-                ChartData('Others', 2987,Colors.blueGrey)
-            ];
-            return Scaffold(
-                body: Center(
-                    child: Container(
-                        child: SfPyramidChart(
-                        series:PyramidSeries<ChartData, String>(
-                            dataSource: chartData,
-                            xValueMapper: (ChartData data, _) => data.x,
-                            yValueMapper: (ChartData data, _) => data.y,
-                            //map Color for each dataPoint datasource.
-                            pointColorMapper: (ChartData sales,_) => sales.color,
-                        )
-                    )
-                )
-            )
-        );
+    final List<ChartData> chartData = <ChartData>[
+      ChartData('Rent', 1000, Colors.yellow),
+      ChartData('Food', 2500, Colors.brown),
+      ChartData('Savings', 760, Colors.green),
+      ChartData('Tax', 1897, Colors.redAccent),
+      ChartData('Others', 2987, Colors.lightBlueAccent)
+    ];
+    return Scaffold(
+        body: Center(
+            child: Container(
+                child: SfPyramidChart(
+                    series: PyramidSeries<ChartData, String>(
+      dataSource: chartData,
+      xValueMapper: (ChartData data, _) => data.x,
+      yValueMapper: (ChartData data, _) => data.y,
+      //map Color for each dataPoint datasource.
+      pointColorMapper: (ChartData sales, _) => sales.color,
+    )))));
+    }
+    }
+
+    class ChartData {
+     ChartData(this.x, this.y, [this.color]);
+    final String x;
+    final double? y;
+    final Color? color;
     }
 
 {% endhighlight %}

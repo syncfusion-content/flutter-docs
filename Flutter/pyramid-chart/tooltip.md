@@ -16,27 +16,37 @@ Chart provides tooltip support for all the series. It is used to show informatio
     late TooltipBehavior _tooltipBehavior;
 
     @override
-    void initState(){
-        _tooltipBehavior = TooltipBehavior(enable: true);
-      super.initState();
+    initState() {
+    _tooltipBehavior = TooltipBehavior(enable: true);
+    super.initState();
     }
+
+    final List<ChartData> chartData = [
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('Mar', 34),
+    ChartData('Apr', 32),
+    ChartData('May', 40)
+    ];
 
     @override
     Widget build(BuildContext context) {
-      return Scaffold(
+    return Scaffold(
         body: Center(
-          child: Container(
-            child: SfPyramidChart(
-              tooltipBehavior: _tooltipBehavior,
-              series: PyramidSeries<SalesData, String>(
-                  dataSource: chartData,
-                  xValueMapper: (SalesData sales, _) =>   sales.year,
-                  yValueMapper: (SalesData sales, _) => sales.sales
-                )
-            )
-          )
-        )
-      );
+            child: Container(
+                child: SfPyramidChart(
+                    tooltipBehavior: _tooltipBehavior,
+                    series: PyramidSeries<ChartData, String>(
+                        dataSource: chartData,
+                        xValueMapper: (ChartData sales, _) => sales.x,
+                        yValueMapper: (ChartData sales, _) => sales.y)))));
+      }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y);
+    final String x;
+    final double? y;
     }
 
 {% endhighlight %}
@@ -69,29 +79,41 @@ You can use the following properties to customize the tooltip appearance.
     late TooltipBehavior _tooltipBehavior;
 
     @override
-    void initState(){
-        _tooltipBehavior = TooltipBehavior(
-                enable: true,
-                borderColor: Colors.red,
-                borderWidth: 2,
-                color: Colors.lightBlue
-              );
-        super.initState();
+    void initState() {
+    _tooltipBehavior = TooltipBehavior(
+        enable: true,
+        borderColor: Colors.red,
+        borderWidth: 2,
+        color: Colors.lightBlue);
+    super.initState();
     }
+
+    final List<ChartData> chartData = [
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('Mar', 34),
+    ChartData('Apr', 32),
+    ChartData('May', 40)
+    ];
 
     @override
     Widget build(BuildContext context) {
-      return Scaffold(
+    return Scaffold(
         body: Center(
-          child: Container(
-            height: 350,
-            width: 350,
-            child: SfPyramidChart(
-              tooltipBehavior: _tooltipBehavior,
-            )
-          )
-        )
-      );
+            child: Container(
+                child: SfPyramidChart(
+                    tooltipBehavior: _tooltipBehavior,
+                    series: PyramidSeries<ChartData, String>(
+                        dataSource: chartData,
+                        xValueMapper: (ChartData sales, _) => sales.x,
+                        yValueMapper: (ChartData sales, _) => sales.y)))));
+      }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y);
+    final String x;
+    final double? y;
     }
 
 {% endhighlight %}
@@ -112,26 +134,40 @@ By default, x and y value will be displayed in the tooltip, and it can be custom
     late TooltipBehavior _tooltipBehavior;
 
     @override
-    void initState(){
-        _tooltipBehavior =  TooltipBehavior(
-                enable: true, 
-                // Formatting the tooltip text
-                format: 'point.y%'
-              );
-        super.initState();
+    void initState() {
+    _tooltipBehavior = TooltipBehavior(
+        enable: true,
+        // Formatting the tooltip text
+        format: 'point.y%');
+    super.initState();
     }
+
+    final List<ChartData> chartData = [
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('Mar', 34),
+    ChartData('Apr', 32),
+    ChartData('May', 40)
+    ];
 
     @override
     Widget build(BuildContext context) {
-      return Scaffold(
+    return Scaffold(
         body: Center(
-          child: Container(
-            child: SfPyramidChart(
-              tooltipBehavior: _tooltipBehavior
-            )
-          )
-        )
-      );
+            child: Container(
+                child: SfPyramidChart(
+                    tooltipBehavior: _tooltipBehavior,
+                    series: PyramidSeries<ChartData, String>(
+                        dataSource: chartData,
+                        xValueMapper: (ChartData sales, _) => sales.x,
+                        yValueMapper: (ChartData sales, _) => sales.y)))));
+      }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y);
+    final String x;
+    final double? y;
     }
 
 {% endhighlight %}
@@ -140,32 +176,45 @@ By default, x and y value will be displayed in the tooltip, and it can be custom
 
 ## Tooltip positioning
 
-The tooltip can be made to display in the fixed location or at the pointer location itself using the `tooltipPosition` property. This defaults to `auto`.
+The tooltip can be made to display in the fixed location or at the pointer location itself using the [`tooltipPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/tooltipPosition.html) property. This defaults to [`auto`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipPosition-class.html).
 
 {% highlight dart %} 
     
     late TooltipBehavior _tooltipBehavior;
 
     @override
-    void initState(){
-        _tooltipBehavior = TooltipBehavior(
-                enable: true, 
-                tooltipPosition: TooltipPosition.pointer
-              );
-        super.initState();
+    void initState() {
+    _tooltipBehavior =
+        TooltipBehavior(enable: true, tooltipPosition: TooltipPosition.pointer);
+    super.initState();
     }
+
+    final List<ChartData> chartData = [
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('Mar', 34),
+    ChartData('Apr', 32),
+    ChartData('May', 40)
+    ];
 
     @override
     Widget build(BuildContext context) {
-      return Scaffold(
+    return Scaffold(
         body: Center(
-          child: Container(
-            child: SfPyramidChart(
-              tooltipBehavior: _tooltipBehavior
-            )
-          )
-        )
-      );
+            child: Container(
+                child: SfPyramidChart(
+                    tooltipBehavior: _tooltipBehavior,
+                    series: PyramidSeries<ChartData, String>(
+                        dataSource: chartData,
+                        xValueMapper: (ChartData sales, _) => sales.x,
+                        yValueMapper: (ChartData sales, _) => sales.y)))));
+      }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y);
+    final String x;
+    final double? y;
     }
 
 {% endhighlight %}
@@ -181,33 +230,43 @@ You can customize the appearance of the tooltip with your own widget by using th
     late TooltipBehavior _tooltipBehavior;
 
     @override
-    void initState(){
-        _tooltipBehavior = TooltipBehavior(
-                enable: true,
-                // Templating the tooltip
-                builder: (dynamic data, dynamic point, dynamic series,
-                int pointIndex, int seriesIndex) {
-                  return Container(
-                    child: Text(
-                      'Point Y : ${point.y.toString()}'
-                    )
-                  );
-                }
-              );
-        super.initState();
+    void initState() {
+    _tooltipBehavior = TooltipBehavior(
+        enable: true,
+        // Templating the tooltip
+        builder: (dynamic data, dynamic point, dynamic series, int pointIndex,
+            int seriesIndex) {
+          return Container(child: Text('Point Y : ${point.y.toString()}'));
+        });
+    super.initState();
     }
+
+    final List<ChartData> chartData = [
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('Mar', 34),
+    ChartData('Apr', 32),
+    ChartData('May', 40)
+    ];
 
     @override
     Widget build(BuildContext context) {
-      return Scaffold(
+    return Scaffold(
         body: Center(
-          child: Container(
-            child: SfPyramidChart(
-              tooltipBehavior: _tooltipBehavior
-            )
-          )
-        )
-      );
+            child: Container(
+                child: SfPyramidChart(
+                    tooltipBehavior: _tooltipBehavior,
+                    series: PyramidSeries<ChartData, String>(
+                        dataSource: chartData,
+                        xValueMapper: (ChartData sales, _) => sales.x,
+                        yValueMapper: (ChartData sales, _) => sales.y)))));
+      }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y);
+    final String x;
+    final double? y;
     }
 
 {% endhighlight %}
@@ -228,30 +287,45 @@ The ActivationMode enum contains the following values:
 {% highlight dart %} 
     
     late TooltipBehavior _tooltipBehavior;
-    
+
     @override
-    void initState(){
-        _tooltipBehavior = TooltipBehavior(
-                enable: true,
-                // Tooltip will be displayed on long press
-                activationMode: ActivationMode.longPress
-              );
-        super.initState();
+    void initState() {
+    _tooltipBehavior = TooltipBehavior(
+        enable: true,
+        // Tooltip will be displayed on long press
+        activationMode: ActivationMode.longPress);
+    super.initState();
     }
+
+    final List<ChartData> chartData = [
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('Mar', 34),
+    ChartData('Apr', 32),
+    ChartData('May', 40)
+    ];
 
     @override
     Widget build(BuildContext context) {
-      return Scaffold(
+    return Scaffold(
         body: Center(
-          child: Container(
-            child: SfPyramidChart(
-              tooltipBehavior: _tooltipBehavior
-            )
-          )
-        )
-      );
+            child: Container(
+                child: SfPyramidChart(
+                    tooltipBehavior: _tooltipBehavior,
+                    series: PyramidSeries<ChartData, String>(
+                        dataSource: chartData,
+                        xValueMapper: (ChartData sales, _) => sales.x,
+                        yValueMapper: (ChartData sales, _) => sales.y)))));
+      }
     }
+
+    class ChartData {
+    ChartData(this.x, this.y);
+    final String x;
+    final double? y;
+    }
+
 
 {% endhighlight %}
 
-Also refer [tooltip event](./events#ontooltiprender) for customizing the tooltip further.
+Also refer [`tooltip event`](https://help.syncfusion.com/flutter/pyramid-chart/callbacks#ontooltiprender) for customizing the tooltip further.
