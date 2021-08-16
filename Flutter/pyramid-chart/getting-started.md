@@ -109,7 +109,7 @@ Based on your data, initialize the series type. In the series, you need to map t
       ChartData(this.x, this.y, [this.color]);
         final String x;
         final double y;
-        final Color color;
+        final Color? color;
     }
 
 {% endhighlight %}
@@ -124,6 +124,12 @@ You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData('David', 25),
+            ChartData('Steve', 38),
+            ChartData('Jack', 34),
+            ChartData('Others', 52)
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
@@ -141,6 +147,12 @@ You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/
         );
     }
 
+    class ChartData {
+      ChartData(this.x, this.y);
+        final String x;
+        final double y;
+    }
+
 {% endhighlight %}
 
 ![Title to chart](images/getting-started/title_chart.png)
@@ -153,22 +165,43 @@ You can add data labels to improve the readability of the chart using the [`data
 
     @override
     Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfPyramidChart(
-                      series:PyramidSeries<ChartData, String>(
-                            dataSource: chartData,
-                            xValueMapper: (ChartData data, _) => data.x,
-                            yValueMapper: (ChartData data, _) => data.y,
-                            // Render the data label
-                            dataLabelSettings:DataLabelSettings(isVisible : true)
-                        )
-                    )
-                )
-            )
-        );
+    final List<ChartData> chartData = [
+      ChartData('David', 35),
+      ChartData('Steve', 28),
+      ChartData('Jack', 34),
+      ChartData('Others', 32),
+      ChartData('Maclin', 40)
+    ];
+    return Scaffold(
+        body: Center(
+            child: Container(
+                child: SfPyramidChart(
+                    // Chart title text
+                    title: ChartTitle(text: 'Half yearly sales analysis'),
+                    series: PyramidSeries<ChartData, String>(
+                        dataSource: chartData,
+                        xValueMapper: (ChartData data, _) => data.x,
+                        yValueMapper: (ChartData data, _) => data.y,
+                        // Render the data label
+                        dataLabelSettings:
+                            DataLabelSettings(isVisible: true))))));
+        }
+    } 
+
+    class ChartData {
+    ChartData(this.x, this.y);
+    final String x;
+    final double y;
     }
+
+
+class ChartData {
+  ChartData(this.x, this.y, [this.color]);
+  final String x;
+  final double y;
+  final Color? color;
+}
+
 
 {% endhighlight %}
 
@@ -184,22 +217,37 @@ You can use legend in chart by setting the [`isVisible`](https://pub.dev/documen
 
     @override
     Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfPyramidChart(
-                      // Enables the legend
-                      legend: Legend(isVisible: true), 
-                      series:PyramidSeries<ChartData, String>(
-                            dataSource: chartData,
-                            xValueMapper: (ChartData data, _) => data.x,
-                            yValueMapper: (ChartData data, _) => data.y,
-                        )
-                    )
-                )      
-            )
-        );
+    final List<ChartData> chartData = [
+      ChartData('David', 35),
+      ChartData('Steve', 28),
+      ChartData('Jack', 34),
+      ChartData('Rens', 32),
+      ChartData('Others', 40)
+    ];
+    return Scaffold(
+        body: Center(
+            child: Container(
+                child: SfPyramidChart(
+                    // Chart title text
+                    title: ChartTitle(text: 'Half yearly sales analysis'),
+                    // Enables the legend
+                    legend: Legend(isVisible: true),
+                    series: PyramidSeries<ChartData, String>(
+                        dataSource: chartData,
+                        xValueMapper: (ChartData data, _) => data.x,
+                        yValueMapper: (ChartData data, _) => data.y,
+                        // Render the data label
+                        dataLabelSettings:
+                            DataLabelSettings(isVisible: true))))));
+        }
     }
+
+    class ChartData {
+    ChartData(this.x, this.y);
+    final String x;
+    final double y;
+    }
+
 
 {% endhighlight %}
 
@@ -220,28 +268,41 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
         _tooltipBehavior = TooltipBehavior(enable: true);
         super.initState();
     }
-
     @override
     Widget build(BuildContext context) {
-        return Scaffold(
-            appBar: AppBar(
-                title: Text(widget.title),
-            ),
-            body: Center(
-                child: Container(
-                    child: SfPyramidChart(
+    final List<ChartData> chartData = [
+      ChartData('David', 35),
+      ChartData('Steve', 28),
+      ChartData('Jack', 34),
+      ChartData('Rens', 32),
+      ChartData('Others', 40)
+    ];
+    return Scaffold(
+        body: Center(
+            child: Container(
+                child: SfPyramidChart(
                       // Enables the tooltip for all the series in chart
                         tooltipBehavior: _tooltipBehavior,
-                        series:PyramidSeries<ChartData, String>(
-                            dataSource: chartData,
-                            xValueMapper: (ChartData data, _) => data.x,
-                            yValueMapper: (ChartData data, _) => data.y,
-                        )
-                    )
-                )
-            )
-        );
+                    // Chart title text
+                    title: ChartTitle(text: 'Half yearly sales analysis'),
+                    // Enables the legend
+                    legend: Legend(isVisible: true),
+                    series: PyramidSeries<ChartData, String>(
+                        dataSource: chartData,
+                        xValueMapper: (ChartData data, _) => data.x,
+                        yValueMapper: (ChartData data, _) => data.y,
+                        // Render the data label
+                        dataLabelSettings:
+                            DataLabelSettings(isVisible: true))))));
+        }
     }
+
+    class ChartData {
+    ChartData(this.x, this.y);
+     String x;
+    final double y;
+    }
+
 
 {% endhighlight %}
 

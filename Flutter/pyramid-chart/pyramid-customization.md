@@ -45,7 +45,7 @@ To render a pyramid chart, create an instance of [`PyramidSeries`](https://pub.d
         ChartData(this.x, this.y, [this.color]);
             final String x;
             final double y;
-            final Color color;
+            final Color? color;
     }
 
 {% endhighlight %}
@@ -60,18 +60,32 @@ You can render the pyramid series as [`linear`](https://pub.dev/documentation/sy
 
     @override
     Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfPyramidChart(
-                        series: PyramidSeries<ChartData, String>(
-                            pyramidMode: PyramidMode.surface
-                        )
-                    )
-                )
-            )
-        );
+    return Scaffold(
+        body: Center(
+            child: Container(
+                child: SfPyramidChart(
+                    series: PyramidSeries<ChartData, String>(
+                        dataSource: [
+          ChartData('Walnuts', 654),
+          ChartData('Almonds', 575),
+          ChartData('Soybeans', 446),
+          ChartData('Black beans', 341),
+          ChartData('Mushrooms', 296),
+          ChartData('Avacado', 160),
+        ],
+                        pyramidMode: PyramidMode.surface,
+                        xValueMapper: (ChartData data, _) => data.x,
+                        yValueMapper: (ChartData data, _) => data.y)))));
+        }
     }
+
+    class ChartData {
+    (this.x, this.y, [this.color]);
+    final String x;
+    final double y;
+    final Color? color;
+    }
+
 
 {% endhighlight %}
 
@@ -85,19 +99,33 @@ You can modify the size of pyramid series using the [`height`](https://pub.dev/d
 
     @override
     Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfPyramidChart(
-                        series: PyramidSeries<ChartData, String>(
-                            height: '50%',
-                            width: '50%',
-                        )
-                    )
-                )
-            )
-        );
+    return Scaffold(
+        body: Center(
+            child: Container(
+                child: SfPyramidChart(
+                    series: PyramidSeries<ChartData, String>(
+                        dataSource: [
+          ChartData('Walnuts', 654),
+          ChartData('Almonds', 575),
+          ChartData('Soybeans', 446),
+          ChartData('Black beans', 341),
+          ChartData('Mushrooms', 296),
+          ChartData('Avacado', 160),
+        ],
+                        height: '50%',
+                        width: '50%',
+                        xValueMapper: (ChartData data, _) => data.x,
+                        yValueMapper: (ChartData data, _) => data.y)))));
+        }
     }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.color]);
+    final String x;
+    final double y;
+    final Color? color;
+    }
+
 
 {% endhighlight %}
 
@@ -111,18 +139,32 @@ You can control the gap between the two segments using the [`gapRatio`](https://
 
     @override
     Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfPyramidChart(
-                        series: PyramidSeries<ChartData, String>(
-                            gapRatio: 0.1,
-                        )
-                    )
-                )
-            )
-        );
+    return Scaffold(
+        body: Center(
+            child: Container(
+                child: SfPyramidChart(
+                    series: PyramidSeries<ChartData, String>(
+                        dataSource: [
+          ChartData('Walnuts', 654),
+          ChartData('Almonds', 575),
+          ChartData('Soybeans', 446),
+          ChartData('Black beans', 341),
+          ChartData('Mushrooms', 296),
+          ChartData('Avacado', 160),
+        ],
+                        gapRatio: 0.1,
+                        xValueMapper: (ChartData data, _) => data.x,
+                        yValueMapper: (ChartData data, _) => data.y)))));
+        }
     }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.color]);
+    final String x;
+    final double y;
+    final Color? color;
+    }
+
 
 {% endhighlight %}
 
@@ -138,19 +180,32 @@ Also, the segments can be exploded by tapping the segment.
 
     @override
     Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfPyramidChart(
-                        series: PyramidSeries<ChartData, String>(
-                            explode: true,
-                            explodeOffset: '5%',
-                            explodeIndex: 2,
-                        )
-                    )
-                )
-            )
-        );
+    return Scaffold(
+        body: Center(
+            child: Container(
+                child: SfPyramidChart(
+                    series: PyramidSeries<ChartData, String>(
+                        dataSource: [
+          ChartData('Walnuts', 654),
+          ChartData('Almonds', 575),
+          ChartData('Soybeans', 446),
+          ChartData('Black beans', 341),
+          ChartData('Mushrooms', 296),
+          ChartData('Avacado', 160),
+        ],
+                        explode: true,
+                        explodeOffset: '5%',
+                        explodeIndex: 2,
+                        xValueMapper: (ChartData data, _) => data.x,
+                        yValueMapper: (ChartData data, _) => data.y)))));
+        }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.color]);
+    final String x;
+    final double y;
+    final Color? color;
     }
 
 {% endhighlight %}
@@ -169,22 +224,34 @@ The [`smartLabelMode`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
     @override
     Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfPyramidChart(
-                        smartLabelMode: SmartLabelMode.shift,
-                        series: PyramidSeries<ChartData, String>(
-                            dataLabelSettings: DataLabelSettings(
-                                isVisible: true, 
-                                labelPosition: LabelPosition.inside
-                            ),
-                        )
-                    )
-                )
-            )
-        );
+    return Scaffold(
+        body: Center(
+            child: Container(
+                child: SfPyramidChart(
+                    series: PyramidSeries<ChartData, String>(
+                        dataSource: [
+          ChartData('Walnuts', 654),
+          ChartData('Almonds', 575),
+          ChartData('Soybeans', 446),
+          ChartData('Black beans', 341),
+          ChartData('Mushrooms', 296),
+          ChartData('Avacado', 160),
+        ],
+                        dataLabelSettings: DataLabelSettings(
+                            isVisible: true,
+                            labelPosition: ChartDataLabelPosition.outside),
+                        xValueMapper: (ChartData data, _) => data.x,
+                        yValueMapper: (ChartData data, _) => data.y)))));
+        }
     }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.color]);
+    final String x;
+    final double y;
+    final Color? color;
+    }
+
 
 {% endhighlight %}
 
