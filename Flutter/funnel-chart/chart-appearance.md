@@ -79,7 +79,7 @@ You can customize the area of the chart using the below properties.
               width: 350, 
               child: SfFunnelChart(
                 backgroundColor: Colors.lightGreen,
-                backgroundImage: 'images/livechart.png',
+                backgroundImage: const AssetImage('images/livechart.png'),
               )
             )
           )

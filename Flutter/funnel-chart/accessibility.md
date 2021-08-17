@@ -11,7 +11,7 @@ documentation: ug
 
 ## Sufficient contrast
 
-The `SfFunnelChart` [theming](https://help.syncfusion.com/flutter/themes/themes) support offers a consistent and standardized look, as well as the ability to set the colors for all UI elements.
+The `SfFunnelChart` [`theming`](https://help.syncfusion.com/flutter/themes) support offers a consistent and standardized look, as well as the ability to set the colors for all UI elements.
 
 The customization the colors can be done for the following chart elements.
 * [Chart title](https://help.syncfusion.com/flutter/funnel-chart/chart-title)
@@ -25,7 +25,7 @@ The customization the colors can be done for the following chart elements.
 
 ## Large fonts
 
-The `SfCFunnelChart` font size can be adjusted automatically based on device settings and the font size scaled based on the `MediaQueryData.textScaleFactor`. And also it allows to change the font size of all elements in Funnel chart.
+The `SfFunnelChart` font size can be adjusted automatically based on device settings and the font size scaled based on the `MediaQueryData.textScaleFactor`. And also it allows to change the font size of all elements in Funnel chart.
 * [Chart title](https://help.syncfusion.com/flutter/funnel-chart/chart-title)
 * [Data label](https://help.syncfusion.com/flutter/funnel-chart/datalabel)
 * [Legend title](https://help.syncfusion.com/flutter/funnel-chart/legend#legend-title)
@@ -35,6 +35,6 @@ The `SfCFunnelChart` font size can be adjusted automatically based on device set
 ## Easily tappable targets
 
 The `SfFunnelChart` Provides callback support to notify when tapping on the essential elements in the chart.
-* [Data points](https://help.syncfusion.com/flutter/funnel-chart/callbacks#onpointtapped)
+* [Data points](https://help.syncfusion.com/flutter/funnel-chart/callbacks#onpointtap)
 * [Data labels](https://help.syncfusion.com/flutter/funnel-chart/callbacks#ondatalabeltapped)
 * [Legend](https://help.syncfusion.com/flutter/funnel-chart/callbacks#onlegendtapped)

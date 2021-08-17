@@ -13,22 +13,36 @@ The [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
 
 {% highlight dart %} 
 
-      @override
-      Widget build(BuildContext context) {
-        return Scaffold(
-          body: Center(
+    final List<ChartData> chartData = [
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('Mar', 34),
+    ChartData('Apr', 32),
+    ChartData('May', 40)
+    ];
+    @override
+    Widget build(BuildContext context) {
+    return Scaffold(
+        body: Center(
             child: Container(
-              child: SfFunnelChart(
-              legend: Legend(isVisible: true),
-              series: FunnelSeries<SalesData, String>(
-                    dataSource:chartData,
-                    xValueMapper: (SalesData sales, _) =>   sales.year,
-                    yValueMapper: (SalesData sales, _) => sales.sales
+                child: SfFunnelChart(
+                    legend: Legend(isVisible: true),
+                    series: FunnelSeries<ChartData, String>(
+                        dataSource: chartData,
+                        xValueMapper: (ChartData sales, _) => sales.x,
+                        yValueMapper: (ChartData sales, _) => sales.y)
+                      )
+                    )
                   )
-              )
-            )
-          )
-        );
+                );
+              }
+            }
+
+      class ChartData {
+      ChartData(this.x, this.y, [this.color]);
+      final String x;
+      final double? y;
+      final Color? color;
       }
 
 {% endhighlight %}
@@ -51,28 +65,41 @@ The [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
 {% highlight dart %} 
 
-      @override
-      Widget build(BuildContext context) {
-        return Scaffold(
-          appBar: AppBar(actions: <Widget>[Text('')],),
-          body: Center(
+      final List<ChartData> chartData = [
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('Mar', 34),
+    ChartData('Apr', 32),
+    ChartData('May', 40)
+    ];
+    @override
+    Widget build(BuildContext context) {
+    return Scaffold(
+        body: Center(
             child: Container(
-              child: SfFunnelChart(
-              legend: Legend(isVisible: true,
-              // Border color and border width of legend
-                borderColor: Colors.black,
-                borderWidth: 2
-              ),
-              series: FunnelSeries<SalesData, String>(
-                    dataSource:chartData,
-                    xValueMapper: (SalesData sales, _) =>   sales.year,
-                    yValueMapper: (SalesData sales, _) => sales.sales
+                child: SfFunnelChart(
+                    legend: Legend(
+                        isVisible:
+                            true, // Border color and border width of legend
+                        borderColor: Colors.black,
+                        borderWidth: 2),
+                    series: FunnelSeries<ChartData, String>(
+                        dataSource: chartData,
+                        xValueMapper: (ChartData sales, _) => sales.x,
+                        yValueMapper: (ChartData sales, _) => sales.y)
+                      )
+                    )
                   )
-              )
-            )
-          )
-        );
-      }
+                );
+              }
+            }
+
+        class ChartData {
+        ChartData(this.x, this.y, [this.color]);
+        final String x;
+        final double? y;
+        final Color? color;
+        }
 
 {% endhighlight %}
 
@@ -92,33 +119,45 @@ The following properties can be used to define and customize the [`title`](https
 
 {% highlight dart %} 
 
-      @override
-      Widget build(BuildContext context) {
-        return Scaffold(
-          appBar: AppBar(actions: <Widget>[Text('')],),
-          body: Center(
+    final List<ChartData> chartData = [
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('Mar', 34),
+    ChartData('Apr', 32),
+    ChartData('May', 40)
+    ];
+    @override
+    Widget build(BuildContext context) {
+    return Scaffold(
+        body: Center(
             child: Container(
-              child: SfFunnelChart(
-              legend: Legend(isVisible: true,
-              title: LegendTitle(
-                      text:'Months',
-                      textStyle: TextStyle(
-                      color: Colors.red,
-                      fontSize: 15,
-                      fontStyle: FontStyle.italic,
-                      fontWeight: FontWeight.w900
+                child: SfFunnelChart(
+                    legend: Legend(
+                      isVisible: true,
+                      title: LegendTitle(
+                          text: 'Months',
+                          textStyle: TextStyle(
+                              color: Colors.red,
+                              fontSize: 15,
+                              fontStyle: FontStyle.italic,
+                              fontWeight: FontWeight.w900)),
+                    ),
+                    series: FunnelSeries<ChartData, String>(
+                        dataSource: chartData,
+                        xValueMapper: (ChartData sales, _) => sales.x,
+                        yValueMapper: (ChartData sales, _) => sales.y)
+                      )
                     )
-                  ),
-              ),
-              series: FunnelSeries<SalesData, String>(
-                    dataSource:chartData,
-                    xValueMapper: (SalesData sales, _) =>   sales.year,
-                    yValueMapper: (SalesData sales, _) => sales.sales
                   )
-              )
-            )
-          )
-        );
+                );
+              }
+          }
+
+      class ChartData {
+      ChartData(this.x, this.y, [this.color]);
+      final String x;
+      final double? y;
+      final Color? color;
       }
 
 {% endhighlight %}
@@ -131,26 +170,39 @@ You can control the visibility of the series by tapping the legend item. You can
 
 {% highlight dart %} 
 
-      @override
-      Widget build(BuildContext context) {
-        return Scaffold(
-          appBar: AppBar(actions: <Widget>[Text('')],),
-          body: Center(
+    final List<ChartData> chartData = [
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('Mar', 34),
+    ChartData('Apr', 32),
+    ChartData('May', 40)
+    ];
+    @override
+    Widget build(BuildContext context) {
+    return Scaffold(
+        body: Center(
             child: Container(
-              child: SfFunnelChart(
-              legend: Legend(isVisible: true,
-               // Toogles the series visibility on tapping the legend item
-                toggleSeriesVisibility: true
-              ),
-              series: FunnelSeries<SalesData, String>(
-                    dataSource:chartData,
-                    xValueMapper: (SalesData sales, _) =>   sales.year,
-                    yValueMapper: (SalesData sales, _) => sales.sales
+                child: SfFunnelChart(
+                    legend: Legend(
+                        isVisible: true,
+                        // Toggles the series visibility on tapping the legend item
+                        toggleSeriesVisibility: true),
+                    series: FunnelSeries<ChartData, String>(
+                        dataSource: chartData,
+                        xValueMapper: (ChartData sales, _) => sales.x,
+                        yValueMapper: (ChartData sales, _) => sales.y)
+                      )
+                    )
                   )
-              )
-            )
-          )
-        );
+                );
+              }
+          }
+
+      class ChartData {
+      ChartData(this.x, this.y, [this.color]);
+      final String x;
+      final double? y;
+      final Color? color;
       }
 
 {% endhighlight %}
@@ -161,26 +213,38 @@ The [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
 
 {% highlight dart %} 
 
-      @override
-      Widget build(BuildContext context) {
-        return Scaffold(
-          appBar: AppBar(actions: <Widget>[Text('')],),
-          body: Center(
+    final List<ChartData> chartData = [
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('Mar', 34),
+    ChartData('Apr', 32),
+    ChartData('May', 40)
+    ];
+    @override
+    Widget build(BuildContext context) {
+    return Scaffold(
+        body: Center(
             child: Container(
-              child: SfFunnelChart(
-              legend: Legend(
-                // Visibility of legend
-                isVisible: false
-              ),
-              series: FunnelSeries<SalesData, String>(
-                    dataSource:chartData,
-                    xValueMapper: (SalesData sales, _) =>   sales.year,
-                    yValueMapper: (SalesData sales, _) => sales.sales
+                child: SfFunnelChart(
+                    legend: Legend(
+                        // Visibility of legend
+                        isVisible: false),
+                    series: FunnelSeries<ChartData, String>(
+                        dataSource: chartData,
+                        xValueMapper: (ChartData sales, _) => sales.x,
+                        yValueMapper: (ChartData sales, _) => sales.y)
+                      )
+                    )
                   )
-              )
-            )
-          )
-        );
+                );
+              }
+          }
+
+      class ChartData {
+      ChartData(this.x, this.y, [this.color]);
+      final String x;
+      final double? y;
+      final Color? color;
       }
 
 {% endhighlight %}
@@ -191,27 +255,38 @@ The legend items can be placed in multiple rows or scroll can be enabled using t
 
 {% highlight dart %} 
 
-      @override
-      Widget build(BuildContext context) {
-        return Scaffold(
-          appBar: AppBar(actions: <Widget>[Text('')],),
-          body: Center(
+    final List<ChartData> chartData = [
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('Mar', 34),
+    ChartData('Apr', 32),
+    ChartData('May', 40)
+    ];
+    @override
+    Widget build(BuildContext context) {
+    return Scaffold(
+        body: Center(
             child: Container(
-              child: SfFunnelChart(
-              legend: Legend(
-                isVisible: true,
+                child: SfFunnelChart(
+                    legend: Legend(isVisible: true,
                 // Overflowing legend content will be wraped
-                overflowMode: LegendItemOverflowMode.wrap
-              ),
-              series: FunnelSeries<SalesData, String>(
-                    dataSource:chartData,
-                    xValueMapper: (SalesData sales, _) =>   sales.year,
-                    yValueMapper: (SalesData sales, _) => sales.sales
+                overflowMode: LegendItemOverflowMode.wrap),
+                    series: FunnelSeries<ChartData, String>(
+                        dataSource: chartData,
+                        xValueMapper: (ChartData sales, _) => sales.x,
+                        yValueMapper: (ChartData sales, _) => sales.y)
+                      )
+                    )
                   )
-              )
-            )
-          )
-        );
+                );
+              }
+          }
+
+      class ChartData {
+      ChartData(this.x, this.y, [this.color]);
+      final String x;
+      final double? y;
+      final Color? color;
       }
 
 {% endhighlight %}
@@ -228,27 +303,39 @@ You can change the position of the legend inside the chart. The following proper
 
 {% highlight dart %} 
 
-      @override
-      Widget build(BuildContext context) {
-        return Scaffold(
-          appBar: AppBar(actions: <Widget>[Text('')],),
-          body: Center(
+    final List<ChartData> chartData = [
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('Mar', 34),
+    ChartData('Apr', 32),
+    ChartData('May', 40)
+    ];
+    @override
+    Widget build(BuildContext context) {
+    return Scaffold(
+        body: Center(
             child: Container(
-              child: SfFunnelChart(
-              legend: Legend(
-                isVisible: true,
-                // Legend will be placed at the left
-                position: LegendPosition.left
-              ),
-              series: FunnelSeries<SalesData, String>(
-                    dataSource:chartData,
-                    xValueMapper: (SalesData sales, _) =>   sales.year,
-                    yValueMapper: (SalesData sales, _) => sales.sales
+                child: SfFunnelChart(
+                    legend: Legend(
+                        isVisible: true,
+                        // Legend will be placed at the left
+                        position: LegendPosition.left),
+                    series: FunnelSeries<ChartData, String>(
+                        dataSource: chartData,
+                        xValueMapper: (ChartData sales, _) => sales.x,
+                        yValueMapper: (ChartData sales, _) => sales.y)
+                      )
+                    )
                   )
-              )
-            )
-          )
-        );
+                );
+              }
+          }
+
+      class ChartData {
+      ChartData(this.x, this.y, [this.color]);
+      final String x;
+      final double? y;
+      final Color? color;
       }
 
 {% endhighlight %}
@@ -262,28 +349,40 @@ Also, the legend will not take a dedicated position for it and will be drawn on 
 
 {% highlight dart %}
 
+    final List<ChartData> chartData = [
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('Mar', 34),
+    ChartData('Apr', 32),
+    ChartData('May', 40)
+    ];
     @override
     Widget build(BuildContext context) {
-      return Scaffold(
-          body: Center(
+    return Scaffold(
+        body: Center(
             child: Container(
-              child: SfFunnelChart(
-                legend: Legend(
-                  isVisible: true,
-                  // Legend will placed at the specified offset
-                  offset: Offset(20, 40)),
-            series: FunnelSeries<SalesData, String>(
-                dataSource: chartData,
-                xValueMapper: (ChartData data, _) => data.x,
-                yValueMapper: (ChartData data, _) => data.y),
-          ))));
-    }
+                child: SfFunnelChart(
+                    legend: Legend(
+                        isVisible: true,
+                        // Legend will placed at the specified offset
+                        offset: Offset(20, 40)),
+                    series: FunnelSeries<ChartData, String>(
+                        dataSource: chartData,
+                        xValueMapper: (ChartData sales, _) => sales.x,
+                        yValueMapper: (ChartData sales, _) => sales.y)
+                      )
+                    )
+                  )
+                );
+              }
+          }
 
-    class ChartData {
-        ChartData(this.x, this.y);
-        final String x;
-        final double? y;
-    }
+      class ChartData {
+      ChartData(this.x, this.y, [this.color]);
+      final String x;
+      final double? y;
+      final Color? color;
+      }
 
 
 {% endhighlight %}
@@ -294,33 +393,45 @@ You can customize the appearance of legend items with your template by using [`l
 
 {% highlight dart %} 
 
-      @override
-      Widget build(BuildContext context) {
-        return Scaffold(
-          appBar: AppBar(actions: <Widget>[Text('')],),
-          body: Center(
+    final List<ChartData> chartData = [
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('Mar', 34),
+    ChartData('Apr', 32),
+    ChartData('May', 40)
+    ];
+    @override
+    Widget build(BuildContext context) {
+    return Scaffold(
+        body: Center(
             child: Container(
-              child: SfFunnelChart(
-              legend: Legend(
-                isVisible: true,
-                // Templating the legend item
-                legendItemBuilder: (String name, dynamic series, dynamic point, int index) {
-                  return Container(
-                    height: 20,
-                    width: 10,
-                    child: Container(child: Text(point.y.toString()))
-                  );
-                }
-              ),
-              series: FunnelSeries<SalesData, String>(
-                    dataSource:chartData,
-                    xValueMapper: (SalesData sales, _) =>   sales.year,
-                    yValueMapper: (SalesData sales, _) => sales.sales
+                child: SfFunnelChart(
+                    legend: Legend(
+                        isVisible: true, // Templating the legend item
+                        legendItemBuilder: (String name, dynamic series,
+                            dynamic point, int index) {
+                          return Container(
+                              height: 20,
+                              width: 10,
+                              child:
+                                  Container(child: Text(point.y.toString())));
+                        }),
+                    series: FunnelSeries<ChartData, String>(
+                        dataSource: chartData,
+                        xValueMapper: (ChartData sales, _) => sales.x,
+                        yValueMapper: (ChartData sales, _) => sales.y)
+                      )
+                    )
                   )
-              )
-            )
-          )
-        );
+                );
+              }
+          }
+
+      class ChartData {
+      ChartData(this.x, this.y, [this.color]);
+      final String x;
+      final double? y;
+      final Color? color;
       }
 
 {% endhighlight %}

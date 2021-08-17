@@ -59,10 +59,18 @@ The data points that has null value are considered as empty points. Empty data p
                         emptyPointSettings: EmptyPointSettings(mode: EmptyPointMode.average),
                         xValueMapper: (ChartData data, _) => data.x,
                         yValueMapper: (ChartData data, _) => data.y
+                        )
                     )
                 )
-            )
-        );
+            );
+        }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.color]);
+    final String x;
+    final double? y;
+    final Color? color;
     }
 
 {% endhighlight %}
@@ -96,11 +104,19 @@ Specific color for empty point can be set by [`color`](https://pub.dev/documenta
                             borderWidth: 2),
                             xValueMapper: (ChartData data, _) => data.x,
                             yValueMapper: (ChartData data, _) => data.y
+                            )
                         )
                     )
                 )
-            )
-        );
+            );
+        }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.color]);
+    final String x;
+    final double? y;
+    final Color? color;
     }
 
 {% endhighlight %}
@@ -115,28 +131,31 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
 
     @override
     Widget build(BuildContext context) {
-            static dynamic chartData = <SalesData>[
-                SalesData('Rent', 1000,Colors.teal),
-                SalesData('Food', 2500,Colors.lightBlue),
-                SalesData('Savings', 760,Colors.brown),
-                SalesData('Tax', 1897,Colors.grey),
-                SalesData('Others', 2987,Colors.blueGrey)
-            ];
-            return Scaffold(
-                body: Center(
-                    child: Container(
-                        child: SfFunnelChart(
-                            series:FunnelSeries<ChartData, String>(
-                                dataSource: chartData,
-                                xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) => data.y,
-                                //map Color for each dataPoint datasource.
-                                pointColorMapper: (ChartData sales,_) => sales.color,
-                            )
-                        )
-                    )
-                )
-            );
+    final dynamic chartData = <ChartData>[
+      ChartData('Rent', 1000, Colors.teal),
+      ChartData('Food', 2500, Colors.lightBlue),
+      ChartData('Savings', 760, Colors.brown),
+      ChartData('Tax', 1897, Colors.grey),
+      ChartData('Others', 2987, Colors.blueGrey)
+    ];
+    return Scaffold(
+        body: Center(
+            child: Container(
+                child: SfFunnelChart(
+                    series: FunnelSeries<ChartData, String>(
+      dataSource: chartData,
+      xValueMapper: (ChartData data, _) => data.x,
+      yValueMapper: (ChartData data, _) => data.y,
+      //map Color for each dataPoint datasource.
+      pointColorMapper: (ChartData sales, _) => sales.color)))));
+        }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.color]);
+    final String x;
+    final double? y;
+    final Color? color; 
     }
 
 {% endhighlight %}
