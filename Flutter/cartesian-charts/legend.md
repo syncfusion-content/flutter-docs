@@ -63,6 +63,7 @@ The [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 * [`isResponsive`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/isResponsive.html) - toggles the visibility of the legend. If the width or height of the legend is greater than the plot area bounds.
 * [`iconBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/iconBorderWidth.html) - border width of the icon in the legend items. Used to change the stroke width of the legend icon shape.
 * [`overflowMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/overflowMode.html) - overflow legend items.
+* The [`legendIconType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/legendIconType.html) property of [`ChartSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries-class.html) is used to set the shape for the legend icon. Any shape in the [`LegendIconType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendIconType-class.html) can be applied to this property.
 
 
 {% highlight dart %} 
