@@ -17,6 +17,7 @@ To export the pyramid chart as a PNG image, we can get the image by calling [`to
 
 {% highlight dart %} 
 
+    final GlobalKey<SfCircularChartState> _pyramidChartKey = GlobalKey();
     Future<void> _renderPyramidImage() async {
       dart_ui.Image data =
           await _pyramidChartKey.currentState!.toImage(pixelRatio: 3.0);
