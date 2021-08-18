@@ -42,7 +42,7 @@ Widget build(BuildContext context) {
       ],
     ),
     body: SfPdfViewer.network(
-      'http://ebooks.syncfusion.com/downloads/flutter-succinctly/flutter-succinctly.pdf',
+      'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
       key: _pdfViewerKey,
     ),
   );
@@ -86,7 +86,7 @@ Widget build(BuildContext context) {
         ],
       ),
       body: SfPdfViewer.network(
-        'http://ebooks.syncfusion.com/downloads/flutter-succinctly/flutter-succinctly.pdf',
+        'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
         controller: _pdfViewerController,
         onDocumentLoaded: (PdfDocumentLoadedDetails details) {
           _pdfBookmark = details.document.bookmarks[0];
