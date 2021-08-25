@@ -118,3 +118,95 @@ In addition to position the widget marker pointer, it is also possible to change
 {% endhighlight %}
 
 ![Customize linear gauge bar pointer offset](images/widget-pointer/widget_pointer_offset.png)
+
+## Drag behavior
+
+You can drag the pointers freely to any position when adding multiple pointers by setting the `dragBehavior` property to `LinearMarkerDragBehavior.free`.
+
+The `LinearMarkerDragBehavior.constraint` can be used to limit the active pointer dragging beyond the other pointers.
+
+### Free
+
+{% highlight dart %}
+
+double _firstPointer = 30;
+double _secondPointer = 70;
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfLinearGauge(
+      markerPointers: [
+        LinearWidgetPointer(
+          value: _firstPointer,
+          dragBehavior: LinearMarkerDragBehavior.free,
+          onChanged: (double newValue) {
+            setState(() {
+              _firstPointer = newValue;
+            });
+          },
+          position: LinearElementPosition.outside,
+          child: Icon(Icons.location_pin, color: Colors.blue, size: 30),
+        ),
+        LinearWidgetPointer(
+          value: _secondPointer,
+          position: LinearElementPosition.outside,
+          dragBehavior: LinearMarkerDragBehavior.free,
+          onChanged: (double newValue) {
+            setState(() {
+              _secondPointer = newValue;
+            });
+          },
+          child: Icon(Icons.location_pin, color: Colors.red, size: 30),
+        ),
+       ],
+    ),
+  );
+}
+
+{% endhighlight %}
+
+![Pointers drag behavior](images/widget-pointer/free-drag-behavior.gif)
+
+### Constrained
+
+{% highlight dart %}
+
+double _firstPointer = 30;
+double _secondPointer = 70;
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfLinearGauge(
+      markerPointers: [
+        LinearWidgetPointer(
+          value: _firstPointer,
+          dragBehavior: LinearMarkerDragBehavior.constraint,
+          onChanged: (double newValue) {
+            setState(() {
+              _firstPointer = newValue;
+            });
+          },
+          position: LinearElementPosition.outside,
+          child: Icon(Icons.location_pin, color: Colors.blue, size: 30),
+        ),
+        LinearWidgetPointer(
+          value: _secondPointer,
+          position: LinearElementPosition.outside,
+          dragBehavior: LinearMarkerDragBehavior.constraint,
+          onChanged: (double newValue) {
+            setState(() {
+              _secondPointer = newValue;
+            });
+          },
+          child: Icon(Icons.location_pin, color: Colors.red, size: 30),
+        ),
+       ],
+    ),
+  );
+}
+
+{% endhighlight %}
+
+![Pointers drag behavior](images/widget-pointer/constraint-drag-behavior.gif)
