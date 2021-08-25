@@ -13,33 +13,47 @@ Chart provides tooltip support for all the series. It is used to show informatio
 
 {% highlight dart %} 
     
+    final List<ChartData> chartData = <ChartData>[
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('March', 30),
+    ChartData('April', 32),
+    ChartData('May', 40)
+    ];
+
     late TooltipBehavior _tooltipBehavior;
 
     @override
-    void initState(){
-      _tooltipBehavior = TooltipBehavior(
-                enable: true);
-      super.initState();
+    void initState() {
+    _tooltipBehavior = TooltipBehavior(enable: true);
+    super.initState();
     }
 
     @override
     Widget build(BuildContext context) {
-      return Scaffold(
+    return Scaffold(
         body: Center(
-          child: Container(
-            child: SfCircularChart(
-            //Enables the tooltip for all the series
-              tooltipBehavior: _tooltipBehavior,
-              series: <CircularSeries>[
-                PieSeries<ChartData, double>(
-                //Enables the tooltip for individual series
-                  enableTooltip: true, 
-                )
-              ]
-            )
+            child: Container(
+                child: SfCircularChart(
+                    //Enables the tooltip for all the series
+                    tooltipBehavior: _tooltipBehavior,
+                    series: <CircularSeries>[
+          PieSeries<ChartData, double>(
+            //Enables the tooltip for individual series
+            enableTooltip: true,
+            dataSource: chartData,
+            xValueMapper: (ChartData sales, _) => sales.x,
+            yValueMapper: (ChartData sales, _) => sales.y,            
           )
-        )
-      );
+        ]))));
+      }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.text]);
+    final String x;
+    final double y;
+    final String? text;
     }
 
 {% endhighlight %}
@@ -69,6 +83,14 @@ You can use the following properties to customize the tooltip appearance.
 
 {% highlight dart %} 
     
+    final List<ChartData> chartData = <ChartData>[
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('March', 30),
+    ChartData('April', 32),
+    ChartData('May', 40)
+    ];
+
     late TooltipBehavior _tooltipBehavior;
 
     @override
@@ -83,15 +105,29 @@ You can use the following properties to customize the tooltip appearance.
 
     @override
     Widget build(BuildContext context) {
-      return Scaffold(
+    return Scaffold(
         body: Center(
-          child: Container(
-            child: SfCircularChart(
-              tooltipBehavior: _tooltipBehavior
-            )
+            child: Container(
+                child: SfCircularChart(
+                    //Enables the tooltip for all the series
+                    tooltipBehavior: _tooltipBehavior,
+                    series: <CircularSeries>[
+          PieSeries<ChartData, String>(
+            //Enables the tooltip for individual series
+            enableTooltip: true,
+            dataSource: chartData,
+            xValueMapper: (ChartData sales, _) => sales.x,
+            yValueMapper: (ChartData sales, _) => sales.y,
           )
-        )
-      );
+        ]))));
+      }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.text]);
+    final String x;
+    final double y;
+    final String? text;
     }
 
 {% endhighlight %}
@@ -109,6 +145,14 @@ By default, x and y value will be displayed in the tooltip, and it can be custom
 
 {% highlight dart %} 
     
+    final List<ChartData> chartData = <ChartData>[
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('March', 30),
+    ChartData('April', 32),
+    ChartData('May', 40)
+    ];
+
     late TooltipBehavior _tooltipBehavior;
 
     @override
@@ -123,25 +167,47 @@ By default, x and y value will be displayed in the tooltip, and it can be custom
 
     @override
     Widget build(BuildContext context) {
-      return Scaffold(
+    return Scaffold(
         body: Center(
-          child: Container(
-            child: SfCircualrChart(
-              tooltipBehavior: _tooltipBehavior
-            )
+            child: Container(
+                child: SfCircularChart(
+                    //Enables the tooltip for all the series
+                    tooltipBehavior: _tooltipBehavior,
+                    series: <CircularSeries>[
+          PieSeries<ChartData, String>(
+            //Enables the tooltip for individual series
+            enableTooltip: true,
+            dataSource: chartData,
+            xValueMapper: (ChartData sales, _) => sales.x,
+            yValueMapper: (ChartData sales, _) => sales.y,
           )
-        )
-      );
+        ]))));
+      }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.text]);
+    final String x;
+    final double y;
+    final String? text;
     }
 
 {% endhighlight %}
 
 ## Tooltip positioning
 
-The tooltip can be made to display in the fixed location or at the pointer location itself using the `tooltipPosition` property. This defaults to `auto`.
+The tooltip can be made to display in the fixed location or at the pointer location itself using the [`tooltipPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/tooltipPosition.html) property. This defaults to [`auto`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipPosition-class.html).
 
 {% highlight dart %} 
     
+    final List<ChartData> chartData = <ChartData>[
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('March', 30),
+    ChartData('April', 32),
+    ChartData('May', 40)
+    ];
+
     late TooltipBehavior _tooltipBehavior;
 
     @override
@@ -155,15 +221,29 @@ The tooltip can be made to display in the fixed location or at the pointer locat
 
     @override
     Widget build(BuildContext context) {
-      return Scaffold(
+    return Scaffold(
         body: Center(
-          child: Container(
-            child: SfCircularChart(
-              tooltipBehavior: _tooltipBehavior
-            )
+            child: Container(
+                child: SfCircularChart(
+                    //Enables the tooltip for all the series
+                    tooltipBehavior: _tooltipBehavior,
+                    series: <CircularSeries>[
+          PieSeries<ChartData, String>(
+            //Enables the tooltip for individual series
+            enableTooltip: true,
+            dataSource: chartData,
+            xValueMapper: (ChartData sales, _) => sales.x,
+            yValueMapper: (ChartData sales, _) => sales.y,
           )
-        )
-      );
+        ]))));
+      }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.text]);
+    final String x;
+    final double y;
+    final String? text;
     }
 
 {% endhighlight %}
@@ -176,6 +256,14 @@ You can customize the appearance of the tooltip with your own widget by using th
 
 {% highlight dart %} 
     
+    final List<ChartData> chartData = <ChartData>[
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('March', 30),
+    ChartData('April', 32),
+    ChartData('May', 40)
+    ];
+
     late TooltipBehavior _tooltipBehavior;
 
     @override
@@ -187,7 +275,7 @@ You can customize the appearance of the tooltip with your own widget by using th
                 int pointIndex, int seriesIndex) {
                   return Container(
                     child: Text(
-                      'PointIndex : ${SeriesIndex.toString()}'
+                      'PointIndex : ${seriesIndex.toString()}'
                     )
                   );
                 }
@@ -197,15 +285,29 @@ You can customize the appearance of the tooltip with your own widget by using th
 
     @override
     Widget build(BuildContext context) {
-      return Scaffold(
+    return Scaffold(
         body: Center(
-          child: Container(
-            child: SfCircularChart(
-              tooltipBehavior: _tooltipBehavior
-            )
+            child: Container(
+                child: SfCircularChart(
+                    //Enables the tooltip for all the series
+                    tooltipBehavior: _tooltipBehavior,
+                    series: <CircularSeries>[
+          PieSeries<ChartData, String>(
+            //Enables the tooltip for individual series
+            enableTooltip: true,
+            dataSource: chartData,
+            xValueMapper: (ChartData sales, _) => sales.x,
+            yValueMapper: (ChartData sales, _) => sales.y,
           )
-        )
-      );
+        ]))));
+      }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.text]);
+    final String x;
+    final double y;
+    final String? text;
     }
 
 {% endhighlight %}
@@ -225,6 +327,14 @@ The ActivationMode enum contains the following values:
 
 {% highlight dart %} 
     
+    final List<ChartData> chartData = <ChartData>[
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('March', 30),
+    ChartData('April', 32),
+    ChartData('May', 40)
+    ];
+
     late TooltipBehavior _tooltipBehavior;
 
     @override
@@ -239,17 +349,31 @@ The ActivationMode enum contains the following values:
 
     @override
     Widget build(BuildContext context) {
-      return Scaffold(
+    return Scaffold(
         body: Center(
-          child: Container(
-            child: SfCircularChart(
-              tooltipBehavior: _tooltipBehavior
-            )
+            child: Container(
+                child: SfCircularChart(
+                    //Enables the tooltip for all the series
+                    tooltipBehavior: _tooltipBehavior,
+                    series: <CircularSeries>[
+          PieSeries<ChartData, String>(
+            //Enables the tooltip for individual series
+            enableTooltip: true,
+            dataSource: chartData,
+            xValueMapper: (ChartData sales, _) => sales.x,
+            yValueMapper: (ChartData sales, _) => sales.y,
           )
-        )
-      );
+        ]))));
+      }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.text]);
+    final String x;
+    final double y;
+    final String? text;
     }
 
 {% endhighlight %}
 
-Also refer [tooltip event](./events#ontooltiprender) for customizing the tooltip further.
+Also refer [tooltip event](https://help.syncfusion.com/flutter/circular-charts/callbacks#ontooltiprender) for customizing the tooltip further.

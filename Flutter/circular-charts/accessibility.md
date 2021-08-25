@@ -11,7 +11,7 @@ documentation: ug
 
 ## Sufficient contrast
 
-The `SfCircularChart` [theming](https://help.syncfusion.com/flutter/themes/themes) support offers a consistent and standardized look, as well as the ability to set the colors for all UI elements.
+The `SfCircularChart` [`theming`](https://help.syncfusion.com/flutter/themes) support offers a consistent and standardized look, as well as the ability to set the colors for all UI elements.
 
 The customization the colors can be done for the following chart elements.
 * [Chart title](https://help.syncfusion.com/flutter/circular-charts/chart-title)
@@ -36,6 +36,6 @@ The `SfCircularChart` font size can be adjusted automatically based on device se
 ## Easily tappable targets
 
 The `SfCircularChart` Provides callback support to notify when tapping on the essential elements in the chart.
-* [Data points](https://help.syncfusion.com/flutter/circular-charts/callbacks#onpointtapped)
+* [Data points](https://help.syncfusion.com/flutter/circular-charts/callbacks#onpointtap)
 * [Data labels](https://help.syncfusion.com/flutter/circular-charts/callbacks#ondatalabeltapped)
 * [Legend](https://help.syncfusion.com/flutter/circular-charts/callbacks#onlegendtapped)

@@ -67,10 +67,17 @@ You can customize the area of the chart using the below properties.
 * [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/backgroundColor.html) - used to change the chart area background color.
 * [`backgroundImage`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/backgroundImage.html) - used to set the image path.
 * [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/borderWidth.html) - used to change chart area the border width.
-* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/bordeColor.html) - used to change the chart area border color.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/borderColor.html) - used to change the chart area border color.
 
 {% highlight dart %} 
 
+    final List<ChartData> chartData = [
+    ChartData('USA', 6),
+    ChartData('China', 7),
+    ChartData('UK', 9),
+    ChartData('Japan', 14),
+    ChartData('France', 10),
+    ];
     @override
     Widget build(BuildContext context) {
       return Scaffold(
@@ -81,12 +88,20 @@ You can customize the area of the chart using the below properties.
               width: 350, 
               child: SfCircularChart(
                 backgroundColor: Colors.lightGreen,
-                backgroundImage: 'images/livechart.png',
+                backgroundImage: const AssetImage('images/livechart.png'),
               )
             )
           )
         )
       );
+    }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.text]);
+    final String x;
+    final double y;
+    final String? text;
     }
 
 {% endhighlight %}

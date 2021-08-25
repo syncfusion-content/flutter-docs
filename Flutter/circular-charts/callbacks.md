@@ -23,6 +23,14 @@ Triggers when the legend item is rendering. Here, you can customize the legendâ€
 
 {% highlight dart %}
 
+    final List<ChartData> chartData = <ChartData>[
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('March', 30),
+    ChartData('April', 32),
+    ChartData('May', 40)
+    ];
+
     @override
     Widget build(BuildContext context) {
     
@@ -33,10 +41,25 @@ Triggers when the legend item is rendering. Here, you can customize the legendâ€
             onLegendItemRender: (LegendRenderArgs args){
               args.text = 'Legend Text';
               args.legendIconType = LegendIconType.diamond;
-            }
+            },
+            series: <CircularSeries<ChartData, String>>[
+                            PieSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData sales, _) => sales.x,
+                        yValueMapper: (ChartData sales, _) => sales.y,
+                )
+              ]
+            )
           )
-        )
-      );
+        );
+      }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.text]);
+    final String x;
+    final double y;
+    final String? text;
     }
 
 {% endhighlight %}
@@ -221,19 +244,38 @@ Triggers when tapping the legend item. The [`onLegendTapped`](https://pub.dev/do
 
 {% highlight dart %}
 
+    final List<ChartData> chartData = <ChartData>[
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('March', 30),
+    ChartData('April', 32),
+    ChartData('May', 40)
+    ];
+
     @override
     Widget build(BuildContext context) {
-    
-      return Scaffold(
+    return Scaffold(
         body: Center(
-          child: SfCircularChart(
-            onLegendTapped: (LegendTapArgs args) {
-              print(args.seriesIndex);
-            },
-            legend: Legend(isVisible: true)
+            child: SfCircularChart(
+                onLegendTapped: (LegendTapArgs args) {
+                  print(args.seriesIndex);
+                },
+                legend: Legend(isVisible: true),
+                series: <CircularSeries<ChartData, String>>[
+          PieSeries<ChartData, String>(
+            dataSource: chartData,
+            xValueMapper: (ChartData sales, _) => sales.x,
+            yValueMapper: (ChartData sales, _) => sales.y,
           )
-        )
-      );
+        ])));
+      }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.text]);
+    final String x;
+    final double y;
+    final String? text;
     }
 
 {% endhighlight %}
@@ -301,24 +343,40 @@ N> This callback will not be called, when the builder is specified for data labe
 
 {% highlight dart %}
 
+    final List<ChartData> chartData = <ChartData>[
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('March', 30),
+    ChartData('April', 32),
+    ChartData('May', 40)
+    ];
+
     @override
     Widget build(BuildContext context) {
       return Container(
-        child: SfCartesianChart(
-          onDatalabelTapped: (DataLabelTapArgs args) {
+        child: SfCircularChart(
+          onDataLabelTapped: (DataLabelTapDetails args) {
             print(args.seriesIndex);                 
           },
-          series: <CircularSeries<Sample, DateTime>>[
-            PieSeries<Sample, DateTime>(
-                dataSource: sample,
-                xValueMapper: (Sample sales, _) => sales.x,
-                yValueMapper: (Sample sales, _) => sales.y,
+          series: <CircularSeries<ChartData, String>>[
+            PieSeries<ChartData, String>(
+                dataSource: chartData,
+                xValueMapper: (ChartData sales, _) => sales.x,
+                yValueMapper: (ChartData sales, _) => sales.y,
                 dataLabelSettings: DataLabelSettings(
                   isVisible: true),
-            )
-          ]
-        )
-      );
+              )
+            ]
+          )
+        );
+      }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.text]);
+    final String x;
+    final double y;
+    final String? text;
     }
 
 {% endhighlight %}
@@ -404,4 +462,4 @@ The callback contains the following argument:
 * [`ChartShaderDetails`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartShaderDetails-class.html) - provides options to get the outer rect, inner rect, and render type (either series or legend)
 
 The onCreateShader callback is called once while rendering
-the data points and legend. For further reference on this callback, Check the [Gradient and image shader](./circular-series-customization#Gradient-fill-and-shader) section.
+the data points and legend. For further reference on this callback, Check the [Gradient and image shader](https://help.syncfusion.com/flutter/circular-charts/circular-series-customization#gradient-and-image-shader) section.

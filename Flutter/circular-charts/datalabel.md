@@ -32,6 +32,13 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
 
 {% highlight dart %} 
 
+    final List<ChartData> chartData = [
+    ChartData('David', 35),
+    ChartData('Steve', 28),
+    ChartData('Jack', 34),
+    ChartData('Others', 32),
+    ChartData('Maclin', 40)
+    ];
     @override
     Widget build(BuildContext context) {
         return Scaffold(
@@ -39,7 +46,7 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
                 child: Container(
                     child: SfCircularChart(
                         series: <CircularSeries>[
-                            PieSeries<ChartData, double>(
+                            PieSeries<ChartData, String>(
                                 dataSource: chartData,
                                 pointColorMapper: (ChartData data, _) => data.color,
                                 xValueMapper: (ChartData data, _) => data.x,
@@ -54,6 +61,14 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
                 )
             )
         );
+        }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.color]);
+    final String x;
+    final double? y;
+    final Color? color;
     }
 
 {% endhighlight %}
@@ -73,7 +88,7 @@ Data label considers the format used in the Circular series by default. In the b
                 child: Container(
                     child: SfCircularChart(
                         series: <CircularSeries>[
-                            PieSeries<ChartData, double>(
+                            PieSeries<ChartData, String>(
                                 dataSource: [
                                     // Bind data source
                                    ChartData('Jan', 35, '35%'),
@@ -82,7 +97,6 @@ Data label considers the format used in the Circular series by default. In the b
                                    ChartData('Apr', 32,  '32%'),
                                    ChartData('May', 40, '40%')
                                 ],
-                                color: Colors.red,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
                                 dataLabelMapper: (ChartData data, _) => data.text,
@@ -95,6 +109,14 @@ Data label considers the format used in the Circular series by default. In the b
                 )
             )
         );
+      }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.text]);
+    final String x;
+    final double? y;
+    final String? text;
     }
 
 {% endhighlight %}
@@ -109,6 +131,13 @@ The [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/la
 
 {% highlight dart %} 
 
+    final List<ChartData> chartData = [
+    ChartData('David', 6),
+    ChartData('Steve', 7),
+    ChartData('Jack', 9),
+    ChartData('Others', 14),
+    ChartData('Maclin', 10)
+    ];
     @override
     Widget build(BuildContext context) {
         return Scaffold(
@@ -116,7 +145,7 @@ The [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/la
                 child: Container(
                     child: SfCircularChart(
                         series: <CircularSeries>[
-                            PieSeries<ChartData, double>(
+                            PieSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
@@ -124,13 +153,21 @@ The [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/la
                                     isVisible: true,
                                     // Positioning the data label
                                     labelPosition: ChartDataLabelPosition.outside
+                                    )
                                 )
-                            )
-                        ]
+                            ]
+                        )
                     )
                 )
-            )
-        );
+            );
+        }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.text]);
+    final String x;
+    final double? y;
+    final String? text; 
     }
 
 {% endhighlight %}
@@ -145,6 +182,15 @@ This feature is used to arrange the data labels smartly and avoid the intersecti
 
 {% highlight dart %} 
 
+    final List<ChartData> chartData = [
+    ChartData('USA', 6),
+    ChartData('China', 7),
+    ChartData('UK', 9),
+    ChartData('Japan', 14),
+    ChartData('France', 10),
+    ChartData('London', 13),
+    ChartData('Spain', 15)
+    ];
     @override
     Widget build(BuildContext context) {
         return Scaffold(
@@ -152,7 +198,7 @@ This feature is used to arrange the data labels smartly and avoid the intersecti
                 child: Container(
                     child:SfCircularChart(
                         series: <CircularSeries>[
-                            PieSeries<ChartData, double>(
+                            PieSeries<ChartData, String>(
                                 // Avoid labels intersection
                                 enableSmartLabels: true,
                                 dataSource: chartData,
@@ -169,6 +215,14 @@ This feature is used to arrange the data labels smartly and avoid the intersecti
                 )
             )
         );
+        }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.text]);
+    final String x;
+    final double? y;
+    final String? text;
     }
 
 {% endhighlight %}
@@ -181,6 +235,13 @@ The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
 {% highlight dart %} 
 
+    final List<ChartData> chartData = [
+    ChartData('Jan', 6),
+    ChartData('Feb', 7),
+    ChartData('Mar', 9),
+    ChartData('Apr', 14),
+    ChartData('May', 10)
+    ];
     @override
     Widget build(BuildContext context) {
         return Scaffold(
@@ -188,7 +249,7 @@ The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
                 child: Container(
                     child:SfCircularChart(
                         series: <CircularSeries>[
-                            PieSeries<ChartData, double>(
+                            PieSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
@@ -205,6 +266,14 @@ The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
                 )
             )
         );
+      }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.text]);
+    final String x;
+    final double? y;
+    final String? text;
     }
 
 {% endhighlight %}
@@ -222,6 +291,13 @@ This feature is used to connect label and data point using a line. It is applica
 
 {% highlight dart %} 
 
+    final List<ChartData> chartData = [
+    ChartData('Jan', 6),
+    ChartData('Feb', 7),
+    ChartData('Mar', 9),
+    ChartData('Apr', 14),
+    ChartData('May', 10)
+    ];
     @override
     Widget build(BuildContext context) {
         return Scaffold(
@@ -229,7 +305,7 @@ This feature is used to connect label and data point using a line. It is applica
                 child: Container(
                     child: SfCircularChart(
                         series: <CircularSeries>[
-                            PieSeries<ChartData, double>(
+                            PieSeries<ChartData, String>(
                                 enableSmartLabels: true,
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
@@ -248,6 +324,14 @@ This feature is used to connect label and data point using a line. It is applica
                 )
             )
         );
+      }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.text]);
+    final String x;
+    final double? y;
+    final String? text;
     }
 
 {% endhighlight %}
@@ -262,41 +346,34 @@ The [`dataLabelMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
     @override
     Widget build(BuildContext context) {
-        final List<ChartData> chartData = [
-            ChartData('USA', 17, '17%'),
-            ChartData('China', 34, '34%'),
-            ChartData('Japan', 24, '24%'),
-            ChartData('Africa', 30, '30%'),
-            ChartData('UK', 10, '10%')
-        ];
+    final List<ChartData> chartData = [
+      ChartData('USA', 17, '17%'),
+      ChartData('China', 34, '34%'),
+      ChartData('Japan', 24, '24%'),
+      ChartData('Africa', 30, '30%'),
+      ChartData('UK', 10, '10%')
+    ];
 
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child:SfCircularChart(
-                        series: <CircularSeries>[
-                            PieSeries<ChartData, String>(
-                                dataSource: chartData,
-                                xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) => data.y,
-                                // Map the data label text for each point from the data source
-                                dataLabelMapper: (ChartData data, _) => data.text,
-                                dataLabelSettings: DataLabelSettings(
-                                    isVisible: true
-                                )
-                            )
-                        ]
-                    )
-                )
-            )
-        );
+    return Scaffold(
+        body: Center(
+            child: Container(
+                child: SfCircularChart(series: <CircularSeries>[
+      PieSeries<ChartData, String>(
+          dataSource: chartData,
+          xValueMapper: (ChartData data, _) => data.x,
+          yValueMapper: (ChartData data, _) => data.y,
+          // Map the data label text for each point from the data source
+          dataLabelMapper: (ChartData data, _) => data.text,
+          dataLabelSettings: DataLabelSettings(isVisible: true))
+        ]))));
+        }
     }
 
     class ChartData {
-        ChartData(this.x, this.y, this.text);
-        final String x;
-        final double y;
-        final String text;
+    ChartData(this.x, this.y, this.text);
+    final String x;
+    final double y;
+    final String text;
     }
 
 {% endhighlight %}
@@ -309,6 +386,13 @@ You can customize the appearance of the data label with your own template using 
 
 {% highlight dart %} 
 
+    final List<ChartData> chartData = [
+    ChartData('Jan', 6),
+    ChartData('Feb', 7),
+    ChartData('Mar', 9),
+    ChartData('Apr', 14),
+    ChartData('May', 10)
+    ];
     @override
     Widget build(BuildContext context) {
         return Scaffold(
@@ -329,15 +413,23 @@ You can customize the appearance of the data label with your own template using 
                                         height: 30,
                                         width: 30,
                                         child: Image.asset('images/livechart.png')
-                                        );
-                                    }
+                                            );
+                                        }
+                                    )
                                 )
-                            )
-                        ]
+                            ]
+                        )
                     )
                 )
-            )
-        );
+            );
+        }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.text]);
+    final String x;
+    final double y;
+    final String? text;
     }
 
 {% endhighlight %}
@@ -350,12 +442,12 @@ Data label and its connector line in the Circular charts for the point value 0 c
 
 {% highlight dart %} 
 
-    final List<SalesData> chartData = <SalesData>[
-        SalesData('Jan', 35),
-        SalesData('Feb', 28),
-        SalesData('March', 0),
-        SalesData('April', 32),
-        SalesData('May', 40)
+    final List<ChartData> chartData = <ChartData>[
+        ChartData('Jan', 35),
+        ChartData('Feb', 28),
+        ChartData('March', 0),
+        ChartData('April', 32),
+        ChartData('May', 40)
     ];
     
     @override
@@ -364,21 +456,29 @@ Data label and its connector line in the Circular charts for the point value 0 c
             body: Center(
                 child: Container(
                     child:SfCircularChart(
-                        series: <CircularSeries<SalesData, String>>[
-                            PieSeries<SalesData, String>(
+                        series: <CircularSeries<ChartData, String>>[
+                            PieSeries<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.xValue,
-                                yValueMapper: (SalesData sales, _) => sales.yValue,
+                                xValueMapper: (ChartData sales, _) => sales.x,
+                                yValueMapper: (ChartData sales, _) => sales.y,
                                 dataLabelSettings: DataLabelSettings(
                                     showZeroValue : false, 
                                     isVisible: true
+                                    )
                                 )
-                            )
-                        ],
+                            ],
+                        )
                     )
                 )
-            )
-        );
+            );
+        }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.text]);
+    final String x;
+    final double y;
+    final String? text;
     }
 
 {% endhighlight %}

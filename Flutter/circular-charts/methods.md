@@ -21,48 +21,47 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
     late TooltipBehavior _tooltipBehavior;
 
     @override
-    void initState(){
-      _tooltipBehavior = TooltipBehavior(enable: true);
-      super.initState();
+    void initState() {
+    _tooltipBehavior = TooltipBehavior(enable: true);
+    super.initState();
     }
 
     @override
     Widget build(BuildContext context) {
+    final List<ChartData> chartData = [
+      ChartData(10, 17),
+      ChartData(20, 34),
+      // Add the required data
+    ];
 
-      final List<ChartData> chartData = [
-          ChartData(10, 17),
-          ChartData(20, 34),
-          // Add the required data
-      ];
-
-      chart = SfCircularChart(
+    chart = SfCircularChart(
         tooltipBehavior: _tooltipBehavior,
-          series: <CircularSeries>[
-            ColumnSeries<ChartData, double>(
+        series: <CircularSeries>[
+          PieSeries<ChartData, double>(
               enableTooltip: true,
               dataSource: chartData,
               xValueMapper: (ChartData data, _) => data.x,
               yValueMapper: (ChartData data, _) => data.y)
-        ]
-      );
+        ]);
 
-      return Scaffold(
+    return Scaffold(
         body: Center(
-          child: Column(
-            children: <Widget>[
-              TextButton(
-                child: Text('Show'),
-                onPressed: show
-              ),
-              Container(child: chart)
-            ]
-          )
-        )
-      );
+            child: Column(children: <Widget>[
+      Container(child: chart),
+      TextButton(child: Text('Show'), onPressed: show),
+      ])));
     }
 
     void show() {
-      _tooltipBehavior.show(10, 17);
+    _tooltipBehavior.show(10, 17);
+      }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.text]);
+    final double x;
+    final double y;
+    final String? text;
     }
   
 {% endhighlight %}
@@ -101,7 +100,7 @@ The below mentioned arguments are given to the [`showByIndex`](https://pub.dev/d
       chart = SfCircularChart(
         tooltipBehavior: _tooltipBehavior,
           series: <CircularSeries>[
-            ColumnSeries<ChartData, double>(
+            PieSeries<ChartData, double>(
               enableTooltip: true,
               dataSource: chartData,
               xValueMapper: (ChartData data, _) => data.x,
@@ -113,17 +112,25 @@ The below mentioned arguments are given to the [`showByIndex`](https://pub.dev/d
         body: Center(
           child: Column(
             children: <Widget>[
+              Container(child: chart),
               TextButton(
                 child: Text('Show'),
                 onPressed:(){
                     _tooltipBehavior.showByIndex(0,1);
-                }
-              ),
-              Container(child: chart)
-            ]
+                  }
+                ),
+              ]
+            )
           )
-        )
-      );
+        );
+      }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.text]);
+    final double x;
+    final double y;
+    final String? text;
     }
 
 {% endhighlight %}
@@ -157,7 +164,7 @@ x & y - logical pixel values to position the tooltip.
       chart = SfCircularChart(
         tooltipBehavior: _tooltipBehavior,
           series: <CircularSeries>[
-            ColumnSeries<ChartData, double>(
+            PieSeries<ChartData, double>(
               enableTooltip: true,
               dataSource: chartData,
               xValueMapper: (ChartData data, _) => data.x,
@@ -169,17 +176,25 @@ x & y - logical pixel values to position the tooltip.
         body: Center(
           child: Column(
             children: <Widget>[
+              Container(child: chart),
               TextButton(
                 child: Text('Show'),
                 onPressed:(){
                   _tooltipBehavior.showByPixel(230.0,470.0);
-                }
-              ),
-              Container(child: chart)
-            ]
+                  }
+                ),
+              ]
+            )
           )
-        )
-      );
+        );
+      }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.text]);
+    final double x;
+    final double y;
+    final String? text;
     }
 
 {% endhighlight %}
@@ -210,7 +225,7 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
       chart = SfCircularChart(
         tooltipBehavior: _tooltipBehavior,
         series: <CircularSeries>[
-          ColumnSeries<ChartData, double>(
+          PieSeries<ChartData, double>(
               enableTooltip: true,
               dataSource: chartData,
               xValueMapper: (ChartData data, _) => data.x,
@@ -222,11 +237,11 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
         body: Center(
           child: Column(
             children: <Widget>[
+              Container(child: chart),
               TextButton(
                 child: Text('Hide'),
                 onPressed: hide
               ),
-              Container(child: chart)
             ]
           )
         )
@@ -235,6 +250,14 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
     void hide(){
         _tooltipBehavior.hide();
+      }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.text]);
+    final double x;
+    final double y;
+    final String? text;
     }
 
 {% endhighlight %}
@@ -284,11 +307,11 @@ N> The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter
         body: Center(
           child: Column(
             children: <Widget>[
+              Container(child: chart),
               TextButton(
                 child: Text('Select'),
                 onPressed: select
               ),
-              Container(child: chart)
             ]
           )
         )
@@ -297,6 +320,15 @@ N> The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter
 
     void select() {
         _selectionBehavior.selectDataPoints(1, 0);
+      }
     }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.text]);
+    final double x;
+    final double y;
+    final String? text;
+    }
+
 
 {% endhighlight %}

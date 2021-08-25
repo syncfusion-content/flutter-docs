@@ -13,6 +13,14 @@ The selection feature in chart let you to select a segment in a series or the se
 
 {% highlight dart %} 
     
+    final List<ChartData> chartData = <ChartData>[
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('March', 30),
+    ChartData('April', 32),
+    ChartData('May', 40)
+    ];
+
     late SelectionBehavior _selectionBehavior;
 
     @override
@@ -35,12 +43,20 @@ The selection feature in chart let you to select a segment in a series or the se
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
                                 selectionBehavior: _selectionBehavior
-                            )
-                        ]
+                                )
+                            ]
+                        )
                     )
                 )
-            )
-        );  
+            );  
+        }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.text]);
+    final String x;
+    final double y;
+    final String? text;
     }
 
 {% endhighlight %}
@@ -63,6 +79,14 @@ You can customize the segments using the below properties.
 
 {% highlight dart %} 
     
+    final List<ChartData> chartData = <ChartData>[
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('March', 30),
+    ChartData('April', 32),
+    ChartData('May', 40)
+    ];
+
     late SelectionBehavior _selectionBehavior;
 
     @override
@@ -81,14 +105,25 @@ You can customize the segments using the below properties.
                 child: Container(
                     child: SfCircularChart(
                         series: <CircularSeries>[
-                            PieSeries<ChartData, double>(
+                            PieSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
                                 selectionBehavior: _selectionBehavior
-                            )
-                        ]
+                                )
+                            ]
+                        )
                     )
                 )
-            )
-        );
+            );  
+        }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.text]);
+    final String x;
+    final double y;
+    final String? text;
     }
 
 {% endhighlight %}
@@ -101,18 +136,51 @@ Multiple selection can be enabled using the [`enableMultiSelection`](https://pub
 
 {% highlight dart %} 
 
+    final List<ChartData> chartData = <ChartData>[
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('March', 30),
+    ChartData('April', 32),
+    ChartData('May', 40)
+    ];
+
+    late SelectionBehavior _selectionBehavior;
+
+    @override
+    void initState(){
+        _selectionBehavior = SelectionBehavior(
+             enable: true);
+        super.initState();
+    }
+
     @override
     Widget build(BuildContext context) {
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCircularChart(
-                        // Enables multiple selection
-                        enableMultiSelection: true
+                      // Enables multiple selection
+                        enableMultiSelection: true,
+                        series: <CircularSeries>[
+                            PieSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                selectionBehavior: _selectionBehavior
+                                )
+                            ]
+                        )
                     )
                 )
-            )
-        );
+            );  
+        }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.text]);
+    final String x;
+    final double y;
+    final String? text;
     }
 
 {% endhighlight %}
@@ -127,6 +195,14 @@ Defaults to `true`.
 
 {% highlight dart %} 
 
+    final List<ChartData> chartData = <ChartData>[
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('March', 30),
+    ChartData('April', 32),
+    ChartData('May', 40)
+    ];
+
     late SelectionBehavior _selectionBehavior;
 
     @override
@@ -140,29 +216,37 @@ Defaults to `true`.
 
     @override
     Widget build(BuildContext context) {
-      return Scaffold(
-        body: Center(
-            child: Container(
-                child: SfCircularChart(
-                    series: <CircularSeries<ChartData, String>>[
-                       PieSeries<ChartData, String>(
-                        dataSource: chartData1,
-                        xValueMapper: (ChartData data, _) => data.x,
-                        yValueMapper: (ChartData data, _) => data.y,
-                        selectionBehavior: _selectionBehavior
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCircularChart(
+                        series: <CircularSeries>[
+                            PieSeries<ChartData, String>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                selectionBehavior: _selectionBehavior
+                                )
+                            ]
                         )
-                    ]
+                    )
                 )
-            )
-         )
-      );
-   }
+            );  
+        }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.text]);
+    final String x;
+    final double y;
+    final String? text;
+    }
 
 {% endhighlight %}
 
 ![Toggle selection](images/selection/deselection.gif)
 
-Also refer [selection event](./events#onselectionchanged) for customizing the selection further.
+Also refer [selection event](https://help.syncfusion.com/flutter/circular-charts/callbacks#onselectionchanged) for customizing the selection further.
 
 #### See Also
 

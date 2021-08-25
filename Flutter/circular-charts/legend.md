@@ -13,6 +13,12 @@ The [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
 
 {% highlight dart %} 
 
+    final List<ChartData> chartData = [
+    ChartData('USA', 6),
+    ChartData('China', 7),
+    ChartData('UK', 9),
+    ];
+
     @override
     Widget build(BuildContext context) {
       return Scaffold(
@@ -33,6 +39,14 @@ The [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
           )
         );
       }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.text]);
+    final String x;
+    final double y;
+    final String? text;
+  }
 
 {% endhighlight %}
 
@@ -54,29 +68,42 @@ The [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
 {% highlight dart %} 
 
+    final List<ChartData> chartData = [
+    ChartData('USA', 6),
+    ChartData('China', 7),
+    ChartData('UK', 9),
+    ];
     @override
     Widget build(BuildContext context) {
       return Scaffold(
         body: Center(
           child: Container(
-            child:SfCircularChart(
-              legend: Legend(
+              child:SfCircularChart(
+                legend: Legend(
                 isVisible: true,
                 // Border color and border width of legend
                 borderColor: Colors.black,
                 borderWidth: 2
-              ),
-              series: <CircularSeries>[
-                PieSeries<ChartData, String>(
-                  dataSource: chartData,
-                  xValueMapper: (ChartData data, _) => data.x,
-                  yValueMapper: (ChartData data, _) => data.y
-                )
-              ]
+                ),
+                series: <CircularSeries>[
+                  PieSeries<ChartData, String>(
+                    dataSource: chartData,
+                    xValueMapper: (ChartData data, _) => data.x,
+                    yValueMapper: (ChartData data, _) => data.y
+                  )
+                ]
+              )
             )
           )
-        )
-      );
+        );
+      }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.text]);
+    final String x;
+    final double y;
+    final String? text;
     }
 
 {% endhighlight %}
@@ -89,20 +116,25 @@ The following properties can be used to define and customize the [`title`](https
 
 * [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendTitle/text.html) - used to change the text of the title.
 * [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/textStyle.html) - used to change the text color, size, font family, fontStyle, and font weight.
-* [`textStyle.color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/textStyle.html) - used to change the color of the text.
-* [`textStyle.fontFamily`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/textStyle.html) - used to change the font family for legend text. 
-* [`textStyle.fontStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/textStyle.html) - used to change the font style for the legend text.
-* [`textStyle.fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/textStyle.html) - used to change the font size for the legend text.
+* [`textStyle.color`](https://api.flutter.dev/flutter/painting/TextStyle/color.html) - used to change the color of the text.
+* [`textStyle.fontFamily`](https://api.flutter.dev/flutter/painting/TextStyle/fontFamily.html) - used to change the font family for legend text. 
+* [`textStyle.fontStyle`](https://api.flutter.dev/flutter/painting/TextStyle/fontStyle.html) - used to change the font style for the legend text.
+* [`textStyle.fontSize`](https://api.flutter.dev/flutter/painting/TextStyle/fontSize.html) - used to change the font size for the legend text.
 * [`alignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/alignment.html) - used to change the alignment of the title text. It can be near, center, or far.
 
 {% highlight dart %} 
 
+    final List<ChartData> chartData = [
+    ChartData('USA', 6),
+    ChartData('China', 7),
+    ChartData('UK', 9),
+    ];
     @override
     Widget build(BuildContext context) {
       return Scaffold(
         body: Center(
-            child: Container(
-                child:SfCircularChart(
+          child: Container(
+              child:SfCircularChart(
                 legend: Legend(
                     isVisible: true,
                     // Legend title
@@ -115,23 +147,26 @@ The following properties can be used to define and customize the [`title`](https
                       fontWeight: FontWeight.w900
                     )
                   ),
+                ),
                 series: <CircularSeries>[
                   PieSeries<ChartData, String>(
                     dataSource: chartData,
                     xValueMapper: (ChartData data, _) => data.x,
                     yValueMapper: (ChartData data, _) => data.y
-              ),
-                series: <CircularSeries>[
-                  PieSeries<ChartData, String>(
-                    dataSource: chartData,
-                    xValueMapper: (ChartData data, _) => data.x,
-                    yValueMapper: (ChartData data, _) => data.y
-                )
-              ]
+                  )
+                ]
+              )
             )
           )
-        )
-      );
+        );
+      }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.text]);
+    final String x;
+    final double y;
+    final String? text;
     }
 
 {% endhighlight %}
@@ -144,28 +179,41 @@ You can control the visibility of the series by tapping the legend item. You can
 
 {% highlight dart %} 
 
+    final List<ChartData> chartData = [
+    ChartData('USA', 6),
+    ChartData('China', 7),
+    ChartData('UK', 9),
+    ];
     @override
     Widget build(BuildContext context) {
       return Scaffold(
         body: Center(
           child: Container(
-            child:SfCircularChart(
-              legend: Legend(
+              child:SfCircularChart(
+                legend: Legend(
                 isVisible: true,
                 // Toogles the series visibility on tapping the legend item
                 toggleSeriesVisibility: true
-              ),
-              series: <CircularSeries>[
-                PieSeries<ChartData, String>(
-                  dataSource: chartData,
-                  xValueMapper: (ChartData data, _) => data.x,
-                  yValueMapper: (ChartData data, _) => data.y
-                )
-              ]
+                ),
+                series: <CircularSeries>[
+                  PieSeries<ChartData, String>(
+                    dataSource: chartData,
+                    xValueMapper: (ChartData data, _) => data.x,
+                    yValueMapper: (ChartData data, _) => data.y
+                  )
+                ]
+              )
             )
           )
-        )
-      );
+        );
+      }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.text]);
+    final String x;
+    final double y;
+    final String? text;
     }
 
 {% endhighlight %}
@@ -176,27 +224,40 @@ The [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
 
 {% highlight dart %} 
 
+    final List<ChartData> chartData = [
+    ChartData('USA', 6),
+    ChartData('China', 7),
+    ChartData('UK', 9),
+    ];
     @override
     Widget build(BuildContext context) {
       return Scaffold(
         body: Center(
           child: Container(
-            child:SfCircularChart(
-              legend: Legend(
+              child:SfCircularChart(
+                legend: Legend(
                 // Visibility of legend
                 isVisible: false
               ),
-              series: <CircularSeries>[
-                PieSeries<ChartData, String>(
-                  dataSource: chartData,
-                  xValueMapper: (ChartData data, _) => data.x,
-                  yValueMapper: (ChartData data, _) => data.y
-                )
-              ]
+                series: <CircularSeries>[
+                  PieSeries<ChartData, String>(
+                    dataSource: chartData,
+                    xValueMapper: (ChartData data, _) => data.x,
+                    yValueMapper: (ChartData data, _) => data.y
+                  )
+                ]
+              )
             )
           )
-        )
-      );
+        );
+      }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.text]);
+    final String x;
+    final double y;
+    final String? text;
     }
 
 {% endhighlight %}
@@ -207,28 +268,43 @@ The legend items can be placed in multiple rows or scroll can be enabled using t
 
 {% highlight dart %} 
 
+    final List<ChartData> chartData = [
+    ChartData('USA', 6),
+    ChartData('China', 7),
+    ChartData('UK', 9),
+    ChartData('Japan', 14),
+    ChartData('France', 10),
+    ];
     @override
     Widget build(BuildContext context) {
       return Scaffold(
         body: Center(
           child: Container(
-            child: SfCircularChart(
-              legend: Legend(
+              child:SfCircularChart(
+                legend: Legend(
                 isVisible: true,
                 // Overflowing legend content will be wraped
                 overflowMode: LegendItemOverflowMode.wrap
               ),
-              series: <CircularSeries>[
-                PieSeries<ChartData, String>(
-                  dataSource: chartData,
-                  xValueMapper: (ChartData data, _) => data.x,
-                  yValueMapper: (ChartData data, _) => data.y
-                )
-              ]
+                series: <CircularSeries>[
+                  PieSeries<ChartData, String>(
+                    dataSource: chartData,
+                    xValueMapper: (ChartData data, _) => data.x,
+                    yValueMapper: (ChartData data, _) => data.y
+                  )
+                ]
+              )
             )
           )
-        )
-      );
+        );
+      }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.text]);
+    final String x;
+    final double y;
+    final String? text;
     }
 
 {% endhighlight %}
@@ -245,28 +321,43 @@ You can change the position of the legend inside the chart. The following proper
 
 {% highlight dart %} 
 
+    final List<ChartData> chartData = [
+    ChartData('USA', 6),
+    ChartData('China', 7),
+    ChartData('UK', 9),
+    ChartData('Japan', 14),
+    ChartData('France', 10),
+    ];
     @override
     Widget build(BuildContext context) {
       return Scaffold(
         body: Center(
           child: Container(
-            child: SfCircularChart(
-              legend: Legend(
+              child:SfCircularChart(
+                legend: Legend(
                 isVisible: true,
                 // Legend will be placed at the left
                 position: LegendPosition.left
               ),
-              series: <CircularSeries>[
-                PieSeries<ChartData, String>(
-                  dataSource: chartData,
-                  xValueMapper: (ChartData data, _) => data.x,
-                  yValueMapper: (ChartData data, _) => data.y
-                ),
-              ]
+                series: <CircularSeries>[
+                  PieSeries<ChartData, String>(
+                    dataSource: chartData,
+                    xValueMapper: (ChartData data, _) => data.x,
+                    yValueMapper: (ChartData data, _) => data.y
+                  )
+                ]
+              )
             )
           )
-        )
-      );
+        );
+      }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.text]);
+    final String x;
+    final double y;
+    final String? text;
     }
 
 {% endhighlight %}
@@ -280,28 +371,42 @@ Also, the legend will not take a dedicated position for it and will be drawn on 
 
 {% highlight dart %}
 
+    final List<ChartData> chartData = [
+    ChartData('USA', 6),
+    ChartData('China', 7),
+    ChartData('UK', 9),
+    ChartData('Japan', 14),
+    ChartData('France', 10),
+    ];
     @override
     Widget build(BuildContext context) {
       return Scaffold(
         body: Center(
           child: Container(
-            child: SfCircularChart(
-              legend: Legend(
+              child:SfCircularChart(
+                legend: Legend(
                 isVisible: true,
                 // Legend will placed at the specified offset
                 offset: Offset(20, 40)),
-              series: <PieSeries>[
-              PieSeries<ChartData, String>(
-                dataSource: chartData,
-                xValueMapper: (ChartData data, _) => data.x,
-                yValueMapper: (ChartData data, _) => data.y),
-          ]))));
+                series: <CircularSeries>[
+                  PieSeries<ChartData, String>(
+                    dataSource: chartData,
+                    xValueMapper: (ChartData data, _) => data.x,
+                    yValueMapper: (ChartData data, _) => data.y
+                  )
+                ]
+              )
+            )
+          )
+        );
+      }
     }
 
     class ChartData {
-        ChartData(this.x, this.y);
-        final String x;
-        final double? y;
+    ChartData(this.x, this.y, [this.text]);
+    final String x;
+    final double y;
+    final String? text;
     }
 
 
@@ -313,13 +418,20 @@ You can customize the appearance of legend items with your template by using [`l
 
 {% highlight dart %} 
 
+    final List<ChartData> chartData = [
+    ChartData('USA', 6),
+    ChartData('China', 7),
+    ChartData('UK', 9),
+    ChartData('Japan', 14),
+    ChartData('France', 10),
+    ];
     @override
     Widget build(BuildContext context) {
       return Scaffold(
         body: Center(
           child: Container(
-            child: SfCircularChart(
-              legend: Legend(
+              child:SfCircularChart(
+                legend: Legend(
                 isVisible: true,
                 // Templating the legend item
                 legendItemBuilder: (String name, dynamic series, dynamic point, int index) {
@@ -330,17 +442,25 @@ You can customize the appearance of legend items with your template by using [`l
                   );
                 }
               ),
-              series: <CircularSeries>[
-                PieSeries<ChartData, String>(
-                  dataSource: chartData,
-                  xValueMapper: (ChartData data, _) => data.x,
-                  yValueMapper: (ChartData data, _) => data.y
-                )
-              ]
+                series: <CircularSeries>[
+                  PieSeries<ChartData, String>(
+                    dataSource: chartData,
+                    xValueMapper: (ChartData data, _) => data.x,
+                    yValueMapper: (ChartData data, _) => data.y
+                  )
+                ]
+              )
             )
           )
-        )
-      );
+        );
+      }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.text]);
+    final String x;
+    final double y;
+    final String? text;
     }
 
 {% endhighlight %}

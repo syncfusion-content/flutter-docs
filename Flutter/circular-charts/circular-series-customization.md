@@ -595,22 +595,33 @@ N> This property is applicable only if the [`onCreateShader`](https://pub.dev/do
 
 {% highlight dart %}
 
+    final List<ChartData> chartData = [
+    ChartData('David', 35),
+    ChartData('Steve', 28),
+    ChartData('Jack', 34),
+    ChartData('Others', 32),
+    ChartData('Maclin', 40)
+    ];
     @override
     Widget build(BuildContext context) {
-        getImage();
-        return Container(
-            child: SfCircularChart(
-                series: <CircularSeries<_SalesData, String>>[
-                    PieSeries<_SalesData, String>(
-                        dataSource: chartData,
-                        // Sweep gradient will be formed with default palette colors.
-                        pointRenderMode: PointRenderMode.gradient,
-                        xValueMapper: (_SalesData sales, _) => sales.year,
-                        xValueMapper: (_SalesData sales, _) => sales.year,
-                    )
-                ]
-            )
-        );
+    // getImage();
+    return Container(
+        child: SfCircularChart(series: <CircularSeries<ChartData, String>>[
+      PieSeries<ChartData, String>(
+        dataSource: chartData,
+        // Sweep gradient will be formed with default palette colors.
+        pointRenderMode: PointRenderMode.gradient,
+        xValueMapper: (ChartData sales, _) => sales.x,
+        yValueMapper: (ChartData sales, _) => sales.y,
+        )]));
+        }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.color]);
+    final String x;
+    final double y;
+    final Color? color;
     }
 
 {% endhighlight %}
@@ -630,30 +641,32 @@ The data points that has null value are considered as empty points. Empty data p
 
     @override
     Widget build(BuildContext context) {
-        
-         final List<ChartData> chartData = [
-            ChartData('David', null),
-            ChartData('Steve', 38),
-            ChartData('Jack', 34),
-            ChartData('Others', 52)
-        ];
-        return Scaffold(
-            body: Center(
-                child: SfCircularChart(
-                    series: <CircularSeries<ChartData,String>>[
-                        // Render pie chart
-                        PieSeries<ChartData, String>(
-                            dataSource: chartData,
-                            dataLabelSettings: DataLabelSettings(isVisible:true),
-                            emptyPointSettings:
-                      EmptyPointSettings(mode: EmptyPointMode.average),
-                            pointColorMapper:(ChartData data,  _) => data.color,
-                            xValueMapper: (ChartData data, _) => data.x,
-                            yValueMapper: (ChartData data, _) => data.y,)
-                    ]
-                )
-            )
-        );
+    final List<ChartData> chartData = [
+      ChartData('David', null),
+      ChartData('Steve', 38),
+      ChartData('Jack', 34),
+      ChartData('Others', 52)
+    ];
+    return Scaffold(
+        body: Center(
+            child: SfCircularChart(series: <CircularSeries<ChartData, String>>[
+      // Render pie chart
+      PieSeries<ChartData, String>(
+        dataSource: chartData,
+        dataLabelSettings: DataLabelSettings(isVisible: true),
+        emptyPointSettings: EmptyPointSettings(mode: EmptyPointMode.average),
+        pointColorMapper: (ChartData data, _) => data.color,
+        xValueMapper: (ChartData data, _) => data.x,
+        yValueMapper: (ChartData data, _) => data.y,
+        )])));
+        }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.color]);
+    final String x;
+    final double? y;
+    final Color? color;
     }
 
 {% endhighlight %}
@@ -689,11 +702,19 @@ Specific color for empty point can be set by [`color`](https://pub.dev/documenta
                                 borderWidth: 2),
                             xValueMapper: (ChartData data, _) => data.x,
                             yValueMapper: (ChartData data, _) => data.y)
-                        ]
+                            ]
+                        )
                     )
                 )
-            )
-        );
+            );
+        }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.color]);
+    final String x;
+    final double? y;
+    final Color? color;
     }
 
 {% endhighlight %}
@@ -732,6 +753,14 @@ The chart’s data source can be sorted using the [`sortingOrder`](https://pub.d
                             yValueMapper: (ChartData data, _) => data.y,
                             animationDuration: 1000
                         )]))));
+        }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.color]);
+    final String x;
+    final double? y;
+    final Color? color;
     }
 
 {% endhighlight %}

@@ -13,6 +13,13 @@ Chart supports annotations which allows you to mark the specific area of interes
 
 {% highlight dart %} 
 
+    final List<ChartData> chartData = [
+    ChartData('USA', 6),
+    ChartData('China', 7),
+    ChartData('UK', 9),
+    ChartData('Japan', 14),
+    ChartData('France', 10),
+    ];
     @override
     Widget build(BuildContext context) {
       return Scaffold(
@@ -26,13 +33,21 @@ Chart supports annotations which allows you to mark the specific area of interes
                       Container(
                         child: const Text('Annotation')
                       ),
-                  )
-                ]
+                    )
+                  ]
+                )
               )
             )
           )
-        )
-      );
+        );
+      }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.text]);
+    final String x;
+    final double y;
+    final String? text;
     }
 
 {% endhighlight %}
@@ -49,6 +64,13 @@ To place the annotation based on the radius values, set the [`Radius`](https://p
 
 {% highlight dart %} 
 
+    final List<ChartData> chartData = [
+    ChartData('USA', 6),
+    ChartData('China', 7),
+    ChartData('UK', 9),
+    ChartData('Japan', 14),
+    ChartData('France', 10),
+    ];
     @override
     Widget build(BuildContext context) {
       return Scaffold(
@@ -71,6 +93,14 @@ To place the annotation based on the radius values, set the [`Radius`](https://p
           )
         )
       );
+    }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.text]);
+    final String x;
+     double y;
+    final String? text;
     }
 
 {% endhighlight %}
