@@ -341,7 +341,7 @@ Widget _getLinearGauge() {
         markerPointers: [
           LinearShapePointer(
               value: pointerValue,
-              onValueChanged: (value) =>
+              onChanged: (value) =>
               {
                 setState(() => {pointerValue = value})
               },
