@@ -149,7 +149,7 @@ class _SfThumbShape extends SfThumbShape {
 
 ## Divider shape
 
-You can change the size and shape of the divider using the [`dividerShape`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/divisorShape.html) property in the `SfRangeSlider`.
+You can change the size and shape of the divider using the [`dividerShape`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dividerShape.html) property in the `SfRangeSlider`.
 
 * getPreferredSize() - Returns the size based on the values passed to it.
 * paint() - Used to change the divider shape.
