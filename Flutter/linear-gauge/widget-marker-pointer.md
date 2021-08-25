@@ -210,3 +210,38 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 
 ![Pointers drag behavior](images/widget-pointer/constraint-drag-behavior.gif)
+
+## Handle onChangeStart, onChanged, and onChangeEnd callbacks
+
+The [`LinearWidgetPointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearWidgetPointer-class.html) provides the `onChangeStart`, `onChanged`, and `onChangeEnd` callbacks. The `onChangeStart` callback will be called when the user start dragging the pointer, the `onChanged` callback will be called when dragging the pointer and the `onChangeEnd` callback will be called when the user stops the pointer dragging.
+
+{% highlight dart %}
+
+double _value = 50;
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfLinearGauge(
+      markerPointers: [
+        LinearWidgetPointer(
+          value: _value,
+          onChangeStart: (double newValue) {
+            _value = newValue;
+          },
+          onChanged: (double newValue) {
+            setState(() {
+              _value = newValue;
+            });
+          },
+          onChangeEnd: (double newValue) {
+            _value = newValue;
+          },
+          child: Container(height: 14, width: 14, color: Colors.redAccent),
+        ),
+      ],
+    ),
+  );
+}
+
+{% endhighlight %}
