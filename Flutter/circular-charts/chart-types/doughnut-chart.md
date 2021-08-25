@@ -70,25 +70,34 @@ The [`cornerStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 
 {% highlight dart %} 
 
+    final List<ChartData> chartData = [
+    ChartData('David', 25),
+    ChartData('Steve', 38),
+    ChartData('Jack', 34),
+    ChartData('Others', 52)
+    ];
+
     @override
     Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCircularChart(
-                        series: <CircularSeries>[
-                            DoughnutSeries<ChartData, String>(
-                                dataSource: chartData,
-                                xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) => data.y,
-                                // Corner style of doughnut segment
-                                cornerStyle: CornerStyle.bothCurve
-                            )
-                        ]
-                    )
-                )
-            )
-        );  
+    return Scaffold(
+        body: Center(
+            child: Container(
+                child: SfCircularChart(series: <CircularSeries>[
+      DoughnutSeries<ChartData, String>(
+          dataSource: chartData,
+          xValueMapper: (ChartData data, _) => data.x,
+          yValueMapper: (ChartData data, _) => data.y,
+          // Corner style of doughnut segment
+          cornerStyle: CornerStyle.bothCurve)
+            ]))));
+        }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.color]);
+    final String x;
+    final double y;
+    final Color? color;
     }
 
 {% endhighlight %}
@@ -101,9 +110,16 @@ You can use the Annotations property in charts, to provide center elevation text
 
 {% highlight dart %} 
 
+    final List<ChartData> chartData = [
+    ChartData('David', 25),
+    ChartData('Steve', 38),
+    ChartData('Jack', 34),
+    ChartData('Others', 52)
+    ];
+
     @override
     Widget build(BuildContext context) {
-        return Scaffold(
+    return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCircularChart(
@@ -129,12 +145,20 @@ You can use the Annotations property in charts, to provide center elevation text
                                 yValueMapper: (ChartData data, _) => data.y,
                                 // Radius of doughnut
                                 radius: '50%'
-                            )
-                        ]
+                                )
+                            ]
+                        )   
                     )
                 )
-            )
-        );
+            );
+        }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.color]);
+    final String x;
+    final double y;
+    final Color? color;
     }
 
 
@@ -148,6 +172,48 @@ You can use the [`pointColorMapper`](https://pub.dev/documentation/syncfusion_fl
 
 {% highlight dart %} 
 
+    final List<ChartData> chartData = <ChartData>[
+      ChartData(
+          'A', 10,  const Color.fromRGBO(255, 4, 0, 1)),
+      ChartData(
+          'B', 10,  const Color.fromRGBO(255, 15, 0, 1)),
+      ChartData(
+          'C', 10,  const Color.fromRGBO(255, 31, 0, 1)),
+      ChartData(
+          'D', 10,  const Color.fromRGBO(255, 60, 0, 1)),
+      ChartData(
+          'E', 10,  const Color.fromRGBO(255, 90, 0, 1)),
+      ChartData(
+          'F', 10,  const Color.fromRGBO(255, 115, 0, 1)),
+      ChartData(
+          'G', 10,  const Color.fromRGBO(255, 135, 0, 1)),
+      ChartData(
+          'H', 10,  const Color.fromRGBO(255, 155, 0, 1)),
+      ChartData(
+          'I', 10,  const Color.fromRGBO(255, 175, 0, 1)),
+      ChartData(
+          'J', 10,  const Color.fromRGBO(255, 188, 0, 1)),
+      ChartData(
+          'K', 10,  const Color.fromRGBO(255, 188, 0, 1)),
+      ChartData(
+          'L', 10,  const Color.fromRGBO(251, 188, 2, 1)),
+      ChartData(
+          'M', 10,  const Color.fromRGBO(245, 188, 6, 1)),
+      ChartData(
+          'N', 10,  const Color.fromRGBO(233, 188, 12, 1)),
+      ChartData(
+          'O', 10,  const Color.fromRGBO(220, 187, 19, 1)),
+      ChartData(
+          'P', 10,  const Color.fromRGBO(208, 187, 26, 1)),
+      ChartData(
+          'Q', 10,  const Color.fromRGBO(193, 187, 34, 1)),
+      ChartData(
+          'R', 10,  const Color.fromRGBO(177, 186, 43, 1)),
+      ChartData(
+          'S', 10,  const Color.fromRGBO(230, 230, 230, 1)),
+      ChartData(
+          'T', 10,  const Color.fromRGBO(230, 230, 230, 1))
+    ];
     @override
     Widget build(BuildContext context) {
         return Scaffold(
@@ -159,17 +225,26 @@ You can use the [`pointColorMapper`](https://pub.dev/documentation/syncfusion_fl
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
-                                pointColorMapper: (ChartSampleData data, _) => data.pointColor,
+                                pointColorMapper: (ChartData data, _) => data.color,
                                 // Radius of doughnut
-                                radius: '50%'
-                            )
-                        ]
+                                radius: '50%',
+                                strokeColor: Colors.white,
+                                strokeWidth: 2,
+                                )
+                            ]
+                        )
                     )
                 )
-            )
-        );
+            );
+        }
     }
 
+    class ChartData {
+    ChartData(this.x, this.y, [this.color]);
+    final String x;
+    final double y;
+    final Color? color;
+    }
 
 {% endhighlight %}
 
@@ -181,6 +256,12 @@ You can use the [`radius`](https://pub.dev/documentation/syncfusion_flutter_char
 
 {% highlight dart %} 
 
+    final List<ChartData> chartData = [
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('Mar', 34),
+    ChartData('May', 40)
+    ];
     @override
     Widget build(BuildContext context) {
         return Scaffold(
@@ -193,13 +274,21 @@ You can use the [`radius`](https://pub.dev/documentation/syncfusion_flutter_char
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
                                 // Radius of doughnut
-                                radius: '50%'
-                            )
-                        ]
+                                radius: '50%',
+                                )
+                            ]
+                        )
                     )
                 )
-            )
-        );
+            );
+        }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.color]);
+    final String x;
+    final double y;
+    final Color? color;
     }
 
 
@@ -213,6 +302,12 @@ You can change the inner radius of doughnut chart using the [`innerRadius`](http
 
 {% highlight dart %} 
 
+    final List<ChartData> chartData = [
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('Mar', 34),
+    ChartData('May', 40)
+    ];
     @override
     Widget build(BuildContext context) {
         return Scaffold(
@@ -224,14 +319,22 @@ You can change the inner radius of doughnut chart using the [`innerRadius`](http
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
-                                // Radius of doughnut's inner circle
+                                // Radius of doughnut
                                 innerRadius: '80%'
-                            )
-                        ]
+                                )
+                            ]
+                        )
                     )
                 )
-            )
-        );
+            );
+        }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.color]);
+    final String x;
+    final double y;
+    final Color? color;
     }
 
 {% endhighlight %}
@@ -248,6 +351,12 @@ You can explode a doughnut segment by enabling the [`explode`](https://pub.dev/d
 
 {% highlight dart %} 
 
+    final List<ChartData> chartData = [
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('Mar', 34),
+    ChartData('May', 40)
+    ];
     @override
     Widget build(BuildContext context) {
         return Scaffold(
@@ -262,13 +371,22 @@ You can explode a doughnut segment by enabling the [`explode`](https://pub.dev/d
                                 // Explode the segments on tap
                                 explode: true,
                                 explodeIndex: 1
-                            )
-                        ]
+                                )
+                            ]
+                        )
                     )
                 )
-            )
-        );
+            );
+        }
     }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.color]);
+    final String x;
+    final double y;
+    final Color? color;
+    }
+
 
 
 {% endhighlight %}
@@ -281,6 +399,12 @@ Using the [`explodeAll`](https://pub.dev/documentation/syncfusion_flutter_charts
 
 {% highlight dart %} 
 
+    final List<ChartData> chartData = [
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('Mar', 34),
+    ChartData('May', 40)
+    ];
     @override
     Widget build(BuildContext context) {
         return Scaffold(
@@ -292,15 +416,23 @@ Using the [`explodeAll`](https://pub.dev/documentation/syncfusion_flutter_charts
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
-                                explode: true,
+                                explode: true, 
                                 // Explode all the segments
                                 explodeAll: true
-                            )
-                        ]
+                                )
+                            ]
+                        )
                     )
                 )
-            )
-        );
+            );
+        }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.color]);
+    final String x;
+    final double y;
+    final Color? color;
     }
 
 
@@ -314,6 +446,12 @@ Using the [`explodeAll`](https://pub.dev/documentation/syncfusion_flutter_charts
 
 {% highlight dart %} 
 
+    final List<ChartData> chartData = [
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('Mar', 34),
+    ChartData('May', 40)
+    ];
     @override
     Widget build(BuildContext context) {
         return Scaffold(
@@ -327,12 +465,20 @@ Using the [`explodeAll`](https://pub.dev/documentation/syncfusion_flutter_charts
                                 yValueMapper: (ChartData data, _) => data.y,
                                 startAngle: 270, // Starting angle of doughnut
                                 endAngle: 90 // Ending angle of doughnut
-                            )
-                        ]
+                                )
+                            ]
+                        )
                     )
                 )
-            )
-        );
+            );
+        }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.color]);
+    final String x;
+    final double y;
+    final Color? color;
     }
 
 
@@ -346,6 +492,12 @@ The small segments in the doughnut chart can be grouped into **others** category
 
 {% highlight dart %} 
 
+    final List<ChartData> chartData = [
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('Mar', 34),
+    ChartData('May', 40)
+    ];
     @override
     Widget build(BuildContext context) {
         return Scaffold(
@@ -360,12 +512,20 @@ The small segments in the doughnut chart can be grouped into **others** category
                                 // Mode of grouping
                                 groupMode: CircularChartGroupMode.point,
                                 groupTo: 2
-                            )
-                        ]
+                                )
+                            ]
+                        )
                     )
                 )
-            )
-        );
+            );
+        }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.color]);
+    final String x;
+    final double y;
+    final Color? color;
     }
 
 

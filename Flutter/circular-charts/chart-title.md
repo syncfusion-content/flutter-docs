@@ -17,10 +17,10 @@ Following properties can be used to customize its appearance.
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTitle/borderColor.html) - used to change the border color.
 * [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTitle/borderWidth.html) - used to change the border width.
 * [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTitle/textStyle.html) - used to change the text color, size, font family, fontStyle, and font weight.
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/color.html) - used to change the color of the text.
-* [`fontFamily`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontFamily.html) - used to change the font family for chart title. 
-* [`fontStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontStyle.html) - used to change the font style for the chart title.
-* [`fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TextStyle/fontSize.html) - used to change the font size for the chart title.
+* [`color`](https://api.flutter.dev/flutter/painting/TextStyle/color.html) - used to change the color of the text.
+* [`fontFamily`](https://api.flutter.dev/flutter/painting/TextStyle/fontFamily.html) - used to change the font family for chart title. 
+* [`fontStyle`](https://api.flutter.dev/flutter/painting/TextStyle/fontStyle.html) - used to change the font style for the chart title.
+* [`fontSize`](https://api.flutter.dev/flutter/painting/TextStyle/fontSize.html) - used to change the font size for the chart title.
 
 
 ### Text Alignment
@@ -51,18 +51,17 @@ You can align the title text content horizontally to the near, center or far of 
                 ),
                 series: <ChartSeries>[
                   // Initialize line series
-                  PieSeries<SalesData, String>(
+                  PieSeries<ChartData, String>(
                     dataSource: [
                       // Bind data source
-                      SalesData('Jan', 35),
-                      SalesData('Feb', 28),
-                      SalesData('Mar', 34),
-                      SalesData('Apr', 32),
-                      SalesData('May', 40)
+                      ChartData('Jan', 35),
+                      ChartData('Feb', 28),
+                      ChartData('Mar', 34),
+                      ChartData('Apr', 32),
+                      ChartData('May', 40)
                     ],
-                    pointColorMapper: (SalesData sales, _) => sales.color,
-                    xValueMapper: (SalesData sales, _) =>   sales.year,
-                    yValueMapper: (SalesData sales, _) => sales.sales
+                    xValueMapper: (ChartData sales, _) =>   sales.year,
+                    yValueMapper: (ChartData sales, _) => sales.sales
                   )
                 ]
               )
@@ -70,6 +69,14 @@ You can align the title text content horizontally to the near, center or far of 
           )
         );
       }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.color]);
+    final String x;
+    final double y;
+    final Color? color;
+}
 
 {% endhighlight %}
 

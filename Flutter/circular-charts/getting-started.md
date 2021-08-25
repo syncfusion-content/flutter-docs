@@ -111,7 +111,7 @@ Based on your data, initialize the series type. In the series, you need to map t
       ChartData(this.x, this.y, [this.color]);
         final String x;
         final double y;
-        final Color color;
+        final Color? color;
     }
 
 {% endhighlight %}
@@ -167,31 +167,33 @@ You can add data labels to improve the readability of the chart using the [`data
 
     @override
     Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCircularChart(
-                        series: <ChartSeries>[
-                            // Initialize line series
-                            PieSeries<SalesData, String>(
-                                dataSource: [
-                                    // Bind data source
-                                    SalesData('Jan', 35),
-                                    SalesData('Feb', 28),
-                                    SalesData('Mar', 34),
-                                    SalesData('Apr', 32),
-                                    SalesData('May', 40)
-                                ],
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales,
-                                // Render the data label
-                                dataLabelSettings:DataLabelSettings(isVisible : true)
-                            )
-                        ]
-                    )
-                )
-            )
-        );
+    return Scaffold(
+        body: Center(
+            child: Container(
+                child: SfCircularChart(series: <CircularSeries>[
+      // Initialize line series
+      PieSeries<ChartData, String>(
+          dataSource: [
+            // Bind data source
+            ChartData('Jan', 35),
+            ChartData('Feb', 28),
+            ChartData('Mar', 34),
+            ChartData('Apr', 32),
+            ChartData('May', 40)
+          ],
+          xValueMapper: (ChartData sales, _) => sales.x,
+          yValueMapper: (ChartData sales, _) => sales.y,
+          // Render the data label
+          dataLabelSettings: DataLabelSettings(isVisible: true))
+            ]))));
+        }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.color]);
+    final String x;
+    final double y;
+    final Color? color;
     }
 
 {% endhighlight %}
@@ -266,27 +268,35 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
                     child: SfCircularChart(
                         // Enables the tooltip for all the series in chart
                         tooltipBehavior: _tooltipBehavior,
-                        series: <ChartSeries>[
+                        series: <CircularSeries>[
                             // Initialize line series
-                            PieSeries<SalesData, String>(
+                            PieSeries<ChartData, String>(
                                 // Enables the tooltip for individual series
                                 enableTooltip: true, 
                                 dataSource: [
                                     // Bind data source
-                                    SalesData('Jan', 35),
-                                    SalesData('Feb', 28),
-                                    SalesData('Mar', 34),
-                                    SalesData('Apr', 32),
-                                    SalesData('May', 40)
+                                    ChartData('Jan', 35),
+                                    ChartData('Feb', 28),
+                                    ChartData('Mar', 34),
+                                    ChartData('Apr', 32),
+                                    ChartData('May', 40)
                                 ],
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
-                            )
-                        ]
+                                xValueMapper: (ChartData sales, _) => sales.x,
+                                yValueMapper: (ChartData sales, _) => sales.y
+                                )
+                            ]
+                        )
                     )
                 )
-            )
-        );
+            );
+        }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.color]);
+    final String x;
+    final double y;
+    final Color? color;
     }
 
 {% endhighlight %}
