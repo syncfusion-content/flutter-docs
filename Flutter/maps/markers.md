@@ -154,6 +154,9 @@ N>
 
 You can customize the built-in markers appearance using the [`iconType`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker/iconType.html), [`iconColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker/iconColor.html), [`iconStrokeColor`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker/iconStrokeColor.html), [`iconStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker/iconStrokeWidth.html), and [`size`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker/size.html) properties of the [`MapMarker`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker-class.html).
 
+* **Alignment** - You can change the position of the marker from the given coordinate using the `alignment` property. The default value is `Alignment.center`. The available alignment options are `topLeft`, `topRight`, `topCenter`, `centerLeft`, `center`, `centerRight`, `bottomLeft`, `bottomCenter`, `bottomRight`.
+* **Offset** - You can adjust the marker position from the given coordinate using the `offset` property. The default value of the `offset` property is `Offset.zero`.
+
 N>
 * The default value of the [`iconType`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker/iconType.html) is `MapIconType.circle`.
 * The default value of the [`iconStrokeWidth`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapMarker/iconStrokeWidth.html) is `1.0`.
@@ -200,6 +203,8 @@ Widget build(BuildContext context) {
                 longitude: _data[index].longitude,
                 iconType: MapIconType.triangle,
                 size: Size(18, 18),
+                alignment: Alignment.center,
+                offset: Offset(0, 9),
                 iconColor: Colors.green[200],
                 iconStrokeColor: Colors.green[900],
                 iconStrokeWidth: 2,
@@ -719,7 +724,7 @@ class Model {
 
 ## Marker controller
 
-You can position the marker at the tapped position by converting touch pixel point into coordinates using the [`MapTileLayerController`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayerController-class.html) in the [`MapTileLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html) and the [`MapShapeLayerController`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerController-class.html) in the [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html).
+You can position the marker at the tapped position by converting touch pixel point into coordinates using the [`pixelToLatLng`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayerController/pixelToLatLng.html) method of [`MapTileLayerController`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayerController-class.html) in the [`MapTileLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapTileLayer-class.html) and the [`MapShapeLayerController`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayerController-class.html) in the [`MapShapeLayer`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeLayer-class.html).
 
 N> It is applicable for both tile layer and shape layer.
 
@@ -877,3 +882,118 @@ typedef MapTapCallback = void Function(Offset position);
 {% endtabs %}
 
 ![Position marker at tapped position](images/markers/marker-at-tapped-position.gif)
+
+## Zoom markers to fit bounds
+
+You can visualize a specific area on the map by specifying the northeast and southwest coordinate points to the `initialLatLngBounds` property in the `MapTileLayer` and `MapShapeLayer`. It renders the map by calculating the center coordinate and zoom level depending on the `initialLatLngBounds` value.
+
+The `initialLatLngBounds` property can be set at load time alone. You can use the `latLngBounds` property of [`MapZoomPanBehavior`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapZoomPanBehavior-class.html) to dynamically update the map bounds.
+
+{% tabs %}
+{% highlight Dart %}
+
+late List<_TouristPlaceDetails> _touristPlaces;
+late MapZoomPanBehavior _zoomPanBehavior;
+bool _canFitMarkers = false;
+
+@override
+void initState() {
+  _zoomPanBehavior = MapZoomPanBehavior();
+  _touristPlaces = <_TouristPlaceDetails>[
+    const _TouristPlaceDetails(
+        MapLatLng(-25.6953, -54.4367), 'Iguazu Falls, Argentina'),
+    const _TouristPlaceDetails(MapLatLng(-50.9423, -73.4068),
+        'Torres del Paine National Park, Patagonia, Chile'),
+    const _TouristPlaceDetails(
+        MapLatLng(-15.9254, -69.3354), 'Lake Titicaca, Bolivia'),
+    const _TouristPlaceDetails(
+        MapLatLng(-13.1631, -72.5450), 'Machu Picchu, Peru'),
+    const _TouristPlaceDetails(
+        MapLatLng(-0.1862504, -78.5706247), 'The Amazon via Quito, Ecuador'),
+    const _TouristPlaceDetails(
+        MapLatLng(5.9701, -62.5362), 'Angel Falls, Venezuela'),
+    const _TouristPlaceDetails(
+        MapLatLng(-14.0875, -75.7626), 'Huacachina, Peru'),
+    const _TouristPlaceDetails(
+        MapLatLng(-22.7953, -67.8361), 'Laguna Verde, Bolivia'),
+    const _TouristPlaceDetails(
+        MapLatLng(-50.5025092, -73.1997346), 'Perito Moreno, Venezuela'),
+    const _TouristPlaceDetails(
+        MapLatLng(-22.9068, -43.1729), 'Rio de Janeiro, Brazil'),
+    const _TouristPlaceDetails(
+        MapLatLng(5.1765, -59.4808), 'Kaieteur Falls, Guyana'),
+    const _TouristPlaceDetails(
+        MapLatLng(-33.4489, -70.6693), 'Santiago, Chile'),
+    const _TouristPlaceDetails(
+        MapLatLng(4.7110, -74.0721), 'Bogota, Colombia'),
+    const _TouristPlaceDetails(
+        MapLatLng(-1.3928, -78.4269), 'Banos, Ecuador'),
+  ];
+  super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: Column(
+      children: [
+        SfMaps(
+          layers: <MapLayer>[
+            MapTileLayer(
+              urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+              zoomPanBehavior: _zoomPanBehavior,
+              initialMarkersCount: _touristPlaces.length,
+              markerBuilder: (BuildContext context, int index) {
+                return MapMarker(
+                  latitude: _touristPlaces[index].latLng.latitude,
+                  longitude: _touristPlaces[index].latLng.longitude,
+                  child: const Icon(
+                    Icons.location_on,
+                    color: Colors.red,
+                    size: 20,
+                  ),
+                );
+              },
+            ),
+          ],
+        ),
+        SizedBox(height: 10),
+        Container(
+          width: 300,
+          padding: EdgeInsets.zero,
+          child: CheckboxListTile(
+            activeColor: Colors.blue,
+            value: _canFitMarkers,
+            title: Text('Zoom marker to fit bounds'),
+            onChanged: (bool? value) {
+              _canFitMarkers = value!;
+              setState(() {
+                if (_canFitMarkers) {
+                  // South America bounds.
+                  _zoomPanBehavior.latLngBounds = const MapLatLngBounds(
+                      MapLatLng(12.434375, -34.80546874999999),
+                      MapLatLng(-55.891699218750006, -91.654150390625));
+                } else {
+                  // World bounds.
+                  _zoomPanBehavior.latLngBounds = const MapLatLngBounds(
+                      MapLatLng(-90.0, -180.0), MapLatLng(90.0, 180.0));
+                }
+              });
+            },
+          ),
+        ),
+      ],
+    ),
+  );
+}
+
+class _TouristPlaceDetails {
+  const _TouristPlaceDetails(this.latLng, this.place);
+  final MapLatLng latLng;
+  final String place;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Zoom markers to fit bounds](images/markers/fit_markers.gif)
