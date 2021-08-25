@@ -78,8 +78,7 @@ You can customize the area of the chart using the below properties.
               height: 300, 
               width: 350, 
               child: SfPyramidChart(
-                backgroundColor: Colors.lightGreen,
-                backgroundImage: backgroundImage: const AssetImage('images/livechart.png'),
+                backgroundColor: Colors.lightGreen,backgroundImage: const AssetImage('images/livechart.png'),
               )
             )
           )

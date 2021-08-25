@@ -100,7 +100,12 @@ Specific color for empty point can be set by [`color`](https://pub.dev/documenta
                             borderColor: Colors.black,
                             borderWidth: 2),
                         xValueMapper: (ChartData data, _) => data.x,
-                        yValueMapper: (ChartData data, _) => data.y)))));
+                        yValueMapper: (ChartData data, _) => data.y
+                        )
+                      )
+                    )
+                )
+            );
         }
     }
 

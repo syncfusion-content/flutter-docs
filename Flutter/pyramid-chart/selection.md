@@ -294,8 +294,8 @@ N> The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter
     return Scaffold(
       body: Center(
           child: Column(children: <Widget>[
-        Container(child: chart),
-        FlatButton(child: Text('Select'), onPressed: select),
+          Container(child: chart),
+          ElevatedButton(child: Text('Select'), onPressed: select),
       ])),
     );
     }

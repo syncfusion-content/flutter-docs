@@ -41,24 +41,25 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
                 child: SfPyramidChart(
                     series: PyramidSeries<ChartData, String>(
                         dataSource: [
-          ChartData('David', 35),
-          ChartData('Steve', 28),
-          ChartData('Jack', 34),
-          ChartData('Others', 32),
-          ChartData('Maclin', 40)
-        ],
+                        ChartData('David', 35),
+                        ChartData('Steve', 28),
+                        ChartData('Jack', 34),
+                        ChartData('Others', 32),
+                        ChartData('Maclin', 40)
+                        ],
                         dataLabelSettings: DataLabelSettings(isVisible: true),
                         xValueMapper: (ChartData data, _) => data.x,
                         yValueMapper: (ChartData data, _) => data.y)))));
-        }
-    }
+                    }
+            }
 
-    class ChartData {
-    ChartData(this.x, this.y, [this.color]);
-    final String x;
-    final double y;
-    final Color? color;
-    }
+        class ChartData {
+        ChartData(this.x, this.y, [this.color]);
+        final String x;
+        final double y;
+        final Color? color;
+        }
+
 {% endhighlight %}
 
 ![DataLabel](images/datalabel/default_datalabel.png)
