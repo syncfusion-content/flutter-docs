@@ -996,4 +996,7 @@ class _TouristPlaceDetails {
 {% endhighlight %}
 {% endtabs %}
 
-![Zoom markers to fit bounds](images/markers/fit_markers.gif)
+### Default markers
+![Zoom markers to fit bounds](images/markers/default_markers.png)
+### Fit markers to bounds
+![Zoom markers to fit bounds](images/markers/fit_markers.png)
