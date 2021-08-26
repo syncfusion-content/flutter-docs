@@ -202,10 +202,9 @@ Also, the segments can be exploded by tapping the segment.
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.color]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final Color? color;
     }
 
 {% endhighlight %}
