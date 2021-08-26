@@ -103,7 +103,7 @@ Widget build(BuildContext context) {
   return Scaffold(
       body: Container(
           child: SfPdfViewer.network(
-              'http://ebooks.syncfusion.com/downloads/flutter-succinctly/flutter-succinctly.pdf')));
+              'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf')));
 }
 
 {% endhighlight %}
@@ -244,7 +244,7 @@ Widget build(BuildContext context) {
   return Scaffold(
       body: Container(
           child: SfPdfViewer.network(
-              'http://ebooks.syncfusion.com/downloads/flutter-succinctly/flutter-succinctly.pdf',
+              'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
               canShowScrollHead: false,
               canShowScrollStatus: false)));
 }
@@ -266,7 +266,7 @@ Widget build(BuildContext context) {
   return Scaffold(
       body: Container(
           child: SfPdfViewer.network(
-              'http://ebooks.syncfusion.com/downloads/flutter-succinctly/flutter-succinctly.pdf', 
+              'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf', 
               canShowPaginationDialog: false)));
 }
 
@@ -291,7 +291,7 @@ Widget build(BuildContext context) {
   return Scaffold(
       body: Container(
           child: SfPdfViewer.network(
-    'http://ebooks.syncfusion.com/downloads/flutter-succinctly/flutter-succinctly.pdf',
+    'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
     onDocumentLoaded: (PdfDocumentLoadedDetails details) {
       print(details.document.pages.count);
     },
@@ -320,7 +320,7 @@ Widget build(BuildContext context) {
   return Scaffold(
       body: Container(
           child: SfPdfViewer.network(
-    'http://ebooks.syncfusion.com/downloads/flutter-succinctly/flutter-succintly.pdf',
+    'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
     onDocumentLoadFailed: (PdfDocumentLoadFailedDetails details) {
       AlertDialog(
         title: Text(details.error),
