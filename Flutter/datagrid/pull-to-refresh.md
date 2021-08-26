@@ -223,6 +223,96 @@ Widget build(BuildContext context) {
   );
 }
 
+class EmployeeDataSource extends DataGridSource {
+  EmployeeDataSource() {
+    buildDataGridRows();
+  }
+
+  List<DataGridRow> dataGridRows = [];
+
+  @override
+  List<DataGridRow> get rows => dataGridRows;
+
+  @override
+  DataGridRowAdapter? buildRow(DataGridRow row) {
+    return DataGridRowAdapter(
+        cells: row.getCells().map<Widget>((dataGridCell) {
+        return Container(
+            alignment: (dataGridCell.columnName == 'id' ||
+                  dataGridCell.columnName == 'salary')
+                  ? Alignment.centerRight
+                  : Alignment.centerLeft,
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            child: Text(
+            dataGridCell.value.toString(),
+            overflow: TextOverflow.ellipsis,
+            ));
+    }).toList());
+  }
+
+  @override
+  Future<void> handleRefresh() async {
+    await Future.delayed(Duration(seconds: 5));
+    _addMoreRows(_employees, 15);
+    buildDataGridRows();
+    notifyListeners();
+  }
+
+  void buildDataGridRows() {
+    dataGridRows = _employees
+        .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
+              DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
+              DataGridCell<String>(columnName: 'name', value: dataGridRow.name),
+              DataGridCell<String>(
+                  columnName: 'designation', value: dataGridRow.designation),
+              DataGridCell<int>(
+                  columnName: 'salary', value: dataGridRow.salary),
+            ]))
+        .toList();
+  }
+
+  void _addMoreRows(List<Employee> employees, int count) {
+    final Random _random = Random();
+    final startIndex = employees.isNotEmpty ? employees.length : 0,
+        endIndex = startIndex + count;
+    for (int i = startIndex; i < endIndex; i++) {
+      employees.add(Employee(
+        1000 + i,
+        _names[_random.nextInt(_names.length - 1)],
+        _designation[_random.nextInt(_designation.length - 1)],
+        10000 + _random.nextInt(10000),
+      ));
+    }
+  }
+
+  final List<String> _names = <String>[
+    'Welli',
+    'Blonp',
+    'Folko',
+    'Furip',
+    'Folig',
+    'Picco',
+    'Frans',
+    'Warth',
+    'Linod',
+    'Simop',
+    'Merep',
+    'Riscu',
+    'Seves',
+    'Vaffe',
+    'Alfki'
+  ];
+
+  final List<String> _designation = <String>[
+    'Project Lead',
+    'Developer',
+    'Manager',
+    'Designer',
+    'System Analyst',
+    'CEO'
+  ];
+}
+
 {% endhighlight %}
 {% endtabs %}
 
