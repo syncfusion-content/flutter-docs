@@ -164,10 +164,9 @@ You can control the gap between the two segments using the [`gapRatio`](https://
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.color]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final Color? color;
     }
 
 
@@ -249,15 +248,18 @@ The [`smartLabelMode`](https://pub.dev/documentation/syncfusion_flutter_charts/l
                       dataLabelSettings: DataLabelSettings(
                           isVisible: true,
                           labelPosition: ChartDataLabelPosition.inside),
-                    )))));
+                        )
+                      )
+                    )
+                )
+            );
         }
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.color]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final Color? color;
     }
 
 {% endhighlight %}

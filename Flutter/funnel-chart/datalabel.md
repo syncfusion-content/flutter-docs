@@ -31,39 +31,34 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
 
     @override
     Widget build(BuildContext context) {
-        final List<ChartData> chartData = [
-        ChartData('David', null),
-        ChartData('Steve', 38),
-        ChartData('Jack', 34),
-        ChartData('Others', 52)
-        ];
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfFunnelChart(
-                        series: FunnelSeries<ChartData, String>(
-                                dataSource: chartData,
-                                pointColorMapper: (ChartData data, _) => data.color,
-                                xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) => data.y,
-                                dataLabelSettings: DataLabelSettings(
-                                    // Renders the data label
-                                    isVisible: true
-                                   )
-                                )
-                            )
-                        )
-                    )
-                );
-            }
+    final List<ChartData> chartData = [
+      ChartData('David', 35),
+      ChartData('Steve', 32),
+      ChartData('Jack', 34),
+      ChartData('Others', 28),
+      ChartData('Maclin', 40)
+    ];
+    return Scaffold(
+        body: Center(
+            child: Container(
+                child: SfFunnelChart(
+                    series: FunnelSeries<ChartData, String>(
+                        dataSource: chartData,
+                        pointColorMapper: (ChartData data, _) => data.color,
+                        xValueMapper: (ChartData data, _) => data.x,
+                        yValueMapper: (ChartData data, _) => data.y,
+                        dataLabelSettings: DataLabelSettings(
+                            // Renders the data label
+                            isVisible: true))))));
         }
+    }
 
-        class ChartData {
-        ChartData(this.x, this.y, [this.color]);
-        final String x;
-        final double? y;
-        final Color? color;
-        }
+    class ChartData {
+    ChartData(this.x, this.y, [this.color]);
+    final String x;
+    final double? y;
+    final Color? color;
+    }
 
 {% endhighlight %}
 
@@ -80,10 +75,11 @@ The [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/la
     @override
     Widget build(BuildContext context) {
     final List<ChartData> chartData = [
-      ChartData('David', null),
-      ChartData('Steve', 38),
+      ChartData('David', 35),
+      ChartData('Steve', 32),
       ChartData('Jack', 34),
-      ChartData('Others', 52)
+      ChartData('Others', 28),
+      ChartData('Maclin', 40)
     ];
     return Scaffold(
         body: Center(
@@ -123,10 +119,11 @@ The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
     @override
     Widget build(BuildContext context) {
     final List<ChartData> chartData = [
-      ChartData('David', null),
-      ChartData('Steve', 38),
+      ChartData('David', 35),
+      ChartData('Steve', 32),
       ChartData('Jack', 34),
-      ChartData('Others', 52)
+      ChartData('Others', 28),
+      ChartData('Maclin', 40)
     ];
     return Scaffold(
         body: Center(
@@ -184,10 +181,9 @@ Data label and its connector line in the Funnel charts for the point value 0 can
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.color]);
+    ChartData(this.x, this.y);
     final double x;
     final double? y;
-    final Color? color;
     }
 
 {% endhighlight %}
