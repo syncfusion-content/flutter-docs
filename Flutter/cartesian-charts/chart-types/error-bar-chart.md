@@ -11,7 +11,7 @@ documentation: ug
 
 Error bars are graphical representations of the variability of data and used on graphs to indicate the error or uncertainty in a reported measurement.
 
-To render a Error bar chart, create an instance of [`ErrorBarSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarSeries-class.html), and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/XyDataSeries-class.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties can be used to customize the appearance:
+To render a Error bar chart, create an instance of [`ErrorBarSeries`], and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/XyDataSeries-class.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties can be used to customize the appearance:
 
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - changes the stroke width of the line.
 * [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
@@ -140,7 +140,7 @@ For ['Custom'] type,You can customize the error bar depending on the error value
     }
 
     class SalesData {
-    const SalesData(this.country, this.salesCount);
+    SalesData(this.country, this.salesCount);
     final String country;
     final int salesCount;
     }
@@ -186,7 +186,7 @@ The error bar mode specifies whether the error bar should be drawn horizontally,
     }
 
     class SalesData {
-    const SalesData(this.country, this.salesCount);
+    SalesData(this.country, this.salesCount);
     final String country;
     final int salesCount;
     }
@@ -230,7 +230,7 @@ Using the ['direction'] option, you can alter the error bar direction to plus, m
     }
 
     class SalesData {
-    const SalesData(this.country, this.salesCount);
+    SalesData(this.country, this.salesCount);
     final String country;
     final int salesCount;
     }
@@ -272,7 +272,7 @@ You can customize the ErrorBar with the following style properties,
     }
 
     class SalesData {
-    const SalesData(this.country, this.salesCount);
+    SalesData(this.country, this.salesCount);
     final String country;
     final int salesCount;
     }
