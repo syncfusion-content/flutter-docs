@@ -43,12 +43,12 @@ The data points that has null value are considered as empty points. Empty data p
 
     @override
     Widget build(BuildContext context) {
-        
          final List<ChartData> chartData = [
-            ChartData('David', null),
-            ChartData('Steve', 38),
-            ChartData('Jack', 34),
-            ChartData('Others', 52)
+            ChartData('David', 35),
+            ChartData('Steve', 28),
+            ChartData('Jack', null),
+            ChartData('Others', 32),
+            ChartData('Maclin', 40)
         ];
         return Scaffold(
             body: Center(
@@ -67,10 +67,9 @@ The data points that has null value are considered as empty points. Empty data p
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.color]);
+    ChartData(this.x, this.y);
     final String x;
     final double? y;
-    final Color? color;
     }
 
 {% endhighlight %}
@@ -86,10 +85,11 @@ Specific color for empty point can be set by [`color`](https://pub.dev/documenta
     @override
     Widget build(BuildContext context) {
         final List<ChartData> chartData = [
-        ChartData('David', null),
-        ChartData('Steve', 38),
-        ChartData('Jack', 34),
-        ChartData('Others', 52)
+            ChartData('David', 35),
+            ChartData('Steve', 28),
+            ChartData('Jack', null),
+            ChartData('Others', 32),
+            ChartData('Maclin', 40)
         ];
         return Scaffold(
             body: Center(
@@ -113,10 +113,9 @@ Specific color for empty point can be set by [`color`](https://pub.dev/documenta
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.color]);
+    ChartData(this.x, this.y);
     final String x;
     final double? y;
-    final Color? color;
     }
 
 {% endhighlight %}
@@ -132,11 +131,11 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
     @override
     Widget build(BuildContext context) {
     final dynamic chartData = <ChartData>[
-      ChartData('Rent', 1000, Colors.teal),
-      ChartData('Food', 2500, Colors.lightBlue),
-      ChartData('Savings', 760, Colors.brown),
-      ChartData('Tax', 1897, Colors.grey),
-      ChartData('Others', 2987, Colors.blueGrey)
+      ChartData('Rent', 35, Colors.amberAccent),
+      ChartData('Food', 28, Colors.brown),
+      ChartData('Savings', 30, Colors.green),
+      ChartData('Tax', 32, Colors.redAccent),
+      ChartData('Others', 40, Colors.cyan)
     ];
     return Scaffold(
         body: Center(

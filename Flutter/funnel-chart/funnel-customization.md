@@ -35,17 +35,17 @@ To render a funnel chart, create an instance of [`FunnelSeries`](https://pub.dev
                             ],
                             xValueMapper: (ChartData data, _) => data.x,
                             yValueMapper: (ChartData data, _) => data.y)
+                        )
                     )
                 )
-            )
-        );
+            );
+        }
     }
 
     class ChartData {
-        ChartData(this.x, this.y, [this.color]);
+        ChartData(this.x, this.y);
             final String x;
             final double y;
-            final Color? color;
     }
 
 {% endhighlight %}
@@ -61,29 +61,30 @@ You can modify the size of funnel series using the [`height`](https://pub.dev/do
     @override
     Widget build(BuildContext context) {
     final List<ChartData> chartData = [
-      ChartData('Jan', 35),
-      ChartData('Feb', 28),
-      ChartData('Mar', 34),
-      ChartData('Apr', 32),
-      ChartData('May', 40)
+      ChartData('Walnuts', 654),
+      ChartData('Almonds', 575),
+      ChartData('Soybeans', 446),
+      ChartData('Black beans', 341),
+      ChartData('Mushrooms', 296),
+      ChartData('Avacado', 160),
     ];
     return Scaffold(
         body: Center(
             child: Container(
                 child: SfFunnelChart(
                     series: FunnelSeries<ChartData, String>(
-                      dataSource: chartData,
-                    height: '50%',
+                        dataSource: chartData,
+                        height: '50%',
                         width: '50%',
-                    )))));
-            }
+                        xValueMapper: (ChartData data, _) => data.x,
+                        yValueMapper: (ChartData data, _) => data.y)))));
         }
+    }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.color]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final Color? color;
     }
 
 {% endhighlight %}
@@ -99,11 +100,12 @@ You can modify the neck size of funnel series using the [`neckHeight`](https://p
     @override
     Widget build(BuildContext context) {
     final List<ChartData> chartData = [
-      ChartData('Jan', 35),
-      ChartData('Feb', 28),
-      ChartData('Mar', 34),
-      ChartData('Apr', 32),
-      ChartData('May', 40)
+      ChartData('Walnuts', 654),
+      ChartData('Almonds', 575),
+      ChartData('Soybeans', 446),
+      ChartData('Black beans', 341),
+      ChartData('Mushrooms', 296),
+      ChartData('Avacado', 160),
     ];
     return Scaffold(
             body: Center(
@@ -113,6 +115,8 @@ You can modify the neck size of funnel series using the [`neckHeight`](https://p
                           dataSource : chartData,
                             neckHeight: '40%',
                             neckWidth: '10%',
+                            xValueMapper: (ChartData data, _) => data.x,
+                            yValueMapper: (ChartData data, _) => data.y
                             )
                         )
                     )
@@ -122,10 +126,9 @@ You can modify the neck size of funnel series using the [`neckHeight`](https://p
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.color]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final Color? color;
     }
 
 
@@ -142,11 +145,12 @@ You can control the gap between the two segments using the [`gapRatio`](https://
     @override
     Widget build(BuildContext context) {
     final List<ChartData> chartData = [
-      ChartData('Jan', 35),
-      ChartData('Feb', 28),
-      ChartData('Mar', 34),
-      ChartData('Apr', 32),
-      ChartData('May', 40)
+      ChartData('Walnuts', 654),
+      ChartData('Almonds', 575),
+      ChartData('Soybeans', 446),
+      ChartData('Black beans', 341),
+      ChartData('Mushrooms', 296),
+      ChartData('Avacado', 160),
     ];
     return Scaffold(
             body: Center(
@@ -155,6 +159,8 @@ You can control the gap between the two segments using the [`gapRatio`](https://
                         series: FunnelSeries<ChartData, String>(
                           dataSource : chartData,
                           gapRatio: 0.1,
+                          xValueMapper: (ChartData data, _) => data.x,
+                          yValueMapper: (ChartData data, _) => data.y
                             )
                         )
                     )
@@ -185,11 +191,12 @@ Also, the segments can be exploded by tapping the segment.
     @override
     Widget build(BuildContext context) {
     final List<ChartData> chartData = [
-      ChartData('Jan', 35),
-      ChartData('Feb', 28),
-      ChartData('Mar', 34),
-      ChartData('Apr', 32),
-      ChartData('May', 40)
+      ChartData('Walnuts', 654),
+      ChartData('Almonds', 575),
+      ChartData('Soybeans', 446),
+      ChartData('Black beans', 341),
+      ChartData('Mushrooms', 296),
+      ChartData('Avacado', 160),
     ];
     return Scaffold(
             body: Center(
@@ -200,6 +207,8 @@ Also, the segments can be exploded by tapping the segment.
                           explode: true,
                           explodeOffset: '5%',
                           explodeIndex: 2,
+                          xValueMapper: (ChartData data, _) => data.x,
+                          yValueMapper: (ChartData data, _) => data.y
                             )
                         )
                     )
@@ -209,10 +218,9 @@ Also, the segments can be exploded by tapping the segment.
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.color]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final Color? color;
     }
 
 {% endhighlight %}
@@ -232,11 +240,12 @@ The [`smartLabelMode`](https://pub.dev/documentation/syncfusion_flutter_charts/l
     @override
     Widget build(BuildContext context) {
     final List<ChartData> chartData = [
-      ChartData('Jan', 35),
-      ChartData('Feb', 28),
-      ChartData('Mar', 34),
-      ChartData('Apr', 32),
-      ChartData('May', 40)
+      ChartData('Walnuts', 654),
+      ChartData('Almonds', 575),
+      ChartData('Soybeans', 446),
+      ChartData('Black beans', 341),
+      ChartData('Mushrooms', 296),
+      ChartData('Avacado', 160),
     ];
     return Scaffold(
         body: Center(
@@ -245,6 +254,8 @@ The [`smartLabelMode`](https://pub.dev/documentation/syncfusion_flutter_charts/l
                     smartLabelMode: SmartLabelMode.shift,
                     series: FunnelSeries<ChartData, String>(
                       dataSource: chartData,
+                      xValueMapper: (ChartData data, _) => data.x,
+                      yValueMapper: (ChartData data, _) => data.y
                       dataLabelSettings: DataLabelSettings(
                           isVisible: true,
                           labelPosition: ChartDataLabelPosition.inside),
@@ -273,11 +284,12 @@ The [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
     @override
     Widget build(BuildContext context) {
     final List<ChartData> chartData = [
-      ChartData('Jan', 35),
-      ChartData('Feb', 28),
-      ChartData('Mar', 34),
-      ChartData('Apr', 32),
-      ChartData('May', 40)
+      ChartData('Walnuts', 654),
+      ChartData('Almonds', 575),
+      ChartData('Soybeans', 446),
+      ChartData('Black beans', 341),
+      ChartData('Mushrooms', 296),
+      ChartData('Avacado', 160),
     ];
     return Scaffold(
             body: Center(
@@ -289,7 +301,9 @@ The [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
                             Colors.brown
                         ],
                         series: FunnelSeries<ChartData, String>(
-                          dataSource : chartData
+                          dataSource : chartData,
+                          xValueMapper: (ChartData data, _) => data.x,
+                          yValueMapper: (ChartData data, _) => data.y
                             )
                         )
                     )
@@ -299,10 +313,9 @@ The [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.color]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final Color? color;
     }
 
 {% endhighlight %}
