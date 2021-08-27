@@ -85,10 +85,11 @@ Based on your data, initialize the series type. In the series, you need to map t
     @override
     Widget build(BuildContext context) {
         final List<ChartData> chartData = [
-            ChartData('David', 25),
-            ChartData('Steve', 38),
-            ChartData('Jack', 34),
-            ChartData('Others', 52)
+        ChartData('David', 35),
+        ChartData('Steve', 28),
+        ChartData('Jack', 34),
+        ChartData('Others', 32),
+        ChartData('Maclin', 40)
         ];
         return Scaffold(
             body: Center(
@@ -106,10 +107,9 @@ Based on your data, initialize the series type. In the series, you need to map t
     }
 
     class ChartData {
-      ChartData(this.x, this.y, [this.color]);
+      ChartData(this.x, this.y);
         final String x;
         final double y;
-        final Color? color;
     }
 
 {% endhighlight %}
@@ -125,10 +125,11 @@ You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/
     @override
     Widget build(BuildContext context) {
         final List<ChartData> chartData = [
-            ChartData('David', 25),
-            ChartData('Steve', 38),
-            ChartData('Jack', 34),
-            ChartData('Others', 52)
+        ChartData('David', 35),
+        ChartData('Steve', 28),
+        ChartData('Jack', 34),
+        ChartData('Others', 32),
+        ChartData('Maclin', 40)
         ];
         return Scaffold(
             body: Center(
@@ -299,7 +300,7 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
     class ChartData {
     ChartData(this.x, this.y);
-     String x;
+    final String x;
     final double y;
     }
 

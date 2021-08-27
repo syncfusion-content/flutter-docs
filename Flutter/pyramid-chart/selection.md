@@ -110,7 +110,7 @@ You can customize the segments using the below properties.
       class ChartData {
       ChartData(this.x, this.y);
       final String x;
-      final double? y;
+      final double y;
       }
 
 
@@ -150,7 +150,7 @@ Multiple selection can be enabled using the [`enableMultiSelection`](https://pub
     class ChartData {
     ChartData(this.x, this.y);
     final String x;
-    final double? y;
+    final double y;
     }
 
 {% endhighlight %}
@@ -199,7 +199,7 @@ Defaults to `true`.
     class ChartData {
     ChartData(this.x, this.y);
     final String x;
-    final double? y;
+    final double y;
     }
 
 {% endhighlight %}
@@ -245,7 +245,7 @@ You can select a point or series programmatically on a chart using [`initialSele
     class ChartData {
     ChartData(this.x, this.y);
     final String x;
-    final double? y;
+    final double y;
     }
 
 {% endhighlight %}
@@ -307,8 +307,8 @@ N> The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter
 
     class ChartData {
     ChartData(this.x, this.y);
-    final double? x;
-    final double? y;
+    final double x;
+    final double y;
     }
 
 {% endhighlight %}

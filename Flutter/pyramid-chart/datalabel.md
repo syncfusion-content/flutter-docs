@@ -54,10 +54,9 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
             }
 
         class ChartData {
-        ChartData(this.x, this.y, [this.color]);
+        ChartData(this.x, this.y);
         final String x;
         final double y;
-        final Color? color;
         }
 
 {% endhighlight %}
@@ -83,12 +82,12 @@ This feature is used to connect label and data point using a line. It can be ena
                 child: SfPyramidChart(
                     series: PyramidSeries<ChartData, String>(
                         dataSource: [
-          ChartData('David', 35),
-          ChartData('Steve', 28),
-          ChartData('Jack', 34),
-          ChartData('Others', 32),
-          ChartData('Maclin', 40)
-        ],
+                        ChartData('David', 35),
+                        ChartData('Steve', 28),
+                        ChartData('Jack', 34),
+                        ChartData('Others', 32),
+                        ChartData('Maclin', 40)
+                        ],
                         dataLabelSettings: DataLabelSettings(
                             isVisible: true,
                             labelPosition: ChartDataLabelPosition.outside,
@@ -101,10 +100,9 @@ This feature is used to connect label and data point using a line. It can be ena
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.color]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final Color? color;
     }
 
 {% endhighlight %}
@@ -125,12 +123,12 @@ The [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/la
                 child: SfPyramidChart(
                     series: PyramidSeries<ChartData, String>(
                         dataSource: [
-          ChartData('David', 35),
-          ChartData('Steve', 28),
-          ChartData('Jack', 34),
-          ChartData('Others', 32),
-          ChartData('Maclin', 40)
-        ],
+                        ChartData('David', 35),
+                        ChartData('Steve', 28),
+                        ChartData('Jack', 34),
+                        ChartData('Others', 32),
+                        ChartData('Maclin', 40)
+                        ],
                         dataLabelSettings: DataLabelSettings(
                             isVisible: true,
                             // Positioning the data label
@@ -141,10 +139,9 @@ The [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/la
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.color]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final Color? color;
     }
 
 {% endhighlight %}
@@ -167,12 +164,12 @@ The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
                 child: SfPyramidChart(
                     series: PyramidSeries<ChartData, String>(
                         dataSource: [
-          ChartData('David', 35),
-          ChartData('Steve', 28),
-          ChartData('Jack', 34),
-          ChartData('Others', 32),
-          ChartData('Maclin', 40)
-        ],
+                        ChartData('David', 35),
+                        ChartData('Steve', 28),
+                        ChartData('Jack', 34),
+                        ChartData('Others', 32),
+                        ChartData('Maclin', 40)
+                        ],
                         dataLabelSettings: DataLabelSettings(
                             isVisible: true,
                             labelPosition: ChartDataLabelPosition.outside,
@@ -184,10 +181,9 @@ The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.color]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final Color? color;
     }
 
 {% endhighlight %}
@@ -208,12 +204,12 @@ You can customize the appearance of the data label with your own template using 
                 child: SfPyramidChart(
                     series: PyramidSeries<ChartData, String>(
                         dataSource: [
-          ChartData('David', 35),
-          ChartData('Steve', 28),
-          ChartData('Jack', 34),
-          ChartData('Others', 32),
-          ChartData('Maclin', 40)
-        ],
+                        ChartData('David', 35),
+                        ChartData('Steve', 28),
+                        ChartData('Jack', 34),
+                        ChartData('Others', 32),
+                        ChartData('Maclin', 40)
+                        ],
                         xValueMapper: (ChartData data, _) => data.x,
                         yValueMapper: (ChartData data, _) => data.y,
                         dataLabelSettings: DataLabelSettings(
@@ -233,10 +229,9 @@ You can customize the appearance of the data label with your own template using 
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.color]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final Color? color;
     }
 
 {% endhighlight %}
@@ -274,10 +269,9 @@ Data label and its connector line in the Pyramid charts for the point value 0 ca
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.color]);
+    ChartData(this.x, this.y);
     final double x;
     final double? y;
-    final Color? color;
     }
 
 {% endhighlight %}
