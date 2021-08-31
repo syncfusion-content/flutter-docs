@@ -54,10 +54,9 @@ To render a pie chart, create an instance of [`PieSeries`](https://pub.dev/docum
     }
 
     class ChartData {
-        ChartData(this.x, this.y, [this.color]);
+        ChartData(this.x, this.y);
         final String x;
         final double y;
-        final Color? color;
     }
 
 {% endhighlight %}
@@ -86,7 +85,6 @@ You can use the [`radius`](https://pub.dev/documentation/syncfusion_flutter_char
                             // Render pie chart
                             PieSeries<ChartData, String>(
                                 dataSource: chartData,
-                                pointColorMapper:(ChartData data,  _) => data.color,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
                                 radius: '50%'
@@ -100,10 +98,9 @@ You can use the [`radius`](https://pub.dev/documentation/syncfusion_flutter_char
     }
 
     class ChartData {
-        ChartData(this.x, this.y, [this.color]);
+        ChartData(this.x, this.y);
         final String x;
         final double y;
-        final Color? color;
     }
 
 {% endhighlight %}
@@ -136,7 +133,6 @@ You can explode a pie segment by enabling the [`explode`](https://pub.dev/docume
                             // Render pie chart
                             PieSeries<ChartData, String>(
                                 dataSource: chartData,
-                                pointColorMapper:(ChartData data,  _) => data.color,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
                                 // Segments will explode on tap
@@ -153,10 +149,9 @@ You can explode a pie segment by enabling the [`explode`](https://pub.dev/docume
     }
 
     class ChartData {
-        ChartData(this.x, this.y, [this.color]);
+        ChartData(this.x, this.y);
         final String x;
         final double y;
-        final Color? color;
     }
 
 {% endhighlight %}
@@ -185,7 +180,6 @@ Using the [`explodeAll`](https://pub.dev/documentation/syncfusion_flutter_charts
                             // Render pie chart
                             PieSeries<ChartData, String>(
                                 dataSource: chartData,
-                                pointColorMapper:(ChartData data,  _) => data.color,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
                                 explode: true,
@@ -201,10 +195,9 @@ Using the [`explodeAll`](https://pub.dev/documentation/syncfusion_flutter_charts
     }
 
     class ChartData {
-        ChartData(this.x, this.y, [this.color]);
+        ChartData(this.x, this.y);
         final String x;
         final double y;
-        final Color? color;
     }
 
 
@@ -234,7 +227,6 @@ Using the [`explodeAll`](https://pub.dev/documentation/syncfusion_flutter_charts
                             // Render pie chart
                             PieSeries<ChartData, String>(
                                 dataSource: chartData,
-                                pointColorMapper:(ChartData data,  _) => data.color,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
                                 startAngle: 270, // starting angle of pie
@@ -249,10 +241,9 @@ Using the [`explodeAll`](https://pub.dev/documentation/syncfusion_flutter_charts
     }
 
     class ChartData {
-        ChartData(this.x, this.y, [this.color]);
+        ChartData(this.x, this.y);
         final String x;
         final double y;
-        final Color? color;
     } 
 
 {% endhighlight %}
@@ -281,7 +272,6 @@ The small segments in the pie chart can be grouped into **others** category usin
                             // Render pie chart
                             PieSeries<ChartData, String>(
                                 dataSource: chartData,
-                                pointColorMapper:(ChartData data,  _) => data.color,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
                                 groupMode: CircularChartGroupMode.point,
@@ -297,10 +287,9 @@ The small segments in the pie chart can be grouped into **others** category usin
     }
 
     class ChartData {
-        ChartData(this.x, this.y, [this.color]);
+        ChartData(this.x, this.y);
         final String x;
         final double y;
-        final Color? color;
     }
 
 

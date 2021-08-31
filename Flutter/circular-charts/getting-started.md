@@ -108,10 +108,9 @@ Based on your data, initialize the series type. In the series, you need to map t
     }
 
     class ChartData {
-      ChartData(this.x, this.y, [this.color]);
+      ChartData(this.x, this.y);
         final String x;
         final double y;
-        final Color? color;
     }
 
 {% endhighlight %}
@@ -190,10 +189,9 @@ You can add data labels to improve the readability of the chart using the [`data
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.color]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final Color? color;
     }
 
 {% endhighlight %}
@@ -293,10 +291,9 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.color]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final Color? color;
     }
 
 {% endhighlight %}

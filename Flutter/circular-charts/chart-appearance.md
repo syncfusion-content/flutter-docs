@@ -98,10 +98,9 @@ You can customize the area of the chart using the below properties.
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.text]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final String? text;
     }
 
 {% endhighlight %}

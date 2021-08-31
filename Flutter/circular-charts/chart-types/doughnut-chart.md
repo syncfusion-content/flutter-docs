@@ -57,7 +57,7 @@ To render a doughnut chart, create an instance of [`DoughnutSeries`](https://pub
         ChartData(this.x, this.y, [this.color]);
             final String x;
             final double y;
-            final Color color;
+            final Color? color;
     }
 
 {% endhighlight %}
@@ -94,10 +94,9 @@ The [`cornerStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/late
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.color]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final Color? color;
     }
 
 {% endhighlight %}
@@ -155,10 +154,9 @@ You can use the Annotations property in charts, to provide center elevation text
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.color]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final Color? color;
     }
 
 
@@ -285,10 +283,9 @@ You can use the [`radius`](https://pub.dev/documentation/syncfusion_flutter_char
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.color]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final Color? color;
     }
 
 
@@ -331,10 +328,9 @@ You can change the inner radius of doughnut chart using the [`innerRadius`](http
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.color]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final Color? color;
     }
 
 {% endhighlight %}
@@ -381,10 +377,9 @@ You can explode a doughnut segment by enabling the [`explode`](https://pub.dev/d
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.color]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final Color? color;
     }
 
 
@@ -429,10 +424,9 @@ Using the [`explodeAll`](https://pub.dev/documentation/syncfusion_flutter_charts
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.color]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final Color? color;
     }
 
 
@@ -475,10 +469,9 @@ Using the [`explodeAll`](https://pub.dev/documentation/syncfusion_flutter_charts
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.color]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final Color? color;
     }
 
 
@@ -522,10 +515,9 @@ The small segments in the doughnut chart can be grouped into **others** category
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.color]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final Color? color;
     }
 
 

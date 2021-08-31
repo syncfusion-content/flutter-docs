@@ -58,10 +58,9 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.text]);
+    ChartData(this.x, this.y);
     final double x;
     final double y;
-    final String? text;
     }
   
 {% endhighlight %}
@@ -127,10 +126,9 @@ The below mentioned arguments are given to the [`showByIndex`](https://pub.dev/d
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.text]);
+    ChartData(this.x, this.y);
     final double x;
     final double y;
-    final String? text;
     }
 
 {% endhighlight %}
@@ -191,10 +189,9 @@ x & y - logical pixel values to position the tooltip.
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.text]);
+    ChartData(this.x, this.y);
     final double x;
     final double y;
-    final String? text;
     }
 
 {% endhighlight %}
@@ -254,10 +251,9 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.text]);
+    ChartData(this.x, this.y);
     final double x;
     final double y;
-    final String? text;
     }
 
 {% endhighlight %}
@@ -324,10 +320,9 @@ N> The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.text]);
+    ChartData(this.x, this.y);
     final double x;
     final double y;
-    final String? text;
     }
 
 

@@ -53,10 +53,9 @@ The selection feature in chart let you to select a segment in a series or the se
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.text]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final String? text;
     }
 
 {% endhighlight %}
@@ -120,10 +119,9 @@ You can customize the segments using the below properties.
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.text]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final String? text;
     }
 
 {% endhighlight %}
@@ -177,10 +175,9 @@ Multiple selection can be enabled using the [`enableMultiSelection`](https://pub
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.text]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final String? text;
     }
 
 {% endhighlight %}
@@ -196,51 +193,49 @@ Defaults to `true`.
 {% highlight dart %} 
 
     final List<ChartData> chartData = <ChartData>[
-    ChartData('Jan', 35),
-    ChartData('Feb', 28),
-    ChartData('March', 30),
-    ChartData('April', 32),
-    ChartData('May', 40)
-    ];
+    ChartData('CHN', 54, 'CHN: 54M'),
+    ChartData('USA', 67, 'USA: 67M'),
+    ChartData('IDN', 65, 'IDN: 65M'),
+    ChartData('JAP', 61, 'JAP: 61M'),
+    ChartData('BRZ', 68, 'BRZ: 68M')
+  ];
 
-    late SelectionBehavior _selectionBehavior;
+  late SelectionBehavior _selectionBehavior;
 
-    @override
-    void initState(){
-      _selectionBehavior =  SelectionBehavior(
-                          enable: true,
-                          toggleSelection: false,
-                            );
-      super.initState(); 
-    }
+  @override
+  void initState() {
+    _selectionBehavior = SelectionBehavior(
+      enable: true,
+      toggleSelection: false,
+    );
+    super.initState();
+  }
 
-    @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCircularChart(
-                        series: <CircularSeries>[
-                            PieSeries<ChartData, String>(
-                                dataSource: chartData,
-                                xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) => data.y,
-                                selectionBehavior: _selectionBehavior
-                                )
-                            ]
-                        )
-                    )
-                )
-            );  
-        }
-    }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Center(
+            child: Container(
+                child: SfCircularChart(series: <CircularSeries>[
+      PieSeries<ChartData, String>(
+          dataSource: chartData,
+          xValueMapper: (ChartData data, _) => data.x,
+          yValueMapper: (ChartData data, _) => data.y,
+          dataLabelMapper: (ChartData data, _) => data.text,
+          selectionBehavior: _selectionBehavior,
+          dataLabelSettings: DataLabelSettings(
+            isVisible: true,
+          ))
+    ]))));
+  }
+}
 
-    class ChartData {
-    ChartData(this.x, this.y, [this.text]);
-    final String x;
-    final double y;
-    final String? text;
-    }
+class ChartData {
+  ChartData(this.x, this.y, [this.text]);
+  final String x;
+  final double y;
+  final String? text;
+}
 
 {% endhighlight %}
 

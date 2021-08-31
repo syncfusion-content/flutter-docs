@@ -44,10 +44,9 @@ Chart supports annotations which allows you to mark the specific area of interes
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.text]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final String? text;
     }
 
 {% endhighlight %}
@@ -97,10 +96,9 @@ To place the annotation based on the radius values, set the [`Radius`](https://p
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.text]);
+    ChartData(this.x, this.y);
     final String x;
-     double y;
-    final String? text;
+    final double y;
     }
 
 {% endhighlight %}

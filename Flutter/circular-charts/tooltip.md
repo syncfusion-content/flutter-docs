@@ -50,10 +50,9 @@ Chart provides tooltip support for all the series. It is used to show informatio
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.text]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final String? text;
     }
 
 {% endhighlight %}
@@ -124,10 +123,9 @@ You can use the following properties to customize the tooltip appearance.
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.text]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final String? text;
     }
 
 {% endhighlight %}
@@ -186,10 +184,9 @@ By default, x and y value will be displayed in the tooltip, and it can be custom
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.text]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final String? text;
     }
 
 {% endhighlight %}
@@ -240,10 +237,9 @@ The tooltip can be made to display in the fixed location or at the pointer locat
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.text]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final String? text;
     }
 
 {% endhighlight %}
@@ -304,10 +300,9 @@ You can customize the appearance of the tooltip with your own widget by using th
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.text]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final String? text;
     }
 
 {% endhighlight %}
@@ -368,10 +363,9 @@ The ActivationMode enum contains the following values:
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.text]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final String? text;
     }
 
 {% endhighlight %}

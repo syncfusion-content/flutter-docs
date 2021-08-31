@@ -56,10 +56,9 @@ Triggers when the legend item is rendering. Here, you can customize the legendâ€
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.text]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final String? text;
     }
 
 {% endhighlight %}
@@ -272,10 +271,9 @@ Triggers when tapping the legend item. The [`onLegendTapped`](https://pub.dev/do
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.text]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final String? text;
     }
 
 {% endhighlight %}
@@ -373,10 +371,9 @@ N> This callback will not be called, when the builder is specified for data labe
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.text]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final String? text;
     }
 
 {% endhighlight %}

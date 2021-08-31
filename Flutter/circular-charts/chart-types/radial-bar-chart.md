@@ -220,10 +220,10 @@ Data labels can be enabled using the [`isVisible`](https://pub.dev/documentation
     @override
     Widget build(BuildContext context) {
         final List<ChartData> chartData = [
-          ChartData('David', 35),
-          ChartData('Steve', 28),
+          ChartData('David', 25),
+          ChartData('Steve', 38),
           ChartData('Jack', 34),
-          ChartData('Others', 32),
+          ChartData('Others', 42),
         ];
         return Scaffold(
             body: Center(

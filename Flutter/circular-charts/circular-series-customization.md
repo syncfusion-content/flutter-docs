@@ -31,7 +31,6 @@ documentation: ug
                             // Render pie chart
                             PieSeries<ChartData, String>(
                                 dataSource: chartData,
-                                pointColorMapper:(ChartData data,  _) => data.color,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
                                 animationDuration: 1000
@@ -44,10 +43,9 @@ documentation: ug
     }
     }
     class ChartData {
-        ChartData(this.x, this.y, [this.color]);
+        ChartData(this.x, this.y);
         final String x;
         final double y;
-        final Color? color;
     }
 
 {% endhighlight %}
@@ -77,7 +75,6 @@ documentation: ug
                             // Render pie chart
                             PieSeries<ChartData, String>(
                                 dataSource: chartData,
-                                pointColorMapper:(ChartData data,  _) => data.color,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
                             )
@@ -89,10 +86,9 @@ documentation: ug
         }
       }
     class ChartData {
-        ChartData(this.x, this.y, [this.color]);
+        ChartData(this.x, this.y);
         final String x;
         final double y;
-        final Color? color;
     }
 
 {% endhighlight %}
@@ -208,10 +204,9 @@ The data points of pie, doughnut and radial bar charts can be filled with three 
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.color]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final Color? color;
     }   
 
 {% endhighlight %}
@@ -279,10 +274,9 @@ The data points of pie, doughnut and radial bar charts can be filled with three 
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.color]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final Color? color;
     }
 
 {% endhighlight %}
@@ -338,10 +332,9 @@ The data points of pie, doughnut and radial bar charts can be filled with three 
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.color]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final Color? color;
     }  
 
 {% endhighlight %}
@@ -414,10 +407,9 @@ The data points of pie, doughnut and radial bar charts can also be filled with i
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.color]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final Color? color;
     }  
 
 {% endhighlight %}
@@ -618,10 +610,9 @@ N> This property is applicable only if the [`onCreateShader`](https://pub.dev/do
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.color]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final Color? color;
     }
 
 {% endhighlight %}
@@ -655,7 +646,6 @@ The data points that has null value are considered as empty points. Empty data p
         dataSource: chartData,
         dataLabelSettings: DataLabelSettings(isVisible: true),
         emptyPointSettings: EmptyPointSettings(mode: EmptyPointMode.average),
-        pointColorMapper: (ChartData data, _) => data.color,
         xValueMapper: (ChartData data, _) => data.x,
         yValueMapper: (ChartData data, _) => data.y,
         )])));
@@ -663,10 +653,9 @@ The data points that has null value are considered as empty points. Empty data p
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.color]);
+    ChartData(this.x, this.y);
     final String x;
     final double? y;
-    final Color? color;
     }
 
 {% endhighlight %}
@@ -711,10 +700,9 @@ Specific color for empty point can be set by [`color`](https://pub.dev/documenta
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.color]);
+    ChartData(this.x, this.y);
     final String x;
     final double? y;
-    final Color? color;
     }
 
 {% endhighlight %}
@@ -731,7 +719,7 @@ The chart’s data source can be sorted using the [`sortingOrder`](https://pub.d
     Widget build(BuildContext context) {
         
         final List<ChartData> chartData = [
-            ChartData('David', 25),
+            ChartData('David', 24),
             ChartData('Steve', 38),
             ChartData('Jack', 34),
             ChartData('Others', 52)
@@ -748,7 +736,6 @@ The chart’s data source can be sorted using the [`sortingOrder`](https://pub.d
                             dataLabelSettings: DataLabelSettings(isVisible:true),
                             sortingOrder: SortingOrder.ascending,
                             sortFieldValueMapper: (ChartData data, _) => data.x,
-                            pointColorMapper:(ChartData data,  _) => data.color,
                             xValueMapper: (ChartData data, _) => data.x,
                             yValueMapper: (ChartData data, _) => data.y,
                             animationDuration: 1000
@@ -757,10 +744,9 @@ The chart’s data source can be sorted using the [`sortingOrder`](https://pub.d
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.color]);
+    ChartData(this.x, this.y);
     final String x;
     final double? y;
-    final Color? color;
     }
 
 {% endhighlight %}

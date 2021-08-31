@@ -48,7 +48,6 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
                         series: <CircularSeries>[
                             PieSeries<ChartData, String>(
                                 dataSource: chartData,
-                                pointColorMapper: (ChartData data, _) => data.color,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
                                 dataLabelSettings: DataLabelSettings(
@@ -65,10 +64,9 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.color]);
+    ChartData(this.x, this.y);
     final String x;
-    final double? y;
-    final Color? color;
+    final double y;
     }
 
 {% endhighlight %}
@@ -164,10 +162,9 @@ The [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/la
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.text]);
+    ChartData(this.x, this.y);
     final String x;
-    final double? y;
-    final String? text; 
+    final double y;
     }
 
 {% endhighlight %}
@@ -219,10 +216,9 @@ This feature is used to arrange the data labels smartly and avoid the intersecti
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.text]);
+    ChartData(this.x, this.y);
     final String x;
-    final double? y;
-    final String? text;
+    final double y;
     }
 
 {% endhighlight %}
@@ -270,10 +266,9 @@ The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.text]);
+    ChartData(this.x, this.y);
     final String x;
     final double? y;
-    final String? text;
     }
 
 {% endhighlight %}
@@ -328,10 +323,9 @@ This feature is used to connect label and data point using a line. It is applica
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.text]);
+    ChartData(this.x, this.y);
     final String x;
-    final double? y;
-    final String? text;
+    final double y;
     }
 
 {% endhighlight %}
@@ -404,7 +398,6 @@ You can customize the appearance of the data label with your own template using 
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
-                                dataLabelMapper: (ChartData data, _) => data.text,
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true,
                                     // Templating the data label
@@ -426,10 +419,9 @@ You can customize the appearance of the data label with your own template using 
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.text]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final String? text;
     }
 
 {% endhighlight %}
@@ -475,10 +467,9 @@ Data label and its connector line in the Circular charts for the point value 0 c
     }
 
     class ChartData {
-    ChartData(this.x, this.y, [this.text]);
+    ChartData(this.x, this.y);
     final String x;
     final double y;
-    final String? text;
     }
 
 {% endhighlight %}
