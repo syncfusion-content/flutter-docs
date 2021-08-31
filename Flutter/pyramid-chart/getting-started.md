@@ -196,14 +196,6 @@ You can add data labels to improve the readability of the chart using the [`data
     }
 
 
-class ChartData {
-  ChartData(this.x, this.y, [this.color]);
-  final String x;
-  final double y;
-  final Color? color;
-}
-
-
 {% endhighlight %}
 
 ![DataLabel to chart](images/getting-started/datalabel.png)
