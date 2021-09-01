@@ -58,6 +58,8 @@ import 'package:syncfusion_flutter_sliders/sliders.dart';
 
 After importing the package, initialize the range selector widget as a child of any widget. Here, the range selector widget is added as a child of the Container widget. The default value of the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html) and [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) properties of the SfRangeSelector is 0.0 and 1.0 respectively. So, the [`initialValues`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/initialValues.html) property must be given within the range. You can add any kind of widget as a child of range selector. Here, [Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts) widget is added as a child.
 
+I> You need to set the [`controller`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/controller.html) property to update range selector thumb values dynamically. Refer this [`link`](https://help.syncfusion.com/flutter/range-selector/range-controller) for setting controller property. The [initialValues](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/initialValues.html) property can be used to set values at load time.
+
 {% tabs %}
 {% highlight Dart %}
 
@@ -115,6 +117,8 @@ class Data {
 
 The [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/onChanged.html) callback is called when the user is selecting the new values.
 
+I> You need to set the [`controller`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/controller.html) property to update range selector thumb values dynamically. Refer this [`link`](https://help.syncfusion.com/flutter/range-selector/range-controller) for setting controller property. The [initialValues](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/initialValues.html) property can be used to set values at load time.
+
 {% tabs %}
 {% highlight Dart %}
 
@@ -171,6 +175,8 @@ class Data {
 ## Set numeric range
 
 You can show numeric values in the range selector by setting `double` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) and [`initialValues`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/initialValues.html) properties.
+
+I> You need to set the [`controller`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/controller.html) property to update range selector thumb values dynamically. Refer this [`link`](https://help.syncfusion.com/flutter/range-selector/range-controller) for setting controller property. The [initialValues](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/initialValues.html) property can be used to set values at load time.
 
 {% tabs %}
 {% highlight Dart %}
@@ -237,6 +243,8 @@ class Data {
 You can show date values in the range selector by setting `DateTime` values to the [`min`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/min.html), [`max`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/max.html) and [`initialValues`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/initialValues.html) properties.
 
 N> You must import [`intl`](https://pub.dev/packages/intl) package for formatting date range selector using the [`DateFormat`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
+
+I> You need to set the [`controller`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/controller.html) property to update range selector thumb values dynamically. Refer this [`link`](https://help.syncfusion.com/flutter/range-selector/range-controller) for setting controller property. The [initialValues](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/initialValues.html) property can be used to set values at load time.
 
 {% tabs %}
 {% highlight Dart %}
@@ -307,6 +315,8 @@ class Data {
 ## Enable ticks
 
 You can enable ticks in the range selector using the [`showTicks`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/showTicks.html) property.
+
+I> You need to set the [`controller`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/controller.html) property to update range selector thumb values dynamically. Refer this [`link`](https://help.syncfusion.com/flutter/range-selector/range-controller) for setting controller property. The [initialValues](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/initialValues.html) property can be used to set values at load time.
 
 {% tabs %}
 {% highlight Dart %}

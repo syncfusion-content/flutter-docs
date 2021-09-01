@@ -414,6 +414,76 @@ Widget build(BuildContext context) {
 
 ![Numeric slider](images/getting-started/vertical_slider_with_tick.png)
 
+## Inverse the horizontal slider
+
+You can invert the horizontal slider by wrapping the slider to the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget by setting [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to `TextDirection.rtl`.
+
+{% tabs %}
+{% highlight Dart %}
+
+double _value = 40.0;
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: Directionality(
+      textDirection: TextDirection.rtl,
+      child: SfSlider(
+        min: 0,
+        max: 100,
+        value: _value,
+        interval: 20,
+        showTicks: true,
+        showLabels: true,
+        onChanged: (dynamic newValue) {
+          setState(() {
+            _value = newValue;
+          });
+        },
+      ),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Inversed horizontal slider](images/getting-started/inversed_horizontal_slider.png)
+
+## Inverse the vertical slider
+
+You can invert the vertical slider using the `isInversed` property. The default value of the `isInversed` property is `false`.
+
+{% tabs %}
+{% highlight Dart %}
+
+double _value = 40.0;
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfSlider.vertical(
+      min: 0,
+      max: 100,
+      value: _value,
+      interval: 20,
+      isInversed: true,
+      showTicks: true,
+      showLabels: true,
+      onChanged: (dynamic newValue) {
+        setState(() {
+          _value = newValue;
+        });
+      },
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Inversed vertical slider](images/getting-started/inversed_vertical_slider.png)
+
 ## Add prefix/suffix to labels
 
 You can add prefix or suffix to the labels using the [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/numberFormat.html) or [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/dateFormat.html) properties.

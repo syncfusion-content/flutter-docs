@@ -317,6 +317,87 @@ class PolylineModel {
 
 ![Polyline width](../images/polyline-layer/polyline-width.png)
 
+## Stroke cap
+
+You can apply the same stroke cap for all [`MapPolyline`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolyline-class.html) in the [`polylines`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolylineLayer/polylines.html) collection using the `MapPolylineLayer.strokeCap` property. Alternatively, you can apply different stroke cap to each [`MapPolyline`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolyline-class.html) in the [`polylines`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolylineLayer/polylines.html) collection using the individual `MapPolyline.strokeCap` property. The default value of the `MapPolylineLayer.strokeCap` property is `StrokeCap.butt`. The available values are `butt`, `round`, and `square`.
+
+{% tabs %}
+{% highlight Dart %}
+
+late List<MapLatLng> polyline;
+late List<PolylineModel> polylines;
+late MapShapeSource dataSource;
+late MapZoomPanBehavior zoomPanBehavior;
+
+@override
+void initState() {
+  polyline = <MapLatLng>[
+    MapLatLng(13.0827, 80.2707),
+    MapLatLng(13.1746, 79.6117),
+    MapLatLng(13.6373, 79.5037),
+    MapLatLng(14.4673, 78.8242),
+    MapLatLng(14.9091, 78.0092),
+    MapLatLng(16.2160, 77.3566),
+    MapLatLng(17.1557, 76.8697),
+    MapLatLng(18.0975, 75.4249),
+    MapLatLng(18.5204, 73.8567),
+    MapLatLng(19.0760, 72.8777),
+  ];
+
+  polylines = <PolylineModel>[
+    PolylineModel(polyline, 5),
+  ];
+  dataSource = MapShapeSource.asset(
+    'assets/india.json',
+    shapeDataField: 'name',
+  );
+
+  zoomPanBehavior = MapZoomPanBehavior(
+    focalLatLng: MapLatLng(20.3173, 78.7139),
+  );
+  super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfMaps(
+      layers: [
+        MapShapeLayer(
+          source: dataSource,
+          sublayers: [
+            MapPolylineLayer(
+              polylines: List<MapPolyline>.generate(
+                polylines.length,
+                    (int index) {
+                  return MapPolyline(
+                    points: polylines[index].points,
+                    width: polylines[index].width,
+                    strokeCap: StrokeCap.round,
+                  );
+                },
+              ).toSet(),
+            ),
+          ],
+          zoomPanBehavior: zoomPanBehavior,
+        ),
+      ],
+    ),
+  );
+}
+
+class PolylineModel {
+  PolylineModel(this.points, this.width);
+
+  final List<MapLatLng> points;
+  final double width;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Polyline stroke cap](../images/polyline-layer/polyline-stroke-cap.png)
+
 ## Dash array
 
 You can apply dash support for the polyline using the [`MapPolyline.dashArray`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapPolyline/dashArray.html) property.
