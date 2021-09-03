@@ -222,7 +222,7 @@ In addition to position the shape pointer, it is also possible to change the off
 
 You can drag the pointers freely to any position when adding multiple pointers by setting the `dragBehavior` property to `LinearMarkerDragBehavior.free`.
 
-The `LinearMarkerDragBehavior.constraint` can be used to limit the active pointer dragging beyond the other pointers.
+The `LinearMarkerDragBehavior.constrained` can be used to limit the active pointer dragging beyond the other pointers.
 
 ### Free
 
@@ -286,7 +286,7 @@ Widget build(BuildContext context) {
           height: 25,
           width: 25,
           shapeType: LinearShapePointerType.invertedTriangle,
-          dragBehavior: LinearMarkerDragBehavior.constraint,
+          dragBehavior: LinearMarkerDragBehavior.constrained,
           onChanged: (double newValue) {
             setState(() {
               _firstPointer = newValue;
@@ -298,7 +298,7 @@ Widget build(BuildContext context) {
           height: 25,
           width: 25,
           shapeType: LinearShapePointerType.invertedTriangle,
-          dragBehavior: LinearMarkerDragBehavior.constraint,
+          dragBehavior: LinearMarkerDragBehavior.constrained,
           onChanged: (double newValue) {
             setState(() {
               _secondPointer = newValue;
