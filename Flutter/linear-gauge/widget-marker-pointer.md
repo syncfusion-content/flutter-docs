@@ -123,7 +123,7 @@ In addition to position the widget marker pointer, it is also possible to change
 
 You can drag the pointers freely to any position when adding multiple pointers by setting the `dragBehavior` property to `LinearMarkerDragBehavior.free`.
 
-The `LinearMarkerDragBehavior.constraint` can be used to limit the active pointer dragging beyond the other pointers.
+The `LinearMarkerDragBehavior.constrained` can be used to limit the active pointer dragging beyond the other pointers.
 
 ### Free
 
@@ -182,7 +182,7 @@ Widget build(BuildContext context) {
       markerPointers: [
         LinearWidgetPointer(
           value: _firstPointer,
-          dragBehavior: LinearMarkerDragBehavior.constraint,
+          dragBehavior: LinearMarkerDragBehavior.constrained,
           onChanged: (double newValue) {
             setState(() {
               _firstPointer = newValue;
@@ -194,7 +194,7 @@ Widget build(BuildContext context) {
         LinearWidgetPointer(
           value: _secondPointer,
           position: LinearElementPosition.outside,
-          dragBehavior: LinearMarkerDragBehavior.constraint,
+          dragBehavior: LinearMarkerDragBehavior.constrained,
           onChanged: (double newValue) {
             setState(() {
               _secondPointer = newValue;
