@@ -107,7 +107,7 @@ document.dispose();
 
 {% endhighlight %}
 
-## Externally sing a PDF document
+## Externally sign a PDF document
 
 You can sign the PDF document from an external digital signature created from various sources such as cloud services like DigitalSign.
 
