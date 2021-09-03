@@ -77,7 +77,7 @@ document.dispose();
 
 ## Adding a signature appearance
 
-You can customize the appearance of the signature field by using the [`appearance`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSignatureField/appearance.html) property in [`PdfSignatureField`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSignatureField-clas.html) as follows,
+You can customize the appearance of the signature field by using the [`appearance`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSignatureField/appearance.html) property in [`PdfSignatureField`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSignatureField-class.html) as follows,
 
 {% highlight dart %}
 
