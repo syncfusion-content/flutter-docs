@@ -193,8 +193,6 @@ Typically, these callbacks are used to show and hide loading indicator.
 {% tabs %}
 {% highlight Dart %}
 
-final OrderInfoDataSource _orderInfoDataSource = OrderInfoDataSource();
-
 @override
 Widget build(BuildContext context) {
   return Scaffold(body: LayoutBuilder(builder: (context, constraints) {
@@ -235,8 +233,6 @@ In the below example, we have set await for 2000ms and displayed the loading ind
 
 {% tabs %}
 {% highlight Dart %}
-
-final OrderInfoDataSource _orderInfoDataSource = OrderInfoDataSource();
 
 bool showLoadingIndicator = true;
 
@@ -402,7 +398,6 @@ The following code example shows how to navigate the previous page programmatica
 {% tabs %}
 {% highlight Dart %}
 
-final OrderInfoDataSource _orderInfoDataSource = OrderInfoDataSource();
 DataPagerController _controller = DataPagerController();
 
 @override
@@ -488,8 +483,6 @@ The following code example illustrates using `SfDataPagerThemeData` with the dat
 {% tabs %}
 {% highlight Dart %}
 
-final OrderInfoDataSource _orderInfoDataSource = OrderInfoDataSource();
-
 @override
 Widget build(BuildContext context) {
   return Scaffold(
@@ -520,8 +513,6 @@ You can change the number of visible items i.e. page buttons in view by using th
 
 {% tabs %}
 {% highlight Dart %}
-
-final OrderInfoDataSource _orderInfoDataSource = OrderInfoDataSource();
 
 @override
 Widget build(BuildContext context) {
@@ -559,7 +550,6 @@ You can load any widget to page button by using [SfDataPager.pageItemBuilder](ht
 
 {% tabs %}
 {% highlight Dart %}
-final OrderInfoDataSource _orderInfoDataSource = OrderInfoDataSource();
 
 @override
 Widget build(BuildContext context) {

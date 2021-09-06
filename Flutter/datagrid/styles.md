@@ -19,8 +19,6 @@ Change the header background color by using [SfDataGridThemeData.headerColor](ht
 {% tabs %}
 {% highlight Dart %} 
 
-late EmployeeDataSource _employeeDataSource;
-
 @override
 Widget build(BuildContext context) {
   return Scaffold(
@@ -78,8 +76,6 @@ N> This is applicable only for desktop platforms.
 {% tabs %}
 {% highlight Dart %}
 
-late EmployeeDataSource _employeeDataSource;
-
 @override
 Widget build(BuildContext context) {
   return Scaffold(
@@ -134,8 +130,6 @@ Color and thickness of the grid lines can be changed by using the [SfDataGridThe
 
 {% tabs %}
 {% highlight Dart %} 
-
-late EmployeeDataSource _employeeDataSource;
 
 @override
 Widget build(BuildContext context) {
@@ -207,8 +201,6 @@ The following code describes how to show vertical and horizontal grid lines for 
 {% tabs %}
 {% highlight Dart %} 
 
-late EmployeeDataSource _employeeDataSource;
-
 @override
 Widget build(BuildContext context) {
   return Scaffold(
@@ -271,8 +263,6 @@ N> Row highlighting is applicable only for desktop platforms.
 {% tabs %}
 {% highlight Dart %} 
 
-late EmployeeDataSource _employeeDataSource;
-
 @override
 Widget build(BuildContext context) {
   return Scaffold(
@@ -320,8 +310,6 @@ Change the row highlighting color and text style by using the [SfDataGridThemeDa
 
 {% tabs %}
 {% highlight Dart %} 
-
-late EmployeeDataSource _employeeDataSource;
 
 @override
 Widget build(BuildContext context) {

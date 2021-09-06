@@ -24,8 +24,6 @@ The following example demonstrates infinite scrolling by showing the circular pr
 
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
-EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-
 @override
 Widget build(BuildContext context) {
   return SfDataGrid(
@@ -209,8 +207,6 @@ The following example demonstrates how to show the button when vertical scrollin
 {% highlight Dart %} 
 
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
-
-EmployeeDataSource _employeeDataSource = EmployeeDataSource();
 
 @override
 Widget build(BuildContext context) {

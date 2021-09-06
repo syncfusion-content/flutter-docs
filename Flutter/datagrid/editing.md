@@ -27,8 +27,6 @@ The following example show how to enable editing in datagrid and committing the 
 {% tabs %}
 {% highlight dart %}
 
-late EmployeeDataSource _employeeDataSource;
-
 @override
 Widget build(BuildContext context) {
   return Scaffold(
@@ -246,8 +244,6 @@ By default, cell will be moved to edit mode when you double tap the cells. You c
 {% tabs %}
 {% highlight dart %}
 
-late EmployeeDataSource _employeeDataSource;
-
 @override
 Widget build(BuildContext context) {
   return Scaffold(
@@ -368,7 +364,6 @@ The [DataGridSource.onCellSubmit](https://pub.dev/documentation/syncfusion_flutt
 {% highlight dart %}
 
 class EmployeeDataSource extends DataGridSource {
-  
   @override
   void onCellSubmit(DataGridRow dataGridRow, RowColumnIndex rowColumnIndex,
       GridColumn column) {

@@ -18,8 +18,6 @@ The row height of particular row can be set by using the [SfDataGrid.onQueryRowH
 {% tabs %}
 {% highlight dart %} 
 
-late EmployeeDataSource _employeeDataSource;
-
 @override
 Widget build(BuildContext context) {
   return SfDataGrid(
@@ -78,9 +76,7 @@ Widget build(BuildContext context) {
 The row height can be autofit based on its content in the `SfDataGrid.onQueryRowHeight` callback and using the [RowHeightDetails.getIntrinsicRowHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/RowHeightDetails/getIntrinsicRowHeight.html) method.
 
 {% tabs %}
-{% highlight dart %} 
-
-late EmployeeDataSource _employeeDataSource;
+{% highlight dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -143,8 +139,6 @@ The `RowHeightDetails.getIntrinsicRowHeight` method provides some properties to 
 {% tabs %}
 {% highlight dart %}
 
-late EmployeeDataSource _employeeDataSource;
-
 @override
 Widget build(BuildContext context) {
   return SfDataGrid(
@@ -205,7 +199,6 @@ By default, the cell height is calculated based on the default text style. To ca
 {% tabs %}
 {% highlight dart %}
 
-late EmployeeDataSource _employeeDataSource;
 final CustomColumnSizer _customColumnSizer = CustomColumnSizer();
 
 @override
@@ -491,9 +484,7 @@ class CustomColumnSizer extends ColumnSizer {
 [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) allows you to customize the height of the header row by using the [headerRowHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/headerRowHeight.html) property.
 
 {% tabs %}
-{% highlight dart %} 
-
-late EmployeeDataSource _employeeDataSource;
+{% highlight dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -552,9 +543,7 @@ Widget build(BuildContext context) {
 You can customize the height of the grid rows in `SfDataGrid` by using the [rowHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/rowHeight.html) property.
 
 {% tabs %}
-{% highlight Dart %} 
-
-late EmployeeDataSource _employeeDataSource;
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -630,9 +619,16 @@ N> Row height changes will be updated only when the `ColumnWidthMode` is in `aut
 
 List<Employee> _employees = [];
 
-final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-
+late EmployeeDataSource _employeeDataSource;
 final DataGridController _controller = DataGridController();
+List<Employee> _employees = <Employee>[];
+
+@override
+void initState() {
+  super.initState();
+  _employees = getEmployeeData();
+  _employeeDataSource = EmployeeDataSource(employees: _employees);
+}
 
 @override
 Widget build(BuildContext context) {
@@ -760,9 +756,16 @@ In the below example, row data is refreshed along with its row height when the `
 
 List<Employee> _employees = [];
 
-final EmployeeDataSource _employeeDataSource = EmployeeDataSource();;
-
+late EmployeeDataSource _employeeDataSource;
 final DataGridController _controller = DataGridController();
+List<Employee> _employees = <Employee>[];
+
+@override
+void initState() {
+  super.initState();
+  _employees = getEmployeeData();
+  _employeeDataSource = EmployeeDataSource(employees: _employees);
+}
 
 @override
 Widget build(BuildContext context) {

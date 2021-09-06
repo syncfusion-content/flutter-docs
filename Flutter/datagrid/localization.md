@@ -31,7 +31,6 @@ Next, import the `flutter_localizations` library and specify [localizationsDeleg
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 final int rowsPerPage = 15;
-late EmployeeDataSource _employeeDataSource;
 
 @override
 Widget build(BuildContext context) {
@@ -138,7 +137,6 @@ Then, declare the [SfGlobalLocalizations.delegate](https://pub.dev/documentation
 {% highlight Dart %}
 
 final int rowsPerPage = 15;
-late EmployeeDataSource _employeeDataSource;
 
 @override
 Widget build(BuildContext context) {

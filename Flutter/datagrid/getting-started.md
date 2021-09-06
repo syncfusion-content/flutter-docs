@@ -61,7 +61,6 @@ Add the SfDataGrid widget as a child of any widget. [SfDataGrid](https://pub.dev
 
 {% tabs %}
 {% highlight Dart %} 
-late EmployeeDataSource _employeeDataSource;
 
 @override
 Widget build(BuildContext context) {
@@ -241,8 +240,6 @@ Widget build(BuildContext context) {
 
 {% tabs %}
 {% highlight Dart %} 
-
-late EmployeeDataSource _employeeDataSource;
   
 @override
 Widget build(BuildContext context) {
@@ -297,9 +294,7 @@ Widget build(BuildContext context) {
 `SfDataGrid` allows you to select one or more rows. The [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/selectionMode.html) property can be set to specify whether a user can select single row, or multiple rows. 
 
 {% tabs %}
-{% highlight Dart %} 
-    
-late EmployeeDataSource _employeeDataSource;
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
@@ -359,8 +354,6 @@ The information about the rows that are selected can be retrieved using [selecte
 
 {% tabs %}
 {% highlight Dart %} 
-
-late EmployeeDataSource _employeeDataSource;
 
 final DataGridController _controller = DataGridController();
 

@@ -46,8 +46,6 @@ Keyboard navigation through the cells and rows is determined based on the [navig
 {% tabs %}
 {% highlight Dart %}
 
-late EmployeeDataSource _employeeDataSource;
-
 @override
 Widget build(BuildContext context) {
   return Scaffold(
@@ -109,8 +107,6 @@ It allows you to select only one row. For example, you have selected a row. Now 
 {% tabs %}
 {% highlight Dart %}
 
-late EmployeeDataSource _employeeDataSource;
-
 @override
 Widget build(BuildContext context) {
   return Scaffold(
@@ -170,8 +166,6 @@ While using `multiple`, you can select multiple rows by pressing the key modifie
 
 {% tabs %}
 {% highlight Dart %}
-
-late EmployeeDataSource _employeeDataSource;
 
 @override
 Widget build(BuildContext context) {
@@ -233,8 +227,6 @@ The selection can be disabled by setting the `selectionMode` property as `none`.
 {% tabs %}
 {% highlight Dart %}
 
-late EmployeeDataSource _employeeDataSource;
-
 @override
 Widget build(BuildContext context) {
   return Scaffold(
@@ -294,8 +286,7 @@ You can get the information of selected rows by using [controller](https://pub.d
 
 {% tabs %}
 {% highlight Dart %}
-    
-late EmployeeDataSource _employeeDataSource;
+
 final DataGridController _dataGridController = DataGridController();
 
 @override
@@ -380,7 +371,6 @@ The following code example shows how to select a row using `selectedIndex`,
 {% tabs %}
 {% highlight Dart %}
 
-late EmployeeDataSource _employeeDataSource;
 final DataGridController _dataGridController = DataGridController();
 
 @override
@@ -449,6 +439,14 @@ The following code example shows how to select a row using `selectedRow`,
 
 late EmployeeDataSource _employeeDataSource;
 final DataGridController _dataGridController = DataGridController();
+List<Employee> _employees = <Employee>[];
+
+@override
+void initState() {
+  super.initState();
+  _employees = getEmployeeData();
+  _employeeDataSource = EmployeeDataSource(employees: _employees);
+}
 
 @override
 Widget build(BuildContext context) {
@@ -516,6 +514,14 @@ Multiple rows can be selected by adding  collection of `DataGridRow` to `selecte
 
 late EmployeeDataSource _employeeDataSource;
 final DataGridController _dataGridController = DataGridController();
+List<Employee> _employees = <Employee>[];
+
+@override
+void initState() {
+  super.initState();
+  _employees = getEmployeeData();
+  _employeeDataSource = EmployeeDataSource(employees: _employees);
+}
 
 @override
 Widget build(BuildContext context) {
@@ -589,7 +595,6 @@ The current cell information such as row index, column index can be retrieved us
 {% tabs %}
 {% highlight Dart %}
 
-late EmployeeDataSource _employeeDataSource;
 final DataGridController _dataGridController = DataGridController();
 
 @override
@@ -660,7 +665,6 @@ The CurrentCell can be moved to a particular cell by using the [moveCurrentCellT
 {% tabs %}
 {% highlight Dart %}
 
-late EmployeeDataSource _employeeDataSource;
 final DataGridController _dataGridController = DataGridController();
 
 @override
@@ -731,7 +735,6 @@ The following code example shows how to clear selection when `selectionMode` pro
 {% tabs %}
 {% highlight Dart %}
 
-late EmployeeDataSource _employeeDataSource;
 final DataGridController _dataGridController = DataGridController();
 
 @override
@@ -799,7 +802,6 @@ The following code example shows how to clear selection when `selectionMode` pro
 {% tabs %}
 {% highlight Dart %}
 
-late EmployeeDataSource _employeeDataSource;
 final DataGridController _dataGridController = DataGridController();
 
 @override
@@ -1021,6 +1023,14 @@ The following example shows how to cancel the selection when select a row which 
 {% highlight Dart %}
 
 late EmployeeDataSource _employeeDataSource;
+List<Employee> _employees = <Employee>[];
+
+@override
+void initState() {
+  super.initState();
+  _employees = getEmployeeData();
+  _employeeDataSource = EmployeeDataSource(employees: _employees);
+}
 
 @override
 Widget build(BuildContext context) {
@@ -1096,8 +1106,6 @@ Widget build(BuildContext context) {
 
 {% tabs %}
 {% highlight Dart %}
-
-late EmployeeDataSource _employeeDataSource;
 
 @override
 Widget build(BuildContext context) {
@@ -1175,9 +1183,6 @@ The datagrid provides the following callbacks to handle interactions to the cell
 {% tabs %}
 {% highlight Dart %}
 
-late EmployeeDataSource _employeeDataSource;
-
-
 @override
 Widget build(BuildContext context) {
   return Scaffold(
@@ -1245,7 +1250,6 @@ To perform custom actions apart from the functionalities mentioned in the above 
 {% tabs %}
 {% highlight Dart %}
 
-late EmployeeDataSource _employeeDataSource;
 final CustomSelectionManager _customSelectionManager = CustomSelectionManager();
 
 @override
@@ -1320,7 +1324,6 @@ When pressing the <kbd>Enter</kbd> key, the current cell will be moved to the ne
 {% tabs %}
 {% highlight Dart %}
 
-late EmployeeDataSource _employeeDataSource;
 final CustomSelectionManager _customSelectionManager = CustomSelectionManager();
 
 @override
@@ -1418,7 +1421,7 @@ late EmployeeDataSource _employeeDataSource;
 @override
 void initState() {
     super.initState();
-    employeeDataSource = EmployeeDataSource(_dataGridController);
+    _employeeDataSource = EmployeeDataSource(_dataGridController);
 }
 
 @override
@@ -1536,8 +1539,6 @@ The current cell border's color and thickness can be changed by [currentCellStyl
 
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 import 'package:syncfusion_flutter_core/theme.dart';
-
-late EmployeeDataSource _employeeDataSource;
 
 @override
 Widget build(BuildContext context) {

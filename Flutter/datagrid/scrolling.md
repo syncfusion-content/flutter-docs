@@ -20,8 +20,6 @@ N> The default value of `isScrollbarAlwaysShown` is false.
 {% tabs %}
 {% highlight Dart %}
 
-late EmployeeDataSource _employeeDataSource;
-
 @override
 Widget build(BuildContext context) {
   return Scaffold(
@@ -81,8 +79,6 @@ The following example shows how to disable the horizontal and vertical scrolling
 
 {% tabs %}
 {% highlight Dart %}
-
-late EmployeeDataSource _employeeDataSource;
 
 @override
 Widget build(BuildContext context) {
@@ -147,7 +143,6 @@ N> The default value of `canAnimate` is `false`.
 {% tabs %}
 {% highlight Dart %}
 
-late EmployeeDataSource _employeeDataSource;
 final DataGridController _controller = DataGridController();
 
 @override
@@ -221,7 +216,6 @@ N> The default value of `canAnimate` is `false`.
 {% tabs %}
 {% highlight Dart %}
 
-late EmployeeDataSource _employeeDataSource;
 final DataGridController _controller = DataGridController();
 
 @override
@@ -293,7 +287,6 @@ N> The default value of `canAnimate` is `false`.
 {% tabs %}
 {% highlight Dart %}
 
-late EmployeeDataSource _employeeDataSource;
 final DataGridController _controller = DataGridController();
 
 @override
@@ -372,7 +365,6 @@ N> The default value of `DataGridScrollPosition` is `Start`.
 {% tabs %}
 {% highlight Dart %}
 
-late EmployeeDataSource _employeeDataSource;
 final DataGridController _controller = DataGridController();
 
 @override
@@ -447,7 +439,6 @@ N> The default value of `canAnimate` is `false`.
 {% tabs %}
 {% highlight Dart %}
 
-late EmployeeDataSource _employeeDataSource;
 final DataGridController _controller = DataGridController();
 
 @override
@@ -519,7 +510,6 @@ N> The default value of `canAnimate` is `false`.
 {% tabs %}
 {% highlight Dart %}
 
-late EmployeeDataSource _employeeDataSource;
 final DataGridController _controller = DataGridController();
 
 @override

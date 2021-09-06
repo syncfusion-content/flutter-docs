@@ -24,8 +24,6 @@ To change the rendering direction from right to left, wrap the [SfDataGrid](http
 
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
-late EmployeeDataSource _employeeDataSource;
-
 @override
 Widget build(BuildContext context) {
   return Directionality(
@@ -90,8 +88,6 @@ Next, import the `flutter_localizations` library and specify [localizationsDeleg
 
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-
-late EmployeeDataSource _employeeDataSource;
 
 @override
 Widget build(BuildContext context) {
