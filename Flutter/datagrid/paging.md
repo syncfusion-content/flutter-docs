@@ -743,7 +743,7 @@ The following options are available to customize the navigation buttons,
    The default value is true.
   * `lastPageItemVisible` - Set the false to lastPageItemVisible property for hiding the last page navigation button. The default value is true.
   * `nextPageItemVisible` - Set the false to nextPageItemVisible property for hiding the next page navigation button. The default value is true.
-  * `previousPageItemVisible` - Set the false to irstPageItemVisible property for hiding the previous page navigation button. The default value is true.
+  * `previousPageItemVisible` - Set the false to firstPageItemVisible property for hiding the previous page navigation button. The default value is true.
 
 The following sample demonstrate the page button customization,
 
