@@ -27,62 +27,54 @@ The following example show how to enable editing in datagrid and committing the 
 {% tabs %}
 {% highlight dart %}
 
+late EmployeeDataSource _employeeDataSource;
+
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-    body: SfDataGrid(
-      source: _employeeDataSource,
-      allowEditing: true,
-      selectionMode: SelectionMode.single,
-      navigationMode: GridNavigationMode.cell,
-      columns: [
+      body: SfDataGrid(
+          source: _employeeDataSource,
+          allowEditing: true,
+          selectionMode: SelectionMode.single,
+          navigationMode: GridNavigationMode.cell,
+          columns: [
         GridColumn(
-          columnName: 'id',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'ID',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
+            columnName: 'id',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'name',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Name',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
+            columnName: 'name',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Name',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'designation',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Designation',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
+            columnName: 'designation',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Designation',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'salary',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'Salary',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
-      ],
-    ),
-  );
+            columnName: 'salary',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Salary',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+      ]));
 }
 
 class EmployeeDataSource extends DataGridSource {
@@ -144,24 +136,22 @@ class EmployeeDataSource extends DataGridSource {
     // The new cell value must be reset.
     // To avoid committing the [DataGridCell] value that was previously edited
     // into the current non-modified [DataGridCell].
-    newCellValue = null;    
+    newCellValue = null;
 
     final bool isNumericType =
         column.columnName == 'id' || column.columnName == 'salary';
 
     return Container(
       padding: const EdgeInsets.all(8.0),
-      alignment:
-          isNumericType ? Alignment.centerRight : Alignment.centerLeft,
+      alignment: isNumericType ? Alignment.centerRight : Alignment.centerLeft,
       child: TextField(
         autofocus: true,
         controller: editingController..text = displayText,
         textAlign: isNumericType ? TextAlign.right : TextAlign.left,
         decoration: InputDecoration(
-            contentPadding: const EdgeInsets.fromLTRB(0, 0, 0, 16.0),
+          contentPadding: const EdgeInsets.fromLTRB(0, 0, 0, 16.0),
         ),
-        keyboardType:
-            isNumericType ? TextInputType.number : TextInputType.text,
+        keyboardType: isNumericType ? TextInputType.number : TextInputType.text,
         onChanged: (String value) {
           if (value.isNotEmpty) {
             if (isNumericType) {
@@ -200,60 +190,50 @@ To disable the editing for a particular column, set the [GridColumn.allowEditing
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-    body: SfDataGrid(
-      source: _employeeDataSource,
-      allowEditing: true,
-      selectionMode: SelectionMode.single,
-      navigationMode: GridNavigationMode.cell,
-      columns: [
+      body: SfDataGrid(
+          source: _employeeDataSource,
+          allowEditing: true,
+          selectionMode: SelectionMode.single,
+          navigationMode: GridNavigationMode.cell,
+          columns: [
         GridColumn(
-          columnName: 'id',
-          allowEditing: false,
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'ID',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
+            columnName: 'id',
+            allowEditing: false,
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'name',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Name',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
+            columnName: 'name',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Name',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'designation',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Designation',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
+            columnName: 'designation',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Designation',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'salary',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'Salary',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
-      ],
-    ),
-  );
+            columnName: 'salary',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Salary',
+                  overflow: TextOverflow.ellipsis,
+                )))
+      ]));
 }
 
 {% endhighlight %}
@@ -266,63 +246,55 @@ By default, cell will be moved to edit mode when you double tap the cells. You c
 {% tabs %}
 {% highlight dart %}
 
+late EmployeeDataSource _employeeDataSource;
+
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-    body: SfDataGrid(
-      source: _employeeDataSource,
-      allowEditing: true,
-      selectionMode: SelectionMode.single,
-      navigationMode: GridNavigationMode.cell,
-      editingGestureType: EditingGestureType.tap,
-      columns: [
+      body: SfDataGrid(
+          source: _employeeDataSource,
+          allowEditing: true,
+          selectionMode: SelectionMode.single,
+          navigationMode: GridNavigationMode.cell,
+          editingGestureType: EditingGestureType.tap,
+          columns: [
         GridColumn(
-          columnName: 'id',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'ID',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
+            columnName: 'id',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'name',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Name',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
+            columnName: 'name',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Name',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'designation',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Designation',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
+            columnName: 'designation',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Designation',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'salary',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'Salary',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
-      ],
-    ),
-  );
+            columnName: 'salary',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Salary',
+                  overflow: TextOverflow.ellipsis,
+                )))
+      ]));
 }
 
 {% endhighlight %}
@@ -343,12 +315,12 @@ The [DataGridSource.onCellBeginEdit](https://pub.dev/documentation/syncfusion_fl
 
 class EmployeeDataSource extends DataGridSource {
   @override
-  bool onCellBeginEdit(DataGridRow dataGridRow, RowColumnIndex rowColumnIndex,
-      GridColumn column) {
-    if(column.columnName == 'id'){
+  bool onCellBeginEdit(
+      DataGridRow dataGridRow, RowColumnIndex rowColumnIndex, GridColumn column) {
+    if (column.columnName == 'id') {
       // Return false, to restrict entering into the editing.
       return false;
-    }else{
+    } else {
       return true;
     }
   }
@@ -369,7 +341,7 @@ The [DataGridSource.canSubmitCell](https://pub.dev/documentation/syncfusion_flut
 {% highlight dart %}
 
 class EmployeeDataSource extends DataGridSource {
-   @override
+  @override
   bool canSubmitCell(DataGridRow dataGridRow, RowColumnIndex rowColumnIndex,
       GridColumn column) {
     if (column.columnName == 'id' && newCellValue == null) {
@@ -448,7 +420,8 @@ The [DataGridSource.onCellCancelEdit](https://pub.dev/documentation/syncfusion_f
 
 class EmployeeDataSource extends DataGridSource {
   @override
-  void onCellCancelEdit(DataGridRow dataGridRow, RowColumnIndex rowColumnIndex, GridColumn column) {
+  void onCellCancelEdit(DataGridRow dataGridRow, RowColumnIndex rowColumnIndex,
+      GridColumn column) {
     // handle the cancel editing code here
   }
 }
@@ -470,72 +443,58 @@ final DataGridController _dataGridController = DataGridController();
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-    body: Column(
-      children: [
-        TextButton(
-          child: Text("Begin Edit"),
-          onPressed: () {
-            _dataGridController.beginEdit(RowColumnIndex(2, 3));
-          },
-        ),
-        Expanded(
-          child: SfDataGrid(
+      body: Column(children: [
+    TextButton(
+        child: Text("Begin Edit"),
+        onPressed: () {
+          _dataGridController.beginEdit(RowColumnIndex(2, 3));
+        }),
+    Expanded(
+        child: SfDataGrid(
             source: _employeeDataSource,
             allowEditing: true,
             selectionMode: SelectionMode.single,
             navigationMode: GridNavigationMode.cell,
             controller: _dataGridController,
             columns: [
-              GridColumn(
-                columnName: 'id',
-                label: Container(
+          GridColumn(
+              columnName: 'id',
+              label: Container(
                   padding: EdgeInsets.symmetric(horizontal: 16.0),
                   alignment: Alignment.centerRight,
                   child: Text(
                     'ID',
                     overflow: TextOverflow.ellipsis,
-                  ),
-                ),
-              ),
-              GridColumn(
-                columnName: 'name',
-                label: Container(
+                  ))),
+          GridColumn(
+              columnName: 'name',
+              label: Container(
                   padding: EdgeInsets.symmetric(horizontal: 16.0),
                   alignment: Alignment.centerLeft,
                   child: Text(
                     'Name',
                     overflow: TextOverflow.ellipsis,
-                  ),
-                ),
-              ),
-              GridColumn(
-                columnName: 'designation',
-                label: Container(
+                  ))),
+          GridColumn(
+              columnName: 'designation',
+              label: Container(
                   padding: EdgeInsets.symmetric(horizontal: 16.0),
                   alignment: Alignment.centerLeft,
                   child: Text(
                     'Designation',
                     overflow: TextOverflow.ellipsis,
-                  ),
-                ),
-              ),
-              GridColumn(
-                columnName: 'salary',
-                label: Container(
+                  ))),
+          GridColumn(
+              columnName: 'salary',
+              label: Container(
                   padding: EdgeInsets.symmetric(horizontal: 16.0),
                   alignment: Alignment.centerRight,
                   child: Text(
                     'Salary',
                     overflow: TextOverflow.ellipsis,
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ],
-    ),
-  );
+                  )))
+        ]))
+  ]));
 }
 
 {% endhighlight %}
@@ -548,77 +507,63 @@ The [SfDataGrid.endEdit](https://pub.dev/documentation/syncfusion_flutter_datagr
 {% tabs %}
 {% highlight dart %}
 
-final DataGridController _dataGridControlle r = DataGridController();
+final DataGridController _dataGridController = DataGridController();
 
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-    body: Column(
-      children: [
-        TextButton(
-          child: Text("End Edit"),
-          onPressed: () {
-            _dataGridController.endEdit();
-          },
-        ),
-        Expanded(
-          child: SfDataGrid(
+      body: Column(children: [
+    TextButton(
+        child: Text("End Edit"),
+        onPressed: () {
+          _dataGridController.endEdit();
+        }),
+    Expanded(
+        child: SfDataGrid(
             source: _employeeDataSource,
             allowEditing: true,
             selectionMode: SelectionMode.single,
             navigationMode: GridNavigationMode.cell,
             controller: _dataGridController,
             columns: [
-              GridColumn(
-                columnName: 'id',
-                label: Container(
+          GridColumn(
+              columnName: 'id',
+              label: Container(
                   padding: EdgeInsets.symmetric(horizontal: 16.0),
                   alignment: Alignment.centerRight,
                   child: Text(
                     'ID',
                     overflow: TextOverflow.ellipsis,
-                  ),
-                ),
-              ),
-              GridColumn(
-                columnName: 'name',
-                label: Container(
+                  ))),
+          GridColumn(
+              columnName: 'name',
+              label: Container(
                   padding: EdgeInsets.symmetric(horizontal: 16.0),
                   alignment: Alignment.centerLeft,
                   child: Text(
                     'Name',
                     overflow: TextOverflow.ellipsis,
-                  ),
-                ),
-              ),
-              GridColumn(
-                columnName: 'designation',
-                label: Container(
+                  ))),
+          GridColumn(
+              columnName: 'designation',
+              label: Container(
                   padding: EdgeInsets.symmetric(horizontal: 16.0),
                   alignment: Alignment.centerLeft,
                   child: Text(
                     'Designation',
                     overflow: TextOverflow.ellipsis,
-                  ),
-                ),
-              ),
-              GridColumn(
-                columnName: 'salary',
-                label: Container(
+                  ))),
+          GridColumn(
+              columnName: 'salary',
+              label: Container(
                   padding: EdgeInsets.symmetric(horizontal: 16.0),
                   alignment: Alignment.centerRight,
                   child: Text(
                     'Salary',
                     overflow: TextOverflow.ellipsis,
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ],
-    ),
-  );
+                  )))
+        ]))
+  ]));
 }
 
 {% endhighlight %}
@@ -636,11 +581,11 @@ class EmployeeDataSource extends DataGridSource {
   bool onCellBeginEdit(DataGridRow dataGridRow, RowColumnIndex rowColumnIndex,
       GridColumn column) {
 
-    // Editing prevented for the cell at RowColumnIndex(2,2).    
+    // Editing prevented for the cell at RowColumnIndex(2,2).
     if (rowColumnIndex.equals(RowColumnIndex(2, 2))) {
       return false;
     } else {
-      return false;
+      return true;
     }
   }
 }

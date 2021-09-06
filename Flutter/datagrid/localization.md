@@ -31,97 +31,81 @@ Next, import the `flutter_localizations` library and specify [localizationsDeleg
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 final int rowsPerPage = 15;
+late EmployeeDataSource _employeeDataSource;
 
 @override
 Widget build(BuildContext context) {
   return MaterialApp(
-    localizationsDelegates: [
-      GlobalMaterialLocalizations.delegate,
-      GlobalWidgetsLocalizations.delegate,
-    ],
-    supportedLocales: [
-      const Locale('zh'),
-      const Locale('ar'),
-      const Locale('ja'),
-    ],
-    locale: const Locale('zh'),
-    home: Scaffold(
-      appBar: AppBar(
-        title: Text('DataPager'),
-      ),
-      body: LayoutBuilder(
-        builder: (context, constraints) {
-          return Column(
-            children: [
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: [
+        const Locale('zh'),
+        const Locale('ar'),
+        const Locale('ja'),
+      ],
+      locale: const Locale('zh'),
+      home: Scaffold(
+          appBar: AppBar(
+            title: Text('DataPager'),
+          ),
+          body: LayoutBuilder(builder: (context, constraints) {
+            return Column(children: [
               SizedBox(
-                height: constraints.maxHeight - 60,
-                width: constraints.maxWidth,
-                child: SfDataGrid(
-                  source: _employeeDataSource,
-                  columns: <GridColumn>[
-                    GridColumn(
-                      columnName: 'id',
-                      label: Container(
-                        padding: EdgeInsets.symmetric(horizontal: 16.0),
-                        alignment: Alignment.centerRight,
-                        child: Text(
-                          'ID',
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                      ),
-                    ),
-                    GridColumn(
-                      columnName: 'name',
-                      label: Container(
-                        padding: EdgeInsets.symmetric(horizontal: 16.0),
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          'Name',
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                      ),
-                    ),
-                    GridColumn(
-                      columnName: 'designation',
-                      label: Container(
-                        padding: EdgeInsets.symmetric(horizontal: 16.0),
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          'Designation',
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                      ),
-                    ),
-                    GridColumn(
-                      columnName: 'salary',
-                      label: Container(
-                        padding: EdgeInsets.symmetric(horizontal: 16.0),
-                        alignment: Alignment.centerRight,
-                        child: Text(
-                          'Salary',
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+                  height: constraints.maxHeight - 60,
+                  width: constraints.maxWidth,
+                  child: SfDataGrid(
+                      source: _employeeDataSource,
+                      columns: <GridColumn>[
+                        GridColumn(
+                            columnName: 'id',
+                            label: Container(
+                                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                                alignment: Alignment.centerRight,
+                                child: Text(
+                                  'ID',
+                                  overflow: TextOverflow.ellipsis,
+                                ))),
+                        GridColumn(
+                            columnName: 'name',
+                            label: Container(
+                                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                                alignment: Alignment.centerLeft,
+                                child: Text(
+                                  'Name',
+                                  overflow: TextOverflow.ellipsis,
+                                ))),
+                        GridColumn(
+                            columnName: 'designation',
+                            label: Container(
+                                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                                alignment: Alignment.centerLeft,
+                                child: Text(
+                                  'Designation',
+                                  overflow: TextOverflow.ellipsis,
+                                ))),
+                        GridColumn(
+                            columnName: 'salary',
+                            label: Container(
+                                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                                alignment: Alignment.centerRight,
+                                child: Text(
+                                  'Salary',
+                                  overflow: TextOverflow.ellipsis,
+                                )))
+                      ])),
               Container(
-                height: 60,
-                width: constraints.maxWidth,
-                child: SfDataPager(
-                  delegate: _employeeDataSource,
-                  pageCount: employees.length / rowsPerPage,
-                  visibleItemsCount: 5,
-                  direction: Axis.horizontal,
-                ),
-              )
-            ],
-          );
-        },
-      ),
-    ),
-  );
+                  height: 60,
+                  width: constraints.maxWidth,
+                  child: SfDataPager(
+                    delegate: _employeeDataSource,
+                    pageCount: _employees.length / rowsPerPage,
+                    visibleItemsCount: 5,
+                    direction: Axis.horizontal,
+                  ))
+            ]);
+          })));
 }
 
 {% endhighlight %}
@@ -154,98 +138,82 @@ Then, declare the [SfGlobalLocalizations.delegate](https://pub.dev/documentation
 {% highlight Dart %}
 
 final int rowsPerPage = 15;
+late EmployeeDataSource _employeeDataSource;
 
 @override
 Widget build(BuildContext context) {
   return MaterialApp(
-    localizationsDelegates: [
-      GlobalMaterialLocalizations.delegate,
-      GlobalWidgetsLocalizations.delegate,
-      SfGlobalLocalizations.delegate
-    ],
-    supportedLocales: [
-      const Locale('zh'),
-      const Locale('ar'),
-      const Locale('ja'),
-    ],
-    locale: const Locale('zh'),
-    home: Scaffold(
-      appBar: AppBar(
-        title: Text('DataPager'),
-      ),
-      body: LayoutBuilder(
-        builder: (context, constraints) {
-          return Column(
-            children: [
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        SfGlobalLocalizations.delegate
+      ],
+      supportedLocales: [
+        const Locale('zh'),
+        const Locale('ar'),
+        const Locale('ja'),
+      ],
+      locale: const Locale('zh'),
+      home: Scaffold(
+          appBar: AppBar(
+            title: Text('DataPager'),
+          ),
+          body: LayoutBuilder(builder: (context, constraints) {
+            return Column(children: [
               SizedBox(
-                height: constraints.maxHeight - 60,
-                width: constraints.maxWidth,
-                child: SfDataGrid(
-                  source: _employeeDataSource,
-                  columns: <GridColumn>[
-                    GridColumn(
-                      columnName: 'id',
-                      label: Container(
-                        padding: EdgeInsets.symmetric(horizontal: 16.0),
-                        alignment: Alignment.centerRight,
-                        child: Text(
-                          'ID',
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                      ),
-                    ),
-                    GridColumn(
-                      columnName: 'name',
-                      label: Container(
-                        padding: EdgeInsets.symmetric(horizontal: 16.0),
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          'Name',
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                      ),
-                    ),
-                    GridColumn(
-                      columnName: 'designation',
-                      label: Container(
-                        padding: EdgeInsets.symmetric(horizontal: 16.0),
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          'Designation',
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                      ),
-                    ),
-                    GridColumn(
-                      columnName: 'salary',
-                      label: Container(
-                        padding: EdgeInsets.symmetric(horizontal: 16.0),
-                        alignment: Alignment.centerRight,
-                        child: Text(
-                          'Salary',
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+                  height: constraints.maxHeight - 60,
+                  width: constraints.maxWidth,
+                  child: SfDataGrid(
+                      source: _employeeDataSource,
+                      columns: <GridColumn>[
+                        GridColumn(
+                            columnName: 'id',
+                            label: Container(
+                                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                                alignment: Alignment.centerRight,
+                                child: Text(
+                                  'ID',
+                                  overflow: TextOverflow.ellipsis,
+                                ))),
+                        GridColumn(
+                            columnName: 'name',
+                            label: Container(
+                                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                                alignment: Alignment.centerLeft,
+                                child: Text(
+                                  'Name',
+                                  overflow: TextOverflow.ellipsis,
+                                ))),
+                        GridColumn(
+                            columnName: 'designation',
+                            label: Container(
+                                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                                alignment: Alignment.centerLeft,
+                                child: Text(
+                                  'Designation',
+                                  overflow: TextOverflow.ellipsis,
+                                ))),
+                        GridColumn(
+                            columnName: 'salary',
+                            label: Container(
+                                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                                alignment: Alignment.centerRight,
+                                child: Text(
+                                  'Salary',
+                                  overflow: TextOverflow.ellipsis,
+                                )))
+                      ])),
               Container(
-                height: 60,
-                width: constraints.maxWidth,
-                child: SfDataPager(
-                  delegate: _employeeDataSource,
-                  pageCount: employees.length / rowsPerPage,
-                  visibleItemsCount: 5,
-                  direction: Axis.horizontal,
-                ),
-              )
-            ],
-          );
-        },
-      ),
-    ),
-  );
+                  height: 60,
+                  width: constraints.maxWidth,
+                  child: SfDataPager(
+                    delegate: _employeeDataSource,
+                    pageCount: _employees.length / rowsPerPage,
+                    visibleItemsCount: 5,
+                    direction: Axis.horizontal,
+                  ))
+            ]);
+          })));
 }
 
 {% endhighlight %}

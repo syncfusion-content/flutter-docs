@@ -18,61 +18,54 @@ The row height of particular row can be set by using the [SfDataGrid.onQueryRowH
 {% tabs %}
 {% highlight dart %} 
 
+late EmployeeDataSource _employeeDataSource;
+
 @override
 Widget build(BuildContext context) {
   return SfDataGrid(
-    source: employeeDataSource,
-    onQueryRowHeight: (details) {
-      // Set the row height as 70.0 to the column header row.
-      return details.rowIndex == 0 ? 70.0 : 49.0;
-    },
-    columns: <GridColumn>[
-      GridColumn(
-        columnName: 'ID',
-        label: Container(
-          padding: EdgeInsets.all(16.0),
-          alignment: Alignment.centerRight,
-          child: Text(
-            'ID',
-            softWrap: true,
-          ),
-        ),
-      ),
-      GridColumn(
-        columnName: 'Contact Name',
-        label: Container(
-          padding: EdgeInsets.all(16.0),
-          alignment: Alignment.centerLeft,
-          child: Text(
-            'Contact Name',
-            softWrap: true,
-          ),
-        ),
-      ),
-      GridColumn(
-        columnName: 'Company Name',
-        label: Container(
-          padding: EdgeInsets.all(16.0),
-          alignment: Alignment.centerLeft,
-          child: Text(
-            'Company Name',
-            softWrap: true,
-          ),
-        ),
-      ),
-      GridColumn(
-        columnName: 'City',
-        label: Container(
-          padding: EdgeInsets.all(16.0),
-          alignment: Alignment.centerLeft,
-          child: Text(
-            'City',
-            softWrap: true,
-          ),
-        ),
-      ),
-    ],
-  );
+      source: _employeeDataSource,
+      onQueryRowHeight: (details) {
+        // Set the row height as 70.0 to the column header row.
+        return details.rowIndex == 0 ? 70.0 : 49.0;
+      },
+      columns: <GridColumn>[
+        GridColumn(
+            columnName: 'ID',
+            label: Container(
+                padding: EdgeInsets.all(16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                  softWrap: true,
+                ))),
+        GridColumn(
+            columnName: 'Contact Name',
+            label: Container(
+                padding: EdgeInsets.all(16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Contact Name',
+                  softWrap: true,
+                ))),
+        GridColumn(
+            columnName: 'Company Name',
+            label: Container(
+                padding: EdgeInsets.all(16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Company Name',
+                  softWrap: true,
+                ))),
+        GridColumn(
+            columnName: 'City',
+            label: Container(
+                padding: EdgeInsets.all(16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'City',
+                  softWrap: true,
+                )))
+      ]);
 }
 
 {% endhighlight %}
@@ -87,60 +80,53 @@ The row height can be autofit based on its content in the `SfDataGrid.onQueryRow
 {% tabs %}
 {% highlight dart %} 
 
+late EmployeeDataSource _employeeDataSource;
+
 @override
 Widget build(BuildContext context) {
   return SfDataGrid(
-    source: employeeDataSource,
-    onQueryRowHeight: (details) {
-      return details.getIntrinsicRowHeight(details.rowIndex);
-    },
-    columns: <GridColumn>[
-      GridColumn(
-        columnName: 'ID',
-        label: Container(
-          padding: EdgeInsets.all(16.0),
-          alignment: Alignment.centerRight,
-          child: Text(
-            'ID',
-            softWrap: true,
-          ),
-        ),
-      ),
-      GridColumn(
-        columnName: 'Contact Name',
-        label: Container(
-          padding: EdgeInsets.all(16.0),
-          alignment: Alignment.centerLeft,
-          child: Text(
-            'Contact Name',
-            softWrap: true,
-          ),
-        ),
-      ),
-      GridColumn(
-        columnName: 'Company Name',
-        label: Container(
-          padding: EdgeInsets.all(16.0),
-          alignment: Alignment.centerLeft,
-          child: Text(
-            'Company Name',
-            softWrap: true,
-          ),
-        ),
-      ),
-      GridColumn(
-        columnName: 'City',
-        label: Container(
-          padding: EdgeInsets.all(16.0),
-          alignment: Alignment.centerLeft,
-          child: Text(
-            'City',
-            softWrap: true,
-          ),
-        ),
-      ),
-    ],
-  );
+      source: _employeeDataSource,
+      onQueryRowHeight: (details) {
+        return details.getIntrinsicRowHeight(details.rowIndex);
+      },
+      columns: <GridColumn>[
+        GridColumn(
+            columnName: 'ID',
+            label: Container(
+                padding: EdgeInsets.all(16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                  softWrap: true,
+                ))),
+        GridColumn(
+            columnName: 'Contact Name',
+            label: Container(
+                padding: EdgeInsets.all(16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Contact Name',
+                  softWrap: true,
+                ))),
+        GridColumn(
+            columnName: 'Company Name',
+            label: Container(
+                padding: EdgeInsets.all(16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Company Name',
+                  softWrap: true,
+                ))),
+        GridColumn(
+            columnName: 'City',
+            label: Container(
+                padding: EdgeInsets.all(16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'City',
+                  softWrap: true,
+                )))
+      ]);
 }
 
 {% endhighlight %}
@@ -157,74 +143,54 @@ The `RowHeightDetails.getIntrinsicRowHeight` method provides some properties to 
 {% tabs %}
 {% highlight dart %}
 
+late EmployeeDataSource _employeeDataSource;
+
 @override
 Widget build(BuildContext context) {
   return SfDataGrid(
-    source: employeeDataSource,
-    onQueryRowHeight: (details) {
-      return details.getIntrinsicRowHeight(details.rowIndex,
-          excludedColumns: ['Contact Name'], canIncludeHiddenColumns: true);
-    },
-    columns: <GridColumn>[
-      GridColumn(
-        columnName: 'ID',
-        autoFitPadding: EdgeInsets.all(16.0),
-        label: Container(
-          alignment: Alignment.centerRight,
-          child: Text(
-            'ID',
-            softWrap: true,
-          ),
-        ),
-      ),
-      GridColumn(
-        columnName: 'Contact Name',
-        autoFitPadding: EdgeInsets.all(16.0),
-        label: Container(
-          alignment: Alignment.centerLeft,
-          child: Text(
-            'Contact Name',
-            softWrap: true,
-          ),
-        ),
-      ),
-      GridColumn(
-        columnName: 'Company Name',
-        visible: false,
-        autoFitPadding: EdgeInsets.all(16.0),
-        width: 100.0,
-        label: Container(
-          alignment: Alignment.centerLeft,
-          child: Text(
-            'Company Name',
-            softWrap: true,
-          ),
-        ),
-      ),
-      GridColumn(
-        columnName: 'City',
-        label: Container(
-          padding: EdgeInsets.all(16.0),
-          alignment: Alignment.centerLeft,
-          child: Text(
-            'City',
-            softWrap: true,
-          ),
-        ),
-      ),
-      GridColumn(
-        columnName: 'Country',
-        label: Container(
-          padding: EdgeInsets.all(16.0),
-          alignment: Alignment.centerLeft,
-          child: Text(
-            'Country',
-            softWrap: true,
-          ),
-        ),
-      ),
-    ],
-  );
+      source: _employeeDataSource,
+      onQueryRowHeight: (details) {
+          return details.getIntrinsicRowHeight(details.rowIndex,
+              excludedColumns: ['Contact Name'], canIncludeHiddenColumns: true);
+      },
+      columns: <GridColumn>[
+        GridColumn(
+            columnName: 'ID',
+            label: Container(
+                padding: EdgeInsets.all(16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                  softWrap: true,
+                ))),
+        GridColumn(
+            columnName: 'Contact Name',
+            label: Container(
+                padding: EdgeInsets.all(16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Contact Name',
+                  softWrap: true,
+                ))),
+        GridColumn(
+            columnName: 'Company Name',
+            label: Container(
+                padding: EdgeInsets.all(16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Company Name',
+                  softWrap: true,
+                ))),
+        GridColumn(
+            columnName: 'City',
+            label: Container(
+                padding: EdgeInsets.all(16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'City',
+                  softWrap: true,
+                )))
+      ]);
 }
 
 {% endhighlight %}
@@ -239,77 +205,69 @@ By default, the cell height is calculated based on the default text style. To ca
 {% tabs %}
 {% highlight dart %}
 
+late EmployeeDataSource _employeeDataSource;
 final CustomColumnSizer _customColumnSizer = CustomColumnSizer();
 
 @override
 Widget build(BuildContext context) {
   return SfDataGrid(
-    source: employeeDataSource,
-    columnSizer: _customColumnSizer,
-    onQueryRowHeight: (details) {
-      return details.getIntrinsicRowHeight(details.rowIndex);
-    },
-    columns: <GridColumn>[
-      GridColumn(
-        columnName: 'ID',
-        autoFitPadding: EdgeInsets.all(10.0),
-        label: Container(
-          padding: EdgeInsets.all(10.0),
-          alignment: Alignment.centerRight,
-          child: Text(
-            'ID',
-            softWrap: true,
-          ),
-        ),
-      ),
-      GridColumn(
-        columnName: 'Contact Name',
-        autoFitPadding: EdgeInsets.all(10.0),
-        label: Container(
-          padding: EdgeInsets.all(10.0),
-          alignment: Alignment.centerLeft,
-          child: Text(
-            'Contact Name',
-            softWrap: true,
-            style: TextStyle(
-                fontWeight: FontWeight.bold, fontStyle: FontStyle.italic),
-          ),
-        ),
-      ),
-      GridColumn(
-        columnName: 'Company Name',
-        visible: true,
-        autoFitPadding: EdgeInsets.all(10.0),
-        width: 100.0,
-        label: Container(
-          padding: EdgeInsets.all(10.0),
-          alignment: Alignment.centerLeft,
-          child: Text(
-            'Company Name',
-            softWrap: true,
-          ),
-        ),
-      ),
-      GridColumn(
-        columnName: 'City',
-        autoFitPadding: EdgeInsets.all(10.0)EdgeInsets.all(10.0),
-        label: Container(
-          padding: EdgeInsets.all(10.0)EdgeInsets.all(10.0),
-          alignment: Alignment.centerLeft,
-          child: Text(
-            'City',
-            softWrap: true,
-            style: TextStyle(
-                fontWeight: FontWeight.bold, fontStyle: FontStyle.italic),
-          ),
-        ),
-      ),
-    ],
-  );
+      source: _employeeDataSource,
+      columnSizer: _customColumnSizer,
+      onQueryRowHeight: (details) {
+        return details.getIntrinsicRowHeight(details.rowIndex);
+      },
+      columns: <GridColumn>[
+        GridColumn(
+            columnName: 'ID',
+            autoFitPadding: EdgeInsets.all(10.0),
+            label: Container(
+                padding: EdgeInsets.all(10.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                  softWrap: true,
+                ))),
+        GridColumn(
+            columnName: 'Contact Name',
+            autoFitPadding: EdgeInsets.all(10.0),
+            label: Container(
+                padding: EdgeInsets.all(10.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Contact Name',
+                  softWrap: true,
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold, fontStyle: FontStyle.italic),
+                ))),
+        GridColumn(
+            columnName: 'Company Name',
+            visible: true,
+            autoFitPadding: EdgeInsets.all(10.0),
+            width: 100.0,
+            label: Container(
+                padding: EdgeInsets.all(10.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Company Name',
+                  softWrap: true,
+                ))),
+        GridColumn(
+            columnName: 'City',
+            autoFitPadding: EdgeInsets.all(10.0),
+            label: Container(
+                padding: EdgeInsets.all(10.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'City',
+                  softWrap: true,
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold, fontStyle: FontStyle.italic),
+                )))
+      ]);
 }
 
 class EmployeeDataSource extends DataGridSource {
-  EmployeeDataSource({required List<_Employee> employees}) {
+  EmployeeDataSource({required List<Employee> employees}) {
     dataGridRows = employees.map<DataGridRow>((dataGridRow) {
       return DataGridRow(cells: [
         DataGridCell<int>(columnName: 'ID', value: dataGridRow.id),
@@ -382,76 +340,87 @@ class CustomColumnSizer extends ColumnSizer {
 
 By default, the cell height is calculated based on the `DataGridCell.value` property. To autofit the cell height based on the displayed formatted value (i.e, DateFormat and NumberFormat), simply override the `computeCellHeight` method and return the super method with the required `cellValue`.
 
+To use `intl`, add the package as dependency to `pubspec.yaml` file.
+
+{% highlight dart %}
+
+dependencies:
+  intl: ^0.17.0
+
+{% endhighlight %}
+
+Import the `intl` library, to use the date and number format.
+
 {% tabs %}
 {% highlight dart %}
 
+import 'package:intl/intl.dart';
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+
+late EmployeeDataSource employeeDataSource;
 final CustomColumnSizer _customColumnSizer = CustomColumnSizer();
 
 @override
 Widget build(BuildContext context) {
-  return SfDataGrid(
-    source: employeeDataSource,
-    columnSizer: _customColumnSizer,
-    onQueryRowHeight: (details) {
-      return details.getIntrinsicRowHeight(details.rowIndex);
-    },
-    columns: <GridColumn>[
-      GridColumn(
-        columnName: 'ID',
-        autoFitPadding: EdgeInsets.all(10.0),
-        label: Container(
-          padding: EdgeInsets.all(10.0),
-          alignment: Alignment.centerRight,
-          child: Text(
-            'ID',
-            softWrap: true,
+  return MaterialApp(
+      home: Scaffold(
+          appBar: AppBar(
+            title: const Text('Syncfusion Flutter DataGrid'),
           ),
-        ),
-      ),
-      GridColumn(
-        columnName: 'Contact Name',
-        autoFitPadding: EdgeInsets.all(10.0),
-        label: Container(
-          padding: EdgeInsets.all(10.0),
-          alignment: Alignment.centerLeft,
-          child: Text(
-            'Contact Name',
-            softWrap: true,
-          ),
-        ),
-      ),
-      GridColumn(
-        columnName: 'Date of Birth',
-        visible: true,
-        autoFitPadding: EdgeInsets.all(10.0),
-        width: 100.0,
-        label: Container(
-          padding: EdgeInsets.all(10.0),
-          alignment: Alignment.centerLeft,
-          child: Text(
-            'Date of Birth',
-            softWrap: true,
-          ),
-        ),
-      ),
-      GridColumn(
-        columnName: 'Salary',
-        autoFitPadding: EdgeInsets.all(10.0),
-        label: Container(
-          padding: EdgeInsets.all(10.0),
-          alignment: Alignment.centerLeft,
-          child: Text(
-            'Salary',
-            softWrap: true,
-          ),
-        ),
-      ),
-    ],
-  );
+          body: SfDataGrid(
+              source: employeeDataSource,
+              columnSizer: _customColumnSizer,
+              onQueryRowHeight: (RowHeightDetails details) {
+                return details.getIntrinsicRowHeight(details.rowIndex);
+              },
+              columns: <GridColumn>[
+                GridColumn(
+                    columnName: 'ID',
+                    autoFitPadding: EdgeInsets.all(10.0),
+                    label: Container(
+                        padding: EdgeInsets.all(10.0),
+                        alignment: Alignment.centerRight,
+                        child: Text(
+                          'ID',
+                          softWrap: true,
+                        ))),
+                GridColumn(
+                    columnName: 'Contact Name',
+                    autoFitPadding: EdgeInsets.all(10.0),
+                    label: Container(
+                        padding: EdgeInsets.all(10.0),
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          'Contact Name',
+                          softWrap: true,
+                        ))),
+                GridColumn(
+                    columnName: 'Date of Birth',
+                    visible: true,
+                    autoFitPadding: EdgeInsets.all(10.0),
+                    width: 100.0,
+                    label: Container(
+                        padding: EdgeInsets.all(10.0),
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          'Date of Birth',
+                          softWrap: true,
+                        ))),
+                GridColumn(
+                    columnName: 'Salary',
+                    autoFitPadding: EdgeInsets.all(10.0),
+                    label: Container(
+                        padding: EdgeInsets.all(10.0),
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          'Salary',
+                          softWrap: true,
+                        )))
+              ])));
 }
 
 class EmployeeDataSource extends DataGridSource {
-  EmployeeDataSource({required List<_Employee> employees}) {
+  EmployeeDataSource({required List<Employee> employees}) {
     dataGridRows = employees.map<DataGridRow>((dataGridRow) {
       return DataGridRow(cells: [
         DataGridCell<int>(columnName: 'ID', value: dataGridRow.id),
@@ -524,49 +493,51 @@ class CustomColumnSizer extends ColumnSizer {
 {% tabs %}
 {% highlight dart %} 
 
+late EmployeeDataSource _employeeDataSource;
+
 @override
 Widget build(BuildContext context) {
   return Scaffold(
       body: SfDataGrid(
-    source: _employeeDatasource,
+    source: _employeeDataSource,
     headerRowHeight: 70,
     columns: <GridColumn>[
       GridColumn(
-        columnName: 'id',
-        label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 16.0),
-          alignment: Alignment.centerRight,
-          child: Text(
-            'ID',
-            overflow: TextOverflow.ellipsis,
-          ))),
+          columnName: 'id',
+          label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'ID',
+                overflow: TextOverflow.ellipsis,
+              ))),
       GridColumn(
-        columnName: 'name',
-        label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 16.0),
-          alignment: Alignment.centerLeft,
-          child: Text(
-            'Name',
-            overflow: TextOverflow.ellipsis,
-          ))),
+          columnName: 'name',
+          label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Name',
+                overflow: TextOverflow.ellipsis,
+              ))),
       GridColumn(
-        columnName: 'designation',
-        label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 16.0),
-          alignment: Alignment.centerLeft,
-          child: Text(
-            'Designation',
-            overflow: TextOverflow.ellipsis,
-          ))),
+          columnName: 'designation',
+          label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Designation',
+                overflow: TextOverflow.ellipsis,
+              ))),
       GridColumn(
-        columnName: 'salary',
-        label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 16.0),
-          alignment: Alignment.centerRight,
-          child: Text(
-            'Salary',
-            overflow: TextOverflow.ellipsis,
-          ))),
+          columnName: 'salary',
+          label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'Salary',
+                overflow: TextOverflow.ellipsis,
+              ))),
     ],
   ));
 }
@@ -582,50 +553,52 @@ You can customize the height of the grid rows in `SfDataGrid` by using the [rowH
 
 {% tabs %}
 {% highlight Dart %} 
-        
+
+late EmployeeDataSource _employeeDataSource;
+
 @override
 Widget build(BuildContext context) {
   return Scaffold(
       body: SfDataGrid(
-    source: _employeeDatasource,
+    source: _employeeDataSource,
     rowHeight: 60,
     columns: <GridColumn>[
       GridColumn(
-        columnName: 'id',
-        label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 16.0),
-          alignment: Alignment.centerRight,
-          child: Text(
-            'ID',
-            overflow: TextOverflow.ellipsis,
-          ))),
+          columnName: 'id',
+          label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'ID',
+                overflow: TextOverflow.ellipsis,
+              ))),
       GridColumn(
-        columnName: 'name',
-        label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 16.0),
-          alignment: Alignment.centerLeft,
-          child: Text(
-            'Name',
-            overflow: TextOverflow.ellipsis,
-          ))),
+          columnName: 'name',
+          label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Name',
+                overflow: TextOverflow.ellipsis,
+              ))),
       GridColumn(
-        columnName: 'designation',
-        label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 16.0),
-          alignment: Alignment.centerLeft,
-          child: Text(
-            'Designation',
-            overflow: TextOverflow.ellipsis,
-          ))),
+          columnName: 'designation',
+          label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Designation',
+                overflow: TextOverflow.ellipsis,
+              ))),
       GridColumn(
-        columnName: 'salary',
-        label: Container(
-          padding: EdgeInsets.symmetric(horizontal: 16.0),
-          alignment: Alignment.centerRight,
-          child: Text(
-            'Salary',
-            overflow: TextOverflow.ellipsis,
-          ))),
+          columnName: 'salary',
+          label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'Salary',
+                overflow: TextOverflow.ellipsis,
+              ))),
     ],
   ));
 }
@@ -648,7 +621,9 @@ You can refresh a specific row and its height by using the [DataGridController.r
 
 If you call `refreshRow` method, `onQueryRowHeight` callback will called for that specific row. So, auto-calculation of height can be recalculated for that row.
 
-In the below example, row data is updated when the `refreshRow` is called in `onPressed` callback of the `FlatButton`.
+In the below example, row data is updated when the `refreshRow` is called in `onPressed` callback of the `TextButton`.
+
+N> Row height changes will be updated only when the `ColumnWidthMode` is in `auto`.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -662,81 +637,123 @@ final DataGridController _controller = DataGridController();
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-    appBar: AppBar(
-      title: const Text('Syncfusion Flutter DataGrid'),
-    ),
-    body: Column(
-      children: [
-        FlatButton(
-          child: const Text('Update cell value),
-              onPressed: () {
-                _employees[0].id=1010;
-                _employeeData[0].name = 'Maria Anders';
-                _employeeData[0].designation = 'Sales Representative';
-                _employees[0].salary = 25000;
-                _controller.refreshRow(0);
-                _employeeDataSource.getData(_employees);
-                _employeeDataSource.updateDataSource();
-              }),
-          SfDataGrid(
-            source: _employeeDataSource,
-            controller: _controller,
-            columnSizer: _columnSizer,
-            onQueryRowHeight: (RowHeightDetails details) {
-              if (details.rowIndex == 0) {
-                return 100.0;
-              }
-              
-              return 50.0; 
-            },
-            columns: <GridColumn>[
-              GridColumn(
-                columnName: 'id',
-                label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'ID',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-              GridColumn(
-                columnName: 'name',
-                label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Name',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-              GridColumn(
-                columnName: 'designation',
-                label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Designation',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-              GridColumn(
-                columnName: 'salary',
-                label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'Salary',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-            ],
-          ),
-        ],
+      appBar: AppBar(
+        title: const Text('Syncfusion Flutter DataGrid'),
       ),
-    );
+      body: Column(children: [
+        TextButton(
+            child: const Text('Update cell value'),
+            onPressed: () {
+              _employees[0].id = 1010;
+              _employees[0].name = 'Maria Anders';
+              _employees[0].designation = 'Sales Representative';
+              _employees[0].salary = 25000;
+              _controller.refreshRow(0);
+              _employeeDataSource.buildDataGridSource(_employees);
+              _employeeDataSource.updateDataGridSource();
+            }),
+        Expanded(
+            child: SfDataGrid(
+                source: _employeeDataSource,
+                controller: _controller,
+                columnSizer: _columnSizer,
+                columnWidthMode: ColumnWidthMode.auto,
+                onQueryRowHeight: (RowHeightDetails details) {
+                  if (details.rowIndex == 0) {
+                    return 100.0;
+                  }
+
+                  return 50.0;
+                },
+                columns: <GridColumn>[
+              GridColumn(
+                  columnName: 'id',
+                  label: Container(
+                      padding: EdgeInsets.symmetric(horizontal: 16.0),
+                      alignment: Alignment.centerRight,
+                      child: Text(
+                        'ID',
+                        overflow: TextOverflow.ellipsis,
+                      ))),
+              GridColumn(
+                  columnName: 'name',
+                  label: Container(
+                      padding: EdgeInsets.symmetric(horizontal: 16.0),
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        'Name',
+                        overflow: TextOverflow.ellipsis,
+                      ))),
+              GridColumn(
+                  columnName: 'designation',
+                  label: Container(
+                      padding: EdgeInsets.symmetric(horizontal: 16.0),
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        'Designation',
+                        overflow: TextOverflow.ellipsis,
+                      ))),
+              GridColumn(
+                  columnName: 'salary',
+                  label: Container(
+                      padding: EdgeInsets.symmetric(horizontal: 16.0),
+                      alignment: Alignment.centerRight,
+                      child: Text(
+                        'Salary',
+                        overflow: TextOverflow.ellipsis,
+                      ))),
+            ]))
+      ]));
+}
+
+class EmployeeDataSource extends DataGridSource {
+  EmployeeDataSource({required List<Employee> employees}) {
+    buildDataGridSource(employees);
   }
+  void buildDataGridSource(List<Employee> employees) {
+    dataGridRows = employees
+        .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
+              DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
+              DataGridCell<String>(columnName: 'name', value: dataGridRow.name),
+              DataGridCell<String>(
+                  columnName: 'designation', value: dataGridRow.designation),
+              DataGridCell<int>(
+                  columnName: 'salary', value: dataGridRow.salary),
+            ]))
+        .toList();
+  }
+
+  List<DataGridRow> dataGridRows = [];
+
+  @override
+  List<DataGridRow> get rows => dataGridRows;
+
+  @override
+  DataGridRowAdapter? buildRow(DataGridRow row) {
+    return DataGridRowAdapter(
+        cells: row.getCells().map<Widget>((dataGridCell) {
+      return Container(
+          alignment: (dataGridCell.columnName == 'id' ||
+                  dataGridCell.columnName == 'salary')
+              ? Alignment.centerRight
+              : Alignment.centerLeft,
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
+          child: Text(
+            dataGridCell.value.toString(),
+            overflow: TextOverflow.ellipsis,
+          ));
+    }).toList());
+  }
+
+  void updateDataGridSource() {
+    notifyListeners();
+  }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-In the below example, row data is refreshed along with its row height when the `refreshRow` is called in `onPressed` callback of the `FlatButton`.
+In the below example, row data is refreshed along with its row height when the `refreshRow` is called in `onPressed` callback of the `TextButton`.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -750,75 +767,74 @@ final DataGridController _controller = DataGridController();
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-    appBar: AppBar(
-      title: const Text('Syncfusion Flutter DataGrid'),
-    ),
-    body: Column(
-      children: [
-        FlatButton(
-          child: const Text('Update cell value),
-              onPressed: () {
-                _employees[0].id=1010;
-                _employeeData[0].name = 'Maria Anders';
-                _employeeData[0].designation = 'Sales Representative';
-                _employees[0].salary = 25000;
-                _controller.refreshRow(0, recalculateRowHeight: true);
-                _employeeDataSource.getData(_employees);
-                _employeeDataSource.updateDataSource();
-              }),
-          SfDataGrid(
-            source: _employeeDataSource,
-            controller: _controller,
-            columnSizer: _columnSizer,
-            onQueryRowHeight: (RowHeightDetails details) {
-              if (details.rowIndex == 0) {
-                return 100;
-              }
-              return 50.0;  
-            },
-            columns: <GridColumn>[
-              GridColumn(
-                columnName: 'id',
-                label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'ID',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-              GridColumn(
-                columnName: 'name',
-                label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Name',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-              GridColumn(
-                columnName: 'designation',
-                label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Designation',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-              GridColumn(
-                columnName: 'salary',
-                label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'Salary',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-            ],
-          ),
-        ],
+      appBar: AppBar(
+        title: const Text('Syncfusion Flutter DataGrid'),
       ),
-    );
-  }
+      body: Column(children: [
+        TextButton(
+            child: const Text('Update cell value'),
+            onPressed: () {
+              _employees[0].id = 1010;
+              _employees[0].name = 'Maria Anders';
+              _employees[0].designation = 'Sales Representative';
+              _employees[0].salary = 25000;
+              _controller.refreshRow(0, recalculateRowHeight: true);
+              _employeeDataSource.buildDataGridSource(_employees);
+              _employeeDataSource.updateDataGridSource();
+            }),
+        Expanded(
+            child: SfDataGrid(
+                source: _employeeDataSource,
+                controller: _controller,
+                columnSizer: _columnSizer,
+                columnWidthMode: ColumnWidthMode.auto,
+                onQueryRowHeight: (RowHeightDetails details) {
+                  if (details.rowIndex == 0) {
+                    return 100.0;
+                  }
+
+                  return 50.0;
+                },
+                columns: <GridColumn>[
+              GridColumn(
+                  columnName: 'id',
+                  label: Container(
+                      padding: EdgeInsets.symmetric(horizontal: 16.0),
+                      alignment: Alignment.centerRight,
+                      child: Text(
+                        'ID',
+                        overflow: TextOverflow.ellipsis,
+                      ))),
+              GridColumn(
+                  columnName: 'name',
+                  label: Container(
+                      padding: EdgeInsets.symmetric(horizontal: 16.0),
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        'Name',
+                        overflow: TextOverflow.ellipsis,
+                      ))),
+              GridColumn(
+                  columnName: 'designation',
+                  label: Container(
+                      padding: EdgeInsets.symmetric(horizontal: 16.0),
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        'Designation',
+                        overflow: TextOverflow.ellipsis,
+                      ))),
+              GridColumn(
+                  columnName: 'salary',
+                  label: Container(
+                      padding: EdgeInsets.symmetric(horizontal: 16.0),
+                      alignment: Alignment.centerRight,
+                      child: Text(
+                        'Salary',
+                        overflow: TextOverflow.ellipsis,
+                      ))),
+            ]))
+      ]));
+}
 
 {% endhighlight %}
 {% endtabs %}
