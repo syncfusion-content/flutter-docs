@@ -16,8 +16,6 @@ The DataGrid supports to change the appearance of the grid by using the [SfDataG
 
 Change the header background color by using [SfDataGridThemeData.headerColor](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/headerColor.html) property.
 
-N> This is applicable only for desktop platforms.
-
 {% tabs %}
 {% highlight Dart %} 
 
@@ -74,6 +72,8 @@ Widget build(BuildContext context) {
 ## Change the header hover color
 
 Change the color of the header on hovering by using the [headerHoverColor]( https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/headerHoverColor.html) property.
+
+N> This is applicable only for desktop platforms.
 
 {% tabs %}
 {% highlight Dart %}
