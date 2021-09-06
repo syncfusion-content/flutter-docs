@@ -222,6 +222,32 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+## selectableDayPredicate
+The SelectableDayPredicate function only allows certain days for selection. If this callback function returns true for certain days, only those days will be selectable in the date picker.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+      body: SafeArea(
+          child: Card(
+              margin: const EdgeInsets.fromLTRB(50, 150, 50, 150),
+              child: SfDateRangePicker(
+                selectableDayPredicate: (DateTime dateTime) {
+                  if (dateTime == DateTime(2022, 9, 5)) {
+                    return false;
+                  }
+                  return true;
+                },
+              )))
+      );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## See also
 
 * [How to restrict swipe gesture for range selection in Flutter date range picker (SfDateRangePicker)?](https://www.syncfusion.com/kb/12117/how-to-restrict-swipe-gesture-for-range-selection-in-flutter-date-range-picker)

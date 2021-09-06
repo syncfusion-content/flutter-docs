@@ -183,6 +183,25 @@ You can display action buttons at the bottom of the date range picker by using t
 
 ![showActionButtons](images/getting-started/confirm_and_cancel_buttons.png)  
   
+## Today button
+Display the today button at the bottom of the date range picker. When the button is clicked, the view easily moves to the current date of the picker view.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+   return Scaffold(
+        body: SfDateRangePicker(
+        view: DateRangePickerView.month,
+        showTodayButton: true,
+        )
+    );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## See also
 
 * [How to apply theming in Flutter date range picker (SfDateRangePicker)?](https://www.syncfusion.com/kb/11898/how-to-apply-theming-in-flutter-date-range-picker-sfdaterangepicker)
