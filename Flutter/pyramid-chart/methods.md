@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Methods in Flutter Pyramid Chart widget | Syncfusion 
-description: Learn here all about available Methods of Syncfusion Flutter Pyramid Chart widget and more.
+description: Learn here all about available Methods of Syncfusion Flutter Pyramid Chart(SfPyramidChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug

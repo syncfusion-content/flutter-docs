@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Methods in Flutter Funnel Chart widget | Syncfusion 
-description: Learn here all about available Methods of Syncfusion Flutter Funnel Chart widget and more.
+description: Learn here all about available Methods of Syncfusion Flutter Funnel Chart(SfFunnelChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
