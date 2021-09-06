@@ -1268,9 +1268,6 @@ Converts logical pixel value to the data point value.
 The [`pixelToPoint`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeriesController/pixelToPoint.html) method takes logical pixel value as input and returns a chart data point.
   
 Since this method is in the series controller, x and y-axis associated with this particular series will be considering for conversion value.
-  
-N> This method is only applicable for Cartesian chart, not for the circular, pyramid,
-and funnel charts.
 
 {% highlight dart %}
 
@@ -1315,9 +1312,6 @@ Converts chart data point value to logical pixel value.
 The [`pointToPixel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeriesController/pointToPixel.html) method takes chart data point value as input and returns logical pixel value.
   
 Since this method is in the series controller, x and y-axis associated with this particular series will be considering for conversion value.
-  
-N> This method is only applicable for Cartesian chart, not for the circular, pyramid,
-and funnel charts.
   
 {% highlight dart %}
 
