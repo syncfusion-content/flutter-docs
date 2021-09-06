@@ -7,7 +7,7 @@ control: SfDataGrid
 documentation: ug
 ---
 
-## Right to Left (RTL) in Flutter DataGrid (SfDataGrid)
+# Right to Left (RTL) in Flutter DataGrid (SfDataGrid)
 
 SfDataGrid supports right-to-left rendering. The columns will be rendered based on LTR and RTL direction.
 
