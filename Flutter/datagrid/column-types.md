@@ -25,56 +25,44 @@ Column can be bound to a property in data object using [GridColumn.columnName](h
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-    body: SfDataGrid(
-      source: _employeeDataSource,
-      columns: <GridColumn>[
-        GridColumn(
-          columnName: 'id',
-          label: Container(
+      body: SfDataGrid(source: _employeeDataSource, columns: <GridColumn>[
+    GridColumn(
+        columnName: 'id',
+        label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'ID',
               overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
-        GridColumn(
-          columnName: 'name',
-          label: Container(
+            ))),
+    GridColumn(
+        columnName: 'name',
+        label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'Name',
               overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
-        GridColumn(
-          columnName: 'salary',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'Salary',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
-        GridColumn(
-          columnName: 'designation',
-          label: Container(
+            ))),
+    GridColumn(
+        columnName: 'designation',
+        label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'Designation',
               overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
-      ],
-    ),
-  );
+            ))),
+    GridColumn(
+        columnName: 'salary',
+        label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'Salary',
+              overflow: TextOverflow.ellipsis,
+            )))
+  ]));
 }
 
 {% endhighlight %}
@@ -93,57 +81,45 @@ Widget build(BuildContext context) {
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-    body: SfDataGrid(
-      source: _employeeDataSource,
-      columns: <GridColumn>[
-        GridColumn(
-          columnName: 'id',
-          label: Container(
+      body: SfDataGrid(source: _employeeDataSource, columns: <GridColumn>[
+    GridColumn(
+        columnName: 'id',
+        label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'ID',
               overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
-        GridColumn(
-          columnName: 'name',
-          label: Container(
+            ))),
+    GridColumn(
+        columnName: 'name',
+        label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'Name',
               overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
-        GridColumn(
-          columnName: 'salary',
-          visible: false,
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'Salary',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
-        GridColumn(
-          columnName: 'designation',
-          label: Container(
+            ))),
+    GridColumn(
+        columnName: 'designation',
+        visible: false,
+        label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'Designation',
               overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
-      ],
-    ),
-  );
+            ))),
+    GridColumn(
+        columnName: 'salary',
+        label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'Salary',
+              overflow: TextOverflow.ellipsis,
+            )))
+  ]));
 }
 
 {% endhighlight %}
@@ -162,57 +138,45 @@ Widget build(BuildContext context) {
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-    body: SfDataGrid(
-      source: _employeeDataSource,
-      columns: <GridColumn>[
-        GridColumn(
-          columnName: 'id',
-          label: Container(
+      body: SfDataGrid(source: _employeeDataSource, columns: <GridColumn>[
+    GridColumn(
+        columnName: 'id',
+        label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'ID',
               overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
-        GridColumn(
-          columnName: 'name',
-          width: 100.0,
-          label: Container(
+            ))),
+    GridColumn(
+        columnName: 'name',
+        width: 100.0,
+        label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'Name',
               overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
-        GridColumn(
-          columnName: 'salary',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'Salary',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
-        GridColumn(
-          columnName: 'designation',
-          label: Container(
+            ))),
+    GridColumn(
+        columnName: 'designation',
+        label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'Designation',
               overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
-      ],
-    ),
-  );
+            ))),
+    GridColumn(
+        columnName: 'salary',
+        label: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              'Salary',
+              overflow: TextOverflow.ellipsis,
+            )))
+  ]));
 }
 
 {% endhighlight %}

@@ -62,101 +62,83 @@ The following code example shows how to freeze a column at left using `frozenCol
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-    body: SfDataGrid(
-      source: _employeeDataSource,
-      frozenColumnsCount: 1,
-      columns: <GridColumn>[
+      body: SfDataGrid(
+          source: _orderDataGridSource,
+          frozenColumnsCount: 1,
+          columns: <GridColumn>[
         GridColumn(
-          columnName: 'id',
-          label: Container(
-            alignment: Alignment.centerRight,
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            child: Text(
-              'ID',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
+            columnName: 'id',
+            label: Container(
+                alignment: Alignment.centerRight,
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'productId',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'Product ID',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
+            columnName: 'productId',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Product ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'name',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Customer Name',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
+            columnName: 'name',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Customer Name',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'product',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Product',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
+            columnName: 'product',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Product',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'orderDate',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.center,
-            child: Text(
-              'Order Date',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
+            columnName: 'orderDate',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.center,
+                child: Text(
+                  'Order Date',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'quantity',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'Quantity',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
+            columnName: 'quantity',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Quantity',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'city',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'City',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
+            columnName: 'city',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'City',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'unitPrice',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'Unit Price',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
-      ],
-    ),
-  );
+            columnName: 'unitPrice',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Unit Price',
+                  overflow: TextOverflow.ellipsis,
+                )))
+      ]));
 }
 
 
@@ -173,101 +155,83 @@ The following code example shows how to freeze a column at right using `footerFr
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-    body: SfDataGrid(
-      source: _employeeDataSource,
-      footerFrozenColumnsCount: 1,
-      columns: <GridColumn>[
+      body: SfDataGrid(
+          source: _orderDataGridSource,
+          footerFrozenColumnsCount: 1,
+          columns: <GridColumn>[
         GridColumn(
-          columnName: 'id',
-          label: Container(
-            alignment: Alignment.centerRight,
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            child: Text(
-              'ID',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
+            columnName: 'id',
+            label: Container(
+                alignment: Alignment.centerRight,
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'productId',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'Product ID',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
+            columnName: 'productId',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Product ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'name',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Customer Name',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
+            columnName: 'name',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Customer Name',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'product',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Product',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
+            columnName: 'product',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Product',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'orderDate',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.center,
-            child: Text(
-              'Order Date',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
+            columnName: 'orderDate',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.center,
+                child: Text(
+                  'Order Date',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'quantity',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'Quantity',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
+            columnName: 'quantity',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Quantity',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'city',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'City',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
+            columnName: 'city',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'City',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'unitPrice',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'Unit Price',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
-      ],
-    ),
-  );
+            columnName: 'unitPrice',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Unit Price',
+                  overflow: TextOverflow.ellipsis,
+                )))
+      ]));
 }
 
 {% endhighlight %}
@@ -291,101 +255,83 @@ The following code example shows how to freeze a row at top using `frozenRowsCou
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-    body: SfDataGrid(
-      source: _employeeDataSource,
-      frozenRowsCount: 1,
-      columns: <GridColumn>[
+      body: SfDataGrid(
+          source: _orderDataGridSource,
+          frozenRowsCount: 1,
+          columns: <GridColumn>[
         GridColumn(
-          columnName: 'id',
-          label: Container(
-            alignment: Alignment.centerRight,
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            child: Text(
-              'ID',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
+            columnName: 'id',
+            label: Container(
+                alignment: Alignment.centerRight,
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'productId',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'Product ID',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
+            columnName: 'productId',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Product ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'name',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Customer Name',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
+            columnName: 'name',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Customer Name',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'product',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Product',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
+            columnName: 'product',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Product',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'orderDate',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.center,
-            child: Text(
-              'Order Date',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
+            columnName: 'orderDate',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.center,
+                child: Text(
+                  'Order Date',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'quantity',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'Quantity',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
+            columnName: 'quantity',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Quantity',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'city',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'City',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
+            columnName: 'city',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'City',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'unitPrice',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'Unit Price',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
-      ],
-    ),
-  );
+            columnName: 'unitPrice',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Unit Price',
+                  overflow: TextOverflow.ellipsis,
+                )))
+      ]));
 }
 
 {% endhighlight %}
@@ -401,101 +347,83 @@ The following code example shows how to freeze a row at bottom using `footerFroz
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-    body: SfDataGrid(
-      source: _employeeDataSource,
-      footerFrozenRowsCount: 1,
-      columns: <GridColumn>[
+      body: SfDataGrid(
+          source: _orderDataGridSource,
+          footerFrozenRowsCount: 1,
+          columns: <GridColumn>[
         GridColumn(
-          columnName: 'id',
-          label: Container(
-            alignment: Alignment.centerRight,
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            child: Text(
-              'ID',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
+            columnName: 'id',
+            label: Container(
+                alignment: Alignment.centerRight,
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'productId',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'Product ID',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
+            columnName: 'productId',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Product ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'name',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Customer Name',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
+            columnName: 'name',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Customer Name',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'product',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Product',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
+            columnName: 'product',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Product',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'orderDate',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.center,
-            child: Text(
-              'Order Date',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
+            columnName: 'orderDate',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.center,
+                child: Text(
+                  'Order Date',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'quantity',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'Quantity',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
+            columnName: 'quantity',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Quantity',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'city',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'City',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
+            columnName: 'city',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'City',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'unitPrice',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'Unit Price',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
-      ],
-    ),
-  );
+            columnName: 'unitPrice',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Unit Price',
+                  overflow: TextOverflow.ellipsis,
+                )))
+      ]));
 }
 
 {% endhighlight %}
@@ -521,109 +449,92 @@ The freeze pane line and freeze pane width can be changed by [frozenPaneLineColo
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-    body: SfDataGridTheme(
-        data: SfDataGridThemeData(
-          frozenPaneElevation: 0.0,
-          frozenPaneLineColor: Colors.red, 
-          frozenPaneLineWidth: 1.5),
-        child: SfDataGrid(
-          source: _orderDataGridSource,
-          frozenRowsCount: 1,
-          footerFrozenRowsCount: 1,
-          frozenColumnsCount: 1,
-          footerFrozenColumnsCount: 1,
-          columns: <GridColumn>[
-            GridColumn(
+      body: SfDataGridTheme(
+    data: SfDataGridThemeData(
+        frozenPaneElevation: 0.0,
+        frozenPaneLineColor: Colors.red,
+        frozenPaneLineWidth: 1.5),
+    child: SfDataGrid(
+        source: _orderDataGridSource,
+        frozenRowsCount: 1,
+        footerFrozenRowsCount: 1,
+        frozenColumnsCount: 1,
+        footerFrozenColumnsCount: 1,
+        columns: <GridColumn>[
+          GridColumn(
               columnName: 'id',
               label: Container(
-                alignment: Alignment.centerRight,
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                child: Text(
-                  'ID',
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ),
-            GridColumn(
+                  alignment: Alignment.centerRight,
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  child: Text(
+                    'ID',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'productId',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Product ID',
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ),
-            GridColumn(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Product ID',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'name',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Customer Name',
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ),
-            GridColumn(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Customer Name',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'product',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Product',
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ),
-            GridColumn(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Product',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'orderDate',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.center,
-                child: Text(
-                  'Order Date',
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ),
-            GridColumn(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.center,
+                  child: Text(
+                    'Order Date',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'quantity',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Quantity',
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ),
-            GridColumn(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Quantity',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'city',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'City',
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ),
-            GridColumn(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'City',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'unitPrice',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Unit Price',
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ),
-          ],
-        )),
-  );
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Unit Price',
+                    overflow: TextOverflow.ellipsis,
+                  )))
+        ]),
+  ));
 }
 
 {% endhighlight %}
@@ -639,104 +550,87 @@ Widget build(BuildContext context) {
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-    body: SfDataGridTheme(
-        data: SfDataGridThemeData(frozenPaneElevation: 7.0),
-        child: SfDataGrid(
-          source: _orderDataGridSource,
-          frozenRowsCount: 1,
-          frozenColumnsCount: 1,
-          columns: <GridColumn>[
-            GridColumn(
+      body: SfDataGridTheme(
+    data: SfDataGridThemeData(frozenPaneElevation: 7.0),
+    child: SfDataGrid(
+        source: _orderDataGridSource,
+        frozenRowsCount: 1,
+        frozenColumnsCount: 1,
+        columns: <GridColumn>[
+          GridColumn(
               columnName: 'id',
               label: Container(
-                alignment: Alignment.centerRight,
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                child: Text(
-                  'ID',
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ),
-            GridColumn(
+                  alignment: Alignment.centerRight,
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  child: Text(
+                    'ID',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'productId',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Product ID',
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ),
-            GridColumn(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Product ID',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'name',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Customer Name',
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ),
-            GridColumn(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Customer Name',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'product',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Product',
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ),
-            GridColumn(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Product',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'orderDate',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.center,
-                child: Text(
-                  'Order Date',
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ),
-            GridColumn(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.center,
+                  child: Text(
+                    'Order Date',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'quantity',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Quantity',
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ),
-            GridColumn(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Quantity',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'city',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'City',
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ),
-            GridColumn(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'City',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'unitPrice',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Unit Price',
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ),
-          ],
-        )),
-  );
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Unit Price',
+                    overflow: TextOverflow.ellipsis,
+                  )))
+        ]),
+  ));
 }
 
 {% endhighlight %}
@@ -754,107 +648,90 @@ By default, elevation effect is applied to frozen panes. If you want to hide the
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-    body: SfDataGridTheme(
-        data: SfDataGridThemeData(
-          frozenPaneElevation: 0.0,
-          frozenPaneLineColor: Colors.red, 
-          frozenPaneLineWidth: 1.5),
-        child: SfDataGrid(
-          source: _orderDataGridSource,
-          frozenRowsCount: 1,
-          frozenColumnsCount: 1,
-          columns: <GridColumn>[
-            GridColumn(
+      body: SfDataGridTheme(
+    data: SfDataGridThemeData(
+        frozenPaneElevation: 0.0,
+        frozenPaneLineColor: Colors.red,
+        frozenPaneLineWidth: 1.5),
+    child: SfDataGrid(
+        source: _orderDataGridSource,
+        frozenRowsCount: 1,
+        frozenColumnsCount: 1,
+        columns: <GridColumn>[
+          GridColumn(
               columnName: 'id',
               label: Container(
-                alignment: Alignment.centerRight,
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                child: Text(
-                  'ID',
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ),
-            GridColumn(
+                  alignment: Alignment.centerRight,
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  child: Text(
+                    'ID',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'productId',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Product ID',
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ),
-            GridColumn(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Product ID',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'name',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Customer Name',
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ),
-            GridColumn(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Customer Name',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'product',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Product',
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ),
-            GridColumn(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Product',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'orderDate',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.center,
-                child: Text(
-                  'Order Date',
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ),
-            GridColumn(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.center,
+                  child: Text(
+                    'Order Date',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'quantity',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Quantity',
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ),
-            GridColumn(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Quantity',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'city',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'City',
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ),
-            GridColumn(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'City',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'unitPrice',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Unit Price',
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ),
-          ],
-        )),
-  );
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Unit Price',
+                    overflow: TextOverflow.ellipsis,
+                  )))
+        ]),
+  ));
 }
 
 {% endhighlight %}
