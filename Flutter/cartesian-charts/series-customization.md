@@ -515,9 +515,9 @@ The chart’s data source can be sorted using the [`sortingOrder`](https://pub.d
 
 ## CartesianChart Shader
 
-Fills the data points with the gradient and image shaders.[`onCreateShader`]() method is used to create the cartesian shader.
+Fills the data points with the gradient and image shader.[`onCreateShader`]() method is used to create the Cartesian shader.
 
-The data points of cartesian charts can be filled with [gradient](https://api.flutter.dev/flutter/dart-ui/Gradient-class.html)(linear, radial and sweep gradient) and [image shaders](https://api.flutter.dev/flutter/dart-ui/ImageShader-class.html).
+The data points of Cartesian charts can be filled with [gradient](https://api.flutter.dev/flutter/dart-ui/Gradient-class.html)(linear, radial and sweep gradient) and [image shader](https://api.flutter.dev/flutter/dart-ui/ImageShader-class.html).
 
 All the data points are together considered as a single segment and the shader is applied commonly. 
 
