@@ -513,6 +513,83 @@ The chart’s data source can be sorted using the [`sortingOrder`](https://pub.d
 
 ![Sorting](images/cartesian-customization/sortings.jpg)
 
+## CartesianChart Shader
+
+Fills the data points with the gradient and image shaders.[`onCreateShader`]() method is used to create the cartesian shader.
+
+The data points of cartesian charts can be filled with [gradient](https://api.flutter.dev/flutter/dart-ui/Gradient-class.html)(linear, radial and sweep gradient) and [image shaders](https://api.flutter.dev/flutter/dart-ui/ImageShader-class.html).
+
+All the data points are together considered as a single segment and the shader is applied commonly. 
+
+Defaults to `null`.
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+    final List<SalesData> chartData = [
+      SalesData('Jan', 35.53),
+      SalesData('Feb',46.06,),
+      SalesData('Mar',46.06,),
+      SalesData('Apr',50.86,),
+      SalesData('May',60.89,),
+      SalesData('Jun',70.27,),
+      SalesData('Jul',75.65,),
+      SalesData('Aug', 74.7),
+      SalesData('Sep',65.91,),
+      SalesData('Oct', 54.28),
+      SalesData('Nov', 46.33),
+      SalesData('Dec', 35.71),
+    ];
+
+    return Scaffold(
+        body: Center(
+      child: Container(
+        child: SfCartesianChart(
+            primaryXAxis: CategoryAxis(),
+            series: <ChartSeries<SalesData, String>>[
+              AreaSeries<SalesData, String>(
+                dataSource: chartData,
+                onCreateShader: (ShaderDetails details) {
+                  return ui.Gradient.linear(details.rect.bottomLeft,
+                      details.rect.bottomRight, const <Color>[
+                    Color.fromRGBO(116, 182, 194, 1),
+                    Color.fromRGBO(75, 189, 138, 1),
+                    Color.fromRGBO(75, 189, 138, 1),
+                    Color.fromRGBO(255, 186, 83, 1),
+                    Color.fromRGBO(255, 186, 83, 1),
+                    Color.fromRGBO(194, 110, 21, 1),
+                    Color.fromRGBO(194, 110, 21, 1),
+                    Color.fromRGBO(116, 182, 194, 1),
+                  ], <double>[
+                    0.1,
+                    0.1,
+                    0.4,
+                    0.4,
+                    0.7,
+                    0.7,
+                    0.9,
+                    0.9
+                  ]);
+                },
+                xValueMapper: (SalesData sales, _) => sales.country,
+                yValueMapper: (SalesData sales, _) => sales.salesCount),
+                ]),
+            ),
+        ));
+      }
+    }
+
+    class SalesData {
+    const SalesData(this.country,this.salesCount);
+    final String country;
+    final double salesCount;
+    }
+
+{% endhighlight %}
+
+![Shader](images/cartesian-customization/shader.png)
+
 #### See Also
 
 * [Rendering a chart using JSON data retrieved from a fire base](https://www.syncfusion.com/kb/11883/how-to-render-chart-using-json-data-stored-in-firebase-database-sfcartesianchart).
