@@ -26,6 +26,14 @@ The `SortColumnDetails` object holds the following two properties:
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
 late EmployeeDataSource _employeeDataSource;
+List<Employee> _employees = <Employee>[];
+
+@override
+void initState() {
+  super.initState();
+  _employees = getEmployeeData();
+  _employeeDataSource = EmployeeDataSource(employees: _employees);
+}
 
 @override
 Widget build(BuildContext context) {
