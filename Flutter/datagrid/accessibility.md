@@ -97,6 +97,7 @@ The row heights in `SfDataGrid` will be automatically adjusted based on the [vis
 {% tabs %}
 {% highlight Dart %}
 
+import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
 @override

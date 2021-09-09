@@ -583,6 +583,8 @@ The following example demonstrates how to load more rows when vertical scrolling
 {% tabs %}
 {% highlight Dart %}
 
+import 'package:intl/intl.dart';
+
 late EmployeeDataSource _employeeDataSource;
 late ScrollController verticalScrollController;
 
@@ -630,39 +632,28 @@ class _EmployeeDataSource extends DataGridSource {
   DataGridRowAdapter buildRow(DataGridRow row) {
     return DataGridRowAdapter(cells: [
       Container(
-        padding: EdgeInsets.all(8),
-        alignment: Alignment.centerRight,
-        child: Text(
-          row.getCells()[0].value.toString(),
-          overflow: TextOverflow.ellipsis,
-        ),
-      ),
+          padding: EdgeInsets.all(8),
+          alignment: Alignment.centerRight,
+          child: Text(row.getCells()[0].value.toString(),
+              overflow: TextOverflow.ellipsis)),
       Container(
-        padding: EdgeInsets.all(8),
-        alignment: Alignment.centerRight,
-        child: Text(
-          row.getCells()[1].value.toString(),
-          overflow: TextOverflow.ellipsis,
-        ),
-      ),
+          padding: EdgeInsets.all(8),
+          alignment: Alignment.centerRight,
+          child: Text(row.getCells()[1].value.toString(),
+              overflow: TextOverflow.ellipsis)),
       Container(
-        padding: EdgeInsets.all(8),
-        alignment: Alignment.centerLeft,
-        child: Text(
-          row.getCells()[2].value.toString(),
-          overflow: TextOverflow.ellipsis,
-        ),
-      ),
+          padding: EdgeInsets.all(8),
+          alignment: Alignment.centerLeft,
+          child: Text(row.getCells()[2].value.toString(),
+              overflow: TextOverflow.ellipsis)),
       Container(
-        padding: EdgeInsets.all(8),
-        alignment: Alignment.centerRight,
-        child: Text(
-          NumberFormat.currency(locale: 'en_US', symbol: '\$')
-              .format(row.getCells()[3].value)
-              .toString(),
-          overflow: TextOverflow.ellipsis,
-        ),
-      ),
+          padding: EdgeInsets.all(8),
+          alignment: Alignment.centerRight,
+          child: Text(
+              NumberFormat.currency(locale: 'en_US', symbol: '\$')
+                  .format(row.getCells()[3].value)
+                  .toString(),
+              overflow: TextOverflow.ellipsis))
     ]);
   }
 

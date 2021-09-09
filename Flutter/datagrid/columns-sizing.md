@@ -164,7 +164,7 @@ Widget build(BuildContext context) {
       columnWidthMode: ColumnWidthMode.auto,
       columns: <GridColumn>[
         GridColumn(
-            columnName: 'ID',
+            columnName: 'id',
             autoFitPadding: EdgeInsets.all(10.0),
             label: Container(
                 padding: EdgeInsets.all(10.0),
@@ -174,7 +174,7 @@ Widget build(BuildContext context) {
                   softWrap: false,
                 ))),
         GridColumn(
-            columnName: 'Name',
+            columnName: 'name',
             autoFitPadding: EdgeInsets.all(10.0),
             label: Container(
                 padding: EdgeInsets.all(10.0),
@@ -184,7 +184,7 @@ Widget build(BuildContext context) {
                   softWrap: false,
                 ))),
         GridColumn(
-            columnName: 'Designation',
+            columnName: 'designation',
             autoFitPadding: EdgeInsets.all(10.0),
             label: Container(
                 padding: EdgeInsets.all(10.0),
@@ -194,7 +194,7 @@ Widget build(BuildContext context) {
                   softWrap: false,
                 ))),
         GridColumn(
-            columnName: 'Salary',
+            columnName: 'salary',
             autoFitPadding: EdgeInsets.all(10.0),
             label: Container(
                 padding: EdgeInsets.all(10.0),
@@ -369,7 +369,9 @@ class CustomColumnSizer extends ColumnSizer {
 By default, the cell width is calculated based on the `DataGridCell.value` property. To autofit the cell width based on the displayed formatted value (i.e, DateFormat and NumberFormat), simply override the `computeCellWidth` method and return the super method with the required `cellValue`.
 
 {% tabs %}
-{% highlight Dart %} 
+{% highlight Dart %}
+
+import 'package:intl/intl.dart';
 
 final CustomColumnSizer _customColumnSizer = CustomColumnSizer();
 

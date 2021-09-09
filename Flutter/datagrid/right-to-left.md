@@ -81,7 +81,7 @@ flutter_localizations:
 
 {% endhighlight %}
 
-Next, import the `flutter_localizations` library and specify [localizationsDelegates](https://api.flutter.dev/flutter/widgets/LocalizationsDelegate-class.html) and `supportedLocales` for `MaterialApp`.
+Then, import the `flutter_localizations` library, specify [localizationsDelegates](https://api.flutter.dev/flutter/widgets/LocalizationsDelegate-class.html) and `supportedLocales` for `MaterialApp`.
 
 {% tabs %}
 {% highlight Dart %}

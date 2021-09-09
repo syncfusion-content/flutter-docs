@@ -25,6 +25,8 @@ The following code example illustrates using `SfDataPager` with the datagrid con
 {% tabs %}
 {% highlight Dart %}
 
+import 'package:intl/intl.dart';
+
 final int rowsPerPage = 15;
 
 final double dataPagerHeight = 60.0;
@@ -233,6 +235,8 @@ In the below example, we have set await for 2000ms and displayed the loading ind
 
 {% tabs %}
 {% highlight Dart %}
+
+import 'package:intl/intl.dart';
 
 bool showLoadingIndicator = true;
 

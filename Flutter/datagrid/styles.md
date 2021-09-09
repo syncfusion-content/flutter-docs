@@ -71,7 +71,7 @@ Widget build(BuildContext context) {
 
 Change the color of the header on hovering by using the [headerHoverColor]( https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfDataGridThemeData/headerHoverColor.html) property.
 
-N> This is applicable only for desktop platforms.
+N> This is applicable for web and desktop platforms.
 
 {% tabs %}
 {% highlight Dart %}
@@ -258,7 +258,7 @@ Widget build(BuildContext context) {
 
 By default, the row highlighting on hovering support is enabled for the web and desktop platforms. Disable the row highlighting by setting the [SfDataGrid.highlightRowOnHover](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/highlightRowOnHover.html) property to `false`.
 
-N> Row highlighting is applicable only for desktop platforms.
+N> This is applicable for web and desktop platforms.
 
 {% tabs %}
 {% highlight Dart %} 

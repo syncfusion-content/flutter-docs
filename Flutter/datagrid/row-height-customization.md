@@ -612,8 +612,6 @@ If you call `refreshRow` method, `onQueryRowHeight` callback will called for tha
 
 In the below example, row data is updated when the `refreshRow` is called in `onPressed` callback of the `TextButton`.
 
-N> Row height changes will be updated only when the `ColumnWidthMode` is in `auto`.
-
 {% tabs %}
 {% highlight Dart %} 
 
