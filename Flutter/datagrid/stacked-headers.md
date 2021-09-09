@@ -19,8 +19,6 @@ Each [StackedHeaderRow](https://pub.dev/documentation/syncfusion_flutter_datagri
 import 'package:syncfusion_flutter_core/theme.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
-late ProductDataSource _productDataSource;
-
 @override
 Widget build(BuildContext context) {
   return SfDataGrid(
@@ -95,8 +93,6 @@ You can provide multiple stacked headers to the datagrid by adding the multiple 
 
 import 'package:syncfusion_flutter_core/theme.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
-
-late ProductDataSource _productDataSource;
 
 @override
 Widget build(BuildContext context) {
@@ -181,8 +177,6 @@ You can also change the row height of stacked header row and column header row b
 
 import 'package:syncfusion_flutter_core/theme.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
-
-late ProductDataSource _productDataSource;
 
 @override
 Widget build(BuildContext context) {
