@@ -26,6 +26,14 @@ The `SortColumnDetails` object holds the following two properties:
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
 late EmployeeDataSource _employeeDataSource;
+List<Employee> _employees = <Employee>[];
+
+@override
+void initState() {
+  super.initState();
+  _employees = getEmployeeData();
+  _employeeDataSource = EmployeeDataSource(employees: _employees);
+}
 
 @override
 Widget build(BuildContext context) {
@@ -98,8 +106,6 @@ To apply sorting for multiple columns in web and desktop, you can click the colu
 
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
-late EmployeeDataSource _employeeDataSource;
-
 @override
 Widget build(BuildContext context) {
   return Scaffold(
@@ -161,8 +167,6 @@ In addition to sort the data in ascending/descending order, the SfDataGrid unsor
 {% highlight Dart %} 
 
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
-
-late EmployeeDataSource _employeeDataSource;
 
 @override
 Widget build(BuildContext context) {
@@ -227,8 +231,6 @@ By default, column gets sorted when column header clicked. This behavior can be 
 
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
-late EmployeeDataSource _employeeDataSource;
-
 @override
 Widget build(BuildContext context) {
   return Scaffold(
@@ -288,8 +290,6 @@ The datagrid provides support the sequence numbers to display the sorted columns
 {% highlight Dart %} 
 
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
-
-late EmployeeDataSource _employeeDataSource;
 
 @override
 Widget build(BuildContext context) {
@@ -354,8 +354,6 @@ The data grid disables sorting for an individual column by setting the [GridColu
 
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
-late EmployeeDataSource _employeeDataSource;
-
 @override
 Widget build(BuildContext context) {
   return Scaffold(
@@ -418,8 +416,6 @@ The following code describes how to change sort icon color by using [SfDataGridT
 
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 import 'package:syncfusion_flutter_core/theme.dart';
-
-late EmployeeDataSource _employeeDataSource;
 
 @override
 Widget build(BuildContext context) {
