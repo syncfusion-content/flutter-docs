@@ -45,7 +45,7 @@ Chart supports annotations which allows you to mark the specific area of interes
 
 ## Positioning the annotation
 
-The [`x`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/x.html) and [`y`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/y.html) values can be specified with axis units or pixel units, and these can be identified by using [`coordinateUnit`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html) property. When logicalPixel is specified, the annotation will be placed with respect to pixel values whereas point is specified, then the annotation will be placed with respect to series point values.
+The [`x`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/x.html) and [`y`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/y.html) values can be specified with axis units or pixel units or percentage units, and these can be identified by using [`coordinateUnit`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html) property. When logicalPixel is specified, the annotation will be placed with respect to pixel values whereas point is specified, then the annotation will be placed with respect to series point values.
 
 **Positioning based on coordinateUnit as point**
 
@@ -115,6 +115,66 @@ To position the annotation based on the pixel values, set the [`CoordinateUnit`]
 {% endhighlight %}
 
 ![Positioning based on coordinateUnit as pixels](images/annotation/annotation_pixel.jpg)
+
+**Positioning based on coordinateUnit as percentage**
+
+To position the annotation based on axis, set the [`x`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/x.html) and [`y`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/y.html) properties based on axis percentage values, and set the [`coordinateUnit`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html) value as [`percentage`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html).
+
+
+{% highlight dart %} 
+
+    @override
+    Widget build(BuildContext context) {
+    final List<SalesData> chartData = [
+      SalesData('IND', 24),
+      SalesData('AUS', 20),
+      SalesData('USA', 27),
+      SalesData('DEU', 57),
+      SalesData('ITA', 30),
+      SalesData('UK', 41),
+    ];
+
+    return Scaffold(
+        body: Center(
+      child: Container(
+        child: SfCartesianChart(
+            primaryXAxis: CategoryAxis(interval: 1),
+            annotations: <CartesianChartAnnotation>[
+              CartesianChartAnnotation(
+                  coordinateUnit: CoordinateUnit.percentage,
+                  region: AnnotationRegion.plotArea,
+                  widget: Container(
+                    child: const Text('Annotation With Percentage',
+                        style: TextStyle(
+                          fontSize: 20,
+                        )),
+                  ),
+                  x: '50%',
+                  y: '50%')
+            ],
+            series: <ChartSeries<SalesData, String>>[
+              ColumnSeries<SalesData, String>(
+                  dataSource: chartData,
+                  animationDuration: 5000,
+                  xValueMapper: (SalesData sales, _) => sales.x,
+                  yValueMapper: (SalesData sales, _) => sales.y)
+                ]
+              ),
+            ),
+          )
+        );
+      }
+    }
+
+    class SalesData {
+    const SalesData(this.x, this.y);
+    final String x;
+    final int y;
+    }
+
+{% endhighlight %}
+
+![Positioning based on coordinateUnit as percentage](images/annotation/percentage.png)
 
 **Positioning based on region**
 
