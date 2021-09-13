@@ -248,7 +248,7 @@ The [`selectDataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts
 * `pointIndex` - index of the point which needs to be selected.
 * `seriesIndex` - index of the series for which the pointIndex is specified and this is an optional parameter. By default it will be considered as 0.
 
-N> The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/enableMultiSelection.html) is also applicable for this but, it is based on the API values specified in the chart.
+N> The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/enableMultiSelection.html) is also applicable for this but, it is based on the API values specified in the chart.
 
 {% highlight dart %}
 
@@ -299,4 +299,43 @@ N> The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter
         _selectionBehavior.selectDataPoints(1, 0);
     }
 
+{% endhighlight %}
+
+## PixelToPoint 
+
+Converts logical pixel value to the data point value.
+  
+The [`pixelToPoint`](~) method takes logical pixel value as input and returns a chart data point.
+
+
+{% highlight dart %}
+
+    //Initialize the series controller
+    CircularSeriesController ? seriesController;
+
+    @override
+    Widget build(BuildContext context) {
+      return Container(
+            child: SfCircularChart(
+             series: <PieSeries<ChartSampleData, String>>[
+               PieSeries<ChartSampleData, String>(
+                 onRendererCreated: (CircularSeriesController  controller) {
+                   seriesController = controller;
+                 },
+               )
+             ],
+             onChartTouchInteractionUp: (ChartTouchInteractionArgs args) {
+               final Offset value = Offset(args.position.dx, args.position.dy);
+               ChartPoint<dynamic> chartpoint =
+                 seriesController!.pixelToPoint(value);
+           }
+         )
+       );
+    }
+
+     class ChartSampleData{
+        ChartSampleData(this.x, this.y);
+        final String x;
+        final double? y;
+      }
 {% endhighlight %}
