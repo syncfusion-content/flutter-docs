@@ -9,7 +9,7 @@ documentation: ug
 
 # Columns Resizing in Flutter DataGrid (SfDataGrid)
 
-[SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) allows resizing the columns by dragging the column resizing indicator that appears on the column header. This can be enabled by setting `SfDataGrid.allowColumnsResizing` property to `true`. The column resizing indicator appears based on the platform. In Web and Desktop, the indicator appears when you hover over the column edge. In Mobile, the indicator appears when you long press a corresponding column.
+[SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) allows resizing the columns by dragging the column resizing indicator. This can be enabled by setting `SfDataGrid.allowColumnsResizing` property to `true`. The column resizing indicator appears based on the platform. In Web and Desktop, the indicator appears when you hover over the column edge. In Mobile, the indicator appears when you long press the column header.
 
 > **NOTE:**
     Column resizing considers the [GridColumn.minimumWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/minimumWidth.html) and [GridColumn.maximumWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/maximumWidth.html) properties.
@@ -87,8 +87,8 @@ Widget build(BuildContext context) {
 
 `SfDataGrid` provides the following modes to resizing a column by setting it to the `SfDataGrid.columnResizeMode` property.
 
-- `onResizing`: The resizing indicator is moved based on the dragging gesture. The width of the column will update as the resizing indicator moves.
-- `onResizingEnd`: The resizing indicator is moved based on the dragging gesture. However, the width of the column is updated when you release the pointer.
+- `onResize`: The resizing indicator is moved based on the dragging gesture. The width of the column will update as the resizing indicator moves.
+- `onResizeEnd`: The resizing indicator is moved based on the dragging gesture. However, the width of the column is updated when you release the pointer.
 
 The following example demonstrates that how to resize a column by setting the `SfDataGrid.columnResizeMode` property to `onResize`.
 
@@ -238,7 +238,7 @@ Widget build(BuildContext context) {
 
 SfDataGrid provides the following callbacks to notify the column resizing operations.
 
-- `onColumnResizeStart`: Called when column resizing is started. In Mobile platforms, this callback will be called at the time of showing the resizing indicator when long press a column header. In Web and Windows platforms, this method will be called when click and drag the indicator.
+- `onColumnResizeStart`: Called when column resizing is started. In Mobile platforms, this callback will be called at the time of showing the resizing indicator when long press a column header. In Web and Windows platforms, this method will be called when click and drag the resizing indicator.
 - `onColumnResizeUpdate`: Called when a column is being resized.
 - `onColumnResizeEnd`: Called when a column resizing is ended. Typically, this will be called when you release the pointer.
 
@@ -313,9 +313,9 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## Disable resizing for a particular colum
+## Disable resizing for a particular column
 
-To disable resizing for a particular column, use the `SfDataGrid.onColumnResizeStart` callback and return `false` to disable the resizing for the corresponding column.
+To disable resizing for a particular column, simply hook the `SfDataGrid.onColumnResizeStart` callback and return `false` to the corresponding column.
 
 {% tabs %}
 {% highlight Dart %}
@@ -393,7 +393,7 @@ Widget build(BuildContext context) {
 
 ## Prevent column from being hidden on resizing
 
-To prevent a column from being hidden while resizing, use `GridColumn.minimumWidth` property to set the minimum width of the column. The column resizing considers the `GridColumn.minimumWidth` and `GridColumn.maximumWidth` properties.
+To prevent a column from being hidden while resizing, use `GridColumn.minimumWidth` property to set the minimum width of the column. Then, the column will not be resized below the minimum width. The column resizing considers the `GridColumn.minimumWidth` and `GridColumn.maximumWidth` properties.
 
 {% tabs %}
 {% highlight Dart %}
