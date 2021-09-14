@@ -725,27 +725,59 @@ Widget build(BuildContext context) {
 
 ![flutter datapager with customization](images/paging/flutter-datapager-customization.png)
 
-### Customize the page button
+### Set the padding between page items
 
-SfDataPager provide the support to customize the data pager button size. 
+The SfDataPager allows you to change the page items padding using `itemPadding` property. 
 
-To customize the item buttons, use the following properties,
+N> The default value of `SfDataPager.itemPadding` is 5.0.
 
-  * `itemWidth` – Set the width to the item buttons and the default width is 50.
-  * `itemHeight` - Set the height to the item buttons and the default height is 50.
-  * `itemPadding` - Set the padding to the item buttons and the default padding is 50.
+### Set the height and width for the page items
 
-The following options are available to customize the navigation buttons,
+SfDataPager buttons will be load with default width and height of size 50 for all platforms. You can customize the button size by setting your required value to `itemWidth`,`itemHeight`,`navigationItemHeight` and `navigationItemWidth` properties.
 
-  * `navigationItemHeight` - Set the height to the navigation buttons and the default height is 50.
-  * `navigationItemWidth` - Set the width to the navigation buttons and the default width is 50.
-  * `firstPageItemVisible` - Set the false to firstPageItemVisible property for hiding the first page navigation button.
-   The default value is true.
-  * `lastPageItemVisible` - Set the false to lastPageItemVisible property for hiding the last page navigation button. The default value is true.
-  * `nextPageItemVisible` - Set the false to nextPageItemVisible property for hiding the next page navigation button. The default value is true.
-  * `previousPageItemVisible` - Set the false to firstPageItemVisible property for hiding the previous page navigation button. The default value is true.
+{% tabs %}
+{% highlight Dart %}
 
-The following sample demonstrate the page button customization,
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text('Syncfusion Flutter DataGrid'),
+        ),
+        body: Center(
+            child: SfDataPagerTheme(
+          data: SfDataPagerThemeData(
+            itemBorderWidth: 0.5,
+            itemBorderColor: Colors.grey.shade400,
+            itemBorderRadius: BorderRadius.circular(5),
+          ),
+          child: SfDataPager(
+            pageCount: 5,
+            visibleItemsCount: 2,
+            itemWidth: 70,
+            itemHeight: 55,
+            navigationItemWidth: 70,
+            navigationItemHeight: 55,
+            delegate: employeeDataSource,
+          ),
+        )));
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+![flutter datapager with page button resizing](images/paging/flutter-datapager-page-item-resizing.png)
+
+### Hide the certian navigation page items
+
+To show or hide the certain navigation page items using the following properties,
+
+ * `firstPageItemVisible` 
+ * `lastPageItemVisible` 
+ * `nextPageItemVisible` 
+ * `previousPageItemVisible`
+
+ N> Default value of all the property is true.
 
 {% tabs %}
 {% highlight Dart %}
@@ -789,10 +821,7 @@ The following sample demonstrate the page button customization,
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datapager with page button resizing](images/paging/flutter_datagrid_resize_pge_button.png)
-
-**NOTE** 
- The itemPadding is applied for both item and navigation buttons of the data pager.
+![flutter datapager with page button resizing](images/paging/flutter_datagrid_resize_page_button.png)
 
 ## Change the number of visible items (buttons) in view
 
