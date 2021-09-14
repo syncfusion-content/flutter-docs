@@ -727,7 +727,7 @@ Widget build(BuildContext context) {
 
 ### Set the padding between page items
 
-The padding between the page items including navigation page items such as first, last, previous and next can be changed by using itemPadding property.
+The padding between the page items including navigation page items such as first, last, previous and next can be changed by using `itemPadding` property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -753,7 +753,7 @@ N> The default value of `SfDataPager.itemPadding` is 5.0.
 
 ### Set the height and width for the page items
 
-The default width and height of the page items are 50 and 50 respectively. You can change the size by using the itemWidth and itemHeight properties for page number items, navigationItemHeight and navigationItemWidth properties for items such as first, last, previous and next navigation items.
+The default width and height of the page items are 50 and 50 respectively. You can change the size by using the `itemWidth` and `itemHeight` properties for page number items, `navigationItemHeight` and `navigationItemWidth` properties for items such as first, last, previous and next navigation items.
 
 {% tabs %}
 {% highlight Dart %}
