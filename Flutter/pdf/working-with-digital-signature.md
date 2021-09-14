@@ -77,7 +77,7 @@ document.dispose();
 
 ## Adding a signature appearance
 
-You can customize the appearance of the signature field by using the [`appearance`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSignatureField/appearance.html) property in [`PdfSignatureField`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSignatureField-clas.html) as follows,
+You can customize the appearance of the signature field by using the [`appearance`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSignatureField/appearance.html) property in [`PdfSignatureField`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSignatureField-class.html) as follows,
 
 {% highlight dart %}
 
@@ -107,7 +107,7 @@ document.dispose();
 
 {% endhighlight %}
 
-## Externally sing a PDF document
+## Externally sign a PDF document
 
 You can sign the PDF document from an external digital signature created from various sources such as cloud services like DigitalSign.
 
