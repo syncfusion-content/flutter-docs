@@ -768,7 +768,7 @@ SfDataPager buttons will be load with default width and height of size 50 for al
 
 ![flutter datapager with page button resizing](images/paging/flutter-datapager-page-item-resizing.png)
 
-### Hide the certian navigation page items
+### Hide the certain navigation page items
 
 To show or hide the certain navigation page items using the following properties,
 
