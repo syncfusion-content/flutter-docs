@@ -727,13 +727,33 @@ Widget build(BuildContext context) {
 
 ### Set the padding between page items
 
-The SfDataPager allows you to change the page items padding using `itemPadding` property. 
+The padding between the page items including navigation page items such as first, last, previous and next can be changed by using itemPadding property.
+
+{% tabs %}
+{% highlight Dart %}
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text('Syncfusion Flutter DataGrid'),
+        ),
+        body: SfDataPager(
+            itemPadding: EdgeInsets.all(8.0),
+            pageCount: 5,
+            delegate: employeeDataSource,
+          ),
+        );
+  }
+
+{% endhighlight %}
+{% endtabs %}
 
 N> The default value of `SfDataPager.itemPadding` is 5.0.
 
 ### Set the height and width for the page items
 
-SfDataPager buttons will be load with default width and height of size 50 for all platforms. You can customize the button size by setting your required value to `itemWidth`,`itemHeight`,`navigationItemHeight` and `navigationItemWidth` properties.
+The default width and height of the page items are 50 and 50 respectively. You can change the size by using the itemWidth and itemHeight properties for page number items, navigationItemHeight and navigationItemWidth properties for items such as first, last, previous and next navigation items.
 
 {% tabs %}
 {% highlight Dart %}
@@ -770,14 +790,14 @@ SfDataPager buttons will be load with default width and height of size 50 for al
 
 ### Hide the certain navigation page items
 
-To show or hide the certain navigation page items using the following properties,
+To hide the certain navigation page items, use the below properties,
 
  * `firstPageItemVisible` 
  * `lastPageItemVisible` 
  * `nextPageItemVisible` 
  * `previousPageItemVisible`
 
- N> Default value of all the property is true.
+ N> Default value of all the properties is true.
 
 {% tabs %}
 {% highlight Dart %}
@@ -795,24 +815,24 @@ To show or hide the certain navigation page items using the following properties
               itemBorderRadius: BorderRadius.circular(5),
               selectedItemColor: Colors.indigo.shade500),
           child: SfDataPager(
+            firstPageItemVisible: false,
+            lastPageItemVisible: false,
             pageCount: 5,
             visibleItemsCount: 3,
             navigationItemWidth: 100,
             delegate: employeeDataSource,
-            pageItemBuilder: (String buttonName) {
-              if (buttonName == 'Next') {
+            pageItemBuilder: (String itemName) {
+              if (itemName == 'Next') {
                 return Center(
                   child: Text('Next'),
                 );
               }
-              if (buttonName == 'Previous') {
+              if (itemName == 'Previous') {
                 return Center(
                   child: Text('Previous'),
                 );
               }
             },
-            firstPageItemVisible: false,
-            lastPageItemVisible: false,
             itemPadding: EdgeInsets.all(8.0),
           ),
         ));
