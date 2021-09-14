@@ -595,4 +595,144 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+## Sort all the rows instead of rows available in a page
 
+The datagrid supports to sort all the rows and certain range of values are displayed in a page. You can set the number of rows required to be displayed in a page by setting the [SfDataGrid.rowsPerPage]() property.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(body: LayoutBuilder(builder: (context, constraint) {
+    return Column(children: [
+      SizedBox(
+          height: constraint.maxHeight - _dataPagerHeight,
+          width: constraint.maxWidth,
+          child: _buildDataGrid(constraint)),
+      Container(
+          height: _dataPagerHeight,
+          child: SfDataPager(
+            delegate: _orderInfoDataSource,
+            pageCount: (_orders.length / _rowsPerPage).ceil().toDouble(),
+            direction: Axis.horizontal,
+          ))
+    ]);
+  }));
+}
+
+Widget _buildDataGrid(BoxConstraints constraint) {
+  return SfDataGrid(
+      source: _orderInfoDataSource,
+      columnWidthMode: ColumnWidthMode.fill,
+      rowsPerPage: _rowsPerPage,
+      allowSorting: true,
+      columns: <GridColumn>[
+        GridColumn(
+            columnName: 'orderID',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Order ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'customerID',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Customer Name',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'orderDate',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Order Date',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'freight',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.center,
+                child: Text(
+                  'Freight',
+                  overflow: TextOverflow.ellipsis,
+                )))
+      ]);
+}
+
+class OrderInfoDataSource extends DataGridSource {
+  OrderInfoDataSource() {
+    buildDataGridRows();
+  }
+
+  List<DataGridRow> dataGridRows = [];
+
+  @override
+  List<DataGridRow> get rows => dataGridRows;
+
+  @override
+  DataGridRowAdapter? buildRow(DataGridRow row) {
+    return DataGridRowAdapter(
+        cells: row.getCells().map<Widget>((dataGridCell) {
+      if (dataGridCell.columnName == 'orderID') {
+        return Container(
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
+          alignment: Alignment.centerRight,
+          child: Text(
+            dataGridCell.value.toString(),
+            overflow: TextOverflow.ellipsis,
+          ),
+        );
+      } else if (dataGridCell.columnName == 'customerID') {
+        return Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              dataGridCell.value.toString(),
+              overflow: TextOverflow.ellipsis,
+            ));
+      } else if (dataGridCell.columnName == 'orderDate') {
+        return Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.centerRight,
+            child: Text(
+              DateFormat.yMd().format(dataGridCell.value).toString(),
+              overflow: TextOverflow.ellipsis,
+            ));
+      } else {
+        return Container(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            alignment: Alignment.center,
+            child: Text(
+              NumberFormat.currency(locale: 'en_US', symbol: '\$')
+                  .format(dataGridCell.value)
+                  .toString(),
+              overflow: TextOverflow.ellipsis,
+            ));
+      }
+    }).toList());
+  }
+
+  void buildDataGridRows() {
+    dataGridRows = _orders.map<DataGridRow>((dataGridRow) {
+      return DataGridRow(cells: [
+        DataGridCell(columnName: 'orderID', value: dataGridRow.orderID),
+        DataGridCell(columnName: 'customerID', value: dataGridRow.customerID),
+        DataGridCell(columnName: 'orderDate', value: dataGridRow.orderDate),
+        DataGridCell(columnName: 'freight', value: dataGridRow.freight),
+      ]);
+    }).toList(growable: false);
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![flutter datapager with sort all rows](images/paging/flutter-datapager-sort-all-rows.gif)
