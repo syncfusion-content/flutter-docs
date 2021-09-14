@@ -312,6 +312,7 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![flutter datagrid text in header checkbox column](images/column-types/flutter-datagrid-text-in-header-checkbox-column.png)
+
 #### Disable the checkbox in header cell
 
 By default, checkBox gets displayed in header cell. By disabling the `showCheckboxOnHeader` property, checkBox can be disappeared in header cell of GridCheckBoxColumn.
@@ -437,7 +438,6 @@ Widget build(BuildContext context) {
 #### Get checked items
 
 You can get the information of checked items by using [controller](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/controller.html) property. Create an instance of [DataGridController](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController-class.html) and set to controller property. The [selectedRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedRows.html) property returns the collection of checked DataGridRows and the [selectedIndex](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedIndex.html) property returns the index of the [selectedRow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedRow.html) in SfDataGrid. [selectedRow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedRow.html) denotes the last selected row in multiple selection.
-
 
 {% tabs %}
 {% highlight Dart %}
