@@ -504,7 +504,7 @@ Widget build(BuildContext context) {
 
 ![Time text appearance](images/timeslot-views/time-text-appearance.png)
 
-## Allday panel background color
+## All day panel background color
 
 All day panel background color can be customized by using the [allDayPanelColor]() property of `timeSlotViewSettings` in calendar.
 

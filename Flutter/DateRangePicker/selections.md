@@ -233,7 +233,6 @@ Widget build(BuildContext context) {
   return Scaffold(
       body: SafeArea(
           child: Card(
-              margin: const EdgeInsets.fromLTRB(50, 150, 50, 150),
               child: SfDateRangePicker(
                 selectableDayPredicate: (DateTime dateTime) {
                   if (dateTime == DateTime(2022, 9, 5)) {
@@ -247,6 +246,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Day predicate Date Range Picker](images/selections/dayPredicate.png)
 
 ## See also
 
