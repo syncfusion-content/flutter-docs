@@ -727,7 +727,7 @@ Widget build(BuildContext context) {
 
 ### Set the padding between page items
 
-The padding between the page items including navigation page items such as first, last, previous and next can be changed by using `itemPadding` property.
+The padding between the page items including navigation page items such as first, last, previous and next can be changed by using the `itemPadding` property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -753,7 +753,7 @@ N> The default value of `SfDataPager.itemPadding` is 5.0.
 
 ### Set the height and width for the page items
 
-The default width and height of the page items are 50 and 50 respectively. You can change the size by using the `itemWidth` and `itemHeight` properties for page number items, `navigationItemHeight` and `navigationItemWidth` properties for items such as first, last, previous and next navigation items.
+The default width and height of the page items are 50 and 50, respectively. For changing page number items size, use the `itemWidth` and `itemHeight` properties; for changing navigation items size such as first, last, previous, and next, use the `navigationItemHeight` and `navigationItemWidth` properties.
 
 {% tabs %}
 {% highlight Dart %}
@@ -788,16 +788,16 @@ The default width and height of the page items are 50 and 50 respectively. You c
 
 ![flutter datapager with page button resizing](images/paging/flutter-datapager-page-item-resizing.png)
 
-### Hide the certain navigation page items
+### Hide certain navigation page items
 
-To hide the certain navigation page items, use the below properties,
+To hide the certain navigation page items, use the following properties:
 
  * `firstPageItemVisible` 
  * `lastPageItemVisible` 
  * `nextPageItemVisible` 
  * `previousPageItemVisible`
 
- N> Default value of all the properties is true.
+ N> Default value of all properties is true.
 
 {% tabs %}
 {% highlight Dart %}
