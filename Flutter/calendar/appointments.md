@@ -233,6 +233,63 @@ MeetingDataSource _getCalendarDataSource() {
 {% endhighlight %}
 {% endtabs %}
 
+## Get the business object
+
+By using the convertAppointmentToObject() method, you can get the event details in custom business object type.
+
+{% tabs %}
+{% highlight Dart %}
+
+class _DataSource extends CalendarDataSource<_Meeting> {
+   _DataSource(List<_Meeting> source) {
+     appointments = source;
+   }
+
+   @override
+   DateTime getStartTime(int index) {
+     return appointments![index].from as DateTime;
+   }
+
+   @override
+   DateTime getEndTime(int index) {
+     return appointments![index].to as DateTime;
+   }
+
+   @override
+   String getSubject(int index) {
+     return appointments![index].content as String;
+   }
+
+   @override
+   Color getColor(int index) {
+     return appointments![index].background as Color;
+   }
+
+   @override
+   _Meeting convertAppointmentToObject(
+       _Meeting customData, Appointment appointment) {
+     return _Meeting(
+         from: appointment.startTime,
+         to: appointment.endTime,
+         content: appointment.subject,
+         background: appointment.color,
+         isAllDay: appointment.isAllDay);
+   }
+ }
+
+class _Meeting {
+  _Meeting({this.content = '', required this.from, required this.to, required this.background, this.isAllDay = false});
+
+  String content;
+  DateTime from;
+  DateTime to;
+  Color background;
+  bool isAllDay;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Spanned appointments
 
 Spanned Appointment is an appointment, which lasts more than 24 hours. It does not block out time slots in SfCalendar, it will render in `All-Day appointment panel` exclusively.
