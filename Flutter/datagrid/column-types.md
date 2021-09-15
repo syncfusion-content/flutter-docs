@@ -521,3 +521,4 @@ The following are the limitations of GridCheckboxColumn:
 * Checkbox column does not support data operations such as sorting.
 * Checkbox column does not support cell selection.
 * checkbox column does not support to add stacked header.
+* Checkbox column will be excluded in exporting operations.
