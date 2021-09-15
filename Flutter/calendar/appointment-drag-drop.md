@@ -83,26 +83,6 @@ void dragStart(AppointmentDragStartDetails appointmentDragStartDetails) {
   var resource = appointmentDragStartDetails.resource;
 }
 
-_AppointmentDataSource _getCalendarDataSource() {
-  List<Appointment> appointments = <Appointment>[];
-  appointments.add(Appointment(
-    startTime: DateTime.now(),
-    endTime: DateTime.now().add(Duration(minutes: 10)),
-    subject: 'Meeting',
-    color: Colors.blue,
-    startTimeZone: '',
-    endTimeZone: '',
-  ));
-
-  return _AppointmentDataSource(appointments);
-}
-
-class _AppointmentDataSource extends CalendarDataSource {
-  _AppointmentDataSource(List<Appointment> source){
-   appointments = source; 
-  }
-}
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -141,26 +121,6 @@ void dragUpdate(AppointmentDragUpdateDetails appointmentDragUpdateDetails) {
   var draggingOffset = appointmentDragUpdateDetails.draggingPosition;
   var resource = appointmentDragUpdateDetails.sourceResource;
   var targetResource = appointmentDragUpdateDetails.targetResource;
-}
-
-_AppointmentDataSource _getCalendarDataSource() {
-  List<Appointment> appointments = <Appointment>[];
-  appointments.add(Appointment(
-    startTime: DateTime.now(),
-    endTime: DateTime.now().add(Duration(minutes: 10)),
-    subject: 'Meeting',
-    color: Colors.blue,
-    startTimeZone: '',
-    endTimeZone: '',
-  ));
-
-  return _AppointmentDataSource(appointments);
-}
-
-class _AppointmentDataSource extends CalendarDataSource {
-  _AppointmentDataSource(List<Appointment> source){
-   appointments = source; 
-  }
 }
 
 {% endhighlight %}
@@ -202,26 +162,22 @@ void dragUpdate(AppointmentDragUpdateDetails appointmentDragUpdateDetails) {
   var targetResource = appointmentDragUpdateDetails.targetResource;
 }
 
-_AppointmentDataSource _getCalendarDataSource() {
-  List<Appointment> appointments = <Appointment>[];
-  appointments.add(Appointment(
-    startTime: DateTime.now(),
-    endTime: DateTime.now().add(Duration(minutes: 10)),
-    subject: 'Meeting',
-    color: Colors.blue,
-    startTimeZone: '',
-    endTimeZone: '',
-  ));
-
-  return _AppointmentDataSource(appointments);
-}
-
-class _AppointmentDataSource extends CalendarDataSource {
-  _AppointmentDataSource(List<Appointment> source){
-   appointments = source; 
-  }
-}
-
 {% endhighlight %}
 {% endtabs %}
 
+## Customize the drag and drop settings
+
+Using [dropAndDropSettings]() property of calendar, you can handle the behavior of drag and drop in calendar.
+
+{% tabs %}
+{% highlight Dart %}
+
+dragAndDropSettings: DragAndDropSettings(
+    allowNavigation: true,
+    allowScroll: true,
+    indicatorTimeFormat: 'hh:mm',
+    showTimeIndicator: true,
+    timeIndicatorStyle: TextStyle(backgroundColor: Colors.red)),
+	
+{% endhighlight %}
+{% endtabs %}
