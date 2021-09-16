@@ -167,7 +167,7 @@ class EmployeeDataSource extends DataGridSource {
     return DataGridRowAdapter(
         cells: row.getCells().map<Widget>((dataGridCell) {
       if (dataGridCell.columnName == 'id') {
-        final int index = dataGridRows.indexOf(row);
+        final int index = effectiveRows.indexOf(row);
         return Container(
             color: (index % 2 != 0) ? Colors.blueAccent : Colors.transparent,
             alignment: Alignment.centerRight,
