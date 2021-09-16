@@ -92,9 +92,9 @@ void dragStart(AppointmentDragStartDetails appointmentDragStartDetails) {
 
 [Appointment]() - Get the dragged appointment details. 
 [Dragging time]() - Get the resource details.
-[Dragging offset]() - 
-[Resource]() -
-[Target resource]() -
+[Dragging offset]() - Get the drag position.
+[SourceResource]() - Get the source resource details.
+[Target resource]() - Get the resource details.
 
 {% tabs %}
 {% highlight Dart %}
@@ -132,8 +132,8 @@ Called when the dragging appointment is dropped in the SfCalendar. The [Appointm
 
 [Appointment] - Get the dragged appointment details. 
 [Drapping time] - Get the resource details.
-[Resource] -
-[Target resource] -
+[Resource] - Get the resource details.
+[Target resource] - Get the target resource details.
 
 {% tabs %}
 {% highlight Dart %}
@@ -179,5 +179,137 @@ dragAndDropSettings: DragAndDropSettings(
     showTimeIndicator: true,
     timeIndicatorStyle: TextStyle(backgroundColor: Colors.red)),
 	
+{% endhighlight %}
+{% endtabs %}
+
+## Appointment resize
+[allowAppointmentResize]() property allows to reschedule the appointment by resizing the appointment in web view.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.week,
+          dataSource: _getCalendarDataSource(),
+		  allowDragAndDrop: true,
+		  allowAppointmentResize: true
+        ),
+      ),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### onAppointmentResizeStart
+[onAppointmentResizeStart]() callback was called whenever the appointment starts to resizing in SfCalendar. The callback arguments contains the resizing appointment, and resource details. 
+
+Resizing appointment - Get the resizing appointment details.
+Resource - Get the resource details.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.week,
+          dataSource: _getCalendarDataSource(),
+		  allowAppointmentResize: true,
+		  onAppointmentResizeStart: resizeStart,
+        ),
+      ),
+    ),
+  );
+}
+
+void resizeStart(AppointmentResizeStartDetails appointmentResizeStartDetails) {
+  var appointment=appointmentResizeStartDetails.appointment;
+  var resource = appointmentResizeStartDetails.resource;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### onAppointmentResizeUpdate
+[onAppointmentResizeUpdate]() callback was called whenever the appointment resizing in SfCalendar. The callback arguments contains the resizing appointment, resizing time, resizing offset and resource details. 
+
+Resizing appointment - 
+Resizing time - 
+Resizing offset -
+Resource details - 
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.week,
+          dataSource: _getCalendarDataSource(),
+		  allowAppointmentResize: true,
+		  onAppointmentResizeUpdate: resizeUpdate,
+        ),
+      ),
+    ),
+  );
+}
+
+void resizeUpdate(AppointmentResizeUpdateDetails appointmentResizeUpdateDetails) {
+  var appointment = appointmentResizeUpdateDetails.appointment;
+  var resizingTime = appointmentResizeUpdateDetails.resizingTime;
+  var resizingOffset = appointmentResizeUpdateDetails.resizingOffset;
+  var resourceDetails = appointmentResizeUpdateDetails.resource;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### onAppointmentResizeEnd
+[onAppointmentResizeEnd]() callback was called whenever the appointment resizing end in the SfCalendar. The callback  arguments contains the resized appointment, start time, end time and resource details. 
+
+[Resized appointment]() - Get the resized appointment details.
+[Start time]() -  Get the start time.
+[End time]() - Get the end time.
+[Resource details]() - Get the resource details.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.week,
+          dataSource: _getCalendarDataSource(),
+		  allowAppointmentResize: true,
+		  onAppointmentResizeEnd: resizeEnd,
+        ),
+      ),
+    ),
+  );
+}
+
+void resizeEnd(AppointmentResizeEndDetails appointmentResizeEndDetails) {
+  var appointment = appointmentResizeEndDetails.appointment;
+  var startTime = appointmentResizeEndDetails.startTime;
+  var endTime = appointmentResizeEndDetails.endTime;
+  var resourceDetails = appointmentResizeEndDetails.resource;
+}
+
 {% endhighlight %}
 {% endtabs %}
