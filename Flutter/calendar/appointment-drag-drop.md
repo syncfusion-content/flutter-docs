@@ -208,7 +208,7 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ### onAppointmentResizeStart
-[onAppointmentResizeStart]() callback was called whenever the appointment starts to resizing in SfCalendar. The callback arguments contains the resizing appointment, and resource details. 
+[onAppointmentResizeStart]() callback was called whenever the appointment starts to resizing in SfCalendar. The [AppointmentResizeStartDetails]() arguments contains the resizing appointment, and resource details. 
 
 Resizing appointment - Get the resizing appointment details.
 Resource - Get the resource details.
@@ -241,7 +241,7 @@ void resizeStart(AppointmentResizeStartDetails appointmentResizeStartDetails) {
 {% endtabs %}
 
 ### onAppointmentResizeUpdate
-[onAppointmentResizeUpdate]() callback was called whenever the appointment resizing in SfCalendar. The callback arguments contains the resizing appointment, resizing time, resizing offset and resource details. 
+[onAppointmentResizeUpdate]() callback was called whenever the appointment resizing in SfCalendar. The [onAppointmentResizeUpdate]() arguments contains the resizing appointment, resizing time, resizing offset and resource details. 
 
 Resizing appointment - 
 Resizing time - 
@@ -278,7 +278,7 @@ void resizeUpdate(AppointmentResizeUpdateDetails appointmentResizeUpdateDetails)
 {% endtabs %}
 
 ### onAppointmentResizeEnd
-[onAppointmentResizeEnd]() callback was called whenever the appointment resizing end in the SfCalendar. The callback  arguments contains the resized appointment, start time, end time and resource details. 
+[onAppointmentResizeEnd]() callback was called whenever the appointment resizing end in the SfCalendar. The [onAppointmentResizeEnd]()  arguments contains the resized appointment, start time, end time and resource details. 
 
 [Resized appointment]() - Get the resized appointment details.
 [Start time]() -  Get the start time.
