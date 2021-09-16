@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Export DataGrid to PDF Document | Flutter DataTable | Syncfusion
-description: Learn here all about how to export Flutter DataGrid (SfDataGrid) into Pdf Document  and more.
+description: Learn here all about how to export Flutter DataGrid (SfDataGrid) into Pdf Document and more.
 platform: flutter
 control: SfDataGrid
 documentation: ug
@@ -105,13 +105,14 @@ By default, all the columns in the SfDataGrid will be exported to PDF. To exclud
 
      List<String> getExcludecolumns() {
      return [
-      'Customer Name',
-      'Price',
+      'Name'
      ];
     }
   
 {% endhighlight %}
 {% endtabs %}
+
+![flutter datagrid shows rows with selection](images/export-to-pdf/pdf-exclude-columns.png)
 
 ### Repeat column headers on each page
 
@@ -232,6 +233,8 @@ By default, entire grid will be exported to PDF. You can export selected items o
 {% endhighlight %}
 {% endtabs %}
 
+![flutter datagrid shows rows with selection](images/export-to-pdf/pdf-selected-rows.png)
+
 ## Setting header and footer in PDF document
 
 SfDataGrid provides a way to display additional content at the top (Header) and bottom (Footer) of the page while exporting to PDF. This can be achieved by setting [headerFooterExport].
@@ -248,7 +251,7 @@ You can insert string, image or any drawing in header and footer in [headerFoote
         final PdfPageTemplateElement header =
             PdfPageTemplateElement(Rect.fromLTWH(0, 0, width, 65));
         header.graphics.drawString(
-          'Product Details',
+          'Company Details',
           PdfStandardFont(PdfFontFamily.helvetica, 13,
               style: PdfFontStyle.bold),
           bounds: const Rect.fromLTWH(0, 25, 200, 60),
@@ -260,6 +263,8 @@ You can insert string, image or any drawing in header and footer in [headerFoote
 {% endhighlight %}
 {% endtabs %}
 
+![flutter datagrid shows rows with selection](images/export-to-pdf/pdf-header.png)
+
 ## Styling cells based on cell type in PDF
 
 You can customize the cell styles based on CellType by using [cellExport].
@@ -270,16 +275,18 @@ You can customize the cell styles based on CellType by using [cellExport].
     PdfDocument document = key.currentState!.exportToPdfDocument(
       cellExport:(cellExport){
            if (cellExport.cellType == DataGridExportCellType.columnHeader) {
-            cellExport.pdfCell.style.backgroundBrush = PdfBrushes.violet;
+            cellExport.pdfCell.style.backgroundBrush = PdfBrushes.pink;
            }
             if (cellExport.cellType == DataGridExportCellType.row) {
-            cellExport.pdfCell.style.backgroundBrush = PdfBrushes.lightPink;
+            cellExport.pdfCell.style.backgroundBrush = PdfBrushes.lightCyan;
            }
       },
       );
 
 {% endhighlight %}
 {% endtabs %}
+
+![flutter datagrid shows rows with selection](images/export-to-pdf/pdf-cell-style.png)
 
 ## Cell customization when exporting
 
@@ -293,18 +300,18 @@ The cell value can be customized while exporting to PDF by using the [cellExport
     PdfDocument document = key.currentState!.exportToPdfDocument(
       cellExport:(cellExport){
           if (cellExport.cellType == DataGridExportCellType.row &&
-            cellExport.columnName == 'Is Closed') {
-          if (cellExport.cellValue == 'Not Closed') {
-            cellExport.pdfCell.value = 'No';
-          } else {
-            cellExport.pdfCell.value = 'Yes';
-          }
+            cellExport.columnName == 'Designation') {
+          if (cellExport.cellValue == 'Project Lead') {
+            cellExport.pdfCell.value = 'Lead';
+          } 
         }
       }
       );
 
 {% endhighlight %}
 {% endtabs %}
+
+![flutter datagrid shows rows with selection](images/export-to-pdf/pdf-customize-cell-values.png)
 
 ### Customize the Cells based on Column Name
 
@@ -319,7 +326,7 @@ You can customize the column style based on the row data when exporting to PDF b
           details.pdfCell.style.textBrush = PdfBrushes.red;
         }
       }
-      );
+    );
 
 {% endhighlight %}
 {% endtabs %}
@@ -332,7 +339,7 @@ You can customize the Exporting Behavior by override the following methods in [D
 
     PdfDocument document = key.currentState!.exportToPdfDocument(
       converter: _custom,
-      );
+    );
 
     Class Custom extends DataGridToPdfConverter{
      
@@ -433,7 +440,7 @@ You can customize the Exporting Behavior by override the following methods in [D
 {% endhighlight %}
 {% endtabs %}
 
-* [getCellValue]:  By Override this method, you can change the row data based on column name and row index.
+* [getCellValue]:  By Override this method, you can change the row data.
 
 {% tabs %}
 {% highlight Dart %}
