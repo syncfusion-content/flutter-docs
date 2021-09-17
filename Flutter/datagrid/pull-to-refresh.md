@@ -171,8 +171,6 @@ You can also change the stroke width and displacement of refresh indicator by us
 
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
-EmployeeDataSource _employeeDataSource = EmployeeDataSource();
-
 @override
 Widget build(BuildContext context) {
   return Theme(
@@ -240,7 +238,6 @@ If you want to refresh data without showing a refresh indicator, you can pass `f
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
 final GlobalKey<SfDataGridState> key = GlobalKey<SfDataGridState>();
-EmployeeDataSource _employeeDataSource = EmployeeDataSource();
 
 @override
 Widget build(BuildContext context) {
