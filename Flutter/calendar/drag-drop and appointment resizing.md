@@ -168,7 +168,6 @@ void dragUpdate(AppointmentDragUpdateDetails appointmentDragUpdateDetails) {
 ## Disabling navigation when dragging appointment
 Using [allowNavigation]() boolean property can handle the appointment dragging, whether navigate to next/previous view or not while dragging the appointment to the endpoint of the current view in calendar. Default value of the [allowNavigation]() property is true and calendar will navigate to next/previous view when dragging the appointment to the endpoint of the current view.
 
-
 {% tabs %}
 {% highlight Dart %}
 
@@ -232,8 +231,8 @@ Widget build(BuildContext context) {
 ### onAppointmentResizeStart
 [onAppointmentResizeStart]() callback was called whenever the appointment starts to resizing in SfCalendar. The [AppointmentResizeStartDetails]() arguments contains the resizing appointment, and resource details. 
 
-Resizing appointment - Get the resizing appointment details.
-Resource - Get the resource details.
+[Resizing appointment]() - Get the resizing appointment details.
+[Resource]() - Get the resource details.
 
 {% tabs %}
 {% highlight Dart %}
