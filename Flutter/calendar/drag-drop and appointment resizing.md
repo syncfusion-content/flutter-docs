@@ -128,7 +128,7 @@ void dragUpdate(AppointmentDragUpdateDetails appointmentDragUpdateDetails) {
 
 ## onDragEnd
 
-Called when the dragging appointment is dropped in the SfCalendar. The [AppointmentDragEndDetails]() arguments contains the dropped appointment, dropping time, source and target resource details. 
+[onDragEnd]() callback called when the dragging appointment is dropped in the SfCalendar. The [AppointmentDragEndDetails]() arguments contains the dropped appointment, dropping time, source and target resource details. 
 
 [Appointment] - Get the dragged appointment details. 
 [Drapping time] - Get the resource details.
