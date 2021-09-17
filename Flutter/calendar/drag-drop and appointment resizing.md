@@ -165,16 +165,38 @@ void dragUpdate(AppointmentDragUpdateDetails appointmentDragUpdateDetails) {
 {% endhighlight %}
 {% endtabs %}
 
-## Customize the drag and drop settings
+## Disabling navigation when dragging appointment
+Using [allowNavigation]() boolean property can handle the appointment dragging, whether navigate to next/previous view or not while dragging the appointment to the endpoint of the current view in calendar. Default value of the [allowNavigation]() property is true and calendar will navigate to next/previous view when dragging the appointment to the endpoint of the current view.
 
-Using [dropAndDropSettings]() property of calendar, you can handle the behavior of drag and drop in calendar.
 
 {% tabs %}
 {% highlight Dart %}
 
 dragAndDropSettings: DragAndDropSettings(
-    allowNavigation: true,
-    allowScroll: true,
+    allowNavigation: true),
+	
+{% endhighlight %}
+{% endtabs %}
+
+## Disabling scroll when dragging appointment
+Using [allowScroll]() boolean property you can handle the appointment dragging, whether scrolling (below/above) the calendar or not while dragging the appointment to the endpoint of the current view in Calendar. Default value of the [allowScroll]() property is true.
+
+{% tabs %}
+{% highlight Dart %}
+
+dragAndDropSettings: DragAndDropSettings(
+    allowScroll: true),
+	
+{% endhighlight %}
+{% endtabs %}
+
+## Disabling dragging time indicator
+[showTimeIndicator]() - Using this boolean property can handle the time indicator whether it should visible or not, which shows the dragged appointment current position time in time text slots. Default value of the [ShowTimeIndicator]() property is true. Also you can set the time indicator style and format by using [indicatorTimeFormat]() and [timeIndicatorStyle]().
+
+{% tabs %}
+{% highlight Dart %}
+
+dragAndDropSettings: DragAndDropSettings(
     indicatorTimeFormat: 'hh:mm',
     showTimeIndicator: true,
     timeIndicatorStyle: TextStyle(backgroundColor: Colors.red)),
