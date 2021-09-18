@@ -16,7 +16,7 @@ The datagrid performs paging of data using the `SfDataPager`. To enable paging, 
 * Create a new `SfDataPager` widget, and set the [SfDataGrid.DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) to the [SfDataPager.delegate](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/delegate.html) property.
 * Set the number of pages required to be displayed in data pager by setting the [SfDataPager.pageCount](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/pageCount.html) property.
 * Set the number of buttons that should be displayed in view by setting the [SfDataPager.visibleItemsCount](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/visibleItemsCount.html) property.
-* You can load the data for the specific page in `handlePageChanges` method. This method is called for every page navigation from data pager.
+* You can load the data for the specific page in `handlePageChange` method. This method is called for every page navigation from data pager.
 
 N> The `SfDataPager.visibleItemsCount` property default value is 5.
 
@@ -597,7 +597,7 @@ Widget build(BuildContext context) {
 
 ## Sort all the rows instead of rows available in a page
 
-The datagrid supports to sort all the rows and certain range of values are displayed in a page. You can set the number of rows required to be displayed in a page by setting the [SfDataGrid.rowsPerPage]() property.
+The datagrid supports to sort all the rows and certain range of sorted values are displayed in a page. To sort the entire data, overriding `handlePageChange` method is not necessary. But you should set the [SfDataGrid.rowsPerPage]() property to show the number of rows on each page.
 
 {% tabs %}
 {% highlight Dart %}
