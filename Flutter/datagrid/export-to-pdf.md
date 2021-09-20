@@ -437,7 +437,7 @@ You can customize the exporting behavior by overriding the available methods in 
 {% endhighlight %}
 {% endtabs %}
 
-The following code snippet illustrates how to create a instance of `customDataGridToPdfConverter` class and  setting the instance to `converter` parameter in `exportToPdfDocument` or `exportToPdfGrid` method.
+The following code snippet illustrates how to create a instance of `CustomDataGridToPdfConverter` class and  setting the instance to `converter` parameter in `exportToPdfDocument` or `exportToPdfGrid` method.
 
 {% tabs %}
 {% highlight Dart %}
