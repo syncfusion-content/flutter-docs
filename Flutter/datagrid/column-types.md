@@ -302,7 +302,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid text in header checkbox column](images/column-types/flutter-datagrid-text-in-header-checkbox-column.png)
+![flutter datagrid shows text in checkbox column header](images/column-types/flutter-datagrid-shows-text-in-checkbox-column-header.png)
 
 #### Disable the checkbox in header cell
 
@@ -363,7 +363,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid disable checkbox in header cell](images/column-types/flutter-datagrid-disable-checkbox-in-header-cell.png)
+![checkbox is disabled in checkbox column header in flutter datagrid](images/column-types/checkbox-is-disabled-in-checkbox-column-header-in-flutter-datagrid.png)
 
 #### Change the background color of checkbox column
 
@@ -424,7 +424,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datagrid checkbox background color](images/column-types/flutter-datagrid-checkbox-background-color.png)
+![background color in checkbox column in flutter datagrid](images/column-types/background-color-in-checkbox-column-in-flutter-datagrid.png)
 
 #### Get checked items
 

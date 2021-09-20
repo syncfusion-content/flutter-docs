@@ -743,4 +743,4 @@ class OrderInfoDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
-![flutter datapager with sort all rows](images/paging/flutter-datapager-sort-all-rows.gif)
+![sorting applied for all the rows in flutter datagrid paging](images/paging/sorting-applied-for-all-the-rows-in-flutter-datagrid-paging.gif)
