@@ -235,7 +235,7 @@ Widget build(BuildContext context) {
           child: Card(
               child: SfDateRangePicker(
                 selectableDayPredicate: (DateTime dateTime) {
-                  if (dateTime == DateTime(2022, 9, 5)) {
+                  if (dateTime == DateTime(2021, 9, 5)) {
                     return false;
                   }
                   return true;

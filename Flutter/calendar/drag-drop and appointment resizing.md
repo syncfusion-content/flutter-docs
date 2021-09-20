@@ -264,10 +264,10 @@ void resizeStart(AppointmentResizeStartDetails appointmentResizeStartDetails) {
 ### onAppointmentResizeUpdate
 [onAppointmentResizeUpdate]() callback was called whenever the appointment resizing in SfCalendar. The [onAppointmentResizeUpdate]() arguments contains the resizing appointment, resizing time, resizing offset and resource details. 
 
-Resizing appointment - 
-Resizing time - 
-Resizing offset -
-Resource details - 
+[Resizing appointment]() - Get the resize appointment.
+[Resizing time]() - Get the resize appointment time.
+[Resizing offset]() - Get the offset value.
+[Resource details]() - Get the resource details.
 
 {% tabs %}
 {% highlight Dart %}
