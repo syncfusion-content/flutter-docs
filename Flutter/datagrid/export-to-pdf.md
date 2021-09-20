@@ -268,7 +268,7 @@ To change the page orientation, you need to export the `SfDataGrid` to `PdfGrid`
     PdfDocument pdfDocument = PdfDocument();
     pdfDocument.pageSettings.orientation = PdfPageOrientation.landscape;
     PdfPage pdfPage = pdfDocument.pages.add();
-    PdfGrid pdfGrid = _key.currentState!.exportToPdfGrid();
+    PdfGrid pdfGrid = key.currentState!.exportToPdfGrid();
     pdfGrid.draw(
      page: pdfPage,
      bounds: Rect.fromLTWH(0, 0, 0, 0));
@@ -399,43 +399,37 @@ You can customize the exporting behavior by overriding the available methods in 
 
     Class CustomDataGridToPdfConverter extends DataGridToPdfConverter{
      
-     @override
-      PdfDocument exportToPdfDocument(SfDataGrid dataGrid, List<DataGridRow>? rows) {
-
-            // TODO: Add your requirements in pdfDocument
-
-       return super.exportToPdfDocument(dataGrid, rows);
-      }
-
-      @override
-      PdfDocument exportToPdfGrid(SfDataGrid dataGrid, List<DataGridRow>? rows) {
-
-            // TODO: Add your requirements in pdfGrid
-
-        return super.exportToPdfGrid(dataGrid, rows);
-      }
-
       @override
       void exportColumnHeader(SfDataGrid dataGrid, GridColumn column,
       String columnName, PdfGrid pdfGrid) {
 
-            // TODO: Add your requirements column headers
+            // TODO: Add your requirements column header
 
        super.exportColumnHeader(dataGrid, column, columnName, pdfGrid);
-    }
+     }
+
+     @override
+     void exportColumnHeaders(
+      SfDataGrid dataGrid, List<GridColumn> columns, PdfGrid pdfGrid) {
+
+            // TODO: Add your requirements column headers
+
+       super.exportColumnHeaders(dataGrid, columns, pdfGrid);
+     }
 
      @override
      void exportRows(
-       List<GridColumn> columns, List<DataGridRow> rows,    PdfGrid pdfGrid) {
+       List<GridColumn> columns, List<DataGridRow> rows, PdfGrid pdfGrid) {
 
             // TODO: Add your requirements in exportRows
        
         super.exportRows(columns, rows, pdfGrid);
-      }
+     }
+
       @override
       void exportRow(List<GridColumn> columns, DataGridRow row, PdfGrid pdfGrid) {
         
-            // TODO: Add your requirements
+            // TODO: Add your requirements in exportRow
 
         super.exportRow(columns, row, pdfGrid);
       } 
