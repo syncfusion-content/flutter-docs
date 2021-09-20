@@ -9,6 +9,28 @@ documentation: ug
 
 # Accessibility in Flutter PDF Viewer (SfPdfViewer)
 
+## Screen reader
+
+The [`SfPdfViewer`](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) can be accessed by the screen readers by wrapping the [`SfPdfViewer`](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) widget to the [`Semantics`](https://api.flutter.dev/flutter/widgets/Semantics-class.html) widget.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: Semantics(
+      label: 'Syncfusion Flutter PDF Viewer',
+      child:
+         SfPdfViewer.network(
+              'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf'),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Sufficient contrast
 
 The `SfPdfViewer` [theming](https://help.syncfusion.com/flutter/themes) support provides a consistent and standardized appearance, as well as the ability to set the colors for all UI elements.
@@ -101,3 +123,7 @@ The `SfPdfViewer` supports the following keyboard interactions.
     <td>COMMAND + C</td>
   </tr>
 </table>
+
+## Easier touch targets
+
+The [`SfPdfViewer`](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) has touch target as 48 * 48 as per the standard for all the elements.
