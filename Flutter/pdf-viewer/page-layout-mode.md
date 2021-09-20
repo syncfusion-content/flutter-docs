@@ -9,7 +9,7 @@ documentation: ug
 
 # Page Layout modes in Flutter PDF Viewer (SfPdfViewer)
 
-The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) supports the following PageLayout modes,
+The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) supports the following PageLayout modes for the transition of pages.
 
 * continuous
 * single
@@ -17,8 +17,6 @@ The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/lat
 ## Continuous page mode
 
 By default, the `continuous` pagelayoutmode will be enabled and it allows to scroll the page continuously. Refer to the following code to enable the `continuous` pagelayoutmode in `SfPdfViewer`.
-
-![Continuous page mode](images/page-layout-mode/continuous-page-mode.png)
 
 {% tabs %}
 {% highlight Dart %}
@@ -37,9 +35,7 @@ Widget build(BuildContext context) {
 
 ## Single page mode
 
-In `single` pagelayoutmode,user can scroll the page from one page to another page. Refer to the following code to enable the `single` pagelayoutmode in `SfPdfViewer`.
-
-![Single page mode](images/page-layout-mode/single-page-mode.png)
+In `single` pagelayoutmode,user can scroll the pages from one page to another page. Refer to the following code to enable the `single` pagelayoutmode in `SfPdfViewer`.
 
 {% tabs %}
 {% highlight Dart %}
