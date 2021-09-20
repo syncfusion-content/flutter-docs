@@ -186,7 +186,7 @@ Widget build(BuildContext context) {
 
 `SfDataGrid` allows you to select or deselect individual rows through checkbox in each row by setting `showCheckboxColumn` property to true. By setting this property to `true`, the checkbox column will be added as first column.
 
-The selection is applied to row only if you set the [SfDataGrid.selectionMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/selectionMode.html) property  other than none.
+The selection is applied to row only if you set the [SfDataGrid.selectionMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/selectionMode.html) property  other than `none`.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -244,8 +244,6 @@ Widget build(BuildContext context) {
 ![flutter datagrid show checkbox column](images/column-types/flutter-datagrid-show-checkbox-column.png)
 
 #### Show text in header cell
-
-You can display widgets along with the checkbox in the header cell by adding widget to the `label` property.
 
 You can display widgets along with the checkbox in the header cell by adding widget to the `SfDataGrid.checkboxColumnSettings.label` property.
 
@@ -308,7 +306,7 @@ Widget build(BuildContext context) {
 
 #### Disable the checkbox in header cell
 
-By default, checkBox gets displayed in header cell. By disabling the `SfDataGrid.checkboxColumnSettings.showCheckboxOnHeader` property, checkBox can be disappeared in header cell of GridCheckBoxColumn.
+By default, checkBox gets displayed in header cell. By disabling the `SfDataGrid.checkboxColumnSettings.showCheckboxOnHeader` property, checkBox can be disappeared in header cell.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -430,7 +428,7 @@ Widget build(BuildContext context) {
 
 #### Get checked items
 
-You can get the information of checked items by using [controller](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/controller.html) property. Create an instance of [DataGridController](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController-class.html) and set to controller property. The [selectedRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedRows.html) property returns the collection of checked DataGridRows.
+You can get the checked items by using the [DataGridController.selectedRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedRows.html) property. Because, the selection and checkbox's checked state are the same.
 
 {% tabs %}
 {% highlight Dart %}
@@ -512,5 +510,5 @@ Widget build(BuildContext context) {
 The following are the limitations of GridCheckboxColumn:
 
 * Checkbox column does not support data operations such as sorting.
-* checkbox column does not support to add stacked header.
+* Checkbox column does not support to add the stacked headers along with other columns.
 * Checkbox column will be excluded in exporting operations.

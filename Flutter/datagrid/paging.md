@@ -27,13 +27,13 @@ The following code example illustrates using `SfDataPager` with the datagrid con
 
 import 'package:intl/intl.dart';
 
-final int rowsPerPage = 15;
+final int _rowsPerPage = 15;
 
-final double dataPagerHeight = 60.0;
+final double _dataPagerHeight = 60.0;
 
-List<OrderInfo> orders = [];
+List<OrderInfo> _orders = [];
 
-List<OrderInfo> paginatedOrders = [];
+List<OrderInfo> _paginatedOrders = [];
 
 final OrderInfoDataSource _orderInfoDataSource = OrderInfoDataSource();
 
@@ -597,10 +597,18 @@ Widget build(BuildContext context) {
 
 ## Sort all the rows instead of rows available in a page
 
-The datagrid supports to sort all the rows and certain range of sorted values are displayed in a page. To sort the entire data, overriding `handlePageChange` method is not necessary. But you should set the [SfDataGrid.rowsPerPage]() property to show the number of rows on each page.
+By default, the rows which are available in a page are sorted. To sort all the rows available for paging, do not override the `handlePageChange` method in `DataGridSource` class. DataGrid itself will split the rows required for each page automatically based on the `SfDataPager.pageCount` i.e. divided value of the `DataGridRows.rows` and `SfDataPager.pageCount`.
+
+If you want to specifically maintain the rows required for a page, you can use the [SfDataGrid.rowsPerPage]() property. But, make sure that you don't override the `handlePageChange` method in `DataGridSource` class in sample level.
 
 {% tabs %}
 {% highlight Dart %}
+
+final int _rowsPerPage = 15;
+
+final double _dataPagerHeight = 60.0;
+
+List<OrderInfo> _orders = [];
 
 @override
 Widget build(BuildContext context) {
