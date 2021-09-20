@@ -20,9 +20,9 @@ Widget build(BuildContext context) {
     home: Scaffold(
       body: Container(
         child: SfCalendar(
-          view: CalendarView.week,
-          dataSource: _getCalendarDataSource(),
-		  allowDragAndDrop: true
+            view: CalendarView.week,
+            dataSource: _getCalendarDataSource(),
+            allowDragAndDrop: true
         ),
       ),
     ),
@@ -41,12 +41,6 @@ _AppointmentDataSource _getCalendarDataSource() {
   ));
 
   return _AppointmentDataSource(appointments);
-}
-
-class _AppointmentDataSource extends CalendarDataSource {
-  _AppointmentDataSource(List<Appointment> source){
-   appointments = source; 
-  }
 }
 
 {% endhighlight %}
@@ -87,7 +81,6 @@ void dragStart(AppointmentDragStartDetails appointmentDragStartDetails) {
 {% endtabs %}
 
 ## onDragUpdate
-
 [onDragUpdate]() callback was called whenever the appointment is dragging in the SfCalendar. The [AppointmentDragUpdateDetails]() arguments contains the dragging appointment, dragging time, dragging offset, source resource and target resource details. 
 
 [Appointment]() - Get the dragged appointment details. 
@@ -230,7 +223,6 @@ Widget build(BuildContext context) {
 
 ### onAppointmentResizeStart
 [onAppointmentResizeStart]() callback was called whenever the appointment starts to resizing in SfCalendar. The [AppointmentResizeStartDetails]() arguments contains the resizing appointment, and resource details. 
-
 [Resizing appointment]() - Get the resizing appointment details.
 [Resource]() - Get the resource details.
 
