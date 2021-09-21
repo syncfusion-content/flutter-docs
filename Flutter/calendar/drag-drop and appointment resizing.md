@@ -81,6 +81,7 @@ void dragStart(AppointmentDragStartDetails appointmentDragStartDetails) {
 {% endtabs %}
 
 ## onDragUpdate
+
 [onDragUpdate]() callback was called whenever the appointment is dragging in the SfCalendar. The [AppointmentDragUpdateDetails]() arguments contains the dragging appointment, dragging time, dragging offset, source resource and target resource details. 
 
 [Appointment]() - Get the dragged appointment details. 
@@ -159,39 +160,82 @@ void dragUpdate(AppointmentDragUpdateDetails appointmentDragUpdateDetails) {
 {% endtabs %}
 
 ## Disabling navigation when dragging appointment
-Using [allowNavigation]() boolean property can handle the appointment dragging, whether navigate to next/previous view or not while dragging the appointment to the endpoint of the current view in calendar. Default value of the [allowNavigation]() property is true and calendar will navigate to next/previous view when dragging the appointment to the endpoint of the current view.
+Using [allowNavigation]() property can handle the appointment dragging, whether navigate to next/previous view or not while dragging the appointment to the endpoint of the current view in calendar. Default value of the [allowNavigation]() property is true and calendar will navigate to next/previous view when dragging the appointment to the endpoint of the current view.
 
 {% tabs %}
 {% highlight Dart %}
 
-dragAndDropSettings: DragAndDropSettings(
-    allowNavigation: true),
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.week,
+          dataSource: _getCalendarDataSource(),
+          allowDragAndDrop: true,
+          dragAndDropSettings: DragAndDropSettings(
+              allowNavigation: true),
+        ),
+      ),
+    ),
+  );
+}
 	
 {% endhighlight %}
 {% endtabs %}
 
 ## Disabling scroll when dragging appointment
-Using [allowScroll]() boolean property you can handle the appointment dragging, whether scrolling (below/above) the calendar or not while dragging the appointment to the endpoint of the current view in Calendar. Default value of the [allowScroll]() property is true.
+Using [allowScroll]() property you can handle the appointment dragging, whether scrolling (below/above) the calendar or not while dragging the appointment to the endpoint of the current view in Calendar. Default value of the [allowScroll]() property is true.
 
 {% tabs %}
 {% highlight Dart %}
 
-dragAndDropSettings: DragAndDropSettings(
-    allowScroll: true),
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.week,
+          dataSource: _getCalendarDataSource(),
+          allowDragAndDrop: true,
+          dragAndDropSettings: DragAndDropSettings(
+              allowScroll: true),
+        ),
+      ),
+    ),
+  );
+}
 	
 {% endhighlight %}
 {% endtabs %}
 
 ## Disabling dragging time indicator
-[showTimeIndicator]() - Using this boolean property can handle the time indicator whether it should visible or not, which shows the dragged appointment current position time in time text slots. Default value of the [ShowTimeIndicator]() property is true. Also you can set the time indicator style and format by using [indicatorTimeFormat]() and [timeIndicatorStyle]().
+[showTimeIndicator]() - Using this property can handle the time indicator whether it should visible or not, which shows the dragged appointment current position time in time text slots. Default value of the [ShowTimeIndicator]() property is true. Also you can set the time indicator style and format by using [indicatorTimeFormat]() and [timeIndicatorStyle]().
 
 {% tabs %}
 {% highlight Dart %}
 
-dragAndDropSettings: DragAndDropSettings(
-    indicatorTimeFormat: 'hh:mm',
-    showTimeIndicator: true,
-    timeIndicatorStyle: TextStyle(backgroundColor: Colors.red)),
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.week,
+          dataSource: _getCalendarDataSource(),
+          allowDragAndDrop: true,
+          dragAndDropSettings: DragAndDropSettings(
+              indicatorTimeFormat: 'hh:mm',
+              showTimeIndicator: true,
+              timeIndicatorStyle: TextStyle(backgroundColor: Colors.red)),
+        ),
+      ),
+    ),
+  );
+}
 	
 {% endhighlight %}
 {% endtabs %}

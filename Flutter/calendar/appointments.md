@@ -233,7 +233,7 @@ MeetingDataSource _getCalendarDataSource() {
 {% endhighlight %}
 {% endtabs %}
 
-## Get the business object
+## Get the business object data
 
 By using the convertAppointmentToObject() method, you can get the event details in custom business object type.
 
