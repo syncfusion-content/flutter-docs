@@ -17,7 +17,7 @@ DataGrid does not automatically display the summary values. To display the summa
 
 ### Display table summary for row
 
-The summary information can be displayed in a row by setting the `GridTableSummaryRow.showSummaryInRow` property to `true` and define summary columns. The `GridTableSummaryRow.title` content will be displayed to the corresponding row. You have to define the `GridTableSummaryRow.title` based on the `GridSummaryColumn.name` property to customize the summary value.
+The summary information can be displayed in a row by setting the `GridTableSummaryRow.showSummaryInRow` property to `true` and defining the summary columns. The `GridTableSummaryRow.title` content will be displayed to the corresponding row. You must define the `GridTableSummaryRow.title` based on the `GridSummaryColumn.name` property to customize the summary value.
 
 {% tabs %}
 {% highlight Dart %}
@@ -598,9 +598,9 @@ class EmployeeDataSource extends DataGridSource {
 
 ### Customize table summary calculation
 
-SfDataGrid provides support to customize the summary calculation. You can be overriding the `DataGridSource.calculateSummaryColumn` method to write custom logic for your custom summary calculation. The `summaryColumn` parameter will be null for the spanned table summary column.
+You can write the custom logic for the summary calculation by overriding the `calculateSummaryValue` method from `DataGridSource` class. The `summaryColumn` parameter will be null for the summary cells for the spanned summary columns.
 
-The following example demonstrates how to customize the summary calculation to find one employee's salary.
+The following example demonstrates how to customize the summary calculation to find standard deviation for the salaries of all the employees.
 
 {% tabs %}
 {% highlight Dart %}
@@ -696,16 +696,20 @@ class EmployeeDataSource extends DataGridSource {
 
     String? title = summaryRow.title;
     if (title != null) {
-      if (title.contains(summaryRow.columns.first.name)) {
-        double deviation = 0;
-        final List<int> values = getCellValues(summaryRow.columns.first);
-        if (values.isNotEmpty) {
-          int sum = values.reduce((value, element) =>
-              value + pow(element - values.average, 2).toInt());
-          deviation = sqrt((sum) / (values.length - 1));
+      if (summaryRow.showSummaryInRow && summaryRow.columns.isNotEmpty) {
+        for (final GridSummaryColumn summaryColumn in summaryRow.columns) {
+          if (title!.contains(summaryColumn.name)) {
+            double deviation = 0;
+            final List<int> values = getCellValues(summaryColumn);
+            if (values.isNotEmpty) {
+              int sum = values.reduce((value, element) =>
+                  value + pow(element - values.average, 2).toInt());
+              deviation = sqrt((sum) / (values.length - 1));
+            }
+            title = title.replaceAll(
+                '{${summaryColumn.name}}', deviation.toString());
+          }
         }
-        title = title.replaceAll(
-            '{${summaryRow.columns.first.name}}', deviation.toString());
       }
     }
     return title ?? '';
