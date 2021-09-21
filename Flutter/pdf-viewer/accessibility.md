@@ -35,7 +35,7 @@ Widget build(BuildContext context) {
 
 The `SfPdfViewer` [theming](https://help.syncfusion.com/flutter/themes) support provides a consistent and standardized appearance, as well as the ability to set the colors for all UI elements.
 
-The following APIs allow you to customize the colors of the following elements.
+The following APIs allow you to customize the colors of the following elements:
 * [searchTextHighlightColor](https://help.syncfusion.com/flutter/pdf-viewer/text-search#customize-the-search-text-highlight-color)
 * [selectionColor and selectionHandleColor](https://help.syncfusion.com/flutter/pdf-viewer/text-selection#customize-the-text-selection-and-its-handle-color)
 
@@ -52,7 +52,7 @@ Also, you can change the font size of the [`SfPdfViewer`](https://pub.dev/docume
 
 ## Keyboard navigation
 
-The `SfPdfViewer` supports the following keyboard interactions.
+The `SfPdfViewer` supports the following keyboard interactions:
 
 <table>
   <tr>
@@ -126,4 +126,4 @@ The `SfPdfViewer` supports the following keyboard interactions.
 
 ## Easier touch targets
 
-The [`SfPdfViewer`](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) has touch target as 48 * 48 as per the standard for all the elements.
+The [`SfPdfViewer`](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) has touch target of 48 * 48, as per the standard for all the elements.
