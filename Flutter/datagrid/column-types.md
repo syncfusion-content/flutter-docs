@@ -184,7 +184,7 @@ Widget build(BuildContext context) {
 
 ### Checkbox column
 
-By setting the `showCheckboxColumn` property to `true`, you can select or deselect individual rows using checkboxes in each row. By setting this property to `true`, the checkbox column will be added as first column.
+By setting the `showCheckboxColumn` property to `true`, you can select or deselect individual rows using checkboxes in each row. The checkbox column will be added as first column.
 
 The selection is applied to row only if you set the [SfDataGrid.selectionMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/selectionMode.html) property  other than `none`.
 
