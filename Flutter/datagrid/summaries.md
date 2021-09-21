@@ -9,11 +9,11 @@ documentation: ug
 
 # Summaries in Flutter DataGrid (SfDataGrid)
 
-## Table summaries
+## Table summary
 
-The `SfDataGrid` provides built-in support to display concise information about the `DataGridSource.rows` by using table summary rows. The table summary value is calculated based on all the data grid rows in the `DataGridSource.rows` property. You can add a table summary row to the data grid by adding the `GridTableSummaryRow` to the `SfDataGrid.tableSummaryRows` collection. 
+The `SfDataGrid` provides built-in support to display concise information about the rows by using table summary rows. The table summary value is calculated based on all the rows in the `DataGridSource.rows` property. You can add a table summary row to the datagrid by adding the `GridTableSummaryRow` to the `SfDataGrid.tableSummaryRows` collection.
 
-The calculated summary value will be passed as a parameter to the `DataGridSource.buildTableSummaryCellWidget` method. You have to set a widget for the table summary column by overriding the `DataGridSource.buildTableSummaryCellWidget`.
+DataGrid does not automatically display the summary values. To display the summary value, you need to override the `buildTableSummaryCellWidget` method in the `DataGridSource` class. The calculated summary value is passed as a parameter to the `DataGridSource.buildTableSummaryCellWidget` method. So, you need to return the required widget with the summary value.
 
 ### Display table summary for row
 
@@ -129,7 +129,7 @@ class EmployeeDataSource extends DataGridSource {
 
 The summary information can be displayed in a column by setting the `GridTableSummaryRow.showSummaryInRow` property to `false`. You can define summary columns to the `GridTableSummaryRow` by adding `GridSummaryColumn` to the `GridTableSummaryRow.summaryColumns` collection. The `GridSummaryColumn` contains the following required properties,
 
-* **`name`**: Defines name of the `GridSummaryColumn` to denote the `GridSummaryColumn` in `GridTableSummaryRow` with title.
+* **`name`**: Defines the corresponding column name for the summary calculation. This should be the same value as the `GridColumn.columnName` property.
 * **`columnName`**: Defines the corresponding column name for the summary calculation.
 * **`summaryType`**: Defines the summary calculation type.
 
@@ -240,7 +240,7 @@ class EmployeeDataSource extends DataGridSource {
 
 ### Positioning table summary row
 
-The `SfDataGrid` provides the support to show the table summary row at either top or bottom position by using the `GridTableSummaryRow.position` property.
+The table summary row can be shown at either top or bottom position by using the `GridTableSummaryRow.position` property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -359,17 +359,17 @@ class EmployeeDataSource extends DataGridSource {
 
 ### Summary calculation types
 
-The summary calculation of the `GridSummaryColumn` can be calculated by the following summary types,
+The following calculation types are supported for the summary calculation,
 
-* **`Sum`**: Defines the sum of the specific summary column.
-* **`Average`**: Defines the average of the summary column. 
-* **`Count`**: Defines the count of rows available in `SfDataGrid`.
-* **`Maximum`**:  Defines the maximum value of the specific summary column.
-* **`Minimum`**:  Defines the minimum value of the specific summary column.
+* **`Sum`**: Calculate the sum of a column
+* **`Average`**: Calculate the average of a column.
+* **`Count`**:  Calculate the total of rows in `SfDataGrid`.
+* **`Maximum`**:  Calculate the maximum value in a column.
+* **`Minimum`**: Calculate the minimum value in a column.
 
 ### Display table summary row with title
 
-`SfDataGrid` supports to display column's summary along with the title simultaneously. You can display column summary along with title by defining the `GridTableSummaryRow.title` and `GridTableSummaryRow.titleColumnCount` property along with define summary columns. Showing column summary with the title can be supported only if the `GridSummaryRow.showSummaryInRow` is `false`. The `GridTableSummaryRow.titleColumnCount` property defines that how long the title should be spanned in the corresponding summary row.
+SfDataGrid supports to display column's summary value along with the title by defining the `GridTableSummaryRow.title` and `GridTableSummaryRow.titleColumnCount` property along with the summary columns. Showing column summary with the title can be supported only if the `GridSummaryRow.showSummaryInRow` is `false`. The `GridTableSummaryRow.titleColumnCount` property defines that how long the title should be spanned in the corresponding summary row.
 
 {% tabs %}
 {% highlight Dart %}
@@ -482,16 +482,9 @@ class EmployeeDataSource extends DataGridSource {
 
 ![flutter datagrid shows table summary column along with title](images/summaries/flutter-datagrid-summary-column-with-title.png)
 
-### Limitations
-
-Following limitations are applicable if displaying column summary along with title simultaneously in `GridTableSummaryRow`:
-
-* If `SfDataGrid.frozenColumnsCount` is defined lesser than `GridTableSummaryRow.titleColumnCount`, the title summary will be spanned to `frozenColumnsCount` range, since spanned range and frozen range cannot be vary.
-* Summary columns defined in the `GridSummaryRow.titleColumnCount` range will not be shown.
-
 ### Set background color for the table summary row
 
-The `GridTableSummaryRow` color can be customized by using the `GridTableSummaryRow.color` property.
+The background color of the table summary row can be customized by using the `GridTableSummaryRow.color` property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -612,60 +605,60 @@ The following example demonstrates how to customize the summary calculation to f
 {% tabs %}
 {% highlight Dart %}
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Syncfusion Flutter DataGrid'),
-      ),
-      body: SfDataGrid(
-        source: employeeDataSource,
-        tableSummaryRows: [
-          GridTableSummaryRow(
-              showSummaryInRow: true,
-              title: 'Salary of James: {Salary}',
-              columns: [
-                GridSummaryColumn(
-                    name: 'Salary',
-                    columnName: 'salary',
-                    summaryType: GridSummaryType.sum)
-              ],
-              position: GridTableSummaryRowPosition.bottom),
-        ],
-        columns: <GridColumn>[
-          GridColumn(
-              columnName: 'id',
-              label: Container(
-                  padding: EdgeInsets.all(16.0),
-                  alignment: Alignment.center,
-                  child: Text(
-                    'ID',
-                  ))),
-          GridColumn(
-              columnName: 'name',
-              label: Container(
-                  padding: EdgeInsets.all(8.0),
-                  alignment: Alignment.center,
-                  child: Text('Name'))),
-          GridColumn(
-              columnName: 'designation',
-              label: Container(
-                  padding: EdgeInsets.all(8.0),
-                  alignment: Alignment.center,
-                  child: Text(
-                    'Job Title',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-          GridColumn(
-              columnName: 'salary',
-              label: Container(
-                  padding: EdgeInsets.all(8.0),
-                  alignment: Alignment.center,
-                  child: Text('Salary'))),
-        ],
-      ),
-    );
-  }
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    appBar: AppBar(
+      title: const Text('Syncfusion Flutter DataGrid'),
+    ),
+    body: SfDataGrid(
+      source: employeeDataSource,
+      tableSummaryRows: [
+        GridTableSummaryRow(
+            showSummaryInRow: true,
+            title: 'Standard Deviation: {Deviation}',
+            columns: [
+              GridSummaryColumn(
+                  name: 'Deviation',
+                  columnName: 'salary',
+                  summaryType: GridSummaryType.sum)
+            ],
+            position: GridTableSummaryRowPosition.bottom),
+      ],
+      columns: <GridColumn>[
+        GridColumn(
+            columnName: 'id',
+            label: Container(
+                padding: EdgeInsets.all(16.0),
+                alignment: Alignment.center,
+                child: Text(
+                  'ID',
+                ))),
+        GridColumn(
+            columnName: 'name',
+            label: Container(
+                padding: EdgeInsets.all(8.0),
+                alignment: Alignment.center,
+                child: Text('Name'))),
+        GridColumn(
+            columnName: 'designation',
+            label: Container(
+                padding: EdgeInsets.all(8.0),
+                alignment: Alignment.center,
+                child: Text(
+                  'Job Title',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'salary',
+            label: Container(
+                padding: EdgeInsets.all(8.0),
+                alignment: Alignment.center,
+                child: Text('Salary'))),
+      ],
+    ),
+  );
+}
 
 class EmployeeDataSource extends DataGridSource {
   EmployeeDataSource({required List<Employee> employeeData}) {
@@ -688,20 +681,31 @@ class EmployeeDataSource extends DataGridSource {
   @override
   String calculateSummaryValue(GridTableSummaryRow summaryRow,
       GridSummaryColumn? summaryColumn, RowColumnIndex rowColumnIndex) {
+    List<int> getCellValues(GridSummaryColumn summaryColumn) {
+      final List<int> values = <int>[];
+      for (final DataGridRow row in rows) {
+        final DataGridCell? cell = row.getCells().firstWhereOrNull(
+            (DataGridCell element) =>
+                element.columnName == summaryColumn.columnName);
+        if (cell != null && cell.value != null) {
+          values.add(cell.value);
+        }
+      }
+      return values;
+    }
+
     String? title = summaryRow.title;
     if (title != null) {
-      if (title.contains('Salary')) {
-        final DataGridRow? row = rows.firstWhereOrNull((element) => element
-            .getCells()
-            .any((element) =>
-                element.columnName == 'name' && element.value == 'James'));
-        if (row != null) {
-          final int salary = row
-              .getCells()
-              .firstWhere((element) => element.columnName == 'salary')
-              .value;
-          title = title.replaceAll('{Salary}', salary.toString());
+      if (title.contains(summaryRow.columns.first.name)) {
+        double deviation = 0;
+        final List<int> values = getCellValues(summaryRow.columns.first);
+        if (values.isNotEmpty) {
+          int sum = values.reduce((value, element) =>
+              value + pow(element - values.average, 2).toInt());
+          deviation = sqrt((sum) / (values.length - 1));
         }
+        title = title.replaceAll(
+            '{${summaryRow.columns.first.name}}', deviation.toString());
       }
     }
     return title ?? '';
