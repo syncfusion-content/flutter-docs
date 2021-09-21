@@ -1,6 +1,6 @@
 ---
 layout: post 
-title: Drag and drop, appointment resizing in Flutter Event Calendar widget | Syncfusion
+title: Drag and drop, resizing in Flutter Event Calendar widget | Syncfusion
 description: Learn here all about Drag and drop and appointment resizing feature of Syncfusion Flutter Event Calendar (SfCalendar) widget and more.
 platform: flutter
 control: SfCalendar
