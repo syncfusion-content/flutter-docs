@@ -235,7 +235,7 @@ MeetingDataSource _getCalendarDataSource() {
 
 ## Get the business object data
 
-By overriding the [convertAppointmentToObject()]() method, you can get the event details with custom business object type, for example you can get the tapped occurence appointment details with corresponding appointment type. 
+You can get the event data in custom business object type by overriding the [convertAppointmentToObject()]() method from the `CalendarDataSource`.
 
 {% tabs %}
 {% highlight Dart %}
