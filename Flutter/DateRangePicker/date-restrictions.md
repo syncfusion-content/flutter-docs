@@ -90,8 +90,8 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## selectableDayPredicate
-[selectableDayPredicate]() callback allows certain days for selection. Only the days that `selectableDayPredicate` returns true for will be selectable in date range picker.
+## SelectableDayPredicate
+[selectableDayPredicate]() callback allows certain days for selection. Only the days that `selectableDayPredicate` returns `true` will be selectable in date range picker.
 
 {% tabs %}
 {% highlight Dart %}
