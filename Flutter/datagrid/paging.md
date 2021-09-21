@@ -16,7 +16,7 @@ The datagrid performs paging of data using the `SfDataPager`. To enable paging, 
 * Create a new `SfDataPager` widget, and set the [SfDataGrid.DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) to the [SfDataPager.delegate](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/delegate.html) property.
 * Set the number of pages required to be displayed in data pager by setting the [SfDataPager.pageCount](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/pageCount.html) property.
 * Set the number of buttons that should be displayed in view by setting the [SfDataPager.visibleItemsCount](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/visibleItemsCount.html) property.
-* You can load the data for a specific page in `handlePageChange` method. This method is called for every page navigation from data pager.
+* You can load the data for the specific page in `handlePageChange` method. This method is called for every page navigation from data pager.
 
 N> The `SfDataPager.visibleItemsCount` property default value is 5.
 
@@ -597,9 +597,9 @@ Widget build(BuildContext context) {
 
 ## Sort all the rows instead of rows available in a page
 
-By default, the rows on a page are sorted. To sort all the rows available for paging, do not override the `handlePageChange` method in the `DataGridSource` class. The DataGrid will automatically split the rows required for each page based on the `SfDataPager.pageCount`, i.e. the divided value of the `DataGridRows.rows` and `SfDataPager.pageCount`.
+By default, the rows which are available in a page are sorted. To sort all the rows available for paging, do not override the `handlePageChange` method in `DataGridSource` class. DataGrid itself will split the rows required for each page automatically based on the `SfDataPager.pageCount` i.e. divided value of the `DataGridRows.rows` and `SfDataPager.pageCount`.
 
-If you want to specifically maintain the rows required for a page, you can use the [SfDataGrid.rowsPerPage]() property. However, make sure that you do not override the `handlePageChange` method in the `DataGridSource` class at the sample level.
+If you want to specifically maintain the rows required for a page, you can use the [SfDataGrid.rowsPerPage]() property. But, make sure that you don't override the `handlePageChange` method in `DataGridSource` class in sample level.
 
 {% tabs %}
 {% highlight Dart %}
