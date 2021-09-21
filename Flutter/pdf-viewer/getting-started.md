@@ -83,9 +83,8 @@ The [SfPdfViewer.asset](https://pub.dev/documentation/syncfusion_flutter_pdfview
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-      body: Container(
-          child: SfPdfViewer.asset(
-              'assets/flutter-succinctly.pdf')));
+      body: SfPdfViewer.asset(
+              'assets/flutter-succinctly.pdf'));
 }
 
 {% endhighlight %}
@@ -101,9 +100,8 @@ The [SfPdfViewer.network](https://pub.dev/documentation/syncfusion_flutter_pdfvi
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-      body: Container(
-          child: SfPdfViewer.network(
-              'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf')));
+      body: SfPdfViewer.network(
+              'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf'));
 }
 
 {% endhighlight %}
@@ -127,9 +125,8 @@ The [SfPdfViewer.file](https://pub.dev/documentation/syncfusion_flutter_pdfviewe
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-      body: Container(
-          child: SfPdfViewer.file(
-              File('storage/emulated/0/Download/flutter-succinctly.pdf'))));
+      body: SfPdfViewer.file(
+              File('storage/emulated/0/Download/flutter-succinctly.pdf')));
 }
 
 {% endhighlight %}
@@ -147,9 +144,8 @@ The [SfPdfViewer.memory](https://pub.dev/documentation/syncfusion_flutter_pdfvie
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-      body: Container(
-          child: SfPdfViewer.memory(
-              bytes)));
+      body: SfPdfViewer.memory(
+              bytes));
 }
 
 {% endhighlight %}
@@ -165,11 +161,10 @@ The `SfPdfViewer` allows you to load the document with the specified scroll offs
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-      body: Container(
-          child: SfPdfViewer.network(
+      body: SfPdfViewer.network(
               'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
               initialScrollOffset: Offset(0, 500),
-              initialZoomLevel: 1.5)));
+              initialZoomLevel: 1.5));
 }
 
 {% endhighlight %}
@@ -188,10 +183,10 @@ final PdfViewerController _pdfViewerController=PdfViewerController();
 Widget build(BuildContext context) {
   return Scaffold(
     appBar: AppBar(
-      title: Text('Syncfusion Flutter PDF Viewer'),
+      title: const Text('Syncfusion Flutter PdfViewer'),
       actions: <Widget>[
         IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_drop_down_circle,
             color: Colors.white,
           ),
@@ -223,10 +218,9 @@ By default, the `SfPdfViewer` displays the spacing between the PDF pages with th
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-      body: Container(
-          child: SfPdfViewer.network(
+      body: SfPdfViewer.network(
               'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
-              pageSpacing: 2)));
+              pageSpacing: 2));
 }
 
 {% endhighlight %}
@@ -242,11 +236,10 @@ By default, the `SfPdfViewer` displays the scroll head and scroll status. You ca
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-      body: Container(
-          child: SfPdfViewer.network(
+      body: SfPdfViewer.network(
               'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
               canShowScrollHead: false,
-              canShowScrollStatus: false)));
+              canShowScrollStatus: false));
 }
 
 {% endhighlight %}
@@ -264,10 +257,9 @@ By default, the page navigation dialog will be displayed when the scroll head is
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-      body: Container(
-          child: SfPdfViewer.network(
+      body: SfPdfViewer.network(
               'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf', 
-              canShowPaginationDialog: false)));
+              canShowPaginationDialog: false));
 }
 
 {% endhighlight %}
@@ -289,13 +281,12 @@ The [onDocumentLoaded](https://pub.dev/documentation/syncfusion_flutter_pdfviewe
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-      body: Container(
-          child: SfPdfViewer.network(
+      body: SfPdfViewer.network(
     'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
     onDocumentLoaded: (PdfDocumentLoadedDetails details) {
       print(details.document.pages.count);
     },
-  )));
+  ));
 }
 
 {% endhighlight %}
@@ -318,24 +309,12 @@ The [PdfDocumentLoadFailedDetails](https://pub.dev/documentation/syncfusion_flut
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-      body: Container(
-          child: SfPdfViewer.network(
+      body: SfPdfViewer.network(
     'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
     onDocumentLoadFailed: (PdfDocumentLoadFailedDetails details) {
-      AlertDialog(
-        title: Text(details.error),
-        content: Text(details.description),
-        actions: <Widget>[
-          FlatButton(
-            child: Text('OK'),
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-          ),
-        ],
-      );
+      print('Error Description: '+details.description);
     },
-  )));
+  ));
 }
 
 {% endhighlight %}

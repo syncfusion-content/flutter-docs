@@ -25,10 +25,9 @@ You can enable or disable the text selection in the PDF page using the [enableTe
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-      body: Container(
-          child: SfPdfViewer.network(
+      body: SfPdfViewer.network(
               'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
-              enableTextSelection: false)));
+              enableTextSelection: false));
 }
 
 {% endhighlight %}
@@ -43,10 +42,13 @@ The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/lat
 {% tabs %}
 {% highlight Dart %}
 
+import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
+
 void main() => runApp(MaterialApp(
       title: 'Syncfusion PDF Viewer Demo',
       theme: ThemeData(
-        textSelectionTheme: TextSelectionThemeData(
+        textSelectionTheme: const TextSelectionThemeData(
             selectionColor: Colors.red, selectionHandleColor: Colors.blue),
       ),
       home: HomePage(),
@@ -63,7 +65,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Syncfusion Flutter PDF Viewer'),
+          title: const Text('Syncfusion Flutter PDF Viewer'),
         ),
         body: Container(
             child: SfPdfViewer.network(
@@ -86,21 +88,20 @@ The [onTextSelectionChanged](https://pub.dev/documentation/syncfusion_flutter_pd
 {% tabs %}
 {% highlight Dart %}
 
-@override
-Widget build(BuildContext context) {
-  return Scaffold(
-      appBar: AppBar(
-        title: Text('Syncfusion Flutter PDF Viewer'),
-      ),
-      body: Container(
-          child: SfPdfViewer.network(
-        'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
-        onTextSelectionChanged: (PdfTextSelectionChangedDetails details) {
-          if (details.selectedText != null) {
-            print(details.selectedText);
-          }
-        },
-      )));
+ @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text('Syncfusion Flutter PDF Viewer'),
+        ),
+        body: SfPdfViewer.network(
+          'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
+          onTextSelectionChanged: (PdfTextSelectionChangedDetails details) {
+            if (details.selectedText != null) {
+              print(details.selectedText);
+            }
+          },
+        ));
 }
 
 {% endhighlight %}
@@ -143,19 +144,21 @@ class _HomePageState extends State<HomePage> {
       BuildContext context, PdfTextSelectionChangedDetails details) {
     final OverlayState _overlayState = Overlay.of(context)!;
     _overlayEntry = OverlayEntry(
-      builder: (context) => Positioned(
+      builder: (BuildContext context) => Positioned(
         top: details.globalSelectedRegion!.center.dy - 55,
         left: details.globalSelectedRegion!.bottomLeft.dx,
-        child: RaisedButton(
+        child: ElevatedButton(
           onPressed: () {
             Clipboard.setData(ClipboardData(text: details.selectedText));
             print(
                 'Text copied to clipboard: ' + details.selectedText.toString());
             _pdfViewerController.clearSelection();
           },
-          color: Colors.white,
-          elevation: 10,
-          child: Text('Copy', style: TextStyle(fontSize: 17)),
+          style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.all(Colors.white),
+          ),
+          child: const Text('Copy',
+              style: TextStyle(fontSize: 17, color: Colors.black)),
         ),
       ),
     );
@@ -166,7 +169,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Syncfusion Flutter PDF Viewer'),
+          title: const Text('Syncfusion Flutter PDF Viewer'),
         ),
         body: Container(
             child: SfPdfViewer.network(

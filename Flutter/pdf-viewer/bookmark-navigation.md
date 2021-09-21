@@ -28,10 +28,10 @@ final GlobalKey<SfPdfViewerState> _pdfViewerKey = GlobalKey();
 Widget build(BuildContext context) {
   return Scaffold(
     appBar: AppBar(
-      title: Text('Syncfusion Flutter PdfViewer'),
+       title: const Text('Syncfusion Flutter PdfViewer'),
       actions: <Widget>[
         IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons. bookmark,
             color: Colors.white,
           ),
@@ -55,6 +55,8 @@ Widget build(BuildContext context) {
 
 You can navigate to the desired bookmark topic programmatically using the [jumpToBookmark](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/jumpToBookmark.html) controller method. The following code example explains the same.
 
+N>Import **'package:syncfusion_flutter_pdf/pdf.dart'** in the Dart code.
+
 {% tabs %}
 {% highlight Dart %}
 
@@ -72,10 +74,10 @@ Widget build(BuildContext context) {
   return MaterialApp(
     home: Scaffold(
       appBar: AppBar(
-        title: Text('Syncfusion Flutter PdfViewer'),
+        title: const Text('Syncfusion Flutter PdfViewer'),
         actions: <Widget>[
           IconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_drop_down_circle,
               color: Colors.white,
             ),

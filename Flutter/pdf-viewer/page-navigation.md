@@ -32,10 +32,10 @@ void initState() {
 Widget build(BuildContext context) {
   return Scaffold(
     appBar: AppBar(
-      title: Text('Syncfusion Flutter PdfViewer'),
+      title: const Text('Syncfusion Flutter PdfViewer'),
       actions: <Widget>[
         IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_drop_down_circle,
             color: Colors.white,
           ),
@@ -74,10 +74,10 @@ void initState() {
 Widget build(BuildContext context) {
   return Scaffold(
     appBar: AppBar(
-      title: Text('Syncfusion Flutter PdfViewer'),
+      title: const Text('Syncfusion Flutter PdfViewer'),
       actions: <Widget>[
         IconButton(
-          icon: Icon(
+           icon: const Icon(
             Icons.keyboard_arrow_up,
             color: Colors.white,
           ),
@@ -86,7 +86,7 @@ Widget build(BuildContext context) {
           },
         ),
         IconButton(
-          icon: Icon(
+           icon: const Icon(
             Icons.keyboard_arrow_down,
             color: Colors.white,
           ),
@@ -125,10 +125,10 @@ void initState() {
 Widget build(BuildContext context) {
   return Scaffold(
     appBar: AppBar(
-      title: Text('Syncfusion Flutter PdfViewer'),
+     title: const Text('Syncfusion Flutter PdfViewer'),
       actions: <Widget>[
         IconButton(
-          icon: Icon(
+           icon: const Icon(
             Icons.first_page,
             color: Colors.white,
           ),
@@ -137,7 +137,7 @@ Widget build(BuildContext context) {
           },
         ),
         IconButton(
-          icon: Icon(
+           icon: const Icon(
             Icons.last_page,
             color: Colors.white,
           ),
@@ -178,10 +178,10 @@ void initState() {
 Widget build(BuildContext context) {
   return Scaffold(
     appBar: AppBar(
-      title: Text('Syncfusion Flutter PdfViewer'),
+      title: const Text('Syncfusion Flutter PdfViewer'),
       actions: <Widget>[
         IconButton(
-          icon: Icon(
+         icon: const Icon(
             Icons.arrow_drop_down_circle,
             color: Colors.white,
           ),
@@ -222,14 +222,13 @@ The [PdfPageChangedDetails](https://pub.dev/documentation/syncfusion_flutter_pdf
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-      body: Container(
-          child: SfPdfViewer.network(
+      body: SfPdfViewer.network(
     'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
     onPageChanged: (PdfPageChangedDetails details) {
       print(details.newPageNumber);
       print(details.isFirstPage);
     },
-  )));
+  ));
 }
 
 {% endhighlight %}

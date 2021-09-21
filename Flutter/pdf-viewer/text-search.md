@@ -36,10 +36,10 @@ void initState() {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Syncfusion Flutter PDF Viewer'),
+          title: const Text('Syncfusion Flutter PDF Viewer'),
           actions: <Widget>[
             IconButton(
-              icon: Icon(
+              icon: const Icon(
                 Icons.search,
                 color: Colors.white,
               ),
@@ -82,10 +82,10 @@ void initState() {
 Widget build(BuildContext context) {
   return Scaffold(
       appBar: AppBar(
-        title: Text('Syncfusion Flutter PDF Viewer'),
+        title: const Text('Syncfusion Flutter PDF Viewer'),
         actions: <Widget>[
           IconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.search,
               color: Colors.white,
             ),
@@ -98,7 +98,7 @@ Widget build(BuildContext context) {
           Visibility(
             visible: _searchResult.hasResult,
             child: IconButton(
-              icon: Icon(
+             icon: const Icon(
                 Icons.keyboard_arrow_up,
                 color: Colors.white,
               ),
@@ -110,7 +110,7 @@ Widget build(BuildContext context) {
           Visibility(
             visible: _searchResult.hasResult,
             child: IconButton(
-              icon: Icon(
+              icon: const Icon(
                 Icons.keyboard_arrow_down,
                 color: Colors.white,
               ),
@@ -150,10 +150,10 @@ void initState() {
 Widget build(BuildContext context) {
   return Scaffold(
       appBar: AppBar(
-        title: Text('Syncfusion Flutter PDF Viewer'),
+        title: const Text('Syncfusion Flutter PDF Viewer'),
         actions: <Widget>[
           IconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.search,
               color: Colors.white,
             ),
@@ -166,7 +166,7 @@ Widget build(BuildContext context) {
           Visibility(
             visible: _searchResult.hasResult,
             child: IconButton(
-              icon: Icon(
+              icon: const Icon(
                 Icons.clear,
                 color: Colors.white,
               ),
@@ -210,10 +210,10 @@ void initState() {
 Widget build(BuildContext context) {
   return Scaffold(
       appBar: AppBar(
-        title: Text('Syncfusion Flutter PDF Viewer'),
+        title: const Text('Syncfusion Flutter PDF Viewer'),
         actions: <Widget>[
           IconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.search,
               color: Colors.white,
             ),
@@ -253,10 +253,10 @@ void initState() {
 Widget build(BuildContext context) {
   return Scaffold(
       appBar: AppBar(
-        title: Text('Syncfusion Flutter PDF Viewer'),
+       title: const Text('Syncfusion Flutter PDF Viewer'),
         actions: <Widget>[
           IconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.search,
               color: Colors.white,
             ),
@@ -299,10 +299,10 @@ void initState() {
 Widget build(BuildContext context) {
   return Scaffold(
       appBar: AppBar(
-        title: Text('Syncfusion Flutter PDF Viewer'),
+        title: const Text('Syncfusion Flutter PDF Viewer'),
         actions: <Widget>[
           IconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.search,
               color: Colors.white,
             ),
@@ -315,7 +315,7 @@ Widget build(BuildContext context) {
           Visibility(
             visible: _searchResult.hasResult,
             child: IconButton(
-              icon: Icon(
+              icon: const Icon(
                 Icons.clear,
                 color: Colors.white,
               ),
@@ -329,27 +329,27 @@ Widget build(BuildContext context) {
           Visibility(
             visible: _searchResult.hasResult,
             child: IconButton(
-              icon: Icon(
+              icon: const Icon(
                 Icons.keyboard_arrow_up,
                 color: Colors.white,
               ),
               onPressed: () {
                 _searchResult.previousInstance();
+                 if(_searchResult.currentInstanceIndex == _searchResult.totalInstanceCount){
+                  print('No more occurrences found.');
+                }
               },
             ),
           ),
           Visibility(
             visible: _searchResult.hasResult,
             child: IconButton(
-              icon: Icon(
+              icon: const Icon(
                 Icons.keyboard_arrow_down,
                 color: Colors.white,
               ),
               onPressed: () {
                 _searchResult.nextInstance();
-                if(_searchResult.currentInstanceIndex == _searchResult.totalInstanceCount){
-                  print('No more occurrences found.');
-                }
               },
             ),
           ),
@@ -421,7 +421,7 @@ class _HomePage extends State<HomePage> {
       }
     }
   }
-  
+
   /// Remove history entry for text search.
   void _handleHistoryEntryRemoved() {
     _textSearchKey.currentState?.clearSearch();
@@ -455,7 +455,7 @@ class _HomePage extends State<HomePage> {
                       setState(() {
                         _textSearchKey.currentState?._showToast = true;
                       });
-                      await Future.delayed(Duration(seconds: 1));
+                      await Future<dynamic>.delayed(const Duration(seconds: 1));
                       setState(() {
                         _textSearchKey.currentState?._showToast = false;
                       });
@@ -464,16 +464,16 @@ class _HomePage extends State<HomePage> {
                 ),
               ),
               automaticallyImplyLeading: false,
-              backgroundColor: Color(0xFFFAFAFA),
+              backgroundColor: const Color(0xFFFAFAFA),
             )
           : AppBar(
-              title: Text(
+              title: const Text(
                 'Syncfusion Flutter PDF Viewer',
                 style: TextStyle(color: Colors.black87),
               ),
-              actions: [
+              actions: <Widget>[
                 IconButton(
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.search,
                     color: Colors.black87,
                   ),
@@ -487,10 +487,10 @@ class _HomePage extends State<HomePage> {
                 ),
               ],
               automaticallyImplyLeading: false,
-              backgroundColor: Color(0xFFFAFAFA),
+              backgroundColor: const Color(0xFFFAFAFA),
             ),
       body: Stack(
-        children: [
+        children: <Widget>[
           SfPdfViewer.network(
             'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
             controller: _pdfViewerController,
@@ -505,15 +505,15 @@ class _HomePage extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Container(
-                    padding:
-                        EdgeInsets.only(left: 15, top: 7, right: 15, bottom: 7),
+                    padding: const EdgeInsets.only(
+                        left: 15, top: 7, right: 15, bottom: 7),
                     decoration: BoxDecoration(
                       color: Colors.grey[600],
-                      borderRadius: BorderRadius.all(
+                      borderRadius: const BorderRadius.all(
                         Radius.circular(16.0),
                       ),
                     ),
-                    child: Text(
+                    child: const Text(
                       'No result',
                       textAlign: TextAlign.center,
                       style: TextStyle(
@@ -538,7 +538,7 @@ typedef SearchTapCallback = void Function(Object item);
 /// SearchToolbar widget
 class SearchToolbar extends StatefulWidget {
   ///it describe the search toolbar constructor
-  SearchToolbar({
+  const SearchToolbar({
     this.controller,
     this.onTap,
     this.showTooltip = true,
@@ -599,15 +599,15 @@ class SearchToolbarState extends State<SearchToolbar> {
 
   ///Display the Alert dialog to search from the beginning
   void _showSearchAlertDialog(BuildContext context) {
-    showDialog(
+    showDialog<dynamic>(
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          insetPadding: EdgeInsets.all(0),
-          title: Text('Search Result'),
+          insetPadding: const EdgeInsets.all(0),
+          title: const Text('Search Result'),
           content: Container(
               width: 328.0,
-              child: Text(
+              child: const Text(
                   'No more occurrences found. Would you like to continue to search from the beginning?')),
           actions: <Widget>[
             TextButton(
@@ -620,7 +620,7 @@ class SearchToolbarState extends State<SearchToolbar> {
               child: Text(
                 'YES',
                 style: TextStyle(
-                    color: Color(0x00000000).withOpacity(0.87),
+                    color: const Color(0x00000000).withOpacity(0.87),
                     fontFamily: 'Roboto',
                     fontStyle: FontStyle.normal,
                     fontWeight: FontWeight.w500,
@@ -640,7 +640,7 @@ class SearchToolbarState extends State<SearchToolbar> {
               child: Text(
                 'NO',
                 style: TextStyle(
-                    color: Color(0x00000000).withOpacity(0.87),
+                    color: const Color(0x00000000).withOpacity(0.87),
                     fontFamily: 'Roboto',
                     fontStyle: FontStyle.normal,
                     fontWeight: FontWeight.w500,
@@ -662,7 +662,7 @@ class SearchToolbarState extends State<SearchToolbar> {
           child: IconButton(
             icon: Icon(
               Icons.arrow_back,
-              color: Color(0x00000000).withOpacity(0.54),
+              color: const Color(0x00000000).withOpacity(0.54),
               size: 24,
             ),
             onPressed: () {
@@ -675,7 +675,7 @@ class SearchToolbarState extends State<SearchToolbar> {
         Flexible(
           child: TextFormField(
             style: TextStyle(
-                color: Color(0x00000000).withOpacity(0.87), fontSize: 16),
+                color: const Color(0x00000000).withOpacity(0.87), fontSize: 16),
             enableInteractiveSelection: false,
             focusNode: focusNode,
             keyboardType: TextInputType.text,
@@ -684,9 +684,10 @@ class SearchToolbarState extends State<SearchToolbar> {
             decoration: InputDecoration(
               border: InputBorder.none,
               hintText: 'Find...',
-              hintStyle: TextStyle(color: Color(0x00000000).withOpacity(0.34)),
+              hintStyle:
+                  TextStyle(color: const Color(0x00000000).withOpacity(0.34)),
             ),
-            onChanged: (text) {
+            onChanged: (String text) {
               if (_searchTextLength < _editingController.value.text.length) {
                 setState(() {});
                 _searchTextLength = _editingController.value.text.length;
@@ -715,7 +716,7 @@ class SearchToolbarState extends State<SearchToolbar> {
           child: Material(
             color: Colors.transparent,
             child: IconButton(
-              icon: Icon(
+              icon: const Icon(
                 Icons.clear,
                 color: Color.fromRGBO(0, 0, 0, 0.54),
                 size: 24,
@@ -737,29 +738,32 @@ class SearchToolbarState extends State<SearchToolbar> {
         Visibility(
           visible: _showItem,
           child: Row(
-            children: [
+            children: <Widget>[
               Text(
                 '${_pdfTextSearchResult.currentInstanceIndex}',
                 style: TextStyle(
-                    color: Color.fromRGBO(0, 0, 0, 0.54).withOpacity(0.87),
+                    color:
+                        const Color.fromRGBO(0, 0, 0, 0.54).withOpacity(0.87),
                     fontSize: 16),
               ),
               Text(
                 ' of ',
                 style: TextStyle(
-                    color: Color.fromRGBO(0, 0, 0, 0.54).withOpacity(0.87),
+                    color:
+                        const Color.fromRGBO(0, 0, 0, 0.54).withOpacity(0.87),
                     fontSize: 16),
               ),
               Text(
                 '${_pdfTextSearchResult.totalInstanceCount}',
                 style: TextStyle(
-                    color: Color.fromRGBO(0, 0, 0, 0.54).withOpacity(0.87),
+                    color:
+                        const Color.fromRGBO(0, 0, 0, 0.54).withOpacity(0.87),
                     fontSize: 16),
               ),
               Material(
                 color: Colors.transparent,
                 child: IconButton(
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.navigate_before,
                     color: Color.fromRGBO(0, 0, 0, 0.54),
                     size: 24,
@@ -776,7 +780,7 @@ class SearchToolbarState extends State<SearchToolbar> {
               Material(
                 color: Colors.transparent,
                 child: IconButton(
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.navigate_next,
                     color: Color.fromRGBO(0, 0, 0, 0.54),
                     size: 24,

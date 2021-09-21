@@ -27,33 +27,30 @@ Next, import the `flutter_localizations` and `syncfusion_localizations` library 
 {% tabs %}
 {% highlight Dart %}
 
-import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:syncfusion_localizations/syncfusion_localizations.dart';
-
-@override
-Widget build(BuildContext context) {
-  return MaterialApp(
-    localizationsDelegates: [
-      GlobalMaterialLocalizations.delegate,
-      GlobalWidgetsLocalizations.delegate, 
-      SfGlobalLocalizations.delegate,
-    ],
-    supportedLocales: [
-      const Locale('fr'),
-      const Locale('ru'),
-      const Locale('ta'),
-    ],
-    locale: const Locale('fr'),
-    title: 'PDF Viewer Localization',
-    home: Scaffold(
-      appBar: AppBar(
-        title: Text('Syncfusion Flutter PDF Viewer'),
-      ),
-      body: SfPdfViewer.network(
-          'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf'),
-    ),
-  );
-}
+  @override
+  Widget build(BuildContext context) {
+      return MaterialApp(
+        localizationsDelegates:[
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          SfGlobalLocalizations.delegate,
+        ],
+        supportedLocales:const [
+          Locale('fr'),
+          Locale('ru'),
+          Locale('ta'),
+        ],
+        locale: const Locale('fr'),
+        title: 'PDF Viewer Localization',
+        home: Scaffold(
+          appBar: AppBar(
+            title: const Text('Syncfusion Flutter PdfViewer'),
+          ),
+          body: SfPdfViewer.network(
+              'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf'),
+        ),
+      );
+    }
 
 {% endhighlight %}
 {% endtabs %}

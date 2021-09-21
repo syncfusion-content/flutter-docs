@@ -30,10 +30,10 @@ void initState() {
 Widget build(BuildContext context) {
   return Scaffold(
     appBar: AppBar(
-      title: Text('Syncfusion Flutter PdfViewer'),
+      title: const Text('Syncfusion Flutter PdfViewer'),
       actions: <Widget>[
         IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.zoom_in,
             color: Colors.white,
           ),
@@ -65,10 +65,9 @@ By default, the `SfPdfViewer` will be zoomed in and out when double-tapped. You 
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-      body: Container(
-          child: SfPdfViewer.network(
+      body: SfPdfViewer.network(
               'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf', 
-              enableDoubleTapZooming: false)));
+              enableDoubleTapZooming: false));
 }
 
 {% endhighlight %}
@@ -96,13 +95,12 @@ The [PdfZoomDetails](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-      body: Container(
-          child: SfPdfViewer.network(
+      body: SfPdfViewer.network(
     'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
     onZoomLevelChanged: (PdfZoomDetails details) {
       print(details.newZoomLevel);
     },
-  )));
+  ));
 }
 
 {% endhighlight %}
