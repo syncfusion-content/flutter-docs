@@ -46,6 +46,9 @@ _AppointmentDataSource _getCalendarDataSource() {
 {% endhighlight %}
 {% endtabs %}
 
+>**NOTE**
+* It is not applicable for month view in mobile platform.
+
 ## onDragStart
 
 [onDragStart]() callback was called whenever the appointment starts to drag in the SfCalendar. The [AppointmentDragStartDetails]() arguments contains the dragging appointment and associated resource details. 
@@ -186,7 +189,8 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ## Disabling scroll when dragging appointment
-Using [allowScroll]() property you can handle the appointment dragging, whether scrolling (below/above) the calendar or not while dragging the appointment to the endpoint of the current view in Calendar. Default value of the [allowScroll]() property is true.
+
+You can restrict the timeslot views auto scroll when the appointment reaches the start/end point of the view port in the timeslot views of calendar by using the [allowScroll]() property of [dragdropsettings]().
 
 {% tabs %}
 {% highlight Dart %}
@@ -264,6 +268,9 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+>**NOTE**
+* It is not applicable for mobile platforms.
 
 ### onAppointmentResizeStart
 [onAppointmentResizeStart]() callback was called whenever the appointment starts to resizing in SfCalendar. The [AppointmentResizeStartDetails]() arguments contains the resizing appointment, and resource details. 
