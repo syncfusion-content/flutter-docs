@@ -90,7 +90,7 @@ Widget build(BuildContext context) {
 
 ![Horizontal scrolling](images/page-layout-and-scroll-direction/horizontal-scrolling.gif)
 
-In`Horizontal` scrolling, PDF pages can be scrolled from left to right. To enable the `Horizontal` scrolling in `SfPdfViewer`, use the following code sample.
+In `Horizontal` scrolling, PDF pages can be scrolled from left to right. To enable the `Horizontal` scrolling in `SfPdfViewer`, use the following code sample.
 
 {% tabs %}
 {% highlight Dart %}
