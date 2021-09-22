@@ -506,7 +506,7 @@ Widget build(BuildContext context) {
 
 ## All day panel background color
 
-All day panel background color can be customized by using the [allDayPanelColor]() property of `timeSlotViewSettings` in calendar.
+All day panel background color can be customized by using the [allDayPanelColor]() property of `timeSlotViewSettings` in the calendar.
 
 {% tabs %}
 {% highlight Dart %}
