@@ -163,7 +163,8 @@ void dragUpdate(AppointmentDragUpdateDetails appointmentDragUpdateDetails) {
 {% endtabs %}
 
 ## Disabling navigation when dragging appointment
-Using [allowNavigation]() property can handle the appointment dragging, whether navigate to next/previous view or not while dragging the appointment to the endpoint of the current view in calendar. Default value of the [allowNavigation]() property is true and calendar will navigate to next/previous view when dragging the appointment to the endpoint of the current view.
+
+You can restrict the dragging appointment navigation to the next/previous view when the appointment reaches the start/end point of the current view in calendar by using the [allowNavigation]() property of `DragDropSettings`. Default value of `allowNavigation` property is true.
 
 {% tabs %}
 {% highlight Dart %}
@@ -190,7 +191,7 @@ Widget build(BuildContext context) {
 
 ## Disabling scroll when dragging appointment
 
-You can restrict the timeslot views auto scroll when the appointment reaches the start/end point of the view port in the timeslot views of calendar by using the [allowScroll]() property of [dragdropsettings]().
+You can restrict the timeslot views auto scroll when the appointment reaches the start/end point of the view port in the timeslot views of calendar by using the [allowScroll]() property of [DragDropSettings]().
 
 {% tabs %}
 {% highlight Dart %}
@@ -245,7 +246,7 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ## Appointment resize
-[allowAppointmentResize]() property allows to reschedule the appointment by resizing the appointment in web view.
+[allowAppointmentResize]() property allows to reschedule the appointment by resizing the appointment in desktop platforms.
 
 {% tabs %}
 {% highlight Dart %}
