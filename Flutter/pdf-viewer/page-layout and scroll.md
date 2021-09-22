@@ -15,8 +15,8 @@ Page layout modes describe how the PDF page is displayed and, scrolling options 
 
 The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) supports the following page layout modes:
 
-*Continuous page layout mode
-*Single page layout mode
+* Continuous page layout mode
+* Single page layout mode
 
 N> Only `Horizontal` scrolling is supported in `Single` page layout mode.
 
@@ -63,8 +63,8 @@ N>
 
 The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) supports the following scrolling options:
 
-*Vertical scrolling
-*Horizontal scrolling
+* Vertical scrolling
+* Horizontal scrolling
 
 ## Vertical scrolling
 
