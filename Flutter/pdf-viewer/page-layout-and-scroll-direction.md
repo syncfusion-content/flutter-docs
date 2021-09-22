@@ -41,6 +41,8 @@ Widget build(BuildContext context) {
 
 ### Single page layout mode
 
+![Single page layout mode](images/page-layout-and-scroll-direction/page-by-page.gif)
+
 In `Single` page layout mode, PDFs will be displayed page by page horizontally. To enable the `Single` page layout mode in `SfPdfViewer`, use the following code sample.
 
 {% tabs %}
@@ -85,6 +87,8 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ### Horizontal scrolling
+
+![Horizontal scrolling](images/page-layout-and-scroll-direction/horizontal-scrolling.gif)
 
 In`Horizontal` scrolling, PDF pages can be scrolled from left to right. To enable the `Horizontal` scrolling in `SfPdfViewer`, use the following code sample.
 
