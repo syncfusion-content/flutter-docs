@@ -11,13 +11,13 @@ documentation: ug
 
 ## Table summary
 
-The `SfDataGrid` provides built-in support to display concise information about the rows by using table summary rows. The table summary value is calculated based on all the rows in the `DataGridSource.rows` property. You can add a table summary row to the datagrid by adding the `GridTableSummaryRow` to the `SfDataGrid.tableSummaryRows` collection.
+The `SfDataGrid` provides built-in support to display concise information about the rows by using the table summary rows. The table summary value is calculated based on all the rows in the `DataGridSource.rows` property. You can add a table summary row to the DataGrid by adding the `GridTableSummaryRow` to the `SfDataGrid.tableSummaryRows` collection.
 
 DataGrid does not automatically display the summary values. To display the summary value, you need to override the `buildTableSummaryCellWidget` method in the `DataGridSource` class. The calculated summary value is passed as a parameter to the `DataGridSource.buildTableSummaryCellWidget` method. So, you need to return the required widget with the summary value.
 
 ### Display table summary for row
 
-The summary information can be displayed in a row by setting the `GridTableSummaryRow.showSummaryInRow` property to `true` and defining the summary columns. The `GridTableSummaryRow.title` content will be displayed to the corresponding row. You must define the `GridTableSummaryRow.title` based on the `GridSummaryColumn.name` property to customize the summary value.
+The summary information can be displayed in a row by setting the `GridTableSummaryRow.showSummaryInRow` property to `true` and defining the summary columns. The `GridTableSummaryRow.title` content will be displayed in the corresponding row. You must define the `GridTableSummaryRow.title` based on the `GridSummaryColumn.name` property to customize the summary value.
 
 {% tabs %}
 {% highlight Dart %}
@@ -127,7 +127,7 @@ class EmployeeDataSource extends DataGridSource {
 
 ### Display table summary for column
 
-The summary information can be displayed in a column by setting the `GridTableSummaryRow.showSummaryInRow` property to `false`. You can define summary columns to the `GridTableSummaryRow` by adding `GridSummaryColumn` to the `GridTableSummaryRow.summaryColumns` collection. The `GridSummaryColumn` contains the following required properties,
+The summary information can be displayed in a column by setting the `GridTableSummaryRow.showSummaryInRow` property to `false`. You can define summary columns to the `GridTableSummaryRow` by adding the `GridSummaryColumn` to the `GridTableSummaryRow.summaryColumns` collection. The `GridSummaryColumn` contains the following required properties:
 
 * **`name`**: Defines the corresponding column name for the summary calculation. This should be the same value as the `GridColumn.columnName` property.
 * **`columnName`**: Defines the corresponding column name for the summary calculation.
@@ -359,17 +359,17 @@ class EmployeeDataSource extends DataGridSource {
 
 ### Summary calculation types
 
-The following calculation types are supported for the summary calculation,
+The following calculation types are supported for the summary calculation:
 
 * **`Sum`**: Calculate the sum of a column
 * **`Average`**: Calculate the average of a column.
-* **`Count`**:  Calculate the total of rows in `SfDataGrid`.
-* **`Maximum`**:  Calculate the maximum value in a column.
+* **`Count`**: Calculate the total of rows in `SfDataGrid`.
+* **`Maximum`**: Calculate the maximum value in a column.
 * **`Minimum`**: Calculate the minimum value in a column.
 
 ### Display table summary row with title
 
-SfDataGrid supports to display column's summary value along with the title by defining the `GridTableSummaryRow.title` and `GridTableSummaryRow.titleColumnCount` property along with the summary columns. Showing column summary with the title can be supported only if the `GridSummaryRow.showSummaryInRow` is `false`. The `GridTableSummaryRow.titleColumnCount` property defines that how long the title should be spanned in the corresponding summary row.
+The SfDataGrid supports to display columns’ summary value along with the title by defining the `GridTableSummaryRow.title` and `GridTableSummaryRow.titleColumnCount` properties along with the summary columns. Showing a column summary with the title can be supported, only if the `GridSummaryRow.showSummaryInRow` is `false`. The `GridTableSummaryRow.titleColumnCount` property defines that how long the title should be spanned in the corresponding summary row.
 
 {% tabs %}
 {% highlight Dart %}
@@ -598,9 +598,9 @@ class EmployeeDataSource extends DataGridSource {
 
 ### Customize table summary calculation
 
-You can write the custom logic for the summary calculation by overriding the `calculateSummaryValue` method from `DataGridSource` class. The `summaryColumn` parameter will be null for the summary cells for the spanned summary columns.
+You can write the custom logic for the summary calculation by overriding the `calculateSummaryValue` method from the `DataGridSource` class. The `summaryColumn` parameter will be null for the summary cells in the spanned summary columns.
 
-The following example demonstrates how to customize the summary calculation to find standard deviation for the salaries of all the employees.
+The following example demonstrates how to customize the summary calculation to find the standard deviation for all employees' salaries.
 
 {% tabs %}
 {% highlight Dart %}
