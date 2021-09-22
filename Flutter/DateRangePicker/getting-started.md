@@ -184,7 +184,6 @@ You can display action buttons at the bottom of the date range picker by using t
 ![showActionButtons](images/getting-started/confirm_and_cancel_buttons.png)  
   
 ## Today button
-
 The today button can be displayed at the bottom of the date range picker by using the[showTodayButton]() property of the `DateRangePicker`. It easily moves to the current date of the picker view.
 
 {% tabs %}
@@ -202,6 +201,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![todayButton](images/getting-started/todayButton.jpg)  
 
 ## See also
 

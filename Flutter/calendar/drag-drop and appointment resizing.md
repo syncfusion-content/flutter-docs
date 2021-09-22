@@ -29,22 +29,10 @@ Widget build(BuildContext context) {
   );
 }
 
-_AppointmentDataSource _getCalendarDataSource() {
-  List<Appointment> appointments = <Appointment>[];
-  appointments.add(Appointment(
-    startTime: DateTime.now(),
-    endTime: DateTime.now().add(Duration(minutes: 10)),
-    subject: 'Meeting',
-    color: Colors.blue,
-    startTimeZone: '',
-    endTimeZone: '',
-  ));
-
-  return _AppointmentDataSource(appointments);
-}
-
 {% endhighlight %}
 {% endtabs %}
+
+![drag_and_drop](images/appointments/dragdrop.gif)
 
 >**NOTE**
 * It is not applicable for month view in mobile platform.
@@ -259,7 +247,6 @@ Widget build(BuildContext context) {
         child: SfCalendar(
           view: CalendarView.week,
           dataSource: _getCalendarDataSource(),
-		  allowDragAndDrop: true,
 		  allowAppointmentResize: true
         ),
       ),
@@ -269,6 +256,8 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+![appointment_resizing](images/appointments/appointment_resize.gif)
 
 >**NOTE**
 * It is not applicable for mobile platforms.
