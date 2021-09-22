@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Page layout and Scrolling options in Flutter PDF Viewer widget
+title: Page layout and Scrolling options in Flutter PDF Viewer | Syncfusion
 description: Learn here all about Page layout and Scrolling options feature of Syncfusion Flutter PDF Viewer (SfPdfViewer) widget and more.
 platform: Flutter
 control: SfPdfViewer
