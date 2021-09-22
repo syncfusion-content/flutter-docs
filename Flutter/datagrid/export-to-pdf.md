@@ -47,7 +47,7 @@ You can export the `SfDataGrid` to PDF by using the following extension methods 
 
 **Add GlobalKey for the DataGrid**
  
-Create the [GlobalKey](https://api.flutter.dev/flutter/widgets/GlobalKey-class.html) using the [SfDataGridState](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGridState-class.html) class. The `SfDataGridState` class allows you to export related methods.
+Create the [GlobalKey](https://api.flutter.dev/flutter/widgets/GlobalKey-class.html) using the [SfDataGridState](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGridState-class.html) class. Exporting related methods are available via `SfDataGridState` class.
 
 Set the created `GlobalKey` to the `SfDataGrid`.
 
