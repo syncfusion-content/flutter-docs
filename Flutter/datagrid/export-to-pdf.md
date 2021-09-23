@@ -9,19 +9,19 @@ documentation: ug
 
 # Export Flutter DataGrid to PDF (SfDataGrid)
 
-The [SfDataGrid] (https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) provides support to export the content to PDF document with several customization options. 
+The [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) provides support to export the content to PDF document with several customization options. 
 
 **Add dependency**
 
 The following dependencies must be added to your pubspec.yaml file for exporting to PDF.
   
-  {% highlight dart %} 
+{% highlight dart %} 
 
-    dependencies:
+dependencies:
 
-    syncfusion_flutter_datagrid_export: ^xx.x.xx
+syncfusion_flutter_datagrid_export: ^xx.x.xx
 
-  {% endhighlight %}
+{% endhighlight %}
 
   >**NOTE** Here, **xx.x.xx** denotes the current version of `Syncfusion Flutter DataGrid Export` package.
 
@@ -29,15 +29,15 @@ The following dependencies must be added to your pubspec.yaml file for exporting
 
 Import the following package in your Dart code.
 
- {% tabs %}
- {% highlight Dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
-    import 'package:syncfusion_flutter_datagrid_export/export.dart';
+import 'package:syncfusion_flutter_datagrid_export/export.dart';
 
-    import 'package:syncfusion_flutter_pdf/pdf.dart';
+import 'package:syncfusion_flutter_pdf/pdf.dart';
 
- {% endhighlight %}
- {% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 You can export the `SfDataGrid` to PDF by using the following extension methods present in the `SfDataGridState` class:
@@ -51,89 +51,82 @@ Create the [GlobalKey](https://api.flutter.dev/flutter/widgets/GlobalKey-class.h
 
 Set the created `GlobalKey` to the `SfDataGrid`.
 
- {% tabs %}
- {% highlight Dart %}
+{% tabs %}
+{% highlight Dart %}
 
-    final GlobalKey<SfDataGridState> key = GlobalKey<SfDataGridState>();
+final GlobalKey<SfDataGridState> key = GlobalKey<SfDataGridState>();
     
- {% endhighlight %}
- {% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 The following code illustrates how to create and display a `SfDataGrid` using the global key.
 
- {% tabs %}
- {% highlight Dart %}
+{% tabs %}
+{% highlight Dart %}
 
-    GlobalKey<SfDataGridState> key = GlobalKey<SfDataGridState>();
+GlobalKey<SfDataGridState> key = GlobalKey<SfDataGridState>();
 
-    @override
-    Widget build(BuildContext context) {
-       return Scaffold(
-        body: Column(
-         children: [
-            ElevatedButton(
-              child: Text('Export To Pdf'),
-               onPressed: () {
-                 PdfDocument document = key.currentState!.exportToPdfDocument();
-              }),
-            Expanded(
-              child: SfDataGrid(
-                source: _employeeDataSource,
-                key: key,
-                columns: [ 
-                  GridColumn(
-                    columnName: 'ID',
-                    label: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 16.0),
-                    alignment: Alignment.center,
-                    child: Text(
-                    'ID',
-                    style: TextStyle(
-                    fontWeight: FontWeight.bold, fontStyle: FontStyle.normal),
-                   overflow: TextOverflow.ellipsis,
-                  ))),
-                 GridColumn(
-                   columnName: 'Name',
-                   label: Container(
-                   padding: EdgeInsets.symmetric(horizontal: 16.0),
-                   alignment: Alignment.center,
-                   child: Text(
-                   'Name',
-                   style: TextStyle(
-                   fontWeight: FontWeight.bold, fontStyle: FontStyle.normal),
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-                 GridColumn(
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: Column(
+      children: [
+        ElevatedButton(
+            child: Text('Export To Pdf'),
+            onPressed: () {
+              PdfDocument document = _key.currentState!.exportToPdfDocument()
+              final List<int> bytes = document.save();
+            }),
+        Expanded(
+          child: SfDataGrid(
+            source: _employeeDataSource,
+            columns: [
+              GridColumn(
+                  columnName: 'ID',
+                  label: Container(
+                      padding: EdgeInsets.symmetric(horizontal: 16.0),
+                      alignment: Alignment.center,
+                      child: Text(
+                        'ID',
+                        overflow: TextOverflow.ellipsis,
+                      ))),
+              GridColumn(
+                  columnName: 'Name',
+                  label: Container(
+                      padding: EdgeInsets.symmetric(horizontal: 16.0),
+                      alignment: Alignment.center,
+                      child: Text(
+                        'Name',
+                        overflow: TextOverflow.ellipsis,
+                      ))),
+              GridColumn(
                   columnName: 'Designation',
                   label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.center,
-                  child: Text(
-                  'Designation',
-                  style: TextStyle(
-                  fontWeight: FontWeight.bold, fontStyle: FontStyle.normal),
-                  overflow: TextOverflow.ellipsis,
-                 ))),
-                 GridColumn(
+                      padding: EdgeInsets.symmetric(horizontal: 16.0),
+                      alignment: Alignment.center,
+                      child: Text(
+                        'Designation',
+                        overflow: TextOverflow.ellipsis,
+                      ))),
+              GridColumn(
                   columnName: 'Salary',
-                  visible: true,
                   label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.center,
-                  child: Text(
-                  'Salary',
-                   style: TextStyle(
-                   fontWeight: FontWeight.bold, fontStyle: FontStyle.normal),
-                   overflow: TextOverflow.ellipsis,
-                ))),
-              ],
-              )),
+                      padding: EdgeInsets.symmetric(horizontal: 16.0),
+                      alignment: Alignment.center,
+                      child: Text(
+                        'Salary',
+                        overflow: TextOverflow.ellipsis,
+                      ))),
             ],
-          ));
-      }
+          ),
+        ),
+      ],
+    ),
+  );
+}
 
- {% endhighlight %}
- {% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Export DataGrid to PDF document
 
@@ -142,9 +135,9 @@ You can export the data to [PdfDocument](https://pub.dev/documentation/syncfusio
 {% tabs %}
 {% highlight Dart %}
 
-    PdfDocument document = key.currentState!.exportToPdfDocument();
-    final List<int> bytes = document.save();
-    File('DataGrid.pdf').writeAsBytes(bytes);
+PdfDocument document = key.currentState!.exportToPdfDocument();
+final List<int> bytes = document.save();
+File('DataGrid.pdf').writeAsBytes(bytes);
   
 {% endhighlight %}
 {% endtabs %}
@@ -156,15 +149,15 @@ You can export the data to [PdfGrid](https://pub.dev/documentation/syncfusion_fl
 {% tabs %}
 {% highlight Dart %}
 
-    PdfDocument document = PdfDocument();
-    PdfPage pdfPage = document.pages.add();
-    PdfGrid pdfGrid = key.currentState!.exportToPdfGrid();
-    pdfGrid.draw(
-     page: pdfPage,
-      bounds: Rect.fromLTWH(0, 0, 0, 0),
-    );
-    final List<int> bytes = document.save();
-    File('DataGrid.pdf').writeAsBytes(bytes);
+PdfDocument document = PdfDocument();
+PdfPage pdfPage = document.pages.add();
+PdfGrid pdfGrid = key.currentState!.exportToPdfGrid();
+pdfGrid.draw(
+ page: pdfPage,
+ bounds: Rect.fromLTWH(0, 0, 0, 0),
+);
+final List<int> bytes = document.save();
+File('DataGrid.pdf').writeAsBytes(bytes);
   
 {% endhighlight %}
 {% endtabs %}
@@ -178,8 +171,8 @@ By default, all the columns in the SfDataGrid are exported to PDF. To exclude so
 {% tabs %}
 {% highlight Dart %}
 
-     PdfDocument document = key.currentState!.exportToPdfDocument( excludeColumns: ['Name']);
-     final List<int> bytes = document.save();
+PdfDocument document = key.currentState!.exportToPdfDocument( excludeColumns: ['Name']);
+final List<int> bytes = document.save();
      
 {% endhighlight %}
 {% endtabs %}
@@ -193,8 +186,8 @@ You can disable the column headers on each page by setting the `canRepeatHeaders
 {% tabs %}
 {% highlight Dart %}
 
-     PdfDocument document = key.currentState!.exportToPdfDocument(canRepeatHeaders:false);
-     final List<int> bytes = document.save();
+PdfDocument document = key.currentState!.exportToPdfDocument(canRepeatHeaders: false);
+final List<int> bytes = document.save();
 
 {% endhighlight %}
 {% endtabs %}
@@ -206,8 +199,8 @@ You can fit all the columns in one page by setting the `fitAllColumnsInOnePage` 
 {% tabs %}
 {% highlight Dart %}
 
-     PdfDocument document = key.currentState!.exportToPdfDocument(fitAllColumnsInOnePage:true);
-     final List<int> bytes = document.save();
+PdfDocument document = key.currentState!.exportToPdfDocument(fitAllColumnsInOnePage: true);
+final List<int> bytes = document.save();
 
 {% endhighlight %}
 {% endtabs %}
@@ -219,8 +212,8 @@ By default, table summaries in `SfDataGrid` are exported to PDF. Set the `export
 {% tabs %}
 {% highlight Dart %}
 
-     PdfDocument document = key.currentState!.exportToPdfDocument(exportTableSummaries:false);
-     final List<int> bytes = document.save();
+PdfDocument document = key.currentState!.exportToPdfDocument(exportTableSummaries: false);
+final List<int> bytes = document.save();
 
 {% endhighlight %}
 {% endtabs %}
@@ -233,8 +226,8 @@ By default, stacked headers in `SfDataGrid` are exported to PDF. Set the `export
 {% tabs %}
 {% highlight Dart %}
 
-     PdfDocument document = key.currentState!.exportToPdfDocument(exportStackedHeaders:false);
-     final List<int> bytes = document.save();
+PdfDocument document = key.currentState!.exportToPdfDocument(exportStackedHeaders: false);
+final List<int> bytes = document.save();
 
 {% endhighlight %}
 {% endtabs %}
@@ -246,8 +239,8 @@ In order, to export the actual column width from `SfDataGrid` instead of the aut
 {% tabs %}
 {% highlight Dart %}
 
-     PdfDocument document = key.currentState!.exportToPdfDocument(autoColumnWidth:false);
-     final List<int> bytes = document.save();
+PdfDocument document = key.currentState!.exportToPdfDocument(autoColumnWidth: false);
+final List<int> bytes = document.save();
 
 {% endhighlight %}
 {% endtabs %}
@@ -265,14 +258,14 @@ To change the page orientation, you need to export the `SfDataGrid` to `PdfGrid`
 {% tabs %}
 {% highlight Dart %}
 
-    PdfDocument pdfDocument = PdfDocument();
-    pdfDocument.pageSettings.orientation = PdfPageOrientation.landscape;
-    PdfPage pdfPage = pdfDocument.pages.add();
-    PdfGrid pdfGrid = key.currentState!.exportToPdfGrid();
-    pdfGrid.draw(
-     page: pdfPage,
-     bounds: Rect.fromLTWH(0, 0, 0, 0));
-    final List<int> bytes = document.save();
+PdfDocument document = PdfDocument();
+document.pageSettings.orientation = PdfPageOrientation.landscape;
+PdfPage pdfPage = document.pages.add();
+PdfGrid pdfGrid = key.currentState!.exportToPdfGrid();
+pdfGrid.draw(
+  page: pdfPage,
+  bounds: Rect.fromLTWH(0, 0, 0, 0));
+final List<int> bytes = document.save();
   
 {% endhighlight %}
 {% endtabs %}
@@ -284,8 +277,8 @@ By default, entire grid is exported to PDF. You can export selected rows only by
 {% tabs %}
 {% highlight Dart %}
 
-    PdfDocument document = key.currentState!.exportToPdfDocument(rows: dataGridController.selectedRows,);
-    final List<int> bytes = document.save();
+PdfDocument document = key.currentState!.exportToPdfDocument(rows: dataGridController.selectedRows,);
+final List<int> bytes = document.save();
 
 {% endhighlight %}
 {% endtabs %}
@@ -299,22 +292,20 @@ Setting the `PdfPageTemplateElement` to `headerFooterExport.pdfDocumentTemplate.
 {% tabs %}
 {% highlight Dart %}
 
-    PdfDocument document = key.currentState!.exportToPdfDocument(
-         headerFooterExport:
-          (DataGridPdfHeaderFooterExportDetails headerFooterExport) {
-        final double width = headerFooterExport.pdfPage.getClientSize().width;
-        final PdfPageTemplateElement header =
-            PdfPageTemplateElement(Rect.fromLTWH(0, 0, width, 65));
-        header.graphics.drawString(
-          'Company Details',
-          PdfStandardFont(PdfFontFamily.helvetica, 13,
-              style: PdfFontStyle.bold),
-          bounds: const Rect.fromLTWH(0, 25, 200, 60),
-        );
-        headerFooterExport.pdfDocumentTemplate.top = header;
-      },
+PdfDocument document = key.currentState!.exportToPdfDocument(
+    headerFooterExport: (DataGridPdfHeaderFooterExportDetails headerFooterExport) {
+      final double width = headerFooterExport.pdfPage.getClientSize().width;
+      final PdfPageTemplateElement header = PdfPageTemplateElement(Rect.fromLTWH(0, 0, width, 65));
+      header.graphics.drawString(
+        'Company Details',
+        PdfStandardFont(PdfFontFamily.helvetica, 13, style: PdfFontStyle.bold),
+        bounds: const Rect.fromLTWH(0, 25, 200, 60),
       );
-      final List<int> bytes = document.save();
+      headerFooterExport.pdfDocumentTemplate.top = header;
+    },
+);
+final List<int> bytes = document.save();
+
 
 {% endhighlight %}
 {% endtabs %}
@@ -328,17 +319,15 @@ You can customize the cell styles based on cell type using the `cellExport` para
 {% tabs %}
 {% highlight Dart %}
 
-    PdfDocument document = key.currentState!.exportToPdfDocument(
-      cellExport:(details){
-           if (details.cellType == DataGridExportCellType.columnHeader) {
-            details.pdfCell.style.backgroundBrush = PdfBrushes.pink;
-           }
-            if (details.cellType == DataGridExportCellType.row) {
-            details.pdfCell.style.backgroundBrush = PdfBrushes.lightCyan;
-           }
-      },
-    );
-    final List<int> bytes = document.save();
+PdfDocument document = key.currentState!.exportToPdfDocument(cellExport: (details) {
+    if (details.cellType == DataGridExportCellType.columnHeader) {
+      details.pdfCell.style.backgroundBrush = PdfBrushes.pink;
+    }
+    if (details.cellType == DataGridExportCellType.row) {
+      details.pdfCell.style.backgroundBrush = PdfBrushes.lightCyan;
+    }
+});
+final List<int> bytes = document.save();
 
 {% endhighlight %}
 {% endtabs %}
@@ -354,17 +343,15 @@ The cell value can be customized while exporting to PDF by directly setting the 
 {% tabs %}
 {% highlight Dart %}
 
-    PdfDocument document = key.currentState!.exportToPdfDocument(
-      cellExport:(details){
-          if (details.cellType == DataGridExportCellType.row &&
-            details.columnName == 'Designation') {
-          if (details.cellValue == 'Project Lead') {
-            details.pdfCell.value = 'Lead';
-          } 
-        }
-      }
-    );
-    final List<int> bytes = document.save();
+PdfDocument document = key.currentState!.exportToPdfDocument(cellExport: (details) {
+   if (details.cellType == DataGridExportCellType.row &&
+       details.columnName == 'Designation') {
+     if (details.cellValue == 'Project Lead') {
+       details.pdfCell.value = 'Lead';
+     }
+   }    
+});
+final List<int> bytes = document.save();
 
 {% endhighlight %}
 {% endtabs %}
@@ -378,14 +365,13 @@ You can customize the column style based on the column name while exporting to P
 {% tabs %}
 {% highlight Dart %}
 
-    PdfDocument document = key.currentState!.exportToPdfDocument(
-      cellExport:(details){
-         if (details.cellType == DataGridExportCellType.row && details.columnName == 'Customer Name') {
-          details.pdfCell.style.textBrush = PdfBrushes.red;
-        }
-      }
-    );
-    final List<int> bytes = document.save();
+PdfDocument document = key.currentState!.exportToPdfDocument(cellExport: (details) {
+    if (details.cellType == DataGridExportCellType.row && details.columnName == 'Customer Name') {
+     details.pdfCell.style.textBrush = PdfBrushes.red;
+    }
+  }
+);
+final List<int> bytes = document.save();
 
 {% endhighlight %}
 {% endtabs %}
@@ -397,43 +383,38 @@ You can customize the exporting behavior by overriding the available methods in 
 {% tabs %}
 {% highlight Dart %}
 
-    Class CustomDataGridToPdfConverter extends DataGridToPdfConverter{
-     
-      @override
-      void exportColumnHeader(SfDataGrid dataGrid, GridColumn column,
+class CustomDataGridToPdfConverter extends DataGridToPdfConverter {
+  @override
+  void exportColumnHeader(SfDataGrid dataGrid, GridColumn column,
       String columnName, PdfGrid pdfGrid) {
+    // TODO: Add your requirements column header
 
-            // TODO: Add your requirements column header
+    super.exportColumnHeader(dataGrid, column, columnName, pdfGrid);
+  }
 
-       super.exportColumnHeader(dataGrid, column, columnName, pdfGrid);
-     }
-
-     @override
-     void exportColumnHeaders(
+  @override
+  void exportColumnHeaders(
       SfDataGrid dataGrid, List<GridColumn> columns, PdfGrid pdfGrid) {
+    // TODO: Add your requirements column headers
 
-            // TODO: Add your requirements column headers
+    super.exportColumnHeaders(dataGrid, columns, pdfGrid);
+  }
 
-       super.exportColumnHeaders(dataGrid, columns, pdfGrid);
-     }
+  @override
+  void exportRows(
+      List<GridColumn> columns, List<DataGridRow> rows, PdfGrid pdfGrid) {
+    // TODO: Add your requirements in exportRows
 
-     @override
-     void exportRows(
-       List<GridColumn> columns, List<DataGridRow> rows, PdfGrid pdfGrid) {
+    super.exportRows(columns, rows, pdfGrid);
+  }
 
-            // TODO: Add your requirements in exportRows
-       
-        super.exportRows(columns, rows, pdfGrid);
-     }
+  @override
+  void exportRow(List<GridColumn> columns, DataGridRow row, PdfGrid pdfGrid) {
+    // TODO: Add your requirements in exportRow
 
-      @override
-      void exportRow(List<GridColumn> columns, DataGridRow row, PdfGrid pdfGrid) {
-        
-            // TODO: Add your requirements in exportRow
-
-        super.exportRow(columns, row, pdfGrid);
-      } 
-    }
+    super.exportRow(columns, row, pdfGrid);
+  }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -442,12 +423,10 @@ The following code sample illustrates how to create an instance of `CustomDataGr
 {% tabs %}
 {% highlight Dart %}
 
-    CustomDataGridToPdfConverter customDataGridToPdfConverter = CustomDataGridToPdfConverter();
+CustomDataGridToPdfConverter customDataGridToPdfConverter = CustomDataGridToPdfConverter();
 
-    PdfDocument document = key.currentState!.exportToPdfDocument(
-      converter: customDataGridToPdfConverter,
-    );
-    final List<int> bytes = document.save();
+PdfDocument document = key.currentState!.exportToPdfDocument(converter: customDataGridToPdfConverter);
+final List<int> bytes = document.save();
 
 {% endhighlight %}
 {% endtabs %}
