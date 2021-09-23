@@ -182,7 +182,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-### Checkbox column
+## Checkbox column
 
 By setting the `showCheckboxColumn` property to `true`, you can select or deselect individual rows using checkboxes in each row. The checkbox column will be added as first column.
 
@@ -243,7 +243,7 @@ Widget build(BuildContext context) {
 
 ![flutter datagrid show checkbox column](images/column-types/flutter-datagrid-show-checkbox-column.png)
 
-#### Show text in header cell
+### Show text in header cell
 
 You can display widgets along with the checkbox in the header cell by adding widget to the `SfDataGrid.checkboxColumnSettings.label` property.
 
@@ -304,7 +304,7 @@ Widget build(BuildContext context) {
 
 ![flutter datagrid shows text in checkbox column header](images/column-types/flutter-datagrid-shows-text-in-checkbox-column-header.png)
 
-#### Disable the checkbox in the header cell
+### Disable the checkbox in the header cell
 
 By default, checkBox gets displayed in the header cell. By disabling the `SfDataGrid.checkboxColumnSettings.showCheckboxOnHeader` property, checkBox can be disappeared in the header cell.
 
@@ -365,7 +365,7 @@ Widget build(BuildContext context) {
 
 ![checkbox is disabled in checkbox column header in flutter datagrid](images/column-types/checkbox-is-disabled-in-checkbox-column-header-in-flutter-datagrid.png)
 
-#### Change the background color of checkbox column
+### Change the background color of checkbox column
 
 The background color of the checkbox column can be customized by using the `SfDataGrid.checkboxColumnSettings.backgroundColor` property.
 
@@ -426,7 +426,7 @@ Widget build(BuildContext context) {
 
 ![background color in checkbox column in flutter datagrid](images/column-types/background-color-in-checkbox-column-in-flutter-datagrid.png)
 
-#### Get checked items
+### Get checked items
 
 You can get the checked items by using the [DataGridController.selectedRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridController/selectedRows.html) property. Because, the selection and checkbox's checked state are the same.
 
@@ -505,7 +505,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-#### Limitations
+### Limitations
 
 The following are the limitations of GridCheckboxColumn:
 
