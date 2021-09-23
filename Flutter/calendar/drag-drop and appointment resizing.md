@@ -41,7 +41,7 @@ Widget build(BuildContext context) {
 
 [onDragStart]() callback was called whenever the appointment starts to drag in the SfCalendar. The [AppointmentDragStartDetails]() arguments contains the dragging appointment and associated resource details. 
 
-[Appointment]() - Get the dragged appointment details. 
+[appointment]() - Get the dragged appointment details. 
 [Resource]() - Get the resource details.
 
 {% tabs %}
@@ -75,11 +75,11 @@ void dragStart(AppointmentDragStartDetails appointmentDragStartDetails) {
 
 [onDragUpdate]() callback was called whenever the appointment is dragging in the SfCalendar. The [AppointmentDragUpdateDetails]() arguments contains the dragging appointment, dragging time, dragging offset, source resource and target resource details. 
 
-[Appointment]() - Get the dragged appointment details. 
-[Dragging time]() - Get the resource details.
-[Dragging offset]() - Get the drag position.
-[SourceResource]() - Get the source resource details.
-[Target resource]() - Get the resource details.
+[appointment]() - Get the dragged appointment details. 
+[draggingTime]() - Get the resource details.
+[draggingPosition]() - Get the drag position.
+[sourceResource]() - Get the source resource details.
+[targetResource]() - Get the resource details.
 
 {% tabs %}
 {% highlight Dart %}
@@ -103,7 +103,7 @@ Widget build(BuildContext context) {
 void dragUpdate(AppointmentDragUpdateDetails appointmentDragUpdateDetails) {
   dynamic appointment = appointmentDragUpdateDetails.appointment;
   DateTime? draggingTime = appointmentDragUpdateDetails.draggingTime;
-  Offset> draggingOffset = appointmentDragUpdateDetails.draggingPosition;
+  Offset? draggingOffset = appointmentDragUpdateDetails.draggingPosition;
   CalendarResource? sourceResource = appointmentDragUpdateDetails.sourceResource;
   CalendarResource? targetResource = appointmentDragUpdateDetails.targetResource;
 }
@@ -115,10 +115,10 @@ void dragUpdate(AppointmentDragUpdateDetails appointmentDragUpdateDetails) {
 
 [onDragEnd]() callback called when the dragging appointment is dropped in the SfCalendar. The [AppointmentDragEndDetails]() arguments contains the dropped appointment, dropping time, source and target resource details. 
 
-[Appointment]() - Get the dragged appointment details. 
-[Dropping time]() - Get the resource details.
-[Resource]() - Get the resource details.
-[Target resource]() - Get the target resource details.
+[appointment]() - Get the dragged appointment details. 
+[droppingTime]() - Get the resource details.
+[sourceResource]() - Get the resource details.
+[targetResource]() - Get the target resource details.
 
 {% tabs %}
 {% highlight Dart %}
@@ -258,7 +258,7 @@ Widget build(BuildContext context) {
 
 ## Customize appearance of dragging Time Indicator
 
-Using [timeIndicatorStyle]() property you can handle the time indicator style which contains `backgroundColor`, `color` and `fontSize`. Also using [indicatorTimeFormat]() property you can change the time format of the indicator.
+Using [timeIndicatorStyle]() property you can customize the text style of the time indicator. Also using [indicatorTimeFormat]() property you can customize the indicator time format.
 
 {% tabs %}
 {% highlight Dart %}
@@ -323,8 +323,8 @@ Widget build(BuildContext context) {
 
 ### onAppointmentResizeStart
 [onAppointmentResizeStart]() callback was called whenever the appointment starts to resizing in SfCalendar. The [AppointmentResizeStartDetails]() arguments contains the resizing appointment, and resource details. 
-[Resizing appointment]() - Get the resizing appointment details.
-[Resource]() - Get the resource details.
+[appointment]() - Get the resizing appointment details.
+[resource]() - Get the resource details.
 
 {% tabs %}
 {% highlight Dart %}
@@ -354,10 +354,10 @@ void resizeStart(AppointmentResizeStartDetails appointmentResizeStartDetails) {
 {% endtabs %}
 
 ### onAppointmentResizeUpdate
-[onAppointmentResizeUpdate]() callback was called whenever the appointment resizing in SfCalendar. The [onAppointmentResizeUpdate]() arguments contains the resizing appointment, resizing time, resizing offset and resource details. 
+[onAppointmentResizeUpdate]() callback was called whenever the appointment resizing in SfCalendar. The [AppointmentResizeUpdateDetails]() arguments contains the resizing appointment, resizing time, resizing offset and resource details. 
 
-[Resizing appointment]() - Get the resize appointment.
-[Resizing time]() - Get the resize appointment time.
+[appointment]() - Get the resize appointment.
+[resizingTime]() - Get the resize appointment time.
 [Resizing offset]() - Get the offset value.
 [Resource details]() - Get the resource details.
 
@@ -391,12 +391,12 @@ void resizeUpdate(AppointmentResizeUpdateDetails appointmentResizeUpdateDetails)
 {% endtabs %}
 
 ### onAppointmentResizeEnd
-[onAppointmentResizeEnd]() callback was called whenever the appointment resizing end in the SfCalendar. The [onAppointmentResizeEnd]()  arguments contains the resized appointment, start time, end time and resource details. 
+[onAppointmentResizeEnd]() callback was called whenever the appointment resizing end in the SfCalendar. The [AppointmentResizeEndDetails]() arguments contains the resized appointment, start time, end time and resource details. 
 
-[Resized appointment]() - Get the resized appointment details.
-[Start time]() -  Get the start time.
-[End time]() - Get the end time.
-[Resource details]() - Get the resource details.
+[appointment]() - Get the resized appointment details.
+[startTime]() -  Get the start time.
+[endTime]() - Get the end time.
+[resource]() - Get the resource details.
 
 {% tabs %}
 {% highlight Dart %}
