@@ -13,7 +13,7 @@ The [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/lates
 
 **Add dependency**
 
-The following dependencies should be added to your pubspec.yaml file for exporting to Excel.
+The following dependencies must be added to your pubspec.yaml file for exporting to the Excel.
   
   {% highlight dart %} 
 
@@ -23,7 +23,7 @@ The following dependencies should be added to your pubspec.yaml file for exporti
 
   {% endhighlight %}
 
-  >**NOTE** Here **xx.x.xx** denotes the current version of `Syncfusion Flutter DataGrid Export` package.
+  >**NOTE** Here, **xx.x.xx** denotes the current version of `Syncfusion Flutter DataGrid Export` package.
 
 **Import package**
 
@@ -39,7 +39,7 @@ Import the following package in your Dart code.
  {% endhighlight %}
  {% endtabs %}
 
-You can export the `SfDataGrid` to Excel by using the following extension methods present in the `SfDataGridState` class.
+You can export the `SfDataGrid` to the Excel by using the following extension methods present in the `SfDataGridState` class.
 
 * `exportToExcelWorkbook`
 * `exportToExcelWorksheet`
@@ -47,7 +47,7 @@ You can export the `SfDataGrid` to Excel by using the following extension method
 
 **Add GlobalKey for the DataGrid**
  
-Create the [GlobalKey](https://api.flutter.dev/flutter/widgets/GlobalKey-class.html) with the [SfDataGridState](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGridState-class.html) class. Exporting related methods are available in the `SfDataGridState` class.
+Create the [GlobalKey](https://api.flutter.dev/flutter/widgets/GlobalKey-class.html) using the [SfDataGridState](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGridState-class.html) class. Exporting related methods are available in the `SfDataGridState` class.
 
 Set the created `GlobalKey` to the `SfDataGrid`.
 
@@ -59,7 +59,7 @@ final GlobalKey<SfDataGridState> key = GlobalKey<SfDataGridState>();
 {% endhighlight %}
 {% endtabs %}
 
-The following code illustrates how to create and export a `SfDataGrid` to the Excel with the global key.
+The following code illustrates how to create and export a `SfDataGrid` to the Excel using the global key.
 
  {% tabs %}
  {% highlight Dart %}
@@ -144,7 +144,7 @@ Widget build(BuildContext context) {
 
 ## Export DataGrid to Excel workbook
 
-You can export the data to [Excel Workbook](https://pub.dev/documentation/syncfusion_flutter_xlsio/latest/xlsio/Workbook-class.html) by using the `exportToExcelWorkbook` method from `key.currentState` of the datagrid.
+You can export the data to [Excel Workbook](https://pub.dev/documentation/syncfusion_flutter_xlsio/latest/xlsio/Workbook-class.html) by using the `exportToExcelWorkbook` method from the `key.currentState` of the DataGrid.
 
 {% tabs %}
 {% highlight Dart %}
@@ -158,7 +158,7 @@ File('DataGrid.xlsx').writeAsBytes(bytes, flush: true);
 
 ## Export DataGrid to Excel sheet
 
-You can export the data to [Excel Worksheet](https://pub.dev/documentation/syncfusion_flutter_xlsio/latest/xlsio/Worksheet-class.html) by using the `exportToExcelWorksheet` method from `key.currentState` of the datagrid.
+You can export the data to [Excel Worksheet](https://pub.dev/documentation/syncfusion_flutter_xlsio/latest/xlsio/Worksheet-class.html) by using the `exportToExcelWorksheet` method from `key.currentState` of the DataGrid.
 
 {% tabs %}
 {% highlight Dart %}
@@ -176,7 +176,7 @@ You can export the data to [Excel Worksheet](https://pub.dev/documentation/syncf
 
 ### Exclude columns when exporting
 
-By default, all the columns in the SfDataGrid will be exported to Excel. To exclude certain columns when exporting to Excel, add those column names to the `excludeColumns` parameter.
+By default, all the columns in the `SfDataGrid` is exported to Excel. To exclude certain columns when exporting to Excel, add those column names to the `excludeColumns` parameter.
 
 {% tabs %}
 {% highlight Dart %}
@@ -192,7 +192,7 @@ final List<int> bytes = workbook.saveAsStream();
 
 ### Exclude table summaries when exporting
 
-By default, table summaries in `SfDataGrid` will be exported to Excel. You can set `exportTableSummaries` parameter as `false` to export the `SfDataGrid` without table summaries.
+By default, table summaries in `SfDataGrid` is exported to Excel. You can set `exportTableSummaries` parameter as `false` to export the `SfDataGrid` without table summaries.
 
 {% tabs %}
 {% highlight Dart %}
@@ -206,7 +206,7 @@ final List<int> bytes = workbook.saveAsStream();
 
 ### Exclude stacked headers when exporting
 
-By default, stacked headers in `SfDataGrid` will be exported to Excel. You can set `exportStackedHeaders` parameter as `false` to export the `SfDataGrid` without stacked headers.
+By default, stacked headers in `SfDataGrid` is exported to Excel. You can set `exportStackedHeaders` parameter as `false` to export the `SfDataGrid` without stacked headers.
 
 {% tabs %}
 {% highlight Dart %}
@@ -220,7 +220,7 @@ final List<int> bytes = workbook.saveAsStream();
 
 ### Change start row and column index when exporting
 
-By default, the datagrid will be exported from (0,0) index in Excel sheet. You can export the data from specific row and column index in Excel worksheet by setting the `startColumnIndex` and `startRowIndex` properties.
+By default, the DataGrid is exported from (0,0) index in Excel sheet. You can export the data from specific row and column index in Excel worksheet by setting the `startColumnIndex` and `startRowIndex` properties.
 
 {% tabs %}
 {% highlight Dart %}
@@ -234,7 +234,7 @@ final List<int> bytes = workbook.saveAsStream();
 
 ## Export the selected rows to Excel
 
-By default, the entire grid will be exported to Excel. You can export selected rows only by passing `dataGridController.selectedRows` to `rows` parameter in `exportToExcelWorksheet` and `exportToExcelWorkbook` methods.
+By default, the entire grid is exported to Excel. You can export selected rows only by passing `dataGridController.selectedRows` to `rows` parameter in `exportToExcelWorksheet` and `exportToExcelWorkbook` methods.
 
 {% tabs %}
 {% highlight Dart %}
@@ -248,7 +248,7 @@ final List<int> bytes = workbook.saveAsStream();
 
 ## Row height and column width customization
 
-By default, [SfDataGrid.rowHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/rowHeight.html) and [SfDataGrid.defaultColumnWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/defaultColumnWidth.html) properties will be set to the cells in the Excel sheet. To customize the row height and column width in Excel, you can use the `defaultRowHeight` and `defaultColumnWidth` properties. But, these properties are only applicable when the `exportRowHeight` and `exportColumnWidth` properties are `false`.
+By default, [SfDataGrid.rowHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/rowHeight.html) and [SfDataGrid.defaultColumnWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/defaultColumnWidth.html) properties will be set to the cells in the Excel sheet. To customize the row height and column width in Excel, you can use the `defaultRowHeight` and `defaultColumnWidth` properties. But these properties are only applicable when the `exportRowHeight` and `exportColumnWidth` properties are `false`.
 
 If the `exportRowHeight` and `exportColumnWidth` properties are `true`, the `SfDataGrid.headerRowHeight` and `SfDataGrid.rowHeight` properties are considered for row heights in Excel and the actual width of the column is considered for columns in Excel.
 
