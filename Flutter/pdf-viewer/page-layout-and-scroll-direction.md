@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Page Layout and Scrolling options in Flutter PDF Viewer (SfPdfViewer)
+# Page layout and Scrolling options in Flutter PDF Viewer (SfPdfViewer)
 
 Page layout modes describe how the PDF page is displayed and, scrolling options describe the direction in which the PDF pages can be scrolled in [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html).
 
