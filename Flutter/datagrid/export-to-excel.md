@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Export Flutter DataGrid to Excel | Flutter DataTable | Syncfusion
-description: Learn here all about how to export the Syncfusion Flutter DataGrid (SfDataGrid) into the Excel sheet and more.
+description: Learn here all about how to export the Syncfusion Flutter DataGrid (SfDataGrid) into the Excel and more.
 platform: flutter
 control: SfDataGrid
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Export to Excel in Flutter DataGrid (SfDataGrid)
 
-The [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) provides support to export the content to the Excel sheet with several customization options.
+The [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) provides support to export the content to the Excel with several customization options.
 
 **Add dependency**
 
@@ -59,7 +59,7 @@ final GlobalKey<SfDataGridState> key = GlobalKey<SfDataGridState>();
 {% endhighlight %}
 {% endtabs %}
 
-The following code illustrates how to create and export a `SfDataGrid` to the Excel sheet with the global key.
+The following code illustrates how to create and export a `SfDataGrid` to the Excel with the global key.
 
  {% tabs %}
  {% highlight Dart %}
@@ -188,7 +188,7 @@ final List<int> bytes = workbook.saveAsStream();
 {% endhighlight %}
 {% endtabs %}
 
-![excel sheet shows the grid with exclude columns](images/export-to-excel/flutter-datagrid-excel-export-exclude-columns.png)
+![excel shows the grid with exclude columns](images/export-to-excel/flutter-datagrid-excel-export-exclude-columns.png)
 
 ### Exclude table summaries when exporting
 
@@ -220,7 +220,7 @@ final List<int> bytes = workbook.saveAsStream();
 
 ### Change start row and column index when exporting
 
-The data in `SfDataGrid` will be exported to the excel sheet based on the `startRowIndex` and `startColumnIndex` properties. You can set these properties to customize the start row and column index of the exporting data in the excel sheet.
+By default, the datagrid will be exported from (0,0) index in Excel sheet. You can export the data from specific row and column index in Excel worksheet by setting the `startColumnIndex` and `startRowIndex` properties.
 
 {% tabs %}
 {% highlight Dart %}
@@ -248,7 +248,9 @@ final List<int> bytes = workbook.saveAsStream();
 
 ## Row height and column width customization
 
-By default, [SfDataGrid.rowHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/rowHeight.html) and [SfDataGrid.defaultColumnWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/defaultColumnWidth.html) properties will be set to the cells in the Excel sheet. To customize the row height and column width in Excel, you can set by using `defaultRowHeight` and `defaultColumnWidth` properties. But, these properties are only applicable when the `exportRowHeight` and `exportColumnWidth` properties are `false`. 
+By default, [SfDataGrid.rowHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/rowHeight.html) and [SfDataGrid.defaultColumnWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/defaultColumnWidth.html) properties will be set to the cells in the Excel sheet. To customize the row height and column width in Excel, you can use the `defaultRowHeight` and `defaultColumnWidth` properties. But, these properties are only applicable when the `exportRowHeight` and `exportColumnWidth` properties are `false`.
+
+If the `exportRowHeight` and `exportColumnWidth` properties are `true`, the `SfDataGrid.headerRowHeight` and `SfDataGrid.rowHeight` properties are considered for row heights in Excel and the actual width of the column is considered for columns in Excel.
 
 {% tabs %}
 {% highlight Dart %}
@@ -283,7 +285,7 @@ final List<int> bytes = workbook.saveAsStream();
 {% endhighlight %}
 {% endtabs %}
 
-![excel sheet shows the cell styling](images/export-to-excel/flutter-datagrid-excel-export-styling.png)
+![excel shows the cell styling](images/export-to-excel/flutter-datagrid-excel-export-styling.png)
 
 ## Cell customization when exporting
 
@@ -306,7 +308,7 @@ final List<int> bytes = workbook.saveAsStream();
 {% endhighlight %}
 {% endtabs %}
 
-![excel sheet shows the cell customization](images/export-to-excel/flutter-datagrid-excel-export-cell-customization.png)
+![excel shows the cell customization](images/export-to-excel/flutter-datagrid-excel-export-cell-customization.png)
 
 ### Customize the cells based on column
 
