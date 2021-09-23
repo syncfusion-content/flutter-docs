@@ -219,9 +219,33 @@ Widget build(BuildContext context) {
           dataSource: _getCalendarDataSource(),
           allowDragAndDrop: true,
           dragAndDropSettings: DragAndDropSettings(
-              indicatorTimeFormat: 'hh:mm',
-              showTimeIndicator: true,
-              timeIndicatorStyle: TextStyle(backgroundColor: Colors.red),
+              showTimeIndicator: true),
+        ),
+      ),
+    ),
+  );
+}
+	
+{% endhighlight %}
+{% endtabs %}
+
+## Handling navigation delay while holding dragged appointment
+
+Using [autoNavigateDelay]() property you can handle the navigation time when navigating to next/previous view while holding the dragged appointment.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.week,
+          dataSource: _getCalendarDataSource(),
+          allowDragAndDrop: true,
+          dragAndDropSettings: DragAndDropSettings(
               autoNavigateDelay: Duration(seconds: 1)),
         ),
       ),
@@ -231,6 +255,42 @@ Widget build(BuildContext context) {
 	
 {% endhighlight %}
 {% endtabs %}
+
+## Customize appearance of dragging Time Indicator
+
+Using [timeIndicatorStyle]() property you can handle the time indicator style which contains `backgroundColor`, `color` and `fontSize`. Also using [indicatorTimeFormat]() property you can change the time format of the indicator.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.week,
+          dataSource: _getCalendarDataSource(),
+          allowDragAndDrop: true,
+          dragAndDropSettings: DragAndDropSettings(
+            indicatorTimeFormat: 'hh:mm',
+            showTimeIndicator: true,
+            timeIndicatorStyle: TextStyle(
+              backgroundColor: Color(0xFFCEE5D0),
+              color: Colors.black,
+              fontSize: 15,
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
+}
+	
+{% endhighlight %}
+{% endtabs %}
+
+![drag_and_drop_indicator_customization](images/appointments/dragtime_customization.gif)
 
 ## Appointment resize
 [allowAppointmentResize]() property allows to reschedule the appointment by resizing the appointment in desktop platforms.
