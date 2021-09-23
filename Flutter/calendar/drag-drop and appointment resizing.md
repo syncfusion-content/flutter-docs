@@ -64,8 +64,8 @@ Widget build(BuildContext context) {
 }
 
 void dragStart(AppointmentDragStartDetails appointmentDragStartDetails) {
-  var appointment = appointmentDragStartDetails.appointment;
-  var resource = appointmentDragStartDetails.resource;
+  dynamic appointment = appointmentDragStartDetails.appointment;
+  CalendarResource? resource = appointmentDragStartDetails.resource;
 }
 
 {% endhighlight %}
@@ -101,11 +101,11 @@ Widget build(BuildContext context) {
 }
 
 void dragUpdate(AppointmentDragUpdateDetails appointmentDragUpdateDetails) {
-  var appointment = appointmentDragUpdateDetails.appointment;
-  var draggingTime = appointmentDragUpdateDetails.draggingTime;
-  var draggingOffset = appointmentDragUpdateDetails.draggingPosition;
-  var resource = appointmentDragUpdateDetails.sourceResource;
-  var targetResource = appointmentDragUpdateDetails.targetResource;
+  dynamic appointment = appointmentDragUpdateDetails.appointment;
+  DateTime? draggingTime = appointmentDragUpdateDetails.draggingTime;
+  Offset> draggingOffset = appointmentDragUpdateDetails.draggingPosition;
+  CalendarResource? sourceResource = appointmentDragUpdateDetails.sourceResource;
+  CalendarResource? targetResource = appointmentDragUpdateDetails.targetResource;
 }
 
 {% endhighlight %}
@@ -115,10 +115,10 @@ void dragUpdate(AppointmentDragUpdateDetails appointmentDragUpdateDetails) {
 
 [onDragEnd]() callback called when the dragging appointment is dropped in the SfCalendar. The [AppointmentDragEndDetails]() arguments contains the dropped appointment, dropping time, source and target resource details. 
 
-[Appointment] - Get the dragged appointment details. 
-[Drapping time] - Get the resource details.
-[Resource] - Get the resource details.
-[Target resource] - Get the target resource details.
+[Appointment]() - Get the dragged appointment details. 
+[Drapping time]() - Get the resource details.
+[Resource]() - Get the resource details.
+[Target resource]() - Get the target resource details.
 
 {% tabs %}
 {% highlight Dart %}
@@ -132,19 +132,18 @@ Widget build(BuildContext context) {
           view: CalendarView.week,
           dataSource: _getCalendarDataSource(),
 		  allowDragAndDrop: true,
-		  onDragUpdate: dragUpdate,
+		  onDragEnd: dragEnd,
         ),
       ),
     ),
   );
 }
 
-void dragUpdate(AppointmentDragUpdateDetails appointmentDragUpdateDetails) {
-  var appointment = appointmentDragUpdateDetails.appointment;
-  var draggingTime = appointmentDragUpdateDetails.draggingTime;
-  var draggingOffset = appointmentDragUpdateDetails.draggingPosition;
-  var resource = appointmentDragUpdateDetails.sourceResource;
-  var targetResource = appointmentDragUpdateDetails.targetResource;
+void dragEnd(AppointmentDragEndDetails appointmentDragEndDetails) {
+  dynamic appointment = appointmentDragEndDetails.appointment!;
+  CalendarResource? sourceResource = appointmentDragEndDetails.sourceResource;
+  CalendarResource? targetResource = appointmentDragEndDetails.targetResource;
+  DateTime? draggingTime = appointmentDragEndDetails.droppingTime;
 }
 
 {% endhighlight %}
@@ -210,7 +209,6 @@ Widget build(BuildContext context) {
 {% tabs %}
 {% highlight Dart %}
 
-
 @override
 Widget build(BuildContext context) {
   return MaterialApp(
@@ -223,7 +221,8 @@ Widget build(BuildContext context) {
           dragAndDropSettings: DragAndDropSettings(
               indicatorTimeFormat: 'hh:mm',
               showTimeIndicator: true,
-              timeIndicatorStyle: TextStyle(backgroundColor: Colors.red)),
+              timeIndicatorStyle: TextStyle(backgroundColor: Colors.red),
+              autoNavigateDelay: Duration(seconds: 1)),
         ),
       ),
     ),
@@ -287,8 +286,8 @@ Widget build(BuildContext context) {
 }
 
 void resizeStart(AppointmentResizeStartDetails appointmentResizeStartDetails) {
-  var appointment=appointmentResizeStartDetails.appointment;
-  var resource = appointmentResizeStartDetails.resource;
+  dynamic appointment=appointmentResizeStartDetails.appointment;
+  CalendarResource? resource = appointmentResizeStartDetails.resource;
 }
 
 {% endhighlight %}
@@ -322,10 +321,10 @@ Widget build(BuildContext context) {
 }
 
 void resizeUpdate(AppointmentResizeUpdateDetails appointmentResizeUpdateDetails) {
-  var appointment = appointmentResizeUpdateDetails.appointment;
-  var resizingTime = appointmentResizeUpdateDetails.resizingTime;
-  var resizingOffset = appointmentResizeUpdateDetails.resizingOffset;
-  var resourceDetails = appointmentResizeUpdateDetails.resource;
+  dynamic appointment = appointmentResizeUpdateDetails.appointment;
+  DateTime? resizingTime = appointmentResizeUpdateDetails.resizingTime;
+  Offset? resizingOffset = appointmentResizeUpdateDetails.resizingOffset;
+  CalendarResource? resourceDetails = appointmentResizeUpdateDetails.resource;
 }
 
 {% endhighlight %}
@@ -359,10 +358,10 @@ Widget build(BuildContext context) {
 }
 
 void resizeEnd(AppointmentResizeEndDetails appointmentResizeEndDetails) {
-  var appointment = appointmentResizeEndDetails.appointment;
-  var startTime = appointmentResizeEndDetails.startTime;
-  var endTime = appointmentResizeEndDetails.endTime;
-  var resourceDetails = appointmentResizeEndDetails.resource;
+  dynamic appointment = appointmentResizeEndDetails.appointment;
+  DateTime? startTime = appointmentResizeEndDetails.startTime;
+  DateTime? endTime = appointmentResizeEndDetails.endTime;
+  CalendarResource? resourceDetails = appointmentResizeEndDetails.resource;
 }
 
 {% endhighlight %}
