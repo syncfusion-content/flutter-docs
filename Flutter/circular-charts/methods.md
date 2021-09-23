@@ -311,15 +311,15 @@ The [`pixelToPoint`](~) method takes logical pixel value as input and returns a 
 {% highlight dart %}
 
     //Initialize the series controller
-    CircularSeriesController ? seriesController;
+    CircularSeriesController? seriesController;
 
     @override
     Widget build(BuildContext context) {
       return Container(
-            child: SfCircularChart(
-             series: <PieSeries<ChartSampleData, String>>[
-               PieSeries<ChartSampleData, String>(
-                 onRendererCreated: (CircularSeriesController  controller) {
+       child: SfCircularChart(
+        series: <PieSeries<ChartData, String>>[
+          PieSeries<ChartData, String>(
+              onRendererCreated: (CircularSeriesController  controller) {
                    seriesController = controller;
                  },
                )
@@ -328,14 +328,14 @@ The [`pixelToPoint`](~) method takes logical pixel value as input and returns a 
                final Offset value = Offset(args.position.dx, args.position.dy);
                ChartPoint<dynamic> chartpoint =
                  seriesController!.pixelToPoint(value);
-           }
-         )
-       );
+          }
+        )
+      );
     }
 
-     class ChartSampleData{
-        ChartSampleData(this.x, this.y);
-        final String x;
-        final double? y;
+    class ChartData{
+      ChartData(this.x, this.y);
+      final String x;
+      final double? y;
       }
 {% endhighlight %}
