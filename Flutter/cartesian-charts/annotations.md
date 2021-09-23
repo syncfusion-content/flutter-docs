@@ -135,29 +135,28 @@ To position the annotation based on the percentage values, set the [`CoordinateU
     ];
 
     return Scaffold(
-        body: Center(
-      child: Container(
-        child: SfCartesianChart(
+      body: Center(
+        child: Container(
+          child: SfCartesianChart(
             primaryXAxis: CategoryAxis(interval: 1),
-            annotations: <CartesianChartAnnotation>[
-              CartesianChartAnnotation(
+              annotations: <CartesianChartAnnotation>[
+                CartesianChartAnnotation(
                   coordinateUnit: CoordinateUnit.percentage,
                   region: AnnotationRegion.plotArea,
                   widget: Container(
                     child: const Text('Annotation With Percentage',
                         style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 14,
                         )),
                   ),
                   x: '50%',
                   y: '50%')
             ],
-            series: <ChartSeries<SalesData, String>>[
-              ColumnSeries<SalesData, String>(
+            series: <ChartSeries<ChartData, String>>[
+              ColumnSeries<ChartData, String>(
                   dataSource: chartData,
-                  animationDuration: 5000,
-                  xValueMapper: (SalesData sales, _) => sales.x,
-                  yValueMapper: (SalesData sales, _) => sales.y)
+                  xValueMapper: (ChartData sales, _) => sales.x,
+                  yValueMapper: (ChartData sales, _) => sales.y)
                 ]
               ),
             ),
@@ -166,10 +165,10 @@ To position the annotation based on the percentage values, set the [`CoordinateU
       }
     }
 
-    class SalesData {
-    const SalesData(this.x, this.y);
-    final String x;
-    final int y;
+    class ChartData {
+      const ChartData(this.x, this.y);
+      final String x;
+      final int y;
     }
 
 {% endhighlight %}
