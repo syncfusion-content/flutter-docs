@@ -116,7 +116,7 @@ void dragUpdate(AppointmentDragUpdateDetails appointmentDragUpdateDetails) {
 [onDragEnd]() callback called when the dragging appointment is dropped in the SfCalendar. The [AppointmentDragEndDetails]() arguments contains the dropped appointment, dropping time, source and target resource details. 
 
 [Appointment]() - Get the dragged appointment details. 
-[Drapping time]() - Get the resource details.
+[Dropping time]() - Get the resource details.
 [Resource]() - Get the resource details.
 [Target resource]() - Get the target resource details.
 
@@ -143,7 +143,7 @@ void dragEnd(AppointmentDragEndDetails appointmentDragEndDetails) {
   dynamic appointment = appointmentDragEndDetails.appointment!;
   CalendarResource? sourceResource = appointmentDragEndDetails.sourceResource;
   CalendarResource? targetResource = appointmentDragEndDetails.targetResource;
-  DateTime? draggingTime = appointmentDragEndDetails.droppingTime;
+  DateTime? droppingTime = appointmentDragEndDetails.droppingTime;
 }
 
 {% endhighlight %}
