@@ -118,7 +118,7 @@ To position the annotation based on the pixel values, set the [`CoordinateUnit`]
 
 **Positioning based on coordinateUnit as percentage**
 
-To position the annotation based on axis, set the [`x`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/x.html) and [`y`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/y.html) properties based on axis percentage values, and set the [`coordinateUnit`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html) value as [`percentage`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html).
+To position the annotation based on the percentage values, set the [`CoordinateUnit`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html) value as [`percentage`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/coordinateUnit.html), and the percentage values in [`x`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/x.html) and [`y`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/y.html) properties of annotation as shown in the following code snippet.
 
 
 {% highlight dart %} 
@@ -135,29 +135,28 @@ To position the annotation based on axis, set the [`x`](https://pub.dev/document
     ];
 
     return Scaffold(
-        body: Center(
-      child: Container(
-        child: SfCartesianChart(
+      body: Center(
+        child: Container(
+          child: SfCartesianChart(
             primaryXAxis: CategoryAxis(interval: 1),
-            annotations: <CartesianChartAnnotation>[
-              CartesianChartAnnotation(
+              annotations: <CartesianChartAnnotation>[
+                CartesianChartAnnotation(
                   coordinateUnit: CoordinateUnit.percentage,
                   region: AnnotationRegion.plotArea,
                   widget: Container(
                     child: const Text('Annotation With Percentage',
                         style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 14,
                         )),
                   ),
                   x: '50%',
                   y: '50%')
             ],
-            series: <ChartSeries<SalesData, String>>[
-              ColumnSeries<SalesData, String>(
+            series: <ChartSeries<ChartData, String>>[
+              ColumnSeries<ChartData, String>(
                   dataSource: chartData,
-                  animationDuration: 5000,
-                  xValueMapper: (SalesData sales, _) => sales.x,
-                  yValueMapper: (SalesData sales, _) => sales.y)
+                  xValueMapper: (ChartData sales, _) => sales.x,
+                  yValueMapper: (ChartData sales, _) => sales.y)
                 ]
               ),
             ),
@@ -166,10 +165,10 @@ To position the annotation based on axis, set the [`x`](https://pub.dev/document
       }
     }
 
-    class SalesData {
-    const SalesData(this.x, this.y);
-    final String x;
-    final int y;
+    class ChartData {
+      const ChartData(this.x, this.y);
+      final String x;
+      final int y;
     }
 
 {% endhighlight %}
