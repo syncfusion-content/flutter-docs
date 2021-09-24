@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Error bar Chart in Flutter Cartesian Charts widget | Syncfusion 
+title: Error bar chart in Flutter Cartesian Charts widget | Syncfusion
 description: Learn here all about error bar chart of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
 platform: flutter
 control: Chart
