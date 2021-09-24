@@ -523,61 +523,61 @@ Defaults to `null`.
 
     @override
     Widget build(BuildContext context) {
-    final List<SalesData> chartData = [
-      SalesData('Jan', 35.53),
-      SalesData('Feb',46.06,),
-      SalesData('Mar',46.06,),
-      SalesData('Apr',50.86,),
-      SalesData('May',60.89,),
-      SalesData('Jun',70.27,),
-      SalesData('Jul',75.65,),
-      SalesData('Aug', 74.7),
-      SalesData('Sep',65.91,),
-      SalesData('Oct', 54.28),
-      SalesData('Nov', 46.33),
-      SalesData('Dec', 35.71),
+    final List<ChartData > chartData = [
+      ChartData ('Jan', 35.53),
+      ChartData ('Feb',46.06,),
+      ChartData ('Mar',46.06,),
+      ChartData ('Apr',50.86,),
+      ChartData ('May',60.89,),
+      ChartData ('Jun',70.27,),
+      ChartData ('Jul',75.65,),
+      ChartData ('Aug', 74.7),
+      ChartData ('Sep',65.91,),
+      ChartData ('Oct', 54.28),
+      ChartData ('Nov', 46.33),
+      ChartData ('Dec', 35.71),
     ];
 
     return Scaffold(
         body: Center(
-      child: Container(
-        child: SfCartesianChart(
-            primaryXAxis: CategoryAxis(),
-            series: <ChartSeries<SalesData, String>>[
-              AreaSeries<SalesData, String>(
-                dataSource: chartData,
-                onCreateShader: (ShaderDetails details) {
-                  return ui.Gradient.linear(details.rect.bottomLeft,
-                      details.rect.bottomRight, const <Color>[
-                    Color.fromRGBO(116, 182, 194, 1),
-                    Color.fromRGBO(75, 189, 138, 1),
-                    Color.fromRGBO(75, 189, 138, 1),
-                    Color.fromRGBO(255, 186, 83, 1),
-                    Color.fromRGBO(255, 186, 83, 1),
-                    Color.fromRGBO(194, 110, 21, 1),
-                    Color.fromRGBO(194, 110, 21, 1),
-                    Color.fromRGBO(116, 182, 194, 1),
-                  ], <double>[
-                    0.1,
-                    0.1,
-                    0.4,
-                    0.4,
-                    0.7,
-                    0.7,
-                    0.9,
-                    0.9
-                  ]);
-                },
-                xValueMapper: (SalesData sales, _) => sales.country,
-                yValueMapper: (SalesData sales, _) => sales.salesCount),
-                ]),
-            ),
-        ));
-      }
+            child: Container(
+                child: SfCartesianChart(
+                    primaryXAxis: CategoryAxis(),
+                    series: <ChartSeries<ChartData , String>>[
+                    AreaSeries<ChartData , String>(
+                        dataSource: chartData,
+                        onCreateShader: (ShaderDetails details) {
+                        return ui.Gradient.linear(details.rect.bottomLeft,
+                        details.rect.bottomRight, const <Color>[
+                        Color.fromRGBO(116, 182, 194, 1),
+                        Color.fromRGBO(75, 189, 138, 1),
+                        Color.fromRGBO(75, 189, 138, 1),
+                        Color.fromRGBO(255, 186, 83, 1),
+                        Color.fromRGBO(255, 186, 83, 1),
+                        Color.fromRGBO(194, 110, 21, 1),
+                        Color.fromRGBO(194, 110, 21, 1),
+                        Color.fromRGBO(116, 182, 194, 1),
+                        ], <double>[
+                        0.1,
+                        0.1,
+                        0.4,
+                        0.4,
+                        0.7,
+                        0.7,
+                        0.9,
+                        0.9
+                        ]);
+                        },
+                        xValueMapper: (ChartData  sales, _) => sales.country,
+                        yValueMapper: (ChartData  sales, _) => sales.salesCount),
+                    ]),
+                ),
+            ));
+        }
     }
 
-    class SalesData {
-    const SalesData(this.country,this.salesCount);
+    class ChartData  {
+    const ChartData (this.country,this.salesCount);
     final String country;
     final double salesCount;
     }
