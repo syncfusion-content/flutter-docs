@@ -523,7 +523,7 @@ Defaults to `null`.
 
     @override
     Widget build(BuildContext context) {
-    final List<ChartData > chartData = [
+    const List<ChartData > chartData = [
       ChartData('Jan', 35.53),
       ChartData('Feb',46.06,),
       ChartData('Mar',46.06,),
@@ -540,7 +540,6 @@ Defaults to `null`.
 
     return Scaffold(
         body: Center(
-            child: Container(
                 child: SfCartesianChart(
                     primaryXAxis: CategoryAxis(),
                     series: <ChartSeries<ChartData , String>>[
@@ -571,7 +570,6 @@ Defaults to `null`.
                         xValueMapper: (ChartData  sales, _) => sales.country,
                         yValueMapper: (ChartData  sales, _) => sales.salesCount),
                     ]),
-                ),
             ));
         }
     }
