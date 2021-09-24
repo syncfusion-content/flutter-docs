@@ -25,15 +25,17 @@ The [`pixelToPoint`](~) method takes logical pixel value as input and returns a 
     Widget build(BuildContext context) {
       return Container(
         child: SfFunnelChart(
-          onChartTouchInteractionDown:   (ChartTouchInteractionArgs args) {
-           final Offset value = Offset(args.position.dx, args.position.dy);
-           final PointInfo<dynamic> chartpoint = seriesController.pixelToPoint(value);
-           }, 
+          onChartTouchInteractionDown: (ChartTouchInteractionArgs args) {
+            final Offset value = Offset(args.position.dx, args.position.dy);
+            final PointInfo<dynamic>? chartpoint = seriesController?.pixelToPoint(value);
+            },
           series: FunnelSeries<ChartSampleData, String>(
             dataSource: data,
             onRendererCreated: (FunnelSeriesController funnelSeriesController) {
-            seriesController = funnelSeriesController;
-            }
+              seriesController = funnelSeriesController;
+            },
+            xValueMapper: (ChartSampleData sales, _) => sales.x,
+            yValueMapper: (ChartSampleData sales, _) => sales.y
           )
         ),
       );

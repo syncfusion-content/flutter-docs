@@ -23,27 +23,29 @@ The [`pixelToPoint`](~) method takes logical pixel value as input and returns a 
 
     @override
     Widget build(BuildContext context) {
-      returnContainer(
+      return Container(
         child: SfPyramidChart(
           onChartTouchInteractionDown: (ChartTouchInteractionArgs args) {
-           final Offset value = Offset(args.position.dx, args.position.dy);
-           final PointInfo<dynamic> chartpoint = seriesController.pixelToPoint(value);
-          }, 
+            final Offset value = Offset(args.position.dx, args.position.dy);
+            final PointInfo<dynamic>? chartpoint = seriesController?.pixelToPoint(value);
+              },
           series: PyramidSeries<ChartSampleData, String>(
             dataSource: data,
             onRendererCreated: (PyramidSeriesController pyramidSeriesController) {
-          seriesController = pyramidSeriesController;
-          }
-         )
+              seriesController = pyramidSeriesController;
+              },
+            xValueMapper: (ChartSampleData sales, _) => sales.x,
+            yValueMapper: (ChartSampleData sales, _) => sales.y
+          )
         ),
       );
     }
 
-     class ChartSampleData{
-        ChartSampleData(this.x, this.y);
-        final String x;
-        final double? y;
-      }
+    class ChartSampleData{
+      ChartSampleData(this.x, this.y);
+      final String x;
+      final double? y;
+    }
 
 
 {% endhighlight %}

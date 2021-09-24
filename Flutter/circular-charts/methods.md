@@ -316,18 +316,17 @@ The [`pixelToPoint`](~) method takes logical pixel value as input and returns a 
     @override
     Widget build(BuildContext context) {
       return Container(
-       child: SfCircularChart(
-        series: <PieSeries<ChartData, String>>[
-          PieSeries<ChartData, String>(
+        child: SfCircularChart(
+          series: <PieSeries<ChartData, String>>[
+            PieSeries<ChartData, String>(
               onRendererCreated: (CircularSeriesController  controller) {
                    seriesController = controller;
                  },
                )
              ],
              onChartTouchInteractionUp: (ChartTouchInteractionArgs args) {
-               final Offset value = Offset(args.position.dx, args.position.dy);
-               ChartPoint<dynamic> chartpoint =
-                 seriesController!.pixelToPoint(value);
+              final Offset value = Offset(args.position.dx, args.position.dy);
+              ChartPoint<dynamic>? chartpoint = seriesController?.pixelToPoint(value);
           }
         )
       );
@@ -337,5 +336,6 @@ The [`pixelToPoint`](~) method takes logical pixel value as input and returns a 
       ChartData(this.x, this.y);
       final String x;
       final double? y;
-      }
+    }
+    
 {% endhighlight %}
