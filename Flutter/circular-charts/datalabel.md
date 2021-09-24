@@ -147,8 +147,8 @@ If the [`labelPosition`](https://npmci.syncfusion.com/flutter/api/release/syncfu
 If the [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelIntersectAction.html) is `none`, then the overlapped labels will be visible irrespective of [`labelPosition`](https://npmci.syncfusion.com/flutter/api/release/syncfusion_flutter_charts/charts/DataLabelSettings/labelPosition.html).
 When the [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelIntersectAction.html) is `shift`, and if the data label goes out of the chart area, then the labels got trimmed and the tooltip is shown when clicking/tapping the data label.
 The values of the [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelIntersectAction.html) are listed below.
-* `hide` - hides the intersected data labels.
-* `none` - intersected data labels will be visible.
+* [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelIntersectAction-class.html) - hides the intersected data labels.
+* [`none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelIntersectAction-class.html) - intersected data labels will be visible.
 * `shift` - smartly arranges the overlapped data labels.  
 
 {% highlight dart %} 
