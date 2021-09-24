@@ -335,7 +335,7 @@ The [`pixelToPoint`](~) method takes logical pixel value as input and returns a 
     class ChartData{
       ChartData(this.x, this.y);
       final String x;
-      final double? y;
+      final double y;
     }
-    
+
 {% endhighlight %}

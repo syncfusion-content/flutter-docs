@@ -29,22 +29,22 @@ The [`pixelToPoint`](~) method takes logical pixel value as input and returns a 
             final Offset value = Offset(args.position.dx, args.position.dy);
             final PointInfo<dynamic>? chartpoint = seriesController?.pixelToPoint(value);
               },
-          series: PyramidSeries<ChartSampleData, String>(
+          series: PyramidSeries<ChartData, String>(
             dataSource: data,
             onRendererCreated: (PyramidSeriesController pyramidSeriesController) {
               seriesController = pyramidSeriesController;
               },
-            xValueMapper: (ChartSampleData sales, _) => sales.x,
-            yValueMapper: (ChartSampleData sales, _) => sales.y
+            xValueMapper: (ChartData sales, _) => sales.x,
+            yValueMapper: (ChartData sales, _) => sales.y
           )
         ),
       );
     }
 
-    class ChartSampleData{
-      ChartSampleData(this.x, this.y);
+    class ChartData{
+      ChartData(this.x, this.y);
       final String x;
-      final double? y;
+      final double y;
     }
 
 
