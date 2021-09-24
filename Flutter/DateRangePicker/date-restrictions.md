@@ -117,7 +117,7 @@ Widget build(BuildContext context) {
 
 >**NOTE**
 * Applicable for year, decade and century views only when the `allowViewNavigation` set as false.
-* This is not applicable when the `navigationMode` set as `scroll`. 
+* This callback is not applicable when the `navigationMode` set as `DateRangePickerNavigationMode.scroll`. 
 
 ![selectable day predicate Range Picker](images/date-restrictions/selectableDayPredicate.jpg)
 
