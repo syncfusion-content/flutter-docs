@@ -123,53 +123,49 @@ To position the annotation based on the percentage values, set the [`CoordinateU
 
 {% highlight dart %} 
 
-    @override
-    Widget build(BuildContext context) {
-    final List<SalesData> chartData = [
-      SalesData('IND', 24),
-      SalesData('AUS', 20),
-      SalesData('USA', 27),
-      SalesData('DEU', 57),
-      SalesData('ITA', 30),
-      SalesData('UK', 41),
-    ];
+@override
+Widget build(BuildContext context) {​​​​​
+  const List<ChartData> chartData = [
+    ChartData('IND', 24),
+    ChartData('AUS', 20),
+    ChartData('USA', 27),
+    ChartData('DEU', 57),
+    ChartData('ITA', 30),
+    ChartData('UK', 41),
+  ];
 
-    return Scaffold(
+  return Scaffold(
       body: Center(
-        child: Container(
-          child: SfCartesianChart(
-            primaryXAxis: CategoryAxis(interval: 1),
-              annotations: <CartesianChartAnnotation>[
-                CartesianChartAnnotation(
-                  coordinateUnit: CoordinateUnit.percentage,
-                  region: AnnotationRegion.plotArea,
-                  widget: Container(
-                    child: const Text('Annotation With Percentage',
-                        style: TextStyle(
-                          fontSize: 14,
-                        )),
-                  ),
+        child: SfCartesianChart(
+          primaryXAxis: CategoryAxis(interval: 1),
+            annotations: const <CartesianChartAnnotation>[
+            CartesianChartAnnotation(
+              coordinateUnit: CoordinateUnit.percentage,
+              region: AnnotationRegion.plotArea,
+               widget: Text('Annotation With Percentage',
+                  style: TextStyle(
+                  fontSize: 14,
+                  )),
                   x: '50%',
-                  y: '50%')
+                  y: '50%'
+              )
             ],
             series: <ChartSeries<ChartData, String>>[
               ColumnSeries<ChartData, String>(
                   dataSource: chartData,
                   xValueMapper: (ChartData sales, _) => sales.x,
                   yValueMapper: (ChartData sales, _) => sales.y)
-                ]
-              ),
-            ),
-          )
-        );
-      }
-    }
+            ]
+        ),
+      )
+  );
+}​​​​​
 
-    class ChartData {
-      const ChartData(this.x, this.y);
-      final String x;
-      final int y;
-    }
+  class ChartData {
+    const ChartData(this.x, this.y);
+    final String x;
+    final int y;
+  }
 
 {% endhighlight %}
 
