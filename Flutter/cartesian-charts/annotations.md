@@ -156,16 +156,16 @@ To position the annotation based on the percentage values, set the [`CoordinateU
                   xValueMapper: (ChartData data, _) => data.x,
                   yValueMapper: (ChartData data, _) => data.y)
             ]
-        ),
-      )
-  );
-}
+          ),
+        )
+      );
+    }
 
-  class ChartData {
-    const ChartData(this.x, this.y);
-    final String x;
-    final int y;
-  }
+    class ChartData {
+      const ChartData(this.x, this.y);
+      final String x;
+      final int y;
+    }
 
 {% endhighlight %}
 
