@@ -504,6 +504,32 @@ Widget build(BuildContext context) {
 
 ![Time text appearance](images/timeslot-views/time-text-appearance.png)
 
+## All day panel background color
+All day panel background color can be customized by using the [allDayPanelColor]() property of `timeSlotViewSettings` in the calendar.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.week,
+          timeSlotViewSettings: TimeSlotViewSettings(allDayPanelColor:Colors.green
+              ),
+        ),
+      ),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Allday panel Background color](images/getting-started/alldayPanelColor.jpg)
+
 ## See also
 
 * [Time label customization in the Flutter event calendar (SfCalendar)](https://www.syncfusion.com/kb/11008/how-to-customize-the-time-label-in-the-flutter-event-calendar-sfcalendar)
