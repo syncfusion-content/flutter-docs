@@ -14,7 +14,8 @@ documentation: ug
 Converts logical pixel value to the data point value.
  
 The `pixelToPoint` method takes logical pixel value as input and returns a chart data point.
- 
+
+N> The method will return the center value of the segment.
 
 {% highlight dart %}
 
