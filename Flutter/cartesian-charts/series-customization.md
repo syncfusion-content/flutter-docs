@@ -524,18 +524,18 @@ Defaults to `null`.
     @override
     Widget build(BuildContext context) {
     final List<ChartData > chartData = [
-      ChartData ('Jan', 35.53),
-      ChartData ('Feb',46.06,),
-      ChartData ('Mar',46.06,),
-      ChartData ('Apr',50.86,),
-      ChartData ('May',60.89,),
-      ChartData ('Jun',70.27,),
-      ChartData ('Jul',75.65,),
-      ChartData ('Aug', 74.7),
-      ChartData ('Sep',65.91,),
-      ChartData ('Oct', 54.28),
-      ChartData ('Nov', 46.33),
-      ChartData ('Dec', 35.71),
+      ChartData('Jan', 35.53),
+      ChartData('Feb',46.06,),
+      ChartData('Mar',46.06,),
+      ChartData('Apr',50.86,),
+      ChartData('May',60.89,),
+      ChartData('Jun',70.27,),
+      ChartData('Jul',75.65,),
+      ChartData('Aug', 74.7),
+      ChartData('Sep',65.91,),
+      ChartData('Oct', 54.28),
+      ChartData('Nov', 46.33),
+      ChartData('Dec', 35.71),
     ];
 
     return Scaffold(
