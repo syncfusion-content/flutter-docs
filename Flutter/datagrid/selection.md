@@ -1003,6 +1003,22 @@ Moves the current cell to the last cell of the last row.
 All rows or cells will be selected.
 </td>
 </tr>
+<tr>
+<td>
+<kbd>F2</kbd> 
+</td>
+<td>
+If the DataGrid.AllowEditing property is true and the GridColumn.AllowEditing property is true for the current column, the current cell enters into edit mode.
+</td>
+</tr>
+<tr>
+<td>
+<kbd>Esc</kbd>
+</td>
+<td>
+The DataGridSource.onCellCancelEdit method is called when you press the Esc key from Web and Desktop platforms. The canSubmitCell and onCellSubmit will not be called when Esc key is pressed.
+</td>
+</tr>
 </table>
 
 ## Callbacks
