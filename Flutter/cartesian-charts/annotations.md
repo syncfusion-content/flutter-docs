@@ -124,7 +124,7 @@ To position the annotation based on the percentage values, set the [`CoordinateU
 {% highlight dart %} 
 
   @override
-  Widget build(BuildContext context) {​​​​​
+  Widget build(BuildContext context) {
     const List<ChartData> chartData = [
       ChartData('IND', 24),
       ChartData('AUS', 20),
@@ -159,7 +159,7 @@ To position the annotation based on the percentage values, set the [`CoordinateU
         ),
       )
   );
-}​​​​​
+}
 
   class ChartData {
     const ChartData(this.x, this.y);
