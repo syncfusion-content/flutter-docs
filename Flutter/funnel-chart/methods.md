@@ -13,7 +13,7 @@ documentation: ug
 
 Converts logical pixel value to the data point value.
  
-The [`pixelToPoint`](~) method takes logical pixel value as input and returns a chart data point.
+The `pixelToPoint` method takes logical pixel value as input and returns a chart data point.
  
 
 {% highlight dart %}
@@ -34,8 +34,8 @@ The [`pixelToPoint`](~) method takes logical pixel value as input and returns a 
             onRendererCreated: (FunnelSeriesController funnelSeriesController) {
               seriesController = funnelSeriesController;
             },
-            xValueMapper: (ChartData sales, _) => sales.x,
-            yValueMapper: (ChartData sales, _) => sales.y
+            xValueMapper: (ChartData data, _) => data.x,
+            yValueMapper: (ChartData data, _) => data.y
           )
         ),
       );

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Methods in Flutter Pyramid Chart widget | Syncfusion 
-description: Learn here all about available Methods of Syncfusion Flutter Pyramid Chart(SfPyramidChart) widget and more.
+description: Learn here all about available methods of Syncfusion Flutter Pyramid Chart(SfPyramidChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
@@ -13,7 +13,7 @@ documentation: ug
 
 Converts logical pixel value to the data point value.
  
-The [`pixelToPoint`](~) method takes logical pixel value as input and returns a chart data point.
+The `pixelToPoint` method takes logical pixel value as input and returns a chart data point.
  
 
 {% highlight dart %}
@@ -34,8 +34,8 @@ The [`pixelToPoint`](~) method takes logical pixel value as input and returns a 
             onRendererCreated: (PyramidSeriesController pyramidSeriesController) {
               seriesController = pyramidSeriesController;
               },
-            xValueMapper: (ChartData sales, _) => sales.x,
-            yValueMapper: (ChartData sales, _) => sales.y
+            xValueMapper: (ChartData data, _) => data.x,
+            yValueMapper: (ChartData data, _) => data.y
           )
         ),
       );

@@ -305,7 +305,7 @@ N> The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter
 
 Converts logical pixel value to the data point value.
   
-The [`pixelToPoint`](~) method takes logical pixel value as input and returns a chart data point.
+The `pixelToPoint` method takes logical pixel value as input and returns a chart data point.
 
 
 {% highlight dart %}
