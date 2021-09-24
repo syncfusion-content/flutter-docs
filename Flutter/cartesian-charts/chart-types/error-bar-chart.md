@@ -11,7 +11,7 @@ documentation: ug
 
 Error bars are graphical representations of the variability of data and used on graphs to indicate the error or uncertainty in a reported measurement.
 
-To render a Error bar chart, create an instance of [`ErrorBarSeries`], and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/XyDataSeries-class.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties can be used to customize the appearance:
+To render an error bar chart, create an instance of `ErrorBarSeries`, and add it to the [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/XyDataSeries-class.html) collection property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html). The following properties can be used to customize the appearance:
 
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - changes the stroke width of the line.
 * [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
@@ -63,7 +63,7 @@ To render a Error bar chart, create an instance of [`ErrorBarSeries`], and add i
 
 ## Type
 
-The `type` property is used to define the error bar type value in `fixed`, `custom`, `percentage`, `standardDeviation`, and `standardError`. The default value of this property is `fixed`.  
+The `type` property is used to define the error bar type value. The default value of this property is `fixed`.  And other values `custom`, `percentage`, `standardDeviation` and `standardError`.
 
 You can customize the error bar depending on the error value by setting the values for `horizontalErrorValue` and `verticalErrorValue` for all types except `custom`.
 
@@ -113,10 +113,10 @@ You can customize the error bar depending on the error value by setting the valu
 
 For `custom` type,you can customize the error bar depending on the error value by setting the values for `horizontalPositiveErrorValue`, `horizontalNegativeErrorValue`, `verticalPositiveErrorValue` and `verticalNegativeErrorValue`.
 
-* `horizontalPositiveErrorValue` - This property horizontally depicts the error value in positive direction. The default value of `HorizontalErrorValue` is `1`.
-* `horizontalNegativeErrorValue` - This property horizontally depicts the error value in negative direction. The default value of `HorizontalErrorValue` is `1`.
-* `verticalPositiveErrorValue` - This property vertically depicts the error value in positive direction. The default value of `VerticalErrorValue` is `3`.
-* `verticalNegativeErrorValue` - This property vertically depicts the error value in negative direction. The default value of `VerticalErrorValue` is `3`.
+* `horizontalPositiveErrorValue` - This property horizontally depicts the error value in positive direction. The default value of `horizontalPositiveErrorValue` is `1`.
+* `horizontalNegativeErrorValue` - This property horizontally depicts the error value in negative direction. The default value of `horizontalNegativeErrorValue` is `1`.
+* `verticalPositiveErrorValue` - This property vertically depicts the error value in positive direction. The default value of `verticalPositiveErrorValue` is `3`.
+* `verticalNegativeErrorValue` - This property vertically depicts the error value in negative direction. The default value of `verticalNegativeErrorValue` is `3`.
 
 {% highlight dart %}
 
@@ -287,7 +287,8 @@ The `capLength` property is used to customize the length of the error bar's cap.
           capLength: 20.0
         )
       ],
-    ));
+    )
+    );
     }
 
     class ChartData {
