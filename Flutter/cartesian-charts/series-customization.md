@@ -120,6 +120,77 @@ If you wish to perform the initial rendering animation again in the existing ser
 
 ![Dynamic series animation](images/cartesian-customization/dynamicanimation.gif)
 
+## Animation delay
+The `animationDelay` property is used to specify the delay duration of the series animation. This takes a millisecond value as input. By default, the series will get animated for the specified duration. If `animationDelay` is specified, then the series will begin to animate after the specified duration.
+Defaults to `0` for all the series except `ErrorBarSeries`. The default value for the `ErrorBarSeries` is `1500`.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+        ChartSeriesController? _chartSeriesController1, _chartSeriesController2;
+        final List<ChartData> chartData = <ChartData>[
+          ChartData(x: 'Jan', y: 45, secondSeriesYValue: 1000),
+          ChartData(x: 'Feb', y: 100, secondSeriesYValue: 3000),
+          ChartData(x: 'March', y: 25, secondSeriesYValue: 1000),
+          ChartData(x: 'April', y: 100, secondSeriesYValue: 7000),
+          ChartData(x: 'May', y: 85, secondSeriesYValue: 5000),
+          ChartData(x: 'June', y: 140, secondSeriesYValue: 7000)
+        ];
+        return Column(children: <Widget>[
+        Container(
+          child: SfCartesianChart(
+            primaryXAxis: CategoryAxis(),
+            axes: <ChartAxis>[
+              NumericAxis(
+                numberFormat: NumberFormat.compact(),
+                majorGridLines: const MajorGridLines(width: 0),
+                opposedPosition: true,
+                name: 'yAxis1',
+                interval: 1000,
+                minimum: 0,
+                maximum: 7000)
+                ],
+            series: <ChartSeries<ChartData, String>>[
+            ColumnSeries<ChartData, String>(
+                animationDuration: 2000,
+                onRendererCreated: (ChartSeriesController controller) {
+                    _chartSeriesController1 = controller;
+                },
+                dataSource: chartData,
+                xValueMapper: (ChartData sales, _) => sales.x,
+                yValueMapper: (ChartData sales, _) => sales.y,
+                name: 'Unit Sold'),
+            LineSeries<ChartData, String>(
+                animationDuration: 4500,
+                animationDelay: 2000,
+                dataSource: chartData,
+                onRendererCreated: (ChartSeriesController controller) {
+                    _chartSeriesController2 = controller;
+                },
+                xValueMapper: (ChartData sales, _) => sales.x,
+                yValueMapper: (ChartData sales, _) => sales.secondSeriesYValue,
+                yAxisName: 'yAxis1',
+                markerSettings: MarkerSettings(isVisible: true),
+                name: 'Total Transaction')
+            ],)),
+        ]);
+    }
+
+    class ChartData {
+      ChartData({this.x, this.y, this.secondSeriesYValue});
+      final String? x;
+      final double? y;
+      final double? secondSeriesYValue;
+    }
+
+{% endhighlight %}
+
+![Animation Delay](images/cartesian-customization/animationDelay.gif)
+
+**Note**
+* The animation delay is applicable for series, trendline, and indicators.
+
 #### See Also
 
 * [Create dynamic animated series on addition of data points in the series](https://www.syncfusion.com/kb/12290/how-to-create-flutter-animated-charts-using-the-charts-widget-sfcartesianchart).

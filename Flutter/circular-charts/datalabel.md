@@ -141,39 +141,72 @@ N>  The [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_char
 
 ### Smart labels
 
-This feature is used to arrange the data labels smartly and avoid the intersection when there is overlapping of labels. The property [`enableSmartLabels`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/enableSmartLabels.html) in [`CircularSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries-class.html) is used to arrange the data labels smartly. By default, this property is true.
+This feature is used to arrange the data labels smartly and avoid the intersection when there is overlapping of labels. The enum property called the `shift` in [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelIntersectAction.html) is used to arrange the data labels smartly when labels get intersect. By default, the label intersection action property is `shift`.
+If the [`labelPosition`](https://npmci.syncfusion.com/flutter/api/release/syncfusion_flutter_charts/charts/DataLabelSettings/labelPosition.html) is `inside` and the [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelIntersectAction.html) is `shift`, then the overlapped labels will shift to outside the slices and arrange smartly. If the [`labelPosition`](https://npmci.syncfusion.com/flutter/api/release/syncfusion_flutter_charts/charts/DataLabelSettings/labelPosition.html) is `inside` and the [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelIntersectAction.html) is `hide`, then the overlapped labels will be hidden.
+If the [`labelPosition`](https://npmci.syncfusion.com/flutter/api/release/syncfusion_flutter_charts/charts/DataLabelSettings/labelPosition.html) is `outside` and the [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelIntersectAction.html) is `shift`, then the overlapped labels arrange smartly. If the [`labelPosition`](https://npmci.syncfusion.com/flutter/api/release/syncfusion_flutter_charts/charts/DataLabelSettings/labelPosition.html) is `outside` and the [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelIntersectAction.html) is `hide`, then the overlapped labels will be hidden.
+If the [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelIntersectAction.html) is `none`, then the overlapped labels will be visible irrespective of [`labelPosition`](https://npmci.syncfusion.com/flutter/api/release/syncfusion_flutter_charts/charts/DataLabelSettings/labelPosition.html).
+When the [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelIntersectAction.html) is `shift`, and if the data label goes out of the chart area, then the labels got trimmed and the tooltip is shown when clicking/tapping the data label.
+The values of the [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelIntersectAction.html) are listed below.
+* `hide` - hides the intersected data labels.
+* `none` - intersected data labels will be visible.
+* `shift` - smartly arranges the overlapped data labels.  
 
 {% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child:SfCircularChart(
-                        series: <CircularSeries>[
-                            PieSeries<ChartData, double>(
-                                // Avoid labels intersection
-                                enableSmartLabels: true,
-                                dataSource: chartData,
-                                xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) =>  data.y,
-                                dataLabelMapper: (ChartData data, _) => data.x,
-                                dataLabelSettings: DataLabelSettings(
-                                    isVisible: true,
-                                    labelPosition: ChartDataLabelPosition.inside
-                                )   
-                            )
-                        ]   
-                    )
-                )
-            )
-        );
+      final List<ChartData> chartData = <ChartData>[
+          ChartData(x: 'USA', y: 46),
+          ChartData(x: 'Great Britain', y: 27),
+          ChartData(x: 'China', y: 26),
+          ChartData(x: 'Russia', y: 19),
+          ChartData(x: 'Germany', y: 17),
+          ChartData(x: 'Japan', y: 12),
+          ChartData(x: 'France', y: 10),
+          ChartData(x: 'Korea', y: 9),
+          ChartData(x: 'Italy', y: 8),
+          ChartData(x: 'Australia', y: 8),
+          ChartData(x: 'Netherlands', y: 8),
+          ChartData(x: 'Hungary', y: 8),
+          ChartData(x: 'Brazil', y: 7),
+          ChartData(x: 'Spain', y: 7),
+          ChartData(x: 'Kenya', y: 6),
+          ChartData(x: 'Jamaica', y: 6),
+          ChartData(x: 'Croatia', y: 5),
+          ChartData(x: 'Cuba', y: 5),
+          ChartData(x: 'New Zealand', y: 4)
+      ];
+      return SfCircularChart(
+        series: <CircularSeries<ChartData, String>>[
+          PieSeries<ChartData, String>(
+            dataSource: chartData,
+            xValueMapper: (ChartData data, _) => data.x,
+            yValueMapper: (ChartData data, _) => data.y,
+            dataLabelMapper: (ChartData data, _) => data.x,
+            radius: '60%',
+            dataLabelSettings: DataLabelSettings(
+              isVisible: true,
+              // Avoid labels intersection
+              labelIntersectAction: LabelIntersectAction.shift,
+              labelPosition: ChartDataLabelPosition.outside,
+              connectorLineSettings: ConnectorLineSettings(
+                type: ConnectorType.curve, length: '25%')
+              )
+          )
+        ]);
+    }
+
+    class ChartData {
+      ChartData({this.x, this.y});
+      final String? x;
+      final num? y;
     }
 
 {% endhighlight %}
 
-![Smart labels](images/datalabel/smart_label.jpg)
+![Smart labels](images/datalabel/smart_datalabel.jpg)
+
+Note: The smart label positioning is applicable only for the pie and doughnut series.
 
 ### Apply series color
 
