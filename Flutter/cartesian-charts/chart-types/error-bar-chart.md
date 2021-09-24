@@ -164,7 +164,7 @@ For `custom` type,you can customize the error bar depending on the error value b
 
 ## Mode
 
-The error bar mode specifies whether the error bar should be drawn `horizontally`, `vertically`, or `both` ways. Use the `mode` option to switch the error bar mode.The default value of the mode is `RenderingMode.vertical`.You can use the following properties to customize the `mode`,
+The error bar `mode` specifies whether the error bar should be drawn `horizontally`, `vertically`, or `both` ways. Use the `mode` option to switch the error bar mode.The default value of the `mode` is `RenderingMode.vertical`.You can use the following properties to customize the `mode`,
 
 * `vertical` - This property displays vertical error value only.
 * `horizontal` - This property displays horizontal error value only.
