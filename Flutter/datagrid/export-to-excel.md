@@ -15,29 +15,29 @@ The [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/lates
 
 The following dependencies must be added to your pubspec.yaml file for exporting to the Excel.
   
-  {% highlight dart %} 
+{% highlight dart %} 
 
-    dependencies:
+dependencies:
 
-    syncfusion_flutter_datagrid_export: ^xx.x.xx
+syncfusion_flutter_datagrid_export: ^xx.x.xx
 
-  {% endhighlight %}
+{% endhighlight %}
 
-  >**NOTE** Here, **xx.x.xx** denotes the current version of `Syncfusion Flutter DataGrid Export` package.
+  >**NOTE:** Here, **xx.x.xx** denotes the current version of `Syncfusion Flutter DataGrid Export` package.
 
 **Import package**
 
 Import the following package in your Dart code.
 
- {% tabs %}
- {% highlight Dart %} 
+{% tabs %}
+{% highlight Dart %} 
 
-    import 'package:syncfusion_flutter_datagrid_export/export.dart';
+import 'package:syncfusion_flutter_datagrid_export/export.dart';
 
-    import 'package:syncfusion_flutter_xlsio/xlsio.dart';
+import 'package:syncfusion_flutter_xlsio/xlsio.dart';
 
- {% endhighlight %}
- {% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 You can export the `SfDataGrid` to the Excel by using the following extension methods present in the `SfDataGridState` class.
 
@@ -163,11 +163,11 @@ You can export the data to [Excel Worksheet](https://pub.dev/documentation/syncf
 {% tabs %}
 {% highlight Dart %}
 
-    final Workbook workbook = Workbook();
-    final Worksheet worksheet = workbook.worksheets[0];
-    key.currentState!.exportToExcelWorksheet(worksheet);
-    final List<int> bytes = workbook.saveAsStream();
-    File('DataGrid.xlsx').writeAsBytes(bytes, flush: true);
+final Workbook workbook = Workbook();
+final Worksheet worksheet = workbook.worksheets[0];
+key.currentState!.exportToExcelWorksheet(worksheet);
+final List<int> bytes = workbook.saveAsStream();
+File('DataGrid.xlsx').writeAsBytes(bytes, flush: true);
   
 {% endhighlight %}
 {% endtabs %}
