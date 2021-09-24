@@ -975,7 +975,7 @@ Triggers when the error bar is being rendered. Here, you can customize the follo
 
 * `pointIndex` - To obtain the point index of the error bar.
 * `viewPortPointIndex` - To obtain the viewport index value of the error bar.
-* `calculatedErrorBarValues` - This contains the calculated error bar values such as `horizontalPositiveErrorValue`,`horizontalNegativeErrorValue`,`verticalPositiveErrorValue` and `verticalNegativeErrorValue`
+* `calculatedErrorBarValues` - This contains the calculated error bar values such as `horizontalPositiveErrorValue`,`horizontalNegativeErrorValue`,`verticalPositiveErrorValue` and `verticalNegativeErrorValue`.
 
 {% highlight dart %}
 
