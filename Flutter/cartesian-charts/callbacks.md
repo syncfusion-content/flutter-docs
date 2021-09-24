@@ -687,13 +687,13 @@ The [`onRenderDetailsUpdate`](https://pub.dev/documentation/syncfusion_flutter_c
 
 ## onRenderDetailsUpdate (Trendline)
 
-The `onRenderDetailsUpdate` callback contains the following arguments.
+Triggers when the trendline gets rendered. The `onRenderDetailsUpdate` callback contains the following arguments.
 
 * `seriesName` - specifies the series name of the trendline.
-* `calculatedDataPoints` - specifies the data points of the series.
+* `calculatedDataPoints` - specifies the calculated data points of the trendline.
 * `trendlineName` - specifies the name of the trendline.
 * `intercept` - specifies the intercept value of the trendline.
-* `rSquaredValue` - specifies the r-square value of the trendline.
+* `rSquaredValue` - specifies the r-squared value of the trendline.
 * `slope` - specifies the slope value of the trendline.
 
 {% highlight dart %}
@@ -720,6 +720,9 @@ The `onRenderDetailsUpdate` callback contains the following arguments.
     }
 
 {% endhighlight %}
+
+>**NOTE**
+* The slope values of the polynomial trendline type will depend on the polynomial order. The intercept, slope, and rSquaredValue are not applicable for moving average trendline type.
 
 ## onRendererCreated
 
