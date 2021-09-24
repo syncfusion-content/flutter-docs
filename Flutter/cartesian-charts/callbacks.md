@@ -979,46 +979,44 @@ Triggers when the error bar is being rendered. Here, you can customize the follo
 
 {% highlight dart %}
 
-  @override
-  Widget build(BuildContext context) {
-    final dynamic chartData = [
-      ChartData(1, 24),
-      ChartData(2, 20),
-      ChartData(3, 35),
-      ChartData(4, 27),
-      ChartData(5, 30),
-      ChartData(6, 41),
-      ChartData(7, 26)
-    ];
+    @override
+    Widget build(BuildContext context) {
+      final dynamic chartData = [
+        ChartData(1, 24),
+        ChartData(2, 20),
+        ChartData(3, 35),
+        ChartData(4, 27),
+        ChartData(5, 30),
+        ChartData(6, 41),
+        ChartData(7, 26)
+      ];
 
-    return Scaffold(
+      return Scaffold(
         body: SfCartesianChart(
       series: <ChartSeries<ChartData, int>>[
         ErrorBarSeries<ChartData, int>(
-            width: 1.5,
-            dataSource: chartData,
-            xValueMapper: (ChartData data, _) => data.x,
-            yValueMapper: (ChartData data, _) => data.y,
-            onRenderDetailsUpdate: (ErrorBarRenderDetails args) {
-              print(args.pointIndex);
-              print(args.viewPortPointIndex);
-              print(
-                  args.calculatedErrorBarValues!.horizontalPositiveErrorValue);
-              print(
-                  args.calculatedErrorBarValues!.horizontalNegativeErrorValue);
-              print(args.calculatedErrorBarValues!.verticalPositiveErrorValue);
-              print(args.calculatedErrorBarValues!.verticalNegativeErrorValue);
-            })
+          dataSource: chartData,
+          xValueMapper: (ChartData data, _) => data.x,
+          yValueMapper: (ChartData data, _) => data.y,
+          onRenderDetailsUpdate: (ErrorBarRenderDetails args) {
+            print(args.pointIndex);
+            print(args.viewPortPointIndex);
+            print(
+                args.calculatedErrorBarValues!.horizontalPositiveErrorValue);
+            print(
+                args.calculatedErrorBarValues!.horizontalNegativeErrorValue);
+            print(args.calculatedErrorBarValues!.verticalPositiveErrorValue);
+            print(args.calculatedErrorBarValues!.verticalNegativeErrorValue);
+          })
       ],
     ));
-  }
-}
+    }
 
-class ChartData {
-  const ChartData(this.x, this.y);
-  final int x;
-  final int y;
-}
+    class ChartData {
+      const ChartData(this.x, this.y);
+      final int x;
+      final int y;
+    }
 
 {% endhighlight %}
 
