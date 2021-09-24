@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Error bar Chart in Flutter Cartesian Charts (SfCartesianChart)
+# Error bar chart in Flutter Cartesian Charts (SfCartesianChart)
 
 Error bars are graphical representations of the variability of data and used on graphs to indicate the error or uncertainty in a reported measurement.
 
@@ -16,10 +16,10 @@ To render a Error bar chart, create an instance of [`ErrorBarSeries`], and add i
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/color.html) - changes the stroke width of the line.
 * [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
 * [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) - changes the stroke width of the line.
-* [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/dashArray.html) - render error bar with dashes.
+* [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/dashArray.html) - renders error bar with dashes.
 * [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/pointColorMapper.html)- maps the individual colors to the data point.
 
-* [`Marker`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/MarkerSettings.html), [`data label`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings-class.html), [`trendline`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline-class.html), [`Technical indicators`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators-class.html), and other user interaction features are not applicable for error bar series. And events like [`onPointTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/onPointTap.html), [`onPointDoubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/onPointDoubleTap.html) and [`onPointLongPress`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/onPointLongPress.html) are not applicable for this series.
+[`Marker`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/MarkerSettings.html), [`data label`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings-class.html), [`trendline`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline-class.html), [`Technical indicators`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators-class.html), and other user interaction features are not applicable for error bar series. And events like [`onPointTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/onPointTap.html), [`onPointDoubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/onPointDoubleTap.html) and [`onPointLongPress`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/onPointLongPress.html) are not applicable for this series.
 
 {% highlight dart %}
 
@@ -47,27 +47,28 @@ To render a Error bar chart, create an instance of [`ErrorBarSeries`], and add i
           yValueMapper: (ChartData data, _) => data.y,
         )
       ],
-    ));
+    )
+    );
     }
 
     class ChartData {
-      const ChartData(this.x, this.y);
+      ChartData(this.x, this.y);
       final int x;
       final int y;
     }
 
 {% endhighlight %}
 
-![Error Bar](cartesian-chart-types-images/error_bar_color.jpg)
+![Error bar](cartesian-chart-types-images/error_bar_color.jpg)
 
 ## Type
 
-The Type property is used to define the error bar type value in `Fixed`, `Custom`, `Percentage`, `StandardDeviation`, and `StandardError`. The default value of this property is `Fixed`.  
+The `type` property is used to define the error bar type value in `fixed`, `custom`, `percentage`, `standardDeviation`, and `standardError`. The default value of this property is `fixed`.  
 
-You can customize the error bar depending on the error value by setting the values for `HorizontalErrorValue` and `VerticalErrorValue` for all types except `Custom`.
+You can customize the error bar depending on the error value by setting the values for `horizontalErrorValue` and `verticalErrorValue` for all types except `custom`.
 
-* `HorizontalErrorValue` - It horizontally depicts the error value in positive and negative directions. The default value of `HorizontalErrorValue` is 1.
-* `VerticalErrorValue` - It vertically depicts the error value in positive and negative directions. The default value of `VerticalErrorValue` is 3.
+* `horizontalErrorValue` - This property horizontally depicts the error value in positive and negative directions. The default value of `horizontalErrorValue` is `1`.
+* `verticalErrorValue` - This property vertically depicts the error value in positive and negative directions. The default value of `verticalErrorValue` is `3`.
 
 {% highlight dart %}
 
@@ -94,27 +95,28 @@ You can customize the error bar depending on the error value by setting the valu
           type: ErrorBarType.standardError
         )
       ],
-    ));
+    )
+    );
     }
 
     class ChartData {
-      const ChartData(this.x, this.y);
+      ChartData(this.x, this.y);
       final int x;
       final int y;
     }
 
 {% endhighlight %}
 
-![Error Bar](cartesian-chart-types-images/error_bar_type.jpg)
+![Error bar type](cartesian-chart-types-images/error_bar_type.jpg)
 
 ### Custom type
 
-For `Custom` type,You can customize the error bar depending on the error value by setting the values for `HorizontalPositiveErrorValue`, `HorizontalNegativeErrorValue`, `VerticalPositiveErrorValue` and `VerticalNegativeErrorValue`.
+For `custom` type,you can customize the error bar depending on the error value by setting the values for `horizontalPositiveErrorValue`, `horizontalNegativeErrorValue`, `verticalPositiveErrorValue` and `verticalNegativeErrorValue`.
 
-* `HorizontalPositiveErrorValue` - It horizontally depicts the error value in positive direction. The default value of `HorizontalErrorValue` is 1.
-* `HorizontalPositiveErrorValue` - It horizontally depicts the error value in positive direction. The default value of `HorizontalErrorValue` is 1.
-* `VerticalPositiveErrorValue` - It vertically depicts the error value in positive direction. The default value of `VerticalErrorValue` is 3.
-* `VerticalNegativeErrorValue` - It vertically depicts the error value in negative direction. The default value of `VerticalErrorValue` is 3.
+* `horizontalPositiveErrorValue` - This property horizontally depicts the error value in positive direction. The default value of `HorizontalErrorValue` is `1`.
+* `horizontalNegativeErrorValue` - This property horizontally depicts the error value in negative direction. The default value of `HorizontalErrorValue` is `1`.
+* `verticalPositiveErrorValue` - This property vertically depicts the error value in positive direction. The default value of `VerticalErrorValue` is `3`.
+* `verticalNegativeErrorValue` - This property vertically depicts the error value in negative direction. The default value of `VerticalErrorValue` is `3`.
 
 {% highlight dart %}
 
@@ -146,26 +148,27 @@ For `Custom` type,You can customize the error bar depending on the error value b
           horizontalNegativeErrorValue: 0.5
         )
       ],
-    ));
+    )
+    );
     }
 
     class ChartData {
-      const ChartData(this.x, this.y);
+      ChartData(this.x, this.y);
       final int x;
       final int y;
     }
 
 {% endhighlight %}
 
-![Error Bar](cartesian-chart-types-images/error_bar_custom_type.jpg)
+![Error bar custom type](cartesian-chart-types-images/error_bar_custom_type.jpg)
 
 ## Mode
 
-The error bar mode specifies whether the error bar should be drawn horizontally, vertically, or both ways. Use the `mode` option to switch the error bar mode.The default value of the mode is `RenderingMode.vertical`.You can use the following properties to customize the `mode`,
+The error bar mode specifies whether the error bar should be drawn `horizontally`, `vertically`, or `both` ways. Use the `mode` option to switch the error bar mode.The default value of the mode is `RenderingMode.vertical`.You can use the following properties to customize the `mode`,
 
-* `RenderingMode.vertical` - It displays vertical error value only.
-* `RenderingMode.horizontal` - It displays horizontal error value only.
-* `RenderingMode.vertical`  - It displays both vertical and horizontal error values.
+* `vertical` - This property displays vertical error value only.
+* `horizontal` - This property displays horizontal error value only.
+* `both`  - This property displays both vertical and horizontal error values.
 
 {% highlight dart %}
 
@@ -194,26 +197,27 @@ The error bar mode specifies whether the error bar should be drawn horizontally,
           horizontalErrorValue:0.2
         )
       ],
-    ));
+    )
+    );
     }
 
     class ChartData {
-      const ChartData(this.x, this.y);
+      ChartData(this.x, this.y);
       final int x;
       final int y;
     }
 
 {% endhighlight %}
 
-![Error Bar](cartesian-chart-types-images/error_bar_mode.jpg)
+![Error bar mode](cartesian-chart-types-images/error_bar_mode.jpg)
 
 ## Direction
 
-Using the `direction` option, you can alter the error bar direction to plus, minus, or both sides.  is The default value of the `direction` is `Direction.both`. .You can use the following properties to customize the `direction`,
+Using the `direction` option,you can alter the error bar direction to `plus`, `minus`, or `both` sides.  The default value of the `direction` is `Direction.both`.You can use the following properties to customize the `direction`,
 
-* `Direction.both` - Used to set error value in positive and negative directions.
-* `Direction.minus` - Used to set error value in a negative direction.
-* `Direction.plus` - Used to set error value in a positive direction.
+* `both` - Used to set error value in positive and negative directions.
+* `minus` - Used to set error value in a negative direction.
+* `plus` - Used to set error value in a positive direction.
 
 {% highlight dart %}
 
@@ -240,24 +244,23 @@ Using the `direction` option, you can alter the error bar direction to plus, min
           direction: Direction.minus
         )
       ],
-    ));
+    )
+    );
     }
 
     class ChartData {
-      const ChartData(this.x, this.y);
+      ChartData(this.x, this.y);
       final int x;
       final int y;
     }
 
 {% endhighlight %}
 
-![Error Bar](cartesian-chart-types-images/error_bar_direction.jpg)
+![Error bar direction](cartesian-chart-types-images/error_bar_direction.jpg)
 
-## CapLength
+## Cap length
 
-You can customize the ErrorBar with the following style properties,
-
-* `capLength` – Used to customize the length of the error bar's cap. The default value of the `capLength` is 10.
+The `capLength` property is used to customize the length of the error bar's cap. The default value is `10`.
 
 {% highlight dart %}
 
@@ -288,11 +291,11 @@ You can customize the ErrorBar with the following style properties,
     }
 
     class ChartData {
-      const ChartData(this.x, this.y);
+      ChartData(this.x, this.y);
       final int x;
       final int y;
     }
 
 {% endhighlight %}
 
-![Error Bar](cartesian-chart-types-images/error_bar_caplength.jpg)
+![Error bar cap length](cartesian-chart-types-images/error_bar_caplength.jpg)

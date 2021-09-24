@@ -974,7 +974,7 @@ Triggers while swiping on the plot area. Whenever the swiping happens on th
 
 ## onRenderDetailsUpdate (ErrorBarSeries)
 
-Triggers when the error bar is being rendered. Here, you can customize the following arguments.
+Triggers when the error bar is being rendered. In this `onRenderDetailsUpdate` callback, you can get the following arguments.
 
 * `pointIndex` - To obtain the point index of the error bar.
 * `viewPortPointIndex` - To obtain the viewport index value of the error bar.
@@ -1012,11 +1012,12 @@ Triggers when the error bar is being rendered. Here, you can customize the follo
             print(args.calculatedErrorBarValues!.verticalNegativeErrorValue);
           })
       ],
-    ));
+    )
+    );
     }
 
     class ChartData {
-      const ChartData(this.x, this.y);
+      ChartData(this.x, this.y);
       final int x;
       final int y;
     }
