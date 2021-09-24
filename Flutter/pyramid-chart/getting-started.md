@@ -22,7 +22,7 @@ Create a simple project using the instructions given in the [Getting Started wit
 
 **Add dependency**
 
-Add the Syncfusion Flutter Chart dependency to your pub spec file.
+Add the Syncfusion [Flutter Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts) dependency to your pub spec file.
 
 {% highlight dart %} 
 
@@ -248,3 +248,6 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
 ![Tooltip in chart](images/getting-started/tooltip.png)
 
 You can find the complete getting started example from this [`link`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/pyramid_chart_example-1124328856).
+
+
+N> You can also explore our [Flutter Charts example](https://flutter.syncfusion.com/#/cartesian-charts/chart-types/line/default-line-chart) that shows how to render various chart types as well as how to easily configure with built-in support for creating stunning visual effects.
