@@ -567,8 +567,8 @@ Defaults to `null`.
                       0.9
                       ]);
                     },
-                    xValueMapper: (ChartData sales, _) => sales.x,
-                    yValueMapper: (ChartData sales, _) => sales.y)])
+                    xValueMapper: (ChartData data, _) => data.x,
+                    yValueMapper: (ChartData data, _) => data.y)])
                 )
             );
         }
