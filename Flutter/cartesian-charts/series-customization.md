@@ -521,6 +521,9 @@ Defaults to `null`.
 
 {% highlight dart %} 
 
+    /// Package import
+    import 'dart:ui' as ui;
+
     @override
     Widget build(BuildContext context) {
     const List<ChartData> chartData = <ChartData>[
