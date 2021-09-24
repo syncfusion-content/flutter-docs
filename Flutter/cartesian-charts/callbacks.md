@@ -685,14 +685,14 @@ The [`onRenderDetailsUpdate`](https://pub.dev/documentation/syncfusion_flutter_c
     
 {% endhighlight %}
 
-## onRenderDetailsUpdate(Trendline)
+## onRenderDetailsUpdate (Trendline)
 
-Triggers when the trendline gets rendered. Trendline properties like color,opacity can be customized using trendlineRender Callback. The [`onTrendlineRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs-class.html) Callback contains the following arguments.
+Triggers when the trendline gets rendered. Trendline properties like color,opacity can be customized using trendlineRender Callback. The [`onRenderDetailsUpdate`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/onRenderDetailsUpdate.html) Callback contains the following arguments.
 
-* [`seriesName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/seriesName.html) - specifies the series name of the trendline.
-* [`data`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/data.html) - specifies the data points of the series.
-* [`trendlineName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/trendlineName.html) - specifies the name of the trendline.
-* [`intercept`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/intercept.html) - specifies the intercept value of the trendline.
+* [`seriesName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderParams/seriesName.html) - specifies the series name of the trendline.
+* [`calculatedDataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderParams/calculatedDataPoints.html) - specifies the data points of the series.
+* [`trendlineName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderParams/trendlineName.html) - specifies the name of the trendline.
+* [`intercept`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderParams/intercept.html) - specifies the intercept value of the trendline.
 * ['rSquare'] - specifies the r-square value of the trendline.
 * ['slope'] - specifies the slope value of the trendline.
 
@@ -700,18 +700,23 @@ Triggers when the trendline gets rendered. Trendline properties like color,opaci
 
     @override
     Widget build(BuildContext context) {
-    
       return Scaffold(
         body: Center(
           child: SfCartesianChart(
-            onTrendlineRender: (TrendlineRenderArgs args) {
-              print('Slope value: ' + args.slope);
-              print('rSquare value: ' + args.rSquare);
-              print('Intercept value (x): ' + args.intercept[0]);
-            }
-          )
-        )
-      );
+            series: <LineSeries<ChartData, String>>[
+              LineSeries<ChartData, String>(
+                dataSource: chartData,
+                xValueMapper: (ChartData data, _) => data.x,
+                yValueMapper: (ChartData data, _) => data.y,
+                trendlines: <Trendline>[
+                  Trendline(onRenderDetailsUpdate: (TrendlineRenderParams args) {
+                    print('Slope value: ' + args.slope![0].toString());
+                    print('rSquare value: ' + args.rSquaredValue.toString());
+                    print('Intercept value (x): ' + args.intercept.toString());
+                  })
+              ])
+          ],
+      )));
     }
 
 {% endhighlight %}
@@ -964,12 +969,12 @@ Triggers while swiping on the plot area. Whenever the swiping happens on th
 
 {% endhighlight %}
 
-## onRenderDetailsUpdate(ErrorBarSeries)
+## onRenderDetailsUpdate (ErrorBarSeries)
 
 Triggers when the error bar is being rendered. Here, you can customize the following arguments.
 
 * [`pointIndex`] - To obtain the point index of the error bar.
-* [`viewportPointIndex`] - To obtain the viewport index value of the error bar.
+* [`viewPortPointIndex`] - To obtain the viewport index value of the error bar.
 * ['horizontalPositiveErrorValue'] - To obtain the error value in the positive horizontal direction.
 * ['horizontalNegativeErrorValue'] - To obtain the error value in the negative horizontal direction.
 * ['verticalPositiveErrorValue'] - To obtain the error value in the positive vertical direction.
@@ -979,39 +984,39 @@ Triggers when the error bar is being rendered. Here, you can customize the follo
 
     @override
     Widget build(BuildContext context) {
-    final List<SalesData> chartData = [
-      SalesData('IND', 24),
-      SalesData('AUS', 20),
-      SalesData('USA', 35),
-      SalesData('DEU', 27),
-      SalesData('ITA', 30),
-      SalesData('UK', 41),
-      SalesData('RUS', 26)
-    ];
+      final List<ChartData> chartData = <ChartData>[
+        ChartData('IND', 24),
+        ChartData('AUS', 20),
+        ChartData('USA', 35),
+        ChartData('DEU', 27),
+        ChartData('ITA', 30),
+        ChartData('UK', 41),
+        ChartData('RUS', 26)
+      ];
 
-    return Scaffold(
-        body: SfCartesianChart(
+      return Scaffold(
+          body: SfCartesianChart(
             primaryXAxis: CategoryAxis(interval: 1),
-            series: <ChartSeries<SalesData, String>>[
-          ErrorBarSeries<SalesData, String>(
-              dataSource: chartData,
-              xValueMapper: (SalesData sales, _) => sales.country,
-              yValueMapper: (SalesData sales, _) => sales.salesCount,
-              onRenderDetailsGet:(ErrorBarRenderDetails args) {
-                     print(args.pointIndex);
-                     print(args.viewportPointIndex);
-                     print(args.calculatedErrorBarValues!.horizontalPositiveErrorValue);
-                     print(args.calculatedErrorBarValues!.horizontalNegativeErrorValue);
-                     print(args.calculatedErrorBarValues!.verticalPositiveErrorValue);
-                     print(args.calculatedErrorBarValues!.verticalNegativeErrorValue);
-                 }))
-        ]));
+            series: <ChartSeries<ChartData, String>>[
+              ErrorBarSeries<ChartData, String>(
+                dataSource: chartData,
+                xValueMapper: (ChartData sales, _) => sales.x,
+                yValueMapper: (ChartData sales, _) => sales.y,
+                onRenderDetailsUpdate: (ErrorBarRenderDetails args) {
+                  print(args.pointIndex);
+                  print(args.viewPortPointIndex);
+                  print(args.calculatedErrorBarValues!.horizontalPositiveErrorValue);
+                  print(args.calculatedErrorBarValues!.horizontalNegativeErrorValue);
+                  print(args.calculatedErrorBarValues!.verticalPositiveErrorValue);
+                  print(args.calculatedErrorBarValues!.verticalNegativeErrorValue);
+              })
+      ]));
     }
 
-    class SalesData {
-    const SalesData(this.country, this.salesCount);
-    final String country;
-    final int salesCount;
+    class ChartData {
+      ChartData(this.x, this.y);
+      final String x;
+      final num y;
     }
 
 {% endhighlight %}
