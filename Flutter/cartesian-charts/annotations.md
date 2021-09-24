@@ -123,16 +123,16 @@ To position the annotation based on the percentage values, set the [`CoordinateU
 
 {% highlight dart %} 
 
-@override
-Widget build(BuildContext context) {​​​​​
-  const List<ChartData> chartData = [
-    ChartData('IND', 24),
-    ChartData('AUS', 20),
-    ChartData('USA', 27),
-    ChartData('DEU', 57),
-    ChartData('ITA', 30),
-    ChartData('UK', 41),
-  ];
+  @override
+  Widget build(BuildContext context) {​​​​​
+    const List<ChartData> chartData = [
+      ChartData('IND', 24),
+      ChartData('AUS', 20),
+      ChartData('USA', 27),
+      ChartData('DEU', 57),
+      ChartData('ITA', 30),
+      ChartData('UK', 41),
+    ];
 
   return Scaffold(
       body: Center(
