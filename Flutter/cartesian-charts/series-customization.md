@@ -575,9 +575,9 @@ Defaults to `null`.
     }
 
     class ChartData {
-    const ChartData(this.x, this.y);
-    final String x;
-    final double y;
+       const ChartData(this.x, this.y);
+       final String x;
+       final double y;
     }
 
 {% endhighlight %}
