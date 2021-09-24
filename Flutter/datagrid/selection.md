@@ -1016,7 +1016,7 @@ If the DataGrid.AllowEditing property is true and the GridColumn.AllowEditing pr
 <kbd>Esc</kbd>
 </td>
 <td>
-The DataGridSource.onCellCancelEdit method is called when you press the Esc key from Web and Desktop platforms. The canSubmitCell and onCellSubmit will not be called when Esc key is pressed.
+If the current cell is in edit mode, calls the DataGridSource.onCellCancelEdit method to revert the current changes and ends the editing.
 </td>
 </tr>
 </table>
