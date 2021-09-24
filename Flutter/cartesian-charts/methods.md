@@ -1305,6 +1305,53 @@ Since this method is in the series controller, x and y-axis associated with this
 
 {% endhighlight %}
 
+## PointToPixel 
+Converts chart data point value to logical pixel value.
+  
+The [`pointToPixel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeriesController/pointToPixel.html) method takes chart data point value as input and returns logical pixel value.
+  
+Since this method is in the series controller, x and y-axis associated with this particular series will be considering for conversion value.
+  
+N> This method is only applicable for Cartesian chart, not for the circular, pyramid,
+and funnel charts.
+  
+{% highlight dart %}
+
+
+    //Initialize the series controller
+    ChartSeriesController? seriesController;
+
+    @override 
+    Widget build(BuildContext context) {
+      return Container(
+          child: SfCartesianChart(
+              series: <CartesianSeries<ChartSampleData, num>>[
+                ColumnSeries<ChartSampleData, num>(
+                  onRendererCreated: (ChartSeriesController controller) {
+                    seriesController = controller;
+                  },
+                )
+              ],
+              onPointTapped: (PointTapArgs args) {
+                  CartesianChartPoint<dynamic> chartPoint =
+                      CartesianChartPoint<dynamic>(data[args.pointIndex].x,
+                          data[args.pointIndex].y);
+                  Offset pointLocation = seriesController!.pointToPixel(chartPoint);
+                  print('X location: ${pointLocation.x}');
+                  print('Y location: ${pointLocation.y}');
+              },
+            )
+      );
+    }
+
+    class ChartSampleData{
+        ChartSampleData(this.x, this.y);
+        final num x;
+        final double? y;
+      }
+
+{% endhighlight %}
+
 ## See Also
 
 * [Show or hide tooltip dynamically in Cartesian chart](https://www.syncfusion.com/kb/11490/how-to-show-or-hide-the-tooltip-dynamically-in-cartesian-charts-sfcartesianchart).
