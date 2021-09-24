@@ -687,12 +687,12 @@ The [`onRenderDetailsUpdate`](https://pub.dev/documentation/syncfusion_flutter_c
 
 ## onRenderDetailsUpdate (Trendline)
 
-Triggers when the trendline gets rendered. Trendline properties like color,opacity can be customized using trendlineRender Callback. The [`onRenderDetailsUpdate`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/onRenderDetailsUpdate.html) Callback contains the following arguments.
+Triggers when the trendline gets rendered. Trendline properties like color,opacity can be customized using trendlineRender Callback. The [`onRenderDetailsUpdate`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs-class.html) Callback contains the following arguments.
 
-* [`seriesName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderParams/seriesName.html) - specifies the series name of the trendline.
-* [`calculatedDataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderParams/calculatedDataPoints.html) - specifies the data points of the series.
-* [`trendlineName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderParams/trendlineName.html) - specifies the name of the trendline.
-* [`intercept`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderParams/intercept.html) - specifies the intercept value of the trendline.
+* [`seriesName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/seriesName.html) - specifies the series name of the trendline.
+* [`calculatedDataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/data.html) - specifies the data points of the series.
+* [`trendlineName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/trendlineName.html) - specifies the name of the trendline.
+* [`intercept`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/intercept.html) - specifies the intercept value of the trendline.
 * ['rSquare'] - specifies the r-square value of the trendline.
 * ['slope'] - specifies the slope value of the trendline.
 
