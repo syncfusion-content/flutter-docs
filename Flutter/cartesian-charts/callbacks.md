@@ -687,14 +687,14 @@ The [`onRenderDetailsUpdate`](https://pub.dev/documentation/syncfusion_flutter_c
 
 ## onRenderDetailsUpdate (Trendline)
 
-Triggers when the trendline gets rendered. Trendline properties like color,opacity can be customized using trendlineRender Callback. The [`onRenderDetailsUpdate`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs-class.html) Callback contains the following arguments.
+The `onRenderDetailsUpdate` callback contains the following arguments.
 
-* [`seriesName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/seriesName.html) - specifies the series name of the trendline.
-* [`calculatedDataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/data.html) - specifies the data points of the series.
-* [`trendlineName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/trendlineName.html) - specifies the name of the trendline.
-* [`intercept`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/intercept.html) - specifies the intercept value of the trendline.
-* ['rSquare'] - specifies the r-square value of the trendline.
-* ['slope'] - specifies the slope value of the trendline.
+* `seriesName` - specifies the series name of the trendline.
+* `calculatedDataPoints` - specifies the data points of the series.
+* `trendlineName` - specifies the name of the trendline.
+* `intercept` - specifies the intercept value of the trendline.
+* `rSquaredValue` - specifies the r-square value of the trendline.
+* `slope` - specifies the slope value of the trendline.
 
 {% highlight dart %}
 
@@ -973,12 +973,12 @@ Triggers while swiping on the plot area. Whenever the swiping happens on th
 
 Triggers when the error bar is being rendered. Here, you can customize the following arguments.
 
-* [`pointIndex`] - To obtain the point index of the error bar.
-* [`viewPortPointIndex`] - To obtain the viewport index value of the error bar.
-* ['horizontalPositiveErrorValue'] - To obtain the error value in the positive horizontal direction.
-* ['horizontalNegativeErrorValue'] - To obtain the error value in the negative horizontal direction.
-* ['verticalPositiveErrorValue'] - To obtain the error value in the positive vertical direction.
-* ['verticalNegativeErrorValue'] - To obtain the error value in the negative vertical direction.
+* `pointIndex` - To obtain the point index of the error bar.
+* `viewPortPointIndex` - To obtain the viewport index value of the error bar.
+* `horizontalPositiveErrorValue` - To obtain the error value in the positive horizontal direction.
+* `horizontalNegativeErrorValue` - To obtain the error value in the negative horizontal direction.
+* `verticalPositiveErrorValue` - To obtain the error value in the positive vertical direction.
+* `verticalNegativeErrorValue` - To obtain the error value in the negative vertical direction.
 
 {% highlight dart %}
 
