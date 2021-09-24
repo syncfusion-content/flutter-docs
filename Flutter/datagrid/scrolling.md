@@ -20,53 +20,51 @@ N> The default value of `isScrollbarAlwaysShown` is false.
 {% tabs %}
 {% highlight Dart %}
 
- @override
- Widget build(BuildContext context) {
-    return Scaffold(
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
       body: SfDataGrid(
-        source: _employeeDataSource,
-        isScrollbarAlwaysShown: true,
-        columns: [
-          GridColumn(
+          source: _employeeDataSource,
+          isScrollbarAlwaysShown: true,
+          columns: [
+        GridColumn(
             columnName: 'id',
             label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerRight,
-              child: Text(
-                'ID',
-                overflow: TextOverflow.ellipsis,
-              ))),
-          GridColumn(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
             columnName: 'name',
             label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Name',
-                overflow: TextOverflow.ellipsis,
-              ))),
-          GridColumn(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Name',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
             columnName: 'designation',
             label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Designation',
-                overflow: TextOverflow.ellipsis,
-              ))),
-          GridColumn(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Designation',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
             columnName: 'salary',
             label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerRight,
-              child: Text(
-                'Salary',
-                overflow: TextOverflow.ellipsis,
-              ))),
-        ],
-      ),
-    );
-  }
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Salary',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+      ]));
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -82,54 +80,52 @@ The following example shows how to disable the horizontal and vertical scrolling
 {% tabs %}
 {% highlight Dart %}
 
- @override
- Widget build(BuildContext context) {
-    return Scaffold(
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
       body: SfDataGrid(
-        source: _employeeDataSource,
-        horizontalScrollPhysics: NeverScrollableScrollPhysics(),
-        verticalScrollPhysics: NeverScrollableScrollPhysics(),
-        columns: [
-          GridColumn(
+          source: _employeeDataSource,
+          horizontalScrollPhysics: NeverScrollableScrollPhysics(),
+          verticalScrollPhysics: NeverScrollableScrollPhysics(),
+          columns: [
+        GridColumn(
             columnName: 'id',
             label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerRight,
-              child: Text(
-                'ID',
-                overflow: TextOverflow.ellipsis,
-              ))),
-          GridColumn(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
             columnName: 'name',
             label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Name',
-                overflow: TextOverflow.ellipsis,
-              ))),
-          GridColumn(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Name',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
             columnName: 'designation',
             label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Designation',
-                overflow: TextOverflow.ellipsis,
-              ))),
-          GridColumn(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Designation',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
             columnName: 'salary',
             label: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerRight,
-              child: Text(
-                'Salary',
-                overflow: TextOverflow.ellipsis,
-              ))),
-        ],
-      ),
-    );
-  }
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Salary',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+      ]));
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -149,60 +145,62 @@ N> The default value of `canAnimate` is `false`.
 
 final DataGridController _controller = DataGridController();
 
- @override
- Widget build(BuildContext context) {
-    return Scaffold(
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
       body: Column(children: [
-        FlatButton(
-          child: Text('ScrollToCell'),
-          onPressed: () {
-            _controller.scrollToCell(15, 2);
-          },
-        ),
-        Expanded( child:SfDataGrid(
-          source: _employeeDataSource,
-          columns: [
-            GridColumn(
+    TextButton(
+        child: Text('ScrollToCell'),
+        onPressed: () {
+          _controller.scrollToCell(10, 1);
+        }),
+    Expanded(
+        child: SfDataGrid(
+            source: _employeeDataSource,
+            defaultColumnWidth: 150,
+            gridLinesVisibility: GridLinesVisibility.both,
+            headerGridLinesVisibility: GridLinesVisibility.both,
+            controller: _controller,
+            columns: [
+          GridColumn(
               columnName: 'id',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'ID',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-            GridColumn(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'ID',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'name',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Name',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-            GridColumn(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Name',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'designation',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Designation',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-            GridColumn(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Designation',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'salary',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Salary',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-          ],
-          controller: _controller,
-        )),
-    );
-  }
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Salary',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+        ]))
+  ]));
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -220,60 +218,62 @@ N> The default value of `canAnimate` is `false`.
 
 final DataGridController _controller = DataGridController();
 
- @override
- Widget build(BuildContext context) {
-    return Scaffold(
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
       body: Column(children: [
-        FlatButton(
-          child: Text('ScrollToRow'),
-          onPressed: () {
-            _controller.scrollToRow(15);
-          },
-        ),
-        Expanded( child:SfDataGrid(
-          source: _employeeDataSource,
-          columns: [
-            GridColumn(
+    TextButton(
+        child: Text('ScrollToRow'),
+        onPressed: () {
+           _controller.scrollToRow(10);
+        }),
+    Expanded(
+        child: SfDataGrid(
+            source: _employeeDataSource,
+            defaultColumnWidth: 150,
+            gridLinesVisibility: GridLinesVisibility.both,
+            headerGridLinesVisibility: GridLinesVisibility.both,
+            controller: _controller,
+            columns: [
+          GridColumn(
               columnName: 'id',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'ID',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-            GridColumn(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'ID',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'name',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Name',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-            GridColumn(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Name',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'designation',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Designation',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-            GridColumn(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Designation',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'salary',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Salary',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-          ],
-          controller: _controller,
-        )),
-    );
-  }
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Salary',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+        ]))
+  ]));
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -289,60 +289,62 @@ N> The default value of `canAnimate` is `false`.
 
 final DataGridController _controller = DataGridController();
 
- @override
- Widget build(BuildContext context) {
-    return Scaffold(
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
       body: Column(children: [
-        FlatButton(
-          child: Text('ScrollToColumn'),
-          onPressed: () {
-            _controller.scrollToColumn(2);
-          },
-        ),
-        Expanded( child:SfDataGrid(
-          source: _employeeDataSource,
-          columns: [
-            GridColumn(
+    TextButton(
+        child: Text('ScrollToColumn'),
+        onPressed: () {
+          _controller.scrollToColumn(1);
+        }),
+    Expanded(
+        child: SfDataGrid(
+            source: _employeeDataSource,
+            defaultColumnWidth: 150,
+            gridLinesVisibility: GridLinesVisibility.both,
+            headerGridLinesVisibility: GridLinesVisibility.both,
+            controller: _controller,
+            columns: [
+          GridColumn(
               columnName: 'id',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'ID',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-            GridColumn(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'ID',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'name',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Name',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-            GridColumn(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Name',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'designation',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Designation',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-            GridColumn(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Designation',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'salary',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Salary',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-          ],
-          controller: _controller,
-        )),
-    );
-  }
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Salary',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+        ]))
+  ]));
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -365,63 +367,65 @@ N> The default value of `DataGridScrollPosition` is `Start`.
 
 final DataGridController _controller = DataGridController();
 
- @override
- Widget build(BuildContext context) {
-    return Scaffold(
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
       body: Column(children: [
-        FlatButton(
-          child: Text('ScrollToCell'),
-          onPressed: () {
-            _controller.scrollToCell(15, 2,
-                canAnimate: true,
-                rowPosition: DataGridScrollPosition.start,
-                columnPosition: DataGridScrollPosition.start);
-          },
-        ),
-        Expanded( child:SfDataGrid(
-          source: _employeeDataSource,
-          columns: [
-            GridColumn(
+    TextButton(
+        child: Text('ScrollToCell'),
+        onPressed: () {
+          _controller.scrollToCell(10, 1,
+              canAnimate: true,
+              rowPosition: DataGridScrollPosition.start,
+              columnPosition: DataGridScrollPosition.start);
+        }),
+    Expanded(
+        child: SfDataGrid(
+            source: _employeeDataSource,
+            defaultColumnWidth: 150,
+            gridLinesVisibility: GridLinesVisibility.both,
+            headerGridLinesVisibility: GridLinesVisibility.both,
+            controller: _controller,
+            columns: [
+          GridColumn(
               columnName: 'id',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'ID',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-            GridColumn(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'ID',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'name',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Name',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-            GridColumn(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Name',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'designation',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Designation',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-            GridColumn(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Designation',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'salary',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Salary',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-          ],
-          controller: _controller,
-        )),
-    );
-  }
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Salary',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+        ]))
+  ]));
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -437,60 +441,62 @@ N> The default value of `canAnimate` is `false`.
 
 final DataGridController _controller = DataGridController();
 
- @override
- Widget build(BuildContext context) {
-    return Scaffold(
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
       body: Column(children: [
-        FlatButton(
-          child: Text('ScrollToVerticalOffset'),
-          onPressed: () {
-            _controller.scrollToVerticalOffset(500);
-          },
-        ),
-        Expanded( child:SfDataGrid(
-          source: _employeeDataSource,
-          columns: [
-            GridColumn(
+    TextButton(
+        child: Text('ScrollToVerticalOffset'),
+        onPressed: () {
+          _controller.scrollToVerticalOffset(500);
+        }),
+    Expanded(
+        child: SfDataGrid(
+            source: _employeeDataSource,
+            defaultColumnWidth: 150,
+            gridLinesVisibility: GridLinesVisibility.both,
+            headerGridLinesVisibility: GridLinesVisibility.both,
+            controller: _controller,
+            columns: [
+          GridColumn(
               columnName: 'id',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'ID',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-            GridColumn(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'ID',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'name',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Name',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-            GridColumn(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Name',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'designation',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Designation',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-            GridColumn(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Designation',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'salary',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Salary',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-          ],
-          controller: _controller,
-        )),
-    );
-  }
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Salary',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+        ]))
+  ]));
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -506,60 +512,62 @@ N> The default value of `canAnimate` is `false`.
 
 final DataGridController _controller = DataGridController();
 
- @override
- Widget build(BuildContext context) {
-    return Scaffold(
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
       body: Column(children: [
-        FlatButton(
-          child: Text('ScrollToHorizontalOffset'),
-          onPressed: () {
-            _controller.scrollToHorizontalOffset(400);
-          },
-        ),
-        Expanded( child:SfDataGrid(
-          source: _employeeDataSource,
-          columns: [
-            GridColumn(
+    TextButton(
+        child: Text('ScrollToHorizontalOffset'),
+        onPressed: () {
+          _controller.scrollToHorizontalOffset(400);
+        }),
+    Expanded(
+        child: SfDataGrid(
+            source: _employeeDataSource,
+            defaultColumnWidth: 150,
+            gridLinesVisibility: GridLinesVisibility.both,
+            headerGridLinesVisibility: GridLinesVisibility.both,
+            controller: _controller,
+            columns: [
+          GridColumn(
               columnName: 'id',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'ID',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-            GridColumn(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'ID',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'name',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Name',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-            GridColumn(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Name',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'designation',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Designation',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-            GridColumn(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Designation',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'salary',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Salary',
-                  overflow: TextOverflow.ellipsis,
-                ))),
-          ],
-          controller: _controller,
-        )),
-    );
-  }
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Salary',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+        ]))
+  ]));
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -575,43 +583,45 @@ The following example demonstrates how to load more rows when vertical scrolling
 {% tabs %}
 {% highlight Dart %}
 
-late _EmployeeDataSource employeeDataSource;
+import 'package:intl/intl.dart';
+
+late EmployeeDataSource _employeeDataSource;
 late ScrollController verticalScrollController;
 
-  void verticalListner() {
-    if (verticalScrollController.position.pixels >=
-        verticalScrollController.position.maxScrollExtent * (70 / 100)) {
-      employeeDataSource.loadMoreRows();
-    }
+void verticalListner() {
+  if (_verticalScrollController.position.pixels >=
+      _verticalScrollController.position.maxScrollExtent * (70 / 100)) {
+    _employeeDataSource.loadMoreRows();
   }
+}
 
-  @override
-  void initState() {
-    super.initState();
-    employeeDataSource = _EmployeeDataSource();
-    verticalScrollController = ScrollController()..addListener(verticalListner);
-  }
+@override
+void initState() {
+  super.initState();
+  _employeeDataSource = _EmployeeDataSource();
+  _verticalScrollController = ScrollController()..addListener(verticalListner);
+}
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Flutter DataGrid Sample'),
-      ),
-      body: SfDataGrid(
-          source: employeeDataSource,
-          verticalScrollController: verticalScrollController,
-          columnWidthMode: ColumnWidthMode.fill,
-          columns: _getColumns()),
-    );
-  }
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    appBar: AppBar(
+      title: Text('Flutter DataGrid Sample'),
+    ),
+    body: SfDataGrid(
+        source: _employeeDataSource,
+        verticalScrollController: _verticalScrollController,
+        columnWidthMode: ColumnWidthMode.fill,
+        columns: _getColumns()),
+  );
+}
 
 class _EmployeeDataSource extends DataGridSource {
   _EmployeeDataSource() {
     loadEmployees(25);
   }
 
-  List<_Employee> employees = [];
+  List<Employee> employees = [];
 
   List<DataGridRow> dataGridRows = [];
 
@@ -622,39 +632,28 @@ class _EmployeeDataSource extends DataGridSource {
   DataGridRowAdapter buildRow(DataGridRow row) {
     return DataGridRowAdapter(cells: [
       Container(
-        padding: EdgeInsets.all(8),
-        alignment: Alignment.centerRight,
-        child: Text(
-          row.getCells()[0].value.toString(),
-          overflow: TextOverflow.ellipsis,
-        ),
-      ),
+          padding: EdgeInsets.all(8),
+          alignment: Alignment.centerRight,
+          child: Text(row.getCells()[0].value.toString(),
+              overflow: TextOverflow.ellipsis)),
       Container(
-        padding: EdgeInsets.all(8),
-        alignment: Alignment.centerRight,
-        child: Text(
-          row.getCells()[1].value.toString(),
-          overflow: TextOverflow.ellipsis,
-        ),
-      ),
+          padding: EdgeInsets.all(8),
+          alignment: Alignment.centerRight,
+          child: Text(row.getCells()[1].value.toString(),
+              overflow: TextOverflow.ellipsis)),
       Container(
-        padding: EdgeInsets.all(8),
-        alignment: Alignment.centerLeft,
-        child: Text(
-          row.getCells()[2].value.toString(),
-          overflow: TextOverflow.ellipsis,
-        ),
-      ),
+          padding: EdgeInsets.all(8),
+          alignment: Alignment.centerLeft,
+          child: Text(row.getCells()[2].value.toString(),
+              overflow: TextOverflow.ellipsis)),
       Container(
-        padding: EdgeInsets.all(8),
-        alignment: Alignment.centerRight,
-        child: Text(
-          NumberFormat.currency(locale: 'en_US', symbol: '\$')
-              .format(row.getCells()[3].value)
-              .toString(),
-          overflow: TextOverflow.ellipsis,
-        ),
-      ),
+          padding: EdgeInsets.all(8),
+          alignment: Alignment.centerRight,
+          child: Text(
+              NumberFormat.currency(locale: 'en_US', symbol: '\$')
+                  .format(row.getCells()[3].value)
+                  .toString(),
+              overflow: TextOverflow.ellipsis))
     ]);
   }
 
@@ -664,7 +663,7 @@ class _EmployeeDataSource extends DataGridSource {
         endIndex = startIndex + count;
 
     for (int i = startIndex; i < endIndex; i++) {
-      var employee = _Employee(
+      var employee = Employee(
         1000 + i,
         1700 + i,
         names[i < names.length ? i : random.nextInt(names.length - 1)],

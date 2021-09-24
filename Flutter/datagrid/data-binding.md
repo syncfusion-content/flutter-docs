@@ -25,7 +25,7 @@ The following example shows how to create the `DataGridSource`,
 {% highlight dart %} 
 
 class EmployeeDataSource extends DataGridSource {
-  EmployeeDataSource(List<Employee> employees) {
+  EmployeeDataSource({required List<Employee> employees}) {
     dataGridRows = employees
         .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
               DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
@@ -47,16 +47,16 @@ class EmployeeDataSource extends DataGridSource {
   DataGridRowAdapter? buildRow(DataGridRow row) {
     return DataGridRowAdapter(
         cells: row.getCells().map<Widget>((dataGridCell) {
-        return Container(
-            alignment: (dataGridCell.columnName == 'id' ||
+      return Container(
+          alignment: (dataGridCell.columnName == 'id' ||
                   dataGridCell.columnName == 'salary')
-                  ? Alignment.centerRight
-                  : Alignment.centerLeft,
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            child: Text(
+              ? Alignment.centerRight
+              : Alignment.centerLeft,
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
+          child: Text(
             dataGridCell.value.toString(),
             overflow: TextOverflow.ellipsis,
-            ));
+          ));
     }).toList());
   }
 }
@@ -77,63 +77,53 @@ List<Employee> _employees = <Employee>[];
 void initState() {
   super.initState();
   _employees = getEmployeeData();
-  employeeDataSource = EmployeeDataSource(employees: _employees);
+  _employeeDataSource = EmployeeDataSource(employees: _employees);
 }
-  
+
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-    body: SfDataGrid(
-      source: _employeeDataSource,
-      columnWidthMode: ColumnWidthMode.lastColumnFill,
-      columns: <GridColumn>[
+      body: SfDataGrid(
+          source: _employeeDataSource,
+          columnWidthMode: ColumnWidthMode.lastColumnFill,
+          columns: <GridColumn>[
         GridColumn(
-          columnName: 'id',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'ID',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
+            columnName: 'id',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'name',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Name',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
+            columnName: 'name',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Name',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'designation',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Designation',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
+            columnName: 'designation',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Designation',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'salary',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'Salary',
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-        ),
-      ],
-    ),
-  );
+            columnName: 'salary',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Salary',
+                  overflow: TextOverflow.ellipsis,
+                )))
+      ]));
 }
 
 {% endhighlight %}
@@ -159,68 +149,53 @@ final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-    body: Column(
-      children: [
-        FlatButton(
-            child: const Text('Add row'),
-            onPressed: () {
-              _employees
-                  .add(Employee(10011, 'Steve', 'Designer', 15000));
-              _employeeDataSource.buildDataGridRows();
-              _employeeDataSource.updateDataGridSource();
-            }),
-        SfDataGrid(
-          source: _employeeDataSource,
-          columns: <GridColumn>[
-            GridColumn(
-              columnName: 'id',
-              label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'ID',
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ),
-            GridColumn(
-              columnName: 'name',
-              label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Name',
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ),
-            GridColumn(
-              columnName: 'designation',
-              label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Designation',
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ),
-            GridColumn(
-              columnName: 'salary',
-              label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Salary',
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ),
-          ],
-        ),
-      ],
-    ),
-  );
+      body: Column(children: [
+    TextButton(
+        child: const Text('Add row'),
+        onPressed: () {
+          _employees.add(Employee(10011, 'Steve', 'Designer', 15000));
+          _employeeDataSource.buildDataGridRows();
+          _employeeDataSource.updateDataGridSource();
+        }),
+    SfDataGrid(source: _employeeDataSource, columns: <GridColumn>[
+      GridColumn(
+          columnName: 'id',
+          label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'ID',
+                overflow: TextOverflow.ellipsis,
+              ))),
+      GridColumn(
+          columnName: 'name',
+          label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Name',
+                overflow: TextOverflow.ellipsis,
+              ))),
+      GridColumn(
+          columnName: 'designation',
+          label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Designation',
+                overflow: TextOverflow.ellipsis,
+              ))),
+      GridColumn(
+          columnName: 'salary',
+          label: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'Salary',
+                overflow: TextOverflow.ellipsis,
+              )))
+    ])
+  ]));
 }
 
 class EmployeeDataSource extends DataGridSource {
@@ -250,16 +225,16 @@ class EmployeeDataSource extends DataGridSource {
   DataGridRowAdapter? buildRow(DataGridRow row) {
     return DataGridRowAdapter(
         cells: row.getCells().map<Widget>((dataGridCell) {
-        return Container(
-            alignment: (dataGridCell.columnName == 'id' ||
+      return Container(
+          alignment: (dataGridCell.columnName == 'id' ||
                   dataGridCell.columnName == 'salary')
-                  ? Alignment.centerRight
-                  : Alignment.centerLeft,
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            child: Text(
+              ? Alignment.centerRight
+              : Alignment.centerLeft,
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
+          child: Text(
             dataGridCell.value.toString(),
             overflow: TextOverflow.ellipsis,
-            ));
+          ));
     }).toList());
   }
 
@@ -286,80 +261,65 @@ final EmployeeDataSource _employeeDataSource = EmployeeDataSource();
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-    appBar: AppBar(
-      title: const Text('Syncfusion Flutter DataGrid'),
-    ),
-    body: Column(
-      children: [
-        FlatButton(
+      appBar: AppBar(
+        title: const Text('Syncfusion Flutter DataGrid'),
+      ),
+      body: Column(children: [
+        TextButton(
             child: const Text('Update cell value'),
             onPressed: () {
               _employees[0].salary = 25000;
               _employeeDataSource.dataGridRows[0] = DataGridRow(cells: [
-                DataGridCell(value: employees[0].id, columnName: 'id'),
-                DataGridCell(value: employees[0].name, columnName: 'name'),
+                DataGridCell(value: _employees[0].id, columnName: 'id'),
+                DataGridCell(value: _employees[0].name, columnName: 'name'),
                 DataGridCell(
-                    value: employees[0].designation,
+                    value: _employees[0].designation,
                     columnName: 'designation'),
-                DataGridCell(
-                    value: employees[0].salary, columnName: 'salary'),
+                DataGridCell(value: _employees[0].salary, columnName: 'salary'),
               ]);
 
               _employeeDataSource.updateDataGridSource(
                   rowColumnIndex: RowColumnIndex(0, 3));
             }),
-        SfDataGrid(
-          source: _employeeDataSource,
-          columns: <GridColumn>[
-            GridColumn(
+        SfDataGrid(source: _employeeDataSource, columns: <GridColumn>[
+          GridColumn(
               columnName: 'id',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'ID',
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ),
-            GridColumn(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'ID',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'name',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Name',
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ),
-            GridColumn(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Name',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'designation',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Designation',
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ),
-            GridColumn(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Designation',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
               columnName: 'salary',
               label: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Salary',
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ),
-          ],
-        ),
-      ],
-    ),
-  );
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Salary',
+                    overflow: TextOverflow.ellipsis,
+                  )))
+        ])
+      ]));
 }
 
 class EmployeeDataSource extends DataGridSource {
@@ -389,20 +349,20 @@ class EmployeeDataSource extends DataGridSource {
   DataGridRowAdapter? buildRow(DataGridRow row) {
     return DataGridRowAdapter(
         cells: row.getCells().map<Widget>((dataGridCell) {
-        return Container(
-            alignment: (dataGridCell.columnName == 'id' ||
+      return Container(
+          alignment: (dataGridCell.columnName == 'id' ||
                   dataGridCell.columnName == 'salary')
-                  ? Alignment.centerRight
-                  : Alignment.centerLeft,
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            child: Text(
+              ? Alignment.centerRight
+              : Alignment.centerLeft,
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
+          child: Text(
             dataGridCell.value.toString(),
             overflow: TextOverflow.ellipsis,
-            ));
+          ));
     }).toList());
   }
 
-  void updateDataGridSource({RowColumnIndex rowColumnIndex}) {
+  void updateDataGridSource({required RowColumnIndex rowColumnIndex}) {
     notifyDataSourceListeners(rowColumnIndex: rowColumnIndex);
   }
 }

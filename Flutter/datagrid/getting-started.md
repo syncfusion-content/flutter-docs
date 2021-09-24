@@ -69,41 +69,41 @@ Widget build(BuildContext context) {
       source: _employeeDataSource,
       columns: [
         GridColumn(
-          columnName: 'id',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'ID',
-              overflow: TextOverflow.ellipsis,
-            ))),
+            columnName: 'id',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'name',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Name',
-              overflow: TextOverflow.ellipsis,
-            ))),
+            columnName: 'name',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Name',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'designation',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Designation',
-              overflow: TextOverflow.ellipsis,
-            ))),
+            columnName: 'designation',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Designation',
+                  overflow: TextOverflow.ellipsis,
+                ))),
         GridColumn(
-          columnName: 'salary',
-          label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'Salary',
-              overflow: TextOverflow.ellipsis,
-            ))),
+            columnName: 'salary',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Salary',
+                  overflow: TextOverflow.ellipsis,
+                ))),
       ],
     ),
   );
@@ -142,7 +142,7 @@ List<Employee> _employees = <Employee>[];
 void initState() {
   super.initState();
   _employees = getEmployeeData();
-  employeeDataSource = EmployeeDataSource(employees: _employees);
+  _employeeDataSource = EmployeeDataSource(employees: _employees);
 }
   
 List<Employee> getEmployeeData() {
@@ -177,13 +177,15 @@ List<Employee> getEmployeeData() {
 {% highlight Dart %} 
 
 class EmployeeDataSource extends DataGridSource {
-  EmployeeDataSource(List<Employee> employees) {
+  EmployeeDataSource({required List<Employee> employees}) {
     dataGridRows = employees
         .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
               DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
               DataGridCell<String>(columnName: 'name', value: dataGridRow.name),
-              DataGridCell<String>(columnName: 'designation', value: dataGridRow.designation),
-              DataGridCell<int>(columnName: 'salary', value: dataGridRow.salary),
+              DataGridCell<String>(
+                  columnName: 'designation', value: dataGridRow.designation),
+              DataGridCell<int>(
+                  columnName: 'salary', value: dataGridRow.salary),
             ]))
         .toList();
   }
@@ -192,21 +194,21 @@ class EmployeeDataSource extends DataGridSource {
 
   @override
   List<DataGridRow> get rows => dataGridRows;
-  
+
   @override
   DataGridRowAdapter? buildRow(DataGridRow row) {
     return DataGridRowAdapter(
         cells: row.getCells().map<Widget>((dataGridCell) {
-        return Container(
-            alignment: (dataGridCell.columnName == 'id' ||
+      return Container(
+          alignment: (dataGridCell.columnName == 'id' ||
                   dataGridCell.columnName == 'salary')
-                  ? Alignment.centerRight
-                  : Alignment.centerLeft,
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            child: Text(
+              ? Alignment.centerRight
+              : Alignment.centerLeft,
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
+          child: Text(
             dataGridCell.value.toString(),
             overflow: TextOverflow.ellipsis,
-            ));
+          ));
     }).toList());
   }
 }
@@ -218,6 +220,8 @@ Create an instance of `DataGridSource` and set this object to `source` property 
 
 {% tabs %}
 {% highlight Dart %} 
+
+late EmployeeDataSource _employeeDataSource;
 
 @override
 Widget build(BuildContext context) {
@@ -236,54 +240,48 @@ Widget build(BuildContext context) {
 
 {% tabs %}
 {% highlight Dart %} 
-
-late EmployeeDataSource _employeeDataSource;
   
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-    body: SfDataGrid(
-      source: _employeeDataSource,
-      columns: [
-        GridColumn(
-          columnName: 'id',
-          label: Container(
+      body: SfDataGrid(source: _employeeDataSource, columns: [
+    GridColumn(
+        columnName: 'id',
+        label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'ID',
               overflow: TextOverflow.ellipsis,
             ))),
-        GridColumn(
-          columnName: 'name',
-          label: Container(
+    GridColumn(
+        columnName: 'name',
+        label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'Name',
               overflow: TextOverflow.ellipsis,
             ))),
-        GridColumn(
-          columnName: 'designation',
-          label: Container(
+    GridColumn(
+        columnName: 'designation',
+        label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerLeft,
             child: Text(
               'Designation',
               overflow: TextOverflow.ellipsis,
             ))),
-        GridColumn(
-          columnName: 'salary',
-          label: Container(
+    GridColumn(
+        columnName: 'salary',
+        label: Container(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
             alignment: Alignment.centerRight,
             child: Text(
               'Salary',
               overflow: TextOverflow.ellipsis,
-            ))),
-      ],
-    ),
-  );
+            )))
+  ]));
 }
 
 {% endhighlight %}
@@ -296,56 +294,53 @@ Widget build(BuildContext context) {
 `SfDataGrid` allows you to select one or more rows. The [selectionMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/selectionMode.html) property can be set to specify whether a user can select single row, or multiple rows. 
 
 {% tabs %}
-{% highlight Dart %} 
-    
-late EmployeeDataSource _employeeDataSource;
+{% highlight Dart %}
 
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-    body: SfDataGrid(
-      source: _employeeDataSource,
-      columns: [
-        GridColumn(
+      body: SfDataGrid(
+    source: _employeeDataSource,
+    columns: [
+      GridColumn(
           columnName: 'id',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'ID',
-              overflow: TextOverflow.ellipsis,
-            ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'ID',
+                overflow: TextOverflow.ellipsis,
+              ))),
+      GridColumn(
           columnName: 'name',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Name',
-              overflow: TextOverflow.ellipsis,
-            ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Name',
+                overflow: TextOverflow.ellipsis,
+              ))),
+      GridColumn(
           columnName: 'designation',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'Designation',
-              overflow: TextOverflow.ellipsis,
-            ))),
-        GridColumn(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Designation',
+                overflow: TextOverflow.ellipsis,
+              ))),
+      GridColumn(
           columnName: 'salary',
           label: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            alignment: Alignment.centerRight,
-            child: Text(
-              'Salary',
-              overflow: TextOverflow.ellipsis,
-            ))),
-      ],
-      selectionMode: SelectionMode.multiple,
-    ),
-  );
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              alignment: Alignment.centerRight,
+              child: Text(
+                'Salary',
+                overflow: TextOverflow.ellipsis,
+              ))),
+    ],
+    selectionMode: SelectionMode.multiple,
+  ));
 }
 
 {% endhighlight %}
@@ -360,73 +355,67 @@ The information about the rows that are selected can be retrieved using [selecte
 {% tabs %}
 {% highlight Dart %} 
 
-late EmployeeDataSource _employeeDataSource;
-
 final DataGridController _controller = DataGridController();
 
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-    body: Column(
-      children: [
-        RaisedButton(
-            child: Text('Get Selection Information'),
-            onPressed: () {
-              int selectedIndex = _controller.selectedIndex;
-              DataGridRow selectedRow = _controller.selectedRow;
-              List<DataGridRow> selectedRows = _controller.selectedRows;
-              print(selectedIndex);
-              print(selectedRow);
-              print(selectedRows);
-            }),
-        Expanded(
-          child: SfDataGrid(
-            source: _employeeDataSource,
-            columns: [
-              GridColumn(
-                columnName: 'id',
-                label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'ID',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-              GridColumn(
-                columnName: 'name',
-                label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Name',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-              GridColumn(
-                columnName: 'designation',
-                label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Designation',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-              GridColumn(
-                columnName: 'salary',
-                label: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'Salary',
-                    overflow: TextOverflow.ellipsis,
-                  ))),
-            ],
-            controller: _controller,
-            selectionMode: SelectionMode.multiple,
-          ),
-        ),
+      body: Column(children: [
+    TextButton(
+        child: Text('Get Selection Information'),
+        onPressed: () {
+          int selectedIndex = _controller.selectedIndex;
+          DataGridRow selectedRow = _controller.selectedRow!;
+          List<DataGridRow> selectedRows = _controller.selectedRows;
+          print(selectedIndex);
+          print(selectedRow);
+          print(selectedRows);
+        }),
+    Expanded(
+        child: SfDataGrid(
+      source: _employeeDataSource,
+      columns: [
+        GridColumn(
+            columnName: 'id',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'name',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Name',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'designation',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Designation',
+                  overflow: TextOverflow.ellipsis,
+                ))),
+        GridColumn(
+            columnName: 'salary',
+            label: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Salary',
+                  overflow: TextOverflow.ellipsis,
+                ))),
       ],
-    ),
-  );
+      controller: _controller,
+      selectionMode: SelectionMode.multiple,
+    ))
+  ]));
 }
 
 {% endhighlight %}
