@@ -978,49 +978,50 @@ Triggers when the error bar is being rendered. Here, you can customize the follo
 
 * `pointIndex` - To obtain the point index of the error bar.
 * `viewPortPointIndex` - To obtain the viewport index value of the error bar.
-* `horizontalPositiveErrorValue` - To obtain the error value in the positive horizontal direction.
-* `horizontalNegativeErrorValue` - To obtain the error value in the negative horizontal direction.
-* `verticalPositiveErrorValue` - To obtain the error value in the positive vertical direction.
-* `verticalNegativeErrorValue` - To obtain the error value in the negative vertical direction.
+* `calculatedErrorBarValues` - This contains the calculated error bar values such as `horizontalPositiveErrorValue`,`horizontalNegativeErrorValue`,`verticalPositiveErrorValue` and `verticalNegativeErrorValue`
 
 {% highlight dart %}
 
-    @override
-    Widget build(BuildContext context) {
-      final List<ChartData> chartData = <ChartData>[
-        ChartData('IND', 24),
-        ChartData('AUS', 20),
-        ChartData('USA', 35),
-        ChartData('DEU', 27),
-        ChartData('ITA', 30),
-        ChartData('UK', 41),
-        ChartData('RUS', 26)
-      ];
+  @override
+  Widget build(BuildContext context) {
+    final dynamic chartData = [
+      ChartData(1, 24),
+      ChartData(2, 20),
+      ChartData(3, 35),
+      ChartData(4, 27),
+      ChartData(5, 30),
+      ChartData(6, 41),
+      ChartData(7, 26)
+    ];
 
-      return Scaffold(
-          body: SfCartesianChart(
-            primaryXAxis: CategoryAxis(interval: 1),
-            series: <ChartSeries<ChartData, String>>[
-              ErrorBarSeries<ChartData, String>(
-                dataSource: chartData,
-                xValueMapper: (ChartData sales, _) => sales.x,
-                yValueMapper: (ChartData sales, _) => sales.y,
-                onRenderDetailsUpdate: (ErrorBarRenderDetails args) {
-                  print(args.pointIndex);
-                  print(args.viewPortPointIndex);
-                  print(args.calculatedErrorBarValues!.horizontalPositiveErrorValue);
-                  print(args.calculatedErrorBarValues!.horizontalNegativeErrorValue);
-                  print(args.calculatedErrorBarValues!.verticalPositiveErrorValue);
-                  print(args.calculatedErrorBarValues!.verticalNegativeErrorValue);
-              })
-      ]));
-    }
+    return Scaffold(
+        body: SfCartesianChart(
+      series: <ChartSeries<ChartData, int>>[
+        ErrorBarSeries<ChartData, int>(
+            width: 1.5,
+            dataSource: chartData,
+            xValueMapper: (ChartData data, _) => data.x,
+            yValueMapper: (ChartData data, _) => data.y,
+            onRenderDetailsUpdate: (ErrorBarRenderDetails args) {
+              print(args.pointIndex);
+              print(args.viewPortPointIndex);
+              print(
+                  args.calculatedErrorBarValues!.horizontalPositiveErrorValue);
+              print(
+                  args.calculatedErrorBarValues!.horizontalNegativeErrorValue);
+              print(args.calculatedErrorBarValues!.verticalPositiveErrorValue);
+              print(args.calculatedErrorBarValues!.verticalNegativeErrorValue);
+            })
+      ],
+    ));
+  }
+}
 
-    class ChartData {
-      ChartData(this.x, this.y);
-      final String x;
-      final num y;
-    }
+class ChartData {
+  const ChartData(this.x, this.y);
+  final int x;
+  final int y;
+}
 
 {% endhighlight %}
 

@@ -17,39 +17,43 @@ To render a Error bar chart, create an instance of [`ErrorBarSeries`], and add i
 * [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/opacity.html) - controls the transparency of the chart series.
 * [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) - changes the stroke width of the line.
 * [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/dashArray.html) - render error bar with dashes.
+* [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/pointColorMapper.html)- maps the individual colors to the data point.
+
+* [`Marker`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerSettings/MarkerSettings.html), [`data label`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings-class.html), [`trendline`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline-class.html), [`Technical indicators`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators-class.html), and other user interaction features are not applicable for error bar series. And events like [`onPointTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/onPointTap.html), [`onPointDoubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/onPointDoubleTap.html) and [`onPointLongPress`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/onPointLongPress.html) are not applicable for this series.
 
 {% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
-    final List<SalesData> chartData = [
-      SalesData('IND', 24),
-      SalesData('AUS', 20),
-      SalesData('USA', 35),
-      SalesData('DEU', 27),
-      SalesData('ITA', 30),
-      SalesData('UK', 41),
-      SalesData('RUS', 26)
-    ];
+      final dynamic chartData = [
+        ChartData(1, 24),
+        ChartData(2, 20),
+        ChartData(3, 35),
+        ChartData(4, 27),
+        ChartData(5, 30),
+        ChartData(6, 41),
+        ChartData(7, 26)
+      ];
 
-    return Scaffold(
+      return Scaffold(
         body: SfCartesianChart(
-            primaryXAxis: CategoryAxis(interval: 1),
-            series: <ChartSeries<SalesData, String>>[
-          ErrorBarSeries<SalesData, String>(
-              dataSource: chartData,
-              xValueMapper: (SalesData sales, _) => sales.country,
-              yValueMapper: (SalesData sales, _) => sales.salesCount,
-              color: Colors.blue,
-              opacity: 0.8,
-              width: 3.0)
-        ]));
+      series: <ChartSeries<ChartData, int>>[
+        ErrorBarSeries<ChartData, int>(
+          width: 3.0,
+          opacity: 0.7,
+          color: Color.fromRGBO(246, 114, 128, 1),
+          dataSource: chartData,
+          xValueMapper: (ChartData data, _) => data.x,
+          yValueMapper: (ChartData data, _) => data.y,
+        )
+      ],
+    ));
     }
 
-    class SalesData {
-    const SalesData(this.country, this.salesCount);
-    final String country;
-    final int salesCount;
+    class ChartData {
+      const ChartData(this.x, this.y);
+      final int x;
+      final int y;
     }
 
 {% endhighlight %}
@@ -58,91 +62,97 @@ To render a Error bar chart, create an instance of [`ErrorBarSeries`], and add i
 
 ## Type
 
-The Type property is used to define the error bar type value in ['Fixed'], ['Custom'], ['Percentage'], ['StandardDeviation'], and ['StandardError']. The default value of this property is ['Fixed'].  
+The Type property is used to define the error bar type value in `Fixed`, `Custom`, `Percentage`, `StandardDeviation`, and `StandardError`. The default value of this property is `Fixed`.  
 
-You can customize the error bar depending on the error value by setting the values for ['HorizontalErrorValue'] and ['VerticalErrorValue'] for all types except ['Custom'].
+You can customize the error bar depending on the error value by setting the values for `HorizontalErrorValue` and `VerticalErrorValue` for all types except `Custom`.
 
-* [HorizontalErrorValue] - It horizontally depicts the error value in positive and negative directions. The default value of [HorizontalErrorValue] is 1.
-* [VerticalErrorValue] - It vertically depicts the error value in positive and negative directions. The default value of [VerticalErrorValue] is 3.
+* `HorizontalErrorValue` - It horizontally depicts the error value in positive and negative directions. The default value of `HorizontalErrorValue` is 1.
+* `VerticalErrorValue` - It vertically depicts the error value in positive and negative directions. The default value of `VerticalErrorValue` is 3.
 
 {% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
-    final List<SalesData> chartData = [
-      SalesData('IND', 24),
-      SalesData('AUS', 20),
-      SalesData('USA', 35),
-      SalesData('DEU', 27),
-      SalesData('ITA', 30),
-      SalesData('UK', 41),
-      SalesData('RUS', 26)
-    ];
+      final dynamic chartData = [
+        ChartData(1, 24),
+        ChartData(2, 20),
+        ChartData(3, 35),
+        ChartData(4, 27),
+        ChartData(5, 30),
+        ChartData(6, 41),
+        ChartData(7, 26)
+      ];
 
-    return Scaffold(
+      return Scaffold(
         body: SfCartesianChart(
-            primaryXAxis: CategoryAxis(interval: 1),
-            series: <ChartSeries<SalesData, String>>[
-          ErrorBarSeries<SalesData, String>(
-              dataSource: chartData,
-              xValueMapper: (SalesData sales, _) => sales.country,
-              yValueMapper: (SalesData sales, _) => sales.salesCount,
-              type:ErrorBarType.standardError)
-        ]));
+      series: <ChartSeries<ChartData, int>>[
+        ErrorBarSeries<ChartData, int>(
+          dataSource: chartData,
+          xValueMapper: (ChartData data, _) => data.x,
+          yValueMapper: (ChartData data, _) => data.y,
+          width: 1.5,
+          type: ErrorBarType.standardError
+        )
+      ],
+    ));
     }
 
-    class SalesData {
-    const SalesData(this.country, this.salesCount);
-    final String country;
-    final int salesCount;
+    class ChartData {
+      const ChartData(this.x, this.y);
+      final int x;
+      final int y;
     }
+
+{% endhighlight %}
 
 ![Error Bar](cartesian-chart-types-images/error_bar_type.jpg)
 
 ### Custom type
 
-For ['Custom'] type,You can customize the error bar depending on the error value by setting the values for ['HorizontalPositiveErrorValue'], ['HorizontalNegativeErrorValue'], ['VerticalPositiveErrorValue'] and ['VerticalNegativeErrorValue'].
+For `Custom` type,You can customize the error bar depending on the error value by setting the values for `HorizontalPositiveErrorValue`, `HorizontalNegativeErrorValue`, `VerticalPositiveErrorValue` and `VerticalNegativeErrorValue`.
 
-* [HorizontalPositiveErrorValue] - It horizontally depicts the error value in positive direction. The default value of [HorizontalErrorValue] is 1.
-* [HorizontalPositiveErrorValue] - It horizontally depicts the error value in positive direction. The default value of [HorizontalErrorValue] is 1.
-* [VerticalPositiveErrorValue] - It vertically depicts the error value in positive direction. The default value of [VerticalErrorValue] is 3.
-* [VerticalNegativeErrorValue] - It vertically depicts the error value in negative direction. The default value of [VerticalErrorValue] is 3.
+* `HorizontalPositiveErrorValue` - It horizontally depicts the error value in positive direction. The default value of `HorizontalErrorValue` is 1.
+* `HorizontalPositiveErrorValue` - It horizontally depicts the error value in positive direction. The default value of `HorizontalErrorValue` is 1.
+* `VerticalPositiveErrorValue` - It vertically depicts the error value in positive direction. The default value of `VerticalErrorValue` is 3.
+* `VerticalNegativeErrorValue` - It vertically depicts the error value in negative direction. The default value of `VerticalErrorValue` is 3.
 
 {% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
-    final List<SalesData> chartData = [
-      SalesData('IND', 24),
-      SalesData('AUS', 20),
-      SalesData('USA', 35),
-      SalesData('DEU', 27),
-      SalesData('ITA', 30),
-      SalesData('UK', 41),
-      SalesData('RUS', 26)
-    ];
+      final dynamic chartData = [
+        ChartData(1, 24),
+        ChartData(2, 20),
+        ChartData(3, 35),
+        ChartData(4, 27),
+        ChartData(5, 30),
+        ChartData(6, 41),
+        ChartData(7, 26)
+      ];
 
-    return Scaffold(
+      return Scaffold(
         body: SfCartesianChart(
-            primaryXAxis: CategoryAxis(interval: 1),
-            series: <ChartSeries<SalesData, String>>[
-          ErrorBarSeries<SalesData, String>(
-              dataSource: chartData,
-              xValueMapper: (SalesData sales, _) => sales.country,
-              yValueMapper: (SalesData sales, _) => sales.salesCount,
-              type: ErrorBarType.custom,
-              mode: RenderingMode.both,
-              verticalPositiveErrorValue: 5,
-              verticalNegativeErrorValue: 2,
-              horizontalPositiveErrorValue: 0.2,
-              horizontalNegativeErrorValue: 0.5)
-        ]));
+      series: <ChartSeries<ChartData, int>>[
+        ErrorBarSeries<ChartData, int>(
+          dataSource: chartData,
+          xValueMapper: (ChartData data, _) => data.x,
+          yValueMapper: (ChartData data, _) => data.y,
+          width: 1.5,
+          type: ErrorBarType.custom,
+          mode: RenderingMode.both,
+          verticalPositiveErrorValue: 5,
+          verticalNegativeErrorValue: 2,
+          horizontalPositiveErrorValue: 0.2,
+          horizontalNegativeErrorValue: 0.5
+        )
+      ],
+    ));
     }
 
-    class SalesData {
-    SalesData(this.country, this.salesCount);
-    final String country;
-    final int salesCount;
+    class ChartData {
+      const ChartData(this.x, this.y);
+      final int x;
+      final int y;
     }
 
 {% endhighlight %}
@@ -151,44 +161,46 @@ For ['Custom'] type,You can customize the error bar depending on the error value
 
 ## Mode
 
-The error bar mode specifies whether the error bar should be drawn horizontally, vertically, or both ways. Use the ['mode'] option to switch the error bar mode.The default value of the mode is [RenderingMode.vertical].You can use the following properties to customize the ['mode'],
+The error bar mode specifies whether the error bar should be drawn horizontally, vertically, or both ways. Use the `mode` option to switch the error bar mode.The default value of the mode is `RenderingMode.vertical`.You can use the following properties to customize the `mode`,
 
-* [RenderingMode.vertical] - It displays vertical error value only.
-* [RenderingMode.horizontal] - It displays horizontal error value only.
-* [RenderingMode.vertical]  - It displays both vertical and horizontal error values.
+* `RenderingMode.vertical` - It displays vertical error value only.
+* `RenderingMode.horizontal` - It displays horizontal error value only.
+* `RenderingMode.vertical`  - It displays both vertical and horizontal error values.
 
 {% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
-    final List<SalesData> chartData = [
-      SalesData('IND', 24),
-      SalesData('AUS', 20),
-      SalesData('USA', 35),
-      SalesData('DEU', 27),
-      SalesData('ITA', 30),
-      SalesData('UK', 41),
-      SalesData('RUS', 26)
-    ];
+      final dynamic chartData = [
+        ChartData(1, 24),
+        ChartData(2, 20),
+        ChartData(3, 35),
+        ChartData(4, 27),
+        ChartData(5, 30),
+        ChartData(6, 41),
+        ChartData(7, 26)
+      ];
 
-    return Scaffold(
+      return Scaffold(
         body: SfCartesianChart(
-            primaryXAxis: CategoryAxis(interval: 1),
-            series: <ChartSeries<SalesData, String>>[
-          ErrorBarSeries<SalesData, String>(
-              dataSource: chartData,
-              xValueMapper: (SalesData sales, _) => sales.country,
-              yValueMapper: (SalesData sales, _) => sales.salesCount,
-              mode:RenderingMode.both,
-              verticalErrorValue:2,
-              horizontalErrorValue:0.2)
-        ]));
+      series: <ChartSeries<ChartData, int>>[
+        ErrorBarSeries<ChartData, int>(
+          dataSource: chartData,
+          xValueMapper: (ChartData data, _) => data.x,
+          yValueMapper: (ChartData data, _) => data.y,
+          width: 1.5,
+          mode:RenderingMode.both,
+          verticalErrorValue:2,
+          horizontalErrorValue:0.2
+        )
+      ],
+    ));
     }
 
-    class SalesData {
-    SalesData(this.country, this.salesCount);
-    final String country;
-    final int salesCount;
+    class ChartData {
+      const ChartData(this.x, this.y);
+      final int x;
+      final int y;
     }
 
 {% endhighlight %}
@@ -197,42 +209,44 @@ The error bar mode specifies whether the error bar should be drawn horizontally,
 
 ## Direction
 
-Using the ['direction'] option, you can alter the error bar direction to plus, minus, or both sides.  is The default value of the ['direction'] is ['Direction.both]. .You can use the following properties to customize the ['direction'],
+Using the `direction` option, you can alter the error bar direction to plus, minus, or both sides.  is The default value of the `direction` is `Direction.both`. .You can use the following properties to customize the `direction`,
 
-* ['Direction.both'] - Used to set error value in positive and negative directions.
-* ['Direction.minus'] - Used to set error value in a negative direction.
-* ['Direction.plus'] - Used to set error value in a positive direction.
+* `Direction.both` - Used to set error value in positive and negative directions.
+* `Direction.minus` - Used to set error value in a negative direction.
+* `Direction.plus` - Used to set error value in a positive direction.
 
 {% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
-    final List<SalesData> chartData = [
-      SalesData('IND', 24),
-      SalesData('AUS', 20),
-      SalesData('USA', 35),
-      SalesData('DEU', 27),
-      SalesData('ITA', 30),
-      SalesData('UK', 41),
-      SalesData('RUS', 26)
-    ];
+      final dynamic chartData = [
+        ChartData(1, 24),
+        ChartData(2, 20),
+        ChartData(3, 35),
+        ChartData(4, 27),
+        ChartData(5, 30),
+        ChartData(6, 41),
+        ChartData(7, 26)
+      ];
 
-    return Scaffold(
+      return Scaffold(
         body: SfCartesianChart(
-            primaryXAxis: CategoryAxis(interval: 1),
-            series: <ChartSeries<SalesData, String>>[
-          ErrorBarSeries<SalesData, String>(
-              dataSource: chartData,
-              xValueMapper: (SalesData sales, _) => sales.country,
-              yValueMapper: (SalesData sales, _) => sales.salesCount,
-              direction: Direction.minus)
-        ]));
+      series: <ChartSeries<ChartData, int>>[
+        ErrorBarSeries<ChartData, int>(
+          dataSource: chartData,
+          xValueMapper: (ChartData data, _) => data.x,
+          yValueMapper: (ChartData data, _) => data.y,
+          width: 1.5,
+          direction: Direction.minus
+        )
+      ],
+    ));
     }
 
-    class SalesData {
-    SalesData(this.country, this.salesCount);
-    final String country;
-    final int salesCount;
+    class ChartData {
+      const ChartData(this.x, this.y);
+      final int x;
+      final int y;
     }
 
 {% endhighlight %}
@@ -243,38 +257,40 @@ Using the ['direction'] option, you can alter the error bar direction to plus, m
 
 You can customize the ErrorBar with the following style properties,
 
-* ['capLength'] – Used to customize the length of the error bar's cap. The default value of the ['capLength'] is 10.
+* `capLength` – Used to customize the length of the error bar's cap. The default value of the `capLength` is 10.
 
 {% highlight dart %}
 
- @override
+    @override
     Widget build(BuildContext context) {
-    final List<SalesData> chartData = [
-      SalesData('IND', 24),
-      SalesData('AUS', 20),
-      SalesData('USA', 35),
-      SalesData('DEU', 27),
-      SalesData('ITA', 30),
-      SalesData('UK', 41),
-      SalesData('RUS', 26)
-    ];
+      final dynamic chartData = [
+        ChartData(1, 24),
+        ChartData(2, 20),
+        ChartData(3, 35),
+        ChartData(4, 27),
+        ChartData(5, 30),
+        ChartData(6, 41),
+        ChartData(7, 26)
+      ];
 
-    return Scaffold(
+      return Scaffold(
         body: SfCartesianChart(
-            primaryXAxis: CategoryAxis(interval: 1),
-            series: <ChartSeries<SalesData, String>>[
-          ErrorBarSeries<SalesData, String>(
-              dataSource: chartData,
-              xValueMapper: (SalesData sales, _) => sales.country,
-              yValueMapper: (SalesData sales, _) => sales.salesCount,
-              capLength: 20.0)
-        ]));
+      series: <ChartSeries<ChartData, int>>[
+        ErrorBarSeries<ChartData, int>(
+          dataSource: chartData,
+          xValueMapper: (ChartData data, _) => data.x,
+          yValueMapper: (ChartData data, _) => data.y,
+          width: 1.5,
+          capLength: 20.0
+        )
+      ],
+    ));
     }
 
-    class SalesData {
-    SalesData(this.country, this.salesCount);
-    final String country;
-    final int salesCount;
+    class ChartData {
+      const ChartData(this.x, this.y);
+      final int x;
+      final int y;
     }
 
 {% endhighlight %}
