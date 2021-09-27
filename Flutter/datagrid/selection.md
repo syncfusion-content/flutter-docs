@@ -1003,6 +1003,22 @@ Moves the current cell to the last cell of the last row.
 All rows or cells will be selected.
 </td>
 </tr>
+<tr>
+<td>
+<kbd>F2</kbd> 
+</td>
+<td>
+If the [DataGrid.AllowEditing](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/allowEditing.html) property is true and the [GridColumn.AllowEditing](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/allowEditing.html) property is true for the current column, the current cell enters into edit mode.
+</td>
+</tr>
+<tr>
+<td>
+<kbd>Esc</kbd>
+</td>
+<td>
+If the current cell is in edit mode, calls the [DataGridSource.onCellCancelEdit](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellCancelEdit.html) method to revert the current changes and ends the editing.
+</td>
+</tr>
 </table>
 
 ## Callbacks
