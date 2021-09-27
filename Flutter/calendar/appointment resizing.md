@@ -58,8 +58,8 @@ Widget build(BuildContext context) {
         child: SfCalendar(
           view: CalendarView.week,
           dataSource: _getCalendarDataSource(),
-		  allowAppointmentResize: true,
-		  onAppointmentResizeStart: resizeStart,
+          allowAppointmentResize: true,
+          onAppointmentResizeStart: resizeStart,
         ),
       ),
     ),
@@ -67,7 +67,7 @@ Widget build(BuildContext context) {
 }
 
 void resizeStart(AppointmentResizeStartDetails appointmentResizeStartDetails) {
-  dynamic appointment=appointmentResizeStartDetails.appointment;
+  dynamic appointment = appointmentResizeStartDetails.appointment;
   CalendarResource? resource = appointmentResizeStartDetails.resource;
 }
 

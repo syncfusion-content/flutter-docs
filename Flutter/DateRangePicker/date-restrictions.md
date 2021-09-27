@@ -98,18 +98,14 @@ Widget build(BuildContext context) {
 
 @override
 Widget build(BuildContext context) {
-  return Scaffold(
-      body: SafeArea(
-          child: Card(
-              child: SfDateRangePicker(
-                selectableDayPredicate: (DateTime dateTime) {
-                  if (dateTime == DateTime(2021, 9, 5)) {
-                    return false;
-                  }
-                  return true;
-                },
-              )))
-      );
+  return Scaffold(body: SafeArea(child: Card(child: SfDateRangePicker(
+    selectableDayPredicate: (DateTime dateTime) {
+      if (dateTime == DateTime(2021, 9, 5)) {
+        return false;
+      }
+      return true;
+    },
+  ))));
 }
 
 {% endhighlight %}
