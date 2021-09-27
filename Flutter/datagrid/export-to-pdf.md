@@ -74,7 +74,7 @@ Widget build(BuildContext context) {
         ElevatedButton(
             child: Text('Export To Pdf'),
             onPressed: () {
-              PdfDocument document = _key.currentState!.exportToPdfDocument()
+              PdfDocument document = key.currentState!.exportToPdfDocument()
               final List<int> bytes = document.save();
             }),
         Expanded(
