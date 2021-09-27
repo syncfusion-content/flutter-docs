@@ -9,7 +9,7 @@ documentation: ug
 
 # Flutter PDF Viewer (SfPdfViewer) Overview
 
-The Syncfusion Flutter PDF Viewer widget lets you view PDF documents seamlessly and efficiently in Android, iOS, Web and macOS platforms. It has highly interactive and customizable features such as magnification, virtual scrolling, page navigation, text selection, text search, and bookmark navigation.
+The Syncfusion [Flutter PDF Viewer](https://www.syncfusion.com/flutter-widgets/flutter-pdf-viewer) widget lets you view PDF documents seamlessly and efficiently in Android, iOS, Web and macOS platforms. It has highly interactive and customizable features such as magnification, virtual scrolling, page navigation, text selection, text search, and bookmark navigation.
 
 ## Key Features
 
@@ -23,3 +23,4 @@ The Syncfusion Flutter PDF Viewer widget lets you view PDF documents seamlessly 
 * **Themes** - Easily switch between light and dark themes.
 * **Localization** - All static text within the PDF Viewer can be localized to any supported language.
 
+N> You can also explore our [Flutter PDF Viewer example](https://flutter.syncfusion.com/#/pdf-viewer/getting-started) that shows you how to render and configure the PDF Viewer.
