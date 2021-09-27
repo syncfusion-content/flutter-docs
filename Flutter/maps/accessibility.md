@@ -99,4 +99,3 @@ Also, you can change the font size of the [`SfMaps`](https://pub.dev/documentati
 
 The [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) has touch target as 48 * 48 as per the standard for all the applicable elements.
 
-N> You can refer to our [Flutter Maps](https://www.syncfusion.com/flutter-widgets/flutter-maps) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Maps example](https://flutter.syncfusion.com/#/maps/shape-layer/range-color-mapping) that shows how to configure a Maps in Flutter.

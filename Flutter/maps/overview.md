@@ -46,5 +46,3 @@ An interactive tile layer allows you to load map tiles from web map tile service
 * **Markers** - Denote a location with built-in symbols or display a custom widget at a specific latitude and longitude on a map.
 
 * **Zooming and panning** - Zoom in the tile layer for a closer look at a specific region by pinching the map, scrolling the mouse wheel or track pad, or using the toolbar on the web. Pan the map to navigate across the regions. You can also customize the zoom level and the center point of the initial rendering.
-
-N> You can also explore our [Flutter Maps example](https://flutter.syncfusion.com/#/maps/shape-layer/range-color-mapping) that shows how to configure a Maps in Flutter.
