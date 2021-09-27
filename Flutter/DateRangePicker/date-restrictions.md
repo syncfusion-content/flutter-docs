@@ -98,22 +98,22 @@ Widget build(BuildContext context) {
 
 @override
 Widget build(BuildContext context) {
-  return Scaffold(
-      body: SafeArea(
-          child: Card(
-              child: SfDateRangePicker(
-                selectableDayPredicate: (DateTime dateTime) {
-                  if (dateTime == DateTime(2021, 9, 5)) {
-                    return false;
-                  }
-                  return true;
-                },
-              )))
-      );
+  return Scaffold(body: SafeArea(child: Card(child: SfDateRangePicker(
+    selectableDayPredicate: (DateTime dateTime) {
+      if (dateTime == DateTime(2021, 9, 5)) {
+        return false;
+      }
+      return true;
+    },
+  ))));
 }
 
 {% endhighlight %}
 {% endtabs %}
+
+>**NOTE**
+* Applicable for year, decade and century views only when the `allowViewNavigation` set as false.
+* This callback is not applicable when the `navigationMode` set as `DateRangePickerNavigationMode.scroll`. 
 
 ![selectable day predicate Range Picker](images/date-restrictions/selectableDayPredicate.jpg)
 
