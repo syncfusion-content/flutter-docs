@@ -56,10 +56,21 @@ If you wish to perform the initial rendering animation again in the existing ser
     @override
     Widget build(BuildContext context) {
         ChartSeriesController? _chartSeriesController1, _chartSeriesController2;
+
         return Column(children: <Widget>[
         Container(
             child: SfCartesianChart(
             primaryXAxis: CategoryAxis(),
+            axes: <ChartAxis>[
+              NumericAxis(
+                numberFormat: NumberFormat.compact(),
+                majorGridLines: const MajorGridLines(width: 0),
+                opposedPosition: true,
+                name: 'yAxis1',
+                interval: 1000,
+                minimum: 0,
+                maximum: 7000)
+                ],
             series: <ChartSeries<_ChartSampleData, String>>[
             ColumnSeries<_ChartSampleData, String>(
                 animationDuration: 2000,
@@ -126,17 +137,21 @@ Defaults to `0` for all the series except `ErrorBarSeries`. The default value fo
 
 {% highlight dart %}
 
+    import 'package:intl/intl.dart';
+    
     @override
     Widget build(BuildContext context) {
         ChartSeriesController? _chartSeriesController1, _chartSeriesController2;
+        
         final List<ChartData> chartData = <ChartData>[
-          ChartData(x: 'Jan', y: 45, secondSeriesYValue: 1000),
-          ChartData(x: 'Feb', y: 100, secondSeriesYValue: 3000),
-          ChartData(x: 'March', y: 25, secondSeriesYValue: 1000),
-          ChartData(x: 'April', y: 100, secondSeriesYValue: 7000),
-          ChartData(x: 'May', y: 85, secondSeriesYValue: 5000),
-          ChartData(x: 'June', y: 140, secondSeriesYValue: 7000)
+          ChartData(x: 'Jan', yValue1: 45, yValue2: 1000),
+          ChartData(x: 'Feb', yValue1: 100, yValue2: 3000),
+          ChartData(x: 'March', yValue1: 25, yValue2: 1000),
+          ChartData(x: 'April', yValue1: 100, yValue2: 7000),
+          ChartData(x: 'May', yValue1: 85, yValue2: 5000),
+          ChartData(x: 'June', yValue1: 140, yValue2: 7000)
         ];
+        
         return Column(children: <Widget>[
         Container(
           child: SfCartesianChart(
@@ -159,7 +174,7 @@ Defaults to `0` for all the series except `ErrorBarSeries`. The default value fo
                 },
                 dataSource: chartData,
                 xValueMapper: (ChartData sales, _) => sales.x,
-                yValueMapper: (ChartData sales, _) => sales.y,
+                yValueMapper: (ChartData sales, _) => sales.yValue1,
                 name: 'Unit Sold'),
             LineSeries<ChartData, String>(
                 animationDuration: 4500,
@@ -169,7 +184,7 @@ Defaults to `0` for all the series except `ErrorBarSeries`. The default value fo
                     _chartSeriesController2 = controller;
                 },
                 xValueMapper: (ChartData sales, _) => sales.x,
-                yValueMapper: (ChartData sales, _) => sales.secondSeriesYValue,
+                yValueMapper: (ChartData sales, _) => sales.yValue2,
                 yAxisName: 'yAxis1',
                 markerSettings: MarkerSettings(isVisible: true),
                 name: 'Total Transaction')
@@ -178,10 +193,10 @@ Defaults to `0` for all the series except `ErrorBarSeries`. The default value fo
     }
 
     class ChartData {
-      ChartData({this.x, this.y, this.secondSeriesYValue});
+      ChartData({this.x, this.yValue1, this.yValue2});
       final String? x;
-      final double? y;
-      final double? secondSeriesYValue;
+      final double? yValue1;
+      final double? yValue2;
     }
 
 {% endhighlight %}
