@@ -56,10 +56,21 @@ If you wish to perform the initial rendering animation again in the existing ser
     @override
     Widget build(BuildContext context) {
         ChartSeriesController? _chartSeriesController1, _chartSeriesController2;
+
         return Column(children: <Widget>[
         Container(
             child: SfCartesianChart(
             primaryXAxis: CategoryAxis(),
+            axes: <ChartAxis>[
+              NumericAxis(
+                numberFormat: NumberFormat.compact(),
+                majorGridLines: const MajorGridLines(width: 0),
+                opposedPosition: true,
+                name: 'yAxis1',
+                interval: 1000,
+                minimum: 0,
+                maximum: 7000)
+                ],
             series: <ChartSeries<_ChartSampleData, String>>[
             ColumnSeries<_ChartSampleData, String>(
                 animationDuration: 2000,
@@ -119,6 +130,81 @@ If you wish to perform the initial rendering animation again in the existing ser
 {% endhighlight %}
 
 ![Dynamic series animation](images/cartesian-customization/dynamicanimation.gif)
+
+## Animation delay
+The `animationDelay` property is used to specify the delay duration of the series animation. This takes a millisecond value as input. By default, the series will get animated for the specified duration. If `animationDelay` is specified, then the series will begin to animate after the specified duration.
+Defaults to `0` for all the series except `ErrorBarSeries`. The default value for the `ErrorBarSeries` is `1500`.
+
+{% highlight dart %}
+
+    import 'package:intl/intl.dart';
+    
+    @override
+    Widget build(BuildContext context) {
+        ChartSeriesController? _chartSeriesController1, _chartSeriesController2;
+        
+        final List<ChartData> chartData = <ChartData>[
+          ChartData(x: 'Jan', yValue1: 45, yValue2: 1000),
+          ChartData(x: 'Feb', yValue1: 100, yValue2: 3000),
+          ChartData(x: 'March', yValue1: 25, yValue2: 1000),
+          ChartData(x: 'April', yValue1: 100, yValue2: 7000),
+          ChartData(x: 'May', yValue1: 85, yValue2: 5000),
+          ChartData(x: 'June', yValue1: 140, yValue2: 7000)
+        ];
+        
+        return Column(children: <Widget>[
+        Container(
+          child: SfCartesianChart(
+            primaryXAxis: CategoryAxis(),
+            axes: <ChartAxis>[
+              NumericAxis(
+                numberFormat: NumberFormat.compact(),
+                majorGridLines: const MajorGridLines(width: 0),
+                opposedPosition: true,
+                name: 'yAxis1',
+                interval: 1000,
+                minimum: 0,
+                maximum: 7000)
+                ],
+            series: <ChartSeries<ChartData, String>>[
+            ColumnSeries<ChartData, String>(
+                animationDuration: 2000,
+                onRendererCreated: (ChartSeriesController controller) {
+                    _chartSeriesController1 = controller;
+                },
+                dataSource: chartData,
+                xValueMapper: (ChartData sales, _) => sales.x,
+                yValueMapper: (ChartData sales, _) => sales.yValue1,
+                name: 'Unit Sold'),
+            LineSeries<ChartData, String>(
+                animationDuration: 4500,
+                animationDelay: 2000,
+                dataSource: chartData,
+                onRendererCreated: (ChartSeriesController controller) {
+                    _chartSeriesController2 = controller;
+                },
+                xValueMapper: (ChartData sales, _) => sales.x,
+                yValueMapper: (ChartData sales, _) => sales.yValue2,
+                yAxisName: 'yAxis1',
+                markerSettings: MarkerSettings(isVisible: true),
+                name: 'Total Transaction')
+            ],)),
+        ]);
+    }
+
+    class ChartData {
+      ChartData({this.x, this.yValue1, this.yValue2});
+      final String? x;
+      final double? yValue1;
+      final double? yValue2;
+    }
+
+{% endhighlight %}
+
+![Animation Delay](images/cartesian-customization/animationDelay.gif)
+
+**Note**
+* The animation delay is applicable for series, trendline, and indicators.
 
 #### See Also
 
