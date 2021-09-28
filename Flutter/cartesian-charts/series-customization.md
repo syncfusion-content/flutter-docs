@@ -141,7 +141,6 @@ Defaults to `0` for all the series except `ErrorBarSeries`. The default value fo
     
     @override
     Widget build(BuildContext context) {
-        ChartSeriesController? _chartSeriesController1, _chartSeriesController2;
         
         final List<ChartData> chartData = <ChartData>[
           ChartData(x: 'Jan', yValue1: 45, yValue2: 1000),
@@ -169,9 +168,6 @@ Defaults to `0` for all the series except `ErrorBarSeries`. The default value fo
             series: <ChartSeries<ChartData, String>>[
             ColumnSeries<ChartData, String>(
                 animationDuration: 2000,
-                onRendererCreated: (ChartSeriesController controller) {
-                    _chartSeriesController1 = controller;
-                },
                 dataSource: chartData,
                 xValueMapper: (ChartData sales, _) => sales.x,
                 yValueMapper: (ChartData sales, _) => sales.yValue1,
@@ -180,9 +176,6 @@ Defaults to `0` for all the series except `ErrorBarSeries`. The default value fo
                 animationDuration: 4500,
                 animationDelay: 2000,
                 dataSource: chartData,
-                onRendererCreated: (ChartSeriesController controller) {
-                    _chartSeriesController2 = controller;
-                },
                 xValueMapper: (ChartData sales, _) => sales.x,
                 yValueMapper: (ChartData sales, _) => sales.yValue2,
                 yAxisName: 'yAxis1',
