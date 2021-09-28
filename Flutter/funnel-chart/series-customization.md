@@ -42,32 +42,31 @@ The `animationDelay` property is used to specify the delay duration of the serie
     
     @override
     Widget build(BuildContext context) {
-        List<_SalesData> data = [
-            _SalesData('Jan', 35),
-            _SalesData('Feb', 28),
-            _SalesData('Mar', 38),
-            _SalesData('Apr', 32),
-            _SalesData('May', 40)
+        List<ChartData> data = [
+            ChartData('Jan', 35),
+            ChartData('Feb', 28),
+            ChartData('Mar', 38),
+            ChartData('Apr', 32),
+            ChartData('May', 40)
         ];
 
         return Center(
             child: SfFunnelChart(
-                series: FunnelSeries<_SalesData, String>(
+                series: FunnelSeries<ChartData, String>(
                     dataSource: data,
                     animationDuration: 4500,
                     animationDelay: 2000,
-                    xValueMapper: (_SalesData sales, _) => sales.month,
-                    yValueMapper: (_SalesData sales, _) => sales.sales,
-                    name: 'Sales',
+                    xValueMapper: (ChartData data, _) => data.x,
+                    yValueMapper: (ChartData data, _) => data.y,
                 )
             ),
         );
     }
 
-    class _SalesData {
-      _SalesData(this.month, this.sales);
-      final String month;
-      final double sales;
+    class ChartData {
+      ChartData(this.x, this.y);
+      final String x;
+      final double y;
     }
 
 {% endhighlight %}
