@@ -517,8 +517,8 @@ Widget build(BuildContext context) {
       body: Container(
         child: SfCalendar(
           view: CalendarView.week,
-          timeSlotViewSettings: TimeSlotViewSettings(allDayPanelColor:Colors.green
-              ),
+          timeSlotViewSettings:
+              TimeSlotViewSettings(allDayPanelColor: Colors.green),
         ),
       ),
     ),
