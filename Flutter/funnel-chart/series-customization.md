@@ -35,6 +35,43 @@ documentation: ug
 
 {% endhighlight %}
 
+## Animation delay
+The `animationDelay` property is used to specify the delay duration of the series animation. This takes a millisecond value as input. By default, the series will get animated for the specified duration. If `animationDelay` is specified, then the series will begin to animate after the specified duration. Defaults to `0`.
+
+{% highlight dart %}
+    
+    @override
+    Widget build(BuildContext context) {
+        List<_SalesData> data = [
+            _SalesData('Jan', 35),
+            _SalesData('Feb', 28),
+            _SalesData('Mar', 38),
+            _SalesData('Apr', 32),
+            _SalesData('May', 40)
+        ];
+
+        return Center(
+            child: SfFunnelChart(
+                series: FunnelSeries<_SalesData, String>(
+                    dataSource: data,
+                    animationDuration: 4500,
+                    animationDelay: 2000,
+                    xValueMapper: (_SalesData sales, _) => sales.month,
+                    yValueMapper: (_SalesData sales, _) => sales.sales,
+                    name: 'Sales',
+                )
+            ),
+        );
+    }
+
+    class _SalesData {
+      _SalesData(this.month, this.sales);
+      final String month;
+      final double sales;
+    }
+
+{% endhighlight %}
+
 ## Empty points
 
 The data points that has null value are considered as empty points. Empty data points are ignored and not plotted in the chart. By using [`emptyPointSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/emptyPointSettings.html) property in series, you can decide the action taken for empty points. Available [`modes`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode-class.html) are [`gap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode-class.html), [`zero`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode-class.html), [`drop`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode-class.html) and [`average`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode-class.html). Default mode of the empty point is [`gap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EmptyPointMode-class.html).

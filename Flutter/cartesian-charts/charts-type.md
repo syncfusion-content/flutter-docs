@@ -236,4 +236,12 @@ This page helps to navigate to the Chart types available in the Syncfusion Flutt
             <a href="https://help.syncfusion.com/flutter/cartesian-charts/chart-types/waterfall-chart">Link</a>
         </td>
     </tr>
+    <tr>
+        <td>
+            Error bar Chart
+        </td>
+        <td>
+            <a href="https://help.syncfusion.com/flutter/cartesian-charts/chart-types/error-bar-chart">Link</a>
+        </td>
+    </tr>
 </table>

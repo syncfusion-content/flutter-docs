@@ -39,6 +39,45 @@ documentation: ug
 
 {% endhighlight %}
 
+## Animation delay
+The `animationDelay` property is used to specify the delay duration of the series animation. This takes a millisecond value as input. By default, the series will get animated for the specified duration. If `animationDelay` is specified, then the series will begin to animate after the specified duration. Defaults to `0`.
+
+{% highlight dart %}
+    
+    @override
+    Widget build(BuildContext context) {
+        List<_SalesData> data = [
+            _SalesData('Jan', 35),
+            _SalesData('Feb', 28),
+            _SalesData('Mar', 38),
+            _SalesData('Apr', 32),
+            _SalesData('May', 40)
+        ];
+
+        return Center(
+            child: SfCircularChart(
+                series: <CircularSeries<_SalesData, String>>[
+                    PieSeries<_SalesData, String>(
+                        dataSource: data,
+                        animationDuration: 4500,
+                        animationDelay: 2000,
+                        xValueMapper: (_SalesData sales, _) => sales.month,
+                        yValueMapper: (_SalesData sales, _) => sales.sales,
+                        name: 'Sales',
+                    )
+                ]
+            ),
+        );
+    }
+
+    class _SalesData {
+      _SalesData(this.month, this.sales);
+      final String month;
+      final double sales;
+    }
+
+{% endhighlight %}
+
 ## Color Palette
 
 [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) provides support for color palette property called [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/palette.html) for the data points in the chart series. If the series color is not specified, then the series will be rendered with appropriate palette color. Ten colors are available by default.
