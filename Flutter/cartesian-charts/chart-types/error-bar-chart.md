@@ -59,11 +59,11 @@ To render an error bar chart, create an instance of `ErrorBarSeries`, and add it
 
 {% endhighlight %}
 
-![Error bar](cartesian-chart-types-images/error_bar_color.jpg)
+![Error bar](cartesian-chart-types-images/error_bar_color.png)
 
 ## Type
 
-The `type` property is used to define the error bar type value. The default value of this property is `fixed`.  And other values `custom`, `percentage`, `standardDeviation` and `standardError`.
+The `type` property is used to define the error bar type value. The default value of this property is `fixed`, and other values are `custom`, `percentage`, `standardDeviation` and `standardError`.
 
 You can customize the error bar depending on the error value by setting the values for `horizontalErrorValue` and `verticalErrorValue` for all types except `custom`.
 
@@ -107,11 +107,11 @@ You can customize the error bar depending on the error value by setting the valu
 
 {% endhighlight %}
 
-![Error bar type](cartesian-chart-types-images/error_bar_type.jpg)
+![Error bar type](cartesian-chart-types-images/error_bar_type.png)
 
 ### Custom type
 
-For `custom` type,you can customize the error bar depending on the error value by setting the values for `horizontalPositiveErrorValue`, `horizontalNegativeErrorValue`, `verticalPositiveErrorValue` and `verticalNegativeErrorValue`.
+For `custom` type, you can customize the error bar depending on the error value by setting the values for `horizontalPositiveErrorValue`, `horizontalNegativeErrorValue`, `verticalPositiveErrorValue` and `verticalNegativeErrorValue`.
 
 * `horizontalPositiveErrorValue` - This property horizontally depicts the error value in positive direction. The default value of `horizontalPositiveErrorValue` is `1`.
 * `horizontalNegativeErrorValue` - This property horizontally depicts the error value in negative direction. The default value of `horizontalNegativeErrorValue` is `1`.
@@ -160,11 +160,11 @@ For `custom` type,you can customize the error bar depending on the error value b
 
 {% endhighlight %}
 
-![Error bar custom type](cartesian-chart-types-images/error_bar_custom_type.jpg)
+![Error bar custom type](cartesian-chart-types-images/error_bar_custom_type.png)
 
 ## Mode
 
-The error bar `mode` specifies whether the error bar should be drawn `horizontally`, `vertically`, or `both` ways. Use the `mode` option to switch the error bar mode.The default value of the `mode` is `RenderingMode.vertical`.You can use the following properties to customize the `mode`,
+The error bar `mode` specifies whether the error bar should be drawn `horizontally`, `vertically`, or `both` ways. Use the `mode` option to switch the error bar mode. The default value of the `mode` is `RenderingMode.vertical`. You can use the following properties to customize the `mode`,
 
 * `vertical` - This property displays vertical error value only.
 * `horizontal` - This property displays horizontal error value only.
@@ -213,7 +213,7 @@ The error bar `mode` specifies whether the error bar should be drawn `horizontal
 
 ## Direction
 
-Using the `direction` option,you can alter the error bar direction to `plus`, `minus`, or `both` sides.  The default value of the `direction` is `Direction.both`.You can use the following properties to customize the `direction`,
+Using the `direction` option, you can alter the error bar direction to `plus`, `minus`, or `both` sides. The default value of the `direction` is `Direction.both`. You can use the following properties to customize the `direction`,
 
 * `both` - Used to set error value in positive and negative directions.
 * `minus` - Used to set error value in a negative direction.
@@ -299,4 +299,4 @@ The `capLength` property is used to customize the length of the error bar's cap.
 
 {% endhighlight %}
 
-![Error bar cap length](cartesian-chart-types-images/error_bar_caplength.jpg)
+![Error bar cap length](cartesian-chart-types-images/error_bar_caplength.png)
