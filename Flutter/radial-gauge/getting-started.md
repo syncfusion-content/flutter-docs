@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting started with Flutter Radial Gauge (SfRadialGauge)
 
-This section explains the steps required to add the radial gauge and its elements such as title, axis, range, pointer and annotation. This section covers only basic features needed to know to get started with Syncfusion radial gauge. 
+This section explains the steps required to add the Flutter [Radial Gauge](https://www.syncfusion.com/flutter-widgets/flutter-radial-gauge) and its elements such as title, axis, range, pointer and annotation. This section covers only basic features needed to know to get started with Syncfusion radial gauge. 
 
 To get start quickly with our Flutter radial gauge widget, you can check on this video.
 
@@ -56,7 +56,7 @@ Import the following package in your Dart code.
 
 ## Initialize the radial gauge
 
-After the package has been imported, initialize the SfRadialGauge as a child of any widget such as container widget.
+After the package has been imported, initialize the [SfRadialGauge](https://www.syncfusion.com/flutter-widgets/flutter-radial-gauge) as a child of any widget such as container widget.
 
 {% highlight dart %} 
 
