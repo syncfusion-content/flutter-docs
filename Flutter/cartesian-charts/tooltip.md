@@ -11,7 +11,7 @@ documentation: ug
 
 Chart provides tooltip support for all the series. It is used to show information about the segment, when you tap on the segment. To enable the tooltip, you need to set [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/enableTooltip.html) property as *true*.
 
-The tooltip state will be preserved on the device's orientation change and on browser resize. For example, if the tooltip's ['animationDuration'](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/animationDuration.html) is set to 10,000ms, and when you change the orientation of your device from portrait to landscape after 5,000ms of tooltip display, the tooltip will be displayed for the next 5,000ms in landscape mode before disappearing.
+The tooltip state will be preserved on the device's orientation change and on browser resize. For example, if the tooltip's ['duration'](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/duration.html) is set to 10,000ms, and when you change the orientation of your device from portrait to landscape after 5,000ms of tooltip display, the tooltip will be displayed for the next 5,000ms in landscape mode before disappearing.
 
 {% highlight dart %} 
     
