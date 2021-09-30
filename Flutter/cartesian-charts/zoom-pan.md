@@ -302,7 +302,7 @@ If zoom mode is set to [`zoomMode.x`](https://pub.dev/documentation/syncfusion_f
     void initState(){
      _zoomPanBehavior = ZoomPanBehavior(
                     enablePinching: true,
-                    zoomMode: zoomMode.x,
+                    zoomMode: ZoomMode.x,
                     enablePanning: true,
                 );
       super.initState();

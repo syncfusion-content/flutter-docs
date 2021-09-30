@@ -124,3 +124,26 @@ File('Output.xlsx').writeAsBytes(bytes);
 
 {% endhighlight %}
 
+Single row and column can also be resized using **SetRowHeightInPixels** and **SetColumnWidthInPixels** properties of **Worksheet**. The following code snippet explains this.
+
+{% highlight dart %}
+
+// Create a new Excel Document.
+final Workbook workbook = Workbook();
+
+// Accessing sheet via index.
+final Worksheet sheet = workbook.worksheets[0];
+
+// Modifying the row height for single range.
+sheet.setRowHeightInPixels(2, 30);
+
+// Modifying the column width for single range.
+sheet.setColumnWidthInPixels(2, 20);
+
+// Save and dispose workbook.
+final List<int> bytes = workbook.saveAsStream();
+workbook.dispose();
+
+File('Output.xlsx').writeAsBytes(bytes);
+
+{% endhighlight %}

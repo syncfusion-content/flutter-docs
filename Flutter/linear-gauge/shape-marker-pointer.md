@@ -217,3 +217,134 @@ In addition to position the shape pointer, it is also possible to change the off
 {% endhighlight %}
 
 ![Customize linear gauge bar pointer offset](images/shape-pointer/shape_pointer_offset.png)
+
+## Drag behavior
+
+You can drag the pointers freely to any position when adding multiple pointers by setting the `dragBehavior` property to `LinearMarkerDragBehavior.free`.
+
+The `LinearMarkerDragBehavior.constrained` can be used to limit the active pointer dragging beyond the other pointers.
+
+### Free
+
+{% highlight dart %}
+
+double _firstPointer = 30;
+double _secondPointer = 70;
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfLinearGauge(
+      markerPointers: [
+        LinearShapePointer(
+          value: _firstPointer,
+          height: 25,
+          width: 25,
+          shapeType: LinearShapePointerType.invertedTriangle,
+          dragBehavior: LinearMarkerDragBehavior.free,
+          onChanged: (double newValue) {
+            setState(() {
+              _firstPointer = newValue;
+            });
+          },
+        ),
+        LinearShapePointer(
+          value: _secondPointer,
+          height: 25,
+          width: 25,
+          shapeType: LinearShapePointerType.invertedTriangle,
+          dragBehavior: LinearMarkerDragBehavior.free,
+          onChanged: (double newValue) {
+            setState(() {
+              _secondPointer = newValue;
+            });
+          },
+        ),
+      ],
+    ),
+  );
+}
+
+{% endhighlight %}
+
+![Pointers drag behavior](images/shape-pointer/free-drag-behavior.gif)
+
+### Constrained
+
+{% highlight dart %}
+
+double _firstPointer = 30;
+double _secondPointer = 70;
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfLinearGauge(
+      markerPointers: [
+        LinearShapePointer(
+          value: _firstPointer,
+          height: 25,
+          width: 25,
+          shapeType: LinearShapePointerType.invertedTriangle,
+          dragBehavior: LinearMarkerDragBehavior.constrained,
+          onChanged: (double newValue) {
+            setState(() {
+              _firstPointer = newValue;
+            });
+          },
+        ),
+        LinearShapePointer(
+          value: _secondPointer,
+          height: 25,
+          width: 25,
+          shapeType: LinearShapePointerType.invertedTriangle,
+          dragBehavior: LinearMarkerDragBehavior.constrained,
+          onChanged: (double newValue) {
+            setState(() {
+              _secondPointer = newValue;
+            });
+          },
+        ),
+      ],
+    ),
+  );
+}
+
+{% endhighlight %}
+
+![Pointers drag behavior](images/shape-pointer/constraint-drag-behavior.gif)
+
+## Handle onChangeStart, onChanged, and onChangeEnd callbacks
+
+The [`LinearShapePointer`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer-class.html) provides the `onChangeStart`, `onChanged`, and `onChangeEnd` callbacks. The `onChangeStart` callback will be called when the user start dragging the pointer, the `onChanged` callback will be called when dragging the pointer and the `onChangeEnd` callback will be called when the user stops the pointer dragging.
+
+{% highlight dart %}
+
+double _value = 50;
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfLinearGauge(
+      markerPointers: [
+        LinearShapePointer(
+          value: _value,
+          onChangeStart: (double newValue) {
+            _value = newValue;
+          },
+          onChanged: (double newValue) {
+            setState(() {
+              _value = newValue;
+            });
+          },
+          onChangeEnd: (double newValue) {
+            _value = newValue;
+          },
+          shapeType: LinearShapePointerType.invertedTriangle,
+        ),
+      ],
+    ),
+  );
+}
+
+{% endhighlight %}

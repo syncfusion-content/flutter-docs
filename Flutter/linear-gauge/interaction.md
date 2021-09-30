@@ -13,7 +13,7 @@ The shape and widget marker pointers in a Linear Gauge can be moved from one val
 
 ## Interaction with marker pointers
 
-The [`onValueChanged`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/LinearShapePointer/onValueChanged.html) call back is used to change the value of the marker pointer at run-time.
+The `onChanged` callback is used to change the value of the marker pointer at run-time.
 
 The following code sample demonstrates how to update simple marker pointer value based on swipe or drag gestures.
 
@@ -30,7 +30,7 @@ double shapePointerValue = 25;
               LinearShapePointer(
                   value: shapePointerValue,
                   //Changes the value of shape pointer based on interaction
-                  onValueChanged: (value) {
+                  onChanged: (value) {
                     setState(() {
                       shapePointerValue = value;
                     });
@@ -66,7 +66,7 @@ The following code sample demonstrates how to update multiple marker pointer val
             markerPointers: [
               LinearShapePointer(
                 value: shapePointerValue,
-                onValueChanged: (value) {
+                onChanged: (value) {
                   setState(() {
                     shapePointerValue = value;
                   });
@@ -83,7 +83,7 @@ The following code sample demonstrates how to update multiple marker pointer val
               LinearWidgetPointer(
 			  position: LinearElementPosition.outside,
 			  value: barPointerValue,
-			  onValueChanged: (value) {
+			  onChanged: (value) {
                   setState(() {
                     barPointerValue = value;
                   });
@@ -107,7 +107,7 @@ The following code sample demonstrates how to update multiple marker pointer val
                 value: widgetPointerValue,
                 shapeType: LinearShapePointerType.invertedTriangle,
                 position: LinearElementPosition.cross,
-                onValueChanged: (value) {
+                onChanged: (value) {
                   setState(() {
                     widgetPointerValue = value;
                   });
@@ -120,7 +120,7 @@ The following code sample demonstrates how to update multiple marker pointer val
               ),
               LinearWidgetPointer(
                 value: widgetPointerValue,
-                onValueChanged: (value) {
+                onChanged: (value) {
                   setState(() {
                     widgetPointerValue = value;
                   });
