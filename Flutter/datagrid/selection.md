@@ -1016,7 +1016,7 @@ If the <a href= "https://pub.dev/documentation/syncfusion_flutter_datagrid/lates
 <kbd>Esc</kbd>
 </td>
 <td>
-If the current cell is in edit mode, calls the property is true and the <a href= "https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellCancelEdit.html">DataGridSource.onCellCancelEdit </a> method to revert the current changes and ends the editing.
+If the current cell is in edit mode, calls the <a href= "https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellCancelEdit.html">DataGridSource.onCellCancelEdit </a> method to revert the current changes and ends the editing.
 </td>
 </tr>
 </table>
