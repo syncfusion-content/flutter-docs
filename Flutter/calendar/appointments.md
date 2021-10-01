@@ -235,7 +235,7 @@ MeetingDataSource _getCalendarDataSource() {
 
 ## Get the business object data
 
-The event data can be achieved in the custom business object type by overriding the [convertAppointmentToObject()]() method from the `CalendarDataSource`.
+The event data can be achieved in the custom business object type by overriding the [convertAppointmentToObject()](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/convertAppointmentToObject.html) method from the `CalendarDataSource`.
 
 {% tabs %}
 {% highlight Dart %}
