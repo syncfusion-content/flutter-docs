@@ -194,3 +194,5 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 {% endhighlight %}
 
 ![Vertical area chart](cartesian-chart-types-images/vertical_area.png)
+
+N> You can refer to our [Flutter Area Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/area-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Area Chart example](https://flutter.syncfusion.com/#/cartesian-charts/chart-types/area/default-area-chart) that shows how to easily configure with built-in support for creating stunning visual effects.
