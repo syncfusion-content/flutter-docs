@@ -458,7 +458,6 @@ Widget build(BuildContext context) {
                       fontSize: 14,
                       fontStyle: FontStyle.italic,
                       fontFamily: 'Times',
-                      hideDelay: 10,
                   ),
                 ),
               );
@@ -484,6 +483,7 @@ Widget build(BuildContext context) {
               color: const Color.fromRGBO(98, 0, 238, 1),
               strokeColor: const Color.fromRGBO(252, 187, 15, 1),
               strokeWidth: 3,
+              hideDelay: 10,
             ),
           ),
         ],
