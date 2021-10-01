@@ -18,6 +18,10 @@ You can change the size and shape of the track using the [`trackShape`](https://
 * getPreferredSize() - Returns the size based on the values passed to it.
 * paint() - Used to change the track shape.
 
+N>
+* You must use the `thumbCenter` and `currentValue` parameters of paint override method for customizing slider track.
+* You must use the `startThumbCenter`, `endThumbCenter`, and `currentValues` parameters of paint override method for customizing range slider and range selector track.
+
 {% tabs %}
 {% highlight Dart %}
 
@@ -116,6 +120,10 @@ You can change the size and shape of the thumb using the [`thumbShape`](https://
 
 * getPreferredSize() - Returns the size based on the values passed to it.
 * paint() - Used to change the thumb shape.
+
+N>
+* You must use the `currentValue` parameter of paint override method for customizing slider thumb.
+* You must use the `currentValues` parameter of paint override method for customizing range slider and range selector thumbs.
 
 {% tabs %}
 {% highlight Dart %}
@@ -217,6 +225,10 @@ You can change the size and shape of the divider using the `dividerShape` proper
 * getPreferredSize() - Returns the size based on the values passed to it.
 * paint() - Used to change the divider shape.
 
+N>
+* You must use the `thumbCenter` and `currentValue` parameters of paint override method for customizing slider divider.
+* You must use the `startThumbCenter`, `endThumbCenter`, and `currentValues` parameters of paint override method for customizing range slider and range selector divider.
+
 {% tabs %}
 {% highlight Dart %}
 
@@ -310,6 +322,10 @@ You can change the size and shape of the major and minor ticks using the [`tickS
 
 * getPreferredSize() - Returns the size based on the values passed to it.
 * paint() - Used to change the ticks shape.
+
+N>
+* You must use the `thumbCenter` and `currentValue` parameters of paint override method for customizing slider ticks.
+* You must use the `startThumbCenter`, `endThumbCenter`, and `currentValues` parameters of paint override method for customizing range slider and range selector ticks.
 
 {% tabs %}
 {% highlight Dart %}

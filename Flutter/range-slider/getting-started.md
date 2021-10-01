@@ -430,6 +430,76 @@ Widget build(BuildContext context) {
 
 ![Numeric range slider](images/getting-started/vertical_range_slider_with_tick.png)
 
+## Inverse the horizontal range slider
+
+You can invert the horizontal range slider by wrapping the range slider to the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget by setting [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property to `TextDirection.rtl`.
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(20.0, 60.0);
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body:  Directionality(
+      textDirection: TextDirection.rtl,
+      child: SfRangeSlider(
+        min: 0,
+        max: 100,
+        values: _values,
+        interval: 20,
+        showTicks: true,
+        showLabels: true,
+        onChanged: (SfRangeValues newValues) {
+          setState(() {
+            _values = newValues;
+          });
+        },
+      ),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Inversed horizontal range slider](images/getting-started/inversed_horizontal_range_slider.png)
+
+## Inverse the vertical range slider
+
+You can invert the vertical range slider using the `isInversed` property. The default value of the `isInversed` property is `false`.
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(20.0, 60.0);
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body:  SfRangeSlider.vertical(
+      min: 0,
+      max: 100,
+      values: _values,
+      interval: 20,
+      isInversed: true,
+      showTicks: true,
+      showLabels: true,
+      onChanged: (SfRangeValues newValues) {
+        setState(() {
+          _values = newValues;
+        });
+      },
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Inversed vertical range slider](images/getting-started/inversed_vertical_range_slider.png)
+
 ## Add prefix/suffix to labels
 
 You can add prefix or suffix to the labels using the [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/numberFormat.html) or [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateFormat.html) properties.
