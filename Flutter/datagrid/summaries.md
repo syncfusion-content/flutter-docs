@@ -130,8 +130,8 @@ class EmployeeDataSource extends DataGridSource {
 The summary information can be displayed in a column by setting the `GridTableSummaryRow.showSummaryInRow` property to `false`. You can define summary columns to the `GridTableSummaryRow` by adding the [GridSummaryColumn](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridSummaryColumn-class.html) to the [GridTableSummaryRow.columns](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridTableSummaryRow/columns.html) collection. The `GridSummaryColumn` contains the following required properties:
 
 * [name](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridSummaryColumn/name.html): Defines the corresponding column name for the summary calculation. This should be the same value as the [GridColumn.columnName](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridCell/columnName.html) property.
-* [columnName](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridSummaryColumn/columnName.html: Defines the corresponding column name for the summary calculation.
-* [summaryType](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridSummaryColumn/summaryType.html: Defines the summary calculation type.
+* [columnName](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridSummaryColumn/columnName.html): Defines the corresponding column name for the summary calculation.
+* [summaryType](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridSummaryColumn/summaryType.html): Defines the summary calculation type.
 
 {% tabs %}
 {% highlight Dart %}
