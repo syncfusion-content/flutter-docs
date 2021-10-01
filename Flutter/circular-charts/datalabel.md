@@ -60,7 +60,7 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
 
 ![DataLabel](images/datalabel/default_datalabel.jpg)
 
-### Formatting label content
+## Formatting label content
 
 Data label considers the format used in the Circular series by default. In the below code snippet, we have specified format for the data label in the [`dataLabelMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/dataLabelMapper.html) and you can see that the same format is applied to the data label.
 
@@ -101,7 +101,7 @@ Data label considers the format used in the Circular series by default. In the b
 
 ![DataLabel format](images/datalabel/datalabel_format.jpg)
 
-### Label position
+## Positioning the labels
 
 The [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelAlignment-class.html) property is used to position the Circular chart type data labels at [`top`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelAlignment-class.html), [`bottom`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelAlignment-class.html), [`auto`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelAlignment-class.html), [`outer`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelAlignment-class.html) and [`middle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelAlignment-class.html) position of the actual data point position. By default, labels are [`auto`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelAlignment-class.html) positioned. You can move the labels horizontally and vertically using OffsetX and OffsetY properties respectively.
 
@@ -139,43 +139,79 @@ The [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/la
 
 N>  The [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelAlignment.html) property is used to position the Cartesian chart labels whereas [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelPosition.html) property is used to position the circular chart labels.
 
-### Smart labels
+## Smart labels
 
-This feature is used to arrange the data labels smartly and avoid the intersection when there is overlapping of labels. The property [`enableSmartLabels`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/enableSmartLabels.html) in [`CircularSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries-class.html) is used to arrange the data labels smartly. By default, this property is true.
+This feature is used to arrange the data labels smartly and avoid the intersection when there is overlapping of labels. The enum property called the [`shift`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelIntersectAction-class.html) in [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelIntersectAction.html) is used to arrange the data labels smartly when labels get intersect. By default, the label intersection action property is [`shift`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelIntersectAction-class.html).
+
+If the [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelPosition.html) is [`inside`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelPosition.html) and the [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelIntersectAction.html) is [`shift`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelIntersectAction-class.html), then the overlapped labels will shift to outside the slices and arrange smartly. If the [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelPosition.html) is [`inside`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelPosition.html) and the [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelIntersectAction.html) is [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelIntersectAction-class.html), then the overlapped labels will be hidden.
+
+If the [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelPosition.html) is [`outside`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelPosition.html) and the [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelIntersectAction.html) is [`shift`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelIntersectAction-class.html), then the overlapped labels arrange smartly. If the [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelPosition.html) is [`outside`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelPosition.html) and the [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelIntersectAction.html) is [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelIntersectAction-class.html), then the overlapped labels will be hidden.
+
+If the [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelIntersectAction.html) is [`none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelIntersectAction-class.html), then the overlapped labels will be visible irrespective of [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelPosition.html).
+
+When the [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelIntersectAction.html) is [`shift`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelIntersectAction-class.html), and if the data label goes out of the chart area, then the labels got trimmed and the tooltip is shown when clicking/tapping the data label. The values of the [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelIntersectAction.html) are listed below.
+* [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelIntersectAction-class.html) - hides the intersected data labels.
+* [`none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelIntersectAction-class.html) - intersected data labels will be visible.
+* [`shift`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelIntersectAction-class.html) - smartly arranges the overlapped data labels.
+
+N>  The smart label positioning is applicable only for the pie and doughnut series.
 
 {% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child:SfCircularChart(
-                        series: <CircularSeries>[
-                            PieSeries<ChartData, double>(
-                                // Avoid labels intersection
-                                enableSmartLabels: true,
-                                dataSource: chartData,
-                                xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) =>  data.y,
-                                dataLabelMapper: (ChartData data, _) => data.x,
-                                dataLabelSettings: DataLabelSettings(
-                                    isVisible: true,
-                                    labelPosition: ChartDataLabelPosition.inside
-                                )   
-                            )
-                        ]   
-                    )
-                )
-            )
-        );
+      final List<ChartData> chartData = <ChartData>[
+          ChartData(x: 'USA', y: 46),
+          ChartData(x: 'Great Britain', y: 27),
+          ChartData(x: 'China', y: 26),
+          ChartData(x: 'Russia', y: 19),
+          ChartData(x: 'Germany', y: 17),
+          ChartData(x: 'Japan', y: 12),
+          ChartData(x: 'France', y: 10),
+          ChartData(x: 'Korea', y: 9),
+          ChartData(x: 'Italy', y: 8),
+          ChartData(x: 'Australia', y: 8),
+          ChartData(x: 'Netherlands', y: 8),
+          ChartData(x: 'Hungary', y: 8),
+          ChartData(x: 'Brazil', y: 7),
+          ChartData(x: 'Spain', y: 7),
+          ChartData(x: 'Kenya', y: 6),
+          ChartData(x: 'Jamaica', y: 6),
+          ChartData(x: 'Croatia', y: 5),
+          ChartData(x: 'Cuba', y: 5),
+          ChartData(x: 'New Zealand', y: 4)
+      ];
+      return SfCircularChart(
+        series: <CircularSeries<ChartData, String>>[
+          PieSeries<ChartData, String>(
+            dataSource: chartData,
+            xValueMapper: (ChartData data, _) => data.x,
+            yValueMapper: (ChartData data, _) => data.y,
+            dataLabelMapper: (ChartData data, _) => data.x,
+            radius: '60%',
+            dataLabelSettings: DataLabelSettings(
+              isVisible: true,
+              // Avoid labels intersection
+              labelIntersectAction: LabelIntersectAction.shift,
+              labelPosition: ChartDataLabelPosition.outside,
+              connectorLineSettings: ConnectorLineSettings(
+                type: ConnectorType.curve, length: '25%')
+              )
+          )
+        ]);
+    }
+
+    class ChartData {
+      ChartData({this.x, this.y});
+      final String? x;
+      final num? y;
     }
 
 {% endhighlight %}
 
-![Smart labels](images/datalabel/smart_label.jpg)
+![Smart labels](images/datalabel/smart_datalabel.jpg)
 
-### Apply series color
+## Apply series color
 
 The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/useSeriesColor.html) property is used to apply the series color to background color of the data labels. The default value of this property is `false`.
 
@@ -211,7 +247,7 @@ The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
 ![Series color](images/datalabel/use_series_color.jpg)
 
-### Connector line
+## Connector line
 
 This feature is used to connect label and data point using a line. It is applicable only for [`Pie`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PieSeries-class.html) and [`Doughnut`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DoughnutSeries-class.html) chart types. The [`connectorLineSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/connectorLineSettings.html) property can be used to customize the connector line.
 
@@ -254,7 +290,7 @@ This feature is used to connect label and data point using a line. It is applica
 
 ![Connector line](images/datalabel/connector_line.jpg)
 
-### Point text mapping
+## Point text mapping
 
 The [`dataLabelMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/dataLabelMapper.html) property is used to map the text from data source. 
 
@@ -303,7 +339,7 @@ The [`dataLabelMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
 ![Data label mapper](images/datalabel/value_mapper.jpg)
 
-### Label template
+## Templating the labels
 
 You can customize the appearance of the data label with your own template using the [`builder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/builder.html) property of [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/dataLabelSettings.html).
 
@@ -385,7 +421,7 @@ Data label and its connector line in the Circular charts for the point value 0 c
 
 ![datalabel0value](images/datalabel/datalabel_0_value.png)
 
-### Data label saturation color
+## Data label saturation color
 
 If the user didn’t provide text color to the data label, then by default, the saturation color is applied to the data label text. i.e., if the data points background color intensity is dark, then the data label will render in white color (#FFFFFF) and if the data points background color intensity is light, data label will render in black color (#000000).
 

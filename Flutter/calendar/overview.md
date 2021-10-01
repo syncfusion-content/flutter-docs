@@ -9,7 +9,7 @@ documentation: ug
 
 # Flutter Event Calendar (SfCalendar) Overview
 
-The Syncfusion Flutter Calendar library was written natively in Dart and has seven types of built-in configurable view modes that provide basic functionality for scheduling, managing, and representing appointments efficiently. The Calendar Widget exposes a clean and convenient user interface for custom working days and hours and basic calendar operations such as date navigation and selection.
+The Syncfusion Flutter Calendar library was written natively in Dart and has nine types of built-in configurable view modes that provide basic functionality for scheduling, managing, and representing appointments efficiently. The Calendar Widget exposes a clean and convenient user interface for custom working days and hours and basic calendar operations such as date navigation and selection.
 
 ![Calendar overview](images/overview/calendar_overview.png)
 

@@ -685,39 +685,44 @@ The [`onRenderDetailsUpdate`](https://pub.dev/documentation/syncfusion_flutter_c
     
 {% endhighlight %}
 
-## onTrendlineRender
+## onRenderDetailsUpdate (Trendline)
 
-Triggers when the trendline gets rendered. Trendline properties like color,opacity can be customized using trendlineRender Callback. The [`onTrendlineRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs-class.html) Callback contains the following arguments.
+Triggers when the trendline gets rendered. The `onRenderDetailsUpdate` callback contains the following arguments.
 
-* [`trendlineIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/trendlineIndex.html) - specifies the  index of the trendline.
-* [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/opacity.html) - specifies the opacity of the trendline.
-* [`seriesName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/seriesName.html) - specifies the series name of the trendline.
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/color.html) - specifies the color of the trendline.
-* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/seriesIndex.html) - specifies the seriesIndex.
-* [`data`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/data.html) - specifies the data points of the series.
-* [`trendlineName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/trendlineName.html) - specifies the name of the trendline.
-* [`intercept`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/intercept.html) - specifies the intercept value of the trendline.
-* [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs/dashArray.html) - specifies and sets the trendline's dashArray.
+* `seriesName` - specifies the series name of the trendline.
+* `calculatedDataPoints` - specifies the calculated data points of the trendline.
+* `trendlineName` - specifies the name of the trendline.
+* `intercept` - specifies the intercept value of the trendline.
+* `rSquaredValue` - specifies the r-squared value of the trendline.
+* `slope` - specifies the slope value of the trendline.
 
 {% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
-    
       return Scaffold(
         body: Center(
           child: SfCartesianChart(
-            onTrendlineRender: (TrendlineRenderArgs args) {
-              args.color = Colors.greenAccent;
-              args.opacity = 0.18;
-              args.dashArray = <double>[5, 3];
-            }
-          )
-        )
-      );
+            series: <LineSeries<ChartData, String>>[
+              LineSeries<ChartData, String>(
+                dataSource: chartData,
+                xValueMapper: (ChartData data, _) => data.x,
+                yValueMapper: (ChartData data, _) => data.y,
+                trendlines: <Trendline>[
+                  Trendline(onRenderDetailsUpdate: (TrendlineRenderParams args) {
+                    print('Slope value: ' + args.slope![0].toString());
+                    print('rSquare value: ' + args.rSquaredValue.toString());
+                    print('Intercept value (x): ' + args.intercept.toString());
+                  })
+              ])
+          ],
+      )));
     }
 
 {% endhighlight %}
+
+>**NOTE**
+* The slope values of the polynomial trendline type will depend on the polynomial order. The intercept, slope, and rSquaredValue are not applicable for moving average trendline type.
 
 ## onRendererCreated
 
@@ -963,6 +968,58 @@ Triggers while swiping on the plot area. Whenever the swiping happens on th
       SalesData(this.x, this.y);
       final num x;
       final double? y;
+    }
+
+{% endhighlight %}
+
+## onRenderDetailsUpdate (ErrorBarSeries)
+
+Triggers when the error bar is being rendered. In this `onRenderDetailsUpdate` callback, you can get the following arguments.
+
+* `pointIndex` - To obtain the point index of the error bar.
+* `viewPortPointIndex` - To obtain the viewport index value of the error bar.
+* `calculatedErrorBarValues` - This contains the calculated error bar values such as `horizontalPositiveErrorValue`,`horizontalNegativeErrorValue`,`verticalPositiveErrorValue` and `verticalNegativeErrorValue`.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      final dynamic chartData = [
+        ChartData(1, 24),
+        ChartData(2, 20),
+        ChartData(3, 35),
+        ChartData(4, 27),
+        ChartData(5, 30),
+        ChartData(6, 41),
+        ChartData(7, 26)
+      ];
+
+      return Scaffold(
+        body: SfCartesianChart(
+      series: <ChartSeries<ChartData, int>>[
+        ErrorBarSeries<ChartData, int>(
+          dataSource: chartData,
+          xValueMapper: (ChartData data, _) => data.x,
+          yValueMapper: (ChartData data, _) => data.y,
+          onRenderDetailsUpdate: (ErrorBarRenderDetails args) {
+            print(args.pointIndex);
+            print(args.viewPortPointIndex);
+            print(
+                args.calculatedErrorBarValues!.horizontalPositiveErrorValue);
+            print(
+                args.calculatedErrorBarValues!.horizontalNegativeErrorValue);
+            print(args.calculatedErrorBarValues!.verticalPositiveErrorValue);
+            print(args.calculatedErrorBarValues!.verticalNegativeErrorValue);
+          })
+      ],
+    )
+    );
+    }
+
+    class ChartData {
+      ChartData(this.x, this.y);
+      final int x;
+      final int y;
     }
 
 {% endhighlight %}

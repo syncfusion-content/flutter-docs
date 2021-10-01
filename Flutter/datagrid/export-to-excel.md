@@ -64,7 +64,7 @@ The following code illustrates how to create and export a `SfDataGrid` to the Ex
  {% tabs %}
  {% highlight Dart %}
 
-final GlobalKey<SfDataGridState> _key = GlobalKey<SfDataGridState>();
+final GlobalKey<SfDataGridState> key = GlobalKey<SfDataGridState>();
 
 @override
 Widget build(BuildContext context) {
@@ -91,7 +91,7 @@ Widget build(BuildContext context) {
               )),
               onPressed: () async {
                 final Workbook workbook =
-                    _key.currentState!.exportToExcelWorkbook();
+                    key.currentState!.exportToExcelWorkbook();
                 final List<int> bytes = workbook.saveAsStream();
                 workbook.dispose();
                 await helper.saveAndLaunchFile(bytes, 'DataGrid.xlsx');
@@ -99,7 +99,7 @@ Widget build(BuildContext context) {
         ),
         Expanded(
           child: SfDataGrid(
-            key: _key,
+            key: key,
             source: employeeDataSource,
             columns: <GridColumn>[
               GridColumn(
@@ -181,7 +181,7 @@ By default, all the columns in the `SfDataGrid` is exported to Excel. To exclude
 {% tabs %}
 {% highlight Dart %}
 
-Workbook workbook = _key.currentState!
+Workbook workbook = key.currentState!
     .exportToExcelWorkbook(excludeColumns: ['Name']);
 final List<int> bytes = workbook.saveAsStream();
      
@@ -197,7 +197,7 @@ By default, table summaries in `SfDataGrid` is exported to Excel. You can set `e
 {% tabs %}
 {% highlight Dart %}
 
-Workbook workbook = _key.currentState!
+Workbook workbook = key.currentState!
     .exportToExcelWorkbook(exportTableSummaries: false);
 final List<int> bytes = workbook.saveAsStream();
 
@@ -211,7 +211,7 @@ By default, stacked headers in `SfDataGrid` is exported to Excel. You can set `e
 {% tabs %}
 {% highlight Dart %}
 
-Workbook workbook = _key.currentState!
+Workbook workbook = key.currentState!
     .exportToExcelWorkbook(exportStackedHeaders: false);
 final List<int> bytes = workbook.saveAsStream();
 
@@ -225,7 +225,7 @@ By default, the DataGrid is exported from (0,0) index in Excel sheet. You can ex
 {% tabs %}
 {% highlight Dart %}
 
-Workbook workbook = _key.currentState!
+Workbook workbook = key.currentState!
     .exportToExcelWorkbook(startRowIndex: 3, startColumnIndex: 2);
 final List<int> bytes = workbook.saveAsStream();
 
@@ -239,7 +239,7 @@ By default, the entire grid is exported to Excel. You can export selected rows o
 {% tabs %}
 {% highlight Dart %}
 
-Workbook workbook = _key.currentState!
+Workbook workbook = key.currentState!
     .exportToExcelWorkbook(rows: dataGridController.selectedRows);
 final List<int> bytes = workbook.saveAsStream();
 
@@ -255,7 +255,7 @@ If the `exportRowHeight` and `exportColumnWidth` properties are `true`, the `SfD
 {% tabs %}
 {% highlight Dart %}
 
-Workbook workbook = _key.currentState!.exportToExcelWorkbook(
+Workbook workbook = key.currentState!.exportToExcelWorkbook(
     exportRowHeight: false,
     exportColumnWidth: false,
     defaultRowHeight: 35,
@@ -272,7 +272,7 @@ You can customize the cell styles based on cell type using `cellExport` paramete
 {% tabs %}
 {% highlight Dart %}
 
-final Workbook workbook = _key.currentState!.exportToExcelWorkbook(
+final Workbook workbook = key.currentState!.exportToExcelWorkbook(
     cellExport: (DataGridCellExcelExportDetails details) {
   if (details.cellType == DataGridExportCellType.columnHeader) {
     details.excelRange.cellStyle.backColor = '#42A5F5';
@@ -296,7 +296,7 @@ The cell value can be customized while exporting to Excel by directly setting th
 {% tabs %}
 {% highlight Dart %}
 
-final Workbook workbook = _key.currentState!.exportToExcelWorkbook(
+final Workbook workbook = key.currentState!.exportToExcelWorkbook(
     cellExport: (DataGridCellExcelExportDetails details) {
   if (details.cellType == DataGridExportCellType.row &&
       details.cellValue == 'Project Lead') {
@@ -317,7 +317,7 @@ You can customize the column style based on the column name when exporting to Ex
 {% tabs %}
 {% highlight Dart %}
 
-final Workbook workbook = _key.currentState!.exportToExcelWorkbook(
+final Workbook workbook = key.currentState!.exportToExcelWorkbook(
     cellExport: (DataGridCellExcelExportDetails details) {
   if (details.cellType == DataGridExportCellType.row &&
       details.columnName == 'Name') {
@@ -409,7 +409,7 @@ The following code snippet illustrates how to create an instance of `CustomDataG
 {% highlight Dart %}
 
 CustomDataGridToExcelConverter converter = CustomDataGridToExcelConverter();
-Workbook workbook = _key.currentState!.exportToExcelWorkbook(converter: converter);
+Workbook workbook = key.currentState!.exportToExcelWorkbook(converter: converter);
 final List<int> bytes = workbook.saveAsStream();
 
 {% endhighlight %}

@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Customizations in Flutter Date Range Picker (SfDateRangePicker)
-You can customize the month and year cells, month format, and selection cells in SfDateRangePicker.
+You can customize the month and year cells, month format, and selection cells in [Flutter Date Range Picker](https://www.syncfusion.com/flutter-widgets/flutter-daterangepicker) (SfDateRangePicker).
 
 ## Month cell customization
 You can customize the calendar month view by using the `monthCellStyle` of `SfDateRangePicker`.

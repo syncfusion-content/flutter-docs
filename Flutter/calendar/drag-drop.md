@@ -9,7 +9,7 @@ documentation: ug
 
 # Appointment Drag and Drop in Flutter Event Calendar (SfCalendar)
 
-Appointments can be rescheduled using the drag and drop operation.
+Easily reschedule an appointment by dragging it from one time slot or month cell and dropping it into a different time slot or month cell.
 
 ## Allow Drag and Drop
 
@@ -96,8 +96,8 @@ Widget build(BuildContext context) {
         child: SfCalendar(
           view: CalendarView.week,
           dataSource: _getCalendarDataSource(),
-		  allowDragAndDrop: true,
-		  onDragUpdate: dragUpdate,
+          allowDragAndDrop: true,
+          onDragUpdate: dragUpdate,
         ),
       ),
     ),
@@ -169,8 +169,7 @@ Widget build(BuildContext context) {
           view: CalendarView.week,
           dataSource: _getCalendarDataSource(),
           allowDragAndDrop: true,
-          dragAndDropSettings: DragAndDropSettings(
-              allowNavigation: true),
+          dragAndDropSettings: DragAndDropSettings(allowNavigation: true),
         ),
       ),
     ),
@@ -196,8 +195,7 @@ Widget build(BuildContext context) {
           view: CalendarView.week,
           dataSource: _getCalendarDataSource(),
           allowDragAndDrop: true,
-          dragAndDropSettings: DragAndDropSettings(
-              allowScroll: true),
+          dragAndDropSettings: DragAndDropSettings(allowScroll: true),
         ),
       ),
     ),
@@ -223,8 +221,7 @@ Widget build(BuildContext context) {
           view: CalendarView.week,
           dataSource: _getCalendarDataSource(),
           allowDragAndDrop: true,
-          dragAndDropSettings: DragAndDropSettings(
-              showTimeIndicator: true),
+          dragAndDropSettings: DragAndDropSettings(showTimeIndicator: true),
         ),
       ),
     ),
@@ -264,7 +261,7 @@ Widget build(BuildContext context) {
     ),
   );
 }
-	
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -286,8 +283,8 @@ Widget build(BuildContext context) {
           view: CalendarView.week,
           dataSource: _getCalendarDataSource(),
           allowDragAndDrop: true,
-          dragAndDropSettings: DragAndDropSettings(
-              autoNavigateDelay: Duration(seconds: 1)),
+          dragAndDropSettings:
+              DragAndDropSettings(autoNavigateDelay: Duration(seconds: 1)),
         ),
       ),
     ),

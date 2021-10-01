@@ -9,7 +9,7 @@ documentation: ug
 
 # Appointment Resize in Flutter Event Calendar (SfCalendar)
 
-Appointments can be resized using the resize operation.
+You can quickly change an appointment’s start and end times by resizing the appointment.
 
 ## Allow Appointment resize
 
@@ -24,10 +24,9 @@ Widget build(BuildContext context) {
     home: Scaffold(
       body: Container(
         child: SfCalendar(
-          view: CalendarView.week,
-          dataSource: _getCalendarDataSource(),
-		  allowAppointmentResize: true
-        ),
+            view: CalendarView.week,
+            dataSource: _getCalendarDataSource(),
+            allowAppointmentResize: true),
       ),
     ),
   );
@@ -58,8 +57,8 @@ Widget build(BuildContext context) {
         child: SfCalendar(
           view: CalendarView.week,
           dataSource: _getCalendarDataSource(),
-		  allowAppointmentResize: true,
-		  onAppointmentResizeStart: resizeStart,
+          allowAppointmentResize: true,
+          onAppointmentResizeStart: resizeStart,
         ),
       ),
     ),
@@ -67,7 +66,7 @@ Widget build(BuildContext context) {
 }
 
 void resizeStart(AppointmentResizeStartDetails appointmentResizeStartDetails) {
-  dynamic appointment=appointmentResizeStartDetails.appointment;
+  dynamic appointment = appointmentResizeStartDetails.appointment;
   CalendarResource? resource = appointmentResizeStartDetails.resource;
 }
 
@@ -93,8 +92,8 @@ Widget build(BuildContext context) {
         child: SfCalendar(
           view: CalendarView.week,
           dataSource: _getCalendarDataSource(),
-		  allowAppointmentResize: true,
-		  onAppointmentResizeUpdate: resizeUpdate,
+          allowAppointmentResize: true,
+          onAppointmentResizeUpdate: resizeUpdate,
         ),
       ),
     ),
@@ -130,8 +129,8 @@ Widget build(BuildContext context) {
         child: SfCalendar(
           view: CalendarView.week,
           dataSource: _getCalendarDataSource(),
-		  allowAppointmentResize: true,
-		  onAppointmentResizeEnd: resizeEnd,
+          allowAppointmentResize: true,
+          onAppointmentResizeEnd: resizeEnd,
         ),
       ),
     ),
