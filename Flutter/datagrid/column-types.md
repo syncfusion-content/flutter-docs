@@ -184,7 +184,7 @@ Widget build(BuildContext context) {
 
 ## Checkbox column
 
-By setting the `showCheckboxColumn` property to `true`, you can select or deselect individual rows using checkboxes in each row. The checkbox column will be added as first column.
+By setting the [showCheckboxColumn](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/showCheckboxColumn.html) property to `true`, you can select or deselect individual rows using checkboxes in each row. The checkbox column will be added as first column.
 
 The selection is applied to row only if you set the [SfDataGrid.selectionMode](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/selectionMode.html) property  other than `none`.
 
@@ -306,7 +306,7 @@ Widget build(BuildContext context) {
 
 ### Disable the checkbox in the header cell
 
-By default, checkBox gets displayed in the header cell. By disabling the `SfDataGrid.checkboxColumnSettings.showCheckboxOnHeader` property, checkBox can be disappeared in the header cell.
+By default, checkBox gets displayed in the header cell. By disabling the [SfDataGrid.checkboxColumnSettings.showCheckboxOnHeader](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridCheckboxColumnSettings/showCheckboxOnHeader.html) property, checkBox can be disappeared in the header cell.
 
 {% tabs %}
 {% highlight Dart %} 
@@ -367,7 +367,7 @@ Widget build(BuildContext context) {
 
 ### Change the background color of checkbox column
 
-The background color of the checkbox column can be customized by using the `SfDataGrid.checkboxColumnSettings.backgroundColor` property.
+The background color of the checkbox column can be customized by using the [SfDataGrid.checkboxColumnSettings.backgroundColor](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridCheckboxColumnSettings/backgroundColor.html) property.
 
 {% tabs %}
 {% highlight Dart %} 

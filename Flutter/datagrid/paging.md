@@ -717,7 +717,7 @@ Widget build(BuildContext context) {
 
 By default, the rows on a page are sorted. To sort all the rows available for paging, do not override the `handlePageChange` method in the `DataGridSource` class. The DataGrid will automatically split the rows required for each page based on the `SfDataPager.pageCount`, i.e. the divided value of the [DataGridRows.rows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/rows.html) and `SfDataPager.pageCount`.
 
-If you want to specifically maintain the rows required for a page, you can use the [SfDataGrid.rowsPerPage]() property. However, make sure that you do not override the `handlePageChange` method in the `DataGridSource` class at the sample level.
+If you want to specifically maintain the rows required for a page, you can use the [SfDataGrid.rowsPerPage](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/rowsPerPage.html) property. However, make sure that you do not override the `handlePageChange` method in the `DataGridSource` class at the sample level.
 
 {% tabs %}
 {% highlight Dart %}
