@@ -16,7 +16,7 @@ The datagrid performs paging of data using the `SfDataPager`. To enable paging, 
 * Create a new `SfDataPager` widget, and set the [SfDataGrid.DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) to the [SfDataPager.delegate](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/delegate.html) property.
 * Set the number of pages required to be displayed in data pager by setting the [SfDataPager.pageCount](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/pageCount.html) property.
 * Set the number of buttons that should be displayed in view by setting the [SfDataPager.visibleItemsCount](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/visibleItemsCount.html) property.
-* You can load the data for a specific page in `handlePageChange` method. This method is called for every page navigation from data pager.
+* You can load the data for a specific page in [handlePageChange](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/handlePageChange.html) method. This method is called for every page navigation from data pager.
 
 N> The `SfDataPager.visibleItemsCount` property default value is 5.
 
@@ -513,7 +513,7 @@ Widget build(BuildContext context) {
 
 ### Set the padding between page items
 
-The padding between the page items including navigation page items such as first, last, previous and next can be changed by using the `itemPadding` property.
+The padding between the page items including navigation page items such as first, last, previous and next can be changed by using the [itemPadding](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/itemPadding.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -539,7 +539,7 @@ N> The default value of `SfDataPager.itemPadding` is 5.0.
 
 ### Set the height and width for the page items
 
-The default width and height of the page items are 50 and 50, respectively. For changing page number items size, use the `itemWidth` and `itemHeight` properties; for changing navigation items size such as first, last, previous, and next, use the `navigationItemHeight` and `navigationItemWidth` properties.
+The default width and height of the page items are 50 and 50, respectively. For changing page number items size, use the [itemWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/itemWidth.html) and [itemHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/itemHeight.html) properties; for changing navigation items size such as first, last, previous, and next, use the [navigationItemHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/navigationItemHeight.html) and [navigationItemWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/navigationItemWidth.html) properties.
 
 {% tabs %}
 {% highlight Dart %}
@@ -578,10 +578,10 @@ The default width and height of the page items are 50 and 50, respectively. For 
 
 To hide the certain navigation page items, use the following properties:
 
- * `firstPageItemVisible` 
- * `lastPageItemVisible` 
- * `nextPageItemVisible` 
- * `previousPageItemVisible`
+ * [firstPageItemVisible](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/firstPageItemVisible.html) 
+ * [lastPageItemVisible](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/lastPageItemVisible.html) 
+ * [nextPageItemVisible](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/nextPageItemVisible.html)
+ * [previousPageItemVisible](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/previousPageItemVisible.html)
 
  N> Default value of all properties is true.
 
@@ -715,9 +715,9 @@ Widget build(BuildContext context) {
 
 ## Sort all the rows instead of rows available in a page
 
-By default, the rows on a page are sorted. To sort all the rows available for paging, do not override the `handlePageChange` method in the `DataGridSource` class. The DataGrid will automatically split the rows required for each page based on the `SfDataPager.pageCount`, i.e. the divided value of the `DataGridRows.rows` and `SfDataPager.pageCount`.
+By default, the rows on a page are sorted. To sort all the rows available for paging, do not override the `handlePageChange` method in the `DataGridSource` class. The DataGrid will automatically split the rows required for each page based on the `SfDataPager.pageCount`, i.e. the divided value of the [DataGridRows.rows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/rows.html) and `SfDataPager.pageCount`.
 
-If you want to specifically maintain the rows required for a page, you can use the [SfDataGrid.rowsPerPage]() property. However, make sure that you do not override the `handlePageChange` method in the `DataGridSource` class at the sample level.
+If you want to specifically maintain the rows required for a page, you can use the [SfDataGrid.rowsPerPage](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/rowsPerPage.html) property. However, make sure that you do not override the `handlePageChange` method in the `DataGridSource` class at the sample level.
 
 {% tabs %}
 {% highlight Dart %}
