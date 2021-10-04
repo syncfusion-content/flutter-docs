@@ -11,7 +11,7 @@ documentation: ug
 
 ## Table summary
 
-The [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) provides built-in support to display concise information about the rows by using the table summary rows. The table summary value is calculated based on all the rows in the [DataGridSource.rows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/rows.html) property. You can add a table summary row to the DataGrid by adding the [GridTableSummaryRow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridTableSummaryRow-class.html) to the `SfDataGrid.tableSummaryRows` collection.
+The [SfDataGrid](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid-class.html) provides built-in support to display concise information about the rows by using the table summary rows. The table summary value is calculated based on all the rows in the [DataGridSource.rows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/rows.html) property. You can add a table summary row to the DataGrid by adding the [GridTableSummaryRow](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridTableSummaryRow-class.html) to the [SfDataGrid.tableSummaryRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/tableSummaryRows.html) collection.
 
 DataGrid does not automatically display the summary values. To display the summary value, you need to override the [buildTableSummaryCellWidget](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/buildTableSummaryCellWidget.html) method in the [DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) class. The calculated summary value is passed as a parameter to the `DataGridSource.buildTableSummaryCellWidget` method. So, you need to return the required widget with the summary value.
 
@@ -598,7 +598,7 @@ class EmployeeDataSource extends DataGridSource {
 
 ### Customize table summary calculation
 
-You can write the custom logic for the summary calculation by overriding the `calculateSummaryValue` method from the `DataGridSource` class. The `GridSummaryColumn` parameter will be null for the summary cells in the spanned summary columns.
+You can write the custom logic for the summary calculation by overriding the `calculateSummaryValue` method from the `DataGridSource` class. The `summaryColumn` parameter will be null for the summary cells in the spanned summary columns.
 
 The following example demonstrates how to customize the summary calculation to find the standard deviation for all employees' salaries.
 
