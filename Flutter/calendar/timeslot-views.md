@@ -505,7 +505,7 @@ Widget build(BuildContext context) {
 ![Time text appearance](images/timeslot-views/time-text-appearance.png)
 
 ## All day panel background color
-All day panel background color can be customized by using the [allDayPanelColor]() property of `timeSlotViewSettings` in the calendar.
+All day panel background color can be customized by using the [allDayPanelColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/allDayPanelColor.html) property of `timeSlotViewSettings` in the calendar.
 
 {% tabs %}
 {% highlight Dart %}
