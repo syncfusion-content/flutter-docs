@@ -17,7 +17,7 @@ Right to left rendering can be switched in the following ways:
 
 ### Wrapping the SfCircularChart with Directionality widget
 
-To change the rendering direction from right to left, you can wrap the [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) widget inside the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and set the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property as [TextDirection.rtl](https://api.flutter.dev/flutter/dart-ui/TextDirection-class.html).
+To change the rendering direction from right to left, you can wrap the [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) widget inside the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and set the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property as [`TextDirection.rtl`](https://api.flutter.dev/flutter/dart-ui/TextDirection-class.html).
 
 {% highlight dart %}
 
@@ -71,7 +71,7 @@ Right to left rendering is effective only for the legend in the chart. Legend it
 
 ![legend RTL](images/rtl-support/circular_legend_rtl.png)
 
-In addition, if you want to change the tooltip’s content, to look like it is rendering from right to left, then you can set the [`format`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/format.html) property in [`TooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior-class.html) as `"point.y : point.x"`. By default, the tooltip format will be `"point.x : point.y"`.
+In addition, if you want to change the tooltip’s content, to look like it is rendering from right to left, then you can set the [`format`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/format.html) property in [`TooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior-class.html) as "point.y : point.x". By default, the tooltip format will be "point.x : point.y".
 
 {% highlight dart %}
     

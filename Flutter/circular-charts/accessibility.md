@@ -11,7 +11,7 @@ documentation: ug
 
 ## Sufficient contrast
 
-The `SfCircularChart` [theming](https://help.syncfusion.com/flutter/themes/themes) support offers a consistent and standardized look, as well as the ability to set the colors for all UI elements.
+The [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) [`theming`](https://help.syncfusion.com/flutter/themes/themes) support offers a consistent and standardized look, as well as the ability to set the colors for all UI elements.
 
 The customization the colors can be done for the following chart elements.
 * [Chart title](https://help.syncfusion.com/flutter/circular-charts/chart-title)
@@ -26,7 +26,7 @@ The customization the colors can be done for the following chart elements.
 
 ## Large fonts
 
-The `SfCircularChart` font size can be adjusted automatically based on device settings and the font size scaled based on the `MediaQueryData.textScaleFactor`. And also it allows to change the font size of all elements in Circular chart.
+The [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) font size can be adjusted automatically based on device settings and the font size scaled based on the [`MediaQueryData.textScaleFactor`](https://api.flutter.dev/flutter/widgets/MediaQueryData/textScaleFactor.html). And also it allows to change the font size of all elements in Circular chart.
 * [Chart title](https://help.syncfusion.com/flutter/circular-charts/chart-title)
 * [Data label](https://help.syncfusion.com/flutter/circular-charts/datalabel)
 * [Legend title](https://help.syncfusion.com/flutter/circular-charts/legend#legend-title)
@@ -35,7 +35,7 @@ The `SfCircularChart` font size can be adjusted automatically based on device se
 
 ## Easily tappable targets
 
-The `SfCircularChart` Provides callback support to notify when tapping on the essential elements in the chart.
+The [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) Provides callback support to notify when tapping on the essential elements in the chart.
 * [Data points](https://help.syncfusion.com/flutter/circular-charts/callbacks#onpointtapped)
 * [Data labels](https://help.syncfusion.com/flutter/circular-charts/callbacks#ondatalabeltapped)
 * [Legend](https://help.syncfusion.com/flutter/circular-charts/callbacks#onlegendtapped)

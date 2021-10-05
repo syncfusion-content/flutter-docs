@@ -120,7 +120,7 @@ Triggers when data label is rendering. Text and text styles such as color, font 
 
 ## onPointTap
 
-Triggers when tapping on the series point. The [onPointTap](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/onPointTap.html) callback contains the following arguments.
+Triggers when tapping on the series point. The [`onPointTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/onPointTap.html) callback contains the following arguments.
 
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/seriesIndex.html) - specifies the current series index.
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/pointIndex.html) - specifies the current point index.
@@ -151,7 +151,7 @@ Triggers when tapping on the series point. The [onPointTap](https://pub.dev/docu
 
 ## onPointDoubleTap
 
-Triggers when double-tap the series point. The [onPointDoubleTap](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/onPointDoubleTap.html) callback contains the following arguments.
+Triggers when double-tap the series point. The [`onPointDoubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/onPointDoubleTap.html) callback contains the following arguments.
 
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/seriesIndex.html) - specifies the current series index.
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/pointIndex.html) - specifies the current point index.
@@ -182,7 +182,7 @@ Triggers when double-tap the series point. The [onPointDoubleTap](https://pub.de
 
 ## onPointLongPress
 
-Triggers when long press on the series point. The [onPointLongPress](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/onPointLongPress.html) callback contains the following arguments.
+Triggers when long press on the series point. The [`onPointLongPress`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/onPointLongPress.html) callback contains the following arguments.
 
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/seriesIndex.html) - specifies the current series index.
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/pointIndex.html) - specifies the current point index.
@@ -243,7 +243,7 @@ Triggers when tapping the legend item. The [`onLegendTapped`](https://pub.dev/do
 Triggers while selection changes. Here you can customize the selectedColor, unselectedColor, selectedBorderColor, selectedBorderWidth, unselectedBorderColor, and unselectedBorderWidth properties. The [`onSelectionChanged`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onSelectionChanged.html) Callback contains the following arguments.
 
 * [`seriesRenderer`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/seriesRenderer.html) - specifies current series.
-* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/pointIndex.html) - specifies the current series index.
+* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/seriesIndex.html) - specifies the current series index.
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/pointIndex.html) - specifies the current point index.
 * [`selectedColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/selectedColor.html) - specifies color of the selected data points or series.
 * [`unselectedColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/unselectedColor.html) - specifies color of the unselected data points or series.
@@ -404,4 +404,4 @@ The callback contains the following argument:
 * [`ChartShaderDetails`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartShaderDetails-class.html) - provides options to get the outer rect, inner rect, and render type (either series or legend)
 
 The onCreateShader callback is called once while rendering
-the data points and legend. For further reference on this callback, Check the [Gradient and image shader](./circular-series-customization#Gradient-fill-and-shader) section.
+the data points and legend. For further reference on this callback, Check the [`Gradient and image shader`](./circular-series-customization#Gradient-fill-and-shader) section.
