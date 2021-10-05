@@ -997,3 +997,5 @@ class _TouristPlaceDetails {
 {% endtabs %}
 
 ![Zoom markers to fit bounds](images/markers/fit_bounds.jpg)
+
+N> You can refer to our [Flutter Maps](https://www.syncfusion.com/flutter-widgets/flutter-maps) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Maps example](https://flutter.syncfusion.com/#/maps/shape-layer/marker) that shows how to configure a Maps in Flutter.
