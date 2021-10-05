@@ -91,7 +91,7 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ## SelectableDayPredicate
-[selectableDayPredicate]() callback allows certain days for selection. Only the days that `selectableDayPredicate` returns `true` will be selectable in the date range picker.
+[selectableDayPredicate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectableDayPredicate.html) callback allows certain days for selection. Only the days that `selectableDayPredicate` returns `true` will be selectable in the date range picker.
 
 {% tabs %}
 {% highlight Dart %}
