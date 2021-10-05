@@ -16,7 +16,7 @@ The datagrid performs paging of data using the `SfDataPager`. To enable paging, 
 * Create a new `SfDataPager` widget, and set the [SfDataGrid.DataGridSource](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource-class.html) to the [SfDataPager.delegate](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/delegate.html) property.
 * Set the number of pages required to be displayed in data pager by setting the [SfDataPager.pageCount](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/pageCount.html) property.
 * Set the number of buttons that should be displayed in view by setting the [SfDataPager.visibleItemsCount](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/visibleItemsCount.html) property.
-* You can load the data for the specific page in `handlePageChange` method. This method is called for every page navigation from data pager.
+* You can load the data for a specific page in [handlePageChange](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/handlePageChange.html) method. This method is called for every page navigation from data pager.
 
 N> The `SfDataPager.visibleItemsCount` property default value is 5.
 
@@ -511,6 +511,124 @@ Widget build(BuildContext context) {
 
 ![flutter datapager with customization](images/paging/flutter-datapager-customization.png)
 
+### Set the padding between page items
+
+The padding between the page items including navigation page items such as first, last, previous and next can be changed by using the [itemPadding](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/itemPadding.html) property.
+
+{% tabs %}
+{% highlight Dart %}
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text('Syncfusion Flutter DataGrid'),
+        ),
+        body: SfDataPager(
+            itemPadding: EdgeInsets.all(8.0),
+            pageCount: 5,
+            delegate: employeeDataSource,
+          ),
+        );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+N> The default value of `SfDataPager.itemPadding` is 5.0.
+
+### Set the height and width for the page items
+
+The default width and height of the page items are 50 and 50, respectively. For changing page number items size, use the [itemWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/itemWidth.html) and [itemHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/itemHeight.html) properties; for changing navigation items size such as first, last, previous, and next, use the [navigationItemHeight](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/navigationItemHeight.html) and [navigationItemWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/navigationItemWidth.html) properties.
+
+{% tabs %}
+{% highlight Dart %}
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text('Syncfusion Flutter DataGrid'),
+        ),
+        body: Center(
+            child: SfDataPagerTheme(
+          data: SfDataPagerThemeData(
+            itemBorderWidth: 0.5,
+            itemBorderColor: Colors.grey.shade400,
+            itemBorderRadius: BorderRadius.circular(5),
+          ),
+          child: SfDataPager(
+            pageCount: 5,
+            visibleItemsCount: 2,
+            itemWidth: 70,
+            itemHeight: 55,
+            navigationItemWidth: 70,
+            navigationItemHeight: 55,
+            delegate: employeeDataSource,
+          ),
+        )));
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+![flutter datapager with page button resizing](images/paging/flutter-datapager-page-item-resizing.png)
+
+### Hide certain navigation page items
+
+To hide the certain navigation page items, use the following properties:
+
+ * [firstPageItemVisible](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/firstPageItemVisible.html) 
+ * [lastPageItemVisible](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/lastPageItemVisible.html) 
+ * [nextPageItemVisible](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/nextPageItemVisible.html)
+ * [previousPageItemVisible](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/previousPageItemVisible.html)
+
+ N> Default value of all properties is true.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text('Syncfusion Flutter DataGrid'),
+        ),
+        body: SfDataPagerTheme(
+          data: SfDataPagerThemeData(
+              itemBorderWidth: 0.5,
+              itemBorderColor: Colors.grey.shade400,
+              itemBorderRadius: BorderRadius.circular(5),
+              selectedItemColor: Colors.indigo.shade500),
+          child: SfDataPager(
+            firstPageItemVisible: false,
+            lastPageItemVisible: false,
+            pageCount: 5,
+            visibleItemsCount: 3,
+            navigationItemWidth: 100,
+            delegate: employeeDataSource,
+            pageItemBuilder: (String itemName) {
+              if (itemName == 'Next') {
+                return Center(
+                  child: Text('Next'),
+                );
+              }
+              if (itemName == 'Previous') {
+                return Center(
+                  child: Text('Previous'),
+                );
+              }
+            },
+            itemPadding: EdgeInsets.all(8.0),
+          ),
+        ));
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+![flutter datapager with page button resizing](images/paging/flutter_datagrid_resize_page_button.png)
+
 ## Change the number of visible items (buttons) in view
 
 You can change the number of visible items i.e. page buttons in view by using the [SfDataPager.visibleItemsCount](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/visibleItemsCount.html).
@@ -597,9 +715,9 @@ Widget build(BuildContext context) {
 
 ## Sort all the rows instead of rows available in a page
 
-By default, the rows which are available in a page are sorted. To sort all the rows available for paging, do not override the `handlePageChange` method in `DataGridSource` class. DataGrid itself will split the rows required for each page automatically based on the `SfDataPager.pageCount` i.e. divided value of the `DataGridRows.rows` and `SfDataPager.pageCount`.
+By default, the rows on a page are sorted. To sort all the rows available for paging, do not override the `handlePageChange` method in the `DataGridSource` class. The DataGrid will automatically split the rows required for each page based on the `SfDataPager.pageCount`, i.e. the divided value of the [DataGridRows.rows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/rows.html) and `SfDataPager.pageCount`.
 
-If you want to specifically maintain the rows required for a page, you can use the [SfDataGrid.rowsPerPage]() property. But, make sure that you don't override the `handlePageChange` method in `DataGridSource` class in sample level.
+If you want to specifically maintain the rows required for a page, you can use the [SfDataGrid.rowsPerPage](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/rowsPerPage.html) property. However, make sure that you do not override the `handlePageChange` method in the `DataGridSource` class at the sample level.
 
 {% tabs %}
 {% highlight Dart %}

@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Timeslot views in Flutter Event Calendar (SfCalendar)
-Calendar has six built-in time slot views used to display date, and the views will display based on the current day by default. Appointments on a specific day will be arranged in respective timeslots based on its duration.
+[Flutter Calendar](https://www.syncfusion.com/flutter-widgets/flutter-calendar) has six built-in time slot views used to display date, and the views will display based on the current day by default. Appointments on a specific day will be arranged in respective timeslots based on its duration.
 
 * **Day view:** Displays a single day.
 * **Week view:** Views all days of a week.
@@ -503,6 +503,32 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![Time text appearance](images/timeslot-views/time-text-appearance.png)
+
+## All day panel background color
+All day panel background color can be customized by using the [allDayPanelColor](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/TimeSlotViewSettings/allDayPanelColor.html) property of `timeSlotViewSettings` in the calendar.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+    home: Scaffold(
+      body: Container(
+        child: SfCalendar(
+          view: CalendarView.week,
+          timeSlotViewSettings:
+              TimeSlotViewSettings(allDayPanelColor: Colors.green),
+        ),
+      ),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Allday panel Background color](images/getting-started/alldayPanelColor.jpg)
 
 ## See also
 

@@ -90,6 +90,33 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+## SelectableDayPredicate
+[selectableDayPredicate](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectableDayPredicate.html) callback allows certain days for selection. Only the days that `selectableDayPredicate` returns `true` will be selectable in the date range picker.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(body: SafeArea(child: Card(child: SfDateRangePicker(
+    selectableDayPredicate: (DateTime dateTime) {
+      if (dateTime == DateTime(2021, 9, 5)) {
+        return false;
+      }
+      return true;
+    },
+  ))));
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+>**NOTE**
+* Applicable for year, decade and century views only when the `allowViewNavigation` set as false.
+* This callback is not applicable when the `navigationMode` set as `DateRangePickerNavigationMode.scroll`. 
+
+![selectable day predicate Range Picker](images/date-restrictions/selectableDayPredicate.jpg)
+
 ## See also
 
 * [How to enable or disable the past dates in the Flutter date range picker (SfDateRangePicker)](https://www.syncfusion.com/kb/12168/how-to-enable-or-disable-the-past-dates-in-the-flutter-date-range-picker-sfdaterangepicker)

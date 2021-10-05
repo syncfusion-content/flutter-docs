@@ -257,6 +257,70 @@ class DataModel {
 
 ![Line shape width](../images/line-layer/line_shape_width.png)
 
+## Stroke cap
+
+You can apply the same stroke cap for all [`MapLine`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLine-class.html) in the [`lines`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLineLayer/lines.html) collection using the `MapLineLayer.strokeCap` property. Alternatively, you can apply different stroke cap to each [`MapLine`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLine-class.html) in the [`lines`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLineLayer/lines.html) collection using the individual `MapLine.strokeCap` property. The default value of the `MapLineLayer.strokeCap` property is `StrokeCap.butt`. The available values are `butt`, `round`, and `square`.
+
+{% tabs %}
+{% highlight Dart %}
+
+late MapShapeSource dataSource;
+late List<DataModel> data;
+
+@override
+void initState() {
+  data = <DataModel>[
+    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(56.1304, -106.3468), 3),
+    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-9.1900, -75.0152), 4),
+    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(61.5240, 105.3188), 6),
+    DataModel(MapLatLng(28.7041, 77.1025), MapLatLng(-25.2744, 133.7751), 7),
+  ];
+
+  dataSource = MapShapeSource.asset(
+    'assets/world_map.json',
+    shapeDataField: 'continent',
+  );
+  super.initState();
+}
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfMaps(
+      layers: [
+        MapShapeLayer(
+          source: dataSource,
+          sublayers: [
+            MapLineLayer(
+              lines: List<MapLine>.generate(data.length, (int index) {
+                return MapLine(
+                  from: data[index].from,
+                  to: data[index].to,
+                  width: data[index].width,
+                  strokeCap: StrokeCap.round,
+                );
+              }).toSet(),
+            ),
+          ],
+        ),
+      ],
+    ),
+  );
+}
+
+class DataModel {
+  DataModel(this.from, this.to, this.width);
+
+  final MapLatLng from;
+  final MapLatLng to;
+  final double width;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Line stroke cap](../images/line-layer/line_stroke_cap.png)
+
 ## Dash array
 
 You can apply dash support for the line using the [`MapLine.dashArray`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLine/dashArray.html) property.
