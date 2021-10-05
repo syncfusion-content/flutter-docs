@@ -13,11 +13,11 @@ The [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/lat
 
 ## Initiate text search and retrieve results
 
-The [searchText](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/searchText.html) controller method is used to initiate the text search and it takes the text to be searched and [TextSearchOption](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/TextSearchOption-class.html) as parameters. This method searches for the text and highlights all the instances of the texts in the document and returns the [PdfTextSearchResult](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult-class.html) object holding the result values such as total instance count, current highlighted instance index, and more. The [PdfTextSearchResult](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult-class.html) object will also help you to navigate to the different searched text instances available and cancel the search operation as well.
+The [searchText](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfViewerController/searchText.html) controller method is used to initiate the text search and it takes the text to be searched and [TextSearchOption](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/TextSearchOption.html) as parameters. This method searches for the text and highlights all the instances of the texts in the document and returns the [PdfTextSearchResult](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult-class.html) object holding the result values such as total instance count, current highlighted instance index, and more. The [PdfTextSearchResult](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/PdfTextSearchResult-class.html) object will also help you to navigate to the different searched text instances available and cancel the search operation as well.
 
 To differentiate the highlighted texts, the current text instance highlight color will be dark, while the rest of the instances will be light. The following code example explains how to perform the text search and retrieve the results for the same.
 
-N> Import **'package:syncfusion_flutter_pdf/pdf.dart'** in the Dart code if you use the [TextSearchOption](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/TextSearchOption-class.html) parameter.
+N> Import **'package:syncfusion_flutter_pdf/pdf.dart'** in the Dart code if you use the [TextSearchOption](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/TextSearchOption.html) parameter.
 
 {% tabs %}
 {% highlight Dart %}
