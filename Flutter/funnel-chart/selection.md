@@ -187,7 +187,7 @@ The [`selectDataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/pointIndex.html) - index of the point which needs to be selected.
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/pointIndex.html) - index of the series for which the pointIndex is specified and this is an optional parameter. By default it will be considered as 0.
 
-N> The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/enableMultiSelection.html) is also applicable for this but, it is based on the API values specified in the chart.
+>**NOTE**:The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/enableMultiSelection.html) is also applicable for this but, it is based on the API values specified in the chart.
 
 {% highlight dart %}
 

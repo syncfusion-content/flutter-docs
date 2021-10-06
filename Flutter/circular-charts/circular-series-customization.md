@@ -155,7 +155,7 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
 The [`onCreateShader`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onCreateShader.html) callback is used to fill the circular chart series data points with gradient and image shader. This callback is called once while rendering
 the data points and legend.
 
-N> All the data points of the circular chart are considered together as a single segment and the shader is applied commonly.
+>**NOTE**:All the data points of the circular chart are considered together as a single segment and the shader is applied commonly.
 
 ### Gradient fill
 
@@ -483,7 +483,7 @@ The [`pointRenderMode`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
 *  If [`PointRenderMode.gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PointRenderMode.html) is specified, a sweep gradient is formed with the solid colors and fills the data points.
 
-N> This property is applicable only if the [`onCreateShader`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onCreateShader.html) and [`pointShaderMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointShaderMapper.html) are null.
+>**NOTE**:This property is applicable only if the [`onCreateShader`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onCreateShader.html) and [`pointShaderMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointShaderMapper.html) are null.
 
 {% highlight dart %}
 
