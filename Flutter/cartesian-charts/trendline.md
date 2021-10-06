@@ -15,7 +15,7 @@ Trendlines can be generated for the Cartesian type series (Line, Column, Scatter
 
 You can use the following properties to customize the behavior and appearance of trendlines.
 
-* [`type`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineType-class.html) - specifies the type of trendline that must be added to the series.
+* [`type`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/type.html) - specifies the type of trendline that must be added to the series.
 * [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/isVisible.html) - used to toggle the visibility of trendlines in a series.
 * [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/width.html) - used to determine the width of trendline.
 * [`backwardForecast`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Trendline/backwardForecast.html) - used to specify the range of backward forecast for the trendline.
@@ -512,6 +512,6 @@ Chart will display details about the points through tooltip, when user interacti
 
 ![tooltip](images/trendline/tooltip.png)
 
-Also refer [`trendline event`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrendlineRenderArgs-class.html) for customizing the tooltip further.
+Also refer [`trendline event`](https://help.syncfusion.com/flutter/cartesian-charts/callbacks#onrenderdetailsupdate-trendline) for customizing the tooltip further.
 
 N> `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.
