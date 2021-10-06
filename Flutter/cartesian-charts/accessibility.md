@@ -11,7 +11,7 @@ documentation: ug
 
 ## Sufficient contrast
 
-The `SfCartesianChart` [theming](https://help.syncfusion.com/flutter/themes/themes) support offers a consistent and standardized look, as well as the ability to set the colors for all UI elements.
+The [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) [`theming`](https://help.syncfusion.com/flutter/themes) support offers a consistent and standardized look, as well as the ability to set the colors for all UI elements.
 
 The customization the colors can be done for the following chart elements.
 * [Chart title](https://help.syncfusion.com/flutter/cartesian-charts/chart-title)
@@ -33,7 +33,7 @@ The customization the colors can be done for the following chart elements.
 
 ## Large fonts
 
-The `SfCartesianChart` font size can be adjusted automatically based on device settings and the font size scaled based on the `MediaQueryData.textScaleFactor`. And also it allows to change the font size of all elements in Cartesian chart.
+The [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) font size can be adjusted automatically based on device settings and the font size scaled based on the [`MediaQueryData.textScaleFactor`](https://api.flutter.dev/flutter/widgets/MediaQueryData/textScaleFactor.html). And also it allows to change the font size of all elements in Cartesian chart.
 * [Chart title](https://help.syncfusion.com/flutter/cartesian-charts/chart-title)
 * [Axis title](https://help.syncfusion.com/flutter/cartesian-charts/axis-customization#axis-title)
 * [Axis label](https://help.syncfusion.com/flutter/cartesian-charts/axis-customization#axis-label-customization)
@@ -47,7 +47,7 @@ The `SfCartesianChart` font size can be adjusted automatically based on device s
 
 ## Easily tappable targets
 
-The `SfCartesianChart` Provides callback support to notify when tapping on the essential elements in the chart.
+The [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) Provides callback support to notify when tapping on the essential elements in the chart.
 * [Axis label](https://help.syncfusion.com/flutter/cartesian-charts/callbacks#onaxislabeltapped)
 * [Data points](https://help.syncfusion.com/flutter/cartesian-charts/callbacks#onpointtapped)
 * [Data label](https://help.syncfusion.com/flutter/cartesian-charts/callbacks#ondatalabeltapped)
