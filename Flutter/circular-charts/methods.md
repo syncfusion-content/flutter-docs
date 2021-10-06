@@ -245,8 +245,8 @@ The [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 
 The [`selectDataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/selectDataPoints.html) method is used to select the data point programmatically. The required arguments are listed below.
 
-* [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipArgs/pointIndex.html) - index of the point which needs to be selected.
-* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipArgs/seriesIndex.html) - index of the series for which the pointIndex is specified and this is an optional parameter. By default it will be considered as 0.
+* [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/pointIndex.html) - index of the point which needs to be selected.
+* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/seriesIndex.html) - index of the series for which the pointIndex is specified and this is an optional parameter. By default it will be considered as 0.
 
 N> The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/enableMultiSelection.html) is also applicable for this but, it is based on the API values specified in the chart.
 
@@ -305,7 +305,7 @@ N> The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter
 
 Converts logical pixel value to the data point value.
   
-The [`pixelToPoint`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeriesController/pointToPixel.html) method takes logical pixel value as input and returns a chart data point.
+The [`pixelToPoint`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeriesController/pixelToPoint.html) method takes logical pixel value as input and returns a chart data point.
 
 N> The method will return the center value of the segment.
 
