@@ -51,11 +51,11 @@ You can use the following properties to customize the appearance:
 
 ### Activation mode
 
-The [`activationMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartTrackball/activationMode.html) property is used to restrict the visibility of trackball based on the touch actions. The default value of this property is [`ActivationMode.tap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartActivationMode-class.html).
+The [`activationMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartTrackball/activationMode.html) property is used to restrict the visibility of trackball based on the touch actions. The default value of this property is [`ActivationMode.tap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartActivationMode.html).
 
-* [`longPress`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartActivationMode-class.html) - Activates trackball only when performing the long press action.
-* [`tap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartActivationMode-class.html) - Activates trackball only when performing tap action.
-* [`doubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartActivationMode-class.html) - Activates trackball only when performing double tap action.
+* [`ActivationMode.longPress`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartActivationMode.html) - Activates trackball only when performing the long press action.
+* [`ActivationMode.tap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartActivationMode.html) - Activates trackball only when performing tap action.
+* [`ActivationMode.doubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartActivationMode.html) - Activates trackball only when performing double tap action.
 
 {% highlight dart %} 
 
