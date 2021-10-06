@@ -72,3 +72,4 @@ To render a waterfall chart, create an instance of [`WaterfallSeries`](https://p
 {% endhighlight %}
 
 ![waterfall_chart](cartesian-chart-types-images/waterfall_series.png)
+
