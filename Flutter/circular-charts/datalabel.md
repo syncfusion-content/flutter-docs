@@ -213,7 +213,7 @@ N>  The smart label positioning is applicable only for the pie and doughnut seri
 
 ## Apply series color
 
-The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/useSeriesColor.html) property is used to apply the series color to background color of the data labels. The default value of this property is 'false'.
+The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/useSeriesColor.html) property is used to apply the series color to background color of the data labels. The default value of this property is `false`.
 
 {% highlight dart %} 
 

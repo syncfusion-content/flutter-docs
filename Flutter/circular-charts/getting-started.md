@@ -32,7 +32,7 @@ Add the Syncfusion [Flutter Chart](https://www.syncfusion.com/flutter-widgets/fl
 
 {% endhighlight %}
 
-> **NOTE** :- Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Charts`](https://pub.dev/packages/syncfusion_flutter_charts/versions) package.
+N> Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Charts`](https://pub.dev/packages/syncfusion_flutter_charts/versions) package.
 
 **Get packages**
 
@@ -74,7 +74,7 @@ Once the package has been imported, initialize the chart as a child of any widge
 
 {% endhighlight %}
 
-> **NOTE**: An empty chart will be displayed. This is the charts default behavior.
+N> An empty chart will be displayed. This is the charts default behavior.
 
 ## Bind data source
 
