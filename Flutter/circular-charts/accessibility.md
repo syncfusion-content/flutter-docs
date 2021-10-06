@@ -35,7 +35,7 @@ The [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
 ## Easily tappable targets
 
-The [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) Provides callback support to notify when tapping on the essential elements in the chart.
+The [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) provides callback support to notify when tapping on the essential elements in the chart.
 * [Data points](https://help.syncfusion.com/flutter/circular-charts/callbacks#onpointtapped)
 * [Data labels](https://help.syncfusion.com/flutter/circular-charts/callbacks#ondatalabeltapped)
 * [Legend](https://help.syncfusion.com/flutter/circular-charts/callbacks#onlegendtapped)

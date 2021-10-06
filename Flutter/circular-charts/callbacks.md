@@ -404,4 +404,4 @@ The callback contains the following argument:
 * [`ChartShaderDetails`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartShaderDetails-class.html) - provides options to get the outer rect, inner rect, and render type (either series or legend)
 
 The onCreateShader callback is called once while rendering
-the data points and legend. For further reference on this callback, Check the [`Gradient and image shader`](./circular-series-customization#Gradient-fill-and-shader) section.
+the data points and legend. For further reference on this callback, Check the [`Gradient and ImageShader`](./circular-series-customization#Gradient-fill-and-shader) section.
