@@ -249,6 +249,8 @@ Widget build(BuildContext context) {
 
 ![marker offset](images/marker-pointers/marker_offset.jpg)
 
+N> You can refer to our [Flutter Radial Gauge](https://www.syncfusion.com/flutter-widgets/flutter-radial-gauge) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Radial Gauge example](https://flutter.syncfusion.com/#/radial-gauge/pointers/marker-pointer) that shows how to configure a Radial Gauge in Flutter.
+
 
 
 

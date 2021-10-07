@@ -122,3 +122,6 @@ Widget build(BuildContext context) {
 
 ![widget pointer position](images/widget-pointer/widget_pointer_position.png)
 
+N> You can refer to our [Flutter Radial Gauge](https://www.syncfusion.com/flutter-widgets/flutter-radial-gauge) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Radial Gauge example](https://flutter.syncfusion.com/#/radial-gauge/pointers/widget-pointer) that shows how to configure a Radial Gauge in Flutter.
+
+

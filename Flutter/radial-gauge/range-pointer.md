@@ -172,5 +172,4 @@ When you set the [`sizeUnit`](https://pub.dev/documentation/syncfusion_flutter_g
 
 If the [`sizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RangePointer/sizeUnit.html)  is specified as factor, the factor value will be multiplied with the axis radius. For example, if you set [`pointerOffset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RangePointer/pointerOffset.html) as 0.1, then the pointer offset is considered as 10% of axis radius.
 
-
-
+N> You can refer to our [Flutter Radial Gauge](https://www.syncfusion.com/flutter-widgets/flutter-radial-gauge) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Radial Gauge example](https://flutter.syncfusion.com/#/radial-gauge/pointers/range-pointer) that shows how to configure a Radial Gauge in Flutter.

@@ -11,7 +11,7 @@ documentation: ug
 
 ## Initial animation
 
-The radial gauge allows all of its elements to be animated with [`enableLoadingAnimation`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfRadialGauge/enableLoadingAnimation.html) property. The default value for this property is false. The duration of the animation can be controlled by [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfRadialGauge/animationDuration.html) property of the gauge.
+The [Flutter radial gauge](https://www.syncfusion.com/flutter-widgets/flutter-radial-gauge) allows all of its elements to be animated with [`enableLoadingAnimation`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfRadialGauge/enableLoadingAnimation.html) property. The default value for this property is false. The duration of the animation can be controlled by [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/SfRadialGauge/animationDuration.html) property of the gauge.
 
 {% highlight dart %}
 
@@ -85,3 +85,5 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 
 ![pointer animation](images/animation/animation.gif)
+
+N> You can also explore our [Flutter Radial Gauge example](https://flutter.syncfusion.com/#/radial-gauge/pointer-animation/bounce-out) that shows how to configure a Radial Gauge in Flutter.
