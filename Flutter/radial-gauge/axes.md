@@ -784,7 +784,7 @@ Widget build(BuildContext context) {
 
 The [`offsetUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/offsetUnit.html)  property of axis is common for both the [`tickOffset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/tickOffset.html) and [`labelOffset`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/RadialAxis/labelOffset.html).
 
-N> [`GaugeSizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeSizeUnit-class.html) allows to specify the value either in logical pixels or in factor. GaugeSizeUnit.factor ranges from 0 to 1. For example, when setting factor as 0.5, the half of axis radius value will be considered.
+N> [`GaugeSizeUnit`](https://pub.dev/documentation/syncfusion_flutter_gauges/latest/gauges/GaugeSizeUnit.html) allows to specify the value either in logical pixels or in factor. GaugeSizeUnit.factor ranges from 0 to 1. For example, when setting factor as 0.5, the half of axis radius value will be considered.
 
 ## Multiple axis
 
