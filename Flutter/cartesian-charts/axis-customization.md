@@ -224,7 +224,7 @@ The [`labelFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 
 Also refer [number format](./axis-types#formatting-the-labels) and [date format](./axis-types#formatting-the-labels-1) for formatting the labels further.
 
-N> You must import [`intl`](https://pub.dev/packages/intl) package for formatting axis label using the [`NumberFormat`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html) class and  [`date Format`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
+>**NOTE**:You must import [`intl`](https://pub.dev/packages/intl) package for formatting axis label using the [`NumberFormat`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html) class and  [`date Format`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
 
 ### Label and tick positioning
 

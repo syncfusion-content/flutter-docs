@@ -173,7 +173,7 @@ To position the annotation based on the percentage values, set the [`CoordinateU
 
 **Positioning based on region**
 
-Annotations can be placed with respect to either [`AnnotationRegion.plotArea`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AnnotationRegion.html)  or [`AnnotationRegion.chart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AnnotationRegion.html) using [`region`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/region.html) property.
+Annotations can be placed with respect to either [`AnnotationRegion.plotArea`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AnnotationRegion.html) or [`AnnotationRegion.chart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AnnotationRegion.html) using [`region`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/region.html) property.
 
 {% highlight dart %} 
 
@@ -356,9 +356,16 @@ When there are multiple axes in the chart, annotation can be added for a particu
 Chart supports watermark which allows you to mark the specific area of interest in the chart area. You can add the custom widgets and watermarks using this annotations feature as depicted below.
 
 {% highlight dart %} 
-
+    
     @override
     Widget build(BuildContext context) {
+      final List<ChartData> chartData = [
+        ChartData(10, 17, 132),
+        ChartData(20, 34, 134),
+        ChartData(30, 24, 124),
+        ChartData(40, 30, 130),
+        ChartData(50, 10, 110)
+      ];
       return Scaffold(
         body: SafeArea(
           child: Center(
@@ -387,10 +394,17 @@ Chart supports watermark which allows you to mark the specific area of interest 
         )
       );
     }
-
+    
+    class ChartData {
+      ChartData(this.x, this.y, this.y2);
+      final double x;
+      final double y;
+      final double y2;
+    }
+ 
 {% endhighlight %}
 
 
 ![Chart with Watermark](images/annotation/watermark.png)
 
->Note :- `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.
+>**NOTE**: `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.

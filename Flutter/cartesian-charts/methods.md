@@ -642,7 +642,7 @@ The [`selectDataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts
 * `pointIndex` - index of the point which needs to be selected.
 * `seriesIndex` - index of the series for which the pointIndex is specified and this is an optional argument. By default it will be considered as 0.
 
-N> The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/enableMultiSelection.html) and [`selectionType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/selectionType.html) are also applicable for this but, it is based on their API values specified in the chart.
+>**NOTE**:The [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/enableMultiSelection.html) and [`selectionType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/selectionType.html) are also applicable for this but, it is based on their API values specified in the chart.
 
 {% highlight dart %}
 
@@ -1312,7 +1312,7 @@ The [`pointToPixel`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
   
 Since this method is in the series controller, x and y-axis associated with this particular series will be considering for conversion value.
   
-N> This method is only applicable for Cartesian chart, not for the circular, pyramid,
+>**NOTE**:This method is only applicable for Cartesian chart, not for the circular, pyramid,
 and funnel charts.
   
 {% highlight dart %}
@@ -1358,4 +1358,4 @@ and funnel charts.
 * [Show or hide trackball dynamically in Cartesian chart](https://www.syncfusion.com/kb/11489/how-to-show-or-hide-trackball-dynamically-in-cartesian-charts-sfcartesianchart).
 * [Show or hide crosshair dynamically in Cartesian chart](https://www.syncfusion.com/kb/11488/how-to-show-or-hide-crosshair-dynamically-in-cartesian-charts-sfcartesianchart).
 
-N> `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.
+>**NOTE**:`chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.

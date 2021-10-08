@@ -261,4 +261,4 @@ Also refer [selection event](./events#onselectionchanged) for customizing the se
 
 * [Dynamically selecting the data points in a chart](https://www.syncfusion.com/kb/11811/how-to-select-the-data-points-dynamically-in-cartesian-charts-sfcartesianchart).
 
-N> `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.
+>**NOTE**:`chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.

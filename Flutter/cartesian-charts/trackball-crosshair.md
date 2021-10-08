@@ -34,7 +34,7 @@ You can use the following properties to customize the appearance of trackball to
 * [`textStyle.fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/InteractiveTooltip/textStyle.html) - used to change the font size for tooltip text.
 * [`hideDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/hideDelay.html ) - used to specify disappear delay for trackball.
 
-N> The above mentioned properties are only applicable for SfCartesian types of charts.
+>**NOTE**:The above mentioned properties are only applicable for SfCartesian types of charts.
 
 {% highlight dart %} 
     
@@ -155,7 +155,7 @@ The position of trackball tooltip can be changed using the [`tooltipAlignment`](
 
 ![Label alignment](images/trackball-crosshair/label_alignment.jpg)
 
-N> This is applicable only when the [`tooltipDisplayMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/tooltipDisplayMode.html) is set to [`TrackballDisplayMode.groupAllPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballDisplayMode.html).
+>**NOTE**:This is applicable only when the [`tooltipDisplayMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/tooltipDisplayMode.html) is set to [`TrackballDisplayMode.groupAllPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballDisplayMode.html).
 
 ### Label format
 
@@ -532,7 +532,7 @@ Crosshair lines can be enabled by using [`enable`](https://pub.dev/documentation
 
 The crosshair state will be preserved on the device's orientation change and on browser resize. For example, if the crosshair's ['hideDelay'](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairBehavior/hideDelay.html) is set to 10,000ms, and when you change the orientation of your device from portrait to landscape after 5,000ms of crosshair display, the crosshair will be displayed for the next 5,000ms in landscape mode before disappearing.
 
-N> The above mentioned properties are only applicable for SfCartesian types of charts.
+>**NOTE**:The above mentioned properties are only applicable for SfCartesian types of charts.
 
 {% highlight dart %} 
     
@@ -679,4 +679,4 @@ Also refer [`crosshair`](./events#oncrosshairpositionchanging) and [`trackball`]
 
 * [Disabling trackball tooltip for particular series in Cartesian chart](https://www.syncfusion.com/kb/11638/how-to-disable-trackball-tooltip-for-particular-series-in-cartesian-charts-sfcartesianchart).
 
-N> `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.
+>**NOTE**:`chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.

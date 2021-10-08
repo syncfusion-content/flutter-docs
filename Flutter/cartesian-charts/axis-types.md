@@ -296,7 +296,7 @@ The [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 Also refer [label format](./axis-customization#formatting-axis-label-content) and [date format](#formatting-the-labels-1) for formatting the labels 
 further.
 
-N> You must import [`intl`](https://pub.dev/packages/intl) package for formatting labels using the [`NumberFormat`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html) class and  [`date Format`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
+>**NOTE**:You must import [`intl`](https://pub.dev/packages/intl) package for formatting labels using the [`NumberFormat`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html) class and  [`date Format`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
 
 
 ### Decimal places
@@ -720,7 +720,7 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
 
 ### Formatting the labels
 
-The [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/dateFormat.html) property formats the date-time axis labels. The default data-time axis label can be formatted with various built-in [`DateFormat`](https://api.flutter.dev/flutter/intl/DateFormat-class.html), which depend on the given data source.
+The [`date formats`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/dateFormat.html) property formats the date-time axis labels. The default data-time axis label can be formatted with various built-in [`DateFormat`](https://api.flutter.dev/flutter/intl/DateFormat-class.html), which depend on the given data source.
 
 {% highlight dart %} 
 
@@ -746,7 +746,7 @@ The [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
 
 Also refer [label format](./axis-customization#formatting-axis-label-content) and [number format](#formatting-the-labels) for formatting the labels further.
 
-N> You must import [`intl`](https://pub.dev/packages/intl) package for formatting labels using the [`NumberFormat`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html) class and  [`date Format`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
+>**NOTE**:You must import [`intl`](https://pub.dev/packages/intl) package for formatting labels using the [`NumberFormat`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html) class and  [`date Format`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
 
 ## Date-time category axis
 
@@ -851,7 +851,7 @@ The Flutter Chart supports the following types of interval for date-time categor
 
 ### Formatting the labels
 
-The [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoryAxis/dateFormat.html) property formats the date-time category axis labels. The default data-time category axis label can be formatted with various built-in [`DateFormat`](https://api.flutter.dev/flutter/intl/DateFormat-class.html), which depend on the given data source.
+The [`date formats`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoryAxis/dateFormat.html) property formats the date-time category axis labels. The default data-time category axis label can be formatted with various built-in [`DateFormat`](https://api.flutter.dev/flutter/intl/DateFormat-class.html), which depend on the given data source.
 
 {% highlight dart %} 
 
@@ -877,7 +877,7 @@ The [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
 
 Also refer [label format](./axis-customization#formatting-axis-label-content) and [number format](#formatting-the-labels) for formatting the labels further.
 
-N> You must import [`intl`](https://pub.dev/packages/intl) package for formatting labels using the [`NumberFormat`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html) class and  [`DateFormat`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
+>**NOTE**:You must import [`intl`](https://pub.dev/packages/intl) package for formatting labels using the [`NumberFormat`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html) class and [`date formats`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
 
 ## Logarithmic axis
 
@@ -977,17 +977,41 @@ By using the [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_cha
 
     @override
     Widget build(BuildContext context) {
+        final dynamic chartData = <ChartData>[
+        ChartData('IND', 160, 10),
+        ChartData('CHN', 12343, 7),
+        ChartData('MAL', 19, 11),
+        ChartData('JAP', 14, 7),
+        ChartData('USA', 11, 8),
+        ChartData('ITL', 5, 6),
+        ChartData('SPA', 10, 3),
+        ChartData('PAK', 1, 7)
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: LogarithmicAxis(
                           isInversed:true,
-                        )  
+                        ),
+                        series : <StepLineSeries<ChartData, String>>[
+                        StepLineSeries<ChartData, String>(
+                        dataSource: chartData,
+                        xValueMapper: (ChartData sales, _) => sales.x,
+                        yValueMapper: (ChartData sales, _) => sales.y,
+                        animationDuration: 0),
+    ]; 
                     )
                 )
             )
         );
+    }
+
+    class ChartData {
+       ChartData(this.year, this.androidSales, this.iphoneSales);
+       final String x;
+       final int y;
+       final int z;
     }
      
 {% endhighlight %}
@@ -998,4 +1022,4 @@ By using the [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_cha
 
 * [Applying currency format to axis labels](https://www.syncfusion.com/kb/11519/how-to-apply-the-currency-format-to-the-axis-labels-sfcartesianchart).
 
-N> `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.
+>**NOTE**:`` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.
