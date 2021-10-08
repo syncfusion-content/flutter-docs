@@ -14,7 +14,7 @@ documentation: ug
 Chart renders based on the parent widget size. If you need the chart to be rendered in specific size, then set the size(width/height) to the parent widget.
 
 You can also customize the following properties:
-* [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTitle/backgroundColor.html) - used to changes the background color of the chart.
+* [`backgroundColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/backgroundColor.html) - used to changes the background color of the chart.
 * [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - used to change the border width.
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - used to change the color of the chart border.
  
@@ -76,7 +76,7 @@ You can customize the plot area of the chart using the below properties.
 * [`plotAreaBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/plotAreaBackgroundColor.html) - used to change the plot area background color.
 * [`plotAreaBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/plotAreaBorderColor.html) - used to change the stroke color of the plot area.
 * [`plotAreaBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/plotAreaBorderWidth.html) - used to change the stroke width of the plot area.
-* [`plotAreaBackgroundImageUrl`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/plotAreaBackgroundImage.html) - used to set the image path.
+* [`plotAreaBackgroundImage`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/plotAreaBackgroundImage.html) - used to set the image path.
 
 {% highlight dart %} 
 
@@ -92,7 +92,7 @@ You can customize the plot area of the chart using the below properties.
                 plotAreaBorderWidth: 5,
                 plotAreaBorderColor: Colors.red,
                 plotAreaBackgroundColor: Colors.lightGreen,
-                plotAreaBackgroundImageUrl: 'images/livechart.png'
+                plotAreaBackgroundImage: 'images/livechart.png'
               )
             )
           )
