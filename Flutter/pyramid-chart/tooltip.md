@@ -9,7 +9,7 @@ documentation: ug
 
 # Tooltip in Flutter Pyramid Chart (SfPyramidChart)
 
-Chart provides tooltip support for all the series. It is used to show information about the segment, when you tap on the segment. To enable the tooltip, you need to set [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/enableTooltip.html) property as true.
+Chart provides tooltip support for all the series. It is used to show information about the segment, when you tap on the segment. To enable the tooltip, you need to set [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/enableTooltip.html) property as `true`.
 
 The tooltip state will be preserved on the device's orientation change and on browser resize. For example, if the tooltip's [`duration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/duration.html) is set to 10,000ms, and when you change the orientation of your device from portrait to landscape after 5,000ms of tooltip display, the tooltip will be displayed for the next 5,000ms in landscape mode before disappearing.
 
@@ -104,10 +104,9 @@ You can use the following properties to customize the tooltip appearance.
 
 By default, x and y value will be displayed in the tooltip, and it can be customized using [`format`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/format.html) property as depicted in the below code snippet. You can show the below values in the tooltip. Also you can add prefix or suffix to these values.
 
-* X value - point.x
-* Y value - point.y
-* Bubble size - point.size
-* Name of the series - series.name
+* X value - `point.x`
+* Y value - `point.y`
+* Name of the series - `series.name`
 
 {% highlight dart %} 
     
