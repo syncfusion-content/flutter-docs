@@ -20,7 +20,7 @@ To get start quickly with our Flutter circular chart widget, you can check on th
 
 ## Key Features
 
-* **Chart types** - Supports 3 different series types such as [`Pie Chart`](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/pie-chart), [`Doughnut Chart`](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/doughnut-chart), and [`Radial bar Chart`](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/radial-bar-chart) series. Each type represents data in a unique style. It is more user friendly and has greater UI visualization.
+* **Chart types** - Supports 3 different series types such as [`pie`](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/pie-chart), [`doughnut`](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/doughnut-chart), and [`radial bar`](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/radial-bar-chart) series. Each type represents data in a unique style. It is more user friendly and has greater UI visualization.
 
   ![Chart Types](images/overview/chart_types_circular.png)
 
