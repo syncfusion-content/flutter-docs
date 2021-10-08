@@ -15,7 +15,7 @@ Syncfusion Flutter Funnel Chart (SfFunnelChart) widget is written natively in Da
 
 ## Key Features
 
-* It supports [`Funnel Chart`](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/funnel-chart) chart series and it is more user friendly and has greater UI visualization.
+* It supports [`Funnel`](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/funnel-chart) chart series and it is more user friendly and has greater UI visualization.
 
 * The end-user experience is greatly enhanced by including the user interaction features such as callbacks, selection, tooltip, and explode in chart. 
 
