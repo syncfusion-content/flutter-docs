@@ -117,3 +117,5 @@ The following code sample demonstrates how to set the `splineType` value to `car
 {% endhighlight %}
 
 ![Spline area type](cartesian-chart-types-images/spline_area_types.png)
+
+N> You can refer to our [Flutter Spline Area Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/spline-area-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Spline Area Chart example](https://flutter.syncfusion.com/#/cartesian-charts/chart-types/spline-area) that shows how to easily configure with built-in support for creating stunning visual effects.

@@ -82,3 +82,5 @@ The [`height`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
 ![Scatter shape](cartesian-chart-types-images/scatter_shape.jpg)
 
 Also refer, [color palette](./series-customization#color-palette), [color mapping](./series-customization#color-mapping-for-data-points), [animation](./series-customization#animation), [gradient](./series-customization#gradient-fill) and [empty points](./series-customization#empty-points) for customizing the scatter series further.
+
+N> You can refer to our [Flutter Scatter Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/scatter-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Scatter Chart example](https://flutter.syncfusion.com/#/cartesian-charts/chart-types/scatter/default-scatter) that shows how to easily configure with built-in support for creating stunning visual effects.

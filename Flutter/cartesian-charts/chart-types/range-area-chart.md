@@ -88,3 +88,5 @@ The borders of the range area chart can be customized using the [`borderDrawMode
 {% endhighlight %}
 
 ![Range area border](cartesian-chart-types-images/range_area_border.png)
+
+N> You can refer to our [Flutter Range Area Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/range-area-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Range Area Chart example](https://flutter.syncfusion.com/#/cartesian-charts/chart-types/range-area) that shows how to easily configure with built-in support for creating stunning visual effects.

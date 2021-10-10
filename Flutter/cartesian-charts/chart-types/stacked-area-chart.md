@@ -9,7 +9,7 @@ documentation: ug
 
 # Stacked area Chart in Flutter Cartesian Charts (SfCartesianChart)
 
-To create a Flutter stacked area chart quickly, you can check this video.
+To create a [Flutter Stacked Area Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/stacked-area-chart) quickly, you can check this video.
 
 <style>#flutterstackedareaChartTutorial{width : 90% !important; height: 300px !important }</style>
 <iframe id='flutterstackedareaChartTutorial' src='https://www.youtube.com/embed/NCUDBD_ClHo'></iframe>

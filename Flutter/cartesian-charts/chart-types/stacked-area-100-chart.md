@@ -10,7 +10,7 @@ documentation: ug
 
 # 100% Stacked area Chart in Flutter Cartesian Charts (SfCartesianChart)
 
-To create a Flutter 100% stacked area chart quickly, you can check this video.
+To create a [Flutter 100% Stacked Area Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/stacked-area-100-chart) quickly, you can check this video.
 
 <style>#flutter100stackedareaChartTutorial{width : 90% !important; height: 300px !important }</style>
 <iframe id='flutter100stackedareaChartTutorial' src='https://www.youtube.com/embed/NCUDBD_ClHo'></iframe>

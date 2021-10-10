@@ -138,3 +138,5 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
     }
 
 {% endhighlight %}
+
+N> You can refer to our [Flutter Range Column Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/range-column-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Range Column Chart example](https://flutter.syncfusion.com/#/cartesian-charts/chart-types/range-column/default-range-column-chart) that shows how to easily configure with built-in support for creating stunning visual effects.
