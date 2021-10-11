@@ -32,8 +32,8 @@ To use the numeric values or to bind the custom data source use the [`SfSparkBar
           child: SfSparkBarChart.custom(
             axisLineWidth: 0,
             dataCount: 7,
-            xValueMapper: (index) => data[index].xval,
-            yValueMapper: (index) => data[index].yval, 
+            xValueMapper: (index) => data[index].xval!,
+            yValueMapper: (index) => data[index].yval!,  
           )
         ),
       );
@@ -51,8 +51,8 @@ To use the numeric values or to bind the custom data source use the [`SfSparkBar
  
     class SalesData {
       SalesData({this.xval, this.yval});
-      final double xval;
-      final double yval;
+      final double? xval;
+      final double? yval;
     }
 
 {% endhighlight %}
@@ -73,8 +73,8 @@ To use the date-time values i.e to bind the custom data source use the [`SfSpark
           child: SfSparkBarChart.custom(
             axisLineWidth: 0,
             dataCount: 23,
-            xValueMapper: (index) => data[index].xval,
-            yValueMapper: (index) => data[index].yval, 
+            xValueMapper: (index) => data[index].xval!,
+            yValueMapper: (index) => data[index].yval!, 
           )
         ),
       );
@@ -107,8 +107,8 @@ To use the date-time values i.e to bind the custom data source use the [`SfSpark
  
     class SalesData {
       SalesData({this.xval, this.yval});
-      final DateTime xval;
-      final double yval;
+      final DateTime? xval;
+      final double? yval;
     }
 
 {% endhighlight %}
@@ -129,8 +129,8 @@ To use the category values i.e to bind the custom data source use the [`SfSparkB
           child: SfSparkLineChart.custom(
             axisLineWidth: 0,
             dataCount: 12,
-            xValueMapper: (index) => data[index].xval,
-            yValueMapper: (index) => data[index].yval, 
+            xValueMapper: (index) => data[index].xval!,
+            yValueMapper: (index) => data[index].yval!,
           )
         ),
       );
@@ -152,8 +152,8 @@ To use the category values i.e to bind the custom data source use the [`SfSparkB
  
     class SalesData {
       SalesData({this.xval, this.yval});
-      final String xval;
-      final double yval;
+      final String? xval;
+      final double? yval;
     }
 
 {% endhighlight %}
@@ -182,8 +182,8 @@ Axis line of the spark charts can be customized using the following properties.
             axisLineDashArray: <double>[5,3],
             axisCrossesAt: 174,
             dataCount: 7,
-            xValueMapper: (index) => data[index].xval,
-            yValueMapper: (index) => data[index].yval, 
+            xValueMapper: (index) => data[index].xval!,
+            yValueMapper: (index) => data[index].yval!, 
           )
         ),
       );
@@ -198,6 +198,13 @@ Axis line of the spark charts can be customized using the following properties.
       SalesData(xval: 6, yval: 180),
       SalesData(xval: 7, yval: 210),
     ]; 
+
+    class SalesData {
+      SalesData({this.xval, this.yval});
+      final int? xval;
+      final double? yval;
+    }
+
 
 {% endhighlight %}
 
