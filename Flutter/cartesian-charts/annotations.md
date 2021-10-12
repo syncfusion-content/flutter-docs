@@ -250,30 +250,51 @@ You can add multiple annotations to the Chart by adding multiple widgets to the 
     Widget build(BuildContext context) {
       return Scaffold(
         body: SafeArea(
-          child: Center(
-            child: Container(
-              child: SfCartesianChart(
-                primaryXAxis: CategoryAxis(),
-                annotations: <CartesianChartAnnotation>[
-               // first annotation
-               CartesianChartAnnotation(
-                  child: Container(child: const Text('High')),
-                  coordinateUnit: CoordinateUnit.logicalPixel,
-                  x: 90,
-                  y: 200),
-              // second annotation
-              CartesianChartAnnotation(
-                  child: Container(child: const Text('Low')),
-                  coordinateUnit: CoordinateUnit.logicalPixel,
-                  x: 170,
-                  y: 200)
-            ],
-         )
-       )
-      )
-    ),
-  );
-}
+            child: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis: CategoryAxis(),
+                        primaryYAxis: NumericAxis(interval: 5),
+                        annotations: <CartesianChartAnnotation>[
+                        // first annotation
+                        CartesianChartAnnotation(
+                        widget: Container(child: const Text('High')),
+                        coordinateUnit: CoordinateUnit.point,
+                        x: 'China',
+                        y: 6,
+                        ),
+                        // second annotation
+                        CartesianChartAnnotation(
+                        widget: Container(child: const Text('Low')),
+                        coordinateUnit: CoordinateUnit.point,
+                        x: 'Japan',
+                        y: 6)
+                        ],
+                        series: <CartesianSeries<ChartData, String>>[
+                        StepLineSeries<ChartData, String>(
+                            dataSource: <ChartData>[
+                                        ChartData('UK', 6),
+                                        ChartData('China', 11),
+                                        ChartData('USA', 20),
+                                        ChartData('Japan', 14),
+                                        ChartData('France', 10)
+                                      ],
+                            xValueMapper: (ChartData sales, _) => sales.year,
+                            yValueMapper: (ChartData sales, _) => sales.sales)
+                          ]
+                        )
+                      )
+                    )
+                  )
+                );
+              }
+            }
+
+            class ChartData {
+              ChartData(this.year, this.sales);
+              final String year;
+              final double sales;
+            }
 
 {% endhighlight %}
 
