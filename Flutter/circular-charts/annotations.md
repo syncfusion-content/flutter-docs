@@ -89,27 +89,45 @@ Chart supports watermark which allows you to mark the specific area of interest 
         body: SafeArea(
           child: Center(
             child: Container(
-              child: SfCircularChart(
-                annotations: <CircularChartAnnotation>[
-                 CircularChartAnnotation(
-                 child: Container(
-                  child: const Text(
-                    '€ - \$ ',
-                  style: TextStyle(
-                  color: Color.fromRGBO(216, 225, 227, 1),
-                  fontWeight: FontWeight.bold,
-                  fontSize: 80),
-                    ),
-                  ),
-                 )
-                ] 
+                  child: SfCircularChart(
+                      annotations: <CircularChartAnnotation>[
+                      CircularChartAnnotation(
+                        widget: Container(
+                        child: const Text(
+                        '€ - \$ ',
+                        style: TextStyle(
+                        color: Color.fromRGBO(216, 225, 227, 1),
+                        fontWeight: FontWeight.bold,
+                        fontSize: 80)),
+                        ),
+                      )
+                    ],
+                    series: <PieSeries<ChartData, String>>[
+                    PieSeries<ChartData, String>(
+                      dataSource: <ChartData>[
+                      ChartData('jan', 37),
+                      ChartData('feb', 24),
+                      ChartData('mar', 36),
+                      ChartData('apr', 38),
+                      ChartData('may', 40),
+                      ],
+                      xValueMapper: (ChartData sales, _) => sales.year,
+                      yValueMapper: (ChartData sales, _) => sales.sales),
+                      ],
+                    )
+                  )
+                )
               )
-            )
-          )
-        )
-      );
-    }
+            );
+          }
+        }
 
+        class ChartData {
+          ChartData(this.year, this.sales);
+          final String year;
+          final double sales;
+        }
+        
 {% endhighlight %}
 
 

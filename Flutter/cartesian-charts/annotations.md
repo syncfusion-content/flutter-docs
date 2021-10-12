@@ -364,29 +364,52 @@ Chart supports watermark which allows you to mark the specific area of interest 
           child: Center(
             child: Container(
               child: SfCartesianChart(
-                annotations: <CartesianChartAnnotation>[
-                 CartesianChartAnnotation(
-                 child: Container(
+                primaryXAxis: CategoryAxis(labelPlacement: LabelPlacement.betweenTicks),
+                  annotations: <CartesianChartAnnotation>[
+                  CartesianChartAnnotation(
+                  widget: Container(
                   child: const Text(
-                    '€ - \$ ',
+                  '€ - \$ ',
                   style: TextStyle(
                   color: Color.fromRGBO(216, 225, 227, 1),
                   fontWeight: FontWeight.bold,
                   fontSize: 80),
-                    ),
                   ),
-        coordinateUnit: CoordinateUnit.point,
-        region: AnnotationRegion.chart,
-        x: 3,
-        y: 38,
-                 )
-                ] 
+                ),
+                coordinateUnit: CoordinateUnit.point,
+                region: AnnotationRegion.chart,
+                x: 'apr',
+                y: 38,
+                )
+              ],
+                series: <ChartSeries<ChartData, String>>[
+                LineSeries<ChartData, String>(
+                    dataSource: <ChartData>[
+                    ChartData('jan', 21),
+                    ChartData('feb', 24),
+                    ChartData('mar', 36),
+                    ChartData('apr', 38),
+                    ChartData('may', 54),
+                    ChartData('jun', 54),
+                    ChartData('jul', 70),
+                    ],
+                    xValueMapper: (ChartData sales, _) => sales.year,
+                    yValueMapper: (ChartData sales, _) => sales.sales),
+                  ],
+                )
               )
             )
           )
-        )
-      );
+        );
+      }
     }
+
+    class ChartData {
+      ChartData(this.year, this.sales);
+      final String year;
+      final double sales;
+    }
+
 
 {% endhighlight %}
 
