@@ -130,7 +130,7 @@ Widget build(BuildContext context) {
 
 ## Save the PDF document as file
 
-To save the file as pdf document, platform specific file generation code should be added. You can find the code snippets to create documents in [mobile](https://help.syncfusion.com/flutter/pdf/getting-started#save-and-open-a-pdf-document-in-mobile) and [web](https://help.syncfusion.com/flutter/pdf/getting-started#save-and-download-a-pdf-document-in-web) platforms.
+To save the file as PDF document, it’s necessary to include [mobile](https://help.syncfusion.com/flutter/pdf/getting-started#save-and-open-a-pdf-document-in-mobile), [web](https://help.syncfusion.com/flutter/pdf/getting-started#save-and-download-a-pdf-document-in-web) and desktop platform-specific file generating code.
 
 ## Export DataGrid to PDF document
 
