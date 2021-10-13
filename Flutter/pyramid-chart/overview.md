@@ -15,7 +15,7 @@ Syncfusion Flutter Pyramid Chart (SfPyramidChart) widget is written natively in 
 
 ## Key Features
 
-* It Supports [`Pyramid`](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/pyramid-chart) chart series and it is more user friendly and has greater UI visualization. 
+* It Supports [`Pyramid Chart`](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/pyramid-chart) chart series and it is more user friendly and has greater UI visualization. 
 
 * The end-user experience is greatly enhanced by including the user interaction features such as callbacks, selection, tooltip, and explode in chart. 
 
