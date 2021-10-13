@@ -308,7 +308,6 @@ When there are multiple axes in the chart, annotation can be added for a particu
 
     @override
     Widget build(BuildContext context) {
-
       final List<ChartData> chartData = [
         ChartData(10, 17, 132),
         ChartData(20, 34, 134),
@@ -381,7 +380,6 @@ Chart supports watermark which allows you to mark the specific area of interest 
 
     @override
     Widget build(BuildContext context) {
-
       return Scaffold(
         body: SafeArea(
           child: Center(
