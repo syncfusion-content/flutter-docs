@@ -173,7 +173,7 @@ To position the annotation based on the percentage values, set the [`CoordinateU
 
 **Positioning based on region**
 
-Annotations can be placed with respect to either [`AnnotationRegion.plotArea`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AnnotationRegion-class.html)  or [`AnnotationRegion.chart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AnnotationRegion-class.html) using [`region`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/region.html) property.
+Annotations can be placed with respect to either [`AnnotationRegion.plotArea`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AnnotationRegion.html)  or [`AnnotationRegion.chart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AnnotationRegion.html) using [`region`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianChartAnnotation/region.html) property.
 
 {% highlight dart %} 
 
@@ -250,30 +250,51 @@ You can add multiple annotations to the Chart by adding multiple widgets to the 
     Widget build(BuildContext context) {
       return Scaffold(
         body: SafeArea(
-          child: Center(
-            child: Container(
-              child: SfCartesianChart(
-                primaryXAxis: CategoryAxis(),
-                annotations: <CartesianChartAnnotation>[
-               // first annotation
-               CartesianChartAnnotation(
-                  child: Container(child: const Text('High')),
-                  coordinateUnit: CoordinateUnit.logicalPixel,
-                  x: 90,
-                  y: 200),
-              // second annotation
-              CartesianChartAnnotation(
-                  child: Container(child: const Text('Low')),
-                  coordinateUnit: CoordinateUnit.logicalPixel,
-                  x: 170,
-                  y: 200)
-            ],
-         )
-       )
-      )
-    ),
-  );
-}
+            child: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis: CategoryAxis(),
+                        primaryYAxis: NumericAxis(interval: 5),
+                        annotations: <CartesianChartAnnotation>[
+                        // first annotation
+                        CartesianChartAnnotation(
+                        widget: Container(child: const Text('High')),
+                        coordinateUnit: CoordinateUnit.point,
+                        x: 'China',
+                        y: 6,
+                        ),
+                        // second annotation
+                        CartesianChartAnnotation(
+                        widget: Container(child: const Text('Low')),
+                        coordinateUnit: CoordinateUnit.point,
+                        x: 'Japan',
+                        y: 6)
+                        ],
+                        series: <CartesianSeries<ChartData, String>>[
+                        StepLineSeries<ChartData, String>(
+                            dataSource: <ChartData>[
+                                        ChartData('UK', 6),
+                                        ChartData('China', 11),
+                                        ChartData('USA', 20),
+                                        ChartData('Japan', 14),
+                                        ChartData('France', 10)
+                                      ],
+                            xValueMapper: (ChartData sales, _) => sales.year,
+                            yValueMapper: (ChartData sales, _) => sales.sales)
+                          ]
+                        )
+                      )
+                    )
+                  )
+                );
+              }
+            }
+
+            class ChartData {
+              ChartData(this.year, this.sales);
+              final String year;
+              final double sales;
+            }
 
 {% endhighlight %}
 
@@ -364,29 +385,52 @@ Chart supports watermark which allows you to mark the specific area of interest 
           child: Center(
             child: Container(
               child: SfCartesianChart(
-                annotations: <CartesianChartAnnotation>[
-                 CartesianChartAnnotation(
-                 child: Container(
+                primaryXAxis: CategoryAxis(labelPlacement: LabelPlacement.betweenTicks),
+                  annotations: <CartesianChartAnnotation>[
+                  CartesianChartAnnotation(
+                  widget: Container(
                   child: const Text(
-                    '€ - \$ ',
+                  '€ - \$ ',
                   style: TextStyle(
                   color: Color.fromRGBO(216, 225, 227, 1),
                   fontWeight: FontWeight.bold,
                   fontSize: 80),
-                    ),
                   ),
-        coordinateUnit: CoordinateUnit.point,
-        region: AnnotationRegion.chart,
-        x: 3,
-        y: 38,
-                 )
-                ] 
+                ),
+                coordinateUnit: CoordinateUnit.point,
+                region: AnnotationRegion.chart,
+                x: 'apr',
+                y: 38,
+                )
+              ],
+                series: <ChartSeries<ChartData, String>>[
+                LineSeries<ChartData, String>(
+                    dataSource: <ChartData>[
+                    ChartData('jan', 21),
+                    ChartData('feb', 24),
+                    ChartData('mar', 36),
+                    ChartData('apr', 38),
+                    ChartData('may', 54),
+                    ChartData('jun', 54),
+                    ChartData('jul', 70),
+                    ],
+                    xValueMapper: (ChartData sales, _) => sales.year,
+                    yValueMapper: (ChartData sales, _) => sales.sales),
+                  ],
+                )
               )
             )
           )
-        )
-      );
+        );
+      }
     }
+
+    class ChartData {
+      ChartData(this.year, this.sales);
+      final String year;
+      final double sales;
+    }
+
 
 {% endhighlight %}
 
