@@ -142,6 +142,10 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+## Save the PDF document as file
+
+To save the file in excel document, platform specific file generation code should be added. You can include the code snippets to create documents in [mobile](https://help.syncfusion.com/flutter/pdf/getting-started#save-and-open-a-pdf-document-in-mobile) and [web](https://help.syncfusion.com/flutter/pdf/getting-started#save-and-download-a-pdf-document-in-web) platforms.
+
 ## Export DataGrid to Excel workbook
 
 You can export the data to [Excel Workbook](https://pub.dev/documentation/syncfusion_flutter_xlsio/latest/xlsio/Workbook-class.html) by using the `exportToExcelWorkbook` method from the `key.currentState` of the DataGrid.
