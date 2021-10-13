@@ -45,11 +45,11 @@ The [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
 
 * [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisTitle/text.html) - used to set the title for axis.
 * [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisTitle/textStyle.html) - used to change the text color, size, font family, font style, and font weight.
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/color.html) - used to change the color of the label.
-* [`fontFamily`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontFamily.html) - used to change the font family for the axis title.
-* [`fontStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontStyle.html) - used to change the font style for the axis title.
-* [`fontWeight`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontWeight.html) - used to change the font weight for the axis title.
-* [`fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontSize.html) - used to change the font size for the axis title.
+* [`color`](https://api.flutter.dev/flutter/painting/TextStyle/color.html) - used to change the color of the label.
+* [`fontFamily`](https://api.flutter.dev/flutter/painting/TextStyle/fontFamily.html) - used to change the font family for the axis title.
+* [`fontStyle`](https://api.flutter.dev/flutter/painting/TextStyle/fontStyle.html) - used to change the font style for the axis title.
+* [`fontWeight`](https://api.flutter.dev/flutter/painting/TextStyle/fontWeight.html) - used to change the font weight for the axis title.
+* [`fontSize`](https://api.flutter.dev/flutter/painting/TextStyle/fontSize.html) - used to change the font size for the axis title.
 
 {% highlight dart %} 
 
@@ -145,11 +145,11 @@ The [`labelRotation`](https://pub.dev/documentation/syncfusion_flutter_charts/la
 The [`labelStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelStyle.html) property in axis provides options to customize the font of axis label. The axis label can be customized using following properties,
 
 * [`labelStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelStyle.html) - used to change the text color, size, font family, font style, and font weight.
-* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/color.html) - used to change the color of the axis label.
-* [`fontFamily`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontFamily.html) - used to change the font family for the axis label.
-* [`fontStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontStyle.html) - used to change the font style for the axis label.
-* [`fontWeight`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontWeight.html) - used to change the font weight for the axis label.
-* [`fontSize`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTextStyle/fontSize.html) - used to change the font size for the axis label.
+* [`color`](https://api.flutter.dev/flutter/painting/TextStyle/color.html) - used to change the color of the axis label.
+* [`fontFamily`](https://api.flutter.dev/flutter/painting/TextStyle/fontFamily.html) - used to change the font family for the axis label.
+* [`fontStyle`](https://api.flutter.dev/flutter/painting/TextStyle/fontStyle.html) - used to change the font style for the axis label.
+* [`fontWeight`](https://api.flutter.dev/flutter/painting/TextStyle/fontWeight.html) - used to change the font weight for the axis label.
+* [`fontSize`](https://api.flutter.dev/flutter/painting/TextStyle/fontSize.html) - used to change the font size for the axis label.
 
 {% highlight dart %} 
 
@@ -224,7 +224,7 @@ The [`labelFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 
 Also refer [number format](./axis-types#formatting-the-labels) and [date format](./axis-types#formatting-the-labels-1) for formatting the labels further.
 
-N> You must import [`intl`](https://pub.dev/packages/intl) package for formatting axis label using the [`NumberFormat`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html) class and  [`date Format`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
+>**NOTE**:You must import [`intl`](https://pub.dev/packages/intl) package for formatting axis label using the [`NumberFormat`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html) class and  [`date Format`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
 
 ### Label and tick positioning
 
@@ -254,7 +254,7 @@ Axis labels and ticks can be positioned inside or outside the chart area by usin
 
 ### Edge label placement
 
-Labels with long text at the edges of an axis may appear partially outside the chart. The [`edgeLabelPlacement`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/edgeLabelPlacement.html) property can be used to avoid the partial appearance of labels at the corners. Default value of this property is `none`. Other available options of [`edgeLabelPlacement`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/edgeLabelPlacement.html) are shift and hide. `shift` option will move the edge labels inside the axis bounds, where the `hide` option will hides the edge labels.
+Labels with long text at the edges of an axis may appear partially outside the chart. The [`edgeLabelPlacement`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/edgeLabelPlacement.html) property can be used to avoid the partial appearance of labels at the corners. Default value of this property is [`EdgeLabelPlacement.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EdgeLabelPlacement.html). Other available options of [`edgeLabelPlacement`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/edgeLabelPlacement.html) are shift and hide. [`EdgeLabelPlacement.shift`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EdgeLabelPlacement.html) option will move the edge labels inside the axis bounds, where the [`EdgeLabelPlacement.hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/EdgeLabelPlacement.html) option will hides the edge labels.
 
 {% highlight dart %} 
 
@@ -472,7 +472,7 @@ The [`visibleMinimum`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
 {% endhighlight %}
 
-Also refer [minimum](./axis-types) and [maximum](./axis-types) range of an axis.
+Also refer [`minimum`](./axis-types) and [`maximum`](./axis-types) range of an axis.
 
 ### Visible maximum
 
@@ -499,7 +499,7 @@ The [`visibleMaximum`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
 ## Smart axis labels
 
-Axis labels may overlap with each other based on chart dimensions and label size. The [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelIntersectAction.html) property of axis is used to avoid overlapping of axis labels. The default value of the [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelIntersectAction.html) is [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelIntersectAction-class.html). Other available values are [`none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelIntersectAction-class.html), [`wrap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelIntersectAction-class.html), [`multipleRows`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelIntersectAction-class.html), [`rotate45`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelIntersectAction-class.html) and [`rotate90`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelIntersectAction-class.html).
+Axis labels may overlap with each other based on chart dimensions and label size. The [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelIntersectAction.html) property of axis is used to avoid overlapping of axis labels. The default value of the [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelIntersectAction.html) is [`AxisLabelIntersectAction.hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelIntersectAction.html). Other available values are [`AxisLabelIntersectAction.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelIntersectAction.html), [`AxisLabelIntersectAction.wrap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelIntersectAction.html), [`AxisLabelIntersectAction.multipleRows`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelIntersectAction.html), [`AxisLabelIntersectAction.rotate45`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelIntersectAction.html) and [`AxisLabelIntersectAction.rotate90`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelIntersectAction.html).
 
 {% highlight dart %} 
 
@@ -951,11 +951,11 @@ By default, the chart is rendered with primary x axis and primary y axis. But, t
 
 The position of axis label can be aligned using the [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelAlignment.html) property.The following options are available in axis label alignment.
 
-* [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelAlignment-class.html) - if it is a horizontal axis, aligns the labels before the gridline and if it is a vertical axis, aligns the labels below the gridline.
+* [`LabelAlignment.start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelAlignment.html) - if it is a horizontal axis, aligns the labels before the gridline and if it is a vertical axis, aligns the labels below the gridline.
 
-* [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelAlignment-class.html) - if it is a horizontal axis, aligns the labels after the gridline and if it is a vertical axis, align the labels above the gridline.
+* [`LabelAlignment.end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelAlignment.html) - if it is a horizontal axis, aligns the labels after the gridline and if it is a vertical axis, align the labels above the gridline.
 
-* [`center`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelAlignment-class.html) - aligns the axis label to the center of the gridlines.
+* [`LabelAlignment.center`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelAlignment.html) - aligns the axis label to the center of the gridlines.
 
 ### Center
 
