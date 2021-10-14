@@ -32,27 +32,27 @@ To use the numeric values or to bind the custom data source use the [`SfSparkBar
           child: SfSparkBarChart.custom(
             axisLineWidth: 0,
             dataCount: 7,
-            xValueMapper: (index) => data[index].xval!,
-            yValueMapper: (index) => data[index].yval!,  
+            xValueMapper: (index) => data[index].year,
+            yValueMapper: (index) => data[index].sales,  
           )
         ),
       );
     }
   
     final List<SalesData> data = [
-      SalesData(xval: 1, yval: 190),
-      SalesData(xval: 2, yval: 165),
-      SalesData(xval: 3, yval: 158),
-      SalesData(xval: 4, yval: 175),
-      SalesData(xval: 5, yval: 200),
-      SalesData(xval: 6, yval: 180),
-      SalesData(xval: 7, yval: 210),
+      SalesData(1, 190),
+      SalesData(2, 165),
+      SalesData(3, 158),
+      SalesData(4, 175),
+      SalesData(5, 200),
+      SalesData(6, 180),
+      SalesData(7, 210),
     ];
  
     class SalesData {
-      SalesData({this.xval, this.yval});
-      final double? xval;
-      final double? yval;
+      SalesData(this.year, this.sales);
+      final double year;
+      final double sales;
     }
 
 {% endhighlight %}
@@ -73,42 +73,43 @@ To use the date-time values i.e to bind the custom data source use the [`SfSpark
           child: SfSparkBarChart.custom(
             axisLineWidth: 0,
             dataCount: 23,
-            xValueMapper: (index) => data[index].xval!,
-            yValueMapper: (index) => data[index].yval!, 
+            xValueMapper: (index) => data[index].year,
+            yValueMapper: (index) => data[index].sales, 
           )
         ),
       );
     }
+
     final List<SalesData> data = [
-      SalesData(xval: DateTime(2018, 0, 1), yval: 4),
-      SalesData(xval: DateTime(2018, 0, 2), yval: 4.5),
-      SalesData(xval: DateTime(2018, 0, 3), yval: 8),
-      SalesData(xval: DateTime(2018, 0, 4), yval: 7),
-      SalesData(xval: DateTime(2018, 0, 5), yval: 6),
-      SalesData(xval: DateTime(2018, 0, 8), yval: 8),
-      SalesData(xval: DateTime(2018, 0, 9), yval: 8),
-      SalesData(xval: DateTime(2018, 0, 10), yval: 6.5),
-      SalesData(xval: DateTime(2018, 0, 11), yval: 4),
-      SalesData(xval: DateTime(2018, 0, 12), yval: 5.5),
-      SalesData(xval: DateTime(2018, 0, 15), yval: 8),
-      SalesData(xval: DateTime(2018, 0, 16), yval: 6),
-      SalesData(xval: DateTime(2018, 0, 17), yval: 6.5),
-      SalesData(xval: DateTime(2018, 0, 18), yval: 7.5),
-      SalesData(xval: DateTime(2018, 0, 19), yval: 7.5),
-      SalesData(xval: DateTime(2018, 0, 22), yval: 4),
-      SalesData(xval: DateTime(2018, 0, 23), yval: 8),
-      SalesData(xval: DateTime(2018, 0, 24), yval: 6),
-      SalesData(xval: DateTime(2018, 0, 25), yval: 7.5),
-      SalesData(xval: DateTime(2018, 0, 26), yval: 4.5),
-      SalesData(xval: DateTime(2018, 0, 29), yval: 6),
-      SalesData(xval: DateTime(2018, 0, 30), yval: 5),
-      SalesData(xval: DateTime(2018, 0, 31), yval: 7),
+      SalesData(DateTime(2018, 0, 1), 4),
+      SalesData(DateTime(2018, 0, 2), 4.5),
+      SalesData(DateTime(2018, 0, 3), 8),
+      SalesData(DateTime(2018, 0, 4), 7),
+      SalesData(DateTime(2018, 0, 5), 6),
+      SalesData(DateTime(2018, 0, 8), 8),
+      SalesData(DateTime(2018, 0, 9), 8),
+      SalesData(DateTime(2018, 0, 10), 6.5),
+      SalesData(DateTime(2018, 0, 11), 4),
+      SalesData(DateTime(2018, 0, 12), 5.5),
+      SalesData(DateTime(2018, 0, 15), 8),
+      SalesData(DateTime(2018, 0, 16), 6),
+      SalesData(DateTime(2018, 0, 17), 6.5),
+      SalesData(DateTime(2018, 0, 18), 7.5),
+      SalesData(DateTime(2018, 0, 19), 7.5),
+      SalesData(DateTime(2018, 0, 22), 4),
+      SalesData(DateTime(2018, 0, 23), 8),
+      SalesData(DateTime(2018, 0, 24), 6),
+      SalesData(DateTime(2018, 0, 25), 7.5),
+      SalesData(DateTime(2018, 0, 26), 4.5),
+      SalesData(DateTime(2018, 0, 29), 6),
+      SalesData(DateTime(2018, 0, 30), 5),
+      SalesData(DateTime(2018, 0, 31), 7),
     ];
  
     class SalesData {
-      SalesData({this.xval, this.yval});
-      final DateTime? xval;
-      final double? yval;
+      SalesData(this.year, this.sales);
+      final DateTime year;
+      final double sales;
     }
 
 {% endhighlight %}
@@ -129,31 +130,31 @@ To use the category values i.e to bind the custom data source use the [`SfSparkB
           child: SfSparkLineChart.custom(
             axisLineWidth: 0,
             dataCount: 12,
-            xValueMapper: (index) => data[index].xval!,
-            yValueMapper: (index) => data[index].yval!,
+            xValueMapper: (index) => data[index].year,
+            yValueMapper: (index) => data[index].sales,
           )
         ),
       );
     }
     final List<SalesData> data = [
-      SalesData(xval: 'Robert', yval: 60),
-      SalesData(xval: 'Andrew', yval: 65),
-      SalesData(xval: 'Suyama', yval: 70),
-      SalesData(xval: 'Michael', yval: 80),
-      SalesData(xval: 'Janet', yval: 55),
-      SalesData(xval: 'Davolio', yval: 90),
-      SalesData(xval: 'Fuller', yval: 75),
-      SalesData(xval: 'Nancy', yval: 85),
-      SalesData(xval: 'Margaret', yval: 77),
-      SalesData(xval: 'Steven', yval: 68),
-      SalesData(xval: 'Laura', yval: 96),
-      SalesData(xval: 'Elizabeth', yval: 57)
+      SalesData('Robert', 60),
+      SalesData('Andrew', 65),
+      SalesData('Suyama', 70),
+      SalesData('Michael', 80),
+      SalesData('Janet', 55),
+      SalesData('Davolio', 90),
+      SalesData('Fuller', 75),
+      SalesData('Nancy', 85),
+      SalesData('Margaret', 77),
+      SalesData('Steven', 68),
+      SalesData('Laura', 96),
+      SalesData('Elizabeth', 57)
     ];  
  
     class SalesData {
-      SalesData({this.xval, this.yval});
-      final String? xval;
-      final double? yval;
+      SalesData(this.year, this.sales);
+      final String year;
+      final double sales;
     }
 
 {% endhighlight %}
@@ -182,27 +183,27 @@ Axis line of the spark charts can be customized using the following properties.
             axisLineDashArray: <double>[5,3],
             axisCrossesAt: 174,
             dataCount: 7,
-            xValueMapper: (index) => data[index].xval!,
-            yValueMapper: (index) => data[index].yval!, 
+            xValueMapper: (index) => data[index].year,
+            yValueMapper: (index) => data[index].sales, 
           )
         ),
       );
     }
 
     final List<SalesData> data = [
-      SalesData(xval: 1, yval: 190),
-      SalesData(xval: 2, yval: 165),
-      SalesData(xval: 3, yval: 158),
-      SalesData(xval: 4, yval: 175),
-      SalesData(xval: 5, yval: 200),
-      SalesData(xval: 6, yval: 180),
-      SalesData(xval: 7, yval: 210),
+      SalesData(1, 190),
+      SalesData(2, 165),
+      SalesData(3, 158),
+      SalesData(4, 175),
+      SalesData(5, 200),
+      SalesData(6, 180),
+      SalesData(7, 210),
     ]; 
 
     class SalesData {
-      SalesData({this.xval, this.yval});
-      final int? xval;
-      final double? yval;
+      SalesData(this.year, this.sales);
+      final int year;
+      final double sales;
     }
 
 
