@@ -32,7 +32,7 @@ To use the numeric values or to bind the custom data source use the [`SfSparkBar
           child: SfSparkBarChart.custom(
             axisLineWidth: 0,
             dataCount: 7,
-            xValueMapper: (index) => data[index].year,
+            xValueMapper: (index) => data[index].value,
             yValueMapper: (index) => data[index].sales,  
           )
         ),
@@ -50,8 +50,8 @@ To use the numeric values or to bind the custom data source use the [`SfSparkBar
     ];
  
     class SalesData {
-      SalesData(this.year, this.sales);
-      final double year;
+      SalesData(this.value, this.sales);
+      final double value;
       final double sales;
     }
 
@@ -183,7 +183,7 @@ Axis line of the spark charts can be customized using the following properties.
             axisLineDashArray: <double>[5,3],
             axisCrossesAt: 174,
             dataCount: 7,
-            xValueMapper: (index) => data[index].year,
+            xValueMapper: (index) => data[index].value,
             yValueMapper: (index) => data[index].sales, 
           )
         ),
@@ -201,8 +201,8 @@ Axis line of the spark charts can be customized using the following properties.
     ]; 
 
     class SalesData {
-      SalesData(this.year, this.sales);
-      final int year;
+      SalesData(this.value, this.sales);
+      final int value;
       final double sales;
     }
 
