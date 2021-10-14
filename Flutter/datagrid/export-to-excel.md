@@ -142,6 +142,10 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+## Save the Excel document as file
+
+To save the file as Excel document, it’s necessary to include [mobile](https://help.syncfusion.com/flutter/xlsio/getting-started#create-an-excel-document-in-mobile), [web](https://help.syncfusion.com/flutter/xlsio/getting-started#create-an-excel-document-in-web) and [desktop](https://help.syncfusion.com/flutter/xlsio/getting-started#create-an-excel-document-in-desktop) platform-specific file generating code.
+
 ## Export DataGrid to Excel workbook
 
 You can export the data to [Excel Workbook](https://pub.dev/documentation/syncfusion_flutter_xlsio/latest/xlsio/Workbook-class.html) by using the `exportToExcelWorkbook` method from the `key.currentState` of the DataGrid.
