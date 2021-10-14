@@ -130,7 +130,7 @@ To use the category values i.e to bind the custom data source use the [`SfSparkB
           child: SfSparkLineChart.custom(
             axisLineWidth: 0,
             dataCount: 12,
-            xValueMapper: (index) => data[index].year,
+            xValueMapper: (index) => data[index].name,
             yValueMapper: (index) => data[index].sales,
           )
         ),
@@ -152,8 +152,8 @@ To use the category values i.e to bind the custom data source use the [`SfSparkB
     ];  
  
     class SalesData {
-      SalesData(this.year, this.sales);
-      final String year;
+      SalesData(this.name, this.sales);
+      final String name;
       final double sales;
     }
 
