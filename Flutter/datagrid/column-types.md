@@ -245,7 +245,7 @@ Widget build(BuildContext context) {
 
 ### Show text in header cell
 
-You can display widgets along with the checkbox in the header cell by adding widget to the `SfDataGrid.checkboxColumnSettings.label` property.
+You can display widgets along with the checkbox in the header cell by adding widget to the [SfDataGrid.checkboxColumnSettings.label](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridCheckboxColumnSettings/label.html) property.
 
 {% tabs %}
 {% highlight Dart %} 
