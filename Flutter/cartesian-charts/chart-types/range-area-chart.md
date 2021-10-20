@@ -57,7 +57,7 @@ Since the [`RangeAreaSeries`](https://pub.dev/documentation/syncfusion_flutter_c
 
 ###	Border customization
 
-The borders of the range area chart can be customized using the [`borderDrawMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RangeAreaSeries/borderDrawMode.html) property. The default value of the [`RangeAreaBorderMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RangeAreaBorderMode-class.html) property is `all` and the other value is `excludeSides`.
+The borders of the range area chart can be customized using the [`borderDrawMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RangeAreaSeries/borderDrawMode.html) property. The default value of the [`RangeAreaBorderMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RangeAreaBorderMode.html) property is `all` and the other value is `excludeSides`.
 
 {% highlight dart %} 
 
