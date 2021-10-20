@@ -118,7 +118,7 @@ You can change the inner radius of radial bar chart using the [`innerRadius`](ht
 
 ## Rounded corners
 
-The [`cornerStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/cornerStyle.html) property specifies the corner type for radial bar chart. The corners can be customized using the [`bothFlat`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CornerStyle.html), [`bothCurve`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CornerStyle.html), [`startCurve`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CornerStyle.html), and [`endCurve`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CornerStyle.html) options. The default value of this property is [`bothFlat`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CornerStyle.html).
+The [`cornerStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/cornerStyle.html) property specifies the corner type for radial bar chart. The corners can be customized using the [`CornerStyle.bothFlat`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CornerStyle.html), [`CornerStyle.bothCurve`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CornerStyle.html), [`CornerStyle.startCurve`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CornerStyle.html), and [`CornerStyle.endCurve`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CornerStyle.html) options. The default value of this property is [`CornerStyle.bothFlat`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CornerStyle.html).
 
 {% highlight dart %} 
 
@@ -153,10 +153,10 @@ Data labels can be enabled using the [`isVisible`](https://pub.dev/documentation
 
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/color.html) - changes the label background color.
 * [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/textStyle.html) - changes the text color, size, font family, fontStyle, and font weight.
-* [`textStyle.color`](https://api.flutter.dev/flutter/painting/TextStyle/color.html) - changes the color of the text.
-* [`textStyle.fontFamily`](https://api.flutter.dev/flutter/painting/TextStyle/fontFamily.html) - changes the font family for chart title. 
-* [`textStyle.fontStyle`](https://api.flutter.dev/flutter/painting/TextStyle/fontStyle.html) - changes the font style for the chart title.
-* [`textStyle.fontSize`](https://api.flutter.dev/flutter/painting/TextStyle/fontSize.html) - changes the font size for the chart title.
+* [`color`](https://api.flutter.dev/flutter/painting/TextStyle/color.html) - changes the color of the text.
+* [`fontFamily`](https://api.flutter.dev/flutter/painting/TextStyle/fontFamily.html) - changes the font family for chart title. 
+* [`fontStyle`](https://api.flutter.dev/flutter/painting/TextStyle/fontStyle.html) - changes the font style for the chart title.
+* [`fontSize`](https://api.flutter.dev/flutter/painting/TextStyle/fontSize.html) - changes the font size for the chart title.
 * [`opacity`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/opacity.html) - controls the transparency of the label background color.
 * [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/borderRadius.html) - customizes the data label border radius.
 * [`angle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/angle.html) - rotates the labels.

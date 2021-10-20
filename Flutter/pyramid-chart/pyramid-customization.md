@@ -54,7 +54,7 @@ To render a pyramid chart, create an instance of [`PyramidSeries`](https://pub.d
 
 ## Pyramid modes
 
-You can render the pyramid series as [`linear`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidMode-class.html) or [`surface`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidMode-class.html) mode. In linear mode, the height of the pyramid segment is based on the Y value, and in surface mode, area of the pyramid segment is based on the Y value. The default value of [`pyramidMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidMode-class.html) property is [`linear`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidMode-class.html).
+You can render the pyramid series as [`PyramidMode.linear`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidMode.html) or [`PyramidMode.surface`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidMode.html) mode. In linear mode, the height of the pyramid segment is based on the Y value, and in surface mode, area of the pyramid segment is based on the Y value. The default value of [`PyramidMode.pyramidMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidMode.html) property is [`PyramidMode.linear`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidMode.html).
 
 {% highlight dart %} 
 
@@ -161,9 +161,9 @@ Also, the segments can be exploded by tapping the segment.
 
 The [`smartLabelMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/smartLabelMode.html) property is used to place the data labels smartly. The [`smartLabelMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/smartLabelMode.html) supports the following values:
 
-* [`shift`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmartLabelMode-class.html) - shifts the data label position when a label intersects with other label.
-* [`none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmartLabelMode-class.html) - renders all the data label when intersect.
-* [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmartLabelMode-class.html) - hides the intersecting data label, and is the default value.
+* [`SmartLabelMode.shift`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmartLabelMode.html) - shifts the data label position when a label intersects with other label.
+* [`SmartLabelMode.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmartLabelMode.html) - renders all the data label when intersect.
+* [`SmartLabelMode.hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmartLabelMode.html) - hides the intersecting data label, and is the default value.
 
 {% highlight dart %} 
 

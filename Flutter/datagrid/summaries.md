@@ -598,7 +598,7 @@ class EmployeeDataSource extends DataGridSource {
 
 ### Customize table summary calculation
 
-You can write the custom logic for the summary calculation by overriding the `calculateSummaryValue` method from the `DataGridSource` class. The `summaryColumn` parameter will be null for the summary cells in the spanned summary columns.
+You can write the custom logic for the summary calculation by overriding the [calculateSummaryValue](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/calculateSummaryValue.html) method from the `DataGridSource` class. The `summaryColumn` parameter will be null for the summary cells in the spanned summary columns.
 
 The following example demonstrates how to customize the summary calculation to find the standard deviation for all employees' salaries.
 

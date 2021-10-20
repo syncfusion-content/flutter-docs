@@ -15,7 +15,7 @@ Markers are used to provide information about the exact point location. You can 
 
 You can use the following properties to customize the appearance:
 
-* [`displayMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartMarker/displayMode.html) - Toggles the visibility of the marker. Defaults to `none`.
+* [`displayMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartMarker/displayMode.html) - Toggles the visibility of the marker. Defaults to [`SparkChartMarkerDisplayMode.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartMarkerDisplayMode.html).
 * [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartMarker/borderWidth.html) - Represents the border width of the marker.
 * [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartMarker/color.html) - Represents the color of the marker.
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartMarker/borderColor.html) - Represents the border color of the marker.
@@ -89,12 +89,12 @@ To enable data label for spark charts, use the [`labelDisplayMode`](https://pub.
 
 Following possible values are available in spark charts to render data label:
 
-* [`none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartLabelDisplayMode-class.html) - Does not allow to display data points on any side.
-* [`all`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartLabelDisplayMode-class.html) - Allows to display data labels on all points.
-* [`high`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartLabelDisplayMode-class.html) - Allows to display data labels on the high point.
-* [`low`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartLabelDisplayMode-class.html) - Allows to display data labels on the low point.
-* [`last`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartLabelDisplayMode-class.html) - Allows to display data labels on the last point.
-* [`first`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartLabelDisplayMode-class.html) - Allows to display data labels on the first point.
+* [`SparkChartLabelDisplayMode.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartLabelDisplayMode.html) - Does not allow to display data points on any side.
+* [`SparkChartLabelDisplayMode.all`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartLabelDisplayMode.html) - Allows to display data labels on all points.
+* [`SparkChartLabelDisplayMode.high`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartLabelDisplayMode.html) - Allows to display data labels on the high point.
+* [`SparkChartLabelDisplayMode.low`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartLabelDisplayMode.html) - Allows to display data labels on the low point.
+* [`SparkChartLabelDisplayMode.last`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartLabelDisplayMode.html) - Allows to display data labels on the last point.
+* [`SparkChartLabelDisplayMode.first`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/sparkcharts/SparkChartLabelDisplayMode.html) - Allows to display data labels on the first point.
 
 {% highlight dart %} 
 
