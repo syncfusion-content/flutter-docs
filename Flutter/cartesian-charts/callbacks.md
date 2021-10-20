@@ -448,7 +448,7 @@ Triggers when zoomed state is reset. The  [`onZoomReset`](https://pub.dev/docume
 
 ## onPointTap
 
-Triggers when tapping on the series point. The [onPointTap](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/onPointTap.html) callback contains the following arguments.
+Triggers when tapping on the series point. The [`onPointTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/onPointTap.html) callback contains the following arguments.
 
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/seriesIndex.html) - specifies the current series index.
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/pointIndex.html) - specifies the current point index.
@@ -479,7 +479,7 @@ Triggers when tapping on the series point. The [onPointTap](https://pub.dev/docu
 
 ## onPointDoubleTap
 
-Triggers when double-tap the series point. The [onPointDoubleTap](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/onPointDoubleTap.html) callback contains the following arguments.
+Triggers when double-tap the series point. The [`onPointDoubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/onPointDoubleTap.html) callback contains the following arguments.
 
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/seriesIndex.html) - specifies the current series index.
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/pointIndex.html) - specifies the current point index.
@@ -510,7 +510,7 @@ Triggers when double-tap the series point. The [onPointDoubleTap](https://pub.de
 
 ## onPointLongPress
 
-Triggers when long press on the series point. The [onPointLongPress](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/onPointLongPress.html) callback contains the following arguments.
+Triggers when long press on the series point. The [`onPointLongPress`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/onPointLongPress.html) callback contains the following arguments.
 
 * [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/seriesIndex.html) - specifies the current series index.
 * [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/pointIndex.html) - specifies the current point index.
@@ -898,7 +898,7 @@ Triggers when tapping on the data label of the data point in the series. The [`o
 * [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/viewportPointIndex.html) - to get the viewport index value of the tapped data label.
 
 
-N>  This callback will not be called, when the builder is specified for data label (data label template). For this case, custom widget specified in the [`DataLabelSettings.builder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/builder.html) property can be wrapped using the [`GestureDetector`](https://api.flutter.dev/flutter/widgets/GestureDetector-class.html) and this functionality can be achieved in the application level.
+>**NOTE**: This callback will not be called, when the builder is specified for data label (data label template). For this case, custom widget specified in the [`DataLabelSettings.builder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/builder.html) property can be wrapped using the [`GestureDetector`](https://api.flutter.dev/flutter/widgets/GestureDetector-class.html) and this functionality can be achieved in the application level.
 
 {% highlight dart %}
 
@@ -932,7 +932,7 @@ N>  This callback will not be called, when the builder is specified for data lab
 
 ## onPlotAreaSwipe
 
-Triggers while swiping on the plot area. Whenever the swiping happens on the plot area (the series rendering area), [`onPlotAreaSwipe`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onPlotAreaSwipe.html) callback will be called. It provides options to get the direction of swiping. If the chart is swiped from left to right direction, the direction is [`ChartSwipeDirection.start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSwipeDirection-class.html) and if the swipe happens from right to left direction, the direction is [`ChartSwipeDirection.end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSwipeDirection-class.html). Using this callback, the user will be able to achieve pagination functionality (i.e., on swiping over chart area, next set of data points can be loaded to the chart).
+Triggers while swiping on the plot area. Whenever the swiping happens on the plot area (the series rendering area), [`onPlotAreaSwipe`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onPlotAreaSwipe.html) callback will be called. It provides options to get the direction of swiping. If the chart is swiped from left to right direction, the direction is [`ChartSwipeDirection.start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSwipeDirection.html) and if the swipe happens from right to left direction, the direction is [`ChartSwipeDirection.end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSwipeDirection.html). Using this callback, the user will be able to achieve pagination functionality (i.e., on swiping over chart area, next set of data points can be loaded to the chart).
 
 {% highlight dart %}
 
@@ -1032,4 +1032,4 @@ Triggers when the error bar is being rendered. In this `onRenderDetailsUpdate` c
 * [Disabling trackball tooltip for particular series using its callback event](https://www.syncfusion.com/kb/11638/how-to-disable-trackball-tooltip-for-particular-series-in-cartesian-charts-sfcartesianchart).
 * [To Synchronize panning in multiple charts](https://www.syncfusion.com/kb/11533/how-to-synchronize-panning-in-multiple-charts-sfcartesianchart).
 
-N> `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.
+>**NOTE**:`chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.
