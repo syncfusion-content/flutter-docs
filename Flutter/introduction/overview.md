@@ -64,6 +64,7 @@ Explore the full capabilities of our Flutter widgets on your device by installin
 <tr>
 </table>
 
+
 ## Create a support incident
 In case, you are not able to find the information that you are looking for in the self-help resources mentioned above, please [contact](https://www.syncfusion.com/support/directtrac/incidents) us by creating a support ticket.
 

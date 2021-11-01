@@ -128,6 +128,10 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+## Save the PDF document as file
+
+To save the file as PDF document, it’s necessary to include [mobile](https://help.syncfusion.com/flutter/pdf/getting-started#save-and-open-a-pdf-document-in-mobile), [web](https://help.syncfusion.com/flutter/pdf/getting-started#save-and-download-a-pdf-document-in-web) and desktop platform-specific file generating code.
+
 ## Export DataGrid to PDF document
 
 You can export the data to [PdfDocument](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument-class.html) by using the `exportToPdfDocument` method from `key.currentState` of the DataGrid.

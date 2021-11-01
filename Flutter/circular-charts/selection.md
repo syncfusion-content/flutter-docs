@@ -162,7 +162,7 @@ Defaults to `true`.
 
 ![Toggle selection](images/selection/deselection.gif)
 
-Also refer [selection event](./events#onselectionchanged) for customizing the selection further.
+Also refer [`selection event`](./events#onselectionchanged) for customizing the selection further.
 
 #### See Also
 
