@@ -107,10 +107,9 @@ Based on your data, initialize the series type. In the series, you need to map t
     }
 
     class ChartData {
-      ChartData(this.x, this.y, [this.color]);
+      ChartData(this.x, this.y);
         final String x;
         final double y;
-        final Color color;
     }
 
 {% endhighlight %}

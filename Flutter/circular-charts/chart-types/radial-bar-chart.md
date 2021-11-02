@@ -33,6 +33,12 @@ The radial bar chart is used for showing the comparisons among the categories us
 
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+        ChartData('David', 35),
+        ChartData('Steve', 28),
+        ChartData('Jack', 34),
+        ChartData('Others', 32),
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
@@ -42,14 +48,21 @@ The radial bar chart is used for showing the comparisons among the categories us
                             RadialBarSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) => data.y
-                            )
-                        ]
+                                yValueMapper: (ChartData data, _) => data.y,
+                                )
+                            ]
+                        )
                     )
                 )
-            )
-        );  
+            );  
+        }
     }
+    class ChartData {
+        ChartData(this.x, this.y);
+        final String x;
+        final double y;
+    }
+
 
 {% endhighlight %}
 
@@ -63,24 +76,38 @@ You can use the [`radius`](https://pub.dev/documentation/syncfusion_flutter_char
 
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+        ChartData('David', 35),
+        ChartData('Steve', 28),
+        ChartData('Jack', 34),
+        ChartData('Others', 32),
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCircularChart(
                         series: <CircularSeries>[
+                            // Renders radial bar chart
                             RadialBarSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
-                                // Radius of the radial bar
-                                radius: '50%'
-                            )
-                        ]
+                                radius: '50%',
+
+                                )
+                            ]
+                        )
                     )
                 )
-            )
-        );
+            );  
+        }
     }
+    class ChartData {
+        ChartData(this.x, this.y);
+        final String x;
+        final double y;
+    }
+
 
 
 {% endhighlight %}
@@ -95,24 +122,38 @@ You can change the inner radius of radial bar chart using the [`innerRadius`](ht
 
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+          ChartData('David', 35),
+          ChartData('Steve', 28),
+          ChartData('Jack', 34),
+          ChartData('Others', 32),
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCircularChart(
                         series: <CircularSeries>[
+                            // Renders radial bar chart
                             RadialBarSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
                                 // Radius of the radial bar's inner circle
                                 innerRadius: '80%'
-                            )
-                        ]
-                    )
-                )
-            )
-        );
+                              )
+                          ]
+                      )
+                  )
+              )
+          );  
+        }
+      }
+    class ChartData {
+        ChartData(this.x, this.y);
+        final String x;
+        final double y;
     }
+
 
 {% endhighlight %}
 
@@ -124,24 +165,38 @@ The [`cornerStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+          ChartData('David', 35),
+          ChartData('Steve', 28),
+          ChartData('Jack', 34),
+          ChartData('Others', 32),
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCircularChart(
                         series: <CircularSeries>[
+                            // Renders radial bar chart
                             RadialBarSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
                                 // Corner style of radial bar segment
                                 cornerStyle: CornerStyle.bothCurve
-                            )
-                        ]
-                    )
-                )
-            )
-        );
+                              )
+                          ]
+                      )
+                  )
+              )
+          );  
+        }
+      }
+    class ChartData {
+        ChartData(this.x, this.y);
+        final String x;
+        final double y;
     }
+
 
 {% endhighlight %}
 
@@ -168,26 +223,38 @@ Data labels can be enabled using the [`isVisible`](https://pub.dev/documentation
 
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+          ChartData('David', 25),
+          ChartData('Steve', 38),
+          ChartData('Jack', 34),
+          ChartData('Others', 42),
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCircularChart(
                         series: <CircularSeries>[
+                            // Renders radial bar chart
                             RadialBarSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) => data.y,
-                                dataLabelSettings: DataLabelSettings(
                                     // Renders the data label
                                     isVisible: true
                                 )
-                            )
-                        ]
-                    )
-                )
-            )
-        );  
+                              )
+                          ]
+                      )
+                  )
+              )
+          );  
+        }
+      }
+    class ChartData {
+        ChartData(this.x, this.y);
+        final String x;
+        final double y;
     }
+
 
 {% endhighlight %}
 
@@ -201,28 +268,36 @@ For example, if you set the maximum value of the radial bar to 100% but the give
 {% highlight dart %}
 
     @override
-    Widget build(BuildContext context) {
-      final List<_ChartData> chartData = <_ChartData>[
-        _ChartData('Low', 3500, const Color.fromRGBO(235, 97, 143, 1)),
-        _ChartData('Average', 7200, const Color.fromRGBO(145, 132, 202, 1)),
-        _ChartData('High', 10500, const Color.fromRGBO(69, 187, 161, 1)),
+    Widget build(BuildContext context) {        
+        final List<ChartData> chartData = <ChartData>[
+        ChartData('Low', 3500, const Color.fromRGBO(235, 97, 143, 1)),
+        ChartData('Average', 7200, const Color.fromRGBO(145, 132, 202, 1)),
+        ChartData('High', 10500, const Color.fromRGBO(69, 187, 161, 1)),
       ];
       return Scaffold(
           body: Center(
               child: Container(
                   child: SfCircularChart(
-                      series: <CircularSeries<_ChartData, String>>[
-            RadialBarSeries<_ChartData, String>(
+                      series: <CircularSeries<ChartData, String>>[
+            RadialBarSeries<ChartData, String>(
                 maximumValue: 6000,
                 radius: '100%',
                 gap: '3%',
                 dataSource: chartData,
                 cornerStyle: CornerStyle.bothCurve,
-                xValueMapper: (_ChartData data, _) => data.x,
-                yValueMapper: (_ChartData data, _) => data.y,
-                pointColorMapper: (_ChartData data, _) => data.color)
+                xValueMapper: (ChartData data, _) => data.x,
+                yValueMapper: (ChartData data, _) => data.y,
+                pointColorMapper: (ChartData data, _) => data.color)
           ]))));
     }
+      }
+    class ChartData {
+        ChartData(this.x, this.y, this.color);
+        final String x;
+        final double y;
+        final Color? color;
+    }
+
 
 {% endhighlight %}
 

@@ -31,25 +31,33 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
 
     @override
     Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfFunnelChart(
-                        series: FunnelSeries<SalesData, String>(
-                                dataSource: chartData,
-                                pointColorMapper: (SalesData data, _) => data.color,
-                                xValueMapper: (SalesData data, _) => data.x,
-                                yValueMapper: (SalesData data, _) => data.y,
-                                dataLabelSettings: DataLabelSettings(
-                                    // Renders the data label
-                                    isVisible: true
-                                )
-                            )
-                    )
-                )
-            )
-        );
+        final List<ChartData> chartData = [
+      ChartData('David', 35),
+      ChartData('Steve', 28),
+      ChartData('Jack', 34),
+      ChartData('Others', 32),
+      ChartData('Maclin', 40)
+    ];
+    return Scaffold(
+        body: Center(
+            child: Container(
+                child: SfFunnelChart(
+                    series: FunnelSeries<ChartData, String>(
+                        dataSource: chartData,
+                        xValueMapper: (ChartData data, _) => data.x,
+                        yValueMapper: (ChartData data, _) => data.y,
+                        dataLabelSettings: DataLabelSettings(
+                            // Renders the data label
+                            isVisible: true))))));
+        }
     }
+
+    class ChartData {
+    ChartData(this.x, this.y);
+    final String x;
+    final double y;
+    }
+
 
 {% endhighlight %}
 
@@ -65,25 +73,34 @@ The [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/la
 
     @override
     Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfFunnelChart(
-                        series: FunnelSeries<SalesData, String>(
-                                dataSource: chartData,
-                                xValueMapper: (SalesData data, _) => data.x,
-                                yValueMapper: (SalesData data, _) => data.y,
-                                dataLabelSettings: DataLabelSettings(
-                                    isVisible: true,
-                                    // Positioning the data label
-                                    labelPosition: ChartDataLabelPosition.outside
-                                )
-                            )
-                    )
-                )
-            )
-        );
+        final List<ChartData> chartData = [
+      ChartData('David', 35),
+      ChartData('Steve', 28),
+      ChartData('Jack', 34),
+      ChartData('Others', 32),
+      ChartData('Maclin', 40)
+    ];
+    return Scaffold(
+        body: Center(
+            child: Container(
+                child: SfFunnelChart(
+                    series: FunnelSeries<ChartData, String>(
+                        dataSource: chartData,
+                        xValueMapper: (ChartData data, _) => data.x,
+                        yValueMapper: (ChartData data, _) => data.y,
+                        dataLabelSettings: DataLabelSettings(
+                            isVisible: true,
+                            // Positioning the data label
+                            labelPosition: ChartDataLabelPosition.outside))))));
+            }
+        }
+
+    class ChartData {
+    ChartData(this.x, this.y);
+    final String x;
+    final double y;
     }
+
 
 {% endhighlight %}
 
@@ -99,27 +116,36 @@ The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
     @override
     Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfFunnelChart(
-                        series: FunnelSeries<SalesData, String>(
-                                dataSource: chartData,
-                                xValueMapper: (SalesData data, _) => data.x,
-                                yValueMapper: (SalesData data, _) => data.y,
-                                dataLabelSettings: DataLabelSettings(
-                                    isVisible: true,
-                                    // Positioning the data label
-                                    labelPosition: ChartDataLabelPosition.outside,
-                                    // Renders background rectangle and fills it with series color
-                                    useSeriesColor: true
-                                )
-                            )
-                    )
-                )
-            )
-        );
+        final List<ChartData> chartData = [
+      ChartData('David', 35),
+      ChartData('Steve', 28),
+      ChartData('Jack', 34),
+      ChartData('Others', 32),
+      ChartData('Maclin', 40)
+    ];
+    return Scaffold(
+        body: Center(
+            child: Container(
+                child: SfFunnelChart(
+                    series: FunnelSeries<ChartData, String>(
+                        dataSource: chartData,
+                        xValueMapper: (ChartData data, _) => data.x,
+                        yValueMapper: (ChartData data, _) => data.y,
+                        dataLabelSettings: DataLabelSettings(
+                            isVisible: true,
+                            // Positioning the data label
+                            labelPosition: ChartDataLabelPosition.outside,
+                            // Renders background rectangle and fills it with series color
+                            useSeriesColor: true))))));
+            }
+        }
+
+    class ChartData {
+    ChartData(this.x, this.y, [this.color]);
+    final String x;
+    final double? y;
     }
+
 
 {% endhighlight %}
 
@@ -134,27 +160,29 @@ Data label and its connector line in the Funnel charts for the point value 0 can
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-            body: Center(
-                    child:SfFunnelChart(
-                        series: FunnelSeries<SalesData, num>(
-                            dataSource: [
-                                SalesData(11, 35),
-                                SalesData(12, 28),
-                                SalesData(13, 0),
-                                SalesData(14, 32),
-                                SalesData(15, 40)
-                            ],
-                            xValueMapper: (SalesData sales, _) => sales.xValue,
-                            yValueMapper: (SalesData sales, _) => sales.yValue,
-                            dataLabelSettings: DataLabelSettings(
-                                showZeroValue: false,
-                                isVisible: true
-                            ),
-                        )
-                    )
-            )
-        );
+        body: Center(
+            child: SfFunnelChart(
+                series: FunnelSeries<ChartData, num>(
+      dataSource: [
+        ChartData(11, 35),
+        ChartData(12, 28),
+        ChartData(13, 0),
+        ChartData(14, 32),
+        ChartData(15, 40)
+      ],
+      xValueMapper: (ChartData sales, _) => sales.x,
+      yValueMapper: (ChartData sales, _) => sales.y,
+      dataLabelSettings:
+          DataLabelSettings(showZeroValue: false, isVisible: true)))));
+        }
     }
+
+    class ChartData {
+    ChartData(this.x, this.y);
+    final double x;
+    final double y;
+    }
+
 {% endhighlight %}
 
 ![hide_0_value](images/datalabel/dataLabel_0_value.png)

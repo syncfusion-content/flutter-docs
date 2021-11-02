@@ -15,6 +15,14 @@ Chart supports annotations which allows you to mark the specific area of interes
 
     @override
     Widget build(BuildContext context) {
+    final List<ChartData> chartData = [
+    ChartData('USA', 6),
+    ChartData('China', 7),
+    ChartData('UK', 9),
+    ChartData('Japan', 14),
+    ChartData('France', 10),
+    ];
+
       return Scaffold(
         body: SafeArea(
           child: Center(
@@ -34,6 +42,12 @@ Chart supports annotations which allows you to mark the specific area of interes
         )
       );
     }
+    class ChartData {
+      ChartData(this.x, this.y);
+      final String x;
+      final double y;
+    }
+
 
 {% endhighlight %}
 
@@ -53,6 +67,14 @@ To place the annotation based on the radius values, set the [`radius`](https://p
 
     @override
     Widget build(BuildContext context) {
+    final List<ChartData> chartData = [
+    ChartData('USA', 6),
+    ChartData('China', 7),
+    ChartData('UK', 9),
+    ChartData('Japan', 14),
+    ChartData('France', 10),
+    ];
+
       return Scaffold(
         body: SafeArea(
           child: Center(
@@ -74,6 +96,12 @@ To place the annotation based on the radius values, set the [`radius`](https://p
         )
       );
     }
+    class ChartData {
+      ChartData(this.x, this.y);
+      final String x;
+      final double y;
+    }
+
 
 {% endhighlight %}
 

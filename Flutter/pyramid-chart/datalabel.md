@@ -36,24 +36,29 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfPyramidChart(
-                        series: PyramidSeries<SalesData, String>(
-                                dataSource: chartData,
-                                pointColorMapper: (SalesData data, _) => data.color,
-                                xValueMapper: (SalesData data, _) => data.x,
-                                yValueMapper: (SalesData data, _) => data.y,
-                                dataLabelSettings: DataLabelSettings(
-                                    // Renders the data label
-                                    isVisible: true
-                                )
-                            )
-                    )
-                )
-            )
-        );
-    }
+        body: Center(
+            child: Container(
+                child: SfPyramidChart(
+                    series: PyramidSeries<ChartData, String>(
+                        dataSource: [
+                        ChartData('David', 35),
+                        ChartData('Steve', 28),
+                        ChartData('Jack', 34),
+                        ChartData('Others', 32),
+                        ChartData('Maclin', 40)
+                        ],
+                        dataLabelSettings: DataLabelSettings(isVisible: true),
+                        xValueMapper: (ChartData data, _) => data.x,
+                        yValueMapper: (ChartData data, _) => data.y)))));
+                    }
+            }
+
+        class ChartData {
+        ChartData(this.x, this.y);
+        final String x;
+        final double y;
+        }
+
 
 {% endhighlight %}
 
@@ -73,30 +78,34 @@ This feature is used to connect label and data point using a line. It can be ena
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfPyramidChart(
-                        series: <PyramidSeries>[
-                            PyramidSeries<ChartData, double>(
-                                enableSmartLabels: true,
-                                dataSource: chartData,
-                                xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) => data.y,
-                                dataLabelSettings: DataLabelSettings(
-                                    isVisible: true,
-                                    labelPosition: ChartDataLabelPosition.outside,
-                                    connectorLineSettings: ConnectorLineSettings(
-                                        // Type of the connector line
-                                        type: ConnectorType.curve
-                                    )
-                                )
-                            )
-                        ]
-                    )
-                )
-            )
-        );
+        body: Center(
+            child: Container(
+                child: SfPyramidChart(
+                    series: PyramidSeries<ChartData, String>(
+                        dataSource: [
+                        ChartData('David', 35),
+                        ChartData('Steve', 28),
+                        ChartData('Jack', 34),
+                        ChartData('Others', 32),
+                        ChartData('Maclin', 40)
+                        ],
+                        dataLabelSettings: DataLabelSettings(
+                            isVisible: true,
+                            labelPosition: ChartDataLabelPosition.outside,
+                            connectorLineSettings: ConnectorLineSettings(
+                                // Type of the connector line
+                                type: ConnectorType.curve)),
+                        xValueMapper: (ChartData data, _) => data.x,
+                        yValueMapper: (ChartData data, _) => data.y)))));
+        }
     }
+
+    class ChartData {
+    ChartData(this.x, this.y);
+    final String x;
+    final double y;
+    }
+
 
 {% endhighlight %}
 
@@ -111,24 +120,32 @@ The [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/la
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfPyramidChart(
-                        series: PyramidSeries<SalesData, String>(
-                                dataSource: chartData,
-                                xValueMapper: (SalesData data, _) => data.x,
-                                yValueMapper: (SalesData data, _) => data.y,
-                                dataLabelSettings: DataLabelSettings(
-                                    isVisible: true,
-                                    // Positioning the data label
-                                    labelPosition: ChartDataLabelPosition.outside
-                                )
-                            )
-                    )
-                )
-            )
-        );
+        body: Center(
+            child: Container(
+                child: SfPyramidChart(
+                    series: PyramidSeries<ChartData, String>(
+                        dataSource: [
+                        ChartData('David', 35),
+                        ChartData('Steve', 28),
+                        ChartData('Jack', 34),
+                        ChartData('Others', 32),
+                        ChartData('Maclin', 40)
+                        ],
+                        dataLabelSettings: DataLabelSettings(
+                            isVisible: true,
+                            // Positioning the data label
+                            labelPosition: ChartDataLabelPosition.outside),
+                        xValueMapper: (ChartData data, _) => data.x,
+                        yValueMapper: (ChartData data, _) => data.y)))));
+        }
     }
+
+    class ChartData {
+    ChartData(this.x, this.y);
+    final String x;
+    final double y;
+    }
+
 
 {% endhighlight %}
 
@@ -145,26 +162,33 @@ The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfPyramidChart(
-                        series: PyramidSeries<SalesData, String>(
-                                dataSource: chartData,
-                                xValueMapper: (SalesData data, _) => data.x,
-                                yValueMapper: (SalesData data, _) => data.y,
-                                dataLabelSettings: DataLabelSettings(
-                                    isVisible: true,
-                                    // Positioning the data label
-                                    labelPosition: ChartDataLabelPosition.outside,
-                                    // Renders background rectangle and fills it with series color
-                                    useSeriesColor: true
-                                )
-                            )
-                    )
-                )
-            )
-        );
+        body: Center(
+            child: Container(
+                child: SfPyramidChart(
+                    series: PyramidSeries<ChartData, String>(
+                        dataSource: [
+                        ChartData('David', 35),
+                        ChartData('Steve', 28),
+                        ChartData('Jack', 34),
+                        ChartData('Others', 32),
+                        ChartData('Maclin', 40)
+                        ],
+                        dataLabelSettings: DataLabelSettings(
+                            isVisible: true,
+                            labelPosition: ChartDataLabelPosition.outside,
+                            // Renders background rectangle and fills it with series color
+                                    useSeriesColor: true),
+                        xValueMapper: (ChartData data, _) => data.x,
+                        yValueMapper: (ChartData data, _) => data.y)))));
+        }
     }
+
+    class ChartData {
+    ChartData(this.x, this.y);
+    final String x;
+    final double y;
+    }
+
 
 {% endhighlight %}
 
@@ -179,30 +203,41 @@ You can customize the appearance of the data label with your own template using 
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfPyramidChart(
-                        series: PyramidSeries<SalesData, String>(
-                                dataSource: chartData,
-                                xValueMapper: (SalesData data, _) => data.x,
-                                yValueMapper: (SalesData data, _) => data.y,
-                                dataLabelSettings: DataLabelSettings(
-                                    isVisible: true,
-                                    // Templating the data label
-                                    builder: (dynamic data, dynamic point, dynamic series, int pointIndex, int seriesIndex) {
-                                        return Container(
-                                        height: 30,
-                                        width: 30,
-                                        child: Image.asset('images/livechart.png')
-                                        );
-                                    }
-                                )
-                            )
-                    )
-                )
-            )
-        );
+        body: Center(
+            child: Container(
+                child: SfPyramidChart(
+                    series: PyramidSeries<ChartData, String>(
+                        dataSource: [
+                        ChartData('David', 35),
+                        ChartData('Steve', 28),
+                        ChartData('Jack', 34),
+                        ChartData('Others', 32),
+                        ChartData('Maclin', 40)
+                        ],
+                        xValueMapper: (ChartData data, _) => data.x,
+                        yValueMapper: (ChartData data, _) => data.y,
+                        dataLabelSettings: DataLabelSettings(
+                            isVisible: true,
+                            // Templating the data label
+                            builder: (dynamic data,
+                                dynamic point,
+                                dynamic series,
+                                int pointIndex,
+                                int seriesIndex) {
+                              return Container(
+                                  height: 30,
+                                  width: 30,
+                                  child: Image.asset('images/livechart.png'));
+                            }))))));
+        }
     }
+
+    class ChartData {
+    ChartData(this.x, this.y);
+    final String x;
+    final double y;
+    }
+
 
 {% endhighlight %}
 
@@ -217,27 +252,33 @@ Data label and its connector line in the Pyramid charts for the point value 0 ca
     @override
     Widget build(BuildContext context) {
         return Scaffold(
-            body: Center(
-                    child:SfPyramidChart(
-                        series: PyramidSeries<SalesData, num>(
-                            dataSource: [
-                                SalesData(11, 35),
-                                SalesData(12, 28),
-                                SalesData(13, 0),
-                                SalesData(14, 32),
-                                SalesData(15, 40)
-                            ],
-                            xValueMapper: (SalesData sales, _) => sales.xValue,
-                            yValueMapper: (SalesData sales, _) => sales.yValue,
-                            dataLabelSettings: DataLabelSettings(
-                                showZeroValue: false, 
-                                isVisible: true
-                            ),
-                        )
-                    )
-            )
-        );
+        body: Center(
+            child: SfPyramidChart(
+                series: PyramidSeries<ChartData, num>(
+      dataSource: [
+        ChartData(11, 35),
+        ChartData(12, 28),
+        ChartData(13, 0),
+        ChartData(14, 32),
+        ChartData(15, 40)
+      ],
+      xValueMapper: (ChartData sales, _) => sales.x,
+      yValueMapper: (ChartData sales, _) => sales.y,
+      dataLabelSettings:
+          DataLabelSettings(showZeroValue: false, isVisible: true),
+         )
+        )
+       )
+      );
     }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y);
+    final double x;
+    final double? y;
+    }
+
 {% endhighlight %}
 
 ![hide_0_value](images/datalabel/dataLabel_0_value.png)

@@ -42,10 +42,9 @@ To render a funnel chart, create an instance of [`FunnelSeries`](https://pub.dev
     }
 
     class ChartData {
-        ChartData(this.x, this.y, [this.color]);
+        ChartData(this.x, this.y);
             final String x;
             final double y;
-            final Color color;
     }
 
 {% endhighlight %}
@@ -60,18 +59,31 @@ You can modify the size of funnel series using the [`height`](https://pub.dev/do
 
     @override
     Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfFunnelChart(
-                        series: FunnelSeries<ChartData, String>(
-                            height: '50%',
-                            width: '50%',
-                        )
-                    )
-                )
-            )
-        );
+      final List<ChartData> chartData = [
+      ChartData('Walnuts', 654),
+      ChartData('Almonds', 575),
+      ChartData('Soybeans', 446),
+      ChartData('Black beans', 341),
+      ChartData('Mushrooms', 296),
+      ChartData('Avacado', 160),
+    ];
+    return Scaffold(
+        body: Center(
+            child: Container(
+                child: SfFunnelChart(
+                    series: FunnelSeries<ChartData, String>(
+                        dataSource: chartData,
+                        height: '50%',
+                        width: '50%',
+                        xValueMapper: (ChartData data, _) => data.x,
+                        yValueMapper: (ChartData data, _) => data.y)))));
+        }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y);
+    final String x;
+    final double y;
     }
 
 {% endhighlight %}
@@ -86,19 +98,38 @@ You can modify the neck size of funnel series using the [`neckHeight`](https://p
 
     @override
     Widget build(BuildContext context) {
-        return Scaffold(
+        final List<ChartData> chartData = [
+      ChartData('Walnuts', 654),
+      ChartData('Almonds', 575),
+      ChartData('Soybeans', 446),
+      ChartData('Black beans', 341),
+      ChartData('Mushrooms', 296),
+      ChartData('Avacado', 160),
+    ];
+    return Scaffold(
             body: Center(
                 child: Container(
                     child: SfFunnelChart(
                         series: FunnelSeries<ChartData, String>(
+                          dataSource : chartData,
                             neckHeight: '40%',
                             neckWidth: '10%',
+                            xValueMapper: (ChartData data, _) => data.x,
+                            yValueMapper: (ChartData data, _) => data.y
+                            )
                         )
                     )
                 )
-            )
-        );
+            );
+        }   
     }
+
+    class ChartData {
+    ChartData(this.x, this.y);
+    final String x;
+    final double y;
+    }
+
 
 {% endhighlight %}
 
@@ -112,18 +143,37 @@ You can control the gap between the two segments using the [`gapRatio`](https://
 
     @override
     Widget build(BuildContext context) {
-        return Scaffold(
+      final List<ChartData> chartData = [
+      ChartData('Walnuts', 654),
+      ChartData('Almonds', 575),
+      ChartData('Soybeans', 446),
+      ChartData('Black beans', 341),
+      ChartData('Mushrooms', 296),
+      ChartData('Avacado', 160),
+    ];
+    return Scaffold(
             body: Center(
                 child: Container(
                     child: SfFunnelChart(
                         series: FunnelSeries<ChartData, String>(
-                            gapRatio: 0.1,
+                          dataSource : chartData,
+                          gapRatio: 0.1,
+                          xValueMapper: (ChartData data, _) => data.x,
+                          yValueMapper: (ChartData data, _) => data.y
+                            )
                         )
                     )
                 )
-            )
-        );
+            );
+        }
     }
+
+    class ChartData {
+    ChartData(this.x, this.y);
+    final String x;
+    final double y;
+    }
+
 
 {% endhighlight %}
 
@@ -139,20 +189,39 @@ Also, the segments can be exploded by tapping the segment.
 
     @override
     Widget build(BuildContext context) {
-        return Scaffold(
+      final List<ChartData> chartData = [
+      ChartData('Walnuts', 654),
+      ChartData('Almonds', 575),
+      ChartData('Soybeans', 446),
+      ChartData('Black beans', 341),
+      ChartData('Mushrooms', 296),
+      ChartData('Avacado', 160),
+    ];
+    return Scaffold(
             body: Center(
                 child: Container(
                     child: SfFunnelChart(
                         series: FunnelSeries<ChartData, String>(
-                            explode: true,
-                            explodeOffset: '5%',
-                            explodeIndex: 2,
+                          dataSource : chartData,
+                          explode: true,
+                          explodeOffset: '5%',
+                          explodeIndex: 2,
+                          xValueMapper: (ChartData data, _) => data.x,
+                          yValueMapper: (ChartData data, _) => data.y
+                            )
                         )
                     )
                 )
-            )
-        );
+            );
+        }
     }
+
+    class ChartData {
+    ChartData(this.x, this.y);
+    final String x;
+    final double y;
+    }
+
 
 {% endhighlight %}
 
@@ -170,22 +239,40 @@ The [`smartLabelMode`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
     @override
     Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfFunnelChart(
-                        smartLabelMode: SmartLabelMode.shift,
-                        series: FunnelSeries<ChartData, String>(
-                            dataLabelSettings: DataLabelSettings(
-                                isVisible: true, 
-                                labelPosition: LabelPosition.inside
-                            ),
+      final List<ChartData> chartData = [
+      ChartData('Walnuts', 654),
+      ChartData('Almonds', 575),
+      ChartData('Soybeans', 446),
+      ChartData('Black beans', 341),
+      ChartData('Mushrooms', 296),
+      ChartData('Avacado', 160),
+    ];
+    return Scaffold(
+        body: Center(
+            child: Container(
+                child: SfFunnelChart(
+                    smartLabelMode: SmartLabelMode.shift,
+                    series: FunnelSeries<ChartData, String>(
+                      dataSource: chartData,
+                      xValueMapper: (ChartData data, _) => data.x,
+                      yValueMapper: (ChartData data, _) => data.y
+                      dataLabelSettings: DataLabelSettings(
+                          isVisible: true,
+                          labelPosition: ChartDataLabelPosition.inside),
                         )
+                      )
                     )
                 )
-            )
-        );
+            );
+        }
     }
+
+    class ChartData {
+    ChartData(this.x, this.y);
+    final String x;
+    final double y;
+    }
+
 
 {% endhighlight %}
 

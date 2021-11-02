@@ -73,6 +73,14 @@ You can customize the area of the chart using the below properties.
 
     @override
     Widget build(BuildContext context) {
+    final List<ChartData> chartData = [
+    ChartData('USA', 6),
+    ChartData('China', 7),
+    ChartData('UK', 9),
+    ChartData('Japan', 14),
+    ChartData('France', 10),
+    ];
+
       return Scaffold(
         body: SafeArea(
           child: Center(
@@ -81,12 +89,20 @@ You can customize the area of the chart using the below properties.
               width: 350, 
               child: SfCircularChart(
                 backgroundColor: Colors.lightGreen,
-                backgroundImage: 'images/livechart.png',
+                backgroundImage: const AssetImage('images/livechart.png'),
               )
             )
           )
         )
       );
     }
+    }
+
+    class ChartData {
+      ChartData(this.x, this.y);
+      final String x;
+      final double y;
+    }
+
 
 {% endhighlight %}

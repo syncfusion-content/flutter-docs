@@ -25,7 +25,14 @@ Triggers when the legend item is rendering. Here, you can customize the legendâ€
 
     @override
     Widget build(BuildContext context) {
-    
+    final List<ChartData> chartData = <ChartData>[
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('March', 30),
+    ChartData('April', 32),
+    ChartData('May', 40)
+    ];
+
       return Scaffold(
         body: Center(
           child: SfCircularChart(
@@ -38,6 +45,12 @@ Triggers when the legend item is rendering. Here, you can customize the legendâ€
         )
       );
     }
+    class ChartData {
+      ChartData(this.x, this.y);
+      final String x;
+      final double y;
+    }
+
 
 {% endhighlight %}
 
@@ -223,7 +236,14 @@ Triggers when tapping the legend item. The [`onLegendTapped`](https://pub.dev/do
 
     @override
     Widget build(BuildContext context) {
-    
+    final List<ChartData> chartData = <ChartData>[
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('March', 30),
+    ChartData('April', 32),
+    ChartData('May', 40)
+    ];
+
       return Scaffold(
         body: Center(
           child: SfCircularChart(
@@ -235,6 +255,12 @@ Triggers when tapping the legend item. The [`onLegendTapped`](https://pub.dev/do
         )
       );
     }
+    class ChartData {
+      ChartData(this.x, this.y);
+      final String x;
+      final double y;
+    }
+
 
 {% endhighlight %}
 
@@ -301,25 +327,41 @@ Triggers when tapping on the data label of the data point in the series. The [`o
 
 {% highlight dart %}
 
+    final List<ChartData> chartData = <ChartData>[
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('March', 30),
+    ChartData('April', 32),
+    ChartData('May', 40)
+    ];
+
     @override
     Widget build(BuildContext context) {
       return Container(
-        child: SfCartesianChart(
-          onDatalabelTapped: (DataLabelTapArgs args) {
+        child: SfCircularChart(
+          onDataLabelTapped: (DataLabelTapDetails args) {
             print(args.seriesIndex);                 
           },
-          series: <CircularSeries<Sample, DateTime>>[
-            PieSeries<Sample, DateTime>(
-                dataSource: sample,
-                xValueMapper: (Sample sales, _) => sales.x,
-                yValueMapper: (Sample sales, _) => sales.y,
+          series: <CircularSeries<ChartData, String>>[
+            PieSeries<ChartData, String>(
+                dataSource: chartData,
+                xValueMapper: (ChartData sales, _) => sales.x,
+                yValueMapper: (ChartData sales, _) => sales.y,
                 dataLabelSettings: DataLabelSettings(
                   isVisible: true),
-            )
-          ]
-        )
-      );
+              )
+            ]
+          )
+        );
+      }
     }
+
+    class ChartData {
+    ChartData(this.x, this.y);
+    final String x;
+    final double y;
+    }
+
 
 {% endhighlight %}
 

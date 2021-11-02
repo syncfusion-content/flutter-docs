@@ -44,20 +44,21 @@ To render a pie chart, create an instance of [`PieSeries`](https://pub.dev/docum
                                 pointColorMapper:(ChartData data,  _) => data.color,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y
-                            )
-                        ]
+                             )
+                            ]
+                        )
                     )
                 )
-            )
-        );
+            );
+        }
     }
 
     class ChartData {
-        ChartData(this.x, this.y, [this.color]);
+        ChartData(this.x, this.y);
         final String x;
         final double y;
-        final Color color;
     }
+
 
 {% endhighlight %}
 
@@ -71,24 +72,38 @@ You can use the [`radius`](https://pub.dev/documentation/syncfusion_flutter_char
 
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData('David', 25),
+            ChartData('Steve', 38),
+            ChartData('Jack', 34),
+            ChartData('Others', 52)
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCircularChart(
                         series: <CircularSeries>[
+                            // Render pie chart
                             PieSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
-                                // Radius of pie
                                 radius: '50%'
-                            )
-                        ]
+                                )
+                            ]
+                        )
                     )
                 )
-            )
-        );
+            );
+        }
     }
+
+    class ChartData {
+        ChartData(this.x, this.y);
+        final String x;
+        final double y;
+    }
+
 
 {% endhighlight %}
 
@@ -106,26 +121,39 @@ You can explode a pie segment by enabling the [`explode`](https://pub.dev/docume
 
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData('David', 25),
+            ChartData('Steve', 38),
+            ChartData('Jack', 34),
+            ChartData('Others', 52)
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCircularChart(
                         series: <CircularSeries>[
+                            // Render pie chart
                             PieSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) => data.y,
-                                // Segments will explode on tap
                                 explode: true,
                                 // First segment will be exploded on initial rendering 
                                 explodeIndex: 1
-                            )
-                        ]
+                                )
+                            ]
+                        )
                     )
                 )
-            )
-        );
+            );
+        }
     }
+
+    class ChartData {
+        ChartData(this.x, this.y);
+        final String x;
+        final double y;
+    }
+
 
 {% endhighlight %}
 
@@ -139,6 +167,12 @@ Using the [`explodeAll`](https://pub.dev/documentation/syncfusion_flutter_charts
 
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData('David', 25),
+            ChartData('Steve', 38),
+            ChartData('Jack', 34),
+            ChartData('Others', 52)
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
@@ -151,13 +185,21 @@ Using the [`explodeAll`](https://pub.dev/documentation/syncfusion_flutter_charts
                                 explode: true,
                                 // All the segments will be exploded
                                 explodeAll: true
-                            )
-                        ]
+                             )
+                            ]
+                        )
                     )
                 )
-            )
-        );
+            );
+        }
     }
+
+    class ChartData {
+        ChartData(this.x, this.y);
+        final String x;
+        final double y;
+    }
+
 
 {% endhighlight %}
 
@@ -171,24 +213,39 @@ Using the [`explodeAll`](https://pub.dev/documentation/syncfusion_flutter_charts
 
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData('David', 25),
+            ChartData('Steve', 38),
+            ChartData('Jack', 34),
+            ChartData('Others', 52)
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCircularChart(
                         series: <CircularSeries>[
+                            // Render pie chart
                             PieSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
                                 startAngle: 270, // starting angle of pie
                                 endAngle: 90 // ending angle of pie
-                            )
-                        ]
+                                )
+                            ]
+                        )
                     )
                 )
-            )
-        );
+            );
+        }
+    }
+
+    class ChartData {
+        ChartData(this.x, this.y);
+        final String x;
+        final double y;
     } 
+ 
 
 {% endhighlight %}
 
@@ -202,6 +259,12 @@ The small segments in the pie chart can be grouped into **others** category usin
 
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData('David', 25),
+            ChartData('Steve', 38),
+            ChartData('Jack', 34),
+            ChartData('Others', 52)
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
@@ -215,12 +278,20 @@ The small segments in the pie chart can be grouped into **others** category usin
                                 // As the grouping mode is point, 2 points will be grouped
                                 groupTo: 2
                             )
-                        ]
+                            ]
+                        )
                     )
                 )
-            )
-        );
+            );
+        }
     }
+
+    class ChartData {
+        ChartData(this.x, this.y);
+        final String x;
+        final double y;
+    }
+
 
 
 {% endhighlight %}

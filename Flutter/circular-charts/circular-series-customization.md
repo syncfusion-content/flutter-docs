@@ -15,20 +15,25 @@ documentation: ug
 
 {% highlight dart %} 
 
+    final List<ChartData> chartData = [
+      ChartData('David', 35),
+      ChartData('Steve', 28),
+      ChartData('Jack', 34),
+      ChartData('Others', 32),
+    ];
     @override
     Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCircularChart(
-                        series: <CircularSeries<ChartData,String>>[
-                            // Render pie chart
-                            PieSeries<ChartData, String>(
-                                dataSource: chartData,
-                                pointColorMapper:(ChartData data,  _) => data.color,
-                                xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) => data.y,
-                                animationDuration: 1000
+    return Scaffold(
+        body: Center(
+            child: Container(
+                child: SfCircularChart(
+                    series: <CircularSeries<ChartData,String>>[
+                        // Render pie chart
+                        PieSeries<ChartData, String>(
+                            dataSource: chartData,
+                            xValueMapper: (ChartData data, _) => data.x,
+                            yValueMapper: (ChartData data, _) => data.y,
+                            animationDuration: 1000
                             )
                         ]
                     )
@@ -36,6 +41,13 @@ documentation: ug
             )
         );
     }
+    
+    class ChartData {
+        ChartData(this.x, this.y);
+        final String x;
+        final double y;
+    }
+
 
 {% endhighlight %}
 
@@ -85,27 +97,40 @@ The [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
 {% highlight dart %} 
 
+    final List<ChartData> chartData = [
+      ChartData('David', 35),
+      ChartData('Steve', 28),
+      ChartData('Jack', 34),
+      ChartData('Others', 32),
+      ChartData('Maclin', 40)
+    ];
     @override
     Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCircularChart(
-                        palette: <Color>[Colors.amber, Colors.brown, Colors.green, Colors.redAccent, Colors.blueAccent, Colors.teal],
-                        series: <CircularSeries<ChartData,String>>[
-                            // Render pie chart
-                            PieSeries<ChartData, String>(
-                                dataSource: chartData,
-                                pointColorMapper:(ChartData data,  _) => data.color,
-                                xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) => data.y,
-                            )
-                        ]
-                    )
-                )
-            )
-        );
+    return Scaffold(
+        body: Center(
+            child: Container(
+                child: SfCircularChart(
+                    palette: <Color>[Colors.amber, Colors.brown, Colors.green, Colors.redAccent, Colors.blueAccent, Colors.teal],
+                    series: <CircularSeries<ChartData,String>>[
+                        // Render pie chart
+                        PieSeries<ChartData, String>(
+                            dataSource: chartData,
+                            xValueMapper: (ChartData data, _) => data.x,
+                            yValueMapper: (ChartData data, _) => data.y,
+                        )
+                      ]
+                  )
+              )
+          )
+      );
     }
+    
+    class ChartData {
+        ChartData(this.x, this.y);
+        final String x;
+        final double y;
+    }
+
 
 {% endhighlight %}
 
@@ -117,34 +142,48 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
 
 {% highlight dart %} 
 
+    final List<ChartData> chartData = [
+      ChartData('David', 35),
+      ChartData('Steve', 28),
+      ChartData('Jack', 34),
+      ChartData('Others', 32),
+      ChartData('Maclin', 40)
+    ];
     @override
     Widget build(BuildContext context) {
-        static List<SalesData> chartData = <SalesData>[
-            SalesData('Rent', 1000,Colors.teal),
-            SalesData('Food', 2500,Colors.lightBlue),
-            SalesData('Savings', 760,Colors.brown),
-            SalesData('Tax', 1897,Colors.grey),
-            SalesData('Others', 2987,Colors.blueGrey)
-        ];
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCircularChart(
-                        primaryXAxis: CategoryAxis(),
-                        series: <PieSeries<SalesData, String>>[
-                            PieSeries<SalesData, String>(
-                                dataSource: chartData,
-              xValueMapper: (SalesData sales, _) => sales.year,
-              yValueMapper: (SalesData sales, _) => sales.sales,
-              //map Color for each dataPoint datasource.
-              pointColorMapper: (SalesData sales,_) => sales.color,
-                            )
-                        ]
-                    )
-                )
-            )
-        );
+    final List<ChartData> chartData = <ChartData>[
+        ChartData('Rent', 1000,Colors.teal),
+        ChartData('Food', 2500,Colors.lightBlue),
+        ChartData('Savings', 760,Colors.brown),
+        ChartData('Tax', 1897,Colors.grey),
+        ChartData('Others', 2987,Colors.blueGrey)
+    ];
+    return Scaffold(
+        body: Center(
+            child: Container(
+                child: SfCircularChart(
+                    series: <PieSeries<ChartData, String>>[
+                        PieSeries<ChartData, String>(
+                            dataSource: chartData,
+                            xValueMapper: (ChartData sales, _) => sales.x,
+                            yValueMapper: (ChartData sales, _) => sales.y,
+                            //map Color for each dataPoint datasource.
+                            pointColorMapper: (ChartData sales,_) => sales.color,
+                            dataLabelSettings: DataLabelSettings(isVisible: true)
+                          )
+                      ]
+                  )
+              )
+          )
+      );
     }
+    class ChartData {
+        ChartData(this.x, this.y, [this.color]);
+        final String x;
+        final double y;
+        final Color? color;
+        }
+
 
 {% endhighlight %}
 
@@ -165,39 +204,52 @@ The data points of pie, doughnut and radial bar charts can be filled with three 
 
 {% highlight dart %}
 
+    final List<ChartData> chartData = [
+    ChartData('David', 35),
+    ChartData('Steve', 28),
+    ChartData('Jack', 34),
+    ChartData('Others', 32),
+    ChartData('Maclin', 40)
+    ];
     List<Color> colors = <Color>[
-      const Color.fromRGBO(75, 135, 185, 1),
-      const Color.fromRGBO(192, 108, 132, 1),
-      const Color.fromRGBO(246, 114, 128, 1),
-      const Color.fromRGBO(248, 177, 149, 1),
-      const Color.fromRGBO(116, 180, 155, 1)
+    const Color.fromRGBO(75, 135, 185, 1),
+    const Color.fromRGBO(192, 108, 132, 1),
+    const Color.fromRGBO(246, 114, 128, 1),
+    const Color.fromRGBO(248, 177, 149, 1),
+    const Color.fromRGBO(116, 180, 155, 1)
     ];
 
     List<double> stops = <double>[
-      0.2,
-      0.4,
-      0.6,
-      0.8,
-      1,
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1,
     ];
 
     @override
     Widget build(BuildContext context) {
-        return Container(
-            child: SfCircularChart(
-                onCreateShader: (ChartShaderDetails chartShaderDetails) {
-                    return Gradient.linear(chartShaderDetails.outerRect.topRight,
-                        chartShaderDetails.outerRect.centerLeft, colors, stops);
-                },
-                series: <CircularSeries<_SalesData, String>>[
-                    PieSeries<_SalesData, String>(
-                        dataSource: chartData,
-                        xValueMapper: (_SalesData sales, _) => sales.year,
-                        xValueMapper: (_SalesData sales, _) => sales.year,
-                    )
-                ]
-            ));
+    return Container(
+    child: SfCircularChart(
+        onCreateShader: (ChartShaderDetails chartShaderDetails) {
+          return ui.Gradient.linear(chartShaderDetails.outerRect.topRight,
+              chartShaderDetails.outerRect.centerLeft, colors, stops);
+        },
+        series: <CircularSeries<ChartData, String>>[
+      PieSeries<ChartData, String>(
+        dataSource: chartData,
+        xValueMapper: (ChartData sales, _) => sales.x,
+        yValueMapper: (ChartData sales, _) => sales.y,
+        )]));
+        }
+    }
+
+    class ChartData {
+        ChartData(this.x, this.y);
+        final String x;
+        final double y;
     }   
+   
 
 {% endhighlight %}
 
@@ -207,39 +259,67 @@ The data points of pie, doughnut and radial bar charts can be filled with three 
 
 {% highlight dart %}
     
+    final List<ChartData> chartData = [
+    ChartData('David', 35),
+    ChartData('Steve', 28),
+    ChartData('Jack', 34),
+    ChartData('Others', 32),
+    ChartData('Maclin', 40)
+    ];
+    List<Color> colors = <Color>[
+    const Color.fromRGBO(75, 135, 185, 1),
+    const Color.fromRGBO(192, 108, 132, 1),
+    const Color.fromRGBO(246, 114, 128, 1),
+    const Color.fromRGBO(248, 177, 149, 1),
+    const Color.fromRGBO(116, 180, 155, 1)
+    ];
+
+    List<double> stops = <double>[
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1,
+    ];
+
     @override
     Widget build(BuildContext context) {
-        return Container(
-            child: SfCircularChart(
-                onCreateShader: (ChartShaderDetails chartShaderDetails) {
-                    return Gradient.sweep(
-                        chartShaderDetails.outerRect.center,
-                        colors,
-                        stops,
-                        TileMode.clamp,
-                        _degreeToRadian(0),
-                        _degreeToRadian(360),
-                        _resolveTransform(chartShaderDetails.outerRect, TextDirection.ltr)
-                    );
-                },
-                series: <CircularSeries<_SalesData, String>>[
-                    RadialBarSeries<_SalesData, String>(
-                        dataSource: chartData,
-                        xValueMapper: (_SalesData sales, _) => sales.year,
-                        xValueMapper: (_SalesData sales, _) => sales.year,
-                    )
-                ]
-            ));
+    return Container(
+    child: SfCircularChart(
+        onCreateShader: (ChartShaderDetails chartShaderDetails) {
+          return ui.Gradient.sweep(
+              chartShaderDetails.outerRect.center,
+              colors,
+              stops,
+              TileMode.clamp,
+              _degreeToRadian(0),
+              _degreeToRadian(360),
+              _resolveTransform(
+                  chartShaderDetails.outerRect, TextDirection.ltr));
+        },
+        series: <CircularSeries<ChartData, String>>[
+      RadialBarSeries<ChartData, String>(
+        dataSource: chartData,
+        xValueMapper: (ChartData sales, _) => sales.x,
+        yValueMapper: (ChartData sales, _) => sales.y,
+        )
+      ]));
     }
 
-    // Rotate the sweep gradient according to the start angle 
-    Float64List _resolveTransform(Rect bounds, TextDirection textDirection) {
-        final GradientTransform transform = GradientRotation(_degreeToRadian(-90));
-        return transform.transform(bounds, textDirection: textDirection)!.storage;
+    dynamic _resolveTransform(Rect bounds, TextDirection textDirection) {
+    final GradientTransform transform = GradientRotation(_degreeToRadian(-90));
+    return transform.transform(bounds, textDirection: textDirection)!.storage;
     }
 
     // Convert degree to radian
     double _degreeToRadian(int deg) => deg * (3.141592653589793 / 180);
+    }
+
+    class ChartData {
+        ChartData(this.x, this.y);
+        final String x;
+        final double y;
+    }
 
 {% endhighlight %}
 
@@ -249,27 +329,56 @@ The data points of pie, doughnut and radial bar charts can be filled with three 
 
 {% highlight dart %}
 
+    final List<ChartData> chartData = [
+    ChartData('David', 35),
+    ChartData('Steve', 28),
+    ChartData('Jack', 34),
+    ChartData('Others', 32),
+    ChartData('Maclin', 40)
+    ];
+    List<Color> colors = <Color>[
+    const Color.fromRGBO(75, 135, 185, 1),
+    const Color.fromRGBO(192, 108, 132, 1),
+    const Color.fromRGBO(246, 114, 128, 1),
+    const Color.fromRGBO(248, 177, 149, 1),
+    const Color.fromRGBO(116, 180, 155, 1)
+    ];
+
+    List<double> stops = <double>[
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1,
+    ];
+
     @override
     Widget build(BuildContext context) {
-        return Container(
-            child: SfCircularChart(
-                onCreateShader: (ChartShaderDetails chartShaderDetails) {
-                    return Gradient.radial(
-                        chartShaderDetails.outerRect.center,
-                        chartShaderDetails.outerRect.right - chartShaderDetails.outerRect.center.dx,
-                        colors,
-                        stops
-                    );
-                },
-                series: <CircularSeries<_SalesData, String>>[
-                    DoughnutSeries<_SalesData, String>(
-                        dataSource: chartData,
-                        xValueMapper: (_SalesData sales, _) => sales.year,
-                        xValueMapper: (_SalesData sales, _) => sales.year,
-                    )
-                ]
-            ));
-    }  
+    return Container(
+    child: SfCircularChart(
+        onCreateShader: (ChartShaderDetails chartShaderDetails) {
+          return ui.Gradient.radial(
+              chartShaderDetails.outerRect.center,
+              chartShaderDetails.outerRect.right -
+                  chartShaderDetails.outerRect.center.dx,
+              colors,
+              stops);
+        },
+        series: <CircularSeries<ChartData, String>>[
+      DoughnutSeries<ChartData, String>(
+        dataSource: chartData,
+        xValueMapper: (ChartData sales, _) => sales.x,
+        yValueMapper: (ChartData sales, _) => sales.y,
+        )]));
+      }
+    }
+
+    class ChartData {
+        ChartData(this.x, this.y);
+        final String x;
+        final double y;
+    }
+
 
 {% endhighlight %}
 
