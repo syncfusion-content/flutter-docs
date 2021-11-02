@@ -854,4 +854,4 @@ class DataModel {
 
 ![Shape sublayer marker](images/shape-sublayer/sublayer-marker.png)
 
-N> You can refer to our [Flutter Maps](https://www.syncfusion.com/flutter-widgets/flutter-maps) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Maps example](https://flutter.syncfusion.com/#/maps/shape-layer/sublayer) that shows how to configure a Maps in Flutter.
+N> You can refer to our [Flutter Maps](https://www.syncfusion.com/flutter-widgets/flutter-maps) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Maps Sublayer example](https://flutter.syncfusion.com/#/maps/shape-layer/sublayer) that shows how to configure a Maps in Flutter.

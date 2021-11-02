@@ -263,4 +263,3 @@ class PopulationModel {
 {% endtabs %}
 
 ![RTL tooltip support](images/right-to-left/tooltip-rtl.png)
-

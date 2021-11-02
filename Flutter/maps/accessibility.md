@@ -98,4 +98,3 @@ Also, you can change the font size of the [`SfMaps`](https://pub.dev/documentati
 ## Easier touch targets
 
 The [`SfMaps`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/SfMaps-class.html) has touch target as 48 * 48 as per the standard for all the applicable elements.
-
