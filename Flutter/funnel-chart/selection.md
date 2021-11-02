@@ -16,31 +16,45 @@ The selection feature in chart let you to select a segment in a series or the se
     late SelectionBehavior _selectionBehavior;
 
     @override
-    void initState(){
-      _selectionBehavior = SelectionBehavio(
-             // Enables the selection
-             enable: true
-      );
-      super.initState();
+    void initState() {
+    _selectionBehavior = SelectionBehavior(
+        // Enables the selection
+        enable: true);
+    super.initState();
     }
+
+    final List<ChartData> chartData = [
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('Mar', 34),
+    ChartData('Apr', 32),
+    ChartData('May', 40)
+    ];
 
     @override
     Widget build(BuildContext context) {
-      return Scaffold(
+    return Scaffold(
         body: Center(
-          child: Container(
-            child: SfFunnelChart(
-              series: FunnelSeries<SalesData, String>(
-                  dataSource: chartData,
-                  xValueMapper: (SalesData sales, _) =>   sales.year,
-                  yValueMapper: (SalesData sales, _) => sales.sales,
-                  selectionBehavior: _selectionBehavior
-                )
-            )
-          )
-        )
-      );
-    }
+            child: Container(
+                child: SfFunnelChart(
+                    series: FunnelSeries<ChartData, String>(
+                        dataSource: chartData,
+                        xValueMapper: (ChartData sales, _) => sales.x,
+                        yValueMapper: (ChartData sales, _) => sales.y,
+                        selectionBehavior: _selectionBehavior)
+                      )
+                    )
+                  )
+                );
+              }
+            }
+
+        class ChartData {
+        ChartData(this.x, this.y);
+        final String x;
+        final double y;
+        }
+
 
 {% endhighlight %}
 
@@ -62,33 +76,46 @@ You can customize the segments using the below properties.
     late SelectionBehavior _selectionBehavior;
 
     @override
-    void initState(){
-      _selectionBehavior = SelectionBehavior(
-                    // Enables the selection
-                    enable: true,
-                    selectedColor: Colors.red,
-                    unselectedColor: Colors.grey,
-                    );
+    void initState() {
+    _selectionBehavior = SelectionBehavior(
+        // Enables the selection
+        enable: true,
+        selectedColor: Colors.red,
+        unselectedColor: Colors.grey,);
       super.initState();
     }
 
+    final List<ChartData> chartData = [
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('Mar', 34),
+    ChartData('Apr', 32),
+    ChartData('May', 40)
+    ];
+
     @override
     Widget build(BuildContext context) {
-      return Scaffold(
+    return Scaffold(
         body: Center(
-          child: Container(
-            child: SfFunnelChart(
-              series: FunnelSeries<SalesData, String>(
-                  dataSource: chartData,
-                  xValueMapper: (SalesData sales, _) =>   sales.year,
-                  yValueMapper: (SalesData sales, _) => sales.sales,
-                  selectionBehavior: _selectionBehavior
-                )
-            )
-          )
-        )
-      );
-    }
+            child: Container(
+                child: SfFunnelChart(
+                    series: FunnelSeries<ChartData, String>(
+                        dataSource: chartData,
+                        xValueMapper: (ChartData sales, _) => sales.x,
+                        yValueMapper: (ChartData sales, _) => sales.y,
+                        selectionBehavior: _selectionBehavior)
+                      )
+                    )
+                  )
+                );
+              }
+            }
+
+        class ChartData {
+        ChartData(this.x, this.y);
+        final String x;
+        final double y;
+        }
 
 {% endhighlight %}
 
@@ -100,19 +127,50 @@ Multiple selection can be enabled using the [`enableMultiSelection`](https://pub
 
 {% highlight dart %} 
 
+    late SelectionBehavior _selectionBehavior;
+
+    @override
+    void initState() {
+    _selectionBehavior = SelectionBehavior(
+        // Enables the selection
+        enable: true);
+      super.initState();
+      }
+
+    final List<ChartData> chartData = [
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('Mar', 34),
+    ChartData('Apr', 32),
+    ChartData('May', 40)
+    ];
+
     @override
     Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfFunnelChart(
-                        // Enables multiple selection
-                        enableMultiSelection: true
+    return Scaffold(
+        body: Center(
+            child: Container(
+                child: SfFunnelChart(
+                  // Enables multiple selection
+                    enableMultiSelection: true,
+                    series: FunnelSeries<ChartData, String>(
+                        dataSource: chartData,
+                        xValueMapper: (ChartData sales, _) => sales.x,
+                        yValueMapper: (ChartData sales, _) => sales.y,
+                        selectionBehavior: _selectionBehavior)
+                      )
                     )
-                )
-            )
-        );
-    }
+                  )
+                );
+              }
+            }
+
+        class ChartData {
+        ChartData(this.x, this.y);
+        final String x;
+        final double y;
+        }
+
 
 {% endhighlight %}
 
@@ -124,18 +182,48 @@ You can select a point or series programmatically on a chart using [`initialSele
 
 {% highlight dart %} 
 
+    late SelectionBehavior _selectionBehavior;
+
+    @override
+    void initState() {
+    _selectionBehavior = SelectionBehavior(
+        // Enables the selection
+        enable: true);
+      super.initState();
+    }
+
+    final List<ChartData> chartData = [
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('Mar', 34),
+    ChartData('Apr', 32),
+    ChartData('May', 40)
+    ];
+
     @override
     Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfFunnelChart(
-                        initialSelectedDataIndexes: [1, 0]
+    return Scaffold(
+        body: Center(
+            child: Container(
+                child: SfFunnelChart(
+                    series: FunnelSeries<ChartData, String>(
+                        initialSelectedDataIndexes: [1, 0],
+                        dataSource: chartData,
+                        xValueMapper: (ChartData sales, _) => sales.x,
+                        yValueMapper: (ChartData sales, _) => sales.y,
+                        selectionBehavior: _selectionBehavior)
+                      )
                     )
-                )
-            )
-        );
-    }
+                  )
+                );
+              }
+            }
+
+        class ChartData {
+        ChartData(this.x, this.y);
+        final String x;
+        final double y;
+        }
 
 {% endhighlight %}
 
@@ -152,27 +240,45 @@ Defaults to `true`.
     late SelectionBehavior _selectionBehavior;
 
     @override
-    void initState(){
-      _selectionBehavior =   SelectionBehavior(
-                enable: true,
-                toggleSelection: false,
-              );
-      super.initState(); 
+    void initState() {
+    _selectionBehavior = SelectionBehavior(
+        // Enables the selection
+        enable: true,
+        toggleSelection: false);
+      super.initState();
     }
+
+    final List<ChartData> chartData = [
+    ChartData('Jan', 35),
+    ChartData('Feb', 28),
+    ChartData('Mar', 34),
+    ChartData('Apr', 32),
+    ChartData('May', 40)
+    ];
 
     @override
     Widget build(BuildContext context) {
-      return Scaffold(
+    return Scaffold(
         body: Center(
-          child: Container(
-            child: SfFunnelChart(
-              series: FunnelSeries<SalesData, String>(
-              dataSource: chartData1,
-              xValueMapper: (ChartData data, _) => data.x,
-              yValueMapper: (ChartData data, _) => data.y,
-              selectionBehavior: _selectionBehavior)
-        ))));
-    }
+            child: Container(
+                child: SfFunnelChart(
+                    series: FunnelSeries<ChartData, String>(
+                        dataSource: chartData,
+                        xValueMapper: (ChartData sales, _) => sales.x,
+                        yValueMapper: (ChartData sales, _) => sales.y,
+                        selectionBehavior: _selectionBehavior)
+                      )
+                    )
+                  )
+                );
+              }
+            }
+
+        class ChartData {
+        ChartData(this.x, this.y);
+        final String x;
+        final double y;
+        }
 
 {% endhighlight %}
 
@@ -195,44 +301,45 @@ The [`selectDataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts
     late SelectionBehavior _selectionBehavior;
 
     @override
-    void initState(){
-      _selectionBehavior = SelectionBehavior(enable: true);
-      super.initState();
+    void initState() {
+    _selectionBehavior = SelectionBehavior(enable: true);
+    super.initState();
     }
 
     @override
     Widget build(BuildContext context) {
-    
     final List<ChartData> chartData = [
       ChartData(10, 17),
       ChartData(20, 34)
       // Add the required data
     ];
-    chart = SfFunnelChart(
-      series: FunnelSeries<ChartData, double>(
+        chart = SfFunnelChart(
+        series: FunnelSeries<ChartData, double>(
             dataSource: chartData,
             xValueMapper: (ChartData data, _) => data.x,
             yValueMapper: (ChartData data, _) => data.y,
-            selectionBehavior: _selectionBehavior
+            selectionBehavior: _selectionBehavior));
+
+        return Scaffold(
+        body: Center(
+            child: Column(children: <Widget>[
+            Container(child: chart),
+            FlatButton(child: Text('Select'), onPressed: select)
+            ]
+          )
         )
-    );
-    
-    return Scaffold(
-      body: Center(
-        child: Column(
-          children: <Widget>[
-            FlatButton(
-              child: Text('Select'),
-              onPressed: select
-            ),
-            Container(child: chart)
-          ]
-        )
-      )
-    );
+      );
     }
-    void select() {
-        _selectionBehavior.selectDataPoints(1, 0);
+
+      void select() {
+      _selectionBehavior.selectDataPoints(1, 0);
+      }
+    }
+
+    class ChartData {
+    ChartData(this.x, this.y);
+    final double x;
+    final double y;
     }
 
 {% endhighlight %}
