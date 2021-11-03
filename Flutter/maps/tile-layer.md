@@ -168,3 +168,5 @@ Widget build(BuildContext context) {
 ## Markers
 
 You can add markers in the tile layer. The procedure is very similar to the shape layer. Kindly refer the [markers](https://help.syncfusion.com/flutter/maps/markers#adding-markers) section.
+
+N> You can refer to our [Flutter Maps](https://www.syncfusion.com/flutter-widgets/flutter-maps) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Maps TileLayer example](https://flutter.syncfusion.com/#/maps/tile-layer/openstreetmap) that shows how to configure a Maps in Flutter.
