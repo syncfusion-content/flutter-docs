@@ -196,3 +196,5 @@ Renders column with track. Track is a rectangular bar rendered from the start to
 ![Track](cartesian-chart-types-images/track_column.jpg)
 
 Also refer, [color palette](./series-customization#color-palette), [color mapping](./series-customization#color-mapping-for-data-points), [animation](./series-customization#animation), [gradient](./series-customization#gradient-fill) and [empty points](./series-customization#empty-points) for customizing the column series further.
+
+N> You can refer to our [Flutter Column Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/column-chart) feature tour page for its groundbreaking feature representations.
