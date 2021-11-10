@@ -364,3 +364,5 @@ class Model {
 {% endtabs %}
 
 ![Bubble customization](images/bubble/bubble-customization.png)
+
+N> You can refer to our [Flutter Maps](https://www.syncfusion.com/flutter-widgets/flutter-maps) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Maps Bubble example](https://flutter.syncfusion.com/#/maps/shape-layer/bubble) that shows how to configure a Maps in Flutter.

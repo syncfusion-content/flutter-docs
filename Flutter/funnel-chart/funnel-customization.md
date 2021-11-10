@@ -162,9 +162,9 @@ Also, the segments can be exploded by tapping the segment.
 
 The [`smartLabelMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/smartLabelMode.html) property is used to place the data labels smartly. The [`smartLabelMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/smartLabelMode.html) supports the following values:
 
-* [`shift`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmartLabelMode-class.html) - shifts the data label position when a label intersects with other label.
-* [`none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmartLabelMode-class.html) - renders all the data labels when intersect.
-* [`hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmartLabelMode-class.html) - hides the intersecting data label, and it is the default value.
+* [`SmartLabelMode.shift`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmartLabelMode.html) - shifts the data label position when a label intersects with other label.
+* [`SmartLabelMode.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmartLabelMode.html) - renders all the data labels when intersect.
+* [`SmartLabelMode.hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmartLabelMode.html) - hides the intersecting data label, and it is the default value.
 
 {% highlight dart %} 
 

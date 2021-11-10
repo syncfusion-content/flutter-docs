@@ -457,4 +457,4 @@ class Model {
 ![Shape color opacity](images/shape-colors/shape-color-opacity.png)
 
 N>
-* Refer the [`MapShapeSource.bubbleColorMappers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/bubbleColorMappers.html), for setting the bubble colors based on the specific value.
+* Refer the [`MapShapeSource.bubbleColorMappers`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapShapeSource/bubbleColorMappers.html), for setting the bubble colors based on the specific value. You can refer to our [Flutter Maps](https://www.syncfusion.com/flutter-widgets/flutter-maps) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Maps Shapes example](https://flutter.syncfusion.com/#/maps/shape-layer/range-color-mapping) that shows how to configure a Maps in Flutter.

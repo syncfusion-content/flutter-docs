@@ -1291,7 +1291,7 @@ N>
 
 ### Solid
 
-You can set solid color for the bar by using the [MapLegendPaintingStyle.solid](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendPaintingStyle-class.html). By defaults [MapLegendPaintingStyle](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.bar.html) will be `solid`.
+You can set solid color for the bar by using the [MapLegendPaintingStyle.solid](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendPaintingStyle.html). By defaults [MapLegendPaintingStyle](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegend/MapLegend.bar.html) will be `solid`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -1375,7 +1375,7 @@ class Model {
 
 ### Gradient
 
-You can set gradient color for the bar by using the [MapLegendPaintingStyle.gradient](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendPaintingStyle-class.html).
+You can set gradient color for the bar by using the [MapLegendPaintingStyle.gradient](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendPaintingStyle.html).
 
 {% tabs %}
 {% highlight Dart %}
@@ -1547,7 +1547,7 @@ class Model {
 
 ## Bar legend labels placement
 
-You can place the labels either between the segments or on the segments using the [`labelsPlacement`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendLabelsPlacement-class.html) property.
+You can place the labels either between the segments or on the segments using the [`labelsPlacement`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendLabelsPlacement.html) property.
 
 <b>Labels placement for range color mapper</b>
 
@@ -1695,7 +1695,7 @@ class Model {
 
 ![Bar legend labels placement](images/legend/bar-legend-range-color-mapper-with-text.png)
 
-The labels are positioned at the center of the segments when setting the [`labelsPlacement`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendLabelsPlacement-class.html) property to `MapLegendLabelsPlacement.onItem`. The labels calculated based on the value of [MapColorMapper.text](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/text.html) property. If the value of [MapColorMapper.text](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/text.html) property is null, labels calculated based on the values of [`MapColorMapper.from`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/from.html) and [`MapColorMapper.to`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/to.html) properties.
+The labels are positioned at the center of the segments when setting the [`labelsPlacement`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapLegendLabelsPlacement.html) property to `MapLegendLabelsPlacement.onItem`. The labels calculated based on the value of [MapColorMapper.text](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/text.html) property. If the value of [MapColorMapper.text](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/text.html) property is null, labels calculated based on the values of [`MapColorMapper.from`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/from.html) and [`MapColorMapper.to`](https://pub.dev/documentation/syncfusion_flutter_maps/latest/maps/MapColorMapper/to.html) properties.
 
 {% tabs %}
 {% highlight Dart %}
@@ -2081,3 +2081,6 @@ class Model {
 {% endtabs %}
 
 ![Bar legend pointer customization](images/legend/bar-legend-pointer-customization.png)
+
+N> You can refer to our [Flutter Maps](https://www.syncfusion.com/flutter-widgets/flutter-maps) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Maps Legend example](https://flutter.syncfusion.com/#/maps/shape-layer/legend) that shows how to configure a Maps in Flutter.
+

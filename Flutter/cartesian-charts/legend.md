@@ -63,7 +63,7 @@ The [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
 * [`isResponsive`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/isResponsive.html) - toggles the visibility of the legend. If the width or height of the legend is greater than the plot area bounds.
 * [`iconBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/iconBorderWidth.html) - border width of the icon in the legend items. Used to change the stroke width of the legend icon shape.
 * [`overflowMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/overflowMode.html) - overflow legend items.
-* The [`legendIconType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/legendIconType.html) property of [`ChartSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries-class.html) is used to set the shape for the legend icon. Any shape in the [`LegendIconType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendIconType-class.html) can be applied to this property.
+* The [`legendIconType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries/legendIconType.html) property of [`ChartSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeries-class.html) is used to set the shape for the legend icon. Any shape in the [`LegendIconType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/legendIconType.html) can be applied to this property.
 
 
 {% highlight dart %} 
@@ -293,7 +293,7 @@ You can control the visibility of a particular series legend item using the [`is
 
 ## Legend overflow
 
-The legend items can be placed in multiple rows or scroll can be enabled using the [`overflowMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/overflowMode.html) property if size of the total legend items exceeds the available size. The default value of the [`overflowMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/overflowMode.html) property is [`scroll`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendItemOverflowMode-class.html).
+The legend items can be placed in multiple rows or scroll can be enabled using the [`overflowMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/overflowMode.html) property if size of the total legend items exceeds the available size. The default value of the [`overflowMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/overflowMode.html) property is [`LegendItemOverflowMode.scroll`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendItemOverflowMode.html).
 
 {% highlight dart %} 
 
@@ -337,8 +337,8 @@ The legend items can be placed in multiple rows or scroll can be enabled using t
 
 You can change the position of the legend inside the chart. The following properties can be used to customize the position of legend. auto position will place the legend at the right, if the chart's width is greater than the chart's height. Else the legend will be placed at the bottom position.
 
-* [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendPosition-class.html) - used to position the legend relatively. The available options are auto, bottom, left, right, and top. Defaults to `auto`.
-* [`orientation`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/orientation.html) - used to change the orientation of the legend, the default value is auto. Also you can set [`horizontal`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendItemOrientation-class.html) or [`vertical`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendItemOrientation-class.html).
+* [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/position.html) - used to position the legend relatively. The available options are auto, bottom, left, right, and top. Defaults to [`LegendPosition.auto`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendPosition.html).
+* [`orientation`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/orientation.html) - used to change the orientation of the legend, the default value is auto. Also you can set [`LegendItemOrientation.horizontal`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendItemOrientation.html) or [`LegendItemOrientation.vertical`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendItemOrientation.html).
 
 {% highlight dart %} 
 
@@ -379,7 +379,7 @@ You can change the position of the legend inside the chart. The following proper
 
 ## Floating legend
 
-Places the legend in custom position. If the [`offset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/offset.html) has been set, the legend is moved from its actual position. For example, if the [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendPosition-class.html) is `top`, then the legend will be placed in the top but in the position added to the actual top position. 
+Places the legend in custom position. If the [`offset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/offset.html) has been set, the legend is moved from its actual position. For example, if the [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/position.html) is [`LegendPosition.top`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendPosition.html), then the legend will be placed in the top but in the position added to the actual top position. 
 Also, the legend will not take a dedicated position for it and will be drawn on the top of the chart's plot area.
 
 {% highlight dart %}
@@ -458,4 +458,4 @@ You can customize the appearance of legend items with your template by using [`l
 
 {% endhighlight %}
 
-N> `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.
+>**NOTE**:`chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.
