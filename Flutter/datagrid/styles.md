@@ -135,7 +135,7 @@ Widget build(BuildContext context) {
 
 ## Change the row background color
 
-Change the row background color by using [DataGridRowAdapter.color](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridRowAdapter/color.html) property.
+The DataGrid supports to change the row background color by using [DataGridRowAdapter.color](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridRowAdapter/color.html) property.
 
 {% tabs %}
 {% highlight Dart %}
