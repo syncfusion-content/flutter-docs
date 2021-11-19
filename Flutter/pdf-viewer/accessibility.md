@@ -56,7 +56,6 @@ The `SfPdfViewer` supports the following keyboard interactions:
 
 <table>
   <tr>
-  <tr>
     <th  style="text-align:left" colspan="1">Action</th>
     <th>Windows</th>
     <th>Macintosh</th>
