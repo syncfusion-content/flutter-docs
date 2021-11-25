@@ -109,7 +109,7 @@ You can use the Annotations property in charts, to provide center elevation text
                     child: SfCircularChart(
                         annotations: <CircularChartAnnotation>[
                          CircularChartAnnotation(
-                           child: Container(
+                           widget: Container(
                              child: PhysicalModel(
                               child: Container(),
                                 shape: BoxShape.circle,
@@ -117,7 +117,7 @@ You can use the Annotations property in charts, to provide center elevation text
                                 shadowColor: Colors.black,
                                 color: const Color.fromRGBO(230, 230, 230, 1)))),
                                 CircularChartAnnotation(
-                                  child: Container(
+                                  widget: Container(
                                   child: const Text('62%',
                                  style: TextStyle(
                                 color: Color.fromRGBO(0, 0, 0, 0.5), fontSize: 25))))
