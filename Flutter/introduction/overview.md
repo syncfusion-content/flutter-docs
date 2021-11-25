@@ -61,7 +61,7 @@ Explore the full capabilities of our Flutter widgets on your device by installin
 <p align="center">
   <a href="https://github.com/syncfusion/flutter-examples"><img alt="Flutter GitHub Samples" src="https://cdn.syncfusion.com/content/images/FTControl/github-samples.png"/></a>
 </p>
-<tr>
+</tr>
 </table>
 
 
