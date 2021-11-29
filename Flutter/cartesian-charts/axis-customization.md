@@ -1252,47 +1252,50 @@ The `borderWidth` controls the visibility of the axis border. `borderColor` and 
 
     @override
     Widget build(BuildContext context) {
-    final List<ChartData> chartData = <ChartData>[
-      ChartData(1, 24),
-      ChartData(2, 20),
-      ChartData(3, 35),
-      ChartData(4, 27),
-      ChartData(5, 30),
-      ChartData(6, 41),
-      ChartData(7, 26)
-    ];
-    return Scaffold(
+      final List<ChartData> chartData = <ChartData>[
+        ChartData(1, 24),
+        ChartData(2, 20),
+        ChartData(3, 35),
+        ChartData(4, 27),
+        ChartData(5, 30),
+        ChartData(6, 41),
+        ChartData(7, 26)
+      ];
+      return Scaffold(
         body: SfCartesianChart(
-      primaryXAxis: NumericAxis(borderWidth: 3.0, borderColor: Colors.blue),
-      primaryYAxis: NumericAxis(borderWidth: 3.0, borderColor: Colors.blue),
-      series: <ChartSeries<ChartData, int>>[
-        LineSeries<ChartData, int>(
-          dataSource: chartData,
-          xValueMapper: (ChartData data, _) => data.x,
-          yValueMapper: (ChartData data, _) => data.y,
+          primaryXAxis: NumericAxis(borderWidth: 3.0, borderColor: Colors.blue),
+          primaryYAxis: NumericAxis(borderWidth: 3.0, borderColor: Colors.blue),
+          series: <ChartSeries<ChartData, int>>[
+            LineSeries<ChartData, int>(
+              dataSource: chartData,
+              xValueMapper: (ChartData data, _) => data.x,
+              yValueMapper: (ChartData data, _) => data.y,
+            )
+          ]
         )
-      ],
-    ));
+      );
     }  
 
     class ChartData {
-     ChartData(this.x, this.y);
-     final int x;
-     final int y;
-    }
+      ChartData(this.x, this.y);
+        final int x;
+        final int y;
+      }
 
 {% endhighlight %}
 
-## Multilevel labels
+![Axis border customization](images/axis-customization/axis_border_customization.jpg)
+
+## Multi-level labels
 
 Multilevel labels can be added to a chart's axis by using the `multiLevelLabels` property. It contains a list of `ChartMultiLevelLabel` instances which contains the below properties as arguments,
 
 * `start` - This property represents the start value of an multilevel label.
-* `end` - This property represents the end value of an multilevel label.
+* `end`   - This property represents the end value of an multilevel label.
 * `text`  - This property represents the text which needs to be rendered for a multilevel label.
 * `level` - This property represents the hierarchical structure of a multi level label.
 
-# Multilevel labels in numeric axis
+#### Multi-level labels in numeric axis
 
 `NumericMultiLevelLabel` is used to render multilevel labels in numeric axis.
 
@@ -1300,62 +1303,266 @@ Multilevel labels can be added to a chart's axis by using the `multiLevelLabels`
 
     @override
     Widget build(BuildContext context) {
-    final List<ChartData> chartData = <ChartData>[
-      ChartData(1, 24),
-      ChartData(2, 20),
-      ChartData(3, 35),
-      ChartData(4, 27),
-      ChartData(5, 30),
-      ChartData(6, 41),
-      ChartData(7, 26)
-    ];
-    return Scaffold(
+      final List<ChartData> chartData = <ChartData>[
+        ChartData(1, 24),
+        ChartData(2, 20),
+        ChartData(3, 35),
+        ChartData(4, 27),
+        ChartData(5, 30),
+        ChartData(6, 41),
+        ChartData(7, 26)
+      ];
+      return Scaffold(
         body: SfCartesianChart(
-      primaryXAxis:
-          NumericAxis(multiLevelLabels: const <NumericMultiLevelLabel>[
-        NumericMultiLevelLabel(start: 1, end: 4, text: 'First', level: 0),
-        NumericMultiLevelLabel(start: 4, end: 7, text: 'Second', level: 0),
-        NumericMultiLevelLabel(start: 1, end: 4, text: 'Third', level: 1),
-        NumericMultiLevelLabel(start: 4, end: 7, text: 'Fourth', level: 1),
-      ]),
-      series: <ChartSeries<ChartData, int>>[
-        LineSeries<ChartData, int>(
-          dataSource: chartData,
-          xValueMapper: (ChartData data, _) => data.x,
-          yValueMapper: (ChartData data, _) => data.y,
+          primaryXAxis:
+            NumericAxis(multiLevelLabels: const <NumericMultiLevelLabel>[
+              NumericMultiLevelLabel(start: 1, end: 4, text: 'First', level: 0),
+              NumericMultiLevelLabel(start: 4, end: 7, text: 'Second', level: 0),
+              NumericMultiLevelLabel(start: 1, end: 4, text: 'Third', level: 1),
+              NumericMultiLevelLabel(start: 4, end: 7, text: 'Fourth', level: 1),
+            ]
+          ),
+          series: <ChartSeries<ChartData, int>>[
+            LineSeries<ChartData, int>(
+            dataSource: chartData,
+            xValueMapper: (ChartData data, _) => data.x,
+            yValueMapper: (ChartData data, _) => data.y,
+            )
+          ],
         )
-      ],
-    ));
+      );
     }
-    }
-
+    
     class ChartData {
-     ChartData(this.x, this.y);
-     final int x;
-     final int y;
+      ChartData(this.x, this.y);
+        final int x;
+        final int y;
     }
 
 {% endhighlight %}
 
-# Multilevel labels in category axis
+![Multi-level labels](images/axis-customization/numeric_multi_level_label.jpg)
+
+#### Multi-level labels in category axis
 
 `CategoricalMultiLevelLabel` is used to render multilevel labels in category axis.
 
+{% highlight dart %}
 
+    @override
+    Widget build(BuildContext context) {
+      final List<ChartData> chartData = <ChartData>[
+        ChartData('Parker', 24),
+        ChartData('David', 20),
+        ChartData('Peter', 35),
+        ChartData('John', 30),
+      ];
+      return Scaffold(
+        body: SfCartesianChart(
+          primaryXAxis:
+            CategoryAxis(
+              multiLevelLabels: const <CategoricalMultiLevelLabel>[
+                CategoricalMultiLevelLabel(start:'Parker', end:'David', text: 'First'),
+                CategoricalMultiLevelLabel(start:'Peter', end:'John', text: 'Second'),
+                CategoricalMultiLevelLabel(start:'Parker', end:'David',  text: 'Third', level: 1),
+                CategoricalMultiLevelLabel(start:'Peter', end:'John', text: 'Fourth', level: 1)
+              ]
+            ),
+          series: <ChartSeries<ChartData, String>>[
+            LineSeries<ChartData, String>(
+              dataSource: chartData,
+              xValueMapper: (ChartData data, _) => data.x,
+              yValueMapper: (ChartData data, _) => data.y,
+            )
+          ]
+        )
+      );
+    } 
 
-# Multilevel labels in date time axis
+    class ChartData {
+      ChartData(this.x, this.y);
+       final String x;
+       final int y;
+    }
+
+![Multi-level labels](images/axis-customization/category_multi_level_label.jpg)
+
+{% endhighlight %}
+
+#### Multi-level labels in date time axis
 
 `DateTimeMultiLevelLabel` is used to render multilevel labels in date time axis.
 
-# Multilevel labels in date time category axis
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      final List<ChartData> chartData = <ChartData>[
+        ChartData(DateTime(2020,1,1), 24),
+        ChartData(DateTime(2021,1,1), 20),
+        ChartData(DateTime(2022,1,1), 35),
+        ChartData(DateTime(2023,1,1), 27),
+        ChartData(DateTime(2024,1,1), 30)
+      ];
+      return Scaffold(
+        body: SfCartesianChart(
+          primaryXAxis:
+            DateTimeAxis(
+              dateFormat: DateFormat.y(),
+              edgeLabelPlacement: EdgeLabelPlacement.shift,
+              multiLevelLabels: <DateTimeMultiLevelLabel>[
+                DateTimeMultiLevelLabel(
+                    start: DateTime(2020,1,1), 
+                    end: DateTime(2022,1,1), 
+                    text: 'First'),
+                DateTimeMultiLevelLabel(
+                    start: DateTime(2022,1,1), 
+                    end: DateTime(2024,1,1), 
+                    text: 'Second'),
+                DateTimeMultiLevelLabel(
+                    start: DateTime(2020,1,1), 
+                    end: DateTime(2022,1,1),
+                    text: 'Third', level: 1),
+                DateTimeMultiLevelLabel(
+                    start: DateTime(2022,1,1), 
+                    end: DateTime(2024,1,1), 
+                    text: 'Fourth', level: 1),
+              ]
+            ),
+          series: <ChartSeries<ChartData, DateTime>>[
+            LineSeries<ChartData, DateTime>(
+              dataSource: chartData,
+              xValueMapper: (ChartData data, _) => data.x,
+              yValueMapper: (ChartData data, _) => data.y,
+            )
+          ]
+        )
+      );
+    }
+    
+    class ChartData {
+      ChartData(this.x, this.y);
+        final DateTime x;
+        final int y;
+    }
+
+{% endhighlight %}
+
+![Multi-level labels](images/axis-customization/datetime_multi_level_labels.jpg)
+
+#### Multi-level labels in date time category axis
 
 `DateTimeCategoricalMultiLevelLabel` is used to render multilevel labels in date time category axis.
 
-# Multilevel labels in logarithmic axis
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      final List<ChartData> chartData = <ChartData>[
+        ChartData(DateTime(2010,1,1), 24),
+        ChartData(DateTime(2022,1,1), 20),
+        ChartData(DateTime(2040,1,1), 27),
+        ChartData(DateTime(2060,1,1), 30)
+      ];
+      return Scaffold(
+        body: SfCartesianChart(
+          primaryXAxis:
+            DateTimeCategoryAxis(
+              edgeLabelPlacement: EdgeLabelPlacement.shift,
+              multiLevelLabels: <DateTimeCategoricalMultiLevelLabel>[
+                DateTimeCategoricalMultiLevelLabel(
+                    start: DateTime(2010,1,1), 
+                    end: DateTime(2022,1,1), 
+                    text: 'First'),
+                DateTimeCategoricalMultiLevelLabel(
+                    start: DateTime(2040,1,1), 
+                    end: DateTime(2060,1,1), 
+                    text: 'Second'),
+                DateTimeCategoricalMultiLevelLabel(
+                    start: DateTime(2010,1,1), 
+                    end: DateTime(2022,1,1),
+                    text: 'Third', level: 1),
+                DateTimeCategoricalMultiLevelLabel(
+                    start: DateTime(2040,1,1), 
+                    end: DateTime(2060,1,1), 
+                    text: 'Fourth', level: 1),
+              ]
+            ),
+          series: <ChartSeries<ChartData, DateTime>>[
+            LineSeries<ChartData, DateTime>(
+              dataSource: chartData,
+              xValueMapper: (ChartData data, _) => data.x,
+              yValueMapper: (ChartData data, _) => data.y,
+            )
+          ]
+        )
+      );
+    }
+    
+    class ChartData {
+      ChartData(this.x, this.y);
+        final DateTime x;
+        final int y;
+    }
+
+{% endhighlight %}
+
+![Multi-level labels](images/axis-customization/datetime_category_multi_level_labels.jpg)
+
+#### Multi-level labels in logarithmic axis
 
 `LogarithmicMultiLevelLabel` is used to render multilevel labels in logarithmic axis.
 
-# Multilevel label text customization
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      final List<ChartData> chartData = <ChartData>[
+        ChartData(1, 2),
+        ChartData(2, 5),
+        ChartData(3, 10),
+        ChartData(4, 24),
+        ChartData(5, 30),
+        ChartData(6, 41),
+        ChartData(7, 26)
+      ];
+      return Scaffold(
+        body: SfCartesianChart(
+          primaryYAxis:
+            LogarithmicAxis(
+              multiLevelLabels: const <LogarithmicMultiLevelLabel>[
+                LogarithmicMultiLevelLabel(
+                              start: 1, end: 10, text: 'First'),
+                LogarithmicMultiLevelLabel(
+                              start: 10, end: 100, text: 'Second'),
+                LogarithmicMultiLevelLabel(
+                              start: 1, end: 10, text: 'Third', level: 1),
+                LogarithmicMultiLevelLabel(
+                              start: 10, end: 100, text: 'Fourth', level: 1),
+              ]
+            ),
+          series: <ChartSeries<ChartData, int>>[
+            LineSeries<ChartData, int>(
+              dataSource: chartData,
+              xValueMapper: (ChartData data, _) => data.x,
+              yValueMapper: (ChartData data, _) => data.y,
+            )
+          ]
+        )
+      );
+    }
+
+    class ChartData {
+      ChartData(this.x, this.y);
+       final int x;
+       final int y;
+    }
+
+{% endhighlight %}
+
+![Multi-level labels](images/axis-customization/logarithmic_multi_level_labels.jpg)
+
+#### Multi-level label and border customization
 
 By using the below properties as arguments in `multiLevelLabelStyle` the multi level label border and multi level label text can be customized.
 
@@ -1380,41 +1587,44 @@ By using the below properties as arguments in `multiLevelLabelStyle` the multi l
 
     @override
     Widget build(BuildContext context) {
-    final List<ChartData> chartData = <ChartData>[
-      ChartData(1, 24),
-      ChartData(2, 20),
-      ChartData(3, 35),
-      ChartData(4, 27),
-      ChartData(5, 30),
-      ChartData(6, 41),
-      ChartData(7, 26)
-    ];
-    return Scaffold(
+      final List<ChartData> chartData = <ChartData>[
+        ChartData(1, 24),
+        ChartData(2, 20),
+        ChartData(3, 35),
+        ChartData(4, 27),
+        ChartData(5, 30),
+        ChartData(6, 41),
+        ChartData(7, 26)
+      ];
+      return Scaffold(
         body: SfCartesianChart(
-      primaryXAxis: NumericAxis(
-          multiLevelLabelStyle: MultiLevelLabelStyle(
+          primaryXAxis: NumericAxis(
+            multiLevelLabelStyle: MultiLevelLabelStyle(
               borderColor: Colors.blue,
               borderWidth: 2.0,
+              borderType: MultiLevelBorderType.curlyBrace,
               textStyle: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.bold,
-                  color: Colors.red)),
-          multiLevelLabels: const <NumericMultiLevelLabel>[
-            NumericMultiLevelLabel(start: 1, end: 4, text: 'First', level: 0),
-            NumericMultiLevelLabel(start: 4, end: 7, text: 'Second', level: 0),
-            NumericMultiLevelLabel(start: 1, end: 4, text: 'Third', level: 1),
-            NumericMultiLevelLabel(start: 4, end: 7, text: 'Fourth', level: 1),
-          ]),
-      series: <ChartSeries<ChartData, int>>[
-        LineSeries<ChartData, int>(
-          dataSource: chartData,
-          xValueMapper: (ChartData data, _) => data.x,
-          yValueMapper: (ChartData data, _) => data.y,
+                  color: Colors.red)
+            ),
+            multiLevelLabels: const <NumericMultiLevelLabel>[
+              NumericMultiLevelLabel(start: 1, end: 4, text: 'First', level: 0),
+              NumericMultiLevelLabel(start: 4, end: 7, text: 'Second', level: 0),
+              NumericMultiLevelLabel(start: 1, end: 4, text: 'Third', level: 1),
+              NumericMultiLevelLabel(start: 4, end: 7, text: 'Fourth', level: 1)
+            ]
+          ),
+           series: <ChartSeries<ChartData, int>>[
+             LineSeries<ChartData, int>(
+               dataSource: chartData,
+               xValueMapper: (ChartData data, _) => data.x,
+               yValueMapper: (ChartData data, _) => data.y,
+            )
+           ]
         )
-      ],
-    ));
+      );
     }
-    } 
 
     class ChartData {
      ChartData(this.x, this.y);
@@ -1424,7 +1634,7 @@ By using the below properties as arguments in `multiLevelLabelStyle` the multi l
 
 {% endhighlight %}
 
-# Multilevel label border customization
+![Multi-level labels](images/axis-customization/multi_level_border_text_customization.jpg)
 
 ## See Also
 
