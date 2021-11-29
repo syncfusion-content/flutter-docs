@@ -118,10 +118,10 @@ Include the following code snippet in _createPDF method to open the PDF document
 {% highlight dart %}
 
 //Get external storage directory
-final directory = await getExternalStorageDirectory();
+final directory = await getApplicationDocumentsDirectory();
 
 //Get directory path
-final path = directory?.path;
+final path = directory.path;
 
 //Create an empty file to write PDF data
 File file = File('$path/Output.pdf');
