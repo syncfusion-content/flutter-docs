@@ -1199,9 +1199,7 @@ class SocialMediaUsers {
 
 ## Show pointer
 
-You may show a pointer on the bar gradient legend while hovering over a tile using the `showPointerOnHover` property. The default value of the `showPointerOnHover` property is `false`.
-
-N> It is applicable for gradient type bar legend.
+You may show a pointer on the solid or gradient bar legend while hovering over a tile using the `showPointerOnHover` property. The default value of the `showPointerOnHover` property is `false`.
 
 {% tabs %}
 {% highlight Dart %}
