@@ -152,8 +152,8 @@ Triggers while rendering the multi level labels. Text and text styles such as co
                 details.textStyle);
             },
             multiLevelLabels: const <NumericMultiLevelLabel>[
-              NumericMultiLevelLabel(start: 1, end: 4, text: 'First', level: 0),
-              NumericMultiLevelLabel(start: 4, end: 7, text: 'Second', level: 0),
+              NumericMultiLevelLabel(start: 1, end: 4, text: 'First'),
+              NumericMultiLevelLabel(start: 4, end: 7, text: 'Second'),
               NumericMultiLevelLabel(start: 1, end: 4, text: 'Third', level: 1),
               NumericMultiLevelLabel(start: 4, end: 7, text: 'Fourth', level: 1),
             ]

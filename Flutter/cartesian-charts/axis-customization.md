@@ -1245,8 +1245,8 @@ Here you need to specify the [`minimum`](https://pub.dev/documentation/syncfusio
 
 The `borderWidth` controls the visibility of the axis border. `borderColor` and `axisBorderType` properties of an axis are used to customize the color and border type respectively. `axisBorderType` can be customized by using below properties,
 
-* `AxisBorderType.rectangle` - Renders the border as a rectangle around an label.
-* `AxisBorderType.withoutTopAndBottom` - Renders the axis border without the top and bottom of the rectangle.
+* `AxisBorderType.rectangle` - Renders the border as a rectangle around a label.
+* `AxisBorderType.withoutTopAndBottom` - Renders the border without the top and bottom of a rectangle.
 
 {% highlight dart %}
 
@@ -1288,16 +1288,16 @@ The `borderWidth` controls the visibility of the axis border. `borderColor` and 
 
 ## Multi-level labels
 
-Multilevel labels can be added to a chart's axis by using the `multiLevelLabels` property. It contains a list of `ChartMultiLevelLabel` instances which contains the below properties as arguments,
+Multi-level labels can be added to a chart's axis by using the `multiLevelLabels` property. It contains a list of instances derived from the `ChartMultiLevelLabel` and `ChartMultiLevelLabel` contains the below properties as arguments,
 
-* `start` - This property represents the start value of an multilevel label.
-* `end`   - This property represents the end value of an multilevel label.
-* `text`  - This property represents the text which needs to be rendered for a multilevel label.
-* `level` - This property represents the hierarchical structure of a multi level label.
+* `start` - Represents the start value of an multi-level label.
+* `end`   - Represents the end value of an multi-level label.
+* `text`  - Represents the text which needs to be rendered for a multilevel label.
+* `level` - Represents the hierarchical structure of a multi level label.
 
 #### Multi-level labels in numeric axis
 
-`NumericMultiLevelLabel` is used to render multilevel labels in numeric axis.
+`NumericMultiLevelLabel` is used to render multi-level labels in numeric axis.
 
 {% highlight dart %}
 
@@ -1345,7 +1345,7 @@ Multilevel labels can be added to a chart's axis by using the `multiLevelLabels`
 
 #### Multi-level labels in category axis
 
-`CategoricalMultiLevelLabel` is used to render multilevel labels in category axis.
+`CategoricalMultiLevelLabel` is used to render multi-level labels in category axis.
 
 {% highlight dart %}
 
@@ -1355,7 +1355,7 @@ Multilevel labels can be added to a chart's axis by using the `multiLevelLabels`
         ChartData('Parker', 24),
         ChartData('David', 20),
         ChartData('Peter', 35),
-        ChartData('John', 30),
+        ChartData('John', 30)
       ];
       return Scaffold(
         body: SfCartesianChart(
@@ -1391,7 +1391,7 @@ Multilevel labels can be added to a chart's axis by using the `multiLevelLabels`
 
 #### Multi-level labels in date time axis
 
-`DateTimeMultiLevelLabel` is used to render multilevel labels in date time axis.
+`DateTimeMultiLevelLabel` is used to render multi-level labels in date time axis.
 
 {% highlight dart %}
 
@@ -1448,11 +1448,11 @@ Multilevel labels can be added to a chart's axis by using the `multiLevelLabels`
 
 {% endhighlight %}
 
-![Multi-level labels](images/axis-customization/datetime_multi_level_labels.jpg)
+![Multi-level labels](images/axis-customization/datetime_multi_level_label.jpg)
 
 #### Multi-level labels in date time category axis
 
-`DateTimeCategoricalMultiLevelLabel` is used to render multilevel labels in date time category axis.
+`DateTimeCategoricalMultiLevelLabel` is used to render multi-level labels in date time category axis.
 
 {% highlight dart %}
 
@@ -1468,7 +1468,6 @@ Multilevel labels can be added to a chart's axis by using the `multiLevelLabels`
         body: SfCartesianChart(
           primaryXAxis:
             DateTimeCategoryAxis(
-              edgeLabelPlacement: EdgeLabelPlacement.shift,
               multiLevelLabels: <DateTimeCategoricalMultiLevelLabel>[
                 DateTimeCategoricalMultiLevelLabel(
                     start: DateTime(2010,1,1), 
@@ -1507,11 +1506,11 @@ Multilevel labels can be added to a chart's axis by using the `multiLevelLabels`
 
 {% endhighlight %}
 
-![Multi-level labels](images/axis-customization/datetime_category_multi_level_labels.jpg)
+![Multi-level labels](images/axis-customization/datetime_category_multi_level_label.jpg)
 
 #### Multi-level labels in logarithmic axis
 
-`LogarithmicMultiLevelLabel` is used to render multilevel labels in logarithmic axis.
+`LogarithmicMultiLevelLabel` is used to render multi-level labels in logarithmic axis.
 
 {% highlight dart %}
 
@@ -1560,28 +1559,21 @@ Multilevel labels can be added to a chart's axis by using the `multiLevelLabels`
 
 {% endhighlight %}
 
-![Multi-level labels](images/axis-customization/logarithmic_multi_level_labels.jpg)
+![Multi-level labels](images/axis-customization/logarithmic_multi_level_label.jpg)
 
-#### Multi-level label and border customization
+#### Multi-level label customization
 
-By using the below properties as arguments in `multiLevelLabelStyle` the multi level label border and multi level label text can be customized.
+By using the below properties as arguments in `multiLevelLabelStyle` the multi-level label border and multi-level label text can be customized.
 
-* `borderColor` - Used to customize the border color of multilevel labels.
-* `borderWidth` - Used to customize the border width of multilevel labels.
-* `textStyle`  - Used to customize the font of multilevel label. The multilevel label can be customized using following properties,
+##### Multi-level label text customization
 
-* `color` - used to change the color of the multilevel label.
-* `fontFamily` - Used to change the font family for the multilevel label.
-* `fontStyle` - Used to change the font style for the multilevel label.
-* `fontWeight` - Used to change the font weight for the multilevel label.
-* `fontSize` - Used to change the font size for the multilevel label.
+* `textStyle`  - Used to customize the font of multi-level label.It label can be customized using following properties,
 
-* `borderType` - Used to customize the border type of multilevel labels. It can be customized by using below properties,
-
-`MultiLevelBorderType.rectangle` - Renders the multilevel label border as rectangle.
-`MultiLevelBorderType.withoutTopAndBottom` - Renders the multilevel label border as rectangle without it's top and bottom.
-`MultiLevelBorderType.squareBrace` - Renders the multilevel label border as square braces.
-`MultiLevelBorderType.curlyBrace` - Renders the multilevel label border as curly braces.
+* `color` - Used to change the color of the multi-level label.
+* `fontFamily` - Used to change the font family for the multi-level label.
+* `fontStyle` - Used to change the font style for the multi-level label.
+* `fontWeight` - Used to change the font weight for the multi-level label.
+* `fontSize` - Used to change the font size for the multi-level label.
 
 {% highlight dart %}
 
@@ -1600,9 +1592,6 @@ By using the below properties as arguments in `multiLevelLabelStyle` the multi l
         body: SfCartesianChart(
           primaryXAxis: NumericAxis(
             multiLevelLabelStyle: MultiLevelLabelStyle(
-              borderColor: Colors.blue,
-              borderWidth: 2.0,
-              borderType: MultiLevelBorderType.curlyBrace,
               textStyle: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.bold,
@@ -1634,7 +1623,67 @@ By using the below properties as arguments in `multiLevelLabelStyle` the multi l
 
 {% endhighlight %}
 
-![Multi-level labels](images/axis-customization/multi_level_border_text_customization.jpg)
+![Multi-level labels](images/axis-customization/multi_level_label_text_customization.jpg)
+
+##### Multi-level label border customization
+
+* `borderColor` - Used to customize the border color of multi-level labels.
+* `borderWidth` - Used to customize the border width of multi-level labels.
+* `borderType` - Used to customize the border type of multi-level labels. It can be customized by using below properties,
+
+* `MultiLevelBorderType.rectangle` - Renders the multi-level label border as rectangle.
+* `MultiLevelBorderType.withoutTopAndBottom` - Renders the multi-level label border as rectangle without it's top and bottom.
+* `MultiLevelBorderType.squareBrace` - Renders the multi-level label border as square braces.
+* `MultiLevelBorderType.curlyBrace` - Renders the multi-level label border as curly braces.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      final List<ChartData> chartData = <ChartData>[
+        ChartData(1, 24),
+        ChartData(2, 20),
+        ChartData(3, 35),
+        ChartData(4, 27),
+        ChartData(5, 30),
+        ChartData(6, 41),
+        ChartData(7, 26)
+      ];
+      return Scaffold(
+        body: SfCartesianChart(
+          primaryXAxis: NumericAxis(
+            multiLevelLabelStyle: MultiLevelLabelStyle(
+              borderColor: Colors.blue,
+              borderWidth: 2.0,
+              borderType: MultiLevelBorderType.curlyBrace,
+            ),
+            multiLevelLabels: const <NumericMultiLevelLabel>[
+              NumericMultiLevelLabel(start: 1, end: 4, text: 'First', level: 0),
+              NumericMultiLevelLabel(start: 4, end: 7, text: 'Second', level: 0),
+              NumericMultiLevelLabel(start: 1, end: 4, text: 'Third', level: 1),
+              NumericMultiLevelLabel(start: 4, end: 7, text: 'Fourth', level: 1)
+            ]
+          ),
+           series: <ChartSeries<ChartData, int>>[
+             LineSeries<ChartData, int>(
+               dataSource: chartData,
+               xValueMapper: (ChartData data, _) => data.x,
+               yValueMapper: (ChartData data, _) => data.y,
+            )
+           ]
+        )
+      );
+    }
+
+    class ChartData {
+     ChartData(this.x, this.y);
+     final int x;
+     final int y;
+    }
+
+{% endhighlight %}
+
+![Multi-level labels](images/axis-customization/multi_level_label_border_customization.jpg)
 
 ## See Also
 
