@@ -253,4 +253,4 @@ The ActivationMode enum contains the following values:
 
 {% endhighlight %}
 
-Also refer [`tooltip event`](./events#ontooltiprender) for customizing the tooltip further.
+Also refer [`tooltip event`](https://help.syncfusion.com/flutter/cartesian-charts/callbacks#ontooltiprender) for customizing the tooltip further.
