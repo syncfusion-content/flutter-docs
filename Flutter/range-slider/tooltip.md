@@ -15,6 +15,8 @@ This section helps to learn about how to add tooltip in the range slider.
 
 You can enable tooltips for both thumbs using the [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/enableTooltip.html). It is used to clearly indicate the current selection of the ranges during interaction. By default, tooltip text is formatted with either [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/numberFormat.html) or [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateFormat.html).
 
+I> By setting the value of `shouldAlwaysShowTooltip` to true, you can always show a tooltip without having to interact with the range slider thumb. The default value is `false` and it works independent of the `enableTooltip` behavior.
+
 ### Horizontal
 
 {% tabs %}
