@@ -118,6 +118,9 @@ You can customize the appearance of the tooltip.
 * **Border color** - Change the border color of the tooltip in the treemap using the [`TreemapTooltipSettings.borderColor`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapTooltipSettings/borderColor.html) property.
 * **Border width** - Change the border width of the tooltip in the treemap using the [`TreemapTooltipSettings.borderWidth`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapTooltipSettings/borderWidth.html) property.
 * **Border radius** - Change the border radius of the tooltip in the treemap using the [`TreemapTooltipSettings.borderRadius`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapTooltipSettings/borderRadius.html) property.
+* **Visibility** - Change the duration of the tooltip visibility using the `hideDelay` property. The default value of the `hideDelay` property is 3. By default, tooltip will hide automatically after 3 seconds of inactivity for mobile platforms. Also, you can increase or decrease the tooltip duration or show tooltip always by setting double.infinity to the `hideDelay` property.
+
+N> For mobile platforms, the hideDelay option is supported. When you hover over the shape, bubble, or marker on the web or desktop, a tooltip will appear. When you remove hover from the shape, it will disappear.
 
 {% tabs %}
 {% highlight Dart %}
@@ -195,6 +198,7 @@ Widget build(BuildContext context) {
               borderColor: Colors.deepOrange[900],
               borderWidth: 2,
               borderRadius: BorderRadius.circular(10),
+              hideDelay: 6,
             ),
           ),
         ),

@@ -15,6 +15,8 @@ This section helps to learn about how to add tooltip in the range slider.
 
 You can enable tooltips for both thumbs using the [`enableTooltip`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/enableTooltip.html). It is used to clearly indicate the current selection of the ranges during interaction. By default, tooltip text is formatted with either [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/numberFormat.html) or [`dateFormat`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/dateFormat.html).
 
+I> By setting the value of `shouldAlwaysShowTooltip` to true, you can always show a tooltip without having to interact with the range slider thumb. The default value is `false` and it works independent of the `enableTooltip` behavior.
+
 ### Horizontal
 
 {% tabs %}
@@ -138,7 +140,7 @@ Widget build(BuildContext context) {
 
 N> This is only applicable for vertical orientation of the range sliders.
 
-You can show tooltip in left or right positions using the [`tooltipPosition`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/tooltipPosition.html) property. The default value of the [`tooltipPosition`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/tooltipPosition.html) property is `SliderTooltipPosition.left`.
+You can show tooltip in left or right positions using the [`tooltipPosition`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SliderTooltipPosition.html) property. The default value of the [`tooltipPosition`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SliderTooltipPosition.html) property is `SliderTooltipPosition.left`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -157,7 +159,7 @@ Widget build(BuildContext context) {
               showTicks: true,
               showLabels: true,
               enableTooltip: true,
-              tooltipPosition:SliderTooltipPosition.right,
+              tooltipPosition: SliderTooltipPosition.right,
               values: _values,
               onChanged: (SfRangeValues newValues) {
                 setState(() {
@@ -268,7 +270,7 @@ Widget build(BuildContext context) {
 
 ## Tooltip color
 
-You can change the background color of the tooltip in the range slider using the [`tooltipBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/tooltipBackgroundColor.html) property.
+You can change the background color of the tooltip in the range slider using the [`tooltipBackgroundColor`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/tooltipBackgroundColor.html) property.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderTheme-class.html).
 
@@ -356,7 +358,7 @@ Widget build(BuildContext context) {
 
 ## Tooltip label style
 
-You can change the appearance of the tooltip text in the range slider using the [`tooltipTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderThemeData/tooltipTextStyle.html) property.
+You can change the appearance of the tooltip text in the range slider using the [`tooltipTextStyle`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfSliderThemeData/tooltipTextStyle.html) property.
 
 N> You must import the `theme.dart` library from the [`Core`](https://pub.dev/packages/syncfusion_flutter_core) package to use [`SfRangeSliderTheme`](https://pub.dev/documentation/syncfusion_flutter_core/latest/theme/SfRangeSliderTheme-class.html).
 

@@ -174,7 +174,71 @@ Widget build(BuildContext context) {
 
 ![Date range slider](images/basic-features/vertical-date-labels.png)
 
-**Handle value change**
+## Handle onChangeStart, onChanged, and onChangeEnd callbacks
+
+**onChangeStart**
+
+The `onChangeStart` callback is called when the user begins to interact with range slider using a tap or drag action. This callback is only used to notify the user that the interaction has started and it does not change the value of the range slider thumb.
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 6.0);
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfRangeSlider(
+      min: 0.0,
+      max: 10.0,
+      values: _values,
+      onChangeStart: (SfRangeValues startValues) {
+        print('Interaction started');
+      },
+      onChanged: (SfRangeValues newValues) {
+        setState(() {
+          _values = newValues;
+        });
+      },
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+**onChangeEnd**
+
+The `onChangeEnd` callback is called when the user stops to interact with range slider using a tap or drag action. This callback is only used to notify the user that the interaction has ended and it does not change the value of the range slider thumb.
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 6.0);
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfRangeSlider(
+      min: 0.0,
+      max: 10.0,
+      values: _values,
+      onChangeEnd: (SfRangeValues endValues) {
+        print('Interaction ended');
+      },
+      onChanged: (SfRangeValues newValues) {
+        setState(() {
+          _values = newValues;
+        });
+      },
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+**onChanged**
 
 The [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSlider/onChanged.html) callback is called when the user selects a value through interaction.
 
