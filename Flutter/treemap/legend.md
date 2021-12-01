@@ -278,7 +278,7 @@ class SocialMediaUsers {
 
 ## Position
 
-You can position the legend items in different directions using the [`TreemapLegend.position`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/position.html) property. The default value of the `position` property is [`TreemapLegendPosition.top`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegendPosition-class.html). The possible values are `left`, `right`, `top`, and `bottom`.
+You can position the legend items in different directions using the [`TreemapLegend.position`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/position.html) property. The default value of the `position` property is [`TreemapLegendPosition.top`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegendPosition.html). The possible values are `left`, `right`, `top`, and `bottom`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -411,7 +411,7 @@ class SocialMediaUsers {
 
 <b>For default legend</b>
 
-You can wrap or scroll the legend items using the [`TreemapLegend.overflowMode`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/overflowMode.html) property. The default value of the `overflowMode` property is [`TreemapLegendOverflowMode.wrap`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegendOverflowMode-class.html). The possible values are `scroll` and `wrap`.
+You can wrap or scroll the legend items using the [`TreemapLegend.overflowMode`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/overflowMode.html) property. The default value of the `overflowMode` property is [`TreemapLegendOverflowMode.wrap`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegendOverflowMode.html). The possible values are `scroll` and `wrap`.
 
 If the legend position is `left` or `right`, then the default scroll direction is `vertical`.
 
@@ -480,7 +480,7 @@ class SocialMediaUsers {
 
 <b>For bar legend</b>
 
-You can wrap or scroll the bar legend items using the [`TreemapLegend.overflowMode`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/overflowMode.html) property. The default value of the `overflowMode` property is [`TreemapLegendOverflowMode.scroll`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegendOverflowMode-class.html). The possible values are `scroll` and `wrap`.
+You can wrap or scroll the bar legend items using the [`TreemapLegend.overflowMode`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegend/overflowMode.html) property. The default value of the `overflowMode` property is [`TreemapLegendOverflowMode.scroll`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegendOverflowMode.html). The possible values are `scroll` and `wrap`.
 
 If the legend position is `left` or `right`, then the default scroll direction is `vertical`.
 
@@ -696,7 +696,7 @@ N>
 
 ### Solid
 
-You can set solid color for the bar by using the `TreemapLegendPaintingStyle.solid`. By defaults [`TreemapLegendPaintingStyle`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegendPaintingStyle-class.html) will be `solid`.
+You can set solid color for the bar by using the `TreemapLegendPaintingStyle.solid`. By defaults [`TreemapLegendPaintingStyle`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegendPaintingStyle.html) will be `solid`.
 
 {% tabs %}
 {% highlight Dart %}
@@ -765,7 +765,7 @@ class SocialMediaUsers {
 
 ### Gradient
 
-You can set gradient color for the bar by using the [`TreemapLegendPaintingStyle.gradient`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegendPaintingStyle-class.html).
+You can set gradient color for the bar by using the [`TreemapLegendPaintingStyle.gradient`](https://pub.dev/documentation/syncfusion_flutter_treemap/latest/treemap/TreemapLegendPaintingStyle.html).
 
 {% tabs %}
 {% highlight Dart %}

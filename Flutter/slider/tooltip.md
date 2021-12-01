@@ -139,7 +139,7 @@ Widget build(BuildContext context) {
 
 N> This is only applicable for vertical orientation of the sliders.
 
-You can show tooltip in left or right positions using the [`tooltipPosition`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/tooltipPosition.html) property. The default value of the [`tooltipPosition`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/tooltipPosition.html) property is `SliderTooltipPosition.left`.
+You can show tooltip in left or right positions using the [`tooltipPosition`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SliderTooltipPosition.html) property. The default value of the [`tooltipPosition`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SliderTooltipPosition.html) property is `SliderTooltipPosition.left`.
 
 {% tabs %}
 {% highlight Dart %}
