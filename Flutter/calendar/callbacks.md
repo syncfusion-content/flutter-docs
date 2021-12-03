@@ -76,6 +76,46 @@ Widget build(BuildContext context) {
 >**NOTE**
 * For recurrence appointment, the tap details will always return as `Appointment`, even for the custom business object.
 
+## Calendar details callback
+
+Return calendar details based on the given offset passed through argument by using [getCalendarDetailsAtOffset]() method.
+
+`date` - returns the date based on the given offset.
+`appointments` - returns the appointments based on the given offset.
+`targetElement` - returns the calendar element based on the given offset.
+`resource` - returns the resource based on the given offset.
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+          body: MouseRegion(
+              onHover: (PointerHoverEvent event) {
+                CalendarDetails? details = _calendarController
+                    .getCalendarDetailsAtOffset!(event.localPosition);
+                if (details!.targetElement == CalendarElement.appointment) {
+                  dynamic appointments = details.appointments;
+                  final String subject =
+                      details.appointments![0].subject.toString();
+                  final dynamic startTime = details.appointments![0].startTime;
+                  final dynamic endTime = details.appointments![0].endTime;
+                }
+              },
+              child: SfCalendar(
+                view: CalendarView.month,
+                controller: _calendarController,
+                dataSource: _getCalendarDataSource(),
+              ))),
+    );
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Long press callback
 The [onLongPress](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/onLongPress.html) callback is called, whenever the `SfCalendar` elements are long pressed on view.
 
