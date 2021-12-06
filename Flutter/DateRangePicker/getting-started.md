@@ -182,6 +182,9 @@ You can display action buttons at the bottom of the date range picker by using t
 {% endtabs %}
 
 ![showActionButtons](images/getting-started/confirm_and_cancel_buttons.png)  
+
+>**NOTE**
+* While clicking onSubmit action button without selecting date, date value set to DateTime(0001,01,01).
   
 ## Today button
 The today button can be displayed at the bottom of the date range picker by using the [showTodayButton](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/showTodayButton.html) property of the `DateRangePicker`. It easily moves to the current date of the picker view.
