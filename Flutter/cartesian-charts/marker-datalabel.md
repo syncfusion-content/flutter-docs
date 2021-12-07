@@ -128,7 +128,7 @@ The markers can be rendered with desired image as shape. For this you have to sp
                                     isVisible: true,
                                     shape: DataMarkerType.image,
                                     // Renders the image as marker
-                                    imageUrl: 'images/livechart.png'
+                                    image: const AssetImage('images/livechart.png')
                                 )
                             )
                         ]

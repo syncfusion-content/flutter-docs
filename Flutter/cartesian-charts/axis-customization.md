@@ -239,7 +239,7 @@ Axis labels and ticks can be positioned inside or outside the chart area by usin
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(
-                            labelPosition: LabelPosition.inside,
+                            labelPosition: ChartDataLabelPosition.inside,
                             tickPosition: TickPosition.inside
                         )
                     )

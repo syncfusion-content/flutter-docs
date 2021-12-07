@@ -178,7 +178,7 @@ The [`smartLabelMode`](https://pub.dev/documentation/syncfusion_flutter_charts/l
                         series: FunnelSeries<ChartData, String>(
                             dataLabelSettings: DataLabelSettings(
                                 isVisible: true, 
-                                labelPosition: LabelPosition.inside
+                                labelPosition: ChartDataLabelPosition.inside
                             ),
                         )
                     )
