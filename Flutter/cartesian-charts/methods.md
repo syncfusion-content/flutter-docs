@@ -51,7 +51,7 @@ The [`show`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
               TextButton(
                 child: Text('Show'),
                 onPressed: show
-              ),s
+              ),
               Container(child: chart)
             ]
           )
