@@ -685,5 +685,75 @@ class _EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
+## Set height and width of DataGrid based on rows and columns available
+
+The `SfDataGrid` provides support to set the height and width of `DataGrid` based on rows and columns available by setting the [shrinkWrapRows] and [shrinkWrapColumns] as `true`. 
+
+* [shrinkWrapRows]: Whether the extent of the vertical scroll view should be determined by the number of rows available.By default, if the DataGrid’s parent height is infinity, height is set as 300. If `shrinkWrapRows` property is true, the height is expanding to view all the rows available in DataGrid.
+
+* [shrinkWrapColumns]: Whether the extent of the horizontal scroll view should be determined by the number of columns available.By default, if the DataGrid’s parent width is infinity, width is set as 300. If `shrinkWrapColumns` property is true, the width is expanding to view all the columns available in DataGrid.
+
+>**NOTE**
+       Shrink wrapping is significantly more expensive than setting the height and width manually.
+
+{% tabs %}
+{% highlight Dart %} 
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+
+late EmployeeDataSource _employeeDataSource;
+
+ @override
+  Widget build(BuildContext context) {
+    return LayoutBuilder(builder: (context, constraints) {
+      return SingleChildScrollView(
+        child: SfDataGrid(
+          source: _employeeDataSource,
+          columns: <GridColumn>[
+            GridColumn(
+                columnName: 'id',
+                label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      'ID',
+                      overflow: TextOverflow.ellipsis,
+                    ))),
+            GridColumn(
+                columnName: 'name',
+                label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Name',
+                      overflow: TextOverflow.ellipsis,
+                    ))),
+            GridColumn(
+                columnName: 'designation',
+                label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Designation',
+                      overflow: TextOverflow.ellipsis,
+                    ))),
+            GridColumn(
+                columnName: 'salary',
+                label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      'Salary',
+                      overflow: TextOverflow.ellipsis,
+                    ))),
+          ],
+        ),
+      );
+    });
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
 **NOTE**  
   Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-load-data-lazily-when-scrolling-reaches-70-in-flutter-datatable-sfdatagrid).

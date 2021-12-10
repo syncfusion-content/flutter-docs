@@ -261,3 +261,110 @@ Widget build(BuildContext context) {
 {% endtabs %}
 
 ![flutter datagrid shows customized swiping delete functionality](images/swiping/flutter-datagrid-customized-swiping-delete-funtionality.gif)
+
+## Set different swipe offset for right and left swiping 
+
+You can set the different swipe offset based on swipe direction by using the `setSwipeMaxOffset` method in `onSwipeStart` callback.The below example shows how to set individual swipe offset based on swipe direction when swiping a data row from `startToEnd` or `endToStart`.  
+
+{% tabs %}
+{% highlight Dart %} 
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+
+late EmployeeDataSource employeeDataSource;
+
+@override
+  Widget build(BuildContext context) {
+    return LayoutBuilder(builder: (context, constraints) {
+      return SfDataGrid(
+        allowSwiping: true,
+        swipeMaxOffset: constraints.maxWidth,
+        source: employeeDataSource,
+        onSwipeStart: (details) {
+          if (details.swipeDirection == DataGridRowSwipeDirection.startToEnd) {
+            details.setSwipeMaxOffset(200);
+          } else if (details.swipeDirection == DataGridRowSwipeDirection.endToStart) {
+            details.setSwipeMaxOffset(100);
+          }
+          return true;
+        },
+        startSwipeActionsBuilder:
+            (BuildContext context, DataGridRow row, int rowIndex) {
+          return GestureDetector(
+              onTap: () {
+                employeeDataSource.dataGridRow.insert(
+                    rowIndex,
+                    DataGridRow(cells: [
+                      DataGridCell(value: 1011, columnName: 'id'),
+                      DataGridCell(value: 'Tom Bass', columnName: 'name'),
+                      DataGridCell(
+                          value: 'Developer', columnName: 'designation'),
+                      DataGridCell(value: 20000, columnName: 'salary')
+                    ]));
+                employeeDataSource.updateDataGridSource();
+              },
+              child: Container(
+                  color: Colors.greenAccent,
+                  child: Center(
+                    child: Icon(Icons.add),
+                  )));
+        },
+        endSwipeActionsBuilder:
+            (BuildContext context, DataGridRow row, int rowIndex) {
+          return GestureDetector(
+              onTap: () {
+                employeeDataSource.dataGridRow.removeAt(rowIndex);
+                employeeDataSource.updateDataGridSource();
+              },
+              child: Container(
+                  color: Colors.redAccent,
+                  child: Center(
+                    child: Icon(Icons.delete),
+                  )));
+        },
+        columns: <GridColumn>[
+          GridColumn(
+              columnName: 'id',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'ID',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'name',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Name',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'designation',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Designation',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+          GridColumn(
+              columnName: 'salary',
+              label: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Salary',
+                    overflow: TextOverflow.ellipsis,
+                  ))),
+        ],
+      );
+    });
+  }
+
+{% endhighlight %}
+{% endtabs %} 
+
+![flutter datagrid shows swiping a row in both directions with different swiping offset](images/swiping/flutter-datagrid-individual-swiping.gif)
