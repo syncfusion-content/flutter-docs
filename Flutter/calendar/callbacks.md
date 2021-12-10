@@ -78,7 +78,7 @@ Widget build(BuildContext context) {
 
 ## Calendar details callback
 
-Return calendar details based on the given offset passed through argument by using [getCalendarDetailsAtOffset]() method.
+Return calendar details based on the given offset passed through argument by using the [getCalendarDetailsAtOffset]() method.
 
 `date` - returns the date based on the given offset.
 `appointments` - returns the appointments based on the given offset.

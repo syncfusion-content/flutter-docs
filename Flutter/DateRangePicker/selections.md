@@ -141,7 +141,7 @@ Extend the selected range with the new selected date in any date range picker vi
 
 ## Extendable range selection Direction
 It allows to extend the selection direction by using the [extendableRangeSelectionDirection]() property of the DateRangePicker. 
-You can set extendable range selection direction is forward, backward, both and none. 
+You can set the extendable range selection direction as forward, backward, both and none. 
 
 {% tabs %}
 {% highlight Dart %}
@@ -163,9 +163,9 @@ You can set extendable range selection direction is forward, backward, both and 
 {% endtabs %}
 
 >**NOTE**
-* If it set to none, doesn’t allows to extend the selection. It will remains the initial range.
-* If it set to forward direction, the start date will not be changed here. 
-* If it set to backward direction, the end date will not be changed here.
+* If it is set to none, it won't allow to extend the selection. It will remain in the initial range.
+* If it is set to forward direction, the start date will not be changed here.
+* If it is set to backward direction, the end date will not be changed here.
 
 ## Selection radius
 Customize the radius of the selection using the [selectionRadius](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectionRadius.html) property of the `SfDateRangePicker`.
