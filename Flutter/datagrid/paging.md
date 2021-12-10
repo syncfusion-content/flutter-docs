@@ -436,6 +436,58 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+## Show dropdown button to choose rows per page
+
+The `SfDataPager` provides the support to choose the rowsperpage. You can select the different rowsperpage by using the following properties,
+
+*	availableRowsPerPage: Set the values that should be displayed in the dropdown. And the default value is [10,15,20].
+*	onRowsPerPage: Provides the selected rows per page value from the SfDataPager.availableRowsPerPage property.
+
+{% tabs %}
+{% highlight Dart %}
+
+int _rowsPerPage=10;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text('Syncfusion Flutter DataGrid'),
+        ),
+        body: LayoutBuilder(
+            builder: (BuildContext context, BoxConstraints constraints) {
+          return Column(
+            children: [
+              Container(
+                height: constraints.maxHeight - datapagerHeight,
+                child: SfDataGrid(
+                    rowsPerPage: _rowsPerPage,
+                    source: employeeDataSource,
+                    columnWidthMode: ColumnWidthMode.fill,
+                    columns: _column),
+              ),
+              Container(
+                  height: datapagerHeight,
+                  child: SfDataPager(
+                    delegate: employeeDataSource,
+                    availableRowsPerPage: [10, 20, 30],
+                    onRowsPerPageChanged: (int? rowsPerPage) {
+                      setState(() {
+                        _rowsPerPage = rowsPerPage!;
+                      });
+                    },
+                    pageCount:
+                        ((employees.length / _rowsPerPage).ceil()).toDouble(),
+                  )),
+            ],
+          );
+        }));
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+![flutter datapager with rowsperpage](images/paging/flutter_datapager_rowsperpage.gif)
 
 ## Orientation
 
