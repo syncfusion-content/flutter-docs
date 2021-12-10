@@ -687,3 +687,74 @@ class _EmployeeDataSource extends DataGridSource {
 
 **NOTE**  
   Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-load-data-lazily-when-scrolling-reaches-70-in-flutter-datatable-sfdatagrid).
+
+## Increase row cache limit
+
+SfDataGrid supports to increase the rows cache limit by setting the [SfDataGrid.rowsCacheExtent]() property. 
+
+### How to generate extra rows
+
+By default, rows are generated based on the view port size and those rows are reused while scrolling. Extra rows can be created while scrolling the DataGrid by using the `SfDataGrid.rowsCacheExtent` property. For example, if you set the value as 10, then extra 10 rows are created rather than the rows in view port size. 
+
+The following code example shows how to generate extra rows using rowsCacheExtent.  
+
+{% tabs %}
+{% highlight Dart %}
+
+  List<Employee> employees = <Employee>[];
+  late EmployeeDataSource employeeDataSource;
+
+  @override
+  void initState() {
+    super.initState();
+    employees = getEmployeeData();
+    employeeDataSource = EmployeeDataSource(employeeData: employees);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Syncfusion Flutter DataGrid'),
+      ),
+      body: SfDataGrid(
+        source: employeeDataSource,
+        columnWidthMode: ColumnWidthMode.fill,
+        rowsCacheExtent: 10,
+        columns: <GridColumn>[
+          GridColumn(
+              columnName: 'id',
+              label: Container(
+                  padding: EdgeInsets.all(16.0),
+                  alignment: Alignment.center,
+                  child: Text('ID'))),
+          GridColumn(
+              columnName: 'name',
+              label: Container(
+                  padding: EdgeInsets.all(8.0),
+                  alignment: Alignment.center,
+                  child: Text('Name'))),
+          GridColumn(
+              columnName: 'designation',
+              label: Container(
+                  padding: EdgeInsets.all(8.0),
+                  alignment: Alignment.center,
+                  child: Text('Designation', overflow: TextOverflow.ellipsis))),
+          GridColumn(
+              columnName: 'salary',
+              label: Container(
+                  padding: EdgeInsets.all(8.0),
+                  alignment: Alignment.center,
+                  child: Text('Salary'))),
+        ],
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+
+### Advantages
+
+Checkbox state animation changes will not occur while scrolling vertically. 
