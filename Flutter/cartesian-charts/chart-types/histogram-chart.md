@@ -37,7 +37,7 @@ You can collapse the normal distribution curve using the [`showNormalDistributio
         body: Center(
             child: Container(
                 child: SfCartesianChart(series: <ChartSeries>[
-                HistogramSeries<ChartData, num>(
+                HistogramSeries<ChartData, double>(
                  dataSource: <ChartData>[
                     ChartData(5.250),
                     ChartData(7.750),
@@ -144,13 +144,13 @@ You can collapse the normal distribution curve using the [`showNormalDistributio
                 binInterval: 20,
                 width: 0.99,
                 curveWidth: 2.5,
-                yValueMapper: (ChartData sales, _) => sales.x as double)]))));
+                yValueMapper: (ChartData sales, _) => sales.y as double)]))));
         }
     }
 
         class ChartData {
-            ChartData(this.x);
-            final dynamic x;
+            ChartData(this.y);
+            final double y;
         }
 
 {% endhighlight %}
