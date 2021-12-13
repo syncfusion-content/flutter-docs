@@ -14,7 +14,7 @@ documentation: ug
 Right to left rendering can be switched in the following ways:
 
 ### Wrapping the SfDateRangePicker with Directionality widget
-The `SfDateRangePicker` supports changing the layout direction of the widget in the right-to-left direction by using the `Directionality` widget and set the `textDirection` property as [TextDirection.rtl](https://api.flutter.dev/flutter/dart-ui/TextDirection-class.html).
+The `SfDateRangePicker` supports changing the layout direction of the widget in the right-to-left direction by using the `Directionality` widget and set the `textDirection` property as [TextDirection.rtl](https://api.flutter.dev/flutter/dart-ui/TextDirection.html).
 
 {% tabs %}
 {% highlight Dart %}
