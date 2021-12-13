@@ -139,6 +139,33 @@ Extend the selected range with the new selected date in any date range picker vi
 >**NOTE**
 * The hovering effect which occurs while extending the range will not be displayed when the `DateRangePickerNavigationMode` is set as `DateRangePickerNavigationMode.scroll`.
 
+## Extendable range selection Direction
+It allows to extend the selection direction by using the [extendableRangeSelectionDirection]() property of the DateRangePicker. 
+You can set the extendable range selection direction as forward, backward, both and none. 
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+      body: SfDateRangePicker(
+        view: DateRangePickerView.month,
+        selectionMode: DateRangePickerSelectionMode.extendableRange,
+        extendableRangeSelectionDirection:
+            ExtendableRangeSelectionDirection.forward,
+      ),
+    ));
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+>**NOTE**
+* If it is set to none, it won't allow to extend the selection. It will remain in the initial range.
+* If it is set to forward direction, the start date will not be changed here.
+* If it is set to backward direction, the end date will not be changed here.
 
 ## Selection radius
 Customize the radius of the selection using the [selectionRadius](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/selectionRadius.html) property of the `SfDateRangePicker`.
