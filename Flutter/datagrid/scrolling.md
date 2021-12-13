@@ -694,8 +694,6 @@ By default, rows are generated based on the view port size and those rows are re
 
 The `rowsCacheExtent` property will create the additional rows internally with the existing visible rows which are already allocated based on view port size. So, rows to be reused will be increased.
 
-The following code example shows how to generate extra rows using rowsCacheExtent.  
-
 {% tabs %}
 {% highlight Dart %}
 
