@@ -438,15 +438,24 @@ Widget build(BuildContext context) {
 
 ## Show dropdown button to choose rows per page
 
-The `SfDataPager` provides the support to choose the rows per page. You can select the different rows per page by using the following properties,
+Show the dropdown button option to select different number of rows per page by defining the onRowPerPageChanged callback. If it is null, no option will be provided to select different number of rows per page.
 
-*	availableRowsPerPage: Set the values that should be displayed in the dropdown. And the default value is [10,15,20].
-*	onRowsPerPage: Provides the selected rows per page value from the SfDataPager.availableRowsPerPage property.
+You can use availableRowsPerPage property to define the list of numbers to be displayed in dropdown. The default value of availableRowsPerPage property is [10,15,20].
 
 {% tabs %}
 {% highlight Dart %}
 
-int _rowsPerPage=10;
+  int _rowsPerPage=10;
+  List<Employee> employees = <Employee>[];
+  late EmployeeDataSource employeeDataSource;
+  double datapagerHeight = 70.0;
+
+  @override
+  void initState() {
+    super.initState();
+    employees = getEmployeeData();
+    employeeDataSource = EmployeeDataSource(employeeData: employees);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -461,7 +470,6 @@ int _rowsPerPage=10;
               Container(
                 height: constraints.maxHeight - datapagerHeight,
                 child: SfDataGrid(
-                    rowsPerPage: _rowsPerPage,
                     source: employeeDataSource,
                     columnWidthMode: ColumnWidthMode.fill,
                     columns: _column),
@@ -474,6 +482,7 @@ int _rowsPerPage=10;
                     onRowsPerPageChanged: (int? rowsPerPage) {
                       setState(() {
                         _rowsPerPage = rowsPerPage!;
+                        employeeDataSource.updateDataGriDataSource();
                       });
                     },
                     pageCount:
@@ -484,6 +493,69 @@ int _rowsPerPage=10;
         }));
   }
 
+  class EmployeeDataSource extends DataGridSource {
+  /// Creates the employee data source class with required details.
+  EmployeeDataSource({required List<Employee> employeeData}) {
+    _employeeData = employeeData;
+    _paginatedRows = employeeData;
+    buildDataGridRow();
+  }
+
+  void buildDataGridRow() {
+    _employeeDataGridRows = _paginatedRows
+        .map<DataGridRow>((e) => DataGridRow(cells: [
+              DataGridCell<int>(columnName: 'id', value: e.id),
+              DataGridCell<String>(columnName: 'name', value: e.name),
+              DataGridCell<String>(
+                  columnName: 'designation', value: e.designation),
+              DataGridCell<int>(columnName: 'salary', value: e.salary),
+            ]))
+        .toList();
+  }
+
+  List<DataGridRow> _employeeDataGridRows = [];
+  List<Employee> _paginatedRows = [];
+  List<Employee> _employeeData = [];
+
+  @override
+  List<DataGridRow> get rows => _employeeDataGridRows;
+
+  @override
+  DataGridRowAdapter buildRow(DataGridRow row) {
+    return DataGridRowAdapter(
+        cells: row.getCells().map<Widget>((e) {
+      return Container(
+        alignment: Alignment.center,
+        padding: EdgeInsets.all(8.0),
+        child: Text(e.value.toString()),
+      );
+    }).toList());
+  }
+
+  @override
+  Future<bool> handlePageChange(int oldPageIndex, int newPageIndex) {
+    final int _startIndex = newPageIndex * _rowsPerPage;
+    int _endIndex = _startIndex + _rowsPerPage;
+    if (_endIndex > _employeeData.length) {
+      _endIndex = _employeeData.length;
+    }
+
+    /// Get particular range from the sorted collection.
+    if (_startIndex < _employeeData.length &&
+        _endIndex <= _employeeData.length) {
+      _paginatedRows = _employeeData.getRange(_startIndex, _endIndex).toList();
+    } else {
+      _paginatedRows = <Employee>[];
+    }
+    buildDataGridRow();
+    notifyListeners();
+    return Future<bool>.value(true);
+  }
+
+  void updateDataGriDataSource() {
+    notifyListeners();
+  }
+  }
 {% endhighlight %}
 {% endtabs %}
 
