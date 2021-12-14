@@ -687,3 +687,69 @@ class _EmployeeDataSource extends DataGridSource {
 
 **NOTE**  
   Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-load-data-lazily-when-scrolling-reaches-70-in-flutter-datatable-sfdatagrid).
+
+## Increase row cache limit
+
+By default, rows are generated based on the view port size and these rows are reused while scrolling. You can set the `SfDataGrid.rowsCacheExtent` property to avoid the visible changes caused by re-using. For example, if you show the checkbox in a column without setting the rows using this property, checkbox state changes with animation can be seen when vertical scrolling is performed.
+
+The `rowsCacheExtent` property will create the additional rows internally with the existing visible rows, which are already allocated based on view port size. So, the number of rows that will be reused will increase.
+
+{% tabs %}
+{% highlight Dart %}
+
+  List<Employee> employees = <Employee>[];
+  late EmployeeDataSource employeeDataSource;
+
+  @override
+  void initState() {
+    super.initState();
+    employees = getEmployeeData();
+    employeeDataSource = EmployeeDataSource(employeeData: employees);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Syncfusion Flutter DataGrid'),
+      ),
+      body: SfDataGrid(
+        source: employeeDataSource,
+        columnWidthMode: ColumnWidthMode.fill,
+        showCheckboxColumn: true,
+        selectionMode: SelectionMode.multiple,
+        rowsCacheExtent: 10,
+        columns: <GridColumn>[
+          GridColumn(
+              columnName: 'id',
+              label: Container(
+                  padding: EdgeInsets.all(16.0),
+                  alignment: Alignment.center,
+                  child: Text('ID'))),
+          GridColumn(
+              columnName: 'name',
+              label: Container(
+                  padding: EdgeInsets.all(8.0),
+                  alignment: Alignment.center,
+                  child: Text('Name'))),
+          GridColumn(
+              columnName: 'designation',
+              label: Container(
+                  padding: EdgeInsets.all(8.0),
+                  alignment: Alignment.center,
+                  child: Text('Designation', overflow: TextOverflow.ellipsis))),
+          GridColumn(
+              columnName: 'salary',
+              label: Container(
+                  padding: EdgeInsets.all(8.0),
+                  alignment: Alignment.center,
+                  child: Text('Salary'))),
+        ],
+      ),
+    );
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Flutter DataTable shows increase row cache extent](images/scrolling/flutter-datagrid-increase-row-cache-extent.gif)
