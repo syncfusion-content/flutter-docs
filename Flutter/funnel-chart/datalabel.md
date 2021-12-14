@@ -165,4 +165,31 @@ If the user didn’t provide text color to the data label, then by default, the 
 
 ![label_saturation](images/datalabel/funnel_saturation.png)
 
+## Over flow mode
 
+Action on data labels when it’s overflowing from its region area.
+ 
+The overflowing data label rendering behavior can be changed based on this. If `overflowMode` property is set to `OverflowMode.none` then the `labelIntersectAction` takes the priority, else
+`overflowMode` takes the priority.
+  
+ _Note:_ This is applicable for pie, doughnut, pyramid, and funnel series
+  types alone.
+
+Defaults to `OverflowMode.none`.
+
+{% highlight dart %}
+
+    Widget build(BuildContext context) {
+        return Container(
+            child: SfFunnelChart(
+            series: PieSeries<ChartData, String>(
+             dataLabelSettings: DataLabelSettings(
+               isVisible: true,
+               overflowMode: OverflowMode.trim
+                    ),
+                ),
+            ),
+        );
+    }
+
+![label_overflow](images/datalabel/funnel_overflow.jpg)

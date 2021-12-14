@@ -426,3 +426,35 @@ Data label and its connector line in the Circular charts for the point value 0 c
 If the user didn’t provide text color to the data label, then by default, the saturation color is applied to the data label text. i.e., if the data points background color intensity is dark, then the data label will render in white color (#FFFFFF) and if the data points background color intensity is light, data label will render in black color (#000000).
 
 ![label_saturation](images/datalabel/circular_saturation.png)
+
+
+## Over flow mode
+
+Action on data labels when it’s overflowing from its region area.
+ 
+The overflowing data label rendering behavior can be changed based on this. If `overflowMode` property is set to `OverflowMode.none` then the `labelIntersectAction` takes the priority, else
+`overflowMode` takes the priority.
+  
+ _Note:_ This is applicable for pie, doughnut, pyramid, and funnel series
+  types alone.
+
+Defaults to `OverflowMode.none`.
+
+{% highlight dart %}
+
+    Widget build(BuildContext context) {
+        return Container(
+             child: SfCircularChart(
+            series: <PieSeries<ChartData, String>>[
+             PieSeries<ChartData, String>(
+             dataLabelSettings: DataLabelSettings(
+             isVisible: true,
+             overflowMode: OverflowMode.trim
+           ),
+         ),
+       ],
+     )
+    );
+    }
+
+![dataLabel_overflow](images/datalabel/circular_overflow.jpg)
