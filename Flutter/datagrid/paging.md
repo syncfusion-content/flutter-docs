@@ -438,9 +438,9 @@ Widget build(BuildContext context) {
 
 ## Show dropdown button to choose rows per page
 
-Show the dropdown button option to select different number of rows per page by defining the onRowPerPageChanged callback. If it is null, no option will be provided to select different number of rows per page.
+Show the dropdown button option to select a different number of rows per page by defining the `onRowPerPageChanged` callback. If it is null, no option will be provided to select different number of rows per page.
 
-You can use availableRowsPerPage property to define the list of numbers to be displayed in dropdown. The default value of availableRowsPerPage property is [10,15,20].
+You can use `availableRowsPerPage` property to define the list of numbers to be displayed in drop-down. The default value of `availableRowsPerPage` property is [10,15,20].
 
 {% tabs %}
 {% highlight Dart %}
