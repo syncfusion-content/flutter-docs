@@ -753,3 +753,72 @@ The `rowsCacheExtent` property will create the additional rows internally with t
 {% endtabs %}
 
 ![Flutter DataTable shows increase row cache extent](images/scrolling/flutter-datagrid-increase-row-cache-extent.gif)
+
+## Set height and width of DataGrid based on rows and columns available
+
+If the height or width of the DataGrid is infinity, then DataGrid sets its height or width to 300 by default. Users can set the height or width based on the number of rows or columns available in DataGrid by using the `shrinkWrapRows` or `shrinkWrapColumns` property, respectively.
+
+>**NOTE**
+       Shrink wrapping is significantly more expensive than setting the height and width manually.
+
+{% tabs %}
+{% highlight Dart %} 
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+
+late EmployeeDataSource _employeeDataSource;
+
+ @override
+  Widget build(BuildContext context) {
+    return LayoutBuilder(builder: (context, constraints) {
+      return SingleChildScrollView(
+        child: SfDataGrid(
+          shrinkWrapColumns: true,
+          shrinkWrapRows: true,
+          source: _employeeDataSource,
+          columns: <GridColumn>[
+            GridColumn(
+                columnName: 'id',
+                label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      'ID',
+                      overflow: TextOverflow.ellipsis,
+                    ))),
+            GridColumn(
+                columnName: 'name',
+                label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Name',
+                      overflow: TextOverflow.ellipsis,
+                    ))),
+            GridColumn(
+                columnName: 'designation',
+                label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Designation',
+                      overflow: TextOverflow.ellipsis,
+                    ))),
+            GridColumn(
+                columnName: 'salary',
+                label: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      'Salary',
+                      overflow: TextOverflow.ellipsis,
+                    ))),
+          ],
+        ),
+      );
+    });
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
