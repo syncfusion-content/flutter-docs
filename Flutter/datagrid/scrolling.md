@@ -685,9 +685,12 @@ class _EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
+**NOTE**  
+  Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-load-data-lazily-when-scrolling-reaches-70-in-flutter-datatable-sfdatagrid).
+
 ## Set height and width of DataGrid based on rows and columns available
 
-By default, the DataGrid sets its height or width as 300 if its height or width is infinity. Users can sets the height or width based on the number of rows or columns available in DataGrid by using the `shrinkWrapRows` or `shrinkWrapColumns` property respectively
+By default, the DataGrid sets its height or width as 300 if its height or width is infinity. Users can sets the height or width based on the number of rows or columns available in DataGrid by using the `shrinkWrapRows` or `shrinkWrapColumns` property respectively.
 
 >**NOTE**
        Shrink wrapping is significantly more expensive than setting the height and width manually.
@@ -752,6 +755,3 @@ late EmployeeDataSource _employeeDataSource;
 
 {% endhighlight %}
 {% endtabs %}
-
-**NOTE**  
-  Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-load-data-lazily-when-scrolling-reaches-70-in-flutter-datatable-sfdatagrid).
