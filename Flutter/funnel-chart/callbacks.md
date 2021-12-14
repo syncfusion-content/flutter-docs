@@ -308,7 +308,7 @@ Triggers when long press on the series point. The [`onPointLongPress`](https://p
     }
 {% endhighlight %}
 
-## OnCreateRenderer
+## onCreateRenderer
 
 ///Used to create the renderer for custom series.
 

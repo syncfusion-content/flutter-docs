@@ -988,7 +988,7 @@ Triggers when the error bar is being rendered. In this `onRenderDetailsUpdate` c
 
 {% endhighlight %}
 
-## OnCreateRenderer
+## onCreateRenderer
 
 Used to create the renderer for custom series.
 
