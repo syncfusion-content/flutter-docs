@@ -1012,13 +1012,13 @@ Defaults to `null`.
             series: <LineSeries<SalesData, num>>[
                 LineSeries<SalesData, num>(
                   onCreateRenderer:(ChartSeries<dynamic, dynamic> series){
-                      return CustomLinerSeriesRenderer();
+                      return CustomLineSeriesRenderer();
                     }
                 ),
               ],
         ));
     }
-      class CustomLinerSeriesRenderer extends LineSeriesRenderer {
+      class CustomLineSeriesRenderer extends LineSeriesRenderer {
        // custom implementation here...
     }
 {% endhighlight %}
