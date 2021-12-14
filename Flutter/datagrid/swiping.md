@@ -264,7 +264,7 @@ Widget build(BuildContext context) {
 
 ## Set different swipe offset for right and left swiping 
 
-You can set the different swipe offset based on swipe direction by using the `setSwipeMaxOffset` method in `onSwipeStart` callback.The below example shows how to set individual swipe offset based on swipe direction when swiping a data row from `startToEnd` or `endToStart`.  
+You can set the different swipe offset based on swipe direction by using the `onSwipeStart` callback and pass the required swipe offset to the `setSwipeMaxOffset` method from `onSwipeStart` callback's argument.  
 
 {% tabs %}
 {% highlight Dart %} 
@@ -278,7 +278,6 @@ late EmployeeDataSource employeeDataSource;
     return LayoutBuilder(builder: (context, constraints) {
       return SfDataGrid(
         allowSwiping: true,
-        swipeMaxOffset: constraints.maxWidth,
         source: employeeDataSource,
         onSwipeStart: (details) {
           if (details.swipeDirection == DataGridRowSwipeDirection.startToEnd) {

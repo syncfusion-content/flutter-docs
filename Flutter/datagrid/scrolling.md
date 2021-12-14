@@ -687,11 +687,7 @@ class _EmployeeDataSource extends DataGridSource {
 
 ## Set height and width of DataGrid based on rows and columns available
 
-The `SfDataGrid` provides support to set the height and width of `DataGrid` based on rows and columns available by setting the [shrinkWrapRows] and [shrinkWrapColumns] as `true`. 
-
-* [shrinkWrapRows]: Whether the extent of the vertical scroll view should be determined by the number of rows available.By default, if the DataGrid’s parent height is infinity, height is set as 300. If `shrinkWrapRows` property is true, the height is expanding to view all the rows available in DataGrid.
-
-* [shrinkWrapColumns]: Whether the extent of the horizontal scroll view should be determined by the number of columns available.By default, if the DataGrid’s parent width is infinity, width is set as 300. If `shrinkWrapColumns` property is true, the width is expanding to view all the columns available in DataGrid.
+By default, the DataGrid sets its height or width as 300 if its height or width is infinity. Users can sets the height or width based on the number of rows or columns available in DataGrid by using the `shrinkWrapRows` or `shrinkWrapColumns` property respectively
 
 >**NOTE**
        Shrink wrapping is significantly more expensive than setting the height and width manually.
@@ -708,6 +704,8 @@ late EmployeeDataSource _employeeDataSource;
     return LayoutBuilder(builder: (context, constraints) {
       return SingleChildScrollView(
         child: SfDataGrid(
+          shrinkWrapColumns: true,
+          shrinkWrapRows: true,
           source: _employeeDataSource,
           columns: <GridColumn>[
             GridColumn(
