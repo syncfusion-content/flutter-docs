@@ -8,7 +8,7 @@ documentation: ug
 
 # Getting started with Flutter PDF
 
-This section explains the steps required to create a PDF document by a single button click. This section covers only the minimal features needed to learn to get started with the PDF.
+This section explains the steps required to create a [Flutter PDF library](https://www.syncfusion.com/flutter-widgets/pdf-library) document by a single button click. This section covers only the minimal features needed to learn to get started with the PDF.
 
 ## Steps to create PDF document in Flutter application
 
@@ -494,3 +494,5 @@ document.dispose();
 The following screenshot shows the invoice PDF document created by the Syncfusion Flutter PDF.
 
 ![Invoice PDF](images/getting-started/invoice.jpg)
+
+N> You can also explore our [Flutter PDF library](https://github.com/syncfusion/flutter-examples/tree/master/lib/samples/pdf) demo that shows how to create and modify PDF files from C# with just five lines of code.
