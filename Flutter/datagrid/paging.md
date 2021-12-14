@@ -442,6 +442,9 @@ Show the dropdown button option to select a different number of rows per page by
 
 You can use `availableRowsPerPage` property to define the list of numbers to be displayed in drop-down. The default value of `availableRowsPerPage` property is [10,15,20].
 
+**NOTE**  
+  After doing the horizontal scrolling on mobile platforms, you can view the drop-down menu.
+
 {% tabs %}
 {% highlight Dart %}
 
