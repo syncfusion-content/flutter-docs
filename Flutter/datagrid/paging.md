@@ -444,7 +444,6 @@ You can use `availableRowsPerPage` property to define the list of numbers to be 
 
 **NOTE**  
   * You can view dropdown button options by horizontally scrolling the DataPager.
-
   * The dropdown button option is not supported, if the [direction](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/direction.html) is vertical.
 
 {% tabs %}
