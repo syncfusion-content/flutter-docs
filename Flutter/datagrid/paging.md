@@ -443,7 +443,7 @@ Show the dropdown button option to select a different number of rows per page by
 You can use `availableRowsPerPage` property to define the list of numbers to be displayed in drop-down. The default value of `availableRowsPerPage` property is [10,15,20].
 
 **NOTE**  
-  * You can view dropdown button options by horizontally scrolling the DataPager.
+  * You can view dropdown button option by horizontally scrolling the DataPager.
   * The dropdown button option is not supported, if the [direction](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/direction.html) is vertical.
 
 {% tabs %}
