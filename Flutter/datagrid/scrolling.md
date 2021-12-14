@@ -756,7 +756,7 @@ The `rowsCacheExtent` property will create the additional rows internally with t
 
 ## Set height and width of DataGrid based on rows and columns available
 
-By default, the DataGrid sets its height or width as 300 if its height or width is infinity. Users can sets the height or width based on the number of rows or columns available in DataGrid by using the `shrinkWrapRows` or `shrinkWrapColumns` property respectively.
+By default, the DataGrid sets it to 300, if the height or width of the DataGrid is infinity. Users can set the height or width based on the number of rows or columns available in DataGrid by using the `shrinkWrapRows` or `shrinkWrapColumns` property, respectively.
 
 >**NOTE**
        Shrink wrapping is significantly more expensive than setting the height and width manually.
