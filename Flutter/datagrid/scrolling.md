@@ -690,7 +690,7 @@ class _EmployeeDataSource extends DataGridSource {
 
 ## Increase row cache limit
 
-By default, rows are generated based on the view port size and these rows are reused while scrolling. You can set the [SfDataGrid.rowsCacheExtent]() property to avoid the visible changes caused by re-using. For example, if you show the checkbox in a column without setting the rows using this property, checkbox state changes with animation can be seen when vertical scrolling is performed.
+By default, rows are generated based on the view port size and these rows are reused while scrolling. You can set the `SfDataGrid.rowsCacheExtent` property to avoid the visible changes caused by re-using. For example, if you show the checkbox in a column without setting the rows using this property, checkbox state changes with animation can be seen when vertical scrolling is performed.
 
 The `rowsCacheExtent` property will create the additional rows internally with the existing visible rows, which are already allocated based on view port size. So, the number of rows that will be reused will increase.
 
