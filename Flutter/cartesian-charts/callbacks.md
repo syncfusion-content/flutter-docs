@@ -990,14 +990,9 @@ Triggers when the error bar is being rendered. In this `onRenderDetailsUpdate` c
 
 ## onCreateRenderer
 
-Used to create the renderer for custom series.
+Used to create the renderer for custom series.This is applicable only when the custom series is defined in the sample and for built-in series types, it is not applicable.
 
-This is applicable only when the custom series is defined in the sample
- and for built-in series types, it is not applicable.
-
-Renderer created in this will hold the series state and
- this should be created for each series. [onCreateRenderer] callback
- function should return the renderer class and should not return null.
+Renderer created in this will hold the series state and this should be created for each series. [onCreateRenderer]() callback function should return the renderer class and should not return null.
 
 Series state will be created only once per series and will not be created
 again when we update the series.
@@ -1009,17 +1004,53 @@ Defaults to `null`.
     Widget build(BuildContext context) {
         return Container(
           child: SfCartesianChart(
-            series: <LineSeries<SalesData, num>>[
-                LineSeries<SalesData, num>(
+            series: <ColumnSeries<SalesData, num>>[
+                ColumnSeries<SalesData, num>(
                   onCreateRenderer:(ChartSeries<dynamic, dynamic> series){
-                      return CustomLineSeriesRenderer();
-                    }
-                ),
-              ],
-        ));
+                      return CustomColumnSeriesRenderer();
+              }
+            ),
+          ],
+        )
+      );
     }
-      class CustomLineSeriesRenderer extends LineSeriesRenderer {
+    class CustomColumnSeriesRenderer extends ColumnSeriesRenderer {
        // custom implementation here...
+       @override
+    ChartSegment createSegment() {
+      return _ColumnCustomPainter();
+      }
+    }
+
+    class _CustomColumnSeriesRenderer extends ColumnSeriesRenderer {
+    _CustomColumnSeriesRenderer(this.series);
+
+    final ColumnSeries<dynamic, dynamic> series;
+    @override
+    ChartSegment createSegment() {
+      return _ColumnCustomPainter(series);
+      }
+    }
+
+    class _ColumnCustomPainter extends ColumnSegment {
+    _ColumnCustomPainter(this.series);
+
+    final ColumnSeries<dynamic, dynamic> series;
+    @override
+    int get currentSegmentIndex => super.currentSegmentIndex!;
+
+    @override
+    Paint getFillPaint() {
+      final Paint customerFillPaint = Paint();
+      customerFillPaint.color =  series.dataSource[currentSegmentIndex].y > 30 ? Colors.red : Colors.green;
+      customerFillPaint.style = PaintingStyle.fill;
+      return customerFillPaint;
+    }
+
+    @override
+    void onPaint(Canvas canvas) {
+      super.onPaint(canvas);
+      }
     }
 {% endhighlight %}
 

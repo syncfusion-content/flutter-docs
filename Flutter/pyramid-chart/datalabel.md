@@ -248,7 +248,7 @@ If the user didn’t provide text color to the data label, then by default, the 
 
 ![label_saturation](images/datalabel/pyramid_saturation.png)
 
-## Over flow mode
+## Overflow mode
 
 Action on data labels when it’s overflowing from its region area.
  
@@ -269,10 +269,10 @@ Defaults to `OverflowMode.none`.
              dataLabelSettings: DataLabelSettings(
                isVisible: true,
                overflowMode: OverflowMode.trim
-                    ),
-                ),
-            )
-        );
+            ),
+          ),
+        )
+      );
     }
 
 ![label_overflow](images/datalabel/pyramid_overflow.jpg)

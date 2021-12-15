@@ -165,7 +165,7 @@ If the user didn’t provide text color to the data label, then by default, the 
 
 ![label_saturation](images/datalabel/funnel_saturation.png)
 
-## Over flow mode
+## Overflow mode
 
 Action on data labels when it’s overflowing from its region area.
  

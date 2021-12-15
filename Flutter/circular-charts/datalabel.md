@@ -428,12 +428,9 @@ If the user didn’t provide text color to the data label, then by default, the 
 ![label_saturation](images/datalabel/circular_saturation.png)
 
 
-## Over flow mode
+## Overflow mode
 
-Action on data labels when it’s overflowing from its region area.
- 
-The overflowing data label rendering behavior can be changed based on this. If `overflowMode` property is set to `OverflowMode.none` then the `labelIntersectAction` takes the priority, else
-`overflowMode` takes the priority.
+Action on data labels when it’s overflowing from its region area.The overflowing data label rendering behavior can be changed based on this. If `overflowMode` property is set to `OverflowMode.none` then the `labelIntersectAction` takes the priority, else `overflowMode` takes the priority.
   
  _Note:_ This is applicable for pie, doughnut, pyramid, and funnel series
   types alone.
@@ -450,11 +447,11 @@ Defaults to `OverflowMode.none`.
              dataLabelSettings: DataLabelSettings(
              isVisible: true,
              overflowMode: OverflowMode.trim
-           ),
-         ),
-       ],
-     )
-    );
+                        ),
+                    ),
+                ],
+            )
+        );
     }
 
 ![dataLabel_overflow](images/datalabel/circular_overflow.jpg)
