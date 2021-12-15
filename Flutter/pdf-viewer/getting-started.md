@@ -71,8 +71,6 @@ Once the package has been imported, initialize the `SfPdfViewer` as a child of a
 * File
 * Memory
 
-N> Currently, we do not support viewing the password-protected PDF document.
-
 ### Load document from the Asset
 
 The [SfPdfViewer.asset](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/SfPdfViewer.asset.html) creates a widget that displays the PDF document obtained from an [`AssetBundle`](https://api.flutter.dev/flutter/services/AssetBundle-class.html). The following code example explains the same.
@@ -306,7 +304,7 @@ Widget build(BuildContext context) {
 The [onDocumentLoadFailed](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onDocumentLoadFailed.html) callback triggers when the document loading fails in the `SfPdfViewer`. That is,
 
 * When any corrupted document is loaded.
-* When any password-protected document is loaded.
+* When any password-protected document is loaded with invalid or empty password.
 * When any improper input source value like the wrong URL or file path is given.
 * When any non-PDF document is loaded.
 
