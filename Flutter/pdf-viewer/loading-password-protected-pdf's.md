@@ -26,7 +26,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-# Customize the visibility of password dialogue
+## Customize the visibility of password dialogue
 
 By default,the password dialog will be alerted when user doesn’t provide a password for encrypted document or incorrect password is passed in constructor.
 You can customize the visibility of the password dialogue using the canShowPasswordDialog property.The following code example explain the same.
@@ -46,4 +46,4 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-
+![Password dialog](images/password_dialog.png)
