@@ -992,10 +992,9 @@ Triggers when the error bar is being rendered. In this `onRenderDetailsUpdate` c
 
 Used to create the renderer for custom series.This is applicable only when the custom series is defined in the sample and for built-in series types, it is not applicable.
 
-Renderer created in this will hold the series state and this should be created for each series. [onCreateRenderer]() callback function should return the renderer class and should not return null.
+Renderer created in this will hold the series state and this should be created for each series.[onCreateRenderer]() callback function should return the renderer class and should not return null.
 
-Series state will be created only once per series and will not be created
-again when we update the series.
+Series state will be created only once per series and will not be created again when we update the series.
 
 Defaults to `null`.
 
@@ -1016,9 +1015,9 @@ Defaults to `null`.
     }
     class CustomColumnSeriesRenderer extends ColumnSeriesRenderer {
        // custom implementation here...
-       @override
-    ChartSegment createSegment() {
-      return _ColumnCustomPainter();
+      @override
+      ChartSegment createSegment() {
+        return _ColumnCustomPainter();
       }
     }
 
@@ -1026,7 +1025,7 @@ Defaults to `null`.
     _CustomColumnSeriesRenderer(this.series);
 
     final ColumnSeries<dynamic, dynamic> series;
-    @override
+     @override
     ChartSegment createSegment() {
       return _ColumnCustomPainter(series);
       }

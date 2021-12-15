@@ -432,8 +432,7 @@ If the user didn’t provide text color to the data label, then by default, the 
 
 Action on data labels when it’s overflowing from its region area.The overflowing data label rendering behavior can be changed based on this. If `overflowMode` property is set to `OverflowMode.none` then the `labelIntersectAction` takes the priority, else `overflowMode` takes the priority.
   
- _Note:_ This is applicable for pie, doughnut, pyramid, and funnel series
-  types alone.
+ _Note:_ This is applicable for pie, doughnut, pyramid, and funnel series types alone.
 
 Defaults to `OverflowMode.none`.
 
@@ -453,5 +452,5 @@ Defaults to `OverflowMode.none`.
             )
         );
     }
-
+{% endhighlight %}
 ![dataLabel_overflow](images/datalabel/circular_overflow.jpg)
