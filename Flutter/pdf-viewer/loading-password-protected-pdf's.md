@@ -46,4 +46,4 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-![Password dialog](images/password_dialog.png)
+![Password dialog](images/password-dialog.png)
