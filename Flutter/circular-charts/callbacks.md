@@ -438,14 +438,11 @@ Defaults to `null`.
 
 ## axisLabelFormatter
  
-Called while rendering each axis label in the chart.
-
-Provides label text, axis name, orientation of the axis, trimmed text and text styles such as color,
- font size, and font weight to the user using the `AxisLabelRenderDetails` class.
+Called while rendering each axis label in the chart. Provides label text, axis name, orientation of the axis, trimmed text and text styles such as color, font size, and font weight to the user using the `AxisLabelRenderDetails` class.
 
 You can customize the text and text style using the `ChartAxisLabel` class and can return it.
 
- Defaults to `null`.
+Defaults to `null`.
 
 {% highlight dart %}
 
@@ -459,6 +456,6 @@ You can customize the text and text style using the `ChartAxisLabel` class and c
     }
 
     ChartAxisLabel axis(AxisLabelRenderDetails details) {
-    return ChartAxisLabel('axis Label', details.textStyle);
+      return ChartAxisLabel('axis Label', details.textStyle);
     }
 {% endhighlight %}
