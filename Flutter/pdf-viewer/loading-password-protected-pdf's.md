@@ -18,8 +18,8 @@ The password protected document can be loaded by passing the password in constru
 Widget build(BuildContext context) {
   return Scaffold(
       body: Container(
-          child: SfPdfViewer.network(
-              'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
+          child: SfPdfViewer.asset(
+              'assets/encrypted_document.pdf',
               password: 'syncfusion',)));
 }
 
@@ -38,8 +38,8 @@ You can customize the visibility of the password dialogue using the canShowPassw
 Widget build(BuildContext context) {
   return Scaffold(
       body: Container(
-          child: SfPdfViewer.network(
-              'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
+          child: SfPdfViewer.asset(
+              'assets/encrypted_document.pdf',
             canShowPasswordDialog: false,)));
 }
 
