@@ -16,7 +16,7 @@ You can refer to the [**Download**](https://help.syncfusion.com/flutter/installa
 
 The steps below show how to install the Essential Studio Flutter product.
 
-1.	Open the Syncfusion Flutter offline installer file from downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package
+1.	Open the Syncfusion Flutter offline installer file from downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package.
 
     ![Installer extraction wizard](Platform_images/Step-by-Step-Installation_img1.png)
 
