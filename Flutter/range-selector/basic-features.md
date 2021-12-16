@@ -169,7 +169,65 @@ class Data {
 
 ![Date range selector](images/basic-features/selector_date_label.png)
 
-**Handle value change**
+## Handle onChangeStart, onChanged, and onChangeEnd callbacks
+
+**onChangeStart**
+
+The `onChangeStart` callback is called when the user begins to interact with range selector using a tap or drag action. This callback is only used to notify the user that the interaction has started and it does not change the value of the range selector thumb.
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 6.0);
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfRangeSelector(
+      min: 0.0,
+      max: 10.0,
+      initialValues: _values,
+      onChangeStart: (SfRangeValues startValues) {
+        print('Interaction started');
+      },
+      onChanged: (SfRangeValues newValues) {},
+      child: SizedBox(),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+**onChangeEnd**
+
+The `onChangeEnd` callback is called when the user stops to interact with range selector using a tap or drag action. This callback is only used to notify the user that the interaction has ended and it does not change the value of the range selector thumb.
+
+{% tabs %}
+{% highlight Dart %}
+
+SfRangeValues _values = SfRangeValues(4.0, 6.0);
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfRangeSelector(
+      min: 0.0,
+      max: 10.0,
+      initialValues: _values,
+      onChangeEnd: (SfRangeValues endValues) {
+        print('Interaction ended');
+      },
+      onChanged: (SfRangeValues newValues) {},
+      child: SizedBox(),
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+**onChanged**
 
 The [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfRangeSelector/onChanged.html) callback is called when the user is selecting the new values.
 

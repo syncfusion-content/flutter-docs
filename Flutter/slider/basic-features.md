@@ -174,7 +174,71 @@ Widget build(BuildContext context) {
 
 ![Date slider](images/basic-features/vertical_date_labels.png)
 
-**Handle value change**
+## Handle onChangeStart, onChanged, and onChangeEnd callbacks
+
+**onChangeStart**
+
+The `onChangeStart` callback is called when the user begins to interact with slider using a tap or drag action. This callback is only used to notify the user that the interaction has started and it does not change the value of the slider thumb.
+
+{% tabs %}
+{% highlight Dart %}
+
+double _value = 4.0;
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfSlider(
+      min: 0.0,
+      max: 10.0,
+      value: _value,
+      onChangeStart: (dynamic startValue) {
+        print('Interaction started');
+      },
+      onChanged: (dynamic newValue) {
+        setState(() {
+          _value = newValue;
+        });
+      },
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+**onChangeEnd**
+
+The `onChangeEnd` callback is called when the user stops to interact with slider using a tap or drag action. This callback is only used to notify the user that the interaction has ended and it does not change the value of the slider thumb.
+
+{% tabs %}
+{% highlight Dart %}
+
+double _value = 4.0;
+
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SfSlider(
+      min: 0.0,
+      max: 10.0,
+      value: _value,
+      onChanged: (dynamic newValue) {
+        setState(() {
+          _value = newValue;
+        });
+      },
+      onChangeEnd: (dynamic endValue) {
+        print('Interaction ended');
+      },
+    ),
+  );
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+**onChanged**
 
 The [`onChanged`](https://pub.dev/documentation/syncfusion_flutter_sliders/latest/sliders/SfSlider/onChanged.html) callback is called when the user selects a value through interaction.
 

@@ -436,6 +436,133 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
+## Show dropdown button to choose rows per page
+
+Show the dropdown button option to select a different number of rows per page by defining the `onRowPerPageChanged` callback. If it is null, no option will be provided to select different number of rows per page.
+
+You can use `availableRowsPerPage` property to define the list of numbers to be displayed in drop-down. The default value of `availableRowsPerPage` property is [10,15,20].
+
+>**NOTE** 
+  You can view dropdown button option by horizontally scrolling the DataPager. The dropdown button option is not supported, if the [direction](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataPager/direction.html) is vertical.
+
+{% tabs %}
+{% highlight Dart %}
+
+  int _rowsPerPage=10;
+  List<Employee> employees = <Employee>[];
+  late EmployeeDataSource employeeDataSource;
+  double datapagerHeight = 70.0;
+
+  @override
+  void initState() {
+    super.initState();
+    employees = getEmployeeData();
+    employeeDataSource = EmployeeDataSource(employeeData: employees);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text('Syncfusion Flutter DataGrid'),
+        ),
+        body: LayoutBuilder(
+            builder: (BuildContext context, BoxConstraints constraints) {
+          return Column(
+            children: [
+              Container(
+                height: constraints.maxHeight - datapagerHeight,
+                child: SfDataGrid(
+                    source: employeeDataSource,
+                    columnWidthMode: ColumnWidthMode.fill,
+                    columns: _column),
+              ),
+              Container(
+                  height: datapagerHeight,
+                  child: SfDataPager(
+                    delegate: employeeDataSource,
+                    availableRowsPerPage: [10, 20, 30],
+                    onRowsPerPageChanged: (int? rowsPerPage) {
+                      setState(() {
+                        _rowsPerPage = rowsPerPage!;
+                        employeeDataSource.updateDataGriDataSource();
+                      });
+                    },
+                    pageCount:
+                        ((employees.length / _rowsPerPage).ceil()).toDouble(),
+                  )),
+            ],
+          );
+        }));
+  }
+
+  class EmployeeDataSource extends DataGridSource {
+  /// Creates the employee data source class with required details.
+  EmployeeDataSource({required List<Employee> employeeData}) {
+    _employeeData = employeeData;
+    _paginatedRows = employeeData;
+    buildDataGridRow();
+  }
+
+  void buildDataGridRow() {
+    _employeeDataGridRows = _paginatedRows
+        .map<DataGridRow>((e) => DataGridRow(cells: [
+              DataGridCell<int>(columnName: 'id', value: e.id),
+              DataGridCell<String>(columnName: 'name', value: e.name),
+              DataGridCell<String>(
+                  columnName: 'designation', value: e.designation),
+              DataGridCell<int>(columnName: 'salary', value: e.salary),
+            ]))
+        .toList();
+  }
+
+  List<DataGridRow> _employeeDataGridRows = [];
+  List<Employee> _paginatedRows = [];
+  List<Employee> _employeeData = [];
+
+  @override
+  List<DataGridRow> get rows => _employeeDataGridRows;
+
+  @override
+  DataGridRowAdapter buildRow(DataGridRow row) {
+    return DataGridRowAdapter(
+        cells: row.getCells().map<Widget>((e) {
+      return Container(
+        alignment: Alignment.center,
+        padding: EdgeInsets.all(8.0),
+        child: Text(e.value.toString()),
+      );
+    }).toList());
+  }
+
+  @override
+  Future<bool> handlePageChange(int oldPageIndex, int newPageIndex) {
+    final int _startIndex = newPageIndex * _rowsPerPage;
+    int _endIndex = _startIndex + _rowsPerPage;
+    if (_endIndex > _employeeData.length) {
+      _endIndex = _employeeData.length;
+    }
+
+    /// Get particular range from the sorted collection.
+    if (_startIndex < _employeeData.length &&
+        _endIndex <= _employeeData.length) {
+      _paginatedRows = _employeeData.getRange(_startIndex, _endIndex).toList();
+    } else {
+      _paginatedRows = <Employee>[];
+    }
+    buildDataGridRow();
+    notifyListeners();
+    return Future<bool>.value(true);
+  }
+
+  void updateDataGriDataSource() {
+    notifyListeners();
+  }
+  }
+{% endhighlight %}
+{% endtabs %}
+
+![flutter datapager with rowsperpage](images/paging/flutter_datapager_rowsperpage.gif)
 
 ## Orientation
 
