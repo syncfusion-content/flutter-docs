@@ -411,7 +411,7 @@ the data points and legend. For further reference on this callback, Check the [`
 
 Used to create the renderer for custom series.This is applicable only when the custom series is defined in the sample and for built-in series types, it is not applicable.
 
-Renderer created in this will hold the series state and this should be created for each series. [onCreateRenderer](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/onCreateRenderer.html) callback function should return the renderer class and should not return null.
+Renderer created in this will hold the series state and this should be created for each series. [`onCreateRenderer`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/onCreateRenderer.html) callback function should return the renderer class and should not return null.
 
 Series state will be created only once per series and will not be created again when we update the series.
 
