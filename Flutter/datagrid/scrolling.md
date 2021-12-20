@@ -690,7 +690,7 @@ class _EmployeeDataSource extends DataGridSource {
 
 ## Increase row cache limit
 
-By default, rows are generated based on the view port size and these rows are reused while scrolling. You can set the `SfDataGrid.rowsCacheExtent` property to avoid the visible changes caused by re-using. For example, if you show the checkbox in a column without setting the rows using this property, checkbox state changes with animation can be seen when vertical scrolling is performed.
+By default, rows are generated based on the view port size and these rows are reused while scrolling. You can set the [SfDataGrid.rowsCacheExtent](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/rowsCacheExtent.html) property to avoid the visible changes caused by re-using. For example, if you show the checkbox in a column without setting the rows using this property, checkbox state changes with animation can be seen when vertical scrolling is performed.
 
 The `rowsCacheExtent` property will create the additional rows internally with the existing visible rows, which are already allocated based on view port size. So, the number of rows that will be reused will increase.
 
@@ -756,7 +756,7 @@ The `rowsCacheExtent` property will create the additional rows internally with t
 
 ## Set height and width of DataGrid based on rows and columns available
 
-If the height or width of the DataGrid is infinity, then DataGrid sets its height or width to 300 by default. Users can set the height or width based on the number of rows or columns available in DataGrid by using the `shrinkWrapRows` or `shrinkWrapColumns` property, respectively.
+If the height or width of the DataGrid is infinity, then DataGrid sets its height or width to 300 by default. Users can set the height or width based on the number of rows or columns available in DataGrid by using the [shrinkWrapRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/shrinkWrapRows.html) or [shrinkWrapColumns](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/shrinkWrapColumns.html) property, respectively.
 
 >**NOTE**
        Shrink wrapping is significantly more expensive than setting the height and width manually.

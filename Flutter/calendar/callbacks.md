@@ -78,7 +78,7 @@ Widget build(BuildContext context) {
 
 ## Calendar details callback
 
-Return calendar details based on the given offset passed through argument by using the [getCalendarDetailsAtOffset]() method.
+Return calendar details based on the given offset passed through argument by using the [getCalendarDetailsAtOffset](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/getCalendarDetailsAtOffset.html) method.
 
 `date` - returns the date based on the given offset.
 `appointments` - returns the appointments based on the given offset.
