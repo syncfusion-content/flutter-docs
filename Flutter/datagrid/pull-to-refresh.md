@@ -175,9 +175,10 @@ import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 Widget build(BuildContext context) {
   return Theme(
       data: ThemeData(
-        accentColor: Colors.white,
-        canvasColor: Colors.lightBlue,
-      ),
+            brightness: Brightness.light,
+            canvasColor: Colors.lightBlue,
+            colorScheme: const ColorScheme.light(
+                primary: Colors.white)),
       child: SfDataGrid(
           allowPullToRefresh: true,
           source: _employeeDataSource,
