@@ -120,6 +120,81 @@ Triggers while rendering the axis labels. Text and text styles such as color, fo
 
 * [Using dateTime values in y-axis using onAxisLabelRender callback](https://www.syncfusion.com/kb/12224/how-to-use-datetime-values-in-the-y-axis-sfcartesianchart).
 
+## multiLevelLabelFormatter
+
+Triggers while rendering the multi-level labels. Text and text styles such as color, font size, font-weight, etc can be customized by using [`ChartAxisLabel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxisLabel-class.html) class. The [`MultiLevelLabelRenderDetails`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelRenderDetails-class.html) contains the following arguments.
+
+* [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelRenderDetails/text.html) - specifies the multi-level label to be rendered.
+* [`actualLevel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelRenderDetails/actualLevel.html) - specifies the re-ordered level value of the current multi-level label.
+* [`axisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelRenderDetails/axisName.html) - specifies the axis name.
+* [`index`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelRenderDetails/index.html) - specifies the index of the multi-level label.
+* [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelRenderDetails/textStyle.html) - used to change the text color, size, font family, font style, and font weight.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      final List<ChartData> chartData = <ChartData>[
+        ChartData(1, 24),
+        ChartData(2, 20),
+        ChartData(3, 35),
+        ChartData(4, 27),
+        ChartData(5, 30),
+        ChartData(6, 41),
+        ChartData(7, 26)
+      ];
+      return Scaffold(
+        body: SfCartesianChart(
+          primaryXAxis: NumericAxis(
+            multiLevelLabelFormatter: (MultiLevelLabelRenderDetails details) {
+              return ChartAxisLabel(
+                details.index == 2 ? 'Callback' : details.text,
+                details.textStyle);
+            },
+            multiLevelLabels: const <NumericMultiLevelLabel>[
+              NumericMultiLevelLabel(
+                start: 1, 
+                end: 4, 
+                text: 'First'
+              ),
+              NumericMultiLevelLabel(
+                start: 4, 
+                end: 7, 
+                text: 'Second'
+              ),
+              NumericMultiLevelLabel(
+                start: 1, 
+                end: 4, 
+                text: 'Third', 
+                level: 1
+              ),
+              NumericMultiLevelLabel(
+                start: 4, 
+                end: 7, 
+                text: 'Fourth', 
+                level: 1
+              ),
+            ]
+          ),
+          series: <ChartSeries<ChartData, int>>[
+            LineSeries<ChartData, int>(
+              dataSource: chartData,
+              xValueMapper: (ChartData data, _) => data.x,
+              yValueMapper: (ChartData data, _) => data.y,
+            )
+          ]
+        )
+      );
+    }
+
+    class ChartData {
+      ChartData(this.x, this.y);
+        final int x;
+        final int y;
+    }
+
+{% endhighlight %}
+
 ## onDataLabelRender
 
 Triggers when data label is rendering. Text and text styles such as color, font size, and font weight can be customized. The [`onDataLabelRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onDataLabelRender.html) Callback contains the following arguments.
