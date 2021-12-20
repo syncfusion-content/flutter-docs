@@ -373,7 +373,7 @@ class MyAppState extends State<MyApp> {
 ![Hijri programmatic multi-range selection](images/hijri-picker/hijri_programmatic_selection_multi_range.png)
 
 ### Extendable range selection
-Extend the selected range with the new selected date in any date range picker view by setting the [DateRangePickerSelectionMode]() to `extendableRange`.
+Extend the selected range with the new selected date in any date range picker view by setting the [DateRangePickerSelectionMode](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/DateRangePickerSelectionMode.html) to `extendableRange`.
 
 {% tabs %}
 {% highlight Dart %}
