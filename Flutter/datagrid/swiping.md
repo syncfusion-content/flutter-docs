@@ -264,7 +264,7 @@ Widget build(BuildContext context) {
 
 ## Set different swipe offsets for right and left swiping 
 
-You can set the different swipe offsets based on swipe direction by using the `onSwipeStart` callback and passing the required swipe offset to the `setSwipeMaxOffset` method from the `onSwipeStart` callback's argument.  
+You can set the different swipe offsets based on swipe direction by using the `onSwipeStart` callback and passing the required swipe offset to the [setSwipeMaxOffset](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSwipeStartDetails/setSwipeMaxOffset.html) method from the `onSwipeStart` callback's argument.  
 
 {% tabs %}
 {% highlight Dart %} 
