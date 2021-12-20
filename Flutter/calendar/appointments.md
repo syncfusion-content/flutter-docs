@@ -290,6 +290,9 @@ class Meeting {
 {% endhighlight %}
 {% endtabs %}
 
+>**NOTE**
+* This method must be implemented to get the data with business object type when drag and drop and appointment resizing enabled.
+
 ## Spanned appointments
 
 Spanned Appointment is an appointment, which lasts more than 24 hours. It does not block out time slots in SfCalendar, it will render in `All-Day appointment panel` exclusively.
