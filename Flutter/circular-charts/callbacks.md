@@ -405,3 +405,56 @@ The callback contains the following argument:
 
 The onCreateShader callback is called once while rendering
 the data points and legend. For further reference on this callback, Check the [`Gradient and ImageShader`](./circular-series-customization#Gradient-fill-and-shader) section.
+
+## onCreateRenderer
+
+Used to create the renderer for custom series.This is applicable only when the custom series is defined in the sample and for built-in series types, it is not applicable.
+
+Renderer created in this will hold the series state and this should be created for each series. [`onCreateRenderer`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/onCreateRenderer.html) callback function should return the renderer class and should not return null.
+
+Series state will be created only once per series and will not be created again when we update the series.
+
+Defaults to `null`.
+
+{% highlight dart %}
+
+    Widget build(BuildContext context) {
+        return Container(
+            child: SfCircularChart(
+                series: <PieSeries<SalesData, num>>[
+                    PieSeries<SalesData, num>(
+                     onCreateRenderer:(CircularSeries<dynamic, dynamic> series){
+                       return CustomPieSeriesRenderer();
+                    }
+                ),
+              ],
+        ));
+    }
+    class CustomPieSeriesRenderer extends PieSeriesRenderer {
+       // custom implementation here...
+    }
+{% endhighlight %}
+
+## axisLabelFormatter
+ 
+Called while rendering each axis label in the chart. Provides label text, axis name, orientation of the axis, trimmed text and text styles such as color, font size, and font weight to the user using the `AxisLabelRenderDetails` class.
+
+You can customize the text and text style using the `ChartAxisLabel` class and can return it.
+
+Defaults to `null`.
+
+{% highlight dart %}
+
+    Widget build(BuildContext context) {
+      return Container(
+        child: SfCartesianChart(
+            primarXAxis: CategoryAxis(
+               axisLabelFormatter: (AxisLabelRenderDetails details) => axis(details),
+            ),
+        ));
+    }
+
+    ChartAxisLabel axis(AxisLabelRenderDetails details) {
+      return ChartAxisLabel('axis Label', details.textStyle);
+    }
+{% endhighlight %}
