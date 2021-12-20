@@ -140,7 +140,7 @@ Extend the selected range with the new selected date in any date range picker vi
 * The hovering effect which occurs while extending the range will not be displayed when the `DateRangePickerNavigationMode` is set as `DateRangePickerNavigationMode.scroll`.
 
 ## Extendable range selection Direction
-It allows to extend the selection direction by using the [extendableRangeSelectionDirection]() property of the DateRangePicker. 
+It allows to extend the selection direction by using the [extendableRangeSelectionDirection](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker/extendableRangeSelectionDirection.html) property of the DateRangePicker. 
 You can set the extendable range selection direction as forward, backward, both and none. 
 
 {% tabs %}
