@@ -409,6 +409,33 @@ class MyAppState extends State<MyApp> {
 >**NOTE**
 * The hovering effect which occurs while extending the range will not be displayed when the `DateRangePickerNavigationMode` is set as `DateRangePickerNavigationMode.scroll`.
 
+## Extendable range selection Direction
+It allows to extend the selection direction by using the [extendableRangeSelectionDirection](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfHijriDateRangePicker/extendableRangeSelectionDirection.html) property of the DateRangePicker. 
+You can set the extendable range selection direction as forward, backward, both and none. 
+
+{% tabs %}
+{% highlight Dart %}
+
+@override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: SfHijriDateRangePicker(
+      view: HijriDatePickerView.month,
+      selectionMode: DateRangePickerSelectionMode.extendableRange,
+      extendableRangeSelectionDirection:
+          ExtendableRangeSelectionDirection.forward,
+    )));
+  }
+
+{% endhighlight %}
+{% endtabs %}
+
+>**NOTE**
+* If it is set to none, it won't allow to extend the selection. It will remain in the initial range.
+* If it is set to forward direction, the start date will not be changed here.
+* If it is set to backward direction, the end date will not be changed here.
+
 ## Month cell customization
 Customize the Hijri date picker month view by using the [monthCellStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfHijriDateRangePicker/monthCellStyle.html) property of `SfHijriDateRangePicker`.
 
