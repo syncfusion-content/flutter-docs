@@ -1301,9 +1301,9 @@ The multi-level labels in the Cartesian chart are used to categorize axis labels
 * [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericMultiLevelLabel/text.html)  - Represents the text which needs to be rendered for a multilevel label.
 * [`level`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericMultiLevelLabel/text.html) - Represents the hierarchical structure of a multi level label.
 
-#### Multi-level labels in numeric axis
+### Multi-level labels in numeric axis
 
-The [`NumericMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericMultiLevelLabel/NumericMultiLevelLabel.html) class is used to render multi-level labels in the numeric axis.
+The [`NumericMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericMultiLevelLabel/NumericMultiLevelLabel.html) class is used to render multi-level labels in the numeric axis. Here the values for [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericMultiLevelLabel/start.html) and [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericMultiLevelLabel/end.html) have to be double.
 
 {% highlight dart %}
 
@@ -1367,9 +1367,9 @@ The [`NumericMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter_
 
 ![Multi-level labels](images/axis-customization/numeric_multi_level_label.jpg)
 
-#### Multi-level labels in category axis
+### Multi-level labels in category axis
 
-The [`CategoricalMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CategoricalMultiLevelLabel-class.html) is used to render multi-level labels in the category axis.
+The [`CategoricalMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CategoricalMultiLevelLabel-class.html) is used to render multi-level labels in the category axis. Here [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CategoricalMultiLevelLabel/start.html) and [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CategoricalMultiLevelLabel/end.html) values need to be string values that are available in the data source.
 
 {% highlight dart %}
 
@@ -1426,13 +1426,13 @@ The [`CategoricalMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flut
        final int y;
     }
 
-![Multi-level labels](images/axis-customization/category_multi_level_label.jpg)
-
 {% endhighlight %}
 
-#### Multi-level labels in date time axis
+![Multi-level labels](images/axis-customization/category_multi_level_label.jpg)
 
-The [`DateTimeMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeMultiLevelLabel-class.html) is used to render multi-level labels in the date-time axis.
+### Multi-level labels in date time axis
+
+The [`DateTimeMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeMultiLevelLabel-class.html) is used to render multi-level labels in the date-time axis. Here [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeMultiLevelLabel/start.html) and [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeMultiLevelLabel/end.html) properties need to be date-time values.
 
 {% highlight dart %}
 
@@ -1496,9 +1496,9 @@ The [`DateTimeMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter
 
 ![Multi-level labels](images/axis-customization/datetime_multi_level_label.jpg)
 
-#### Multi-level labels in date time category axis
+### Multi-level labels in date time category axis
 
-The [`DateTimeCategoricalMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoricalMultiLevelLabel-class.html) is used to render multi-level labels in the date-time category axis.
+The [`DateTimeCategoricalMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoricalMultiLevelLabel-class.html) is used to render multi-level labels in the date-time category axis. Here [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoricalMultiLevelLabel/start.html) and [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoricalMultiLevelLabel/end.html) properties need to be date-time values.
 
 {% highlight dart %}
 
@@ -1559,9 +1559,9 @@ The [`DateTimeCategoricalMultiLevelLabel`](https://pub.dev/documentation/syncfus
 
 ![Multi-level labels](images/axis-customization/datetime_category_multi_level_label.jpg)
 
-#### Multi-level labels in logarithmic axis
+### Multi-level labels in logarithmic axis
 
-The [`LogarithmicMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LogarithmicMultiLevelLabel-class.html) is used to render multi-level labels in the logarithmic axis.
+The [`LogarithmicMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LogarithmicMultiLevelLabel-class.html) is used to render multi-level labels in the logarithmic axis. Here the [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LogarithmicMultiLevelLabel/start.html) and [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LogarithmicMultiLevelLabel/end.html) properties need to be double values.
 
 {% highlight dart %}
 
@@ -1625,13 +1625,13 @@ The [`LogarithmicMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flut
 
 ![Multi-level labels](images/axis-customization/logarithmic_multi_level_label.jpg)
 
-#### Multi-level label customization
+### Multi-level label customization
 
-The [`multiLevelLabelStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/multiLevelLabelStyle.html) property is used to customize the multi-level label's border width, color, and text style.
+The [`multiLevelLabelStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/multiLevelLabelStyle.html) property is used to customize the multi-level label's border width, border type, color, and text style.
 
-##### Multi-level label text customization
+#### Multi-level label text customization
 
-The text style of the multi-level label like color, font size, font-weight, etc can be customized by using [`TextStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelStyle/textStyle.html) class
+The text style of the multi-level label like color, font size, font-weight, etc can be customized by using [`TextStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelStyle/textStyle.html) class.
 
 {% highlight dart %}
 
@@ -1701,11 +1701,11 @@ The text style of the multi-level label like color, font size, font-weight, etc 
 
 ![Multi-level labels](images/axis-customization/multi_level_label_text_customization.jpg)
 
-##### Multi-level label border customization
+#### Multi-level label border customization
 
-* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelStyle/borderColor.html) - Used to customize the border color of multi-level labels.
-* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelStyle/borderWidth.html) - Used to customize the border width of multi-level labels.
-* [`borderType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelStyle/borderType.html) - Used to customize the border type of multi-level labels. It can be customized by using below properties,
+The border width, color and type of the multi-level label can be customized using the [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelStyle/borderWidth.html),  [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelStyle/borderColor.html) and [`borderType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelStyle/borderType.html) properties.
+
+The different types of multi-level label's border are mentioned below,
 
 * [`MultiLevelBorderType.rectangle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelBorderType.html) - Renders the multi-level label border as rectangle.
 * [`MultiLevelBorderType.withoutTopAndBottom`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelBorderType.html) - Renders the multi-level label border as rectangle without it's top and bottom.
