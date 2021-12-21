@@ -178,6 +178,57 @@ The [`labelStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
 
 ![Axis label](images/axis-customization/label_custom.jpg)
 
+### Axis border customization
+
+The color and width of the axis border can be customized with [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/borderColor.html) and [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/borderWidth.html) properties respectively. The border types can be changed using the [`axisBorderType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/axisBorderType.html) property and the default value is [`AxisBorderType.rectangle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisBorderType.html). Another value of [`axisBorderType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/axisBorderType.html) is [`AxisBorderType.withoutTopAndBottom`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisBorderType.html).
+
+* [`AxisBorderType.rectangle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisBorderType.html) - Renders the border as a rectangle around a label.
+* [`AxisBorderType.withoutTopAndBottom`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisBorderType.html) - Renders the border without the top and bottom of a rectangle.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      final List<ChartData> chartData = <ChartData>[
+        ChartData(1, 24),
+        ChartData(2, 20),
+        ChartData(3, 35),
+        ChartData(4, 27),
+        ChartData(5, 30),
+        ChartData(6, 41),
+        ChartData(7, 26)
+      ];
+      return Scaffold(
+        body: SfCartesianChart(
+          primaryXAxis: NumericAxis(
+            borderWidth: 1.0,
+            borderColor: Colors.blue
+          ),
+          primaryYAxis: NumericAxis(
+            borderWidth: 1.0, 
+            borderColor: Colors.blue
+          ),
+          series: <ChartSeries<ChartData, int>>[
+            LineSeries<ChartData, int>(
+              dataSource: chartData,
+              xValueMapper: (ChartData data, _) => data.x,
+              yValueMapper: (ChartData data, _) => data.y,
+            )
+          ]
+        )
+      );
+    }  
+
+    class ChartData {
+      ChartData(this.x, this.y);
+        final int x;
+        final int y;
+    }
+
+{% endhighlight %}
+
+![Axis border customization](images/axis-customization/axis_border_customization.jpg)
+
 ### Axis animation
 
 The axis animation can be enabled using the `enableAxisAnimation` property of the chart. It defaults to `false` and this is applicable for all the primary and secondary axis in the chart.
@@ -1240,6 +1291,493 @@ Here you need to specify the [`minimum`](https://pub.dev/documentation/syncfusio
     }
 
 {% endhighlight %}
+
+## Multi-level labels
+
+The multi-level labels in the Cartesian chart are used to categorize axis labels and they can be added to the chart axis by using the [`multiLevelLabels`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/multiLevelLabels.html) property. The below properties are used to add the multi-level label.
+
+* [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericMultiLevelLabel/start.html) - Represents the start value of an multi-level label.
+* [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericMultiLevelLabel/end.html)   - Represents the end value of an multi-level label.
+* [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericMultiLevelLabel/text.html)  - Represents the text which needs to be rendered for a multilevel label.
+* [`level`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericMultiLevelLabel/text.html) - Represents the hierarchical structure of a multi level label.
+
+### Multi-level labels in numeric axis
+
+The [`NumericMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericMultiLevelLabel/NumericMultiLevelLabel.html) class is used to render multi-level labels in the numeric axis. Here the values for [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericMultiLevelLabel/start.html) and [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericMultiLevelLabel/end.html) have to be double.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      final List<ChartData> chartData = <ChartData>[
+        ChartData(1, 24),
+        ChartData(2, 20),
+        ChartData(3, 35),
+        ChartData(4, 27),
+        ChartData(5, 30),
+        ChartData(6, 41),
+        ChartData(7, 26)
+      ];
+      return Scaffold(
+        body: SfCartesianChart(
+          primaryXAxis: NumericAxis(
+            multiLevelLabels: const <NumericMultiLevelLabel>[
+              NumericMultiLevelLabel(
+                start: 1, 
+                end: 4, 
+                text: 'First'
+              ),
+              NumericMultiLevelLabel(
+                start: 4, 
+                end: 7, 
+                text: 'Second'
+              ),
+              NumericMultiLevelLabel(
+                start: 1, 
+                end: 4, 
+                text: 'Third', 
+                level: 1
+              ),
+              NumericMultiLevelLabel(
+                start: 4, 
+                end: 7, 
+                text: 'Fourth', 
+                level: 1
+              ),
+            ]
+          ),
+          series: <ChartSeries<ChartData, int>>[
+            LineSeries<ChartData, int>(
+              dataSource: chartData,
+              xValueMapper: (ChartData data, _) => data.x,
+              yValueMapper: (ChartData data, _) => data.y,
+            )
+          ],
+        )
+      );
+    }
+    
+    class ChartData {
+      ChartData(this.x, this.y);
+        final int x;
+        final int y;
+    }
+
+{% endhighlight %}
+
+![Multi-level labels](images/axis-customization/numeric_multi_level_label.jpg)
+
+### Multi-level labels in category axis
+
+The [`CategoricalMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CategoricalMultiLevelLabel-class.html) is used to render multi-level labels in the category axis. Here [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CategoricalMultiLevelLabel/start.html) and [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CategoricalMultiLevelLabel/end.html) values need to be string values that are available in the data source.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      final List<ChartData> chartData = <ChartData>[
+        ChartData('Parker', 24),
+        ChartData('David', 20),
+        ChartData('Peter', 35),
+        ChartData('John', 30)
+      ];
+      return Scaffold(
+        body: SfCartesianChart(
+          primaryXAxis: CategoryAxis(
+            multiLevelLabels: const <CategoricalMultiLevelLabel>[
+              CategoricalMultiLevelLabel(
+                start:'Parker', 
+                end:'David', 
+                text: 'First'
+              ),
+              CategoricalMultiLevelLabel(
+                start:'Peter', 
+                end:'John', 
+                text: 'Second'
+              ),
+              CategoricalMultiLevelLabel(
+                start:'Parker', 
+                end:'David',  
+                text: 'Third', 
+                level: 1
+              ),
+              CategoricalMultiLevelLabel(
+                start:'Peter', 
+                end:'John', 
+                text: 'Fourth', 
+                level: 1
+              )
+            ]
+          ),
+          series: <ChartSeries<ChartData, String>>[
+            LineSeries<ChartData, String>(
+              dataSource: chartData,
+              xValueMapper: (ChartData data, _) => data.x,
+              yValueMapper: (ChartData data, _) => data.y,
+            )
+          ]
+        )
+      );
+    } 
+
+    class ChartData {
+      ChartData(this.x, this.y);
+       final String x;
+       final int y;
+    }
+
+{% endhighlight %}
+
+![Multi-level labels](images/axis-customization/category_multi_level_label.jpg)
+
+### Multi-level labels in date time axis
+
+The [`DateTimeMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeMultiLevelLabel-class.html) is used to render multi-level labels in the date-time axis. Here [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeMultiLevelLabel/start.html) and [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeMultiLevelLabel/end.html) properties need to be date-time values.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      final List<ChartData> chartData = <ChartData>[
+        ChartData(DateTime(2020,1,1), 24),
+        ChartData(DateTime(2021,1,1), 20),
+        ChartData(DateTime(2022,1,1), 35),
+        ChartData(DateTime(2023,1,1), 27),
+        ChartData(DateTime(2024,1,1), 30)
+      ];
+      return Scaffold(
+        body: SfCartesianChart(
+          primaryXAxis: DateTimeAxis(
+            dateFormat: DateFormat.y(),
+            edgeLabelPlacement: EdgeLabelPlacement.shift,
+            multiLevelLabels: <DateTimeMultiLevelLabel>[
+              DateTimeMultiLevelLabel(
+                start: DateTime(2020,1,1), 
+                end: DateTime(2022,1,1), 
+                text: 'First'
+              ),
+              DateTimeMultiLevelLabel(
+                start: DateTime(2022,1,1), 
+                end: DateTime(2024,1,1), 
+                text: 'Second'
+              ),
+              DateTimeMultiLevelLabel(
+                start: DateTime(2020,1,1), 
+                end: DateTime(2022,1,1),
+                text: 'Third', 
+                level: 1
+              ),
+              DateTimeMultiLevelLabel(
+                start: DateTime(2022,1,1), 
+                end: DateTime(2024,1,1), 
+                text: 'Fourth', 
+                level: 1
+              ),
+            ]
+          ),
+          series: <ChartSeries<ChartData, DateTime>>[
+            LineSeries<ChartData, DateTime>(
+              dataSource: chartData,
+              xValueMapper: (ChartData data, _) => data.x,
+              yValueMapper: (ChartData data, _) => data.y,
+            )
+          ]
+        )
+      );
+    }
+    
+    class ChartData {
+      ChartData(this.x, this.y);
+        final DateTime x;
+        final int y;
+    }
+
+{% endhighlight %}
+
+![Multi-level labels](images/axis-customization/datetime_multi_level_label.jpg)
+
+### Multi-level labels in date time category axis
+
+The [`DateTimeCategoricalMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoricalMultiLevelLabel-class.html) is used to render multi-level labels in the date-time category axis. Here [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoricalMultiLevelLabel/start.html) and [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoricalMultiLevelLabel/end.html) properties need to be date-time values.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      final List<ChartData> chartData = <ChartData>[
+        ChartData(DateTime(2010,1,1), 24),
+        ChartData(DateTime(2022,1,1), 20),
+        ChartData(DateTime(2040,1,1), 27),
+        ChartData(DateTime(2060,1,1), 30)
+      ];
+      return Scaffold(
+        body: SfCartesianChart(
+          primaryXAxis: DateTimeCategoryAxis(
+            multiLevelLabels: <DateTimeCategoricalMultiLevelLabel>[
+              DateTimeCategoricalMultiLevelLabel(
+                start: DateTime(2010,1,1), 
+                end: DateTime(2022,1,1), 
+                text: 'First'
+              ),
+              DateTimeCategoricalMultiLevelLabel(
+                start: DateTime(2040,1,1), 
+                end: DateTime(2060,1,1), 
+                text: 'Second'
+              ),
+              DateTimeCategoricalMultiLevelLabel(
+                start: DateTime(2010,1,1), 
+                end: DateTime(2022,1,1),
+                text: 'Third', 
+                level: 1
+              ),
+              DateTimeCategoricalMultiLevelLabel(
+                start: DateTime(2040,1,1), 
+                end: DateTime(2060,1,1), 
+                text: 'Fourth', 
+                level: 1
+              ),
+            ]
+          ),
+          series: <ChartSeries<ChartData, DateTime>>[
+            LineSeries<ChartData, DateTime>(
+              dataSource: chartData,
+              xValueMapper: (ChartData data, _) => data.x,
+              yValueMapper: (ChartData data, _) => data.y,
+            )
+          ]
+        )
+      );
+    }
+    
+    class ChartData {
+      ChartData(this.x, this.y);
+        final DateTime x;
+        final int y;
+    }
+
+{% endhighlight %}
+
+![Multi-level labels](images/axis-customization/datetime_category_multi_level_label.jpg)
+
+### Multi-level labels in logarithmic axis
+
+The [`LogarithmicMultiLevelLabel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LogarithmicMultiLevelLabel-class.html) is used to render multi-level labels in the logarithmic axis. Here the [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LogarithmicMultiLevelLabel/start.html) and [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LogarithmicMultiLevelLabel/end.html) properties need to be double values.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      final List<ChartData> chartData = <ChartData>[
+        ChartData(1, 2),
+        ChartData(2, 5),
+        ChartData(3, 10),
+        ChartData(4, 24),
+        ChartData(5, 30),
+        ChartData(6, 41),
+        ChartData(7, 26)
+      ];
+      return Scaffold(
+        body: SfCartesianChart(
+          primaryYAxis: LogarithmicAxis(
+            multiLevelLabels: const <LogarithmicMultiLevelLabel>[
+              LogarithmicMultiLevelLabel(
+                start: 1, 
+                end: 10, 
+                text: 'First'
+              ),
+              LogarithmicMultiLevelLabel(
+                start: 10, 
+                end: 100, 
+                text: 'Second'
+              ),
+              LogarithmicMultiLevelLabel(
+                start: 1, 
+                end: 10, 
+                text: 'Third', 
+                level: 1
+              ),
+              LogarithmicMultiLevelLabel(
+                start: 10, 
+                end: 100, 
+                text: 'Fourth', 
+                level: 1
+              ),
+            ]
+          ),
+          series: <ChartSeries<ChartData, int>>[
+            LineSeries<ChartData, int>(
+              dataSource: chartData,
+              xValueMapper: (ChartData data, _) => data.x,
+              yValueMapper: (ChartData data, _) => data.y,
+            )
+          ]
+        )
+      );
+    }
+
+    class ChartData {
+      ChartData(this.x, this.y);
+       final int x;
+       final int y;
+    }
+
+{% endhighlight %}
+
+![Multi-level labels](images/axis-customization/logarithmic_multi_level_label.jpg)
+
+### Multi-level label customization
+
+The [`multiLevelLabelStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/multiLevelLabelStyle.html) property is used to customize the multi-level label's border width, border type, color, and text style.
+
+#### Multi-level label text customization
+
+The text style of the multi-level label like color, font size, font-weight, etc can be customized by using [`TextStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelStyle/textStyle.html) class.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      final List<ChartData> chartData = <ChartData>[
+        ChartData(1, 24),
+        ChartData(2, 20),
+        ChartData(3, 35),
+        ChartData(4, 27),
+        ChartData(5, 30),
+        ChartData(6, 41),
+        ChartData(7, 26)
+      ];
+      return Scaffold(
+        body: SfCartesianChart(
+          primaryXAxis: NumericAxis(
+            multiLevelLabelStyle: MultiLevelLabelStyle(
+              textStyle: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.red)
+            ),
+            multiLevelLabels: const <NumericMultiLevelLabel>[
+              NumericMultiLevelLabel(
+                start: 1, 
+                end: 4, 
+                text: 'First'
+              ),
+              NumericMultiLevelLabel(
+                start: 4, 
+                end: 7, 
+                text: 'Second'
+              ),
+              NumericMultiLevelLabel(
+                start: 1, 
+                end: 4, 
+                text: 'Third', 
+                level: 1
+              ),
+              NumericMultiLevelLabel(
+                start: 4, 
+                end: 7, 
+                text: 'Fourth', 
+                level: 1
+              )
+            ]
+          ),
+          series: <ChartSeries<ChartData, int>>[
+            LineSeries<ChartData, int>(
+              dataSource: chartData,
+              xValueMapper: (ChartData data, _) => data.x,
+              yValueMapper: (ChartData data, _) => data.y,
+            )
+          ]
+        )
+      );
+    }
+
+    class ChartData {
+     ChartData(this.x, this.y);
+     final int x;
+     final int y;
+    }
+
+{% endhighlight %}
+
+![Multi-level labels](images/axis-customization/multi_level_label_text_customization.jpg)
+
+#### Multi-level label border customization
+
+The border width, color and type of the multi-level label can be customized using the [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelStyle/borderWidth.html),  [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelStyle/borderColor.html) and [`borderType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelStyle/borderType.html) properties.
+
+The different types of multi-level label's border are mentioned below,
+
+* [`MultiLevelBorderType.rectangle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelBorderType.html) - Renders the multi-level label border as rectangle.
+* [`MultiLevelBorderType.withoutTopAndBottom`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelBorderType.html) - Renders the multi-level label border as rectangle without it's top and bottom.
+* [`MultiLevelBorderType.squareBrace`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelBorderType.html) - Renders the multi-level label border as square braces.
+* [`MultiLevelBorderType.curlyBrace`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelBorderType.html) - Renders the multi-level label border as curly braces.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      final List<ChartData> chartData = <ChartData>[
+        ChartData(1, 24),
+        ChartData(2, 20),
+        ChartData(3, 35),
+        ChartData(4, 27),
+        ChartData(5, 30),
+        ChartData(6, 41),
+        ChartData(7, 26)
+      ];
+      return Scaffold(
+        body: SfCartesianChart(
+          primaryXAxis: NumericAxis(
+            multiLevelLabelStyle: MultiLevelLabelStyle(
+              borderColor: Colors.blue,
+              borderWidth: 2.0,
+              borderType: MultiLevelBorderType.curlyBrace,
+            ),
+            multiLevelLabels: const <NumericMultiLevelLabel>[
+              NumericMultiLevelLabel(
+                start: 1, 
+                end: 4, 
+                text: 'First'
+              ),
+              NumericMultiLevelLabel(
+                start: 4, 
+                end: 7, 
+                text: 'Second'
+              ),
+              NumericMultiLevelLabel(
+                start: 1, 
+                end: 4, 
+                text: 'Third', 
+                level: 1
+              ),
+              NumericMultiLevelLabel(
+                start: 4, 
+                end: 7, 
+                text: 'Fourth', 
+                level: 1
+              )
+            ]
+          ),
+          series: <ChartSeries<ChartData, int>>[
+            LineSeries<ChartData, int>(
+              dataSource: chartData,
+              xValueMapper: (ChartData data, _) => data.x,
+              yValueMapper: (ChartData data, _) => data.y,
+            )
+          ]
+        )
+      );
+    }
+
+    class ChartData {
+     ChartData(this.x, this.y);
+     final int x;
+     final int y;
+    }
+
+{% endhighlight %}
+
+![Multi-level labels](images/axis-customization/multi_level_label_border_customization.jpg)
 
 ## See Also
 

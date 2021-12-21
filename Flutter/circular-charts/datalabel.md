@@ -426,3 +426,30 @@ Data label and its connector line in the Circular charts for the point value 0 c
 If the user didn’t provide text color to the data label, then by default, the saturation color is applied to the data label text. i.e., if the data points background color intensity is dark, then the data label will render in white color (#FFFFFF) and if the data points background color intensity is light, data label will render in black color (#000000).
 
 ![label_saturation](images/datalabel/circular_saturation.png)
+
+## Overflow mode
+
+Action on data labels when it’s overflowing from its region area. The overflowing data label rendering behavior can be changed based on this. If [`overflowMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/overflowMode.html) property is set to [`OverflowMode.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/overflowMode.html) then the [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelIntersectAction.html) takes the priority, else [`overflowMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/overflowMode.html) takes the priority.  
+
+Defaults to [`OverflowMode.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/overflowMode.html).
+  
+ N> This is applicable for pie, doughnut, pyramid, and funnel series types alone.
+
+{% highlight dart %}
+
+    Widget build(BuildContext context) {
+        return Container(
+             child: SfCircularChart(
+            series: <PieSeries<ChartData, String>>[
+             PieSeries<ChartData, String>(
+             dataLabelSettings: DataLabelSettings(
+             isVisible: true,
+             overflowMode: OverflowMode.trim
+                        ),
+                    ),
+                ],
+            )
+        );
+    }
+{% endhighlight %}
+![dataLabel_overflow](images/datalabel/circular_overflow.jpg)
