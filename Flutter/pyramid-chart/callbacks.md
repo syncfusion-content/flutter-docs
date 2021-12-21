@@ -333,7 +333,7 @@ Defaults to `null`.
                 ),
         ));
       }
-    class CustomPyramidSeriesRenderer extends     PyramidSeriesRenderer {
+    class CustomPyramidSeriesRenderer extends PyramidSeriesRenderer {
        // custom implementation here...
     }
 {% endhighlight %}
