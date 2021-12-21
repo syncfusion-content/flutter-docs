@@ -9,58 +9,6 @@ documentation: ug
 
 # Axis customization in Flutter Cartesian Charts (SfCartesianChart)
 
-## Axis border customization
-
-The color and width of the axis border can be customized with [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/borderColor.html) and [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/borderWidth.html) properties respectively. The border types can be changed using the [`axisBorderType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/axisBorderType.html) property and the default value is [`AxisBorderType.rectangle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisBorderType.html). Another value of [`axisBorderType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/axisBorderType.html) is [`AxisBorderType.withoutTopAndBottom`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisBorderType.html).
-
-* [`AxisBorderType.rectangle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisBorderType.html) - Renders the border as a rectangle around a label.
-* [`AxisBorderType.withoutTopAndBottom`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisBorderType.html) - Renders the border without the top and bottom of a rectangle.
-
-{% highlight dart %}
-
-    @override
-    Widget build(BuildContext context) {
-      final List<ChartData> chartData = <ChartData>[
-        ChartData(1, 24),
-        ChartData(2, 20),
-        ChartData(3, 35),
-        ChartData(4, 27),
-        ChartData(5, 30),
-        ChartData(6, 41),
-        ChartData(7, 26)
-      ];
-      return Scaffold(
-        body: SfCartesianChart(
-          primaryXAxis: NumericAxis(
-            borderWidth: 1.0,
-            borderColor: Colors.blue
-          ),
-          primaryYAxis: NumericAxis(
-            borderWidth: 1.0, 
-            borderColor: Colors.blue
-          ),
-          series: <ChartSeries<ChartData, int>>[
-            LineSeries<ChartData, int>(
-              dataSource: chartData,
-              xValueMapper: (ChartData data, _) => data.x,
-              yValueMapper: (ChartData data, _) => data.y,
-            )
-          ]
-        )
-      );
-    }  
-
-    class ChartData {
-      ChartData(this.x, this.y);
-        final int x;
-        final int y;
-    }
-
-{% endhighlight %}
-
-![Axis border customization](images/axis-customization/axis_border_customization.jpg)
-
-
 ## Common axis features
 
 Customization of features such as axis title, labels, grid lines and tick lines are common to all the axes. Each of these features are explained in this section.
@@ -229,6 +177,57 @@ The [`labelStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/lates
 {% endhighlight %}
 
 ![Axis label](images/axis-customization/label_custom.jpg)
+
+### Axis border customization
+
+The color and width of the axis border can be customized with [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/borderColor.html) and [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/borderWidth.html) properties respectively. The border types can be changed using the [`axisBorderType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/axisBorderType.html) property and the default value is [`AxisBorderType.rectangle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisBorderType.html). Another value of [`axisBorderType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/axisBorderType.html) is [`AxisBorderType.withoutTopAndBottom`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisBorderType.html).
+
+* [`AxisBorderType.rectangle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisBorderType.html) - Renders the border as a rectangle around a label.
+* [`AxisBorderType.withoutTopAndBottom`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisBorderType.html) - Renders the border without the top and bottom of a rectangle.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      final List<ChartData> chartData = <ChartData>[
+        ChartData(1, 24),
+        ChartData(2, 20),
+        ChartData(3, 35),
+        ChartData(4, 27),
+        ChartData(5, 30),
+        ChartData(6, 41),
+        ChartData(7, 26)
+      ];
+      return Scaffold(
+        body: SfCartesianChart(
+          primaryXAxis: NumericAxis(
+            borderWidth: 1.0,
+            borderColor: Colors.blue
+          ),
+          primaryYAxis: NumericAxis(
+            borderWidth: 1.0, 
+            borderColor: Colors.blue
+          ),
+          series: <ChartSeries<ChartData, int>>[
+            LineSeries<ChartData, int>(
+              dataSource: chartData,
+              xValueMapper: (ChartData data, _) => data.x,
+              yValueMapper: (ChartData data, _) => data.y,
+            )
+          ]
+        )
+      );
+    }  
+
+    class ChartData {
+      ChartData(this.x, this.y);
+        final int x;
+        final int y;
+    }
+
+{% endhighlight %}
+
+![Axis border customization](images/axis-customization/axis_border_customization.jpg)
 
 ### Axis animation
 
@@ -1295,7 +1294,7 @@ Here you need to specify the [`minimum`](https://pub.dev/documentation/syncfusio
 
 ## Multi-level labels
 
-The multi-level labels in the Cartesian chart are used to categorize axis labels and they can be added to the chart axis by using the [`multiLevelLabels`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/multiLevelLabels.html) property. The below properties are used to add the multi-level label text.
+The multi-level labels in the Cartesian chart are used to categorize axis labels and they can be added to the chart axis by using the [`multiLevelLabels`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/multiLevelLabels.html) property. The below properties are used to add the multi-level label.
 
 * [`start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericMultiLevelLabel/start.html) - Represents the start value of an multi-level label.
 * [`end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericMultiLevelLabel/end.html)   - Represents the end value of an multi-level label.
