@@ -2,7 +2,6 @@
 layout: post
 title: Getting started with Flutter PDF library | Syncfusion
 description: Learn here about getting started with Syncfusion Flutter PDF non-UI library, its elements, and more.
-platform: flutter
 control: PDF
 documentation: ug
 ---
