@@ -999,31 +999,37 @@ Defaults to `null`.
 
 {% highlight dart %}
 
+    @override
     Widget build(BuildContext context) {
-        return Container(
-          child: SfCartesianChart(
-            series: <ColumnSeries<SalesData, num>>[
-                ColumnSeries<SalesData, num>(
-                  onCreateRenderer:(ChartSeries<dynamic, dynamic> series){
-                      return CustomColumnSeriesRenderer();
+      final List<ChartData> chartData = <ChartData>[
+        ChartData(1, 24),
+        ChartData(2, 20),
+        ChartData(3, 35),
+        ChartData(4, 27),
+        ChartData(5, 30),
+        ChartData(6, 41),
+        ChartData(7, 26)
+      ];
+      return Container(
+        child: SfCartesianChart(
+          series: <ColumnSeries<ChartData, int>>[
+            ColumnSeries<ChartData, int>(
+              dataSource: chartData,
+              xValueMapper: (ChartData data, _) => data.x,
+              yValueMapper: (ChartData data, _) => data.y,
+              onCreateRenderer: (ChartSeries<ChartData, int> series) {
+                return _CustomColumnSeriesRenderer(series as ColumnSeries<ChartData, int>);
               }
             ),
           ],
         )
       );
     }
-    class CustomColumnSeriesRenderer extends ColumnSeriesRenderer {
-      // custom implementation here...
-      @override
-      ChartSegment createSegment() {
-        return _ColumnCustomPainter();
-      }
-    }
 
     class _CustomColumnSeriesRenderer extends ColumnSeriesRenderer {
       _CustomColumnSeriesRenderer(this.series);
 
-      final ColumnSeries<dynamic, dynamic> series;
+      final ColumnSeries<ChartData, int> series;
       @override
       ChartSegment createSegment() {
         return _ColumnCustomPainter(series);
@@ -1033,27 +1039,36 @@ Defaults to `null`.
     class _ColumnCustomPainter extends ColumnSegment {
       _ColumnCustomPainter(this.series);
 
-      final ColumnSeries<dynamic, dynamic> series;
+      final ColumnSeries<ChartData, int> series;
       @override
       int get currentSegmentIndex => super.currentSegmentIndex!;
 
-    @override
-    Paint getFillPaint() {
-      final Paint customerFillPaint = Paint();
-      customerFillPaint.color =  series.dataSource[currentSegmentIndex].y > 30 ? Colors.red : Colors.green;
-      customerFillPaint.style = PaintingStyle.fill;
-      return customerFillPaint;
-    }
+      @override
+      Paint getFillPaint() {
+        final Paint customerFillPaint = Paint();
+        customerFillPaint.color = series.dataSource[currentSegmentIndex].y > 30
+          ? Colors.red
+          : Colors.green;
+        customerFillPaint.style = PaintingStyle.fill;
+        return customerFillPaint;
+      }
 
-    @override
-    void onPaint(Canvas canvas) {
-      super.onPaint(canvas);
+      @override
+      void onPaint(Canvas canvas) {
+        super.onPaint(canvas);
       }
     }
+ 
+    class ChartData {
+      ChartData(this.x, this.y);
+      final int x;
+      final int y;
+    }
+  
 {% endhighlight %}
 
 ## axisLabelFormatter
- 
+
 Called while rendering each axis label in the chart. Provides label text, axis name, orientation of the axis, trimmed text and text styles such as color, font size, and font weight to the user using the `AxisLabelRenderDetails` class.
 
 You can customize the text and text style using the `ChartAxisLabel` class and can return it.
