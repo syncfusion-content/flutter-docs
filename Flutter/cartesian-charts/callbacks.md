@@ -1012,13 +1012,13 @@ Defaults to `null`.
       ];
       return Container(
         child: SfCartesianChart(
-          series: <ColumnSeries<ChartData, num>>[
-            ColumnSeries<ChartData, num>(
+          series: <ColumnSeries<ChartData, int>>[
+            ColumnSeries<ChartData, int>(
               dataSource: chartData,
               xValueMapper: (ChartData data, _) => data.x,
               yValueMapper: (ChartData data, _) => data.y,
-              onCreateRenderer: (ChartSeries<dynamic, dynamic> series) {
-                return _CustomColumnSeriesRenderer(series as ColumnSeries<dynamic, dynamic>);
+              onCreateRenderer: (ChartSeries<ChartData, int> series) {
+                return _CustomColumnSeriesRenderer(series as ColumnSeries<ChartData, int>);
               }
             ),
           ],
@@ -1029,7 +1029,7 @@ Defaults to `null`.
     class _CustomColumnSeriesRenderer extends ColumnSeriesRenderer {
       _CustomColumnSeriesRenderer(this.series);
 
-      final ColumnSeries<dynamic, dynamic> series;
+      final ColumnSeries<ChartData, int> series;
       @override
       ChartSegment createSegment() {
         return _ColumnCustomPainter(series);
@@ -1039,7 +1039,7 @@ Defaults to `null`.
     class _ColumnCustomPainter extends ColumnSegment {
       _ColumnCustomPainter(this.series);
 
-      final ColumnSeries<dynamic, dynamic> series;
+      final ColumnSeries<ChartData, int> series;
       @override
       int get currentSegmentIndex => super.currentSegmentIndex!;
 
