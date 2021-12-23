@@ -1651,9 +1651,8 @@ The text style of the multi-level label like color, font size, font-weight, etc 
           primaryXAxis: NumericAxis(
             multiLevelLabelStyle: MultiLevelLabelStyle(
               textStyle: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.red)
+                  fontSize: 1,
+                  color: Colors.blue)
             ),
             multiLevelLabels: const <NumericMultiLevelLabel>[
               NumericMultiLevelLabel(
