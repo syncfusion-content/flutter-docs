@@ -112,9 +112,7 @@ class MyAppState extends State<MyApp> {
   
     bool isSpecialDay(DateTime date) {
     for (int j = 0; j < _specialDates.length; j++) {
-      if (date.year == _specialDates[j].year &&
-          date.month == _specialDates[j].month &&
-          date.day == _specialDates[j].day) {
+      if (isSameDate(date, _specialDates[j])) {
         return true;
       }
     }
@@ -133,9 +131,7 @@ class MyAppState extends State<MyApp> {
 
   bool isBlackedDate(DateTime date) {
     for (int j = 0; j < _blackoutDates.length; j++) {
-      if (date.year == _blackoutDates[j].year &&
-          date.month == _blackoutDates[j].month &&
-          date.day == _blackoutDates[j].day) {
+      if (isSameDate(date, _blackoutDates[j])) {
         return true;
       }
     }
