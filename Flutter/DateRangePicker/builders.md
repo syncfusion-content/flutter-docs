@@ -21,7 +21,7 @@ The [DateRangePickerCellBuilder](https://pub.dev/documentation/syncfusion_flutte
 {% tabs %}
 {% highlight Dart %}
 
-class MyAppstate extends State<MyApp> {
+class MyAppState extends State<MyApp> {
   final DateRangePickerController _controller = DateRangePickerController();
   late List<DateTime> _specialDates;
   late List<DateTime> _blackoutDates;
