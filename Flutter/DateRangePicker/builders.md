@@ -23,27 +23,6 @@ The [DateRangePickerCellBuilder](https://pub.dev/documentation/syncfusion_flutte
 
 class MyAppState extends State<MyApp> {
   final DateRangePickerController _controller = DateRangePickerController();
-  late List<DateTime> _specialDates;
-  late List<DateTime> _blackoutDates;
-  @override void initState() {
-    _specialDates = <DateTime>[
-      DateTime.now().add(Duration(days: 2)),
-      DateTime.now().add(Duration(days: 3)),
-      DateTime.now().add(Duration(days: 6)),
-      DateTime.now().add(Duration(days: 7)),
-      DateTime.now().add(Duration(days: -2)),
-      DateTime.now().add(Duration(days: -3)),
-      DateTime.now().add(Duration(days: -6)),
-      DateTime.now().add(Duration(days: -7))
-    ];
-
-    _blackoutDates = <DateTime>[
-      DateTime.now().add(Duration(days: -8)),
-      DateTime.now().add(Duration(days: -9)),
-      DateTime.now().add(Duration(days: -10)),
-    ];
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -51,89 +30,85 @@ class MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
           body: SafeArea(
-            child: SfDateRangePicker(
-              controller: _controller,
-              cellBuilder:
-                  (BuildContext context, DateRangePickerCellDetails details) {
-                final bool isToday = isSameDate(details.date, DateTime.now());
-                final bool isBlackOut = isBlackedDate(details.date);
-                final bool isSpecialDate = isSpecialDay(details.date);
-                return Container(
-                  margin: EdgeInsets.all(2),
-                  padding: EdgeInsets.only(top: 10),
-                  decoration: BoxDecoration(
-                      color: Colors.blueAccent,
-                      border: isToday
-                          ? Border.all(color: Colors.black, width: 2)
-                          : null),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: <Widget>[
-                      Text(
-                        details.date.day.toString(),
-                        style: TextStyle(
-                          fontSize: 13,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      isBlackOut
-                          ? Icon(
-                        Icons.block_sharp,
-                        size: 13,
-                      )
-                          : isSpecialDate
-                          ? Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(
-                            Icons.cake,
-                            size: 13,
-                          ),
-                          Icon(
-                            Icons.celebration,
-                            size: 13,
-                          ),
-                          Icon(
-                            Icons.audiotrack,
-                            size: 13,
-                          )
-                        ],
-                      )
-                          : Container()
-                    ],
+        child: SfDateRangePicker(
+          controller: _controller,
+          cellBuilder:
+              (BuildContext context, DateRangePickerCellDetails details) {
+            final bool isToday = isSameDate(details.date, DateTime.now());
+            final bool isBlackOut = isBlackedDate(details.date);
+            final bool isSpecialDate = isSpecialDay(details.date);
+            return Container(
+              margin: EdgeInsets.all(2),
+              padding: EdgeInsets.only(top: 10),
+              decoration: BoxDecoration(
+                  color: Colors.blueAccent,
+                  border: isToday
+                      ? Border.all(color: Colors.black, width: 2)
+                      : null),
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  Text(
+                    details.date.day.toString(),
+                    style: TextStyle(
+                      fontSize: 13,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                );
-              },
-            ),
-          )),
+                  isBlackOut
+                      ? Icon(
+                          Icons.block_sharp,
+                          size: 13,
+                        )
+                      : isSpecialDate
+                          ? Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.cake,
+                                  size: 13,
+                                ),
+                                Icon(
+                                  Icons.celebration,
+                                  size: 13,
+                                ),
+                                Icon(
+                                  Icons.audiotrack,
+                                  size: 13,
+                                )
+                              ],
+                            )
+                          : Container()
+                ],
+              ),
+            );
+          },
+        ),
+      )),
     );
   }
-  
-    bool isSpecialDay(DateTime date) {
-    for (int j = 0; j < _specialDates.length; j++) {
-      if (isSameDate(date, _specialDates[j])) {
-        return true;
-      }
+
+  bool isSpecialDay(DateTime date) {
+    if (date.day == 20 || date.day == 21 || date.day == 24 || date.day == 25) {
+      return true;
     }
     return false;
   }
 
   bool isSameDate(DateTime date, DateTime dateTime) {
-  if (date.year == dateTime.year &&
-          date.month == dateTime.month &&
-          date.day ==dateTime.day) {
-        return true;
-      }
+    if (date.year == dateTime.year &&
+        date.month == dateTime.month &&
+        date.day == dateTime.day) {
+      return true;
+    }
 
     return false;
   }
 
   bool isBlackedDate(DateTime date) {
-    for (int j = 0; j < _blackoutDates.length; j++) {
-      if (isSameDate(date, _blackoutDates[j])) {
-        return true;
-      }
+    if (date.day == 17 || date.day == 18) {
+      return true;
     }
     return false;
   }
