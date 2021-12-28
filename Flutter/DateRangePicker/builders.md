@@ -118,7 +118,7 @@ class MyAppState extends State<MyApp> {
 {% endhighlight %}
 {% endtabs %}
 
-![Cell builder](images/builders/cell-builder.png)
+![Cell builder](images/builders/cell-builder.jpg)
 
 >**NOTE** 
 * Use [HijriDateRangePickerCellDetails]() for the [SfHijriDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfHijriDateRangePicker-class.html).
