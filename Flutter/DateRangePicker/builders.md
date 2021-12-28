@@ -23,84 +23,102 @@ The [DateRangePickerCellBuilder](https://pub.dev/documentation/syncfusion_flutte
 
 class MyAppState extends State<MyApp> {
   final DateRangePickerController _controller = DateRangePickerController();
-  
+
   @override
   Widget build(BuildContext context) {
-   return MaterialApp(
-    home: Scaffold(
-        body: SfDateRangePicker(
-      controller: _controller,
-      cellBuilder:
-          (BuildContext context, DateRangePickerCellDetails details) {
-        final bool isToday = isSameDate(details.date, DateTime.now());
-        final bool isBlackOut = isBlackedDate(details.date);
-        final bool isSpecialDate = isSpecialDay(details.date);
-        return Container(
-          margin: EdgeInsets.all(2),
-          padding: EdgeInsets.only(top: kIsWeb ? 5 : 10),
-          decoration: BoxDecoration(
-              color: Colors.blueAccent,
-              border:
-                  isToday ? Border.all(color: Colors.black, width: 2) : null),
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: <Widget>[
-              Text(
-                details.date.day.toString(),
-                style: TextStyle(
-                  fontSize: kIsWeb ? 11 : 15,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              isBlackOut
-                  ? Icon(
-                      Icons.block_sharp,
-                      size: 13,
-                    )
-                  : isSpecialDate
-                      ? Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(
-                              Icons.cake,
-                              size: 13,
-                            ),
-                            Icon(
-                              Icons.celebration,
-                              size: 13,
-                            ),
-                            Icon(
-                              Icons.audiotrack,
-                              size: 13,
-                            )
-                          ],
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+          body: SafeArea(
+        child: SfDateRangePicker(
+          controller: _controller,
+          cellBuilder:
+              (BuildContext context, DateRangePickerCellDetails details) {
+            final bool isToday = isSameDate(details.date, DateTime.now());
+            final bool isBlackOut = isBlackedDate(details.date);
+            final bool isSpecialDate = isSpecialDay(details.date);
+            return Container(
+              margin: EdgeInsets.all(2),
+              padding: EdgeInsets.only(top: 10),
+              decoration: BoxDecoration(
+                  color: Colors.blueAccent,
+                  border: isToday
+                      ? Border.all(color: Colors.black, width: 2)
+                      : null),
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  Text(
+                    details.date.day.toString(),
+                    style: TextStyle(
+                      fontSize: 13,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  isBlackOut
+                      ? Icon(
+                          Icons.block_sharp,
+                          size: 13,
                         )
-                      : Container()
-            ],
-          ),
-        );
-      },
-    )),
-  );
+                      : isSpecialDate
+                          ? Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.cake,
+                                  size: 13,
+                                ),
+                                Icon(
+                                  Icons.celebration,
+                                  size: 13,
+                                ),
+                                Icon(
+                                  Icons.audiotrack,
+                                  size: 13,
+                                )
+                              ],
+                            )
+                          : Container()
+                ],
+              ),
+            );
+          },
+        ),
+      )),
+    );
+  }
+
+  bool isSpecialDay(DateTime date) {
+    if (date.day == 20 || date.day == 21 || date.day == 24 || date.day == 25) {
+      return true;
+    }
+    return false;
+  }
+
+  bool isSameDate(DateTime date, DateTime dateTime) {
+    if (date.year == dateTime.year &&
+        date.month == dateTime.month &&
+        date.day == dateTime.day) {
+      return true;
+    }
+
+    return false;
+  }
+
+  bool isBlackedDate(DateTime date) {
+    if (date.day == 17 || date.day == 18) {
+      return true;
+    }
+    return false;
+  }
 }
 
-bool isSpecialDay(DateTime date) {
-  /// Check the condition for special date here.
-}
-
-bool isSameDate(DateTime date, DateTime dateTime) {
-  /// Check condition for today date.
-}
-
-bool isBlackedDate(DateTime date) {
-  /// Check condition for blackout date here.
-}
 
 {% endhighlight %}
 {% endtabs %}
 
-![Cell builder](images/builders/cell-builder.png)
+![Cell builder](images/builders/cell-builder.jpg)
 
 >**NOTE** 
 * Use [HijriDateRangePickerCellDetails]() for the [SfHijriDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfHijriDateRangePicker-class.html).
