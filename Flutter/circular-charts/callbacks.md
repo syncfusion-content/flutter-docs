@@ -304,7 +304,7 @@ Triggers when tapping on the data label of the data point in the series. The [`o
     @override
     Widget build(BuildContext context) {
       return Container(
-        child: SfCartesianChart(
+        child: SfCircularChart(
           onDatalabelTapped: (DataLabelTapArgs args) {
             print(args.seriesIndex);                 
           },
@@ -395,6 +395,60 @@ The callback contains the following argument:
 
 {% endhighlight %}
 
+## onRendererCreated
+
+Triggers when the series renderer is created. This callback can be used to obtain the [`CircularSeriesController`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeriesController-class.html) instance, which is used to access the the public methods in the series.
+
+{% highlight dart %}
+
+        //Initialize the series controller
+    CircularSeriesController? circularSeriesController;
+
+    return Column(children: <Widget>[
+      Container(
+          child: SfCircularChart(
+        series: <CircularSeries<ChartData, dynamic>>[
+          DoughnutSeries<ChartData, dynamic>(
+            dataSource: chartData,
+            xValueMapper: (ChartData data, _) => data.x,
+            yValueMapper: (ChartData data, _) => data.y,
+            onRendererCreated: (CircularSeriesController controller) {
+              circularSeriesController = controller;
+            },
+          ),
+        ],
+      )),
+      Container(
+          child: ElevatedButton(
+              onPressed: () {
+                //Removed a point from data source
+                chartData.removeAt(0);
+                //Added a point to the data source
+                chartData.add(ChartData(3, 23));
+                //Here accessed the public method of the series.
+                circularSeriesController!.updateDataSource(
+                  addedDataIndexes: <int>[chartData.length - 1],
+                  removedDataIndexes: <int>[0],
+                );
+              },
+              child: Container(
+                child: Text('Add a point'),
+                )
+              )
+            )
+          ]
+        );
+      }
+    }
+
+    class ChartData {
+      ChartData(this.x, this.y);
+      final num x;
+      final double? y;
+    }
+
+{% endhighlight %}
+
 ## onCreateShader
 
 Using this callback, you can fill the data points of circular charts series with gradient and image shader.
@@ -405,3 +459,33 @@ The callback contains the following argument:
 
 The onCreateShader callback is called once while rendering
 the data points and legend. For further reference on this callback, Check the [`Gradient and ImageShader`](./circular-series-customization#Gradient-fill-and-shader) section.
+
+## onCreateRenderer
+
+Used to create the renderer for custom series.This is applicable only when the custom series is defined in the sample and for built-in series types, it is not applicable.
+
+Renderer created in this will hold the series state and this should be created for each series. [`onCreateRenderer`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/onCreateRenderer.html) callback function should return the renderer class and should not return null.
+
+Series state will be created only once per series and will not be created again when we update the series.
+
+Defaults to `null`.
+
+{% highlight dart %}
+
+    Widget build(BuildContext context) {
+        return Container(
+            child: SfCircularChart(
+                series: <PieSeries<SalesData, num>>[
+                    PieSeries<SalesData, num>(
+                     onCreateRenderer:(CircularSeries<dynamic, dynamic> series){
+                       return CustomPieSeriesRenderer();
+                    }
+                ),
+              ],
+        ));
+    }
+    class CustomPieSeriesRenderer extends PieSeriesRenderer {
+       // custom implementation here...
+    }
+
+{% endhighlight %}
