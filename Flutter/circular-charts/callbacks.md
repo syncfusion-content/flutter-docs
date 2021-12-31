@@ -304,7 +304,7 @@ Triggers when tapping on the data label of the data point in the series. The [`o
     @override
     Widget build(BuildContext context) {
       return Container(
-        child: SfCartesianChart(
+        child: SfCircularChart(
           onDatalabelTapped: (DataLabelTapArgs args) {
             print(args.seriesIndex);                 
           },
@@ -433,29 +433,5 @@ Defaults to `null`.
     }
     class CustomPieSeriesRenderer extends PieSeriesRenderer {
        // custom implementation here...
-    }
-{% endhighlight %}
-
-## axisLabelFormatter
- 
-Called while rendering each axis label in the chart. Provides label text, axis name, orientation of the axis, trimmed text and text styles such as color, font size, and font weight to the user using the `AxisLabelRenderDetails` class.
-
-You can customize the text and text style using the `ChartAxisLabel` class and can return it.
-
-Defaults to `null`.
-
-{% highlight dart %}
-
-    Widget build(BuildContext context) {
-      return Container(
-        child: SfCartesianChart(
-            primarXAxis: CategoryAxis(
-               axisLabelFormatter: (AxisLabelRenderDetails details) => axis(details),
-            ),
-        ));
-    }
-
-    ChartAxisLabel axis(AxisLabelRenderDetails details) {
-      return ChartAxisLabel('axis Label', details.textStyle);
     }
 {% endhighlight %}
