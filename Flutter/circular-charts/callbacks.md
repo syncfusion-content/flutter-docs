@@ -304,7 +304,7 @@ Triggers when tapping on the data label of the data point in the series. The [`o
     @override
     Widget build(BuildContext context) {
       return Container(
-        child: SfCartesianChart(
+        child: SfCircularChart(
           onDatalabelTapped: (DataLabelTapArgs args) {
             print(args.seriesIndex);                 
           },
