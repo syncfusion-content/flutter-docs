@@ -1069,7 +1069,7 @@ Defaults to `null`.
 
 ## onCreateShader
 
-Using this callback, you can fill the data points of cartesian charts series with gradient and image shader.
+Using this callback, you can fill the data points of Cartesian charts series with gradient and image shader.
 
 The callback contains the following argument:
 
