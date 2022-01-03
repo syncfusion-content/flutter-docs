@@ -1067,6 +1067,17 @@ Defaults to `null`.
   
 {% endhighlight %}
 
+## onCreateShader
+
+Using this callback, you can fill the data points of cartesian charts series with gradient and image shader.
+
+The callback contains the following argument:
+
+* [`ChartShaderDetails`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartShaderDetails-class.html) - provides options to get the outer rect, inner rect, and render type (either series or legend)
+
+The onCreateShader callback is called once while rendering
+the data points and legend. For further reference on this callback, Check the [`Gradient fill`](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#gradient-fill) section.
+
 ## axisLabelFormatter
 
 Called while rendering each axis label in the chart. Provides label text, axis name, orientation of the axis, trimmed text and text styles such as color, font size, and font weight to the user using the `AxisLabelRenderDetails` class.
