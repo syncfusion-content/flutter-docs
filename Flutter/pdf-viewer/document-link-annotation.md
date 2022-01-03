@@ -21,10 +21,9 @@ You can enable or disable the navigation of document link annotation using the [
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-      body: Container(
-          child: SfPdfViewer.network(
+      body: SfPdfViewer.network(
               'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
-              enableDocumentLinkAnnotation: false)));
+              enableDocumentLinkAnnotation: false));
 }
 
 {% endhighlight %}
