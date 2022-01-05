@@ -1069,14 +1069,67 @@ Defaults to `null`.
 
 ## onCreateShader
 
-Using this callback, you can fill the data points of Cartesian charts series with gradient and image shader.
-
-The callback contains the following argument:
-
-* [`ChartShaderDetails`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartShaderDetails-class.html) - provides options to get the outer rect, inner rect, and render type (either series or legend)
+The [`onCreateShader`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/onCreateShader.html)  provides options to get the outer rect, inner rect, and render type (either series or legend) using [`ChartShaderDetails`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartShaderDetails-class.html)  class.
 
 The onCreateShader callback is called once while rendering
 the data points and legend. For further reference on this callback, Check the [`Gradient fill`](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#gradient-fill) section.
+
+{% highlight dart %}
+
+    Widget build(BuildContext context) {
+    final List<ChartData> chartData = <ChartData>[
+      ChartData('IND', 24),
+      ChartData('AUS', 20),
+      ChartData('USA', 27),
+      ChartData('DEU', 57),
+      ChartData('ITA', 30),
+      ChartData('UK', 41),
+    ];
+    final List<Color> colors = <Color>[
+      const Color.fromRGBO(75, 135, 185, 1),
+      const Color.fromRGBO(192, 108, 132, 1),
+      const Color.fromRGBO(246, 114, 128, 1),
+      const Color.fromRGBO(248, 177, 149, 1),
+      const Color.fromRGBO(116, 180, 155, 1)
+    ];
+    final List<double> stops = <double>[
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      1,
+    ];
+
+    return Scaffold(
+        appBar: AppBar(),
+        body: Center(
+            child: Container(
+          child: SfCartesianChart(
+            primaryXAxis: CategoryAxis(),
+            series: <CartesianSeries<ChartData, String>>[
+            AreaSeries<ChartData, String>(
+              dataSource: chartData,
+              onCreateShader: (ShaderDetails chartShaderDetails) {
+                return ui.Gradient.linear(chartShaderDetails.rect.topRight,
+                    chartShaderDetails.rect.centerLeft, colors, stops);
+              },
+              xValueMapper: (ChartData data, _) => data.x,
+              yValueMapper: (ChartData data, _) => data.y),
+                ]
+              ),
+            )
+          )
+        );
+      }
+    }
+
+    class ChartData {
+      ChartData(this.x, this.y);
+      final String x;
+      final double? y;
+      }
+
+{% endhighlight %}
 
 ## axisLabelFormatter
 

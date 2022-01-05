@@ -312,7 +312,7 @@ Triggers when long press on the series point. The [`onPointLongPress`](https://p
 
 ## onChartTouchInteractionUp
 
-Triggers when tapped or clicked on the chart area. You can get the position of the tapped region using this callback.
+Triggers when tapped or clicked on the chart area. You can get the tapped region using the [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) argument.
 
 The callback contains the following argument:
 
@@ -336,7 +336,7 @@ The callback contains the following argument:
 
 ## onChartTouchInteractionMove
 
-Triggers when touched or clicked and moved on the chart area. You can get the position of the moving region using this callback.
+Triggers when touched or clicked and moved on the chart area. You can get the tapped region using the [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) argument.
 
 The callback contains the following argument:
 
@@ -360,7 +360,7 @@ The callback contains the following argument:
 
 ## onChartTouchInteractionDown
 
-Triggers when touched or clicked on the chart area. You can get the position of the touched region using this callback.
+Triggers when touched or clicked on the chart area. You can get the tapped region using the [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) argument.
 
 The callback contains the following argument:
 
