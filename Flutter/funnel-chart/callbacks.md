@@ -374,8 +374,17 @@ Triggers when the series renderer is created. This callback can be used to obtai
 
 {% highlight dart %}
 
-        //Initialize the series controller
+    //Initialize the series controller
     FunnelSeriesController? funnelSeriesController;
+    
+    final List<ChartData> chartData = <ChartData>[
+      ChartData(1, 24),
+      ChartData(2, 20),
+      ChartData(3, 23),
+      ChartData(4, 57),
+      ChartData(5, 30),
+      ChartData(6, 41),
+    ];
 
     return Column(children: <Widget>[
       Container(

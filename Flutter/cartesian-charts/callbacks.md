@@ -696,6 +696,15 @@ Triggers when the series renderer is created. This callback can be used to obtai
     //Initialize the series controller
     ChartSeriesController? _chartSeriesController;
     
+    final List<ChartData> chartData = <ChartData>[
+      ChartData(1, 24),
+      ChartData(2, 20),
+      ChartData(3, 23),
+      ChartData(4, 57),
+      ChartData(5, 30),
+      ChartData(6, 41),
+    ];
+
     @override
     Widget build(BuildContext context) {
 
@@ -1064,6 +1073,9 @@ the data points and legend. For further reference on this callback, Check the [`
 
 {% highlight dart %}
 
+    /// Package import
+    import 'dart:ui' as ui;
+
     Widget build(BuildContext context) {
     final List<ChartData> chartData = <ChartData>[
       ChartData('IND', 24),
@@ -1113,9 +1125,9 @@ the data points and legend. For further reference on this callback, Check the [`
 
     class ChartData {
       ChartData(this.x, this.y);
-      final String x;
+      final num x;
       final double? y;
-      }
+  }
 
 {% endhighlight %}
 

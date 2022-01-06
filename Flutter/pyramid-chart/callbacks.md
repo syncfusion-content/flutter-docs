@@ -376,8 +376,17 @@ Triggers when the series renderer is created. This callback can be used to obtai
 
 {% highlight dart %}
 
-        //Initialize the series controller
+    //Initialize the series controller
     PyramidSeriesController? pyramidSeriesController;
+
+    final List<ChartData> chartData = <ChartData>[
+      ChartData(1, 24),
+      ChartData(2, 20),
+      ChartData(3, 23),
+      ChartData(4, 57),
+      ChartData(5, 30),
+      ChartData(6, 41),
+    ];
 
     return Column(children: <Widget>[
       Container(
@@ -388,9 +397,10 @@ Triggers when the series renderer is created. This callback can be used to obtai
           yValueMapper: (ChartData data, _) => data.y,
           onRendererCreated: (PyramidSeriesController controller) {
             pyramidSeriesController = controller;
-          },
-        ),
-      )),
+            },
+          ),
+        )
+      ),
       Container(
           child: ElevatedButton(
               onPressed: () {
@@ -406,15 +416,18 @@ Triggers when the series renderer is created. This callback can be used to obtai
               },
               child: Container(
                 child: Text('Add a point'),
-              )))
-    ]);
-  }
-}
+                )
+              )
+            )
+          ]
+        );
+      }
+    }
 
-class ChartData {
-  ChartData(this.x, this.y);
-  final num x;
-  final double? y;
-}
+    class ChartData {
+      ChartData(this.x, this.y);
+      final num x;
+      final double? y;
+    }
 
 {% endhighlight %}

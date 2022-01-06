@@ -389,8 +389,17 @@ Triggers when the series renderer is created. This callback can be used to obtai
 
 {% highlight dart %}
 
-        //Initialize the series controller
+    //Initialize the series controller
     CircularSeriesController? circularSeriesController;
+
+    final List<ChartData> chartData = <ChartData>[
+      ChartData(1, 24),
+      ChartData(2, 20),
+      ChartData(3, 23),
+      ChartData(4, 57),
+      ChartData(5, 30),
+      ChartData(6, 41),
+    ];
 
     return Column(children: <Widget>[
       Container(
@@ -402,10 +411,11 @@ Triggers when the series renderer is created. This callback can be used to obtai
             yValueMapper: (ChartData data, _) => data.y,
             onRendererCreated: (CircularSeriesController controller) {
               circularSeriesController = controller;
-            },
-          ),
-        ],
-      )),
+              },
+            ),
+          ],
+        )
+      ),
       Container(
           child: ElevatedButton(
               onPressed: () {
@@ -445,6 +455,9 @@ The onCreateShader callback is called once while rendering
 the data points and legend. For further reference on this callback, check the [`Gradient and ImageShader`](./circular-series-customization#Gradient-fill-and-shader) section.
 
 {% highlight dart %}
+
+    /// Package import
+    import 'dart:ui' as ui;
 
     Widget build(BuildContext context) {
     final List<ChartData> chartData = <ChartData>[
