@@ -327,10 +327,6 @@ Triggers when tapping on the data label of the data point in the series. The [`o
 
 Triggers when tapped or clicked on the chart area. You can get the tapped region using the [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) argument.
 
-The callback contains the following argument:
-
-* [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) - used to get the position of the touch interaction.
-
 {% highlight dart %}
 
     @override
@@ -351,10 +347,6 @@ The callback contains the following argument:
 
 Triggers when tapped or clicked and moved on the chart area. You can get the tapped region using the [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) argument.
 
-The callback contains the following argument:
-
-* [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) - used to get the position of the touch interaction.
-
 {% highlight dart %}
 
     @override
@@ -374,10 +366,6 @@ The callback contains the following argument:
 ## onChartTouchInteractionDown
 
 Triggers when touched or clicked on the chart area. You can get the tapped region using the [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) argument.
-
-The callback contains the following argument:
-
-* [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) - used to get the position of the touch interaction.
 
 {% highlight dart %}
 
