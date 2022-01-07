@@ -309,3 +309,125 @@ Triggers when long press on the series point. The [`onPointLongPress`](https://p
       );
     }
 {% endhighlight %}
+
+## onChartTouchInteractionUp
+
+Triggers when tapped or clicked on the chart area. You can get the tapped region using the [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) argument.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      return Container(
+            child: SfPyramidChart(
+                onChartTouchInteractionUp: (ChartTouchInteractionArgs args){
+                  print(args.position.dx.toString());
+                  print(args.position.dy.toString());
+                }
+            )
+        );
+    }
+
+{% endhighlight %}
+
+## onChartTouchInteractionMove
+
+Triggers when touched or clicked and moved on the chart area. You can get the tapped region using the [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) argument.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+        return Container(
+            child: SfPyramidChart(
+                onChartTouchInteractionMove: (ChartTouchInteractionArgs args){
+                  print(args.position.dx.toString());
+                  print(args.position.dy.toString());
+                }
+            )
+        );
+    }
+
+{% endhighlight %}
+
+## onChartTouchInteractionDown
+
+Triggers when touched or clicked on the chart area. You can get the tapped region using the [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) argument.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+        return Container(
+          child: SfPyramidChart(
+                onChartTouchInteractionDown: (ChartTouchInteractionArgs args){
+                  print(args.position.dx.toString());
+                  print(args.position.dy.toString());
+                }
+            )
+        );
+    }
+
+{% endhighlight %}
+
+## onRendererCreated
+
+Triggers when the series renderer is created. This callback can be used to obtain the [`PyramidSeriesController`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidSeriesController-class.html) instance, which is used to access the the public methods in the series.
+
+{% highlight dart %}
+
+    //Initialize the series controller
+    PyramidSeriesController? pyramidSeriesController;
+
+    final List<ChartData> chartData = <ChartData>[
+      ChartData(1, 24),
+      ChartData(2, 20),
+      ChartData(3, 23),
+      ChartData(4, 57),
+      ChartData(5, 30),
+      ChartData(6, 41),
+    ];
+
+    return Column(children: <Widget>[
+      Container(
+          child: SfPyramidChart(
+        series: PyramidSeries<ChartData, dynamic>(
+          dataSource: chartData,
+          xValueMapper: (ChartData data, _) => data.x,
+          yValueMapper: (ChartData data, _) => data.y,
+          onRendererCreated: (PyramidSeriesController controller) {
+            pyramidSeriesController = controller;
+            },
+          ),
+        )
+      ),
+      Container(
+          child: ElevatedButton(
+              onPressed: () {
+                //Removed a point from data source
+                chartData.removeAt(0);
+                //Added a point to the data source
+                chartData.add(ChartData(3, 23));
+                //Here accessed the public method of the series.
+                pyramidSeriesController!.updateDataSource(
+                  addedDataIndexes: <int>[chartData.length - 1],
+                  removedDataIndexes: <int>[0],
+                );
+              },
+              child: Container(
+                child: Text('Add a point'),
+                )
+              )
+            )
+          ]
+        );
+      }
+    }
+
+    class ChartData {
+      ChartData(this.x, this.y);
+      final num x;
+      final double? y;
+    }
+
+{% endhighlight %}
