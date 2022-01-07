@@ -466,14 +466,14 @@ document.dispose();
 
 ## Apply built-in grid style
 
-Essential Flutter PDF supports Built-in table styles. This will help you  apply background colors and styles to your grid. This is applicable to the ['PdfGrid'](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/pdf-library.html) model, and the appearance is identical to Microsoft Word’s built-in table styles. You can also apply in-built table styles with the following additional table style options.
+Essential Flutter PDF supports Built-in table styles. This will help you  apply background colors and styles to your grid. This is applicable to the ['PdfGrid']('https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGrid-class.html') model, and the appearance is identical to Microsoft Word’s built-in table styles. You can also apply in-built table styles with the following additional table style options.
 •	Banded columns
 •	Banded rows
 •	First column
 •	Last column
 •	Header row
 •	Last row
-We have various built-in styles for ['PdfGrid'](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/pdf-library.html) and  some of the styles have no changes to the background color property. For example, the below listed styles do not have a background color. As the default background color is white, it is directly applied to each row in the grid. 
+We have various built-in styles for ['PdfGrid'](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGrid-class.html) and  some of the styles have no changes to the background color property. For example, the below listed styles do not have a background color. As the default background color is white, it is directly applied to each row in the grid. 
 •	PdfGridBuiltInStyle.gridTable1Light
 •	PdfGridBuiltInStyle.gridTable1LightAccent1
 •	PdfGridBuiltInStyle.gridTable1LightAccent2
@@ -490,7 +490,7 @@ And we have some styles that have background color only in the header rows. Plea
 •	PdfGridBuiltInStyle.listTable3Accent5
 •	PdfGridBuiltInStyle.listTable3Accent6
 
-N>  We can also customize the background color of the ['PdfGrid'](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/pdf-library.html) by using the PdfGrid.style.backgroundBrush, PdfGridRow.style.backgroundBrush and PdfGridCell.style.backgroundBrush properties. Please note that the changes in the above properties are not considered, when we apply the ['PdfGridBuiltInStyle'](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGridBuiltInStyle.html) . 
+N>  We can also customize the background color of the ['PdfGrid'](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGrid-class.html) by using the PdfGrid.style.backgroundBrush, PdfGridRow.style.backgroundBrush and PdfGridCell.style.backgroundBrush properties. Please note that the changes in the above properties are not considered, when we apply the ['PdfGridBuiltInStyle'](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGridBuiltInStyle.html) . 
 The below code example illustrates how to apply a built-in table style using the ['applyBuiltInStyle'](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGrid/applyBuiltInStyle.html ) method of the PdfGrid with styles from the ['PdfGridBuiltInStyle'](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGridBuiltInStyle.html) Enum.
 
 {% highlight dart %}
