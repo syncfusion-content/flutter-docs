@@ -26,7 +26,7 @@ To change the rendering direction from right to left, you can wrap the [`SfCarte
         return Scaffold(
             body: Directionality(
                 textDirection: TextDirection.rtl,
-            child: SfCartesianChart(
+                child: SfCartesianChart(
                         //...
                 ),
             ),
