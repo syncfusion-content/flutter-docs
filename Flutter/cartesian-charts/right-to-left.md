@@ -27,22 +27,10 @@ To change the rendering direction from right to left, you can wrap the [`SfCarte
             body: Directionality(
                 textDirection: TextDirection.rtl,
             child: SfCartesianChart(
-                primaryXAxis: CategoryAxis(),
-                series: <CartesianSeries<ChartData, String>>[
-                  LineSeries<ChartData, String>(
-                    dataSource: chartData,
-                    xValueMapper: (ChartData data, _) => data.x,
-                    yValueMapper: (ChartData data, _) => data.y)]
-                    )
-                )
-            );
-        }
-    }
-
-    class ChartData {
-       ChartData(this.x, this.y);
-       final String x;
-       final double? y;
+                        //...
+                ),
+            ),
+        );
     }
 
 {% endhighlight %}
