@@ -667,10 +667,10 @@ The [`placeLabelsNearAxisLine`](https://pub.dev/documentation/syncfusion_flutter
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: NumericAxis(
-                            placeLabelNearToAxisLine: false
+                            placeLabelsNearAxisLine: false
                         ),
                         primaryYAxis:NumericAxis(
-                            placeLabelNearToAxisLine: false
+                            placeLabelsNearAxisLine: false
                         )
                     )
                 )
