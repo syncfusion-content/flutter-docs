@@ -17,7 +17,7 @@ Right to left rendering can be switched in the following ways:
 
 ### Wrapping the SfCartesianChart with Directionality widget
 
-To change the rendering direction from right to left, you can wrap the [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) widget inside the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and set the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property as [`TextDirection.rtl`](https://api.flutter.dev/flutter/dart-ui/TextDirection-class.html).
+To change the rendering direction from right to left, you can wrap the [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart-class.html) widget inside the [`Directionality`](https://api.flutter.dev/flutter/widgets/Directionality-class.html) widget and set the [`textDirection`](https://api.flutter.dev/flutter/widgets/Directionality/textDirection.html) property as [`TextDirection.rtl`](https://api.flutter.dev/flutter/dart-ui/TextDirection.html).
 
 {% highlight dart %}
 
@@ -40,6 +40,11 @@ To change the rendering direction from right to left, you can wrap the [`SfCarte
 To change the chart rendering direction from right to left, you can change the [`locale`](https://api.flutter.dev/flutter/material/MaterialApp/locale.html) to any of the RTL languages such as Arabic, Persian, Hebrew, Pashto, and Urdu.
 
 {% highlight dart %}
+    
+    /// Package import
+    import 'package:flutter_localizations/flutter_localizations.dart';
+
+    // ...
 
     @override
     Widget build(BuildContext context) {
@@ -98,7 +103,7 @@ Also, if you want to change the tooltip’s content, to look like it is renderin
     @override
     void initState(){
       _tooltipBehavior =  TooltipBehavior(enable: true,
-      format: “point.y : point.x);
+      format: 'point.y : point.x');
       super.initState(); 
     }
     SfCartesianChart(
