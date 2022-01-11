@@ -33,10 +33,10 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
-## How to create and display a customized password dialogue?
+## How to create and display a customized password dialog?
 
-The `SfPdfViewer` library allows you can create and display a customized password dialogue.The following code example explains the same.
-
+The `SfPdfViewer` library, allows you can create and display a customized password dialog.The following code example explains the same.
+In this example, We have disabled the build-in password dialog by setting the false to the [canShowPasswordDialog](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/canShowPasswordDialog.html) property and using the [AlertDialog](https://api.flutter.dev/flutter/material/AlertDialog-class.html) widget to create the customized password dialog. Whenever the `password` is empty or incorrect, the [onDocumentLoadFailed](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/onDocumentLoadFailed.html) callback is triggered, we have used this callback to display the customized password dialog.
 
 {% tabs %}
 {% highlight Dart %}
@@ -48,17 +48,16 @@ import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 void main() {
   runApp(MaterialApp(
     title: 'Syncfusion PDF Viewer Demo',
-    home: HomePage(),
+    home: CustomPasswordDialog(),
   ));
 }
 
-/// Represents Homepage for Navigation
-class HomePage extends StatefulWidget {
+class CustomPasswordDialog extends StatefulWidget {
   @override
-  _HomePage createState() => _HomePage();
+  _CustomPasswordDialogState createState() => _CustomPasswordDialogState();
 }
 
-class _HomePage extends State<HomePage> {
+class _CustomPasswordDialogState extends State<CustomPasswordDialog> {
   final GlobalKey<SfPdfViewerState> _pdfViewerKey = GlobalKey();
   final TextEditingController _textFieldController = TextEditingController();
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
@@ -67,11 +66,6 @@ class _HomePage extends State<HomePage> {
   String? password;
   bool _hasPasswordDialog = false;
   String _errorText = '';
-
-  @override
-  void initState() {
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -159,7 +153,7 @@ class _HomePage extends State<HomePage> {
                 width: 36,
                 child: RawMaterialButton(
                   onPressed: () {
-                    _closePasswordDialogue();
+                    _closePasswordDialog();
                   },
                   child: Icon(
                     Icons.clear,
@@ -261,7 +255,6 @@ class _HomePage extends State<HomePage> {
                         onFieldSubmitted: (String value) {
                           _handlePasswordValidation(value);
                         },
-                        // ignore: missing_return
                         validator: (String? value) {
                           if (_errorText.isNotEmpty) {
                             return _errorText;
@@ -282,7 +275,7 @@ class _HomePage extends State<HomePage> {
           actions: <Widget>[
             TextButton(
               onPressed: () {
-                _closePasswordDialogue();
+                _closePasswordDialog();
               },
               child: Text(
                 'CANCEL',
@@ -317,8 +310,8 @@ class _HomePage extends State<HomePage> {
     );
   }
 
-  ///Close the password dialogue
-  void _closePasswordDialogue() {
+  ///Close the password dialog
+  void _closePasswordDialog() {
     Navigator.pop(context, 'Cancel');
     _hasPasswordDialog = false;
     _passwordDialogFocusNode.unfocus();
