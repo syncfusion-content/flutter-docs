@@ -696,6 +696,15 @@ Triggers when the series renderer is created. This callback can be used to obtai
     //Initialize the series controller
     ChartSeriesController? _chartSeriesController;
     
+    final List<ChartData> chartData = <ChartData>[
+      ChartData(1, 24),
+      ChartData(2, 20),
+      ChartData(3, 23),
+      ChartData(4, 57),
+      ChartData(5, 30),
+      ChartData(6, 41),
+    ];
+
     @override
     Widget build(BuildContext context) {
 
@@ -744,11 +753,7 @@ Triggers when the series renderer is created. This callback can be used to obtai
 
 ## onChartTouchInteractionDown
 
-Triggers when touched or clicked on the chart area. You can get the position of the touched region using this callback.
-
-The callback contains the following argument:
-
-* [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) - used to get the position of the touch interaction.
+Triggers when touched or clicked on the chart area. You can get the tapped region using the [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) argument.
 
 {% highlight dart %}
 
@@ -768,11 +773,7 @@ The callback contains the following argument:
 
 ## onChartTouchInteractionUp
 
-Triggers when tapped or clicked on the chart area. You can get the position of the tapped region using this callback.
-
-The callback contains the following argument:
-
-* [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) - used to get the position of the touch interaction.
+Triggers when tapped or clicked on the chart area. You can get the tapped region using the [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) argument.
 
 {% highlight dart %}
 
@@ -792,11 +793,7 @@ The callback contains the following argument:
 
 ## onChartTouchInteractionMove
 
-Triggers when touched or clicked and moved on the chart area. You can get the position of the moving region using this callback.
-
-The callback contains the following argument:
-
-* [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) - used to get the position of the touch interaction.
+Triggers when touched or clicked and moved on the chart area. You can get the tapped region using the [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) argument.
 
 {% highlight dart %}
 
@@ -1065,6 +1062,73 @@ Defaults to `null`.
       final int y;
     }
   
+{% endhighlight %}
+
+## onCreateShader
+
+The [`onCreateShader`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/onCreateShader.html)  provides options to get the outer rect, inner rect, and render type (either series or legend) using [`ChartShaderDetails`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartShaderDetails-class.html)  class.
+
+The onCreateShader callback is called once while rendering
+the data points and legend. For further reference on this callback, Check the [`Gradient fill`](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#gradient-fill) section.
+
+{% highlight dart %}
+
+    /// Package import
+    import 'dart:ui' as ui;
+
+    Widget build(BuildContext context) {
+    final List<ChartData> chartData = <ChartData>[
+      ChartData('IND', 24),
+      ChartData('AUS', 20),
+      ChartData('USA', 27),
+      ChartData('DEU', 57),
+      ChartData('ITA', 30),
+      ChartData('UK', 41),
+    ];
+    final List<Color> colors = <Color>[
+      const Color.fromRGBO(75, 135, 185, 1),
+      const Color.fromRGBO(192, 108, 132, 1),
+      const Color.fromRGBO(246, 114, 128, 1),
+      const Color.fromRGBO(248, 177, 149, 1),
+      const Color.fromRGBO(116, 180, 155, 1)
+    ];
+    final List<double> stops = <double>[
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      1,
+    ];
+
+    return Scaffold(
+        appBar: AppBar(),
+        body: Center(
+            child: Container(
+          child: SfCartesianChart(
+            primaryXAxis: CategoryAxis(),
+            series: <CartesianSeries<ChartData, String>>[
+            AreaSeries<ChartData, String>(
+              dataSource: chartData,
+              onCreateShader: (ShaderDetails chartShaderDetails) {
+                return ui.Gradient.linear(chartShaderDetails.rect.topRight,
+                    chartShaderDetails.rect.centerLeft, colors, stops);
+              },
+              xValueMapper: (ChartData data, _) => data.x,
+              yValueMapper: (ChartData data, _) => data.y),
+                ]
+              ),
+            )
+          )
+        );
+      }
+    }
+
+    class ChartData {
+      ChartData(this.x, this.y);
+      final num x;
+      final double? y;
+  }
+
 {% endhighlight %}
 
 ## axisLabelFormatter
