@@ -11,7 +11,7 @@ documentation: ug
 
 When loading a password-protected document without a password or with an invalid password in [SfPdfViewer](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer-class.html) using the [password](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/password.html) property. The default password dialogue will be displayed.
 
-![Password dialog](images/password-dialog.png)
+![Password dialog](images/password-dialog/password-dialog.png)
 
 ## Customize the visibility of password dialogue
 
@@ -47,7 +47,6 @@ import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 void main() {
   runApp(MaterialApp(
-    title: 'Syncfusion PDF Viewer Demo',
     home: CustomPasswordDialog(),
   ));
 }
@@ -62,7 +61,6 @@ class _CustomPasswordDialogState extends State<CustomPasswordDialog> {
   final TextEditingController _textFieldController = TextEditingController();
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final FocusNode _passwordDialogFocusNode = FocusNode();
-  bool _passwordVisible = true;
   String? password;
   bool _hasPasswordDialog = false;
   String _errorText = '';
@@ -71,19 +69,7 @@ class _CustomPasswordDialogState extends State<CustomPasswordDialog> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Syncfusion Flutter PDF Viewer'),
-        actions: <Widget>[
-          IconButton(
-            icon: const Icon(
-              Icons.bookmark,
-              color: Colors.white,
-              semanticLabel: 'Bookmark',
-            ),
-            onPressed: () {
-              _pdfViewerKey.currentState?.openBookmarkView();
-            },
-          ),
-        ],
+        title: const Text('Custom Password Dialog'),
       ),
       body: SfPdfViewer.network(
         'https://cdn.syncfusion.com/content/PDFViewer/encrypted.pdf',
@@ -102,7 +88,7 @@ class _CustomPasswordDialogState extends State<CustomPasswordDialog> {
           if (details.description.contains('password')) {
             if (details.description.contains('password') &&
                 _hasPasswordDialog) {
-              _errorText = 'Invalid password';
+              _errorText = 'Invalid password !!';
               _formKey.currentState?.validate();
               _textFieldController.clear();
               _passwordDialogFocusNode.requestFocus();
@@ -197,8 +183,8 @@ class _CustomPasswordDialogState extends State<CustomPasswordDialog> {
                     Form(
                       key: _formKey,
                       child: TextFormField(
-                        obscureText: _passwordVisible,
-                        obscuringCharacter: '*',
+                        obscuringCharacter: '#',
+                        obscureText: true,
                         decoration: InputDecoration(
                           border: OutlineInputBorder(
                               borderSide: BorderSide(
@@ -217,36 +203,12 @@ class _CustomPasswordDialogState extends State<CustomPasswordDialog> {
                                 .onSurface
                                 .withOpacity(0.6),
                           ),
-                          labelText: 'Enter password',
-                          labelStyle: TextStyle(
-                            fontFamily: 'Roboto',
-                            fontSize: 18,
-                            fontWeight: FontWeight.w500,
-                            color: Theme.of(context)
-                                .colorScheme
-                                .onSurface
-                                .withOpacity(0.87),
-                          ),
                           errorStyle: TextStyle(
                             fontFamily: 'Roboto',
                             fontSize: 14,
                             fontWeight: FontWeight.w500,
                             color: Theme.of(context).colorScheme.error,
                           ),
-                          suffixIcon: IconButton(
-                              icon: Icon(
-                                  _passwordVisible
-                                      ? Icons.visibility
-                                      : Icons.visibility_off,
-                                  color: Theme.of(context)
-                                      .colorScheme
-                                      .onSurface
-                                      .withOpacity(0.6)),
-                              onPressed: () {
-                                setState(() {
-                                  _passwordVisible = !_passwordVisible;
-                                });
-                              }),
                         ),
                         enableInteractiveSelection: false,
                         controller: _textFieldController,
@@ -329,3 +291,5 @@ class _CustomPasswordDialogState extends State<CustomPasswordDialog> {
 
 {% endhighlight %}
 {% endtabs %}
+
+![Custom Password dialog](images/password-dialog/custompassword-dialog.png)
