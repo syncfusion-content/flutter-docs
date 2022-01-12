@@ -104,7 +104,7 @@ class _CustomPasswordDialogState extends State<CustomPasswordDialog> {
     );
   }
 
-  /// Show the customized password dialog box
+  /// Show the customized password dialog
   Future<void> _showPasswordDialog() async {
     return showDialog<void>(
       context: context,
