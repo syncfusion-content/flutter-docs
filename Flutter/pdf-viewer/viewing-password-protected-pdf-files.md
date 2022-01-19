@@ -41,27 +41,26 @@ In this example, We have disabled the built-in password dialog by setting the fa
 {% tabs %}
 {% highlight Dart %}
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
+import 'package:flutter/foundation.dart';
 
 void main() {
-  runApp(MaterialApp(
-    home: CustomPasswordDialog(),
-  ));
+  runApp(const MaterialApp(home: CustomPasswordDialog()));
 }
 
 class CustomPasswordDialog extends StatefulWidget {
+  const CustomPasswordDialog({Key? key}) : super(key: key);
+
   @override
   _CustomPasswordDialogState createState() => _CustomPasswordDialogState();
 }
 
 class _CustomPasswordDialogState extends State<CustomPasswordDialog> {
-  final GlobalKey<SfPdfViewerState> _pdfViewerKey = GlobalKey();
+  String? _password;
+  final GlobalKey<FormFieldState> _formKey = GlobalKey<FormFieldState>();
   final TextEditingController _textFieldController = TextEditingController();
-  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final FocusNode _passwordDialogFocusNode = FocusNode();
-  String? password;
   bool _hasPasswordDialog = false;
   String _errorText = '';
 
@@ -69,14 +68,14 @@ class _CustomPasswordDialogState extends State<CustomPasswordDialog> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Custom Password Dialog'),
+        title: const Text('Custom password dialog'),
+        toolbarHeight: 56,
       ),
       body: SfPdfViewer.network(
         'https://cdn.syncfusion.com/content/PDFViewer/encrypted.pdf',
-        key: _pdfViewerKey,
         canShowPasswordDialog: false,
-        password: password,
-        onDocumentLoaded: (PdfDocumentLoadedDetails details) {
+        password: _password,
+        onDocumentLoaded: (details) {
           if (_hasPasswordDialog) {
             Navigator.pop(context);
             _hasPasswordDialog = false;
@@ -84,17 +83,18 @@ class _CustomPasswordDialogState extends State<CustomPasswordDialog> {
             _textFieldController.clear();
           }
         },
-        onDocumentLoadFailed: (PdfDocumentLoadFailedDetails details) {
+        onDocumentLoadFailed: (details) {
           if (details.description.contains('password')) {
             if (details.description.contains('password') &&
                 _hasPasswordDialog) {
-              _errorText = 'Invalid password !!';
+              _errorText = "Invalid password !!";
               _formKey.currentState?.validate();
               _textFieldController.clear();
               _passwordDialogFocusNode.requestFocus();
             } else {
               _errorText = '';
-              _showPasswordDialog();
+              /// Creating custom password dialog.
+              _showCustomPasswordDialog();
               _passwordDialogFocusNode.requestFocus();
               _hasPasswordDialog = true;
             }
@@ -105,158 +105,116 @@ class _CustomPasswordDialogState extends State<CustomPasswordDialog> {
   }
 
   /// Show the customized password dialog
-  Future<void> _showPasswordDialog() async {
+  Future<void> _showCustomPasswordDialog() async {
     return showDialog<void>(
-      context: context,
-      builder: (BuildContext context) {
-        final Orientation orientation =
-            kIsWeb ? Orientation.portrait : MediaQuery.of(context).orientation;
-        return AlertDialog(
-          scrollable: true,
-          insetPadding: EdgeInsets.zero,
-          contentPadding: orientation == Orientation.portrait
-              ? const EdgeInsets.all(24)
-              : const EdgeInsets.only(top: 0, right: 24, left: 24, bottom: 0),
-          buttonPadding: orientation == Orientation.portrait
-              ? const EdgeInsets.all(8)
-              : const EdgeInsets.all(4),
-          backgroundColor: Colors.white,
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Text(
-                'Password required',
-                style: TextStyle(
-                  fontFamily: 'Roboto',
-                  fontSize: 20,
-                  fontWeight: FontWeight.w500,
-                  color:
-                      Theme.of(context).colorScheme.onSurface.withOpacity(0.87),
-                ),
-              ),
-              SizedBox(
-                height: 36,
-                width: 36,
-                child: RawMaterialButton(
-                  onPressed: () {
-                    _closePasswordDialog();
-                  },
-                  child: Icon(
-                    Icons.clear,
+        context: context,
+        builder: (BuildContext context) {
+          final Orientation orientation = kIsWeb
+              ? Orientation.portrait
+              : MediaQuery.of(context).orientation;
+          return AlertDialog(
+            scrollable: true,
+            insetPadding: EdgeInsets.zero,
+            contentPadding: orientation == Orientation.portrait
+                ? const EdgeInsets.all(24)
+                : const EdgeInsets.only(top: 0, right: 24, left: 24, bottom: 0),
+            buttonPadding: orientation == Orientation.portrait
+                ? const EdgeInsets.all(8)
+                : const EdgeInsets.all(4),
+            title: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text(
+                  'Password required',
+                  style: TextStyle(
+                    fontFamily: 'Roboto',
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
                     color: Theme.of(context)
                         .colorScheme
                         .onSurface
-                        .withOpacity(0.6),
-                    size: 24,
+                        .withOpacity(0.87),
                   ),
                 ),
-              ),
-            ],
-          ),
-          shape: const RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(Radius.circular(4.0))),
-          content: StatefulBuilder(
-              builder: (BuildContext context, StateSetter setState) {
-            return SingleChildScrollView(
-              child: SizedBox(
-                width: 328,
-                child: Column(
-                  children: <Widget>[
-                    Align(
-                      alignment: Alignment.centerLeft,
-                      child: Padding(
-                        padding: const EdgeInsets.fromLTRB(0, 0, 0, 30),
-                        child: Text(
-                          'The document is password protected.Please enter a password',
-                          style: TextStyle(
-                            fontFamily: 'Roboto',
-                            fontSize: 16,
-                            fontWeight: FontWeight.w400,
-                            color: Theme.of(context)
-                                .colorScheme
-                                .onSurface
-                                .withOpacity(0.6),
-                          ),
-                        ),
-                      ),
+                SizedBox(
+                  height: 36,
+                  width: 36,
+                  child: RawMaterialButton(
+                    onPressed: () {
+                      _closePasswordDialog();
+                    },
+                    child: Icon(
+                      Icons.clear,
+                      color: Theme.of(context)
+                          .colorScheme
+                          .onSurface
+                          .withOpacity(0.6),
+                      size: 24,
                     ),
-                    Form(
-                      key: _formKey,
-                      child: TextFormField(
-                        obscuringCharacter: '#',
-                        obscureText: true,
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                              borderSide: BorderSide(
-                            color: Theme.of(context)
-                                .colorScheme
-                                .onSurface
-                                .withOpacity(0.12),
-                          )),
-                          hintText: 'Password: syncfusion',
-                          hintStyle: TextStyle(
-                            fontFamily: 'Roboto',
-                            fontSize: 16,
-                            fontWeight: FontWeight.w400,
-                            color: Theme.of(context)
-                                .colorScheme
-                                .onSurface
-                                .withOpacity(0.6),
-                          ),
-                          errorStyle: TextStyle(
-                            fontFamily: 'Roboto',
-                            fontSize: 14,
-                            fontWeight: FontWeight.w500,
-                            color: Theme.of(context).colorScheme.error,
-                          ),
-                        ),
-                        enableInteractiveSelection: false,
-                        controller: _textFieldController,
-                        autofocus: true,
-                        focusNode: _passwordDialogFocusNode,
-                        onFieldSubmitted: (String value) {
-                          _handlePasswordValidation(value);
-                        },
-                        validator: (String? value) {
-                          if (_errorText.isNotEmpty) {
-                            return _errorText;
-                          }
-                          return null;
-                        },
-                        onChanged: (String value) {
-                          _formKey.currentState?.validate();
-                          _errorText = '';
-                        },
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
-              ),
-            );
-          }),
-          actions: <Widget>[
-            TextButton(
-              onPressed: () {
-                _closePasswordDialog();
-              },
-              child: Text(
-                'CANCEL',
-                style: TextStyle(
-                  fontFamily: 'Roboto',
-                  fontSize: 14,
-                  fontWeight: FontWeight.w500,
-                  color: Theme.of(context).colorScheme.primary,
-                ),
-              ),
+              ],
             ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(0, 0, 8, 0),
-              child: TextButton(
+            shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(4.0))),
+            content: SingleChildScrollView(
+                child: SizedBox(
+                    width: 326,
+                    child: Column(children: <Widget>[
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 0, 0, 30),
+                          child: Text(
+                            'The document is password protected. Please enter a password.',
+                            style: TextStyle(
+                              fontFamily: 'Roboto',
+                              fontSize: 16,
+                              fontWeight: FontWeight.w400,
+                              color: Theme.of(context)
+                                  .colorScheme
+                                  .onSurface
+                                  .withOpacity(0.6),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Form(
+                        child: TextFormField(
+                          key: _formKey,
+                          controller: _textFieldController,
+                          focusNode: _passwordDialogFocusNode,
+                          obscureText: true,
+                          decoration: const InputDecoration(
+                              hintText: 'Password hint: syncfusion',
+                              border: OutlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.blue)),
+                              focusedBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.blue))),
+                          obscuringCharacter: '#',
+                          onFieldSubmitted: (value) {
+                            _handlePasswordValidation(value);
+                          },
+                          validator: (value) {
+                            if (_errorText.isNotEmpty) {
+                              return _errorText;
+                            }
+                            return null;
+                          },
+                          onChanged: (value) {
+                            _formKey.currentState?.validate();
+                            _errorText = '';
+                          },
+                        ),
+                      )
+                    ]))),
+            actions: <Widget>[
+              TextButton(
                 onPressed: () {
                   _handlePasswordValidation(_textFieldController.text);
                 },
                 child: Text(
-                  'OPEN',
+                  'OK',
                   style: TextStyle(
                     fontFamily: 'Roboto',
                     fontSize: 14,
@@ -265,11 +223,26 @@ class _CustomPasswordDialogState extends State<CustomPasswordDialog> {
                   ),
                 ),
               ),
-            )
-          ],
-        );
-      },
-    );
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
+                child: TextButton(
+                  onPressed: () {
+                    _closePasswordDialog();
+                  },
+                  child: Text(
+                    'CANCEL',
+                    style: TextStyle(
+                      fontFamily: 'Roboto',
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                      color: Theme.of(context).colorScheme.primary,
+                    ),
+                  ),
+                ),
+              )
+            ],
+          );
+        });
   }
 
   ///Close the password dialog
@@ -283,7 +256,7 @@ class _CustomPasswordDialogState extends State<CustomPasswordDialog> {
   /// Validates the password entered in text field.
   void _handlePasswordValidation(String value) {
     setState(() {
-      password = value;
+      _password = value;
       _passwordDialogFocusNode.requestFocus();
     });
   }
