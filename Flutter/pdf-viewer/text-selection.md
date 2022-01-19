@@ -25,10 +25,9 @@ You can enable or disable the text selection in the PDF page using the [enableTe
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-      body: Container(
-          child: SfPdfViewer.network(
+      body: SfPdfViewer.network(
               'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
-              enableTextSelection: false)));
+              enableTextSelection: false));
 }
 
 {% endhighlight %}
@@ -92,15 +91,14 @@ Widget build(BuildContext context) {
       appBar: AppBar(
         title: Text('Syncfusion Flutter PDF Viewer'),
       ),
-      body: Container(
-          child: SfPdfViewer.network(
+      body: SfPdfViewer.network(
         'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
         onTextSelectionChanged: (PdfTextSelectionChangedDetails details) {
           if (details.selectedText != null) {
             print(details.selectedText);
           }
         },
-      )));
+      ));
 }
 
 {% endhighlight %}

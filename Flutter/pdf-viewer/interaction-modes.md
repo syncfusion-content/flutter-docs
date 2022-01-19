@@ -26,10 +26,9 @@ By default, the `selection` interaction mode will be enabled on a desktop web br
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-      body: Container(
-          child: SfPdfViewer.network(
+      body: SfPdfViewer.network(
               'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf', 
-              interactionMode: PdfInteractionMode.selection)));
+              interactionMode: PdfInteractionMode.selection));
 }
 
 {% endhighlight %}
@@ -45,10 +44,9 @@ In `pan` mode, the dragging and scrolling of the pages can be performed in any d
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-      body: Container(
-          child: SfPdfViewer.network(
+      body: SfPdfViewer.network(
               'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf', 
-              interactionMode: PdfInteractionMode.pan)));
+              interactionMode: PdfInteractionMode.pan));
 }
 
 {% endhighlight %}
