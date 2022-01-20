@@ -222,14 +222,13 @@ The [PdfPageChangedDetails](https://pub.dev/documentation/syncfusion_flutter_pdf
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-      body: Container(
-          child: SfPdfViewer.network(
+      body: SfPdfViewer.network(
     'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
     onPageChanged: (PdfPageChangedDetails details) {
       print(details.newPageNumber);
       print(details.isFirstPage);
     },
-  )));
+  ));
 }
 
 {% endhighlight %}

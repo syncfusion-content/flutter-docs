@@ -30,10 +30,9 @@ By default, the `continuous` page layout mode is enabled, which scrolls the PDF 
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-      body: Container(
-          child: SfPdfViewer.network(
+      body:SfPdfViewer.network(
               'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
-              pageLayoutMode: PdfPageLayoutMode.continuous)));
+              pageLayoutMode: PdfPageLayoutMode.continuous));
 }
 
 {% endhighlight %}
@@ -49,10 +48,9 @@ In `Single` page layout mode, PDFs will be displayed page by page horizontally. 
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-      body: Container(
-          child: SfPdfViewer.network(
-              'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf', 
-             pageLayoutMode: PdfPageLayoutMode.single)));
+      body:SfPdfViewer.network(
+              'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
+              pageLayoutMode: PdfPageLayoutMode.single));
 }
 
 {% endhighlight %}
@@ -77,10 +75,9 @@ By default, `Vertical` scrolling is enabled, which moves the PDF pages from up t
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-      body: Container(
-          child: SfPdfViewer.network(
-              'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf', 
-             scrollDirection: PdfScrollDirection.vertical)));
+      body:SfPdfViewer.network(
+              'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
+              scrollDirection: PdfScrollDirection.vertical));
 }
 
 {% endhighlight %}
@@ -96,10 +93,9 @@ In `Horizontal` scrolling, PDF pages can be scrolled from left to right. To enab
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-      body: Container(
-          child: SfPdfViewer.network(
-              'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf', 
-             scrollDirection: PdfScrollDirection.horizontal)));
+      body:SfPdfViewer.network(
+              'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
+              scrollDirection: PdfScrollDirection.horizontal));
 }
 
 {% endhighlight %}
