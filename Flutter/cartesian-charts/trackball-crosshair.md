@@ -122,6 +122,8 @@ The position of trackball tooltip can be changed using the [`tooltipAlignment`](
 * [`ChartAlignment.far`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAlignment.html) - aligns the trackball tooltip to the bottom position of plot area.
 * [`ChartAlignment.center`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAlignment.html) - aligns the trackball tooltip to the center position of plot area. 
 
+>**NOTE**:The above [`tooltipAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballBehavior/tooltipAlignment.html) are only applicable for trackball displaymode [`TrackballDisplayMode.groupAllPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballDisplayMode.html).
+
 {% highlight dart %} 
     
     late TrackballBehavior _trackballBehavior;
