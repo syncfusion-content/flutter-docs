@@ -44,13 +44,13 @@ To render a Candle chart, create an instance of [` CandleSeries`](https://pub.de
                         primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders CandleSeries
-                            CandleSeries<SalesData, DateTime>(
+                            CandleSeries<ChartData, DateTime>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                lowValueMapper: (Sample sales, _) => sales.low,
-                                highValueMapper: (Sample sales, _) => sales.high, 
-                                openValueMapper: (Sample sales, _) => sales.open,
-                          closeValueMapper: (Sample sales, _) => sales.close,
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                lowValueMapper: (ChartData sales, _) => sales.low,
+                                highValueMapper: (ChartData sales, _) => sales.high, 
+                                openValueMapper: (ChartData sales, _) => sales.open,
+                          closeValueMapper: (ChartData sales, _) => sales.close,
 
                             )
                         ]
