@@ -22,7 +22,6 @@ To render a waterfall chart, create an instance of [`WaterfallSeries`](https://p
 * [`xValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/xValueMapper.html) - field in the data source, which is considered as x-value.
 * [`yValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/yValueMapper.html) - field in the data source, which is considered as y-value.
 * [`intermediateSumPredicate`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/intermediateSumPredicate.html) - used to predict the intermediate sum based on which the data point will be considered as an intermediate sum or not. If this has true value, then that point will be considered as an intermediate sum. Else if it has false, then it will be considered as a normal data point in the chart.
-
 * [`totalSumPredicate`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/totalSumPredicate.html) - used to predict the total sum based on which the data point will be considered as as total sum or not. If this has true value, then that point will be considered as a total sum. Else if it has false, then it will be considered as a normal data point in chart.
 
 {% highlight dart %}
