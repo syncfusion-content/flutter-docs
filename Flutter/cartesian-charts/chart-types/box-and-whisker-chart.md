@@ -46,3 +46,5 @@ To render a Box and Whisker chart, create an instance of [`BoxAndWhiskerSeries`]
 {% endhighlight %}
 
 ![box and whisker chart](cartesian-chart-types-images/box_and_whisker.png)
+
+Also refer, [color palette](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#color-palette), [color mapping](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#color-mapping-for-data-points), [animation](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#animation), [gradient](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#gradient-fill), [sorting](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#sorting) and [empty points](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#empty-points) for customizing the line series further.
