@@ -103,3 +103,7 @@ The `width` property is used to change the width of the rectangle. The default v
 {% endhighlight %}
 
 ![Stacked 100 column width and spacing](cartesian-chart-types-images/stacked_column_100_size.png)
+
+## See also
+
+[color palette](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#color-palette), [color mapping](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#color-mapping-for-data-points), [animation](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#animation), [gradient](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#gradient-fill), [sorting](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#sorting) and [empty points](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#empty-points) for customizing the stacked column 100 series further.

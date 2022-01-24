@@ -300,3 +300,7 @@ The `capLength` property is used to customize the length of the error bar's cap.
 {% endhighlight %}
 
 ![Error bar cap length](cartesian-chart-types-images/error_bar_caplength.png)
+
+## See also
+
+[color palette](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#color-palette), [color mapping](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#color-mapping-for-data-points), [animation](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#animation), [sorting](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#sorting) and [empty points](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#empty-points) for customizing the error bar series further.

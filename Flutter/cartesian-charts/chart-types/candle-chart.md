@@ -122,3 +122,7 @@ The following are the types of indication when the combination of high, low, ope
 {% endhighlight %}
 
 ![Candle Indication](cartesian-chart-types-images/candle_indication.jpg)
+
+## See also
+
+[color palette](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#color-palette), [color mapping](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#color-mapping-for-data-points), [animation](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#animation), [sorting](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#sorting) and [empty points](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#empty-points) for customizing the candle series further.

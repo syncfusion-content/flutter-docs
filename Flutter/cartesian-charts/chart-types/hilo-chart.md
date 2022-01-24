@@ -52,3 +52,7 @@ To render a HiLo chart, create an instance of [`HiloSeries`](https://pub.dev/doc
 {% endhighlight %}
 
 ![hiLo chart](cartesian-chart-types-images/hilo_chart.png)
+
+## See also
+
+[color palette](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#color-palette), [color mapping](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#color-mapping-for-data-points), [animation](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#animation), [sorting](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#sorting) and [empty points](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#empty-points) for customizing the hilo series further.
