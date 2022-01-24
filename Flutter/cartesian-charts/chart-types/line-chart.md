@@ -36,10 +36,9 @@ To render a line chart, create an instance of [`LineSeries`](https://pub.dev/doc
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders line chart
-                            LineSeries<SalesData, DateTime>(
+                            LineSeries<SalesData, int>(
                                 dataSource: chartData,
                                 xValueMapper: (SalesData sales, _) => sales.year,
                                 yValueMapper: (SalesData sales, _) => sales.sales
@@ -53,7 +52,7 @@ To render a line chart, create an instance of [`LineSeries`](https://pub.dev/doc
 
     class SalesData {
         SalesData(this.year, this.sales);
-        final DateTime year;
+        final int year;
         final double sales;
     }
 
