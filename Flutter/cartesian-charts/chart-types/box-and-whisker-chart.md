@@ -47,6 +47,11 @@ To render a Box and Whisker chart, create an instance of [`BoxAndWhiskerSeries`]
 
 ![box and whisker chart](cartesian-chart-types-images/box_and_whisker.png)
 
-## See also
+## See Also
 
-[color palette](./series-customization#color-palette), [color mapping](./series-customization#color-mapping-for-data-points), [animation](./series-customization#animation), [gradient](./series-customization#gradient-fill), [empty points](./series-customization#empty-points)  and [sorting](./series-customization##sorting) for customizing the box and whisker series further.
+* [Color palette](./series-customization#color-palette) 
+* [Color mapping](./series-customization#color-mapping-for-data-points)
+* [Animation](./series-customization#animation)
+* [Gradient](./series-customization#gradient-fill)
+* [Empty points](./series-customization#empty-points)  
+* [Sorting](./series-customization##sorting) 
