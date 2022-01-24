@@ -66,7 +66,7 @@ To render a Candle chart, create an instance of [` CandleSeries`](https://pub.de
 
 ### See Also 
 
-* [Rendering flutter candle stick chart](https://www.syncfusion.com/kb/12288/how-to-render-flutter-candlestick-chart-using-the-charts-widget-sfcartesianchart).
+* [Rendering flutter candlestick chart](https://www.syncfusion.com/kb/12288/how-to-render-flutter-candlestick-chart-using-the-charts-widget-sfcartesianchart).
 
 ## Indication for same values
 
