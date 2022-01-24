@@ -84,3 +84,54 @@ File('Output.pdf').writeAsBytes(document.save());
 document.dispose();
 	
 {% endhighlight %}
+
+## Inserting image to PDF using a web URL
+
+The ['PdfBitmap'](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfBitmap-class.html) API accepts List<int> and base64 string as  inputs, so you can retrieve the image from the web URL as base64 or List<int> and assign it to the bitmap class. 
+
+Steps to insert an image to the PDF using Web URL:
+ 1.	Add **http** package to the dependencies section of the **pubspec.yaml** file
+ {% highlight http %}
+dependencies: 
+http: ^0.13.4
+{%endhighlight%}
+
+2.	Import the following package into your dart file.
+{%highlight package%}
+import 'package:http/http.dart' show get;
+{%endhighlight%}
+
+This is explained in the following code snippet.
+
+{% highlight dart %}
+
+    //Create a PDF document.
+    PdfDocument document = PdfDocument();
+
+    //Add a page to the PDF.
+    PdfPage page = document.pages.add();
+
+    
+    //Read the image data from the weblink.
+    var url =
+        "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg";
+    var response = await get(Uri.parse(url));
+    var data = response.bodyBytes;
+
+    //Create a bitmap object.
+    PdfBitmap image = PdfBitmap(data);
+
+    //Draw an image to the document.
+    page.graphics.drawImage(
+        image,
+        Rect.fromLTWH(
+            0, 0, page.getClientSize().width, page.getClientSize().height));
+
+    //Save and launch the document.
+    final List<int> bytes = document.save();
+
+    //Dispose the document.
+    document.dispose();
+
+	
+{% endhighlight %}
