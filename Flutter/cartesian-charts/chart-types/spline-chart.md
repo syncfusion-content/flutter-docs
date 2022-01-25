@@ -204,4 +204,4 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
 {% endhighlight %}
 
-![Vertical spline chart](cartesian-chart-types-images/inversed-spline.jpeg)
+![Vertical spline chart](cartesian-chart-types-images/inversed-spline.png)
