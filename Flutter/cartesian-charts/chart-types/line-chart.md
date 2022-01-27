@@ -24,25 +24,24 @@ To render a line chart, create an instance of [`LineSeries`](https://pub.dev/doc
 
     @override
     Widget build(BuildContext context) {
-        final List<SalesData> chartData = [
-            SalesData(2010, 35),
-            SalesData(2011, 28),
-            SalesData(2012, 34),
-            SalesData(2013, 32),
-            SalesData(2014, 40)
+        final List<ChartData> chartData = [
+            ChartData(2010, 35),
+            ChartData(2011, 28),
+            ChartData(2012, 34),
+            ChartData(2013, 32),
+            ChartData(2014, 40)
         ];
 
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders line chart
-                            LineSeries<SalesData, DateTime>(
+                            LineSeries<ChartData, int>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales
                             )
                         ]
                     )
@@ -51,9 +50,9 @@ To render a line chart, create an instance of [`LineSeries`](https://pub.dev/doc
         );
     }
 
-    class SalesData {
-        SalesData(this.year, this.sales);
-        final DateTime year;
+    class ChartData {
+        ChartData(this.year, this.sales);
+        final int year;
         final double sales;
     }
 
@@ -69,12 +68,12 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
     
     @override
     Widget build(BuildContext context) {
-        final List<SalesData> chartData = [
-        SalesData("2010", 35),
-        SalesData("2011", 28),
-        SalesData('2012', 34),
-        SalesData('2013', 32),
-        SalesData('2014', 40)
+        final List<ChartData> chartData = [
+        ChartData("2010", 35),
+        ChartData("2011", 28),
+        ChartData('2012', 34),
+        ChartData('2013', 32),
+        ChartData('2014', 40)
         ];
         return Scaffold(
             body: Center(
@@ -82,12 +81,12 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
-                            LineSeries<SalesData, DateTime>(
+                            LineSeries<ChartData, DateTime>(
                                 dataSource: chartData,
                                 // Dash values for line
                                 dashArray: <double>[5, 5],
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales)
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales)
                         ]
                     )
                 )
@@ -118,18 +117,18 @@ To render a multi-colored line series, map the individual colors to the data usi
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
-                            LineSeries<SalesData, String>(
+                            LineSeries<ChartData, String>(
                                 dataSource: [
-                                    SalesData('Jan', 35, Colors.red),
-                                    SalesData('Feb', 28, Colors.green),
-                                    SalesData('Mar', 34, Colors.blue),
-                                    SalesData('Apr', 32, Colors.pink),
-                                    SalesData('May', 40, Colors.black)
+                                    ChartData('Jan', 35, Colors.red),
+                                    ChartData('Feb', 28, Colors.green),
+                                    ChartData('Mar', 34, Colors.blue),
+                                    ChartData('Apr', 32, Colors.pink),
+                                    ChartData('May', 40, Colors.black)
                                 ],
                                 // Bind the color for all the data points from the data source
-                                pointColorMapper:(SalesData sales, _) => sales.segmentColor,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                pointColorMapper:(ChartData sales, _) => sales.segmentColor,
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales
                             )
                         ]
                     )
@@ -138,8 +137,8 @@ To render a multi-colored line series, map the individual colors to the data usi
         );
     }
 
-    class SalesData {
-        SalesData(this.year, this.sales, this.segmentColor);
+    class ChartData {
+        ChartData(this.year, this.sales, this.segmentColor);
         final String year;
         final double sales;
         final Color segmentColor;

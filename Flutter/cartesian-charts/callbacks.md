@@ -83,82 +83,6 @@ Triggers when the visible range of an axis is changed, i.e. value changes for mi
 
 {% endhighlight %}
 
-
-## multiLevelLabelFormatter
-
-Triggers while rendering the multi-level labels. Text and text styles such as color, font size, font-weight, etc can be customized by using `ChartAxisLabel` class. The `MultiLevelLabelRenderDetails` contains the following arguments.
-
-* `text` - specifies the multi-level label to be rendered.
-* `actualLevel` - specifies the re-ordered level value of the current multi-level label.
-* `axisName` - specifies the axis name.
-* `index` - specifies the index of the multi-level label.
-* `textStyle` - used to change the text color, size, font family, font style, and font weight.
-
-{% highlight dart %}
-
-    @override
-    Widget build(BuildContext context) {
-      final List<ChartData> chartData = <ChartData>[
-        ChartData(1, 24),
-        ChartData(2, 20),
-        ChartData(3, 35),
-        ChartData(4, 27),
-        ChartData(5, 30),
-        ChartData(6, 41),
-        ChartData(7, 26)
-      ];
-      return Scaffold(
-        body: SfCartesianChart(
-          primaryXAxis: NumericAxis(
-            multiLevelLabelFormatter: (MultiLevelLabelRenderDetails details) {
-              return ChartAxisLabel(
-                details.index == 2 ? 'Callback' : details.text,
-                details.textStyle);
-            },
-            multiLevelLabels: const <NumericMultiLevelLabel>[
-              NumericMultiLevelLabel(
-                start: 1, 
-                end: 4, 
-                text: 'First'
-              ),
-              NumericMultiLevelLabel(
-                start: 4, 
-                end: 7, 
-                text: 'Second'
-              ),
-              NumericMultiLevelLabel(
-                start: 1, 
-                end: 4, 
-                text: 'Third', 
-                level: 1
-              ),
-              NumericMultiLevelLabel(
-                start: 4, 
-                end: 7, 
-                text: 'Fourth', 
-                level: 1
-              ),
-            ]
-          ),
-          series: <ChartSeries<ChartData, int>>[
-            LineSeries<ChartData, int>(
-              dataSource: chartData,
-              xValueMapper: (ChartData data, _) => data.x,
-              yValueMapper: (ChartData data, _) => data.y,
-            )
-          ]
-        )
-      );
-    }
-
-    class ChartData {
-      ChartData(this.x, this.y);
-        final int x;
-        final int y;
-    }
-
-{% endhighlight %}
-
 ## onDataLabelRender
 
 Triggers when data label is rendering. Text and text styles such as color, font size, and font weight can be customized. The [`onDataLabelRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onDataLabelRender.html) Callback contains the following arguments.
@@ -772,6 +696,15 @@ Triggers when the series renderer is created. This callback can be used to obtai
     //Initialize the series controller
     ChartSeriesController? _chartSeriesController;
     
+    final List<ChartData> chartData = <ChartData>[
+      ChartData(1, 24),
+      ChartData(2, 20),
+      ChartData(3, 23),
+      ChartData(4, 57),
+      ChartData(5, 30),
+      ChartData(6, 41),
+    ];
+
     @override
     Widget build(BuildContext context) {
 
@@ -820,11 +753,7 @@ Triggers when the series renderer is created. This callback can be used to obtai
 
 ## onChartTouchInteractionDown
 
-Triggers when touched or clicked on the chart area. You can get the position of the touched region using this callback.
-
-The callback contains the following argument:
-
-* [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) - used to get the position of the touch interaction.
+Triggers when touched or clicked on the chart area. You can get the tapped region using the [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) argument.
 
 {% highlight dart %}
 
@@ -844,11 +773,7 @@ The callback contains the following argument:
 
 ## onChartTouchInteractionUp
 
-Triggers when tapped or clicked on the chart area. You can get the position of the tapped region using this callback.
-
-The callback contains the following argument:
-
-* [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) - used to get the position of the touch interaction.
+Triggers when tapped or clicked on the chart area. You can get the tapped region using the [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) argument.
 
 {% highlight dart %}
 
@@ -868,11 +793,7 @@ The callback contains the following argument:
 
 ## onChartTouchInteractionMove
 
-Triggers when touched or clicked and moved on the chart area. You can get the position of the moving region using this callback.
-
-The callback contains the following argument:
-
-* [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) - used to get the position of the touch interaction.
+Triggers when touched or clicked and moved on the chart area. You can get the tapped region using the [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) argument.
 
 {% highlight dart %}
 
@@ -1065,7 +986,7 @@ Triggers when the error bar is being rendered. In this `onRenderDetailsUpdate` c
 
 ## onCreateRenderer
 
-Used to create the renderer for custom series.This is applicable only when the custom series is defined in the sample and for built-in series types, it is not applicable.
+Used to create the renderer for custom series. This is applicable only when the custom series is defined in the sample and for built-in series types, it is not applicable.
 
 Renderer created in this will hold the series state and this should be created for each series. [`onCreateRenderer`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/onCreateRenderer.html) callback function should return the renderer class and should not return null.
 
@@ -1075,57 +996,238 @@ Defaults to `null`.
 
 {% highlight dart %}
 
+    @override
     Widget build(BuildContext context) {
-        return Container(
-          child: SfCartesianChart(
-            series: <ColumnSeries<SalesData, num>>[
-                ColumnSeries<SalesData, num>(
-                  onCreateRenderer:(ChartSeries<dynamic, dynamic> series){
-                      return CustomColumnSeriesRenderer();
+      final List<ChartData> chartData = <ChartData>[
+        ChartData(1, 24),
+        ChartData(2, 20),
+        ChartData(3, 35),
+        ChartData(4, 27),
+        ChartData(5, 30),
+        ChartData(6, 41),
+        ChartData(7, 26)
+      ];
+      return Container(
+        child: SfCartesianChart(
+          series: <ColumnSeries<ChartData, int>>[
+            ColumnSeries<ChartData, int>(
+              dataSource: chartData,
+              xValueMapper: (ChartData data, _) => data.x,
+              yValueMapper: (ChartData data, _) => data.y,
+              onCreateRenderer: (ChartSeries<ChartData, int> series) {
+                return _CustomColumnSeriesRenderer(series as ColumnSeries<ChartData, int>);
               }
             ),
           ],
         )
       );
     }
-    class CustomColumnSeriesRenderer extends ColumnSeriesRenderer {
-       // custom implementation here...
-      @override
-      ChartSegment createSegment() {
-        return _ColumnCustomPainter();
-      }
-    }
 
     class _CustomColumnSeriesRenderer extends ColumnSeriesRenderer {
-    _CustomColumnSeriesRenderer(this.series);
+      _CustomColumnSeriesRenderer(this.series);
 
-    final ColumnSeries<dynamic, dynamic> series;
-     @override
-    ChartSegment createSegment() {
-      return _ColumnCustomPainter(series);
+      final ColumnSeries<ChartData, int> series;
+      @override
+      ChartSegment createSegment() {
+        return _ColumnCustomPainter(series);
       }
     }
 
     class _ColumnCustomPainter extends ColumnSegment {
-    _ColumnCustomPainter(this.series);
+      _ColumnCustomPainter(this.series);
 
-    final ColumnSeries<dynamic, dynamic> series;
-    @override
-    int get currentSegmentIndex => super.currentSegmentIndex!;
+      final ColumnSeries<ChartData, int> series;
+      @override
+      int get currentSegmentIndex => super.currentSegmentIndex!;
 
-    @override
-    Paint getFillPaint() {
-      final Paint customerFillPaint = Paint();
-      customerFillPaint.color =  series.dataSource[currentSegmentIndex].y > 30 ? Colors.red : Colors.green;
-      customerFillPaint.style = PaintingStyle.fill;
-      return customerFillPaint;
-    }
+      @override
+      Paint getFillPaint() {
+        final Paint customerFillPaint = Paint();
+        customerFillPaint.color = series.dataSource[currentSegmentIndex].y > 30
+          ? Colors.red
+          : Colors.green;
+        customerFillPaint.style = PaintingStyle.fill;
+        return customerFillPaint;
+      }
 
-    @override
-    void onPaint(Canvas canvas) {
-      super.onPaint(canvas);
+      @override
+      void onPaint(Canvas canvas) {
+        super.onPaint(canvas);
       }
     }
+ 
+    class ChartData {
+      ChartData(this.x, this.y);
+      final int x;
+      final int y;
+    }
+  
+{% endhighlight %}
+
+## onCreateShader
+
+The [`onCreateShader`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/onCreateShader.html)  provides options to get the outer rect, inner rect, and render type (either series or legend) using [`ChartShaderDetails`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartShaderDetails-class.html)  class.
+
+The onCreateShader callback is called once while rendering
+the data points and legend. For further reference on this callback, Check the [`Gradient fill`](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#gradient-fill) section.
+
+{% highlight dart %}
+
+    /// Package import
+    import 'dart:ui' as ui;
+
+    Widget build(BuildContext context) {
+    final List<ChartData> chartData = <ChartData>[
+      ChartData('IND', 24),
+      ChartData('AUS', 20),
+      ChartData('USA', 27),
+      ChartData('DEU', 57),
+      ChartData('ITA', 30),
+      ChartData('UK', 41),
+    ];
+    final List<Color> colors = <Color>[
+      const Color.fromRGBO(75, 135, 185, 1),
+      const Color.fromRGBO(192, 108, 132, 1),
+      const Color.fromRGBO(246, 114, 128, 1),
+      const Color.fromRGBO(248, 177, 149, 1),
+      const Color.fromRGBO(116, 180, 155, 1)
+    ];
+    final List<double> stops = <double>[
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      1,
+    ];
+
+    return Scaffold(
+        appBar: AppBar(),
+        body: Center(
+            child: Container(
+          child: SfCartesianChart(
+            primaryXAxis: CategoryAxis(),
+            series: <CartesianSeries<ChartData, String>>[
+            AreaSeries<ChartData, String>(
+              dataSource: chartData,
+              onCreateShader: (ShaderDetails chartShaderDetails) {
+                return ui.Gradient.linear(chartShaderDetails.rect.topRight,
+                    chartShaderDetails.rect.centerLeft, colors, stops);
+              },
+              xValueMapper: (ChartData data, _) => data.x,
+              yValueMapper: (ChartData data, _) => data.y),
+                ]
+              ),
+            )
+          )
+        );
+      }
+    }
+
+    class ChartData {
+      ChartData(this.x, this.y);
+      final num x;
+      final double? y;
+  }
+
+{% endhighlight %}
+
+## axisLabelFormatter
+
+Called while rendering each axis label in the chart. Provides label text, axis name, orientation of the axis, trimmed text and text styles such as color, font size, and font weight to the user using the `AxisLabelRenderDetails` class.
+
+You can customize the text and text style using the `ChartAxisLabel` class and can return it.
+
+Defaults to `null`.
+
+{% highlight dart %}
+
+    Widget build(BuildContext context) {
+      return Container(
+        child: SfCartesianChart(
+            primarXAxis: CategoryAxis(
+               axisLabelFormatter: (AxisLabelRenderDetails details) => axis(details),
+            ),
+        ));
+    }
+
+    ChartAxisLabel axis(AxisLabelRenderDetails details) {
+      return ChartAxisLabel('Label', details.textStyle);
+    }
+{% endhighlight %}
+
+## multiLevelLabelFormatter
+
+Triggers while rendering the multi-level labels. Text and text styles such as color, font size, font-weight, etc can be customized by using [`ChartAxisLabel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxisLabel-class.html) class. The [`MultiLevelLabelRenderDetails`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelRenderDetails-class.html) contains the following arguments.
+
+* [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelRenderDetails/text.html) - specifies the multi-level label to be rendered.
+* [`actualLevel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelRenderDetails/actualLevel.html) - specifies the re-ordered level value of the current multi-level label.
+* [`axisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelRenderDetails/axisName.html) - specifies the axis name.
+* [`index`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelRenderDetails/index.html) - specifies the index of the multi-level label. and the index will be in the same order as specified in [`multiLevelLabels`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/multiLevelLabels.html) property.
+* [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelRenderDetails/textStyle.html) - used to change the text color, size, font family, font style, etc.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      final List<ChartData> chartData = <ChartData>[
+        ChartData(1, 24),
+        ChartData(2, 20),
+        ChartData(3, 35),
+        ChartData(4, 27),
+        ChartData(5, 30),
+        ChartData(6, 41),
+        ChartData(7, 26)
+      ];
+      return Scaffold(
+        body: SfCartesianChart(
+          primaryXAxis: NumericAxis(
+            multiLevelLabelFormatter: (MultiLevelLabelRenderDetails details) {
+              return ChartAxisLabel(
+                details.index == 2 ? 'Callback' : details.text,
+                details.textStyle);
+            },
+            multiLevelLabels: const <NumericMultiLevelLabel>[
+              NumericMultiLevelLabel(
+                start: 1, 
+                end: 4, 
+                text: 'First'
+              ),
+              NumericMultiLevelLabel(
+                start: 4, 
+                end: 7, 
+                text: 'Second'
+              ),
+              NumericMultiLevelLabel(
+                start: 1, 
+                end: 4, 
+                text: 'Third', 
+                level: 1
+              ),
+              NumericMultiLevelLabel(
+                start: 4, 
+                end: 7, 
+                text: 'Fourth', 
+                level: 1
+              ),
+            ]
+          ),
+          series: <ChartSeries<ChartData, int>>[
+            LineSeries<ChartData, int>(
+              dataSource: chartData,
+              xValueMapper: (ChartData data, _) => data.x,
+              yValueMapper: (ChartData data, _) => data.y,
+            )
+          ]
+        )
+      );
+    }
+
+    class ChartData {
+      ChartData(this.x, this.y);
+        final int x;
+        final int y;
+    }
+
 {% endhighlight %}
 
 ## See Also

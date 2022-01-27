@@ -325,11 +325,7 @@ Triggers when tapping on the data label of the data point in the series. The [`o
 
 ## onChartTouchInteractionUp
 
-Triggers when tapped or clicked on the chart area. You can get the position of the tapped region using this callback.
-
-The callback contains the following argument:
-
-* [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) - used to get the position of the touch interaction.
+Triggers when tapped or clicked on the chart area. You can get the tapped region using the [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) argument.
 
 {% highlight dart %}
 
@@ -349,11 +345,7 @@ The callback contains the following argument:
 
 ## onChartTouchInteractionMove
 
-Triggers when touched or clicked and moved on the chart area. You can get the position of the moving region using this callback.
-
-The callback contains the following argument:
-
-* [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) - used to get the position of the touch interaction.
+Triggers when tapped or clicked and moved on the chart area. You can get the tapped region using the [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) argument.
 
 {% highlight dart %}
 
@@ -373,11 +365,7 @@ The callback contains the following argument:
 
 ## onChartTouchInteractionDown
 
-Triggers when touched or clicked on the chart area. You can get the position of the touched region using this callback.
-
-The callback contains the following argument:
-
-* [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) - used to get the position of the touch interaction.
+Triggers when touched or clicked on the chart area. You can get the tapped region using the [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) argument.
 
 {% highlight dart %}
 
@@ -395,43 +383,131 @@ The callback contains the following argument:
 
 {% endhighlight %}
 
-## onCreateShader
+## onRendererCreated
 
-Using this callback, you can fill the data points of circular charts series with gradient and image shader.
-
-The callback contains the following argument:
-
-* [`ChartShaderDetails`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartShaderDetails-class.html) - provides options to get the outer rect, inner rect, and render type (either series or legend)
-
-The onCreateShader callback is called once while rendering
-the data points and legend. For further reference on this callback, Check the [`Gradient and ImageShader`](./circular-series-customization#Gradient-fill-and-shader) section.
-
-
-## onCreateRenderer
-
-Used to create the renderer for custom series.This is applicable only when the custom series is defined in the sample and for built-in series types, it is not applicable.
-
-Renderer created in this will hold the series state and this should be created for each series. [`onCreateRenderer`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/onCreateRenderer.html) callback function should return the renderer class and should not return null.
-
-Series state will be created only once per series and will not be created again when we update the series.
-
-Defaults to `null`.
+Triggers when the series renderer is created. This callback can be used to obtain the [`CircularSeriesController`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeriesController-class.html) instance, which is used to access the the public methods in the series.
 
 {% highlight dart %}
 
+    //Initialize the series controller
+    CircularSeriesController? circularSeriesController;
+
+    final List<ChartData> chartData = <ChartData>[
+      ChartData(1, 24),
+      ChartData(2, 20),
+      ChartData(3, 23),
+      ChartData(4, 57),
+      ChartData(5, 30),
+      ChartData(6, 41),
+    ];
+
+    return Column(children: <Widget>[
+      Container(
+          child: SfCircularChart(
+        series: <CircularSeries<ChartData, dynamic>>[
+          DoughnutSeries<ChartData, dynamic>(
+            dataSource: chartData,
+            xValueMapper: (ChartData data, _) => data.x,
+            yValueMapper: (ChartData data, _) => data.y,
+            onRendererCreated: (CircularSeriesController controller) {
+              circularSeriesController = controller;
+              },
+            ),
+          ],
+        )
+      ),
+      Container(
+          child: ElevatedButton(
+              onPressed: () {
+                //Removed a point from data source
+                chartData.removeAt(0);
+                //Added a point to the data source
+                chartData.add(ChartData(3, 23));
+                //Here accessed the public method of the series.
+                circularSeriesController!.updateDataSource(
+                  addedDataIndexes: <int>[chartData.length - 1],
+                  removedDataIndexes: <int>[0],
+                );
+              },
+              child: Container(
+                child: Text('Add a point'),
+                )
+              )
+            )
+          ]
+        );
+      }
+    }
+
+    class ChartData {
+      ChartData(this.x, this.y);
+      final num x;
+      final double? y;
+    }
+
+{% endhighlight %}
+
+## onCreateShader
+
+The [`onCreateShader`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onCreateShader.html) provides options to get the outer rect, inner rect, and render type (either series or legend) using [`ChartShaderDetails`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartShaderDetails-class.html)  class.
+
+The onCreateShader callback is called once while rendering
+the data points and legend. For further reference on this callback, check the [`Gradient and ImageShader`](./circular-series-customization#Gradient-fill-and-shader) section.
+
+{% highlight dart %}
+
+    /// Package import
+    import 'dart:ui' as ui;
+
     Widget build(BuildContext context) {
-        return Container(
-            child: SfCircularChart(
-                series: <PieSeries<SalesData, num>>[
-                    PieSeries<SalesData, num>(
-                     onCreateRenderer:(CircularSeries<dynamic, dynamic> series){
-                       return CustomPieSeriesRenderer();
-                    }
-                ),
-              ],
-        ));
+    final List<ChartData> chartData = <ChartData>[
+      ChartData('IND', 24),
+      ChartData('AUS', 20),
+      ChartData('USA', 27),
+      ChartData('DEU', 57),
+      ChartData('ITA', 30),
+      ChartData('UK', 41),
+    ];
+    final List<Color> colors = <Color>[
+      const Color.fromRGBO(75, 135, 185, 1),
+      const Color.fromRGBO(192, 108, 132, 1),
+      const Color.fromRGBO(246, 114, 128, 1),
+      const Color.fromRGBO(248, 177, 149, 1),
+      const Color.fromRGBO(116, 180, 155, 1)
+    ];
+    final List<double> stops = <double>[
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      1,
+    ];
+
+    return Scaffold(
+        body: Center(
+            child: Container(
+          child: SfCircularChart(
+              onCreateShader: (ChartShaderDetails chartShaderDetails) {
+                return ui.Gradient.linear(chartShaderDetails.outerRect.topRight,
+                    chartShaderDetails.outerRect.centerLeft, colors, stops);
+              },
+              series: <PieSeries<ChartData, String>>[
+                PieSeries<ChartData, String>(
+                  dataSource: chartData,
+                  xValueMapper: (ChartData data, _) => data.x,
+                  yValueMapper: (ChartData data, _) => data.y),
+                ]
+              ),
+            )
+          )
+        );
+      }
     }
-    class CustomPieSeriesRenderer extends PieSeriesRenderer {
-       // custom implementation here...
+
+    class ChartData {
+      ChartData(this.x, this.y);
+      final String x;
+      final double? y;
     }
+
 {% endhighlight %}
