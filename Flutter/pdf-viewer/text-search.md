@@ -189,7 +189,7 @@ Widget build(BuildContext context) {
 
 ## Customize the search text highlight color
 
-The colors in which the current instance and other instances are highlighted can be customized with the help of [searchTextHighlightColor](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/searchTextHighlightColor.html) property. The default highlight color is **Orange** [Color(0xFFE56E00)] and the current instance highlight color opacity (w.r.t this property) will be higher than the other instances. By default, the current instance highlight color opacity will be 60% and the other instances color opacity will be 20%. 
+The colors in which the current instance and other instances are highlighted can be customized with the help of [currentSearchTextHighlightColor](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/currentSearchTextHighlightColor.html) and [otherSearchTextHighlightColor](https://pub.dev/documentation/syncfusion_flutter_pdfviewer/latest/pdfviewer/SfPdfViewer/otherSearchTextHighlightColor.html) property. The default highlight color is **Orange** [Color(0xFFE56E00)] and the current instance highlight color opacity (w.r.t this property) will be higher than the other instances. By default, the current instance highlight color opacity will be 60% and the other instances color opacity will be 30%.
 
 The following code example explains how to customize the search text highlight color.
 
@@ -201,9 +201,9 @@ late PdfTextSearchResult _searchResult;
 
 @override
 void initState() {
-    _pdfViewerController = PdfViewerController();
-    _searchResult = PdfTextSearchResult();
-    super.initState();
+   _pdfViewerController = PdfViewerController();
+   _searchResult = PdfTextSearchResult();
+   super.initState();
 }
 
 @override
@@ -211,22 +211,25 @@ Widget build(BuildContext context) {
   return Scaffold(
       appBar: AppBar(
         title: Text('Syncfusion Flutter PDF Viewer'),
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(
-              Icons.search,
-              color: Colors.white,
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(
+                Icons.search,
+                color: Colors.white,
+              ),
+              onPressed: () async {
+                _searchResult = await _pdfViewerController.searchText('the',
+                    searchOption: TextSearchOption.caseSensitive);
+              },
             ),
-            onPressed: () async {
-              _searchResult = await _pdfViewerController.searchText('the',
-                  searchOption: TextSearchOption.caseSensitive);
-            },
-          ),        ],
-      ),
-      body: SfPdfViewer.network(
+          ],
+        ),
+        body: SfPdfViewer.network(
           'https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf',
-          controller:_pdfViewerController,
-          searchTextHighlightColor: Colors.blue));
+          controller: _pdfViewerController,
+          currentSearchTextHighlightColor: Colors.blue,
+          otherSearchTextHighlightColor: Colors.yellow,
+        ));
 }
 
 {% endhighlight %}
