@@ -712,8 +712,8 @@ Triggers when the series renderer is created. This callback can be used to obtai
         children: <Widget>[
           Container(
           child: SfCartesianChart(
-                series: <LineSeries<SalesData, num>>[
-                    LineSeries<SalesData, num>(
+                series: <LineSeries<ChartData, num>>[
+                    LineSeries<ChartData, num>(
                       dataSource: chartData,
                       //Initialize the onRendererCreated event and store the controller for the respective series
                       onRendererCreated: (ChartSeriesController controller) {
@@ -743,8 +743,8 @@ Triggers when the series renderer is created. This callback can be used to obtai
       );
     }
 
-    class SalesData {
-      SalesData(this.x, this.y);
+    class ChartData {
+      ChartData(this.x, this.y);
       final num x;
       final double? y;
     }
@@ -906,8 +906,8 @@ Triggers while swiping on the plot area. Whenever the swiping happens on th
             onPlotAreaSwipe:
               (ChartSwipeDirection direction) =>
                   performSwipe(direction),
-            series: <ChartSeries<SalesData, num>>[
-                 AreaSeries<SalesData, num>(
+            series: <ChartSeries<ChartData, num>>[
+                 AreaSeries<ChartData, num>(
                      dataSource: chartData,
                  ),
             ],
@@ -924,8 +924,8 @@ Triggers while swiping on the plot area. Whenever the swiping happens on th
       }
     }
 
-    class SalesData {
-      SalesData(this.x, this.y);
+    class ChartData {
+      ChartData(this.x, this.y);
       final num x;
       final double? y;
     }

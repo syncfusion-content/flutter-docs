@@ -26,10 +26,10 @@ To render a column chart, create an instance of [`ColumnSeries`](https://pub.dev
                     child: SfCartesianChart(
                         series: <ChartSeries>[
                             // Renders column chart
-                            ColumnSeries<SalesData, double>(
+                            ColumnSeries<ChartData, double>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales
                             )
                         ]
                     )
@@ -50,12 +50,12 @@ By default, all the column series that have the same x and y-axes are placed sid
     
     @override
     Widget build(BuildContext context) {
-        final List<SalesData> chartData = [
-            SalesData(2010, 35, 23),
-            SalesData(2011, 38, 49),
-            SalesData(2012, 34, 12),
-            SalesData(2013, 52, 33),
-            SalesData(2014, 40, 30)
+        final List<ChartData> chartData = [
+            ChartData(2010, 35, 23),
+            ChartData(2011, 38, 49),
+            ChartData(2012, 34, 12),
+            ChartData(2013, 52, 33),
+            ChartData(2014, 40, 30)
         ];
         
         return Scaffold(
@@ -66,17 +66,17 @@ By default, all the column series that have the same x and y-axes are placed sid
                         // Columns will be rendered back to back
                         enableSideBySideSeriesPlacement: false,
                         series: <ChartSeries>[
-                            ColumnSeries<SalesData, DateTime>(
+                            ColumnSeries<ChartData, DateTime>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales
                             ),
-                            ColumnSeries<SalesData, DateTime>(
+                            ColumnSeries<ChartData, DateTime>(
                                 opacity: 0.9,
                                 width: 0.4,
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.loss
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.loss
                             )
                         ]
                     )
@@ -104,10 +104,10 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
                 child: Container(
                     child: SfCartesianChart(
                         series: <ChartSeries>[
-                            ColumnSeries<SalesData, double>(
+                            ColumnSeries<ChartData, double>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales,
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales,
                                 width: 0.8, // Width of the columns
                                 spacing: 0.2 // Spacing between the columns
                             )
@@ -135,10 +135,10 @@ The [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
                 child: Container(
                     child: SfCartesianChart(
                         series: <ChartSeries>[
-                            ColumnSeries<SalesData, double>(
+                            ColumnSeries<ChartData, double>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales,
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales,
                                 // Sets the corner radius
                                 borderRadius: BorderRadius.all(Radius.circular(15))
                             )
@@ -177,12 +177,12 @@ Renders column with track. Track is a rectangular bar rendered from the start to
                 child: Container(
                     child: SfCartesianChart(
                         series: <ChartSeries>[
-                            ColumnSeries<SalesData, double>(
+                            ColumnSeries<ChartData, double>(
                                 dataSource: chartData,
                                 // Renders the track
                                 isTrackVisible: true,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales
                             )
                         ]
                     )

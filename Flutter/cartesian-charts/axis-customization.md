@@ -957,26 +957,26 @@ By default, the chart is rendered with primary x axis and primary y axis. But, t
                             )
                         ],
                         series: <ChartSeries>[
-                            LineSeries<SalesData, String>(
+                            LineSeries<ChartData, String>(
                                 dataSource: [
-                                    SalesData('Jan', 35),
-                                    SalesData('Feb', 28),
-                                    SalesData('Mar', 34),
-                                    SalesData('Apr', 32),
-                                    SalesData('May', 40)
+                                    ChartData('Jan', 35),
+                                    ChartData('Feb', 28),
+                                    ChartData('Mar', 34),
+                                    ChartData('Apr', 32),
+                                    ChartData('May', 40)
                                 ],
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales
                             ),
-                            LineSeries<SalesData, String>(
+                            LineSeries<ChartData, String>(
                                 dataSource: [
-                                    SalesData('Jan', 15, 1),
-                                    SalesData('Feb', 11, 2),
-                                    SalesData('Mar', 14, 3),
-                                    SalesData('Apr', 12, 4),
+                                    ChartData('Jan', 15, 1),
+                                    ChartData('Feb', 11, 2),
+                                    ChartData('Mar', 14, 3),
+                                    ChartData('Apr', 12, 4),
                                 ],
-                                xValueMapper: (SalesData sales, _) => sales.numeric,
-                                yValueMapper: (SalesData sales, _) => sales.sales,
+                                xValueMapper: (ChartData sales, _) => sales.numeric,
+                                yValueMapper: (ChartData sales, _) => sales.sales,
                                 xAxisName: 'xAxis',
                                 yAxisName: 'yAxis'
                             )
@@ -987,8 +987,8 @@ By default, the chart is rendered with primary x axis and primary y axis. But, t
         );
     }
 
-    class SalesData {
-        SalesData(this.year, this.sales, [this.numeric]);
+    class ChartData {
+        ChartData(this.year, this.sales, [this.numeric]);
         final String year;
         final double? sales;
         final double? numeric;
@@ -1127,24 +1127,24 @@ The maximum width for axis labels and the space occupied by the axis labels can 
             primaryXAxis: CategoryAxis(
                 maximumLabelWidth: 80,
             ),
-            series: <ChartSeries<SalesData, String>>[
-                    BarSeries<SalesData, String>(
-                        dataSource: <SalesData>[
-                            SalesData('Goldin Finance 117', 597),
-                            SalesData('Ping An Finance Center', 599),
-                            SalesData('Makkah Clock Royal Tower', 601),
-                            SalesData('Shanghai Tower', 632),
-                            SalesData('Burj Khalifa', 828)],
-                        xValueMapper: (SalesData sales, _) => sales.year,
-                        yValueMapper: (SalesData sales, _) => sales.sales
+            series: <ChartSeries<ChartData, String>>[
+                    BarSeries<ChartData, String>(
+                        dataSource: <ChartData>[
+                            ChartData('Goldin Finance 117', 597),
+                            ChartData('Ping An Finance Center', 599),
+                            ChartData('Makkah Clock Royal Tower', 601),
+                            ChartData('Shanghai Tower', 632),
+                            ChartData('Burj Khalifa', 828)],
+                        xValueMapper: (ChartData sales, _) => sales.year,
+                        yValueMapper: (ChartData sales, _) => sales.sales
                     ),
             ]
           )
       );
     }
 
-    class SalesData {
-        SalesData(this.year, this.sales);
+    class ChartData {
+        ChartData(this.year, this.sales);
         final String year;
         final double sales;
     }
