@@ -174,3 +174,11 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
 {% endhighlight %}
 
 ![Stacked line cumulative](cartesian-chart-types-images/stacked_line_cumulative.jpg)
+
+## See Also
+
+* [Color palette](./series-customization#color-palette) 
+* [Color mapping](./series-customization#color-mapping-for-data-points)
+* [Animation](./series-customization#animation)
+* [Empty points](./series-customization#empty-points)  
+* [Sorting](./series-customization##sorting) 

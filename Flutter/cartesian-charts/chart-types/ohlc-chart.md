@@ -117,3 +117,11 @@ The following are the types of indication when the combination of high, low, ope
 {% endhighlight %}
 
 ![OHLC Indication](cartesian-chart-types-images/hilo_open_close_indication.jpg)
+
+## See Also
+
+* [Color palette](./series-customization#color-palette) 
+* [Color mapping](./series-customization#color-mapping-for-data-points)
+* [Animation](./series-customization#animation)
+* [Empty points](./series-customization#empty-points)  
+* [Sorting](./series-customization##sorting) 

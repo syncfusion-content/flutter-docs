@@ -117,3 +117,12 @@ The following code sample demonstrates how to set the `splineType` value to `car
 {% endhighlight %}
 
 ![Spline area type](cartesian-chart-types-images/spline_area_types.png)
+
+## See Also
+
+* [Color palette](./series-customization#color-palette) 
+* [Color mapping](./series-customization#color-mapping-for-data-points)
+* [Animation](./series-customization#animation)
+* [Gradient](./series-customization#gradient-fill)
+* [Empty points](./series-customization#empty-points)  
+* [Sorting](./series-customization##sorting) 
