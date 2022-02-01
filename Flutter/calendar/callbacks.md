@@ -75,7 +75,7 @@ Widget build(BuildContext context) {
 
 >**NOTE**
 * For recurrence appointment, the tap details will always return as `Appointment`, even for the custom business object.
-* You can`t get the controller.view by using `onTap` callback for allowedViews.
+* You can`t get the controller.view by using `onTap` callback for allowed views.
 * `onTap` callback not applicable for date selection of the picker in the calendar header.
 
 ## Calendar details callback
