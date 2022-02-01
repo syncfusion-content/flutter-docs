@@ -29,10 +29,10 @@ The selection feature in chart let you to select a segment in a series or the se
         body: Center(
           child: Container(
             child: SfPyramidChart(
-              series: PyramidSeries<SalesData, String>(
+              series: PyramidSeries<ChartData, String>(
                   dataSource: chartData,
-                  xValueMapper: (SalesData sales, _) =>   sales.year,
-                  yValueMapper: (SalesData sales, _) => sales.sales,
+                  xValueMapper: (ChartData sales, _) =>   sales.year,
+                  yValueMapper: (ChartData sales, _) => sales.sales,
                   selectionBehavior: _selectionBehavior
                 )
             )
@@ -77,10 +77,10 @@ You can customize the segments using the below properties.
         body: Center(
           child: Container(
             child: SfPyramidChart(
-              series: PyramidSeries<SalesData, String>(
+              series: PyramidSeries<ChartData, String>(
                   dataSource: chartData,
-                  xValueMapper: (SalesData sales, _) =>   sales.year,
-                  yValueMapper: (SalesData sales, _) => sales.sales,
+                  xValueMapper: (ChartData sales, _) =>   sales.year,
+                  yValueMapper: (ChartData sales, _) => sales.sales,
                   selectionBehavior: _selectionBehavior
                 )
             )
@@ -142,7 +142,7 @@ Defaults to `true`.
         body: Center(
           child: Container(
             child: SfPyramidChart(
-              series: PyramidSeries<SalesData, String>(
+              series: PyramidSeries<ChartData, String>(
                 dataSource: chartData1,
                 xValueMapper: (ChartData data, _) => data.x,
                 yValueMapper: (ChartData data, _) => data.y,

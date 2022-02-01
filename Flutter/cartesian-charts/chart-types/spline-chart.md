@@ -26,10 +26,10 @@ To render a spline chart, create an instance of [`SplineSeries`](https://pub.dev
                         primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders spline chart
-                            SplineSeries<SalesData, DateTime>(
+                            SplineSeries<ChartData, DateTime>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales
                             )
                         ]
                     )
@@ -56,12 +56,12 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
-                            SplineSeries<SalesData, DateTime>(
+                            SplineSeries<ChartData, DateTime>(
                                 dataSource: chartData,
                                 // Dash values for spline
                                 dashArray: <double>[5, 5],
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales
                             )
                         ]
                     )
@@ -97,13 +97,13 @@ The following code sample demonstrates how to set the [`splineType`](https://pub
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
-                            SplineSeries<SalesData, DateTime>(
+                            SplineSeries<ChartData, DateTime>(
                                 dataSource: chartData,
                                 // Type of spline
                                 splineType: SplineType.cardinal,
                                 cardinalSplineTension: 0.9,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales
                             )
                         ]
                     )
@@ -133,10 +133,10 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
                         isTransposed: true,
                         primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
-                            SplineSeries<SalesData, String>(
+                            SplineSeries<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales
                             )
                         ]
                     )

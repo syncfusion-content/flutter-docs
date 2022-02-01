@@ -30,13 +30,13 @@ To render a spline range area chart, create an instance of the [`SplineRangeArea
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        series: <CartesianSeries<SalesData, num>>[
-                        SplineRangeAreaSeries<SalesData, num>(
+                        series: <CartesianSeries<ChartData, num>>[
+                        SplineRangeAreaSeries<ChartData, num>(
                           dataSource: chartData,
-                          xValueMapper: (SalesData sales, _) => sales.xValue,
-                          lowValueMapper: (SalesData sales, _) =>
+                          xValueMapper: (ChartData sales, _) => sales.xValue,
+                          lowValueMapper: (ChartData sales, _) =>
                               sales.lowValue,
-                          highValueMapper: (SalesData sales, _) =>
+                          highValueMapper: (ChartData sales, _) =>
                               sales.highValue,),
                     ]
                 )
@@ -70,14 +70,14 @@ The following code sample demonstrates how to set the [`splineType`](https://pub
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        series: <CartesianSeries<SalesData, num>>[
-                            SplineRangeAreaSeries<SalesData, num>(
+                        series: <CartesianSeries<ChartData, num>>[
+                            SplineRangeAreaSeries<ChartData, num>(
                                 dataSource: chartData,
                                 splineType: SplineType.cardinal,
                                 cardinalSplineTension: 0.8,
-                                xValueMapper: (SalesData sales, _) => sales.xValue,
-                                lowValueMapper: (SalesData sales, _) => sales.lowValue,
-                                highValueMapper: (SalesData sales, _) => sales.highValue
+                                xValueMapper: (ChartData sales, _) => sales.xValue,
+                                lowValueMapper: (ChartData sales, _) => sales.lowValue,
+                                highValueMapper: (ChartData sales, _) => sales.highValue
                             )
                         ]
                     )
@@ -102,8 +102,8 @@ The borders of the spline range area chart can be customized using the [`borderD
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        series: <CartesianSeries<SalesData, num>>[
-                            SplineRangeAreaSeries<SalesData, num>(
+                        series: <CartesianSeries<ChartData, num>>[
+                            SplineRangeAreaSeries<ChartData, num>(
                                 borderDrawMode: RangeAreaBorderMode.all,
                                 borderWidth:2,
                                 borderColor: Colors.red

@@ -152,7 +152,7 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
 
     @override
     Widget build(BuildContext context) {
-            static List<SalesData> chartData = <ChartData>[
+            static List<ChartData> chartData = <ChartData>[
                 ChartData('Rent', 1000,Colors.teal),
                 ChartData('Food', 2500,Colors.lightBlue),
                 ChartData('Savings', 760,Colors.brown),

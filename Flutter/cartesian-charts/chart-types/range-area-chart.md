@@ -69,14 +69,14 @@ The borders of the range area chart can be customized using the [`borderDrawMode
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
-                            RangeAreaSeries<SalesData, DateTime>(
+                            RangeAreaSeries<ChartData, DateTime>(
                                 dataSource: chartData,
                                 color: Color.fromRGB(224, 242, 241,1),
                                 borderDrawMode: RangeAreaBorderMode.excludeSides,
                                 borderColor: Colors.green,
                                 borderWidth: 2,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales
                             )
                         ]
                     )

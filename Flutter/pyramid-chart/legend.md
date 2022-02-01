@@ -20,10 +20,10 @@ The [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
           child: Container(
             child: SfPyramidChart(
             legend: Legend(isVisible: true),
-            series: PyramidSeries<SalesData, String>(
+            series: PyramidSeries<ChartData, String>(
                   dataSource:chartData,
-                  xValueMapper: (SalesData sales, _) =>   sales.year,
-                  yValueMapper: (SalesData sales, _) => sales.sales
+                  xValueMapper: (ChartData sales, _) =>   sales.year,
+                  yValueMapper: (ChartData sales, _) => sales.sales
                 )
             )
           )
@@ -67,10 +67,10 @@ The [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/char
               borderColor: Colors.black,
               borderWidth: 2
             ),
-            series: PyramidSeries<SalesData, String>(
+            series: PyramidSeries<ChartData, String>(
                   dataSource:chartData,
-                  xValueMapper: (SalesData sales, _) =>   sales.year,
-                  yValueMapper: (SalesData sales, _) => sales.sales
+                  xValueMapper: (ChartData sales, _) =>   sales.year,
+                  yValueMapper: (ChartData sales, _) => sales.sales
                 )
             )
           )
@@ -114,10 +114,10 @@ The following properties are used to define and customize the [`title`](https://
                   )
                 ),
             ),
-            series: PyramidSeries<SalesData, String>(
+            series: PyramidSeries<ChartData, String>(
                   dataSource:chartData,
-                  xValueMapper: (SalesData sales, _) =>   sales.year,
-                  yValueMapper: (SalesData sales, _) => sales.sales
+                  xValueMapper: (ChartData sales, _) =>   sales.year,
+                  yValueMapper: (ChartData sales, _) => sales.sales
                 )
             )
           )
@@ -146,10 +146,10 @@ You can control the visibility of the series by tapping the legend item. You can
               // Toogles the series visibility on tapping the legend item
               toggleSeriesVisibility: true
             ),
-            series: PyramidSeries<SalesData, String>(
+            series: PyramidSeries<ChartData, String>(
                   dataSource:chartData,
-                  xValueMapper: (SalesData sales, _) =>   sales.year,
-                  yValueMapper: (SalesData sales, _) => sales.sales
+                  xValueMapper: (ChartData sales, _) =>   sales.year,
+                  yValueMapper: (ChartData sales, _) => sales.sales
                 )
             )
           )
@@ -176,10 +176,10 @@ The [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
               // Visibility of legend
               isVisible: false
             ),
-            series: PyramidSeries<SalesData, String>(
+            series: PyramidSeries<ChartData, String>(
                   dataSource:chartData,
-                  xValueMapper: (SalesData sales, _) =>   sales.year,
-                  yValueMapper: (SalesData sales, _) => sales.sales
+                  xValueMapper: (ChartData sales, _) =>   sales.year,
+                  yValueMapper: (ChartData sales, _) => sales.sales
                 )
             )
           )
@@ -207,10 +207,10 @@ The legend items can be placed in multiple rows or scroll can be enabled using t
               // Overflowing legend content will be wraped
               overflowMode: LegendItemOverflowMode.wrap
             ),
-            series: PyramidSeries<SalesData, String>(
+            series: PyramidSeries<ChartData, String>(
                   dataSource:chartData,
-                  xValueMapper: (SalesData sales, _) =>   sales.year,
-                  yValueMapper: (SalesData sales, _) => sales.sales
+                  xValueMapper: (ChartData sales, _) =>   sales.year,
+                  yValueMapper: (ChartData sales, _) => sales.sales
                 )
             )
           )
@@ -244,10 +244,10 @@ You can change the position of the legend inside the chart. The following proper
               // Legend will be placed at the left
               position: LegendPosition.left
             ),
-            series: PyramidSeries<SalesData, String>(
+            series: PyramidSeries<ChartData, String>(
                   dataSource:chartData,
-                  xValueMapper: (SalesData sales, _) =>   sales.year,
-                  yValueMapper: (SalesData sales, _) => sales.sales
+                  xValueMapper: (ChartData sales, _) =>   sales.year,
+                  yValueMapper: (ChartData sales, _) => sales.sales
                 )
             )
           )
@@ -276,7 +276,7 @@ Also, the legend will not take a dedicated position for it and will be drawn on 
                           isVisible: true,
                           // Legend will placed at the specified offset
                           offset: Offset(20, 40)),
-            series: PyramidSeries<SalesData, String>(
+            series: PyramidSeries<ChartData, String>(
                 dataSource: chartData,
                 xValueMapper: (ChartData data, _) => data.x,
                 yValueMapper: (ChartData data, _) => data.y),
@@ -316,10 +316,10 @@ You can customize the appearance of legend items with your template by using [`l
                 );
               }
             ),
-            series: PyramidSeries<SalesData, String>(
+            series: PyramidSeries<ChartData, String>(
                   dataSource:chartData,
-                  xValueMapper: (SalesData sales, _) =>   sales.year,
-                  yValueMapper: (SalesData sales, _) => sales.sales
+                  xValueMapper: (ChartData sales, _) =>   sales.year,
+                  yValueMapper: (ChartData sales, _) => sales.sales
                 )
             )
           )
