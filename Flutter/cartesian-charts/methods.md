@@ -1218,8 +1218,8 @@ Widget build(BuildContext context) {
         children: <Widget>[
           Container(
           child: SfCartesianChart(
-                series: <LineSeries<ChartData, num>>[
-                    LineSeries<ChartData, num>(
+                series: <LineSeries<SalesData, num>>[
+                    LineSeries<SalesData, num>(
                       dataSource: chartData,
                       //Initialize the onRendererCreated event and store the controller for the respective series
                       onRendererCreated: (ChartSeriesController controller) {
