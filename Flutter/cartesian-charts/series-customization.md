@@ -214,35 +214,48 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = <ChartData>[
+                ChartData('Jan', 21),
+                ChartData('Feb', 24),
+                ChartData('Mar', 35),
+                ChartData('Apr', 38),
+                ChartData('May', 54),
+                ChartData('Jun', 21),
+                ChartData('Jul', 24),
+                ChartData('Aug', 35),
+                ChartData('Sep', 38),
+                ChartData('Oct', 54),
+                ChartData('Nov', 38),
+                ChartData('Dec', 54)
+             ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        // Transpose the chart
                         isTransposed: true,
                         primaryXAxis: CategoryAxis(),
-                        series: <CartesianSeries>[
+                        series: <ChartSeries>[
                             SplineSeries<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) => data.y,
-                            )
-                        ]
+                                xValueMapper: (ChartData sales, _) => sales.x,
+                                yValueMapper: (ChartData sales, _) => sales.y
+                                )
+                            ]
+                        )
                     )
                 )
-            )
-        );
+            );
+        }
     }
-
     class ChartData {
-        ChartData(this.x, this.y)'
+        ChartData(this.x, this.y);
         final String x;
         final double? y;
     }
 
 {% endhighlight %}
 
-![Transposed chart](images/cartesian-customization/transposes.jpg)
+![Transposed chart](images/cartesian-customization/transposes.png)
 
 ## Color palette
 
@@ -252,6 +265,12 @@ The [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
 
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = <ChartData>[
+                ChartData('Germany', 129, 130, 100),
+                ChartData('Russia', 124, 92, 94),
+                ChartData('Norway', 109, 107, 90),
+                ChartData('USA', 88, 95, 70)
+		];
         return Scaffold(
             body: Center(
                 child: Container(
