@@ -91,13 +91,13 @@ The ['PdfBitmap'](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pd
 
 Steps to insert an image to the PDF using Web URL:
  1.	Add **http** package to the dependencies section of the **pubspec.yaml** file
- {% highlight http %}
+ {% highlight dart %}
 dependencies: 
 http: ^0.13.4
 {%endhighlight%}
 
 2.	Import the following package into your dart file.
-{%highlight package%}
+{%highlight dart%}
 import 'package:http/http.dart' show get;
 {%endhighlight%}
 
