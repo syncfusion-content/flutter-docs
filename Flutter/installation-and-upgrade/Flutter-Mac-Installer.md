@@ -18,10 +18,10 @@ The steps below show how to install the Flutter Mac installer. 
 
    ![Alert Image](Mac-Installer_images/Mac_Catalina_MacOS_Alert.png)  
 
-      If you face this alert, follow the below steps for easiest solution. 
+      If you face this alert, follow the below steps for easiest solution.
          
-         1.	Right click downloaded pkg file
-         2.	Select “Open With” option and choose Installer (Default)
+      1. Right click downloaded pkg file
+      2. Select “Open With” option and choose Installer (Default)
 
 2. Open the Syncfusion Flutter Mac Installer(.pkg) file from downloaded location by double-clicking it. The Syncfusion Essential Studio Flutter Mac Installer's welcome wizard will be displayed. Click the Continue button.
 
