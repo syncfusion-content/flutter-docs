@@ -148,7 +148,7 @@ To render a multi-colored line series, map the individual colors to the data usi
 
 ![Multi-colored line](cartesian-chart-types-images/multiColored_line.jpg)
 
-## See also
+## See Also
 
 * [Color palette](./series-customization#color-palette) 
 * [Color mapping](./series-customization#color-mapping-for-data-points)
