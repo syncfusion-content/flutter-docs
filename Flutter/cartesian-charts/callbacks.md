@@ -1,1025 +1,1241 @@
 ---
 layout: post
-title: Axis types in Flutter Cartesian Charts widget | Syncfusion 
-description: Learn here all about available Axis types of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
+title: Callbacks in Flutter Cartesian Charts widget | Syncfusion 
+description: Learn here all about available Callbacks feature of Syncfusion Flutter Cartesian Charts (SfCartesianChart) widget and more.
 platform: flutter
 control: Chart
 documentation: ug
 ---
 
-# Axis types in Flutter Cartesian Charts (SfCartesianChart)
+# Callbacks in Flutter Cartesian Charts (SfCartesianChart)
 
-Charts typically have two axes that are used to measure and categorize data: a vertical (Y) axis, and a horizontal (X) axis.
+The below Callbacks are for Cartesian chart.
 
-Vertical(Y) axis always uses numerical scale. Horizontal(X) axis supports the following types of scale:
+## onTooltipRender
 
-* Category
-* Numeric
-* Date-time
-* Date-time category
-* Logarithmic
+Triggers when the tooltip is rendering. Here, you can customize the text, header, x and y-positions. The [`onTooltipRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onTooltipRender.html) Callback contains the following arguments.
 
-## Numeric axis
+* [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipArgs/text.html) - specifies the content of the tooltip.
+* [`header`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipArgs/header.html) - specifies the header content of the tooltip.
+* [`locationX`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipArgs/locationX.html) - specifies the x position of tooltip.
+* [`locationY`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipArgs/locationY.html) - specifies the y position of tooltip.
+* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipArgs/seriesIndex.html) - specifies the current series index.
+* [`dataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipArgs/dataPoints.html) - holds the data point collection.
+* [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipArgs/pointIndex.html) - specifies the current point index.
+* [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipArgs/viewportPointIndex.html) - specifies the viewport index value of the tooltip.
 
-Numeric axis uses numerical scale and displays numbers as labels. By default, [`NumericAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis-class.html) is set to both horizontal axis and vertical axis.
+ {% highlight dart %}
 
-{% highlight dart %} 
+    late TooltipBehavior _tooltipBehavior;
+
+    @override
+    void initState(){
+      _tooltipBehavior =  TooltipBehavior(enable: true);
+      super.initState(); 
+    }
 
     @override
     Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCartesianChart(
-                        primaryXAxis: NumericAxis(), 
-                        primaryYAxis: NumericAxis(),
-                        series: <ChartSeries<SalesData, double>>[
-                            // Renders column chart
-                            ColumnSeries<SalesData, double>(
-                                dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
-                            )
-                        ]
-                    )
-                )
-            )
-        );
-    }
-
-    class SalesData{
-        SalesData(this.year, this.sales);
-        final double year;
-        final double sales;
+      return Scaffold(
+        body: Center(
+          child: SfCartesianChart(
+            tooltipBehavior: _tooltipBehavior,
+            onTooltipRender: (TooltipArgs args) {
+              args.text = 'Customized Text';
+            }
+          )
+        )
+      );
     }
 
 {% endhighlight %}
 
-![Numeric axis](images/axis-types/numeric.jpg)
-
-### Inversed numeric axis
-
-By using the [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/isInversed.html) property in Cartesian charts, the numeric axis can be inverted. Axis is rendered from the minimum value to the maximum value by default, and can be inverted from the maximum value to the minimum value.
-
-{% highlight dart %} 
-
-    @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCartesianChart(
-                        primaryXAxis: NumericAxis(isInversed: true), 
-                        primaryYAxis: NumericAxis(isInversed: true) 
-                    )
-                )
-            )
-        );
-    }
-
-{% endhighlight %}
-
-![Inversed Numeric axis](images/axis-types/inversed-numeric.png)
-
-### Customizing range
-
-To customize the range of an axis, use the [`minimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/minimum.html) and [`maximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/maximum.html) properties of [`NumericAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/NumericAxis.html). By default, nice range will be calculated automatically based on the provided data.
-
-{% highlight dart %} 
-
-    @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCartesianChart(
-                        primaryYAxis: NumericAxis(
-                            minimum: 10,
-                            maximum: 50
-                        )  
-                    )
-                )
-            )
-        );
-    }
-
-{% endhighlight %}
-
-![Numeric axis range](images/axis-types/numeric_range.jpg)
-
-### Customizing interval
-
-Axis interval can be customized using the [`interval`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/interval.html) property of [`ChartAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis-class.html). By default, nice interval will be calculated based on the minimum and maximum values of the provided data.
-
-{% highlight dart %} 
-
-    @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCartesianChart(
-                        primaryYAxis: NumericAxis(
-                            // axis interval is set to 10
-                            interval: 10
-                        ) 
-                    )
-                )
-            )
-        );
-    }
-
-{% endhighlight %}
-
-![Numeric axis interval](images/axis-types/numeric_interval.jpg)
-
-### Applying padding to the range
-
-Padding can be applied to the minimum and maximum extremes of the axis range using the [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangePadding.html) property. Numeric axis supports the following types of padding:
-
-* additional
-* auto
-* none
-* normal
-* round
-
-**additional**
-
-When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangePadding.html) property is [`ChartRangePadding.additional`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding.html), the axis range will be rounded and an interval of the axis will be added as padding to the minimum and maximum values of the range.
-
-{% highlight dart %} 
-
-    @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCartesianChart(
-                        primaryYAxis: NumericAxis(
-                            // Additional range padding is applied to y axis
-                            rangePadding: ChartRangePadding.additional
-                        )  
-                    )
-                )
-            )
-        );
-    }
-
-{% endhighlight %}
-
-![RangePadding additional](images/axis-types/numeric_additional.jpg)
-
-**auto**
-
-When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangePadding.html) property is [`ChartRangePadding.auto`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding.html), the horizontal numeric axis takes none for padding calculation, whereas the vertical numeric axis takes normal for padding calculation. This is also the default value of rangePadding.
-
-{% highlight dart %} 
-
-    @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCartesianChart(
-                        primaryYAxis: NumericAxis(
-                            rangePadding: ChartRangePadding.auto
-                        )  
-                    )
-                )
-            )
-        );
-    }
-
-{% endhighlight %}
-
-![RangePadding auto](images/axis-types/numeric_auto.jpg)
-
-**none**
-
-When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangePadding.html) property is [`ChartRangePadding.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding.html), padding will not be applied to the axis.
-
-{% highlight dart %} 
-
-    @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCartesianChart(
-                        primaryYAxis: NumericAxis(
-                            rangePadding: ChartRangePadding.none
-                        )  
-                    )
-                )
-            )
-        );
-    }
-
-{% endhighlight %}
-
-**normal**
-
-When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangePadding.html) property is [`ChartRangePadding.normal`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding.html), padding is applied to the axis based on the default range calculation.
-
-{% highlight dart %} 
-
-    @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCartesianChart(
-                        primaryYAxis: NumericAxis(
-                            rangePadding: ChartRangePadding.normal
-                        )   
-                    )
-                )
-            )
-        );
-    }
-
-{% endhighlight %}
-
-![RangePadding normal](images/axis-types/numeric_normal.jpg)
-
-**round**
-
-When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangePadding.html) property is [`ChartRangePadding.round`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding.html), axis range will be rounded to the nearest possible numeric value.
-
-{% highlight dart %} 
-
-    @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCartesianChart(
-                        primaryYAxis: NumericAxis(
-                            rangePadding: ChartRangePadding.round
-                        )  
-                    )
-                )
-            )
-        );
-    }
-
-{% endhighlight %}
-
-![RangePadding round](images/axis-types/numeric_round.jpg)
-
-### Formatting the labels
-
-The [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/numberFormat.html) property of numeric axis formats the numeric axis labels with [`globalized label formats`](https://api.flutter.dev/flutter/intl/NumberFormat-class.html). The following code snippet demonstrates how to format numeric labels.
-
-{% highlight dart %} 
-
-    @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCartesianChart(
-                        primaryYAxis: NumericAxis(
-                            // Y axis labels will be rendered with currency format
-                            numberFormat: NumberFormat.simpleCurrency()
-                        )
-                    )
-                )
-            )
-        );
-    }
-
-{% endhighlight %}
-
-![Number format](images/axis-types/number_format.jpg)
-
-Also refer [label format](./axis-customization#formatting-axis-label-content) and [date format](#formatting-the-labels-1) for formatting the labels 
-further.
-
->**NOTE**:You must import [`intl`](https://pub.dev/packages/intl) package for formatting labels using the [`NumberFormat`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html) class and  [`date Format`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
-
-
-### Decimal places
-
-The [`decimalPlaces`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/decimalPlaces.html) property of numeric axis can be used to control the number of decimal digits of the numeric axis labels. The default value of [`decimalPlaces`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/decimalPlaces.html) property is 3.
-
-{% highlight dart %} 
-
-    @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCartesianChart(
-                        primaryXAxis: NumericAxis(
-                            deciamlPlaces: 5
-                        ),
-                        primaryYAxis: NumericAxis(
-                            decimalPlaces: 4,
-                            rangPadding: ChartRangePadding.none
-                        )
-                    )
-                )
-            )
-        );
-    }
-
-{% endhighlight %}
-
-![Decimal Places](images/axis-types/numeric_decimalplaces.jpg)
-
-N>
-* In order to control the decimal places of the y-axis labels, you need to use [`decimalPlaces`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/decimalPlaces.html) property of the axis along with setting the [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangePadding.html) to [`ChartRangePadding.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding.html).
-* For x-axis labels, setting the [`decimalPlaces`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/decimalPlaces.html) alone is enough.
-
-## Category axis
-
-Category axis displays text labels instead of numbers. When the string values are bound to x values, then the x-axis must be initialized with CategoryAxis.
-
-{% highlight dart %} 
-
-    @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCartesianChart(
-                        primaryXAxis: CategoryAxis(),
-                        series: <ChartSeries<SalesData, String>>[
-                            // Renders column chart
-                            ColumnSeries<SalesData, String>(
-                                dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
-                            )
-                        ]
-                    )
-                )
-            )
-        );
-    }
-
-    class SalesData{
-        SalesData(this.year, this.sales);
-        final String year;
-        final double sales;
-    }
-
-{% endhighlight %}
-
-![Category Axis](images/axis-types/category.jpg)
-
-### Placing labels between the ticks
-
-Labels in category axis can be placed on the ticks by setting the [`labelPlacement`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CategoryAxis/labelPlacement.html) to [`LabelPlacement.onTicks`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelPlacement.html). The default value of the [`labelPlacement`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CategoryAxis/labelPlacement.html) property is [`LabelPlacement.betweenTicks`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelPlacement.html). So, the labels will be placed between the ticks by default.
-
-{% highlight dart %} 
-
-    @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCartesianChart(
-                        primaryXAxis: CategoryAxis(
-                            // Axis labels will be placed on the ticks
-                            labelPlacement: LabelPlacement.onTicks
-                        )
-                    )
-                )
-            )
-        );
-    }
-
-{% endhighlight %}
-
-### Displaying labels after a fixed interval
-
-To display the labels after a fixed interval n, set the [`interval`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/interval.html) property of ChartAxis to n. The default value of interval is null.
-
-{% highlight dart %} 
-
-    @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCartesianChart(
-                        primaryXAxis: CategoryAxis(
-                            labelPlacement: LabelPlacement.betweenTicks,
-                            interval: 2
-                        ) 
-                    )
-                )
-            )
-        );
-    }
-
-{% endhighlight %}
-
-![Fixed interval](images/axis-types/category_interval.jpg)
-
-### Indexed category axis
-
-Category axis can also be rendered based on the index values of data source by setting the [`arrangeByIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CategoryAxis/arrangeByIndex.html) property to true in the axis.
+## onActualRangeChanged
+
+Triggers when the visible range of an axis is changed, i.e. value changes for minimum, maximum, and interval. Here, you can customize the visible range of an axis. The [`onActualRangeChanged`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onActualRangeChanged.html) Callback contains the following arguments.
+
+* [`axisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActualRangeChangedArgs/axisName.html) - specifies the axis name.
+* [`axis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActualRangeChangedArgs/axis.html) - holds the information about the current axis.
+* [`actualMin`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActualRangeChangedArgs/actualMin.html) - specifies the actual minimum range of an axis.
+* [`actualMax`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActualRangeChangedArgs/actualMax.html) - specifies the actual maximum range of an axis.
+* [`actualInterval`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActualRangeChangedArgs/actualInterval.html) - specifies the actual interval of an axis.
+* [`visibleMin`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActualRangeChangedArgs/visibleMin.html) - specifies the visible minimum range of an axis.
+* [`visibleMax`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActualRangeChangedArgs/visibleMax.html) - specifies the visible maximum range of an axis.
+* [`visibleInterval`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActualRangeChangedArgs/visibleInterval.html) - specifies the visible interval of an axis. 
+* [`orientation`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ActualRangeChangedArgs/orientation.html) - specifies the current axis orientation.
 
 {% highlight dart %}
 
-    final List<ChartData> chartData = [
-        ChartData('John', 10),
-        ChartData('David', 9),
-        ChartData('Brit', 10),
-    ];
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: Center(
+          child: SfCartesianChart(
+            onActualRangeChanged: (ActualRangeChangedArgs args){
+              if (args.axisName == 'primaryYAxis'){
+                args.visibleMin = 10;
+              }
+            }
+          )
+        )
+      );
+    }
 
-    final List<ChartData> chartData2 = [
-        ChartData('Anto', 11),
-        ChartData('Peter', 12),
-        ChartData('Parker', 8),
-    ];
+{% endhighlight %}
+
+## onDataLabelRender
+
+Triggers when data label is rendering. Text and text styles such as color, font size, and font weight can be customized. The [`onDataLabelRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onDataLabelRender.html) Callback contains the following arguments.
+
+* [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/text.html) - used to get and set the content of the data label.
+* [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/textStyle.html) - used to change the text color, size, font family, font style, and font weight.
+* [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/pointIndex.html) - specifies the current point index.
+* [`seriesRenderer`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/seriesRenderer.html) - specifies current series and the series type may vary based on the chart type.
+* [`dataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/dataPoints.html) - used to get the data points of the series.
+* [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/viewportPointIndex.html) - to get the viewport index value of the tapped data label.
+* [`offset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/offset.html) - used to get and set the horizontal/vertical position of the data label. The first argument sets the horizontal component to x, while the second argument sets the vertical component to y.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelRenderArgs/color.html) - used to get and set the background color of a data label.
+ 
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCartesianChart(
-                        primaryXAxis: CategoryAxis(
-                            // Axis will be rendered based on the index values
-                            arrangeByIndex: true
-                        ),
-                        series: <ChartSeries<ChartData, String>>[
-                            ColumnSeries<ChartData, String>(
-                                dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y,
-                            ),
-                            ColumnSeries<ChartData, String>(
-                                dataSource: chartData2,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y,
-                            )
-                        ]
-                    )
+    
+      return Scaffold(
+        body: Center(
+          child: SfCartesianChart(
+            onDataLabelRender:(DataLabelRenderArgs args){
+              args.text = 'Data label';
+              CartesianSeries<ChartData, double> series = args.seriesRenderer;
+              //Changed the background color of the data label based on the series type
+              if (series.name == 'Product A') {
+                args.color = Colors.blue;
+              } else if(series.name == 'Product B'){
+                args.color = Colors.red;
+              }
+            },
+            series: <CartesianSeries>[
+              ColumnSeries<ChartData, double>(
+                dataLabelSettings: DataLabelSettings(
+                  isVisible: true
                 )
-            )
-        );
+              )
+            ]
+          )
+        )
+      );
     }
 
     class ChartData {
-        ChartData(this.x, this.y);
-        final String x;
-        final double? y;
+      ChartData(this.x, this.y);
+      final double x;
+      final double? y;
     }
 
 {% endhighlight %}
 
-![Indexed category axis](images/axis-types/category_arrangebyIndex.jpg)
+## onLegendItemRender
 
-## Date-time axis
+Triggers when the legend item is rendering. Here, you can customize the legend’s text, and shape.  The [`onLegendItemRender`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onLegendItemRender.html) Callback contains the following arguments.
 
-The date-time axis uses date-time scale and displays date-time values as axis labels in specified format.
+* [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendRenderArgs/text.html) - specifies the content of the legend.
+* [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendRenderArgs/pointIndex.html) - specifies the current point index that is applicable for circular chart type alone.
+* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendRenderArgs/seriesIndex.html) - specifies the current series index.
+* [`legendIconType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendRenderArgs/legendIconType.html) - specifies the shape of the legend.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendRenderArgs/color.html) - used to get and set the color of the legend icon.
 
-{% highlight dart %} 
+{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCartesianChart(
-                        primaryXAxis: DateTimeAxis(),
-                         series: <ChartSeries<SalesData, DateTime>>[
-                            // Renders line chart
-                            LineSeries<SalesData, DateTime>(
-                                dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
-                            )
-                        ]
-                    )
-                )
-            )
-        );
-    }
-
-    class SalesData{
-        SalesData(this.year, this.sales);
-        final DateTime year;
-        final double sales;
+    
+      return Scaffold(
+        body: Center(
+          child: SfCartesianChart(
+            legend: Legend(isVisible: true),
+            onLegendItemRender: (LegendRenderArgs args){
+              args.text = 'Legend Text';
+              args.legendIconType = LegendIconType.diamond;
+            }
+          )
+        )
+      );
     }
 
 {% endhighlight %}
 
-![DateTime axis](images/axis-types/datetime.jpg)
+## onTrackballPositionChanging
 
-### Customizing range
+Triggers while the trackball position is changing. Here, you can customize the text of the trackball.The [`onTrackballPositionChanging`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onTrackballPositionChanging.html) Callback contains the following argument.
 
-To customize the range of an axis, use the [`minimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/minimum.html) and [`maximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/maximum.html) properties of [`DateTimeAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/DateTimeAxis.html). By default, nice range will be calculated automatically based on the provided data.
+* [`chartPointInfo`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballArgs/chartPointInfo.html) - holds the information about the current point.
 
-{% highlight dart %} 
+{% highlight dart %}
+
+  late TrackballBehavior _trackballBehavior;
+
+    @override
+    void initState(){
+      _trackballBehavior =  TrackballBehavior(enable: true);
+      super.initState(); 
+    }
 
     @override
     Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCartesianChart(
-                        primaryXAxis: DateTimeAxis(
-                            minimum: DateTime(2010),
-                            maximum: DateTime(2020)
-                        )
-                    )
-                )
+    
+      return Scaffold(
+        body: Center( 
+          child: SfCartesianChart(
+              onTrackballPositionChanging: (TrackballArgs args) {
+                args.chartPointInfo.label = 'Custom Text';
+              },
+              trackballBehavior: _trackballBehavior
             )
-        );
+          )
+      );
     }
 
 {% endhighlight %}
 
-![DateTime range](images/axis-types/datetime_range.jpg)
+## onCrosshairPositionChanging
 
-### Date-time intervals
+Triggers while the crosshair position is changing. Here, you can customize the text and line color of the crosshair.The [`onCrosshairPositionChanging`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onCrosshairPositionChanging.html) Callback contains the following arguments.
 
-The date-time intervals can be customized using the [`interval`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/interval.html) and [`intervalType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/intervalType.html) properties of [`DateTimeAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/DateTimeAxis.html). For example, setting [`interval`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/interval.html) as 2 and [`intervalType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/intervalType.html) to years, would consider 2 years to be an interval.
+* [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairRenderArgs/text.html) - used to get and set the crosshair tooltip content.
+* [`value`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairRenderArgs/value.html) - specifies the actual value of the crosshair.
+* [`axisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairRenderArgs/axisName.html) - specifies the axis name.
+* [`orientation`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairRenderArgs/orientation.html) - specifies the current axis orientation.
+* [`axis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairRenderArgs/axis.html) - holds the information about the current axis.
+* [`lineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CrosshairRenderArgs/lineColor.html) - used to get and set the color of the crosshair line.
 
-The Flutter Chart supports the following types of interval for date-time axis:
+{% highlight dart %}
+    
+    late CrosshairBehavior _crosshairBehavior;
 
-* auto
-* years
-* months
-* days
-* hours
-* minutes
-* seconds
-* milliseconds
-
-{% highlight dart %} 
+    @override
+    void initState(){
+      _crosshairBehavior = CrosshairBehavior(
+            enable: true
+          );
+      super.initState(); 
+    }
 
     @override
     Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCartesianChart(
-                        primaryXAxis: DateTimeAxis(
-                            // Interval type will be months
-                            intervalType: DateTimeIntervalType.months,
-                            interval: 2
-                        )
-                    )
-                )
-            )
-        );
+    
+      return Scaffold(
+        body: Center(
+          child: SfCartesianChart(
+            onCrosshairPositionChanging: (CrosshairRenderArgs args){
+              args.text = 'crosshair';
+            },
+            crosshairBehavior: _crosshairBehavior
+          )
+        )
+      );
     }
 
 {% endhighlight %}
 
-![DateTime range](images/axis-types/datetime_interval.jpg)
+## onZooming
+
+Triggers when the zooming action is in progress. The [`onZooming`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onZooming.html) Callback contains the following arguments.
+
+* [`axis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/axis.html) - holds the information about the current axis.
+* [`currentZoomPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/currentZoomPosition.html) - used to get and set the current zoom position of an axis.
+* [`currentZoomFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/currentZoomFactor.html) - used to get and set the current zoom factor of an axis.
+* [`previousZoomPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/previousZoomPosition.html) - specifies the previous zoom position of an axis.
+* [`previousZoomFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/previousZoomFactor.html) - specifies the previous zoom factor of an axis.
+
+{% highlight dart %}
+    
+    late ZoomPanBehavior _zoomPanBehavior;
+
+    @override
+    void initState(){
+      _zoomPanBehavior = ZoomPanBehavior(
+            enableDoubleTapZooming: true,
+            enablePanning: true,
+            enablePinching: true,
+            enableSelectionZooming: true
+          );
+      super.initState(); 
+    }
+
+    @override
+    Widget build(BuildContext context) {
+    
+      return Scaffold(
+          body: Center(
+            child: SfCartesianChart(
+              zoomPanBehavior: _zoomPanBehavior,
+              onZooming: (ZoomPanArgs args){
+                  print(args.currentZoomFactor);
+                  print(args.currentZoomPosition);
+              }
+            )
+          )
+      );
+    }
+
+{% endhighlight %}
+
+## onZoomStart
+
+Triggers when zooming action begins. The [`onZoomStart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onZoomStart.html) Callback contains the following arguments.
+
+* [`axis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/axis.html) - holds the information about the current axis.
+* [`currentZoomPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/currentZoomPosition.html) - used to get and set the current zoom position of an axis.
+* [`currentZoomFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/currentZoomFactor.html) - used to get and set the current zoom factor of an axis.
+* [`previousZoomPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/previousZoomPosition.html) - specifies the previous zoom position of an axis.
+* [`previousZoomFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/previousZoomFactor.html) - specifies the previous zoom factor of an axis.
+
+{% highlight dart %}
+    
+    late ZoomPanBehavior _zoomPanBehavior;
+
+    @override
+    void initState(){
+      _zoomPanBehavior = ZoomPanBehavior(
+            enableDoubleTapZooming: true,
+            enablePanning: true,
+            enablePinching: true,
+            enableSelectionZooming: true
+          );
+      super.initState(); 
+    }
+
+    @override
+    Widget build(BuildContext context) {
+    
+      return Scaffold(
+        body: Center(
+          child: SfCartesianChart(
+            zoomPanBehavior: _zoomPanBehavior,
+            onZoomStart: (ZoomPanArgs args){
+                print(args.currentZoomFactor);
+                print(args.currentZoomPosition);
+            }
+          )
+        )
+      );
+    }
+
+{% endhighlight %}
+
+## onZoomEnd
+
+Triggers when the zooming action is completed. The [`onZoomEnd`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onZoomEnd.html) Callback contains the following arguments.
+
+* [`axis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/axis.html) - holds the information about the current axis.
+* [`currentZoomPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/currentZoomPosition.html) - used to get and set the current zoom position of an axis.
+* [`currentZoomFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/currentZoomFactor.html) - used to get and set the current zoom factor of an axis.
+* [`previousZoomPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/previousZoomPosition.html) - specifies the previous zoom position of an axis.
+* [`previousZoomFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/previousZoomFactor.html) - specifies the previous zoom factor of an axis.
+
+{% highlight dart %}
+    
+    late ZoomPanBehavior _zoomPanBehavior;
+
+    @override
+    void initState(){
+      _zoomPanBehavior = ZoomPanBehavior(
+            enableDoubleTapZooming: true,
+            enablePanning: true,
+            enablePinching: true,
+            enableSelectionZooming: true
+          );
+      super.initState(); 
+    }
+
+    @override
+    Widget build(BuildContext context) {
+    
+      return Scaffold(
+        body: Center(
+          child: SfCartesianChart(
+            zoomPanBehavior: _zoomPanBehavior,
+            onZoomEnd: (ZoomPanArgs args){
+                print(args.currentZoomFactor);
+                print(args.currentZoomPosition);
+            }
+          )
+        )
+      );
+    }
+
+{% endhighlight %}
+
+## onZoomReset
+
+Triggers when zoomed state is reset. The  [`onZoomReset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onZoomReset.html) Callback contains the following arguments.
+
+* [`axis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/axis.html) - holds the information about the current axis.
+* [`currentZoomPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/currentZoomPosition.html) - used to get and set the current zoom position of an axis.
+* [`currentZoomFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/currentZoomFactor.html) - used to get and set the current zoom factor of an axis.
+* [`previousZoomPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/previousZoomPosition.html) - specifies the previous zoom position of an axis.
+* [`previousZoomFactor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ZoomPanArgs/previousZoomFactor.html) - specifies the previous zoom factor of an axis.
+
+{% highlight dart %}
+    
+    late ZoomPanBehavior _zoomPanBehavior;
+
+    @override
+    void initState(){
+      _zoomPanBehavior = ZoomPanBehavior(
+            enableDoubleTapZooming: true,
+            enablePanning: true,
+            enablePinching: true,
+            enableSelectionZooming: true
+          );
+      super.initState(); 
+    }
+
+    @override
+    Widget build(BuildContext context) {
+    
+      return Scaffold(
+        body: Center(
+          child: SfCartesianChart(
+            zoomPanBehavior: _zoomPanBehavior,
+            onZoomReset: (ZoomPanArgs args){
+                print(args.currentZoomFactor);
+                print(args.currentZoomPosition);
+            }
+          )
+        )
+      );
+    }
+
+{% endhighlight %}
+
+## onPointTap
+
+Triggers when tapping on the series point. The [`onPointTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/onPointTap.html) callback contains the following arguments.
+
+* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/seriesIndex.html) - specifies the current series index.
+* [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/pointIndex.html) - specifies the current point index.
+* [`dataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/dataPoints.html) - holds the data point collection.
+* [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/viewportPointIndex.html) - specifies the viewport index value of the tapped data point.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: Center(
+          child: SfCartesianChart(
+            series: <ChartSeries<ChartData,num>>[
+              ColumnSeries(
+                onPointTap: (ChartPointDetails details) {
+                  print(details.pointIndex);
+                  print(details.seriesIndex);
+                }
+              )
+            ],
+          )
+        )
+      );
+    }
+
+{% endhighlight %}
+
+## onPointDoubleTap
+
+Triggers when double-tap the series point. The [`onPointDoubleTap`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/onPointDoubleTap.html) callback contains the following arguments.
+
+* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/seriesIndex.html) - specifies the current series index.
+* [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/pointIndex.html) - specifies the current point index.
+* [`dataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/dataPoints.html) - holds the data point collection.
+* [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/viewportPointIndex.html) - specifies the viewport index value of the double-tapped data point.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: Center(
+          child: SfCartesianChart(
+            series: <ChartSeries<ChartData,num>>[
+              ColumnSeries(
+                onPointDoubleTap: (ChartPointDetails details) {
+                  print(details.pointIndex);
+                  print(details.seriesIndex);
+                }
+              )
+            ],
+          )
+        )
+      );
+    }
+
+{% endhighlight %}
+
+## onPointLongPress
+
+Triggers when long press on the series point. The [`onPointLongPress`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/onPointLongPress.html) callback contains the following arguments.
+
+* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/seriesIndex.html) - specifies the current series index.
+* [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/pointIndex.html) - specifies the current point index.
+* [`dataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/dataPoints.html) - holds the data point collection.
+* [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartPointDetails/viewportPointIndex.html) - specifies the viewport index value of the long pressed data point.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: Center(
+          child: SfCartesianChart(
+            series: <ChartSeries<ChartData,num>>[
+              ColumnSeries(
+                onPointLongPress: (ChartPointDetails details) {
+                  print(details.pointIndex);
+                  print(details.seriesIndex);
+                }
+              )
+            ],
+          )
+        )
+      );
+    }
+{% endhighlight %}
+
+## onAxisLabelTapped
+
+Triggers when tapping the axis label. The  [`onAxisLabelTapped`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onAxisLabelTapped.html) Callback contains the following arguments.
+
+* [`axis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelTapArgs/axis.html) - holds the information about the current axis.
+* [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelTapArgs/text.html) - specifies the content of the axis label.
+* [`value`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelTapArgs/value.html) - specifies the actual value of the current axis label.
+* [`axisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelTapArgs/axisName.html) - used to get the axis name.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+    
+      return Scaffold(
+        body: Center(
+          child: SfCartesianChart(
+            onAxisLabelTapped: (AxisLabelTapArgs args) {
+              print(args.text);
+            }
+          )
+        )
+      );
+    }
+
+{% endhighlight %}
 
 #### See Also
 
-* [Rendering flutter time series chart with hours interval](https://www.syncfusion.com/kb/12289/how-to-render-flutter-time-series-chart-using-the-charts-widget-sfcartesianchart).
+* [Navigating to an hyperlink on axis label tap](https://www.syncfusion.com/kb/12202/how-to-navigate-to-a-hyperlink-when-clicked-on-chart-axis-label-sfcartesianchart).
 
-### Double range support
+## onLegendTapped
 
-Date-time axis [`interval`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/interval.html) property can be customized using double value.
+Triggers when tapping the legend item. The  [`onLegendTapped`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onLegendTapped.html) Callback contains the following arguments.
 
-For example, if you are rendering a series with months in x-axis with an interval of 0.5, then the interval will be calculated in days. The interval calculation may vary depending upon the number of days in the month.
+* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendTapArgs/seriesIndex.html) - specifies the current series index.
+* [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendTapArgs/pointIndex.html) - specifies the current point index that is applicable for circular series.
+* [`series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendTapArgs/series.html) - specifies the current series and the series type may vary based on the chart type.
 
-
-{% highlight dart %} 
-
-     @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCartesianChart(
-                        primaryXAxis: DateTimeAxis(
-                             interval: 0.5,
-                        )
-                        primaryXAxis: NumericAxis()
-                    )
-                )
-            )
-        );
-     }
-
-{% endhighlight %}
-
-![doublerange](images/axis-types/doublerange.png)
-
-### Applying padding to range
-
-Padding can be applied to the [`minimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/minimum.html) and [`maximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/maximum.html) extremes of a range using the `RangePadding` property. The date-time axis supports the following types of padding:
-
-* none
-* round 
-* additional
-* normal
-
-**none**
-
-When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangePadding.html) property is [`ChartRangePadding.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding.html), padding will not be applied to the axis.
-
-{% highlight dart %} 
-
-    @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCartesianChart(
-                        primaryXAxis: DateTimeAxis(
-                            rangePadding: ChartRangePadding.none
-                        )
-                    )
-                )
-            )
-        );
-    }
-
-{% endhighlight %}
-
-![Range padding none](images/axis-types/datetime_rangePadding_none.jpg)
-
-**round**
-
-When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangePadding.html) property is [`ChartRangePadding.round`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding.html), axis range will be rounded to the nearest possible date-time value.
-
-{% highlight dart %} 
-
-    @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCartesianChart(
-                        primaryXAxis: DateTimeAxis(
-                            rangePadding: ChartRangePadding.round
-                        ) 
-                    )
-                )
-            )
-        );
-    }
-
-{% endhighlight %}
-
-![RangePadding round](images/axis-types/datetime_rangePadding_round.jpg)
-
-**additional**
-
-When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangePadding.html) property is [`ChartRangePadding.additional`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding.html), range will be rounded and date-time interval of the axis will be added as padding to the minimum and maximum extremes of a range.
-
-{% highlight dart %} 
-
-    @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCartesianChart(
-                        primaryXAxis: DateTimeAxis(
-                            rangePadding: ChartRangePadding.additional
-                        ) 
-                    )
-                )
-            )
-        );
-    }
-
-{% endhighlight %}
-
-![RangePadding round](images/axis-types/datetime_rangePadding_add.jpg)
-
-**normal**
-
-When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangePadding.html) property is [`ChartRangePadding.normal`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding.html), padding will be applied to the axis based on the default range calculation.
-
-{% highlight dart %} 
-
-    @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCartesianChart(
-                        primaryXAxis: DateTimeAxis(
-                            rangePadding: ChartRangePadding.normal
-                        )
-                    )
-                )
-            )
-        );
-    }
-
-{% endhighlight %}
-
-![RangePadding normal](images/axis-types/datetime_rangePadding_normal.jpg)
-
-### Formatting the labels
-
-The [`date formats`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/dateFormat.html) property formats the date-time axis labels. The default data-time axis label can be formatted with various built-in [`DateFormat`](https://api.flutter.dev/flutter/intl/DateFormat-class.html), which depend on the given data source.
-
-{% highlight dart %} 
-
-    @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCartesianChart(
-                        primaryXAxis: DateTimeAxis(
-                            // X axis labels will be rendered based on the below format
-                            dateFormat: DateFormat.y()
-                        )  
-                    )
-                )
-            )
-        );
-    }
-
-{% endhighlight %}
-
-![Date format](images/axis-types/datetime_labelFormat.jpg)
-
-Also refer [label format](./axis-customization#formatting-axis-label-content) and [number format](#formatting-the-labels) for formatting the labels further.
-
->**NOTE**:You must import [`intl`](https://pub.dev/packages/intl) package for formatting labels using the [`NumberFormat`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html) class and  [`date Format`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
-
-## Date-time category axis
-
-Date-time category axis is a combination of both [`DateTimeAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeAxis/DateTimeAxis.html) and [`CategoryAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CategoryAxis-class.html). Date-time category axis is used to display the date-time values with non-linear intervals. For example, the business days alone have been depicted in a week here.
-
-{% highlight dart %} 
-
-    @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCartesianChart(
-                        primaryXAxis: DateTimeCategoryAxis(),
-                        series: <ChartSeries<SalesData, DateTime>>[
-                            // Renders Column chart
-                            ColumnSeries<SalesData, DateTime>(
-                                dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
-                            )
-                        ] 
-                    )
-                )
-            )
-        );
-    }
-
-    class SalesData{
-        SalesData(this.year, this.sales);
-        final DateTime year;
-        final double sales;
-    }
-
-{% endhighlight %}
-
-![DateTimeCategory axis](images/axis-types/datetimecategory.jpg)
-
-### Customizing range
-
-To customize the range of an axis, use the [`minimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoryAxis/minimum.html) and [`maximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoryAxis/maximum.html) properties of [`DateTimeCategoryAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoryAxis-class.html). By default, nice range will be calculated automatically based on the provided data.
-
-{% highlight dart %} 
-
-    @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCartesianChart(
-                        primaryXAxis: DateTimeCategoryAxis(
-                            minimum: DateTime(2010, 2, 3),
-                            maximum: DateTime(2010, 2, 10)
-                        )
-                    )
-                )
-            )
-        );
-    }
-
-{% endhighlight %}
-
-![DateTimeCategory range](images/axis-types/datetimecategory_range.jpg)
-
-### Date-time intervals
-
-The date-time category intervals can be customized using the [`interval`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/interval.html) and [`intervalType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoryAxis/intervalType.html) properties of [`DateTimeCategoryAxis`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoryAxis-class.html). For example, To display the axis labels after a fixed interval n, set the [`interval`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/interval.html) property of ChartAxis to n and to display the labels in months, set the [`intervalType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoryAxis/intervalType.html) property of DateTimeCategoryAxis as months.
-
-The Flutter Chart supports the following types of interval for date-time category axis:
-
-* auto
-* years
-* months
-* days
-* hours
-* minutes
-* seconds
-* milliseconds
-
-{% highlight dart %} 
-
-    @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCartesianChart(
-                        primaryXAxis: DateTimeCategoryAxis(
-                            // Interval type will be years
-                            intervalType: DateTimeIntervalType.months,
-                            interval: 2
-                        )
-                    )
-                )
-            )
-        );
-    }
-
-{% endhighlight %}
-
-![DateTimeCategory intervals](images/axis-types/datetimecategory_interval.jpg)
-
-### Formatting the labels
-
-The [`date formats`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DateTimeCategoryAxis/dateFormat.html) property formats the date-time category axis labels. The default data-time category axis label can be formatted with various built-in [`DateFormat`](https://api.flutter.dev/flutter/intl/DateFormat-class.html), which depend on the given data source.
-
-{% highlight dart %} 
-
-    @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCartesianChart(
-                        primaryXAxis: DateTimeCategoryAxis(
-                            // X axis labels will be rendered based on the below format
-                            dateFormat: DateFormat.yMMMd()
-                        )  
-                    )
-                )
-            )
-        );
-    }
-
-{% endhighlight %}
-
-![DateTimeCategory  date format](images/axis-types/datetimecategory_dateFormat.jpg)
-
-Also refer [label format](./axis-customization#formatting-axis-label-content) and [number format](#formatting-the-labels) for formatting the labels further.
-
->**NOTE**:You must import [`intl`](https://pub.dev/packages/intl) package for formatting labels using the [`NumberFormat`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html) class and [`date formats`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
-
-## Logarithmic axis
-
-Logarithmic axis uses logarithmic scale and displays numbers as axis labels.
-
-{% highlight dart %} 
-
-    @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCartesianChart(
-                        primaryXAxis: NumericAxis(),
-                        primaryYAxis: LogarithmicAxis(),
-                        series: <ChartSeries<SalesData, double>>[
-                            // Renders Column chart
-                            ColumnSeries<SalesData, double>(
-                                dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
-                            )
-                        ] 
-                    )
-                )
-            )
-        );
-    }
-
-    class SalesData{
-        SalesData(this.year, this.sales);
-        final double year;
-        final double sales;
-    }
-
-{% endhighlight %}
-
-![Logarithmic axis](images/axis-types/logarthmic.jpg)
-
-### Change logarithmic range
-
-To customize the range of log axis, use the [`minimum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LogarithmicAxis/minimum.html), [`maximum`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LogarithmicAxis/maximum.html), and [`interval`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/interval.html) properties. By default, the range will be calculated automatically based on the provided data.
 
 {% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCartesianChart(
-                        primaryYAxis: LogarithmicAxis(
-                            minimum: 100,
-                            maximum: 100000,
-                            interval: 1,
-                        )  
-                    )
-                )
-            )
-        );
+    
+      return Scaffold(
+        body: Center(
+          child: SfCartesianChart(
+            onLegendTapped: (LegendTapArgs args) {
+              print(args.seriesIndex);
+            },
+            legend: Legend(isVisible: true)
+          )
+        )
+      );
     }
 
 {% endhighlight %}
 
-![Logarithmic range](images/axis-types/logarthmic_range.jpg)
+## onSelectionChanged
 
-### Change log base value
+Triggers while selection changes. Here you can customize the selectedColor, unselectedColor, selectedBorderColor, selectedBorderWidth, unselectedBorderColor, and unselectedBorderWidth properties. The [`onSelectionChanged`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onSelectionChanged.html) Callback contains the following arguments.
 
-To customize the log base value, use the [`logBase`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LogarithmicAxis/logBase.html) property.
+* [`seriesRenderer`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/seriesRenderer.html) - specifies current series.
+* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/seriesIndex.html) - specifies the current series index.
+* [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/pointIndex.html) - specifies the current point index.
+* [`selectedColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/selectedColor.html) - used to get and set the color of the selected data points or series.
+* [`unselectedColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/unselectedColor.html) - used to get and set the color of the unselected data points or series.
+* [`selectedBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/selectedBorderColor.html) - used to get and set the border color of the selected data points or series.
+* [`selectedBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/selectedBorderWidth.html) - used to get and set the border width of the selected data points or series.
+* [`unselectedBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/unselectedBorderColor.html) - used to get and set the border color of the unselected data points or series.
+* [`unselectedBorderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/unselectedBorderWidth.html) - used to get and set the border width of the unselected data points or series.
+* [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionArgs/viewportPointIndex.html) - used to get the viewport index value of the selected data points.
 
 {% highlight dart %}
+    
+    late SelectionBehavior _selectionBehavior;
 
     @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCartesianChart(
-                        primaryYAxis: LogarithmicAxis(
-                           logBase: 5,
-                        )  
-                    )
-                )
-            )
-        );
+    void initState(){
+      _selectionBehavior =  SelectionBehavior(enable: true);
+      super.initState(); 
     }
-     
-{% endhighlight %}
-
-![Logarithmic base](images/axis-types/log_base.jpg)
-
-### Inversed logarithmic axis 
-
-By using the [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/isInversed.html) Property in Cartesian charts, the  logarithmic axis can be inverted. Axis gets rendered from the minimum value to the maximum value by default and can be inverted from the maximum value to the minimum value.
-
-{% highlight dart %}
 
     @override
     Widget build(BuildContext context) {
-        final dynamic chartData = <ChartData>[
-        ChartData('IND', 160, 10),
-        ChartData('CHN', 12343, 7),
-        ChartData('MAL', 19, 11),
-        ChartData('JAP', 14, 7),
-        ChartData('USA', 11, 8),
-        ChartData('ITL', 5, 6),
-        ChartData('SPA', 10, 3),
-        ChartData('PAK', 1, 7)
-        ];
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCartesianChart(
-                        primaryXAxis: LogarithmicAxis(
-                          isInversed:true,
-                        ),
-                        series : <StepLineSeries<ChartData, String>>[
-                        StepLineSeries<ChartData, String>(
-                        dataSource: chartData,
-                        xValueMapper: (ChartData sales, _) => sales.x,
-                        yValueMapper: (ChartData sales, _) => sales.y,
-                        animationDuration: 0),
-    ]; 
-                    )
+    
+      return Scaffold(
+          body: Center(
+            child: SfCartesianChart(
+              onSelectionChanged: (SelectionArgs args){
+                args.selectedColor = Colors.red;
+                args.unselectedColor = Colors.lightGreen;
+              },
+              series: <CartesianSeries>[
+                ColumnSeries<ChartData, double>(
+                  selectionBehavior: _selectionBehavior
                 )
+              ]
             )
-        );
+          )
+      );
     }
 
     class ChartData {
-       ChartData(this.year, this.androidSales, this.iphoneSales);
-       final String x;
-       final int y;
-       final int z;
+      ChartData(this.x, this.y);
+      final double x;
+      final double? y;
     }
-     
+
 {% endhighlight %}
 
-![Inversed logarithmic axis](images/axis-types/inversed-logarithmic.png) 
+## onRenderDetailsUpdate (TechnicalIndicators)
+ 
+Triggers when the indicator is rendering. Here you can customize the name, calculated data points, signal line color, signal line width, signal line dash array, and so on.
+ 
+The [`onRenderDetailsUpdate`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/onRenderDetailsUpdate.html) contains following arguments.
+
+* [`name`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderParams/name.html) - used to get and set the indicator name.
+* [`calculatedDataPoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/IndicatorRenderParams/calculatedDataPoints.html) - used to get the calculated indicator data points details.
+* [`signalLineColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicatorRenderDetails/signalLineColor.html) - used to change the color of the signal line.
+* [`signalLineWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicatorRenderDetails/signalLineWidth.html) - used to change the width of the signal line.
+* [`signalLineDashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicatorRenderDetails/signalLineDashArray.html) - used to change the dash array size of the signal line.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      List<double> signalLineDashArray = <double>[5,5];
+      double signalLineWidth = 3.0;
+      Color signalLineColor = Colors.cyan;
+      return Scaffold(
+        body:Center(
+          child: SfCartesianChart(
+            indicators: <TechnicalIndicators<dynamic, dynamic>>[
+              SmaIndicator<dynamic, dynamic>(
+                onRenderDetailsUpdate: (IndicatorRenderParams params) {
+                  return TechnicalIndicatorRenderDetails(signalLineColor, signalLineWidth, signalLineDashArray);
+                },
+            )],
+          )
+        )
+      );
+    }
+    
+{% endhighlight %}
+
+## onRenderDetailsUpdate (Trendline)
+
+Triggers when the trendline gets rendered. The `onRenderDetailsUpdate` callback contains the following arguments.
+
+* `seriesName` - specifies the series name of the trendline.
+* `calculatedDataPoints` - specifies the calculated data points of the trendline.
+* `trendlineName` - specifies the name of the trendline.
+* `intercept` - specifies the intercept value of the trendline.
+* `rSquaredValue` - specifies the r-squared value of the trendline.
+* `slope` - specifies the slope value of the trendline.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        body: Center(
+          child: SfCartesianChart(
+            series: <LineSeries<ChartData, String>>[
+              LineSeries<ChartData, String>(
+                dataSource: chartData,
+                xValueMapper: (ChartData data, _) => data.x,
+                yValueMapper: (ChartData data, _) => data.y,
+                trendlines: <Trendline>[
+                  Trendline(onRenderDetailsUpdate: (TrendlineRenderParams args) {
+                    print('Slope value: ' + args.slope![0].toString());
+                    print('rSquare value: ' + args.rSquaredValue.toString());
+                    print('Intercept value (x): ' + args.intercept.toString());
+                  })
+              ])
+          ],
+      )));
+    }
+
+{% endhighlight %}
+
+>**NOTE**
+* The slope values of the polynomial trendline type will depend on the polynomial order. The intercept, slope, and rSquaredValue are not applicable for moving average trendline type.
+
+## onRendererCreated
+
+Triggers when the series renderer is created. This callback can be used to obtain the [`ChartSeriesController`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSeriesController-class.html) instance, which is used to access the the public methods in the series.
+
+{% highlight dart %}
+
+    //Initialize the series controller
+    ChartSeriesController? _chartSeriesController;
+    
+    final List<ChartData> chartData = <ChartData>[
+      ChartData(1, 24),
+      ChartData(2, 20),
+      ChartData(3, 23),
+      ChartData(4, 57),
+      ChartData(5, 30),
+      ChartData(6, 41),
+    ];
+
+    @override
+    Widget build(BuildContext context) {
+
+      return Column(
+        children: <Widget>[
+          Container(
+          child: SfCartesianChart(
+                series: <LineSeries<SalesData, num>>[
+                    LineSeries<SalesData, num>(
+                      dataSource: chartData,
+                      //Initialize the onRendererCreated event and store the controller for the respective series
+                      onRendererCreated: (ChartSeriesController controller) {
+                          _chartSeriesController = controller;
+                      },
+                    ),
+                  ],
+            )
+          ),
+          Container(
+            child: ElevatedButton(
+              onPressed: () {
+                //Removed a point from data source
+                chartData.removeAt(0);
+                //Added a point to the data source
+                chartData.add(ChartData(3,23));
+                //Here accessed the public method of the series.
+                _chartSeriesController?.updateDataSource(
+                  addedDataIndexes: <int>[chartData.length -1],
+                  removedDataIndexes: <int>[0],
+                );
+              },
+              child: Container(child: Text('Add a point'),)
+            )
+          )
+        ]
+      );
+    }
+
+    class SalesData {
+      SalesData(this.x, this.y);
+      final num x;
+      final double? y;
+    }
+
+{% endhighlight %}
+
+## onChartTouchInteractionDown
+
+Triggers when touched or clicked on the chart area. You can get the tapped region using the [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) argument.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+        return Container(
+          child: SfCartesianChart(
+                onChartTouchInteractionDown: (ChartTouchInteractionArgs args){
+                  print(args.position.dx.toString());
+                  print(args.position.dy.toString());
+                }
+            )
+        );
+    }
+
+{% endhighlight %}
+
+## onChartTouchInteractionUp
+
+Triggers when tapped or clicked on the chart area. You can get the tapped region using the [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) argument.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+     return Container(
+        child: SfCartesianChart(
+            onChartTouchInteractionUp: (ChartTouchInteractionArgs args){
+                print(args.position.dx.toString());
+                print(args.position.dy.toString());
+              }
+        )
+    );
+  }
+
+{% endhighlight %}
+
+## onChartTouchInteractionMove
+
+Triggers when touched or clicked and moved on the chart area. You can get the tapped region using the [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartTouchInteractionArgs/position.html) argument.
+
+{% highlight dart %}
+
+  @override
+  Widget build(BuildContext context) {
+      return Container(
+        child: SfCartesianChart(
+            onChartTouchInteractionMove: (ChartTouchInteractionArgs args){
+                print(args.position.dx.toString());
+                print(args.position.dy.toString());
+              }
+        )
+    );
+  }
+
+{% endhighlight %}
+
+## onMarkerRender
+
+Triggers when the marker is being rendered. Here, you can customize the following arguments.
+
+* [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerRenderArgs/pointIndex.html) - to get the point index of the marker.
+* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerRenderArgs/seriesIndex.html) - to get the series index of the marker.
+* [`shape`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerRenderArgs/shape.html) - to get and set the shape of the marker.
+* [`markerHeight`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerRenderArgs/markerHeight.html) - to get and set the height of the marker.
+* [`markerWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerRenderArgs/markerWidth.html) - to get and set the width of the marker.
+* [`color`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerRenderArgs/color.html) - to get and set the color of the marker.
+* [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerRenderArgs/borderWidth.html) - to get and set the border width of the marker.
+* [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerRenderArgs/borderColor.html) - to get and set the border color of the marker.
+* [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MarkerRenderArgs/viewportPointIndex.html) - to get the viewport index value of the tapped data label.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+        return Container(
+            child: SfCartesianChart(
+                onMarkerRender: (MarkerRenderArgs args) {
+                  if (args.pointIndex == 1) {
+                    args.color = Colors.red;
+                    args.markerHeight = 20;
+                    args.markerWidth = 20;
+                    args.shape = DataMarkerType.diamond;
+                    args.borderColor = Colors.green;
+                    args.borderWidth = 2;
+                  }
+                },
+            )
+        );
+    }
+
+{% endhighlight %}
+
+## onDataLabelTapped
+Triggers when tapping on the data label of the data point in the series. The [`onDataLabelTapped`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onDataLabelTapped.html) Callback contains the following arguments.
+
+* [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/position.html) - specifies the position of the tapped data label in logical pixels.
+* [`seriesIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/seriesIndex.html) - specifies the series index of the tapped data label
+* [`pointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/pointIndex.html) - specifies the point index of the tapped data label.
+* [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/text.html) - specifies the content of the tapped data label.
+* [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/dataLabelSettings.html) - to get the data label customization options specified in that particular series.
+* [`viewportPointIndex`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelTapDetails/viewportPointIndex.html) - to get the viewport index value of the tapped data label.
+
+
+>**NOTE**: This callback will not be called, when the builder is specified for data label (data label template). For this case, custom widget specified in the [`DataLabelSettings.builder`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/builder.html) property can be wrapped using the [`GestureDetector`](https://api.flutter.dev/flutter/widgets/GestureDetector-class.html) and this functionality can be achieved in the application level.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      return Container(
+          child: SfCartesianChart(
+              onDatalabelTapped: (DataLabelTapArgs args) {
+                print(args.seriesIndex);                 
+              },
+              series: <ChartSeries<Sample, DateTime>>[
+                  LineSeries<Sample, DateTime>(
+                    dataSource: chartData,
+                    xValueMapper: (Sample sales, _) => sales.x,
+                    yValueMapper: (Sample sales, _) => sales.y,
+                    dataLabelSettings: DataLabelSettings(
+                        isVisible: true),
+                  )
+              ]
+          )
+      );
+    }
+
+    class Sample{
+      Sample(this.x, this,y);
+      final DateTime x;
+      final double? y;
+    }
+
+{% endhighlight %}
+
+## onPlotAreaSwipe
+
+Triggers while swiping on the plot area. Whenever the swiping happens on the plot area (the series rendering area), [`onPlotAreaSwipe`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/onPlotAreaSwipe.html) callback will be called. It provides options to get the direction of swiping. If the chart is swiped from left to right direction, the direction is [`ChartSwipeDirection.start`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSwipeDirection.html) and if the swipe happens from right to left direction, the direction is [`ChartSwipeDirection.end`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartSwipeDirection.html). Using this callback, the user will be able to achieve pagination functionality (i.e., on swiping over chart area, next set of data points can be loaded to the chart).
+
+{% highlight dart %}
+
+    //Initialize the series controller
+    ChartSeriesController? SeriesController;
+    
+    @override
+    Widget build(BuildContext context) {
+      return Container(
+         child: SfCartesianChart(
+            onPlotAreaSwipe:
+              (ChartSwipeDirection direction) =>
+                  performSwipe(direction),
+            series: <ChartSeries<SalesData, num>>[
+                 AreaSeries<SalesData, num>(
+                     dataSource: chartData,
+                 ),
+            ],
+         )
+      );
+    }
+
+    Widget performSwipe(ChartSwipeDirection direction) {
+        if (direction == ChartSwipeDirection.end) {
+            chartData.add(ChartSampleData(
+                x: chartData[chartData.length - 1].x + 1,
+                y: 10));
+            seriesController?.updateDataSource(addedDataIndex: chartData.length - 1);
+      }
+    }
+
+    class SalesData {
+      SalesData(this.x, this.y);
+      final num x;
+      final double? y;
+    }
+
+{% endhighlight %}
+
+## onRenderDetailsUpdate (ErrorBarSeries)
+
+Triggers when the error bar is being rendered. In this `onRenderDetailsUpdate` callback, you can get the following arguments.
+
+* `pointIndex` - To obtain the point index of the error bar.
+* `viewPortPointIndex` - To obtain the viewport index value of the error bar.
+* `calculatedErrorBarValues` - This contains the calculated error bar values such as `horizontalPositiveErrorValue`,`horizontalNegativeErrorValue`,`verticalPositiveErrorValue` and `verticalNegativeErrorValue`.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      final dynamic chartData = [
+        ChartData(1, 24),
+        ChartData(2, 20),
+        ChartData(3, 35),
+        ChartData(4, 27),
+        ChartData(5, 30),
+        ChartData(6, 41),
+        ChartData(7, 26)
+      ];
+
+      return Scaffold(
+        body: SfCartesianChart(
+      series: <ChartSeries<ChartData, int>>[
+        ErrorBarSeries<ChartData, int>(
+          dataSource: chartData,
+          xValueMapper: (ChartData data, _) => data.x,
+          yValueMapper: (ChartData data, _) => data.y,
+          onRenderDetailsUpdate: (ErrorBarRenderDetails args) {
+            print(args.pointIndex);
+            print(args.viewPortPointIndex);
+            print(
+                args.calculatedErrorBarValues!.horizontalPositiveErrorValue);
+            print(
+                args.calculatedErrorBarValues!.horizontalNegativeErrorValue);
+            print(args.calculatedErrorBarValues!.verticalPositiveErrorValue);
+            print(args.calculatedErrorBarValues!.verticalNegativeErrorValue);
+          })
+      ],
+    )
+    );
+    }
+
+    class ChartData {
+      ChartData(this.x, this.y);
+      final int x;
+      final int y;
+    }
+
+{% endhighlight %}
+
+## onCreateRenderer
+
+Used to create the renderer for custom series. This is applicable only when the custom series is defined in the sample and for built-in series types, it is not applicable.
+
+Renderer created in this will hold the series state and this should be created for each series. [`onCreateRenderer`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/onCreateRenderer.html) callback function should return the renderer class and should not return null.
+
+Series state will be created only once per series and will not be created again when we update the series.
+
+Defaults to `null`.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      final List<ChartData> chartData = <ChartData>[
+        ChartData(1, 24),
+        ChartData(2, 20),
+        ChartData(3, 35),
+        ChartData(4, 27),
+        ChartData(5, 30),
+        ChartData(6, 41),
+        ChartData(7, 26)
+      ];
+      return Container(
+        child: SfCartesianChart(
+          series: <ColumnSeries<ChartData, int>>[
+            ColumnSeries<ChartData, int>(
+              dataSource: chartData,
+              xValueMapper: (ChartData data, _) => data.x,
+              yValueMapper: (ChartData data, _) => data.y,
+              onCreateRenderer: (ChartSeries<ChartData, int> series) {
+                return _CustomColumnSeriesRenderer(series as ColumnSeries<ChartData, int>);
+              }
+            ),
+          ],
+        )
+      );
+    }
+
+    class _CustomColumnSeriesRenderer extends ColumnSeriesRenderer {
+      _CustomColumnSeriesRenderer(this.series);
+
+      final ColumnSeries<ChartData, int> series;
+      @override
+      ChartSegment createSegment() {
+        return _ColumnCustomPainter(series);
+      }
+    }
+
+    class _ColumnCustomPainter extends ColumnSegment {
+      _ColumnCustomPainter(this.series);
+
+      final ColumnSeries<ChartData, int> series;
+      @override
+      int get currentSegmentIndex => super.currentSegmentIndex!;
+
+      @override
+      Paint getFillPaint() {
+        final Paint customerFillPaint = Paint();
+        customerFillPaint.color = series.dataSource[currentSegmentIndex].y > 30
+          ? Colors.red
+          : Colors.green;
+        customerFillPaint.style = PaintingStyle.fill;
+        return customerFillPaint;
+      }
+
+      @override
+      void onPaint(Canvas canvas) {
+        super.onPaint(canvas);
+      }
+    }
+ 
+    class ChartData {
+      ChartData(this.x, this.y);
+      final int x;
+      final int y;
+    }
+  
+{% endhighlight %}
+
+## onCreateShader
+
+The [`onCreateShader`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/onCreateShader.html)  provides options to get the outer rect, inner rect, and render type (either series or legend) using [`ChartShaderDetails`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartShaderDetails-class.html)  class.
+
+The onCreateShader callback is called once while rendering
+the data points and legend. For further reference on this callback, Check the [`Gradient fill`](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#gradient-fill) section.
+
+{% highlight dart %}
+
+    /// Package import
+    import 'dart:ui' as ui;
+
+    Widget build(BuildContext context) {
+    final List<ChartData> chartData = <ChartData>[
+      ChartData('IND', 24),
+      ChartData('AUS', 20),
+      ChartData('USA', 27),
+      ChartData('DEU', 57),
+      ChartData('ITA', 30),
+      ChartData('UK', 41),
+    ];
+    final List<Color> colors = <Color>[
+      const Color.fromRGBO(75, 135, 185, 1),
+      const Color.fromRGBO(192, 108, 132, 1),
+      const Color.fromRGBO(246, 114, 128, 1),
+      const Color.fromRGBO(248, 177, 149, 1),
+      const Color.fromRGBO(116, 180, 155, 1)
+    ];
+    final List<double> stops = <double>[
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      1,
+    ];
+
+    return Scaffold(
+        appBar: AppBar(),
+        body: Center(
+            child: Container(
+          child: SfCartesianChart(
+            primaryXAxis: CategoryAxis(),
+            series: <CartesianSeries<ChartData, String>>[
+            AreaSeries<ChartData, String>(
+              dataSource: chartData,
+              onCreateShader: (ShaderDetails chartShaderDetails) {
+                return ui.Gradient.linear(chartShaderDetails.rect.topRight,
+                    chartShaderDetails.rect.centerLeft, colors, stops);
+              },
+              xValueMapper: (ChartData data, _) => data.x,
+              yValueMapper: (ChartData data, _) => data.y),
+                ]
+              ),
+            )
+          )
+        );
+      }
+    }
+
+    class ChartData {
+      ChartData(this.x, this.y);
+      final num x;
+      final double? y;
+  }
+
+{% endhighlight %}
+
+## axisLabelFormatter
+
+Called while rendering each axis label in the chart. Provides label text, axis name, orientation of the axis, trimmed text and text styles such as color, font size, and font weight to the user using the `AxisLabelRenderDetails` class.
+
+You can customize the text and text style using the `ChartAxisLabel` class and can return it.
+
+Defaults to `null`.
+
+{% highlight dart %}
+
+    Widget build(BuildContext context) {
+      return Container(
+        child: SfCartesianChart(
+            primarXAxis: CategoryAxis(
+               axisLabelFormatter: (AxisLabelRenderDetails details) => axis(details),
+            ),
+        ));
+    }
+
+    ChartAxisLabel axis(AxisLabelRenderDetails details) {
+      return ChartAxisLabel('Label', details.textStyle);
+    }
+{% endhighlight %}
+
+## multiLevelLabelFormatter
+
+Triggers while rendering the multi-level labels. Text and text styles such as color, font size, font-weight, etc can be customized by using [`ChartAxisLabel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxisLabel-class.html) class. The [`MultiLevelLabelRenderDetails`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelRenderDetails-class.html) contains the following arguments.
+
+* [`text`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelRenderDetails/text.html) - specifies the multi-level label to be rendered.
+* [`actualLevel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelRenderDetails/actualLevel.html) - specifies the re-ordered level value of the current multi-level label.
+* [`axisName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelRenderDetails/axisName.html) - specifies the axis name.
+* [`index`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelRenderDetails/index.html) - specifies the index of the multi-level label. and the index will be in the same order as specified in [`multiLevelLabels`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/multiLevelLabels.html) property.
+* [`textStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/MultiLevelLabelRenderDetails/textStyle.html) - used to change the text color, size, font family, font style, etc.
+
+{% highlight dart %}
+
+    @override
+    Widget build(BuildContext context) {
+      final List<ChartData> chartData = <ChartData>[
+        ChartData(1, 24),
+        ChartData(2, 20),
+        ChartData(3, 35),
+        ChartData(4, 27),
+        ChartData(5, 30),
+        ChartData(6, 41),
+        ChartData(7, 26)
+      ];
+      return Scaffold(
+        body: SfCartesianChart(
+          primaryXAxis: NumericAxis(
+            multiLevelLabelFormatter: (MultiLevelLabelRenderDetails details) {
+              return ChartAxisLabel(
+                details.index == 2 ? 'Callback' : details.text,
+                details.textStyle);
+            },
+            multiLevelLabels: const <NumericMultiLevelLabel>[
+              NumericMultiLevelLabel(
+                start: 1, 
+                end: 4, 
+                text: 'First'
+              ),
+              NumericMultiLevelLabel(
+                start: 4, 
+                end: 7, 
+                text: 'Second'
+              ),
+              NumericMultiLevelLabel(
+                start: 1, 
+                end: 4, 
+                text: 'Third', 
+                level: 1
+              ),
+              NumericMultiLevelLabel(
+                start: 4, 
+                end: 7, 
+                text: 'Fourth', 
+                level: 1
+              ),
+            ]
+          ),
+          series: <ChartSeries<ChartData, int>>[
+            LineSeries<ChartData, int>(
+              dataSource: chartData,
+              xValueMapper: (ChartData data, _) => data.x,
+              yValueMapper: (ChartData data, _) => data.y,
+            )
+          ]
+        )
+      );
+    }
+
+    class ChartData {
+      ChartData(this.x, this.y);
+        final int x;
+        final int y;
+    }
+
+{% endhighlight %}
 
 ## See Also
 
-* [Applying currency format to axis labels](https://www.syncfusion.com/kb/11519/how-to-apply-the-currency-format-to-the-axis-labels-sfcartesianchart).
+* [Customize the tooltip using its callback event](https://www.syncfusion.com/kb/11507/how-to-customize-the-tooltip-using-callback-events-sfcartesianchart).
+* [Customize the axis labels using its callback event](https://www.syncfusion.com/kb/11678/how-to-customize-the-axis-labels-using-callback-events-sfcartesianchart).
+* [Customize the data labels using its callback event](https://www.syncfusion.com/kb/11679/how-to-customize-data-labels-using-callback-events-sfcartesianchart).
+* [Disabling trackball tooltip for particular series using its callback event](https://www.syncfusion.com/kb/11638/how-to-disable-trackball-tooltip-for-particular-series-in-cartesian-charts-sfcartesianchart).
+* [To Synchronize panning in multiple charts](https://www.syncfusion.com/kb/11533/how-to-synchronize-panning-in-multiple-charts-sfcartesianchart).
 
->**NOTE**:`` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.
+>**NOTE**:`chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.
