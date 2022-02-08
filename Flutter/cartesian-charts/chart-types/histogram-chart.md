@@ -154,3 +154,12 @@ You can collapse the normal distribution curve using the [`showNormalDistributio
 {% endhighlight %}
 
 ![histogram chart](cartesian-chart-types-images/Histogram.png)
+
+## See Also
+
+* [Color palette](./series-customization#color-palette) 
+* [Color mapping](./series-customization#color-mapping-for-data-points)
+* [Animation](./series-customization#animation)
+* [Gradient](./series-customization#gradient-fill)
+* [Empty points](./series-customization#empty-points)  
+* [Sorting](./series-customization##sorting) 
