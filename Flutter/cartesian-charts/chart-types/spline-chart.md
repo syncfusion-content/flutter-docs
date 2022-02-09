@@ -30,7 +30,6 @@ To render a spline chart, create an instance of [`SplineSeries`](https://pub.dev
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders spline chart
                             SplineSeries<ChartData, int>(
@@ -89,11 +88,6 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
             );
         }
     }
-    class ChartData {
-        ChartData(this.x, this.y);
-        final int x;
-        final double? y;
-    }
 
 {% endhighlight %}
 
@@ -142,11 +136,6 @@ The following code sample demonstrates how to set the [`splineType`](https://pub
                 )
             );
         }
-    }
-    class ChartData {
-        ChartData(this.x, this.y);
-        final int x;
-        final double? y;
     }
 
 {% endhighlight %}
