@@ -78,7 +78,7 @@ To render a waterfall chart, create an instance of [`WaterfallSeries`](https://p
 
 ![waterfall_chart](cartesian-chart-types-images/waterfall_series.png)
 
-## See Also
+#### See Also
 
 * [Color palette](./series-customization#color-palette) 
 * [Color mapping](./series-customization#color-mapping-for-data-points)

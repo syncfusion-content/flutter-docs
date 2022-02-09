@@ -89,7 +89,7 @@ The borders of the range area chart can be customized using the [`borderDrawMode
 
 ![Range area border](cartesian-chart-types-images/range_area_border.png)
 
-## See Also
+#### See Also
 
 * [Color palette](./series-customization#color-palette) 
 * [Color mapping](./series-customization#color-mapping-for-data-points)

@@ -110,7 +110,7 @@ The `dashArray` property of `StackedLine100Series` is used to render line series
 
 ![Dashed line chart](cartesian-chart-types-images/stacked_line_100_dashes.png)
 
-## See Also
+#### See Also
 
 * [Color palette](./series-customization#color-palette) 
 * [Color mapping](./series-customization#color-mapping-for-data-points)

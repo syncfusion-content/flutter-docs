@@ -77,7 +77,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
 
 ![Dashed step area chart](cartesian-chart-types-images/step_area_dashed.png)
 
-## See Also
+#### See Also
 
 * [Color palette](./series-customization#color-palette) 
 * [Color mapping](./series-customization#color-mapping-for-data-points)

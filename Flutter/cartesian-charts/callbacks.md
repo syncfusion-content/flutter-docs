@@ -1230,7 +1230,7 @@ Triggers while rendering the multi-level labels. Text and text styles such as co
 
 {% endhighlight %}
 
-## See Also
+#### See Also
 
 * [Customize the tooltip using its callback event](https://www.syncfusion.com/kb/11507/how-to-customize-the-tooltip-using-callback-events-sfcartesianchart).
 * [Customize the axis labels using its callback event](https://www.syncfusion.com/kb/11678/how-to-customize-the-axis-labels-using-callback-events-sfcartesianchart).

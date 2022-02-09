@@ -1778,7 +1778,7 @@ The different types of multi-level label's border are mentioned below,
 
 ![Multi-level labels](images/axis-customization/multi_level_label_border_customization.jpg)
 
-## See Also
+#### See Also
 
 * [Rendering a particular part of a data using visible minimum and visible maximum in the Cartesian chart](https://www.syncfusion.com/kb/11308/how-to-render-particular-part-of-a-data-in-cartesian-charts-sfcartesianchart).
 

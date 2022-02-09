@@ -47,7 +47,7 @@ To render a Box and Whisker chart, create an instance of [`BoxAndWhiskerSeries`]
 
 ![box and whisker chart](cartesian-chart-types-images/box_and_whisker.png)
 
-## See Also
+#### See Also
 
 * [Color palette](./series-customization#color-palette) 
 * [Color mapping](./series-customization#color-mapping-for-data-points)

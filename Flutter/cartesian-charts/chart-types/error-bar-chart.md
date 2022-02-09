@@ -301,7 +301,7 @@ The `capLength` property is used to customize the length of the error bar's cap.
 
 ![Error bar cap length](cartesian-chart-types-images/error_bar_caplength.png)
 
-## See Also
+#### See Also
 
 * [Color palette](./series-customization#color-palette) 
 * [Color mapping](./series-customization#color-mapping-for-data-points)

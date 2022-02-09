@@ -119,7 +119,7 @@ The borders of the spline range area chart can be customized using the [`borderD
 
 ![splinerangearea_bordermode](cartesian-chart-types-images/splinerangearea_bordermode.png)
 
-## See Also
+#### See Also
 
 * [Color palette](./series-customization#color-palette) 
 * [Color mapping](./series-customization#color-mapping-for-data-points)

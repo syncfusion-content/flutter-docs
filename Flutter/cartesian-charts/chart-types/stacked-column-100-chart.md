@@ -104,7 +104,7 @@ The `width` property is used to change the width of the rectangle. The default v
 
 ![Stacked 100 column width and spacing](cartesian-chart-types-images/stacked_column_100_size.png)
 
-## See Also
+#### See Also
 
 * [Color palette](./series-customization#color-palette) 
 * [Color mapping](./series-customization#color-mapping-for-data-points)

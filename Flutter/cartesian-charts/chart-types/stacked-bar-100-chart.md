@@ -104,7 +104,7 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
 
 ![Stacked 100 bar width and spacing](cartesian-chart-types-images/stacked_bar_100_sizing.png)
 
-## See Also
+#### See Also
 
 * [Color palette](./series-customization#color-palette) 
 * [Color mapping](./series-customization#color-mapping-for-data-points)

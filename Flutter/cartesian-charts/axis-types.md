@@ -1018,7 +1018,7 @@ By using the [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_cha
 
 ![Inversed logarithmic axis](images/axis-types/inversed-logarithmic.png) 
 
-## See Also
+#### See Also
 
 * [Applying currency format to axis labels](https://www.syncfusion.com/kb/11519/how-to-apply-the-currency-format-to-the-axis-labels-sfcartesianchart).
 

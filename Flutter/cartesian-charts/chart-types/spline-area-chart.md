@@ -118,7 +118,7 @@ The following code sample demonstrates how to set the `splineType` value to `car
 
 ![Spline area type](cartesian-chart-types-images/spline_area_types.png)
 
-## See Also
+#### See Also
 
 * [Color palette](./series-customization#color-palette) 
 * [Color mapping](./series-customization#color-mapping-for-data-points)

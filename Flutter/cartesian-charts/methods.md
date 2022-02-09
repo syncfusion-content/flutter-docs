@@ -1352,7 +1352,7 @@ and funnel charts.
 
 {% endhighlight %}
 
-## See Also
+#### See Also
 
 * [Show or hide tooltip dynamically in Cartesian chart](https://www.syncfusion.com/kb/11490/how-to-show-or-hide-the-tooltip-dynamically-in-cartesian-charts-sfcartesianchart).
 * [Show or hide trackball dynamically in Cartesian chart](https://www.syncfusion.com/kb/11489/how-to-show-or-hide-trackball-dynamically-in-cartesian-charts-sfcartesianchart).

@@ -99,7 +99,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
 
 ![Dashed line chart](cartesian-chart-types-images/dashed_line.jpg)
 
-### See Also
+#### See Also
 
 *[Applying dashed pattern for line chart](https://www.syncfusion.com/kb/12349/how-to-create-dash-pattern-line-chart-in-flutter-using-cartesian-charts-widget).
 
