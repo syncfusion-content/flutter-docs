@@ -19,23 +19,35 @@ To render a spline chart, create an instance of [`SplineSeries`](https://pub.dev
 
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData(2010, 35),
+            ChartData(2011, 13),
+            ChartData(2012, 34),
+            ChartData(2013, 27),
+            ChartData(2014, 40)
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders spline chart
-                            SplineSeries<SalesData, DateTime>(
+                            SplineSeries<ChartData, int>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
-                            )
-                        ]
+                                xValueMapper: (ChartData sales, _) => sales.x,
+                                yValueMapper: (ChartData sales, _) => sales.y
+                                )
+                            ]
+                        )
                     )
                 )
-            )
-        );
+            );
+        }
+    }
+    class ChartData {
+        ChartData(this.x, this.y);
+        final int x;
+        final double? y;
     }
 
 {% endhighlight %}
@@ -50,24 +62,31 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
     
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData(2010, 35),
+            ChartData(2011, 13),
+            ChartData(2012, 34),
+            ChartData(2013, 27),
+            ChartData(2014, 40)
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
-                            SplineSeries<SalesData, DateTime>(
+                            SplineSeries<ChartData, int>(
                                 dataSource: chartData,
                                 // Dash values for spline
                                 dashArray: <double>[5, 5],
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
-                            )
-                        ]
+                                xValueMapper: (ChartData sales, _) => sales.x,
+                                yValueMapper: (ChartData sales, _) => sales.y
+                                )
+                            ]
+                        )
                     )
                 )
-            )
-        );
+            );
+        }
     }
 
 {% endhighlight %}
@@ -91,25 +110,32 @@ The following code sample demonstrates how to set the [`splineType`](https://pub
     
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData(2010, 35),
+            ChartData(2011, 13),
+            ChartData(2012, 34),
+            ChartData(2013, 27),
+            ChartData(2014, 40)
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
-                            SplineSeries<SalesData, DateTime>(
+                            SplineSeries<ChartData, int>(
                                 dataSource: chartData,
                                 // Type of spline
                                 splineType: SplineType.cardinal,
                                 cardinalSplineTension: 0.9,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
-                            )
-                        ]
+                                xValueMapper: (ChartData sales, _) => sales.x,
+                                yValueMapper: (ChartData sales, _) => sales.y
+                                )
+                            ]
+                        )
                     )
                 )
-            )
-        );
+            );
+        }
     }
 
 {% endhighlight %}
@@ -126,6 +152,20 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = <ChartData>[
+                ChartData('Jan', 21),
+                ChartData('Feb', 24),
+                ChartData('Mar', 35),
+                ChartData('Apr', 38),
+                ChartData('May', 54),
+                ChartData('Jun', 21),
+                ChartData('Jul', 24),
+                ChartData('Aug', 35),
+                ChartData('Sep', 38),
+                ChartData('Oct', 54),
+                ChartData('Nov', 38),
+                ChartData('Dec', 54)
+             ];
         return Scaffold(
             body: Center(
                 child: Container(
@@ -133,16 +173,22 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
                         isTransposed: true,
                         primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
-                            SplineSeries<SalesData, String>(
+                            SplineSeries<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
-                            )
-                        ]
+                                xValueMapper: (ChartData sales, _) => sales.x,
+                                yValueMapper: (ChartData sales, _) => sales.y
+                                )
+                            ]
+                        )
                     )
                 )
-            )
-        );
+            );
+        }
+    }
+    class ChartData {
+        ChartData(this.x, this.y);
+        final String x;
+        final double? y;
     }
 
 {% endhighlight %}
