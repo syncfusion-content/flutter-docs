@@ -25,17 +25,17 @@ To render an error bar chart, create an instance of [`ErrorBarSeries`](https://p
 
     @override
     Widget build(BuildContext context) {
-    final dynamic chartData = [
-      ChartData(1, 24),
-      ChartData(2, 20),
-      ChartData(3, 35),
-      ChartData(4, 27),
-      ChartData(5, 30),
-      ChartData(6, 41),
-      ChartData(7, 26)
-    ];
+      final dynamic chartData = [
+        ChartData(1, 24),
+        ChartData(2, 20),
+        ChartData(3, 35),
+        ChartData(4, 27),
+        ChartData(5, 30),
+        ChartData(6, 41),
+        ChartData(7, 26)
+      ];
 
-    return Scaffold(
+      return Scaffold(
         body: SfCartesianChart(
               series: <ChartSeries<ChartData, int>>[
                 ErrorBarSeries<ChartData, int>(
@@ -55,7 +55,7 @@ To render an error bar chart, create an instance of [`ErrorBarSeries`](https://p
     class ChartData {
       ChartData(this.x, this.y);
       final int x;
-      final int? y;
+      final int y;
     }
 
 {% endhighlight %}
@@ -105,7 +105,7 @@ You can customize the error bar depending on the error value by setting the valu
 
 ### Custom type
 
-For [`custom`]([`ErrorBarType.custom`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarType.html)) type, you can customize the error bar depending on the error value by setting the values for [`horizontalPositiveErrorValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarSeries/horizontalPositiveErrorValue.html), [`horizontalNegativeErrorValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarSeries/horizontalNegativeErrorValue.html), [`verticalPositiveErrorValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarSeries/verticalPositiveErrorValue.html) and [`verticalNegativeErrorValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarSeries/verticalNegativeErrorValue.html).
+For [`ErrorBarType.custom`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarType.html) type, you can customize the error bar depending on the error value by setting the values for [`horizontalPositiveErrorValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarSeries/horizontalPositiveErrorValue.html), [`horizontalNegativeErrorValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarSeries/horizontalNegativeErrorValue.html), [`verticalPositiveErrorValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarSeries/verticalPositiveErrorValue.html) and [`verticalNegativeErrorValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarSeries/verticalNegativeErrorValue.html).
 
 * [`horizontalPositiveErrorValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarSeries/horizontalPositiveErrorValue.html)- This property horizontally depicts the error value in positive direction. The default value is `1`.
 * [`horizontalNegativeErrorValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarSeries/horizontalNegativeErrorValue.html) - This property horizontally depicts the error value in negative direction. The default value is `1`.
