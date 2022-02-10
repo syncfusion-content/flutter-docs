@@ -69,19 +69,18 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
     @override
     Widget build(BuildContext context) {
         final List<ChartData> chartData = [
-        ChartData("2010", 35),
-        ChartData("2011", 28),
-        ChartData('2012', 34),
-        ChartData('2013', 32),
-        ChartData('2014', 40)
+            ChartData(2010, 35),
+            ChartData(2011, 28),
+            ChartData(2012, 34),
+            ChartData(2013, 32),
+            ChartData(2014, 40)
         ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
-                            LineSeries<ChartData, DateTime>(
+                            LineSeries<ChartData, int>(
                                 dataSource: chartData,
                                 // Dash values for line
                                 dashArray: <double>[5, 5],
@@ -101,7 +100,7 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
 
 #### See Also
 
-*[Applying dashed pattern for line chart](https://www.syncfusion.com/kb/12349/how-to-create-dash-pattern-line-chart-in-flutter-using-cartesian-charts-widget).
+* [Applying dashed pattern for line chart](https://www.syncfusion.com/kb/12349/how-to-create-dash-pattern-line-chart-in-flutter-using-cartesian-charts-widget).
 
 ## Multi-colored line
 
@@ -126,9 +125,9 @@ To render a multi-colored line series, map the individual colors to the data usi
                                     ChartData('May', 40, Colors.black)
                                 ],
                                 // Bind the color for all the data points from the data source
-                                pointColorMapper:(ChartData sales, _) => sales.segmentColor,
-                                xValueMapper: (ChartData sales, _) => sales.year,
-                                yValueMapper: (ChartData sales, _) => sales.sales
+                                pointColorMapper:(ChartData sales, _) => sales.color,
+                                xValueMapper: (ChartData sales, _) => sales.x,
+                                yValueMapper: (ChartData sales, _) => sales.y
                             )
                         ]
                     )
@@ -138,14 +137,20 @@ To render a multi-colored line series, map the individual colors to the data usi
     }
 
     class ChartData {
-        ChartData(this.year, this.sales, this.segmentColor);
-        final String year;
-        final double sales;
-        final Color segmentColor;
+        ChartData(this.x, this.y, this.color);
+        final String x;
+        final double y;
+        final Color color;
     }
 
 {% endhighlight %}
 
 ![Multi-colored line](cartesian-chart-types-images/multiColored_line.jpg)
 
-Also refer, [color palette](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#color-palette), [color mapping](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#color-mapping-for-data-points), [animation](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#animation), [gradient](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#gradient-fill) and [empty points](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#empty-points) for customizing the line series further.
+#### See Also
+
+ * [color palette](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#color-palette) 
+ * [color mapping](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#color-mapping-for-data-points)
+ * [animation](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#animation)
+ * [gradient](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#gradient-fill)
+ * [empty points](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#empty-points) 
