@@ -10,7 +10,29 @@ documentation: ug
 
 # Syncfusion Flutter Mac Installation
 
-The steps below show how to install the Flutter Mac installer. 
+## How to download Flutter Mac installer?
+
+1. Essential Studio Flutter Mac installer can be downloaded from your account’s [download](https://help.syncfusion.com/common/essential-studio/download) section. You can download trial\licensed Mac installer based on your license.
+
+2. In the downloads page, click the "Mac" button and download the required Essential Studio Flutter Mac installer.
+
+   ![Download Page](Mac-Installer_images/Mac_Download.png)  
+
+
+## Steps to resolve the warning message in Catalina OS or later
+
+   While running Essential Studio Flutter Mac Installer on Catalina MacOS or later, the below alert will be displayed.
+
+   ![Alert Image](Mac-Installer_images/Mac_Catalina_MacOS_Alert.png)  
+     
+   If you receive this alert, follow the below steps for the easiest solution.   
+
+   1.	Right-click the downloaded pkg file.
+   2.	Select the "Open With" option and choose "Installer (Default)".
+
+## Step-by-Step Installation
+
+The steps below show how to install the Essential Studio Flutter Mac installer. 
 
 1. Open the Syncfusion Flutter Mac Installer(.pkg) file from downloaded location by double-clicking it. The Syncfusion Essential Studio Flutter Mac Installer's welcome wizard will be displayed. Click the Continue button.
 
@@ -26,13 +48,13 @@ The steps below show how to install the Flutter Mac installer. 
 
    ![License confirmation wizard](Mac-Installer_images/Mac_Installer3.png)
    
-   N> The Unlock key is not required to install the Mac installer. The Syncfusion Mac installer can be used for development purposes without registering the Unlock key..
+   N> The Unlock key is not required to install the Mac installer. The Syncfusion Essential Studio Flutter Mac installer can be used for development purposes without registering the Unlock key..
 
 4. The Destination select wizard will appear. You can choose which disc to install the Syncfusion Essential Studio for Flutter installer on here.
 
    ![license wizard](Mac-Installer_images/Mac_Installer11.png)
 
-5. The Installation Type wizard will appear. Click Install to begin the standard installation of the Syncfusion Flutter Mac installer.
+5. The Installation Type wizard will appear. Click Install to begin the standard installation of the Syncfusion Essential Studio Flutter Mac installer.
 
    ![Installation type wizard](Mac-Installer_images/Mac_Installer6.png)
 
