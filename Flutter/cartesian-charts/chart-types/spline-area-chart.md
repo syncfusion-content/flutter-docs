@@ -29,20 +29,20 @@ To render a spline area chart, create an instance of [`SplineAreaSeries`](https:
             ChartData(2016, 4.5, 2),
             ChartData(2017, 3.6, 1.56),
             ChartData(2018, 3.43, 2.1),
-        ];
+            ];
         return Scaffold(
             body: Center(
                     child: SfCartesianChart(
                         series: <ChartSeries>[
-                            SplineAreaSeries<SalesData, int>(
+                            SplineAreaSeries<ChartData, int>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.x,
-                                yValueMapper: (SalesData sales, _) => sales.y
+                                xValueMapper: (ChartData sales, _) => sales.x,
+                                yValueMapper: (ChartData sales, _) => sales.y
                             ),
-                            SplineAreaSeries<SalesData, int>(
+                            SplineAreaSeries<ChartData, int>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.x,
-                                yValueMapper: (SalesData sales, _) => sales.y1
+                                xValueMapper: (ChartData sales, _) => sales.x,
+                                yValueMapper: (ChartData sales, _) => sales.y1
                             ),
                         ]
                     )
@@ -78,27 +78,27 @@ The following code sample demonstrates how to set the `splineType` value to `car
     @override
     Widget build(BuildContext context) {
         final List<ChartData> chartData = <ChartData>[
-            ChartData(2010, 10.53, 3.3),
-            ChartData(2011, 9.5, 5.4),
-            ChartData(2012, 10, 2.65),
-            ChartData(2013, 9.4, 2.62),
-            ChartData(2014, 5.8, 1.99),
-            ChartData(2015, 4.9, 1.44),
-            ChartData(2016, 4.5, 2),
-            ChartData(2017, 3.6, 1.56),
-            ChartData(2018, 3.43, 2.1),
+            ChartData(2010, 10.53),
+            ChartData(2011, 9.5),
+            ChartData(2012, 10),
+            ChartData(2013, 9.4),
+            ChartData(2014, 5.8),
+            ChartData(2015, 4.9),
+            ChartData(2016, 4.5),
+            ChartData(2017, 3.6),
+            ChartData(2018, 3.43),
         ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
                         series: <ChartSeries>[
-                            SplineAreaSeries<SalesData, int>(
+                            SplineAreaSeries<ChartData, int>(
                                 dataSource: chartData,
                                 splineType: SplineType.cardinal,
                                 cardinalSplineTension: 0.9,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales
                             )
                         ]
                     )
@@ -119,16 +119,27 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
     
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = <ChartData>[
+            ChartData(2010, 10.53),
+            ChartData(2011, 9.5),
+            ChartData(2012, 10),
+            ChartData(2013, 9.4),
+            ChartData(2014, 5.8),
+            ChartData(2015, 4.9),
+            ChartData(2016, 4.5),
+            ChartData(2017, 3.6),
+            ChartData(2018, 3.43),
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
                         series: <ChartSeries>[
-                            SplineAreaSeries<SalesData, int>(
+                            SplineAreaSeries<ChartData, int>(
                                 dataSource: chartData,
                                 dashArray: <double>[5, 5],
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales
                             )
                         ]
                     )
