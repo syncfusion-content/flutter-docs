@@ -133,9 +133,9 @@ Widget build(BuildContext context) {
 
 ![flutter datagrid header hovering](images/styles/flutter-datagrid-header-highlight.gif)
 
-## Change the row background and cell value color
+## Change the row background color
 
-The DataGrid supports to change the row background color by using [DataGridRowAdapter.color](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridRowAdapter/color.html) property. Also, you can change the cell value color by setting the TextStyle color to the style property of the Text widget in the `DataGridRowAdapter` method. 
+The DataGrid supports to change the row background color by using [DataGridRowAdapter.color](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridRowAdapter/color.html) property.
 
 {% tabs %}
 {% highlight Dart %}
@@ -417,3 +417,52 @@ Widget build(BuildContext context) {
 
 ![flutter datagrid highlight rows](images/styles/flutter-datagrid-highlight-rows.gif)
 
+## Change the cell value color
+
+The DataGrid supports to change the datagrid cell value by setting the TextStyle color to the style property of the Text widget in the `DataGridRowAdapter`. 
+
+{% tabs %}
+{% highlight Dart %}
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+
+class EmployeeDataSource extends DataGridSource {
+  EmployeeDataSource({required List<Employee> employees}) {
+    dataGridRows = employees
+        .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
+              DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
+              DataGridCell<String>(columnName: 'name', value: dataGridRow.name),
+              DataGridCell<String>(
+                  columnName: 'designation', value: dataGridRow.designation),
+              DataGridCell<int>(
+                  columnName: 'salary', value: dataGridRow.salary),
+            ]))
+        .toList();
+  }
+
+  List<DataGridRow> dataGridRows = [];
+
+  @override
+  List<DataGridRow> get rows => dataGridRows;
+
+  @override
+  DataGridRowAdapter? buildRow(DataGridRow row) {
+    return DataGridRowAdapter(
+        cells: row.getCells().map<Widget>((dataGridCell) {
+      return Container(
+          alignment: (dataGridCell.columnName == 'id' ||
+                  dataGridCell.columnName == 'salary')
+              ? Alignment.centerRight
+              : Alignment.centerLeft,
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          child: Text(
+            dataGridCell.value.toString(),
+            style: const TextStyle(color: Colors.red),
+            overflow: TextOverflow.ellipsis,
+          ));
+    }).toList());
+  }
+}
+{% endhighlight %}
+{% endtabs %}
+
+![flutter datagrid cell value color](images/styles/flutter-datagrid-cell-value-styling.png)
