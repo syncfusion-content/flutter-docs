@@ -133,9 +133,9 @@ Widget build(BuildContext context) {
 
 ![flutter datagrid header hovering](images/styles/flutter-datagrid-header-highlight.gif)
 
-## Change the row background color
+## Change the row background and cell value color
 
-The DataGrid supports to change the row background color by using [DataGridRowAdapter.color](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridRowAdapter/color.html) property.
+The DataGrid supports to change the row background color by using [DataGridRowAdapter.color](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridRowAdapter/color.html) property. Also, you can change the cell value color by setting the TextStyle color to the style property of the Text widget in the `DataGridRowAdapter` method. 
 
 {% tabs %}
 {% highlight Dart %}
