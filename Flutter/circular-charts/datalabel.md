@@ -433,7 +433,7 @@ Action on data labels when it’s overflowing from its region area. The overflow
 
 Defaults to [`OverflowMode.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/overflowMode.html).
   
- N> This is applicable for pie, doughnut, pyramid, and funnel series types alone.
+ >**NOTE**: This is applicable for pie, doughnut, pyramid, and funnel series types alone.
 
 {% highlight dart %}
 
