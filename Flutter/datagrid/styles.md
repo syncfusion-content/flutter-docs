@@ -419,10 +419,11 @@ Widget build(BuildContext context) {
 
 ## Change the cell value color
 
-The DataGrid supports to change the datagrid cell value by setting the TextStyle color to the style property of the Text widget in the `DataGridRowAdapter`. 
+The DataGrid requires a widget for each cell from the user end. Typically, users load the [Text](https://api.flutter.dev/flutter/widgets/Text-class.html) widget to display the cell values. So that, text color can be changed by setting the [TextStyle](https://api.flutter.dev/flutter/painting/TextStyle-class.html) to the style property of the `Text` widget.
 
 {% tabs %}
 {% highlight Dart %}
+
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
 class EmployeeDataSource extends DataGridSource {
@@ -444,24 +445,29 @@ class EmployeeDataSource extends DataGridSource {
   @override
   List<DataGridRow> get rows => dataGridRows;
 
-  @override
+ @override
   DataGridRowAdapter? buildRow(DataGridRow row) {
     return DataGridRowAdapter(
         cells: row.getCells().map<Widget>((dataGridCell) {
+      TextStyle? getTextStyle() {
+        if (dataGridCell.columnName == 'name') {
+          return const TextStyle(color: Colors.pinkAccent);
+        } else {
+          return null;
+        }
+      }
       return Container(
-          alignment: (dataGridCell.columnName == 'id' ||
-                  dataGridCell.columnName == 'salary')
-              ? Alignment.centerRight
-              : Alignment.centerLeft,
-          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          alignment: Alignment.center,
+          padding: const EdgeInsets.symmetric(horizontal: 8.0),
           child: Text(
             dataGridCell.value.toString(),
-            style: const TextStyle(color: Colors.red),
+            style: getTextStyle(),
             overflow: TextOverflow.ellipsis,
           ));
     }).toList());
   }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
