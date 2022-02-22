@@ -344,7 +344,8 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
 
 ![Point color mapping](images/cartesian-customization/colormapping.jpg)
 
-## Gradient fill
+## Gradient
+### Gradient fill
 
 The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/gradient.html) property is used to define the gradient colors. The colors from this property are used for series. Also, you can use the transform property available in [`LinearGradient`](https://api.flutter.dev/flutter/painting/LinearGradient/LinearGradient.html) to transform the applied gradient colors.
 
@@ -447,7 +448,7 @@ If the properties of both [`borderColor`](https://pub.dev/documentation/syncfusi
 
 ![stroke_gradient](images/cartesian-customization/stroke_gradient.png)
 
-## Gradient based on values
+### Gradient based on values
 
 The `onCreateShader` callback is used to fill the data points with the [`gradient`](https://api.flutter.dev/flutter/dart-ui/Gradient-class.html) and [`ImageShader`](https://api.flutter.dev/flutter/dart-ui/ImageShader-class.html). All the data points are together considered as a single segment and the shader is applied commonly.
 

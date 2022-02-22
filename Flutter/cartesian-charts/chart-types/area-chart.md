@@ -93,6 +93,8 @@ The borders of the area chart can be customized using the [`borderDrawMode`](htt
 
 {% endhighlight %}
 
+![Area border](cartesian-chart-types-images/area_border.jpg)
+
 ## Area with gradients
 
 The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/gradient.html) property is used to define the gradient colors. The colors from this property is used for series.

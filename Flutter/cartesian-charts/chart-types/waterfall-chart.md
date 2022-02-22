@@ -67,7 +67,7 @@ To render a waterfall chart, create an instance of [`WaterfallSeries`](https://p
     }
 
     class ChartData {
-        ChartData([this.x, this.y, this.isIntermediate, this.isTotal]);
+        ChartData(this.x, this.y, [this.isIntermediate, this.isTotal]);
         final double? x;
         final num? y;
         final bool? isIntermediate;

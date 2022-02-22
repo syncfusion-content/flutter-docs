@@ -23,6 +23,13 @@ Markers are used to provide information about the exact point location. You can 
 
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData('USA', 6),
+            ChartData('China', 11),
+            ChartData('UK', 9),
+            ChartData('Japan', 14),
+            ChartData('France', 10,
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
@@ -248,7 +255,6 @@ Data label considers the format used in the vertical axis by default. In the bel
 
 {% endhighlight %}
 
-import
 
 ![DataLabel format](images/marker-datalabel/datalabel_format.jpg)
 
@@ -266,9 +272,9 @@ The [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/l
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis: DateTimeAxis(),
+                        primaryXAxis: CategoryAxis(),
                         series: <CartesianSeries>[
-                            AreaSeries<ChartData, DateTime>(
+                            AreaSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
@@ -287,7 +293,7 @@ The [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
     class ChartData {
         ChartData(this.x, this.y);
-        final DateTime x;
+        final String x;
         final double? y;
       }
 
@@ -308,9 +314,9 @@ The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis: DateTimeAxis(),
+                        primaryXAxis: CategoryAxis(),
                         series: <CartesianSeries>[
-                            AreaSeries<ChartData, DateTime>(
+                            AreaSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
@@ -329,7 +335,7 @@ The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
     class ChartData {
         ChartData(this.x, this.y);
-        final DateTime x;
+        final String x;
         final double? y;
       }
 
@@ -346,13 +352,13 @@ The [`dataLabelMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/
     @override
     Widget build(BuildContext context) {
         final List<ChartData> chartData =[
-        ChartData('jan', 21),
-        ChartData('feb', 24),
-        ChartData('mar', 36),
-        ChartData('apr', 38),
-        ChartData('may', 54),
-        ChartData('jun', 57),
-        ChartData('jul', 70)
+        ChartData('Jan', 21),
+        ChartData('Feb', 24),
+        ChartData('Mar', 36),
+        ChartData('Apr', 38),
+        ChartData('May', 54),
+        ChartData('Jun', 57),
+        ChartData('Jul', 70)
      ];
 
         return Scaffold(
@@ -413,7 +419,7 @@ You can customize the appearance of the data label with your own template using 
                                         return Container(
                                         height: 30,
                                         width: 30,
-                                        child: Image.asset('images/livechart.png')
+                                        child: Image.asset('images/bike.png')
                                         );
                                     }
                                 )

@@ -31,7 +31,7 @@ Numeric axis uses numerical scale and displays numbers as labels. By default, [`
             ChartData(1, 235, 240),
             ChartData(2, 242, 250),
             ChartData(3, 320, 280),
-            ChartData(4, 310, 305),
+            ChartData(4, 360, 355),
             ChartData(5, 270, 245)
         ];
         return Scaffold(
@@ -1073,7 +1073,7 @@ Logarithmic axis uses logarithmic scale and displays numbers as axis labels.
                             // Renders Column chart
                             ColumnSeries<ChartData, double>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.year,
+                                xValueMapper: (ChartData sales, _) => sales.number,
                                 yValueMapper: (ChartData sales, _) => sales.sales
                             )
                         ] 
@@ -1084,8 +1084,8 @@ Logarithmic axis uses logarithmic scale and displays numbers as axis labels.
     }
 
     class ChartData{
-        ChartData(this.year, this.sales);
-        final double year;
+        ChartData(this.number, this.sales);
+        final double number;
         final double sales;
     }
 
