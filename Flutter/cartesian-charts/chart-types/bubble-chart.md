@@ -218,4 +218,4 @@ Using the [`datasource`](https://pub.dev/documentation/syncfusion_flutter_charts
 
 ![Bubble nultiple series](cartesian-chart-types-images/bubble_with_multiple.png)
 
->**NOTE**: You can refer to our [Flutter Bubble Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/bubble-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Bubble Chart example](https://flutter.syncfusion.com/#/cartesian-charts/chart-types/bubble/default-bubble-chart) that shows how to easily configure with built-in support for creating stunning visual effects.
+>**Note**: You can refer to our [Flutter Bubble Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/bubble-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Bubble Chart example](https://flutter.syncfusion.com/#/cartesian-charts/chart-types/bubble/default-bubble-chart) that shows how to easily configure with built-in support for creating stunning visual effects.

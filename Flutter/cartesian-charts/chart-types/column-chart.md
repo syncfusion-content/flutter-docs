@@ -242,4 +242,4 @@ Renders column with track. Track is a rectangular bar rendered from the start to
 * [empty points](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#empty-points)
 * [Sorting](https://help.syncfusion.com/flutter/cartesian-charts/series-customization##sorting)
 
->**NOTE**: You can refer to our [Flutter Column Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/column-chart) feature tour page for its groundbreaking feature representations.
+>**Note**: You can refer to our [Flutter Column Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/column-chart) feature tour page for its groundbreaking feature representations.

@@ -49,7 +49,7 @@ To render a Box and Whisker chart, create an instance of [`BoxAndWhiskerSeries`]
 
 #### See Also
 
-* [Color palette](./series-customization#color-palette) 
+* [Color palette](../cartesian-charts/series-customization#color-palette) 
 * [Color mapping](./series-customization#color-mapping-for-data-points)
 * [Animation](./series-customization#animation)
 * [Gradient](./series-customization#gradient-fill)

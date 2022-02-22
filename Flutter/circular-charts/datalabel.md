@@ -137,7 +137,7 @@ The [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/la
 
 ![Data label position](images/datalabel/datalabel_position.jpg)
 
->**NOTE**: The [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelAlignment.html) property is used to position the Cartesian chart labels whereas [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelPosition.html) property is used to position the circular chart labels.
+>**Note**: The [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelAlignment.html) property is used to position the Cartesian chart labels whereas [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelPosition.html) property is used to position the circular chart labels.
 
 ## Smart labels
 
@@ -154,7 +154,7 @@ When the [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutt
 * [`LabelIntersectAction.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelIntersectAction.html) - intersected data labels will be visible.
 * [`LabelIntersectAction.shift`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelIntersectAction.html) - smartly arranges the overlapped data labels.
 
->**NOTE**: The smart label positioning is applicable only for the pie and doughnut series.
+>**Note**: The smart label positioning is applicable only for the pie and doughnut series.
 
 {% highlight dart %} 
 
@@ -433,7 +433,7 @@ Action on data labels when it’s overflowing from its region area. The overflow
 
 Defaults to [`OverflowMode.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/overflowMode.html).
   
- >**NOTE**: This is applicable for pie, doughnut, pyramid, and funnel series types alone.
+ >**Note**: This is applicable for pie, doughnut, pyramid, and funnel series types alone.
 
 {% highlight dart %}
 

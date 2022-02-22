@@ -479,7 +479,7 @@ Data label and its connector line in the Cartesian charts for the point value 0 
 
 The [`offset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/offset.html) property of [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/dataLabelSettings.html) can be used to add padding for the data label to move it in both vertically and horizontally direction from its position. It takes the logical pixel value for x and y values as input.
 
->**NOTE**: This is not applicable for other widgets like Circular, Pyramid and Funnel charts.
+>**Note**: This is not applicable for other widgets like Circular, Pyramid and Funnel charts.
 
 #### Horizontal padding
 
@@ -555,4 +555,4 @@ If the user didn’t provide text color to the data label, then by default, the 
 
 ![label_saturation](images/marker-datalabel/cartesian_saturation.png)
 
->**NOTE**: `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.
+>**Note**: `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.

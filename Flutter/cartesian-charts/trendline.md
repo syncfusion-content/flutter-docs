@@ -514,4 +514,4 @@ Chart will display details about the points through tooltip, when user interacti
 
 Also refer [`trendline event`](https://help.syncfusion.com/flutter/cartesian-charts/callbacks#onrenderdetailsupdate-trendline) for customizing the tooltip further.
 
->**NOTE**: `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.
+>**Note**: `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.

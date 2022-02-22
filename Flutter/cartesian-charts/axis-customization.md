@@ -275,7 +275,7 @@ The [`labelFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 
 Also refer [number format](./axis-types#formatting-the-labels) and [date format](./axis-types#formatting-the-labels-1) for formatting the labels further.
 
->**NOTE**: You must import [`intl`](https://pub.dev/packages/intl) package for formatting axis label using the [`NumberFormat`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html) class and  [`date Format`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
+>**Note**: You must import [`intl`](https://pub.dev/packages/intl) package for formatting axis label using the [`NumberFormat`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html) class and  [`date Format`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
 
 ### Label and tick positioning
 
@@ -1096,7 +1096,7 @@ By default, value axis range will be calculated automatically based on the visib
   
 To toggle this functionality, [`anchorRangeToVisiblePoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/anchorRangeToVisiblePoints.html) property can be used. i.e. on setting this property to false, the value axis range will be calculated based on all the data points in chart irrespective of visible points.
   
->**NOTE**: This is applicable only to the value axis and not for other axis and applicable only when zoom mode is set to x.
+>**Note**: This is applicable only to the value axis and not for other axis and applicable only when zoom mode is set to x.
   
 {% highlight dart %} 
 
@@ -1151,7 +1151,7 @@ The maximum width for axis labels and the space occupied by the axis labels can 
 
 {% endhighlight %}
 
->**NOTE**:  If both [`maximumLabelWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/maximumLabelWidth.html) and [`labelsExtent`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelsExtent.html) properties are specified, then the priority goes to [`labelsExtent`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelsExtent.html) property.
+>**Note**:  If both [`maximumLabelWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/maximumLabelWidth.html) and [`labelsExtent`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelsExtent.html) properties are specified, then the priority goes to [`labelsExtent`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelsExtent.html) property.
 
 ![Axis label trim](images/axis-customization/axis-label-trim.gif)
 
