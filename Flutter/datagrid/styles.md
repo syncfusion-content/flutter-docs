@@ -417,3 +417,58 @@ Widget build(BuildContext context) {
 
 ![flutter datagrid highlight rows](images/styles/flutter-datagrid-highlight-rows.gif)
 
+## Change the cell value color
+
+The DataGrid requires a widget for each cell from the user end. Typically, users load the [Text](https://api.flutter.dev/flutter/widgets/Text-class.html) widget to display the cell values. So that, text color can be changed by setting the [TextStyle](https://api.flutter.dev/flutter/painting/TextStyle-class.html) to the style property of the `Text` widget.
+
+{% tabs %}
+{% highlight Dart %}
+
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+
+class EmployeeDataSource extends DataGridSource {
+  EmployeeDataSource({required List<Employee> employees}) {
+    dataGridRows = employees
+        .map<DataGridRow>((dataGridRow) => DataGridRow(cells: [
+              DataGridCell<int>(columnName: 'id', value: dataGridRow.id),
+              DataGridCell<String>(columnName: 'name', value: dataGridRow.name),
+              DataGridCell<String>(
+                  columnName: 'designation', value: dataGridRow.designation),
+              DataGridCell<int>(
+                  columnName: 'salary', value: dataGridRow.salary),
+            ]))
+        .toList();
+  }
+
+  List<DataGridRow> dataGridRows = [];
+
+  @override
+  List<DataGridRow> get rows => dataGridRows;
+
+ @override
+  DataGridRowAdapter? buildRow(DataGridRow row) {
+    return DataGridRowAdapter(
+        cells: row.getCells().map<Widget>((dataGridCell) {
+      TextStyle? getTextStyle() {
+        if (dataGridCell.columnName == 'name') {
+          return const TextStyle(color: Colors.pinkAccent);
+        } else {
+          return null;
+        }
+      }
+      return Container(
+          alignment: Alignment.center,
+          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+          child: Text(
+            dataGridCell.value.toString(),
+            style: getTextStyle(),
+            overflow: TextOverflow.ellipsis,
+          ));
+    }).toList());
+  }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![flutter datagrid cell value color](images/styles/flutter-datagrid-cell-value-styling.png)

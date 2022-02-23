@@ -54,7 +54,7 @@ Widget build(BuildContext context) {
 
 ![minDate and maxDate](images/date-navigation/min-maxDate.png) 
 
->**NOTE**
+>**Note**
 * The timeslot falls beyond the minimum or maximum date-time will be disabled, and the user interaction was restricted in the timeslot views.
 
 
@@ -278,7 +278,7 @@ You can customize the swipe interaction of SfCalendar by using the [viewNavigati
 {% endhighlight %}
 {% endtabs %}
 
->**NOTE**
+>**Note**
 * Not applicable when the view is set to schedule. 
 * It will not impact scrolling timeslot views, [forward](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/forward.html), [backward](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarController/backward.html), and [showNavigationArrow](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/showNavigationArrow.html).
 

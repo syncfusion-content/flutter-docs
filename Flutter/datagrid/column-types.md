@@ -72,7 +72,7 @@ Widget build(BuildContext context) {
 
 [GridColumn.visible](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/visible.html) property can be used to set a column as hidden. The default value of the `visible` property is true.
 
->**NOTE**  
+>**Note**  
    Set the `visible` property to `false` instead of setting column width as `0` to hide a column.
 
 {% tabs %}
@@ -129,7 +129,7 @@ Widget build(BuildContext context) {
 
 `SfDataGrid` allows you to customize the width of each [GridColumn](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn-class.html) in the [SfDataGrid.Columns](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/columns.html) collection. To customize column width, use the [GridColumn.width](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/width.html) property. By default, this property will not be assigned any value. The GridColumn renders in view based on the value of the [defaultColumnWidth](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/defaultColumnWidth.html) property.
 
->**NOTE**  
+>**Note**  
    Set the `visible` property to `false` instead of setting column width as `0` to hide a column.
 
 {% tabs %}

@@ -120,7 +120,7 @@ class MyAppState extends State<MyApp> {
 
 ![Cell builder](images/builders/cell-builder.jpg)
 
->**NOTE** 
+>**Note** 
 * Use [HijriDateRangePickerCellDetails]() for the [SfHijriDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfHijriDateRangePicker-class.html).
 
 

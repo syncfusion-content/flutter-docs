@@ -41,7 +41,7 @@ Widget build(BuildContext context) {
 
 ![Change time interval](images/timeslot-views/time-interval.png)
 
->**NOTE**
+>**Note**
 * If you modify the timeInterval value (in minutes), you need to change the time labels format by setting the timeFormat value to `hh:mm`. By default, timeFormat value is `h a`.
 
 ## Change time interval height
@@ -118,7 +118,7 @@ Widget build(BuildContext context) {
 
 ![Flexible working days and working hours](images/timeslot-views/starthour-endhour.png)
 
->**NOTE**
+>**Note**
 * The `nonWorkingDays` property will applicable only for `workWeek` and `timelineWorkWeek` views only, and not applicable for the remaining views.
 * Calendar Appointments UI, which does not fall within the `startHour` and `endHour` will not be visible and if it falls partially, it will be clipped.
 * No need to specify the decimal point values for `startHour` and `endHour`, if you don’t want to set the minutes.
@@ -131,7 +131,7 @@ You can restrict the user interaction such as selection and highlights specific 
 
 ![Special time region in Flutter event calendar](images/timeslot-views/Special_region.png)
 
->**NOTE** 
+>**Note** 
 * If time region has both the text and icon then it will draw icon only.
 * The `TimeRegion` not applicable, when the calendar view is set to `timelineMonth`.
 
@@ -168,7 +168,7 @@ You can enable or disable the touch interaction of `TimeRegion` using the [enabl
 
 ![Special time region touch restriction](images/timeslot-views/Special_region_touch_restriction.png)
 
->**NOTE**
+>**Note**
 This property only restricts the interaction on region and it does not restrict the following:
 * Programmatic selection (if the user updates the selected date value dynamically)
 * Does not clear the selection when the user selects the region and dynamically change
@@ -385,7 +385,7 @@ class _AppointmentDataSource extends CalendarDataSource {
 
 ![Minimum appointment duration](images/timeslot-views/minimum-appointment-height.png)
 
->**NOTE**
+>**Note**
 * `minimumAppointmentDuration` value will be set, when an appointment duration value lesser than `minimumAppointmentDuration`.
 * Appointment duration value will be set, when the appointment duration value greater than `minimumAppointmentDuration`.
 * `timeInterval` value will be set, when `minimumAppointmentDuration` greater than `timeInterval` with lesser appointment duration.

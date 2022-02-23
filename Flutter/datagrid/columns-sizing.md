@@ -151,7 +151,7 @@ Widget build(BuildContext context) {
 
 By default, the EdgeInsets.all(16.0) is added with the auto width or height value. You can change the padding for specific columns by using the [GridColumn.autoFitPadding](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/GridColumn/autoFitPadding.html) property.
 
->**NOTE** 
+>**Note** 
   `GridColumn.autoFitPadding` is applicable for header cell also.
 
 {% tabs %}

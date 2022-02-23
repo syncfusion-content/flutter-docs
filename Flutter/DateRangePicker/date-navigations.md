@@ -371,7 +371,7 @@ Widget build(BuildContext context) {
 
 ![navigationMode](images/date-navigations/navigation_mode.gif)
 
->**NOTE**
+>**Note**
 When the navigation mode is set to `DateRangePickerNavigationMode.scroll`.
 * Swipe selection is not supported when the range and multi-range are the selection modes.
 * The `onViewChanged` will be called when the view reaches the starting position of the date range picker view.

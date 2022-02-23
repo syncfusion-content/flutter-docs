@@ -29,7 +29,7 @@ Widget build(BuildContext context) {
 
 ![Hijri date range picker](images/hijri-picker/hijri_programattic_view_navigation.jpg)
 
->**NOTE** 
+>**Note** 
 * Most of the properties type and classes were same from [SfDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfDateRangePicker-class.html) except the followings [HijriDatePickerController](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerController-class.html), [HijriDatePickerMonthCellStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerMonthCellStyle-class.html), [HijriDatePickerMonthViewSettings](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerMonthViewSettings-class.html), [HijriDatePickerViewChangedArgs](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerViewChangedArgs-class.html), [HijriDatePickerYearCellStyle](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerYearCellStyle-class.html), [HijriDateRange](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDateRange-class.html) and [HijriDatePickerView](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerView.html).
 * Use the [HijriDateTime](https://pub.dev/documentation/syncfusion_flutter_core/latest/core/HijriDateTime-class.html) class to define the date for `SfHijriDateRangePicker`.
 
@@ -406,7 +406,7 @@ class MyAppState extends State<MyApp> {
 
 ![Hijri Extendable Range Selection in Flutter Date Range Picker](images/hijri-picker/flutter-hijri-date-range-picker-extendable-range-selection.png)
 
->**NOTE**
+>**Note**
 * The hovering effect which occurs while extending the range will not be displayed when the `DateRangePickerNavigationMode` is set as `DateRangePickerNavigationMode.scroll`.
 
 ## Extendable range selection Direction
@@ -431,7 +431,7 @@ You can set the extendable range selection direction as forward, backward, both 
 {% endhighlight %}
 {% endtabs %}
 
->**NOTE**
+>**Note**
 * If it is set to none, it won't allow to extend the selection. It will remain in the initial range.
 * If it is set to forward direction, the start date will not be changed here.
 * If it is set to backward direction, the end date will not be changed here.

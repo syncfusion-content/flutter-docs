@@ -758,7 +758,7 @@ The `rowsCacheExtent` property will create the additional rows internally with t
 
 If the height or width of the DataGrid is infinity, then DataGrid sets its height or width to 300 by default. Users can set the height or width based on the number of rows or columns available in DataGrid by using the [shrinkWrapRows](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/shrinkWrapRows.html) or [shrinkWrapColumns](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/SfDataGrid/shrinkWrapColumns.html) property, respectively.
 
->**NOTE**
+>**Note**
        Shrink wrapping is significantly more expensive than setting the height and width manually.
 
 {% tabs %}

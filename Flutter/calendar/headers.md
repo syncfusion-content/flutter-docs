@@ -148,7 +148,7 @@ Widget build(BuildContext context) {
 
 ![View header appearance](images/headers/viewheader-style.png)
 
->**NOTE**
+>**Note**
 * The `dateTextStyle` property not applicable for view header in month view of calendar.
 
 ## See also

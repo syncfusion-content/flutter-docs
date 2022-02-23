@@ -15,7 +15,7 @@ The schedule view display two different UI for mobile and web, for mobile it wil
 
 ![Schedule view in Flutter event calendar](images/scheduleview/Schedule-view.png)
 
->**NOTE** 
+>**Note** 
 * If the web view width is less than `767` the calendar will render the mobile schedule UI for the web. 
 
 ## Appointment item height

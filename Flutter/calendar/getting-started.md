@@ -377,7 +377,7 @@ Widget build(BuildContext context) {
 ![Show Navigation Arrow](images/getting-started/show-navigation-arrow.jpg)
 
 
->**NOTE** 
+>**Note** 
 * The `showNavigationArrow` property is not applicable when the `view` is set to `CalendarView.schedule`.
 
 ## Cell end padding

@@ -23,7 +23,7 @@ syncfusion_flutter_datagrid_export: ^xx.x.xx
 
 {% endhighlight %}
 
-  >**NOTE** Here, **xx.x.xx** denotes the current version of `Syncfusion Flutter DataGrid Export` package.
+  >**Note** Here, **xx.x.xx** denotes the current version of `Syncfusion Flutter DataGrid Export` package.
 
 **Import package**
 
@@ -249,7 +249,7 @@ final List<int> bytes = document.save();
 {% endhighlight %}
 {% endtabs %}
 
->**NOTE**
+>**Note**
        If you disabled the `autoColumnWidth`, then you must set `fitAllColumnsInOnePage` as false. Then only, the overflowing columns are drawn in next page. Because `fitAllColumnsInOnePage` has topmost priority.
 
 

@@ -33,7 +33,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
->**NOTE** 
+>**Note** 
 * Use [HijriDatePickerViewChangedArgs](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/HijriDatePickerViewChangedArgs-class.html) for the [SfHijriDateRangePicker](https://pub.dev/documentation/syncfusion_flutter_datepicker/latest/datepicker/SfHijriDateRangePicker-class.html).
 
 ### Selection changed callback

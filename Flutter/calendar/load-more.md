@@ -47,7 +47,7 @@ return SfCalendar(
 {% endhighlight %}
 {% endtabs %}
 
->**NOTE**
+>**Note**
 * This callback will be called after the `onViewChanged` callback.
 * The widget returned from this builder will be removed from the SfCalendar when the `CalendarDataSource.notifyListeners` is called.
 

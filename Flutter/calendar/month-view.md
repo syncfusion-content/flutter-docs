@@ -32,7 +32,7 @@ Widget build(BuildContext context) {
 
 ![Month agenda view](images/monthview/appointment-indicator-count.png)
 
->**NOTE**
+>**Note**
 * An agenda view displays text as `No Selected Date` until no date is selected.
 * If there is no appointment in a selected day, agenda view displays the text as `No Events`.
 
@@ -151,7 +151,7 @@ Widget build(BuildContext context) {
 
 ![Appointment display count](images/monthview/appointment-indicator-count.png)
 
->**NOTE**
+>**Note**
 * If appointments count is lesser than the `appointmentDisplayCount` value in the particular day, then according to the number of appointments available, appointment will be displayed in the month cell.
 * Appointment indicator will be shown on the basis of date meetings, usable month cell size and indicator count. For eg, if the month cell size is less (available for only 4 dots) and the indicator count is 10, then 4 indicators will be shown.
 
@@ -259,7 +259,7 @@ Widget build(BuildContext context) {
 
 ![Customize number of month rows](images/monthview/number-of-month-rows.png)
 
->**NOTE**
+>**Note**
 * Week number ranges from 1 to 6. If lesser or greater than these range is considered, `numberOfWeeksInView` will be displayed as 6.
 * Dynamically changing `numberOfWeeksInView` shows the first row of month view dates. It can be handled using the `initialDisplayDate` property of calendar.
 

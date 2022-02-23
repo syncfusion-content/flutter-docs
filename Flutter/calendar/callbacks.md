@@ -38,7 +38,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
->**NOTE**
+>**Note**
 * Initially, the `onViewChanged` callback would be triggered to load the appointment data on the basis of visible dates.
 
 ## Calendar tap callback
@@ -73,7 +73,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
->**NOTE**
+>**Note**
 * For recurrence appointment, the tap details will always return as `Appointment`, even for the custom business object.
 * The `onTap` and `onLongPress` callbacks are not applicable for pop-ups like allowedViews and date picker in the calendar header.
 
@@ -148,7 +148,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
->**NOTE**
+>**Note**
 * For recurrence appointment, the long pressed details will always return as `Appointment`, even for the custom business object.
 
 ## See also

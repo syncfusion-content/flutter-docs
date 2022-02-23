@@ -421,5 +421,5 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
->**NOTE**  
+>**Note**  
   `SfDataGrid` supports selection via keyboard interaction for the Web and Desktop platform when `selectionMode` is not `none`.

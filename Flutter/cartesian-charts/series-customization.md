@@ -131,13 +131,12 @@ If you wish to perform the initial rendering animation again in the existing ser
 
 ![Dynamic series animation](images/cartesian-customization/dynamicanimation.gif)
 
-## Animation delay
+### Animation delay
 
-The `animationDelay` property is used to specify the delay duration of the series animation. This takes milliseconds value as input. By default, the series will get animated for the specified duration. If `animationDelay` is specified, then the series will begin to animate after the specified duration.
-Defaults to `0` for all the series except `ErrorBarSeries`. The default value for the `ErrorBarSeries` is `1500`.
+The [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/animationDelay.html) property is used to specify the delay duration of the series animation. This takes milliseconds value as input. By default, the series will get animated for the specified duration. If [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/animationDelay.html) is specified, then the series will begin to animate after the specified duration.
+Defaults to `0` for all the series except [`ErrorBarSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarSeries-class.html). The default value for the [`ErrorBarSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarSeries-class.html) is `1500`.
 
->**Note**
-* The animation delay is applicable for series, trendline, and indicators.
+>**Note**: The animation delay is applicable for series, trendline, and indicators.
 
 {% highlight dart %}
 
@@ -156,37 +155,40 @@ Defaults to `0` for all the series except `ErrorBarSeries`. The default value fo
         ];
         
         return Column(children: <Widget>[
-        Container(
-          child: SfCartesianChart(
-            primaryXAxis: CategoryAxis(),
-            axes: <ChartAxis>[
-              NumericAxis(
-                numberFormat: NumberFormat.compact(),
-                majorGridLines: const MajorGridLines(width: 0),
-                opposedPosition: true,
-                name: 'yAxis1',
-                interval: 1000,
-                minimum: 0,
-                maximum: 7000)
+           Container(
+              child: SfCartesianChart(
+                primaryXAxis: CategoryAxis(),
+                axes: <ChartAxis>[
+                   NumericAxis(
+                    numberFormat: NumberFormat.compact(),
+                    majorGridLines: const MajorGridLines(width: 0),
+                    opposedPosition: true,
+                    name: 'yAxis1',
+                    interval: 1000,
+                    minimum: 0,
+                    maximum: 7000)
                 ],
-            series: <ChartSeries<ChartData, String>>[
-            ColumnSeries<ChartData, String>(
-                animationDuration: 2000,
-                dataSource: chartData,
-                xValueMapper: (ChartData sales, _) => sales.x,
-                yValueMapper: (ChartData sales, _) => sales.yValue1,
-                name: 'Unit Sold'),
-            LineSeries<ChartData, String>(
-                animationDuration: 4500,
-                animationDelay: 2000,
-                dataSource: chartData,
-                xValueMapper: (ChartData sales, _) => sales.x,
-                yValueMapper: (ChartData sales, _) => sales.yValue2,
-                yAxisName: 'yAxis1',
-                markerSettings: MarkerSettings(isVisible: true),
-                name: 'Total Transaction')
-            ],)),
-        ]);
+                series: <ChartSeries<ChartData, String>>[
+                  ColumnSeries<ChartData, String>(
+                    animationDuration: 2000,
+                    dataSource: chartData,
+                    xValueMapper: (ChartData sales, _) => sales.x,
+                    yValueMapper: (ChartData sales, _) => sales.yValue1,
+                    name: 'Unit Sold'),
+                 LineSeries<ChartData, String>(
+                    animationDuration: 4500,
+                    animationDelay: 2000,
+                    dataSource: chartData,
+                    xValueMapper: (ChartData sales, _) => sales.x,
+                    yValueMapper: (ChartData sales, _) => sales.yValue2,
+                    yAxisName: 'yAxis1',
+                    markerSettings: MarkerSettings(isVisible: true),
+                    name: 'Total Transaction')
+                    ]
+                  )
+               ) 
+           ]
+        );
     }
 
     class ChartData {
