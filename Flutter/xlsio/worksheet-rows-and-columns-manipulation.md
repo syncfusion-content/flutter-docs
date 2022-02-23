@@ -185,7 +185,7 @@ workbook.dispose();
 
 ## Show or Hide Rows and Columns
 
-Visibility of rows and columns can be set by using the showRows and showColumns methods as shown below.
+Visibility of rows and columns can be set by using the [showRows](https://pub.dev/documentation/syncfusion_flutter_xlsio/latest/xlsio/Range/showRows.html) and [showColumns](https://pub.dev/documentation/syncfusion_flutter_xlsio/latest/xlsio/Range/showColumns.html) methods as shown below.
 
 {% highlight dart %}
 
@@ -212,7 +212,7 @@ workbook.dispose();
 
 ## Show or Hide Specific Range
 
-The following code snippet shows how to set the visibility for a specific range.
+The following code snippet shows how to set the visibility for a specific range through [showRange](https://pub.dev/documentation/syncfusion_flutter_xlsio/latest/xlsio/Range/showRange.html) method .
 
 {% highlight dart %}
 
