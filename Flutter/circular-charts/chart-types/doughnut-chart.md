@@ -373,4 +373,4 @@ The small segments in the doughnut chart can be grouped into **others** category
 
 ![Doughnut grouping](circular-chart-types-images/doughnut_grouping.jpg)
 
-N> You can refer to our [Flutter Doughnut Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/doughnut-chart) feature tour page for its groundbreaking feature representations.
+>**Note**: You can refer to our [Flutter Doughnut Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/doughnut-chart) feature tour page for its groundbreaking feature representations.

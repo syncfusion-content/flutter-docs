@@ -15,7 +15,7 @@ Converts logical pixel value to the data point value.
  
 The [`pixelToPoint`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidSeriesController/pixelToPoint.html) method takes logical pixel value as input and returns a chart data point.
  
- >**NOTE**: The method will return the center value of the segment.
+ >**Note**: The method will return the center value of the segment.
 
 {% highlight dart %}
 

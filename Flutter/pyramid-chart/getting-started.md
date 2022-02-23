@@ -32,7 +32,7 @@ Add the Syncfusion [`Flutter Chart`](https://www.syncfusion.com/flutter-widgets/
 
 {% endhighlight %}
 
->**NOTE**: Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Charts`](https://pub.dev/packages/syncfusion_flutter_charts/versions) package.
+>**Note**: Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Charts`](https://pub.dev/packages/syncfusion_flutter_charts/versions) package.
 
 **Get packages**
 
@@ -58,7 +58,7 @@ Import the following package in your Dart code.
 
 Once the package has been imported, initialize the chart as a child of any widget. SfPyramidChart can be used to render pyramid charts. Here, as we are rendering pyramid chart, initialize SfPyramidChart widget as a child of Container widget.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="7" %} 
 
     @override
     Widget build(BuildContext context) {
@@ -250,4 +250,4 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
 You can find the complete getting started example from this [`link`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/pyramid_chart_example-1124328856).
 
 
->**NOTE**: You can also explore our [Flutter Charts example](https://flutter.syncfusion.com/#/cartesian-charts/chart-types/line/default-line-chart) that shows how to render various chart types as well as how to easily configure with built-in support for creating stunning visual effects.
+>**Note**: You can also explore our [Flutter Charts example](https://flutter.syncfusion.com/#/cartesian-charts/chart-types/line/default-line-chart) that shows how to render various chart types as well as how to easily configure with built-in support for creating stunning visual effects.
