@@ -175,7 +175,7 @@ class EmployeeDataSource extends DataGridSource {
 {% endhighlight %}
 {% endtabs %}
 
->**Note**  
+>**NOTE**  
   Download demo application from [GitHub](https://github.com/SyncfusionExamples/how-to-perform-editing-in-flutter-datatable-sfdatagrid).
 
 ## Disable the editing for specific column
@@ -357,7 +357,7 @@ class EmployeeDataSource extends DataGridSource {
 
 The [DataGridSource.onCellSubmit](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellSubmit.html) method is called when the editing is completed. We recommend you save the edited values to underlying collection in this method. It makes sense to handle the entire editing operation in this single method.
 
->**Note**     
+>**NOTE**     
    There is no need to call the `notifyListeners` after you update the DataGridRows. DataGrid will refresh the UI automatically.
 
 {% tabs %}
@@ -407,7 +407,7 @@ class EmployeeDataSource extends DataGridSource {
 
 The [DataGridSource.onCellCancelEdit](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellCancelEdit.html) method is called when you press the `Esc` key from Web and Desktop platforms. The [canSubmitCell](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/canSubmitCell.html) and [onCellSubmit](https://pub.dev/documentation/syncfusion_flutter_datagrid/latest/datagrid/DataGridSource/onCellSubmit.html) will not be called when `Esc` key is pressed.
 
->**Note**    
+>**NOTE**    
    No need to call the notifyListener inside it.
 
 {% tabs %}
