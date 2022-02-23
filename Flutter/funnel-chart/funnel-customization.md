@@ -197,47 +197,6 @@ Also, the segments can be exploded by tapping the segment.
 
 ![Explode](images/funnel-charts/funnel_explode.jpg)
 
-## Smart data labels
-
-The [`smartLabelMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/smartLabelMode.html) property is used to place the data labels smartly. The [`smartLabelMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/smartLabelMode.html) supports the following values:
-
-* [`SmartLabelMode.shift`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmartLabelMode.html) - shifts the data label position when a label intersects with other label.
-* [`SmartLabelMode.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmartLabelMode.html) - renders all the data labels when intersect.
-* [`SmartLabelMode.hide`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SmartLabelMode.html) - hides the intersecting data label, and it is the default value.
-
-{% highlight dart %} 
-
-    @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfFunnelChart(
-                        smartLabelMode: SmartLabelMode.shift,
-                        series: FunnelSeries<ChartData, String>(
-                            dataLabelSettings: DataLabelSettings(
-                                isVisible: true, 
-                                labelPosition: ChartDataLabelPosition.inside
-                            ),
-                            dataSource: [
-                                ChartData('Walnuts', 654),
-                                ChartData('Almonds', 575),
-                                ChartData('Soybeans', 446),
-                                ChartData('Black beans', 341),
-                                ChartData('Mushrooms', 296),
-                                ChartData('Avacado', 160),
-                            ],
-                            xValueMapper: (ChartData data, _) => data.x,
-                            yValueMapper: (ChartData data, _) => data.y)
-                        )
-                    )
-                )
-            )
-        );
-    }
-
-{% endhighlight %}
-
 ## Applying palette color
 
 The [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/palette.html) property is used to define colors for the series available in chart. By default, a set of 10 colors is predefined for applying it to the series. If the colors specified in the series are less than the number of series, then the remaining series will be filled with the specified palette colors rotationally.
