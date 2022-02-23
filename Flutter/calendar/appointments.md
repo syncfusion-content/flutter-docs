@@ -69,7 +69,7 @@ class _AppointmentDataSource extends CalendarDataSource {
 | [getLocation](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getLocation.html) | Maps the property name of custom class, which is equivalent for `location` of `Appointment`. |
 | [getRecurrenceExceptionDates](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/CalendarDataSource/getRecurrenceExceptionDates.html) | Maps the property name of custom class, which is equivalent for `recurrenceExceptionDates` of `Appointment`. |
 
->**Note**
+>**NOTE**
 * Custom appointment class should contain two date time fields as mandatory.
 
 {% tabs %}
@@ -290,7 +290,7 @@ class Meeting {
 {% endhighlight %}
 {% endtabs %}
 
->**Note**
+>**NOTE**
 * This method must be implemented to get the data with business object type when drag and drop and appointment resizing enabled.
 
 ## Spanned appointments
@@ -341,7 +341,7 @@ _AppointmentDataSource _getCalendarDataSource() {
 
 ![All day appointment](images/appointments/all-day-appointment.png)
 
->**Note**
+>**NOTE**
 * Appointment which lasts through an entire day (exact 24 hours) will be considered as all day appointment without setting the IsAllDay property. For example, 06/12/2019 12:00AM to 06/12/2019 12:00AM.
 
 ## Recurrence appointment
@@ -667,7 +667,7 @@ class _AppointmentDataSource extends CalendarDataSource {
 
 ![Recurrence exceptiondate](images/appointments/recurrence-exception-date.png)
 
->**Note**
+>**NOTE**
 * Exception dates should be Universal Time Coordinates (UTC) time zone.
 
 ### Create recurrence exceptions for custom appointment
@@ -775,7 +775,7 @@ class Meeting {
 {% endhighlight %}
 {% endtabs %}
 
->**Note**
+>**NOTE**
 * Exception dates should be Universal Time Coordinates (UTC) time zone.
 
 ### Add exception appointment to the recurrence series
@@ -831,7 +831,7 @@ AppointmentDataSource _getDataSource() {
 
 ![Recurrence Series in Flutter Calendar](images/appointments/flutter-calendar-recurrence-series.png)
 
->**Note**
+>**NOTE**
 * The RecurrenceId of the changed occurrence should hold the exact recurrence pattern appointment Id.
 * The exception appointment should be a normal appointment, and should not be created as recurring appointment, since its occurrence is from recurrence pattern.
 * The exception recurrence appointment does not have the RecurrenceRule, so for an exception appointment, it will be reset to empty.
@@ -929,7 +929,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
->**Note**
+>**NOTE**
 * The `startTime` specifies the starting date from which the appointments should be obtained.
 
 
@@ -961,7 +961,7 @@ Gets an occurrence at the specified date within a series of recurring appointmen
 {% endhighlight %}
 {% endtabs %}
 
->**Note**
+>**NOTE**
 * If there is no appointment occurring on the date specified, null is returned.
 * The `patternAppointment` is required for the start appointment in a recurrence series, from which the occurrence appointments are cloned with the pattern appointment characteristics.
 * The `date` is required for the occurrence appointment.
@@ -999,7 +999,7 @@ Gets the pattern appointment for the specified occurrence by using the [getPatte
 {% endhighlight %}
 {% endtabs %}
 
->**Note**
+>**NOTE**
 * The `occurrenceAppointment` is necessary in order to receive the Pattern appointment.
 
 ## See also

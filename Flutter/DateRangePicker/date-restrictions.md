@@ -111,7 +111,7 @@ Widget build(BuildContext context) {
 {% endhighlight %}
 {% endtabs %}
 
->**Note**
+>**NOTE**
 * Applicable for year, decade and century views only when the `allowViewNavigation` set as false.
 * This callback is not applicable when the `navigationMode` set as `DateRangePickerNavigationMode.scroll`. 
 

@@ -1180,7 +1180,7 @@ appointments.add(Appointment(
 {% endhighlight %}
 {% endtabs %}
 
->**Note**
+>**NOTE**
 * If the recurring appointment is converted to another time zone, then the whole sequence will be recalculated according to the new time zone information.
 * If you create an all-day appointment, its start time and end time will be set to 12 A.M. and 12 A.M. by default, so time zone is not applicable for all-day appointments.
 * Calendar supports daylight saving time.

@@ -38,7 +38,7 @@ Widget build(BuildContext context) {
 
 ![drag_and_drop](images/appointments/dragdrop.gif)
 
->**Note**
+>**NOTE**
 * It is not applicable for month view in mobile platform.
 
 ## onDragStart

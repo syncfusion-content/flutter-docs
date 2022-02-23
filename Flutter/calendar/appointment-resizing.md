@@ -37,7 +37,7 @@ Widget build(BuildContext context) {
 
 ![appointment_resizing](images/appointments/appointment_resize.gif)
 
->**Note**
+>**NOTE**
 * It is not applicable for mobile platforms.
 
 ## onAppointmentResizeStart

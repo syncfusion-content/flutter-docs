@@ -249,7 +249,7 @@ class MyAppState extends State<MyApp> {
 
 ![Appointment builder](images/builder/appointment-builder.png)
 
->**Note**
+>**NOTE**
 * For recurring appointments, this will always return as `Appointment`, even for the custom business objects.
 
 
