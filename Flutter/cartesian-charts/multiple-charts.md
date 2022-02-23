@@ -18,6 +18,12 @@ You can add multiple series to the [`series`](https://pub.dev/documentation/sync
 
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = <ChartData>[
+           ChartData('Germany', 128, 129, 101),
+           ChartData('Russia', 123, 92, 93),
+           ChartData('Norway', 107, 106, 90),
+           ChartData('USA', 87, 95, 71),
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
@@ -47,7 +53,7 @@ You can add multiple series to the [`series`](https://pub.dev/documentation/sync
     }
 
      class ChartData {
-        ChartData(this.x, this.y, this.y2, this.y3);
+        ChartData(this.x, this.y, this.y1, this.y2);
         final String x;
         final double? y;
         final double? y1;
@@ -68,6 +74,12 @@ Also refer [multiple axes](./axis-customization#multiple-axes) for customizing t
 
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = <ChartData>[
+            ChartData('Germany', 129),
+            ChartData('Russia', 90),
+            ChartData('USA', 107),
+            ChartData('Norway', 68),
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
@@ -84,7 +96,7 @@ Also refer [multiple axes](./axis-customization#multiple-axes) for customizing t
                             LineSeries<ChartData, String>(
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) => data.y1
+                                yValueMapper: (ChartData data, _) => data.y
                             )
                         ]
                     )
@@ -94,10 +106,9 @@ Also refer [multiple axes](./axis-customization#multiple-axes) for customizing t
     }
 
     class ChartData {
-        ChartData(this.x, this.y, this.y1);
+        ChartData(this.x, this.y);
         final String x;
         final double? y;
-        final double? y1;
       }
 
 {% endhighlight %}
@@ -108,6 +119,6 @@ Also refer [multiple axes](./axis-customization#multiple-axes) for customizing t
 
 * Cartesian type series cannot be combined with circular series (pie, doughnut, and radial bar).  
 
->**NOTE**:`chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.
-
-N> You can refer to our [Flutter Combination Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/combination-chart) feature tour page for its groundbreaking feature representations.
+>**Note**:
+* `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.
+* You can refer to our [Flutter Combination Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/combination-chart) feature tour page for its groundbreaking feature representations.
