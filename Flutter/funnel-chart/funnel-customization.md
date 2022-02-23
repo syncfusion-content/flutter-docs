@@ -42,10 +42,9 @@ To render a funnel chart, create an instance of [`FunnelSeries`](https://pub.dev
     }
 
     class ChartData {
-        ChartData(this.x, this.y, [this.color]);
+        ChartData(this.x, this.y);
             final String x;
             final double y;
-            final Color color;
     }
 
 {% endhighlight %}
@@ -67,6 +66,16 @@ You can modify the size of funnel series using the [`height`](https://pub.dev/do
                         series: FunnelSeries<ChartData, String>(
                             height: '50%',
                             width: '50%',
+                            dataSource: [
+                                ChartData('Walnuts', 654),
+                                ChartData('Almonds', 575),
+                                ChartData('Soybeans', 446),
+                                ChartData('Black beans', 341),
+                                ChartData('Mushrooms', 296),
+                                ChartData('Avacado', 160),
+                            ],
+                            xValueMapper: (ChartData data, _) => data.x,
+                            yValueMapper: (ChartData data, _) => data.y)
                         )
                     )
                 )
@@ -93,6 +102,16 @@ You can modify the neck size of funnel series using the [`neckHeight`](https://p
                         series: FunnelSeries<ChartData, String>(
                             neckHeight: '40%',
                             neckWidth: '10%',
+                            dataSource: [
+                                ChartData('Walnuts', 654),
+                                ChartData('Almonds', 575),
+                                ChartData('Soybeans', 446),
+                                ChartData('Black beans', 341),
+                                ChartData('Mushrooms', 296),
+                                ChartData('Avacado', 160),
+                            ],
+                            xValueMapper: (ChartData data, _) => data.x,
+                            yValueMapper: (ChartData data, _) => data.y)
                         )
                     )
                 )
@@ -118,6 +137,16 @@ You can control the gap between the two segments using the [`gapRatio`](https://
                     child: SfFunnelChart(
                         series: FunnelSeries<ChartData, String>(
                             gapRatio: 0.1,
+                            dataSource: [
+                                ChartData('Walnuts', 654),
+                                ChartData('Almonds', 575),
+                                ChartData('Soybeans', 446),
+                                ChartData('Black beans', 341),
+                                ChartData('Mushrooms', 296),
+                                ChartData('Avacado', 160),
+                            ],
+                            xValueMapper: (ChartData data, _) => data.x,
+                            yValueMapper: (ChartData data, _) => data.y)
                         )
                     )
                 )
@@ -147,6 +176,16 @@ Also, the segments can be exploded by tapping the segment.
                             explode: true,
                             explodeOffset: '5%',
                             explodeIndex: 2,
+                            dataSource: [
+                                ChartData('Walnuts', 654),
+                                ChartData('Almonds', 575),
+                                ChartData('Soybeans', 446),
+                                ChartData('Black beans', 341),
+                                ChartData('Mushrooms', 296),
+                                ChartData('Avacado', 160),
+                            ],
+                            xValueMapper: (ChartData data, _) => data.x,
+                            yValueMapper: (ChartData data, _) => data.y)
                         )
                     )
                 )
@@ -180,6 +219,16 @@ The [`smartLabelMode`](https://pub.dev/documentation/syncfusion_flutter_charts/l
                                 isVisible: true, 
                                 labelPosition: ChartDataLabelPosition.inside
                             ),
+                            dataSource: [
+                                ChartData('Walnuts', 654),
+                                ChartData('Almonds', 575),
+                                ChartData('Soybeans', 446),
+                                ChartData('Black beans', 341),
+                                ChartData('Mushrooms', 296),
+                                ChartData('Avacado', 160),
+                            ],
+                            xValueMapper: (ChartData data, _) => data.x,
+                            yValueMapper: (ChartData data, _) => data.y)
                         )
                     )
                 )
@@ -205,7 +254,12 @@ The [`palette`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
                             Colors.teal,
                             Colors.orange,
                             Colors.brown
-                        ]
+                        ],
+                        series: FunnelSeries<ChartData, String>(
+                        dataSource: chartData,
+                        xValueMapper: (ChartData data, _) => data.x,
+                        yValueMapper: (ChartData data, _) => data.y,
+                        )
                     )
                 )
             )

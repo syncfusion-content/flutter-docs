@@ -35,15 +35,22 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
 
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData('Jan', 35),
+            ChartData('Feb', 28),
+            ChartData('Mar', 38),
+            ChartData('Apr', 32),
+            ChartData('May', 40)
+        ];
+
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfPyramidChart(
-                        series: PyramidSeries<SalesData, String>(
+                        series: PyramidSeries<ChartData, String>(
                                 dataSource: chartData,
-                                pointColorMapper: (SalesData data, _) => data.color,
-                                xValueMapper: (SalesData data, _) => data.x,
-                                yValueMapper: (SalesData data, _) => data.y,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
                                 dataLabelSettings: DataLabelSettings(
                                     // Renders the data label
                                     isVisible: true
@@ -53,6 +60,11 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
                 )
             )
         );
+    }
+    class ChartData {
+        ChartData(this.x, this.y);
+        final String x;
+        final double? y;
     }
 
 {% endhighlight %}
@@ -114,10 +126,10 @@ The [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/la
             body: Center(
                 child: Container(
                     child: SfPyramidChart(
-                        series: PyramidSeries<SalesData, String>(
+                        series: PyramidSeries<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData data, _) => data.x,
-                                yValueMapper: (SalesData data, _) => data.y,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true,
                                     // Positioning the data label
@@ -148,10 +160,10 @@ The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
             body: Center(
                 child: Container(
                     child: SfPyramidChart(
-                        series: PyramidSeries<SalesData, String>(
+                        series: PyramidSeries<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData data, _) => data.x,
-                                yValueMapper: (SalesData data, _) => data.y,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true,
                                     // Positioning the data label
@@ -182,10 +194,10 @@ You can customize the appearance of the data label with your own template using 
             body: Center(
                 child: Container(
                     child: SfPyramidChart(
-                        series: PyramidSeries<SalesData, String>(
+                        series: PyramidSeries<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData data, _) => data.x,
-                                yValueMapper: (SalesData data, _) => data.y,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true,
                                     // Templating the data label
@@ -219,16 +231,16 @@ Data label and its connector line in the Pyramid charts for the point value 0 ca
         return Scaffold(
             body: Center(
                     child:SfPyramidChart(
-                        series: PyramidSeries<SalesData, num>(
+                        series: PyramidSeries<ChartData, num>(
                             dataSource: [
-                                SalesData(11, 35),
-                                SalesData(12, 28),
-                                SalesData(13, 0),
-                                SalesData(14, 32),
-                                SalesData(15, 40)
+                                ChartData(11, 35),
+                                ChartData(12, 28),
+                                ChartData(13, 0),
+                                ChartData(14, 32),
+                                ChartData(15, 40)
                             ],
-                            xValueMapper: (SalesData sales, _) => sales.xValue,
-                            yValueMapper: (SalesData sales, _) => sales.yValue,
+                            xValueMapper: (ChartData sales, _) => sales.xValue,
+                            yValueMapper: (ChartData sales, _) => sales.yValue,
                             dataLabelSettings: DataLabelSettings(
                                 showZeroValue: false, 
                                 isVisible: true
@@ -254,7 +266,7 @@ Action on data labels when it’s overflowing from its region area. The overflow
   
 Defaults to [`OverflowMode.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/overflowMode.html).
 
-N> This is applicable for pie, doughnut, pyramid, and funnel series types alone.
+>**Note**: This is applicable for pie, doughnut, pyramid, and funnel series types alone.
 
 {% highlight dart %}
 

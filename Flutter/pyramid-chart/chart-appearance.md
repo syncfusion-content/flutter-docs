@@ -17,17 +17,33 @@ Chart renders based on the parent widget size. If you need the chart to be rende
 
     @override
     Widget build(BuildContext context) {
+      final List<ChartData> data = [
+            ChartData('Jan', 35),
+            ChartData('Feb', 28),
+            ChartData('Mar', 38),
+            ChartData('Apr', 32),
+            ChartData('May', 40)
+        ];
         return Scaffold(
-          body: SafeArea(
-            child: Center(
+          body: Center(
             child: Container(
               height: 300,
               width: 350,
-              child: SfPyramidChart()
-            )
+              child: SfPyramidChart(
+                series: PyramidSeries<ChartData, String>(
+                dataSource: chartData,
+                xValueMapper: (ChartData data, _) => data.x,
+                yValueMapper: (ChartData data, _) => data.y)
+               )
+             )
            )
-          )
-        );
+         )
+       );
+    }
+    class ChartData {
+      ChartData(this.x, this.y);
+      final String x;
+      final double y;
     }
 
 {% endhighlight %}
@@ -41,17 +57,18 @@ Margin to the chart can be specified using the [`margin`](https://pub.dev/docume
     @override
     Widget build(BuildContext context) {
       return Scaffold(
-        body: SafeArea(
-          child: Center(
+        body: Center(
             child: Container(
               height: 300,
               width: 350,
               child: SfPyramidChart(
                 borderColor: Colors.red,
-                borderWidth: 2,
-                // Sets 15 logical pixels as margin for all the 4 sides.
-                margin: EdgeInsets.all(15)
-                )
+              borderWidth: 2,
+              margin: EdgeInsets.all(15),
+              series: PyramidSeries<ChartData, String>(
+                dataSource: chartData,
+                xValueMapper: (ChartData data, _) => data.x,
+                yValueMapper: (ChartData data, _) => data.y)
               )
             )
           )
@@ -59,6 +76,8 @@ Margin to the chart can be specified using the [`margin`](https://pub.dev/docume
     }
 
 {% endhighlight %}
+
+![margin](images\chart-title\chart_margin.png)
 
 ## Chart area customization
 
@@ -72,14 +91,17 @@ You can customize the area of the chart using the below properties.
     @override
     Widget build(BuildContext context) {
       return Scaffold(
-        body: SafeArea(
-          child: Center(
+        body: Center(
             child: Container(
               height: 300, 
               width: 350, 
               child: SfPyramidChart(
                 backgroundColor: Colors.lightGreen,
                 backgroundImage: 'images/livechart.png',
+                series: PyramidSeries<ChartData, String>(
+                dataSource: chartData,
+                xValueMapper: (ChartData data, _) => data.x,
+                yValueMapper: (ChartData data, _) => data.y,)
               )
             )
           )
@@ -88,3 +110,5 @@ You can customize the area of the chart using the below properties.
     }
 
 {% endhighlight %}
+
+![customization](images\chart-title\customization.png)

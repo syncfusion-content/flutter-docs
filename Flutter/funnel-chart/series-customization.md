@@ -35,7 +35,7 @@ documentation: ug
 
 {% endhighlight %}
 
-## Animation delay
+### Animation delay
 
 The [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/animationDelay.html) property is used to specify the delay duration of the series animation. This takes milliseconds value as input. By default, the series will get animated for the specified duration. If [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FunnelSeries/animationDelay.html) is specified, then the series will begin to animate after the specified duration. Defaults to `0`.
 
@@ -71,6 +71,8 @@ The [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/l
     }
 
 {% endhighlight %}
+
+![Animation delay](images/Funnel-customization/animation-delay.gif)
 
 ## Empty points
 
@@ -152,12 +154,12 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
 
     @override
     Widget build(BuildContext context) {
-            static dynamic chartData = <SalesData>[
-                SalesData('Rent', 1000,Colors.teal),
-                SalesData('Food', 2500,Colors.lightBlue),
-                SalesData('Savings', 760,Colors.brown),
-                SalesData('Tax', 1897,Colors.grey),
-                SalesData('Others', 2987,Colors.blueGrey)
+            static dynamic chartData = <ChartData>[
+                ChartData('Rent', 1000,Colors.teal),
+                ChartData('Food', 2500,Colors.lightBlue),
+                ChartData('Savings', 760,Colors.brown),
+                ChartData('Tax', 1897,Colors.grey),
+                ChartData('Others', 2987,Colors.blueGrey)
             ];
             return Scaffold(
                 body: Center(
