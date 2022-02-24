@@ -452,8 +452,8 @@ Data label and its connector line in the Cartesian charts for the point value 0 
         return Scaffold(
             body: Center(
                     child:SfCartesianChart(
-                        series: <CartesianSeries<SalesData,num>>[
-                            SplineSeries<SalesData, num>(
+                        series: <CartesianSeries<ChartData,num>>[
+                            SplineSeries<ChartData, num>(
                                 dataLabelSettings: DataLabelSettings(
                                     showZeroValue: false, 
                                     isVisible: true
@@ -465,8 +465,8 @@ Data label and its connector line in the Cartesian charts for the point value 0 
         );
     }
 
-    class SalesData {
-        SalesData(this.x, this.y);
+    class ChartData {
+        ChartData(this.x, this.y);
         final num x;
         final double? y;
       }
@@ -492,8 +492,8 @@ In Horizontal padding, providing positive value for x moves the data l
         return Scaffold(
             body: Center(
                     child:SfCartesianChart(
-                        series: <CartesianSeries<SalesData,num>>[
-                            SplineSeries<SalesData, num>(
+                        series: <CartesianSeries<ChartData,num>>[
+                            SplineSeries<ChartData, num>(
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true,
                                     offset: Offset(30, 0),
@@ -505,8 +505,8 @@ In Horizontal padding, providing positive value for x moves the data l
         );
     }
 
-    class SalesData {
-        SalesData(this.x, this.y);
+    class ChartData {
+        ChartData(this.x, this.y);
         final num x;
         final double? y;
       }
@@ -526,8 +526,8 @@ In Vertical padding, providing positive value for y moves the data lab
         return Scaffold(
             body: Center(
                     child:SfCartesianChart(
-                        series: <CartesianSeries<SalesData,num>>[
-                            SplineSeries<SalesData, num>(
+                        series: <CartesianSeries<ChartData,num>>[
+                            SplineSeries<ChartData, num>(
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true,
                                     offset: Offset(0, 30),
@@ -539,8 +539,8 @@ In Vertical padding, providing positive value for y moves the data lab
         );
     }
 
-     class SalesData {
-        SalesData(this.x, this.y);
+     class ChartData {
+        ChartData(this.x, this.y);
         final num x;
         final double? y;
       }

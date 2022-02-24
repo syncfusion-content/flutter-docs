@@ -574,22 +574,22 @@ Refer the following example below
         body: Center(
           child: SfCartesianChart(
             indicators: <TechnicalIndicators>[
-            MomentumIndicator<SalesData, num>(
+            MomentumIndicator<ChartData, num>(
                 period: 5,
                 dataSource: chartData,
-                xValueMapper: (SalesData sales, _) => sales.x,
-                highValueMapper: (SalesData sales, _) => sales.high,
-                lowValueMapper: (SalesData sales, _) => sales.low,
-                openValueMapper: (SalesData sales, _) => sales.open,
-                closeValueMapper: (SalesData sales, _) => sales.close,
+                xValueMapper: (ChartData sales, _) => sales.x,
+                highValueMapper: (ChartData sales, _) => sales.high,
+                lowValueMapper: (ChartData sales, _) => sales.low,
+                openValueMapper: (ChartData sales, _) => sales.open,
+                closeValueMapper: (ChartData sales, _) => sales.close,
               )
             ], 
-            series: <ChartSeries<SalesData, num>>[
-              LineSeries<SalesData, num>(
+            series: <ChartSeries<ChartData, num>>[
+              LineSeries<ChartData, num>(
                   color: Colors.purple,
                   dataSource: chartData,
-                  xValueMapper: (SalesData1 sales, _) => sales.x,
-                  yValueMapper: (SalesData1 sales, _) => sales.y,
+                  xValueMapper: (ChartData1 sales, _) => sales.x,
+                  yValueMapper: (ChartData1 sales, _) => sales.y,
               )
             ]
           )
@@ -597,8 +597,8 @@ Refer the following example below
       );
     }
 
-     class SalesData {
-        SalesData(this.x, this.low, this.high, this.open, this.close);
+     class ChartData {
+        ChartData(this.x, this.low, this.high, this.open, this.close);
         final num x;
         final double? low;
         final double? high;
@@ -606,8 +606,8 @@ Refer the following example below
         final double? close;
       }
 
-      class SalesData1{
-        SalesData1(this.x, this.y);
+      class ChartData1{
+        ChartData1(this.x, this.y);
         final num x;
         final double y;
       }

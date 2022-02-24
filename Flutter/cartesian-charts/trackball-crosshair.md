@@ -61,10 +61,16 @@ You can use the following properties to customize the appearance of trackball to
             child: Container(
               child: SfCartesianChart(
                 trackballBehavior: _trackballBehavior,
+                series: <LineSeries<ChartData, String>>[
+                      LineSeries<ChartData, String>(
+                          dataSource: ChartData,
+                          xValueMapper: (ChartData sales, _) => sales.x,
+                          yValueMapper: (ChartData sales, _) => sales.y),
+                          ]
+                      )
+                  )
               )
-            )
           )
-        )
       );
     }
 
@@ -103,10 +109,16 @@ The [`tooltipDisplayMode`](https://pub.dev/documentation/syncfusion_flutter_char
             child: Container(
               child: SfCartesianChart(
                 trackballBehavior: _trackballBehavior, 
+                series: <LineSeries<ChartData, num>>[
+                      LineSeries<ChartData, num>(
+                          dataSource: ChartData,
+                          xValueMapper: (ChartData sales, _) => sales.x,
+                          yValueMapper: (ChartData sales, _) => sales.y),
+                          ]
+                      )
+                  )
               )
-            )
           )
-        )
       );
     }
 
@@ -146,10 +158,16 @@ The position of trackball tooltip can be changed using the [`tooltipAlignment`](
             child: Container(
               child: SfCartesianChart(
                 trackballBehavior: _trackballBehavior,
+                series: <LineSeries<ChartData, num>>[
+                      LineSeries<ChartData, num>(
+                          dataSource: ChartData,
+                          xValueMapper: (ChartData sales, _) => sales.x,
+                          yValueMapper: (ChartData sales, _) => sales.y),
+                          ]
+                      )
+                  )
               )
-            )
           )
-        )
       );
     }
 
@@ -187,13 +205,18 @@ By default, axis value will be displayed in the tooltip, and it can be customize
             child: Container(
               child: SfCartesianChart(
                 trackballBehavior: _trackballBehavior,
+                series: <LineSeries<ChartData, String>>[
+                      LineSeries<ChartData, String>(
+                          dataSource: ChartData,
+                          xValueMapper: (ChartData sales, _) => sales.x,
+                          yValueMapper: (ChartData sales, _) => sales.y),
+                          ]
+                      )
+                  )
               )
-            )
           )
-        )
       );
     }
-
 {% endhighlight %}
 
 ![Label format](images/trackball-crosshair/label_format.jpg)
@@ -230,11 +253,18 @@ The ActivationMode enum contains the following values:
           child: Center(
             child: Container(
               child: SfCartesianChart(
+                primaryXAxis: DateTimeAxis(),
                 trackballBehavior: _trackballBehavior,
+                series: <LineSeries<ChartData, DateTime>>[
+                      LineSeries<ChartData, DateTime>(
+                          dataSource: ChartData,
+                          xValueMapper: (ChartData sales, _) => sales.x,
+                          yValueMapper: (ChartData sales, _) => sales.y),
+                          ]
+                      )
+                  )
               )
-            )
           )
-        )
       );
     }
 
@@ -263,27 +293,27 @@ The ActivationMode enum contains the following values:
               child: SfCartesianChart(
                 primaryXAxis: DateTimeAxis(),
                 trackballBehavior: _trackballBehavior,
-                <LineSeries<SalesData, DateTime>>[
-                      LineSeries<SalesData, DateTime>(
+                series: <LineSeries<ChartData, DateTime>>[
+                      LineSeries<ChartData, DateTime>(
                           dataSource: ChartData,
-                          markerSettings: MarkerSettings(enable: true),
-                          xValueMapper: (SalesData sales, _) => sales.year,
-                          yValueMapper: (SalesData sales, _) => sales.sales)
-                      LineSeries<SalesData, DateTime>(
-                          dataSource: ChartData1,
-                          markerSettings: MarkerSettings(enable: true),
-                          xValueMapper: (SalesData sales, _) => sales.year,
-                          yValueMapper: (SalesData sales, _) => sales.sales),
-                      LineSeries<SalesData, DateTime>(
-                          dataSource: ChartDat2,
-                          markerSettings: MarkerSettings(enable: true),
-                          xValueMapper: (SalesData sales, _) => sales.year,
-                          yValueMapper: (SalesData sales, _) => sales.sales),
-                      LineSeries<SalesData, DateTime>(
-                          dataSource: ChartData3,
-                          markerSettings: MarkerSettings(enable: true),
-                          xValueMapper: (SalesData sales, _) => sales.year,
-                          yValueMapper: (SalesData sales, _) => sales.sales)
+                          markerSettings: MarkerSettings(isVisible: true),
+                          xValueMapper: (ChartData sales, _) => sales.x,
+                          yValueMapper: (ChartData sales, _) => sales.y),
+                      LineSeries<ChartData, DateTime>(
+                          dataSource: ChartData,
+                          markerSettings: MarkerSettings(isVisible: true),
+                          xValueMapper: (ChartData sales, _) => sales.x,
+                          yValueMapper: (ChartData sales, _) => sales.y1),
+                      LineSeries<ChartData, DateTime>(
+                          dataSource: ChartData,
+                          markerSettings: MarkerSettings(isVisible: true),
+                          xValueMapper: (ChartData sales, _) => sales.x,
+                          yValueMapper: (ChartData sales, _) => sales.y2),
+                      LineSeries<ChartData, DateTime>(
+                          dataSource: ChartData,
+                          markerSettings: MarkerSettings(isVisible: true),
+                          xValueMapper: (ChartData sales, _) => sales.x,
+                          yValueMapper: (ChartData sales, _) => sales.y3)
                 ]
               )
             )
@@ -291,8 +321,8 @@ The ActivationMode enum contains the following values:
       );
     }
 
-    class SalesData {
-        SalesData(this.year, this.sales);
+    class ChartData {
+        ChartData(this.year, this.sales);
         final DateTime year;
         final double? sales;
       }
@@ -333,19 +363,19 @@ Also refer, [marker customization](./marker-datalabel#Marker) for customizing th
               child: SfCartesianChart(
                 primaryXAxis: DateTimeAxis(),
                 trackballBehavior: _trackballBehavior,
-                <LineSeries<SalesData, DateTime>>[
-                      LineSeries<SalesData, DateTime>(
+                <LineSeries<ChartData, DateTime>>[
+                      LineSeries<ChartData, DateTime>(
                           dataSource: ChartData,
-                          xValueMapper: (SalesData sales, _) => sales.year,
-                          yValueMapper: (SalesData sales, _) => sales.sales)
-                      LineSeries<SalesData, DateTime>(
+                          xValueMapper: (ChartData sales, _) => sales.year,
+                          yValueMapper: (ChartData sales, _) => sales.sales)
+                      LineSeries<ChartData, DateTime>(
                           dataSource: ChartData1,
-                          xValueMapper: (SalesData sales, _) => sales.year,
-                          yValueMapper: (SalesData sales, _) => sales.sales),
-                      LineSeries<SalesData, DateTime>(
+                          xValueMapper: (ChartData sales, _) => sales.year,
+                          yValueMapper: (ChartData sales, _) => sales.sales),
+                      LineSeries<ChartData, DateTime>(
                           dataSource: ChartData2,
-                          xValueMapper: (SalesData sales, _) => sales.year,
-                          yValueMapper: (SalesData sales, _) => sales.sales),
+                          xValueMapper: (ChartData sales, _) => sales.year,
+                          yValueMapper: (ChartData sales, _) => sales.sales),
                 ]
               )
             )
@@ -353,8 +383,8 @@ Also refer, [marker customization](./marker-datalabel#Marker) for customizing th
       );
     }
 
-    class SalesData {
-        SalesData(this.year, this.sales);
+    class ChartData {
+        ChartData(this.year, this.sales);
         final DateTime year;
         final double? sales;
       }
@@ -424,11 +454,11 @@ You can customize the appearance of the trackball tooltip with your own widgets 
             child: SfCartesianChart(
               primaryXAxis: CategoryAxis(),
               trackballBehavior: _trackballBehavior,
-              series: <CartesianChart<SalesData, String>>[
-                SplineSeries<SalesData, String>(
+              series: <CartesianChart<ChartData, String>>[
+                SplineSeries<ChartData, String>(
                     dataSource: ChartData,
-                    xValueMapper: (SalesData sales, _) => sales.year,
-                    yValueMapper: (SalesData sales, _) => sales.sales)
+                    xValueMapper: (ChartData sales, _) => sales.year,
+                    yValueMapper: (ChartData sales, _) => sales.sales)
                 ]
               )
             )
@@ -436,8 +466,8 @@ You can customize the appearance of the trackball tooltip with your own widgets 
       );
     }
 
-    class SalesData {
-        SalesData(this.year, this.sales);
+    class ChartData {
+        ChartData(this.year, this.sales);
         final String year;
         final double? sales;
       }
@@ -455,6 +485,7 @@ The following properties are available in [`TrackballGroupingModeInfo`](https://
 * [`currentPointIndices`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballGroupingModeInfo/currentPointIndices.html) - it specifies the current point indices.
 * [`visibleSeriesIndices`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballGroupingModeInfo/visibleSeriesIndices.html) - it specifies the visible series indices.
 * [`visibleSeriesList`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TrackballGroupingModeInfo/visibleSeriesList.html) - it specifies the Cartesian visible series list.
+
 ### Trackball tooltip Marker
 
 The [`canShowMarker`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/InteractiveTooltip/canShowMarker.html) is used to toggle the visibility of the marker in the trackball tooltip.
@@ -485,23 +516,23 @@ Defaults to `true`.
                 child: SfCartesianChart(
                     primaryXAxis: CategoryAxis(),
                     trackballBehavior: _trackballBehavior,
-                    series: <LineSeries<SalesData, String>>[
-                      LineSeries<SalesData, String>(
+                    series: <LineSeries<ChartData, String>>[
+                      LineSeries<ChartData, String>(
                           dataSource: chartData,
-                          xValueMapper: (SalesData sales, _) => sales.year,
-                          yValueMapper: (SalesData sales, _) => sales.sales),
-                      LineSeries<SalesData, String>(
+                          xValueMapper: (ChartData sales, _) => sales.year,
+                          yValueMapper: (ChartData sales, _) => sales.sales),
+                      LineSeries<ChartData, String>(
                           dataSource: chartData,
-                          xValueMapper: (SalesData sales, _) => sales.year,
-                          yValueMapper: (SalesData sales, _) => sales.sales1),
-                      LineSeries<SalesData, String>(
+                          xValueMapper: (ChartData sales, _) => sales.year,
+                          yValueMapper: (ChartData sales, _) => sales.sales1),
+                      LineSeries<ChartData, String>(
                           dataSource: chartData,
-                          xValueMapper: (SalesData sales, _) => sales.year,
-                          yValueMapper: (SalesData sales, _) => sales.sales2),
-                      LineSeries<SalesData, String>(
+                          xValueMapper: (ChartData sales, _) => sales.year,
+                          yValueMapper: (ChartData sales, _) => sales.sales2),
+                      LineSeries<ChartData, String>(
                           dataSource: chartData,
-                          xValueMapper: (SalesData sales, _) => sales.year,
-                          yValueMapper: (SalesData sales, _) => sales.sales3),
+                          xValueMapper: (ChartData sales, _) => sales.year,
+                          yValueMapper: (ChartData sales, _) => sales.sales3),
                     ]
                 )
             )
@@ -509,8 +540,8 @@ Defaults to `true`.
       );
     }
 
-    class SalesData {
-      SalesData(this.year, this.sales, this,sales1, this.sales2, this.sales3);
+    class ChartData {
+      ChartData(this.year, this.sales, this,sales1, this.sales2, this.sales3);
       final String year;
       final double? sales;
       final double? sales1;
