@@ -189,7 +189,7 @@ Defaults to [`OverflowMode.none`](https://pub.dev/documentation/syncfusion_flutt
     Widget build(BuildContext context) {
         return Container(
             child: SfFunnelChart(
-            series: PieSeries<ChartData, String>(
+            series: FunnelSeries<ChartData, String>(
              dataLabelSettings: DataLabelSettings(
                isVisible: true,
                overflowMode: OverflowMode.trim
