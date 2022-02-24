@@ -40,10 +40,10 @@ The following properties can be used to customize the appearance:
                     child: SfCartesianChart(
                         series: <ChartSeries>[
                             // Renders area chart
-                            AreaSeries<SalesData, int>(
+                            AreaSeries<ChartData, int>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales
                             )
                         ]
                     )
@@ -75,14 +75,14 @@ The borders of the area chart can be customized using the [`borderDrawMode`](htt
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
-                            AreaSeries<SalesData, DateTime>(
+                            AreaSeries<ChartData, DateTime>(
                                 dataSource: chartData,
                                 color: Colors.deepOrange[300],
                                 borderMode: AreaBorderMode.excludeBottom,
                                 borderColor: Colors.green,
                                 borderWidth: 2,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales
                             )
                         ]
                     )
@@ -146,10 +146,10 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
                         primaryYAxis: NumericAxis(labelFormat: '{value}mm')
                         series: <ChartSeries>[
                             // Renders area chart
-                            AreaSeries<SalesData, int>(
+                            AreaSeries<ChartData, int>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales,
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales,
                                  gradient: gradientColors
                             )
                         ]
@@ -199,10 +199,10 @@ Data points with a null value are considered empty points. Empty data points are
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
-                            AreaSeries<SalesData, DateTime>(
+                            AreaSeries<ChartData, DateTime>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales,emptyPointSettings:
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales,emptyPointSettings:
                                 EmptyPointSettings(mode: EmptyPointMode.zero)
                             )
                         ]
@@ -233,10 +233,10 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
                         isTransposed: true,
                         primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
-                            AreaSeries<SalesData, DateTime>(
+                            AreaSeries<ChartData, DateTime>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales
                             )
                         ]
                     )

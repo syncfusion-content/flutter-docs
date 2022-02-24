@@ -36,9 +36,9 @@ To render a HiLo chart, create an instance of [`HiloSeries`](https://pub.dev/doc
                         primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders bar chart
-                            HiloSeries<SalesData, DateTime>(
+                            HiloSeries<ChartData, DateTime>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
+                                xValueMapper: (ChartData sales, _) => sales.year,
                                   lowValueMapper: (Sample sales, _) => sales.low,
               highValueMapper: (Sample sales, _) => sales.high
                             )

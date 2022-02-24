@@ -31,10 +31,10 @@ To render a bar chart, create an instance of [`BarSeries`](https://pub.dev/docum
                     child: SfCartesianChart(
                         series: <ChartSeries>[
                             // Renders bar chart
-                            BarSeries<SalesData, double>(
+                            BarSeries<ChartData, double>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales
                             )
                         ]
                     )
@@ -62,10 +62,10 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
                 child: Container(
                     child: SfCartesianChart(
                         series: <ChartSeries>[
-                            BarSeries<SalesData, double>(
+                            BarSeries<ChartData, double>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales,
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales,
                                 width: 0.6, // Width of the bars
                                 spacing: 0.3 // Spacing between the bars
                             )
@@ -93,10 +93,10 @@ The [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
                 child: Container(
                     child: SfCartesianChart(
                         series: <ChartSeries>[
-                            BarSeries<SalesData, double>(
+                            BarSeries<ChartData, double>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales,
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales,
                                 borderRadius: BorderRadius.all(Radius.circular(15))
                             )
                         ]
@@ -128,12 +128,12 @@ You can render the bar chart with track. Track is a rectangular bar rendered fro
                 child: Container(
                     child: SfCartesianChart(
                         series: <ChartSeries>[
-                            BarSeries<SalesData, double>(
+                            BarSeries<ChartData, double>(
                                 dataSource: chartData,
                                 // Renders the track
                                 isTrackVisible: true,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales
                             )
                         ]
                     )
