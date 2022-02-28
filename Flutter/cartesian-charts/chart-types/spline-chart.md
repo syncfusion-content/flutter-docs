@@ -34,8 +34,8 @@ To render a spline chart, create an instance of [`SplineSeries`](https://pub.dev
                             // Renders spline chart
                             SplineSeries<ChartData, int>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y
+                                xValueMapper: (ChartData data, _) => sales.x,
+                                yValueMapper: (ChartData data, _) => sales.y
                                 )
                             ]
                         )
@@ -88,8 +88,8 @@ The following code sample demonstrates how to set the [`splineType`](https://pub
                                 // Type of spline
                                 splineType: SplineType.cardinal,
                                 cardinalSplineTension: 0.9,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y
+                                xValueMapper: (ChartData data, _) => sales.x,
+                                yValueMapper: (ChartData data, _) => sales.y
                                 )
                             ]
                         )
@@ -127,8 +127,8 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
                                 dataSource: chartData,
                                 // Dash values for spline
                                 dashArray: <double>[5, 5],
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y
+                                xValueMapper: (ChartData data, _) => sales.x,
+                                yValueMapper: (ChartData data, _) => sales.y
                                 )
                             ]
                         )
@@ -173,8 +173,8 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
                         series: <ChartSeries>[
                             SplineSeries<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y
+                                xValueMapper: (ChartData data, _) => sales.x,
+                                yValueMapper: (ChartData data, _) => sales.y
                                 )
                             ]
                         )

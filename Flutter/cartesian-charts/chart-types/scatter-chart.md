@@ -29,8 +29,8 @@ To render a scatter chart, create an instance of [`ScatterSeries`](https://pub.d
                             // Renders scatter chart
                             ScatterSeries<ChartData, DateTime>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y
+                                xValueMapper: (ChartData data, _) => sales.x,
+                                yValueMapper: (ChartData data, _) => sales.y
                             )
                         ]
                     )
@@ -61,8 +61,8 @@ The [`height`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/ch
                         series: <ChartSeries>[
                             ScatterSeries<ChartData, DateTime>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y,
+                                xValueMapper: (ChartData data, _) => sales.x,
+                                yValueMapper: (ChartData data, _) => sales.y,
                                 markerSettings: MarkerSettings(
                                     height: 15,
                                     width: 15,

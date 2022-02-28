@@ -40,10 +40,10 @@ To render a spline range area chart, create an instance of the [`SplineRangeArea
                     series: <CartesianSeries<ChartData, num>>[
                     SplineRangeAreaSeries<ChartData, num>(
                         dataSource: chartData,
-                        xValueMapper: (ChartData sales, _) => sales.xValue,
-                        lowValueMapper: (ChartData sales, _) =>
+                        xValueMapper: (ChartData data, _) => sales.xValue,
+                        lowValueMapper: (ChartData data, _) =>
                         sales.lowValue,
-                        highValueMapper: (ChartData sales, _) =>
+                        highValueMapper: (ChartData data, _) =>
                         sales.highValue,),
                     ]
                 )
@@ -86,9 +86,9 @@ The following code sample demonstrates how to set the [`splineType`](https://pub
                                 dataSource: chartData,
                                 splineType: SplineType.cardinal,
                                 cardinalSplineTension: 0.8,
-                                xValueMapper: (ChartData sales, _) => sales.xValue,
-                                lowValueMapper: (ChartData sales, _) => sales.lowValue,
-                                highValueMapper: (ChartData sales, _) => sales.highValue
+                                xValueMapper: (ChartData data, _) => sales.xValue,
+                                lowValueMapper: (ChartData data, _) => sales.lowValue,
+                                highValueMapper: (ChartData data, _) => sales.highValue
                             )
                         ]
                     )
@@ -117,9 +117,9 @@ The borders of the spline range area chart can be customized using the [`borderD
                                 dataSource: chartData,
                                 borderWidth:2,
                                 borderColor: Colors.red,
-                                xValueMapper: (ChartData sales, _) => sales.xValue,
-                                lowValueMapper: (ChartData sales, _) => sales.lowValue,
-                                highValueMapper: (ChartData sales, _) => sales.highValue
+                                xValueMapper: (ChartData data, _) => sales.xValue,
+                                lowValueMapper: (ChartData data, _) => sales.lowValue,
+                                highValueMapper: (ChartData data, _) => sales.highValue
                             )
                         ]
                     )

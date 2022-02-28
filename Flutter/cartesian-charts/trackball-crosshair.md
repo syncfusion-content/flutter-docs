@@ -64,8 +64,8 @@ You can use the following properties to customize the appearance of trackball to
                 series: <LineSeries<ChartData, String>>[
                       LineSeries<ChartData, String>(
                           dataSource: ChartData,
-                          xValueMapper: (ChartData sales, _) => sales.x,
-                          yValueMapper: (ChartData sales, _) => sales.y),
+                          xValueMapper: (ChartData data, _) => sales.x,
+                          yValueMapper: (ChartData data, _) => sales.y),
                           ]
                       )
                   )
@@ -112,8 +112,8 @@ The [`tooltipDisplayMode`](https://pub.dev/documentation/syncfusion_flutter_char
                 series: <LineSeries<ChartData, num>>[
                       LineSeries<ChartData, num>(
                           dataSource: ChartData,
-                          xValueMapper: (ChartData sales, _) => sales.x,
-                          yValueMapper: (ChartData sales, _) => sales.y),
+                          xValueMapper: (ChartData data, _) => sales.x,
+                          yValueMapper: (ChartData data, _) => sales.y),
                           ]
                       )
                   )
@@ -161,8 +161,8 @@ The position of trackball tooltip can be changed using the [`tooltipAlignment`](
                 series: <LineSeries<ChartData, num>>[
                       LineSeries<ChartData, num>(
                           dataSource: ChartData,
-                          xValueMapper: (ChartData sales, _) => sales.x,
-                          yValueMapper: (ChartData sales, _) => sales.y),
+                          xValueMapper: (ChartData data, _) => sales.x,
+                          yValueMapper: (ChartData data, _) => sales.y),
                           ]
                       )
                   )
@@ -208,8 +208,8 @@ By default, axis value will be displayed in the tooltip, and it can be customize
                 series: <LineSeries<ChartData, String>>[
                       LineSeries<ChartData, String>(
                           dataSource: ChartData,
-                          xValueMapper: (ChartData sales, _) => sales.x,
-                          yValueMapper: (ChartData sales, _) => sales.y),
+                          xValueMapper: (ChartData data, _) => sales.x,
+                          yValueMapper: (ChartData data, _) => sales.y),
                           ]
                       )
                   )
@@ -258,8 +258,8 @@ The ActivationMode enum contains the following values:
                 series: <LineSeries<ChartData, DateTime>>[
                       LineSeries<ChartData, DateTime>(
                           dataSource: ChartData,
-                          xValueMapper: (ChartData sales, _) => sales.x,
-                          yValueMapper: (ChartData sales, _) => sales.y),
+                          xValueMapper: (ChartData data, _) => sales.x,
+                          yValueMapper: (ChartData data, _) => sales.y),
                           ]
                       )
                   )
@@ -297,23 +297,23 @@ The ActivationMode enum contains the following values:
                       LineSeries<ChartData, DateTime>(
                           dataSource: ChartData,
                           markerSettings: MarkerSettings(isVisible: true),
-                          xValueMapper: (ChartData sales, _) => sales.x,
-                          yValueMapper: (ChartData sales, _) => sales.y),
+                          xValueMapper: (ChartData data, _) => sales.x,
+                          yValueMapper: (ChartData data, _) => sales.y),
                       LineSeries<ChartData, DateTime>(
                           dataSource: ChartData,
                           markerSettings: MarkerSettings(isVisible: true),
-                          xValueMapper: (ChartData sales, _) => sales.x,
-                          yValueMapper: (ChartData sales, _) => sales.y1),
+                          xValueMapper: (ChartData data, _) => sales.x,
+                          yValueMapper: (ChartData data, _) => sales.y1),
                       LineSeries<ChartData, DateTime>(
                           dataSource: ChartData,
                           markerSettings: MarkerSettings(isVisible: true),
-                          xValueMapper: (ChartData sales, _) => sales.x,
-                          yValueMapper: (ChartData sales, _) => sales.y2),
+                          xValueMapper: (ChartData data, _) => sales.x,
+                          yValueMapper: (ChartData data, _) => sales.y2),
                       LineSeries<ChartData, DateTime>(
                           dataSource: ChartData,
                           markerSettings: MarkerSettings(isVisible: true),
-                          xValueMapper: (ChartData sales, _) => sales.x,
-                          yValueMapper: (ChartData sales, _) => sales.y3)
+                          xValueMapper: (ChartData data, _) => sales.x,
+                          yValueMapper: (ChartData data, _) => sales.y3)
                 ]
               )
             )
@@ -322,9 +322,9 @@ The ActivationMode enum contains the following values:
     }
 
     class ChartData {
-        ChartData(this.year, this.sales);
-        final DateTime year;
-        final double? sales;
+        ChartData(this.x, this.y);
+        final DateTime x;
+        final double? y;
       }
 
 {% endhighlight %}
@@ -366,16 +366,16 @@ Also refer, [marker customization](./marker-datalabel#Marker) for customizing th
                 <LineSeries<ChartData, DateTime>>[
                       LineSeries<ChartData, DateTime>(
                           dataSource: ChartData,
-                          xValueMapper: (ChartData sales, _) => sales.year,
-                          yValueMapper: (ChartData sales, _) => sales.sales)
+                          xValueMapper: (ChartData data, _) => data.x,
+                          yValueMapper: (ChartData data, _) => data.y)
                       LineSeries<ChartData, DateTime>(
                           dataSource: ChartData1,
-                          xValueMapper: (ChartData sales, _) => sales.year,
-                          yValueMapper: (ChartData sales, _) => sales.sales),
+                          xValueMapper: (ChartData data, _) => data.x,
+                          yValueMapper: (ChartData data, _) => data.y),
                       LineSeries<ChartData, DateTime>(
                           dataSource: ChartData2,
-                          xValueMapper: (ChartData sales, _) => sales.year,
-                          yValueMapper: (ChartData sales, _) => sales.sales),
+                          xValueMapper: (ChartData data, _) => data.x,
+                          yValueMapper: (ChartData data, _) => data.y),
                 ]
               )
             )
@@ -384,9 +384,9 @@ Also refer, [marker customization](./marker-datalabel#Marker) for customizing th
     }
 
     class ChartData {
-        ChartData(this.year, this.sales);
-        final DateTime year;
-        final double? sales;
+        ChartData(this.x, this.y);
+        final DateTime x;
+        final double? y;
       }
 
 
@@ -457,8 +457,8 @@ You can customize the appearance of the trackball tooltip with your own widgets 
               series: <CartesianChart<ChartData, String>>[
                 SplineSeries<ChartData, String>(
                     dataSource: ChartData,
-                    xValueMapper: (ChartData sales, _) => sales.year,
-                    yValueMapper: (ChartData sales, _) => sales.sales)
+                    xValueMapper: (ChartData data, _) => data.x,
+                    yValueMapper: (ChartData data, _) => data.y)
                 ]
               )
             )
@@ -467,9 +467,9 @@ You can customize the appearance of the trackball tooltip with your own widgets 
     }
 
     class ChartData {
-        ChartData(this.year, this.sales);
-        final String year;
-        final double? sales;
+        ChartData(this.x, this.y);
+        final String x;
+        final double? y;
       }
 
 {% endhighlight %}
@@ -519,20 +519,20 @@ Defaults to `true`.
                     series: <LineSeries<ChartData, String>>[
                       LineSeries<ChartData, String>(
                           dataSource: chartData,
-                          xValueMapper: (ChartData sales, _) => sales.year,
-                          yValueMapper: (ChartData sales, _) => sales.sales),
+                          xValueMapper: (ChartData data, _) => data.x,
+                          yValueMapper: (ChartData data, _) => data.y),
                       LineSeries<ChartData, String>(
                           dataSource: chartData,
-                          xValueMapper: (ChartData sales, _) => sales.year,
-                          yValueMapper: (ChartData sales, _) => sales.sales1),
+                          xValueMapper: (ChartData data, _) => data.x,
+                          yValueMapper: (ChartData data, _) => data.y1),
                       LineSeries<ChartData, String>(
                           dataSource: chartData,
-                          xValueMapper: (ChartData sales, _) => sales.year,
-                          yValueMapper: (ChartData sales, _) => sales.sales2),
+                          xValueMapper: (ChartData data, _) => data.x,
+                          yValueMapper: (ChartData data, _) => data.y2),
                       LineSeries<ChartData, String>(
                           dataSource: chartData,
-                          xValueMapper: (ChartData sales, _) => sales.year,
-                          yValueMapper: (ChartData sales, _) => sales.sales3),
+                          xValueMapper: (ChartData data, _) => data.x,
+                          yValueMapper: (ChartData data, _) => data.y3),
                     ]
                 )
             )
@@ -541,9 +541,9 @@ Defaults to `true`.
     }
 
     class ChartData {
-      ChartData(this.year, this.sales, this,sales1, this.sales2, this.sales3);
-      final String year;
-      final double? sales;
+      ChartData(this.x, this.y, this,sales1, this.y2, this.y3);
+      final String x;
+      final double? y;
       final double? sales1;
       final double? sales2;
       final double? sales3;

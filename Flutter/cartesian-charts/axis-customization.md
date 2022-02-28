@@ -965,8 +965,8 @@ By default, the chart is rendered with primary x axis and primary y axis. But, t
                                     ChartData('Apr', 32),
                                     ChartData('May', 40)
                                 ],
-                                xValueMapper: (ChartData sales, _) => sales.year,
-                                yValueMapper: (ChartData sales, _) => sales.sales
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             ),
                             LineSeries<ChartData, String>(
                                 dataSource: [
@@ -975,8 +975,8 @@ By default, the chart is rendered with primary x axis and primary y axis. But, t
                                     ChartData('Mar', 14, 3),
                                     ChartData('Apr', 12, 4),
                                 ],
-                                xValueMapper: (ChartData sales, _) => sales.numeric,
-                                yValueMapper: (ChartData sales, _) => sales.sales,
+                                xValueMapper: (ChartData data, _) => sales.numeric,
+                                yValueMapper: (ChartData data, _) => data.y,
                                 xAxisName: 'xAxis',
                                 yAxisName: 'yAxis'
                             )
@@ -988,9 +988,9 @@ By default, the chart is rendered with primary x axis and primary y axis. But, t
     }
 
     class ChartData {
-        ChartData(this.year, this.sales, [this.numeric]);
-        final String year;
-        final double? sales;
+        ChartData(this.x, this.y, [this.numeric]);
+        final String x;
+        final double? y;
         final double? numeric;
     }
 
@@ -1135,8 +1135,8 @@ The maximum width for axis labels and the space occupied by the axis labels can 
                             ChartData('Makkah Clock Royal Tower', 601),
                             ChartData('Shanghai Tower', 632),
                             ChartData('Burj Khalifa', 828)],
-                        xValueMapper: (ChartData sales, _) => sales.year,
-                        yValueMapper: (ChartData sales, _) => sales.sales
+                        xValueMapper: (ChartData data, _) => data.x,
+                        yValueMapper: (ChartData data, _) => data.y
                     ),
             ]
           )
@@ -1144,9 +1144,9 @@ The maximum width for axis labels and the space occupied by the axis labels can 
     }
 
     class ChartData {
-        ChartData(this.year, this.sales);
-        final String year;
-        final double sales;
+        ChartData(this.x, this.y);
+        final String x;
+        final double y;
     }
 
 {% endhighlight %}

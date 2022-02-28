@@ -172,15 +172,15 @@ Defaults to `0` for all the series except [`ErrorBarSeries`](https://pub.dev/doc
                   ColumnSeries<ChartData, String>(
                     animationDuration: 2000,
                     dataSource: chartData,
-                    xValueMapper: (ChartData sales, _) => sales.x,
-                    yValueMapper: (ChartData sales, _) => sales.yValue1,
+                    xValueMapper: (ChartData data, _) => sales.x,
+                    yValueMapper: (ChartData data, _) => sales.yValue1,
                     name: 'Unit Sold'),
                  LineSeries<ChartData, String>(
                     animationDuration: 4500,
                     animationDelay: 2000,
                     dataSource: chartData,
-                    xValueMapper: (ChartData sales, _) => sales.x,
-                    yValueMapper: (ChartData sales, _) => sales.yValue2,
+                    xValueMapper: (ChartData data, _) => sales.x,
+                    yValueMapper: (ChartData data, _) => sales.yValue2,
                     yAxisName: 'yAxis1',
                     markerSettings: MarkerSettings(isVisible: true),
                     name: 'Total Transaction')

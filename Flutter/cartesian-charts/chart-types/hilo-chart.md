@@ -38,7 +38,7 @@ To render a HiLo chart, create an instance of [`HiloSeries`](https://pub.dev/doc
                             // Renders bar chart
                             HiloSeries<ChartData, DateTime>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.year,
+                                xValueMapper: (ChartData data, _) => data.x,
                                   lowValueMapper: (Sample sales, _) => sales.low,
               highValueMapper: (Sample sales, _) => sales.high
                             )

@@ -65,11 +65,11 @@ Refer the following example,
             series: <ChartSeries<ChartData, DateTime>>[
               HiloOpenCloseSeries<ChartData, DateTime>(
               dataSource: ChartData,
-              xValueMapper: (ChartData sales, _) => sales.x,
-              lowValueMapper: (ChartData sales, _) => sales.low,
-              highValueMapper: (ChartData sales, _) => sales.high,
-              openValueMapper: (ChartData sales, _) => sales.open,
-              closeValueMapper: (ChartData sales, _) => sales.close,
+              xValueMapper: (ChartData data, _) => sales.x,
+              lowValueMapper: (ChartData data, _) => sales.low,
+              highValueMapper: (ChartData data, _) => sales.high,
+              openValueMapper: (ChartData data, _) => sales.open,
+              closeValueMapper: (ChartData data, _) => sales.close,
               name: 'HiloOpenClose'),
               ]
             )
@@ -577,11 +577,11 @@ Refer the following example below
             MomentumIndicator<ChartData, num>(
                 period: 5,
                 dataSource: chartData,
-                xValueMapper: (ChartData sales, _) => sales.x,
-                highValueMapper: (ChartData sales, _) => sales.high,
-                lowValueMapper: (ChartData sales, _) => sales.low,
-                openValueMapper: (ChartData sales, _) => sales.open,
-                closeValueMapper: (ChartData sales, _) => sales.close,
+                xValueMapper: (ChartData data, _) => sales.x,
+                highValueMapper: (ChartData data, _) => sales.high,
+                lowValueMapper: (ChartData data, _) => sales.low,
+                openValueMapper: (ChartData data, _) => sales.open,
+                closeValueMapper: (ChartData data, _) => sales.close,
               )
             ], 
             series: <ChartSeries<ChartData, num>>[

@@ -43,9 +43,9 @@ To render a OpenHighLowClose chart, create an instance of [` hiloOpenCloseSeries
                         primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders hiloOpenCloseSeries 
-                            hiloOpenCloseSeries<SalesData, DateTime>(
+                            hiloOpenCloseSeries<ChartData, DateTime>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
+                                xValueMapper: (ChartData sales, _) => data.x,
                                 lowValueMapper: (Sample sales, _) => sales.low,
                                 highValueMapper: (Sample sales, _) => sales.high, 
                                 openValueMapper: (Sample sales, _) => sales.open,

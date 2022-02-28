@@ -46,11 +46,11 @@ To render a Candle chart, create an instance of [` CandleSeries`](https://pub.de
                             // Renders CandleSeries
                             CandleSeries<ChartData, DateTime>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.year,
-                                lowValueMapper: (ChartData sales, _) => sales.low,
-                                highValueMapper: (ChartData sales, _) => sales.high, 
-                                openValueMapper: (ChartData sales, _) => sales.open,
-                          closeValueMapper: (ChartData sales, _) => sales.close,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                lowValueMapper: (ChartData data, _) => sales.low,
+                                highValueMapper: (ChartData data, _) => sales.high, 
+                                openValueMapper: (ChartData data, _) => sales.open,
+                          closeValueMapper: (ChartData data, _) => sales.close,
 
                             )
                         ]
