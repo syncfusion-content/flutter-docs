@@ -44,13 +44,13 @@ Numeric axis uses numerical scale and displays numbers as labels. By default, [`
                             // Renders column chart
                             ColumnSeries<ChartData, double>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             ),
                             ColumnSeries<ChartData, double>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y1
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y1
                             ),
                         ]
                     )
@@ -465,8 +465,8 @@ Category axis displays text labels instead of numbers. When the string values ar
                             // Renders column chart
                             ColumnSeries<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.year,
-                                yValueMapper: (ChartData sales, _) => sales.sales
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             )
                         ]
                     )
@@ -476,9 +476,9 @@ Category axis displays text labels instead of numbers. When the string values ar
     }
 
     class ChartData{
-        ChartData(this.year, this.sales);
-        final String year;
-        final double sales;
+        ChartData(this.x, this.y);
+        final String x;
+        final double y;
     }
 
 {% endhighlight %}
@@ -566,13 +566,13 @@ Category axis can also be rendered based on the index values of data source by s
                         series: <ChartSeries<ChartData, String>>[
                             ColumnSeries<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
                             ),
                             ColumnSeries<ChartData, String>(
                                 dataSource: chartData2,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
                             )
                         ]
                     )
@@ -615,8 +615,8 @@ The date-time axis uses date-time scale and displays date-time values as axis la
                             // Renders line chart
                             LineSeries<ChartData, DateTime>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.year,
-                                yValueMapper: (ChartData sales, _) => sales.sales
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             )
                         ]
                     )
@@ -626,9 +626,9 @@ The date-time axis uses date-time scale and displays date-time values as axis la
     }
 
     class ChartData{
-        ChartData(this.year, this.sales);
-        final DateTime year;
-        final double sales;
+        ChartData(this.x, this.y);
+        final DateTime x;
+        final double y;
     }
 
 {% endhighlight %}
@@ -933,8 +933,8 @@ Date-time category axis is a combination of both [`DateTimeAxis`](https://pub.de
                             // Renders Column chart
                             ColumnSeries<ChartData, DateTime>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.year,
-                                yValueMapper: (ChartData sales, _) => sales.sales
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             )
                         ] 
                     )
@@ -944,9 +944,9 @@ Date-time category axis is a combination of both [`DateTimeAxis`](https://pub.de
     }
 
     class ChartData{
-        ChartData(this.year, this.sales);
-        final DateTime year;
-        final double sales;
+        ChartData(this.x, this.y);
+        final DateTime x;
+        final double y;
     }
 
 {% endhighlight %}
@@ -1073,8 +1073,8 @@ Logarithmic axis uses logarithmic scale and displays numbers as axis labels.
                             // Renders Column chart
                             ColumnSeries<ChartData, double>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.number,
-                                yValueMapper: (ChartData sales, _) => sales.sales
+                                xValueMapper: (ChartData data, _) => data.number,
+                                yValueMapper: (ChartData data, _) => data.y
                             )
                         ] 
                     )
@@ -1084,9 +1084,9 @@ Logarithmic axis uses logarithmic scale and displays numbers as axis labels.
     }
 
     class ChartData{
-        ChartData(this.number, this.sales);
-        final double number;
-        final double sales;
+        ChartData(this.x, this.y);
+        final double x;
+        final double y;
     }
 
 {% endhighlight %}
@@ -1173,8 +1173,8 @@ By using the [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_cha
                         series : <StepLineSeries<ChartData, String>>[
                         StepLineSeries<ChartData, String>(
                         dataSource: chartData,
-                        xValueMapper: (ChartData sales, _) => sales.x,
-                        yValueMapper: (ChartData sales, _) => sales.y,
+                        xValueMapper: (ChartData data, _) => data.x,
+                        yValueMapper: (ChartData data, _) => data.y,
                         animationDuration: 0),
     ]; 
                     )
@@ -1184,7 +1184,7 @@ By using the [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_cha
     }
 
     class ChartData {
-       ChartData(this.year, this.androidSales, this.iphoneSales);
+       ChartData(this.x, this.androiddata, this.iphonedata);
        final String x;
        final int y;
        final int z;

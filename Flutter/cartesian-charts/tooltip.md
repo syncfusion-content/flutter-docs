@@ -119,7 +119,7 @@ By default, x and y value will be displayed in the tooltip, and it can be custom
 * Y value - `point.y`
 * Bubble size - `point.size`
 * Name of the series - `series.name`
-* Stores the cumulative value - `point.cumualtive `
+* Stores the cumulative value for stacked series - `point.cumualtive `
 
 {% highlight dart %}     
 

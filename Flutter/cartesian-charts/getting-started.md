@@ -58,7 +58,7 @@ Import the following package in your Dart code.
 
 Once the package has been imported, initialize the chart as a child of any widget. SfCartesianChart is used to render all kinds of charts which need to be plotted in Cartesian coordinates. Here, as we are plotting line chart, initialize SfCartesianChart widget as a child of Container widget.
 
-{% highlight dart hl_lines="7" %} 
+{% highlight dart %} 
 
     @override
     Widget build(BuildContext context) {
