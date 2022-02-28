@@ -136,7 +136,7 @@ If you wish to perform the initial rendering animation again in the existing ser
 The [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/animationDelay.html) property is used to specify the delay duration of the series animation. This takes milliseconds value as input. By default, the series will get animated for the specified duration. If [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/animationDelay.html) is specified, then the series will begin to animate after the specified duration.
 Defaults to `0` for all the series except [`ErrorBarSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarSeries-class.html). The default value for the [`ErrorBarSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarSeries-class.html) is `1500`.
 
->**NOTE**: The animation delay is applicable for series, trendline, and indicators.
+>**Note**: The animation delay is applicable for series, trendline, and indicators.
 
 {% highlight dart %}
 
@@ -346,7 +346,8 @@ The [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_charts
 
 ![Point color mapping](images/cartesian-customization/colormapping.jpg)
 
-## Gradient fill
+## Gradient
+### Gradient fill
 
 The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/gradient.html) property is used to define the gradient colors. The colors from this property are used for series. Also, you can use the transform property available in [`LinearGradient`](https://api.flutter.dev/flutter/painting/LinearGradient/LinearGradient.html) to transform the applied gradient colors.
 
@@ -399,7 +400,7 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
 
 * [Rotating the gradient applied to a chart in Cartesian charts](https://www.syncfusion.com/kb/12054/how-to-apply-and-rotate-gradient-in-the-chart-sfcartesainchart).
 
-N>: The gradient is not applicable for spline, step line, candle, hilo, hilo open close, and line type charts. However, in line type gradient is applicable for [`FastLineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FastLineSeries-class.html) alone.
+>**Note**: The gradient is not applicable for spline, step line, candle, hilo, hilo open close, and line type charts. However, in line type gradient is applicable for [`FastLineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/FastLineSeries-class.html) alone.
 
 ### Gradient stroke
  
@@ -449,7 +450,7 @@ If the properties of both [`borderColor`](https://pub.dev/documentation/syncfusi
 
 ![stroke_gradient](images/cartesian-customization/stroke_gradient.png)
 
-## Gradient based on values
+### Gradient based on values
 
 The `onCreateShader` callback is used to fill the data points with the [`gradient`](https://api.flutter.dev/flutter/dart-ui/Gradient-class.html) and [`ImageShader`](https://api.flutter.dev/flutter/dart-ui/ImageShader-class.html). All the data points are together considered as a single segment and the shader is applied commonly.
 
@@ -672,4 +673,4 @@ The chart’s data source can be sorted using the [`sortingOrder`](https://pub.d
 
 * [Rendering a chart using JSON data retrieved from a fire base](https://www.syncfusion.com/kb/11883/how-to-render-chart-using-json-data-stored-in-firebase-database-sfcartesianchart).
 
->**NOTE**:`chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.
+>**Note**: `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.

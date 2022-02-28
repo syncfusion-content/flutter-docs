@@ -64,7 +64,7 @@ To render a 100% stacked area chart, create an instance of `StackingArea100Serie
 
 ![Stacked 100Area chart](cartesian-chart-types-images/stacked_area_100.png)
 
-## See Also
+#### See Also
 
 * [Color palette](./series-customization#color-palette) 
 * [Color mapping](./series-customization#color-mapping-for-data-points)

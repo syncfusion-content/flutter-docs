@@ -25,6 +25,13 @@ The selection feature in chart let you to select a segment in a series or the se
 
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData('USA', 6),
+            ChartData('China', 11),
+            ChartData('UK', 9),
+            ChartData('Japan', 14),
+            ChartData('France', 10),
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
@@ -80,15 +87,25 @@ You can customize the segments using the below properties.
 
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData('USA', 6),
+            ChartData('China', 11),
+            ChartData('UK', 9),
+            ChartData('Japan', 14),
+            ChartData('France', 10),
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
                         series: <CartesianSeries>[
-                            ColumnSeries<ChartData, String>(
-                                selectionBehavior: _selectionBehavior
-                            )
+                            series: <ChartSeries<ChartData, String>>[
+                        ColumnSeries<ChartData, String>(
+                            dataSource: chartData,
+                            selectionBehavior: _selectionBehavior
+                            xValueMapper: (ChartData data, _) => data.x,
+                            yValueMapper: (ChartData data, _) => data.y)
                         ]
                     )
                 )
@@ -116,18 +133,52 @@ The selection features allows you to select segments in following modes using [`
 
 {% highlight dart %} 
 
+    late SelectionBehavior _selectionBehavior;
+    
+    @override
+    void initState(){
+     _selectionBehavior = SelectionBehavior(
+            enable: true);
+        super.initState(); 
+    }
+
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData('USA', 6, 8),
+            ChartData('China', 11, 7),
+            ChartData('UK', 9, 10),
+            ChartData('Japan', 14, 8),
+            ChartData('France', 10, 12),
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
                         // Mode of selection
-                        selectionType: SelectionType.cluster
+                        selectionType: SelectionType.cluster,
+                        series: <ChartSeries<ChartData, String>>[
+                        ColumnSeries<ChartData, String>(
+                            dataSource: chartData,
+                            selectionBehavior: _selectionBehavior,
+                            xValueMapper: (ChartData data, _) => data.x,
+                            yValueMapper: (ChartData data, _) => data.y),
+                        ColumnSeries<ChartData, String>(
+                            dataSource: chartData,
+                            selectionBehavior: _selectionBehavior,
+                            xValueMapper: (ChartData data, _) => data.x,
+                            yValueMapper: (ChartData data, _) => data.y1),
+                        ],
                     )
                 )
             )
         );
+    }
+    class ChartData {
+        ChartData(this.x, this.y, this.y1);
+        final String x;
+        final double y;
+        final double y1;
     }
 
 {% endhighlight %}
@@ -139,15 +190,38 @@ The selection features allows you to select segments in following modes using [`
 Multiple selection can be enabled using the [`enableMultiSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/enableMultiSelection.html) property of chart.
 
 {% highlight dart %} 
+    late SelectionBehavior _selectionBehavior;
+    
+    @override
+    void initState(){
+     _selectionBehavior = SelectionBehavior(
+            enable: true);
+        super.initState(); 
+    }
 
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData('USA', 6),
+            ChartData('China', 11),
+            ChartData('UK', 9),
+            ChartData('Japan', 14),
+            ChartData('France', 10),
+        ];
+
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
                         // Enables multiple selection
-                        enableMultiSelection: true
+                        enableMultiSelection: true,
+                        series: <ChartSeries<ChartData, String>>[
+                        ColumnSeries<ChartData, String>(
+                            dataSource: chartData,
+                            selectionBehavior: _selectionBehavior
+                            xValueMapper: (ChartData data, _) => data.x,
+                            yValueMapper: (ChartData data, _) => data.y),
+                        ]
                     )
                 )
             )
@@ -168,47 +242,50 @@ You can select a point or series programmatically on a chart using [`initialSele
     
     @override
     void initState(){
-    _selectionBehavior =  SelectionBehavior(
-         // Enables the selection
-         enable: true );
+     _selectionBehavior = SelectionBehavior(
+            enable: true);
         super.initState(); 
     }
 
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData('USA', 6, 8),
+            ChartData('China', 11, 7),
+            ChartData('UK', 9, 10),
+            ChartData('Japan', 14, 8),
+            ChartData('France', 10, 12),
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis: CategoryAxis(),
-                        series: <CartesianSeries>[
-                            ColumnSeries<ChartData, String>(
-                                // Initially selected the data at point index 1.
-                                initialSelectedDataIndexes: <int>[1],
-                                dataSource: chartData1,
-                                xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) => data.y,
-                                selectionBehavior: _selectionBehavior
-                            ),
-                            ColumnSeries<ChartData, String>(
-                                dataSource: chartData2,
-                                xValueMapper: (ChartData data, _) => data.x,
-                                yValueMapper: (ChartData data, _) => data.y,
-                                selectionBehavior: _selectionBehavior
-                            )
-                        ]
+                        // Mode of selection
+                        selectionType: SelectionType.cluster,
+                        series: <ChartSeries<ChartData, String>>[
+                        ColumnSeries<ChartData, String>(
+                            dataSource: chartData,
+                            initialSelectedDataIndexes: <int>[1],
+                            selectionBehavior: _selectionBehavior
+                            xValueMapper: (ChartData data, _) => data.x,
+                            yValueMapper: (ChartData data, _) => data.y),
+                        ColumnSeries<ChartData, String>(
+                            dataSource: chartData,
+                            selectionBehavior: _selectionBehavior
+                            xValueMapper: (ChartData data, _) => data.x,
+                            yValueMapper: (ChartData data, _) => data.y1),
+                        ],
                     )
                 )
             )
         );
     }
-
     class ChartData {
-        ChartData(this.x, this.y);
+        ChartData(this.x, this.y, this.y1);
         final String x;
-        final double? y;
-      }
-
+        final double y;
+        final double y1;
+    }
 {% endhighlight %}
 
 ![Initial selection](images/selection/initial_render_selection.jpg)
@@ -216,6 +293,7 @@ You can select a point or series programmatically on a chart using [`initialSele
 ## Toggle selection
 
 You can decide, whether to deselect the selected data point/series or remain selected when interacted with it again by setting the [`toggleSelection`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SelectionBehavior/toggleSelection.html) property `true` or `false`. If set to true, deselection will be performed else the point will not get deselected.
+
 This works even while calling public methods, in various selection modes, with multi-selection, and also on dynamic changes.
 Defaults to `true`.
 
@@ -234,6 +312,13 @@ Defaults to `true`.
 
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData('CHN', 52),
+            ChartData('USA', 69),
+            ChartData('IDN', 68),
+            ChartData('JAP', 61),
+            ChartData('BRA', 69),
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
@@ -261,4 +346,4 @@ Also refer [selection event](./events#onselectionchanged) for customizing the se
 
 * [Dynamically selecting the data points in a chart](https://www.syncfusion.com/kb/11811/how-to-select-the-data-points-dynamically-in-cartesian-charts-sfcartesianchart).
 
->**NOTE**:`chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.
+>**Note**: `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.

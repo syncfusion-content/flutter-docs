@@ -275,7 +275,7 @@ The [`labelFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/late
 
 Also refer [number format](./axis-types#formatting-the-labels) and [date format](./axis-types#formatting-the-labels-1) for formatting the labels further.
 
->**NOTE**:You must import [`intl`](https://pub.dev/packages/intl) package for formatting axis label using the [`NumberFormat`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html) class and  [`date Format`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
+>**Note**: You must import [`intl`](https://pub.dev/packages/intl) package for formatting axis label using the [`NumberFormat`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html) class and  [`date Format`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
 
 ### Label and tick positioning
 
@@ -957,26 +957,26 @@ By default, the chart is rendered with primary x axis and primary y axis. But, t
                             )
                         ],
                         series: <ChartSeries>[
-                            LineSeries<SalesData, String>(
+                            LineSeries<ChartData, String>(
                                 dataSource: [
-                                    SalesData('Jan', 35),
-                                    SalesData('Feb', 28),
-                                    SalesData('Mar', 34),
-                                    SalesData('Apr', 32),
-                                    SalesData('May', 40)
+                                    ChartData('Jan', 35),
+                                    ChartData('Feb', 28),
+                                    ChartData('Mar', 34),
+                                    ChartData('Apr', 32),
+                                    ChartData('May', 40)
                                 ],
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales
                             ),
-                            LineSeries<SalesData, String>(
+                            LineSeries<ChartData, String>(
                                 dataSource: [
-                                    SalesData('Jan', 15, 1),
-                                    SalesData('Feb', 11, 2),
-                                    SalesData('Mar', 14, 3),
-                                    SalesData('Apr', 12, 4),
+                                    ChartData('Jan', 15, 1),
+                                    ChartData('Feb', 11, 2),
+                                    ChartData('Mar', 14, 3),
+                                    ChartData('Apr', 12, 4),
                                 ],
-                                xValueMapper: (SalesData sales, _) => sales.numeric,
-                                yValueMapper: (SalesData sales, _) => sales.sales,
+                                xValueMapper: (ChartData sales, _) => sales.numeric,
+                                yValueMapper: (ChartData sales, _) => sales.sales,
                                 xAxisName: 'xAxis',
                                 yAxisName: 'yAxis'
                             )
@@ -987,8 +987,8 @@ By default, the chart is rendered with primary x axis and primary y axis. But, t
         );
     }
 
-    class SalesData {
-        SalesData(this.year, this.sales, [this.numeric]);
+    class ChartData {
+        ChartData(this.year, this.sales, [this.numeric]);
         final String year;
         final double? sales;
         final double? numeric;
@@ -1096,7 +1096,7 @@ By default, value axis range will be calculated automatically based on the visib
   
 To toggle this functionality, [`anchorRangeToVisiblePoints`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/anchorRangeToVisiblePoints.html) property can be used. i.e. on setting this property to false, the value axis range will be calculated based on all the data points in chart irrespective of visible points.
   
-N>: This is applicable only to the value axis and not for other axis and applicable only when zoom mode is set to x.
+>**Note**: This is applicable only to the value axis and not for other axis and applicable only when zoom mode is set to x.
   
 {% highlight dart %} 
 
@@ -1127,31 +1127,31 @@ The maximum width for axis labels and the space occupied by the axis labels can 
             primaryXAxis: CategoryAxis(
                 maximumLabelWidth: 80,
             ),
-            series: <ChartSeries<SalesData, String>>[
-                    BarSeries<SalesData, String>(
-                        dataSource: <SalesData>[
-                            SalesData('Goldin Finance 117', 597),
-                            SalesData('Ping An Finance Center', 599),
-                            SalesData('Makkah Clock Royal Tower', 601),
-                            SalesData('Shanghai Tower', 632),
-                            SalesData('Burj Khalifa', 828)],
-                        xValueMapper: (SalesData sales, _) => sales.year,
-                        yValueMapper: (SalesData sales, _) => sales.sales
+            series: <ChartSeries<ChartData, String>>[
+                    BarSeries<ChartData, String>(
+                        dataSource: <ChartData>[
+                            ChartData('Goldin Finance 117', 597),
+                            ChartData('Ping An Finance Center', 599),
+                            ChartData('Makkah Clock Royal Tower', 601),
+                            ChartData('Shanghai Tower', 632),
+                            ChartData('Burj Khalifa', 828)],
+                        xValueMapper: (ChartData sales, _) => sales.year,
+                        yValueMapper: (ChartData sales, _) => sales.sales
                     ),
             ]
           )
       );
     }
 
-    class SalesData {
-        SalesData(this.year, this.sales);
+    class ChartData {
+        ChartData(this.year, this.sales);
         final String year;
         final double sales;
     }
 
 {% endhighlight %}
 
-N>:  If both [`maximumLabelWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/maximumLabelWidth.html) and [`labelsExtent`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelsExtent.html) properties are specified, then the priority goes to [`labelsExtent`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelsExtent.html) property.
+>**Note**:  If both [`maximumLabelWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/maximumLabelWidth.html) and [`labelsExtent`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelsExtent.html) properties are specified, then the priority goes to [`labelsExtent`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/labelsExtent.html) property.
 
 ![Axis label trim](images/axis-customization/axis-label-trim.gif)
 
@@ -1778,7 +1778,7 @@ The different types of multi-level label's border are mentioned below,
 
 ![Multi-level labels](images/axis-customization/multi_level_label_border_customization.jpg)
 
-## See Also
+#### See Also
 
 * [Rendering a particular part of a data using visible minimum and visible maximum in the Cartesian chart](https://www.syncfusion.com/kb/11308/how-to-render-particular-part-of-a-data-in-cartesian-charts-sfcartesianchart).
 

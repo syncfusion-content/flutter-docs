@@ -32,25 +32,25 @@ To render a 100% stacked column chart, create an instance of [`StackedColumn100S
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
-                            StackedColumn100Series<SalesData, String>(
+                            StackedColumn100Series<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales
                             ),
-                            StackedColumn100Series<SalesData, String>(
+                            StackedColumn100Series<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales2
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales2
                             ),
-                            StackedColumn100Series<SalesData, String>(
+                            StackedColumn100Series<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales3
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales3
                             ),
-                            StackedColumn100Series<SalesData, String>(
+                            StackedColumn100Series<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales4
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales4
                             )
                         ]
                     )
@@ -79,17 +79,17 @@ The `width` property is used to change the width of the rectangle. The default v
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
-                            StackedColumn100Series<SalesData, String>(
+                            StackedColumn100Series<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales,
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales,
                                 width: 0.8, // Width of the columns
                                 spacing: 0.2 // Spacing between the columns
                             ),
-                            StackedColumn100Series<SalesData, String>(
+                            StackedColumn100Series<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales2,
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales2,
                                 width: 0.8, // Width of the columns
                                 spacing: 0.2 // Spacing between the columns
                             )
@@ -104,7 +104,7 @@ The `width` property is used to change the width of the rectangle. The default v
 
 ![Stacked 100 column width and spacing](cartesian-chart-types-images/stacked_column_100_size.png)
 
-## See Also
+#### See Also
 
 * [Color palette](./series-customization#color-palette) 
 * [Color mapping](./series-customization#color-mapping-for-data-points)

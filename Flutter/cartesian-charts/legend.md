@@ -299,21 +299,49 @@ The legend items can be placed in multiple rows or scroll can be enabled using t
 
     @override
     Widget build(BuildContext context) {
+      final List<ChartData> chartData = <ChartData>[
+      ChartData(2005, 11, 21, 31, 41, 51),
+      ChartData(2006, 13, 23, 33, 43, 53),
+      ChartData(2007, 29, 36, 49, 59, 69),
+      ChartData(2008, 28, 38, 48, 68, 78),
+      ChartData(2009, 35, 54, 64, 74, 84),
+      ChartData(2010, 37, 57, 67, 77, 87),
+      ChartData(2011, 50, 70, 80, 85, 90),
+    ];
       return Scaffold(
         body: Center(
           child: Container(
             child: SfCartesianChart(
-              primaryXAxis: DateTimeAxis(),
               legend: Legend(
                 isVisible: true,
                 // Overflowing legend content will be wraped
                 overflowMode: LegendItemOverflowMode.wrap
               ),
-              series: <CartesianSeries>[
-                LineSeries<ChartData, DateTime>(
+              series: <CartesianSeries<ChartData, int>>[
+                LineSeries<ChartData, int>(
                   dataSource: chartData,
                   xValueMapper: (ChartData data, _) => data.x,
-                  yValueMapper: (ChartData data, _) => data.y
+                  yValueMapper: (ChartData data, _) => data.series0
+                ),
+                LineSeries<ChartData, int>(
+                  dataSource: chartData,
+                  xValueMapper: (ChartData data, _) => data.x,
+                  yValueMapper: (ChartData data, _) => data.series1
+                ),
+                LineSeries<ChartData, int>(
+                  dataSource: chartData,
+                  xValueMapper: (ChartData data, _) => data.x,
+                  yValueMapper: (ChartData data, _) => data.series2
+                ),
+                LineSeries<ChartData, int>(
+                  dataSource: chartData,
+                  xValueMapper: (ChartData data, _) => data.x,
+                  yValueMapper: (ChartData data, _) => data.series3
+                ),
+                LineSeries<ChartData, int>(
+                  dataSource: chartData,
+                  xValueMapper: (ChartData data, _) => data.x,
+                  yValueMapper: (ChartData data, _) => data.series4
                 )
               ]
             )
@@ -323,10 +351,16 @@ The legend items can be placed in multiple rows or scroll can be enabled using t
     }
 
     class ChartData {
-        ChartData(this.x, this.y);
-        final DateTime x;
-        final double? y;
-      }
+      ChartData(this.x, this.series0, this.series1, this.series2, this.series3,
+      this.series4);
+      final int x;
+      final double series0;
+      final double series1;
+      final double series2;
+      final double series3;
+      final double series4;
+    }
+
 
 {% endhighlight %}
 
@@ -458,4 +492,4 @@ You can customize the appearance of legend items with your template by using [`l
 
 {% endhighlight %}
 
->**NOTE**:`chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.
+>**Note**: `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.

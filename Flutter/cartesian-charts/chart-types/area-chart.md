@@ -27,17 +27,23 @@ The following properties can be used to customize the appearance:
 
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData(2010, 35),
+            ChartData(2011, 28),
+            ChartData(2012, 34),
+            ChartData(2013, 32),
+            ChartData(2014, 40)
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders area chart
-                            AreaSeries<SalesData, DateTime>(
+                            AreaSeries<ChartData, int>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales
                             )
                         ]
                     )
@@ -45,12 +51,17 @@ The following properties can be used to customize the appearance:
             )
         );
     }
+    class ChartData {
+        ChartData(this.year, this.sales);
+        final int year;
+        final double sales;
+    }
 
 {% endhighlight %}
 
 ![Area chart](cartesian-chart-types-images/area.jpg)
 
-###	Border customization
+##	Border customization
 
 The borders of the area chart can be customized using the [`borderDrawMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AreaSeries/borderDrawMode.html) property. The default value of the [`borderDrawMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AreaSeries/borderDrawMode.html) property is [`BorderDrawMode.top`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BorderDrawMode.html). The other values are [`BorderDrawMode.all`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BorderDrawMode.html) and [`BorderDrawMode.excludeBottom`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BorderDrawMode.html).
 
@@ -64,14 +75,14 @@ The borders of the area chart can be customized using the [`borderDrawMode`](htt
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
-                            AreaSeries<SalesData, DateTime>(
+                            AreaSeries<ChartData, DateTime>(
                                 dataSource: chartData,
                                 color: Colors.deepOrange[300],
                                 borderMode: AreaBorderMode.excludeBottom,
                                 borderColor: Colors.green,
                                 borderWidth: 2,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales
                             )
                         ]
                     )
@@ -84,8 +95,6 @@ The borders of the area chart can be customized using the [`borderDrawMode`](htt
 
 ![Area border](cartesian-chart-types-images/area_border.jpg)
 
-Also refer, [color palette](./series-customization#color-palette), [color mapping](./series-customization#color-mapping-for-data-points), [animation](./series-customization#animation), [gradient](./series-customization#gradient-fill) and [empty points](./series-customization#empty-points) for customizing the area series further.
-
 ## Area with gradients
 
 The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/gradient.html) property is used to define the gradient colors. The colors from this property is used for series.
@@ -95,7 +104,29 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
 
     @override
     Widget build(BuildContext context) {
-         final List<Color> color = <Color>[];
+        final List<ChartData> chartData = [
+            ChartData(1924, 400),
+            ChartData(1925, 410),
+            ChartData(1926, 405),
+            ChartData(1927, 410),
+            ChartData(1928, 350),
+            ChartData(1929, 370),
+            ChartData(1930, 500),
+            ChartData(1931, 390),
+            ChartData(1932, 450),
+            ChartData(1933, 440),
+            ChartData(1934, 350),
+            ChartData(1935, 370),
+            ChartData(1936, 480),
+            ChartData(1937, 410),
+            ChartData(1938, 530),
+            ChartData(1939, 520),
+            ChartData(1940, 390),
+            ChartData(1941, 360),
+            ChartData(1942, 405),
+            ChartData(1943, 400),
+        ];
+        final List<Color> color = <Color>[];
         color.add(Colors.blue[50]!);
         color.add(Colors.blue[200]!);
         color.add(Colors.blue);
@@ -112,13 +143,13 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis: DateTimeAxis(),
+                        primaryYAxis: NumericAxis(labelFormat: '{value}mm')
                         series: <ChartSeries>[
                             // Renders area chart
-                            AreaSeries<SalesData, DateTime>(
+                            AreaSeries<ChartData, int>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales,
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales,
                                  gradient: gradientColors
                             )
                         ]
@@ -140,16 +171,39 @@ Data points with a null value are considered empty points. Empty data points are
 
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData(1924, 400),
+            ChartData(1925, 410),
+            ChartData(1926, 405),
+            ChartData(1927, 410),
+            ChartData(1928, 350),
+            ChartData(1929, 370),
+            ChartData(1930, 500),
+            ChartData(1931, 390),
+            ChartData(1932, null),
+            ChartData(1933, null),
+            ChartData(1934, null),
+            ChartData(1935, null),
+            ChartData(1936, null),
+            ChartData(1937, 410),
+            ChartData(1938, 530),
+            ChartData(1939, 520),
+            ChartData(1940, 390),
+            ChartData(1941, 360),
+            ChartData(1942, 405),
+            ChartData(1943, 400),
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
-                            AreaSeries<SalesData, DateTime>(
+                            AreaSeries<ChartData, DateTime>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales,emptyPointSettings:
+                                EmptyPointSettings(mode: EmptyPointMode.zero)
                             )
                         ]
                     )
@@ -179,10 +233,10 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
                         isTransposed: true,
                         primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
-                            AreaSeries<SalesData, DateTime>(
+                            AreaSeries<ChartData, DateTime>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales
                             )
                         ]
                     )
@@ -195,4 +249,12 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
 ![Vertical area chart](cartesian-chart-types-images/vertical_area.png)
 
-N> You can refer to our [Flutter Area Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/area-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Area Chart example](https://flutter.syncfusion.com/#/cartesian-charts/chart-types/area/default-area-chart) that shows how to easily configure with built-in support for creating stunning visual effects.
+#### See Also
+* [color palette](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#color-palette) 
+ * [color mapping](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#color-mapping-for-data-points)
+ * [animation](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#animation)
+ * [gradient](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#gradient-fill)
+ * [empty points](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#empty-points) 
+
+
+>**Note**: You can refer to our [Flutter Area Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/area-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Area Chart example](https://flutter.syncfusion.com/#/cartesian-charts/chart-types/area/default-area-chart) that shows how to easily configure with built-in support for creating stunning visual effects.

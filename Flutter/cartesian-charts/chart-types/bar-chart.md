@@ -31,10 +31,10 @@ To render a bar chart, create an instance of [`BarSeries`](https://pub.dev/docum
                     child: SfCartesianChart(
                         series: <ChartSeries>[
                             // Renders bar chart
-                            BarSeries<SalesData, double>(
+                            BarSeries<ChartData, double>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales
                             )
                         ]
                     )
@@ -62,10 +62,10 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
                 child: Container(
                     child: SfCartesianChart(
                         series: <ChartSeries>[
-                            BarSeries<SalesData, double>(
+                            BarSeries<ChartData, double>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales,
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales,
                                 width: 0.6, // Width of the bars
                                 spacing: 0.3 // Spacing between the bars
                             )
@@ -93,10 +93,10 @@ The [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
                 child: Container(
                     child: SfCartesianChart(
                         series: <ChartSeries>[
-                            BarSeries<SalesData, double>(
+                            BarSeries<ChartData, double>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales,
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales,
                                 borderRadius: BorderRadius.all(Radius.circular(15))
                             )
                         ]
@@ -128,12 +128,12 @@ You can render the bar chart with track. Track is a rectangular bar rendered fro
                 child: Container(
                     child: SfCartesianChart(
                         series: <ChartSeries>[
-                            BarSeries<SalesData, double>(
+                            BarSeries<ChartData, double>(
                                 dataSource: chartData,
                                 // Renders the track
                                 isTrackVisible: true,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales
                             )
                         ]
                     )
@@ -148,9 +148,9 @@ You can render the bar chart with track. Track is a rectangular bar rendered fro
 
 Also refer, [color palette](./series-customization#color-palette), [color mapping](./series-customization#color-mapping-for-data-points), [animation](./series-customization#animation), [gradient](./series-customization#gradient-fill) and [empty points](./series-customization#empty-points) for customizing the bar series further.
 
-N> You can refer to our [Flutter Bar Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/bar-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Bar Chart example](https://flutter.syncfusion.com/#/cartesian-charts/chart-types/bar/default-bar-chart) that shows how to easily configure with built-in support for creating stunning visual effects.
+>**Note**: You can refer to our [Flutter Bar Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/bar-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Flutter Bar Chart example](https://flutter.syncfusion.com/#/cartesian-charts/chart-types/bar/default-bar-chart) that shows how to easily configure with built-in support for creating stunning visual effects.
 
-### See Also
+#### See Also
 
 * [Create vertical bar chart](https://www.syncfusion.com/kb/12348/how-to-create-vertical-bar-chart-in-flutter-using-cartesian-charts-widget-sfcartesianchart)
 

@@ -32,7 +32,7 @@ Add the Syncfusion Flutter Chart dependency to your pub spec file.
 
 {% endhighlight %}
 
->**NOTE**:Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Charts`](https://pub.dev/packages/syncfusion_flutter_charts/versions) package.
+>**Note**: Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Charts`](https://pub.dev/packages/syncfusion_flutter_charts/versions) package.
 
 **Get packages**
 
@@ -58,7 +58,7 @@ Import the following package in your Dart code.
 
 Once the package has been imported, initialize the chart as a child of any widget. SfCartesianChart is used to render all kinds of charts which need to be plotted in Cartesian coordinates. Here, as we are plotting line chart, initialize SfCartesianChart widget as a child of Container widget.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="7" %} 
 
     @override
     Widget build(BuildContext context) {
@@ -92,17 +92,17 @@ Based on your data, initialize the appropriate axis type and series type. In the
                         primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
                             // Initialize line series
-                            LineSeries<SalesData, String>(
+                            LineSeries<ChartData, String>(
                                 dataSource: [
                                     // Bind data source
-                                    SalesData('Jan', 35),
-                                    SalesData('Feb', 28),
-                                    SalesData('Mar', 34),
-                                    SalesData('Apr', 32),
-                                    SalesData('May', 40)
+                                    ChartData('Jan', 35),
+                                    ChartData('Feb', 28),
+                                    ChartData('Mar', 34),
+                                    ChartData('Apr', 32),
+                                    ChartData('May', 40)
                                 ],
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales
                             )
                         ]
                     )
@@ -111,8 +111,8 @@ Based on your data, initialize the appropriate axis type and series type. In the
         );
     }
 
-    class SalesData {
-        SalesData(this.year, this.sales);
+    class ChartData {
+        ChartData(this.year, this.sales);
         final String year;
         final double? sales;
     }
@@ -139,17 +139,17 @@ You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/
                         primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
                             // Initialize line series
-                            LineSeries<SalesData, String>(
+                            LineSeries<ChartData, String>(
                             dataSource: [
                                 // Bind data source
-                                SalesData('Jan', 35),
-                                SalesData('Feb', 28),
-                                SalesData('Mar', 34),
-                                SalesData('Apr', 32),
-                                SalesData('May', 40)
+                                ChartData('Jan', 35),
+                                ChartData('Feb', 28),
+                                ChartData('Mar', 34),
+                                ChartData('Apr', 32),
+                                ChartData('May', 40)
                             ],
-                            xValueMapper: (SalesData sales, _) => sales.year,
-                            yValueMapper: (SalesData sales, _) => sales.sales)
+                            xValueMapper: (ChartData sales, _) => sales.year,
+                            yValueMapper: (ChartData sales, _) => sales.sales)
                         ]
                     )
                 )
@@ -157,8 +157,8 @@ You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/
         );
     }
 
-    class SalesData {
-        SalesData(this.year, this.sales);
+    class ChartData {
+        ChartData(this.year, this.sales);
         final String year;
         final double? sales;
     }
@@ -184,17 +184,17 @@ You can add data labels to improve the readability of the chart using the [`data
                         primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
                             // Initialize line series
-                            LineSeries<SalesData, String>(
+                            LineSeries<ChartData, String>(
                                 dataSource: [
                                     // Bind data source
-                                    SalesData('Jan', 35),
-                                    SalesData('Feb', 28),
-                                    SalesData('Mar', 34),
-                                    SalesData('Apr', 32),
-                                    SalesData('May', 40)
+                                    ChartData('Jan', 35),
+                                    ChartData('Feb', 28),
+                                    ChartData('Mar', 34),
+                                    ChartData('Apr', 32),
+                                    ChartData('May', 40)
                                 ],
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales,
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales,
                                 // Render the data label
                                 dataLabelSettings:DataLabelSettings(isVisible : true)
                             )
@@ -205,8 +205,8 @@ You can add data labels to improve the readability of the chart using the [`data
         );
     }
 
-    class SalesData {
-        SalesData(this.year, this.sales);
+    class ChartData {
+        ChartData(this.year, this.sales);
         final String year;
         final double? sales;
     }
@@ -237,17 +237,17 @@ Additionally, the [`series.name`](https://pub.dev/documentation/syncfusion_flutt
                         primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
                             // Initialize line series
-                            LineSeries<SalesData, String>(
+                            LineSeries<ChartData, String>(
                                 dataSource: [
                                     // Bind data source
-                                    SalesData('Jan', 35),
-                                    SalesData('Feb', 28),
-                                    SalesData('Mar', 34),
-                                    SalesData('Apr', 32),
-                                    SalesData('May', 40)
+                                    ChartData('Jan', 35),
+                                    ChartData('Feb', 28),
+                                    ChartData('Mar', 34),
+                                    ChartData('Apr', 32),
+                                    ChartData('May', 40)
                                 ],
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales,
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales,
                             )
                         ]
                     )
@@ -256,8 +256,8 @@ Additionally, the [`series.name`](https://pub.dev/documentation/syncfusion_flutt
         );
     }
 
-    class SalesData {
-        SalesData(this.year, this.sales);
+    class ChartData {
+        ChartData(this.year, this.sales);
         final String year;
         final double? sales;
     }
@@ -297,19 +297,19 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
                         primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
                             // Initialize line series
-                            LineSeries<SalesData, String>(
+                            LineSeries<ChartData, String>(
                                 // Enables the tooltip for individual series
                                 enableTooltip: true, 
                                 dataSource: [
                                     // Bind data source
-                                    SalesData('Jan', 35),
-                                    SalesData('Feb', 28),
-                                    SalesData('Mar', 34),
-                                    SalesData('Apr', 32),
-                                    SalesData('May', 40)
+                                    ChartData('Jan', 35),
+                                    ChartData('Feb', 28),
+                                    ChartData('Mar', 34),
+                                    ChartData('Apr', 32),
+                                    ChartData('May', 40)
                                 ],
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales
                             )
                         ]
                     )
@@ -318,8 +318,8 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
         );
     }
 
-     class SalesData {
-        SalesData(this.year, this.sales);
+     class ChartData {
+        ChartData(this.year, this.sales);
         final String year;
         final double? sales;
     }
@@ -330,8 +330,8 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
 You can find the complete getting started example from this [`link`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/cartesian_chart_example1086100980).
 
->**NOTE**:You can refer to our [`Flutter Charts`](https://www.syncfusion.com/flutter-widgets/flutter-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Flutter Charts example`](https://flutter.syncfusion.com/#/cartesian-charts/chart-types/line/default-line-chart) that shows how to render various chart types as well as how to easily configure with built-in support for creating stunning visual effects.
+>**Note**: You can refer to our [`Flutter Charts`](https://www.syncfusion.com/flutter-widgets/flutter-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Flutter Charts example`](https://flutter.syncfusion.com/#/cartesian-charts/chart-types/line/default-line-chart) that shows how to render various chart types as well as how to easily configure with built-in support for creating stunning visual effects.
 
-## See Also
+#### See Also
 
 * [Integrate Syncfusion Flutter charts in Flutter web Application](https://www.syncfusion.com/kb/11551/how-to-integrate-syncfusion-charts-in-flutter-web-application-sfcartesianchart).

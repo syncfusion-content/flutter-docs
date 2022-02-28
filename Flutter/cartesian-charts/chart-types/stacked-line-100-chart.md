@@ -30,25 +30,25 @@ To render a 100% stacked line chart, create an instance of [`StackedLine100Serie
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
-                            StackedLine100Series<SalesData, String>(
+                            StackedLine100Series<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales
                             ),
-                            StackedLine100Series<SalesData, String>(
+                            StackedLine100Series<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales2
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales2
                             ),
-                            StackedLine100Series<SalesData, String>(
+                            StackedLine100Series<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales3
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales3
                             ),
-                            StackedLine100Series<SalesData, String>(
+                            StackedLine100Series<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales4
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales4
                             )
                         ]
                     )
@@ -75,29 +75,29 @@ The `dashArray` property of `StackedLine100Series` is used to render line series
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
                         series: <ChartSeries>[
-                            StackedLine100Series<SalesData, String>(
+                            StackedLine100Series<ChartData, String>(
                                 dataSource: chartData,
                                 dashArray: <double>[5,5],
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales
                             ),
-                            StackedLine100Series<SalesData, String>(
+                            StackedLine100Series<ChartData, String>(
                                 dataSource: chartData,
                                 dashArray: <double>[5,5],
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales2
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales2
                             ),
-                            StackedLine100Series<SalesData, String>(
+                            StackedLine100Series<ChartData, String>(
                                 dataSource: chartData,
                                 dashArray: <double>[5,5],
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales3
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales3
                             ),
-                            StackedLine100Series<SalesData, String>(
+                            StackedLine100Series<ChartData, String>(
                                 dataSource: chartData,
                                 dashArray: <double>[5,5],
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales4
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales4
                             )
                         ]
                     )
@@ -110,7 +110,7 @@ The `dashArray` property of `StackedLine100Series` is used to render line series
 
 ![Dashed line chart](cartesian-chart-types-images/stacked_line_100_dashes.png)
 
-## See Also
+#### See Also
 
 * [Color palette](./series-customization#color-palette) 
 * [Color mapping](./series-customization#color-mapping-for-data-points)

@@ -29,12 +29,12 @@ To render a Box and Whisker chart, create an instance of [`BoxAndWhiskerSeries`]
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        series: <ChartSeries<SalesData, double>>[
-                           BoxAndWhiskerSeries<SalesData, double>(
+                        series: <ChartSeries<ChartData, double>>[
+                           BoxAndWhiskerSeries<ChartData, double>(
                                 dataSource: data,
                                 boxPlotMode: BoxPlotMode.exclusive,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.number
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.number
                             )
                         ]
                     )
@@ -47,9 +47,9 @@ To render a Box and Whisker chart, create an instance of [`BoxAndWhiskerSeries`]
 
 ![box and whisker chart](cartesian-chart-types-images/box_and_whisker.png)
 
-## See Also
+#### See Also
 
-* [Color palette](./series-customization#color-palette) 
+* [Color palette](../cartesian-charts/series-customization#color-palette) 
 * [Color mapping](./series-customization#color-mapping-for-data-points)
 * [Animation](./series-customization#animation)
 * [Gradient](./series-customization#gradient-fill)

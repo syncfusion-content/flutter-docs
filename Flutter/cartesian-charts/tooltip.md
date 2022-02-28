@@ -119,6 +119,7 @@ By default, x and y value will be displayed in the tooltip, and it can be custom
 * Y value - `point.y`
 * Bubble size - `point.size`
 * Name of the series - `series.name`
+* Stores the cumulative value - `point.cumualtive `
 
 {% highlight dart %}     
 
@@ -150,7 +151,7 @@ By default, x and y value will be displayed in the tooltip, and it can be custom
 
 ## Tooltip positioning
 
-The tooltip can be made to display in the fixed location or at the pointer location itself using the [`tooltipPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/tooltipPosition.html) property. This defaults to [`TooltipPosition .auto`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipPosition.html).
+The tooltip can be made to display in the fixed location or at the pointer location itself using the [`tooltipPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipBehavior/tooltipPosition.html) property. This defaults to [`TooltipPosition.auto`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TooltipPosition.html).
 
 {% highlight dart %} 
 

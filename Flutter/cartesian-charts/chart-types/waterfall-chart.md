@@ -67,7 +67,7 @@ To render a waterfall chart, create an instance of [`WaterfallSeries`](https://p
     }
 
     class ChartData {
-        ChartData([this.x, this.y, this.isIntermediate, this.isTotal]);
+        ChartData(this.x, this.y, [this.isIntermediate, this.isTotal]);
         final double? x;
         final num? y;
         final bool? isIntermediate;
@@ -78,7 +78,7 @@ To render a waterfall chart, create an instance of [`WaterfallSeries`](https://p
 
 ![waterfall_chart](cartesian-chart-types-images/waterfall_series.png)
 
-## See Also
+#### See Also
 
 * [Color palette](./series-customization#color-palette) 
 * [Color mapping](./series-customization#color-mapping-for-data-points)

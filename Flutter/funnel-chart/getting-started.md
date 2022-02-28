@@ -32,7 +32,7 @@ Add the Syncfusion [Flutter Chart](https://www.syncfusion.com/flutter-widgets/fl
 
 {% endhighlight %}
 
->**NOTE**: Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Charts`](https://pub.dev/packages/syncfusion_flutter_charts/versions) package.
+>**Note**: Here **xx.x.xx** denotes the current version of [`Syncfusion Flutter Charts`](https://pub.dev/packages/syncfusion_flutter_charts/versions) package.
 
 **Get packages**
 
@@ -58,7 +58,7 @@ Import the following package in your Dart code.
 
 Once the package has been imported, initialize the chart as a child of any widget. SfFunnelChart can be used to render Funnel charts. Here, as we are rendering Funnel chart, initialize SfFunnelChart widget as a child of Container widget.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="7" %} 
 
     @override
     Widget build(BuildContext context) {
@@ -74,7 +74,7 @@ Once the package has been imported, initialize the chart as a child of any widge
 
 {% endhighlight %}
 
->**NOTE**: An empty chart will be displayed. This is the charts default behavior. 
+>**Note**: An empty chart will be displayed. This is the charts default behavior. 
 
 ## Bind data source
 
@@ -252,4 +252,4 @@ You can find the complete getting started sample from this [`link`](https://www.
 
 
 
->**NOTE**: You can also explore our [Flutter Charts example](https://flutter.syncfusion.com/#/cartesian-charts/chart-types/line/default-line-chart) that shows how to render various chart types as well as how to easily configure with built-in support for creating stunning visual effects.
+>**Note**: You can also explore our [Flutter Charts example](https://flutter.syncfusion.com/#/cartesian-charts/chart-types/line/default-line-chart) that shows how to render various chart types as well as how to easily configure with built-in support for creating stunning visual effects.

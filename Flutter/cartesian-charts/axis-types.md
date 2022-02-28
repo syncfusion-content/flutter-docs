@@ -27,19 +27,31 @@ Numeric axis uses numerical scale and displays numbers as labels. By default, [`
 
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData(1, 235, 240),
+            ChartData(2, 242, 250),
+            ChartData(3, 320, 280),
+            ChartData(4, 360, 355),
+            ChartData(5, 270, 245)
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: NumericAxis(), 
                         primaryYAxis: NumericAxis(),
-                        series: <ChartSeries<SalesData, double>>[
+                        series: <ChartSeries<ChartData, double>>[
                             // Renders column chart
-                            ColumnSeries<SalesData, double>(
+                            ColumnSeries<ChartData, double>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
-                            )
+                                xValueMapper: (ChartData sales, _) => sales.x,
+                                yValueMapper: (ChartData sales, _) => sales.y
+                            ),
+                            ColumnSeries<ChartData, double>(
+                                dataSource: chartData,
+                                xValueMapper: (ChartData sales, _) => sales.x,
+                                yValueMapper: (ChartData sales, _) => sales.y1
+                            ),
                         ]
                     )
                 )
@@ -47,10 +59,11 @@ Numeric axis uses numerical scale and displays numbers as labels. By default, [`
         );
     }
 
-    class SalesData{
-        SalesData(this.year, this.sales);
-        final double year;
-        final double sales;
+    class ChartData{
+        ChartData(this.x, this.y, this.y1);
+        final double x;
+        final double y;
+        final double y1;
     }
 
 {% endhighlight %}
@@ -65,16 +78,39 @@ By using the [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_cha
 
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = <ChartData>[
+            ChartData(2010, 10.53),
+            ChartData(2011, 9.5),
+            ChartData(2012, 10),
+            ChartData(2013, 9.4),
+            ChartData(2014, 5.8),
+            ChartData(2015, 4.9),
+            ChartData(2016, 4.5),
+            ChartData(2017, 3.6),
+            ChartData(2018, 3.43),
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: NumericAxis(isInversed: true), 
-                        primaryYAxis: NumericAxis(isInversed: true) 
+                        primaryYAxis: NumericAxis(isInversed: true),
+                        series: <ChartSeries<ChartData, int>>[
+                        LineSeries<ChartData, int>(
+                            dataSource: chartData,
+                            markerSettings: MarkerSettings(isVisible: true),
+                            xValueMapper: (ChartData data, _) => data.x,
+                            yValueMapper: (ChartData data, _) => data.y),
+                        ],
                     )
                 )
             )
         );
+    }
+    class ChartData{
+        ChartData(this.x, this.y);
+        final double x;
+        final double y;
     }
 
 {% endhighlight %}
@@ -89,6 +125,13 @@ To customize the range of an axis, use the [`minimum`](https://pub.dev/documenta
 
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData(1, 24),
+            ChartData(2, 25),
+            ChartData(3, 28),
+            ChartData(4, 35),
+            ChartData(5, 23)
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
@@ -96,7 +139,13 @@ To customize the range of an axis, use the [`minimum`](https://pub.dev/documenta
                         primaryYAxis: NumericAxis(
                             minimum: 10,
                             maximum: 50
-                        )  
+                        ),
+                        series: <ChartSeries<ChartData, int>>[
+                        ColumnSeries<ChartData, int>(
+                            dataSource: chartData,
+                            xValueMapper: (ChartData data, _) => data.x,
+                            yValueMapper: (ChartData data, _) => data.y),
+                        ], 
                     )
                 )
             )
@@ -122,7 +171,13 @@ Axis interval can be customized using the [`interval`](https://pub.dev/documenta
                         primaryYAxis: NumericAxis(
                             // axis interval is set to 10
                             interval: 10
-                        ) 
+                        ),
+                        series: <ChartSeries<ChartData, int>>[
+                        ColumnSeries<ChartData, int>(
+                            dataSource: chartData,
+                            xValueMapper: (ChartData data, _) => data.x,
+                            yValueMapper: (ChartData data, _) => data.y),
+                        ], 
                     )
                 )
             )
@@ -158,7 +213,13 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
                         primaryYAxis: NumericAxis(
                             // Additional range padding is applied to y axis
                             rangePadding: ChartRangePadding.additional
-                        )  
+                        ),
+                        series: <ChartSeries<ChartData, int>>[
+                        ColumnSeries<ChartData, int>(
+                            dataSource: chartData,
+                            xValueMapper: (ChartData data, _) => data.x,
+                            yValueMapper: (ChartData data, _) => data.y),
+                        ],   
                     )
                 )
             )
@@ -183,7 +244,13 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
                     child: SfCartesianChart(
                         primaryYAxis: NumericAxis(
                             rangePadding: ChartRangePadding.auto
-                        )  
+                        ),
+                        series: <ChartSeries<ChartData, int>>[
+                        ColumnSeries<ChartData, int>(
+                            dataSource: chartData,
+                            xValueMapper: (ChartData data, _) => data.x,
+                            yValueMapper: (ChartData data, _) => data.y),
+                        ],   
                     )
                 )
             )
@@ -208,7 +275,13 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
                     child: SfCartesianChart(
                         primaryYAxis: NumericAxis(
                             rangePadding: ChartRangePadding.none
-                        )  
+                        ),
+                        series: <ChartSeries<ChartData, int>>[
+                        ColumnSeries<ChartData, int>(
+                            dataSource: chartData,
+                            xValueMapper: (ChartData data, _) => data.x,
+                            yValueMapper: (ChartData data, _) => data.y),
+                        ],   
                     )
                 )
             )
@@ -231,7 +304,13 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
                     child: SfCartesianChart(
                         primaryYAxis: NumericAxis(
                             rangePadding: ChartRangePadding.normal
-                        )   
+                        ),
+                        series: <ChartSeries<ChartData, int>>[
+                        ColumnSeries<ChartData, int>(
+                            dataSource: chartData,
+                            xValueMapper: (ChartData data, _) => data.x,
+                            yValueMapper: (ChartData data, _) => data.y),
+                        ],    
                     )
                 )
             )
@@ -256,7 +335,13 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
                     child: SfCartesianChart(
                         primaryYAxis: NumericAxis(
                             rangePadding: ChartRangePadding.round
-                        )  
+                        ),
+                        series: <ChartSeries<ChartData, int>>[
+                        ColumnSeries<ChartData, int>(
+                            dataSource: chartData,
+                            xValueMapper: (ChartData data, _) => data.x,
+                            yValueMapper: (ChartData data, _) => data.y),
+                        ],   
                     )
                 )
             )
@@ -282,7 +367,13 @@ The [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
                         primaryYAxis: NumericAxis(
                             // Y axis labels will be rendered with currency format
                             numberFormat: NumberFormat.simpleCurrency()
-                        )
+                        ),
+                        series: <ChartSeries<ChartData, int>>[
+                        ColumnSeries<ChartData, int>(
+                            dataSource: chartData,
+                            xValueMapper: (ChartData data, _) => data.x,
+                            yValueMapper: (ChartData data, _) => data.y),
+                        ], 
                     )
                 )
             )
@@ -296,7 +387,7 @@ The [`numberFormat`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 Also refer [label format](./axis-customization#formatting-axis-label-content) and [date format](#formatting-the-labels-1) for formatting the labels 
 further.
 
->**NOTE**:You must import [`intl`](https://pub.dev/packages/intl) package for formatting labels using the [`NumberFormat`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html) class and  [`date Format`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
+>**Note**: You must import [`intl`](https://pub.dev/packages/intl) package for formatting labels using the [`NumberFormat`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html) class and  [`date Format`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
 
 
 ### Decimal places
@@ -307,6 +398,17 @@ The [`decimalPlaces`](https://pub.dev/documentation/syncfusion_flutter_charts/la
 
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = <ChartData>[
+            ChartData(1.45143, 10.53333),
+            ChartData(2.45143, 9.55445),
+            ChartData(3.45143, 10.26587),
+            ChartData(4.45143, 11.42762),
+            ChartData(5.45143, 5.817699),
+            ChartData(6.45143, 7.917744),
+            ChartData(7.45143, 4.52734),
+            ChartData(8.45143, 3.615545),
+            ChartData(9.45143, 1.4327671),
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
@@ -317,7 +419,14 @@ The [`decimalPlaces`](https://pub.dev/documentation/syncfusion_flutter_charts/la
                         primaryYAxis: NumericAxis(
                             decimalPlaces: 4,
                             rangPadding: ChartRangePadding.none
-                        )
+                        ),
+                        series: <ChartSeries<ChartData, double>>[
+                            LineSeries<ChartData, double>(
+                                dataSource: chartData,
+                                markerSettings: MarkerSettings(isVisible: true),
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y),
+                        ],
                     )
                 )
             )
@@ -328,7 +437,7 @@ The [`decimalPlaces`](https://pub.dev/documentation/syncfusion_flutter_charts/la
 
 ![Decimal Places](images/axis-types/numeric_decimalplaces.jpg)
 
-N>
+>**Note**:
 * In order to control the decimal places of the y-axis labels, you need to use [`decimalPlaces`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/decimalPlaces.html) property of the axis along with setting the [`rangePadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxis/rangePadding.html) to [`ChartRangePadding.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartRangePadding.html).
 * For x-axis labels, setting the [`decimalPlaces`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/NumericAxis/decimalPlaces.html) alone is enough.
 
@@ -340,17 +449,24 @@ Category axis displays text labels instead of numbers. When the string values ar
 
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData('John', 10),
+            ChartData('Parker', 11),
+            ChartData('David', 9),
+            ChartData('Peter', 10),
+            ChartData('Brit', 10)
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: CategoryAxis(),
-                        series: <ChartSeries<SalesData, String>>[
+                        series: <ChartSeries<ChartData, String>>[
                             // Renders column chart
-                            ColumnSeries<SalesData, String>(
+                            ColumnSeries<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales
                             )
                         ]
                     )
@@ -359,8 +475,8 @@ Category axis displays text labels instead of numbers. When the string values ar
         );
     }
 
-    class SalesData{
-        SalesData(this.year, this.sales);
+    class ChartData{
+        ChartData(this.year, this.sales);
         final String year;
         final double sales;
     }
@@ -483,17 +599,24 @@ The date-time axis uses date-time scale and displays date-time values as axis la
 
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData(DateTime(2015, 1), 6),
+            ChartData(DateTime(2016, 1), 11),
+            ChartData(DateTime(2017, 1), 9),
+            ChartData(DateTime(2018, 1), 14),
+            ChartData(DateTime(2019, 1), 10),
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeAxis(),
-                         series: <ChartSeries<SalesData, DateTime>>[
+                         series: <ChartSeries<ChartData, DateTime>>[
                             // Renders line chart
-                            LineSeries<SalesData, DateTime>(
+                            LineSeries<ChartData, DateTime>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales
                             )
                         ]
                     )
@@ -502,8 +625,8 @@ The date-time axis uses date-time scale and displays date-time values as axis la
         );
     }
 
-    class SalesData{
-        SalesData(this.year, this.sales);
+    class ChartData{
+        ChartData(this.year, this.sales);
         final DateTime year;
         final double sales;
     }
@@ -525,9 +648,15 @@ To customize the range of an axis, use the [`minimum`](https://pub.dev/documenta
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeAxis(
-                            minimum: DateTime(2010),
-                            maximum: DateTime(2020)
-                        )
+                            minimum: DateTime(2014, 1),
+                            maximum: DateTime(2020, 1),
+                        ),
+                        series: <ChartSeries<ChartData, DateTime>>[
+                        LineSeries<ChartData, DateTime>(
+                            dataSource: chartData,
+                            xValueMapper: (ChartData data, _) => data.x,
+                            yValueMapper: (ChartData data, _) => data.y),
+                        ],
                     )
                 )
             )
@@ -565,7 +694,13 @@ The Flutter Chart supports the following types of interval for date-time axis:
                             // Interval type will be months
                             intervalType: DateTimeIntervalType.months,
                             interval: 2
-                        )
+                        ),
+                        series: <ChartSeries<ChartData, DateTime>>[
+                        LineSeries<ChartData, DateTime>(
+                            dataSource: chartData,
+                            xValueMapper: (ChartData data, _) => data.x,
+                            yValueMapper: (ChartData data, _) => data.y),
+                        ],
                     )
                 )
             )
@@ -591,6 +726,13 @@ For example, if you are rendering a series with months in x-axis with an interva
 
      @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData(DateTime(2015, 5, 1), 35),
+            ChartData(DateTime(2015, 5, 31), 31),
+            ChartData(DateTime(2015, 6, 30), 34),
+            ChartData(DateTime(2015, 7, 30), 32),
+            ChartData(DateTime(2015, 8, 30), 38),
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
@@ -598,7 +740,13 @@ For example, if you are rendering a series with months in x-axis with an interva
                         primaryXAxis: DateTimeAxis(
                              interval: 0.5,
                         )
-                        primaryXAxis: NumericAxis()
+                        primaryXAxis: NumericAxis(),
+                        series: <ChartSeries<ChartData, DateTime>>[
+                        SplineSeries<ChartData, DateTime>(
+                            dataSource: chartData,
+                            xValueMapper: (ChartData data, _) => data.x,
+                            yValueMapper: (ChartData data, _) => data.y),
+                        ],
                     )
                 )
             )
@@ -626,13 +774,26 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
 
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData(DateTime(2015, 1), 6),
+            ChartData(DateTime(2015, 2), 11),
+            ChartData(DateTime(2015, 3), 9),
+            ChartData(DateTime(2015, 4), 14),
+            ChartData(DateTime(2015, 5), 10),
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeAxis(
                             rangePadding: ChartRangePadding.none
-                        )
+                        ),
+                        series: <ChartSeries<ChartData, DateTime>>[
+                        LineSeries<ChartData, DateTime>(
+                            dataSource: chartData,
+                            xValueMapper: (ChartData data, _) => data.x,
+                            yValueMapper: (ChartData data, _) => data.y),
+                        ],
                     )
                 )
             )
@@ -666,7 +827,7 @@ When the value of [`rangePadding`](https://pub.dev/documentation/syncfusion_flut
 
 {% endhighlight %}
 
-![RangePadding round](images/axis-types/datetime_rangePadding_round.jpg)
+![RangePadding round](images/axis-types/datetime_rangePadding_round.png)
 
 **additional**
 
@@ -746,7 +907,7 @@ The [`date formats`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
 Also refer [label format](./axis-customization#formatting-axis-label-content) and [number format](#formatting-the-labels) for formatting the labels further.
 
->**NOTE**:You must import [`intl`](https://pub.dev/packages/intl) package for formatting labels using the [`NumberFormat`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html) class and  [`date Format`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
+>**Note**: You must import [`intl`](https://pub.dev/packages/intl) package for formatting labels using the [`NumberFormat`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html) class and  [`date Format`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
 
 ## Date-time category axis
 
@@ -756,17 +917,24 @@ Date-time category axis is a combination of both [`DateTimeAxis`](https://pub.de
 
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData(DateTime(2015, 2, 1), 21),
+            ChartData(DateTime(2015, 2, 2), 34),
+            ChartData(DateTime(2015, 3, 5), 30),
+            ChartData(DateTime(2015, 10, 3), 42),
+            ChartData(DateTime(2015, 12, 8), 35),
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
                         primaryXAxis: DateTimeCategoryAxis(),
-                        series: <ChartSeries<SalesData, DateTime>>[
+                        series: <ChartSeries<ChartData, DateTime>>[
                             // Renders Column chart
-                            ColumnSeries<SalesData, DateTime>(
+                            ColumnSeries<ChartData, DateTime>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData sales, _) => sales.year,
+                                yValueMapper: (ChartData sales, _) => sales.sales
                             )
                         ] 
                     )
@@ -775,8 +943,8 @@ Date-time category axis is a combination of both [`DateTimeAxis`](https://pub.de
         );
     }
 
-    class SalesData{
-        SalesData(this.year, this.sales);
+    class ChartData{
+        ChartData(this.year, this.sales);
         final DateTime year;
         final double sales;
     }
@@ -793,6 +961,14 @@ To customize the range of an axis, use the [`minimum`](https://pub.dev/documenta
 
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData(DateTime(2015, 2, 3), 21),
+            ChartData(DateTime(2015, 2, 4), 34),
+            ChartData(DateTime(2015, 2, 5), 30),
+            ChartData(DateTime(2015, 2, 8), 42),
+            ChartData(DateTime(2015, 2, 9), 35),
+            ChartData(DateTime(2015, 2, 9), 49),
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
@@ -877,7 +1053,7 @@ The [`date formats`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
 Also refer [label format](./axis-customization#formatting-axis-label-content) and [number format](#formatting-the-labels) for formatting the labels further.
 
->**NOTE**:You must import [`intl`](https://pub.dev/packages/intl) package for formatting labels using the [`NumberFormat`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html) class and [`date formats`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
+>**Note**: You must import [`intl`](https://pub.dev/packages/intl) package for formatting labels using the [`NumberFormat`](https://pub.dev/documentation/intl/latest/intl/NumberFormat-class.html) class and [`date formats`](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) class.
 
 ## Logarithmic axis
 
@@ -893,12 +1069,12 @@ Logarithmic axis uses logarithmic scale and displays numbers as axis labels.
                     child: SfCartesianChart(
                         primaryXAxis: NumericAxis(),
                         primaryYAxis: LogarithmicAxis(),
-                        series: <ChartSeries<SalesData, double>>[
+                        series: <ChartSeries<ChartData, double>>[
                             // Renders Column chart
-                            ColumnSeries<SalesData, double>(
+                            ColumnSeries<ChartData, double>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData sales, _) => sales.number,
+                                yValueMapper: (ChartData sales, _) => sales.sales
                             )
                         ] 
                     )
@@ -907,9 +1083,9 @@ Logarithmic axis uses logarithmic scale and displays numbers as axis labels.
         );
     }
 
-    class SalesData{
-        SalesData(this.year, this.sales);
-        final double year;
+    class ChartData{
+        ChartData(this.number, this.sales);
+        final double number;
         final double sales;
     }
 
@@ -1018,8 +1194,8 @@ By using the [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_cha
 
 ![Inversed logarithmic axis](images/axis-types/inversed-logarithmic.png) 
 
-## See Also
+#### See Also
 
 * [Applying currency format to axis labels](https://www.syncfusion.com/kb/11519/how-to-apply-the-currency-format-to-the-axis-labels-sfcartesianchart).
 
->**NOTE**:`` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.
+>**Note**: `ChartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.

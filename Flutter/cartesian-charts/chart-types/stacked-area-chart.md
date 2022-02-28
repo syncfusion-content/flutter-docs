@@ -171,7 +171,7 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
 
 ![Stacked area cumulative](cartesian-chart-types-images/stacked_area_cumulative.jpg)
 
-## See Also
+#### See Also
 
 * [Color palette](./series-customization#color-palette) 
 * [Color mapping](./series-customization#color-mapping-for-data-points)

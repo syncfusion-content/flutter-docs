@@ -33,32 +33,7 @@ To render a OpenHighLowClose chart, create an instance of [` hiloOpenCloseSeries
 
 
 {% highlight dart %} 
-    
-    @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCartesianChart(
-                        primaryXAxis: DateTimeAxis(),
-                        series: <ChartSeries>[
-                            // Renders hiloOpenCloseSeries 
-                            hiloOpenCloseSeries<SalesData, DateTime>(
-                                dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                lowValueMapper: (Sample sales, _) => sales.low,
-                                highValueMapper: (Sample sales, _) => sales.high, 
-                                openValueMapper: (Sample sales, _) => sales.open,
-                                closeValueMapper: (Sample sales, _) => sales.close,
-
-                            )
-                        ]
-                    )
-                )   
-            )
-        );
-    }
-
+{% include_relative code-snippet/ohlc.cs %}
 {% endhighlight %}
 
 ![hiLoopenclose chart](cartesian-chart-types-images/hilo_open_close.png)
@@ -118,7 +93,7 @@ The following are the types of indication when the combination of high, low, ope
 
 ![OHLC Indication](cartesian-chart-types-images/hilo_open_close_indication.jpg)
 
-## See Also
+#### See Also
 
 * [Color palette](./series-customization#color-palette) 
 * [Color mapping](./series-customization#color-mapping-for-data-points)
