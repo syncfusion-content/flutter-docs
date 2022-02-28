@@ -41,23 +41,23 @@ To render a stacked column chart, create an instance of [`StackedColumnSeries`](
                         series: <ChartSeries>[
                             StackedColumnSeries<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y1
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y1
                             ),
                             StackedColumnSeries<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y2
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y2
                             ),
                              StackedColumnSeries<ChartData,String>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y3
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y3
                             ),
                             StackedColumnSeries<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y4
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y4
                             )
                         ]
                     )
@@ -96,26 +96,26 @@ You can group and stack the similar stacked series types using the [`groupName`]
                             StackedColumnSeries<ChartData, String>(
                                 groupName: 'Group A',
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y1
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y1
                             ),
                             StackedColumnSeries<ChartData, String>(
                                 groupName: 'Group B',
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y2
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y2
                             ),
                             StackedColumnSeries<ChartData, String>(
                                 groupName: 'Group A',
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y3
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y3
                             ),
                             StackedColumnSeries<ChartData, String>(
                                 groupName: 'Group B',
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y4
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y4
                             )
                         ]
                     )
@@ -155,29 +155,29 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
                                 groupName: 'Group A',
                                 dataLabelSettings: DataLabelSettings(isVisible:true, showCumulativeValues: true),
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y1
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y1
                             ),
                             StackedColumnSeries<ChartData, String>(
                                 groupName: 'Group B',
                                 dataLabelSettings: DataLabelSettings(isVisible:true, showCumulativeValues: true),
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y2
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y2
                             ),
                             StackedColumnSeries<ChartData, String>(
                                 groupName: 'Group A',
                                 dataLabelSettings: DataLabelSettings(isVisible:true, showCumulativeValues: true),
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y3
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y3
                             ),
                             StackedColumnSeries<ChartData, String>(
                                 groupName: 'Group B',
                                 dataLabelSettings: DataLabelSettings(isVisible:true, showCumulativeValues: true),
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y4
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y4
                             )
                         ]
                     )
@@ -199,7 +199,7 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
 
 ![Stacked column cumulative](cartesian-chart-types-images/stacked_column_cumulative.jpg)
 
-## See Also
+#### See Also
 
 * [Color palette](./series-customization#color-palette) 
 * [Color mapping](./series-customization#color-mapping-for-data-points)

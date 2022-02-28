@@ -28,8 +28,8 @@ To render a step line chart, create an instance of [`StepLineSeries`](https://pu
                             // Renders step line chart
                             StepLineSeries<ChartData, DateTime>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             )
                         ]
                     )
@@ -60,8 +60,8 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
                                 dataSource: chartData,
                                 // Dashes for step line
                                 dashArray: <double>[5, 5],
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             )
                         ]
                     )
