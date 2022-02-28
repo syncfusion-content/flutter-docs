@@ -279,8 +279,8 @@ You can add multiple annotations to the Chart by adding multiple widgets to the 
                                         ChartData('Japan', 14),
                                         ChartData('France', 10)
                                       ],
-                            xValueMapper: (ChartData sales, _) => sales.year,
-                            yValueMapper: (ChartData sales, _) => sales.sales)
+                            xValueMapper: (ChartData data, _) => data.x,
+                            yValueMapper: (ChartData data, _) => data.y)
                           ]
                         )
                       )
@@ -291,9 +291,9 @@ You can add multiple annotations to the Chart by adding multiple widgets to the 
             }
 
             class ChartData {
-              ChartData(this.year, this.sales);
-              final String year;
-              final double sales;
+              ChartData(this.x, this.y);
+              final String x;
+              final double y;
             }
 
 {% endhighlight %}
@@ -414,8 +414,8 @@ Chart supports watermark which allows you to mark the specific area of interest 
                     ChartData('jun', 54),
                     ChartData('jul', 70),
                     ],
-                    xValueMapper: (ChartData sales, _) => sales.year,
-                    yValueMapper: (ChartData sales, _) => sales.sales),
+                    xValueMapper: (ChartData data, _) => data.x,
+                    yValueMapper: (ChartData data, _) => data.y),
                   ],
                 )
               )
@@ -426,9 +426,9 @@ Chart supports watermark which allows you to mark the specific area of interest 
     }
 
     class ChartData {
-      ChartData(this.year, this.sales);
-      final String year;
-      final double sales;
+      ChartData(this.x, this.y);
+      final String x;
+      final double y;
     }
 
 {% endhighlight %}

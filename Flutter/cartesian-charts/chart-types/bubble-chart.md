@@ -39,9 +39,9 @@ Bubble chart requires three fields (X, Y, and Size) to plot a point. Here, [`siz
                             // Renders bubble chart
                             BubbleSeries<ChartData, DateTime>(
                                 dataSource: chartData,
-                                sizeValueMapper: (ChartData sales, _) => sales.size,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y
+                                sizeValueMapper: (ChartData data, _) => data.size,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             )
                         ]
                     )
@@ -77,11 +77,11 @@ The [`minimumRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/la
                         series: <ChartSeries>[
                             BubbleSeries<ChartData, DateTime>(
                                 dataSource: chartData,
-                                sizeValueMapper: (ChartData sales, _) => sales.size,
+                                sizeValueMapper: (ChartData data, _) => data.size,
                                 minimumRadius:9, // Minimum radius of bubble
                                 maximumRadius: 15, // Maximum radius of bubble
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             )
                         ]
                     )
@@ -112,10 +112,10 @@ Using the [`pointColorMapper`](https://pub.dev/documentation/syncfusion_flutter_
                         series: <ChartSeries>[
                             BubbleSeries<ChartData, String>(
                                 dataSource: chartData,
-                                sizeValueMapper: (ChartData sales, _) => sales.size,
-                                pointColorMapper:(ChartData sales, _) => sales.pointColor,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y
+                                sizeValueMapper: (ChartData data, _) => data.size,
+                                pointColorMapper:(ChartData data, _) => data.pointColor,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             )
                         ]
                     )
@@ -157,9 +157,9 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
                         series: <CartesianSeries>[
                             BubbleSeries<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y,
-                                 sizeValueMapper:(ChartData sales, _) => sales.size,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
+                                 sizeValueMapper:(ChartData data, _) => data.size,
                                 // Applies gradient color
                                 gradient: gradientColors
                             )
@@ -189,24 +189,24 @@ Using the [`datasource`](https://pub.dev/documentation/syncfusion_flutter_charts
                         series: <ChartSeries>[
                             BubbleSeries<ChartData, num>(
                                   dataSource: northAmerica,
-                                  xValueMapper: (ChartData sales, _) => sales.xValue,
-                                  yValueMapper: (ChartData sales, _) => sales.y,
-                                  sizeValueMapper: (ChartData sales, _) => sales.size),
+                                  xValueMapper: (ChartData data, _) => data.xValue,
+                                  yValueMapper: (ChartData data, _) => data.y,
+                                  sizeValueMapper: (ChartData data, _) => data.size),
                             BubbleSeries<ChartData, num>(
                                   dataSource: europe,
-                                  xValueMapper: (ChartData sales, _) => sales.xValue,
-                                  yValueMapper: (ChartData sales, _) => sales.y,
-                                  sizeValueMapper:(ChartData sales, _) => sales.size),
+                                  xValueMapper: (ChartData data, _) => data.xValue,
+                                  yValueMapper: (ChartData data, _) => data.y,
+                                  sizeValueMapper:(ChartData data, _) => data.size),
                             BubbleSeries<ChartData, num>(
                                   dataSource: asia,
-                                  xValueMapper: (ChartData sales, _) => sales.xValue,
-                                  yValueMapper: (ChartData sales, _) => sales.y,
-                                  sizeValueMapper: (ChartData sales, _) => sales.size),
+                                  xValueMapper: (ChartData data, _) => data.xValue,
+                                  yValueMapper: (ChartData data, _) => data.y,
+                                  sizeValueMapper: (ChartData data, _) => data.size),
                             BubbleSeries<ChartData, num>(
                                   dataSource: africa,
-                                  xValueMapper: (ChartData sales, _) => sales.xValue,
-                                  yValueMapper: (ChartData sales, _) => sales.y,
-                                  sizeValueMapper: (ChartData sales, _) => sales.size),
+                                  xValueMapper: (ChartData data, _) => data.xValue,
+                                  yValueMapper: (ChartData data, _) => data.y,
+                                  sizeValueMapper: (ChartData data, _) => data.size),
                         ]
                     )
                 )   

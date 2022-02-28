@@ -33,9 +33,9 @@ Since the [`RangeAreaSeries`](https://pub.dev/documentation/syncfusion_flutter_c
                         series: <ChartSeries>[
                             RangeAreaSeries<ChartData, DateTime>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                lowValueMapper: (ChartData sales, _) => sales.low,
-                                highValueMapper: (ChartData sales, _) => sales.high,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                lowValueMapper: (ChartData data, _) => data.low,
+                                highValueMapper: (ChartData data, _) => data.high,
                             )
                         ]
                     )
@@ -75,8 +75,8 @@ The borders of the range area chart can be customized using the [`borderDrawMode
                                 borderDrawMode: RangeAreaBorderMode.excludeSides,
                                 borderColor: Colors.green,
                                 borderWidth: 2,
-                                xValueMapper: (ChartData sales, _) => sales.year,
-                                yValueMapper: (ChartData sales, _) => sales.sales
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             )
                         ]
                     )

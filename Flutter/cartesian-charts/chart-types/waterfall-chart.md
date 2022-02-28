@@ -52,11 +52,11 @@ To render a waterfall chart, create an instance of [`WaterfallSeries`](https://p
                   intermediateSumColor: const Color.fromRGBO(79, 129, 188, 1),
                   totalSumColor: const Color.fromRGBO(79, 129, 188, 1),
                   color: const Color.fromRGBO(0, 189, 174, 1),
-                  xValueMapper: (ChartData sales, _) => sales.x,
-                  yValueMapper: (ChartData sales, _) => sales.y,
-                  intermediateSumPredicate: (ChartData sales, _) =>
-                      sales.isIntermediate,
-                  totalSumPredicate: (ChartData sales, _) => sales.isTotal,
+                  xValueMapper: (ChartData data, _) => data.x,
+                  yValueMapper: (ChartData data, _) => data.y,
+                  intermediateSumPredicate: (ChartData data, _) =>
+                      data.isIntermediate,
+                  totalSumPredicate: (ChartData data, _) => data.isTotal,
                   connectorLineSettings:
                       WaterfallConnectorLineSettings(width: 2.5))
                            ]

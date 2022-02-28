@@ -32,23 +32,23 @@ To render a 100% stacked line chart, create an instance of [`StackedLine100Serie
                         series: <ChartSeries>[
                             StackedLine100Series<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.year,
-                                yValueMapper: (ChartData sales, _) => sales.sales
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             ),
                             StackedLine100Series<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.year,
-                                yValueMapper: (ChartData sales, _) => sales.sales2
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y2
                             ),
                             StackedLine100Series<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.year,
-                                yValueMapper: (ChartData sales, _) => sales.sales3
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y3
                             ),
                             StackedLine100Series<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.year,
-                                yValueMapper: (ChartData sales, _) => sales.sales4
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y4
                             )
                         ]
                     )
@@ -78,26 +78,26 @@ The `dashArray` property of `StackedLine100Series` is used to render line series
                             StackedLine100Series<ChartData, String>(
                                 dataSource: chartData,
                                 dashArray: <double>[5,5],
-                                xValueMapper: (ChartData sales, _) => sales.year,
-                                yValueMapper: (ChartData sales, _) => sales.sales
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             ),
                             StackedLine100Series<ChartData, String>(
                                 dataSource: chartData,
                                 dashArray: <double>[5,5],
-                                xValueMapper: (ChartData sales, _) => sales.year,
-                                yValueMapper: (ChartData sales, _) => sales.sales2
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y2
                             ),
                             StackedLine100Series<ChartData, String>(
                                 dataSource: chartData,
                                 dashArray: <double>[5,5],
-                                xValueMapper: (ChartData sales, _) => sales.year,
-                                yValueMapper: (ChartData sales, _) => sales.sales3
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y3
                             ),
                             StackedLine100Series<ChartData, String>(
                                 dataSource: chartData,
                                 dashArray: <double>[5,5],
-                                xValueMapper: (ChartData sales, _) => sales.year,
-                                yValueMapper: (ChartData sales, _) => sales.sales4
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y4
                             )
                         ]
                     )

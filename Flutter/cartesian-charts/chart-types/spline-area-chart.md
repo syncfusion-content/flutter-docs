@@ -36,13 +36,13 @@ To render a spline area chart, create an instance of [`SplineAreaSeries`](https:
                         series: <ChartSeries>[
                             SplineAreaSeries<ChartData, int>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             ),
                             SplineAreaSeries<ChartData, int>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y1
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y1
                             ),
                         ]
                     )
@@ -97,8 +97,8 @@ The following code sample demonstrates how to set the `splineType` value to `car
                                 dataSource: chartData,
                                 splineType: SplineType.cardinal,
                                 cardinalSplineTension: 0.9,
-                                xValueMapper: (ChartData sales, _) => sales.year,
-                                yValueMapper: (ChartData sales, _) => sales.sales
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             )
                         ]
                     )
@@ -138,8 +138,8 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
                             SplineAreaSeries<ChartData, int>(
                                 dataSource: chartData,
                                 dashArray: <double>[5, 5],
-                                xValueMapper: (ChartData sales, _) => sales.year,
-                                yValueMapper: (ChartData sales, _) => sales.sales
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             )
                         ]
                     )

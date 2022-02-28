@@ -40,8 +40,8 @@ To render a line chart, create an instance of [`LineSeries`](https://pub.dev/doc
                             // Renders line chart
                             LineSeries<ChartData, int>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.year,
-                                yValueMapper: (ChartData sales, _) => sales.sales
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             )
                         ]
                     )
@@ -51,9 +51,9 @@ To render a line chart, create an instance of [`LineSeries`](https://pub.dev/doc
     }
 
     class ChartData {
-        ChartData(this.year, this.sales);
-        final int year;
-        final double sales;
+        ChartData(this.x, this.y);
+        final int x;
+        final double y;
     }
 
 {% endhighlight %}
@@ -84,8 +84,8 @@ The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
                                 dataSource: chartData,
                                 // Dash values for line
                                 dashArray: <double>[5, 5],
-                                xValueMapper: (ChartData sales, _) => sales.year,
-                                yValueMapper: (ChartData sales, _) => sales.sales)
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y)
                         ]
                     )
                 )
@@ -125,9 +125,9 @@ To render a multi-colored line series, map the individual colors to the data usi
                                     ChartData('May', 40, Colors.black)
                                 ],
                                 // Bind the color for all the data points from the data source
-                                pointColorMapper:(ChartData sales, _) => sales.color,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y
+                                pointColorMapper:(ChartData data, _) => data.color,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             )
                         ]
                     )

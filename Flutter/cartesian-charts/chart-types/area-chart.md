@@ -42,8 +42,8 @@ The following properties can be used to customize the appearance:
                             // Renders area chart
                             AreaSeries<ChartData, int>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.year,
-                                yValueMapper: (ChartData sales, _) => sales.sales
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             )
                         ]
                     )
@@ -52,9 +52,9 @@ The following properties can be used to customize the appearance:
         );
     }
     class ChartData {
-        ChartData(this.year, this.sales);
-        final int year;
-        final double sales;
+        ChartData(this.x, this.y);
+        final int x;
+        final double y;
     }
 
 {% endhighlight %}
@@ -81,8 +81,8 @@ The borders of the area chart can be customized using the [`borderDrawMode`](htt
                                 borderMode: AreaBorderMode.excludeBottom,
                                 borderColor: Colors.green,
                                 borderWidth: 2,
-                                xValueMapper: (ChartData sales, _) => sales.year,
-                                yValueMapper: (ChartData sales, _) => sales.sales
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             )
                         ]
                     )
@@ -148,8 +148,8 @@ The [`gradient`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/
                             // Renders area chart
                             AreaSeries<ChartData, int>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.year,
-                                yValueMapper: (ChartData sales, _) => sales.sales,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
                                  gradient: gradientColors
                             )
                         ]
@@ -201,8 +201,8 @@ Data points with a null value are considered empty points. Empty data points are
                         series: <ChartSeries>[
                             AreaSeries<ChartData, DateTime>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.year,
-                                yValueMapper: (ChartData sales, _) => sales.sales,emptyPointSettings:
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,emptyPointSettings:
                                 EmptyPointSettings(mode: EmptyPointMode.zero)
                             )
                         ]
@@ -235,8 +235,8 @@ The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
                         series: <ChartSeries>[
                             AreaSeries<ChartData, DateTime>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.year,
-                                yValueMapper: (ChartData sales, _) => sales.sales
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             )
                         ]
                     )

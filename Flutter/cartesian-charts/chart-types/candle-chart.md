@@ -34,6 +34,7 @@ To render a Candle chart, create an instance of [` CandleSeries`](https://pub.de
 
 
 {% highlight dart %} 
+{% include relative code-snippet/data.dart %}
     
     @override
     Widget build(BuildContext context) {
@@ -45,12 +46,12 @@ To render a Candle chart, create an instance of [` CandleSeries`](https://pub.de
                         series: <ChartSeries>[
                             // Renders CandleSeries
                             CandleSeries<ChartData, DateTime>(
-                                dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.year,
-                                lowValueMapper: (ChartData sales, _) => sales.low,
-                                highValueMapper: (ChartData sales, _) => sales.high, 
-                                openValueMapper: (ChartData sales, _) => sales.open,
-                          closeValueMapper: (ChartData sales, _) => sales.close,
+                                dataSource: financialData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                lowValueMapper: (ChartData data, _) => data.low,
+                                highValueMapper: (ChartData data, _) => data.high, 
+                                openValueMapper: (ChartData data, _) => data.open,
+                          closeValueMapper: (ChartData data, _) => data.close,
 
                             )
                         ]

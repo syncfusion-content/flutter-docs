@@ -872,8 +872,8 @@ Triggers when tapping on the data label of the data point in the series. The [`o
               series: <ChartSeries<Sample, DateTime>>[
                   LineSeries<Sample, DateTime>(
                     dataSource: chartData,
-                    xValueMapper: (Sample sales, _) => sales.x,
-                    yValueMapper: (Sample sales, _) => sales.y,
+                    xValueMapper: (Sample data, _) => data.x,
+                    yValueMapper: (Sample data, _) => data.y,
                     dataLabelSettings: DataLabelSettings(
                         isVisible: true),
                   )

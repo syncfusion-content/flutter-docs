@@ -35,8 +35,8 @@ To render a column chart, create an instance of [`ColumnSeries`](https://pub.dev
                             // Renders column chart
                             ColumnSeries<ChartData, int>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.year,
-                                yValueMapper: (ChartData sales, _) => sales.sales
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             )
                         ]
                     )
@@ -79,15 +79,15 @@ By default, all the column series that have the same x and y-axes are placed sid
                         series: <ChartSeries<ChartData, int>>[
                             ColumnSeries<ChartData, int>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             ),
                             ColumnSeries<ChartData, DateTime>(
                                 opacity: 0.9,
                                 width: 0.4,
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y1
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y1
                             )
                         ]
                     )
@@ -130,8 +130,8 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
                         series: <ChartSeries<ChartData, int>>[
                             ColumnSeries<ChartData, int>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.year,
-                                yValueMapper: (ChartData sales, _) => sales.sales,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
                                 width: 0.8, // Width of the columns
                                 spacing: 0.2 // Spacing between the columns
                             )
@@ -168,8 +168,8 @@ The [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
                         series: <ChartSeries<ChartData, int>>[
                             ColumnSeries<ChartData, int>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.x,
-                                yValueMapper: (ChartData sales, _) => sales.y,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
                                 // Sets the corner radius
                                 borderRadius: BorderRadius.all(Radius.circular(15))
                             )
@@ -219,8 +219,8 @@ Renders column with track. Track is a rectangular bar rendered from the start to
                                 dataSource: chartData,
                                 // Renders the track
                                 isTrackVisible: true,
-                                xValueMapper: (ChartData sales, _) => sales.year,
-                                yValueMapper: (ChartData sales, _) => sales.sales
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             )
                         ]
                     )

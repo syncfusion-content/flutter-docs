@@ -33,8 +33,8 @@ To render a bar chart, create an instance of [`BarSeries`](https://pub.dev/docum
                             // Renders bar chart
                             BarSeries<ChartData, double>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.year,
-                                yValueMapper: (ChartData sales, _) => sales.sales
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             )
                         ]
                     )
@@ -64,8 +64,8 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
                         series: <ChartSeries>[
                             BarSeries<ChartData, double>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.year,
-                                yValueMapper: (ChartData sales, _) => sales.sales,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
                                 width: 0.6, // Width of the bars
                                 spacing: 0.3 // Spacing between the bars
                             )
@@ -95,8 +95,8 @@ The [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
                         series: <ChartSeries>[
                             BarSeries<ChartData, double>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData sales, _) => sales.year,
-                                yValueMapper: (ChartData sales, _) => sales.sales,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
                                 borderRadius: BorderRadius.all(Radius.circular(15))
                             )
                         ]
@@ -132,8 +132,8 @@ You can render the bar chart with track. Track is a rectangular bar rendered fro
                                 dataSource: chartData,
                                 // Renders the track
                                 isTrackVisible: true,
-                                xValueMapper: (ChartData sales, _) => sales.year,
-                                yValueMapper: (ChartData sales, _) => sales.sales
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             )
                         ]
                     )

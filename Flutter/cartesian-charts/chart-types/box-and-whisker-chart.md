@@ -33,8 +33,8 @@ To render a Box and Whisker chart, create an instance of [`BoxAndWhiskerSeries`]
                            BoxAndWhiskerSeries<ChartData, double>(
                                 dataSource: data,
                                 boxPlotMode: BoxPlotMode.exclusive,
-                                xValueMapper: (ChartData sales, _) => sales.year,
-                                yValueMapper: (ChartData sales, _) => sales.number
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             )
                         ]
                     )
