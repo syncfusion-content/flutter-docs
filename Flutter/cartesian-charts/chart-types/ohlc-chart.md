@@ -33,6 +33,7 @@ To render a OpenHighLowClose chart, create an instance of [` hiloOpenCloseSeries
 
 
 {% highlight dart %} 
+{% include relative code-snippet/data.dart %}
     
     @override
     Widget build(BuildContext context) {
@@ -43,13 +44,13 @@ To render a OpenHighLowClose chart, create an instance of [` hiloOpenCloseSeries
                         primaryXAxis: DateTimeAxis(),
                         series: <ChartSeries>[
                             // Renders hiloOpenCloseSeries 
-                            hiloOpenCloseSeries<SalesData, DateTime>(
-                                dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                lowValueMapper: (Sample sales, _) => sales.low,
-                                highValueMapper: (Sample sales, _) => sales.high, 
-                                openValueMapper: (Sample sales, _) => sales.open,
-                                closeValueMapper: (Sample sales, _) => sales.close,
+                            hiloOpenCloseSeries<ChartData, DateTime>(
+                                dataSource: financialData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                lowValueMapper: (Sample data, _) => data.low,
+                                highValueMapper: (Sample data, _) => data.high, 
+                                openValueMapper: (Sample data, _) => data.open,
+                                closeValueMapper: (Sample data, _) => data.close,
 
                             )
                         ]
@@ -57,8 +58,8 @@ To render a OpenHighLowClose chart, create an instance of [` hiloOpenCloseSeries
                 )   
             )
         );
-    }
-
+    } 
+    
 {% endhighlight %}
 
 ![hiLoopenclose chart](cartesian-chart-types-images/hilo_open_close.png)
@@ -118,7 +119,7 @@ The following are the types of indication when the combination of high, low, ope
 
 ![OHLC Indication](cartesian-chart-types-images/hilo_open_close_indication.jpg)
 
-## See Also
+#### See Also
 
 * [Color palette](./series-customization#color-palette) 
 * [Color mapping](./series-customization#color-mapping-for-data-points)
