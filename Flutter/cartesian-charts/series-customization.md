@@ -78,8 +78,8 @@ If you wish to perform the initial rendering animation again in the existing ser
                     _chartSeriesController1 = controller;
                 },
                 dataSource: chartData,
-                xValueMapper: (_ChartSampleData sales, _) => sales.x,
-                yValueMapper: (_ChartSampleData sales, _) => sales.y,
+                xValueMapper: (_ChartSampleData data, _) => data.x,
+                yValueMapper: (_ChartSampleData data, _) => data.y,
                 name: 'Unit Sold'),
             LineSeries<_ChartSampleData, String>(
                 animationDuration: 4500,
@@ -87,9 +87,9 @@ If you wish to perform the initial rendering animation again in the existing ser
                 onRendererCreated: (ChartSeriesController controller) {
                     _chartSeriesController2 = controller;
                 },
-                xValueMapper: (_ChartSampleData sales, _) => sales.x,
-                yValueMapper: (_ChartSampleData sales, _) =>
-                    sales.secondSeriesYValue,
+                xValueMapper: (_ChartSampleData data, _) => data.x,
+                yValueMapper: (_ChartSampleData data, _) =>
+                    data.secondSeriesYValue,
                 yAxisName: 'yAxis1',
                 markerSettings: MarkerSettings(isVisible: true),
                 name: 'Total Transaction')
@@ -172,15 +172,15 @@ Defaults to `0` for all the series except [`ErrorBarSeries`](https://pub.dev/doc
                   ColumnSeries<ChartData, String>(
                     animationDuration: 2000,
                     dataSource: chartData,
-                    xValueMapper: (ChartData data, _) => sales.x,
-                    yValueMapper: (ChartData data, _) => sales.yValue1,
+                    xValueMapper: (ChartData data, _) => data.x,
+                    yValueMapper: (ChartData data, _) => data.yValue1,
                     name: 'Unit Sold'),
                  LineSeries<ChartData, String>(
                     animationDuration: 4500,
                     animationDelay: 2000,
                     dataSource: chartData,
-                    xValueMapper: (ChartData data, _) => sales.x,
-                    yValueMapper: (ChartData data, _) => sales.yValue2,
+                    xValueMapper: (ChartData data, _) => data.x,
+                    yValueMapper: (ChartData data, _) => data.yValue2,
                     yAxisName: 'yAxis1',
                     markerSettings: MarkerSettings(isVisible: true),
                     name: 'Total Transaction')

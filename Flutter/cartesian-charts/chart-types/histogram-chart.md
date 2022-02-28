@@ -142,7 +142,7 @@ You can collapse the normal distribution curve using the [`showNormalDistributio
                 showNormalDistributionCurve: true,
                 curveColor: const Color.fromRGBO(192, 108, 132, 1),
                 binInterval: 20,
-                yValueMapper: (ChartData data, _) => sales.y)]))));
+                yValueMapper: (ChartData data, _) => data.y)]))));
         }
     }
 

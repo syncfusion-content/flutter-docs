@@ -33,9 +33,9 @@ Since the [`RangeAreaSeries`](https://pub.dev/documentation/syncfusion_flutter_c
                         series: <ChartSeries>[
                             RangeAreaSeries<ChartData, DateTime>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData data, _) => sales.x,
-                                lowValueMapper: (ChartData data, _) => sales.low,
-                                highValueMapper: (ChartData data, _) => sales.high,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                lowValueMapper: (ChartData data, _) => data.low,
+                                highValueMapper: (ChartData data, _) => data.high,
                             )
                         ]
                     )

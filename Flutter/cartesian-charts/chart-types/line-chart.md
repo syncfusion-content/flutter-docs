@@ -125,9 +125,9 @@ To render a multi-colored line series, map the individual colors to the data usi
                                     ChartData('May', 40, Colors.black)
                                 ],
                                 // Bind the color for all the data points from the data source
-                                pointColorMapper:(ChartData data, _) => sales.color,
-                                xValueMapper: (ChartData data, _) => sales.x,
-                                yValueMapper: (ChartData data, _) => sales.y
+                                pointColorMapper:(ChartData data, _) => data.color,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             )
                         ]
                     )

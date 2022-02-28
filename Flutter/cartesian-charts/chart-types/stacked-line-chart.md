@@ -33,23 +33,23 @@ To render a stacked line chart, create an instance of [`StackedLineSeries`](http
                         series: <ChartSeries>[
                             StackedLineSeries<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData data, _) => sales.x,
-                                yValueMapper: (ChartData data, _) => sales.y1
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y1
                             ),
                             StackedLineSeries<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData data, _) => sales.x,
-                                yValueMapper: (ChartData data, _) => sales.y2
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y2
                             ),
                              StackedLineSeries<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData data, _) => sales.x,
-                                yValueMapper: (ChartData data, _) => sales.y3
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y3
                             ),
                             StackedLineSeries<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData data, _) => sales.x,
-                                yValueMapper: (ChartData data, _) => sales.y4
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y4
                             )
                         ]
                     )
@@ -83,8 +83,8 @@ You can group and stack the similar stacked series types using the [`groupName`]
                                     useSeriesColor: true
                                 ),
                                 dataSource: chartData,
-                                xValueMapper: (ChartData data, _) => sales.x,
-                                yValueMapper: (ChartData data, _) => sales.y1
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y1
                             ),
                             StackedLineSeries<ChartData, String>(
                                 groupName: 'Group B',
@@ -93,8 +93,8 @@ You can group and stack the similar stacked series types using the [`groupName`]
                                     useSeriesColor: true
                                 ),
                                 dataSource: chartData,
-                                xValueMapper: (ChartData data, _) => sales.x,
-                                yValueMapper: (ChartData data, _) => sales.y2
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y2
                             ),
                             StackedLineSeries<ChartData, String>(
                                 groupName: 'Group A',
@@ -103,8 +103,8 @@ You can group and stack the similar stacked series types using the [`groupName`]
                                     useSeriesColor: true
                                 ),
                                 dataSource: chartData,
-                                xValueMapper: (ChartData data, _) => sales.x,
-                                yValueMapper: (ChartData data, _) => sales.y3
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y3
                             ),
                         ]
                     )
@@ -139,8 +139,8 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
                                     useSeriesColor: true
                                 ),
                                 dataSource: chartData,
-                                xValueMapper: (ChartData data, _) => sales.x,
-                                yValueMapper: (ChartData data, _) => sales.y1
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y1
                             ),
                             StackedLineSeries<ChartData, String>(
                                 groupName: 'Group B',
@@ -150,8 +150,8 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
                                     useSeriesColor: true
                                 ),
                                 dataSource: chartData,
-                                xValueMapper: (ChartData data, _) => sales.x,
-                                yValueMapper: (ChartData data, _) => sales.y2
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y2
                             ),
                             StackedLineSeries<ChartData, String>(
                                 groupName: 'Group A',
@@ -161,8 +161,8 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
                                     useSeriesColor: true
                                 ),
                                 dataSource: chartData,
-                                xValueMapper: (ChartData data, _) => sales.x,
-                                yValueMapper: (ChartData data, _) => sales.y3
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y3
                             ),
                         ]
                     )

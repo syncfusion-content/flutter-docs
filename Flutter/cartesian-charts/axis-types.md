@@ -1073,7 +1073,7 @@ Logarithmic axis uses logarithmic scale and displays numbers as axis labels.
                             // Renders Column chart
                             ColumnSeries<ChartData, double>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData data, _) => data.number,
+                                xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y
                             )
                         ] 
@@ -1184,7 +1184,7 @@ By using the [`isInversed`](https://pub.dev/documentation/syncfusion_flutter_cha
     }
 
     class ChartData {
-       ChartData(this.x, this.androiddata, this.iphonedata);
+       ChartData(this.x, this.y, this.z);
        final String x;
        final int y;
        final int z;

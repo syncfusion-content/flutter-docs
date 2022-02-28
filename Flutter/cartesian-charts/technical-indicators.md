@@ -65,11 +65,11 @@ Refer the following example,
             series: <ChartSeries<ChartData, DateTime>>[
               HiloOpenCloseSeries<ChartData, DateTime>(
               dataSource: ChartData,
-              xValueMapper: (ChartData data, _) => sales.x,
-              lowValueMapper: (ChartData data, _) => sales.low,
-              highValueMapper: (ChartData data, _) => sales.high,
-              openValueMapper: (ChartData data, _) => sales.open,
-              closeValueMapper: (ChartData data, _) => sales.close,
+              xValueMapper: (ChartData data, _) => data.x,
+              lowValueMapper: (ChartData data, _) => data.low,
+              highValueMapper: (ChartData data, _) => data.high,
+              openValueMapper: (ChartData data, _) => data.open,
+              closeValueMapper: (ChartData data, _) => data.close,
               name: 'HiloOpenClose'),
               ]
             )
@@ -577,19 +577,19 @@ Refer the following example below
             MomentumIndicator<ChartData, num>(
                 period: 5,
                 dataSource: chartData,
-                xValueMapper: (ChartData data, _) => sales.x,
-                highValueMapper: (ChartData data, _) => sales.high,
-                lowValueMapper: (ChartData data, _) => sales.low,
-                openValueMapper: (ChartData data, _) => sales.open,
-                closeValueMapper: (ChartData data, _) => sales.close,
+                xValueMapper: (ChartData data, _) => data.x,
+                highValueMapper: (ChartData data, _) => data.high,
+                lowValueMapper: (ChartData data, _) => data.low,
+                openValueMapper: (ChartData data, _) => data.open,
+                closeValueMapper: (ChartData data, _) => data.close,
               )
             ], 
             series: <ChartSeries<ChartData, num>>[
               LineSeries<ChartData, num>(
                   color: Colors.purple,
                   dataSource: chartData,
-                  xValueMapper: (ChartData1 sales, _) => sales.x,
-                  yValueMapper: (ChartData1 sales, _) => sales.y,
+                  xValueMapper: (ChartData1 data, _) => data.x,
+                  yValueMapper: (ChartData1 data, _) => data.y,
               )
             ]
           )

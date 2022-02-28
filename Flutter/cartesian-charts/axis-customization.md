@@ -975,7 +975,7 @@ By default, the chart is rendered with primary x axis and primary y axis. But, t
                                     ChartData('Mar', 14, 3),
                                     ChartData('Apr', 12, 4),
                                 ],
-                                xValueMapper: (ChartData data, _) => sales.numeric,
+                                xValueMapper: (ChartData data, _) => data.y1,
                                 yValueMapper: (ChartData data, _) => data.y,
                                 xAxisName: 'xAxis',
                                 yAxisName: 'yAxis'
@@ -988,10 +988,10 @@ By default, the chart is rendered with primary x axis and primary y axis. But, t
     }
 
     class ChartData {
-        ChartData(this.x, this.y, [this.numeric]);
+        ChartData(this.x, this.y, this.numeric);
         final String x;
         final double? y;
-        final double? numeric;
+        final double? y1;
     }
 
 {% endhighlight %}
@@ -1255,9 +1255,9 @@ Here you need to specify the [`minimum`](https://pub.dev/documentation/syncfusio
               series: <SplineSeries<ChartSampleData, DateTime>>[
                 SplineSeries<ChartSampleData, DateTime>(
                   dataSource: splineSeriesData,
-                  xValueMapper: (ChartSampleData sales, _) =>
-                      sales.x as DateTime,
-                  yValueMapper: (ChartSampleData sales, _) => sales.y,
+                  xValueMapper: (ChartSampleData data, _) =>
+                      data.x as DateTime,
+                  yValueMapper: (ChartSampleData data, _) => data.y,
                   //  Add required properties.
                 )
               ],

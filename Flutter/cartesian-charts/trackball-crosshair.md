@@ -64,8 +64,8 @@ You can use the following properties to customize the appearance of trackball to
                 series: <LineSeries<ChartData, String>>[
                       LineSeries<ChartData, String>(
                           dataSource: ChartData,
-                          xValueMapper: (ChartData data, _) => sales.x,
-                          yValueMapper: (ChartData data, _) => sales.y),
+                          xValueMapper: (ChartData data, _) => data.x,
+                          yValueMapper: (ChartData data, _) => data.y),
                           ]
                       )
                   )
@@ -112,8 +112,8 @@ The [`tooltipDisplayMode`](https://pub.dev/documentation/syncfusion_flutter_char
                 series: <LineSeries<ChartData, num>>[
                       LineSeries<ChartData, num>(
                           dataSource: ChartData,
-                          xValueMapper: (ChartData data, _) => sales.x,
-                          yValueMapper: (ChartData data, _) => sales.y),
+                          xValueMapper: (ChartData data, _) => data.x,
+                          yValueMapper: (ChartData data, _) => data.y),
                           ]
                       )
                   )
@@ -161,8 +161,8 @@ The position of trackball tooltip can be changed using the [`tooltipAlignment`](
                 series: <LineSeries<ChartData, num>>[
                       LineSeries<ChartData, num>(
                           dataSource: ChartData,
-                          xValueMapper: (ChartData data, _) => sales.x,
-                          yValueMapper: (ChartData data, _) => sales.y),
+                          xValueMapper: (ChartData data, _) => data.x,
+                          yValueMapper: (ChartData data, _) => data.y),
                           ]
                       )
                   )
@@ -208,8 +208,8 @@ By default, axis value will be displayed in the tooltip, and it can be customize
                 series: <LineSeries<ChartData, String>>[
                       LineSeries<ChartData, String>(
                           dataSource: ChartData,
-                          xValueMapper: (ChartData data, _) => sales.x,
-                          yValueMapper: (ChartData data, _) => sales.y),
+                          xValueMapper: (ChartData data, _) => data.x,
+                          yValueMapper: (ChartData data, _) => data.y),
                           ]
                       )
                   )
@@ -258,8 +258,8 @@ The ActivationMode enum contains the following values:
                 series: <LineSeries<ChartData, DateTime>>[
                       LineSeries<ChartData, DateTime>(
                           dataSource: ChartData,
-                          xValueMapper: (ChartData data, _) => sales.x,
-                          yValueMapper: (ChartData data, _) => sales.y),
+                          xValueMapper: (ChartData data, _) => data.x,
+                          yValueMapper: (ChartData data, _) => data.y),
                           ]
                       )
                   )
@@ -297,23 +297,23 @@ The ActivationMode enum contains the following values:
                       LineSeries<ChartData, DateTime>(
                           dataSource: ChartData,
                           markerSettings: MarkerSettings(isVisible: true),
-                          xValueMapper: (ChartData data, _) => sales.x,
-                          yValueMapper: (ChartData data, _) => sales.y),
+                          xValueMapper: (ChartData data, _) => data.x,
+                          yValueMapper: (ChartData data, _) => data.y),
                       LineSeries<ChartData, DateTime>(
                           dataSource: ChartData,
                           markerSettings: MarkerSettings(isVisible: true),
-                          xValueMapper: (ChartData data, _) => sales.x,
-                          yValueMapper: (ChartData data, _) => sales.y1),
+                          xValueMapper: (ChartData data, _) => data.x,
+                          yValueMapper: (ChartData data, _) => data.y1),
                       LineSeries<ChartData, DateTime>(
                           dataSource: ChartData,
                           markerSettings: MarkerSettings(isVisible: true),
-                          xValueMapper: (ChartData data, _) => sales.x,
-                          yValueMapper: (ChartData data, _) => sales.y2),
+                          xValueMapper: (ChartData data, _) => data.x,
+                          yValueMapper: (ChartData data, _) => data.y2),
                       LineSeries<ChartData, DateTime>(
                           dataSource: ChartData,
                           markerSettings: MarkerSettings(isVisible: true),
-                          xValueMapper: (ChartData data, _) => sales.x,
-                          yValueMapper: (ChartData data, _) => sales.y3)
+                          xValueMapper: (ChartData data, _) => data.x,
+                          yValueMapper: (ChartData data, _) => data.y3)
                 ]
               )
             )
@@ -541,12 +541,12 @@ Defaults to `true`.
     }
 
     class ChartData {
-      ChartData(this.x, this.y, this,sales1, this.y2, this.y3);
+      ChartData(this.x, this.y, this,y1, this.y2, this.y3);
       final String x;
       final double? y;
-      final double? sales1;
-      final double? sales2;
-      final double? sales3;
+      final double? y1;
+      final double? y2;
+      final double? y3;
     }
 
 {% endhighlight %}

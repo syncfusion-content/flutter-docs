@@ -36,13 +36,13 @@ To render a spline area chart, create an instance of [`SplineAreaSeries`](https:
                         series: <ChartSeries>[
                             SplineAreaSeries<ChartData, int>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData data, _) => sales.x,
-                                yValueMapper: (ChartData data, _) => sales.y
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             ),
                             SplineAreaSeries<ChartData, int>(
                                 dataSource: chartData,
-                                xValueMapper: (ChartData data, _) => sales.x,
-                                yValueMapper: (ChartData data, _) => sales.y1
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y1
                             ),
                         ]
                     )
