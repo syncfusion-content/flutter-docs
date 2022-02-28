@@ -14,4 +14,4 @@ The License key registration is no longer required for Flutter from version 18.3
 
 The Flutter controls from Syncfusion can be used without registering the license keys.
 
-N> If you are using Syncfusion controls prior to version 18.3.0.x, please follow this [link](https://help.syncfusion.com/common/essential-studio/licensing/license-key#flutter) to register your license key.
+>**Note**: If you are using Syncfusion controls prior to version 18.3.0.x, please follow this [link](https://help.syncfusion.com/common/essential-studio/licensing/license-key#flutter) to register your license key.
