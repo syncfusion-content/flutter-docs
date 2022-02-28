@@ -33,6 +33,7 @@ To render a OpenHighLowClose chart, create an instance of [` hiloOpenCloseSeries
 
 
 {% highlight dart %} 
+{% include relative code-snippet/data.dart %}
     
     @override
     Widget build(BuildContext context) {
