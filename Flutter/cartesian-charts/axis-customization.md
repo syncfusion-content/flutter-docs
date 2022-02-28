@@ -990,7 +990,7 @@ By default, the chart is rendered with primary x axis and primary y axis. But, t
     }
 
     class ChartData {
-        ChartData(this.x, this.y, this.numeric);
+        ChartData(this.x, this.y, this.y1);
         final String x;
         final double? y;
         final double? y1;
