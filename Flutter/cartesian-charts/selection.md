@@ -167,17 +167,17 @@ The selection features allows you to select segments in following modes using [`
                 selectionBehavior: _selectionBehavior,
                 xValueMapper: (ChartData data, _) => data.x,
                 yValueMapper: (ChartData data, _) => data.y1)],
-            )
-            )
-        )
-        );
+                 )
+              )
+           )
+       );
     }
 
     class ChartData {
-    ChartData(this.x, this.y, this.y1);
-    final String x;
-    final double y;
-    final double y1;
+        ChartData(this.x, this.y, this.y1);
+        final String x;
+        final double y;
+        final double y1;
     }
 
 
