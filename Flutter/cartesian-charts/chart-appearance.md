@@ -18,7 +18,7 @@ You can also customize the following properties:
 * [`borderWidth`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderWidth.html) - used to change the border width.
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/borderColor.html) - used to change the color of the chart border.
  
-{% highlight dart %} 
+{% highlight dart hl_lines="8 10" %} 
 
     @override
     Widget build(BuildContext context) {
@@ -26,8 +26,10 @@ You can also customize the following properties:
         body: SafeArea(
           child: Center(
             child: Container(
-              height: 300, // height of the Container widget
-              width: 350,  // width of the Container widget
+              // height of the Container widget
+              height: 300, 
+              // width of the Container widget
+              width: 350,  
               child: SfCartesianChart()
             )
           )
@@ -43,7 +45,7 @@ You can also customize the following properties:
 
 Margin to the chart can be specified using the [`margin`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/margin.html) property.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="13" %} 
 
     @override
     Widget build(BuildContext context) {
