@@ -46,7 +46,7 @@ To render a Candle chart, create an instance of [` CandleSeries`](https://pub.de
                         series: <ChartSeries>[
                             // Renders CandleSeries
                             CandleSeries<ChartData, DateTime>(
-                                dataSource: chartData,
+                                dataSource: financialData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 lowValueMapper: (ChartData data, _) => data.low,
                                 highValueMapper: (ChartData data, _) => data.high, 
