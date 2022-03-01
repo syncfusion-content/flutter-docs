@@ -20,22 +20,34 @@ To render a column chart, create an instance of [`ColumnSeries`](https://pub.dev
     
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData(1, 35),
+            ChartData(2, 23),
+            ChartData(3, 34),
+            ChartData(4, 25),
+            ChartData(5, 40)
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        series: <ChartSeries>[
+                        series: <ChartSeries<ChartData, int>>[
                             // Renders column chart
-                            ColumnSeries<SalesData, double>(
+                            ColumnSeries<ChartData, int>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             )
                         ]
                     )
                 )      
             )
         );
+    }
+    class ChartData {
+        ChartData(this.x, this.y, this.y1);
+        final int x;
+        final double y;
     }
 
 {% endhighlight %}
@@ -50,39 +62,44 @@ By default, all the column series that have the same x and y-axes are placed sid
     
     @override
     Widget build(BuildContext context) {
-        final List<SalesData> chartData = [
-            SalesData(2010, 35, 23),
-            SalesData(2011, 38, 49),
-            SalesData(2012, 34, 12),
-            SalesData(2013, 52, 33),
-            SalesData(2014, 40, 30)
+        final List<ChartData> chartData = [
+            ChartData(2010, 35, 23),
+            ChartData(2011, 38, 49),
+            ChartData(2012, 34, 12),
+            ChartData(2013, 52, 33),
+            ChartData(2014, 40, 30)
         ];
         
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        primaryXAxis: DateTimeAxis(),
                         // Columns will be rendered back to back
                         enableSideBySideSeriesPlacement: false,
-                        series: <ChartSeries>[
-                            ColumnSeries<SalesData, DateTime>(
+                        series: <ChartSeries<ChartData, int>>[
+                            ColumnSeries<ChartData, int>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             ),
-                            ColumnSeries<SalesData, DateTime>(
+                            ColumnSeries<ChartData, DateTime>(
                                 opacity: 0.9,
                                 width: 0.4,
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.loss
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y1
                             )
                         ]
                     )
                 )   
             )
         );
+    }
+    class ChartData {
+        ChartData(this.x, this.y, this.y1);
+        final int x;
+        final double y;
+        final double y1;
     }
 
 {% endhighlight %}
@@ -99,15 +116,22 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
     
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData(1, 35),
+            ChartData(2, 23),
+            ChartData(3, 34),
+            ChartData(4, 25),
+            ChartData(5, 40)
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        series: <ChartSeries>[
-                            ColumnSeries<SalesData, double>(
+                        series: <ChartSeries<ChartData, int>>[
+                            ColumnSeries<ChartData, int>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
                                 width: 0.8, // Width of the columns
                                 spacing: 0.2 // Spacing between the columns
                             )
@@ -130,15 +154,22 @@ The [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
     
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData(1, 35),
+            ChartData(2, 23),
+            ChartData(3, 34),
+            ChartData(4, 25),
+            ChartData(5, 40)
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        series: <ChartSeries>[
-                            ColumnSeries<SalesData, double>(
+                        series: <ChartSeries<ChartData, int>>[
+                            ColumnSeries<ChartData, int>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
                                 // Sets the corner radius
                                 borderRadius: BorderRadius.all(Radius.circular(15))
                             )
@@ -153,9 +184,9 @@ The [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/lat
 
 ![Rounded corners](cartesian-chart-types-images/rounded_column.jpg)
 
-### See Also
+#### See Also
 
-* [Rendering each data points with different border radius in column charts](https://www.syncfusion.com/kb/12074/how-to-set-different-border-radius-for-each-rect-series-data-points-by-extending-the).
+* [Rendering each data points with different border radius in column charts](https://www.syncfusion.com/kb/12074/how-to-set-different-border-radius-for-each-rect-series-data-points-by-extending-the)
 
 * [Adding rounded corners for the specific sides in column charts](https://www.syncfusion.com/kb/12059/how-to-add-rounded-corners-for-specific-sides-in-the-rect-series-types-sfcartesianchart)
 
@@ -172,17 +203,24 @@ Renders column with track. Track is a rectangular bar rendered from the start to
     
     @override
     Widget build(BuildContext context) {
+        final List<ChartData> chartData = [
+            ChartData(1, 35),
+            ChartData(2, 23),
+            ChartData(3, 34),
+            ChartData(4, 25),
+            ChartData(5, 40)
+        ];
         return Scaffold(
             body: Center(
                 child: Container(
                     child: SfCartesianChart(
-                        series: <ChartSeries>[
-                            ColumnSeries<SalesData, double>(
+                        series: <ChartSeries<ChartData, int>>[
+                            ColumnSeries<ChartData, double>(
                                 dataSource: chartData,
                                 // Renders the track
                                 isTrackVisible: true,
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y
                             )
                         ]
                     )
@@ -195,6 +233,13 @@ Renders column with track. Track is a rectangular bar rendered from the start to
 
 ![Track](cartesian-chart-types-images/track_column.jpg)
 
-Also refer, [color palette](./series-customization#color-palette), [color mapping](./series-customization#color-mapping-for-data-points), [animation](./series-customization#animation), [gradient](./series-customization#gradient-fill) and [empty points](./series-customization#empty-points) for customizing the column series further.
+#### See Also
 
-N> You can refer to our [Flutter Column Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/column-chart) feature tour page for its groundbreaking feature representations.
+* [color palette](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#color-palette) 
+* [color mapping](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#color-mapping-for-data-points)
+* [animation](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#animation)
+* [gradient](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#gradient-fill)
+* [empty points](https://help.syncfusion.com/flutter/cartesian-charts/series-customization#empty-points)
+* [Sorting](https://help.syncfusion.com/flutter/cartesian-charts/series-customization##sorting)
+
+>**Note**: You can refer to our [Flutter Column Chart](https://www.syncfusion.com/flutter-widgets/flutter-charts/chart-types/column-chart) feature tour page for its groundbreaking feature representations.

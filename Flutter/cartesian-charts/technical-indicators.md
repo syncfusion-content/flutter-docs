@@ -41,7 +41,7 @@ To render any indicator, add it to the [`TechnicalIndicators`](https://pub.dev/d
 * [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/dashArray.html) - Used to render the indicators with dashes.
 
 
-N>: If you giving series and indicator in the chart, you can add the same [`seriesName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/seriesName.html) to the series and indicator, otherwise you can directly bind the [`dataSource`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/dataSource.html) to the [`indicators`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/indicators.html) property.
+>**Note**: If you giving series and indicator in the chart, you can add the same [`seriesName`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/seriesName.html) to the series and indicator, otherwise you can directly bind the [`dataSource`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/dataSource.html) to the [`indicators`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/indicators.html) property.
 
 ## Indicator Types
 
@@ -65,11 +65,11 @@ Refer the following example,
             series: <ChartSeries<ChartData, DateTime>>[
               HiloOpenCloseSeries<ChartData, DateTime>(
               dataSource: ChartData,
-              xValueMapper: (ChartData sales, _) => sales.x,
-              lowValueMapper: (ChartData sales, _) => sales.low,
-              highValueMapper: (ChartData sales, _) => sales.high,
-              openValueMapper: (ChartData sales, _) => sales.open,
-              closeValueMapper: (ChartData sales, _) => sales.close,
+              xValueMapper: (ChartData data, _) => data.x,
+              lowValueMapper: (ChartData data, _) => data.low,
+              highValueMapper: (ChartData data, _) => data.high,
+              openValueMapper: (ChartData data, _) => data.open,
+              closeValueMapper: (ChartData data, _) => data.close,
               name: 'HiloOpenClose'),
               ]
             )
@@ -574,22 +574,22 @@ Refer the following example below
         body: Center(
           child: SfCartesianChart(
             indicators: <TechnicalIndicators>[
-            MomentumIndicator<SalesData, num>(
+            MomentumIndicator<ChartData, num>(
                 period: 5,
                 dataSource: chartData,
-                xValueMapper: (SalesData sales, _) => sales.x,
-                highValueMapper: (SalesData sales, _) => sales.high,
-                lowValueMapper: (SalesData sales, _) => sales.low,
-                openValueMapper: (SalesData sales, _) => sales.open,
-                closeValueMapper: (SalesData sales, _) => sales.close,
+                xValueMapper: (ChartData data, _) => data.x,
+                highValueMapper: (ChartData data, _) => data.high,
+                lowValueMapper: (ChartData data, _) => data.low,
+                openValueMapper: (ChartData data, _) => data.open,
+                closeValueMapper: (ChartData data, _) => data.close,
               )
             ], 
-            series: <ChartSeries<SalesData, num>>[
-              LineSeries<SalesData, num>(
+            series: <ChartSeries<ChartData, num>>[
+              LineSeries<ChartData, num>(
                   color: Colors.purple,
                   dataSource: chartData,
-                  xValueMapper: (SalesData1 sales, _) => sales.x,
-                  yValueMapper: (SalesData1 sales, _) => sales.y,
+                  xValueMapper: (ChartData1 data, _) => data.x,
+                  yValueMapper: (ChartData1 data, _) => data.y,
               )
             ]
           )
@@ -597,8 +597,8 @@ Refer the following example below
       );
     }
 
-     class SalesData {
-        SalesData(this.x, this.low, this.high, this.open, this.close);
+     class ChartData {
+        ChartData(this.x, this.low, this.high, this.open, this.close);
         final num x;
         final double? low;
         final double? high;
@@ -606,8 +606,8 @@ Refer the following example below
         final double? close;
       }
 
-      class SalesData1{
-        SalesData1(this.x, this.y);
+      class ChartData1{
+        ChartData1(this.x, this.y);
         final num x;
         final double y;
       }
@@ -641,4 +641,4 @@ _Note_ : Each indicators has their own number of value mappers available,
 
 *	[`Triangular moving average indicator`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TmaIndicator-class.html) (TMA) - can be rendered with five value mappers ([`xValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/xValueMapper.html), [`lowValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/lowValueMapper.html), [`highValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/highValueMapper.html), [`openValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/openValueMapper.html), [`closeValueMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/TechnicalIndicators/closeValueMapper.html)).
 
->**NOTE**:`chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.
+>**Note**: `chartData` in the above code snippets is a class type list and holds the data for binding to the chart series. Refer [Bind data source](https://help.syncfusion.com/flutter/cartesian-charts/getting-started#bind-data-source) topic for more details.

@@ -52,11 +52,11 @@ To render a waterfall chart, create an instance of [`WaterfallSeries`](https://p
                   intermediateSumColor: const Color.fromRGBO(79, 129, 188, 1),
                   totalSumColor: const Color.fromRGBO(79, 129, 188, 1),
                   color: const Color.fromRGBO(0, 189, 174, 1),
-                  xValueMapper: (ChartData sales, _) => sales.x,
-                  yValueMapper: (ChartData sales, _) => sales.y,
-                  intermediateSumPredicate: (ChartData sales, _) =>
-                      sales.isIntermediate,
-                  totalSumPredicate: (ChartData sales, _) => sales.isTotal,
+                  xValueMapper: (ChartData data, _) => data.x,
+                  yValueMapper: (ChartData data, _) => data.y,
+                  intermediateSumPredicate: (ChartData data, _) =>
+                      data.isIntermediate,
+                  totalSumPredicate: (ChartData data, _) => data.isTotal,
                   connectorLineSettings:
                       WaterfallConnectorLineSettings(width: 2.5))
                            ]
@@ -67,7 +67,7 @@ To render a waterfall chart, create an instance of [`WaterfallSeries`](https://p
     }
 
     class ChartData {
-        ChartData([this.x, this.y, this.isIntermediate, this.isTotal]);
+        ChartData(this.x, this.y, [this.isIntermediate, this.isTotal]);
         final double? x;
         final num? y;
         final bool? isIntermediate;
@@ -78,7 +78,7 @@ To render a waterfall chart, create an instance of [`WaterfallSeries`](https://p
 
 ![waterfall_chart](cartesian-chart-types-images/waterfall_series.png)
 
-## See Also
+#### See Also
 
 * [Color palette](./series-customization#color-palette) 
 * [Color mapping](./series-customization#color-mapping-for-data-points)
