@@ -33,32 +33,8 @@ To render a OpenHighLowClose chart, create an instance of [` hiloOpenCloseSeries
 
 
 {% highlight dart %} 
-{% include relative code-snippet/data.dart %}
-    
-    @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-            body: Center(
-                child: Container(
-                    child: SfCartesianChart(
-                        primaryXAxis: DateTimeAxis(),
-                        series: <ChartSeries>[
-                            // Renders hiloOpenCloseSeries 
-                            hiloOpenCloseSeries<ChartData, DateTime>(
-                                dataSource: financialData,
-                                xValueMapper: (ChartData data, _) => data.x,
-                                lowValueMapper: (Sample data, _) => data.low,
-                                highValueMapper: (Sample data, _) => data.high, 
-                                openValueMapper: (Sample data, _) => data.open,
-                                closeValueMapper: (Sample data, _) => data.close,
 
-                            )
-                        ]
-                    )
-                )   
-            )
-        );
-    } 
+{% include_relative code-snippet/financial.dart %}
     
 {% endhighlight %}
 
