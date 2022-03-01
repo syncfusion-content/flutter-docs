@@ -58,7 +58,7 @@ To render a column chart, create an instance of [`ColumnSeries`](https://pub.dev
 
 By default, all the column series that have the same x and y-axes are placed side by side in a chart. If you want to place a series one over the other (overlapped), set the [`enableSideBySideSeriesPlacement`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/enableSideBySideSeriesPlacement.html) property of [`SfCartesianChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/SfCartesianChart.html) to false and configure the [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) property to differentiate the series. The following code snippet and screenshot illustrate the overlapped placement of column series.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="16" %} 
     
     @override
     Widget build(BuildContext context) {
@@ -112,7 +112,7 @@ The [`spacing`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
 
 The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) property is used to change the width of the rectangle. The default value of the width is 0.7, and the value ranges from 0 to 1. Here, 1 and 0 correspond to 100% and 0% of the available width, respectively.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="20 22" %} 
     
     @override
     Widget build(BuildContext context) {
@@ -132,8 +132,10 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
-                                width: 0.8, // Width of the columns
-                                spacing: 0.2 // Spacing between the columns
+                                // Width of the columns
+                                width: 0.8, 
+                                // Spacing between the columns
+                                spacing: 0.2 
                             )
                         ]
                     )
@@ -150,7 +152,7 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
 
 The [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ColumnSeries/borderRadius.html) property is used to add the rounded corners to the rectangle.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="20" %} 
     
     @override
     Widget build(BuildContext context) {
@@ -199,7 +201,7 @@ Renders column with track. Track is a rectangular bar rendered from the start to
 * [`trackBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ColumnSeries/trackBorderColor.html) - changes the stroke color of the track.
 * [`trackPadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ColumnSeries/trackPadding.html) - adds padding to the track.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="18" %} 
     
     @override
     Widget build(BuildContext context) {

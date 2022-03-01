@@ -100,7 +100,7 @@ In the range column chart when data label is enabled, by default there will be t
 
 The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/isTransposed.html) property of [`CartesianSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries-class.html) is used to transpose the horizontal and vertical axes, to view the data in a different perspective. Using this feature, you can render range column chart.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="7" %} 
     
     @override
     Widget build(BuildContext context) {

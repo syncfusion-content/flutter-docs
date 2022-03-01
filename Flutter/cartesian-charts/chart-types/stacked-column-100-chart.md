@@ -65,11 +65,11 @@ To render a 100% stacked column chart, create an instance of [`StackedColumn100S
 
 ## Column width and spacing
 
-The `spacing` property is used to change the spacing between two segments. The default value of spacing is 0, and the value ranges from 0 to 1. Here, 1 and 0 correspond to 100% and 0% of the available space, respectively.
+The [`spacing`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedColumn100Series/spacing.html) property is used to change the spacing between two segments. The default value of spacing is 0, and the value ranges from 0 to 1. Here, 1 and 0 correspond to 100% and 0% of the available space, respectively.
 
-The `width` property is used to change the width of the rectangle. The default value of the width is 0.7, and the value ranges from 0 to 1. Here, 1 and 0 correspond to 100% and 0% of the available width, respectively.
+The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) property is used to change the width of the rectangle. The default value of the width is 0.7, and the value ranges from 0 to 1. Here, 1 and 0 correspond to 100% and 0% of the available width, respectively.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="13 14 20 21" %} 
     
     @override
     Widget build(BuildContext context) {

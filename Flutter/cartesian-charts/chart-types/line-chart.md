@@ -64,7 +64,7 @@ To render a line chart, create an instance of [`LineSeries`](https://pub.dev/doc
 
 The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/dashArray.html) property of [`LineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LineSeries-class.html) is used to render line series with dashes. Odd value is considered as rendering size and even value is considered as gap.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="18" %}
     
     @override
     Widget build(BuildContext context) {

@@ -53,7 +53,7 @@ The [`spacing`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/c
 
 The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/width.html) property is used to change the width of the rectangle. The default value of the width is 0.7, and the value ranges from 0 to 1. Here, 1 and 0 correspond to 100% and 0% of the available width, respectively.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="13 15" %} 
     
     @override
     Widget build(BuildContext context) {
@@ -66,8 +66,10 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
                                 dataSource: chartData,
                                 xValueMapper: (ChartData data, _) => data.x,
                                 yValueMapper: (ChartData data, _) => data.y,
-                                width: 0.6, // Width of the bars
-                                spacing: 0.3 // Spacing between the bars
+                                // Width of the bars
+                                width: 0.6, 
+                                // Spacing between the bars
+                                spacing: 0.3 
                             )
                         ]
                     )
@@ -84,7 +86,7 @@ The [`width`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/cha
 
 The [`borderRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BarSeries/borderRadius.html) property is used to add the rounded corners to the rectangle.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="12" %} 
     
     @override
     Widget build(BuildContext context) {
@@ -119,7 +121,7 @@ You can render the bar chart with track. Track is a rectangular bar rendered fro
 * [`trackBorderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BarSeries/trackBorderColor.html) - changes the stroke color of the track.
 * [`trackPadding`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/BarSeries/trackPadding.html) - Adds padding to the track.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="11" %} 
     
     @override
     Widget build(BuildContext context) {

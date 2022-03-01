@@ -63,9 +63,9 @@ To render a 100% stacked line chart, create an instance of [`StackedLine100Serie
 
 ## Dashed line
 
-The `dashArray` property of `StackedLine100Series` is used to render line series with dashes. Odd value is considered as rendering size and even value is considered as gap.
+The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedLine100Series/dashArray.html) property of [`StackedLine100Series`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StackedLine100Series-class.html) is used to render line series with dashes. Odd value is considered as rendering size and even value is considered as gap.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="11 17 23 29" %}
     
     @override
     Widget build(BuildContext context) {

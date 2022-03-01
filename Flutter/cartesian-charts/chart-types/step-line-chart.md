@@ -46,7 +46,7 @@ To render a step line chart, create an instance of [`StepLineSeries`](https://pu
 
 The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/dashArray.html) property of the [`StepLineSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/StepLineSeries-class.html) is used to render step line series with dashes. Odd value is considered as rendering size and even value is considered as gap.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="12" %} 
     
     @override
     Widget build(BuildContext context) {

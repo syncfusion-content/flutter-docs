@@ -222,7 +222,7 @@ Data points with a null value are considered empty points. Empty data points are
 
 The [`isTransposed`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCartesianChart/isTransposed.html) property of [`CartesianSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries-class.html) is used to transpose the horizontal and vertical axes, to view the data in a different perspective. Using this feature, you can render vertical area chart.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="7" %} 
 
     @override
     Widget build(BuildContext context) {

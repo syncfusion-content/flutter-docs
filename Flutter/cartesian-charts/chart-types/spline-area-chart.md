@@ -62,18 +62,18 @@ To render a spline area chart, create an instance of [`SplineAreaSeries`](https:
 
 ##	Spline area rendering types
 
-The `splineType` allows you to change the spline area curve in series. The following types can be used in `SplineAreaSeries`:
+The [`splineType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineAreaSeries/splineType.html) allows you to change the spline area curve in series. The following types can be used in [`SplineAreaSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineAreaSeries-class.html):
 
 * natural
 * monotonic
 * cardinal
 * clamped
 
-By default, the value of `splineType` is `natural`.
+By default, the value of [`splineType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineAreaSeries/splineType.html) is [`natural`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineType.html).
 
-The following code sample demonstrates how to set the `splineType` value to `cardinal`. When you set the cardinal type, you can specify the desired line tension of the `cardinal` spline using the `cardinalSplineTension` property. The value of this property ranges from 0 to 1.
+The following code sample demonstrates how to set the [`splineType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineAreaSeries/splineType.html) value to [`cardinal`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineType.html). When you set the cardinal type, you can specify the desired line tension of the [`cardinal`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineType.html) spline using the [`cardinalSplineTension`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineAreaSeries/cardinalSplineTension.html) property. The value of this property ranges from 0 to 1.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="21" %} 
     
     @override
     Widget build(BuildContext context) {
@@ -115,7 +115,7 @@ The following code sample demonstrates how to set the `splineType` value to `car
 
 The [`dashArray`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CartesianSeries/dashArray.html) property of the [`SplineAreaSeries`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineAreaSeries-class.html) is used to render spline area series with dashes. Odd value is considered as rendering size and even value is considered as gap.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="21" %}
     
     @override
     Widget build(BuildContext context) {

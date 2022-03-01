@@ -71,7 +71,7 @@ You can customize the error bar depending on the error value by setting the valu
 * [`horizontalErrorValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarSeries/horizontalErrorValue.html) - This property horizontally depicts the error value in positive and negative directions. The default value is `1`.
 * [`verticalErrorValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarSeries/verticalErrorValue.html) - This property vertically depicts the error value in positive and negative directions. The default value is `3`.
 
-{% highlight dart %}
+{% highlight dart hl_lines="21" %}
 
     @override
     Widget build(BuildContext context) {
@@ -93,7 +93,8 @@ You can customize the error bar depending on the error value by setting the valu
                 xValueMapper: (ChartData data, _) => data.x,
                 yValueMapper: (ChartData data, _) => data.y,
                 width: 1.5,
-                type: ErrorBarType.standardError)
+                type: ErrorBarType.standardError
+                )
               ],
             )
          );
@@ -159,7 +160,7 @@ The default value is [`RenderingMode.vertical`](https://pub.dev/documentation/sy
 * [`RenderingMode.horizontal`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RenderingMode.html) - This property displays horizontal error value only.
 * [`RenderingMode.both`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/RenderingMode.html)  - This property displays both vertical and horizontal error values.
 
-{% highlight dart %}
+{% highlight dart hl_lines="21" %}
 
     @override
     Widget build(BuildContext context) {
@@ -204,7 +205,7 @@ The default value is [`Direction.both`](https://pub.dev/documentation/syncfusion
 * [`Direction.minus`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Direction.html) - Used to set error value in a negative direction.
 * [`Direction.plus`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Direction.html) - Used to set error value in a positive direction.
 
-{% highlight dart %}
+{% highlight dart hl_lines="21" %}
 
     @override
     Widget build(BuildContext context) {
@@ -241,7 +242,7 @@ The default value is [`Direction.both`](https://pub.dev/documentation/syncfusion
 
 The [`capLength`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ErrorBarSeries/capLength.html) property is used to customize the length of the error bar's cap. The default value is `10`.
 
-{% highlight dart %}
+{% highlight dart hl_lines="21" %}
 
     @override
     Widget build(BuildContext context) {

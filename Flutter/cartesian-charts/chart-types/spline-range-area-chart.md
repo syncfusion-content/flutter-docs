@@ -74,7 +74,7 @@ By default, the value of [`splineType`](https://pub.dev/documentation/syncfusion
 
 The following code sample demonstrates how to set the [`splineType`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineSeries/splineType.html) value to [`SplineType.cardinal`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineType.html). When you set the cardinal type, you can specify the desired line tension of the [`SplineType.cardinal`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineType.html) spline using the [`SplineType.cardinalSplineTension`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SplineSeries/cardinalSplineTension.html) property. The value of this property ranges from 0 to 1.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="9" %} 
 
     @override
     Widget build(BuildContext context) {
