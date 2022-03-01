@@ -172,17 +172,17 @@ You can add data labels to improve the readability of the chart using the [`data
                     child: SfCircularChart(
                         series: <ChartSeries>[
                             // Initialize line series
-                            PieSeries<SalesData, String>(
+                            PieSeries<ChartData, String>(
                                 dataSource: [
                                     // Bind data source
-                                    SalesData('Jan', 35),
-                                    SalesData('Feb', 28),
-                                    SalesData('Mar', 34),
-                                    SalesData('Apr', 32),
-                                    SalesData('May', 40)
+                                    ChartData('Jan', 35),
+                                    ChartData('Feb', 28),
+                                    ChartData('Mar', 34),
+                                    ChartData('Apr', 32),
+                                    ChartData('May', 40)
                                 ],
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales,
+                                xValueMapper: (ChartData sales, _) => data.x,
+                                yValueMapper: (ChartData sales, _) => data.y,
                                 // Render the data label
                                 dataLabelSettings:DataLabelSettings(isVisible : true)
                             )
@@ -215,17 +215,17 @@ You can use legend in chart by setting the [`isVisible`](https://pub.dev/documen
                         legend: Legend(isVisible: true), 
                         series: <ChartSeries>[
                             // Initialize line series
-                            PieSeries<SalesData, String>(
+                            PieSeries<ChartData, String>(
                                 dataSource: [
                                     // Bind data source
-                                    SalesData('Jan', 35),
-                                    SalesData('Feb', 28),
-                                    SalesData('Mar', 34),
-                                    SalesData('Apr', 32),
-                                    SalesData('May', 40)
+                                    ChartData('Jan', 35),
+                                    ChartData('Feb', 28),
+                                    ChartData('Mar', 34),
+                                    ChartData('Apr', 32),
+                                    ChartData('May', 40)
                                 ],
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales,
+                                xValueMapper: (ChartData sales, _) => data.x,
+                                yValueMapper: (ChartData sales, _) => data.y,
                                 name: 'Sales'
                             )
                         ]
@@ -267,19 +267,19 @@ The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/
                         tooltipBehavior: _tooltipBehavior,
                         series: <ChartSeries>[
                             // Initialize line series
-                            PieSeries<SalesData, String>(
+                            PieSeries<ChartData, String>(
                                 // Enables the tooltip for individual series
                                 enableTooltip: true, 
                                 dataSource: [
                                     // Bind data source
-                                    SalesData('Jan', 35),
-                                    SalesData('Feb', 28),
-                                    SalesData('Mar', 34),
-                                    SalesData('Apr', 32),
-                                    SalesData('May', 40)
+                                    ChartData('Jan', 35),
+                                    ChartData('Feb', 28),
+                                    ChartData('Mar', 34),
+                                    ChartData('Apr', 32),
+                                    ChartData('May', 40)
                                 ],
-                                xValueMapper: (SalesData sales, _) => sales.year,
-                                yValueMapper: (SalesData sales, _) => sales.sales
+                                xValueMapper: (ChartData sales, _) => data.x,
+                                yValueMapper: (ChartData sales, _) => data.y
                             )
                         ]
                     )

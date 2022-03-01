@@ -30,10 +30,10 @@ The tooltip state will be preserved on the device's orientation change and on br
           child: Container(
             child: SfPyramidChart(
               tooltipBehavior: _tooltipBehavior,
-              series: PyramidSeries<SalesData, String>(
+              series: PyramidSeries<ChartData, String>(
                   dataSource: chartData,
-                  xValueMapper: (SalesData sales, _) =>   sales.year,
-                  yValueMapper: (SalesData sales, _) => sales.sales
+                  xValueMapper: (ChartData sales, _) =>   data.x,
+                  yValueMapper: (ChartData sales, _) => data.y
                 )
             )
           )

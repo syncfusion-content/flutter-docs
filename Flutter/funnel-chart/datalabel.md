@@ -35,11 +35,11 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
             body: Center(
                 child: Container(
                     child: SfFunnelChart(
-                        series: FunnelSeries<SalesData, String>(
+                        series: FunnelSeries<ChartData, String>(
                                 dataSource: chartData,
-                                pointColorMapper: (SalesData data, _) => data.color,
-                                xValueMapper: (SalesData data, _) => data.x,
-                                yValueMapper: (SalesData data, _) => data.y,
+                                pointColorMapper: (ChartData data, _) => data.color,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
                                 dataLabelSettings: DataLabelSettings(
                                     // Renders the data label
                                     isVisible: true
@@ -69,10 +69,10 @@ The [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/la
             body: Center(
                 child: Container(
                     child: SfFunnelChart(
-                        series: FunnelSeries<SalesData, String>(
+                        series: FunnelSeries<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData data, _) => data.x,
-                                yValueMapper: (SalesData data, _) => data.y,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true,
                                     // Positioning the data label
@@ -103,10 +103,10 @@ The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/l
             body: Center(
                 child: Container(
                     child: SfFunnelChart(
-                        series: FunnelSeries<SalesData, String>(
+                        series: FunnelSeries<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData data, _) => data.x,
-                                yValueMapper: (SalesData data, _) => data.y,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                yValueMapper: (ChartData data, _) => data.y,
                                 dataLabelSettings: DataLabelSettings(
                                     isVisible: true,
                                     // Positioning the data label
@@ -136,16 +136,16 @@ Data label and its connector line in the Funnel charts for the point value 0 can
         return Scaffold(
             body: Center(
                     child:SfFunnelChart(
-                        series: FunnelSeries<SalesData, num>(
+                        series: FunnelSeries<ChartData, num>(
                             dataSource: [
-                                SalesData(11, 35),
-                                SalesData(12, 28),
-                                SalesData(13, 0),
-                                SalesData(14, 32),
-                                SalesData(15, 40)
+                                ChartData(11, 35),
+                                ChartData(12, 28),
+                                ChartData(13, 0),
+                                ChartData(14, 32),
+                                ChartData(15, 40)
                             ],
-                            xValueMapper: (SalesData sales, _) => sales.xValue,
-                            yValueMapper: (SalesData sales, _) => sales.yValue,
+                            xValueMapper: (ChartData sales, _) => data.xValue,
+                            yValueMapper: (ChartData sales, _) => data.yValue,
                             dataLabelSettings: DataLabelSettings(
                                 showZeroValue: false,
                                 isVisible: true

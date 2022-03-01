@@ -49,17 +49,17 @@ You can align the title text content horizontally to the near, center or far of 
                   )
                 ),
                 // Initialize category axis
-                series: FunnelSeries<SalesData, String>(
+                series: FunnelSeries<ChartData, String>(
                     dataSource: [
                       // Bind data source
-                      SalesData('Jan', 35),
-                      SalesData('Feb', 28),
-                      SalesData('Mar', 34),
-                      SalesData('Apr', 32),
-                      SalesData('May', 40)
+                      ChartData('Jan', 35),
+                      ChartData('Feb', 28),
+                      ChartData('Mar', 34),
+                      ChartData('Apr', 32),
+                      ChartData('May', 40)
                     ],
-                    xValueMapper: (SalesData sales, _) =>   sales.year,
-                    yValueMapper: (SalesData sales, _) => sales.sales
+                    xValueMapper: (ChartData sales, _) =>   data.x,
+                    yValueMapper: (ChartData sales, _) => data.y
                   )
               )
             )

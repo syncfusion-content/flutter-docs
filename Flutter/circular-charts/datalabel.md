@@ -386,12 +386,12 @@ Data label and its connector line in the Circular charts for the point value 0 c
 
 {% highlight dart %} 
 
-    final List<SalesData> chartData = <SalesData>[
-        SalesData('Jan', 35),
-        SalesData('Feb', 28),
-        SalesData('March', 0),
-        SalesData('April', 32),
-        SalesData('May', 40)
+    final List<ChartData> chartData = <ChartData>[
+        ChartData('Jan', 35),
+        ChartData('Feb', 28),
+        ChartData('March', 0),
+        ChartData('April', 32),
+        ChartData('May', 40)
     ];
     
     @override
@@ -400,11 +400,11 @@ Data label and its connector line in the Circular charts for the point value 0 c
             body: Center(
                 child: Container(
                     child:SfCircularChart(
-                        series: <CircularSeries<SalesData, String>>[
-                            PieSeries<SalesData, String>(
+                        series: <CircularSeries<ChartData, String>>[
+                            PieSeries<ChartData, String>(
                                 dataSource: chartData,
-                                xValueMapper: (SalesData sales, _) => sales.xValue,
-                                yValueMapper: (SalesData sales, _) => sales.yValue,
+                                xValueMapper: (ChartData sales, _) => data.xValue,
+                                yValueMapper: (ChartData sales, _) => data.yValue,
                                 dataLabelSettings: DataLabelSettings(
                                     showZeroValue : false, 
                                     isVisible: true
