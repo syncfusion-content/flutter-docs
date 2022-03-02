@@ -213,6 +213,8 @@ You can show the cumulative data label values using the [`showCumulativeValues`]
 
 #### See Also
 
+* [How to show cumulative and non-cumulative values on the stacked column charts](https://www.syncfusion.com/kb/13029/how-to-show-cumulative-and-non-cumulative-values-on-the-stacked-column-charts)
+
 * [Color palette](./series-customization#color-palette) 
 * [Color mapping](./series-customization#color-mapping-for-data-points)
 * [Animation](./series-customization#animation)

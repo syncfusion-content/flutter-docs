@@ -1789,3 +1789,5 @@ The different types of multi-level label's border are mentioned below,
 * [Creating a flutter master-detail chart using range controller in the Cartesian chart](https://www.syncfusion.com/kb/12318/how-to-create-flutter-master-detail-chart-using-the-cartesian-charts-widget).
 
 * [Changing the visible range of chart using range selector in the Cartesian chart](https://www.syncfusion.com/kb/12053/how-to-change-the-visible-chart-range-using-the-range-selector-widget-sfcartesianchart).
+
+* [How to add a vertical line and update it dynamically in the Cartesian charts](https://www.syncfusion.com/kb/13028/how-to-add-a-vertical-line-and-update-it-dynamically-in-the-cartesian-charts).

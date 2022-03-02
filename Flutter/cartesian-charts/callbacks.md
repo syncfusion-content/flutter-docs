@@ -1133,9 +1133,9 @@ the data points and legend. For further reference on this callback, Check the [`
 
 ## axisLabelFormatter
 
-Called while rendering each axis label in the chart. Provides label text, axis name, orientation of the axis, trimmed text and text styles such as color, font size, and font weight to the user using the `AxisLabelRenderDetails` class.
+Called while rendering each axis label in the chart. Provides label text, axis name, orientation of the axis, trimmed text and text styles such as color, font size, and font weight to the user using the [`AxisLabelRenderDetails`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/AxisLabelRenderDetails-class.html) class.
 
-You can customize the text and text style using the `ChartAxisLabel` class and can return it.
+You can customize the text and text style using the [`ChartAxisLabel`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartAxisLabel-class.html) class and can return it.
 
 Defaults to `null`.
 
@@ -1154,6 +1154,10 @@ Defaults to `null`.
       return ChartAxisLabel('Label', details.textStyle);
     }
 {% endhighlight %}
+
+#### See Also
+
+* [How to format the date-time axis labels in Cartesian chart (SfCartesianChart)](https://www.syncfusion.com/kb/13044/how-to-format-the-date-time-axis-labels-in-cartesian-chart-sfcartesianchart)
 
 ## multiLevelLabelFormatter
 

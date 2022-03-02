@@ -63,6 +63,10 @@ To render a OpenHighLowClose chart, create an instance of [` hiloOpenCloseSeries
 
 ![hiLoopenclose chart](cartesian-chart-types-images/hilo_open_close.png)
 
+#### See Also 
+
+* [Display volume data of financial series in Flutter Cartesian Chart](https://www.syncfusion.com/kb/12965/display-volume-data-of-financial-series-in-flutter-cartesian-chart).
+
 ## Indication for same values
 
 In the OHLC series, there is a feature for the datapoints indication when their high and low values are same or open and close values or high, low, open and close values are same for a datapoint. For using this indication feature, [`showIndicationForSameValues`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/HiloOpenCloseSeries/showIndicationForSameValues.html) property can be set to `true`.
