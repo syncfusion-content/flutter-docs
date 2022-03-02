@@ -33,9 +33,32 @@ To render a Candle chart, create an instance of [` CandleSeries`](https://pub.de
 
 
 
-{% highlight dart %}
+{% highlight dart %} 
+    
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Center(
+                child: Container(
+                    child: SfCartesianChart(
+                        primaryXAxis: DateTimeAxis(),
+                        series: <ChartSeries>[
+                            // Renders CandleSeries
+                            CandleSeries<ChartData, DateTime>(
+                                dataSource: financialData,
+                                xValueMapper: (ChartData data, _) => data.x,
+                                lowValueMapper: (ChartData data, _) => data.low,
+                                highValueMapper: (ChartData data, _) => data.high, 
+                                openValueMapper: (ChartData data, _) => data.open,
+                          closeValueMapper: (ChartData data, _) => data.close,
 
-{% include_relative code-snippet/financial.dart %}
+                            )
+                        ]
+                    )
+                )   
+            )
+        );
+    }
 
 {% endhighlight %}
 
