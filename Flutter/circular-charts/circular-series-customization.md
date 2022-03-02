@@ -13,7 +13,7 @@ documentation: ug
 
 [`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) provides animation support for the series. Series will be animated while rendering. Animation is enabled by default, you can also control the duration of the animation using [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/animationDuration.html) property. You can disable the animation by setting 0 value to that property.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="14" %} 
 
     @override
     Widget build(BuildContext context) {
@@ -39,11 +39,11 @@ documentation: ug
 
 {% endhighlight %}
 
-## Animation delay
+### Animation delay
 
 The [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/animationDelay.html) property is used to specify the delay duration of the series animation. This takes milliseconds value as input. By default, the series will get animated for the specified duration. If [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/animationDelay.html) is specified, then the series will begin to animate after the specified duration. Defaults to `0`.
 
-{% highlight dart %}
+{% highlight dart hl_lines="17" %}
     
     @override
     Widget build(BuildContext context) {
@@ -77,6 +77,11 @@ The [`animationDelay`](https://pub.dev/documentation/syncfusion_flutter_charts/l
     }
 
 {% endhighlight %}
+
+### Dynamic animation
+
+[`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) also provide the dynamic animation support for the series. The series can be dynamically added to the charts, it will animated by setting the timer value. when you set the [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/animationDuration.html) value to 0, the series won't be animated. 
+
 
 ## Color Palette
 
@@ -486,7 +491,7 @@ The [`pointRenderMode`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
 >**Note**: This property is applicable only if the [`onCreateShader`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart/onCreateShader.html) and [`pointShaderMapper`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/pointShaderMapper.html) are null.
 
-{% highlight dart %}
+{% highlight dart hl_lines="10" %}
 
     @override
     Widget build(BuildContext context) {
@@ -509,10 +514,6 @@ The [`pointRenderMode`](https://pub.dev/documentation/syncfusion_flutter_charts/
 {% endhighlight %}
 
 ![Image pointshadermapper](images/circular-customization/pie_rendermode.jpg)
-
-## Dynamic animation
-
-[`SfCircularChart`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfCircularChart-class.html) also provide the dynamic animation support for the series. The series can be dynamically added to the charts, it will animated by setting the timer value. when you set the [`animationDuration`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/animationDuration.html) value to 0, the series won't be animated. 
 
 
 ## Empty points

@@ -27,7 +27,6 @@ Add the Syncfusion [`Flutter Chart`](https://www.syncfusion.com/flutter-widgets/
 {% highlight dart %} 
 
     dependencies:
-
     syncfusion_flutter_charts: ^xx.x.xx
 
 {% endhighlight %}
@@ -148,7 +147,7 @@ You can add a [`title`](https://pub.dev/documentation/syncfusion_flutter_charts/
 
 You can add data labels to improve the readability of the chart using the [`dataLabelSettings`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/PyramidSeries/dataLabelSettings.html) property.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="12" %} 
 
     @override
     Widget build(BuildContext context) {
@@ -179,7 +178,7 @@ The legend provides information about the series rendered in the chart.
 
 You can use legend in chart by setting the [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/isVisible.html) property to true in [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend-class.html).
 
-{% highlight dart %} 
+{% highlight dart hl_lines="7" %}  
 
     @override
     Widget build(BuildContext context) {
@@ -210,7 +209,7 @@ The tooltip is used when you cannot display information using the data labels du
 
 The [`tooltipBehavior`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfPyramidChart/tooltipBehavior.html) property in chart is used to enable and customize the tooltip for the pyramid series. The tooltip is enabled as demonstrated in the following code snippet.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="5" %}  
     
     late TooltipBehavior _tooltipBehavior;
 

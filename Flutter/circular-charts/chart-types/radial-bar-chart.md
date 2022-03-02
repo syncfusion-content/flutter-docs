@@ -70,7 +70,7 @@ The radial bar chart is used for showing the comparisons among the categories us
 
 You can use the [`radius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/radius.html) property to change the diameter of the radial bar chart with respect to the plot area. The default value is 80%.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="13" %} 
 
     @override
     Widget build(BuildContext context) {
@@ -102,7 +102,7 @@ You can use the [`radius`](https://pub.dev/documentation/syncfusion_flutter_char
 
 You can change the inner radius of radial bar chart using the [`innerRadius`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/innerRadius.html) property with respect to the plot area. The value ranges from 0% to 100%.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="13" %} 
 
     @override
     Widget build(BuildContext context) {
@@ -131,7 +131,7 @@ You can change the inner radius of radial bar chart using the [`innerRadius`](ht
 
 The [`cornerStyle`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CircularSeries/cornerStyle.html) property specifies the corner type for radial bar chart. The corners can be customized using the [`CornerStyle.bothFlat`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CornerStyle.html), [`CornerStyle.bothCurve`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CornerStyle.html), [`CornerStyle.startCurve`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CornerStyle.html), and [`CornerStyle.endCurve`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CornerStyle.html) options. The default value of this property is [`CornerStyle.bothFlat`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/CornerStyle.html).
 
-{% highlight dart %} 
+{% highlight dart hl_lines="13" %} 
 
     @override
     Widget build(BuildContext context) {
@@ -175,7 +175,7 @@ Data labels can be enabled using the [`isVisible`](https://pub.dev/documentation
 * [`borderColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/borderColor.html) - changes the stroke color of the data label shape.
 * [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/useSeriesColor.html) - uses the series color for filling the data label shape.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="14" %} 
 
     @override
     Widget build(BuildContext context) {

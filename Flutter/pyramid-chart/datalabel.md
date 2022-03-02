@@ -31,7 +31,7 @@ Data label can be added to a chart series by enabling the [`isVisible`](https://
 * [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelIntersectAction.html) - action on data labels intersection. The intersecting data labels can be hidden.
 
 
-{% highlight dart %} 
+{% highlight dart hl_lines="8" %}  
 
     @override
     Widget build(BuildContext context) {
@@ -80,7 +80,7 @@ This feature is used to connect label and data point using a line. It can be ena
 * [`length`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ConnectorLineSettings/length.html) - specifies the length of the connector line.
 * [`type`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ConnectorLineSettings/type.html) - specifies the shape of connector line either [`ConnectorType.curve`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ConnectorType.html) or [`ConnectorType.line`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ConnectorType.html). 
 
-{% highlight dart %} 
+{% highlight dart hl_lines="18" %}  
 
     @override
     Widget build(BuildContext context) {
@@ -118,7 +118,7 @@ The [`labelAlignment`](https://pub.dev/documentation/syncfusion_flutter_charts/l
 
 The [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/labelPosition.html) property is used to place the Pyramid series data labels either [`ChartDataLabelPosition.inside`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelPosition.html) or [`ChartDataLabelPosition.outside`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelPosition.html). By default the label of Pyramid chart is placed [`ChartDataLabelPosition.inside`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/ChartDataLabelPosition.html) the series.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="14" %}  
 
     @override
     Widget build(BuildContext context) {
@@ -152,7 +152,7 @@ The [`labelPosition`](https://pub.dev/documentation/syncfusion_flutter_charts/la
 
 The [`useSeriesColor`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/useSeriesColor.html) property is used to apply the series color to background color of the data labels. The default value of this property is false.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="16" %}  
 
     @override
     Widget build(BuildContext context) {
@@ -224,7 +224,7 @@ You can customize the appearance of the data label with your own template using 
 
 Data label and its connector line in the Pyramid charts for the point value 0 can be hidden using the [`showZeroValue`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/DataLabelSettings/showZeroValue.html) property. This defaults to `true`.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="17" %}  
 
     @override
     Widget build(BuildContext context) {
@@ -250,6 +250,7 @@ Data label and its connector line in the Pyramid charts for the point value 0 ca
             )
         );
     }
+
 {% endhighlight %}
 
 ![hide_0_value](images/datalabel/dataLabel_0_value.png)
@@ -268,7 +269,7 @@ Defaults to [`OverflowMode.none`](https://pub.dev/documentation/syncfusion_flutt
 
 >**Note**: This is applicable for pie, doughnut, pyramid, and funnel series types alone.
 
-{% highlight dart %}
+{% highlight dart hl_lines="7" %} 
 
     Widget build(BuildContext context) {
         return Container(
@@ -282,6 +283,7 @@ Defaults to [`OverflowMode.none`](https://pub.dev/documentation/syncfusion_flutt
         )
       );
     }
+
 {% endhighlight %}
 ![label_overflow](images/datalabel/pyramid_overflow.jpg)
 
@@ -300,7 +302,7 @@ When the [`labelIntersectAction`](https://pub.dev/documentation/syncfusion_flutt
 * [`LabelIntersectAction.none`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelIntersectAction.html) - intersected data labels will be visible.
 * [`LabelIntersectAction.shift`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LabelIntersectAction.html) - smartly arranges the overlapped data labels.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="34" %} 
 
     @override
     Widget build(BuildContext context) {
