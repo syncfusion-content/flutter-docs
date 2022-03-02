@@ -11,7 +11,7 @@ documentation: ug
 
 The [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/legend.html) contains list of chart series/data points in chart. The information provided in each legend item helps to identify the corresponding data series in chart.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="14" %} 
 
       @override
       Widget build(BuildContext context) {
@@ -141,7 +141,7 @@ The following properties can be used to define and customize the [`title`](https
 
 You can control the visibility of the series by tapping the legend item. You can enable this feature by enabling the [`toggleSeriesVisibility`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/toggleSeriesVisibility.html) property.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="10" %} 
 
       @override
       Widget build(BuildContext context) {
@@ -171,7 +171,7 @@ You can control the visibility of the series by tapping the legend item. You can
 
 The [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/isVisible.html) property of [`legend`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/SfFunnelChart/legend.html) is used to toggle the visibility of legend.
 
-{% highlight dart %} 
+{% highlight dart hl_lines="10" %} 
 
       @override
       Widget build(BuildContext context) {
@@ -201,7 +201,7 @@ The [`isVisible`](https://pub.dev/documentation/syncfusion_flutter_charts/latest
 
 The legend items can be placed in multiple rows or scroll can be enabled using the [`overflowMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/overflowMode.html) property if size of the total legend items exceeds the available size. The default value of the [`overflowMode`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/overflowMode.html) property is [`LegendItemOverflowMode.scroll`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendItemOverflowMode.html).
 
-{% highlight dart %} 
+{% highlight dart hl_lines="11" %} 
 
       @override
       Widget build(BuildContext context) {
@@ -238,7 +238,7 @@ You can change the position of the legend inside the chart. The following proper
 * [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/position.html) - used to position the legend relatively. The available options are auto, bottom, left, right, and top. Defaults to [`LegendPosition.auto`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendPosition.html).
 * [`orientation`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/orientation.html) - used to change the orientation of the legend, the default value is [`LegendItemOrientation.auto`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendItemOrientation.html). Also you can set [`LegendItemOrientation.horizontal`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendItemOrientation.html) or [`LegendItemOrientation.vertical`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendItemOrientation.html).
 
-{% highlight dart %} 
+{% highlight dart hl_lines="11" %} 
 
       @override
       Widget build(BuildContext context) {
@@ -272,7 +272,7 @@ You can change the position of the legend inside the chart. The following proper
 Places the legend in custom position. If the [`offset`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/offset.html) has been set, the legend is moved from its actual position. For example, if the [`position`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/Legend/position.html) is [`LegendPosition.top`](https://pub.dev/documentation/syncfusion_flutter_charts/latest/charts/LegendPosition.html), then the legend will be placed in the top but in the position added to the actual top position. 
 Also, the legend will not take a dedicated position for it and will be drawn on the top of the chart's plot area.
 
-{% highlight dart %}
+{% highlight dart hl_lines="10" %}
 
     @override
     Widget build(BuildContext context) {

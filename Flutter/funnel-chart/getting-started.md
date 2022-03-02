@@ -27,7 +27,6 @@ Add the Syncfusion [Flutter Chart](https://www.syncfusion.com/flutter-widgets/fl
 {% highlight dart %} 
 
     dependencies:
-
     syncfusion_flutter_charts: ^xx.x.xx
 
 {% endhighlight %}
